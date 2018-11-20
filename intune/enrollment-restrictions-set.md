@@ -15,12 +15,12 @@ ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
 ms.reviewer: dagerrit
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: de77ad92eac4aa869aec504f1762ad6f216c74d2
-ms.sourcegitcommit: bea4a81d262607c6e9dd1e26f5cd1a2faf7d051b
+ms.openlocfilehash: 97543ec74225ef86208000bccb2a8ad7852dd9c1
+ms.sourcegitcommit: b96568a77d3cb6f602e7577446996fe7dde169bd
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45602150"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51610060"
 ---
 # <a name="set-enrollment-restrictions"></a>Ustawianie ograniczeń rejestracji
 
@@ -66,7 +66,7 @@ Ograniczenia domyślne są automatycznie zapewniane w przypadku ograniczeń reje
 
 ## <a name="set-device-type-restrictions"></a>Ustawianie ograniczeń typu urządzeń
 
-Możesz zmienić ustawienia ograniczeń dotyczących typu urządzenia, wykonując poniższe czynności. Te ograniczenia nie wpływają na urządzenia, które zostały już zarejestrowane. Za pomocą tej funkcji nie można zablokować urządzeń zarejestrowanych przy użyciu [agenta usługi Intune na komputerze](/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune.md).
+Możesz zmienić ustawienia ograniczeń dotyczących typu urządzenia, wykonując poniższe czynności. Te ograniczenia nie wpływają na urządzenia, które zostały już zarejestrowane. Za pomocą tej funkcji nie można zablokować urządzeń zarejestrowanych przy użyciu [agenta usługi Intune na komputerze](/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune).
 
 1. Zaloguj się do witryny Azure Portal.
 2. Wybierz opcję **Więcej usług**, wyszukaj usługę **Intune**, a następnie wybierz usługę **Intune**.
@@ -100,11 +100,11 @@ Następujące metody kwalifikują się do autoryzacji jako rejestracja firmowa s
 - Urządzenie jest rejestrowane za pomocą [funkcji automatycznego rejestrowania z programu SCCM dla współzarządzania](https://docs.microsoft.com/sccm/core/clients/manage/co-management-overview#how-to-configure-co-management.md).
  
 Następujące rejestracje są oznaczone jako firmowe przez usługę Intune, ale ponieważ nie umożliwiają administratorowi usługi Intune kontroli na poziomie urządzenia, będą zablokowane:
- - [Automatyczne rejestrowanie w rozwiązaniu MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) przez [przyłączenie do usługi Azure Active Directory podczas konfigurowania systemu Windows](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-frx.md)\*.
-- [Automatyczne rejestrowanie w rozwiązaniu MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) przez [przyłączenie do usługi Azure Active Directory z ustawień systemu Windows](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-setup.md)*.
+ - [Automatyczne rejestrowanie w rozwiązaniu MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) przez [przyłączenie do usługi Azure Active Directory podczas konfigurowania systemu Windows](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-frx)\*.
+- [Automatyczne rejestrowanie w rozwiązaniu MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) przez [przyłączenie do usługi Azure Active Directory z ustawień systemu Windows](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network)*.
  
 Następujące metody rejestracji urządzeń osobistych będą także blokowane:
-- [Automatyczne rejestrowanie w rozwiązaniu MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) za pomocą polecenia [Dodaj konto służbowe w oknie Ustawienia systemu Windows](https://docs.microsoft.com/azure/active-directory/device-management-azuread-registered-devices-windows10-setup.md)\*.
+- [Automatyczne rejestrowanie w rozwiązaniu MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) za pomocą polecenia [Dodaj konto służbowe w oknie Ustawienia systemu Windows](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network)\*.
 - Opcja [Tylko rejestracja w rozwiązaniu MDM]( https://docs.microsoft.com/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device) w oknie Ustawienia systemu Windows.
 
 \* Te urządzenia nie są blokowane w przypadku zarejestrowania w rozwiązaniu Autopilot.

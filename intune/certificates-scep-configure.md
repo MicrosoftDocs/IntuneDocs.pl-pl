@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: dfe8d8d7c7a534dd4a21104b0c7076c039d9f504
-ms.sourcegitcommit: 5d5448f6c365aeb01d6f2488bf122024b9616bec
+ms.openlocfilehash: b0ee2b2ad8d25d1040577a7f8abff4377704d2d5
+ms.sourcegitcommit: 6ff5df63a2fff291d7ac5fed9c51417fe808650d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51212533"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52167539"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurowanie certyfikatów SCEP i korzystanie z nich w usłudze Intune
 
@@ -365,6 +365,7 @@ Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i podaj nas
      - iOS
      - Windows 8.1 i nowsze
      - System Windows 10 lub nowszy
+     - Android Enterprise
 
    - **Format nazwy podmiotu**: wybierz sposób automatycznego tworzenia nazwy podmiotu w żądaniu certyfikatu przez usługę Intune. Opcje zmienią się, jeśli wybierzesz typ certyfikatu **Użytkownik** lub typ certyfikatu **Urządzenie**. 
 
