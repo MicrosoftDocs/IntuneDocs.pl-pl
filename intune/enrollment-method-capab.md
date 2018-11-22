@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c9e440aef7f434cbe675506fd6f22a9bd26b2c31
-ms.sourcegitcommit: 528d2bc70bfd25803a2d9f0fe9372c8a5f5e7dad
+ms.openlocfilehash: 457acdc212855767687f97f7d03b731f35afad46
+ms.sourcegitcommit: 490f68479af814fbea1d9bd222011736fcbb1dd6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446824"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51811533"
 ---
 # <a name="capabilities-by-enrollment-method-for-windows-devices"></a>Możliwości według metody rejestracji dla urządzeń z systemem Windows
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "47446824"
 Usługa Intune umożliwia zarządzanie urządzeniami i aplikacjami pracowników oraz sposobem uzyskiwania przez nich dostępu do danych firmy. Urządzenia muszą najpierw zostać zarejestrowane w usłudze Intune. Istnieje kilka metod rejestrowania urządzeń pracowników. Każda metoda ma inne najlepsze rozwiązania oraz możliwości, jak pokazano w poniższych tabelach.
 
 ## <a name="best-practices-by-enrollment-method"></a>Najlepsze rozwiązania według metody rejestracji
-| **Najlepsze rozwiązania** | **[Dołączone do usługi Azure AD](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[Dołączone do usługi Azure AD za pomocą rozwiązania Autopilot](enrollment-autopilot.md)** |**[Zbiorcze](windows-bulk-enroll.md)**|**[Menedżer rejestracji urządzeń](device-enrollment-manager-enroll.md)** | **[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](device-enrollment.md#bring-your-own-device)** | **Obiekt zasad grupy** |
+| **Najlepsze rozwiązania** | **[Dołączone do usługi Azure AD](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[Dołączone do usługi Azure AD za pomocą rozwiązania Autopilot](enrollment-autopilot.md)** |**[Zbiorcze](windows-bulk-enroll.md)**|**[Menedżer rejestracji urządzeń](device-enrollment-manager-enroll.md)** | **[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](device-enrollment.md#bring-your-own-device)** | **[GPO](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)** |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Często używane w usłudze EDU|![X](media/xmark.png)|![Znacznik wyboru](media/checkmark.png)|![Znacznik wyboru](media/checkmark.png)|![Znacznik wyboru](media/checkmark.png)|![X](media/xmark.png)|![X](media/xmark.png)|
 |Urządzenia mogą być używane jako urządzenia udostępnione|![X](media/xmark.png)|![X](media/xmark.png)|![Znacznik wyboru](media/checkmark.png)|![Znacznik wyboru](media/checkmark.png)|![X](media/xmark.png)|![X](media/xmark.png)|
@@ -36,7 +36,7 @@ Usługa Intune umożliwia zarządzanie urządzeniami i aplikacjami pracowników 
 
 ## <a name="capabilities-by-enrollment-method"></a>Możliwości według metody rejestracji
 
-| **Możliwości** | **[Dołączone do usługi Azure AD](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[Dołączone do usługi Azure AD za pomocą rozwiązania Autopilot](enrollment-autopilot.md)** |**[Zbiorcze](windows-bulk-enroll.md)**|**[Menedżer rejestracji urządzeń](device-enrollment-manager-enroll.md)** | **[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](device-enrollment.md#bring-your-own-device)** | **Obiekt zasad grupy** |
+| **Możliwości** | **[Dołączone do usługi Azure AD](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[Dołączone do usługi Azure AD za pomocą rozwiązania Autopilot](enrollment-autopilot.md)** |**[Zbiorcze](windows-bulk-enroll.md)**|**[Menedżer rejestracji urządzeń](device-enrollment-manager-enroll.md)** | **[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](device-enrollment.md#bring-your-own-device)** | **[GPO](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)** |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Dostęp warunkowy                                      |![Znacznik wyboru](media/checkmark.png)|![Znacznik wyboru](media/checkmark.png)|![X](media/xmark.png)|![X](media/xmark.png)|![Znacznik wyboru](media/checkmark.png)|![Znacznik wyboru](media/checkmark.png)|
 |Użytkownicy zostają skojarzeni z urządzeniem                    |![Znacznik wyboru](media/checkmark.png)|![Znacznik wyboru](media/checkmark.png)|![X](media/xmark.png)|![X](media/xmark.png)|![Znacznik wyboru](media/checkmark.png)|![Znacznik wyboru](media/checkmark.png)|
@@ -52,5 +52,5 @@ Usługa Intune umożliwia zarządzanie urządzeniami i aplikacjami pracowników 
 
 ## <a name="next-steps"></a>Następne kroki
 
-[Opcje rejestracji](enrollment-options.md)
+[Konfigurowanie rejestracji dla systemu Windows](windows-enroll.md)
 

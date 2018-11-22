@@ -6,8 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/23/2017
-ms.topic: article
+ms.date: 11/13/2018
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
@@ -15,12 +14,12 @@ ms.assetid: 15f8a838-0b69-412b-a42e-c6edb61f0cae
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cac03f35cdec3c1a4815559abc83108bd27d3472
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
+ms.openlocfilehash: 5e0a207d3e845e3983dfe6ce3abbb70fcbbe65cf
+ms.sourcegitcommit: 4d5e811d451aeb6307e0f64818e182e471ae1ed4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231142"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51618977"
 ---
 # <a name="how-to-validate-your-app-protection-policy-setup"></a>Sposób sprawdzania poprawności ustawień zasad ochrony aplikacji
 
@@ -29,12 +28,12 @@ ms.locfileid: "48231142"
 Sprawdzanie poprawnej konfiguracji i działania zasad ochrony aplikacji. Te wskazówki dotyczą zasad ochrony aplikacji w portalu Azure Portal.
 
 ### <a name="checking-for-symptoms"></a>Sprawdzanie pod kątem objawów
-Zgłaszanie problemów przez użytkowników jest mało prawdopodobne, ponieważ ochrona aplikacji to narzędzie ochrony danych. W przypadku problemu z konfiguracją ochrony aplikacji użytkownik będzie mieć nieograniczony dostęp — taki jaki miałby bez stosowania ochrony aplikacji — i nie będzie świadomy wystąpienia problemu. Z tego powodu zaleca się sprawdzenie poprawności konfiguracji ochrony aplikacji przez pilotażowe wdrożenie zasad ochrony aplikacji dla małej grupy użytkowników, którzy celowo przetestują ograniczenia związane z ochroną aplikacji.
+Zgłaszanie problemów przez użytkowników jest mało prawdopodobne, ponieważ ochrona aplikacji to narzędzie ochrony danych. W przypadku problemu z konfiguracją ochrony aplikacji użytkownik będzie mieć nieograniczony dostęp, taki jaki miałby bez stosowania ochrony aplikacji, i nie będzie świadomy wystąpienia problemu. Z tego powodu zaleca się przeprowadzenie walidacji konfiguracji ochrony aplikacji przez pilotażowe wdrożenie zasad ochrony aplikacji dla małej grupy użytkowników, którzy celowo przetestują ograniczenia związane z ochroną aplikacji.
 
 
 ### <a name="what-to-check"></a>Co należy sprawdzić
 
-Jeśli wyniki testów pokazują, że zachowanie zasad ochrony aplikacji nie jest zgodne z oczekiwanym, zaleca się sprawdzenie następujących kwestii:
+Jeśli wyniki testów pokazują, że zachowanie zasad ochrony aplikacji nie jest zgodne z oczekiwanym, sprawdź następujące kwestie:
 
 - Czy użytkownicy mają licencje na ochronę aplikacji?
 - Czy użytkownicy mają licencje usługi O365?
@@ -42,10 +41,10 @@ Jeśli wyniki testów pokazują, że zachowanie zasad ochrony aplikacji nie jest
 
 #### <a name="user-app-protection-status"></a>Stan ochrony aplikacji użytkownika
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
-1. Wybierz kolejno pozycje **Zarządzanie aplikacjami** > **Monitorowanie** >  **Stan ochrony aplikacji** > **Przypisani użytkownicy**.
-
-2. Wybierz użytkownika z listy lub wyszukaj i wybierz użytkownika, a następnie wybierz pozycję **Wybierz użytkownika**. W górnej części kolumny **Zgłaszanie aplikacji** widoczna jest informacja, czy użytkownik ma licencję na ochronę aplikacji. Możesz również zobaczyć, czy użytkownik ma licencję usługi O365, i sprawdzić stan aplikacji dla wszystkich urządzeń użytkownika.
+2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
+3. Wybierz kolejno pozycje **Aplikacje klienckie** > **Monitorowanie** >  **Stan ochrony aplikacji**, a następnie wybierz kafelek **Przypisani użytkownicy**. 
+4. Na stronie **Zgłaszanie aplikacji** wybierz pozycję **Wybierz użytkownika**, aby wyświetlić listę użytkowników i grup. 
+5. Na liście wyszukaj i wybierz użytkownika, a następnie wybierz pozycję **Wybierz użytkownika**. W górnej części strony **Zgłaszanie aplikacji** widoczna jest informacja, czy użytkownik ma licencję na ochronę aplikacji. Możesz również zobaczyć, czy użytkownik ma licencję usługi O365, i sprawdzić stan aplikacji dla wszystkich urządzeń użytkownika.
 
 
 

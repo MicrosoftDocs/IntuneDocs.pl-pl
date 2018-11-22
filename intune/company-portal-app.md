@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/22/2018
+ms.date: 11/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: dec6f258-ee1b-4824-bf66-29053051a1ae
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ce31832421ece9008e1526e54ba3e9aa2780c666
-ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
+ms.openlocfilehash: 6a249962c4ac75e51be082112b884a5825d4ef2a
+ms.sourcegitcommit: 490f68479af814fbea1d9bd222011736fcbb1dd6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236292"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51811516"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Jak skonfigurować aplikację Portal firmy w usłudze Microsoft Intune
 
@@ -29,7 +29,7 @@ ms.locfileid: "50236292"
 Portal firmy usługi Microsoft Intune jest miejscem, w którym użytkownicy uzyskują dostęp do danych firmy i mogą wykonywać typowe zadania, takie jak rejestrowanie urządzeń, instalowanie aplikacji i znajdowanie informacji pomocy od działu IT.        
 
 > [!Tip]        
-> Podczas dostosowywania Portalu firmy konfiguracje mają zastosowanie do witryny sieci Web Portal firmy i aplikacji Portal firmy.       
+> Podczas dostosowywania Portalu firmy konfiguracje mają zastosowanie do witryny sieci Web Portal firmy i aplikacji Portal firmy. Należy pamiętać, że użytkownicy muszą mieć przypisaną licencję usługi Intune, aby uzyskiwać dostęp do witryny internetowej Portal firmy.
 
 Dostosowywanie portalu firmy ułatwia zapewnienie znanego i przydatnego środowiska dla użytkowników końcowych. W tym celu w obciążeniu **Aplikacje klienckie** wybierz kolejno pozycje **Konfiguracja** > **Znakowanie Portalu firmy**, po czym skonfiguruj wymagane ustawienia.  
 
@@ -48,7 +48,7 @@ Pola oznaczone gwiazdką (*) są obowiązkowe.
 | **Adres URL zasad zachowania poufności informacji** |     79     | Istnieje możliwość wprowadzenia własnych zasad zachowania poufności informacji, które będą wyświetlane, gdy użytkownik kliknie w portalu firmy linki do informacji o prywatności. Musisz podać prawidłowy adres URL w postaci `<https://www.contoso.com>`. |
 
 ## <a name="support-information"></a>Informacje dotyczące pomocy technicznej      
-Wprowadź informacje dotyczące pomocy technicznej w firmie, aby udostępnić pracownikom dane kontaktowe do użycia w przypadku pytań związanych z usługą Intune.       
+Wprowadź informacje dotyczące pomocy technicznej w firmie, aby udostępnić pracownikom dane kontaktowe do użycia w przypadku pytań związanych z usługą Intune.          
 
 |Nazwa pola|Długość maksymalna|Więcej informacji|
 |---|---|---|
@@ -84,24 +84,33 @@ Wybierz logo, które będzie wyglądać najlepiej na białym lub jasnym tle.
 
 ### <a name="brand-image-for-company-portal"></a>Obraz marki dla Portalu firmy
 
-Możesz wyświetlać obraz marki Twojej firmy. Obsługa obrazu marki jest dodawana do aplikacji Portal firmy, ale obraz może nie być widoczny na wszystkich platformach.
+Możesz wyświetlać obraz marki Twojej firmy. Po zapisaniu zmian można wybrać pozycję **Podgląd ustawień** w portalu internetowym usługi Intune w górnej części bloku, aby zobaczyć, jak będą wyglądać konfiguracje. Podgląd obrazu marki jest dostępny tylko w urządzeniu z systemem iOS, a nie w portalu internetowym usługi Intune. 
 
 |Nazwa pola|Więcej informacji|
 |---|---|
-|**Przekaż obraz marki**| Ta opcja umożliwia wyświetlanie obrazu tła na stronie profilu użytkownika w aplikacji Portal firmy.<p><ul><li>Zalecana szerokość obrazu: więcej niż 1125 pikseli, ale nie mniej niż 640 pikseli</li><li>Maksymalny rozmiar obrazu: 1,3 MB</li><li>Typ pliku: PNG, JPG lub JPEG</li></ul>|
+|**Przekaż obraz marki**| Ta opcja umożliwia wyświetlanie obrazu tła na stronie profilu użytkownika w aplikacji Portal firmy.<p>*Uwaga*: wyświetlany obraz może wyglądać inaczej na różnych platformach.<p><ul><li>Zalecana szerokość obrazu: więcej niż 1125 pikseli, ale nie mniej niż 640 pikseli</li><li>Maksymalny rozmiar obrazu: 1,3 MB</li><li>Typ pliku: PNG, JPG lub JPEG</li></ul>|
 
 Odpowiedni obraz marki wzmacnia pozytywne wrażenie marki, co pozwala zwiększyć zaufanie użytkownika w Portalu firmy. Poniżej przedstawiono porady, które warto wziąć pod uwagę podczas nabywania, wybierania i optymalizowania obrazu dla Portalu firmy. 
 
 - Skontaktuj się z działem marketingu lub działem graficznym. Być może są już dostępne zatwierdzone obrazy marki. Mogą one również pomóc w optymalizacji obrazów. 
 
-- Rozważ użycie obrazu w orientacji poziomej i pionowej. Obraz powinien mieć wystarczającą ilość tła wokół punktu centralnego. Obraz może zostać przycięty inaczej w zależności od rozmiaru i orientacji urządzenia. 
+- Rozważ użycie obrazu w orientacji poziomej i pionowej. Obraz powinien mieć wystarczającą ilość tła wokół punktu centralnego. Obraz może zostać przycięty inaczej w zależności od rozmiaru, orientacji i platformy urządzenia. 
 
 - Nie używaj ogólnego obrazu. Obraz powinien odzwierciedlać markę firmy i kojarzyć się użytkownikom z firmą. Jeśli nie masz własnego obrazu, lepszym rozwiązaniem jest brak obrazu niż użycie ogólnego obrazu, który nie ma znaczenia dla użytkownika. 
 
 - Usuń niepotrzebne metadane. Plik obrazu może zawierać metadane, takie jak profil aparatu, lokalizację geograficzną, tytuł, podpis itp. Użyj narzędzia do optymalizacji obrazów, aby usunąć te informacje w celu zachowania jakości przy spełnieniu wymagania dotyczącego limitu rozmiaru pliku. 
 
-Po zapisaniu zmian można wybrać pozycję **Podgląd ustawień** w portalu internetowym usługi Intune w górnej części bloku, aby zobaczyć, jak będą wyglądać konfiguracje. Podgląd obrazu marki jest dostępny tylko w urządzeniu z systemem iOS, a nie w portalu internetowym usługi Intune. 
+Po dodaniu lub zmodyfikowaniu obrazu marki w usłudze Intune użytkownik końcowy może nie widzieć zmiany w urządzeniach z systemem iOS do momentu, gdy aplikacja Portal firmy rozpozna zmianę podczas uruchamiania, a następnie zostanie ponownie uruchomiona w celu wyświetlenia obrazu marki. 
 
+### <a name="brand-image-examples"></a>Przykłady obrazu marki
+
+Na poniższej ilustracji przedstawiono przykład obrazu marki urządzenia iPad:
+
+![Zrzut ekranu przedstawiający przykład obrazu marki urządzenia iPhone](media/company-portal-app/company-portal-app-03.png)
+
+Na poniższej ilustracji przedstawiono przykład obrazu marki urządzenia iPhone:
+
+![Zrzut ekranu przedstawiający przykład obrazu marki urządzenia iPad](media/company-portal-app/company-portal-app-02.png)
 
 ## <a name="windows-company-portal-keyboard-shortcuts"></a>Skróty klawiaturowe w aplikacji Portal firmy dla systemu Windows
 
@@ -125,6 +134,10 @@ Poniższe skróty klawiaturowe są dostępne w aplikacji Portal firmy dla system
 |  | Usuń | CTRL + D lub Delete |
 |  | Sprawdź dostęp | Ctrl + M lub F9 |
 | Szczegóły aplikacji | Instalowanie | CTRL + I |
+
+Użytkownicy końcowi będą również mogli zobaczyć dostępne skróty w aplikacji Portal firmy dla systemu Windows.
+
+![Zrzut ekranu przedstawiający dostępne skróty w aplikacji Portal firmy dla systemu Windows](media/company-portal-app/company-portal-app-01.png)
 
 ## <a name="next-steps"></a>Następne kroki
 

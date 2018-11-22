@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.suite: ems
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: a9761c57b15700e147bc092b7577fe1b32c78c18
-ms.sourcegitcommit: 18f51ae8291b57562921e40fc364a5a60a59b139
+ms.openlocfilehash: c46a90d36ba8b50703e62fc663b1d090ac1bcfc7
+ms.sourcegitcommit: b96568a77d3cb6f602e7577446996fe7dde169bd
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44254160"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51610128"
 ---
 # <a name="what-is-device-enrollment"></a>Co to jest rejestrowanie urządzenia?
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -42,7 +42,6 @@ Domyślnie w usłudze Intune mogą być rejestrowane urządzenia dla dowolnej pl
 |**[USB-Direct](#usb-direct)**| Nie |    Nie  | Nie|[Więcej informacji](./apple-configurator-direct-enroll-ios.md)|
 
 ## <a name="macos-enrollment-methods"></a>Metody rejestracji urządzeń z systemem macOS
-
 | **Metoda** |  **Wymagane zresetowanie** |  **Koligacja użytkownika** | **Zablokowane** | **Szczegóły**|
 |:---:|:---:|:---:|:---:|:---:|
 |**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#bring-your-own-device)** | Nie| Tak | Nie | [Więcej informacji](./macos-enroll.md)|
@@ -56,7 +55,11 @@ Domyślnie w usłudze Intune mogą być rejestrowane urządzenia dla dowolnej pl
 |**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#bring-your-own-device)** | Nie |  Tak |   Nie | [Więcej informacji](windows-enroll.md)|
 |**[Menedżer rejestracji urządzeń](#device-enrollment-manager)**| Nie |Nie |Nie  |[Więcej informacji](device-enrollment-manager-enroll.md)|
 |**Automatyczne rejestrowanie** | Nie |Tak |Nie | [Więcej informacji](./windows-enroll.md#enable-windows-10-automatic-enrollment)|
+|**Rozwiązanie Autopilot** |Tak |Tak |Nie | [Więcej informacji](enrollment-autopilot.md)]
 |**Rejestrowanie zbiorcze** |Nie |Nie |Nie | [Więcej informacji](./windows-bulk-enroll.md) |
+|**Współzarządzanie** |Nie |Tak |Nie | [Więcej informacji na](https://docs.microsoft.com/sccm/core/clients/manage/co-management-overview)]
+|**Obiekt zasad grupy** |Nie |Tak |Nie | [Więcej informacji na](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)]
+
 
 ## <a name="android-enrollment-methods"></a>Metody rejestracji systemu Android
 

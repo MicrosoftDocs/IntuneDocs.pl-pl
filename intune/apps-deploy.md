@@ -15,12 +15,12 @@ ms.assetid: dc349e22-9e1c-42ba-9e70-fb2ef980ef7a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e5442b45ed180d10943dfd5d1a1ef1546d693b2b
-ms.sourcegitcommit: 11bd3dbbc9dd762df7c6d20143f2171799712547
+ms.openlocfilehash: f7b875d370880f28fa6a611bd5f66fb54b02955d
+ms.sourcegitcommit: b96568a77d3cb6f602e7577446996fe7dde169bd
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48903424"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51610111"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Przypisywanie aplikacji do grup przy użyciu usługi Microsoft Intune
 
@@ -58,7 +58,7 @@ Poniższa tabela zawiera listę różnych opcji przypisywania aplikacji do użyt
 6. W sekcji **Zarządzaj** menu wybierz pozycję **Przypisania**.
 7. Wybierz pozycję **Dodaj grupę**, aby otworzyć okienko **Dodawanie grupy** powiązane z aplikacją.
 8. Dla określonej aplikacji wybierz **typ przypisania**:
-   - **Dostępne dla zarejestrowanych urządzeń**: użytkownicy instalują aplikację z witryny internetowej lub aplikacji Portal firmy.
+   - **Dostępne dla zarejestrowanych urządzeń**: przypisz aplikację do grupy użytkowników, którzy mogą zainstalować aplikację z witryny internetowej lub aplikacji Portal firmy.
    - **Dostępne z rejestracją lub bez**: przypisz tę aplikację do grup użytkowników, których urządzenia nie są zarejestrowane w usłudze Intune. Aplikacje z zarządzanego sklepu Google Play nie obsługują tej opcji. 
    - **Wymagane**: aplikacja jest instalowana na urządzeniach w wybranych grupach.
    - **Odinstaluj**: aplikacja jest odinstalowywana z urządzeń w wybranych grupach.

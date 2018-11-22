@@ -5,23 +5,45 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/22/2018
+ms.date: 11/6/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b794ec40d05358ddd1aa3179c2f4060b2cd6fe1d
-ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
+ms.openlocfilehash: 23e993f883b149e86ce83e0e028572f55468b84b
+ms.sourcegitcommit: be6f6b750635ebc7956dd2d60a0e131d124b2fc3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236513"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51947313"
 ---
 # <a name="configure-vpn-settings-on-ios-devices-in-microsoft-intune"></a>Konfigurowanie ustawień sieci VPN dla urządzeń z systemem iOS w usłudze Microsoft Intune
 
 Usługa Microsoft Intune obejmuje wiele ustawień sieci VPN, które mogą być wdrażane na urządzeniach z systemem iOS. Te ustawienia są używane do tworzenia i konfigurowania połączeń sieci VPN z siecią Twojej organizacji. W tym artykule opisano te ustawienia. Niektóre ustawienia są dostępne tylko dla niektórych klientów sieci VPN, takich jak Citrix, Zscaler itp.
+
+## <a name="connection-type"></a>Typ połączenia
+
+Umożliwia wybór typu połączenia sieci VPN z poniższej listy dostawców:
+
+- **Check Point Capsule VPN**
+- **Cisco Legacy AnyConnect**: dotyczy aplikacji [Cisco Legacy AnyConnect](https://itunes.apple.com/app/cisco-legacy-anyconnect/id392790924) w wersji 4.0.5x i starszej.
+- **Cisco AnyConnect**: dotyczy aplikacji [Cisco AnyConnect](https://itunes.apple.com/app/cisco-anyconnect/id1135064690) w wersji 4.0.7x i nowszej.
+- **SonicWall Mobile Connect**
+- **F5 Access Legacy**: dotyczy aplikacji F5 Access w wersji 2.1 i starszej.
+- **F5 Access**: dotyczy aplikacji F5 Access w wersji 3.0 i nowszej.
+- **Palo Alto Networks GlobalProtect (starsza wersja)**: dotyczy aplikacji Palo Alto Networks GlobalProtect w wersji 4.1 i starszej.
+- **Palo Alto Networks GlobalProtect**: dotyczy aplikacji Palo Alto Networks GlobalProtect w wersji 5.0 i nowszej.
+- **Pulse Secure**
+- **Cisco (IPSec)**
+- **Sieć VPN Citrix**
+- **Citrix SSO**
+- **Zscaler**: wymaga integracji rozwiązania Zscaler Private Access (ZPA) z kontem usługi Azure AD. Aby uzyskać szczegółowe instrukcje, zobacz [dokumentację rozwiązania Zscaler](https://help.zscaler.com/zpa/configuration-example-microsoft-azure-ad#Azure_UserSSO). 
+- **Niestandardowa sieć VPN**
+
+> [!NOTE]
+> Firmy Cisco, Citrix, F5 i Palo Alto ogłosiły, że ich starsi klienci nie działają w systemie iOS 12. Należy przeprowadzić migrację do nowych aplikacji tak szybko, jak to możliwe. Aby uzyskać więcej informacji, zobacz [blog zespołu pomocy technicznej usługi Microsoft Intune](https://go.microsoft.com/fwlink/?linkid=2013806&clcid=0x409).
 
 ## <a name="base-vpn-settings"></a>Podstawowe ustawienia sieci VPN
 
@@ -37,44 +59,28 @@ Ustawienia wymienione na poniższej liście są określane przez wybrany typ po�
 
     > [!NOTE]
     > Jeśli w przypadku sieci VPN Cisco IPsec używana jest metoda uwierzytelniania polegająca na podaniu nazwy użytkownika i hasła, użytkownicy końcowi muszą dostarczyć wspólny klucz tajny za pomocą niestandardowego profilu programu Apple Configurator.
-  
-- **Typ połączenia**: umożliwia wybór typu połączenia sieci VPN z poniższej listy dostawców:
-  - **Check Point Capsule VPN**
-  - **Cisco Legacy AnyConnect**: dotyczy aplikacji [Cisco Legacy AnyConnect](https://itunes.apple.com/app/cisco-legacy-anyconnect/id392790924) w wersji 4.0.5x i starszej.
-  - **Cisco AnyConnect**: dotyczy aplikacji [Cisco AnyConnect](https://itunes.apple.com/app/cisco-anyconnect/id1135064690) w wersji 4.0.7x i nowszej.
-  - **SonicWall Mobile Connect**
-  - **F5 Access Legacy**: dotyczy aplikacji F5 Access w wersji 2.1 i starszej.
-  - **F5 Access**: dotyczy aplikacji F5 Access w wersji 3.0 i nowszej.
-  - **Palo Alto Networks GlobalProtect (starsza wersja)**: dotyczy aplikacji Palo Alto Networks GlobalProtect w wersji 4.1 i starszej.
-  - **Palo Alto Networks GlobalProtect**: dotyczy aplikacji Palo Alto Networks GlobalProtect w wersji 5.0 i nowszej.
-  - **Pulse Secure**
-  - **Cisco (IPSec)**
-  - **Sieć VPN Citrix**
-  - **Citrix SSO**
-  - **Zscaler**: wymaga integracji rozwiązania Zscaler Private Access (ZPA) z kontem usługi Azure AD. Aby uzyskać szczegółowe instrukcje, zobacz [dokumentację rozwiązania Zscaler](https://help.zscaler.com/zpa/configuration-example-microsoft-azure-ad#Azure_UserSSO). 
-  - **Niestandardowa sieć VPN**    
 
-    > [!NOTE]
-    > Firmy Cisco, Citrix, F5 i Palo Alto ogłosiły, że ich starsi klienci nie działają w systemie iOS 12. Należy przeprowadzić migrację do nowych aplikacji tak szybko, jak to możliwe. Aby uzyskać więcej informacji, zobacz [blog zespołu pomocy technicznej usługi Microsoft Intune](https://go.microsoft.com/fwlink/?linkid=2013806&clcid=0x409).
-
-* **Wykluczone adresy URL** (tylko rozwiązania Zscaler): po nawiązaniu połączenia z siecią VPN rozwiązania Zscaler wymienione adresy URL są dostępne poza chmurą Zscaler. 
+- **Wykluczone adresy URL** (tylko rozwiązania Zscaler): po nawiązaniu połączenia z siecią VPN rozwiązania Zscaler wymienione adresy URL są dostępne poza chmurą Zscaler. 
 
 - **Podziel tunelowanie**: ustawienie **Włącz** lub **Wyłącz**. Ta opcja pozwala urządzeniom decydować, z którego połączenia skorzystać, w zależności od ruchu. Na przykład użytkownik w hotelu używa połączenia sieci VPN, aby uzyskać dostęp do plików roboczych, ale podczas zwykłego przeglądania Internetu skorzysta ze standardowej sieci hotelowej.
 
-- **Włączanie kontroli dostępu do sieci**: to ustawienie jest elementem zastępczym dla klientów sieci VPN, takich jak Citrix, umożliwiającym zezwolenie na umieszczenie identyfikatora urządzenia w profilu sieci VPN na potrzeby użycia z kontrolą dostępu do sieci. Po wybraniu pozycji **Zgadzam się** ten identyfikator urządzenia zostanie dołączony do profilu sieci VPN. Obecnie żaden klient sieci VPN ani rozwiązanie partnerskie kontroli dostępu do sieci nie obsługuje tego nowego identyfikatora, więc urządzenia będą mogły nawiązywać połączenia z siecią VPN niezależnie od stanu zgodności. Zaktualizujemy ten dokument, gdy nasi partnerzy dodadzą obsługę identyfikatora.
+- **Identyfikator sieci VPN** (niestandardowa sieć VPN, Zscaler i Citrix): identyfikator używanej aplikacji sieci VPN udostępniany przez dostawcę sieci VPN.
+  - **Podaj pary klucz/wartość dla atrybutów niestandardowej sieci VPN Twojej organizacji**: dodaj lub zaimportuj **klucze** i **wartości**, aby dostosować połączenie swojej sieci VPN. Pamiętaj, że te wartości są zwykle dostarczane przez dostawcę sieci VPN.
+
+- **Włączanie kontroli dostępu do sieci (NAC)** (tylko aplikacja Citrix SSO): po wybraniu pozycji **Zgadzam się** identyfikator urządzenia będzie uwzględniany w profilu sieci VPN. Ten identyfikator może służyć do uwierzytelniania w sieci VPN w celu zezwolenia na dostęp do sieci lub uniemożliwienia tego dostępu.
+
+  **W przypadku korzystania z aplikacji Citrix SSO z aplikacją Gateway** pamiętaj, aby:
+
+  - Upewnić się, że używasz aplikacji Citrix Gateway 12.0.59 lub nowszej.
+  - Upewnić się, że użytkownicy zainstalowali na swoich urządzeniach aplikację Citrix SSO 1.1.6 lub nowszą.
+  - Zintegrować aplikację Citrix Gateway z usługą Intune na potrzeby kontroli dostępu do sieci zgodnie z opisem w przewodniku wdrażania [Integrating Microsoft Intune/Enterprise Mobility Suite with NetScaler (LDAP+OTP Scenario)](https://www.citrix.com/content/dam/citrix/en_us/documents/guide/integrating-microsoft-intune-enterprise-mobility-suite-with-netscaler.pdf) (Integrowanie usługi Microsoft Intune/pakietu Enterprise Mobility Suite z rozwiązaniem NetScaler (scenariusz LDAP+OTP)) firmy Citrix.
+  - Włączyć kontrolę dostępu do sieci w profilu sieci VPN.
 
   Ważne informacje:  
 
-  - Po włączeniu tego ustawienia połączenie z siecią VPN jest rozłączane co 24 godziny.
-  - Identyfikator urządzenia jest częścią profilu, ale nie jest widoczny w usłudze Intune ani w profilu. Ten identyfikator nie jest nigdzie zapisywany przez firmę Microsoft ani nie jest przez nią udostępniany. Po dodaniu obsługi przez partnerów sieci VPN klient sieci VPN, taki jak Citrix SSO, będzie mógł pobrać identyfikator i wysłać zapytanie do usługi Intune, aby potwierdzić, że urządzenie jest zarejestrowane, oraz określić, czy profil sieci VPN jest zgodny.
+  - Po włączeniu kontroli dostępu do sieci połączenie z siecią VPN jest rozłączane co 24 godziny.
+  - Identyfikator urządzenia jest częścią profilu, ale nie jest widoczny w usłudze Intune. Ten identyfikator nie jest nigdzie zapisywany przez firmę Microsoft ani nie jest przez nią udostępniany. Po dodaniu obsługi przez partnerów sieci VPN klient sieci VPN, taki jak Citrix SSO, będzie mógł pobrać identyfikator i wysłać zapytanie do usługi Intune, aby potwierdzić, że urządzenie jest zarejestrowane, oraz określić, czy profil sieci VPN jest zgodny.
   - Aby usunąć to ustawienie, ponownie utwórz profil i nie wybieraj pozycji **Zgadzam się**. Następnie ponownie przypisz profil.
-
-## <a name="custom-vpn-settings"></a>Niestandardowe ustawienia sieci VPN
-
-W przypadku wybrania pozycji **Niestandardowa sieć VPN** jako typu połączenia skonfiguruj także następujące ustawienia. Te ustawienia są również widoczne dla połączeń rozwiązania Zscaler i Citrix.
-
-- **Identyfikator sieci VPN**: to jest identyfikator używanej aplikacji sieci VPN udostępniony przez dostawcę sieci VPN.
-- **Podaj pary klucz/wartość dla atrybutów niestandardowej sieci VPN Twojej organizacji**: dodaj lub zaimportuj **klucze** i **wartości**, aby dostosować połączenie swojej sieci VPN. Pamiętaj, że te wartości są zwykle dostarczane przez dostawcę sieci VPN.
 
 ## <a name="automatic-vpn-settings"></a>Ustawienia automatycznego połączenia VPN
 

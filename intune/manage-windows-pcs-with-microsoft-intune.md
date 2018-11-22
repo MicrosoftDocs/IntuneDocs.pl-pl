@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/17/2018
+ms.date: 11/13/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,19 +14,19 @@ ms.assetid: 3b8d22fe-c318-4796-b760-44f1ccf34312
 ms.reviewer: owenyen
 ms.suite: ems
 ms.custom: intune-classic-keep
-ms.openlocfilehash: ef21f22a4808518ce8557b761e4181f8f6a655c3
-ms.sourcegitcommit: ed97b68f08c1a8469f0b45bc1c839a0b5f5c71e0
+ms.openlocfilehash: f311d8a389d551ed834d955c5d1c59dbc9c3c4a2
+ms.sourcegitcommit: b96568a77d3cb6f602e7577446996fe7dde169bd
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45978250"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51610026"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Zarządzanie komputerami z systemem Windows przy użyciu oprogramowania klienckiego usługi Intune
 
 [!INCLUDE [classic-portal](includes/classic-portal.md)]
 
 > [!NOTE]
-> Możesz użyć usługi Microsoft Intune do zarządzania komputerami z systemem Windows albo [jako urządzeniami przenośnymi z wykorzystaniem zarządzania urządzeniami przenośnymi (MDM)](windows-enroll.md), albo jako komputerami z wykorzystaniem oprogramowania klienckiego usługi Intune zgodnie z poniższym opisem. Jednak firma Microsoft zaleca, aby klienci [używali rozwiązania MDM do zarządzania](windows-enroll.md) zawsze, gdy jest to możliwe.
+> Możesz użyć usługi Microsoft Intune do zarządzania komputerami z systemem Windows albo [jako urządzeniami przenośnymi z wykorzystaniem zarządzania urządzeniami przenośnymi (MDM)](windows-enroll.md), albo jako komputerami z wykorzystaniem oprogramowania klienckiego usługi Intune zgodnie z poniższym opisem. Jednak firma Microsoft zaleca, aby klienci [używali rozwiązania MDM do zarządzania](windows-enroll.md) zawsze, gdy jest to możliwe. Aby uzyskać więcej informacji, zobacz temat [Porównanie zarządzania komputerami z systemem Windows jako komputerami i jako urządzeniami mobilnymi](pc-management-comparison.md) 
 
 Usługa Intune zapewnia organizacjom kompleksowe rozwiązanie do zarządzania urządzeniami przenośnymi. Usługa Intune może zarządzać komputerami z systemem Windows jako urządzeniami przenośnymi przy użyciu nowoczesnych funkcji zarządzania urządzeniami wbudowanych w systemie operacyjnym Windows 10. Aby spełnić wymagania organizacji związane z zarządzaniem, usługa Intune może również zarządzać komputerami z systemem Windows jako komputerami przy użyciu oprogramowania klienckiego usługi Intune. W tej metodzie zarządzania używa się funkcji tradycyjnego zarządzania komputerami ze starszej wersji systemu operacyjnego Windows.
 
@@ -40,7 +40,8 @@ Usługa Intune obsługuje zarządzanie komputerami z systemem Windows jako kompu
 
 ## <a name="requirements-for-intune-pc-client-management"></a>Wymagania dotyczące funkcji zarządzania komputerami przy użyciu klienta usługi Intune
 
-**Sprzęt**: poniżej podano minimalne wymagania dotyczące sprzętu w przypadku instalowania oprogramowania klienckiego usługi Intune:
+**Sprzęt**:  
+Poniżej podano minimalne wymagania dotyczące sprzętu w przypadku instalowania oprogramowania klienckiego usługi Intune:
 
 |Wymaganie|Więcej informacji|
 |---------------|--------------------|
@@ -48,7 +49,8 @@ Usługa Intune obsługuje zarządzanie komputerami z systemem Windows jako kompu
 |Procesor i pamięć|Należy zapoznać się z wymaganiami dotyczącymi procesora i pamięci RAM dla systemu operacyjnego komputera.|
 |Miejsce na dysku|200 MB dostępnego miejsca na dysku przed zainstalowaniem oprogramowania klienckiego.|
 
-**Oprogramowanie**: poniżej podano wymagania dotyczące oprogramowania w przypadku instalowania oprogramowania klienckiego:
+**Oprogramowanie**:  
+Poniżej podano wymagania dotyczące oprogramowania w przypadku instalowania oprogramowania klienta:
 
 |Wymaganie|Więcej informacji|
 |---------------|--------------------|

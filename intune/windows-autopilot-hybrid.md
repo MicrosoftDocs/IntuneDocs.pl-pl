@@ -15,12 +15,12 @@ ms.assetid: 8518d8fa-a0de-449d-89b6-8a33fad7b3eb
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7ce54f3bc51735c763359b3e59832454d0a89fad
-ms.sourcegitcommit: cfce9318b5b5a3005929be6eab632038a12379c3
+ms.openlocfilehash: 1a10d434fbdb5d827c7ecb89d1ae2f7e43c0f951
+ms.sourcegitcommit: 1e6fee4032c50ab41a5166db39fbea80a731c541
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51298092"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51654912"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-using-intune-and-windows-autopilot-preview"></a>Wdrażanie urządzeń przyłączonych do hybrydowej usługi Active Directory przy użyciu usługi Intune i rozwiązania Windows Autopilot (wersja zapoznawcza)
 Za pomocą usługi Intune i rozwiązania Windows Autopilot można skonfigurować urządzenia przyłączone do hybrydowej usługi Azure Active Directory. Aby to zrobić, wykonaj poniższe czynności.
@@ -110,12 +110,13 @@ Jednostka organizacyjna, której przyznano uprawnienia do tworzenia komputerów,
 
 Łącznik usługi Intune dla usługi Active Directory musi być zainstalowany na komputerze z systemem Windows Server 2016, który ma dostęp do Internetu i usługi Active Directory. W celu zwiększenia skalowalności i dostępności lub obsługi wielu domen usługi Active Directory można zainstalować wiele łączników w danym środowisku. Zaleca się instalowanie łącznika na serwerze, na którym nie są uruchomione inne łączniki usługi Intune.
 
-1. W usłudze [Intune](https://aka.ms/intuneportal) wybierz pozycję **Rejestracja urządzeń** > **Rejestracja urządzeń z systemem Windows** > **Łącznik usługi Intune dla usługi Active Directory (wersja zapoznawcza)** > **Dodaj łącznik**. 
-2. Postępuj zgodnie z instrukcjami, aby pobrać łącznik.
-3. Otwórz pobrany plik konfiguracji łącznika, aby zainstalować łącznik (ODJConnectorBootstrapper.exe).
-4. Po zakończeniu instalacji wybierz pozycję **Konfiguruj**.
-5. Wybierz pozycję **Zaloguj się**.
-6. Wprowadź poświadczenia roli Administrator globalny lub Administrator usługi Intune użytkownika.
+1. Upewnij się, że pakiet językowy został zainstalowany i skonfigurowany zgodnie z opisem w temacie [Intune Connector (Preview) language requirements](https://docs.microsoft.com/windows/deployment/windows-autopilot/intune-connector) (Wymagania językowe łącznika usługi Intune (wersja zapoznawcza)).
+2. W usłudze [Intune](https://aka.ms/intuneportal) wybierz pozycję **Rejestracja urządzeń** > **Rejestracja urządzeń z systemem Windows** > **Łącznik usługi Intune dla usługi Active Directory (wersja zapoznawcza)** > **Dodaj łącznik**. 
+3. Postępuj zgodnie z instrukcjami, aby pobrać łącznik.
+4. Otwórz pobrany plik konfiguracji łącznika, aby zainstalować łącznik (ODJConnectorBootstrapper.exe).
+5. Po zakończeniu instalacji wybierz pozycję **Konfiguruj**.
+6. Wybierz pozycję **Zaloguj się**.
+7. Wprowadź poświadczenia roli Administrator globalny lub Administrator usługi Intune użytkownika.
 8. Wybierz pozycję **Rejestracja urządzeń** > **Rejestracja urządzeń z systemem Windows** > **Łącznik usługi Intune dla usługi Active Directory (wersja zapoznawcza)** i upewnij się, że połączenie jest w stanie **Aktywne**.
 
 ### <a name="configure-web-proxy-settings"></a>Konfigurowanie ustawień internetowego serwera proxy

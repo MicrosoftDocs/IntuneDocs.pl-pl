@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e71c6bdb-d75c-404f-8e38-24a663be81c2
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a01bbf8e65c72b303d1474a92b93796051bfc02e
-ms.sourcegitcommit: 503d76e0b066d0db77bcc48e5116c861f6a6fb57
+ms.openlocfilehash: 2c47cd8ea136bcead14e70769f63df7b9b8f0e20
+ms.sourcegitcommit: b96568a77d3cb6f602e7577446996fe7dde169bd
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47187805"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51610094"
 ---
 # <a name="see-device-details-in-intune"></a>Wyświetlanie szczegółów urządzenia w usłudze Intune
 
@@ -45,7 +45,7 @@ W tym artykule przedstawiono sposób wyświetlania wszystkich urządzeń i ich w
      - Uruchamianie sesji pomocy zdalnej
    - Za pomocą opcji **Właściwości** możesz przypisać [utworzoną kategorię urządzeń](device-group-mapping.md) i zmienić własność urządzenia na urządzenie osobiste lub urządzenie firmowe.
    - **Sprzęt** — zawiera wiele szczegółów dotyczących urządzenia, w tym identyfikator urządzenia, system operacyjny wraz z wersją, miejsce do magazynowania, model i producenta, ustawienia dostępu warunkowego oraz inne informacje.
-   - **Odnalezione aplikacje** — wyświetla listę wszystkich aplikacji, które zostały odnalezione jako zainstalowane na urządzeniu przez usługę Intune, wraz z wersjami aplikacji. Możesz też **wyeksportować** listę aplikacji do pliku CSV.
+   - **Odnalezione aplikacje** — wyświetla listę wszystkich aplikacji, które zostały odnalezione jako zainstalowane na urządzeniu przez usługę Intune, wraz z wersjami aplikacji. Możesz też **wyeksportować** listę aplikacji do pliku CSV. Ta lista jest aktualizowana co 7 dni.
    - **Zgodność urządzenia** — wyświetla wszystkie przypisane zasady zgodności oraz informację o tym, czy urządzenie jest zgodne.
    - **Konfiguracja urządzenia** — zawiera wszystkie zasady konfiguracji urządzeń przypisane do urządzenia oraz informację o tym, czy wdrożenie zasad powiodło się.
 
@@ -60,8 +60,10 @@ Usługa Intune zbiera listę aplikacji tylko na urządzeniach należących do fi
 |iOS|Tylko aplikacje zarządzane|Wszystkie aplikacje zainstalowane na urządzeniu|
 |macOS|Wszystkie aplikacje zainstalowane na urządzeniu|Wszystkie aplikacje zainstalowane na urządzeniu|  
 |Android|Tylko aplikacje zarządzane|Wszystkie aplikacje zainstalowane na urządzeniu|  
+|Android Enterprise|Tylko aplikacje zarządzane|Tylko aplikacje zainstalowane w profilu służbowym|  
 
 ## <a name="hardware-device-details"></a>Szczegóły urządzeń
+W zależności od operatora danego urządzenia mogą nie zostać zebrane wszystkie szczegóły
 
 |Szczegóły|Opis|Platforma| 
 |--------------|----------------------|----|  
