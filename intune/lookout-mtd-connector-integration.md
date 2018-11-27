@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 5b0d7644-3183-45ba-a165-0d82d70cb71e
 ms.reviewer: heenamac
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: fe8a55153ccc2b28c23ec2f32a4285d20afaaf6a
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
+ms.openlocfilehash: f0ff43e5a25a2f2d7d97564e638d01b014ab81cb
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48232188"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52181075"
 ---
 # <a name="set-up-your-lookout-mobile-threat-defense-integration-with-intune"></a>Konfigurowanie integracji usługi Lookout Mobile Threat Defense za pomocą usługi Intune
 
@@ -50,11 +51,11 @@ Dzierżawa usługi Lookout Mobility Endpoint Security zostanie skojarzona z subs
 
 Wykonaj poniższe kroki w celu zebrania informacji, które musisz przekazać zespołowi pomocy technicznej firmy Lookout.
 
-1. Zaloguj się do witryny [Azure Portal](https://portal.azure.com) i wybierz swoją subskrypcję. 
+1. Zaloguj się do witryny [Azure Portal](https://portal.azure.com) i wybierz swoją subskrypcję. 
 
-2. Po wybraniu nazwy subskrypcji wynikowy adres URL zawiera identyfikator subskrypcji.  Jeśli masz problemy ze znalezieniem identyfikatora subskrypcji, zobacz ten [artykuł pomocy technicznej firmy Microsoft](https://support.office.com/article/Find-your-Office-365-tenant-ID-6891b561-a52d-4ade-9f39-b492285e2c9b), aby uzyskać wskazówki dotyczące znajdowania identyfikatora subskrypcji.
+2. Po wybraniu nazwy subskrypcji wynikowy adres URL zawiera identyfikator subskrypcji.  Jeśli masz problemy ze znalezieniem identyfikatora subskrypcji, zobacz ten [artykuł pomocy technicznej firmy Microsoft](https://support.office.com/article/Find-your-Office-365-tenant-ID-6891b561-a52d-4ade-9f39-b492285e2c9b), aby uzyskać wskazówki dotyczące znajdowania identyfikatora subskrypcji.
 
-3. Wyszukaj identyfikator grupy usługi Azure AD. Konsola usługi Lookout obsługuje 2 poziomy dostępu:  
+3. Wyszukaj identyfikator grupy usługi Azure AD. Konsola usługi Lookout obsługuje 2 poziomy dostępu:  
    * **Pełny dostęp:** administrator usługi Azure AD może utworzyć grupę użytkowników, którzy mają pełny dostęp, i opcjonalnie utworzyć grupę użytkowników z ograniczonym dostępem.  Tylko użytkownicy z tych grup będą mogli logować się do **konsoli usługi Lookout**.
    * **Ograniczony dostęp:** użytkownicy w tej grupie nie będą mieć dostępu do kilku modułów konsoli usługi Lookout związanych z konfiguracją oraz rejestracją i będą mieć dostęp tylko do odczytu do modułu **Security Policy** (Zasady zabezpieczeń) konsoli usługi Lookout.  
 

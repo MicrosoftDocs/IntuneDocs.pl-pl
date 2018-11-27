@@ -13,12 +13,16 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: ''
 Customer intent: As an Intune admin, I want to set up Windows Autopilot so that users can enroll in Intune.
-ms.openlocfilehash: a90f53bfc5841cc0f773751e7df917d8fc8b6cf8
-ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
+ms.reviewer: angerobe
+ms.suite: ems
+search.appverid: MET150
+ms.custom: intune
+ms.openlocfilehash: 087f890f84c9bc0ff0c46f129ef84b8a268c738e
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49431938"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52187739"
 ---
 # <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>Samouczek: rejestrowanie urządzeń z systemem Windows w usłudze Intune przy użyciu rozwiązania Autopilot
 Rozwiązanie Windows Autopilot upraszcza rejestrowanie urządzeń. Dzięki usłudze Microsoft Intune i rozwiązaniu Autopilot można przekazać nowe urządzenia użytkownikom końcowym bez konieczności tworzenia, konserwowania i stosowania niestandardowych obrazów systemów operacyjnych. 

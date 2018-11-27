@@ -13,19 +13,20 @@ ms.technology: ''
 ms.assetid: 40622ced-6029-4abf-873e-b51d2b51934c
 ms.reviewer: tscott
 ms.suite: ems
+search.appverid: MET150
 ms.custom: ''
-ms.openlocfilehash: ca4b289f059cc4fc8bc77518e06e9cee0f8e7864
-ms.sourcegitcommit: b47fad133ef8ef1eb65484463431c6c53f6a638a
+ms.openlocfilehash: f4ead71e626316b515646d474cc006be7cf2f774
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35291625"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52190374"
 ---
 # <a name="troubleshoot-company-resource-access-problems-with-microsoft-intune"></a>Rozwiązywanie problemów z dostępem do zasobów firmy przy użyciu usługi Microsoft Intune
 
 Kody błędów i stanów przedstawione w tym temacie ułatwiają rozwiązywanie problemów w przypadku, gdy akcja usługi Microsoft Intune zwraca kod błędu.
 
-Jeśli te informacje nie pomogą rozwiązać problemu, zobacz [How to get support for Microsoft Intune](get-support.md) (Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune), aby znaleźć więcej sposobów uzyskania pomocy.
+Jeśli te informacje nie pomogą rozwiązać problemu, zobacz [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](get-support.md), aby znaleźć więcej sposobów uzyskania pomocy.
 
 ## <a name="status-codes-for-mdm-managed-windows-devices"></a>Kody stanu dla urządzeń z systemem Windows zarządzanych przez usługę MDM
 
