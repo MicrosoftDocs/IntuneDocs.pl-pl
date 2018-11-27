@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: a8e38e29-f5e3-4a71-a170-d3b1a06e37c6
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
+search.appverid: MET150
 ms.custom: ''
-ms.openlocfilehash: 8e73a9cf189ba44a9f093559b9175dfa947a38e1
-ms.sourcegitcommit: a30cfdb3d3f97b6d5943db2d842011a6f60115f0
+ms.openlocfilehash: 1d8ccd4e432623cf7d0ce4ce66651a95e13b8473
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864595"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52186498"
 ---
 # <a name="create-a-design"></a>Tworzenie projektu
 
@@ -34,11 +35,11 @@ Twój projekt usługi Intune będzie opierać się na zbieranych przez Ciebie in
 
 -   Uwagi dotyczące platform urządzeń
 
--   Wymagania do spełnienia  
+-   Wymagania do spełnienia  
 
 Chociaż wymagania dotyczące infrastruktury lokalnej są minimalne, plan projektu jest nadal pomocny, aby zapewnić istnienie prawidłowego rozwiązania do zarządzania urządzeniami mobilnymi spełniającego Twoje cele, zamierzenia i wymagania.
 
-Omówmy teraz każde z tych zagadnień w bardziej szczegółowy sposób. 
+Omówmy teraz każde z tych zagadnień w bardziej szczegółowy sposób. 
 
 ## <a name="record-your-current-environment"></a>Rejestrowanie bieżącego środowiska
 Ponadto często mają miejsce zmiany projektu w fazach wdrażania i testowania. Użyj swojego planu projektu do dokumentowania tych zmian i ich uzasadnień w miarę ich występowania.

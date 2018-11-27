@@ -13,13 +13,14 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: c46a90d36ba8b50703e62fc663b1d090ac1bcfc7
-ms.sourcegitcommit: b96568a77d3cb6f602e7577446996fe7dde169bd
+ms.openlocfilehash: e677b62c7610739079184bc5ef59e47544f833bb
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51610128"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52190221"
 ---
 # <a name="what-is-device-enrollment"></a>Co to jest rejestrowanie urządzenia?
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -55,7 +56,7 @@ Domyślnie w usłudze Intune mogą być rejestrowane urządzenia dla dowolnej pl
 |**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#bring-your-own-device)** | Nie |  Tak |   Nie | [Więcej informacji](windows-enroll.md)|
 |**[Menedżer rejestracji urządzeń](#device-enrollment-manager)**| Nie |Nie |Nie  |[Więcej informacji](device-enrollment-manager-enroll.md)|
 |**Automatyczne rejestrowanie** | Nie |Tak |Nie | [Więcej informacji](./windows-enroll.md#enable-windows-10-automatic-enrollment)|
-|**Rozwiązanie Autopilot** |Tak |Tak |Nie | [Więcej informacji](enrollment-autopilot.md)]
+|**Rozwiązanie Autopilot** |Tak |Tak |Nie | [Więcej informacji na](enrollment-autopilot.md)]
 |**Rejestrowanie zbiorcze** |Nie |Nie |Nie | [Więcej informacji](./windows-bulk-enroll.md) |
 |**Współzarządzanie** |Nie |Tak |Nie | [Więcej informacji na](https://docs.microsoft.com/sccm/core/clients/manage/co-management-overview)]
 |**Obiekt zasad grupy** |Nie |Tak |Nie | [Więcej informacji na](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)]

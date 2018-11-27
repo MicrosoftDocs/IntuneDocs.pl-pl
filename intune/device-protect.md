@@ -12,19 +12,23 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: ''
-ms.openlocfilehash: bb9606a8586e0dbdbb566def344c9c551cb09e52
-ms.sourcegitcommit: a8b544975156dd45c2bf215b57ac994415b568bc
+ms.reviewer: angerobe
+ms.suite: ems
+search.appverid: MET150
+ms.custom: intune-classic
+ms.openlocfilehash: 06f14b0ba1edcde28c7f2c732ab286e80f186bf2
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39164825"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52188266"
 ---
 # <a name="protect-devices-with-microsoft-intune"></a>Ochrona danych za pomocą usługi Microsoft Intune
 
 Usługa Microsoft Intune pomaga chronić zarządzane urządzenia i dane przechowywane na tych urządzeniach.
 
 ## <a name="device-configuration"></a>Konfiguracja urządzenia
-[Zasady konfiguracji](device-profiles.md) usługi Intune ułatwiają ochronę i konfigurowanie urządzeń przez kontrolowanie wielu ustawień i funkcji. Na przykład:
+[Zasady konfiguracji](device-profiles.md) usługi Intune ułatwiają ochronę i konfigurowanie urządzeń przez kontrolowanie wielu ustawień i funkcji. Przykład:
 - Możesz ograniczyć użycie funkcji sprzętu na urządzeniu, takich jak funkcje aparatu lub Bluetooth.
 - Możesz skonfigurować zgodne i niezgodne aplikacje. Otrzymasz alert w przypadku zainstalowania niezgodnej aplikacji (a niektóre platformy mogą faktycznie zablokować instalację).
 

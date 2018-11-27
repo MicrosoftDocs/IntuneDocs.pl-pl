@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 1381a5ce-c743-40e9-8a10-4c218085bb5f
 ms.reviewer: heenamac
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 932feb064552e05536821d0e75e27059387bcf56
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 9a15c84ded066a26254737f75293b0d743fe5eab
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31029812"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52181228"
 ---
 # <a name="how-to-configure-intune-education-settings-for-shared-ipad-devices"></a>Jak skonfigurować ustawienia rozwiązań dla edukacji usługi Intune dla udostępnianych urządzeń iPad
 
@@ -183,7 +184,7 @@ Urządzenie jest teraz skojarzone z kategorią urządzeń. Powtórz ten proces d
 5. W okienku profilów wybierz pozycję **Utwórz profil**.
 6. W okienku **Utwórz skojarzenie** wypełnij pola **Nazwa** i **Opis**.
 7. Wybierz kolejno pozycje **Wybierz klasy** > **Konfiguruj**, aby skojarzyć grupy z profilem koszyka.
-8. Wybierz klasy do dołączenia do profilu koszyka, a następnie wybierz pozycję **Wybierz**. 
+8. Wybierz klasy do dołączenia do profilu koszyka, a następnie wybierz pozycję **Wybierz**. 
 9. Wybierz kolejno pozycje **Wybierz koszyki** > **Konfiguruj**, aby skojarzyć grupy z profilem koszyka.
 10. Wybierz grupy do włączenia do profilu koszyka, a następnie wybierz pozycję **Wybierz**.
 11. W okienku **Utwórz skojarzenie** wybierz pozycję **Zapisz** w celu zapisania profilu koszyka.
@@ -198,7 +199,7 @@ Profil zostanie utworzony i wyświetlony w okienku z listą profilów.
 4. W okienku **Konfiguracja urządzeń** wybierz kolejno pozycje **Monitoruj** > **Stan przypisania**.
 5. W okienku **Stan przypisania** wybierz utworzony **Profil koszyka**.
 6. W okienku **Profil koszyka** wybierz pozycję **Przypisania**, a następnie w obszarze **Dołączanie** wybierz pozycję **Wybierz grupy do uwzględnienia**.
-7. Wybierz klasy, które mają być celem profilu koszyka (nie należy wybierać grupy), a następnie wybierz pozycję **Wybierz**. 
+7. Wybierz klasy, które mają być celem profilu koszyka (nie należy wybierać grupy), a następnie wybierz pozycję **Wybierz**. 
 8. Gdy skończysz, wybierz pozycję **Zapisz**.
 
 Przypisanie zostanie zakończone i usługa Intune wdroży profil aplikacji Classroom na urządzeniach docelowych na podstawie przypisania klasy.
