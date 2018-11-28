@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 7fc95d17-098e-4da5-8a09-a96476569dd9
 ms.reviewer: cacamp
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 47917943188b2b3d0448845b1e356d181ec8f3af
-ms.sourcegitcommit: 9d08545727543b434dd270371fa50233470f2bce
+ms.openlocfilehash: 103b509a562e777a28882f21aef2ca36354533f5
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50410841"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52183255"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune
 
@@ -116,7 +117,7 @@ W tym widoku możesz wykonać następujące czynności:
 4. [Wyświetlanie spraw pomocy technicznej](#view-support-cases), które zostały otwarte wcześniej przy użyciu tego nowego przepływu pracy  
 
 ### <a name="specify-details-about-an-issue"></a>Określanie szczegółów problemu
-Po otwarciu pomocy i obsługi technicznej z lokalizacji, która jest obsługiwana przez nowe środowisko, zostanie otwarta strona **Potrzebujesz pomocy?**  . Na tej stronie możesz określić szczegóły problemu. Podczas wprowadzania informacji w konsoli będą wyświetlane typowe zapytania na podstawie używanych słów kluczowych. Możesz wybrać oferowaną podpowiedź lub dokończyć własny opis problemu. Jeśli wprowadzisz własny opis, wybierz pozycję **Uzyskaj pomoc**, aby go przesłać. Gdy prześlesz zapytanie, konsola zwróci informacje kontekstowe, które ułatwią rozwiązanie problemu.
+Po otwarciu Pomocy i obsługi technicznej z lokalizacji, która jest obsługiwana przez nowe środowisko, zostanie otwarta strona **Potrzebujesz pomocy?**  . Na tej stronie możesz określić szczegóły problemu. Podczas wprowadzania informacji w konsoli będą wyświetlane typowe zapytania na podstawie używanych słów kluczowych. Możesz wybrać oferowaną podpowiedź lub dokończyć własny opis problemu. Jeśli wprowadzisz własny opis, wybierz pozycję **Uzyskaj pomoc**, aby go przesłać. Gdy prześlesz zapytanie, konsola zwróci informacje kontekstowe, które ułatwią rozwiązanie problemu.
 
 Oto przykłady zapytań, które możesz przesłać:
   
