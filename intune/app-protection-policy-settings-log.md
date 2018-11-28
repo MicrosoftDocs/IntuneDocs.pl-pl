@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/15/2017
+ms.date: 11/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,17 +14,26 @@ ms.technology: ''
 ms.assetid: 4CD5EE94-7BA6-4F59-8E28-1EBCA7CA6436
 ms.reviewer: andcerat
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 05502c901f01ba134475ec69df3c42aa6e0e7480
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
+ms.openlocfilehash: eedbc17147c6f9e2988d954308f2332de10d00ab
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231765"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52189847"
 ---
 # <a name="review-client-app-protection-logs"></a>Przeglądanie dzienników ochrony aplikacji klienta
 
-Informacje na temat ustawień, które można przeglądać w dziennikach ochrony aplikacji. Dostęp do dzienników jest uzyskiwany przez włączenie trybu diagnostycznego usługi Intune dla aplikacji na kliencie mobilnym. W poniższej tabeli przedstawiono nazwy i opisy ustawień zarejestrowanych w dzienniku.
+Informacje na temat ustawień, które można przeglądać w dziennikach ochrony aplikacji. Uzyskaj dostęp do dzienników, włączając diagnostykę usługi Intune na kliencie mobilnym. 
+
+Proces włączania i zbierania dzienników zależy od platformy:
+- **Urządzenia z systemem Android** — użyj aplikacji *Portal firmy*. Zobacz [Wysyłanie dzienników do działu pomocy technicznej Twojej firmy pocztą e-mail](/intune-user-help/send-logs-to-your-it-admin-by-email-android).
+- **Urządzenia z systemem iOS** — użyj programu Managed Browser lub *Microsoft Edge* do zbierania dzienników. Aby uzyskać szczegółowe informacje, zobacz wpis w blogu zespołu pomocy technicznej usługi Intune [New Intune Diagnostic Console for Log Submission in the Intune Managed Browser](https://blogs.technet.microsoft.com/intunesupport/2017/11/10/support-tip-new-intune-diagnostic-console-for-log-submission-in-the-intune-managed-browser) (Nowa konsola diagnostyki usługi Intune do przesyłania dzienników w programie Intune Managed Browser). 
+- **Urządzenia z systemem Windows 10** — użyj narzędzia *MDMDiag* i dzienników zdarzeń. Zobacz temat [Diagnose MDM failures in Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) (Diagnozowanie błędów zarządzania urządzeniami przenośnymi w systemie Windows 10) w materiałach dotyczących zarządzania klientami z systemem Windows oraz wpis w blogu [Troubleshooting Windows 10 Intune Policy Failures](http://configmgrdogsarchive.com/2018/08/09/troubleshooting-windows-10-intune-policy-failures) (Rozwiązywanie problemów z błędami zasad usługi Intune w systemie Windows 10)
+
+
+W poniższej tabeli przedstawiono nazwy i opisy ustawień zarejestrowanych w dzienniku.
 
 ## <a name="app-protection-policy-settings"></a>Ustawienia zasad ochrony aplikacji
 

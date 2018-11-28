@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 64e5133d-1e23-4ee6-b556-f5d32c0e95da
 ms.reviewer: mghadial
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 09e4cfc314ea21294cd3de62611a089ec724a683
-ms.sourcegitcommit: f69f2663ebdd9c1def68423e8eadf30f86575f7e
+ms.openlocfilehash: 457b5b97bd13caddb5c60836940dd491eac752f8
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49075631"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52181891"
 ---
 # <a name="monitor-app-information-and-assignments-with-microsoft-intune"></a>Monitorowanie informacji o aplikacji i przypisań z użyciem usługi Microsoft Intune
 
@@ -67,7 +68,9 @@ Wykresy pokazują liczbę aplikacji dla następujących stanów:
 >    - Ukierunkowana zmiana zainstalowanej aplikacji zarządzanej może spowodować spadek liczby instalacji w bloku stanu, ale będzie nadal zgłaszana w wykrytych aplikacjach.
 >    - Przeznaczenie tej samej aplikacji dla wielu wystąpień w dzierżawie spowoduje wygenerowanie różnych liczników z powodu potencjalnego nakładania się użytkowników lub urządzeń. W każdym wystąpieniu aplikacji będą liczeni nakładający się użytkownicy, ale odnalezione aplikacje będą mieć powielone liczby.
 >    - Odnalezione aplikacje i stan aplikacji są zbierane w różnych przedziałach czasowych, które mogą spowodować rozbieżności liczby aplikacji.
- 
+> 
+> Ponadto, aplikacje systemu Android wdrożone przy użyciu opcji **Dostępne z rejestracją lub bez niej** zgłaszają stan instalacji aplikacji tylko w przypadku zarejestrowanych urządzeń. Stan instalacji aplikacji jest niedostępny dla urządzeń, których nie zarejestrowano w usłudze Intune.
+
 ### <a name="device-install-status"></a>Stan instalacji urządzenia
 
 Lista stanu urządzenia zostanie pokazana po wybraniu pozycji **Stan instalacji urządzenia** w sekcji **Monitorowanie** menu. Tabela szczegółów zawiera następujące kolumny:

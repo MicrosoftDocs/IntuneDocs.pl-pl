@@ -13,13 +13,14 @@ ms.technology: ''
 ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
 ms.reviewer: aanavath
 ms.suite: ems
+search.appverid: MET150
 ms.custom: ''
-ms.openlocfilehash: c9920e914a80ec3bb02f5066e6d6e34b2236c860
-ms.sourcegitcommit: 5d5448f6c365aeb01d6f2488bf122024b9616bec
+ms.openlocfilehash: db9f0ca860186222491906aa35baf1e92d14e548
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51212499"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52181347"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu iOS
 
@@ -126,7 +127,7 @@ Aby włączyć zestaw SDK aplikacji usługi Intune, wykonaj następujące kroki:
 
 4. Po włączeniu udostępniania łańcucha kluczy wykonaj następujące kroki, aby utworzyć oddzielną grupę dostępu, w której będą przechowywane dane zestawu SDK aplikacji usługi Intune. Grupę dostępu łańcucha kluczy możesz utworzyć za pomocą interfejsu użytkownika lub pliku uprawnień. Jeśli używasz interfejsu użytkownika do utworzenia grupy dostępu łańcucha kluczy, koniecznie wykonaj następujące czynności:
 
-   1. Jeśli dla Twojej aplikacji mobilnej nie zdefiniowano żadnych grup dostępu łańcucha kluczy, dodaj identyfikator pakietu aplikacji jako pierwszą grupę.
+   1. Jeśli dla Twojej aplikacji mobilnej nie zdefiniowano żadnych grup dostępu łańcucha kluczy, dodaj identyfikator pakietu aplikacji jako **pierwszą** grupę.
 
    2. Dodaj udostępnioną grupę łańcucha kluczy `com.microsoft.intune.mam` do istniejących grup dostępu. Zestaw SDK aplikacji usługi Intune używa tej grupy dostępu do przechowywania danych.
 
@@ -140,7 +141,7 @@ Aby włączyć zestaw SDK aplikacji usługi Intune, wykonaj następujące kroki:
            * `$(AppIdentifierPrefix)com.microsoft.adalcache`
 
       > [!NOTE]
-      > Plik uprawnień to plik XML, który jest unikatowy dla Twojej aplikacji mobilnej. Służy do określania specjalnych uprawnień i możliwości w Twojej aplikacji dla systemu iOS. Jeśli aplikacja nie miała wcześniej pliku uprawnień, włączenie udostępniania pęku kluczy (krok 3) powinno spowodować wygenerowanie takiego pliku dla aplikacji w środowisku Xcode.
+      > Plik uprawnień to plik XML, który jest unikatowy dla Twojej aplikacji mobilnej. Służy do określania specjalnych uprawnień i możliwości w Twojej aplikacji dla systemu iOS. Jeśli aplikacja nie miała wcześniej pliku uprawnień, włączenie udostępniania pęku kluczy (krok 3) powinno spowodować wygenerowanie takiego pliku dla aplikacji w środowisku Xcode. Upewnij się, że identyfikator pakietu aplikacji jest pierwszym wpisem na liście.
 
 5. Uwzględnij każdy protokół przekazywany przez aplikację do procedury `UIApplication canOpenURL`, w tablicy `LSApplicationQueriesSchemes` pliku Info.plist aplikacji. Pamiętaj o zapisaniu zmian przed przejściem do następnego kroku.
 

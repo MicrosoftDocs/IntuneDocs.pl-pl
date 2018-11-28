@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 975d8d84-792a-41ad-925a-4a7f1ae4dcaf
 ms.reviewer: heenamac
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 6deed5de94b72ec3dfb5e8336cc2a58678b4748f
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
+ms.openlocfilehash: aad6687a110642f3b21dc0cff3a791f4714c7949
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231478"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52187467"
 ---
 # <a name="zimperium-mobile-threat-defense-connector-with-intune"></a>Łącznik rozwiązania Zimperium Mobile Threat Defense z usługą Intune
 
@@ -58,7 +59,7 @@ Po wykryciu na urządzeniach złośliwego oprogramowania możesz zablokować na 
 
 ### <a name="control-access-based-on-threat-to-network"></a>Kontrola dostępu oparta na zagrożeniu dla sieci
 
-Wykrywanie w sieci zagrożeń, takich jak ataki typu **Man-in-the-middle**, i ochrona dostępu do sieci Wi-Fi w oparciu o ryzyko dotyczące urządzenia.
+Wykrywanie w sieci zagrożeń, takich jak ataki typu  **Man-in-the-middle** , i ochrona dostępu do sieci Wi-Fi na podstawie ryzyka dotyczącego urządzeń.
 
 **Blokowanie dostępu do sieci za pośrednictwem sieci Wi-Fi:**
 
@@ -70,7 +71,7 @@ Wykrywanie w sieci zagrożeń, takich jak ataki typu **Man-in-the-middle**, i oc
 
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Kontrola dostępu do usługi SharePoint Online oparta na zagrożeniu dla sieci
 
-Wykrywanie w sieci zagrożeń, takich jak ataki typu **Man-in-the-middle**, i blokowanie synchronizacji plików firmowych w oparciu o ryzyko dotyczące urządzenia.
+Wykrywanie w sieci zagrożeń, takich jak ataki typu  **Man-in-the-middle** , i blokowanie synchronizacji plików firmowych na podstawie ryzyka dotyczącego urządzeń.
 
 **Blokowanie usługi SharePoint Online po wykryciu zagrożeń sieciowych:**
 
@@ -94,7 +95,7 @@ Wykrywanie w sieci zagrożeń, takich jak ataki typu **Man-in-the-middle**, i bl
 
 -   Subskrypcja usługi Zimperium Mobile Threat Defense
 
-    -   Aby uzyskać więcej informacji, zobacz [witrynę internetową Zimperium](https://www.zimperium.com/zips-mobile-ips).
+    -   Aby uzyskać więcej informacji, zobacz  [witrynę internetową Zimperium](https://www.zimperium.com/zips-mobile-ips) .
 
 ## <a name="next-steps"></a>Następne kroki
 

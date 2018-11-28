@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 5E5A35D3-88F8-441B-8A0B-C5D7A1E5137B
 ms.reviewer: aanavath
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 5020b1653dd92587805e471e80808e34f3007a84
-ms.sourcegitcommit: 63b74a60aafa8d2d6af0594448ae0471fbd79194
+ms.openlocfilehash: e2c4335b17397833fdae9e95fecc2677c8068150
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494034"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52187348"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Nawiązywanie połączenia z magazynem danych przy użyciu usługi Power BI
 
@@ -53,7 +54,7 @@ Plik usługi Power BI (pbix) zawiera informacje dotyczące połączenia dla dzie
 > [!Important]  
 > Każdy plik usługi Power BI (pbix) może różnić się w zależności od lokalizacji dzierżawy. Jeśli zarządzasz wieloma dzierżawami usługi Intune, upewnij się, że używasz pliku pobranego z witryny Azure Portal po zalogowaniu się do tej dzierżawy.  
 
-1.  Zaloguj się do witryny Azure Portal i wybierz pozycję **Monitorowanie i zarządzanie** > **Intune**. Możesz również wyszukać zasoby i znaleźć usługę **Intune**.  
+1.  Zaloguj się do witryny Azure Portal i wybierz pozycję **Monitorowanie i zarządzanie** > **Intune**. Możesz również wyszukać zasoby i znaleźć usługę  **Intune**.  
 2.  Otwórz blok **Interfejs API magazynu danych usługi Microsoft Intune (wersja zapoznawcza)**.
 3.  Wybierz pozycję **Pobierz plik usługi Power BI**. Plik z rozszerzeniem pbix zostanie pobrany do wskazanej lokalizacji.
 4.  Otwórz plik w usłudze Power BI. Zostaną załadowane *raporty magazynu danych usługi Intune*, ale pobieranie danych dzierżawy może chwilę potrwać.
@@ -64,7 +65,7 @@ Plik usługi Power BI (pbix) zawiera informacje dotyczące połączenia dla dzie
 
 Po uwierzytelnieniu klienta w usłudze Azure AD adres URL usługi OData nawiąże połączenie z punktem końcowym RESTful w interfejsie API magazynu danych, który uwidoczni model danych klienta raportowania. Postępuj zgodnie z tymi instrukcjami, aby przy użyciu aplikacji Power BI Desktop nawiązać połączenie i utworzyć własne raporty. Możesz skorzystać z rozwiązania innego niż aplikacja Power BI Desktop. Wraz z adresem URL usługi OData możesz użyć swojego ulubionego narzędzia analitycznego, o ile klient obsługuje uwierzytelnianie OAUTH2.0 i standard OData v4.0.
 
-1.  Zaloguj się do witryny Azure Portal i wybierz pozycję **Monitorowanie i zarządzanie** > **Intune**. Możesz również wyszukać zasoby i znaleźć usługę **Intune**.  
+1.  Zaloguj się do witryny Azure Portal i wybierz pozycję **Monitorowanie i zarządzanie** > **Intune**. Możesz również wyszukać zasoby i znaleźć usługę  **Intune**.  
 2.  Otwórz blok **Interfejs API magazynu danych usługi Microsoft Intune (wersja zapoznawcza)**.
 3. Pobierz adres URL niestandardowego kanału informacyjnego z bloku raportowania, na przykład `https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=beta`
 4. Otwórz aplikację **Power BI Desktop**.

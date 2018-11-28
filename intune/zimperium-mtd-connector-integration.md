@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 363fd280-1865-4a61-855b-eb75c3c62753
 ms.reviewer: heenamac
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 9772e802be0fef75d60a6ae01835d18376b1eb22
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
+ms.openlocfilehash: 68896a363cab37aabe9a597872da0fe75c44c473
+ms.sourcegitcommit: 3903f20cb5686532ccd8c36aa43c5150cee7cca2
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231377"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52267241"
 ---
 # <a name="integrate-zimperium-with-intune"></a>Integracja rozwiązania Zimperium z usługą Intune
 
@@ -29,7 +30,7 @@ Aby zintegrować rozwiązanie Zimperium Mobile Threat Defense z usługą Intune,
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
 > [!NOTE]
-> Poniższe kroki należy wykonać w [konsoli Zimperium MTD](https://staging2-console.zimperium.com).
+> Poniższe kroki należy wykonać w  [konsoli Zimperium MTD](https://sso.zimperium.com/signon/aad/).
 
 Przed rozpoczęciem procesu integracji rozwiązania Zimperium z usługą Intune upewnij się, że przygotowano następującą subskrypcję i poświadczenia:
 
@@ -61,7 +62,7 @@ Następuje proces autoryzacji aplikacji Zimperium:
 
 ## <a name="to-set-up-zimperium-integration"></a>Aby skonfigurować integrację rozwiązania Zimperium
 
-1.  Przejdź do [konsoli Zimperium MTD](https://staging2-console.zimperium.com) i zaloguj się przy użyciu poświadczeń.
+1.  Przejdź do  [konsoli Zimperium MTD](https://sso.zimperium.com/signon/aad/)  i zaloguj się przy użyciu swoich poświadczeń.
 
 2.  Z menu po lewej stronie wybierz element **Zarządzanie**.
 
@@ -69,16 +70,16 @@ Następuje proces autoryzacji aplikacji Zimperium:
 
 4.  Wybierz pozycję **Dodaj zarządzanie urządzeniami przenośnymi**, a następnie wybierz element **Microsoft Intune** z listy **Dostawcy rozwiązań do zarządzania urządzeniami przenośnymi**.
 
-5.  Po ustawieniu usługi Microsoft Intune jako usługi zarządzania urządzeniami mobilnymi pojawia się okienko **Konfiguracja usługi Microsoft Intune**. Wybierz polecenie **Dodaj usługę Azure Active Directory** dla każdej opcji: **Zimperium zConsole** i **zIPS iOS and Android apps** (Aplikacje zIPS dla systemów iOS i Android), aby autoryzować rozwiązanie Zimperium do komunikowania się z usługami Intune i Azure AD za pomocą logowania jednokrotnego usługi Azure AD.
+5.  Po ustawieniu usługi Microsoft Intune jako usługi zarządzania urządzeniami przenośnymi pojawia się okienko  **Konfiguracja usługi Microsoft Intune** . Wybierz polecenie  **Dodaj usługę Azure Active Directory**  dla każdej opcji: **Zimperium zConsole** i **zIPS iOS and Android apps** (Aplikacje zIPS dla systemów iOS i Android), aby autoryzować rozwiązanie Zimperium do komunikowania się z usługami Intune i Azure AD za pomocą logowania jednokrotnego usługi Azure AD.
 
     > [!IMPORTANT]
     > Aby ukończyć proces integracji z usługą Intune, należy dodać rozwiązanie Zimperium zConsole i aplikacje zIPS dla systemów iOS i Android.
 
-6.  Wybierz opcję **Akceptuj**, aby autoryzować aplikację Zimperium do komunikacji z usługami Intune i Azure Active Directory.
+6.  Wybierz pozycję  **Akceptuj** , aby autoryzować aplikację Zimperium do komunikacji z usługami Intune i Azure Active Directory.
 
 7.  Po dodaniu rozwiązania **Zimperium zConsole** i **aplikacji zIPS dla systemów iOS i Android** do usługi Azure AD dodaj grupy zabezpieczeń usługi Azure AD. To dodanie umożliwi rozwiązaniu Zimperium synchronizację grupy zabezpieczeń usługi Azure AD z jej usługą.
 
-8.  Wybierz polecenie **Zakończ**, aby zapisać konfigurację i uruchomić pierwszą synchronizację grupy zabezpieczeń usługi Azure AD.
+8.  Wybierz pozycję  **Zakończ**, aby zapisać konfigurację i uruchomić pierwszą synchronizację grupy zabezpieczeń usługi Azure AD.
 
 ## <a name="next-steps"></a>Następne kroki
 

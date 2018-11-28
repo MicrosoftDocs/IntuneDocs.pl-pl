@@ -12,13 +12,14 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: dfefb17a2d8b9b4041846b879297f388156fee54
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: 28c8863e8739563a6b6c9152a46abb6bf50f2db5
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43312821"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52189201"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Usuwanie urządzeń przy użyciu czyszczenia, wycofywania lub ręcznego wyrejestrowywania urządzenia
 
@@ -29,14 +30,14 @@ Za pomocą akcji **Wycofaj** lub **Wyczyść** możesz usunąć z usługi Intune
 > [!NOTE]
 > Zanim usuniesz użytkownika z usługi Azure Active Directory, użyj akcji **Wyczyść** lub **Wycofaj** na wszystkich urządzeniach skojarzonych z tym użytkownikiem. Jeśli usuniesz użytkowników mających zarządzane urządzenia z usługi Azure AD, usługa Intune nie będzie już mogła wydawać tym urządzeniom poleceń wyczyszczenia lub wycofania.
 
-## <a name="wipe"></a>Wyczyść
+## <a name="wipe"></a>Czyszczenie danych
 
 Akcja **Wyczyść** przywraca domyślne ustawienia fabryczne na urządzeniu. Jeśli pole wyboru **Zachowaj stan rejestracji i konto użytkownika** zostało zaznaczone, dane użytkownika są zachowywane. W przeciwnym razie zawartość dysku jest bezpiecznie wymazywana.
 
 |Akcja Wyczyść|**Zachowaj stan rejestracji i konto użytkownika**|Usunięto z zarządzania przez usługę Intune|Opis|
 |:-------------:|:------------:|:------------:|------------|
-|**Wyczyść**| Nie zaznaczono | Tak | Czyści wszystkie konta użytkowników, dane, zasady zarządzania urządzeniami przenośnymi i ustawienia. Resetuje system operacyjny do domyślnego stanu i ustawień.|
-|**Wyczyść**| Zaznaczono | Nie | Czyści wszystkie zasady zarządzania urządzeniami przenośnymi. Zachowuje konta i dane użytkowników. Przywraca domyślne ustawienia użytkownika. Resetuje system operacyjny do domyślnego stanu i ustawień.|
+|**Czyszczenie danych**| Nie zaznaczono | Tak | Czyści wszystkie konta użytkowników, dane, zasady zarządzania urządzeniami przenośnymi i ustawienia. Resetuje system operacyjny do domyślnego stanu i ustawień.|
+|**Czyszczenie danych**| Zaznaczono | Nie | Czyści wszystkie zasady zarządzania urządzeniami przenośnymi. Zachowuje konta i dane użytkowników. Przywraca domyślne ustawienia użytkownika. Resetuje system operacyjny do domyślnego stanu i ustawień.|
 
 Opcja **Zachowaj stan rejestracji i konto użytkownika** jest dostępna tylko w wersji 1709 systemu Windows 10 lub nowszej.
 

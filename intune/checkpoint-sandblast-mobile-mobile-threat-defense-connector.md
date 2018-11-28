@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 706a4228-9bdf-41e0-b8d1-64c923dd2d2b
 ms.reviewer: heenamac
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 5766c4ebe7b261356248b00d0ca2d8937d3db79a
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
+ms.openlocfilehash: 3600cae373dceb88122852e3d260e91e2618d516
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231530"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52180429"
 ---
 # <a name="check-point-sandblast-mobile-threat-defense-connector-with-intune"></a>Łącznik rozwiązania Check Point SandBlast Mobile Threat Defense z usługą Intune
 
@@ -59,7 +60,7 @@ Po wykryciu na urządzeniach złośliwego oprogramowania możesz zablokować na 
 
 ### <a name="control-access-based-on-threat-to-network"></a>Kontrola dostępu oparta na zagrożeniu dla sieci
 
-Wykrywanie w sieci zagrożeń, takich jak ataki typu **Man-in-the-middle**, i ochrona dostępu do sieci Wi-Fi w oparciu o ryzyko dotyczące urządzenia.
+Wykrywanie w sieci zagrożeń, takich jak ataki typu  **Man-in-the-middle** , i ochrona dostępu do sieci Wi-Fi na podstawie ryzyka dotyczącego urządzeń.
 
 **Blokowanie dostępu do sieci za pośrednictwem sieci Wi-Fi:**
 
@@ -71,7 +72,7 @@ Wykrywanie w sieci zagrożeń, takich jak ataki typu **Man-in-the-middle**, i oc
 
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Kontrola dostępu do usługi SharePoint Online oparta na zagrożeniu dla sieci
 
-Wykrywanie w sieci zagrożeń, takich jak ataki typu **Man-in-the-middle**, i blokowanie synchronizacji plików firmowych w oparciu o ryzyko dotyczące urządzenia.
+Wykrywanie w sieci zagrożeń, takich jak ataki typu  **Man-in-the-middle** , i blokowanie synchronizacji plików firmowych na podstawie ryzyka dotyczącego urządzeń.
 
 **Blokowanie usługi SharePoint Online po wykryciu zagrożeń sieciowych:**
 

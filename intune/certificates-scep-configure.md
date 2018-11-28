@@ -12,13 +12,14 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.reviewer: kmyrup
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: b0ee2b2ad8d25d1040577a7f8abff4377704d2d5
-ms.sourcegitcommit: 6ff5df63a2fff291d7ac5fed9c51417fe808650d
+ms.openlocfilehash: 73a3b26eb9a18475530e3b52ba9b91c4af5e685d
+ms.sourcegitcommit: 349ab913932547b4a7491181f0aff092f109b87b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52167539"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52303876"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurowanie certyfikatów SCEP i korzystanie z nich w usłudze Intune
 
@@ -66,7 +67,7 @@ Zaleca się opublikowanie serwera usługi NDES za pośrednictwem odwrotnego serw
 |**Szablon certyfikatu**|Skonfiguruj ten szablon na serwerze urzędu wystawiającego certyfikaty.|
 |**Certyfikat uwierzytelniania klienta**|Żądany od urzędu wystawiającego certyfikaty lub publicznego urzędu certyfikacji; instalowany na serwerze usługi NDES.|
 |**Certyfikat uwierzytelniania serwera**|Żądany od urzędu wystawiającego certyfikaty lub publicznego urzędu certyfikacji; certyfikat SSL instalowany i powiązany w usługach IIS na serwerze usługi NDES. Jeśli certyfikat ma ustawione użycie kluczy uwierzytelniania klienta i serwera (**rozszerzenia EKU**), wówczas można użyć tego samego certyfikatu.|
-|**Certyfikat zaufanego głównego urzędu certyfikacji**|Ten certyfikat należy wyeksportować w formacie pliku **cer** z głównego urzędu certyfikacji lub z dowolnego urządzenia traktującego główny urząd certyfikacji jako zaufany. Następnie należy przypisać go do urządzeń, korzystając z profilu certyfikatu zaufanego urzędu certyfikacji.<br /><br />Należy użyć jednego certyfikatu zaufanego głównego urzędu certyfikacji dla każdej platformy systemu operacyjnego i powiązać te certyfikaty z poszczególnymi utworzonymi profilami zaufanych certyfikatów głównych.<br /><br />W razie potrzeby można użyć dodatkowych certyfikatów zaufanego głównego urzędu certyfikacji. Można na przykład zrobić to, aby urząd certyfikacji podpisujący certyfikaty uwierzytelniania serwera dla punktów dostępowych Wi-Fi był traktowany jako zaufany.|
+|**Certyfikat zaufanego głównego urzędu certyfikacji**|Ten certyfikat należy wyeksportować w formacie pliku **cer** z głównego urzędu certyfikacji lub z dowolnego urządzenia traktującego główny urząd certyfikacji jako zaufany. Następnie należy przypisać go do użytkowników i/lub urządzeń, używając profilu certyfikatu zaufanego urzędu certyfikacji.<br /><b>UWAGA:<b /> po przypisaniu profilu certyfikatu SCEP przypisz profil zaufanego certyfikatu głównego, którego dotyczy odwołanie w profilu certyfikatu SCEP, do tej samej grupy użytkowników lub urządzeń.<br /><br />Należy użyć jednego certyfikatu zaufanego głównego urzędu certyfikacji dla każdej platformy systemu operacyjnego i powiązać te certyfikaty z poszczególnymi utworzonymi profilami zaufanych certyfikatów głównych.<br /><br />W razie potrzeby można użyć dodatkowych certyfikatów zaufanego głównego urzędu certyfikacji. Można na przykład zrobić to, aby urząd certyfikacji podpisujący certyfikaty uwierzytelniania serwera dla punktów dostępowych Wi-Fi był traktowany jako zaufany.|
 
 ### <a name="accounts"></a>Konta
 
@@ -481,7 +482,7 @@ Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i podaj nas
      - **Podpis cyfrowy**: zezwalaj na wymianę kluczy tylko wtedy, gdy klucz jest chroniony przy użyciu podpisu cyfrowego.
    - **Rozmiar klucza (bity)**: wybierz liczbę bitów zawartych w kluczu.
    - **Algorytm skrótu** (Android, Windows Phone 8.1, Windows 8.1, Windows 10): wybierz jeden z dostępnych typów algorytmu wyznaczania wartości skrótu do użycia z tym certyfikatem. Wybierz najwyższy poziom zabezpieczeń obsługiwany przez podłączane urządzenia.
-   - **Certyfikat główny**: wybierz profil certyfikatu głównego urzędu certyfikacji, który został uprzednio skonfigurowany i przypisany do użytkownika lub urządzenia. Ten certyfikat urzędu certyfikacji musi być certyfikatem głównym urzędu certyfikacji wystawiającego certyfikat skonfigurowany w ramach danego profilu certyfikatu.
+   - **Certyfikat główny**: wybierz profil certyfikatu głównego urzędu certyfikacji, który został uprzednio skonfigurowany i przypisany do użytkownika i/lub urządzenia. Ten certyfikat urzędu certyfikacji musi być certyfikatem głównym urzędu certyfikacji wystawiającego certyfikat skonfigurowany w ramach danego profilu certyfikatu. Przypisz ten profil zaufanego certyfikatu głównego do tej samej grupy, która jest przypisana w profilu certyfikatu SCEP.
    - **Rozszerzone użycie klucza**: użyj polecenia **Dodaj**, aby dodać wartości w zależności od przeznaczenia certyfikatu. W większości przypadków jest wymagane wprowadzenie wartości **Uwierzytelnianie klienta** dla certyfikatu, aby zapewnić użytkownikom lub urządzeniom możliwość uwierzytelnienia na serwerze. Można jednak dodać również inne użycia klucza, zgodnie z potrzebami.
    - **Ustawienia rejestracji**
      - **Próg odnawiania (%)**: podaj wartość procentową pozostałego okresu ważności certyfikatu, przy której urządzenie ma żądać jego odnowienia.

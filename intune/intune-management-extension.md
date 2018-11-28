@@ -13,13 +13,14 @@ ms.technology: ''
 ms.assetid: 768b6f08-3eff-4551-b139-095b3cfd1f89
 ms.reviewer: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ad8e874dda47b7c6deeb614b0f893f7c922241ce
-ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
+ms.openlocfilehash: 29a3f6c6e320f970ef7b2b086b8d25ab82453199
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236343"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52179409"
 ---
 # <a name="manage-powershell-scripts-in-intune-for-windows-10-devices"></a>Zarządzanie skryptami programu PowerShell w usłudze Intune dla urządzeń z systemem Windows 10
 Rozszerzenie do zarządzania usługi Intune pozwala przekazywać skrypty programu PowerShell w usłudze Intune w celu uruchamiania ich na urządzeniach z systemem Windows 10. Rozszerzenie do zarządzania uzupełnia możliwości funkcji zarządzania urządzeniami mobilnymi (MDM, Mobile Device Management) z systemem Windows 10 i ułatwia migrację do nowoczesnego zarządzania.
@@ -27,9 +28,9 @@ Rozszerzenie do zarządzania usługi Intune pozwala przekazywać skrypty program
 ## <a name="moving-to-modern-management"></a>Migracja do nowoczesnego zarządzania
 Środowisko informatyczne użytkowników końcowych przechodzi transformację cyfrową. Klasyczne, tradycyjne środowisko informatyczne opiera się na pojedynczej platformie urządzeń, urządzeniach należących do firm, użytkownikach pracujących w biurze i różnych ręcznych, reaktywnych procesach informatycznych. Nowoczesne miejsce pracy obsługuje jednak wiele platform urządzeń, które należą zarówno do użytkowników, jak i do firmy, umożliwia użytkownikom pracę w dowolnym miejscu oraz zapewnia zautomatyzowane i proaktywne procesy informatyczne. 
 
-Usługi MDM, takie jak Microsoft Intune, pozwalają zarządzać urządzeniami z systemem Windows 10 za pomocą protokołu zarządzania MDM. Wbudowany klient zarządzania systemu Windows 10 jest w stanie komunikować się z usługą Intune na potrzeby wykonywania zadań zarządzania przedsiębiorstwem. Ułatwia to wprowadzanie nowoczesnego zarządzania na urządzeniach z systemem Windows 10. Niekiedy jednak są potrzebne pewne funkcje, takie jak zaawansowana konfiguracja urządzeń, rozwiązywanie problemów i zarządzanie starszymi aplikacjami Win32, które aktualnie nie są dostępne w usługach MDM systemu Windows 10. Aby korzystać z tych funkcji, w niektórych przypadkach uruchamia się na urządzeniach z systemem Windows 10 oprogramowanie klienckie usługi Intune. W wyniku tego nie można korzystać z nowych możliwości zapewnianych przez usługi MDM systemu Windows 10. [Porównaj różnice między oprogramowaniem klienckim usługi Intune a usługami MDM systemu Windows 10](https://docs.microsoft.com/intune-classic/deploy-use/pc-management-comparison).
+Usługi MDM, takie jak Microsoft Intune, pozwalają zarządzać urządzeniami z systemem Windows 10 za pomocą protokołu zarządzania MDM. Wbudowany klient zarządzania systemu Windows 10 jest w stanie komunikować się z usługą Intune na potrzeby wykonywania zadań zarządzania przedsiębiorstwem. Ułatwia to wprowadzanie nowoczesnego zarządzania na urządzeniach z systemem Windows 10. Jednak wbudowane funkcje zarządzania urządzeniami przenośnymi w systemie Windows 10 nie oferują pewnych możliwości, które mogą być potrzebne.
 
-Rozszerzenie do zarządzania usługi Intune uzupełnia możliwości usług MDM dostarczanych z systemem Windows 10. Można tworzyć skrypty programu PowerShell do uruchamiania na urządzeniach z systemem Windows 10, które zapewniają wymagane możliwości. Można na przykład utworzyć skrypt programu PowerShell, który instaluje starszą aplikację Win32 na urządzeniach z systemem Windows 10, przekazać go do usługi Intune, przypisać do grupy usługi Azure Active Directory (AD) i uruchomić na urządzeniach z systemem Windows 10. Następnie można monitorować stan uruchomienia skryptu na urządzeniach z systemem Windows 10 od początku do końca.
+Rozszerzenie do zarządzania usługi Intune uzupełnia możliwości usług MDM dostarczanych z systemem Windows 10. Można tworzyć skrypty programu PowerShell do uruchamiania na urządzeniach z systemem Windows 10, które zapewniają wymagane możliwości. Można utworzyć skrypt programu PowerShell konfigurujący ustawienia niestandardowe, przekazać go do usługi Intune, przypisać do grupy usługi Azure Active Directory (AD) i uruchomić na urządzeniach z systemem Windows 10. Można monitorować stan uruchomienia skryptu na urządzeniach z systemem Windows 10 od początku do końca.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 Rozszerzenie do zarządzania usługi Intune ma następujące wymagania wstępne:
@@ -55,7 +56,6 @@ Rozszerzenie do zarządzania usługi Intune ma następujące wymagania wstępne:
 3. Wybierz co najmniej jedną grupę zawierającą użytkowników, których urządzenia otrzymują skrypt. Użyj pozycji **Wybierz**, aby przypisać zasady do wybranych grup.
 
 > [!NOTE]
-> - Skryptów programu PowerShell nie można stosować do grup komputerów.
 > - Użytkownicy końcowi nie muszą być zalogowani na urządzeniu, aby wykonywać skrypty programu PowerShell. 
 > - Skrypty programu PowerShell w usłudze Intune mogą być przeznaczone dla grup zabezpieczeń urządzeń usługi AAD.
 

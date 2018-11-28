@@ -5,20 +5,21 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/01/2018
+ms.date: 06/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 72cdd888-efca-46e6-b2e7-fb9696bb2fba
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 60d9398b80a30adee194470ac4e5c6c1efc0bd4c
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
+ms.openlocfilehash: 7cb7c23e673c9e0c074f45991333fde9bfc8e930
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744639"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52186192"
 ---
 # <a name="use-teamviewer-to-remotely-administer-intune-devices"></a>Używanie programu TeamViewer do zdalnego administrowania urządzeniami usługi Intune
 
@@ -58,7 +59,10 @@ Po skonfigurowaniu łącznika można rozpocząć zdalne administrowanie urządze
 
 ![Używanie programu TeamViewer do zdalnego administrowania urządzeniem z systemem Android — przykład](./media/android-teamviewer.png)
 
-Po rozpoczęciu sesji zdalnej użytkownik końcowy zobaczy flagę powiadomienia na ikonie aplikacji Portal firmy na swoim urządzeniu. Po otwarciu aplikacji jest również wyświetlane powiadomienie. Użytkownik może wtedy zaakceptować żądanie pomocy zdalnej.
+Po rozpoczęciu sesji zdalnej użytkownicy będą widzieć flagę powiadomienia na ikonie aplikacji Portal firmy na swoim urządzeniu. Po otwarciu aplikacji jest również wyświetlane powiadomienie. Użytkownik może zaakceptować żądanie pomocy zdalnej.
+
+> [!NOTE]
+> Powiadomienia programu TeamViewer w aplikacji Portal firmy nie są wyświetlane dla urządzeń z systemem Windows zarejestrowanych przy użyciu metod „bez użytkownika”, takich jak DEM i WCD. W tych przypadkach zaleca się użycie portalu programu TeamViewer do wygenerowania sesji.
 
 W programie TeamViewer można wykonywać wiele akcji w urządzeniu, łączenie z przejęciem kontroli nad nim. Aby uzyskać szczegółowe informacje na temat czynności możliwych do wykonania, zobacz [wskazówki dotyczące programu TeamViewer](https://www.teamviewer.com/support/documents/).
 
