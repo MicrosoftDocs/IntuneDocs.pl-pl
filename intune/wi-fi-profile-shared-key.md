@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/05/2018
+ms.date: 11/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: karanda
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 59736ad188cf88c994ff93b4a505731afad8f550
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: a7250471e698d32a305755147943311d2150f0b2
+ms.sourcegitcommit: a27a9c4cae47be50807aa3c890f0d5c0c023f04a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186328"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52618190"
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key---intune"></a>Użycie niestandardowego profilu urządzenia do tworzenia profilu sieci Wi-Fi z użyciem klucza wstępnego — usługa Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -34,9 +34,8 @@ Klucze wstępne (PSK) są zazwyczaj używane do uwierzytelniania użytkowników 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
 - Być może łatwiej będzie skopiować kod z komputera, który łączy się z tą siecią, zgodnie z opisem w dalszej części tego artykułu.
-- W przypadku systemu Android można skorzystać z aplikacji [Android PSK Generator](http://intunepskgenerator.johnathonb.com/).
 - Można dodać wiele sieci i kluczy, dodając więcej ustawień OMA-URI.
-- W przypadku urządzeń z systemem iOS należy skonfigurować profil przy użyciu programu Apple Configurator na komputerze Mac. Można również użyć aplikacji [iOS PSK Mobile Config Generator](http://intunepskgenerator.johnathonb.com/).
+- W przypadku urządzeń z systemem iOS należy skonfigurować profil przy użyciu programu Apple Configurator na komputerze Mac.
 - Klucz wstępny wymaga ciągu 64 cyfr szesnastkowych lub hasła o długości 8–63 drukowalnych znaków ASCII. Niektóre znaki, takie jak znak gwiazdki (*), nie są obsługiwane.
 
 ## <a name="create-a-custom-profile"></a>Tworzenie profilu niestandardowego
