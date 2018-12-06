@@ -61,7 +61,7 @@ Poniższa lista zawiera opis ustawień, którymi dział pomocy technicznej w fir
 
 * Dostęp do określonych witryn sieci Web  
 
-* Dostęp do wewnętrznych witryn internetowych firmy przy użyciu programu Edge i serwera proxy usługi Azure Active Directory  
+* Dostęp do wewnętrznych witryn internetowych firmy przy użyciu programu Microsoft Edge i serwera proxy usługi Azure Active Directory  
 
 * Minimalna wersja aplikacji, wersja systemu operacyjnego
 
