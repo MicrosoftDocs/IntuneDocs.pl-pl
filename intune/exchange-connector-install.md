@@ -16,12 +16,12 @@ ms.reviewer: chrisgre
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 019f09444f96d8bb3bca046ef5be20af373a3bff
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 0dc87c20b0da6fcfcc4e3ab304c61c5b264aaf38
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52183711"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112565"
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune-azure"></a>Konfigurowanie lokalnego programu Exchange Connector w usłudze Microsoft Intune Azure
 
@@ -45,7 +45,7 @@ Poniższa tabela zawiera listę wymagań dotyczących komputera, na którym ma b
 |------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |         Systemy operacyjne          |                                                               Usługa Intune obsługuje lokalny program Exchange Connector na komputerach z dowolną wersją systemu Windows Server 2008 z dodatkiem SP2 (64-bitową), Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2 i Windows Server 2016.<br /><br />Łącznik nie jest obsługiwany w żadnej instalacji Server Core.                                                                |
 |         Microsoft Exchange         |                                                                           Lokalne łączniki wymagają programu Microsoft Exchange 2010 z dodatkiem SP3 lub jego nowszej wersji albo starszej wersji środowiska usługi Exchange Online w wersji dedykowanej. Aby ustalić, czy środowisko usługi Exchange Online w wersji dedykowanej zawiera <strong>nową</strong> czy <strong>starszą</strong> konfigurację, skontaktuj się z menedżerem ds. klientów.                                                                           |
-| Urząd zarządzania urządzeniami przenośnymi |                                                                                                                              [Konfigurowanie usługi Intune jako urzędu zarządzania urządzeniami przenośnymi](https://docs.microsoft.com/intune-classic/deploy-use/prerequisites-for-enrollment#step-2-mdm-authority-set).                                                                                                                               |
+| Urząd zarządzania urządzeniami przenośnymi |                                                                                                                              [Konfigurowanie usługi Intune jako urzędu zarządzania urządzeniami przenośnymi](mdm-authority-set.md).                                                                                                                               |
 |              Sprzęt              |                                                                                                                                                     Komputer, na którym jest instalowany łącznik, wymaga co najmniej procesora CPU 1,6 GHz z 2 GB pamięci RAM oraz 10 GB wolnego miejsca na dysku.                                                                                                                                                      |
 |  Synchronizacja z usługą Active Directory  |                                                                                      Zanim będzie możliwe połączenie usługi Intune z programem Exchange Server przy użyciu programu Connector, należy [skonfigurować synchronizację usługi Active Directory](users-add.md), aby zapewnić synchronizację lokalnych użytkowników i grup zabezpieczeń z wystąpieniem usługi Azure Active Directory.                                                                                      |
 |        Dodatkowe oprogramowanie         |                                                                                                                                           Na komputerze, który będzie hostem łącznika, musi być wdrożona pełna instalacja platformy Microsoft .NET Framework 4.5 i programu Windows PowerShell 2.0.                                                                                                                                           |

@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 2782190f043a6d0c2d1af52d5a77fd3ce53b739f
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 69c8b4a5b786768d315bfe6ec707b8c4b915c93a
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181455"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112939"
 ---
 # <a name="reference-for-devices-entities"></a>Odwołanie do jednostek urządzeń
 
@@ -316,7 +316,7 @@ Jednostka **DevicePropertyHistory** ma takie same właściwości, jak tabela urz
 
 ## <a name="mdmdeviceinventoryhistories"></a>MdmDeviceInventoryHistories
 
-Jednostka **MdmDeviceInventoryHistories** zawiera dzienne migawki danych spisu dla urządzeń zarządzanych przez usługę MDM w ciągu ostatnich 90 dni. Kolumna DateKey wskazuje dzień wiersza. Niektóre właściwości mogą nie mieć zastosowania lub nie zostaną wypełnione dla wszystkich urządzeń, więc zapoznaj się z tą stroną, aby uzyskać więcej szczegółowych informacji. Aby uzyskać więcej informacji, zobacz [Understand your devices with inventory in Microsoft Intune](https://docs.microsoft.com/Intune-classic/deploy-use/understand-your-devices-with-inventory-in-microsoft-Intune) (Poznawanie urządzeń za pomocą spisu w usłudze Microsoft Intune).
+Jednostka **MdmDeviceInventoryHistories** zawiera dzienne migawki danych spisu dla urządzeń zarządzanych przez usługę MDM w ciągu ostatnich 90 dni. Kolumna DateKey wskazuje dzień wiersza. Niektóre właściwości mogą nie mieć zastosowania lub nie zostaną wypełnione dla wszystkich urządzeń, więc zapoznaj się z tą stroną, aby uzyskać więcej szczegółowych informacji. Aby uzyskać więcej informacji, zobacz [Understand your devices with inventory in Microsoft Intune](device-inventory.md) (Poznawanie urządzeń za pomocą spisu w usłudze Microsoft Intune).
 
 | Właściwość  | Opis |
 |---------|------------|
