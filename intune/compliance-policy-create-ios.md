@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/16/2018
+ms.date: 11/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 56427f5b6d72d952ce9c388b4d5289d3075b7df0
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 35091139e3afaabac4fad0b22fc6096cf7ada7c3
+ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52182277"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52728875"
 ---
 # <a name="add-a-device-compliance-policy-for-ios-devices-in-intune"></a>Dodawanie zasad zgodności dla urządzeń z systemem iOS w usłudze Intune
 
@@ -54,7 +54,8 @@ W poniższej tabeli opisano sposób postępowania z niezgodnymi ustawieniami w p
 ## <a name="create-a-device-compliance-policy"></a>Tworzenie zasad zgodności urządzenia
 
 [!INCLUDE [new-device-compliance-policy](./includes/new-device-compliance-policy.md)]
-5. W polu **Platforma** wybierz opcję **iOS**. Wybierz opcję **Konfigurowanie ustawień** i wprowadź wartości ustawień dla pól **Poczta e-mail**, **Kondycja urządzenia**, **Właściwości urządzenia** i **Zabezpieczenia systemu**. Po zakończeniu wybierz kolejno przycisk **OK** i pozycję **Utwórz**.
+4. W polu **Platforma** wybierz opcję **iOS**. 
+5. Wybierz opcję **Konfigurowanie ustawień** i wprowadź wartości ustawień **Poczta e-mail**, **Kondycja urządzenia**, **Właściwości urządzenia** i **Zabezpieczenia systemu** opisanych w tym temacie. Po zakończeniu wybierz kolejno przycisk **OK** i pozycję **Utwórz**.
 
 <!--- 4. Choose **Actions for noncompliance** to say what actions should happen when a device is determined as noncompliant with this policy.
 5. In the **Actions for noncompliance** pane, choose **Add** to create a new action.  The action parameters pane allows you to specify the action, email recipients that should receive the notification in addition to the user of the device, and the content of the notification that you want to send.
@@ -88,6 +89,8 @@ Aby uzyskać szczegółowe informacje na temat profilów poczty e-mail, zobacz a
 
 - **Wymagana minimalna wersja systemu operacyjnego:** jeśli urządzenie nie spełnia wymagań dotyczących minimalnej wersji systemu operacyjnego, będzie zgłaszane jako niezgodne. Zostanie wyświetlony link ze wskazówkami dotyczącymi uaktualniania. Użytkownik może wybrać opcję uaktualnienia urządzenia, co umożliwi korzystanie z zasobów firmy.
 - **Dozwolona maksymalna wersja systemu operacyjnego**: jeśli urządzenie korzysta z wersji systemu operacyjnego nowszej niż określona w regule, powoduje to zablokowanie dostępu do zasobów firmy. Następnie użytkownik zostanie poproszony o kontakt z administratorem IT. Do momentu zmiany reguły, aby dopuścić daną wersję systemu operacyjnego, urządzenie nie będzie mogło uzyskać dostępu do zasobów firmy.
+- **Minimalna wersja kompilacji systemu operacyjnego**: gdy firma Apple publikuje aktualizacje zabezpieczeń, zwykle jest aktualizowany numer kompilacji, a nie wersja systemu operacyjnego. Użyj tej funkcji, aby wprowadzić minimalny numer kompilacji dozwolony na urządzeniu. To proces sprawdzenia zgodności obsługuje urządzenia z systemem iOS 8.0 lub nowszym. 
+- **Maksymalna wersja kompilacji systemu operacyjnego**: gdy firma Apple publikuje aktualizacje zabezpieczeń, zwykle jest aktualizowany numer kompilacji, a nie wersja systemu operacyjnego. Użyj tej funkcji, aby wprowadzić maksymalny numer kompilacji dozwolony na urządzeniu. To proces sprawdzenia zgodności obsługuje urządzenia z systemem iOS 8.0 lub nowszym.
 
 ## <a name="system-security"></a>Zabezpieczenia systemu
 

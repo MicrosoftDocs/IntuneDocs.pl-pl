@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/24/2018
+ms.date: 11/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.reviewer: muhosabe
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 14588563dd261063071c09c1bbd3b428fb375830
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 583a64b5dd91df2ef9e5acbaf129b447aca7f2d9
+ms.sourcegitcommit: b93db06ba435555f5b126f97890931484372fcfb
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184186"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52828998"
 ---
 # <a name="add-a-device-compliance-policy-for-macos-devices-with-intune"></a>Dodawanie zasad zgodności dla urządzeń z systemem macOS w usłudze Intune
 
@@ -49,7 +49,8 @@ W poniższej tabeli opisano sposób postępowania z niezgodnymi ustawieniami w p
 ## <a name="create-a-device-compliance-policy"></a>Tworzenie zasad zgodności urządzenia
 
 [!INCLUDE [new-device-compliance-policy](./includes/new-device-compliance-policy.md)]
-5. W polu **Platforma** wybierz opcję **macOS**. Wybierz opcję **Konfigurowanie ustawień** i wprowadź wartości ustawień dla pól **Kondycja urządzenia**, **Właściwości urządzenia** i **Zabezpieczenia systemu**. Po zakończeniu wybierz kolejno przycisk **OK** i pozycję **Utwórz**.
+4. W polu **Platforma** wybierz opcję **macOS**. 
+5. Wybierz opcję **Konfigurowanie ustawień** i wprowadź wartości ustawień **Kondycja urządzenia**, **Właściwości urządzenia** i **Zabezpieczenia systemu** opisanych w tym artykule. Po zakończeniu wybierz kolejno przycisk **OK** i pozycję **Utwórz**.
 
 ## <a name="device-health"></a>Kondycja urządzenia
 
@@ -59,6 +60,8 @@ W poniższej tabeli opisano sposób postępowania z niezgodnymi ustawieniami w p
 
 - **Minimalna wersja systemu operacyjnego**: jeśli urządzenie nie spełnia wymagań dotyczących minimalnej wersji systemu operacyjnego, będzie zgłaszane jako niezgodne. Zostanie wyświetlony link ze wskazówkami dotyczącymi uaktualniania. Użytkownik końcowy może zdecydować się na uaktualnienie swojego urządzenia, co umożliwi mu dostęp do zasobów firmy.
 - **Maksymalna wersja systemu operacyjnego**: jeśli urządzenie korzysta z wersji systemu operacyjnego nowszej niż określona w regule, powoduje to zablokowanie dostępu do zasobów firmy. Użytkownik zostanie poproszony o kontakt z administratorem IT. Dopóki reguła nie zostanie zmieniona tak, aby dopuszczać daną wersję systemu operacyjnego, urządzenie nie będzie mogło uzyskać dostępu do zasobów firmy.
+- **Minimalna wersja kompilacji systemu operacyjnego**: gdy firma Apple publikuje aktualizacje zabezpieczeń, zwykle jest aktualizowany numer kompilacji, a nie wersja systemu operacyjnego. Użyj tej funkcji, aby wprowadzić minimalny numer kompilacji dozwolony na urządzeniu.
+- **Maksymalna wersja kompilacji systemu operacyjnego**: gdy firma Apple publikuje aktualizacje zabezpieczeń, zwykle jest aktualizowany numer kompilacji, a nie wersja systemu operacyjnego. Użyj tej funkcji, aby wprowadzić maksymalny numer kompilacji dozwolony na urządzeniu.
 
 ## <a name="system-security-settings"></a>Ustawienia zabezpieczeń systemu
 
@@ -94,7 +97,7 @@ Zapora chroni urządzenia przed nieautoryzowanym dostępem sieciowym. Zapora umo
 
 **Zezwalaj na aplikacje pobrane z tych lokalizacji**: umożliwia instalowanie na urządzeniach obsługiwanych aplikacji z różnych lokalizacji. Dostępne opcje lokalizacji:
 
-- **Nieskonfigurowane**: wartość domyślna. Opcja Gatekeeper nie ma wpływu na zgodność. 
+- **Nieskonfigurowane**: wartość domyślna. Opcja Gatekeeper nie ma wpływu na zgodność lub jej brak. 
 - **Mac App Store**: zezwala na instalowanie aplikacji tylko ze sklepu Mac App Store. Nie można instalować aplikacji od innych firm ani zidentyfikowanych deweloperów. Jeśli użytkownik wybierze program Gatekeeper w celu zainstalowania aplikacji spoza sklepu Mac App Store, urządzenie zostanie uznane za niezgodne.
 - **Mac App Store i zidentyfikowani deweloperzy**: zezwala na instalowanie aplikacji ze sklepu Mac App Store oraz od zidentyfikowanych deweloperów. System macOS sprawdza tożsamość deweloperów oraz przeprowadza kilka innych testów, aby zweryfikować integralność aplikacji. Jeśli użytkownik wybierze program Gatekeeper w celu zainstalowania aplikacji z innego źródła, urządzenie zostanie uznane za niezgodne.
 - **Dowolne miejsce**: instalować można aplikacje z dowolnego miejsca i od dowolnego dewelopera. To najmniej bezpieczna opcja.

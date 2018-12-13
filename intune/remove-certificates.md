@@ -14,12 +14,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: dabd5b6ca2f8bb01421c24cb7c16ab57cf59ef56
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 06b568ee7cc2dc55a8d44cf04b96078b47d8c4b3
+ms.sourcegitcommit: 77a1047f5d93c1924e5c9ea243454532881be031
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180990"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52579170"
 ---
 # <a name="remove-scep-and-pkcs-certificates-in-microsoft-intune"></a>Usuwanie certyfikatów SCEP i PKCS w usłudze Microsoft Intune
 
@@ -43,8 +43,7 @@ W tym artykule opisano niektóre typowe scenariusze oraz ich wpływ na certyfika
   - Administrator uruchamia akcję [czyszczenia](devices-wipe.md#wipe)
   - Administrator uruchamia akcję [wycofywania](devices-wipe.md#retire)
   - Urządzenie jest usuwane z grupy usługi Azure Active Directory (AD)
-  - Zasady zgodności są usuwane z przypisania grupy
-  - Profil konfiguracji jest usuwany z przypisania grupy
+  - Profil certyfikatu jest usuwany z przypisania grupy
 
 - Certyfikat SCEP jest odwoływany. gdy:
   - Administrator zmienia lub uaktualnia profil certyfikatu SCEP
@@ -53,7 +52,6 @@ W tym artykule opisano niektóre typowe scenariusze oraz ich wpływ na certyfika
   - Użytkownik końcowy wyrejestrowuje się
   - Administrator uruchamia akcję [czyszczenia](devices-wipe.md#wipe)
   - Administrator uruchamia akcję [wycofywania](devices-wipe.md#retire)
-  - Zasady zgodności są usuwane z przypisania grupy
 
 - Certyfikaty SCEP **pozostają** w urządzeniu (certyfikaty nie są odwoływane ani usuwane), gdy:
   - Użytkownik końcowy traci licencję usługi Intune
@@ -78,8 +76,7 @@ W tym artykule opisano niektóre typowe scenariusze oraz ich wpływ na certyfika
   - Administrator wycofuje licencję usługi Intune
   - Administrator usuwa użytkownika lub grupę z usługi Azure AD
   - Administrator zmienia lub uaktualnia profil certyfikatu SCEP
-  - Profil konfiguracji jest usuwany z przypisania grupy
-  - Zasady zgodności są usuwane z przypisania grupy 
+  - Profil certyfikatu jest usuwany z przypisania grupy
 
 
 ## <a name="ios-devices"></a>Urządzenia z systemem iOS
@@ -92,8 +89,7 @@ W tym artykule opisano niektóre typowe scenariusze oraz ich wpływ na certyfika
   - Administrator uruchamia akcję [czyszczenia](devices-wipe.md#wipe)
   - Administrator uruchamia akcję [wycofywania](devices-wipe.md#retire)
   - Urządzenie jest usuwane z grupy usługi Azure Active Directory (AD)
-  - Zasady zgodności są usuwane z przypisania grupy
-  - Profil konfiguracji jest usuwany z przypisania grupy
+  - Profil certyfikatu jest usuwany z przypisania grupy
 
 - Certyfikat SCEP jest odwoływany. gdy:
   - Administrator zmienia lub uaktualnia profil certyfikatu SCEP
@@ -102,7 +98,6 @@ W tym artykule opisano niektóre typowe scenariusze oraz ich wpływ na certyfika
   - Użytkownik końcowy wyrejestrowuje się
   - Administrator uruchamia akcję [czyszczenia](devices-wipe.md#wipe)
   - Administrator uruchamia akcję [wycofywania](devices-wipe.md#retire)
-  - Zasady zgodności są usuwane z przypisania grupy
 
 - Certyfikaty SCEP **pozostają** w urządzeniu (certyfikaty nie są odwoływane ani usuwane), gdy:
   - Użytkownik końcowy traci licencję usługi Intune
@@ -118,8 +113,7 @@ W tym artykule opisano niektóre typowe scenariusze oraz ich wpływ na certyfika
   - Administrator uruchamia akcję [wycofywania](devices-wipe.md#retire)
 
 - Certyfikat PKCS jest usuwany, gdy:
-  - Zasady zgodności są usuwane z przypisania grupy
-  - Profil konfiguracji jest usuwany z przypisania grupy
+  - Profil certyfikatu jest usuwany z przypisania grupy
   
 - Certyfikat główny jest usuwany, gdy:
   - Użytkownik końcowy wyrejestrowuje się
@@ -143,8 +137,7 @@ W tym artykule opisano niektóre typowe scenariusze oraz ich wpływ na certyfika
 - Certyfikat SCEP jest odwoływany. gdy:
   - Administrator uruchamia akcję [wycofywania](devices-wipe.md#retire)
   - Urządzenie jest usuwane z grupy usługi Azure Active Directory (AD)
-  - Zasady zgodności są usuwane z przypisania grupy
-  - Profil konfiguracji jest usuwany z przypisania grupy
+  - Profil certyfikatu jest usuwany z przypisania grupy
   - Administrator usuwa użytkownika lub grupę z usługi Azure Active Directory (AD)
   - Administrator zmienia lub uaktualnia profil certyfikatu SCEP
 
@@ -176,8 +169,7 @@ W tym artykule opisano niektóre typowe scenariusze oraz ich wpływ na certyfika
   - Administrator wycofuje licencję usługi Intune
   - Administrator usuwa użytkownika lub grupę z usługi Azure AD
   - Administrator zmienia lub uaktualnia profil certyfikatu SCEP
-  - Profil konfiguracji jest usuwany z przypisania grupy
-  - Zasady zgodności są usuwane z przypisania grupy 
+  - Profil certyfikatu jest usuwany z przypisania grupy
   
   
 > [!NOTE]
@@ -191,8 +183,7 @@ W tym artykule opisano niektóre typowe scenariusze oraz ich wpływ na certyfika
   - Użytkownik końcowy wyrejestrowuje się
   - Administrator uruchamia akcję [wycofywania](devices-wipe.md#retire)
   - Urządzenie jest usuwane z grupy usługi Azure Active Directory (AD)
-  - Zasady zgodności są usuwane z przypisania grupy
-  - Profil konfiguracji jest usuwany z przypisania grupy
+  - Profil certyfikatu jest usuwany z przypisania grupy
 
 - Certyfikat SCEP jest odwoływany. gdy:
   - Administrator zmienia lub uaktualnia profil certyfikatu SCEP

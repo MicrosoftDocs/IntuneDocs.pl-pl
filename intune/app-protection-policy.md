@@ -16,12 +16,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: d974e6db3543ef3ba0b11cf67989260e429dde4c
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 785f4d1d81858fe5d4ebe4feab72880b408d8cd3
+ms.sourcegitcommit: 0499d16db961aaed4bd134ee924e40c5861121c7
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179171"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52389873"
 ---
 # <a name="what-are-app-protection-policies"></a>Co to są zasady ochrony aplikacji?
 
@@ -66,9 +66,9 @@ Dodatkowe korzyści można uzyskać, używając jednocześnie rozwiązań MDM i 
 
 
 ### <a name="supported-platforms-for-app-protection-policies"></a>Platformy obsługiwane przez zasady ochrony aplikacji
-Obsługa platformy zasad ochrony aplikacji usługi Intune jest powiązana z obsługą platformy aplikacji mobilnych pakietu Office. Aby uzyskać szczegółowe informacje, zobacz sekcję **Aplikacje mobilne** w temacie [Wymagania systemowe pakietu Office](https://products.office.com/office-system-requirements#coreui-contentrichblock-9r05pwg).
+Obsługa platformy zasad ochrony aplikacji usługi Intune jest powiązana z obsługą platformy aplikacji mobilnych pakietu Office dla urządzeń z systemem Android i iOS. Aby uzyskać szczegółowe informacje, zobacz sekcję **Aplikacje mobilne** w temacie [Wymagania systemowe pakietu Office](https://products.office.com/office-system-requirements#coreui-contentrichblock-9r05pwg).
 
-Urządzenia z systemem Windows nie są obecne obsługiwane. Jednak podczas rejestrowania urządzeń z systemem Windows 10 w usłudze Intune możesz użyć rozwiązania Windows Information Protection, które oferuje podobne funkcje. Aby uzyskać szczegółowe informacje, zobacz [Protect your enterprise data using Windows Information Protection](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip) (Chronienie danych przedsiębiorstwa przy użyciu rozwiązania Windows Information Protection).
+Urządzenia z systemem Windows nie są obecne obsługiwane. Możesz jednak użyć rozwiązania Windows Information Protection, które oferuje podobne funkcje. Aby uzyskać szczegółowe informacje, zobacz [Protect your enterprise data using Windows Information Protection](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip) (Chronienie danych przedsiębiorstwa przy użyciu rozwiązania Windows Information Protection).
 
 
 ## <a name="how-app-protection-policies-protect-app-data"></a>W jaki sposób zasady ochrony aplikacji chronią dane aplikacji
@@ -146,7 +146,9 @@ Chociaż zasady **globalne** mają zastosowanie do wszystkich użytkowników w d
 
 Aplikacje, które obsługują wiele tożsamości, umożliwiają uzyskiwanie dostępu do tych samych aplikacji przy użyciu różnych kont (służbowych i osobistych), podczas gdy zasady ochrony aplikacji są stosowane tylko wtedy, gdy aplikacje są używane w kontekście służbowym.
 
-Przypuśćmy na przykład, że użytkownik uruchamia aplikację OneDrive przy użyciu konta służbowego. W kontekście służbowym nie może przenieść plików do osobistej lokalizacji przechowywania. Później, jeśli użytkownik korzysta z usługi OneDrive przy użyciu konta osobistego, może bez ograniczeń kopiować i przenosić dane z usługi OneDrive w wersji do użytku osobistego.
+Przykładem kontekstu prywatnego będzie sytuacja, w której użytkownik uruchamia nowy dokument programu Word. Ponieważ jest ona uznawana za kontekst prywatny, nie są stosowane zasady rozwiązania Intune App Protection. Gdy dokument zostanie zapisany na koncie firmowym w usłudze OneDrive, będzie uznawany za kontekst służbowy i zasady rozwiązania Intune App Protection będą stosowane.
+
+Przykładem kontekstu służbowego będzie sytuacja, w której użytkownik uruchamia aplikację OneDrive za pomocą konta służbowego. W kontekście służbowym nie może przenieść plików do osobistej lokalizacji przechowywania. Później, jeśli użytkownik korzysta z usługi OneDrive przy użyciu konta osobistego, może bez ograniczeń kopiować i przenosić dane z usługi OneDrive w wersji do użytku osobistego.
 
 - Dowiedz się więcej o aplikacjach, które obsługują [zarządzanie aplikacjami mobilnymi (MAM) i wiele tożsamości](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) za pomocą usługi Intune.
 

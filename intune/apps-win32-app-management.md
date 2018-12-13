@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/15/2018
+ms.date: 12/03/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 0dc1974a57e5a5aa6808936c37e02fd31a7cac7b
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 6e8a74763f29707aa3e774be52f7b383b040ec1e
+ms.sourcegitcommit: b93db06ba435555f5b126f97890931484372fcfb
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187298"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52829151"
 ---
 # <a name="intune-standalone---win32-app-management-public-preview"></a>Autonomiczna usługa Intune — zarządzanie aplikacjami Win32 (publiczna wersja zapoznawcza)
 
@@ -29,15 +29,11 @@ Autonomiczna usługa Intune daje większe możliwości zarządzania aplikacjami 
 
 ## <a name="prerequisites-for-public-preview"></a>Wymagania wstępne dla publicznej wersji zapoznawczej
 
-- System Windows 10 wersja 1607 lub nowszy (wersja Enterprise)
+- System Windows 10 w wersji 1607 lub nowszej (wersje Enterprise, Pro i Education)
 - Klient z systemem Windows 10 musi być: 
     - Przyłączony do usługi Azure Active Directory (AAD) lub hybrydowej usługi Azure Active Directory
     - Zarejestrowany w usłudze Intune (zarządzany przez rozwiązanie MDM)
 - Rozmiar aplikacji systemu Windows jest ograniczony do 8 GB na aplikację w publicznej wersji zapoznawczej 
-
-> [!NOTE]
-> Obecnie testujemy wersje Pro i Education systemu Windows 10 w wersji 1607 i chętnie poznamy Twoją opinię.
-
 
 ## <a name="prepare-the-win32-app-content-for-upload"></a>Przygotowanie zawartości aplikacji Win32 do przekazania
 
@@ -186,7 +182,7 @@ Podobnie jak w przypadku aplikacji biznesowych, możesz dodać aplikację Win32 
     - **Użyj niestandardowego skryptu wykrywania** — określ skrypt programu PowerShell, który będzie używany do wykrywania aplikacji. 
     
         1.  **Plik skryptu** — wybierz skrypt programu PowerShell, który wykryje obecność aplikacji na kliencie. Aplikacja zostanie wykryta, gdy skrypt zwróci wartość 0 jako kod zakończenia i zapisze wartość ciągu do strumienia STDOUT.
-        2.  **Uruchom skrypt jako proces 32-bitowy na klientach 64-bitowych** — wybierz opcję **Tak**, aby uruchamiać skrypt za pomocą poświadczeń zalogowanego użytkownika końcowego. Wybierz opcję **Nie** (domyślną), aby uruchamiać skrypt w kontekście systemu.
+        2.  **Uruchom skrypt jako proces 32-bitowy na klientach 64-bitowych**: wybierz opcję **Tak**, aby uruchamiać skrypt za pomocą poświadczeń zalogowanego użytkownika końcowego. Wybierz opcję **Nie** (domyślną), aby uruchamiać skrypt w kontekście systemu.
         3.  **Wymuszaj sprawdzanie podpisu skryptu** — wybierz opcję **Tak**, aby zweryfikować, że skrypt jest podpisany przez zaufanego wydawcę, co umożliwi uruchamianie skryptu bez wyświetlania ostrzeżeń ani monitów. Skrypt będzie uruchamiany bez blokowania. Wybierz opcję **Nie** (domyślną), aby uruchamiać skrypt z potwierdzeniem przez użytkownika końcowego i bez weryfikacji podpisu.
     
         Dodatek usługi Intune sprawdza wyniki ze skryptu. Odczytuje wartości zapisane przez skrypt do strumienia wyjścia standardowego (STDOUT) i standardowego strumienia błędów (STDERR) oraz kod zakończenia. Jeśli skrypt zwróci wartość różną od zera, jego wykonanie zakończy się niepowodzeniem, a stan wykrywania aplikacji będzie wskazywać, że nie jest zainstalowana. Jeśli kod zakończenia ma wartość zero, a strumień STDOUT zawiera dane, stan wykrywania aplikacji to Zainstalowano. 
@@ -200,7 +196,7 @@ Podobnie jak w przypadku aplikacji biznesowych, możesz dodać aplikację Win32 
 
 1.  W okienku **Dodawanie aplikacji** wybierz pozycję **Kody powrotne**, aby dodać kody powrotne używane do określenia zachowania ponowienia instalacji aplikacji lub zachowania po instalacji. Pozycje kodów powrotnych są dodawane domyślnie podczas tworzenia aplikacji. Istnieje jednak możliwość dodania kolejnych kodów powrotnych lub zmiany istniejących kodów powrotnych. 
 2.  W okienku **Kody powrotne** dodaj kolejne kody powrotne lub zmodyfikuj istniejące kody powrotne.
-    - **Niepowodzenie** — wartość zwracana wskazująca błąd instalacji aplikacji.
+    - **Niepowodzenie** — wartość zwracana, która wskazuje błąd instalacji aplikacji.
     - **Ponowny rozruch sprzętowy** — kod powrotny ponownego uruchomienia sprzętowego nie zezwala na zainstalowanie następnej aplikacji Win32 na kliencie bez ponownego uruchomienia. 
     - **Ponowny rozruch systemowy** — kod powrotny ponownego uruchomienia systemowego umożliwia zainstalowanie następnej aplikacji Win32 bez ponownego uruchomienia klienta. Ponowne uruchomienie jest niezbędne do ukończenia instalacji bieżącej aplikacji.
     - **Ponów** — w przypadku kodu powrotnego ponowienia agent spróbuje zainstalować aplikację trzy razy. Między próbami agent będzie czekać 5 minut. 
@@ -227,6 +223,10 @@ Podobnie jak w przypadku aplikacji biznesowych, możesz dodać aplikację Win32 
 8.  W okienku **Przypisania** aplikacji wybierz pozycję **Zapisz**.
 
 W tym momencie wykonywanie kroków dodawania aplikacji Win32 do usługi Intune zostało zakończone. Aby uzyskać informacje dotyczące przypisywania i monitorowania aplikacji, zobacz [Przypisywanie aplikacji do grup w usłudze Microsoft Intune](https://docs.microsoft.com/intune/apps-deploy) i [Monitorowanie informacji o aplikacji i przypisań z użyciem usługi Microsoft Intune](https://docs.microsoft.com/intune/apps-monitor).
+
+## <a name="delivery-optimization"></a>Optymalizacja dostarczania
+
+System Windows 10 RS3 i nowsi klienci będą pobierać zawartość aplikacji Win32 w usłudze Intune przy użyciu składnika Optymalizacja dostarczania w obrębie klienta systemu Windows 10. Optymalizacja dostarczania udostępnia funkcję Sieć równorzędna, która jest włączana domyślnie. Optymalizację dostarczania można skonfigurować przy użyciu zasad grupy, a w przyszłości oprogramowania MDM w usłudze Intune. Aby uzyskać więcej informacji, zobacz [Delivery Optimization for Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) (Optymalizacja dostarczania w systemie Windows 10). 
 
 ## <a name="install-required-and-available-apps-on-devices"></a>Instalowanie wymaganych i dostępnych aplikacji na urządzeniach
 

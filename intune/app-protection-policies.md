@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/30/2018
+ms.date: 11//28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 2e0331210a10727ff5753e6c227777cd1ebb16d9
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 2a5b16e828b1a2e680f41f50aa603b1bfe2ad9fa
+ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52185975"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52728824"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Tworzenie i przypisywanie zasad ochrony aplikacji
 
@@ -74,10 +74,14 @@ Nowe tworzone zasady nie zostaną wdrożone dla żadnych użytkowników, dopóki
 
    ![Zrzut ekranu okienka Przypisania z wyróżnioną opcją menu Wybierz grupy do uwzględnienia](./media/app-protection-policy-add-users.png)
 
-3.  Zostanie wyświetlona lista wszystkich grup zabezpieczeń w usłudze **Azure Active Directory**. Wybierz grupy użytkowników, których mają dotyczyć te zasady, a następnie wybierz pozycję **Wybierz**. Wybranie pozycji **Wybierz** wdraża zasady dla użytkowników.
+3.  Zostanie wyświetlona lista wszystkich grup zabezpieczeń w usłudze **Azure Active Directory**. Wybierz grupy użytkowników, których mają dotyczyć te zasady, a następnie wybierz pozycję **Wybierz**. 
 
     ![Zrzut ekranu przedstawiający okienko Dodawanie grupy użytkowników z listą użytkowników usługi Azure Active Directory](./media/azure-ad-user-group-list.png)
 
+4.  Po dołączeniu i wykluczeniu grup wybierz pozycję **Zapisz**, aby zapisać konfigurację i wdrożyć zasady do użytkowników. Jeśli przed zapisaniem konfiguracji wybierzesz pozycję **Odrzuć**, wszystkie zmiany wprowadzone na kartach *Dołączanie* i *Wykluczanie* zostaną odrzucone.   
+ 
+     ![Zrzut ekranu przedstawiający opcje zapisywania i odrzucania](./media/save-assignment.png)
+  
 Zasady zostały utworzone i wdrożone dla użytkowników.
 
 Zasady wpływają tylko na użytkowników z przypisanymi licencjami usługi Microsoft Intune. Nie mają one wpływu na użytkowników w wybranej grupie zabezpieczeń, którym nie przypisano licencji usługi Intune.
@@ -109,9 +113,13 @@ Aby zobaczyć efekt zmian natychmiast, użytkownik końcowy musi wylogować się
 
 2.  W okienku *Intune App Protection* wybierz pozycję **Przypisania**, aby otworzyć okienko **Intune App Protection — przypisania** zawierające listę bieżących grup użytkowników, których dotyczą dane zasady.
 
-3.  Aby dodać nową grupę użytkowników do zasad, na karcie **Uwzględnianie** wybierz pozycję **Wybierz grupy do uwzględnienia** i wybierz grupę użytkowników. Wybierz pozycję **Wybierz**, aby wdrożyć zasady dla wybranej grupy.
+3.  Aby dodać nową grupę użytkowników do zasad, na karcie *Uwzględnianie* wybierz pozycję **Wybierz grupy do uwzględnienia** i wybierz grupę użytkowników. Wybierz pozycję **Wybierz**, aby dodać grupę. 
 
-4.  Aby usunąć grupę użytkowników, na karcie **Wykluczanie** wybierz pozycję **Wybierz grupy do wykluczenia** i wybierz grupę użytkowników. Wybierz pozycję **Wybierz**, aby usunąć grupę użytkowników.
+4.  Aby wykluczyć grupę użytkowników, na karcie *Wykluczanie* wybierz pozycję **Wybierz grupy do wykluczenia** i wybierz grupę użytkowników. Wybierz pozycję **Wybierz**, aby usunąć grupę użytkowników.  
+
+5.  Aby usunąć grupy dodane wcześniej, na karcie *Dołączanie* lub *Wykluczanie* wybierz wielokropek (...) i wybierz pozycję **Usuń**. 
+
+5.  Gdy zmiany przypisań będą gotowe, wybierz pozycję **Zapisz**, aby zapisać konfigurację i wdrożyć zasady do zestawu nowych użytkowników. Jeśli przed zapisaniem konfiguracji wybierzesz pozycję **Odrzuć**, wszystkie zmiany wprowadzone na kartach *Dołączanie* i *Wykluczanie* zostaną odrzucone.
 
 ### <a name="to-change-policy-settings"></a>Aby zmienić ustawienia zasad
 

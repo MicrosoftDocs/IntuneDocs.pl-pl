@@ -16,12 +16,12 @@ ms.reviewer: ilwu
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d86df4c38e0d4313dbff6ff2cd9111b2126dbaba
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 829b9587849208c40d5e4c0f58169b4f6dfd4153
+ms.sourcegitcommit: a0e965b3a568d1435270012ab89e5857e72cd434
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180939"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52630021"
 ---
 # <a name="manage-internet-access-using-a-microsoft-intune-policy-protected-browser"></a>Zarządzanie dostępem do Internetu za pomocą przeglądarki zabezpieczonej przy użyciu zasad w usłudze Microsoft Intune
 
@@ -175,7 +175,12 @@ Aby uzyskać więcej informacji o sposobie używania aplikacji Managed Browser i
 
 ## <a name="how-to-configure-the-homepage-for-a-protected-browser"></a>Jak skonfigurować stronę główną dla przeglądarki chronionej
 
-To ustawienie pozwala skonfigurować stronę główną, którą widzą użytkownicy po uruchomieniu przeglądarki chronionej lub utworzeniu nowej karty. Korzystając z procedury tworzenia konfiguracji aplikacji Managed Browser lub Microsoft Edge, podaj następującą parę klucza i wartości:
+To ustawienie pozwala skonfigurować stronę główną, którą widzą użytkownicy po uruchomieniu przeglądarki chronionej lub utworzeniu nowej karty. 
+- To ustawienie spowoduje wyświetlenie strony internetowej w programie Managed Browser.  W programie Edge w zamian będzie wyświetlany skrót do strony głównej.
+- Ikona skrótu do strony głównej jest wyświetlana jako ikona pod kontrolką wyszukiwania.  Nie można jej edytować ani usuwać.
+- Wyświetlony skrót do strony głównej zostanie wyróżniony przy użyciu nazwy Twojej organizacji.  Będzie on zawsze pojawiać się jako pierwsza ikona.
+
+Korzystając z procedury tworzenia konfiguracji aplikacji Managed Browser lub Microsoft Edge, podaj następującą parę klucza i wartości:
 
 |                                Klucz                                |                                                           Wartość                                                            |
 |-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|

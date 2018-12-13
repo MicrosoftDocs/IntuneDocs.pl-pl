@@ -16,12 +16,12 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ada9fee575824d27a6bfdd8f14d4845d228467db
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: b953ea281ad785d8a0ce7bee4b0f6d420b785dd9
+ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186089"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52729045"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Konfigurowanie strony ze stanem rejestracji
  
@@ -61,6 +61,16 @@ Urządzenie lub użytkownik mogą należeć do wielu grup i mieć wiele profiló
 2. Zatrzymaj wskaźnik myszy nad profilem na liście.
 3. Używając trzech pionowych punktów, przeciągnij profil do żądanej pozycji na liście.
 
+## <a name="block-access-to-a-device-until-a-specific-application-is-installed"></a>Blokowanie dostępu do urządzenia do momentu zainstalowania określonej aplikacji
+
+Zanim użytkownik będzie mógł uzyskiwać dostęp do pulpitu, można określić aplikacje, które należy zainstalować.
+
+1. W usłudze Intune wybierz kolejno pozycje **Rejestrowanie urządzenia** > **Rejestracja w systemie Windows** > **Strona ze stanem rejestracji (wersja zapoznawcza)**.
+2. Wybierz profil > **Ustawienia**.
+3. Wybierz pozycję **Tak** dla opcji **Pokaż postęp aplikacji i profilu**.
+4. Wybierz pozycję **Tak** dla opcji **Blokuj użycie urządzenia do momentu zainstalowania wszystkich aplikacji i profilów**.
+5. Wybierz pozycję **Wybrane** dla opcji **Blokuj użycie urządzenia do momentu zainstalowania wymaganych aplikacji, jeśli zostały przypisane do użytkownika/urządzenia**.
+ 6. Wybierz pozycję **Wybierz aplikacje** > wybierz aplikacje > **Wybierz** > **Zapisz**.
 
 ## <a name="enrollment-status-page-tracking-information"></a>Informacje śledzenia strony ze stanem rejestracji
 

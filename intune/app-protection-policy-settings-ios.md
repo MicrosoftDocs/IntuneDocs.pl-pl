@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/07/2018
+ms.date: 11/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: andcerat
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 79df4e20a1dcd4a5cbc30ab0c887d53bf205ebbf
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 5ff7876ef5c04eb59d1e89ac03b640d4f443cca6
+ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184747"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52728960"
 ---
 #  <a name="ios-app-protection-policy-settings"></a>Ustawienia zasad ochrony aplikacji dla systemu iOS
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -30,7 +30,7 @@ Opisane w tym artykule ustawienia zasad można [skonfigurować](app-protection-p
 
 Istnieją trzy kategorie ustawień zasad: *Relokacja danych*, *Wymagania dotyczące dostępu* i *Uruchamianie warunkowe*. W tym artykule termin ***aplikacje zarządzane przez zasady*** dotyczy aplikacji konfigurowanych przy użyciu zasad ochrony aplikacji.
 
-##  <a name="data-relocation-settings"></a>Ustawienia relokacji danych
+##  <a name="data-protection-settings"></a>Ustawienia ochrony danych
 
 | Ustawienie | Sposób użycia |  
 |------|------| 
@@ -47,7 +47,7 @@ Istnieją trzy kategorie ustawień zasad: *Relokacja danych*, *Wymagania dotycz�
 
 
 > [!NOTE]
-> Żadne z ustawień relokacji danych nie steruje funkcją „Otwórz za pomocą” zarządzaną przez firmę Apple na urządzeniach z systemem iOS. Aby korzystać z funkcji „Otwórz za pomocą” zarządzanej przez firmę Apple, zobacz [Zarządzanie przesyłaniem danych między aplikacjami systemu iOS za pomocą usługi Microsoft Intune](data-transfer-between-apps-manage-ios.md).
+> Żadne z ustawień ochrony danych nie steruje funkcją „Otwórz za pomocą” zarządzaną przez firmę Apple na urządzeniach z systemem iOS. Aby korzystać z funkcji „Otwórz za pomocą” zarządzanej przez firmę Apple, zobacz [Zarządzanie przesyłaniem danych między aplikacjami systemu iOS za pomocą usługi Microsoft Intune](data-transfer-between-apps-manage-ios.md).
 
 ## <a name="data-transfer-exemptions"></a>Wyjątki w transferze danych
 
