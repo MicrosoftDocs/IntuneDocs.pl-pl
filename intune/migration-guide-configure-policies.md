@@ -1,5 +1,5 @@
 ---
-title: Konfigurowanie zasad zgodności urządzeń i zasad zarządzania aplikacjami podczas migracji do usługi Intune
+title: Konfigurowanie zgodności urządzeń i aplikacji podczas migracji do usługi Intune
 titlesuffix: Microsoft Intune
 description: Ten artykuł zawiera niezbędne instrukcje dotyczące konfigurowania zasad zgodności urządzeń i zasad zarządzania aplikacjami podczas migracji do usługi Microsoft Intune.
 keywords: ''
@@ -15,12 +15,13 @@ ms.assetid: 0062d08e-e5b3-4f73-8b64-5ad95adbe945
 ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
-ms.openlocfilehash: 651612ac403db01ff2c5b7574216459c7ee2bd16
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: 99f8f1eb297ac1530f9379dd4f033b72eee0b0f4
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52183804"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53031827"
 ---
 # <a name="configure-device-compliance-and-app-management-policies-when-migrating-to-microsoft-intune"></a>Konfigurowanie zasad zgodności urządzeń i zasad zarządzania aplikacjami podczas migracji do usługi Microsoft Intune
 
@@ -41,7 +42,7 @@ Poszczególne platformy urządzeń oferują różne ustawienia, ale zasady dotyc
 
 ## <a name="task-list-for-device-compliance-policies"></a>Lista zadań dotyczących zasad zgodności urządzeń
 
-### <a name="task-1-add-device-groups-optional"></a>Zadanie 1. Dodanie grup urządzeń (opcjonalnie)
+### <a name="task-1-add-device-groups-optional"></a>Zadanie 1. Dodanie grup urządzeń (opcjonalnie)
 
 Możliwe jest tworzenie grup urządzeń, co jest przydatne, gdy trzeba wykonywać zadania administracyjne na podstawie tożsamości urządzenia, a nie tożsamości użytkownika.
 
@@ -49,11 +50,11 @@ Grupy urządzeń ułatwiają zarządzanie urządzeniami, które nie mają dedyko
 
 Dzięki skonfigurowaniu grup urządzeń przed rozpoczęciem rejestracji urządzeń można użyć kategorii urządzeń w celu automatycznego dołączania urządzeń do grup podczas rejestracji. Następnie automatycznie otrzymają one odpowiednie zasady grupy dotyczące urządzeń. [Wprowadzenie do grup](groups-get-started.md).
 
-### <a name="task-2-use-resource-access-profiles-wi-fi-vpn-and-email-certificates"></a>Zadanie 2. Użycie profilów dostępu do zasobów (certyfikatów sieci Wi-Fi i VPN oraz poczty e-mail)
+### <a name="task-2-use-resource-access-profiles-wi-fi-vpn-and-email-certificates"></a>Zadanie 2: Użycie profilów dostępu do zasobów (certyfikatów sieci Wi-Fi i VPN oraz poczty e-mail)
 
 Profile dostępu do zasobów dostarczają certyfikaty i konfiguracje dostępu zarejestrowanym urządzeniom. Jeśli używasz uwierzytelniania opartego na certyfikatach, [skonfiguruj certyfikaty](certificates-configure.md).
 
-### <a name="task-3-create-and-deploy-device-configuration-profiles"></a>Zadanie 3. Tworzenie i wdrażanie profilów konfiguracji urządzeń
+### <a name="task-3-create-and-deploy-device-configuration-profiles"></a>Zadanie 3: Tworzenie i wdrażanie profilów konfiguracji urządzeń
 
 Musisz utworzyć profil konfiguracji urządzeń, aby wymusić stosowanie ustawień na poziomie urządzenia, na przykład wyłączyć aparat i sklep z aplikacjami, skonfigurować ekran główny i tryb pojedynczej aplikacji itd. Dowiedz się więcej o [profilach urządzeń](device-profiles.md).
 
@@ -65,7 +66,7 @@ Musisz utworzyć profil konfiguracji urządzeń, aby wymusić stosowanie ustawie
 
 - Dowiedz się, jak dodać niestandardowe zasady dla systemu [iOS](custom-settings-ios.md).
 
-### <a name="task-4-create-and-deploy-device-compliance-policies-optional"></a>Zadanie 4. Tworzenie i wdrażanie zasad zgodności urządzeń (opcjonalnie)
+### <a name="task-4-create-and-deploy-device-compliance-policies-optional"></a>Zadanie 4: Tworzenie i wdrażanie zasad zgodności urządzeń (opcjonalnie)
 
 Zasady zgodności urządzeń umożliwiają ocenę ustawień związanych z zabezpieczeniami i udostępniają raporty na temat zgodności urządzeń ze standardami firmowymi. Te ustawienia obejmują:
 
@@ -81,7 +82,7 @@ Zapoznaj się z dodatkowymi materiałami dotyczącymi ustawień zgodności urzą
 
 -   Dowiedz się, [jak utworzyć zasady zgodności urządzeń](device-compliance-get-started.md).
 
-### <a name="task-5-publish-and-deploy-apps"></a>Zadanie 5. Publikowanie i wdrażanie aplikacji
+### <a name="task-5-publish-and-deploy-apps"></a>Zadanie 5: Publikowanie i wdrażanie aplikacji
 
 Funkcje MDM usługi Intune umożliwiają dostarczanie aplikacji przez wymaganie ich automatycznej instalacji lub ich udostępnienie w Portalu firmy.
 
@@ -89,7 +90,7 @@ Funkcje MDM usługi Intune umożliwiają dostarczanie aplikacji przez wymaganie 
 
 -   [Jak wdrażać aplikacje](apps-deploy.md).
 
-### <a name="task-6-enable-device-enrollment"></a>Zadanie 6. Włączanie rejestracji urządzeń
+### <a name="task-6-enable-device-enrollment"></a>Zadanie 6: Włączanie rejestracji urządzeń
 
 Zarejestrowanie urządzenia jest niezbędne do zarządzania urządzeniem. Dowiedz się, [jak przygotować rejestrację firmowych urządzeń i osobistych urządzeń użytkowników](device-enrollment.md).
 

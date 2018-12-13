@@ -5,31 +5,31 @@ services: microsoft-intune
 author: ErikRe
 ms.author: erikre
 manager: dougeby
-ms.date: 11/09/2018
+ms.date: 12/05/2018
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 658a7655-a6df-4dbe-b56c-22c7fc60e706
-ms.reviewer: angerobe
+ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
-ms.openlocfilehash: 13ffb9e7091b484c59f44802de675b1ab45b1c77
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 5876b0df6787640e465952cb1cca17f4f3105762
+ms.sourcegitcommit: 88f760abcea7348a0c6d00b533b54a6ff68d3985
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52183472"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977341"
 ---
-# <a name="quickstart-enroll-your-windows-10-device"></a>Szybki start: rejestrowanie urządzenia z systemem Windows 10
+# <a name="quickstart-enroll-your-windows-10-device"></a>Szybki start: Rejestrowanie urządzenia z systemem Windows 10
 
 W tym przewodniku Szybki start najpierw przyjmiesz rolę użytkownika usługi Intune i zarejestrujesz urządzenie z systemem Windows 10 w usłudze Microsoft Intune. Następnie wrócisz do usługi Intune i sprawdzisz, czy urządzenie zostało zarejestrowane.
 
 Zarejestrowanie urządzeń z systemem Windows 10 w usłudze Microsoft Intune umożliwia pracownikom organizacji uzyskiwanie dostępu do zabezpieczonych danych, w tym plików, wiadomości e-mail i innych zasobów. Dotyczy to urządzeń z systemami Windows 10 Desktop i Windows 10 Mobile. Zarejestrowanie urządzeń ułatwia zabezpieczenie dostępu zarówno z perspektywy administratora, jak i całej organizacji, a także pomaga w rozdzieleniu danych służbowych od prywatnych.
 
 > [!TIP]
-> Dowiedz się, co się dzieje po [zarejestrowaniu urządzenia w usłudze Intune](/intune-user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) i jak ten proces wpływa na [informacje przechowywane na urządzeniu](/intune-user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
+> Dowiedz się, co się dzieje po [zarejestrowaniu urządzenia w usłudze Intune](/intune-user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows) i jak ten proces wpływa na [informacje przechowywane na urządzeniu](/intune-user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune).
 
 Jeśli nie masz subskrypcji usługi Intune, [utwórz konto bezpłatnej wersji próbnej](free-trial-sign-up.md).
 
@@ -58,7 +58,7 @@ Zanim zarejestrujesz system Windows 10 Desktop, musisz sprawdzić, którą wersj
 4. Upewnij się, że system Windows 10 jest w **wersji** **1607 lub nowszej**.
 
     > [!IMPORTANT]
-    > Kroki przedstawione w tym przewodniku Szybki start dotyczą systemu Windows 10 w wersji **1607 lub nowszej**. Jeśli używasz wersji **1511 lub starszej**, przejdź do [tych kroków](/intune-user-help/enroll-your-w10-device-your-account.md).
+    > Kroki przedstawione w tym przewodniku Szybki start dotyczą systemu Windows 10 w wersji **1607 lub nowszej**. Jeśli używasz wersji **1511 lub starszej**, przejdź do [tych kroków](/intune-user-help/enroll-your-w10-device-your-account).
 
 ## <a name="enroll-windows-10-desktop"></a>Rejestrowanie komputera z systemem Windows 10
 
@@ -85,7 +85,7 @@ Zanim zarejestrujesz system Windows 10 Desktop, musisz sprawdzić, którą wersj
 
    ![Zrzut ekranu z nowo dodanym kontem](media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-06.png)
 
-    Jeśli powyższe kroki zostały wykonane, ale nadal nie można uzyskać dostępu do służbowego konta e-mail i plików, wykonaj czynności opisane w części [Rozwiązywanie problemów w przypadku wyświetlenia ekranu Dostęp do zasobów służbowych](/intune-user-help/troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-access-work-or-school).
+    Jeśli powyższe kroki zostały wykonane, ale nadal nie można uzyskać dostępu do służbowego konta e-mail i plików, wykonaj czynności opisane w części [Rozwiązywanie problemów w przypadku wyświetlenia ekranu Dostęp do zasobów służbowych](/intune-user-help/troubleshoot-your-windows-10-device-windows#troubleshooting-steps-to-follow-if-you-see-access-work-or-school).
 
 ## <a name="confirm-your-device-enrollment-in-intune"></a>Potwierdzanie rejestracji urządzenia w usłudze Intune
 
@@ -97,11 +97,11 @@ Zanim zarejestrujesz system Windows 10 Desktop, musisz sprawdzić, którą wersj
 
 ## <a name="clean-up-resources"></a>Oczyszczanie zasobów
 
-Aby wyrejestrować urządzenie z systemem Windows, zobacz [Usuwanie urządzenia z systemem Windows z zarządzania](/intune-user-help/unenroll-your-device-from-intune-windows.md).
+Aby wyrejestrować urządzenie z systemem Windows, zobacz [Usuwanie urządzenia z systemem Windows z zarządzania](/intune-user-help/unenroll-your-device-from-intune-windows).
 
 ## <a name="next-steps"></a>Następne kroki
 
-W tym przewodniku Szybki start przedstawiono sposób rejestrowania urządzenia z systemem Windows 10 w usłudze Intune. Możesz też zapoznać się z innymi sposobami rejestrowania urządzeń na wszystkich platformach. Aby uzyskać więcej informacji o używaniu urządzeń z usługą Intune, zobacz [Wykonywanie pracy przy użyciu urządzeń zarządzanych](/intune-user-help/use-managed-devices-to-get-work-done.md).
+W tym przewodniku Szybki start przedstawiono sposób rejestrowania urządzenia z systemem Windows 10 w usłudze Intune. Możesz też zapoznać się z innymi sposobami rejestrowania urządzeń na wszystkich platformach. Aby uzyskać więcej informacji o używaniu urządzeń z usługą Intune, zobacz [Wykonywanie pracy przy użyciu urządzeń zarządzanych](/intune-user-help/use-managed-devices-to-get-work-done).
 
 Aby zapoznać się kolejnymi przewodnikami Szybki start dotyczącymi usługi Intune, przejdź do kolejnego przewodnika Szybki start.
 

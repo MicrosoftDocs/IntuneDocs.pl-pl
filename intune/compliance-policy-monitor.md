@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/12/2018
+ms.date: 12/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: f835f2bd2802454bbcdb27251524dfa4d2400f1a
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: e26de8691e78e4b35e8618c48f38c7972af233f8
+ms.sourcegitcommit: 88f760abcea7348a0c6d00b533b54a6ff68d3985
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52178382"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977307"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Monitorowanie zasad zgodności urządzeń Intune
 
@@ -58,6 +58,9 @@ Podczas przechodzenia do szczegółów raportów możesz też zobaczyć konkretn
 
 Wykres przedstawia stany zgodności dla wszystkich urządzeń zarejestrowanych w usłudze Intune. Stany zgodności urządzeń są przechowywane w dwóch różnych bazach danych: Intune i Azure Active Directory. 
 
+> [!IMPORTANT]
+> Usługa Intune wykonuje wszystkie oceny zgodności na urządzeniu zgodnie z jego harmonogramem ewidencjonowania. [Dowiedz się więcej o harmonogramie ewidencjonowania urządzenia](https://docs.microsoft.com/intune/device-profile-troubleshoot#how-long-does-it-take-for-mobile-devices-to-get-a-policy-or-apps-after-they-have-been-assigned).
+
 Opisy różnych stanów zasad zgodności urządzeń:
 
 - **Zgodne**: urządzenie pomyślnie zastosowało co najmniej jedno ustawienie zasady zgodności urządzenia.
@@ -68,13 +71,13 @@ Opisy różnych stanów zasad zgodności urządzeń:
 
 - **Nie oceniono**: wstępny stan dla nowo zarejestrowanych urządzeń. Lub urządzeń, którym nie przypisano zasad zgodności i które nie mają wyzwalacza umożliwiającego sprawdzenie zgodności.
 
-- **Niezgodne**: urządzenie nie zastosowało pomyślnie co najmniej jednego ustawienia zasad zgodności urządzenia. Lub użytkownik nie zapewnił zgodności z zasadami.
+- **Niezgodne:** urządzenie nie zastosowało pomyślnie co najmniej jednego ustawienia zasad zgodności urządzenia. Lub użytkownik nie zapewnił zgodności z zasadami.
 
-- **Urządzenie nie jest zsynchronizowane**: urządzenie nie zgłosiło stanu zasad zgodności urządzenia z jednej z następujących przyczyn:
+- **Urządzenie nie jest zsynchronizowane:** urządzenie nie zgłosiło stanu zasad zgodności urządzenia z jednej z następujących przyczyn:
 
-  - **Nieznany**: urządzenie jest w trybie offline lub nie nawiązało łączności z usługą Intune lub Azure AD z innych przyczyn.
+  - **Nieznane**: urządzenie jest w trybie offline lub nie nawiązało łączności z usługą Intune lub Azure AD z innych przyczyn.
 
-  - **Błąd**: urządzenie nie skomunikowało się z usługą Intune i Azure AD i otrzymało komunikat o błędzie z podanym powodem.
+  - **Błąd**: urządzenie nie skomunikowało się z usługami Intune i Azure AD i otrzymało komunikat o błędzie wraz z powodem.
 
 > [!IMPORTANT]
 > Urządzenia, które są zarejestrowane w usłudze Intune, ale nie są objęte żadnymi zasadami zgodności urządzeń, są uwzględnione w raporcie w obszarze **Zgodne**.
@@ -155,7 +158,7 @@ Ta funkcja jest uwzględniana w obszarze raportowania stanu urządzenia:
     - Powodzenie: zasady zostały zastosowane.
     - Błąd: nie można zastosować zasad. Ten komunikat jest przeważnie wyświetlany z kodem błędu stanowiącym link do wyjaśnienia. 
     - Konflikt: na tym samym urządzeniu zostały zastosowane dwa ustawienia, a usługa Intune nie może rozwiązać konfliktu. Administrator powinien zapoznać się z tą sytuacją.
-    - Oczekujące: urządzenie nie zostało jeszcze zaewidencjonowane w usłudze Intune w celu odebrania zasad. 
+    - Pending: urządzenie nie zostało jeszcze zaewidencjonowane w usłudze Intune w celu odebrania zasad. 
     - Nie dotyczy: urządzenie nie może odebrać zasad. Na przykład zasady aktualizują ustawienie specyficzne dla systemu iOS 11.1, ale urządzenie używa systemu iOS 10. 
 
 3. Aby wyświetlić szczegóły urządzeń używających danych zasad, wybierz jeden z stanów. Na przykład wybierz pozycję **Powodzenie**. W następnym oknie jest wyświetlana lista szczegółów określonego urządzenia, w tym nazwa i stan jego wdrażania.

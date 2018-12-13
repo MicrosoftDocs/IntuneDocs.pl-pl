@@ -1,7 +1,7 @@
 ---
 title: Rejestrowanie urządzeń przy użyciu konta menedżera rejestracji urządzeń
 titlesuffix: Microsoft Intune
-description: Użycie konta menedżera rejestracji urządzeń w celu zarejestrowania urządzeń w usłudze Intune. "
+description: Użycie konta menedżera rejestracji urządzeń w celu zarejestrowania urządzeń w usłudze Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -15,15 +15,15 @@ ms.assetid: 7196b33e-d303-4415-ad0b-2ecdb14230fd
 ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: 1d3e01cdbc7c9e30034e83e9609c0df5f031c18a
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: eb369d8e89ff41e75d5bd669819afbe98b6d1ba7
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184917"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53031844"
 ---
-# <a name="enroll-devices-by-using-a-device-enrollment-manager-account"></a>Rejestrowanie urządzeń przy użyciu konta menedżera rejestracji urządzeń
+# <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Rejestrowanie urządzeń w usłudze Intune przy użyciu konta menedżera rejestracji urządzeń
 
 Przy użyciu jednego konta usługi Azure Active Directory możesz zarejestrować do 1000 urządzeń przenośnych, korzystając z konta menedżera rejestracji urządzeń (DEM, Device Enrollment Manager). Menedżer DEM to uprawnienie usługi Intune, które można zastosować do konta użytkownika usługi AAD i które umożliwia użytkownikowi zarejestrowanie do 1000 urządzeń. Konto DEM jest przydatne w scenariuszach, w których urządzenia są rejestrowane i przygotowywane przed przekazaniem ich użytkownikom.
 

@@ -15,15 +15,15 @@ ms.assetid: ''
 ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: 5ea4d41477f2f0c6dc1314e47072d2c4cf862e23
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: 637fe2d2c764cf78e67e728bfa77567cf12e88ce
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184832"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53031997"
 ---
-# <a name="set-up-enrollment-of-android-enterprise-kiosk-devices"></a>Konfigurowanie rejestracji urządzeń kiosku z rozwiązaniem Android enterprise
+# <a name="set-up-intune-enrollment-of-android-enterprise-kiosk-devices"></a>Konfigurowanie rejestracji urządzeń kiosku z rozwiązaniem Android enterprise w usłudze Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
@@ -57,7 +57,7 @@ Aby zarejestrować urządzenia kiosku, należy utworzyć profil rejestracji. Po 
 1. Przejdź do [portalu usługi Intune](https://portal.azure.com) i wybierz pozycję **Rejestracja urządzeń** > **Rejestracja urządzenia z systemem Android** > **Rejestracja urządzenia kiosku i zadań**.
 2. Wybierz pozycję **Utwórz** i wypełnij wymagane pola.
     - **Nazwa**: wpisz nazwę, która będzie używana podczas przypisywania profilu do dynamicznej grupy urządzeń.
-    - **Data wygaśnięcia tokenu**: data wygaśnięcia tokenu. Firma Google wymusza maksymalnie 90 dni.
+    - **Data wygaśnięcia tokenu**: Data, kiedy wygasa token. Firma Google wymusza maksymalnie 90 dni.
 3. Wybierz pozycję **Utwórz**, aby zapisać profil.
 
 ### <a name="create-a-device-group"></a>Tworzenie grupy urządzeń
@@ -68,10 +68,10 @@ Aplikacje i zasady można zastosować do przypisanych albo dynamicznych grup urz
 2. W bloku **Grupa** wypełnij wymagane pola w następujący sposób:
     - **Typ grupy**: Zabezpieczenia
     - **Nazwa grupy**: wpisz intuicyjną nazwę (na przykład Urządzenia z fabryki 1)
-    - **Typ członkostwa**: Urządzenie dynamiczne
+    - **Typ członkostwa**: urządzenie dynamiczne
 3. Wybierz pozycję **Dodaj zapytanie dynamiczne**.
 4. W bloku **Reguły członkostwa dynamicznego** wypełnij pola w następujący sposób:
-    - **Dodaj dynamiczną regułę członkostwa**: Reguła prosta
+    - **Dodaj dynamiczną regułę członkostwa**: reguła prosta
     - **Dodaj urządzenia, na których**: enrollmentProfileName
     - W środkowym polu wybierz pozycję **Dopasowanie**.
     - W ostatnim polu wprowadź nazwę profilu rejestracji, który został utworzony wcześniej.

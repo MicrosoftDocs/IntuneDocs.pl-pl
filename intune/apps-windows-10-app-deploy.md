@@ -16,12 +16,12 @@ ms.reviewer: priyar
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 034919a7ae7d223a30b11b4c3aa1f495e028e89c
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 00e8b0e35514fe583027d15fdcc810295aa9fa9e
+ms.sourcegitcommit: 88f760abcea7348a0c6d00b533b54a6ff68d3985
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184628"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977290"
 ---
 # <a name="windows-10-app-deployment-using-microsoft-intune"></a>Wdrażanie aplikacji systemu Windows 10 w usłudze Microsoft Intune 
 
@@ -49,7 +49,7 @@ W zależności od typu aplikacji aplikację można zainstalować na urządzeniu 
     - Nowoczesne aplikacje biznesowe i aplikacje ze sklepu Microsoft dla Firm (zarówno w trybie online, jak i offline) mogą być wdrażane w kontekście użytkownika i będą obsługiwały zarówno wymaganą, jak i dostępną intencję.
     - Aplikacje Win32 tworzone jako aplikacje typu **Tryb użytkownika** lub **Tryb podwójny** mogą być wdrażane w kontekście użytkownika i będą obsługiwały zarówno **wymaganą**, jak i **dostępną** intencję. 
 - **Kontekst urządzenia**: po wdrożeniu aplikacji w kontekście urządzenia zarządzana aplikacja zostanie zainstalowana bezpośrednio na urządzeniu przez usługę Intune.
-    - Tylko nowoczesne aplikacje biznesowe oraz aplikacje ze sklepu Microsoft dla Firm licencjonowane online mogą być wdrażane w kontekście urządzenia i będą obsługiwały wyłącznie wymaganą intencję.
+    - Tylko nowoczesne aplikacje biznesowe oraz aplikacje ze sklepu Microsoft Store dla Firm licencjonowane offline mogą być wdrażane w kontekście urządzenia i będą obsługiwały wyłącznie wymaganą intencję.
     - Aplikacje Win32 tworzone jako aplikacje typu **Tryb komputera** lub **Tryb podwójny** mogą być wdrażane w kontekście użytkownika i będą obsługiwały tylko **wymaganą** intencję.
 
 > [!NOTE]

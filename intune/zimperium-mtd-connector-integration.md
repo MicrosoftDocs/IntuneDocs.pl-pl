@@ -6,22 +6,22 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/29/2017
+ms.date: 12/04/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 363fd280-1865-4a61-855b-eb75c3c62753
-ms.reviewer: heenamac
+ms.reviewer: davidra
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 68896a363cab37aabe9a597872da0fe75c44c473
-ms.sourcegitcommit: 3903f20cb5686532ccd8c36aa43c5150cee7cca2
+ms.openlocfilehash: 3f2ffb3f99ce0dc925c52f733b25292cdbddae3e
+ms.sourcegitcommit: d3b1e3fffd3e0229292768c7ef634be71e4736ae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52267241"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52861000"
 ---
 # <a name="integrate-zimperium-with-intune"></a>Integracja rozwiązania Zimperium z usługą Intune
 
@@ -36,7 +36,7 @@ Przed rozpoczęciem procesu integracji rozwiązania Zimperium z usługą Intune 
 
 -   Subskrypcja usługi Microsoft Intune
 
--   Poświadczenia administratora usługi Azure Active Directory umożliwiające przyznanie następujących uprawnień:
+-   Poświadczenia administratora globalnego usługi Azure Active Directory umożliwiające przyznanie następujących uprawnień:
 
     -   Logowanie i odczyt profilu użytkownika
 
@@ -52,7 +52,7 @@ Przed rozpoczęciem procesu integracji rozwiązania Zimperium z usługą Intune 
 
 Następuje proces autoryzacji aplikacji Zimperium:
 
--   Zezwól usłudze Zimperium na przekazywanie informacji związanych z kondycją urządzenia z powrotem do usługi Intune.
+-   Udziel usłudze Zimperium uprawnień do przekazywania informacji związanych z kondycją urządzenia z powrotem do usługi Intune. Aby udzielić tych uprawnień, należy użyć poświadczeń administratora globalnego. Udzielanie uprawnień jest operacją jednorazową. Po udzieleniu uprawnień poświadczenia administratora globalnego nie są wymagane do codziennych operacji.
 
 -   Usługa Zimperium synchronizuje się z członkostwem grupy rejestracji usługi Azure Active Directory (AD), aby zapełnić bazę danych urządzeń.
 
@@ -60,9 +60,12 @@ Następuje proces autoryzacji aplikacji Zimperium:
 
 -   Zezwól aplikacji Zimperium na zalogowanie się przy użyciu logowania jednokrotnego usługi Azure AD.
 
+Aby uzyskać więcej informacji na temat zgody i aplikacji usługi Azure Active Directory, zobacz [Request the permissions from a directory admin](https://docs.microsoft.com/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-from-a-directory-admin) (Żądanie uprawnień od administratora katalogu) w artykule dotyczącym usługi Azure Active Directory *Permissions and consent in the Azure Active Directory v2.0 endpoint* (Uprawnienia i zgoda w punkcie końcowym usługi Azure Active Directory w wersji 2.0).
+
+
 ## <a name="to-set-up-zimperium-integration"></a>Aby skonfigurować integrację rozwiązania Zimperium
 
-1.  Przejdź do  [konsoli Zimperium MTD](https://sso.zimperium.com/signon/aad/)  i zaloguj się przy użyciu swoich poświadczeń.
+1.  Przejdź do  [konsoli Zimperium MTD](https://sso.zimperium.com/signon/aad/)  i zaloguj się przy użyciu swoich poświadczeń. Aby przeprowadzić proces konfiguracji integracji rozwiązania Zimperium, należy zalogować się jako użytkownik usługi Azure Active Directory, który ma przypisaną rolę administratora globalnego. Podczas tej jednorazowej operacji konfiguracji prawa administratora globalnego są używane w celu udzielenia uprawnień dla aplikacji Zimperium do komunikacji z usługą Intune w organizacji. 
 
 2.  Z menu po lewej stronie wybierz element **Zarządzanie**.
 
@@ -70,9 +73,9 @@ Następuje proces autoryzacji aplikacji Zimperium:
 
 4.  Wybierz pozycję **Dodaj zarządzanie urządzeniami przenośnymi**, a następnie wybierz element **Microsoft Intune** z listy **Dostawcy rozwiązań do zarządzania urządzeniami przenośnymi**.
 
-5.  Po ustawieniu usługi Microsoft Intune jako usługi zarządzania urządzeniami przenośnymi pojawia się okienko  **Konfiguracja usługi Microsoft Intune** . Wybierz polecenie  **Dodaj usługę Azure Active Directory**  dla każdej opcji: **Zimperium zConsole** i **zIPS iOS and Android apps** (Aplikacje zIPS dla systemów iOS i Android), aby autoryzować rozwiązanie Zimperium do komunikowania się z usługami Intune i Azure AD za pomocą logowania jednokrotnego usługi Azure AD.
+5.  Po ustawieniu usługi Microsoft Intune jako usługi MDM zostanie wyświetlone okno **Konfiguracja usługi Microsoft Intune** . Wybierz opcję **Dodaj usługę Azure Active Directory** dla każdej opcji: **Zimperium zConsole**, **Aplikacje zIPS dla systemów iOS i Android**, aby autoryzować rozwiązanie Zimperium do komunikowania się z usługami Intune i Azure AD za pomocą logowania jednokrotnego usługi Azure AD.
 
-    > [!IMPORTANT]
+    > [!IMPORTANT]  
     > Aby ukończyć proces integracji z usługą Intune, należy dodać rozwiązanie Zimperium zConsole i aplikacje zIPS dla systemów iOS i Android.
 
 6.  Wybierz pozycję  **Akceptuj** , aby autoryzować aplikację Zimperium do komunikacji z usługami Intune i Azure Active Directory.
@@ -80,6 +83,8 @@ Następuje proces autoryzacji aplikacji Zimperium:
 7.  Po dodaniu rozwiązania **Zimperium zConsole** i **aplikacji zIPS dla systemów iOS i Android** do usługi Azure AD dodaj grupy zabezpieczeń usługi Azure AD. To dodanie umożliwi rozwiązaniu Zimperium synchronizację grupy zabezpieczeń usługi Azure AD z jej usługą.
 
 8.  Wybierz pozycję  **Zakończ**, aby zapisać konfigurację i uruchomić pierwszą synchronizację grupy zabezpieczeń usługi Azure AD.
+
+9.  Wyloguj się z konsoli rozwiązania Zimperium MTD.
 
 ## <a name="next-steps"></a>Następne kroki
 

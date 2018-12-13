@@ -14,12 +14,12 @@ ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 28c8863e8739563a6b6c9152a46abb6bf50f2db5
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 44923d89647118268c7a55746599354ac88fbfd2
+ms.sourcegitcommit: d3b1e3fffd3e0229292768c7ef634be71e4736ae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189201"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52861017"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Usuwanie urządzeń przy użyciu czyszczenia, wycofywania lub ręcznego wyrejestrowywania urządzenia
 
@@ -81,7 +81,7 @@ W poniższych tabelach opisano usuwane dane oraz wpływ akcji **Wycofaj** na dan
 
 |Typ danych|iOS|
 |-------------|-------|
-|Aplikacje firmowe i skojarzone dane zainstalowane za pomocą usługi Intune|Aplikacje zostaną odinstalowane. Dane aplikacji firmowych zostaną usunięte.<br /><br />Dane aplikacji firmy Microsoft korzystających z zarządzania aplikacjami mobilnymi zostaną usunięte. Aplikacja nie zostanie usunięta.|
+|Aplikacje firmowe i skojarzone dane zainstalowane za pomocą usługi Intune|**Aplikacje zainstalowane przy użyciu Portalu firmy:** Wszystkie dane aplikacji i aplikacje są usuwane. Te aplikacje to aplikacje zainstalowane pierwotnie ze sklepu App Store i zarządzane później jako aplikacje firmowe. <br /><br /> **Aplikacje firmy Microsoft używające funkcji zarządzania aplikacjami mobilnymi i zainstalowane ze sklepu App Store:** Dane aplikacji prywatnych są usuwane. Dane aplikacji firmowych i aplikacje nie są usuwane.|
 |Ustawienia|Konfiguracje, które były ustawione przez zasady usługi Intune, nie są już wymuszane. Użytkownicy mogą zmieniać ustawienia.|
 |Ustawienia profili sieci Wi-Fi i sieci VPN|Usuwane.|
 |Ustawienia profili certyfikatów|Certyfikaty zostaną usunięte i odwołane.|

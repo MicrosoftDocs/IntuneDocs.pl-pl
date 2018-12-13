@@ -1,5 +1,5 @@
 ---
-title: Kategoryzowanie urządzeń do grup w usłudze Intune
+title: Kategoryzowanie urządzeń na grupy w usłudze Intune
 titleSuffix: Microsoft Intune
 description: Dowiedz się, jak kategoryzować urządzenia do grup, aby ułatwić zarządzanie.
 keywords: ''
@@ -14,19 +14,19 @@ ms.technology: ''
 ms.assetid: 7b668c37-40b9-4c69-8334-5d8344e78c24
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: 159079686507815ad4cf1738ca4157467352f681
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: 0abc42de95f90b3690e91908f92bb53d11a802d8
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189524"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53031766"
 ---
-# <a name="categorize-devices-into-groups-for-easier-management"></a>Kategoryzowanie urządzeń do grup w celu ułatwienia zarządzania
+# <a name="categorize-devices-into-groups"></a>Kategoryzowanie urządzeń na grupy
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Użyj kategorii urządzeń usługi Microsoft Intune do automatycznego dodawania urządzeń do grup opartych na zdefiniowanych przez Ciebie kategoriach. Dzięki temu łatwiej jest zarządzać tymi urządzeniami.
+Aby ułatwić zarządzanie urządzeniami, użyj kategorii urządzeń usługi Microsoft Intune w celu automatycznego dodawania urządzeń do grup opartych na zdefiniowanych przez Ciebie kategoriach.
 
 Kategorie urządzeń korzystają z następującego przepływu pracy:
 1. Tworzenie kategorii do wyboru dla użytkowników podczas rejestrowania urządzeń.
@@ -51,7 +51,7 @@ Możesz utworzyć dowolne kategorie urządzeń. Przykład:
 
 Nazwa kategorii urządzeń będzie używana podczas tworzenia grup zabezpieczeń usługi Azure Active Directory (Azure AD) w kroku 2.
 
-### <a name="step-2-create-azure-active-directory-security-groups"></a>Krok 2. Utworzenie grup zabezpieczeń usługi Azure Active Directory
+### <a name="step-2-create-azure-active-directory-security-groups"></a>Krok 2: Utworzenie grup zabezpieczeń usługi Azure Active Directory
 W tym kroku utworzysz grupy dynamiczne w witrynie Azure Portal na podstawie kategorii urządzeń i ich nazw.
 
 Aby kontynuować, zobacz [Tworzenie zaawansowanych reguł przy użyciu atrybutów](https://azure.microsoft.com/documentation/articles/active-directory-accessmanagement-groups-with-advanced-rules/#using-attributes-to-create-rules-for-device-objects) w dokumentacji usługi Azure AD.
