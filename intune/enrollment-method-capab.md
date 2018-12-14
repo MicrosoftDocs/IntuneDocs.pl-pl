@@ -1,7 +1,7 @@
 ---
-title: Możliwości usługi Intune według metody rejestracji dla urządzeń z systemem Windows
+title: Możliwości metod rejestracji usługi Intune dla urządzeń z systemem Windows
 titlesuffix: Microsoft Intune
-description: Zobacz możliwości obsługiwane przez poszczególne metody rejestracji dla urządzeń z systemem Windows.
+description: Możliwości każdej metody rejestracji dla urządzeń z systemem Windows.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -14,18 +14,18 @@ ms.technology: ''
 ms.assetid: ''
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: 38bb88015261aa50d6c27aec026614f1205aebe8
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: f32a0967c094c16b76ad4c4572ebd8e80c6115b2
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189813"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032133"
 ---
-# <a name="capabilities-by-enrollment-method-for-windows-devices"></a>Możliwości według metody rejestracji dla urządzeń z systemem Windows
+# <a name="intune-enrollment-method-capabilities-for-windows-devices"></a>Możliwości metod rejestracji usługi Intune dla urządzeń z systemem Windows
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Usługa Intune umożliwia zarządzanie urządzeniami i aplikacjami pracowników oraz sposobem uzyskiwania przez nich dostępu do danych firmy. Urządzenia muszą najpierw zostać zarejestrowane w usłudze Intune. Istnieje kilka metod rejestrowania urządzeń pracowników. Każda metoda ma inne najlepsze rozwiązania oraz możliwości, jak pokazano w poniższych tabelach.
+Istnieje kilka metod rejestrowania urządzeń pracowników w usłudze Intune. Każda metoda ma inne najlepsze rozwiązania oraz możliwości, jak pokazano w poniższych tabelach.
 
 ## <a name="best-practices-by-enrollment-method"></a>Najlepsze rozwiązania według metody rejestracji
 | **Najlepsze rozwiązania** | **[Dołączone do usługi Azure AD](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[Dołączone do usługi Azure AD za pomocą rozwiązania Autopilot](enrollment-autopilot.md)** |**[Zbiorcze](windows-bulk-enroll.md)**|**[Menedżer rejestracji urządzeń](device-enrollment-manager-enroll.md)** | **[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](device-enrollment.md#bring-your-own-device)** | **[GPO](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)** |

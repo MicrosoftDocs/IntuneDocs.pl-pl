@@ -5,22 +5,22 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/19/2018
+ms.date: 12/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: fd99a168747bd4a0f5852404e767d658b8400ba2
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: intune-azure, seodec18
+ms.openlocfilehash: 062adf12f743fdbbe42c1f29e91f2a16414ca457
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180837"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032269"
 ---
-# <a name="manage-and-use-windows-holographic-and-hololens-devices-with-intune"></a>Zarządzanie urządzeniami HoloLens oraz z urządzeniami systemem Windows Holographic i korzystanie z nich za pomocą usługi Intune
+# <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Zarządzanie urządzeniami z systemem Windows Holographic i urządzeniami HoloLens oraz korzystanie z różnych funkcji zarządzania urządzeniami przy użyciu usługi Intune
 
 Usługa Microsoft Intune oferuje wiele funkcji ułatwiających zarządzanie urządzeniami z systemem Windows Holographic for Business, takimi jak [Microsoft HoloLens](https://docs.microsoft.com/hololens/). Przy użyciu usługi Intune można potwierdzić, że urządzenia są zgodne z zasadami Twojej organizacji, a urządzenie można dostosować, dodając profil sieci VPN lub Wi-Fi. Kolejną istotną funkcją jest korzystanie z urządzenia jak z kiosku i uruchamianie określonej aplikacji lub określonego zestawu aplikacji.
 
@@ -32,11 +32,11 @@ Aby korzystać z urządzeń z systemem Windows Holographic przy użyciu usługi 
 
 Usługa Azure Active Directory (AD) jest bardzo pomocna w zarządzaniu i sterowaniu urządzeniami z systemem Windows Holographic for Business. Usługi Intune i Azure AD umożliwiają: 
 
-- **[Konfigurowanie urządzeń dołączonych do usługi Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-setup)**: w usłudze Azure Active Directory (AD) możesz dodawać służbowe urządzenia z systemem Windows 10, w tym urządzenia z systemem Windows Holographic for Business. Ta funkcja umożliwia usłudze Azure AD sterowanie urządzeniem. Pomaga ona potwierdzić, że użytkownicy uzyskują dostęp do zasobów firmy z urządzeń, które spełniają Twoje standardy zabezpieczeń i zgodności.
+- **[Dołączanie urządzeń do usługi Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)**: w usłudze Azure Active Directory (AD) możesz dodawać służbowe urządzenia z systemem Windows 10, w tym urządzenia z systemem Windows Holographic for Business. Ta funkcja umożliwia usłudze Azure AD sterowanie urządzeniem. Pomaga ona potwierdzić, że użytkownicy uzyskują dostęp do zasobów firmy z urządzeń, które spełniają Twoje standardy zabezpieczeń i zgodności.
 
-  Artykuł [Introduction to device management in Azure AD (Wprowadzenie do zarządzania urządzeniami w usłudze Azure AD)](https://docs.microsoft.com/azure/active-directory/device-management-introduction) zawiera więcej szczegółowych informacji.
+  Artykuł [Zarządzanie urządzeniami w usłudze Azure AD](https://docs.microsoft.com/azure/active-directory/devices/overview) zawiera więcej szczegółowych informacji.
 
-- **[Zbiorcze rejestrowanie urządzeń z systemem Windows](windows-bulk-enroll.md)**: możesz dołączać do usług Azure Active Directory (AD) i Intune dużą liczbę nowych urządzeń z systemem Windows. W ramach tej funkcji, nazywanej rejestrowaniem zbiorczym, są używane pakiety aprowizacji. Te pakiety umożliwiają dołączenie urządzeń z systemem Windows Holographic for Business do dzierżawy usługi Azure AD i zarejestrowanie ich w usłudze Intune.
+- **[Rejestrację zbiorczą urządzeń z systemem Windows](windows-bulk-enroll.md)**: możesz dołączyć dużą liczbę nowych urządzeń z systemem Windows do usługi Azure Active Directory (AD) i Intune. W ramach tej funkcji, nazywanej rejestrowaniem zbiorczym, są używane pakiety aprowizacji. Te pakiety umożliwiają dołączenie urządzeń z systemem Windows Holographic for Business do dzierżawy usługi Azure AD i zarejestrowanie ich w usłudze Intune.
 
 ## <a name="company-portal"></a>Portal firmy
 **[Konfigurowanie aplikacji Portal firmy](company-portal-app.md)**
@@ -49,7 +49,6 @@ Przy użyciu aplikacji Portal firmy możesz również uruchomić następujące a
 - [Zmienianie nazwy urządzenia](/intune-user-help/rename-your-device-cpapp)
 - [Instalowanie aplikacji](/intune-user-help/install-apps-cpapp-windows) na urządzeniu
 - [Ręczne synchronizowanie urządzeń](/intune-user-help/sync-your-device-manually-windows) z aplikacji Ustawienia lub aplikacji Portal firmy
-
 
 ## <a name="compliance-policy"></a>Zasady zgodności
 **[Tworzenie zasad zgodności urządzenia](compliance-policy-create-windows.md)**

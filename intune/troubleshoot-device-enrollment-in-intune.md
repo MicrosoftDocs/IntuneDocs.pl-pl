@@ -16,12 +16,12 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: df84438ca93e50c392b085eb439abe02f074e5c3
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: cd238a7b779dd5e52e3cf8fb06c8f89db1f76559
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189728"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112929"
 ---
 # <a name="troubleshoot-device-enrollment-in-intune"></a>Rozwiązywanie problemów dotyczących rejestrowania urządzeń w usłudze Intune
 
@@ -53,7 +53,7 @@ Użytkownicy urządzenia zarządzanego mogą zbierać dzienniki rejestracji i dz
 Te problemy mogą wystąpić na wszystkich platformach urządzeń.
 
 ### <a name="device-cap-reached"></a>Osiągnięto limit urządzeń
-**Problem:** podczas rejestracji urządzenia przez użytkownika występuje błąd (na przykład **Portal firmy jest tymczasowo niedostępny**), a dziennik DMPdownloader.log programu Configuration Manager zawiera błąd **DeviceCapReached**.
+**Problem:** Podczas rejestracji urządzenia przez użytkownika występuje błąd (na przykład **Portal firmy jest tymczasowo niedostępny**), a dziennik DMPdownloader.log programu Configuration Manager zawiera błąd **DeviceCapReached**.
 
 **Rozwiązanie:**
 
@@ -73,12 +73,12 @@ Aby uniknąć osiągania górnych limitów urządzeń, pamiętaj o usuwaniu niea
 
 > [!NOTE]
 > 
-> Stosowania limitu rejestracji urządzeń można uniknąć, używając konta menedżera rejestracji urządzeń zgodnie z opisem w temacie [Rejestrowanie urządzeń należących do firmy przy użyciu menedżera rejestracji urządzeń w usłudze Microsoft Intune](/intune-classic/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune).
+> Stosowania limitu rejestracji urządzeń można uniknąć, używając konta menedżera rejestracji urządzeń zgodnie z opisem w temacie [Rejestrowanie urządzeń należących do firmy przy użyciu menedżera rejestracji urządzeń w usłudze Microsoft Intune](device-enrollment-manager-enroll.md).
 > 
 > Konto użytkownika, które jest dodawane do konta Menedżerowie rejestracji urządzeń, nie będzie mogło zostać użyte do ukończenia procesu rejestrowania, jeśli dla danych logowania tego użytkownika zostaną wymuszone zasady dostępu warunkowego.
 
 ### <a name="company-portal-temporarily-unavailable"></a>Portal firmy jest tymczasowo niedostępny
-**Problem:** na urządzeniu występuje błąd **Portal firmy jest tymczasowo niedostępny**.
+**Problem:** Na urządzeniu występuje błąd **Portal firmy jest tymczasowo niedostępny**.
 
 **Rozwiązanie:**
 
@@ -93,7 +93,7 @@ Aby uniknąć osiągania górnych limitów urządzeń, pamiętaj o usuwaniu niea
 5.  Jeśli logowanie użytkownika przebiegnie pomyślnie, na urządzeniu z systemem iOS zostanie wyświetlony monit o zainstalowanie aplikacji Portal firmy dla usługi Intune i zarejestrowanie. Na urządzeniu z systemem Android należy ręcznie zainstalować aplikację Portal firmy dla usługi Intune, po czym będzie można ponowić próbę rejestracji.
 
 ### <a name="mdm-authority-not-defined"></a>Niezdefiniowany urząd MDM
-**Problem:** występuje błąd **Nie zdefiniowano urzędu MDM**.
+**Problem:** Występuje błąd **Nie zdefiniowano urzędu MDM**.
 
 **Rozwiązanie:**
 
@@ -133,10 +133,10 @@ Aby uniknąć osiągania górnych limitów urządzeń, pamiętaj o usuwaniu niea
 **Rozwiązanie:** W [centrum administracyjnym usługi Office 365](https://portal.office.com/) usuń znaki specjalne z nazwy firmy i zapisz informacje o firmie.
 
 ### <a name="unable-to-sign-in-or-enroll-devices-when-you-have-multiple-verified-domains"></a>Nie można się zalogować lub zarejestrować urządzeń w przypadku korzystania z wielu zweryfikowanych domen
-**Problem:** ten problem może wystąpić po dodaniu drugiej zweryfikowanej domeny do usługi AD FS. Możliwe, że użytkownicy z sufiksem głównej nazwy użytkownika (nazwy UPN) drugiej domeny nie będą mogli zalogować się do portali lub rejestrować urządzeń.
+**Problem:** Ten problem może wystąpić po dodaniu drugiej zweryfikowanej domeny do usługi AD FS. Możliwe, że użytkownicy z sufiksem głównej nazwy użytkownika (nazwy UPN) drugiej domeny nie będą mogli zalogować się do portali lub rejestrować urządzeń.
 
 
-<strong>Rozwiązanie:</strong> klienci usługi Microsoft Office 365 muszą wdrożyć oddzielne wystąpienie usługi federacyjnej AD FS 2.0 na każdy sufiks, jeśli:
+<strong>Rozwiązanie:</strong> Klienci usługi Microsoft Office 365 muszą wdrożyć oddzielne wystąpienie usługi federacyjnej AD FS 2.0 na każdy sufiks, jeśli:
 - korzystają z logowania jednokrotnego (SSO) za pośrednictwem usług AD FS 2.0 i
 - mają wiele domen najwyższego poziomu dla sufiksów nazw głównych użytkowników w organizacji (na przykład @contoso.com lub @fabrikam.com).
 
@@ -157,7 +157,7 @@ Poniższa tabela zawiera listę błędów, które użytkownicy końcowi mogą na
 
 
 ### <a name="devices-fail-to-check-in-with-the-intune-service-and-display-as-unhealthy-in-the-intune-admin-console"></a>Nie można zaewidencjonować urządzeń w usłudze Intune — w konsoli administracyjnej usługi Intune stan urządzeń jest wyświetlany jako „W niedobrej kondycji”
-**Problem:** zaewidencjonowywanie niektórych urządzeń firmy Samsung z systemem Android w wersji 4.4.x i 5.x przy użyciu usługi Intune może zostać zatrzymane. Jeśli nie można zaewidencjonować urządzeń:
+**Problem:** Ewidencjonowanie niektórych urządzeń firmy Samsung z systemem Android w wersji 4.4.x i 5.x przy użyciu usługi Intune może zostać zatrzymane. Jeśli nie można zaewidencjonować urządzeń:
 
 - Nie otrzymują one zasad, aplikacji ani poleceń zdalnych z usługi Intune.
 - W konsoli administracyjnej ich stan jest wyświetlany jako **W niedobrej kondycji**.
@@ -206,7 +206,7 @@ Jeśli rozwiązanie 2 nie działa, poproś użytkowników o wykonanie poniższyc
 
 
 ### <a name="profile-installation-failed"></a>Instalacja profilu nie powiodła się
-**Problem:**  Na urządzeniu z systemem Android wystąpił błąd **Instalacja profilu nie powiodła się**.
+**Problem:** Na urządzeniu z systemem Android wystąpił błąd **Instalacja profilu nie powiodła się**.
 
 **Rozwiązanie:**
 
@@ -220,7 +220,7 @@ Jeśli rozwiązanie 2 nie działa, poproś użytkowników o wykonanie poniższyc
 
 ### <a name="android-certificate-issues"></a>Problemy z certyfikatami systemu Android
 
-**Problem**: użytkownicy otrzymują następujący komunikat na urządzeniu: *Nie możesz się zalogować, ponieważ urządzenie nie ma wymaganego certyfikatu.*
+**Problem**: Użytkownicy otrzymują na swoich urządzeniach następujący komunikat: *Nie możesz się zalogować z powodu braku wymaganego certyfikatu na urządzeniu.*
 
 **Rozwiązanie 1**:
 
@@ -271,7 +271,7 @@ Poniższa tabela zawiera listę błędów, które użytkownicy końcowi mogą na
 |AccountNotOnboarded|Występuje problem z certyfikatem umożliwiającym komunikację urządzenia przenośnego z siecią firmową.<br /><br />|Usługa Apple Push Notification Service (APNs) udostępnia kanał na potrzeby kontaktu zarejestrowanych urządzeń z systemem iOS. Rejestracja zakończy się niepowodzeniem i zostanie wyświetlony ten komunikat, jeśli:<ul><li>kroki uzyskiwania certyfikatu APNs nie zostały ukończone lub</li><li>certyfikat APNs wygasł.</li></ul>Aby uzyskać więcej informacji, zobacz [Konfigurowanie zarządzania systemem iOS i komputerami Mac przez usługę Microsoft Intune](ios-enroll.md).|
 |DeviceTypeNotSupported|Prawdopodobnie użytkownik wykonał próbę zarejestrowania urządzenia z systemem innymi niż iOS. Typ urządzenia przenośnego, które próbujesz zarejestrować, nie jest obsługiwany.<br /><br />Upewnij się, że na urządzeniu działa system iOS w wersji 8.0 lub nowszej.<br /><br />|Upewnij się, że na urządzeniu użytkownika działa system iOS w wersji 8.0 lub nowszej.|
 |UserLicenseTypeInvalid|Nie można zarejestrować urządzenia, ponieważ konto użytkownika nie jest jeszcze członkiem wymaganej grupy użytkowników.<br /><br />|Aby użytkownicy mogli rejestrować urządzenia, muszą należeć do odpowiedniej grupy użytkowników. Ten komunikat oznacza, że użytkownicy mają niewłaściwy typ licencji dla urzędu zarządzania urządzeniami mobilnymi. Na przykład użytkownicy zobaczą ten błąd, gdy spełnione są oba z następujących warunków:<ol><li>usługa Intune została ustawiona jako urząd zarządzania urządzeniami mobilnymi</li><li>używana jest licencja programu System Center 2012 R2 Configuration Manager.</li></ol>Przejrzyj poniższe artykuły, aby uzyskać więcej informacji:<br /><br />Zobacz [Konfigurowanie zarządzania systemem iOS i komputerami Mac przez usługę Microsoft Intune](ios-enroll.md), a także informacje o sposobie konfigurowania użytkowników w temacie [Synchronizacja usługi Active Directory i dodawanie użytkowników do usługi Intune](users-add.md) oraz [Organizowanie użytkowników i urządzeń](groups-add.md).|
-|MdmAuthorityNotDefined|Nie określono urzędu zarządzania urządzeniami mobilnymi.<br /><br />|Urząd zarządzania urządzeniami mobilnymi nie został ustawiony w usłudze Intune.<br /><br />Zapoznaj się z pozycją 1 w sekcji „Krok 6. Rejestrowanie urządzeń przenośnych i instalowanie aplikacji” w temacie [Rozpoczynanie pracy z 30-dniową wersją próbną usługi Microsoft Intune](free-trial-sign-up.md).|
+|MdmAuthorityNotDefined|Nie określono urzędu zarządzania urządzeniami mobilnymi.<br /><br />|Urząd zarządzania urządzeniami mobilnymi nie został ustawiony w usłudze Intune.<br /><br />Zapoznaj się z pozycją 1 w sekcji „Krok 6: Rejestrowanie urządzeń przenośnych i instalowanie aplikacji” w temacie [Rozpoczynanie pracy z 30-dniową wersją próbną usługi Microsoft Intune](free-trial-sign-up.md).|
 
 ### <a name="devices-are-inactive-or-the-admin-console-cant-communicate-with-them"></a>Urządzenia są nieaktywne lub nie jest możliwe nawiązanie łączności między nimi a konsolą administracyjną
 **Problem:** urządzenia z systemem iOS nie są ewidencjonowane przy użyciu usługi Intune. Urządzenia muszą być okresowo zaewidencjonowane w celu umożliwienia im dalszego dostępu do chronionych zasobów firmy. Jeśli nie można zaewidencjonować urządzeń:
@@ -280,7 +280,7 @@ Poniższa tabela zawiera listę błędów, które użytkownicy końcowi mogą na
 - W konsoli administracyjnej ich stan jest wyświetlany jako **W niedobrej kondycji**.
 - Użytkownicy chronieni przez zasady dostępu warunkowego mogą utracić dostęp do zasobów firmowych.
 
-**Rozwiązanie:** podaj użytkownikom końcowym następujące rozwiązania, aby pomóc im odzyskać dostęp do zasobów firmy.
+**Rozwiązanie:** Udostępnij użytkownikom końcowym następujące rozwiązania, aby pomóc im odzyskać dostęp do zasobów firmy.
 
 Po uruchomieniu w systemie iOS aplikacja Portal firmy sprawdza, czy urządzenie użytkownika nie utraciło łączności z usługą Intune. Jeśli aplikacja wykryje brak połączenia, automatycznie podejmie próbę synchronizacji z usługą Intune w celu ponownego nawiązania połączenia (użytkownicy zobaczą komunikat **Trwa próba wykonania synchronizacji...** ).
 
@@ -315,7 +315,7 @@ Aby uzyskać więcej informacji, zobacz artykuł [Najlepsze rozwiązania dotycz�
 
 
 ### <a name="profile-installation-failed"></a>Instalacja profilu nie powiodła się
-**Problem:**  Na urządzeniu z systemem iOS wystąpił błąd **Instalacja profilu nie powiodła się**.
+**Problem:** Na urządzeniu z systemem iOS wystąpił błąd **Instalacja profilu nie powiodła się**.
 
 ### <a name="troubleshooting-steps-for-failed-profile-installation"></a>Kroki rozwiązywania problemów dotyczących niepowodzenia instalacji profilu
 
@@ -464,9 +464,9 @@ Certyfikat poprzedniego konta nadal istnieje na komputerze.
 1. Kliknij dwukrotnie pozycję **Certyfikaty**, wybierz pozycję **Konto komputera** > **Dalej**, a następnie wybierz pozycję **Komputer lokalny**.
 1. Kliknij dwukrotnie pozycję **Certyfikaty (komputer lokalny)** i wybierz pozycję **Osobiste/certyfikaty**.
 1. Wyszukaj certyfikat usługi Intune wydany przez wydawcę Sc_Online_Issuing i usuń go, jeśli istnieje.
-1. Jeśli istnieje następujący klucz rejestru, usuń go oraz wszystkie jego klucze podrzędne: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\OnlineManagement regkey**.
+1. Jeśli istnieje następujący klucz rejestru, usuń go oraz wszystkie jego klucze podrzędne: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\OnlineManagement**.
 1. Spróbuj ponownie zarejestrować komputer.
-1. Jeśli nadal nie można zarejestrować komputera, wyszukaj następujący klucz i usuń go, jeśli istnieje: **KEY_CLASSES_ROOT\Installer\Products\6985F0077D3EEB44AB6849B5D7913E95**.
+1. Jeśli nadal nie można zarejestrować komputera, wyszukaj następujący klucz i go usuń, jeśli istnieje: **KEY_CLASSES_ROOT\Installer\Products\6985F0077D3EEB44AB6849B5D7913E95**.
 1. Spróbuj ponownie zarejestrować komputer.
 
     > [!IMPORTANT]
@@ -491,7 +491,7 @@ Certyfikat poprzedniego konta nadal istnieje na komputerze.
 |0x80043008, 0x80CF3008|Uruchomienie usługi Microsoft Online Management Updates nie powiodło się.|Skontaktuj się z pomocą techniczną zgodnie z opisem w temacie [How to get support for Microsoft Intune](get-support.md) (Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune).|
 |0x80043009, 0x80CF3009|Komputer kliencki jest już zarejestrowany w usłudze.|Aby móc ponownie zarejestrować komputer kliencki w usłudze, musisz go najpierw wycofać.|
 |0x8004300B, 0x80CF300B|Nie można uruchomić pakietu instalacyjnego oprogramowania klienckiego, ponieważ wersja systemu Windows uruchomiona na kliencie jest nieobsługiwana.|Usługa Intune nie obsługuje wersji systemu Windows uruchomionej na komputerze klienckim.|
-|0xAB2|Instalator Windows nie może uzyskać dostępu do środowiska wykonawczego VBScript w celu wykonania akcji niestandardowej.|Przyczyną tego błędu jest próba wykonania akcji niestandardowej opartej na dołączanych dynamicznie bibliotekach (DLL). Podczas rozwiązywania problemu z biblioteką DLL może być konieczne użycie narzędzi opisanych w artykule KB198038 z bazy wiedzy pomocy technicznej firmy Microsoft: [Useful Tools for Package and Deployment Issues](https://support.microsoft.com/kb/198038) (Przydatne narzędzia w przypadku problemów z tworzeniem pakietów i wdrażaniem).|
+|0xAB2|Instalator Windows nie może uzyskać dostępu do środowiska wykonawczego VBScript w celu wykonania akcji niestandardowej.|Przyczyną tego błędu jest próba wykonania akcji niestandardowej opartej na dołączanych dynamicznie bibliotekach (DLL). Podczas rozwiązywania problemu z biblioteką DLL konieczne może być użycie narzędzi opisanych w [artykule KB198038 bazy wiedzy pomocy technicznej firmy Microsoft, który zawiera: opis przydatnych narzędzi do rozwiązywania problemów z pakietami i wdrażaniem](https://support.microsoft.com/kb/198038).|
 |0x80cf0440|Połączenie z punktem końcowym usługi zostało zakończone.|Konto próbne lub płatne zostało zawieszone. Utwórz nowe konto próbne lub płatne i zarejestruj je ponownie.|
 
 

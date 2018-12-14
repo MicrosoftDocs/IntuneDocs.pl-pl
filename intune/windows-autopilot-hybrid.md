@@ -1,12 +1,12 @@
 ---
-title: Konfigurowanie rejestracji w usłudze Intune na potrzeby urządzeń przyłączonych do hybrydowej usługi Active Directory przy użyciu rozwiązania Windows Autopilot
-titleSuffix: Microsoft Intune
-description: Użyj rozwiązania Windows Autopilot do zarejestrowania urządzeń przyłączonych do hybrydowej usługi Active Directory w usłudze Intune.
+title: Rejestracja na potrzeby urządzeń przyłączonych do hybrydowej usługi Active Directory – rozwiązanie Windows Autopilot
+titleSuffix: ''
+description: Użycie rozwiązania Windows Autopilot do zarejestrowania urządzeń przyłączonych do hybrydowej usługi Active Directory w usłudze Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/2/2018
+ms.date: 12/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,13 +15,13 @@ ms.assetid: 8518d8fa-a0de-449d-89b6-8a33fad7b3eb
 ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: 77a0c3f3a2e1ed0ee2dbc652049bb7057c736010
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: ced67b2dcdd5720a9708868808ec885938b8ddcd
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189966"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112446"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-using-intune-and-windows-autopilot-preview"></a>Wdrażanie urządzeń przyłączonych do hybrydowej usługi Active Directory przy użyciu usługi Intune i rozwiązania Windows Autopilot (wersja zapoznawcza)
 Za pomocą usługi Intune i rozwiązania Windows Autopilot można skonfigurować urządzenia przyłączone do hybrydowej usługi Azure Active Directory. Aby to zrobić, wykonaj poniższe czynności.
@@ -68,7 +68,7 @@ Urządzenia, które mają zostać zarejestrowane, muszą spełniać również na
 
 Łącznik usługi Intune dla usługi Active Directory tworzy komputery rejestrujące się za pomocą rozwiązania Autopilot w lokalnej domenie usługi Active Directory. Komputer hostujący łącznik usługi Intune musi mieć uprawnienia do tworzenia obiektów komputerów w ramach domeny. 
 
-W przypadku niektórych domen komputerom nie są przyznawane uprawnienia do tworzenia komputerów. Możliwe jest również, że administratorzy nie chcą zwiększać limitu kont komputerów na poziomie domeny. W takich sytuacjach prawa można delegować do jednostki organizacyjnej, w której tworzone są urządzenia przyłączone do hybrydowej usługi Active Directory.
+W przypadku niektórych domen komputerom nie są przyznawane uprawnienia do tworzenia komputerów. Ponadto domeny mają wbudowany limit (domyślnie 10), mający zastosowanie do wszystkich użytkowników i komputerów, które nie mają delegowanych uprawnień do tworzenia obiektów komputerów. W związku z tym uprawnienia muszą zostać delegowane do komputerów hostujących łącznik usługi Intune w jednostce organizacyjnej, w której tworzone są urządzenia przyłączone do hybrydowej usługi Azure AD.
 
 Jednostka organizacyjna, której przyznano uprawnienia do tworzenia komputerów, musi być zgodna z:
 - jednostką organizacyjną wprowadzoną w profilu przyłączania do domeny
@@ -122,7 +122,7 @@ Jednostka organizacyjna, której przyznano uprawnienia do tworzenia komputerów,
 
 ### <a name="configure-web-proxy-settings"></a>Konfigurowanie ustawień internetowego serwera proxy
 
-Jeśli w środowisku sieciowym znajduje się internetowy serwer proxy, postępuj zgodnie z instrukcjami znajdującymi się w następującym artykule, aby łącznik usługi Intune dla usługi Active Directory działał prawidłowo: [Work with existing on-premises proxy servers (Praca z istniejącymi lokalnymi internetowymi serwerami proxy)](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers).
+Jeśli w środowisku sieciowym znajduje się internetowy serwer proxy, postępuj zgodnie z instrukcjami znajdującymi się w następującym artykule, aby łącznik usługi Intune dla usługi Active Directory działał prawidłowo: [Work with existing on-premises proxy servers (Praca z istniejącymi lokalnymi serwerami proxy)](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers).
 
 
 ## <a name="create-a-device-group"></a>Tworzenie grupy urządzeń
@@ -200,10 +200,10 @@ Zmiana stanu urządzenia z wartości **Nieprzypisane** do wartości **Przypisywa
 
 1. W usłudze [Intune](https://aka.ms/intuneportal) wybierz kolejno pozycje **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
 2. Wprowadź następujące właściwości:
-   - **Nazwa**: wprowadź opisową nazwę nowego profilu.
-   - **Opis:** wprowadź opis profilu.
-   - **Platforma**: wybierz **system Windows 10 lub nowszy**.
-   - **Typ profilu**: wybierz pozycję **Przyłączanie do domeny (wersja zapoznawcza)**.
+   - **Nazwa**: Wprowadź opisową nazwę nowego profilu.
+   - **Opis**: Wprowadź opis profilu.
+   - **Platforma**: Wybierz **System Windows 10 lub nowszy**.
+   - **Typ profilu**: Wybierz pozycję **Dołączanie do domeny (wersja zapoznawcza)**.
 3. Wybierz pozycję **Ustawienia**, a następnie podaj wartości w polach **Prefiks nazwy komputera**, **Nazwa domeny** i **Jednostka organizacyjna** (opcjonalnie). 
 4. Wybierz pozycję **OK** > **Utwórz**. Profil zostanie utworzony i wyświetlony na liście.
 5. Aby przypisać ten profil, wykonaj kroki w obszarze [Przypisywanie profilu urządzenia](device-profile-assign.md#assign-a-device-profile). 

@@ -1,5 +1,5 @@
 ---
-title: Tworzenie projektu
+title: Tworzenie projektu usługi Microsoft Intune
 titlesuffix: Microsoft Intune
 description: Ten artykuł jest pomocny w przypadku tworzenia projektu i implementacji tylko w chmurze usługi Microsoft Intune.
 keywords: ''
@@ -15,13 +15,13 @@ ms.assetid: a8e38e29-f5e3-4a71-a170-d3b1a06e37c6
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
-ms.custom: ''
-ms.openlocfilehash: 1d8ccd4e432623cf7d0ce4ce66651a95e13b8473
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: f0159b4d33112e507556ceb53505eedc57ec05f7
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186498"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112990"
 ---
 # <a name="create-a-design"></a>Tworzenie projektu
 
@@ -211,7 +211,7 @@ W celu opracowania własnej listy urządzeń możesz [pobrać szablon powyższej
 
 Usługa Intune obsługuje zarówno urządzenia należące do firmy, jak i urządzenia osobiste. Urządzenie jest uważane za należące do firmy, jeśli rejestrujesz je przez menedżera rejestracji urządzeń lub za pośrednictwem programu Device Enrollment Program. Na przykład urządzenie zarejestrowane za pośrednictwem programu Device Enrollment Program (DEP) firmy Apple, oznaczone jako firmowe i umieszczone w grupie urządzeń, która otrzymuje docelowe zasady i aplikacje firmowe.
 
-Aby uzyskać więcej informacji o firmowych i zgodnych z modelem BYOD przypadkach użycia, zobacz [Sekcja 3: Określanie wymagań scenariuszy przypadków użycia](planning-guide-requirements.md).
+Zobacz [Sekcja 3: Określanie wymagań scenariuszy przypadków użycia](planning-guide-requirements.md), aby uzyskać więcej informacji o firmowych i zgodnych z modelem BYOD przypadkach użycia.
 
 ### <a name="bulk-enrollment"></a>Rejestrowanie zbiorcze
 
@@ -257,10 +257,10 @@ Należy utworzyć co najmniej jeden zestaw zasad konfiguracji dla danej platform
 
 | **Nazwa zasad** | **Platforma urządzeń** | **Ustawienia** | **Grupa docelowa** |   
 |:---:|:---:|:---:|:---:|
-| Firmowe — system iOS | iOS | Wymagany jest numer PIN, długość: 6 znaków, nie ma możliwości tworzenia kopii zapasowej w chmurze | Urządzenia firmowe |                                                           
-| Firmowe — system Android | Android | Wymagany jest numer PIN, długość: 6 znaków, nie ma możliwości tworzenia kopii zapasowej w chmurze | Urządzenia firmowe |                                                           
-| Model BYOD — system iOS  | iOS | Wymagany jest numer PIN, długość: 4 znaki | Urządzenia BYOD |
-| Model BYOD — system Android  | Android | Wymagany jest numer PIN, długość: 4 znaki | Urządzenia BYOD |
+| Firmowe — system iOS | iOS | Wymagany jest numer PIN, długość: 6, Ograniczenie możliwości tworzenia kopii zapasowej w chmurze | Urządzenia firmowe |                                                           
+| Firmowe — system Android | Android | Wymagany jest numer PIN, długość: 6, Ograniczenie możliwości tworzenia kopii zapasowej w chmurze | Urządzenia firmowe |                                                           
+| Model BYOD — system iOS  | iOS | Wymagany jest numer PIN, długość: 4 | Urządzenia BYOD |
+| Model BYOD — system Android  | Android | Wymagany jest numer PIN, długość: 4 | Urządzenia BYOD |
 
 
 Aby zidentyfikować potrzeby swojego zestawu zasad konfiguracji, możesz [pobrać szablon powyższej tabeli](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0).
@@ -402,7 +402,7 @@ Dostęp warunkowy służy do umożliwiania dostępu do poczty e-mail i innych za
 
 Na potrzeby dostępu online zdecyduj, których platform i grup użytkowników będą dotyczyć zasady dostępu warunkowego. Ponadto określ, czy należy zainstalować lub skonfigurować łącznik Intune Service To Service Connector na potrzeby usługi Exchange Online lub lokalnej instalacji programu Exchange. Dowiedz się więcej na temat sposobu instalowania i konfigurowania łączników Intune Service to Service Connector: <!---these links are correct--->
 
--   [Usługa Exchange Online](/intune-classic/deploy-use/intune-service-to-service-exchange-connector)
+-   [Usługa Exchange Online](exchange-service-connector-configure.md)
 
 -   [Lokalna instalacja programu Exchange](exchange-connector-install.md)
 

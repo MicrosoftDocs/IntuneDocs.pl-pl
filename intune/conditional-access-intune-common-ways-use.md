@@ -1,6 +1,6 @@
 ---
-title: Dostęp warunkowy w usłudze Microsoft Intune
-titlesuffix: ''
+title: Scenariusze dostępu warunkowego
+titlesuffix: Microsoft Intune
 description: Dowiedz się, w jaki sposób dostęp warunkowy usługi Intune jest powszechnie używany dla dostępu warunkowego opartego na urządzeniach i dostępu warunkowego na podstawie aplikacji.
 keywords: ''
 author: brenduns
@@ -14,13 +14,13 @@ ms.technology: ''
 ms.assetid: a0b8e55e-c3d8-4599-be25-dc10c1027b62
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure; get-started
-ms.openlocfilehash: d7c47e7e82928ea40d0b39dfbb17472441eac4f5
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: intune-azure; get-started; seodec18
+ms.openlocfilehash: 7073c5c617806bcf35934aba73bf15a9a195a506
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187671"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112480"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Jakie są typowe sposoby korzystania z dostępu warunkowego przy użyciu usługi Intune?
 
@@ -45,7 +45,7 @@ Zasady dostępu warunkowego opartego na urządzeniach dla usługi Exchange Onlin
 
 -   Dowiedz się więcej o [zgodności urządzenia w usłudze Intune](device-compliance.md).
 
--   Dowiedz się więcej o [ochronie poczty e-mail, usług Office 365 oraz pozostałych usług przy użyciu dostępu warunkowego w usłudze Intune](https://docs.microsoft.com/intune-classic/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune).
+-   Dowiedz się więcej o [ochronie poczty e-mail, usług Office 365 oraz pozostałych usług przy użyciu dostępu warunkowego w usłudze Intune](app-based-conditional-access-intune.md).
 
 > [!NOTE]
 > Na urządzeniach z systemem Android w przypadku włączenia dostępu opartego na urządzeniach dla usługi SharePoint Online użytkownicy muszą włączyć opcję **Włącz dostęp za pomocą przeglądarki** na zarejestrowanym urządzeniu w następujący sposób:
@@ -125,7 +125,7 @@ Gdy na urządzeniu mobilnym zainstalowano agenta usługi Mobile Threat Defense, 
 
 Usługa Intune oraz integracja z usługą Mobile Threat Defense stanowią czynnik decydujący w zakresie dostępu warunkowego w oparciu o ryzyko dotyczące urządzenia.
 
--   Dowiedz się więcej na temat usługi [Intune Mobile Threat Defense](https://docs.microsoft.com/intune-classic/deploy-use/mobile-threat-defense).
+-   Dowiedz się więcej na temat usługi [Intune Mobile Threat Defense](mobile-threat-defense.md).
 
 ### <a name="conditional-access-for-windows-pcs"></a>Dostęp warunkowy dla komputerów z systemem Windows
 
@@ -133,11 +133,11 @@ Dostęp warunkowy dla komputerów zapewnia możliwości podobne do tych dostępn
 
 #### <a name="corporate-owned"></a>Urządzenia należące do firmy
 
--   **Przyłączone do domeny w lokalnej usłudze AD:** ta opcja jest często używana przez organizacje, które są zadowolone z tego, jak obecnie zarządzają komputerami przy użyciu zasad grupy usługi AD i/lub programu System Center Configuration Manager.
+-   **Przyłączone do domeny w lokalnej usłudze AD:** Ta opcja jest często używana przez organizacje, które są zadowolone z tego, jak obecnie zarządzają komputerami przy użyciu zasad grupy usługi AD i/lub programu System Center Configuration Manager.
 
--   **Przyłączone do domeny w usłudze Azure AD oraz zarządzane w usłudze Intune:** ten scenariusz jest zwykle dostosowany do modelu „Wybierz swoje własne urządzenie” (CYOD) i scenariusza wykorzystania laptopów, które są rzadko podłączane do sieci firmowej. Urządzenie łączy się z usługą Azure AD i zostaje zarejestrowane w usłudze Intune, która usuwa wszystkie zależności od lokalnej usługi AD oraz kontrolerów domeny. Może to pełnić rolę kryteriów dostępu warunkowego podczas uzyskiwania dostępu do zasobów firmowych.
+-   **Przyłączone do domeny w usłudze Azure AD oraz zarządzane w usłudze Intune:** Ten scenariusz jest zwykle dostosowany do modelu „Wybierz swoje własne urządzenie” (CYOD) i scenariusza wykorzystania komputerów przenośnych, które są rzadko podłączane do sieci firmowej. Urządzenie łączy się z usługą Azure AD i zostaje zarejestrowane w usłudze Intune, która usuwa wszystkie zależności od lokalnej usługi AD oraz kontrolerów domeny. Może to pełnić rolę kryteriów dostępu warunkowego podczas uzyskiwania dostępu do zasobów firmowych.
 
--   **Przyłączone do domeny w usłudze AD oraz System Center Configuration Manager:** począwszy od bieżącej gałęzi, program System Center Configuration Manager zapewnia możliwości dostępu warunkowego, dzięki którym można ocenić określone kryteria zgodności oprócz kwestii przyłączenia komputera do domeny:
+-   **Przyłączone do domeny w usłudze AD oraz System Center Configuration Manager:** Począwszy od bieżącej gałęzi, program System Center Configuration Manager zapewnia możliwości dostępu warunkowego, dzięki którym można ocenić kwestię przyłączenia komputera do domeny, a także określone kryteria zgodności:
 
     -   Czy komputer jest szyfrowany?
 
@@ -147,7 +147,7 @@ Dostęp warunkowy dla komputerów zapewnia możliwości podobne do tych dostępn
 
 #### <a name="bring-your-own-device-byod"></a>„Przynieś własne urządzenie” (BYOD)
 
--   **Dołączanie w miejscu pracy i zarządzanie usługą Intune:** użytkownik może dołączać własne urządzenia do dostępu do zasobów oraz usług firmowych. Można użyć dołączania w miejscu pracy oraz rejestrowania urządzeń w usłudze Intune w celu otrzymywania zasad na poziomie urządzenia, co stanowi również kolejną opcję oceny kryteriów dostępu warunkowego.
+-   **Dołączanie w miejscu pracy i zarządzanie za pomocą usługi Intune:** Użytkownik może dołączać własne urządzenia do dostępu do firmowych zasobów i usług. Można użyć dołączania w miejscu pracy oraz rejestrowania urządzeń w usłudze Intune w celu otrzymywania zasad na poziomie urządzenia, co stanowi również kolejną opcję oceny kryteriów dostępu warunkowego.
 
 ## <a name="app-based-conditional-access"></a>Dostęp warunkowy na podstawie aplikacji
 

@@ -16,12 +16,12 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: efb850e0f08c94cfee7948f50411220216eb8418
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 9562eb2c8fae49628ac042f28f172fb9f8fd5106
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52188079"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112548"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Konfigurowanie rejestracji dla urządzeń z systemem Windows
 
@@ -55,7 +55,7 @@ Usługa Intune obsługuje zarządzanie wieloma użytkownikami na urządzeniach z
 ## <a name="simplify-windows-enrollment-without-azure-ad-premium"></a>Uproszczenie rejestrowania systemu Windows bez usługi Azure AD Premium
 Aby uprościć rejestrację, możesz utworzyć alias serwera nazw domen (DNS) (typ rekordu CNAME), który przekierowuje żądania rejestrowania do serwerów usługi Intune. W przeciwnym razie użytkownicy próbujący nawiązać połączenie z usługą Intune będą musieli wprowadzić nazwę serwera usługi Intune podczas rejestracji.
 
-**Krok 1. Tworzenie rekordu CNAME** (opcjonalnie)<br>
+**Krok 1: Tworzenie rekordu CNAME** (opcjonalnie)<br>
 Utwórz rekordy zasobów CNAME systemu DNS dla domeny Twojej firmy. Jeśli na przykład witryna internetowa firmy to contoso.com, w systemie DNS należy utworzyć rekord CNAME, który przekierowuje domenę EnterpriseEnrollment.contoso.com do domeny enterpriseenrollment-s.manage.microsoft.com.
 
 Chociaż tworzenie wpisów DNS rekordów CNAME jest opcjonalne, rekordy CNAME ułatwiają użytkownikom rejestrację. Jeśli rekord CNAME nie zostanie znaleziony, użytkownicy są proszeni o ręczne wprowadzenie nazwy serwera MDM: enrollment.manage.microsoft.com.
@@ -83,7 +83,7 @@ Administrator systemu DNS firmy Contoso powinien utworzyć następujące rekordy
 
 Propagowanie zmian rekordów DNS może potrwać do 72 godzin. Nie można zweryfikować zmiany w systemie DNS w usłudze Intune, dopóki trwa propagowanie rekordu DNS.
 
-**Krok 2. Weryfikacja rekordu CNAME** (opcjonalnie)<br>
+**Krok 2: Weryfikacja rekordu CNAME** (opcjonalnie)<br>
 1. W usłudze [Intune w witrynie Azure Portal](https://aka.ms/intuneportal) wybierz kolejno pozycje **Rejestrowanie urządzenia**  >  **Rejestracja w systemie Windows**  >  **Weryfikacja rekordu CNAME**.
 2. W polu **Domena** wprowadź witrynę internetową firmy, a następnie wybierz pozycję **Testuj**.
 
@@ -102,4 +102,4 @@ Aby uzyskać więcej informacji o zadaniach użytkowników końcowych, zobacz [Z
 
 ## <a name="next-steps"></a>Następne kroki
 
-- [Uwagi dotyczące zarządzania urządzeniami z systemem Windows przy użyciu usługi Intune na platformie Azure](/intune-classic/deploy-use/intune-on-azure).
+- [Uwagi dotyczące zarządzania urządzeniami z systemem Windows przy użyciu usługi Intune na platformie Azure](intune-legacy-pc-client.md).

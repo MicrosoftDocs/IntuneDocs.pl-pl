@@ -1,7 +1,7 @@
 ---
-title: Uzyskiwanie certyfikatu wypychania MDM firmy Apple
-titlesuffix: Microsoft Intune
-description: Opis czynności niezbędnych w celu uzyskania certyfikatu wypychania MDM firmy Apple przeznaczonego do zarządzania urządzeniami z systemem iOS za pomocą usługi Intune.
+title: Uzyskiwanie certyfikatu wypychania MDM firmy Apple dla usługi Intune
+titlesuffix: ''
+description: Uzyskiwanie certyfikatu wypychania MDM firmy Apple przeznaczonego do zarządzania urządzeniami z systemem iOS za pomocą usługi Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -15,19 +15,19 @@ ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: 927da6f2e7584cb3b43bede77cfbc19ec91b568a
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: 053e3f42553268aaeff0502e2cfe05b33b18618b
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189473"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032167"
 ---
 # <a name="get-an-apple-mdm-push-certificate"></a>Uzyskiwanie certyfikatu wypychania MDM firmy Apple
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Usługa Intune umożliwia zarządzanie urządzeniami przenośnymi typu iPad, iPhone oraz komputerami Mac i zapewnia użytkownikom dostęp do poczty e-mail oraz aplikacji firmy. Aby zarządzać urządzeniami z systemem iOS i macOS, wymagany jest certyfikat usługi wypychania MDM firmy Apple. Po dodaniu certyfikatu do usługi Intune użytkownicy mogą rejestrować swoje urządzenia przy użyciu następujących sposobów:
+Aby zarządzać urządzeniami z systemem iOS i macOS, wymagany jest certyfikat usługi wypychania MDM firmy Apple. Po dodaniu certyfikatu do usługi Intune użytkownicy mogą rejestrować swoje urządzenia przy użyciu następujących sposobów:
 
 - Aplikacja Portal firmy.
 

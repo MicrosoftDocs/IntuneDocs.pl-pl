@@ -1,11 +1,12 @@
 ---
 title: Brak wymaganego certyfikatu urządzenia | Microsoft Docs
-description: ''
+titlesuffix: Microsoft Intune
+description: Twoje urządzenie nie ma certyfikatu wymaganego przez dział pomocy technicznej Twojej firmy.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/16/2017
+ms.date: 12/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,19 +17,19 @@ searchScope:
 ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
-ms.custom: intune-enduser
-ms.openlocfilehash: 043b04688630f345be625456fb9cfec586e2f790
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.custom: intune-enduser; seodec18
+ms.openlocfilehash: e40ac2fd81375b84084dd229f4cb5a6ab3e9915f
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43150756"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032218"
 ---
 # <a name="your-device-is-missing-a-required-certificate"></a>Brak wymaganego certyfikatu urządzenia
 
 ## <a name="whats-a-certificate"></a>Co to jest certyfikat?
 
-[Kryptografia](https://technet.microsoft.com/library/cc962030.aspx) to dziedzina nauki zajmująca się zapewnianiem bezpieczeństwa informacji. Kryptografia służyła kiedyś do przekazywania kodowanych wiadomości w celu [zagwarantowania, że komunikacja ma charakter tajny](https://technet.microsoft.com/library/cc962019.aspx). W swej najprostszej postaci kryptografia zakłada zamianę lub podstawianie liter w celu przekształcenia wiadomości kodowanej w wiadomość niemożliwą do odczytania, zaszyfrowaną lub ukrytą. Tylko osoba posiadająca klucz dekodujący lub _certyfikat_ może dokonać konwersji kodowanego komunikatu do jego pierwotnej postaci umożliwiającej odczyt. Urządzenie z systemem Android wykorzystuje certyfikaty usługi Intune w celu zagwarantowania, że komunikacja między urządzeniem i zasobami organizacji, taka jak wiadomości e-mail i dokumenty, jest bezpieczna zarówno po stronie urządzenia, jak i zasobów, a także podczas przesyłu danych w toku komunikacji.
+[Kryptografia](https://technet.microsoft.com/library/cc962030.aspx) to dziedzina nauki zajmująca się zapewnianiem bezpieczeństwa informacji. Kryptografia służyła kiedyś do przekazywania kodowanych wiadomości w celu [zagwarantowania, że komunikacja ma charakter tajny](https://technet.microsoft.com/library/cc962019.aspx). W swej najprostszej postaci kryptografia zakłada zamianę lub podstawianie liter w celu przekształcenia kodowanej wiadomości w wiadomość niemożliwą do odczytania, zaszyfrowaną lub ukrytą. Tylko osoba posiadająca klucz dekodujący lub _certyfikat_ może dokonać konwersji kodowanego komunikatu do jego pierwotnej postaci umożliwiającej odczyt. Urządzenie z systemem Android wykorzystuje certyfikaty usługi Intune w celu zagwarantowania, że komunikacja między urządzeniem i zasobami organizacji, taka jak wiadomości e-mail i dokumenty, jest bezpieczna zarówno po stronie urządzenia, jak i zasobów, a także podczas przesyłu danych w toku komunikacji.
 
 ## <a name="fixing-certificate-issues"></a>Rozwiązywanie problemów z certyfikatami
 
@@ -38,6 +39,6 @@ Jeśli urządzenie z systemem Android nie zostało zarejestrowane w usłudze Int
 
 Pierwszym krokiem, jaki należy wykonać, jest sprawdzenie, czy w urządzeniu [brakuje certyfikatu, który zwykle jest na nim wstępnie zainstalowany](your-device-is-missing-a-preinstalled-certificate-android.md).
 
-Jeśli wykonanie tej czynności nie rozwiąże problemu, dział pomocy technicznej Twojej firmy może [narzucić wymóg zainstalowania drugiego certyfikatu w celu zapewnienia dodatkowego bezpieczeństwa](your-device-is-missing-an-IT-required-certificate-android.md).
+Jeśli nie udaje się rozwiązać problemów z certyfikatem, dział pomocy technicznej Twojej firmy może [narzucić wymóg zainstalowania drugiego certyfikatu w celu zapewnienia wyższego poziomu bezpieczeństwa](your-device-is-missing-an-IT-required-certificate-android.md).
 
 Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).

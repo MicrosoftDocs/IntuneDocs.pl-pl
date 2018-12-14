@@ -1,11 +1,11 @@
 ---
-title: Niestandardowe ustawienia urządzeń z systemem Windows Holographic for Business w usłudze Microsoft Intune na platformie Azure | Microsoft Docs
+title: Ustawienia niestandardowe — urządzenia z systemem Windows Holographic for Business — usługa Microsoft Intune
 description: 'Dodaj lub utwórz profil niestandardowy w celu użycia ustawień identyfikatora URI OMA dla urządzeń z systemem Windows Holographic for Business w usłudze Microsoft Intune, w tym dla urządzenia Microsoft Hololens. Ustawienia dostawcy usług konfiguracji zasad dostępne do użycia to: AllowFastReconnect, AllowVPN, AllowUpdateService, UpdateServiceURL, RequireUpdatesApproval, ApprovedUpdates i ApplicationLaunchRestrictions.'
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/24/2018
+ms.date: 12/06/2018
 ms.article: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,13 +13,13 @@ ms.topic: article
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: b66adc535d51fdaf2e3fc7a4bb1b11d34433db98
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: 2c4e6041f00ad55b18f8b20996da8002f5ce0247
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52185580"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032201"
 ---
 # <a name="use-custom-settings-for-windows-holographic-for-business-devices-in-intune"></a>Używanie ustawień niestandardowych dla urządzeń z systemem Windows Holographic for Business w usłudze Intune
 
@@ -39,17 +39,17 @@ W tym artykule pokazano, jak utworzyć profil niestandardowy dla urządzeń z sy
 2. Wybierz pozycję **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
 3. Podaj następujące ustawienia:
 
-    - **Nazwa**: wprowadź nazwę profilu, na przykład `hololens custom profile`.
-    - **Opis:** wprowadź opis profilu.
-    - **Platforma**: wybierz **system Windows 10 lub nowszy**.
-    - **Typ profilu**: wybierz pozycję **Niestandardowy**.
+    - **Nazwa**: Wprowadź nazwę profilu, na przykład `hololens custom profile`.
+    - **Opis**: Wprowadź opis profilu.
+    - **Platforma**: Wybierz **System Windows 10 lub nowszy**.
+    - **Typ profilu**: Wybierz **Niestandardowy**.
 
 4. W obszarze **Niestandardowe ustawienia OMA-URI** wybierz pozycję **Dodaj**. Podaj następujące ustawienia:
 
-    - **Nazwa**: wprowadź unikatową nazwę ustawienia OMA-URI, aby ułatwić jego identyfikację na liście ustawień.
-    - **Opis elementu**: wprowadź opis ułatwiający identyfikację ustawienia oraz zawierający inne ważne szczegóły.
-    - **OMA-URI** (z uwzględnieniem wielkości liter): wprowadź identyfikator OMA-URI, którego chcesz użyć jako ustawienia.
-    - **Typ danych**: wprowadź typ danych używany w przypadku tego ustawienia identyfikatora OMA-URI. Dostępne opcje:
+    - **Nazwa**: Wprowadź unikatową nazwę dla ustawienia OMA-URI, aby ułatwić jego identyfikację na liście ustawień.
+    - **Opis**: Wprowadź opis ułatwiający identyfikację ustawienia oraz zawierający inne ważne szczegóły.
+    - **OMA-URI** (rozróżniana jest wielkość liter): Wprowadź identyfikator OMA-URI, którego chcesz używać jako ustawienia.
+    - **Typ danych**: Wybierz typ danych używany w przypadku tego ustawienia identyfikatora OMA-URI. Dostępne opcje:
 
         - String
         - Ciąg (plik XML)
@@ -59,7 +59,7 @@ W tym artykule pokazano, jak utworzyć profil niestandardowy dla urządzeń z sy
         - Boolean
         - Base64 (plik)
 
-    - **Wartość**: wprowadź wartość danych, którą chcesz skojarzyć z wprowadzonym identyfikatorem OMA-URI. Wartość zależy od wybranego typu danych. Jeśli na przykład wybrano opcję **Data i godzina**, wybierz wartość za pomocą selektora daty.
+    - **Wartość**: Wprowadź wartość danych, którą chcesz skojarzyć z wprowadzonym identyfikatorem OMA-URI. Wartość zależy od wybranego typu danych. Jeśli na przykład wybrano opcję **Data i godzina**, wybierz wartość za pomocą selektora daty.
 
     Po dodaniu ustawień możesz wybrać pozycję **Eksportuj**. Wybranie pozycji **Eksportuj** spowoduje utworzenie listy wszystkich dodanych wartości w pliku wartości rozdzielanych przecinkami (CSV).
 

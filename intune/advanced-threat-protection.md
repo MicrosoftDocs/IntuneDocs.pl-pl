@@ -14,18 +14,18 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: de80092647462f83fb92303080239fd30198bd3c
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 1b8d08e60b9cd656eb9467fd5289b9dfc428d183
+ms.sourcegitcommit: 67666682935c44ff6ad003c0da220a79cc42c9c3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180238"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53167998"
 ---
 # <a name="enable-windows-defender-atp-with-conditional-access-in-intune"></a>Włączanie usługi Windows Defender ATP z dostępem warunkowym w usłudze Intune
 
 Usługi Windows Defender Advanced Threat Protection (ATP) i Microsoft Intune współpracują ze sobą i ułatwiają zapobieganie naruszeniom bezpieczeństwa oraz pomagają ograniczyć wpływ naruszeń w organizacji.
 
-Ta funkcja dotyczy: urządzeń z systemem Windows 10
+Ta funkcja ma zastosowanie do: Urządzenia z systemem Windows 10
 
 Na przykład ktoś wysyła użytkownikowi w organizacji załącznik programu Word z osadzonym złośliwym kodem. Użytkownik otwiera załącznik i uaktywnia zawartość. Rozpoczyna się atak z udziałem podniesionego przywileju i atakujący korzystający z maszyny zdalnej ma prawa administratora do urządzenia ofiary. Następnie atakujący uzyskuje zdalnie dostęp do innych urządzeń użytkownika.
 
@@ -89,13 +89,13 @@ Po dodaniu urządzenia przy użyciu pakietu konfiguracji nie musisz tego robić 
 5. W polu **Typ profilu** wybierz pozycję **Windows Defender ATP (Windows 10 Desktop)**.
 6. Skonfiguruj ustawienia:
 
-  - **Typ pakietu konfiguracji klienta usługi Windows Defender ATP**: wybierz pozycję **Dodaj**, aby dodać pakiet konfiguracyjny do profilu. Wybierz pozycję **Odłącz**, aby usunąć pakiet konfiguracyjny z profilu.
+  - **Typ pakietu konfiguracji klienta usługi Windows Defender ATP**: Wybierz pozycję **Dodaj**, aby dodać pakiet konfiguracyjny do profilu. Wybierz pozycję **Odłącz**, aby usunąć pakiet konfiguracyjny z profilu.
   
     > [!NOTE] 
-    > Jeśli zostało prawidłowo nawiązane połączenie z usługą Windows Defender ATP, usługa Intune automatycznie **doda** dla Ciebie profil konfiguracji.
+    > Jeśli połączenie z usługą Windows Defender ATP zostało ustanowione poprawnie, usługa Intune automatycznie **doda** profil konfiguracji dla użytkownika, a ustawienie **Typ pakietu konfiguracji klienta usługi Windows Defender ATP** nie będzie dostępne.
   
-  - **Udostępnianie próbek dla wszystkich plików**: pozycja **Włącz** umożliwia zbieranie przykładów oraz ich udostępnianie w usłudze Windows Defender ATP. Na przykład, jeśli widzisz podejrzany plik, możesz go przesłać do usługi Windows Defender ATP w celu wykonania szczegółowej analizy. Pozycja **Nieskonfigurowane** nie udostępnia żadnych przykładów w usłudze Windows Defender ATP.
-  - **Usprawnij częstotliwość raportowania danych telemetrycznych**: pozycja **Włącz** to ustawienie dla urządzeń narażonych na duże ryzyko, co pozwoli na częstsze przekazywanie danych telemetrycznych do usługi Windows Defender ATP.
+  - **Udostępnianie próbek dla wszystkich plików**: Pozycja **Włącz** umożliwia zbieranie przykładów oraz ich udostępnianie w usłudze Windows Defender ATP. Na przykład, jeśli widzisz podejrzany plik, możesz go przesłać do usługi Windows Defender ATP w celu wykonania szczegółowej analizy. Pozycja **Nieskonfigurowane** nie udostępnia żadnych przykładów w usłudze Windows Defender ATP.
+  - **Usprawnij częstotliwość raportowania danych telemetrycznych**: Pozycja **Włącz** to ustawienie dla urządzeń narażonych na duże ryzyko, która pozwala na częstsze przekazywanie danych telemetrycznych do usługi Windows Defender ATP.
 
     Dodatkowe informacje na temat ustawień usługi Windows Defender ATP można znaleźć w artykule [Onboard Windows 10 machines using System Center Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-endpoints-sccm-windows-defender-advanced-threat-protection) (Dodawanie maszyn z systemem Windows 10 za pomocą programu System Center Configuration Manager).
 
@@ -110,10 +110,10 @@ Zasady zgodności określają akceptowalny poziom ryzyka na urządzeniu.
 4. W polu **Platforma** wybierz pozycję **Windows 10 i nowsze**.
 5. W ustawieniach usługi **Windows Defender ATP** ustaw pozycję **Wymagaj, aby urządzenie było na poziomie niższym lub równym ocenie ryzyka maszyny** na preferowany poziom:
 
-  - **Czyste**: ten poziom jest najbardziej bezpieczny. Urządzenie, na którym są obecne jakiekolwiek zagrożenia, nie może uzyskiwać dostępu do zasobów firmy. Jeśli zostaną znalezione jakiekolwiek zagrożenia, urządzenie zostanie ocenione jako niezgodne.
-  - **Niski**: urządzenie jest zgodne, jeśli istnieją tylko zagrożenia niskiego poziomu. Urządzenia ze średnim lub wysokim poziomem zagrożenia nie są zgodne.
-  - **Średni**: urządzenie jest zgodne, jeśli znalezione na nim zagrożenia są na poziomie niskim lub średnim. W przypadku wykrycia zagrożeń wysokiego poziomu urządzenie zostanie określone jako niezgodne.
-  - **Wysoki**: ta opcja jest najmniej bezpieczna, zezwala na wszystkie poziomy zagrożeń. Urządzenia z wysokim, średnim i niskim poziomem zagrożeń są więc uznawane za zgodne.
+  - **Czyste**: Ten poziom jest najbardziej bezpieczny. Urządzenie, na którym są obecne jakiekolwiek zagrożenia, nie może uzyskiwać dostępu do zasobów firmy. Jeśli zostaną znalezione jakiekolwiek zagrożenia, urządzenie zostanie ocenione jako niezgodne.
+  - **Niski**: Urządzenie jest zgodne, jeśli istnieją tylko zagrożenia niskiego poziomu. Urządzenia ze średnim lub wysokim poziomem zagrożenia nie są zgodne.
+  - **Średni**: Urządzenie jest zgodne, jeśli znalezione na nim zagrożenia są na poziomie niskim lub średnim. W przypadku wykrycia zagrożeń wysokiego poziomu urządzenie zostanie określone jako niezgodne.
+  - **Wysoki**: Ta opcja jest najmniej bezpieczna, zezwala na wszystkie poziomy zagrożeń. Urządzenia z wysokim, średnim i niskim poziomem zagrożeń są więc uznawane za zgodne.
 
 6. Wybierz opcję **OK** i **Utwórz**, aby zapisać zmiany (i utworzyć zasady).
 

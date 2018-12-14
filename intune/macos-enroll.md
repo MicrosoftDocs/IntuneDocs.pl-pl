@@ -16,12 +16,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 85a05f4816692d3bccfe695c7e69f54d007f3b59
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 7a54a72afb6052ed11566c2d2ada596ebde2159b
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187008"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112412"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Konfigurowanie rejestracji dla urządzeń z systemem macOS w usłudze Intune
 
@@ -37,7 +37,7 @@ Przed rozpoczęciem konfigurowania rejestracji urządzeń z systemem macOS nale�
 
 - [Konfigurowanie domen](custom-domain-name-configure.md)
 - [Ustawienie urzędu zarządzania urządzeniami przenośnymi](mdm-authority-set.md)
-- [Tworzenie grup](https://docs.microsoft.com/intune-classic/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-5)
+- [Tworzenie grup](groups-add.md)
 - [Skonfigurowanie aplikacji Portal firmy](company-portal-app.md)
 - Przypisanie licencji użytkowników w [portalu usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854)
 - [Uzyskiwanie certyfikatu wypychania MDM firmy Apple](apple-mdm-push-certificate-get.md)
@@ -47,7 +47,7 @@ Przed rozpoczęciem konfigurowania rejestracji urządzeń z systemem macOS nale�
 Możesz umożliwić użytkownikom rejestrowanie swoich urządzeń osobistych na potrzeby zarządzania w usłudze Intune — rozwiązanie to nazywa się „bring your own device”, czyli BYOD. Gdy wymagania wstępne zostaną spełnione, a licencje użytkowników przypisane, użytkownicy mogą zarejestrować swoje urządzenia przez:
 - przejście do [witryny Portal firmy](https://portal.manage.microsoft.com) lub
 - pobranie aplikacji Portal firmy.
-Możesz także wysłać im link do kroków rejestracji online: [Rejestrowanie urządzenia z systemem macOS w usłudze Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos).
+Możesz także wysłać im link do opisu kroków rejestracji online: [Rejestrowanie urządzenia z systemem macOS w usłudze Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos).
 
 Aby uzyskać informacje o innych zadaniach użytkownika końcowego, zobacz następujące artykuły:
 
@@ -56,8 +56,8 @@ Aby uzyskać informacje o innych zadaniach użytkownika końcowego, zobacz nast�
 
 ## <a name="company-owned-macos-devices"></a>Urządzenia z systemem macOS należące do firmy
 W przypadku organizacji, które kupują urządzenia dla swoich użytkowników, usługa Intune obsługuje następujące metody rejestracji urządzeń z systemem macOS należących do firmy:
-- [Program Device Enrollment Program (DEP) firmy Apple](device-enrollment-program-enroll-macos.md): Organizacje mogą zakupić urządzenia z systemem macOS za pośrednictwem programu Device Enrollment Program firmy Apple. Program Device Enrollment Program umożliwia wdrożenie „na odległość” profilu rejestracji w celu zarządzania urządzeniami.
-- [Menedżer rejestracji urządzeń (DEM)](device-enrollment-manager-enroll.md): Konto menedżera rejestracji urządzeń (DEM) umożliwia rejestrację do 1000 urządzeń.
+- [Program Device Enrollment Program (DEP) firmy Apple](device-enrollment-program-enroll-macos.md): organizacje mogą zakupić urządzenia z systemem macOS za pośrednictwem programu Device Enrollment Program (DEP) firmy Apple. Program Device Enrollment Program umożliwia wdrożenie „na odległość” profilu rejestracji w celu zarządzania urządzeniami.
+- [Menedżer rejestracji urządzeń (DEM, Device enrollment manager)](device-enrollment-manager-enroll.md): konto menedżera rejestracji urządzeń (DEM) umożliwia rejestrację do 1000 urządzeń.
 
 ## <a name="block-macos-enrollment"></a>Blokowanie rejestracji urządzeń z systemem macOS
 Domyślnie usługa Intune zezwala na rejestrowanie urządzeń z systemem macOS. Aby zablokować rejestrowanie urządzeń z systemem macOS, zobacz [Ustawianie ograniczeń typu urządzeń](enrollment-restrictions-set.md).

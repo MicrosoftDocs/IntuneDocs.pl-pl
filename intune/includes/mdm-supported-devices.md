@@ -2,7 +2,7 @@
 
 ### <a name="apple"></a>Apple
 - System Apple iOS 10.0 lub nowszy
-- System Mac OS X 10.11 lub nowszy (w grudniu 2018 r. obsługiwana wersja zmieni się na 10.12 i nowsze)
+- System Mac OS X 10.12 lub nowszy
 
 ### <a name="google"></a>Google
 - System Android 4.4 lub nowszy (w tym system Samsung Knox Standard w wersji 4.4 lub nowszej)
@@ -26,8 +26,8 @@
 - Systemy Windows Phone 8.1, Windows 8.1 RT, komputery z systemem Windows 8.1 (tryb utrzymania)
 
 > [!NOTE]
-> Usługi Intune nie można używać do zarządzania systemami operacyjnymi Windows Server.
+> Usługi Intune nie można używać do zarządzania systemami operacyjnymi Windows Server. Jednostka SKU odpowiadająca wersji Home nie obsługuje wszystkich funkcji usługi Intune.
 
-Klienci z pakietem Enterprise Management + Security (EMS) mogą także [użyć usługi Azure Active Directory (Azure AD), aby zarejestrować urządzenia z systemem Windows 10](/intune-classic/deploy-use/set-up-windows-device-management-with-microsoft-intune#azure-active-directory-enrollment).
+Klienci z pakietem Enterprise Management + Security (EMS) mogą także użyć [usługi Azure Active Directory (Azure AD), aby zarejestrować urządzenia z systemem Windows 10](/intune/windows-enroll.md).
 
 

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: ''
-ms.date: 05/08/2018
+ms.date: 12/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,13 +15,13 @@ ms.assetid: 30df0f9e-6e9e-4d75-a722-3819e33d480d
 ms.reviewer: arnab
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: fdd99d7c3987eee852399c37108c890a827e1111
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: 47627bc9f223c301fd04b88c0080b3a6fea26fe8
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189745"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032472"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>Automatyczne rejestrowanie urządzeń z systemem Android za pomocą rozwiązania Knox Mobile Enrollment firmy Samsung
 
@@ -68,7 +68,7 @@ Po pomyślnym zarejestrowaniu firmy można utworzyć profil oprogramowania MDM d
 |Włącz tę aplikację jako właściciela urządzenia Google | Tak | Wybierz tę opcję, aby zarejestrować się w systemie Android Enterprise. 
 |Obsługiwane zarządzanie urządzeniami przenośnymi      | Tak       |Microsoft Intune 
 |Pozostaw wszystkie aplikacje systemowe włączone | Nie | Wybierz tę opcję, aby upewnić się, że wszystkie aplikacje są włączone i dostępne dla tego profilu. Jeśli ta opcja nie jest zaznaczona, na pasku aplikacji urządzenia będzie wyświetlany tylko bardzo ograniczony zestaw aplikacji systemowych. Aplikacje takie jak aplikacja poczty e-mail pozostaną ukryte. 
-|Custom JSON (Niestandardowa notacja JSON)        | Nie        |{"com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "Wprowadź ciąg tokenu rejestracji w usłudze Intune"}. Dowiedz się, jak [utworzyć profil rejestracji](android-kiosk-enroll.md). 
+|Custom JSON (Niestandardowa notacja JSON)        | Nie        |{"com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "Wprowadź ciąg tokenu rejestracji usługi Intune"}. Dowiedz się, jak [utworzyć profil rejestracji](android-kiosk-enroll.md). 
 | Dodaj umowy prawne | Nie | Pozostaw to pole puste. 
 
 ### <a name="for-android"></a>Dla systemu Android
@@ -93,7 +93,7 @@ Associate a Knox license with this profile (Skojarz licencję rozwiązania Knox 
 Aby przypisywać profile oprogramowania MDM do urządzeń, należy dodać obsługiwane urządzenia rozwiązania Samsung Knox do portalu Knox za pomocą jednej z następujących metod:
 - **Przy użyciu odsprzedawców zatwierdzonych przez firmę Samsung:** użyj tej metody w przypadku kupowania urządzeń od jednego z zatwierdzonych odsprzedawców firmy Samsung. Zatwierdzeni odsprzedawcy mogą automatycznie przekazywać Twoje urządzenia. [Odwiedź stronę podręcznika użytkownika rozwiązania Samsung Knox Enrollment, aby dowiedzieć się, jak dodawać odsprzedawców](https://docs.samsungknox.com/KME-Getting-Started/Content/Register_resellers.htm).
 
-- **Przy użyciu aplikacji Knox Deployment App (KDA):** użyj tej metody, jeśli masz istniejące urządzenia, które musisz zarejestrować przy użyciu rozwiązania KME. W celu dodania urządzeń do portalu Knox za pomocą tej metody możesz użyć funkcji Bluetooth lub NFC. [Odwiedź stronę podręcznika użytkownika rozwiązania Samsung Knox Enrollment, aby dowiedzieć się, jak używać aplikacji KDA](https://docs.samsungknox.com/KME-Getting-Started/Content/add-device-info.htm).
+- **Przy użyciu aplikacji Knox Deployment App (KDA):** użyj tej metody, jeśli masz urządzenia, które musisz zarejestrować przy użyciu rozwiązania KME. W celu dodania urządzeń do portalu Knox za pomocą tej metody możesz użyć funkcji Bluetooth lub NFC. [Odwiedź stronę podręcznika użytkownika rozwiązania Samsung Knox Enrollment, aby dowiedzieć się, jak używać aplikacji KDA](https://docs.samsungknox.com/KME-Getting-Started/Content/add-device-info.htm).
 
 ## <a name="assign-an-mdm-profile-to-devices"></a>Przypisywanie profilu oprogramowania MDM do urządzeń
 Przed rozpoczęciem rejestrowania dodanych urządzeń musisz przypisać do nich profil oprogramowania MDM w portalu rozwiązania Knox. [Odwiedź stronę podręcznika użytkownika rozwiązania Samsung Knox Enrollment, aby dowiedzieć się więcej na temat konfiguracji urządzeń](https://docs.samsungknox.com/KME-Getting-Started/Content/configure-devices.htm).
@@ -102,9 +102,9 @@ Przed rozpoczęciem rejestrowania dodanych urządzeń musisz przypisać do nich 
 
 W przypadku urządzeń zarejestrowanych w usłudze Intune przy użyciu rozwiązania KME dla systemu Android można skonfigurować sposób logowania użytkownika końcowego w następujący sposób:
 
-- **Bez skojarzenia nazwy użytkownika:** w portalu rozwiązania Knox w obszarze **Device details** (Szczegóły urządzenia) pozostaw puste pola **User ID** (Identyfikator użytkownika) i **Password** (Hasło) w przypadku dodawanych urządzeń. W tej sytuacji użytkownicy końcowi będą musieli wprowadzić nazwę użytkownika i hasło podczas rejestrowania w usłudze Intune.
+- **Bez skojarzenia nazwy użytkownika:** w portalu rozwiązania Knox w obszarze **Szczegóły urządzenia** dla dodawanych urządzeń pozostaw puste pola **Identyfikator użytkownika** i **Hasło**. W tej sytuacji użytkownicy końcowi będą musieli wprowadzić nazwę użytkownika i hasło podczas rejestrowania w usłudze Intune.
 
-- **Ze skojarzeniem nazwy użytkownika:** w portalu rozwiązania Knox w obszarze **Device details** (Szczegóły urządzenia) wypełnij pole **User ID** (Identyfikator użytkownika) (wprowadź nazwę przypisanego użytkownika lub konto [menedżera rejestracji urządzeń](https://docs.microsoft.com/intune/device-enrollment-manager-enroll)) w przypadku dodawanych urządzeń. Spowoduje to wstępne wypełnienie nazwy użytkownika, a użytkownik końcowy będzie musiał wprowadzić hasło podczas rejestrowania w usłudze Intune.
+- **Ze skojarzeniem nazwy użytkownika:** w portalu rozwiązania Knox w obszarze **Szczegóły urządzenia** dla dodawanych urządzeń wypełnij pole **Identyfikator użytkownika** (na przykład nazwa przypisanego użytkownika lub konto [menedżera rejestracji urządzeń](https://docs.microsoft.com/intune/device-enrollment-manager-enroll)). Spowoduje to wstępne wypełnienie nazwy użytkownika, a użytkownik końcowy będzie musiał wprowadzić hasło podczas rejestrowania w usłudze Intune.
 
 > [!NOTE]
 >
@@ -119,13 +119,15 @@ Nadal potrzebujesz pomocy? Zapoznaj się z pełną wersją [podręcznika użytko
 
 ## <a name="frequently-asked-questions"></a>Często zadawane pytania
 
-- **Obsługa właściciela urządzenia:** usługa Intune obsługuje rejestrowanie urządzeń tylko do trybu kiosku przy użyciu systemu Android Enterprise. Inne tryby właściciela urządzenia systemu Android Enterprise będą obsługiwane, gdy staną się dostępne w usłudze Intune.
+- **Obsługa właściciela urządzenia:** Usługa Intune obsługuje rejestrowanie urządzeń tylko do trybu kiosku przy użyciu systemu Android Enterprise. Inne tryby właściciela urządzenia systemu Android Enterprise będą obsługiwane, gdy staną się dostępne w usłudze Intune.
 
-- **Resetowanie do ustawień fabrycznych w celu zarejestrowania w systemie Android Enterprise:** jeśli ma miejsce zmiana zastosowania urządzeń, które zostały już zostały skonfigurowane, muszą one zostać zresetowane do ustawień fabrycznych podczas rejestracji w systemie Android Enterprise.
+- **Brak obsługi profilów roboczych:** rozwiązanie KME jest metodą rejestracji urządzeń firmowych. Na urządzeniach osobistych zarejestrowanych w profilu roboczym systemu Android dane służbowe i dane osobiste są od siebie oddzielone. Z tego powodu rejestracja urządzenia w profilu roboczym przy użyciu rozwiązania KME nie jest scenariuszem obsługiwanym przez usługę Intune.
 
-- **Aktualizacje przy użyciu konta Google Play:** konto Google Play nie jest niezbędne do rejestracji urządzenia w usłudze Microsoft Intune. Przyszłe aktualizacje aplikacji Portal firmy w usłudze Intune mogą jednak wymagać konta Google Play na urządzeniu. Konto Google Play nie jest wymagane podczas rejestracji jako właściciel urządzenia Google.
+- **Resetowanie do ustawień fabrycznych w celu zarejestrowania w systemie Android Enterprise:** jeśli ma miejsce zmiana zastosowania urządzeń, które zostały już skonfigurowane, podczas rejestracji w systemie Android Enterprise muszą one zostać zresetowane do ustawień fabrycznych.
 
-- **Pole „Password” (Hasło) jest ignorowane:** jeśli pole **Password** (Hasło) zostało wypełnione w obszarze **Device details** (Szczegóły urządzenia) w portalu rozwiązania Knox, jest ono ignorowane przez aplikację Portal firmy w usłudze Intune podczas rejestracji urządzeń z systemem Android. Użytkownik końcowy musi wprowadzić hasło na urządzeniu, aby ukończyć rejestrację tego urządzenia.
+- **Konto Google Play:** konto Google Play nie jest niezbędne do rejestracji urządzenia w usłudze Microsoft Intune. Przyszłe aktualizacje aplikacji Portal firmy w usłudze Intune mogą jednak wymagać konta Google Play na urządzeniu. Konto Google Play nie jest wymagane podczas rejestracji jako właściciel urządzenia Google.
+
+- **Pole „Hasło” jest ignorowane:** jeśli w obszarze **Szczegóły urządzenia** w portalu rozwiązania Knox zostało wypełnione pole **Hasło**, jest ono ignorowane przez aplikację Portal firmy w usłudze Intune podczas rejestracji urządzeń z systemem Android. Użytkownik końcowy musi wprowadzić hasło na urządzeniu, aby ukończyć rejestrację tego urządzenia.
 
 
 ## <a name="getting-support"></a>Uzyskiwanie pomocy technicznej

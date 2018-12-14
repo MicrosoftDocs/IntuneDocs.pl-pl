@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: coryfe
 ms.suite: ems
 search.appverid: MET150
-ms.openlocfilehash: a715fe518331d20b9a47d8374a37ce66ec59055d
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: c39faf6bb6a22cb861eb655edd6358b345b87c7e
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189316"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112769"
 ---
 # <a name="manage-software-updates-in-intune"></a>Zarządzanie aktualizacjami oprogramowania w usłudze Intune
 
@@ -28,7 +28,7 @@ System Windows jako usługa to sposób aktualizowania urządzeń z systemem Wind
 
 Używając usługi Windows Update dla firm, można uprościć środowisko zarządzania aktualizacjami. Nie musisz zatwierdzać poszczególnych aktualizacji dla grup urządzeń. Możesz zarządzać ryzykiem w środowiskach, konfigurując strategię wdrażania aktualizacji. Dzięki usłudze Windows Update masz pewność, że aktualizacje są instalowane w odpowiednich momentach. Usługa Microsoft Intune zapewnia możliwość konfigurowania ustawień aktualizacji na urządzeniach oraz odraczania instalacji aktualizacji. Usługa Intune nie przechowuje aktualizacji, a jedynie przypisanie zasad aktualizacji. W celu pobrania aktualizacji urządzenia uzyskują dostęp bezpośrednio do usługi Windows Update. Przy użyciu usługi Intune możesz konfigurować **pierścienie aktualizacji systemu Windows 10** i zarządzać nimi. Pierścień aktualizacji obejmuje grupę ustawień, które konfigurują, kiedy i w jaki sposób instalowane są aktualizacje systemu Windows 10. Na przykład można skonfigurować następujące ustawienia:
 
-- **Kanał obsługi systemu Windows 10**: wybierz kanał obsługi, z którego grupy urządzeń mają otrzymywać aktualizacje. Dostępne są następujące kanały: 
+- **Kanał obsługi systemu Windows 10**: Wybierz kanał obsługi, z którego grupy urządzeń mają otrzymywać aktualizacje. Dostępne są następujące kanały: 
   - Półroczny kanał
   - Półroczny kanał (kierowany)
   - Niejawny program testów systemu Windows — szybki
@@ -36,12 +36,12 @@ Używając usługi Windows Update dla firm, można uprościć środowisko zarzą
   - Wydanie w ramach niejawnego programu testów systemu Windows 
       
   Aby uzyskać więcej informacji o dostępnych kanałach obsługi, zobacz [Omówienie systemu Windows jako usługi](https://docs.microsoft.com/windows/deployment/update/waas-overview#servicing-channels).
-- **Ustawienia opóźnień**: skonfiguruj ustawienia opóźnień aktualizacji w celu opóźnienia instalacji aktualizacji grup urządzeń. Użyj tych ustawień, aby wdrażać aktualizacje w etapach i móc śledzić ich postęp.
-- **Wstrzymywanie**: w przypadku wystąpienia problemu podczas wdrażania aktualizacji możesz odroczyć ich instalację. 
-- **Okno obsługi**: skonfiguruj godziny, w których można instalować aktualizacje.
-- **Typ aktualizacji**: wybierz typy aktualizacji przeznaczone do zainstalowania. Na przykład aktualizacje dotyczące jakości, aktualizacje dotyczące funkcji lub aktualizacje sterowników.
-- **Zachowanie podczas instalacji**: określa sposób przeprowadzania instalacji aktualizacji. To ustawienie określa na przykład, czy urządzenie jest automatycznie ponownie uruchamiane po zakończeniu instalacji.
-- **Pobieranie elementów równorzędnych**: możesz skonfigurować pobieranie elementów równorzędnych. W przypadku skonfigurowania tej opcji po zakończeniu pobierania przez urządzenie aktualizacji inne urządzenia mogą pobierać aktualizację z tego urządzenia. To ustawienie przyspiesza proces pobierania.
+- **Ustawienia odraczania**: Skonfiguruj ustawienia odraczania aktualizacji w celu opóźnienia instalacji aktualizacji dla grup urządzeń. Użyj tych ustawień, aby wdrażać aktualizacje w etapach i móc śledzić ich postęp.
+- **Wstrzymywanie**: W przypadku wystąpienia problemu podczas wdrażania aktualizacji możesz odłożyć jej instalację. 
+- **Okno obsługi**: Skonfiguruj godziny, w których można instalować aktualizacje.
+- **Typ aktualizacji**: Wybierz typy aktualizacji przeznaczone do zainstalowania. Na przykład aktualizacje dotyczące jakości, aktualizacje dotyczące funkcji lub aktualizacje sterowników.
+- **Zachowanie podczas instalacji**: Określa sposób przeprowadzania instalacji aktualizacji. To ustawienie określa na przykład, czy urządzenie jest automatycznie ponownie uruchamiane po zakończeniu instalacji.
+- **Pobieranie z elementu równorzędnego**: Możesz skonfigurować pobieranie z elementów równorzędnych. W przypadku skonfigurowania tej opcji po zakończeniu pobierania przez urządzenie aktualizacji inne urządzenia mogą pobierać aktualizację z tego urządzenia. To ustawienie przyspiesza proces pobierania.
 
 Po utworzeniu pierścieni aktualizacji należy je przypisać do grup urządzeń. Za pomocą pierścieni aktualizacji można utworzyć strategię aktualizacji, która uwzględnia potrzeby biznesowe. Aby uzyskać więcej informacji, zobacz artykuł [Manage updates using Windows Update for Business](https://technet.microsoft.com/itpro/windows/manage/waas-manage-updates-wufb) (Zarządzanie aktualizacjami za pomocą usługi Windows Update dla firm).
 
@@ -78,27 +78,27 @@ Po utworzeniu pierścieni aktualizacji należy je przypisać do grup urządzeń.
 3. Wprowadź nazwę i opis (opcjonalnie), a następnie wybierz pozycję **Konfiguruj**.
 4. W obszarze **Ustawienia** wprowadź następujące informacje:
 
-   - **Kanał obsługi**: ustaw kanał, z którego urządzenie ma otrzymywać aktualizacje systemu Windows.
-   - **Aktualizacje produktów firmy Microsoft**: określ, czy skanować w poszukiwaniu aktualizacji z usługi Microsoft Update.
-   - **Sterowniki systemu Windows**: określ, czy podczas aktualizacji chcesz wykluczyć aktualizację sterowników z usługi Windows Update.
-   - **Zachowanie automatycznych aktualizacji**: wybierz sposób instalowania automatycznych aktualizacji oraz moment ponownego uruchomienia. Aby uzyskać szczegółowe informacje, zobacz sekcję [Update/AllowAutoUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#update-allowautoupdate).
-     - **Częstotliwość automatycznego zachowania**: to ustawienie jest wyświetlane, jeśli jako automatyczne zachowanie wybierzesz opcję **Automatycznie instaluj i uruchamiaj ponownie w zaplanowanym czasie**. Za pomocą tego ustawienia możesz planować instalowanie aktualizacji, w tym tydzień, dzień i godzinę.
+   - **Kanał obsługi**: Ustaw kanał, z którego urządzenie ma otrzymywać aktualizacje systemu Windows.
+   - **Aktualizacje produktów firmy Microsoft**: Określ, czy skanować w poszukiwaniu aktualizacji aplikacji z usługi Microsoft Update.
+   - **Sterowniki systemu Windows**: Określ, czy podczas aktualizacji chcesz wykluczyć aktualizację sterowników z usługi Windows Update.
+   - **Zachowanie automatycznych aktualizacji**: Wybierz sposób instalowania automatycznych aktualizacji oraz moment ponownego uruchomienia. Aby uzyskać szczegółowe informacje, zobacz sekcję [Update/AllowAutoUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#update-allowautoupdate).
+     - **Częstotliwość automatycznego zachowania**: To ustawienie jest wyświetlane, jeśli jako automatyczne zachowanie wybierzesz opcję **Automatycznie instaluj i uruchamiaj ponownie w zaplanowanym czasie**. Za pomocą tego ustawienia możesz planować instalowanie aktualizacji, w tym tydzień, dzień i godzinę.
 
-   - **Testy po ponownym uruchomieniu**: domyślnie włączone. Po ponownym uruchomieniu urządzenia przeprowadzane są testy obejmujące aktywnych użytkowników, poziom naładowania baterii, uruchomione gry oraz inne. Aby pominąć te testy po ponownym uruchomieniu urządzenia, wybierz pozycję **Pomiń**.
+   - **Testy po ponownym uruchomieniu**: Domyślnie włączone. Po ponownym uruchomieniu urządzenia przeprowadzane są testy obejmujące aktywnych użytkowników, poziom naładowania baterii, uruchomione gry oraz inne. Aby pominąć te testy po ponownym uruchomieniu urządzenia, wybierz pozycję **Pomiń**.
 
-   - **Okres opóźnienia aktualizacji dotyczących jakości (dni)**: wprowadź liczbę dni opóźniania aktualizacji dotyczących jakości. Okres opóźnienia aktualizacji dotyczących jakości może wynosić do 30 dni od daty wydania aktualizacji.
+   - **Okres odroczenia aktualizacji dotyczących jakości (dni)**: Wprowadź liczbę dni odroczenia aktualizacji dotyczących jakości. Okres opóźnienia aktualizacji dotyczących jakości może wynosić do 30 dni od daty wydania aktualizacji.
 
      Aktualizacje dotyczące jakości są zazwyczaj poprawkami oraz ulepszeniami istniejących funkcji systemu Windows i są publikowane w drugi wtorek każdego miesiąca. Funkcja aktualizacji dotyczących jakości za pośrednictwem usługi Windows Update dla Firm odbiera tylko te aktualizacje (wersja „B”), ale firma Microsoft może w dowolnej chwili udostępnić inne aktualizacje. Możesz określić, czy i na jak długo mają zostać opóźnione aktualizacje dotyczące jakości po udostępnieniu ich w usłudze Windows Update. Aby uzyskać więcej informacji, zobacz artykuł [Deploy updates using Windows Update for Business](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb) (Wdrażanie aktualizacji za pomocą usługi Windows Update dla Firm).
 
-   - **Okres opóźnienia aktualizacji funkcji (dni)**: wprowadź liczbę dni opóźniania aktualizacji funkcji. Okres opóźnienia aktualizacji funkcji może wynosić do 180 dni od daty wydania aktualizacji.
+   - **Okres odroczenia aktualizacji funkcji (dni)**: Wprowadź liczbę dni odroczenia aktualizacji funkcji. Okres opóźnienia aktualizacji funkcji może wynosić do 180 dni od daty wydania aktualizacji.
 
      Aktualizacje dotyczące funkcji są zazwyczaj nowymi funkcjami systemu Windows. Po skonfigurowaniu ustawienia **Kanał obsługi** możesz określić, czy i na jak długo mają zostać opóźnione aktualizacje funkcji po udostępnieniu ich w usłudze Windows Update.
 
-     Na przykład **jeśli ustawiono kanał obsługi Półroczny kanał (kierowany), a okres opóźnienia wynosi 30 dni**: załóżmy, że aktualizacja dotycząca funkcji X została po raz pierwszy publicznie udostępniona w usłudze Windows Update jako Półroczny kanał (kierowany) w styczniu. Urządzenie nie otrzyma tej aktualizacji do lutego — 30 dni później.
+     Przykład: **Jeśli jako kanał obsługi ustawiono Półroczny kanał (kierowany), a okres odroczenia wynosi 30 dni**: Załóżmy, że aktualizacja dotycząca funkcji X jest po raz pierwszy publicznie udostępniona w usłudze Windows Update jako Półroczny kanał (kierowany) w styczniu. Urządzenie nie otrzyma tej aktualizacji do lutego — 30 dni później.
 
-     **Jeśli ustawiono kanał obsługi Półroczny kanał, a okres opóźnienia wynosi 30 dni**: załóżmy, że aktualizacja dotycząca funkcji X została po raz pierwszy publicznie udostępniona w usłudze Windows Update jako Półroczny kanał (kierowany) w styczniu. Cztery miesiące później, w kwietniu, aktualizacja dotycząca funkcji X zostaje wydana jako Półroczny kanał. Urządzenie otrzyma aktualizację funkcji po 30 dniach od opublikowania wersji Półroczny kanał i aktualizacja nastąpi w maju.
+     **Jeśli jako kanał obsługi ustawiono Półroczny kanał, a okres odroczenia wynosi 30 dni**: Załóżmy, że aktualizacja dotycząca funkcji X jest po raz pierwszy publicznie udostępniona w usłudze Windows Update jako Półroczny kanał (kierowany) w styczniu. Cztery miesiące później, w kwietniu, aktualizacja dotycząca funkcji X zostaje wydana jako Półroczny kanał. Urządzenie otrzyma aktualizację funkcji po 30 dniach od opublikowania wersji Półroczny kanał i aktualizacja nastąpi w maju.
 
-   - **Tryb pobierania optymalizacji dostarczania**: wybierz metodę pobierania aktualizacji systemu Windows używaną przez urządzenia. Aby uzyskać szczegółowe informacje, zobacz [DeliveryOptimization/DODownloadMode](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#download-mode).
+   - **Tryb pobierania optymalizacji dostarczania**: Wybierz metodę używaną przez urządzenia do pobierania aktualizacji systemu Windows. Aby uzyskać szczegółowe informacje, zobacz [DeliveryOptimization/DODownloadMode](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#download-mode).
 
 5. Po zakończeniu wybierz przycisk **OK**. W obszarze **Tworzenie pierścienia aktualizacji**, wybierz pozycję **Utwórz**.
 
@@ -131,16 +131,16 @@ Zgodność aktualizacji można monitorować w usłudze Intune za pomocą bezpła
 ### <a name="review-update-compliance-using-oms"></a>Przeglądanie zgodności aktualizacji przy użyciu pakietu OMS
 Wdrożenia aktualizacji systemu Windows 10 można monitorować za pomocą bezpłatnego rozwiązania o nazwie Update Compliance. Aby uzyskać szczegółowe informacje, zobacz artykuł [Monitor Windows Updates with Update Compliance](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor) (Monitorowanie aktualizacji systemu Windows za pomocą aplikacji Update Compliance). Dzięki temu rozwiązaniu można nadać komercyjny identyfikator dowolnemu urządzeniu z systemem Windows 10 zarządzanemu przez usługę Intune, dla którego chcesz otrzymywać raport zgodności aktualizacji.
 
-W usłudze Intune możesz użyć ustawień ścieżki OMA-URI dla niestandardowych zasad do skonfigurowania identyfikatora komercyjnego. Szczegółowe informacje można znaleźć w artykule [Ustawienia zasad usługi Intune dla urządzeń z systemem Windows 10 w usłudze Microsoft Intune](https://docs.microsoft.com/intune-classic/deploy-use/windows-10-policy-settings-in-microsoft-intune).   
+W usłudze Intune możesz użyć ustawień ścieżki OMA-URI dla niestandardowych zasad do skonfigurowania identyfikatora komercyjnego. Szczegółowe informacje można znaleźć w artykule [Ustawienia zasad usługi Intune dla urządzeń z systemem Windows 10 w usłudze Microsoft Intune](custom-settings-windows-10.md).   
 
 Ścieżka OMA-URI (z uwzględnieniem wielkości liter) służąca do konfigurowania komercyjnego identyfikatora to: ./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID
 
 Na przykład można użyć następujących wartości w obszarze **Dodaj lub edytuj ustawienie OMA-URI**:
 
-- **Nazwa ustawienia**: identyfikator komercyjny programu Windows Analytics
-- **Opis ustawienia**: konfigurowanie komercyjnych identyfikatorów rozwiązań programu Windows Analytics
+- **Nazwa ustawienia**: Identyfikator komercyjny programu Windows Analytics
+- **Opis ustawienia**: Konfigurowanie identyfikatorów komercyjnych rozwiązań programu Windows Analytics
 - **OMA-URI** (wielkość liter jest rozróżniana): ./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID
-- **Typ danych:**: ciąg
+- **Typ danych**: String
 - **Wartość**: <*użyj identyfikatora GUID wyświetlanego na karcie Telemetria systemu Windows w obszarze roboczym usługi OMS*>
 
 ![Ustawienia identyfikatora OMA-URI — Edytowanie wiersza](./media/commID-edit.png)
@@ -174,4 +174,4 @@ System Windows Holographic for Business obsługuje następujące ustawienia:
 
 - **Zachowanie automatycznych aktualizacji**
 - **Aktualizacje produktów firmy Microsoft**
-- **Kanał obsługi**: obsługiwane są opcje **Półroczny kanał** oraz **Półroczny kanał (kierowany)**
+- **Kanał obsługi**: Obsługiwane są opcje **Półroczny kanał** i **Półroczny kanał (kierowany)**

@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d9a7ad5d77f0c085fc1e91b6991657e6b848b3f3
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: e6f816ae0eb025addfaa0c5f7ec7d16005f6b040
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187841"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112956"
 ---
 # <a name="set-enrollment-restrictions"></a>Ustawianie ograniczeń rejestracji
 
@@ -67,7 +67,7 @@ Ograniczenia domyślne są automatycznie zapewniane w przypadku ograniczeń reje
 
 ## <a name="set-device-type-restrictions"></a>Ustawianie ograniczeń typu urządzeń
 
-Możesz zmienić ustawienia ograniczeń dotyczących typu urządzenia, wykonując poniższe czynności. Te ograniczenia nie wpływają na urządzenia, które zostały już zarejestrowane. Za pomocą tej funkcji nie można zablokować urządzeń zarejestrowanych przy użyciu [agenta usługi Intune na komputerze](/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune).
+Możesz zmienić ustawienia ograniczeń dotyczących typu urządzenia, wykonując poniższe czynności. Te ograniczenia nie wpływają na urządzenia, które zostały już zarejestrowane. Za pomocą tej funkcji nie można zablokować urządzeń zarejestrowanych przy użyciu [agenta usługi Intune na komputerze](manage-windows-pcs-with-microsoft-intune.md).
 
 1. Zaloguj się do witryny Azure Portal.
 2. Wybierz opcję **Więcej usług**, wyszukaj usługę **Intune**, a następnie wybierz usługę **Intune**.
@@ -123,7 +123,7 @@ Możesz zmienić ustawienia ograniczeń dotyczących limitu liczby urządzeń, w
 6. Wybierz pozycję **Zapisz**.
 
 
-Użytkownikom zostanie wyświetlone powiadomienie, gdy osiągną limit liczby zarejestrowanych urządzeń. Na przykład w systemie iOS wygląda ono następująco:
+Podczas rejestracji urządzeń BYOD zostanie wyświetlone powiadomienie dla użytkowników, gdy osiągną limit liczby zarejestrowanych urządzeń. Na przykład w systemie iOS wygląda ono następująco:
 
 ![Powiadomienie o limicie urządzeń w systemie iOS](./media/enrollment-restrictions-ios-set-limit-notification.png)
 

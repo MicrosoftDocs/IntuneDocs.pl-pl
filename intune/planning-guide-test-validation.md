@@ -15,12 +15,12 @@ ms.assetid: 4f82ee0c-4bd6-4623-9b10-9249d316ccf5
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
-ms.openlocfilehash: bbcf6e21b9f5dd0474461e88ff54d6dde97590aa
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: ba214e059e9a5ddb17a8b1344d4d30ab1d7b40fa
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179936"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112463"
 ---
 # <a name="intune-testing-and-validation"></a>Testowanie i sprawdzanie poprawności usługi Intune
 
@@ -42,7 +42,7 @@ Jeśli składnika projektu nie ma w żadnym kryterium testowania zgodnym z wymag
 
 -   **Urządzenia:** urządzenia testowe, które mogą być czyszczone lub na których możliwe jest przywrócenie ustawień fabrycznych.
 
--   **Składniki integracji:** wszystkie składniki integracji (łącznik certyfikatów, łącznik Service To Service Connector usługi Intune dla hostowanego programu Exchange i lokalny łącznik usługi Intune dla programu Exchange) powinny być zainstalowane i skonfigurowane, jeśli jest to konieczne.
+-   **Składniki integracji:** wszystkie składniki integracji (łącznik certyfikatów, łącznik Service To Service Connector usługi Intune dla hostowanego programu Exchange i łącznik usługi Intune dla lokalnego programu Exchange) powinny być zainstalowane i skonfigurowane zgodnie z potrzebami.
 
 Aby przezwyciężyć nieprzewidziane trudności, konieczne może być wprowadzenie zmian w projekcie. Dodatkowo wszystkie zmiany projektu powinny być w pełni udokumentowane wraz z podaniem przyczyn wprowadzenia poszczególnych zmian. Oto przykład zmiany:
 
@@ -52,7 +52,7 @@ Podczas testowania i walidacji mogą pojawić się wyzwania lub problemy wymagaj
 
 -   [Dowiedz się, jak uzyskać pomoc techniczną dla usługi Intune](get-support.md)
 
--   [Kontakt z telefoniczną asystowaną pomocą techniczną dla usługi Microsoft Intune](/intune-classic/troubleshoot/contact-assisted-phone-support-for-microsoft-intune)
+-   [Kontakt z telefoniczną asystowaną pomocą techniczną dla usługi Microsoft Intune](get-support.md)
 
 ## <a name="functional-validation-testing"></a>Testowanie poprawności funkcjonalnej
 
@@ -62,7 +62,7 @@ Sprawdzanie poprawności funkcjonalnej polega na testowaniu poszczególnych skł
 
 ## <a name="use-case-validation-testing"></a>Testowanie poprawności przypadku użycia
 
-Należy przeprowadzić testy poprawności przypadku użycia w celu potwierdzenia, że scenariusze są kompletne i funkcjonalne. Istnieją dwa typy scenariuszy przypadków użycia: administratora IT i użytkownika końcowego.
+Należy przeprowadzić testy poprawności przypadku użycia w celu potwierdzenia, że scenariusze są kompletne i funkcjonalne. Istnieją dwa typy scenariuszy przypadków użycia: dotyczą one administratora IT i użytkownika końcowego.
 
 ### <a name="it-admin"></a>Administrator IT
 

@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: db655c49277051267036d76e518cc870757f67c2
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: fafc9381f59ceb4e78e3e76d24694cd0acdcf8d0
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52183047"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112378"
 ---
 # <a name="known-issues-in-microsoft-intune"></a>Znane problemy w usłudze Microsoft Intune
 
@@ -31,7 +31,7 @@ Zapoznaj się z tym artykułem, aby dowiedzieć się więcej o wszelkich znanych
 
 Aby zgłosić błąd, którego nie ma na tej liście, [otwórz żądanie pomocy technicznej](get-support.md).
 
-Możesz poprosić o dodanie nowej funkcji do usługi Intune, wysyłając raport z witryny [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas/category/189016-azure-admin-console).
+Możesz poprosić o dodanie nowej funkcji do usługi Intune, wysyłając raport z witryny [Microsoft Intune Feedback](https://microsoftintune.uservoice.com/forums/291681-ideas/category/189016-azure-admin-console).
 
 ## <a name="migration"></a>Migracja
 
@@ -44,13 +44,13 @@ Zasady zgodności utworzone w klasycznej witrynie Azure Portal będą przestarza
 
 ### <a name="intune-legacy-pc-client-features-are-only-available-in-the-silverlight-console"></a>Funkcje starszej wersji klienta usługi Intune są dostępne tylko w konsoli programu Silverlight
 
-Możliwość zarządzania systemem Windows 10 w usłudze Intune w witrynie Azure Portal jest dostępna za pośrednictwem funkcji zarządzania urządzeniami mobilnymi systemu Windows. Aby uzyskać więcej informacji, zobacz [Usługa Intune w konsoli platformy Azure i starszej wersji klienta usługi Intune](https://docs.microsoft.com/intune-classic/deploy-use/intune-on-azure).
+Możliwość zarządzania systemem Windows 10 w usłudze Intune w witrynie Azure Portal jest dostępna za pośrednictwem funkcji zarządzania urządzeniami mobilnymi systemu Windows. Aby uzyskać więcej informacji, zobacz [Usługa Intune w konsoli platformy Azure i starszej wersji klienta usługi Intune](intune-legacy-pc-client.md).
 
 ### <a name="groups-created-by-intune-during-migration-might-affect-functionality-of-other-microsoft-products"></a>Grupy utworzone przez usługę Intune podczas migracji mogą mieć wpływ na funkcjonalność innych produktów firmy Microsoft
 
 W przypadku migracji z usługi Intune do witryny Azure Portal może zostać wyświetlona nowa grupa o nazwie **Wszyscy użytkownicy — b0b08746-4dbe-4a37-9adf-9e7652c0b421**. Ta grupa zawiera wszystkich użytkowników usługi Azure Active Directory, nie tylko licencjonowanych użytkowników usługi Intune. Jeśli planujesz, że niektórzy bieżący lub nowi użytkownicy nie będą członkami żadnych grup, może to spowodować problemy z pozostałymi produktami firmy Microsoft.
 
-### <a name="status-blades-for-migrated-policies-do-not-work"></a>Bloki stanu zmigrowanych zasad nie działają
+### <a name="status-blades-for-migrated-policies-dont-work"></a>Bloki stanu zmigrowanych zasad nie działają
 
 Nie można wyświetlić informacji o stanie zasad, które zostały zmigrowane z klasycznej witryny Azure Portal do witryny Azure Portal. Można jednak nadal wyświetlać raporty dla tych zasad w portalu klasycznym. Aby wyświetlić informacje o stanie zmigrowanych zasad konfiguracji, utwórz je ponownie w witrynie Azure Portal.
 
@@ -58,7 +58,7 @@ Nie można wyświetlić informacji o stanie zasad, które zostały zmigrowane z 
 
 
 ### <a name="multiple-app-install-prompts-for-certain-vpp-apps"></a>Wiele monitów o instalację niektórych aplikacji VPP
-Może być wyświetlanych wiele monitów o zainstalowane niektórych aplikacji VPP, które są już zainstalowane na urządzeniach użytkowników końcowych. Ten problem występuje, jeśli ustawiono opcję **Aktualizacje automatyczne aplikacji** na **Wł.** dla tokenu VPP przekazanego do witryny Azure Portal usługi Intune.    
+Może być wyświetlanych wiele monitów o zainstalowanie niektórych aplikacji VPP, które są już zainstalowane na urządzeniach użytkowników końcowych. Ten problem występuje, jeśli ustawiono opcję **Aktualizacje automatyczne aplikacji** na **Wł.** dla tokenu VPP przekazanego do witryny Azure Portal usługi Intune.    
 
 Aby obejść ten problem, możesz wyłączyć opcję **Aktualizacje automatyczne aplikacji** dla tego tokenu VPP. W tym celu przejdź do usługi Microsoft Intune w witrynie Azure Portal. W usłudze Intune wybierz pozycję **Aplikacje klienckie** > **Tokeny programu VPP dla systemu iOS**. Następnie wybierz token VPP użyty do wdrożenia aplikacji, której dotyczy problem, i wybierz kolejno pozycje **Edytuj** > **Aktualizacje automatyczne aplikacji** > **Wył.** > **Zapisz**. Innym sposobem jest zatrzymanie wdrażania aplikacji, której dotyczy problem, jako aplikacji VPP, co spowoduje, że monity nie będą już wyświetlane.    
 
