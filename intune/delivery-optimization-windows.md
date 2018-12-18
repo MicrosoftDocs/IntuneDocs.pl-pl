@@ -5,34 +5,36 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/19/2018
+ms.date: 12/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 36cfb5ac05b2d69b5c7349f4ebc6054848a08fc8
-ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
+ms.openlocfilehash: 1b83a380620704e9e3f616cee77b33d577c86c0d
+ms.sourcegitcommit: 88f760abcea7348a0c6d00b533b54a6ff68d3985
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52730409"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977273"
 ---
 # <a name="windows-10-and-newer-delivery-optimization-settings-in-microsoft-intune"></a>Ustawienia optymalizacji dostarczania w systemie Windows 10 (i nowszych) w usłudze Microsoft Intune
 
-W tym artykule wymieniono i opisano wszystkie ustawienia optymalizacji dostarczania, które można skonfigurować dla urządzeń z systemem Windows 10. Te ustawienia są dodawane do profilu konfiguracji urządzenia, a następnie przypisywane do urządzeń lub wdrażane na nich przy użyciu usługi Microsoft Intune.
+W tym artykule wymieniono i opisano wszystkie ustawienia optymalizacji dostarczania, które można skonfigurować dla urządzeń z systemem Windows 10. Te ustawienia są dodawane do profilu konfiguracji urządzenia, a następnie przypisywane do urządzeń lub wdrażane na nich przy użyciu usługi Microsoft Intune. 
+
+[Aktualizacje optymalizacji dostarczania](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) to świetny zasób, z którego dowiesz się więcej na temat optymalizacji dostarczania w systemie Windows 10.
 
 ## <a name="settings"></a>Ustawienia
 
-**Tryb pobierania optymalizacji dostarczania**: wybierz sposób dostarczania aktualizacji urządzeń. Dostępne opcje:
+**Tryb pobierania optymalizacji dostarczania**: wybierz sposób dostarczania aktualizacji do urządzeń. Dostępne opcje:
 
-- **Nie skonfigurowano**: użytkownicy końcowi aktualizują swoje urządzenia przy użyciu własnych metod, czyli na przykład stosując ustawienia **aktualizacji systemu Windows** lub **optymalizacji dostarczania** dostępne w systemie operacyjnym.
-- **Tylko protokół HTTP, bez komunikacji równorzędnej**: pobieranie aktualizacji tylko z Internetu. Aktualizacje nie są pobierane z innych komputerów w sieci (tzw. komunikacja równorzędnej lub sieć równorzędna).
+- **Nieskonfigurowane**: użytkownicy końcowi aktualizują swoje urządzenia przy użyciu własnych metod, czyli na przykład stosując ustawienia **aktualizacji systemu Windows** lub **optymalizacji dostarczania** dostępne w systemie operacyjnym.
+- **Tylko protokół HTTP, bez komunikacji równorzędnej**: pobieranie aktualizacji tylko z Internetu. Aktualizacje nie są pobierane z innych komputerów w sieci (tzw. komunikacja równorzędna lub sieć równorzędna).
 - **Protokół HTTP w połączeniu z komunikacją równorzędną za tym samym protokołem HTTP translatora adresów sieciowych z komunikacją równorzędną w grupie prywatnej**: pobieranie aktualizacji z Internetu i innych komputerów w sieci. Komunikacja równorzędna występuje na urządzeniach w tej samej lokacji usługi Active Directory (jeśli istnieje) lub w tej samej domenie. Po wybraniu tej opcji następuje przecięcie adresów IP translatora adresów sieciowych w ramach komunikacji równorzędnej.
 - **Protokół HTTP w połączeniu z internetową komunikacją równorzędną**: pobieranie aktualizacji z Internetu i innych komputerów w sieci.
 - **Prosty tryb pobierania bez komunikacji równorzędnej**: pobieranie aktualizacji z Internetu bezpośrednio od właściciela aktualizacji, takiego jak firma Microsoft. Podczas tego procesu nie ma kontaktu z usługami optymalizacji dostarczania w chmurze.
-- **Tryb obejścia**: pobieranie aktualizacji przez zastosowanie ograniczeń przepustowości Usługi inteligentnego transferu w tle (BITS). Optymalizacja dostarczania nie jest używana.
+- **Tryb obejścia**: pobieranie aktualizacji przez zastosowanie Usługi inteligentnego transferu w tle (BITS). Optymalizacja dostarczania nie jest używana.
 
 ## <a name="move-from-existing-update-rings-to-delivery-optimization"></a>Przechodzenie z istniejących pierścieni aktualizacji do optymalizacji dostarczania
 

@@ -1,28 +1,32 @@
 ---
-title: Ograniczenia urządzeń korzystających z profili służbowych systemu Android w usłudze Microsoft Intune — Azure | Microsoft Docs
-description: W urządzeniach z profilami systemu Android Enterprise możesz ograniczyć część ustawień, w tym kopiowanie i wklejanie, pokazywanie powiadomień, uprawnienia aplikacji, udostępnianie danych, długość hasła, błędy logowania, używanie odcisku palca do odblokowywania, ponowne używanie haseł oraz włączanie udostępniania kontaktów służbowych za pomocą technologii Bluetooth.
+title: Ustawienia urządzeń z systemem Android Enterprise w usłudze Microsoft Intune — Azure | Microsoft Docs
+description: W urządzeniach z systemem Android Enterprise lub Android for Work możesz ograniczyć ustawienia, w tym kopiowanie i wklejanie, pokazywanie powiadomień, uprawnienia aplikacji, udostępnianie danych, długość hasła, błędy logowania, używanie odcisku palca do odblokowywania, ponowne używanie haseł oraz włączanie udostępniania kontaktów służbowych za pomocą technologii Bluetooth. Konfiguruj urządzenia jako kiosk w celu uruchamiania jednej aplikacji lub wielu aplikacji.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/19/2018
+ms.date: 12/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: 5f153e738aff28cae6481c0502f0682d10b8f104
-ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
+ms.custom: intune-azure, seodec18
+ms.openlocfilehash: c9e2e0df79625329310171c509327395989f3a7c
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52729096"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032541"
 ---
-# <a name="work-device-restriction-settings-in-intune"></a>Ustawienia ograniczeń urządzenia służbowego w usłudze Intune
+# <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem Android Enterprise w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune
 
-W tym artykule opisano ustawienia ograniczeń urządzenia, które można skonfigurować w usłudze Microsoft Intune dla urządzeń z profilami systemu Android Enterprise.
+W tym artykule wymieniono i opisano różne ustawienia, którymi można sterować na urządzeniach z systemem Android Enterprise. Użyj tych ustawień w ramach swojego rozwiązania do zarządzania urządzeniami mobilnymi (MDM), aby zezwalać na działanie funkcji lub je wyłączać, uruchamiać aplikacje w trybie kiosku, kontrolować zabezpieczenia i nie tylko.
+
+## <a name="before-you-begin"></a>Przed rozpoczęciem
+
+[Utwórz profil konfiguracji urządzenia](device-restrictions-configure.md).
 
 ## <a name="device-owner-only"></a>Tylko właściciel urządzenia
 
@@ -31,17 +35,17 @@ W tym artykule opisano ustawienia ograniczeń urządzenia, które można skonfig
 - **Przechwytywanie ekranu**: wybierz pozycję **Blokuj**, aby uniemożliwić tworzenie zrzutów ekranu i przechwytywanie ekranów w urządzeniu. Zapobiega również wyświetlaniu zawartości na urządzeniach wyświetlających, które nie mają zabezpieczonego wyjścia wideo. Pozycja **Nieskonfigurowane** umożliwia użytkownikowi przechwytywanie zawartości ekranu w formie obrazu.
 - **Aparat fotograficzny**: wybierz pozycję **Blokuj**, aby uniemożliwić dostęp do aparatu na urządzeniu. Pozycja **Niewymagane** zezwala na dostęp do aparatu urządzenia.
 - **Domyślne zasady uprawnień**: to ustawienie określa domyślne zasady uprawnień dla żądań uprawnień w środowisku uruchomieniowym. Dopuszczalne wartości to:
-  - **Ustawienie domyślne urządzenia**: użyte zostaną ustawienia domyślne urządzenia.
-  - **Monituj**: użytkownik jest monitowany o zatwierdzenie uprawnień.
-  - **Automatycznie udzielaj**: uprawnienia są automatycznie udzielane.
-  - **Automatycznie odmawiaj**: uprawnienia są automatycznie odrzucane.
+  - **Ustawienie domyślne urządzenia**: zostaną użyte ustawienia domyślne urządzenia.
+  - **Monituj**: użytkownik jest monitowany o zatwierdzenie uprawnienia.
+  - **Automatyczne udzielaj**: uprawnienia są automatycznie udzielane.
+  - **Automatyczne odmawiaj**: następuje automatyczna odmowa udzielenia uprawnień.
 - **Zmiany daty i godziny**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom ręczne ustawianie daty i godziny. Pozycja **Nieskonfigurowane** umożliwia użytkownikom ustawianie określonej daty i godziny na urządzeniu.
 - **Zmiany głośności**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom zmienianie głośności urządzenia. Pozycja **Nieskonfigurowane** umożliwia korzystanie z ustawień głośności na urządzeniu.
 - **Resetowanie do ustawień fabrycznych**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom używanie opcji resetowania do ustawień fabrycznych w ustawieniach urządzenia. Pozycja **Nieskonfigurowane** pozwala użytkownikom na używanie tego ustawienia na urządzeniu.
 - **Bezpieczny rozruch**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom ponowne uruchamianie urządzenia w trybie awaryjnym. Pozycja **Nieskonfigurowane** pozwala użytkownikom na ponowne uruchamianie urządzenia w trybie awaryjnym.
 - **Pasek stanu**: wybierz pozycję **Blokuj**, aby uniemożliwić dostęp do paska stanu, w tym do powiadomień i szybkich ustawień. Pozycja **Nieskonfigurowane** zezwala użytkownikom na dostęp do paska stanu.
 - **Usługi roamingu danych**: wybierz pozycję **Blokuj**, aby uniemożliwić roaming danych w sieci komórkowej. Pozycja **Nieskonfigurowane** zezwala na roaming danych, gdy urządzenie jest w sieci komórkowej.
-- **Zmiany ustawienia sieci Wi-Fi**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom zmienianie ustawień sieci Wi-Fi utworzonych przez właściciela urządzenia. Użytkownicy mogą tworzyć własne konfiguracje sieci Wi-Fi. Pozycja **Nieskonfigurowane** umożliwia użytkownikom zmianę ustawień sieci Wi-Fi na urządzeniu.
+- **Zmiany ustawień sieci Wi-Fi**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom zmienianie ustawień sieci Wi-Fi utworzonych przez właściciela urządzenia. Użytkownicy mogą tworzyć własne konfiguracje sieci Wi-Fi. Pozycja **Nieskonfigurowane** umożliwia użytkownikom zmianę ustawień sieci Wi-Fi na urządzeniu.
 - **Konfiguracja punktu dostępu sieci Wi-Fi**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom tworzenie lub zmienianie konfiguracji sieci Wi-Fi. Pozycja **Nieskonfigurowane** umożliwia użytkownikom zmianę ustawień sieci Wi-Fi na urządzeniu.
 - **Konfiguracja połączenia Bluetooth**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom konfigurowanie połączenia Bluetooth na urządzeniu. Pozycja **Nieskonfigurowane** umożliwia używanie połączenia Bluetooth na urządzeniu.
 - **Udostępnianie kontaktów za pośrednictwem połączenia Bluetooth**: wybierz pozycję **Blokuj**, aby uniemożliwić dostęp do kontaktów służbowych z innego urządzenia, takiego jak system samochodowy, gdy urządzenie z systemem Android zostanie sparowane za pomocą połączenia Bluetooth. Pozycja **Nieskonfigurowane** zezwala na dostęp do kontaktów służbowych na innym urządzeniu Bluetooth, które zostało sparowane z urządzeniem z systemem Android.
@@ -52,7 +56,7 @@ W tym artykule opisano ustawienia ograniczeń urządzenia, które można skonfig
 - **Przesyłaj dane za pomocą komunikacji NFC**: wybierz pozycję **Blokuj**, aby uniemożliwić używanie technologii NFC (Near Field Communication) do przesyłania danych z aplikacji. Pozycja **Nieskonfigurowane** umożliwia używanie technologii NFC do udostępniania danych między urządzeniami.
 - **Funkcje debugowania**: wybierz pozycję **Zezwalaj**, aby umożliwić użytkownikom korzystanie z funkcji debugowania na urządzeniu. Pozycja **Nieskonfigurowane** uniemożliwia użytkownikom korzystanie z funkcji debugowania na urządzeniu.
 - **Dostosowanie mikrofonu**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom wyłączanie wyciszania mikrofonu i dostosowywanie jego głośności. Pozycja **Nieskonfigurowane** umożliwia użytkownikom używanie i dostosowywanie głośności mikrofonu na urządzeniu.
-- **Adresy e-mail związane z ochroną po zastosowaniu funkcji resetowania do ustawień fabrycznych**: wybierz pozycję **Adresy e-mail konta Google**. Wprowadź adresy e-mail administratorów urządzenia, którzy mogą je odblokować po wyczyszczeniu zawartości. Pamiętaj, aby oddzielić adresy e-mail średnikami w następujący sposób: `admin1@gmail.com;admin2@gmail.com`. Jeśli nie wprowadzono adresu e-mail, każda osoba może odblokować urządzenie po przywróceniu go do ustawień fabrycznych.
+- **Adresy e-mail ochrony dotyczącej resetowania do ustawień fabrycznych**: wybierz pozycję **Adresy e-mail konta Google**. Wprowadź adresy e-mail administratorów urządzenia, którzy mogą je odblokować po wyczyszczeniu zawartości. Pamiętaj, aby oddzielić adresy e-mail średnikami w następujący sposób: `admin1@gmail.com;admin2@gmail.com`. Jeśli nie wprowadzono adresu e-mail, każda osoba może odblokować urządzenie po przywróceniu go do ustawień fabrycznych.
 - **Wyjście bezpieczeństwa sieci**: wybierz pozycję **Włącz**, aby umożliwić użytkownikom włączanie funkcji wyjścia bezpieczeństwa sieci. Jeśli podczas uruchamiania urządzenia nie nawiązano połączenia sieciowego, wyjście bezpieczeństwa wyświetli prośbę o tymczasowe połączenie z siecią i odświeżenie zasad urządzenia. Po zastosowaniu zasad sieć tymczasowa zostanie zapomniana, a urządzenie będzie kontynuować rozruch. Ta funkcja powoduje połączenie urządzeń z siecią, jeśli:
   - W ostatnich zasadach nie ma odpowiedniej sieci.
   - Urządzenie jest uruchamiane w aplikacji w trybie blokady zadania.
@@ -60,9 +64,9 @@ W tym artykule opisano ustawienia ograniczeń urządzenia, które można skonfig
 
   Pozycja **Nieskonfigurowane** uniemożliwia użytkownikom włączanie funkcji wyjścia bezpieczeństwa sieci na urządzeniu.
 
-- **Zezwalaj na instalację z nieznanych źródeł**: wybierz pozycję **Zezwalaj**, aby umożliwić użytkownikom włączanie opcji **Nieznane źródła**. To ustawienie umożliwia instalowanie aplikacji z nieznanych źródeł. Pozycja **Nieskonfigurowane** uniemożliwia użytkownikom włączanie opcji **Nieznane źródła**.
+- **Zezwalaj na instalację z nieznanych źródeł**: wybierz pozycję **Zezwalaj**, aby użytkownicy mogli włączać opcję **Nieznane źródła**. To ustawienie umożliwia instalowanie aplikacji z nieznanych źródeł. Pozycja **Nieskonfigurowane** uniemożliwia użytkownikom włączanie opcji **Nieznane źródła**.
 - **Aktualizacja systemu**: wybierz opcję, aby określić sposób obsługi aktualizacji bezprzewodowych przez urządzenie:
-  - **Ustawienie domyślne urządzenia**: użyte zostaną ustawienia domyślne urządzenia.
+  - **Ustawienie domyślne urządzenia**: zostaną użyte ustawienia domyślne urządzenia.
   - **Automatyczne**: aktualizacje są automatycznie instalowane bez interakcji z użytkownikiem. Ustawienie tych zasad powoduje natychmiastowe instalowanie wszystkich oczekujących aktualizacji.
   - **Odłożone**: instalowanie aktualizacji jest odkładane o 30 dni. Po upływie tych 30 dni system Android monituje użytkownika o zainstalowanie aktualizacji. Producenci urządzeń i operatorzy mogą uniemożliwiać (wykluczać) odkładanie ważnych aktualizacji zabezpieczeń. Aktualizacja podlegająca takiemu wykluczeniu powoduje wyświetlenie użytkownikowi powiadomienia systemowego na urządzeniu. 
   - **Okno obsługi**: aktualizacje są instalowane automatycznie w ramach codziennego okna obsługi skonfigurowanego w usłudze Intune. Próba instalacji jest podejmowana codziennie przez 30 dni i może zakończyć się niepowodzeniem ze względu na brak miejsca lub niski poziom baterii. Po upływie 30 dni system Android monituje użytkownika o instalację. To okno jest też używane do instalowania aktualizacji aplikacji ze sklepu Play. Tej opcji należy używać w przypadku urządzeń dedykowanych, takich jak kioski, ponieważ umożliwia ona aktualizowanie aplikacji na pierwszym planie kiosków z pojedynczymi aplikacjami.
@@ -115,7 +119,7 @@ Urządzenie można skonfigurować do uruchamiania pojedynczej aplikacji lub wiel
     
     Pozycja **Wyłącz** nie oferuje możliwości wstrzymywania trybu kiosku. Jeśli administrator wybiera przycisk Wstecz, a następnie przycisk „Wyjdź z kiosku”, pojawia się komunikat z informacją o tym, że kod dostępu jest wymagany.
     
-    - **Kod wychodzenia z trybu kiosku**: wprowadź numer PIN składający się z 4–6 cyfr. Administrator używa tego numeru PIN do tymczasowego wstrzymywania trybu kiosku.
+    - **Kod wychodzenia z trybu kiosku**: wprowadź liczbowy kod PIN zawierający 4–6 cyfr. Administrator używa tego numeru PIN do tymczasowego wstrzymywania trybu kiosku.
  
   - **Ustaw tło przy użyciu niestandardowego adresu URL**: wprowadź adres URL, aby dostosować ekran tła na urządzeniu kiosku.
 
@@ -139,7 +143,7 @@ Urządzenie można skonfigurować do uruchamiania pojedynczej aplikacji lub wiel
 ### <a name="users-and-accounts-settings"></a>Ustawienia użytkowników i kont
 
 - **Dodawanie nowych użytkowników**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom dodawanie nowych użytkowników. Każdy użytkownik ma na urządzeniu obszar osobisty, który zawiera niestandardowe ekrany główne, konta, aplikacje i ustawienia. Pozycja **Nieskonfigurowane** umożliwia użytkownikom dodawanie innych użytkowników do urządzenia.
-- **Usuwanie użytkowników**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom usuwanie użytkowników. Pozycja **Nieskonfigurowane** umożliwia użytkownikom usuwanie innych użytkowników z urządzenia.
+- **Usuwanie użytkownika**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom usuwanie użytkowników. Pozycja **Nieskonfigurowane** umożliwia użytkownikom usuwanie innych użytkowników z urządzenia.
 - **Zmiany dotyczące konta**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom modyfikowanie kont. Pozycja **Nieskonfigurowane** umożliwia użytkownikom aktualizowanie kont użytkowników na urządzeniu.
 
 ## <a name="work-profile-only"></a>Tylko profil służbowy 
@@ -148,14 +152,14 @@ Urządzenie można skonfigurować do uruchamiania pojedynczej aplikacji lub wiel
 
 #### <a name="general"></a>Ogólne
 
-- **Kopiuj i wklejaj między profilem służbowym a osobistym**: wybierz pozycję **Blokuj**, aby uniemożliwić kopiowanie i wklejanie między aplikacjami służbowymi i osobistymi. Pozycja **Nieskonfigurowane** umożliwia użytkownikom udostępnianie danych aplikacjom w profilu osobistym przy użyciu kopiowania i wklejania. 
+- **Ogranicz kopiowanie i wklejanie między profilami służbowymi i osobistymi**: wybierz pozycję **Blokuj**, aby uniemożliwić kopiowanie i wklejanie między aplikacjami służbowymi i osobistymi. Pozycja **Nieskonfigurowane** umożliwia użytkownikom udostępnianie danych aplikacjom w profilu osobistym przy użyciu kopiowania i wklejania. 
 - **Udostępnianie danych między profilami służbowym i osobistym**: wybierz, czy aplikacje w profilu służbowym mogą udostępniać dane aplikacjom w profilu osobistym. Możesz na przykład sterować akcjami udostępniania, takimi jak opcja **Udostępnij…**, w aplikacjach. w przeglądarce Chrome. To ustawienie nie ma zastosowania do zachowania schowka w zakresie kopiowania/wklejania. Opcje udostępniania:
   - **Domyślne ograniczenia udostępniania**: domyślne zachowanie urządzenia w zakresie udostępniania, które różni się w zależności od wersji systemu Android. Udostępnianie danych z profilu osobistego w profilu służbowym jest domyślnie dozwolone. Udostępnianie danych z profilu służbowego w profilu osobistym jest domyślnie zablokowane. To ustawienie zapobiega udostępnianiu danych z profilu służbowego w profilu osobistym. Firma Google nie blokuje udostępniania z profilu osobistego do profilu służbowego na urządzeniach z systemem w wersji 6.0 lub nowszej.
-  - **Aplikacje w profilu służbowym mogą obsługiwać żądania udostępnienia z profilu osobistego**: umożliwia włączenie wbudowanej funkcji systemu Android pozwalającej na udostępnianie danych z profilu osobistego w profilu służbowym. Gdy ta opcja jest włączona, żądanie udostępnienia z aplikacji w profilu osobistym umożliwi udostępnianie danych aplikacjom w profilu służbowym. Jest to domyślne ustawienie w przypadku urządzeń z systemem Android w wersji wcześniejszej niż 6.0.
+  - **Aplikacje w profilu służbowym mogą obsługiwać żądania udostępniania z profilu osobistego**: włącza wbudowaną funkcję systemu Android, która umożliwia udostępnianie danych z profilu osobistego w profilu służbowym. Gdy ta opcja jest włączona, żądanie udostępnienia z aplikacji w profilu osobistym umożliwi udostępnianie danych aplikacjom w profilu służbowym. Jest to domyślne ustawienie w przypadku urządzeń z systemem Android w wersji wcześniejszej niż 6.0.
   - **Zezwalaj na udostępnianie przez granice**: umożliwia udostępnianie przez granicę profilu służbowego w obu kierunkach. Po wybraniu tego ustawienia aplikacje w profilu służbowym mogą udostępniać dane niewskazanym aplikacjom w profilu osobistym. To ustawienie pozwala zarządzanym aplikacjom z profilu służbowego udostępniać dane aplikacjom w niezarządzanym obszarze urządzenia. Dlatego należy go używać ostrożnie.
 
 - **Powiadomienia profilu służbowego przy zablokowanym urządzeniu**: pozwala określić, czy aplikacje z profilu służbowego mogą pokazywać dane w powiadomieniach, gdy urządzenie jest zablokowane. Pozycja **Blokuj** powoduje, że dane nie są wyświetlane. Pozycja **Nieskonfigurowane** powoduje wyświetlanie danych.
-- **Domyślne uprawnienia aplikacji**: powoduje ustawienie domyślnych zasad uprawnień dla wszystkich aplikacji w profilu służbowym. Począwszy od systemu Android 6, użytkownik jest monitowany o udzielenie określonych uprawnień wymaganych przez aplikacje, gdy aplikacja jest uruchamiana. To ustawienie zasad pozwala określić, czy użytkownicy są monitowani o nadanie uprawnień wszystkim aplikacjom w profilu służbowym. Można na przykład przypisać aplikację do profilu służbowego, który wymaga dostępu do lokalizacji. Standardowo aplikacja monituje użytkownika o zatwierdzenie lub odrzucenie dostępu aplikacji do lokalizacji. Należy użyć tych zasad, aby automatycznie udzielić uprawnień bez wyświetlania monitu, automatycznie odmówić uprawnień bez wyświetlania monitu lub pozwolić użytkownikowi końcowemu zdecydować. Wybierz spośród opcji:
+- **Domyślne uprawnienia aplikacji**: Powoduje ustawienie domyślnych zasad uprawnień dla wszystkich aplikacji w profilu służbowym. Począwszy od systemu Android 6, użytkownik jest monitowany o udzielenie określonych uprawnień wymaganych przez aplikacje, gdy aplikacja jest uruchamiana. To ustawienie zasad pozwala określić, czy użytkownicy są monitowani o nadanie uprawnień wszystkim aplikacjom w profilu służbowym. Można na przykład przypisać aplikację do profilu służbowego, który wymaga dostępu do lokalizacji. Standardowo aplikacja monituje użytkownika o zatwierdzenie lub odrzucenie dostępu aplikacji do lokalizacji. Należy użyć tych zasad, aby automatycznie udzielić uprawnień bez wyświetlania monitu, automatycznie odmówić uprawnień bez wyświetlania monitu lub pozwolić użytkownikowi końcowemu zdecydować. Wybierz spośród opcji:
   - **Ustawienie domyślne urządzenia**
   - **Monit**
   - **Automatyczne udzielaj**
@@ -163,7 +167,7 @@ Urządzenie można skonfigurować do uruchamiania pojedynczej aplikacji lub wiel
 
   Zasad konfiguracji aplikacji można także użyć do nadania uprawnień dla poszczególnych aplikacji (**Aplikacje klienckie** > **Zasady konfiguracji aplikacji**).
 
-- **Dodawanie i usuwanie kont**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom końcowym ręczne dodawanie i usuwanie kont w profilu służbowym. Na przykład w przypadku wdrożenia aplikacji Gmail w profilu służbowym systemu Android można uniemożliwić użytkownikom końcowym dodawanie i usuwanie kont w tym profilu służbowym. Pozycja **Nieskonfigurowane** zezwala na dodawanie kont w profilu służbowym.  
+- **Dodawanie i usuwanie kont**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom końcowym ręczne dodawanie lub usuwanie kont w profilu służbowym. Na przykład w przypadku wdrożenia aplikacji Gmail w profilu służbowym systemu Android można uniemożliwić użytkownikom końcowym dodawanie i usuwanie kont w tym profilu służbowym. Pozycja **Nieskonfigurowane** zezwala na dodawanie kont w profilu służbowym.  
 
 - **Udostępnianie kontaktów za pośrednictwem połączenia Bluetooth**: umożliwia dostęp do kontaktów służbowych z innego urządzenia, takiego jak samochód, sparowanego za pomocą połączenia Bluetooth. Domyślnie to ustawienie nie jest skonfigurowane i kontakty służbowe nie są wyświetlane. Wybierz pozycję **Włącz**, aby zezwolić na udostępnianie i wyświetlić kontakty z profilu służbowego. To ustawienie dotyczy urządzeń z systemem Android w wersji 6.0 i nowszych oraz profilem służbowym. Włączenie tego ustawienia może umożliwić niektórym urządzeniom Bluetooth zapisanie w pamięci podręcznej kontaktów służbowych przy pierwszym połączeniu. Wyłączenie tych zasad po przeprowadzeniu początkowego parowania/synchronizacji może nie spowodować usunięcia kontaktów służbowych z urządzenia Bluetooth.
 
@@ -178,8 +182,8 @@ Urządzenie można skonfigurować do uruchamiania pojedynczej aplikacji lub wiel
 #### <a name="work-profile-password"></a>Hasło profilu służbowego
 
 - **Wymagaj hasła profilu służbowego**: ma zastosowanie do systemu Android 7.0 lub nowszego z włączonym profilem służbowym. Wybierz pozycję **Wymagaj**, aby wprowadzić zasady kodu dostępu, które będą mieć zastosowanie wyłącznie do aplikacji w profilu służbowym. Domyślnie użytkownik końcowy może używać dwóch różnych kodów PIN lub wybrać opcję połączenia zdefiniowanych kodów PIN w celu uzyskania kodu PIN o większej sile. Pozycja **Nieskonfigurowane** umożliwia użytkownikowi używanie aplikacji służbowych bez wprowadzania hasła.
-- **Minimalna długość hasła**: określ minimalną liczbę znaków, które musi zawierać hasło użytkownika (**4**-**16**).
-- **Maksymalna liczba minut braku aktywności przed zablokowaniem profilu służbowego**: określ, po jakim czasie następuje zablokowanie profilu służbowego. Użytkownik musi następnie wprowadzić swoje poświadczenia, aby odzyskać dostęp.
+- **Minimalna długość hasła**: określ minimalną liczbę znaków, które musi zawierać hasło użytkownika, **4**-**16**.
+- **Maksymalna liczba minut braku aktywności przed zablokowaniem profilu służbowego**: wybierz długość czasu przed zablokowaniem profilu służbowego. Użytkownik musi następnie wprowadzić swoje poświadczenia, aby odzyskać dostęp.
 - **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia**: określ, ile razy może zostać podane nieprawidłowe hasło, zanim profil służbowy zostanie wyczyszczony z urządzenia.
 - **Wygaśnięcie hasła (dni)**: określ liczbę dni, po których użytkownik końcowy musi zmienić hasło (**1**-**255**).
 - **Wymagany typ hasła**: wybierz typ hasła, które musi zostać ustawione na urządzeniu. Wybierz spośród opcji:
@@ -191,7 +195,7 @@ Urządzenie można skonfigurować do uruchamiania pojedynczej aplikacji lub wiel
   - **Co najmniej alfabetyczne**
   - **Co najmniej alfanumeryczne**
   - **Co najmniej alfanumeryczne z symbolami**
-- **Zapobiegaj ponownemu użyciu starych haseł**: wprowadź liczbę nowych haseł, których należy użyć, zanim będzie możliwe ponowne użycie starego hasła (**1**-**24**).
+- **Zapobiegaj ponownemu używaniu poprzednich haseł**: wprowadź liczbę nowych haseł, których należy użyć, zanim będzie możliwe ponowne użycie starego hasła (**1**-**24**).
 - **Odblokowywanie za pomocą odcisku palca**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom końcowym użycie skanera linii papilarnych w celu odblokowania urządzenia. Pozycja **Nieskonfigurowane** zezwala użytkownikom na odblokowywanie urządzeń przy użyciu odcisku palca w profilu służbowym.
 - **Blokada Smart Lock i inni agenci zaufania**: wybierz pozycję **Blokuj**, aby uniemożliwić funkcji Smart Lock lub innym agentom zaufania dostosowywanie ustawień blokady ekranu na zgodnych urządzeniach. Ta funkcja, zwana również czasami agentem zaufania, umożliwia wyłączenie lub obejście hasła ekranu blokady urządzenia, jeśli urządzenie znajduje się w zaufanej lokalizacji. Na przykład można obejść hasło profilu służbowego, gdy urządzenie jest połączone z konkretnym urządzeniem Bluetooth lub znajduje się w pobliżu tagu NFC. Za pomocą tego ustawienia można uniemożliwić użytkownikom konfigurowanie funkcji Smart Lock.
 
@@ -199,10 +203,10 @@ Urządzenie można skonfigurować do uruchamiania pojedynczej aplikacji lub wiel
 
 Te ustawienia hasła są stosowane w profilach osobistych na urządzeniach korzystających z profilu służbowego.
 
-- **Minimalna długość hasła**: określ minimalną liczbę znaków, które musi zawierać hasło użytkownika (**4**-**14**).
-- **Maksymalna liczba minut braku aktywności przed zablokowaniem ekranu**: określ, po jakim czasie braku aktywności następuje automatyczne zablokowanie urządzenia
-- **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia**: określ, ile razy może zostać podane nieprawidłowe hasło, zanim zostaną wyczyszczone wszystkie dane z urządzenia
-- **Wygaśnięcie hasła (dni)**: określ liczbę dni, po których użytkownik końcowy musi zmienić hasło (**1**-**255**)
+- **Minimalna długość hasła**: określ minimalną liczbę znaków, które musi zawierać hasło użytkownika, **4**-**14**.
+- **Maksymalna liczba minut braku aktywności przed zablokowaniem ekranu**: wybierz długość czasu przed automatycznym zablokowaniem nieaktywnego urządzenia.
+- **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia**: określ, ile razy może zostać podane nieprawidłowe hasło, zanim wszystkie dane zostaną wyczyszczone z urządzenia.
+- **Wygaśnięcie hasła (dni)**: określ liczbę dni, po których użytkownik końcowy musi zmienić hasło (**1**-**255**).
 - **Wymagany typ hasła**: wybierz typ hasła, które musi zostać ustawione na urządzeniu. Wybierz spośród opcji:
   - **Ustawienie domyślne urządzenia**
   - **Zabezpieczenia biometryczne na niskim poziomie**
@@ -212,7 +216,7 @@ Te ustawienia hasła są stosowane w profilach osobistych na urządzeniach korzy
   - **Co najmniej alfabetyczne**
   - **Co najmniej alfanumeryczne**
   - **Co najmniej alfanumeryczne z symbolami**
-- **Zapobiegaj ponownemu użyciu starych haseł**: wprowadź liczbę nowych haseł, których należy użyć, zanim będzie możliwe ponowne użycie starego hasła (**1**-**24**).
+- **Zapobiegaj ponownemu używaniu poprzednich haseł**: wprowadź liczbę nowych haseł, których należy użyć, zanim będzie możliwe ponowne użycie starego hasła (**1**-**24**).
 - **Odblokowywanie za pomocą odcisku palca**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikowi końcowemu użycie skanera linii papilarnych w celu odblokowania urządzenia. Pozycja **Nieskonfigurowane** zezwala użytkownikowi na odblokowywanie urządzenia przy użyciu odcisku palca.
 - **Blokada Smart Lock i inni agenci zaufania**: wybierz pozycję **Blokuj**, aby uniemożliwić funkcji Smart Lock lub innym agentom zaufania dostosowywanie ustawień blokady ekranu na zgodnych urządzeniach. Ta funkcja, zwana również czasami agentem zaufania, umożliwia wyłączenie lub obejście hasła ekranu blokady urządzenia, jeśli urządzenie znajduje się w zaufanej lokalizacji. Na przykład można obejść hasło profilu służbowego, gdy urządzenie jest połączone z konkretnym urządzeniem Bluetooth lub znajduje się w pobliżu tagu NFC. Za pomocą tego ustawienia można uniemożliwić użytkownikom konfigurowanie funkcji Smart Lock.
 
@@ -243,7 +247,7 @@ Te ustawienia hasła są stosowane w profilach osobistych na urządzeniach korzy
   > [!IMPORTANT]
   >  - Wybrany klient sieci VPN musi być zainstalowany na urządzeniu i musi obsługiwać sieć VPN dla aplikacji w profilach służbowych. W przeciwnym razie wystąpi błąd. 
   >  - Należy zatwierdzić aplikację klienta sieci VPN w **zarządzanymi sklepie Google Play**, zsynchronizować aplikację z usługą Intune i wdrożyć aplikację na urządzeniu. Po wykonaniu tej czynności aplikacja jest zainstalowana w profilu służbowym użytkownika.
-  >  - Istnieją znane problemy podczas korzystania z sieci VPN dla aplikacji z programem F5 Access dla systemu Android 3.0.3. Aby uzyskać więcej informacji, zobacz [opublikowane przez firmę F5 informacje o wersji programu F5 Access dla systemu Android 3.0.3](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-3.html#relnotes_known_issues_f5_access_android).
+  >  - Mogą wystąpić znane problemy podczas korzystania z sieci VPN dla aplikacji z programem F5 Access dla systemu Android 3.0.4. Aby uzyskać więcej informacji, zobacz [opublikowane przez firmę F5 informacje o wersji programu F5 Access dla systemu Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android).
 
 - **Tryb blokady**: wybierz pozycję **Włącz**, aby wymusić korzystanie z tunelu sieci VPN przez cały ruch sieciowy. Jeśli nie nawiązano połączenia z siecią VPN, urządzenie nie będzie mieć dostępu do sieci.
 

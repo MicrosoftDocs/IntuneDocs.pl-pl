@@ -16,12 +16,12 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: ed6a79142c2bbe3bd93b02c17e92f4f11f2583f3
-ms.sourcegitcommit: b93db06ba435555f5b126f97890931484372fcfb
+ms.openlocfilehash: 06031b8085e50caa2092287c97b3eab0ead366ee
+ms.sourcegitcommit: 5e4c7da8ce62d5a5720316ef4068c1920f8f5b67
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52829202"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53200610"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co nowego w usłudze Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -42,6 +42,14 @@ Dowiedz się co tydzień, co nowego w usłudze Microsoft Intune. Możesz równie
 ### Role-based access control
 
 -->     
+
+## <a name="week-of-december-10-2018"></a>Tydzień 10 grudnia 2018 r.
+
+### <a name="microsoft-auto-update-version-450-required-for-macos-devices----3503442---"></a>Funkcja Microsoft Auto Update w wersji 4.50 wymagana dla urządzeń z systemem macOS <!-- 3503442 -->
+Aby nadal otrzymywać aktualizacje aplikacji Portal firmy i innych aplikacjach pakietu Office, należy uaktualnić urządzenia z systemem macOS zarządzane przez usługę Intune do funkcji Microsoft Auto Update w wersji 4.5.0. Użytkownicy mogą już mieć tę wersję dla swoich aplikacji pakietu Office.
+
+### <a name="intune-requires-macos-1012-or-later----2827778---"></a>Usługa Intune wymaga systemu macOS 10.12 lub nowszego <!-- 2827778 -->
+Usługa Intune wymaga teraz systemu macOS w wersji 10.12 lub nowszego. Urządzenia z wcześniejszymi wersjami systemu macOS nie mogą używać aplikacji Portal firmy w celu rejestracji do usługi Intune. Aby nadal otrzymywać pomoc techniczną i nowe funkcje, użytkownicy muszą uaktualnić swoje urządzenia do systemu macOS 10.12 lub nowszego i uaktualnić aplikację Portal firmy do najnowszej wersji.
 
 ## <a name="week-of-november-26-2018"></a>Tydzień 26 listopada 2018 r.
 
@@ -114,7 +122,7 @@ Jeśli do wstępnej aprowizacji aplikacji Portal firmy podczas rejestracji progr
 Usługa Intune obsługuje teraz program Device Enrollment Program dla urządzeń z systemem macOS w przypadku kont usługi Apple School Manager.  Aby uzyskać więcej informacji, zobacz [Automatically enroll macOS devices with Apple School Manager or Device Enrollment Program](device-enrollment-program-enroll-macos.md) (Automatyczne rejestrowanie urządzeń z systemem macOS w ramach usługi Apple School Manager lub programu Device Enrollment Program).
 
 ### <a name="new-intune-device-subscription-sku---3312071--"></a>Nowa wersja SKU <!--3312071--> subskrypcji usługi Intune dla urządzeń
-W celu ułatwienia obniżania kosztów zarządzania urządzeniami w przedsiębiorstwach udostępniono nową wersję SKU subskrypcji opartej na urządzeniach. Ta wersja SKU subskrypcji usługi Intune dla urządzeń jest licencjonowana na urządzenie i jest subskrypcją miesięczną. Cena zależy od programu licencjonowania. Jest dostępna w kanałach sprzedaży Direct Channel, Enterprise Agreement (EA), Microsoft Products and Services Program (MPSA) oraz Open i Cloud Solution Provider (CSP).
+W celu ułatwienia obniżania kosztów zarządzania urządzeniami w przedsiębiorstwach udostępniono nową wersję SKU subskrypcji opartej na urządzeniach. Ta wersja SKU subskrypcji usługi Intune dla urządzeń jest licencjonowana na urządzenie i jest subskrypcją miesięczną. Cena zależy od programu licencjonowania. Jest ona dostępna bezpośrednio w portalu administracyjnym usługi Office, a także za pośrednictwem umów [Enterprise Agreement](https://www.microsoft.com/licensing/licensing-programs/enterprise?activetab=enterprise-tab:primaryr2) (EA), [Microsoft Products and Services Agreement](https://www.microsoft.com/licensing/mpsa/default) (MPSA), [umów Microsoft Open](https://partner.microsoft.com/licensing/licensing-agreements) oraz [dostawcy rozwiązań w chmurze](https://www.microsoftpartnercommunity.com/t5/Partnership-101/What-is-the-Cloud-Solution-Provider-CSP-program/td-p/2453) (CSP, Cloud Solution Provider).
 
 ### <a name="device-management"></a>Zarządzanie urządzeniami
 
@@ -187,7 +195,7 @@ Skrypty programu PowerShell w usłudze Intune mogą być przeznaczone dla grup z
 #### <a name="new-required-password-type-default-setting-for-android-android-enterprise---2649963---"></a>Nowe ustawienie domyślne „Wymagany typ hasła” dla systemów Android, Android Enterprise<!-- 2649963 -->
 Podczas tworzenia nowych zasad zgodności (**Intune** > **Zgodność urządzenia** > **Zasady** > **Utwórz zasady** > **Android** lub **Android enterprise** dla platformy > Zabezpieczenia systemu) wartość domyślna dla ustawienia **Wymagany typ hasła** ulega zmianie:
 
-Z: Ustawienie domyślne urządzenia Na: Co najmniej numeryczne
+Od: Ustawienie domyślne urządzenia Do: Co najmniej numeryczne
 
 Dotyczy: Android, Android Enterprise
 
@@ -213,15 +221,18 @@ Nowy raport zawierający szczegółowe informacje dotyczące porzuconych rejestr
 #### <a name="new-azure-active-directory-terms-of-use-feature----2870393---"></a>Nowa funkcja warunków użytkowania usługi Azure Active Directory <!-- 2870393 -->
 Usługa Azure Active Directory udostępnia funkcję warunków użytkowania, której można użyć zamiast istniejących warunków i postanowień usługi Intune. Funkcja warunków użytkowania usługi Azure AD zapewnia większą elastyczność w związku z tym, które warunki wyświetlić i kiedy, lepszą obsługę lokalizacji, większą kontrolę sposobu renderowania i ulepszone raportowanie. Funkcja warunków użytkowania usługi Azure AD wymaga usługi Azure Active Directory Premium P1, która jest również częścią pakietu Enterprise Mobility + Security E3. Aby dowiedzieć się więcej, zobacz artykuł [Zarządzanie warunkami i postanowieniami obowiązującymi w firmie na potrzeby dostępu użytkowników](terms-and-conditions-create.md).
 
-### <a name="android-device-owner-mode-support---3188762--"></a>Obsługa trybu Właściciel urządzenia z systemem Android <!--3188762-->
+#### <a name="android-device-owner-mode-support---3188762--"></a>Obsługa trybu Właściciel urządzenia z systemem Android <!--3188762-->
 W przypadku rejestracji w rozwiązaniu Samsung Knox Mobile Enrollment usługa Intune obsługuje teraz rejestrowanie urządzeń w trybie zarządzania Właściciel urządzenia z systemem Android. Użytkownicy korzystający z sieci komórkowej lub Wi-Fi mogą za pomocą kilku naciśnięć zarejestrować urządzenie przy jego pierwszym włączeniu. Aby uzyskać więcej informacji, zobacz temat [Automatically enroll Android devices by using Samsung's Knox Mobile Enrollment](android-samsung-knox-mobile-enroll.md) (Automatyczne rejestrowanie urządzeń z systemem Android za pomocą rozwiązania Knox Mobile Enrollment firmy Samsung).
 
 ### <a name="device-management"></a>Zarządzanie urządzeniami
+#### <a name="new-settings-for-software-updates------1907869--wnready---"></a>Nowe ustawienia aktualizacji oprogramowania <!-- 1907869  wnready -->  
+- Teraz można skonfigurować niektóre powiadomienia, aby wysyłać do użytkowników końcowych alerty dotyczące operacji ponownego uruchamiania, które są wymagane do zakończenia instalacji najnowszych aktualizacji oprogramowania.   
+- Teraz można skonfigurować monit ostrzegawczy dotyczący ponownych uruchomień, które odbywają się poza godzinami pracy. Ta opcja jest obsługiwana w przypadku scenariuszy BYOD.
 
-### <a name="group-windows-autopilot-enrolled-devices-by-correlator-id----2075110---"></a>Grupowanie urządzeń zarejestrowanych w programie Windows Autopilot według identyfikatora korelatora <!-- 2075110 -->
+#### <a name="group-windows-autopilot-enrolled-devices-by-correlator-id----2075110---"></a>Grupowanie urządzeń zarejestrowanych w programie Windows Autopilot według identyfikatora korelatora <!-- 2075110 -->
 Usługa Intune teraz obsługuje grupowanie urządzeń z systemem Windows według identyfikatora korelatora, jeśli urządzenia są zarejestrowane przy użyciu [rozwiązania Autopilot dla istniejących urządzeń](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) za pośrednictwem programu Configuration Manager. Identyfikator korelatora jest parametrem pliku konfiguracji rozwiązania Autopilot. Usługa Intune automatycznie ustawi [atrybut enrollmentProfileName urządzenia w usłudze Azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#using-attributes-to-create-rules-for-device-objects) na wartość „OfflineAutopilotprofile-<correlator ID>”. Dzięki temu można utworzyć dowolne grupy dynamiczne usługi Azure AD na podstawie identyfikatora korelatora za pomocą atrybutu enrollmentprofileName dla rejestracji rozwiązania Autopilot w trybie offline. Aby uzyskać więcej informacji, zobacz [Rozwiązanie Windows Autopilot dla istniejących urządzeń](enrollment-autopilot.md#windows-autopilot-for-existing-devices).
 
-### <a name="intune-app-protection-policies----2984657---"></a>Zasady ochrony aplikacji usługi Intune <!-- 2984657 -->
+#### <a name="intune-app-protection-policies----2984657---"></a>Zasady ochrony aplikacji usługi Intune <!-- 2984657 -->
 Zasady ochrony aplikacji usługi Intune pozwalają skonfigurować różne ustawienia ochrony danych dla chronionych aplikacji usługi Intune, takich jak Outlook i Word. Zmieniliśmy wygląd i działanie tych ustawień dla systemów [iOS](app-protection-policy-settings-ios.md) i [Android](app-protection-policy-settings-android.md), aby umożliwić łatwiejsze znalezienie poszczególnych ustawień. Istnieją trzy kategorie ustawień zasad:
 - **Relokacja danych** — ta grupa obejmuje kontrolki ochrony przed utratą danych ograniczające działania takie jak wycinanie, kopiowanie, wklejanie i zapisywanie pod nową nazwą. Te ustawienia określają, jak użytkownicy używają danych w aplikacjach.
 - **Wymagania dotyczące dostępu** — ta grupa zawiera opcje numeru PIN dla poszczególnych aplikacji, które określają, w jaki sposób użytkownik uzyskuje dostęp do aplikacji w kontekście służbowym.  
@@ -301,7 +312,7 @@ Użytkownicy końcowi będą teraz mogli wyzwalać akcje aplikacji i urządzeń 
 #### <a name="create-dns-suffixes-in-vpn-configuration-profiles-on-devices-running-windows-10---1333668---"></a>Tworzenie sufiksów DNS w profilach konfiguracji sieci VPN na urządzeniach z systemem Windows 10<!-- 1333668 -->
 Podczas tworzenia profilu konfiguracji urządzenia sieci VPN (**Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **Windows 10 i nowsze** (platforma) > **VPN** (typ profilu)) wprowadzasz pewne ustawienia systemu DNS. Dzięki tej aktualizacji można również podać wiele **sufiksów DNS** w usłudze Intune. Korzystając z sufiksów DNS, możesz wyszukać zasób sieciowy za pomocą jego krótkiej nazwy, zamiast w pełni kwalifikowanej nazwy domeny (FQDN). Ta aktualizacja umożliwia również zmianę kolejności sufiksów DNS w usłudze Intune.
 Pole [Ustawienia sieci VPN systemu Windows 10](vpn-settings-windows-10.md#dns-settings) zawiera aktualnie ustawienia systemu DNS.
-Dotyczy urządzeń z systemem Windows 10
+Dotyczy: Urządzenia z systemem Windows 10
 
 #### <a name="support-for-always-on-vpn-for-android-enterprise-work-profiles----1333705---"></a>Obsługa zawsze włączonej sieci VPN dla profilów roboczych systemu Android dla firm <!-- 1333705 -->
 Dzięki tej aktualizacji będziesz mieć możliwość używania zawsze włączonych połączeń sieci VPN na urządzeniach z systemem Android dla firm dzięki zarządzanym profilom służbowym. Zawsze włączone połączenia sieci VPN pozostają aktywne lub są natychmiast przywracane, gdy użytkownik odblokuje urządzenie, gdy urządzenie uruchomi się ponownie lub gdy zmieni się sieć bezprzewodowa. Połączenie można również przenieść do trybu „blokady”, który powoduje zablokowanie całego ruchu sieciowego do momentu uaktywnienia połączenia sieci VPN.
@@ -358,7 +369,7 @@ Ta aktualizacja obejmuje następujące ulepszenia profilu konfiguracji urządzen
 - Obecnie w jednym urządzeniu można utworzyć wiele profilów kiosku. Dzięki tej aktualizacji usługa Intune będzie obsługiwać tylko jeden profil kiosku na urządzenie. Jeśli nadal potrzebujesz wielu profilów kiosku w jednym urządzeniu, możesz użyć niestandardowego identyfikatora URI.
 - W profilu **Kiosk z wieloma aplikacjami** można wybrać rozmiar kafelka aplikacji oraz porządek **układu menu Start** w siatce aplikacji. Jeśli wolisz szersze możliwości dostosowywania, możesz kontynuować przekazywanie pliku XML.
 - Ustawienia przeglądarki kiosku są przenoszone do ustawień **kiosku**. Obecnie ustawienia **przeglądarki internetowej kiosku** mają własną kategorię w witrynie Azure Portal.
-Dotyczy: system Windows 10 lub nowszy
+Dotyczy: System Windows 10 lub nowszy
 
 
 
@@ -592,7 +603,7 @@ Zaktualizowana wersja zestawu Intune App SDK dla systemu Android jest dostępna 
 Podczas tworzenia nowych zasad systemu macOS (**Zgodność urządzeń** > **Zasady** > **Tworzenie zasad**  >  **Platforma: macOS** > **Zabezpieczenia systemu**) dostępne są nowe ustawienia **Zapory**: 
 
 - **Zapora**: skonfiguruj obsługę połączeń przychodzących w danym środowisku.
-- **Połączenia przychodzące**: **blokuj** wszystkie połączenia przychodzące poza wymaganymi dla podstawowych usług internetowych, np. DHCP, Bonjour i IPSec. To ustawienie blokuje również wszystkie usługi udostępniania.
+- **Połączenia przychodzące**: wybierz pozycję **Blokuj**, aby blokować wszystkie połączenia przychodzące poza wymaganymi dla podstawowych usług internetowych, np. DHCP, Bonjour i IPSec. To ustawienie blokuje również wszystkie usługi udostępniania.
 - **Tryb niewidzialności**: **włącz** tryb niewidzialności, aby zapobiegać odpowiadaniu przez komputer na żądania sondowania. Urządzenie nadal odpowiada na przychodzące żądania w przypadku autoryzowanych aplikacji.
 
 Dotyczy: macOS 10.12 i nowsze
@@ -721,11 +732,11 @@ W obszarze **Zgodność urządzenia** > **Zasady** > wybierz zasady > **Przeglą
 - Nie dotyczy. Wyświetlany jest również obraz, który informuje o liczbie urządzeń innych platform. Na przykład jeśli przeglądasz profil systemu iOS, nowy kafelek pokazuje liczbę urządzeń z systemem innym niż iOS, które także są przypisane do tego profilu. Zobacz [Zasady zgodności urządzeń](compliance-policy-monitor.md#view-status-of-device-policies).
 
 #### <a name="device-compliance-supports-3rd-party-anti-virus-solutions----2325484---"></a>Zasady zgodności urządzeń obsługują rozwiązania antywirusowe innych firm <!-- 2325484 -->
-Podczas tworzenia nowych zasad zgodności urządzeń (**Zgodność urządzeń** > **Zasady** > **Tworzenie zasad** > **Platforma: Windows 10 lub nowszy** > **Ustawienia** > **Zabezpieczenia systemu**) są dostępne nowe opcje **[zabezpieczeń urządzeń](compliance-policy-create-windows.md#windows-10-and-later-policy-settings)**: 
+W przypadku tworzenia zasad zgodności urządzenia (**Zgodność urządzenia** > **Zasady** > **Utwórz zasady** > **Platforma: Windows 10 i nowsze** > **Ustawienia** > **Zabezpieczenia systemu**) istnieją nowe opcje w obszarze **[Zasady zabezpieczeń urządzeń](compliance-policy-create-windows.md#windows-10-and-later-policy-settings)**: 
 - **Oprogramowanie antywirusowe**: w przypadku wybrania ustawienia **Wymagaj** możesz sprawdzić zgodność przy użyciu rozwiązań antywirusowych zarejestrowanych w Centrum zabezpieczeń systemu Windows, na przykład rozwiązań firmy Symantec i usługi Windows Defender. 
 - **Program antyszpiegowski**: w przypadku wybrania ustawienia **Wymagaj** możesz sprawdzić zgodność przy użyciu rozwiązań antyszpiegowskich zarejestrowanych w Centrum zabezpieczeń systemu Windows, na przykład rozwiązań firmy Symantec i usługi Windows Defender. 
 
-Dotyczy: system Windows 10 lub nowszy 
+Dotyczy: System Windows 10 lub nowszy 
 
 ### <a name="device-enrollment"></a>Rejestrowanie urządzeń
 
@@ -830,7 +841,7 @@ Profile wdrażania rozwiązania AutoPilot można przypisywać do grup usługi Az
 #### <a name="set-compliance-by-device-location----851881----"></a>Ustawianie zgodności według lokalizacji urządzenia <!-- 851881 ! -->
 W niektórych sytuacjach możesz ograniczyć dostęp do zasobów firmy do określonej lokalizacji zdefiniowanej przez połączenie sieciowe. Możesz teraz tworzyć zasady zgodności (**Zgodność urządzenia** > **Lokalizacje**) na podstawie adresu IP urządzenia. Jeśli urządzenie zostanie przeniesione poza zakres adresów IP, nie będzie miało dostępu do zasobów firmy.
 
-Dotyczy: urządzeń z systemem Android 6.0 lub nowszym ze zaktualizowaną aplikacją Portal firmy
+Dotyczy: Urządzenia z systemem Android 6.0 lub nowszym ze zaktualizowaną aplikacją Portal firmy
 
 #### <a name="prevent-consumer-apps-and-experiences-on-windows-10-enterprise-rs4-autopilot-devices---1621980---"></a>Blokowanie aplikacji i środowisk konsumenckich na urządzeniach z rozwiązaniem AutoPilot w systemie Windows 10 Enterprise RS4<!-- 1621980 -->
 Będzie można zablokować instalację aplikacji i środowisk konsumenckich na urządzeniach z systemem Windows 10 Enterprise RS4 i rozwiązaniem AutoPilot. Aby wyświetlić tę funkcję, przejdź do pozycji **Intune** > **Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **Platforma** = **System Windows 10 lub nowszy** > **Typ profilu** = **Ograniczenia dotyczące urządzeń** > **Konfigurowanie** > **W centrum uwagi Windows** > **Funkcje dla konsumentów**. 
@@ -844,7 +855,7 @@ Możesz teraz wyszukiwać numery IMEI i numery seryjne w bloku Wszystkie urządz
 #### <a name="management-name-field-will-be-editable----1875989---"></a>Będzie można edytować pole Nazwa zarządzania <!-- 1875989 -->
 Możesz teraz edytować pole Nazwa zarządzania w bloku **Właściwości** urządzenia. Aby edytować to pole, wybierz pozycję **Urządzenia** > **Wszystkie urządzenia** > wybierz urządzenie > **Właściwości**. Pola nazwy zarządzania można używać do unikatowego identyfikowania urządzenia.
 
-#### <a name="new-all-devices-filter-device-category----1878520---"></a>Nowy filtr listy Wszystkie urządzenia: Kategoria urządzeń <!-- 1878520 -->
+#### <a name="new-all-devices-filter-device-category----1878520---"></a>Nowy filtr Wszystkie urządzenia: Kategoria urządzenia <!-- 1878520 -->
 Obecnie można filtrować listę **Wszystkie urządzenia** według kategorii urządzeń. Aby to zrobić, wybierz pozycję **Urządzenia** > **Wszystkie urządzenia** > **Filtr** > **Kategoria urządzeń**.
 
 #### <a name="use-teamviewer-to-screen-share-ios-and-macos-devices----1985547---"></a>Używanie programu TeamViewer do udostępniania ekranów urządzeń z systemami iOS i MacOS<!-- 1985547 -->
@@ -959,15 +970,15 @@ Dzięki tej aktualizacji funkcja [Windows Defender Credential Guard](https://doc
 
 Następujące technologie zależne są włączane automatycznie podczas konfigurowania funkcji Credential Guard: 
 
-  - **Włącz zabezpieczenia oparte na wirtualizacji (VBS)**: włącza zabezpieczenia oparte na wirtualizacji (VBS) podczas następnego ponownego uruchomienia. Zabezpieczenia oparte na wirtualizacji używają funkcji hypervisor systemu Windows, aby zapewniać obsługę usług zabezpieczeń, i wymagają bezpiecznego rozruchu.
-  - **Bezpieczny rozruch z bezpośrednim dostępem do pamięci (DMA)**: włącza zabezpieczenia VBS z funkcją bezpiecznego rozruchu i bezpośrednim dostępem do pamięci. Ochrona DMA wymaga obsługi sprzętowej i można ją włączyć tylko na prawidłowo skonfigurowanych urządzeniach. 
+  - **Zabezpieczenia oparte na wirtualizacji (VBS)**: włącza funkcję VBS podczas następnego rozruchu. Zabezpieczenia oparte na wirtualizacji używają funkcji hypervisor systemu Windows, aby zapewniać obsługę usług zabezpieczeń, i wymagają bezpiecznego rozruchu.
+  - **Bezpieczny rozruch przy użyciu bezpośredniego dostępu do pamięci (DMA)**: włącza funkcję VBS z opcją bezpiecznego rozruchu i bezpośrednim dostępem do pamięci. Ochrona DMA wymaga obsługi sprzętowej i można ją włączyć tylko na prawidłowo skonfigurowanych urządzeniach. 
 
 #### <a name="use-a-custom-subject-name-on-scep-certificate----2064190---"></a>Użycie niestandardowej nazwy podmiotu w certyfikacie SCEP <!-- 2064190 -->
 Istnieje możliwość użycia nazwy pospolitej **OnPremisesSamAccountName** w niestandardowej nazwie podmiotu dla profilu certyfikatu SCEP. Na przykład możesz użyć nazwy `CN={OnPremisesSamAccountName})`.
 
 ####  <a name="block-camera-and-screen-captures-on-android-enterprise-work-profiles----1098977---"></a>Blokowanie aparatu i przechwytywania ekranu w profilach służbowych Android Enterprise <!-- 1098977 -->
 Podczas konfigurowania ograniczeń urządzenia z systemem Android można zablokować dwie nowe właściwości: 
-- Aparat: blokuje dostęp do wszystkich aparatów w urządzeniu
+- Aparat fotograficzny: blokuje dostęp do wszystkich aparatów w urządzeniu
 - Przechwytywanie ekranu: blokuje przechwytywanie ekranu i wyświetlanie zawartości na urządzeniach wyświetlających, które nie mają zabezpieczonego wyjścia wideo
 
 Dotyczy profilów służbowych Android Enterprise.
@@ -1042,7 +1053,7 @@ Aplikacja Portal firmy usługi Intune dla systemu Windows 10 została zaktualizo
 
 #### <a name="use-cisco-anyconnect-client-for-ios----1333708---"></a>Korzystanie z klienta Cisco AnyConnect dla systemu iOS <!-- 1333708 -->
 
-W przypadku tworzenia nowego profilu sieci VPN dla systemu iOS są teraz dostępne dwie opcje: **Cisco AnyConnect** i **Cisco Legacy AnyConnect**. Profile Cisco AnyConnect obsługują wersję 4.0.7x i nowsze. Istniejące profile sieci VPN oprogramowania Cisco AnyConnect dla systemu iOS zostaną oznaczone etykietą **Cisco Legacy AnyConnect** i będą nadal działały z oprogramowaniem AnyConnect 4.0.5x oraz jego starszymi wersjami, jak ma to miejsce obecnie.
+W przypadku tworzenia nowego profilu sieci VPN dla systemu iOS masz teraz dwie opcje: **Cisco AnyConnect** i **Cisco Legacy AnyConnect**. Profile Cisco AnyConnect obsługują wersję 4.0.7x i nowsze. Istniejące profile sieci VPN oprogramowania Cisco AnyConnect dla systemu iOS zostaną oznaczone etykietą **Cisco Legacy AnyConnect** i będą nadal działały z oprogramowaniem AnyConnect 4.0.5x oraz jego starszymi wersjami, jak ma to miejsce obecnie.
 
 > [!NOTE]
 > Ta zmiana dotyczy tylko systemu iOS. W przypadku platform systemów Android i macOS oraz profilu służbowego Android Enterprise nadal będzie dostępna tylko jedna opcja oprogramowania Cisco AnyConnect.
@@ -1118,7 +1129,7 @@ Jeśli masz skonfigurowany łącznik typu „usługa z usługą” i masz urząd
 
 
 
-### <a name="plan-for-change-performance-updates-to-intune-for-education---1750215--"></a>Planowanie pod kątem zmian: aktualizacje zwiększające wydajność dla usługi Intune for Education <!--1750215-->
+### <a name="plan-for-change-performance-updates-to-intune-for-education---1750215--"></a>Planowanie zmian: aktualizacje zwiększające wydajność dla usługi Intune for Education <!--1750215-->
 Dodajemy kilka aktualizacji do usługi Intune for Education w celu zwiększenia szybkości i niezawodności podczas przypisywania ustawień do użytkowników lub urządzeń. W ramach tej zmiany pod koniec listopada przeniesiemy Twoje przypisania zasad lub ustawień do nowych grup.
 
 #### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
@@ -1133,7 +1144,7 @@ Nie musisz nic robić w związku z przenoszeniem przez nas Twoich przypisań zas
 Jeśli obecnie przypisujesz zasady do grup usługi Azure AD wymienionych powyżej w usłudze Intune na platformie Azure, zamiast tego zacznij przypisywać je do grup „Wszyscy użytkownicy” i „Wszystkie urządzenia” w konsoli usługi Intune for Education. Gdy zobaczysz w konsoli grupy usługi Azure AD określone w ich nazwach jako przestarzałe, przestań przypisywać zasady w usłudze Azure AD. Jeśli obecnie nie używasz tych grup ze zmienionymi nazwami do żadnych celów, najlepiej je usuń.
 
 
-### <a name="plan-for-change-intune-will-move-to-support-macos-1012-and-higher-in-december---2970975--"></a>Planowanie zmian: w grudniu usługa Intune przejdzie na obsługę systemu macOS w wersji 10.12 i nowszych <!--2970975--> 
+### <a name="plan-for-change-intune-will-move-to-support-macos-1012-and-higher-in-december---2970975--"></a>Planowanie zmian: W grudniu usługa Intune przejdzie na obsługę systemu macOS 10.12 i nowszych wersji <!--2970975--> 
 
 Firma Apple właśnie wydała system macOS 10.14. W grudniu 2018 r. usługa Intune przejdzie na obsługę systemu macOS 10.12 i nowszych wersji. 
 
@@ -1161,7 +1172,9 @@ Od grudnia użytkownicy końcowi, którzy mają urządzenia inne niż te wymieni
 Aby uzyskać więcej informacji, zobacz [Rejestrowanie urządzenia z systemem macOS w usłudze Intune przy użyciu aplikacji Portal firmy](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos-cp).
  
 
-### <a name="plan-for-change-new-intune-support-experience-for-premier-customers"></a>Planowana zmiana: nowe środowisko pomocy technicznej usługi Intune dla klientów wersji Premier 
+### <a name="plan-for-change-new-intune-support-experience-for-premier-customers"></a>Planowanie zmian: nowe środowisko pomocy technicznej usługi Intune dla klientów wersji Premier 
+Aktualizacja z 04/12/2018: Próbujemy ulepszyć ten proces, dlatego tworzenie żądań pomocy technicznej w usłudze MPO zostanie wyłączone później niż 3 grudnia. Będziemy Cię informować za pośrednictwem Centrum wiadomości i wkrótce zaktualizujemy ten wpis, aby udostępnić osie czasu tej zmiany.
+
 Jako klient korzystający z pomocy technicznej Microsoft Premier możesz obecnie używać portalu Microsoft Premier Online (MPO) (premier.microsoft.com) oraz usługi Intune na platformie Azure (portal.azure.com) do tworzenia żądań pomocy technicznej dla usługi Intune. Od 3 grudnia 2018 r. żądania pomocy technicznej będzie można tworzyć tylko w usłudze Intune na platformie Azure, ponieważ kontynuujemy rozbudowę środowiska pomocy technicznej Premier.
 
 #### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
@@ -1194,7 +1207,7 @@ https://aka.ms/PasswordSettings
 ### <a name="apple-to-require-updates-for-application-transport-security---748318--"></a>Firma Apple będzie wymagać aktualizacji mechanizmu Application Transport Security <!--748318-->
 Firma Apple ogłosiła, że będzie egzekwować pewne wymagania dotyczące mechanizmu Application Transport Security (ATS). Mechanizm ATS służy do wymuszania mocniejszych zabezpieczeń całej komunikacji aplikacji za pośrednictwem protokołu HTTPS. Ta zmiana wpływa na klientów usługi Intune korzystających z aplikacji Portalu firmy w systemie iOS. W naszym [blogu pomocy technicznej usługi Intune](https://aka.ms/compportalats) będziemy umieszczać szczegółowe informacje.
 
-### <a name="plan-for-change-intune-moving-to-tls-12"></a>Planowanie zmian: usługa Intune przechodzi na protokół TLS 1.2
+### <a name="plan-for-change-intune-moving-to-tls-12"></a>Planowanie zmian: usługa Intune przechodzi do protokołu TLS 1.2
 Poczynając od 31 października 2018 r., usługa Intune będzie obsługiwać protokół TLS (Transport Layer Security) w wersji 1.2, aby zapewnić najlepsze w swojej klasie szyfrowanie, zagwarantować, że nasza usługa będzie domyślnie bezpieczniejsza, oraz dopasować ją do innych usług firmy Microsoft, takich jak Microsoft Office 365. Usługa Office poinformowała o tej zmianie w komunikacie MC128929.
 
 Aplikacja Portal firmy również przejdzie na obsługę protokołu TLS 1.2 od 31 października 2018 r.
@@ -1207,7 +1220,7 @@ Jeśli po 31 października 2018 r. wystąpi problem związany z używaniem stars
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Co należy zrobić, aby przygotować się do tej zmiany?
 Zalecamy aktywne usunięcie zależności protokołu TLS 1.0 i 1.1 w swoich środowiskach oraz wyłączenie protokołu TLS 1.0 i 1.1 na poziomie systemu operacyjnego, jeśli to możliwe. Już dziś zacznij planowanie migracji do protokołu TLS 1.2. Sprawdź wpis w blogu na temat obsługi technicznej poniżej, gdzie znajduje się lista urządzeń, które dziś nie są obsługiwane przez usługę Intune, ale mogą nadal otrzymywać zasady, i które nie będą mogły nawiązać połączenia przy użyciu protokołu TLS w wersji 1.2. Może być konieczne powiadomienie tych użytkowników końcowych, że utracą oni dostęp do zasobów firmy.
 
-**Dodatkowe informacje**: [Intune moving to TLS 1.2 for encryption (Przechodzenie do protokołu TLS 1.2 z powodu szyfrowania)](https://blogs.technet.microsoft.com/intunesupport/2018/06/05/intune-moving-to-tls-1-2-for-encryption/)
+**Dodatkowe informacje**: [Intune moving to TLS 1.2 for encryption (Przenoszenie usługi Intune do protokołu TLS 1.2 z powodu szyfrowania)](https://blogs.technet.microsoft.com/intunesupport/2018/06/05/intune-moving-to-tls-1-2-for-encryption/)
 
 
 

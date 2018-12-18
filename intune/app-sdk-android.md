@@ -5,7 +5,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/03/2018
+ms.date: 12/09/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: c556bab6deadc0db0ea625ee3c26bba636ea497d
-ms.sourcegitcommit: b93db06ba435555f5b126f97890931484372fcfb
+ms.openlocfilehash: c073040275f63b4623ea28a25ad0940dea563b75
+ms.sourcegitcommit: 67666682935c44ff6ad003c0da220a79cc42c9c3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52829185"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168032"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android
 
@@ -35,14 +35,14 @@ Dzięki zestawowi SDK aplikacji usługi Microsoft Intune dla systemu Android mo�
 Zestaw SDK aplikacji usługi Intune obejmuje następujące pliki:
 
 * **Microsoft.Intune.MAM.SDK.aar**: składniki zestawu SDK z wyjątkiem plików JAR biblioteki obsługi.
-* **Microsoft.Intune.MAM.SDK.Support.v4.jar**: klasy niezbędne do obsługi funkcji MAM w aplikacjach korzystających z biblioteki obsługi systemu Android w wersji 4.
-* **Microsoft.Intune.MAM.SDK.Support.v7.jar**: klasy niezbędne do obsługi funkcji MAM w aplikacjach korzystających z biblioteki obsługi systemu Android w wersji 7.
-* **Microsoft.Intune.MAM.SDK.Support.v17.jar**: klasy niezbędne do obsługi funkcji MAM w aplikacjach korzystających z biblioteki obsługi systemu Android w wersji 17. 
+* **Microsoft.Intune.MAM.SDK.Supplubt.v4.jar**: klasy niezbędne do włączenia funkcji MAM w aplikacjach korzystających z biblioteki obsługi systemu Android w wersji 4.
+* **Microsoft.Intune.MAM.SDK.Supplubt.v7.jar**: klasy niezbędne do włączenia funkcji MAM w aplikacjach korzystających z biblioteki obsługi systemu Android w wersji 7.
+* **Microsoft.Intune.MAM.SDK.Support.v17.jar**: klasy niezbędne do włączenia funkcji MAM w aplikacjach korzystających z biblioteki obsługi systemu Android w wersji 17. 
 * **Microsoft.Intune.MAM.SDK.Support.Text.jar**: klasy niezbędne do obsługi funkcji MAM w aplikacjach korzystających z klas biblioteki obsługi systemu Android w pakiecie `android.support.text`.
 * **Microsoft.Intune.MDM.SDK.DownlevelStubs.jar**: ten plik jar zawiera klasy zastępcze dla klas systemowych systemu Android, które istnieją wyłącznie w nowszych urządzeniach, ale są przywoływane przez metody w MAMActivity. Nowsze urządzenia będą ignorować te klasy zastępcze. Ten plik jar jest niezbędny tylko wtedy, gdy aplikacja wykonuje odbicie wobec klas pochodzących z MAMActivity. Większość aplikacji nie musi go uwzględniać. Jeśli używasz tego pliku jar, musisz pamiętać o wykluczeniu wszystkich jego klas z narzędzia ProGuard. Znajdują się one wszystkie w obszarze pakietu głównego „android”
 * **com.microsoft.intune.mam.build.jar**: wtyczka programu Gradle, która [pomaga w integracji zestawu SDK](#build-tooling).
 * **CHANGELOG.txt**: zawiera rejestr zmian wprowadzonych w każdej z wersji zestawu SDK.
-* **THIRDPARTYNOTICES.TXT**: informacje o uznaniu autorstwa dotyczące kodu innych firm lub typu „open source”, który zostanie skompilowany w ramach aplikacji.
+* **THIRDPARTYNOTICES.TXT**:  informacje o uznaniu autorstwa dla kodu innych firm lub typu „open source”, który zostanie skompilowany w ramach aplikacji.
 
 ## <a name="requirements"></a>Wymagania
 
@@ -844,7 +844,7 @@ mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBeha
 * Obsługa suwerennych chmur wymaga określenia urzędu.
 #### <a name="registration"></a>Rejestracja
 
-* Dla wygody użytkownika metody rejestracji są idempotentne. Na przykład metoda `registerAccountForMAM()` umożliwia zarejestrowanie konta i podjęcie próby rejestracji aplikacji tylko wówczas, gdy konto nie jest jeszcze zarejestrowane, a metoda `unregisterAccountForMAM()` powoduje wyrejestrowanie konta tylko, jeśli jest ono aktualnie zarejestrowane. Kolejne wywołania nie skutkują wykonaniem żadnych operacji, więc wielokrotne wywoływanie tych metod nie przynosi żadnych szkód. Ponadto nie ma gwarancji, że po każdym wywołaniu metody zostanie przesłane powiadomienie o wynikach. Oznacza to, że jeśli metoda `registerAccountForMAM` zostanie wywołana dla tożsamości, która jest już zarejestrowana, powiadomienie może nie zostać ponownie wysłane dla tej tożsamości. Istnieje możliwość, że będą wysyłane powiadomienia, które nie odpowiadają żadnym wywołaniom tych metod, ponieważ zestaw SDK może okresowo podejmować próby rejestracji w tle, a wyrejestrowania mogą być powodowane przez żądania wyczyszczenia danych odbierane z usługi Intune.
+* Dla wygody użytkownika metody rejestracji są idempotentne. Na przykład metoda `registerAccountForMAM()` umożliwia zarejestrowanie konta i podjęcie próby rejestracji aplikacji tylko wówczas, gdy konto nie jest jeszcze zarejestrowane, a metoda `unregisterAccountForMAM()` powoduje wyrejestrowanie konta tylko, jeśli jest ono aktualnie zarejestrowane. Kolejne wywołania nie skutkują wykonaniem żadnych operacji, więc wielokrotne wywoływanie tych metod nie przynosi żadnych szkód. Ponadto komunikacja między wywołaniami tych metod i powiadomienia o wynikach nie są gwarantowane: Oznacza to, że jeśli metoda `registerAccountForMAM` jest wywoływana dla już zarejestrowanej tożsamości, powiadomienie może nie zostać ponownie wysłane dla tej tożsamości. Istnieje możliwość, że będą wysyłane powiadomienia, które nie odpowiadają żadnym wywołaniom tych metod, ponieważ zestaw SDK może okresowo podejmować próby rejestracji w tle, a wyrejestrowania mogą być powodowane przez żądania wyczyszczenia danych odbierane z usługi Intune.
 
 * Metody rejestracji można wywoływać dla dowolnej liczby różnych tożsamości, lecz obecnie możliwe jest pomyślne zarejestrowanie tylko jednego konta użytkownika. Jeśli wiele kont użytkowników, które są licencjonowane na potrzeby usługi Intune i podlegają zasadom ochrony aplikacji, zostało zarejestrowanych w tym samym lub zbliżonym czasie, nie ma żadnej gwarancji co do tego, które z nich zostanie zarejestrowane pomyślnie.
 
@@ -1114,7 +1114,7 @@ Oprócz możliwości ustawiania tożsamości przez aplikację tożsamość wątk
 
   Ponadto interakcja użytkownika z działaniem może spowodować niejawne przełączenie tożsamości.
 
-  **Przykład:** naciśnięcie przez użytkownika przycisku anulowania w monicie o uwierzytelnienie podczas operacji `Resume`, spowoduje niejawne przełączenie do pustej tożsamości.
+  **Przykład:** naciśnięcie przez użytkownika przycisku anulowania w monicie o uwierzytelnienie podczas operacji `Resume` spowoduje niejawne przełączenie do pustej tożsamości.
 
   Aplikacja ma możliwość otrzymania powiadomienia o tych zmianach i może ich zabronić, jeśli będzie to konieczne. Klasy `MAMService` i `MAMContentProvider` prezentują następującą metodę, którą mogą zastąpić podklasy:
 
@@ -1616,9 +1616,8 @@ Te instrukcje dotyczą wszystkich deweloperów aplikacji Android i Xamarin, któ
 4. Włącz wymagane zasady zarządzania aplikacjami mobilnymi przez umieszczenie w manifeście następującej wartości: ```xml <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />```
    > [!NOTE] 
    > Wymusi to na użytkowniku pobranie aplikacji Portal firmy na urządzenie i ukończenie przepływu rejestracji domyślnej przed użyciem.
-
-> [!NOTE]
-    > Musi to być jedyna integracja z usługą MAM-WE w aplikacji. Wszelkie inne próby wywołania interfejsów API MAMEnrollmentManager spowodują konflikty.
+   >
+   > Musi to być jedyna integracja z usługą MAM-WE w aplikacji. Wszelkie inne próby wywołania interfejsów API MAMEnrollmentManager spowodują konflikty.
 
 3. Włącz wymagane zasady zarządzania aplikacjami mobilnymi przez umieszczenie w manifeście następującej wartości:
 ```xml
