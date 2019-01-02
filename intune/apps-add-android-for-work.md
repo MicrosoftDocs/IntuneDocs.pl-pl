@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/04/2018
+ms.date: 12/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: c7d5d29df0f91a4cff1060cd10a5d2355e196e39
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 5495addba30e8a958d2a49f2c04ee5af70d62712
+ms.sourcegitcommit: a0db74934433226e28ffdf5d92930dafd2feceae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180144"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305934"
 ---
 # <a name="assign-apps-to-android-work-profile-devices-with-intune"></a>Przypisywanie aplikacji do urządzeń z profilem służbowym systemu Android za pomocą usługi Intune
 
@@ -56,7 +56,7 @@ Upewnij się, że w obciążeniu **Rejestrowanie urządzenia** w witrynie Azure 
 
     ![Opcje obsługi nowych żądań dotyczących uprawnień aplikacji](media/approve-app-settings.png)
 
-    Aplikacja została zatwierdzona i jest wyświetlana w konsoli administratora IT. Następnie możesz [zsynchronizować aplikację profilu służbowego systemu Android z usługą Intune](apps-add-android-for-work.md#sync-an-android-for-work-app-with-intune). 
+    Aplikacja została zatwierdzona i jest wyświetlana w konsoli administratora IT. Następnie możesz [zsynchronizować aplikację profilu służbowego systemu Android z usługą Intune](apps-add-android-for-work.md#sync-a-managed-google-play-app-with-intune). 
 
 ## <a name="sync-a-managed-google-play-app-with-intune"></a>Synchronizowanie aplikacji z zarządzanego sklepu Google Play z usługą Intune
 
@@ -84,7 +84,7 @@ Jeśli deweloper aplikacji zaktualizuje uprawnienia wraz z nową wersją aplikac
 
 Należy okresowo odwiedzać zarządzaną konsolę Google Play w celu upewnienia się, czy aplikacja nie wymaga nowych uprawnień. Sklep Google Play można skonfigurować tak, aby w sytuacji, gdy dla zatwierdzonej aplikacji wymagane będą nowe uprawnienia, była wysyłana wiadomość e-mail na określone adresy. Jeśli po przypisaniu aplikacji okaże się, że nie zainstalowano jej na urządzeniach, sprawdź, czy aplikacja nie wymaga nowych uprawnień, wykonując następujące kroki:
 
-1. Przejdź do sklepu [Google Play](http://play.google.com/work).
+1. Przejdź do sklepu [Google Play](https://play.google.com/work).
 2. Zaloguj się przy użyciu konta Google używanego do publikowania i zatwierdzania aplikacji.
 3. Wybierz kartę **Aktualizacje** i sprawdź, czy którekolwiek aplikacje wymagają aktualizacji.  
     Wszystkie wyświetlone aplikacje wymagają nowych uprawnień i nie zostaną przypisane do czasu ich zastosowania.
