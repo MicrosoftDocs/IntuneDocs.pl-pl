@@ -14,12 +14,12 @@ ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 44923d89647118268c7a55746599354ac88fbfd2
-ms.sourcegitcommit: d3b1e3fffd3e0229292768c7ef634be71e4736ae
+ms.openlocfilehash: 12d050bb7ef959b940e2b758284863319282f179
+ms.sourcegitcommit: 58ac1051faeb33dd29e59049d901761707486350
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52861017"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53553660"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Usuwanie urządzeń przy użyciu czyszczenia, wycofywania lub ręcznego wyrejestrowywania urządzenia
 
@@ -81,7 +81,7 @@ W poniższych tabelach opisano usuwane dane oraz wpływ akcji **Wycofaj** na dan
 
 |Typ danych|iOS|
 |-------------|-------|
-|Aplikacje firmowe i skojarzone dane zainstalowane za pomocą usługi Intune|**Aplikacje zainstalowane przy użyciu Portalu firmy:** Wszystkie dane aplikacji i aplikacje są usuwane. Te aplikacje to aplikacje zainstalowane pierwotnie ze sklepu App Store i zarządzane później jako aplikacje firmowe. <br /><br /> **Aplikacje firmy Microsoft używające funkcji zarządzania aplikacjami mobilnymi i zainstalowane ze sklepu App Store:** Dane aplikacji prywatnych są usuwane. Dane aplikacji firmowych i aplikacje nie są usuwane.|
+|Aplikacje firmowe i skojarzone dane zainstalowane za pomocą usługi Intune|**Aplikacje zainstalowane przy użyciu Portalu firmy:** Wszystkie dane aplikacji i aplikacje są usuwane. Te aplikacje to aplikacje zainstalowane pierwotnie ze sklepu App Store i zarządzane później jako aplikacje firmowe. <br /><br /> **Aplikacje firmy Microsoft używające funkcji zarządzania aplikacjami mobilnymi i zainstalowane ze sklepu App Store:** Dane aplikacji firmowych zostaną usunięte. Dane aplikacji osobistych i aplikacje nie są usuwane.|
 |Ustawienia|Konfiguracje, które były ustawione przez zasady usługi Intune, nie są już wymuszane. Użytkownicy mogą zmieniać ustawienia.|
 |Ustawienia profili sieci Wi-Fi i sieci VPN|Usuwane.|
 |Ustawienia profili certyfikatów|Certyfikaty zostaną usunięte i odwołane.|

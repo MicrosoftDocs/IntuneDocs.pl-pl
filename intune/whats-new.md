@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/30/2018
+ms.date: 12/10/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 06031b8085e50caa2092287c97b3eab0ead366ee
-ms.sourcegitcommit: 5e4c7da8ce62d5a5720316ef4068c1920f8f5b67
+ms.openlocfilehash: 3f0283b07c4efd03800f21aadba2cc53beffec68
+ms.sourcegitcommit: 58ac1051faeb33dd29e59049d901761707486350
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53200610"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53553694"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co nowego w usłudze Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -45,7 +45,16 @@ Dowiedz się co tydzień, co nowego w usłudze Microsoft Intune. Możesz równie
 
 ## <a name="week-of-december-10-2018"></a>Tydzień 10 grudnia 2018 r.
 
-### <a name="microsoft-auto-update-version-450-required-for-macos-devices----3503442---"></a>Funkcja Microsoft Auto Update w wersji 4.50 wymagana dla urządzeń z systemem macOS <!-- 3503442 -->
+### <a name="app-management"></a>Zarządzanie aplikacjami
+
+#### <a name="updates-for-application-transport-security----748318---"></a>Aktualizacje mechanizmu Application Transport Security <!-- 748318 -->
+
+Usługa Microsoft Intune obsługuje protokół TLS (Transport Layer Security) 1.2+, aby zapewnić najlepsze w swojej klasie szyfrowanie i zagwarantować, że nasza usługa będzie domyślnie bezpieczniejsza, a także dopasować ją do innych usług firmy Microsoft, takich jak Microsoft Office 365. Aby spełnić to wymaganie, portale firmy dla systemu iOS i macOS będą wymuszać wymagania zaktualizowanego mechanizmu Application Transport Security (ATS) firmy Apple, które obejmują również protokół TLS 1.2+. Mechanizm ATS służy do wymuszania mocniejszych zabezpieczeń całej komunikacji aplikacji za pośrednictwem protokołu HTTPS. Ta zmiana dotyczy klientów usługi Intune korzystających z aplikacji Portal firmy dla systemu iOS i macOS. Aby uzyskać więcej informacji, zobacz [blog dotyczący pomocy technicznej usługi Intune](https://aka.ms/compportalats).
+
+#### <a name="the-intune-app-sdk-will-support-256-bit-encryption-keys----1832174---"></a>Zestaw SDK aplikacji usługi Intune będzie obsługiwać 256-bitowe klucze szyfrowania <!-- 1832174 -->
+Zestaw SDK aplikacji usługi Intune dla systemu Android korzysta z 256-bitowych kluczy szyfrowania po włączeniu szyfrowania przy użyciu zasad ochrony aplikacji. Zestaw SDK będzie nadal obsługiwać 128-bitowe klucze w celu zachowania zgodności z zawartością i aplikacjami, które używają starszych wersji zestawu SDK.
+
+### <a name="microsoft-auto-update-version-450-required-for-macos-devices----3503442---"></a>Funkcja Microsoft Auto Update w wersji 4.5.0 wymagana dla urządzeń z systemem macOS <!-- 3503442 -->
 Aby nadal otrzymywać aktualizacje aplikacji Portal firmy i innych aplikacjach pakietu Office, należy uaktualnić urządzenia z systemem macOS zarządzane przez usługę Intune do funkcji Microsoft Auto Update w wersji 4.5.0. Użytkownicy mogą już mieć tę wersję dla swoich aplikacji pakietu Office.
 
 ### <a name="intune-requires-macos-1012-or-later----2827778---"></a>Usługa Intune wymaga systemu macOS 10.12 lub nowszego <!-- 2827778 -->
@@ -103,6 +112,23 @@ Aby korzystać z tej funkcji, zapoznaj się z zasadami zgodności dla systemów 
 Optymalizacja dostarczania to nowy profil konfiguracji dla systemu Windows 10 i nowszych wersji. Ta funkcja oferuje bardziej usprawnione środowisko dostarczania aktualizacji oprogramowania do urządzeń w organizacji. Ta aktualizacja pomaga też dostarczać ustawienia w nowych i istniejących pierścieniach aktualizacji przy użyciu profilu konfiguracji.
 Aby skonfigurować profil konfiguracji optymalizacji dostarczania, zobacz [Windows 10 (and newer) delivery optimization settings](delivery-optimization-windows.md) (Ustawienia optymalizacji w systemie Windows 10 (i nowszych)).
 
+#### <a name="new-device-restriction-settings-added-to-ios-and-macos-devices----2827760---"></a>Nowe ustawienia ograniczeń urządzeń dodane do urządzeń z systemem iOS i macOS <!-- 2827760 -->
+Ta aktualizacja obejmuje nowe ustawienia dla urządzeń z systemem iOS i macOS, które zostały wydane z systemem iOS 12:
+
+**Ustawienia systemu iOS**: 
+- Ogólne: Blokuj usuwanie aplikacji (tylko tryb nadzorowany)
+- Ogólne: Blokuj tryb ograniczony USB (tylko tryb nadzorowany)
+- Ogólne: Wymuszaj automatyczne ustawianie daty i godziny (tylko tryb nadzorowany)
+- Hasło: Blokuj automatyczne wypełnianie haseł (tylko tryb nadzorowany)
+- Hasło: Blokuj zbliżeniowe żądania haseł (tylko tryb nadzorowany)
+- Hasło: Blokuj udostępnianie haseł (tylko tryb nadzorowany)
+
+**Ustawienia systemu macOS**: 
+- Hasło: Blokuj automatyczne wypełnianie haseł
+- Hasło: Blokuj zbliżeniowe żądania haseł
+- Hasło: Blokuj udostępnianie haseł
+
+Aby dowiedzieć się więcej o tych ustawieniach, zobacz ustawienia ograniczeń urządzeń z systemem [iOS](device-restrictions-ios.md) i [macOS](device-restrictions-macos.md).
 
 ### <a name="device-enrollment"></a>Rejestrowanie urządzeń
 
@@ -1143,35 +1169,6 @@ Nie musisz nic robić w związku z przenoszeniem przez nas Twoich przypisań zas
 
 Jeśli obecnie przypisujesz zasady do grup usługi Azure AD wymienionych powyżej w usłudze Intune na platformie Azure, zamiast tego zacznij przypisywać je do grup „Wszyscy użytkownicy” i „Wszystkie urządzenia” w konsoli usługi Intune for Education. Gdy zobaczysz w konsoli grupy usługi Azure AD określone w ich nazwach jako przestarzałe, przestań przypisywać zasady w usłudze Azure AD. Jeśli obecnie nie używasz tych grup ze zmienionymi nazwami do żadnych celów, najlepiej je usuń.
 
-
-### <a name="plan-for-change-intune-will-move-to-support-macos-1012-and-higher-in-december---2970975--"></a>Planowanie zmian: W grudniu usługa Intune przejdzie na obsługę systemu macOS 10.12 i nowszych wersji <!--2970975--> 
-
-Firma Apple właśnie wydała system macOS 10.14. W grudniu 2018 r. usługa Intune przejdzie na obsługę systemu macOS 10.12 i nowszych wersji. 
-
-#### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
-
-Począwszy od grudnia, użytkownicy końcowi na urządzeniach z systemem macOS 10.11 lub wcześniejszym nie będą mogli korzystać z Portalu firmy w celu rejestracji w usłudze Intune. Będą musieli uaktualnić swoje urządzenia do systemu macOS 10.12 lub nowszego i uaktualnić aplikację Portal firmy do najnowszej wersji, aby nadal otrzymywać pomoc techniczną oraz nowe funkcje. 
-
-System macOS 10.12 i jego nowsze wersje są obecnie obsługiwane na następujących urządzeniach: 
-- MacBook (koniec 2009 roku i nowsze) 
-- iMac (koniec 2009 roku i nowsze)
-- MacBook Air (koniec 2010 roku i nowsze)  
-- MacBook Pro (koniec 2010 roku i nowsze) 
-- Mac Mini (koniec 2010 roku i nowsze) 
-- Mac Pro (koniec 2010 roku i nowsze) 
-
-Od grudnia użytkownicy końcowi, którzy mają urządzenia inne niż te wymienione powyżej, nie będą mogli uzyskać dostępu do najnowszej wersji aplikacji Portal firmy dla systemu macOS. Istniejące zarejestrowane urządzenia z nieobsługiwanymi wersjami systemu macOS starszymi niż macOS 10.12 będą nadal zarządzane i wyświetlane w konsoli administracyjnej usługi Intune.
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Co należy zrobić, aby przygotować się do tej zmiany?
-
-- Poproś użytkowników końcowych, aby do grudnia 2018 r. uaktualnili swoje urządzenia do obsługiwanej wersji systemu operacyjnego. 
-- Sprawdź raporty usługi Intune w konsoli usługi Intune na platformie Azure, aby zobaczyć, na które urządzenia lub użytkowników może to mieć wpływ. Przejdź do pozycji Urządzenia > Wszystkie urządzenia i filtruj zawartość według systemu operacyjnego. Możesz dodać dodatkowe kolumny, które ułatwiają określenie, kto w organizacji ma urządzenia z systemem macOS 10.11. 
-- Jeśli korzystasz z hybrydowego zarządzania urządzeniami mobilnymi (MDM), przejdź do pozycji Zasoby i zgodność > Urządzenia w konsoli programu Configuration Manager, kliknij prawym przyciskiem myszy kolumny, aby dodać kolumny System operacyjny i Wersja klienta, a następnie sortuj według systemu operacyjnego. Należy pamiętać, że hybrydowe zarządzanie urządzeniami mobilnymi jest przestarzałe i należy przejść na usługę Intune na platformie Azure najszybciej, jak to możliwe. 
- 
-#### <a name="additional-information"></a>Dodatkowe informacje
-Aby uzyskać więcej informacji, zobacz [Rejestrowanie urządzenia z systemem macOS w usłudze Intune przy użyciu aplikacji Portal firmy](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos-cp).
- 
-
 ### <a name="plan-for-change-new-intune-support-experience-for-premier-customers"></a>Planowanie zmian: nowe środowisko pomocy technicznej usługi Intune dla klientów wersji Premier 
 Aktualizacja z 04/12/2018: Próbujemy ulepszyć ten proces, dlatego tworzenie żądań pomocy technicznej w usłudze MPO zostanie wyłączone później niż 3 grudnia. Będziemy Cię informować za pośrednictwem Centrum wiadomości i wkrótce zaktualizujemy ten wpis, aby udostępnić osie czasu tej zmiany.
 
@@ -1204,28 +1201,3 @@ Przejrzyj ustawienia dotyczące haseł w zasadach zgodności i ograniczeń urzą
 #### <a name="additional-information"></a>Dodatkowe informacje
 https://aka.ms/PasswordSettings 
 
-### <a name="apple-to-require-updates-for-application-transport-security---748318--"></a>Firma Apple będzie wymagać aktualizacji mechanizmu Application Transport Security <!--748318-->
-Firma Apple ogłosiła, że będzie egzekwować pewne wymagania dotyczące mechanizmu Application Transport Security (ATS). Mechanizm ATS służy do wymuszania mocniejszych zabezpieczeń całej komunikacji aplikacji za pośrednictwem protokołu HTTPS. Ta zmiana wpływa na klientów usługi Intune korzystających z aplikacji Portalu firmy w systemie iOS. W naszym [blogu pomocy technicznej usługi Intune](https://aka.ms/compportalats) będziemy umieszczać szczegółowe informacje.
-
-### <a name="plan-for-change-intune-moving-to-tls-12"></a>Planowanie zmian: usługa Intune przechodzi do protokołu TLS 1.2
-Poczynając od 31 października 2018 r., usługa Intune będzie obsługiwać protokół TLS (Transport Layer Security) w wersji 1.2, aby zapewnić najlepsze w swojej klasie szyfrowanie, zagwarantować, że nasza usługa będzie domyślnie bezpieczniejsza, oraz dopasować ją do innych usług firmy Microsoft, takich jak Microsoft Office 365. Usługa Office poinformowała o tej zmianie w komunikacie MC128929.
-
-Aplikacja Portal firmy również przejdzie na obsługę protokołu TLS 1.2 od 31 października 2018 r.
-
-#### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
-Od 31 października 2018 r. usługa Intune już nie będzie obsługiwać protokołu TLS w wersjach 1.0 i 1.1. Wszystkie kombinacje klient-serwer i serwer-przeglądarka powinny używać protokołu TLS w wersji 1.2, aby zapewnić bezproblemowe połączenia z usługą Intune. Należy pamiętać, że ta zmiana będzie miała wpływ na urządzenia użytkowników końcowych, które nie są już obsługiwane przez usługę Intune, ale nadal odbierają zasady za pomocą usługi Intune i nie mogą korzystać z protokołu TLS w wersji 1.2. Obejmuje to urządzenia, na których działa system Android 4.3 lub starszy. Aby uzyskać listę objętych urządzeń i przeglądarek, zobacz poniższe informacje dodatkowe.
-
-Jeśli po 31 października 2018 r. wystąpi problem związany z używaniem starszej wersji protokołu TLS, konieczna będzie aktualizacje do protokołu TLS 1.2 lub do urządzenia obsługującego protokół TLS 1.2 w ramach rozwiązania.
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Co należy zrobić, aby przygotować się do tej zmiany?
-Zalecamy aktywne usunięcie zależności protokołu TLS 1.0 i 1.1 w swoich środowiskach oraz wyłączenie protokołu TLS 1.0 i 1.1 na poziomie systemu operacyjnego, jeśli to możliwe. Już dziś zacznij planowanie migracji do protokołu TLS 1.2. Sprawdź wpis w blogu na temat obsługi technicznej poniżej, gdzie znajduje się lista urządzeń, które dziś nie są obsługiwane przez usługę Intune, ale mogą nadal otrzymywać zasady, i które nie będą mogły nawiązać połączenia przy użyciu protokołu TLS w wersji 1.2. Może być konieczne powiadomienie tych użytkowników końcowych, że utracą oni dostęp do zasobów firmy.
-
-**Dodatkowe informacje**: [Intune moving to TLS 1.2 for encryption (Przenoszenie usługi Intune do protokołu TLS 1.2 z powodu szyfrowania)](https://blogs.technet.microsoft.com/intunesupport/2018/06/05/intune-moving-to-tls-1-2-for-encryption/)
-
-
-
-## <a name="see-also"></a>Zobacz też
-* [Blog usługi Microsoft Intune](http://go.microsoft.com/fwlink/?LinkID=273882)
-* [Plan platformy w chmurze](https://www.microsoft.com/cloud-platform/roadmap)
-* [Co nowego w interfejsie użytkownika aplikacji Portal firmy](whats-new-app-ui.md)
-* [Nowości w poprzednich miesiącach](whats-new-archive.md)

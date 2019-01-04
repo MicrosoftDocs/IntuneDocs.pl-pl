@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/19/2018
+ms.date: 12/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: b4a45ac5a73d199ec883e3dda95a97a8f3c09d9a
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: fee473cd6cb6fa7e8a092ebd70192f2b7f8a8b84
+ms.sourcegitcommit: 279f923b1802445e501324a262d14e8bfdddabde
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181520"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53737937"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>Dołączanie i wykluczanie przypisań aplikacji w usłudze Microsoft Intune
 
@@ -50,7 +50,7 @@ Aby przypisać aplikację do grup za pomocą dołączania i wykluczania przypisa
 5. Wybierz aplikację, którą chcesz przypisać. Na pulpicie nawigacyjnym zostaną wyświetlone informacje o aplikacji. 
 6. W sekcji **Zarządzaj** menu wybierz pozycję **Przypisania**. 
 
-    ![Przypisania aplikacji usługi Intune](./media/apps-inc-exl-01.png)
+    ![Uwzględnianie przypisań aplikacji podczas przypisywania aplikacji](./media/apps-inc-exl-01.png)
 7. Wybierz pozycję **Dodaj grupę**, aby dodać grupy użytkowników, którzy są przypisani do aplikacji. 
 8. W okienku **Dodawanie grupy** wybierz **typ przypisania** spośród dostępnych typów przypisania.
 9. Jako typ przypisania wybierz pozycję **Dostępne z rejestracją lub bez niej**.

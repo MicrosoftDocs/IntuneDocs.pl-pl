@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 457b5b97bd13caddb5c60836940dd491eac752f8
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: bff4e2b3afe684fe12243fa0f410728eb16eeaba
+ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181891"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53325181"
 ---
 # <a name="monitor-app-information-and-assignments-with-microsoft-intune"></a>Monitorowanie informacji o aplikacji i przypisań z użyciem usługi Microsoft Intune
 
@@ -36,7 +36,7 @@ Usługa Intune oferuje kilka sposobów monitorowania właściwości zarządzanyc
 5. Na liście aplikacji wybierz aplikację do monitorowania. Zostanie wyświetlone okienko aplikacji, które zawiera przegląd stanu urządzenia i stanu użytkownika.
 
 > [!NOTE]
-> Aplikacje w sklepie dla systemu Android, które są wdrażane jako **dostępne**, nie zgłaszają swojego stanu instalacji.
+> Aplikacje systemu Android ze Sklepu wdrażane jako **Dostępne** oraz aplikacje LOB systemu Android wdrażane jako **Dostępne z rejestracją lub bez niej** nie zgłaszają stanu instalacji.
 
 ## <a name="app-overview-pane"></a>Okienko przeglądu aplikacji
 
