@@ -1,12 +1,12 @@
 ---
 title: Przypisywanie aplikacji do grup w usłudze Microsoft Intune
 titlesuffix: ''
-description: Dowiedz się, jak przypisać aplikację usługi Intune do grup użytkowników lub urządzeń.
+description: Dowiedz się, jak przypisać aplikację usługi Intune do grup użytkowników lub urządzeń za pomocą usługi Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/09/2018
+ms.date: 12/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a9afde942f2784cb2fb42b13d11a127e3c9811a1
-ms.sourcegitcommit: 3903f20cb5686532ccd8c36aa43c5150cee7cca2
+ms.openlocfilehash: bc31c793722f7073281c82da1fe4389fc214457b
+ms.sourcegitcommit: f114eeba1909c7d4e157003b1a9e2232dd1c99e3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52267258"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53734276"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Przypisywanie aplikacji do grup przy użyciu usługi Microsoft Intune
 
@@ -29,20 +29,22 @@ ms.locfileid: "52267258"
 
 Po [dodaniu aplikacji](apps-add.md) do usługi Microsoft Intune należy ją przypisać do użytkowników i urządzeń. Ważne jest, aby pamiętać, że aplikację można przypisać do urządzenia, bez względu na to, czy jest ono zarządzane przez usługę Intune. 
 
+> [!NOTE]
+> Dostępna intencja wdrożenia nie jest obsługiwane w przypadku grup urządzeń, obsługiwane są tylko grupy użytkowników.
+
 Poniższa tabela zawiera listę różnych opcji przypisywania aplikacji do użytkowników i urządzeń:
 
-||||
-|-|-|-|-|
-|&nbsp;|**Urządzenia zarejestrowane w usłudze Intune**|**Urządzenia niezarejestrowane w usłudze Intune**|
-|Przypisz do użytkowników|Tak|Tak|
-|Przypisz do urządzeń|Tak|Nie|
-|Przypisz opakowane aplikacje lub aplikacje zawierające zestaw Intune SDK (dla zasad ochrony aplikacji)|Tak|Tak|
-|Przypisz aplikacje jako dostępne|Tak|Tak|
-|Przypisz aplikacje jako wymagane|Tak|Nie|
-|Odinstaluj aplikacje|Tak|Nie|
-|Otrzymuj aktualizacje aplikacji z usługi Intune|Tak|Nie|
-|Użytkownicy końcowi instalują dostępne aplikacje z aplikacji Portal firmy|Tak|Nie|
-|Użytkownicy końcowi instalują dostępne aplikacje z internetowego Portalu firmy|Tak|Tak|
+|   | Urządzenia zarejestrowane w usłudze Intune | Urządzenia niezarejestrowane w usłudze Intune |
+|-------------------------------------------------------------------------------------------|------------------------------|----------------------------------|
+| Przypisz do użytkowników | Tak | Tak |
+| Przypisz do urządzeń | Tak | Nie |
+| Przypisz opakowane aplikacje lub aplikacje zawierające zestaw Intune SDK (dla zasad ochrony aplikacji) | Tak | Tak |
+| Przypisz aplikacje jako dostępne | Tak | Tak |
+| Przypisz aplikacje jako wymagane | Tak | Nie |
+| Odinstaluj aplikacje | Tak | Nie |
+| Otrzymuj aktualizacje aplikacji z usługi Intune | Tak | Nie |
+| Użytkownicy końcowi instalują dostępne aplikacje z aplikacji Portal firmy | Tak | Nie |
+| Użytkownicy końcowi instalują dostępne aplikacje z internetowego Portalu firmy | Tak | Tak |
 
 > [!NOTE]
 > Obecnie można przypisać aplikacje systemu iOS i Android (aplikacje biznesowe i zakupione w sklepie) do urządzeń, które nie zostały zarejestrowane w usłudze Intune.
@@ -60,14 +62,14 @@ Poniższa tabela zawiera listę różnych opcji przypisywania aplikacji do użyt
 7. Wybierz pozycję **Dodaj grupę**, aby otworzyć okienko **Dodawanie grupy** powiązane z aplikacją.
 8. Dla określonej aplikacji wybierz **typ przypisania**:
    - **Dostępne dla zarejestrowanych urządzeń**: przypisz aplikację do grupy użytkowników, którzy mogą zainstalować aplikację z witryny internetowej lub aplikacji Portal firmy.
-   - **Dostępne z rejestracją lub bez**: przypisz tę aplikację do grup użytkowników, których urządzenia nie są zarejestrowane w usłudze Intune. Aplikacje z zarządzanego sklepu Google Play nie obsługują tej opcji. 
-   - **Wymagane**: aplikacja jest instalowana na urządzeniach w wybranych grupach.
-   - **Odinstaluj**: aplikacja jest odinstalowywana z urządzeń w wybranych grupach.
+   - **Dostępne z rejestracją lub bez**: przypisz tę aplikację do grup użytkowników, których urządzenia nie są zarejestrowane w usłudze Intune. Aplikacje z zarządzanego sklepu Google Play nie obsługują tej opcji. Użytkownicy muszą mieć przypisaną licencję usługi Intune, zobacz [Licencje usługi Intune](licenses.md).
+   - **Wymagane**: aplikacja jest instalowana na urządzeniach w wybranych grupach. Niektóre platformy mogą wyświetlać dodatkowe monity wymagające potwierdzenia przez użytkownika końcowego przed rozpoczęciem instalacji aplikacji.
+   - **Odinstalowywanie**: aplikacja jest odinstalowywana z urządzeń w wybranych grupach, jeśli usługa Intune wcześniej zainstalowała aplikację na urządzeniu za pośrednictwem przypisania „Dostępne dla zarejestrowanych urządzeń” lub „Wymagane” przy użyciu tego samego wdrożenia. Po wdrożeniu nie można usunąć linków internetowych.
 
      > [!NOTE]
      > **Tylko dla aplikacji systemu iOS**: jeśli utworzono profil sieci VPN systemu iOS zawierający ustawienia sieci VPN dla aplikacji, można wybrać ten profil w obszarze **Sieć VPN**. Gdy aplikacja jest uruchomiona, połączenie sieci VPN jest otwarte. Aby uzyskać więcej informacji, zobacz temat [Ustawienia sieci VPN dla urządzeń z systemem iOS](vpn-settings-ios.md).
      >
-     > **Tylko dla aplikacji systemu Android**: jeśli aplikacja systemu Android jest wdrażana przy użyciu opcji **Dostępne z rejestracją lub bez niej**, stan raportowania będzie dostępny tylko na zarejestrowanych urządzeniach.
+     > **Tylko dla aplikacji systemu Android**: jeśli aplikacja systemu Android jest wdrażana przy użyciu opcji **Dostępne z rejestracją lub bez**, stan raportowania będzie dostępny tylko na zarejestrowanych urządzeniach.
 
 9. Aby wybrać grupy użytkowników, na które ma wpływ to przypisanie aplikacji, wybierz pozycję **Uwzględnione grupy**.
 10. Po wybraniu co najmniej jednej grupy do dołączenia wybierz pozycję **Wybierz**.
@@ -83,9 +85,8 @@ Aplikacja jest teraz przypisana do wybranych grup. Aby uzyskać więcej informac
 
 Czasami ta sama aplikacja zostaje przypisana do wielu grup, ale z różnymi intencjami. Informacje przedstawione w poniższej tabeli pomogą w zrozumieniu wynikowej intencji:
 
-||||
-|-|-|-|
-|**Intencja grupy 1**|**Intencja grupy 2**|**Intencja wynikowa**|
+| Intencja grupy 1 | Intencja grupy 2 | Intencja wynikowa |
+|-----------------------------------|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |Użytkownik, wymagane|Użytkownik, dostępne|Wymagane i dostępne|
 |Użytkownik, wymagane|Użytkownik, niedostępne|Wymagane|
 |Użytkownik, wymagane|Użytkownik, odinstalowywanie|Wymagane|

@@ -6,7 +6,7 @@ keywords: Magazyn danych usługi Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/13/2018
+ms.date: 12/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,14 +16,14 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: b08746965c23c8d247a53bcd0b0844a24581b4e6
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 730195b200448d529d2a56ac8e8a45548264de2d
+ms.sourcegitcommit: 1c9ef5cfac2fc024528d2cfc9d590fa68dd58080
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179100"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53429648"
 ---
-#  <a name="intune-data-warehouse-api"></a>Interfejs API magazynu danych usługi Intune
+#  <a name="microsoft-intune-data-warehouse-api"></a>Interfejs API magazynu danych usługi Microsoft Intune
 
 Przy użyciu interfejsu API magazynu danych usługi Intune możesz uzyskać dostęp do danych usługi Intune w formacie czytelnym dla komputerów i użyć tych danych w swoim ulubionym narzędziu analitycznym. Przy użyciu interfejsu API możesz tworzyć raporty zapewniające wgląd w środowisko mobilne przedsiębiorstwa. Interfejs API korzysta z protokołu OData, który jest zgodny z wzorcami standardowymi w następujących kwestiach:
 
@@ -66,6 +66,6 @@ Usługa OData definiuje abstrakcyjny model danych i protokół, które umożliwi
 
 Dowiedz się więcej na temat pracy z usługą Azure AD, czytając artykuł [Scenariusze uwierzytelniania dla usługi Azure AD](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios).
 
-Źródła danych OData znajdziesz w witrynie [odata.org](http://www.odata.org).
+Źródła danych OData znajdziesz w witrynie [odata.org](https://www.odata.org).
   
-Zapoznaj się ze standardem OData w wersji 4.0 na stronie [OData w wersji 4.0] (http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html)  
+Zapoznaj się ze standardem OData w wersji 4.0 na stronie [OData w wersji 4.0] (https://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html)  

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 12/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 5a28cdcf4d19aec62cd05808f4fb3cda68e083ea
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.openlocfilehash: 3f53ce0b2afd214dec98082c23f7187b4e69317b
+ms.sourcegitcommit: f114eeba1909c7d4e157003b1a9e2232dd1c99e3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53032065"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53734242"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-access-actions-in-intune"></a>Selektywne czyszczenie danych przy użyciu akcji dostępu zasad ochrony aplikacji w usłudze Intune
 
@@ -110,7 +110,7 @@ Poniższa lista zawiera typowe akcje:
 
 W niektórych przypadkach, na przykład dla ustawienia **Minimalna wersja systemu operacyjnego**, można skonfigurować ustawienie w taki sposób, aby poszczególne odpowiednie akcje były wykonywane w zależności od numeru wersji. 
 
-![Zrzut ekranu przedstawiający akcje dostępu zasad ochrony aplikacji usługi Intune — ustawienie Minimalna wersja systemu operacyjnego](./media/apps-selective-wipe-access-actions05.png)
+![Zrzut ekranu przedstawiający akcje dostępu ochrony aplikacji — ustawienie Minimalna wersja systemu operacyjnego](./media/apps-selective-wipe-access-actions05.png)
 
 Gdy ustawienie zostanie w pełni skonfigurowane, wiersz będzie wyświetlany w widoku tylko do odczytu i będzie go można edytować w dowolnym momencie. Ponadto wiersz zostanie wyświetlony z listą rozwijaną w kolumnie **Ustawienie**. Ustawienia, które zostały już skonfigurowane i nie zezwalają na wykonanie wielu akcji, nie będą dostępne na liście rozwijanej.
 

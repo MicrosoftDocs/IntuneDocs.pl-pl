@@ -14,19 +14,19 @@ ms.reviewer: owenyen
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
-ms.openlocfilehash: 9059ddb164dfa57ed76b57141aad89dbb716a09f
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 66402d9e2bc66ec96de88f64dd61c41e1ddb34e5
+ms.sourcegitcommit: 58ac1051faeb33dd29e59049d901761707486350
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179088"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53553643"
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Instalowanie klienta oprogramowania usługi Intune na komputerach z systemem Windows
 
 [!INCLUDE [classic-portal](includes/classic-portal.md)]
 
 > [!NOTE]
-> Możesz użyć usługi Microsoft Intune do zarządzania komputerami z systemem Windows albo [jako urządzeniami przenośnymi z wykorzystaniem zarządzania urządzeniami przenośnymi (MDM)](windows-enroll.md), albo jako komputerami z wykorzystaniem oprogramowania klienckiego usługi Intune zgodnie z poniższym opisem. Jednak firma Microsoft zaleca, aby klienci [używali rozwiązania MDM do zarządzania](windows-enroll.md) zawsze, gdy jest to możliwe.
+> Możesz użyć usługi Microsoft Intune do zarządzania komputerami z systemem Windows albo [jako urządzeniami przenośnymi z wykorzystaniem zarządzania urządzeniami przenośnymi (MDM)](windows-enroll.md), albo jako komputerami z wykorzystaniem oprogramowania klienckiego usługi Intune zgodnie z poniższym opisem. Jednak firma Microsoft zaleca, aby klienci [używali rozwiązania MDM do zarządzania](windows-enroll.md) zawsze, gdy jest to możliwe. Aby uzyskać więcej informacji, zobacz temat [Porównanie zarządzania komputerami z systemem Windows jako komputerami i jako urządzeniami mobilnymi](pc-management-comparison.md) 
 
 
 Komputery z systemem Windows można zarejestrować, instalując oprogramowanie klienckie usługi Intune. Oprogramowanie klienckie usługi Intune można zainstalować na następujące sposoby:
@@ -125,7 +125,7 @@ Jeśli użytkownikom przypisano licencję usługi Intune i ustawiono usługę In
 - Dla użytkowników komputerów z systemem Windows 10 lub Windows 8.1 są wyświetlane dwie opcje rejestracji:
 
   -  **Zarejestruj komputer jako urządzenie przenośne**: użytkownicy wybierają przycisk **Dowiedz się, jak zarejestrować** i przechodzą do instrukcji dotyczących sposobu rejestracji komputera jako urządzenia przenośnego. Ten przycisk jest zawsze wyświetlany, ponieważ rejestracja w zarządzaniu urządzeniami przenośnymi jest uznawana za domyślną i preferowaną opcję rejestracji. Jednak opcja zarządzania urządzeniami przenośnymi nie została uwzględniona w tym temacie, który obejmuje tylko instalację oprogramowania klienckiego.
-  - **Zarejestruj komputer przy użyciu oprogramowania klienckiego usługi Intune**: należy poinformować użytkowników, aby wybrali link **Kliknij tutaj, aby je pobrać**, który poprowadzi ich przez proces instalacji oprogramowania klienckiego.
+  - **Zarejestruj komputer przy użyciu oprogramowania klienckiego usługi Intune**: należy poinformować użytkowników, aby wybrali link **Kliknij tutaj, aby je pobrać**, który przeprowadzi ich przez proces instalacji oprogramowania klienckiego.
 
 Poniższa tabela zawiera podsumowanie opcji.
 
@@ -260,4 +260,4 @@ Operacja wyrejestrowania nie usuwa folderu OnlineManagement. Odczekaj 30 minut p
     "rd /s /q %ProgramFiles%\Microsoft\OnlineManagement".
 
 ### <a name="next-steps"></a>Następne kroki
-[Zarządzanie urządzeniami przy użyciu usługi Microsoft Intune](device-management.md)
+[Typowe zadania związane z zarządzaniem komputerem z systemem Windows za pomocą klienta oprogramowania usługi Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)

@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: e1d645de0dfa9c215a9670246f43375de5153286
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 72349a609485096b5abd6eaff3c252a510a978a7
+ms.sourcegitcommit: 279f923b1802445e501324a262d14e8bfdddabde
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52185427"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53738022"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Jak skonfigurować aplikację Portal firmy w usłudze Microsoft Intune
 
@@ -72,7 +72,7 @@ Zastosuj kolor motywu w Portalu firmy. Wybierz kolor standardowy lub wprowadź s
 |**Wybierz kolor standardowy lub wprowadź sześciocyfrowy kod szesnastkowy**| Wybierz pozycję **Standardowy**, aby wybrać kolor. Wybierz pozycję **Niestandardowy**, aby wybrać kolor na podstawie wartości kodu szesnastkowego.|
 |**Wybierz kolor motywu**| Wybierz kolor motywu, który ma zostać zastosowany dla portalu firmy. Możesz użyć koloru standardowego lub wprowadzić konkretny kod szesnastkowy. |
 |**Wyświetl**| Wybierz, czy mają być wyświetlane **logo i nazwa firmy**, **tylko logo firmy** czy **tylko nazwa firmy**. |
-|**Przekaż logo firmy**|Możesz przekazać logo firmy, aby było wyświetlane w Portalu firmy. Kolor tekstu jest wybierany automatycznie, aby zapewnić najwyższy poziom kontrastu. Aby uzyskać najlepszy wygląd, przekaż logo z przezroczystym tłem.<p><ul><li>Maksymalny rozmiar obrazu: 400 x 400 pikseli</li><li>Maksymalny rozmiar pliku: 750 KB</li><li>Typ pliku: PNG, JPG lub JPEG</li></ul>|
+|**Przekaż logo firmy**|Możesz przekazać logo firmy, aby było wyświetlane w Portalu firmy. Kolor tekstu jest wybierany automatycznie, aby zapewnić najwyższy poziom kontrastu. Aby uzyskać najlepszy wygląd, przekaż logo z przezroczystym tłem.<p><ul><li>Maksymalny rozmiar obrazu: 400 piks. x 400 piks.</li><li>Maksymalny rozmiar pliku: 750 KB</li><li>Typ pliku: PNG, JPG lub JPEG</li></ul>|
 
 Po przekazaniu logo w obszarze podglądu będą wyświetlane logo i kolor motywu. Jeśli wybrano wyświetlanie nazwy firmy, będzie ona wyświetlana w kolorze czarnym lub białym w Portalu firmy. Jej kolor zostanie wybrany automatycznie, aby zapewnić najwyższy poziom kontrastu na podstawie koloru motywu. Nazwa firmy nie będzie wyświetlana w obszarze podglądu na ekranie. 
 
@@ -81,7 +81,7 @@ Wybierz logo, które będzie wyglądać najlepiej na białym lub jasnym tle.
 
 |Nazwa pola|Więcej informacji|
 |---|---|
-|**Przekaż logo**| Ta opcja jest dostępna, jeśli logo firmy ma być wyświetlane. Aby uzyskać najlepszy wygląd, przekaż logo z przezroczystym tłem.<p><ul><li>Maksymalny rozmiar obrazu: 400 x 400 pikseli</li><li>Maksymalny rozmiar pliku: 750 KB</li><li>Typ pliku: PNG, JPG lub JPEG</li></ul>|
+|**Przekaż logo**| Ta opcja jest dostępna, jeśli logo firmy ma być wyświetlane. Aby uzyskać najlepszy wygląd, przekaż logo z przezroczystym tłem.<p><ul><li>Maksymalny rozmiar obrazu: 400 piks. x 400 piks.</li><li>Maksymalny rozmiar pliku: 750 KB</li><li>Typ pliku: PNG, JPG lub JPEG</li></ul>|
 
 ### <a name="brand-image-for-company-portal"></a>Obraz marki dla Portalu firmy
 
@@ -138,7 +138,7 @@ Poniższe skróty klawiaturowe są dostępne w aplikacji Portal firmy dla system
 
 Użytkownicy końcowi będą również mogli zobaczyć dostępne skróty w aplikacji Portal firmy dla systemu Windows.
 
-![Zrzut ekranu przedstawiający dostępne skróty w aplikacji Portal firmy dla systemu Windows](media/company-portal-app/company-portal-app-01.png)
+![Zrzut ekranu przedstawiający dostępne skróty w Portalu firmy dla systemu Windows](media/company-portal-app/company-portal-app-01.png)
 
 ## <a name="next-steps"></a>Następne kroki
 

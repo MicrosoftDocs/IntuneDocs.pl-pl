@@ -16,12 +16,12 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: ced67b2dcdd5720a9708868808ec885938b8ddcd
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: 9de47f996706255c072926524860cfcc833e8b8b
+ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112446"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53642561"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-using-intune-and-windows-autopilot-preview"></a>Wdrażanie urządzeń przyłączonych do hybrydowej usługi Active Directory przy użyciu usługi Intune i rozwiązania Windows Autopilot (wersja zapoznawcza)
 Za pomocą usługi Intune i rozwiązania Windows Autopilot można skonfigurować urządzenia przyłączone do hybrydowej usługi Azure Active Directory. Aby to zrobić, wykonaj poniższe czynności.
@@ -204,7 +204,7 @@ Zmiana stanu urządzenia z wartości **Nieprzypisane** do wartości **Przypisywa
    - **Opis**: Wprowadź opis profilu.
    - **Platforma**: Wybierz **System Windows 10 lub nowszy**.
    - **Typ profilu**: Wybierz pozycję **Dołączanie do domeny (wersja zapoznawcza)**.
-3. Wybierz pozycję **Ustawienia**, a następnie podaj wartości w polach **Prefiks nazwy komputera**, **Nazwa domeny** i **Jednostka organizacyjna** (opcjonalnie). 
+3. Wybierz pozycję **Ustawienia**, a następnie podaj wartości w polach **Prefiks nazwy komputera**, **Nazwa domeny** i **Jednostka organizacyjna** w formacie DN (opcjonalnie). 
 4. Wybierz pozycję **OK** > **Utwórz**. Profil zostanie utworzony i wyświetlony na liście.
 5. Aby przypisać ten profil, wykonaj kroki w obszarze [Przypisywanie profilu urządzenia](device-profile-assign.md#assign-a-device-profile). 
 

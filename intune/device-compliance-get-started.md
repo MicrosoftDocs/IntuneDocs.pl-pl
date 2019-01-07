@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/05/2018
+ms.date: 12/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: fd3a38b331507ddc50a7b5e4ce8794e71d0e5dc5
-ms.sourcegitcommit: 88f760abcea7348a0c6d00b533b54a6ff68d3985
+ms.openlocfilehash: b896a1607dfc036fe248c233477239700dc96091
+ms.sourcegitcommit: 3297fe04ad0d10bc32ebdb903406c2152743179e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52977358"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531332"
 ---
 # <a name="get-started-with-device-compliance-policies-in-intune"></a>Wprowadzenie do zasad zgodności urządzeń w usłudze Intune
 
@@ -171,7 +171,7 @@ Zestaw wbudowanych **ustawień zasad zgodności** (witryna Azure Portal > Zgodno
   Włączenie tego ustawienia wymaga, aby na urządzeniach:
   - Włączyć usługi lokalizacyjne na poziomie systemu operacyjnego
   - Zezwolić aplikacji Portal firmy na użycie usług lokalizacyjnych
-  - Oceniać i zgłaszać stan jailbreaku do usługi Intune co najmniej raz na 72 godziny. Jeśli te warunki nie są spełnione, urządzenie jest oznaczane jako niezgodne. Ocena jest wyzwalana przez otwarcie aplikacji Portal firmy lub fizyczne przeniesienie urządzenia o 500 metrów lub więcej.
+  - Oceniać i zgłaszać stan jailbreaku do usługi Intune co najmniej raz na 72 godziny. Jeśli te warunki nie są spełnione, urządzenie jest oznaczane jako niezgodne. Ocena jest wyzwalana przez otwarcie aplikacji Portal firmy lub fizyczne przeniesienie urządzenia o 500 metrów lub więcej. Jeśli urządzenie nie zostanie przeniesione o 500 metrów w ciągu 72 godzin, użytkownik musi otworzyć aplikację Portal firmy w celu przeprowadzenia rozszerzonej oceny pod kątem wykonania jailbreaku.
 
 - **Okres ważności stanu zgodności (dni)**: podaj okres zgłaszania stanu urządzenia dla wszystkich odebranych zasad zgodności. Urządzenia, które nie zwrócą stanu w tym okresie, są traktowane jako niezgodne. Wartość domyślna to 30 dni.
 

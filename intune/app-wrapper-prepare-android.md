@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/19/2018
+ms.date: 12/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 42b554f025f80546a0a2dd93de92549f2f037b3f
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: e9d3b82fb544b1c73671438440b108573343795a
+ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112881"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53324909"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Przygotowywanie aplikacji systemu Android pod kątem zasad ochrony aplikacji za pomocą narzędzia opakowującego aplikacje usługi Intune
 
@@ -45,7 +45,7 @@ Przed uruchomieniem tego narzędzia należy zapoznać się z sekcją [Uwagi doty
 
 -   Aplikacja musi być opracowana przez Twoją firmę lub dla niej. To narzędzie nie może być używane do przetwarzania aplikacji pobranych ze sklepu Google Play.
 
--   Aby uruchomić narzędzie opakowujące aplikacje, należy zainstalować najnowszą wersję środowiska [Java Runtime Environment](http://java.com/download/) i upewnić się, że w zmiennych środowiskowych systemu Windows została ustawiona zmienna ścieżki Java C:\ProgramData\Oracle\Java\javapath. Aby uzyskać więcej informacji, zobacz [dokumentację środowiska Java](http://java.com/download/help/).
+-   Aby uruchomić narzędzie opakowujące aplikacje, należy zainstalować najnowszą wersję środowiska [Java Runtime Environment](https://java.com/download/) i upewnić się, że w zmiennych środowiskowych systemu Windows została ustawiona zmienna ścieżki Java C:\ProgramData\Oracle\Java\javapath. Aby uzyskać więcej informacji, zobacz [dokumentację środowiska Java](https://java.com/download/help/).
 
     > [!NOTE]
     > W pewnych sytuacjach 32-bitowa wersja programu Java może spowodować problemy z pamięcią. Warto zainstalować wersję 64-bitową.
@@ -71,12 +71,12 @@ Zwróć uwagę na folder, w którym zostało zainstalowane narzędzie. Domyślna
 
 2. Z folderu, w którym zostało zainstalowane narzędzie, zaimportuj moduł programu PowerShell narzędzia opakowującego aplikacje:
 
-   ```
+   ```PowerShell
    Import-Module .\IntuneAppWrappingTool.psm1
    ```
 
 3. Uruchom narzędzie za pomocą polecenia **invoke-AppWrappingTool**, używając następującej składni:
-   ```
+   ```PowerShell
    Invoke-AppWrappingTool [-InputPath] <String> [-OutputPath] <String> -KeyStorePath <String> -KeyStorePassword <SecureString>
    -KeyAlias <String> -KeyPassword <SecureString> [-SigAlg <String>] [<CommonParameters>]
    ```
@@ -99,18 +99,18 @@ Zwróć uwagę na folder, w którym zostało zainstalowane narzędzie. Domyślna
 
 - Aby uzyskać szczegółowe informacje dotyczące używania tego narzędzia, wpisz polecenie:
 
-    ```
+    ```PowerShell
     Help Invoke-AppWrappingTool
     ```
 
 **Przykład:**
 
 Zaimportuj moduł programu PowerShell.
-```
+```PowerShell
 Import-Module "C:\Program Files (x86)\Microsoft Intune Mobile Application Management\Android\App Wrapping Tool\IntuneAppWrappingTool.psm1"
 ```
 Uruchom narzędzie opakowujące aplikacje z aplikacją natywną HelloWorld.apk.
-```
+```PowerShell
 invoke-AppWrappingTool -InputPath .\app\HelloWorld.apk -OutputPath .\app_wrapped\HelloWorld_wrapped.apk -KeyStorePath "C:\Program Files (x86)\Java\jre1.8.0_91\bin\mykeystorefile" -keyAlias mykeyalias -SigAlg SHA1withRSA -Verbose
 ```
 
@@ -142,7 +142,7 @@ Aby uniknąć potencjalnego fałszowania, ujawnienia informacji i ataków oparty
 
 -   Zaimportuj aplikację wyjściową do usługi Intune na tym samym komputerze, na którym uruchomiono to narzędzie. Zobacz temat [keytool](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html), aby uzyskać więcej informacji o narzędziu Java keytool.
 
--   Jeśli aplikacja wyjściowa i narzędzie znajdują się w ścieżce Universal Naming Convention (UNC), a narzędzie i pliki wejściowe nie zostały uruchomione na tym samym komputerze, skonfiguruj zabezpieczenia środowiska, używając [zabezpieczeń protokołu internetowego (IPsec)](http://wikipedia.org/wiki/IPsec) lub [podpisywania bloku komunikatów serwera (SMB)](https://support.microsoft.com/kb/887429).
+-   Jeśli aplikacja wyjściowa i narzędzie znajdują się w ścieżce Universal Naming Convention (UNC), a narzędzie i pliki wejściowe nie zostały uruchomione na tym samym komputerze, skonfiguruj zabezpieczenia środowiska, używając [zabezpieczeń protokołu internetowego (IPsec)](https://wikipedia.org/wiki/IPsec) lub [podpisywania bloku komunikatów serwera (SMB)](https://support.microsoft.com/kb/887429).
 
 -   Upewnij się, że aplikacja pochodzi z zaufanego źródła.
 
@@ -167,11 +167,17 @@ Te instrukcje dotyczą wszystkich aplikacji Android i Xamarin, w przypadku któr
 > Termin „identyfikator klienta” związany z Twoją aplikacją jest taki sam jak termin „identyfikator aplikacji” w witrynie Azure Portal związany z Twoją aplikacją. 
 > * Aby włączyć logowanie jednokrotne, skorzystaj z typowej konfiguracji biblioteki ADAL nr 2.
 
-2. Włącz rejestrację domyślną przez umieszczenie w manifeście następującej wartości: ```xml <meta-data android:name="com.microsoft.intune.mam.DefaultMAMServiceEnrollment" android:value="true" />```
+2. Włącz rejestrację domyślną przez umieszczenie w manifeście następującej wartości:
+   ```xml
+   <meta-data android:name="com.microsoft.intune.mam.DefaultMAMServiceEnrollment" android:value="true" />
+   ```
    > [!NOTE] 
    > Musi to być jedyna integracja z usługą MAM-WE w aplikacji. Wszelkie inne próby wywołania interfejsów API MAMEnrollmentManager mogą powodować konflikty.
 
-3. Włącz wymagane zasady zarządzania aplikacjami mobilnymi przez umieszczenie w manifeście następującej wartości: ```xml <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />```
+3. Włącz wymagane zasady zarządzania aplikacjami mobilnymi przez umieszczenie w manifeście następującej wartości:
+   ```xml
+   <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />
+   ```
    > [!NOTE] 
    > Wymusi to na użytkowniku pobranie aplikacji Portal firmy na urządzenie i ukończenie przepływu rejestracji domyślnej przed użyciem.
 

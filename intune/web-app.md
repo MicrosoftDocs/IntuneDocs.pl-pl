@@ -1,12 +1,12 @@
 ---
 title: Dodawanie aplikacji internetowych do usługi Microsoft Intune
 titleSuffix: ''
-description: Informacje o dodawaniu aplikacji internetowych do usługi Microsoft Intune.
+description: Dowiedz się więcej na temat dodawania aplikacji internetowych (aplikacji typu klient-serwer) do usługi Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/10/2018
+ms.date: 12/19/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ace65aab5ded1449b1e1fd092936e9e2a019f6c1
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 4f0c5d79c17c3cc2ada275337d266c134eed7e91
+ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187637"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53642544"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>Dodawanie aplikacji internetowych do usługi Microsoft Intune
 
@@ -46,18 +46,18 @@ Aby dodać aplikację do usługi Intune jako skrót do aplikacji w Internecie, w
 6. W okienku **Dodaj aplikację** wybierz typ **Link internetowy** z listy rozwijanej **Typ aplikacji**.
 7. Wybierz pozycję **Konfiguruj**.
 8. W okienku **Informacje o aplikacji** dodaj następujące informacje:
-    - **Nazwa**: wprowadź nazwę aplikacji, która ma być wyświetlana w Portalu firmy. 
+    - **Nazwa**:  wprowadź nazwę aplikacji, która ma być wyświetlana w Portalu firmy. 
     
         > [!NOTE]
         > Jeśli po wdrożeniu i zainstalowaniu aplikacji zmienisz jej nazwę za pośrednictwem witryny Azure Portal usługi Intune, nie będzie można już więcej oddziaływać na tę aplikację przy użyciu poleceń.
     
-    - **Opis**: wprowadź opis aplikacji. Ten opis jest wyświetlany użytkownikom Portalu firmy.
+    - **Opis**: Wprowadź opis aplikacji. Ten opis jest wyświetlany użytkownikom Portalu firmy.
     - **Wydawca**: wprowadź nazwę wydawcy tej aplikacji.
     - **Adres URL aplikacji**: wprowadź adres URL witryny hostującej aplikację, którą chcesz przypisać.
     - **Kategoria**: opcjonalnie wybierz co najmniej jedną wbudowaną lub utworzoną przez siebie kategorię aplikacji. Ułatwi to użytkownikom znajdowanie aplikacji podczas przeglądania Portalu firmy.
-    - **Wyświetl jako polecaną aplikację w Portalu firmy**: wybierz tę opcję, aby wyświetlić pakiet aplikacji na stronie głównej portalu firmy podczas przeglądania aplikacji przez użytkowników.
+    - **Wyświetl jako polecaną aplikację w Portalu firmy**: wybierz tę opcję, aby wyświetlić pakiet aplikacji w dobrze widocznym miejscu na stronie głównej portalu firmy podczas przeglądania aplikacji przez użytkowników.
     - **Wymagaj zarządzanej przeglądarki do otworzenia tego linku**: wybierz tę opcję, aby przypisać do użytkowników link do witryny lub aplikacji internetowej, który będą mogli otworzyć w przeglądarce Intune Managed Browser. Ten program musi być zainstalowany na urządzeniu.
-    - **Logo**: przekaż ikonę, która zostanie skojarzona z aplikacją. Będzie ona wyświetlana jako ikona aplikacji podczas przeglądania Portalu firmy.
+    - **Logo**: Przekaż ikonę, która zostanie skojarzona z aplikacją. Będzie ona wyświetlana jako ikona aplikacji podczas przeglądania Portalu firmy.
 9. Wybierz przycisk **OK**.
 10. W okienku **Dodaj aplikację** wybierz pozycję **Dodaj**.
 

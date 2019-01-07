@@ -16,18 +16,18 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 637fe2d2c764cf78e67e728bfa77567cf12e88ce
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.openlocfilehash: 76a16df06c085eb3b40a3a48d4398a46233a09b8
+ms.sourcegitcommit: 9a1924ba2372904eb4a8a1894973e6f2be84129d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53031997"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626088"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-kiosk-devices"></a>Konfigurowanie rejestracji urządzeń kiosku z rozwiązaniem Android enterprise w usłudze Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-System Android obsługuje kioski za pomocą zestawu rozwiązań modelu firmowych urządzeń mających określone zastosowanie dla urządzeń z systemem Android. Takie urządzenia są używane w jednym celu, na przykład do cyfrowego znakowania, drukowania biletów lub zarządzania zapasami. Administratorzy ograniczają użycie urządzenia do zdefiniowanego zestawu aplikacji i linków internetowych. Uniemożliwia to również użytkownikom dodawanie innych aplikacji i wykonywanie innych akcji na urządzeniu.
+System Android obsługuje kioski za pomocą zestawu rozwiązań [Urządzenia dedykowane](https://developers.google.com/android/work/overview#company-owned-devices-for-dedicated-use). Takie urządzenia są używane w jednym celu, na przykład do cyfrowego znakowania, drukowania biletów lub zarządzania zapasami. Administratorzy ograniczają użycie urządzenia do zdefiniowanego zestawu aplikacji i linków internetowych. Uniemożliwia to również użytkownikom dodawanie innych aplikacji i wykonywanie innych akcji na urządzeniu.
 
 Usługa Intune ułatwia wdrażanie aplikacji i ustawień na kioskach z systemem Android. Aby uzyskać szczegółowe informacje na temat rozwiązania Android enterprise, zobacz [wymagania dotyczące rozwiązania Android enterprise](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
 

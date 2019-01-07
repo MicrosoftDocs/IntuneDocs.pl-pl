@@ -15,12 +15,12 @@ ms.reviewer: erikre
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 7cb6e5e603b353be5d3c0d3fdaca4f1d8af675ad
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 1e2b97970a7ab440a032eb29f5307e4dbeddc3bc
+ms.sourcegitcommit: a0db74934433226e28ffdf5d92930dafd2feceae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181194"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53306019"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Często zadawane pytania dotyczące zarządzania aplikacjami mobilnymi (MAM) i ochrony aplikacji
 
@@ -37,9 +37,9 @@ Zarządzanie aplikacjami mobilnymi pozwala chronić dane organizacji w obrębie 
 
 **Jakie konfiguracje urządzeń obsługuje zarządzanie aplikacjami mobilnymi?**<br></br>
 Zarządzanie aplikacjami mobilnymi usługi Intune obsługuje dwie konfiguracje:
-- **Intune MDM + MAM**: administratorzy IT mogą zarządzać aplikacjami korzystającymi z zasad zarządzania aplikacjami mobilnymi i ochrony aplikacji tylko na urządzeniach zarejestrowanych w usłudze zarządzania urządzeniami mobilnymi (MDM) usługi Intune. Aby zarządzać aplikacjami przy użyciu konfiguracji MDM + MAM, klienci powinni używać konsoli usługi Intune w witrynie Azure Portal pod adresem https://portal.azure.com.
+- **Zarządzanie urządzeniami przenośnymi i zarządzanie aplikacjami mobilnymi w usłudze Intune**: Administratorzy IT mogą zarządzać aplikacjami korzystającymi z zasad zarządzania aplikacjami mobilnymi i ochrony aplikacji tylko na urządzeniach zarejestrowanych w usłudze zarządzania urządzeniami przenośnymi (MDM) usługi Intune. Aby zarządzać aplikacjami przy użyciu konfiguracji MDM + MAM, klienci powinni używać konsoli usługi Intune w witrynie Azure Portal pod adresem https://portal.azure.com.
 
-- **MAM bez rejestracji urządzeń**: Zarządzanie aplikacjami mobilnymi bez rejestracji urządzeń (MAM-WE) umożliwia administratorom IT zarządzanie aplikacjami za pomocą zasad zarządzania aplikacjami mobilnymi i ochrony aplikacji na urządzeniach, które nie zostały zarejestrowane w usłudze Intune MDM. Oznacza to, że aplikacjami można zarządzać przy użyciu usługi Intune na urządzeniach zarejestrowanych u dostawców EMM innych firm. Aby zarządzać aplikacjami przy użyciu konfiguracji MAM-WE, klienci powinni używać konsoli usługi Intune w witrynie Azure Portal pod adresem http://portal.azure.com. Aplikacjami można również zarządzać przy użyciu usługi Intune na urządzeniach zarejestrowanych u dostawców usługi Enterprise Mobility Management (EMM) innych firm lub w ogóle niezarejestrowanych w usłudze MDM.
+- **Zarządzanie aplikacjami mobilnymi bez rejestracji urządzenia**: zarządzanie aplikacjami mobilnymi bez rejestracji urządzeń (MAM-WE) umożliwia administratorom IT zarządzanie aplikacjami za pomocą zasad zarządzania aplikacjami mobilnymi i ochrony aplikacji na urządzeniach, które nie zostały zarejestrowane w usłudze Intune MDM. Oznacza to, że aplikacjami można zarządzać przy użyciu usługi Intune na urządzeniach zarejestrowanych u dostawców EMM innych firm. Aby zarządzać aplikacjami przy użyciu konfiguracji MAM-WE, klienci powinni używać konsoli usługi Intune w witrynie Azure Portal pod adresem https://portal.azure.com. Aplikacjami można również zarządzać przy użyciu usługi Intune na urządzeniach zarejestrowanych u dostawców usługi Enterprise Mobility Management (EMM) innych firm lub w ogóle niezarejestrowanych w usłudze MDM.
 
 
 ## <a name="app-protection-policies"></a>Zasady ochrony aplikacji
@@ -61,7 +61,7 @@ Każdą aplikacją zintegrowaną z zestawem [Intune App SDK](/intune/app-sdk) lu
 
 - Użytkownik końcowy musi mieć licencję usługi Microsoft Intune przypisaną do swojego konta usługi Azure Active Directory. Zobacz temat [Zarządzanie licencjami usługi Intune](/intune/licenses-assign), aby dowiedzieć się, jak przypisać licencje usługi Intune użytkownikom końcowym.
 
-- Użytkownik końcowy musi należeć do grupy zabezpieczeń objętej zasadami ochrony aplikacji. Te same zasady ochrony aplikacji muszą obejmować określoną używaną aplikację. Zasady ochrony aplikacji można tworzyć i wdrażać w konsoli usługi Intune w [portalu Azure](http://portal.azure.com). Grupy zabezpieczeń można obecnie tworzyć w [portalu Office](http://portal.office.com).
+- Użytkownik końcowy musi należeć do grupy zabezpieczeń objętej zasadami ochrony aplikacji. Te same zasady ochrony aplikacji muszą obejmować określoną używaną aplikację. Zasady ochrony aplikacji można tworzyć i wdrażać w konsoli usługi Intune w [portalu Azure](https://portal.azure.com). Grupy zabezpieczeń można obecnie tworzyć w [portalu Office](https://portal.office.com).
 
 - Użytkownik końcowy musi zalogować się do aplikacji przy użyciu konta usługi AAD.
 
@@ -76,7 +76,7 @@ Każdą aplikacją zintegrowaną z zestawem [Intune App SDK](/intune/app-sdk) lu
 
 **Jakie są dodatkowe wymagania dotyczące korzystania z aplikacji [Word, Excel i PowerPoint](https://products.office.com/business/office)?**
 
-- Użytkownik końcowy musi mieć licencję usługi [Office 365 Business lub Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) przypisaną do swojego konta usługi Azure Active Directory. Subskrypcja musi obejmować aplikacje pakietu Office na urządzeniach przenośnych i może uwzględniać konto magazynu w chmurze w ramach usługi [OneDrive dla Firm](https://onedrive.live.com/about/business/). Licencje usługi Office 365 można przypisać w [portalu Office](http://portal.office.com), wykonując poniższe [instrukcje](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
+- Użytkownik końcowy musi mieć licencję usługi [Office 365 Business lub Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) przypisaną do swojego konta usługi Azure Active Directory. Subskrypcja musi obejmować aplikacje pakietu Office na urządzeniach przenośnych i może uwzględniać konto magazynu w chmurze w ramach usługi [OneDrive dla Firm](https://onedrive.live.com/about/business/). Licencje usługi Office 365 można przypisać w [portalu Office](https://portal.office.com), wykonując poniższe [instrukcje](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
 
 - Użytkownik końcowy musi mieć zarządzaną lokalizację skonfigurowaną przy użyciu funkcji szczegółowego zapisywania jako — w ramach ustawienia „Nie zezwalaj na używanie polecenia Zapisz jako” w zasadach ochrony aplikacji. Przykładowo — jeśli zarządzana lokalizacja to OneDrive, aplikację [OneDrive](https://onedrive.live.com/about/) należy skonfigurować w aplikacji Word, Excel lub PowerPoint użytkownika końcowego.
 
@@ -109,9 +109,9 @@ Osobisty numer identyfikacyjny (PIN) jest kodem dostępu służącym do weryfika
 
 - **Jak często użytkownik będzie otrzymywać monit o podanie numeru PIN usługi Intune?**<br></br> Administrator IT może zdefiniować ustawienie zasad ochrony aplikacji usługi Intune „Ponownie sprawdź wymagania dostępu po (w minutach)” w konsoli administracyjnej usługi Intune. To ustawienie określa czas, po którym na urządzeniu są sprawdzane wymagania dotyczące dostępu i ponownie jest wyświetlany ekran numeru PIN aplikacji. Jednak wpływ na częstotliwość monitowania użytkownika mają następujące ważne informacje o numerze PIN: 
 
-    - **Numer PIN jest współużytkowany przez aplikacje tego samego wydawcy, aby zwiększyć użyteczność:** w systemie iOS numer PIN danej aplikacji jest używany przez wszystkie aplikacje **tego samego wydawcy aplikacji**. W systemie Android numer PIN danej aplikacji jest współużytkowany przez wszystkie aplikacje.
-    - **Zachowanie „Ponownie sprawdź wymagania dostępu po (w minutach)” po ponownym uruchomieniu urządzenia:** „Czasomierz numeru PIN” śledzi liczbę minut bezczynności, które określają, kiedy po raz kolejny pokazać pytanie o numer PIN aplikacji usługi Intune. W systemie iOS na czasomierz numeru PIN nie ma wpływu ponowne uruchomienie urządzenia. W związku z tym ponowne uruchomienie urządzenia nie ma wpływu na liczbę minut, przez które użytkownik jest nieaktywny w aplikacji systemu iOS objętej zasadami numeru PIN usługi Intune. W systemie Android czasomierz numeru PIN jest resetowany przy ponownym uruchomieniu urządzenia. W efekcie aplikacje systemu Android z zasadami numeru PIN usługi Intune prawdopodobnie wyświetlą zapytanie o numer PIN aplikacji niezależnie od wartości ustawienia „Ponownie sprawdź wymagania dostępu po (w minutach)” **po ponownym uruchomieniu urządzenia**.  
-    - **Ciągłe działanie czasomierza skojarzonego z numerem PIN:** gdy zostanie wprowadzony numer PIN w celu uzyskania dostępu do aplikacji (aplikacji A) i aplikacja zostanie wyłączona z pierwszego planu (głównego fokusu wprowadzania) na urządzeniu, czasomierz numeru PIN zostanie zresetowany dla tego numeru PIN. Monit dla użytkownika o podanie numeru PIN nie będzie wyświetlany w żadnej aplikacji (aplikacji B), która współużytkuje ten numer PIN, ponieważ czasomierz został zresetowany. Monit pojawi się znowu po ponownym osiągnięciu odpowiedniej wartości ustawienia „Ponownie sprawdź wymagania dostępu po (w minutach)”.
+    - **Numer PIN jest udostępniany w aplikacjach tego samego wydawcy w celu zwiększenia użyteczności:** w systemie iOS numer PIN danej aplikacji jest udostępniany we wszystkich aplikacjach **tego samego wydawcy aplikacji**. W systemie Android numer PIN danej aplikacji jest współużytkowany przez wszystkie aplikacje.
+    - **Zachowanie „Ponownie sprawdź wymagania dostępu po (w minutach)” po ponownym uruchomieniu urządzenia:** funkcja „Czasomierz numeru PIN” śledzi liczbę minut braku aktywności, które określają, kiedy należy ponownie wyświetlić numer PIN aplikacji usługi Intune. W systemie iOS na czasomierz numeru PIN nie ma wpływu ponowne uruchomienie urządzenia. W związku z tym ponowne uruchomienie urządzenia nie ma wpływu na liczbę minut, przez które użytkownik jest nieaktywny w aplikacji systemu iOS objętej zasadami numeru PIN usługi Intune. W systemie Android czasomierz numeru PIN jest resetowany przy ponownym uruchomieniu urządzenia. W efekcie aplikacje systemu Android z zasadami numeru PIN usługi Intune prawdopodobnie wyświetlą zapytanie o numer PIN aplikacji niezależnie od wartości ustawienia „Ponownie sprawdź wymagania dostępu po (w minutach)” **po ponownym uruchomieniu urządzenia**.  
+    - **Ciągłe działanie czasomierza skojarzonego z numerem PIN:** gdy numer PIN zostanie wprowadzony w celu uzyskania dostępu do aplikacji (aplikacji A) i aplikacja zostanie wyłączona z pierwszego planu (głównego fokusu wprowadzania) na urządzeniu, czasomierz numeru PIN zostanie zresetowany dla tego numeru PIN. Monit dla użytkownika o podanie numeru PIN nie będzie wyświetlany w żadnej aplikacji (aplikacji B), która współużytkuje ten numer PIN, ponieważ czasomierz został zresetowany. Monit pojawi się znowu po ponownym osiągnięciu odpowiedniej wartości ustawienia „Ponownie sprawdź wymagania dostępu po (w minutach)”.
 
 W przypadku urządzeń z systemem iOS, nawet jeśli numer PIN jest współużytkowany pomiędzy aplikacjami od różnych dostawców, zostanie ponownie wyświetlony monit, jeśli ponownie osiągnięto wartość **Sprawdź ponownie wymagania dostępu po (minuty)** dla aplikacji, która nie jest głównym elementem fokusu wprowadzania danych. Przykładowo użytkownik ma aplikację _A_ od wydawcy _X_ oraz aplikację _B_ od wydawcy _Y_; obie aplikacje współdzielą ten sam numer PIN. Użytkownik skupia się na aplikacji _A_ (na pierwszym planie), a aplikacja _B_ jest zminimalizowana. Po osiągnięciu wartości **Sprawdź ponownie wymagania dostępu po (minuty)** i przełączeniu się przez użytkownika na aplikację _B_ będzie wymagany numer PIN.
 

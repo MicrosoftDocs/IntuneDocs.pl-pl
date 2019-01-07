@@ -1,12 +1,12 @@
 ---
 title: Co to jest zarządzanie aplikacjami w usłudze Microsoft Intune?
 titlesuffix: ''
-description: Poznaj podstawy zarządzania aplikacjami w usłudze Microsoft Intune.
+description: Dowiedz się więcej o możliwościach zarządzania aplikacjami klienckimi według platformy w usłudze Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/10/2018
+ms.date: 12/19/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 366fab51d88587233f945fe7d880e3b6881bef45
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: f156accf5b51e7fff51db738c70b0b0840d7e365
+ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179188"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53642833"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co to jest zarządzanie aplikacjami w usłudze Microsoft Intune?
 
@@ -78,7 +78,7 @@ W następnych czterech sekcjach opisano opcje dostępne w okienku **Aplikacje kl
     - [Dodawanie aplikacji](apps-add.md).
     - [Przypisywanie aplikacji](apps-deploy.md).
     - [Monitorowanie aplikacji](apps-monitor.md).
-- **Zasady konfiguracji aplikacji mobilnych**: wybierz tę opcję, aby określać wartości ustawień, które mogą być wymagane, jeśli użytkownik uruchamia aplikację. Aby uzyskać więcej informacji, zobacz:
+- **Zasady konfigurowania aplikacji**: wybierz tę opcję, aby określać wartości ustawień, które mogą być wymagane, jeśli użytkownik uruchamia aplikację. Aby uzyskać więcej informacji, zobacz:
     - [Zasady konfiguracji aplikacji usługi Intune](app-configuration-policies-overview.md).
         - [Zasady konfiguracji aplikacji systemu iOS](app-configuration-policies-use-ios.md).
         - [Zasady konfiguracji aplikacji systemu Android](app-configuration-policies-use-android.md).
@@ -98,7 +98,7 @@ Aby uzyskać więcej informacji na temat tej sekcji, zobacz [Zarządzanie aplika
 - **Odnalezione aplikacje**: wyświetlanie aplikacji, które zostały przypisane przez usługę Intune lub zainstalowane na urządzeniu. Aby uzyskać więcej informacji, zobacz [Wyświetlanie szczegółów urządzenia w usłudze Intune](device-inventory.md).
 - **Stan instalacji aplikacji**: wyświetlanie stanu utworzonego przez siebie przypisania aplikacji. Aby uzyskać więcej informacji, zobacz [Monitorowanie informacji o aplikacji i przypisań z użyciem usługi Microsoft Intune](apps-monitor.md#device-and-user-status-graphs).
 - **Stan ochrony aplikacji**: wyświetlanie stanu zasad ochrony aplikacji dla wybranego użytkownika.
-- **Dzienniki inspekcji**: wyświetlanie działań wszystkich administratorów IT związane z aplikacją usługi Intune.
+- **Dzienniki inspekcji**: wyświetlanie działań wszystkich administratorów IT związanych z aplikacją usługi Intune.
 
 Aby uzyskać więcej informacji na temat tej sekcji, zobacz [Monitorowanie aplikacji](apps-monitor.md).
 
@@ -109,9 +109,9 @@ Aby uzyskać więcej informacji na temat tej sekcji, zobacz [Monitorowanie aplik
 - **Certyfikat firmy Symantec systemu Windows**: stosowanie lub wyświetlanie stanu certyfikatu podpisywania kodu firmy Symantec potrzebnego do rozpowszechniania plików appx XAP i WP8.x na urządzeniach z systemem Windows 10 Mobile.
 - **Microsoft Store dla Firm**: konfigurowanie integracji ze sklepem Microsoft Store dla Firm. Po wykonaniu tej czynności można synchronizować zakupione aplikacje z usługą Intune, przypisywać je i śledzić użycie licencji. Aby uzyskać więcej informacji, zobacz:
     - [Aplikacje nabyte w ramach zakupów zbiorczych w sklepie Microsoft Store dla Firm](windows-store-for-business.md).
-- **Klucze ładowania bezpośredniego systemu Windows**: dodawanie klucza ładowania bezpośredniego systemu Windows, który może służyć do bezpośredniej instalacji aplikacji na urządzeniach bez konieczności publikowania aplikacji i pobierania jej ze Sklepu Windows. Aby uzyskać więcej informacji, zobacz:
+- **Klucze ładowania bezpośredniego systemu Windows**: dodawanie klucza ładowania bezpośredniego systemu Windows, który może służyć do bezpośredniej instalacji aplikacji na urządzeniach bez konieczności publikowania aplikacji i pobierania jej ze sklepu Windows Store. Aby uzyskać więcej informacji, zobacz:
     - [Ładowanie bezpośrednie aplikacji systemu Windows](app-sideload-windows.md).
-- **Znakowanie portalu firmy**: dostosowywanie portalu firmy w celu nadania mu logo Twojej firmy. Aby uzyskać więcej informacji, zobacz:
+- **Znakowanie Portalu firmy**: dostosowywanie Portalu firmy w celu nadania mu logo Twojej firmy. Aby uzyskać więcej informacji, zobacz:
     - [Konfiguracja portalu firmy](company-portal-app.md).
 - **Kategorie aplikacji**: dodawanie, przypinanie i usuwanie nazw kategorii aplikacji.
 - **Profil służbowy systemu Android**: zatwierdzanie i synchronizowanie aplikacji zatwierdzonych dla przedsiębiorstwa. Aby uzyskać więcej informacji, zobacz:

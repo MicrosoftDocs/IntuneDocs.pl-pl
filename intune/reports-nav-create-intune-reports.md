@@ -6,7 +6,7 @@ keywords: Magazyn danych usługi Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/09/2018
+ms.date: 12/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,14 +16,14 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 13054bcaf885173e768fefb585cb71f266e9ca9e
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 02bf1672db70bce57e527a0992f6a979b2e099e7
+ms.sourcegitcommit: 1c9ef5cfac2fc024528d2cfc9d590fa68dd58080
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184662"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53429580"
 ---
-# <a name="use-the-intune-data-warehouse"></a>Korzystanie z magazynu danych usługi Intune
+# <a name="use-the-microsoft-intune-data-warehouse"></a>Korzystanie z magazynu danych usługi Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
@@ -31,6 +31,8 @@ Przy użyciu magazynu danych usługi Intune możesz tworzyć raporty zapewniają
 -   Trendy rejestracji użytkowników w usłudze Intune w celu zoptymalizowania zakupu licencji
 -   Podział na wersje aplikacji i systemów operacyjnych w celu przejrzenia stanu urządzeń przenośnych
 -   Trendy rejestracji i zgodności urządzeń w celu bezproblemowego wdrożenia aktualizacji zasad
+
+## <a name="data-warehouse-benefits"></a>Korzyści związane z magazynem danych
 
 Magazyn danych zapewnia dostęp do większej ilości informacji o środowisku mobilnym niż witryna Azure Portal. Dzięki magazynowi danych usługi Intune możesz uzyskać dostęp do następujących elementów:
 
@@ -45,7 +47,7 @@ Magazyn danych zapewnia dostęp do większej ilości informacji o środowisku mo
 > Teraz można używać wersji 1.0 magazynu danych usługi Intune, ustawiając parametr zapytania  `api-version=v1.0`. Aktualizacje kolekcji w magazynie danych są z natury addytywne i nie przerywają działania istniejących scenariuszy.<br><br>
 > Możesz zapoznać się z najnowszymi funkcjami magazynu danych, korzystając z wersji beta. Aby można było korzystać z wersji beta, adres URL musi zawierać parametr zapytania  `api-version=beta`. Wersja beta umożliwia korzystanie z funkcji jeszcze przed ich ogólnym udostępnieniem jako obsługiwana usługa. W miarę dodawania nowych funkcji do usługi Intune zachowanie wersji beta i kontrakty danych mogą ulec zmianie. Każdy kod niestandardowy lub narzędzia raportowania zależne od wersji beta mogą przestać działać po zainstalowaniu aktualizacji.
 
-**Następne kroki**
+## <a name="next-steps"></a>Następne kroki
 
 - Uzyskaj link i uzyskaj wgląd przy użyciu usługi Power BI. Aby uzyskać instrukcje, zobacz [Nawiązywanie połączenia z magazynem danych usługi Intune przy użyciu usługi Power BI](reports-proc-get-a-link-powerbi.md).
 - Za pomocą swojego linku utwórz niestandardowy raport w usłudze Power BI. Aby uzyskać instrukcje, zobacz [Tworzenie raportu w usłudze Power BI na podstawie źródła danych OData](reports-proc-create-with-odata.md).

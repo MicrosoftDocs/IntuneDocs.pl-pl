@@ -1,12 +1,12 @@
 ---
 title: Ręczne dodawanie aplikacji Portal firmy dla systemu Windows 10
 titleSuffix: Microsoft Intune
-description: Dowiedz się, jak ręcznie dodać aplikację Portal firmy dla systemu Windows 10.
+description: Dowiedz się, jak pracownicy mogą ręcznie dodać aplikację Portal firmy dla systemu Windows 10 do swoich komputerów z poziomu sklepu Microsoft Store.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/14/2018
+ms.date: 12/19/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 7808d9c189f429e15cdf916d18412ba951c7e696
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 755e836c5954b9cbbf3c7729755aaa25062710d8
+ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190272"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53642595"
 ---
 # <a name="manually-add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Ręczne dodawanie aplikacji Portal firmy dla systemu Windows 10 przy użyciu usługi Microsoft Intune
 
@@ -51,7 +51,7 @@ Użytkownicy mogą samodzielnie zainstalować aplikację Portal firmy ze sklepu 
 
 7. Pobierz wszystkie pakiety w obszarze „Wymagane struktury” wybierając pozycję **Pobierz**.  
     Należy wykonać tę czynność dla architektury x86, x64 i ARM — co składa się na całkowitą liczbę 12 pakietów.
-8. Przed przekazaniem aplikacji Portal firmy do usługi Intune utwórz folder (na przykład C:\Portal firmy) z pakietami umieszczonymi w następujący sposób:
+8. Przed przekazaniem aplikacji Portal firmy do usługi Intune utwórz folder (na przykład: C:\Portal firmy) z następującą strukturą pakietów:
    - Umieść pakiet Portal firmy w folderze C:\Portal firmy. W tej lokalizacji utwórz również podfolder *Zależności*.  
 
      ![Folder Zależności zapisany przy użyciu pliku APPXBUN](./media/Win10CP-Dependencies-save.png)

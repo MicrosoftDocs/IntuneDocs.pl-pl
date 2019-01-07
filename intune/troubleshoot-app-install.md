@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/10/2018
+ms.date: 12/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: b613f364-0150-401f-b9b8-2b09470b34f4
 ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 86f0892fe855201b9bdb28d61301353f6588954a
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: cd43bfda69b42fb81a72d520d169fe1785161f65
+ms.sourcegitcommit: 0f19bc5c76b7c0835bfd180459f2bbd128eec1c2
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52188130"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53267015"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Rozwiązywanie problemów z instalacją aplikacji
 
@@ -84,6 +84,19 @@ Następujące komunikaty o błędach oraz opisy zapewniają szczegółowe inform
 |    Użytkownik odrzucił ofertę zaktualizowania aplikacji. (0x87D13B63)    |    Użytkownik końcowy kliknął przycisk Anuluj podczas procesu aktualizacji.     |
 |    Nieznany błąd (0x87D103E8)    |    Wystąpił nieznany błąd instalacji aplikacji. Jest to błąd wynikowy, gdy nie wystąpią inne błędy.    |
 
+### <a name="other-installation-errors"></a>Inne błędy instalacji
+
+|    Komunikat o błędzie/kod    |    Opis    |
+|-----------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    0x80073CFF, 0x80CF201C (błąd klienta)    |    Aby zainstalować tę aplikację, wymagany jest system z obsługą ładowania bezpośredniego. Upewnij się, że pakiet aplikacji został podpisany przy użyciu zaufanego podpisu i zainstalowany na urządzeniu przyłączonym do domeny, które ma włączone zasady **AllowAllTrustedApps**, lub na urządzeniu, które ma licencję ładowania bezpośredniego systemu Windows z włączonymi zasadami **AllowAllTrustedApps**. Aby uzyskać więcej informacji, zobacz temat [Troubleshooting packaging, deployment, and query of Windows Store apps](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting) (Rozwiązywanie problemów z pakowaniem, wdrażaniem i zapytaniami aplikacji ze sklepu Windows Store).     |
+|    0x80073CF0    |    Nie można otworzyć pakietu. Możliwe przyczyny:<ul><li> Pakiet jest niepodpisany.</li><li> Nazwa wydawcy jest niezgodna z podmiotem certyfikatu podpisywania.</li></ul> Sprawdź dziennik zdarzeń **AppxPackagingOM**, aby uzyskać informacje. Aby uzyskać więcej informacji, zobacz temat [Troubleshooting packaging, deployment, and query of Windows Store apps](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting) (Rozwiązywanie problemów z pakowaniem, wdrażaniem i zapytaniami aplikacji ze sklepu Windows Store).    |
+|    0x80073CF3    |    Niepowodzenie aktualizacji, błąd weryfikacji zależności lub konflikt pakietu. Możliwe przyczyny:<ul><li> Przychodzący pakiet powoduje konflikt z zainstalowanym pakietem.</li><li> Określona zależność pakietu nie została odnaleziona.</li><li> Pakiet nie obsługuje poprawnej architektury procesora.</li></ul> Sprawdź dziennik zdarzeń **AppXDeployment-Server**, aby uzyskać informacje. Aby uzyskać więcej informacji, zobacz temat [Troubleshooting packaging, deployment, and query of Windows Store apps](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting) (Rozwiązywanie problemów z pakowaniem, wdrażaniem i zapytaniami aplikacji ze sklepu Windows Store).    |
+|    0x80073CFB    |    Dany pakiet jest już zainstalowany i jego ponowna instalacja została zablokowana. Ten błąd może pojawić się w przypadku instalowania pakietu, który nie jest identyczny z pakietem już zainstalowanym. Upewnij się , że podpis cyfrowy jest również częścią pakietu. Jeśli pakiet został ponownie skompilowany lub ponownie podpisany, nie jest już bitowo identyczny z wcześniej zainstalowanym pakietem. Dostępne są następujące dwie opcje naprawienia tego błędu:<ul><li> Zwiększenie numeru wersji aplikacji, a następnie ponowne skompilowanie i ponowne podpisanie pakietu.</li><li> Usunięcie starego pakietu dla każdego użytkownika w systemie przed zainstalowaniem nowego pakietu.</li></ul> Aby uzyskać więcej informacji, zobacz temat [Troubleshooting packaging, deployment, and query of Windows Store apps](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting) (Rozwiązywanie problemów z pakowaniem, wdrażaniem i zapytaniami aplikacji ze sklepu Windows Store).    |
+|    0x87D1041C    |    Instalacja aplikacji zakończyła się pomyślnie, ale nie wykryto aplikacji. Aplikacja została pomyślnie wdrożona przez usługę Intune, a następnie odinstalowana. Możliwe przyczyny odinstalowania aplikacji:<ul><li> Użytkownik końcowy odinstalował aplikację.</li><li> Informacje o tożsamości w pakiecie są niezgodne z danymi zgłaszanymi przez urządzenie w przypadku nieprawidłowych aplikacji.</li><li>W przypadku samoaktualizujących się instalatorów MSI wersja produktu nie odpowiada informacjom o aplikacji po przeprowadzeniu aktualizacji poza usługą Intune.</li></ul> Poinstruuj użytkownika, aby ponownie zainstalował aplikację z portalu firmy. Pamiętaj, że wymagane aplikacje zostaną automatycznie zainstalowane ponownie po następnym zaewidencjonowaniu urządzenia.    |
+
+## <a name="troubleshooting-apps-from-the-microsoft-store"></a>Rozwiązywanie problemów z aplikacjami ze Sklepu Microsoft
+
+Informacje zawarte w temacie [Troubleshooting packaging, deployment, and query of Microsoft Store apps (Tworzenie pakietów, wdrażanie i zapytania aplikacji ze Sklepu Microsoft)](https://msdn.microsoft.com/library/windows/desktop/hh973484.aspx) pomagają w rozwiązywaniu typowych problemów, które mogą wystąpić podczas instalowania aplikacji ze Sklepu Microsoft za pomocą usługi Intune lub w inny sposób.
 
 ## <a name="next-steps"></a>Następne kroki
 

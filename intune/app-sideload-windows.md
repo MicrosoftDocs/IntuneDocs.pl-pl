@@ -5,7 +5,7 @@ keywords: ''
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/17/2018
+ms.date: 12/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: c96d66a11f49db68d20511aeae9b2abbab53b172
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 4e37675186ef21d219627ec3ec1973e6e9944d1d
+ms.sourcegitcommit: 279f923b1802445e501324a262d14e8bfdddabde
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181246"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53737971"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Podpisywanie aplikacji biznesowych w celu wdrażania ich na urządzeniach z systemem Windows za pomocą usługi Intune
 
@@ -34,10 +34,10 @@ Poniższe instrukcje ułatwią uzyskanie wymaganego certyfikatu i podpisanie apl
 
 
 1. **Rejestracja jako deweloper Microsoft**<br>
-   [Zarejestruj się jako deweloper Microsoft](http://go.microsoft.com/fwlink/?LinkId=268442), podając dane konta firmowego użyte do zalogowania się w celu wykupienia konta dla firmy. Ta prośba musi zostać autoryzowana przez specjalistę firmy, zanim otrzymasz certyfikat podpisywania kodu.
+   [Zarejestruj się jako deweloper Microsoft](https://go.microsoft.com/fwlink/?LinkId=268442), podając dane konta firmowego użyte do zalogowania się w celu wykupienia konta dla firmy. Ta prośba musi zostać autoryzowana przez specjalistę firmy, zanim otrzymasz certyfikat podpisywania kodu.
 
 2. **Uzyskaj firmowy certyfikat firmy Symantec**<br>
-  Posługując się swoim identyfikatorem firmy Symantec, kup certyfikat w [witrynie firmy Symantec](http://go.microsoft.com/fwlink/?LinkId=268441) . Po zakupie certyfikatu osoba zatwierdzająca w firmie wyznaczona podczas rejestracji w charakterze dewelopera Microsoft otrzyma wiadomość e-mail z prośbą o zatwierdzenie żądania certyfikatu. Więcej informacji o wymaganiu certyfikatu firmy Symantec znajduje się w sekcji [Dlaczego w systemie Windows Phone jest wymagany certyfikat firmy Symantec?](https://technet.microsoft.com/library/dn764959.aspx#BKMK_Symantec) często zadawanych pytań dotyczących rejestrowania urządzeń z systemem Windows.
+  Posługując się swoim identyfikatorem firmy Symantec, kup certyfikat w [witrynie firmy Symantec](https://go.microsoft.com/fwlink/?LinkId=268441) . Po zakupie certyfikatu osoba zatwierdzająca w firmie wyznaczona podczas rejestracji w charakterze dewelopera Microsoft otrzyma wiadomość e-mail z prośbą o zatwierdzenie żądania certyfikatu. Więcej informacji o wymaganiu certyfikatu firmy Symantec znajduje się w sekcji [Dlaczego w systemie Windows Phone jest wymagany certyfikat firmy Symantec?](https://technet.microsoft.com/library/dn764959.aspx#BKMK_Symantec) często zadawanych pytań dotyczących rejestrowania urządzeń z systemem Windows.
 
 3.  **Zaimportuj certyfikaty**<br>
     Po zatwierdzeniu żądania otrzymasz wiadomość e-mail z instrukcjami dotyczącymi importowania certyfikatów. Postępuj zgodnie z instrukcjami w wiadomości e-mail, aby zaimportować certyfikaty.
@@ -45,14 +45,14 @@ Poniższe instrukcje ułatwią uzyskanie wymaganego certyfikatu i podpisanie apl
 4.  **Zweryfikuj zaimportowane certyfikaty**<br>
     Aby zweryfikować, że certyfikaty zostały zaimportowane prawidłowo, przejdź do przystawki **Certyfikaty**, kliknij prawym przyciskiem myszy pozycję **Certyfikaty** i wybierz polecenie **Znajdź certyfikaty**. W polu **Zawiera** wprowadź „Symantec” i kliknij przycisk **Znajdź teraz**. Zaimportowane certyfikaty powinny być wyświetlane w wynikach.
 
-    ![Znajdź certyfikat firmy Symantec](./media/wit.gif)
+    ![Wyniki certyfikatów są wyświetlane w oknie dialogowym Znajdowanie certyfikatów](./media/wit.gif)
 
 5. **Wyeksportuj certyfikat podpisywania**<br>
     Po zweryfikowaniu, że certyfikaty znajdują się na liście, możesz wyeksportować plik PFX w celu podpisania portalu firmy. Wybierz certyfikat firmy Symantec, dla którego w kolumnie **Zamierzony cel** widnieje wartość „podpisywanie kodu”. Kliknij certyfikat podpisywania kodu prawym przyciskiem myszy i wybierz polecenie **Eksportuj**.
 
     ![Wyeksportuj certyfikat podpisywania](./media/wit-walk-cert2.gif)
 
-    W **Kreatorze eksportu certyfikatów**wybierz opcję **Tak, eksportuj klucz prywatny** , a następnie kliknij przycisk **Dalej**. Wybierz pozycję **Wymiana informacji osobistych — PKCS #12 (PFX)** i zaznacz opcję **Jeśli jest to możliwe, dołącz wszystkie certyfikaty do ścieżki certyfikacji**. Ukończ pracę kreatora. Więcej informacji znajduje się w temacie [Eksportowanie certyfikatu z kluczem prywatnym](http://go.microsoft.com/fwlink/?LinkID=203031).
+    W **Kreatorze eksportu certyfikatów**wybierz opcję **Tak, eksportuj klucz prywatny** , a następnie kliknij przycisk **Dalej**. Wybierz pozycję **Wymiana informacji osobistych — PKCS #12 (PFX)** i zaznacz opcję **Jeśli jest to możliwe, dołącz wszystkie certyfikaty do ścieżki certyfikacji**. Ukończ pracę kreatora. Więcej informacji znajduje się w temacie [Eksportowanie certyfikatu z kluczem prywatnym](https://go.microsoft.com/fwlink/?LinkID=203031).
 
 6.  **Przekaż aplikację do usługi Intune**<br>
     Aby udostępnić aplikację użytkownikom końcowym, przekaż podpisany plik aplikacji oraz certyfikat podpisywania kodu.
@@ -72,32 +72,32 @@ Aplikację Portal firmy można wdrożyć na urządzeniach z systemem Windows, w 
 
 1.  **Pobierz aplikację Portal firmy**
 
-    Aby pobrać aplikację Portal firmy przy użyciu usługi Intune, możesz pobrać [aplikację Portal firmy w usłudze Microsoft Intune dla systemu Windows Phone 8.1](http://go.microsoft.com/fwlink/?LinkId=615799) z Centrum pobierania i uruchomić plik samowyodrębniający (EXE). Ten plik zawiera dwa pliki:
+    Aby pobrać aplikację Portal firmy przy użyciu usługi Intune, możesz pobrać [aplikację Portal firmy w usłudze Microsoft Intune dla systemu Windows Phone 8.1](https://go.microsoft.com/fwlink/?LinkId=615799) z Centrum pobierania i uruchomić plik samowyodrębniający (EXE). Ten plik zawiera dwa pliki:
 
     -   CompanyPortal.appx — aplikacja instalacyjna Portal firmy dla systemu Windows Phone 8.1
 
     -   WinPhoneCompanyPortal.ps1 — skrypt programu PowerShell służący do podpisywania pliku aplikacji Portal firmy na potrzeby wdrożenia go na urządzeniach z systemem Windows Phone 8.1
 
-    Możesz również pobrać aplikację Portal firmy systemu Windows Phone 8.1 (pakiet licencjonowany w trybie offline) lub Portal firmy systemu Windows 10 ze [Sklepu Microsoft dla Firm](http://businessstore.microsoft.com/). Aby korzystać z aplikacji Portal firmy w trybie offline, należy ją uzyskać, pobierając ją z licencją trybu offline i odpowiednim pakietem offline. Elementy list dotyczących platform Windows 8 i Windows Phone 8 odpowiadają elementom systemu 8.1. Aby uzyskać szczegółowe informacje dotyczące wykonania tej czynności za pomocą usługi Intune, zobacz [Zarządzanie aplikacjami zakupionymi w Sklepie Microsoft dla Firm](windows-store-for-business.md).
+    Możesz również pobrać aplikację Portal firmy systemu Windows Phone 8.1 (pakiet licencjonowany w trybie offline) lub Portal firmy systemu Windows 10 ze [Sklepu Microsoft dla Firm](https://businessstore.microsoft.com/). Aby korzystać z aplikacji Portal firmy w trybie offline, należy ją uzyskać, pobierając ją z licencją trybu offline i odpowiednim pakietem offline. Elementy list dotyczących platform Windows 8 i Windows Phone 8 odpowiadają elementom systemu 8.1. Aby uzyskać szczegółowe informacje dotyczące wykonania tej czynności za pomocą usługi Intune, zobacz [Zarządzanie aplikacjami zakupionymi w Sklepie Microsoft dla Firm](windows-store-for-business.md).
 
-2.  **Pobierz zestaw Windows Phone SDK** Pobierz zestaw Windows Phone SDK 8.0 (http://go.microsoft.com/fwlink/?LinkId=615570)) i zainstaluj go na komputerze. Zestaw SDK jest potrzebny do generowania tokenu rejestracji aplikacji.
+2.  **Pobierz zestaw Windows Phone SDK** Pobierz zestaw Windows Phone SDK 8.0 (https://go.microsoft.com/fwlink/?LinkId=615570)) i zainstaluj go na komputerze. Zestaw SDK jest potrzebny do generowania tokenu rejestracji aplikacji.
 
 3.  **Wygeneruj plik AETX** Wygeneruj plik tokenu rejestracji aplikacji (AETX) z pliku PFX firmy Symantec za pomocą narzędzia AETGenerator.exe wchodzącego w skład zestawu Windows Phone SDK 8.0. Aby uzyskać instrukcje dotyczące sposobu tworzenia pliku AETX, zobacz [Jak wygenerować token rejestracji aplikacji dla systemu Windows Phone](https://msdn.microsoft.com/library/windows/apps/jj735576.aspx)
 
-4.  **Pobierz zestaw Windows SDK dla systemu Windows 8.1** Pobierz i zainstaluj zestaw [Windows Phone SDK](http://go.microsoft.com/fwlink/?LinkId=613525) (http://go.microsoft.com/fwlink/?LinkId=613525)). Zwróć uwagę, że skrypt programu PowerShell dołączony do aplikacji Portal firmy używa domyślnej lokalizacji instalacji: `${env:ProgramFiles(x86)}\Windows Kits\8.1`. W przypadku instalacji w innym miejscu należy dołączyć lokalizację w parametrze polecenia cmdlet.
+4.  **Pobierz zestaw Windows SDK dla systemu Windows 8.1** Pobierz i zainstaluj zestaw [Windows Phone SDK](https://go.microsoft.com/fwlink/?LinkId=613525) (https://go.microsoft.com/fwlink/?LinkId=613525)). Zwróć uwagę, że skrypt programu PowerShell dołączony do aplikacji Portal firmy używa domyślnej lokalizacji instalacji: `${env:ProgramFiles(x86)}\Windows Kits\8.1`. W przypadku instalacji w innym miejscu należy dołączyć lokalizację w parametrze polecenia cmdlet.
 
 5.  **Podpisz kod aplikacji przy użyciu programu PowerShell** Jako administrator otwórz program **Windows PowerShell** na komputerze hosta z zainstalowanym pakietem Windows SDK i certyfikatem podpisywania kodu przedsiębiorstwa firmy Symantec, przejdź do pliku Sign-WinPhoneCompanyPortal.ps1, a następnie uruchom skrypt.
 
     **Przykład 1**
 
-    ```
+    ```PowerShell
     .\Sign-WinPhoneCompanyPortal.ps1 -InputAppx 'C:\temp\CompanyPortal.appx' -OutputAppx 'C:\temp\CompanyPortalEnterpriseSigned.appx' -PfxFilePath 'C:\signing\cert.pfx' -PfxPassword '1234' -AetxPath 'C:\signing\cert.aetx'
     ```
     W tym przykładzie skrypt podpisuje plik CompanyPortal.appx w lokalizacji C:\temp\ i tworzy plik CompanyPortalEnterpriseSigned.appx. Używa hasła 1234 do pliku PFX i odczytuje identyfikator wydawcy z pliku PFX. Odczytuje również identyfikator przedsiębiorstwa z pliku cert.aetx.
 
     **Przykład 2**
 
-    ```
+    ```PowerShell
     .\Sign-WinPhoneCompanyPortal.ps1 -InputAppx 'C:\temp\CompanyPortal.appx' -OutputAppx 'C:\temp\CompanyPortalEnterpriseSigned.appx' -PfxFilePath 'C:\signing\cert.pfx' -PfxPassword '1234' -PublisherId 'OID.0.9.2342.19200300.100.1.1=1000000001, CN="Test, Inc.", OU=Test 1' -EnterpriseId 1000000001
     ```
     W tym przykładzie skrypt podpisuje plik CompanyPortal.appx w lokalizacji C:\temp\ i tworzy plik CompanyPortalEnterpriseSigned.appx. Używa hasła 1234 do pliku PFX i określonego identyfikatora wydawcy.
@@ -128,7 +128,7 @@ Okresowo należy odnawiać certyfikat firmy Symantec służący do wdrażania ap
 
 1.  Poszukaj wiadomości e-mail dotyczącej odnowienia certyfikatu, która została wysłana przez firmę Symantec około 14 dni przed jego wygaśnięciem. Zawiera ona instrukcje od firmy Symantec w zakresie odnowienia certyfikatu przedsiębiorstwa.
 
-    Aby uzyskać dodatkowe informacje o certyfikatach firmy Symantec, odwiedź witrynę [www.symantec.com](http://www.symantec.com) lub zadzwoń pod numer 1-877-438-8776 lub 1-650-426-3400.
+    Aby uzyskać dodatkowe informacje o certyfikatach firmy Symantec, odwiedź witrynę [www.symantec.com](https://www.symantec.com) lub zadzwoń pod numer 1-877-438-8776 lub 1-650-426-3400.
 
 2.  Przejdź do witryny internetowej (na przykład: [https://products.websecurity.symantec.com/orders/enrollment/microsoftCert.do](https://products.websecurity.symantec.com/orders/enrollment/microsoftCert.do)) i zaloguj się za pomocą identyfikatora wydawcy firmy Symantec oraz adresu e-mail skojarzonego z certyfikatem. Pamiętaj o tym, aby rozpocząć procedurę odnowienia na tym samym komputerze, na którym będzie pobierany certyfikat.
 
@@ -155,7 +155,7 @@ Aplikację Portal firmy dla systemu Windows 10 można wdrożyć ręcznie bezpoś
 1. Zaloguj się do swojego konta w [Sklepie Microsoft dla Firm](https://www.microsoft.com/business-store) i kup wersję **licencji offline** aplikacji Portal firmy.  
 2. Po nabyciu aplikacji wybierz ją ze strony **Spis**.  
 3. Wybierz pozycję **Wszystkie urządzenia systemu Windows 10** w polu **Platforma**, a następnie odpowiednią wartość pola **Architektura** i pobierz aplikację. Plik licencji aplikacji nie jest wymagany dla tej aplikacji.
-![Obraz systemu Windows 10 wszystkich urządzeń i szczegóły pakietu Architektura X86 do pobrania](./media/Win10CP-all-devices.png)
+![Obraz przedstawiający szczegóły pakietu systemu Windows 10 X86 do pobrania](./media/Win10CP-all-devices.png)
 4. Pobierz wszystkie pakiety w obszarze „Wymagane struktury”. Jest to niezbędne dla architektury x86, x64 i ARM — co składa się na całkowitą liczbę 9 pakietów, jak pokazano poniżej.
 
 ![Obraz plików zależności do pobrania ](./media/Win10CP-dependent-files.png)
@@ -164,7 +164,7 @@ Aplikację Portal firmy dla systemu Windows 10 można wdrożyć ręcznie bezpoś
    ![Obraz folderu Zależności zapisany w pliku APPXBUN](./media/Win10CP-Dependencies-save.png)
    2. Umieść dziewięć pakietów zależności w folderze Zależności.  
    Jeśli zależności nie będą wprowadzone w tym formacie, usługa Intune nie będzie mogła ich rozpoznać i przekazać podczas przekazywania pakietu, co spowoduje niepowodzenie przekazania z powodu następującego błędu.  
-   ![W folderze aplikacji nie znaleziono zależności aplikacji systemu Windows dla tego instalatora oprogramowania. Możesz kontynuować tworzenie i wdrażanie tej aplikacji, ale nie będzie ona działać, dopóki nie zostaną dostarczone brakujące zależności aplikacji systemu Windows.](./media/Win10CP-error-message.png)
+   ![Komunikat o błędzie — należy określić zależności aplikacji systemu Windows.](./media/Win10CP-error-message.png)
 6. Wróć do usługi Intune, a następnie przekaż aplikację Portal firmy jako nową aplikację. Wdróż ją jako wymaganą aplikację dla żądanej grupy użytkowników docelowych.  
 
 Aby uzyskać więcej informacji na temat sposobu obsługi zależności dla aplikacji uniwersalnych w usłudze Intune, zobacz temat [Deploying an appxbundle with dependencies via Microsoft Intune MDM](https://blogs.technet.microsoft.com/configmgrdogs/2016/11/30/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm/) (Wdrażanie pliku appxbundle z zależnościami poprzez rozwiązanie MDM programu Microsoft Intune).  

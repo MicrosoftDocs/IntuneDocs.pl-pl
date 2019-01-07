@@ -1,12 +1,12 @@
 ---
 title: Pobieranie danych z interfejsu API magazynu danych za pomocą klienta REST
 titlesuffix: Microsoft Intune
-description: Pobieraj dane z magazynu danych usługi Intune za pomocą interfejsu API RESTful.
+description: W tym temacie opisano sposób pobierania danych z magazynu danych usługi Microsoft Intune przy użyciu interfejsu API RESTful.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/13/2018
+ms.date: 12/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: bcd4d9177bcefc1e026bc55831e589a5bcb57105
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 893e20652af68ec7f33c733376252a937f9584dc
+ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52185997"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53642884"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Pobieranie danych z interfejsu API magazynu danych usługi Intune za pomocą klienta REST
 

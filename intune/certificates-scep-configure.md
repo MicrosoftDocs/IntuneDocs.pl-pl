@@ -14,12 +14,12 @@ ms.reviewer: kmyrup
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 73a3b26eb9a18475530e3b52ba9b91c4af5e685d
-ms.sourcegitcommit: 349ab913932547b4a7491181f0aff092f109b87b
+ms.openlocfilehash: ee61063a36a486a0840446f82834bc37cc96bfc0
+ms.sourcegitcommit: a843bd081e9331838ade05a3c05b02d60b6bec4c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52303876"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53597379"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurowanie certyfikatów SCEP i korzystanie z nich w usłudze Intune
 
@@ -27,23 +27,23 @@ Ten artykuł zawiera informacje dotyczące konfigurowania infrastruktury oraz tw
 
 ## <a name="configure-on-premises-infrastructure"></a>Konfigurowanie infrastruktury lokalnej
 
-- **Domena usługi Active Directory:** wszystkie serwery wymienione w tej części (z wyjątkiem serwera proxy aplikacji internetowej) muszą należeć do Twojej domeny usługi Active Directory.
+- **Domena usługi Active Directory**: Wszystkie serwery wymienione w tej części (z wyjątkiem serwera proxy aplikacji internetowych) muszą należeć do Twojej domeny usługi Active Directory.
 
-- **Urząd certyfikacji** (CA): wymagany jest urząd certyfikacji przedsiębiorstwa firmy Microsoft z systemem Windows Server 2008 R2 lub nowszym w wersji Enterprise. Autonomiczny urząd certyfikacji nie jest obsługiwany. Aby uzyskać szczegółowe informacje, zobacz temat [Instalowanie urzędu certyfikacji](http://technet.microsoft.com/library/jj125375.aspx).
+- **Urząd certyfikacji**: wymagany jest urząd certyfikacji przedsiębiorstwa firmy Microsoft z systemem Windows Server 2008 R2 lub nowszym w wersji Enterprise. Autonomiczny urząd certyfikacji nie jest obsługiwany. Aby uzyskać szczegółowe informacje, zobacz temat [Instalowanie urzędu certyfikacji](http://technet.microsoft.com/library/jj125375.aspx).
     Jeśli na serwerze urzędu certyfikacji jest zainstalowany system Windows Server 2008 R2, należy najpierw [zainstalować poprawkę z tematu KB2483564](http://support.microsoft.com/kb/2483564/).
 
-- **Serwer usługi NDES**: w systemie Windows Server 2012 R2 lub nowszym należy skonfigurować rolę serwera rejestracji urządzeń sieciowych (NDES). Usługa Intune nie obsługuje usługi NDES na serwerze, na którym jest uruchomiony urząd certyfikacji przedsiębiorstwa. Temat [Wskazówki dotyczące usługi rejestracji urządzeń sieciowych](http://technet.microsoft.com/library/hh831498.aspx) zawiera instrukcje dotyczące sposobu konfiguracji systemu Windows Server 2012 R2 do hostowania usługi NDES.
+- **Serwer usługi NDES**: w systemie Windows Server 2012 R2 lub nowszym należy skonfigurować rolę serwera usługi rejestracji urządzeń sieciowych (NDES). Usługa Intune nie obsługuje usługi NDES na serwerze, na którym jest uruchomiony urząd certyfikacji przedsiębiorstwa. Temat [Wskazówki dotyczące usługi rejestracji urządzeń sieciowych](http://technet.microsoft.com/library/hh831498.aspx) zawiera instrukcje dotyczące sposobu konfiguracji systemu Windows Server 2012 R2 do hostowania usługi NDES.
 Serwer usługi NDES musi być dołączony do domeny w tym samym lesie co urząd certyfikacji przedsiębiorstwa. Więcej informacji na temat wdrażania serwera usługi NDES w oddzielnym lesie, sieci izolowanej lub domenie wewnętrznej można znaleźć w temacie [Używanie modułu zasad z usługą rejestracji urządzeń sieciowych](https://technet.microsoft.com/library/dn473016.aspx).
 
 - **Łącznik certyfikatów usługi Microsoft Intune**: pobierz instalator **łącznika certyfikatów** (**NDESConnectorSetup.exe**) z portalu administracyjnego usługi Intune. Należy uruchomić ten instalator na serwerze z rolą usługi NDES.  
 
   - Łącznik certyfikatów usługi NDES obsługuje też tryb Federal Information Processing Standard (FIPS). Tryb FIPS nie jest wymagany, ale gdy jest on włączony, możesz wystawiać i odwoływać certyfikaty.
 
-- **Serwer proxy aplikacji internetowej** (opcjonalnie): jako serwera proxy aplikacji internetowej (WAP) użyj serwera z systemem Windows Server 2012 R2 lub nowszym. Ta konfiguracja:
+- **Serwer proxy aplikacji internetowej** (opcjonalnie): użyj serwera, na którym system Windows Server 2012 R2 lub nowszy działa jako serwer proxy aplikacji internetowej (WAP). Ta konfiguracja:
   - Umożliwia urządzeniom otrzymywanie certyfikatów przy użyciu połączenia internetowego.
   - Jest zalecana ze względów bezpieczeństwa w przypadku używania połączenia internetowego do pobierania i odnawiania certyfikatów przez urządzenia.
   
-- **Serwer proxy aplikacji usługi Azure AD** (opcjonalnie): serwera proxy aplikacji usługi Azure AD można używać zamiast dedykowanego serwer proxy aplikacji internetowej (WAP) w celu publikowania serwera usługi NDES w Internecie. Aby uzyskać więcej informacji, zobacz [Zapewnianie bezpiecznego dostępu zdalnego do aplikacji lokalnych](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
+- **Serwer proxy aplikacji usługi Azure AD** (opcjonalnie): serwera proxy aplikacji usługi Azure AD można używać zamiast dedykowanego serwera proxy aplikacji internetowej (WAP) w celu publikowania serwera usługi NDES w Internecie. Aby uzyskać więcej informacji, zobacz [Zapewnianie bezpiecznego dostępu zdalnego do aplikacji lokalnych](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
 
 #### <a name="additional"></a>Dodatkowe
 
@@ -263,7 +263,7 @@ W tym kroku:
 
     - **Ulepszone użycie klucza**: musi to być wartość **Uwierzytelnianie klienta**
 
-    - **Nazwa podmiotu**: ta wartość musi być nazwą DNS serwera, na którym jest instalowany certyfikat (serwera usługi NDES)
+    - **Nazwa podmiotu**: ta wartość musi być nazwą DNS serwera, na którym jest instalowany certyfikat (serwer usługi NDES)
 
 ##### <a name="configure-iis-request-filtering"></a>Konfigurowanie filtrowania żądań w usługach IIS
 
@@ -280,8 +280,8 @@ W tym kroku:
 
     Potwierdź, że następujące wartości są ustawione jako wpisy typu DWORD:
 
-    - Nazwa: **MaxFieldLength**o wartości dziesiętnej **65534**
-    - Nazwa: **MaxRequestBytes**o wartości dziesiętnej **65534**
+    - Nazwa: **MaxFieldLength** o wartości dziesiętnej **65534**
+    - Nazwa: **MaxRequestBytes** o wartości dziesiętnej **65534**
 
 4. Uruchom ponownie serwer usługi NDES. Teraz serwer jest gotowy do obsługi łącznika certyfikatów.
 
@@ -390,7 +390,7 @@ Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i podaj nas
 
                 Aby użyć zmiennej `{{OnPrem_Distinguished_Name}}`, zsynchronizuj atrybut użytkownika `onpremisesdistingishedname` z usługą Azure AD za pomocą programu [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect).
 
-            - **CN = {{onPremisesSamAccountName}}**: administratorzy mogą synchronizować atrybut samAccountName z usługi Active Directory do usługi Azure AD za pomocą programu Azure AD Connect do atrybutu o nazwie `onPremisesSamAccountName`. Usługa Intune może podstawić zmienną jako część żądania wystawienia certyfikatu w podmiocie certyfikatu SCEP.  Atrybut samAccountName jest nazwą logowania użytkownika, która jest używana do obsługi klientów i serwerów z poprzedniej wersji systemu Windows (starszej niż Windows 2000). Nazwa logowania użytkownika ma format: `DomainName\testUser` lub tylko `testUser`.
+            - **CN={{onPremisesSamAccountName}}**: administratorzy mogą synchronizować atrybut samAccountName z usługi Active Directory do usługi Azure AD za pomocą programu Azure AD Connect do atrybutu o nazwie `onPremisesSamAccountName`. Usługa Intune może podstawić zmienną jako część żądania wystawienia certyfikatu w podmiocie certyfikatu SCEP.  Atrybut samAccountName jest nazwą logowania użytkownika, która jest używana do obsługi klientów i serwerów z poprzedniej wersji systemu Windows (starszej niż Windows 2000). Nazwa logowania użytkownika ma format: `DomainName\testUser` lub tylko `testUser`.
 
                 Aby użyć zmiennej `{{onPremisesSamAccountName}}`, zsynchronizuj atrybut użytkownika `onPremisesSamAccountName` z usługą Azure AD za pomocą programu [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect).
 
@@ -428,7 +428,7 @@ Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i podaj nas
         >  - Profil nie zostanie zainstalowany na urządzeniu, jeśli określone zmienne urządzenia nie są obsługiwane. Na przykład jeśli zmienna {{IMEI}} zostanie użyta w nazwie podmiotu profilu protokołu SCEP przypisanego do urządzenia, które nie ma numeru IMEI, instalacja profilu zakończy się niepowodzeniem. 
 
 
-   - **Nazwa alternatywna podmiotu**: określ sposób automatycznego tworzenia wartości dla nazwy alternatywnej podmiotu w żądaniu certyfikatu przez usługę Intune. Opcje zmienią się, jeśli wybierzesz typ certyfikatu **Użytkownik** lub typ certyfikatu **Urządzenie**. 
+   - **Alternatywna nazwa podmiotu**: wprowadź informacje na temat sposobu, w jaki usługa Intune ma automatycznie tworzyć wartości alternatywnej nazwy podmiotu (SAN) w żądaniu certyfikatu. Opcje zmienią się, jeśli wybierzesz typ certyfikatu **Użytkownik** lub typ certyfikatu **Urządzenie**. 
 
         **Typ certyfikatu Użytkownik**  
 
@@ -470,23 +470,23 @@ Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i podaj nas
         >  -  W przypadku korzystania z właściwości urządzenia, takich jak numer IMEI, numer seryjny i w pełni kwalifikowana nazwa domeny w obrębie podmiotu lub nazwy SAN dla certyfikatu urządzenia, należy pamiętać, że te właściwości mogą zostać sfałszowane przez osobę z dostępem do urządzenia.
         >  - Profil nie zostanie zainstalowany na urządzeniu, jeśli określone zmienne urządzenia nie są obsługiwane. Na przykład jeśli zmienna {{IMEI}} zostanie użyta w alternatywnej nazwie podmiotu profilu protokołu SCEP przypisanego do urządzenia, które nie ma numeru IMEI, instalacja profilu zakończy się niepowodzeniem.  
 
-   - **Okres ważności certyfikatu**: jeśli dla wystawiającego urzędu certyfikacji uruchomiono polecenie `certutil - setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE`, które dopuszcza niestandardowy okres ważności, możesz określić ilość czasu pozostałego do wygaśnięcia certyfikatu.<br>Możesz podać okres krótszy niż okres ważności w szablonie certyfikatu, ale nie dłuższy. Jeśli na przykład okres ważności certyfikatu w szablonie certyfikatu wynosi dwa lata, możesz określić jeden rok, ale nie pięć lat. Wartość musi być też niższa niż pozostały okres ważności certyfikatu urzędu wystawiającego certyfikaty. 
-   - **Dostawca magazynu kluczy (KSP)** (Windows Phone 8.1, Windows 8.1, Windows 10): podaj miejsce przechowywania klucza certyfikatu. Można wybrać jedną z następujących opcji:
+   - **Okres ważności certyfikatu**: jeśli na urzędzie wystawiającym certyfikaty zostało uruchomione polecenie `certutil - setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE`, które dopuszcza niestandardowy okres ważności, możesz określić ilość czasu pozostałego do wygaśnięcia certyfikatu.<br>Możesz podać okres krótszy niż okres ważności w szablonie certyfikatu, ale nie dłuższy. Jeśli na przykład okres ważności certyfikatu w szablonie certyfikatu wynosi dwa lata, możesz określić jeden rok, ale nie pięć lat. Wartość musi być też niższa niż pozostały okres ważności certyfikatu urzędu wystawiającego certyfikaty. 
+   - **Dostawca magazynu kluczy (KSP)** (Windows Phone 8.1, Windows 8.1, Windows 10): wprowadź lokalizację przechowywania klucza do certyfikatu. Można wybrać jedną z następujących opcji:
      - **Zarejestruj u dostawcy magazynu kluczy modułu Trusted Platform Module (TPM), w przeciwnym razie u dostawcy magazynu kluczy oprogramowania**
      - **Zarejestruj u dostawcy magazynu kluczy modułu Trusted Platform Module (TPM), w przeciwnym razie niepowodzenie**
      - **Zarejestruj w usłudze Passport, w przeciwnym razie niepowodzenie (system Windows 10 i nowsze)**
      - **Zarejestruj u dostawcy magazynu kluczy oprogramowania**
 
    - **Użycie klucza**: podaj opcje użycia klucza certyfikatu. Dostępne opcje:
-     - **Szyfrowanie klucza**: zezwalaj na wymianę kluczy tylko wtedy, gdy klucz jest zaszyfrowany.
-     - **Podpis cyfrowy**: zezwalaj na wymianę kluczy tylko wtedy, gdy klucz jest chroniony przy użyciu podpisu cyfrowego.
-   - **Rozmiar klucza (bity)**: wybierz liczbę bitów zawartych w kluczu.
-   - **Algorytm skrótu** (Android, Windows Phone 8.1, Windows 8.1, Windows 10): wybierz jeden z dostępnych typów algorytmu wyznaczania wartości skrótu do użycia z tym certyfikatem. Wybierz najwyższy poziom zabezpieczeń obsługiwany przez podłączane urządzenia.
+     - **Szyfrowanie klucza**: zezwalaj na wymianę kluczy tylko wtedy, gdy klucz jest zaszyfrowany
+     - **Podpis cyfrowy**: zezwalaj na wymianę kluczy tylko wtedy, gdy w ochronie klucza pomaga podpis cyfrowy
+   - **Rozmiar klucza (bity)**: wybierz liczbę bitów zawartych w kluczu
+   - **Algorytm wyznaczania wartości skrótu** (Android, Windows Phone 8.1, Windows 8.1, Windows 10): Wybierz jeden z dostępnych typów algorytmu wyznaczania wartości skrótu do użycia z tym certyfikatem. Wybierz najwyższy poziom zabezpieczeń obsługiwany przez podłączane urządzenia.
    - **Certyfikat główny**: wybierz profil certyfikatu głównego urzędu certyfikacji, który został uprzednio skonfigurowany i przypisany do użytkownika i/lub urządzenia. Ten certyfikat urzędu certyfikacji musi być certyfikatem głównym urzędu certyfikacji wystawiającego certyfikat skonfigurowany w ramach danego profilu certyfikatu. Przypisz ten profil zaufanego certyfikatu głównego do tej samej grupy, która jest przypisana w profilu certyfikatu SCEP.
-   - **Rozszerzone użycie klucza**: użyj polecenia **Dodaj**, aby dodać wartości w zależności od przeznaczenia certyfikatu. W większości przypadków jest wymagane wprowadzenie wartości **Uwierzytelnianie klienta** dla certyfikatu, aby zapewnić użytkownikom lub urządzeniom możliwość uwierzytelnienia na serwerze. Można jednak dodać również inne użycia klucza, zgodnie z potrzebami.
+   - **Rozszerzone użycie klucza**: **dodaj** wartości w zależności od celu certyfikatu. W większości przypadków jest wymagane wprowadzenie wartości **Uwierzytelnianie klienta** dla certyfikatu, aby zapewnić użytkownikom lub urządzeniom możliwość uwierzytelnienia na serwerze. Można jednak dodać również inne użycia klucza, zgodnie z potrzebami.
    - **Ustawienia rejestracji**
-     - **Próg odnawiania (%)**: podaj wartość procentową pozostałego okresu ważności certyfikatu, przy której urządzenie ma żądać jego odnowienia.
-     - **Adresy URL serwerów SCEP**: podaj co najmniej jeden adres URL dla serwerów usługi NDES, które wystawiają certyfikaty za pośrednictwem protokołu SCEP.
+     - **Próg odnawiania (%)**: wprowadź wartość procentową pozostałego okresu ważności certyfikatu, przy której urządzenie ma żądać odnowienia certyfikatu.
+     - **Adresy URL serwerów SCEP**: wprowadź co najmniej jeden adres URL dla serwerów usługi NDES, które wystawiają certyfikaty za pośrednictwem protokołu SCEP. Na przykład wprowadź adres podobny do następującego: `https://ndes.contoso.com/certsrv/mscep/mscep.dll`.
      - Wybierz pozycję **OK**, a następnie **Utwórz**, aby utworzyć profil.
 
 Profil zostanie utworzony i wyświetlony w okienku z listą profilów.

@@ -6,7 +6,7 @@ keywords: Magazyn danych usługi Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/13/2018
+ms.date: 12/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 931aa360b82efcf4ef643fb40bc4982c05e589ee
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 9c93554fd6750459aacc154165e7a58e160534fb
+ms.sourcegitcommit: 1c9ef5cfac2fc024528d2cfc9d590fa68dd58080
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52182996"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53429716"
 ---
 # <a name="create-a-report-from-the-odata-feed-with-power-bi"></a>Tworzenie raportu w usłudze Power BI na podstawie źródła danych OData
 
@@ -45,7 +45,7 @@ Nieco mylące może być użycie terminów _jednostka_ i _tabela_. Model danych 
 
 ## <a name="install-power-bi-desktop"></a>Instalowanie programu Power BI Desktop
 
-Zainstaluj najnowszą wersję aplikacji Power BI Desktop. Aplikację Power BI Desktop możesz pobrać z witryny [PowerBI.microsoft.com](https://powerbi.microsoft.com/desktop)
+Zainstaluj najnowszą wersję aplikacji Power BI Desktop. Aplikację Power BI Desktop możesz pobrać z witryny: [PowerBI.microsoft.com](https://powerbi.microsoft.com/desktop)
 
 ## <a name="connect-to-the-odata-feed-for-the-intune-data-warehouse-for-your-tenant"></a>Łączenie się ze źródłem danych OData dla magazynu danych usługi Intune swojej dzierżawy
 
@@ -106,7 +106,7 @@ Masz teraz wizualizację pokazującą rozkład producentów urządzeń w organiz
 Do mapy drzewa możesz dodać filtr, aby za pomocą aplikacji odpowiedzieć na inne pytania.
 
 
-1. Aby dodać filtr, wybierz kanwę raportu, a następnie wybierz **ikonę fragmentatora** (![Mapa drzewa z danymi](media/reports-create-slicer.png)) w sekcji **Wizualizacje**.
+1. Aby dodać filtr, wybierz kanwę raportu, a następnie wybierz **ikonę fragmentatora** (![Mapa drzewa z modelem danych i obsługiwanymi relacjami](media/reports-create-slicer.png)) w obszarze **Wizualizacje**.
 2. Znajdź tabelę **ownerTypes** i przeciągnij pole danych **ownerTypeName** do sekcji **Filtry** w panelu **Wizualizacje**.  
 
    W tabeli devices znajduje się pole danych **OwnerTypeKey**, które zawiera kod informujący o tym, czy urządzenie jest własnością firmy, czy prywatną. Ponieważ za pomocą tego filtru chcesz pokazać przyjazne nazwy, znajdź tabelę **ownerTypes** i przeciągnij pole **ownerTypeName**. Ten przykład pokazuje, jak model danych obsługuje relacje między tabelami.

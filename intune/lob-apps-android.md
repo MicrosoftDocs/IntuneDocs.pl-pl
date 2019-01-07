@@ -1,12 +1,12 @@
 ---
 title: Dodawanie aplikacji biznesowych dla systemu Android do usługi Microsoft Intune
 titlesuffix: ''
-description: Dowiedz się, jak dodawać aplikacje biznesowe dla systemu Android do usługi Microsoft Intune.
+description: Dowiedz się, jak dodać aplikację biznesową (LOB) dla systemu Android do usługi Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/13/2018
+ms.date: 12/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 60ca4e81fbf2b081a27c633a13d808e88389bb1c
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 2d1bc4762f46062cc80bb584da0a71423140c234
+ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52182945"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53642782"
 ---
 # <a name="add-an-android-line-of-business-app-to-microsoft-intune"></a>Dodawanie aplikacji biznesowych dla systemu Android do usługi Microsoft Intune
 
@@ -32,7 +32,7 @@ Aplikacja biznesowa (LOB) to aplikacja dodawana do usługi Intune za pomocą pli
 > [!Note]
 > Aby uzyskać więcej informacji o aplikacjach LOB z zarządzanego sklepu Google Play, zobacz [Praca z aplikacją biznesową z zarządzanego sklepu Google Play](apps-add-android-for-work.md?#working-with-a-line-of-business-app-from-the-managed-google-play-store). 
 
-## <a name="step-1-specify-the-software-setup-file"></a>Krok 1. Określanie lokalizacji pliku konfiguracji oprogramowania
+## <a name="step-1-specify-the-software-setup-file"></a>Krok 1. Określanie pliku konfiguracji oprogramowania
 
 1. Zaloguj się do [portalu Azure](https://portal.azure.com).
 2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
@@ -41,39 +41,39 @@ Aplikacja biznesowa (LOB) to aplikacja dodawana do usługi Intune za pomocą pli
 5. Wybierz pozycję **Dodaj** powyżej listy aplikacji.
 6. W okienku **Dodaj aplikację** wybierz opcję **Aplikacja biznesowa**.
 
-## <a name="step-2-configure-the-app-package-file"></a>Krok 2. Konfigurowanie pliku pakietu aplikacji
+## <a name="step-2-configure-the-app-package-file"></a>Krok 2: Konfigurowanie pliku pakietu aplikacji
 
 1. W okienku **Dodaj aplikację** wybierz pozycję **Plik pakietu aplikacji**.
 2. W okienku **Plik pakietu aplikacji** wybierz przycisk przeglądania. Następnie wybierz plik instalacyjny systemu Android z rozszerzeniem **APK**.
 3. Po zakończeniu wybierz przycisk **OK**.
 
 
-## <a name="step-3-configure-app-information"></a>Krok 3. Konfigurowanie informacji o aplikacji
+## <a name="step-3-configure-app-information"></a>Krok 3: Konfigurowanie informacji o aplikacji
 
 1. W okienku **Dodaj aplikację** wybierz pozycję **Informacje o aplikacji**.
 2. W okienku **Informacje o aplikacji** dodaj szczegóły swojej aplikacji. W zależności od wybranej aplikacji niektóre wartości w tym okienku mogą zostać wypełnione automatycznie.
     - **Nazwa**: wprowadź nazwę aplikacji wyświetlaną w portalu firmy. Upewnij się, że wszystkie używane nazwy aplikacji są unikatowe. Jeśli dana nazwa aplikacji występuje dwa razy, w portalu firmy będzie widoczna tylko jedna aplikacja o tej nazwie.
     - **Opis**: wprowadź opis aplikacji. Opis będzie widoczny w portalu firmy.
-    - **Wydawca**: wprowadź nazwę wydawcy aplikacji.
+    - **Wydawca**: Wprowadź nazwę wydawcy aplikacji.
     - **Minimalna wersja systemu operacyjnego**: wybierz z listy minimalną wersję systemu operacyjnego, w którym można zainstalować aplikację. W przypadku przypisania aplikacji do urządzenia z wcześniejszą wersją systemu operacyjnego instalacja nie będzie możliwa.
-    - **Kategoria**: wybierz co najmniej jedną wbudowaną kategorię aplikacji lub kategorię utworzoną przez siebie. Kategorie ułatwiają użytkownikom znajdowanie aplikacji podczas przeglądania portalu firmy.
-    - **Wyświetl jako polecaną aplikację w portalu firmy**: wyróżnij aplikację na stronie głównej portalu firmy dla użytkowników przeglądających aplikacje.
-    - **Adres URL informacji**: opcjonalnie wprowadź adres URL witryny internetowej zawierającej informacje o tej aplikacji. Adres URL będzie widoczny w portalu firmy.
-    - **Adres URL zasad ochrony prywatności**: opcjonalnie wprowadź adres URL witryny internetowej zawierającej informacje o zasadach ochrony prywatności w tej aplikacji. Adres URL będzie widoczny w portalu firmy.
+    - **Kategoria**: wybierz co najmniej jedną kategorię aplikacji — wbudowaną lub utworzoną samodzielnie. Kategorie ułatwiają użytkownikom znajdowanie aplikacji podczas przeglądania portalu firmy.
+    - **Wyświetl jako polecaną aplikację w Portalu firmy**: Wyróżnij aplikację na stronie głównej Portalu firmy dla użytkowników przeglądających aplikacje.
+    - **Adres URL informacji**: Opcjonalnie wprowadź adres URL witryny sieci Web zawierającej informacje o tej aplikacji. Adres URL będzie widoczny w portalu firmy.
+    - **Adres URL zasad ochrony prywatności**: Opcjonalnie wprowadź adres URL witryny sieci Web zawierającej informacje dotyczące zasad ochrony prywatności w tej aplikacji. Adres URL będzie widoczny w portalu firmy.
     - **Deweloper**: opcjonalnie wprowadź nazwę dewelopera aplikacji.
     - **Właściciel**: opcjonalnie wprowadź nazwę właściciela aplikacji. Przykładem może być **Dział kadr**.
     - **Uwagi**: wprowadź wszelkie uwagi, które chcesz skojarzyć z tą aplikacją.
-    - **Logo**: przekaż ikonę, która zostanie skojarzona z aplikacją. Będzie ona wyświetlana jako ikona aplikacji podczas przeglądania Portalu firmy.
+    - **Logo**: przekaż ikonę skojarzoną z aplikacją. Będzie ona wyświetlana jako ikona aplikacji podczas przeglądania Portalu firmy.
 3. Po zakończeniu wybierz przycisk **OK**.
 
-## <a name="step-4-finish-up"></a>Krok 4. Zakończenie
+## <a name="step-4-finish-up"></a>Krok 4. Zakończenie
 
 1. W okienku **Dodaj aplikację** sprawdź, czy szczegóły aplikacji są prawidłowe.
 2. Wybierz pozycję **Dodaj**, aby przekazać aplikację do usługi Intune.
 
 Utworzona przez Ciebie aplikacja jest teraz widoczna na liście aplikacji. Korzystając z listy, możesz przypisywać aplikację do wybranych grup. Aby uzyskać pomoc, zobacz artykuł [How to assign apps to groups](apps-deploy.md) (Jak przypisać aplikacje do grupy).
 
-## <a name="step-5-update-a-line-of-business-app"></a>Krok 5. Aktualizacja aplikacji biznesowej
+## <a name="step-5-update-a-line-of-business-app"></a>Krok 5. Aktualizowanie aplikacji biznesowej
 
 [!INCLUDE [shared-proc-lob-updateapp](./includes/shared-proc-lob-updateapp.md)]
 

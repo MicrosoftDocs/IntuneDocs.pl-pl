@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/04/2018
+ms.date: 12/20/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: apps; get-started
-ms.openlocfilehash: 048b8472be00c544611fe2ea8763b16019cebc0b
-ms.sourcegitcommit: 580eb4920d18ce09c9431d9d0dfee9d195459c0e
+ms.openlocfilehash: e122f2c0c62fbde04a328b1423416be82dcfa1f9
+ms.sourcegitcommit: f114eeba1909c7d4e157003b1a9e2232dd1c99e3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52887053"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53734225"
 ---
 # <a name="overview-of-the-app-lifecycle-in-microsoft-intune"></a>Przegląd cyklu życia aplikacji w usłudze Microsoft Intune
 
@@ -28,7 +28,7 @@ ms.locfileid: "52887053"
 
 Cykl życia aplikacji w usłudze Microsoft Intune rozpoczyna się po dodaniu aplikacji i jest realizowany przez dodatkowe fazy aż do usunięcia aplikacji. Zrozumienie tych faz pozwala uzyskać szczegółowe informacje konieczne do rozpoczęcia zarządzania aplikacjami w usłudze Intune.
 
-![Cykl życia aplikacji](./media/app-lifecycle.png "Cykl życia aplikacji Intune")
+![Cykl życia aplikacji — dodawanie, wdrażanie, konfigurowanie, ochrona i wycofywanie.](./media/app-lifecycle.png "cykl życia aplikacji usługi Intune")
 
 ## <a name="add"></a>Dodaj
 

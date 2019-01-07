@@ -1,7 +1,7 @@
 ---
 title: Dziennik zmian magazynu danych usługi Intune
 titlesuffix: Microsoft Intune
-description: Lista zmian w interfejsie API magazynu danych usługi Intune.
+description: Ten temat zawiera listę zmian interfejsu API magazynu danych usługi Microsoft Intune.
 keywords: Magazyn danych usługi Intune
 author: Erikre
 ms.author: erikre
@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: dfdbaffeb8872e8b121d138ee0aca0315279e718
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 0f39b0cb758c8c62da2e76ef8eaff07264ff3f3a
+ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189949"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53642765"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Dziennik zmian dla interfejsu API magazynu danych usługi Intune
 
@@ -95,4 +95,4 @@ Można teraz tworzyć raporty i wizualizacje danych, korzystając z informacji s
 
 ## <a name="next-steps"></a>Następne kroki
  - Dowiedz się, [co nowego w usłudze Intune w każdym tygodniu](whats-new.md). Możesz również sprawdzić informacje o nadchodzących zmianach, ważnych powiadomieniach dotyczących usługi oraz poprzednich wersjach.
- - Zapoznaj się z [blogiem usługi Microsoft Intune](http://go.microsoft.com/fwlink/?LinkID=273882).
+ - Zapoznaj się z [blogiem usługi Microsoft Intune](https://go.microsoft.com/fwlink/?LinkID=273882).

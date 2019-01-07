@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/03/2018
+ms.date: 12/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 6e8a74763f29707aa3e774be52f7b383b040ec1e
-ms.sourcegitcommit: b93db06ba435555f5b126f97890931484372fcfb
+ms.openlocfilehash: 11a698628e3ca1342f10f088045012523c8ac745
+ms.sourcegitcommit: f114eeba1909c7d4e157003b1a9e2232dd1c99e3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52829151"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53734293"
 ---
 # <a name="intune-standalone---win32-app-management-public-preview"></a>Autonomiczna usługa Intune — zarządzanie aplikacjami Win32 (publiczna wersja zapoznawcza)
 
@@ -69,42 +69,42 @@ Odwołaj się do pliku *license.txt* przy użyciu ścieżki względnej *licenses
 
 Podobnie jak w przypadku aplikacji biznesowych, możesz dodać aplikację Win32 do usługi Microsoft Intune. Aplikacje tego typu są zwykle pisane we własnym zakresie lub przez inną firmę. W poniższych krokach przedstawiono wskazówki ułatwiające dodanie aplikacji systemu Windows do usługi Microsoft Intune.
 
-### <a name="step-1-specify-the-software-setup-file"></a>Krok 1. Określanie lokalizacji pliku konfiguracji oprogramowania
+### <a name="step-1-specify-the-software-setup-file"></a>Krok 1. Określanie pliku konfiguracji oprogramowania
 
 1.  Zaloguj się do [portalu Azure](https://portal.azure.com/).
 2.  Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 3.  W okienku **Intune** wybierz pozycję **Aplikacje klienckie** > **Aplikacje** > **Dodaj**.
 4.  W okienku aplikacji **Dodawanie** wybierz pozycję **Aplikacja systemu Windows (Win32) — wersja zapoznawcza** z listy rozwijanej.
 
-    ![Zrzut ekranu listy rozwijanej Dodaj aplikację — Dodaj typ](./media/apps-win32-app-01.png)
+    ![Zrzut ekranu przedstawiający blok dodawania aplikacji — pole listy rozwijanej dodawania typu](./media/apps-win32-app-01.png)
 
 ### <a name="step-2-upload-the-app-package-file"></a>Krok 2: Przekazywanie pliku pakietu aplikacji
 
 1.  W okienku **Dodawanie aplikacji** wybierz pozycję **Dodaj plik pakietu**, aby wybrać plik. Zostanie wyświetlone okienko Plik pakietu aplikacji.
 
-    ![Zrzut ekranu okienka Plik pakietu aplikacji](./media/apps-win32-app-02.png)
+    ![Zrzut ekranu przedstawiający blok pliku pakietu aplikacji](./media/apps-win32-app-02.png)
 
 2.  W okienku **Plik pakietu aplikacji** wybierz przycisk przeglądania. Następnie wybierz plik instalacyjny systemu Windows z rozszerzeniem *intunewin*.
 3.  Po zakończeniu wybierz przycisk **OK**.
 
-### <a name="step-3-configure-app-information"></a>Krok 3. Konfigurowanie informacji o aplikacji
+### <a name="step-3-configure-app-information"></a>Krok 3: Konfigurowanie informacji o aplikacji
 
 1.  Aby skonfigurować aplikację, w okienku **Dodaj aplikację** wybierz pozycję **Informacje o aplikacji**.
 2.  W okienku **Informacje o aplikacji** skonfiguruj następujące informacje. Niektóre wartości w tym okienku mogą zostać wypełnione automatycznie.
     - **Nazwa**: wprowadź nazwę aplikacji wyświetlaną w portalu firmy. Jeśli dana nazwa aplikacji występuje dwa razy, obie aplikacje będą wyświetlane w portalu firmy.
-    - **Opis**: wprowadź opis aplikacji. Opis będzie widoczny w portalu firmy.
-    - **Wydawca**: podaj nazwę wydawcy aplikacji.
+    - **Opis**: Wprowadź opis aplikacji. Opis będzie widoczny w portalu firmy.
+    - **Wydawca**: Wprowadź nazwę wydawcy aplikacji.
     - **Kategoria**: wybierz co najmniej jedną kategorię aplikacji — wbudowaną lub utworzoną samodzielnie. Kategorie ułatwiają użytkownikom znajdowanie aplikacji podczas przeglądania portalu firmy.
-    - **Wyświetl jako polecaną aplikację w portalu firmy**: wyróżnij aplikację na stronie głównej portalu firmy dla użytkowników przeglądających aplikacje.
+    - **Wyświetl jako polecaną aplikację w Portalu firmy**: Wyróżnij aplikację na stronie głównej Portalu firmy dla użytkowników przeglądających aplikacje.
     - **Adres URL informacji**: opcjonalnie wprowadź adres URL witryny internetowej zawierającej informacje o aplikacji. Adres URL będzie widoczny w portalu firmy.
-    - **Adres URL zasad ochrony prywatności**: opcjonalnie wprowadź adres URL witryny internetowej zawierającej informacje o zasadach ochrony prywatności mających zastosowanie do aplikacji. Adres URL będzie widoczny w portalu firmy.
+    - **Adres URL zasad ochrony prywatności**: opcjonalnie wprowadź adres URL witryny internetowej zawierającej informacje dotyczące zasad ochrony prywatności w aplikacji. Adres URL będzie widoczny w portalu firmy.
     - **Deweloper**: opcjonalnie wprowadź nazwę dewelopera aplikacji.
     - **Właściciel**: opcjonalnie wprowadź nazwę właściciela aplikacji. Przykładem może być **Dział kadr**.
     - **Uwagi**: wprowadź wszelkie uwagi, które chcesz skojarzyć z tą aplikacją.
-    - **Logo**: przekaż ikonę, która zostanie skojarzona z aplikacją. Będzie ona wyświetlana jako ikona aplikacji podczas przeglądania portalu firmy.
+    - **Logo**: przekaż ikonę skojarzoną z aplikacją. Będzie ona wyświetlana jako ikona aplikacji podczas przeglądania portalu firmy.
 3.  Po zakończeniu wybierz przycisk **OK**.
 
-### <a name="step-4-configure-app-installation-details"></a>Krok 4. Konfigurowanie szczegółów instalacji aplikacji
+### <a name="step-4-configure-app-installation-details"></a>Krok 4. Konfigurowanie szczegółów instalacji aplikacji
 1.  W okienku **Dodawanie aplikacji** wybierz pozycję **Program**, aby skonfigurować polecenia instalacji i usuwania aplikacji.
 2.  Dodaj pełny wiersz polecenia instalacji, który umożliwia zainstalowanie aplikacji. 
 
@@ -133,7 +133,7 @@ Podobnie jak w przypadku aplikacji biznesowych, możesz dodać aplikację Win32 
     - **Wymagana minimalna szybkość procesora (MHz)**: opcjonalnie określ minimalną szybkość procesora wymaganą do zainstalowania aplikacji.
 3.  Po zakończeniu wybierz przycisk **OK**.
 
-### <a name="step-6-configure-app-detection-rules"></a>Krok 6: Konfigurowanie reguł wykrywania aplikacji
+### <a name="step-6-configure-app-detection-rules"></a>Krok 6. Konfigurowanie reguł wykrywania aplikacji
 
 1.  W okienku **Dodawanie aplikacji** wybierz pozycję **Reguły wykrywania**, aby skonfigurować reguły wykrywania obecności aplikacji.
 2.  W polu **Format reguł** wybierz sposób wykrywania obecności aplikacji. Reguły wykrywania obecności aplikacji możesz skonfigurować ręcznie lub przy użyciu niestandardowego skryptu. Musisz wybrać co najmniej jedną regułę wykrywania. 
@@ -182,17 +182,19 @@ Podobnie jak w przypadku aplikacji biznesowych, możesz dodać aplikację Win32 
     - **Użyj niestandardowego skryptu wykrywania** — określ skrypt programu PowerShell, który będzie używany do wykrywania aplikacji. 
     
         1.  **Plik skryptu** — wybierz skrypt programu PowerShell, który wykryje obecność aplikacji na kliencie. Aplikacja zostanie wykryta, gdy skrypt zwróci wartość 0 jako kod zakończenia i zapisze wartość ciągu do strumienia STDOUT.
-        2.  **Uruchom skrypt jako proces 32-bitowy na klientach 64-bitowych**: wybierz opcję **Tak**, aby uruchamiać skrypt za pomocą poświadczeń zalogowanego użytkownika końcowego. Wybierz opcję **Nie** (domyślną), aby uruchamiać skrypt w kontekście systemu.
+
+        2.  **Uruchom skrypt jako proces 32-bitowy na klientach 64-bitowych**: wybierz pozycję **Tak**, aby uruchamiać skrypt w procesie 32-bitowym na klientach 64-bitowych. Wybierz pozycję **Nie** (ustawienie domyślne), aby uruchamiać skrypt w procesie 64-bitowym na klientach 64-bitowych. Klienci 32-bitowi uruchamiają skrypt w procesie 32-bitowym.
+
         3.  **Wymuszaj sprawdzanie podpisu skryptu** — wybierz opcję **Tak**, aby zweryfikować, że skrypt jest podpisany przez zaufanego wydawcę, co umożliwi uruchamianie skryptu bez wyświetlania ostrzeżeń ani monitów. Skrypt będzie uruchamiany bez blokowania. Wybierz opcję **Nie** (domyślną), aby uruchamiać skrypt z potwierdzeniem przez użytkownika końcowego i bez weryfikacji podpisu.
     
-        Dodatek usługi Intune sprawdza wyniki ze skryptu. Odczytuje wartości zapisane przez skrypt do strumienia wyjścia standardowego (STDOUT) i standardowego strumienia błędów (STDERR) oraz kod zakończenia. Jeśli skrypt zwróci wartość różną od zera, jego wykonanie zakończy się niepowodzeniem, a stan wykrywania aplikacji będzie wskazywać, że nie jest zainstalowana. Jeśli kod zakończenia ma wartość zero, a strumień STDOUT zawiera dane, stan wykrywania aplikacji to Zainstalowano. 
-    
-        > [!NOTE]
-        > Jeśli kod zakończenia skryptu to 0, oznacza to pomyślne wykonanie skryptu. Drugi kanał wyjściowy wskazuje wykrycie aplikacji — dane w strumieniu STDOUT oznaczają, że aplikacja została wykryta na kliencie. Nie szukamy konkretnego ciągu w strumieniu STDOUT.
-    
-3.  Po dodaniu reguł wybierz polecenie **Dodaj** > **OK**.
+            Agent usługi Intune sprawdza wyniki ze skryptu. Odczytuje wartości zapisane przez skrypt do strumienia wyjścia standardowego (STDOUT) i standardowego strumienia błędów (STDERR) oraz kod zakończenia. Jeśli skrypt zwróci wartość różną od zera, jego wykonanie zakończy się niepowodzeniem, a stan wykrywania aplikacji będzie wskazywać, że nie jest zainstalowana. Jeśli kod zakończenia ma wartość zero, a strumień STDOUT zawiera dane, stan wykrywania aplikacji to Zainstalowano. 
 
-### <a name="step-7-configure-app-return-codes"></a>Krok 7. Konfigurowanie kodów powrotnych aplikacji
+            > [!NOTE]
+            > Jeśli kod zakończenia skryptu to 0, oznacza to pomyślne wykonanie skryptu. Drugi kanał wyjściowy wskazuje wykrycie aplikacji — dane w strumieniu STDOUT oznaczają, że aplikacja została wykryta na kliencie. Nie szukamy konkretnego ciągu w strumieniu STDOUT.
+
+        4.  Po dodaniu reguł wybierz polecenie **Dodaj** > **OK**.
+
+### <a name="step-7-configure-app-return-codes"></a>Krok 7. Konfigurowanie kodów powrotnych aplikacji
 
 1.  W okienku **Dodawanie aplikacji** wybierz pozycję **Kody powrotne**, aby dodać kody powrotne używane do określenia zachowania ponowienia instalacji aplikacji lub zachowania po instalacji. Pozycje kodów powrotnych są dodawane domyślnie podczas tworzenia aplikacji. Istnieje jednak możliwość dodania kolejnych kodów powrotnych lub zmiany istniejących kodów powrotnych. 
 2.  W okienku **Kody powrotne** dodaj kolejne kody powrotne lub zmodyfikuj istniejące kody powrotne.
@@ -203,19 +205,19 @@ Podobnie jak w przypadku aplikacji biznesowych, możesz dodać aplikację Win32 
     - **Powodzenie** — wartość zwracana, która wskazuje pomyślne zainstalowanie aplikacji.
 3.  Wybierz pozycję **OK** po dodaniu lub zmodyfikowaniu listy kodów powrotnych.
 
-### <a name="step-8-add-the-app"></a>Krok 8. Dodawanie aplikacji
+### <a name="step-8-add-the-app"></a>Krok 8. Dodawanie aplikacji
 
 1.  W okienku **Dodaj aplikację** sprawdź poprawność skonfigurowanych informacji.
 2.  Wybierz pozycję **Dodaj**, aby przekazać aplikację do usługi Intune.
 
-### <a name="step-9-assign-the-app"></a>Krok 9: Przypisanie aplikacji
+### <a name="step-9-assign-the-app"></a>Krok 9. Przypisywanie aplikacji
 
 1.  W okienku aplikacji wybierz pozycję **Przypisania**.
 2.  Wybierz pozycję **Dodaj grupę**, aby otworzyć okienko **Dodawanie grupy** powiązane z aplikacją.
 3.  Dla określonej aplikacji wybierz **typ przypisania**:
     - **Dostępne dla zarejestrowanych urządzeń**: użytkownicy instalują aplikację z aplikacji Portal firmy lub witryny internetowej Portal firmy.
     - **Wymagane**: aplikacja jest instalowana na urządzeniach w wybranych grupach.
-    - **Odinstaluj**: aplikacja jest odinstalowywana z urządzeń w wybranych grupach.
+    - **Odinstalowywanie**: aplikacja jest odinstalowywana z urządzeń w wybranych grupach.
 4.  Wybierz pozycję **Objęte grupy** i przypisz grupy, które będą używać aplikacji.
 5.  W okienku **Przypisywanie** wybierz przycisk **OK**, aby ukończyć wybieranie uwzględnionych grup.
 6.  Jeśli chcesz wykluczyć wszystkie grupy użytkowników z objęcia wpływem tego przypisania aplikacji, wybierz pozycję **Wykluczenie grup**.
@@ -236,12 +238,12 @@ Użytkownik końcowy nie będzie widzieć wyskakujących powiadomień systemu Wi
 
 Poniższy obraz przedstawia powiadomienie użytkownika końcowego o wprowadzeniu zmian na urządzeniu.
 
-![Zrzut ekranu z przykładem powiadomienia użytkownika końcowego o wprowadzeniu przez aplikację zmian na urządzeniu](./media/apps-win32-app-09.png)    
+![Zrzut ekranu powiadamiający użytkownika o tym, że są wprowadzane zmiany aplikacji](./media/apps-win32-app-09.png)    
 
 ## <a name="troubleshoot-win32-app-issues"></a>Rozwiązywanie problemów z aplikacjami Win32
 Typowa lokalizacja dzienników agenta na maszynie klienta to `C:\ProgramData\Microsoft\IntuneManagementExtension\Logs`. Do wyświetlenia plików dziennika możesz użyć programu `CMTrace.exe`. Program *CMTrace.exe* można pobrać ze strony [Narzędzia klienta SCCM](https://docs.microsoft.com/sccm/core/support/tools). 
 
-![Zrzut ekranu dzienników agenta](./media/apps-win32-app-10.png)    
+![Zrzut ekranu przedstawiający dzienniki klienta na maszynie klienta](./media/apps-win32-app-10.png)    
 
 ### <a name="troubleshooting-areas-to-consider"></a>Obszary rozwiązywania problemów do uwzględnienia
 - Sprawdź ustawienie celu, aby upewnić się, że agent jest zainstalowany na urządzeniu — aplikacja Win32 przeznaczona dla grupy lub skrypt programu PowerShell przeznaczony dla grupy spowoduje utworzenie zasad instalacji agenta dla grupy zabezpieczeń.

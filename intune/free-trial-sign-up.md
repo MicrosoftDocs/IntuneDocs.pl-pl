@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/09/2018
+ms.date: 12/20/2018
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,14 +16,14 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 827766d76a66ea7d69ebbd3ba77efe785689e7e2
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 2257253d023c97d14418b3566c0c493a3cd8f615
+ms.sourcegitcommit: 279f923b1802445e501324a262d14e8bfdddabde
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189184"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53737920"
 ---
-# <a name="quickstart-try-microsoft-intune-for-free"></a>Przewodnik Szybki start: bezpłatna wersja próbna usługi Microsoft Intune 
+# <a name="quickstart-try-microsoft-intune-for-free"></a>Szybki start: bezpłatna wersja próbna usługi Microsoft Intune 
 
 Usługa Microsoft Intune pomaga w ochronie danych firmy i pracowników, umożliwiając zarządzanie urządzeniami i aplikacjami. W tym przewodniku Szybki start utworzysz bezpłatną subskrypcję w celu wypróbowania usługi Intune w środowisku testowym.
 
@@ -50,7 +50,7 @@ Usługę Intune można bezpłatnie testować przez 30 dni. Jeśli masz już kont
 
 2. Utwórz konto, używając nazwy swojej firmy z dołączonym tekstem **.onmicrosoft.com**. 
 
-    ![Zrzut ekranu strony internetowej tworzenia konta próbnego usługi Microsoft Intune](./media/account-sign-up-site-user-id.png)
+    ![Zrzut ekranu przedstawiający nowy proces obsługi poświadczeń na koncie próbnym usługi Microsoft Intune](./media/account-sign-up-site-user-id.png)
 
     Jeśli Twoja organizacja ma własną domenę niestandardową, której chcesz używać (bez końcówki **.onmicrosoft.com**), możesz to zmienić w portalu administracyjnym usługi Office 365 zgodnie z opisem w dalszej części tego artykułu.
 
@@ -106,13 +106,13 @@ Jak wspomniano powyżej, jeśli Twoja organizacja ma własną domenę niestandar
 
 3. Wpisz niestandardową nazwę domeny. Następnie wybierz pozycję **Dalej**.
 
-   ![Zrzut ekranu z centrum administracji Office 365 z wybranymi opcjami Ustawienia > Domeny oraz dodawaną nową nazwą domeny](./media/domain-custom-add.png)
+   ![Zrzut ekranu przedstawiający centrum administracyjne usługi Office 365 — dodawanie domeny](./media/domain-custom-add.png)
 
 4. Zweryfikuj swoje prawo własności do wprowadzonej w poprzedniej części domeny. 
     
     Wybranie pozycji **wyślij kod pocztą e-mail** spowoduje wysłanie wiadomości e-mail do zarejestrowanego dla domeny kontaktu. Po otrzymaniu wiadomości e-mail skopiuj kod i wprowadź go w polu z etykietą **Tutaj wprowadź kod weryfikacyjny**. Jeśli kod weryfikacyjny będzie zgodny, domena zostanie dodana do dzierżawy. Wyświetlony adres e-mail może nie wyglądać znajomo. Niektórzy rejestratorzy ukrywają prawdziwy adres e-mail podany podczas rejestrowania domeny.
 
-   ![Zrzut ekranu przedstawiający centrum administracyjne usługi Office 365 — weryfikowanie dodawanej nazwy domeny](./media/domain-custom-verify.png)
+   ![Zrzut ekranu przedstawiający centrum administracyjne usługi Office 365 — weryfikowanie domeny](./media/domain-custom-verify.png)
 
    > [!NOTE]
    > Aby uzyskać szczegółowe informacje dotyczące weryfikowania za pomocą rekordu TXT, zobacz [Create DNS records at any DNS hosting provider for Office 365](https://support.office.com/article/Create-DNS-records-at-any-DNS-hosting-provider-for-Office-365-7B7B075D-79F9-4E37-8A9E-FB60C1D95166) (Tworzenie rekordów DNS u dowolnego dostawcy hostingu DNS dla usługi Office 365).

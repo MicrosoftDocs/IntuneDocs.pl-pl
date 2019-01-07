@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/13/2018
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: e677b62c7610739079184bc5ef59e47544f833bb
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 73caf328bd25cb31bacea6b964c1db7601f3aec6
+ms.sourcegitcommit: baacdb2c5ee69d0055acad2d64f2bf1a3fc5e02d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190221"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53570812"
 ---
 # <a name="what-is-device-enrollment"></a>Co to jest rejestrowanie urządzenia?
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -47,6 +47,7 @@ Domyślnie w usłudze Intune mogą być rejestrowane urządzenia dla dowolnej pl
 |:---:|:---:|:---:|:---:|:---:|
 |**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#bring-your-own-device)** | Nie| Tak | Nie | [Więcej informacji](./macos-enroll.md)|
 |**[Menedżer rejestracji urządzeń](#device-enrollment-manager)**| Nie |Nie |Nie  | [Więcej informacji](./device-enrollment-manager-enroll.md)|
+|**[Device Enrollment Program](#apple-device-enrollment-program)**|   Tak |   Opcjonalne |  Opcjonalne|[Więcej informacji](./device-enrollment-program-enroll-macos.md)|
 
 
 ## <a name="windows-enrollment-methods"></a>Metody rejestracji systemu Windows
@@ -56,10 +57,10 @@ Domyślnie w usłudze Intune mogą być rejestrowane urządzenia dla dowolnej pl
 |**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#bring-your-own-device)** | Nie |  Tak |   Nie | [Więcej informacji](windows-enroll.md)|
 |**[Menedżer rejestracji urządzeń](#device-enrollment-manager)**| Nie |Nie |Nie  |[Więcej informacji](device-enrollment-manager-enroll.md)|
 |**Automatyczne rejestrowanie** | Nie |Tak |Nie | [Więcej informacji](./windows-enroll.md#enable-windows-10-automatic-enrollment)|
-|**Rozwiązanie Autopilot** |Tak |Tak |Nie | [Więcej informacji na](enrollment-autopilot.md)]
+|**Rozwiązanie Autopilot** |Tak |Tak |Nie | [Więcej informacji](enrollment-autopilot.md)
 |**Rejestrowanie zbiorcze** |Nie |Nie |Nie | [Więcej informacji](./windows-bulk-enroll.md) |
-|**Współzarządzanie** |Nie |Tak |Nie | [Więcej informacji na](https://docs.microsoft.com/sccm/core/clients/manage/co-management-overview)]
-|**Obiekt zasad grupy** |Nie |Tak |Nie | [Więcej informacji na](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)]
+|**Współzarządzanie** |Nie |Tak |Nie | [Więcej informacji](https://docs.microsoft.com/sccm/core/clients/manage/co-management-overview)
+|**Obiekt zasad grupy** |Nie |Tak |Nie | [Więcej informacji](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
 
 
 ## <a name="android-enrollment-methods"></a>Metody rejestracji systemu Android
@@ -81,7 +82,7 @@ Model „Przynieś własne urządzenie” (BYOD) obejmuje osobiste telefony, tab
 Menedżer rejestracji urządzeń (DEM) to specjalne konto użytkownika używane do rejestrowania wielu urządzeń należących do firmy i zarządzania nimi. Menedżerowie mogą zainstalować Portal firmy i zarejestrować wiele urządzeń bez użytkowników. Tego rodzaju urządzenia nadają się do wykorzystania w punktach sprzedaży lub na potrzeby użycia aplikacji narzędziowych, ale są złym rozwiązaniem dla użytkowników, którzy potrzebują dostępu do poczty e-mail lub zasobów firmowych. Dowiedz się więcej na temat [menedżera rejestracji urządzeń](./device-enrollment-manager-enroll.md). 
 
 ### <a name="apple-device-enrollment-program"></a>Program Device Enrollment Program firmy Apple
-Zarządzanie w programie Device Enrollment Program (DEP) firmy Apple pozwala na tworzenie i bezprzewodowe wdrażanie zasad na urządzeniach z systemem iOS kupionych i zarządzanych przy użyciu programu DEP. Urządzenie jest rejestrowane, gdy użytkownik włącza je po raz pierwszy i uruchamia asystenta ustawień systemu iOS. Ta metoda obsługuje tryb nadzorowany systemu iOS, który umożliwia skonfigurowanie określonej funkcji na urządzeniu.
+Zarządzanie w programie Device Enrollment Program (DEP) firmy Apple pozwala na tworzenie i bezprzewodowe wdrażanie zasad na urządzeniach z systemem iOS oraz macOS kupionych i zarządzanych przy użyciu programu DEP. Urządzenie jest rejestrowane, gdy użytkownik włącza je po raz pierwszy i uruchamia asystenta ustawień. Ta metoda obsługuje tryb nadzorowany systemu iOS, który umożliwia skonfigurowanie określonej funkcji na urządzeniu.
 
 Więcej informacji o rejestracji DEP urządzeń z systemem iOS:
 

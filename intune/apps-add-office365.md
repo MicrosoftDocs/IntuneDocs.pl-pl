@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/15/2018
+ms.date: 12/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: c98eb7795ca01db9a78b428faf433109928cff76
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: e2958b536aa6603fc9cde14e679a05e4a9d5f4dd
+ms.sourcegitcommit: 0f19bc5c76b7c0835bfd180459f2bbd128eec1c2
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52182276"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266974"
 ---
 # <a name="assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Przypisywanie aplikacji usługi Office 365 do urządzeń z systemem Windows 10 przy użyciu usługi Microsoft Intune
 
@@ -74,9 +74,9 @@ W tym kroku podajesz informacje o pakiecie aplikacji. Te informacje pomagają zi
     - **Opis pakietu**: wprowadź opis pakietu aplikacji. Możesz na przykład podać listę aplikacji wybranych do uwzględnienia.
     - **Wydawca**: w roli wydawcy występuje firma Microsoft.
     - **Kategoria**: opcjonalnie wybierz co najmniej jedną wbudowaną lub utworzoną przez siebie kategorię aplikacji. To ustawienie ułatwi użytkownikom znajdowanie pakietu aplikacji podczas przeglądania portalu firmy.
-    - **Wyświetl jako polecaną aplikację w Portalu firmy**: wybierz tę opcję, aby wyświetlić pakiet aplikacji na stronie głównej portalu firmy podczas przeglądania aplikacji przez użytkowników.
-    - **Adres URL informacji**: opcjonalnie wprowadź adres URL witryny internetowej zawierającej informacje o tej aplikacji. Adres będzie widoczny dla użytkowników Portalu firmy.
-    - **Adres URL zasad ochrony prywatności**: opcjonalnie wprowadź adres URL witryny internetowej zawierającej informacje o zasadach ochrony prywatności w tej aplikacji. Adres będzie widoczny dla użytkowników Portalu firmy.
+    - **Wyświetl jako polecaną aplikację w Portalu firmy**: wybierz tę opcję, aby wyświetlić pakiet aplikacji w dobrze widocznym miejscu na stronie głównej portalu firmy podczas przeglądania aplikacji przez użytkowników.
+    - **Adres URL informacji**: Opcjonalnie wprowadź adres URL witryny sieci Web zawierającej informacje o tej aplikacji. Adres będzie widoczny dla użytkowników Portalu firmy.
+    - **Adres URL zasad ochrony prywatności**: Opcjonalnie wprowadź adres URL witryny sieci Web zawierającej informacje dotyczące zasad ochrony prywatności w tej aplikacji. Adres będzie widoczny dla użytkowników Portalu firmy.
     - **Deweloper**: w roli dewelopera występuje firma Microsoft.
     - **Właściciel**: w roli właściciela występuje firma Microsoft.
     - **Uwagi**: wprowadź wszelkie uwagi, które chcesz skojarzyć z tą aplikacją.
@@ -105,7 +105,7 @@ W tym kroku skonfigurujesz opcje instalacji pakietu aplikacji. Ustawienia są st
         Aby uzyskać więcej informacji, zobacz [Overview of update channels for Office 365 ProPlus (Omówienie kanałów aktualizacji usługi Office 365 ProPlus)](https://docs.microsoft.com/DeployOffice/overview-of-update-channels-for-office-365-proplus).
 
     - **Usuń plik MSI z urządzeń użytkownika końcowego** — wybierz, czy chcesz usunąć wcześniej istniejące aplikacje MSI pakietu Office z urządzeń użytkownika końcowego. Instalacja nie powiedzie się, jeśli na urządzeniach użytkownika końcowego są wcześniej istniejące aplikacje MSI. Aplikacje do odinstalowania nie są ograniczone tylko do aplikacji wybranych do instalacji w okienku **Konfigurowanie pakietu aplikacji**, ponieważ zostaną usunięte wszystkie aplikacje pakietu Office (MSI) na urządzeniu użytkownika końcowego. Aby uzyskać więcej informacji, zobacz [Remove existing MSI versions of Office when upgrading to Office 365 ProPlus (Usuwanie istniejących wersji MSI pakietu Office podczas uaktualniania do usługi Office 365 ProPlus)](https://docs.microsoft.com/deployoffice/upgrade-from-msi-version). Podczas ponownego instalowania pakietu Office na maszynach użytkowników końcowych przez usługę Intune użytkownicy końcowi automatycznie uzyskają te same pakiety językowe, które mieli z poprzednimi instalacjami MSI pakietu Office. 
-    - **Automatycznie akceptuj umowę licencyjną użytkownika końcowego aplikacji**: wybierz tę opcję, jeśli nie wymagasz, aby użytkownicy końcowi akceptowali umowę licencyjną. Usługa Intune zaakceptuje umowę automatycznie.
+    - **Automatycznie akceptuj licencję użytkownika aplikacji**: wybierz tę opcję, jeśli użytkownicy końcowi nie muszą akceptować umowy licencyjnej. Usługa Intune zaakceptuje umowę automatycznie.
     - **Użyj aktywacji na komputerze udostępnionym**: wybierz tę opcję, jeśli wielu użytkowników współużytkuje komputer. Aby uzyskać więcej informacji, zobacz [omówienie aktywacji na komputerze udostępnionym dla usługi Office 365](https://docs.microsoft.com/DeployOffice/overview-of-shared-computer-activation-for-office-365-proplus).
     - **Języki**: pakiet Office jest automatycznie instalowany we wszystkich obsługiwanych językach, które zostały zainstalowane w systemie Windows na urządzeniu użytkownika końcowego. Wybierz tę opcję, jeśli chcesz zainstalować dodatkowe języki z pakietem aplikacji. <p></p>
     Dla aplikacji pakietu Office 365 Pro Plus zarządzanych przez usługę Intune możesz wdrożyć dodatkowe języki. Lista dostępnych języków uwzględnia **Typ** pakietu językowego (podstawowy, częściowy i weryfikujący). W witrynie Azure Portal wybierz pozycję **Microsoft Intune** > **Aplikacje klienckie** > **Aplikacje** > **Dodaj**. Na liście **Typ aplikacji** w bloku **Dodaj aplikację** wybierz pozycję **Windows 10** w obszarze **Pakiet Office 365**. Wybierz pozycję **Języki** w bloku **Ustawienia pakietu aplikacji**. Aby uzyskać więcej informacji, zobacz artykuł [Overview of deploying languages in Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-of-deploying-languages-in-office-365-proplus) (Omówienie wdrażania języków w usłudze Office 365 ProPlus).
@@ -120,33 +120,31 @@ W poniższej tabeli przedstawiono listę kodów typowych błędów, które mogą
 
 ### <a name="status-for-office-csp"></a>Stan dostawcy CSP pakietu Office
 
-||||
-|-|-|-|
-|Stan|Etap|Opis|
-|1460 (ERROR_TIMEOUT)|Pliki do pobrania|Nie można pobrać Narzędzia wdrażania pakietu Office|    
-|13 (ERROR_INVALID_DATA)|-|Nie można zweryfikować podpisu pobranego Narzędzia wdrażania pakietu Office|
-|Kod błędu z zasad CertVerifyCertificateChainPolicy|-|Nie można sprawdzić certyfikatów pobranego Narzędzia wdrażania pakietu Office|    
-|997|PWT|Instalowanie|
-|0|Po instalacji|Instalacja zakończona pomyślnie|    
-|1603 (ERROR_INSTALL_FAILURE)|-|Nieudane sprawdzanie wymagań wstępnych, takich jak:<ul><li>SxS (nastąpiła próba instalacji po zainstalowaniu instalatora MSI 2016)</li><li>Niezgodność wersji</li><li>Inne</li></ul>|  
-|0x8000ffff (E_UNEXPECTED)|-|Podjęto próbę odinstalowania w sytuacji, gdy na maszynie nie ma modułu Szybka instalacja pakietu Office|     
-|17002|-|Nie można ukończyć scenariusza (instalacja). Możliwe przyczyny:<ul><li>Instalacja anulowana przez użytkownika</li><li>Instalacja anulowana przez inną instalację</li><li>Brak miejsca na dysku podczas instalacji</li><li>Nieznany identyfikator języka</li></ul>|
-|17004|-|Nieznane jednostki SKU|   
+| Stan | Etap | Opis |
+|--------------------------------------------------|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1460 (ERROR_TIMEOUT) | Pliki do pobrania | Nie można pobrać Narzędzia wdrażania pakietu Office |
+| 13 (ERROR_INVALID_DATA) | - | Nie można zweryfikować podpisu pobranego Narzędzia wdrażania pakietu Office |
+| Kod błędu z zasad CertVerifyCertificateChainPolicy | - | Nie można sprawdzić certyfikatów pobranego Narzędzia wdrażania pakietu Office |
+| 997 | PWT | Instalowanie |
+| 0 | Po instalacji | Instalacja zakończona pomyślnie |
+| 1603 (ERROR_INSTALL_FAILURE) | - | Nie można sprawdzić wymagań wstępnych, takich jak: SxS (nastąpiła próba instalacji po zainstalowaniu instalatora MSI 2016), niezgodność wersji, inne |
+| 0x8000ffff (E_UNEXPECTED) | - | Podjęto próbę odinstalowania w sytuacji, gdy na maszynie nie ma modułu Szybka instalacja pakietu Office |
+| 17002 | - | Nie można ukończyć scenariusza (instalacja). Możliwe przyczyny: instalacja anulowana przez użytkownika, instalacja anulowana przez inną instalację, brak miejsca na dysku podczas instalacji, nieznany identyfikator języka |
+| 17004 | - | Nieznane jednostki SKU |
 
 
 ### <a name="office-deployment-tool-error-codes"></a>Kody błędów Narzędzia wdrażania pakietu Office
 
-|||||
-|-|-|-|-|
-|Scenariusz|Kod powrotu|Interfejs użytkownika|Uwaga|
-|Podjęto działania związane z odinstalowywaniem w sytuacji, gdy nie ma aktywnego modułu Szybka instalacja|-2147418113, 0x8000ffff lub 2147549183|Kod błędu: 30088-1008<br>Kod błędu: 30125-1011 (404)|Narzędzie wdrażania pakietu Office|
-|Instalacja, gdy zainstalowano wersję instalatora MSI|1603|-|Narzędzie wdrażania pakietu Office|
-|Instalacja anulowana przez użytkownika lub inną instalację|17002|-|Szybka instalacja|
-|Próba zainstalowania wersji 64-bitowej na urządzeniu z zainstalowaną wersją 32-bitową|1603|-|Kod zwrotny Narzędzia wdrażania pakietu Office|
-|Próba zainstalowania nieznanej jednostki SKU (to nie jest rzeczywisty przypadek użycia dostawcy CSP pakietu Office, ponieważ należy przekazywać tylko prawidłowe jednostki SKU)|17004|-|Szybka instalacja|
-|Brak miejsca|17002|-|Szybka instalacja|
-|Nie można uruchomić modułu Szybka instalacja (nieoczekiwana sytuacja)|17000|-|Szybka instalacja|
-|Moduł Szybka instalacja nie mógł umieścić scenariusza w kolejce (nieoczekiwana sytuacja)|17001|-|Szybka instalacja|
+| Scenariusz | Kod powrotu | Interfejs użytkownika | Uwaga |
+|------------------------------------------------------------------------------------------------------------------|---------------------------------------|----------------------------------------------------|------------------------------------|
+| Podjęto działania związane z odinstalowywaniem w sytuacji, gdy nie ma aktywnego modułu Szybka instalacja | -2147418113, 0x8000ffff lub 2147549183 | Kod błędu: 30088-1008 Kod błędu: 30125-1011 (404) | Narzędzie wdrażania pakietu Office |
+| Instalacja, gdy zainstalowano wersję instalatora MSI | 1603 | - | Narzędzie wdrażania pakietu Office |
+| Instalacja anulowana przez użytkownika lub inną instalację | 17002 | - | Szybka instalacja |
+| Próba zainstalowania wersji 64-bitowej na urządzeniu z zainstalowaną wersją 32-bitową | 1603 | - | Kod zwrotny Narzędzia wdrażania pakietu Office |
+| Próba zainstalowania nieznanej jednostki SKU (to nie jest rzeczywisty przypadek użycia dostawcy CSP pakietu Office, ponieważ należy przekazywać tylko prawidłowe jednostki SKU) | 17004 | - | Szybka instalacja |
+| Brak miejsca | 17002 | - | Szybka instalacja |
+| Nie można uruchomić modułu Szybka instalacja (nieoczekiwana sytuacja) | 17000 | - | Szybka instalacja |
+| Moduł Szybka instalacja nie mógł umieścić scenariusza w kolejce (nieoczekiwana sytuacja) | 17001 | - | Szybka instalacja |
 
 ## <a name="next-steps"></a>Następne kroki
 

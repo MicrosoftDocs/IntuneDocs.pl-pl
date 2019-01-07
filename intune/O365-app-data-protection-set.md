@@ -1,7 +1,7 @@
 ---
 title: Zarządzanie danymi aplikacji usługi Office 365 w usłudze Microsoft Intune
 titlesuffix: ''
-description: Dowiedz się więcej na temat zarządzania danymi aplikacji usługi Office 365 w usłudze Microsoft Intune.
+description: Dowiedz się więcej na temat zarządzania danymi i ochrony aplikacji usługi Office 365 w usłudze Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -17,12 +17,12 @@ ms.reviewer: ayesham
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a3eed03deb3f619f75502e8a9d1d66fefc38a081
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 05af4625c06975e4eb7b2566ce676c4610500bdf
+ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180075"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53642477"
 ---
 # <a name="how-your-users-will-experience-basic-protection-on-managed-office-365-apps-in-microsoft-intune"></a>Na czym polega podstawowa ochrona użytkowników zarządzanych aplikacji usługi Office 365 w usłudze Microsoft Intune
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/01/2018
+ms.date: 12/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: ilwu
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 829b9587849208c40d5e4c0f58169b4f6dfd4153
-ms.sourcegitcommit: a0e965b3a568d1435270012ab89e5857e72cd434
+ms.openlocfilehash: 65f3598282bd46d422f8748d2653dbf8e18cf9b7
+ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52630021"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53324977"
 ---
 # <a name="manage-internet-access-using-a-microsoft-intune-policy-protected-browser"></a>Zarządzanie dostępem do Internetu za pomocą przeglądarki zabezpieczonej przy użyciu zasad w usłudze Microsoft Intune
 
@@ -150,7 +150,7 @@ Aplikacje Microsoft Edge i Intune Managed Browser oraz [serwer proxy aplikacji u
 ### <a name="before-you-start"></a>Przed rozpoczęciem
 
 - Skonfiguruj wewnętrzne aplikacje przy użyciu serwera proxy aplikacji usługi Azure AD.
-    - Aby skonfigurować serwer proxy aplikacji i publikować aplikacje, zobacz [dokumentację dotyczącą konfiguracji](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started#how-to-get-started). 
+    - Aby skonfigurować serwer proxy aplikacji i publikować aplikacje, zobacz [dokumentację dotyczącą konfiguracji](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started#get-started). 
 - Wymagana jest aplikacja Managed Browser w wersji 1.2.0 lub nowszej.
 - Użytkownicy aplikacji Managed Browser lub Microsoft Edge mają przypisane do aplikacji [zasady ochrony aplikacji usługi Intune]( app-protection-policy.md).
 
@@ -161,7 +161,7 @@ Aplikacje Microsoft Edge i Intune Managed Browser oraz [serwer proxy aplikacji u
 #### <a name="step-1-enable-automatic-redirection-to-a-protected-browser-from-outlook"></a>Krok 1. Włączenie automatycznego przekierowania do przeglądarki chronionej z poziomu programu Outlook
 Program Outlook musi być skonfigurowany przy użyciu zasad ochrony aplikacji, które powodują włączenie ustawienia **Ogranicz zawartość sieci Web wyświetlaną w programie Managed Browser**.
 
-#### <a name="step-2-assign-an-app-configuration-policy-assigned-for-the-protected-browser"></a>Krok 2. Przypisanie zasad konfiguracji aplikacji przypisanych do przeglądarki chronionej.
+#### <a name="step-2-assign-an-app-configuration-policy-assigned-for-the-protected-browser"></a>Krok 2: Przypisanie zasad konfiguracji aplikacji przypisanych do przeglądarki chronionej
 Ta procedura umożliwia skonfigurowanie aplikacji Managed Browser lub Microsoft Edge, aby korzystała z przekierowywania serwera proxy aplikacji. Korzystając z procedury tworzenia konfiguracji aplikacji Managed Browser lub Microsoft Edge, podaj następującą parę klucza i wartości:
 
 | Klucz                                                             | Wartość    |
@@ -261,6 +261,19 @@ Poniższe informacje dotyczą dopuszczalnych formatów i symboli wieloznacznych,
   - `http://www.contoso.com:*`
 
   - `http://www.contoso.com: /*`
+## <a name="opening-links-within-the-intune-managed-browser-vs-microsoft-edge"></a>Otwieranie linków w programie Intune Managed Browser i przeglądarce Microsoft Edge 
+
+Obydwa programy — Intune Managed Browser i Microsoft Edge — są obecnie traktowane jako przeglądarki zarządzane przez zasady / przeglądarki chronione. Obecne zasady ochrony aplikacji powodują otwieranie linków internetowych z aplikacji zarządzanych przez usługę Intune w określonej przeglądarce w zależności od scenariusza i platformy. 
+
+W systemie Android: 
+* Managed Browser, jeśli na urządzeniu znajduje się zarówno przeglądarka MB, jak i Edge — chyba że ustawienie „com.microsoft.intune.useEdge” ma wartość „true” dla wszystkich zarządzanych przez usługę Intune aplikacji wymagających wskazania przeglądarki zarządzanej na podstawie zasad.  
+* Microsoft Edge, jeśli na urządzeniu znajduje się tylko ta przeglądarka i jest ona objęta zasadami.
+* Managed Browser, jeśli na urządzeniu znajduje się tylko ta przeglądarka i jest ona objęta zasadami. 
+
+W systemie iOS w przypadku aplikacji, które mają zintegrowany zestaw SDK usługi Intune dla systemu iOS w wersji 9.0.9+: 
+* Managed Browser, jeśli na urządzeniu znajduje się zarówno przeglądarka MB, jak i Edge — chyba że ustawienie „com.microsoft.intune.useEdge” ma wartość „true” dla wszystkich zarządzanych przez usługę Intune aplikacji wymagających wskazania przeglądarki zarządzanej na podstawie zasad **LUB** Microsoft Edge, jeśli przeglądarka ta jest zainstalowana i skonfigurowano dla niej zasady. 
+* Microsoft Edge, jeśli na urządzeniu znajduje się tylko ta przeglądarka, jest ona objęta zasadami i zostały one dla niej skonfigurowane. 
+* Managed Browser, jeśli na urządzeniu znajduje się tylko ta przeglądarka, jest ona objęta zasadami i zostały one dla niej skonfigurowane.
 
 ## <a name="how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios"></a>Jak uzyskać dostęp do dzienników zarządzanych aplikacji przy użyciu programu Managed Browser w systemie iOS
 

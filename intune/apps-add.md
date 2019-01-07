@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/19/2018
+ms.date: 12/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,14 +16,14 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 2a0fb9aca406c1a49c979b59e5d879d66a730c1c
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 9cd03d4953376d20e96ec146ece91120d592cb99
+ms.sourcegitcommit: 1c9ef5cfac2fc024528d2cfc9d590fa68dd58080
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52185893"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53429784"
 ---
-# <a name="add-apps-to-microsoft-intune"></a>Dodawanie aplikacji do usługi Microsoft Intune
+# <a name="add-apps-to-microsoft-intune"></a>Dodawanie aplikacji do usługi Microsoft Intune 
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
@@ -118,9 +118,9 @@ W aplikacjach zarządzanych przez usługę Intune można również włączyć oc
 
 ### <a name="understanding-licensed-apps"></a>Licencjonowane aplikacje
 Oprócz zapoznania się z aplikacjami internetowymi, aplikacjami ze sklepu i aplikacjami biznesowymi należy także znać miejsca docelowe aplikacji programu zakupów zbiorczych i aplikacji licencjonowanych, takich jak: 
-- **Apple Volume Purchasing Program for Business (iOS)**: ten sklep z aplikacjami systemu iOS umożliwia zakup wielu licencji dla aplikacji, które mają być uruchamiane w firmie. Zakup wielu kopii ułatwia efektywne zarządzanie aplikacjami w firmie. Aby uzyskać więcej informacji, zobacz [Zarządzanie aplikacjami dla systemu iOS nabytymi w ramach zakupów zbiorczych](vpp-apps-ios.md).
-- **Profil służbowy systemu Android**: przypisywanie aplikacji do urządzeń z profilem służbowym systemu Android przebiega inaczej niż przypisywanie aplikacji do urządzeń ze standardową wersją systemu Android. Wszystkie aplikacje, które instalujesz dla profilów służbowych Android, pochodzą z zarządzanego sklepu Google Play. Proces obejmuje zalogowanie się do sklepu, wyszukanie odpowiednich aplikacji, a następnie ich zatwierdzenie. Następnie aplikacja zostaje wyświetlona w węźle **Licencjonowane aplikacje** w witrynie Azure Portal i można zarządzać przypisaniem aplikacji w taki sam sposób, jak w przypadku wszystkich innych.
-- **Microsoft Store dla Firm (Windows 10)**: Microsoft Store dla Firm to miejsce, w którym można znaleźć i zakupić aplikacje dla całej organizacji, pojedynczo lub zbiorczo. Łącząc sklep z usługą Microsoft Intune, aplikacjami nabytymi w ramach zakupów zbiorczych można zarządzać bezpośrednio w witrynie Azure Portal. Aby uzyskać więcej informacji, zobacz [Zarządzanie aplikacjami zakupionymi w Sklepie Microsoft dla Firm](windows-store-for-business.md).
+- **Program Volume Purchase Program for Business (VPP) firmy Apple (iOS)**: sklep z aplikacjami dla systemu iOS umożliwia zakup wielu licencji dla aplikacji, które mają być uruchamiane w firmie. Zakup wielu kopii ułatwia efektywne zarządzanie aplikacjami w firmie. Aby uzyskać więcej informacji, zobacz [Zarządzanie aplikacjami dla systemu iOS nabytymi w ramach zakupów zbiorczych](vpp-apps-ios.md).
+- **Profil służbowy systemu Android**: Przypisywanie aplikacji do urządzeń z profilem służbowym systemu Android przebiega inaczej niż przypisywanie aplikacji do standardowych urządzeń z systemem Android. Wszystkie aplikacje, które instalujesz dla profilów służbowych Android, pochodzą z zarządzanego sklepu Google Play. Proces obejmuje zalogowanie się do sklepu, wyszukanie odpowiednich aplikacji, a następnie ich zatwierdzenie. Następnie aplikacja zostaje wyświetlona w węźle **Licencjonowane aplikacje** w witrynie Azure Portal i można zarządzać przypisaniem aplikacji w taki sam sposób, jak w przypadku wszystkich innych.
+- **Microsoft Store dla Firm (Windows 10)**: sklep Microsoft Store dla Firm to miejsce, w którym można znaleźć i zakupić aplikacje dla całej organizacji, pojedynczo lub zbiorczo. Łącząc sklep z usługą Microsoft Intune, aplikacjami nabytymi w ramach zakupów zbiorczych można zarządzać bezpośrednio w witrynie Azure Portal. Aby uzyskać więcej informacji, zobacz [Zarządzanie aplikacjami zakupionymi w Sklepie Microsoft dla Firm](windows-store-for-business.md).
 
     > [!NOTE]
     > Rozszerzenia plików aplikacji dla systemu Windows to **msi**, **appx**, **appxbundle**, **msix** i **msixbundle**.  

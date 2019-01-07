@@ -16,12 +16,12 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 0cea1b958849d6c2422461e85eba57577a65e884
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: 2d47a8f61c85b390ae53311154f27d2d85860840
+ms.sourcegitcommit: 9a1924ba2372904eb4a8a1894973e6f2be84129d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112599"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626051"
 ---
 # <a name="supported-operating-systems-and-browsers-in-intune"></a>Systemy operacyjne i przeglądarki obsługiwane w usłudze Intune
 
@@ -30,6 +30,8 @@ ms.locfileid: "53112599"
 Przed skonfigurowaniem usługi Microsoft Intune sprawdź obsługiwane systemy operacyjne i przeglądarki.
 
 Aby uzyskać pomoc dotyczącą instalowania usługi Intune na urządzeniu, zobacz [Wykonywanie pracy przy użyciu urządzeń zarządzanych](/intune-user-help/company-portal-frequently-asked-questions) i [Przepustowość i wymagania dotyczące konfiguracji sieci usługi Intune](network-bandwidth-use.md).
+
+Aby uzyskać więcej informacji na temat obsługi dostawcy usługi konfiguracji, odwiedź stronę [Configuration service provider reference](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) (Informacje dotyczące dostawcy usługi konfiguracji).
 
 ## <a name="intune-supported-operating-systems"></a>Systemy operacyjne obsługiwane przez usługę Intune
 
