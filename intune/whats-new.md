@@ -16,12 +16,12 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 3f0283b07c4efd03800f21aadba2cc53beffec68
-ms.sourcegitcommit: 58ac1051faeb33dd29e59049d901761707486350
+ms.openlocfilehash: a84683531481410d54f527ddd35400dcfe504fc5
+ms.sourcegitcommit: 6058c611d5a54076121af1d327a43ad861a43f8a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553694"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53996035"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co nowego w usłudze Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -93,13 +93,6 @@ Teraz można zarządzać następującymi aplikacjami za pomocą [zasad ochrony a
 
 Zasady ochrony aplikacji umożliwiają ochronę danych firmowych i kontrolowanie transferu danych dla tych aplikacji, podobnie jak w przypadku innych aplikacji zarządzanych przez zasady usługi Intune. Uwaga: jeśli usługa Flow nie jest jeszcze widoczna w konsoli, należy ją dodać podczas tworzenia lub edytowania zasad ochrony aplikacji. W tym celu należy użyć opcji **+ Więcej aplikacji** i podać *identyfikator aplikacji* dla usługi Flow w polu danych wejściowych. W przypadku systemu Android należy użyć wartości *com.microsoft.flow*, a w przypadku systemu iOS — wartości *com.microsoft.procsimo*.
 
-#### <a name="intune-app-protection-policies-ui-update----3251427---"></a>Aktualizacja interfejsu użytkownika zasad ochrony aplikacji usługi Intune <!-- 3251427 -->
-Zmieniliśmy etykiety ustawień i przycisków funkcji ochrony aplikacji usługi Intune, aby ułatwić ich zrozumienie. Oto niektóre zmiany:  
-
-- Kontrolki **tak** / **nie** zostały zmienione głównie na kontrolki **blokuj** / **zezwalaj ** oraz **wyłącz** / **włącz**. Etykiety również zostały aktualizowane.  
-- Format ustawień został zmieniony, dzięki czemu ustawienie i jego etykieta znajdują się obok siebie w kontrolce, umożliwiając lepszą nawigację.   
-
-Ustawienia domyślne i liczba ustawień pozostają takie same, lecz ta zmiana pozwala użytkownikowi lepiej zrozumieć i wykorzystać ustawienia w celu stosowania wybranych zasad ochrony aplikacji, a także łatwiej nawigować po nich.
 
 ### <a name="device-configuration"></a>Konfiguracja urządzenia
 
