@@ -6,19 +6,19 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 7/25/2018
+ms.date: 07/25/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
-ms.openlocfilehash: aa447721449b2b3733e20d9f65f0253e9123228b
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 761605a74e6aeda65d9c6361b18b51e255873ac1
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184211"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53816535"
 ---
 # <a name="integrate-better-mobile-with-intune"></a>Integrowanie usługi Better Mobile z usługą Intune
 
@@ -62,7 +62,7 @@ Przebieg procesu autoryzacji aplikacji Better Mobile jest następujący:
 1. Przejdź do [konsoli administracyjnej Better Mobile](https://aad.bmobi.net) i zaloguj się przy użyciu swoich poświadczeń.
 2. Wybierz kolejno pozycje **Integracja** > **EMM/MDM** > **DODAJ KONTO**.
 
-     ![Konsola administracyjna usługi Better Mobile](media/better_mobile_console.png)
+     ![Obraz przedstawiający konsolę administracyjną usługi Better Mobile](media/better_mobile_console.png)
  
 3. Wybierz pozycję **Intune**.
 4. Obok pozycji **NAZWA KONTA** wpisz deskryptor. 

@@ -1,6 +1,5 @@
 ---
-title: Integrowanie narzędzia Jamf Pro z usługą Microsoft Intune w celu zachowania zgodności
-titlesuffix: ''
+title: Integrowanie narzędzia Jamf Pro z usługą Microsoft Intune w celu zachowania zgodności | Microsoft Intune
 description: Stosuj zasady zgodności usługi Microsoft Intune z dostępem warunkowym usługi Azure Active Directory, aby pomóc zabezpieczać urządzenia zarządzane przez narzędzie Jamf.
 keywords: ''
 author: brenduns
@@ -16,16 +15,16 @@ ms.reviewer: elocholi
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: e936ecd4ce6a9b0fa447ecfe8e45e04a78999a2b
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: cc547926d95e3fa1bec54b4ea55f764b5701b3b7
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52185019"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53816824"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Integrowanie narzędzia Jamf Pro z usługą Intune w celu zachowania zgodności
 
-Dotyczy: usługa Intune w witrynie Azure Portal
+Dotyczy: Usługa Intune w witrynie Azure Portal
 
 Jeśli do zarządzania użytkownikami końcowymi komputerów Mac Twoja organizacja używa narzędzia [Jamf Pro](https://www.jamf.com), zastosowanie zasad zgodności usługi Microsoft Intune i dostępu warunkowego usługi Azure Active Directory zapewnia, że urządzenia w organizacji będą zgodne.
 

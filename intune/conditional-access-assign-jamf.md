@@ -1,12 +1,12 @@
 ---
-title: Zasady zgodności urządzeń dla urządzeń Jamf
+title: Zasady zgodności urządzeń dla urządzeń Jamf | Microsoft Intune
 titlesuffix: Microsoft Intune
 description: Stosuj zasady zgodności usługi Microsoft Intune z dostępem warunkowym usługi Azure Active Directory, aby pomóc zabezpieczać urządzenia zarządzane przez narzędzie Jamf.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/16/2018
+ms.date: 01/02/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,16 +16,16 @@ ms.reviewer: elocholi
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 6fa89e96b05e5344dec32fb452be8ebeaa58bc12
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: d7d054b11a4abc969ad411169d0222be37fd6711
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52182027"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817232"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Wymuszanie zgodności na urządzeniach Mac zarządzanych za pomocą narzędzia Jamf Pro
 
-Dotyczy: usługa Intune w witrynie Azure Portal
+Dotyczy: Usługa Intune w witrynie Azure Portal
 
 W celu zapewnienia, że użytkownicy końcowi spełniają wymagania obowiązujące w organizacji, można wykorzystać usługę Azure Active Directory i zasady dostępu warunkowego usługi Microsoft Intune. Te zasady można stosować na komputerach Mac, które są [zarządzane za pomocą narzędzia Jamf Pro](conditional-access-integrate-jamf.md). Wymaga to dostępu do konsol usługi Intune i narzędzia Jamf Pro.
 
@@ -57,7 +57,7 @@ Aplikację Portal firmy dla systemu macOS w narzędziu Jamf Pro należy wdroży�
 ## <a name="create-a-policy-in-jamf-pro-to-have-users-register-their-devices-with-azure-active-directory"></a>Tworzenie zasad narzędzia Jamf Pro, które umożliwią użytkownikom rejestrowanie swoich urządzeń w usłudze Azure Active Directory
 
 > [!NOTE]
-> Przed przejściem do dalszych kroków musisz [wdrożyć aplikację Portal firmy](conditional-access-assign-jamf.md#require-the-company-portal-app-for-macos) dla systemu macOS.  
+> Przed przejściem do dalszych kroków musisz [wdrożyć aplikację Portal firmy](conditional-access-assign-jamf.md#deploy-the-company-portal-app-for-macos-in-jamf-pro) dla systemu macOS.  
 
 Użytkownicy końcowi muszą za pośrednictwem usługi Jamf Self Service uruchomić aplikację Portal firmy, aby zarejestrować urządzenie w usłudze Azure Active Directory jako urządzenie zarządzane za pomocą narzędzia Jamf Pro. Wymaga to podjęcia działania przez użytkowników końcowych. Zalecamy [kontakt z użytkownikiem końcowym](end-user-educate.md) za pośrednictwem poczty e-mail, powiadomień Jamf Pro lub innych metod powiadamiania użytkowników końcowych, aby poinformować ich o potrzebie kliknięcia przycisku w usłudze Jamf Self Service.
 

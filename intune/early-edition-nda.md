@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/3/2018
+ms.date: 01/07/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,14 +17,14 @@ ms.reviewer: cacampbell
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 21d89d97355430f071763391d69fe332cf3ef369
-ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
+ms.openlocfilehash: 94125ced318f304e5b2bdc8f09472280fc05b08a
+ms.sourcegitcommit: 662afec5e87639a7f541bb89700cc0fec5037bb0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53642901"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54069357"
 ---
-# <a name="the-early-edition-for-microsoft-intune---december-2018"></a>Wczesna wersja usługi Microsoft Intune — grudzień 2018
+# <a name="the-early-edition-for-microsoft-intune---january-2019"></a>Wczesna wersja usługi Microsoft Intune — styczeń 2019
 
 > [!Note]
 > Powiadomienie NDA: Dla usługi Intune opracowywane są następujące zmiany. Te informacje są udostępniane pod rygorem umowy o zachowaniu poufności w bardzo ograniczonym zakresie. Nie wolno publikować żadnych tych informacji w mediach społecznościowych ani w publicznych witrynach internetowych, takich jak Twitter, UserVoice, Reddit itd. 
@@ -40,6 +40,45 @@ Ta strona jest okresowo aktualizowana. Odwiedź ją ponownie, aby sprawdzić dod
 -->
  
 ## <a name="intune-in-the-azure-portal"></a>Usługa Intune w witrynie Azure Portal
+
+<!-- 1901 start -->
+
+### <a name="android-enterprise-apps----1352553----"></a>Aplikacje systemu Android Enterprise <!-- 1352553  -->
+Za pomocą usługi Microsoft Intune będzie można usuwać aplikacje zarządzane ze sklepu Google Play. Aby usunąć aplikację zarządzaną ze sklepu Google Play, konieczne będzie otwarcie usługi Microsoft Intune w witrynie Azure Portal i wybranie pozycji **Aplikacje klienckie** > **Aplikacje**. Na liście aplikacji będzie trzeba wybrać wielokropek (...) po prawej stronie aplikacji zarządzanej ze sklepu Google Play, a następnie wybrać pozycję **Usuń** z wyświetlonej listy poleceń. Po usunięciu aplikacji zarządzanej ze sklepu Google Play z listy aplikacji ta aplikacja zarządzana stanie się automatycznie aplikacją niezatwierdzoną.
+
+### <a name="managed-google-play-app-type----1352580---"></a>Typ aplikacji zarządzanej ze sklepu Google Play <!-- 1352580 -->
+Dzięki zastosowaniu typów aplikacji **zarządzanych ze sklepu Google Play** będzie można wybiórczo dodawać [aplikacje zarządzane ze sklepu Google Play](https://play.google.com/work/search?q=microsoft&c=apps) do usługi Intune. Administratorzy usługi Intune będą mogli przeglądać, wyszukiwać, zatwierdzać, synchronizować i przypisywać zatwierdzone aplikacje zarządzane ze sklepu Google Play z poziomu usługi Intune. Nie będzie już konieczne przechodzenie do zarządzanej konsoli Google Play i dokonywanie ponownego uwierzytelniania. W usłudze Intune wystarczy wybrać pozycję **Aplikacje klienckie** > **Aplikacje** > **Dodaj**. Natomiast na liście **Typ aplikacji** będzie trzeba wybrać pozycję **Zarządzany sklep Google Play**.
+
+### <a name="preview-of-support-for-android-corporate-owned-fully-managed-devices----1574342----"></a>Obsługa należących do firmy, w pełni zarządzanych urządzeń z systemem Android — wersja zapoznawcza <!-- 1574342  -->
+Usługa Intune będzie obsługiwać w pełni zarządzane, należące do firmy urządzenia z systemem Android w scenariuszu „właściciel urządzenia”, w którym urządzenia są ściśle zarządzane przez dział IT i są powiązane z poszczególnymi użytkownikami. Pozwala to administratorom na zarządzanie całym urządzeniem, wymuszanie rozszerzonej gamy opcji kontroli zasad niedostępnych dla profilów służbowych oraz ograniczanie możliwości instalowania aplikacji przez użytkowników tylko do aplikacji z zarządzanego sklepu Google Play. W celu skonfigurowania w pełni zarządzanych urządzeń z systemem Android będzie trzeba przejść kolejno do pozycji **Rejestrowanie urządzenia** > **Rejestracja systemu Android** > **Firmowe, w pełni zarządzane urządzenia użytkowników**. Należy pamiętać, że ta funkcja jest dostępna w wersji zapoznawczej. Niektóre funkcje usługi Intune, takie jak certyfikaty, zgodność i dostęp warunkowy, nie są obecnie dostępne dla w pełni zarządzanych urządzeń użytkowników z systemem Android.
+
+### <a name="deployment-of-online-licensed-microsoft-store-for-business-apps----16726660----"></a>Wdrażanie licencjonowanych w trybie online aplikacji ze sklepu Microsoft Store dla Firm <!-- 16726660  -->
+Będzie możliwe przypisywanie w kontekście urządzenia wymaganych, licencjonowanych w trybie online aplikacji ze sklepu Microsoft Store dla Firm. Wdrożona w ten sposób aplikacja ze sklepu Microsoft Store dla Firm będzie mogła być zainstalowana dla wszystkich użytkowników urządzenia. Dotyczy to tylko urządzeń stacjonarnych z systemem Windows 10 w wersji RS4 lub nowszej. Możliwość instalacji w kontekście urządzenia jest dostępna na stronie przypisywania aplikacji klienckich dla aplikacji MSFB licencjonowanych w trybie online.
+
+### <a name="configure-profile-to-skip-some-screens-during-setup-assistant----2276470----"></a>Konfigurowanie profilu pod kątem pominięcia niektórych ekranów asystenta ustawień <!-- 2276470  -->
+Podczas tworzenia profilu rejestracji systemu macOS będzie można skonfigurować go tak, aby pominąć dowolny z następujących ekranów, gdy użytkownik będzie korzystać z asystenta ustawień:
+- Migracja systemu Android
+- Wyświetlanie sygnału
+- Ochrona prywatności
+- iCloudStorage
+
+### <a name="assign-autopilot-profiles-to-the-all-devices-virtual-group---2715522----"></a>Przypisywanie profilów rozwiązania Autopilot do wirtualnej grupy wszystkich urządzeń <!--2715522  -->
+Będzie można przypisać profile rozwiązania Autopilot do wirtualnej grupy wszystkich urządzeń. Aby to zrobić, wybierz pozycję **Rejestrowanie urządzeń** > **Rejestracja w systemie Windows** > **Profile wdrażania** > wybierz profil > **Przypisania** > w obszarze **Przypisz do** wybierz pozycję **Wszystkie urządzenia**. Aby uzyskać więcej informacji na temat profilów rozwiązania Autopilot, zobacz [Rejestrowanie urządzeń z systemem Windows przy użyciu rozwiązania Windows Autopilot](enrollment-autopilot.md).
+
+### <a name="customize-wallpaper-on-supervised-ios-devices-using-a-device-configuration-profile----2809324----"></a>Dostosowywanie tapety na urządzeniach nadzorowanych z systemem iOS przy użyciu profilu konfiguracji urządzenia <!-- 2809324  -->
+Podczas tworzenia profilu konfiguracji urządzenia dla urządzeń z systemem iOS będzie można włączać lub ograniczać niektóre ustawienia w obszarze **Konfiguracja urządzeń** > **Profile** > **Utwórz profil** > **iOS** dla platformy > **Ograniczenia dotyczące urządzeń** dla typu profilu. Ta aktualizacja zawiera nowe ustawienia **Tapeta**, które pozwalają administratorowi na użycie obrazu w formacie png, jpg lub jpeg jako tapety, wyświetlenie podglądu takiego obrazu i zablokowanie możliwości zmiany tapety przez użytkowników. Ustawienia dotyczące tapety mają zastosowanie tylko na urządzeniach nadzorowanych. Aby uzyskać listę bieżących ustawień, zobacz [iOS device restriction settings](device-restrictions-ios.md) (Ustawienia dotyczące ograniczania urządzeń z systemem iOS).
+
+### <a name="toast-notifications-for-win32-apps----3136566-----"></a>Wyskakujące powiadomienia dla aplikacji Win32 <!-- 3136566   -->
+Będzie można pominąć wyświetlanie wyskakujących powiadomień dla użytkownika końcowego podczas przypisywania aplikacji. W usłudze Intune wybierz kolejno pozycje **Aplikacje klienckie** > **Aplikacje** > wybierz aplikację > **Przypisania** > **Uwzględnij grupy**. 
+
+### <a name="contact-sharing-via-bluetooth-is-removed-in-device-restrictions--device-owner-for-android-enterprise----3598396---"></a>Udostępnianie kontaktów za pośrednictwem połączenia Bluetooth zostało usunięte z obszaru Ograniczenia dotyczące urządzeń > Właściciel urządzenia w systemie Android Enterprise <!-- 3598396 -->
+Podczas tworzenia profilu ograniczeń dotyczących urządzeń z systemem Android Enterprise widoczne jest ustawienie **Udostępnianie kontaktów za pośrednictwem połączenia Bluetooth**. W ramach tej aktualizacji ustawienie **Udostępnianie kontaktów za pośrednictwem połączenia Bluetooth** zostanie usunięte (**Konfiguracja urządzeń** > **Profile** > **Utwórz profil** > **Android Enterprise** dla platformy > **Ograniczenia dotyczące urządzeń > Właściciel urządzenia** dla typu profilu > **Ogólne**). 
+
+Ustawienie **Udostępnianie kontaktów za pośrednictwem połączenia Bluetooth** nie jest obsługiwane w przypadku zarządzania właścicielami urządzeń w systemie Android Enterprise. Po usunięciu tego ustawienia nie będzie ono miało wpływu na jakiekolwiek urządzenia czy dzierżawy, nawet jeśli to ustawienie zostało włączone i skonfigurowane w środowisku.
+
+Aby wyświetlić aktualną listę ustawień, zobacz [Ustawienia urządzeń z systemem Android Enterprise w celu zezwolenia na funkcje lub ich ograniczenia](device-restrictions-android-for-work.md).
+
+Dotyczy: właściciel urządzenia z systemem Android Enterprise
 
 <!-- 1812 start -->
 
@@ -75,8 +114,9 @@ Aktualną listę ustawień sieci VPN można znaleźć w temacie [Windows 10 VPN 
 ### <a name="the-intune-app-sdk-will-support-256-bit-encryption-keys----1832174---"></a>Zestaw SDK aplikacji usługi Intune będzie obsługiwać 256-bitowe klucze szyfrowania <!-- 1832174 -->
 Zestaw SDK aplikacji usługi Intune dla systemu Android będzie używać 256-bitowych kluczy szyfrowania po włączeniu szyfrowania przy użyciu zasad ochrony aplikacji. Zestaw SDK będzie nadal obsługiwać 128-bitowe klucze w celu zachowania zgodności z zawartością i aplikacjami, które używają starszych wersji zestawu SDK.
 
-### <a name="enabled-shared-pc-settings-in-intune-profile----1907917---"></a>Włączone ustawienia komputera udostępnionego w profilu usługi Intune <!-- 1907917 -->
+### <a name="enabled-shared-pc-settings-in-intune-profile----1907917-1063203---"></a>Włączone ustawienia komputera udostępnionego w profilu usługi Intune <!-- 1907917, 1063203 -->
 Obecnie można konfigurować ustawienia komputera udostępnionego na urządzeniach z systemem Windows 10 Desktop przy użyciu niestandardowego ustawienia OMA-URI. Zostanie dodany nowy profil służący do konfigurowania ustawień komputera udostępnionego (**Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **Windows 10 i nowsze** > **Urządzenie udostępnione wielu użytkownikom**).
+
 Dotyczy: system Windows 10 lub nowsze oraz system Windows Holographic for Business
 
 ### <a name="intune-policies-update-authentication-method-and-company-portal-app-installation-----1927359---"></a>Zasady usługi Intune aktualizują metodę uwierzytelniania i instalację aplikacji Portal firmy <!-- 1927359 -->
@@ -113,10 +153,6 @@ Aby wybrać ekrany do pominięcia, przejdź kolejno do pozycji **Rejestrowanie u
 
 ### <a name="some-bitlocker-settings-support-windows-10-pro-edition---2727036---"></a>Niektóre ustawienia funkcji BitLocker obsługują wersję systemu Windows 10 Pro<!-- 2727036 -->
 Będzie można utworzyć profil konfiguracji, który definiuje ustawienia programu Endpoint Protection na urządzeniach z systemem Windows 10, w tym funkcji BitLocker. Spowoduje to dodanie obsługi systemu Windows 10 Professional dla niektórych ustawień funkcji BitLocker. Aby wyświetlić bieżące ustawienia wersji systemu Windows 10, zobacz [Endpoint protection settings for Windows 10](endpoint-protection-windows-10.md#windows-encryption) (Ustawienia programu Endpoint Protection dla systemu Windows 10).
-
-
-### <a name="intune-device-reporting-fields----2748738---"></a>Pola raportów dotyczących urządzeń w usłudze Intune <!-- 2748738 -->
-Usługa Intune będzie udostępniać dodatkowe pola raportów dotyczących urządzeń, takie jak na przykład producent systemu Android, model i wersja poprawki zabezpieczeń, a także model z systemem iOS. W usłudze Intune te pola będą dostępne po wybraniu opcji **Aplikacje klienckie** > **Stan ochrony aplikacji** i wybraniu pozycji **Raport ochrony aplikacji: iOS, Android**. Ponadto te parametry będą pomocne w przypadku konfigurowania listy **dozwolonych** dla producenta urządzenia (Android), listy **dozwolonych** dla modelu urządzenia (Android i iOS) oraz ustawienia minimalnej wersji poprawki zabezpieczeń systemu Android. 
 
 ### <a name="intune-device-reporting-fields----2748738---"></a>Pola raportów dotyczących urządzeń w usłudze Intune <!-- 2748738 -->
 Usługa Intune będzie udostępniać dodatkowe pola raportów dotyczących urządzeń, takie jak na przykład producent systemu Android, model i wersja poprawki zabezpieczeń, a także model z systemem iOS. W usłudze Intune te pola będą dostępne po wybraniu opcji **Aplikacje klienckie** > **Stan ochrony aplikacji** i wybraniu pozycji **Raport ochrony aplikacji: iOS, Android**. Ponadto te parametry będą pomocne w przypadku konfigurowania listy **dozwolonych** dla producenta urządzenia (Android), listy **dozwolonych** dla modelu urządzenia (Android i iOS) oraz ustawienia minimalnej wersji poprawki zabezpieczeń systemu Android. 
@@ -155,6 +191,8 @@ Szablony administracyjne w usłudze Intune (**Konfiguracja urządzenia** > **Sza
 Szablony administracyjne są dostępne w publicznej wersji zapoznawczej Szablony administracyjne są przenoszone z obszaru **Konfiguracja urządzenia** > **Szablony administracyjne** do obszaru **Konfiguracja urządzenia** > **Profile** >**Utwórz profil** > w polu **Platforma** wybierz  **Windows 10 i nowsze**, w polu **Typ profilu** wybierz **Szablony administracyjne**.
 Włączone raportowanie Dotyczy: System Windows 10 lub nowszy
 
+### <a name="intune-macos-company-portal-dark-mode----3300524---"></a>Tryb ciemny Portalu firmy usługi Intune w systemie macOS <!-- 3300524 -->
+Portal firmy usługi Intune w systemie macOS obsługuje teraz tryb ciemny systemu macOS. Po włączeniu trybu ciemnego na urządzeniu z systemem macOS w wersji 10.14 lub nowszej Portal firmy dostosuje swój wygląd do kolorów obecnych w tym trybie.
 
 <!-- 1810 start -->
 
@@ -211,7 +249,7 @@ Dotyczy: system Windows 10 lub nowszy
 
 Aktualnie nie ma aktywnych powiadomień.
 
-### <a name="see-also"></a>Zobacz też
+### <a name="see-also"></a>Zobacz także
 Aby dowiedzieć się więcej o najnowszych zmianach, zobacz [Co nowego w usłudze Microsoft Intune](whats-new.md).
 
 

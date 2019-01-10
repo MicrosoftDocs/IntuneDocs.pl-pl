@@ -1,6 +1,5 @@
 ---
-title: Integracja rozwiązania Zimperium MTD z usługą Microsoft Intune
-titleSuffix: ''
+title: Integracja rozwiązania Zimperium MTD z usługą Microsoft Intune | Microsoft Intune
 description: Jak skonfigurować rozwiązanie Zimperium Mobile Threat Defense (MTD) za pomocą usługi Microsoft Intune w celu kontrolowania dostępu urządzeń przenośnych do zasobów firmy.
 keywords: ''
 author: brenduns
@@ -16,12 +15,12 @@ ms.reviewer: davidra
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 3f2ffb3f99ce0dc925c52f733b25292cdbddae3e
-ms.sourcegitcommit: d3b1e3fffd3e0229292768c7ef634be71e4736ae
+ms.openlocfilehash: b12cec7a01d809eb5a6b6523a73dd224c10c972e
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52861000"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817198"
 ---
 # <a name="integrate-zimperium-with-intune"></a>Integracja rozwiązania Zimperium z usługą Intune
 

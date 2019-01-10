@@ -16,14 +16,14 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 3da4208b3036b0252e2e5bd26d8361d04642183a
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 83371d14215eb9ed2298796279d232ffbc7d129f
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189711"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817045"
 ---
-# <a name="quickstart-create-an-email-device-profile-for-ios"></a>Przewodnik Szybki start: tworzenie profilu urządzenia poczty e-mail dla systemu iOS
+# <a name="quickstart-create-an-email-device-profile-for-ios"></a>Szybki start: tworzenie profilu urządzenia poczty e-mail dla systemu iOS
 
 Z tego przewodnika Szybki start dowiesz się, jak utworzyć profil urządzenia poczty e-mail dla urządzeń z systemem iOS. Ten profil określa ustawienia, które są wymagane, aby wbudowana aplikacja poczty e-mail na urządzeniu z systemem iOS mogła łączyć się z firmową pocztą e-mail. Profile urządzeń poczty e-mail ułatwiają standaryzacje ustawień na różnych urządzeniach i umożliwiają użytkownikom końcowym dostęp do firmowej poczty e-mail na ich osobistych urządzeniach bez konieczności przeprowadzania konfiguracji po ich stronie. Aby dodatkowo zabezpieczyć pocztę e-mail, można za pomocą profilu poczty e-mail ustalać, czy urządzenia są zgodne, i skonfigurować dostęp warunkowy w celu zezwalania na dostęp do poczty e-mail tylko zgodnym urządzeniom. Aby uzyskać szczegółowe informacje na temat profilów poczty e-mail, zobacz [How to configure email settings in Microsoft Intune](email-settings-configure.md) (Jak skonfigurować ustawienia poczty e-mail w usłudze Microsoft Intune).
 
@@ -45,7 +45,7 @@ Zaloguj się w usłudze [Intune](https://aka.ms/intuneportal) jako administrator
    - W polu **Platforma** wybierz opcję **iOS**.
    - W polu **Typ profilu** wybierz opcję **E-mail**.
     
-     ![Tworzenie profilu poczty e-mail dla systemu iOS](media/quickstart-email-profile/ios-email-profile-name.png)
+     ![Tworzenie profilu poczty e-mail do użytku w systemie iOS](media/quickstart-email-profile/ios-email-profile-name.png)
 
 5. Wybierz pozycję **Ustawienia**, a następnie wprowadź następujące ustawienia (w przypadku pozostałych ustawień pozostaw wartości domyślne):
    - **Serwer poczty e-mail**: na potrzeby tego przewodnika Szybki start wprowadź **outlook.office365.com**. To ustawienie określa lokalizację programu Exchange (adres URL) serwera poczty e-mail, za pomocą którego aplikacja poczty systemu iOS będzie łączyć się z kontem e-mail.
@@ -54,7 +54,7 @@ Zaloguj się w usłudze [Intune](https://aka.ms/intuneportal) jako administrator
    - **Atrybut adresu e-mail z usługi AAD**: to ustawienie jest adresem e-mail z usługi Azure AD, który będzie używany do logowania się w programie Exchange. Na potrzeby tego przewodnika Szybki start wybierz opcję **Główna nazwa użytkownika**.
    - **Metoda uwierzytelniania**: na potrzeby tego przewodnika Szybki start wybierz pozycję **Nazwa użytkownika i hasło**. (Można również wybrać pozycję **Certyfikat**, jeśli skonfigurowano już certyfikat dla usługi Intune).
     
-     ![Tworzenie profilu poczty e-mail dla systemu iOS](media/quickstart-email-profile/ios-email-profile.png)
+     ![Tworzenie profilu poczty e-mail na potrzeby systemu iOS](media/quickstart-email-profile/ios-email-profile.png)
 
 6. Wybierz przycisk **OK**.
 7. Wybierz przycisk **Utwórz**. Nowy profil pojawi się na liście profilów z wyświetlonym pulpitem nawigacyjnym, aby można było monitorować sposób przypisania go do urządzeń z systemem iOS i użytkowników systemu iOS.

@@ -1,5 +1,5 @@
 ---
-title: Przeglądanie dzienników zasad ochrony aplikacji
+title: Przeglądanie dzienników zasad ochrony aplikacji | Microsoft Intune
 titlesuffix: Microsoft Intune
 description: Informacje na temat ustawień, które można przeglądać w dziennikach ochrony aplikacji.
 keywords: ''
@@ -16,12 +16,12 @@ ms.reviewer: andcerat
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: eedbc17147c6f9e2988d954308f2332de10d00ab
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 3e7b6ec1063b4337f44de0a4502bcbf7c2a45edf
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189847"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817215"
 ---
 # <a name="review-client-app-protection-logs"></a>Przeglądanie dzienników ochrony aplikacji klienta
 
@@ -39,8 +39,8 @@ W poniższej tabeli przedstawiono nazwy i opisy ustawień zarejestrowanych w dzi
 
 | Nazwa                        | Możliwe wartości                                                                                                                                                                                                                                                                                           | Ustawienie w portalu zarządzania aplikacjami mobilnymi w usłudze Azure Intune                                                                                                                            |
 |-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| AccessRecheckOfflineTimeout | x min                                                                                                                                                                                                                                                                                                   | [Dostęp] Ponowne sprawdzenie wymagań dostępu — okres karencji w trybie offline<br>Uwaga: Jest to okres, po którym wymagania dostępu aplikacji zostaną sprawdzone ponownie, jeśli urządzenie jest w trybie offline.             |
-| AccessRecheckOnlineTimeout  | _x_ min                                                                                                                                                                                                                                                                                                   | [Dostęp] Ponowne sprawdzenie wymagań dostępu — limit czasu.<br>Uwaga: Jest to okres, po którym wymagania dostępu aplikacji zostaną sprawdzone ponownie po uruchomieniu aplikacji, jeśli urządzenie jest w trybie online. |
+| AccessRecheckOfflineTimeout | x min                                                                                                                                                                                                                                                                                                   | [Dostęp] Ponowne sprawdzenie wymagań dostępu — okres karencji w trybie offline<br>Uwaga: jest to okres, po którym wymagania dostępu aplikacji zostaną sprawdzone ponownie, jeśli urządzenie jest w trybie offline.             |
+| AccessRecheckOnlineTimeout  | _x_ min                                                                                                                                                                                                                                                                                                   | [Dostęp] Ponowne sprawdzenie wymagań dostępu — limit czasu.<br>Uwaga: jest to okres, po którym wymagania dostępu aplikacji zostaną sprawdzone ponownie po uruchomieniu aplikacji, jeśli urządzenie jest w trybie online. |
 | AppPinDisabled              | 0 = Nie<br>1 = Tak                                                                                                                                                                                                                                                                                           | [Dostęp] Wyłącz numer PIN aplikacji, gdy zarządzany jest numer PIN urządzenia.                                                                                                                                     |
 | AppSharingFromLevel         | 0 = Brak aplikacji<br>1 = Zarządzane aplikacje<br>2 = Dowolna aplikacja                                                                                                                                                                                                                                                              | [Relokacja danych] Zezwalaj aplikacji na odbieranie danych z innych aplikacji.                                                                                                                        |
 | AppSharingToLevel           | 0 = Brak aplikacji<br>1 = Zarządzane aplikacje<br>2 = Dowolna aplikacja                                                                                                                                                                                                                                                              | [Relokacja danych] Zezwalaj aplikacji na przesyłanie danych do innych aplikacji.                                                                                                                         |

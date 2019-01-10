@@ -1,12 +1,11 @@
 ---
-title: Migracja dostępu warunkowego do witryny Azure Portal
-titlesuffix: Microsoft Intune
+title: Migracja dostępu warunkowego do witryny Azure Portal | Microsoft Intune
 description: Ponowne przypisywanie zasad dostępu warunkowego utworzonych wcześniej w klasycznym portalu usługi Intune do witryny Azure Portal.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/25/2018
+ms.date: 01/02/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +15,12 @@ ms.reviewer: chrisgree
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 6dbd7d9079bdb826f83cce76650cacebee056b68
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: d319ff39574565c3f326bd6b03b346e989bdc488
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184492"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817436"
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Ponowne przypisywanie zasad dostępu warunkowego z klasycznego portalu usługi Intune do witryny Azure Portal
 
@@ -46,7 +45,7 @@ Jeśli wszystko jest już gotowe do przejścia na witrynę Azure Portal, wykonaj
             - Stopniowo usuwaj użytkowników z grup zabezpieczeń, które mają przypisane zasady dostępu warunkowego w portalu klasycznym usługi Intune.
             - Po sprawdzeniu, czy nowe zasady dla tych użytkowników działają, można je wyłączyć w portalu klasycznym usługi Intune. 
 <br /><br />
-- Jeśli ustawienia zasad dostępu warunkowego zostały skonfigurowane w portalu klasycznym usługi Intune do używania protokołu EAS (Exchange ActiveSync), za pomocą [instrukcji w tym temacie](#to-reassign-intune-device-based-conditional-access-policies-for-eas-clients) **przypisz ponownie ustawienia zasad dostępu warunkowego EAS w witrynie Azure Portal**.
+- Jeśli ustawienia zasad dostępu warunkowego zostały skonfigurowane w portalu klasycznym usługi Intune do używania protokołu EAS (Exchange ActiveSync), za pomocą [instrukcji w tym temacie](#reassign-intune-device-based-conditional-access-policies-for-eas-clients) **przypisz ponownie ustawienia zasad dostępu warunkowego EAS w witrynie Azure Portal**.
 
 ### <a name="to-verify-your-device-based-conditional-access-policies-in-the-intune-classic-portal"></a>Aby zweryfikować w portalu klasycznym usługi Intune zasady dostępu warunkowego opartego na urządzeniach
 
@@ -135,7 +134,7 @@ Blok **Intune App Protection** w witrynie Azure Portal umożliwia administratoro
 
 21. W bloku **Nowy** zasad dostępu warunkowego włącz przełącznik **Włącz zasady**, a następnie kliknij pozycję **Utwórz**.
 
-    ![Obraz przedstawiający porównanie interfejsu użytkownika dla włączania zasad dostępu warunkowego w portalu usługi Intune i w witrynie Azure Portal](./media/reassign-ca-11.png)
+    ![Porównanie interfejsu użytkownika dla włączania zasad dostępu warunkowego w usłudze Intune i na platformie Azure](./media/reassign-ca-11.png)
 
 ## <a name="reassign-intune-device-based-conditional-access-policies-for-eas-clients"></a>Ponowne przypisywanie zdefiniowanych w usłudze Intune zasad dostępu warunkowego opartego na urządzeniach dla klientów programu EAS
 
@@ -149,7 +148,7 @@ Jeśli w ramach zasad dotyczących usługi Exchange Online skonfigurowano w port
 
 4. W sekcji **Przypisania** wybierz pozycję **Użytkownicy i grupy**, aby wybrać użytkowników i grupy docelowe dla nowych zasad dostępu warunkowego.
 
-    ![Obraz przedstawiający porównanie interfejsu użytkownika grup użytkowników w portalu usługi Intune i witrynie Azure Portal](./media/reassign-ca-12.png)
+    ![Obraz przedstawiający porównanie interfejsu użytkownika grup użytkowników w witrynie Azure Portal i portalu usługi Intune](./media/reassign-ca-12.png)
 
     > [!IMPORTANT] 
     > Wybór dokonany dla witryny Azure Portal powinien odpowiadać wyborowi dokonanemu dla witryny Azure Portal. Na przykład jeśli w portalu klasycznym usługi Intune masz wybranych wszystkich użytkowników, wybierz pozycję **Wszyscy użytkownicy** w witrynie Azure Portal. Oprócz tego, jeśli w portalu klasycznym usługi Intune była zaznaczona opcja **Wykluczone grupy**, musisz także wykluczyć te grupy w witrynie Azure Portal.
@@ -167,7 +166,7 @@ Jeśli w ramach zasad dotyczących usługi Exchange Online skonfigurowano w port
 
 8. W bloku **Warunki** wybierz pozycję **Aplikacje klienckie**, a następnie wybierz odpowiednią aplikację kliencką. Jeśli wybrano blokowanie klientów nieobsługiwanych przez usługę Intune, użyj opcji **Zastosuj zasady tylko do obsługiwanych platform**.
 
-    ![Obraz przedstawiający porównanie interfejsu użytkownika aplikacji klienckiej w portalu usługi Intune i witrynie Azure Portal](./media/reassign-ca-15.png)
+    ![Obraz przedstawiający porównanie interfejsu użytkownika aplikacji klienckiej w witrynie Azure Portal i portalu usługi Intune](./media/reassign-ca-15.png)
 
 9. Po wybraniu aplikacji klienckiej kliknij dwa razy pozycję **Gotowe**.
 
@@ -179,7 +178,7 @@ Jeśli w ramach zasad dotyczących usługi Exchange Online skonfigurowano w port
 
 12. W bloku **Nowy** zasad dostępu warunkowego włącz przełącznik **Włącz zasady**, a następnie kliknij pozycję **Utwórz**.
 
-    ![Obraz przedstawiający porównanie interfejsu użytkownika dla włączania zasad dostępu warunkowego w portalu usługi Intune i w witrynie Azure Portal](./media/reassign-ca-17.png)
+    ![Porównanie interfejsu użytkownika dla włączania zasad dostępu warunkowego w usłudze Intune i na platformie Azure](./media/reassign-ca-17.png)
 
 > [!NOTE]
 > Jeśli skonfigurujesz opcję **Platformy urządzeń**, próba zapisania zasad zakończy się niepowodzeniem z powodu błędu „Konfiguracja zasad nie jest obsługiwana”. Program Exchange ActiveSync nie może zidentyfikować platformy używanej przez łączące się urządzenie. W związku z tym w przypadku tworzenia zasad dla urządzeń z programem Exchange ActiveSync konfigurowanie konkretnych platform urządzeń nie jest obsługiwane.
@@ -203,7 +202,7 @@ Po ponownym przypisaniu zasad dostępu warunkowego w witrynie Azure Portal nale�
 
     ![Obraz przedstawiający wyłączanie zasad dostępu warunkowego w portalu klasycznym usługi Intune](./media/reassign-ca-18.png)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Typowe sposoby korzystania z dostępu warunkowego przy użyciu usługi Intune](conditional-access-intune-common-ways-use.md)
 - [Dostęp warunkowy oparty na aplikacji z użyciem usługi Intune](app-based-conditional-access-intune.md)

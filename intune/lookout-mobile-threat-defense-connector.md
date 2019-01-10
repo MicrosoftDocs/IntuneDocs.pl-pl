@@ -1,6 +1,5 @@
 ---
-title: Łącznik usługi Lookout MTD w usłudze Microsoft Intune
-titlesuffix: ''
+title: Łącznik usługi Lookout MTD w usłudze Microsoft Intune | Microsoft Intune
 description: Dowiedz się więcej na temat integracji usługi Intune z usługą Lookout Mobile Threat Defense (MTD) w celu kontrolowania dostępu urządzeń przenośnych do zasobów firmy.
 keywords: ''
 author: brenduns
@@ -16,12 +15,12 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d7a545fe08acc9ab88086fa92be934c860ae4716
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: bd61b10ee60e1f9413c22d0d618bc5c270dc76a6
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179545"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817079"
 ---
 # <a name="lookout-mobile-threat-defense-connector-with-intune"></a>Łącznik Lookout Mobile Threat Defense z usługą Intune
 
@@ -63,34 +62,34 @@ Po wykryciu na urządzeniach złośliwego oprogramowania można zablokować na t
 
 **Blokowanie po wykryciu złośliwych aplikacji:**
 
-![diagram przedstawiający blokowanie dostępu przez zasady dostępu warunkowego, gdy urządzenie zostanie uznane za niezgodne z powodu znajdujących się na nim złośliwych aplikacji](./media/malicious-apps-blocked.png)
+![Obraz koncepcyjny przedstawiający blokowanie dostępu przez zasady z powodu wykrycia złośliwych aplikacji](./media/malicious-apps-blocked.png)
 
 **Dostęp udzielany po skorygowaniu:**
 
-![Diagram przedstawiający zasady dostępu warunkowego udzielające dostępu, gdy urządzenie jest uznane za zgodne po skorygowaniu](./media/malicious-apps-unblocked.png)
+![Obraz koncepcyjny przedstawiający udzielenie dostępu do urządzeń po skorygowaniu](./media/malicious-apps-unblocked.png)
 
 ### <a name="control-access-based-on-threat-to-network"></a>Kontrola dostępu oparta na zagrożeniu dla sieci
 Wykrywanie zagrożeń dla sieci, takich jak ataki typu man-in-the-middle, i ochrona dostępu do sieci Wi-Fi w oparciu o ryzyko dotyczące urządzenia.
 
 **Blokowanie dostępu do sieci przez Wi-Fi:**
 
-![diagram przedstawiający dostęp warunkowy blokujący dostęp do sieci Wi-Fi na podstawie zagrożeń sieciowych](./media/network-wifi-blocked.png)
+![Obraz przedstawiający blokowanie dostępu do sieci Wi-Fi z powodu wykrycia zagrożeń sieciowych](./media/network-wifi-blocked.png)
 
 **Dostęp udzielany po skorygowaniu:**
 
-![Diagram przedstawiający dostęp warunkowy, który zezwala na dostęp po skorygowaniu zagrożenia](./media/network-wifi-unblocked.png)
+![Obraz koncepcyjny przedstawiający dostęp warunkowy zezwalający na dostęp po skorygowaniu](./media/network-wifi-unblocked.png)
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Kontrola dostępu do usługi SharePoint Online oparta na zagrożeniu dla sieci
 
 Wykrywanie zagrożeń dla sieci, takich jak ataki typu man-in-the-middle i blokowanie synchronizacji plików firmy w oparciu o ryzyko dotyczące urządzenia.
 
 **Blokowanie usługi SharePoint Online po wykryciu zagrożeń sieciowych:**
 
-![Diagram przedstawiający dostęp warunkowy blokujący dostęp urządzenia do usługi SharePoint Online w oparciu o wykryte zagrożenie](./media/network-spo-blocked.png)
+![Obraz koncepcyjny przedstawiający blokowanie dostępu do usługi SharePoint Online](./media/network-spo-blocked.png)
 
 
 **Dostęp udzielany po skorygowaniu:**
 
-![Diagram przedstawiający dostęp warunkowy zezwalający na dostęp po skorygowaniu zagrożenia dotyczącego sieci](./media/network-spo-unblocked.png)
+![Obraz koncepcyjny przedstawiający zezwolenie na dostęp po skorygowaniu zagrożenia dotyczącego sieci](./media/network-spo-unblocked.png)
 
 ## <a name="next-steps"></a>Następne kroki
 Oto główne kroki, które należy wykonać, aby zaimplementować to rozwiązanie:

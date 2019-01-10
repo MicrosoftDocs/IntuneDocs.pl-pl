@@ -1,12 +1,11 @@
 ---
-title: Ustawienia funkcji Windows Information Protection w usłudze Microsoft Intune
-titleSuffix: ''
+title: Ustawienia funkcji Windows Information Protection w usłudze Microsoft Intune | Microsoft Intune
 description: Dowiedz się więcej na temat ustawień usługi Intune, których można użyć do zarządzania funkcją Windows Information Protection.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 1/18/2018
+ms.date: 01/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +14,12 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: e1505c48d8605f2ac53b0d93ca933137fac981e3
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 2d1d5468779bf300ad4f2713c363d4ca723b80da
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179222"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817011"
 ---
 # <a name="how-to-configure-windows-information-protection-in-microsoft-intune"></a>Jak skonfigurować ustawienia funkcji Windows Information Protection w usłudze Microsoft Intune
 
@@ -35,7 +34,7 @@ Te zasady usługi Intune służą do zarządzania listą aplikacji chronionych p
 >[!NOTE]
 > Aby używać aplikacji Portal firmy systemu Windows 10 z funkcją Windows Information Protection, należy dodać aplikację Portal firmy w trybie działania **Wyklucz** funkcji Windows Information Protection. 
 
-### <a name="next-steps"></a>Następne kroki
+## <a name="next-steps"></a>Następne kroki
 Aby uzyskać więcej informacji, zobacz:
 -  [Protect your enterprise data using Windows Information Protection (Chronienie danych przedsiębiorstwa przy użyciu rozwiązania Windows Information Protection)](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip)
 - [Create a Windows Information Protection (WIP) policy using the classic console for Microsoft Intune (Tworzenie zasad rozwiązania Windows Information Protection (WIP) przy użyciu konsoli klasycznej dla usługi Microsoft Intune)](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-intune)

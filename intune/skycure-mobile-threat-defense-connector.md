@@ -1,6 +1,5 @@
 ---
-title: Łącznik Symantec w usłudze Microsoft Intune
-titlesuffix: ''
+title: Łącznik Symantec w usłudze Microsoft Intune | Microsoft Intune
 description: Dowiedz się więcej na temat integracji usługi Intune z programem Symantec Endpoint Protection Mobile w celu kontrolowania dostępu urządzeń przenośnych do zasobów firmy.
 keywords: ''
 author: brenduns
@@ -16,12 +15,12 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 1503bdb9b62e7e9fb4b2d5a0482e058d6fed31f7
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 5ba90d47f13ac22465927fc5724a254f121c800e
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187705"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817127"
 ---
 # <a name="symantec-endpoint-protection-mobile-connector"></a>Łącznik Symantec Endpoint Protection Mobile
 
@@ -67,11 +66,11 @@ Po wykryciu na urządzeniach złośliwego oprogramowania możesz zablokować na 
 
 **Blokowanie po wykryciu złośliwych aplikacji:**
 
-![Wykryto złośliwe aplikacje](./media/symantec-arch-1.png)
+![Koncepcyjny obraz przedstawiający wykrycie złośliwych aplikacji](./media/symantec-arch-1.png)
 
 **Dostęp udzielany po skorygowaniu:**
 
-![Dostęp udzielany po skorygowaniu w następstwie wykrycia złośliwych aplikacji](./media/symantec-arch-2.png)
+![Obraz przedstawiający dostęp udzielany po skorygowaniu w następstwie wykrycia złośliwych aplikacji](./media/symantec-arch-2.png)
 
 ### <a name="control-access-based-on-threat-to-network"></a>Kontrola dostępu oparta na zagrożeniu dla sieci
 

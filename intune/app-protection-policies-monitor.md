@@ -16,12 +16,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 765fae6f0e860935f5ceccadfdf1d9c3fe45d60e
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: c0603b3cfd2b8fbe1d26e782118fb07526849cfa
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181908"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53816844"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Monitorowanie zasad ochrony aplikacji
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -81,11 +81,11 @@ Aby wyświetlić raportowanie dla użytkownika, wykonaj następujące kroki:
 
 1.  Aby wybrać użytkownika, wybierz kafelek **Podsumowanie**.
 
-    ![Zrzut ekranu wyróżniający kafelek podsumowania w obszarze zarządzania aplikacjami mobilnymi usługi Intune, blok Ustawienia](./media/MAM-reporting-6.png)
+    ![Zrzut ekranu przedstawiający kafelek Podsumowanie bloku zarządzania aplikacjami mobilnymi usługi Intune](./media/MAM-reporting-6.png)
 
 2. W okienku **Raportowanie aplikacji**, które się otworzy, wybierz opcję **Wybierz użytkownika**, aby wyszukać użytkownika w usłudze Azure Active Directory.
 
-    ![Zrzut ekranu wyróżniający opcję Wybierz użytkownika w okienku Raportowanie aplikacji](./media/MAM-reporting-2.png)
+    ![Zrzut ekranu przedstawiający opcję Wybierz użytkownika w okienku Raportowanie aplikacji](./media/MAM-reporting-2.png)
 
 3. Wybierz użytkownika z listy. Zostaną wyświetlone szczegółowe informacje o stanie zgodności tego użytkownika.
 
@@ -112,7 +112,7 @@ Możesz uzyskać dostęp do tych samych raportów, które są wyświetlane w wid
 
         -   Wszystkie aplikacje są zaewidencjonowane, nie są jednak objęte żadnymi zasadami zarządzania aplikacjami mobilnymi.
 
-![Zrzut ekranu przedstawiający blok raportowania aplikacji użytkownika z tabelą szczegółów dla 3 zarejestrowanych aplikacji](./media/MAM-reporting-4.png)
+![Zrzut ekranu przedstawiający blok raportowania aplikacji użytkownika ze szczegółami dla 3 aplikacji](./media/MAM-reporting-4.png)
 
 ## <a name="table-grouping"></a>Grupowanie tabel
 
@@ -129,13 +129,13 @@ Wykonaj następujące kroki, aby wygenerować raport dotyczący ochrony aplikacj
 
 1. W okienku zarządzania aplikacjami mobilnymi usługi Intune wybierz **raport dotyczący ochrony aplikacji**.
 
-    ![Zrzut ekranu wyróżniający link pobierania ochrony aplikacji w okienku zarządzania aplikacjami mobilnymi usługi Intune](./media/app-protection-report-csv-2.png)
+    ![Zrzut ekranu przedstawiający link pobierania raportu dotyczącego ochrony aplikacji](./media/app-protection-report-csv-2.png)
 
 2. Wybierz opcję Tak, aby zapisać raport, a następnie wybierz polecenie Zapisz jako i wybierz folder, w którym chcesz zapisać raport.
 
     ![Zrzut ekranu przedstawiający okno dialogowe z potwierdzeniem opcji Zapisz raport](./media/app-protection-report-csv-1.png)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 [Zarządzanie przesyłaniem danych między aplikacjami systemu iOS](data-transfer-between-apps-manage-ios.md)
 
 * [Czego można oczekiwać, gdy aplikacja dla systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji](app-protection-enabled-apps-android.md)

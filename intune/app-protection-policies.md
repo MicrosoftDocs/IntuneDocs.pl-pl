@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11//28/2018
+ms.date: 11/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 2a5b16e828b1a2e680f41f50aa603b1bfe2ad9fa
-ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
+ms.openlocfilehash: 35fd4650d5508995f879f4d83030f70fe9c550b8
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52728824"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817368"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Tworzenie i przypisywanie zasad ochrony aplikacji
 
@@ -72,11 +72,11 @@ Nowe tworzone zasady nie zostaną wdrożone dla żadnych użytkowników, dopóki
 
 2. W okienku ***Intune App Protection** wybierz pozycję **Przypisania**, aby otworzyć okienko **Intune App Protection — przypisania**. Na karcie *Dołączanie* wybierz pozycję **Wybierz grupy do uwzględnienia**. 
 
-   ![Zrzut ekranu okienka Przypisania z wyróżnioną opcją menu Wybierz grupy do uwzględnienia](./media/app-protection-policy-add-users.png)
+   ![Zrzut ekranu okienka Przypisania z menu Wybierz grupy do uwzględnienia](./media/app-protection-policy-add-users.png)
 
 3.  Zostanie wyświetlona lista wszystkich grup zabezpieczeń w usłudze **Azure Active Directory**. Wybierz grupy użytkowników, których mają dotyczyć te zasady, a następnie wybierz pozycję **Wybierz**. 
 
-    ![Zrzut ekranu przedstawiający okienko Dodawanie grupy użytkowników z listą użytkowników usługi Azure Active Directory](./media/azure-ad-user-group-list.png)
+    ![Zrzut ekranu przedstawiający okienko Dodawanie grupy użytkowników z listą użytkowników usługi Azure AD](./media/azure-ad-user-group-list.png)
 
 4.  Po dołączeniu i wykluczeniu grup wybierz pozycję **Zapisz**, aby zapisać konfigurację i wdrożyć zasady do użytkowników. Jeśli przed zapisaniem konfiguracji wybierzesz pozycję **Odrzuć**, wszystkie zmiany wprowadzone na kartach *Dołączanie* i *Wykluczanie* zostaną odrzucone.   
  
@@ -138,7 +138,7 @@ Ponieważ zasady ochrony aplikacji usługi Intune dotyczą tożsamości użytkow
 
 Aby utworzyć te zasady, przejdź do zasad **Aplikacje klienckie** > **Ochrona aplikacji** w konsoli usługi Intune, a następnie kliknij pozycję **Utwórz zasady**. Istniejące zasady ochrony aplikacji są także dostępne do edycji. Aby zastosować zasady ochrony aplikacji do zarówno do urządzeń zarządzanych, jak i niezarządzanych, potwierdź, że pozycja **Przeznaczone dla wszystkich typów aplikacji** ma domyślną wartość **Tak**. Jeśli chcesz przypisać z większą dokładnością na podstawie stanu zarządzania, ustaw pozycję **Przeznaczone dla wszystkich typów aplikacji** na wartość **Nie**. 
 
-![Zrzut ekranu przedstawiający blok Dodawanie zasad z wybraną pozycją Dotyczy wszystkich typów aplikacji](./media/app-protection-policies-target-all.png)
+![Zrzut ekranu przedstawiający blok Dodawanie zasad z pozycją Dotyczy wszystkich typów aplikacji](./media/app-protection-policies-target-all.png)
 
 W przypadku systemu iOS są wymagane dodatkowe ustawienia konfiguracji aplikacji przeznaczone dla ustawień zasad ochrony aplikacji na urządzeniach zarejestrowanych w usłudze Intune:
 - Ustawienie **IntuneMAMUPN** musi być skonfigurowane dla wszystkich aplikacji zarządzanych przez oprogramowanie MDM. Aby uzyskać więcej informacji, zobacz [Jak zarządzać przesyłaniem danych między aplikacjami systemu iOS w usłudze Microsoft Intune](https://docs.microsoft.com/intune/data-transfer-between-apps-manage-ios#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
@@ -157,6 +157,6 @@ Aby wyświetlić pełną listę ustawień zasad dla systemów iOS i Android, wyb
 ## <a name="next-steps"></a>Następne kroki
 [Monitorowanie zgodności i stanu użytkownika](app-protection-policies-monitor.md)
 
-### <a name="see-also"></a>Zobacz też
+### <a name="see-also"></a>Zobacz także
 * [Czego można oczekiwać, gdy aplikacja systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji](app-protection-enabled-apps-android.md)
 * [Czego można oczekiwać, gdy aplikacja systemu iOS jest zarządzana przy użyciu zasad ochrony aplikacji](app-protection-enabled-apps-ios.md)

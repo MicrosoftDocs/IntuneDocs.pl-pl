@@ -1,12 +1,11 @@
 ---
-title: Łącznik Intune Exchange dla usługi Exchange Online
-titleSuffix: ''
+title: Łącznik Intune Exchange dla usługi Exchange Online | Microsoft Intune
 description: Połączenie usługi Intune z programem Exchange usługi Office 365 umożliwia obsługę funkcji zarządzanie urządzeniami przenośnymi usługi Exchange ActiveSync.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/22/2018
+ms.date: 01/02/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +15,12 @@ ms.reviewer: muhosabe
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 318bde24e42bfdf9bbcf15d83f42405fc06f7901
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 9845ed1b809b611975c07c6c8335acd237d845c0
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184220"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53816705"
 ---
 # <a name="configure-the-exchange-service-connector-for-intune-and-exchange-online"></a>Konfiguracja łącznika usługi Exchange dla programów Intune i Exchange Online
 W tym artykule opisano, jak połączyć usługę Microsoft Intune z usługą Exchange Online lub nową usługą Exchange Online w wersji dedykowanej. Aby ustalić, czy środowisko usługi Exchange Online w wersji dedykowanej jest w wersji **nowej**, czy **starszej**, skontaktuj się z menedżerem ds. klientów.
@@ -52,7 +51,7 @@ Musisz też utworzyć konto użytkownika usługi Exchange Online, którego będz
 
 ## <a name="set-up-the-service-to-service-connector"></a>Konfigurowanie łącznika Service To Service Connector
 
-1. Zaloguj się w witrynie [Azure Portal](http://portal.azure.com) przy użyciu konta użytkownika z prawami administratora programu Exchange, uprawnieniami do użycia [opisanych wcześniej](#exchange-cmdlet-requirements) poleceń cmdlet, ważną licencją usługi Intune i rolą administratora globalnego. Usługa Microsoft Intune używa adresu e-mail aktualnie zalogowanego użytkownika, aby skonfigurować połączenie.
+1. Zaloguj się w witrynie [Azure Portal](https://portal.azure.com) przy użyciu konta użytkownika z prawami administratora programu Exchange, uprawnieniami do użycia [opisanych wcześniej](#exchange-cmdlet-requirements) poleceń cmdlet, ważną licencją usługi Intune i rolą administratora globalnego. Usługa Microsoft Intune używa adresu e-mail aktualnie zalogowanego użytkownika, aby skonfigurować połączenie.
 
 2. W menu po lewej stronie wybierz pozycję **Wszystkie usługi**, a następnie w filtrze pola tekstowego wpisz **Intune**.
 

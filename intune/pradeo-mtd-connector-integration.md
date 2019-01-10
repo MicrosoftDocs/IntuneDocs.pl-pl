@@ -13,12 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 82872ba6-80f8-4cc9-adf4-0ccd8ff26dd2
 search.appverid: MET150
-ms.openlocfilehash: d7b88b73c260a6a84fdb835069de23c52775929a
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 65b480b60b195ab012743f9a4006fb69aa929dbb
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179486"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53816807"
 ---
 # <a name="integrate-pradeo-with-intune"></a>Integracja usługi Pradeo z usługą Intune
 
@@ -67,7 +67,7 @@ Przebieg procesu autoryzacji aplikacji Pradeo jest następujący:
 
 4.  W oknie **EMM (Enterprise mobility management - Intune** (EMM, Zarządzanie mobilnością w przedsiębiorstwie — usługa Intune) ramach **kroku 1** wybierz przycisk **Pradeo Connector** (Łącznik Pradeo). 
 
-    ![Okno zarządzania mobilnością w przedsiębiorstwie Pradeo w usłudze Intune](./media/pradeo_setup.png)
+    ![Zrzut ekranu przedstawiający okno zarządzania mobilnością w przedsiębiorstwie Pradeo w usłudze Intune](./media/pradeo_setup.png)
 
 5. W oknie połączenia usługi Microsoft Intune wprowadź swoje poświadczenia usługi Intune.
 

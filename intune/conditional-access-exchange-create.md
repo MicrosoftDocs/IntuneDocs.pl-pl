@@ -1,5 +1,5 @@
 ---
-title: Tworzenie zasad dostępu warunkowego programu Exchange
+title: Tworzenie zasad dostępu warunkowego programu Exchange | Microsoft Intune
 titlesuffix: Microsoft Intune
 description: Konfigurowanie dostępu warunkowego do lokalnego programu Exchange i starszej wersji usługi Exchange Online w wersji dedykowanej w usłudze Intune.
 keywords: ''
@@ -15,12 +15,12 @@ ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 0a539000153ad45b5256e4e63086fa72fee44947
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: ed996ec17ab0c8144286eeed0a87f07b35da2969
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186107"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817062"
 ---
 # <a name="create-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated"></a>Tworzenie zasad dostępu warunkowego do lokalnego programu Exchange i starszej wersji usługi Exchange Online w wersji dedykowanej w usłudze Intune
 
@@ -125,6 +125,6 @@ Począwszy od usługi Intune w wersji 1704, administratorzy mogą tworzyć zasad
 
 2. W okienku **Zasady** wybierz pozycję **Nowe zasady**, aby utworzyć nowe zasady dostępu warunkowego usługi Azure AD.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Conditional Access in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access) (Dostęp warunkowy w usłudze Azure Active Directory)

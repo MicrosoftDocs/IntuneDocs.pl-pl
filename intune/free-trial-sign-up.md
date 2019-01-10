@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/20/2018
+ms.date: 01/06/2019
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 2257253d023c97d14418b3566c0c493a3cd8f615
-ms.sourcegitcommit: 279f923b1802445e501324a262d14e8bfdddabde
+ms.openlocfilehash: 59e9af2449f384fce22acaef9a696f2944eabaa1
+ms.sourcegitcommit: bf1549eb59adc31ead8601e40253a7024b22853c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53737920"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54067435"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Szybki start: bezpłatna wersja próbna usługi Microsoft Intune 
 
@@ -50,7 +50,7 @@ Usługę Intune można bezpłatnie testować przez 30 dni. Jeśli masz już kont
 
 2. Utwórz konto, używając nazwy swojej firmy z dołączonym tekstem **.onmicrosoft.com**. 
 
-    ![Zrzut ekranu przedstawiający nowy proces obsługi poświadczeń na koncie próbnym usługi Microsoft Intune](./media/account-sign-up-site-user-id.png)
+    ![Zrzut ekranu przedstawiający nowy proces obsługi poświadczeń na koncie próbnym usługi Intune](./media/account-sign-up-site-user-id.png)
 
     Jeśli Twoja organizacja ma własną domenę niestandardową, której chcesz używać (bez końcówki **.onmicrosoft.com**), możesz to zmienić w portalu administracyjnym usługi Office 365 zgodnie z opisem w dalszej części tego artykułu.
 

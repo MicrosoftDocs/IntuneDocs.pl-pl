@@ -1,12 +1,11 @@
 ---
-title: Tworzenie zasad zgodności urządzeń usługi MTD w usłudze Microsoft Intune
-titlesuffix: ''
+title: Tworzenie zasad zgodności urządzeń usługi MTD w usłudze Microsoft Intune | Microsoft Intune
 description: Utwórz zasady zgodności urządzeń usługi Intune wykorzystujące poziomy zagrożeń partnera MTD w celu określenia, czy urządzenie przenośne może uzyskiwać dostęp do zasobów firmy.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/27/2018
+ms.date: 01/02/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,19 +15,19 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: aaa02c397ca17011dd231c98018ca86c190f49ac
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 5962ff96b9c92bcf69a75221f1b7c5a5ab2f2634
+ms.sourcegitcommit: 6058c611d5a54076121af1d327a43ad861a43f8a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186184"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53995984"
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>Tworzenie zasad zgodności urządzeń usługi Mobile Threat Defense (MTD) za pomocą usługi Intune
 
 > [!NOTE] 
 > Niniejsze informacje dotyczą wszystkich partnerów usługi Mobile Threat Defense.
 
-Usługa Intune w połączeniu z usługą MTD pomaga wykrywać zagrożenia i oceniać ryzyko na urządzeniach przenośnych. Można utworzyć regułę zasad zgodności urządzeń w usłudze Intune, która ocenia ryzyko w celu określenia, czy urządzenie jest zgodne. Następnie można użyć zasad dostępu warunkowego, aby zablokować dostęp do usług w oparciu o zgodność urządzenia.
+Usługa Intune w połączeniu z usługą MTD pomaga wykrywać zagrożenia i oceniać ryzyko na urządzeniach przenośnych. Można utworzyć regułę zasad zgodności urządzeń w usłudze Intune, która ocenia ryzyko w celu określenia, czy urządzenie jest zgodne. Następnie można użyć [zasad dostępu warunkowego](create-conditional-access-intune.md), aby zablokować dostęp do usług w oparciu o zgodność urządzenia.
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
@@ -54,7 +53,7 @@ Wymagania wstępne dotyczące zasad zgodności urządzeń i usługi MTD:
 
 7.  W okienku **Kondycja urządzenia** wybierz poziom zagrożeń mobilnych z listy rozwijanej w obszarze **Wymagaj od urządzenia, aby jego poziom zagrożenia był niższy lub równy poziomowi zagrożenia urządzenia**.
 
-    a.  **Zabezpieczone**: ten poziom jest najbardziej bezpieczny. Urządzenie, na którym są obecne jakiekolwiek zagrożenia, nie może uzyskiwać dostępu do zasobów firmy. Jeśli zostaną znalezione jakiekolwiek zagrożenia, urządzenie zostanie ocenione jako niezgodne.
+    a.  **Zabezpieczone**: Ten poziom jest najbardziej bezpieczny. Urządzenie, na którym są obecne jakiekolwiek zagrożenia, nie może uzyskiwać dostępu do zasobów firmy. Jeśli zostaną znalezione jakiekolwiek zagrożenia, urządzenie zostanie ocenione jako niezgodne.
 
     b.  **Niski**: urządzenie jest zgodne, jeśli są obecne tylko zagrożenia niskiego poziomu. Jakiekolwiek zagrożenia wyższego poziomu spowodują, że urządzenie będzie miało status urządzenia niezgodnego.
 

@@ -15,12 +15,12 @@ ms.reviewer: davidra
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: c6ab669b1f9331d0bd0a70ca5f86ac7f3f190fb6
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: bda8512bd28351c384bfe53b46db62e5a86fe9bd
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180395"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817283"
 ---
 # <a name="network-access-control-nac-integration-with-intune"></a>Integracja kontroli dostępu do sieci (NAC) z usługą Intune
 
@@ -48,7 +48,7 @@ Rozwiązanie NAC współpracuje z funkcją dostępu warunkowego w celu umożliwi
 
 Poniższa lista stanowi omówienie działania integracji kontroli dostępu do sieci w przypadku integracji z usługą Intune. W pierwszych trzech krokach (1–3) wyjaśniono proces dołączania. Po zintegrowaniu rozwiązania NAC z usługą Intune kroki 4–9 opisują bieżące działanie.
 
-![Jak rozwiązanie NAC współpracuje z usługą Intune](./media/ca-intune-common-ways-2.png)
+![Koncepcyjny obraz przedstawiający sposób współpracy rozwiązania NAC z usługą Intune](./media/ca-intune-common-ways-2.png)
 
 1. Zarejestruj rozwiązanie partnerskie NAC za pomocą usługi Azure Active Directory (AAD) i przydziel uprawnienia delegowane do interfejsu API NAC usługi Intune.
 2. Skonfiguruj rozwiązanie partnerskie NAC za pomocą odpowiednich ustawień z uwzględnieniem adresu URL odnajdowania usługi Intune.

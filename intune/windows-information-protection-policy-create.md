@@ -1,6 +1,5 @@
 ---
-title: Tworzenie i wdrażanie zasad ochrony aplikacji w funkcji Windows Information Protection (WIP)
-titlesuffix: Microsoft Intune
+title: Tworzenie i wdrażanie zasad ochrony aplikacji w funkcji Windows Information Protection (WIP) | Microsoft Intune
 description: Tworzenie i wdrażanie zasad ochrony aplikacji w funkcji Windows Information Protection (WIP) za pomocą usługi Intune
 keywords: ''
 author: brenduns
@@ -16,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: b5599e98b9712d30979c327167b19b159d3ff5dc
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 57d0aaebd0ed07a78b32eec64a6dc2817bf5e7f5
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181334"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817317"
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Tworzenie i wdrażanie zasad ochrony aplikacji w funkcji Windows Information Protection (WIP) za pomocą usługi Intune
 
@@ -42,7 +41,7 @@ Podczas dodawania zasad funkcji WIP należy zrozumieć kilka koncepcji:
 ### <a name="types-of-apps"></a>Typy aplikacji
 
 -   **Zalecane aplikacje:** wstępnie wypełniona lista aplikacji (przede wszystkim pakietu Microsoft Office), którą możesz łatwo zaimportować do zasad.
--   **Aplikacje ze sklepu:** możesz dodać do zasad dowolną aplikację ze sklepu Windows.
+-   **Aplikacje ze Sklepu:** możesz dodać do zasad dowolną aplikację ze Sklepu Windows.
 -   **Aplikacje klasyczne systemu Windows:** możesz dodać do zasad dowolne aplikacje klasyczne systemu Windows (np. plik exe, dll)
 
 ## <a name="prerequisites"></a>Wymagania wstępne
@@ -149,7 +148,7 @@ Po wyłączeniu funkcji WIP zostanie podjęta próba odszyfrowania wszystkich pl
 
 1.  W bloku **Zasady aplikacji** wybierz nazwę swoich zasad, a następnie wybierz pozycję **Wymagane ustawienia**.
 
-    ![Zrzut ekranu trybu uczenia](./media/learning-mode-sc1.png)
+    ![Zrzut ekranu przedstawiający okienko trybu uczenia](./media/learning-mode-sc1.png)
 
 1.  Wybierz ustawienie, a następnie wybierz pozycję **Zapisz**.
 

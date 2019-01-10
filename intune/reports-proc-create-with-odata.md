@@ -6,7 +6,7 @@ keywords: Magazyn danych usługi Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/14/2018
+ms.date: 01/06/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 9c93554fd6750459aacc154165e7a58e160534fb
-ms.sourcegitcommit: 1c9ef5cfac2fc024528d2cfc9d590fa68dd58080
+ms.openlocfilehash: 3599146aaebc2e3788fa96e8e04657ce4db41c4f
+ms.sourcegitcommit: bf1549eb59adc31ead8601e40253a7024b22853c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53429716"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54067452"
 ---
 # <a name="create-a-report-from-the-odata-feed-with-power-bi"></a>Tworzenie raportu w usłudze Power BI na podstawie źródła danych OData
 
@@ -61,7 +61,7 @@ Zainstaluj najnowszą wersję aplikacji Power BI Desktop. Aplikację Power BI De
 7. Wklej adres URL niestandardowego źródła danych w polu adresu URL w oknie **Źródło danych OData**.
 8. Wybierz pozycję **Podstawowe**.
 
-    ![Źródło danych OData](media/reports-create-01-odatafeed.png)
+    ![Źródło danych OData dla magazynu danych usługi Intune dzierżawy](media/reports-create-01-odatafeed.png)
 
 9. Wybierz przycisk **OK**.
 10. Wybierz pozycję **Konto organizacji**, a następnie zaloguj się za pomocą poświadczeń usługi Intune.
@@ -70,7 +70,7 @@ Zainstaluj najnowszą wersję aplikacji Power BI Desktop. Aplikację Power BI De
 
 11. Wybierz polecenie **Połącz**. Zostanie otwarty Nawigator z listą tabel w magazynie danych usługi Intune.
 
-    ![Nawigator](media/reports-create-02-loadentities.png)
+    ![Zrzut ekranu przedstawiający Nawigator — lista tabel magazynu danych](media/reports-create-02-loadentities.png)
 
 12. Wybierz tabele **devices** i **ownerTypes**.  Wybierz polecenie **Załaduj**. Usługa Power BI załaduje dane do modelu.
 
@@ -78,7 +78,7 @@ Zainstaluj najnowszą wersję aplikacji Power BI Desktop. Aplikację Power BI De
 
 Zaimportować możesz wiele tabel, aby przeanalizować nie tylko dane w pojedynczej tabeli, ale także powiązane dane w różnych tabelach.  Usługa PowerBI ma funkcję o nazwie **autowykrywanie**, która próbuje automatycznie znaleźć i utworzyć relacje. Tabele w magazynie danych zostały zbudowane tak, aby współpracowały z funkcją autowykrywania usługi Power BI. Jednak nawet wtedy, gdy usługa PowerBI nie wykryje automatycznie relacji, nadal masz możliwość zarządzania nimi.
 
-![Zarządzanie relacjami](media/reports-create-03-managerelationships.png)
+![Zarządzanie relacjami pokrewnych danych w tabelach](media/reports-create-03-managerelationships.png)
 
 1. Wybierz pozycję **Zarządzaj relacjami**.
 2. Jeśli usługa Power BI nie wykryła jeszcze relacji, wybierz pozycję **Wykryj automatycznie**.
@@ -99,7 +99,7 @@ Wykres mapy drzewa pokazuje hierarchiczne dane w postaci pól zawierających pol
 
 Masz teraz wizualizację pokazującą rozkład producentów urządzeń w organizacji.
 
-![Mapa drzewa z danymi](media/reports-create-06-treemapwdata.png)
+![Mapa drzewa z danymi — rozkład producentów urządzeń](media/reports-create-06-treemapwdata.png)
 
 ## <a name="add-a-filter"></a>Dodawanie filtru
 
@@ -111,7 +111,7 @@ Do mapy drzewa możesz dodać filtr, aby za pomocą aplikacji odpowiedzieć na i
 
    W tabeli devices znajduje się pole danych **OwnerTypeKey**, które zawiera kod informujący o tym, czy urządzenie jest własnością firmy, czy prywatną. Ponieważ za pomocą tego filtru chcesz pokazać przyjazne nazwy, znajdź tabelę **ownerTypes** i przeciągnij pole **ownerTypeName**. Ten przykład pokazuje, jak model danych obsługuje relacje między tabelami.
 
-![Mapa drzewa z filtrem](media/reports-create-08_ownertype.png)
+![Mapa drzewa z filtrem — obsługuje relacje między tabelami](media/reports-create-08_ownertype.png)
 
 Masz teraz interakcyjny filtr, za pomocą którego możesz się przełączać między urządzeniami firmowymi i prywatnymi. Użyj tego filtru, aby zobaczyć zmiany w rozkładzie.
 

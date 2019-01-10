@@ -1,6 +1,6 @@
 ---
 title: Wysyłanie dzienników z urządzeń z systemem Windows 10 do działu pomocy technicznej Twojej firmy | Dokumentacja firmy Microsoft
-description: Wysyłanie dzienników diagnostycznych w celu ułatwienia działowi pomocy technicznej firmy rozwiązywania problemów z aplikacjami
+description: Wysyłanie szczegółów błędów do działu pomocy technicznej firmy, aby ułatwić rozwiązanie problemów z aplikacją
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: scottduf
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: fa6018d4a226303c6ea097a9ee36a043a040038c
-ms.sourcegitcommit: 9a1924ba2372904eb4a8a1894973e6f2be84129d
+ms.openlocfilehash: cc1af3dee9dc8c591322c26b65a354130b05786a
+ms.sourcegitcommit: 0dc977795ff80abb6a3b989ca633cba410f06c64
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626071"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54006322"
 ---
 # <a name="send-diagnostic-logs-to-your-company-support-from-company-portal-for-windows"></a>Wysyłanie dzienników diagnostycznych z Portalu firmy w systemie Windows do działu pomocy technicznej firmy
 

@@ -16,12 +16,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 785f4d1d81858fe5d4ebe4feab72880b408d8cd3
-ms.sourcegitcommit: 0499d16db961aaed4bd134ee924e40c5861121c7
+ms.openlocfilehash: 49ecdebc2777112ce8c8c97af1f98b3c12b200e1
+ms.sourcegitcommit: 0dc977795ff80abb6a3b989ca633cba410f06c64
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52389873"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54006288"
 ---
 # <a name="what-are-app-protection-policies"></a>Co to są zasady ochrony aplikacji?
 
@@ -75,14 +75,14 @@ Urządzenia z systemem Windows nie są obecne obsługiwane. Możesz jednak uży�
 
 #### <a name="apps-without-app-protection-policies"></a>Aplikacje bez zasad ochrony aplikacji
 
-![Obraz przedstawiający swobodne przemieszczanie się danych między aplikacjami w sytuacji, gdy zasady ochrony aplikacji nie zostały wdrożone](./media/apps-without-protection-policies.png)
+![Obraz koncepcyjny przedstawiający przenoszenie danych między aplikacjami, dla których nie są wymuszane żadne zasady](./media/apps-without-protection-policies.png)
 
 W przypadku korzystania z aplikacji bez ograniczeń dane firmowe i prywatne mogą ulec wymieszaniu. Dane firmowe mogą więc trafić na przykład do magazynu osobistego albo do aplikacji pozostających poza Twoją kontrolą, co grozi utratą danych. Strzałki na poprzednim rysunku oznaczają nieograniczone przemieszczanie się danych między aplikacjami zarówno firmowymi, jak i prywatnymi oraz do lokalizacji magazynu.
 
 
 ### <a name="data-protection-with-app-protection-policies"></a>Ochrona danych za pomocą zasad ochrony aplikacji
 
-![Obraz pokazujący sposób ochrony danych firmowych po zastosowaniu zasad ochrony aplikacji ](./media/apps-with-protection-policies.png)
+![Obraz koncepcyjny przedstawiający dane firmy chronione za pomocą zasad](./media/apps-with-protection-policies.png)
 
 
 Zasady ochrony aplikacji pozwalają zapobiec zapisywaniu danych firmowych w magazynie lokalnym urządzenia. Można również ograniczyć przenoszenie danych do innych aplikacji, które nie są chronione przez zasady ochrony aplikacji. Ustawienia zasad ochrony aplikacji obejmują:
@@ -156,5 +156,5 @@ Przykładem kontekstu służbowego będzie sytuacja, w której użytkownik uruch
 
 [Sposoby tworzenia i wdrażania zasad ochrony aplikacji w usłudze Microsoft Intune](app-protection-policies.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 Aplikacje innych firm, takie jak aplikacja mobilna Salesforce, współpracują w określony sposób z usługą Intune, aby chronić dane firmowe. Aby dowiedzieć się więcej o tym, jak aplikacja Salesforce współpracuje w szczególności z usługą Intune (z uwzględnieniem ustawień konfiguracji aplikacji MDM), zobacz temat [Salesforce App and Microsoft Intune](https://gallery.technet.microsoft.com/Salesforce-App-and-Intune-c47d44ee/file/188000/1/Salesforce%20App%20and%20Intune%20for%20external.pdf) (Aplikacja Salesforce i usługa Microsoft Intune).

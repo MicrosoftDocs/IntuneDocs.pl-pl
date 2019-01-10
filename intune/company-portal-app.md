@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 72349a609485096b5abd6eaff3c252a510a978a7
-ms.sourcegitcommit: 279f923b1802445e501324a262d14e8bfdddabde
+ms.openlocfilehash: 6d9d6cb1eccd91e7832a9456504c36cb983b4810
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53738022"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817385"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Jak skonfigurować aplikację Portal firmy w usłudze Microsoft Intune
 
@@ -89,7 +89,7 @@ Możesz wyświetlać obraz marki Twojej firmy. Po zapisaniu zmian można wybrać
 
 |Nazwa pola|Więcej informacji|
 |---|---|
-|**Przekaż obraz marki**| Ta opcja umożliwia wyświetlanie obrazu tła na stronie profilu użytkownika w aplikacji Portal firmy.<p>*Uwaga*: wyświetlany obraz może wyglądać inaczej na różnych platformach.<p><ul><li>Zalecana szerokość obrazu: więcej niż 1125 pikseli, ale nie mniej niż 640 pikseli</li><li>Maksymalny rozmiar obrazu: 1,3 MB</li><li>Typ pliku: PNG, JPG lub JPEG</li></ul>|
+|**Przekaż obraz marki**| Ta opcja umożliwia wyświetlanie obrazu tła na stronie profilu użytkownika w aplikacji Portal firmy.<p>*Uwaga*: wyświetlany obraz może wyglądać inaczej na różnych platformach.<p><ul><li>Zalecana szerokość obrazu: mniej niż 1125 pikseli, ale nie mniej niż 640 pikseli</li><li>Maksymalny rozmiar obrazu: 1,3 MB</li><li>Typ pliku: PNG, JPG lub JPEG</li></ul>|
 
 Odpowiedni obraz marki wzmacnia pozytywne wrażenie marki, co pozwala zwiększyć zaufanie użytkownika w Portalu firmy. Poniżej przedstawiono porady, które warto wziąć pod uwagę podczas nabywania, wybierania i optymalizowania obrazu dla Portalu firmy. 
 

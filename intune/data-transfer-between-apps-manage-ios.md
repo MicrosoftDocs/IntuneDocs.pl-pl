@@ -1,6 +1,5 @@
 ---
-title: Zarządzanie przesyłaniem danych między aplikacjami systemu iOS
-titlesuffix: Microsoft Intune
+title: Zarządzanie przesyłaniem danych między aplikacjami systemu iOS | Microsoft Intune
 description: Informacje na temat używania zasad zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune do zarządzania przesyłaniem danych między aplikacjami.
 keywords: ''
 author: brenduns
@@ -16,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: e252822569723be6cfe18e488f79a7605f21193c
-ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
+ms.openlocfilehash: bbd0272b37b56f9f9e66cdf00ddc89a827f3c875
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52728671"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53816977"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Jak zarządzać przesyłaniem danych między aplikacjami systemu iOS w usłudze Microsoft Intune
 
@@ -40,7 +39,7 @@ Zasady ochrony aplikacji są używane z funkcją **zarządzania funkcją Otwórz
 
 -   **Urządzenia zarządzane przez usługę Intune:** w przypadku urządzeń zarejestrowanych w usłudze Intune przesyłanie danych między aplikacjami z zasadami ochrony aplikacji a innymi zarządzanymi aplikacjami systemu iOS wdrożonymi za pośrednictwem usługi Intune jest automatycznie dozwolone. Aby określić sposób zezwalania na transfer danych do innych aplikacji, włącz ustawienie **Zezwalaj aplikacji na przesyłanie danych do innych aplikacji** i wybierz preferowany poziom udostępniania. Aby określić sposób zezwalania na odbieranie przez aplikację danych z innych aplikacji, włącz ustawienie **Zezwalaj aplikacji na odbieranie danych z innych aplikacji** i wybierz preferowany poziom odbierania danych. Funkcja **zarządzania funkcją Otwórz w** umożliwia sterowanie przesyłaniem danych między aplikacjami, które zostały wdrożone za pomocą usługi Intune. Aby uzyskać więcej informacji na temat odbierania i udostępniania danych aplikacji, zobacz [Ustawienia relokacji danych](app-protection-policy-settings-ios.md#data-protection-settings).   
 
--   **Urządzenia zarządzane przez rozwiązanie do zarządzania urządzeniami przenośnymi innej firmy:** można ograniczyć transfer danych tylko do zarządzanych aplikacji za pomocą funkcji **zarządzania funkcją Otwórz w** systemu iOS.
+-   **Urządzenia zarządzane przez rozwiązanie MDM innej firmy:** można ograniczyć transfer danych tylko do zarządzanych aplikacji za pomocą funkcji **zarządzania funkcją Otwórz w** systemu iOS.
 Aby zapewnić, że aplikacje, które wdrażasz za pomocą rozwiązania do zarządzania urządzeniami przenośnymi innej firmy, również będą skojarzone z zasadami ochrony aplikacji usługi Intune, skonfiguruj ustawienie nazwy UPN użytkownika według opisu w sekcji [Konfigurowanie ustawienia nazwy UPN użytkownika](#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). Gdy aplikacje są wdrażane z ustawieniem nazwy UPN użytkownika, zasady ochrony aplikacji są stosowane do aplikacji po zalogowaniu się użytkownika za pomocą konta służbowego.
 
 ## <a name="configure-user-upn-setting-for-microsoft-intune-or-third-party-emm"></a>Konfigurowanie ustawienia nazwy UPN użytkownika dla usługi Microsoft Intune lub rozwiązania zarządzania mobilnością w przedsiębiorstwie innej firmy
@@ -59,7 +58,7 @@ Skonfigurowanie ustawienia nazwy UPN użytkownika jest **wymagane** w przypadku 
 4.  Wdróż zasadę funkcji **Otwórz w** przy użyciu usługi Intune lub dostawcy rozwiązania do zarządzania urządzeniami przenośnymi innej firmy na zarejestrowanych urządzeniach.
 
 
-### <a name="example-1-admin-experience-in-intune-or-third-party-mdm-console"></a>Przykład 1: Środowisko administracyjne w konsoli usługi Intune lub rozwiązania do zarządzania urządzeniami przenośnymi innej firmy
+### <a name="example-1-admin-experience-in-intune-or-third-party-mdm-console"></a>Przykład 1: Środowisko administracyjne w konsoli usługi Intune lub rozwiązania MDM innej firmy
 
 1. Przejdź do konsoli administracyjnej usługi Intune lub dostawcy rozwiązania do zarządzania urządzeniami przenośnymi innej firmy. Przejdź do sekcji konsoli, w której wdraża się ustawienia konfiguracji aplikacji na zarejestrowanych urządzeniach z systemem iOS.
 
@@ -103,5 +102,5 @@ Na przykład ustawienie zasad **Wymagaj numeru PIN aplikacji** jest łatwe do pr
 Najpierw [utwórz i przypisz zasady ochrony aplikacji](app-protection-policies.md) do aplikacji w systemie iOS. Zobacz [Weryfikowanie zasad ochrony aplikacji](app-protection-policies-validate.md), aby uzyskać więcej informacji na temat testowania zasad ochrony aplikacji.
 
 
-### <a name="see-also"></a>Zobacz też
+### <a name="see-also"></a>Zobacz także
 [Co to są zasady ochrony aplikacji w usłudze Intune](app-protection-policy.md)

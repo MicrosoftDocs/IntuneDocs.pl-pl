@@ -16,18 +16,18 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: aad6687a110642f3b21dc0cff3a791f4714c7949
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: b94b4228f05abd2e7c815797f2f187efb8b303e4
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187467"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817249"
 ---
 # <a name="zimperium-mobile-threat-defense-connector-with-intune"></a>Łącznik rozwiązania Zimperium Mobile Threat Defense z usługą Intune
 
 Dostęp urządzeń przenośnych do zasobów firmy można kontrolować przy użyciu dostępu warunkowego opartego na ocenie ryzyka przeprowadzanej przez usługę Zimperium. Jest to rozwiązanie chroniące przed zagrożeniami bezpieczeństwa urządzeń przenośnych zintegrowane z usługą Microsoft Intune. Ryzyko jest oceniane na podstawie danych telemetrycznych zebranych z urządzeń z uruchomioną aplikacją Zimperium.
 
-Zasady dostępu warunkowego można skonfigurować w oparciu o ocenę ryzyka przeprowadzaną przez rozwiązanie Zimperium włączane przy użyciu zasad zgodności urządzeń usługi Intune, których w przypadku niezgodnego urządzenia można użyć do zezwalania na dostęp do zasobów firmy lub blokowania go w oparciu o wykryte zagrożenia.
+Zasady dostępu warunkowego można skonfigurować w oparciu o ocenę ryzyka przeprowadzaną przez aplikację Zimperium włączaną przy użyciu zasad zgodności urządzeń usługi Intune. Zasady oceny ryzyka mogą zezwalać na dostęp do zasobów firmowych lub blokować go niezgodnym urządzeniom w oparciu o wykryte zagrożenia.
 
 ## <a name="how-do-intune-and-zimperium-help-protect-your-company-resources"></a>W jaki sposób usługa Intune i rozwiązanie Zimperium ułatwiają ochronę zasobów firmy?
 
@@ -51,11 +51,11 @@ Po wykryciu na urządzeniach złośliwego oprogramowania możesz zablokować na 
 
 **Blokowanie po wykryciu złośliwych aplikacji:**
 
-![Wykryto złośliwe aplikacje](./media/Maliciousapps_blocked_Zimperium.png)
+![Koncepcyjny obraz przedstawiający wykrycie złośliwych aplikacji](./media/Maliciousapps_blocked_Zimperium.png)
 
 **Dostęp udzielany po skorygowaniu:**
 
-![Udzielono dostępu po wykryciu złośliwych aplikacji](./media/maliciousapps_unblocked_Zimperium.png)
+![Koncepcyjny obraz przedstawiający dostęp udzielany po skorygowaniu](./media/maliciousapps_unblocked_Zimperium.png)
 
 ### <a name="control-access-based-on-threat-to-network"></a>Kontrola dostępu oparta na zagrożeniu dla sieci
 
@@ -95,7 +95,7 @@ Wykrywanie w sieci zagrożeń, takich jak ataki typu  **Man-in-the-middle** , 
 
 -   Subskrypcja usługi Zimperium Mobile Threat Defense
 
-    -   Aby uzyskać więcej informacji, zobacz  [witrynę internetową Zimperium](https://www.zimperium.com/zips-mobile-ips) .
+    -   Aby uzyskać więcej informacji, odwiedź  [witrynę internetową Zimperium](https://www.zimperium.com/zips-mobile-ips).
 
 ## <a name="next-steps"></a>Następne kroki
 

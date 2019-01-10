@@ -1,12 +1,11 @@
 ---
-title: Konfigurowanie lokalnego programu Exchange Connector usługi Microsoft Intune
-titleSuffix: ''
+title: Konfigurowanie lokalnego programu Exchange Connector usługi Microsoft Intune | Microsoft Intune
 description: Za pomocą lokalnego programu Exchange Connector możesz zarządzać dostępem urządzeń do skrzynek pocztowych programu Exchange na podstawie rejestracji w usłudze Intune oraz programu Exchange Active Sync (EAS).
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/08/2018
+ms.date: 01/02/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +15,12 @@ ms.reviewer: chrisgre
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 0dc87c20b0da6fcfcc4e3ab304c61c5b264aaf38
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: 28886382da00f5c07129f4e69e0bbadf97634420
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112565"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817266"
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune-azure"></a>Konfigurowanie lokalnego programu Exchange Connector w usłudze Microsoft Intune Azure
 
@@ -71,7 +70,7 @@ Musisz utworzyć konto użytkownika usługi Active Directory, które będzie uż
 
 ## <a name="download-the-on-premises-exchange-connector-software-installation-package"></a>Pobieranie pakietu instalacyjnego lokalnego programu Exchange Connector
 
-1. W obsługiwanym systemie operacyjnym Windows Server dla lokalnego programu Exchange Connector otwórz witrynę [Azure Portal](http://portal.azure.com) i zaloguj się przy użyciu konta użytkownika, który jest administratorem lokalnego serwera programu Exchange i ma licencję na korzystanie z programu Exchange Server.
+1. W obsługiwanym systemie operacyjnym Windows Server dla lokalnego programu Exchange Connector otwórz witrynę [Azure Portal](https://portal.azure.com) i zaloguj się przy użyciu konta użytkownika, który jest administratorem lokalnego serwera programu Exchange i ma licencję na korzystanie z programu Exchange Server.
 
 2. W menu po lewej stronie wybierz pozycję **Wszystkie usługi**, a następnie w filtrze pola tekstowego wpisz **Intune**.
 

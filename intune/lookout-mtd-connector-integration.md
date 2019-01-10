@@ -1,12 +1,11 @@
 ---
-title: Konfigurowanie integracji usługi Lookout za pomocą usługi Microsoft Intune
-titlesuffix: ''
+title: Konfigurowanie integracji usługi Lookout za pomocą usługi Microsoft Intune | Microsoft Intune
 description: Dowiedz się więcej na temat integracji usługi Intune z usługą Lookout Mobile Threat Defense w celu kontrolowania dostępu urządzeń przenośnych do zasobów firmy.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/21/2017
+ms.date: 01/02/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +15,12 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: f0ff43e5a25a2f2d7d97564e638d01b014ab81cb
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 84bc12d568fce0f5cd6e460595eedf0af0d6296e
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181075"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53816875"
 ---
 # <a name="set-up-your-lookout-mobile-threat-defense-integration-with-intune"></a>Konfigurowanie integracji usługi Lookout Mobile Threat Defense za pomocą usługi Intune
 
@@ -77,11 +76,11 @@ Wykonaj poniższe kroki w celu zebrania informacji, które musisz przekazać zes
 
 3. W [konsoli usługi Lookout](https://aad.lookout.com) w module **System** wybierz kartę **Connectors** (Łączniki), a następnie wybierz pozycję **Intune**.
 
-   ![Zrzut ekranu konsoli usługi Lookout z otwartą kartą łączników i wyróżnioną opcją Intune](./media/lookout_mtp_setup-intune-connector.png)
+   ![Obraz przedstawiający konsolę usługi Lookout z opcją Intune na karcie Connectors (Łączniki)](./media/lookout_mtp_setup-intune-connector.png)
 
 4. Wybierz kolejno pozycje **Connectors** > **Connection Settings** (Łączniki > Ustawienia połączeń) i określ wartość **Heartbeat Frequency** (Częstotliwość pulsu) w minutach.
 
-   ![Zrzut ekranu przedstawiający kartę ustawień połączenia i skonfigurowaną częstotliwość pulsu](./media/lookout-mtp-connection-settings.png)
+   ![Obraz przedstawiający kartę ustawień połączenia ze skonfigurowaną częstotliwością pulsu](./media/lookout-mtp-connection-settings.png)
 
 ## <a name="configure-enrollment-groups"></a>Konfigurowanie grup rejestracji
 1. Najlepszym rozwiązaniem jest utworzenie w [portalu zarządzania usługi Azure AD](https://manage.windowsazure.com) grupy zabezpieczeń usługi Azure AD zawierającej małą liczbę użytkowników na potrzeby testowania integracji z usługą Lookout.
@@ -95,10 +94,10 @@ Wykonaj poniższe kroki w celu zebrania informacji, które musisz przekazać zes
 
     >[!IMPORTANT]
     > Wartość **Nazwa wyświetlana** uwzględnia wielkość liter, jak pokazano w obszarze **Właściwości** grupy zabezpieczeń w witrynie Azure Portal. Jak widać poniżej, wartość **Nazwa wyświetlana** ma format camelCase, a tytuł jest pisany małymi literami. W konsoli usługi Lookout dopasuj wielkość liter wartości **Nazwa wyświetlana** dla grupy zabezpieczeń.
-    >![Zrzut ekranu przedstawiający witrynę Azure Portal, usługę Azure Active Directory i stronę właściwości](./media/aad-group-display-name.png)
+    >![Obraz przedstawiający witrynę Azure Portal, usługę Azure Active Directory i stronę właściwości](./media/aad-group-display-name.png)
 
     >[!NOTE] 
-    >Najlepszym rozwiązaniem jest użycie domyślnej wartości (5 minut) określającej, ile czasu ma upłynąć między kolejnymi próbami wykrywania nowego urządzenia. Bieżące ograniczenia: **Usługa Lookout nie może walidować nazw wyświetlanych grup** — upewnij się, że pole **NAZWA WYŚWIETLANA** w witrynie Azure Portal dokładnie odpowiada grupie zabezpieczeń usługi Azure AD. **Tworzenie grup zagnieżdżonych nie jest obsługiwane** — grupy zabezpieczeń usługi Azure AD używane w usłudze Lookout mogą zawierać tylko użytkowników. Nie mogą zawierać innych grup.
+    >Najlepszym rozwiązaniem jest użycie domyślnej wartości (5 minut) określającej, ile czasu ma upłynąć między kolejnymi próbami wykrywania nowego urządzenia. Bieżące ograniczenia — **usługa Lookout nie może walidować nazw wyświetlanych grup:** Upewnij się, że wartość pola **NAZWA WYŚWIETLANA** w witrynie Azure Portal odpowiada dokładnie grupie zabezpieczeń usługi Azure AD. **Tworzenie grup zagnieżdżonych nie jest obsługiwane:**  Grupy zabezpieczeń usługi Azure AD używane w usłudze Lookout muszą zawierać tylko użytkowników. Nie mogą zawierać innych grup.
 
 3.  Po dodaniu grupy przy następnym otwarciu aplikacji Lookout for Work przez użytkownika na obsługiwanym urządzeniu zostanie ono aktywowane w usłudze Lookout.
 
@@ -115,7 +114,7 @@ W opcji **Error Management** (Zarządzanie błędami) wpisz adres e-mail, na kt�
 ## <a name="configure-enrollment-settings"></a>Konfigurowanie ustawień rejestracji
 W module **System** na stronie **Connectors** (Łączniki) określ liczbę dni, zanim urządzenie zostanie uznane za odłączone.  Odłączone urządzenia są uznawane za niezgodne i nie mają dostępu do aplikacji firmowych zgodnie z zasadami dostępu warunkowego usługi Intune. Można określić wartości z zakresu od 1 do 90 dni.
 
-![Ustawienia rejestracji usługi Lookout](./media/lookout-console-enrollment-settings.png)
+![Ustawienia rejestracji usługi Lookout w module System](./media/lookout-console-enrollment-settings.png)
 
 ## <a name="configure-email-notifications"></a>Konfigurowanie powiadomień e-mail
 Jeśli chcesz otrzymywać alerty e-mail dotyczące zagrożeń, zaloguj się do [konsoli usługi Lookout](https://aad.lookout.com) przy użyciu konta użytkownika, który powinien otrzymywać powiadomienia. Na karcie **Preferences** (Preferencje) modułu **System** wybierz poziom zagrożenia, który powinien wywoływać powiadomienia, i ustaw go na wartość **ON** (Włącz). Zapisz zmiany.
@@ -123,7 +122,7 @@ Jeśli chcesz otrzymywać alerty e-mail dotyczące zagrożeń, zaloguj się do [
 ![Zrzut ekranu strony preferencji z wyświetlonym kontem użytkownika](./media/lookout-mtp-email-notifications.png) Jeśli nie chcesz już otrzymywać powiadomień pocztą e-mail, ustaw dla powiadomień wartość **OFF** (Wyłącz) i zapisz zmiany.
 
 ### <a name="configure-threat-classification"></a>Konfigurowanie klasyfikacji zagrożeń
-Usługa Lookout Mobile Threat Defense klasyfikuje różne typy zagrożeń dla urządzeń przenośnych. [Klasyfikacje zagrożeń w usłudze Lookout](http://personal.support.lookout.com/hc/articles/114094130693) mają domyślne poziomy ryzyka, które są z nimi skojarzone. Można je zmienić w dowolnym momencie zależnie od potrzeb firmy.
+Usługa Lookout Mobile Threat Defense klasyfikuje różne typy zagrożeń dla urządzeń przenośnych. [Klasyfikacje zagrożeń w usłudze Lookout](https://personal.support.lookout.com/hc/articles/114094130693) mają domyślne poziomy ryzyka, które są z nimi skojarzone. Można je zmienić w dowolnym momencie zależnie od potrzeb firmy.
 
 ![Zrzut ekranu przedstawiający stronę zasad wraz z zagrożeniem i klasyfikacjami](./media/lookout-mtp-threat-classification.png)
 

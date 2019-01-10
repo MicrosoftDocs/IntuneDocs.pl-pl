@@ -1,23 +1,23 @@
 ---
-title: Zarządzanie wersjami systemu operacyjnego w usłudze Microsoft Intune
+title: Zarządzanie wersjami systemu operacyjnego w usłudze Microsoft Intune | Microsoft Intune
 description: Dowiedz się, jak w usłudze Microsoft Intune zarządzać wersjami systemów operacyjnych na różnych platformach.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/19/2017
+ms.date: 01/02/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 361ef17b-1ee0-4879-b7b1-d678b0787f5a
 search.appverid: MET150
-ms.openlocfilehash: c75956cd1e3e9bba0017a624b99dcc090d32978b
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 27a581a72c20c940a04a791ef9e63a2dc8bf5b24
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52182231"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53816994"
 ---
 # <a name="manage-operating-system-versions-with-intune"></a>Zarządzanie wersjami systemu operacyjnego w usłudze Intune
 Na nowoczesnych platformach urządzeń przenośnych i komputerów ważne aktualizacje, poprawki i nowe wersje pojawiają się bardzo często. Aktualizacjami i poprawkami dla systemu Windows możesz zarządzać w pełni, ale w przypadku systemów iOS i Android wymagane jest uczestnictwo użytkowników końcowych w tym procesie.  Usługa Microsoft Intune ma funkcje pomagające uporządkować zarządzanie wersjami systemów operacyjnych na różnych platformach.
@@ -59,13 +59,12 @@ Aby uzyskać szczegółowe informacje, zobacz [Get started with device complianc
 Zasady ochrony aplikacji usługi Intune i ustawienia dostępu w systemie zarządzania aplikacjami mobilnymi (MAM) pozwalają określać minimalną wersję systemu operacyjnego w warstwie aplikacji. Dzięki temu można informować użytkowników o konieczności zaktualizowania ich systemów operacyjnych do określonej minimalnej wersji, zachęcać ich do tego, a nawet tego wymagać.
  
 Dostępne są dwie opcje: 
+- **Ostrzeżenie** — informuje użytkownika końcowego o konieczności uaktualnienia, gdy otworzy aplikację z zasadami ochrony aplikacji lub ustawieniami dostępu systemu MAM na urządzeniu z systemem operacyjnym w wersji starszej niż minimalna. Dostęp do aplikacji i danych organizacji jest dozwolony.
+  ![Obraz przedstawiający okno dialogowe z ostrzeżeniem dotyczącym aktualizacji w systemie Android](./media/os-version-update-warning.png) 
 
-|Ostrzeżenie  |Zablokowanie  |
-|---------|---------|
-|Ostrzeżenie informuje użytkownika końcowego o konieczności uaktualnienia, gdy otworzy aplikację z zasadami ochrony aplikacji lub ustawieniami dostępu systemu MAM na urządzeniu z systemem operacyjnym w wersji starszej niż minimalna. Dostęp do aplikacji i danych organizacji jest dozwolony.|Zablokowanie informuje użytkownika końcowego o obowiązku uaktualnienia, gdy otworzy aplikację z zasadami ochrony aplikacji lub ustawieniami dostępu systemu MAM na urządzeniu z systemem operacyjnym w wersji starszej niż określona. Dostęp do aplikacji i danych organizacji jest zabroniony.|
-|![Okno dialogowe z ostrzeżeniem dotyczącym aktualizacji w systemie Android](./media/os-version-update-warning.png)    |![Okno dialogowe z informacją o zablokowaniu dostępu do aplikacji](./media/os-version-access-blocked.png)          |
+- **Zablokowanie** — informuje użytkownika końcowego o obowiązku uaktualnienia, gdy otworzy aplikację z zasadami ochrony aplikacji lub ustawieniami dostępu systemu MAM na urządzeniu z systemem operacyjnym w wersji starszej niż określona. Dostęp do aplikacji i danych organizacji jest zabroniony.
+  ![Obraz przedstawiający okno dialogowe z informacją o zablokowaniu dostępu do aplikacji](./media/os-version-access-blocked.png)
 
- 
 ### <a name="in-practice"></a>W praktyce
 Obecnie organizacje używają ustawień zasad ochrony aplikacji, gdy aplikacje są otwierane lub gdy ich działanie jest wznawiane, aby informować użytkowników końcowych o konieczności dbania o ich aktualność. Przykładowa konfiguracja może być następująca: użytkownicy są ostrzegani, gdy używana przez nich wersja jest o jedną starsza od aktualnej, a blokowani, gdy jest starsza o dwie od aktualnej.
  
