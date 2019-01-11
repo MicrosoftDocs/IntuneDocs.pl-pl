@@ -374,9 +374,11 @@ items:
   - name: Konfigurowanie urządzeń
     href: device-profiles.md
     items:
-    - name: Konfigurowanie profilów urządzeń
+    - name: Profile urządzeń
       href: device-profile-create.md
-    - name: Konfigurowanie funkcji urządzeń
+    - name: Szablony administracyjne
+      href: administrative-templates-windows.md
+    - name: Funkcje urządzeń dla systemów iOS i macOS
       href: device-features-configure.md
       items:
       - name: Funkcja AirPrint dla systemów iOS i MacOS
@@ -387,13 +389,13 @@ items:
         href: home-screen-settings-ios.md
       - name: Powiadomienia aplikacji dla systemu iOS
         href: app-notification-settings-ios.md
-      - name: Urządzenia udostępnione dla systemu iOS
+      - name: Komunikat na ekranie blokady dla systemu iOS
         href: shared-device-settings-ios.md
       - name: Konfigurowanie logowania jednokrotnego w usłudze Intune dla urządzeń z systemem iOS
         href: sso-ios.md
       - name: Ustawienia filtru zawartości sieci Web dla urządzeń z systemem iOS
         href: web-content-filter-settings-ios.md
-    - name: Konfigurowanie ograniczeń dotyczących urządzeń
+    - name: Ograniczenia dotyczące urządzeń
       href: device-restrictions-configure.md
       items:
       - name: Android
@@ -416,18 +418,18 @@ items:
         href: device-restrictions-windows-holographic.md
     - name: Optymalizacja dostarczania
       href: delivery-optimization-windows.md
-    - name: Konfigurowanie ochrony punktu końcowego
+    - name: Program Endpoint Protection
       href: endpoint-protection-configure.md
       items:
       - name: macOS
         href: endpoint-protection-macos.md
       - name: Windows 10
         href: endpoint-protection-windows-10.md
-    - name: Konfigurowanie ochrony tożsamości
+    - name: Identity Protection
       href: identity-protection-configure.md
     - name: Ustawienia kiosku systemu Windows 10
       href: kiosk-settings.md
-    - name: Konfigurowanie ustawień poczty e-mail
+    - name: Ustawienia poczty e-mail
       href: email-settings-configure.md
       items:
       - name: Android
@@ -438,7 +440,7 @@ items:
         href: email-settings-windows-phone-8-1.md
       - name: Windows 10
         href: email-settings-windows-10.md
-    - name: Konfigurowanie ustawień sieci VPN
+    - name: Ustawienia sieci VPN
       href: vpn-settings-configure.md
       items:
       - name: Android
@@ -455,7 +457,7 @@ items:
         href: vpn-settings-windows-phone-8-1.md
       - name: Windows 10
         href: vpn-settings-windows-10.md
-    - name: Konfigurowanie ustawień sieci Wi-Fi
+    - name: Ustawienia sieci Wi-Fi
       href: wi-fi-settings-configure.md
       items:
       - name: Android
@@ -470,7 +472,7 @@ items:
         href: wi-fi-settings-windows.md
       - name: Windows 8.1
         href: wi-fi-settings-import-windows-8-1.md
-    - name: Konfigurowanie profilów sieci komórkowej eSIM
+    - name: Profile sieci komórkowej eSIM
       href: esim-device-configuration.md
     - name: Edukacja
       items:
@@ -478,27 +480,34 @@ items:
         href: education-settings-configure-ios-shared.md
       - name: Windows 10
         href: education-settings-configure.md
-    - name: Konfigurowanie ustawień uaktualniania systemu Windows 10
+    - name: Ustawienia uaktualniania wersji systemu Windows 10
       href: edition-upgrade-configure-windows-10.md
-    - name: Konfigurowanie zasad aktualizacji systemu iOS
+    - name: Zasady aktualizacji systemu iOS
       href: software-updates-ios.md
-    - name: Konfigurowanie certyfikatów
+    - name: Certyfikaty
       href: certificates-configure.md
       items:
       - name: SCEP
         href: certificates-scep-configure.md
       - name: PKCS
         href: certficates-pfx-configure.md
-      - name: Używanie protokołu S/MIME do szyfrowania wiadomości e-mail
+      - name: Protokół S/MIME do szyfrowania wiadomości e-mail
         href: certificates-s-mime-encryption-sign.md
-      - name: Używanie urzędu certyfikacji innej firmy za pomocą protokołu SCEP
+      - name: Urzędy certyfikacji innych firm z protokołem SCEP
         href: certificate-authority-add-scep-overview.md
       - name: Usługa internetowa Symantec PKI Manager
         href: certificates-symantec-configure.md
       - name: Usuwanie certyfikatów protokołu SCEP lub PKCS
         href: remove-certificates.md
-    - name: Konfigurowanie ustawień usługi Windows Information Protection
+    - name: Ustawienia usługi Windows Information Protection
       href: windows-information-protection-configure.md
+    - name: Urządzenia udostępnione używane przez wielu użytkowników
+      href: shared-user-device-settings.md
+      items:
+      - name: Windows 10
+        href: shared-user-device-settings-windows.md
+      - name: Windows Holographic for Business
+        href: shared-user-device-settings-windows-holographic.md
     - name: Zarządzanie skryptami środowiska PowerShell
       href: intune-management-extension.md
     - name: Monitorowanie wydatków telekomunikacyjnych
@@ -512,17 +521,17 @@ items:
   - name: Ustaw zgodność urządzenia
     href: device-compliance-get-started.md
     items:
-    - name: Tworzenie zasad dla systemu Android
+    - name: Zasady systemu Android
       href: compliance-policy-create-android.md
-    - name: Tworzenie zasad profilu w systemie Android Enterprise
+    - name: Zasady profilu systemu Android Enterprise
       href: compliance-policy-create-android-for-work.md
-    - name: Tworzenie zasad w celu włączenia funkcji Google Play Protect
+    - name: Włączanie usługi Google Play Protect
       href: compliance-policy-create-google-play-protect.md
-    - name: Tworzenie zasad dla systemu iOS
+    - name: Zasady systemu iOS
       href: compliance-policy-create-ios.md
-    - name: Tworzenie zasad dla systemu macOS
+    - name: Zasady systemu macOS
       href: compliance-policy-create-mac-os.md
-    - name: Tworzenie zasad dla systemu Windows
+    - name: Zasady systemu Windows
       href: compliance-policy-create-windows.md
     - name: Zasady oparte na lokalizacji
       href: use-network-locations.md
@@ -693,6 +702,10 @@ items:
         href: custom-settings-windows-holographic.md
       - name: Windows Phone 8,1
         href: custom-settings-windows-phone-8-1.md
+- name: Pomoc i obsługa techniczna
+  items:
+  - name: Stan dzierżawy
+    href: tenant-status.md
 - name: Wskazówki dla deweloperów
   items:
   - name: Interfejs API umożliwiający dodawanie urzędu certyfikacji innej firmy
@@ -841,9 +854,9 @@ items:
         href: manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md
       - name: Rozwiązywanie konfliktów zasad
         href: resolve-gpo-and-microsoft-intune-policy-conflicts.md
-ms.openlocfilehash: ada41d711516760e9d928c78968b0a24d719d783
-ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
+ms.openlocfilehash: 1f17ae67e609e9836c29f6afd810bbea5ece99b4
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53325062"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203590"

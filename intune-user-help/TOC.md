@@ -130,6 +130,7 @@
 ### [Co się stanie w przypadku zresetowania urządzenia](what-happens-if-you-reset-your-device-using-the-company-portal-windows.md)
 ### [Wyłączanie zbierania danych użycia przez firmę Microsoft](turn-off-microsoft-usage-data-collection-windows.md)
 ### [Ręczne synchronizowanie urządzenia](sync-your-device-manually-windows.md)
+### [Uzyskiwanie pomocy i obsługi technicznej](help-support-windows-cpapp.md)
 
 ### [Rozwiązywanie typowych problemów dotyczących systemu Windows](troubleshoot-your-device-windows.md)
 #### [Rozwiązywanie ograniczeń punktu dostępu](resolve-access-point-restrictions.md)
