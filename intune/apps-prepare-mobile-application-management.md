@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 84b36f6cae9dd16bde6bd380407a78aeb2478010
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: 742b4892c4dbe9ee2dfa2bb03eebb2667803c6bf
+ms.sourcegitcommit: 513c59a23ca5dfa80a3ba6fc84068503a4158757
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112429"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54210758"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Przygotowanie aplikacji biznesowych pod kątem zasad ochrony aplikacji
 
@@ -98,7 +98,7 @@ W tej tabeli przedstawiono ustawienia do użycia w przypadku zestawu SDK aplikac
 |Zablokuj przechwytywanie ekranu (tylko system Android)|X|X|
 |Obsługa zarządzania aplikacjami mobilnymi bez rejestracji urządzenia|X|X|
 |Pełne czyszczenie|X|X|
-|Selektywne czyszczenie <br></br>**Uwaga:** W systemie iOS usunięcie profilu zarządzania spowoduje również usunięcie aplikacji.|X||
+|Selektywne czyszczenie <br><br>**Uwaga:** W systemie iOS usunięcie profilu zarządzania spowoduje również usunięcie aplikacji.|X||
 |Nie zezwalaj na używanie polecenia „Zapisz jako”|X||
 |Docelowa konfiguracja aplikacji|X||
 |Obsługa wielu tożsamości|X||
@@ -115,6 +115,6 @@ W tej tabeli przedstawiono ustawienia do użycia w przypadku zestawu SDK aplikac
 
 Aby dowiedzieć się więcej na temat zasad ochrony aplikacji i usługi Intune, zobacz następujące tematy:
 
-  - [Narzędzie opakowujące aplikacje systemu Android](app-wrapper-prepare-android.md)</br>
-  - [Narzędzie opakowujące aplikacje systemu iOS](app-wrapper-prepare-ios.md)</br>
+  - [Narzędzie opakowujące aplikacje systemu Android](app-wrapper-prepare-android.md)<br>
+  - [Narzędzie opakowujące aplikacje systemu iOS](app-wrapper-prepare-ios.md)<br>
   - [Używanie zestawu SDK w celu przygotowania aplikacji do zarządzania aplikacjami mobilnymi](app-sdk.md)
