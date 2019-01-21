@@ -2,10 +2,10 @@
 title: Konfigurowanie ustawień usługi Windows Update dla firm w usłudze Microsoft Intune — Azure | Microsoft Docs
 description: Zaktualizuj ustawienia aktualizacji oprogramowania w profilu, aby tworzyć pierścień aktualizacji, sprawdzać zgodność i wstrzymywać aktualizacje w ustawieniach usługi Windows Update dla firm za pomocą usługi Microsoft Intune na urządzeniach z systemem Windows 10.
 keywords: ''
-author: dougeby
-ms.author: dougeby
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 11/12/2018
+ms.date: 01/15/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: coryfe
 ms.suite: ems
 search.appverid: MET150
-ms.openlocfilehash: c39faf6bb6a22cb861eb655edd6358b345b87c7e
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: ccb91082a3226ec4091a139d31796fd77bdf0616
+ms.sourcegitcommit: e9ba1280b95565a5c5674b825881655d0303e688
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112769"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54297387"
 ---
 # <a name="manage-software-updates-in-intune"></a>Zarządzanie aktualizacjami oprogramowania w usłudze Intune
 
@@ -76,16 +76,12 @@ Po utworzeniu pierścieni aktualizacji należy je przypisać do grup urządzeń.
 1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi**, ustaw nazwę usługi **Intune** w filtrze, a następnie wybierz pozycję **Microsoft Intune**.
 2. Wybierz pozycję **Aktualizacje oprogramowania** > **Pierścienie aktualizacji systemu Windows 10** > **Utwórz**.
 3. Wprowadź nazwę i opis (opcjonalnie), a następnie wybierz pozycję **Konfiguruj**.
-4. W obszarze **Ustawienia** wprowadź następujące informacje:
+4. W obszarze **Ustawienia** wprowadź następujące informacje:  
 
+   **Aktualizacja ustawień**  
    - **Kanał obsługi**: Ustaw kanał, z którego urządzenie ma otrzymywać aktualizacje systemu Windows.
    - **Aktualizacje produktów firmy Microsoft**: Określ, czy skanować w poszukiwaniu aktualizacji aplikacji z usługi Microsoft Update.
    - **Sterowniki systemu Windows**: Określ, czy podczas aktualizacji chcesz wykluczyć aktualizację sterowników z usługi Windows Update.
-   - **Zachowanie automatycznych aktualizacji**: Wybierz sposób instalowania automatycznych aktualizacji oraz moment ponownego uruchomienia. Aby uzyskać szczegółowe informacje, zobacz sekcję [Update/AllowAutoUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#update-allowautoupdate).
-     - **Częstotliwość automatycznego zachowania**: To ustawienie jest wyświetlane, jeśli jako automatyczne zachowanie wybierzesz opcję **Automatycznie instaluj i uruchamiaj ponownie w zaplanowanym czasie**. Za pomocą tego ustawienia możesz planować instalowanie aktualizacji, w tym tydzień, dzień i godzinę.
-
-   - **Testy po ponownym uruchomieniu**: Domyślnie włączone. Po ponownym uruchomieniu urządzenia przeprowadzane są testy obejmujące aktywnych użytkowników, poziom naładowania baterii, uruchomione gry oraz inne. Aby pominąć te testy po ponownym uruchomieniu urządzenia, wybierz pozycję **Pomiń**.
-
    - **Okres odroczenia aktualizacji dotyczących jakości (dni)**: Wprowadź liczbę dni odroczenia aktualizacji dotyczących jakości. Okres opóźnienia aktualizacji dotyczących jakości może wynosić do 30 dni od daty wydania aktualizacji.
 
      Aktualizacje dotyczące jakości są zazwyczaj poprawkami oraz ulepszeniami istniejących funkcji systemu Windows i są publikowane w drugi wtorek każdego miesiąca. Funkcja aktualizacji dotyczących jakości za pośrednictwem usługi Windows Update dla Firm odbiera tylko te aktualizacje (wersja „B”), ale firma Microsoft może w dowolnej chwili udostępnić inne aktualizacje. Możesz określić, czy i na jak długo mają zostać opóźnione aktualizacje dotyczące jakości po udostępnieniu ich w usłudze Windows Update. Aby uzyskać więcej informacji, zobacz artykuł [Deploy updates using Windows Update for Business](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb) (Wdrażanie aktualizacji za pomocą usługi Windows Update dla Firm).
@@ -96,9 +92,21 @@ Po utworzeniu pierścieni aktualizacji należy je przypisać do grup urządzeń.
 
      Przykład: **Jeśli jako kanał obsługi ustawiono Półroczny kanał (kierowany), a okres odroczenia wynosi 30 dni**: Załóżmy, że aktualizacja dotycząca funkcji X jest po raz pierwszy publicznie udostępniona w usłudze Windows Update jako Półroczny kanał (kierowany) w styczniu. Urządzenie nie otrzyma tej aktualizacji do lutego — 30 dni później.
 
-     **Jeśli jako kanał obsługi ustawiono Półroczny kanał, a okres odroczenia wynosi 30 dni**: Załóżmy, że aktualizacja dotycząca funkcji X jest po raz pierwszy publicznie udostępniona w usłudze Windows Update jako Półroczny kanał (kierowany) w styczniu. Cztery miesiące później, w kwietniu, aktualizacja dotycząca funkcji X zostaje wydana jako Półroczny kanał. Urządzenie otrzyma aktualizację funkcji po 30 dniach od opublikowania wersji Półroczny kanał i aktualizacja nastąpi w maju.
+     **Jeśli jako kanał obsługi ustawiono Półroczny kanał, a okres odroczenia wynosi 30 dni**: Załóżmy, że aktualizacja dotycząca funkcji X jest po raz pierwszy publicznie udostępniona w usłudze Windows Update jako Półroczny kanał (kierowany) w styczniu. Cztery miesiące później, w kwietniu, aktualizacja dotycząca funkcji X zostaje wydana jako Półroczny kanał. Urządzenie otrzyma aktualizację funkcji po 30 dniach od opublikowania wersji Półroczny kanał i aktualizacja nastąpi w maju.  
 
-   - **Tryb pobierania optymalizacji dostarczania**: Wybierz metodę używaną przez urządzenia do pobierania aktualizacji systemu Windows. Aby uzyskać szczegółowe informacje, zobacz [DeliveryOptimization/DODownloadMode](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#download-mode).
+   **Ustawienia środowiska użytkownika**
+   
+   - **Zachowanie automatycznych aktualizacji**: Wybierz sposób instalowania automatycznych aktualizacji oraz moment ponownego uruchomienia. Aby uzyskać szczegółowe informacje, zobacz sekcję [Update/AllowAutoUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#update-allowautoupdate).
+
+     Ustawienie *Resetuj do domyślnych* przywróci pierwotne ustawienia automatycznych aktualizacji na maszynach z systemem Windows 10 z *aktualizacją z października 2018 r.* lub nowszą.  
+
+     - **Częstotliwość automatycznego zachowania**: To ustawienie jest wyświetlane, jeśli jako automatyczne zachowanie wybierzesz opcję **Automatycznie instaluj i uruchamiaj ponownie w zaplanowanym czasie**. Za pomocą tego ustawienia możesz planować instalowanie aktualizacji, w tym tydzień, dzień i godzinę.
+
+   - **Testy po ponownym uruchomieniu**: Domyślnie włączone. Po ponownym uruchomieniu urządzenia przeprowadzane są testy obejmujące aktywnych użytkowników, poziom naładowania baterii, uruchomione gry oraz inne. Aby pominąć te testy po ponownym uruchomieniu urządzenia, wybierz pozycję **Pomiń**.
+
+   - **Blokowanie wstrzymywania aktualizacji systemu Windows przez użytkownika**: Domyślnie włączone. Użyj tego ustawienia, aby zezwolić użytkownikom na wstrzymywanie instalacji aktualizacji w obszarze *Ustawienia* ich komputerów lub zablokować tę możliwość. 
+      
+   - **Tryb pobierania optymalizacji dostarczania**: Optymalizacja dostarczania nie jest już skonfigurowana w ramach pierścienia aktualizacji systemu Windows 10 w obszarze Aktualizacje oprogramowania. Optymalizacja dostarczania jest teraz konfigurowana za pośrednictwem konfiguracji urządzenia. Poprzednie konfiguracje są nadal dostępne w konsoli. Możesz usunąć poprzednie konfiguracje, edytując je tak, aby były *Nieskonfigurowane*, ale poza tym nie mogą być modyfikowane. Aby uniknąć konfliktu pomiędzy nowymi i starymi zasadami, zobacz [Przechodzenie z istniejących pierścieni aktualizacji do optymalizacji dostarczania](delivery-optimization-windows.md#move-from-existing-update-rings-to-delivery-optimization), a następnie przenieś ustawienia do profilu optymalizacji dostarczania. 
 
 5. Po zakończeniu wybierz przycisk **OK**. W obszarze **Tworzenie pierścienia aktualizacji**, wybierz pozycję **Utwórz**.
 

@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/06/2017
+ms.date: 01/09/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,25 +17,25 @@ ROBOTS: ''
 ms.reviewer: robstack
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 2a5f383eef6f380711578cb79dfd8006ca6f96e1
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: e067ce76046355a7da6bb785ae3302c0fc3e8bb9
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43150670"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203150"
 ---
-# <a name="use-managed-devices-to-get-work-done"></a>Wykonywanie pracy przy użyciu urządzeń zarządzanych
-Microsoft Intune to oprogramowanie, które umożliwia organizacjom zarządzanie urządzeniami (takimi jak smartfony, tablety i komputery), aplikacjami i innymi zasobami firmy, w tym pocztą e-mail. Pracownicy mogą uzyskiwać dostęp do swoich danych roboczych z dowolnego miejsca za pośrednictwem prawie każdego urządzenia, nie narażając informacji firmowych na niebezpieczeństwo.
+# <a name="use-managed-devices-to-access-work-or-school-resources"></a>Uzyskiwanie dostępu zasobów służbowych przy użyciu urządzeń zarządzanych
+Usługa Microsoft Intune to system zarządzania urządzeniami, który umożliwia organizacjom zarządzanie dostępem do urządzeń, aplikacji i poczty e-mail. Zarządzanie urządzeniami umożliwia Tobie oraz innym pracownikom i uczniom/studentom dostęp do informacji służbowych z niemal dowolnego miejsca w niemal każdym urządzeniu. Ty i dane organizacji jesteście bezpieczni nawet wtedy, gdy pracujesz zdalnie.
 
-Po zarejestrowaniu urządzeń do zarządzania za pomocą usługi Intune dział IT może zarządzać zasobami służbowymi i zabezpieczać je, a użytkownicy mogą korzystać z preferowanych urządzeń podczas wykonywania pracy. Podstawowym sposobem osiągnięcia tego stanu jest zarejestrowanie urządzenia do zarządzania za pośrednictwem Portalu firmy.
+Za pomocą usługi Microsoft Intune firma może skonfigurować wymagania w zakresie zabezpieczeń i urządzeń. Gdy wszystko będzie gotowe do zarządzania urządzeniem, użyjesz aplikacji Intune — Portal firmy. Pozwala ona uzyskiwać dostęp do zasobów służbowych za pomocą preferowanego urządzenia. 
 
-## <a name="what-information-can-my-company-see-when-i-enroll-my-device-in-intune"></a>Jakie informacje może wyświetlać moja firma, gdy zarejestruję swoje urządzenie w usłudze Intune?
-Dział wsparcia technicznego firmy ma dostęp do informacji mających związek z wykonywaną pracą, ale nie do informacji osobistych. Ma to szczególne znaczenie dla osób, które chcą zarejestrować swoje urządzenie osobiste w celu używania go w pracy. [Lista rzeczy, które dział IT może zobaczyć bądź też nie](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) znajduje się w kolejnym artykule dotyczącym wsparcia użytkowników.
+## <a name="what-information-can-my-company-see-when-i-get-my-device-managed"></a>Jakie informacje może wyświetlać moja firma, gdy urządzenie jest zarządzane?
+Gdy zakończysz konfigurację w Portalu firmy, pomoc techniczna w Twojej firmie będzie widzieć tylko informacje związane z pracą. Twoje dane osobowe nie będą widoczne. Ma to szczególne znaczenie dla osób, które chcą zarejestrować swoje urządzenie osobiste w celu używania go w pracy. Informacje o tym, [jakie dane są widoczne, znajdziesz w następnym artykule](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
 
-## <a name="how-do-i-get-the-company-portal"></a>Jak uzyskać aplikację Portal firmy?
-Dostęp do portalu firmy możesz uzyskać na dwa różne sposoby:
+## <a name="how-do-i-get-company-portal"></a>Jak uzyskać aplikację Portal firmy?
+Pobierz Portal firmy w jeden z następujących sposobów:
 
-- Instalując aplikację Portal firmy na urządzeniu. Zazwyczaj aplikację Portal można pobrać ze sklepu z aplikacjami odpowiedniego dla urządzenia, ale także dział pomocy technicznej Twojej firmy może zainstalować aplikację Portal firmy dla Ciebie.
+- Instalując aplikację Portal firmy w urządzeniu. Zazwyczaj aplikację Portal można pobrać ze sklepu z aplikacjami odpowiedniego dla urządzenia, ale także dział pomocy technicznej Twojej firmy może zainstalować aplikację Portal firmy dla Ciebie.
 - Przechodząc do [witryny internetowej Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980) skonfigurowanej przez dział pomocy technicznej Twojej firmy.
 
 ## <a name="whats-the-difference-between-the-app-and-the-website"></a>Jakie są różnice między aplikacją i witryną internetową?

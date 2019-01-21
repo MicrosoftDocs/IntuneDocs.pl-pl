@@ -14,12 +14,12 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 65457a65504b633018bb61851f16c8c65fa1c806
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 2282ba4dd3caf8c71c8624884bc124393ea52d2f
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52185682"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203097"
 ---
 # <a name="add-ios-or-macos-device-feature-settings-in-intune"></a>Dodawanie ustawień funkcji urządzenia z systemem iOS lub macOS w usłudze Intune
 
@@ -30,7 +30,7 @@ Funkcje urządzenia umożliwiają sterowanie różnymi ustawieniami i funkcjami 
 - Ustawienia funkcji AirPrint i AirPlay
 - Układ ekranu głównego
 - Powiadomienia z aplikacji
-- Konfiguracja urządzenia udostępnianego
+- Komunikat na ekranie blokady
 - Konfigurowanie logowania jednokrotnego
 - Filtrowanie zawartości internetowej
 
@@ -43,8 +43,8 @@ W tym artykule przedstawiono podstawowe informacje na temat konfigurowania profi
 3. Wybierz pozycję **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
 4. Wprowadź następujące właściwości:
 
-   - **Nazwa**: wprowadź opisową nazwę nowego profilu.
-   - **Opis:** wprowadź opis profilu. (Jest to opcjonalne, ale zalecane).
+   - **Nazwa**: Wprowadź opisową nazwę nowego profilu.
+   - **Opis**: Wprowadź opis profilu. To ustawienie jest opcjonalne, ale zalecane.
    - **Platforma**: wybierz typ platformy:
      - **iOS**
      - **macOS**
@@ -55,7 +55,7 @@ W tym artykule przedstawiono podstawowe informacje na temat konfigurowania profi
      - [Ustawienia funkcji AirPlay dla urządzeń z systemem iOS](airplay-settings-ios.md)
      - [Ustawienia układu ekranu głównego dla urządzeń z systemem iOS](home-screen-settings-ios.md)
      - [Ustawienia powiadomień aplikacji dla urządzeń z systemem iOS](app-notification-settings-ios.md)
-     - [Ustawienia konfiguracji urządzenia udostępnianego dla urządzeń z systemem iOS](shared-device-settings-ios.md)
+     - [Ustawienia komunikatów na ekranie blokady dla systemu iOS](shared-device-settings-ios.md)
      - [Konfigurowanie logowania jednokrotnego w usłudze Intune dla urządzeń z systemem iOS](sso-ios.md)
      - [Ustawienia filtru zawartości sieci Web dla urządzeń z systemem iOS](web-content-filter-settings-ios.md)
 

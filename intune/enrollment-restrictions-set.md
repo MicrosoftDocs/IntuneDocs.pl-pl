@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: e6f816ae0eb025addfaa0c5f7ec7d16005f6b040
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: a8ebe8f8cd84ef5eb38bf7e17f413bcc6a0791cd
+ms.sourcegitcommit: c84e1845b854704c4b048832e365dd381c7f3754
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112956"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54122550"
 ---
 # <a name="set-enrollment-restrictions"></a>Ustawianie ograniczeń rejestracji
 
@@ -81,6 +81,8 @@ Możesz zmienić ustawienia ograniczeń dotyczących typu urządzenia, wykonują
     - Profil służbowy systemu Android obsługuje wersję major.minor.rev.build.
     - System iOS obsługuje wersję major.minor.rev. Wersje systemu operacyjnego nie mają zastosowania do urządzeń firmy Apple rejestrowanych przy użyciu programu Device Enrollment Program, usługi Apple School Manager lub aplikacji Apple Configurator.
     - System Windows obsługuje tylko major.minor.rev.build dla systemu Windows 10.
+> [!Note]
+> System Windows 10 nie udostępnia numeru kompilacji podczas rejestracji, więc jeśli na przykład wprowadzisz kompilację 10.0.17134.174, a urządzenie korzysta z kompilacji 10.0.17134.100, urządzenie zostanie zablokowane podczas rejestracji.
 8. Wybierz pozycję **Zezwalaj** lub **Blokuj** dla **urządzeń osobistych** w przypadku każdej platformy na liście.
 9. Wybierz przycisk **OK**.
 

@@ -1,40 +1,43 @@
 ---
 title: Ustawienia poczty e-mail dla urządzeń z systemem iOS w usłudze Microsoft Intune — Azure | Microsoft Docs
-description: Utwórz profil konfiguracji poczty e-mail urządzenia, który korzysta z serwerów programu Exchange i pobiera atrybuty z usługi Azure Active Directory. Możesz również włączyć protokół SSL, uwierzytelniać użytkowników przy użyciu certyfikatów lub nazwy użytkownika/hasła i synchronizować pocztę e-mail w urządzeniach z systemem iOS za pomocą usługi Microsoft Intune.
+description: Zapoznaj się z listą wszystkich ustawień poczty e-mail, które możesz skonfigurować i dodać w przypadku urządzeń z systemem iOS w usłudze Microsoft Intune, w tym używanie serwerów programu Exchange i pobieranie atrybutów z usługi Azure Active Directory. Możesz również włączyć protokół SSL, uwierzytelniać użytkowników przy użyciu certyfikatów lub nazwy użytkownika/hasła i synchronizować pocztę e-mail na urządzeniach z systemem iOS za pomocą profilów konfiguracji urządzenia w usłudze Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/05/2018
+ms.date: 12/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: b3aa3e7a4cd79ab990afe7f02a1d6960bc66494a
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: intune-azure; seodec18
+ms.openlocfilehash: c54ccf5bba53d5d638f011d3bd0d308adf6cb013
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180191"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203369"
 ---
-# <a name="email-profile-settings-for-ios-devices---intune"></a>Ustawienia profilu poczty e-mail dla urządzeń z systemem iOS — Intune
+# <a name="email-profile-settings-for-ios-devices-in-intune"></a>Ustawienia profilu poczty e-mail dla urządzeń z systemem iOS w usłudze Intune
 
-Ustawienia profilu poczty e-mail umożliwiają skonfigurowanie urządzeń z systemem iOS.
+W usłudze Microsoft Intune możesz utworzyć i skonfigurować profil poczty e-mail w celu nawiązywania połączenia z serwerem poczty e-mail, wybrać sposób uwierzytelniania użytkowników, użyć szyfrowania S/MIME na potrzeby szyfrowania i nie tylko.
 
-> [!IMPORTANT]
-> Wprowadzamy ulepszenia funkcji szyfrowania S/MIME opisanej w tym artykule. W wyniku funkcja szyfrowania S/MIME jest tymczasowo usuwana w usłudze Intune. Po wydaniu tej funkcji usuniemy tę uwagę.
+W tym artykule wymieniono i opisano wszystkie ustawienia poczty e-mail dostępne dla urządzeń z systemem iOS. Możesz utworzyć profil konfiguracji urządzenia, aby wypchnąć lub wdrożyć te ustawienia poczty e-mail na urządzeniach z systemem iOS.
+
+## <a name="before-you-begin"></a>Przed rozpoczęciem
+
+[Utwórz profil konfiguracji urządzenia](email-settings-configure.md#create-a-device-profile).
 
 ## <a name="email-settings"></a>Ustawienia poczty e-mail
 
-- **Serwer poczty e-mail**: wprowadź nazwę hosta serwera programu Exchange.
+- **Serwer poczty e-mail**: wprowadź nazwę hosta serwera Exchange.
 - **Nazwa konta**: wprowadź nazwę wyświetlaną konta e-mail. Ta nazwa jest widoczna na urządzeniach użytkowników.
 - **Atrybut nazwy użytkownika z usługi AAD**: ta nazwa to atrybut pobierany przez usługę Intune z usługi Azure Active Directory (AAD). Usługa Intune dynamicznie generuje nazwę użytkownika używaną przez ten profil. Dostępne opcje:
-  - **Główna nazwa użytkownika**: pobiera nazwę, taką jak `user1` lub `user1@contoso.com`
-  - **Podstawowy adres SMTP**: pobiera nazwę w formacie adresu e-mail, takiego jak `user1@contoso.com`
-  - **Nazwa konta SAM**: wymaga domeny, takiej jak `domain\user1`.
+  - **Nazwa główna użytkownika**: pobiera nazwę, taką jak `user1` lub `user1@contoso.com`
+  - **Podstawowy adres SMTP**: Pobiera nazwę w formacie adresu e-mail, na przykład `user1@contoso.com`
+  - **Nazwa konta sAM**: wymaga domeny, takiej jak `domain\user1`.
 
     Wprowadź też następujące ustawienia:  
     - **Źródło nazwy domeny użytkownika**: wybierz pozycję **AAD** (Azure Active Directory) lub **Niestandardowe**.
@@ -45,11 +48,11 @@ Ustawienia profilu poczty e-mail umożliwiają skonfigurowanie urządzeń z syst
       Podczas wybierania atrybutów **Niestandardowe** wprowadź następujące ustawienia:
       - **Nazwa domeny niestandardowej do użycia**: wprowadź wartość używaną przez usługę Intune jako nazwa domeny, taką jak `contoso.com` lub `contoso`
 
-- **Atrybut adresu e-mail z usługi AAD**: określ sposób generowania adresu e-mail użytkownika. Wybierz pozycję **Główna nazwa użytkownika** (`user1@contoso.com` lub `user1`), aby użyć pełnej nazwy użytkownika jako adresu e-mail. Wybierz pozycję **Podstawowy adres SMTP** (`user1@contoso.com`), aby użyć podstawowego adresu SMTP do logowania się do programu Exchange.
-- **Metoda uwierzytelniania** — wybierz metodę uwierzytelniania stosowaną w profilu e-mail: **Certyfikaty** lub **Nazwa użytkownika i hasło**. Uwierzytelnianie Azure Multi-Factor Authentication nie jest obsługiwane.
+- **Atrybut adresu e-mail z usługi AAD**: Wybierz sposób generowania adresu e-mail użytkownika. Wybierz pozycję **Główna nazwa użytkownika** (`user1@contoso.com` lub `user1`), aby użyć pełnej nazwy użytkownika jako adresu e-mail. Wybierz pozycję **Podstawowy adres SMTP** (`user1@contoso.com`), aby użyć podstawowego adresu SMTP do logowania się do programu Exchange.
+- **Metoda uwierzytelniania**: Wybierz metodę uwierzytelniania stosowaną w profilu poczty e-mail: **Certyfikaty** lub **Nazwa użytkownika i hasło**. Uwierzytelnianie Azure Multi-Factor Authentication nie jest obsługiwane.
   - W przypadku wybrania pozycji **Certyfikat** wybierz wcześniej utworzony profil certyfikatu SCEP lub PKCS klienta, który jest używany do uwierzytelniania połączenia z programem Exchange.
-- **Protokół SSL**: wybierz pozycję **Włącz**, aby użyć protokołu SSL (Secure Sockets Layer) podczas wysyłania i odbierania wiadomości e-mail oraz komunikacji z serwerem programu Exchange.
-- **Protokół OAuth**: wybierz pozycję **Włącz**, aby użyć protokołu OAuth (Open Authorization) podczas wysyłania i odbierania wiadomości e-mail oraz komunikacji z programem Exchange. Jeśli serwer OAuth korzysta z uwierzytelniania przy użyciu certyfikatu, wybierz opcję **Certyfikat** w obszarze **Metoda uwierzytelniania** i dołącz certyfikat do profilu. Możesz też wybrać opcję **Nazwa użytkownika i hasło** w obszarze **Metoda uwierzytelniania**. Jeśli korzystasz z protokołu OAuth, sprawdź następujące elementy:
+- **SSL**: Wybierz pozycję **Włącz**, aby użyć protokołu SSL (Secure Sockets Layer) podczas wysyłania i odbierania wiadomości e-mail oraz komunikacji z serwerem programu Exchange.
+- **OAuth**: Wybierz pozycję **Włącz**, aby użyć protokołu OAuth (Open Authorization) podczas wysyłania i odbierania wiadomości e-mail oraz komunikacji z programem Exchange. Jeśli serwer OAuth korzysta z uwierzytelniania przy użyciu certyfikatu, wybierz opcję **Certyfikat** w obszarze **Metoda uwierzytelniania** i dołącz certyfikat do profilu. Możesz też wybrać opcję **Nazwa użytkownika i hasło** w obszarze **Metoda uwierzytelniania**. Jeśli korzystasz z protokołu OAuth, sprawdź następujące elementy:
 
   - Przed skierowaniem tego profilu do użytkowników upewnij się, że rozwiązanie poczty e-mail obsługuje protokół OAuth. Instalacja usługi Office 365 Exchange Online obsługuje uwierzytelnianie za pomocą protokołu OAuth. Instalacja lokalna programu Exchange i rozwiązania partnerów lub innych firm mogą nie obsługiwać protokołu OAuth. Instalacja lokalna programu Exchange może być skonfigurowana pod kątem obsługi nowoczesnego uwierzytelniania — zobacz wpis na blogu [Announcing Hybrid Modern Authentication for Exchange On-Premises](https://blogs.technet.microsoft.com/exchange/2017/12/06/announcing-hybrid-modern-authentication-for-exchange-on-premises/) (Ogłoszenie hybrydowego nowoczesnego uwierzytelniania dla lokalnej instalacji programu Exchange).
 
@@ -66,12 +69,32 @@ Ustawienia profilu poczty e-mail umożliwiają skonfigurowanie urządzeń z syst
   > 1. Urządzeniom, które są już wybrane jako docelowe, zostaną przypisane nowe profile.
   > 2. Użytkownikom końcowym wyświetli się monit o ponowne wprowadzenie swoich poświadczeń.
 
-- **S/MIME**: wybierz pozycję **Włącz protokół S/MIME**, aby wysyłać wychodzącą pocztę e-mail przy użyciu podpisywania S/MIME. Po włączeniu można również zaszyfrować wiadomości e-mail do adresatów, którzy mogą odbierać zaszyfrowane wiadomości e-mail i odszyfrować wiadomości e-mail odbierane od nadawców.
-  - Jeśli wybierzesz opcję **Certyfikat**, wybierz istniejący profil certyfikatu PKCS do uwierzytelniania połączenia z programem Exchange lub szyfrowania wymiany wiadomości e-mail.
-- **Liczba wiadomości e-mail do synchronizacji**: wybierz liczbę dni, z których chcesz zsynchronizować pocztę e-mail. Możesz też wybrać pozycję **Nieograniczone**, aby zsynchronizować wszystkie dostępne wiadomości e-mail.
-- **Zezwalaj na przenoszenie wiadomości na inne konta poczty e-mail**: wybierz pozycję **Włącz**, aby umożliwić użytkownikom przenoszenie wiadomości e-mail między różnymi kontami skonfigurowanymi na ich urządzeniu.
-- **Zezwalaj na wysyłanie wiadomości e-mail przy użyciu aplikacji innych firm**: wybierz pozycję **Włącz**, aby zezwalać użytkownikowi na wybranie jego profilu jako domyślnego konta do wysyłania poczty e-mail. Umożliwia to aplikacjom innych firm otwieranie wiadomości e-mail w natywnej aplikacji poczty e-mail, na przykład w celu dołączania plików do wiadomości e-mail.
-- **Synchronizuj ostatnio używane adresy e-mail**: wybierz pozycję **Włącz**, aby zezwalać użytkownikom na synchronizowanie z serwerem listy adresów e-mail, które były ostatnio używane na urządzeniu.
+- **S/MIME**: Wybierz opcję **Włącz protokół S/MIME** , aby zezwolić użytkownikom na podpisywanie i/lub szyfrowanie wiadomości e-mail w natywnej aplikacji pocztowej systemu iOS. 
+
+  Gdy używasz protokołu S/MIME w wiadomościach e-mail, potwierdzasz autentyczność nadawcy oraz integralność i poufność wiadomości.
+
+  - **Włączone podpisywanie S/MIME**: Wybierz opcję **Włącz**, aby umożliwić użytkownikom cyfrowe podpisywanie wychodzących wiadomości e-mail dla wprowadzonego konta. Dzięki podpisywaniu użytkownicy odbierający wiadomości mogą być pewni, że wiadomość pochodzi od określonego nadawcy, a nie od kogoś, kto udaje, że jest tym nadawcą. Wybranie opcji **Wyłącz** powoduje, że użytkownicy nie mogą cyfrowo podpisywać wiadomości.
+    - **Zezwalaj użytkownikowi na zmianę ustawienia**: Wybierz opcję **Włącz**, aby umożliwić użytkownikom zmianę zachowania podpisywania S/MIME. Wybranie opcji **Wyłącz** uniemożliwia użytkownikom zmienianie skonfigurowanego ustawienia podpisywania S/MIME. Dostępne w systemie iOS 12 lub nowszym.
+
+  - **Certyfikat podpisywania S/MIME**: Wybierz istniejący profil certyfikatu PKCS lub SCEP, który jest używany do podpisywania wiadomości e-mail.
+    - **Zezwalaj użytkownikowi na zmianę ustawienia**: Wybierz opcję **Włącz**, aby umożliwić użytkownikom zmianę certyfikatu podpisywania. Wybranie opcji **Wyłącz** uniemożliwia użytkownikom zmienianie certyfikatu podpisywania i wymusza na użytkownikach stosowanie skonfigurowanego przez Ciebie certyfikatu. Dostępne w systemie iOS 12 lub nowszym.
+
+  - **Szyfruj domyślnie**: Wybranie opcji **Włącz** powoduje domyślne szyfrowanie wszystkich wiadomości. Wybranie opcji **Wyłącz** powoduje, że szyfrowanie wiadomości nie jest zachowaniem domyślnym.
+    - **Zezwalaj użytkownikowi na zmianę ustawienia**: Wybierz opcję **Włącz**, aby umożliwić użytkownikom zmienianie domyślnego zachowania szyfrowania. Wybranie opcji **Wyłącz** uniemożliwia użytkownikom zmienianie domyślnego zachowania szyfrowania i wymusza na użytkownikach stosowanie skonfigurowanego przez Ciebie ustawienia. Dostępne w systemie iOS 12 lub nowszym.
+
+  - **Wymuś szyfrowanie poszczególnych wiadomości**: Szyfrowanie poszczególnych wiadomości umożliwia użytkownikom wybranie, które wiadomości e-mail mają być szyfrowane przed wysłaniem. Wybierz opcję **Włącz**, aby wyświetlić opcję szyfrowania poszczególnych wiadomości podczas tworzenia nowej wiadomości e-mail. Dzięki temu użytkownicy mogą wybrać opcję zaszyfrowania wiadomości lub z niej zrezygnować. Wybranie opcji **Wyłącz** powoduje, że opcja szyfrowania poszczególnych wiadomości nie jest widoczna.
+
+    Jeśli ustawienie **Szyfruj domyślnie** jest włączone, włączenie szyfrowania poszczególnych wiadomości umożliwia użytkownikom zrezygnowanie z szyfrowania pojedynczych wiadomości. Jeśli ustawienie **Szyfruj domyślnie** jest wyłączone, włączenie szyfrowania poszczególnych wiadomości umożliwia użytkownikom wybranie szyfrowania pojedynczych wiadomości.
+
+  - **Certyfikat szyfrowania S/MIME**: Wybierz istniejący profil certyfikatu PKCS lub SCEP, który jest używany do szyfrowania wiadomości e-mail.
+    - **Zezwalaj użytkownikowi na zmianę ustawienia**: Wybierz opcję **Włącz**, aby umożliwić użytkownikom zmianę certyfikatu szyfrowania. Wybranie opcji **Wyłącz** uniemożliwia użytkownikom zmienianie certyfikatu szyfrowania i wymusza na użytkownikach stosowanie skonfigurowanego przez Ciebie certyfikatu. Dostępne w systemie iOS 12 lub nowszym.
+- **Liczba wiadomości e-mail do synchronizacji**: Wybierz liczbę dni, z których chcesz zsynchronizować pocztę e-mail. Możesz też wybrać pozycję **Nieograniczone**, aby zsynchronizować wszystkie dostępne wiadomości e-mail.
+- **Zezwalaj na przenoszenie wiadomości na inne konta e-mail**: Wybierz opcję **Włącz**, aby zezwolić użytkownikom na przenoszenie wiadomości e-mail między innymi kontami, które użytkownicy skonfigurowali na swoich urządzeniach.
+- **Zezwalaj na wysyłanie wiadomości e-mail z aplikacji innych firm**: Wybierz opcję **Włącz**, aby zezwolić użytkownikom na wybranie tego profilu jako domyślnego konta do wysyłania poczty e-mail. Umożliwia to aplikacjom innych firm otwieranie wiadomości e-mail w natywnej aplikacji poczty e-mail, na przykład w celu dołączania plików do wiadomości e-mail.
+- **Synchronizuj ostatnio używane adresy e-mail**: Wybierz opcję **Włącz**, aby zezwolić użytkownikom na synchronizowanie z serwerem listy adresów e-mail, które były ostatnio używane na urządzeniu.
 
 ## <a name="next-steps"></a>Następne kroki
-[Konfigurowanie ustawień poczty e-mail w usłudze Intune](email-settings-configure.md)
+
+Profil został utworzony, ale nie wykonuje jeszcze żadnych czynności. W dalszej części [przypiszesz profil](device-profile-assign.md) i będziesz [monitorować jego stan](device-profile-monitor.md).
+
+Konfigurowanie ustawień poczty e-mail na urządzeniach z systemami [Android](email-settings-android.md), [Windows 10](email-settings-windows-10.md) i [Windows Phone 8.1](email-settings-windows-phone-8-1.md).

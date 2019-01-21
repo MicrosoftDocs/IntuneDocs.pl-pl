@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/14/2017
+ms.date: 01/09/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 0f8139d5a17d1a6594354994fda6c0eef64a22f3
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: c3f1c28fb94823dd3370080c62c0d6f3d0da521e
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43147506"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203267"
 ---
 # <a name="use-managed-apps-on-your-ios-device"></a>Korzystanie z aplikacji zarządzanych na urządzeniu z systemem iOS
 
@@ -34,7 +34,7 @@ Gdy uzyskujesz dostęp do danych firmowych w aplikacji zarządzanej, jest wyświ
 
 ![Komunikat dotyczący aplikacji zarządzanych systemu iOS](./media/managed-apps-message.png)
 
-### <a name="how-do-i-get-managed-apps"></a>Jak uzyskać aplikacje zarządzane?
+## <a name="how-do-i-get-managed-apps"></a>Jak uzyskać aplikacje zarządzane?  
 Aplikacje zarządzane można uzyskać na kilka sposobów:
 
 -   Gdy urządzenie jest zarejestrowane w usłudze Microsoft Intune, zainstaluj aplikację z aplikacji Portal firmy lub witryny internetowej Portal firmy. Aplikację może również zainstalować na Twoim urządzeniu dział pomocy technicznej Twojej firmy. Aby uzyskać informacje na temat rejestrowania, zobacz artykuł [Rejestrowanie urządzenia z systemem iOS w usłudze Intune](enroll-your-device-in-intune-ios.md) lub [Rejestrowanie urządzenia z systemem macOS w usłudze Intune](enroll-your-device-in-intune-macos.md).
@@ -43,7 +43,16 @@ Aplikacje zarządzane można uzyskać na kilka sposobów:
 
 Dział pomocy technicznej Twojej firmy może czasami zakupić wiele licencji dla instalowanej przez Ciebie aplikacji. Jeśli zostanie wyświetlony komunikat z prośbą o zaakceptowanie umowy programu Apple Volume Purchase Program, jest to zjawisko normalne i można go zaakceptować. Jeśli go nie zaakceptujesz, nie będzie można zainstalować aplikacji.
 
-### <a name="what-can-my-company-support-manage-in-an-app"></a>Czym dział pomocy technicznej mojej firmy może zarządzać w aplikacji?
+## <a name="available-apps"></a>Aplikacje dostępne   
+ Twoja organizacja wybiera aplikacje, które są dla Ciebie odpowiednie i przydatne w pracy lub w szkole. Są to jedyne aplikacje, które znajdziesz w aplikacji Portal firmy.   
+
+ Aplikacje są również udostępniane na podstawie typu używanego urządzenia. Jeśli na przykład używasz aplikacji Portal firmy dla systemu iOS, będziesz mieć dostęp do aplikacji dla systemu iOS, ale nie dla systemu Android.   
+
+## <a name="request-an-app-for-work-or-school"></a>Żądanie aplikacji do pracy lub do szkoły   
+ Jeśli potrzebujesz jakiejś aplikacji, która nie jest dostępna w aplikacji Portal firmy, możesz o nią poprosić. Informacje kontaktowe do **pomocy technicznej** znajdziesz w aplikacji Portal firmy na karcie **Pomoc techniczna**. Te same informacje kontaktowe znajdują się w [witrynie internetowej Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).   
+ 
+
+## <a name="what-can-my-company-support-manage-in-an-app"></a>Czym dział pomocy technicznej mojej firmy może zarządzać w aplikacji?  
 Oto kilka przykładowych opcji, którymi dział pomocy technicznej Twojej firmy może zarządzać w aplikacji i które mogą wpływać na interakcję z danymi firmowymi na urządzeniu:
 
 -   Dostęp do określonych witryn sieci Web

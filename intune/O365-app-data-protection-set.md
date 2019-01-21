@@ -17,12 +17,12 @@ ms.reviewer: ayesham
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ef84a77961dafc1a881bdb54208fae602857ae32
-ms.sourcegitcommit: bf1549eb59adc31ead8601e40253a7024b22853c
+ms.openlocfilehash: 807bc306848a731e63f7f854a9d4b451264e21a8
+ms.sourcegitcommit: 513c59a23ca5dfa80a3ba6fc84068503a4158757
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54067469"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54210809"
 ---
 # <a name="how-your-users-will-experience-basic-protection-on-managed-office-365-apps-in-microsoft-intune"></a>Na czym polega podstawowa ochrona użytkowników zarządzanych aplikacji usługi Office 365 w usłudze Microsoft Intune
 
@@ -89,33 +89,32 @@ W tym artykule posłużono się przykładem usługi OneDrive dla Firm w celu zad
 
 ## <a name="what-policies-does-this-wizard-set"></a>Jakie zasady można ustawić, korzystając z tego kreatora?
 
-|     |       | |
-|----|--------|-|
-|**Nazwa**|Zarządzaj aplikacjami usługi Office 365| |
-| **Opis**|Utworzona z użyciem kreatora Zarządzaj aplikacjami usługi Office 365| |
-| |  | |
-| **Nazwa ustawienia** |**Wartość zasady dla systemu iOS** | **Wartość zasady dla systemu Android** |
-|Zapobiegaj tworzeniu kopii zapasowych w programach iTunes i iCloud| Nie | Brak |
-|Blokuj kopie zapasowe systemu Android |Brak | Nie|
-|Zezwalaj aplikacji na transfer danych do innych aplikacji | Wszystkie aplikacje | Wszystkie aplikacje|
-|Zezwalaj aplikacji na odbieranie danych z innych aplikacji| Wszystkie aplikacje | Wszystkie aplikacje|
-|Nie zezwalaj na używanie polecenia „Zapisz jako” | Nie | Nie|
-|Ogranicz wycinanie, kopiowanie i wklejanie w innych aplikacjach | Dowolna aplikacja | Dowolna aplikacja |
-|Ogranicz zawartość sieci Web wyświetlaną w zarządzanej przeglądarce firmowej | Nie| Nie|
-|Szyfruj dane aplikacji | Gdy urządzenie jest zablokowane | Tak|
-|Wyłącz synchronizowanie kontaktów | Nie| Nie|
-|Wyłącz drukowanie | Nie | Nie|
-|Wymagaj numeru PIN w celu udzielenia dostępu | Nie | Tak|
-|Liczba prób przed zresetowaniem numeru PIN | Brak |5|
-|Zezwalaj na prosty numer PIN | Brak |Tak|
-|Długość numeru PIN | Brak | 4|
-|Zezwalaj na odcisk palca zamiast numeru PIN | Brak | Tak |
-|Wymagaj poświadczeń firmowych w celu udzielenia dostępu | Nie | Nie|
-|Blokuj uruchamianie aplikacji zarządzanych na urządzeniach, na których zdjęto zabezpieczenia systemu lub uzyskano dostęp do konta root | Nie | Nie|
-|Ponownie sprawdź wymagania dostępu po (w minutach) — limit czasu | 30 | 30|
-|Ponownie sprawdź wymagania dostępu po (w minutach) — okres karencji w trybie offline | 720 |720|
-|Interwał przebywania w trybie offline (w dniach) przed wyczyszczeniem danych aplikacji | 90 | 90|
-|Zablokuj przechwytywanie ekranu (tylko urządzenia z systemem Android) | Brak | Nie |
+**Nazwa**: Zarządzaj aplikacjami usługi Office 365<br>
+**Opis**: Utworzona z użyciem kreatora Zarządzaj aplikacjami usługi Office 365
+
+| Nazwa ustawienia | Wartość zasad dla systemu iOS | Wartość zasad dla systemu Android |
+|------------------------------------------------------------------------|-----------------------|----------------------|
+| Zapobiegaj tworzeniu kopii zapasowych w programach iTunes i iCloud | Nie | Brak |
+| Blokuj kopie zapasowe systemu Android | Brak | Nie |
+| Zezwalaj aplikacji na transfer danych do innych aplikacji | Wszystkie aplikacje | Wszystkie aplikacje |
+| Zezwalaj aplikacji na odbieranie danych z innych aplikacji | Wszystkie aplikacje | Wszystkie aplikacje |
+| Nie zezwalaj na używanie polecenia „Zapisz jako” | Nie | Nie |
+| Ogranicz wycinanie, kopiowanie i wklejanie w innych aplikacjach | Dowolna aplikacja | Dowolna aplikacja |
+| Ogranicz zawartość sieci Web wyświetlaną w zarządzanej przeglądarce firmowej | Nie | Nie |
+| Szyfruj dane aplikacji | Gdy urządzenie jest zablokowane | Tak |
+| Wyłącz synchronizowanie kontaktów | Nie | Nie |
+| Wyłącz drukowanie | Nie | Nie |
+| Wymagaj numeru PIN w celu udzielenia dostępu | Nie | Tak |
+| Liczba prób przed zresetowaniem numeru PIN | Brak | 5 |
+| Zezwalaj na prosty numer PIN | Brak | Tak |
+| Długość numeru PIN | Brak | 4 |
+| Zezwalaj na odcisk palca zamiast numeru PIN | Brak | Tak |
+| Wymagaj poświadczeń firmowych w celu udzielenia dostępu | Nie | Nie |
+| Blokuj uruchamianie aplikacji zarządzanych na urządzeniach, na których zdjęto zabezpieczenia systemu lub uzyskano dostęp do konta root | Nie | Nie |
+| Ponownie sprawdź wymagania dostępu po (w minutach) — limit czasu | 30 | 30 |
+| Ponownie sprawdź wymagania dostępu po (w minutach) — okres karencji w trybie offline | 720 | 720 |
+| Interwał przebywania w trybie offline (w dniach) przed wyczyszczeniem danych aplikacji | 90 | 90 |
+| Zablokuj przechwytywanie ekranu (tylko urządzenia z systemem Android) | Brak | Nie |
 
 ### <a name="why-is-an-app-pin-policy-only-configured-for-android-devices"></a>Dlaczego zasada aplikacji dotycząca numeru PIN jest skonfigurowana tylko dla urządzeń z systemem Android?
 Szyfrowanie przebiega inaczej w systemach iOS i Android.

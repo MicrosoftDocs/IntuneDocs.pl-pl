@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/25/2017
+ms.date: 01/09/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,20 +17,20 @@ ROBOTS: ''
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 1e9b9908fcc48e9137c07f9a5397661d66e5be95
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: 88107a580eb72f647bb7c32d52ed5d3c848cd392
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43146743"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203318"
 ---
 # <a name="send-logs-to-your-company-support-from-the-settings-app-for-windows-10"></a>Wysyłanie dzienników z aplikacji Ustawienia w systemie Windows 10 do działu pomocy technicznej Twojej firmy
 
-Jeśli podczas korzystania z urządzenia z systemem Windows 10 zarządzanym przez firmę wystąpi błąd, możesz pomóc działowi pomocy technicznej Twojej firmy rozwiązać problem, wysyłając informacje pocztą e-mail. Te informacje są przechowywane na urządzeniu w specjalnym dokumencie nazywanym _dziennikiem diagnostycznym_.
+Użyj aplikacji Ustawienia, aby rozwiązać problemy z aplikacją Portal firmy dla systemu Windows 10. Jeśli napotkasz problem podczas korzystania z aplikacji na urządzeniu z systemem Windows 10, możesz wysłać wiadomość e-mail do zespołu pomocy technicznej w celu uzyskania pomocy. Zdarzenia i błędy występujące w aplikacji Portal firmy są zapisywane na urządzeniu w specjalnym dokumencie o nazwie _dziennik diagnostyczny_. Mogą one zawierać dodatkowe informacje szczegółowe o błędzie, a po wyeksportowaniu są przydatne dla zespołów pomocy technicznej.
 
-1. Otwórz aplikację **Ustawienia** systemu Windows, przechodząc do **menu Start** i wybierając przycisk **Ustawienia**. Możesz również wyszukać „ustawienia” na pasku wyszukiwania.
+1. Aby otworzyć aplikację **Ustawienia**, przejdź do menu **Start** i wybierz pozycję **Ustawienia**. Możesz również wyszukać ciąg *ustawienia* na pasku wyszukiwania.
 2. Przejdź kolejno do pozycji **Konta** > **Uzyskaj dostęp do miejsca pracy lub nauki**.
-3. Wybierz pozycję „Eksportuj pliki dziennika zarządzania”.
+3. Wybierz pozycję **Eksportuj pliki dziennika zarządzania**.
 
    ![Zostanie wyświetlony ekran „Uzyskaj dostęp do miejsca pracy lub nauki” zawierający opcję Eksportuj pod nagłówkiem „Powiązane ustawienia”.](./media/w10-export-logs.png)
 

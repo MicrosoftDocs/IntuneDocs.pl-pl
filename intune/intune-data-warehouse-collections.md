@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/19/2018
+ms.date: 01/11/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
-ms.openlocfilehash: d290fadf92ee112a1f663c6894861b393b81f74d
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 2eae4ea2bfabe1b41af88ae34b81fbf12ef5f9d9
+ms.sourcegitcommit: e9ba1280b95565a5c5674b825881655d0303e688
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190323"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54297506"
 ---
 #  <a name="intune-data-warehouse-collections"></a>Kolekcje magazynu danych usługi Intune
 
@@ -312,6 +312,92 @@ Jednostka **deviceEnrollmentType** wskazuje, jak urządzenie zostało zarejestro
 | 9                | WindowsCoManagement                | Współzarządzanie urządzeniami z systemem Windows 10 wyzwalane przez rozwiązanie AutoPilot lub zasady grupy.                       |
 | 10               | WindowsAzureADJoinsUsingDeviceAuth | Dołączanie urządzeń z systemem Windows 10 do usługi Azure AD przy użyciu uwierzytelniania urządzeń.                                            |
 
+## <a name="enrollmentactivities"></a>enrollmentActivities 
+Jednostka **EnrollmentActivity** wskazuje działanie rejestracji urządzenia.
+
+| Właściwość                      | Opis                                                               |
+|-------------------------------|---------------------------------------------------------------------------|
+| dateKey                       | Klucz daty zarejestrowania tego działania rejestracji.               |
+| deviceEnrollmentTypeKey       | Klucz typu rejestracji.                                        |
+| deviceTypeKey                 | Klucz typu urządzenia.                                                |
+| enrollmentEventStatusKey      | Klucz stanu wskazujący powodzenie lub niepowodzenie rejestracji.    |
+| enrollmentFailureCategoryKey  | Klucz kategorii niepowodzenia rejestracji (jeśli rejestracja nie powiodła się).        |
+| enrollmentFailureReasonKey    | Klucz przyczyny niepowodzenia rejestracji (jeśli rejestracja nie powiodła się).          |
+| osVersion                     | Wersja systemu operacyjnego urządzenia.                               |
+| count                         | Łączna liczba działań rejestracji zgodnych z powyższymi klasyfikacjami.  |
+
+## <a name="enrollmenteventstatuses"></a>enrollmentEventStatuses 
+Jednostka **EnrollmentEventStatus** wskazuje wynik rejestracji urządzenia.
+
+| Właściwość                   | Opis                                                                       |
+|----------------------------|-----------------------------------------------------------------------------------|
+| enrollmentEventStatusKey   | Unikatowy identyfikator stanu rejestracji w magazynie danych (klucz zastępczy)  |
+| enrollmentEventStatusName  | Nazwa stanu rejestracji. Zobacz poniższe przykłady.                            |
+
+### <a name="example"></a>Przykład
+
+| enrollmentEventStatusName  | Opis                            |
+|----------------------------|----------------------------------------|
+| Powodzenie                    | Rejestracja urządzenia zakończona powodzeniem         |
+| Niepowodzenie                     | Rejestracja urządzenia zakończona niepowodzeniem             |
+| Niedostępny              | Niedostępny stan rejestracji.  |
+
+## <a name="enrollmentfailurecategories"></a>enrollmentFailureCategories 
+Jednostka **EnrollmentFailureCategory** wskazuje, dlaczego rejestracja urządzenia się nie powiodła. 
+
+| Właściwość                       | Opis                                                                                 |
+|--------------------------------|---------------------------------------------------------------------------------------------|
+| enrollmentFailureCategoryKey   | Unikatowy identyfikator kategorii niepowodzenia rejestracji w magazynie danych (klucz zastępczy)  |
+| enrollmentFailureCategoryName  | Nazwa kategorii niepowodzenia rejestracji. Zobacz poniższe przykłady.                            |
+
+### <a name="example"></a>Przykład
+
+| enrollmentFailureCategoryName   | Opis                                                                                                   |
+|---------------------------------|---------------------------------------------------------------------------------------------------------------|
+| Nie dotyczy                  | Kategoria niepowodzenia rejestracji nie ma zastosowania.                                                            |
+| Niedostępny                   | Kategoria niepowodzenia rejestracji nie jest dostępna.                                                             |
+| Nieznane                         | Nieznany błąd.                                                                                                |
+| Uwierzytelnianie                  | Uwierzytelnianie nie powiodło się.                                                                                        |
+| Autoryzacja                   | Wywołanie zostało uwierzytelnione, ale nie zostało autoryzowane do rejestracji.                                                         |
+| AccountValidation               | Nie można zweryfikować konta na potrzeby rejestracji. (Konto zablokowane, rejestracja nie jest włączona)                      |
+| UserValidation                  | Nie można zweryfikować użytkownika. (Użytkownik nie istnieje, brak licencji)                                           |
+| DeviceNotSupported              | Urządzenie nie jest obsługiwane w zakresie zarządzania urządzeniami przenośnymi.                                                         |
+| InMaintenance                   | Konto jest poddawane konserwacji.                                                                                    |
+| BadRequest                      | Klient wysłał żądanie, którego usługa nie rozumie lub nie obsługuje.                                        |
+| FeatureNotSupported             | Funkcje używane przez tę rejestrację nie są obsługiwane dla tego konta.                                        |
+| EnrollmentRestrictionsEnforced  | Ograniczenia rejestracji skonfigurowane przez administratora spowodowały zablokowanie rejestracji.                                          |
+| ClientDisconnected              | Upłynął limit czasu dla klienta lub rejestracja została przerwana przez użytkownika końcowego.                                                        |
+| UserAbandonment                 | Rejestracja została porzucona przez użytkownika końcowego. (Użytkownik końcowy rozpoczął dołączanie, ale go nie ukończył w odpowiednim czasie)  |
+
+## <a name="enrollmentfailurereasons"></a>enrollmentFailureReasons  
+Jednostka **EnrollmentFailureReason** wskazuje bardziej szczegółową przyczynę niepowodzenia rejestracji urządzenia w ramach kategorii niepowodzenia.  
+
+| Właściwość                     | Opis                                                                               |
+|------------------------------|-------------------------------------------------------------------------------------------|
+| enrollmentFailureReasonKey   | Unikatowy identyfikator przyczyny niepowodzenia rejestracji w magazynie danych (klucz zastępczy)  |
+| enrollmentFailureReasonName  | Nazwa przyczyny niepowodzenia rejestracji. Zobacz poniższe przykłady.                            |
+
+### <a name="example"></a>Przykład
+
+| enrollmentFailureReasonName      | Opis                                                                                                                                                                                            |
+|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Nie dotyczy                   | Przyczyna niepowodzenia rejestracji nie ma zastosowania.                                                                                                                                                       |
+| Niedostępny                    | Przyczyna niepowodzenia rejestracji nie jest dostępna.                                                                                                                                                        |
+| Nieznane                          | Nieznany błąd.                                                                                                                                                                                         |
+| UserNotLicensed                  | Użytkownik nie został odnaleziony w usłudze Intune lub nie ma ważnej licencji.                                                                                                                                     |
+| UserUnknown                      | Użytkownik nie jest znany usłudze Intune.                                                                                                                                                                           |
+| BulkAlreadyEnrolledDevice        | Tylko jeden użytkownik może zarejestrować urządzenie. To urządzenie zostało już wcześniej zarejestrowane przez innego użytkownika.                                                                                                                |
+| EnrollmentOnboardingIssue        | Urząd zarządzania urządzeniami przenośnymi (MDM, mobile device management) usługi Intune nie został jeszcze skonfigurowany.                                                                                                                                 |
+| AppleChallengeIssue              | Instalacja profilu zarządzania systemu iOS została opóźniona lub zakończyła się niepowodzeniem.                                                                                                                                         |
+| AppleOnboardingIssue             | Do rejestracji w usłudze Intune wymagany jest certyfikat wypychania MDM firmy Apple.                                                                                                                                       |
+| DeviceCap                        | Użytkownik próbował zarejestrować więcej urządzeń, niż jest to dozwolone.                                                                                                                                        |
+| AuthenticationRequirementNotMet  | Autoryzacja tego żądania nie powiodła się w usłudze rejestracji usługi Intune.                                                                                                                                            |
+| UnsupportedDeviceType            | To urządzenie nie spełnia minimalnych wymagań dotyczących rejestracji w usłudze Intune.                                                                                                                                  |
+| EnrollmentCriteriaNotMet         | Rejestracja tego urządzenia nie powiodła się ze względu na skonfigurowaną regułę ograniczeń rejestracji.                                                                                                                          |
+| BulkDeviceNotPreregistered       | Nie odnaleziono numeru IMEI (International Mobile Equipment Identity) lub numeru seryjnego urządzenia.  Bez tego identyfikatora urządzenia są rozpoznawane jako urządzenia osobiste, które są obecnie zablokowane.  |
+| FeatureNotSupported              | Użytkownik próbował uzyskać dostęp do funkcji, która nie została jeszcze udostępniona wszystkim klientom lub nie jest zgodna z konfiguracją usługi Intune.                                                            |
+| UserAbandonment                  | Rejestracja została porzucona przez użytkownika końcowego. (Użytkownik końcowy rozpoczął dołączanie, ale go nie ukończył w odpowiednim czasie)                                                                                           |
+| APNSCertificateExpired           | Nie można zarządzać urządzeniami firmy Apple, jeśli certyfikat wypychania MDM firmy Apple wygasł.                                                                                                                            |
 
 ## <a name="intunemanagementextensions"></a>intuneManagementExtensions
 Jednostka **intuneManagementExtension** zawiera listę kondycji jednostki **intuneManagementExtension** na każdym urządzeniu z systemem Windows 10 dziennie. Dane są zachowywane przez ostatnie 60 dni.
@@ -330,7 +416,7 @@ Jednostka **IntuneManagementExtensionHealthState** zawiera listę wszystkich mo�
 |      Właściwość     |                   Opis                  | Przykład |
 |:-----------------:|:----------------------------------------------:|:-------:|
 | ExtensionStateKey | Unikatowy identyfikator stanu kondycji.           | 2       |
-| ExtensionState    | Stan kondycji jednostki IntuneManagementExtension. | W dobrej kondycji |
+| ExtensionState    | Stan kondycji jednostki IntuneManagementExtension. | Dobra kondycja |
 
 ## <a name="intunemanagementextensionversions"></a>intuneManagementExtensionVersions
 Jednostka **IntuneManagementExtensionVersion** wyświetla listę wszystkich wersji używanych przez jednostkę **IntuneManagementExtension**.
@@ -419,7 +505,7 @@ Jednostka **ownerType** wskazuje, czy urządzenie jest firmowe, osobiste czy nie
 |:-------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------:|
 | ownerTypeID   | Unikatowy identyfikator typu właściciela.                                                                                                                                               |                            |
 | ownerTypeKey  | Unikatowy identyfikator typu właściciela w magazynie danych — klucz zastępczy.                                                                                                       |                            |
-| ownerTypeName | Reprezentuje typ właściciela urządzenia: Company — urządzenie jest własnością przedsiębiorstwa.  Personal — urządzenie jest własnością osobistą (BYOD).   Unknown — brak informacji o tym urządzeniu. | Company Personal Unknown |
+| ownerTypeName | Reprezentuje typ właściciela urządzeń:  Company — urządzenie jest własnością przedsiębiorstwa.  Personal — urządzenie jest własnością osobistą (BYOD).   Unknown — brak informacji o tym urządzeniu. | Company Personal Unknown |
 
 ## <a name="policies"></a>policies
 Jednostka **Policy** zawiera listę profilów konfiguracji urządzeń, profilów konfiguracji aplikacji i zasad zgodności. Za pomocą funkcji zarządzania urządzeniami przenośnymi (MDM) możesz przypisać zasady grupie w przedsiębiorstwie.

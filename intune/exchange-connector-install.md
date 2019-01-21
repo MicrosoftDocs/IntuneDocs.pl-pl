@@ -15,12 +15,12 @@ ms.reviewer: chrisgre
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 28886382da00f5c07129f4e69e0bbadf97634420
-ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
+ms.openlocfilehash: 3e66dd3d77cc36a6d311afea82e0f2087b469495
+ms.sourcegitcommit: 8c1590db761cc411369cae26677f909d3a8ca297
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53817266"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54239595"
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune-azure"></a>Konfigurowanie lokalnego programu Exchange Connector w usłudze Microsoft Intune Azure
 
@@ -42,7 +42,7 @@ Poniższa tabela zawiera listę wymagań dotyczących komputera, na którym ma b
 
 |            Wymaganie             |                                                                                                                                                                                                        Więcej informacji                                                                                                                                                                                                        |
 |------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|         Systemy operacyjne          |                                                               Usługa Intune obsługuje lokalny program Exchange Connector na komputerach z dowolną wersją systemu Windows Server 2008 z dodatkiem SP2 (64-bitową), Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2 i Windows Server 2016.<br /><br />Łącznik nie jest obsługiwany w żadnej instalacji Server Core.                                                                |
+|         Systemy operacyjne          |                                                               Usługa Intune obsługuje lokalny program Exchange Connector na komputerach z dowolną wersją systemu Windows Server 2008 z dodatkiem SP2 (64-bitową), Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2 i Windows Server 2016.<br /><br />Program Connector nie jest obsługiwany w żadnej instalacji Server Core.                                                                |
 |         Microsoft Exchange         |                                                                           Lokalne łączniki wymagają programu Microsoft Exchange 2010 z dodatkiem SP3 lub jego nowszej wersji albo starszej wersji środowiska usługi Exchange Online w wersji dedykowanej. Aby ustalić, czy środowisko usługi Exchange Online w wersji dedykowanej zawiera <strong>nową</strong> czy <strong>starszą</strong> konfigurację, skontaktuj się z menedżerem ds. klientów.                                                                           |
 | Urząd zarządzania urządzeniami przenośnymi |                                                                                                                              [Konfigurowanie usługi Intune jako urzędu zarządzania urządzeniami przenośnymi](mdm-authority-set.md).                                                                                                                               |
 |              Sprzęt              |                                                                                                                                                     Komputer, na którym jest instalowany łącznik, wymaga co najmniej procesora CPU 1,6 GHz z 2 GB pamięci RAM oraz 10 GB wolnego miejsca na dysku.                                                                                                                                                      |
@@ -97,7 +97,7 @@ Wykonaj następujące kroki, aby zainstalować lokalny program Exchange Connecto
 
    ![Obraz przedstawiający miejsce, w którym należy wybrać typ serwera Exchange Server](./media/intune-sa-exchange-connector-config.png)
 
-   W przypadku lokalnego serwera programu Exchange podaj jego nazwę lub w pełni kwalifikowaną nazwę domeny serwera programu Exchange, który hostuje rolę **serwera dostępu klienta**.
+   W przypadku lokalnego serwera Exchange podaj nazwę lub w pełni kwalifikowaną nazwę domeny serwera Exchange, który hostuje rolę **serwera Dostęp klienta**.
 
    W przypadku hostowanego serwera Exchange podaj adres serwera Exchange. Aby określić adres URL hostowanego serwera Exchange:
 
@@ -116,15 +116,15 @@ Wykonaj następujące kroki, aby zainstalować lokalny program Exchange Connecto
 
        4. Wybierz przycisk **OK**.
 
-   5. W polach **Nazwa użytkownika (domena\nazwa_użytkownika)** i **Hasło** podaj poświadczenia wymagane do nawiązania połączenia z serwerem Exchange.
+4. W polach **Nazwa użytkownika (domena\nazwa_użytkownika)** i **Hasło** podaj poświadczenia wymagane do nawiązania połączenia z serwerem Exchange.
 
-   6.  Podaj poświadczenia, które są niezbędne do wysyłania powiadomień do skrzynek pocztowych użytkowników programie Exchange Server. Ten użytkownik może być przeznaczony jedynie do obsługi powiadomień. Użytkownik powiadomień potrzebuje skrzynki pocztowej programu Exchange, aby móc wysyłać powiadomienia pocztą e-mail. Powiadomienia te można skonfigurować za pomocą zasad dostępu warunkowego w usłudze Intune.  
+5. Podaj poświadczenia, które są niezbędne do wysyłania powiadomień do skrzynek pocztowych użytkowników programie Exchange Server. Ten użytkownik może być przeznaczony jedynie do obsługi powiadomień. Użytkownik powiadomień potrzebuje skrzynki pocztowej programu Exchange, aby móc wysyłać powiadomienia pocztą e-mail. Powiadomienia te można skonfigurować za pomocą zasad dostępu warunkowego w usłudze Intune.  
 
-       Upewnij się, że usługa wykrywania automatycznego i usługi sieci Web programu Exchange są skonfigurowane na serwerze dostępu klienta programu Exchange. Aby uzyskać więcej informacji na ten temat, zapoznaj się z artykułem [Client Access server](https://technet.microsoft.com/library/dd298114.aspx) (Serwer dostępu klienta).
+       Ensure that the Autodiscover service and Exchange Web Services are configured on the Exchange Client Access Server. For more information, see [Client Access server](https://technet.microsoft.com/library/dd298114.aspx).
 
-   7.  W polu **Hasło** podaj hasło dla tego konta, aby umożliwić usłudze Intune dostęp do serwera Exchange.
+6. W polu **Hasło** podaj hasło dla tego konta, aby umożliwić usłudze Intune dostęp do serwera Exchange.
 
-   8. Wybierz polecenie **Połącz**.
+7. Wybierz polecenie **Połącz**.
 
    > [!NOTE]
    > Konfigurowanie połączenia może potrwać kilka minut.
@@ -157,9 +157,9 @@ Po pomyślnym skonfigurowaniu łączników programu Exchange Connector można wy
 
 Możesz również sprawdzić godzinę i datę ostatniej pomyślnej próby synchronizacji.
 
-### <a name="system-center-operations-manager-scom-management-pack"></a>Pakiet administracyjny programu System Center Operations Manager (SCOM)
+### <a name="system-center-operations-manager-management-pack"></a>Pakiet administracyjny programu System Center Operations Manager
 
-Począwszy od wersji 1710 usługi Intune, można korzystać z [pakietu administracyjnego programu SCOM dla łącznika programu Exchange oraz usługi Intune](https://www.microsoft.com/download/details.aspx?id=55990&751be11f-ede8-5a0c-058c-2ee190a24fa6=True&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True&fa43d42b-25b5-4a42-fe9b-1634f450f5ee=True). Zapewnia on różne sposoby monitorowania łącznika programu Exchange w przypadku konieczności rozwiązywania problemów.
+Począwszy od wersji 1710 usługi Intune, można korzystać z [pakietu administracyjnego programu Operations Manager dla łącznika programu Exchange oraz usługi Intune](https://www.microsoft.com/download/details.aspx?id=55990&751be11f-ede8-5a0c-058c-2ee190a24fa6=True&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True&fa43d42b-25b5-4a42-fe9b-1634f450f5ee=True). Zapewnia on różne sposoby monitorowania łącznika programu Exchange w przypadku konieczności rozwiązywania problemów.
 
 ## <a name="manually-force-a-quick-sync-or-full-sync"></a>Ręczne wymuszanie szybkiej synchronizacji lub pełnej synchronizacji
 Lokalny program Exchange Connect regularnie i automatycznie synchronizuje rekordy protokołu EAS i urządzeń usługi Intune. W przypadku zmiany stanu zgodności urządzenia automatyczny proces synchronizacji regularnie zaktualizuje rekordy tak, aby dostęp do urządzenia został odpowiednio umożliwiony lub zablokowany.

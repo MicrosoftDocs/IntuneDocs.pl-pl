@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/23/2018
+ms.date: 01/09/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 60df25542e69422e15a2a57473a3fbfa2cc413a5
-ms.sourcegitcommit: 604b29c480b24270b5debc3e5f3141c8149ee6ed
+ms.openlocfilehash: d5b07262dad3eaab76dd4854b82f0e45b3921b26
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49959506"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203505"
 ---
 # <a name="use-managed-apps-on-your-android-device"></a>Korzystanie z aplikacji zarządzanych na urządzeniu z systemem Android
 Aplikacje zarządzane są konfigurowane tak, aby spełniały wymagania organizacji dotyczące bezpieczeństwa oraz chroniły dane służbowe. Te aplikacje są udostępniane w urządzeniu z możliwością automatycznego instalowania lub używania. 
@@ -56,7 +56,15 @@ Najpierw należy zainstalować aplikację Portal firmy, a w razie potrzeby obją
 * Organizacja udostępnia aplikacje zarządzane przeznaczone dla Ciebie w aplikacji Portal firmy. Przejdź do witryny internetowej lub aplikacji Portal firmy, aby wyszukiwać, przeglądać i instalować te aplikacje. 
 * Instalujesz aplikację ze sklepu Google Play, a następnie logujesz się do niej przy użyciu konta służbowego.  
 
-## <a name="what-can-my-company-support-manage-in-an-app"></a>Czym dział pomocy technicznej mojej firmy może zarządzać w aplikacji?
+ ## <a name="available-apps"></a>Aplikacje dostępne   
+ Twoja organizacja wybiera aplikacje, które są dla Ciebie odpowiednie i przydatne w pracy lub w szkole. Są to jedyne aplikacje, które znajdziesz w aplikacji Portal firmy.   
+
+ Aplikacje są również udostępniane na podstawie typu używanego urządzenia. Jeśli na przykład używasz aplikacji Portal firmy dla systemu Android, będziesz mieć dostęp do aplikacji dla systemu Android, ale nie dla systemu iOS.   
+
+ ## <a name="request-an-app-for-work-or-school"></a>Żądanie aplikacji do pracy lub do szkoły   
+ Jeśli potrzebujesz jakiejś aplikacji, która nie jest dostępna w aplikacji Portal firmy, możesz o nią poprosić. Informacje kontaktowe do **pomocy technicznej** znajdziesz w aplikacji Portal firmy na karcie **Kontakt z działem IT**. Te same informacje kontaktowe znajdują się w [witrynie internetowej Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).   
+
+## <a name="what-can-my-company-support-manage-in-an-app"></a>Czym dział pomocy technicznej mojej firmy może zarządzać w aplikacji?  
 Poniższa lista zawiera opis ustawień, którymi dział pomocy technicznej w firmie może zarządzać w aplikacji. Te ustawienia mają wpływ na sposób wyświetlania danych służbowych w urządzeniu, uzyskiwania do nich dostępu oraz używania ich w inny sposób:
 
 * Dostęp do określonych witryn sieci Web  

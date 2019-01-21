@@ -15,12 +15,12 @@ ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 0c09a80f97056f7cb08d69d6a8deedc4e421a556
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 37483f0fa33db109510ee537772a7bdead79e4f3
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190306"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203556"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Korzystanie z portalu rozwiązywania problemów, aby pomóc użytkownikom w firmie
 
@@ -271,6 +271,15 @@ Po wybraniu wiersza błędu zostaną wyświetlone bardziej szczegółowe informa
 | Autoryzacja rejestracji nie powiodła się | Podjęto próbę rejestracji przy użyciu starszej wersji aplikacji Portal firmy. |
 | Urządzenie nie jest obsługiwane | Urządzenie nie spełnia minimalnych wymagań na potrzeby rejestracji w usłudze Intune. |
 | Nie spełniono ograniczeń rejestracji | Ta rejestracja została zablokowana ze względu na ograniczenie rejestracji skonfigurowane przez administratora. |
+| Wersja urządzenia jest zbyt niska | Administrator skonfigurował ograniczenie rejestracji polegające na wymaganiu nowszej wersji urządzenia. |
+| Wersja urządzenia jest zbyt wysoka | Administrator skonfigurował ograniczenie rejestracji polegające na wymaganiu starszej wersji urządzenia. |
+| Urządzenia nie można zarejestrować jako osobistego | Administrator skonfigurował ograniczenie rejestracji polegające na blokowaniu rejestracji osobistych, a urządzenie, którego rejestracja nie powiodła się, nie zostało wstępnie zdefiniowane jako firmowe. |
+| Platforma urządzenia jest zablokowana | Administrator skonfigurował ograniczenie rejestracji, które blokuje platformę tego urządzenia. |
+| Token masowy wygasł | Token masowy w pakiecie aprowizacyjnym wygasł. |
+| Nie znaleziono urządzenia rozwiązania Autopilot lub szczegółów | Podczas próby rejestracji nie znaleziono urządzenia rozwiązania Autopilot. |
+| Nie znaleziono lub nie przypisano profilu rozwiązania Autopilot | Urządzenie nie ma aktywnego profilu rozwiązania Autopilot. |
+| Nieoczekiwana metoda rejestracji rozwiązania Autopilot | Podjęto próbę zarejestrowania urządzenia przy użyciu niedozwolonej metody. |
+| Usunięto urządzenie rozwiązania Autopilot | Urządzenie, dla którego podjęto próbę rejestracji, zostało usunięte z rozwiązania Autopilot dla tego konta. |
 | Osiągnięto limit urządzeń | Ta rejestracja została zablokowana ze względu na limit urządzeń skonfigurowany przez administratora. |
 | Dołączanie urządzenia firmy Apple | W przypadku wszystkich urządzeń z systemem iOS możliwość rejestracji została w tej chwili zablokowana z powodu braku lub wygaśnięcia certyfikatu wypychania MDM firmy Apple w usłudze Intune. |
 | Urządzenie nie jest wstępnie zarejestrowane | Urządzenie nie zostało wstępnie zarejestrowane jako firmowe, a wszystkie rejestracje osobiste zostały zablokowane przez administratora. |

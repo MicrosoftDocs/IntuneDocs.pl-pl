@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 755e836c5954b9cbbf3c7729755aaa25062710d8
-ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
+ms.openlocfilehash: ec170727b8846caae3e96cc19be8d1e274c17427
+ms.sourcegitcommit: 513c59a23ca5dfa80a3ba6fc84068503a4158757
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53642595"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54210741"
 ---
 # <a name="manually-add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Ręczne dodawanie aplikacji Portal firmy dla systemu Windows 10 przy użyciu usługi Microsoft Intune
 
@@ -47,7 +47,7 @@ Użytkownicy mogą samodzielnie zainstalować aplikację Portal firmy ze sklepu 
 5. W polu **Platforma** wybierz pozycję **Wszystkie urządzenia z systemem Windows 10**, a następnie wybierz odpowiednie wartości w polach **Wersja minimalna**, **Architektura** i **Pobierz metadane aplikacji**. 
 6. Wybierz pozycję **Pobierz**, aby zapisać plik na maszynie lokalnej.
 
-    ![Wybrana opcja „Wszystkie urządzenia systemu Windows 10” i szczegóły pakietu Architektura X86 do pobrania](./media/Win10CP-all-devices.png)
+    ![Wybrana jest opcja urządzeń z systemem Windows 10 oraz architektury X86](./media/Win10CP-all-devices.png)
 
 7. Pobierz wszystkie pakiety w obszarze „Wymagane struktury” wybierając pozycję **Pobierz**.  
     Należy wykonać tę czynność dla architektury x86, x64 i ARM — co składa się na całkowitą liczbę 12 pakietów.

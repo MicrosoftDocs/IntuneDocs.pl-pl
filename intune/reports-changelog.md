@@ -6,7 +6,7 @@ keywords: Magazyn danych usługi Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/09/2018
+ms.date: 01/11/2010
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,18 +16,25 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 0f39b0cb758c8c62da2e76ef8eaff07264ff3f3a
-ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
+ms.openlocfilehash: 3fce49decb7574d32d1923a77bb2cca28384ce11
+ms.sourcegitcommit: e9ba1280b95565a5c5674b825881655d0303e688
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53642765"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54297234"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Dziennik zmian dla interfejsu API magazynu danych usługi Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Bądź na bieżąco z aktualizacjami magazynu danych usługi Intune.
+
+## <a name="1812"></a>1812 
+_Wydanie: grudzień 2018 r._
+
+### <a name="enrollment-activities-collection-released-to-v10"></a>Wydano wersję 1.0 kolekcji działań rejestracji 
+
+Kolekcja działań rejestracji jest teraz dostępna w wersji 1.0. Dzięki tej kolekcji możesz poznać liczbę niepowodzeń rejestracji oraz jej trend w danym środowisku. Aby uzyskać więcej informacji, zobacz [enrollmentActivities](intune-data-warehouse-collections.md#enrollmentactivities), [enrollmentEventStatuses](intune-data-warehouse-collections.md#enrollmenteventstatuses), [enrollmentFailureCategories](intune-data-warehouse-collections.md#enrollmentfailurecategories) i [enrollmentFailureReasons](intune-data-warehouse-collections.md#enrollmentfailurereasons).
 
 ## <a name="1808"></a>1808
 _Wydanie: sierpień 2018 r._
@@ -36,9 +43,9 @@ _Wydanie: sierpień 2018 r._
 
 Teraz można używać wersji 1.0 magazynu danych usługi Intune, ustawiając parametr zapytania `api-version=v1.0`. Aktualizacje kolekcji w magazynie danych są z natury addytywne i nie przerywają działania istniejących scenariuszy.
 
-### <a name="enrollment-failure-collection-released-to-beta"></a>Niepowodzenie rejestracji — kolekcja wydana do wersji beta
+### <a name="enrollment-activities-collection-released-to-beta"></a>Wydano wersję beta kolekcji działań rejestracji
 
-Nowa kolekcja `Enrollment Failure` została wydana do wersji beta. Możesz jej użyć, aby zrozumieć, jak działa Twoja rejestracja. W tym celu zapoznaj się z najczęściej występującymi problemami. 
+Nowa kolekcja `Enrollment Activities` została wydana do wersji beta. Możesz jej użyć, aby zrozumieć, jak działa Twoja rejestracja. W tym celu zapoznaj się z najczęściej występującymi problemami. 
 
 
 ## <a name="1805"></a>1805

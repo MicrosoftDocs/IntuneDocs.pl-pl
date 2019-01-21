@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
-ms.openlocfilehash: 03840b0a4a7ce3f4735e22a227f5d2856d532b11
-ms.sourcegitcommit: 02f75d241b3cbb125cb235d16d447f8855b1806d
+ms.openlocfilehash: e0bb198b078695b567756c6a7db832d00e7a8c5b
+ms.sourcegitcommit: 513c59a23ca5dfa80a3ba6fc84068503a4158757
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657784"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54210843"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Wprowadzenie do zestawu SDK aplikacji usługi Microsoft Intune
 
@@ -158,6 +158,8 @@ Po wykonaniu czynności niezbędnych do zintegrowania Twojej aplikacji systemu i
     * Jeśli jesteś niezależnym dostawcą oprogramowania i włączasz obsługę ochrony aplikacji usługi Intune dla swoich aplikacji systemu iOS lub Android ze sklepu, po dokonaniu rejestracji w usłudze Microsoft Intune w sposób opisany w kroku rejestracji otrzymasz kod promocyjny. Kod ten pozwala zarejestrować się w celu korzystania z wersji próbnej usługi Microsoft Intune przez dodatkowy rok.
 
     * Jeśli opracowujesz aplikację biznesową, która nie zostanie dostarczona do sklepu, dostęp do usługi Microsoft Intune możesz uzyskiwać za pośrednictwem swojej organizacji. Możesz też zarejestrować się w celu skorzystania z miesięcznej bezpłatnej wersji próbnej usługi [Microsoft Intune](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0).
+    
+    * Jeśli testujesz aplikację na urządzeniu przenośnym przy użyciu konta użytkownika końcowego, upewnij się, że do konta przypisano licencję usługi Intune w witrynie internetowej portalu administracyjnego usługi Office po zalogowaniu się przy użyciu konta administratora. Zobacz [Assign Microsoft Intune license (Przypisywanie licencji usługi Microsoft Intune)](https://docs.microsoft.com/en-ca/intune/licenses-assign).
 
 * **Zasady ochrony aplikacji usługi Intune**: aby przetestować wszystkie zasady ochrony aplikacji usługi Intune w swojej aplikacji, musisz znać oczekiwane zachowanie każdego ustawienia zasad. Zobacz opisy [zasad ochrony aplikacji systemu iOS](app-protection-policy-settings-ios.md) i [zasad ochrony aplikacji systemu Android](app-protection-policy-settings-android.md).
 

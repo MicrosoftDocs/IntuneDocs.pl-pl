@@ -1,12 +1,12 @@
 ---
-title: Przypisywanie aplikacji do urządzeń z profilem służbowym systemu Android
+title: Przypisywanie zarządzanych aplikacji ze sklepu Google Play do urządzeń z systemem Android Enterprise
 titlesuffix: Microsoft Intune
-description: Dowiedz się, jak synchronizować aplikacje z zarządzanego sklepu Google Play i przypisywać je do urządzeń z profilem służbowym systemu Android.
+description: Dowiedz się, jak synchronizować aplikacje z zarządzanego sklepu Google Play i przypisywać je do urządzeń z systemem Android Enterprise.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/11/2018
+ms.date: 01/11/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,18 +16,18 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 5495addba30e8a958d2a49f2c04ee5af70d62712
-ms.sourcegitcommit: a0db74934433226e28ffdf5d92930dafd2feceae
+ms.openlocfilehash: 135aa120d8c0e441c59e9b9b3c5bb8ee6aa17229
+ms.sourcegitcommit: 8c1590db761cc411369cae26677f909d3a8ca297
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305934"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54239578"
 ---
-# <a name="assign-apps-to-android-work-profile-devices-with-intune"></a>Przypisywanie aplikacji do urządzeń z profilem służbowym systemu Android za pomocą usługi Intune
+# <a name="assign-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Przypisywanie zarządzanych aplikacji ze sklepu Google Play do urządzeń z systemem Android Enterprise z usługą Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Rozwiązanie Android enterprise to program obejmujący urządzenia z profilem służbowym systemu Android i urządzenia kiosku. W przypadku urządzeń z profilem służbowym systemu Android rozwiązanie Android enterprise to zestaw funkcji i usług, które oddzielają osobiste aplikacje i dane od służbowych aplikacji i danych. Rozwiązanie Android enterprise udostępnia dodatkowe opcje zarządzania i ochrony prywatności, które ułatwiają użytkownikom korzystanie z urządzeń z systemem Android w celach służbowych. Usługa Intune ułatwia wdrażanie aplikacji i ustawień na urządzeniach z profilem służbowym systemu Android, co zapewnia oddzielenie informacji osobistych od służbowych. Wszystkie aplikacje, które instalujesz na urządzeniach z profilem służbowym systemu Android, pochodzą z zarządzanego sklepu Google Play. Przypisywanie aplikacji do urządzeń z profilem służbowym systemu Android przebiega inaczej niż przypisywanie aplikacji do standardowych urządzeń z systemem Android. Proces obejmuje zalogowanie się do sklepu, wyszukanie odpowiednich aplikacji, a następnie ich zatwierdzenie. Następnie aplikacja zostaje wyświetlona w węźle **Licencjonowane aplikacje** w witrynie Azure Portal i można zarządzać przypisaniem aplikacji w taki sam sposób, jak w przypadku wszystkich innych.
+Rozwiązanie Android Enterprise to program obejmujący urządzenia z profilem służbowym systemu Android, urządzenia dedykowane, urządzenia kiosku oraz urządzenia w pełni zarządzane. W przypadku urządzeń z profilem służbowym systemu Android rozwiązanie Android enterprise to zestaw funkcji i usług, które oddzielają osobiste aplikacje i dane od służbowych aplikacji i danych. Rozwiązanie Android enterprise udostępnia dodatkowe opcje zarządzania i ochrony prywatności, które ułatwiają użytkownikom korzystanie z urządzeń z systemem Android w celach służbowych. Usługa Intune ułatwia wdrażanie aplikacji i ustawień na urządzeniach z profilem służbowym systemu Android, co zapewnia oddzielenie informacji osobistych od służbowych. Wszystkie aplikacje, które instalujesz na urządzeniach z profilem służbowym systemu Android, pochodzą z zarządzanego sklepu Google Play. Przypisywanie aplikacji do urządzeń z profilem służbowym systemu Android przebiega inaczej niż przypisywanie aplikacji do standardowych urządzeń z systemem Android. Proces obejmuje zalogowanie się do sklepu, wyszukanie odpowiednich aplikacji, a następnie ich zatwierdzenie. Następnie aplikacja zostaje wyświetlona w węźle **Licencjonowane aplikacje** w witrynie Azure Portal i można zarządzać przypisaniem aplikacji w taki sam sposób, jak w przypadku wszystkich innych.
 
 Ponadto możesz przypisywać utworzone samodzielnie aplikacje biznesowe w następujący sposób:
 - Utwórz w ramach programu Google Developer konto, które pozwala publikować aplikacje w prywatnym obszarze w sklepie Google Play.

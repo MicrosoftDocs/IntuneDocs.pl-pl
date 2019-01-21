@@ -1,11 +1,11 @@
 ---
-title: Profile urządzeń w usłudze Microsoft Intune — Azure | Microsoft Docs
-description: Przegląd różnych profilów urządzeń usługi Microsoft Intune, takich jak na przykład funkcje, ograniczenia, poczta e-mail, sieć Wi-Fi, sieć VPN, wiedza, certyfikaty, uaktualnianie systemu Windows 10, funkcji BitLocker i usługi Windows Defender, usługa Windows Information Protection i niestandardowe ustawienia konfiguracji w witrynie Azure Portal. Te profile służą do zarządzania danymi i urządzeniami oraz ich ochrony w Twojej firmie.
+title: Ustawienia i funkcje urządzeń w usłudze Microsoft Intune — Azure | Microsoft Docs
+description: Przegląd różnych profilów urządzeń usługi Microsoft Intune, takich jak na przykład funkcje, ograniczenia, poczta e-mail, sieć Wi-Fi, sieć VPN, wiedza, certyfikaty, uaktualnianie systemu Windows 10, funkcji BitLocker i usługi Windows Defender, usługa Windows Information Protection, szablony administracyjne i niestandardowe ustawienia konfiguracji w witrynie Azure Portal. Te profile służą do zarządzania danymi i urządzeniami oraz ich ochrony w Twojej firmie.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/19/2018
+ms.date: 01/09/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,42 +15,101 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: c9a3146b1ad5f6f7c439d2e49cf534e14d154f76
-ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
+ms.openlocfilehash: bc28bca31c43140a7bca528655825bab60c53be1
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52728705"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203522"
 ---
-# <a name="what-are-microsoft-intune-device-profiles"></a>Co to są profile urządzeń w usłudze Microsoft Intune?
+# <a name="apply-features-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Stosowanie ustawień funkcji w urządzeniach przy użyciu profili urządzeń w usłudze Microsoft Intune
 
-Usługa Microsoft Intune obejmuje ustawienia i funkcje, które można włączać lub wyłączać na różnych urządzeniach w organizacji. Te ustawienia i funkcje są zarządzane przy użyciu profilów. Oto kilka przykładów profilów: 
+Usługa Microsoft Intune obejmuje ustawienia i funkcje, które można włączać lub wyłączać na różnych urządzeniach w organizacji. Te ustawienia i funkcje są dodawane do „profili konfiguracji”. Możesz tworzyć profile dla różnych urządzeń różnych platform, w tym systemów iOS, Android i Windows, a następnie zastosować profil za pomocą usługi Intune do urządzeń w Twojej organizacji.
 
-- Profil sieci Wi-Fi, który zapewnia różnym urządzeniom dostęp do firmowej sieci Wi-Fi
-- Profil sieci VPN, który zapewnia różnym urządzeniom dostęp do serwera sieci VPN w sieci firmowej
+Oto kilka przykładów profilów:
 
-Ten artykuł zawiera omówienie różnych profilów, które można utworzyć dla urządzeń. Profile te umożliwiają lub uniemożliwiają korzystanie z niektórych funkcji urządzenia.
+- W urządzeniach z systemem Windows 10 użyj szablonu profilu, który blokuje kontrolki ActiveX w programie Internet Explorer.
+- W urządzeniach z systemem iOS lub macOS zezwól użytkownikom na korzystanie z drukarek AirPrint w Twojej organizacji.
+- Umożliwiaj lub blokuj dostęp do funkcji Bluetooth w urządzeniu.
+- Utwórz profil sieci WiFi lub VPN, który zapewnia różnym urządzeniom dostęp do sieci firmowej.
+- Zarządzaj aktualizacjami oprogramowania, łącznie z czasem ich instalacji.
+- Uruchom dedykowane urządzenie kiosku z systemem Android, które umożliwia uruchamianie jednej lub wielu aplikacji.
 
-## <a name="before-you-begin"></a>Przed rozpoczęciem
-
-Aby wyświetlić dostępne funkcje, otwórz witrynę [Azure Portal](https://portal.azure.com), a następnie otwórz zasób usługi Intune. 
-
-**Konfiguracja urządzenia** obejmuje następujące opcje:
-
-- **Omówienie**: lista stanów profilów oraz dodatkowe szczegółowe informacje o profilach przypisanych do użytkowników i urządzeń
-- **Zarządzanie**: tworzenie profilów urządzeń i przekazywanie niestandardowych [skryptów programu PowerShell](intune-management-extension.md) do uruchamiania w profilu
-- **Monitorowanie**: sprawdzanie stanu profilu (powodzenie lub niepowodzenie) oraz wyświetlanie dzienników dotyczących profilów
-- **Instalator**: dodawanie urzędu certyfikacji (SCEP lub PFX) lub włączanie zarządzania wydatkami telekomunikacyjnymi w profilu
+Ten artykuł zawiera instrukcje dotyczące tworzenia profilu oraz omówienie różnych typów profili, które można utworzyć. Profile te umożliwiają lub uniemożliwiają korzystanie z niektórych funkcji urządzenia.
 
 ## <a name="create-the-profile"></a>Tworzenie profilu
 
-[Tworzenie profilów urządzeń](device-profile-create.md) — ten temat zawiera szczegółowe wskazówki krok po kroku, aby utworzyć profil. 
+1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi**, wpisz nazwę usługi **Intune** w filtrze, a następnie wybierz pozycję **Intune**.
 
-## <a name="device-features---ios-and-macos"></a>Funkcje urządzeń — system iOS i macOS
+2. Wybierz pozycję **Konfiguracja urządzenia**. Do wyboru są następujące opcje:
 
-Profil [Funkcje urządzenia](device-features-configure.md) steruje funkcjami urządzeń z systemami iOS i macOS, takimi jak AirPrint, powiadomienia i udostępniane konfiguracje urządzeń.
+    - **Omówienie**: lista stanów profilów oraz dodatkowe szczegółowe informacje o profilach przypisanych do użytkowników i urządzeń.
+    - **Zarządzanie**: tworzenie profili urządzeń, przekazywanie niestandardowych [skryptów programu PowerShell](intune-management-extension.md) do uruchamiania w profilu i dodawanie planów danych do urządzeń korzystających z karty [eSIM](esim-device-configuration.md).
+    - **Monitorowanie**: sprawdzanie stanu profilu (powodzenie lub niepowodzenie) oraz wyświetlanie dzienników dotyczących profili.
+    - **Instalator**: dodawanie urzędu certyfikacji SCEP lub PFX albo włączanie [zarządzania wydatkami telekomunikacyjnymi](telecom-expenses-monitor.md) w profilu.
+
+3. Wybierz pozycję **Profile**  >  **Utwórz profil**. Wprowadź następujące właściwości:
+
+   - **Nazwa**: Wprowadź opisową nazwę profilu.
+   - **Opis**: Wprowadź opis profilu. To ustawienie jest opcjonalne, ale zalecane.
+   - **Platforma**: Wybierz platformę urządzeń. Dostępne opcje:  
+
+       - **Android**
+       - **Android enterprise**
+       - **iOS**
+       - **macOS**
+       - **Windows Phone 8.1**
+       - **Windows 8.1 lub nowszy**
+       - **Windows 10 lub nowszy**
+
+   - **Typ profilu**: Wybierz typ ustawień, który chcesz utworzyć. Wyświetlana lista zależy od wybranej **platformy**:
+
+       - [Szablony administracyjne](administrative-templates-windows.md)
+       - [Niestandardowe](custom-settings-configure.md)
+       - [Optymalizacja dostarczania](delivery-optimization-windows.md)
+       - [Funkcje urządzenia](device-features-configure.md)
+       - [Ograniczenia dotyczące urządzeń](device-restrictions-configure.md)
+       - [Uaktualnianie wersji i przełącznik trybów](edition-upgrade-configure-windows-10.md)
+       - [Edukacja](education-settings-configure.md)
+       - [Poczta e-mail](email-settings-configure.md)
+       - [Program Endpoint Protection](endpoint-protection-configure.md)
+       - [Identity Protection](identity-protection-configure.md)  
+       - [Kiosk](kiosk-settings.md)
+       - [Certyfikat PKCS](certficates-pfx-configure.md)
+       - [Certyfikat SCEP](certificates-scep-configure.md)
+       - [Zaufany certyfikat](certificates-configure.md)
+       - [Zasady aktualizacji](software-updates-ios.md)
+       - [VPN](vpn-settings-configure.md)
+       - [Wi-Fi](wi-fi-settings-configure.md)
+       - [Zaawansowana ochrona przed zagrożeniami w usłudze Windows Defender](advanced-threat-protection.md)
+       - [Rozwiązanie Windows Information Protection](windows-information-protection-configure.md)
+
+     Jeśli na przykład wybierzesz platformę **iOS**, opcje typu profilu będą wyglądać podobnie do następujących:
+
+     ![Tworzenie profilu systemu iOS w usłudze Intune](./media/create-device-profile.png)
+
+4. Wybierz pozycję **Ustawienia**. Ustawienia są zorganizowane według kategorii. Wybierz kategorię, aby wyświetlić listę wszystkich ustawień, które można skonfigurować.
+
+5. Po zakończeniu wybierz pozycję **OK**  >  **Utwórz**, aby zapisać zmiany.
+
+Aby dowiedzieć się więcej na temat różnych typów profili, przeczytaj następne sekcje w tym artykule.
+
+## <a name="administrative-templates-preview"></a>Szablony administracyjne (wersja zapoznawcza)
+
+[Szablony administracyjne](administrative-templates-windows.md) obejmują setki ustawień, które można skonfigurować dla programu Internet Explorer, usługi OneDrive, pulpitu zdalnego, programów Word, Excel i innych programów pakietu Office oraz wiele innych ustawień.
+
+Te szablony zapewniają administratorom uproszczony widok ustawień przypominający zasady grupy, ale są w pełni oparte na chmurze. 
 
 Ta funkcja obsługuje systemy:
+
+- System Windows 10 lub nowszy
+
+## <a name="device-features"></a>Funkcje urządzenia
+
+Profil [Funkcje urządzenia](device-features-configure.md) steruje funkcjami urządzeń z systemami iOS i macOS, takimi jak AirPrint, powiadomienia i komunikaty na ekranie blokady.
+
+Ta funkcja obsługuje systemy:
+
 - iOS 
 - macOS
 
@@ -167,6 +226,8 @@ Ta funkcja obsługuje systemy:
 
 W sekcji [Zasady aktualizacji systemu iOS](software-updates-ios.md) pokazano, jak utworzyć i przypisać zasady systemu iOS w celu zainstalowania aktualizacji oprogramowania na urządzeniach z systemem iOS. Można również sprawdzić stan instalacji.
 
+Aby uzyskać informacje o zasadach aktualizacji urządzeń z systemem Windows, zobacz [Optymalizacja dostarczania](delivery-optimization-windows.md). 
+
 Ta funkcja obsługuje systemy:
 - iOS
 
@@ -187,7 +248,19 @@ Ta funkcja obsługuje systemy:
 Profil [Windows Information Protection](windows-information-protection-configure.md) ułatwia ochronę przed wyciekami danych bez zakłócania pracy pracownika. Pomaga również chronić aplikacje i dane przedsiębiorstwa przed przypadkowymi przeciekami danych z urządzeń należących do przedsiębiorstwa oraz urządzeń osobistych, których pracownicy używają w pracy. Korzystanie z zestawu funkcji Windows Information Protection nie wymaga zmian środowiska ani innych aplikacji.
 
 Ta funkcja obsługuje systemy:
+
 - System Windows 10 lub nowszy
+
+## <a name="shared-multi-user-device"></a>Urządzenie udostępnione używane przez wielu użytkowników
+
+Profile [Windows 10](shared-user-device-settings-windows.md) i [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md) obejmują ustawienia zarządzania urządzeniami z wieloma użytkownikami, nazywanymi urządzeniami udostępnionymi lub komputerami udostępnionymi. Możesz określić, czy użytkownik zalogowany do urządzenia może zmieniać opcje uśpienia lub zapisywać pliki w urządzeniu. W innym przykładzie możesz utworzyć zasady, które usuwają nieaktywne poświadczeń z urządzeń Windows HoloLens, aby zaoszczędzić miejsce.
+
+Te ustawienia urządzeń udostępnionych z wieloma użytkownikami pozwalają administratorowi sterowanie niektórymi funkcjami urządzeń i zarządzać tymi urządzeniami udostępnionymi przy użyciu usługi Intune.
+
+Ta funkcja obsługuje systemy:
+
+- System Windows 10 lub nowszy
+- Windows Holographic for Business
 
 ## <a name="custom-profile"></a>Profil niestandardowy
 
@@ -203,3 +276,7 @@ Ta funkcja obsługuje systemy:
 ## <a name="manage-and-troubleshoot"></a>Zarządzanie i rozwiązywanie problemów
 
 [Zarządzaj profilami](device-profile-monitor.md), aby sprawdzić stan urządzeń i przypisane profile. Możesz też pomóc w rozwiązywaniu konfliktów, sprawdzając ustawienia powodujące konflikt i profile, które zawierają te ustawienia. [Typowe problemy i rozwiązania](device-profile-troubleshoot.md) obejmują pytania i odpowiedzi ułatwiające pracę z profilami, w tym zachowanie w przypadku usunięcia profilu, przyczyny wysyłania powiadomień do urządzeń i nie tylko.
+
+## <a name="next-steps"></a>Następne kroki
+Wybierz platformę i rozpocznij pracę:
+

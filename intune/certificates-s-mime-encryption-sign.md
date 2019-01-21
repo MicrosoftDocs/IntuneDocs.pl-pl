@@ -1,35 +1,40 @@
 ---
-title: Podpisywanie i szyfrowanie wiadomości e-mail przy użyciu protokołu S/MIME — Azure | Micrososft Docs
-description: Używanie lub włączanie protokołu S/MIME na potrzeby do podpisywania i szyfrowania wiadomości e-mail w usłudze Microsoft Intune
+title: Podpisywanie i szyfrowanie poczty e-mail przy użyciu protokołu S/MIME — Microsoft Intune — Azure | Micrososft Docs
+description: Dowiedz się, jak podpisywać i szyfrować wiadomości e-mail w urządzeniach za pomocą certyfikatów cyfrowych w usłudze Microsoft Intune. Są to certyfikaty protokołu S/MIME skonfigurowane przy użyciu profili konfiguracji urządzeń. Certyfikaty podpisywania i szyfrowania używają protokołu PKCS (certyfikatów prywatnych) oraz umożliwiają importowanie certyfikatów za pomocą łącznika.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/21/2018
+ms.date: 12/10/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: eaa85870b289bb3b65ce997d8610324f43d69452
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: intune-azure; seodec18
+ms.openlocfilehash: 0339be98bf045d280912bf88e88b5ba544b0a1f4
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52185648"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203131"
 ---
-# <a name="smime-email-signing-and-encryption-in-intune"></a>Podpisywanie i szyfrowanie wiadomości e-mail przy użyciu protokołu S/MIME w usłudze Intune
+# <a name="smime-overview-to-sign-and-encrypt-email-in-intune"></a>Omówienie protokołu S/MIME w zakresie podpisywania i szyfrowania wiadomości e-mail w usłudze Intune
 
-> [!IMPORTANT]
-> Wprowadzamy ulepszenia funkcji szyfrowania S/MIME opisanej w tym artykule. W wyniku funkcja szyfrowania S/MIME jest tymczasowo usuwana w usłudze Intune. Po wydaniu tej funkcji usuniemy tę uwagę.
+Certyfikaty poczty e-mail, nazywane też certyfikatami S/MIME, zapewniają dodatkowe zabezpieczenia wiadomości e-mail przy użyciu szyfrowania i odszyfrowywania. Usługa Microsoft Intune może używać certyfikatów S/MIME do podpisywania i szyfrowania wiadomości e-mail w urządzeniach przenośnych korzystających z następujących platform:
 
-Protokół S/MIME zapewnia dodatkowy poziom zabezpieczeń komunikacji za pośrednictwem poczty e-mail dzięki użyciu szyfrowania i odszyfrowywania. Usługa Microsoft Intune może używać protokołu S/MIME do podpisywania i szyfrowania wiadomości e-mail na urządzeniach przenośnych z systemem iOS, Windows, Windows Phone, Android i macOS.
+- Android
+- iOS
+- macOS
+- System Windows 10 lub nowszy
+- Windows Phone
 
-Na urządzeniach z systemem iOS można utworzyć profil poczty e-mail zarządzany przez usługę Intune, która będzie korzystać z protokołu S/MIME i certyfikatów w przypadku podpisywania i szyfrowania przychodzących i wychodzących wiadomości e-mail. Na innych platformach protokół S/MIME może być obsługiwany lub nie. Jeśli jest obsługiwany, można zainstalować certyfikaty, które używają podpisywania i szyfrowania za pomocą protokołu S/MIME. Następnie użytkownik końcowy może włączyć protokół S/MIME w aplikacjach poczty e-mail.
+Na urządzeniach z systemem iOS można utworzyć profil poczty e-mail zarządzany przez usługę Intune, która będzie korzystać z protokołu S/MIME i certyfikatów w przypadku podpisywania i szyfrowania przychodzących i wychodzących wiadomości e-mail. Na innych platformach protokół S/MIME może być obsługiwany lub nie. Jeśli jest obsługiwany, zainstaluj certyfikaty, które używają podpisywania i szyfrowania za pomocą protokołu S/MIME. Następnie użytkownik końcowy włącza protokół S/MIME w aplikacjach poczty e-mail.
 
-Aby uzyskać więcej informacji na temat szyfrowania i podpisywania wiadomości e-mail przy użyciu protokołu S/MIME, zobacz [S/MIME for message signing and encryption (Protokół S/MIME na potrzeby podpisywania i szyfrowania wiadomości)](https://docs.microsoft.com/Exchange/policy-and-compliance/smime).
+Aby uzyskać więcej informacji na temat szyfrowania i podpisywania wiadomości e-mail przy użyciu protokołu S/MIME w programie Exchange, zobacz [S/MIME for message signing and encryption (Protokół S/MIME na potrzeby podpisywania i szyfrowania wiadomości)](https://docs.microsoft.com/Exchange/policy-and-compliance/smime).
+
+W tym artykule omówiono, jak podpisywać i szyfrować wiadomości e-mail w urządzeniach przy użyciu certyfikatów S/MIME.
 
 ## <a name="signing-certificates"></a>Certyfikaty podpisywania
 
@@ -71,3 +76,10 @@ Aby wdrożyć certyfikat PKCS zaimportowany w usłudze Intune i używany do szyf
 ## <a name="smime-email-profiles"></a>Profile poczty e-mail protokołu S/MIME
 
 Po utworzeniu profilów certyfikatów podpisywania i szyfrowania S/MIME można [włączyć protokół S/MIME na potrzeby natywnej poczty e-mail systemu iOS](email-settings-ios.md).
+
+## <a name="next-steps"></a>Następne kroki
+
+- [Używanie certyfikatów SCEP](certificates-scep-configure.md)
+- [Używanie certyfikatów PKCS](certficates-pfx-configure.md)
+- [Używanie urzędu certyfikacji partnera](certificate-authority-add-scep-overview.md)
+- [Wystawianie certyfikatów PKCS z poziomu usługi internetowej Symantec PKI Manager](certificates-symantec-configure.md)

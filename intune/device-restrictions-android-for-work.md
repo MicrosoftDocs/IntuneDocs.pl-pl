@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 12/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
-ms.openlocfilehash: c9e2e0df79625329310171c509327395989f3a7c
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.openlocfilehash: 671c713be805038c7c2f2608dbadd9d8afdce344
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53032541"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203607"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem Android Enterprise w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune
 
@@ -77,6 +77,10 @@ W tym artykule wymieniono i opisano różne ustawienia, którymi można sterowa�
   - **Tylko sieć Wi-Fi**
   - **Zawsze**
 
+- **Okna powiadomień**: po ustawieniu opcji **Wyłącz** powiadomienia wyświetlane w oknach, w tym wyskakujące powiadomienia, powiadomienia o połączeniach przychodzących, połączeniach wychodzących, alerty systemowe i błędy systemowe, nie są wyświetlane na urządzeniu. Po ustawieniu opcji **Nieskonfigurowane** zostanie użyte domyślne ustawienie systemu operacyjnego, co może prowadzić do wyświetlania powiadomień.
+- **Pomiń wskazówki podczas pierwszego użycia**: wybierz opcję **Włącz**, aby ukrywać lub pomijać sugestie aplikacji dotyczące skorzystania z samouczków lub przeczytania wskazówek wprowadzających podczas uruchamiania aplikacji. Po ustawieniu opcji **Nieskonfigurowane** zostanie użyte domyślne ustawienie systemu operacyjnego, co może prowadzić do wyświetlania tych sugestii podczas uruchamiania aplikacji.
+
+
 ### <a name="system-security-settings"></a>Ustawienia zabezpieczeń systemu
 
 - **Skanowanie aplikacji pod kątem zagrożeń**: pozycja **Wymagaj** wymusza włączenie ustawienia **Weryfikuj aplikacje** w profilach służbowych i osobistych.
@@ -126,6 +130,7 @@ Urządzenie można skonfigurować do uruchamiania pojedynczej aplikacji lub wiel
 ### <a name="device-password-settings"></a>Ustawienia haseł urządzeń
 
 - **Blokada klawiatury**: wybierz pozycję **Wyłącz**, aby uniemożliwić użytkownikom używanie funkcji blokady ekranu Blokada klawiatury na urządzeniu. Pozycja **Nieskonfigurowane** zezwala użytkownikowi na korzystanie z funkcji blokady klawiatury.
+- **Wyłączone funkcje blokady klawiatury**: jeśli blokada klawiatury jest włączona na urządzeniu, wybierz, które funkcje mają zostać wyłączone. Na przykład po zaznaczeniu opcji **Zabezpiecz aparat** funkcja aparatu zostanie wyłączona na urządzeniu. Wszystkie funkcje, które nie są zaznaczone, są włączone na urządzeniu.
 - **Wymagany typ hasła**: określ typ hasła wymagany dla urządzenia. Dostępne opcje:
   - **Co najmniej numeryczne**
   - **Złożona wartość liczbowa**: powtarzające się lub kolejne cyfry, np. „1111” lub „1234”, są niedozwolone.
@@ -145,6 +150,32 @@ Urządzenie można skonfigurować do uruchamiania pojedynczej aplikacji lub wiel
 - **Dodawanie nowych użytkowników**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom dodawanie nowych użytkowników. Każdy użytkownik ma na urządzeniu obszar osobisty, który zawiera niestandardowe ekrany główne, konta, aplikacje i ustawienia. Pozycja **Nieskonfigurowane** umożliwia użytkownikom dodawanie innych użytkowników do urządzenia.
 - **Usuwanie użytkownika**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom usuwanie użytkowników. Pozycja **Nieskonfigurowane** umożliwia użytkownikom usuwanie innych użytkowników z urządzenia.
 - **Zmiany dotyczące konta**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom modyfikowanie kont. Pozycja **Nieskonfigurowane** umożliwia użytkownikom aktualizowanie kont użytkowników na urządzeniu.
+
+### <a name="connectivity"></a>Łączność
+
+- **Zawsze włączona sieć VPN**: wybierz pozycję **Włącz**, aby ustawić klienta sieci VPN tak, aby automatycznie łączył się i przywracał połączenie z siecią VPN. Zawsze włączone połączenia sieci VPN pozostają aktywne lub natychmiast łączą się, gdy użytkownik zablokuje urządzenie, urządzenie uruchomi się ponownie lub zmieni się sieć bezprzewodowa. 
+
+  Wybierz pozycję **Nieskonfigurowane**, aby wyłączyć zawsze włączoną sieć VPN dla wszystkich klientów sieci VPN.
+
+  > [!IMPORTANT]
+  > Należy pamiętać, aby dla jednego urządzenia wdrożyć tylko jedne zasady zawsze włączonej sieci VPN. Wdrażanie wielu zasad zawsze włączonej sieci VPN dla jednego urządzenia nie jest obsługiwane.
+
+- **Klient sieci VPN**: wybierz klienta sieci VPN, który obsługuje opcję Zawsze włączone. Dostępne opcje:
+  - Cisco AnyConnect
+  - F5 Access
+  - Palo Alto Networks GlobalProtect
+  - Pulse Secure
+  - Niestandardowy
+    - **Identyfikator pakietu**: wprowadź identyfikator pakietu aplikacji w sklepie Google Play. Jeśli na przykład adresem URL aplikacji w sklepie Play jest `https://play.google.com/store/details?id=com.contosovpn.android.prod`, to identyfikatorem pakietu jest `com.contosovpn.android.prod`.
+
+  > [!IMPORTANT]
+  >  - Wybrany klient sieci VPN musi być zainstalowany na urządzeniu i musi obsługiwać sieć VPN dla aplikacji w profilach służbowych. W przeciwnym razie wystąpi błąd. 
+  >  - Należy zatwierdzić aplikację klienta sieci VPN w **zarządzanymi sklepie Google Play**, zsynchronizować aplikację z usługą Intune i wdrożyć aplikację na urządzeniu. Po wykonaniu tej czynności aplikacja jest zainstalowana w profilu służbowym użytkownika.
+  >  - Mogą wystąpić znane problemy podczas korzystania z sieci VPN dla aplikacji z programem F5 Access dla systemu Android 3.0.4. Aby uzyskać więcej informacji, zobacz [opublikowane przez firmę F5 informacje o wersji programu F5 Access dla systemu Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android).
+
+- **Tryb blokady**: wybierz pozycję **Włącz**, aby wymusić korzystanie z tunelu sieci VPN przez cały ruch sieciowy. Jeśli nie nawiązano połączenia z siecią VPN, urządzenie nie będzie mieć dostępu do sieci.
+
+  Wybierz pozycję **Nieskonfigurowane**, aby zezwolić ruchowi na przepływ przez tunel VPN lub sieć komórkową.
 
 ## <a name="work-profile-only"></a>Tylko profil służbowy 
 

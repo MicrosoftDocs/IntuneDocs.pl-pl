@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 1/17/2018
+ms.date: 1/10/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 305799fa21ae7c3464caf8f7019dcf9e8170d3ac
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 32281ae37b7b36dfbf49503275a8a1e6c35d8f6d
+ms.sourcegitcommit: 513c59a23ca5dfa80a3ba6fc84068503a4158757
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181483"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54210792"
 ---
 # <a name="common-issues-and-resolutions-with-device-profiles-in-microsoft-intune"></a>Typowe problemy dotyczące profilów urządzeń w usłudze Microsoft Intune i sposoby ich rozwiązania
 
@@ -72,11 +72,11 @@ Inne zmiany, takie jak zmiana informacji kontaktowych w Portalu firmy, nie powod
 ## <a name="if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-gets-applied"></a>Jeśli do tego samego użytkownika lub urządzenia przypisano wiele zasad, jak mogę zidentyfikować ustawienia do zastosowania?
 Jeśli co najmniej dwie zasady są przypisane do tego samego użytkownika lub urządzenia, ocena ustawień do zastosowania odbywa się na poziomie indywidualnego ustawienia:
 
--   Ustawienia zasad zgodności mają zawsze pierwszeństwo przed ustawieniami zasad konfiguracji
+- Ustawienia zasad zgodności mają zawsze pierwszeństwo przed ustawieniami zasad konfiguracji
 
--   Jeśli ocena zasad zgodności dotyczy tego samego ustawienia w innych zasadach zgodności, zostanie zastosowane najbardziej restrykcyjne ustawienie zasad zgodności.
+- Jeśli ocena zasad zgodności dotyczy tego samego ustawienia w innych zasadach zgodności, zostanie zastosowane najbardziej restrykcyjne ustawienie zasad zgodności.
 
--   Jeśli ustawienie zasad konfiguracji powoduje konflikt z ustawieniem w innych zasadach konfiguracji, ten konflikt jest wyświetlany w witrynie Azure Portal. W tym scenariuszu należy ręcznie rozwiązać te konflikty.
+- Jeśli ustawienie zasad konfiguracji powoduje konflikt z ustawieniem w innych zasadach konfiguracji, ten konflikt jest wyświetlany w witrynie Azure Portal. W tym scenariuszu należy ręcznie rozwiązać te konflikty.
 
 ## <a name="what-happens-when-app-protection-policies-conflict-with-each-other-which-one-is-applied-to-the-app"></a>Co się dzieje, gdy zasady ochrony aplikacji powodują konflikt? Które z nich są stosowane w aplikacji?
 Wartości powodujące konflikt to najbardziej restrykcyjne ustawienia dostępne w zasadach ochrony aplikacji, z wyjątkiem pól wprowadzania liczb (na przykład liczby prób wpisania numeru PIN przed zresetowaniem). Pola wprowadzania liczb są ustawiane na wartości, który zostałyby użyte w przypadku utworzenia zasad zarządzania aplikacjami mobilnymi w konsoli przy użyciu opcji zalecanych ustawień.
@@ -95,38 +95,41 @@ Usunięcie profilu lub usunięcie urządzenia z grupy zawierającej profil powod
 
 - Profile sieci Wi-Fi, sieci VPN, certyfikatu i poczty e-mail: te profile są usuwane ze wszystkich obsługiwanych zarejestrowanych urządzeń.
 - Wszystkie pozostałe typy profilów:  
-    - **Urządzenia z systemami Windows i Android**: ustawienia nie są usuwane z urządzenia
-    - **Urządzenia z systemem Windows Phone 8.1**: następujące ustawienia są usuwane:  
-        - Wymagaj hasła do odblokowania urządzeń przenośnych
-        - Zezwalaj na proste hasła
-        - Minimalna długość hasła
-        - Wymagany typ hasła
-        - Wygaśnięcie hasła w dniach
-        - Pamiętaj historię haseł
-        - Liczba dopuszczalnych nieudanych logowań przed wyczyszczeniem danych z urządzenia
-        - Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła
-        - Wymagany typ hasła — minimalna liczba zestawów znaków
-        - Zezwalaj na używanie aparatu
-        - Wymagaj szyfrowania na urządzeniu przenośnym
-        - Zezwalaj na używanie magazynu wymiennego
-        - Zezwalaj na używanie przeglądarki sieci Web
-        - Zezwalaj na korzystanie ze sklepu z aplikacjami
-        - Zezwalaj na przechwytywanie ekranu
-        - Zezwalaj na używanie funkcji geolokalizacji
-        - Zezwalaj na konto Microsoft
-        - Zezwalaj na kopiowanie i wklejanie
-        - Zezwalaj na tethering Wi-Fi
-        - Zezwalaj na automatyczne łączenie z bezpłatnymi punktami hotspot Wi-Fi
-        - Zezwalaj na raportowanie informacji o punktach hotspot Wi-Fi
-        - Zezwalaj na czyszczenie
-        - Zezwalaj na połączenia Bluetooth
-        - Zezwalaj na komunikację NFC
-        - Zezwalaj na połączenia Wi-Fi
 
-    - **iOS**: wszystkie ustawienia są usuwane, z wyjątkiem:
-        - Zezwalaj na roaming połączeń głosowych
-        - Zezwalaj na roaming danych
-        - Zezwalaj na automatyczną synchronizację podczas roamingu
+  - **Urządzenia z systemami Windows i Android**: ustawienia nie są usuwane z urządzenia
+  - **Urządzenia z systemem Windows Phone 8.1**: Następujące ustawienia zostaną usunięte:  
+  
+    - Wymagaj hasła do odblokowania urządzeń przenośnych
+    - Zezwalaj na proste hasła
+    - Minimalna długość hasła
+    - Wymagany typ hasła
+    - Wygaśnięcie hasła w dniach
+    - Pamiętaj historię haseł
+    - Liczba dopuszczalnych nieudanych logowań przed wyczyszczeniem danych z urządzenia
+    - Czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła
+    - Wymagany typ hasła — minimalna liczba zestawów znaków
+    - Zezwalaj na używanie aparatu
+    - Wymagaj szyfrowania na urządzeniu przenośnym
+    - Zezwalaj na używanie magazynu wymiennego
+    - Zezwalaj na używanie przeglądarki sieci Web
+    - Zezwalaj na korzystanie ze sklepu z aplikacjami
+    - Zezwalaj na przechwytywanie ekranu
+    - Zezwalaj na używanie funkcji geolokalizacji
+    - Zezwalaj na konto Microsoft
+    - Zezwalaj na kopiowanie i wklejanie
+    - Zezwalaj na tethering Wi-Fi
+    - Zezwalaj na automatyczne łączenie z bezpłatnymi punktami hotspot Wi-Fi
+    - Zezwalaj na raportowanie informacji o punktach hotspot Wi-Fi
+    - Zezwalaj na czyszczenie
+    - Zezwalaj na połączenia Bluetooth
+    - Zezwalaj na komunikację NFC
+    - Zezwalaj na połączenia Wi-Fi
+
+  - **iOS**: wszystkie ustawienia są usuwane, z wyjątkiem:
+  
+    - Zezwalaj na roaming połączeń głosowych
+    - Zezwalaj na roaming danych
+    - Zezwalaj na automatyczną synchronizację podczas roamingu
 
 ## <a name="i-changed-a-device-restriction-profile-but-the-changes-havent-taken-effect"></a>Profil ograniczeń urządzenia został zmieniony, ale zmiany nie zostały zastosowane
 Urządzenia z systemem Windows Phone nie zezwalają na obniżenie bezpieczeństwa zasad zabezpieczeń ustawionych wcześniej przy użyciu usługi MDM lub EAS. Na przykład po ustawieniu dla zasady **Minimalna liczba znaków hasła** wartości 8 nastąpiła próba jej zmniejszenia do 4. Bardziej restrykcyjny profil został już zastosowany do urządzenia.
@@ -134,6 +137,14 @@ Urządzenia z systemem Windows Phone nie zezwalają na obniżenie bezpieczeństw
 Zmiana wartości na obniżającą poziom zabezpieczeń profilu będzie wiązać się ze zresetowaniem zasad zabezpieczeń. Na przykład w systemie Windows 8.1 na pulpicie szybko przesuń palcem od prawej strony i wybierz pozycję **Ustawienia** > **Panel sterowania**. Wybierz aplet **Konta użytkowników** . W menu nawigacji po lewej stronie (u dołu ekranu) znajduje się link **Resetuj zasady zabezpieczeń**. Wybierz go, a następnie wybierz opcję **Resetuj zasady**.
 
 W przypadku innych urządzeń MDM, takich jak urządzenia z systemem Android, Windows Phone 8.1 lub nowszym, iOS oraz Windows 10, zastosowanie mniej restrykcyjnego profilu może wymagać wycofania i ponownego zarejestrowania urządzenia w usłudze.
+
+## <a name="some-settings-in-a-windows-10-profile-return-not-applicable"></a>Niektóre ustawienia w profilu systemu Windows 10 zwracają komunikat „Nie dotyczy”
+Niektóre ustawienia na urządzeniach z systemem Windows 10 mogą być wyświetlane jako „Nie dotyczy”. Oznacza to, że to konkretne ustawienie nie jest obsługiwane w wersji lub wydaniu systemu Windows uruchomionym na urządzeniu. Ten komunikat może być wyświetlany z następujących powodów:
+
+- Ustawienie jest dostępne tylko dla nowszych wersji systemu Windows, a nie dla bieżącej wersji systemu operacyjnego urządzenia.
+- Ustawienie jest dostępne tylko dla konkretnych wersji systemu Windows lub jednostek SKU, na przykład Home, Professional, Enterprise lub Education.
+
+Aby dowiedzieć się więcej na temat wymagań dotyczących ustawień dla konkretnych wersji lub jednostek SKU, zobacz [Configuration Service Provider (CSP) reference](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) (Dokumentacja dostawcy usług konfiguracji — CSP).
 
 ## <a name="next-steps"></a>Następne kroki
 Potrzebujesz dodatkowej pomocy? Zobacz [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](get-support.md).

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/11/2018
+ms.date: 01/10/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 893e20652af68ec7f33c733376252a937f9584dc
-ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
+ms.openlocfilehash: f587fdf7c1690dbb0a31388a9c70b780179e541e
+ms.sourcegitcommit: 513c59a23ca5dfa80a3ba6fc84068503a4158757
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53642884"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54210877"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Pobieranie danych z interfejsu API magazynu danych usługi Intune za pomocą klienta REST
 
@@ -47,7 +47,7 @@ Utwórz aplikację natywną na platformie Azure. Ta aplikacja natywna jest aplik
     3.  Wpisz adres URL w polu **Adres URL logowania**. Adres URL logowania zależy od konkretnego scenariusza, jeśli jednak zamierzasz korzystać z narzędzia Postman, wpisz `https://www.getpostman.com/oauth2/callback`. Podczas uwierzytelniania w usłudze Azure AD w kroku uwierzytelniania klienta użyj wywołania zwrotnego.
 4.  Wybierz przycisk **Utwórz**.
 
-     ![Interfejs API magazynu danych usługi Intune](./media/reports-get_rest_data_client_overview.png)
+     ![Aplikacja kliencka magazynu danych usługi Intune](./media/reports-get_rest_data_client_overview.png)
 
 5. Zanotuj wartość z pola **Identyfikator aplikacji** dla tej aplikacji. Identyfikatora użyjesz w następnej sekcji.
 
@@ -134,7 +134,7 @@ Aby uzyskać nowy token dostępu dla narzędzia Postman, należy dodać adres UR
 
 12. Wybierz pozycję **Request Token** (Zażądaj tokenu).
 
-    ![Informacje dla tokenu](./media/reports-postman_getnewtoken.png)
+    ![Informacje dla tokenu dostępu](./media/reports-postman_getnewtoken.png)
 
 13. Wpisz swoje poświadczenia na stronie autoryzacji usługi Azure AD. Lista tokenów w narzędziu Postman zawiera teraz token o nazwie `Bearer`.
 14. Wybierz pozycję **Use token** (Użyj tokenu). Lista nagłówków zawiera nową wartość klucza autoryzacji i wartość `Bearer <your-authorization-token>`.
@@ -144,7 +144,7 @@ Aby uzyskać nowy token dostępu dla narzędzia Postman, należy dodać adres UR
 1.  Wybierz pozycję **Send** (Wyślij).
 2.  Dane zwrotne zostaną wyświetlone w treści odpowiedzi narzędzia Postman.
 
-    ![Postman 200OK](./media/reports-postman_200OK.png)
+    ![Stan klienta Postman to 200 OK](./media/reports-postman_200OK.png)
 
 ## <a name="create-a-rest-client-c-to-get-data-from-the-intune-data-warehouse"></a>Tworzenie klienta REST (C#) do pobierania danych z magazynu danych usługi Intune
 
@@ -161,7 +161,7 @@ Następujący przykład zawiera prostego klienta REST. W kodzie użyto klasy **h
 6. Wybierz pozycję **Akceptuję**, aby zaakceptować licencję pakietu NuGet.
 7. Otwórz plik `Program.cs` z poziomu Eksploratora rozwiązań.
 
-    ![Projekt w programie Visual Studio](./media/reports-get_rest_data_in.png)
+    ![Plik Program.cs i Eksplorator rozwiązań w programie Visual Studio](./media/reports-get_rest_data_in.png)
 
 8. Zastąp kod w pliku Program.cs następującym kodem:  
    ```csharp

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 12/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
-ms.openlocfilehash: 062adf12f743fdbbe42c1f29e91f2a16414ca457
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.openlocfilehash: 721d3a26e25c14a2e4ccd20b179ae7d4611d3186
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53032269"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203386"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Zarządzanie urządzeniami z systemem Windows Holographic i urządzeniami HoloLens oraz korzystanie z różnych funkcji zarządzania urządzeniami przy użyciu usługi Intune
 
@@ -123,6 +123,11 @@ Wirtualne sieci prywatne (VPN) zapewniają użytkownikom bezpieczny dostęp zdal
 #### <a name="configure-wi-fiwi-fi-settings-configuremd"></a>[Konfigurowanie sieci Wi-Fi](wi-fi-settings-configure.md)
 
 Możesz też utworzyć profil sieci Wi-Fi w usłudze Intune, aby przypisać ustawienia sieci bezprzewodowej do urządzeń z systemem Windows Holographic for Business. Jeśli przypiszesz profil sieci Wi-Fi, użytkownicy końcowi otrzymają dostęp do sieci firmowej bez żadnej konfiguracji sieci. Na przykład możesz utworzyć sieć Wi-Fi przeznaczoną wyłącznie dla urządzeń z systemem Windows Holographic for Business.
+
+## <a name="shared-multi-user-devices"></a>Urządzenia udostępnione używane przez wielu użytkowników
+[Urządzenia udostępnione](shared-user-device-settings-windows-holographic.md)
+
+Urządzenia z systemem Windows Holographic for Business, takie jak Microsoft HoloLens, mogą mieć wielu użytkowników. Usługa Intune obejmuje ustawienia do kontrolowania różnych funkcji tych urządzeń udostępnionych, takich jak zarządzanie zasilaniem, użycie magazynu lokalnego i zarządzanie kontami. Profile konfiguracji można również zastosować do urządzeń z różnymi systemami operacyjnymi. Na przykład jedna grupa urządzeń może zawierać urządzenia z systemami RS2 i RS3.
 
 ## <a name="software-updates"></a>Aktualizacje oprogramowania
 **[Zarządzanie aktualizacjami oprogramowania](windows-update-for-business-configure.md)**

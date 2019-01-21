@@ -16,12 +16,12 @@ ms.reviewer: owenyen
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
-ms.openlocfilehash: 81f84c2e645a9a6a20ff901239117b562a26b0aa
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 9d6c894e30b050ec6e824e1e77d0c476d4dc15bc
+ms.sourcegitcommit: 2ff19c09a43c63556d082966727674120b516d10
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186651"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149631"
 ---
 # <a name="manage-user-device-linking-for-windows-pcs"></a>Zarządzanie łączeniem użytkownik-urządzenie dla komputerów z systemem Windows
 
@@ -43,13 +43,13 @@ Aby połączyć użytkownika z komputerem:
 
    - Aby pozostawić komputer połączony z bieżącym użytkownikiem (jeśli istnieje), wybierz pozycję **Anuluj**.
 
-   - Aby usunąć połączenie z bieżącym użytkownikiem (jeśli istnieje), wybierz pozycję <strong>Usuń połączenie **&gt; **OK</strong>.
+   - Aby usunąć połączenie z bieżącym użytkownikiem (jeśli istnieje), wybierz pozycję <strong>Usuń połączenie **&gt;** OK</strong>.
 
    - Aby połączyć komputer z nowym użytkownikiem, wybierz użytkownika na liście **Wszyscy użytkownicy**. Potwierdź, że dane użytkownika są prawidłowe, a następnie wybierz pozycję **OK**.
 
 > [!TIP]
 > Jeśli chcesz ograniczyć użytkownikom końcowym możliwość łączenia z komputerami, włącz opcję **Ogranicz użytkownikowi możliwość łączenia z komputerami** w zasadach **Ustawienia agenta usługi Microsoft Intune**.
 
-### <a name="see-also"></a>Zobacz też
+### <a name="see-also"></a>Zobacz także
 
 [Typowe zadania związane z zarządzaniem komputerem z systemem Windows za pomocą klienta oprogramowania usługi Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)

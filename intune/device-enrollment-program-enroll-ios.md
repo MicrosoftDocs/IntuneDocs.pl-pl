@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 1af474063ec7b6ccac2a36afbec421767f79444a
-ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
+ms.openlocfilehash: afddf57f93ef2308ce8e8fd8aab8d74c3419a3ea
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53642850"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203420"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Automatyczne rejestrowanie urządzeń z systemem iOS w ramach programu Device Enrollment Program
 
@@ -192,7 +192,15 @@ Teraz, po zainstalowaniu tokenu, możesz utworzyć profil rejestracji dla urząd
     | <strong>Powiększenie</strong> | Oferować użytkownikowi opcję powiększania ekranu podczas konfigurowania urządzenia. |
     | <strong>Siri</strong> | Oferować użytkownikowi opcję konfigurowania programu Siri. |
     | <strong>Dane diagnostyczne</strong> | Wyświetlać ekran **Diagnostyka** dla użytkownika. Na tym ekranie użytkownik może wybrać opcję wysyłania danych diagnostycznych do firmy Apple. |
-
+    | <strong>Wyświetlanie sygnału</strong> | Umożliwiać użytkownikowi włączenie funkcji wyświetlania sygnału. |
+    | <strong>Ochrona prywatności</strong> | Wyświetlać użytkownikowi ekran ochrony prywatności. |
+    | <strong>Migracja systemu Android</strong> | Umożliwiać użytkownikowi migrację danych z urządzenia z systemem Android. |
+    | <strong>iMessage i FaceTime</strong> | Umożliwiać użytkownikowi skonfigurowanie aplikacji iMessage i FaceTime. |
+    | <strong>Dołączanie</strong> | Wyświetlać ekrany informacyjne dotyczące dołączania na potrzeby edukacji użytkowników, takie jak Arkusz okładki, Wybór aplikacji i Centrum sterowania. |
+    | <strong>Migracja urządzenia Watch</strong> | Umożliwiać użytkownikowi migrowanie danych z urządzenia Watch. |
+    | <strong>Czas przed ekranem</strong> | Wyświetlać ekran Czas przed ekranem. |
+    | <strong>Aktualizacja oprogramowania</strong> | Wyświetlać ekranu obowiązkowych aktualizacji oprogramowania. |
+    | <strong>Instalator SIM</strong> | Umożliwiać użytkownikowi dodawanie planu sieci komórkowej. |
 
 14. Wybierz przycisk **OK**.
 

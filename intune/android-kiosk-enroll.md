@@ -16,12 +16,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 76a16df06c085eb3b40a3a48d4398a46233a09b8
-ms.sourcegitcommit: 9a1924ba2372904eb4a8a1894973e6f2be84129d
+ms.openlocfilehash: 5a84bcd820b7596d1b1df01342604562c7853140
+ms.sourcegitcommit: a44359b426e19b8bf4b99eca6af2755c6d3c6fb8
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626088"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54098321"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-kiosk-devices"></a>Konfigurowanie rejestracji urządzeń kiosku z rozwiązaniem Android enterprise w usłudze Intune
 
@@ -112,7 +112,7 @@ W przypadku urządzeń z systemem Android 5.1 lub nowszym obsługujących komuni
 
 ### <a name="enroll-by-using-a-token"></a>Rejestracja przy użyciu tokenu
 
-W przypadku urządzeń z systemem Android 6 lub nowszym można użyć tokenu do zarejestrowania urządzenia. System Android 6.1 i jego nowsze wersje mogą również używać skanowania kodu QR w przypadku korzystania z metody rejestracji **aft#setup**.
+W przypadku urządzeń z systemem Android 6 lub nowszym można użyć tokenu do zarejestrowania urządzenia. System Android 6.1 i jego nowsze wersje mogą również używać skanowania kodu QR w przypadku korzystania z metody rejestracji **afw#setup**.
 
 1. Włącz wyczyszczone urządzenie.
 2. Na ekranie **powitalnym** wybierz swój język.

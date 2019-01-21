@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/10/2018
+ms.date: 01/10/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: a84683531481410d54f527ddd35400dcfe504fc5
-ms.sourcegitcommit: 6058c611d5a54076121af1d327a43ad861a43f8a
+ms.openlocfilehash: 0cc94da03e1288de519d08acadbf3374bb76fcd7
+ms.sourcegitcommit: 513c59a23ca5dfa80a3ba6fc84068503a4158757
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53996035"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54210911"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co nowego w usłudze Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -42,6 +42,131 @@ Dowiedz się co tydzień, co nowego w usłudze Microsoft Intune. Możesz równie
 ### Role-based access control
 
 -->     
+
+
+## <a name="week-of-january-7-2019"></a>Tydzień od 7 stycznia 2019 r.
+
+### <a name="app-management"></a>Zarządzanie aplikacjami
+
+#### <a name="intune-app-pin----2298397---"></a>Numer PIN aplikacji usługi Intune <!-- 2298397 -->
+Jako administrator IT masz teraz możliwość skonfigurowania, ile dni użytkownik końcowy może czekać, aż będzie musiał zmienić numer PIN aplikacji usługi Intune. Nowe ustawienie, czyli *resetowanie numeru PIN po określonej liczbie dni*, jest dostępne w witrynie Azure Portal w obszarze **Intune** > **Aplikacje klienckie** > **Zasady ochrony aplikacji** > **Utwórz zasady** > **Ustawienia** > **Wymagania dotyczące dostępu**. Ta funkcja jest dostępne dla urządzeń z systemami [iOS](app-protection-policy-settings-ios.md) i [Android](app-protection-policy-settings-android.md) i obsługuje dodatnie liczby całkowite.
+
+
+#### <a name="intune-device-reporting-fields----2748738---"></a>Pola raportów dotyczących urządzeń w usłudze Intune <!-- 2748738 -->
+Usługa Intune udostępnia dodatkowe pola raportów dotyczących urządzeń, takie jak na przykład identyfikator rejestracji aplikacji, producent systemu Android, model i wersja poprawki zabezpieczeń, a także model urządzenia z systemem iOS. W usłudze Intune te pola są dostępne po wybraniu opcji **Aplikacje klienckie** > **Stan ochrony aplikacji** i wybraniu pozycji **Raport ochrony aplikacji: iOS, Android**. Ponadto te parametry będą pomocne w przypadku konfigurowania listy **dozwolonych** dla producenta urządzenia (Android), listy **dozwolonych** dla modelu urządzenia (Android i iOS) oraz ustawienia minimalnej wersji poprawki zabezpieczeń systemu Android. 
+
+
+### <a name="device-configuration"></a>Konfiguracja urządzenia
+
+#### <a name="administrative-templates-are-in-public-preview-and-moved-to-their-own-configuration-profile----3322847---"></a>Szablony administracyjne są dostępne w publicznej wersji zapoznawczej i zostały przeniesione do własnego profilu konfiguracji <!-- 3322847 -->
+
+Szablony administracyjne w usłudze Intune (**Konfiguracja urządzenia** > **Szablony administracyjne**) są obecnie dostępne w prywatnej wersji zapoznawczej. Dzięki tej aktualizacji
+
+- Szablony administracyjne obejmują około 300 ustawień, którymi można zarządzać w usłudze Intune. Wcześniej ustawienia te istniały tylko w edytorze zasad grupy.
+- Szablony administracyjne są dostępne w publicznej wersji zapoznawczej.
+- Szablony administracyjne są przenoszone z obszaru **Konfiguracja urządzenia** > **Szablony administracyjne** do obszaru **Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > w polu **Platforma** wybierz pozycję  **Windows 10 i nowsze** > w polu **Typ profilu** wybierz pozycję **Szablony administracyjne**.
+- Funkcja Raportowanie jest włączona
+
+Aby dowiedzieć się więcej na temat tej funkcji, zobacz [szablony systemu Windows 10 służące do konfigurowania ustawień zasad grupy](administrative-templates-windows.md).
+
+Dotyczy: System Windows 10 lub nowszy
+
+#### <a name="use-smime-to-encrypt-and-sign-multiple-devices-for-a-user-----1333642---"></a>Używanie protokołu S/MIME do szyfrowania i rejestrowania wielu urządzeń użytkownika <!-- 1333642 -->
+Ta aktualizacja obejmuje szyfrowanie poczty e-mail za pomocą protokołu S/MIME z użyciem profilu nowo zaimportowanego certyfikatu (**Konfiguracja urządzenia** > **Profil** > **Utwórz profil** > wybierz platformę > typ profilu **Zaimportowany certyfikat PKCS**). W usłudze Intune można importować certyfikaty w formacie PFX. Usługa Intune może następnie dostarczać te same certyfikaty do wielu urządzeń zarejestrowanych przez jednego użytkownika. Obejmuje to również:
+- Profil natywnej poczty e-mail systemu iOS obsługuje włączanie szyfrowania S/MIME przy użyciu importowanych certyfikatów w formacie PFX.
+- Natywna aplikacja poczty na urządzeniach z systemem Windows Phone 10 automatycznie używa certyfikatu szyfrowania S/MIME.
+- Certyfikaty prywatne mogą być dostarczane na wielu platformach. Jednak nie wszystkie aplikacje poczty e-mail obsługują szyfrowanie S/MIME.
+- Na innych platformach może być konieczne ręczne skonfigurowanie aplikacji poczty, aby włączyć szyfrowanie S/MIME.  
+- Aplikacje poczty e-mail, które obsługuje szyfrowanie S/MIME może obsługiwać pobieranie certyfikatów dla protokołu S/MIME szyfrowania wiadomości e-mail w sposób, który nie obsługuje zarządzania urządzeniami Przenośnymi, takie jak odczytywanie ich z magazynu certyfikatów ich wydawcy.
+Aby uzyskać więcej informacji na temat tej funkcji, zapoznaj się z [omówieniem protokołu S/MIME do podpisywania i szyfrowania wiadomości e-mail](certificates-s-mime-encryption-sign.md).
+Obsługiwane na: Windows, Windows Phone 10, macOS, iOS, Android
+
+#### <a name="new-options-to-automatically-connect-and-persist-rules-when-using-dns-settings-on-windows-10-and-later-devices----1333665-2999078---"></a>Nowe opcje automatycznego łączenia i utrzymywania reguł w przypadku korzystania z ustawień systemu DNS w systemie Windows 10 lub nowszym <!-- 1333665, 2999078 -->
+Na urządzeniach z systemem Windows 10 lub nowszym możesz utworzyć profil konfiguracji sieci VPN z listą serwerów DNS, która pozwala na rozpoznawanie domen, np. contoso.com. Ta aktualizacja obejmuje nowe ustawienia funkcji rozpoznawania nazw (**Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > wybierz platformę **Windows 10 i nowsze** > wybierz typ profilu **VPN** > **Ustawienia DNS** >**Dodaj**): 
+- **Połącz automatycznie**: po wybraniu pozycji **Włączone** urządzenie automatycznie łączy się z siecią VPN po nawiązaniu kontaktu z wprowadzoną domeną, np. contoso.com.
+- **Trwałe**: domyślnie wszystkie reguły tabeli zasad rozpoznawania nazw (NRPT) są aktywne reguły tak długo, jak długo urządzenie jest połączone za pomocą tego profilu sieci VPN. Gdy to ustawienie jest **włączone** dla reguły tabeli NRPT, reguła pozostanie aktywna na urządzeniu, nawet wtedy gdy połączenie sieci VPN zostanie rozłączone. Reguła pozostaje aktywna do momentu usunięcia profilu sieci VPN lub ręcznego usunięcia reguły, co można wykonać w programie PowerShell.
+W temacie [Ustawienia sieci VPN systemu Windows 10](vpn-settings-windows-10.md) opisano te ustawienia. 
+
+#### <a name="use-trusted-network-detection-for-vpn-profiles-on-windows-10-devices----1500165---"></a>Korzystanie z wykrywania zaufanych sieci na użytek profilów sieci VPN na urządzeniach z systemem Windows 10 <!-- 1500165 -->
+W przypadku korzystania z wykrywania zaufanych sieci możesz wyłączyć automatyczne tworzenie połączenia sieci VPN w profilach sieci VPN, gdy użytkownik będzie już w zaufanej sieci. Dzięki tej aktualizacji masz możliwość dodawania sufiksów DNS w celu włączenia wykrywania zaufanych sieci na urządzeniach z systemem Windows 10 i nowszych (**Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **Windows 10 i nowsze** jako platforma > **VPN** jako typ profilu).
+Aktualną listę ustawień sieci VPN można znaleźć w temacie [Windows 10 VPN settings](vpn-settings-windows-10.md) (Ustawienia sieci VPN w systemie Windows 10).
+
+#### <a name="manage-windows-holographic-for-business-devices-used-by-multiple-users----1907917-1063203---"></a>Zarządzanie urządzeniami z systemem Windows Holographic for Business używanymi przez wielu użytkowników <!-- 1907917, 1063203 -->
+Obecnie można konfigurować ustawienia komputera udostępnionego na urządzeniach z systemem Windows 10 i Windows Holographic for Business przy użyciu niestandardowego ustawienia OMA-URI. W ramach tej aktualizacji dodawany jest nowy profil służący do konfigurowania ustawień komputera udostępnionego (**Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **Windows 10 i nowsze** > **Urządzenie udostępnione wielu użytkownikom**).
+Aby dowiedzieć się więcej na temat tej funkcji, zobacz [ustawienia usługi Intune do zarządzania urządzeniami udostępnionymi](shared-user-device-settings.md).
+Dotyczy: system Windows 10 lub nowsze oraz system Windows Holographic for Business
+
+#### <a name="new-windows-10-update-settings---2626030--2512994----"></a>Nowe ustawienia aktualizacji systemu Windows 10 <!--2626030  2512994  -->
+W przypadku [pierścieni aktualizacji systemu Windows 10](windows-update-for-business-configure.md) możesz skonfigurować:
+- **Zachowanie automatycznych aktualizacji**: użyj nowej opcji *Resetuj do domyślnych* w celu przywrócenia oryginalnych ustawień automatycznych aktualizacji na maszynie z systemem Windows 10 z *aktualizacją z października 2018 r.*
+- **Blokowanie wstrzymywania aktualizacji systemu Windows przez użytkownika**: skonfiguruj nowe ustawienie aktualizacji oprogramowania, które umożliwia zezwalanie użytkownikom na wstrzymywanie instalacji aktualizacji lub blokowanie tej możliwości w obszarze *Ustawienia* ich komputerów. 
+
+#### <a name="ios-email-profiles-can-use-smime-signing-and-encryption----2662949---"></a>Profile poczty e-mail w systemie iOS mogą używać szyfrowania i podpisywania protokołu S/MIME <!-- 2662949 -->
+Masz możliwość tworzenia profilu poczty e-mail z różnymi ustawieniami. Ta aktualizacja obejmuje między innymi ustawienia protokołu S/MIME, których można używać do podpisywania i szyfrowania wiadomości e-mail na urządzeniach z systemem iOS (**Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > wybierz platformę **iOS** > wybierz typ profilu **E-mail**).
+Lista ustawień znajduje się w obszarze [ustawień konfiguracji poczty e-mail systemu iOS](email-settings-ios.md).
+
+#### <a name="some-bitlocker-settings-support-windows-10-pro-edition---2727036---"></a>Niektóre ustawienia funkcji BitLocker obsługują wersję systemu Windows 10 Pro<!-- 2727036 -->
+Możesz utworzyć profil konfiguracji, który definiuje ustawienia programu Endpoint Protection na urządzeniach z systemem Windows 10, w tym ustawienia funkcji BitLocker. W tej aktualizacji dodano obsługę systemu Windows 10 Professional dla niektórych ustawień funkcji BitLocker. Aby wyświetlić te ustawienia ochrony, zobacz [Ustawienia programu Endpoint Protection dla systemu Windows 10](endpoint-protection-windows-10.md#windows-encryption).
+
+#### <a name="shared-device-configuration-is-renamed-to-lock-screen-message-for-ios-devices-in-the-azure-portal---2809362---"></a>Nazwa konfiguracji urządzenia udostępnionego została zmieniona na Komunikat ekranu blokady dla urządzeń z systemem iOS w witrynie Azure Portal<!-- 2809362 -->
+W przypadku tworzenia profilu konfiguracji dla urządzeń z systemem iOS możesz dodać ustawienia obszaru **Konfiguracja urządzenia udostępnianego** w celu wyświetlania określonego tekstu na ekranie blokady. Ta aktualizacja obejmuje następujące zmiany: 
+- Ustawienia **Konfiguracja urządzenia udostępnianego** w witrynie Azure Portal są zmieniane na „Komunikat ekranu blokady (tylko tryb nadzorowany)” (**Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > wybierz platformę **iOS** > wybierz typ profilu **Funkcje urządzenia** > **Komunikat ekranu blokady**).
+- Podczas dodawania wiadomości ekranu blokady można wstawić numer seryjny, nazwę urządzenia lub inną wartość specyficzną dla urządzenia w obszarze **Informacje dotyczące tagu zasobu** i **Przypis dolny ekranu blokady**. Na przykład można wprowadzić wartości `Device name: {{devicename}}` lub `Serial number is {{serialnumber}}`, używając nawiasów klamrowych. Listę dostępnych tokenów do użycia można znaleźć w sekcje [iOS tokens](app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) (Tokeny systemu iOS).
+Listę ustawień można znaleźć w temacie dotyczącym [ustawień wyświetlania komunikatów na ekranie blokady](shared-device-settings-ios.md).
+
+#### <a name="new-app-store-doc-viewing-gaming-device-restriction-settings-added-to-ios-devices----2827760--"></a>Do urządzeń z systemem iOS dodano nowe ustawienia ograniczeń urządzenia obejmujące sklep App Store, wyświetlanie dokumentów i gry <!-- 2827760-->
+W obszarze **Konfiguracja urządzenia** > **Profile** > **Utwórz profil** >  **iOS** dla platformy > **Ograniczenia dotyczące urządzeń** dla typu profilu > **App Store, wyświetlanie dokumentów, gry** dodano następujące ustawienia: Zezwalanie aplikacjom zarządzanym na zapisywanie kontaktów na kontach niezarządzanych kontaktów (tylko w trybie nadzorowanym) Zezwalanie niezarządzanym aplikacjom na odczytywanie z kont kontaktów zarządzanych (tylko w trybie nadzorowanym) Aby wyświetlić te ustawienia, zobacz [ograniczenia urządzeń z systemem iOS](device-restrictions-ios.md#app-store-doc-viewing-gaming).
+
+#### <a name="new-notification-hints-and-keyguard-settings-to-android-enterprise-device-owner-devices----3201839-3201843---"></a>Nowe ustawienia powiadomień, wskazówek i funkcji blokowania klawiatury na urządzeniach właściciela urządzenia z systemem Android Enterprise<!-- 3201839 3201843 -->
+Ta aktualizacja obejmuje kilka nowych funkcji dotyczących urządzeń z systemem Android Enterprise uruchamianych jako właściciel urządzenia. Aby korzystać z tych funkcji, przejdź do pozycji **Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > w polu **Platforma** wybierz wartość **Android Enterprise** > w polu **Typ profilu** wybierz wartość **Tylko właściciel urządzenia** > **Ograniczenia urządzenia**.
+Nowe funkcje obejmują: 
+- Wyłączanie wyświetlania powiadomień systemowych, w tym połączeń przychodzących, alertów systemowych, błędy systemu i innych
+- Sugerowanie pomijania samouczków i wskazówek dotyczących aplikacji otwieranych po raz pierwszy
+- Wyłączanie zaawansowanych ustawień funkcji blokady klawiatury, takich jak aparat, powiadomienia, odblokowywanie odciskiem palca i inne Aby wyświetlić te ustawienia, zobacz [ustawienia ograniczeń urządzeń z systemem Android Enterprise](device-restrictions-android-for-work.md).
+
+#### <a name="android-enterprise-device-owner-devices-can-use-always-on-vpn-connections----3202194---"></a>Urządzenia właściciela urządzenia z systemem Android Enterprise mogą używać zawsze włączonych połączeń VPN <!-- 3202194 -->
+Dzięki tej aktualizacji będziesz mieć możliwość używania zawsze włączonych połączeń sieci VPN na urządzeniach właściciela urządzenia z systemem Android Enterprise. Zawsze włączone połączenia sieci VPN pozostają aktywne lub są natychmiast przywracane, gdy użytkownik odblokuje urządzenie, gdy urządzenie uruchomi się ponownie lub gdy zmieni się sieć bezprzewodowa. Połączenie można również przenieść do trybu „blokady”, który powoduje zablokowanie całego ruchu sieciowego do momentu uaktywnienia połączenia sieci VPN.
+Zawsze włączoną sieć VPN możesz włączyć za pomocą ustawień **Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **Android Enterprise** jako platforma > **Ograniczenia dotyczące urządzeń** dla opcji Tylko właściciel urządzenia > **Łączność**. Aby zapoznać się z tymi ustawieniami, zobacz [ustawienia ograniczeń urządzeń z systemem Android Enterprise](device-restrictions-android-for-work.md).
+
+#### <a name="new-setting-to-end-processes-in-task-manager-on-windows-10-devices----3285177---"></a>Nowe ustawienie służące do kończenia procesów w Menedżerze zadań na urządzeniach z systemem Windows 10 <!-- 3285177 --> 
+Ta aktualizacja obejmuje nowe ustawienie służące do kończenia procesów w Menedżerze zadań na urządzeniach z systemem Windows 10. Używając profilu konfiguracji urządzenia (ustawienia w obszarze **Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > w polu **Platforma** wybierz wartość **Windows 10** > w polu **Typ profilu** wybierz wartość **Ograniczenia dotyczące urządzeń** > **Ogólne**), możesz zezwolić na to ustawienie lub je zablokować.
+Aby zapoznać się z bieżącymi ustawieniami, zobacz [ustawienia ograniczeń urządzeń z systemem Windows 10](device-restrictions-windows-10.md).
+Dotyczy: System Windows 10 lub nowszy
+
+
+### <a name="device-enrollment"></a>Rejestrowanie urządzeń
+
+#### <a name="more-detailed-enrollment-restriction-failure-messaging----3111564---"></a>Bardziej szczegółowe komunikaty dotyczące błędów ograniczeń rejestracji <!-- 3111564 -->
+Bardziej szczegółowe komunikaty o błędach będą dostępne, gdy ograniczenia rejestracji nie zostaną spełnione. Aby wyświetlić te komunikaty, przejdź do obszaru **Intune** > **Rozwiązywanie problemów** i zapoznaj się z tabelą błędów rejestracji. Aby uzyskać więcej informacji, zobacz [listę błędów rejestracji](help-desk-operators.md#configuration-policies-reference).
+
+#### <a name="skip-more-setup-assistant-screens-on-an-ios-dep-device----2687509---"></a>Pomijanie większej liczby ekranów Asystenta ustawień na urządzeniu DEP z systemem iOS <!-- 2687509 -->
+Oprócz ekranów, które obecnie możesz pominąć, możesz skonfigurować urządzenia z systemem iOS objęte programem DEP tak, aby następujące ekrany Asystenta ustawień były pomijane podczas rejestracji urządzenia przez użytkownika: Ton wyświetlacza, Prywatność, Migracja systemu Android, Przycisk Strona główna, iMessage i FaceTime, Przechodzenie do usługi, Migracja urządzenia Watch, Wygląd, Czas korzystania z urządzenia, Aktualizacja oprogramowania, Instalator SIM.
+Aby wybrać ekrany do pominięcia, przejdź kolejno do pozycji **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Tokeny programu rejestracji** > wybierz token > **Profile** > wybierz profil > **Właściwości** > **Dostosowywanie Asystenta ustawień** > wybierz pozycję **Ukryj**  dla ekranów do pominięcia > **OK**.
+
+
+### <a name="monitor-and-troubleshoot"></a>Monitorowanie i rozwiązywanie problemów
+
+#### <a name="tenant-status-dashboard-----1124854---"></a>Pulpit nawigacyjny stanu dzierżawy <!-- 1124854 -->
+Nowa [strona stanu dzierżawy](tenant-status.md) to jedna lokalizacja, w której można wyświetlać stan i powiązane szczegóły dzierżawy.  Pulpit nawigacyjny jest podzielony na cztery obszary:
+- **Szczegóły dzierżawy**: zawiera informacje takie jak nazwa i lokalizacja dzierżawy, urząd zarządzania urządzeniami przenośnymi, łączna liczba zarejestrowanych urządzeń w Twojej dzierżawie i liczba licencji. Ta sekcja zawiera także bieżącą wersję usługi dla Twojej dzierżawy.
+- **Stan łącznika**: zawiera informacje na temat dostępnych skonfigurowanych łączników, może również zawierać te, które nie zostały jeszcze włączone.  
+   Na podstawie bieżącego stanu łączniki są oznaczane flagami Dobra kondycja, Ostrzeżenie lub Zła kondycja. Wybierz łącznik, aby przejść do szczegółów lub skonfigurować dla niego dodatkowe informacje.
+-  **Kondycja usługi Intune**: zawiera szczegółowe informacje dotyczące aktywnych zdarzeń lub awarii w dzierżawie. Informacje przedstawione w tej sekcji są pobierane bezpośrednio z Centrum wiadomości usługi Office.
+-  **Wiadomości w usłudze Intune**: zawiera aktywne wiadomości dla Twojej dzierżawy. Wiadomości obejmują takie elementy jak na przykład powiadomienia o tym, że dzierżawa otrzymała najnowsze funkcje usługi Intune.  Informacje przedstawione w tej sekcji są pobierane bezpośrednio z Centrum wiadomości usługi Office.
+
+#### <a name="new-help-and-support-experience-in-company-portal-for-windows-10----1488939--"></a>Nowe środowisko pomocy i obsługi technicznej w aplikacji Portal firmy w systemie Windows 10 <!-- 1488939-->
+Nowa strona pomocy i obsługi technicznej w aplikacji Portal firmy umożliwia użytkownikom rozwiązywanie problemów i zwracanie się o pomoc w zakresie aplikacji i problemów z dostępem. Na nowej stronie użytkownicy mogą wysłać wiadomość e-mail zawierającą szczegóły błędu oraz informacje z dziennika diagnostycznego, a także znaleźć kontakt do pomocy technicznej organizacji. Mają również dostęp do sekcji z często zadawanymi pytaniami i linkami do odpowiedniej dokumentacji usługi Intune. 
+
+#### <a name="new-help-and-support-experience-for-intune------3307080---"></a>Nowe środowisko pomocy i obsługi technicznej dla usługi Intune <!-- #3307080 -->
+W ciągu kilku najbliższych dni wprowadzimy nowe środowisko pomocy i obsługi technicznej dla wszystkich dzierżaw. Nowe środowisko jest dostępne dla usługi Intune i można uzyskać do niego dostęp, korzystając z bloków usługi Intune w witrynie [Azure Portal](https://portal.azure.com/).
+Nowe środowisko pozwala opisać problem własnymi słowami i uzyskać szczegóły dotyczące rozwiązywania problemu oraz zawartość internetową dotyczącą korygowania. Te rozwiązania są oferowane za pośrednictwem algorytmu uczenia maszynowego opartego na regułach i sterowanego przez zapytania użytkownika. Oprócz korzystania ze wskazówek specyficznych dla problemu możesz użyć nowego przepływu pracy tworzenia sprawy do otwarcia zgłoszenia do pomocy technicznej za pomocą poczty e-mail lub telefonu. To nowe środowisko zastępuje poprzednie środowisko Pomocy i obsługi technicznej w postaci statycznego zestawu wstępnie wybranych opcji określonych na podstawie obszaru konsoli aktywnego podczas otwierania środowiska Pomoc i obsługa techniczna. Aby uzyskać więcej informacji, zobacz [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](get-support.md).
+
+### <a name="role-based-access-control"></a>Kontrola dostępu oparta na rolach
+
+#### <a name="scope-tags-for-apps----1081941---"></a>Tagi zakresu dla aplikacji <!-- 1081941 -->
+Możesz tworzyć tagi zakresu w celu ograniczenia dostępu do ról i aplikacji. Możesz dodać tag zakresu do aplikacji, tak aby tylko osoby z rolą przypisaną do tego tagu zakresu miały dostęp do aplikacji. Aby uzyskać więcej informacji, zobacz [Używanie tagów zakresu do filtrowania zasad](scope-tags.md).
+
+
 
 ## <a name="week-of-december-10-2018"></a>Tydzień 10 grudnia 2018 r.
 
@@ -244,7 +369,7 @@ Usługa Azure Active Directory udostępnia funkcję warunków użytkowania, któ
 W przypadku rejestracji w rozwiązaniu Samsung Knox Mobile Enrollment usługa Intune obsługuje teraz rejestrowanie urządzeń w trybie zarządzania Właściciel urządzenia z systemem Android. Użytkownicy korzystający z sieci komórkowej lub Wi-Fi mogą za pomocą kilku naciśnięć zarejestrować urządzenie przy jego pierwszym włączeniu. Aby uzyskać więcej informacji, zobacz temat [Automatically enroll Android devices by using Samsung's Knox Mobile Enrollment](android-samsung-knox-mobile-enroll.md) (Automatyczne rejestrowanie urządzeń z systemem Android za pomocą rozwiązania Knox Mobile Enrollment firmy Samsung).
 
 ### <a name="device-management"></a>Zarządzanie urządzeniami
-#### <a name="new-settings-for-software-updates------1907869--wnready---"></a>Nowe ustawienia aktualizacji oprogramowania <!-- 1907869  wnready -->  
+#### <a name="new-settings-for-software-updates------1907869---"></a>Nowe ustawienia aktualizacji oprogramowania <!-- 1907869 -->  
 - Teraz można skonfigurować niektóre powiadomienia, aby wysyłać do użytkowników końcowych alerty dotyczące operacji ponownego uruchamiania, które są wymagane do zakończenia instalacji najnowszych aktualizacji oprogramowania.   
 - Teraz można skonfigurować monit ostrzegawczy dotyczący ponownych uruchomień, które odbywają się poza godzinami pracy. Ta opcja jest obsługiwana w przypadku scenariuszy BYOD.
 
@@ -281,7 +406,7 @@ Dla klientów objętych wdrożeniem to nowe środowisko zastępuje bieżące śr
 
 *Nowe środowisko Pomoc i obsługa techniczna jest wdrażane dla niektórych, lecz nie wszystkich, dzierżaw i jest dostępne w portalu Zarządzanie urządzeniami. Użytkownicy nowego środowiska zostali wybrani losowo z dostępnych dzierżaw usługi Intune. Nowe dzierżawy będą dodawane w miarę postępów wdrażania.*  
 
-Aby uzyskać więcej informacji, zobacz [Nowe środowisko Pomoc i obsługa techniczna](get-support.md#new-help-and-support-experience) na stronie Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune.  
+Aby uzyskać więcej informacji, zobacz [Środowisko Pomoc i obsługa techniczna](get-support.md#help-and-support-experience) na stronie Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune.  
 
 ### <a name="powershell-module-for-intune--preview-available----951068---"></a>Moduł programu PowerShell dla usługi Intune w wersji zapoznawczej dostępny<!-- 951068 -->
 Nowy moduł programu PowerShell, który zapewnia obsługę interfejsu API usługi Intune za pośrednictwem programu Microsoft Graph, jest teraz dostępny w wersji zapoznawczej w serwisie [GitHub]( https://aka.ms/intunepowershell). Aby uzyskać szczegółowe informacje na temat korzystania z tego modułu, zobacz plik README w tej lokalizacji. 

@@ -14,12 +14,12 @@ ms.assetid: a0b8e55e-c3d8-4599-be25-dc10c1027b62
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
-ms.openlocfilehash: 753ad125e541936586f2939985a23ed3b06ea7ea
-ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
+ms.openlocfilehash: a762f14fd93400d76c63d2108a41229bf2ffc34d
+ms.sourcegitcommit: c84e1845b854704c4b048832e365dd381c7f3754
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53817164"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54122591"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Jakie są typowe sposoby korzystania z dostępu warunkowego przy użyciu usługi Intune?
 
@@ -39,15 +39,14 @@ Usługi Intune i Azure Active Directory działają razem w celu zapewnienia, że
 Usługa Intune zapewnia możliwości zasad zgodności urządzenia, które służą do oceny stanu zgodności urządzeń. Stan zgodności jest zgłaszany do usługi Azure Active Directory w celu zastosowania do wymuszania zasad dostępu warunkowego utworzonych w usłudze Azure Active Directory, gdy użytkownik próbuje uzyskać dostęp do zasobów firmy.
 
 Zasady dostępu warunkowego opartego na urządzeniach dla usługi Exchange Online oraz pozostałych produktów Office 365 są konfigurowane za pośrednictwem witryny [Azure Portal](https://docs.microsoft.com/intune-azure/introduction/what-is-microsoft-intune).
-
--   Dowiedz się więcej na temat [dostępu warunkowego w usłudze Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal).
+-   Dowiedz się więcej na temat [wymagania urządzeń zarządzanych z dostępem warunkowym w usłudze Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/require-managed-devices).
 
 -   Dowiedz się więcej o [zgodności urządzenia w usłudze Intune](device-compliance.md).
 
--   Dowiedz się więcej o [ochronie poczty e-mail, usług Office 365 oraz pozostałych usług przy użyciu dostępu warunkowego w usłudze Intune](app-based-conditional-access-intune.md).
+-   Dowiedz się więcej na temat [obsługiwanych przeglądarek z dostępem warunkowym w usłudze Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/technical-reference#supported-browsers).
 
 > [!NOTE]
-> Na urządzeniach z systemem Android w przypadku włączenia dostępu opartego na urządzeniach dla usługi SharePoint Online użytkownicy muszą włączyć opcję **Włącz dostęp za pomocą przeglądarki** na zarejestrowanym urządzeniu w następujący sposób:
+> Na urządzeniach z systemem Android w przypadku włączenia dostępu opartego na urządzeniach dla usługi SharePoint Online lub dostępu opartego na przeglądarce do usługi Exchange Online użytkownicy muszą włączyć opcję **Włącz dostęp za pomocą przeglądarki** na zarejestrowanym urządzeniu w następujący sposób:
 > 1. Uruchomić **aplikację Portal firmy**.
 > 2. Przejść do strony **Ustawienia** za pomocą przycisku wielokropka (...) lub przycisku menu sprzętu.
 > 3. Nacisnąć przycisk **Włącz dostęp za pomocą przeglądarki**. 
@@ -146,7 +145,9 @@ Dostęp warunkowy dla komputerów zapewnia możliwości podobne do tych dostępn
 
 #### <a name="bring-your-own-device-byod"></a>„Przynieś własne urządzenie” (BYOD)
 
--   **Dołączanie w miejscu pracy i zarządzanie za pomocą usługi Intune:** Użytkownik może dołączać własne urządzenia do dostępu do firmowych zasobów i usług. Można użyć dołączania w miejscu pracy oraz rejestrowania urządzeń w usłudze Intune w celu otrzymywania zasad na poziomie urządzenia, co stanowi również kolejną opcję oceny kryteriów dostępu warunkowego.
+-   **Dołączanie w miejscu pracy i zarządzanie za pomocą usługi Intune:** Użytkownik może dołączać własne urządzenia do dostępu do firmowych zasobów i usług. Można użyć dołączania w miejscu pracy oraz rejestrowania urządzeń w funkcji zarządzania urządzeniami przenośnymi usługi Intune w celu otrzymywania zasad na poziomie urządzenia, co stanowi również kolejną opcję oceny kryteriów dostępu warunkowego.
+
+Dowiedz się więcej o [zarządzania urządzeniami w usłudze Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/devices/overview).
 
 ## <a name="app-based-conditional-access"></a>Dostęp warunkowy na podstawie aplikacji
 

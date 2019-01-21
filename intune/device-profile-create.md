@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/28/2018
+ms.date: 12/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,26 +15,27 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 6bc6f5d2f32ff060eb2eec568b0048628ad0e09c
-ms.sourcegitcommit: 349ab913932547b4a7491181f0aff092f109b87b
+ms.openlocfilehash: cb6e3f0a9f62348d55b5dc2284c1007ea7faf088
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52303859"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203216"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Tworzenie profilu urządzenia w usłudze Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 ## <a name="create-the-profile"></a>Tworzenie profilu
-1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi** i wyszukaj usługę **Microsoft Intune**.
 
-2. W obszarze **Microsoft Intune** wybierz pozycję **Konfiguracja urządzeń**, a następnie **Profile**. Następnie wybierz opcję **Utwórz profil**.
+1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi**, wpisz nazwę usługi **Intune** w filtrze, a następnie wybierz pozycję **Intune**.
+
+2. Wybierz kolejno pozycje **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
 
 3. Wprowadź następujące właściwości:
 
-   - **Nazwa**: wprowadź opisową nazwę nowego profilu.
-   - **Opis:** wprowadź opis profilu. (Jest to opcjonalne, ale zalecane).
+   - **Nazwa**: Wprowadź opisową nazwę nowego profilu.
+   - **Opis**: Wprowadź opis profilu. To ustawienie jest opcjonalne, ale zalecane.
    - **Platforma**: wybierz typ platformy:  
 
        - **Android**
@@ -46,7 +47,7 @@ ms.locfileid: "52303859"
        - **Windows 10 lub nowszy**
 
    - **Typ profilu**: wybierz typ, który ma zostać utworzony. Lista zależy od wybranej platformy.
-   - **Ustawienia**: ustawienia poszczególnych typów profilów opisano w następujących tematach:
+   - **Ustawienia**: Ustawienia poszczególnych typów profilów opisano w następujących artykułach:
 
        -  [Funkcje urządzenia](device-features-configure.md)
        -  [Ograniczenia dotyczące urządzeń](device-restrictions-configure.md)
