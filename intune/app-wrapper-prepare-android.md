@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: e9d3b82fb544b1c73671438440b108573343795a
-ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
+ms.openlocfilehash: e7b60ecbf2a9a110b68807f8d1dce4db21f8f61d
+ms.sourcegitcommit: 912aee714432c4a1e8efeee253ca2be4f972adaa
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53324909"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54316920"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Przygotowywanie aplikacji systemu Android pod kątem zasad ochrony aplikacji za pomocą narzędzia opakowującego aplikacje usługi Intune
 
@@ -148,40 +148,7 @@ Aby uniknąć potencjalnego fałszowania, ujawnienia informacji i ataków oparty
 
 -   Zabezpiecz katalog wyjściowy, który zawiera opakowaną aplikację. Rozważ użycie katalogu poziomu użytkownika dla produktu wyjściowego.
 
-## <a name="requiring-user-login-prompt-for-an-automatic-app-we-service-enrollment-requiring-intune-app-protection-policies-in-order-to-use-your-wrapped-android-lob-app-and-enabling-adal-sso-optional"></a>Wymaganie monitu logowania użytkownika na potrzeby automatycznej rejestracji w usłudze APP-WE, wymaganie zasad ochrony aplikacji usługi Intune w celu korzystania z opakowanej aplikacji LOB dla systemu Android i włączanie logowania jednokrotnego do biblioteki ADAL (opcjonalnie)
-
-Poniżej przedstawiono wskazówki dotyczące wymagania monitowania użytkownika podczas uruchamiania aplikacji w celu automatycznej rejestracji w usłudze APP-WE (w tej sekcji nazywanej **rejestracją domyślną**) oraz wymagania zasad ochrony aplikacji usługi Intune, aby umożliwić używanie opakowanej aplikacji LOB dla systemu Android tylko chronionym użytkownikom usługi Intune. Omówiono również sposób włączenia logowania jednokrotnego w przypadku opakowanej aplikacji LOB dla systemu Android. 
-
-> [!NOTE] 
-> Korzyści wynikające z **rejestracji domyślnej** obejmują uproszczone uzyskiwanie zasad z usługi APP-WE dla aplikacji na urządzeniu.
-
-### <a name="general-requirements"></a>Wymagania ogólne
-* Zespół zestawu SDK usługi Intune będzie wymagać identyfikatora Twojej aplikacji. Można go znaleźć za pośrednictwem witryny [Azure Portal](https://portal.azure.com/) w obszarze **Wszystkie aplikacje** w kolumnie **Identyfikator aplikacji**. Dobrym sposobem na skontaktowanie się z zespołem zestawu SDK usługi Intune jest wysłanie wiadomości e-mail na adres msintuneappsdk@microsoft.com.
-     
-### <a name="working-with-the-intune-sdk"></a>Korzystanie z zestawu SDK usługi Intune
-Te instrukcje dotyczą wszystkich aplikacji Android i Xamarin, w przypadku których chcesz wymagać zasad ochrony aplikacji usługi Intune do użycia na urządzeniu użytkownika końcowego.
-
-1. Skonfiguruj bibliotekę ADAL, korzystając z kroków zdefiniowanych w [przewodniku zestawu SDK usługi Intune dla systemu Android](https://docs.microsoft.com/intune/app-sdk-android#configure-azure-active-directory-authentication-library-adal).
-
-> [!NOTE]
-> Termin „identyfikator klienta” związany z Twoją aplikacją jest taki sam jak termin „identyfikator aplikacji” w witrynie Azure Portal związany z Twoją aplikacją. 
-> * Aby włączyć logowanie jednokrotne, skorzystaj z typowej konfiguracji biblioteki ADAL nr 2.
-
-2. Włącz rejestrację domyślną przez umieszczenie w manifeście następującej wartości:
-   ```xml
-   <meta-data android:name="com.microsoft.intune.mam.DefaultMAMServiceEnrollment" android:value="true" />
-   ```
-   > [!NOTE] 
-   > Musi to być jedyna integracja z usługą MAM-WE w aplikacji. Wszelkie inne próby wywołania interfejsów API MAMEnrollmentManager mogą powodować konflikty.
-
-3. Włącz wymagane zasady zarządzania aplikacjami mobilnymi przez umieszczenie w manifeście następującej wartości:
-   ```xml
-   <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />
-   ```
-   > [!NOTE] 
-   > Wymusi to na użytkowniku pobranie aplikacji Portal firmy na urządzenie i ukończenie przepływu rejestracji domyślnej przed użyciem.
-
-### <a name="see-also"></a>Zobacz też
+### <a name="see-also"></a>Zobacz także
 - [Wybieranie sposobu przygotowania aplikacji do zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune](apps-prepare-mobile-application-management.md)
 
 - [Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android](app-sdk-android.md)
