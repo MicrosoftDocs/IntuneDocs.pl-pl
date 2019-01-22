@@ -176,7 +176,7 @@ Aby uzyskać więcej informacji o sposobie używania aplikacji Managed Browser i
 ## <a name="how-to-configure-the-homepage-for-a-protected-browser"></a>Jak skonfigurować stronę główną dla przeglądarki chronionej
 
 To ustawienie pozwala skonfigurować stronę główną, którą widzą użytkownicy po uruchomieniu przeglądarki chronionej lub utworzeniu nowej karty. 
-- To ustawienie spowoduje wyświetlenie strony internetowej w programie Managed Browser.  W programie Edge w zamian będzie wyświetlany skrót do strony głównej.
+- To ustawienie spowoduje wyświetlenie strony internetowej w programie Managed Browser.  W programie Microsoft Edge w zamian będzie wyświetlany skrót do strony głównej.
 - Ikona skrótu do strony głównej jest wyświetlana jako ikona pod kontrolką wyszukiwania.  Nie można jej edytować ani usuwać.
 - Wyświetlony skrót do strony głównej zostanie wyróżniony przy użyciu nazwy Twojej organizacji.  Będzie on zawsze pojawiać się jako pierwsza ikona.
 
@@ -266,12 +266,12 @@ Poniższe informacje dotyczą dopuszczalnych formatów i symboli wieloznacznych,
 Obydwa programy — Intune Managed Browser i Microsoft Edge — są obecnie traktowane jako przeglądarki zarządzane przez zasady / przeglądarki chronione. Obecne zasady ochrony aplikacji powodują otwieranie linków internetowych z aplikacji zarządzanych przez usługę Intune w określonej przeglądarce w zależności od scenariusza i platformy. 
 
 W systemie Android: 
-* Managed Browser, jeśli na urządzeniu znajduje się zarówno przeglądarka MB, jak i Edge — chyba że ustawienie „com.microsoft.intune.useEdge” ma wartość „true” dla wszystkich zarządzanych przez usługę Intune aplikacji wymagających wskazania przeglądarki zarządzanej na podstawie zasad.  
+* Managed Browser, jeśli na urządzeniu znajduje się zarówno przeglądarka MB, jak i Microsoft Edge — chyba że ustawienie „com.microsoft.intune.useEdge” ma wartość „true” dla wszystkich zarządzanych przez usługę Intune aplikacji wymagających wskazania przeglądarki zarządzanej na podstawie zasad.  
 * Microsoft Edge, jeśli na urządzeniu znajduje się tylko ta przeglądarka i jest ona objęta zasadami.
 * Managed Browser, jeśli na urządzeniu znajduje się tylko ta przeglądarka i jest ona objęta zasadami. 
 
 W systemie iOS w przypadku aplikacji, które mają zintegrowany zestaw SDK usługi Intune dla systemu iOS w wersji 9.0.9+: 
-* Managed Browser, jeśli na urządzeniu znajduje się zarówno przeglądarka MB, jak i Edge — chyba że ustawienie „com.microsoft.intune.useEdge” ma wartość „true” dla wszystkich zarządzanych przez usługę Intune aplikacji wymagających wskazania przeglądarki zarządzanej na podstawie zasad **LUB** Microsoft Edge, jeśli przeglądarka ta jest zainstalowana i skonfigurowano dla niej zasady. 
+* Managed Browser, jeśli na urządzeniu znajduje się zarówno przeglądarka MB, jak i Microsoft Edge — chyba że ustawienie „com.microsoft.intune.useEdge” ma wartość „true” dla wszystkich zarządzanych przez usługę Intune aplikacji wymagających wskazania przeglądarki zarządzanej na podstawie zasad **LUB** Microsoft Edge, jeśli przeglądarka ta jest zainstalowana i skonfigurowano dla niej zasady. 
 * Microsoft Edge, jeśli na urządzeniu znajduje się tylko ta przeglądarka, jest ona objęta zasadami i zostały one dla niej skonfigurowane. 
 * Managed Browser, jeśli na urządzeniu znajduje się tylko ta przeglądarka, jest ona objęta zasadami i zostały one dla niej skonfigurowane.
 
