@@ -15,12 +15,12 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
-ms.openlocfilehash: db499f2d55318919f420e03be0883ec70d949d20
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 576e690e6f77480756e1406e6c0bea8696c422ea
+ms.sourcegitcommit: 8e3a20b2ad59d3a6789ee81b9cbe6d2c711da11d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180377"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54380449"
 ---
 # <a name="set-up-intune"></a>Konfigurowanie usługi Intune
 
@@ -30,7 +30,7 @@ Te kroki konfiguracji ułatwiają włączenie zarządzania urządzeniami przeno�
 
 Niektóre kroki, takie jak skonfigurowanie subskrypcji usługi Intune i ustawienie urzędu MDM, są wymagane w większości scenariuszy. Inne kroki, np. skonfigurowanie domeny niestandardowej lub dodanie aplikacji, są opcjonalne i zależą od potrzeb firmy.
 
-Jeśli obecnie używasz programu Microsoft System Center Configuration Manager do zarządzania komputerami i serwerami, możesz [rozszerzyć program Configuration Manager, aby zarządzał urządzeniami przenośnymi](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).
+Jeśli obecnie używasz programu Microsoft System Center Configuration Manager do zarządzania komputerami i serwerami, możesz [za pomocą współzarządzania podpiąć program Configuration Manager pod chmurę](https://docs.microsoft.com/sccm/comanage/overview).
 
 >[!TIP]
 >W przypadku zakupu co najmniej 150 licencji na usługę Intune w uprawniającym planie można skorzystać z usługi *Asysta centrum rozwiązania FastTrack*. Ta usługa zapewnia pomoc specjalistów firmy Microsoft przy przygotowaniu środowiska usługi Intune. Zobacz [Asysta centrum rozwiązania FastTrack dla pakietu Enterprise Mobility + Security (EMS)](https://docs.microsoft.com/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program).

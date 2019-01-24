@@ -16,12 +16,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 4b76625276a34c027ae8c74f1c6a3977c4a7e8bd
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: db6aed3d87b8a8df55c5c95e52eb3dd9ccc690a7
+ms.sourcegitcommit: 911923e9fe0eed52b1c93e400f776956835e582f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179953"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54386964"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-devices"></a>Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem Android
 
@@ -62,13 +62,17 @@ Dla każdego klucza i wartości konfiguracji ustaw następujące elementy:
 ### <a name="supported-variables-for-configuration-values"></a>Obsługiwane zmienne dla wartości konfiguracji
 
 Jeśli wybierzesz zmienną jako typ wartości, możesz wybrać następujące opcje:
-- Główna nazwa użytkownika — na przykład **John@contoso.com**
-- Poczta — na przykład **John@contoso.com**
-- Częściowa nazwa UPN — na przykład **John**
-- Identyfikator konta — na przykład **fc0dc142-71d8-4b12-bbea-bae2a8514c81**
-- Identyfikator urządzenia — na przykład **b9841cd9-9843-405f-be28-b2265c59ef97**
-- Identyfikator użytkownika — na przykład **3ec2c00f-b125-4519-acf0-302ac3761822**
-- Nazwa użytkownika — na przykład **John Doe**
+
+| Opcja | Przykład |
+|----|----|
+| Mail | john@contoso.com |
+| Nazwa główna użytkownika | john@contoso.com |
+| Częściowa nazwa UPN | jan |
+| Domena | contoso.com |
+| Nazwa użytkownika | Jan Kowalski |
+| Identyfikator konta | fc0dc142-71d8-4b12-bbea-bae2a8514c81 |
+| Identyfikator użytkownika | 3ec2c00f-b125-4519-acf0-302ac3761822 |
+| Identyfikator urządzenia | b9841cd9-9843-405f-be28-b2265c59ef97 |
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Zezwalanie tylko na skonfigurowane konta organizacji w aplikacjach z obsługą wielu tożsamości 
 

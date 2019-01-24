@@ -16,12 +16,12 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 0cc94da03e1288de519d08acadbf3374bb76fcd7
-ms.sourcegitcommit: 513c59a23ca5dfa80a3ba6fc84068503a4158757
+ms.openlocfilehash: 264b7f4b476b18695c6dd0282f34a9af33b6b27f
+ms.sourcegitcommit: 1f544172299f0990e1e13cebf3830b8c0511d6ed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54210911"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54418214"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co nowego w usłudze Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -42,7 +42,10 @@ Dowiedz się co tydzień, co nowego w usłudze Microsoft Intune. Możesz równie
 ### Role-based access control
 
 -->     
+## <a name="week-of-january-14-2019"></a>Tydzień od 14 stycznia 2019 r.
 
+### <a name="preview-of-support-for-android-corporate-owned-fully-managed-devices----1574342----"></a>Obsługa należących do firmy, w pełni zarządzanych urządzeń z systemem Android — wersja zapoznawcza <!-- 1574342  -->
+Usługa Intune obsługuje teraz w pełni zarządzane, należące do firmy urządzenia z systemem Android w scenariuszu „właściciel urządzenia”, w którym urządzenia są ściśle zarządzane przez dział IT i są powiązane z poszczególnymi użytkownikami. Pozwala to administratorom na zarządzanie całym urządzeniem, wymuszanie rozszerzonej gamy opcji kontroli zasad niedostępnych dla profilów służbowych oraz ograniczanie możliwości instalowania aplikacji przez użytkowników tylko do aplikacji z zarządzanego sklepu Google Play. Aby uzyskać więcej informacji, zobacz [Konfigurowanie rejestracji w usłudze Intune dla w pełni zarządzanych urządzeń z systemem Android](android-fully-managed-enroll.md) i [Rejestracja urządzeń dedykowanych i w pełni zarządzanych](android-dedicated-devices-fully-managed-enroll.md).  Należy pamiętać, że ta funkcja jest dostępna w wersji zapoznawczej. Niektóre funkcje usługi Intune, takie jak certyfikaty, zgodność i dostęp warunkowy, nie są obecnie dostępne dla w pełni zarządzanych urządzeń użytkowników z systemem Android.
 
 ## <a name="week-of-january-7-2019"></a>Tydzień od 7 stycznia 2019 r.
 
@@ -115,7 +118,7 @@ W przypadku tworzenia profilu konfiguracji dla urządzeń z systemem iOS możesz
 Listę ustawień można znaleźć w temacie dotyczącym [ustawień wyświetlania komunikatów na ekranie blokady](shared-device-settings-ios.md).
 
 #### <a name="new-app-store-doc-viewing-gaming-device-restriction-settings-added-to-ios-devices----2827760--"></a>Do urządzeń z systemem iOS dodano nowe ustawienia ograniczeń urządzenia obejmujące sklep App Store, wyświetlanie dokumentów i gry <!-- 2827760-->
-W obszarze **Konfiguracja urządzenia** > **Profile** > **Utwórz profil** >  **iOS** dla platformy > **Ograniczenia dotyczące urządzeń** dla typu profilu > **App Store, wyświetlanie dokumentów, gry** dodano następujące ustawienia: Zezwalanie aplikacjom zarządzanym na zapisywanie kontaktów na kontach niezarządzanych kontaktów (tylko w trybie nadzorowanym) Zezwalanie niezarządzanym aplikacjom na odczytywanie z kont kontaktów zarządzanych (tylko w trybie nadzorowanym) Aby wyświetlić te ustawienia, zobacz [ograniczenia urządzeń z systemem iOS](device-restrictions-ios.md#app-store-doc-viewing-gaming).
+W obszarze **Konfiguracja urządzenia** > **Profile** > **Utwórz profil** >  **iOS** dla platformy > **Ograniczenia dotyczące urządzeń** dla typu profilu > **App Store, wyświetlanie dokumentów, gry** dodano następujące ustawienia: Zezwalanie aplikacjom zarządzanym na zapisywanie kontaktów na kontach niezarządzanych kontaktów. Zezwalanie niezarządzanym aplikacjom na odczytywanie z kont kontaktów zarządzanych. Aby wyświetlić te ustawienia, zobacz [ograniczenia urządzeń z systemem iOS](device-restrictions-ios.md#app-store-doc-viewing-gaming).
 
 #### <a name="new-notification-hints-and-keyguard-settings-to-android-enterprise-device-owner-devices----3201839-3201843---"></a>Nowe ustawienia powiadomień, wskazówek i funkcji blokowania klawiatury na urządzeniach właściciela urządzenia z systemem Android Enterprise<!-- 3201839 3201843 -->
 Ta aktualizacja obejmuje kilka nowych funkcji dotyczących urządzeń z systemem Android Enterprise uruchamianych jako właściciel urządzenia. Aby korzystać z tych funkcji, przejdź do pozycji **Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > w polu **Platforma** wybierz wartość **Android Enterprise** > w polu **Typ profilu** wybierz wartość **Tylko właściciel urządzenia** > **Ograniczenia urządzenia**.
@@ -139,9 +142,6 @@ Dotyczy: System Windows 10 lub nowszy
 #### <a name="more-detailed-enrollment-restriction-failure-messaging----3111564---"></a>Bardziej szczegółowe komunikaty dotyczące błędów ograniczeń rejestracji <!-- 3111564 -->
 Bardziej szczegółowe komunikaty o błędach będą dostępne, gdy ograniczenia rejestracji nie zostaną spełnione. Aby wyświetlić te komunikaty, przejdź do obszaru **Intune** > **Rozwiązywanie problemów** i zapoznaj się z tabelą błędów rejestracji. Aby uzyskać więcej informacji, zobacz [listę błędów rejestracji](help-desk-operators.md#configuration-policies-reference).
 
-#### <a name="skip-more-setup-assistant-screens-on-an-ios-dep-device----2687509---"></a>Pomijanie większej liczby ekranów Asystenta ustawień na urządzeniu DEP z systemem iOS <!-- 2687509 -->
-Oprócz ekranów, które obecnie możesz pominąć, możesz skonfigurować urządzenia z systemem iOS objęte programem DEP tak, aby następujące ekrany Asystenta ustawień były pomijane podczas rejestracji urządzenia przez użytkownika: Ton wyświetlacza, Prywatność, Migracja systemu Android, Przycisk Strona główna, iMessage i FaceTime, Przechodzenie do usługi, Migracja urządzenia Watch, Wygląd, Czas korzystania z urządzenia, Aktualizacja oprogramowania, Instalator SIM.
-Aby wybrać ekrany do pominięcia, przejdź kolejno do pozycji **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Tokeny programu rejestracji** > wybierz token > **Profile** > wybierz profil > **Właściwości** > **Dostosowywanie Asystenta ustawień** > wybierz pozycję **Ukryj**  dla ekranów do pominięcia > **OK**.
 
 
 ### <a name="monitor-and-troubleshoot"></a>Monitorowanie i rozwiązywanie problemów
@@ -164,7 +164,7 @@ Nowe środowisko pozwala opisać problem własnymi słowami i uzyskać szczegó�
 ### <a name="role-based-access-control"></a>Kontrola dostępu oparta na rolach
 
 #### <a name="scope-tags-for-apps----1081941---"></a>Tagi zakresu dla aplikacji <!-- 1081941 -->
-Możesz tworzyć tagi zakresu w celu ograniczenia dostępu do ról i aplikacji. Możesz dodać tag zakresu do aplikacji, tak aby tylko osoby z rolą przypisaną do tego tagu zakresu miały dostęp do aplikacji. Aby uzyskać więcej informacji, zobacz [Używanie tagów zakresu do filtrowania zasad](scope-tags.md).
+Możesz tworzyć tagi zakresu w celu ograniczenia dostępu do ról i aplikacji. Możesz dodać tag zakresu do aplikacji, tak aby tylko osoby z rolą przypisaną do tego tagu zakresu miały dostęp do aplikacji. Do aplikacji zakupionych za pośrednictwem programu Apple Volume Purchase Program (VPP) nie można przypisywać tagów zakresu.  Aby uzyskać więcej informacji, zobacz [Używanie tagów zakresu do filtrowania zasad](scope-tags.md).
 
 
 
@@ -1252,6 +1252,54 @@ Teraz możesz użyć rozwiązania App Policy Protection (APP) i funkcji dostępu
 
 ## <a name="notices"></a>Uwagi
 
+### <a name="upcoming-password-enforcement-change-for-macos-10142-in-intune---1873216--"></a>Nadchodzące wymuszanie zmiany hasła dla systemu macOS 10.14.2 w usłudze Intune <!--1873216-->
+W komunikacie MC145129 w czerwcu przekazaliśmy informację, że w usłudze Intune planowane jest zintegrowanie nowo udostępnionego przez firmę Apple ustawienia „Zmień hasło przy następnym uwierzytelnianiu” przeznaczonego dla urządzeń z systemem macOS w wersji 10.13 i nowszych. Obecnie planujemy wdrożyć to ustawienie w lutym dla systemów macOS 10.14.2 i nowszych. 
+
+#### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
+Ta zmiana będzie miała na Ciebie wpływ, jeśli posiadasz lub zamierzasz nabyć urządzenia z systemem macOS 10.14.2 lub nowszym. Teraz, gdy firma Apple wprowadziła ustawienie „Zmień hasło przy następnym uwierzytelnianiu”, usługa Intune może wymusić na użytkownikach aktualizację haseł na takie, które są zgodne, po wypchnięciu zasad haseł. Po zintegrowaniu tej nowej funkcji firmy Apple użytkownicy systemu macOS otrzymają żądanie aktualizacji hasła, nawet jeśli hasło jest już zgodne. Należy pamiętać, że jeśli hasło jest już zgodne i nie obowiązuje wymaganie, że haseł nie można powtarzać, to użytkownicy końcowi podczas aktualizacji hasła będą mogli ustawić takie samo hasło, jakie już mają. Monit o aktualizację hasła będzie wyświetlany użytkownikom tylko wtedy, kiedy będą oni chcieli uwierzytelnić się lub zalogować się na urządzeniu. Jeśli zablokujesz zasoby firmy aż do oznaczenia urządzenia jako zgodnego, użytkownicy końcowi posiadający urządzenia z systemem macOS 10.14.2 mogą mieć zablokowany dostęp do zasobów firmy, takich jak wiadomości e-mail lub witryny programu SharePoint, do momentu zresetowania hasła. W przyszłości wszystkie aktualizacje zasad konfiguracji i zgodności haseł będą wymuszać na uwzględnionych użytkownikach zaktualizowanie haseł. Nasze badania przeprowadzone wśród klientów przed wprowadzeniem tej zmiany wykazały, że nie będzie ona miała wpływu na większość klientów, ponieważ użytkownicy końcowi zwykle będą aktualizować swoje hasła po otrzymaniu żądania rejestracji za pomocą hasła lub żądania zresetowania hasła w celu zachowania zgodności
+
+#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Co zrobić, aby przygotować się do tej zmiany?
+Warto poinformować dział pomocy technicznej w swojej firmie. Zaktualizujemy tę stronę Co nowego, kiedy ta zmiana zostanie wdrożona. Jeśli nie chcesz wymuszać tych zasad dla haseł urządzeń z systemem macOS, zalecamy anulowanie przypisania lub usunięcie istniejących zasad systemu macOS.
+
+
+### <a name="reminder-intune-support-experience-for-premier-customers-now-in-azure-instead-of-mpo---2828727--"></a>Przypomnienie: teraz na platformie Azure zamiast portalu MPO dostępne jest środowisko pomocy technicznej usługi Intune dla klientów wersji Premier <!--2828727-->
+W komunikacie MC147649 we wrześniu przekazaliśmy informację, że w grudniu usuniemy możliwość tworzenia żądań pomocy technicznej usługi Intune z poziomu portalu Microsoft Premier Online (MPO) (premier.microsoft.com). Teraz, po niewielkim opóźnieniu, pod koniec stycznia nastąpi przekierowanie do tworzenia żądań obsługi tylko w usłudze Intune na platformie Azure. 
+
+
+#### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
+Od końca stycznia nie będzie można tworzyć żądań pomocy technicznej w portalu MPO. Jest to związane z rozbudową środowiska pomocy technicznej Premier.  Po podjęciu takiej próby zobaczysz monit o przejście do usługi Intune na platformie Azure, którego nie będzie można odrzucić. W tym miejscu możesz utworzyć żądanie pomocy technicznej, które zostanie przekierowane do dedykowanego działu pomocy technicznej firmy Microsoft, który w odpowiednim czasie zdiagnozuje i rozwiąże problem. Pamiętaj, że żądań pomocy technicznej utworzonych w portalu MPO nie można wyświetlić w witrynie Azure Portal. 
+
+W witrynie Azure Portal dostępne jest nowe środowisko pomocy technicznej, jak ogłosiliśmy niedawno w komunikacie MC171941. Więcej informacji na ten temat można znaleźć na stronie [https://aka.ms/new_support_experience](https://aka.ms/new_support_experience) oraz korzystając z linku do informacji dodatkowych.
+
+Jeśli korzystasz z hybrydowego oprogramowania do zarządzania urządzeniami mobilnymi (hybrydowe oprogramowanie MDM) lub współzarządzania, możesz nadal używać portalu MPO do tworzenia żądań pomocy technicznej dla programu ConfigMgr, ale żądania pomocy technicznej dla usługi Intune tworzyć w witrynie Azure Portal. Przypominamy, że hybrydowe zarządzanie urządzeniami mobilnymi jest [przestarzałe](https://docs.microsoft.com/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures) i należy zaplanować jak najszybsze przejście do usługi Intune na platformie Azure. Aby uzyskać więcej informacji, zobacz [Move from Hybrid Mobile Device Management to Intune on Azure](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150) (Przechodzenie z hybrydowego zarządzania urządzeniami przenośnymi do usługi Intune na platformie Azure).
+
+Zauważ, że tylko użytkownicy z rolami administratora globalnego, administratora usługi Intune i administratora pomocy technicznej usługi mogą tworzyć bilety pomocy technicznej w witrynie Azure Portal.
+
+#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Co zrobić, aby przygotować się do tej zmiany?
+- Nie korzystaj z portalu MPO, a do tworzenia wszystkich żądań pomocy technicznej usługi Intune i zarządzania nimi używaj usługi Intune na platformie Azure.  
+- W razie potrzeby powiadom dział pomocy technicznej i zaktualizuj dokumentację.
+- Jeśli użytkownicy bez ról administratora globalnego ani administratora usługi Intune aktualnie tworzą żądania pomocy technicznej w portalu MPO, przypisz im rolę administratora pomocy technicznej usługi Azure Active Directory, aby mogli nadal tworzyć bilety pomocy technicznej w witrynie Azure Portal.
+
+#### <a name="additional-information"></a>Dodatkowe informacje
+[https://aka.ms/IntuneSupport_MPO_to_Azure](https://aka.ms/IntuneSupport_MPO_to_Azure)
+
+### <a name="plan-for-change-user-experience-update-to-intune-company-portal-app-for-ios"></a>Planowanie zmian: Aktualizacja środowiska użytkownika aplikacji Portal firmy dla systemu iOS usługi Intune
+Z radością informujemy, że w usłudze Intune wkrótce zostanie udostępniona znacząca aktualizacja środowiska obsługi użytkownika aplikacji Portal firmy dla systemu iOS. Aktualizacja będzie zawierała wizualne zmiany strony głównej, na której zostaną dodane zaawansowane filtry i szybszy dostęp do aplikacji i książek.
+
+#### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
+Ta aktualizacja środowiska użytkownika nie zmieni bieżącej funkcjonalności aplikacji Portal firmy dla systemu iOS, będzie natomiast zawierać następujące elementy:
+- Strona główna o wyglądzie i działaniu natywnym dla systemu iOS 
+- Funkcje filtrowania list zawartości i wyszukiwania z uwzględnieniem możliwości filtrowania według typu zawartości (aplikacje lub książki elektroniczne) oraz dostępności (zarządzanie urządzeniem wymagane lub dostępne bez rejestracji)
+- Możliwość wyszukiwania książek elektronicznych
+- Historia wyszukiwania dla aplikacji i książek elektronicznych Jeśli bierzesz udział w programie Apple TestFlight, otrzymasz powiadomienie o wstępnej wersji zaktualizowanej aplikacji Portal firmy dla systemu iOS usługi Intune, gdy będzie dostępna. Jeśli nie bierzesz udziału w programie Apple TestFlight, nie jest za późno, aby się zarejestrować. Rejestracja umożliwi korzystanie ze zaktualizowanej aplikacji Portal firmy, zanim będzie ona dostępna dla Twoich użytkowników końcowych. Ponadto będziesz mieć możliwość przesłania opinii bezpośrednio do zespołu usługi Intune.  
+
+#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Co zrobić, aby przygotować się do tej zmiany?
+Nie trzeba podejmować żadnych działań, te zmiany zostaną wprowadzone w nadchodzącym wydaniu aplikacji Portal firmy dla systemu iOS. 
+
+#### <a name="additional-information"></a>Dodatkowe informacje
+[https://aka.ms/cp_update_iOS](https://aka.ms/cp_update_iOS)
+
+
 ### <a name="plan-for-change-exchange-online-to-intune-connector-will-not-be-available-in-intune----3105122---"></a>Planowanie zmian: łącznik usługi Exchange Online z usługą Intune nie będzie dostępny w usłudze Intune <!-- 3105122 -->
 Aby uprościć środowisko pracy z usługą Exchange Online i dostępem warunkowym, wyłączymy łącznik typu „usługa z usługą" między usługami Exchange Online i Intune. Ta zmiana rozpocznie się od grudniowej aktualizacji usługi i zostanie zakończona w aktualizacji usługi w lutym 2019 r.
 
@@ -1286,27 +1334,6 @@ Po wdrożeniu tych aktualizacji nie będzie już trzeba używać grup usługi Az
 Nie musisz nic robić w związku z przenoszeniem przez nas Twoich przypisań zasad. Jeśli obecnie przypisujesz zasady w konsoli usługi Intune for Education, rób to nadal.
 
 Jeśli obecnie przypisujesz zasady do grup usługi Azure AD wymienionych powyżej w usłudze Intune na platformie Azure, zamiast tego zacznij przypisywać je do grup „Wszyscy użytkownicy” i „Wszystkie urządzenia” w konsoli usługi Intune for Education. Gdy zobaczysz w konsoli grupy usługi Azure AD określone w ich nazwach jako przestarzałe, przestań przypisywać zasady w usłudze Azure AD. Jeśli obecnie nie używasz tych grup ze zmienionymi nazwami do żadnych celów, najlepiej je usuń.
-
-### <a name="plan-for-change-new-intune-support-experience-for-premier-customers"></a>Planowanie zmian: nowe środowisko pomocy technicznej usługi Intune dla klientów wersji Premier 
-Aktualizacja z 04/12/2018: Próbujemy ulepszyć ten proces, dlatego tworzenie żądań pomocy technicznej w usłudze MPO zostanie wyłączone później niż 3 grudnia. Będziemy Cię informować za pośrednictwem Centrum wiadomości i wkrótce zaktualizujemy ten wpis, aby udostępnić osie czasu tej zmiany.
-
-Jako klient korzystający z pomocy technicznej Microsoft Premier możesz obecnie używać portalu Microsoft Premier Online (MPO) (premier.microsoft.com) oraz usługi Intune na platformie Azure (portal.azure.com) do tworzenia żądań pomocy technicznej dla usługi Intune. Od 3 grudnia 2018 r. żądania pomocy technicznej będzie można tworzyć tylko w usłudze Intune na platformie Azure, ponieważ kontynuujemy rozbudowę środowiska pomocy technicznej Premier.
-
-#### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
-Po 3 grudnia nie będzie można tworzyć żądań pomocy technicznej w portalu MPO.  Po podjęciu takiej próby zobaczysz monit o przejście do usługi Intune na platformie Azure, którego nie będzie można odrzucić. W tym miejscu możesz utworzyć żądanie pomocy technicznej, które zostanie przekierowane do dedykowanego działu pomocy technicznej firmy Microsoft, który w odpowiednim czasie zdiagnozuje i rozwiąże problem. Żądań pomocy technicznej utworzonych w portalu MPO nie można wyświetlić w witrynie Azure Portal, dlatego nie należy już tworzyć żądań pomocy technicznej w portalu MPO.  
-
-Jeśli korzystasz z hybrydowego oprogramowania do zarządzania urządzeniami mobilnymi (hybrydowe oprogramowanie MDM) lub współzarządzania, możesz nadal używać portalu MPO do tworzenia żądań pomocy technicznej dla programu ConfigMgr, ale żądania pomocy technicznej dla usługi Intune tworzyć w witrynie Azure Portal. Przypominamy, że hybrydowe zarządzanie urządzeniami mobilnymi jest przestarzałe i należy zaplanować jak najszybsze przejście do usługi Intune na platformie Azure. Aby uzyskać więcej informacji, zobacz [Move from Hybrid Mobile Device Management to Intune on Azure](https://aka.ms/hybrid_notification) (Przechodzenie z hybrydowego zarządzania urządzeniami przenośnymi do usługi Intune na platformie Azure).
-
-Zauważ, że tylko użytkownicy z rolami administratora globalnego, administratora usługi Intune i administratora pomocy technicznej usługi mogą tworzyć bilety pomocy technicznej w witrynie Azure Portal.
-
-#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Co zrobić, aby przygotować się do tej zmiany?
-- Nie korzystaj z portalu MPO, a do tworzenia wszystkich żądań pomocy technicznej usługi Intune i zarządzania nimi używaj usługi Intune na platformie Azure.  
-- W razie potrzeby powiadom dział pomocy technicznej i zaktualizuj dokumentację.
-- Jeśli użytkownicy bez ról administratora globalnego ani administratora usługi Intune aktualnie tworzą żądania pomocy technicznej w portalu MPO, przypisz im rolę administratora pomocy technicznej usługi Azure Active Directory, aby mogli nadal tworzyć bilety pomocy technicznej w witrynie Azure Portal.
-- Kliknij pozycję Informacje dodatkowe, aby uzyskać więcej informacji i pomocne linki.
-
-#### <a name="additional-information"></a>Dodatkowe informacje
-Aby uzyskać więcej informacji, zobacz [wpis w blogu zespołu pomocy technicznej usługi Microsoft Intune](https://aka.ms/IntuneSupport_MPO_to_Azure).
 
 
 ### <a name="take-action-please-update-your-android-device-restriction-or-compliance-policy-password-settings-in-intune"></a>Wymagana akcja: zaktualizuj ustawienia hasła zasad zgodności lub ograniczeń urządzenia z systemem Android w usłudze Intune

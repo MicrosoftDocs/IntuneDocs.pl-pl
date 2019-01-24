@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/12/2019
+ms.date: 01/16/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: elocholi
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 8e607dc612f71cdf72322b9fa7ecf14abb5fd809
-ms.sourcegitcommit: d54a12a836503f7e8b90346f16b7ad2d83b710dc
+ms.openlocfilehash: 971dc851714045a8a3b60dfe8ff6c6acc4419294
+ms.sourcegitcommit: 7c41f42d6e398ed46aa602ec8aaa4f39aaf92772
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54270592"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54325019"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Integrowanie narzędzia Jamf Pro z usługą Intune w celu zachowania zgodności
 
@@ -83,51 +83,9 @@ Aby połączyć usługę Intune z narzędziem Jamf Pro:
 
 Po skonfigurowaniu integracji między usługą Intune i narzędziem Jamf musisz [zastosować zasady zgodności do urządzeń zarządzanych za pomocą narzędzia Jamf](conditional-access-assign-jamf.md).
 
-## <a name="information-shared-from-jamf-pro-to-intune"></a>Informacje przekazywane z narzędzia Jamf Pro do usługi Intune
 
-Narzędzie Jamf Pro przechwytuje informacje dotyczące spisu zarządzanych urządzeń z systemem macOS. Narzędzie Jamf Pro zgłasza do usługi Intune następujące informacje:
-
-* Identyfikator urządzenia w usłudze Azure Active Directory
-* Stan spisu JAMF (stan spisu komputera zaewidencjonowanego w oprogramowaniu Jamf Pro w ciągu ostatnich 24 godzin)
-* Wersja systemu operacyjnego
-* Identyfikator użytkownika w usłudze Azure Active Directory
-* Zaszyfrowane (FileVault 2)
-* Stan programu Gatekeeper
-* Hasło: minimalna liczba zestawów znaków
-* Wygaśnięcie hasła w dniach
-* Typ hasła — prosty, alfanumeryczny lub nieznany
-* Zapobieganie automatycznemu logowaniu
-* Wymagana długość kodu dostępu
-* Hasło: liczba poprzednich haseł, których nie można użyć ponownie
-* Ochrona integralności systemu
-* Czas ostatniego zaewidencjonowania
-* Typ architektury
-* Dostępne gniazda pamięci RAM
-* Pojemność baterii
-* Pamięć rozruchowa ROM
-* Szybkość magistrali
-* Rozmiar pamięci podręcznej
-* Nazwa urządzenia
-* Przyłączanie do domeny
-* Identyfikator Jamf
-* Adres MAC
-* Marka
-* Model
-* Identyfikator modelu
-* Szybkość karty sieciowej
-* Liczba rdzeni
-* Liczba procesorów
-* System operacyjny
-* Platforma
-* Szybkość procesora
-* Typ procesora
-* Dodatkowy adres MAC
-* Numer seryjny
-* Wersja SMC
-* Całkowita ilość pamięci RAM
-* Identyfikator UDID
-* Adres e-mail użytkownika
 
 ## <a name="next-steps"></a>Następne kroki
 
 - [Stosowanie zasad zgodności do urządzeń zarządzanych za pomocą narzędzia Jamf](conditional-access-assign-jamf.md)
+- [Dane wysyłane do usługi Intune przez narzędzie Jamf](data-jamf-sends-to-intune.md)

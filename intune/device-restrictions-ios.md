@@ -14,12 +14,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d6fb1c65199b68f7492b1f397c4f6075e345d3e8
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.openlocfilehash: 80eb088063522ba3acb293776064fd98846b9a3e
+ms.sourcegitcommit: 8e3a20b2ad59d3a6789ee81b9cbe6d2c711da11d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54203675"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54380500"
 ---
 # <a name="ios-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem iOS umożliwiające działanie funkcji lub ich ograniczanie przy użyciu usługi Intune
 
@@ -151,12 +151,12 @@ Tryb nadzorowany systemu iOS można włączyć tylko podczas początkowego konfi
 - **Jawna zawartość programu iTunes — muzyka, podcasty lub wiadomości (tylko nadzorowany)**: wybierz pozycję **Blokuj**, aby uniemożliwić ujawnianie zawartości programu iTunes: muzyki, podkastów lub wiadomości. Pozycja **Nieskonfigurowane** zezwala urządzeniu na dostęp do zawartości w sklepie sklasyfikowanej jako zawartość dla dorosłych.
 - **Pobieranie ze sklepu iBook zawartości oznaczonej jako „Erotyka”**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom pobieranie ze sklepu iBook multimediów oznaczonych jako erotyka. Pozycja **Nieskonfigurowane** zezwala użytkownikom na pobieranie ze sklepu iBook książek z kategorii „Erotyka”.
 - **Wyświetlanie dokumentów firmowych w aplikacjach niezarządzanych**: pozycja **Blokuj** uniemożliwia wyświetlanie dokumentów innych niż firmowe w aplikacjach niezarządzanych. Pozycja **Nieskonfigurowane** zezwala na wyświetlanie dokumentów firmowych w dowolnej aplikacji. Na przykład chcesz uniemożliwić użytkownikom zapisywanie plików z aplikacji OneDrive w aplikacji Dropbox. Skonfiguruj to ustawienie jako **Blokuj**. Jeśli urządzenie otrzymało zasady (na przykład po ponownym uruchomieniu), nie ma już możliwości zapisywania.
-  - **Zezwalaj aplikacjom zarządzanym na zapisywanie kontaktów na kontach niezarządzanych kontaktów (tylko nadzorowany)**: po ustawieniu opcji **Zezwalaj** użytkownicy mogą dodawać lub synchronizować informacje kontaktowe dowolnej osoby w programie Outlook, w tym kontakty biznesowe i firmowe, przy użyciu wbudowanej aplikacji Kontakty na urządzeniu. Po ustawieniu opcji **Nieskonfigurowane** użytkownicy nie mogą dodawać kontaktów programu Outlook do wbudowanej aplikacji Kontakty na urządzeniu.
+  - **Zezwalaj aplikacjom zarządzanym na zapisywanie kontaktów na kontach niezarządzanych kontaktów**: po ustawieniu opcji **Zezwalaj** użytkownicy mogą dodawać lub synchronizować informacje kontaktowe dowolnej osoby w programie Outlook, w tym kontakty biznesowe i firmowe, przy użyciu wbudowanej aplikacji Kontakty na urządzeniu. Po ustawieniu opcji **Nieskonfigurowane** użytkownicy nie mogą dodawać kontaktów programu Outlook do wbudowanej aplikacji Kontakty na urządzeniu.
   
     Aby użyć tego ustawienia, skonfiguruj ustawienie **Wyświetlanie dokumentów firmowych w aplikacjach niezarządzanych** na wartość **Blokuj**.
   
 - **Wyświetlanie dokumentów innych niż firmowe w aplikacjach firmowych**: pozycja **Blokuj** uniemożliwia wyświetlanie dokumentów innych niż firmowe w aplikacjach firmowych. Pozycja **Nieskonfigurowane** zezwala na wyświetlanie dowolnych dokumentów w zarządzanych aplikacjach firmowych.
-  - **Zezwalaj niezarządzanym aplikacjom na odczytywanie z kont kontaktów zarządzanych (tylko nadzorowany)**: ustawienie opcji **Zezwalaj** powoduje, że użytkownicy mogą dodawać informacje kontaktowe dowolnej osoby z aplikacji iContacts do programu Outlook. Ustawienie opcji **Nieskonfigurowane** zapobiega odczytywaniu informacji z wbudowanej aplikacji Kontakty na urządzeniu oraz uniemożliwia usuwanie duplikatów.
+  - **Zezwalaj niezarządzanym aplikacjom na odczytywanie z kont kontaktów zarządzanych**: ustawienie opcji **Zezwalaj** powoduje, że użytkownicy mogą dodawać informacje kontaktowe dowolnej osoby z aplikacji iContacts do programu Outlook. Ustawienie opcji **Nieskonfigurowane** zapobiega odczytywaniu informacji z wbudowanej aplikacji Kontakty na urządzeniu oraz uniemożliwia usuwanie duplikatów.
   
     Aby użyć tego ustawienia, skonfiguruj ustawienie **Wyświetlanie dokumentów innych niż firmowe w aplikacjach firmowych** na wartość **Blokuj**.
   

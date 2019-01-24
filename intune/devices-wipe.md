@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/29/2018
+ms.date: ''
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ad2d2842672853587da1396cae6c15ebd7ade44a
-ms.sourcegitcommit: c84e1845b854704c4b048832e365dd381c7f3754
+ms.openlocfilehash: 1866d658503cb2dcdf482a050d7bbd73a914858b
+ms.sourcegitcommit: 398b8a0d98e928b3406f59ab3d061554643ef60b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54122642"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54400028"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Usuwanie urządzeń przy użyciu czyszczenia, wycofywania lub ręcznego wyrejestrowywania urządzenia
 
@@ -81,22 +81,20 @@ W poniższych tabelach opisano usuwane dane oraz wpływ akcji **Wycofaj** na dan
 
 |Typ danych|iOS|
 |-------------|-------|
-|Aplikacje firmowe i skojarzone dane zainstalowane za pomocą usługi Intune|**Aplikacje zainstalowane przy użyciu Portalu firmy:** Wszystkie dane aplikacji i aplikacje są usuwane. Te aplikacje to aplikacje zainstalowane pierwotnie ze sklepu App Store i zarządzane później jako aplikacje firmowe. <br /><br /> **Aplikacje firmy Microsoft używające funkcji zarządzania aplikacjami mobilnymi i zainstalowane ze sklepu App Store:** Dane aplikacji firmowych zostaną usunięte. Dane aplikacji osobistych i aplikacje nie są usuwane.|
+|Aplikacje firmowe i skojarzone dane zainstalowane za pomocą usługi Intune|**Aplikacje zainstalowane za pomocą aplikacji Portal firmy:** W przypadku aplikacji przypiętych do profilu zarządzania usuwane są wszystkie aplikacje i dane aplikacji. Te aplikacje to aplikacje zainstalowane pierwotnie ze sklepu App Store i zarządzane później jako aplikacje firmowe. <br /><br /> **Aplikacje firmy Microsoft używające funkcji zarządzania aplikacjami mobilnymi i zainstalowane ze sklepu App Store:** W przypadku aplikacji, które nie są zarządzane za pomocą aplikacji Portal firmy, usuwane są dane aplikacji firmowych, które są chronione za pomocą szyfrowania zarządzania aplikacjami mobilnymi (MAM) w lokalnym magazynie aplikacji. Dane chronione przez szyfrowanie MAM poza aplikacją pozostają zaszyfrowane i nie można ich używać, ale nie są usuwane. Dane aplikacji osobistych i aplikacje nie są usuwane.|
 |Ustawienia|Konfiguracje, które były ustawione przez zasady usługi Intune, nie są już wymuszane. Użytkownicy mogą zmieniać ustawienia.|
 |Ustawienia profili sieci Wi-Fi i sieci VPN|Usuwane.|
 |Ustawienia profili certyfikatów|Certyfikaty zostaną usunięte i odwołane.|
 |Agent zarządzania|Profil zarządzania jest usuwany.|
 |Poczta e-mail|Profile poczty e-mail aprowizowane za pośrednictwem usługi Intune są usuwane. Poczta e-mail zapisana w pamięci podręcznej na urządzeniu jest usuwana.|
-|Outlook|Wiadomości e-mail odebrane w aplikacji Microsoft Outlook dla systemu iOS są usuwane. Wymaga to uprzedniego wdrożenia aplikacji mobilnej Outlook jako wymaganej dla użytkowników systemu iOS.|
 |Odłączenie usługi Azure AD|Rekord usługi Azure AD jest usuwany.|
-|Kontakty |Kontakty synchronizowane bezpośrednio z aplikacji do natywnej książki adresowej są usuwane. Nie można usunąć wszystkich kontaktów zsynchronizowanych z natywnej książki adresowej do innego źródła zewnętrznego. <br /> <br />Aktualnie obsługiwana jest tylko aplikacja Outlook.
 
 ### <a name="android"></a>Android
 
 |Typ danych|Android|Android Samsung Knox Standard|
 |-------------|-----------|------------------------|
 |Linki sieci Web|Usuwane.|Usuwane.|
-|Aplikacje niezarządzane ze sklepu Google Play|Aplikacje i dane pozostają zainstalowane.|Aplikacje i dane pozostają zainstalowane.|
+|Aplikacje niezarządzane ze sklepu Google Play|Aplikacje i dane pozostają zainstalowane. <br /> <br />Usuwane są dane aplikacji firmowych, które są chronione za pomocą szyfrowania zarządzania aplikacjami mobilnymi (MAM) w lokalnym magazynie aplikacji. Dane chronione przez szyfrowanie MAM poza aplikacją pozostają zaszyfrowane i nie można ich używać, ale nie są usuwane. |Aplikacje i dane pozostają zainstalowane. <br /> <br />Usuwane są dane aplikacji firmowych, które są chronione za pomocą szyfrowania zarządzania aplikacjami mobilnymi (MAM) w lokalnym magazynie aplikacji. Dane chronione przez szyfrowanie MAM poza aplikacją pozostają zaszyfrowane i nie można ich używać, ale nie są usuwane.|
 |Niezarządzane aplikacje biznesowe|Aplikacje i dane pozostają zainstalowane.|Aplikacje są odinstalowywane, a lokalne dane aplikacji są usuwane. Żadne dane poza aplikacją (np. na karcie SD) nie są usuwane.|
 |Aplikacje zarządzane ze sklepu Google Play|Dane aplikacji zostaną usunięte. Aplikacja nie jest usuwana. Dane chronione przez szyfrowanie funkcji zarządzania aplikacjami mobilnymi (MAM, Mobile Application Management) poza aplikacją (np. karta SD) pozostają zaszyfrowane i nie można ich używać, ale nie są usuwane.|Dane aplikacji zostaną usunięte. Aplikacja nie jest usuwana. Dane chronione przez szyfrowanie MAM poza aplikacją (np. karta SD) pozostają zaszyfrowane, ale nie są usuwane.|
 |Zarządzane aplikacje biznesowe|Dane aplikacji zostaną usunięte. Aplikacja nie jest usuwana. Dane chronione przez szyfrowanie MAM poza aplikacją (np. karta SD) pozostają zaszyfrowane i nie można ich używać, ale nie są usuwane.|Dane aplikacji zostaną usunięte. Aplikacja nie jest usuwana. Dane chronione przez szyfrowanie MAM poza aplikacją (np. karta SD) pozostają zaszyfrowane i nie można ich używać, ale nie są usuwane.|
@@ -105,9 +103,7 @@ W poniższych tabelach opisano usuwane dane oraz wpływ akcji **Wycofaj** na dan
 |Ustawienia profili certyfikatów|Certyfikaty są odwoływane, ale nie są usuwane.|Certyfikaty zostaną usunięte i odwołane.|
 |Agent zarządzania|Uprawnienie administratora urządzenia jest odwoływane.|Uprawnienie administratora urządzenia jest odwoływane.|
 |Poczta e-mail|Nie dotyczy (profile poczty e-mail nie są obsługiwane przez urządzenia z systemem Android)|Profile poczty e-mail aprowizowane za pośrednictwem usługi Intune są usuwane. Poczta e-mail zapisana w pamięci podręcznej na urządzeniu jest usuwana.|
-|Outlook|Poczta e-mail odebrana przez aplikację Outlook dla systemu Android jest usuwana, ale tylko w przypadku, gdy program Outlook jest chroniony przy użyciu zasad zarządzania aplikacjami mobilnymi. W przeciwnym razie program Outlook nie jest czyszczony podczas wyrejestrowywania urządzenia.|Poczta e-mail odebrana przez aplikację Outlook dla systemu Android jest usuwana, ale tylko w przypadku, gdy program Outlook jest chroniony przy użyciu zasad zarządzania aplikacjami mobilnymi. W przeciwnym razie program Outlook nie jest czyszczony podczas wyrejestrowywania urządzenia.|
 |Odłączenie usługi Azure AD|Rekord usługi Azure AD jest usuwany.|Rekord usługi Azure AD jest usuwany.|
-|Kontakty |Kontakty synchronizowane bezpośrednio z aplikacji do natywnej książki adresowej są usuwane. Nie można usunąć wszystkich kontaktów zsynchronizowanych z natywnej książki adresowej do innego źródła zewnętrznego. <br /> <br />Aktualnie obsługiwana jest tylko aplikacja Outlook.|Kontakty synchronizowane bezpośrednio z aplikacji do natywnej książki adresowej są usuwane. Nie można usunąć wszystkich kontaktów zsynchronizowanych z natywnej książki adresowej do innego źródła zewnętrznego. <br /> <br />Aktualnie obsługiwana jest tylko aplikacja Outlook.
 
 ### <a name="android-work-profile"></a>Profil służbowy systemu Android
 

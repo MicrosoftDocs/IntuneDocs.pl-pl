@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
-ms.openlocfilehash: a698d7a57c59a27dbd39036b1e2607e80570029f
-ms.sourcegitcommit: 513c59a23ca5dfa80a3ba6fc84068503a4158757
+ms.openlocfilehash: 65a461928c377dd4a674f8f3f2eeeef148ab56b2
+ms.sourcegitcommit: 912aee714432c4a1e8efeee253ca2be4f972adaa
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54210775"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54316903"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Powiązania Xamarin zestawu SDK aplikacji usługi Microsoft Intune
 
@@ -113,12 +113,10 @@ W przypadku aplikacji dla systemu Android bazujących na środowisku Xamarin, kt
 
 1.  Dodaj pakiet NuGet [Microsoft.Intune.MAM.Remapper.Tasks](https://www.nuget.org/packages/Microsoft.Intune.MAM.Remapper.Tasks) do projektu. To spowoduje automatyczne dodanie powiązań platformy Xamarin dla zestawu Intune App SDK, jeśli nie zostały jeszcze dodane.
 
-2.  Dodaj wywołanie `Xamarin.Forms.Forms.Init(Context, Bundle)` do funkcji `OnMAMCreate` w klasie `MAMApplication` utworzonej w kroku 2.2. Jest to wymagane, ponieważ aplikacja zarządzana w usłudze Intune może być uruchamiana w tle.
+2.  Dodaj wywołanie `Xamarin.Forms.Forms.Init(Context, Bundle)` do funkcji `OnMAMActivity` w klasie `MAMApplication` utworzonej w kroku 2.2. Jest to wymagane, ponieważ aplikacja zarządzana w usłudze Intune może być uruchamiana w tle.
 
 > [!NOTE]
 > Ponieważ ta operacja ponownie zapisuje zależność używaną w programie Visual Studio na potrzeby automatycznego uzupełniania Intellisense, po pierwszym uruchomieniu narzędzia remapper może być konieczne ponowne uruchomienie programu Visual Studio w celu zapewnienia prawidłowego rozpoznania zmian przez funkcję Intellisense. 
-
-Na tym kończy się podstawowa procedura dołączania składnika do aplikacji. Można teraz wykonać kroki zawarte w przykładowej aplikacji Xamarin Android. Dostępne są dwa przykłady — dla platformy Xamarin.Forms i systemu Android.
 
 ## <a name="requiring-intune-app-protection-policies-in-order-to-use-your-xamarin-based-android-lob-app-optional"></a>Wymaganie zasad ochrony aplikacji usługi Intune w celu korzystania z aplikacji biznesowej systemu Android opartej na środowisku Xamarin (opcjonalnie) 
 
@@ -144,8 +142,14 @@ Te instrukcje dotyczą wszystkich aplikacji Android i Xamarin, w przypadku któr
 Te instrukcje stanowią wymaganie dla aplikacji platformy .NET/Xamarin, w przypadku których chcesz wymagać zasad ochrony aplikacji usługi Intune do użycia na urządzeniu użytkownika końcowego.
 
 1. Wykonaj wszystkie kroki zdefiniowane w dokumentacji biblioteki ADAL w sekcji [Brokered Authentication for Android (Uwierzytelnianie obsługiwane przez brokera dla systemu Android)](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet/tree/dev/adal#brokered-authentication-for-android).
-> [!NOTE] 
-> Oczekuje się, że wersja biblioteki .NET ADAL, która zostanie wydana jako następna (3.17.4), będzie zawierać poprawkę wymaganą do działania tej funkcji.
+
+## <a name="potential-compilation-errors"></a>Potencjalne błędy kompilacji
+Poniżej przedstawiono niektóre błędy kompilacji spotykane najczęściej podczas opracowywania aplikacji opartej na środowisku Xamarin.
+
+* [Błąd kompilatora CS0239](https://docs.microsoft.com/en-us/dotnet/csharp/misc/cs0239): Ten błąd jest często spotykany w tym formularzu ``'MainActivity.OnCreate(Bundle)': cannot override inherited member 'MAMAppCompatActivityBase.OnCreate(Bundle)' because it is sealed``.
+Kiedy narzędzie do ponownego mapowania modyfikuje dziedziczenie klas platformy Xamarin, stan niektórych funkcji jest zmieniany na `sealed` i zamiast tego do zastąpienia jest dodawany nowy wariant MAM. Wystarczy zmienić nazwę zastąpień, jak opisano [tutaj](https://docs.microsoft.com/en-us/intune/app-sdk-android#renamed-methods). Na przykład nazwę elementu `MainActivity.OnCreate()` można zmienić na `MainActivity.OnMAMCreate()`
+
+* [Błąd kompilatora CS0507](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/cs0507): Ten błąd jest często spotykany w tym formularzu ``'MyActivity.OnRequestPermissionsResult()' cannot change access modifiers when overriding 'public' inherited member ...``. Kiedy narzędzie do ponownego mapowania zmienia dziedziczenie niektórych klas platformy Xamarin, stan niektórych funkcji członkowskich jest zmieniany na `public`. W przypadku zastąpienia którejkolwiek z tych funkcji może być konieczna także zmiana stanu zastąpienia na `public`.
 
 ## <a name="support"></a>Support
 Jeśli Twoja organizacja jest istniejącym klientem usługi Intune, skontaktuj się z przedstawicielem pomocy technicznej firmy Microsoft, aby otworzyć bilet pomocy technicznej i utworzyć problem [na stronie problemów serwisu Github](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues), a my pomożemy Ci tak szybko, jak to możliwe. 

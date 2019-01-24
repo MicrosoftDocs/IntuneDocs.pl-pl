@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/05/2018
+ms.date: 12/31/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 79a1a03f74db8e44dc3ee4d6575e193ce7841e24
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.openlocfilehash: 3d86afec4e501533ab0048e866969a5bf73c2c57
+ms.sourcegitcommit: 911923e9fe0eed52b1c93e400f776956835e582f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53031895"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54387047"
 ---
 # <a name="enroll-android-devices"></a>Rejestrowanie urządzeń z systemem Android
 
@@ -29,9 +29,10 @@ ms.locfileid: "53031895"
 
 Jako administrator usługi Intune możesz zarządzać następującymi urządzeniami z systemem Android:
 - Urządzenia z systemem Android, w tym urządzenia z systemem Samsung Knox Standard.
-- Urządzenia z rozwiązaniem Android enterprise, w tym [urządzenia z profilem służbowym Android](#enable-enrollment-of-android-for-work-devices) i urządzenia kiosku z systemem Android.
-
-Urządzenia z systemem Samsung Knox Standard są obsługiwane w przypadku zarządzania wieloma użytkownikami za pomocą usługi Intune. Oznacza to, że użytkownicy mogą zalogować się na urządzeniu i wylogować się z niego przy użyciu swoich poświadczeń usługi Azure AD. Urządzenie jest zarządzane centralnie niezależnie od tego, czy jest używane. Po zalogowaniu się użytkownicy otrzymują dostęp do aplikacji oraz zostają wobec nich zastosowane zasady. Gdy użytkownicy się wylogują, wszystkie dane aplikacji są usuwane.
+- Urządzenia z rozwiązaniem Android enterprise, w tym:
+    - **Urządzenia z profilami służbowymi systemu Android**: Urządzenia osobiste z uprawnieniami dostępu do danych firmowych. Administratorzy mogą zarządzać kontami służbowymi, aplikacjami i danymi. Dane osobiste na urządzeniu są oddzielone od danych służbowych, a administratorzy nie kontrolują ustawień ani danych osobistych. 
+    - **Urządzenia dedykowane z systemem Android**: Urządzenia należące do firmy przeznaczone do użytku w jednym celu, takim jak znakowanie cyfrowe, drukowanie biletów czy zarządzanie zapasami. Administratorzy ograniczają użycie urządzenia do zdefiniowanego zestawu aplikacji i linków internetowych. Uniemożliwia to również użytkownikom dodawanie innych aplikacji i wykonywanie innych akcji na urządzeniu.
+    - **W pełni zarządzane urządzenia systemu Android**: Urządzenia należące do firmy wykorzystywane przez jednego użytkownika w celach wyłącznie służbowych, a nie osobistych. Administratorzy mogą zarządzać całym urządzeniem i wymuszać kontrolki zasad niedostępne dla profilów służbowych. 
 
 ## <a name="prerequisite"></a>Wymaganie wstępne
 
@@ -52,14 +53,16 @@ Aby zablokować rejestrowanie urządzeń z systemem Android lub tylko urządzeń
 
 ## <a name="set-up-android-enterprise-enrollment"></a>Konfigurowanie rejestracji rozwiązania Android enterprise
 
-Android enterprise to zestaw funkcji i usług dostępnych na urządzeniach z systemem Android, które oddzielają osobiste aplikacje i dane od profilu służbowego zawierającego służbowe aplikacje i dane. Urządzenia z rozwiązaniem Android enterprise obejmują urządzenia z profilem służbowym i kioski. 
+Android enterprise to zestaw funkcji i usług dostępnych na urządzeniach z systemem Android, które oddzielają osobiste aplikacje i dane od profilu służbowego zawierającego służbowe aplikacje i dane. Urządzenia z rozwiązaniem Android enterprise obejmują urządzenia z profilem służbowym, w pełni zarządzane urządzenia i urządzenia dedykowane. 
 
-Aby skonfigurować rejestrację urządzeń z rozwiązaniem Android enterprise, należy najpierw [połączyć rozwiązanie Android enterprise z usługą Intune](connect-intune-android-enterprise.md). Po ukończeniu tego kroku można wykonać następujące czynności:
-
-[Konfigurowanie rejestracji profilu służbowego systemu Android](android-work-profile-enroll.md)
-[Konfigurowanie rejestracji kiosków z systemem Android](android-kiosk-enroll.md)
+- [Konfigurowanie rejestracji profilu służbowego systemu Android](android-work-profile-enroll.md)
+- [Konfigurowanie rejestracji dedykowanych urządzeń z systemem Android](android-kiosk-enroll.md)
+- [Konfigurowanie w pełni zarządzanej rejestracji systemu Android](android-fully-managed-enroll.md)
 
 ## <a name="end-user-experience-when-enrolling-a-samsung-knox-device"></a>Środowisko użytkownika końcowego podczas rejestrowania urządzenia z rozwiązaniem Samsung Knox
+
+Urządzenia z systemem Samsung Knox Standard są obsługiwane w przypadku zarządzania wieloma użytkownikami za pomocą usługi Intune. Oznacza to, że użytkownicy mogą zalogować się na urządzeniu i wylogować się z niego przy użyciu swoich poświadczeń usługi Azure AD. Urządzenie jest zarządzane centralnie niezależnie od tego, czy jest używane. Po zalogowaniu się użytkownicy otrzymują dostęp do aplikacji oraz zostają wobec nich zastosowane zasady. Gdy użytkownicy się wylogują, wszystkie dane aplikacji są usuwane.
+
 Podczas rejestrowania urządzeń z rozwiązaniem Samsung Knox należy uwzględnić kilka zagadnień:
 -   Nawet jeśli żadne zasady nie wymagają numeru PIN, urządzenie musi mieć co najmniej czterocyfrowy numer PIN, aby można było je zarejestrować. Jeśli urządzenie nie ma numeru PIN, dla użytkownika zostanie wyświetlony monit z żądaniem jego utworzenia.
 -   Nie ma żadnych interakcji użytkownika dla certyfikatów WPJ (Workplace Join Certificate).
@@ -69,3 +72,9 @@ Podczas rejestrowania urządzeń z rozwiązaniem Samsung Knox należy uwzględni
 -   Nie są wyświetlane żadne dodatkowe monity dotyczące instalowania certyfikatów wypchniętych przez usługę na potrzeby dostępu do zasobów firmy.
 - Niektóre starsze urządzenia z rozwiązaniem Knox monitują użytkownika w związku z dodatkowymi certyfikatami używanymi na potrzeby dostępu do zasobów firmy.
 - Jeśli instalowanie certyfikatu WPJ na urządzeniu Samsung Mini nie powiedzie się z błędem **Nie znaleziono certyfikatu** lub **Nie można zarejestrować urządzenia**, zainstaluj najnowsze aktualizacje oprogramowania układowego firmy Samsung.
+
+## <a name="next-steps"></a>Następne kroki
+
+- [Konfigurowanie rejestracji profilu służbowego systemu Android](android-work-profile-enroll.md)
+- [Konfigurowanie rejestracji dedykowanych urządzeń z systemem Android](android-kiosk-enroll.md)
+- [Konfigurowanie w pełni zarządzanej rejestracji systemu Android](android-fully-managed-enroll.md)
