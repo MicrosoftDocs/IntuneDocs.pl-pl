@@ -16,18 +16,19 @@ ms.reviewer: derriw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 40549d8fa9bead312f39ca9a782fb555e1022cd6
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: fd71af5d52f81d05ce424212e029f01c59a33a8d
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180412"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831585"
 ---
 # <a name="how-to-configure-intune-settings-for-the-ios-classroom-app"></a>Jak konfigurować ustawienia usługi Intune dla aplikacji Classroom w systemie iOS
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
->[!NOTE]
->Ustawienia usługi Intune dla aplikacji Classroom nie są już aktualne. Ten artykuł dotyczy tylko użytkowników posiadających profile edukacyjne w usłudze Intune.
+
+> [!NOTE]
+> Ustawienia usługi Intune dla aplikacji Classroom nie są aktualne. Ten artykuł dotyczy tylko użytkowników posiadających profile edukacyjne w usłudze Intune.
 
 ## <a name="introduction"></a>Wprowadzenie
 [Classroom](https://itunes.apple.com/app/id1085319084) jest aplikacją, która pomaga nauczycielom w prowadzeniu nauczania oraz sterowaniu urządzeniami uczniów w klasie. Na przykład aplikacja pozwala nauczycielom:

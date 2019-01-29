@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/15/2018
+ms.date: 01/22/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 4082b845643aae47464e4df14ac6621fcf8f39cf
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: f3bea9b1678669aa568c44e63f57aebd832cf203
+ms.sourcegitcommit: 9739a9aab032ebb2c4b52ccfb454a9e0f78b2ee4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180255"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54751182"
 ---
 # <a name="manage-android-work-profile-devices-with-intune"></a>Zarządzanie urządzeniami z profilem służbowym systemu Android za pomocą usługi Intune
 
@@ -67,7 +67,7 @@ Stosowane zasady ochrony aplikacji są w pełni obsługiwane w profilu służbow
 
 Obsługa sieci VPN działa podobnie do profilów sieci VPN systemu Android. Na potrzeby zarządzania rozwiązaniem Android enterprise dostępni są ci sami dostawcy sieci VPN oraz takie same podstawowe opcje konfiguracji z dwiema różnicami:
 
--  **Połączenia VPN ograniczone do profilu służbowego** — połączenia w sieci VPN są ograniczone tylko do aplikacji wdrożonych w profilu służbowym. Z połączenia VPN mogą korzystać tylko aplikacje zarządzane przez rozwiązanie Android enterprise. Aplikacje osobiste zainstalowane na urządzeniu nie mogą używać zarządzanego połączenia VPN. Aby uzyskać więcej informacji, zobacz [Ustawienia sieci VPN dla rozwiązania Android enterprise](vpn-settings-android.md#android-for-work-vpn-settings).
+-  **Połączenia VPN ograniczone do profilu służbowego** — połączenia w sieci VPN są ograniczone tylko do aplikacji wdrożonych w profilu służbowym. Z połączenia VPN mogą korzystać tylko aplikacje zarządzane przez rozwiązanie Android enterprise. Aplikacje osobiste zainstalowane na urządzeniu nie mogą używać zarządzanego połączenia VPN. Aby uzyskać więcej informacji, zobacz [Ustawienia sieci VPN dla rozwiązania Android enterprise](vpn-settings-android.md#android-enterprise-vpn-settings).
 
 -  **Sieć VPN specyficzna dla aplikacji** — sieć VPN specyficzną dla aplikacji można skonfigurować w usłudze Intune, jeśli dostawca sieci VPN zapewnia obsługę następujących funkcji:
     - Konfiguracja sieci VPN specyficznej dla aplikacji.

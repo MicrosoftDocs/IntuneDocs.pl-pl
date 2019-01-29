@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/11/2018
+ms.date: 01/22/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
-ms.openlocfilehash: 62c44768f17ecc82dc748eb4dfda74da421ee3b5
-ms.sourcegitcommit: 911923e9fe0eed52b1c93e400f776956835e582f
+ms.openlocfilehash: 91f338a768ef67106a9b65de759dd74da2902138
+ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54387013"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55072562"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem Android Enterprise w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune
 
@@ -48,7 +48,6 @@ W tym artykule wymieniono i opisano różne ustawienia, którymi można sterowa�
 - **Zmiany ustawień sieci Wi-Fi**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom zmienianie ustawień sieci Wi-Fi utworzonych przez właściciela urządzenia. Użytkownicy mogą tworzyć własne konfiguracje sieci Wi-Fi. Pozycja **Nieskonfigurowane** umożliwia użytkownikom zmianę ustawień sieci Wi-Fi na urządzeniu.
 - **Konfiguracja punktu dostępu sieci Wi-Fi**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom tworzenie lub zmienianie konfiguracji sieci Wi-Fi. Pozycja **Nieskonfigurowane** umożliwia użytkownikom zmianę ustawień sieci Wi-Fi na urządzeniu.
 - **Konfiguracja połączenia Bluetooth**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom konfigurowanie połączenia Bluetooth na urządzeniu. Pozycja **Nieskonfigurowane** umożliwia używanie połączenia Bluetooth na urządzeniu.
-- **Udostępnianie kontaktów za pośrednictwem połączenia Bluetooth**: wybierz pozycję **Blokuj**, aby uniemożliwić dostęp do kontaktów służbowych z innego urządzenia, takiego jak system samochodowy, gdy urządzenie z systemem Android zostanie sparowane za pomocą połączenia Bluetooth. Pozycja **Nieskonfigurowane** zezwala na dostęp do kontaktów służbowych na innym urządzeniu Bluetooth, które zostało sparowane z urządzeniem z systemem Android.
 - **Tethering i dostęp do hotspotów**: wybierz pozycję **Blokuj**, aby uniemożliwić tethering i uzyskiwanie dostępu do przenośnych hotspotów. Pozycja **Nieskonfigurowane** zezwala na tethering i dostęp do przenośnych hotspotów.
 - **Pamięć USB**: wybierz pozycję **Zezwalaj**, aby uzyskiwać dostęp do pamięci USB na urządzeniu. Pozycja **Nieskonfigurowane** uniemożliwia dostęp do pamięci USB.
 - **Transfer plików USB**: wybierz pozycję **Blokuj**, aby uniemożliwić przesyłanie plików za pośrednictwem USB. Pozycja **Nieskonfigurowane** pozwala na transfer plików.

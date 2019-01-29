@@ -16,12 +16,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 45c1d1f293454b32b97c8147f08809565714743a
-ms.sourcegitcommit: 911923e9fe0eed52b1c93e400f776956835e582f
+ms.openlocfilehash: d457ca413f3069e8528dc6f4951f834e3f1dac6a
+ms.sourcegitcommit: 2a1720184cec577684a64af85d0d731693d11d81
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54387208"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55146914"
 ---
 # <a name="set-up-intune-enrollment-of-android-fully-managed-devices-preview"></a>Konfiguracja rejestracji w usłudze Intune dla w pełni zarządzanych urządzeń z systemem Android (wersja zapoznawcza)
 
@@ -38,7 +38,7 @@ Do zarządzania w pełni zarządzanymi urządzeniami z systemem Android niezbęd
 
 Urządzenia muszą spełniać następujące wymagania, aby mogły być zarządzane jako w pełni zarządzane urządzenia z systemem Android:
 
-- System operacyjny Android w wersji 6.0 lub nowszy.
+- System operacyjny Android w wersji 5.1 lub nowszy.
 - Na urządzeniach musi działać kompilacja systemu Android obsługująca łączność z usługami Google Mobile Services (GMS). Urządzenia muszą mieć dostępne usługi GMS i muszą być w stanie połączyć się z usługami GMS.
 
 Jeśli powyższe wymagania są spełnione, nie ma żadnych ograniczeń dotyczących producenta urządzenia/producenta OEM.

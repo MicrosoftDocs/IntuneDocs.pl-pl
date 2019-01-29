@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: coryfe
 ms.suite: ems
 search.appverid: MET150
-ms.openlocfilehash: ccb91082a3226ec4091a139d31796fd77bdf0616
-ms.sourcegitcommit: e9ba1280b95565a5c5674b825881655d0303e688
+ms.openlocfilehash: d0fcb021545d96fe8f5bfdf742dd4d181c91fb1a
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54297387"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831568"
 ---
 # <a name="manage-software-updates-in-intune"></a>Zarządzanie aktualizacjami oprogramowania w usłudze Intune
 
@@ -106,7 +106,7 @@ Po utworzeniu pierścieni aktualizacji należy je przypisać do grup urządzeń.
 
    - **Blokowanie wstrzymywania aktualizacji systemu Windows przez użytkownika**: Domyślnie włączone. Użyj tego ustawienia, aby zezwolić użytkownikom na wstrzymywanie instalacji aktualizacji w obszarze *Ustawienia* ich komputerów lub zablokować tę możliwość. 
       
-   - **Tryb pobierania optymalizacji dostarczania**: Optymalizacja dostarczania nie jest już skonfigurowana w ramach pierścienia aktualizacji systemu Windows 10 w obszarze Aktualizacje oprogramowania. Optymalizacja dostarczania jest teraz konfigurowana za pośrednictwem konfiguracji urządzenia. Poprzednie konfiguracje są nadal dostępne w konsoli. Możesz usunąć poprzednie konfiguracje, edytując je tak, aby były *Nieskonfigurowane*, ale poza tym nie mogą być modyfikowane. Aby uniknąć konfliktu pomiędzy nowymi i starymi zasadami, zobacz [Przechodzenie z istniejących pierścieni aktualizacji do optymalizacji dostarczania](delivery-optimization-windows.md#move-from-existing-update-rings-to-delivery-optimization), a następnie przenieś ustawienia do profilu optymalizacji dostarczania. 
+   - **Tryb pobierania optymalizacji dostarczania**: Optymalizacja dostarczania nie jest już skonfigurowana w ramach pierścienia aktualizacji systemu Windows 10 w obszarze Aktualizacje oprogramowania. Optymalizacja dostarczania jest teraz konfigurowana za pośrednictwem konfiguracji urządzenia. Poprzednie konfiguracje są nadal dostępne w konsoli. Możesz usunąć poprzednie konfiguracje, edytując je tak, aby były *Nieskonfigurowane*, ale poza tym nie mogą być modyfikowane. Aby uniknąć konfliktu pomiędzy nowymi i starymi zasadami, zobacz [Przechodzenie z istniejących pierścieni aktualizacji do optymalizacji dostarczania](delivery-optimization-windows.md#move-existing-update-rings-to-delivery-optimization), a następnie przenieś ustawienia do profilu optymalizacji dostarczania. 
 
 5. Po zakończeniu wybierz przycisk **OK**. W obszarze **Tworzenie pierścienia aktualizacji**, wybierz pozycję **Utwórz**.
 

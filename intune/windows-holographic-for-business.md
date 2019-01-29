@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
-ms.openlocfilehash: 721d3a26e25c14a2e4ccd20b179ae7d4611d3186
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.openlocfilehash: df91908f3d3be7be23e3cecfa83e2d92b656b91e
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54203386"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831602"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Zarządzanie urządzeniami z systemem Windows Holographic i urządzeniami HoloLens oraz korzystanie z różnych funkcji zarządzania urządzeniami przy użyciu usługi Intune
 
@@ -108,7 +108,7 @@ W profilach możesz użyć identyfikatora URI OMA, aby dostosować wybrane ustaw
 
 Aby skonfigurować ustawienia identyfikatora URI OMA (Open Mobile Alliance Uniform Resource Identifier), możesz utworzyć profil niestandardowy w usłudze Intune. Użyj ustawień identyfikatora URI OMA, aby kontrolować różne funkcje urządzeń z systemem Windows Holographic for Business, np. włączać sieć VPN lub sprawdzać aktualizacje w witrynie Microsoft Update.
 
-#### <a name="configure-kiosk-modekiosk-settingsmdwindows-holographic-for-business"></a>[Konfigurowanie trybu kiosku](kiosk-settings.md#windows-holographic-for-business)
+#### <a name="configure-kiosk-modekiosk-settings-holographicmd"></a>[Konfigurowanie trybu kiosku](kiosk-settings-holographic.md)
 
 Za pomocą udostępnionych funkcji lub funkcji komputera gościa usługi Intune możesz skonfigurować urządzenia z systemem Windows Holographic for Business, aby były uruchamiane jako kiosk. Na tych urządzeniach może działać jedna aplikacja (tryb kiosku z jedną aplikacją) lub wiele aplikacji (tryb kiosku z wieloma aplikacjami).
 
