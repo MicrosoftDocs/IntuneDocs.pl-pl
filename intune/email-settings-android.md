@@ -1,6 +1,6 @@
 ---
-title: Ustawienia poczty e-mail dla urządzeń z systemem Android i rozwiązaniem Android Enterprise w usłudze Microsoft Intune — Azure | Microsoft Docs
-description: Twórz profile konfiguracji poczty e-mail urządzeń, które korzystają z serwerów programu Exchange i pobierają atrybuty z usługi Azure Active Directory. Włącz protokół SSL lub SMIME, uwierzytelniaj użytkowników przy użyciu certyfikatów lub nazwy użytkownika/hasła oraz synchronizuj pocztę e-mail i harmonogramy w urządzeniach z systemem Android i profilami służbowymi systemu Android za pomocą usługi Microsoft Intune.
+title: Ustawienia poczty e-mail systemu Android w usłudze Microsoft Intune — Azure | Microsoft Docs
+description: Twórz profile konfiguracji poczty e-mail urządzeń, które korzystają z serwerów programu Exchange i pobierają atrybuty z usługi Azure Active Directory. Włącz protokół SSL lub S/MIME, uwierzytelniaj użytkowników przy użyciu certyfikatów lub nazwy użytkownika i hasła oraz synchronizuj pocztę e-mail i harmonogramy na urządzeniach z systemem Android Samsung Knox za pomocą usługi Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -13,34 +13,33 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: b96363d679a6f09327bf9a1b46421e786d1956a8
-ms.sourcegitcommit: 912aee714432c4a1e8efeee253ca2be4f972adaa
+ms.openlocfilehash: 4336be8d24ac4a81ec6fca09f22d594000bbd9a5
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54316886"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831395"
 ---
-# <a name="android-and-android-enterprise-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Ustawienia urządzeń z systemem Android lub rozwiązaniem Android Enterprise do konfigurowania poczty e-mail, uwierzytelniania i synchronizacji w usłudze Intune
+# <a name="android-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Ustawienia urządzeń z systemem Android do konfigurowania poczty e-mail, uwierzytelniania i synchronizacji w usłudze Intune
 
-W tym artykule wymieniono i opisano różne ustawienia poczty e-mail, którymi można sterować na urządzeniach z systemem Android i rozwiązaniem Android Enterprise. W ramach rozwiązania do zarządzania urządzeniami mobilnymi (MDM) możesz skorzystać z tych ustawień, aby skonfigurować serwer poczty e-mail lub użyć protokołu SSL do szyfrowania wiadomości e-mail oraz określić inne elementy.
+W tym artykule wymieniono i opisano różne ustawienia poczty e-mail, którymi można sterować na urządzeniach z systemem Android Samsung Knox w usłudze Intune. W ramach rozwiązania do zarządzania urządzeniami mobilnymi (MDM) możesz skorzystać z tych ustawień, aby skonfigurować serwer poczty e-mail lub użyć protokołu SSL do szyfrowania wiadomości e-mail oraz określić inne elementy.
 
-Jako administrator usługi Intune możesz utworzyć i przypisać ustawienia poczty e-mail do następujących urządzeń z systemem Android:
+Jako administrator usługi Intune możesz utworzyć i przypisać ustawienia poczty e-mail do urządzeń z systemem Android Samsung Knox Standard.
 
-- Android Samsung Knox Standard
-- Android Enterprise
+Aby dowiedzieć się więcej na temat profilów poczty e-mail w usłudze Intune, zobacz temat [Konfigurowanie ustawień poczty e-mail](email-settings-configure.md).
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
-[Utwórz profil konfiguracji urządzenia](email-settings-configure.md).
+[Utwórz profil konfiguracji urządzenia](email-settings-configure.md#create-a-device-profile).
 
 ## <a name="android-samsung-knox"></a>Android (Samsung Knox)
 
-- **Serwer poczty e-mail**: wprowadź nazwę hosta serwera Exchange.
+- **Serwer poczty e-mail**: wprowadź nazwę hosta serwera Exchange. Na przykład wprowadź `outlook.office365.com`.
 - **Nazwa konta**: wprowadź nazwę wyświetlaną konta e-mail. Ta nazwa jest widoczna na urządzeniach użytkowników.
-- **Atrybut nazwy użytkownika z usługi AAD**: ta nazwa to atrybut pobierany przez usługę Intune z usługi Azure Active Directory (AAD). Usługa Intune dynamicznie generuje nazwę użytkownika używaną przez ten profil. Dostępne opcje:
+- **Atrybut nazwy użytkownika z usługi AAD**: ta nazwa to atrybut pobierany przez usługę Intune z usługi Azure Active Directory (Azure AD). Usługa Intune dynamicznie generuje nazwę użytkownika używaną przez ten profil. Dostępne opcje:
   - **Nazwa główna użytkownika**: pobiera nazwę, taką jak `user1` lub `user1@contoso.com`
   - **Nazwa użytkownika**: pobiera tylko nazwę, taką jak `user1`
-  - **Nazwa konta sAM**: wymaga domeny, takiej jak `domain\user1`. Nazwy konta SAM można używać tylko z urządzeniami z systemem Android. Rozwiązanie Android Enterprise nie jest obsługiwane.
+  - **Nazwa konta sAM**: wymaga domeny, takiej jak `domain\user1`. Nazwa konta sAM jest używana tylko z urządzeniami z systemem Android.
 
     Wprowadź też następujące ustawienia:  
     - **Źródło nazwy domeny użytkownika**: wybierz pozycję **AAD** (Azure Active Directory) lub **Niestandardowe**.
@@ -51,7 +50,9 @@ Jako administrator usługi Intune możesz utworzyć i przypisać ustawienia pocz
       Podczas wybierania atrybutów **Niestandardowe** wprowadź następujące ustawienia:
       - **Nazwa domeny niestandardowej do użycia**: wprowadź wartość używaną przez usługę Intune jako nazwa domeny, taką jak `contoso.com` lub `contoso`
 
-- **Atrybut adresu e-mail z usługi AAD**: Wybierz sposób generowania adresu e-mail użytkownika. Wybierz pozycję **Główna nazwa użytkownika** (`user1@contoso.com` lub `user1`), aby użyć pełnej głównej nazwy jako adresu e-mail, lub wybierz pozycję **Podstawowy adres SMTP** (`user1@contoso.com`), aby użyć podstawowego adresu SMTP do logowania do programu Exchange.
+- **Atrybut adresu e-mail z usługi AAD**: ta nazwa to atrybut adresu e-mail pobierany przez usługę Intune z usługi Azure AD. Usługa Intune dynamicznie generuje adres e-mail używany przez ten profil. Dostępne opcje:
+  - **Główna nazwa użytkownika**:  używa pełnej nazwy głównej, takiej jak `user1@contoso.com` lub `user1`, jako adresu e-mail.
+  - **Podstawowy adres SMTP**: używa podstawowego adresu SMTP, takiego jak `user1@contoso.com`, do logowania się do programu Exchange.
 
 - **Metoda uwierzytelniania**: Wybierz metodę uwierzytelniania stosowaną w profilu poczty e-mail: **Certyfikaty** lub **Nazwa użytkownika i hasło**.
   - W przypadku wybrania opcji **Certyfikat** wybierz wcześniej utworzony profil certyfikatu SCEP lub PKCS klienta, który będzie używany do uwierzytelniania połączenia z programem Exchange.
@@ -71,27 +72,13 @@ Jako administrator usługi Intune możesz utworzyć i przypisać ustawienia pocz
 
 - **Typ zawartości do synchronizowania**: Wybierz typy zawartości, które chcesz synchronizować na urządzeniach. Wartość **Nieskonfigurowane** wyłącza to ustawienie. Jeśli w przypadku ustawienia wartości **Nieskonfigurowane** użytkownik końcowy włączy synchronizację na urządzeniu, to synchronizacja zostanie ponownie wyłączona podczas synchronizacji urządzenia z usługą Intune, ponieważ zasady zostały wzmocnione. 
 
-  Można synchronizować następującą zawartość: 
-  - **Kontakty**
-  - **Kalendarz**
-  - **Zadania**
-
-## <a name="android-enterprise"></a>Android Enterprise
-
-- **Aplikacja poczty e-mail**: wybierz pozycję **Gmail** lub **Nine Work**
-- **Serwer poczty e-mail**: nazwa hosta serwera programu Exchange.
-- **Atrybut nazwy użytkownika z usługi AAD**: ta nazwa to atrybut usługi Active Directory (AD) lub Azure AD, który jest używany do generowania nazwy użytkownika dla tego profilu poczty e-mail. Uzupełnij pole **Podstawowy adres SMTP**, na przykład user1@contoso.com, lub **Główna nazwa użytkownika**, na przykład użytkownik1 lub user1@contoso.com.
-- **Atrybut adresu e-mail z usługi AAD**: Wybierz, jak jest generowany adres e-mail użytkownika na poszczególnych urządzeniach. Wybierz opcję **Główna nazwa użytkownika**, aby użyć pełnej głównej nazwy jako adresu e-mail, lub opcję **Nazwa użytkownika**.
-- **Metoda uwierzytelniania**: Wybierz metodę uwierzytelniania stosowaną w profilu poczty e-mail: **Certyfikaty** lub **Nazwa użytkownika i hasło**.
-  - W przypadku wybrania opcji **Certyfikat** wybierz wcześniej utworzony profil certyfikatu SCEP lub PKCS klienta, który będzie używany do uwierzytelniania połączenia z programem Exchange.
-- **SSL**: Użyj komunikacji SSL (Secure Sockets Layer) podczas wysyłania wiadomości e-mail, otrzymywania wiadomości e-mail i komunikacji z serwerem programu Exchange.
-- **Liczba wiadomości e-mail do synchronizacji**: wybierz liczbę dni okresu, z którego chcesz synchronizować pocztę e-mail, lub wybierz pozycję **Nieograniczone**, aby synchronizować wszystkie dostępne wiadomości e-mail.
-- **Typ zawartości do synchronizowania** (tylko Nine Work): Wybierz typy zawartości, które chcesz synchronizować na urządzeniach. Wartość **Nieskonfigurowane** wyłącza to ustawienie. Jeśli w przypadku ustawienia wartości **Nieskonfigurowane** użytkownik końcowy włączy synchronizację na urządzeniu, to synchronizacja zostanie ponownie wyłączona podczas synchronizacji urządzenia z usługą Intune, ponieważ zasady zostały wzmocnione. 
-
-  Można synchronizować następującą zawartość: 
-  - **Kontakty**
-  - **Kalendarz**
-  - **Zadania**
+  Można synchronizować następującą zawartość:  
+  - **Kontakty**: wybierz pozycję **Włącz**, aby zezwolić użytkownikom końcowym na synchronizowanie kontaktów z urządzeniami.
+  - **Kalendarz**: wybierz pozycję **Włącz**, aby zezwolić użytkownikom końcowym na synchronizowanie kalendarza z urządzeniami.
+  - **Zadania**: wybierz pozycję **Włącz**, aby zezwolić użytkownikom końcowym na synchronizowanie dowolnych zadań z urządzeniami.
 
 ## <a name="next-steps"></a>Następne kroki
-[Konfigurowanie ustawień poczty e-mail w usłudze Intune](email-settings-configure.md)
+
+[Przypisywanie profilu](device-profile-assign.md) i [monitorowanie jego stanu](device-profile-monitor.md).
+
+Można również utworzyć profile poczty e-mail dla [profilu służbowego w systemie Android Enterprise](email-settings-android-enterprise.md) oraz systemów [iOS](email-settings-ios.md), [Windows 10 i nowszych](email-settings-windows-10.md) i [Windows Phone 8.1](email-settings-windows-phone-8-1.md).
