@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/10/2019
+ms.date: 01/24/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: cd6ac0b1fdb64897a831c0111f7e0a611c85bede
-ms.sourcegitcommit: 513c59a23ca5dfa80a3ba6fc84068503a4158757
+ms.openlocfilehash: 51d1c477f490cb23c35ef54a0a5099ee4b4b035b
+ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54210707"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55068258"
 ---
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Jak czyścić z aplikacji usługi Intune tylko dane firmowe
 
@@ -36,6 +36,9 @@ Aby selektywnie usunąć dane aplikacji firmowych, utwórz żądanie czyszczenia
 
 >[!IMPORTANT]
 > Kontakty synchronizowane bezpośrednio z aplikacji do natywnej książki adresowej są usuwane. Nie można wyczyścić wszystkich kontaktów zsynchronizowanych z natywnej książki adresowej do innego źródła zewnętrznego. Obecnie dotyczy to tylko aplikacji Microsoft Outlook.
+
+## <a name="deployed-wip-policies-without-user-enrollment"></a>Wdrożone zasady funkcji WIP bez rejestracji użytkownika
+Zasady funkcji Windows Information Protection (WIP) można wdrożyć bez konieczności rejestracji urządzeń z systemem Windows 10 przez użytkowników zarządzania urządzeniami przenośnymi. Ta konfiguracja pozwala firmom na ochronę firmowych dokumentów na podstawie konfiguracji funkcji WIP, jednocześnie umożliwiając użytkownikom zarządzanie własnymi urządzeniami z systemem Windows. Gdy dokumenty są chronione za pomocą zasad funkcji WIP, chronione dane mogą być selektywnie czyszczone przez administratora usługi Intune. Wybierając użytkownika i urządzenie oraz wysyłając żądanie czyszczenia, wszystkie dane chronione za pomocą zasad funkcji WIP staną się bezużyteczne. Z usługi Intune w witrynie Azure Portal wybierz pozycję **Aplikacja kliencka** > **Selektywne czyszczenie aplikacji**. Aby uzyskać więcej informacji, zobacz [Tworzenie i wdrażanie zasad ochrony aplikacji w funkcji Windows Information Protection (WIP) za pomocą usługi Intune](windows-information-protection-policy-create.md).
 
 ## <a name="create-a-wipe-request"></a>Tworzenie żądania czyszczenia
 

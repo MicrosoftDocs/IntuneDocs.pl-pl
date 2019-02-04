@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/18/2018
+ms.date: 01/16/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,24 +13,24 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a338cce6249cc7c5214a9d69a897cad3eaa09e93
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 54af9b1ef7872caddb972515d9c4765f8492bf00
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52188402"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831364"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>Dodawanie i używanie ustawień sieci Wi-Fi dla urządzeń w usłudze Microsoft Intune
 
-Aby przypisać ustawienia sieci bezprzewodowej dla użytkowników i urządzeń w Twojej organizacji, użyj profili sieci Wi-Fi usługi Microsoft Intune. W przypadku przypisania profilu sieci Wi-Fi użytkownicy mogą uzyskiwać dostęp do sieci Wi-Fi organizacji bez konieczności samodzielnego konfigurowania.
+Sieć Wi-Fi to sieć bezprzewodowa, która jest używana przez wiele urządzeń przenośnych w celu uzyskania dostępu do sieci. Usługa Microsoft Intune obejmuje wbudowane ustawienia sieci Wi-Fi, które można wdrażać do użytkowników i urządzeń w organizacji. Ta grupa ustawień jest nazywana „profilem” i można ją przypisywać do różnych użytkowników i grup. Po przypisaniu użytkownicy uzyskują dostęp do sieci Wi-Fi organizacji bez konieczności samodzielnego konfigurowania.
 
 Załóżmy, że instalujesz nową sieć Wi-Fi o nazwie Sieć Wi-Fi firmy Contoso. Następnie chcesz skonfigurować wszystkie urządzenia z systemem iOS tak, aby łączyły się z tą siecią. Oto proces:
 
 1. Utwórz profil sieci Wi-Fi zawierający ustawienia potrzebne do łączenia się z siecią bezprzewodową Sieć Wi-Fi firmy Contoso.
-2. Przypisz profil do grupy obejmującej wszystkich użytkowników urządzeń z systemem iOS.
+2. Przypisz profil do grupy uwzględniającej wszystkich użytkowników urządzeń z systemem iOS.
 3. Użytkownicy znajdują nową sieć Wi-Fi firmy Contoso na liście sieci bezprzewodowych w urządzeniu. Mogą następnie połączyć się z siecią przy użyciu wybranej metody uwierzytelniania.
 
-Wykonaj kroki opisane w tym artykule, aby utworzyć profil sieci Wi-Fi. Następnie zapoznaj się z tematami opisującymi ustawienia i szczegóły specyficzne dla poszczególnych platform.
+W tym artykule znajduje się lista czynności wymaganych do utworzenia profilu sieci Wi-Fi. Zawiera on również linki, które opisują różne ustawienia poszczególnych platform.
 
 ## <a name="supported-device-platforms"></a>Obsługiwane platformy urządzeń
 
@@ -45,7 +45,7 @@ Profile sieci Wi-Fi obsługują następujące platformy urządzeń:
 > [!NOTE]
 > Na urządzeniach z systemem Windows 8.1 można zaimportować konfigurację sieci Wi-Fi, która została wcześniej wyeksportowana z innego urządzenia.
 
-## <a name="create-a-wi-fi-device-profile"></a>Tworzenie profilu urządzenia sieci Wi-Fi
+## <a name="create-a-device-profile"></a>Tworzenie profilu urządzenia
 
 1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi** > wpisz nazwę usługi **Intune** w filtrze, a następnie wybierz pozycję **Microsoft Intune**. 
 2. Wybierz pozycję **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
@@ -56,7 +56,6 @@ Profile sieci Wi-Fi obsługują następujące platformy urządzeń:
     - **Android enterprise**
     - **iOS**
     - **macOS**
-    - **Windows Phone 8.1**
     - **Windows 8.1 lub nowszy**
     - **Windows 10 lub nowszy**
 
@@ -80,4 +79,4 @@ Profile sieci Wi-Fi obsługują następujące platformy urządzeń:
 
 ## <a name="next-steps"></a>Następne kroki
 
-Profil został utworzony, ale nie wykonuje żadnych czynności. Następnie [przypisz ten profil](device-profile-assign.md).
+Profil został utworzony, ale nie wykonuje żadnych czynności. Następnie [przypiszesz ten profil](device-profile-assign.md) i będziesz [monitorować jego stan](device-profile-monitor.md).

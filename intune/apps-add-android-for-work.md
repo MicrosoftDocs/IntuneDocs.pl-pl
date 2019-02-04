@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/11/2019
+ms.date: 01/25/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,14 +16,14 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 135aa120d8c0e441c59e9b9b3c5bb8ee6aa17229
-ms.sourcegitcommit: 8c1590db761cc411369cae26677f909d3a8ca297
+ms.openlocfilehash: a2f339c9ecf79f3c2e4e87eccd9a5f3b80046aa0
+ms.sourcegitcommit: 17f58d35a6bdff3e179662f3731fc74d39144470
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54239578"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55105208"
 ---
-# <a name="assign-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Przypisywanie zarządzanych aplikacji ze sklepu Google Play do urządzeń z systemem Android Enterprise z usługą Intune
+# <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Dodawanie zarządzanych aplikacji ze sklepu Google Play do urządzeń z systemem Android Enterprise z usługą Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
@@ -37,7 +37,36 @@ Ponadto możesz przypisywać utworzone samodzielnie aplikacje biznesowe w nastę
 
 Upewnij się, że w obciążeniu **Rejestrowanie urządzenia** w witrynie Azure Portal usługa Intune i profile służbowe systemu Android zostały skonfigurowane do współpracy. Aby uzyskać więcej informacji, zobacz [Rejestrowanie urządzeń z systemem Android](android-work-profile-enroll.md).
 
-## <a name="synchronize-an-app-from-the-managed-google-play-store"></a>Synchronizowanie aplikacji z zarządzanego sklepu Google Play
+>[!NOTE]
+>Jeśli pracujesz, korzystając z usługi Microsoft Intune, firma Microsoft zaleca używanie przeglądarki Microsoft Edge lub Google Chrome.
+
+## <a name="managed-google-play-app-type"></a>Typ aplikacji zarządzanej ze sklepu Google Play 
+Dzięki zastosowaniu typów aplikacji **zarządzanych ze sklepu Google Play** będzie można wybiórczo dodawać [aplikacje zarządzane ze sklepu Google Play](https://play.google.com/work/search?q=microsoft&c=apps) do usługi Intune. Administratorzy usługi Intune mogą przeglądać, wyszukiwać, zatwierdzać, synchronizować i przypisywać zatwierdzone aplikacje zarządzane ze sklepu Google Play z poziomu usługi Intune.  Nie jest już konieczne przechodzenie do zarządzanej konsoli Google Play i dokonywanie ponownego uwierzytelniania. 
+
+> [!NOTE]
+> Jeśli chcesz zsynchronizować aplikację zarządzaną ze sklepu Google Play z usługą Intune, zobacz sekcję [Synchronizowanie aplikacji z zarządzanego sklepu Google Play przy użyciu usługi Intune](apps-add-android-for-work.md#synchronize-a-managed-google-play-app-with-intune-alternative)
+
+## <a name="add-a-managed-google-play-app-using-intune"></a>Dodawanie aplikacji zarządzanej ze sklepu Google Play przy użyciu usługi Intune
+
+1. Zaloguj się do [portalu Azure](https://portal.azure.com).
+2. Wybierz pozycję **Wszystkie usługi** > **Intune**.  
+    Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
+3. W okienku **Intune** wybierz pozycję **Aplikacje klienckie** > **Aplikacje**.
+5. W okienku **Aplikacje** wybierz pozycję **Dodaj**.
+6. W polu listy rozwijanej **Typ aplikacji** wybierz pozycję **Zarządzany sklep Google Play**.
+7. Wybierz pozycję **Zarządzany sklep Google Play — zatwierdzanie aplikacji**, aby wyszukiwać zatwierdzonych aplikacji zarządzane ze sklepu Google Play.
+8. Kliknij każdą aplikację, którą chcesz uwzględnić. Następnie:
+9. Kliknij pozycję **Zatwierdź**, aby zatwierdzić aplikację zarządzaną ze sklepu Google Play, a następnie kliknij pozycję **Zatwierdź**, aby zaakceptować uprawnienia aplikacji. 
+10. Kliknij przycisk **OK**, aby uwzględnić aplikacje.
+11. Kliknij przycisk **Dodaj** w okienku **dodawania aplikacji**, aby przeprowadzić synchronizację z usługą zarządzanego sklepu Google Play.
+
+## <a name="synchronize-a-managed-google-play-app-with-intune-alternative"></a>Synchronizowanie aplikacji z zarządzanego sklepu Google Play przy użyciu usługi Intune (alternatywa)
+Jeśli wolisz zsynchronizować aplikację z zarządzanego sklepu Google Play, zamiast dodawać ją bezpośrednio za pomocą usługi Intune, wykonaj poniższe kroki.
+
+> [!IMPORTANT]
+> Informacje podane poniżej przedstawiają alternatywną metodę dodawania aplikacji z zarządzanego sklepu Google Play za pomocą usługi Intune zgodnie z powyższym opisem.
+
+### <a name="synchronize-an-app-from-the-managed-google-play-store"></a>Synchronizowanie aplikacji z zarządzanego sklepu Google Play
 
 1. Przejdź do [zarządzanego sklepu Google Play](https://play.google.com/work). Zaloguj się za pomocą tego samego konta, którego użyto do skonfigurowania połączenia między usługą Intune i rozwiązaniem Android enterprise.
 2. Wyszukaj w sklepie i wybierz aplikację, którą chcesz przypisać za pomocą usługi Intune.
@@ -58,7 +87,7 @@ Upewnij się, że w obciążeniu **Rejestrowanie urządzenia** w witrynie Azure 
 
     Aplikacja została zatwierdzona i jest wyświetlana w konsoli administratora IT. Następnie możesz [zsynchronizować aplikację profilu służbowego systemu Android z usługą Intune](apps-add-android-for-work.md#sync-a-managed-google-play-app-with-intune). 
 
-## <a name="sync-a-managed-google-play-app-with-intune"></a>Synchronizowanie aplikacji z zarządzanego sklepu Google Play z usługą Intune
+### <a name="sync-a-managed-google-play-app-with-intune"></a>Synchronizowanie aplikacji z zarządzanego sklepu Google Play z usługą Intune
 
 Jeśli aplikacja ze sklepu została zatwierdzona, ale nie jest widoczna w węźle **Licencjonowane aplikacje** w obciążeniu **Aplikacje klienckie**, wymuś natychmiastową synchronizację w następujący sposób:
 
@@ -71,7 +100,9 @@ Jeśli aplikacja ze sklepu została zatwierdzona, ale nie jest widoczna w węźl
 6. W okienku obciążenia **Aplikacje klienckie** wybierz pozycję **Aplikacje**.  
     Zostanie wyświetlona nowo udostępniona aplikacja z zarządzanego sklepu Google Play.
 
-Gdy aplikacja zostanie wyświetlona w węźle **Licencje aplikacji** w okienku obciążenia **Aplikacje klienckie**, możesz [przypisać ją w taki sam sposób, jak dowolną inną aplikację](/intune-azure/manage-apps/deploy-apps). Aplikacje można przypisywać tylko do grup użytkowników.
+## <a name="assigning-the-managed-google-play-app"></a>Przypisywanie aplikacji z zarządzanego sklepu Google Play
+
+Gdy aplikacja zostanie wyświetlona w węźle **Licencje aplikacji** w okienku obciążenia **Aplikacje klienckie**, możesz [przypisać ją w taki sam sposób, jak dowolną inną aplikację](/intune-azure/manage-apps/deploy-apps), przypisując aplikację do grup użytkowników.
 
 Po przypisaniu aplikacja jest instalowana na urządzeniach docelowych. Użytkownik urządzenia nie będzie monitowany o zatwierdzenie instalacji.
 
@@ -106,6 +137,9 @@ Można także skonfigurować sklep Google Play w taki sposób, aby automatycznie
 4. Po opublikowaniu aplikacji zaloguj się do [zarządzanego sklepu Google Play](https://play.google.com/work) za pomocą tego samego konta, którego użyto do skonfigurowania połączenia między usługą Intune i rozwiązaniem Android enterprise.
 5. W węźle **Aplikacje** w sklepie sprawdź, czy opublikowana aplikacja jest widoczna.  
     Ta aplikacja została automatycznie zatwierdzona do synchronizacji z usługą Intune.
+
+## <a name="delete-managed-google-play-apps"></a>Usuwanie aplikacji z zarządzanego sklepu Google Play 
+W razie potrzeby możesz usuwać aplikacje z zarządzanego sklepu Google Play z poziomu usługi Microsoft Intune. Aby usunąć aplikację z zarządzanego sklepu Google Play, otwórz usługę Microsoft Intune w witrynie Azure Portal i wybierz kolejno pozycje **Aplikacje klienckie** > **Aplikacje**. Na liście aplikacji wybierz wielokropek (...) po prawej stronie aplikacji z zarządzanego sklepu Google Play, a następnie wybierz pozycję **Usuń** z wyświetlonej listy. Po usunięciu aplikacji zarządzanej ze sklepu Google Play z listy aplikacji ta aplikacja zarządzana stanie się automatycznie aplikacją niezatwierdzoną.
 
 ## <a name="next-steps"></a>Następne kroki
 

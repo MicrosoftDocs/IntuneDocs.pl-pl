@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/26/2018
+ms.date: 01/23/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: ilwu
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
-ms.openlocfilehash: 5981b3dbb74209fbd4d7f0ab03adb5a35a41954b
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.openlocfilehash: d9dfa25c2528ea2f929c3db6714bc68fee013a7b
+ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54203539"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55072579"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Ustawienia systemu Windows 10 (oraz nowszych wersji) służące do ochrony urządzeń przy użyciu usługi Intune
 
@@ -152,6 +152,9 @@ Obsługiwany w następujących wersjach systemu Windows 10:
 Podstawowe ustawienia to uniwersalne ustawienia funkcji BitLocker dla wszystkich typów dysków danych. Te ustawienia zarządzają zadaniami szyfrowania dysku lub opcjami konfiguracji, które użytkownik końcowy może modyfikować w przypadku wszystkich typów dysków z danymi.
 
 - **Ostrzeżenie dotyczące innego szyfrowania dysku**: **Blokuj** — wyłączenie ostrzeżenia dotyczącego używania innej usługi szyfrowania dysku na urządzeniu. Ustawienie na wartość **Nie skonfigurowano** (ustawienie domyślne) zezwala na wyświetlanie ostrzeżeń.
+    - **Zezwalaj użytkownikom standardowym na włączanie szyfrowania podczas dołączania do usługi Azure AD**: W przypadku wybrania pozycji **Zezwalaj** użytkownicy standardowi/inni niż administratorzy mogą włączać szyfrowanie przy użyciu funkcji BitLocker, gdy użytkownik jest zalogowany. To ustawienie dotyczy tylko urządzeń dołączonych do usługi Azure Active Directory (Azure ADJ, Azure Active Directory Joined). Pozycja **Nieskonfigurowane** zezwala tylko administratorom na włączanie szyfrowania przy użyciu funkcji BitLocker na urządzeniu.
+      
+      To ustawienie dotyczy tylko urządzeń dołączonych do usługi Azure Active Directory (Azure ADJ, Azure Active Directory Joined). Wymaga ono również, aby ustawienie **Ostrzeżenie dotyczące innego szyfrowania dysku** miało wartość **Blokuj**.
 - **Konfiguruj metody szyfrowania**: **Włącz** — skonfiguruj algorytmy szyfrowania na potrzeby systemu operacyjnego, danych i dysków wymiennych. W przypadku ustawienia tej opcji na wartość **Nie skonfigurowano** (ustawienie domyślne) funkcja BitLocker używa 128-bitowego szyfrowania XTS-AES jako domyślnej metody szyfrowania lub używa metody szyfrowania określonej przez dowolny skrypt instalacji.
   - **Szyfrowanie dla dysków z systemami operacyjnymi**: Wybierz metodę szyfrowania dla dysków z systemami operacyjnymi. Zaleca się użycie algorytmu XTS-AES.
   - **Szyfrowanie dla stałych dysków danych**: Wybierz metodę szyfrowania dla stałych (wbudowanych) dysków danych. Zaleca się użycie algorytmu XTS-AES.

@@ -231,19 +231,19 @@ items:
       href: troubleshoot-device-enrollment-in-intune.md
   - name: Ustaw zgodność urządzenia
     items:
-    - name: Przegląd zgodności urządzenia
+    - name: Przegląd zgodności
       href: device-compliance-get-started.md
-    - name: Tworzenie zasad dla systemu Android
+    - name: Zgodność systemu Android
       href: compliance-policy-create-android.md
-    - name: Tworzenie zasad profilu w systemie Android Enterprise
+    - name: Zgodność rozwiązania Android Enterprise
       href: compliance-policy-create-android-for-work.md
-    - name: Tworzenie zasad w celu włączenia funkcji Google Play Protect
+    - name: Włączanie usługi Google Play Protect
       href: compliance-policy-create-google-play-protect.md
-    - name: Tworzenie zasad dla systemu iOS
+    - name: Zgodność systemu iOS
       href: compliance-policy-create-ios.md
-    - name: Tworzenie zasad dla systemu Windows
+    - name: Zgodność systemu Windows
       href: compliance-policy-create-windows.md
-    - name: Zasady oparte na lokalizacji
+    - name: Zgodność oparta na lokalizacji
       href: use-network-locations.md
     - name: Ocena zasad
       href: policy-evaluate.md
@@ -251,39 +251,39 @@ items:
       href: actions-for-noncompliance.md
     - name: Monitorowanie zgodności urządzenia
       href: compliance-policy-monitor.md
-  - name: Konfigurowanie urządzeń
+  - name: Konfiguruj ustawienia urządzenia
     items:
-    - name: Konfigurowanie urządzeń przy użyciu profilów
+    - name: Przegląd konfiguracji urządzenia
       href: device-profiles.md
     - name: Profile urządzeń
       href: device-profile-create.md
     - name: Szablony administracyjne
       href: administrative-templates-windows.md
-    - name: Funkcje urządzeń (systemy iOS i MacOS)
+    - name: Funkcje urządzenia
       href: device-features-configure.md
-    - name: Ograniczenia dotyczące urządzeń
+    - name: Ograniczanie ustawień i funkcji urządzenia
       href: device-restrictions-configure.md
-    - name: Optymalizacja dostarczania
+    - name: Dostarczanie aktualizacji
       href: delivery-optimization-windows.md
-    - name: Uaktualnianie wersji i przełącznik trybów
+    - name: Uaktualnianie wersji i tryb S mode
       href: edition-upgrade-configure-windows-10.md
-    - name: Ustawienia poczty e-mail
+    - name: Konfigurowanie poczty e-mail
       href: email-settings-configure.md
-    - name: Ustawienia kiosku
+    - name: Włączanie trybu kiosku
       href: kiosk-settings.md
-    - name: Ustawienia sieci VPN
+    - name: Dodawanie sieci VPN
       href: vpn-settings-configure.md
       items:
       - name: Sieć VPN dla poszczególnych aplikacji systemu Android
         href: android-pulse-secure-per-app-vpn.md
       - name: Sieć VPN dla poszczególnych aplikacji systemu iOS
         href: vpn-setting-configure-per-app.md
-    - name: Ustawienia sieci Wi-Fi
+    - name: Dodawanie bezprzewodowej sieci Wi-Fi
       href: wi-fi-settings-configure.md
       items:
       - name: Sieć Wi-Fi z kluczem wstępnym
         href: wi-fi-profile-shared-key.md
-    - name: Ustawienia rozwiązań dla edukacji
+    - name: Aplikacja edukacyjna Wypełnij test
       href: education-settings-configure.md
     - name: Urządzenia udostępnione używane przez wielu użytkowników
       href: shared-user-device-settings.md
@@ -295,7 +295,7 @@ items:
       href: device-profile-assign.md
     - name: Monitorowanie profilów
       href: device-profile-monitor.md
-    - name: Rozwiązywanie problemów z profilami
+    - name: Typowe pytania i odpowiedzi
       href: device-profile-troubleshoot.md
   - name: Ochrona danych na urządzeniu
     items:
@@ -854,6 +854,8 @@ items:
       items:
       - name: Dokumentacja interfejsów API usługi Intune
         href: https://developer.microsoft.com/graph/docs/api-reference/beta/resources/intune_graph_overview
+    - name: Interfejsy API programu Graph służące do konfigurowania urządzeń
+      href: graph-apis-used-by-intune-device-configuration-windows.md
 - name: Zasoby
   items:
   - name: Przewodnik po dokumentacji usługi Microsoft Intune
@@ -949,9 +951,9 @@ items:
       href: data-outside-protect.md
     - name: Zapobieganie wyciekom danych na urządzeniach niezarządzanych
       href: data-leak-prevention.md
-ms.openlocfilehash: 9ba87d149285aea0e39e790f7e620bba52bb47bd
-ms.sourcegitcommit: 36e41b5164a72bf54c80a9f5ad054f77b0e8c07e
+ms.openlocfilehash: 456d3f4205ca9e24c4358c97a3a2f6a33d1a421f
+ms.sourcegitcommit: 4a1ac07efd66b45c1435649bcd7215adbd84898f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55504548"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55645193"

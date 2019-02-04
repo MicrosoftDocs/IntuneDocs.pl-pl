@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 01/10/2019
+ms.date: 01/25/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 264b7f4b476b18695c6dd0282f34a9af33b6b27f
-ms.sourcegitcommit: 1f544172299f0990e1e13cebf3830b8c0511d6ed
+ms.openlocfilehash: 21fde80ec80492957b686a66dcfe4db55894c38e
+ms.sourcegitcommit: 6f2f2fa70f4e47fa5ad2f3c536ba7116e1bd1d05
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/21/2019
-ms.locfileid: "54418214"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55199493"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co nowego w usłudze Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -31,6 +31,7 @@ Dowiedz się co tydzień, co nowego w usłudze Microsoft Intune. Możesz równie
 > [!Note]
 > Aby uzyskać informacje na temat nowych funkcji w ramach hybrydowego zarządzania urządzeniami przenośnymi, odwiedź stronę [Co nowego w funkcjach hybrydowych](/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management).
 
+**Kanał informacyjny RSS**: otrzymuj powiadomienie, gdy ta strona zostanie zaktualizowana przez skopiowanie i wklejenie następującego adresu URL w czytniku kanałów informacyjnych: `https://docs.microsoft.com/api/search/rss?search=%22What%27s+new+in+microsoft+intune%3F+-+Azure%22&locale=en-us`
 
 <!-- Common categories:  
 ### App management
@@ -42,6 +43,102 @@ Dowiedz się co tydzień, co nowego w usłudze Microsoft Intune. Możesz równie
 ### Role-based access control
 
 -->     
+## <a name="week-of-january-21-2019"></a>Tydzień od 21 stycznia 2019 r.
+
+### <a name="app-management"></a>Zarządzanie aplikacjami
+
+#### <a name="toast-notifications-for-win32-apps----3136566-----"></a>Wyskakujące powiadomienia dla aplikacji Win32 <!-- 3136566   -->
+Można pominąć wyświetlanie wyskakujących powiadomień dla użytkownika końcowego podczas przypisywania aplikacji. W usłudze Intune wybierz kolejno pozycje **Aplikacje klienckie** > **Aplikacje** > wybierz aplikację > **Przypisania** > **Uwzględnij grupy**. 
+
+#### <a name="intune-app-protection-policies-ui-update----3251427----"></a>Aktualizacja interfejsu użytkownika zasad ochrony aplikacji usługi Intune <!-- 3251427  -->
+Zmieniliśmy etykiety ustawień i przycisków funkcji ochrony aplikacji usługi Intune, aby ułatwić ich zrozumienie. Oto niektóre zmiany:  
+- Kontrolki **tak** / **nie** zostały zmienione głównie na kontrolki **blokuj** / **zezwalaj ** oraz **wyłącz** / **włącz**. Etykiety również zostały aktualizowane.  
+- Format ustawień został zmieniony, dzięki czemu ustawienie i jego etykieta znajdują się obok siebie w kontrolce, umożliwiając lepszą nawigację.   
+
+Ustawienia domyślne i liczba ustawień pozostają takie same, lecz ta zmiana pozwala użytkownikowi lepiej zrozumieć i wykorzystać ustawienia w celu stosowania wybranych zasad ochrony aplikacji, a także łatwiej nawigować po nich. Aby uzyskać informacje, zobacz [Ustawienia systemu iOS](app-protection-policy-settings-ios.md) i [Ustawienia systemu Android](app-protection-policy-settings-android.md).
+
+#### <a name="additional-settings-for-outlook----3301182----"></a>Dodatkowe ustawienia dla programu Outlook <!-- 3301182  -->
+Teraz, używając usługi Intune, można skonfigurować dodatkowe ustawienia dla programu Outlook dla systemów iOS i Android.  Te ustawienia są następujące: Zezwalaj na używanie tylko kont służbowych w programie Outlook w systemach iOS i Android Wdrażaj nowoczesne uwierzytelnianie dla usługi Office 365 i hybrydowe nowoczesne uwierzytelniania na kontach Użyj elementu `SAMAccountName` dla pola nazwy użytkownika w profilu poczty e-mail w przypadku wybrania uwierzytelniania podstawowego Zezwalaj na zapisywanie kontaktów Konfiguruj adresatów zewnętrznych (MailTips) Konfiguruj funkcję **Priorytetowa skrzynka odbiorcza** Wymagaj biometrii do uzyskiwania dostępu do programu Outlook dla systemu iOS Blokuj obrazy zewnętrzne
+> [!NOTE]
+> Jeśli do zarządzania dostępem do tożsamości firmowych są używane zasady rozwiązania Intune App Protection, warto rozważyć wyłączenie **wymagania danych biometrycznych**. Aby uzyskać więcej informacji, zobacz **Wymagaj poświadczeń firmowych w celu udzielenia dostępu** dla [ustawień dotyczących dostępu systemu iOS](app-protection-policy-settings-ios.md#access-settings) i [ustawień dotyczących dostępu systemu Android](app-protection-policy-settings-android.md#access-settings).
+
+#### <a name="delete-android-enterprise-apps----1352553---"></a>Usuwanie aplikacji systemu Android Enterprise <!-- 1352553 -->
+Możesz usuwać aplikacje z zarządzanego sklepu Google Play z poziomu usługi Microsoft Intune. Aby usunąć aplikację z zarządzanego sklepu Google Play, otwórz usługę Microsoft Intune w witrynie Azure Portal i wybierz kolejno pozycje **Aplikacje klienckie** > **Aplikacje**. Na liście aplikacji wybierz wielokropek (...) po prawej stronie aplikacji z zarządzanego sklepu Google Play, a następnie wybierz pozycję **Usuń** z wyświetlonej listy. Po usunięciu aplikacji zarządzanej ze sklepu Google Play z listy aplikacji ta aplikacja zarządzana stanie się automatycznie aplikacją niezatwierdzoną.
+
+#### <a name="managed-google-play-app-type----1352580---"></a>Typ aplikacji zarządzanej ze sklepu Google Play <!-- 1352580 -->
+Dzięki zastosowaniu typów aplikacji **zarządzanych ze sklepu Google Play** będzie można wybiórczo dodawać [aplikacje zarządzane ze sklepu Google Play](https://play.google.com/work/search?q=microsoft&c=apps) do usługi Intune. Administratorzy usługi Intune mogą przeglądać, wyszukiwać, zatwierdzać, synchronizować i przypisywać zatwierdzone aplikacje zarządzane ze sklepu Google Play z poziomu usługi Intune.  Nie jest już konieczne przechodzenie do zarządzanej konsoli Google Play i dokonywanie ponownego uwierzytelniania.  W usłudze Intune wystarczy wybrać pozycję **Aplikacje klienckie** > **Aplikacje** > **Dodaj**. Natomiast na liście **Typ aplikacji** będzie trzeba wybrać pozycję **Zarządzany sklep Google Play**.
+
+### <a name="device-configuration"></a>Konfiguracja urządzenia
+
+#### <a name="use-microsoft-recommended-settings-with-security-baselines-public-preview----2055484-----"></a>Używanie ustawień zalecanych przez firmę Microsoft z punktami odniesienia zabezpieczeń (publiczna wersja zapoznawcza) <!-- 2055484   -->
+Uwaga: Ta funkcja jest nadal wprowadzana i będzie dostępna wkrótce.
+
+Usługa Intune umożliwia integrację z innymi usługami koncentrującymi się na zabezpieczeniach, w tym z usługą Windows Defender ATP i usługą Office 365 ATP. Klienci pytają o typową strategię i spójny zestaw kompleksowych przepływów pracy zabezpieczeń w usługach Microsoft 365. Naszym celem jest dopasowanie strategii w celu utworzenia rozwiązań, które łączą operacje zabezpieczeń i typowe zadania administratora. W usłudze Intune staramy się osiągnąć ten cel, publikując zestaw „punktów odniesienia zabezpieczeń” zalecanych przez firmę Microsoft (**Intune** > **Punkty odniesienia zabezpieczeń**).  Administrator może tworzyć zasady zabezpieczeń bezpośrednio z tych punktów odniesienia, a następnie wdrażać je dla użytkowników. Możesz również dostosować rekomendacje dotyczące najlepszych rozwiązań do potrzeb organizacji. Usługa Intune zapewnia, że urządzenia pozostają w zgodności z tymi punktami odniesienia, i powiadamia administratorów użytkowników lub urządzeń, które nie są zgodne.
+
+Aby dowiedzieć się więcej na temat punktów odniesienia zabezpieczeń, zobacz temat [Create a Windows 10 security baseline in Intune](security-baselines-monitor.md) (Tworzenie punktu odniesienia zabezpieczeń systemu Windows 10 w usłudze Intune).
+
+Ta funkcja ma zastosowanie do: System Windows 10 lub nowszy
+
+#### <a name="non-administrators-can-enable-bitlocker-on-windows-10-devices-joined-to-azure-ad---2147379-----"></a>Użytkownicy inni niż administratorzy mogą włączyć funkcję BitLocker na urządzeniach z systemem Windows 10 dołączonych do usługi Azure AD<!-- 2147379   -->
+Włączenie ustawień funkcji BitLocker na urządzeniach z systemem Windows 10 (**Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **Windows 10 i nowsze** jako platforma > **Endpoint Protection** jako typ profilu > **Szyfrowanie systemu Windows**) oznacza dodanie ustawień funkcji BitLocker. 
+
+Ta aktualizacja obejmuje nowe ustawienie funkcji BitLocker, które zezwala użytkownikom standardowym (innym niż administratorzy) na włączanie szyfrowania. 
+
+Aby wyświetlić te ustawienia, zobacz [Ustawienia programu Endpoint Protection dla systemu Windows 10](endpoint-protection-windows-10.md#windows-encryption).
+
+#### <a name="check-for-configuration-manager-compliance----2192052--eepublished----"></a>Sprawdzanie zgodności w programie Configuration Manager <!-- 2192052  eepublished  -->
+Ta aktualizacja zawiera nowe ustawienie zgodności programu System Center Configuration Manager (**Zgodność urządzenia** > **Zasady** > **Utwórz zasady** > **System Windows 10 i nowsze** > **Zgodność z programem Configuration Manager**). Program Configuration Manager wysyła sygnały zgodności do usługi Intune. Przy użyciu tego ustawienia można wymagać, aby wszystkie sygnały programu Configuration Manager zwracały stan „zgodne”.
+
+Na przykład można wymagać, aby na urządzeniach były zainstalowane wszystkie aktualizacje oprogramowania. W programie Configuration Manager to wymaganie ma stan „Zainstalowano”. Jeśli jakiekolwiek programy na urządzeniu mają nieznany stan, to urządzenie jest niezgodne w usłudze Intune.
+
+To ustawienie opisano w sekcji [Zgodność z programem Configuration Manager](compliance-policy-create-windows.md#configuration-manager-compliance).
+
+Dotyczy: System Windows 10 lub nowszy
+
+#### <a name="customize-wallpaper-on-supervised-ios-devices-using-a-device-configuration-profile----2809324-----"></a>Dostosowywanie tapety na urządzeniach nadzorowanych z systemem iOS przy użyciu profilu konfiguracji urządzenia <!-- 2809324   -->
+Podczas tworzenia profilu konfiguracji urządzenia dla urządzeń z systemem iOS można dostosowywać niektóre funkcje (**Konfiguracja urządzeń** > **Profile** > **Utwórz profil** > **iOS** dla platformy > **Funkcje urządzenia** dla typu profilu). Ta aktualizacja obejmuje nowe ustawienia obszaru **Tapeta**, które umożliwiają administratorowi użycie obrazu PNG, JPG lub JPEG na ekranie głównym lub ekranie blokady. Te ustawienia dotyczące tapety mają zastosowanie tylko na urządzeniach nadzorowanych. 
+
+Listę tych ustawień można znaleźć w temacie [iOS device feature settings](ios-device-features-settings.md) (Ustawienia funkcji urządzeń z systemem iOS).
+
+#### <a name="windows-10-kiosk-is-generally-available----3594661----"></a>Kiosk systemu Windows 10 jest ogólnie dostępny <!-- 3594661  -->
+W tej aktualizacji funkcja kiosku jest udostępniana ogólnie na urządzeniach z systemem Windows 10 i nowszych. Aby zapoznać się ze wszystkimi ustawieniami, które można dodać i skonfigurować, zobacz temat [Ustawienia kiosku dla systemu Windows 10 (i nowszego)](kiosk-settings.md).
+
+#### <a name="contact-sharing-via-bluetooth-is-removed-in-device-restrictions--device-owner-for-android-enterprise----3598396-----"></a>Udostępnianie kontaktów za pośrednictwem połączenia Bluetooth zostało usunięte z obszaru Ograniczenia dotyczące urządzeń > Właściciel urządzenia w systemie Android Enterprise <!-- 3598396   -->
+Podczas tworzenia profilu ograniczeń dotyczących urządzeń z systemem Android Enterprise widoczne jest ustawienie **Udostępnianie kontaktów za pośrednictwem połączenia Bluetooth**. W ramach tej aktualizacji ustawienie **Udostępnianie kontaktów za pośrednictwem połączenia Bluetooth** zostało usunięte (**Konfiguracja urządzeń** > **Profile** > **Utwórz profil** > **Android Enterprise** dla platformy > **Ograniczenia dotyczące urządzeń > Właściciel urządzenia** dla typu profilu > **Ogólne**). 
+
+Ustawienie **Udostępnianie kontaktów za pośrednictwem połączenia Bluetooth** nie jest obsługiwane w przypadku zarządzania właścicielami urządzeń w systemie Android Enterprise. Po usunięciu tego ustawienia nie będzie ono miało wpływu na jakiekolwiek urządzenia czy dzierżawy, nawet jeśli to ustawienie zostało włączone i skonfigurowane w środowisku.
+
+Aby wyświetlić aktualną listę ustawień, zobacz [Ustawienia urządzeń z systemem Android Enterprise w celu zezwolenia na funkcje lub ich ograniczenia](device-restrictions-android-for-work.md).
+
+Dotyczy: właściciel urządzenia z systemem Android Enterprise
+
+#### <a name="intune-app-protection-policies-ui-update----3251427---"></a>Aktualizacja interfejsu użytkownika zasad ochrony aplikacji usługi Intune <!-- 3251427 -->
+Zmieniliśmy etykiety ustawień i przycisków funkcji ochrony aplikacji usługi Intune, aby ułatwić ich zrozumienie. Oto niektóre zmiany:  
+- Kontrolki **tak** / **nie** zostały zmienione głównie na kontrolki **blokuj** / **zezwalaj ** oraz **wyłącz** / **włącz**. Etykiety również zostały aktualizowane.  
+- Format ustawień został zmieniony, dzięki czemu ustawienie i jego etykieta znajdują się obok siebie w kontrolce, umożliwiając lepszą nawigację.   
+
+Ustawienia domyślne i liczba ustawień pozostają takie same, lecz ta zmiana pozwala użytkownikowi lepiej zrozumieć i wykorzystać ustawienia w celu stosowania wybranych zasad ochrony aplikacji, a także łatwiej nawigować po nich. Aby uzyskać informacje, zobacz [Ustawienia systemu iOS](app-protection-policy-settings-ios.md) i [Ustawienia systemu Android](app-protection-policy-settings-android.md).
+
+### <a name="device-management"></a>Zarządzanie urządzeniami
+
+#### <a name="selective-wipe-support-for-wip-without-enrollment-devices----1434452---"></a>Obsługa selektywnego czyszczenia danych dla urządzeń usługi WIP bez rejestracji <!-- 1434452 -->
+Usługa Windows Information Protection Without Enrollment (WIP-WE) umożliwia klientom ochronę danych firmowych na urządzeniach z systemem Windows 10 bez konieczności pełnej rejestracji w rozwiązaniu MDM. Gdy dokumenty są chronione za pomocą zasad funkcji WIP-WE, chronione dane mogą być selektywnie czyszczone przez administratora usługi Intune. Wybierając użytkownika i urządzenie oraz wysyłając żądanie czyszczenia, wszystkie dane chronione za pomocą zasad funkcji WIP-WE staną się bezużyteczne. Z usługi Intune w witrynie Azure Portal wybierz pozycję **Aplikacja mobilna** > **Selektywne czyszczenie aplikacji**.
+
+### <a name="monitor-and-troubleshoot"></a>Monitorowanie i rozwiązywanie problemów
+
+#### <a name="new-operational-logs-and-ability-to-send-logs-to-azure-monitor-services----3762211----"></a>Nowe dzienniki operacyjne i możliwość wysyłania dzienników do usług Azure Monitor <!-- 3762211  -->
+Usługa Intune ma wbudowaną funkcję rejestrowania inspekcji, która śledzi zdarzenia w miarę wprowadzania zmian. Ta aktualizacja obejmuje nowe funkcje rejestrowania, w tym: 
+- Dzienniki operacyjne (wersja zapoznawcza), które pokazują szczegóły użytkowników i zarejestrowanych urządzeń, łącznie z próbami udanymi i nieudanymi.
+- Dzienniki inspekcji i dzienniki operacyjne można wysyłać do usługi Azure Monitor, łącznie z informacjami na temat kont magazynu, centrów zdarzeń i analizy dzienników. Usługi te pozwalają na przechowywanie danych rejestrowania, korzystanie z analiz, takich jak Splunk i QRadar, oraz uzyskiwanie wizualizacji danych rejestrowania.
+
+Więcej informacji na temat tej funkcji zawiera artykuł [Send log data to storage, event hubs, or log analytics in Intune](review-logs-using-azure-monitor.md) (Wysyłanie danych dziennika do magazynu, centrów zdarzeń lub analizy dzienników w usłudze Intune).
+
+### <a name="skip-more-setup-assistant-screens-on-an-ios-dep-device----2687509----"></a>Pomijanie większej liczby ekranów Asystenta ustawień na urządzeniu DEP z systemem iOS <!-- 2687509  -->
+Oprócz ekranów, które obecnie możesz pominąć, możesz skonfigurować urządzenia z systemem iOS objęte programem DEP tak, aby następujące ekrany Asystenta ustawień były pomijane podczas rejestracji urządzenia przez użytkownika: Ton wyświetlacza, Prywatność, Migracja systemu Android, Przycisk Strona główna, iMessage i FaceTime, Przechodzenie do usługi, Migracja urządzenia Watch, Wygląd, Czas korzystania z urządzenia, Aktualizacja oprogramowania, Instalator SIM.
+Aby wybrać ekrany do pominięcia, przejdź kolejno do pozycji **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Tokeny programu rejestracji** > wybierz token > **Profile** > wybierz profil > **Właściwości** > **Dostosowywanie Asystenta ustawień** > wybierz pozycję **Ukryj**  dla ekranów do pominięcia > **OK**.
+Jeśli tworzysz nowy profil lub edytujesz profil, wybrane pomijane ekrany muszą być synchronizowane z serwerem MDM firmy Apple. Użytkownicy mogą wydać ręczną synchronizację urządzeń, aby nie było ma żadnego opóźnienia podczas pobierania zmian profilu.
+Rozpoczęliśmy wprowadzanie tej funkcji, ale udostępnienie jej wszystkim klientom może potrwać kilka dni.
+
 ## <a name="week-of-january-14-2019"></a>Tydzień od 14 stycznia 2019 r.
 
 ### <a name="preview-of-support-for-android-corporate-owned-fully-managed-devices----1574342----"></a>Obsługa należących do firmy, w pełni zarządzanych urządzeń z systemem Android — wersja zapoznawcza <!-- 1574342  -->

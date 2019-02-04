@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a8ebe8f8cd84ef5eb38bf7e17f413bcc6a0791cd
-ms.sourcegitcommit: c84e1845b854704c4b048832e365dd381c7f3754
+ms.openlocfilehash: bd282a6b23f33b11cbd046cac4f791d6d675e365
+ms.sourcegitcommit: 9739a9aab032ebb2c4b52ccfb454a9e0f78b2ee4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54122550"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54751216"
 ---
 # <a name="set-enrollment-restrictions"></a>Ustawianie ograniczeń rejestracji
 
@@ -100,7 +100,7 @@ Następujące metody kwalifikują się do autoryzacji jako rejestracja firmowa s
 - Urządzenie jest zarejestrowane w rozwiązaniu Windows Autopilot, ale nie jest to opcja „Tylko rejestracja w rozwiązaniu MDM” w oknie Ustawienia systemu Windows.
 - Numer IMEI urządzenia znajduje się w polu **Rejestrowanie urządzenia** > **[Identyfikatory urządzeń firmowych](corporate-identifiers-add.md)**. (Nieobsługiwany w systemie Windows Phone 8.1).
 - Urządzenie jest rejestrowane za pomocą [pakietu aprowizacji zbiorczej](windows-bulk-enroll.md).
-- Urządzenie jest rejestrowane za pomocą [funkcji automatycznego rejestrowania z programu SCCM dla współzarządzania](https://docs.microsoft.com/sccm/core/clients/manage/co-management-overview#how-to-configure-co-management.md).
+- Urządzenie jest rejestrowane za pomocą obiektu zasad grupy lub [funkcji automatycznego rejestrowania z programu SCCM dla współzarządzania](https://docs.microsoft.com/sccm/core/clients/manage/co-management-overview#how-to-configure-co-management.md).
  
 Następujące rejestracje są oznaczone jako firmowe przez usługę Intune, ale ponieważ nie umożliwiają administratorowi usługi Intune kontroli na poziomie urządzenia, będą zablokowane:
  - [Automatyczne rejestrowanie w rozwiązaniu MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) przez [przyłączenie do usługi Azure Active Directory podczas konfigurowania systemu Windows](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-frx)\*.

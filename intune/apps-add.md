@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2019
+ms.date: 01/24/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 95f41985f11803e6e1a474b38a2af6a891ddafcb
-ms.sourcegitcommit: bf1549eb59adc31ead8601e40253a7024b22853c
+ms.openlocfilehash: c615dd2dda680cd106fd099d180f57ce2a5ebfef
+ms.sourcegitcommit: 17f58d35a6bdff3e179662f3731fc74d39144470
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54067486"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55105225"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Dodawanie aplikacji do usługi Microsoft Intune 
 
@@ -52,7 +52,7 @@ W poniższej tabeli przedstawiono typy specyficzne dla aplikacji i sposób ich d
 | Aplikacje ze sklepu dla systemu iOS  | Aplikacja ze sklepu  | Wybierz **iOS** jako **typ aplikacji**, wyszukaj aplikację i wybierz aplikację w usłudze Intune. |
 | Aplikacje ze sklepu dla systemu Windows Phone 8.1  | Aplikacja ze sklepu  | Wybierz **Windows Phone 8.1** jako **typ aplikacji**, a następnie wprowadź adres URL Sklepu Microsoft dla aplikacji. |
 | Aplikacje ze sklepu Microsoft Store  | Aplikacja ze sklepu  | Wybierz **Windows** jako **typ aplikacji**, a następnie wprowadź adres URL sklepu Microsoft Store dla aplikacji. |
-| Aplikacje profilu służbowego systemu Android | Aplikacja ze sklepu  | Znajdź i zatwierdź aplikację profilu służbowego systemu Android w zarządzanym sklepie Google Play.  |
+| Aplikacje zarządzane ze sklepu Google Play | Aplikacja ze sklepu  | Wybierz **Zarządzany sklep Google Play** jako **typ aplikacji**, wyszukaj aplikację i wybierz aplikację w usłudze Intune. |
 | Aplikacje pakietu Office 365 dla systemu Windows 10  | Aplikacja ze sklepu (Office 365) | W obszarze **Pakiet Office 365** wybierz **Windows 10** jako **typ aplikacji**, a następnie wybierz aplikację usługi Office 365, którą chcesz zainstalować.  |
 | Aplikacje pakietu Office 365 dla systemu macOS | Aplikacja ze sklepu (Office 365) | W obszarze **Pakiet Office 365** wybierz **macOS** jako **typ aplikacji**, a następnie wybierz pakiet aplikacji usługi Office 365. |
 | Aplikacje biznesowe (LOB) dla systemu Android | Aplikacja LOB | Wybierz aplikację **Biznesowa** jako **typ aplikacji**, wybierz pozycję **Plik pakietu aplikacji**, a następnie wprowadź plik instalacyjny systemu Android z rozszerzeniem **.apk**.  |
@@ -119,7 +119,7 @@ W aplikacjach zarządzanych przez usługę Intune można również włączyć oc
 ### <a name="understanding-licensed-apps"></a>Licencjonowane aplikacje
 Oprócz zapoznania się z aplikacjami internetowymi, aplikacjami ze sklepu i aplikacjami biznesowymi należy także znać miejsca docelowe aplikacji programu zakupów zbiorczych i aplikacji licencjonowanych, takich jak: 
 - **Program Volume Purchase Program for Business (VPP) firmy Apple (iOS)**: sklep z aplikacjami dla systemu iOS umożliwia zakup wielu licencji dla aplikacji, które mają być uruchamiane w firmie. Zakup wielu kopii ułatwia efektywne zarządzanie aplikacjami w firmie. Aby uzyskać więcej informacji, zobacz [Zarządzanie aplikacjami dla systemu iOS nabytymi w ramach zakupów zbiorczych](vpp-apps-ios.md).
-- **Profil służbowy systemu Android**: Przypisywanie aplikacji do urządzeń z profilem służbowym systemu Android przebiega inaczej niż przypisywanie aplikacji do standardowych urządzeń z systemem Android. Wszystkie aplikacje, które instalujesz dla profilów służbowych Android, pochodzą z zarządzanego sklepu Google Play. Proces obejmuje zalogowanie się do sklepu, wyszukanie odpowiednich aplikacji, a następnie ich zatwierdzenie. Następnie aplikacja zostaje wyświetlona w węźle **Licencjonowane aplikacje** w witrynie Azure Portal i można zarządzać przypisaniem aplikacji w taki sam sposób, jak w przypadku wszystkich innych.
+- **Profil służbowy systemu Android**: Przypisywanie aplikacji do urządzeń z profilem służbowym systemu Android przebiega inaczej niż przypisywanie aplikacji do standardowych urządzeń z systemem Android. Wszystkie aplikacje, które instalujesz dla profilów służbowych Android, pochodzą z zarządzanego sklepu Google Play. Usługa Intune umożliwia wyszukiwanie wybranych aplikacji i ich zatwierdzanie. Następnie aplikacja zostaje wyświetlona w węźle **Licencjonowane aplikacje** w witrynie Azure Portal i można zarządzać przypisaniem aplikacji w taki sam sposób, jak w przypadku wszystkich innych.
 - **Microsoft Store dla Firm (Windows 10)**: sklep Microsoft Store dla Firm to miejsce, w którym można znaleźć i zakupić aplikacje dla całej organizacji, pojedynczo lub zbiorczo. Łącząc sklep z usługą Microsoft Intune, aplikacjami nabytymi w ramach zakupów zbiorczych można zarządzać bezpośrednio w witrynie Azure Portal. Aby uzyskać więcej informacji, zobacz [Zarządzanie aplikacjami zakupionymi w Sklepie Microsoft dla Firm](windows-store-for-business.md).
 
     > [!NOTE]

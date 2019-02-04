@@ -1,12 +1,11 @@
 ---
-title: Ustawienia sieci Wi-Fi dla urządzeń z systemem Android dla firm i kiosku systemu Android
-titleSuffix: Microsoft Intune
+title: Ustawienia sieci Wi-Fi dla urządzeń z systemem Android Enterprise oraz urządzeń kiosku — Microsoft Intune | Microsoft Docs
 description: Tworzenie lub dodawanie profilu konfiguracji urządzeń w sieci Wi-Fi dla systemu Android dla firm i kiosku systemu Android. Zapoznaj się z różnymi ustawieniami, w tym dotyczącymi dodawania certyfikatów, wybierania typu protokołu EAP i wybierania metody uwierzytelniania w usłudze Microsoft Intune. W przypadku urządzeń kiosku należy także wprowadzić klucz wstępny sieci.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 01/16/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,22 +13,22 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 1424cd43c6ccde17724a4165fe74def4da291e29
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: ea72cda4cb72af9028c52078e2215619bb2bef3c
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112361"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831483"
 ---
 # <a name="add-wi-fi-settings-for-devices-running-android-enterprise-and-android-kiosk-in-microsoft-intune"></a>Dodawanie ustawień sieci Wi-Fi dla urządzeń z systemem Android dla firm i kiosku systemu Android w usłudze Microsoft Intune
 
 Można utworzyć profil z określonymi ustawieniami sieci Wi-Fi, a następnie wdrożyć ten profil na urządzeniach z systemem Android dla firm i urządzeniach kiosku systemu Android. Usługa Microsoft Intune oferuje wiele funkcji, w uwierzytelnianie do sieci, korzystanie z klucza wstępnego i inne.
 
-W tym artykule opisano te ustawienia.
+W tym artykule opisano te ustawienia. Więcej informacji na temat funkcji sieci Wi-Fi w usłudze Microsoft Intune można znaleźć w artykule [Używanie sieci Wi-Fi na urządzeniach](wi-fi-settings-configure.md).
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
-[Utwórz profil urządzenia](device-profile-create.md).
+[Utwórz profil urządzenia](wi-fi-settings-configure.md#create-a-device-profile).
 
 ## <a name="device-owner-only---kiosk"></a>Tylko właściciel urządzenia — kiosk
 
@@ -66,7 +65,7 @@ Wybierz przycisk **OK**, aby zapisać zmiany.
 
   - **EAP-TLS**: Wprowadź też następujące ustawienia:
 
-    - **Zaufanie serwera** - **Certyfikat główny weryfikacji serwera**: wybierz istniejący profil zaufanego certyfikatu głównego. Ten certyfikat jest przesyłany na serwer, gdy klient łączy się z siecią, i jest używany do uwierzytelniania połączenia.
+    - **Zaufanie serwera** - **Certyfikat główny weryfikacji serwera**: wybierz istniejący profil zaufanego certyfikatu głównego. Gdy klient łączy się z siecią, ten certyfikat jest przedstawiany na serwerze i uwierzytelnia połączenie.
 
       Wybierz przycisk **OK**, aby zapisać zmiany.
 
@@ -76,13 +75,13 @@ Wybierz przycisk **OK**, aby zapisać zmiany.
 
   - **EAP-TTLS**: Wprowadź też następujące ustawienia:
 
-    - **Zaufanie serwera** - **Certyfikat główny weryfikacji serwera**: wybierz istniejący profil zaufanego certyfikatu głównego. Ten certyfikat jest przesyłany na serwer, gdy klient łączy się z siecią, i jest używany do uwierzytelniania połączenia.
+    - **Zaufanie serwera** - **Certyfikat główny weryfikacji serwera**: wybierz istniejący profil zaufanego certyfikatu głównego. Gdy klient łączy się z siecią, ten certyfikat jest przedstawiany na serwerze i uwierzytelnia połączenie.
 
       Wybierz przycisk **OK**, aby zapisać zmiany.
 
     - **Uwierzytelnianie klienta**: wybierz **metodę uwierzytelniania**. Dostępne opcje:
 
-      - **Nazwa użytkownika i hasło**: Monituj użytkownika o nazwę użytkownika i hasło w celu uwierzytelnienia połączenia. Wprowadź też następujące ustawienia:
+      - **Nazwa użytkownika i hasło**: monituj użytkownika o nazwę użytkownika i hasło w celu uwierzytelnienia połączenia. Wprowadź też następujące ustawienia:
         - **Metoda bez protokołu EAP (tożsamość wewnętrzna)**: wybierz sposób uwierzytelniania połączenia. Pamiętaj, aby wybrać ten sam protokół, który został skonfigurowany w sieci Wi-Fi.
 
           Dostępne opcje: **Hasło nieszyfrowane (PAP)**, **Protokół uwierzytelniania typu Challenge Handshake (CHAP)**, **Microsoft CHAP (MS-CHAP)** i **Microsoft CHAP wersja 2 (MS-CHAP v2)**
@@ -95,7 +94,7 @@ Wybierz przycisk **OK**, aby zapisać zmiany.
 
   - **PEAP**: Wprowadź też następujące ustawienia:
 
-    - **Zaufanie serwera** - **Certyfikat główny weryfikacji serwera**: wybierz istniejący profil zaufanego certyfikatu głównego. Ten certyfikat jest przesyłany na serwer, gdy klient łączy się z siecią, i jest używany do uwierzytelniania połączenia.
+    - **Zaufanie serwera** - **Certyfikat główny weryfikacji serwera**: wybierz istniejący profil zaufanego certyfikatu głównego. Gdy klient łączy się z siecią, ten certyfikat jest przedstawiany na serwerze i uwierzytelnia połączenie.
 
       Wybierz przycisk **OK**, aby zapisać zmiany.
 
@@ -116,9 +115,6 @@ Wybierz kolejno pozycje **OK** > **Utwórz**, aby zapisać zmiany. Profil zostan
 
 ## <a name="next-steps"></a>Następne kroki
 
-Profil został utworzony, ale nie wykonuje żadnych czynności. Następnie [przypisz ten profil](device-profile-assign.md).
+Profil został utworzony, ale nie wykonuje żadnych czynności. Następnie [przypiszesz ten profil](device-profile-assign.md) i będziesz [monitorować jego stan](device-profile-monitor.md).
 
-## <a name="more-resources"></a>Dodatkowe zasoby
-
-- Informacje o ustawieniach dostępnych dla urządzeń z systemem Android można znaleźć w temacie [Ustawienia sieci Wi-Fi dla urządzeń z systemem Android](wi-fi-settings-android.md).
-- [Omówienie ustawień sieci Wi-Fi](wi-fi-settings-configure.md), w tym informacje na temat innych platform.
+Możesz również utworzyć profile sieci Wi-Fi dla urządzeń z systemami [Android](wi-fi-settings-android.md), [iOS](wi-fi-settings-ios.md), [macOS](wi-fi-settings-macos.md), [Windows 10](wi-fi-settings-windows.md) i [Windows 8.1](wi-fi-settings-import-windows-8-1.md).

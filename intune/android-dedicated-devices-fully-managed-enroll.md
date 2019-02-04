@@ -16,23 +16,23 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 9f9f95c42be252e0b2be515344e01a1d93e2cc6c
-ms.sourcegitcommit: 911923e9fe0eed52b1c93e400f776956835e582f
+ms.openlocfilehash: 0eb12470c20efd8d455f8bb165455ae4266da956
+ms.sourcegitcommit: 2a1720184cec577684a64af85d0d731693d11d81
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54387221"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55146897"
 ---
 # <a name="enroll-your-android-dedicated-devices-or-fully-managed-devices-preview"></a>Rejestrowanie dedykowanych lub w pełni zarządzanych urządzeń z systemem Android (wersja zapoznawcza)
 
 Po skonfigurowaniu [dedykowanych](android-kiosk-enroll.md) lub [w pełni zarządzanych](android-fully-managed-enroll.md) urządzeń z systemem Android w usłudze Intune możesz zarejestrować te urządzenia. Sposób rejestrowania urządzeń z systemem Android zależy od systemu operacyjnego.
 
-| Metoda rejestracji | Minimalna wersja systemu operacyjnego Android dla urządzeń dedykowanych | Minimalna wersja systemu operacyjnego Android dla urządzeń w pełni zarządzanych |
-| ----- | ----- | ----- |
-| Komunikacja zbliżeniowa | 5.1 | 6.0 |
-| Wpis tokenu | 6.0 | 6.0 |
-| Kod QR | 7.0 | 7.0 |
-| Zero Touch  | 8.0\* | 8.0\* |
+| Metoda rejestracji | Minimalna wersja systemu operacyjnego Android dla urządzeń dedykowanych i w pełni zarządzanych |
+| ----- | ----- |
+| Komunikacja zbliżeniowa | 5.1 |
+| Wpis tokenu | 6.0 |
+| Kod QR | 7.0 |
+| Zero Touch  | 8.0\* |
 
 \* W przypadku producentów uczestniczących w programie.
 
@@ -42,7 +42,7 @@ W przypadku urządzeń obsługujących komunikację zbliżeniową (NFC, Near Fie
 
 ### <a name="enroll-by-using-a-token"></a>Rejestracja przy użyciu tokenu
 
-W przypadku urządzeń z systemem Android 6 lub nowszym można użyć tokenu do zarejestrowania urządzenia. System Android 6.1 i jego nowsze wersje mogą również używać skanowania kodu QR w przypadku korzystania z metody rejestracji **aft#setup**.
+W przypadku urządzeń z systemem Android 6 lub nowszym można użyć tokenu do zarejestrowania urządzenia. System Android 6.1 i jego nowsze wersje mogą również używać skanowania kodu QR w przypadku korzystania z metody rejestracji **afw#setup**.
 
 1. Włącz wyczyszczone urządzenie.
 2. Na ekranie **powitalnym** wybierz swój język.

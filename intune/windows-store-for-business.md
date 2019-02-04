@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/01/2018
+ms.date: 01/22/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 1584344907df168a98f947e187d6f0f0ef4a492a
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: d6ee36785c4134dd1c346bdc464096e832df3a9c
+ms.sourcegitcommit: f854ed8619ac66fe626198d8e4a8cac2e0c0710a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187926"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54460059"
 ---
 # <a name="how-to-manage-apps-you-purchased-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Jak zarządzać aplikacjami zakupionymi w Sklepie Microsoft dla Firm za pomocą usługi Microsoft Intune
 
@@ -52,12 +52,12 @@ Ponadto powiązane zestawy i aplikacje licencjonowane w trybie offline synchroni
 
 ## <a name="associate-your-microsoft-store-for-business-account-with-intune"></a>Kojarzenie konta w Sklepie Microsoft dla Firm z usługą Intune
 Przed włączeniem synchronizacji w konsoli usługi Intune należy skonfigurować konto w sklepie, aby używało usługi Intune jako narzędzia do zarządzania:
-1. Upewnij się, że logujesz się w Sklepie Windows dla firm za pomocą tego samego konta dzierżawy, którego używasz do logowania się do usługi Intune.
-2. W Sklepie dla firm wybierz opcję **Ustawienia** > **Narzędzia do zarządzania**.
-3. Na stronie Narzędzia do zarządzania wybierz opcję **Dodaj narzędzie do zarządzania**, a następnie wybierz pozycję **Microsoft Intune**.
+1. Upewnij się, że logujesz się w sklepie [Microsoft Store dla Firm](https://www.microsoft.com/business-store) za pomocą tego samego konta dzierżawy, którego używasz do logowania się do usługi Intune.
+2. W sklepie Store dla Firm wybierz kartę **Zarządzaj**, wybierz pozycję **Ustawienia** i wybierz kartę **Rozpowszechniaj**.
+3. Jeśli usługa **Microsoft Intune** nie jest dostępna jako wybrane narzędzie do zarządzania urządzeniami przenośnymi, wybierz **pozycję Dodaj narzędzie do zarządzania**, aby dodać usługę **Microsoft Intune**. Jeśli nie masz usługi **Microsoft Intune** aktywowanej jako narzędzie do zarządzania urządzeniami przenośnymi, kliknij pozycję **Aktywuj** obok pozycji **Microsoft Intune**. Pamiętaj, że powinno się aktywować usługę **Microsoft Intune**, a nie pozycję **Rejestracja w usłudze Microsoft Intune**.
 
 > [!NOTE]
-> Wcześniej można było skojarzyć tylko jedno narzędzie do zarządzania, aby przypisać aplikację za pomocą Sklepu Microsoft dla Firm. Teraz ze sklepem można skojarzyć wiele narzędzi do zarządzania (np. usługę Intune i program Configuration Manager).
+> Wcześniej można było skojarzyć tylko jedno narzędzie do zarządzania, aby przypisać aplikację za pomocą Sklepu Microsoft dla Firm. Teraz ze sklepem można skojarzyć wiele narzędzi do zarządzania (np. usługę Intune i program Configuration Manager). 
 
 Teraz możesz przejść do konfigurowania synchronizacji w konsoli Intune.
 
@@ -92,12 +92,12 @@ W przypadku przypisania aplikacji ze Sklepu Microsoft dla Firm licencja będzie 
 
 ## <a name="remove-apps"></a>Usuwanie aplikacji
 
-Aby usunąć aplikację synchronizowaną ze sklepem Microsoft Store dla firm, należy zalogować się do sklepu Microsoft Store dla firm i zwrócić aplikację.
+Aby usunąć aplikację synchronizowaną ze sklepem Microsoft Store dla firm, należy zalogować się do sklepu Microsoft Store dla firm i zwrócić aplikację. Proces jest taki sam, bez względu na to, czy aplikacja jest bezpłatna, czy nie. W przypadku aplikacji bezpłatnej sklep zwróci 0 USD. W poniższym przykładzie przedstawiono zwrot pieniędzy za bezpłatną aplikację. 
 
 ![Zrzut ekranu przedstawiający szczegóły usuwania aplikacji](./media/microsoft-store-for-business-01.png)
 
 > [!NOTE]
-> Ukrycie aplikacji w sklepie prywatnym nie zapobiega synchronizowaniu jej przez usługę Intune. Jest konieczne zwrócenie aplikacji.
+> Ukrycie aplikacji w sklepie prywatnym nie zapobiega synchronizowaniu jej przez usługę Intune. W celu całkowitego usunięcia aplikacji należy uzyskać zwrot jej kosztów.
 
 ## <a name="next-steps"></a>Następne kroki
 

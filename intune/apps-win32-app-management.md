@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/20/2018
+ms.date: 01/23/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 11a698628e3ca1342f10f088045012523c8ac745
-ms.sourcegitcommit: f114eeba1909c7d4e157003b1a9e2232dd1c99e3
+ms.openlocfilehash: cb52a9755dffd20e6d3d66419855cc4ee7fca293
+ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53734293"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55068326"
 ---
 # <a name="intune-standalone---win32-app-management-public-preview"></a>Autonomiczna usługa Intune — zarządzanie aplikacjami Win32 (publiczna wersja zapoznawcza)
 
@@ -239,6 +239,9 @@ Użytkownik końcowy nie będzie widzieć wyskakujących powiadomień systemu Wi
 Poniższy obraz przedstawia powiadomienie użytkownika końcowego o wprowadzeniu zmian na urządzeniu.
 
 ![Zrzut ekranu powiadamiający użytkownika o tym, że są wprowadzane zmiany aplikacji](./media/apps-win32-app-09.png)    
+
+## <a name="toast-notifications-for-win32-apps"></a>Wyskakujące powiadomienia dla aplikacji Win32 
+W razie potrzeby można pominąć wyświetlanie wyskakujących powiadomień dla użytkownika końcowego podczas przypisywania aplikacji. W usłudze Intune wybierz kolejno pozycje **Aplikacje klienckie** > **Aplikacje** > wybierz aplikację > **Przypisania** > **Uwzględnij grupy**. 
 
 ## <a name="troubleshoot-win32-app-issues"></a>Rozwiązywanie problemów z aplikacjami Win32
 Typowa lokalizacja dzienników agenta na maszynie klienta to `C:\ProgramData\Microsoft\IntuneManagementExtension\Logs`. Do wyświetlenia plików dziennika możesz użyć programu `CMTrace.exe`. Program *CMTrace.exe* można pobrać ze strony [Narzędzia klienta SCCM](https://docs.microsoft.com/sccm/core/support/tools). 

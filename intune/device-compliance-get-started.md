@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/17/2018
+ms.date: 01/28/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,32 +14,28 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: b896a1607dfc036fe248c233477239700dc96091
-ms.sourcegitcommit: 3297fe04ad0d10bc32ebdb903406c2152743179e
+ms.openlocfilehash: 806df8077045a4ad81cb7e221bd053059461a2fd
+ms.sourcegitcommit: 6f2f2fa70f4e47fa5ad2f3c536ba7116e1bd1d05
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53531332"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55199408"
 ---
 # <a name="get-started-with-device-compliance-policies-in-intune"></a>Wprowadzenie do zasad zgodności urządzeń w usłudze Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Wymagania dotyczące zgodności to zasadniczo reguły, takie jak wymóg stosowania numeru PIN urządzenia lub stosowania szyfrowania. Zasady zgodności urządzeń służą do definiowania reguł i ustawień, które muszą zostać zastosowane na urządzeniu, aby było uważane za zgodne. Reguły obejmują:
+Wiele rozwiązań do zarządzania urządzeniami mobilnymi (MDM) pomaga chronić dane organizacji, wymagając od użytkowników i urządzeń spełnienia pewnych wymagań. W usłudze Intune ta funkcja jest nazywana „zasadami zgodności”. Zasady zgodności definiują reguły i ustawienia, które użytkownicy i urządzenia muszą spełnić, aby były zgodne. Używając tych zasad w połączeniu z dostępem warunkowym, administratorzy mogą blokować użytkowników i urządzenia niespełniające warunków reguł. Na przykład administrator usługi Intune może wymagać, aby:
 
-- Używanie hasła dostępu do urządzenia
+- Użytkownicy końcowi używali hasła do uzyskiwania dostępu do danych organizacji na urządzeniach przenośnych
 
-- Szyfrowanie
+- Urządzenie nie miało złamanych zabezpieczeń ani odblokowanego dostępu do konta root
 
-- Określanie, czy urządzenie ma złamane zabezpieczenia lub odblokowany dostęp do konta root
+- Na urządzeniu zainstalowano minimalną lub maksymalną wersję systemu operacyjnego
 
-- Minimalna wymagana wersja systemu operacyjnego
+- Poziom zagrożenia urządzenia był niższy lub równy podanemu poziomowi zagrożenia
 
-- Dozwolona maksymalna wersja systemu operacyjnego
-
-- Urządzenie musi być na poziomie usługi Mobile Threat Defense lub niższym
-
-Zasady zgodności urządzeń mogą być również używane do monitorowania stanu zgodności urządzeń.
+Zasady zgodności urządzeń mogą być również używane do monitorowania stanu zgodności na urządzeniach.
 
 > [!IMPORTANT]
 > Usługa Intune wykonuje wszystkie oceny zgodności na urządzeniu zgodnie z jego harmonogramem ewidencjonowania. [Dowiedz się więcej o harmonogramie ewidencjonowania urządzenia](https://docs.microsoft.com/intune/device-profile-troubleshoot#how-long-does-it-take-for-mobile-devices-to-get-a-policy-or-apps-after-they-have-been-assigned).
@@ -68,7 +64,8 @@ compliance issues on the device. You can also use this time to create your actio
 Remember that you need to implement conditional access policies in addition to compliance policies in order for access to company resources to be blocked.--->
 
 ## <a name="prerequisites"></a>Wymagania wstępne
-Do korzystania z zasad zgodności urządzeń są wymagane następujące elementy:
+
+Aby korzystać z zasad zgodności urządzeń, upewnij się, że spełniono następujące warunki:
 
 - Użyj następujących subskrypcji:
 
@@ -84,30 +81,28 @@ Do korzystania z zasad zgodności urządzeń są wymagane następujące elementy
   - Windows Phone 8,1
   - Windows 10
 
-- Urządzenia muszą być zarejestrowane w usłudze Intune, aby mogły zgłaszać stan zgodności.
+- Urządzenia zostały zarejestrowane w usłudze Intune, co pozwala na wyświetlenie stanu zgodności
 
-- Urządzenia zarejestrowane dla jednego użytkownika lub urządzenia bez użytkownika podstawowego są obsługiwane. Wiele kontekstów użytkownika nie jest obsługiwanych.
+- Urządzenia zostały zarejestrowane dla jednego użytkownika lub bez użytkownika podstawowego. Urządzenia zarejestrowane dla wielu użytkowników nie są obsługiwane.
 
-## <a name="how-intune-device-compliance-policies-work-with-azure-ad"></a>Jak zasady zgodności urządzeń usługi Intune działają z usługą Azure AD
+## <a name="how-device-compliance-policies-work-with-azure-ad"></a>Jak zasady zgodności urządzeń działają z usługą Azure AD
 
 Gdy urządzenie jest rejestrowane w usłudze Intune, rozpoczyna się proces rejestracji w usłudze Azure AD, który aktualizuje atrybuty urządzenia w usłudze Azure AD. Jedną z kluczowych informacji jest stan zgodności urządzenia. Stan zgodności jest używany przez zasady dostępu warunkowego do blokowania lub udostępniania poczty e-mail i innych zasobów firmy.
 
 Artykuł [Azure AD registration process (Proces rejestracji w usłudze Azure AD)](https://docs.microsoft.com/azure/active-directory/device-management-introduction) zawiera więcej informacji.
 
-### <a name="assign-a-resulting-device-configuration-profile-status"></a>Przypisywanie wynikowego stanu profilu konfiguracji urządzenia
+## <a name="refresh-cycle-times"></a>Czasy cyklu odświeżania
 
-Jeśli urządzenie ma wiele profilów konfiguracji i dla co najmniej dwóch przypisanych profilów konfiguracji ma ono różne stany zgodności, to zostanie przypisany jeden wynikowy stan zgodności. To przypisanie jest oparte na poziomie ważności koncepcyjnej przypisanym do poszczególnych stanów zgodności. Poszczególnym stanom zgodności odpowiadają następujące poziomy ważności:
+Podczas sprawdzania zgodności usługa Intune używa tego samego cyklu odświeżania, co w przypadku profilów konfiguracji. Mówiąc ogólnie, są używane następujące czasy:
 
-|Stan  |Ważność  |
-|---------|---------|
-|Oczekiwanie     |1|
-|Sukces     |2|
-|Niepowodzenie     |3|
-|Error     |4|
+- iOS: co sześć godzin
+- macOS: co sześć godzin
+- Android: co osiem godzin
+- Komputery z systemem Windows 10 zarejestrowane jako urządzenia: co osiem godzin
+- Windows Phone: co osiem godzin
+- Windows 8.1: co osiem godzin
 
-Jeśli urządzenie ma przypisanych wiele profilów konfiguracji, to do urządzenia jest przypisywany najwyższy spośród poziomów ważności wszystkich profili.
-
-Na przykład urządzenie może mieć przypisane trzy profile: stan Pending (oczekiwanie, ważność = 1), stan Succeeded (powodzenie, ważność = 2) i stan Error (błąd, ważność = 4). Stan Error ma najwyższy poziom ważności, dlatego wszystkie trzy profile mają stan zgodności Error.
+Sprawdzanie zgodności jest przeprowadzane częściej od razu po zarejestrowaniu urządzenia.
 
 ### <a name="assign-an-ingraceperiod-status"></a>Przypisywanie stanu InGracePeriod
 
@@ -152,19 +147,19 @@ Na przykład urządzenie może mieć przypisane trzy rodzaje zasad zgodności: s
 W przypadku urządzeń zgodnych z regułami zasad możesz udzielić im dostępu do poczty e-mail i innych zasobów firmy. Jeśli urządzenia nie są zgodne z regułami zasad, to nie uzyskają dostępu do zasobów firmy. To jest dostęp warunkowy.
 
 #### <a name="without-conditional-access"></a>Bez dostępu warunkowego
-Zasady zgodności można również stosować bez dostępu warunkowego. Jeśli zasady zgodności są stosowane niezależnie, urządzenia docelowe są oceniane, po czym generowany jest raport z ich stanem zgodności. Na przykład można uzyskać raport z liczbą urządzeń, które nie są szyfrowane, lub z informacją o urządzeniach, w których zdjęto zabezpieczenia systemu albo uzyskano dostęp do konta root. Jeśli zasady zgodności są stosowane bez dostępu warunkowego, dostęp do zasobów firmy nie jest ograniczany.
+Zasady zgodności można również stosować bez dostępu warunkowego. Jeśli zasady zgodności są stosowane niezależnie, urządzenia docelowe są oceniane, po czym generowany jest raport z ich stanem zgodności. Na przykład można uzyskać raport z liczbą urządzeń, które nie są szyfrowane, lub z informacją o urządzeniach, w których zdjęto zabezpieczenia systemu albo uzyskano dostęp do konta root. Jeśli zasady zgodności są stosowane bez dostępu warunkowego, dostęp do zasobów organizacji nie jest ograniczany.
 
 ## <a name="ways-to-deploy-device-compliance-policies"></a>Sposoby wdrażania zasad zgodności urządzeń
 Zasady zgodności można wdrożyć dla użytkowników w grupach użytkowników lub urządzeń w grupach urządzeń. Gdy zasady zgodności są wdrażane dla użytkownika, sprawdzana jest zgodność wszystkich urządzeń użytkownika. Na urządzeniach z systemem Windows 10 w wersji 1803 lub nowszej zaleca się wdrażanie do grupy urządzeń, *jeśli* użytkownik podstawowy nie zarejestrował urządzenia. Użycie grup urządzeń w tym scenariuszu ułatwia raportowanie zgodności.
 
-Zestaw wbudowanych **ustawień zasad zgodności** (witryna Azure Portal > Zgodność urządzenia) ocenianych na wszystkich urządzeniach zarejestrowanych w usłudze Intune. Należą do nich:
+Zestaw wbudowanych ustawień zasad zgodności (**Intune** > **Zgodność urządzenia**) jest oceniany na wszystkich urządzeniach zarejestrowanych w usłudze Intune. Należą do nich następujące elementy:
 
 - **Oznacz urządzenia bez przypisanych zasad zgodności jako**: ta właściwość ma dwie wartości:
 
   - **Zgodne**: funkcja zabezpieczeń wyłączona
   - **Niezgodne** (domyślna): funkcja zabezpieczeń włączona
 
-  Jeśli urządzenie nie ma przypisanych zasad zgodności, jest ono traktowane jako niezgodne. Domyślnie urządzenia są oznaczone jako **Zgodne**. Jeśli korzystasz z dostępu warunkowego, zalecamy zmianę ustawienia na **Niezgodne**. Jeśli użytkownik jest niezgodny, ponieważ zasady nie są przypisane, w aplikacji Portal firmy zostanie wyświetlony komunikat `No compliance policies have been assigned`.
+  Jeśli urządzenie nie ma przypisanych zasad zgodności, jest ono traktowane jako niezgodne. Domyślnie urządzenia są oznaczone za pomocą wartości **Niezgodne**. Jeśli korzystasz z dostępu warunkowego, zalecamy zmianę ustawienia na **Niezgodne**. Jeśli użytkownik jest niezgodny, ponieważ zasady nie zostały przypisane, w aplikacji Portal firmy zostanie wyświetlony komunikat `No compliance policies have been assigned`.
 
 - **Rozszerzone wykrywanie jailbreaku**: włączenie tego ustawienia powoduje, że urządzenia z systemem iOS są częściej ewidencjonowane w usłudze Intune. Włączenie tej właściwości powoduje użycie usług lokalizacyjnych urządzenia i wpływa na użycie baterii. Dane lokalizacji użytkownika nie są przechowywane przez usługę Intune.
 

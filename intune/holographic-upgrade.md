@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 01/22/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,50 +14,34 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 4839206db5e34a039c9e99dd74f5ab1bad328418
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: 80d4cf8db5789e6eeb22a777eeef74dce3009856
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112344"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831296"
 ---
 # <a name="upgrade-devices-running-windows-holographic-to-windows-holographic-for-business"></a>Uaktualnianie urządzeń z systemem Windows Holographic do systemu Windows Holographic for Business
 
+Usługa Microsoft Intune zawiera wiele ustawień pomocnych w przypadku zarządzania urządzeniami i ich ochrony. W tym artykule wymieniono i opisano ustawienia używane do uaktualniania urządzeń z systemem Windows Holographic do systemu Windows Holographic for Business. Te ustawienia są tworzone w profilu konfiguracji uaktualniania w usłudze Intune oraz są wypychane do urządzeń lub na nich wdrażane.
 
-Aby zarządzać urządzeniami z systemem Windows Holographic za pomocą usługi Microsoft Intune, musisz uaktualnić urządzenia z systemem Windows Holographic do systemu Windows Holographic for Business. W celu przeprowadzenia tego uaktualnienia możesz utworzyć profil uaktualniania wersji. W przypadku urządzeń Microsoft HoloLens możesz kupić wersję Commercial Suite, aby uzyskać wymaganą licencję na uaktualnienie. Aby uzyskać więcej informacji, zobacz [Unlock Windows Holographic for Business features](https://docs.microsoft.com/hololens/hololens-upgrade-enterprise) (Odblokowanie funkcji systemu Windows Holographic for Business).
+W ramach rozwiązania do zarządzania urządzeniami przenośnymi (MDM) użyj tych ustawień, aby uaktualnić urządzenia z systemem Windows Holographic. W przypadku urządzeń Microsoft HoloLens możesz kupić wersję Commercial Suite, aby uzyskać wymaganą licencję na uaktualnienie. Aby uzyskać więcej informacji, zobacz [Unlock Windows Holographic for Business features](https://docs.microsoft.com/hololens/hololens-upgrade-enterprise) (Odblokowanie funkcji systemu Windows Holographic for Business).
 
-## <a name="to-set-up-an-edition-upgrade-device-configuration-profile"></a>Aby skonfigurować profil konfiguracji urządzenia dla uaktualnienia wersji
+Aby uzyskać więcej informacji na temat tej funkcji, zobacz [Uaktualnianie wersji systemu Windows 10 lub włączanie trybu S](edition-upgrade-configure-windows-10.md).
 
-1. Zaloguj się do witryny [Azure Portal](https://portal.azure.com) przy użyciu konta administratora.
+## <a name="before-you-begin"></a>Przed rozpoczęciem
 
+[Utwórz profil konfiguracji urządzenia](edition-upgrade-configure-windows-10.md#create-the-profile).
 
-2.  Kliknij pozycje **Konfiguracja urządzeń**, **Profile**, a następnie kliknij przycisk **+ Utwórz profil**.
+## <a name="edition-upgrade"></a>Zasady uaktualniania wersji
 
-    ![Utwórz profil](media/Holographic-create-profile.png)
+- **Wersja, do której ma być uaktualniany system**: wybierz pozycję **Windows 10 Holographic for Business**.
+- **Plik licencji**: wyszukaj i wybierz plik licencji XML, który został udostępniony.
 
-3.  Na stronie **Utwórz profil** wpisz nazwę profilu, wybierz pozycję **Windows 10 i nowsze** dla platformy, a następnie wybierz pozycję **Uaktualnienie wersji** dla typu profilu. Kliknij przycisk **Konfiguruj ustawienia**.
-
-5. Na stronie **Uaktualnienie wersji** dla pozycji **Docelowa wersja uaktualnienia** wybierz pozycję **Windows 10 Holographic for Business**. W polu **Plik licencji** wyszukaj i wybierz plik licencji XML, który został udostępniony.
-
-    ![Wprowadzanie nazwy pliku XML](media/Holographic-edition-upgrade.png)
+  ![Wprowadzanie nazwy pliku XML, który zawiera informacje dotyczące licencji systemu Holographic for Business](media/Holographic-edition-upgrade.png)
  
-5.  Kliknij przycisk **OK**, a następnie kliknij przycisk **Utwórz**, aby utworzyć profil.
-
-
-## <a name="deploy-the-edition-upgrade-policy"></a>Wdrażanie zasad uaktualniania wersji
-
-Następnie przypisz profil uaktualniania wersji do wybranych grup lub urządzeń.
-
-1. W profilu, który został utworzony w poprzednich krokach, kliknij przycisk **Przypisania**.
-
-2. Na stronie **Przypisania** wybierz grupy użytkowników i urządzeń, które chcesz dołączać i wykluczać za pomocą zasad.
-
-![Dołączanie i wykluczanie grup](media/Holographic-groups.PNG)
-
-Profil uaktualnienia wersji jest stosowany, gdy ci użytkownicy lub urządzenia są zarejestrowane w usłudze Intune. 
-
 ## <a name="next-steps"></a>Następne kroki
 
-Aby uzyskać więcej informacji na temat grup, zobacz [Wprowadzenie do grup](get-started-groups.md).
+Profil został utworzony, ale może jeszcze nie wykonywać żadnych czynności. Pamiętaj, aby [przypisać profil](device-profile-assign.md) i [monitorować jego stan](device-profile-monitor.md).
 
-
+Można również utworzyć profile uaktualniania wersji dla urządzeń z [systemem Windows 10 i nowszym](edition-upgrade-windows-settings.md).

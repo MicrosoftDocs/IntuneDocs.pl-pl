@@ -16,12 +16,12 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: b87e0d24c000e3083eaebeac1a4cf6026d495ccf
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.openlocfilehash: f01009a0cb35f4270bdb1e768ee781172c8bfa2f
+ms.sourcegitcommit: 17f58d35a6bdff3e179662f3731fc74d39144470
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53032099"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55105191"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Konfigurowanie strony ze stanem rejestracji
  
@@ -32,7 +32,7 @@ Podczas konfigurowania urządzenia przy użyciu usługi Intune na stronie ze sta
 - Blokowanie użycia do zakończenia instalacji.
 - Określanie czynności, które użytkownik może wykonać, jeśli konfigurowanie urządzenia nie powiedzie się.
 
-Ponadto możesz ustawić kolejność priorytetu dla każdego profilu w celu obsłużenia konfliktu przypisań profilu w przypadku tego samego użytkownika lub urządzenia.
+Ponadto możesz ustawić kolejność priorytetu dla każdego profilu w celu obsłużenia konfliktu przypisań profilu do tego samego użytkownika lub urządzenia.
 
  
 ## <a name="turn-on-default-enrollment-status-page-for-all-users"></a>Włączanie domyślnej strony stanu rejestracji dla wszystkich użytkowników

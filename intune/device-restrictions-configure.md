@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 11b241a14ed70a2e999fa505449cd12cdd1e025e
-ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
+ms.openlocfilehash: 7ab60e64927db5537a106c1257a5624670771f86
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52728790"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831415"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Konfiguracja ustawień ograniczeń urządzeń w usłudze Microsoft Intune
 
@@ -32,7 +32,7 @@ Na przykład można utworzyć profil ograniczenia dotyczącego urządzeń, któr
 
 Zapoznaj się z podstawowymi informacjami na temat profilów ograniczeń, a następnie przeczytaj kolejne artykuły dotyczące poszczególnych platform, aby dowiedzieć się więcej o konkretnych urządzeniach.
 
-## <a name="create-a-device-profile-containing-device-restriction-settings"></a>Tworzenie profilu urządzenia zawierającego ustawienia ograniczeń dotyczących urządzeń
+## <a name="create-the-profile"></a>Tworzenie profilu
 
 1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi** > wpisz nazwę usługi **Intune** w filtrze > wybierz pozycję **Intune**.
 2. Wybierz pozycję **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
@@ -48,7 +48,7 @@ Zapoznaj się z podstawowymi informacjami na temat profilów ograniczeń, a nast
     - **Windows 10 lub nowszy**
 
 5. Z listy rozwijanej **Typ profilu** wybierz pozycję **Ograniczenia dotyczące urządzeń**. Aby utworzyć profil ograniczeń dotyczących urządzeń z systemem Windows 10 Team, np. urządzeń Surface Hub, wybierz pozycję **Ograniczenia dotyczące urządzeń (Windows 10 Team)**.
-6. Ustawienia, które można skonfigurować, różnią się w zależności od wybranej platformy. Wybierz szczegółowe ustawienia platformy:
+6. Ustawienia, które można skonfigurować, różnią się w zależności od wybranej platformy. Wybierz platformę dla ustawień szczegółowych:
 
     - [Ustawienia systemu Android](device-restrictions-android.md)
     - [Ustawienia systemu Android Enterprise](device-restrictions-android-for-work.md)
@@ -60,13 +60,13 @@ Zapoznaj się z podstawowymi informacjami na temat profilów ograniczeń, a nast
     - [Windows 10 Team settings](device-restrictions-windows-10-teams.md) (Ustawienia systemu Windows 10 Team)
     - [Ustawienia systemu Windows Holographic for Business](device-restrictions-windows-holographic.md)
 
-7. Gdy skończysz, wróć na stronę **Tworzenie profilu** i wybierz pozycję **Utwórz**.
+7. Po zakończeniu wybierz kolejno pozycje **OK** > **Utwórz**, aby zapisać zmiany.
 
-Profil zostanie utworzony i wyświetlony na stronie listy profilów. 
+Profil został utworzony i wyświetlony na liście profilów.
 
-## <a name="next-step"></a>Następny krok
+## <a name="next-steps"></a>Następne kroki
 
-Po utworzeniu profil jest gotowy do przypisania. Zobacz [Przypisywanie profilów urządzeń](device-profile-assign.md), aby dowiedzieć się, jakie czynności należy wykonać. 
+Po utworzeniu profil jest gotowy do przypisania. W dalszej części [przypiszesz profil](device-profile-assign.md) i będziesz [monitorować jego stan](device-profile-monitor.md).
 
 <!--  Removing image as part of design review; retaining source until we known the disposition.
 

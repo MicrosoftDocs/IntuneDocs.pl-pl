@@ -3,7 +3,7 @@ title: Rejestracja zbiorcza urządzeń z systemem Windows 10
 titlesuffix: Microsoft Intune
 description: Tworzenie pakietu rejestracji zbiorczej dla usługi Microsoft Intune
 keywords: ''
-author: Erikje
+author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 5/21/2018
@@ -15,12 +15,12 @@ ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: damionw
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: fca6fd73da1277973ee313055eaf4b5ba073afbb
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 97f51b4934a2dc2267e255da0ec1d896dd6b8961
+ms.sourcegitcommit: 9739a9aab032ebb2c4b52ccfb454a9e0f78b2ee4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184815"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54751199"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Rejestracja zbiorcza urządzeń z systemem Windows
 
@@ -48,8 +48,7 @@ Użytkownicy usługi Azure AD są standardowymi użytkownikami tych urządzeń i
    - **Project folder** (Folder projektu) — lokalizacja zapisu dla projektu
    - **Description** (Opis) — opcjonalny opis projektu ![Zrzut ekranu przedstawiający proces wpisywania nazwy, folderu projektu i opisu w aplikacji Windows Configuration Designer](media/bulk-enroll-name.png)
 
-4. Wprowadź unikatową nazwę dla każdego z urządzeń. Nazwy mogą zawierać numer seryjny (%% SERIAL%%) lub losowy zestaw znaków. Opcjonalnie można także wprowadzić klucz produktu (w przypadku uaktualniania wersji systemu Windows), skonfigurować urządzenie pod kątem współużytkowania i usunąć wstępnie zainstalowane oprogramowanie.
-
+4. Wprowadź unikatową nazwę dla każdego z urządzeń. Nazwy mogą zawierać numer seryjny (%SERIAL%) lub losowy zestaw znaków. Opcjonalnie można także wprowadzić klucz produktu (w przypadku uaktualniania wersji systemu Windows), skonfigurować urządzenie pod kątem współużytkowania i usunąć wstępnie zainstalowane oprogramowanie.
    ![Zrzut ekranu przedstawiający proces określania nazwy i klucza produktu w aplikacji Windows Configuration Designer](media/bulk-enroll-device.png)
 
 5. Opcjonalnie można skonfigurować sieć Wi-Fi, z którą urządzenia połączą się po pierwszym uruchomieniu.  Jeśli urządzenia sieciowe nie zostaną skonfigurowane, podczas pierwszego uruchomienia urządzenia wymagane będzie połączenie sieci przewodowej.

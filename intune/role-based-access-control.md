@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 07a1c0a0825faafa85b3fb2904dcb517268617bf
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 745fd366520ba55e54a5b666d47469debb241ab9
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180055"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831534"
 ---
 # <a name="role-based-administration-control-rbac-with-microsoft-intune"></a>Kontrola dostępu na podstawie ról (kontrola RBAC) w usłudze Microsoft Intune
 
@@ -35,7 +35,7 @@ Kontrola RBAC ułatwia kontrolowanie, kto może wykonywać różne zadania usłu
 
 Od momentu udostępnienia nowej witryny Azure Portal usługa **Azure Active Directory (Azure AD)** zapewnia dwie role katalogu, których można użyć z usługą Intune. Tym rolom nadaje się pełne uprawnienia do wykonywania wszystkich działań w usłudze Intune:
 
-- **Administrator globalny:** użytkownicy posiadający tę rolę mają dostęp do wszystkich funkcji administracyjnych w usłudze Azure AD oraz usług, które federują do usługi Azure AD, np. Exchange Online, SharePoint Online oraz Skype dla firm Online. Osoba, która zarejestruje się dla dzierżawcy usługi Azure AD staje się administratorem globalnym. Tylko administratorzy globalni mogą przypisywać pozostałe role administratorów usługi Azure AD. Dana organizacja może mieć więcej niż jednego administratora globalnego. Administratorzy globalni mogą resetować hasła dla wszystkich użytkowników oraz wszystkich pozostałych administratorów.
+- **Administrator globalny:** użytkownicy z tą rolą mają dostęp do wszystkich funkcji administracyjnych w usłudze Azure AD oraz usług, które federują do usługi Azure AD, np. Exchange Online, SharePoint Online oraz Skype dla firm Online. Osoba, która zarejestruje się dla dzierżawcy usługi Azure AD staje się administratorem globalnym. Tylko administratorzy globalni mogą przypisywać pozostałe role administratorów usługi Azure AD. Dana organizacja może mieć więcej niż jednego administratora globalnego. Administratorzy globalni mogą resetować hasła dla wszystkich użytkowników oraz wszystkich pozostałych administratorów.
 
 - **Administrator usługi Intune:** użytkownicy posiadający tę rolę mają globalne uprawnienia w ramach usługi Intune, gdy usługa ta jest dostępna. Ponadto oprócz zastępowanych ograniczeń platformy Azure ta rola zapewnia możliwość zarządzania użytkownikami, urządzeniami oraz tworzenia grup usługi Intune i zarządzania nimi.
 
@@ -43,59 +43,58 @@ Od momentu udostępnienia nowej witryny Azure Portal usługa **Azure Active Dire
 
     > [!IMPORTANT]
     > Rola administratora usługi Intune nie zapewnia możliwości zarządzania ustawieniami dostępu warunkowego usługi Azure AD.
-    > Członkowie ról usługi Intune muszą mieć licencje usługi Intune.
+    > Aby mieć przypisaną rolę usługi Intune, użytkownik musi mieć licencję usługi Intune.
 
     > [!TIP]
-    > Usługa Intune wyświetla również trzy rozszerzenia usługi Azure AD: **Użytkownicy**, **Grupy** oraz **Dostęp warunkowy**, które są kontrolowane za pomocą usługi Azure AD RBAC. Ponadto **Administrator konta użytkownika** wykonuje tylko działania użytkownika/grupy usługi AAD i nie ma pełnych uprawnień do wykonywania wszystkich działań w usłudze Intune. Aby uzyskać więcej szczegółowych informacji, zobacz temat [RBAC with Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles) (Kontrola RBAC przy użyciu usługi Azure AD).
+    > Usługa Intune wyświetla również trzy rozszerzenia usługi Azure AD: **Użytkownicy**, **Grupy** oraz **Dostęp warunkowy**, które są kontrolowane za pomocą usługi Azure AD RBAC. Ponadto **Administrator konta użytkownika** wykonuje tylko działania użytkownika/grupy usługi AAD i nie ma pełnych uprawnień do wykonywania wszystkich działań w usłudze Intune. Aby uzyskać więcej informacji, zobacz [Kontrola RBAC w usłudze Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles).
 
 ## <a name="roles-created-in-the-intune-classic-portal"></a>Role utworzone w portalu klasycznym usługi Intune
 
-Tylko użytkownicy usługi Intune **Administratorzy usługi** z pełnymi uprawnieniami są migrowani z portalu klasycznego usługi Intune do usługi Intune w witrynie Azure Portal. Musisz ponownie przypisać użytkowników usługi Intune **Administratorów usługi** z dostępem „Tylko do odczytu” lub „Pomoc techniczna” do ról usługi Intune w witrynie Azure Portal i usunąć ich z portalu klasycznego.
+Tylko użytkownicy usługi Intune **Administratorzy usługi** z pełnymi uprawnieniami są migrowani z portalu klasycznego usługi Intune do usługi Intune w witrynie Azure Portal. Musisz ponownie przypisać użytkowników usługi Intune z rolą **Administratorzy usługi** z dostępem „Tylko do odczytu” lub „Pomoc techniczna” do ról usługi Intune w witrynie Azure Portal i usunąć ich z portalu klasycznego.
 
 > [!IMPORTANT]
 > Może być konieczne zachowanie dostępu Administratora usługi Intune w portalu klasycznym, jeśli administratorzy będą nadal potrzebować dostępu do zarządzania komputerami przy użyciu usługi Intune.
 
 ## <a name="built-in-roles"></a>Wbudowane role
 
-Poniższe role są wbudowane w usługę Intune i można je przypisać do grup bez dalszej konfiguracji:
+Wbudowane role można przypisywać do grup bez konieczności dalszej konfiguracji. Nie można usuwać ani edytować roli wbudowanej.
 
 - **Pracownik punktu pomocy**: wykonuje zadania zdalne na użytkownikach i urządzeniach i może przypisywać aplikacje lub zasady do użytkowników lub urządzeń.
 - **Menedżer zasad i profilów**: zarządza zasadami zgodności, profilami konfiguracji i rejestracją Apple oraz identyfikatorami urządzeń firmowych.
-- **Operator tylko do odczytu**: wyświetla informacje o użytkownikach, urządzeniach, rejestracji, konfiguracji i aplikacji. Nie może wprowadzać zmian w usłudze Intune.
+- **Operator tylko do odczytu**: wyświetla informacje o użytkownikach, urządzeniach, rejestracji, konfiguracji i aplikacji. Nie można wprowadzać zmian w usłudze Intune.
 - **Menedżer aplikacji**: zarządza aplikacjami mobilnymi i zarządzanymi, może odczytywać informacje o urządzeniu i może wyświetlać profile konfiguracji urządzeń.
 - **Administrator ról usługi Intune**: zarządza niestandardowymi rolami usługi Intune i dodaje przypisania dla wbudowanych ról usługi Intune. Jest to jedyna rola usługi Intune, która może przypisywać uprawnienia administratorom.
 - **Administrator szkoły**: zarządza urządzeniami z systemem Windows 10 w usłudze [Intune for Education](introduction-intune-education.md) i może wykonywać następujące akcje: 
 
-|Uprawnienie|Operacja|
-|---|---|
-|Inspekcja danych|Odczyt|
-|DeviceConfigurations|Przypisywanie, tworzenie, usuwanie, odczyt, aktualizowanie|
-|Menedżerowie rejestracji urządzeń|Odczyt, aktualizowanie|
-|Urządzenia zarządzane|Odczyt, aktualizowanie<!--, Delete [To be added in 1803]-->|
-|Aplikacje mobilne|Przypisywanie, tworzenie, usuwanie, odczyt, aktualizowanie|
-|Reports|Odczyt|
-|Zdalne działania|Czyszczenie komputera, ponowny rozruch, zdalne blokowanie, wycofywanie, synchronizowanie urządzeń, czyszczenie|
-|Organizacja|Odczyt|
+    |Uprawnienie|Operacja|
+    |---|---|
+    |Inspekcja danych|Odczyt|
+    |DeviceConfigurations|Przypisywanie, tworzenie, usuwanie, odczyt, aktualizowanie|
+    |Menedżerowie rejestracji urządzeń|Odczyt, aktualizowanie|
+    |Urządzenia zarządzane|Odczyt, aktualizowanie<!--, Delete [To be added in 1803]-->|
+    |Aplikacje mobilne|Przypisywanie, tworzenie, usuwanie, odczyt, aktualizowanie|
+    |Reports|Odczyt|
+    |Zdalne działania|Czyszczenie komputera, ponowny rozruch, zdalne blokowanie, wycofywanie, synchronizowanie urządzeń, czyszczenie|
+    |Organizacja|Odczyt|
 
 ### <a name="to-assign-a-built-in-role"></a>Aby przypisać rolę wbudowaną
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
 2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 3. W okienku **Intune** wybierz pozycję **Role** > **Wszystkie role**.
-1. W okienku **Role usługi Intune — Wszystkie role** wybierz rolę wbudowaną, którą chcesz przypisać.
+4. W okienku **Role usługi Intune — Wszystkie role** wybierz rolę wbudowaną, którą chcesz przypisać.
 
-2. W okienku <*nazwa roli*> — **Omówienie** wybierz pozycję **Zarządzaj**, a następnie wybierz pozycję **Przypisania**.
+5. W okienku <*nazwa roli*> — **Omówienie** wybierz pozycję **Zarządzaj**, a następnie wybierz pozycję **Przypisania**.
 
-    > [!NOTE]
-    > Nie można usunąć ani edytować ról wbudowanych
+6. W okienku roli niestandardowej wybierz pozycję **Przypisz**.
 
-3. W okienku roli niestandardowej wybierz pozycję **Przypisz**.
+7. W okienku **Przypisania ról** uzupełnij pole **Nazwa** i opcjonalne pole **Opis** odnoszące się do przypisania.
 
-4. W okienku **Przypisania ról** uzupełnij pole **Nazwa** i opcjonalne pole **Opis** odnoszące się do przypisania, po czym wybierz następujące właściwości:
-    - **Członkowie** — wybierz grupę, do której należy użytkownik, któremu chcesz nadać uprawnienia.
-    - **Zakres** — wybierz grupę, do której należą użytkownicy, którymi będzie mógł zarządzać wskazany wcześniej członek.
+8. W obszarze **Członkowie** wybierz grupę, do której należy użytkownik, któremu chcesz nadać uprawnienia.
+
+9. W obszarze **Zakres** wybierz grupę, do której należą użytkownicy, którymi będzie mógł zarządzać wskazany wcześniej członek.
 <br></br>
-5. Gdy wszystko będzie gotowe, kliknij przycisk **OK**. Nowe przypisanie zostanie wyświetlone na liście przypisań.
+10. Gdy wszystko będzie gotowe, wybierz przycisk **OK**. Nowe przypisanie zostanie wyświetlone na liście przypisań.
 
 ### <a name="intune-rbac-table"></a>Tabela kontroli RBAC przy użyciu usługi Intune
 
@@ -122,7 +121,7 @@ Można utworzyć rolę niestandardową, która zawiera wszystkie uprawnienia wym
 
 5. W okienku **Uprawnienia** wybierz uprawnienia do użycia w ramach tej roli. Użyj [tabeli Intune RBAC](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a) aby określić uprawnienia, które chcesz zastosować.
 
-6. Gdy wszystko będzie gotowe, wybierz pozycję **OK**.
+6. Gdy wszystko będzie gotowe, wybierz przycisk **OK**.
 
 7. W okienku **Dodaj rolę niestandardową** kliknij pozycję **Utwórz**. Nowa rola zostanie wyświetlona na liście w okienku **Role usługi Intune — Wszystkie role**.
 
@@ -134,16 +133,18 @@ Można utworzyć rolę niestandardową, która zawiera wszystkie uprawnienia wym
 
 3. W okienku roli niestandardowej wybierz pozycję **Przypisz**.
 
-4. W okienku **Przypisania ról** uzupełnij pole **Nazwa** i opcjonalne pole **Opis** odnoszące się do przypisania, po czym wybierz następujące właściwości:
-    - **Członkowie** — wybierz grupę, do której należy użytkownik, któremu chcesz nadać uprawnienia.
-    - **Zakres** — wybierz grupę, do której należą użytkownicy, którymi będzie mógł zarządzać wskazany wcześniej członek.
-<br></br>
-5. Gdy wszystko będzie gotowe, kliknij przycisk **OK**. Nowe przypisanie zostanie wyświetlone na liście przypisań.
+4. W okienku **Przypisania ról** uzupełnij pole **Nazwa** i opcjonalne pole **Opis** odnoszące się do przypisania.
+
+5. W obszarze **Członkowie** wybierz grupę, do której należy użytkownik, któremu chcesz nadać uprawnienia.
+
+6. W obszarze **Zakres** wybierz grupę, do której należą użytkownicy, którymi będzie mógł zarządzać wskazany wcześniej członek.
+
+7. Gdy wszystko będzie gotowe, wybierz przycisk **OK**. Nowe przypisanie zostanie wyświetlone na liście przypisań.
 
 ## <a name="next-steps"></a>Następne kroki
 
 [Użyj roli operatora pomocy technicznej usługi Intune w portalu do rozwiązywania problemów](help-desk-operators.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 [Przypisz role przy użyciu usługi Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-users-assign-role-azure-portal)
