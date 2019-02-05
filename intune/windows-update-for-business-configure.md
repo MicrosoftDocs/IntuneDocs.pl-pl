@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/15/2019
+ms.date: 02/04/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: coryfe
 ms.suite: ems
 search.appverid: MET150
-ms.openlocfilehash: d0fcb021545d96fe8f5bfdf742dd4d181c91fb1a
-ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
+ms.openlocfilehash: 184f70aefbdc90c301ef2f97c5a3abb5ac49a4a8
+ms.sourcegitcommit: 12f8b7f0bca1baa2c1f68dd6af4f16a4814daa11
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54831568"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737489"
 ---
 # <a name="manage-software-updates-in-intune"></a>Zarządzanie aktualizacjami oprogramowania w usłudze Intune
 
@@ -167,7 +167,7 @@ Można wstrzymać otrzymywanie przez urządzenia aktualizacji dotyczących funkc
 > Gdy wydasz polecenie wstrzymania, urządzenia otrzymają je przy następnej rejestracji w usłudze. Istnieje możliwość, że urządzenia mogą zainstalować zaplanowaną aktualizację przed zarejestrowaniem.
 > Ponadto jeśli urządzenie docelowe jest wyłączone w momencie wydania polecenia wstrzymania, może ono po włączeniu pobrać i zainstalować zaplanowane aktualizacje przed zarejestrowaniem się w usłudze Intune.
 
-### <a name="uninstall-the-latest-from-windows-10-software-updates"></a>Odinstalowywanie najnowszych aktualizacji oprogramowania systemu Windows 10 
+## <a name="uninstall-the-latest-from-windows-10-software-updates"></a>Odinstalowywanie najnowszych aktualizacji oprogramowania systemu Windows 10 
 Jeśli wystąpi problem powodujący awarię na komputerach z systemem Windows 10, możesz odinstalować (wycofać) najnowszą aktualizację funkcji lub najnowszą aktualizację jakości. Odinstalowywanie aktualizacji funkcji lub jakości jest dostępne tylko dla kanału obsługi dostępnego na urządzeniu. Odinstalowywanie wyzwala zasady w celu przywrócenia poprzedniej aktualizacji na maszynach z systemem Windows 10. W przypadku aktualizacji funkcji można ograniczyć czas (od 2 do 60 dni), w którym można odinstalować najnowszą wersję. Aby ustawić opcje odinstalowywania aktualizacji oprogramowania:
 
 1. W usłudze Intune wybierz pozycję **Aktualizacje oprogramowania**.

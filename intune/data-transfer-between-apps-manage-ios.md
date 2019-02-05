@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 58d0cbbd503697575cd63e66fff80bd91e742e5e
-ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
+ms.openlocfilehash: 8e223301b15a408c5f5a444a1904fca9826929ac
+ms.sourcegitcommit: 0142020a7cd75348c6367facf072ed94238e667f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54831455"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55229903"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Jak zarządzać przesyłaniem danych między aplikacjami systemu iOS w usłudze Microsoft Intune
 
@@ -37,7 +37,7 @@ Zasady ochrony aplikacji są używane z funkcją **zarządzania funkcją Otwórz
 
 -   **Urządzenia pracowników, które nie są zarządzane przez żadne rozwiązanie MDM:** można skonfigurować zasady ochrony aplikacji z ustawieniem **Allow app to transfer data to only Policy Managed apps** (Zezwalaj aplikacji na przesyłanie danych tylko do aplikacji zarządzanych przez zasady). Zachowanie funkcji *Otwórz w* w aplikacji zarządzanej przez zasady przedstawia tylko inne aplikacje zarządzane przez zasady jako opcje udostępniania. Jeśli użytkownik próbuje wysłać plik chroniony przez zasady w formie załącznika z usługi OneDrive przy użyciu natywnej aplikacji poczty, nie można tego pliku odczytać.
 
--   **Urządzenia zarządzane przez usługę Intune:** w przypadku urządzeń zarejestrowanych w usłudze Intune przesyłanie danych między aplikacjami z zasadami ochrony aplikacji a innymi zarządzanymi aplikacjami systemu iOS wdrożonymi za pośrednictwem usługi Intune jest automatycznie dozwolone. Aby określić sposób zezwalania na transfer danych do innych aplikacji, włącz ustawienie **Zezwalaj aplikacji na przesyłanie danych do innych aplikacji** i wybierz preferowany poziom udostępniania. Aby określić sposób zezwalania na odbieranie przez aplikację danych z innych aplikacji, włącz ustawienie **Zezwalaj aplikacji na odbieranie danych z innych aplikacji** i wybierz preferowany poziom odbierania danych. Funkcja **zarządzania funkcją Otwórz w** umożliwia sterowanie przesyłaniem danych między aplikacjami, które zostały wdrożone za pomocą usługi Intune. Aby uzyskać więcej informacji na temat odbierania i udostępniania danych aplikacji, zobacz [Ustawienia relokacji danych](app-protection-policy-settings-ios.md#data-protection-settings).   
+-   **Urządzenia zarządzane przez usługę Intune:** w przypadku urządzeń zarejestrowanych w usłudze Intune przesyłanie danych między aplikacjami z zasadami ochrony aplikacji a innymi zarządzanymi aplikacjami systemu iOS wdrożonymi za pośrednictwem usługi Intune jest automatycznie dozwolone. Aby określić sposób zezwalania na transfer danych do innych aplikacji, włącz ustawienie **Zezwalaj aplikacji na przesyłanie danych do innych aplikacji** i wybierz preferowany poziom udostępniania. Aby określić sposób zezwalania na odbieranie przez aplikację danych z innych aplikacji, włącz ustawienie **Zezwalaj aplikacji na odbieranie danych z innych aplikacji** i wybierz preferowany poziom odbierania danych. Funkcja **zarządzania funkcją Otwórz w** umożliwia sterowanie przesyłaniem danych między aplikacjami, które zostały wdrożone za pomocą usługi Intune. Aby uzyskać więcej informacji na temat odbierania i udostępniania danych aplikacji, zobacz [Ustawienia relokacji danych](app-protection-policy-settings-ios.md#data-protection).   
 
 -   **Urządzenia zarządzane przez rozwiązanie MDM innej firmy:** można ograniczyć transfer danych tylko do zarządzanych aplikacji za pomocą funkcji **zarządzania funkcją Otwórz w** systemu iOS.
 Aby zapewnić, że aplikacje, które wdrażasz za pomocą rozwiązania do zarządzania urządzeniami przenośnymi innej firmy, również będą skojarzone z zasadami ochrony aplikacji usługi Intune, skonfiguruj ustawienie nazwy UPN użytkownika według opisu w sekcji [Konfigurowanie ustawienia nazwy UPN użytkownika](#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). Gdy aplikacje są wdrażane z ustawieniem nazwy UPN użytkownika, zasady ochrony aplikacji są stosowane do aplikacji po zalogowaniu się użytkownika za pomocą konta służbowego.
