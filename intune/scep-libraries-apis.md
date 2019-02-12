@@ -15,12 +15,13 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 4109c437ae5a096c78c19aef489218cf7286eb01
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: c7178ae7231586e781766adb1fea45b375a76920
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53032337"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55842052"
 ---
 # <a name="use-apis-to-add-third-party-cas-for-scep-to-intune"></a>Dodawanie urzędów certyfikacji innych firm dla protokołu SCEP do usługi Intune za pomocą interfejsów API
 
@@ -298,7 +299,7 @@ Walidacja i sprawdzenie, że rozwiązanie jest prawidłowo zintegrowane z usług
 12. Upewnij się, że właściwości zainstalowanych certyfikatów odpowiadają właściwościom skonfigurowanym w profilu protokołu SCEP.
 13. Upewnij się, że wystawione certyfikaty są wymienione w konsoli usługi Intune.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Add 3rd party CA overview (Dodawanie urzędu certyfikacji innej firmy — omówienie)](certificate-authority-add-scep-overview.md)
 - [Setup Intune](setup-steps.md) (Konfigurowanie usługi Intune)

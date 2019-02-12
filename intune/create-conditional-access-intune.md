@@ -15,12 +15,13 @@ ms.assetid: ''
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 320ded06b59b583baf27544249393029f7488b2d
-ms.sourcegitcommit: 0f19bc5c76b7c0835bfd180459f2bbd128eec1c2
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5c9fc2b2e973fdebfd303382e88630ef9999b517
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53267719"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55844160"
 ---
 # <a name="create-a-device-based-conditional-access-policy"></a>Tworzenie zasad dostępu warunkowego opartego na urządzeniach
 
@@ -93,5 +94,5 @@ Zasady dostępu warunkowego określają aplikację lub usługi, które chcesz ch
 
 12. Wybierz przycisk **Utwórz**.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 [Dostęp warunkowy oparty na aplikacji z użyciem usługi Intune](app-based-conditional-access-intune.md)

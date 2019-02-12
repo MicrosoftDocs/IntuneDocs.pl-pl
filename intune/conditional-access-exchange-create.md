@@ -15,12 +15,13 @@ ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ed996ec17ab0c8144286eeed0a87f07b35da2969
-ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 8b4f35dba38dd1b69f770a3a10689ce87eaf3a27
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53817062"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55840403"
 ---
 # <a name="create-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated"></a>Tworzenie zasad dostępu warunkowego do lokalnego programu Exchange i starszej wersji usługi Exchange Online w wersji dedykowanej w usłudze Intune
 
@@ -80,9 +81,9 @@ Natywna aplikacja **do obsługi poczty** w systemie Windows 8.1 lub nowszym (w p
 
 1. Po pomyślnym zalogowaniu zostanie wyświetlony **pulpit nawigacyjny platformy Azure**.
 
-1. W menu po lewej stronie wybierz pozycję  **Wszystkie usługi** i wpisz  **Intune** w filtrze pola tekstowego.
+1. W menu po lewej stronie wybierz pozycję **Wszystkie usługi**, a następnie w filtrze pola tekstowego wpisz **Intune**.
 
-1. Wybierz pozycję  **Intune**, aby wyświetlić **pulpit nawigacyjny usługi Intune**.
+1. Wybierz pozycję **Intune**, aby wyświetlić **Pulpit nawigacyjny Intune**.
 
 1. Wybierz pozycję **Dostęp lokalny**. W okienku **Dostęp lokalny** wyświetlany jest stan zasad dostępu warunkowego oraz urządzeń, których dotyczą.
 

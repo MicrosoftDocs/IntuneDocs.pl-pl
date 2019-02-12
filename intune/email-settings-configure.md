@@ -14,12 +14,13 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 28a78720b6ccc86b275f57b443ee7a63ca746512
-ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b518d562b8f6a45b13f6ab2d33fb6067395573ca
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54831330"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55840564"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>Dodawanie ustawień poczty e-mail do urządzeń przy użyciu usługi Intune
 
@@ -65,7 +66,7 @@ Profile poczty e-mail są przypisywane do grup urządzeń, a nie grup użytkowni
 
 - **Opcja 1**. Otwórz profil poczty e-mail (**Konfiguracja urządzenia** > **Profile**) i wybierz pozycję **Przypisania**. Karta **Dołączanie** zawiera grupy, które zostały przypisane do profilu. Kliknij prawym przyciskiem myszy grupę > **Usuń**. Pamiętaj o **zapisaniu** zmian.
 
-- **Opcja 2**. [Wyczyść lub wycofaj urządzenie](devices-wipe.md). Tych akcji można używać do selektywnego lub pełnego usuwania danych i ustawień.
+- **Opcja 2**: [Wyczyść lub wycofaj urządzenie](devices-wipe.md). Tych akcji można używać do selektywnego lub pełnego usuwania danych i ustawień.
 
 ## <a name="secure-email-access"></a>Bezpieczny dostęp do poczty e-mail
 
