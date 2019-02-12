@@ -17,12 +17,13 @@ ROBOTS: ''
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: ce673ab5206d5024da1cb6822beb523aa155325f
-ms.sourcegitcommit: 2d30ec70b85f49a7563adcab864c1be5a63b9947
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 627cabb14def14494ca258fbc9ac7ebf736b10da
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48863029"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55834385"
 ---
 # <a name="rename-device-from-the-company-portal-app-for-windows"></a>Zmienianie nazwy urządzenia w aplikacji Portal firmy dla systemu Windows
 Zmień nazwę urządzenia, aby można je było łatwiej odróżnić od innych urządzeń. Aplikacja Portal firmy dla systemu Windows umożliwia zmianę nazw następujących typów dołączonych urządzeń:  

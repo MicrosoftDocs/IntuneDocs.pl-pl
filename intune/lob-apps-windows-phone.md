@@ -16,12 +16,13 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 9fa39f212c9979a9986bba5537f0c9a2b5e01c8c
-ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 0b0325e1c199d991ffd8eae93616c0ccb2da8ccd
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53642646"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55846217"
 ---
 # <a name="add-a-windows-phone-line-of-business-app-to-microsoft-intune"></a>Dodawanie aplikacji biznesowych dla systemu Windows Phone do usługi Microsoft Intune
 
@@ -49,17 +50,17 @@ Informacje przedstawione w tym artykule są przydatne podczas dodawania aplikacj
 
 1. W okienku **Dodaj aplikację** wybierz pozycję **Informacje o aplikacji**.
 2. W okienku **Informacje o aplikacji** skonfiguruj informacje dotyczące aplikacji. W zależności od wybranej aplikacji niektóre wartości w tym okienku mogą zostać wypełnione automatycznie.
-    - **Nazwa**: Wprowadź nazwę aplikacji wyświetlaną w portalu firmy. Upewnij się, że wszystkie używane nazwy aplikacji są unikatowe. Jeśli dana nazwa aplikacji występuje dwa razy, w portalu firmy będzie widoczna tylko jedna aplikacja o tej nazwie.
+    - **Nazwa**: wprowadź nazwę aplikacji wyświetlaną w portalu firmy. Upewnij się, że wszystkie używane nazwy aplikacji są unikatowe. Jeśli dana nazwa aplikacji występuje dwa razy, w portalu firmy będzie widoczna tylko jedna aplikacja o tej nazwie.
     - **Opis**: Wprowadź opis aplikacji. Opis będzie widoczny w portalu firmy.
     - **Wydawca**: Wprowadź nazwę wydawcy aplikacji.
-    - **Kategoria**: Wybierz co najmniej jedną kategorię aplikacji — wbudowaną lub utworzoną samodzielnie. Kategorie ułatwiają użytkownikom znajdowanie aplikacji podczas przeglądania portalu firmy.
-    - **Wyświetl jako polecaną aplikację w portalu firmy**: Wyróżnij aplikację na stronie głównej Portalu firmy dla użytkowników przeglądających aplikacje.
+    - **Kategoria**: wybierz co najmniej jedną kategorię aplikacji — wbudowaną lub utworzoną samodzielnie. Kategorie ułatwiają użytkownikom znajdowanie aplikacji podczas przeglądania portalu firmy.
+    - **Wyświetl jako polecaną aplikację w Portalu firmy**: Wyróżnij aplikację na stronie głównej Portalu firmy dla użytkowników przeglądających aplikacje.
     - **Adres URL informacji**: Opcjonalnie wprowadź adres URL witryny sieci Web zawierającej informacje o tej aplikacji. Adres URL będzie widoczny w portalu firmy.
     - **Adres URL zasad ochrony prywatności**: Opcjonalnie wprowadź adres URL witryny sieci Web zawierającej informacje dotyczące zasad ochrony prywatności w tej aplikacji. Adres URL będzie widoczny w portalu firmy.
-    - **Deweloper**: Opcjonalnie wprowadź nazwę dewelopera aplikacji.
-    - **Właściciel**: Opcjonalnie wprowadź nazwę właściciela aplikacji. Przykładem może być **Dział kadr**.
-    - **Uwagi**: Wprowadź wszelkie uwagi, które chcesz skojarzyć z tą aplikacją.
-    - **Logo**: Przekaż ikonę, która jest skojarzona z aplikacją. Będzie ona wyświetlana jako ikona aplikacji podczas przeglądania Portalu firmy.
+    - **Deweloper**: opcjonalnie wprowadź nazwę dewelopera aplikacji.
+    - **Właściciel**: opcjonalnie wprowadź nazwę właściciela aplikacji. Przykładem może być **Dział kadr**.
+    - **Uwagi**: wprowadź wszelkie uwagi, które chcesz skojarzyć z tą aplikacją.
+    - **Logo**: przekaż ikonę skojarzoną z aplikacją. Będzie ona wyświetlana jako ikona aplikacji podczas przeglądania Portalu firmy.
 3. Po zakończeniu wybierz przycisk **OK**.
 
 ## <a name="step-4-finish-up"></a>Krok 4. Zakończenie

@@ -16,12 +16,13 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: d270aef9bd7102148466006f4057f1c598b02b0e
-ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 1970749aa23653bcc9cbc2351af80739f0f75582
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53642705"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55834555"
 ---
 # <a name="user-lifetime-representation-in-the-microsoft-intune-data-warehouse"></a>Reprezentacja okresu istnienia użytkownika w magazynie danych usługi Microsoft Intune
 
@@ -37,14 +38,14 @@ Załóżmy, że użytkownik, **Jan Kowalski**, pobiera przypisaną mu licencję 
  
 | Nazwa wyświetlana | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
 | -- | -- | -- | -- | -- |
-| Jan Kowalski | FAŁSZ | 06/01/2017 | 12/31/9999 | PRAWDA
+| Jan Kowalski | FAŁSZ | 06/01/2017 | 12/31/9999 | TRUE
  
 Jan Kowalski rezygnuje ze swojej licencji w dniu 25 lipca 2017 r. Tabela **Użytkownik** zawiera następujące wpisy. Zmiany w istniejących rekordach są `marked`. 
 
 | Nazwa wyświetlana | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
 | -- | -- | -- | -- | -- |
 | Jan Kowalski | FAŁSZ | 06/01/2017 | `07/26/2017` | `FALSE` 
-| Jan Kowalski | PRAWDA | 07/26/2017 | 12/31/9999 | PRAWDA 
+| Jan Kowalski | TRUE | 07/26/2017 | 12/31/9999 | TRUE 
 
 Pierwszy wiersz wskazuje, że Jan Kowalski istniał w usłudze Intune od dnia 2017-06-01 do 2017-07-25. Drugi rekord wskazuje, że użytkownik został usunięty w dniu 2017-07-25 i nie jest już obecny w usłudze Intune.
 
@@ -53,8 +54,8 @@ A teraz załóżmy, że Jan Kowalski pobiera nową przypisaną licencję w dniu 
 | Nazwa wyświetlana | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
 | -- | -- | -- | -- | -- |
 | Jan Kowalski | FAŁSZ | 06/01/2017 | 07/26/2017 | FAŁSZ 
-| Jan Kowalski | PRAWDA | 07/26/2017 | `08/31/2017` | `FALSE` 
-| Jan Kowalski | FAŁSZ | 08/31/2017 | 12/31/9999 | PRAWDA 
+| Jan Kowalski | TRUE | 07/26/2017 | `08/31/2017` | `FALSE` 
+| Jan Kowalski | FAŁSZ | 08/31/2017 | 12/31/9999 | TRUE 
  
 Osoba, która chce wyświetlić bieżący stan wszystkich użytkowników, będzie chciała zastosować filtr, gdzie `IsCurrent = TRUE`. 
  

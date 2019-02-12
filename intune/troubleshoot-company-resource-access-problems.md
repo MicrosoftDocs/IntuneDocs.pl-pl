@@ -15,12 +15,13 @@ ms.reviewer: tscott
 ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
-ms.openlocfilehash: f4ead71e626316b515646d474cc006be7cf2f774
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e600c2db57352eb2348ded9fe55295837223797b
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190374"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55843089"
 ---
 # <a name="troubleshoot-company-resource-access-problems-with-microsoft-intune"></a>Rozwiązywanie problemów z dostępem do zasobów firmy przy użyciu usługi Microsoft Intune
 
@@ -34,7 +35,7 @@ Jeśli te informacje nie pomogą rozwiązać problemu, zobacz [Jak uzyskać pomo
 |---------------|-----------------|--------------|
 |10 (APP_CI_ENFORCEMENT_IN_PROGRESS)|Instalacja w toku||
 |20 (APP_CI_ENFORCEMENT_IN_PROGRESS_WAITING_CONTENT)|Oczekiwanie na zawartość||
-|30 (APP_CI_ENFORCEMENT_ERROR_RETRIEVING_CONTENT)|Pobieranie zawartości|Prawdopodobna przyczyna: stan zadania 30 wskazuje, że pobieranie aplikacji przez użytkownika nie powiodło się.<br /><br />Czym może to być spowodowane:<br /><br />Podczas pobierania aplikacji urządzenie utraciło połączenie z Internetem.<br /><br />Być może wygasł certyfikat wystawiony dla urządzenia w chwili rejestracji.<br /><br />Środki zaradcze:<br /><br />Uruchom aplet Aplikacje firmowe z Panelu sterowania na urządzeniu, aby upewnić się, że certyfikat urządzenia nie wygasł. Jeśli tak się stało, konieczna będzie ponowna rejestracja urządzenia.<br /><br />Upewnij się, że urządzenie jest połączone z Internetem, i spróbuj ponownie zażądać aplikacji.|
+|30 (APP_CI_ENFORCEMENT_ERROR_RETRIEVING_CONTENT)|Pobieranie zawartości|Prawdopodobna przyczyna: Stan zadania 30 wskazuje, że pobieranie aplikacji przez użytkownika nie powiodło się.<br /><br />Czym może to być spowodowane:<br /><br />Podczas pobierania aplikacji urządzenie utraciło połączenie z Internetem.<br /><br />Być może wygasł certyfikat wystawiony dla urządzenia w chwili rejestracji.<br /><br />Środki zaradcze:<br /><br />Uruchom aplet Aplikacje firmowe z Panelu sterowania na urządzeniu, aby upewnić się, że certyfikat urządzenia nie wygasł. Jeśli tak się stało, konieczna będzie ponowna rejestracja urządzenia.<br /><br />Upewnij się, że urządzenie jest połączone z Internetem, i spróbuj ponownie zażądać aplikacji.|
 |40 (APP_CI_ENFORCEMENT_IN_PROGRESS_CONTENT_DOWNLOADED)|Pobieranie zawartości ukończone||
 |50 (APP_CI_ENFORCEMENT_IN_PROGRESS_INSTALLING)|Instalacja w toku||
 |60 (APP_CI_ENFORCEMENT_ERROR_INSTALLING)|Wystąpił błąd instalacji|Po pobraniu nie powiodła się instalacja aplikacji.<br /><br />Na urządzeniu nie ma certyfikatu podpisywania kodu użytego do podpisania aplikacji.<br /><br />Zależność struktury, od której jest zależna aplikacja, nie została zainstalowana na urządzeniu.<br /><br />Upewnij się, że certyfikat podpisywania kodu użyty do podpisania tej aplikacji jest na urządzeniu, i potwierdź u administratora, że taki certyfikat był przeznaczony dla wszystkich zarejestrowanych przez przedsiębiorstwo urządzeń z systemem Windows RT.<br /><br />W przypadku, gdy przyczyną niepowodzenia instalacji jest brakująca zależność struktury, administrator będzie musiał ponownie opublikować aplikację, pakując strukturę wraz z pakietem aplikacji.<br /><br />Pobrany pakiet aplikacji nie jest prawidłowym pakietem, może być uszkodzony lub może nie być zgodny z wersją systemu operacyjnego na urządzeniu.|
@@ -302,75 +303,75 @@ Jeśli te informacje nie pomogą rozwiązać problemu, zobacz [Jak uzyskać pomo
 
 |Kod stanu|Szesnastkowy kod błędu|Komunikat o błędzie|
 |---------------|--------------------------|-----------------|
-|-2016344008|0x87D10838|(1404): odmowa dostępu do certyfikatu|
-|-2016344009|0x87D10837|(1403): nie znaleziono certyfikatu|
-|-2016344010|0x87D10836|DCMO(1402): operacja nie powiodła się|
-|-2016344011|0x87D10835|DCMO(1401): użytkownik nie zaakceptował operacji po wyświetleniu monitu|
-|-2016344012|0x87D10834|DCMO(1400): błąd klienta|
-|-2016344108|0x87D107D4|DCMO(1204): możliwość urządzenia jest wyłączona, a użytkownik może ją ponownie włączyć|
-|-2016344109|0x87D107D3|DCMO(1203): możliwość urządzenia jest wyłączona, a użytkownik nie może jej ponownie włączyć|
-|-2016344110|0x87D107D2|DCMO(1202): operacja włączania została wykonana pomyślnie, ale możliwość urządzenia jest aktualnie odłączona|
-|-2016344111|0xF3FB4D95|DCMO(1201): operacja włączania została wykonana pomyślnie, a możliwość urządzenia jest aktualnie dołączona|
-|-2016344112|0x87D107D0|DCMO(1200): operacja została wykonana pomyślnie|
-|-2016345595|0x87D10205|Syncml(517): odpowiedź na niepodzielne polecenie była zbyt duża, aby zmieścić ją w pojedynczym komunikacie.|
-|-2016345596|0x87D10204|Syncml(516): polecenie znajdowało się wewnątrz niepodzielnego elementu, dla którego wystąpiło niepowodzenie. To polecenie nie zostało wycofane pomyślnie.|
-|-2016345598|0x87D10202|Syncml(514): polecenie SyncML nie zostało zakończone pomyślnie, ponieważ operacja została już anulowana przed przetworzeniem polecenia.|
-|-2016345599|0x87D10201|Syncml(513): odbiorca nie obsługuje lub odmawia obsługi określonej wersji protokołu synchronizacji SyncML użytej w komunikacie SyncML żądania.|
-|-2016345600|0x87D10200|Syncml(512): podczas sesji synchronizacji wystąpił błąd aplikacji.|
-|-2016345601|0x87D101FF|Syncml(511): podczas przetwarzania żądania wystąpił poważny błąd na serwerze.|
-|-2016345602|0x87D101FE|Syncml(510): podczas przetwarzania żądania wystąpił błąd. Błąd jest związany z błędem w magazynie danych odbiorcy.|
-|-2016345603|0x87D101FD|Syncml(509): zarezerwowany do użytku w przyszłości.|
-|-2016345604|0x87D101FC|Syncml(508): wystąpił błąd wymagający odświeżenia bieżącego stanu synchronizacji klienta z serwerem.|
-|-2016345605|0x87D101FB|Syncml(507): błąd spowodował niepowodzenie wszystkich poleceń SyncML w elemencie o typie niepodzielnym.|
-|-2016345606|0x87D101FA|Syncml(506): podczas przetwarzania żądania wystąpił błąd aplikacji.|
-|-2016345607|0x87D101F9|Syncml(505): odbiorca nie obsługuje lub odmawia obsługi określonej wersji schematu DTD SyncML użytego w komunikacie SyncML żądania.|
-|-2016345608|=0x87D101F8|Syncml(504): odbiorca, który działa jako brama lub serwer proxy, nie otrzymał terminowo odpowiedzi od nadrzędnego odbiorcy określonego przez identyfikator URI (np. HTTP, FTP, LDAP) lub innego odbiorcy dodatkowego (np. DNS), do którego musiał uzyskać dostęp podczas próby wykonania żądania.|
-|-2016345609|0x87D101F7|Syncml(503): odbiorca nie może obecnie obsłużyć żądania ze względu na tymczasowe przeciążenie lub konserwację odbiorcy.|
-|-2016345610|0x87D101F6|Syncml(502): odbiorca podczas działania jako brama lub serwer proxy otrzymał nieprawidłową odpowiedź od nadrzędnego serwera, do którego uzyskiwał dostęp podczas próby wykonania żądania.|
-|-2016345611|0x87D101F5|Syncml(501): odbiorca nie obsługuje polecenia wymaganego do wykonania żądania.|
-|-2016345612|0x87D101F4|Syncml(500): odbiorca napotkał nieoczekiwany warunek, który uniemożliwił mu wykonanie żądania|
-|-2016345684|0x87D101AC|Syncml(428): przenoszenie nie powiodło się|
-|-2016345685|0x87D101AB|Syncml(427): nie można usunąć elementu nadrzędnego, ponieważ zawiera elementy podrzędne.|
-|-2016345686|0x87D101AA|Syncml(426): nie zaakceptowano częściowego elementu.|
-|-2016345687|0x87D101A9|Syncml(425): żądane polecenie nie powiodło się, ponieważ nadawca nie ma wystarczających uprawnień kontroli dostępu na odbiorcy.|
-|-2016345688|0x87D101A8|Syncml(424): odebrano podzielony obiekt, ale rozmiar odebranego obiektu nie był zgodny z rozmiarem zadeklarowanym w pierwszym fragmencie.|
-|-2016345689|0x87D101A7|Syncml(423): żądane polecenie nie powiodło się, ponieważ usunięty wstępnie element został wcześniej całkowicie usunięty na serwerze.|
-|-2016345690|0x87D101A6|Syncml(422): żądane polecenie nie powiodło się na serwerze, ponieważ skrypt CGI w identyfikatorze LocURI był niepoprawnie uformowany.|
-|-2016345691|0x87D101A5|Syncml(421): żądane polecenie nie powiodło się na serwerze, ponieważ określona gramatyka wyszukiwania jest nieznana.|
-|-2016345692|0x87D101A4|Syncml(420): odbiorca nie ma więcej miejsca w magazynie dla pozostałych danych synchronizacji.|
-|-2016345693|0x87D101A3|Syncml(419): żądanie klienta spowodowało powstanie konfliktu, który został rozwiązany przez określenie pierwszeństwa polecenia serwera.|
-|-2016345694|0x87D101A2|Syncml(418): żądane polecenie Put lub Add nie powiodło się, ponieważ element docelowy już istnieje.|
-|-2016345695|0x87D101A1|Syncml(417): żądanie nie powiodło się w tym momencie, a osoba tworząca powinna ponowić żądanie w późniejszym momencie.|
-|-2016345696|0x87D101A0|Syncml(416): żądanie nie powiodło się, ponieważ określony w żądaniu rozmiar w bajtach był zbyt duży.|
-|-2016345697|0x87D1019F|Syncml(415): nieobsługiwany typ lub format nośnika.|
-|-2016345698|0x87D1019E|Syncml(414): żądane polecenie nie powiodło się, ponieważ identyfikator URI elementu docelowego jest zbyt długi i odbiorca nie może lub nie chce go przetworzyć.|
-|-2016345699|0x87D1019D|Syncml(413): odbiorca odmawia wykonania żądanego polecenia, ponieważ żądany element jest zbyt duży, aby możliwe było jego przetworzenie przez odbiorcę.|
-|-2016345700|0x87D1019C|Syncml(412): żądane polecenie nie powiodło się na odbiorcy, ponieważ było niekompletne lub niepoprawnie uformowane.|
-|-2016345701|0x87D1019B|Syncml(411): żądanemu poleceniu musi towarzyszyć rozmiar w bajtach lub informacje o długości w typie elementu Meta.|
-|-2016345702|0x87D1019A|Syncml(410): żądany element docelowy nie znajduje się już na odbiorcy i nie jest znany identyfikator URI przekazywania.|
-|-2016345703|0x87D10199|Syncml(409): żądanie nie powiodło się ze względu na konflikt aktualizacji między wersjami danych klienta i serwera.|
-|-2016345704|0x87D10198|Syncml(408): nie odebrano oczekiwanego komunikatu w wymaganym czasie.|
-|-2016345705|0x87D10197|Syncml(407): żądane polecenie nie powiodło się, ponieważ przy jego uruchomieniu musi zostać określone właściwe uwierzytelnienie.|
-|-2016345706|0x87D10196|Syncml(406): żądane polecenie nie powiodło się, ponieważ opcjonalna funkcja w żądaniu nie jest obsługiwana.|
-|-2016345707|0x87D10195|Syncml(405): żądane polecenie nie jest dozwolone dla elementu docelowego.|
-|-2016345708|0x87D10194|Syncml(404): nie znaleziono żądanego elementu docelowego.|
-|-2016345709|0x87D10193|Syncml(403): żądane polecenie nie powiodło się, ale odbiorca zrozumiał to polecenie.|
-|-2016345710|0x87D10192|Syncml(402): żądane polecenie nie powiodło się, ponieważ wymagana jest właściwa płatność.|
-|-2016345711|0x87D10191|Syncml(401): żądane polecenie nie powiodło się, ponieważ obiekt żądający musi określić właściwe uwierzytelnienie.|
-|-2016345712|0x87D10190|Syncml(400): nie można wykonać żądanego polecenia ze względu na nieprawidłowo uformowaną składnię w poleceniu.|
-|-2016345807|0x87D10131|Syncml(305): dostęp do żądanego elementu docelowego należy uzyskać przy użyciu określonego identyfikatora URI serwera proxy.|
+|-2016344008|0x87D10838|(1404): Odmowa dostępu do certyfikatu|
+|-2016344009|0x87D10837|(1403): Nie znaleziono certyfikatu|
+|-2016344010|0x87D10836|DCMO(1402): Operacja nie powiodła się|
+|-2016344011|0x87D10835|DCMO(1401): Użytkownik nie zaakceptował operacji po wyświetleniu monitu|
+|-2016344012|0x87D10834|DCMO(1400): Błąd klienta|
+|-2016344108|0x87D107D4|DCMO(1204): Możliwość urządzenia jest wyłączona, a użytkownik może ją ponownie włączyć|
+|-2016344109|0x87D107D3|DCMO(1203): Możliwość urządzenia jest wyłączona, a użytkownik nie może jej ponownie włączyć|
+|-2016344110|0x87D107D2|DCMO(1202): Operacja włączania została wykonana pomyślnie, ale możliwość urządzenia jest aktualnie odłączona|
+|-2016344111|0xF3FB4D95|DCMO(1201): Operacja włączania została wykonana pomyślnie, a możliwość urządzenia jest aktualnie dołączona|
+|-2016344112|0x87D107D0|DCMO(1200): Operacja została wykonana pomyślnie|
+|-2016345595|0x87D10205|Syncml(517): Odpowiedź na niepodzielne polecenie była zbyt duża, aby zmieścić ją w pojedynczym komunikacie.|
+|-2016345596|0x87D10204|Syncml(516): Polecenie znajdowało się wewnątrz niepodzielnego elementu, dla którego wystąpiło niepowodzenie. To polecenie nie zostało wycofane pomyślnie.|
+|-2016345598|0x87D10202|Syncml(514): Polecenie SyncML nie zostało zakończone pomyślnie, ponieważ operacja została już anulowana przed przetworzeniem polecenia.|
+|-2016345599|0x87D10201|Syncml(513): Odbiorca nie obsługuje lub odmawia obsługi określonej wersji protokołu synchronizacji SyncML użytej w komunikacie SyncML żądania.|
+|-2016345600|0x87D10200|Syncml(512): Podczas sesji synchronizacji wystąpił błąd aplikacji.|
+|-2016345601|0x87D101FF|Syncml(511): Podczas przetwarzania żądania wystąpił poważny błąd na serwerze.|
+|-2016345602|0x87D101FE|Syncml(510): Podczas przetwarzania żądania wystąpił błąd. Błąd jest związany z błędem w magazynie danych odbiorcy.|
+|-2016345603|0x87D101FD|Syncml(509): Zarezerwowany do użytku w przyszłości.|
+|-2016345604|0x87D101FC|Syncml(508): Wystąpił błąd wymagający odświeżenia bieżącego stanu synchronizacji klienta z serwerem.|
+|-2016345605|0x87D101FB|Syncml(507): Błąd spowodował niepowodzenie wszystkich poleceń SyncML w elemencie o typie niepodzielnym.|
+|-2016345606|0x87D101FA|Syncml(506): Podczas przetwarzania żądania wystąpił błąd aplikacji.|
+|-2016345607|0x87D101F9|Syncml(505): Odbiorca nie obsługuje lub odmawia obsługi określonej wersji schematu DTD SyncML użytego w komunikacie SyncML żądania.|
+|-2016345608|=0x87D101F8|Syncml(504): Odbiorca, który działa jako brama lub serwer proxy, nie otrzymał we właściwym czasie odpowiedzi od nadrzędnego odbiorcy określonego przez identyfikator URI (np. HTTP, FTP, LDAP) lub innego odbiorcy dodatkowego (np. DNS), do którego musiał uzyskać dostęp podczas próby wykonania żądania.|
+|-2016345609|0x87D101F7|Syncml(503): Odbiorca nie może obecnie obsłużyć żądania ze względu na tymczasowe przeciążenie lub konserwację odbiorcy.|
+|-2016345610|0x87D101F6|Syncml(502): Odbiorca podczas działania jako brama lub serwer proxy otrzymał nieprawidłową odpowiedź od nadrzędnego serwera, do którego uzyskiwał dostęp podczas próby wykonania żądania.|
+|-2016345611|0x87D101F5|Syncml(501): Odbiorca nie obsługuje polecenia wymaganego do wykonania żądania.|
+|-2016345612|0x87D101F4|Syncml(500): Odbiorca napotkał nieoczekiwany warunek, który uniemożliwił mu wykonanie żądania|
+|-2016345684|0x87D101AC|Syncml(428): Przenoszenie nie powiodło się|
+|-2016345685|0x87D101AB|Syncml(427): Nie można usunąć elementu nadrzędnego, ponieważ zawiera elementy podrzędne.|
+|-2016345686|0x87D101AA|Syncml(426): Nie zaakceptowano częściowego elementu.|
+|-2016345687|0x87D101A9|Syncml(425): Żądane polecenie nie powiodło się, ponieważ nadawca nie ma wystarczających uprawnień kontroli dostępu u odbiorcy.|
+|-2016345688|0x87D101A8|Syncml(424): Odebrano podzielony obiekt, ale rozmiar odebranego obiektu nie był zgodny z rozmiarem zadeklarowanym w pierwszym fragmencie.|
+|-2016345689|0x87D101A7|Syncml(423): Żądane polecenie nie powiodło się, ponieważ usunięty wstępnie element został wcześniej całkowicie usunięty na serwerze.|
+|-2016345690|0x87D101A6|Syncml(422): Żądane polecenie nie powiodło się na serwerze, ponieważ skrypt CGI w identyfikatorze LocURI był niepoprawnie sformatowany.|
+|-2016345691|0x87D101A5|Syncml(421): Żądane polecenie nie powiodło się na serwerze, ponieważ określona gramatyka wyszukiwania jest nieznana.|
+|-2016345692|0x87D101A4|Syncml(420): Odbiorca nie ma więcej miejsca w magazynie dla pozostałych danych synchronizacji.|
+|-2016345693|0x87D101A3|Syncml(419): Żądanie klienta spowodowało powstanie konfliktu, który został rozwiązany przez określenie pierwszeństwa polecenia serwera.|
+|-2016345694|0x87D101A2|Syncml(418): Żądane polecenie Put lub Add nie powiodło się, ponieważ element docelowy już istnieje.|
+|-2016345695|0x87D101A1|Syncml(417): Żądanie nie powiodło się w tym momencie, a osoba tworząca powinna ponowić żądanie później.|
+|-2016345696|0x87D101A0|Syncml(416): Żądanie nie powiodło się, ponieważ określony w żądaniu rozmiar w bajtach był zbyt duży.|
+|-2016345697|0x87D1019F|Syncml(415): Nieobsługiwany typ lub format nośnika.|
+|-2016345698|0x87D1019E|Syncml(414): Żądane polecenie nie powiodło się, ponieważ identyfikator URI elementu docelowego jest zbyt długi i odbiorca nie może lub nie chce go przetworzyć.|
+|-2016345699|0x87D1019D|Syncml(413): Odbiorca odmawia wykonania żądanego polecenia, ponieważ żądany element jest zbyt duży, aby możliwe było jego przetworzenie przez odbiorcę.|
+|-2016345700|0x87D1019C|Syncml(412): Żądane polecenie nie powiodło się na odbiorcy, ponieważ było niekompletne lub niepoprawnie sformatowane.|
+|-2016345701|0x87D1019B|Syncml(411): Żądanemu poleceniu musi towarzyszyć rozmiar w bajtach lub informacje o długości w typie elementu Meta.|
+|-2016345702|0x87D1019A|Syncml(410): Żądany element docelowy nie znajduje się już u odbiorcy i nie jest znany identyfikator URI przekazywania.|
+|-2016345703|0x87D10199|Syncml(409): Żądanie nie powiodło się ze względu na konflikt aktualizacji między wersjami danych klienta i serwera.|
+|-2016345704|0x87D10198|Syncml(408): Nie odebrano oczekiwanego komunikatu w wymaganym czasie.|
+|-2016345705|0x87D10197|Syncml(407): Żądane polecenie nie powiodło się, ponieważ przy jego uruchomieniu musi zostać określone właściwe uwierzytelnienie.|
+|-2016345706|0x87D10196|Syncml(406): Żądane polecenie nie powiodło się, ponieważ opcjonalna funkcja w żądaniu nie jest obsługiwana.|
+|-2016345707|0x87D10195|Syncml(405): Żądane polecenie nie jest dozwolone dla elementu docelowego.|
+|-2016345708|0x87D10194|Syncml(404): Nie znaleziono żądanego elementu docelowego.|
+|-2016345709|0x87D10193|Syncml(403): Żądane polecenie nie powiodło się, ale odbiorca zrozumiał to polecenie.|
+|-2016345710|0x87D10192|Syncml(402): Żądane polecenie nie powiodło się, ponieważ wymagana jest właściwa płatność.|
+|-2016345711|0x87D10191|Syncml(401): Żądane polecenie nie powiodło się, ponieważ obiekt żądający musi określić właściwe uwierzytelnienie.|
+|-2016345712|0x87D10190|Syncml(400): Nie można wykonać żądanego polecenia ze względu na nieprawidłowo sformatowaną składnię w poleceniu.|
+|-2016345807|0x87D10131|Syncml(305): Dostęp do żądanego elementu docelowego należy uzyskać przy użyciu określonego identyfikatora URI serwera proxy.|
 |-2016345808|0x87D10130|Syncml(304): Żądane polecenie SyncML nie zostało wykonane na elemencie docelowym.|
-|-2016345809|0x87D1012F|Syncml(303): żądany element docelowy można znaleźć pod innym identyfikatorem URI.|
-|-2016345810|0x87D1012E|Syncml(302): żądany element docelowy został tymczasowo przeniesiony pod inny identyfikator URI.|
-|-2016345811|0x87D1012D|Syncml(301): żądany element docelowy ma nowy identyfikator URI.|
-|-2016345812|0x87D1012C|Syncml(300): żądany element docelowy stanowi jedną z wielu alternatyw żądanego elementu docelowego.|
-|-2016345896|0x87D100D8|Syncml(216): polecenie znajdowało się wewnątrz niepodzielnego elementu, dla którego wystąpił błąd. To polecenie zostało pomyślnie wycofane.|
-|-2016345897|0x87D100D7|Syncml(215): polecenie nie zostało wykonane w wyniku interakcji z użytkownikiem, który nie zaakceptował wyboru.|
-|-2016345898|0x87D100D6|Syncml(214): operacja została anulowana. Polecenie SyncML zostało wykonane pomyślnie, ale żadne kolejne polecenia nie będą przetwarzane w ramach sesji.|
-|-2016345899|0x87D100D5|Syncml(213): podzielony element został zaakceptowany i zbuforowany|
-|-2016345900|0x87D100D4|Syncml(212): uwierzytelnianie zostało zaakceptowane. Żadne inne uwierzytelnianie nie jest potrzebne w pozostałej części sesji synchronizacji. Tego kodu odpowiedzi można użyć tylko w odpowiedzi na żądanie, w którym podano poświadczenia.|
-|-2016345901|0x87D100D3|Syncml(211): element nie został usunięty. Nie znaleziono żądanego elementu. Być może został usunięty wcześniej.|
-|-2016345902|0x87D100D2|Syncml(210): usunięcie bez archiwizacji. Odpowiedź wskazuje, że żądane dane zostały pomyślnie usunięte, ale nie zostały zarchiwizowane przed usunięciem, ponieważ ta funkcja OPCJONALNA nie jest obsługiwana przez implementację.|
+|-2016345809|0x87D1012F|Syncml(303): Żądany element docelowy można znaleźć pod innym identyfikatorem URI.|
+|-2016345810|0x87D1012E|Syncml(302): Żądany element docelowy został tymczasowo przeniesiony pod inny identyfikator URI.|
+|-2016345811|0x87D1012D|Syncml(301): Żądany element docelowy ma nowy identyfikator URI.|
+|-2016345812|0x87D1012C|Syncml(300): Żądany element docelowy stanowi jedną z wielu alternatyw żądanego elementu docelowego.|
+|-2016345896|0x87D100D8|Syncml(216): Polecenie znajdowało się wewnątrz niepodzielnego elementu, dla którego wystąpił błąd. To polecenie zostało pomyślnie wycofane.|
+|-2016345897|0x87D100D7|Syncml(215): Polecenie nie zostało wykonane w wyniku interakcji z użytkownikiem, który nie zaakceptował wyboru.|
+|-2016345898|0x87D100D6|Syncml(214): Operacja została anulowana. Polecenie SyncML zostało wykonane pomyślnie, ale żadne kolejne polecenia nie będą przetwarzane w ramach sesji.|
+|-2016345899|0x87D100D5|Syncml(213): Podzielony element został zaakceptowany i zbuforowany.|
+|-2016345900|0x87D100D4|Syncml(212): Uwierzytelnianie zostało zaakceptowane. Żadne inne uwierzytelnianie nie jest potrzebne w pozostałej części sesji synchronizacji. Tego kodu odpowiedzi można użyć tylko w odpowiedzi na żądanie, w którym podano poświadczenia.|
+|-2016345901|0x87D100D3|Syncml(211): Element nie został usunięty. Nie znaleziono żądanego elementu. Być może został usunięty wcześniej.|
+|-2016345902|0x87D100D2|Syncml(210): Usunięcie bez archiwizacji. Odpowiedź wskazuje, że żądane dane zostały pomyślnie usunięte, ale nie zostały zarchiwizowane przed usunięciem, ponieważ ta funkcja OPCJONALNA nie jest obsługiwana przez implementację.|
 |-2016345903|0x87D100D1|Konflikt został rozwiązany za pomocą duplikatu. Odpowiedź wskazuje, że żądanie spowodowało konflikt aktualizacji, który został rozwiązany przez zduplikowanie danych klienta w bazie danych serwera. Odpowiedź zawiera docelowy identyfikator URI duplikatu w elemencie stanu. Dodatkowo w przypadku synchronizacji dwukierunkowej zostało zwrócone polecenie Add z definicją danych duplikatu.|
 |-2016345904|0x87D100D0|Konflikt został rozwiązany przez zastosowanie polecenia klienta. Odpowiedź wskazuje, że wystąpił konflikt aktualizacji, który został rozwiązany przez nadanie pierwszeństwa poleceniu klienta.|
 |-2016345905|0x87D100CF|Konflikt został rozwiązany przez scalenie. Odpowiedź wskazuje, że żądanie spowodowało wystąpienie konfliktu, który został rozwiązany przez scalenie wystąpień danych klienta i serwera. Odpowiedź zawiera docelowy i źródłowy adres URL w elemencie stanu. Dodatkowo zostało zwrócone polecenie Replace ze scalonymi danymi.|

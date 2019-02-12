@@ -16,12 +16,13 @@ ms.reviewer: owenyen
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
-ms.openlocfilehash: db9cdf539f0cf80fb4640ba41929c67e643956c4
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 30532c87fe8b6e9d96bf00d45a29f4da4a99b9da
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181126"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849797"
 ---
 # <a name="help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune"></a>Ochrona komputerów z systemem Windows przy użyciu zasad Zapory systemu Windows w usłudze Microsoft Intune
 
@@ -136,5 +137,5 @@ Możesz skonfigurować wyjątki, które zezwalają na przesyłanie konkretnych r
 |**Windows Virtual PC**<br>(system Windows 7 lub nowszy)|Umożliwia maszynom wirtualnym komunikowanie się z innymi komputerami.|
 |**Bezprzewodowe urządzenia przenośne**|Umożliwia transferowanie multimediów z kamery sieciowej lub urządzenia multimedialnego do zarządzanych komputerów przy użyciu protokołu transferu multimediów (MTP). To ustawienie powoduje użycie usługi SSDP i protokołów sieciowych UPnP.|
 
-### <a name="see-also"></a>Zobacz też
+### <a name="see-also"></a>Zobacz także
 [Zasady ochrony komputerów z systemem Windows](policies-to-protect-windows-pcs-in-microsoft-intune.md)

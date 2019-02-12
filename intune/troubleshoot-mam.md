@@ -15,12 +15,13 @@ ms.assetid: cd5a0a3b-0013-4be3-a233-ce6e9083149f
 ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 58ff1bd91a5c95d66d75ad6546137dd2de9feac3
-ms.sourcegitcommit: a30d4b699df4bff17ef39d6c93b2a5c5432db5ae
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e827862510f24a2f133562c836d6c1b47186c330
+ms.sourcegitcommit: c0b954c82cd732b5328f92b618947bf425bf0a91
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54899097"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56086152"
 ---
 # <a name="troubleshoot-mobile-application-management"></a>Rozwiązywanie problemów związanych z zarządzaniem aplikacjami mobilnymi
 
@@ -34,9 +35,9 @@ Są to typowe problemy, które administrator IT może napotkać podczas korzysta
 
 | Problem | Opis | Rozwiązanie |
 | -- | -- | -- |
-| Zasady nie są stosowane w przypadku programu Skype dla firm | Zasady ochrony aplikacji bez rejestracji urządzenia wprowadzone w witrynie Azure Portal nie są stosowane do aplikacji Skype dla firm na urządzeniach z systemem iOS i Android. | Skonfiguruj aplikację Skype dla firm do korzystania z nowoczesnego uwierzytelniania.  Postępuj zgodnie z instrukcjami podanymi w temacie [Zapewnianie dzierżawcy możliwości nowoczesnego uwierzytelniania](http://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx), aby skonfigurować nowoczesne uwierzytelnianie dla aplikacji Skype. |
+| Zasady nie są stosowane w przypadku programu Skype dla firm | Zasady ochrony aplikacji bez rejestracji urządzenia wprowadzone w witrynie Azure Portal nie są stosowane do aplikacji Skype dla firm na urządzeniach z systemem iOS i Android. | Skonfiguruj aplikację Skype dla firm do korzystania z nowoczesnego uwierzytelniania.  Postępuj zgodnie z instrukcjami podanymi w temacie [Zapewnianie dzierżawcy możliwości nowoczesnego uwierzytelniania](https://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx), aby skonfigurować nowoczesne uwierzytelnianie dla aplikacji Skype. |
 | Zasady aplikacji pakietu Office nie są stosowane | Zasady ochrony aplikacji nie są stosowane do żadnej [obsługiwanej aplikacji pakietu Office](https://www.microsoft.com/cloud-platform/microsoft-intune-partners) dla jakiegokolwiek użytkownika. | Potwierdź, że użytkownik ma licencję na usługę Intune oraz że aplikacje pakietu Office są objęte wdrożonymi zasadami ochrony aplikacji. Zastosowanie nowo wdrożonych zasad ochrony aplikacji może potrwać do 8 godzin. |
-| Administrator nie może skonfigurować zasad ochrony aplikacji w witrynie Azure Portal | Użytkownik będący administratorem IT nie może skonfigurować zasad ochrony aplikacji w portalu Azure Portal. | Następujące role użytkownika mają dostęp do portalu Azure Portal: <ul><li>Administrator globalny, którego można skonfigurować w [portalu usługi Office](http://portal.office.com/)</li><li>Właściciel, którego można skonfigurować w [portalu Azure](https://portal.azure.com/).</li><li>Współautor, którego można skonfigurować w [portalu Azure](https://portal.azure.com/).</li></ul> W celu uzyskania pomocy podczas konfigurowania tych ról zapoznaj się z tematem [Kontrola dostępu na podstawie ról (kontrola RBAC) w usłudze Microsoft Intune](role-based-access-control.md).|
+| Administrator nie może skonfigurować zasad ochrony aplikacji w witrynie Azure Portal | Użytkownik będący administratorem IT nie może skonfigurować zasad ochrony aplikacji w portalu Azure Portal. | Następujące role użytkownika mają dostęp do portalu Azure Portal: <ul><li>Administrator globalny, którego można skonfigurować w [portalu usługi Office](https://portal.office.com/)</li><li>Właściciel, którego można skonfigurować w [portalu Azure](https://portal.azure.com/).</li><li>Współautor, którego można skonfigurować w [portalu Azure](https://portal.azure.com/).</li></ul> W celu uzyskania pomocy podczas konfigurowania tych ról zapoznaj się z tematem [Kontrola dostępu na podstawie ról (kontrola RBAC) w usłudze Microsoft Intune](role-based-access-control.md).|
 |W raportach zasad ochrony aplikacji brakuje kont użytkowników | W raportach konsoli administratora nie są widoczne konta użytkowników, dla których niedawno wdrożono zasady ochrony aplikacji. | W przypadku użytkownika niedawno objętego zasadami ochrony aplikacji wyświetlenie informacji na jego temat w raportach może nastąpić po upływie nawet 24 godzin. |
 | Zmiany zasad nie działają | Zastosowanie zmian i aktualizacji zasad ochrony aplikacji może potrwać nawet 8 godzin. | Jeśli to konieczne, użytkownik końcowy może wylogować się z aplikacji i zalogować się do niej ponownie, aby wymusić synchronizację z usługą. |
 | Zasady ochrony aplikacji nie działają z programem DEP | Zasady ochrony aplikacji nie są stosowane do urządzeń korzystających z programu DEP firmy Apple. | Upewnij się, że używasz koligacji użytkownika na potrzeby programu Device Enrollment Program (DEP) firmy Apple. Koligacja użytkownika jest wymagana dla każdej aplikacji, która wymaga uwierzytelniania użytkownika w ramach programu DEP. <br><br>Artykuł [Automatyczne rejestrowanie urządzeń z systemem iOS w ramach programu Device Enrollment Program firmy Apple](device-enrollment-program-enroll-ios.md) zawiera dalsze informacje na temat rejestracji w ramach programu DEP dla systemu iOS.|
