@@ -14,12 +14,13 @@ ms.assetid: 5aa5cfa3-c483-4099-b40f-578ff8dca425
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 1eb1e671cc16196974cb15cdc785ba7d99fa8f46
-ms.sourcegitcommit: 4bd992da609b8bcc85edc2d64fe8128546aa4617
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 781e82e64cda747f602b305fda74fd25e0362d7d
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55303416"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55846516"
 ---
 # <a name="use-fresh-start-to-reset-windows-10-devices-with-intune"></a>Użycie funkcji Rozpoczęcie od nowa do resetowania urządzeń z systemem Windows 10 przy użyciu usługi Intune
 
@@ -36,7 +37,7 @@ Akcja **Rozpoczęcie od nowa** urządzenia usuwa wszystkie aplikacje zainstalowa
     * urządzenie zostało ponownie zarejestrowane w usługach zarządzania urządzeniami przenośnymi, gdy zaloguje się do niego użytkownik z włączoną obsługą usługi Azure Active Directory;
     * zachować zawartość folderu macierzystego urządzenia użytkownika i usunąć aplikacje i ustawienia.  
   > [!IMPORTANT]
- > Jeśli nie zachowasz danych użytkownika, urządzenie zostanie przywrócone do stanu po zakupie. Urządzenie BYOD zostanie wyrejestrowane z usługi Azure AD i z usługi zarządzania urządzeniami przenośnymi.
+ > Jeśli nie zachowasz danych użytkownika, urządzenia zostanie przywrócone do stanu po zakupie. Urządzenie BYOD zostanie wyrejestrowane z usługi Azure AD i z usługi zarządzania urządzeniami przenośnymi.
  > Urządzenie dołączone do hybrydowej usługi Azure AD zostanie ponownie zarejestrowane w usługach zarządzania urządzeniami przenośnymi, gdy zaloguje się do niego użytkownik z włączoną obsługą usługi Azure Active Directory.
  
 5. Kliknij przycisk **OK**.   

@@ -13,12 +13,13 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
-ms.openlocfilehash: 31cfa617e0ca5d8d0848d1ecb781fda701589ccd
-ms.sourcegitcommit: 0142020a7cd75348c6367facf072ed94238e667f
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 7886f533f6ffa379132ac7c898bc5c1a1dac9111
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55229954"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55836544"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Ustawienia urządzenia z systemem Windows 10 lub nowszym, które ma działać jako kiosk w usłudze Intune
 
@@ -55,7 +56,7 @@ W przypadku wybrania trybu kiosku z pojedynczą aplikacją wprowadź następują
 
   Podaj następujące ustawienia:
 
-  - **Adres URL domyślnej strony głównej **: Wprowadź domyślny adres URL pokazywany po otwarciu przeglądarki kiosku lub ponownym uruchomieniu przeglądarki. Na przykład wprowadź adres `http://bing.com` lub `http://www.contoso.com`.
+  - **Adres URL domyślnej strony głównej** : Wprowadź domyślny adres URL pokazywany po otwarciu przeglądarki kiosku lub ponownym uruchomieniu przeglądarki. Na przykład wprowadź adres `http://bing.com` lub `http://www.contoso.com`.
 
   - **Przycisk Strona główna**: **Pokaż** lub **Ukryj** przycisk Strona główna przeglądarki kiosku. Domyślnie ten przycisk nie jest wyświetlany.
 
@@ -119,7 +120,7 @@ W przypadku wybrania trybu kiosku z wieloma aplikacjami wprowadź następujące 
 
   Podaj następujące ustawienia:
 
-  - **Adres URL domyślnej strony głównej **: Wprowadź domyślny adres URL pokazywany po otwarciu przeglądarki kiosku lub ponownym uruchomieniu przeglądarki. Na przykład wprowadź adres `http://bing.com` lub `http://www.contoso.com`.
+  - **Adres URL domyślnej strony głównej** : Wprowadź domyślny adres URL pokazywany po otwarciu przeglądarki kiosku lub ponownym uruchomieniu przeglądarki. Na przykład wprowadź adres `http://bing.com` lub `http://www.contoso.com`.
 
   - **Przycisk Strona główna**: **Pokaż** lub **Ukryj** przycisk Strona główna przeglądarki kiosku. Domyślnie ten przycisk nie jest wyświetlany.
 

@@ -16,12 +16,13 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 9258bf1847e83087404967c0ded50481da3a8dff
-ms.sourcegitcommit: e0d55bdda1a818ffe4cfc0ef0592833e22f65a89
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 8ff89d1776d71dc24ea675de167f3fd22d6bdf04
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55290744"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55838771"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Przypisywanie aplikacji do grup przy użyciu usługi Microsoft Intune
 
@@ -53,7 +54,7 @@ Poniższa tabela zawiera listę różnych opcji przypisywania aplikacji do użyt
 
 ## <a name="assign-an-app"></a>Przypisywanie aplikacji
 
-1. Zaloguj się do witryny [Azure Portal](https://portal.azure.com).
+1. Zaloguj się do [portalu Azure](https://portal.azure.com).
 2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 3. W menu **Intune** wybierz opcję **Aplikacje klienckie**.
 4. W sekcji **Zarządzaj** menu wybierz pozycję **Aplikacje**.
