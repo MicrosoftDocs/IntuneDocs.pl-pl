@@ -2,10 +2,10 @@
 title: Korzystanie z usługi Windows Defender ATP w usłudze Microsoft Intune —Azure | Microsoft Docs
 description: Dowiedz się, jak włączyć usługę Windows Defender Advanced Threat Protection (ATP) w scenariuszu typu end-to-end, m.in. w przypadku włączania ATP w usługach Intune oraz Windows Defender Security Center (portal ATP), dodawania urządzeń przy użyciu profilu konfiguracji ATP, tworzenia zasad zgodności z urządzeniami w usłudze Intune, tworzenia zasad dostępu warunkowego usługi Azure AD oraz monitorowania zgodności z urządzeniami.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 10/11/2018
+ms.date: 1/29/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,14 +14,15 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 1b8d08e60b9cd656eb9467fd5289b9dfc428d183
-ms.sourcegitcommit: 67666682935c44ff6ad003c0da220a79cc42c9c3
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: afa2ef4cf1199597f61af99d631243e2d3b51e64
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53167998"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55845180"
 ---
-# <a name="enable-windows-defender-atp-with-conditional-access-in-intune"></a>Włączanie usługi Windows Defender ATP z dostępem warunkowym w usłudze Intune
+# <a name="enforce-compliance-for-windows-defender-atp-with-conditional-access-in-intune"></a>Wymuszanie zgodności usługi Windows Defender ATP z dostępem warunkowym w usłudze Intune
 
 Usługi Windows Defender Advanced Threat Protection (ATP) i Microsoft Intune współpracują ze sobą i ułatwiają zapobieganie naruszeniom bezpieczeństwa oraz pomagają ograniczyć wpływ naruszeń w organizacji.
 

@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 063a5cbbe18efc5c406c9dc7f2fa40d614b2e48a
-ms.sourcegitcommit: d3b1e3fffd3e0229292768c7ef634be71e4736ae
+ms.openlocfilehash: 444fd63f8c582d35891dfa5aedb9eadd6626e541
+ms.sourcegitcommit: 4bd992da609b8bcc85edc2d64fe8128546aa4617
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52860966"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55303399"
 ---
 # <a name="manage-powershell-scripts-in-intune-for-windows-10-devices"></a>Zarządzanie skryptami programu PowerShell w usłudze Intune dla urządzeń z systemem Windows 10
 
@@ -38,7 +38,7 @@ Rozszerzenie do zarządzania usługi Intune uzupełnia funkcje usług MDM dostar
 
 Rozszerzenie do zarządzania usługi Intune ma następujące wymagania wstępne:
 
-- Urządzenia muszą zostać dołączone do usługi Azure AD i [automatycznie zarejestrowane](windows-enroll.md#enable-windows-10-automatic-enrollment). Rozszerzenie zarządzania w usłudze Intune obsługuje urządzenia dołączone do usługi Azure AD, urządzenia dołączone do domeny hybrydowej oraz wspólnie zarządzane, zarejestrowane urządzenia z systemem Windows. Urządzenia zarejestrowane przy użyciu obiektu zasad grupy nie są obsługiwane.
+- Urządzenia muszą być przyłączone do usługi Azure AD oraz w niej zarejestrowane, a usługa Azure AD musi być skonfigurowana na potrzeby [automatycznej rejestracji w usłudze Intune](windows-enroll.md#enable-windows-10-automatic-enrollment). Rozszerzenie zarządzania w usłudze Intune obsługuje urządzenia dołączone do usługi Azure AD, urządzenia dołączone do domeny hybrydowej oraz wspólnie zarządzane, zarejestrowane urządzenia z systemem Windows.
 - Na urządzeniach musi działać system Windows 10 w wersji 1607 lub nowszej.
 - Agent rozszerzenia zarządzania usługi Intune jest instalowany, gdy skrypt programu PowerShell lub aplikacja Win32 jest wdrażana do grupy zabezpieczeń użytkowników lub urządzeń.
 
@@ -62,9 +62,9 @@ Rozszerzenie do zarządzania usługi Intune ma następujące wymagania wstępne:
 3. Wybierz co najmniej jedną grupę obejmującą użytkowników, których urządzenia otrzymują skrypt. Użyj pozycji **Wybierz**, aby przypisać zasady do wybranych grup.
 
 > [!NOTE]
-> - Skryptów programu PowerShell nie można stosować do grup komputerów.
 > - Użytkownicy końcowi nie muszą logować się na urządzeniu, aby wykonywać skrypty programu PowerShell.
 > - Skrypty programu PowerShell w usłudze Intune mogą być przeznaczone dla grup zabezpieczeń urządzeń usługi Azure AD.
+> - Skrypty programu PowerShell w usłudze Intune mogą być przeznaczone dla grup zabezpieczeń użytkowników usługi Azure AD.
 
 Rozszerzenie do zarządzania usługi Intune przeprowadza sprawdzenie w usłudze Intune co godzinę. Po przypisaniu zasad do grup usługi Azure AD skrypt programu PowerShell jest uruchamiany, a wyniki jego działania są zgłaszane.
 

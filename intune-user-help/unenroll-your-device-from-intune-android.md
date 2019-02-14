@@ -17,12 +17,13 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 75b26e178badbaa7905199eb91490134d2b72ba9
-ms.sourcegitcommit: 61ed365f7f8826451c41bcab5e19bef97b5a3c72
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: fafd9c92a51c8ef258d151a3c19c271fdc45f4c2
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54057342"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55835864"
 ---
 # <a name="unenroll-your-android-device-from-management"></a>Wyrejestrowanie urządzenia z systemem Android z zarządzania  
 
@@ -35,39 +36,39 @@ Usunięcie zarejestrowanego urządzenia z systemem Android spowoduje, że nie b�
 
 1. W aplikacji Portal firmy przejdź do prawego górnego rogu, a następnie naciśnij pionowy symbol wielokropka. Zostanie otwarte menu akcji.
 
-   ![Obraz aplikacji Portal firmy dla systemu Android z otwartym menu akcji w prawym górnym rogu. Nowa opcja „usuń portal firmy” jest dostępna jako trzecia opcja poniżej opcji „mój profil” i „ustawienia”, powyżej pozycji „warunki i postanowienia”, „pomoc i opinie” oraz „informacje”.](./media/android_remove_cp_menu_action_after_1705.png)
+   ![Zrzut ekranu przedstawiający aplikację Portal firmy dla systemu Android z otwartym menu akcji w prawym górnym rogu. Nowa opcja „usuń portal firmy” jest dostępna jako trzecia opcja poniżej opcji „mój profil” i „ustawienia”, powyżej pozycji „warunki i postanowienia”, „pomoc i opinie” oraz „informacje”.](./media/android_remove_cp_menu_action_after_1705.png)
 
 2. Naciśnij pozycję **Usuń Portal firmy**.  
 
 3. Zostanie wyświetlony komunikat z informacjami o tym, co się stanie po wyrejestrowaniu urządzenia. Naciśnij przycisk **OK**, aby potwierdzić, że chcesz usunąć urządzenie z aplikacji Portal firmy.
 
-   ![Obraz okna dialogowego potwierdzenia, które jest dostępne po wybraniu w menu akcji nowej opcji „usuń portal firmy”. Okno dialogowe informuje użytkownika, że „po usunięciu portalu firmy urządzenie przestanie być zarządzane przez dział pomocy technicznej Twojej firmy, a dostęp do firmowych danych, aplikacji i poczty e-mail może zostać utracony”. Następnie użytkownik jest proszony o potwierdzenie za pomocą przycisku „Tak”, że chce usunąć aplikację Portal firmy.](./media/android_remove_cp_menu_confirmation_after_1705.png)
+   ![Zrzut ekranu przedstawiający potwierdzenie, które jest dostępne po wybraniu w menu akcji nowej opcji „Usuń Portal firmy”.](./media/android_remove_cp_menu_confirmation_after_1705.png)
 
-## <a name="removing-data-collected-by-the-company-portal-app"></a>Usuwanie danych zebranych przez aplikację Portal firmy  
+## <a name="remove-data-collected-by-the-company-portal-app"></a>Usuwanie danych zebranych przez aplikację Portal firmy  
 
 Aby usunąć wszystkie dane przechowywane przez aplikację Portal firmy dla systemu Android z urządzenia:
 
--   Wyczyść dane aplikacji: przejdź do obszaru Aplikacje, a następnie kliknij aplikację i przycisk „Wyczyść dane”
--   Usuń folder „\storage\internal storage\Android\data\com.microsoft.windowsintune.companyportal”
+-   Wyczyść dane aplikacji, naciskając pozycję **Aplikacje** > **[*nazwa aplikacji*]** > **Wyczyść dane**.
+-   Usuń następujący folder: \storage\internal storage\Android\data\com.microsoft.windowsintune.companyportal.
 
 ## <a name="uninstall-the-company-portal-app"></a>Odinstalowywanie aplikacji Portal firmy  
-Portal firmy to aplikacja do zarządzania urządzeniami. Nie można jej odinstalować do momentu [wyrejestrowania urządzenia z zarządzania](unenroll-your-device-from-intune-android.md#unenroll-your-android-device-from-management). Po wykonaniu tej czynności naciśnij i przytrzymaj ikonę aplikacji Portal firmy do momentu wyświetlenia pozycji **Odinstaluj**. Naciśnij pozycję **Odinstaluj**, aby usunąć aplikację z urządzenia.  
+Portal firmy to aplikacja do zarządzania urządzeniami. Nie można jej odinstalować do momentu wyrejestrowania urządzenia z zarządzania. Po wykonaniu tej czynności naciśnij i przytrzymaj ikonę aplikacji Portal firmy do momentu wyświetlenia pozycji **Odinstaluj**. Naciśnij pozycję **Odinstaluj**, aby usunąć aplikację z urządzenia.  
 
 Alternatywnie naciśnij kolejno pozycje **Ustawienia** > **Aplikacje** > **Portal firmy** > **Odinstaluj**.  
 
-### <a name="remove-company-portal-app-as-device-administrator"></a>Usuwanie aplikacji Portal firmy przez administratora urządzenia  
-W ostateczności możesz odinstalować tę aplikację z urządzenia, usuwając ją jako administrator urządzenia.  
+### <a name="remove-the-company-portal-app-as-a-device-administrator"></a>Usuwanie aplikacji Portal firmy przez administratora urządzenia  
+W ostateczności możesz odinstalować tę aplikację z urządzenia, jako administrator urządzenia.  
 
-Jeśli masz urządzenie należące do firmy, Twoja organizacja może wymagać, aby aplikacja Portal firmy działała na urządzeniu przez cały czas. Jeśli odinstalujesz tę aplikację, to do czasu jej ponownej instalacji możesz utracić dostęp do chronionych zasobów firmy, takich jak wiadomości e-mail, aplikacje i ustawienia sieci WiFi lub VPN. Aby uzyskać więcej informacji na temat instalowania, aktualizowania lub usuwania wymaganych aplikacji, zobacz [Dodawanie aplikacji do usługi Microsoft Intune](https://docs.microsoft.com/intune/apps-add#apps-that-are-added-automatically-by-intune).  
+Jeśli masz urządzenie należące do firmy, Twoja organizacja może wymagać, aby aplikacja Portal firmy działała na urządzeniu przez cały czas. Jeśli odinstalujesz tę aplikację, to do czasu jej ponownej instalacji możesz utracić dostęp do chronionych zasobów firmy, takich jak wiadomości e-mail, aplikacje i ustawienia sieci Wi-Fi lub VPN. Aby uzyskać więcej informacji na temat instalowania, aktualizowania lub usuwania wymaganych aplikacji, zobacz [Dodawanie aplikacji do usługi Microsoft Intune](https://docs.microsoft.com/intune/apps-add#apps-that-are-added-automatically-by-intune).  
 
-Wykonaj poniższe kroki, aby wyłączyć aplikację Portal firmy jako administrator urządzenia. Rzeczywiste nazwy poszczególnych ustawień mogą być inne na Twoim urządzeniu z systemem Android.  
+Poniżej opisano, jak administrator urządzenia może wyłączyć aplikację Portal firmy. Rzeczywiste nazwy poszczególnych ustawień mogą być inne na Twoim urządzeniu z systemem Android.  
 
-**Instrukcje dla systemu Android, opcja 1**:  
+**Opcja 1**.  
 1. Wybierz kolejno pozycje **Ustawienia** > **Zabezpieczenia** > **Dodatkowe ustawienia zabezpieczeń** > **Administratorzy urządzenia**.  
 2. Usuń zaznaczenie opcji **Portal firmy**.  
 
-**Instrukcje dla systemu Android, opcja 2**:  
+**Opcja 2**:  
 1. Wybierz kolejno pozycje **Ustawienia** > **Blokada ekranu i zabezpieczenia** > **Inne ustawienia zabezpieczeń** > **Aplikacje administratora urządzenia**.  
 2. Usuń zaznaczenie opcji **Portal firmy**.    
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie internetowej Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).

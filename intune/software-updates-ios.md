@@ -2,8 +2,8 @@
 title: Konfigurowanie zasad aktualizacji oprogramowania systemu iOS w usłudze Microsoft Intune — Azure | Microsoft Docs
 description: W usłudze Microsoft Intune utwórz lub dodaj zasady konfiguracji ograniczające automatyczną instalację aktualizacji oprogramowania na urządzeniach z systemem iOS zarządzanych lub nadzorowany przez usługę Intune. Możesz wybrać datę i godzinę, kiedy aktualizacje mają nie być instalowane. Możesz także przypisać te zasady do grup, użytkowników lub urządzeń i sprawdzać, czy wystąpiły błędy instalacji.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 10/11/2018
 ms.topic: article
@@ -11,12 +11,13 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 search.appverid: MET150
-ms.openlocfilehash: 61bd7d5cf40355536aa7d5c361a771ce2b4f30ec
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: cce77976ea0cb31596ca0a1fd6c4becc9e3cee34
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189881"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55833603"
 ---
 # <a name="configure-ios-update-policies-in-intune"></a>Konfigurowanie zasad aktualizacji systemu iOS w usłudze Intune
 
@@ -33,7 +34,10 @@ Ta funkcja obsługuje urządzenia z systemem iOS w wersji 10.3 lub nowszej. Usta
 4. Wprowadź nazwę i opis zasad.
 5. Wybierz pozycję **Ustawienia**. 
 
-    Wprowadź szczegóły dotyczące czasu, kiedy na urządzeniach z systemem iOS nie jest wymuszana instalacja najnowszych aktualizacji. Te ustawienia tworzą przedział czasu z ograniczeniami. Możesz skonfigurować **dni** tygodnia, **strefę czasową**, **godzinę rozpoczęcia**, **godzinę zakończenia** oraz to, czy **opóźniać widoczność aktualizacji oprogramowania (w dniach)**, aby wprowadzić użytkowników. Możesz wybrać zakres opóźnienia aktualizacji oprogramowania z przedziału od 1 do 90 dni. Aby zrezygnować z ustawienia opóźnienia aktualizacji oprogramowania, wprowadź wartość 0. Te ustawienia aktualizacji będą stosowane tylko na nadzorowanych urządzeniach z systemem iOS.
+    Wprowadź szczegóły dotyczące czasu, kiedy na urządzeniach z systemem iOS nie jest wymuszana instalacja najnowszych aktualizacji. Te ustawienia tworzą przedział czasu z ograniczeniami. Możesz skonfigurować **dni** tygodnia, **strefę czasową**, **godzinę rozpoczęcia**, **godzinę zakończenia** oraz to, czy **opóźniać widoczność aktualizacji oprogramowania (w dniach)**, aby wprowadzić użytkowników. Możesz wybrać zakres opóźnienia aktualizacji oprogramowania z przedziału od 1 do 90 dni. Po upływie czasu opóźnienia użytkownicy otrzymują powiadomienie o aktualizacji do najnowszej wersji systemu operacyjnego dostępnej w momencie wyzwolenia opóźnienia. Aby zrezygnować z ustawienia opóźnienia aktualizacji oprogramowania, wprowadź wartość 0. Te ustawienia aktualizacji będą stosowane tylko na nadzorowanych urządzeniach z systemem iOS.
+  
+    Na przykład jeśli system iOS 12.a jest dostępny **1 stycznia** i ustawienie **Opóźnij aktualizacje systemu operacyjnego** ma wartość **5 dni**, ta konkretna wersja nie będzie wyświetlana jako dostępna aktualizacja na żadnym urządzeniu użytkownika końcowego przypisanym do tego profilu. **Szóstego dnia** po wydaniu aktualizacja będzie wyświetlana jako dostępna, a wszyscy użytkownicy końcowi będą mogli zainicjować aktualizację.
+
 
 6. Wybierz przycisk **OK**, aby zapisać zmiany. Wybierz pozycję **Utwórz**, aby utworzyć zasady.
 
@@ -44,7 +48,7 @@ Profil zostanie utworzony i wyświetlony na liście zasad. Zarządzanie urządze
 1. W obszarze **Aktualizacje oprogramowania** wybierz pozycję **Zasady aktualizacji dla systemu iOS**.
 2. Wybierz istniejące zasady > **Właściwości**.
 3. Zaktualizuj czas z ograniczeniami:
-
+    
     1. Wybieranie dni tygodnia
     2. Wybierz strefę czasową, w której te zasady są stosowane
     3. Wprowadź godzinę rozpoczęcia i zakończenia w przypadku godzin zabronionych

@@ -28,7 +28,9 @@ Automatyczna rejestracja umożliwia użytkownikom rejestrowanie urządzeń z sys
    - **Wszystkie** — wszyscy użytkownicy mogą automatycznie rejestrować swoje urządzenia z systemem Windows 10
 
       > [!IMPORTANT]
-      > Jeśli dla danej grupy są włączone zarówno **Zakres użytkownika funkcji zarządzania aplikacjami mobilnymi**, jak i automatyczna rejestracja w zarządzaniu urządzeniami przenośnymi (**Zakres użytkownika oprogramowania MDM**), wówczas włączone jest tylko rozwiązanie zarządzania aplikacjami mobilnymi. Gdy użytkownicy w tej grupie dołączają urządzenia osobiste w miejscu pracy, dodawane jest tylko rozwiązanie zarządzania aplikacjami mobilnymi. Urządzenia nie są automatycznie rejestrowane przez rozwiązanie zarządzania urządzeniami przenośnymi.
+      > W przypadku urządzeń BYOD zakres użytkownika funkcji MAM ma pierwszeństwo, jeśli dla wszystkich użytkowników (lub tych samych grup użytkowników) jest włączony zarówno zakres użytkownika funkcji MAM, jak i zakres użytkownika oprogramowania MDM (automatyczne rejestrowanie MDM). Urządzenie będzie używało zasad funkcji Windows Information Protection (WIP) (jeśli je skonfigurowano) i nie zostanie zarejestrowane przez funkcję zarządzania urządzeniami mobilnymi.
+      >
+      > W przypadku urządzeń firmowych zakres użytkownika oprogramowania MDM ma pierwszeństwo, jeśli włączone są oba zakresy. Urządzenia są rejestrowane przez funkcję zarządzania urządzeniami mobilnymi.
 
    ![Zrzut ekranu witryny Azure Portal](../media/auto-enroll-scope.png)
 

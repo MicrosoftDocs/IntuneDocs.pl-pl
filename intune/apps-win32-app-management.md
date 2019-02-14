@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2019
+ms.date: 01/29/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,30 +16,30 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: cb52a9755dffd20e6d3d66419855cc4ee7fca293
-ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
+ms.openlocfilehash: ba77c14e470ed75a87f44adcaf0ba9b98cd06438
+ms.sourcegitcommit: e0d55bdda1a818ffe4cfc0ef0592833e22f65a89
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55068326"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55290761"
 ---
-# <a name="intune-standalone---win32-app-management-public-preview"></a>Autonomiczna usługa Intune — zarządzanie aplikacjami Win32 (publiczna wersja zapoznawcza)
+# <a name="intune-standalone---win32-app-management"></a>Autonomiczna usługa Intune — zarządzanie aplikacjami Win32
 
 Autonomiczna usługa Intune daje większe możliwości zarządzania aplikacjami Win32. O ile klienci połączeni z chmurą mogą zarządzać aplikacjami Win32 za pomocą programu Configuration Manager, klienci korzystający tylko z usługi Intune będą mieć większe możliwości zarządzania aplikacjami biznesowymi Win32. Ten temat zawiera omówienie funkcji zarządzania aplikacjami Win32 w usłudze Intune i informacje dotyczące rozwiązywania problemów.
 
-## <a name="prerequisites-for-public-preview"></a>Wymagania wstępne dla publicznej wersji zapoznawczej
+## <a name="prerequisites"></a>Wymagania wstępne
 
 - System Windows 10 w wersji 1607 lub nowszej (wersje Enterprise, Pro i Education)
 - Klient z systemem Windows 10 musi być: 
     - Przyłączony do usługi Azure Active Directory (AAD) lub hybrydowej usługi Azure Active Directory
     - Zarejestrowany w usłudze Intune (zarządzany przez rozwiązanie MDM)
-- Rozmiar aplikacji systemu Windows jest ograniczony do 8 GB na aplikację w publicznej wersji zapoznawczej 
+- Rozmiar aplikacji systemu Windows jest ograniczony do 8 GB na aplikację
 
 ## <a name="prepare-the-win32-app-content-for-upload"></a>Przygotowanie zawartości aplikacji Win32 do przekazania
 
-Użyj narzędzia [Microsoft Intune Win32 App Upload Prep Tool](https://github.com/Microsoft/Intune-Win32-App-Packaging-Tool), aby przetworzyć wstępnie aplikacje Win32. Narzędzie do tworzenia pakietów konwertuje pliki instalacyjne aplikacji do formatu *intunewin*. Narzędzie do tworzenia pakietów wykrywa także niektóre atrybuty wymagane przez usługę Intune na potrzeby określenia stanu instalacji aplikacji. Po użyciu tego narzędzia dla folderu instalatora aplikacji będzie można utworzyć aplikację Win32 w konsoli usługi Intune.
+Użyj narzędzia [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730), aby przetworzyć wstępnie aplikacje Win32. Narzędzie konwertuje pliki instalacyjne aplikacji do formatu *intunewin*. Narzędzie wykrywa także niektóre atrybuty wymagane przez usługę Intune na potrzeby określenia stanu instalacji aplikacji. Po użyciu tego narzędzia dla folderu instalatora aplikacji będzie można utworzyć aplikację Win32 w konsoli usługi Intune.
 
-Narzędzie [Microsoft Intune Win32 App Upload Prep Tool](https://github.com/Microsoft/Intune-Win32-App-Packaging-Tool) możesz pobrać z witryny GitHub.
+Narzędzie [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730) możesz pobrać z witryny GitHub.
 
 ### <a name="available-command-line-parameters"></a>Dostępne parametry wiersza polecenia 
 
@@ -74,7 +74,7 @@ Podobnie jak w przypadku aplikacji biznesowych, możesz dodać aplikację Win32 
 1.  Zaloguj się do [portalu Azure](https://portal.azure.com/).
 2.  Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 3.  W okienku **Intune** wybierz pozycję **Aplikacje klienckie** > **Aplikacje** > **Dodaj**.
-4.  W okienku aplikacji **Dodawanie** wybierz pozycję **Aplikacja systemu Windows (Win32) — wersja zapoznawcza** z listy rozwijanej.
+4.  W okienku aplikacji **Dodawanie** wybierz z listy rozwijanej pozycję **Aplikacja systemu Windows (Win32)**.
 
     ![Zrzut ekranu przedstawiający blok dodawania aplikacji — pole listy rozwijanej dodawania typu](./media/apps-win32-app-01.png)
 
@@ -85,6 +85,10 @@ Podobnie jak w przypadku aplikacji biznesowych, możesz dodać aplikację Win32 
     ![Zrzut ekranu przedstawiający blok pliku pakietu aplikacji](./media/apps-win32-app-02.png)
 
 2.  W okienku **Plik pakietu aplikacji** wybierz przycisk przeglądania. Następnie wybierz plik instalacyjny systemu Windows z rozszerzeniem *intunewin*.
+
+    > [!IMPORTANT]
+    > Upewnij się, że używasz najnowszej wersji narzędzia Microsoft Win32 Content Prep Tool. Jeśli nie użyjesz najnowszej wersji, zostanie wyświetlone ostrzeżenie z informacją, że aplikacja została spakowana przy użyciu starszej wersji narzędzia Microsoft Win32 Content Prep Tool. 
+
 3.  Po zakończeniu wybierz przycisk **OK**.
 
 ### <a name="step-3-configure-app-information"></a>Krok 3: Konfigurowanie informacji o aplikacji
@@ -171,7 +175,7 @@ Podobnie jak w przypadku aplikacji biznesowych, możesz dodać aplikację Win32 
             
                 ![Zrzut ekranu okienka Reguła wykrywania — obecność klucza rejestru](./media/apps-win32-app-05.png)    
             
-            2.  Sprawdzenie obecności wartości rejestru (**niedostępne w wersji zapoznawczej**).
+            2.  Sprawdź, czy wartość rejestru istnieje.
         
                 ![Zrzut okienka Reguła wykrywania — obecność wartości rejestru](./media/apps-win32-app-06.png)    
         

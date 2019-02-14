@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/13/2018
+ms.date: 01/29/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
-ms.openlocfilehash: f2b75eb5a87dbfd7a17aee83f173d3d472920428
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.openlocfilehash: e297169757f1bcc703ce698302ce6f7129104827
+ms.sourcegitcommit: 0142020a7cd75348c6367facf072ed94238e667f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54203641"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55230124"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem Windows 10 (i nowszym) w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune
 
@@ -307,7 +307,7 @@ Użyj przycisku **Dodaj**, aby utworzyć konfigurację kiosku (lub wybierz istni
 - **Hasło**: Wymaga od użytkownika końcowego wprowadzenia hasła w celu uzyskania dostępu do urządzenia.
   - **Wymagany typ hasła**: Określa, czy hasło musi być wyłącznie numeryczne lub alfanumeryczne.
   - **Minimalna długość hasła**: Dotyczy tylko systemu Windows 10 Mobile.
-  - **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia**: W przypadku urządzeń z systemem Windows 10: jeśli na urządzeniu jest włączona funkcja BitLocker, zostanie ono przełączone do trybu odzyskiwania funkcji BitLocker po określonej liczbie nieudanych prób logowania. Jeśli na urządzeniu nie została włączona funkcja BitLocker, to ustawienie nie będzie miało zastosowania. Na urządzeniach z systemem Windows 10 Mobile: po określonej liczbie niepowodzeń logowania urządzenie zostanie wyczyszczone.
+  - **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia**: Urządzenia z systemem Windows 10: jeśli na urządzeniu jest włączona funkcja BitLocker, zostanie ono przełączone do trybu odzyskiwania funkcji BitLocker po określonej liczbie nieudanych prób logowania. Jeśli na urządzeniu nie została włączona funkcja BitLocker, to ustawienie nie będzie miało zastosowania. Urządzenia z systemem Windows 10 Mobile: po określonej liczbie niepowodzeń logowania urządzenie zostanie wyczyszczone.
   - **Maksymalna liczba minut braku aktywności przed zablokowaniem ekranu**: Określa czas bezczynności urządzenia, po upływie którego ekran jest blokowany.
   - **Wygaśnięcie hasła (dni)**: Określa czas, po jakim hasło urządzenia musi zostać zmienione.
   - **Zapobiegaj ponownemu używaniu poprzednich haseł**: Określa liczbę poprzednich haseł, które są zapamiętywane przez urządzenie.
@@ -319,8 +319,8 @@ Użyj przycisku **Dodaj**, aby utworzyć konfigurację kiosku (lub wybierz istni
 
 Możesz dodawać aplikacje, dla których chcesz określić inne zachowanie dotyczące prywatności niż zachowanie zdefiniowane w domyślnym ustawieniu prywatności.
 
-- **Nazwa pakietu**: nazwa rodziny pakietów aplikacji.
-- **Nazwa aplikacji**: nazwa aplikacji.
+- **Nazwa pakietu**: Nazwa rodziny pakietu aplikacji.
+- **Nazwa aplikacji**: Nazwa aplikacji.
 
 ### <a name="exceptions"></a>Wyjątki
 
@@ -420,7 +420,7 @@ Można skonfigurować informacje, do których mogą uzyskiwać dostęp wszystkie
 
 - **Układ menu Start**: W celu dostosowania menu Start na urządzeniach stacjonarnych można przekazać plik XML zawierający dostosowania, w tym kolejność wyświetlania aplikacji i nie tylko. Użytkownicy nie mogą zmieniać wprowadzonego w ten sposób układu menu Start.
 - **Przypinaj witryny internetowe do kafelków w menu Start**: Zaimportuj obrazy z przeglądarki Microsoft Edge, które będą wyświetlane jako linki w menu Start systemu Windows dla urządzeń stacjonarnych.
-- **Odpinanie aplikacji od paska zadań**: Wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom odpinanie aplikacji od menu Start.
+- **Odpinanie aplikacji od paska zadań**: Wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom odpinanie aplikacji od paska zadań.
 - **Szybkie przełączanie użytkowników**: Wybierz pozycję **Blokuj**, aby uniemożliwić przełączanie się między zalogowanymi jednocześnie użytkownikami bez wylogowywania się.
 - **Najczęściej używane aplikacje**: Wybierz pozycję **Blokuj**, aby ukrywać najczęściej używane aplikacje w menu Start. Powoduje też wyłączenie odpowiedniego przełącznika w aplikacji Ustawienia.
 - **Ostatnio dodane aplikacje**: Wybierz pozycję **Blokuj**, aby ukrywać ostatnio dodane aplikacje w menu Start. Powoduje też wyłączenie odpowiedniego przełącznika w aplikacji Ustawienia.

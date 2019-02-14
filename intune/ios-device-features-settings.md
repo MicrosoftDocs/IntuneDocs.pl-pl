@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/24/2019
+ms.date: 01/30/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
-ms.openlocfilehash: a5a756cd3fd8b78893cee6a3c4629e49d6ac7c87
-ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
+ms.openlocfilehash: 8656e480c292fc9ed1212f9d2c180b791cb4f94c
+ms.sourcegitcommit: ce76541ceb783eb2e242032ef8579041d2f61532
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55072545"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55431494"
 ---
 # <a name="ios-device-feature-settings-in-intune"></a>Ustawienia funkcji urządzenia z systemem iOS w usłudze Intune
 
@@ -177,16 +177,23 @@ Wybierz sposób, w jaki aplikacje na urządzeniu z systemem iOS wysyłają powia
 
 Te ustawienia pozwalają wyświetlać niestandardowe komunikaty lub tekst w oknie logowania i na ekranie blokady. Można na przykład wprowadzić komunikat „W razie zgubienia zwróć do” oraz informacje dotyczące tagu zasobu. 
 
-Te ustawienia obsługują nadzorowane urządzenia z systemem iOS w wersji 9.3 i nowszych.
+Ta funkcja obsługuje urządzenia nadzorowane z następującymi systemami:
 
-1. W obszarze **Ustawienia** wybierz pozycję **Konfiguracja urządzenia udostępnionego (tylko tryb nadzorowany)**.
+- iOS 9.3 i nowsze
+
+1. W polu **Ustawienia** wybierz pozycję **Komunikat ekranu blokady (tylko tryb nadzorowany)**.
 2. Podaj następujące ustawienia:
 
-    - **Informacje dotyczące tagu zasobu**: wprowadź informacje o tagu zasobu urządzenia. Na przykład wprowadź `Owned by Contoso Corp`. 
+    - **Informacje dotyczące tagu zasobu**: wprowadź informacje o tagu zasobu urządzenia. Na przykład wprowadź adres `Owned by Contoso Corp` lub `Serial Number: {{serialnumber}}`. 
 
       Wprowadzony tekst zostanie wyświetlony w oknie logowania i na ekranie blokady w urządzeniu.
 
-    - **Przypis dolny ekranu blokady**: wprowadź informację, która może ułatwić zwrot urządzenia w przypadku jego utraty lub kradzieży. Na przykład wpisz coś takiego: `If found, call Contoso at ...`.
+    - **Przypis dolny ekranu blokady**: wprowadź informację, która może ułatwić zwrot urządzenia w przypadku jego utraty lub kradzieży. Możesz podać dowolny tekst. Na przykład wpisz coś takiego: `If found, call Contoso at ...`.
+
+    Możesz też dodać w tych polach informacje dotyczące konkretnych urządzeń za pomocą tokenów urządzeń. Aby na przykład wyświetlić numer seryjny, wprowadź `Serial Number: {{serialnumber}}`. Na ekranie blokady zostanie wyświetlony tekst podobny do tego: `Serial Number 123456789ABC`. Podczas wprowadzania zmiennych użyj nawiasów klamrowych `{{ }}`. [Tokeny konfiguracji aplikacji](app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) zawierają listę zmiennych, których można użyć. Możesz też użyć wartości `deviceName` lub innej wartości specyficznej dla urządzenia.
+
+    > [!NOTE]
+    > Zmienne nie są weryfikowane w interfejsie użytkownika. Dlatego mogą pojawić się profile zapisane z niepoprawnymi danymi wejściowymi. Na przykład jeśli podano wartość `{{Devicename}}` zamiast `{{devicename}}`, to zostanie wyświetlony literał ciągu zamiast unikatowej nazwy urządzenia.
 
 3. Po zakończeniu wybierz przycisk **OK**, aby zapisać zmiany.
 
@@ -279,6 +286,8 @@ Te ustawienia kontrolują dostęp za pomocą adresu URL przeglądarki na urządz
 ## <a name="wallpaper-settings"></a>Ustawienia tapety
 
 Dodaj niestandardowy obrazu PNG, JPG lub JPEG na urządzeniach nadzorowanych z systemem iOS. Na przykład użyj logo firmy na ekranie blokady.
+
+Jeśli profil bez obrazu zostanie przypisany do urządzeń z istniejącym obrazem, mogą wystąpić nieoczekiwane zachowania. Na przykład profil zostanie utworzony bez obrazu. Ten profil jest przypisany do urządzeń, które mają już obraz. W tym scenariuszu obraz może zostać zmieniony na obraz domyślny urządzenia lub oryginalny obraz może pozostać na urządzeniu. To zachowanie jest kontrolowane i ograniczane przez platformę MDM firmy Apple.
 
 - **Lokalizacja wyświetlania tapety**: wybierz lokalizację wyświetlania obrazu na urządzeniu. Dostępne opcje:
   - **Nieskonfigurowane**: obraz niestandardowy nie jest dodawany do urządzenia. Urządzenie używa wartości domyślnej systemu operacyjnego.

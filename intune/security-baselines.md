@@ -2,10 +2,10 @@
 title: Używanie punktów odniesienia zabezpieczeń w usłudze Microsoft Intune — Azure | Microsoft Docs
 description: Dodaj lub skonfiguruj zalecane ustawienia zabezpieczeń grup w celu ochrony użytkowników i danych na urządzeniach przy użyciu usługi Microsoft Intune w ramach zarządzania urządzeniami przenośnymi. Włącz funkcję BitLocker, konfiguruj Zaawansowaną ochronę przed zagrożeniami w usłudze Windows Defender, kontroluj program Internet Explorer, używaj filtru SmartScreen, ustawiaj lokalne zasady zabezpieczeń, wymagaj hasła, blokuj materiały do pobrania z Internetu i nie tylko.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 01/22/2019
+ms.date: 02/01/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,23 +14,24 @@ ms.assetid: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d78adf8e7d6d2ce05951171e6248dcc8c389945d
-ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: c610371760413cc157bee84382280666f387432b
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55070299"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850832"
 ---
 # <a name="create-a-windows-10-security-baseline-in-intune"></a>Tworzenie punktu odniesienia zabezpieczeń systemu Windows 10 w usłudze Intune
 
-Punkty odniesienia zabezpieczeń to funkcja w wersji zapoznawczej, która jest dostępna dla urządzeń z systemem Windows 10 i nowszymi wersjami. Ta funkcja obejmuje wiele ustawień usługi Intune, które ułatwiają zabezpieczanie i ochronę użytkowników i urządzeń. Ustawia ona również automatycznie te ustawienia na wartości zalecane przez zespoły zajmujące się zabezpieczeniami. Na przykład punkt odniesienia automatycznie włącza funkcję BitLocker, automatycznie wymaga podania hasła przed odblokowaniem urządzenia, automatycznie wyłącza uwierzytelnianie podstawowe i wykonuje inne czynności.
+Punkty odniesienia zabezpieczeń to funkcja w wersji zapoznawczej, która jest dostępna dla urządzeń z systemem Windows 10 i nowszymi wersjami. Ta funkcja obejmuje wiele ustawień obsługiwanych przez usługę Intune, które ułatwiają zabezpieczanie i ochronę użytkowników i urządzeń. Ustawia ona również automatycznie te ustawienia na wartości zalecane przez zespoły zajmujące się zabezpieczeniami. Na przykład punkt odniesienia automatycznie włącza funkcję BitLocker, automatycznie wymaga podania hasła przed odblokowaniem urządzenia, automatycznie wyłącza uwierzytelnianie podstawowe i wykonuje inne czynności.
 
 Ta funkcja ma zastosowanie do:
 
 - System Windows 10 w wersji 1809 lub nowszej
 
 > [!NOTE]
-> W okresie obowiązywania wersji zapoznawczej punktów odniesienia zabezpieczeń firma Microsoft nie zaleca używania profilów w środowisku produkcyjnym, ponieważ punkty odniesienia mogą zmieniać się w trakcie korzystania z wersji zapoznawczej.
+> W okresie obowiązywania wersji zapoznawczej punktów odniesienia zabezpieczeń firma Microsoft nie zaleca używania profilów w środowisku produkcyjnym, ponieważ punkty odniesienia mogą zmieniać się w trakcie korzystania z wersji zapoznawczej. Gdy punkty odniesienia zabezpieczeń staną się ogólnie dostępne, istniejące profile nie zostaną przekonwertowane na najnowsze obsługiwane profile.
 
 Celem użycia punktów odniesienia zabezpieczeń jest zapewnienie kompleksowego, bezpiecznego przepływu pracy podczas pracy z usługą Microsoft 365. Oto niektóre korzyści:
 
@@ -94,6 +95,12 @@ Po utworzeniu profil jest gotowy do przypisania do użytkowników, urządzeń i 
 
 Po zapisaniu profil będzie wypychany do urządzeń w momencie ich zaewidencjonowania w usłudze Intune. Może więc zdarzyć się to natychmiast.
 
+## <a name="available-security-baselines"></a>Dostępne punkty odniesienia zabezpieczeń  
+
+Poniższe punkty odniesienia zabezpieczeń są dostępne do użycia z usługą Intune.
+- **Wersja zapoznawcza: punkt odniesienia rozwiązania MDM**
+  - Wersja: [Październik 2018](security-baseline-settings-windows.md)
+
 ## <a name="q--a"></a>Pytania i odpowiedzi
 
 #### <a name="why-these-settings"></a>Dlaczego warto używać tych ustawień?
@@ -117,5 +124,5 @@ Ten sam zespół firmy Microsoft wybrał i zorganizował ustawienia dla każdego
 - Migracja z lokalnych zasad grupy usługi Active Directory do rozwiązania działającego wyłącznie w chmurze przy użyciu usługi Azure Active Directory (AD) w usłudze Microsoft Intune to podróż. Aby ją ułatwić, można korzystać z towarzyszących obiektów zasad grupy dla hybrydowych urządzeń usługi AS i przyłączonych do usługi Azure AD. W razie potrzeby te urządzenia mogą uzyskać ustawienia zarządzania urządzeniami przenośnymi z chmury (usługi Intune), a ustawienia zasad grupy z kontrolerów domeny w środowisku lokalnym.
 
 ## <a name="next-steps"></a>Następne kroki
-
-Sprawdź stan oraz monitoruj [punkt odniesienia i profil](security-baselines-monitor.md).
+- Zapoznaj się z [ustawieniami punktu odniesienia systemu Windows](security-baseline-settings-windows.md) obsługiwanymi przez usługę Intune.  
+- Sprawdź stan oraz monitoruj [punkt odniesienia i profil](security-baselines-monitor.md).

@@ -2,10 +2,10 @@
 title: Używanie numeru PIN do logowania się do urządzeń z systemem Windows 10 za pomocą usługi Microsoft Intune — Azure | Microsoft Docs
 description: Użyj funkcji Windows Hello dla firm, aby zezwolić użytkownikom na logowanie do urządzeń przy użyciu numeru PIN, odcisku palca i innych opcji. Utwórz profil konfiguracji ochrony tożsamości w usłudze Intune dla urządzeń z systemem Windows 10 urządzenia przy użyciu tych ustawień i przypisz profil do grup użytkowników i grup urządzeń.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 01/22/2019
+ms.date: 01/29/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,13 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 843806681fcee4ddec175207c2c49d6db95e0f0d
-ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: c917294ac11f8f0a19c0f8f361df8d2910cb461c
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54831391"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55838007"
 ---
 # <a name="use-windows-hello-for-business-on-windows-10-devices-with-microsoft-intune"></a>Korzystanie z funkcji Windows Hello dla firm na urządzeniach z systemem Windows 10 z usługą Microsoft Intune
 
@@ -60,7 +61,7 @@ W tym artykule przedstawiono sposób tworzenia profilu konfiguracji urządzenia.
 
 4. Po zakończeniu wybierz kolejno pozycje **OK** > **Utwórz**, aby zapisać zmiany.
 
-Profil został utworzony i wyświetlony na liście profilów. Następnie [przypisz](device-profile-assign.md) ten profil do grup.
+Profil został utworzony i wyświetlony na liście profilów. Następnie [przypisz](device-profile-assign.md) ten profil do grup użytkowników i urządzeń stosownie do potrzeb.
 
 <!--  Removing image as part of design review; retaining source until we known the disposition.
 

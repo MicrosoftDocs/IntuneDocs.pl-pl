@@ -2,8 +2,8 @@
 title: Resetowanie urządzeń z systemem Windows 10 za pomocą usługi Microsoft Intune — Azure | Microsoft Docs
 description: Usuń lub odinstaluj aplikacje na komputerach z systemem Windows 10 przy użyciu funkcji Rozpoczęcie od nowa usługi Microsoft Intune.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: ErikjeMS
+ms.author: erikje
 manager: dougeby
 ms.date: 08/09/2018
 ms.topic: article
@@ -14,12 +14,12 @@ ms.assetid: 5aa5cfa3-c483-4099-b40f-578ff8dca425
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: cd2320e4c3935c4865d785bbb2461bba20afffdb
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 1eb1e671cc16196974cb15cdc785ba7d99fa8f46
+ms.sourcegitcommit: 4bd992da609b8bcc85edc2d64fe8128546aa4617
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52188742"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55303416"
 ---
 # <a name="use-fresh-start-to-reset-windows-10-devices-with-intune"></a>Użycie funkcji Rozpoczęcie od nowa do resetowania urządzeń z systemem Windows 10 przy użyciu usługi Intune
 
@@ -33,10 +33,11 @@ Akcja **Rozpoczęcie od nowa** urządzenia usuwa wszystkie aplikacje zainstalowa
 3. Kliknij pozycję **Rozpoczęcie od nowa**. 
 4. Wybierz opcję **Zachowaj dane użytkownika na tym urządzeniu**, aby:
    * urządzenie pozostało dołączone do usługi Azure AD,
-    * urządzenie pozostało zarejestrowane w usłudze zarządzania urządzeniami przenośnymi, 
+    * urządzenie zostało ponownie zarejestrowane w usługach zarządzania urządzeniami przenośnymi, gdy zaloguje się do niego użytkownik z włączoną obsługą usługi Azure Active Directory;
     * zachować zawartość folderu macierzystego urządzenia użytkownika i usunąć aplikacje i ustawienia.  
   > [!IMPORTANT]
- > Jeśli nie zachowasz danych użytkownika, urządzenia zostanie przywrócone do stanu po zakupie. Zostanie ono wyrejestrowane z usługi Azure AD i z usługi zarządzania urządzeniami przenośnymi. 
+ > Jeśli nie zachowasz danych użytkownika, urządzenie zostanie przywrócone do stanu po zakupie. Urządzenie BYOD zostanie wyrejestrowane z usługi Azure AD i z usługi zarządzania urządzeniami przenośnymi.
+ > Urządzenie dołączone do hybrydowej usługi Azure AD zostanie ponownie zarejestrowane w usługach zarządzania urządzeniami przenośnymi, gdy zaloguje się do niego użytkownik z włączoną obsługą usługi Azure Active Directory.
  
 5. Kliknij przycisk **OK**.   
 6. Aby wyświetlić stan tej akcji, wróć do obszaru **Urządzenia** i kliknij przycisk **Akcje urządzenia**.  

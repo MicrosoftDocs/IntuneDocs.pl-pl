@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 7d45ea6d2a33db2de1d640a554b6a07ad8825109
-ms.sourcegitcommit: 8117444cfdddf6d9bdbc4ac715af8d88e72f411d
+ms.openlocfilehash: d54c778923b0d217187f6e4c70e4bc8730788fbc
+ms.sourcegitcommit: dde9e1e1d15c412751a186410c2a04974ff1b102
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48260253"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55690805"
 ---
 # <a name="enroll-your-macos-device-in-intune-with-the-company-portal-app"></a>Rejestrowanie urządzenia z systemem macOS w usłudze Intune przy użyciu aplikacji Portal firmy
 
@@ -57,7 +57,7 @@ Wykonaj poniższe kroki, aby zarejestrować urządzenia z systemem operacyjnym m
 
 4. Na stronie __Urządzenia__ zostanie wyświetlona lista zarządzanych urządzeń lub transparent. Wyświetlone elementy zależą od tego, czy masz już zarządzane urządzenie. 
     * Aby dodać urządzenie, którego nie ma na liście, wybierz transparent z tekstem **Naciśnij tutaj, aby poinformować nas o używanym urządzeniu lub dodać nowe urządzenie**.
-    * Jeśli nie masz żadnych urządzeń, transparent wyświetla tekst: **Nie masz żadnych zarządzanych urządzeń. Dodaj urządzenie, naciskając tutaj.** Kliknij transparent, aby dodać urządzenie.  
+    * Jeśli nie masz żadnych urządzeń, baner zawiera następujący napis: **Nie masz żadnych urządzeń zarządzanych. Dodaj urządzenie, naciskając tutaj.** Kliknij transparent, aby dodać urządzenie.  
 
      ![Zrzut ekranu przedstawiający stronę Urządzenia z czerwonym kwadratem wokół opcji transparentu wyróżniającym miejsce, w którym należy kliknąć.](./media/CP-enroll-MACOS-1808.png)  
 5.  Wykonaj poniższy krok dopasowany do obecnie wyświetlanej wiadomości w aplikacji Portal firmy.  
@@ -93,4 +93,11 @@ Profil zarządzania definiuje połączenia kanału zarządzania urządzeniami pr
 
 Ponadto, ponieważ inne profile nie wymagają indywidualnych weryfikacji, są szybciej generowane i dostarczane do urządzeń. 
 
-Nadal potrzebujesz pomocy? Skontaktuj się z działem pomocy technicznej Twojej firmy. Odpowiednie informacje kontaktowe możesz znaleźć w [witrynie aplikacji Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).  
+## <a name="updating-the-company-portal-app"></a>Aktualizowanie aplikacji Portal firmy
+
+Aktualizowanie aplikacji Portal firmy odbywa się tak samo, jak w przypadku każdej innej aplikacji pakietu Office, za pomocą programu Microsoft AutoUpdate dla komputerów Mac. Dowiedz się więcej o [aktualizowaniu aplikacji firmy Microsoft dla systemu macOS](https://support.office.com/article/Check-for-Office-for-Mac-updates-automatically-bfd1e497-c24d-4754-92ab-910a4074d7c1).  
+
+## <a name="next-steps"></a>Następne kroki  
+Potrzebujesz dodatkowej pomocy? Skontaktuj się z działem pomocy technicznej Twojej firmy. Odpowiednie informacje kontaktowe możesz znaleźć w [witrynie aplikacji Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).  
+
+

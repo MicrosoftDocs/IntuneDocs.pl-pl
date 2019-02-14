@@ -16,12 +16,13 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 3c100ef3e598bf377f0464bfba161d4ad689ba98
-ms.sourcegitcommit: 9a1924ba2372904eb4a8a1894973e6f2be84129d
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 9951c1e2be1824936d757bfa74f4c82eeaf5e498
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626045"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55834453"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Konfigurowanie rejestracji dla urządzeń z systemem Windows
 
@@ -82,6 +83,12 @@ Administrator systemu DNS firmy Contoso powinien utworzyć następujące rekordy
 `EnterpriseEnrollment-s.manage.microsoft.com` — obsługuje przekierowanie do usługi Intune z rozpoznawaniem domeny na podstawie nazwy domeny adresu e-mail
 
 Propagowanie zmian rekordów DNS może potrwać do 72 godzin. Nie można zweryfikować zmiany w systemie DNS w usłudze Intune, dopóki trwa propagowanie rekordu DNS.
+
+## <a name="additional-endpoints-are-supported-but-not-recommended"></a>Dodatkowe punkty końcowe są obsługiwane, ale niezalecane
+EnterpriseEnrollment-s.manage.microsoft.com to preferowana nazwa FQDN na potrzeby rejestrowania, ale istnieją dwa inne punkty końcowe, które były w przeszłości używane przez klientów i są obsługiwane. EnterpriseEnrollment.manage.microsoft.com (bez -s) oraz manage.microsoft.com mogą służyć jako elementy docelowe serwera autowykrywania, ale użytkownik musi dotknąć przycisku OK w komunikacie potwierdzenia. Jeśli wskażesz punkt końcowy EnterpriseEnrollment-s.manage.microsoft.com, użytkownik nie będzie musiał wykonywać dodatkowego potwierdzenia, dlatego jest to zalecana konfiguracja.
+
+## <a name="alternate-methods-of-redirection-are-not-supported"></a>Alternatywne metody przekierowywania nie są obsługiwane
+Konfiguracja rekordu CNAME jest jedyną obsługiwaną metodą. Na przykład użycie serwera proxy w celu przekierowania punktu końcowego enterpriseenrollment.contoso.com/EnrollmentServer/Discovery.svc do enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc lub manage.microsoft.com/EnrollmentServer/Discovery.svc nie jest obsługiwane.
 
 **Krok 2: Weryfikacja rekordu CNAME** (opcjonalnie)<br>
 1. W usłudze [Intune w witrynie Azure Portal](https://aka.ms/intuneportal) wybierz kolejno pozycje **Rejestrowanie urządzenia**  >  **Rejestracja w systemie Windows**  >  **Weryfikacja rekordu CNAME**.

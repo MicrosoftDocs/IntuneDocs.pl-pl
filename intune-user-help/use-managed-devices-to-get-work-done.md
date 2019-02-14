@@ -17,12 +17,13 @@ ROBOTS: ''
 ms.reviewer: robstack
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: e067ce76046355a7da6bb785ae3302c0fc3e8bb9
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 44aad280f0b8714adbb3c8a1e109b68a5af46d4d
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54203150"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55838839"
 ---
 # <a name="use-managed-devices-to-access-work-or-school-resources"></a>Uzyskiwanie dostępu zasobów służbowych przy użyciu urządzeń zarządzanych
 Usługa Microsoft Intune to system zarządzania urządzeniami, który umożliwia organizacjom zarządzanie dostępem do urządzeń, aplikacji i poczty e-mail. Zarządzanie urządzeniami umożliwia Tobie oraz innym pracownikom i uczniom/studentom dostęp do informacji służbowych z niemal dowolnego miejsca w niemal każdym urządzeniu. Ty i dane organizacji jesteście bezpieczni nawet wtedy, gdy pracujesz zdalnie.
@@ -39,16 +40,9 @@ Pobierz Portal firmy w jeden z następujących sposobów:
 - Przechodząc do [witryny internetowej Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980) skonfigurowanej przez dział pomocy technicznej Twojej firmy.
 
 ## <a name="whats-the-difference-between-the-app-and-the-website"></a>Jakie są różnice między aplikacją i witryną internetową?
-Istnieje kilka niewielkich różnic między aplikacją Portal firmy a witryną internetową Portal firmy, jednak większość zadań można wykonać w obu. Oto niektóre dostępne zadania:
+Każda aplikacja Portal firmy dla systemu Windows 10, iOS, macOS i Android bezproblemowo integruje się z odpowiednią platformą urządzenia. Witryna internetowa jest dostępna z dowolnego urządzenia i udostępnia to samo uniwersalne środowisko niezależnie od tego, którego urządzenia używasz. 
 
-- Rejestrowanie urządzeń do zarządzania
-- Wyświetlanie stanu urządzeń
-- Pobieranie zalecanych i wymaganych aplikacji dla swojej organizacji
-- Zmienianie nazwy urządzenia
-- Resetowanie numeru PIN lub hasła urządzenia
-- Kontaktowanie się z działem IT w celu uzyskania pomocy
-
-Aby zobaczyć, co można zrobić za pomocą witryny internetowej Portal firmy, a co w aplikacji Portal firmy na urządzeniu, kliknij jeden z poniższych linków:
+Wskazówki dotyczące aplikacji Portal firmy specyficzne dla platformy urządzenia, począwszy od kroków rejestracji, są dostępne pod następującymi linkami:  
 
 - [Korzystanie z urządzenia z systemem Android](using-your-android-device-with-intune.md)
 - [Korzystanie z urządzenia z systemem iOS](using-your-ios-device-with-intune.md)

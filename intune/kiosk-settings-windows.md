@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
-ms.openlocfilehash: 61cb1a3c9de10020381d62a2a7795d5ff728db22
-ms.sourcegitcommit: 6f2f2fa70f4e47fa5ad2f3c536ba7116e1bd1d05
+ms.openlocfilehash: 31cfa617e0ca5d8d0848d1ecb781fda701589ccd
+ms.sourcegitcommit: 0142020a7cd75348c6367facf072ed94238e667f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 01/29/2019
-ms.locfileid: "55199425"
+ms.locfileid: "55229954"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Ustawienia urządzenia z systemem Windows 10 lub nowszym, które ma działać jako kiosk w usłudze Intune
 
@@ -101,7 +101,7 @@ W przypadku wybrania trybu kiosku z wieloma aplikacjami wprowadź następujące 
 
     - **Nazwa aplikacji**: Element wymagany. Wprowadź nazwę aplikacji.
     - **Ścieżka lokalna**: Element wymagany. Wprowadź ścieżkę do pliku wykonywalnego, taką jak `C:\Program Files (x86)\Microsoft VS Code\Code.exe` lub `C:\Program Files (x86)\Google\Chrome\Application\chrome.exe`.
-    - **Identyfikator modelu użytkownika aplikacji (AUMID)**: Wprowadź identyfikator modelu użytkownika aplikacji (AUMID) dla aplikacji systemu Win32. To ustawienie określa początkowy układ kafelka na pulpicie. Aby uzyskać ten identyfikator, zobacz [Znajdowanie identyfikatora modelu użytkownika aplikacji zainstalowanej aplikacji](https://docs.microsoft.com/powershell/module/startlayout/get-startapps?view=win10-ps).
+    - **Identyfikator modelu użytkownika aplikacji (AUMID)**: Wprowadź identyfikator modelu użytkownika aplikacji (AUMID) dla aplikacji systemu Win32. To ustawienie określa początkowy układ kafelka na pulpicie. Informacje na temat uzyskiwania tego identyfikatora zawiera artykuł [Get-StartApps](https://docs.microsoft.com/powershell/module/startlayout/get-startapps?view=win10-ps) (Polecenie Get-StartApps).
     - **Rozmiar kafelka**: Element wymagany. Wybierz mały, średni, szeroki lub duży rozmiar kafelka aplikacji.
   
   - **Dodaj przy użyciu identyfikatora AUMID**: Użyj tej opcji, aby dodać aplikacje skrzynki odbiorczej systemu Windows, na przykład Notatnik lub Kalkulator. Wprowadź następujące właściwości: 

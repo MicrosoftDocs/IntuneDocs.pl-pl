@@ -13,12 +13,13 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ba60df2dcec51e1c45e6a84a8fc9831937f70aef
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 0d5abe78389d58043b44ba6e7f31854407019c0d
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190081"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55834147"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Konfigurowanie profilów sieci komórkowej karty eSIM w usłudze Intune — publiczna wersja zapoznawcza
 
@@ -35,7 +36,7 @@ W usłudze Intune można importować jednorazowe kody aktywacji uzyskane od oper
 
 Aby wdrożyć kartę eSIM na urządzeniach za pomocą usługi Intune, potrzebne są następujące elementy:
 
-- **Urządzenia obsługujące kartę eSIM**, na przykład Surface LTE: sprawdź, [czy Twoje urządzenie obsługuje kartę eSIM](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data). Możesz też wyświetlić listę [niektórych znanych urządzeń obsługujących karty eSIM](#esim-capable-devices) (w tym artykule).
+- **Urządzenia obsługujące kartę eSIM** takie jak Surface LTE: Sprawdź, [czy Twoje urządzenie obsługuje kartę eSIM](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data). Możesz też wyświetlić listę [niektórych znanych urządzeń obsługujących karty eSIM](#esim-capable-devices) (w tym artykule).
 - **Komputer PC z systemem Windows 10 i aktualizacją Fall Creators Update**  (wersja 1709 lub nowsza) zarejestrowany w usłudze Intune i zarządzany za pomocą funkcji MDM.
 - **Kody aktywacji** dostarczone przez operatora sieci komórkowej. Te jednorazowe kody aktywacji są dodawane do usługi Intune i wdrażane na urządzeniach obsługujących kartę eSIM. Skontaktuj się z operatorem sieci komórkowej, aby uzyskać kody aktywacji karty eSIM.
 
@@ -65,6 +66,9 @@ Następujące urządzenia obsługujące kartę eSIM są dostępne na rynku lub z
 - Lenovo T480
 - Samsung Galaxy Book
 - Surface Pro LTE
+- HP Spectre Folio 13
+- Lenovo Yoga C630
+- Samsung Galaxy Book 2
 
 ## <a name="step-1-add-cellular-activation-codes"></a>Krok 1. Dodawanie kodów aktywacji sieci komórkowej
 
@@ -100,7 +104,7 @@ Podczas pracy z plikiem csv zawierającym kody aktywacji upewnij się, że nast�
 
     ![Pula subskrypcji sieci komórkowej otrzymuje nazwę taką, jak nazwa przykładowego pliku csv z kodami aktywacji](./media/esim-device-configuration/subscription-pool-name-csv-file.png)
 
-## <a name="step-2-create-an-azure-ad-device-group"></a>Krok 2. Tworzenie grupy urządzeń usługi Azure AD
+## <a name="step-2-create-an-azure-ad-device-group"></a>Krok 2: Tworzenie grupy urządzeń usługi Azure AD
 
 Utwórz grupę urządzeń, która zawiera urządzenia obsługujące kartę eSIM. Instrukcje znajdują się w temacie [Dodawanie grup](groups-add.md).
 
@@ -108,7 +112,7 @@ Utwórz grupę urządzeń, która zawiera urządzenia obsługujące kartę eSIM.
 > - Wskazywane są wyłącznie urządzenia, nie użytkownicy.
 > - Zaleca się utworzenie statycznej grupy urządzeń usługi Azure AD zawierającej urządzenia obsługujące kartę eSIM. Korzystanie z grupy pozwala mieć pewność, że wskazywane są tylko urządzenia obsługujące kartę eSIM.
 
-## <a name="step-3-assign-esim-activation-codes-to-devices"></a>Krok 3. Przypisywanie kodów aktywacji karty eSIM do urządzeń
+## <a name="step-3-assign-esim-activation-codes-to-devices"></a>Krok 3: Przypisywanie kodów aktywacji karty eSIM do urządzeń
 
 Przypisz profil do grupy usługi Azure AD, która zawiera urządzenia obsługujące kartę eSIM.
 
@@ -124,7 +128,7 @@ Przypisz profil do grupy usługi Azure AD, która zawiera urządzenia obsługuj�
 
 Kodów aktywacji karty eSIM można użyć tylko raz. Po zainstalowaniu kodu na urządzeniu w usłudze Intune moduł karty eSIM kontaktuje się z operatorem sieci komórkowej w celu pobrania profilu sieci komórkowej. Ten kontakt kończy rejestrację urządzenia w sieci operatora.
 
-## <a name="step-4-monitor-deployment"></a>Krok 4. Monitorowanie wdrożenia
+## <a name="step-4-monitor-deployment"></a>Krok 4. Monitorowanie wdrożenia
 
 #### <a name="review-the-deployment-status"></a>Sprawdzanie stanu wdrożenia
 
@@ -157,7 +161,7 @@ Szczegółową listę urządzeń możesz wyświetlać i monitorować w obszarze 
 1. Wybierz kolejno pozycje **Konfiguracja urządzeń** > **Profile sieci komórkowej eSIM**, a następnie wybierz istniejącą subskrypcję.
 2. Wybierz pozycję **Stan urządzenia**. W usłudze Intune wyświetlane są dodatkowe informacje dotyczące urządzenia:
 
-  - **Nazwa urządzenia**: nazwa docelowego urządzenia
+  - **Nazwa urządzenia**: nazwa urządzenia docelowego
   - **Użytkownik**: użytkownik zarejestrowanego urządzenia
   - **Identyfikator ICCID**: unikatowy kod dostarczony przez operatora sieci komórkowej w ramach kodu aktywacji zainstalowanego na urządzeniu
   - **Stan aktywacji**: stan dostarczenia i instalacji kodu aktywacji na urządzeniu w usłudze Intune
@@ -190,7 +194,7 @@ Profil karty eSIM zostanie również usunięty, jeśli urządzenie zostanie [wyc
 - Upewnij się, że plik csv jest poprawnie sformatowany. Upewnij się, że plik nie zawiera zduplikowanych kodów, nie obejmuje wielu operatorów sieci komórkowych i nie zawiera różnych planów taryfowych. Pamiętaj, że każdy plik musi być unikatowy dla operatora sieci komórkowej i planu taryfowego.
 - Utwórz grupę usługi Azure AD urządzeń statycznych, która będzie zawierała wyłącznie docelowe urządzenia obsługujące kartę eSIM.
 - Jeśli wystąpi problem ze stanem wdrożenia, sprawdź następujące elementy:
-  - **Nieprawidłowy format pliku**: zobacz **Krok 1. Dodawanie kodów aktywacji sieci komórkowej** (w tym artykule), aby zapoznać się z prawidłowym formatem pliku.
+  - **Nieprawidłowy format pliku**: Patrz **Krok 1: Dodawanie kodów aktywacji sieci komórkowej** (w tym artykule), aby zapoznać się z prawidłowym formatem pliku.
   - **Aktywacja sieci komórkowej zakończyła się niepowodzeniem, skontaktuj się z operatorem sieci komórkowej**: kod aktywacji nie został aktywowany w sieci. Możliwe również, że pobieranie profilu i aktywacja w sieci komórkowej zakończyły się niepowodzeniem.
 
 ## <a name="next-steps"></a>Następne kroki

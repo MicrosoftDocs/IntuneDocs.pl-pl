@@ -2,24 +2,25 @@
 title: Używanie certyfikatów SCEP z usługą Microsoft Intune na platformie Azure | Microsoft Docs
 description: Aby korzystać z certyfikatów SCEP w usłudze Microsoft Intune, skonfiguruj lokalną domenę usługi AD, utwórz urząd certyfikacji, skonfiguruj serwer usługi NDES i zainstaluj łącznik certyfikatów usługi Intune. Następnie utwórz profil certyfikatu SCEP i przypisz go do grup. Zapoznaj się też z różnymi identyfikatorami zdarzeń i ich opisami oraz kodami diagnostycznymi dla usługi łącznika Intune.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 11/6/2018
+ms.date: 1/29/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
-ms.reviewer: kmyrup
+ms.reviewer: lacranda
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ee61063a36a486a0840446f82834bc37cc96bfc0
-ms.sourcegitcommit: a843bd081e9331838ade05a3c05b02d60b6bec4c
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 50235e4e21e738081dc1b41d8e6a8b6210430064
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53597379"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55838142"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurowanie certyfikatów SCEP i korzystanie z nich w usłudze Intune
 
@@ -561,4 +562,5 @@ Począwszy od wersji 6.1806.x.x, usługa łącznika Intune rejestruje zdarzenia 
 ## <a name="next-steps"></a>Następne kroki
 
 - [Używanie certyfikatów PKCS](certficates-pfx-configure.md) lub [wystawianie certyfikatów PKCS z poziomu usługi internetowej Symantec PKI Manager](certificates-symantec-configure.md)
-- [Dodawanie urzędu certyfikacji innej firmy w celu korzystania protokołu SCEP w usłudze Intune](certificate-authority-add-scep-overview.md)
+- [Dodawanie urzędu certyfikacji innej firmy w celu korzystania z protokołu SCEP w usłudze Intune](certificate-authority-add-scep-overview.md)
+- Dodatkową pomoc można uzyskać w przewodniku [Troubleshooting SCEP certificate profile deployment in Microsoft Intune](https://support.microsoft.com/help/4457481/troubleshooting-scep-certificate-profile-deployment-in-intune) (Rozwiązywanie problemów z wdrażaniem profilu certyfikatu SCEP w usłudze Microsoft Intune).
