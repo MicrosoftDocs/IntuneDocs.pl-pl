@@ -229,6 +229,45 @@ items:
       href: enrollment-report-company-portal-abandon.md
     - name: Rozwiązywanie problemów z rejestrowaniem urządzeń
       href: troubleshoot-device-enrollment-in-intune.md
+  - name: Zarządzaj urządzeniami
+    href: device-management.md
+    items:
+    - name: Możliwości zarządzania urządzeniami
+      href: device-management-capabilities.md
+    - name: Zastosowanie obejścia blokady aktywacji
+      href: device-activation-lock-bypass.md
+    - name: Zarządzanie funkcją Zacznij od nowa w systemie Windows
+      href: device-fresh-start.md
+    - name: Lokalizowanie zgubionego urządzenia z systemem iOS
+      href: device-locate.md
+    - name: Włączanie trybu zgubienia w systemie iOS
+      href: device-lost-mode.md
+    - name: Włączanie trybu nadzorowanego dla systemu iOS
+      href: device-supervised-mode.md
+    - name: Blokowanie urządzenia
+      href: device-remote-lock.md
+    - name: Zresetuj kod dostępu
+      href: device-passcode-reset.md
+    - name: Ponowne uruchamianie urządzenia
+      href: device-restart.md
+    - name: Wylogowywanie bieżącego użytkownika
+      href: device-logout-user.md
+    - name: Usuń użytkownika
+      href: device-remove-user.md
+    - name: Wymazywanie urządzenia
+      href: device-erase.md
+    - name: Zdalne sterowanie urządzeniami przenośnymi
+      href: device-profile-android-teamviewer.md
+    - name: Resetowanie numeru PIN w systemie Windows 10
+      href: device-windows-pin-reset.md
+    - name: Instalowanie łącznika usługi programu Exchange
+      href: exchange-service-connector-configure.md
+    - name: Synchronizowanie urządzenia
+      href: device-sync.md
+    - name: Przeglądanie spisu urządzeń
+      href: device-inventory.md
+    - name: Usuwanie urządzeń
+      href: devices-wipe.md
   - name: Ustaw zgodność urządzenia
     items:
     - name: Przegląd zgodności
@@ -959,9 +998,9 @@ items:
       href: data-outside-protect.md
     - name: Zapobieganie wyciekom danych na urządzeniach niezarządzanych
       href: data-leak-prevention.md
-ms.openlocfilehash: 3b178658fad3e94d09dcd5979e155b8097753ffd
-ms.sourcegitcommit: 5708ec1d7ae50494be44ed5064f150b636188c84
+ms.openlocfilehash: 365777adf57d1f36577e2e6f20cce6b193a829f8
+ms.sourcegitcommit: 8e503c1b350f7b29a045b7daf3eece64be4ca3c4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56240048"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56302204"
