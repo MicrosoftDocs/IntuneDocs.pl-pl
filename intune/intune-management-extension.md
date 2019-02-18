@@ -15,12 +15,13 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 444fd63f8c582d35891dfa5aedb9eadd6626e541
-ms.sourcegitcommit: 4bd992da609b8bcc85edc2d64fe8128546aa4617
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 0d0594c9f14b9d18c597de9ca37826a669dde5f3
+ms.sourcegitcommit: e262b0ad8df610e25eb9421b9ebc2673bcf1020e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55303399"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "55986879"
 ---
 # <a name="manage-powershell-scripts-in-intune-for-windows-10-devices"></a>Zarządzanie skryptami programu PowerShell w usłudze Intune dla urządzeń z systemem Windows 10
 
@@ -46,7 +47,7 @@ Rozszerzenie do zarządzania usługi Intune ma następujące wymagania wstępne:
 
 1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi** > wpisz nazwę usługi **Intune** w filtrze > wybierz pozycję **Microsoft Intune**.
 2. Wybierz pozycję **Konfiguracja urządzenia** > **Skrypty programu PowerShell** > **Dodaj**.
-3. Wprowadź **nazwę** i **opis** skryptu programu PowerShell. Aby podać **lokalizację skryptu**, przejdź do skryptu programu PowerShell. Rozmiar skryptu musi być mniejszy niż 200 KB (ASCII) lub 100 KB (Unicode).
+3. Wprowadź **nazwę** i **opis** skryptu programu PowerShell. Aby podać **lokalizację skryptu**, przejdź do skryptu programu PowerShell. Skrypt nie może być większy niż 200 KB.
 4. Wybierz pozycję **Konfiguruj**. Następnie określ, czy skrypt ma być uruchamiany przy użyciu poświadczeń użytkownika na urządzeniu (**Tak**), czy w kontekście systemu (**Nie**). Domyślnie skrypt jest uruchamiany w kontekście systemu. Wybierz pozycję **Tak**, chyba że skrypt musi zostać uruchomiony w kontekście systemu. 
   ![Okienko Dodaj skrypt programu PowerShell](./media/mgmt-extension-add-script.png)
 5. Określ, czy skrypt musi zostać podpisany przez zaufanego wydawcę (**Tak**). Domyślnie nie jest wymagane, aby skrypt był podpisany. 

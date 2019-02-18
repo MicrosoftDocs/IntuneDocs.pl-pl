@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/29/2019
+ms.date: 02/05/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,13 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
-ms.openlocfilehash: e297169757f1bcc703ce698302ce6f7129104827
-ms.sourcegitcommit: 0142020a7cd75348c6367facf072ed94238e667f
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f5afb23fd571b03e4fde97cb7800c399819d4cc8
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55230124"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849847"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem Windows 10 (i nowszym) w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune
 
@@ -70,6 +71,7 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 - **Konto Microsoft**: Zezwala użytkownikowi na skojarzenie konta Microsoft z urządzeniem.
 - **Konto inne niż Microsoft**: Umożliwia użytkownikowi dodanie na urządzeniu kont poczty e-mail, które nie są skojarzone z kontem Microsoft.
 - **Synchronizacja ustawień dla konta Microsoft**: Zezwala na synchronizację ustawień urządzenia i aplikacji, które są skojarzone z kontem Microsoft, między urządzeniami.
+- **Asystent logowania za pomocą konta Microsoft**: wybierz pozycję **Wyłącz**, aby uniemożliwić użytkownikom końcowym sterowanie usługą asystenta logowania firmy Microsoft (wlidsvc), na przykład ręczne zatrzymywanie lub uruchamianie usługi. Gdy ustawiona zostanie pozycja **Nie skonfigurowano**, usługa NT wlidsvc użyje domyślnego ustawienia systemu operacyjnego, które może pozwalać użytkownikom końcowym na uruchamianie i zatrzymywanie usługi. Ta usługa jest używana przez system operacyjny do umożliwiania użytkownikom logowania się na konta Microsoft.
 
 ## <a name="cloud-printer"></a>Drukarka w chmurze
 
@@ -192,7 +194,7 @@ Użyj przycisku **Dodaj**, aby utworzyć konfigurację kiosku (lub wybierz istni
 ## <a name="locked-screen-experience"></a>Środowisko ekranu blokady
 
 - **Powiadomienia centrum akcji (tylko dla urządzeń przenośnych)**: Włącza powiadomienia z centrum akcji na ekranie blokady urządzenia (tylko system Windows 10 Mobile).
-- **Adres URL obrazu ekranu blokady (tylko dla komputerów stacjonarnych)**: Wprowadź adres URL obrazu w formacie JPEG używany jako tapeta ekranu blokady systemu Windows. Użytkownicy nie mogą zmieniać tego ustawienia.
+- **Adres URL obrazu ekranu blokady (tylko dla komputerów stacjonarnych)**: Wprowadź adres URL obrazu w formacie JPEG używany jako tapeta ekranu blokady systemu Windows. To ustawienie blokuje obraz. Obrazu nie można później zmienić.
 - **Konfigurowany przez użytkownika limit czasu ekranu (tylko urządzenia przenośne)**: Pozwala użytkownikom na konfigurowanie ilości czasu 
 - **Cortana na zablokowanym ekranie (tylko komputery stacjonarne)**: Nie zezwala użytkownikowi na interakcję z funkcją Cortana, gdy jest wyświetlany ekran blokady (tylko system Windows 10 Desktop).
 - **Wyskakujące powiadomienia na zablokowanym ekranie**: Blokuje wyświetlanie alertów na ekranie blokady.
@@ -313,7 +315,6 @@ Użyj przycisku **Dodaj**, aby utworzyć konfigurację kiosku (lub wybierz istni
   - **Zapobiegaj ponownemu używaniu poprzednich haseł**: Określa liczbę poprzednich haseł, które są zapamiętywane przez urządzenie.
   - **Wymagaj hasła przy powrocie urządzenia ze stanu bezczynności (tylko urządzenia przenośne)**: Określa, czy użytkownik musi wprowadzić hasło, aby odblokować urządzenie (tylko system Windows 10 Mobile).
   - **Proste hasła**: Umożliwia korzystanie z prostych haseł, takich jak 1111 lub 1234. To ustawienie zezwala również na używanie haseł obrazkowych systemu Windows lub blokuje tę możliwość.
-- **Szyfrowanie**: Włącza szyfrowanie na urządzeniach docelowych.
 
 ## <a name="per-app-privacy-exceptions"></a>Wyjątki prywatności dla aplikacji
 

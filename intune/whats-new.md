@@ -16,12 +16,13 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 996b4d85da41b480d73d7a79011e2bbd732ea334
-ms.sourcegitcommit: dde9e1e1d15c412751a186410c2a04974ff1b102
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 299e76d55cd5fc61d96a81a49f721bc5c0c69a11
+ms.sourcegitcommit: 77c63ddb51ffd5258f4ea0e68672c2eb011b83e1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55690839"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55905853"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co nowego w usłudze Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -282,7 +283,7 @@ Nowe środowisko pozwala opisać problem własnymi słowami i uzyskać szczegó�
 ### <a name="role-based-access-control"></a>Kontrola dostępu oparta na rolach
 
 #### <a name="scope-tags-for-apps----1081941---"></a>Tagi zakresu dla aplikacji <!-- 1081941 -->
-Możesz tworzyć tagi zakresu w celu ograniczenia dostępu do ról i aplikacji. Możesz dodać tag zakresu do aplikacji, tak aby tylko osoby z rolą przypisaną do tego tagu zakresu miały dostęp do aplikacji. Do aplikacji zakupionych za pośrednictwem programu Apple Volume Purchase Program (VPP) nie można przypisywać tagów zakresu.  Aby uzyskać więcej informacji, zobacz [Używanie tagów zakresu do filtrowania zasad](scope-tags.md).
+Możesz tworzyć tagi zakresu w celu ograniczenia dostępu do ról i aplikacji. Możesz dodać tag zakresu do aplikacji, tak aby tylko osoby z rolą przypisaną do tego tagu zakresu miały dostęp do aplikacji. Obecnie aplikacjom dodawanym do usługi Intune z zarządzanego sklepu Google Play lub aplikacjom kupowanym w ramach programu Apple Volume Purchase Program (VPP) nie można przypisywać tagów zakresu (ich obsługa będzie dostępna w przyszłości). Aby uzyskać więcej informacji, zobacz [Używanie tagów zakresu do filtrowania zasad](scope-tags.md).
 
 
 
