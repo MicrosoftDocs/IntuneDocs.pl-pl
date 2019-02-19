@@ -15,16 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 951db22026725c2ec2e9c2be340bcccd44b2528b
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 383370aaaca10cb44b614be6e250218106406cb4
+ms.sourcegitcommit: e0374b3ced83c8876a4f78b326869c10588a55e5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55848104"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56307757"
 ---
 # <a name="monitor-conditional-access-compliance-for-on-premises-exchange-and-exchange-online-in-intune"></a>Monitorowanie zgodności z dostępem warunkowym dla lokalnego programu Exchange i usługi Exchange Online w usłudze Intune
 
-Począwszy od usługi Intune w wersji 1704, administratorzy mogą zobaczyć informacje dotyczące raportowania powiązane z rekordami urządzeń w programie Exchange ActiveSync, które są synchronizowane z usługą Intune za pośrednictwem lokalnego programu Exchange Connector lub łącznika Service To Service Connector usługi Intune (łącznika usługi Exchange Online). Raportowanie zgodności z dostępem warunkowym zawiera podsumowanie informacji o urządzeniach o różnych stanach synchronizacji:
+Począwszy od usługi Intune w wersji 1704 administratorzy mogą zobaczyć informacje dotyczące raportowania powiązane z rekordami urządzeń w programie Exchange ActiveSync, które są synchronizowane z usługą Intune za pośrednictwem lokalnego programu Exchange Connector lub łącznika Service To Service Connector usługi Intune (łącznika usługi Exchange Online). Raportowanie zgodności z dostępem warunkowym zawiera podsumowanie informacji o urządzeniach o różnych stanach synchronizacji:
 
 -   **Zezwalaj**
 
@@ -36,11 +36,11 @@ Począwszy od usługi Intune w wersji 1704, administratorzy mogą zobaczyć info
 
 1.  Przejdź do witryny [Azure Portal](https://portal.azure.com/) i zaloguj się przy użyciu swoich poświadczeń usługi Intune.
 
-2.  Po pomyślnym zalogowaniu zostanie wyświetlony **pulpit nawigacyjny platformy Azure**.
+2.  Po pomyślnym zalogowaniu zostanie wyświetlona strona **Pulpit nawigacyjny Azure**.
 
-3.  W menu po lewej stronie wybierz pozycję  **Wszystkie usługi** i wpisz  **Intune** w filtrze pola tekstowego.
+3.  W menu po lewej stronie wybierz pozycję **Wszystkie usługi**, a następnie w filtrze pola tekstowego wpisz **Intune**.
 
-4.  Wybierz pozycję  **Intune**, aby wyświetlić **pulpit nawigacyjny usługi Intune**.
+4.  Wybierz pozycję **Intune**, aby wyświetlić **Pulpit nawigacyjny Intune**.
 
 5.  Wybierz pozycję **Dostęp warunkowy**, a następnie wybierz pozycję **Przegląd**.
 
