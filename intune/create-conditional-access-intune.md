@@ -30,7 +30,7 @@ Usługa Intune umożliwia rozszerzenie dostępu warunkowego w usłudze Azure Act
 Zasady dostępu warunkowego określają aplikację lub usługi, które chcesz chronić, warunki uzyskiwania dostępu do aplikacji lub usług oraz użytkowników, w przypadku których zasady mają zastosowanie. Dostęp warunkowy to funkcja usługi Azure AD w wersji Premium, którą można skonfigurować w usłudze Azure Active Directory. Te same zasady można jednak skonfigurować w portalu usługi Intune. 
 
 > [!IMPORTANT]
-> Przed skonfigurowaniem dostępu warunkowego należy skonfigurować zasady zgodności urządzeń usługi Intune na potrzeby oceny urządzeń w oparciu o to, czy spełniają one określone wymagania. Zobacz [Wprowadzenie do zasad zgodności urządzeń w usłudze Intune](device-compliance-get-started.md).
+> Przed skonfigurowaniem dostępu warunkowego należy skonfigurować zasady zgodności urządzeń usługi Intune, które będą oceniać, czy urządzenia spełniają określone wymagania. Zobacz [Wprowadzenie do zasad zgodności urządzeń w usłudze Intune](device-compliance-get-started.md).
 
 ## <a name="create-conditional-access-policy"></a>Tworzenie zasad dostępu warunkowego
 
@@ -48,7 +48,7 @@ Zasady dostępu warunkowego określają aplikację lub usługi, które chcesz ch
        
       b. **Role katalogu**: wybierz co najmniej jedną rolę usługi Azure AD w celu dołączenia lub wykluczenia użytkowników, do których przypisano te role.
       
-      c. **Użytkownicy i grupy**: wybierz tę opcję, aby wyszukać i wybrać poszczególnych użytkowników lub grupy, które chcesz dołączyć lub wykluczyć.
+      c. **Użytkownicy i grupy**: wybierz tę opcję, aby wyszukać i wybrać konkretnych użytkowników lub konkretne grupy do dołączenia lub wykluczenia.
      
        > [!TIP]  
        > Przetestuj zasady w mniejszej grupie użytkowników, aby upewnić się, że działają zgodnie z oczekiwaniami.
