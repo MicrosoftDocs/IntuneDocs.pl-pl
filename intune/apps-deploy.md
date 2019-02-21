@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ff89d1776d71dc24ea675de167f3fd22d6bdf04
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 6b0c2bff4051a1adba1a68f38d8f0a9b80b914b4
+ms.sourcegitcommit: 5708ec1d7ae50494be44ed5064f150b636188c84
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55838771"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56240065"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Przypisywanie aplikacji do grup przy użyciu usługi Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Po [dodaniu aplikacji](apps-add.md) do usługi Microsoft Intune należy ją przypisać do użytkowników i urządzeń. Ważne jest, aby pamiętać, że aplikację można przypisać do urządzenia, bez względu na to, czy jest ono zarządzane przez usługę Intune. 
+Po [dodaniu aplikacji](apps-add.md) do usługi Microsoft Intune należy ją przypisać do użytkowników i urządzeń. Ważne jest, aby pamiętać, że aplikację można przypisać do urządzenia, bez względu na to, czy jest ono zarządzane przez usługę Intune.
 
 > [!NOTE]
 > Dostępna intencja wdrożenia nie jest obsługiwane w przypadku grup urządzeń, obsługiwane są tylko grupy użytkowników.
@@ -124,8 +124,19 @@ Czasami ta sama aplikacja zostaje przypisana do wielu grup, ale z różnymi inte
 > W przypadku dodania zarządzanych aplikacji ze sklepu iOS do usługi Microsoft Intune i przypisania ich jako **Wymagane** są one automatycznie tworzone z intencjami **Wymagane** i **Dostępne**.<br><br>
 > Aplikacje ze sklepu dla systemu iOS (nie aplikacje zakupione w ramach programu VPP dla systemu iOS), które mają określony cel i intencję, będą wymuszane na urządzeniach w chwili zameldowania urządzenia i będą także widoczne w aplikacji Portal firmy.
 
-## <a name="android-enterprise-app-we-app-deployment"></a>Wdrażanie aplikacji APP-WE dla systemu Android Enterprise
-Dla urządzeń z systemem Android w scenariuszu wdrażania zasad ochrony aplikacji bez rejestracji (APP-WE) będzie można używać zarządzanego sklepu Google Play w celu wdrażania aplikacji ze sklepu i aplikacji biznesowych dla użytkowników. Mówiąc ściślej, możesz udostępnić użytkownikom końcowym środowisko katalogu i instalacji aplikacji, które nie wymaga już od użytkowników końcowych obniżenia poziomu zabezpieczeń urządzeń przez umożliwienie instalacji z nieznanych źródeł. Ponadto ten scenariusz wdrażania zapewni ulepszone środowisko pracy użytkownika końcowego. Aby uzyskać instrukcje dotyczące przypisywania aplikacji, zobacz [Przypisywanie aplikacji](apps-deploy.md#assign-an-app).
+## <a name="managed-google-play-app-deployment-to-unmanaged-devices"></a>Wdrażanie aplikacji z zarządzanego sklepu Google Play na urządzeniach niezarządzanych
+W przypadku urządzeń z systemem Android w scenariuszu wdrażania zasad ochrony aplikacji bez rejestracji (APP-WE) można używać zarządzanego sklepu Google Play w celu wdrażania aplikacji ze sklepu i aplikacji biznesowych dla użytkowników. Aplikacje z zarządzanego sklepu Google Play oznaczane docelowo jako **Dostępne z rejestracją lub bez niej** będą wyświetlane w aplikacji Sklep Play na urządzeniu użytkownika końcowego, a nie w aplikacji Portal firmy. Użytkownik końcowy będzie przeglądać i instalować aplikacje wdrożone w ten sposób z poziomu aplikacji Play. Ponieważ aplikacje są instalowane z zarządzanego sklepu Google Play, użytkownik końcowy nie będzie musiał zmieniać ustawień swojego urządzenia, aby umożliwić instalację aplikacji z nieznanych źródeł, co oznacza, że urządzenia będą bezpieczniejsze. Jeśli deweloper aplikacji publikuje nową wersję aplikacji w sklepie Play zainstalowanym na urządzeniu użytkownika, aplikacja zostanie automatycznie zaktualizowana przez sklep Play. 
+
+Czynności wymagane do przypisania aplikacji z zarządzanego sklepu Google Play do urządzeń niezarządzanych:
+
+1. Połącz dzierżawę usługi Intune z zarządzanym sklepem Google Play. Jeśli już wykonano tę czynność w celu zarządzania profilem służbowym systemu Android Enterprise na urządzeniach dedykowanych lub w pełni zarządzanych, nie musisz wykonywać jej ponownie.
+2. Dodaj aplikacje z zarządzanego sklepu Google Play do konsoli usługi Intune.
+3. Oznacz docelowe aplikacje z zarządzanego sklepu Google Play jako **Dostępne z rejestracją lub bez** dla wybranej grupy użytkowników. Oznaczanie aplikacji docelowych jako **Wymagane** i **Odinstaluj** nie jest obsługiwane w przypadku urządzeń niezarejestrowanych.
+4. Przypisz zasady ochrony aplikacji do grupy użytkowników.
+5. Następnym razem, gdy użytkownik końcowy otworzy aplikację Portal firmy, zobaczy komunikat informujący, że ma dostępne aplikacje w aplikacji Sklep Play.  Użytkownik może wybrać to powiadomienie, aby przenieść się bezpośrednio do aplikacji sklepu Play i wyświetlić aplikacje firmowe, lub może oddzielnie przejść do aplikacji Sklep Play.
+6. Użytkownik końcowy może rozwinąć menu kontekstowe w obrębie aplikacji Sklep Play i przełączać się między osobistym kontem Google (gdzie są wyświetlane aplikacje osobiste) i kontem służbowym (gdzie są wyświetlane przeznaczone dla niego aplikacje ze sklepu i aplikacje biznesowe). Użytkownicy końcowi instalują aplikacje, wybierając pozycję Zainstaluj w aplikacji Sklep Play.
+
+Jeśli selektywne czyszczenie zasad ochrony aplikacji zostanie włączone w konsoli usługi Intune, konto służbowe zostanie automatycznie usunięte z aplikacji Sklep Play, a użytkownik końcowy nie będzie od tego momentu widzieć aplikacji służbowych w wykazie aplikacji Sklep Play. Gdy konto służbowe zostanie usunięte z urządzenia, aplikacje zainstalowane ze Sklepu Play pozostaną zainstalowane na urządzeniu i nie będą odinstalowywane. 
 
 ## <a name="next-steps"></a>Następne kroki
 

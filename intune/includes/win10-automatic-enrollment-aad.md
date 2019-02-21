@@ -32,6 +32,9 @@ Automatyczna rejestracja umożliwia użytkownikom rejestrowanie urządzeń z sys
       >
       > W przypadku urządzeń firmowych zakres użytkownika oprogramowania MDM ma pierwszeństwo, jeśli włączone są oba zakresy. Urządzenia są rejestrowane przez funkcję zarządzania urządzeniami mobilnymi.
 
+   > [!NOTE]
+   > Zakres użytkowników funkcji MAM należy ustawić na kolekcję lub grupę użytkowników.
+
    ![Zrzut ekranu witryny Azure Portal](../media/auto-enroll-scope.png)
 
 5. Użyj wartości domyślnych dla następujących adresów URL:

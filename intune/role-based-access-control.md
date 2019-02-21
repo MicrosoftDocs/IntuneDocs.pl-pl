@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 08e6c7657eeba7a41b9927e736fe7f4fc07e25e6
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: a57dca7f6b817177cbd131e969c1b5aa52a248a8
+ms.sourcegitcommit: e0374b3ced83c8876a4f78b326869c10588a55e5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55848580"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56307774"
 ---
 # <a name="role-based-administration-control-rbac-with-microsoft-intune"></a>Kontrola dostępu na podstawie ról (kontrola RBAC) w usłudze Microsoft Intune
 
@@ -29,7 +29,8 @@ Kontrola RBAC ułatwia kontrolowanie, kto może wykonywać różne zadania usłu
 
 - **Definicja roli**: nazwa roli, zarządzane przez nią zasoby oraz uprawnienia nadane dla każdego zasobu.
 - **Elementy członkowskie**: grupy użytkowników, którym nadano uprawnienia.
-- **Zakres**: grupy użytkowników lub urządzeń, którymi mogą zarządzać elementy członkowskie.
+- **Zakres (grupy)**: grupy użytkowników lub urządzeń, którymi mogą zarządzać elementy członkowskie.
+- **[Zakres (tagi)](https://docs.microsoft.com/intune/scope-tags)**: tagi, w których stosuje się przypisanie roli.
 - **Przypisanie**: po skonfigurowaniu definicji, elementów członkowskich i zakresu jest przypisywana rola.
 
 ![Przykład kontroli RBAC przy użyciu usługi Intune](./media/intune-rbac-1.PNG)
@@ -82,20 +83,22 @@ Wbudowane role można przypisywać do grup bez konieczności dalszej konfiguracj
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
 2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
-3. W okienku **Intune** wybierz pozycję **Role** > **Wszystkie role**.
-4. W okienku **Role usługi Intune — Wszystkie role** wybierz rolę wbudowaną, którą chcesz przypisać.
+3. W bloku **Intune** wybierz pozycję **Role** > **Wszystkie role**.
+4. W bloku **Role usługi Intune — Wszystkie role** wybierz rolę wbudowaną, którą chcesz przypisać.
 
-5. W okienku <*nazwa roli*> — **Omówienie** wybierz pozycję **Zarządzaj**, a następnie wybierz pozycję **Przypisania**.
+5. W bloku <*nazwa roli*> — **Przegląd** wybierz kolejno pozycje **Zarządzaj** > **Przypisania**.
 
-6. W okienku roli niestandardowej wybierz pozycję **Przypisz**.
+6. W bloku roli niestandardowej wybierz pozycję **Przypisz**.
 
-7. W okienku **Przypisania ról** uzupełnij pole **Nazwa** i opcjonalne pole **Opis** odnoszące się do przypisania.
+7. W bloku **Przypisania ról** wprowadź **nazwę przypisania** i opcjonalnie **opis przypisania** danego przypisania.
 
-8. W obszarze **Członkowie** wybierz grupę, do której należy użytkownik, któremu chcesz nadać uprawnienia.
+8. W obszarze **Członkowie (grupy)** wybierz grupę, do której należy użytkownik, któremu chcesz nadać uprawnienia.
 
-9. W obszarze **Zakres** wybierz grupę, do której należą użytkownicy, którymi będzie mógł zarządzać wskazany wcześniej członek.
-<br></br>
-10. Gdy wszystko będzie gotowe, wybierz przycisk **OK**. Nowe przypisanie zostanie wyświetlone na liście przypisań.
+9. W obszarze **Zakres (grupy)** wybierz grupę, do której należą użytkownicy, którymi będzie mógł zarządzać wskazany wcześniej członek.
+
+10. W obszarze **Zakres (tagi)** wybierz tagi, w których zostanie zastosowane to przypisanie roli.
+
+11. Gdy wszystko będzie gotowe, wybierz przycisk **OK**. Nowe przypisanie zostanie wyświetlone na liście przypisań.
 
 ### <a name="intune-rbac-table"></a>Tabela kontroli RBAC przy użyciu usługi Intune
 
@@ -116,31 +119,21 @@ Można utworzyć rolę niestandardową, która zawiera wszystkie uprawnienia wym
 
 2. W menu po lewej stronie wybierz pozycję **Wszystkie usługi**, a następnie w filtrze pola tekstowego wpisz **Intune**.
 
-3. Wybierz pozycję **Intune** > **Role** > **Wszystkie role** > **Dodaj niestandardowe**.
+3. Wybierz pozycję **Intune** > **Role** > **Wszystkie role** > **Dodaj**.
 
-4. W okienku **Dodaj rolę niestandardową** wprowadź nazwę i opis nowej roli, a następnie kliknij pozycję **Uprawnienia**.
+4. W bloku **Dodaj rolę niestandardową** wprowadź nazwę i opis nowej roli, a następnie kliknij pozycję **Uprawnienia**.
 
-5. W okienku **Uprawnienia** wybierz uprawnienia do użycia w ramach tej roli. Użyj [tabeli Intune RBAC](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a) aby określić uprawnienia, które chcesz zastosować.
+5. W bloku **Uprawnienia** wybierz uprawnienia do użycia w ramach tej roli. Użyj [tabeli Intune RBAC](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a) aby określić uprawnienia, które chcesz zastosować.
 
-6. Gdy wszystko będzie gotowe, wybierz przycisk **OK**.
+6. W bloku **Zakres (tagi)** wybierz tagi, w których zostanie zastosowana ta rola niestandardowa.
 
-7. W okienku **Dodaj rolę niestandardową** kliknij pozycję **Utwórz**. Nowa rola zostanie wyświetlona na liście w okienku **Role usługi Intune — Wszystkie role**.
+7. Gdy wszystko będzie gotowe, wybierz przycisk **OK**.
+
+7. W bloku **Dodaj rolę niestandardową** kliknij pozycję **Utwórz**. Nowa rola zostanie wyświetlona na liście w bloku **Role usługi Intune — Wszystkie role**.
 
 ### <a name="to-assign-a-custom-role"></a>Aby przypisać rolę niestandardową
 
-1. W okienku **Role usługi Intune — Wszystkie role** wybierz rolę niestandardową, którą chcesz przypisać.
-
-2. W okienku <*nazwa roli*> — **Omówienie** wybierz pozycję **Zarządzaj**, a następnie wybierz pozycję **Przypisania**. W tym okienku możesz również edytować i usuwać istniejące role.
-
-3. W okienku roli niestandardowej wybierz pozycję **Przypisz**.
-
-4. W okienku **Przypisania ról** uzupełnij pole **Nazwa** i opcjonalne pole **Opis** odnoszące się do przypisania.
-
-5. W obszarze **Członkowie** wybierz grupę, do której należy użytkownik, któremu chcesz nadać uprawnienia.
-
-6. W obszarze **Zakres** wybierz grupę, do której należą użytkownicy, którymi będzie mógł zarządzać wskazany wcześniej członek.
-
-7. Gdy wszystko będzie gotowe, wybierz przycisk **OK**. Nowe przypisanie zostanie wyświetlone na liście przypisań.
+Wykonaj te same kroki, co w przypadku [przypisywania roli wbudowanej](https://docs.microsoft.com/intune/role-based-access-control#to-assign-a-built-in-role), i wybierz rolę niestandardową.
 
 ## <a name="next-steps"></a>Następne kroki
 

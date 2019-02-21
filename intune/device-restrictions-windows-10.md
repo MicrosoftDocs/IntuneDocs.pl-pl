@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5afb23fd571b03e4fde97cb7800c399819d4cc8
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 943b5dc8c0fe1c9b55b9c4971be2087353b60428
+ms.sourcegitcommit: e0374b3ced83c8876a4f78b326869c10588a55e5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55849847"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56307893"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem Windows 10 (i nowszym) w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune
 
@@ -138,6 +138,10 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 - **Obszar roboczy pisma odręcznego**: Blokuje dostęp użytkowników do obszaru roboczego pisma odręcznego. Pozycja **Nieskonfigurowane** włącza obszar roboczy pisma odręcznego, a użytkownik może używać go na ekranie blokady urządzenia.
 - **Automatyczne ponowne wdrażanie**: Pozwala użytkownikom z uprawnieniami administracyjnymi usunąć wszystkie dane użytkownika i ustawienia za pomocą kombinacji klawiszy **CTRL+Win+R** na ekranie blokady urządzenia. Urządzenie jest automatycznie ponownie konfigurowane i rejestrowane do zarządzania.
 - **Wymagaj od użytkowników nawiązania połączenia z siecią podczas konfigurowania urządzenia (tylko niejawny program testów systemu Windows)**: Wybierz pozycję **Wymagane**, aby wymagać, żeby urządzenia łączyły się z siecią przed wyjściem poza stronę Sieć podczas instalacji systemu Windows 10. Chociaż ta funkcja jest obecnie w wersji zapoznawczej, niejawny program testów systemu Windows (kompilacja 1809 lub nowsza) jest wymagany, aby użyć tego ustawienia.
+- **Bezpośredni dostęp do pamięci**: Pozycja **Blokuj** uniemożliwia bezpośredni dostęp do pamięci dla wszystkich podrzędnych portów PCI z możliwością podłączenia podczas pracy, dopóki użytkownik nie zaloguje się do systemu Windows. Pozycja **Włączone** (wartość domyślna) zezwala na bezpośredni dostęp do pamięci nawet wtedy, gdy użytkownik nie jest zalogowany.
+
+  Zasady zabezpieczeń zawartości: [DataProtection/AllowDirectMemoryAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection#dataprotection-allowdirectmemoryaccess)
+
 - **Kończ procesy z Menedżera zadań**: To ustawienie określa, czy użytkownicy niebędący administratorami mogą używać Menedżera zadań do kończenia zadań. Pozycja **Blokuj** uniemożliwia użytkownikom standardowym (niebędącym administratorami) używanie Menedżera zadań do zakończenia procesu lub zadania na urządzeniu. **Nieskonfigurowane** (wartość domyślna) umożliwia użytkownikom standardowym zakończenie procesu lub zadania za pomocą Menedżera zadań.
 
 ## <a name="kiosk-preview---obsolete"></a>Kiosk (wersja zapoznawcza) — przestarzałe

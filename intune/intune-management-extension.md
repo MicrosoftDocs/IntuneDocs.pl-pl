@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0d0594c9f14b9d18c597de9ca37826a669dde5f3
-ms.sourcegitcommit: e262b0ad8df610e25eb9421b9ebc2673bcf1020e
+ms.openlocfilehash: 573ca3aa10094e61165d297730d556e2ef559767
+ms.sourcegitcommit: 8e503c1b350f7b29a045b7daf3eece64be4ca3c4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "55986879"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56302187"
 ---
 # <a name="manage-powershell-scripts-in-intune-for-windows-10-devices"></a>Zarządzanie skryptami programu PowerShell w usłudze Intune dla urządzeń z systemem Windows 10
 
@@ -31,9 +31,9 @@ Rozszerzenie do zarządzania usługi Intune służy do przekazywania skryptów p
 
 Środowisko informatyczne użytkowników końcowych przechodzi transformację cyfrową. Klasyczne, tradycyjne środowisko informatyczne opiera się na pojedynczej platformie urządzeń, urządzeniach należących do firm, użytkownikach pracujących w biurze i różnych ręcznych, reaktywnych procesach informatycznych. Nowoczesne miejsce pracy obsługuje wiele platform, które należą do użytkowników i do firmy, umożliwia użytkownikom pracę w dowolnym miejscu oraz zapewnia zautomatyzowane i proaktywne procesy informatyczne.
 
-Usługi zarządzania urządzeniami przenośnymi, takie jak Microsoft Intune, mogą zarządzać urządzeniami mobilnymi i stacjonarnymi z systemem Windows 10. Wbudowany klient zarządzania systemu Windows 10 komunikuje się z usługą Intune w celu uruchamiania zadań zarządzania przedsiębiorstwem. Istnieją pewne zadania, których możesz potrzebować, takie jak zaawansowana konfiguracja urządzeń, rozwiązywanie problemów i zarządzanie starszymi aplikacjami Win32, a które aktualnie nie są dostępne w oprogramowaniu MDM dla systemu Windows 10. Aby korzystać z tych funkcji, możesz uruchomić oprogramowanie klienckie usługi Intune na urządzeniach z systemem Windows 10. [Porównanie zarządzania komputerami z systemem Windows jako komputerami i jako urządzeniami mobilnymi](pc-management-comparison.md) to świetny zasób.
+Usługi zarządzania urządzeniami przenośnymi, takie jak Microsoft Intune, mogą zarządzać urządzeniami mobilnymi i stacjonarnymi z systemem Windows 10. Wbudowany klient zarządzania systemu Windows 10 komunikuje się z usługą Intune w celu uruchamiania zadań zarządzania przedsiębiorstwem. Istnieją pewne zadania, których możesz potrzebować, takie jak zaawansowana konfiguracja urządzeń i rozwiązywanie problemów. Na potrzeby zarządzania aplikacjami Win32 możesz użyć funkcji [zarządzania aplikacjami Win32](apps-win32-app-management.md) na urządzeniach z systemem Windows 10.
 
-Rozszerzenie do zarządzania usługi Intune uzupełnia funkcje usług MDM dostarczanych z systemem Windows 10. Można tworzyć skrypty programu PowerShell do uruchamiania na urządzeniach z systemem Windows 10. Można na przykład utworzyć skrypt programu PowerShell, który instaluje starszą aplikację Win32, przekazać go do usługi Intune, przypisać do grupy usługi Azure Active Directory (AD) i uruchomić. Następnie można monitorować stan uruchomienia skryptu od początku do końca.
+Rozszerzenie do zarządzania usługi Intune uzupełnia funkcje usług MDM dostarczanych z systemem Windows 10. Można tworzyć skrypty programu PowerShell do uruchamiania na urządzeniach z systemem Windows 10. Można na przykład utworzyć skrypt programu PowerShell, który przeprowadza zaawansowane konfiguracje urządzeń, przekazuje skrypt do usługi Intune, przypisuje go do grupy usługi Azure Active Directory (AD) i uruchamia ten skrypt. Następnie można monitorować stan uruchomienia skryptu od początku do końca.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 

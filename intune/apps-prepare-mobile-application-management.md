@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74445c678455dc881f79fed20ed68be6f090fe78
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 10b2ef5844c2d8889fd1d5c377fcefb8330be9e2
+ms.sourcegitcommit: 93de3423d2d8f0019e676a63784edeb3daf47cb7
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55834776"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56325439"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Przygotowanie aplikacji biznesowych pod kątem zasad ochrony aplikacji
 
@@ -87,7 +87,6 @@ W tej tabeli przedstawiono ustawienia do użycia w przypadku zestawu SDK aplikac
 |Zezwalaj aplikacji na odbieranie danych z innych aplikacji|X|X|
 |Ogranicz wycinanie, kopiowanie i wklejanie w innych aplikacjach|X|X|
 |Wymagaj prostego numeru PIN w celu udzielenia dostępu|X|X|
-|Zastąp numer PIN wbudowanej aplikacji numerem PIN usługi Intune|X||
 |Określ liczbę prób przed zresetowaniem numeru PIN|X|X|
 |Zezwalaj na odcisk palca zamiast numeru PIN|X|X|
 |Zezwalaj na rozpoznawanie twarzy zamiast numeru PIN (tylko system iOS)|X|X|
@@ -98,8 +97,8 @@ W tej tabeli przedstawiono ustawienia do użycia w przypadku zestawu SDK aplikac
 |Wybierz okres karencji w trybie offline|X|X|
 |Zablokuj przechwytywanie ekranu (tylko system Android)|X|X|
 |Obsługa zarządzania aplikacjami mobilnymi bez rejestracji urządzenia|X|X|
-|Pełne czyszczenie|X|X|
-|Selektywne czyszczenie <br><br>**Uwaga:** W systemie iOS usunięcie profilu zarządzania spowoduje również usunięcie aplikacji.|X||
+|Pełne czyszczenie danych aplikacji|X|X|
+|Selektywne czyszczenie danych służbowych w scenariuszach obejmujących wiele tożsamości <br><br>**Uwaga:** W systemie iOS usunięcie profilu zarządzania spowoduje również usunięcie aplikacji.|X||
 |Nie zezwalaj na używanie polecenia „Zapisz jako”|X||
 |Docelowa konfiguracja aplikacji|X||
 |Obsługa wielu tożsamości|X||
