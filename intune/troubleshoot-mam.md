@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2019
+ms.date: 02/21/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e827862510f24a2f133562c836d6c1b47186c330
-ms.sourcegitcommit: c0b954c82cd732b5328f92b618947bf425bf0a91
+ms.openlocfilehash: ae8113a603ae4c091005f7c82045708f7e9e3e97
+ms.sourcegitcommit: 8943848d47d5d5d6e44c74d414c34c5e3457862b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56086152"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56655395"
 ---
 # <a name="troubleshoot-mobile-application-management"></a>Rozwiązywanie problemów związanych z zarządzaniem aplikacjami mobilnymi
 
@@ -78,7 +78,7 @@ Okno dialogowe błędu lub komunikat o błędzie | Przyczyna | Korekty |
 **Nie skonfigurowano aplikacji**: możliwość korzystania z tej aplikacji nie została skonfigurowana w Twoim przypadku. Skontaktuj się z administratorem IT, aby uzyskać pomoc. | Nie można wykryć zasad ochrony wymaganych dla tej aplikacji. |Upewnij się, zasady ochrony aplikacji systemu iOS są wdrożone w grupie zabezpieczeń użytkownika i obejmują tę aplikację.
 **Intune Managed Browser — Zapraszamy**: ta aplikacja działa najlepiej, gdy jest zarządzana przez usługę Microsoft Intune. Możesz przeglądać sieć Web za pomocą tej aplikacji, a jeśli jest ona zarządzana przez usługę Microsoft Intune, uzyskasz dostęp do dodatkowych funkcji ochrony danych. | Nie można wykryć zasad ochrony wymaganych dla aplikacji Intune Managed Browser. <br><br>Użytkownik nadal może korzystać z tej aplikacji do przeglądania sieci Web, ale nie jest ona zarządzana przez usługę Intune. | Upewnij się, zasady ochrony aplikacji systemu iOS są wdrożone w grupie zabezpieczeń użytkownika i obejmują aplikację Intune Managed Browser.
 **Logowanie nie powiodło się**: nie możemy Cię zalogować w tej chwili. Spróbuj ponownie później. | Nie można zarejestrować użytkownika przy użyciu usługi MAM po dokonaniu próby logowania z użyciem konta służbowego. | Upewnij się, zasady ochrony aplikacji systemu iOS są wdrożone w grupie zabezpieczeń użytkownika i obejmują tę aplikację.
-**Nie skonfigurowano konta**: Twoja organizacja nie skonfigurowała na Twoim koncie dostępu do danych służbowych. Skontaktuj się z administratorem działu IT w celu uzyskania pomocy. | Konto użytkownika nie ma licencji Intune A Direct. | Upewnij się, że konto użytkownika ma przypisaną licencję usługi Intune w [portalu pakietu Office](http://portal.office.com).
+**Nie skonfigurowano konta**: Twoja organizacja nie skonfigurowała na Twoim koncie dostępu do danych służbowych. Skontaktuj się z administratorem działu IT w celu uzyskania pomocy. | Konto użytkownika nie ma licencji Intune A Direct. | Upewnij się, że konto użytkownika ma przypisaną licencję usługi Intune w [portalu pakietu Office](https://portal.office.com).
 **Niezgodne urządzenie**: nie można użyć tej aplikacji, ponieważ używasz urządzenia z usuniętymi ograniczeniami. Skontaktuj się z administratorem IT, aby uzyskać pomoc. | Usługa Intune wykryła, że użytkownik korzysta z urządzenia ze zdjętymi zabezpieczeniami systemu. | Przywróć ustawienia fabryczne urządzenia. Postępuj zgodnie z [tymi instrukcjami](https://support.apple.com/HT201274) z witryny pomocy technicznej firmy Apple.
 **Wymagane jest połączenie z Internetem**: aby zweryfikować, czy możesz używać tej aplikacji, musisz mieć połączenie z Internetem. | Urządzenie nie jest połączone z Internetem. | Połącz urządzenie z siecią Wi-Fi lub siecią transmisji danych.
 **Nieznany błąd**: spróbuj ponownie uruchomić tę aplikację. Jeśli ten problem będzie nadal występować, skontaktuj się z administratorem działu IT w celu uzyskania pomocy. | Wystąpił nieznany błąd. | Poczekaj chwilę i spróbuj ponownie. Jeśli błąd będzie nadal występować, utwórz [bilet pomocy technicznej](get-support.md#create-an-online-support-ticket) w usłudze Intune.
@@ -97,7 +97,7 @@ Okno dialogowe/komunikat o błędzie | Przyczyna | Korekty |
 **Logowanie nie powiodło się**: spróbuj zalogować się ponownie. Jeśli problem będzie się powtarzać, skontaktuj się z administratorem IT w celu uzyskania pomocy. | Nie można uwierzytelnić konta, przy użyciu którego użytkownik próbował się zalogować. | Upewnij się, że użytkownik loguje się przy użyciu konta służbowego, które jest już zarejestrowane w usłudze Intune MAM (pierwszego konta służbowego, przy użyciu którego wykonano pomyślne logowanie w tej aplikacji). <br><br> Wyczyść dane aplikacji. <br><br> Upewnij się, że używana wersja aplikacji jest aktualna. <br><br> Upewnij się, że wersja aplikacji Portal firmy jest aktualna.
 **Wymagane jest połączenie z Internetem**: aby zweryfikować, czy możesz używać tej aplikacji, musisz mieć połączenie z Internetem. | Urządzenie nie jest połączone z Internetem. | Połącz urządzenie z siecią Wi-Fi lub siecią transmisji danych.
 **Niezgodne urządzenie**: nie można korzystać z tej aplikacji, ponieważ używane przez Ciebie urządzenie ma dostęp do konta root. Skontaktuj się z administratorem IT, aby uzyskać pomoc. | Usługa Intune wykryła, że użytkownik korzysta z urządzenia z odblokowanym dostępem. | Przywróć ustawienia fabryczne urządzenia.
-**Nie skonfigurowano konta**: ta aplikacja musi być zarządzana przez usługę Microsoft Intune, ale Twoje konto nie zostało skonfigurowane. Skontaktuj się z administratorem IT, aby uzyskać pomoc. | Konto użytkownika nie ma licencji Intune A Direct. | Upewnij się, że konto użytkownika ma przypisaną licencję usługi Intune w [portalu pakietu Office](http://portal.office.com).
+**Nie skonfigurowano konta**: ta aplikacja musi być zarządzana przez usługę Microsoft Intune, ale Twoje konto nie zostało skonfigurowane. Skontaktuj się z administratorem IT, aby uzyskać pomoc. | Konto użytkownika nie ma licencji Intune A Direct. | Upewnij się, że konto użytkownika ma przypisaną licencję usługi Intune w [portalu pakietu Office](https://portal.office.com).
 **Nie można zarejestrować aplikacji**: ta aplikacja musi być zarządzana przez usługę Microsoft Intune, ale w tej chwili nie udało nam się jej zarejestrować. Skontaktuj się z administratorem IT, aby uzyskać pomoc. | Nie można automatycznie zarejestrować aplikacji przy użyciu usługi zarządzania aplikacjami mobilnymi, gdy wymagane są zasady ochrony aplikacji. | Wyczyść dane aplikacji. <br><br> Wyślij dzienniki do usługi Intune za pomocą aplikacji Portal firmy lub utwórz bilet pomocy technicznej. Aby uzyskać więcej informacji, zobacz [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](get-support.md).
 
 ## <a name="next-steps"></a>Następne kroki

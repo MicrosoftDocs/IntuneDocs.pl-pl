@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 1/29/2019
+ms.date: 02/22/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 50235e4e21e738081dc1b41d8e6a8b6210430064
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: cdc0f02aa09edd05314d0d4a6a2abacc98c94bf2
+ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55838142"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56742741"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurowanie certyfikatów SCEP i korzystanie z nich w usłudze Intune
 
@@ -364,10 +364,12 @@ Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i podaj nas
 6. Podaj następujące ustawienia:
 
    - **Typ certyfikatu**: wybierz pozycję **Użytkownik** w przypadku certyfikatów użytkownika. Wybierz pozycję **Urządzenie** w przypadku urządzeń bez użytkowników, takich jak kioski. Certyfikaty typu **Urządzenie** są dostępne dla następujących platform:  
+     - Android Enterprise
      - iOS
+     - macOS
      - Windows 8.1 i nowsze
      - System Windows 10 lub nowszy
-     - Android Enterprise
+
 
    - **Format nazwy podmiotu**: wybierz sposób automatycznego tworzenia nazwy podmiotu w żądaniu certyfikatu przez usługę Intune. Opcje zmienią się, jeśli wybierzesz typ certyfikatu **Użytkownik** lub typ certyfikatu **Urządzenie**. 
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19994745a232a362d6bba0f09ed3934e492a17ed
-ms.sourcegitcommit: 2f431f122ce3ee6b5d0cdb04a0b748d00f83e295
+ms.openlocfilehash: b1ff65e1b48815cd5964aa7498fa6ba54df50e09
+ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265676"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56742299"
 ---
 # <a name="the-early-edition-for-microsoft-intune---february-2019"></a>Wczesna wersja usługi Microsoft Intune — luty 2019
 
@@ -43,92 +43,6 @@ Ta strona jest okresowo aktualizowana. Odwiedź ją ponownie, aby sprawdzić dod
 ## <a name="intune-in-the-azure-portal"></a>Usługa Intune w witrynie Azure Portal
 <!-- 1902 start-->
 
-### <a name="powershell-scripts-can-run-in-a-64-bit-host-on-64-bit-devices----1862675----"></a>Skrypty programu PowerShell można uruchomić w ramach 64-bitowego hosta na urządzeniach 64-bitowych <!-- 1862675  -->
-Po dodaniu skryptu programu PowerShell do profilu konfiguracji urządzenia skrypt jest zawsze wykonywany jako 32-bitowy nawet w 64-bitowych systemach operacyjnych. Dzięki tej aktualizacji administrator może uruchomić skrypt w ramach 64-bitowego hosta programu PowerShell na urządzeniach 64-bitowych (**Konfiguracja urządzenia** > **Skrypty PowerShell** > **Dodaj** > **Konfiguruj** > **Uruchom skrypt w 64-bitowym hoście programu PowerShell**).
-Aby uzyskać więcej informacji na temat korzystania z programu PowerShell, zobacz [Skrypty programu PowerShell w usłudze Intune](intune-management-extension.md).
-Dotyczy: System Windows 10 lub nowszy
-
-### <a name="rename-an-enrolled-windows-device----1911112----"></a>Zmiana nazwy zarejestrowanego urządzenia z systemem Windows <!-- 1911112  -->
-Będzie można zmienić nazwę zarejestrowanego urządzenia z systemem Windows 10 (RS4 lub nowszym). Aby to zrobić, wybierz pozycje **Intune** > **Urządzenia** > **Wszystkie urządzenia** > wybierz urządzenie > **Zmień nazwę urządzenia**.
-
-### <a name="assign-scep-certificates-to-a-userless-macos-device-------2340521-----"></a>Przypisywanie certyfikatów SCEP do urządzenia z systemem macOS bez użytkowników    <!-- 2340521   -->
-Będzie można przypisać certyfikaty prostego protokołu rejestrowania certyfikatów (SCEP) do urządzenia z systemem macOS bez użytkowników i skojarzyć certyfikat z profilem sieci Wi-Fi lub VPN. Rozszerza to istniejącą obsługę [przypisywania certyfikatów do urządzeń bez użytkowników z systemem Windows, iOS i Android](certificates-scep-configure.md#create-a-scep-certificate-profile).
-
-### <a name="intune-conditional-access-ui-update------2432313----"></a>Aktualizacja interfejsu użytkownika dostępu warunkowego usługi Intune   <!-- 2432313  -->
-Wprowadzamy ulepszenia interfejsu użytkownika dla dostępu warunkowego w konsoli usługi Intune. Należą do nich następujące elementy:
-- Zastąpienie bloku *Dostęp warunkowy* usługi Intune blokiem z usługi Azure Active Directory. Dzięki temu będziesz mieć dostęp do pełnego zakresu ustawień i konfiguracji dotyczących dostępu warunkowego, który pozostaje technologią usługi Azure AD.
-- Przeniesienie konfiguracji *łącznika usługi Exchange* do obecnego bloku *Dostęp lokalny*. Nazwa bloku jest także zmieniana na *Dostęp do programu Exchange*. Ta zmiana umieszcza w jednym miejscu konfigurowanie i monitorowanie szczegółów dotyczących usługi Exchange online i lokalnej.
-
-### <a name="intune-will-leverage-google-play-protect-apis-on-android-devices----2577355----"></a>Usługa Intune będzie korzystać z interfejsów API usługi Google Play Protect na urządzeniach z systemem Android <!-- 2577355  -->
-Niektórzy administratorzy IT muszą radzić sobie ze środowiskiem BYOD, w którym użytkownicy końcowi mogą rootować swoje telefony komórkowe lub wykonywać ich jailbreak. To zachowanie, choć czasem podejmowane bez złych zamiarów, powoduje obejście wielu zasad usługi Intune określonych w celu ochrony danych organizacji na urządzeniach użytkowników końcowych. W związku z tym usługa Intune udostępnia funkcję wykrywania rootingu i jailbreaku dla zarówno zarejestrowanych, jak i niezarejestrowanych urządzeń. W tej wersji usługa Intune wykorzysta interfejsy API usługi Google Play do dodania sprawdzeń dotyczących wykrywania rootingu dla urządzeń niezarejestrowanych. Mimo że firma Google nie udostępnia wszystkich wykonywanych sprawdzeń dotyczących rootingu, oczekujemy, że te interfejsy API wykrywają użytkowników, którzy wykonali rooting swojego urządzenia z dowolnej przyczyny — od dostosowania urządzenia do umożliwienia pobierania nowszych aktualizacji systemu operacyjnego na starszych urządzeniach. Następnie można zablokować dostęp tych użytkowników do danych firmowych lub wyczyścić ich konta firmowe z aplikacji obsługujących zasady. Dodatkowo administratorzy IT otrzymają kilka aktualizacji raportowania w bloku Intune App Protection — raport „Użytkownicy z flagą” pokazuje użytkowników wykrytych za pomocą skanowania przy użyciu interfejsu API SafetyNet usługi Google Play Protect, a raport „Potencjalnie szkodliwe aplikacje” pokazuje aplikacje wykryte za pomocą skanowania przy użyciu interfejsu API Verify Apps firmy Google. Ta funkcja jest dostępna w systemie Android. 
-
-### <a name="win32-app-information-available-in-troubleshooting-blade----2617342------"></a>Informacje o aplikacji Win32 dostępne w bloku Rozwiązywanie problemów <!-- 2617342    -->
-Będzie dostępna możliwość zbierania plików dziennika błędów dla instalacji aplikacji Win32 w bloku **Rozwiązywanie problemów** aplikacji usługi Intune. Aby uzyskać więcej informacji na temat rozwiązywania problemów z instalacją aplikacji, zobacz [Rozwiązywanie problemów z instalacją aplikacji](troubleshoot-app-install.md).
-
-### <a name="kiosk-browser-and-microsoft-edge-browser-apps-can-run-on-windows-10-devices-in-kiosk-mode----2935135----"></a>Aplikacje Kiosk Browser i Microsoft Edge mogą pracować na urządzeniach z systemem Windows 10 w trybie kiosku <!-- 2935135  -->
-Urządzenia z systemem Windows 10 pracujące w trybie kiosku umożliwiają uruchamianie jednej lub wielu aplikacji. Ta aktualizacja obejmuje kilka zmian dotyczących korzystania z aplikacji w trybie kiosku, w tym:
-
-- Możliwość uruchamiania przeglądarek Microsoft Edge i Kiosk Browser jako aplikacji na urządzeniu kiosku (**Konfiguracja urządzenia** > **Profile** > **Nowy profil** >  **System Windows 10 i nowsze** dla platformy > **Kiosk** dla typu profilu).
-- Zablokowanie lub dopuszczenie możliwości uruchamiania przeglądarki Microsoft Edge w trybie kiosku (**Konfiguracja urządzenia** > **Profile** > **Nowy profil** >  **System Windows 10 i nowsze** dla platformy > **Ograniczenia urządzenia** dla typu profilu > **Przeglądarka Microsoft Edge**). Gdy przeglądarka Microsoft Edge nie działa w trybie kiosku, użytkownicy końcowi mogą zmienić jej ustawienia.
-
-Aby uzyskać listę bieżących ustawień, zobacz:
-
-- [Ustawienia urządzenia z systemem Windows 10 lub nowszym, które ma działać jako kiosk](kiosk-settings-windows.md)
-- [Ograniczenia urządzeń z przeglądarką Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser)
-
-Dotyczy: System Windows 10 lub nowszy
-
-### <a name="auto-assign-scope-tags-to-resources-created-by-an-admin-with-that-scope----3173823----"></a>Automatyczne przypisywanie tagów zakresu do zasobów utworzonych przez administratora przy użyciu danego zakresu <!-- 3173823  -->
-Gdy administrator utworzy zasób, wszelkie tagi zakresu przypisane do administratora zostaną automatycznie przypisane do nowych zasobów.
-
-### <a name="new-device-restriction-settings-for-ios-and-macos-devices----3448774---"></a>Nowe ustawienia ograniczeń urządzeń z systemami iOS i macOS <!-- 3448774 -->
-Istnieje możliwość ograniczenia niektórych ustawień i funkcji na urządzeniach z systemami iOS i macOS (**Konfiguracja urządzenia** > **Profile** > **Nowy profil** >  **iOS** lub **macOS** dla platformy > **Ograniczenia urządzenia** dla typu profilu). Ta aktualizacja dodaje kolejne funkcje i ustawienia, które można kontrolować, w tym ustawianie czasu korzystania z urządzenia, zmienianie ustawień karty eSIM i planów komórkowych, opóźnianie widoczności aktualizacji oprogramowania dla użytkownika, blokowanie buforowania zawartości i nie tylko.
-Aby wyświetlić bieżące funkcje i ustawienia, które można ograniczyć, zobacz:
-- [Ustawienia ograniczeń dotyczących urządzeń z systemem iOS](device-restrictions-ios.md)
-- [Ustawienia ograniczeń dotyczących urządzeń z systemem macOS](device-restrictions-macos.md)
-
-Dotyczy:
-- iOS
-- macOS
-
-### <a name="failed-enrollment-report-moves-to-the-device-enrollment-blade----3560202---"></a>Raport niepowodzenia rejestracji zostanie przeniesiony do bloku Rejestrowanie urządzenia <!-- 3560202 -->
-Raport **Rejestracje zakończone niepowodzeniem** zostanie przeniesiony do sekcji **Monitor** bloku **Rejestracja urządzenia**. Dodane zostaną również dwie nowe kolumny (Metoda rejestracji i Wersja systemu operacyjnego).
-
-### <a name="change-kiosk-to-dedicated-devices----3598402----"></a>Zmiana pozycji „Kiosk” na „Urządzenia dedykowane” <!-- 3598402  -->
-W ramach ujednolicania terminologii dla systemu Android pozycja **Kiosk** zostanie zmieniona na **Urządzenia dedykowane** w ramach pozycji Profile konfiguracji urządzeń, **System Android dla firm** > **Właściciel urządzenia** > **Ograniczenia urządzenia**.
-
-### <a name="safari-and-delaying-user-software-update-visibility-ios-settings-are-moving-in-the-intune-ui----3640850--3803313----"></a>Ustawienia systemu iOS dotyczące przeglądarki Safari i opóźniania widoczności aktualizacji oprogramowania użytkownika są przenoszone w interfejsie użytkownika usługi Intune <!-- 3640850, , 3803313  -->
-W przypadku urządzeń z systemem iOS można skonfigurować ustawienia przeglądarki Safari i aktualizacje oprogramowania. W ramach tej aktualizacji wymienione ustawienia są przenoszone do różnych części interfejsu użytkownika usługi Intune:
-
-- Ustawienia przeglądarki Safari są przenoszone z pozycji **Safari**(**Konfiguracji urządzenia** > **Profile** > **Nowy profil** > **iOS** dla platformy > **Ograniczenia urządzenia** dla typu profilu) do pozycji **Aplikacje wbudowane**. 
-- Ustawienie **Opóźnianie widoczności aktualizacji oprogramowania użytkownika dla urządzeń z systemem iOS w trybie nadzorowanym** (**Aktualizacje oprogramowania** > **Aktualizuj zasady dla systemu iOS**) jest przenoszone do obszaru **Ograniczenia urządzeń** > **Ogólne**.
-
-Aby uzyskać listę bieżących ustawień, zobacz [Ograniczenia urządzeń z systemem iOS](device-restrictions-ios.md) i [Aktualizacje oprogramowania dla systemu iOS](software-updates-ios.md).
-
-Dotyczy: 
-- iOS
-
-### <a name="enabling-restrictions-in-the-device-settings-is-renamed-to-screen-time-on-ios-devices----3699164----"></a>Nazwa opcji Włączanie ograniczeń w ustawieniach urządzenia zostanie zmieniona na Czas korzystania z urządzenia na urządzeniach z systemem iOS <!-- 3699164  -->
-Istnieje możliwość skonfigurowania pozycji **Włączanie ograniczeń w ustawieniach urządzenia** na urządzeniach nadzorowanych z systemem iOS (**Konfiguracja urządzenia** > **Profile** > **Nowy profil** > **iOS** dla platformy > **Ograniczenia urządzenia** dla typu profilu > **Ogólne**). W ramach tej aktualizacji nazwa tego ustawienia zostanie zmieniona na **Czas korzystania z urządzenia (tylko nadzorowane)**. Zachowanie jest takie samo. W szczególności: 
-
-- System iOS 11.4.1 i starsze: opcja **Blokuj** uniemożliwia użytkownikom końcowym ustawianie własnych ograniczeń w ustawieniach urządzenia. 
-- System iOS 12.0 i nowsze: opcja **Blokuj** uniemożliwia użytkownikom końcowym ustawianie pozycji **Czas korzystania z urządzenia** w ustawieniach urządzenia, w tym ograniczeń dotyczących zawartości i prywatności. Na urządzeniach uaktualnionych do systemu iOS 12.0 karta ograniczeń nie będzie już widoczna w ustawieniach urządzenia. Te ustawienia znajdują się teraz w obszarze **Czas korzystania z urządzenia**. 
-
-Aby uzyskać listę bieżących ustawień, zobacz [Ustawienia ograniczenia urządzenia z systemem iOS](device-restrictions-ios.md).
-
-Dotyczy: 
-- iOS
-
-### <a name="app-status-details-for-ios-apps----3761235----"></a>Szczegóły stanu aplikacji systemu iOS <!-- 3761235  -->
-Zostaną wprowadzone nowe komunikaty o błędzie dla instalacji aplikacji związane z następującymi sytuacjami:
-- Błąd aplikacji programu VPP podczas instalowania na współużytkowanym urządzeniu iPad
-- Błąd, jeśli sklep App Store jest wyłączony
-- Błąd szukania licencji programu VPP dla aplikacji
-- Błąd instalacji aplikacji systemowych za pomocą dostawcy rozwiązania MDM
-- Błąd instalacji aplikacji, gdy urządzenie jest w trybie zgubienia lub kiosku
-- Błąd instalacji aplikacji, gdy użytkownik nie jest zalogowany do sklepu App Store
-
-W usłudze Intune wybierz pozycję **Aplikacje klienckie** > **Aplikacje** > „Nazwa aplikacji” > **Stan instalacji urządzenia**. Nowe komunikaty o błędzie będą dostępne w kolumnie **Szczegóły stanu**.
 
 <!-- 1901 start -->
 

@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c777beb294482a179d4b99fc71db031367698d0d
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: dd6ba4c9c93bf41d0407f5fa0feead440d858507
+ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55835796"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56742129"
 ---
 # <a name="windows-10-and-windows-holographic-for-business-device-settings-to-run-as-a-dedicated-kiosk-using-intune"></a>Ustawienia urządzenia z systemem Windows 10 i Windows Holographic for Business, które ma działać jako dedykowany kiosk przy użyciu usługi Intune
 
@@ -69,6 +69,6 @@ Profil zostanie utworzony i wyświetlony na liście profilów. Teraz należy [pr
 
 Profile kiosku można tworzyć dla urządzeń, na których działają następujące platformy:
 - [Android](device-restrictions-android.md#kiosk)
-- [Android Enterprise](device-restrictions-android-for-work.md#kiosk-settings)
+- [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings)
 - [Windows 10 lub nowszy](kiosk-settings-windows.md)
 - [Windows Holographic for Business](kiosk-settings-holographic.md)
