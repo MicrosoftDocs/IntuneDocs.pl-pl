@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 01/24/2019
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6b0c2bff4051a1adba1a68f38d8f0a9b80b914b4
-ms.sourcegitcommit: 5708ec1d7ae50494be44ed5064f150b636188c84
+ms.openlocfilehash: 4d4352ce24d6adc38040b200e9f9d8be8a502340
+ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56240065"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57232186"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Przypisywanie aplikacji do grup przy użyciu usługi Microsoft Intune
 
@@ -89,8 +89,8 @@ Czasami ta sama aplikacja zostaje przypisana do wielu grup, ale z różnymi inte
 | Intencja grupy 1 | Intencja grupy 2 | Intencja wynikowa |
 |-----------------------------------|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |Użytkownik, wymagane|Użytkownik, dostępne|Wymagane i dostępne|
-|Użytkownik, wymagane|Użytkownik, niedostępne|Wymagane|
-|Użytkownik, wymagane|Użytkownik, odinstalowywanie|Wymagane|
+|Użytkownik, wymagane|Użytkownik, niedostępne|Wymagana|
+|Użytkownik, wymagane|Użytkownik, odinstalowywanie|Wymagana|
 |Użytkownik, dostępne|Użytkownik, niedostępne|Niedostępny|
 |Użytkownik, dostępne|Użytkownik, odinstalowywanie|Odinstalowanie|
 |Użytkownik, niedostępne|Użytkownik, odinstalowywanie|Odinstalowanie
@@ -102,7 +102,7 @@ Czasami ta sama aplikacja zostaje przypisana do wielu grup, ale z różnymi inte
 |Użytkownik, niedostępne|Urządzenie, odinstalowywanie|Odinstalowanie|
 |Użytkownik, odinstalowywanie|Urządzenie, wymagane|Oba elementy istnieją, usługa Intune rozstrzyga jako wymagane|
 |Użytkownik, odinstalowywanie|Urządzenie, odinstalowywanie|Oba elementy istnieją, usługa Intune rozstrzyga jako odinstalowywanie|
-|Urządzenie, wymagane|Urządzenie, odinstalowywanie|Wymagane|
+|Urządzenie, wymagane|Urządzenie, odinstalowywanie|Wymagana|
 |Użytkownik, wymagane i dostępne|Użytkownik, dostępne|Wymagane i dostępne|
 |Użytkownik, wymagane i dostępne|Użytkownik, odinstalowywanie|Wymagane i dostępne|
 |Użytkownik, wymagane i dostępne|Użytkownik, niedostępne|Wymagane i dostępne|
@@ -111,9 +111,9 @@ Czasami ta sama aplikacja zostaje przypisana do wielu grup, ale z różnymi inte
 |Użytkownik, wymagane i dostępne|Urządzenie, odinstalowywanie|Oba elementy istnieją, usługa Intune rozstrzyga jako wymagane (wymagane i dostępne)
 |Użytkownik, niedostępne|Urządzenie, niedostępne|Niedostępny|
 |Użytkownik, dostępne|Urządzenie, niedostępne|Dostępne|
-|Użytkownik, wymagane|Urządzenie, niedostępne|Wymagane|
+|Użytkownik, wymagane|Urządzenie, niedostępne|Wymagana|
 |Użytkownik, dostępne bez rejestracji|Użytkownik, wymagane i dostępne|Wymagane i dostępne
-|Użytkownik, dostępne bez rejestracji|Użytkownik, wymagane|Wymagane
+|Użytkownik, dostępne bez rejestracji|Użytkownik, wymagane|Wymagana
 |Użytkownik, dostępne bez rejestracji|Użytkownik, niedostępne|Niedostępny
 |Użytkownik, dostępne bez rejestracji|Użytkownik, dostępne|Dostępne|
 |Użytkownik, dostępne bez rejestracji|Urządzenie, wymagane|Wymagane i dostępne bez rejestracji|

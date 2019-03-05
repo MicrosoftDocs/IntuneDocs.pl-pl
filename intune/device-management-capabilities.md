@@ -6,7 +6,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 06/15/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 39fd7256b9db7590a3a6b601b8884494062fe897
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 6b5308eb1f9d83bcc9b9cbc29cac9bcf09356e77
+ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55845299"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57231948"
 ---
 # <a name="enrolled-device-management-capabilities-of-microsoft-intune"></a>Możliwości zarządzania zarejestrowanymi urządzeniami w usłudze Microsoft Intune
 
@@ -64,7 +64,7 @@ Użytkownicy uzyskują dostęp do portalu firmy, który umożliwia instalowanie 
 |Profile certyfikatów|Służą do tworzenia i wdrażania profilów zaufanych certyfikatów i certyfikatów SCEP (Simple Certificate Enrollment Protocol), które mogą być używane do zabezpieczania i uwierzytelniania profili sieci Wi-Fi i VPN oraz profili poczty e-mail.|[Bezpieczny dostęp do zasobów przy użyciu profilów certyfikatów w usłudze Microsoft Intune](certificates-configure.md)|
 |Profile sieci Wi-Fi|Służą do wdrażania ustawień sieci bezprzewodowej dla użytkowników. Wdrażając te ustawienia, można zminimalizować działania użytkowników wymagane w celu połączenia z siecią firmową.|[Połączenia Wi-Fi w usłudze Microsoft Intune](wi-fi-settings-configure.md)|
 |Profile poczty e-mail|Umożliwiają tworzenie i wdrażanie ustawień poczty e-mail na urządzeniach, aby użytkownicy mogli uzyskiwać dostęp do firmowej poczty e-mail na urządzeniach osobistych bez konieczności samodzielnego przeprowadzania konfiguracji.|[Konfigurowanie dostępu do firmowej poczty e-mail przy użyciu profilów poczty e-mail w usłudze Microsoft Intune](email-settings-configure.md)|
-|profile sieci VPN,|Umożliwiają wdrażanie ustawień sieci VPN dla użytkowników i urządzeń w Twojej organizacji. Przez wdrożenie tych ustawień można maksymalnie ułatwić użytkownikom nawiązywanie połączeń z zasobami w sieci firmowej.|[Połączenia VPN w usłudze Microsoft Intune](device-profiles.md#vpn)|
+|Profile sieci VPN|Umożliwiają wdrażanie ustawień sieci VPN dla użytkowników i urządzeń w Twojej organizacji. Przez wdrożenie tych ustawień można maksymalnie ułatwić użytkownikom nawiązywanie połączeń z zasobami w sieci firmowej.|[Połączenia VPN w usłudze Microsoft Intune](device-profiles.md#vpn)|
 |Zasady dostępu warunkowego|Służą do zarządzania dostępem do poczty e-mail programu Microsoft Exchange i usługi SharePoint Online z urządzeń, które nie są zarządzane przez usługę Intune.|[Ograniczanie dostępu do poczty e-mail i programu SharePoint przy użyciu usługi Microsoft Intune](app-based-conditional-access-intune.md)|
 
 ## <a name="next-steps"></a>Następne kroki

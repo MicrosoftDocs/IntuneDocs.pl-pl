@@ -18,12 +18,12 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: acbfafcc26aa924a5a9d0a7712bb56119099af43
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: f84eddaf9fac6dd678c7046664bf1feb9ea8cfc1
+ms.sourcegitcommit: da9ee02de327f202b00be44c79bf7abd35b9929b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55848223"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57335245"
 ---
 # <a name="enroll-your-organization-provided-macos-device-in-management"></a>Rejestrowanie udostępnionego przez organizację urządzenia z systemem macOS na potrzeby zarządzania
 
@@ -64,7 +64,7 @@ Wykonaj poniższe kroki, aby zarejestrować urządzenie z systemem macOS na potr
     * Skonfigurowanie komputera Mac  
 ## <a name="get-the-company-portal-app"></a>Pobranie aplikacji Portal firmy      
 Pobierz na urządzenie aplikację Portal firmy usługi Intune dla systemu macOS. Ta aplikacja umożliwia monitorowanie, synchronizowanie, dodawanie i usuwanie urządzenia z zarządzania oraz instalowanie aplikacji. W tych krokach wyjaśniono, jak zarejestrować urządzenie za pomocą aplikacji Portal firmy.  
-1. Na urządzeniu z systemem macOS przejdź na stronę http://portal.manage.microsoft.com/EnrollmentRedirect.aspx.
+1. Na urządzeniu z systemem macOS przejdź na stronę https://portal.manage.microsoft.com/EnrollmentRedirect.aspx.
 2. Zaloguj się do witryny aplikacji Portal firmy przy użyciu konta służbowego. 
 3. Kliknij przycisk **Pobierz aplikację** w celu pobrania instalatora aplikacji Portal firmy dla systemu macOS.
 4. Po wyświetleniu monitu otwórz plik pkg i wykonaj kroki instalacji.

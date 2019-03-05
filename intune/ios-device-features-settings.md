@@ -6,7 +6,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 01/30/2019
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4a2acd4e54329dbfd43e468a3a0f3b1fa62eee44
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 7176da8bf35265ecf16b72faf987a4dcf5e66e0e
+ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850109"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57235738"
 ---
 # <a name="ios-device-feature-settings-in-intune"></a>Ustawienia funkcji urządzenia z systemem iOS w usłudze Intune
 
@@ -340,7 +340,7 @@ Następująca lista zawiera identyfikatory pakietu typowych wbudowanych aplikacj
 |Ustawienia|com.apple.Preferences|
 |Giełda|com.apple.stocks|
 |Porady|com.apple.tips|
-|Filmy|com.apple.videos|
+|Filmy wideo|com.apple.videos|
 |Dyktafon|com.apple.VoiceMemos|
 |Wallet|com.apple.Passbook|
 |Zegarek|com.apple.Bridge|

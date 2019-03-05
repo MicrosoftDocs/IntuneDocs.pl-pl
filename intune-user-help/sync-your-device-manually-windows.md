@@ -18,21 +18,18 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4666779620aa0404c12107a374280c403d66bec3
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 30135c69b95ba9731682af52ad0da3bb9df193e9
+ms.sourcegitcommit: da9ee02de327f202b00be44c79bf7abd35b9929b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55840216"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57335075"
 ---
 # <a name="sync-your-windows-device-manually"></a>Ręczne synchronizowanie urządzenia z systemem Windows
 
 W przypadku niezadowalającej prędkości instalacji aplikacji należy zainicjować ręczną synchronizację urządzenia. Ręczna synchronizacja wymusza połączenie urządzenia z usługą Intune w celu pobrania najnowszych aktualizacji i wiadomości. Po ukończeniu synchronizacji urządzenia prędkość instalacji może wzrosnąć.
 
-Usługa Intune obsługuje ręczną synchronizację z aplikacji Portal firmy, paska zadań na pulpicie i aplikacji Ustawienia na urządzeniu. 
-
-Funkcje aplikacji Portal firmy są obsługiwane na urządzeniach z systemem Windows 10 z aktualizacją Creator’s Update (1703) lub nowszą. 
-* [Synchronizacja z aplikacji Portal firmy](#Sync-from-Company-Portal-app-for-Windows)  
+Usługa Intune obsługuje ręczną synchronizację z aplikacji Portal firmy, paska zadań na pulpicie i aplikacji Ustawienia na urządzeniu. Funkcje aplikacji Portal firmy są obsługiwane na urządzeniach z systemem Windows 10 z aktualizacją Creator’s Update (1703) lub nowszą. 
 
 Za pomocą aplikacji Ustawienia na urządzeniu można synchronizować wszystkie urządzenia z systemem Windows, w tym:
 
@@ -75,11 +72,11 @@ Wykonaj następujące kroki, aby ręcznie zsynchronizować urządzenia Microsoft
 
 3. Istnieje wiele wersji systemu Windows 10 na komputery stacjonarne. Porównaj swój ekran z przedstawionymi poniżej zrzutami, aby określić czynności do wykonania. 
 
-    * Jeśli na ekranie jest wyświetlany napis**Uzyskaj dostęp do miejsca pracy lub nauki**, przejdź do procedury w sekcji [Uzyskaj dostęp do miejsca pracy lub nauki](#access-work-or-school).
+    * Jeśli na ekranie jest wyświetlany napis**Uzyskaj dostęp do miejsca pracy lub nauki**, przejdź do procedury w sekcji [Uzyskaj dostęp do miejsca pracy lub nauki](#access-work-or-school-steps).
 
     ![Opcja Uzyskaj dostęp do miejsca pracy lub nauki w ustawieniach aplikacji](./media/w10-enroll-rs1-connect-to-work-or-school.png)  
 
-    * W przypadku napisu **Dostęp z miejsca pracy** przejdź do procedury w sekcji [Dostęp z miejsca pracy](#work-access).  
+    * W przypadku napisu **Dostęp z miejsca pracy** przejdź do procedury w sekcji [Dostęp z miejsca pracy](#work-access-steps).  
 
     ![Wybieranie dostępu z miejsca pracy jako typu konta](./media/win10pc-sync-3-work-access.png)
 

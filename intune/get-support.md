@@ -5,8 +5,8 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/09/2019
-ms.topic: article
+ms.date: 03/04/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 66ade3d833a82e717284c4abfe48b2c1b6d85add
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 01cffe9143034b9f4221cd760f9cb91f1cceebce
+ms.sourcegitcommit: da9ee02de327f202b00be44c79bf7abd35b9929b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55836510"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334973"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune
 
@@ -50,7 +50,7 @@ Jako administrator informatyczny możesz za pomocą opcji **Pomoc i obsługa tec
 ![Bloki w usłudze Intune](./media/get-support/intune-blades.png)
 
 
-To nowe środowisko jest podobne do środowiska w [centrum administracyjnym rozwiązania Microsoft 365](https://portal.office.com/AdminPortal/Home) i zastępuje [poprzednie środowisko pomocy i obsługi technicznej](#azure-help-+-and-support-experience). 
+To nowe środowisko jest podobne do środowiska w [centrum administracyjnym rozwiązania Microsoft 365](https://portal.office.com/AdminPortal/Home) i zastępuje [poprzednie środowisko pomocy i obsługi technicznej](#azure-help-+-support-experience). 
 
 Aby uzyskać dostęp do pomocy i obsługi technicznej, wykonaj następujące czynności:  
 - **Pulpit nawigacyjny zarządzania urządzeniami:**

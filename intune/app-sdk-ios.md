@@ -6,7 +6,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 12/13/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eaffed2af38e269000dd951cec536e1f80be705f
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 4b2b19b1c2bf2916b44ffa4ca4aa31a85fa6b3b9
+ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55841355"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57235790"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu iOS
 
@@ -221,34 +221,34 @@ Niektóre z tych ustawień mogły zostać omówione w poprzednich sekcjach, a ni
 
 Ustawienie  | Typ  | Definicja | Wymagane?
 --       |  --   |   --       |  --
-ADALClientId  | String  | Identyfikator klienta usługi Azure AD aplikacji. | Wymagane, jeśli aplikacja korzysta z biblioteki ADAL. |
-ADALAuthority | String | Urząd usługi Azure AD używany przez aplikację. Należy użyć własnego środowiska, w którym skonfigurowano konta usługi AAD. | Wymagane, jeśli aplikacja korzysta z biblioteki ADAL. W przypadku braku tej wartości używana jest wartość domyślna usługi Intune.|
-ADALRedirectUri  | String  | Identyfikator URI przekierowania usługi Azure AD aplikacji. | Ustawienie ADALRedirectUri lub ADALRedirectScheme jest wymagane, jeśli aplikacja korzysta z biblioteki ADAL.  |
-ADALRedirectScheme  | String  | Schemat przekierowania usługi Azure AD aplikacji. Może być używany zamiast ustawienia ADALRedirectUri, jeśli identyfikator URI przekierowania aplikacji ma format `scheme://bundle_id`. | Ustawienie ADALRedirectUri lub ADALRedirectScheme jest wymagane, jeśli aplikacja korzysta z biblioteki ADAL. |
-ADALLogOverrideDisabled | Boolean  | Określa, czy zestaw SDK będzie przekierowywać wszystkie dzienniki biblioteki ADAL (łącznie z ewentualnymi wywołaniami biblioteki ADAL z aplikacji) do własnego pliku dziennika. Wartość domyślna to NO (Nie). Wybierz wartość YES (Tak), jeśli aplikacja będzie ustawiać własne wywołanie zwrotne dziennika biblioteki ADAL. | Opcjonalny. |
-ADALCacheKeychainGroupOverride | String  | Określa grupę łańcucha kluczy do użycia dla pamięci podręcznej biblioteki ADAL zamiast „com.microsoft.adalcache”. Zauważ, że ta grupa nie zawiera prefiksu app-id. Zostanie on umieszczony jako prefiks w podanym ciągu w środowisku uruchomieniowym. | Opcjonalny. |
+ADALClientId  | Ciąg  | Identyfikator klienta usługi Azure AD aplikacji. | Wymagane, jeśli aplikacja korzysta z biblioteki ADAL. |
+ADALAuthority | Ciąg | Urząd usługi Azure AD używany przez aplikację. Należy użyć własnego środowiska, w którym skonfigurowano konta usługi AAD. | Wymagane, jeśli aplikacja korzysta z biblioteki ADAL. W przypadku braku tej wartości używana jest wartość domyślna usługi Intune.|
+ADALRedirectUri  | Ciąg  | Identyfikator URI przekierowania usługi Azure AD aplikacji. | Ustawienie ADALRedirectUri lub ADALRedirectScheme jest wymagane, jeśli aplikacja korzysta z biblioteki ADAL.  |
+ADALRedirectScheme  | Ciąg  | Schemat przekierowania usługi Azure AD aplikacji. Może być używany zamiast ustawienia ADALRedirectUri, jeśli identyfikator URI przekierowania aplikacji ma format `scheme://bundle_id`. | Ustawienie ADALRedirectUri lub ADALRedirectScheme jest wymagane, jeśli aplikacja korzysta z biblioteki ADAL. |
+ADALLogOverrideDisabled | Wartość logiczna  | Określa, czy zestaw SDK będzie przekierowywać wszystkie dzienniki biblioteki ADAL (łącznie z ewentualnymi wywołaniami biblioteki ADAL z aplikacji) do własnego pliku dziennika. Wartość domyślna to NO (Nie). Wybierz wartość YES (Tak), jeśli aplikacja będzie ustawiać własne wywołanie zwrotne dziennika biblioteki ADAL. | Opcjonalny. |
+ADALCacheKeychainGroupOverride | Ciąg  | Określa grupę łańcucha kluczy do użycia dla pamięci podręcznej biblioteki ADAL zamiast „com.microsoft.adalcache”. Zauważ, że ta grupa nie zawiera prefiksu app-id. Zostanie on umieszczony jako prefiks w podanym ciągu w środowisku uruchomieniowym. | Opcjonalny. |
 AppGroupIdentifiers | Tablica ciągów  | Tablica grup aplikacji z sekcji uprawnień aplikacji com.apple.security.application-groups. | Wymagane, jeśli aplikacja używa grup aplikacji. |
-ContainingAppBundleId | String | Określa identyfikator pakietu aplikacji zawierającej rozszerzenie. | Wymagane w przypadku rozszerzeń dla systemu iOS. |
-DebugSettingsEnabled| Boolean | W przypadku ustawienia na wartość YES (TAK) zasady testu w pakiecie ustawień mogą być stosowane. Aplikacje *nie* powinny być dostarczane z włączonym tym ustawieniem. | Opcjonalny. Wartość domyślna to no (Nie).|
-MainNibFile <br> MainNibFile~ipad  | String  | To ustawienie powinno zawierać nazwę pliku głównego nib aplikacji.  | Wymagane, jeśli w pliku Info.plist aplikacji zdefiniowano ustawienie MainNibFile. |
-MainStoryboardFile <br> MainStoryboardFile~ipad  | String  | To ustawienie powinno zawierać nazwę pliku głównego storyboard aplikacji. | Wymagane, jeśli w pliku Info.plist aplikacji zdefiniowano ustawienie UIMainStoryboardFile. |
-MAMPolicyRequired| Boolean| Określa, czy uruchamianie aplikacji będzie blokowane, jeśli aplikacja nie ma zasad aplikacji usługi Intune. Wartość domyślna to NO (Nie). <br><br> Uwaga: Aplikacje nie mogą być przesłane do sklepu z aplikacjami z ustawieniem MAMPolicyRequired ustawionym na wartość YES (Tak). | Opcjonalny. Wartość domyślna to no (Nie).|
-MAMPolicyWarnAbsent | Boolean| Określa, czy użytkownik będzie ostrzegany podczas uruchamiania aplikacji, jeśli aplikacja nie ma zasad aplikacji usługi Intune. <br><br> Uwaga: Użytkownicy będą mogli korzystać z aplikacji bez zasad po odrzuceniu ostrzeżenia. | Opcjonalny. Wartość domyślna to no (Nie). |
-MultiIdentity | Boolean| Określa, czy aplikacja obsługuje wiele tożsamości. | Opcjonalny. Wartość domyślna to no (Nie). |
-SplashIconFile <br> SplashIconFile~ipad | String  | Określa plik ikony powitalnej (uruchamiania) usługi Intune. | Opcjonalny. |
+ContainingAppBundleId | Ciąg | Określa identyfikator pakietu aplikacji zawierającej rozszerzenie. | Wymagane w przypadku rozszerzeń dla systemu iOS. |
+DebugSettingsEnabled| Wartość logiczna | W przypadku ustawienia na wartość YES (TAK) zasady testu w pakiecie ustawień mogą być stosowane. Aplikacje *nie* powinny być dostarczane z włączonym tym ustawieniem. | Opcjonalny. Wartość domyślna to no (Nie).|
+MainNibFile <br> MainNibFile~ipad  | Ciąg  | To ustawienie powinno zawierać nazwę pliku głównego nib aplikacji.  | Wymagane, jeśli w pliku Info.plist aplikacji zdefiniowano ustawienie MainNibFile. |
+MainStoryboardFile <br> MainStoryboardFile~ipad  | Ciąg  | To ustawienie powinno zawierać nazwę pliku głównego storyboard aplikacji. | Wymagane, jeśli w pliku Info.plist aplikacji zdefiniowano ustawienie UIMainStoryboardFile. |
+MAMPolicyRequired| Wartość logiczna| Określa, czy uruchamianie aplikacji będzie blokowane, jeśli aplikacja nie ma zasad aplikacji usługi Intune. Wartość domyślna to NO (Nie). <br><br> Uwaga: Aplikacje nie mogą być przesłane do sklepu z aplikacjami z ustawieniem MAMPolicyRequired ustawionym na wartość YES (Tak). | Opcjonalny. Wartość domyślna to no (Nie).|
+MAMPolicyWarnAbsent | Wartość logiczna| Określa, czy użytkownik będzie ostrzegany podczas uruchamiania aplikacji, jeśli aplikacja nie ma zasad aplikacji usługi Intune. <br><br> Uwaga: Użytkownicy będą mogli korzystać z aplikacji bez zasad po odrzuceniu ostrzeżenia. | Opcjonalny. Wartość domyślna to no (Nie). |
+MultiIdentity | Wartość logiczna| Określa, czy aplikacja obsługuje wiele tożsamości. | Opcjonalny. Wartość domyślna to no (Nie). |
+SplashIconFile <br> SplashIconFile~ipad | Ciąg  | Określa plik ikony powitalnej (uruchamiania) usługi Intune. | Opcjonalny. |
 SplashDuration | Liczba | Minimalny czas w sekundach, przez który ekran uruchamiania usługi Intune będzie wyświetlany podczas uruchamiania aplikacji. Wartość domyślna to 1,5. | Opcjonalny. |
-BackgroundColor| String| Określa kolor tła ekranu uruchamiania i ekranu numeru PIN. Akceptuje ciąg szesnastkowy RGB w postaci „#XXXXXX”, gdzie „X” może być znakiem z zakresu 0–9 lub A–F. Znak # można pominąć.   | Opcjonalny. Domyślnie jasnoszary. |
-ForegroundColor| String| Określa kolor pierwszego planu ekranu uruchamiania i ekranu numeru PIN, np. kolor tekstu. Akceptuje ciąg szesnastkowy RGB w postaci „#XXXXXX”, gdzie „X” może być znakiem z zakresu 0–9 lub A–F. Znak # można pominąć.  | Opcjonalny. Domyślnie czarny. |
-AccentColor | String| Określa kolor akcentu dla ekranu numeru PIN, na przykład kolor tekstu przycisku i kolor wyróżnienia pola. Akceptuje ciąg szesnastkowy RGB w postaci „#XXXXXX”, gdzie „X” może być znakiem z zakresu 0–9 lub A–F. Znak # można pominąć.| Opcjonalny. Domyślnie systemowy niebieski. |
+BackgroundColor| Ciąg| Określa kolor tła ekranu uruchamiania i ekranu numeru PIN. Akceptuje ciąg szesnastkowy RGB w postaci „#XXXXXX”, gdzie „X” może być znakiem z zakresu 0–9 lub A–F. Znak # można pominąć.   | Opcjonalny. Domyślnie jasnoszary. |
+ForegroundColor| Ciąg| Określa kolor pierwszego planu ekranu uruchamiania i ekranu numeru PIN, np. kolor tekstu. Akceptuje ciąg szesnastkowy RGB w postaci „#XXXXXX”, gdzie „X” może być znakiem z zakresu 0–9 lub A–F. Znak # można pominąć.  | Opcjonalny. Domyślnie czarny. |
+AccentColor | Ciąg| Określa kolor akcentu dla ekranu numeru PIN, na przykład kolor tekstu przycisku i kolor wyróżnienia pola. Akceptuje ciąg szesnastkowy RGB w postaci „#XXXXXX”, gdzie „X” może być znakiem z zakresu 0–9 lub A–F. Znak # można pominąć.| Opcjonalny. Domyślnie systemowy niebieski. |
 MAMTelemetryDisabled| Boolean| Określa, czy zestaw SDK będzie wysyłał dane telemetryczne do swojej wewnętrznej bazy danych.| Opcjonalny. Wartość domyślna to no (Nie). |
-MAMTelemetryUsePPE | Boolean | Określa, czy zestaw SDK objęty zarządzaniem aplikacjami mobilnymi będzie wysyłał dane do wewnętrznej bazy danych telemetrii wstępnego środowiska produkcyjnego. Użyj tego ustawienia podczas testowania aplikacji za pomocą zasad usługi Intune, aby dane telemetryczne testu nie mieszały się z danymi klienta. | Opcjonalny. Wartość domyślna to no (Nie). |
-MaxFileProtectionLevel | String | Opcjonalny. Umożliwia aplikacji określenie maksymalnej liczby elementów `NSFileProtectionType`, które może obsługiwać. Ta wartość będzie zastępować zasady wysyłane przez usługę, jeśli poziom będzie wyższy niż to, co może obsługiwać aplikacja. Możliwe wartości: `NSFileProtectionComplete`, `NSFileProtectionCompleteUnlessOpen`, `NSFileProtectionCompleteUntilFirstUserAuthentication`, `NSFileProtectionNone`.|
-OpenInActionExtension | Boolean | Ustaw wartość YES (Tak) dla rozszerzenia akcji „Otwórz w”. Aby uzyskać więcej informacji, zobacz sekcję Udostępnianie danych przy użyciu kontrolera UIActivityViewController. |
+MAMTelemetryUsePPE | Wartość logiczna | Określa, czy zestaw SDK objęty zarządzaniem aplikacjami mobilnymi będzie wysyłał dane do wewnętrznej bazy danych telemetrii wstępnego środowiska produkcyjnego. Użyj tego ustawienia podczas testowania aplikacji za pomocą zasad usługi Intune, aby dane telemetryczne testu nie mieszały się z danymi klienta. | Opcjonalny. Wartość domyślna to no (Nie). |
+MaxFileProtectionLevel | Ciąg | Opcjonalny. Umożliwia aplikacji określenie maksymalnej liczby elementów `NSFileProtectionType`, które może obsługiwać. Ta wartość będzie zastępować zasady wysyłane przez usługę, jeśli poziom będzie wyższy niż to, co może obsługiwać aplikacja. Możliwe wartości: `NSFileProtectionComplete`, `NSFileProtectionCompleteUnlessOpen`, `NSFileProtectionCompleteUntilFirstUserAuthentication`, `NSFileProtectionNone`.|
+OpenInActionExtension | Wartość logiczna | Ustaw wartość YES (Tak) dla rozszerzenia akcji „Otwórz w”. Aby uzyskać więcej informacji, zobacz sekcję Udostępnianie danych przy użyciu kontrolera UIActivityViewController. |
 WebViewHandledURLSchemes | Tablica ciągów | Określa schematy adresów URL obsługiwane przez widok internetowy Twojej aplikacji. | Wymagane, jeśli aplikacja używa widoku internetowego, który obsługuje adresy URL za pośrednictwem linków i/lub języka JavaScript. |
 
 ## <a name="receive-app-protection-policy"></a>Otrzymywanie zasad ochrony aplikacji
 
-### <a name="overview"></a>Przegląd
+### <a name="overview"></a>Omówienie
 
 Aby otrzymać zasady ochrony aplikacji usługi Intune, aplikacje muszą zainicjować żądanie rejestracji w usłudze MAM usługi Intune. W konsoli usługi Intune można skonfigurować aplikacje do otrzymywania zasad ochrony aplikacji po rejestracji urządzeń lub bez rejestracji. Zasady ochrony aplikacji bez rejestracji, określane również jako zasady **APP-WE** lub MAM-WE, umożliwiają zarządzanie aplikacjami przez usługę Intune bez konieczności rejestracji urządzenia do celów zarządzania urządzeniami mobilnymi (MDM) usługi Intune. W obu przypadkach do otrzymania zasad konieczna jest rejestracja w usłudze MAM usługi Intune.
 
@@ -305,8 +305,8 @@ Jeśli chcesz, aby zestaw SDK usługi Intune obsługiwał całe uwierzytelnianie
 
 Ustawienie  | Typ  | Definicja |
 --       |  --   |   --       |  
-AutoEnrollOnLaunch| Boolean| Określa, czy aplikacja ma podejmować próbę automatycznego rejestrowania w momencie uruchomienia, jeśli wykryto istniejącą tożsamość zarządzaną i nie została ona jeszcze zarejestrowana. Wartość domyślna to NO (Nie). <br><br> Uwaga: Jeśli tożsamość zarządzana nie została znaleziona lub nie jest dostępny prawidłowy token tożsamości w pamięci podręcznej biblioteki ADAL, próba rejestracji nie powiedzie się w sposób cichy bez monitowania o poświadczenia, chyba że aplikacja ma również ustawienie MAMPolicyRequired o wartości YES (Tak). |
-MAMPolicyRequired| Boolean| Określa, czy uruchamianie aplikacji będzie blokowane, jeśli aplikacja nie ma zasad ochrony aplikacji usługi Intune. Wartość domyślna to NO (Nie). <br><br> Uwaga: Aplikacje nie mogą być przesłane do sklepu App Store z ustawieniem MAMPolicyRequired ustawionym na wartość YES (Tak). W przypadku podania wartości YES (Tak) dla ustawienia MAMPolicyRequired ustawienie AutoEnrollOnLaunch również musi mieć wartość YES (Tak). |
+AutoEnrollOnLaunch| Wartość logiczna| Określa, czy aplikacja ma podejmować próbę automatycznego rejestrowania w momencie uruchomienia, jeśli wykryto istniejącą tożsamość zarządzaną i nie została ona jeszcze zarejestrowana. Wartość domyślna to NO (Nie). <br><br> Uwaga: Jeśli tożsamość zarządzana nie została znaleziona lub nie jest dostępny prawidłowy token tożsamości w pamięci podręcznej biblioteki ADAL, próba rejestracji nie powiedzie się w sposób cichy bez monitowania o poświadczenia, chyba że aplikacja ma również ustawienie MAMPolicyRequired o wartości YES (Tak). |
+MAMPolicyRequired| Wartość logiczna| Określa, czy uruchamianie aplikacji będzie blokowane, jeśli aplikacja nie ma zasad ochrony aplikacji usługi Intune. Wartość domyślna to NO (Nie). <br><br> Uwaga: Aplikacje nie mogą być przesłane do sklepu App Store z ustawieniem MAMPolicyRequired ustawionym na wartość YES (Tak). W przypadku podania wartości YES (Tak) dla ustawienia MAMPolicyRequired ustawienie AutoEnrollOnLaunch również musi mieć wartość YES (Tak). |
 
 Jeśli wybierzesz tę opcję dla swojej aplikacji, nie musisz ponownie uruchamiać aplikacji po zarejestrowaniu.
 

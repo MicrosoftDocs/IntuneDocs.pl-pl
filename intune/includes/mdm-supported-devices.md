@@ -28,6 +28,6 @@
 > [!NOTE]
 > Usługi Intune nie można używać do zarządzania systemami operacyjnymi Windows Server. Jednostka SKU odpowiadająca wersji Home nie obsługuje wszystkich funkcji usługi Intune.
 
-Klienci z pakietem Enterprise Management + Security (EMS) mogą także użyć [usługi Azure Active Directory (Azure AD), aby zarejestrować urządzenia z systemem Windows 10](/intune/windows-enroll.md).
+Klienci z pakietem Enterprise Management + Security (EMS) mogą także użyć [usługi Azure Active Directory (Azure AD), aby zarejestrować urządzenia z systemem Windows 10](/intune/windows-enroll).
 
 

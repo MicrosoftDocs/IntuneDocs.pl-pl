@@ -6,7 +6,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 10/22/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6844fc94755805e95b56d3d457ada6ce54807874
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 69cc0d732c9dc850d55acedf4e6dbae0f43f350a
+ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55846455"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57232063"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Często zadawane pytania dotyczące zarządzania aplikacjami mobilnymi (MAM) i ochrony aplikacji
 
@@ -193,7 +193,7 @@ Podczas pracy z różnymi typami ustawień pierwszeństwo ma wymaganie dotycząc
 - Jeśli nie przypisano żadnej licencji usługi Intune, zaewidencjonowanie następuje co 24 godziny.
 
 
-## <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz też
 - [Implementowanie własnego planu dotyczącego usługi Intune](planning-guide-onboarding.md)
 - [Testowanie i sprawdzanie poprawności w usłudze Intune](planning-guide-test-validation.md)
 - [Ustawienia zasad zarządzania aplikacjami mobilnymi systemu Android w usłudze Microsoft Intune](app-protection-policy-settings-android.md)

@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 683156b968c743c4c82b472c6e566d5762c22c1a
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: eab28cdd4515561ad34a433773e351150a87f626
+ms.sourcegitcommit: da9ee02de327f202b00be44c79bf7abd35b9929b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55844670"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334956"
 ---
 # <a name="create-a-work-profile-and-enroll-your-device-in-intune"></a>Tworzenie profilu służbowego i rejestrowanie urządzenia w usłudze Intune
 
@@ -33,7 +33,7 @@ Dział pomocy technicznej Twojej firmy może zarządzać tylko profilem służbo
 
 Aby utworzyć profil służbowy:
 
-1.  Na **ekranie powitalnym** portalu firmy dla systemu Android naciśnij przycisk **Zaloguj**, a następnie zaloguj się przy użyciu swojego konta służbowego. Jeśli jeszcze nie masz zainstalowanej bezpłatnej aplikacji, pobierz i zainstaluj ją ze sklepu [Google Play](http://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal).
+1.  Na **ekranie powitalnym** portalu firmy dla systemu Android naciśnij przycisk **Zaloguj**, a następnie zaloguj się przy użyciu swojego konta służbowego. Jeśli jeszcze nie masz zainstalowanej bezpłatnej aplikacji, pobierz i zainstaluj ją ze sklepu [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal).
 
     ![Ekran powitalny aplikacji Portal firmy dla systemu Android](./media/and-enroll-0-welcome-screen.png)
 

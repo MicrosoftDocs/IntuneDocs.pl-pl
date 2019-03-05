@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 02/09/2019
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91a8364927667bbc910d86dc3e95f447eb5cf93a
-ms.sourcegitcommit: 77c63ddb51ffd5258f4ea0e68672c2eb011b83e1
+ms.openlocfilehash: a2dce0b743cd2944569e19a8106327f6735b1d6b
+ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55905819"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57231710"
 ---
 # <a name="windows-security-baseline-settings-for-intune"></a>Ustawienia punktów odniesienia zabezpieczeń usługi Intune  
 
@@ -45,7 +45,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
 
 - **Konta Microsoft opcjonalne dla aplikacji ze Sklepu Windows**  
   To ustawienie zasad umożliwia kontrolowanie, czy konta Microsoft są opcjonalne dla aplikacji ze Sklepu Windows, które wymagają konta do zalogowania. Te zasady dotyczy tylko aplikacji ze Sklepu Windows, które je obsługują. Jeśli to ustawienie zasad zostanie włączone, aplikacje ze Sklepu Windows, które zwykle wymagają konta Microsoft do zalogowania się, umożliwią użytkownikom logowanie się za pomocą konta przedsiębiorstwa. Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, użytkownicy będą musieli logować się przy użyciu konta Microsoft.  
-  - **Ustawienie domyślne**: Włączono  
+  - **Ustawienie domyślne**: Enabled  
 
 ## <a name="application-management"></a>Zarządzanie aplikacjami   
 Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji zasad — ApplicationManagement](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement) w dokumentacji systemu Windows.  
@@ -64,11 +64,11 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
 - **Tryb autoodtwarzania**  
   To ustawienie zasad umożliwia wyłączenie funkcji autoodtwarzania. Autoodtwarzanie rozpoczyna odczyt z dysku zaraz po włożeniu nośnika do stacji. W rezultacie plik konfiguracji programów i muzyka na nośniku audio są uruchamiane natychmiast. W systemach starszych niż Windows XP z dodatkiem SP2 autoodtwarzanie jest domyślnie wyłączone w przypadku stacji dysków wymiennych, takich jak stacja dyskietek (ale nie stacja CD-ROM), i dysków sieciowych. Począwszy od systemu Windows XP z dodatkiem SP2, autoodtwarzanie jest też włączone dla dysków wymiennych, łącznie ze stacjami Zip i niektórymi urządzeniami pamięci masowej USB. Jeśli to ustawienie zasad zostanie włączone, autoodtwarzanie zostanie wyłączone dla stacji CD-ROM i stacji nośników wymiennych lub wyłączone dla wszystkich stacji. To ustawienie zasad powoduje wyłączenie autoodtwarzania dla dodatkowych typów dysków. To ustawienie nie służy do włączania autoodtwarzania dla dysków, dla których jest ono domyślnie wyłączone. Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, autoodtwarzanie zostanie włączone. Uwaga: to ustawienie zasad jest dostępne w folderach konfiguracji komputera i konfiguracji użytkownika. Jeśli ustawienia zasad powodują konflikt, ustawienie zasad w konfiguracji komputera ma pierwszeństwo przed ustawieniem zasad w konfiguracji użytkownika.
-  - **Ustawienie domyślne**: Wyłączone
+  - **Ustawienie domyślne**: Wyłącz
 
 - **Blokuj autoodtwarzanie w urządzeniach niezawierających woluminów**  
   To ustawienie zasad blokuje autoodtwarzanie w urządzeniach MTP, takich jak aparaty fotograficzne i telefony. Jeśli to ustawienie zasad zostanie włączone, autoodtwarzanie nie będzie dozwolone w urządzeniach MTP, takich jak aparaty fotograficzne i telefony. Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, autoodtwarzanie zostanie włączone w urządzeniach niezawierających woluminów.
-  - **Ustawienie domyślne**: Włączono  
+  - **Ustawienie domyślne**: Enabled  
 
 ## <a name="bitlocker"></a>Bitlocker    
 Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji zasad — Bitlocker](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bitlocker
@@ -123,11 +123,11 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
 
 - **Blokuj pobieranie internetowe przez Kreatora publikacji internetowej i Kreatora zamawiania online**  
   To ustawienie zasad określa, czy system Windows ma pobierać listę dostawców dla Kreatora publikacji internetowej i Kreatora zamawiania online. Te kreatory pozwalają użytkownikom wybrać z listy firmę, która świadczy takie usługi jak magazyn online i drukowanie zdjęć. Domyślnie oprócz dostawców określonych w rejestrze w systemie Windows jest także wyświetlana lista dostawców pobrana z witryny internetowej systemu Windows. Włączenie tego ustawienia zasad spowoduje, że system Windows nie będzie pobierać listy dostawców i będą wyświetlani tylko dostawcy usług zapisywani w pamięci podręcznej w rejestrze lokalnym. Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, lista dostawców zostanie pobrana po użyciu przez użytkownika Kreatora publikacji internetowej lub Kreatora zamawiania online. Więcej informacji, w tym szczegółowe informacje na temat określania dostawców usług w rejestrze, można znaleźć w dokumentacji Kreatora publikacji internetowej i Kreatora zamawiania online.  
-  - **Ustawienie domyślne**: Włączono  
+  - **Ustawienie domyślne**: Enabled  
 
 - **Blokuj pobieranie sterowników wydruku przez HTTP**  
   To ustawienie zasad określa, czy zezwalać temu klientowi na pobieranie pakietów sterowników wydruku przez HTTP. Aby skonfigurować drukowanie HTTP, należy pobrać przez HTTP sterowniki inne niż te, które były dostarczone z systemem. Uwaga: to ustawienie zasad nie blokuje klientowi możliwości drukowania za pomocą drukarek w intranecie lub Internecie przez HTTP. Uniemożliwia tylko pobieranie sterowników, które nie są już zainstalowane lokalnie. Jeśli to ustawienie zasad zostanie włączone, nie będzie można pobierać sterowników drukarek przez HTTP. Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, użytkownicy będą mogli pobierać sterowniki drukarek przez HTTP.
-  - **Ustawienie domyślne**: Włączono  
+  - **Ustawienie domyślne**: Enabled  
 
 ## <a name="credentials-delegation"></a>Delegowanie poświadczeń  
 Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji zasad — CredentialsDelegation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-credentialsdelegation
@@ -136,7 +136,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
 - **Delegowanie zdalnego hosta poświadczeń bez możliwości eksportowania**  
   Host zdalny umożliwia delegowanie poświadczeń, których nie można eksportować. Gdy używasz delegowania poświadczeń, urządzenia dostarczają do hosta zdalnego poświadczenia w wersji, którą można eksportować. Naraża to użytkowników na kradzież poświadczeń przed osoby atakujące na hoście zdalnym. Jeśli to ustawienie zasad zostanie włączone, host będzie obsługiwać tryb administratora z ograniczonym dostępem lub tryb zdalnej funkcji Credential Guard. Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, tryb administratora z ograniczonym dostępem i tryb zdalnej funkcji Credential Guard nie będą obsługiwane. Użytkownik zawsze będzie musiał przekazywać poświadczenia do hosta.  
 
-  - **Ustawienie domyślne**: Włączono  
+  - **Ustawienie domyślne**: Enabled  
 
 ## <a name="credentials-ui"></a>Interfejs użytkownika poświadczeń  
 Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji zasad — CredentialsUI](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-credentialsui) w dokumentacji systemu Windows.  
@@ -144,7 +144,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
 - **Wyliczanie administratorów**    
   To ustawienie zasad określa, czy podczas próby podniesienia poziomu uruchomionej aplikacji przez użytkownika mają być wyświetlane konta administratorów. Domyślnie podczas próby podniesienia poziomu uruchomionej aplikacji przez użytkownika konta administratorów nie są wyświetlane. Jeśli to ustawienie zasad zostanie włączone, wszystkie konta administratorów lokalnych na komputerze będą wyświetlane, dzięki czemu użytkownik może wybrać jedno z nich i wprowadzić poprawne hasło. Jeśli to ustawienie zasad zostanie wyłączone, użytkownicy będą zawsze musieli wpisać nazwę użytkownika i hasło, aby podnieść poziom.  
 
-  - **Ustawienie domyślne**: Wyłączone  
+  - **Ustawienie domyślne**: Wyłącz  
 
 ## <a name="data-protection"></a>Ochrona danych  
 Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji zasad — DataProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection
@@ -175,7 +175,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   - **Default**: Yes  
   -->
 - **Uruchom ochronę systemu**  
-  - **Ustawienie domyślne**: Włączono  
+  - **Ustawienie domyślne**: Enabled  
 
 ## <a name="device-installation"></a>Instalacja urządzenia  
 Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji zasad — DeviceInstallation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation) w dokumentacji systemu Windows.  
@@ -209,7 +209,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
 
 - **Uniemożliwiaj używanie aparatu fotograficznego**  
   Wyłącza przełącznik aparatu na ekranie blokady w ustawieniach komputera i uniemożliwia wywoływanie aparatu na ekranie blokady. Domyślnie użytkownicy mogą włączyć wywoływanie dostępnego aparatu na ekranie blokady. Jeśli to ustawienie zostanie włączone, użytkownicy nie będą mogli włączyć ani wyłączyć dostępu do aparatu na ekranie blokady w ustawieniach komputera i nie będzie można wywołać aparatu na ekranie blokady.  
-  - **Ustawienie domyślne**: Włączono  
+  - **Ustawienie domyślne**: Enabled  
 
 - **Wymagaj hasła**  
   Określa, czy blokada urządzenia jest włączona.
@@ -246,7 +246,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
 
 - **Blokuj pokaz slajdów**  
   Wyłącza ustawienia pokazu slajdów na ekranie blokady w ustawieniach komputera i uniemożliwia odtwarzanie pokazu slajdów na ekranie blokady. Domyślnie użytkownicy mogą włączyć pokaz slajdów, który będzie uruchamiany po zablokowaniu maszyny. Jeśli to ustawienie zostanie włączone, użytkownicy nie będą już mogli modyfikować ustawień pokazu slajdów w ustawieniach komputera i nigdy nie zostanie uruchomiony żaden pokaz slajdów.
-  - **Ustawienie domyślne**: Włączono  
+  - **Ustawienie domyślne**: Enabled  
     *Ustawienie Włączone uniemożliwia uruchamianie pokazów slajdów.* 
 
 - **Minimalny wiek hasła w dniach**  
@@ -295,11 +295,11 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
 
 - **Blokuj zapobieganie wykonywaniu danych**  
   Wyłączenie zapobiegania wykonywaniu danych umożliwia niektórym starszym aplikacjom wtyczek działanie bez zamykania Eksploratora.
-  - **Ustawienie domyślne**: Wyłączone  
+  - **Ustawienie domyślne**: Wyłącz  
    
 - **Blokuj zakończenie sterty w przypadku uszkodzenia**  
   Wyłączenie zakończenia sterty w przypadku uszkodzenia umożliwia niektórym starszym aplikacjom wtyczek działanie bez natychmiastowego zamykania Eksploratora, mimo że Eksplorator może nadal nieoczekiwane zakończyć działanie później.
-  - **Ustawienie domyślne**: Wyłączone  
+  - **Ustawienie domyślne**: Wyłącz  
     
 
 ## <a name="internet-explorer"></a>Internet Explorer  
@@ -327,11 +327,11 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
 - **Przeciąganie zawartości z innych domen w systemie Windows w strefie z ograniczeniami w programie Internet Explorer**  
   To ustawienie zasad umożliwia ustawianie opcji przeciągania zawartości z między domenami, gdy źródło i lokalizacja docelowa znajdują się w tym samym oknie. Jeśli to ustawienie zasad zostanie włączone i klikniesz pozycję Włącz, użytkownicy będą mogli przeciągać zawartość między domenami, gdy źródło i lokalizacja docelowa znajdują się w tym samym oknie. Użytkownicy nie mogą zmieniać tego ustawienia. Jeśli to ustawienie zasad zostanie włączone i klikniesz pozycję Wyłącz, użytkownicy nie będą mogli przeciągać zawartość między domenami, gdy źródło i lokalizacja docelowa znajdują się w tym samym oknie. Użytkownicy nie mogą zmieniać tego ustawienia w oknie dialogowym Opcje internetowe. W programie Internet Explorer 10, jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, użytkownicy nie będą mogli przeciągać zawartości między domenami, gdy źródło i lokalizacja docelowa znajdują się w tym samym oknie. Użytkownicy mogą zmieniać to ustawienie w oknie dialogowym Opcje internetowe. W programie Internet Explorer 9 lub starszym, jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, użytkownicy nie będą mogli przeciągać zawartości między domenami, gdy źródło i lokalizacja docelowa znajdują się w tym samym oknie. Użytkownicy nie mogą zmieniać tego ustawienia w oknie dialogowym Opcje internetowe.
-  - **Ustawienie domyślne**: Wyłączone
+  - **Ustawienie domyślne**: Wyłącz
   
 - **Ostrzeżenie o niezgodności adresu certyfikatu programu Internet Explorer**  
   To ustawienie zasad umożliwia włączenie ostrzeżenia o zabezpieczeniach dotyczącego niezgodności adresu certyfikatu. Gdy to ustawienie zasad zostanie włączone, użytkownik otrzyma ostrzeżenie podczas odwiedzania witryn bezpiecznego protokołu HTTP (HTTPS), które przedstawiają certyfikaty wystawione dla adresu innej witryny. To ostrzeżenie pomaga zapobiegać atakom metodą fałszowania. Jeśli to ustawienie zasad zostanie włączone, ostrzeżenie o niezgodności adresu certyfikatu będzie zawsze wyświetlane. Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, użytkownik będzie mógł wybrać, czy ostrzeżenie o niezgodności adresu certyfikatu ma być wyświetlane (na stronie Zaawansowane w internetowym panelu sterowania).
-  - **Ustawienie domyślne**: Włączono 
+  - **Ustawienie domyślne**: Enabled 
   
 - **Mniej uprzywilejowane witryny w strefie z ograniczeniami w programie Internet Explorer**  
   To ustawienie zasad pozwala określić, czy witryny internetowe z mniej uprzywilejowanych stref, takie jak witryny internetowe, mogą prowadzić do tej strefy. Jeśli to ustawienie zasad zostanie włączone, witryny z mniej uprzywilejowanych stref będą mogły otwierać nowe okna w tej strefie. Strefa zabezpieczeń będzie działać bez dodatkowej warstwy zabezpieczeń, które są udostępniane przez funkcję zabezpieczeń do ochrony z poziomu podniesienia uprawnień strefy. Jeśli w polu listy rozwijanej wybierzesz wartość Monituj, użytkownik otrzyma ostrzeżenie o potencjalnie ryzykownej nawigacji. Jeśli to ustawienie zasad zostanie wyłączone, potencjalnie szkodliwe nawigacje będą blokowane. Funkcja zabezpieczeń programu Internet Explorer będzie włączona w tej strefie zgodnie z ustawieniem kontroli funkcji ochrony z poziomu podniesienia uprawnień strefy. Jeśli to ustawienie zasad nie zostanie skonfigurowane, potencjalnie szkodliwe nawigacje będą blokowane. Funkcja zabezpieczeń programu Internet Explorer będzie włączona w tej strefie zgodnie z ustawieniem kontroli funkcji ochrony z poziomu podniesienia uprawnień strefy.
@@ -339,7 +339,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
 - **Automatyczny monit o pobieranie plików w strefie z ograniczeniami w programie Internet Explorer**  </br>
   To ustawienie zasad określa, czy użytkownicy otrzymują monit o pobieranie plików niezainicjowane przez użytkownika. Niezależnie od tego ustawienia u użytkowników będą wyświetlane okna dialogowe pobierania plików w przypadku pobierania zainicjowanego przez użytkownika. Jeśli to ustawienie zostanie włączone, u użytkowników będzie wyświetlane okno dialogowe pobierania plików w przypadku prób automatycznego pobrania. Jeśli to ustawienie zostanie wyłączone lub nie zostanie skonfigurowane, próby pobrania plików, które nie są inicjowane przez użytkownika, będą blokowane, a użytkownicy będą widzieć pasek powiadomień zamiast okna dialogowego pobierania plików. Użytkownicy będą mogli kliknąć pasek powiadomień, aby zezwolić na pobranie plików.
-  - **Ustawienie domyślne**: Wyłączone
+  - **Ustawienie domyślne**: Wyłącz
   
 - **Składniki uzależnione od platformy .NET Framework w strefie internetowej w programie Internet Explorer**  
   To ustawienie zasad umożliwia zarządzanie tym, czy składniki .NET Framework, które nie są podpisane przy użyciu technologii Authenticode, mogą być wykonywane w programie Internet Explorer. Do tych składników należą zarządzane kontrolki przywoływane z tagu obiektu oraz zarządzane pliki wykonywalne przywoływane z linku. Jeśli to ustawienie zasad zostanie włączone, program Internet Explorer będzie wykonywał niepodpisane składniki zarządzane. Jeśli w polu listy rozwijanej wybierzesz wartość Monituj, program Internet Explorer będzie prosił użytkownika o określenie, czy może wykonywać niepodpisane składniki zarządzane. Jeśli to ustawienie zasad zostanie wyłączone, program Internet Explorer nie będzie wykonywał niepodpisanych składników zarządzanych. Jeśli to ustawienie zasad nie zostanie skonfigurowane, program Internet Explorer będzie wykonywał niepodpisane składniki zarządzane.
@@ -347,23 +347,23 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
 - **Strefa internetowa w programie Internet Explorer zezwala na używanie kontrolek ActiveX TDC tylko przez zatwierdzone domeny**  </br>
   To ustawienie zasad określa, czy użytkownik może uruchomić kontrolkę ActiveX TDC w witrynach internetowych. Jeśli to ustawienie zasad zostanie włączone, kontrolka ActiveX TDC nie będzie uruchamiana z witryn internetowych w tej strefie. Jeśli to ustawienie zasad zostanie wyłączone, kontrolka ActiveX TDC będzie uruchamiana ze wszystkich witryn w tej strefie.
-  - **Ustawienie domyślne**: Włączono 
+  - **Ustawienie domyślne**: Enabled 
   
 - **Okna inicjowane przez skrypty w strefie z ograniczeniami w programie Internet Explorer**  
   To ustawienie zasad umożliwia zarządzanie ograniczeniami dotyczącymi okien podręcznych oraz okien zawierających paski tytułu i stanu inicjowanych przez skrypty. Jeśli to ustawienie zasad zostanie włączone, zabezpieczenia Ograniczenia systemu Windows nie będą stosowane w tej strefie. Strefa zabezpieczeń będzie działać bez dodatkowej warstwy zabezpieczeń udostępnianej przez tę funkcję. Jeśli to ustawienie zasad zostanie wyłączone, nie będzie możliwe uruchamianie potencjalnie szkodliwych akcji zawartych w oknach podręcznych oraz oknach zawierających paski tytułu i stanu inicjowanych przez skrypty. Ta funkcja zabezpieczeń programu Internet Explorer będzie włączona w tej strefie zgodnie z ustawieniem sterowania funkcją Ograniczenia zabezpieczeń okien inicjowanych przez skrypty dla procesu. Jeśli to ustawienie zasad nie zostanie skonfigurowane, nie będzie możliwe uruchamianie potencjalnie szkodliwych akcji zawartych w oknach podręcznych oraz oknach zawierających paski tytułu i stanu inicjowanych przez skrypty. Ta funkcja zabezpieczeń programu Internet Explorer będzie włączona w tej strefie zgodnie z ustawieniem sterowania funkcją Ograniczenia zabezpieczeń okien inicjowanych przez skrypty dla procesu.
-  - **Ustawienie domyślne**: Wyłączone 
+  - **Ustawienie domyślne**: Wyłącz 
   
 - **Strefa internetowa w programie Internet Explorer obejmuje ścieżkę lokalną podczas przekazywania plików do serwera**  </br>
   To ustawienie zasad określa, czy informacje o ścieżce lokalnej będą wysyłane, gdy użytkownik będzie przekazywał plik za pomocą formularza HTML. Jeśli informacje o ścieżce lokalnej będą wysyłane, niektóre informacje mogą zostać przypadkowo ujawnione serwerowi. Na przykład pliki wysłane z komputera użytkownika mogą zawierać nazwę użytkownika jako część ścieżki. Jeśli to ustawienie zasad zostanie włączone, informacje o ścieżce będą wysyłane, gdy użytkownik będzie przekazywał plik za pomocą formularza HTML. Jeśli to ustawienie zasad zostanie wyłączone, informacje o ścieżce będą usuwane, gdy użytkownik będzie przekazywał plik za pomocą formularza HTML. Jeśli to ustawienie zasad nie zostanie skonfigurowane, użytkownik będzie mógł wybrać, czy informacje o ścieżce będą wysyłane podczas przekazywania pliku za pomocą formularza HTML. Domyślnie informacje o ścieżce są wysyłane.
-  - **Ustawienie domyślne**: Wyłączone 
+  - **Ustawienie domyślne**: Wyłącz 
   
 - **Wyłączanie procesów w rozszerzonym trybie chronionym programu Internet Explorer**  
   To ustawienie zasad określa, czy program Internet Explorer 11 korzysta z procesów 64-bitowych (większe bezpieczeństwo) czy procesów 32-bitowych (większa zgodność) w rozszerzonym trybie chronionym w 64-bitowych wersjach systemu Windows. Ważne: Niektóre kontrolki ActiveX i paski narzędzi mogą być niedostępne, gdy są używane procesy 64-bitowe. Jeśli to ustawienie zasad zostanie włączone, program Internet Explorer 11 będzie używać 64-bitowych procesów kart w rozszerzonym trybie chronionym w 64-bitowych wersjach systemu Windows. Jeśli to ustawienie zasad zostanie wyłączone, program Internet Explorer 11 będzie używać 32-bitowych procesów kart w rozszerzonym trybie chronionym w 64-bitowych wersjach systemu Windows. Jeśli to ustawienie zasad nie zostanie skonfigurowane, użytkownicy będą mogli włączyć lub wyłączyć tę funkcję w ustawieniach programu Internet Explorer. Ta funkcja jest domyślnie wyłączona.
-  - **Ustawienie domyślne**: Włączono 
+  - **Ustawienie domyślne**: Enabled 
   
 - **Ignorowanie błędów certyfikatów programu Internet Explorer**  </br>
   To ustawienie zasad uniemożliwia użytkownikowi ignorowanie błędów certyfikatu Secure Sockets Layer/Transport Layer Security (SSL/TLS), które przerywają przeglądanie (na przykład błędy z powodu wygaśnięcia, odwołania lub niezgodności nazwy) w programie Internet Explorer. Jeśli to ustawienie zasad zostanie włączone, użytkownik nie będzie mógł kontynuować przeglądania. Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, użytkownik będzie mógł ignorować błędy certyfikatu i kontynuować przeglądanie.
-  - **Ustawienie domyślne**: Wyłączone 
+  - **Ustawienie domyślne**: Wyłącz 
   
 - **Ładowanie stref internetowych plików XAML w programie Internet Explorer**  
   To ustawienie zasad umożliwia zarządzanie ładowaniem plików XAML (Extensible Application Markup Language). XAML to oparty na składni XML język znaczników deklaratywnych, który jest często służy do tworzenia zaawansowanych interfejsów użytkownika i grafik korzystających z programu Windows Presentation Foundation. Jeśli to ustawienie zasad zostanie włączone i w polu listy rozwijanej zostanie ustawiona wartość Włącz, pliki XAML będą automatycznie ładowane w programie Internet Explorer. Użytkownik nie może zmienić tego zachowania. Jeśli ustawisz w polu listy rozwijanej wartość Monituj, użytkownik będzie monitowany o załadowanie plików XAML. Jeśli to ustawienie zasad zostanie wyłączone, pliki XAML nie będą ładowane w programie Internet Explorer. Użytkownik nie może zmienić tego zachowania. Jeśli to ustawienie zasad nie zostanie skonfigurowane, użytkownik będzie mógł wybrać, czy załadować pliki XAML w programie Internet Explorer.
@@ -371,7 +371,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
 - **Automatyczny monit o pobieranie plików w strefie internetowej programu Internet Explorer**  </br>
   To ustawienie zasad określa, czy użytkownicy otrzymują monit o pobieranie plików niezainicjowane przez użytkownika. Niezależnie od tego ustawienia u użytkowników będą wyświetlane okna dialogowe pobierania plików w przypadku pobierania zainicjowanego przez użytkownika. Jeśli to ustawienie zostanie włączone, u użytkowników będzie wyświetlane okno dialogowe pobierania plików w przypadku prób automatycznego pobrania. Jeśli to ustawienie zostanie wyłączone lub nie zostanie skonfigurowane, próby pobrania plików, które nie są inicjowane przez użytkownika, będą blokowane, a użytkownicy będą widzieć pasek powiadomień zamiast okna dialogowego pobierania plików. Użytkownicy będą mogli kliknąć pasek powiadomień, aby zezwolić na pobranie plików.
-  - **Ustawienie domyślne**: Włączono  
+  - **Ustawienie domyślne**: Enabled  
   
 - **Ostrzeżenie o zabezpieczeniach strefy z ograniczeniami dla potencjalnie niebezpiecznych plików w programie Internet Explorer**  
   To ustawienie zasad określa, czy komunikat „Otwieranie pliku — ostrzeżenie o zabezpieczeniach” pojawia się, gdy użytkownik próbuje otworzyć pliki wykonywalne lub inne potencjalnie niebezpieczne pliki (na przykład z udziału plików w intranecie za pomocą Eksploratora plików). Jeśli to ustawienie zasad zostanie włączone i w polu listy rozwijanej zostanie ustawiona wartość Włącz, te pliki będą otwierane bez ostrzeżenia o zabezpieczeniach. Jeśli w polu listy rozwijanej ustawisz wartość Monituj, przed otwarciem plików pojawi się ostrzeżenie o zabezpieczeniach. Jeśli to ustawienie zasad zostanie wyłączone, nie będzie można otworzyć tych plików. Jeśli to ustawienie zasad nie zostanie skonfigurowane, użytkownik będzie mógł skonfigurować sposób obsługi tych plików przez komputer. Domyślnie te pliki są zablokowane w strefie z ograniczeniami, włączone w strefie intranetu i komputera lokalnego oraz mają ustawione monitowanie w strefie Internetu i zaufanej strefie.
@@ -379,7 +379,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
 - **Filtrowanie skryptów między witrynami w strefie internetowej programu Internet Explorer**  
   Te zasady określają, czy filtr skryptów między witrynami (XSS) będzie wykrywał i blokował wprowadzanie skryptu między witrynami w witrynach internetowych w tej strefie. Jeśli to ustawienie zasad zostanie włączone, filtr XSS zostanie włączony dla witryn w tej strefie i filtr XSS będzie próbować zablokować wprowadzanie skryptów między witrynami. Jeśli to ustawienie zasad zostanie wyłączone, filtr XSS zostanie wyłączony dla witryn w tej strefie i program Internet Explorer będzie zezwalać na wprowadzanie skryptów między witrynami.
-  - **Ustawienie domyślne**: Włączono 
+  - **Ustawienie domyślne**: Enabled 
   
 - **Powrót do protokołu SSL3 w programie Internet Explorer**  
   To ustawienie zasad umożliwia zablokowanie niezabezpieczonego powrotu do protokołu SSL 3.0. Jeśli te zasady zostaną włączone, program Internet Explorer będzie podejmować próby połączenia z witrynami za pomocą protokołu SSL 3.0 lub starszego w przypadku niepowodzenia połączenia za pomocą protokołu TLS 1.0 lub nowszego. Zalecamy, aby nie zezwalać na niezabezpieczony powrót w celu zapobieżenia atakowi typu man-in-the-middle. Te zasady nie mają wpływu na to, które protokoły zabezpieczeń są włączone. Jeśli te zasady zostaną wyłączone, będą używane ustawienia domyślne systemu.
@@ -387,22 +387,22 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
 - **Blokada filtra SmartScreen w strefie internetowej programu Internet Explorer**  
   To ustawienie zasad określa, czy filtr SmartScreen skanuje strony w tej strefie pod kątem złośliwej zawartości. Jeśli to ustawienie zasad zostanie włączone, filtr SmartScreen będzie skanować strony w tej strefie pod kątem złośliwej zawartości. Jeśli to ustawienie zasad zostanie wyłączone, filtr SmartScreen nie będzie skanować stron w tej strefie pod kątem złośliwej zawartości. Jeśli to ustawienie zasad nie zostanie skonfigurowane, użytkownik będzie mógł wybrać, czy filtr SmartScreen ma skanować strony w tej strefie pod kątem złośliwej zawartości. Uwaga: W programie Internet Explorer 7 to ustawienie zasad określa, czy filtr wyłudzania informacji skanuje strony w tej strefie pod kątem złośliwej zawartości.
-  - **Ustawienie domyślne**: Włączono 
+  - **Ustawienie domyślne**: Enabled 
   
 - **Uruchamianie aplikacje i plików w elementach iFrame w strefie z ograniczeniami programu Internet Explorer**  
   To ustawienie zasad umożliwia określenie, czy można uruchamiać aplikacje i pobierać pliki z odwołania IFRAME w kodzie HTML stron w tej strefie. Jeśli to ustawienie zasad zostanie włączone, użytkownicy będą mogli uruchamiać aplikacje i pobierać pliki z elementów IFRAME na stronach w tej strefie bez interwencji użytkownika. Jeśli w polu listy rozwijanej ustawisz wartość Monituj, użytkownicy będą proszeni o wybranie, czy uruchamiać aplikacje i pobierać pliki z elementów IFRAME na stronach w tej strefie. Jeśli to ustawienie zasad zostanie wyłączone, użytkownicy nie będą mogli uruchamiać aplikacji i pobierać plików z elementów IFRAME na stronach w tej strefie. Jeśli to ustawienie zasad nie zostanie skonfigurowane, użytkownicy nie będą mogli uruchamiać aplikacji i pobierać plików z elementów IFRAME na stronach w tej strefie.
   - **Ustawienie domyślne**: Wyłącz 
   
 - **Pomijanie ostrzeżeń filtra SmartScreen o nietypowych plikach w programie Internet Explorer** To ustawienie zasad określa, czy użytkownik może pomijać ostrzeżenia filtra SmartScreen. Filtr SmartScreen wysyła do użytkownika ostrzeżenia o plikach wykonywalnych, których użytkownicy programu Internet Explorer nie pobierają często z Internetu. Jeśli to ustawienie zasad zostanie włączone, ostrzeżenia filtra SmartScreen będą blokować użytkownika. Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, użytkownik będzie mógł pomijać ostrzeżenia filtra SmartScreen.
-  - **Ustawienie domyślne**: Wyłączone  
+  - **Ustawienie domyślne**: Wyłącz  
   
 - **Blokowanie okien podręcznych w strefie internetowej programu Internet Explorer**  
   To ustawienie zasad pozwala określić, czy mają być wyświetlane niechciane okna podręczne. Okna podręczne otwierane, gdy użytkownik końcowy kliknie link, nie są blokowane. Jeśli to ustawienie zasad zostanie włączone, większość niechcianych okien podręcznych nie będzie wyświetlana. Jeśli to ustawienie zasad zostanie wyłączone, wyświetlanie okien podręcznych nie będzie blokowane. Jeśli to ustawienie zasad nie zostanie skonfigurowane, większość niechcianych okien podręcznych nie będzie wyświetlana.
-  - **Ustawienie domyślne**: Włączenie  
+  - **Ustawienie domyślne**: Włącz  
   
 - **Spójna obsługa protokołu MIME przez procesy programu Internet Explorer**  
   Program Internet Explorer zawiera dynamiczne zachowania elementów binarnych: składniki, które hermetyzują określone funkcje dla elementów HTML, z którymi są połączone. To ustawienie zasad określa, czy ustawienie ograniczenia zabezpieczeń zachowania elementów binarnych jest zablokowane czy dozwolone. Jeśli to ustawienie zasad zostanie włączone, zachowania elementów binarnych będą zablokowane w procesach Eksploratora plików i programu Internet Explorer. Jeśli to ustawienie zasad zostanie wyłączone, zachowania elementów binarnych będą dozwolone w procesach Eksploratora plików i programu Internet Explorer. Jeśli to ustawienie zasad nie zostanie skonfigurowane, zachowania elementów binarnych będą zablokowane w procesach Eksploratora plików i programu Internet Explorer.
-  - **Ustawienie domyślne**: Włączono  
+  - **Ustawienie domyślne**: Enabled  
   
 - **Uprawnienia środowiska Java w strefie z ograniczeniami programu Internet Explorer** To ustawienie zasad umożliwia zarządzanie uprawnieniami dotyczącymi apletów Java. Jeśli to ustawienie zasad zostanie włączone, będzie można wybierać opcje z listy rozwijanej. Ustawienie Niestandardowe umożliwia kontrolowanie ustawień uprawnień pojedynczo. Ustawienie Niski poziom zabezpieczeń umożliwia apletom wykonywanie wszystkich operacji. Ustawienie Średni poziom zabezpieczeń umożliwia uruchamianie apletów w ich piaskownicy (obszarze pamięci, poza którym program nie może wykonywać wywołań) oraz udostępnia funkcje, takie jak obszar na pliki tymczasowe (bezpieczny obszar magazynu na komputerze klienckim) i kontrolowane przez użytkownika operacje we/wy na plikach. Ustawienie Wysoki poziom zabezpieczeń umożliwia uruchamianie apletów w ich piaskownicy. Wyłącz język Java, aby uniemożliwić uruchamianie jakichkolwiek apletów. Jeśli to ustawienie zasad zostanie wyłączone, nie będzie można uruchamiać apletów Java. Jeśli to ustawienie zasad nie zostanie skonfigurowane, aplety Java będą wyłączone.
   - **Ustawienie domyślne**: Wyłącz Java  
@@ -410,7 +410,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
 - **Kontrolki ActiveX programu Internet Explorer w trybie chronionym**  
   To ustawienie zasad uniemożliwia uruchamianie kontrolek ActiveX w trybie chronionym, gdy jest włączony rozszerzony tryb chroniony. Jeśli użytkownik ma zainstalowaną kontrolkę ActiveX, która nie jest zgodna z rozszerzonym trybem chronionym, i witryna internetowa próbuje ją załadować, program Internet Explorer powiadamia użytkownika i umożliwia uruchomienie witryny w standardowym trybie chronionym. To ustawienie zasad powoduje wyłączenie tego powiadomienia i wymuszenie działania wszystkich witryn w rozszerzonym trybie chronionym. Rozszerzony tryb chroniony zapewnia dodatkową ochronę przed złośliwymi witrynami internetowymi dzięki użyciu 64-bitowych procesów w 64-bitowych wersjach systemu Windows. Na komputerach z systemem w wersji co najmniej Windows 8 rozszerzony tryb chroniony ogranicza także lokalizacje, z których program Internet Explorer może czytać w rejestrze i w systemie plików. Gdy rozszerzony tryb chroniony jest włączony i użytkownik napotyka witrynę, która próbuje załadować kontrolkę ActiveX niezgodną z rozszerzonym trybem chronionym, program Internet Explorer powiadamia użytkownika i umożliwia wyłączenie rozszerzonego trybu chronionego dla tej witryny. Jeśli to ustawienie zasad zostanie włączone, program Internet Explorer nie umożliwi użytkownikowi wyłączenia rozszerzonego trybu chronionego. Wszystkie witryny trybu chronionego będą uruchamiane w rozszerzonym trybie chronionym. Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, program Internet Explorer będzie powiadamiać użytkowników i umożliwi uruchamianie witryn z niezgodnymi kontrolkami ActiveX w standardowym trybie chronionym. Jest to zachowanie domyślne.
-  - **Ustawienie domyślne**: Wyłączone  
+  - **Ustawienie domyślne**: Wyłącz  
   
 - **Ładowanie stref z ograniczeniami plików XAML w programie Internet Explorer**  
   To ustawienie zasad umożliwia zarządzanie ładowaniem plików XAML (Extensible Application Markup Language). XAML to oparty na składni XML język znaczników deklaratywnych, który jest często służy do tworzenia zaawansowanych interfejsów użytkownika i grafik korzystających z programu Windows Presentation Foundation. Jeśli to ustawienie zasad zostanie włączone i w polu listy rozwijanej zostanie ustawiona wartość Włącz, pliki XAML będą automatycznie ładowane w programie Internet Explorer. Użytkownik nie może zmienić tego zachowania. Jeśli ustawisz w polu listy rozwijanej wartość Monituj, użytkownik będzie monitowany o załadowanie plików XAML. Jeśli to ustawienie zasad zostanie wyłączone, pliki XAML nie będą ładowane w programie Internet Explorer. Użytkownik nie może zmienić tego zachowania. Jeśli to ustawienie zasad nie zostanie skonfigurowane, użytkownik będzie mógł wybrać, czy załadować pliki XAML w programie Internet Explorer.
@@ -418,7 +418,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
 - **Ograniczenia zabezpieczeń okien ze skryptem w procesach programu Internet Explorer**  
   Program Internet Explorer umożliwia skryptom programowe otwieranie różnego rodzaju okien oraz zmienianie ich rozmiaru i położenia. Funkcja zabezpieczeń dotycząca ograniczeń okien ogranicza okna podręczne i uniemożliwia skryptom wyświetlanie okien, w których pasek tytułu i stanu nie są widoczne dla użytkownika lub zaciemniają paski tytułu i stanu innych okien. Jeśli to ustawienie zasad zostanie włączone, okna inicjowane przez skrypty będą ograniczone dla wszystkich procesów. Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, okna inicjowane przez skrypty nie będą ograniczone.
-  - **Ustawienie domyślne**: Włączono   
+  - **Ustawienie domyślne**: Enabled   
   
 - **Uruchamianie wtyczek i kontrolek ActiveX w strefie z ograniczeniami w programie Internet Explorer**  
   To ustawienie zasad pozwala określić, czy wtyczki i kontrolki ActiveX mogą być uruchamiane na stronach z określonej strefy. Jeśli to ustawienie zasad zostanie włączone, kontrolki i wtyczki będą uruchamiane bez interwencji użytkownika. Jeśli w polu listy rozwijanej wybierzesz wartość Monituj, użytkownicy będą proszeni o wybranie, czy zezwalać na uruchamianie kontrolek i wtyczek. Jeśli to ustawienie zasad zostanie wyłączone, kontrolki i wtyczki nie będą uruchamiane. Jeśli to ustawienie zasad nie zostanie skonfigurowane, kontrolki i wtyczki nie będą uruchamiane.
@@ -430,7 +430,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
 - **Opcje logowania w strefie z ograniczeniami w programie Internet Explorer**  
   To ustawienie zasad umożliwia zarządzanie ustawieniami opcji logowania. Jeśli to ustawienie zasad zostanie włączone, będzie można wybierać poniższe opcje logowania. Użyj logowania anonimowego, aby wyłączyć uwierzytelnianie HTTP i używać konta gościa tylko dla protokołu CIFS (Common Internet File System). Monituj o podanie nazwy użytkownika i hasła, aby wysyłać zapytania do użytkowników dotyczące identyfikatorów użytkowników i haseł. Po wysłaniu zapytania do użytkownika można używać tych wartości dyskretnie w pozostałej części sesji. Zaloguj automatycznie tylko w strefie intranetu, aby wysyłać do użytkowników zapytania dotyczące identyfikatorów użytkowników i haseł w innych strefach. Po wysłaniu zapytania do użytkownika można używać tych wartości dyskretnie w pozostałej części sesji. Użyj automatycznego logowania przy użyciu bieżącej nazwy użytkownika i hasła, aby spróbować zalogować się przy użyciu odpowiedzi na żądanie systemu Windows NT (uwierzytelnianie NTLM). Jeśli odpowiedź na żądanie systemu Windows NT jest obsługiwana przez serwer, podczas logowania są używane nazwa użytkownika i hasło sieci użytkownika. Jeśli odpowiedź na żądanie systemu Windows NT nie jest obsługiwana przez serwer, użytkownik zostanie poproszony o podanie nazwy użytkownika i hasła. Jeśli to ustawienie zasad zostanie wyłączone, zostanie ustawione automatyczne logowanie tylko w strefie intranetu. Jeśli to ustawienie zasad nie zostanie skonfigurowane, zostanie ustawione monitowanie o podanie nazwy użytkownika i hasła.
-  - **Ustawienie domyślne**: Anonimowe  
+  - **Ustawienie domyślne**: Anonimowy  
   
 - **Zaufana strefa w programie Internet Explorer inicjuje i umieszcza w skryptach kontrolki ActiveX, które nie są oznaczone jako bezpieczne**  
   To ustawienie zasad umożliwia zarządzanie kontrolkami ActiveX, które nie są oznaczone jako bezpieczne. Jeśli to ustawienie zasad zostanie włączone, kontrolki ActiveX będą uruchamiane i ładowane z parametrami oraz będą wykonywane ich skrypty bez konieczności ustawiania poziomu bezpieczeństwa obiektów dla niezaufanych danych lub skryptów. To ustawienie nie jest zalecane poza strefami bezpiecznymi i administrowanymi. To ustawienie umożliwia inicjowanie i wykonywanie skryptów zarówno bezpiecznych, jak i niebezpiecznych kontrolek, z jednoczesnym ignorowaniem opcji Wykonaj skrypty kontrolek ActiveX zaznaczone jako bezpieczne. Jeśli to ustawienie zasad zostanie włączone i w polu listy rozwijanej zostanie wybrana pozycja Monituj, użytkownicy będą pytani, czy zezwolić na ładowanie kontrolek z parametrami lub inicjowanych przez skrypty. Jeśli to ustawienie zasad zostanie wyłączone, kontrolki ActiveX, które nie mogą stać się bezpieczne, nie będą ładowane z parametrami ani nie będą wykonywane ich skrypty. Jeśli to ustawienie zasad nie zostanie skonfigurowane, użytkownicy będą pytani, czy zezwolić na ładowanie kontrolek z parametrami lub inicjowanych przez skrypty.
@@ -438,7 +438,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
 - **Sprawdzanie odwołania certyfikatów serwera w programie Internet Explorer**  
   To ustawienie zasad pozwala określić, czy program Internet Explorer będzie sprawdzać stan odwołania certyfikatów serwerów. Certyfikaty są odwoływane w przypadku naruszenia zabezpieczeń lub gdy nie są już prawidłowe. To ustawienie chroni użytkowników przed przesłaniem danych poufnych do fałszywej lub niezabezpieczonej witryny. Jeśli to ustawienie zasad zostanie włączone, program Internet Explorer będzie sprawdzać, czy certyfikaty serwerów zostały odwołane. Jeśli to ustawienie zasad zostanie wyłączone, program Internet Explorer nie będzie sprawdzać, czy certyfikaty serwerów zostały odwołane. Jeśli to ustawienie zasad nie zostanie skonfigurowane, program Internet Explorer nie będzie sprawdzać, czy certyfikaty serwerów zostały odwołane.
-  - **Ustawienie domyślne**: Włączono 
+  - **Ustawienie domyślne**: Enabled 
   
 - **Mniej uprzywilejowane witryny w strefie internetowej programu Internet Explorer**  
   To ustawienie zasad pozwala określić, czy witryny internetowe z mniej uprzywilejowanych stref, takie jak witryny z ograniczeniami, mogą prowadzić do tej strefy. Jeśli to ustawienie zasad zostanie włączone, witryny z mniej uprzywilejowanych stref będą mogły otwierać nowe okna w tej strefie. Strefa zabezpieczeń będzie działać bez dodatkowej warstwy zabezpieczeń, które są udostępniane przez funkcję zabezpieczeń do ochrony z poziomu podniesienia uprawnień strefy. Jeśli w polu listy rozwijanej wybierzesz wartość Monituj, użytkownik otrzyma ostrzeżenie o potencjalnie ryzykownej nawigacji. Jeśli to ustawienie zasad zostanie wyłączone, potencjalnie szkodliwe nawigacje będą blokowane. Funkcja zabezpieczeń programu Internet Explorer będzie włączona w tej strefie zgodnie z ustawieniem kontroli funkcji ochrony z poziomu podniesienia uprawnień strefy. Jeśli to ustawienie zasad nie zostanie skonfigurowane, witryny z mniej uprzywilejowanych stref będą mogły otwierać nowe okna w tej strefie.
@@ -454,15 +454,15 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
 - **Program Internet Explorer uniemożliwia instalację kontrolek ActiveX przez poszczególnych użytkowników**  </br>
   To ustawienie zasad umożliwia blokowanie instalacji kontrolek ActiveX przeprowadzanych przez poszczególnych użytkowników. Jeśli to ustawienie zasad zostanie włączone, poszczególni użytkownicy nie będą mogli instalować kontrolek ActiveX. Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, poszczególni użytkownicy będą mogli instalować kontrolki ActiveX.
-  - **Ustawienie domyślne**: Włączono  
+  - **Ustawienie domyślne**: Enabled  
   
 - **Program Internet Explorer uniemożliwia zarządzanie filtrem SmartScreen**  </br>
   To ustawienie zasad uniemożliwia użytkownikowi zarządzanie filtrem SmartScreen i powoduje wyświetlenie ostrzeżenia o tym, że odwiedzana witryna jest znana z fałszywych prób zebrania informacji osobistych metodą wyłudzania informacji lub z hostowania złośliwego oprogramowania. W przypadku włączenia tego ustawienia zasad użytkownik nie otrzyma monitu o włączenie filtru SmartScreen. Wszystkie adresy witryn, których nie ma na liście dozwolonych filtru, są automatycznie wysyłane do firmy Microsoft bez monitowania użytkownika. Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, użytkownik otrzyma monit o to, czy włączyć filtr SmartScreen podczas pierwszego uruchomienia.
-  - **Ustawienie domyślne**: Włączenie  
+  - **Ustawienie domyślne**: Włącz  
   
 - **Funkcja zabezpieczeń wykrywania protokołu MIME w procesach programu Internet Explorer**  
   To ustawienie zasad określa, czy wykrywanie protokołu MIME programu Internet Explorer uniemożliwi podwyższenie poziomu pliku danego typu do bardziej niebezpiecznego typu pliku. Jeśli to ustawienie zasad zostanie włączone, wykrywanie protokołu MIME nigdy nie będzie podwyższać poziomu pliku danego typu do bardziej niebezpiecznego typu pliku. Jeśli to ustawienie zasad zostanie wyłączone, procesy programu Internet Explorer będą zezwalać na podwyższanie poziomu pliku danego typu do bardziej niebezpiecznego typu pliku w ramach wykrywania protokołu MIME. Jeśli to ustawienie zasad nie zostanie skonfigurowane, wykrywanie protokołu MIME nigdy nie będzie podwyższać poziomu pliku danego typu do bardziej niebezpiecznego typu pliku.
-  - **Ustawienie domyślne**: Włączono  
+  - **Ustawienie domyślne**: Enabled  
   
 - **Pobieranie podpisanych kontrolek ActiveX w strefie z ograniczeniami w programie Internet Explorer**  </br>
   To ustawienie zasad umożliwia zarządzanie tym, czy użytkownicy mogą pobierać podpisane kontrolki ActiveX ze strony w strefie. Jeśli te zasady zostaną włączone, użytkownicy będą mogli pobierać podpisane kontrolki bez interwencji użytkownika. Jeśli wybierzesz w polu listy rozwijanej wartość Monituj, użytkownicy będą proszeni o wybranie, czy pobierać kontrolki podpisane przez niezaufanych wydawców. Kod podpisany przez zaufanych wydawców jest dyskretnie pobierany. Jeśli to ustawienie zasad zostanie wyłączone, nie będzie można pobierać podpisanych kontrolek. Jeśli to ustawienie zasad nie zostanie skonfigurowane, użytkownicy będą proszeni o wybranie, czy pobierać kontrolki podpisane przez niezaufanych wydawców. Kod podpisany przez zaufanych wydawców jest dyskretnie pobierany.
@@ -478,11 +478,11 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
 - **Strefa z ograniczeniami w programie Internet Explorer zezwala na używanie kontrolek ActiveX TDC tylko przez zatwierdzone domeny**  </br>
   To ustawienie zasad określa, czy użytkownik może uruchomić kontrolkę ActiveX TDC w witrynach internetowych. Jeśli to ustawienie zasad zostanie włączone, kontrolka ActiveX TDC nie będzie uruchamiana z witryn internetowych w tej strefie. Jeśli to ustawienie zasad zostanie wyłączone, kontrolka ActiveX TDC będzie uruchamiana ze wszystkich witryn w tej strefie.
-  - **Ustawienie domyślne**: Włączono  
+  - **Ustawienie domyślne**: Enabled  
   
 - **Zaufana strefa w programie Internet Explorer nie uruchamia oprogramowania chroniącego przed złośliwym oprogramowaniem względem kontrolek ActiveX**   </br>
   To ustawienie zasad określa, czy program Internet Explorer uruchamia programy chroniące przed złośliwym oprogramowaniem względem kontrolek ActiveX w celu sprawdzenia, czy można bezpiecznie ładować je na stronach. Jeśli to ustawienie zasad zostanie włączone, program Internet Explorer nie będzie sprawdzał za pomocą programu chroniącego przed złośliwym oprogramowaniem, czy utworzenie wystąpienia kontrolki ActiveX jest bezpieczne. Jeśli to ustawienie zasad zostanie wyłączone, program Internet Explorer zawsze będzie sprawdzał za pomocą programu chroniącego przed złośliwym oprogramowaniem, czy utworzenie wystąpienia kontrolki ActiveX jest bezpieczne. Jeśli to ustawienie zasad nie zostanie skonfigurowane, program Internet Explorer zawsze będzie sprawdzał za pomocą programu chroniącego przed złośliwym oprogramowaniem, czy utworzenie wystąpienia kontrolki ActiveX jest bezpieczne. Użytkownicy mogą włączać i wyłączać to zachowanie przy użyciu ustawień zabezpieczeń programu Internet Explorer.
-  - **Ustawienie domyślne**: Wyłączone 
+  - **Ustawienie domyślne**: Wyłącz 
   
 - **Uprawnienia języka Java w strefie komputera lokalnego programu Internet Explorer**  
   To ustawienie zasad umożliwia zarządzanie uprawnieniami dotyczącymi apletów Java. Jeśli to ustawienie zasad zostanie włączone, będzie można wybierać opcje z listy rozwijanej. Ustawienie Niestandardowe umożliwia kontrolowanie ustawień uprawnień pojedynczo. Ustawienie Niski poziom zabezpieczeń umożliwia apletom wykonywanie wszystkich operacji. Ustawienie Średni poziom zabezpieczeń umożliwia uruchamianie apletów w ich piaskownicy (obszarze pamięci, poza którym program nie może wykonywać wywołań) oraz udostępnia funkcje, takie jak obszar na pliki tymczasowe (bezpieczny obszar magazynu na komputerze klienckim) i kontrolowane przez użytkownika operacje we/wy na plikach. Ustawienie Wysoki poziom zabezpieczeń umożliwia uruchamianie apletów w ich piaskownicy. Wyłącz język Java, aby uniemożliwić uruchamianie jakichkolwiek apletów. Jeśli to ustawienie zasad zostanie wyłączone, nie będzie można uruchamiać apletów Java. Jeśli to ustawienie zasad nie zostanie skonfigurowane, zostaną ustawione uprawnienia na Średni poziom zabezpieczeń.
@@ -490,15 +490,15 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
 - **Strefa intranetowa w programie Internet Explorer nie uruchamia oprogramowania chroniącego przed złośliwym oprogramowaniem względem kontrolek ActiveX**  </br>
   To ustawienie zasad określa, czy program Internet Explorer uruchamia programy chroniące przed złośliwym oprogramowaniem względem kontrolek ActiveX w celu sprawdzenia, czy można bezpiecznie ładować je na stronach. Jeśli to ustawienie zasad zostanie włączone, program Internet Explorer nie będzie sprawdzał za pomocą programu chroniącego przed złośliwym oprogramowaniem, czy utworzenie wystąpienia kontrolki ActiveX jest bezpieczne. Jeśli to ustawienie zasad zostanie wyłączone, program Internet Explorer zawsze będzie sprawdzał za pomocą programu chroniącego przed złośliwym oprogramowaniem, czy utworzenie wystąpienia kontrolki ActiveX jest bezpieczne. Jeśli to ustawienie zasad nie zostanie skonfigurowane, program Internet Explorer nie będzie sprawdzał za pomocą programu chroniącego przed złośliwym oprogramowaniem, czy utworzenie wystąpienia kontrolki ActiveX jest bezpieczne. Użytkownicy mogą włączać i wyłączać to zachowanie przy użyciu ustawień zabezpieczeń programu Internet Explorer.
-  - **Ustawienie domyślne**: Wyłączone  
+  - **Ustawienie domyślne**: Wyłącz  
 
 - **Skryptlety w strefie z ograniczeniami w programie Internet Explorer**  
   To ustawienie zasad pozwala określić, czy użytkownik może uruchamiać skryptlety. Jeśli to ustawienie zasad zostanie włączone, użytkownik będzie mógł uruchamiać skryptlety. Jeśli to ustawienie zasad zostanie wyłączone, użytkownik nie będzie mógł uruchamiać skryptletów. Jeśli to ustawienie zasad nie zostanie skonfigurowane, użytkownik będzie mógł włączać lub wyłączać skryptlety.
-  - **Ustawienie domyślne**: Wyłączone  
+  - **Ustawienie domyślne**: Wyłącz  
   
 - **Pasek powiadomień procesów programu Internet Explorer**  </br>  
   To ustawienie zasad pozwala określić, czy pasek powiadomień ma być wyświetlany dla procesów programu Internet Explorer, gdy instalacja pliku lub kodu jest ograniczona. Domyślnie pasek powiadomień jest wyświetlany dla procesów programu Internet Explorer. Jeśli to ustawienie zasad zostanie włączone, pasek powiadomień będzie wyświetlany dla procesów programu Internet Explorer. Jeśli to ustawienie zasad zostanie wyłączone, pasek powiadomień nie będzie wyświetlany dla procesów programu Internet Explorer. Jeśli to ustawienie zasad nie zostanie skonfigurowane, pasek powiadomień będzie wyświetlany dla procesów programu Internet Explorer.
-  - **Ustawienie domyślne**: Włączono  
+  - **Ustawienie domyślne**: Enabled  
   
 - **Pobieranie podpisanych kontrolek ActiveX w strefie internetowej programu Internet Explorer**  </br>
   To ustawienie zasad umożliwia zarządzanie tym, czy użytkownicy mogą pobierać podpisane kontrolki ActiveX ze strony w strefie. Jeśli te zasady zostaną włączone, użytkownicy będą mogli pobierać podpisane kontrolki bez interwencji użytkownika. Jeśli wybierzesz w polu listy rozwijanej wartość Monituj, użytkownicy będą proszeni o wybranie, czy pobierać kontrolki podpisane przez niezaufanych wydawców. Kod podpisany przez zaufanych wydawców jest dyskretnie pobierany. Jeśli to ustawienie zasad zostanie wyłączone, nie będzie można pobierać podpisanych kontrolek. Jeśli to ustawienie zasad nie zostanie skonfigurowane, użytkownicy będą proszeni o wybranie, czy pobierać kontrolki podpisane przez niezaufanych wydawców. Kod podpisany przez zaufanych wydawców jest dyskretnie pobierany.
@@ -506,11 +506,11 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
 - **Filtr SmartScreen w strefie z ograniczeniami w programie Internet Explorer**  
   To ustawienie zasad określa, czy filtr SmartScreen skanuje strony w tej strefie pod kątem złośliwej zawartości. Jeśli to ustawienie zasad zostanie włączone, filtr SmartScreen będzie skanować strony w tej strefie pod kątem złośliwej zawartości. Jeśli to ustawienie zasad zostanie wyłączone, filtr SmartScreen nie będzie skanować stron w tej strefie pod kątem złośliwej zawartości. Jeśli to ustawienie zasad nie zostanie skonfigurowane, użytkownik będzie mógł wybrać, czy filtr SmartScreen ma skanować strony w tej strefie pod kątem złośliwej zawartości. Uwaga: W programie Internet Explorer 7 to ustawienie zasad określa, czy filtr wyłudzania informacji skanuje strony w tej strefie pod kątem złośliwej zawartości.
-  - **Ustawienie domyślne**: Włączono  
+  - **Ustawienie domyślne**: Enabled  
   
 - **Usuwanie przycisku Uruchom teraz dla nieaktualnych kontrolek ActiveX w programie Internet Explorer**  </br>
   To ustawienie zasad pozwala ukryć przed użytkownikami przycisk „Uruchom teraz” oraz uniemożliwia uruchamianie określonych nieaktualnych kontrolek ActiveX w programie Internet Explorer. Jeśli to ustawienie zasad zostanie włączone, użytkownicy nie będą widzieć przycisku „Uruchom teraz” w komunikacie ostrzegawczym, który jest wyświetlany, gdy program Internet Explorer blokuje nieaktualną kontrolkę ActiveX. Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, użytkownicy będą widzieć przycisk „Uruchom teraz” w komunikacie ostrzegawczym, który jest wyświetlany, gdy program Internet Explorer blokuje nieaktualną kontrolkę ActiveX. Kliknięcie tego przycisku pozwala użytkownikowi uruchomić raz nieaktualną kontrolkę ActiveX. Więcej informacji można znaleźć na stronie „Nieaktualne kontrolki ActiveX” w bibliotece TechNet programu Internet Explorer.
-  - **Ustawienie domyślne**: Włączono 
+  - **Ustawienie domyślne**: Enabled 
   
 - **Uruchamianie aplikacji i plików w elementach iframe w strefie internetowej programu Internet Explorer**  
   To ustawienie zasad umożliwia określenie, czy można uruchamiać aplikacje i pobierać pliki z odwołania IFRAME w kodzie HTML stron w tej strefie. Jeśli to ustawienie zasad zostanie włączone, użytkownicy będą mogli uruchamiać aplikacje i pobierać pliki z elementów IFRAME na stronach w tej strefie bez interwencji użytkownika. Jeśli w polu listy rozwijanej ustawisz wartość Monituj, użytkownicy będą proszeni o wybranie, czy uruchamiać aplikacje i pobierać pliki z elementów IFRAME na stronach w tej strefie. Jeśli to ustawienie zasad zostanie wyłączone, użytkownicy nie będą mogli uruchamiać aplikacji i pobierać plików z elementów IFRAME na stronach w tej strefie. Jeśli to ustawienie zasad nie zostanie skonfigurowane, użytkownicy będą proszeni o wybranie, czy uruchamiać aplikacje i pobierać pliki z elementów IFRAME na stronach w tej strefie
@@ -522,7 +522,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
 - **Filtr SmartScreen w strefie internetowej programu Internet Explorer**  
   To ustawienie zasad określa, czy filtr SmartScreen skanuje strony w tej strefie pod kątem złośliwej zawartości. Jeśli to ustawienie zasad zostanie włączone, filtr SmartScreen będzie skanować strony w tej strefie pod kątem złośliwej zawartości. Jeśli to ustawienie zasad zostanie wyłączone, filtr SmartScreen nie będzie skanować stron w tej strefie pod kątem złośliwej zawartości. Jeśli to ustawienie zasad nie zostanie skonfigurowane, użytkownik będzie mógł wybrać, czy filtr SmartScreen ma skanować strony w tej strefie pod kątem złośliwej zawartości. Uwaga: W programie Internet Explorer 7 to ustawienie zasad określa, czy filtr wyłudzania informacji skanuje strony w tej strefie pod kątem złośliwej zawartości.
-  - **Ustawienie domyślne**: Włączono  
+  - **Ustawienie domyślne**: Enabled  
   
 - **Zablokowane uprawnienia języka Java w zaufanej strefie programu Internet Explorer**  
   To ustawienie zasad umożliwia zarządzanie uprawnieniami dotyczącymi apletów Java. Jeśli to ustawienie zasad zostanie włączone, będzie można wybierać opcje z listy rozwijanej. Ustawienie Niestandardowe umożliwia kontrolowanie ustawień uprawnień pojedynczo. Ustawienie Niski poziom zabezpieczeń umożliwia apletom wykonywanie wszystkich operacji. Ustawienie Średni poziom zabezpieczeń umożliwia uruchamianie apletów w ich piaskownicy (obszarze pamięci, poza którym program nie może wykonywać wywołań) oraz udostępnia funkcje, takie jak obszar na pliki tymczasowe (bezpieczny obszar magazynu na komputerze klienckim) i kontrolowane przez użytkownika operacje we/wy na plikach. Ustawienie Wysoki poziom zabezpieczeń umożliwia uruchamianie apletów w ich piaskownicy. Wyłącz język Java, aby uniemożliwić uruchamianie jakichkolwiek apletów. Jeśli to ustawienie zasad zostanie wyłączone, nie będzie można uruchamiać apletów Java. Jeśli to ustawienie zasad nie zostanie skonfigurowane, aplety Java będą wyłączone.
@@ -530,15 +530,15 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
 - **Sprawdzanie podpisów pobranych programów w programie Internet Explorer**  
   To ustawienie zasad pozwala określić, czy program Internet Explorer ma sprawdzać podpisy cyfrowe (identyfikujące wydawcę podpisanego oprogramowania i sprawdzające, czy został on zmodyfikowany lub naruszony) w komputerach użytkowników przed pobraniem programów wykonywalnych. Jeśli to ustawienie zasad zostanie włączone, program Internet Explorer będzie sprawdzać podpisy cyfrowe programów wykonywalnych i wyświetlać ich tożsamości przed pobraniem do komputerów użytkowników. Jeśli to ustawienie zasad zostanie wyłączone, program Internet Explorer nie będzie sprawdzać podpisy cyfrowe programów wykonywalnych ani wyświetlać ich tożsamości przed pobraniem do komputerów użytkowników. Jeśli te zasady nie zostaną skonfigurowane, program Internet Explorer nie będzie sprawdzać podpisy cyfrowe programów wykonywalnych ani wyświetlać ich tożsamości przed pobraniem do komputerów użytkowników.
-  - **Ustawienie domyślne**: Włączono  
+  - **Ustawienie domyślne**: Enabled  
   
 - **Wykonywanie skryptów kontrolek przeglądarki internetowej w strefie z ograniczeniami w programie Internet Explorer**  
   To ustawienie zasad określa, czy strona może kontrolować osadzone kontrolki WebBrowser za pomocą skryptu. Jeśli to ustawienie zasad zostanie włączone, dostęp skryptów do kontrolki WebBrowser będzie dozwolony. Jeśli to ustawienie zasad zostanie wyłączone, dostęp skryptów do kontrolki WebBrowser nie będzie dozwolony. Jeśli to ustawienie zasad nie zostanie skonfigurowane, użytkownik będzie mógł włączyć lub wyłączyć dostęp skryptów do kontrolki WebBrowser. Domyślnie dostęp skryptów do kontrolki WebBrowser jest dozwolony tylko w strefach Komputer lokalny i Intranet.
-  - **Ustawienie domyślne**: Wyłączone  
+  - **Ustawienie domyślne**: Wyłącz  
   
 - **Filtrowanie skryptów między witrynami w strefie z ograniczeniami w programie Internet Explorer**  
   Te zasady określają, czy filtr skryptów między witrynami (XSS) będzie wykrywał i blokował wprowadzanie skryptu między witrynami w witrynach internetowych w tej strefie. Jeśli to ustawienie zasad zostanie włączone, filtr XSS zostanie włączony dla witryn w tej strefie i filtr XSS będzie próbować zablokować wprowadzanie skryptów między witrynami. Jeśli to ustawienie zasad zostanie wyłączone, filtr XSS zostanie wyłączony dla witryn w tej strefie i program Internet Explorer będzie zezwalać na wprowadzanie skryptów między witrynami.
-  - **Ustawienie domyślne**: Włączono  
+  - **Ustawienie domyślne**: Enabled  
   
 - **Zachowanie danych binarnych i skryptów w strefie z ograniczeniami w programie Internet Explorer**  
   To ustawienie zasad umożliwia zarządzanie dynamicznym zachowaniem danych binarnych i skryptów: składników, które hermetyzują określone funkcji dla elementów kodu HTML, do których zostały dołączone. Jeśli to ustawienie zasad zostanie włączone, zachowania danych binarnych i skryptów będą dostępne. Jeśli w polu listy rozwijanej wybierzesz pozycję Zatwierdzone przez administratora, dostępne będą tylko zachowania zatwierdzone przez administratora w ramach zasad ograniczenia zabezpieczeń zachowań danych binarnych. Jeśli to ustawienie zasad zostanie wyłączone, zachowania danych binarnych i skryptów nie będą dostępne, o ile aplikacje nie mają zaimplementowanego niestandardowego menedżera zabezpieczeń. Jeśli to ustawienie zasad nie zostanie skonfigurowane, zachowania danych binarnych i skryptów nie będą dostępne, o ile aplikacje nie mają zaimplementowanego niestandardowego menedżera zabezpieczeń.
@@ -546,7 +546,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
 - **Sprawdzanie ustawień zabezpieczeń programu Internet Explorer**  </br>
   To ustawienie zasad powoduje wyłączenie funkcji sprawdzania ustawień zabezpieczeń, która sprawdza ustawienia zabezpieczeń programu Internet Explorer, aby określić, kiedy ustawienia stanowią zagrożenie dla programu Internet Explorer. Jeśli to ustawienie zasad zostanie włączone, funkcja zostanie wyłączona. Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, funkcja zostanie włączona.
-  - **Ustawienie domyślne**: Włączono  
+  - **Ustawienie domyślne**: Enabled  
   
 - **Ostrzeżenie o zabezpieczeniach strefy internetowej dla potencjalnie niebezpiecznych plików w programie Internet Explorer**  
   To ustawienie zasad określa, czy komunikat „Otwieranie pliku — ostrzeżenie o zabezpieczeniach” pojawia się, gdy użytkownik próbuje otworzyć pliki wykonywalne lub inne potencjalnie niebezpieczne pliki (na przykład z udziału plików w intranecie za pomocą Eksploratora plików). Jeśli to ustawienie zasad zostanie włączone i w polu listy rozwijanej zostanie ustawiona wartość Włącz, te pliki będą otwierane bez ostrzeżenia o zabezpieczeniach. Jeśli w polu listy rozwijanej ustawisz wartość Monituj, przed otwarciem plików pojawi się ostrzeżenie o zabezpieczeniach. Jeśli to ustawienie zasad zostanie wyłączone, nie będzie można otworzyć tych plików. Jeśli to ustawienie zasad nie zostanie skonfigurowane, użytkownik będzie mógł skonfigurować sposób obsługi tych plików przez komputer. Domyślnie te pliki są zablokowane w strefie z ograniczeniami, włączone w strefie intranetu i komputera lokalnego oraz mają ustawione monitowanie w strefie Internetu i zaufanej strefie.
@@ -558,15 +558,15 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
 - **Blokowanie nieaktualnych kontrolek ActiveX w programie Internet Explorer**  </br>
   To ustawienie zasad określa, czy program Internet Explorer ma blokować nieaktualne kontrolki ActiveX. Nieaktualne kontrolki ActiveX nigdy nie są blokowane w strefie intranetowej. Jeśli to ustawienie zasad zostanie włączone, program Internet Explorer przestanie blokować nieaktualne kontrolki ActiveX. Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, program Internet Explorer będzie nadal blokować określone nieaktualne kontrolki ActiveX. Więcej informacji można znaleźć na stronie „Nieaktualne kontrolki ActiveX” w bibliotece TechNet programu Internet Explorer.
-  - **Ustawienie domyślne**: Włączono  
+  - **Ustawienie domyślne**: Enabled  
   
 - **Blokowanie okien podręcznych w strefie z ograniczeniami w programie Internet Explorer**  
   To ustawienie zasad pozwala określić, czy mają być wyświetlane niechciane okna podręczne. Okna podręczne otwierane, gdy użytkownik końcowy kliknie link, nie są blokowane. Jeśli to ustawienie zasad zostanie włączone, większość niechcianych okien podręcznych nie będzie wyświetlana. Jeśli to ustawienie zasad zostanie wyłączone, wyświetlanie okien podręcznych nie będzie blokowane. Jeśli to ustawienie zasad nie zostanie skonfigurowane, większość niechcianych okien podręcznych nie będzie wyświetlana.
-  - **Ustawienie domyślne**: Włączenie  
+  - **Ustawienie domyślne**: Włącz  
   
 - **Ograniczenia zabezpieczeń protokołu MK w procesach programu Internet Explorer**  
   Ustawienie zasad ograniczeń zabezpieczeń protokołu MK uniemożliwia korzystanie z protokołu MK, zmniejszając w ten sposób obszar powierzchni ataku. Korzystanie z zasobów obsługiwanych przez protokół MK nie będzie możliwe. Jeśli to ustawienie zasad zostanie włączone, protokół MK będzie zabroniony dla Eksploratora plików i przeglądarki Internet Explorer, a korzystanie z zasobów obsługiwanych przez protokół MK nie będzie możliwe. Jeśli to ustawienie zasad zostanie wyłączone, aplikacje będą mogły używać interfejsu API protokołu MK. Zasoby obsługiwane przez protokół MK będą działały w przypadku procesów Eksploratora plików i przeglądarki Internet Explorer. Jeśli to ustawienie zasad nie zostanie skonfigurowane, protokół MK będzie zabroniony dla Eksploratora plików i przeglądarki Internet Explorer, a korzystanie z zasobów obsługiwanych przez protokół MK nie będzie możliwe.
-  - **Ustawienie domyślne**: Włączono  
+  - **Ustawienie domyślne**: Enabled  
   
 - **Uprawnienia języka Java w strefie zaufanej programu Internet Explorer**  </br>
   To ustawienie zasad umożliwia zarządzanie uprawnieniami dotyczącymi apletów Java. Jeśli to ustawienie zasad zostanie włączone, będzie można wybierać opcje z listy rozwijanej. Ustawienie Niestandardowe umożliwia kontrolowanie ustawień uprawnień pojedynczo. Ustawienie Niski poziom zabezpieczeń umożliwia apletom wykonywanie wszystkich operacji. Ustawienie Średni poziom zabezpieczeń umożliwia uruchamianie apletów w ich piaskownicy (obszarze pamięci, poza którym program nie może wykonywać wywołań) oraz udostępnia funkcje, takie jak obszar na pliki tymczasowe (bezpieczny obszar magazynu na komputerze klienckim) i kontrolowane przez użytkownika operacje we/wy na plikach. Ustawienie Wysoki poziom zabezpieczeń umożliwia uruchamianie apletów w ich piaskownicy. Wyłącz język Java, aby uniemożliwić uruchamianie jakichkolwiek apletów. Jeśli to ustawienie zasad zostanie wyłączone, nie będzie można uruchamiać apletów Java. Jeśli to ustawienie zasad nie zostanie skonfigurowane, zostaną ustawione uprawnienia Niski poziom zabezpieczeń.
@@ -582,15 +582,15 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
 - **Strefa internetowa w programie Internet Explorer zezwala na używanie kontrolek ActiveX tylko przez zatwierdzone domeny**  </br>
   To ustawienie zasad określa, czy użytkownik będzie proszony o wyrażenie zgody na uruchamianie kontrolek ActiveX w witrynach internetowych innych niż witryna internetowa, która zainstalowała kontrolkę ActiveX. Jeśli to ustawienie zasad zostanie włączone, użytkownik będzie proszony o wyrażenie zgody na uruchamianie kontrolek ActiveX z witryn internetowych w tej strefie. Użytkownik może zezwolić na uruchamianie kontrolki z bieżącej witryny lub ze wszystkich witryn. Jeśli to ustawienie zasad zostanie wyłączone, w poszczególnych witrynach nie będzie wyświetlany monit kontrolki ActiveX i będzie można uruchamiać kontrolki ActiveX ze wszystkich witryn w tej strefie.
-  - **Ustawienie domyślne**: Włączono  
+  - **Ustawienie domyślne**: Enabled  
   
 - **Program Internet Explorer zawiera wszystkie ścieżki sieciowe**  
   Program Internet Explorer zawiera wszystkie ścieżki sieciowe
-  - **Ustawienie domyślne**: Wyłączone 
+  - **Ustawienie domyślne**: Wyłącz 
   
 - **Tryb chroniony w strefie internetowej programu Internet Explorer**  
   To ustawienie zasad umożliwia włączenie trybu chronionego. Tryb chroniony ułatwia ochronę programu Internet Explorer przed wykorzystywaniem luk w zabezpieczeniach, zmniejszając liczbę lokalizacji, w których program Internet Explorer może zapisywać w rejestrze i w systemie plików. Jeśli to ustawienie zasad zostanie włączone, tryb chroniony będzie włączony. Użytkownik nie będzie mógł wyłączyć trybu chronionego. Jeśli to ustawienie zasad zostanie wyłączone, tryb chroniony będzie wyłączony. Użytkownik nie będzie mógł włączyć trybu chronionego. Jeśli to ustawienie zasad nie zostanie skonfigurowane, użytkownik będzie mógł włączać i wyłączać tryb chroniony.
-  - **Ustawienie domyślne**: Włączenie 
+  - **Ustawienie domyślne**: Włącz 
   
 - **Strefa internetowa w programie Internet Explorer pozwala inicjować i wykonywać skrypty kontrolek ActiveX, które nie są oznaczone jako bezpieczne**  
   To ustawienie zasad umożliwia zarządzanie kontrolkami ActiveX, które nie są oznaczone jako bezpieczne. Jeśli to ustawienie zasad zostanie włączone, kontrolki ActiveX będą uruchamiane i ładowane z parametrami oraz będą wykonywane ich skrypty bez konieczności ustawiania poziomu bezpieczeństwa obiektów dla niezaufanych danych lub skryptów. To ustawienie nie jest zalecane poza strefami bezpiecznymi i administrowanymi. To ustawienie umożliwia inicjowanie i wykonywanie skryptów zarówno bezpiecznych, jak i niebezpiecznych kontrolek, z jednoczesnym ignorowaniem opcji Wykonaj skrypty kontrolek ActiveX zaznaczone jako bezpieczne. Jeśli to ustawienie zasad zostanie włączone i w polu listy rozwijanej zostanie wybrana pozycja Monituj, użytkownicy będą pytani, czy zezwolić na ładowanie kontrolek z parametrami lub inicjowanych przez skrypty. Jeśli to ustawienie zasad zostanie wyłączone, kontrolki ActiveX, które nie mogą stać się bezpieczne, nie będą ładowane z parametrami ani nie będą wykonywane ich skrypty. Jeśli to ustawienie zasad nie zostanie skonfigurowane, kontrolki ActiveX, które nie mogą stać się bezpieczne, nie będą ładowane z parametrami ani nie będą wykonywane ich skrypty.
@@ -598,11 +598,11 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
 - **Zablokowany filtr SmartScreen w strefie z ograniczeniami w programie Internet Explorer**  </br>
   To ustawienie zasad określa, czy filtr SmartScreen skanuje strony w tej strefie pod kątem złośliwej zawartości. Jeśli to ustawienie zasad zostanie włączone, filtr SmartScreen będzie skanować strony w tej strefie pod kątem złośliwej zawartości. Jeśli to ustawienie zasad zostanie wyłączone, filtr SmartScreen nie będzie skanować stron w tej strefie pod kątem złośliwej zawartości. Jeśli to ustawienie zasad nie zostanie skonfigurowane, użytkownik będzie mógł wybrać, czy filtr SmartScreen ma skanować strony w tej strefie pod kątem złośliwej zawartości. Uwaga: W programie Internet Explorer 7 to ustawienie zasad określa, czy filtr wyłudzania informacji skanuje strony w tej strefie pod kątem złośliwej zawartości.
-  - **Ustawienie domyślne**: Włączono  
+  - **Ustawienie domyślne**: Enabled  
   
 - **Wykrywanie awarii w programie Internet Explorer**  
   To ustawienie zasad umożliwia zarządzanie funkcją wykrywania awarii Zarządzania dodatkami. Jeśli to ustawienie zasad zostanie włączone, awaria w programie Internet Explorer będzie powodowała zachowanie typowe dla systemu Windows XP Professional z dodatkiem Service Pack 1 lub starszego, to znaczy będzie wywoływać Raportowanie błędów systemu Windows. Wciąż będą obowiązywały wszystkie ustawienia zasad dla Raportowania błędów systemu Windows. Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, funkcja wykrywania awarii zarządzania dodatkami będzie działała.
-  - **Ustawienie domyślne**: Wyłączone  
+  - **Ustawienie domyślne**: Wyłącz  
   
 - **Uprawnienia języka Java w strefie internetowej programu Internet Explorer**  
   To ustawienie zasad umożliwia zarządzanie uprawnieniami dotyczącymi apletów Java. Jeśli to ustawienie zasad zostanie włączone, będzie można wybierać opcje z listy rozwijanej. Ustawienie Niestandardowe umożliwia kontrolowanie ustawień uprawnień pojedynczo. Ustawienie Niski poziom zabezpieczeń umożliwia apletom wykonywanie wszystkich operacji. Ustawienie Średni poziom zabezpieczeń umożliwia uruchamianie apletów w ich piaskownicy (obszarze pamięci, poza którym program nie może wykonywać wywołań) oraz udostępnia funkcje, takie jak obszar na pliki tymczasowe (bezpieczny obszar magazynu na komputerze klienckim) i kontrolowane przez użytkownika operacje we/wy na plikach. Ustawienie Wysoki poziom zabezpieczeń umożliwia uruchamianie apletów w ich piaskownicy. Wyłącz język Java, aby uniemożliwić uruchamianie jakichkolwiek apletów. Jeśli to ustawienie zasad zostanie wyłączone, nie będzie można uruchamiać apletów Java. Jeśli to ustawienie zasad nie zostanie skonfigurowane, zostaną ustawione uprawnienia Wysoki poziom zabezpieczeń.
@@ -622,7 +622,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
 - **Przeciąganie zawartości z innych domen między oknami w strefie internetowej programu Internet Explorer**  
   To ustawienie zasad umożliwia ustawianie opcji przeciągania zawartości między domenami, gdy źródło i lokalizacja docelowa znajdują się w różnych oknach. Jeśli to ustawienie zasad zostanie włączone i klikniesz pozycję Włącz, użytkownicy będą mogli przeciągać zawartość między domenami, gdy źródło i lokalizacja docelowa znajdują się w różnych oknach. Użytkownicy nie mogą zmieniać tego ustawienia. Jeśli to ustawienie zasad zostanie włączone i klikniesz pozycję Wyłącz, użytkownicy nie będą mogli przeciągać zawartości z jednej domeny do innej, gdy zarówno miejsce źródłowe, jak i docelowe będą w różnych oknach. Użytkownicy nie mogą zmieniać tego ustawienia. W programie Internet Explorer 10, jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, użytkownicy nie będą mogli przeciągać zawartości z jednej domeny do innej, gdy miejsce źródłowe i docelowe będą w różnych oknach. Użytkownicy mogą zmieniać to ustawienie w oknie dialogowym Opcje internetowe. W programie Internet Explorer 9 lub jego starszych wersjach, jeśli te zasady zostaną wyłączone lub nie zostaną skonfigurowane, użytkownicy będą mogli przeciągać zawartość z jednej domeny do innej, gdy miejsce źródłowe i docelowe będą w różnych oknach. Użytkownicy nie mogą zmieniać tego ustawienia.
-  - **Ustawienie domyślne**: Wyłączone 
+  - **Ustawienie domyślne**: Wyłącz 
   
 - **Strefa intranetowa w programie Internet Explorer pozwala inicjować i wykonywać skrypty kontrolek ActiveX, które nie są oznaczone jako bezpieczne**  
   To ustawienie zasad umożliwia zarządzanie kontrolkami ActiveX, które nie są oznaczone jako bezpieczne. Jeśli to ustawienie zasad zostanie włączone, kontrolki ActiveX będą uruchamiane i ładowane z parametrami oraz będą wykonywane ich skrypty bez konieczności ustawiania poziomu bezpieczeństwa obiektów dla niezaufanych danych lub skryptów. To ustawienie nie jest zalecane poza strefami bezpiecznymi i administrowanymi. To ustawienie umożliwia inicjowanie i wykonywanie skryptów zarówno bezpiecznych, jak i niebezpiecznych kontrolek, z jednoczesnym ignorowaniem opcji Wykonaj skrypty kontrolek ActiveX zaznaczone jako bezpieczne. Jeśli to ustawienie zasad zostanie włączone i w polu listy rozwijanej zostanie wybrana pozycja Monituj, użytkownicy będą pytani, czy zezwolić na ładowanie kontrolek z parametrami lub inicjowanych przez skrypty. Jeśli to ustawienie zasad zostanie wyłączone, kontrolki ActiveX, które nie mogą stać się bezpieczne, nie będą ładowane z parametrami ani nie będą wykonywane ich skrypty. Jeśli to ustawienie zasad nie zostanie skonfigurowane, kontrolki ActiveX, które nie mogą stać się bezpieczne, nie będą ładowane z parametrami ani nie będą wykonywane ich skrypty.
@@ -630,7 +630,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
 - **Pobieranie załączników w programie Internet Explorer**  
   To ustawienie zasad uniemożliwia użytkownikowi pobieranie załączników (w postaci plików) ze źródła danych na komputer użytkownika. Jeśli to ustawienie zasad zostanie włączone, użytkownik nie będzie mógł ustawić pobierania załącznika przez aparat synchronizacji źródła danych za pośrednictwem strony właściwości źródła danych. Deweloper nie będzie mógł zmienić ustawienia pobierania za pośrednictwem interfejsów API źródła danych. Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, użytkownik będzie mógł ustawić pobieranie załącznika przez aparat synchronizacji źródła danych za pośrednictwem strony właściwości źródła danych. Deweloper będzie mógł zmienić ustawienie pobierania za pośrednictwem interfejsów API źródła danych.
-  - **Ustawienie domyślne**: Wyłączone  
+  - **Ustawienie domyślne**: Wyłącz  
   
 - **Pobieranie niepodpisanych kontrolek ActiveX w strefie z ograniczeniami w programie Internet Explorer**  </br>
   To ustawienie zasad umożliwia zarządzanie tym, czy użytkownicy mogą pobierać niepodpisane kontrolki ActiveX ze strefy. Tego rodzaju kod jest potencjalnie szkodliwy, zwłaszcza gdy pochodzi z niezaufanej strefy. Jeśli to ustawienie zasad zostanie włączone, użytkownicy będą mogli uruchamiać niepodpisane kontrolki bez interwencji użytkownika. Jeśli w polu listy rozwijanej zostanie wybrana pozycja Monit, użytkownicy będą proszeni o wybranie, czy zezwalać na uruchamianie niepodpisanych kontrolek. Jeśli to ustawienie zasad zostanie wyłączone, użytkownicy nie będą mogli uruchamiać niepodpisanych kontrolek. Jeśli to ustawienie zasad nie zostanie skonfigurowane, użytkownicy nie będą mogli uruchamiać niepodpisanych kontrolek.
@@ -638,11 +638,11 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
 - **Przeciąganie zawartości z innych domen w obrębie okien w strefie internetowej programu Internet Explorer**  
   To ustawienie zasad umożliwia zarządzanie tym, czy użytkownicy mogą pobierać niepodpisane kontrolki ActiveX ze strefy. Tego rodzaju kod jest potencjalnie szkodliwy, zwłaszcza gdy pochodzi z niezaufanej strefy. Jeśli to ustawienie zasad zostanie włączone, użytkownicy będą mogli uruchamiać niepodpisane kontrolki bez interwencji użytkownika. Jeśli w polu listy rozwijanej zostanie wybrana pozycja Monit, użytkownicy będą proszeni o wybranie, czy zezwalać na uruchamianie niepodpisanych kontrolek. Jeśli to ustawienie zasad zostanie wyłączone, użytkownicy nie będą mogli uruchamiać niepodpisanych kontrolek. Jeśli to ustawienie zasad nie zostanie skonfigurowane, użytkownicy nie będą mogli uruchamiać niepodpisanych kontrolek.
-  - **Ustawienie domyślne**: Wyłączone  
+  - **Ustawienie domyślne**: Wyłącz  
   
 - **Procesy programu Internet Explorer ograniczają instalowanie kontrolek ActiveX**  </br>
   To ustawienie zasad umożliwia aplikacjom hostującym kontrolkę przeglądarki internetowej blokowanie automatycznego monitowania o instalowanie kontrolek ActiveX. Jeśli to ustawienie zasad zostanie włączone, kontrolka przeglądarki internetowej będzie blokowała dla wszystkich procesów automatyczne monitowanie o instalowanie kontrolek ActiveX. Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, kontrolka przeglądarki internetowej nie będzie blokowała dla wszystkich procesów automatycznego monitowania o instalowanie kontrolek ActiveX.
-  - **Ustawienie domyślne**: Włączono  
+  - **Ustawienie domyślne**: Enabled  
   
 - **Skryptlety strefy internetowej programu Internet Explorer** To ustawienie zasad pozwala określić, czy użytkownik może uruchamiać skryptlety. Jeśli to ustawienie zasad zostanie włączone, użytkownik będzie mógł uruchamiać skryptlety. Jeśli to ustawienie zasad zostanie wyłączone, użytkownik nie będzie mógł uruchamiać skryptletów. Jeśli to ustawienie zasad nie zostanie skonfigurowane, użytkownik będzie mógł włączać lub wyłączać skryptlety.
   - **Ustawienie domyślne**: Wyłącz  
@@ -653,26 +653,26 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
 - **Oprogramowanie przeglądarki Internet Explorer w przypadku nieprawidłowego podpisu** </br>
   To ustawienie zasad umożliwia zarządzanie tym, czy oprogramowanie, takie jak kontrolki ActiveX i funkcje pobierania plików, może być instalowane lub uruchamiane przez użytkownika, nawet jeśli podpis jest nieprawidłowy. Nieprawidłowy podpis może oznaczać, że ktoś naruszył plik. Jeśli to ustawienie zasad zostanie włączone, użytkownicy będą monitowani o instalowanie lub uruchamianie plików z nieprawidłowym podpisem. Jeśli to ustawienie zasad zostanie wyłączone, użytkownicy nie będą mogli uruchamiać ani instalować plików z nieprawidłowym podpisem. Jeśli te zasady nie zostaną skonfigurowane, użytkownicy będą mogli wybrać, czy pliki z nieprawidłowym podpisem mają być uruchamiane lub instalowane.
-  - **Ustawienie domyślne**: Wyłączone  
+  - **Ustawienie domyślne**: Wyłącz  
   
 - **Kopiowanie i wklejanie za pomocą skryptu w strefie z ograniczeniami w programie Internet Explorer** </br> To ustawienie zasad umożliwia zarządzanie tym, czy skrypty mogą wykonać operację schowka (na przykład wycięcie, skopiowanie i wklejenie) w określonym regionie. Jeśli to ustawienie zasad zostanie włączone, skrypt będzie mógł wykonać operację schowka. Jeśli w polu listy rozwijanej zostanie wybrana pozycja Monit, użytkownicy będą pytani, czy można wykonać operacje schowka. Jeśli to ustawienie zasad zostanie wyłączone, skrypt nie będzie mógł wykonać operacji schowka. Jeśli to ustawienie zasad nie zostanie skonfigurowane, skrypt nie będzie mógł wykonać operacji schowka.
   - **Ustawienie domyślne**: Wyłącz  
   
 - **Przeciąganie zawartości z innych domen między oknami w strefie z ograniczeniami w programie Internet Explorer**  
   To ustawienie zasad umożliwia ustawianie opcji przeciągania zawartości między domenami, gdy źródło i lokalizacja docelowa znajdują się w różnych oknach. Jeśli to ustawienie zasad zostanie włączone i klikniesz pozycję Włącz, użytkownicy będą mogli przeciągać zawartość między domenami, gdy źródło i lokalizacja docelowa znajdują się w różnych oknach. Użytkownicy nie mogą zmieniać tego ustawienia. Jeśli to ustawienie zasad zostanie włączone i klikniesz pozycję Wyłącz, użytkownicy nie będą mogli przeciągać zawartości z jednej domeny do innej, gdy zarówno miejsce źródłowe, jak i docelowe będą w różnych oknach. Użytkownicy nie mogą zmieniać tego ustawienia. W programie Internet Explorer 10, jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, użytkownicy nie będą mogli przeciągać zawartości z jednej domeny do innej, gdy miejsce źródłowe i docelowe będą w różnych oknach. Użytkownicy mogą zmieniać to ustawienie w oknie dialogowym Opcje internetowe. W programie Internet Explorer 9 lub jego starszych wersjach, jeśli te zasady zostaną wyłączone lub nie zostaną skonfigurowane, użytkownicy będą mogli przeciągać zawartość z jednej domeny do innej, gdy miejsce źródłowe i docelowe będą w różnych oknach. Użytkownicy nie mogą zmieniać tego ustawienia.
-  - **Ustawienie domyślne**: Wyłączone  
+  - **Ustawienie domyślne**: Wyłącz  
   
 - **Użytkownicy programu Internet Explorer dodający witryny**  
   Uniemożliwia użytkownikom dodawanie i usuwanie witryn ze stref zabezpieczeń. Strefa zabezpieczeń to grupa witryn internetowych na tym samym poziomie zabezpieczeń. Włączenie tych zasad spowoduje wyłączenie ustawień zarządzania witrynami dla stref zabezpieczeń. (Aby zobaczyć ustawienia zarządzania witrynami dla stref zabezpieczeń, w oknie dialogowym Opcje internetowe kliknij kartę Zabezpieczenia, a następnie kliknij przycisk Witryny). Jeśli te zasady zostaną wyłączone lub nie zostaną skonfigurowane, użytkownicy będą mogli dodawać witryny internetowe do stref Zaufane witryny lub Witryny z ograniczeniami bądź je stamtąd usuwać, a także zmieniać ustawienia strefy Lokalny intranet. Te zasady uniemożliwiają użytkownikom zmianę ustawień zarządzania witrynami dla stref zabezpieczeń ustanowionych przez administratora. Uwaga: Zasady „Wyłącz stronę Zabezpieczenia” (znajdujące się w katalogu \User Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel), które powodują usunięcie karty Zabezpieczenia z interfejsu, mają pierwszeństwo przed tymi zasadami. Jeśli zostaną włączone, omawiane tu zasady będą ignorowane. Zobacz też zasady „Strefy zabezpieczeń: Używaj tylko ustawień komputera”.
-  - **Ustawienie domyślne**: Wyłączone  
+  - **Ustawienie domyślne**: Wyłącz  
   
 - **Okna inicjowane przez skrypty w strefie internetowej programu Internet Explorer**  
   To ustawienie zasad umożliwia zarządzanie ograniczeniami dotyczącymi okien podręcznych oraz okien zawierających paski tytułu i stanu inicjowanych przez skrypty. Jeśli to ustawienie zasad zostanie włączone, zabezpieczenia Ograniczenia systemu Windows nie będą stosowane w tej strefie. Strefa zabezpieczeń będzie działać bez dodatkowej warstwy zabezpieczeń udostępnianej przez tę funkcję. Jeśli to ustawienie zasad zostanie wyłączone, nie będzie możliwe uruchamianie potencjalnie szkodliwych akcji zawartych w oknach podręcznych oraz oknach zawierających paski tytułu i stanu inicjowanych przez skrypty. Ta funkcja zabezpieczeń programu Internet Explorer będzie włączona w tej strefie zgodnie z ustawieniem sterowania funkcją Ograniczenia zabezpieczeń okien inicjowanych przez skrypty dla procesu. Jeśli to ustawienie zasad nie zostanie skonfigurowane, nie będzie możliwe uruchamianie potencjalnie szkodliwych akcji zawartych w oknach podręcznych oraz oknach zawierających paski tytułu i stanu inicjowanych przez skrypty. Ta funkcja zabezpieczeń programu Internet Explorer będzie włączona w tej strefie zgodnie z ustawieniem sterowania funkcją Ograniczenia zabezpieczeń okien inicjowanych przez skrypty dla procesu.
-  - **Ustawienie domyślne**: Wyłączone  
+  - **Ustawienie domyślne**: Wyłącz  
   
 - **Strefy zabezpieczeń programu Internet Explorer używają tylko ustawień komputera**  
   Stosuje informacje o strefie zabezpieczeń do wszystkich użytkowników tego samego komputera. Strefa zabezpieczeń to grupa witryn internetowych na tym samym poziomie zabezpieczeń. Jeśli te zasady zostaną włączone, zmiany wprowadzone przez użytkownika w strefie zabezpieczeń będą dotyczyły wszystkich użytkowników tego komputera. Jeśli te zasady zostaną wyłączone lub nie zostaną skonfigurowane, użytkownicy tego samego komputera będą mogli określać własne ustawienia stref zabezpieczeń. Te zasady mają zapewnić jednolite stosowanie ustawień stref zabezpieczeń na tym samym komputerze dla wszystkich użytkowników. Zobacz też zasady „Strefy zabezpieczeń: Nie zezwalaj użytkownikom na zmienianie zasad”.
-  - **Ustawienie domyślne**: Włączono  
+  - **Ustawienie domyślne**: Enabled  
   
 - **Zablokowane uprawnienia języka Java w strefie komputera lokalnego programu Internet Explorer**  
   To ustawienie zasad umożliwia zarządzanie uprawnieniami dotyczącymi apletów Java. Jeśli to ustawienie zasad zostanie włączone, będzie można wybierać opcje z listy rozwijanej. Ustawienie Niestandardowe umożliwia kontrolowanie ustawień uprawnień pojedynczo. Ustawienie Niski poziom zabezpieczeń umożliwia apletom wykonywanie wszystkich operacji. Ustawienie Średni poziom zabezpieczeń umożliwia uruchamianie apletów w ich piaskownicy (obszarze pamięci, poza którym program nie może wykonywać wywołań) oraz udostępnia funkcje, takie jak obszar na pliki tymczasowe (bezpieczny obszar magazynu na komputerze klienckim) i kontrolowane przez użytkownika operacje we/wy na plikach. Ustawienie Wysoki poziom zabezpieczeń umożliwia uruchamianie apletów w ich piaskownicy. Wyłącz język Java, aby uniemożliwić uruchamianie jakichkolwiek apletów. Jeśli to ustawienie zasad zostanie wyłączone, nie będzie można uruchamiać apletów Java. Jeśli to ustawienie zasad nie zostanie skonfigurowane, aplety Java będą wyłączone
@@ -680,7 +680,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
 - **Strefa z ograniczeniami w programie Internet Explorer nie uruchamia oprogramowania chroniącego przed złośliwym oprogramowaniem względem kontrolek ActiveX**  </br>
   To ustawienie zasad określa, czy program Internet Explorer uruchamia programy chroniące przed złośliwym oprogramowaniem względem kontrolek ActiveX w celu sprawdzenia, czy można bezpiecznie ładować je na stronach. Jeśli to ustawienie zasad zostanie włączone, program Internet Explorer nie będzie sprawdzał za pomocą programu chroniącego przed złośliwym oprogramowaniem, czy utworzenie wystąpienia kontrolki ActiveX jest bezpieczne. Jeśli to ustawienie zasad zostanie wyłączone, program Internet Explorer zawsze będzie sprawdzał za pomocą programu chroniącego przed złośliwym oprogramowaniem, czy utworzenie wystąpienia kontrolki ActiveX jest bezpieczne. Jeśli to ustawienie zasad nie zostanie skonfigurowane, program Internet Explorer zawsze będzie sprawdzał za pomocą programu chroniącego przed złośliwym oprogramowaniem, czy utworzenie wystąpienia kontrolki ActiveX jest bezpieczne. Użytkownicy mogą włączać i wyłączać to zachowanie przy użyciu ustawień zabezpieczeń programu Internet Explorer.
-  - **Ustawienie domyślne**: Wyłączone  
+  - **Ustawienie domyślne**: Wyłącz  
   
 - **Strefa z ograniczeniami w programie Internet Explorer uruchamia składniki uzależnione od platformy .NET Framework podpisane przy użyciu technologii Authenticode**  
   To ustawienie zasad umożliwia zarządzanie tym, czy składniki .NET Framework podpisane przy użyciu technologii Authenticode mogą być wykonywane w programie Internet Explorer. Do tych składników należą zarządzane kontrolki przywoływane z tagu obiektu oraz zarządzane pliki wykonywalne przywoływane z linku. Jeśli to ustawienie zasad zostanie włączone, program Internet Explorer będzie wykonywał podpisane składniki zarządzane. Jeśli w polu listy rozwijanej wybierzesz wartość Monituj, program Internet Explorer będzie prosił użytkownika o określenie, czy może wykonywać podpisane składniki zarządzane. Jeśli to ustawienie zasad zostanie wyłączone, program Internet Explorer nie będzie wykonywał podpisanych składników zarządzanych. Jeśli to ustawienie zasad nie zostanie skonfigurowane, program Internet Explorer nie będzie wykonywał podpisanych składników zarządzanych.
@@ -692,18 +692,18 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
 - **Strefa internetowa w programie Internet Explorer nie uruchamia oprogramowania chroniącego przed złośliwym oprogramowaniem względem kontrolek ActiveX**  </br>
   To ustawienie zasad określa, czy program Internet Explorer uruchamia programy chroniące przed złośliwym oprogramowaniem względem kontrolek ActiveX w celu sprawdzenia, czy można bezpiecznie ładować je na stronach. Jeśli to ustawienie zasad zostanie włączone, program Internet Explorer nie będzie sprawdzał za pomocą programu chroniącego przed złośliwym oprogramowaniem, czy utworzenie wystąpienia kontrolki ActiveX jest bezpieczne. Jeśli to ustawienie zasad zostanie wyłączone, program Internet Explorer zawsze będzie sprawdzał za pomocą programu chroniącego przed złośliwym oprogramowaniem, czy utworzenie wystąpienia kontrolki ActiveX jest bezpieczne. Jeśli to ustawienie zasad nie zostanie skonfigurowane, program Internet Explorer zawsze będzie sprawdzał za pomocą programu chroniącego przed złośliwym oprogramowaniem, czy utworzenie wystąpienia kontrolki ActiveX jest bezpieczne. Użytkownicy mogą włączać i wyłączać to zachowanie przy użyciu ustawień zabezpieczeń programu Internet Explorer.
-  - **Ustawienie domyślne**: Wyłączone  
+  - **Ustawienie domyślne**: Wyłącz  
   
 - **Kopiowanie i wklejanie za pomocą skryptu w strefie internetowej programu Internet Explorer** </br> To ustawienie zasad umożliwia zarządzanie tym, czy skrypty mogą wykonać operację schowka (na przykład wycięcie, skopiowanie i wklejenie) w określonym regionie. Jeśli to ustawienie zasad zostanie włączone, skrypt będzie mógł wykonać operację schowka. Jeśli w polu listy rozwijanej zostanie wybrana pozycja Monit, użytkownicy będą pytani, czy można wykonać operacje schowka. Jeśli to ustawienie zasad zostanie wyłączone, skrypt nie będzie mógł wykonać operacji schowka. Jeśli to ustawienie zasad nie zostanie skonfigurowane, skrypt będzie mógł wykonać operację schowka.
   - **Ustawienie domyślne**: Wyłącz  
   
 - **Program Internet Explorer używa usługi instalatora ActiveX**  </br>
   To ustawienie zasad pozwala określić sposób instalowania kontrolek ActiveX. Jeśli to ustawienie zasad zostanie włączone, kontrolki ActiveX będą instalowane tylko wtedy, gdy usługa instalatora kontrolek ActiveX jest obecna i została skonfigurowana tak, aby umożliwiać instalowanie kontrolek ActiveX. Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, kontrolki ActiveX, w tym kontrolki użytkownika, będą instalowane za pośrednictwem standardowego procesu instalacji.
-  - **Ustawienie domyślne**: Włączono  
+  - **Ustawienie domyślne**: Enabled  
   
 - **Ochrona procesów programu Internet Explorer przed podnoszeniem uprawnień strefy**  
   Program Internet Explorer stosuje ograniczenia na każdej otwieranej stronie internetowej. Ograniczenia są zależne od lokalizacji strony internetowej (Internet, intranet, strefa komputera lokalnego itd.). Na przykład strony internetowe na komputerze lokalnym mają najmniejsze ograniczenia zabezpieczeń i znajdują się w strefie Komputer lokalny, co sprawia, że strefa zabezpieczeń Komputer lokalny staje się głównym celem dla złośliwych użytkowników. Jeśli to ustawienie zasad zostanie włączone, dowolna strefa będzie mogła być chroniona przed podniesieniem uprawnień strefy dla wszystkich procesów. Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, procesy inne niż związane z programem Internet Explorer lub wymienione na liście procesów nie otrzymają takiej ochrony.
-  - **Ustawienie domyślne**: Włączono  
+  - **Ustawienie domyślne**: Enabled  
   
 - **Pobieranie niepodpisanych kontrolek ActiveX w strefie internetowej programu Internet Explorer**  </br>
   To ustawienie zasad umożliwia zarządzanie tym, czy użytkownicy mogą pobierać niepodpisane kontrolki ActiveX ze strefy. Tego rodzaju kod jest potencjalnie szkodliwy, zwłaszcza gdy pochodzi z niezaufanej strefy. Jeśli to ustawienie zasad zostanie włączone, użytkownicy będą mogli uruchamiać niepodpisane kontrolki bez interwencji użytkownika. Jeśli w polu listy rozwijanej zostanie wybrana pozycja Monit, użytkownicy będą proszeni o wybranie, czy zezwalać na uruchamianie niepodpisanych kontrolek. Jeśli to ustawienie zasad zostanie wyłączone, użytkownicy nie będą mogli uruchamiać niepodpisanych kontrolek. Jeśli to ustawienie zasad nie zostanie skonfigurowane, użytkownicy nie będą mogli uruchamiać niepodpisanych kontrolek.
@@ -715,17 +715,17 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
 - **Aktualizacje paska stanu za pomocą skryptu w strefie internetowej programu Internet Explorer**  
   To ustawienie zasad umożliwia zarządzanie tym, czy skrypt może aktualizować pasek stanu w obrębie strefy. Jeśli to ustawienie zasad zostanie włączone, skrypt będzie mógł aktualizować pasek stanu. Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, skrypt nie będzie mógł aktualizować paska stanu.
-  - **Ustawienie domyślne**: Wyłączone  
+  - **Ustawienie domyślne**: Wyłącz  
   
 - **Strefa z ograniczeniami w programie Internet Explorer obejmuje ścieżkę lokalną podczas przekazywania plików do serwera**  </br> To ustawienie zasad określa, czy informacje o ścieżce lokalnej będą wysyłane, gdy użytkownik będzie przekazywał plik za pomocą formularza HTML. Jeśli informacje o ścieżce lokalnej będą wysyłane, niektóre informacje mogą zostać przypadkowo ujawnione serwerowi. Na przykład pliki wysłane z komputera użytkownika mogą zawierać nazwę użytkownika jako część ścieżki. Jeśli to ustawienie zasad zostanie włączone, informacje o ścieżce będą wysyłane, gdy użytkownik będzie przekazywał plik za pomocą formularza HTML. Jeśli to ustawienie zasad zostanie wyłączone, informacje o ścieżce będą usuwane, gdy użytkownik będzie przekazywał plik za pomocą formularza HTML. Jeśli to ustawienie zasad nie zostanie skonfigurowane, użytkownik będzie mógł wybrać, czy informacje o ścieżce będą wysyłane podczas przekazywania pliku za pomocą formularza HTML. Domyślnie informacje o ścieżce są wysyłane.
-  - **Ustawienie domyślne**: Wyłączone  
+  - **Ustawienie domyślne**: Wyłącz  
   
 - **Procesy programu Internet Explorer ograniczają pobieranie plików**  </br> To ustawienie zasad umożliwia aplikacjom hostującym kontrolkę przeglądarki internetowej blokowanie automatycznego monitowania o pobieranie plików, które nie jest inicjowane przez użytkownika. Jeśli to ustawienie zasad zostanie włączone, kontrolka przeglądarki internetowej będzie blokowała dla wszystkich procesów automatyczne monitowanie o pobieranie plików, które nie jest inicjowane przez użytkownika. Jeśli to ustawienie zasad zostanie wyłączone, kontrolka przeglądarki internetowej nie będzie blokowała dla wszystkich procesów automatycznego monitowania o pobieranie plików, które nie jest inicjowane przez użytkownika.
-  - **Ustawienie domyślne**: Włączono  
+  - **Ustawienie domyślne**: Enabled  
   
 - **Strefa z ograniczeniami w programie Internet Explorer zezwala na używanie kontrolek ActiveX tylko przez zatwierdzone domeny**  </br>
   To ustawienie zasad określa, czy użytkownik będzie proszony o wyrażenie zgody na uruchamianie kontrolek ActiveX w witrynach internetowych innych niż witryna internetowa, która zainstalowała kontrolkę ActiveX. Jeśli to ustawienie zasad zostanie włączone, użytkownik będzie proszony o wyrażenie zgody na uruchamianie kontrolek ActiveX z witryn internetowych w tej strefie. Użytkownik może zezwolić na uruchamianie kontrolki z bieżącej witryny lub ze wszystkich witryn. Jeśli to ustawienie zasad zostanie wyłączone, w poszczególnych witrynach nie będzie wyświetlany monit kontrolki ActiveX i będzie można uruchamiać kontrolki ActiveX ze wszystkich witryn w tej strefie.
-  - **Ustawienie domyślne**: Włączono  
+  - **Ustawienie domyślne**: Enabled  
   
 - **Strefa z ograniczeniami w programie Internet Explorer pozwala inicjować i wykonywać skrypty kontrolek ActiveX, które nie są oznaczone jako bezpieczne**  
   To ustawienie zasad umożliwia zarządzanie kontrolkami ActiveX, które nie są oznaczone jako bezpieczne. Jeśli to ustawienie zasad zostanie włączone, kontrolki ActiveX będą uruchamiane i ładowane z parametrami oraz będą wykonywane ich skrypty bez konieczności ustawiania poziomu bezpieczeństwa obiektów dla niezaufanych danych lub skryptów. To ustawienie nie jest zalecane poza strefami bezpiecznymi i administrowanymi. To ustawienie umożliwia inicjowanie i wykonywanie skryptów zarówno bezpiecznych, jak i niebezpiecznych kontrolek, z jednoczesnym ignorowaniem opcji Wykonaj skrypty kontrolek ActiveX zaznaczone jako bezpieczne. Jeśli to ustawienie zasad zostanie włączone i w polu listy rozwijanej zostanie wybrana pozycja Monituj, użytkownicy będą pytani, czy zezwolić na ładowanie kontrolek z parametrami lub inicjowanych przez skrypty. Jeśli to ustawienie zasad zostanie wyłączone, kontrolki ActiveX, które nie mogą stać się bezpieczne, nie będą ładowane z parametrami ani nie będą wykonywane ich skrypty. Jeśli to ustawienie zasad nie zostanie skonfigurowane, kontrolki ActiveX, które nie mogą stać się bezpieczne, nie będą ładowane z parametrami ani nie będą wykonywane ich skrypty.
@@ -733,24 +733,24 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
 - **Użytkownicy programu Internet Explorer zmieniający zasady**  
     Uniemożliwia użytkownikom zmianę ustawień strefy zabezpieczeń. Strefa zabezpieczeń to grupa witryn internetowych na tym samym poziomie zabezpieczeń. Jeśli te zasady zostaną włączone, przycisk Poziom niestandardowy i suwak poziomu zabezpieczeń na karcie Zabezpieczenia w oknie dialogowym Opcje internetowe będą wyłączone. Jeśli te zasady zostaną wyłączone lub nie zostaną skonfigurowane, użytkownicy będą mogli zmieniać ustawienia stref zabezpieczeń. Te zasady uniemożliwiają użytkownikom zmianę ustawień strefy zabezpieczeń ustanowionych przez administratora. Uwaga: Zasady „Wyłącz stronę Zabezpieczenia” (znajdujące się w katalogu \User Configuration\Administrative Templates\Windows Components\Internet Explorer\Internet Control Panel), które powodują usunięcie karty Zabezpieczenia z programu Internet Explorer w Panelu sterowania, mają pierwszeństwo przed tymi zasadami. Jeśli zostaną włączone, omawiane tu zasady będą ignorowane. Zobacz też zasady „Strefy zabezpieczeń: Używaj tylko ustawień komputera”.
-    - **Ustawienie domyślne**: Wyłączone  
+    - **Ustawienie domyślne**: Wyłącz  
   
 - **Tryb chroniony strefy z ograniczeniami w programie Internet Explorer**  
   To ustawienie zasad umożliwia włączenie trybu chronionego. Tryb chroniony ułatwia ochronę programu Internet Explorer przed wykorzystywaniem luk w zabezpieczeniach, zmniejszając liczbę lokalizacji, w których program Internet Explorer może zapisywać w rejestrze i w systemie plików. Jeśli to ustawienie zasad zostanie włączone, tryb chroniony będzie włączony. Użytkownik nie będzie mógł wyłączyć trybu chronionego. Jeśli to ustawienie zasad zostanie wyłączone, tryb chroniony będzie wyłączony. Użytkownik nie będzie mógł włączyć trybu chronionego. Jeśli to ustawienie zasad nie zostanie skonfigurowane, użytkownik będzie mógł włączać i wyłączać tryb chroniony.
-  - **Ustawienie domyślne**: Włączenie  
+  - **Ustawienie domyślne**: Włącz  
   
 - **Trwałość danych użytkownika w strefie internetowej programu Internet Explorer**  
   To ustawienie zasad umożliwia zarządzanie zachowywaniem informacji w historii przeglądarki, w ulubionych, w magazynie XML lub bezpośrednio na stronie internetowej zapisanej na dysku. Gdy użytkownik wróci na utrwaloną stronę, a ustawienie zasad zostało odpowiednio skonfigurowane, będzie można przywrócić stan strony. Jeśli to ustawienie zasad zostanie włączone, użytkownicy będą mogli zarządzać zachowywaniem informacji w historii przeglądarki, w ulubionych, w magazynie XML lub bezpośrednio na stronie internetowej zapisanej na dysku. Jeśli to ustawienie zasad zostanie wyłączone, użytkownicy nie będą mogli zarządzać zachowywaniem informacji w historii przeglądarki, w ulubionych, w magazynie XML lub bezpośrednio na stronie internetowej zapisanej na dysku. Jeśli to ustawienie zasad nie zostanie skonfigurowane, użytkownicy będą mogli zarządzać zachowywaniem informacji w historii przeglądarki, w ulubionych, w magazynie XML lub bezpośrednio na stronie internetowej zapisanej na dysku.
-  - **Ustawienie domyślne**: Wyłączone  
+  - **Ustawienie domyślne**: Wyłącz  
   
 - **Wykonywanie skryptów kontrolek przeglądarki internetowej w strefie internetowej programu Internet Explorer**  
  
   To ustawienie zasad określa, czy strona może kontrolować osadzone kontrolki WebBrowser za pomocą skryptu. Jeśli to ustawienie zasad zostanie włączone, dostęp skryptów do kontrolki WebBrowser będzie dozwolony. Jeśli to ustawienie zasad zostanie wyłączone, dostęp skryptów do kontrolki WebBrowser nie będzie dozwolony. Jeśli to ustawienie zasad nie zostanie skonfigurowane, użytkownik będzie mógł włączyć lub wyłączyć dostęp skryptów do kontrolki WebBrowser. Domyślnie dostęp skryptów do kontrolki WebBrowser jest dozwolony tylko w strefach Komputer lokalny i Intranet.
-  - **Ustawienie domyślne**: Wyłączone  
+  - **Ustawienie domyślne**: Wyłącz  
   
 - **Trwałość danych użytkownika w strefie z ograniczeniami w programie Internet Explorer**  
     To ustawienie zasad umożliwia zarządzanie zachowywaniem informacji w historii przeglądarki, w ulubionych, w magazynie XML lub bezpośrednio na stronie internetowej zapisanej na dysku. Gdy użytkownik wróci na utrwaloną stronę, a ustawienie zasad zostało odpowiednio skonfigurowane, będzie można przywrócić stan strony. Jeśli to ustawienie zasad zostanie włączone, użytkownicy będą mogli zarządzać zachowywaniem informacji w historii przeglądarki, w ulubionych, w magazynie XML lub bezpośrednio na stronie internetowej zapisanej na dysku. Jeśli to ustawienie zasad zostanie wyłączone, użytkownicy nie będą mogli zarządzać zachowywaniem informacji w historii przeglądarki, w ulubionych, w magazynie XML lub bezpośrednio na stronie internetowej zapisanej na dysku. Jeśli to ustawienie zasad nie zostanie skonfigurowane, użytkownicy nie będą mogli zarządzać ochroną informacji w historii przeglądarki, w ulubionych, w magazynie XML lub bezpośrednio na stronie internetowej zapisanej na dysku.  
-  - **Ustawienie domyślne**: Wyłączone  
+  - **Ustawienie domyślne**: Wyłącz  
   
 - **Zablokowane uprawnienia języka Java w strefie intranetowej programu Internet Explorer**  
   To ustawienie zasad umożliwia zarządzanie uprawnieniami dotyczącymi apletów Java. Jeśli to ustawienie zasad zostanie włączone, będzie można wybierać opcje z listy rozwijanej. Ustawienie Niestandardowe umożliwia kontrolowanie ustawień uprawnień pojedynczo. Ustawienie Niski poziom zabezpieczeń umożliwia apletom wykonywanie wszystkich operacji. Ustawienie Średni poziom zabezpieczeń umożliwia uruchamianie apletów w ich piaskownicy (obszarze pamięci, poza którym program nie może wykonywać wywołań) oraz udostępnia funkcje, takie jak obszar na pliki tymczasowe (bezpieczny obszar magazynu na komputerze klienckim) i kontrolowane przez użytkownika operacje we/wy na plikach. Ustawienie Wysoki poziom zabezpieczeń umożliwia uruchamianie apletów w ich piaskownicy. Wyłącz język Java, aby uniemożliwić uruchamianie jakichkolwiek apletów. Jeśli to ustawienie zasad zostanie wyłączone, nie będzie można uruchamiać apletów Java. Jeśli to ustawienie zasad nie zostanie skonfigurowane, aplety Java będą wyłączone.
@@ -758,15 +758,15 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
 - **Rozszerzony tryb chroniony programu Internet Explorer**  
   Rozszerzony tryb chroniony zapewnia dodatkową ochronę przed złośliwymi witrynami internetowymi dzięki użyciu 64-bitowych procesów w 64-bitowych wersjach systemu Windows. Na komputerach z systemem w wersji co najmniej Windows 8 rozszerzony tryb chroniony ogranicza także lokalizacje, z których program Internet Explorer może czytać w rejestrze i w systemie plików. Jeśli to ustawienie zasad zostanie włączone, rozszerzony tryb chroniony będzie włączony. W każdej strefie, w której włączono tryb chroniony, będzie używany rozszerzony tryb chroniony. Użytkownicy nie będą mogli wyłączyć rozszerzonego trybu chronionego. Jeśli to ustawienie zasad zostanie wyłączone, rozszerzony tryb chroniony będzie wyłączony. We wszystkich strefach z włączonym trybem chronionym będzie używana wersja trybu chronionego wprowadzona w programie Internet Explorer 7 dla systemu Windows Vista. Jeśli te zasady nie zostaną skonfigurowane, użytkownicy będą mogli włączać i wyłączać rozszerzony tryb chroniony na karcie Zaawansowane w oknie dialogowym Opcje internetowe.
-  - **Ustawienie domyślne**: Włączono  
+  - **Ustawienie domyślne**: Enabled  
   
 - **Program Internet Explorer pomija ostrzeżenia filtra SmartScreen**  
   To ustawienie zasad określa, czy użytkownik może pomijać ostrzeżenia filtra SmartScreen. Filtr SmartScreen wysyła do użytkownika ostrzeżenia o plikach wykonywalnych, których użytkownicy programu Internet Explorer nie pobierają często z Internetu. Jeśli to ustawienie zasad zostanie włączone, ostrzeżenia filtra SmartScreen będą blokować użytkownika. Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, użytkownik będzie mógł pomijać ostrzeżenia filtra SmartScreen.
-  - **Ustawienie domyślne**: Wyłączone  
+  - **Ustawienie domyślne**: Wyłącz  
   
 - **Ustawienie Meta Refresh w strefie z ograniczeniami w programie Internet Explorer**  
   To ustawienie zasad umożliwia zarządzanie tym, czy przeglądarka użytkownika może być przekierowywana do innej strony internetowej, gdy autor strony internetowej używa ustawienia (tagu) Meta Refresh w celu przekierowywania przeglądarek do innej strony internetowej. Jeśli to ustawienie zasad zostanie włączone, przeglądarka użytkownika, która ładuje stronę zawierającą aktywne ustawienie Meta Refresh, będzie mogła zostać przekierowana do innej strony internetowej. Jeśli to ustawienie zasad zostanie wyłączone, przeglądarka użytkownika, która ładuje stronę zawierającą aktywne ustawienie Meta Refresh, nie będzie mogła zostać przekierowana do innej strony internetowej. Jeśli to ustawienie zasad nie zostanie skonfigurowane, przeglądarka użytkownika, która ładuje stronę zawierającą aktywne ustawienie Meta Refresh, nie będzie mogła zostać przekierowana do innej strony internetowej.
-  - **Ustawienie domyślne**: Wyłączone  
+  - **Ustawienie domyślne**: Wyłącz  
   
 ## <a name="local-policies-security-options"></a>Opcje zabezpieczeń zasad lokalnych
 Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji zasad — LocalPoliciesSecurityOptions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions) w dokumentacji systemu Windows. 
@@ -776,7 +776,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   - **Ustawienie domyślne**: Tak  
   
 - **Minimalne zabezpieczenia sesji dla serwerów opartych ma technologii SSP NTLM**  
-  To ustawienie zabezpieczeń pozwala serwerowi na wymaganie negocjacji szyfrowania 128-bitowego i/lub zabezpieczeń sesji NTLMv2. Te wartości są zależne od wartości ustawienia zabezpieczeń Poziom uwierzytelniania programu LAN Manager. Dostępne są następujące opcje: Wymagaj zabezpieczeń sesji NTLMv2: Połączenie będzie nieudane, jeśli nie zostanie wynegocjowana integralność komunikatu. Wymagaj szyfrowania 128-bitowego. Połączenie będzie nieudane, jeśli nie zostanie wynegocjowane silne szyfrowanie (128-bitowe).
+  To ustawienie zabezpieczeń pozwala serwerowi na wymaganie negocjacji szyfrowania 128-bitowego i/lub zabezpieczeń sesji NTLMv2. Te wartości są zależne od wartości ustawienia zabezpieczeń Poziom uwierzytelniania programu LAN Manager. Dostępne opcje to: Wymagaj zabezpieczeń sesji NTLMv2: Połączenie będzie nieudane, jeśli nie zostanie wynegocjowana integralność komunikatu. Wymagaj szyfrowania 128-bitowego. Połączenie będzie nieudane, jeśli nie zostanie wynegocjowane silne szyfrowanie (128-bitowe).
   - **Ustawienie domyślne**: Wymagaj protokołu NTLM V2 i szyfrowania 128-bitowego  
   
 - **Liczba minut braku aktywności na ekranie blokady przed aktywowaniem wygaszacza ekranu**  
@@ -799,15 +799,15 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   - **Ustawienie domyślne**: Tak
   
 - **Działanie monitu o podniesienie uprawnień administratora**  
-  To ustawienie zasad steruje działaniem monitu o podniesienie uprawnień w przypadku administratorów. Dostępne są następujące opcje: 0 — Podnieś bez monitowania: Umożliwia uprzywilejowanym kontom wykonanie operacji, która wymaga podniesienia uprawnień, bez konieczności wymagania zgody lub poświadczeń. Uwaga: Tej opcji należy używać tylko w środowiskach z największymi ograniczeniami. 1 — Monituj o podanie poświadczeń na bezpiecznym pulpicie: Jeśli operacja wymaga podniesienia uprawnień, na bezpiecznym pulpicie zostanie wyświetlony monit o wprowadzenie nazwy i hasła uprzywilejowanego użytkownika. Jeśli użytkownik wprowadzi prawidłowe poświadczenia, operacja będzie kontynuowana przy użyciu najwyższych dostępnych uprawnień użytkownika. 2 — Monituj o zgodę na bezpiecznym pulpicie: Jeśli operacja wymaga podniesienia uprawnień, na bezpiecznym pulpicie zostanie wyświetlony monit o wybranie pozycji Zezwól lub Odmów. Jeśli użytkownik wybierze pozycję Zezwól, operacja będzie kontynuowana przy użyciu najwyższych dostępnych uprawnień użytkownika. 3 — Monituj o poświadczenia: Jeśli operacja wymaga podniesienia uprawnień, zostanie wyświetlony monit o wprowadzenie nazwy i hasła użytkownika administracyjnego. Jeśli użytkownik wprowadzi prawidłowe poświadczenia, operacja będzie kontynuowana przy użyciu odpowiednich uprawnień. 4 — Monituj o zgodę: Jeśli operacja wymaga podniesienia uprawnień, zostanie wyświetlony monit o wybranie pozycji Zezwól lub Odmów. Jeśli użytkownik wybierze pozycję Zezwól, operacja będzie kontynuowana przy użyciu najwyższych dostępnych uprawnień użytkownika. 5 — Monituj o zgodę w przypadku plików binarnych z systemem innym niż Windows: (Ustawienie domyślne) Jeśli operacja dotycząca aplikacji firmy innej niż Microsoft wymaga podniesienia uprawnień, na bezpiecznym pulpicie zostanie wyświetlony monit o wybranie pozycji Zezwól lub Odmów. Jeśli użytkownik wybierze pozycję Zezwól, operacja będzie kontynuowana przy użyciu najwyższych dostępnych uprawnień użytkownika
+  To ustawienie zasad steruje działaniem monitu o podniesienie uprawnień w przypadku administratorów. Dostępne opcje to: 0 — Podnieś bez monitowania: Umożliwia uprzywilejowanym kontom wykonanie operacji, która wymaga podniesienia uprawnień, bez konieczności wymagania zgody lub poświadczeń. Uwaga: Tej opcji należy używać tylko w środowiskach z największymi ograniczeniami. 1 — Monituj o podanie poświadczeń na bezpiecznym pulpicie: Jeśli operacja wymaga podniesienia uprawnień, na bezpiecznym pulpicie zostanie wyświetlony monit o wprowadzenie nazwy i hasła uprzywilejowanego użytkownika. Jeśli użytkownik wprowadzi prawidłowe poświadczenia, operacja będzie kontynuowana przy użyciu najwyższych dostępnych uprawnień użytkownika. 2 — Monituj o zgodę na bezpiecznym pulpicie: Jeśli operacja wymaga podniesienia uprawnień, na bezpiecznym pulpicie zostanie wyświetlony monit o wybranie pozycji Zezwól lub Odmów. Jeśli użytkownik wybierze pozycję Zezwól, operacja będzie kontynuowana przy użyciu najwyższych dostępnych uprawnień użytkownika. 3 — Monituj o poświadczenia: Jeśli operacja wymaga podniesienia uprawnień, zostanie wyświetlony monit o wprowadzenie nazwy i hasła użytkownika administracyjnego. Jeśli użytkownik wprowadzi prawidłowe poświadczenia, operacja będzie kontynuowana przy użyciu odpowiednich uprawnień. 4 — Monituj o zgodę: Jeśli operacja wymaga podniesienia uprawnień, zostanie wyświetlony monit o wybranie pozycji Zezwól lub Odmów. Jeśli użytkownik wybierze pozycję Zezwól, operacja będzie kontynuowana przy użyciu najwyższych dostępnych uprawnień użytkownika. 5 — Monituj o zgodę w przypadku plików binarnych z systemem innym niż Windows: (Ustawienie domyślne) Jeśli operacja dotycząca aplikacji firmy innej niż Microsoft wymaga podniesienia uprawnień, na bezpiecznym pulpicie zostanie wyświetlony monit o wybranie pozycji Zezwól lub Odmów. Jeśli użytkownik wybierze pozycję Zezwól, operacja będzie kontynuowana przy użyciu najwyższych dostępnych uprawnień użytkownika
   - **Ustawienie domyślne**: Monituj o zgodę na bezpiecznym pulpicie
   
 - **Minimalne zabezpieczenia sesji dla klientów opartych na technologii SSP NTLM**  
-  To ustawienie zabezpieczeń pozwala klientowi na wymaganie negocjacji szyfrowania 128-bitowego i/lub zabezpieczeń sesji NTLMv2. Te wartości są zależne od wartości ustawienia zabezpieczeń Poziom uwierzytelniania programu LAN Manager. Dostępne są następujące opcje: Wymagaj zabezpieczeń sesji NTLMv2: Połączenie będzie nieudane, jeśli nie zostanie wynegocjowany protokół NTLMv2. Wymagaj szyfrowania 128-bitowego: Połączenie będzie nieudane, jeśli nie zostanie wynegocjowane silne szyfrowanie (128-bitowe).
+  To ustawienie zabezpieczeń pozwala klientowi na wymaganie negocjacji szyfrowania 128-bitowego i/lub zabezpieczeń sesji NTLMv2. Te wartości są zależne od wartości ustawienia zabezpieczeń Poziom uwierzytelniania programu LAN Manager. Dostępne opcje to: Wymagaj zabezpieczeń sesji NTLMv2: Połączenie będzie nieudane, jeśli nie zostanie wynegocjowany protokół NTLMv2. Wymagaj szyfrowania 128-bitowego: Połączenie będzie nieudane, jeśli nie zostanie wynegocjowane silne szyfrowanie (128-bitowe).
   - **Ustawienie domyślne**: Wymagaj protokołu NTLM V2 i szyfrowania 128-bitowego
   
 - **Zachowanie po wyjęciu karty inteligentnej**  
-  To ustawienie zabezpieczeń określa, co się stanie, gdy karta inteligentna zalogowanego użytkownika zostanie usunięta z czytnika kart inteligentnych. Dostępne są następujące opcje: Brak akcji Zablokuj stację roboczą Wymuś wylogowanie Rozłącz, gdy istnieje sesja usług pulpitu zdalnego Jeśli w oknie dialogowym Właściwości dla tych zasad zostanie kliknięta pozycja Zablokuj stację roboczą, po wyjęciu karty inteligentnej stacja robocza zostanie zablokowana, umożliwiając użytkownikom opuszczenie miejsca, zabranie karty inteligentnej ze sobą i zachowanie sesji chronionej. Jeśli w oknie dialogowym Właściwości dla tych zasad zostanie kliknięta pozycja Wymuś wylogowanie, po wyjęciu karty inteligentnej użytkownik zostanie automatycznie wylogowany. Jeśli zostanie kliknięta pozycja Rozłącz, gdy istnieje sesja usług pulpitu zdalnego, usunięcie karty inteligentnej spowoduje rozłączenie sesji bez wylogowywania użytkownika. Umożliwia to użytkownikowi włożenie karty inteligentnej i wznowienie sesji w późniejszym czasie lub na innym komputerze z czytnikiem kart inteligentnych bez konieczności ponownego logowania się. Jeśli sesja jest lokalna, te zasady działają tak samo, jak w przypadku opcji Zablokuj stację roboczą.
+  To ustawienie zabezpieczeń określa, co się stanie, gdy karta inteligentna zalogowanego użytkownika zostanie usunięta z czytnika kart inteligentnych. Dostępne opcje to: Brak akcji Zablokuj stację roboczą Wymuś wylogowanie Rozłącz, gdy istnieje sesja usług pulpitu zdalnego Jeśli w oknie dialogowym Właściwości dla tych zasad zostanie kliknięta pozycja Zablokuj stację roboczą, po wyjęciu karty inteligentnej stacja robocza zostanie zablokowana, umożliwiając użytkownikom opuszczenie miejsca, zabranie karty inteligentnej ze sobą i zachowanie sesji chronionej. Jeśli w oknie dialogowym Właściwości dla tych zasad zostanie kliknięta pozycja Wymuś wylogowanie, po wyjęciu karty inteligentnej użytkownik zostanie automatycznie wylogowany. Jeśli zostanie kliknięta pozycja Rozłącz, gdy istnieje sesja usług pulpitu zdalnego, usunięcie karty inteligentnej spowoduje rozłączenie sesji bez wylogowywania użytkownika. Umożliwia to użytkownikowi włożenie karty inteligentnej i wznowienie sesji w późniejszym czasie lub na innym komputerze z czytnikiem kart inteligentnych bez konieczności ponownego logowania się. Jeśli sesja jest lokalna, te zasady działają tak samo, jak w przypadku opcji Zablokuj stację roboczą.
   - **Ustawienie domyślne**: Zablokuj stację roboczą
   
 - **Blokuj anonimowe wyliczanie kont SAM i udziałów**  
@@ -823,7 +823,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   - **Ustawienie domyślne**: Automatycznie odrzucaj żądania podniesienia uprawnień
   
 - **Wymagaj trybu zatwierdzania przez administratora dla administratorów**  
-  To ustawienie zasad kontroluje zachowanie wszystkich ustawień zasad funkcji Kontrola konta użytkownika (UAC) dla komputera. Jeśli to ustawienie zasad zostanie zmienione, należy uruchomić ponownie komputer. Dostępne są następujące opcje: 0 — Wyłączone: Tryb zatwierdzania przez administratora i wszystkie powiązane ustawienia zasad funkcji Kontrola konta użytkownika będą wyłączone. Uwaga: Jeśli to ustawienie zasad zostanie wyłączone, Centrum zabezpieczeń powiadomi Cię o pogorszeniu ogólnego stanu zabezpieczeń systemu operacyjnego. 1 — Włączone: (Ustawienie domyślne) Tryb zatwierdzania przez administratora będzie włączony. Te zasady muszą być włączone, a powiązane z nimi ustawienia zasad funkcji Kontrola konta użytkownika muszą być także odpowiednio ustawione, aby wbudowane konto administratora i wszystkich pozostałych użytkowników, którzy są członkami grupy Administratorzy, można było uruchamiać w trybie zatwierdzania przez administratora.
+  To ustawienie zasad kontroluje zachowanie wszystkich ustawień zasad funkcji Kontrola konta użytkownika (UAC) dla komputera. Jeśli to ustawienie zasad zostanie zmienione, należy uruchomić ponownie komputer. Dostępne opcje to: 0 — Wyłączone: Tryb zatwierdzania przez administratora i wszystkie powiązane ustawienia zasad funkcji Kontrola konta użytkownika będą wyłączone. Uwaga: Jeśli to ustawienie zasad zostanie wyłączone, Centrum zabezpieczeń powiadomi Cię o pogorszeniu ogólnego stanu zabezpieczeń systemu operacyjnego. 1 — Włączone: (Ustawienie domyślne) Tryb zatwierdzania przez administratora będzie włączony. Te zasady muszą być włączone, a powiązane z nimi ustawienia zasad funkcji Kontrola konta użytkownika muszą być także odpowiednio ustawione, aby wbudowane konto administratora i wszystkich pozostałych użytkowników, którzy są członkami grupy Administratorzy, można było uruchamiać w trybie zatwierdzania przez administratora.
   - **Ustawienie domyślne**: Tak
   
 - **Zapobiegaj anonimowemu wyliczaniu kont SAM**  
@@ -843,7 +843,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   - **Ustawienie domyślne**: Tak
 
 - **Wykrywanie instalacji aplikacji i monitowanie o podniesienie uprawnień**  
-  To ustawienie zasad steruje zachowaniem wykrywania instalacji aplikacji na komputerze. Dostępne są następujące opcje: Włączone: (Ustawienie domyślne) W przypadku wykrycia pakietu instalacyjnego aplikacji, który wymaga podwyższonego poziomu uprawnień, użytkownik jest monitowany o podanie nazwy użytkownika administracyjnego i hasła. Jeśli użytkownik wprowadzi prawidłowe poświadczenia, operacja będzie kontynuowana przy użyciu odpowiednich uprawnień. Disabled: Pakiety instalacyjne aplikacji nie są wykrywane i monitowane o podniesienie poziomu uprawnień. W przedsiębiorstwach, które korzystają z pulpitów użytkowników standardowych i technologii instalacji delegowanej, takich jak instalacja oprogramowania zasad grupy lub Systems Management Server (SMS), to ustawienie zasad powinno zostać wyłączone. W tym przypadku wykrywanie instalatora nie jest konieczne.
+  To ustawienie zasad steruje zachowaniem wykrywania instalacji aplikacji na komputerze. Dostępne opcje to: Włączone: (Ustawienie domyślne) W przypadku wykrycia pakietu instalacyjnego aplikacji, który wymaga podwyższonego poziomu uprawnień, użytkownik jest monitowany o podanie nazwy użytkownika administracyjnego i hasła. Jeśli użytkownik wprowadzi prawidłowe poświadczenia, operacja będzie kontynuowana przy użyciu odpowiednich uprawnień. Disabled: Pakiety instalacyjne aplikacji nie są wykrywane i monitowane o podniesienie poziomu uprawnień. W przedsiębiorstwach, które korzystają z pulpitów użytkowników standardowych i technologii instalacji delegowanej, takich jak instalacja oprogramowania zasad grupy lub Systems Management Server (SMS), to ustawienie zasad powinno zostać wyłączone. W tym przypadku wykrywanie instalatora nie jest konieczne.
   - **Ustawienie domyślne**: Tak
   
 - **Zapobiegaj przechowywaniu wartości skrótu programu LAN Manager dla następnej zmiany hasła**  
@@ -858,19 +858,19 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
 Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji zasad — MSSecurityGuide](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-mssecurityguide) w dokumentacji systemu Windows.  
 
 - **Stosuj ograniczenia funkcji Kontrola konta użytkownika do kont lokalnych podczas logowania do sieci**  
-    - **Ustawienie domyślne**: Włączono
+    - **Ustawienie domyślne**: Enabled
   
 - **Konfiguracja uruchamiania sterownika klienta SMB v1**  
   - **Ustawienie domyślne**: Sterownik wyłączony
   
 - **Serwer SMB v1**  
-  - **Ustawienie domyślne**: Wyłączone
+  - **Ustawienie domyślne**: Wyłącz
   
 - **Uwierzytelnianie szyfrowane**  
-  - **Ustawienie domyślne**: Wyłączone
+  - **Ustawienie domyślne**: Wyłącz
   
 - **Ochrona przed zastąpieniem obsługi wyjątków strukturalnych**  
-  - **Ustawienie domyślne**: Włączono
+  - **Ustawienie domyślne**: Enabled
   
 ## <a name="mss-legacy"></a>Starsza wersja MSS  
 Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji zasad — MSSLegacy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-msslegacy) w dokumentacji systemu Windows.  
@@ -879,51 +879,51 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   - **Ustawienie domyślne**: Najwyższa ochrona 
   
 - **Sieć ignoruje żądania wydania nazwy NetBIOS z wyjątkiem żądań z serwerów WINS**  
-  - **Ustawienie domyślne**: Włączono
+  - **Ustawienie domyślne**: Enabled
   
 - **Poziom ochrony routingu źródła protokołu IPv6 sieci**  
   - **Ustawienie domyślne**: Najwyższa ochrona
 
 - **Przekierowania protokołu ICMP sieci zastępują wygenerowane przez OSPF**  
-  - **Ustawienie domyślne**: Wyłączone
+  - **Ustawienie domyślne**: Wyłącz
   
 ## <a name="power"></a>Zasilanie  
 Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji zasad — Power](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power) w dokumentacji systemu Windows.  
 
 - **Wymagaj hasła przy wznawianiu, gdy urządzenie jest zasilane z sieci**  
   To ustawienie zasad określa, czy użytkownik ma być monitowany o podanie hasła podczas wznawiania działania systemu po trybie uśpienia. Jeśli to ustawienie zasad zostanie włączone lub nie zostanie skonfigurowane, użytkownik będzie monitowany o podanie hasła podczas wznawiania działania systemu po trybie uśpienia. Jeśli to ustawienie zasad zostanie wyłączone, użytkownik nie będzie monitowany o podanie hasła podczas wznawiania działania systemu po trybie uśpienia.
-  - **Ustawienie domyślne**: Włączono
+  - **Ustawienie domyślne**: Enabled
   
 - **Stany wstrzymania podczas uśpienia, gdy urządzenie jest zasilane z baterii**  
   To ustawienie zasad określa, czy system Windows może używać stanów wstrzymania podczas przełączania komputera w stan uśpienia. Jeśli to ustawienie zasad zostanie włączone lub nie zostanie skonfigurowane, system Windows będzie używał stanów wstrzymania do przełączania komputera w stan uśpienia. Jeśli to ustawienie zasad zostanie wyłączone, stany wstrzymania (S1–S3) będą niedozwolone.
-  - **Ustawienie domyślne**: Wyłączone
+  - **Ustawienie domyślne**: Wyłącz
   
 - **Stany wstrzymania podczas uśpienia, gdy urządzenie jest zasilane z sieci**  
   To ustawienie zasad określa, czy system Windows może używać stanów wstrzymania podczas przełączania komputera w stan uśpienia. Jeśli to ustawienie zasad zostanie włączone lub nie zostanie skonfigurowane, system Windows będzie używał stanów wstrzymania do przełączania komputera w stan uśpienia. Jeśli to ustawienie zasad zostanie wyłączone, stany wstrzymania (S1–S3) będą niedozwolone.
-  - **Ustawienie domyślne**: Wyłączone
+  - **Ustawienie domyślne**: Wyłącz
   
 - **Wymagaj hasła przy wznawianiu, gdy urządzenie jest zasilane z baterii**  
   To ustawienie zasad określa, czy użytkownik ma być monitowany o podanie hasła podczas wznawiania działania systemu po trybie uśpienia. Jeśli to ustawienie zasad zostanie włączone lub nie zostanie skonfigurowane, użytkownik będzie monitowany o podanie hasła podczas wznawiania działania systemu po trybie uśpienia. Jeśli to ustawienie zasad zostanie wyłączone, użytkownik nie będzie monitowany o podanie hasła podczas wznawiania działania systemu po trybie uśpienia.
-  - **Ustawienie domyślne**: Włączono
+  - **Ustawienie domyślne**: Enabled
   
 ## <a name="remote-desktop-services"></a>Usługi pulpitu zdalnego  
 Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji zasad — RemoteDesktopServices](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotedesktopservices) w dokumentacji systemu Windows.  
 
 - **Blokuj zapisywanie haseł**  
   Określa, czy hasła mogą być zapisywane w oknie Podłączanie pulpitu zdalnego na tym komputerze. Jeśli to ustawienie zostanie włączone, pole wyboru zapisywania haseł w oknie Podłączanie pulpitu zdalnego będzie wyłączone, a użytkownicy nie będą już mogli zapisywać haseł. Gdy użytkownik otworzy plik RDP za pomocą funkcji Podłączanie pulpitu zdalnego i zapisze swoje ustawienia, wszystkie hasła, które wcześniej istniały w pliku RDP, zostaną usunięte. Jeśli to ustawienie zostanie wyłączone lub nie zostanie skonfigurowane, użytkownik będzie mógł zapisywać hasła za pomocą funkcji Podłączanie pulpitu zdalnego.
-  - **Ustawienie domyślne**: Włączono
+  - **Ustawienie domyślne**: Enabled
   
 - **Bezpieczna komunikacja RPC**  
   Określa, czy serwer hosta sesji usług pulpitu zdalnego będzie wymagał bezpiecznej komunikacji RPC ze wszystkimi klientami, czy też będzie umożliwiał komunikację niezabezpieczoną. To ustawienie umożliwia poprawę zabezpieczeń komunikacji RPC z klientami, zezwalając tylko na żądania uwierzytelnione i szyfrowane. Jeśli stan zostanie ustawiony na Włączono, usługi pulpitu zdalnego będą akceptowały żądania od klientów RPC obsługujących bezpieczne żądania, a nie będą zezwalały na niezabezpieczoną komunikację z klientami niezaufanymi. Jeśli stan zostanie ustawiony na Wyłączono, usługi pulpitu zdalnego zawsze będą żądały zabezpieczeń dla całego ruchu RPC. Jednak niezabezpieczona komunikacja będzie dozwolona w przypadku klientów RPC, którzy nie odpowiadają na żądanie. Jeśli stan zostanie ustawiony na Nie skonfigurowano, niezabezpieczona komunikacja będzie dozwolona. Uwaga: Interfejs usług RPC służy do administrowania usługami pulpitu zdalnego i ich konfigurowania.
-  - **Ustawienie domyślne**: Włączono
+  - **Ustawienie domyślne**: Enabled
   
 - **Blokuj przekierowywanie dysków**  
   To ustawienie zasad określa, czy zapobiegać mapowaniu dysków klienta w ramach sesji usług pulpitu zdalnego (przekierowywaniu dysków). Domyślnie serwer hosta sesji usług pulpitu zdalnego automatycznie mapuje dyski klienta po podłączeniu. Zamapowane dyski są wyświetlane w drzewie folderów sesji w Eksploratorze plików lub na komputerze w formacie *\<litera_dysku>* na *\<nazwa_komputera>*. To ustawienie zasad umożliwia zmianę tego zachowania. Jeśli to ustawienie zasad zostanie włączone, przekierowywanie dysków klienta nie będzie dozwolone w ramach sesji usług pulpitu zdalnego, a przekierowywanie kopii plików ze Schowka nie będzie dozwolone na komputerach z systemami Windows Server 2003, Windows 8 i Windows XP. Jeśli to ustawienie zasad zostanie wyłączone, przekierowywanie dysków klienta będzie zawsze dozwolone. Ponadto przekierowywanie kopii plików ze Schowka będzie zawsze dozwolone, gdy będzie dozwolone przekierowywanie Schowka. Jeśli to ustawienie zasad nie zostanie skonfigurowane, przekierowywanie dysków klienta i przekierowywanie kopii plików ze Schowka nie będzie określane na poziomie zasad grupy.
-  - **Ustawienie domyślne**: Włączono
+  - **Ustawienie domyślne**: Enabled
   
 - **Monit o podanie hasła podczas nawiązywania połączenia**  
   To ustawienie zasad określa, czy usługi pulpitu zdalnego zawsze będą wyświetlały klientowi monit o podanie hasła podczas nawiązywania połączenia. To ustawienie służy do wymuszania monitu o podanie hasła dla użytkowników, którzy logują się do usług pulpitu zdalnego, nawet wtedy, gdy podali już hasło w kliencie usługi Podłączanie pulpitu zdalnego. Domyślnie usługi pulpitu zdalnego umożliwiają użytkownikom automatyczne logowanie się po wprowadzeniu hasła w kliencie usługi Podłączanie pulpitu zdalnego. Jeśli to ustawienie zasad zostanie włączone, użytkownicy nie będą mogli automatycznie logować się do usług pulpitu zdalnego po podaniu haseł w kliencie usługi Podłączanie pulpitu zdalnego. Będą monitowani o podanie hasła w celu zalogowania. Jeśli to ustawienie zasad zostanie wyłączone, użytkownicy zawsze będą mogli automatycznie logować się do usług pulpitu zdalnego po podaniu haseł w kliencie usługi Podłączanie pulpitu zdalnego. Jeśli to ustawienie zasad nie zostanie skonfigurowane, automatyczne logowanie nie będzie określane na poziomie zasad grupy. 
-  - **Ustawienie domyślne**: Włączono
+  - **Ustawienie domyślne**: Enabled
   
 - **Poziom szyfrowania połączeń klienta usług pulpitu zdalnego**  
   Określa, czy do zabezpieczenia komunikacji między komputerami klienckimi a serwerami hosta sesji usług pulpitu zdalnego podczas połączeń za pomocą protokołu RDP (Remote Desktop Protocol) ma być wymagane użycie określonego poziomu szyfrowania. Te zasady mają zastosowanie tylko wtedy, gdy jest używane szyfrowanie natywne RDP. Jednak szyfrowanie natywne RDP (w przeciwieństwie do szyfrowania SSL) nie jest zalecane. Te zasady nie dotyczą szyfrowania SSL. Jeśli to ustawienie zasad zostanie włączone, cała komunikacja między klientami a serwerami hosta sesji usług pulpitu zdalnego podczas połączeń zdalnych będą musiały używać metody szyfrowania określonej w tym ustawieniu. Domyślnie poziom szyfrowania jest ustawiony na Wysoki. Dostępne są następujące metody szyfrowania:  
@@ -939,27 +939,27 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
 
 - **Blokuj przechowywanie poświadczeń Uruchom jako**  
   Uwierzytelnianie podstawowe klienta
-  - **Ustawienie domyślne**: Włączono
+  - **Ustawienie domyślne**: Enabled
   
 - **Uwierzytelnianie podstawowe**  
   To ustawienie zasad umożliwia zarządzanie tym, czy usługa Windows Remote Management (WinRM) będzie akceptowała uwierzytelnianie podstawowe z klienta zdalnego. Jeśli to ustawienie zasad zostanie włączone, usługa WinRM będzie akceptowała uwierzytelnianie podstawowe z klienta zdalnego. Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, usługa WinRM nie będzie akceptowała uwierzytelniania podstawowego z klienta zdalnego.
-  - **Ustawienie domyślne**: Wyłączone
+  - **Ustawienie domyślne**: Wyłącz
   
 - **Blokuj uwierzytelnianie szyfrowane klienta**  
   To ustawienie zasad umożliwia zarządzanie tym, czy klient usługi Windows Remote Management (WinRM) będzie używał uwierzytelniania szyfrowanego. Jeśli to ustawienie zasad zostanie włączone, klient usługi WinRM nie będzie używał uwierzytelniania szyfrowanego. Jeśli to ustawienie zostanie wyłączone lub nie zostanie skonfigurowane, klient usługi WinRM będzie używał uwierzytelniania szyfrowanego.
-  - **Ustawienie domyślne**: Włączono
+  - **Ustawienie domyślne**: Enabled
   
 - **Ruch niezaszyfrowany**  
   To ustawienie zasad umożliwia zarządzanie tym, czy usługa Windows Remote Management (WinRM) będzie wysyłała i odbierała niezaszyfrowane komunikaty za pośrednictwem sieci. Jeśli to ustawienie zasad zostanie włączone, klient usługi WinRM będzie wysyłał i odbierał niezaszyfrowane komunikaty za pośrednictwem sieci. Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, klient usługi WinRM będzie wysyłał i odbierał tylko zaszyfrowane komunikaty za pośrednictwem sieci.  
-  - **Ustawienie domyślne**: Wyłączone
+  - **Ustawienie domyślne**: Wyłącz
   
 - **Niezaszyfrowany ruch klienta**  
   To ustawienie zasad umożliwia zarządzanie tym, czy klient usługi Windows Remote Management (WinRM) będzie wysyłał i odbierał niezaszyfrowane komunikaty za pośrednictwem sieci. Jeśli to ustawienie zasad zostanie włączone, klient usługi WinRM będzie wysyłał i odbierał niezaszyfrowane komunikaty za pośrednictwem sieci. Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, klient usługi WinRM będzie wysyłał i odbierał tylko zaszyfrowane komunikaty za pośrednictwem sieci.
-  - **Ustawienie domyślne**: Wyłączone
+  - **Ustawienie domyślne**: Wyłącz
   
 - **Uwierzytelnianie podstawowe klienta**  
   To ustawienie zasad umożliwia zarządzanie tym, czy klient usługi Windows Remote Management (WinRM) będzie używał uwierzytelniania podstawowego. Jeśli to ustawienie zasad zostanie włączone, klient usługi WinRM będzie używał uwierzytelniania podstawowego. Jeśli usługa WinRM zostanie skonfigurowana tak, aby używała transportu HTTP, nazwa użytkownika i hasło będą wysyłane przez sieć jako zwykły tekst. Jeśli to ustawienie zostanie wyłączone lub nie zostanie skonfigurowane, klient usługi WinRM nie będzie używał uwierzytelniania podstawowego.
-  - **Ustawienie domyślne**: Wyłączone
+  - **Ustawienie domyślne**: Wyłącz
   
 
 ## <a name="remote-procedure-call"></a>Zdalne wywoływanie procedur  
@@ -1026,7 +1026,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   - Próby ręcznego połączenia Gdy komputer jest już połączony z siecią nienależącą do domeny lub siecią opartą na domenie przez nośnik inny niż Ethernet, a użytkownik próbuje utworzyć ręczne połączenie z dodatkową siecią niezgodnie z tym ustawieniem zasad, istniejące połączenie sieciowe zostanie zakończone i ręczne połączenie będzie dozwolone. Gdy komputer jest już połączony z siecią nienależącą do domeny lub siecią opartą na domenie przez protokół Ethernet, a użytkownik próbuje utworzyć ręczne połączenie z dodatkową siecią niezgodnie z tym ustawieniem zasad, istniejące połączenie Ethernet zostanie zachowane i próba ręcznego połączenia zostanie zablokowana.  
 
   Jeśli to ustawienie zasad nie zostanie skonfigurowane lub zostanie wyłączone, komputery będą mogły łączyć się jednocześnie z sieciami należącymi do domeny i nienależącymi do domeny.
-  - **Ustawienie domyślne**: Włączono
+  - **Ustawienie domyślne**: Enabled
   
 ## <a name="windows-defender"></a>Usługa Windows Defender  
 Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji zasad — Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) w dokumentacji systemu Windows.  
@@ -1053,7 +1053,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
 - **Typ zapobiegania kradzieży poświadczeń**  
   Funkcja Windows Defender Credential Guard używa zabezpieczeń opartych na wirtualizacji do izolowania kluczy tajnych, aby tylko uprzywilejowane oprogramowanie systemowe mogło uzyskiwać do nich dostęp. Nieautoryzowany dostęp do tych kluczy tajnych może prowadzić do ataków przy użyciu skradzionych poświadczeń, takich jak „pass the hash” lub „pass the ticket”. Funkcja Windows Defender Credential Guard zapobiega atakom przez ochronę skrótów haseł NTLM, biletów uprawniających do przyznawania biletów protokołu Kerberos i poświadczeń przechowywanych przez aplikacje, takich jak poświadczenia domeny.
-  - **Ustawienie domyślne**: Włączenie
+  - **Ustawienie domyślne**: Włącz
 
 - **Typ wykonywania zawartości wiadomości e-mail**  
   Ta reguła blokuje możliwość uruchamiania następujących typów plików z wiadomości e-mail w programie Microsoft Outlook lub poczcie internetowej (np. Gmail.com lub Outlook.com): Pliki wykonywalne (takie jak exe, dll lub scr), pliki skryptów (takie jak pliki ps programu PowerShell, pliki vbs języka Visual Basic lub pliki js języka JavaScript) i pliki archiwum skryptów.
@@ -1061,7 +1061,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
 - **Typ ochrony sieci**  
   Ta zasada umożliwia włączenie lub wyłączenie ochrony sieci (blokowanie/inspekcja) w funkcji Windows Defender Exploit Guard. Ochrona sieci w funkcji Windows Defender Exploit Guard chroni pracowników używających dowolnej aplikacji przed wyłudzeniem informacji, witrynami hostującymi programy wykorzystujące luki w zabezpieczeniach i złośliwą zawartością w Internecie. Obejmuje to blokadę połączeń w przeglądarkach innych firm z niebezpiecznymi witrynami. Typ wartości to liczba całkowita. Jeśli to ustawienie zostanie włączone, ochrona sieci zostanie włączona i pracownicy nie będą mogli jej wyłączyć. Jej zachowaniem można sterować przy użyciu następujących opcji: Blokada i inspekcja. Jeśli te zasady zostaną włączone z opcją „Blokada”, użytkownicy/aplikacje nie będą mogły łączyć się z niebezpiecznymi domenami. Ta aktywność będzie widoczna w usłudze Windows Defender Security Center. Jeśli te zasady zostaną włączone z opcją „Inspekcja”, użytkownicy/aplikacje będą mogły łączyć się z niebezpiecznymi domenami. Ta aktywność będzie jednak nadal widoczna w usłudze Windows Defender Security Center. Jeśli te zasady zostaną wyłączone, użytkownicy/aplikacje będą mogły łączyć się z niebezpiecznymi domenami. Aktywność sieci nie będzie widoczna w usłudze Windows Defender Security Center. Jeśli te zasady nie zostaną skonfigurowane, blokada sieci zostanie domyślnie wyłączona.
-  - **Ustawienie domyślne**: Włączenie
+  - **Ustawienie domyślne**: Włącz
   
 - **Zaplanowany dzień skanowania w usłudze Defender**  
   Zaplanowany dzień skanowania w usłudze Defender.
@@ -1124,12 +1124,12 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
 
 - **Obszar roboczy pisma odręcznego**  
   Określa, czy użytkownik może uzyskać dostęp do obszaru roboczego pisma odręcznego. 0 — dostęp do obszaru roboczego pisma odręcznego jest wyłączony. Funkcja jest wyłączona. 1 — obszar roboczy pisma odręcznego jest włączony (funkcja jest włączona), ale użytkownik nie może uzyskać dostępu do niego powyżej ekranu blokady. 2 (domyślnie) — obszar roboczy pisma odręcznego jest włączony (funkcja jest włączona), a użytkownik może używać jej powyżej ekranu blokady.
-  - **Ustawienie domyślne**: Włączono
+  - **Ustawienie domyślne**: Enabled
  
 ## <a name="windows-powershell"></a>Windows PowerShell  
 Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji zasad — WindowsPowerShell](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowspowershell) w dokumentacji systemu Windows.  
 
 - **Rejestrowanie bloków skryptu w powłoce programu PowerShell**  
   To ustawienie zasad umożliwia rejestrowanie wszystkich danych wejściowych skryptu programu PowerShell w dzienniku zdarzeń Microsoft-Windows-PowerShell/Operational. Jeśli to ustawienie zasad zostanie włączone, program Windows PowerShell będzie rejestrować przetwarzanie poleceń, bloków skryptu, funkcji i skryptów wywoływanych interakcyjnie lub przy użyciu automatyzacji. Jeśli to ustawienie zasad zostanie wyłączone, rejestrowania danych wejściowych skryptu programu PowerShell zostanie wyłączone. Jeśli włączysz rejestrowanie wywołań bloków skryptu, program PowerShell dodatkowo będzie rejestrował zdarzenia w przypadku uruchomienia lub zatrzymania wywołania polecenia, bloku skryptu, funkcji lub skryptu. Włączenie rejestrowania wywołań generuje dużą liczbę dzienników zdarzeń. Uwaga: to ustawienie zasad istnieje w konfiguracji komputera i konfiguracji użytkownika w edytorze zasad grupy. Ustawienie zasad konfiguracji komputera ma pierwszeństwo przed ustawieniem zasad konfiguracji użytkownika.
-  - **Ustawienie domyślne**: Włączono
+  - **Ustawienie domyślne**: Enabled
  

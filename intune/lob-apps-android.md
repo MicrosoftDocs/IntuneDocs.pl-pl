@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 12/11/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5fde13ae148c794cc6e91d1d5f17dc231f0e3b81
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: a080d655aa4dfda46e0fc6019183e8425942f2c4
+ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55848529"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57238442"
 ---
 # <a name="add-an-android-line-of-business-app-to-microsoft-intune"></a>Dodawanie aplikacji biznesowych dla systemu Android do usługi Microsoft Intune
 
@@ -36,7 +36,7 @@ Aplikacja biznesowa (LOB) to aplikacja dodawana do usługi Intune za pomocą pli
 > [!Note]
 > W przypadku urządzeń z programem Android for Work postępuj zgodnie z [tym artykułem](https://docs.microsoft.com/intune/apps-add-android-for-work). 
 
-## <a name="step-1-specify-the-software-setup-file"></a>Krok 1. Określanie pliku konfiguracji oprogramowania
+## <a name="step-1-specify-the-software-setup-file"></a>Krok 1: Określanie pliku konfiguracji oprogramowania
 
 1. Zaloguj się do [portalu Azure](https://portal.azure.com).
 2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
@@ -70,14 +70,14 @@ Aplikacja biznesowa (LOB) to aplikacja dodawana do usługi Intune za pomocą pli
     - **Logo**: przekaż ikonę skojarzoną z aplikacją. Będzie ona wyświetlana jako ikona aplikacji podczas przeglądania Portalu firmy.
 3. Po zakończeniu wybierz przycisk **OK**.
 
-## <a name="step-4-finish-up"></a>Krok 4. Zakończenie
+## <a name="step-4-finish-up"></a>Krok 4: Zakończenie
 
 1. W okienku **Dodaj aplikację** sprawdź, czy szczegóły aplikacji są prawidłowe.
 2. Wybierz pozycję **Dodaj**, aby przekazać aplikację do usługi Intune.
 
 Utworzona przez Ciebie aplikacja jest teraz widoczna na liście aplikacji. Korzystając z listy, możesz przypisywać aplikację do wybranych grup. Aby uzyskać pomoc, zobacz artykuł [How to assign apps to groups](apps-deploy.md) (Jak przypisać aplikacje do grupy).
 
-## <a name="step-5-update-a-line-of-business-app"></a>Krok 5. Aktualizowanie aplikacji biznesowej
+## <a name="step-5-update-a-line-of-business-app"></a>Krok 5: Aktualizowanie aplikacji biznesowej
 
 [!INCLUDE [shared-proc-lob-updateapp](./includes/shared-proc-lob-updateapp.md)]
 

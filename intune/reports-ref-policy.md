@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 12/14/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 08724e6e73d277a0d68155fb255a11ba68207b41
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: e28f5b7a37e1ed21c4680a57098bdd0a43a79346
+ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55842035"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57238408"
 ---
 # <a name="reference-for-policy-entities"></a>Dokumentacja jednostek zasad
 
@@ -66,7 +66,7 @@ Jednostka **DeviceConfigurationProfileDeviceActivity** zawiera liczbę urządze�
 | DateKey |Klucz daty zarejestrowania zameldowania profilu konfiguracji urządzeń w magazynie danych. |20160703 |
 | Oczekiwanie |Liczba unikatowych urządzeń w stanie Oczekiwanie. |123 |
 | Sukces |Liczba unikatowych urządzeń w stanie Sukces. |12 |
-| Error |Liczba unikatowych urządzeń w stanie Błąd. |10 |
+| Błąd |Liczba unikatowych urządzeń w stanie Błąd. |10 |
 | Niepowodzenie |Liczba unikatowych urządzeń w stanie Niepowodzenie. |2 |
 
 
@@ -78,7 +78,7 @@ Jednostka **DeviceConfigurationProfileUserActivity** zawiera liczbę użytkownik
 | DateKey |Klucz daty zarejestrowania zameldowania profilu konfiguracji urządzeń w magazynie danych. |20160703 |
 | Oczekiwanie |Liczba unikatowych użytkowników w stanie Oczekiwanie. |123 |
 | Sukces |Liczba unikatowych użytkowników w stanie Sukces. |12 |
-| Error |Liczba unikatowych użytkowników w stanie Błąd. |10 |
+| Błąd |Liczba unikatowych użytkowników w stanie Błąd. |10 |
 | Niepowodzenie |Liczba unikatowych użytkowników w stanie Niepowodzenie. |2 |
 
 ## <a name="policytypeactivity"></a>PolicyTypeActivity
@@ -92,7 +92,7 @@ Jednostka **PolicyTypeActivity** zawiera łączną liczbę urządzeń w stanie S
 | PolicyTypeKey |Typ klucza zasad; można go połączyć z typem zasad w celu otrzymania nazwy typu zasad. |Zasady zgodności systemu Windows 10 |
 | Oczekiwanie |Liczba unikatowych urządzeń w stanie Oczekiwanie. |123 |
 | Sukces |Liczba unikatowych urządzeń w stanie Sukces. |12 |
-| Error |Liczba unikatowych urządzeń w stanie Błąd. |10 |
+| Błąd |Liczba unikatowych urządzeń w stanie Błąd. |10 |
 | Niepowodzenie |Liczba unikatowych urządzeń w stanie Niepowodzenie. |2 |
 
 ## <a name="compliance-policy"></a>Zasady zgodności
@@ -107,12 +107,12 @@ Poniższa tabela zawiera podsumowanie stanu przypisania zasad zgodności do urz�
 |Właściwość     |Opis  |Przykład  |
 |---------|---------|---------|
 |DateKey  |Klucz daty utworzenia podsumowania zasad zgodności.|20161204 |
-|Nieznane  |Liczba urządzeń, które są w trybie offline lub nie nawiązały łączności z usługą Intune lub Azure AD z innych przyczyn. |5|
+|Nieznany  |Liczba urządzeń, które są w trybie offline lub nie nawiązały łączności z usługą Intune lub Azure AD z innych przyczyn. |5|
 |NotApplicable      |Liczba urządzeń, na których nie mają zastosowania zasady zgodności urządzeń przepisane przez administratora.|201 |
 |Zgodny      |Liczba urządzeń, które pomyślnie zastosowały co najmniej jedne zasady zgodności urządzenia przepisane przez administratora. |4083 |
 |InGracePeriod      |Liczba urządzeń, które nie są zgodne, ale są w okresie prolongaty zdefiniowanym przez administratora. |57|
 |NonCompliant      |Liczba urządzeń, na których nie udało się zastosować co najmniej jednej z zasad zgodności urządzenia przepisanego przez administratora lub też użytkownik nie spełnił zasad zgodności przepisanych przez administratora.|43 |
-|Error      |Liczba urządzeń, które nie mogły nawiązać połączenia z usługą Intune lub usługą Azure AD i zwróciły komunikat o błędzie. |3|
+|Błąd      |Liczba urządzeń, które nie mogły nawiązać połączenia z usługą Intune lub usługą Azure AD i zwróciły komunikat o błędzie. |3|
 
 ### <a name="compliancepolicystatusdeviceperpolicyactivities"></a>CompliancePolicyStatusDevicePerPolicyActivities 
 
@@ -125,12 +125,12 @@ Poniższa tabela zawiera podsumowanie stanu przypisania zasad zgodności do urz�
 |DateKey  |Klucz daty utworzenia podsumowania zasad zgodności.|20161219|
 |PolicyKey     |Klucz zasad zgodności, dla których utworzono podsumowanie. |10178 |
 |PolicyPlatformKey      |Klucz typu platformy zasad zgodności, dla którego utworzono podsumowanie.|5|
-|Nieznane     |Liczba urządzeń, które są w trybie offline lub nie nawiązały łączności z usługą Intune lub Azure AD z innych przyczyn.|13|
+|Nieznany     |Liczba urządzeń, które są w trybie offline lub nie nawiązały łączności z usługą Intune lub Azure AD z innych przyczyn.|13|
 |NotApplicable     |Liczba urządzeń, na których nie mają zastosowania zasady zgodności urządzeń przepisane przez administratora.|3|
 |Zgodny      |Liczba urządzeń, które pomyślnie zastosowały co najmniej jedne zasady zgodności urządzenia przepisane przez administratora. |45|
 |InGracePeriod      |Liczba urządzeń, które nie są zgodne, ale są w okresie prolongaty zdefiniowanym przez administratora. |3|
 |NonCompliant      |Liczba urządzeń, na których nie udało się zastosować co najmniej jednej z zasad zgodności urządzenia przepisanego przez administratora lub też użytkownik nie spełnił zasad zgodności przepisanych przez administratora.|7|
-|Error      |Liczba urządzeń, które nie mogły nawiązać połączenia z usługą Intune lub usługą Azure AD i zwróciły komunikat o błędzie. |3|
+|Błąd      |Liczba urządzeń, które nie mogły nawiązać połączenia z usługą Intune lub usługą Azure AD i zwróciły komunikat o błędzie. |3|
 
 ### <a name="policyplatformtypes"></a>PolicyPlatformTypes
 
@@ -153,7 +153,7 @@ Poniższa tabela zawiera liczbę urządzeń w stanie Sukces, Oczekiwanie, Niepow
 |Oczekiwanie|Liczba unikatowych urządzeń w stanie Oczekiwanie.|123|
 |Sukces|Liczba unikatowych urządzeń w stanie Sukces.|12|
 PolicyKey|Klucz zasad; można go połączyć z zasadami w celu otrzymania jednostki policyName.|Plan bazowy systemu Windows 10|
-|Error|Liczba unikatowych urządzeń w stanie Błąd.|10|
+|Błąd|Liczba unikatowych urządzeń w stanie Błąd.|10|
 |Niepowodzenie|Liczba unikatowych urządzeń w stanie Niepowodzenie.|2|
 
 ### <a name="policyuseractivity"></a>PolicyUserActivity 
@@ -167,5 +167,5 @@ Poniższa tabela zawiera liczbę użytkowników w stanie Sukces, Oczekiwanie, Ni
 |  Oczekiwanie  |                         Liczba unikatowych urządzeń w stanie Oczekiwanie.                          |         123         |
 | Sukces |                         Liczba unikatowych urządzeń w stanie Sukces.                          |         12          |
 | PolicyKey |                Klucz zasad; można go połączyć z zasadami w celu otrzymania jednostki policyName.                 | Plan bazowy systemu Windows 10 |
-|   Error   |                          Liczba unikatowych urządzeń w stanie Błąd.                           |         10          |
+|   Błąd   |                          Liczba unikatowych urządzeń w stanie Błąd.                           |         10          |
 

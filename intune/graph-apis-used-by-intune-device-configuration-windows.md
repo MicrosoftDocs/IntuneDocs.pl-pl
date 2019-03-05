@@ -1,12 +1,12 @@
 ---
-title: Wykres interfejsy API używane podczas konfigurowania urządzenia w Microsoft Intune — Azure | Dokumentacja firmy Microsoft
+title: Wykres interfejsów API, aby skonfigurować urządzenia w Microsoft Intune — Azure | Dokumentacja firmy Microsoft
 titleSuffix: ''
-description: Wyświetlenie listy wszystkich interfejsów API programu Graph przy użyciu zgodnych Windows dostawcy usług Kryptograficznych i Przesunięcie identyfikatora URI na urządzeniach z systemem Windows 10 i nowszych używane podczas konfigurowania urządzenia w programie Microsoft Intune. Zobacz zgodnych interfejsów API i dostawcy usług Kryptograficznych dla udostępnionych komputerów z systemem, program endpoint protection, ochrona przed zagrożeniami usługi Windows Defender advanced, ochrony tożsamości, systemu Windows 10 zespołów, kiosku i Windows Update dla firm.
+description: Wyświetlenie listy wszystkich jednostek interfejsu API programu Graph przy użyciu zgodnych Windows dostawcy usług Kryptograficznych i Przesunięcie identyfikatora URI na urządzeniach z systemem Windows 10 i nowszych używane podczas konfigurowania urządzenia w programie Microsoft Intune. Zobacz zgodnych interfejsów API i dostawcy usług Kryptograficznych dla udostępnionych komputerów z systemem, program endpoint protection, ochrona przed zagrożeniami usługi Windows Defender advanced, ochrony tożsamości, systemu Windows 10 zespołów, kiosku i Windows Update dla firm.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/01/2019
+ms.date: 03/04/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,30 +15,34 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ccc46914e53e72d941cc726b6a32fa421e23ca4
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: b2bed795125043eac07fce41a0f101a9b029bd06
+ms.sourcegitcommit: da9ee02de327f202b00be44c79bf7abd35b9929b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57232135"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57335313"
 ---
 # <a name="graph-apis-and-matching-windows-10-csps-used-in-intune"></a>Interfejsy API programu Graph i pasującą dostawców usług kryptograficznych systemu Windows 10 jest używany w usłudze Intune
 
-Microsoft Intune używa [interfejsu API programu Graph](https://docs.microsoft.com/graph/api/resources/intune-graph-overview) umożliwiają konfigurowanie urządzeń (**Intune** > **konfiguracji urządzenia**) systemem Windows 10 lub nowszym. Interfejs API programu Graph używa dostawcy usługi konfiguracji (CSP) do odczytu, ustawić, zmienić lub usunąć ustawienia konfiguracji na urządzeniach.
+Microsoft Intune używa [jednostki interfejsu API programu Graph](https://docs.microsoft.com/graph/api/resources/intune-graph-overview) (otwiera innej witryny Docs) do skonfigurowania urządzeń (**Intune** > **konfiguracji urządzenia**) z systemu Windows 10 lub nowszy. Interfejs API programu Graph używa dostawcy usługi konfiguracji (CSP) do odczytu, ustawić, zmienić lub usunąć ustawienia konfiguracji na urządzeniach.
 
 Ta lista mają zastosowanie do:
 
 - System Windows 10 lub nowszy
 
-W tym artykule wymieniono właściwości wykresu oraz zgodnych dostawców usług kryptograficznych systemu Windows 10 i przesunięcie identyfikatorów URI.
+W tym artykule wymieniono jednostki programu Graph i ich zgodnego systemu Windows 10 dostawców usług kryptograficznych i przesunięcia identyfikatorów URI.
+
+Te informacje są przydatne w przypadku różnych scenariuszy. Na przykład co jest używane przez usługę Intune można znaleźć ustawienia, aby uwzględnić w konfiguracje niestandardowe OMA-URI i tak dalej. 
 
 ## <a name="windows-10-csps"></a>Dostawcy usług kryptograficznych systemu Windows 10
 
-Aby uzyskać więcej informacji na temat dostawców usługi konfiguracji systemu Windows 10, zobacz [odwołania do dostawcy usługi konfiguracji](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
+Aby uzyskać więcej informacji na temat dostawców usługi konfiguracji systemu Windows 10, zobacz [odwołania do dostawcy usługi konfiguracji](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) (otwiera innej witryny Docs).
 
 ## <a name="graph-api-properties-to-csp-mapping"></a>Właściwości interfejsu API programu Graph w celu mapowania dostawcy usług Kryptograficznych
 
-Na poniższej liście przedstawiono właściwości interfejsu API programu Graph, używane przez program Microsoft Intune dla konfiguracji urządzenia z systemem Windows 10. Zawiera również dostawcy usług Kryptograficznych odpowiedniego systemu Windows 10 i przesunięcia identyfikatora URI.
+Na poniższej liście przedstawiono większość jednostki interfejsu API programu Graph, używane przez program Microsoft Intune dla konfiguracji urządzenia z systemem Windows 10. Zawiera również dostawcy usług Kryptograficznych odpowiedniego systemu Windows 10 i przesunięcia identyfikatora URI.
+
+Aby wyświetlić wersje systemu Windows 10, zastosuj następujące interfejsy API, należy użyć systemu Windows 10 [odwołania do dostawcy usługi konfiguracji](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) (otwiera innej witryny Docs).
 
 #### <a name="editionupgradeconfigurationlicense"></a>EditionUpgradeConfiguration.License 
 **CSP**: ./Device/Vendor/MSFT/WindowsLicensing  
@@ -237,8 +241,7 @@ Na poniższej liście przedstawiono właściwości interfejsu API programu Graph
 **Przesunięcie URI**: /Config/CredentialsUI/EnumerateAdministrators
 
 #### <a name="windows10endpointprotectionconfigurationdefenderadditionalguardedfolders"></a>Windows10EndpointProtectionConfiguration.DefenderAdditionalGuardedFolders 
-**CSP**: ./Device/Vendor/MSFT/Policy/  
-**Przesunięcie URI**: /Config/Defender/ControlledFolderAccessProtectedFolders
+**CSP**: ./Device/Vendor/MSFT/Policy **Offset URI**: /Config/Defender/ControlledFolderAccessProtectedFolders
 
 #### <a name="windows10endpointprotectionconfigurationdefenderadvancedransomewareprotectiontype"></a>Windows10EndpointProtectionConfiguration.DefenderAdvancedRansomewareProtectionType 
 **CSP**: ./Device/Vendor/MSFT/Policy  
@@ -257,23 +260,21 @@ Na poniższej liście przedstawiono właściwości interfejsu API programu Graph
 **Przesunięcie URI**: /Config/Defender/AttackSurfaceReductionRules (dostawcy usług Kryptograficznych/konfiguracja wymaga właściwości wykresu: windows10endpointprotection/Configuration.defenderOfficeAppsOtherProcessInjectionType, windows10endpointprotection / Configuration.defenderOfficeAppsExecutableContentCreationOrLaunchType, windows10endpointprotection/Configuration.defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection / Configuration.defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration.defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration.defenderScriptDownloadedPayloadExecutionType , windows10endpointprotection/Configuration.defenderEmailContentExecutionType, windows10endpointprotection/Configuration.defenderPreventCredentialStealingType, windows10endpointprotection / Configuration.defenderUntrustedUSBProcessType
 
 #### <a name="windows10endpointprotectionconfigurationdefenderexploitprotectionxml"></a>Windows10EndpointProtectionConfiguration.DefenderExploitProtectionXml 
-**CSP**: ./Device/Vendor/MSFT/Policy/ **Offset URI**: /Config/ExploitGuard/ExploitProtectionSettings
+**CSP**: ./Device/Vendor/MSFT/Policy **Offset URI**: /Config/ExploitGuard/ExploitProtectionSettings
 
 #### <a name="windows10endpointprotectionconfigurationdefenderexploitprotectionxmlfilename"></a>Windows10EndpointProtectionConfiguration.DefenderExploitProtectionXmlFileName 
 **CSP**: ./Device/Vendor/MSFT/Policy  
 **Przesunięcie URI**: /Config/ExploitGuard/ExploitProtectionSettings
 
 #### <a name="windows10endpointprotectionconfigurationdefenderguardedfoldersallowedapppaths"></a>Windows10EndpointProtectionConfiguration.DefenderGuardedFoldersAllowedAppPaths 
-**CSP**: ./Device/Vendor/MSFT/Policy/  
-**Przesunięcie URI**: /Config/Defender/ControlledFolderAccessAllowedApplications
+**Dostawcy usług Kryptograficznych**: ./Device/Vendor/MSFT/Policy **przesunięcie URI**: /Config/Defender/ControlledFolderAccessAllowedApplications
 
 #### <a name="windows10endpointprotectionconfigurationdefenderguardmyfolderstype"></a>Windows10EndpointProtectionConfiguration.DefenderGuardMyFoldersType 
 **CSP**: ./Device/Vendor/MSFT/Policy  
 **Przesunięcie URI**: /Config/Defender/EnableControlledFolderAccess
 
 #### <a name="windows10endpointprotectionconfigurationdefendernetworkprotectiontype"></a>Windows10EndpointProtectionConfiguration.DefenderNetworkProtectionType 
-**CSP**: ./Device/Vendor/MSFT/Policy/  
-**Przesunięcie URI**: /Config/Defender/EnableNetworkProtection
+**Dostawcy usług Kryptograficznych**: ./Device/Vendor/MSFT/Policy **przesunięcie URI**: /Config/Defender/EnableNetworkProtection
 
 #### <a name="windows10endpointprotectionconfigurationdefenderofficeappsexecutablecontentcreationorlaunch"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeAppsExecutableContentCreationOrLaunch 
 **CSP**: ./Device/Vendor/MSFT/Policy  
@@ -340,8 +341,7 @@ Na poniższej liście przedstawiono właściwości interfejsu API programu Graph
 **Przesunięcie URI**: /Config/Defender/AttackSurfaceReductionRules (dostawcy usług Kryptograficznych/konfiguracja wymaga właściwości wykresu: windows10endpointprotection/Configuration.defenderOfficeAppsOtherProcessInjectionType, windows10endpointprotection / Configuration.defenderOfficeAppsExecutableContentCreationOrLaunchType, windows10endpointprotection/Configuration.defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection / Configuration.defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration.defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration.defenderScriptDownloadedPayloadExecutionType , windows10endpointprotection/Configuration.defenderEmailContentExecutionType, windows10endpointprotection/Configuration.defenderPreventCredentialStealingType, windows10endpointprotection / Configuration.defenderUntrustedUSBProcessType
 
 #### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterblockexploitprotectionoverride"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterBlockExploitProtectionOverride 
-**CSP**: ./Device/Vendor/MSFT/Policy/  
-**Offset URI**: /Config/WindowsDefenderSecurityCenter/DisallowExploitProtectionOverride
+**CSP**: ./Device/Vendor/MSFT/Policy **Offset URI**: /Config/WindowsDefenderSecurityCenter/DisallowExploitProtectionOverride
 
 #### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterdisableaccountui"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterDisableAccountUI 
 **CSP**: ./Device/Vendor/MSFT/Policy  
@@ -416,19 +416,18 @@ Na poniższej liście przedstawiono właściwości interfejsu API programu Graph
 **Przesunięcie URI**: /Config/Defender/AttackSurfaceReductionRules (dostawcy usług Kryptograficznych/konfiguracja wymaga właściwości wykresu: windows10endpointprotection/Configuration.defenderOfficeAppsOtherProcessInjectionType, windows10endpointprotection / Configuration.defenderOfficeAppsExecutableContentCreationOrLaunchType, windows10endpointprotection/Configuration.defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection / Configuration.defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration.defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration.defenderScriptDownloadedPayloadExecutionType , windows10endpointprotection/Configuration.defenderEmailContentExecutionType, windows10endpointprotection/Configuration.defenderPreventCredentialStealingType, windows10endpointprotection / Configuration.defenderUntrustedUSBProcessType
 
 #### <a name="windows10endpointprotectionconfigurationdeviceguardenablesecurebootwithdma"></a>Windows10EndpointProtectionConfiguration.DeviceGuardEnableSecureBootWithDMA 
-**CSP**: ./Device/Vendor/MSFT/Policy/  
+**CSP**: ./Device/Vendor/MSFT/Policy  
 **Przesunięcie URI**: /Config/DeviceGuard/RequirePlatformSecurityFeatures
 
 #### <a name="windows10endpointprotectionconfigurationdeviceguardenablevirtualizationbasedsecurity"></a>Windows10EndpointProtectionConfiguration.DeviceGuardEnableVirtualizationBasedSecurity 
-**CSP**: ./Device/Vendor/MSFT/Policy/  
-**Przesunięcie URI**: /Config/DeviceGuard/EnableVirtualizationBasedSecurity
+**CSP**: ./Device/Vendor/MSFT/Policy **Offset URI**: /Config/DeviceGuard/EnableVirtualizationBasedSecurity
 
 #### <a name="windows10endpointprotectionconfigurationdeviceguardlaunchsystemguard"></a>Windows10EndpointProtectionConfiguration.DeviceGuardLaunchSystemGuard 
-**CSP**: ./Device/Vendor/MSFT/Policy/  
+**CSP**: ./Device/Vendor/MSFT/Policy  
 **Przesunięcie URI**: /Config/DeviceGuard/ConfigureSystemGuardLaunch
 
 #### <a name="windows10endpointprotectionconfigurationdeviceguardlocalsystemauthoritycredentialguardsettings"></a>Windows10EndpointProtectionConfiguration.DeviceGuardLocalSystemAuthorityCredentialGuardSettings 
-**CSP**: ./Device/Vendor/MSFT/Policy/  
+**CSP**: ./Device/Vendor/MSFT/Policy  
 **Przesunięcie URI**: /Config/DeviceGuard/LsaCfgFlags
 
 #### <a name="windows10endpointprotectionconfigurationdmaguarddeviceenumerationpolicy"></a>Windows10EndpointProtectionConfiguration.DmaGuardDeviceEnumerationPolicy 
@@ -868,12 +867,10 @@ Na poniższej liście przedstawiono właściwości interfejsu API programu Graph
 **Przesunięcie URI**: /Config/MSSecurityGuide/WDigestAuthentication
 
 #### <a name="windows10endpointprotectionconfigurationsmartscreenblockoverrideforfiles"></a>Windows10EndpointProtectionConfiguration.SmartScreenBlockOverrideForFiles 
-**CSP**: ./Device/Vendor/MSFT/Policy/  
-**Przesunięcie URI**: /Config/DeviceGuard/RequirePlatformSecurityFeatures
+**Dostawcy usług Kryptograficznych**: ./Device/Vendor/MSFT/Policy **przesunięcie URI**: /Config/DeviceGuard/RequirePlatformSecurityFeatures
 
 #### <a name="windows10endpointprotectionconfigurationsmartscreenenableinshell"></a>Windows10EndpointProtectionConfiguration.SmartScreenEnableInShell 
-**CSP**: ./Device/Vendor/MSFT/Policy/  
-**Przesunięcie URI**: /Config/SmartScreen/EnableSmartScreenInShell
+**Dostawcy usług Kryptograficznych**: ./Device/Vendor/MSFT/Policy **przesunięcie URI**: /Config/SmartScreen/EnableSmartScreenInShell
 
 #### <a name="windows10endpointprotectionconfigurationsolicitedremoteassistance"></a>windows10endpointprotectionconfiguration.solicitedRemoteAssistance 
 **CSP**: ./Device/Vendor/MSFT/Policy  
@@ -1030,6 +1027,9 @@ Na poniższej liście przedstawiono właściwości interfejsu API programu Graph
 #### <a name="windows10endpointprotectionconfigurationxboxserviceslivenetworkingservicestartupmode"></a>Windows10EndpointProtectionConfiguration.XboxServicesLiveNetworkingServiceStartupMode 
 **CSP**: ./Vendor/MSFT/Policy  
 **Przesunięcie URI**: /Config/SystemServices/ConfigureXboxLiveNetworkingServiceStartupMode
+
+#### <a name="windows10enterprisemodernappmanagementconfigurationuninstallbuiltinapps"></a>Windows10EnterpriseModernAppManagementConfiguration.UninstallBuiltInApps
+**CSP**: Wywołanie interfejsu API programu Graph nie dotyczy tylko **przesunięcie URI**: Tylko wywołania interfejsu API programu Graph n/d
 
 #### <a name="windows10generalconfigurationaccountsblockaddingnonmicrosoftaccountemail"></a>Windows10GeneralConfiguration.AccountsBlockAddingNonMicrosoftAccountEmail 
 **CSP**: ./Vendor/MSFT/Policy  
@@ -2924,9 +2924,17 @@ Na poniższej liście przedstawiono właściwości interfejsu API programu Graph
 **CSP**: ./Device/Vendor/MSFT/Policy  
 **Przesunięcie URI**: /Config/Update/PauseFeatureUpdatesStartTime
 
+#### <a name="windowsupdateforbusinessconfigurationfeatureupdatesrollbackstartdatetime"></a>WindowsUpdateForBusinessConfiguration.FeatureUpdatesRollbackStartDateTime
+**CSP**: N/d — interfejs API programu Graph tylko **przesunięcie URI**: N/d — interfejs API programu Graph tylko
+
 #### <a name="windowsupdateforbusinessconfigurationfeatureupdateswillberolledback"></a>WindowsUpdateForBusinessConfiguration.FeatureUpdatesWillBeRolledBack 
-**CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: / wycofania/FeatureUpdate
+**CSP**: N/d — interfejs API programu Graph tylko **przesunięcie URI**: N/d — interfejs API programu Graph tylko
+
+#### <a name="windowsupdateforbusinessconfigurationfeatureupdatesrollbackwindowindays"></a>WindowsUpdateForBusinessConfiguration.FeatureUpdatesRollbackWindowInDays
+**CSP**: N/d — interfejs API programu Graph tylko **przesunięcie URI**: N/d — interfejs API programu Graph tylko
+
+#### <a name="windowsupdateforbusinessconfigurationinstallationschedule"></a>WindowsUpdateForBusinessConfiguration.InstallationSchedule
+**Dostawcy usług Kryptograficznych**: ./Device/Vendor/MSFT/Policy **przesunięcie URI**: /Config/Update/ActiveHoursStart /Config/Update/ActiveHoursEnd, /Config/Update/ScheduledInstallDay, /Config/Update/ScheduledInstallTime
 
 #### <a name="windowsupdateforbusinessconfigurationmicrosoftupdateserviceallowed"></a>WindowsUpdateForBusinessConfiguration.MicrosoftUpdateServiceAllowed 
 **CSP**: ./Device/Vendor/MSFT/Policy  
@@ -2948,9 +2956,11 @@ Na poniższej liście przedstawiono właściwości interfejsu API programu Graph
 **CSP**: ./Device/Vendor/MSFT/Policy  
 **Przesunięcie URI**: /Config/Update/PauseQualityUpdatesStartTime
 
+#### <a name="windowsupdateforbusinessconfigurationqualityupdatesrollbackstartdatetime"></a>WindowsUpdateForBusinessConfiguration.QualityUpdatesRollbackStartDateTime
+**CSP**: N/d — interfejs API programu Graph tylko **przesunięcie URI**: N/d — interfejs API programu Graph tylko
+
 #### <a name="windowsupdateforbusinessconfigurationqualityupdateswillberolledback"></a>WindowsUpdateForBusinessConfiguration.QualityUpdatesWillBeRolledBack 
-**CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: / wycofania/QualityUpdate
+**CSP**: N/d — interfejs API programu Graph tylko **przesunięcie URI**: N/d — interfejs API programu Graph tylko
 
 #### <a name="windowsupdateforbusinessconfigurationscheduleimminentrestartwarninginminutes"></a>WindowsUpdateForBusinessConfiguration.ScheduleImminentRestartWarningInMinutes 
 **CSP**: ./Device/Vendor/MSFT/Policy  
@@ -2976,4 +2986,4 @@ Na poniższej liście przedstawiono właściwości interfejsu API programu Graph
 ## <a name="next-steps"></a>Następne kroki
 
 - [Omówienie konfiguracji urządzeń](device-profiles.md)
-- [Odwołanie do dostawcy usługi konfiguracji](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference)
+- [Odwołanie do dostawcy usługi konfiguracji](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) (otwiera innej witryny Docs)
