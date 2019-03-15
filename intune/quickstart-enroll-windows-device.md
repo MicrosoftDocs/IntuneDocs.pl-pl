@@ -9,6 +9,7 @@ ms.date: 12/05/2018
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 658a7655-a6df-4dbe-b56c-22c7fc60e706
 ms.reviewer: ''
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c04dc3169fbf6a60d0c4d7db8358092909e90240
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 9b9247d07ae947e61528095a4853e5cdbcbc80c0
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55841824"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57389978"
 ---
 # <a name="quickstart-enroll-your-windows-10-device"></a>Szybki start: Rejestrowanie urządzenia z systemem Windows 10
 
@@ -59,7 +60,7 @@ Zanim zarejestrujesz system Windows 10 Desktop, musisz sprawdzić, którą wersj
 4. Upewnij się, że system Windows 10 jest w **wersji** **1607 lub nowszej**.
 
     > [!IMPORTANT]
-    > Kroki przedstawione w tym przewodniku Szybki start dotyczą systemu Windows 10 w wersji **1607 lub nowszej**. Jeśli używasz wersji **1511 lub starszej**, przejdź do [tych kroków](/intune-user-help/enroll-your-w10-device-your-account).
+    > Kroki przedstawione w tym przewodniku Szybki start dotyczą systemu Windows 10 w wersji **1607 lub nowszej**. Jeśli używasz wersji **1511 lub starszej**, przejdź do [tych kroków](/intune-user-help/enroll-windows-10-device.md).  
 
 ## <a name="enroll-windows-10-desktop"></a>Rejestrowanie komputera z systemem Windows 10
 
