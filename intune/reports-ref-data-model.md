@@ -7,9 +7,10 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 12/20/2018
-ms.topic: conceptual
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 4D04D3D9-4B6C-41CD-AAF8-466AF8FA6032
 ms.reviewer: aanavath
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e305d419a101410a9a934a200dfcfb1c3488ff7
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
-ms.translationtype: HT
+ms.openlocfilehash: 2cbf6e1bde3f8853f2e5c6c1919089bf0dc10126
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57238289"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57565524"
 ---
 # <a name="microsoft-intune-data-warehouse-data-model"></a>Model danych magazynu danych usługi Microsoft Intune
 
@@ -49,7 +50,7 @@ Te obszary zawierają jednostki, które mają znaczenie dla danego środowiska u
   -  [Bieżący użytkownik](reports-ref-current-user.md)
   -  [Skojarzenie urządzenia użytkownika](reports-ref-user-device.md)
 
-## <a name="relationships-star-schema-model"></a>Relacje: model o schemacie gwiazdy
+## <a name="relationships-star-schema-model"></a>Relacje: Model o schemacie gwiazdy
 
 Magazyn organizuje jednostki w relacje zrozumiałe dla typu pytań, które chcesz zadać. Na przykład możesz sprawdzić liczbę instalacji wewnętrznie opracowanych aplikacji systemu Android. Struktura magazynu danych umożliwia szczegółowy wgląd w środowisko mobilne. Z kolei narzędzia analityczne, takie jak usługa Microsoft Power BI, mogą przy użyciu modelu danych magazynu danych tworzyć wizualizacje i dynamiczne pulpity nawigacyjne.
 
@@ -57,7 +58,7 @@ Jednostki i relacje korzystają z modelu o schemacie gwiazdy. W schemacie gwiazd
 
 Model schematu gwiazdy jest zoptymalizowany pod kątem elastyczności i analizy danych, aby umożliwić tworzenie raportów potrzebnych do zrozumienia ewoluującego środowiska mobilnego.
 
-## <a name="time-daily-snapshots"></a>Godzina: dzienne migawki
+## <a name="time-daily-snapshots"></a>Czas: dzienne migawki
 
 Magazyn jest elementem podrzędnym względem danych w usłudze Intune. Usługa Intune wykonuje dzienną migawkę codziennie o północy czasu UTC i przechowuje ją w magazynie. Czasy przechowywania migawek w różnych tabelach faktów różnią się. Niektóre mogą je utrzymywać przez siedem dni, inne 30 dni, a niektóre nawet dłużej.
 

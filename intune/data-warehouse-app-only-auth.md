@@ -7,9 +7,10 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 12/11/2018
-ms.topic: conceptual
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: d7166563-6bb5-4624-b8c8-6b300a997c3a
 ms.reviewer: aanavath
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5df1fffbe3d7518bd53f81bcc294e062385d5334
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
-ms.translationtype: HT
+ms.openlocfilehash: d3511644b9de87cb3f2d36ad3f3c738663085c02
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57235365"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57564792"
 ---
 # <a name="intune-data-warehouse-application-only-authentication"></a>Uwierzytelnianie tylko aplikacji w magazynie danych usługi Intune
 
@@ -76,7 +77,7 @@ W tej sekcji usługa Azure AD generuje wartość klucza dla aplikacji.
 W tej sekcji opisano przyznawanie uprawnień do aplikacji.
 
 1.  W bloku **Ustawienia** wybierz pozycję **Wymagane uprawnienia**.
-2.  Kliknij przycisk **dodać**.
+2.  Kliknij pozycję **Dodaj**.
 3.  Wybierz pozycję **Dodaj interfejs API**, aby wyświetlić blok **Wybierz interfejs API**.
 4.  Wybierz pozycję **Interfejs API usługi Microsoft Intune (MicrosoftIntuneAPI)**, a następnie kliknij pozycję **Wybierz** w bloku **Wybierz interfejs API**. Zostanie wybrany krok **Wybierz uprawnienia** i wyświetli się blok **Włącz dostęp**.
 5.  Wybierz opcję **Uzyskaj dane magazynu danych z programu Microsoft Intune** w sekcji **Uprawnienia aplikacji**.
