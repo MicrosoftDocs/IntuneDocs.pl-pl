@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/09/2019
+ms.date: 02/22/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 39f19d347cb799a47d07ade4f8458fade68b1b99
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
-ms.translationtype: HT
+ms.openlocfilehash: 25f1bb6d2d78f5c4188d81bc8d9be2cc0c7de43e
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55834657"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "56742537"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Instalowanie i udostępnianie aplikacji na urządzeniu
 Instaluj aplikacje na swoim urządzeniu przy użyciu aplikacji Portal firmy dla systemu Windows.
@@ -35,11 +35,12 @@ Instaluj aplikacje na swoim urządzeniu przy użyciu aplikacji Portal firmy dla 
     ![Strona główna aplikacji Portal firmy dla systemu Windows 10.](./media/RS1_AppDetailsPage_Installed_03.png)    
 2. Znajdź i zainstaluj aplikacje z poziomu dowolnej z poniższych sekcji w aplikacji Portal firmy:  
 
-    * **Strona główna**: Wybierz opcję z listy aplikacji polecanych w swojej organizacji.  
-    * **Pokaż wszystkie**: W sekcji **Strona główna** > **Aplikacje** kliknij opcję **Pokaż wszystkie**, aby wyświetlić wszystkie dostępne aplikacje.  
-    * **Wszystkie aplikacje**: Wybierz tę stronę w okienku nawigacji, aby wyświetlić wszystkie dostępne aplikacje, w tym zainstalowane i polecane.  
-    * **Wyszukaj aplikacje**: W okienku nawigacji aplikacji znajduje się statyczny pasek wyszukiwania.  Aby znaleźć dostępne aplikacje, wyszukaj je według nazw aplikacji lub wydawców.  
-    * **Wszystkie aplikacje**: Przeglądanie, sortowanie i filtrowanie wszystkich dostępnych aplikacji. Wyniki wyszukiwania są sortowane automatycznie według istotności.  
+    * **Strona główna**: wybierz opcję z listy aplikacji polecanych w swojej organizacji.  
+    * **Pokaż wszystkie**: w sekcji **Strona główna** > **Aplikacje** kliknij opcję **Pokaż wszystkie**, aby wyświetlić wszystkie dostępne aplikacje.  
+    * **Wszystkie aplikacje**: wybierz tę stronę w okienku nawigacji, aby wyświetlić wszystkie dostępne aplikacje, w tym zainstalowane i polecane.  
+    * **Kategorie aplikacji**: Wybierz tę stronę w okienku nawigacji, aby wybrać aplikacje na podstawie typu lub funkcji. Aplikacje są sortowane w obszarze kategorii, takich jak **polecane**, **Education**, i **produktywność**.  
+    * **Wyszukaj aplikacje**: w okienku nawigacji aplikacji znajduje się statyczny pasek wyszukiwania.  Aby znaleźć dostępne aplikacje, wyszukaj je według nazw aplikacji lub wydawców.  
+    * **Wszystkie aplikacje**: przeglądanie, sortowanie i filtrowanie wszystkich dostępnych aplikacji. Wyniki wyszukiwania są sortowane automatycznie według istotności.  
 
 3. Wybierz aplikację.   
 4. Na stronie szczegółów aplikacji kliknij pozycję **Zainstaluj**. Po zakończeniu instalacji zostanie wyświetlony stan **Zainstalowano**.  

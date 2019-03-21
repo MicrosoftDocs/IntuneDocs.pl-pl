@@ -19,10 +19,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 2c9ea11cd19fee8f491329020753501996b47f40
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
-ms.translationtype: HT
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
+ms.lasthandoff: 03/14/2019
 ms.locfileid: "55834725"
 ---
 # <a name="enroll-your-macos-device-in-intune-with-the-company-portal-app"></a>Rejestrowanie urządzenia z systemem macOS w usłudze Intune przy użyciu aplikacji Portal firmy
@@ -58,7 +58,7 @@ Wykonaj poniższe kroki, aby zarejestrować urządzenia z systemem operacyjnym m
 
 4. Na stronie __Urządzenia__ zostanie wyświetlona lista zarządzanych urządzeń lub transparent. Wyświetlone elementy zależą od tego, czy masz już zarządzane urządzenie. 
     * Aby dodać urządzenie, którego nie ma na liście, wybierz transparent z tekstem **Naciśnij tutaj, aby poinformować nas o używanym urządzeniu lub dodać nowe urządzenie**.
-    * Jeśli nie masz żadnych urządzeń, baner zawiera następujący napis: **Nie masz żadnych urządzeń zarządzanych. Dodaj urządzenie, naciskając tutaj.** Kliknij transparent, aby dodać urządzenie.  
+    * Jeśli nie masz żadnych urządzeń, transparent wyświetla tekst: **Nie masz żadnych zarządzanych urządzeń. Dodaj urządzenie, naciskając tutaj.** Kliknij transparent, aby dodać urządzenie.  
 
      ![Zrzut ekranu przedstawiający stronę Urządzenia z czerwonym kwadratem wokół opcji transparentu wyróżniającym miejsce, w którym należy kliknąć.](./media/CP-enroll-MACOS-1808.png)  
 5.  Wykonaj poniższy krok dopasowany do obecnie wyświetlanej wiadomości w aplikacji Portal firmy.  

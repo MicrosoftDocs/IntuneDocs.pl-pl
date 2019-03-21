@@ -1,15 +1,16 @@
 ---
 title: Przeglądanie dzienników zasad ochrony aplikacji | Microsoft Intune
 titlesuffix: Microsoft Intune
-description: Informacje na temat ustawień, które można przeglądać w dziennikach ochrony aplikacji.
+description: W tym temacie opisano sposób konfigurowania dzienników (aplikacja) zasad ochrony aplikacji usługi Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 11/20/2018
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 4CD5EE94-7BA6-4F59-8E28-1EBCA7CA6436
 ms.reviewer: andcerat
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0d5ffdb67a6243bf34db03fb8394763e1a1c1f0e
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
-ms.translationtype: HT
+ms.openlocfilehash: ff80a5911c4bb027cbe2f9289a415ed9797277a6
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55847169"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57460499"
 ---
 # <a name="review-client-app-protection-logs"></a>Przeglądanie dzienników ochrony aplikacji klienta
 
@@ -40,8 +41,8 @@ W poniższej tabeli przedstawiono nazwy i opisy ustawień zarejestrowanych w dzi
 
 | Nazwa                        | Możliwe wartości                                                                                                                                                                                                                                                                                           | Ustawienie w portalu zarządzania aplikacjami mobilnymi w usłudze Azure Intune                                                                                                                            |
 |-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| AccessRecheckOfflineTimeout | x min                                                                                                                                                                                                                                                                                                   | [Dostęp] Ponowne sprawdzenie wymagań dostępu — okres karencji w trybie offline<br>Uwaga: jest to okres, po którym wymagania dostępu aplikacji zostaną sprawdzone ponownie, jeśli urządzenie jest w trybie offline.             |
-| AccessRecheckOnlineTimeout  | _x_ min                                                                                                                                                                                                                                                                                                   | [Dostęp] Ponowne sprawdzenie wymagań dostępu — limit czasu.<br>Uwaga: jest to okres, po którym wymagania dostępu aplikacji zostaną sprawdzone ponownie po uruchomieniu aplikacji, jeśli urządzenie jest w trybie online. |
+| AccessRecheckOfflineTimeout | x min                                                                                                                                                                                                                                                                                                   | [Dostęp] Ponowne sprawdzenie wymagań dostępu — okres karencji w trybie offline<br>Uwaga: Jest to okres, po którym wymagania dostępu aplikacji zostaną sprawdzone ponownie, jeśli urządzenie jest w trybie offline.             |
+| AccessRecheckOnlineTimeout  | _x_ min                                                                                                                                                                                                                                                                                                   | [Dostęp] Ponowne sprawdzenie wymagań dostępu — limit czasu.<br>Uwaga: Jest to okres, po którym wymagania dostępu aplikacji zostaną sprawdzone ponownie po uruchomieniu aplikacji, jeśli urządzenie jest w trybie online. |
 | AppPinDisabled              | 0 = Nie<br>1 = Tak                                                                                                                                                                                                                                                                                           | [Dostęp] Wyłącz numer PIN aplikacji, gdy zarządzany jest numer PIN urządzenia.                                                                                                                                     |
 | AppSharingFromLevel         | 0 = Brak aplikacji<br>1 = Zarządzane aplikacje<br>2 = Dowolna aplikacja                                                                                                                                                                                                                                                              | [Relokacja danych] Zezwalaj aplikacji na odbieranie danych z innych aplikacji.                                                                                                                        |
 | AppSharingToLevel           | 0 = Brak aplikacji<br>1 = Zarządzane aplikacje<br>2 = Dowolna aplikacja                                                                                                                                                                                                                                                              | [Relokacja danych] Zezwalaj aplikacji na przesyłanie danych do innych aplikacji.                                                                                                                         |

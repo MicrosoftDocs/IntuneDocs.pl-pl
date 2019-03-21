@@ -18,11 +18,11 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9bdb3e5c79b348b323df129c2dec4c02af596215
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
-ms.translationtype: HT
+ms.openlocfilehash: 85856e77fc8ebbd4054ef819a9110e0fa258ced3
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
+ms.lasthandoff: 03/14/2019
 ms.locfileid: "55844551"
 ---
 # <a name="using-your-windows-device-with-intune-company-portal"></a>Korzystanie z urządzenia z systemem Windows z aplikacją Portal firmy usługi Intune
@@ -46,7 +46,7 @@ Aplikacja Portal firmy obsługuje obecnie urządzenia z następującymi wersjami
 W aplikacji Portal firmy są obsługiwane inne wersje systemu Windows, takie jak [Windows 10 Holographic](https://www.microsoft.com/hololens). Jednak te wersje nie są omawiane w tym artykule, ponieważ są przeznaczone do bardzo konkretnych zastosowań.
 
 ## <a name="set-up-your-device-in-the-company-portal"></a>Konfigurowanie urządzenia w aplikacji Portal firmy
-- [Przekazywanie urządzenia z systemem Windows do zarządzania w aplikacji Portal firmy](enroll-your-device-in-intune-windows.md)
+- [Przekazywanie urządzenia z systemem Windows do zarządzania w aplikacji Portal firmy](windows-enrollment-company-portal.md)  
 - [Co oznacza *przekazanie urządzenia do zarządzania*?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
 - [Jakie informacje może zobaczyć firma na moim urządzeniu?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 - [Szyfrowanie urządzenia](encrypt-your-device-windows.md)

@@ -6,20 +6,21 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 01/22/2019
-ms.topic: conceptual
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 38bc5ed233bf3368ae9b0ce21b8688966a1ffdef
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
-ms.translationtype: HT
+ms.openlocfilehash: f38803d3be05182639ac8eca2578e9ce121f7c2f
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57232357"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57566016"
 ---
 # <a name="windows-holographic-for-business-device-settings-to-run-as-a-kiosk-in-intune"></a>Ustawienia urządzeń z systemem Windows Holographic for Business na potrzeby uruchamiania jako kiosku w usłudze Intune
 
@@ -39,11 +40,11 @@ Aby dowiedzieć się więcej na temat funkcji kiosku systemu Windows w usłudze 
 
 W przypadku wybrania trybu kiosku z pojedynczą aplikacją wprowadź następujące ustawienia:
 
-- **Typ logowania użytkownika**: Wybierz pozycję **Konto użytkownika lokalnego**, aby wprowadzić konto użytkownika lokalnego (na urządzenie) lub konto Microsoft skojarzone z aplikacją kiosku. Konta użytkowników typu **Logowanie automatyczne** nie są obsługiwane na platformie Windows Holographic for Business.
+- **Typ logowania użytkownika**: wybierz pozycję **Konto użytkownika lokalnego**, aby wprowadzić konto użytkownika lokalnego (na urządzenie) lub konto Microsoft skojarzone z aplikacją kiosku. Konta użytkowników typu **Logowanie automatyczne** nie są obsługiwane na platformie Windows Holographic for Business.
 
-- **Typ aplikacji**: Wybierz pozycję **Aplikacja ze Sklepu**.
+- **Typ aplikacji**: wybierz pozycję **Aplikacja ze sklepu**.
 
-- **Aplikacja do uruchamiania w trybie kiosku**: Wybierz pozycję **Dodaj aplikację ze sklepu**, a następnie wybierz aplikację z listy.
+- **Aplikacja do uruchamiania w trybie kiosku**: wybierz pozycję **Dodaj aplikację ze sklepu**, a następnie wybierz aplikację z listy.
 
     Lista nie zawiera żadnych aplikacji? Dodaj aplikacje, wykonując czynności opisane w temacie [Aplikacje klienckie](apps-add.md).
 
@@ -53,30 +54,30 @@ W przypadku wybrania trybu kiosku z pojedynczą aplikacją wprowadź następują
 
 Aplikacje w tym trybie są dostępne w menu Start. Te aplikacje to jedyne aplikacje, które użytkownik może otwierać. W przypadku wybrania trybu kiosku z wieloma aplikacjami wprowadź następujące ustawienia:
 
-- **Określ urządzenia w trybie S z systemem Windows 10 jako docelowe**: Wybierz pozycję **Nie**. Tryb S nie jest obsługiwany na platformie Windows Holographic for Business.
+- **Określ urządzenia w trybie S z systemem Windows 10 jako docelowe**: wybierz pozycję **Nie**. Tryb S nie jest obsługiwany na platformie Windows Holographic for Business.
 
-- **Typ logowania użytkownika**: Dodaj co najmniej jedno konta użytkownika, które może używać dodanych aplikacji. Dostępne opcje: 
+- **Typ logowania użytkownika**: dodaj co najmniej jedno konto użytkownika, które może używać dodanych aplikacji. Dostępne opcje: 
 
-  - **Logowanie automatyczne**: Ta opcja nie jest obsługiwana na platformie Windows Holographic for Business.
-  - **Konta użytkowników lokalnych**: **Dodaj** konto użytkownika lokalnego (w urządzeniu). Wprowadzone konto jest używane do logowania się do kiosku.
-  - **Użytkownik lub grupa usługi Azure AD (system Windows 10 w wersji 1803 lub nowszej)**: Wymaga poświadczeń użytkownika w celu zalogowania się na urządzeniu. Wybierz pozycję **Dodaj**, aby wybrać użytkowników lub grupy usługi Azure AD z listy. Można wybrać wielu użytkowników lub wiele grup. Wybierz przycisk **Wybierz**, aby zapisać zmiany.
-  - **Odwiedzający platformę HoloLens**: Konto gościa, które nie wymaga żadnych poświadczeń użytkownika ani uwierzytelniania, zgodnie z opisem w sekcji [Pojęcia związane z trybem komputera udostępnionego](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
+  - **Logowanie automatyczne**: nie jest obsługiwane na platformie Windows Holographic for Business.
+  - **Konta użytkownika lokalnego**: **dodaj** konto użytkownika lokalnego (w urządzeniu). Wprowadzone konto jest używane do logowania się do kiosku.
+  - **Użytkownik lub grupa usługi Azure AD (system Windows 10 w wersji 1803 i nowszych)**: wymaga poświadczeń użytkownika do zalogowania na urządzeniu. Wybierz pozycję **Dodaj**, aby wybrać użytkowników lub grupy usługi Azure AD z listy. Można wybrać wielu użytkowników lub wiele grup. Wybierz przycisk **Wybierz**, aby zapisać zmiany.
+  - **Gość HaloLens**: konto gościa, które nie wymaga żadnych poświadczeń użytkownika ani uwierzytelniania, zgodnie z opisem w sekcji [Shared PC mode concepts (Pojęcia związane z trybem komputera udostępnionego)](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
 
-- **Aplikacje**: Dodaj aplikacje do uruchamiania w urządzeniu kiosku. Pamiętaj, że możesz dodać kilka aplikacji.
+- **Aplikacje**: dodaj aplikacje do uruchamiania w urządzeniu kiosku. Pamiętaj, że możesz dodać kilka aplikacji.
 
-  - **Dodaj aplikacje ze Sklepu**: Wybierz istniejącą aplikację, którą dodano za pomocą funkcji [Aplikacje klienckie](apps-add.md). Jeśli lista nie zawiera żadnych aplikacji, możesz pobrać aplikacje i [dodać je do usługi Intune](store-apps-windows.md).
-  - **Dodaj aplikację systemu Win32**: Ta opcja nie jest obsługiwana na platformie Windows Holographic for Business.
-  - **Dodaj przy użyciu identyfikatora AUMID**: Użyj tej opcji, aby dodać aplikacje skrzynki odbiorczej systemu Windows. Wprowadź następujące właściwości: 
+  - **Dodaj aplikacje ze sklepu**: wybierz istniejącą aplikację, którą dodano za pomocą usługi [Aplikacje klienckie](apps-add.md). Jeśli lista nie zawiera żadnych aplikacji, możesz pobrać aplikacje i [dodać je do usługi Intune](store-apps-windows.md).
+  - **Dodaj aplikację systemu Win32**: opcja nieobsługiwana na platformie Windows Holographic for Business.
+  - **Dodaj według identyfikatora AUMID**: użyj tej opcji, aby dodać aplikacje skrzynki odbiorczej systemu Windows. Wprowadź następujące właściwości: 
 
-    - **Nazwa aplikacji**: Element wymagany. Wprowadź nazwę aplikacji.
-    - **Identyfikator modelu użytkownika aplikacji (AUMID)**: Element wymagany. Wprowadź identyfikator modelu użytkownika aplikacji (AUMID) dla aplikacji systemu Windows. Aby uzyskać ten identyfikator, zobacz [Znajdowanie identyfikatora modelu użytkownika aplikacji zainstalowanej aplikacji](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
-    - **Rozmiar kafelka**: Element wymagany. Wybierz mały, średni, szeroki lub duży rozmiar kafelka aplikacji.
+    - **Nazwa aplikacji**: wymagana. Wprowadź nazwę aplikacji.
+    - **Identyfikator modelu użytkownika aplikacji (AUMID)**: wymagany. Wprowadź identyfikator modelu użytkownika aplikacji (AUMID) dla aplikacji systemu Windows. Aby uzyskać ten identyfikator, zobacz [Znajdowanie identyfikatora modelu użytkownika aplikacji zainstalowanej aplikacji](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+    - **Rozmiar kafelka**: wymagany. Wybierz mały, średni, szeroki lub duży rozmiar kafelka aplikacji.
 
-- **Ustawienia przeglądarki kiosku**: Ta opcja nie jest obsługiwana na platformie Windows Holographic for Business.
+- **Ustawienia przeglądarki kiosku**: nie są obsługiwane na platformie Windows Holographic for Business.
 
-- **Użyj alternatywnego układu ekranu startowego**: Wybierz pozycję **Tak**, aby wprowadzić plik XML, który opisuje sposób wyświetlania aplikacji w menu Start, w tym ich kolejność. Użyj tej opcji, jeśli potrzebujesz większej liczby dostosowań w menu Start. Artykuł [Customize and export Start layout (Dostosowywanie i eksportowanie układu menu Start)](https://docs.microsoft.com/hololens/hololens-kiosk#start-layout-for-hololens) zawiera wskazówki i oraz plik XML przygotowany dla urządzeń platformy Windows Holographic for Business.
+- **Użyj alternatywnego układ menu Start**: wybierz pozycję **Tak**, aby wprowadzić plik XML, który opisuje sposób wyświetlania aplikacji w menu Start, w tym ich kolejność. Użyj tej opcji, jeśli potrzebujesz większej liczby dostosowań w menu Start. Artykuł [Customize and export Start layout (Dostosowywanie i eksportowanie układu menu Start)](https://docs.microsoft.com/hololens/hololens-kiosk#start-layout-for-hololens) zawiera wskazówki i oraz plik XML przygotowany dla urządzeń platformy Windows Holographic for Business.
 
-- **Pasek zadań systemu Windows**: Ta opcja nie jest obsługiwana na platformie Windows Holographic for Business.
+- **Pasek zadań systemu Windows**: nie jest obsługiwany na platformie Windows Holographic for Business.
 
 ## <a name="next-steps"></a>Następne kroki
 

@@ -6,20 +6,21 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 01/22/2019
-ms.topic: conceptual
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aff0aad055aee08dfbf17622e3d9f9c3061165b8
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
-ms.translationtype: HT
+ms.openlocfilehash: 666b61eec021fa6a2cdad5126f572234d97b6883
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57233971"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57566101"
 ---
 # <a name="configure-vpn-settings-for-devices-running-android-in-intune"></a>Konfigurowanie ustawień sieci VPN dla urządzeń z systemem Android w usłudze Intune
 
@@ -36,15 +37,15 @@ W zależności od wybranych ustawień niektórych wartości z poniższej listy n
 
 ## <a name="android-vpn-settings"></a>Ustawienia sieci VPN dla systemu Android
 
-- **Nazwa połączenia**: Wprowadź nazwę dla połączenia. Użytkownicy końcowi widzą tę nazwę, przeglądając w urządzeniu listę dostępnych połączeń sieci VPN.
-- **Adres IP lub nazwa FQDN**: wprowadź adres IP lub w pełni kwalifikowaną nazwę domeny (FQDN) serwera sieci VPN, z którym urządzenia nawiązują połączenie. Na przykład podaj adres **192.168.1.1** lub **vpn.contoso.com**.
+- **Nazwa połączenia**: umożliwia wprowadzenie nazwy połączenia. Użytkownicy końcowi widzą tę nazwę, przeglądając w urządzeniu listę dostępnych połączeń sieci VPN.
+- **Adres IP lub nazwa FQDN** — podaj adres IP lub w pełni kwalifikowaną nazwę domeny (FQDN) serwera sieci VPN, z którym urządzenia nawiązują połączenie. Na przykład podaj adres **192.168.1.1** lub **vpn.contoso.com**.
 
-  - **Metoda uwierzytelniania**: wybierz sposób uwierzytelniania urządzeń na serwerze sieci VPN. Dostępne opcje:
+  - **Metoda uwierzytelniania**: umożliwia wybór sposobu uwierzytelniania urządzeń na serwerze sieci VPN. Dostępne opcje:
 
     - **Certyfikaty**: wybierz istniejący profil certyfikatu SCEP lub PKCS na potrzeby uwierzytelniania połączenia. [Konfigurowanie certyfikatów](certificates-configure.md): zawiera procedurę tworzenia profilu certyfikatu.
     - **Nazwa użytkownika i hasło**: podczas logowania się do serwera sieci VPN użytkownicy są proszeni o wprowadzenie nazwy użytkownika i hasła.
 
-- **Typ połączenia**: wybierz typ połączenia sieci VPN. Dostępne opcje:
+- **Typ połączenia**: pozwala wybrać typ połączenia VPN. Dostępne opcje:
 
   - **Check Point Capsule VPN**
   - **Cisco AnyConnect**
@@ -53,20 +54,20 @@ W zależności od wybranych ustawień niektórych wartości z poniższej listy n
   - **Pulse Secure**
   - **Citrix**
 
-- **Odcisk palca** (tylko funkcja Check Point Capsule VPN): wprowadź ciąg znaków, na przykład **Kod odcisku palca firmy Contoso**, aby sprawdzić, czy serwer sieci VPN jest zaufany. Odcisk palca można wysłać do klienta, który będzie wówczas traktował każdy serwer przedstawiający ten sam odcisk palca podczas połączenia jako zaufany. Jeśli urządzenie nie ma żadnego odcisku palca, wyświetli użytkownikowi monit dotyczący zaufania serwerowi sieci VPN zawierający odcisk palca serwera. Użytkownik samodzielnie weryfikuje odcisk palca i wybiera pozycję Zaufane w celu nawiązania połączenia.
-- **Wprowadź pary kluczy i wartości dla atrybutów sieci VPN Citrix** (tylko Citrix): wprowadź pary kluczy i wartości udostępnione przez firmę Citrix. Te wartości służą do konfigurowania właściwości połączenia sieci VPN.
+- **Odcisk palca** (tylko dla Check Point Capsule VPN) — wprowadź ciąg znaków, na przykład **Kod odcisku palca firmy Contoso**, aby sprawdzić, czy serwer sieci VPN jest zaufany. Odcisk palca można wysłać do klienta, który będzie wówczas traktował każdy serwer przedstawiający ten sam odcisk palca podczas połączenia jako zaufany. Jeśli urządzenie nie ma żadnego odcisku palca, wyświetli użytkownikowi monit dotyczący zaufania serwerowi sieci VPN zawierający odcisk palca serwera. Użytkownik samodzielnie weryfikuje odcisk palca i wybiera pozycję Zaufane w celu nawiązania połączenia.
+- **Podaj pary klucza i wartości dla atrybutów sieci VPN Citrix** (tylko dla dostawcy Citrix) — wprowadź pary klucza i wartości dostarczone przez dostawcę Citrix. Te wartości służą do konfigurowania właściwości połączenia sieci VPN.
 
 ## <a name="android-enterprise-vpn-settings"></a>Ustawienia sieci VPN systemu Android Enterprise
 
-- **Nazwa połączenia**: Wprowadź nazwę dla połączenia. Użytkownicy końcowi widzą tę nazwę, przeglądając w urządzeniu listę dostępnych połączeń sieci VPN.
-- **Adres IP lub nazwa FQDN**: wprowadź adres IP lub w pełni kwalifikowaną nazwę domeny (FQDN) serwera sieci VPN, z którym urządzenia nawiązują połączenie. Na przykład podaj adres **192.168.1.1** lub **vpn.contoso.com**.
+- **Nazwa połączenia**: umożliwia wprowadzenie nazwy połączenia. Użytkownicy końcowi widzą tę nazwę, przeglądając w urządzeniu listę dostępnych połączeń sieci VPN.
+- **Adres IP lub nazwa FQDN** — podaj adres IP lub w pełni kwalifikowaną nazwę domeny (FQDN) serwera sieci VPN, z którym urządzenia nawiązują połączenie. Na przykład podaj adres **192.168.1.1** lub **vpn.contoso.com**.
 
-  - **Metoda uwierzytelniania**: wybierz sposób uwierzytelniania urządzeń na serwerze sieci VPN. Dostępne opcje:
+  - **Metoda uwierzytelniania**: umożliwia wybór sposobu uwierzytelniania urządzeń na serwerze sieci VPN. Dostępne opcje:
   
     - **Certyfikaty**: wybierz istniejący profil certyfikatu SCEP lub PKCS na potrzeby uwierzytelniania połączenia. [Konfigurowanie certyfikatów](certificates-configure.md): zawiera procedurę tworzenia profilu certyfikatu.
     - **Nazwa użytkownika i hasło**: podczas logowania się do serwera sieci VPN użytkownicy są proszeni o wprowadzenie nazwy użytkownika i hasła.
 
-- **Typ połączenia**: wybierz typ połączenia sieci VPN. Dostępne opcje:
+- **Typ połączenia**: pozwala wybrać typ połączenia VPN. Dostępne opcje:
 
   - **Check Point Capsule VPN**
   - **Cisco AnyConnect**

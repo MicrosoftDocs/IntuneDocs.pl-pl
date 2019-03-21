@@ -5,9 +5,10 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 ms.date: 07/13/2017
-ms.topic: conceptual
+ms.topic: archived
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
 ms.reviewer: owenyen
@@ -15,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48079adfd8ff2f635ebf63370da62f7e428dcb40
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
-ms.translationtype: HT
+ms.openlocfilehash: d68f4151dc8b10ef716524f2422f532dec6693f9
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57238510"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57461247"
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Instalowanie klienta oprogramowania usługi Intune na komputerach z systemem Windows
 
@@ -126,7 +127,7 @@ Jeśli użytkownikom przypisano licencję usługi Intune i ustawiono usługę In
 - Dla użytkowników komputerów z systemem Windows 10 lub Windows 8.1 są wyświetlane dwie opcje rejestracji:
 
   -  **Zarejestruj komputer jako urządzenie przenośne**: użytkownicy wybierają przycisk **Dowiedz się, jak zarejestrować** i przechodzą do instrukcji dotyczących sposobu rejestracji komputera jako urządzenia przenośnego. Ten przycisk jest zawsze wyświetlany, ponieważ rejestracja w zarządzaniu urządzeniami przenośnymi jest uznawana za domyślną i preferowaną opcję rejestracji. Jednak opcja zarządzania urządzeniami przenośnymi nie została uwzględniona w tym temacie, który obejmuje tylko instalację oprogramowania klienckiego.
-  - **Zarejestruj komputer przy użyciu oprogramowania klienckiego usługi Intune**: należy poinformować użytkowników, aby wybrali link **Kliknij tutaj, aby je pobrać**, który przeprowadzi ich przez proces instalacji oprogramowania klienckiego.
+  - **Zarejestruj komputer przy użyciu oprogramowania klienckiego usługi Intune**: należy poinformować użytkowników, aby wybrali link **Kliknij tutaj, aby je pobrać**, który poprowadzi ich przez proces instalacji oprogramowania klienckiego.
 
 Poniższa tabela zawiera podsumowanie opcji.
 
@@ -251,7 +252,7 @@ Sprawdź folder „%ProgramFiles%\Microsoft\OnlineManagement” i upewnij się, 
 
 - AgentInstaller
 - Dzienniki
-- Aktualizacje
+- Updates
 - Wspólne
 
 ### <a name="remove-the-onlinemanagement-folder"></a>Usuń folder OnlineManagement

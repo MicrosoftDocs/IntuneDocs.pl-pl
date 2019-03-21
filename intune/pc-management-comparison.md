@@ -7,9 +7,10 @@ author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.date: 01/01/2018
-ms.topic: conceptual
+ms.topic: archived
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 068a73bb-e6b3-44a6-8f6e-4cf7d455bbf3
 ms.reviewer: owenyen
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d94549f150b2c658ba422ea1d6f68c5b5df85e33
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
-ms.translationtype: HT
+ms.openlocfilehash: 9c70dbee01c546f73052b8741ce339c7bfe92fc7
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57238493"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57461145"
 ---
 # <a name="compare-managing-windows-pcs-as-computers-or-mobile-devices"></a>Porównanie zarządzania komputerami z systemem Windows jako komputerami i jako urządzeniami mobilnymi
 
@@ -53,4 +54,5 @@ Organizacje mogą użyć usługi Microsoft Intune do zarządzania komputerami z 
 Zarządzanie komputerami z systemem Windows z użyciem nowoczesnego zarządzania urządzeniami mobilnymi ma następujące zalety:
 - **Skalowalność** — zarządzanie MDM skaluje się dzięki zarządzaniu w chmurze w usłudze Intune. Oprogramowanie klienckie usługi Intune jest ograniczone do 7000 komputerów.
 - **Prostota** — korzystanie z nowoczesnych możliwości zarządzania zawartych w systemie operacyjnym bez konieczności pobierania oprogramowania klienckiego
-- **Spójność** — komputery z systemem Windows są zarządzane tak, jak wszystkie inne urządzenia mobilne w organizacji<!-- - **Cloud optimization** - -->
+- **Spójność** — komputery z systemem Windows są zarządzane tak, jak wszystkie inne urządzenia mobilne w organizacji
+<!-- - **Cloud optimization** - -->
