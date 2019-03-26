@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 34d1cbe969b8e186d9e067660237da9c4ca88fb8
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 313e4ccf0e96536b3e99edb968298e4cc3343aa1
+ms.sourcegitcommit: aab39bf86707ccaef45fd6527fff4f1c89336710
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57396220"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58429737"
 ---
 # <a name="what-can-intune-do-for-my-company"></a>Jakie korzyści może zapewnić usługa Intune mojej firmie?
 Usługa Microsoft Intune to oparta na chmurze usługa zarządzania mobilnością w przedsiębiorstwie (EMM, enterprise mobility management) ułatwiająca pracownikom utrzymanie produktywności przy jednoczesnej ochronie danych firmowych.
@@ -46,15 +46,15 @@ Usługa Intune umożliwia:
 
 ## <a name="quickstarts"></a>Przewodniki Szybki start
 
-Rozumiemy, że rozpoczęcie zarządzania urządzeniami przenośnymi może być trudne, ponieważ trzeba podjąć wiele różnych decyzji w imieniu swojej firmy. Poniższe przewodniki Szybki start ułatwiają rozpoczęcie pracy z usługą Intune i szybkie wykonanie niektórych typowych zadań.
+Rozumiemy, że wprowadzanie zarządzania urządzeniami przenośnymi może być trudne. Istnieje wiele różnych decyzji, które musisz podjąć w imieniu swojej firmy. Poniższe przewodniki Szybki start ułatwiają rozpoczęcie pracy z usługą Intune i szybkie wykonanie niektórych typowych zadań.
 
-**Przewodniki Szybki start** możesz wykonywać w zalecanej kolejności, korzystając ze spisu treści w lewej części strony.
+**Przewodniki Szybki start** możesz wykonywać w zalecanej kolejności, korzystając ze spisu treści w lewej części tej strony.
 
 - [Wypróbuj bezpłatnie usługę Intune](free-trial-sign-up.md) — utwórz bezpłatną subskrypcję w celu wypróbowania usługi Intune w środowisku testowym.    
 - [Tworzenie użytkownika](quickstart-create-user.md) — dodaj użytkownika do usługi Intune, aby umożliwić mu dostęp do zasobów firmy na urządzeniach przenośnych.
 - [Tworzenie grupy](quickstart-create-group.md) — umieść użytkowników w grupach, aby ułatwić zarządzanie zasadami i aplikacjami, do których mogą uzyskiwać dostęp.
-- [Konfigurowanie automatycznego rejestrowania](quickstart-setup-auto-enrollment.md) — skonfiguruj usługę Microsoft Intune w celu automatycznego rejestrowania urządzeń w przypadku logowania się określonych użytkowników na urządzeniach z systemem Windows 10.
-- [Rejestrowanie urządzenia](quickstart-enroll-windows-device.md) — przyjmij rolę użytkownika usługi Intune i zarejestruj urządzenie w usłudze Microsoft Intune. Następnie wrócisz do usługi Intune i sprawdzisz, czy urządzenie zostało zarejestrowane.
+- [Konfigurowanie automatycznego rejestrowania](quickstart-setup-auto-enrollment.md) — skonfiguruj usługę Intune w celu automatycznego rejestrowania urządzeń w przypadku logowania się określonych użytkowników na urządzeniach z systemem Windows 10.
+- [Rejestrowanie urządzenia](quickstart-enroll-windows-device.md) — przyjmij rolę użytkownika usługi Intune i zarejestruj urządzenie w usłudze Intune. Następnie wróć do usługi Intune i sprawdź, czy urządzenie zostało zarejestrowane pomyślnie.
 - [Tworzenie zasad zgodności urządzeń](quickstart-set-password-length-android.md) — utwórz zasady zgodności urządzeń i przypisz grupę do zasad.
 - [Wysyłanie powiadomień do niezgodnych urządzeń](quickstart-send-notification.md) — wysyłaj powiadomienia e-mail do pracowników, którzy mają niezgodne urządzenia, przez utworzenie i przypisanie zasad zgodności.
 - [Dodawanie i przypisywanie aplikacji](quickstart-add-assign-app.md) — utwórz i przypisz pracownikom aplikację kliencką.
