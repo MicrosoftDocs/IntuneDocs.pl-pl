@@ -10,20 +10,22 @@ ms.date: 11/09/2018
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 2586fce0-5dca-4686-b9c4-791778838401
 ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 2ae378550a75f756390053e44eb4fbd04f665612
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 7dee5407b39d9299081bf526b117c64b5883a106
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179091"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57393366"
 ---
-# <a name="quickstart-create-and-assign-an-app-protection-policy"></a>Szybki start: tworzenie i przypisywanie zasad ochrony aplikacji
+# <a name="quickstart-create-and-assign-an-app-protection-policy"></a>Szybki start: Tworzenie i przypisywanie zasad ochrony aplikacji
 
 W tym przewodniku Szybki start użyjesz usługi Intune do utworzenia i przypisania zasad ochrony aplikacji do aplikacji klienckiej na urządzeniu użytkownika końcowego. Usługa Intune używa zasad ochrony aplikacji, aby sprawdzać, czy Twoje aplikacje spełniają wymagania organizacji w zakresie ochrony danych.
 
@@ -45,7 +47,7 @@ Użyj następujących kroków, aby utworzyć zasady ochrony aplikacji:
 2. Wprowadź następujące informacje: 
 
     - **Nazwa**: *Ochrona zawartości w systemie Windows 10*
-    - **Opis**: *Użytkownicy skojarzeni z tymi zasadami nie będą mogli wycinać, kopiować ani wklejać żadnej zawartości między przypisaną aplikacją a innymi niezarządzanymi aplikacjami na urządzeniu.*
+    - **Opis**: *Użytkownicy skojarzeni z tymi zasadami nie będą mogli wycinać, kopiować ani wklejać żadnej zawartości między przypisaną aplikacją i innymi niezarządzanymi aplikacjami na urządzeniu.*
     - **Platforma**: *Windows 10*
     - **Stan rejestracji**: *Z rejestracją*
 
@@ -84,4 +86,4 @@ W tym przewodniku Szybki start zostały utworzone i przypisane zasady ochrony ap
 Aby zapoznać się kolejnymi przewodnikami Szybki start dotyczącymi usługi Intune, przejdź do kolejnego przewodnika Szybki start.
 
 > [!div class="nextstepaction"]
-> [Szybki start: tworzenie i przypisywanie roli niestandardowej](quickstart-create-custom-role.md)
+> [Szybki start: Tworzenie i przypisywanie roli niestandardowej](quickstart-create-custom-role.md)

@@ -4,6 +4,7 @@ description: Przewodnik Szybki start — tworzenie i przypisywanie roli niestand
 services: microsoft-intune
 author: ErikjeMS
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.topic: quickstart
 ms.date: 09/21/2018
 ms.author: erikje
@@ -11,14 +12,15 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
-ms.openlocfilehash: 5de108835254d6a65546b8f1c9e8d0e9c32dbd26
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: be3ef61d3bdce2f1ad74a388a2ec50691313a1d1
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189932"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57400292"
 ---
-# <a name="quickstart-create-and-assign-a-custom-role"></a>Przewodnik Szybki start: tworzenie i przypisywanie roli niestandardowej
+# <a name="quickstart-create-and-assign-a-custom-role"></a>Szybki start: Utworzenie i przypisanie roli niestandardowej
 
 W tym przewodniku Szybki start dotyczącym usługi Intune utworzysz rolę niestandardową z określonymi uprawnieniami dla działu operacji zabezpieczeń. Następnie przypiszesz tę rolę grupie takich operatorów. Istnieje kilka ról domyślnych, których można używać od razu. Jednak tworząc role niestandardowe, takie jak ta, uzyskujesz precyzyjną kontrolę nad dostępem do wszystkich części systemu zarządzania urządzeniami przenośnymi.
 
@@ -73,4 +75,4 @@ W tym przewodniku Szybki start utworzono rolę niestandardową do operacji zabez
 Aby zapoznać się kolejnymi przewodnikami Szybki start dotyczącymi usługi Intune, przejdź do kolejnego przewodnika Szybki start.
 
 > [!div class="nextstepaction"]
-> [Szybki start: tworzenie profilu urządzenia poczty e-mail dla systemu iOS](quickstart-email-profile.md)
+> [Szybki start: Tworzenie profilu poczty e-mail urządzenia dla systemu iOS](quickstart-email-profile.md)

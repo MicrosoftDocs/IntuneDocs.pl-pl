@@ -4,6 +4,7 @@ description: Przewodnik Szybki start — tworzenie użytkownika w usłudze Intun
 services: microsoft-intune
 author: ErikjeMS
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.topic: quickstart
 ms.date: 10/30/2018
 ms.author: erikje
@@ -11,14 +12,15 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
-ms.openlocfilehash: b5653c67766a3312cf7ce2872e8b0cd4301b0e8b
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 98c71bd4c93e869b429b7677b4fb7c442aa58643
+ms.sourcegitcommit: fdc6261f4ed695986e06d18353c10660a4735362
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189499"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57991081"
 ---
-# <a name="quickstart-create-a-user-and-assign-a-license-to-it"></a>Przewodnik Szybki start: tworzenie użytkownika i przypisywanie mu licencji
+# <a name="quickstart-create-a-user-and-assign-a-license-to-it"></a>Szybki start: Tworzenie użytkownika i przypisywanie do niego licencji
 
 W tym przewodniku Szybki start utworzysz użytkownika, a następnie przypiszesz licencję temu użytkownikowi. W przypadku korzystania z usługi Intune każda osoba, która ma mieć dostęp do danych firmy, musi mieć konto użytkownika. Administratorzy usługi Intune mogą później konfigurować tych użytkowników na potrzeby zarządzania kontrolą dostępu.
 
@@ -45,9 +47,9 @@ Osoby, które chcą zarejestrować się w zarządzaniu urządzeniami w usłudze 
 
 ## <a name="assign-a-license-to-the-user"></a>Przypisywanie użytkownikowi licencji
 
-Po utworzeniu użytkownika trzeba użyć [portalu usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854), aby przypisać licencję usługi Intune do tego użytkownika. Jeśli użytkownikom nie zostaną przypisane licencje, nie będą oni mogli zarejestrować swoich urządzeń w usłudze Intune. 
+Po utworzeniu użytkownika należy użyć [centrum administracyjnego platformy Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854), aby przypisać licencję usługi Intune do tego użytkownika. Jeśli użytkownikom nie zostaną przypisane licencje, nie będą oni mogli zarejestrować swoich urządzeń w usłudze Intune. 
 
-1. Zaloguj się do [portalu usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) przy użyciu tych samych poświadczeń, które zostały użyte do zalogowania się do usługi Intune.
+1. Zaloguj się do [centrum administracyjnego platformy Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) przy użyciu tych samych poświadczeń co użyte do zalogowania się do usługi Intune.
 2. Wybierz pozycję **Użytkownicy** > **Aktywni użytkownicy** > wybierz utworzonego przed chwilą użytkownika.
 3. Obok pozycji **Licencje produktów** wybierz pozycję **Edytuj**.
 4. W obszarze **Lokalizacja** wybierz lokalizację dla użytkownika.
@@ -61,7 +63,7 @@ W przypadku nowego aktywnego użytkownika usługi Intune będzie wyświetlana in
 
 ## <a name="clean-up-resources"></a>Oczyszczanie zasobów
 
-Jeśli już nie potrzebujesz tego użytkownika, możesz go usunąć, przechodząc do [portalu usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) i wybierając pozycję **Użytkownicy** > **Aktywni użytkownicy** > *wybierając użytkownika z listy* > **Usuń użytkownika** > **Usuń użytkownika** > **Potwierdź zmiany** > **Zamknij**.
+Jeśli już nie potrzebujesz tego użytkownika, możesz go usunąć, przechodząc do [centrum administracyjnego platformy Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) i wybierając pozycję **Użytkownicy** > **Aktywni użytkownicy** > *wybierz użytkownika z listy* > **Usuń użytkownika** > **Usuń użytkownika** > **Potwierdź zmiany** > **Zamknij**.
 
 ## <a name="next-steps"></a>Następne kroki
 
@@ -70,4 +72,4 @@ W tym przewodniku Szybki start utworzono użytkownika i przypisano licencję tem
 Aby zapoznać się kolejnymi przewodnikami Szybki start dotyczącymi usługi Intune, przejdź do kolejnego przewodnika Szybki start.
 
 > [!div class="nextstepaction"]
-> [Przewodnik Szybki start: tworzenie grupy do zarządzania użytkownikami](quickstart-create-group.md)
+> [Szybki start: Tworzenie grupy do zarządzania użytkownikami](quickstart-create-group.md)

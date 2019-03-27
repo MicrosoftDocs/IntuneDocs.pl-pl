@@ -4,6 +4,7 @@ description: Szybki start — konfigurowanie automatycznego rejestrowania urząd
 services: microsoft-intune
 author: ErikjeMS
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.topic: quickstart
 ms.date: 11/05/2018
 ms.author: erikje
@@ -11,14 +12,15 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 0d6f210d055d8395985b4fe64b5a061b2c8a0304
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 810adbf06ddcd0aabb5c758f6a71c898116a9cee
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179672"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57394312"
 ---
-# <a name="quickstart-set-up-automatic-enrollment-for-windows-10-devices"></a>Szybki start: konfigurowanie automatycznego rejestrowania urządzeń z systemem Windows 10
+# <a name="quickstart-set-up-automatic-enrollment-for-windows-10-devices"></a>Szybki start: Konfigurowanie automatycznego rejestrowania urządzeń z systemem Windows 10
 
 W tym przewodniku Szybki start skonfigurujesz w usłudze Microsoft Intune automatyczne rejestrowanie urządzeń w przypadku logowania się określonych użytkowników na urządzeniach z systemem Windows 10.
 
@@ -74,4 +76,4 @@ W tym przewodniku Szybki start przedstawiono sposób konfigurowania automatyczne
 Aby zapoznać się kolejnymi przewodnikami Szybki start dotyczącymi usługi Intune, przejdź do kolejnego przewodnika Szybki start.
 
 > [!div class="nextstepaction"]
-> [Szybki start: rejestrowanie urządzenia z systemem Windows 10](quickstart-enroll-windows-device.md)
+> [Szybki start: Rejestrowanie urządzenia z systemem Windows 10](quickstart-enroll-windows-device.md)

@@ -6,10 +6,11 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2019
+ms.date: 03/11/2019
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 195931c0-8208-43bd-b0af-b1f8e469a32c
 ms.reviewer: ''
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b0ed363acca7fc0021569009b1f672a06101e29f
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 94c83ab0f70a5a40bd745b4db83ef16ac14acd00
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55834181"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57756857"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Szybki start: bezpłatna wersja próbna usługi Microsoft Intune 
 
@@ -53,7 +54,7 @@ Usługę Intune można bezpłatnie testować przez 30 dni. Jeśli masz już kont
 
     ![Zrzut ekranu przedstawiający nowy proces obsługi poświadczeń na koncie próbnym usługi Intune](./media/account-sign-up-site-user-id.png)
 
-    Jeśli Twoja organizacja ma własną domenę niestandardową, której chcesz używać (bez końcówki **.onmicrosoft.com**), możesz to zmienić w portalu administracyjnym usługi Office 365 zgodnie z opisem w dalszej części tego artykułu.
+    Jeśli Twoja organizacja ma własną domenę niestandardową, której chcesz używać (bez końcówki **.onmicrosoft.com**), możesz ją zmienić w centrum administracyjnym platformy Microsoft 365 zgodnie z opisem w dalszej części tego artykułu.
 
 3. Na końcu procesu rejestracji przejrzyj informacje o swoim nowym koncie.
 
@@ -86,34 +87,34 @@ Aby ustawić usługę Intune jako urząd MDM, wykonaj następujące czynności.
 3. Wybierz baner wskazujący, że zarządzanie urządzeniami nie zostało włączone, lub, jeśli baner nie zostanie wyświetlony natychmiast, wybierz pozycję **Rejestracja urządzeń**. Blok **Wybór urzędu MDM** zostanie wyświetlony, jeśli zarządzanie urządzeniami nie zostało jeszcze włączone.
 
     > [!NOTE]
-    > Pomarańczowy baner jest wyświetlany tylko wtedy, gdy nie ustawiono jeszcze urzędu MDM.
+    > Po ustawieniu urzędu MDM wartość dla niego zostanie wyświetlona w bloku **Rejestracja urządzeń**. Pomarańczowy baner jest wyświetlany tylko wtedy, gdy nie ustawiono jeszcze urzędu MDM. 
 
     ![Obraz bloku Wybór urzędu MDM](./media/choose-mdm-authority.png) 
 
-4. W obszarze **Wybór urzędu MDM** ustaw jako urząd MDM **Urząd MDM usługi Intune**.
+4. Jeśli urząd MDM nie jest ustawiony, w obszarze **Wybór urzędu MDM** ustaw dla urzędu MDM opcję **Urząd MDM usługi Intune**.
 
 Aby uzyskać więcej informacji na temat urzędu MDM, zobacz [Ustawianie urzędu zarządzania urządzeniami mobilnymi](mdm-authority-set.md).
 
 ## <a name="configure-your-custom-domain-name-optional"></a>Konfigurowanie niestandardowej nazwy domeny (opcjonalnie)
 
-Jak wspomniano powyżej, jeśli Twoja organizacja ma własną domenę niestandardową, której chcesz używać (bez końcówki **.onmicrosoft.com**), możesz to zmienić w portalu administracyjnym usługi Office 365. Dodasz, zweryfikujesz i skonfigurujesz niestandardową nazwę domeny.  
+Jak wspomniano powyżej, jeśli organizacja ma własną domenę niestandardową, której chcesz użyć zamiast domeny **.onmicrosoft.com**, możesz ją zmienić w centrum administracyjnym platformy Microsoft 365. Domenę niestandardową możesz dodać, zweryfikować i skonfigurować, wykonując następujące kroki.  
 
 > [!IMPORTANT]
-> Początkowej nazwy domeny **onmicrosoft.com** nie można zmienić ani usunąć. Można dodać, zmienić lub usunąć niestandardowe nazwy domen używane z usługą Intune, aby zapewnić wyraźną tożsamość firmy.
+> *Początkowej* części nazwy domeny **onmicrosoft.com** nie można zmienić ani usunąć. Jednak można dodać, zmienić lub usunąć *niestandardowe* nazwy domen używane w połączeniu z usługą Intune, aby zachować wyraźną tożsamość firmy. Aby uzyskać więcej informacji, zobacz [Konfigurowanie nazwy domeny niestandardowej](custom-domain-name-configure.md).
 
-1. Przejdź do [portalu zarządzania usługi Office 365](https://portal.office.com/Admin/Default.aspx) i zaloguj się za pomocą konta administratora.
+1. Przejdź do [centrum administracyjnego platformy Microsoft 365](https://admin.microsoft.com) i zaloguj się za pomocą konta administratora.
 
 2. W okienku nawigacji wybierz pozycję **Konfiguracja** > **Domeny** > **Dodaj domenę**.
 
 3. Wpisz niestandardową nazwę domeny. Następnie wybierz pozycję **Dalej**.
 
-   ![Zrzut ekranu przedstawiający centrum administracyjne usługi Office 365 — dodawanie domeny](./media/domain-custom-add.png)
+   ![Zrzut ekranu przedstawiający centrum administracyjne platformy Microsoft 365 — dodawanie domeny](./media/domain-custom-add.png)
 
 4. Zweryfikuj swoje prawo własności do wprowadzonej w poprzedniej części domeny. 
     
-    Wybranie pozycji **wyślij kod pocztą e-mail** spowoduje wysłanie wiadomości e-mail do zarejestrowanego dla domeny kontaktu. Po otrzymaniu wiadomości e-mail skopiuj kod i wprowadź go w polu z etykietą **Tutaj wprowadź kod weryfikacyjny**. Jeśli kod weryfikacyjny będzie zgodny, domena zostanie dodana do dzierżawy. Wyświetlony adres e-mail może nie wyglądać znajomo. Niektórzy rejestratorzy ukrywają prawdziwy adres e-mail podany podczas rejestrowania domeny.
+    Wybranie pozycji **wyślij kod pocztą e-mail** spowoduje wysłanie wiadomości e-mail do zarejestrowanego dla domeny kontaktu. Po otrzymaniu wiadomości e-mail skopiuj kod i wprowadź go w polu z etykietą **Tutaj wprowadź kod weryfikacyjny**. Jeśli kod weryfikacyjny będzie zgodny, domena zostanie dodana do dzierżawy. Wyświetlony adres e-mail może nie wyglądać znajomo. Niektórzy rejestratorzy ukrywają rzeczywisty adres e-mail. Adres email może być także inny niż podany podczas rejestrowania domeny.
 
-   ![Zrzut ekranu przedstawiający centrum administracyjne usługi Office 365 — weryfikowanie domeny](./media/domain-custom-verify.png)
+   ![Zrzut ekranu przedstawiający centrum administracyjne platformy Microsoft 365 — weryfikowanie domeny](./media/domain-custom-verify.png)
 
    > [!NOTE]
    > Aby uzyskać szczegółowe informacje dotyczące weryfikowania za pomocą rekordu TXT, zobacz [Create DNS records at any DNS hosting provider for Office 365](https://support.office.com/article/Create-DNS-records-at-any-DNS-hosting-provider-for-Office-365-7B7B075D-79F9-4E37-8A9E-FB60C1D95166) (Tworzenie rekordów DNS u dowolnego dostawcy hostingu DNS dla usługi Office 365).
@@ -122,7 +123,7 @@ Jak wspomniano powyżej, jeśli Twoja organizacja ma własną domenę niestandar
 
 Istnieją dwa portale, których można użyć:
 - Pulpit nawigacyjny usługi Intune na platformie Azure ([portal.azure.com](https://portal.azure.com)) umożliwia zapoznanie się z [możliwościami usługi Intune](what-is-intune.md). Zazwyczaj praca odbywa się na pulpicie nawigacyjnym usługi Intune.
-- Centrum administracyjne usługi Office 365 ([portal.office.com](https://portal.office.com)) umożliwia dodawanie użytkowników i zarządzanie nimi, jeśli nie używa się w tym celu usługi Azure Active Directory. Możesz również zarządzać innymi aspektami konta, w tym rozliczeniami i pomocą techniczną.
+- Centrum administracyjne platformy Microsoft 365 ([admin.microsoft.com](https://admin.microsoft.com)) umożliwia dodawanie użytkowników i zarządzanie nimi, jeśli nie używa się w tym celu usługi Azure Active Directory. Możesz również zarządzać innymi aspektami konta, w tym rozliczeniami i pomocą techniczną.
 
 ## <a name="next-steps"></a>Następne kroki
 

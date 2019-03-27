@@ -1,6 +1,6 @@
 ---
 title: Co to jest Microsoft Intune
-description: Dowiedz się, w jaki sposób usługa Intune pełni rolę składnika zarządzania urządzeniami przenośnymi (MDM, mobile device management) i zarządzania aplikacjami mobilnymi (MAM, mobile app management) rozwiązania Enterprise Mobility + Security oraz jak pomaga w ochronie danych firmy.
+description: Dowiedz się, jak usługa Microsoft Intune pełni rolę składnika zarządzania urządzeniami przenośnymi (MDM, mobile device management) i zarządzania aplikacjami mobilnymi (MAM, mobile app management) rozwiązania Enterprise Mobility + Security oraz jak pomaga w ochronie danych firmy.
 keywords: co to jest usługa Intune
 author: dougeby
 ms.author: dougeby
@@ -9,6 +9,7 @@ ms.date: 02/26/2019
 ms.topic: overview
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 3b4e778d-ac13-4c23-974f-5122f74626bc
 ms.reviewer: pmay
@@ -16,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 92cd9a5a6c3ee49b2431b43b024c338e06b5dfe2
-ms.sourcegitcommit: 7d694e3cd01623513c2b163946e60a99ab9535d2
+ms.openlocfilehash: 511e672193ec609f817c10572c99ac73831c54ae
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56891610"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57460584"
 ---
 # <a name="what-is-microsoft-intune"></a>Co to jest usługa Microsoft Intune?
 
 [!INCLUDE [both-portals](./includes/note-for-both-portals.md)]
 
-Usługa Intune to oparta na chmurze usługa z zakresu zarządzania mobilnością w przedsiębiorstwie (EMM, enterprise mobility management) ułatwiająca pracownikom utrzymanie produktywności przy jednoczesnej ochronie danych firmy. Podobnie jak inne usługi platformy Azure, usługa Microsoft Intune jest dostępna w witrynie Azure Portal. Usługa Intune umożliwia:
+Microsoft Intune to oparta na chmurze usługa zarządzania mobilnością w przedsiębiorstwie (EMM, enterprise mobility management) ułatwiająca pracownikom utrzymanie produktywności przy jednoczesnej ochronie danych firmy. Podobnie jak inne usługi platformy Azure, usługa Microsoft Intune jest dostępna w witrynie Azure Portal. Usługa Intune umożliwia:
 * zarządzanie urządzeniami przenośnymi i komputerami używanymi przez pracowników do uzyskiwania dostępu do danych firmowych,
 * zarządzanie aplikacjami mobilnymi używanymi przez pracowników,
 * chronienie danych firmowych poprzez kontrolowanie sposobu, w jaki pracownicy uzyskują do nich dostęp i udostępniają je,
@@ -44,7 +45,7 @@ Usługa Intune to oparta na chmurze usługa z zakresu zarządzania mobilnością
 
 
 ## <a name="how-does-intune-work"></a>Jak działa usługa Intune?
-Usługa Intune jest składnikiem pakietu Enterprise Mobility + Security (EMS), który zarządza urządzeniami przenośnymi i aplikacjami. Usługa ta jest ściśle zintegrowana z innymi składnikami pakietu EMS, np. usługą Azure Active Directory (Azure AD), która umożliwia kontrolowanie tożsamości i dostępu, oraz usługą Azure Information Protection na potrzeby ochrony danych. Używając jej wraz z usługą Office 365, możesz zapewnić produktywność pracowników na wszystkich urządzeniach, z których korzystają, przy jednoczesnym zachowaniu bezpieczeństwa informacji należących do organizacji.
+Usługa Intune jest składnikiem pakietu Enterprise Mobility + Security (EMS) firmy Microsoft, który zarządza urządzeniami przenośnymi i aplikacjami mobilnymi. Usługa ta jest ściśle zintegrowana z innymi składnikami pakietu EMS, np. usługą Azure Active Directory (Azure AD), która umożliwia kontrolowanie tożsamości i dostępu, oraz usługą Azure Information Protection na potrzeby ochrony danych. Używając jej wraz z usługą Office 365, możesz zapewnić produktywność pracowników na wszystkich urządzeniach, z których korzystają, przy jednoczesnym zachowaniu bezpieczeństwa informacji należących do organizacji.
 
 ![Obraz architektury usługi Intune](./media/intunearch_sm.png)
 
@@ -81,7 +82,7 @@ Termin „zarządzanie aplikacjami mobilnymi” jest często używany jako oznac
 
 Omawiając konfigurację aplikacji i usługę Intune, odnosimy się w szczególności do technologii takich jak [konfiguracja aplikacji zarządzanych w systemie iOS](https://developer.apple.com/library/content/samplecode/sc2279/Introduction/Intro.html).
 
-Korzystając z usługi Intune w połączeniu z innymi usługami pakietu EMS, możesz zapewnić swojej organizacji lepsze bezpieczeństwo aplikacji mobilnych niż to dostarczane przez system operacyjny urządzeń przenośnych i same aplikacje mobilne za pośrednictwem konfiguracji aplikacji. Aplikacja zarządzana za pomocą pakietu EMS ma dostęp do szerszego zakresu zabezpieczeń aplikacji mobilnych i danych, który obejmuje:
+Korzystając z usługi Intune w połączeniu z innymi usługami pakietu EMS, możesz zapewnić swojej organizacji lepsze bezpieczeństwo aplikacji mobilnych niż to dostarczane przez system operacyjny urządzeń przenośnych i same aplikacje mobilne za pośrednictwem konfiguracji aplikacji. Aplikacja zarządzana za pomocą pakietu EMS ma dostęp do szerszego zakresu funkcji zabezpieczeń aplikacji mobilnych i danych, który obejmuje następujące funkcje:
 
 * [Logowanie jednokrotne](https://docs.microsoft.com/azure/active-directory/active-directory-appssoaccess-whatis)  
 *   [Uwierzytelnianie wieloskładnikowe](https://docs.microsoft.com/azure/active-directory/authentication/multi-factor-authentication)
@@ -99,16 +100,16 @@ Zapewnianie bezpieczeństwa aplikacji stanowi element zarządzania aplikacjami. 
 * Ograniczanie działań, jakie mogą podjąć użytkownicy wobec informacji firmowych, na przykład kopiowania, wycinania, wklejania, zapisywania i wyświetlania
 * Usuwanie danych firmy z aplikacji mobilnych, nazywane również selektywnym czyszczeniem lub czyszczeniem firmowym
 
-Jednym ze sposobów zapewniania bezpieczeństwa aplikacji mobilnych przez usługę Intune jest użycie funkcji **zasad ochrony aplikacji**. Zasady ochrony aplikacji wykorzystują tożsamość usługi Azure AD do izolowania danych firmowych od danych osobistych. Dane, do których dostęp uzyskiwany jest za pomocą poświadczeń firmowych, zostaną objęte dodatkowymi firmowymi zabezpieczeniami.
+Jednym ze sposobów zapewniania bezpieczeństwa aplikacji mobilnych przez usługę Intune jest użycie funkcji **zasad ochrony aplikacji**. Zasady ochrony aplikacji wykorzystują tożsamość usługi Azure AD do izolowania danych firmowych od danych osobistych. Dane, do których dostęp jest uzyskiwany za pomocą poświadczeń firmowych, zostaną objęte dodatkowymi zabezpieczeniami firmowymi.
 
-Gdy na przykład użytkownik loguje się do swojego urządzenia za pomocą poświadczeń firmowych, jego tożsamość firmowa umożliwia mu uzyskanie dostępu do danych, do których dostęp przy użyciu tożsamości osobistej nie jest możliwy. Podczas używania danych firmowych zasady ochrony aplikacji kontrolują sposób ich zapisywania i udostępniania. Te zabezpieczenia nie są stosowane względem danych, do których użytkownik uzyskuje dostęp, logując się do urządzenia za pomocą tożsamości osobistej. W ten sposób dział IT sprawuje kontrolę nad danymi firmowymi, a użytkownik końcowy kontroluje dane osobiste i utrzymuje ich prywatność.
+Gdy na przykład użytkownik loguje się do swojego urządzenia za pomocą poświadczeń firmowych, jego tożsamość firmowa umożliwia mu uzyskanie dostępu do danych, do których dostęp przy użyciu tożsamości osobistej nie jest możliwy. Podczas używania danych firmowych zasady ochrony aplikacji kontrolują sposób ich zapisywania i udostępniania. Te zabezpieczenia nie są stosowane względem danych, do których użytkownik uzyskuje dostęp, logując się do urządzenia za pomocą tożsamości osobistej. W ten sposób dział IT sprawuje kontrolę nad danymi firmowymi, a użytkownik końcowy kontroluje swoje dane osobiste i utrzymuje ich prywatność.
 
 ## <a name="emm-with-and-without-device-enrollment"></a>Usługa EMM z rejestracją urządzenia i bez niej
 Większość rozwiązań do zarządzania mobilnością w przedsiębiorstwie obsługuje podstawowe technologie związane z urządzeniami przenośnymi i aplikacjami mobilnymi. Są one zazwyczaj powiązane z urządzeniami, które zostały zarejestrowane w rozwiązaniu do zarządzania urządzeniami przenośnymi organizacji. Usługa Intune obsługuje te scenariusze, a dodatkowo obsługuje wiele scenariuszy „bez rejestracji”.  
 
-Organizacje różnią się pod względem zakresu, w jakim przyjmują scenariusze „bez rejestracji”. Niektóre organizacje standaryzują ten scenariusz. Niektóre dopuszczają go na urządzeniach towarzyszących, takich jak tablety osobiste. Inne w ogóle go nie obsługują. Nawet w ostatnim przypadku, w którym organizacja wymaga, aby wszystkie urządzenia pracownicze były zarejestrowane w rozwiązaniu MDM, zwykle obsługują one scenariusze „bez rejestracji” w przypadku wykonawców, dostawców i innych urządzeń, które mają specjalne zwolnienie.
+Organizacje różnią się pod względem zakresu, w jakim przyjmują scenariusze „bez rejestracji”. Niektóre organizacje standaryzują ten scenariusz. Niektóre dopuszczają go na urządzeniach towarzyszących, takich jak tablety osobiste. Inne w ogóle go nie obsługują. Nawet w ostatnim przypadku, w którym organizacja wymaga, aby wszystkie urządzenia pracowników były zarejestrowane w rozwiązaniu MDM, zwykle obsługują one scenariusze „bez rejestracji” na potrzeby podwykonawców, dostawców i innych urządzeń objętych specjalnym zwolnieniem.
 
-Technologia „bez rejestracji” usługi Intune może być nawet używana na zarejestrowanych urządzeniach. Urządzenie zarejestrowane w rozwiązaniu MDM może mieć na przykład zabezpieczenia typu „Otwórz w” dostarczone przez system operacyjny urządzenia przenośnego. W systemie iOS stosowana jest ochrona z użyciem funkcji „Otwórz w”, która uniemożliwia otwarcie dokumentu z jednej aplikacji, takiej jak program Outlook, w innej aplikacji, takiej jak Word. Wyjątek stanowi sytuacja, w której obie aplikacje są zarządzane przez dostawcę rozwiązania MDM. Ponadto dział IT może stosować zasady ochrony aplikacji względem aplikacji mobilnych zarządzanych przez pakiet EMS w celu kontrolowania funkcji „Zapisz jako” oraz zapewnienia uwierzytelniania wieloskładnikowego.
+Technologia „bez rejestracji” usługi Intune może być nawet używana na zarejestrowanych urządzeniach. Urządzenie zarejestrowane w rozwiązaniu MDM może mieć na przykład zabezpieczenia typu „Otwórz w” dostarczone przez system operacyjny urządzenia przenośnego. Ochrona pozycji „Otwórz w” to funkcja systemu iOS firmy Apple, która uniemożliwia otwarcie dokumentu z jednej aplikacji, takiej jak program Outlook, w innej aplikacji, takiej jak program Word. Wyjątek stanowi sytuacja, w której obie aplikacje są zarządzane przez tego samego dostawcę rozwiązania MDM. Ponadto dział IT może stosować zasady ochrony aplikacji względem aplikacji mobilnych zarządzanych przez pakiet EMS w celu kontrolowania funkcji „Zapisz jako” oraz udostępniania uwierzytelniania wieloskładnikowego.
 
 Niezależnie od stanowiska organizacji względem zarejestrowanych i niezarejestrowanych urządzeń przenośnych oraz aplikacji mobilnych usługa Intune, jako część pakietu EMS, dysponuje narzędziami, które pomagają zwiększyć produktywność pracowników przy jednoczesnej ochronie danych firmowych.
 
@@ -133,7 +134,7 @@ Aby uzyskać krótki przewodnik po dostosowywaniu środowiska portalu, zobacz [W
 
 ### <a name="before-you-start"></a>Przed rozpoczęciem
 
-Aby skorzystać z usługi Intune w portalu Azure Portal, musisz mieć konto administratora i konto dzierżawy usługi Intune. [Utwórz konto](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20), jeśli jeszcze go nie masz.
+Aby skorzystać z usługi Intune w portalu Azure Portal, musisz mieć konto administratora i konto dzierżawy usługi Intune. [Utwórz konto](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20), jeśli jeszcze go nie masz.
 
 ### <a name="supported-web-browsers-for-the-azure-portal"></a>Obsługiwane przeglądarki internetowe w portalu Azure
 
