@@ -6,10 +6,11 @@ keywords: Magazyn danych usługi Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/11/2010
-ms.topic: article
+ms.date: 02/22/2019
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: E85DBB2D-67BB-4E10-82D6-E43046B9C43C
 ms.reviewer: aanavath
@@ -17,18 +18,33 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f8e10549e05f814975337831e3eb9821d87a3f43
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 20c9c1bf5eea12407cba2e00288a039b74fcaca7
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55834011"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57565642"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Dziennik zmian dla interfejsu API magazynu danych usługi Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Bądź na bieżąco z aktualizacjami magazynu danych usługi Intune.
+
+## <a name="1902"></a>1902 
+_Wydane w lutym 2019 r._
+
+### <a name="power-bi-compliance-app"></a>Usługa Power BI zgodności aplikacji 
+
+Dostęp do magazynu danych usługi Intune w usłudze Power BI Online przy użyciu [zgodności usługi Intune (Data Warehouse)](https://app.powerbi.com/groups/me/getapps/services/Intune_dw_compliance) aplikacji. Za pomocą tej aplikacji usługi Power BI możesz teraz uzyskać dostęp i udostępniać wstępnie utworzonych raportów bez żadnej konfiguracji i bez opuszczania przeglądarki sieci web. 
+
+> [!NOTE]
+> Istnieją dwa dodatkowe filtry, które można zastosować do aplikacji usługi Intune zgodność.
+
+#### <a name="add-additional-filters-to-the-intune-compliance-app"></a>Dodawanie dodatkowych filtrów do aplikacji zgodności usługi Intune
+1. Otwórz [zgodności usługi Intune (Data Warehouse)](https://app.powerbi.com/groups/me/getapps/services/Intune_dw_compliance) aplikacji w browers usługi sieci web.
+2. Kliknij przycisk **niezgodne urządzenia** i wybierz **niezgodne** w **complianceStatus** filtru. 
+3. Kliknij pozycję **nieznane urządzenia** i wybierz **nie jest jeszcze dostępna** w **complianceStatus** filtru. 
 
 ## <a name="1812"></a>1812 
 _Wydanie: grudzień 2018 r._

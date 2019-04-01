@@ -6,28 +6,29 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/11/2018
-ms.topic: article
+ms.date: 02/19/2019
+ms.topic: troubleshooting
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: b613f364-0150-401f-b9b8-2b09470b34f4
 ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65391ca620892dcd3b95719454dabc30eb35cb6f
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
-ms.translationtype: HT
+ms.openlocfilehash: 5a5e000a973932db0bbaa215ea94976219ff905c
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55839384"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57577850"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Rozwiązywanie problemów z instalacją aplikacji
 
 Na urządzeniach zarządzanych przez oprogramowanie MDM w usłudze Microsoft Intune czasami operacje instalacji aplikacji mogą zakończyć się niepowodzeniem. W takich sytuacjach zrozumienie przyczyny niepowodzenia lub rozwiązanie problemu może okazać się wyzwaniem. Usługa Microsoft Intune udostępnia szczegóły niepowodzeń instalacji aplikacji, które ułatwiają operatorom pomocy technicznej i administratorom usługi Intune wyświetlanie informacji o aplikacji pomocnych podczas obsługi żądań użytkowników dotyczących pomocy. Okienko rozwiązywania problemów w usłudze Intune zawiera szczegóły niepowodzenia, w tym szczegółowe informacje o aplikacjach zarządzanych na urządzeniu użytkownika. W obszarze każdego urządzenia w okienku **Aplikacje zarządzane** są dostępne kompleksowe szczegóły cyklu eksploatacji. Można zapoznać się z problemami dotyczącymi instalacji, takimi jak występujące podczas tworzenia, modyfikowania i wybierania aplikacji oraz dostarczania jej na urządzenie. 
 
-## <a name="to-review-app-troubleshooting-details"></a>Aby przejrzeć szczegóły dotyczące rozwiązywania problemów z aplikacją
+## <a name="app-troubleshooting-details"></a>Szczegóły dotyczące rozwiązywania problemów aplikacji
 
 Usługa Intune dostarcza szczegółowe informacje na temat rozwiązywania problemów z aplikacją w oparciu o aplikacje zainstalowane na urządzeniu określonego użytkownika.
 
@@ -52,6 +53,47 @@ Szczegóły błędu instalacji aplikacji będą wskazywać problem. Tych szczeg�
 > [!Note]  
 > Dostęp do okienka **Rozwiązywanie problemów** można też uzyskać przez przejście w przeglądarce do strony [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting).
 
+## <a name="win32-app-installation-troubleshooting"></a>Win32 aplikacji Rozwiązywanie problemów z instalacją
+
+Wybierz aplikację Win32, który został wdrożony za pomocą rozszerzenie zarządzania usługi Intune. Możesz wybrać **zbieranie dzienników** opcji w przypadku niepowodzenia instalacja aplikacji Win32. 
+
+> [!IMPORTANT]
+> **Zbieranie dzienników** opcja nie zostanie włączona, gdy aplikacja Win32 został pomyślnie zainstalowany na urządzeniu.<p>Aby można było zebrać informacje w dzienniku aplikacji Win32, rozszerzenie zarządzania usługi Intune musi być zainstalowany na komputerze klienckim Windows. Rozszerzenie zarządzania usługi Intune jest instalowane, gdy skrypt programu PowerShell lub aplikacja Win32 jest wdrażana do grupy zabezpieczeń użytkowników lub urządzeń. Aby uzyskać więcej informacji, zobacz [rozszerzenie zarządzania usługi Intune — wymagania wstępne](intune-management-extension.md#prerequisites).
+
+### <a name="collect-log-file"></a>Zbieranie pliku dziennika
+
+Aby zbierać dzienniki instalacji aplikacji Win32, najpierw wykonaj kroki podane w sekcji [szczegóły rozwiązywania problemów aplikacji](troubleshoot-app-install.md#app-troubleshooting-details). Następnie kontynuuj wykonując następujące kroki:
+
+1. Kliknij przycisk **zbieranie dzienników** opcja **szczegółowe informacje dotyczące instalacji** bloku.
+
+    <image alt="Win32 app installation details - Collect log option" src="media/troubleshoot-app-install-04.png" width="500" />
+
+2. Udostępnianie ścieżki do plików dziennika nazw plików, aby rozpocząć proces zbierania plików dziennika, a następnie kliknij przycisk **OK**.
+    
+    > [!NOTE]
+    > Zbieranie dzienników potrwa mniej niż dwie godziny. Obsługiwane typy plików: *.log, txt, .dmp, cab, .zip, XML, evtx i .evtl*. Maksymalnie 25 ścieżki plików są dozwolone.
+
+3. Po zebraniu pliki dziennika można wybrać **dzienniki** link, aby pobrać pliki dziennika.
+
+    <image alt="Win32 app log details - Download logs" src="media/troubleshoot-app-install-05.png" width="500" />
+
+    > [!NOTE]
+    > Pojawi się powiadomienie o powodzeniu zbierania dzienników aplikacji.
+
+#### <a name="win32-log-collection-requirements"></a>Wymagania dotyczące zbierania dzienników Win32
+
+Istnieją określone wymagania, które należy wykonać, aby zbierać pliki dziennika:
+
+- Należy określić pełną ścieżkę do pliku. 
+- Można określić zmienne środowiskowe dla optymalizacji zbierania dzienników, takie jak następujące:<br>
+  *% PROGRAMFILES %, % PROGRAMDATA % %D PUBLICZNYCH %, % WINDIR %, % TEMP %, % TMP %*
+- Tylko rozszerzenia plików są dozwolone, takie jak:<br>
+  *log, txt, .dmp cab, .zip, .xml*
+- Maksymalna plik dziennika do przekazania jest 60 MB lub 25 plików, zależnie co nastąpi wcześniej. 
+- Zbieranie dzienników instalacji aplikacji Win32 jest włączone dla aplikacji, które spełniają wymagane, dostępne, a intencja przypisywanie aplikacji odinstalowania.
+- Przechowywane dzienniki są szyfrowane, aby chronić wszelkie informacje wrażliwych danych osobowych zawartych w dziennikach.
+- Podczas otwierania obsługi biletów dla błędów aplikacji Win32, Dołącz do dzienników błędów powiązanych, za pomocą powyższych kroków.
+
 ## <a name="app-installation-errors"></a>Błędy instalacji aplikacji
 
 Następujące komunikaty o błędach oraz opisy zapewniają szczegółowe informacje o błędach instalacji w systemie Android i iOS. 
@@ -66,24 +108,34 @@ Następujące komunikaty o błędach oraz opisy zapewniają szczegółowe inform
 |    Aplikacja nie została wykryta po pomyślnym ukończeniu instalacji. (0x87D1041C)    |    Użytkownik jawnie odinstalował aplikację. Ten błąd nie jest zwracany przez klienta. Jest od generowany wtedy, gdy aplikacja została w pewnym momencie zainstalowana, ale następnie użytkownik ją odinstalował. Ten błąd powinien być wyświetlany tylko w przypadku wymaganych aplikacji. Użytkownicy mogą odinstalowywać aplikacje, które nie są wymagane. Ten błąd może wystąpić tylko na urządzeniach DA. System KNOX blokuje dezinstalację aplikacji zarządzanych.       Przy następnej synchronizacji na urządzeniu zostanie ponownie opublikowane powiadomienie, aby użytkownik przeprowadził instalację.   Użytkownik może zignorować to powiadomienie. Błąd będzie stale zgłaszany, aż do momentu, gdy użytkownik zainstaluje aplikację.    |
 |    Pobieranie nie powiodło się z powodu nieoczekiwanego błędu. (0xC7D14FB2)    |    Ten błąd występuje, gdy pobieranie nie powiedzie się. Ten błąd często występuje z powodu problemów z siecią Wi-Fi lub powolnego połączenia.       Ten błąd jest zwracany jedynie dla scenariuszy DA. W przypadku scenariuszy KNOX użytkownik nie otrzymuje monitu o instalację, ponieważ można ją przeprowadzić w trybie cichym. Usługa Intune wyświetla powiadomienie, które użytkownik może kliknąć, aby spróbować ponownie. Jeśli aplikacja jest aplikacją dostępną, powiadomienie można odrzucić. Jeśli jednak dana aplikacja jest wymagana, nie można go odrzucić.    |
 |    Pobieranie nie powiodło się z powodu nieoczekiwanego błędu. Zasada zostanie ponowiona przy kolejnej synchronizacji urządzenia. (0xC7D15078)    |    Ten błąd występuje, gdy pobieranie nie powiedzie się. Ten błąd często występuje z powodu problemów z siecią Wi-Fi lub powolnego połączenia.       Ten błąd jest zwracany jedynie dla scenariuszy DA. W przypadku scenariuszy KNOX użytkownik nie otrzymuje monitu o instalację, ponieważ można ją przeprowadzić w trybie cichym.    |
-|    Użytkownik końcowy anulował instalację aplikacji. (0xC7D14FB1)    |    Użytkownik jawnie odinstalował aplikację. Ten błąd jest zwracany, gdy użytkownik anuluje akcję instalacji systemu operacyjnego Android. Użytkownik kliknął przycisk anulowania po wyświetleniu monitu o instalacji systemu operacyjnego, lub kliknął poza monitem.        Ten błąd jest zwracany jedynie dla scenariuszy DA. W przypadku scenariuszy KNOX użytkownik nie otrzymuje monitu o instalację, ponieważ można ją przeprowadzić w trybie cichym. Usługa Intune wyświetla powiadomienie, które użytkownik może kliknąć, aby spróbować ponownie. Jeśli aplikacja jest aplikacją dostępną, powiadomienie można odrzucić. Jeśli jednak dana aplikacja jest wymagana, nie można go odrzucić.    |
+|    Użytkownik końcowy anulował instalację aplikacji. (0xC7D14FB1)    |    Użytkownik jawnie odinstalował aplikację. Ten błąd jest zwracany, gdy użytkownik anuluje działanie instalacji systemu operacyjnego Android. Użytkownik kliknął przycisk anulowania po wyświetleniu monitu o instalacji systemu operacyjnego, lub kliknął poza monitem.        Ten błąd jest zwracany jedynie dla scenariuszy DA. W przypadku scenariuszy KNOX użytkownik nie otrzymuje monitu o instalację, ponieważ można ją przeprowadzić w trybie cichym. Usługa Intune wyświetla powiadomienie, które użytkownik może kliknąć, aby spróbować ponownie. Jeśli aplikacja jest aplikacją dostępną, powiadomienie można odrzucić. Jeśli jednak dana aplikacja jest wymagana, nie można go odrzucić.    |
 |    Proces pobierania pliku został nieoczekiwanie zatrzymany. (0xC7D15015)    |    System operacyjny zatrzymał proces pobierania przed ukończeniem. Ten błąd może wystąpić, gdy poziom naładowania baterii urządzenia jest niski lub gdy pobieranie trwa zbyt długo.       Ten błąd jest zwracany jedynie dla scenariuszy DA. W przypadku scenariuszy KNOX użytkownik nie otrzymuje monitu o instalację, ponieważ można ją przeprowadzić w trybie cichym. Usługa Intune wyświetla powiadomienie, które użytkownik może kliknąć, aby spróbować ponownie. Jeśli aplikacja jest aplikacją dostępną, powiadomienie można odrzucić. Jeśli jednak dana aplikacja jest wymagana, nie można go odrzucić.    |
 |    Usługa pobierania pliku została nieoczekiwanie zatrzymana. Zasada zostanie ponowiona przy kolejnej synchronizacji urządzenia. (0xC7D1507C)    |    System operacyjny zatrzymał proces pobierania przed ukończeniem. Ten błąd może wystąpić, gdy poziom naładowania baterii urządzenia jest niski lub gdy pobieranie trwa zbyt długo.       Ten błąd jest zwracany jedynie dla scenariuszy DA. W przypadku scenariuszy KNOX użytkownik nie otrzymuje monitu o instalację, ponieważ można ją przeprowadzić w trybie cichym.    |
 
 ### <a name="ios-errors"></a>Błędy systemu iOS
 
-|    Komunikat o błędzie/kod    |    Opis    |
-|:----------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-|    (0x87D12906)    |    Agent MDM firmy Apple zwrócił informację, że polecenie instalacji nie powiodło się.        |
-|    (0x87D1313C)    |    Utracono połączenie sieciowe, gdy zaktualizowany adres URL usługi pobierania został wysłany na urządzenie. W szczególności nie można odnaleźć serwera z określoną nazwą hosta.    |
-|    Urządzenie z systemem iOS jest aktualnie zajęte. (0x87D11388)    |    Urządzenia z systemem iOS było zajęte, co spowodowało błąd.    |
-|    Instalacja aplikacji nie powiodła się. (0x87D13B64)    |    Wystąpił błąd instalacji aplikacji. Do rozwiązania tego problemu są wymagane dzienniki programu XCODE.    |
-|    Aplikacja jest zarządzana, ale wygasła lub została usunięta przez użytkownika. (0x87D13B66)    |    Użytkownik jawnie odinstalował aplikację. Może być też tak, że aplikacja wygasła, ale nie można jej pobrać, lub wykrywanie aplikacji jest niezgodne z odpowiedzią z urządzenia.   Ponadto ten błąd może wystąpić na podstawie usterki platformy iOS 9.2.2.    |
-|    Zaplanowano zainstalowanie tej aplikacji, ale sfinalizowanie transakcji wymaga kodu realizacji.   (0x87D13B60)    |    Ten błąd zazwyczaj występuje w przypadku aplikacji ze sklepu dla systemu iOS, które są płatne.     |
-|    Aplikacja nie została wykryta po pomyślnym ukończeniu instalacji. (0x87D1041C)    |    Proces wykrywania aplikacji jest niezgodny z odpowiedzią z urządzenia.    |
-|    Użytkownik odrzucił ofertę zainstalowania aplikacji. (0x87D13B62)    |    Podczas początkowej instalacji aplikacji użytkownik kliknął przycisk Anuluj.    |
-|    Użytkownik odrzucił ofertę zaktualizowania aplikacji. (0x87D13B63)    |    Użytkownik końcowy kliknął przycisk Anuluj podczas procesu aktualizacji.     |
-|    Nieznany błąd (0x87D103E8)    |    Wystąpił nieznany błąd instalacji aplikacji. Jest to błąd wynikowy, gdy nie wystąpią inne błędy.    |
+| Komunikat o błędzie/kod | Wskazówki dotyczące opisu/Rozwiązywanie problemów |
+|------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| (0x87D12906) | Agent MDM firmy Apple zwrócił informację, że polecenie instalacji nie powiodło się. |
+| (0x87D1313C) | Utracono połączenie sieciowe, gdy zaktualizowany adres URL usługi pobierania został wysłany na urządzenie. W szczególności nie można odnaleźć serwera z określoną nazwą hosta. |
+| Urządzenie z systemem iOS jest aktualnie zajęte. (0x87D11388) | Urządzenie z systemem iOS było zajęte, co spowodowało wystąpienie błędu. |
+| Instalacja aplikacji nie powiodła się. (0x87D13B64) | Wystąpił błąd instalacji aplikacji. Do rozwiązania tego problemu są wymagane dzienniki programu XCODE. |
+| Aplikacja jest zarządzana, ale wygasła lub została usunięta przez użytkownika. (0x87D13B66) | Użytkownik jawnie odinstalował aplikację. Może być też tak, że aplikacja wygasła, ale nie można jej pobrać, lub wykrywanie aplikacji jest niezgodne z odpowiedzią z urządzenia.   Ponadto ten błąd może wystąpić na podstawie usterki platformy iOS 9.2.2. |
+| Zaplanowano zainstalowanie tej aplikacji, ale sfinalizowanie transakcji wymaga kodu realizacji. (0x87D13B60) | Ten błąd zazwyczaj występuje w przypadku aplikacji ze sklepu dla systemu iOS, które są płatne. |
+| Aplikacja nie została wykryta po pomyślnym ukończeniu instalacji.   (0x87D1041C) | Proces wykrywania aplikacji jest niezgodny z odpowiedzią z urządzenia. |
+| Użytkownik odrzucił ofertę zainstalowania aplikacji. (0x87D13B62) | Podczas początkowej instalacji aplikacji użytkownik kliknął przycisk Anuluj. |
+| Użytkownik odrzucił ofertę zaktualizowania aplikacji. (0x87D13B63) | Użytkownik końcowy kliknął przycisk Anuluj podczas procesu aktualizacji. |
+| Nieznany błąd (0x87D103E8) | Wystąpił nieznany błąd instalacji aplikacji. Jest to błąd wynikowy, gdy nie wystąpią inne błędy. |
+| Aplikacje programu VPP można zainstalować tylko na udostępnione urządzenie iPad (-2016330861). | Aplikacje należy uzyskać przy użyciu programu Apple Volume Purchase Program do zainstalowania na udostępnione urządzenie iPad. |
+| Nie można instalować aplikacji, po wyłączeniu App Store (-2016330860).  | Store aplikacji musi być włączony dla użytkownika o zainstalowanie aplikacji. |
+| Nie można odnaleźć licencji VPP dla aplikacji (-2016330859).  | Spróbuj odwoływanie i ponowne przypisywanie licencji aplikacji. |
+| Nie można zainstalować aplikacje systemu przy użyciu dostawcy zarządzania urządzeniami Przenośnymi (-2016330858). | Instalowanie aplikacji, które są wstępnie zainstalowane przez system operacyjny z systemem iOS nie jest obsługiwanym scenariuszem. |
+| Nie można instalować aplikacji, gdy urządzenie jest w trybie utraconym (-2016330857). | Wszystkie przypadki użycia urządzenie jest zablokowane w trybie utraconym.   Wyłączenie trybu utraty na instalowanie aplikacji. |
+| Nie można instalować aplikacji, gdy urządzenie jest w trybie kiosku (-2016330856). | Spróbuj dodać to urządzenie do grupy wykluczonych zasad konfiguracji trybu kiosku na instalowanie aplikacji. |
+| Nie można zainstalować aplikacji 32-bitowych na tym urządzeniu (-2016330852). | Urządzenie nie obsługuje instalowania 32-bitowych aplikacji. Spróbuj wdrażania 64-bitowej wersji aplikacji. |
+| Użytkownik musi zarejestrować się do App Store (-2016330855). | Użytkownik musi zalogować się do Store aplikacji można było zainstalować aplikację. |
+| Nieznany problem. Spróbuj ponownie (-2016330854). | Instalacja aplikacji nie powiodło się z nieznanej przyczyny.   Spróbuj ponownie później. |
+| Instalacja aplikacji nie powiodła się. Usługa Intune spróbuje ponownie przy kolejnym synchronizuje urządzenia (-2016330853). | Instalacja aplikacji wystąpił błąd urządzenia. Synchronizować urządzenie, aby ponownie spróbuj zainstalować aplikację. |
 
 ### <a name="other-installation-errors"></a>Inne błędy instalacji
 

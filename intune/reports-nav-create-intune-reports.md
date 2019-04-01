@@ -7,9 +7,10 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 12/14/2018
-ms.topic: conceptual
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 57019B11-DF9B-4D8A-95FE-254C75398DDE
 ms.reviewer: aanavath
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ac6591256e1bb45c0e2ac9c1d6fe9ac213b106a
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
-ms.translationtype: HT
+ms.openlocfilehash: c3112683d44b7c4d4a3e9d1bccc6fb8c06450600
+ms.sourcegitcommit: fdc6261f4ed695986e06d18353c10660a4735362
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57234039"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58069122"
 ---
 # <a name="use-the-microsoft-intune-data-warehouse"></a>Korzystanie z magazynu danych usługi Microsoft Intune
 
@@ -42,7 +43,7 @@ Magazyn danych zapewnia dostęp do większej ilości informacji o środowisku mo
   -  Model danych korzystający ze standardu OData
 
 > [!Note]
-> Jeśli korzystasz z hybrydowego zarządzania urządzeniami przenośnymi za pomocą programu System Center Configuration Manager i usługi Microsoft Intune, musisz pobierać dane z programu SCCM. Magazyn danych usługi Intune zawiera tylko dane usługi Intune. Do tworzenia niestandardowych raportów można używać pulpitu nawigacyjnego usługi Power BI w programie SCCM. Aby uzyskać więcej informacji, zapoznaj się z artykułami „[Announcing the Power BI solution template for System Center Configuration Manager”]( https://powerbi.microsoft.com/blog/sccm-solution-template) („Przedstawiamy szablon rozwiązania Power BI dla programu System Center Configuration Manager”) i „[Power BI content for Dynamics 365](https://docs.microsoft.com/dynamics365/unified-operations/dev-itpro/analytics/power-bi-home-page)” („Zawartość usługi Power Bi dla usługi Dynamics 365”).
+> Jeśli korzystasz ze współzarządzanego zarządzania urządzeniami przenośnymi za pomocą programu System Center Configuration Manager i usługi Microsoft Intune, musisz pobierać dane z programu Configuration Manager. Magazyn danych usługi Intune zawiera tylko dane usługi Intune. Pulpit nawigacyjny usługi Power BI w programie Configuration Manager można użyć dla niestandardowych raportów. Aby uzyskać więcej informacji, zapoznaj się z artykułami „[Announcing the Power BI solution template for System Center Configuration Manager”]( https://powerbi.microsoft.com/blog/sccm-solution-template) („Przedstawiamy szablon rozwiązania Power BI dla programu System Center Configuration Manager”) i „[Power BI content for Dynamics 365](https://docs.microsoft.com/dynamics365/unified-operations/dev-itpro/analytics/power-bi-home-page)” („Zawartość usługi Power Bi dla usługi Dynamics 365”).
 
 > [!Important]  
 > Teraz można używać wersji 1.0 magazynu danych usługi Intune, ustawiając parametr zapytania  `api-version=v1.0`. Aktualizacje kolekcji w magazynie danych są z natury addytywne i nie przerywają działania istniejących scenariuszy.<br><br>
@@ -52,4 +53,4 @@ Magazyn danych zapewnia dostęp do większej ilości informacji o środowisku mo
 
 - Uzyskaj link i uzyskaj wgląd przy użyciu usługi Power BI. Aby uzyskać instrukcje, zobacz [Nawiązywanie połączenia z magazynem danych usługi Intune przy użyciu usługi Power BI](reports-proc-get-a-link-powerbi.md).
 - Za pomocą swojego linku utwórz niestandardowy raport w usłudze Power BI. Aby uzyskać instrukcje, zobacz [Tworzenie raportu w usłudze Power BI na podstawie źródła danych OData](reports-proc-create-with-odata.md).
-- Uzyskaj więcej informacji o interfejsie API magazynu danych usługi Intune, modelu danych i relacjach między jednostkami<!-- , and an example of creating a custom client to retrieve data,--> — zobacz [Interfejs API magazynu danych usługi Intune](reports-nav-intune-data-warehouse.md).
+- Uzyskaj więcej informacji o interfejsie API magazynu danych usługi Intune, modelu danych i relacjach między jednostkami<!-- , and an example of creating a custom client to retrieve data,--> Zobacz artykuł [Interfejs API magazynu danych usługi Intune](reports-nav-intune-data-warehouse.md).

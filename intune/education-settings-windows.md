@@ -6,9 +6,10 @@ author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 01/22/2019
-ms.topic: conceptual
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 6f4de4bd-3dde-4a8d-8e22-46c5d06c3eea
 ms.reviewer: heenamac
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 32c15037bad21ca90f81ed239ac24a9bac8d7499
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
-ms.translationtype: HT
+ms.openlocfilehash: 206bc3276f3c175fe61852f235c722b835ad60b4
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57228327"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57564860"
 ---
 # <a name="configure-the-take-a-test-app-on-windows-10-devices-using-intune"></a>Konfigurowanie aplikacji Take a Test na urządzeniach z systemem Windows 10 przy użyciu usługi Intune
 
@@ -37,7 +38,7 @@ Artykuł [Aplikacja Take a Test w usłudze Intune](education-settings-configure.
 
 ## <a name="take-a-test-settings"></a>Ustawienia aplikacji Take a Test
 
-- **Typ konta**: wybierz sposób logowania użytkowników do testu. Dostępne opcje:
+- **Typ konta**: Wybierz, jak użytkownicy logują się do testu. Dostępne opcje:
   - Konto usługi Azure AD
   - Konto domeny
   - Konto lokalne

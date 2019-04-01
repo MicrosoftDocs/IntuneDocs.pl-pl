@@ -6,9 +6,10 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 01/22/2019
-ms.topic: conceptual
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
 ms.reviewer: dagerrit
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 38087afa95dc5933b55e6342ad46386cf0185f42
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
-ms.translationtype: HT
+ms.openlocfilehash: c2a8c234c305744c48785763c87913c2635276ad
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57228973"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57565608"
 ---
 # <a name="windows-10-and-newer-device-settings-to-upgrade-editions-or-enable-s-mode-in-intune"></a>Ustawienia urządzeń z systemem Windows 10 (lub nowszym) służące do uaktualniania wersji lub włączenia trybu S w usłudze Intune
 
@@ -37,15 +38,15 @@ Aby uzyskać więcej informacji na temat tej funkcji, zobacz [Uaktualnianie wers
 
 ## <a name="edition-upgrade"></a>Zasady uaktualniania wersji
 
-- **Wersja, do której ma być uaktualniany system**: wybierz wersję systemu Windows 10, do której chcesz uaktualnić system. Urządzenia objęte tymi zasadami zostaną uaktualnione do wybranej wersji.
+- **Docelowa wersja uaktualnienia**: wybierz wersję systemu Windows 10, do której chcesz uaktualnić system. Urządzenia objęte tymi zasadami zostaną uaktualnione do wybranej wersji.
 - **Klucz produktu**: wprowadź otrzymany od firmy Microsoft klucz produktu. Po utworzeniu zasad zawierających klucz produktu nie jest możliwe zaktualizowanie takiego klucza i jest on ukryty ze względów bezpieczeństwa. Aby zmienić klucz produktu, ponownie wprowadź cały klucz.
 - **Plik licencji**: w przypadku systemu **Windows 10 Holographic for Business** lub **Windows 10 Mobile** wybierz pozycję **Przeglądaj**, aby wybrać plik licencji otrzymany od firmy Microsoft. Ten plik licencji zawiera informacje o licencjach dla wersji, do których są uaktualniane urządzenia.
 
 ## <a name="mode-switch"></a>Przełączanie trybu
 
-- **Brak konfiguracji**: urządzenie w trybie S pozostaje w trybie S. Użytkownik końcowy może wyłączyć tryb S na urządzeniu.
-- **Zachowaj w trybie S**: uniemożliwia użytkownikowi końcowemu wyłączenie trybu S na urządzeniu.
-- **Wyłącz**: wyłącza tryb S na urządzeniu.
+- **Brak konfiguracji**: urządzenie trybu S pozostaje w tym trybie. Użytkownik końcowy może wyłączyć tryb S na urządzeniu.
+- **Keep in S mode** (Pozostaw w trybie S): uniemożliwia użytkownikowi końcowemu wyłączenie trybu S na urządzeniu.
+- **Switch** (Wyłącz): wyłącza tryb S na urządzeniu.
 
 ## <a name="next-steps"></a>Następne kroki
 

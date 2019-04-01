@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9444a124b9b8a47633f544205940dadb3df0fd8f
-ms.sourcegitcommit: da9ee02de327f202b00be44c79bf7abd35b9929b
-ms.translationtype: HT
+ms.openlocfilehash: 55935b2f69f9573d8df5ea5ca32fb4587c652b26
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57335007"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57389461"
 ---
 # <a name="your-android-device-seems-to-be-encrypted-but-company-portal-says-otherwise"></a>Urządzenie z systemem Android wydaje się być szyfrowane, ale Portal firmy informuje, że jest inaczej
 
@@ -63,16 +63,15 @@ Niektóre urządzenia z systemem Android w wersji 7.0+ szyfrują dane metodami, 
 
 ### <a name="known-devices-that-can-be-updated-to-fix-this-issue"></a>Znane urządzenia, które można zaktualizować w celu rozwiązania tego problemu
 
-W przypadku wymienionych poniżej urządzeń problem może wystąpić, jeśli urządzenie nie zostało zaktualizowane do najnowszej wersji systemu Android. Aktualizacje można zainstalować przy użyciu opcji **Ustawienia** > **Aktualizuj**. 
+Jeśli urządzenie nie była aktualizowana do najnowszej wersji systemu Android, przejdź do Twojego urządzenia **ustawienia** aplikacji i wybierz **aktualizacji**. Te urządzenia mogą pojawić się jako niezgodne, dopóki nie zaktualizujesz:  
 
-- [Huawei Honor 8](https://consumer.huawei.com/us/support/phones/honor-8/)
-- [Huawei P9](https://consumer.huawei.com/en/phones/p9/)
+- Huawei Honor 8
+- Huawei P9
 
 ### <a name="known-devices-that-currently-cannot-be-updated-to-fix-this-issue"></a>Znane urządzenia, których obecnie nie można zaktualizować w celu rozwiązania tego problemu
+Następujące urządzenia zawsze będzie wydawać się zaszyfrowane i nie można uzyskać dostęp do zasobów firmy. Aby uzyskać dostęp do zasobów firmy, należy użyć innego urządzenia.  
 
-Nie można rozwiązać tego problemu w przypadku urządzeń wymienionych poniżej. Konieczne może być użycie innego urządzenia w celu uzyskania dostępu do zasobów firmy. 
-
-- [Huawei Mate 8](https://consumer.huawei.com/en/mobile-phones/mate8/index.htm)
-- [Urządzenia OPPO](https://www.oppo.com/en/smartphones)
-- [Urządzenia Vivo](https://www.vivo.co.in)
-- [Smartfony Xiaomi Mi](https://xiaomi-mi.com/mi-smartphones/)
+- Huawei Mate 8
+- Urządzenia OPPO
+- Urządzenia Vivo
+- Smartfony Xiaomi Mi

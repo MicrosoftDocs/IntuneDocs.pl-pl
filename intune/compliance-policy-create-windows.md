@@ -5,20 +5,22 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/22/2019
-ms.topic: article
+ms.date: 03/04/2019
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 518bb2ab0f59b5692ff2c2391fe971abba0639c6
-ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e6e82e24f051e64d07487d915ac6fd0848727ecf
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55072528"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57566815"
 ---
 # <a name="add-a-device-compliance-policy-for-windows-devices-in-intune"></a>Dodawanie zasad zgodności urządzeń z systemem Windows w usłudze Intune
 
@@ -73,8 +75,8 @@ Te ustawienia zasad są stosowane do urządzeń z następującymi platformami:
 
 ### <a name="device-properties"></a>Właściwości urządzenia
 
-- **Wymagana minimalna wersja systemu operacyjnego**: jeśli urządzenie nie spełnia wymagań dotyczących minimalnej wersji systemu operacyjnego, będzie zgłaszane jako niezgodne. Zostanie wyświetlony link ze wskazówkami dotyczącymi uaktualniania. Użytkownik końcowy może zdecydować się na uaktualnienie swojego urządzenia, co umożliwi mu dostęp do zasobów firmy.
-- **Dozwolona maksymalna wersja systemu operacyjnego**: jeśli urządzenie korzysta z wersji systemu operacyjnego nowszej niż wprowadzona w regule, powoduje to zablokowanie dostępu do zasobów firmy. Użytkownik zostanie poproszony o kontakt z administratorem IT. Urządzenie nie może uzyskiwać dostępu do zasobów organizacji do momentu zmiany reguły na dopuszczającą daną wersję systemu operacyjnego.
+- **Wymagana minimalna wersja systemu operacyjnego:** jeśli urządzenie nie spełnia wymagań dotyczących minimalnej wersji systemu operacyjnego, będzie zgłaszane jako niezgodne. Zostanie wyświetlony link ze wskazówkami dotyczącymi uaktualniania. Użytkownik końcowy może zdecydować się na uaktualnienie swojego urządzenia, co umożliwi mu dostęp do zasobów firmy.
+- **Dozwolona maksymalna wersja systemu operacyjnego**: jeśli urządzenie korzysta z wersji systemu operacyjnego nowszej niż określona w regule, spowoduje to zablokowanie dostępu do zasobów firmy. Użytkownik zostanie poproszony o kontakt z administratorem IT. Urządzenie nie może uzyskiwać dostępu do zasobów organizacji do momentu zmiany reguły na dopuszczającą daną wersję systemu operacyjnego.
 
 Komputery z systemem Windows 8.1 zwracają wersję **3**. Jeśli ustawiono regułę wersji systemu operacyjnego Windows na wartość Windows 8.1, urządzenie jest zgłaszane jako niezgodne nawet wtedy, gdy działa na nim system Windows 8.1.
 
@@ -82,7 +84,7 @@ Komputery z systemem Windows 8.1 zwracają wersję **3**. Jeśli ustawiono regu�
 
 #### <a name="password"></a>Hasło
 
-- **Wymagaj hasła do odblokowania urządzeń przenośnych**: pozycja **Wymagaj** wymusza na użytkownikach wprowadzanie hasła podczas uzyskiwania dostępu do swoich urządzeń.
+- **Wymagaj hasła do odblokowania urządzeń przenośnych**: wybierz pozycję **Wymagaj**, aby wymagać od użytkowników podania hasła przed uzyskaniem dostępu do urządzenia.
 - **Proste hasła**: ustaw wartość **Blokuj**, aby uniemożliwić użytkownikom tworzenie prostych haseł, takich jak **1234** lub **1111**. Ustaw wartość **Nieskonfigurowane**, aby umożliwić użytkownikom tworzenie haseł, takich jak **1234** lub **1111**.
 - **Minimalna długość hasła**: wprowadź minimalną liczbę cyfr lub znaków, które musi zawierać hasło.
 
@@ -92,7 +94,7 @@ Komputery z systemem Windows 8.1 zwracają wersję **3**. Jeśli ustawiono regu�
 
 - **Typ hasła**: określ, czy hasło ma zawierać tylko znaki **numeryczne**, czy też ma być dopuszczalna kombinacja cyfr i innych znaków (**Alfanumeryczne**).
   
-  - **Liczba znaków innych niż alfanumeryczne w haśle**: Jeśli parametr **Wymagany typ hasła** ma wartość **Alfanumeryczne**, wówczas to ustawienie określa minimalną liczbę zestawów znaków użytych w haśle. Są cztery zestawy znaków:
+  - **Liczba znaków innych niż alfanumeryczne w haśle**: jeśli pozycja **Wymagany typ hasła** została ustawiona na wartość **Alfanumeryczne**, to ustawienie określa minimalną wymaganą liczbę zestawów znaków do użycia w haśle. Są cztery zestawy znaków:
     - Małe litery
     - Wielkie litery
     - Symbole
@@ -103,23 +105,23 @@ Komputery z systemem Windows 8.1 zwracają wersję **3**. Jeśli ustawiono regu�
     - Jeśli minimalna długość hasła jest większa niż osiem znaków
     - Lub jeśli minimalna liczba zestawów znaków jest większa niż dwa
 
-- **Maksymalny czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**: wprowadź czas bezczynności, po którym użytkownik musi ponownie wprowadzić swoje hasło.
-- **Wygaśnięcie hasła (dni)**: wybierz liczbę dni, po których wygasa hasło i należy utworzyć nowe.
-- **Liczba poprzednich haseł, których nie można użyć ponownie**: wprowadź liczbę wcześniej używanych haseł, których nie można użyć ponownie.
+- **Maksymalny czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**: wprowadź czas bezczynności, po którym użytkownik musi ponownie wprowadzić hasło.
+- **Wygaśnięcie hasła (dni)**: wybierz liczbę dni, po których hasło wygasa i należy utworzyć nowe.
+- **Liczba poprzednich haseł, których nie można użyć ponownie**: wprowadź liczbę poprzednio używanych haseł, których ponowne użycie nie jest możliwe.
 
 #### <a name="encryption"></a>Szyfrowanie
 
-- **Wymagaj szyfrowania urządzenia przenośnego**: wartość **Wymagaj** oznacza, że urządzenie musi zostać zaszyfrowane w celu połączenia się z zasobami magazynu danych.
+- **Wymagaj szyfrowania na urządzeniu przenośnym**: wartość **Wymagaj** oznacza, że urządzenie musi zostać zaszyfrowane w celu połączenia się z zasobami magazynu danych.
 
 ## <a name="windows-10-and-later-policy-settings"></a>Ustawienia zasad dla systemu Windows 10 i nowszych
 
 ### <a name="device-health"></a>Device health
 
 - **Wymagaj funkcji BitLocker**: po włączeniu funkcji BitLocker urządzenie może chronić dane przechowywane na dysku przed nieautoryzowanym dostępem, gdy system jest wyłączony lub przechodzi w stan hibernacji. Szyfrowanie dysków funkcją BitLocker szyfruje wszystkie dane przechowywane na woluminie systemu operacyjnego Windows. Funkcja BitLocker używa modułu TPM do ochrony systemu operacyjnego i danych użytkownika. Pomaga także zagwarantować, że zabezpieczenia nie zostaną naruszone nawet wtedy, gdy komputer zostanie zgubiony, skradziony lub pozostawiony bez nadzoru. Jeśli komputer jest wyposażony w zgodny moduł TPM, funkcja BitLocker używa go do zablokowania kluczy szyfrowania służących do ochrony danych. W związku z tym klucze będą niedostępne, dopóki moduł TPM nie zweryfikuje stanu komputera.
-- **Wymagaj włączenia bezpiecznego rozruchu na urządzeniu**: Po włączeniu funkcji bezpiecznego rozruchu system musi włączać się do fabrycznie zaufanego stanu. Ponadto po włączeniu funkcji bezpiecznego rozruchu podstawowe składniki używane do uruchamiania urządzenia muszą mieć prawidłowe podpisy kryptograficzne, które są podpisami zaufanymi dla organizacji, która wyprodukowała urządzenie. Oprogramowanie układowe UEFI sprawdza podpis, zanim pozwoli na uruchomienie komputera. Jeśli jakiekolwiek pliki zostaną naruszone, co spowoduje uszkodzenie ich podpisu, system nie zostanie uruchomiony.
+- **Wymagaj włączenia bezpiecznego rozruchu w urządzeniu**: po włączeniu funkcji bezpiecznego rozruchu system musi włączać się do fabrycznie zaufanego stanu. Ponadto po włączeniu funkcji bezpiecznego rozruchu podstawowe składniki używane do uruchamiania urządzenia muszą mieć prawidłowe podpisy kryptograficzne, które są podpisami zaufanymi dla organizacji, która wyprodukowała urządzenie. Oprogramowanie układowe UEFI sprawdza podpis, zanim pozwoli na uruchomienie komputera. Jeśli jakiekolwiek pliki zostaną naruszone, co spowoduje uszkodzenie ich podpisu, system nie zostanie uruchomiony.
 
   > [!NOTE]
-  > Ustawienie **Wymagaj włączenia bezpiecznego rozruchu na urządzeniu** jest obsługiwane na urządzeniach z modułami TPM 1.2 i 2.0. W przypadku urządzeń, które nie obsługują modułu TPM 2.0 ani nowszego, stan zasad w usłudze Intune ma wartość **Niezgodne**. Jest to ograniczenie usługi [zaświadczania o kondycji urządzenia](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation) w systemie Windows 10.
+  > Ustawienie **Wymagaj włączenia bezpiecznego rozruchu na urządzeniu** jest obsługiwane na niektórych urządzeniach z modułami TPM 1.2 i 2.0. W przypadku urządzeń, które nie obsługują modułu TPM 2.0 ani nowszego, stan zasad w usłudze Intune ma wartość **Niezgodne**. Aby uzyskać więcej informacji na temat obsługiwanych wersji, zobacz [zaświadczanie o kondycji urządzenia](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation).
 
 - **Wymagaj integralności kodu**: integralność kodu jest funkcją, która weryfikuje integralność pliku sterownika lub pliku systemowego zawsze wtedy, gdy jest ładowany do pamięci. Funkcja integralności kodu wykrywa, czy do jądra jest ładowany niepodpisany plik sterownika lub plik systemowy. Wykrywa ona także sytuację, w której plik systemowy został zmodyfikowany przez złośliwe oprogramowanie uruchomione przez konto użytkownika z uprawnieniami administratora.
 
@@ -139,11 +141,11 @@ Aby uzyskać szczegółowe informacje o sposobie działania usługi HAS, zobacz 
 
   Jeśli urządzenie korzysta z wersji systemu operacyjnego późniejszej niż wprowadzona w regule, spowoduje to zablokowanie dostępu do zasobów firmy i wyświetlenie monitu o kontakt z administratorem IT. Urządzenie nie będzie mogło uzyskiwać dostępu do zasobów firmy, dopóki reguła nie zostanie zmieniona tak, aby dopuszczać daną wersję systemu operacyjnego.
 
-- **Minimalna wersja systemu operacyjnego wymagana dla urządzeń przenośnych**: wprowadź minimalną dozwoloną wersję w formacie numerycznym główna.pomocnicza.kompilacja.
+- **Wymagana minimalna wersja systemu operacyjnego dla urządzeń przenośnych**: wprowadź minimalną dozwoloną wersję w formacie numerycznym główna.pomocnicza.kompilacja.
 
   Jeśli urządzenie ma wcześniejszą wersję systemu operacyjnego niż wprowadzona, zostanie zgłoszone jako niezgodne. Zostanie wyświetlony link ze wskazówkami dotyczącymi uaktualniania. Użytkownik końcowy może wybrać opcję uaktualnienia urządzenia. Po uaktualnieniu użytkownik będzie mógł uzyskiwać dostęp do zasobów firmy.
 
-- **Maksymalna wersja systemu operacyjnego wymagana dla urządzeń przenośnych**: wprowadź maksymalną dozwoloną wersję w formacie numerycznym główna.pomocnicza.kompilacja.
+- **Wymagana maksymalna wersja systemu operacyjnego dla urządzeń przenośnych**: wprowadź maksymalną dozwoloną wersję w formacie numerycznym główna.pomocnicza.kompilacja.
 
   Jeśli urządzenie korzysta z wersji systemu operacyjnego późniejszej niż wprowadzona, spowoduje to zablokowanie dostępu do zasobów firmy i wyświetlenie monitu o kontakt z administratorem IT. Urządzenie nie będzie mogło uzyskiwać dostępu do zasobów firmy, dopóki reguła nie zostanie zmieniona tak, aby dopuszczać daną wersję systemu operacyjnego.
 
@@ -153,7 +155,7 @@ Aby uzyskać szczegółowe informacje o sposobie działania usługi HAS, zobacz 
 
 Dotyczy tylko współzarządzanych urządzeń z systemem Windows 10 lub nowszym. Urządzenia przeznaczone tylko dla usługi Intune zwracają stan Niedostępne.
 
-- **Wymagaj zgodności urządzenia z poziomu programu System Center Configuration Manager**: wybierz pozycję **Wymagaj**, aby wymuszać zgodność wszystkich ustawień (elementów konfiguracji) w programie System Center Configuration Manager. 
+- **Wymagaj zgodności urządzenia w programie System Center Configuration Manager**: Wybierz **wymagają** wymusić in System Center Configuration Manager by następowała wszystkich ustawień (elementów konfiguracji). 
 
   Na przykład można wymagać, aby na urządzeniach były zainstalowane wszystkie aktualizacje oprogramowania. W programie Configuration Manager to wymaganie ma stan „Zainstalowano”. Jeśli jakiekolwiek programy na urządzeniu mają nieznany stan, to urządzenie jest niezgodne w usłudze Intune.
   
@@ -163,11 +165,11 @@ Dotyczy tylko współzarządzanych urządzeń z systemem Windows 10 lub nowszym.
 
 #### <a name="password"></a>Hasło
 
-- **Wymagaj hasła do odblokowania urządzeń przenośnych**: pozycja **Wymagaj** wymusza na użytkownikach wprowadzanie hasła podczas uzyskiwania dostępu do swoich urządzeń.
+- **Wymagaj hasła do odblokowania urządzeń przenośnych**: wybierz pozycję **Wymagaj**, aby wymagać od użytkowników podania hasła przed uzyskaniem dostępu do urządzenia.
 - **Proste hasła**: ustaw wartość **Blokuj**, aby uniemożliwić użytkownikom tworzenie prostych haseł, takich jak **1234** lub **1111**. Ustaw wartość **Nieskonfigurowane**, aby umożliwić użytkownikom tworzenie haseł, takich jak **1234** lub **1111**.
 - **Typ hasła**: określ, czy hasło ma zawierać tylko znaki **numeryczne**, czy też ma być dopuszczalna kombinacja cyfr i innych znaków (**Alfanumeryczne**).
 
-  - **Liczba znaków innych niż alfanumeryczne w haśle**: Jeśli parametr **Wymagany typ hasła** ma wartość **Alfanumeryczne**, wówczas to ustawienie określa minimalną liczbę zestawów znaków użytych w haśle. Są cztery zestawy znaków:
+  - **Liczba znaków innych niż alfanumeryczne w haśle**: jeśli pozycja **Wymagany typ hasła** została ustawiona na wartość **Alfanumeryczne**, to ustawienie określa minimalną wymaganą liczbę zestawów znaków do użycia w haśle. Są cztery zestawy znaków:
     - Małe litery
     - Wielkie litery
     - Symbole
@@ -176,22 +178,22 @@ Dotyczy tylko współzarządzanych urządzeń z systemem Windows 10 lub nowszym.
     Ustawienie większej liczby wymaga wprowadzenia bardziej skomplikowanego hasła przez użytkownika.
 
 - **Minimalna długość hasła**: wprowadź minimalną liczbę cyfr lub znaków, które musi zawierać hasło.
-- **Maksymalny czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**: wprowadź czas bezczynności, po którym użytkownik musi ponownie wprowadzić swoje hasło.
-- **Wygaśnięcie hasła (dni)**: wybierz liczbę dni, po których wygasa hasło i należy utworzyć nowe.
-- **Liczba poprzednich haseł, których nie można użyć ponownie**: wprowadź liczbę wcześniej używanych haseł, których nie można użyć ponownie.
-- **Wymagaj hasła przy powrocie urządzenia ze stanu bezczynności (systemy Mobile i Holographic)**: wymuś na użytkownikach wprowadzanie hasła za każdym razem, gdy urządzenie wraca ze stanu bezczynności.
+- **Maksymalny czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**: wprowadź czas bezczynności, po którym użytkownik musi ponownie wprowadzić hasło.
+- **Wygaśnięcie hasła (dni)**: wybierz liczbę dni, po których hasło wygasa i należy utworzyć nowe.
+- **Liczba poprzednich haseł, których nie można użyć ponownie**: wprowadź liczbę poprzednio używanych haseł, których ponowne użycie nie jest możliwe.
+- **Wymagaj hasła, gdy urządzenie wraca ze stanu bezczynności (Mobile i Holographic)**: wymuszaj wprowadzanie haseł przez użytkowników za każdym razem, gdy urządzenie wraca ze stanu bezczynności.
 
 #### <a name="encryption"></a>Szyfrowanie
 
-- **Szyfrowanie magazynu danych urządzenia**: wybierz pozycję **Wymagaj**, aby szyfrować magazyn danych na urządzeniach.
+- **Szyfrowanie magazynu danych na urządzeniu**: wybierz pozycję **Wymagaj**, aby szyfrować magazyn danych na urządzeniach.
 
   > [!NOTE]
   > Ustawienie **Szyfrowanie magazynu danych na urządzeniu** ogólnie sprawdza, czy na urządzeniu jest stosowane szyfrowanie. Aby uzyskać bardziej niezawodne ustawienie szyfrowania, rozważ użycie opcji **Wymagaj funkcji BitLocker**, która korzysta z zaświadczania o kondycji urządzenia systemu Windows w celu weryfikowania stanu funkcji BitLocker na poziomie modułu TPM.
 
 #### <a name="device-security"></a>Zabezpieczenia urządzeń
 
-- **Oprogramowanie antywirusowe**: w przypadku wybrania ustawienia **Wymagaj** możesz sprawdzić zgodność przy użyciu rozwiązań antywirusowych zarejestrowanych w Centrum zabezpieczeń systemu Windows, na przykład rozwiązań firmy Symantec i usługi Windows Defender. W przypadku wybrania ustawienia **Nieskonfigurowane** usługa Intune nie będzie wykonywać sprawdzania w poszukiwaniu jakichkolwiek rozwiązań antywirusowych zainstalowanych na urządzeniu.
-- **Program antyszpiegowski**: w przypadku wybrania ustawienia **Wymagaj** możesz sprawdzić zgodność przy użyciu rozwiązań antyszpiegowskich zarejestrowanych w Centrum zabezpieczeń systemu Windows, na przykład rozwiązań firmy Symantec i usługi Windows Defender. W przypadku wybrania ustawienia **Nieskonfigurowane** usługa Intune nie będzie wykonywać sprawdzania w poszukiwaniu jakichkolwiek rozwiązań antyszpiegowskich zainstalowanych na urządzeniu.
+- **Oprogramowanie antywirusowe**: w przypadku wybrania opcji **Wymagaj** możesz sprawdzić zgodność przy użyciu rozwiązań antywirusowych zarejestrowanych w [Centrum zabezpieczeń systemu Windows](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), na przykład rozwiązań firmy Symantec i usługi Windows Defender. W przypadku wybrania ustawienia **Nieskonfigurowane** usługa Intune nie będzie wykonywać sprawdzania w poszukiwaniu jakichkolwiek rozwiązań antywirusowych zainstalowanych na urządzeniu.
+- **Program antyszpiegowski**: w przypadku wybrania opcji **Wymagaj** możesz sprawdzić zgodność przy użyciu rozwiązań antyszpiegowskich zarejestrowanych w [Centrum zabezpieczeń systemu Windows](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), na przykład rozwiązań firmy Symantec i usługi Windows Defender. W przypadku wybrania ustawienia **Nieskonfigurowane** usługa Intune nie będzie wykonywać sprawdzania w poszukiwaniu jakichkolwiek rozwiązań antyszpiegowskich zainstalowanych na urządzeniu.
 
 ### <a name="windows-defender-atp"></a>Zaawansowana ochrona przed zagrożeniami w usłudze Windows Defender
 

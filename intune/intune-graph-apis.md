@@ -7,20 +7,22 @@ author: dougeby
 manager: dougeby
 ms.author: dougeby
 ms.date: 03/08/2018
-ms.topic: article
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 79A67342-C06D-4D20-A447-678A6CB8D70A
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 5129484a3cfea873be4009849b5989f9c2acd888
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 8625eddaa3c6223767c7c93022275b028b4a145b
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187453"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57566560"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Jak używać usługi Azure AD do uzyskiwania dostępu do interfejsów API usługi Intune w programie Microsoft Graph
 
@@ -146,13 +148,13 @@ __Wykonywanie akcji zdalnych mających wpływ na użytkownika na urządzeniach M
 __Odczyt i zapis na urządzeniach Microsoft Intune__ | [DeviceManagementManagedDevices.ReadWrite.All](#mgd-rw)
 __Odczyt z urządzeń Microsoft Intune__ | [DeviceManagementManagedDevices.Read.All](#mgd-ro)
 __Odczyt i zapis ustawień kontroli RBAC usługi Microsoft Intune__ | [DeviceManagementRBAC.ReadWrite.All](#rac-rw)
-__Odczyt ustawień kontroli RBAC usługi Microsoft Intune__ | [DeviceManagementRBAC.Read.All](#rac=ro)
+__Odczyt ustawień kontroli RBAC usługi Microsoft Intune__ | DeviceManagementRBAC.Read.All
 __Odczyt i zapis aplikacji usługi Microsoft Intune__ | [DeviceManagementApps.ReadWrite.All](#app-rw)
 __Odczyt aplikacji usługi Microsoft Intune__ | [DeviceManagementApps.Read.All](#app-ro)
-__Odczyt i zapis konfiguracji i zasad urządzeń Microsoft Intune__ | [DeviceManagementConfiguration.ReadWrite.All](#cfg-rw)
+__Odczyt i zapis konfiguracji i zasad urządzeń Microsoft Intune__ | DeviceManagementConfiguration.ReadWrite.All
 __Odczyt konfiguracji i zasad urządzeń Microsoft Intune__ | [DeviceManagementConfiguration.Read.All](#cfg-ro)
 __Odczyt i zapis konfiguracji usługi Microsoft Intune__ | [DeviceManagementServiceConfig.ReadWrite.All](#svc-rw)
-__Odczyt konfiguracji usługi Microsoft Intune__ | [DeviceManagementServiceConfig.Read.All](#svc-ra)
+__Odczyt konfiguracji usługi Microsoft Intune__ | DeviceManagementServiceConfig.Read.All
 
 W tabeli wymieniono ustawienia w takiej formie, w jakiej są wyświetlane w witrynie Azure Portal. W poniższych sekcjach opisano zakresy w kolejności alfabetycznej.
 
@@ -588,7 +590,7 @@ Pamiętaj, aby dodać użytkownika do innych ról, zgodnie z potrzebami. Na przy
 
 Ponadto:
 
-- Aby przypisać licencję usługi Intune do konta użytkownika, skorzystaj z witryny https://portal.office.com.
+- Aby przypisać licencję usługi Intune do konta użytkownika, skorzystaj z witryny https://admin.microsoft.com.
 
 - Zaktualizuj kod aplikacji do uwierzytelniania klienta domeny dzierżawy usługi Azure AD zamiast własnej.
 

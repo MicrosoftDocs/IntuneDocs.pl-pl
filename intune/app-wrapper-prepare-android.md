@@ -5,10 +5,11 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/12/2018
-ms.topic: conceptual
+ms.date: 03/11/2019
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: e9c349c8-51ae-4d73-b74a-6173728a520b
 ms.reviewer: aanavath
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b554bd4eb6aa5e49354501e69326b6eeb11098ef
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
-ms.translationtype: HT
+ms.openlocfilehash: 64de72822ad8d2f8d9893e3428208ff1363d33e2
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57236983"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57566050"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Przygotowywanie aplikacji systemu Android pod kątem zasad ochrony aplikacji za pomocą narzędzia opakowującego aplikacje usługi Intune
 
@@ -30,7 +31,6 @@ ms.locfileid: "57236983"
 Za pomocą narzędzia opakowującego aplikacje dla systemu Android w usłudze Microsoft Intune można zmieniać działanie wewnętrznych aplikacji dla systemu Android przez ograniczanie ich funkcji bez konieczności zmieniania kodu aplikacji.
 
 Narzędzie to jest aplikacją wiersza polecenia systemu Windows działającą w programie PowerShell i tworzącą otokę wokół aplikacji dla systemu Android. Po opakowaniu wybranej aplikacji można modyfikować jej funkcje, konfigurując [zasady zarządzania aplikacjami mobilnymi](app-protection-policies.md) usługi Intune.
-
 
 Przed uruchomieniem tego narzędzia należy zapoznać się z sekcją [Uwagi dotyczące zabezpieczeń przy uruchamianiu narzędzia opakowującego aplikacje](#security-considerations-for-running-the-app-wrapping-tool). Aby pobrać to narzędzie, przejdź do strony [Microsoft Intune App Wrapping Tool for Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android) (Narzędzie opakowujące aplikacje dla systemu Android w usłudze Microsoft Intune) w witrynie GitHub.
 
@@ -53,10 +53,12 @@ Przed uruchomieniem tego narzędzia należy zapoznać się z sekcją [Uwagi doty
 
 - System Android wymaga, aby wszystkie pakiety aplikacji (apk) były podpisane. Aby uzyskać informacje dotyczące **ponownego używania** istniejących certyfikatów i ogólne wskazówki dotyczące certyfikatów podpisywania, zobacz [Ponowne używanie certyfikatów podpisywania i opakowywanie aplikacji](https://docs.microsoft.com/intune/app-wrapper-prepare-android#reusing-signing-certificates-and-wrapping-apps). Plik wykonywalny Java keytool.exe służy do generowania **nowych** poświadczeń wymaganych do podpisania opakowanej aplikacji wyjściowej. Wszelkie ustawiane hasła muszą być bezpieczne, ale zanotuj je, ponieważ będą potrzebne do uruchomienia narzędzia opakowującego aplikacje.
 
-> [!NOTE]
-> Narzędzie opakowujące aplikacje usługi Intune nie obsługuje podpisywania aplikacji za pomocą schematów podpisów firmy Google w wersji v2 i w przyszłej wersji v3. Zaleca się, aby po opakowaniu pliku apk przy użyciu narzędzia opakowującego aplikacje usługi Intune skorzystać z [narzędzia Apksigner dostarczanego przez firmę Google]( https://developer.android.com/studio/command-line/apksigner). Pozwoli to zagwarantować, że po pobraniu aplikacji na urządzeniach użytkowników końcowych będzie można ją uruchomić poprawnie zgodnie ze standardami systemu Android. 
+    > [!NOTE]
+    > Narzędzie opakowujące aplikacje usługi Intune nie obsługuje podpisywania aplikacji za pomocą schematów podpisów firmy Google w wersji v2 i w przyszłej wersji v3. Zaleca się, aby po opakowaniu pliku apk przy użyciu narzędzia opakowującego aplikacje usługi Intune skorzystać z [narzędzia Apksigner dostarczanego przez firmę Google]( https://developer.android.com/studio/command-line/apksigner). Pozwoli to zagwarantować, że po pobraniu aplikacji na urządzeniach użytkowników końcowych będzie można ją uruchomić poprawnie zgodnie ze standardami systemu Android. 
 
-- (Opcjonalnie) Włącz Multidex w aplikacji wejściowej. Czasami aplikacja może osiągnąć limit rozmiaru pliku wykonywalnego Dalvik (DEX) z powodu klas zestawu Intune MAM SDK, które są dodawane podczas opakowywania. Pliki DEX są częścią kompilacji aplikacji systemu Android. W tym scenariuszu najlepszym rozwiązaniem jest włączenie obsługi Multidex w samej aplikacji. W niektórych organizacjach może to wymagać współpracy z osobami kompilującymi aplikację (tj. zespołem zajmującym się kompilacją aplikacji). 
+- (Opcjonalnie) Czasami aplikacja może osiągnąć limit rozmiaru pliku wykonywalnego Dalvik (DEX) z powodu klas zestawu Intune MAM SDK, które są dodawane podczas opakowywania. Pliki DEX są częścią kompilacji aplikacji systemu Android. Intune App Wrapping Tool automatycznie obsługuje przepełnienie plik DEKS podczas otaczania dla aplikacji za pomocą min API na poziomie 21 lub nowszej (począwszy od programu [v. 1.0.2501.1](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android/releases)). W przypadku aplikacji z minimalny poziom interfejsu API 21 < najlepszym rozwiązaniem jest zwiększenie minimalny poziom interfejsu API przy użyciu otoki `-UseMinAPILevelForNativeMultiDex` flagi. Nie można zwiększyć minimalny poziom interfejsu API aplikacji klientów następujące rozwiązania przepełnienie DEX są dostępne. W niektórych organizacjach może to wymagać współpracy z osobami kompilującymi aplikację (tj. zespołem zajmującym się kompilacją aplikacji):
+* Narzędzia ProGuard można użyć w celu wyeliminowania odwołań nieużywanych klasy z podstawową plik DEKS aplikacji.
+* Dla klientów korzystających z v3.1.0 lub nowszej dla systemu Android wtyczki programu Gradle, wyłącz [D8 dexer](https://android-developers.googleblog.com/2018/04/android-studio-switching-to-d8-dexer.html).  
 
 ## <a name="install-the-app-wrapping-tool"></a>Instalacja narzędzia opakowującego aplikacje
 
@@ -64,7 +66,7 @@ Przed uruchomieniem tego narzędzia należy zapoznać się z sekcją [Uwagi doty
 
 2.  Zaakceptuj umowę licencyjną, a następnie zakończ instalację.
 
-Zwróć uwagę na folder, w którym zostało zainstalowane narzędzie. Domyślna lokalizacja to: C:\Program Files (x86)\Microsoft Intune Mobile Application Management\Android\App Wrapping Tool.
+Zwróć uwagę na folder, w którym zostało zainstalowane narzędzie. Domyślna lokalizacja: C:\Program Files (x86)\Microsoft Intune Mobile Application Management\Android\App Wrapping Tool.
 
 ## <a name="run-the-app-wrapping-tool"></a>Uruchamianie narzędzia opakowującego aplikacje
 
@@ -93,6 +95,7 @@ Zwróć uwagę na folder, w którym zostało zainstalowane narzędzie. Domyślna
 |**-KeyAlias**&lt;ciąg&gt;|Nazwa klucza, który ma być używany do podpisywania.| |
 |**-KeyPassword**&lt;ciąg_bezpieczny&gt;|Hasło używane do odszyfrowania klucza prywatnego, który zostanie użyty do podpisywania.| |
 |**-SigAlg**&lt;ciąg_bezpieczny&gt;| (Opcjonalnie) Nazwa algorytmu sygnatury używanego do podpisywania. Algorytm musi być zgodny z kluczem prywatnym.|Przykłady: SHA256withRSA, SHA1withRSA|
+|**-UseMinAPILevelForNativeMultiDex**| (Opcjonalnie) Użyj tej flagi, aby zwiększyć źródłowej aplikacji systemu Android minimalny poziom interfejsu API do 21. Ta flaga wyświetli monit o potwierdzenie, ponieważ będzie ograniczać, kto może zainstalować tę aplikację. Użytkownicy mogą pomijać okno dialogowe potwierdzenia, dodając parametr "-Potwierdź: $false" do ich polecenia programu PowerShell. Flaga powinna służyć wyłącznie przez klientów w aplikacjach z min interfejsu API < 21, które nie powiodły się, aby zawijać pomyślnie z powodu błędów przepełnienia DEX. | |
 | **&lt;typowe_parametry&gt;** | (Opcjonalnie) To polecenie obsługuje typowe parametry programu PowerShell, takie jak verbose i debug. |
 
 

@@ -6,9 +6,10 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 01/09/2019
-ms.topic: conceptual
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
 ms.reviewer: ''
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 707bb84df55fa202e3dc5241e3d7212039b17b3b
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
-ms.translationtype: HT
+ms.openlocfilehash: 28f8a589f20cb63ad4f9873942e9ad511d729b37
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55841746"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57566458"
 ---
 # <a name="windows-10-and-later-settings-to-manage-shared-devices-using-intune"></a>Ustawienia systemu Windows 10 oraz nowszych wersji służące do zarządzania urządzeniami udostępnionymi przy użyciu usługi Intune
 
@@ -39,24 +40,24 @@ Aby uzyskać więcej informacji na temat tej funkcji w usłudze Intune, zobacz [
 
 ## <a name="shared-multi-user-device-settings"></a>Ustawienia urządzenia udostępnionego obsługującego wielu użytkowników
 
-- **Tryb komputera udostępnionego**: Wybierz polecenie **Włącz**, aby włączyć tryb komputera udostępnionego. W tym trybie na urządzeniu może zalogować się jednocześnie tylko jeden użytkownik. Inny użytkownik nie może się zalogować, dopóki pierwszy użytkownik się nie wyloguje. Domyślna opcja **Nieskonfigurowane** oznacza, że to ustawienie jest niezarządzane przez usługę Intune i nie wypycha żadnych zasad w celu kontroli tego ustawienia na urządzeniu.
-- **Konto gościa**: Wybierz, aby utworzyć opcję Gość na ekranie logowania. Konta gości nie wymagają poświadczeń użytkownika ani uwierzytelniania. To ustawienie tworzy nowe konto lokalne za każdym razem, gdy zostanie użyte. Dostępne opcje:
-  - **Gość**: Tworzy konto gościa lokalnie na urządzeniu.
-  - **Domena**: Tworzy konto gościa w usłudze Azure Active Directory (AD).
-  - **Gość i domena**: Tworzy konto gościa lokalnie na urządzeniu i w usłudze Azure Active Directory (AD).
-- **Zarządzanie kontami**: Ustaw w pozycji **Włącz**, aby automatycznie usuwać konta lokalne utworzone przez gości oraz konta w usługach AD i Azure AD. Gdy użytkownik wyloguje się z urządzenia lub gdy zostanie uruchomiona konserwacja systemu, te konta zostaną usunięte. Gdy to ustawienie jest włączone, należy również skonfigurować:
-  - **Usuwanie kont**: Wybierz, kiedy konta są usuwane: **Po przekroczeniu progu przestrzeni dyskowej**, **Po przekroczeniu progu przestrzeni dyskowej i czasu nieaktywności** lub **Natychmiast po wylogowaniu**. Wprowadź też następujące ustawienia:
-    - **Próg rozpoczęcia usuwania (%)**: Wprowadź wartość procentową miejsca na dysku (od 0 do 100). Gdy łączna ilość miejsca na dysku/w pamięci urządzenia spadnie poniżej wprowadzonej wartości, konta zostaną usunięte z pamięci podręcznej. Konta są usuwane w trybie ciągłym w celu odzyskiwania miejsca dyskowego. Konta, które są nieaktywne najdłużej, są usuwane w pierwszej kolejności.
-    - **Próg zatrzymania usuwania (%)**: Wprowadź wartość procentową miejsca na dysku (od 0 do 100). Gdy łączna ilość miejsca na dysku/w pamięci urządzenia będzie odpowiadać wprowadzonej wartości, proces usuwania zostanie zatrzymany.
+- **Trybu komputera udostępnionego**: Wybierz **Włącz** włączenie trybu komputera udostępnionego. W tym trybie na urządzeniu może zalogować się jednocześnie tylko jeden użytkownik. Inny użytkownik nie może się zalogować, dopóki pierwszy użytkownik się nie wyloguje. Domyślna opcja **Nieskonfigurowane** oznacza, że to ustawienie jest niezarządzane przez usługę Intune i nie wypycha żadnych zasad w celu kontroli tego ustawienia na urządzeniu.
+- **Konto gościa**: wybierz, aby utworzyć opcję Gość na ekranie logowania. Konta gości nie wymagają poświadczeń użytkownika ani uwierzytelniania. To ustawienie tworzy nowe konto lokalne za każdym razem, gdy zostanie użyte. Dostępne opcje:
+  - **Gość**: tworzy konto gościa lokalnie na urządzeniu.
+  - **Domena**: tworzy konto gościa w usłudze Azure Active Directory (AD).
+  - **Gość i domena**: tworzy konto gościa lokalnie na urządzeniu i w usłudze Azure Active Directory (AD).
+- **Zarządzanie kontami**: ustaw pozycję **Włącz**, aby automatycznie usuwać konta lokalne utworzone przez gości oraz konta w usługach AD i Azure AD. Gdy użytkownik wyloguje się z urządzenia lub gdy zostanie uruchomiona konserwacja systemu, te konta zostaną usunięte. Gdy to ustawienie jest włączone, należy również skonfigurować:
+  - **Konto usuwania**: Wybierz, kiedy konta są usuwane: **na próg miejsca pamięci masowej**, **próg miejsca pamięci masowej i nieaktywne próg**, lub **natychmiast po Wyloguj** . Wprowadź też następujące ustawienia:
+    - **Start Usuń threshold(%)**: wprowadź wartość procentową (0 – 100), miejsca na dysku. Gdy łączna ilość miejsca na dysku/w pamięci urządzenia spadnie poniżej wprowadzonej wartości, konta zostaną usunięte z pamięci podręcznej. Konta są usuwane w trybie ciągłym w celu odzyskiwania miejsca dyskowego. Konta, które są nieaktywne najdłużej, są usuwane w pierwszej kolejności.
+    - **Zatrzymaj usuwanie threshold(%)**: wprowadź wartość procentową (0 – 100), miejsca na dysku. Gdy łączna ilość miejsca na dysku/w pamięci urządzenia będzie odpowiadać wprowadzonej wartości, proces usuwania zostanie zatrzymany.
 
   Ustaw w pozycji **Wyłącz**, aby zachować konta lokalne, konta usługi AD oraz Azure AD utworzone przez gości.
 
-- **Magazyn lokalny**: Wybierz opcję **Włączone**, aby uniemożliwić użytkownikom zapisywanie i wyświetlanie plików na dysku twardym urządzenia. Wybierz opcję **Wyłączone**, aby umożliwić użytkownikom wyświetlanie i zapisywanie plików lokalnie za pomocą Eksploratora plików. Domyślna opcja **Nieskonfigurowane** oznacza, że to ustawienie jest niezarządzane przez usługę Intune i nie wypycha żadnych zasad w celu kontroli tego ustawienia na urządzeniu.
-- **Zasady dotyczące zasilania**: Po ustawieniu opcji **Włączone** użytkownicy nie mogą wyłączyć opcji hibernacji, nie mogą zmieniać działań związanych z trybem uśpienia (na przykład zamykania pokrywy) i nie mogą zmieniać ustawień zasilania. Po ustawieniu opcji **Wyłączone**, użytkownicy mogą wprowadzić urządzenie w tryb hibernacji, mogą zamknąć pokrywę, aby wprowadzić urządzenie w stan uśpienia, i mogą zmieniać ustawienia zasilania. Domyślna opcja **Nieskonfigurowane** oznacza, że to ustawienie jest niezarządzane przez usługę Intune i nie wypycha żadnych zasad w celu kontroli tego ustawienia na urządzeniu.
-- **Limit czasu uśpienia (w sekundach)**: Wprowadź, ile sekund (od 0 do 100) urządzenie ma być nieaktywne, zanim przejdzie w stan uśpienia. Jeśli nie ustawisz czasu, urządzenie przejdzie w stan uśpienia po upływie 60 minut.
-- **Zaloguj, kiedy komputer wznowi pracę po uśpieniu**: Ustaw opcję **Włączone**, aby użytkownicy musieli zalogować się przy użyciu hasła, gdy urządzenie wznawia pracę po uśpieniu. Wybierz opcję **Wyłączone**, aby użytkownicy nie musieli wprowadzać nazwy użytkownika i hasła. Domyślna opcja **Nieskonfigurowane** oznacza, że to ustawienie jest niezarządzane przez usługę Intune i nie wypycha żadnych zasad w celu kontroli tego ustawienia na urządzeniu.
-- **Godzina rozpoczęcia konserwacji (w minutach po północy)**: Wprowadź czas w minutach (od 0 do 1440) automatycznego uruchomienia zadań konserwacji, takich jak Windows Update. Domyślna godzina rozpoczęcia to północ, czyli zero (`0`) minut. Zmień czas rozpoczęcia, wprowadzając czas rozpoczęcia w minutach po północy. Jeśli chcesz na przykład, aby konserwacja rozpoczynała się o 2:00, wprowadź liczbę `120`. Jeśli chcesz, aby konserwacja rozpoczynała się o 20:00, wprowadź liczbę `1200`.
-- **Zasady dotyczące edukacji**: Wybierz opcję **włączone**, aby używać ustawień zalecanych podczas korzystania z urządzeń w szkołach, które są bardziej restrykcyjne. Wybierz opcję **Wyłączone**, aby nie korzystać z domyślnych i zalecanych ustawień dotyczących edukacji. Domyślna opcja **Nieskonfigurowane** oznacza, że to ustawienie jest niezarządzane przez usługę Intune i nie wypycha żadnych zasad w celu kontroli tego ustawienia na urządzeniu.
+- **Magazyn lokalny**: wybierz opcję **Włączone**, aby uniemożliwić użytkownikom zapisywanie i wyświetlanie plików na dysku twardym urządzenia. Wybierz opcję **Wyłączone**, aby umożliwić użytkownikom wyświetlanie i zapisywanie plików lokalnie za pomocą Eksploratora plików. Domyślna opcja **Nieskonfigurowane** oznacza, że to ustawienie jest niezarządzane przez usługę Intune i nie wypycha żadnych zasad w celu kontroli tego ustawienia na urządzeniu.
+- **Zasady dotyczące zasilania**: po ustawieniu opcji **Włączone** użytkownicy nie mogą wyłączyć opcji hibernacji, nie mogą zmieniać działań związanych z trybem uśpienia (na przykład zamykania pokrywy) ani nie mogą zmieniać ustawień zasilania. Po ustawieniu opcji **Wyłączone**, użytkownicy mogą wprowadzić urządzenie w tryb hibernacji, mogą zamknąć pokrywę, aby wprowadzić urządzenie w stan uśpienia, i mogą zmieniać ustawienia zasilania. Domyślna opcja **Nieskonfigurowane** oznacza, że to ustawienie jest niezarządzane przez usługę Intune i nie wypycha żadnych zasad w celu kontroli tego ustawienia na urządzeniu.
+- **Sleep limit czasu (w sekundach)**: Wprowadź liczbę sekund (0 – 100), nieaktywne, urządzenie przejdzie w tryb uśpienia. Jeśli nie ustawisz czasu, urządzenie przejdzie w stan uśpienia po upływie 60 minut.
+- **Zaloguj, kiedy komputer wznowi pracę po uśpieniu**: ustaw opcję **Włączone**, aby użytkownicy musieli zalogować się przy użyciu hasła, gdy urządzenie wznawia pracę po uśpieniu. Wybierz opcję **Wyłączone**, aby użytkownicy nie musieli wprowadzać nazwy użytkownika i hasła. Domyślna opcja **Nieskonfigurowane** oznacza, że to ustawienie jest niezarządzane przez usługę Intune i nie wypycha żadnych zasad w celu kontroli tego ustawienia na urządzeniu.
+- **Konserwacja uruchomienie (w minutach od północy)**: wprowadź czas w minutach (0 – 1440), uruchamiania zadań automatycznej konserwacji, takich jak Windows Update. Domyślna godzina rozpoczęcia to północ, czyli zero (`0`) minut. Zmień czas rozpoczęcia, wprowadzając czas rozpoczęcia w minutach po północy. Jeśli chcesz na przykład, aby konserwacja rozpoczynała się o 2:00, wprowadź liczbę `120`. Jeśli chcesz, aby konserwacja rozpoczynała się o 20:00, wprowadź liczbę `1200`.
+- **Zasady dotyczące edukacji**: wybierz opcję **Włączone**, aby używać ustawień zalecanych, które są bardziej restrykcyjne, podczas korzystania z urządzeń w szkołach. Wybierz opcję **Wyłączone**, aby nie korzystać z domyślnych i zalecanych ustawień dotyczących edukacji. Domyślna opcja **Nieskonfigurowane** oznacza, że to ustawienie jest niezarządzane przez usługę Intune i nie wypycha żadnych zasad w celu kontroli tego ustawienia na urządzeniu.
 
   Aby uzyskać więcej informacji na temat zasad dotyczących edukacji, zobacz [Windows 10 configuration recommendations for education customers (Zalecenia konfiguracji systemu Windows 10 dla klientów w instytucjach edukacyjnych)](https://docs.microsoft.com/education/windows/configure-windows-for-education).
 

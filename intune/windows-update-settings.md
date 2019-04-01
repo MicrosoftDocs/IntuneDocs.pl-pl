@@ -6,20 +6,21 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 03/04/2019
-ms.topic: conceptual
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28e7109a82a5c083b4be26bc823bb0e06d97a7ca
-ms.sourcegitcommit: da9ee02de327f202b00be44c79bf7abd35b9929b
-ms.translationtype: HT
+ms.openlocfilehash: ef626523898a8873bde9851664b4ade85c2b0a23
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334990"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57566543"
 ---
 # <a name="windows-update-settings-for-intune"></a>Ustawienia aktualizacji systemu Windows dla usługi Intune  
 
@@ -33,8 +34,8 @@ Ustawienia aktualizacji umożliwiają kontrolowanie elementów pobieranych przez
 
 ### <a name="servicing-channel"></a>Kanał obsługi  
 
-- **Ustawienie domyślne**: Półroczny kanał dystrybucji (kierowany)  
-- **Dokumentacja dotycząca systemu Windows**: [Update/BranchReadinessLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-branchreadinesslevel)  
+- **Domyślny**: kanał półroczny (kierowany)  
+- **Dokumentację referencyjną Windows**: [aktualizacji/BranchReadinessLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-branchreadinesslevel)  
 Ustaw kanał (gałąź), z którego urządzenie ma otrzymywać aktualizacje systemu Windows. Różne kanały mogą używać innych okresów odroczenia przed dostarczeniem aktualizacji.  
 
 Na przykład opcja *Półroczny kanał* ma odroczenie o długości sześciu miesięcy. Oznacza to, że jeśli używasz tego kanału bez dodatkowych odroczeń związanych z ustawieniem, urządzenie instaluje aktualizację sześć miesięcy po jej wydaniu.  
@@ -57,22 +58,22 @@ Jeśli wybierzesz kanał niejawnego programu testów, usługa Intune automatyczn
 
 ### <a name="microsoft-product-updates"></a>Aktualizacje produktów firmy Microsoft  
 
-- **Ustawienie domyślne**:  Zezwalaj
-- **Dokumentacja dotycząca systemu Windows**: [Update/AllowMUUpdateService](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-allowmuupdateservice)
+- **Domyślne**: Zezwalaj
+- **Dokumentację referencyjną Windows**: [aktualizacji/AllowMUUpdateService](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-allowmuupdateservice)
 
 Wybierz pozycję *Zezwalaj*, aby skanować w poszukiwaniu aktualizacji aplikacji z usługi Microsoft Update.    
 
 ### <a name="windows-drivers"></a>Sterowniki systemu Windows  
 
-- **Ustawienie domyślne**:  Zezwalaj
-- **Dokumentacja dotycząca systemu Windows**: [Update/ExcludeWUDriversInQualityUpdate](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-excludewudriversinqualityupdate)
+- **Domyślne**: Zezwalaj
+- **Dokumentację referencyjną Windows**: [aktualizacji/ExcludeWUDriversInQualityUpdate](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-excludewudriversinqualityupdate)
 
 Wybierz pozycję *Zezwalaj*, aby uwzględniać sterowniki z usługi Windows Update podczas aktualizacji
 
 ### <a name="quality-update-deferral-period-days"></a>Okres odroczenia aktualizacji dotyczących jakości (dni)  
 
-- **Ustawienie domyślne**: 0  
-- **Dokumentacja dotycząca systemu Windows**: [Update/DeferQualityUpdatesPeriodInDays](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-deferqualityupdatesperiodindays)  
+- **Domyślnie**: 0  
+- **Dokumentację referencyjną Windows**: [aktualizacji/DeferQualityUpdatesPeriodInDays](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-deferqualityupdatesperiodindays)  
 
 Określ liczbę dni odroczenia aktualizacji dotyczących jakości: od 0 do 30. Jest to okres stosowany oprócz każdego okresu odroczenia stanowiącego część wybranego kanału usługi. Okres odroczenia rozpoczyna się po odebraniu zasad przez urządzenie.  
 
@@ -80,21 +81,21 @@ Aktualizacje dotyczące jakości są zazwyczaj poprawkami oraz ulepszeniami istn
 
 ### <a name="feature-update-deferral-period-days"></a>Okres odroczenia aktualizacji funkcji (dni)  
 
-- **Ustawienie domyślne**: 0  
-- **Dokumentacja dotycząca systemu Windows**: [Update/PauseFeatureUpdatesPeriodInDays](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-deferfeatureupdatesperiodindays)  
+- **Domyślnie**: 0  
+- **Dokumentację referencyjną Windows**: [aktualizacji/PauseFeatureUpdatesPeriodInDays](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-deferfeatureupdatesperiodindays)  
 
 Określ liczbę dni odroczenia aktualizacji funkcji. Jest to okres stosowany oprócz każdego okresu odroczenia stanowiącego część wybranego kanału usługi. Okres odroczenia rozpoczyna się po odebraniu zasad przez urządzenie.  
 Obsługiwany okres odroczenia:  
 
-- *System Windows w wersji 1709 lub nowszej*: od 0 do 365 dni  
-- *System Windows w wersji 1703*:  od 0 do 180 dni  
+- *Windows w wersji 1709 lub nowszej*: od 0 do 365 dni  
+- *Windows w wersji 1703*: 0 do 180 dni  
 
 Aktualizacje dotyczące funkcji są zazwyczaj nowymi funkcjami systemu Windows.  
 
 ### <a name="set-feature-update-uninstall-period-2--60-days"></a>Ustawianie okresu odinstalowywania aktualizacji funkcji (2–60 dni)  
 
-- **Ustawienie domyślne**: 10  
-- **Dokumentacja dotycząca systemu Windows**:  [Update/ConfigureFeatureUpdateUninstallPeriod](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-configurefeatureupdateuninstallperiod)  
+- **Domyślne**: 10  
+- **Dokumentację referencyjną Windows**: [aktualizacji/ConfigureFeatureUpdateUninstallPeriod](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-configurefeatureupdateuninstallperiod)  
 
 Skonfiguruj czas, po którym nie można odinstalować aktualizacji funkcji.  
 
@@ -109,8 +110,8 @@ Ustawienia środowiska użytkownika umożliwiają kontrolowanie środowiska uży
 
 ### <a name="automatic-update-behavior"></a>Zachowanie automatycznych aktualizacji  
 
-- **Ustawienie domyślne**: Automatycznie instaluj i uruchamiaj ponownie w zaplanowanym czasie  
-- **Dokumentacja dotycząca systemu Windows**: [Update/AllowAutoUpdate](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)  
+- **Domyślnie**: automatycznie instaluj i uruchamiaj ponownie w zaplanowanym czasie  
+- **Dokumentację referencyjną Windows**: [Update/AllowAutoUpdate](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)  
 
 Wybierz sposób instalowania automatycznych aktualizacji oraz — w razie potrzeby — moment ponownego uruchomienia urządzenia.  
 
@@ -122,39 +123,39 @@ Zapoznaj się z dokumentacją dotyczącą systemu Windows, aby uzyskać pełne i
 
   Ta opcja może powodować automatyczne ponowne uruchamianie urządzenia po zainstalowaniu aktualizacji. Użyj ustawień **godzin aktywnego użytkowania**, aby zdefiniować okres, podczas którego operacje automatycznego ponownego uruchamiania są blokowane:  
 
-  - **Początek godzin aktywnego użytkowania**: Określ godzinę rozpoczęcia pomijania ponownych uruchomień z powodu instalacji aktualizacji.  
-    **Dokumentacja dotycząca systemu Windows**:  [Update/ActiveHoursStart](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-activehoursstart)  
-    **Ustawienie domyślne**: 8:00  
+  - **Początek godzin aktywnego użytkowania**: określ godzinę rozpoczęcia pomijania ponownych uruchomień z powodu instalacji aktualizacji.  
+    **Dokumentację referencyjną Windows**: [aktualizacji/ActiveHoursStart](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-activehoursstart)  
+    **Domyślne**: 8: 00  
   
-  - **Koniec godzin aktywnego użytkowania**: Określ godzinę zakończenia pomijania ponownych uruchomień z powodu instalacji aktualizacji.  
-    **Dokumentacja dotycząca systemu Windows**:  [Update/ActiveHoursEnd](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
-    **Ustawienie domyślne**: 17:00  
+  - **Koniec godzin aktywnego użytkowania**: określ godzinę zakończenia pomijania ponownych uruchomień z powodu instalacji aktualizacji.  
+    **Dokumentację referencyjną Windows**: [aktualizacji/ActiveHoursEnd](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
+    **Domyślne**: 17: 00  
 
 - **Automatycznie instaluj i ponownie uruchamiaj podczas konserwacji** — aktualizacje są pobierane automatycznie, a następnie instalowane podczas automatycznej konserwacji, gdy urządzenie nie jest używane ani zasilane za pomocą baterii. Jeśli ponowne uruchomienie urządzenia jest wymagane, jest ono wykonywane, gdy urządzenie nie jest używane. (Jest to wartość domyślna w przypadku urządzeń niezarządzanych).  
 
   Ta opcja może powodować automatyczne ponowne uruchamianie urządzenia po zainstalowaniu aktualizacji. Sposób korzystania z ustawień **godzin aktywnego użytkowania** nie został opisany w ustawieniach usługi Windows Update, ale są one używane przez usługę Intune do zdefiniowania okresu, w trakcie którego operacje automatycznego ponownego uruchamiania są blokowane:  
 
-  - **Początek godzin aktywnego użytkowania**: Określ godzinę rozpoczęcia pomijania ponownych uruchomień z powodu instalacji aktualizacji.  
-    **Dokumentacja dotycząca systemu Windows**:  [Update/ActiveHoursStart](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-activehoursstart)  
-    **Ustawienie domyślne**: 8:00  
+  - **Początek godzin aktywnego użytkowania**: określ godzinę rozpoczęcia pomijania ponownych uruchomień z powodu instalacji aktualizacji.  
+    **Dokumentację referencyjną Windows**: [aktualizacji/ActiveHoursStart](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-activehoursstart)  
+    **Domyślne**: 8: 00  
 
-  - **Koniec godzin aktywnego użytkowania**: Określ godzinę zakończenia pomijania ponownych uruchomień z powodu instalacji aktualizacji.  
-    **Dokumentacja dotycząca systemu Windows**:  [Update/ActiveHoursEnd](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
-    **Ustawienie domyślne**: 17:00  
+  - **Koniec godzin aktywnego użytkowania**: określ godzinę zakończenia pomijania ponownych uruchomień z powodu instalacji aktualizacji.  
+    **Dokumentację referencyjną Windows**: [aktualizacji/ActiveHoursEnd](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
+    **Domyślne**: 17: 00  
 
 - **Automatycznie instaluj i uruchamiaj ponownie w zaplanowanym czasie** — określ dzień i godzinę instalacji. Jeśli nie zostaną one podane, instalacja będzie uruchamiana codziennie o 3:00, po czym nastąpi 15-minutowe odliczanie do ponownego uruchomienia. Zarejestrowane użycia mogą opóźnić odliczanie i ponowne uruchamianie.  
   
   Ta opcja obsługuje dodatkowe ustawienia.  
-  **Dokumentacja dotycząca systemu Windows**:  [Update/AllowAutoUpdate](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)  
+  **Dokumentację referencyjną Windows**: [Update/AllowAutoUpdate](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)  
 
-  - **Częstotliwość automatycznego zachowania**: Za pomocą tego ustawienia możesz planować instalowanie aktualizacji, w tym tydzień, dzień i godzinę.  
-    **Ustawienie domyślne**: Co tydzień
+  - **Częstotliwość automatycznego zachowania**: za pomocą tego ustawienia możesz planować instalowanie aktualizacji, w tym tydzień, dzień i godzinę.  
+    **Domyślne**: co tydzień
 
-  - **Planowany dzień instalacji**:  Określ dzień tygodnia, w którym chcesz instalować aktualizacje.  
-    **Ustawienie domyślne**: Dowolny dzień  
+  - **Planowany dzień instalacji**: Określ na dzień tygodnia, w których wymagane są aktualizacje do zainstalowania.  
+    **Domyślne**: każdego dnia  
 
-  - **Planowana godzina instalacji**:  Określ godzinę, o której chcesz instalować aktualizacje.  
-    **Ustawienie domyślne**: 3:00  
+  - **Zaplanowany czas instalacji**: Określ czas, w której ma aktualizacje do zainstalowania.  
+    **Domyślne**: 3: 00  
 
 - **Automatycznie instaluj i uruchamiaj ponownie bez kontroli użytkownika końcowego** — aktualizacje są pobierane automatycznie, a następnie instalowane podczas automatycznej konserwacji, gdy urządzenie nie jest używane ani zasilane za pomocą baterii. Jeśli ponowne uruchomienie urządzenia jest wymagane, jest ono wykonywane, gdy urządzenie nie jest używane. Ta opcja powoduje ustawienie okienka sterowania dla użytkowników końcowych na typ „tylko do odczytu”.  
 
@@ -163,47 +164,47 @@ Zapoznaj się z dokumentacją dotyczącą systemu Windows, aby uzyskać pełne i
 
 ### <a name="restart-checks"></a>Testy po ponownym uruchomieniu  
 
-- **Ustawienie domyślne**: Zezwalaj  
-- **Dokumentacja dotycząca systemu Windows**: [Update/SetEDURestart](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-setedurestart)  
+- **Domyślne**: Zezwalaj  
+- **Dokumentację referencyjną Windows**: [aktualizacji/SetEDURestart](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-setedurestart)  
 
 To ustawienie ma różne wyniki w zależności od wersji systemu Windows na urządzeniach:  
 
-- System Windows w wersji 1703 lub starszej: Po ponownym uruchomieniu urządzenia przeprowadzane są testy obejmujące aktywnych użytkowników, poziom naładowania baterii, uruchomione gry oraz inne. Aby pominąć te testy po ponownym uruchomieniu urządzenia, wybierz pozycję **Pomiń**.  
-- Od systemu Windows w wersji 1709: W trakcie godzin aktywnego użytkowania następujące procesy nie są uruchamiane w przypadku aktualizacji: skanowanie, pobieranie, instalowanie i ponowne uruchamianie. Po godzinach aktywnego użytkowania procesy aktualizacji są uruchamiane i mogą wybudzić urządzenie ze stanu uśpienia oraz skanować, pobierać, instalować i ponownie uruchamiać urządzenie, o ile sprawdzanie baterii i zasilania zakończy się wynikiem pozytywnym. Aby uzyskać więcej informacji, zobacz [Update/SetEDURestart](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-setedurestart).  
+- System Windows w wersji 1703 i starszych: po ponownym uruchomieniu urządzenia przeprowadzane są testy obejmujące aktywnych użytkowników, poziom naładowania baterii, uruchomione gry oraz inne. Aby pominąć te testy po ponownym uruchomieniu urządzenia, wybierz pozycję **Pomiń**.  
+- Od systemu Windows w wersji 1709: w trakcie godzin aktywnego użytkowania następujące procesy nie są uruchamiane w przypadku aktualizacji: skanowanie, pobieranie, instalowanie i ponowne uruchamianie. Po godzinach aktywnego użytkowania procesy aktualizacji są uruchamiane i mogą wybudzić urządzenie ze stanu uśpienia oraz skanować, pobierać, instalować i ponownie uruchamiać urządzenie, o ile sprawdzanie baterii i zasilania zakończy się wynikiem pozytywnym. Aby uzyskać więcej informacji, zobacz [Update/SetEDURestart](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-setedurestart).  
 
 ### <a name="block-user-from-pausing-windows-updates"></a>Blokowanie wstrzymywania aktualizacji systemu Windows przez użytkownika  
 
-- **Ustawienie domyślne**: Zezwalaj  
-- **Dokumentacja dotycząca systemu Windows**: [Update/SetDisablePauseUXAccess](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-setdisablepauseuxaccess)  
+- **Domyślne**: Zezwalaj  
+- **Dokumentację referencyjną Windows**: [aktualizacji/SetDisablePauseUXAccess](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-setdisablepauseuxaccess)  
 
 Zezwala użytkownikowi na wstrzymywanie instalacji aktualizacji lub blokuje tę możliwość.  
 
 ### <a name="require-users-approval-to-restart-outside-of-work-hours"></a>Wymaganie zatwierdzenia przez użytkownika w przypadku ponownego uruchamiania poza godzinami pracy  
 
-- **Ustawienie domyślne**: Nieskonfigurowane  
-- **Dokumentacja dotycząca systemu Windows**: [Update/AutoRestartRequiredNotificationDismissal](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
+- **Domyślnie**: Nie skonfigurowano  
+- **Dokumentację referencyjną Windows**: [aktualizacji/AutoRestartRequiredNotificationDismissal](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
   
 Wybierz pozycję *Wymagaj*, aby wymagać od użytkownika zatwierdzenia ponownego uruchomienia urządzenia poza godzinami pracy.  
    
 ### <a name="remind-user-prior-to-required-auto-restart-with-dismissible-reminder-hours"></a>Przypominanie użytkownikowi o wymaganym automatycznym ponownym uruchomieniu przy użyciu przypomnienia możliwego do odrzucenia (godziny)  
 
-- **Ustawienie domyślne**: *nie jest ono konfigurowane domyślnie, a użytkownicy nie otrzymują powiadomienia*.  
-- **Dokumentacja dotycząca systemu Windows**: [Update/ScheduleRestartWarning](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-schedulerestartwarning)  
+- **Domyślnie**: *ustawienie nie jest domyślnie skonfigurowane, a użytkownicy nie otrzymują przypomnienia*.  
+- **Dokumentację referencyjną Windows**: [aktualizacji/ScheduleRestartWarning](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-schedulerestartwarning)  
 
 Określ, jak długo przed automatycznym ponownym uruchomieniem powiadomienie możliwe do odrzucenia ma być wyświetlane na urządzeniu użytkownika w celu przypomnienia mu o tym ponownym uruchomieniu. Obsługiwane są następujące wartości godzin: **2**, **4**, **8**, **12** lub **24**.  
 
 ### <a name="remind-user-prior-to-required-auto-restart-with-permanent-reminder-minutes"></a>Przypominanie użytkownikowi o wymaganym automatycznym ponownym uruchomieniu przy użyciu przypomnienia trwałego (minuty)  
 
-- **Ustawienie domyślne**: *nie jest ono konfigurowane domyślnie, a użytkownicy nie otrzymują powiadomienia*.  
-- **Dokumentacja dotycząca systemu Windows**: [Update/ScheduleImminentRestartWarning](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-scheduleimminentrestartwarning) 
+- **Domyślnie**: *ustawienie nie jest domyślnie skonfigurowane, a użytkownicy nie otrzymują przypomnienia*.  
+- **Dokumentację referencyjną Windows**: [aktualizacji/ScheduleImminentRestartWarning](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-scheduleimminentrestartwarning) 
 
 Określ, jak długo przed automatycznym ponownym uruchomieniem ostrzeżenie niemożliwe do odrzucenia ma być wyświetlane na urządzeniu użytkownika w celu przypomnienia mu o tym ponownym uruchomieniu. Obsługiwane są następujące wartości minut: **15**, **30** lub **60**.  
  
 ### <a name="allow-user-to-restart-engaged-restart"></a>Zezwalanie użytkownikowi na ponowne uruchamianie (ponowne uruchomienie wymagające interwencji użytkownika)  
 
-- **Ustawienie domyślne**: Nieskonfigurowane  
-- **Dokumentacja dotycząca systemu Windows**: *nie dotyczy*  
-- **Wersja systemu Windows**: ustawienie obsługiwane w systemie Windows 10 w wersji 1803 i nowszych  
+- **Domyślnie**: Nie skonfigurowano  
+- **Dokumentację referencyjną Windows**: *nie dotyczy*  
+- **Wersja Windows**: obsługiwane w systemie Windows 10 w wersji 1803 i nowszych  
 
   > [!NOTE]  
   > W systemie Windows 10 w wersji 1809 wprowadzono dodatkowe ustawienia ponownego uruchamiania wymagającego interwencji użytkownika, które umożliwiają stosowanie oddzielnych ustawień aktualizacji dotyczących funkcji i jakości. Natomiast ustawienia zarządzane przez usługę Intune nie są oddzielnie stosowane do różnych typów aktualizacji. W zamian usługa Intune stosuje te same wartości w przypadku aktualizacje dotyczące funkcji i jakości.  
@@ -215,24 +216,24 @@ Aby uzyskać więcej informacji na temat tej opcji, zobacz sekcję [Engaged rest
 Poniższe ustawienia są używane do kontrolowania czasu wykonywania akcji ponownego uruchomienia wymagającego interwencji użytkownika.  
 
 - **Przenoś użytkowników do ponownego uruchomienia wymagającego interwencji użytkownika po automatycznym ponownym uruchomieniu (dni)**  
-  - **Ustawienie domyślne**:  Domyślnie ta opcja nie jest konfigurowana, ale obsługuje wartość z zakresu od **2** do **30**.  
-  - **Dokumentacja dotycząca systemu Windows**: [Update/EngagedRestartTransitionSchedule](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-engagedrestarttransitionschedule)  
+  - **Domyślnie**: domyślnie to ustawienie nie jest skonfigurowane, ale obsługuje wartość z zakresu od **2** do **30**.  
+  - **Dokumentację referencyjną Windows**: [aktualizacji/EngagedRestartTransitionSchedule](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-engagedrestarttransitionschedule)  
   Określ, jak długo po zainstalowaniu aktualizacji na urządzeniu ma rozpocząć się zachowanie ponownego uruchomienia wymagającego interwencji użytkownika. Po skonfigurowanej liczbie dni użytkownicy otrzymają monit o ponowne uruchomienie urządzenia.  
 
 - **Odłóż przypomnienie o ponownym uruchomieniu wymagającym interwencji użytkownika (dni)**  
-  - **Ustawienie domyślne**:  Domyślnie ta opcja nie jest konfigurowana, ale obsługuje wartość z zakresu od **1** do **3**.  
-  - **Dokumentacja dotycząca systemu Windows**: [Update/EngagedRestartSnoozeSchedule](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-engagedrestartsnoozeschedule)  
+  - **Domyślnie**: domyślnie to ustawienie nie jest skonfigurowane, ale obsługuje wartość z zakresu od **1** do **3**.  
+  - **Dokumentację referencyjną Windows**: [aktualizacji/EngagedRestartSnoozeSchedule](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-engagedrestartsnoozeschedule)  
   Określ, o ile można odłożyć monit o ponowne uruchomienie.  Po zakończeniu okresu odłożenia monit o ponowne uruchomienie pojawi się jeszcze raz. Użytkownik może nadal odkładać przypomnienie do momentu osiągnięcia terminu instalacji.  
 
 - **Ustaw termin oczekujących ponownych uruchomień (dni)**  
-  - **Ustawienie domyślne**:  Domyślnie ta opcja nie jest konfigurowana, ale obsługuje wartość z zakresu od **2** do **30**.  
-  - **Dokumentacja dotycząca systemu Windows**: [Update/EngagedRestartDeadline](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-engagedrestartdeadline)  
+  - **Domyślnie**: domyślnie to ustawienie nie jest skonfigurowane, ale obsługuje wartość z zakresu od **2** do **30**.  
+  - **Dokumentację referencyjną Windows**: [aktualizacji/EngagedRestartDeadline](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-csp-update#update-engagedrestartdeadline)  
   Określ maksymalną liczbę dni oczekiwania po rozpoczęciu zachowania ponownego uruchomienia wymagającego interwencji użytkownika, aż urządzenie wymusi wymagane ponowne uruchomienie. To ponowne uruchomienie spowoduje monitowanie użytkowników o zapisanie pracy
 
 ### <a name="delivery-optimization-download-mode"></a>Tryb pobierania optymalizacji dostarczania  
 
-- **Ustawienie domyślne**:  Nie dotyczy
-- **Dokumentacja dotycząca systemu Windows**: *nie dotyczy*
+- **Domyślne**: nie dotyczy
+- **Dokumentację referencyjną Windows**: *nie dotyczy*
 
 Optymalizacja dostarczania nie jest już skonfigurowana w ramach pierścienia aktualizacji systemu Windows 10 w obszarze Aktualizacje oprogramowania. Optymalizacja dostarczania jest teraz konfigurowana za pośrednictwem konfiguracji urządzenia. Poprzednie konfiguracje są nadal dostępne w konsoli. Możesz usunąć poprzednie konfiguracje, edytując je tak, aby były *Nieskonfigurowane*, ale poza tym nie mogą być modyfikowane. 
 

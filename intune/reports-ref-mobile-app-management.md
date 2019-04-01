@@ -6,10 +6,11 @@ keywords: Magazyn danych usługi Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/20/2018
-ms.topic: conceptual
+ms.date: 03/05/2019
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 084F11AD-F7BA-45A4-8424-45E6E4564930
 ms.reviewer: aanavath
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a21194b218cc7df230bf1ef1969b8d4483940d75
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 7ea3e2c87055e4f111c8f12c47c468dff2c4e587
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57238765"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57565693"
 ---
 # <a name="reference-for-mobile-app-management-mam-entities"></a>Dokumentacja jednostek zarządzania aplikacjami mobilnymi (MAM)
 
@@ -83,12 +84,12 @@ Jednostka **MamCheckin** reprezentuje dane zebrane po zameldowaniu wystąpienia 
 | Właściwość | Opis | Przykład |
 |---------|------------|--------|
 | DateKey |Klucz daty zarejestrowania zameldowania aplikacji MAM w magazynie danych. | 20160703 |
-| ApplicationInstanceKey |Klucz wystąpienia aplikacji skojarzony z zameldowaniem tej aplikacji MAM. |1900-02-05 12:00:00 |
-| UserKey |Klucz użytkownika skojarzony z zameldowaniem tej aplikacji MAM. |1900-12-01 12:00:00 |
-| ApplicationKey |Klucz aplikacji MAM, która została zameldowana. |1900-01-10 12:00:00 |
-| DeviceHealthKey |Klucz kondycji urządzenia skojarzony z zameldowaniem tej aplikacji MAM. |1900-02-01 12:00:00 |
-| PlatformKey |Reprezentuje platformę urządzenia skojarzonego z zameldowaniem tej aplikacji MAM. |1900-01-01 12:00:00 |
-| EffectiveAppliedPolicyKey |Reprezentuje efektywnie zastosowane zasady skojarzone z aplikacją MAM, która została zameldowana. Efektywne zastosowanie zasad jest wynikiem scalenia wszystkich zasad dotyczących danej aplikacji i użytkownika. |1900-02-05 12:00:00 |
+| ApplicationInstanceKey |Klucz wystąpienia aplikacji skojarzony z zameldowaniem tej aplikacji MAM. | 123 |
+| UserKey |Klucz użytkownika skojarzony z zameldowaniem tej aplikacji MAM. | 4323 |
+| ApplicationKey |Klucz aplikacji MAM, która została zameldowana. |234 |
+| DeviceHealthKey |Klucz kondycji urządzenia skojarzony z zameldowaniem tej aplikacji MAM. | 321 |
+| PlatformKey |Reprezentuje platformę urządzenia skojarzonego z zameldowaniem tej aplikacji MAM. |123 |
+| EffectiveAppliedPolicyKey |Reprezentuje efektywnie zastosowane zasady skojarzone z aplikacją MAM, która została zameldowana. Efektywne zastosowanie zasad jest wynikiem scalenia wszystkich zasad dotyczących danej aplikacji i użytkownika. | 322 |
 | LastCheckInDate |Data i godzina ostatniego zameldowania tej aplikacji MAM. Wartość może być równa null. |2016-11-23 12:00:00 |
 
 ## <a name="mamdevicehealth"></a>MamDeviceHealth
@@ -97,8 +98,8 @@ Jednostka **MamDeviceHealth** reprezentuje urządzenia, które mają wdrożone z
 
 | Właściwość | Opis | Przykład |
 |---------|------------|--------|
-| DeviceHealthKey |Unikatowy identyfikator urządzenia i jego skojarzonej kondycji w magazynie danych — klucz zastępczy. |1900-01-01 12:00:00 |
-| DeviceHealth |Unikatowy identyfikator urządzenia i jego skojarzonej kondycji — podobny do wartości DeviceHealthKey, ale identyfikator jest kluczem naturalnym. |1900-01-01 12:00:00 |
+| DeviceHealthKey |Unikatowy identyfikator urządzenia i jego skojarzonej kondycji w magazynie danych — klucz zastępczy. |123 |
+| DeviceHealth |Unikatowy identyfikator urządzenia i jego skojarzonej kondycji — podobny do wartości DeviceHealthKey, ale identyfikator jest kluczem naturalnym. |b66bc706-ffff-7777-0340-032819502773 |
 | DeviceHealthName |Reprezentuje stan urządzenia. <br>Not available — brak informacji o tym urządzeniu. <br>Healthy — urządzenie nie ma zdjętych zabezpieczeń systemu. <br>Unhealthy — urządzenie ma zdjęte zabezpieczenia systemu. |Not Available Healthy Unhealthy |
 | RowLastModifiedDateTimeUTC |Data i godzina w formacie UTC ostatniej modyfikacji kondycji konkretnego urządzenia MAM w magazynie danych. |2016-11-23 12:00:00 |
 

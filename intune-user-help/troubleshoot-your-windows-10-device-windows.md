@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/13/2017
+ms.date: 03/11/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,15 +18,15 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3dba2401240b19b93318946af0e8760fef121518
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
-ms.translationtype: HT
+ms.openlocfilehash: 2fe8a765bdb11d0b94dbbb7519360c6e7a01e8ce
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
+ms.lasthandoff: 03/14/2019
 ms.locfileid: "55837581"
 ---
 # <a name="troubleshoot-your-windows-10-device-enrollment"></a>Rozwiązywanie problemów dotyczących rejestrowania urządzeń z systemem Windows 10
-Jeśli po wykonaniu kroków opisanych w artykule [Rejestrowanie urządzenia z systemem Windows 10 Mobile lub Windows 10 Desktop w usłudze Intune](enroll-your-w10-phone-or-w10-pc-windows.md) nadal nie możesz uzyskać dostępu do służbowego adresu e-mail i plików, wykonaj następujące czynności.
+Jeśli urządzenie zostało zarejestrowane, ale nadal nie można uzyskać dostępu do służbowy adres e-mail i plików, wykonaj następujące czynności.  
 
 1.  Przyjrzyj się obu ekranom i zastanów się, który z nich przypomina zawartość ekranu urządzenia. Wykonaj kroki odnoszące się do ekranu przypominającego ekran urządzenia.
 
@@ -48,13 +48,13 @@ Jeśli po wykonaniu kroków opisanych w artykule [Rejestrowanie urządzenia z sy
 
      ![validate-successful-enrollment](./media/w10-enroll-rs1-validate-successful-enrollment.png)
 
-   - Jeśli nie widzisz informacji o połączeniu pokazanych powyżej lub jeśli są one wyświetlane, ale brakuje niektórych opcji, naciśnij przycisk **Połącz**, a następnie zaloguj się przy użyciu swoich poświadczeń służbowych. Na tym etapie powinno zostać nawiązane połączenie.
+   - Jeśli nie widzisz informacje o połączeniu pokazanych powyżej, lub jeśli są one wyświetlane, ale brakuje niektórych opcji, naciśnij przycisk **Connect**. Następnie zaloguj się przy użyciu poświadczeń konta służbowego, aby nawiązać połączenie.  
 
 ## <a name="troubleshooting-steps-to-follow-if-you-see-your-account"></a>Rozwiązywanie problemów w przypadku pozycji „Konto”
 
 Jeśli powyższe kroki zostały wykonane, ale nadal nie można uzyskać dostępu do służbowej poczty e-mail, plików i innych danych, wróć do pozycji **Konta**, a następnie naciśnij pozycję **Dostęp z miejsca pracy**.
 
-- Jeśli widzisz konto służbowe, gratulujemy. Połączenie zostało nawiązane.
+- Jeśli Zobacz swoją pracę, lub na liście konta służbowego, zostało nawiązane.  
 
 - Jeśli nie widzisz konta służbowego, naciśnij pozycję **Połącz**, a następnie zaloguj się przy użyciu poświadczeń konta służbowego.
 

@@ -6,10 +6,11 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/14/2018
-ms.topic: article
+ms.date: 02/21/2018
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: cd9f05e7-26e6-45e0-8d38-67d8232b1cae
 ms.reviewer: aanavath
@@ -17,17 +18,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 71f4ce34abdb0c1b3d7dbc2bbd3f41f618715fb3
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
-ms.translationtype: HT
+ms.openlocfilehash: 065535bc6bb4dc586ab45ffa0a9a1250c0a1c908
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55837406"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57566492"
 ---
 # <a name="microsoft-intune-app-sdk-overview"></a>Omówienie zestawu SDK aplikacji usługi Microsoft Intune
-Korzystając z zestawu SDK aplikacji usługi Intune, dostępnego dla systemów iOS i Android, możesz obsługiwać zasady ochrony aplikacji usługi Intune w swojej aplikacji. Położono w nim nacisk na minimalizację liczby zmian kodu wymaganych od dewelopera aplikacji. Większość funkcji zestawu SDK możesz włączyć bez zmiany zachowania aplikacji. W przypadku rozszerzonego środowiska użytkownika końcowego i administratora IT możesz użyć interfejsów API, aby dostosować zachowanie aplikacji dla funkcji, które wymagają współdziałania ze strony aplikacji.
+Korzystając z zestawu SDK aplikacji usługi Intune dostępnego dla systemów iOS i Android, możesz obsługiwać [zasady ochrony aplikacji](app-protection-policy.md) usługi Intune w swojej aplikacji. Gdy aplikacja ma zastosowano zasady ochrony aplikacji, mogą być zarządzane przez usługę Intune i jest rozpoznawany przez usługę Intune jako zarządzaną aplikację. Zestaw SDK kładzie nacisk na minimalizację liczby zmian kodu wymaganych od dewelopera aplikacji. Większość funkcji zestawu SDK możesz włączyć bez zmiany zachowania aplikacji. W przypadku rozszerzonego środowiska użytkownika końcowego i administratora IT możesz użyć interfejsów API zestawu SDK, aby dostosować zachowanie aplikacji pod kątem obsługi funkcji, które wymagają współdziałania ze strony aplikacji.
 
-Gdy włączysz obsługę zasad ochrony aplikacji w swojej aplikacji, administratorzy IT będą mogli wdrażać te zasady w celu ochrony danych firmowych w aplikacji.
+Gdy włączysz obsługę zasad ochrony aplikacji usługi Intune w swojej aplikacji, administratorzy IT będą mogli wdrażać te zasady w celu ochrony danych firmowych w aplikacji.
 
 ## <a name="app-protection-features"></a>Funkcje ochrony aplikacji
 
@@ -51,13 +52,13 @@ Administratorzy IT mogą wymusić otwieranie linków sieci Web w danej aplikacji
 ### <a name="enforce-a-pin-policy"></a>Wymuszanie zasad numeru PIN
 Administratorzy IT mogą wymagać od użytkowników końcowych wprowadzania numeru PIN przed uzyskaniem dostępu do danych firmowych w aplikacji. Gwarantuje to, że osoba korzystająca z aplikacji jest tą samą osobą, która początkowo zalogowała się przy użyciu swojego konta służbowego. Gdy użytkownicy końcowi skonfigurują swoje numery PIN, zestaw SDK aplikacji usługi Intune będzie używać usługi Azure Active Directory do weryfikowania poświadczeń użytkowników końcowych względem zarejestrowanego konta usługi Intune.
 
-### <a name="require-users-to-sign-in-with-work-or-school-account-for-app-access"></a>Wymaganie, aby użytkownicy logowali się za pomocą konta służbowego w celu uzyskania dostępu do aplikacji
+### <a name="require-users-to-sign-in-with-a-work-or-school-account-for-app-access"></a>Wymaganie logowania się użytkowników za pomocą konta służbowego w celu uzyskania dostępu do aplikacji
 Administratorzy IT mogą wymagać od użytkowników logowania się za pomocą konta służbowego w celu uzyskania dostępu do aplikacji. Zestaw SDK aplikacji usługi Intune używa usługi Azure Active Directory do udostępnienia funkcji logowania jednokrotnego, która umożliwia ponowne używanie poświadczeń podczas kolejnych logowań po ich jednokrotnym podaniu. Obsługiwane jest również uwierzytelnianie przy użyciu rozwiązań do zarządzania tożsamościami sfederowanych z usługą Azure Active Directory.
 
 ### <a name="check-device-health-and-compliance"></a>Sprawdzanie kondycji i zgodności urządzenia
 Administratorzy IT mogą sprawdzać kondycję urządzenia i jego zgodność z zasadami usługi Intune przed udostępnieniem aplikacji użytkownikom końcowym. W systemie iOS te zasady sprawdzają, czy nie zostały zdjęte zabezpieczenia systemu. W systemie Android te zasady sprawdzają, czy na urządzeniu nie został odblokowany dostęp do konta root.
 
-### <a name="multi-identity-support"></a>Obsługa wielu tożsamości
+### <a name="support-multi-identity"></a>Obsługa wielu tożsamości
 Obsługa wielu tożsamości to funkcja zestawu SDK, która umożliwia współistnienie kont zarządzanych przez zasady (firmowych) i niezarządzanych (osobistych) w jednej aplikacji.
 
 Na przykład wielu użytkowników konfiguruje zarówno konto firmowe, jak i osobiste w aplikacjach mobilnych Outlook dla systemów iOS i Android. Gdy użytkownik uzyskuje dostęp do danych za pomocą konta firmowego, administrator IT musi mieć pewność, że zostaną zastosowane zasady ochrony aplikacji. Jednak gdy użytkownik uzyskuje dostęp do osobistego konta e-mail, dane powinny być poza kontrolą administratora IT. Zestaw SDK aplikacji usługi Intune osiąga to, stosując zasady ochrony aplikacji **tylko** do tożsamości firmowej w aplikacji.
@@ -80,4 +81,4 @@ Aby dowiedzieć się więcej na temat rozwiązania Citrix MDX, zobacz [About the
 
 ## <a name="next-steps"></a>Następne kroki
 
-- Zapoznaj się z [zasadami ochrony aplikacji](app-protection-policy.md).
+- [Wprowadzenie do zestawu SDK aplikacji usługi Microsoft Intune](app-sdk-get-started.md).

@@ -5,10 +5,11 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/19/2018
-ms.topic: article
+ms.date: 02/24/2019
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 38ebd3f5-cfcc-4204-8a75-6e2f162cd7c1
 ms.reviewer: aanavath
@@ -16,31 +17,32 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac9c8ca0b04cbb6f7cf570134a6f4bdce7bf57ed
-ms.sourcegitcommit: 93de3423d2d8f0019e676a63784edeb3daf47cb7
-ms.translationtype: HT
+ms.openlocfilehash: 23c254094281c7591730b2972ec0de41f5243e66
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56325456"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57566390"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Wprowadzenie do zestawu SDK aplikacji usługi Microsoft Intune
 
 Ten przewodnik pomoże szybko włączyć w aplikacji mobilnej obsługę zasad ochrony aplikacji za pomocą usługi Microsoft Intune. Przydatne może okazać się uprzednie zrozumienie korzyści zapewnianych przez zestaw SDK aplikacji usługi Intune, które wyjaśniono w temacie [Omówienie zestawu SDK aplikacji usługi Intune](app-sdk.md).
 
-Zestaw SDK aplikacji usługi Intune obsługuje podobne scenariusze dla systemów iOS i Android oraz pozwala utworzyć spójne środowisko dla administratorów IT na tych platformach. Istnieją jednak niewielkie różnice w obsłudze niektórych funkcji ze względu na ograniczenia platform.
+Zestaw SDK aplikacji usługi Intune obsługuje podobne scenariusze dla systemów iOS i Android oraz pozwala utworzyć spójne środowisko dla administratorów IT na tych platformach. Istnieją jednak niewielkie różnice w obsłudze niektórych funkcji ze względu na różnice i ograniczenia platform.
 
 ## <a name="register-your-store-app-with-microsoft"></a>Rejestrowanie aplikacji ze sklepu w usłudze Microsoft Intune
 
 ### <a name="if-your-app-is-internal-to-your-organization-and-will-not-be-publicly-available"></a>Jeśli Twoja aplikacja jest wewnętrzną aplikacją organizacji i nie będzie dostępna publicznie:
 
-*Nie musisz* rejestrować swojej aplikacji. W przypadku wewnętrznych aplikacji biznesowych administrator IT wdroży aplikację wewnętrznie. Usługa Intune wykryje, że aplikacja została opracowana za pomocą zestawu SDK, i zezwoli administratorowi IT na zastosowanie do niej zasad ochrony aplikacji. Możesz przejść do sekcji [Włączanie obsługi zasad ochrony aplikacji dla aplikacji systemu iOS lub Android](#enable-your-iOS-or-Android-app-for-app-protection-policy).
+_**Nie musisz**_ rejestrować swojej aplikacji. Dla wewnętrznej [aplikacji biznesowych (LOB)](apps-add.md#app-types-in-microsoft-intune) , napisanych przez Twoją firmę lub dla, IT administrator wdroży aplikację wewnętrznie. Usługa Intune wykryje, że aplikacja została opracowana za pomocą zestawu SDK, i zezwoli administratorowi IT na zastosowanie do niej zasad ochrony aplikacji. Możesz przejść do sekcji [Włączanie obsługi zasad ochrony aplikacji dla aplikacji systemu iOS lub Android](#enable-your-iOS-or-Android-app-for-app-protection-policy).
 
 ### <a name="if-your-app-will-be-released-to-a-public-app-store-like-the-apple-app-store-or-google-play"></a>Jeśli Twoja aplikacja będzie rozpowszechniana w publicznym sklepie z aplikacjami, takim jak Apple App Store lub Google Play:
 
-_**Musisz**_ najpierw zarejestrować aplikację w usłudze Microsoft Intune i zaakceptować warunki rejestracji. Administratorzy IT mogą następnie zastosować zasady ochrony aplikacji do zarządzanej aplikacji, która będzie wyświetlana jako aplikacja partnerska usługi Intune.
+_**Musisz**_ najpierw zarejestrować aplikację w usłudze Microsoft Intune i zaakceptować warunki rejestracji. Administratorzy IT mogą następnie zastosować zasady ochrony aplikacji do zarządzanej aplikacji, która będzie wyświetlana jako [chroniona aplikacja partnerska usługi Intune](apps-supported-intune-apps.md#partner-apps).
 
 Do czasu zakończenia rejestracji i potwierdzenia jej przez zespół usługi Microsoft Intune administratorzy usługi Intune nie będą mieć linku bezpośredniego do opcji zastosowania zasad ochrony aplikacji do Twojej aplikacji. Firma Microsoft doda także aplikację do swojej [strony partnerów usługi Microsoft Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-apps). Wyświetlanie ikony aplikacji na tej stronie świadczy o tym, że obsługuje ona zasady ochrony aplikacji usługi Intune.
 
+### <a name="the-registration-process"></a>Proces rejestracji
 Aby rozpocząć proces rejestracji (jeśli nie współpracujesz już z osobą kontaktową z firmy Microsoft), wypełnij [kwestionariusz partnera aplikacji usługi Microsoft Intune](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR80SNPjnVA1KsGiZ89UxSdVUMEpZNUFEUzdENENOVEdRMjM5UEpWWjJFVi4u).
 
 Użyjemy adresów e-mail podanych w odpowiedziach kwestionariusza w celu uzyskania kontaktu i kontynuowania procesu rejestracji. Ponadto skorzystamy z Twojego adresu e-mail użytego podczas rejestracji, aby kontaktować się z Tobą w razie jakichkolwiek pytań.
@@ -84,7 +86,7 @@ Aby ułatwić zintegrowanie zestawu SDK aplikacji usługi Intune z aplikacją, b
 
 * **[Przewodnik dla deweloperów korzystających z zestawu SDK aplikacji usługi Intune dla systemu Android](app-sdk-android.md)**: ten dokument zawiera szczegółowe instrukcje dotyczące włączania aplikacji natywnej systemu Android przy użyciu zestawu SDK aplikacji usługi Intune.
 
-* **[Przewodnik powiązań platformy Xamarin dla zestawu Intune App SDK](app-sdk-xamarin.md)**: ten dokument pomoże Ci tworzyć aplikacje dla systemów iOS i Android przy użyciu oprogramowania Xamarin i zasad ochrony aplikacji usługi Intune.
+* **[Przewodnik powiązań platformy Xamarin dla zestawu Intune App SDK](app-sdk-xamarin.md)**: ten dokument pomoże Ci tworzyć aplikacje dla systemów Android i iOS przy użyciu oprogramowania Xamarin i zasad ochrony aplikacji usługi Intune.
 
 
 
@@ -94,17 +96,17 @@ Aby ułatwić zintegrowanie zestawu SDK aplikacji usługi Intune z aplikacją, b
  
  * Aplikacja została skompilowana z użyciem [biblioteki uwierzytelniania usługi Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) i włączono w niej opcję uwierzytelniania brokera usługi AAD.
  
- * [Identyfikator klienta usługi AAD](https://docs.microsoft.com/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication#optional-configure-a-native-client-application) dla aplikacji musi być unikatowy w obrębie platform iOS i Android.
+ * [Identyfikator klienta usługi AAD](https://docs.microsoft.com/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication#configure-a-native-client-application) dla aplikacji musi być unikatowy w obrębie platform iOS i Android.
  
 ## <a name="configure-telemetry-for-your-app"></a>Konfigurowanie telemetrii dla aplikacji
 
 Usługa Microsoft Intune zbiera dane dotyczące statystyk użycia aplikacji.
 
-* **Zestaw SDK aplikacji usługi Intune dla systemu iOS**: Zestaw SDK domyślnie rejestruje dane telemetryczne zestawu SDK dotyczące zdarzeń użycia. Te dane są wysyłane do usługi Microsoft Intune.
+* **Zestaw SDK aplikacji usługi Intune dla systemu iOS**: zestaw SDK domyślnie rejestruje dane telemetryczne zestawu SDK dotyczące zdarzeń użycia. Te dane są wysyłane do usługi Microsoft Intune.
 
     * Jeśli zrezygnujesz z wysyłania danych telemetrycznych zestawu SDK do usługi Microsoft Intune z aplikacji, musisz wyłączyć funkcję przesyłania danych telemetrycznych przez ustawienie dla właściwości `MAMTelemetryDisabled` wartości „YES” w słowniku IntuneMAMSettings.
 
-* **Zestaw SDK aplikacji usługi Intune dla systemu Android**: Zestaw SDK aplikacji usługi Intune dla systemu Android nie kontroluje zbierania danych z aplikacji. Aplikacja Portal firmy domyślnie rejestruje dane telemetryczne. Te dane są wysyłane do usługi Microsoft Intune. Zgodnie z zasadami firmy Microsoft nie zbieramy żadnych danych osobowych. 
+* **Zestaw SDK aplikacji usługi Intune dla systemu Android**: zestaw SDK aplikacji usługi Intune dla systemu Android nie kontroluje zbierania danych z aplikacji. Aplikacja Portal firmy domyślnie rejestruje dane telemetryczne. Te dane są wysyłane do usługi Microsoft Intune. Zgodnie z zasadami firmy Microsoft nie zbieramy żadnych danych osobowych. 
 
     * Jeśli użytkownicy końcowi chcą zrezygnować z wysyłania tych danych, muszą wyłączyć telemetrię w ustawieniach aplikacji portalu firmy. Aby dowiedzieć się więcej, zobacz artykuł [Wyłączanie zbierania danych użycia przez firmę Microsoft](https://docs.microsoft.com/intune-user-help/turn-off-microsoft-usage-data-collection-android). 
 
@@ -158,9 +160,9 @@ Po wykonaniu czynności niezbędnych do zintegrowania Twojej aplikacji systemu i
 
     * Jeśli jesteś niezależnym dostawcą oprogramowania i włączasz obsługę ochrony aplikacji usługi Intune dla swoich aplikacji systemu iOS lub Android ze sklepu, po dokonaniu rejestracji w usłudze Microsoft Intune w sposób opisany w kroku rejestracji otrzymasz kod promocyjny. Kod ten pozwala zarejestrować się w celu korzystania z wersji próbnej usługi Microsoft Intune przez dodatkowy rok.
 
-    * Jeśli opracowujesz aplikację biznesową, która nie zostanie dostarczona do sklepu, dostęp do usługi Microsoft Intune możesz uzyskiwać za pośrednictwem swojej organizacji. Możesz też zarejestrować się w celu skorzystania z miesięcznej bezpłatnej wersji próbnej usługi [Microsoft Intune](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0).
+    * Jeśli opracowujesz aplikację biznesową, która nie zostanie dostarczona do sklepu, dostęp do usługi Microsoft Intune możesz uzyskiwać za pośrednictwem swojej organizacji. Możesz też zarejestrować się w celu skorzystania z miesięcznej bezpłatnej wersji próbnej usługi [Microsoft Intune](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0).
     
-    * Jeśli testujesz aplikację na urządzeniu przenośnym przy użyciu konta użytkownika końcowego, upewnij się, że do konta przypisano licencję usługi Intune w witrynie internetowej portalu administracyjnego usługi Office po zalogowaniu się przy użyciu konta administratora. Zobacz [Assign Microsoft Intune license (Przypisywanie licencji usługi Microsoft Intune)](https://docs.microsoft.com/en-ca/intune/licenses-assign).
+    * Jeśli testujesz aplikację na urządzeniu przenośnym przy użyciu konta użytkownika końcowego, upewnij się, że do konta przypisano licencję usługi Intune w witrynie internetowej centrum administracyjnego Microsoft 365 po zalogowaniu się przy użyciu konta administratora. Zobacz [Assign Microsoft Intune license (Przypisywanie licencji usługi Microsoft Intune)](https://docs.microsoft.com/en-ca/intune/licenses-assign).
 
 * **Zasady ochrony aplikacji usługi Intune**: aby przetestować wszystkie zasady ochrony aplikacji usługi Intune w swojej aplikacji, musisz znać oczekiwane zachowanie każdego ustawienia zasad. Zobacz opisy [zasad ochrony aplikacji systemu iOS](app-protection-policy-settings-ios.md) i [zasad ochrony aplikacji systemu Android](app-protection-policy-settings-android.md).
 

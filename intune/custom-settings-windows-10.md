@@ -6,20 +6,21 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 10/24/2018
-ms.topic: article
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 86c822ba197851fe7e05d91ff8aa703fb9fe3811
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
-ms.translationtype: HT
+ms.openlocfilehash: 44be460ee910818d52179da55151d1bceeb8b306
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55842796"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57565914"
 ---
 # <a name="use-custom-settings-for-windows-10-devices-in-intune"></a>Używanie ustawień niestandardowych dla urządzeń z systemem Windows 10 w usłudze Intune
 
@@ -43,17 +44,17 @@ Ten artykuł zawiera następujące informacje:
 2. Wybierz pozycję **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
 3. Podaj następujące ustawienia:
 
-    - **Nazwa**: Wprowadź nazwę profilu, na przykład `windows 10 custom profile`.
-    - **Opis**: Wprowadź opis profilu.
-    - **Platforma**: Wybierz **System Windows 10 lub nowszy**.
-    - **Typ profilu**: Wybierz **Niestandardowy**.
+    - **Nazwa**: wprowadź nazwę profilu, na przykład `windows 10 custom profile`.
+    - **Opis:** wprowadź opis profilu.
+    - **Platforma**: wybierz **system Windows 10 lub nowszy**.
+    - **Typ profilu**: wybierz pozycję **Niestandardowy**.
 
 4. W obszarze **Niestandardowe ustawienia OMA-URI** wybierz pozycję **Dodaj**. Podaj następujące ustawienia:
 
-    - **Nazwa**: Wprowadź unikatową nazwę dla ustawienia OMA-URI, aby ułatwić jego identyfikację na liście ustawień.
-    - **Opis**: Wprowadź opis ułatwiający identyfikację ustawienia oraz zawierający inne ważne szczegóły.
-    - **OMA-URI** (rozróżniana jest wielkość liter): Wprowadź identyfikator OMA-URI, którego chcesz używać jako ustawienia.
-    - **Typ danych**: Wybierz typ danych używany w przypadku tego ustawienia identyfikatora OMA-URI. Dostępne opcje:
+    - **Nazwa**: wprowadź unikatową nazwę ustawienia OMA-URI, aby ułatwić jego identyfikację na liście ustawień.
+    - **Opis elementu**: wprowadź opis ułatwiający identyfikację ustawienia oraz zawierający inne ważne szczegóły.
+    - **OMA-URI** (z uwzględnieniem wielkości liter): wprowadź identyfikator OMA-URI, którego chcesz użyć jako ustawienia.
+    - **Typ danych**: wprowadź typ danych używany w przypadku tego ustawienia identyfikatora OMA-URI. Dostępne opcje:
 
         - String
         - Ciąg (plik XML)
@@ -63,7 +64,7 @@ Ten artykuł zawiera następujące informacje:
         - Boolean
         - Base64 (plik)
 
-    - **Wartość**: Wprowadź wartość danych, którą chcesz skojarzyć z wprowadzonym identyfikatorem OMA-URI. Wartość zależy od wybranego typu danych. Jeśli na przykład wybrano opcję **Data i godzina**, wybierz wartość za pomocą selektora daty.
+    - **Wartość**: wprowadź wartość danych, którą chcesz skojarzyć z wprowadzonym identyfikatorem OMA-URI. Wartość zależy od wybranego typu danych. Jeśli na przykład wybrano opcję **Data i godzina**, wybierz wartość za pomocą selektora daty.
 
     Po dodaniu ustawień możesz wybrać pozycję **Eksportuj**. Wybranie pozycji **Eksportuj** spowoduje utworzenie listy wszystkich dodanych wartości w pliku wartości rozdzielanych przecinkami (CSV).
 
@@ -82,7 +83,7 @@ Pełna lista wszystkich dostawców usług konfiguracji obsługiwanych w systemie
 
 Nie wszystkie ustawienia są zgodne ze wszystkimi wersjami systemu Windows 10. Artykuł [Configuration service provider reference (Informacje dotyczące dostawcy usług konfiguracji)](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference) zawiera informacje o tym, które wersje są obsługiwane przez każdego dostawcę usług konfiguracji.
 
-Ponadto usługa Intune nie obsługuje wszystkich ustawień wymienionych w artykule [Configuration service provider reference](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference) (Informacje dotyczące dostawcy usług konfiguracji). Aby dowiedzieć się, czy usługa Intune obsługuje dane ustawienie, otwórz artykuł dotyczący tego ustawienia. Na stronie każdego ustawienia znajdują się informacje dotyczące obsługiwanych operacji. Aby ustawienie mogło być używane z usługą Intune, musi obsługiwać operacje **Dodaj** lub **Zastąp**.
+Ponadto usługa Intune nie obsługuje wszystkich ustawień wymienionych w artykule [Configuration service provider reference](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference) (Informacje dotyczące dostawcy usług konfiguracji). Aby dowiedzieć się, czy usługa Intune obsługuje dane ustawienie, otwórz artykuł dotyczący tego ustawienia. Na stronie każdego ustawienia znajdują się informacje dotyczące obsługiwanych operacji. Aby ustawienie mogło być używane z usługą Intune, musi obsługiwać operacje **Dodaj**, **Zastąp** i **Pobierz**. Jeśli wartość zwracana przez **uzyskać** operacja nie jest zgodna wartość dostarczona przez **Dodaj** lub **Zastąp** operacje, a następnie Intune zgłasza błąd zgodności.
 
 ## <a name="next-steps"></a>Następne kroki
 

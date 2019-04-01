@@ -6,9 +6,10 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 01/09/2019
-ms.topic: conceptual
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
 ms.reviewer: ''
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 428025e5e56450fd859f6bf2c9a990cbdca4f263
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
-ms.translationtype: HT
+ms.openlocfilehash: 151ceaa40f2993d3160b9de34eee92e53c35925d
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55835116"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57565863"
 ---
 # <a name="windows-holographic-for-business-settings-to-manage-shared-devices-using-intune"></a>Ustawienia systemu Windows Holographic for Business służące do zarządzenia urządzeniami udostępnionymi przy użyciu usługi Intune
 
@@ -42,10 +43,10 @@ Aby uzyskać więcej informacji na temat tej funkcji w usłudze Intune, zobacz [
 > [!NOTE]
 > Urządzenia z systemem Windows Holographic for Business, w tym Microsoft HoloLens, obsługują wyłącznie ustawienia **Zarządzania kontami**. Jeśli skonfigurujesz jakiekolwiek inne ustawienia pokazane w usłudze Intune, na przykład **Tryb komputera udostępnionego**, nie ma to wpływu na te urządzenia.
 
-- **Zarządzanie kontami**: Ustaw w pozycji **Włącz**, aby automatycznie usuwać konta lokalne utworzone przez gości oraz konta w usługach AD i Azure AD. Gdy użytkownik wyloguje się z urządzenia lub gdy zostanie uruchomiona konserwacja systemu, te konta zostaną usunięte. Gdy to ustawienie jest włączone, należy również skonfigurować:
-  - **Usuwanie kont**: Wybierz, kiedy konta są usuwane: **Po przekroczeniu progu przestrzeni dyskowej**, **Po przekroczeniu progu przestrzeni dyskowej i czasu nieaktywności** lub **Natychmiast po wylogowaniu**. Wprowadź też następujące ustawienia:
-    - **Próg rozpoczęcia usuwania (%)**: Wprowadź wartość procentową miejsca na dysku (od 0 do 100). Gdy łączna ilość miejsca na dysku/w pamięci urządzenia spadnie poniżej wprowadzonej wartości, konta zostaną usunięte z pamięci podręcznej. Konta są usuwane w trybie ciągłym w celu odzyskiwania miejsca dyskowego. Konta, które są nieaktywne najdłużej, są usuwane w pierwszej kolejności.
-    - **Próg zatrzymania usuwania (%)**: Wprowadź wartość procentową miejsca na dysku (od 0 do 100). Gdy łączna ilość miejsca na dysku/w pamięci urządzenia będzie odpowiadać wprowadzonej wartości, proces usuwania zostanie zatrzymany.
+- **Zarządzanie kontami**: ustaw pozycję **Włącz**, aby automatycznie usuwać konta lokalne utworzone przez gości oraz konta w usługach AD i Azure AD. Gdy użytkownik wyloguje się z urządzenia lub gdy zostanie uruchomiona konserwacja systemu, te konta zostaną usunięte. Gdy to ustawienie jest włączone, należy również skonfigurować:
+  - **Konto usuwania**: Wybierz, kiedy konta są usuwane: **na próg miejsca pamięci masowej**, **próg miejsca pamięci masowej i nieaktywne próg**, lub **natychmiast po Wyloguj** . Wprowadź też następujące ustawienia:
+    - **Start Usuń threshold(%)**: wprowadź wartość procentową (0 – 100), miejsca na dysku. Gdy łączna ilość miejsca na dysku/w pamięci urządzenia spadnie poniżej wprowadzonej wartości, konta zostaną usunięte z pamięci podręcznej. Konta są usuwane w trybie ciągłym w celu odzyskiwania miejsca dyskowego. Konta, które są nieaktywne najdłużej, są usuwane w pierwszej kolejności.
+    - **Zatrzymaj usuwanie threshold(%)**: wprowadź wartość procentową (0 – 100), miejsca na dysku. Gdy łączna ilość miejsca na dysku/w pamięci urządzenia będzie odpowiadać wprowadzonej wartości, proces usuwania zostanie zatrzymany.
 
   Ustaw w pozycji **Wyłącz**, aby zachować konta lokalne, konta usługi AD oraz Azure AD utworzone przez gości.
 

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 9a18bceb6b42f06464baf31a4cdd4dea21d19675
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MTE75
+ms.contentlocale: pl-PL
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57461298"
+---
 ## <a name="april-2017"></a>Kwiecień 2017
 
 ### <a name="new-capabilities"></a>Nowe możliwości
@@ -37,7 +45,7 @@ Nowy pasek postępu jest zaprezentowany na [stronie dotyczącej nowości w inter
 
 #### <a name="bulk-enroll-windows-10-devices----747607---"></a>Rejestracja zbiorcza urządzeń z systemem Windows 10 <!-- 747607 -->
 
-Teraz możesz łączyć dużą liczbę urządzeń z aktualizacją systemu Windows 10 dla twórców z usługami Azure Active Directory oraz Intune, korzystając z aplikacji Windows Configuration Designer (WCD). Aby włączyć [zbiorcze rejestrowanie w usłudze MDM](/intune-classic/deploy-use/bulk-enroll-windows) dla dzierżawy usługi Azure AD, utwórz pakiet aprowizacyjny, który dołącza urządzenia do dzierżawy usługi Azure AD, przy użyciu aplikacji Windows Configuration Designer, i zastosuj pakiet do firmowych urządzeń, które chcesz zarejestrować i którymi chcesz zarządzać w sposób zbiorczy. Po zastosowaniu pakietu urządzenia dołączają do usługi Azure AD, rejestrują się w usłudze Intune i umożliwiają logowanie użytkownikom usługi Azure AD.  Użytkownicy usługi Azure AD są standardowymi użytkownikami tych urządzeń i otrzymują przypisane zasady oraz wymagane aplikacje. Scenariusze samoobsługowe i scenariusze użycia witryny internetowej Portal firmy nie są w tej chwili obsługiwane.
+Teraz możesz łączyć dużą liczbę urządzeń z aktualizacją systemu Windows 10 dla twórców z usługami Azure Active Directory oraz Intune, korzystając z aplikacji Windows Configuration Designer (WCD). Aby włączyć [zbiorcze rejestrowanie w usłudze MDM](/intune-classic/deploy-use/bulk-enroll-windows) dla dzierżawy usługi Azure AD, utwórz pakiet aprowizacyjny, który dołącza urządzenia do dzierżawy usługi Azure AD, przy użyciu aplikacji Windows Configuration Designer, i zastosuj pakiet do firmowych urządzeń, które chcesz zarejestrować i którymi chcesz zarządzać w sposób zbiorczy. Po zastosowaniu pakietu urządzenia dołączają do usługi Azure AD, rejestrują się w usłudze Intune i umożliwiają logowanie użytkownikom usługi Azure AD.  Użytkownicy usługi Azure AD są standardowymi użytkownikami tych urządzeń i otrzymują przypisane zasady oraz wymagane aplikacje. Scenariusze samoobsługowe i scenariusze użycia witryny internetowej Portal firmy nie są w tej chwili obsługiwane.
 
 ### <a name="whats-new-in-the-public-preview-of-the-intune-admin-experience-on-azure---736542--"></a>Nowości w publicznej wersji zapoznawczej środowiska administracyjnego usługi Intune na platformie Azure <!--736542-->
 
@@ -55,7 +63,7 @@ Informacje na temat nowości w wersji zapoznawczej usługi Intune na platformie 
 
 Na kontach usługi Intune utworzonych po styczniu 2017 roku włączono bezpośredni dostęp do scenariuszy rejestracji firmy Apple przy użyciu obciążenia Rejestruj urządzenia w portalu Azure w wersji zapoznawczej. Wcześniej podgląd rejestracji firmy Apple był dostępny tylko z poziomu linków w klasycznym portalu Intune. Konta usługi Intune utworzone przed styczniem 2017 będą wymagać przeprowadzenia jednorazowej migracji, zanim funkcje te będą dostępne w systemie Azure. Harmonogram migracji nie został jeszcze ogłoszony, ale szczegółowe informacje zostaną udostępnione najszybciej, jak będzie to możliwe. Zdecydowanie zalecamy utworzenie konta w wersji próbnej w celu przetestowania nowego środowiska pracy w przypadku, gdy istniejące konto nie ma dostępu do podglądu.
 
-#### <a name="whats-coming-for-appx-in-intune-in-the-azure-portal----1000270---"></a>Elementy dostępne wkrótce dla pakietu AppX w usłudze Intune w witrynie Azure Portal<!-- 1000270 -->
+#### <a name="whats-coming-for-appx-in-intune-in-the-azure-portal----1000270---"></a>Elementy dostępne wkrótce dla pakietu Appx w usłudze Intune w witrynie Azure Portal <!-- 1000270 -->
 
 W ramach migracji do usługi Intune w witrynie Azure Portal wprowadzamy następujące zmiany w pakiecie AppX:
 
@@ -89,7 +97,7 @@ Wraz z aktualizacją usługi w połowie maja 2017 r. strona Intune Partner zosta
 
 Administratorzy partnerów nie będą już mogli wyświetlać strony Intune Partner ani podejmować na niej działań w imieniu swoich klientów. Zamiast tego konieczne będzie zalogowanie się w jednym z dwóch innych portali firmy Microsoft dla partnerów.
 
-Logowanie się na zarządzane konta klientów będzie możliwe zarówno w [Centrum partnerskim firmy Microsoft](https://partnercenter.microsoft.com/), jak i w [Centrum administracyjnym dla partnerów usługi Microsoft Office 365](https://portal.office.com/). Aby kontynuować czynności partnerskie, należy korzystać z dowolnej z tych witryn do zarządzania klientami.
+Logowanie się na zarządzane konta klientów będzie możliwe zarówno w [Centrum partnerskim firmy Microsoft](https://partnercenter.microsoft.com/), jak i w [Centrum administracyjnym usługi Microsoft 365](https://admin.microsoft.com/). Aby kontynuować czynności partnerskie, należy korzystać z dowolnej z tych witryn do zarządzania klientami.
 
 
 #### <a name="apple-to-require-updates-for-application-transport-security---748318--"></a>Firma Apple będzie wymagać aktualizacji mechanizmu Application Transport Security <!--748318-->
@@ -129,7 +137,7 @@ Aby uzyskać więcej informacji o tych zmianach, zobacz artykuł [Aktualizacje i
 
 W ramach zmian wyglądu witryny internetowej Portal firmy użytkownicy systemów iOS i Android będą mogli instalować na swoich urządzeniach niezarządzanych aplikacje przypisane im jako „dostępne bez rejestracji”. Przy użyciu poświadczeń usługi Intune użytkownicy mogą zalogować się do witryny internetowej Portal firmy i wyświetlić listę przypisanych im aplikacji. Pakiety aplikacji oznaczonych jako „dostępne bez rejestracji” są udostępniane do pobrania za pośrednictwem witryny internetowej Portal firmy. Ta zmiana nie ma wpływu na aplikacje, które wymagają rejestracji na potrzeby instalacji, ponieważ użytkownicy, którzy zechcą zainstalować te aplikacje, zobaczą monit o zarejestrowanie ich urządzenia.
 
-#### <a name="signing-script-for-windows-10-company-portal---941642--"></a>Podpisywanie skryptu dla aplikacji Portal firmy systemu Windows 10<!--941642-->
+#### <a name="signing-script-for-windows-10-company-portal---941642--"></a>Podpisywanie skryptu dla aplikacji Portal firmy systemu Windows 10 <!--941642-->
 
 Jeśli musisz pobrać i ładować bezpośrednio aplikację Portal firmy dla systemu Windows 10, możesz teraz korzystać ze skryptu upraszczającego i usprawniającego proces podpisywania aplikacji w organizacji.   Aby pobrać skrypt i instrukcje dotyczące korzystania z niego, zobacz temat [Microsoft Intune Signing Script](https://aka.ms/win10cpscript) (Microsoft Intune – skrypt podpisywania) dla aplikacji Portal firmy systemu Windows 10 w galerii TechNet. Więcej szczegółów dotyczących tego powiadomienia można znaleźć w artykule [Updating your Windows 10 Company Portal app](https://blogs.technet.microsoft.com/intunesupport/2017/03/13/updating-your-windows-10-company-portal-app/) (Aktualizowanie aplikacji Portal firmy dla systemu Windows 10) na blogu zespołu pomocy technicznej usługi Intune.
 
@@ -152,7 +160,7 @@ Ponieważ Sklep Google Play jest niedostępny w Chinach, aplikacje na urządzeni
 - [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
 - [Wandoujia](https://go.microsoft.com/fwlink/?linkid=836950)
 
-#### <a name="best-practice-make-sure-your-company-portal-apps-are-up-to-date---879465--"></a>Najlepsze rozwiązanie: upewnij się, że aplikacje portalu firmy są aktualne<!--879465-->
+#### <a name="best-practice-make-sure-your-company-portal-apps-are-up-to-date---879465--"></a>Najlepsze rozwiązanie: upewnij się, że aplikacje Portalu firmy są aktualne <!--879465-->
 
 W grudniu 2016 roku opublikowaliśmy aktualizację włączającą wymuszanie uwierzytelniania wieloskładnikowego (MFA, multi-factor authentication) dla grupy użytkowników rejestrujących urządzenie z systemem iOS, Android, Windows 8.1 i nowszym lub Windows Phone 8.1 i nowszym. Ta funkcja nie może działać bez niektórych podstawowych wersji aplikacji Portal firmy dla systemów Android (w wersji 5.0.3419.0 lub nowszej) i iOS (w wersji 2.1.17 lub nowszej).
 
@@ -170,7 +178,7 @@ Firma Microsoft poinformowała o ogólnej dostępności obszaru roboczego Micros
 
 ### <a name="new-capabilities"></a>Nowe możliwości
 
-### <a name="modernizing-the-company-portal-website---753980--"></a>Modernizowanie witryny sieci Web Portal firmy <!--753980-->
+### <a name="modernizing-the-company-portal-website---753980--"></a>Modernizowanie witryny internetowej Portal firmy <!--753980-->
 Witryna internetowa Portal firmy będzie obsługiwać aplikacje przeznaczone dla użytkowników, którzy nie mają zarządzanych urządzeń. Witryna internetowa zostanie zmieniona tak, aby wyglądała jak witryny innych produktów i usług firmy Microsoft, przy użyciu nowego schematu kontrastujących kolorów, ilustracji dynamicznych i menu typu „hamburger”. ![Mały obraz menu typu „hamburger” dodanego w lewym górnym rogu witryny internetowej Portal firmy,](/intune/whats-new-app-ui).
 
 ### <a name="notices"></a>Uwagi
@@ -188,7 +196,7 @@ Domyślne zachowanie w przypadku rejestrowania komputerów z systemem Windows 10
 #### <a name="improving-mobile-app-management-support-for-selective-wipe---581242--"></a>Ulepszona obsługa selektywnego czyszczenia danych przez zarządzanie aplikacjami mobilnymi <!--581242-->
 Użytkownicy końcowi otrzymają dodatkowe wskazówki dotyczące odzyskiwania dostępu do danych służbowych w przypadku automatycznego usunięcia tych danych spowodowanego przez zasadę „Interwał offline przed wyczyszczeniem danych aplikacji”.<!--, or the removal of the Intune Company Portal on Android.-->
 
-#### <a name="company-portal-for-ios-links-open-inside-the-app---665954--"></a>Linki w aplikacji Portal dla systemu iOS są otwierane wewnątrz aplikacji <!--665954-->
+#### <a name="company-portal-for-ios-links-open-inside-the-app---665954--"></a>Linki w aplikacji Portal firmy dla systemu iOS są otwierane wewnątrz aplikacji <!--665954-->
 Linki w aplikacji Portal firmy dla systemu iOS, w tym linki do dokumentacji i aplikacji, będą otwierane bezpośrednio w aplikacji Portal firmy przy użyciu widoku przeglądarki Safari w aplikacji. Ta aktualizacja zostanie udostępniona oddzielnie od aktualizacji usługi w styczniu.
 
 #### <a name="new-mdm-server-address-for-windows-devices---893007--"></a>Nowy adres serwera MDM dla urządzeń z systemem Windows <!--893007-->
@@ -204,7 +212,7 @@ Od marca aplikacja Portal firmy dla systemu Android będzie zgodna z [zaleceniam
 
 Obrazy przedstawiające poprzednią i nową wersję są dostępne na [stronie aktualizacji interfejsu użytkownika](/intune/whats-new-app-ui).
 
-### <a name="associate-multiple-management-tools-with-the-microsoft-store-for-business---926135--"></a>Kojarzenie wielu narzędzi do zarządzania ze Sklepem Microsoft dla Firm <!--926135-->
+### <a name="associate-multiple-management-tools-with-the-microsoft-store-for-business---926135--"></a>Kojarzenie wielu narzędzi do zarządzania ze sklepie Microsoft Store dla Firm <!--926135-->
 Wcześniej w przypadku wdrażania aplikacji ze Sklepu Microsoft dla Firm za pomocą więcej niż jednego narzędzia do zarządzania można było skojarzyć ze Sklepem Microsoft dla Firm tylko jedno z tych narzędzi. Teraz ze sklepem można skojarzyć wiele narzędzi do zarządzania (np. usługę Intune i program Configuration Manager). Aby uzyskać szczegółowe informacje, zobacz artykuł [Zarządzanie aplikacjami zakupionymi w Sklepie Microsoft dla Firm za pomocą usługi Microsoft Intune](/intune-classic/deploy-use/manage-apps-you-purchased-from-the-windows-store-for-business-with-microsoft-intune#associate-your-windows-store-for-business-account-with-intune).
 
 ## <a name="whats-new-in-the-public-preview-of-the-intune-admin-experience-on-azure---736542--"></a>Nowości w publicznej wersji zapoznawczej środowiska administracyjnego usługi Intune na platformie Azure <!--736542-->
@@ -240,13 +248,13 @@ Na witrynie sieci Web Portal firmy użytkownikom komputerów stacjonarnych z sys
 #### <a name="improving-mobile-app-management-support-for-selective-wipe---581242--"></a>Ulepszona obsługa selektywnego czyszczenia danych przez zarządzanie aplikacjami mobilnymi <!--581242-->
 Użytkownicy końcowi otrzymają dodatkowe wskazówki dotyczące odzyskiwania dostępu do danych służbowych w przypadku automatycznego usunięcia tych danych spowodowanego przez zasadę „Interwał offline przed wyczyszczeniem danych aplikacji”.<!--, or the removal of the Intune Company Portal on Android.-->
 
-#### <a name="company-portal-for-ios-links-open-inside-the-app---665954--"></a>Linki w aplikacji Portal dla systemu iOS są otwierane wewnątrz aplikacji <!--665954-->
+#### <a name="company-portal-for-ios-links-open-inside-the-app---665954--"></a>Linki w aplikacji Portal firmy dla systemu iOS są otwierane wewnątrz aplikacji <!--665954-->
 Linki w aplikacji Portal firmy dla systemu iOS, w tym linki do dokumentacji i aplikacji, będą otwierane bezpośrednio w aplikacji Portal firmy przy użyciu widoku przeglądarki Safari w aplikacji. Ta aktualizacja zostanie udostępniona oddzielnie od aktualizacji usługi w styczniu.
 
-#### <a name="modernizing-the-company-portal-website---753980--"></a>Modernizowanie witryny sieci Web Portal firmy <!--753980-->
+#### <a name="modernizing-the-company-portal-website---753980--"></a>Modernizowanie witryny internetowej Portal firmy <!--753980-->
 Od lutego witryna sieci Web Portal firmy będzie obsługiwać aplikacje przeznaczone dla użytkowników, którzy nie mają zarządzanych urządzeń. Witryna internetowa zostanie zmieniona tak, aby wyglądała jak witryny innych produktów i usług firmy Microsoft, przy użyciu nowego schematu kontrastujących kolorów, ilustracji dynamicznych i menu typu „hamburger”. ![Menu typu „hamburger” witryny internetowej Portal firmy](/intune/whats-new-app-ui).
 
-#### <a name="new-documentation-for-app-protection-policies---583398--"></a>Nowa dokumentacja dla zasad ochrony aplikacji <!--583398-->
+#### <a name="new-documentation-for-app-protection-policies---583398--"></a>Nowa dokumentacja dotycząca zasad ochrony aplikacji <!--583398-->
 Zaktualizowaliśmy dokumentację dla administratorów i deweloperów aplikacji, którzy chcą włączyć zasady ochrony aplikacji (znane jako zasady zarządzania aplikacjami mobilnymi) w swoich aplikacjach dla systemów iOS i Android przy użyciu narzędzia opakowującego aplikacje usługi Intune lub zestawu SDK aplikacji usługi Intune.
 
 Zaktualizowano następujące artykuły:
@@ -271,13 +279,16 @@ Na początku roku 2017 przeprowadzimy migrację pełnego środowiska administrac
 
 W środowisku administracyjnym w witrynie Azure Portal będzie używana już zapowiadana nowa funkcja grupowania i określania celu. W przypadku migrowania istniejącej dzierżawy do nowego środowiska grupowania nastąpi również migracja do nowego środowiska administracyjnego w wersji zapoznawczej w dzierżawie. W międzyczasie możesz zapoznać się z naszą ofertą dotyczącą usługi Microsoft Intune w witrynie Azure Portal, korzystając z [nowej dokumentacji](/intune/what-is-intune).
 
-__Integracja z usługami zarządzania kosztami telekomunikacyjnymi w publicznej wersji zapoznawczej witryny Azure Portal__ <!--747605--> Obecnie rozpoczynamy pracę nad wersją zapoznawczą integracji z usługami zarządzania kosztami telekomunikacyjnymi innych firm w witrynie Azure Portal. Usługa Intune może być używana do wymuszania limitów użycia danych w kraju i w roamingu. Te operacje integracji rozpoczynamy od współpracy z firmą [Saaswedo](http://www.saaswedo.com/). Aby włączyć tę funkcję w dzierżawie w wersji próbnej, [skontaktuj się z pomocą techniczną firmy Microsoft](/intune-classic/troubleshoot/how-to-get-support-for-microsoft-intune).
+__Integracja zarządzania kosztami telekomunikacyjnymi w publicznej wersji zapoznawczej witryny Azure Portal__ <!--747605-->
+Obecnie rozpoczynamy pracę nad wersją zapoznawczą integracji z usługami zarządzania kosztami telekomunikacyjnymi innych firm w witrynie Azure Portal. Usługa Intune może być używana do wymuszania limitów użycia danych w kraju i w roamingu. Te operacje integracji rozpoczynamy od współpracy z firmą [Saaswedo](http://www.saaswedo.com/). Aby włączyć tę funkcję w dzierżawie w wersji próbnej, [skontaktuj się z pomocą techniczną firmy Microsoft](/intune-classic/troubleshoot/how-to-get-support-for-microsoft-intune).
 
 ### <a name="new-capabilities"></a>Nowe możliwości
 
-__Uwierzytelnianie wieloskładnikowe na wszystkich platformach__ <!--747590--> Teraz można wymusić użycie usługi Multi-Factor Authentication (MFA) przez wybraną grupę użytkowników podczas rejestracji urządzeń z systemem iOS, Android, Windows 8.1+ lub Windows Phone 8.1+ w portalu zarządzania Azure. W tym celu należy skonfigurować usługę MFA w aplikacji rejestracji w usłudze Microsoft Intune w usłudze Azure Active Directory.
+__Usługa Multi-Factor Authentication na wszystkich platformach__ <!--747590-->
+Teraz można wymusić użycie usługi Multi-Factor Authentication (MFA) przez wybraną grupę użytkowników podczas rejestracji urządzeń z systemem iOS, Android, Windows 8.1+ lub Windows Phone 8.1+ w portalu zarządzania Azure. W tym celu należy skonfigurować usługę MFA w aplikacji rejestracji w usłudze Microsoft Intune w usłudze Azure Active Directory.
 
-__Możliwość ograniczenia rejestracji urządzeń przenośnych__ <!--747596--> Usługa Intune dodaje nowe ograniczenia rejestracji, które pozwalają kontrolować, które platformy urządzeń przenośnych mogą być rejestrowane. Usługa Intune dzieli platformy urządzeń przenośnych na iOS, macOS, Android, Windows i Windows Mobile.
+__Możliwość ograniczenia rejestracji urządzeń przenośnych__ <!--747596-->
+Usługa Intune dodaje nowe ograniczenia rejestracji, które pozwalają kontrolować, które platformy urządzeń przenośnych mogą być rejestrowane. Usługa Intune dzieli platformy urządzeń przenośnych na iOS, macOS, Android, Windows i Windows Mobile.
 * Ograniczanie rejestracji urządzeń przenośnych nie ogranicza rejestracji klientów komputerów stacjonarnych.
 * Tylko platforma iOS ma dodatkową opcję blokowania rejestracji urządzeń, które są własnością osobistą.
 
@@ -285,9 +296,11 @@ Intune oznacza wszystkie nowe urządzenia jako osobiste, chyba że administrator
 
 ### <a name="notices"></a>Uwagi
 
-__Uwierzytelnianie wieloskładnikowe przy rejestracji przeniesione do witryny Azure Portal__ <!--VSO 750545-->Wcześniej w celu skonfigurowania usługi MFA na potrzeby rejestracji w usłudze Intune administratorzy musieli przejść do konsoli usługi Intune lub konsoli programu Configuration Manager (wersje wydane przed październikiem 2016). Dzięki zaktualizowanej funkcji teraz należy zalogować się do witryny [Microsoft Azure Portal](https://manage.windowsazure.com) przy użyciu poświadczeń usługi Intune i skonfigurować ustawienia usługi MFA za pośrednictwem usługi Azure AD. Więcej informacji na ten temat można znaleźć [tutaj](https://aka.ms/mfa_ad).
+__Użycie usługi Multi-Factor Authentication podczas rejestracji przeniesione do witryny Azure Portal__ <!--VSO 750545-->
+Wcześniej w celu skonfigurowania usługi MFA na potrzeby rejestracji w usłudze Intune administratorzy musieli przejść do konsoli usług Intune lub konsoli programu Configuration Manager (wersje wydane przed październikiem 2016). Dzięki zaktualizowanej funkcji teraz należy zalogować się do witryny [Microsoft Azure Portal](https://manage.windowsazure.com) przy użyciu poświadczeń usługi Intune i skonfigurować ustawienia usługi MFA za pośrednictwem usługi Azure AD. Więcej informacji na ten temat można znaleźć [tutaj](https://aka.ms/mfa_ad).
 
-__Aplikacja Portal firmy dla systemu Android teraz jest dostępna w Chinach__ <!--VSO 658093--> Obecnie publikujemy aplikację Portal firmy dla systemu Android możliwą do pobierania na terenie Chin. Z powodu braku sklepu Google Play w Chinach aplikacje dla urządzeń z systemem Android należy uzyskiwać z chińskich platform handlowych oferujących aplikacje. Aplikacja Portal firmy dla systemu Android będzie dostępna do pobrania w następujących sklepach:
+__Aplikacja Portal firmy dla systemu Android jest teraz dostępna w Chinach__ <!--VSO 658093-->
+Obecnie publikujemy aplikację Portal firmy dla systemu Android możliwą do pobierania na terenie Chin. Z powodu braku sklepu Google Play w Chinach aplikacje dla urządzeń z systemem Android należy uzyskiwać z chińskich platform handlowych oferujących aplikacje. Aplikacja Portal firmy dla systemu Android będzie dostępna do pobrania w następujących sklepach:
 * [Baidu](https://go.microsoft.com/fwlink/?linkid=836946)
 * [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
 * [Tencent](https://go.microsoft.com/fwlink/?linkid=836949)
@@ -306,11 +319,14 @@ Aplikacja Portal firmy dla systemu Android używa usług Google Play do komuniko
 
 ### <a name="deprecations"></a>Zakończenie obsługi
 
-__Firefox nie będzie obsługiwać technologii Silverlight__ <!--VSO TBA--> Mozilla rezygnuje z obsługi technologii Silverlight w wersji 52 [przeglądarki Firefox](https://www.mozilla.org/firefox), począwszy od marca 2017 r. W związku z tym nie będzie można zalogować się do istniejącej konsoli usługi Intune za pomocą przeglądarki Firefox w wersjach nowszych niż 51. W celu uzyskania dostępu do konsoli administracyjnej zaleca się korzystanie z programu Internet Explorer 10 i 11 lub [wersji przeglądarki Firefox niższej niż 52](https://ftp.mozilla.org/pub/firefox/releases/). Przejście usługi Intune do witryny Azure Portal umożliwi obsługę wielu [nowoczesnych przeglądarek](/azure/azure-preview-portal-supported-browsers-devices) bez konieczności korzystania z technologii Silverlight.
+__Przeglądarka Firefox nie obsługuje już programu Silverlight__ <!--VSO TBA-->
+Mozilla rezygnuje z obsługi technologii Silverlight w wersji 52 [przeglądarki Firefox](https://www.mozilla.org/firefox), począwszy od marca 2017 r. W związku z tym nie będzie można zalogować się do istniejącej konsoli usługi Intune za pomocą przeglądarki Firefox w wersjach nowszych niż 51. W celu uzyskania dostępu do konsoli administracyjnej zaleca się korzystanie z programu Internet Explorer 10 i 11 lub [wersji przeglądarki Firefox niższej niż 52](https://ftp.mozilla.org/pub/firefox/releases/). Przejście usługi Intune do witryny Azure Portal umożliwi obsługę wielu [nowoczesnych przeglądarek](/azure/azure-preview-portal-supported-browsers-devices) bez konieczności korzystania z technologii Silverlight.
 
-__Usunięcie zasad dotyczących mobilnych skrzynek pocztowych usługi Exchange Online__ <!--770687--> Od grudnia administratorzy nie będą już mogli wyświetlać ani konfigurować zasad dotyczących mobilnych skrzynek pocztowych usługi Exchange Online (EAS) w konsoli usługi Intune. Ta zmiana zostanie wdrożona we wszystkich dzierżawach usługi Intune w grudniu i styczniu. Wszystkie istniejące skonfigurowane zasady pozostaną niezmienione; w przypadku konfigurowania nowych zasad trzeba będzie korzystać z powłoki zarządzania serwerem Exchange. Więcej informacji można znaleźć [tutaj](https://technet.microsoft.com/library/bb123783%28v=exchg.150%29.aspx).
+__Usuwanie zasad mobilnej skrzynki odbiorczej usługi Exchange Online__ <!--770687-->
+Od grudnia administratorzy nie będą już mogli wyświetlać ani konfigurować zasad dotyczących mobilnych skrzynek pocztowych usługi Exchange Online (EAS) w konsoli usługi Intune. Ta zmiana zostanie wdrożona we wszystkich dzierżawach usługi Intune w grudniu i styczniu. Wszystkie istniejące skonfigurowane zasady pozostaną niezmienione; w przypadku konfigurowania nowych zasad trzeba będzie korzystać z powłoki zarządzania serwerem Exchange. Więcej informacji można znaleźć [tutaj](https://technet.microsoft.com/library/bb123783%28v=exchg.150%29.aspx).
 
-__Aplikacje Intune AV Player, Image Viewer i PDF Viewer przestaną być obsługiwane w systemie Android__ <!--747553--> Od połowy grudnia 2016 r. użytkownicy nie będą już mogli korzystać z aplikacji Intune AV Player, Image Viewer i PDF Viewer. Te aplikacje zostały zastąpione przez aplikację Azure Information Protection. Więcej informacji na temat aplikacji Azure Information Protection można znaleźć [tutaj](/information-protection/rms-client/mobile-app-faq).
+__Aplikacje Intune AV Player, Image Viewer i PDF Viewer nie są już obsługiwane w systemie Android__ <!--747553-->
+Od połowy grudnia 2016 r. użytkownicy nie będą już mogli korzystać z aplikacji Intune AV Player, Image Viewer i PDF Viewer. Te aplikacje zostały zastąpione przez aplikację Azure Information Protection. Więcej informacji na temat aplikacji Azure Information Protection można znaleźć [tutaj](/information-protection/rms-client/mobile-app-faq).
 
 ## <a name="november-2016"></a>Listopad 2016
 

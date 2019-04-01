@@ -10,18 +10,20 @@ ms.date: 01/11/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 29f09230-dc56-43db-b599-d961967bda49
 ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
-ms.openlocfilehash: 2eae4ea2bfabe1b41af88ae34b81fbf12ef5f9d9
-ms.sourcegitcommit: e9ba1280b95565a5c5674b825881655d0303e688
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 2cdf7ea715a13809c860e77412914e3fd2b45a28
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54297506"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57400487"
 ---
 #  <a name="intune-data-warehouse-collections"></a>Kolekcje magazynu danych usługi Intune
 
@@ -505,7 +507,10 @@ Jednostka **ownerType** wskazuje, czy urządzenie jest firmowe, osobiste czy nie
 |:-------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------:|
 | ownerTypeID   | Unikatowy identyfikator typu właściciela.                                                                                                                                               |                            |
 | ownerTypeKey  | Unikatowy identyfikator typu właściciela w magazynie danych — klucz zastępczy.                                                                                                       |                            |
-| ownerTypeName | Reprezentuje typ właściciela urządzeń:  Company — urządzenie jest własnością przedsiębiorstwa.  Personal — urządzenie jest własnością osobistą (BYOD).   Unknown — brak informacji o tym urządzeniu. | Company Personal Unknown |
+| ownerTypeName | Reprezentuje typ właściciela urządzenia: Corporate — urządzenie jest własnością przedsiębiorstwa.  Personal — urządzenie jest własnością osobistą (BYOD).   Unknown — brak informacji o tym urządzeniu. | Nieznany osobistych firmowych |
+
+> [!Note]  
+> Aby uzyskać `ownerTypeName` filtru w usługi Azure AD podczas tworzenia grup dynamicznych w przypadku urządzeń, należy ustawić wartość `deviceOwnership` jako `Company`. Aby uzyskać więcej informacji, zobacz [reguły dla urządzeń](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
 
 ## <a name="policies"></a>policies
 Jednostka **Policy** zawiera listę profilów konfiguracji urządzeń, profilów konfiguracji aplikacji i zasad zgodności. Za pomocą funkcji zarządzania urządzeniami przenośnymi (MDM) możesz przypisać zasady grupie w przedsiębiorstwie.
