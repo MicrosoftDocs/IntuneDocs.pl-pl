@@ -5,7 +5,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/20/2019
+ms.date: 03/26/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0a7ccc2da5fd99c3c72c8c9beb765f292e896eee
-ms.sourcegitcommit: fdc6261f4ed695986e06d18353c10660a4735362
-ms.translationtype: HT
+ms.openlocfilehash: 965dcfbb711eac1b38977e023d1975f4dc0e8b81
+ms.sourcegitcommit: d38ca1bf44e17211097aea481e00b6c1e87effae
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58069324"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58514501"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android
 
@@ -832,7 +832,7 @@ void updateToken(String upn, String aadId, String resourceId, String token);
     > [!NOTE]
     > Upewnij się, że Twoja aplikacja korzysta z `resourceId` i `aadId` parametry przekazane do `acquireToken()` tak, aby nabywa się prawidłowy token.
 
-    ```
+    ```java
     class MAMAuthCallback implements MAMServiceAuthenticationCallback {
         public String acquireToken(String upn, String aadId, String resourceId) {
         return mAuthContext.acquireTokenSilentSync(resourceId, ClientID, aadId).getAccessToken();
@@ -1278,7 +1278,7 @@ Wszystkie metody używane do ustawiania tożsamości raportują wynikowe wartoś
 |--|--|
 | SUCCEEDED | Zmiana tożsamości zakończyła się pomyślnie. |
 | NOT_ALLOWED  | Zmiana tożsamości jest niedozwolona. Ma to miejsce, jeśli zostanie podjęta próba ustawienia tożsamości interfejsu użytkownika (kontekstu), gdy dla bieżącego wątku jest już ustawiona inna tożsamość. |
-| CANCELLED | Użytkownik anulował zmianę tożsamości, czyli prawdopodobnie nacisnął przycisk wstecz w monicie o podanie kodu PIN/uwierzytelnienie. |
+| CANCELLED | Użytkownik anulował zmianę tożsamości, czyli prawdopodobnie nacisnął przycisk Wstecz w monicie o podanie kodu PIN lub uwierzytelnienie. |
 | FAILED | Z nieokreślonego powodu nie można zmienić tożsamości.|
 
 Przed wyświetleniem lub użyciem danych firmowych aplikacja powinna upewnić się, że przełączenie tożsamości zakończyło się pomyślnie. Obecnie przełączanie tożsamości procesu i wątku zawsze powiedzie się dla aplikacji z włączoną obsługą wielu tożsamości, jednak firma Microsoft zastrzega sobie prawo do dodania warunków błędów. Przełączenie tożsamości interfejsu użytkownika może zakończyć się niepowodzeniem w przypadku podania nieprawidłowych argumentów, jeśli będą one powodowały konflikt z tożsamością wątku, lub jeśli użytkownik anulował wymagania dotyczące uruchamiania warunkowego (np. przez naciśnięcie przycisku Wstecz na ekranie numeru PIN).
@@ -1633,7 +1633,7 @@ Jeśli aplikacja mająca wiele tożsamości rejestruje się w celu odbierania po
 
 Jeśli aplikacja została zarejestrowana do odbierania powiadomienia `WIPE_USER_DATA`, nie będzie korzystać z domyślnego selektywnego czyszczenia danych z zestawu SDK. W przypadku aplikacji z obsługą wielu tożsamości taka utrata może być bardziej znacząca, ponieważ domyślne selektywne czyszczenie danych funkcji MAM będzie czyścić tylko pliki o określonej tożsamości. Jeśli aplikacja obsługująca wiele tożsamości ma przeprowadzać domyślne selektywne czyszczenie danych funkcji MAM _**oraz**_ wykonywać własne działania w zakresie czyszczenia, wymagana jest rejestracja pod kątem otrzymywania powiadomień `WIPE_USER_AUXILIARY_DATA`. To powiadomienie zostanie wysyłane przez zestaw SDK bezpośrednio przed wykonaniem domyślnego selektywnego czyszczenia danych funkcji zarządzania aplikacjami mobilnymi. Aplikacja w żadnym wypadku nie może być zarejestrowana do otrzymywania jednocześnie powiadomień `WIPE_USER_DATA` i `WIPE_USER_AUXILIARY_DATA`.
 
-Domyślne selektywne czyszczenie danych zostanie poprawnie, zamknij aplikację, trwa kończenie działania i zabijanie procesu aplikacji. Aplikacja zastępuje domyślne czyszczenie seletive, warto wziąć pod uwagę zamykanie aplikacji ręcznie, aby uniemożliwić użytkownikowi uzyskiwanie dostępu do danych w pamięci, po zakończeniu czyszczenia.
+Domyślne selektywne czyszczenie danych zostanie poprawnie, zamknij aplikację, trwa kończenie działania i zabijanie procesu aplikacji. Aplikacja zastępuje domyślne selektywne czyszczenie danych, warto wziąć pod uwagę zamykanie aplikacji ręcznie, aby uniemożliwić użytkownikowi uzyskiwanie dostępu do danych w pamięci, po zakończeniu czyszczenia.
 
 
 ## <a name="enabling-mam-targeted-configuration-for-your-android-applications-optional"></a>Włączanie docelowej konfiguracji funkcji MAM dla aplikacji systemu Android (opcjonalnie)
@@ -1785,7 +1785,7 @@ Zestaw SDK usługi Intune obsługuje kontrakt udostępniony przez interfejs API 
 
 ## <a name="telemetry"></a>Telemetria
 
-Zestaw SDK aplikacji usługi Intune dla systemu Android nie kontroluje zbierania danych z aplikacji. Aplikacja Portal firmy domyślnie rejestruje dane telemetryczne. Te dane są wysyłane do usługi Microsoft Intune. Zgodnie z zasadami firmy Microsoft nie zbieramy żadnych danych osobowych.
+Zestaw SDK aplikacji usługi Intune dla systemu Android nie kontroluje zbierania danych z aplikacji. Domyślnie, aplikacja Portal firmy rejestruje dane generowane przez system. Te dane są wysyłane do usługi Microsoft Intune. Zgodnie z Policy firmy Microsoft nie zbieramy żadnych danych osobowych.
 
 > [!NOTE]
 > Jeśli użytkownicy końcowi chcą zrezygnować z wysyłania tych danych, muszą wyłączyć telemetrię w ustawieniach aplikacji portalu firmy. Aby dowiedzieć się więcej, zobacz artykuł [Wyłączanie zbierania danych użycia przez firmę Microsoft](https://docs.microsoft.com/intune-user-help/turn-off-microsoft-usage-data-collection-android). 

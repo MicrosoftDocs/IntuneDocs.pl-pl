@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/13/2019
+ms.date: 03/11/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78b47decc297c58feadb7cd507a3ff09070d46d4
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: HT
+ms.openlocfilehash: 55a0cb45cd3e3a8e367b0bff7bd8e856b02af953
+ms.sourcegitcommit: aab39bf86707ccaef45fd6527fff4f1c89336710
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565744"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58429695"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Ustawienia urządzenia z systemem Windows 10 lub nowszym, które ma działać jako kiosk w usłudze Intune
 
@@ -176,6 +176,7 @@ Aplikacje w tym trybie są dostępne w menu Start. Te aplikacje to jedyne aplika
 
       Wybierz przycisk **OK**, aby zapisać zmiany.
 
+    - **Autouruchamianiem w przypadku**: opcjonalne. Wybierz aplikację do autouruchamianiem w przypadku, gdy użytkownik loguje się. Tylko jednej aplikacji może być AutoLaunched.
     - **Rozmiar kafelka**: wymagany. Wybierz mały, średni, szeroki lub duży rozmiar kafelka aplikacji.
 
   > [!TIP]
@@ -184,6 +185,8 @@ Aplikacje w tym trybie są dostępne w menu Start. Te aplikacje to jedyne aplika
 - **Użyj alternatywnego układ menu Start**: wybierz pozycję **Tak**, aby wprowadzić plik XML, który opisuje sposób wyświetlania aplikacji w menu Start, w tym ich kolejność. Użyj tej opcji, jeśli potrzebujesz większej liczby dostosowań w menu Start. Artykuł [Customize and export Start layout (Dostosowywanie i eksportowanie układu menu Start)](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout) zawiera wskazówki i przykładowy kod XML.
 
 - **Pasek zadań systemu Windows**: wybierz opcję **pokazywania** lub **ukrywania** paska zadań. Domyślnie pasek zadań nie jest wyświetlany. Ikony, takich jak ikona sieci Wi-Fi, są wyświetlane, ale użytkownicy końcowi nie mogą zmieniać ich ustawień.
+
+- **Zezwalaj na dostęp do folderu pobrane**: Wybierz **tak** aby umożliwić użytkownikom dostęp do folderu pliki do pobrania w Eksploratorze Windows. Domyślnie dostęp do folderu pobierania jest wyłączone. Ta funkcja jest często używana dla użytkowników końcowych na dostęp do elementów pobrany z poziomu przeglądarki.
 
 Wybierz przycisk **OK**, aby zapisać zmiany.
 

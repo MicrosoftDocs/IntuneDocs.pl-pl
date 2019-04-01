@@ -2,8 +2,8 @@
 title: Ustawienia ochrony dla urządzeń z systemem Windows 10 w usłudze Microsoft Intune — Azure | Microsoft Docs
 description: Na urządzeniach z systemem Windows 10 możesz użyć ustawień programu Endpoint Protection lub skonfigurować je, aby włączyć w usłudze Microsoft Intune usługę Windows Defender, w tym program Application Guard, zaporę, filtr SmartScreen, szyfrowanie i funkcję BitLocker, program Exploit Guard, kontrolę aplikacji, Centrum zabezpieczeń i zabezpieczenia na urządzeniach lokalnych.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 03/04/2019
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fbbdbbb92c033a99f1c439271c745c1abfbcd562
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: HT
+ms.openlocfilehash: 4c2df888e146a7f240530e5cbc6628dbce34cb61
+ms.sourcegitcommit: b0b1030017e741d92c508130447a8242d9ad7a51
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566696"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58343001"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Ustawienia systemu Windows 10 (oraz nowszych wersji) służące do ochrony urządzeń przy użyciu usługi Intune
 
@@ -87,8 +87,7 @@ Te ustawienia mają zastosowanie do wszystkich typów urządzeń.
 
 Te ustawienia mają zastosowanie do sieci określonych typów, w tym **sieci z domeną (w miejscu pracy)**, **sieci prywatnej (wykrywalnej)** i **sieci publicznej (niewykrywalnej)**.
 
-#### <a name="general-settings"></a>Ustawienia ogólne
-
+#### <a name="general-settings"></a>Ustawienia ogólne  
 - **Zapora Windows Defender**: opcja **Włącz** powoduje włączenie zapory i zabezpieczeń zaawansowanych. **Nie skonfigurowano** (ustawienie domyślne) — zezwala na cały ruch sieciowy niezależnie od ustawień innych zasad.
 - **Tryb niewidzialności**: **Blokuj** — blokowanie działania zapory w trybie niewidzialności. Blokowanie trybu niewidzialności pozwala również zablokować **wykluczanie pakietów zabezpieczonych przez protokół IPsec**. **Nie skonfigurowano** (ustawienie domyślne) — pozwala na działanie zapory w trybie niewidzialności, co pomaga zapobiegać odpowiedziom na żądania sondowania.
 - **Z osłoną**: **Blokuj** —powoduje wyłączenie tej funkcji. **Nie skonfigurowano** (ustawienie domyślne) — włącza to ustawienie. Gdy to ustawienie i Zapora Windows Defender są włączone, cały ruch przychodzący jest blokowany bez względu na inne ustawienia zasad.

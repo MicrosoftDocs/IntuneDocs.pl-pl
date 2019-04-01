@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4fa6a68d1b5a8d2ccf87587ecab36c7807770d48
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: HT
+ms.openlocfilehash: 0a59c40a5f1095e832f84c4b21d553e3c5f11ed7
+ms.sourcegitcommit: 464cf677e3746eaba46836dedfb94572a75032f9
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565353"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58330423"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem macOS umożliwiające działanie funkcji lub ich ograniczanie przy użyciu usługi Intune
 
@@ -46,7 +46,7 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
   Ta funkcja ma zastosowanie do:  
   - System macOS 10.13 i nowsze
 
-- **Odroczenie aktualizacji oprogramowania (tylko tryb nadzorowany)**: po ustawieniu **nieskonfigurowane** (ustawienie domyślne), aktualizacje oprogramowania są wyświetlane na urządzeniu z Apple zwalnia je. Na przykład jeśli aktualizację systemu macOS pobiera wydany przez firmę Apple w określonym dniu, następnie aktualizacja naturalnie pojawia się na urządzeniu wokół daty wydania.
+- **Odroczenie aktualizacji oprogramowania**: po ustawieniu **nieskonfigurowane** (ustawienie domyślne), aktualizacje oprogramowania są wyświetlane na urządzeniu z Apple zwalnia je. Na przykład jeśli aktualizację systemu macOS pobiera wydany przez firmę Apple w określonym dniu, następnie aktualizacja naturalnie pojawia się na urządzeniu wokół daty wydania. Aktualizacje dotyczące konferencji build inicjatora są dozwolone bez opóźnień.
 
   **Włącz** umożliwia opóźnienie podczas aktualizacji oprogramowania są wyświetlane na urządzeniach z 0 – 90 dni. To ustawienie nie kontroluje, kiedy aktualizacje są lub nie są zainstalowane. 
 
@@ -69,7 +69,7 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
   - **Wygaśnięcie hasła (dni)**: określa liczbę dni, po upływie których użytkownik musi zmienić hasło (od **1** do **255** dni).
   - **Zapobiegaj ponownemu użyciu starych haseł**: wprowadź liczbę poprzednio używanych haseł, których ponowne użycie nie jest możliwe, od **1** do **24**.
 
-- **Zablokuj użytkownikowi możliwość modyfikowania kodu dostępu**: Wybierz **bloku** przestanie kodu dostępu z zmieniany dodany lub usunięty. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia dodawanie, zmienianie lub usuwanie kodów dostępu.
+- **Zablokuj użytkownikom możliwość modyfikowania kodu dostępu**: Wybierz **bloku** przestanie kodu dostępu z zmieniany dodany lub usunięty. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia dodawanie, zmienianie lub usuwanie kodów dostępu.
 - **Blokuj odblokowywanie za pomocą odcisku palca**: wybierz pozycję **Blokuj**, aby uniemożliwić użycie odcisku palca do odblokowywania urządzenia. Pozycja **Nieskonfigurowane** (wartość domyślna) zezwala użytkownikowi na odblokowywanie urządzenia przy użyciu odcisku palca.
 
 - **Blokuj automatyczne wypełnianie haseł**: wybierz pozycję **Blokuj**, aby uniemożliwić użycie funkcji automatycznego wypełniania haseł w systemie macOS. Wybieranie **bloku** ma również następujące znaczenie:
