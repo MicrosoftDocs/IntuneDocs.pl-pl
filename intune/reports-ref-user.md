@@ -6,7 +6,7 @@ keywords: Magazyn danych usługi Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/14/2018
+ms.date: 03/20/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ccd9a14c29db5039ce0173d0c09fd3d2851755f3
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: MTE75
+ms.openlocfilehash: 4ab0674304f1e74c8bf2ad1aeecd419575484e5f
+ms.sourcegitcommit: 93286c22426dcb59191a99e3cf2af4ff6ff16522
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566254"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58358174"
 ---
 # <a name="reference-for-user-entity"></a>Informacje dotyczące jednostki User (Użytkownik)
 
@@ -40,13 +40,10 @@ Kolekcja jednostek **User** zawiera dane użytkownika. Te rekordy obejmują stan
 | UserKey |Unikatowy identyfikator użytkownika w magazynie danych — klucz zastępczy. |123 |
 | UserId |Unikatowy identyfikator użytkownika — podobny do UserKey, ale jest kluczem naturalnym. |b66bc706-ffff-7437-0340-032819502773 |
 | UserEmail |Adres e-mail użytkownika. |John@constoso.com |
-| UPN | Główna nazwa użytkownika. | John@constoso.com |
+| userPrincipalName | Główna nazwa użytkownika. | John@constoso.com |
 | Nazwa wyświetlana |Nazwa wyświetlana użytkownika. |Michał |
 | IntuneLicensed |Określa, czy użytkownik ma licencję usługi Intune, czy nie. |True/False |
 | IsDeleted | Wskazuje, czy wszystkie licencje użytkownika wygasły i czy użytkownik został z tego powodu usunięty z usługi Intune. Dla pojedynczego rekordu ta flaga nie zmienia się. Zamiast tego tworzony jest nowy rekord odpowiadający nowemu stanowi użytkownika. |Prawda/Fałsz |
-| StartDateInclusiveUTC |Jeśli flaga IsDeleted = FAŁSZ, data i godzina przypisania licencji użytkownikowi i początku jego obecności w usłudze Intune (w formacie UTC). Jeśli flaga IsDeleted = PRAWDA, data i godzina wygaśnięcia ważności licencji użytkownika i usunięcia go z usługi Intune (w formacie UTC). |2016-11-23 12:00:00 |
-| EndDateExclusiveUTC |Jeśli flaga IsDeleted = FAŁSZ, data i godzina wygaśnięcia ważności licencji użytkownika i usunięcia go z usługi Intune (w formacie UTC). Licencja wygasła w pewnym momencie poprzedniego dnia. Jeśli flaga IsDeleted = PRAWDA, data i godzina uzyskania nowej licencji przez użytkownika i ponownego utworzenia go w usłudze Intune (w formacie UTC).  |2016-11-23 12:00:00 |
-| IsCurrent |Wskazuje, czy ten rekord reprezentuje najnowszy stan użytkownika. Dla pojedynczego użytkownika może istnieć wiele rekordów, ale tylko jeden z nich reprezentuje bieżący stan.  |Prawda/Fałsz |
 | RowLastModifiedDateTimeUTC |Data i godzina ostatniej modyfikacji rekordu w magazynie danych (w formacie UTC)  |2016-11-23 12:00:00 |
 
 ## <a name="next-steps"></a>Następne kroki

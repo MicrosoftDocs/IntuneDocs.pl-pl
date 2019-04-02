@@ -4,7 +4,7 @@ description: Rozwiązanie Microsoft 365 Enterprise obejmuje usługę Microsoft I
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/21/2018
+ms.date: 03/29/2018
 ms.topic: conceptual
 audience: ITPro
 ms.prod: microsoft-365-enterprise
@@ -16,16 +16,16 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93e34c3de77dde59b87829617b8cbbd2614f7081
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: MTE75
+ms.openlocfilehash: ea24101600c7a0e485440f50fc043c14bd840968
+ms.sourcegitcommit: 8e6f4acb592dbe5de63aa7642ee9487288740714
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57231251"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58646492"
 ---
 # <a name="what-is-device-management"></a>Co to jest zarządzanie urządzeniami? 
 
-Kluczowym zadaniem każdego administratora jest chronienie i zabezpieczanie danych i zasobów organizacji. To zadanie to zarządzanie urządzeniami. Użytkownicy mają wiele urządzeń, za pomocą których otwierają i udostępniają pliki osobiste, odwiedzają witryny internetowe oraz instalują aplikacje i gry. Ci sami użytkownicy są jednocześnie pracownikami bądź uczniami lub studentami i chcą mieć na urządzeniach dostęp do zasobów służbowych oraz szkolnych, takich jak wiadomości e-mail i program OneNote. *Zarządzanie urządzeniami* umożliwia organizacjom chronienie i zabezpieczanie zasobów i danych. 
+Kluczowym zadaniem każdego administratora jest chronienie i zabezpieczanie danych i zasobów organizacji. To zadanie to *zarządzanie urządzeniami*. Użytkownicy mają wiele urządzeń, za pomocą których otwierają i udostępniają pliki osobiste, odwiedzają witryny internetowe oraz instalują aplikacje i gry. Ci sami użytkownicy są jednocześnie pracownikami bądź uczniami lub studentami i chcą mieć na urządzeniach dostęp do zasobów służbowych oraz szkolnych, takich jak wiadomości e-mail i program OneNote. Zarządzanie urządzeniami umożliwia organizacjom chronienie i zabezpieczanie zasobów i danych. 
 
 Dzięki korzystaniu z usług dostawcy zarządzania urządzeniami organizacje mogą mieć pewność, że dostęp do należących do nich informacji uzyskują tylko autoryzowane osoby i urządzenia. Natomiast użytkownicy urządzeń mogą bez obaw uzyskiwać dostęp do danych służbowych na swoich telefonach, ponieważ wiedzą, że ich urządzenia spełniają wymagania zabezpieczeń organizacji. Z punktu widzenia organizacji można się zastanawiać: **w jaki sposób powinniśmy chronić nasze zasoby?**
 

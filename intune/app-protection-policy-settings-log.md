@@ -6,24 +6,24 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/20/2018
+ms.date: 03/19/2019
 ms.topic: troubleshooting
 ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 4CD5EE94-7BA6-4F59-8E28-1EBCA7CA6436
-ms.reviewer: andcerat
+ms.reviewer: demerson
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ff80a5911c4bb027cbe2f9289a415ed9797277a6
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: MTE75
+ms.openlocfilehash: 6c42003f53e5d4ff7afa8afe9c242ef2470b5ee3
+ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57460499"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394797"
 ---
 # <a name="review-client-app-protection-logs"></a>Przeglądanie dzienników ochrony aplikacji klienta
 
@@ -43,6 +43,7 @@ W poniższej tabeli przedstawiono nazwy i opisy ustawień zarejestrowanych w dzi
 |-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | AccessRecheckOfflineTimeout | x min                                                                                                                                                                                                                                                                                                   | [Dostęp] Ponowne sprawdzenie wymagań dostępu — okres karencji w trybie offline<br>Uwaga: Jest to okres, po którym wymagania dostępu aplikacji zostaną sprawdzone ponownie, jeśli urządzenie jest w trybie offline.             |
 | AccessRecheckOnlineTimeout  | _x_ min                                                                                                                                                                                                                                                                                                   | [Dostęp] Ponowne sprawdzenie wymagań dostępu — limit czasu.<br>Uwaga: Jest to okres, po którym wymagania dostępu aplikacji zostaną sprawdzone ponownie po uruchomieniu aplikacji, jeśli urządzenie jest w trybie online. |
+| AllowedOutboundClipboardSharingExceptionLength               | Liczba znaków: x                                                                                                                                                                                                                                                                                           | [Dostęp] Określ liczbę znaków, które mogą być wycięte lub skopiowane z zarządzanej aplikacji.  To ustawienie przesłania `AllowedOutboundClipboardSharingLevel` ograniczeń. Wartość domyślna "0" oznacza, że wyjątek nie jest dozwolone. 
 | AppPinDisabled              | 0 = Nie<br>1 = Tak                                                                                                                                                                                                                                                                                           | [Dostęp] Wyłącz numer PIN aplikacji, gdy zarządzany jest numer PIN urządzenia.                                                                                                                                     |
 | AppSharingFromLevel         | 0 = Brak aplikacji<br>1 = Zarządzane aplikacje<br>2 = Dowolna aplikacja                                                                                                                                                                                                                                                              | [Relokacja danych] Zezwalaj aplikacji na odbieranie danych z innych aplikacji.                                                                                                                        |
 | AppSharingToLevel           | 0 = Brak aplikacji<br>1 = Zarządzane aplikacje<br>2 = Dowolna aplikacja                                                                                                                                                                                                                                                              | [Relokacja danych] Zezwalaj aplikacji na przesyłanie danych do innych aplikacji.                                                                                                                         |

@@ -1,11 +1,11 @@
 ---
-title: Dzienniki inspekcji dla działań usługi Microsoft Intune
+title: Inspekcja zmiany i zdarzeń w Microsoft Intune — Azure | Dokumentacja firmy Microsoft
 description: Dowiedz się, jak przeglądać dzienniki inspekcji służące do rejestrowania działań usługi Microsoft Intune.
 keywords: ''
 ms.author: dougeby
 author: dougeby
 manager: dougeby
-ms.date: 02/27/2018
+ms.date: 03/18/2019
 ms.topic: troubleshooting
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,35 +14,51 @@ ms.technology: ''
 ms.assetid: 6ee841cc-5694-4ba1-8f66-1d58edec30a4
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 98540af0f0b7d259973d1a7e873c68fc64f488d1
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 93072ba4730de0252f54d93fa1169062d496ce38
+ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57460686"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394905"
 ---
-# <a name="audit-logs-for-intune-activities"></a>Dzienniki inspekcji dla działań usługi Intune
-Dzienniki inspekcji stanowią rekord działań, które generują zmiany w usłudze Microsoft Intune. Możesz tworzyć, aktualizować (edytować), usuwać i przypisywać akcje lub zadania zdalne, a także generować zdarzenia inspekcji, które można przeglądać. Możesz przeglądać dzienniki inspekcji dla większości obciążeń usługi Intune. Inspekcja jest domyślnie włączona dla wszystkich klientów i nie można jej wyłączyć. Rejestrowanie zdarzeń inspekcji rozpoczęto w dniu wydania funkcji w grudniu 2017 r. Wcześniejsze zdarzenia są niedostępne.
+# <a name="use-audit-logs-to-track-and-monitor-events-in-microsoft-intune"></a>Korzystaj z dzienników inspekcji do śledzenia i monitorowania zdarzeń w programie Microsoft Intune
+
+Dzienniki inspekcji uwzględniają rekord działań, które generują zmiany w usłudze Microsoft Intune. Tworzyć, aktualizować (edytować), usuwanie, przypisywanie i akcje zdalne tworzenie zdarzeń inspekcji, które Administratorzy mogą sprawdzić dla większości obciążeń usługi Intune. Inspekcja jest włączona domyślnie dla wszystkich klientów. Nie można wyłączyć.
+
+> [!NOTE]
+> Zdarzenia inspekcji rozpoczęto nagrywanie wydawania funkcji grudnia 2017 r. Wcześniejsze zdarzenia nie są dostępne.
 
 ## <a name="who-can-access-the-data"></a>Kto może uzyskać dostęp do danych?
+
 Dzienniki inspekcji mogą przeglądać użytkownicy z następującymi uprawnieniami:
+
 - Administrator globalny
 - Administrator usługi Intune
 - Administratorzy przypisani do roli usługi Intune z uprawieniami **Dane inspekcji** - **Odczyt**
 
 ## <a name="audit-logs-for-intune-workloads"></a>Dzienniki inspekcji dla obciążeń usługi Intune
-Dzienniki inspekcji można przeglądać w grupie monitorowania dla poszczególnych obciążeń usługi Intune.  
-1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
-3. W okienku **Intune** wybierz obciążenie, dla którego chcesz przejrzeć dzienniki inspekcji, na przykład **Urządzenia**.
-4. W grupie **Monitorowanie** dla danego obciążenia wybierz pozycję **Dzienniki inspekcji**.
+
+Dzienniki inspekcji można przeglądać w grupie monitorowania dla poszczególnych obciążeń usługi Intune:
+
+1. W witrynie [Azure Portal](https://portal.azure.com/) wybierz pozycję **Wszystkie usługi**, wpisz nazwę usługi **Intune** w filtrze, a następnie wybierz pozycję **Intune**.
+2. Wybierz obciążenie, aby przejrzeć dzienniki inspekcji. Na przykład wybierz **urządzeń**.
+3. W obszarze **monitorowanie**, wybierz **dzienniki inspekcji**.
+
+## <a name="route-logs-to-azure-monitor"></a>Kierowanie dzienników do usługi Azure Monitor
+
+Dzienniki inspekcji i operacyjne dzienniki też mogą być kierowane do usługi Azure Monitor. W **dzienniki inspekcji**, wybierz opcję **Eksportuj ustawienia danych**:
+
+![Dane dziennika są eksportowane do usługi Azure monitor, wybierając pozycję Ustawienia danych eksportu w usłudze Intune](./media/audit-logs-export-data-settings.png)
+
+Więcej informacji na temat tej funkcji zawiera artykuł [Send log data to storage, event hubs, or log analytics](review-logs-using-azure-monitor.md) (Wysyłanie danych dziennika do magazynu, centrów zdarzeń lub analizy dzienników).
 
 ## <a name="review-audit-events"></a>Przeglądanie zdarzeń inspekcji
-![Dzienniki inspekcji](./media/monitor-audit-logs.png "Dzienniki inspekcji")
 
-Domyślny widok listy dziennika inspekcji zawiera następujące elementy:    
+![Wybierz dzienniki inspekcji w usłudze Intune, aby zobaczyć akcje i daty, kiedy wystąpiły zdarzenia](./media/monitor-audit-logs.png "dzienniki inspekcji")
 
-- data i godzina wystąpienia
+Domyślny widok listy dziennika inspekcji zawiera następujące elementy:
+
+- Data i godzina wystąpienia
 - Zainicjowane przez (aktor)
 - Nazwa aplikacji
 - Aktywność
@@ -50,18 +66,25 @@ Domyślny widok listy dziennika inspekcji zawiera następujące elementy:
 - Kategoria
 - Stan
 
-Kliknięcie elementu w widoku listy powoduje wyświetlenie wszystkich dostępnych szczegółów na jego temat.
+Aby wyświetlić bardziej szczegółowe informacje o zdarzeniu, wybierz element na liście:
 
-![Dzienniki inspekcji](./media/monitor-audit-log-detail.png "Dzienniki inspekcji")
+![Uzyskiwanie bardziej szczegółowych informacji na temat kto zrobił, co w inspekcji dzienników w usłudze Intune](./media/monitor-audit-log-detail.png "szczegółach dziennika inspekcji")
 
-> [!Note]    
-> Sekcja **Zainicjowane przez (aktor)** w szczegółach dziennika inspekcji zawiera informacje o tym, kto wykonał działanie i gdzie zostało ono wykonane. Na przykład, jeśli działanie zostanie wykonane w usłudze Intune w witrynie Azure Portal, w obszarze **Aplikacja** zawsze jest podane **rozszerzenie portalu usługi Microsoft Intune**, a w obszarze **Identyfikator aplikacji** zawsze znajduje się ten sam identyfikator GUID. 
->    
-> Sekcja **Elementy docelowe** może zawierać wiele elementów docelowych oraz właściwości, które zostały zmienione.  
-
+> [!NOTE]
+> **Zainicjowane przez (Aktor)** zawiera informacje na temat opracowywali zadania i gdzie zostało uruchomione. Na przykład, jeśli działanie zostanie uruchomione w usłudze Intune w witrynie Azure Portal, w obszarze **Aplikacja** zawsze jest podane **rozszerzenie portalu usługi Microsoft Intune**, a w obszarze **Identyfikator aplikacji** zawsze znajduje się ten sam identyfikator GUID.
+> 
+> Sekcja **Elementy docelowe** zawiera wiele elementów docelowych oraz właściwości, które zostały zmienione.  
 
 ## <a name="filter-audit-events"></a>Filtrowanie zdarzeń inspekcji
-Każde obciążenie zawiera element menu, który wstępnie filtruje kategorię zdarzeń inspekcji skojarzoną z danym okienkiem. Oddzielna opcja filtrowania umożliwia zmianę kategorii na inną oraz filtrowanie szczegółów akcji zdarzeń w ramach danej kategorii. Można wyszukiwać dane według nazwy UPN (na przykład użytkownika, który wykonał akcję). Filtr zakresu dat umożliwia ustawienie opcji 24 godzin, 7 dni lub 30 dni. Domyślnie są wyświetlane zdarzenia inspekcji z ostatnich 30 dni.
+
+Każde obciążenie zawiera element menu, który wstępnie filtruje kategorię zdarzeń inspekcji skojarzoną z danym okienkiem. Oddzielna opcja filtrowania umożliwia zmianę kategorii na inną oraz filtrowanie szczegółów akcji zdarzeń w ramach danej kategorii. Możesz wyszukiwać według nazwy UPN, takich jak użytkownik, który wykonał akcję. Filtr zakresu dat umożliwia ustawienie opcji 24 godzin, 7 dni lub 30 dni. Domyślnie są pokazywane zdarzenia inspekcji z ostatnich 30 dni.
 
 ## <a name="use-graph-api-to-retrieve-audit-events"></a>Korzystanie z interfejsów API programu Graph w celu pobrania zdarzeń inspekcji
-Aby uzyskać szczegółowe informacje na temat korzystania z interfejsu API programu Graph w celu pobrania zdarzeń inspekcji z ostatniego roku, zobacz temat [List auditEvents](https://developer.microsoft.com/en-us/graph/docs/api-reference/beta/api/intune_auditing_auditevent_list) (Wyświetlanie listy obiektów auditEvent).
+
+Aby uzyskać szczegółowe informacje dotyczące jednego roku zdarzeń inspekcji przy użyciu interfejsu API programu graph, zobacz [listy auditEvents](https://docs.microsoft.com/graph/api/intune-auditing-auditevent-list?view=graph-rest-1.0).
+
+## <a name="next-steps"></a>Następne kroki
+
+[Wyślij dane dzienników z magazynem, usługa event hubs lub dziennika analizy](review-logs-using-azure-monitor.md).
+
+[Przejrzyj dzienniki ochrony aplikacji klienta](app-protection-policy-settings-log.md).

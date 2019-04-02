@@ -1,11 +1,11 @@
 ---
-title: Wyrejestrowywanie urządzenia z systemem macOS z usługi Intune | Microsoft Docs
-description: Opis sposobu wyrejestrowania urządzenia z systemem macOS z usługi Intune
+title: Wyrejestrowywanie urządzenia z systemem macOS z aplikacji Portal firmy w usłudze Intune | Microsoft Docs
+description: Opis sposobu wyrejestrowania urządzenia z systemem macOS z aplikacji Portal firmy
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/12/2018
+ms.date: 03/20/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,22 +18,24 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b3518707aa90c3866fbf8b24936db6d781712bdb
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 19cb76df318abe84670c1a7d703e85e3b7e7539a
+ms.sourcegitcommit: 464cf677e3746eaba46836dedfb94572a75032f9
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55839994"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58330402"
 ---
-# <a name="unenroll-your-macos-device-from-intune"></a>Wyrejestrowanie urządzenia z systemem macOS z usługi Intune
+# <a name="unenroll-your-macos-device-from-company-portal"></a>Wyrejestrowywanie urządzenia z systemem macOS z portalu firmy
 
 Po wyrejestrowaniu z usługi Intune urządzenie z systemem macOS nie może uzyskiwać dostępu do zasobów firmy.
 
 Postępuj zgodnie z następującymi krokami, aby wyrejestrować urządzenie z systemem macOS z usługi zarządzania:
 
-1.  W aplikacji Portal firmy w obszarze **Moje urządzenia** wybierz urządzenie, które chcesz wyrejestrować.
+1.  Zaloguj się w aplikacji Portal firmy dla macOS.
+2.  Przejdź do pozycji **Urządzenia** wybierz urządzenie, które chcesz wyrejestrować.
 
-2.  Kliknij pozycję **Usuń** > **Usuń**.
+3.  Wybierz ikonę menu wielokropka > **Usuń**.
+4.  Zostanie wyświetlony komunikat z potwierdzeniem. Wybierz **Usuń** Aby wyrejestrować urządzenie. 
 
 Po wyrejestrowaniu urządzenia z usługi Intune:
 

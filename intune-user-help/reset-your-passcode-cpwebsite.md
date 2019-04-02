@@ -18,12 +18,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e973e18a79c18af6b201194fc1a6534da5fa38a
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: HT
+ms.openlocfilehash: fd05c600553ec23085b03eb560e0e736c9d7a764
+ms.sourcegitcommit: 25e17a1d002ee1faa49bb89648eb59373528539f
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55838040"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58163432"
 ---
 # <a name="how-to-reset-your-device-passcode-from-the-company-portal-website"></a>Jak zresetować kod dostępu urządzenia z poziomu witryny sieci Web Portal firmy
 
@@ -32,7 +32,7 @@ Jeśli utracisz numer PIN lub hasło, możesz zresetować je przy użyciu [witry
 Jeśli używasz urządzenia zarejestrowanego przez firmę, możesz nie widzieć opcji umożliwiającej zresetowanie kodu dostępu do urządzenia. Skontaktuj się z działem pomocy technicznej Twojej firmy w celu uzyskania kodu dostępu.
 
    > [!NOTE]
-   > Nie można zresetować kodu dostępu w przypadku urządzeń z systemem Android 7.0 lub nowszym. Jeśli zapomnisz, jaki jest kod dostępu, musisz zresetować urządzenie, przywracając ustawienia fabryczne. 
+   > Nie można zresetować kodu dostępu w przypadku urządzeń z uruchomionym systemem Android 7.0 lub nowszym. Jeśli nie pamiętasz kodu dostępu, musisz zresetować urządzenie, przywracając ich ustawienia fabryczne. 
 
 ## <a name="reset-your-passcode"></a>Resetowanie kodu dostępu
 
