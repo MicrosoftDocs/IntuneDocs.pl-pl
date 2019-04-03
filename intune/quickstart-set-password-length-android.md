@@ -1,12 +1,12 @@
 ---
 title: Szybki start — tworzenie zasad zgodności haseł dla urządzeń z systemem Android
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: W tym przewodniku Szybki start użyjesz usługi Microsoft Intune do ustawienia długości hasła wymaganej w przypadku urządzeń z systemem Android.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/09/2018
+ms.date: 03/26/2019
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 62ae0c7b9a00c3e07bb49261ca1a20bd5ef5db15
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: f4a16272f32b8546e7e9bb12a22f16235ab49aed
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57397281"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799662"
 ---
 # <a name="quickstart-create-a-password-compliance-policy-for-android-devices"></a>Szybki start: Tworzenie zasad zgodności haseł dla urządzeń z systemem Android
 
@@ -49,7 +49,8 @@ W tym przewodniku Szybki start użyjesz usługi Intune, aby wymagać od pracowni
 3. W polu **Platforma** wybierz opcję **Android**. 
 4. Wybierz kolejno pozycje **Ustawienia** > **Zabezpieczenia systemu**, aby wyświetlić blok **Zabezpieczenia systemu** dla systemu Android.
 5. Kliknij polecenie **Wymagaj** znajdujące się obok polecenia **Wymagaj hasła do odblokowania urządzeń przenośnych**.
-6. Wprowadź liczbę **6** obok pozycji **Minimalna długość hasła**. 
+6. Wybierz opcję **Co najmniej numeryczne** obok pozycji **Wymagany typ hasła**.
+7. Wprowadź liczbę **6** obok pozycji **Minimalna długość hasła**. 
 
     ![Zrzut ekranu przedstawiający tworzenie grupy w usłudze Microsoft Intune](media/quickstart-set-password-length-android/quickstart-set-password-length-android-01.png)
 

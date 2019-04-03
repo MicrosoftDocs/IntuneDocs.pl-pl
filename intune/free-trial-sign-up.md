@@ -1,6 +1,6 @@
 ---
 title: Przewodnik Szybki start — bezpłatna wersja próbna usługi Microsoft Intune
-titlesuffix: ''
+titleSuffix: ''
 description: Ten przewodnik Szybki start obejmuje utworzenie bezpłatnej subskrypcji wersji próbnej, omówienie obsługiwanych konfiguracji i wymagań sieciowych oraz opcjonalne skonfigurowanie nazwy domeny.
 keywords: ''
 author: Erikre
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 94c83ab0f70a5a40bd745b4db83ef16ac14acd00
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 63f9ef266c9a5754d5de57232a8f7bc41a6c5777
+ms.sourcegitcommit: 79baf89e4a7a7b1cecb8ccf5cb976736ae6a7286
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57756857"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58871399"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Szybki start: bezpłatna wersja próbna usługi Microsoft Intune 
 
@@ -67,7 +67,7 @@ Usługę Intune można bezpłatnie testować przez 30 dni. Jeśli masz już kont
 
     ![Obraz przedstawiający stronę logowania witryny Azure Portal](./media/azure-portal-signin.png)
 
-3. Aby wyświetlić usługę Microsoft Intune w porcie platformy Azure, wybierz pozycję **Wszystkie usługi** z paska bocznego w lewej części strony.
+3. Aby wyświetlić usługę Microsoft Intune w witrynie Azure Portal, wybierz pozycję **Wszystkie usługi** na pasku bocznym z lewej części strony.
 4. Wyszukaj usługę **Microsoft Intune** w polu filtrowania i wybierz ją.
 5. Wybierz ikonę **gwiazdki**, aby dodać usługę Intune na końcu listy ulubionych usług, i otwórz jej pulpit nawigacyjny.
 
@@ -97,7 +97,7 @@ Aby uzyskać więcej informacji na temat urzędu MDM, zobacz [Ustawianie urzędu
 
 ## <a name="configure-your-custom-domain-name-optional"></a>Konfigurowanie niestandardowej nazwy domeny (opcjonalnie)
 
-Jak wspomniano powyżej, jeśli organizacja ma własną domenę niestandardową, której chcesz użyć zamiast domeny **.onmicrosoft.com**, możesz ją zmienić w centrum administracyjnym platformy Microsoft 365. Domenę niestandardową możesz dodać, zweryfikować i skonfigurować, wykonując następujące kroki.  
+Jak wspomniano powyżej, jeśli organizacja ma własną domenę niestandardową, której chcesz użyć zamiast domeny **.onmicrosoft.com**, możesz ją zmienić w centrum administracyjnym platformy Microsoft 365. Nazwę domeny niestandardowej możesz dodać, zweryfikować i skonfigurować, wykonując następujące kroki.  
 
 > [!IMPORTANT]
 > *Początkowej* części nazwy domeny **onmicrosoft.com** nie można zmienić ani usunąć. Jednak można dodać, zmienić lub usunąć *niestandardowe* nazwy domen używane w połączeniu z usługą Intune, aby zachować wyraźną tożsamość firmy. Aby uzyskać więcej informacji, zobacz [Konfigurowanie nazwy domeny niestandardowej](custom-domain-name-configure.md).
@@ -110,7 +110,7 @@ Jak wspomniano powyżej, jeśli organizacja ma własną domenę niestandardową,
 
    ![Zrzut ekranu przedstawiający centrum administracyjne platformy Microsoft 365 — dodawanie domeny](./media/domain-custom-add.png)
 
-4. Zweryfikuj swoje prawo własności do wprowadzonej w poprzedniej części domeny. 
+4. Zweryfikuj swoje prawo własności do domeny wprowadzonej w poprzedniej części. 
     
     Wybranie pozycji **wyślij kod pocztą e-mail** spowoduje wysłanie wiadomości e-mail do zarejestrowanego dla domeny kontaktu. Po otrzymaniu wiadomości e-mail skopiuj kod i wprowadź go w polu z etykietą **Tutaj wprowadź kod weryfikacyjny**. Jeśli kod weryfikacyjny będzie zgodny, domena zostanie dodana do dzierżawy. Wyświetlony adres e-mail może nie wyglądać znajomo. Niektórzy rejestratorzy ukrywają rzeczywisty adres e-mail. Adres email może być także inny niż podany podczas rejestrowania domeny.
 

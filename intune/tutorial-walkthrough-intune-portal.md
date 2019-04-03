@@ -6,7 +6,7 @@ keywords: ''
 author: ErikRe
 ms.author: erikre
 manager: dougeby
-ms.date: 01/31/2019
+ms.date: 03/28/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c733dbbf992ae10e14ba711b34e621d3f0fb3da8
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: c601af8c2b73ac68ec88f45d3684fcfd41f1c87f
+ms.sourcegitcommit: 1144247aa7f042eb1b99d8fd8dd17b909eae38c5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57395263"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58567592"
 ---
 # <a name="tutorial-walkthrough-of-microsoft-intune-in-the-azure-portal"></a>Samouczek: przewodnik po usłudze Microsoft Intune w witrynie Azure Portal
 
@@ -113,7 +113,7 @@ Wykonaj poniższe czynności, aby lepiej poznać usługę Intune w witrynie Azur
 
     Możesz bezpośrednio dodawać użytkowników do usługi Intune lub synchronizować użytkowników z lokalnej usługi Active Directory. Po dodaniu użytkownicy mogą rejestrować urządzenia i uzyskiwać dostęp do zasobów firmy. Możesz także przyznawać użytkownikom dodatkowe uprawnienia dostępu do usługi Intune. Aby uzyskać więcej informacji, zobacz [Dodawanie użytkowników i przyznawanie uprawnień administracyjnych do usługi Intune](users-add.md).
 
-9. W usłudze [Intune](https://aka.ms/intuneportal) wybierz pozycję **Grupy**, aby wyświetlić szczegółowe informacje o grupach usługi Azure Active Directory (Azure AD) w usłudze Intune. Jako administrator usługi Intune możesz przy użyciu grup zarządzać urządzeniami i użytkownikami. 
+9. W usłudze [Intune](https://aka.ms/intuneportal) wybierz pozycję **Grupy**, aby wyświetlić szczegółowe informacje o grupach usługi Azure Active Directory (Azure AD) w usłudze Intune. Jako administrator usługi Intune używasz grup do zarządzania urządzeniami i użytkownikami. 
 
     ![Zrzut ekranu przedstawiający okienko Grupy](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-09.png)
 

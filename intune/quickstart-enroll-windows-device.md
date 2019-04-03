@@ -5,7 +5,7 @@ services: microsoft-intune
 author: ErikRe
 ms.author: erikre
 manager: dougeby
-ms.date: 12/05/2018
+ms.date: 03/27/2018
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9b9247d07ae947e61528095a4853e5cdbcbc80c0
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 6dfdf61159d899a81e1ef53a1aaa649c98833b0e
+ms.sourcegitcommit: 79baf89e4a7a7b1cecb8ccf5cb976736ae6a7286
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57389978"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58871420"
 ---
 # <a name="quickstart-enroll-your-windows-10-device"></a>Szybki start: Rejestrowanie urządzenia z systemem Windows 10
 
-W tym przewodniku Szybki start najpierw przyjmiesz rolę użytkownika usługi Intune i zarejestrujesz urządzenie z systemem Windows 10 w usłudze Microsoft Intune. Następnie wrócisz do usługi Intune i sprawdzisz, czy urządzenie zostało zarejestrowane.
+W tym przewodniku Szybki start najpierw przyjmiesz rolę użytkownika usługi Intune i zarejestrujesz urządzenie z systemem Windows 10 w usłudze Microsoft Intune. Następnie wrócisz do usługi Intune i potwierdzisz, że urządzenie zostało zarejestrowane.
 
 Zarejestrowanie urządzeń z systemem Windows 10 w usłudze Microsoft Intune umożliwia pracownikom organizacji uzyskiwanie dostępu do zabezpieczonych danych, w tym plików, wiadomości e-mail i innych zasobów. Dotyczy to urządzeń z systemami Windows 10 Desktop i Windows 10 Mobile. Zarejestrowanie urządzeń ułatwia zabezpieczenie dostępu zarówno z perspektywy administratora, jak i całej organizacji, a także pomaga w rozdzieleniu danych służbowych od prywatnych.
 
@@ -72,7 +72,7 @@ Zanim zarejestrujesz system Windows 10 Desktop, musisz sprawdzić, którą wersj
 
     ![Wybieranie pozycji Uzyskaj dostęp do miejsca pracy lub nauki](media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-04.png)
 
-3. Zaloguj się do usługi Intune przy użyciu konta służbowego, a następnie wybierz pozycję **Dalej**. Jeśli został wykonany przewodnik Szybki start [tworzenia użytkownika i przypisywania licencji], możesz zarejestrować się przy użyciu tam utworzonego konta użytkownika.
+3. Zaloguj się do usługi Intune przy użyciu konta służbowego, a następnie wybierz pozycję **Dalej**. Jeśli wykonano kroki z przewodnika Szybki start dotyczącego [tworzenia użytkownika i przypisywania licencji](quickstart-create-user.md), możesz zalogować się przy użyciu utworzonego konta użytkownika.
 
     > [!NOTE]
     > Jeśli konfigurujesz domenę „.onmicrosoft.com”, konto użytkownika będzie mieć w adresie fragment **.onmicrosoft.com**. 

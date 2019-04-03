@@ -6,23 +6,23 @@ author: ErikjeMS
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.topic: quickstart
-ms.date: 10/30/2018
+ms.date: 03/25/2019
 ms.author: erikje
 ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 98c71bd4c93e869b429b7677b4fb7c442aa58643
-ms.sourcegitcommit: fdc6261f4ed695986e06d18353c10660a4735362
+ms.openlocfilehash: b49595493b5db3e5735e0a4717c27e91f058b8d8
+ms.sourcegitcommit: d38ca1bf44e17211097aea481e00b6c1e87effae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57991081"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58514267"
 ---
-# <a name="quickstart-create-a-user-and-assign-a-license-to-it"></a>Szybki start: Tworzenie użytkownika i przypisywanie do niego licencji
+# <a name="quickstart-create-a-user-in-intune-and-assign-them-a-license"></a>Szybki start: Tworzenie użytkownika w usłudze Intune i przypisywanie do niego licencji
 
-W tym przewodniku Szybki start utworzysz użytkownika, a następnie przypiszesz licencję temu użytkownikowi. W przypadku korzystania z usługi Intune każda osoba, która ma mieć dostęp do danych firmy, musi mieć konto użytkownika. Administratorzy usługi Intune mogą później konfigurować tych użytkowników na potrzeby zarządzania kontrolą dostępu.
+W tym przewodniku Szybki start utworzysz użytkownika, a następnie przypiszesz do niego usługę Intune. W przypadku korzystania z usługi Intune każda osoba, która ma mieć dostęp do danych firmy, musi mieć własne konto użytkownika. Administratorzy usługi Intune mogą później konfigurować tych użytkowników na potrzeby zarządzania kontrolą dostępu.
 
 Jeśli nie masz subskrypcji usługi Intune, [utwórz konto bezpłatnej wersji próbnej](free-trial-sign-up.md).
 
@@ -30,9 +30,9 @@ Jeśli nie masz subskrypcji usługi Intune, [utwórz konto bezpłatnej wersji pr
 
 Zaloguj się w usłudze [Intune](https://aka.ms/intuneportal) jako [administrator globalny lub administrator usługi Intune](users-add.md#types-of-administrators). Jeśli utworzono subskrypcję wersji próbnej usługi Intune, konto, którego użyto do utworzenia subskrypcji, jest administratorem globalnym.
 
-## <a name="create-a-user"></a>Utworzenie użytkownika
+## <a name="create-a-user"></a>Tworzenie użytkownika
 
-Osoby, które chcą zarejestrować się w zarządzaniu urządzeniami w usłudze Intune, muszą mieć konta użytkowników.
+Użytkownicy, którzy chcą zarejestrować się w zarządzaniu urządzeniami w usłudze Intune, muszą mieć konto użytkownika. Aby utworzyć nowego użytkownika:
 
 1. W usłudze Intune wybierz pozycję **Użytkownicy** > **Wszyscy użytkownicy** > **Nowy użytkownik**.
 ![Przeglądarka](media/quickstart-create-user/create-user.png)
@@ -47,10 +47,12 @@ Osoby, które chcą zarejestrować się w zarządzaniu urządzeniami w usłudze 
 
 ## <a name="assign-a-license-to-the-user"></a>Przypisywanie użytkownikowi licencji
 
-Po utworzeniu użytkownika należy użyć [centrum administracyjnego platformy Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854), aby przypisać licencję usługi Intune do tego użytkownika. Jeśli użytkownikom nie zostaną przypisane licencje, nie będą oni mogli zarejestrować swoich urządzeń w usłudze Intune. 
+Po utworzeniu użytkownika należy użyć [centrum administracyjnego platformy Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854), aby przypisać do niego licencję usługi Intune. Jeśli nie przypiszesz licencji do użytkownika, nie będzie on mógł zarejestrować urządzenia w usłudze Intune. 
+
+Aby przypisać licencję usługi Intune do użytkownika:
 
 1. Zaloguj się do [centrum administracyjnego platformy Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) przy użyciu tych samych poświadczeń co użyte do zalogowania się do usługi Intune.
-2. Wybierz pozycję **Użytkownicy** > **Aktywni użytkownicy** > wybierz utworzonego przed chwilą użytkownika.
+2. Wybierz pozycję **Użytkownicy** > **Aktywni użytkownicy** > i wybierz utworzonego przed chwilą użytkownika.
 3. Obok pozycji **Licencje produktów** wybierz pozycję **Edytuj**.
 4. W obszarze **Lokalizacja** wybierz lokalizację dla użytkownika.
 5. Kliknij przycisk **Włączona** obok licencji usługi Intune (lub innej posiadanej licencji obejmującej usługę Intune). Wyświetlana [nazwa produktu](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference)** jest używana jako plan usługi w zarządzaniu platformą Azure 
@@ -67,7 +69,7 @@ Jeśli już nie potrzebujesz tego użytkownika, możesz go usunąć, przechodzą
 
 ## <a name="next-steps"></a>Następne kroki
 
-W tym przewodniku Szybki start utworzono użytkownika i przypisano licencję temu użytkownikowi. Aby uzyskać więcej informacji na temat dodawania użytkowników do usługi Intune, zobacz [Dodawanie użytkowników i przyznawanie uprawnień administracyjnych do usługi Intune](users-add.md).
+W tym przewodniku Szybki start utworzono użytkownika i przypisano do niego licencję usługi Intune. Aby uzyskać więcej informacji na temat dodawania użytkowników do usługi Intune, zobacz [Dodawanie użytkowników i przyznawanie uprawnień administracyjnych do usługi Intune](users-add.md).
 
 Aby zapoznać się kolejnymi przewodnikami Szybki start dotyczącymi usługi Intune, przejdź do kolejnego przewodnika Szybki start.
 

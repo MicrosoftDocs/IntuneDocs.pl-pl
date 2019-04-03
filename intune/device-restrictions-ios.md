@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/13/2019
+ms.date: 03/26/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a92d18615f6be7c1e0ce931d443d2ac986db991e
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 5106a4f147828310fc1b4a41ef4065d10bdaeecf
+ms.sourcegitcommit: 44095bbd1502b02201a01604531f4105401fbb92
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566713"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58490730"
 ---
 # <a name="ios-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem iOS umożliwiające działanie funkcji lub ich ograniczanie przy użyciu usługi Intune
 
@@ -43,7 +43,7 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
     Ta funkcja ma zastosowanie do:  
     - System iOS 9.3.2 lub nowszy
 
-- **Przechwytywanie ekranu**: wybierz pozycję **Blokuj**, aby uniemożliwić tworzenie zrzutów ekranu i przechwytywanie ekranów w urządzeniu. Pozycja **Nieskonfigurowane** (domyślna) umożliwia użytkownikowi przechwytywanie zawartości ekranu w formie obrazu.
+- **Przechwytywanie ekranu**: wybierz pozycję **Blokuj**, aby uniemożliwić tworzenie zrzutów ekranu i przechwytywanie ekranów w urządzeniu. W systemie iOS 9.0 i nowsze również w tym nagrania ekranu blokowania. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia użytkownikowi przechwytywanie zawartości ekranu w formie obrazu lub pliku wideo.
   - **Zdalny podgląd ekranu za pomocą aplikacji Classroom (tylko nadzorowany)**: wybierz pozycję **Blokuj**, aby uniemożliwić aplikacji Classroom zdalne wyświetlanie podglądu ekranu w urządzeniach. Pozycja **Nieskonfigurowane** (domyślna) umożliwia aplikacji Classroom firmy Apple wyświetlanie ekranu.
 
     Ta funkcja ma zastosowanie do:  
@@ -158,7 +158,7 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 - **Zakupy w aplikacji**: wybierz pozycję **Blokuj**, aby uniemożliwić dokonywanie zakupów w aplikacji ze sklepu. Pozycja **Nieskonfigurowane** zezwala na zakupy w sklepie w uruchomionej aplikacji.
 - **Jawna zawartość programu iTunes — muzyka, podcasty lub wiadomości (tylko tryb nadzorowany)**: wybierz pozycję **Blokuj**, aby uniemożliwić ujawnianie zawartości programu iTunes: muzyki, podkastów lub wiadomości. Pozycja **Nieskonfigurowane** zezwala urządzeniu na dostęp do zawartości w sklepie sklasyfikowanej jako zawartość dla dorosłych.
 - **Pobieranie ze sklepu iBook zawartości oznaczonej jako „Erotyka”**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom pobieranie ze sklepu iBook multimediów oznaczonych jako erotyka. Pozycja **Nieskonfigurowane** zezwala użytkownikom na pobieranie ze sklepu iBook książek z kategorii „Erotyka”.
-- **Wyświetlanie dokumentów firmowych w aplikacjach niezarządzanych**: pozycja **Blokuj** uniemożliwia wyświetlanie dokumentów innych niż firmowe w aplikacjach niezarządzanych. Pozycja **Nieskonfigurowane** zezwala na wyświetlanie dokumentów firmowych w dowolnej aplikacji. Na przykład chcesz uniemożliwić użytkownikom zapisywanie plików z aplikacji OneDrive w aplikacji Dropbox. Skonfiguruj to ustawienie jako **Blokuj**. Jeśli urządzenie otrzymało zasady (na przykład po ponownym uruchomieniu), nie ma już możliwości zapisywania.
+- **Wyświetlanie dokumentów firmowych w aplikacjach niezarządzanych**: pozycja **Blokuj** uniemożliwia wyświetlanie dokumentów firmowych w aplikacjach niezarządzanych. Pozycja **Nieskonfigurowane** zezwala na wyświetlanie dokumentów firmowych w dowolnej aplikacji. Na przykład chcesz uniemożliwić użytkownikom zapisywanie plików z aplikacji OneDrive w aplikacji Dropbox. Skonfiguruj to ustawienie jako **Blokuj**. Jeśli urządzenie otrzymało zasady (na przykład po ponownym uruchomieniu), nie ma już możliwości zapisywania.
   - **Zezwalaj zarządzanym aplikacjom na zapisuj kontakty do kont niezarządzanych kontakty**: po ustawieniu **Zezwalaj**, użytkownicy mogą dodać lub synchronizowania informacji skontaktuj się z pomocą programu Outlook każda osoba, łącznie z firmy i kontakty firmowe do wbudowana aplikacja kontakty na urządzeniu. Po ustawieniu opcji **Nieskonfigurowane** użytkownicy nie mogą dodawać kontaktów programu Outlook do wbudowanej aplikacji Kontakty na urządzeniu.
   
     Aby użyć tego ustawienia, skonfiguruj ustawienie **Wyświetlanie dokumentów firmowych w aplikacjach niezarządzanych** na wartość **Blokuj**.
@@ -255,7 +255,7 @@ Aby dodać aplikacje do tych list, możesz:
   Ta funkcja ma zastosowanie do:  
   - System iOS 11.0 i nowsze
 
-- **Osobisty hotspot**: pozycja **Blokuj** uniemożliwia używanie urządzenia jako osobistego hotspotu. To ustawienie może być niezgodne w przypadku niektórych operatorów. **Nieskonfigurowane** (ustawienie domyślne) umożliwia tej funkcji.
+- **Osobisty Hotspot**: **bloku** wyłącza osobisty hotspot na urządzeniu użytkownika przy każdej synchronizacji urządzenia. To ustawienie może być niezgodne w przypadku niektórych operatorów. **Nieskonfigurowane** (ustawienie domyślne) przechowuje konfigurację osobisty hotspot jako domyślnej ustawionej przez użytkownika.
 - **Dołączaj do sieci Wi-Fi wyłącznie za pomocą profilów konfiguracji (tylko nadzorowany)**: pozycja **Wymagaj** wymusza użycie na urządzeniu tylko sieci Wi-Fi, które zostały skonfigurowane przy użyciu profilu konfiguracji usługi Intune. Opcja **Nieskonfigurowane** (domyślna) zezwala urządzeniu na korzystanie z innych sieci Wi-Fi.
 - **Zasady użycia danych komórkowych (tylko aplikacje zarządzane)**: zdefiniuj typy danych, których aplikacje zarządzane mogą używać podczas pracy w sieciach komórkowych. Dostępne opcje:
   - **Zablokuj użycie danych komórkowych**: zablokuj użycie danych komórkowych dla **wszystkich zarządzanych aplikacji** lub **wybierz określone aplikacje**.
@@ -443,7 +443,7 @@ Tryb nadzorowany systemu iOS można włączyć tylko podczas początkowego konfi
 > - Zawartość dla dorosłych
 > - Dokumenty i dane iCloud
 > - Gry dla wielu graczy
-> - Dodaj przyjaciół centrum gier
+> - Dodawanie znajomych w aplikacji Game Center
 > - Siri
 
 ## <a name="next-steps"></a>Następne kroki

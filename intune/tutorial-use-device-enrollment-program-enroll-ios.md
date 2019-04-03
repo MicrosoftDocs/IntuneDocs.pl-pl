@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 1/30/2019
+ms.date: 03/29/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 Customer intent: As an Intune admin, I want to set up the Device Enrollment Program so that users can automatically enroll in Intune.
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 88fe825b75e7717740e5a5ca4af4c52e9bb21768
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: f9cd0eec492f5131e4015aa64eccb4c081c663ee
+ms.sourcegitcommit: 8e6f4acb592dbe5de63aa7642ee9487288740714
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57400402"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58646475"
 ---
 # <a name="tutorial-use-the-device-enrollment-program-to-enroll-ios-devices-in-intune"></a>Samouczek: rejestrowanie urządzeń z systemem iOS w usłudze Intune przy użyciu programu Device Enrollment Program
 Program Device Enrollment Program (DEP) firmy Apple ułatwia rejestrowanie urządzeń. Dzięki usłudze Microsoft Intune i programowi DEP urządzenia są automatycznie rejestrowane przy pierwszym uruchomieniu urządzenia przez użytkownika. Umożliwia to dostarczanie urządzeń wielu użytkownikom bez konieczności indywidualnego konfigurowania każdego urządzenia. 
@@ -61,7 +61,7 @@ W portalu Apple DEP Portal można utworzyć token programu DEP. W tym portalu mo
 
 5. W polu **MDM Server Name** (Nazwa serwera MDM) wpisz *TestMDMServer*, a następnie wybierz pozycję **Next** (Dalej). Nazwa serwera służy użytkownikowi do identyfikowania serwera MDM. Nie jest to nazwa ani adres URL serwera usługi Microsoft Intune.
 
-6. Zostanie otwarte okno dialogowe **Add &lt;nazwa_serwera&gt;** (Dodawanie serwera <nazwa_serwera>) z widocznym komunikatem **Upload Your Public Key** (Przekaż klucz publiczny). Kliknij pozycję **Choose File…** (Wybierz plik...) w celu przekazania pliku PEM, a następnie kliknij przycisk **Next** (Dalej).
+6. Zostanie otwarte okno dialogowe **Add &lt;nazwa_serwera&gt;** (Dodawanie serwera <nazwa_serwera>) z widocznym komunikatem **Upload Your Public Key** (Przekaż klucz publiczny). Wybierz pozycję **Choose File…** (Wybierz plik...) w celu przekazania pliku PEM, a następnie kliknij przycisk **Next** (Dalej).
 
 6. Wybierz pozycję **Deployment Programs** (Programy wdrażania)  > **Device Enrollment Program** > **Manage Devices** (Zarządzaj urządzeniami).
 7. W obszarze **Choose Devices By** (Wybierz urządzenia według) wybierz pozycję **Serial Number** (Numer seryjny). <!--ask Tiffany about this-->

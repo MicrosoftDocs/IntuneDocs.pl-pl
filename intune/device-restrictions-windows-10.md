@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/13/2019
+ms.date: 03/20/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8190365ad2b50dfa7369b8899e8984b6a52f1cba
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: HT
+ms.openlocfilehash: 7ca34826f3a235fe620b5ac0dcb95d57dabf4c71
+ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566756"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58395004"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem Windows 10 (i nowszym) w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune
 
@@ -29,7 +29,7 @@ W tym artykule wymieniono i opisano wszystkie różne ustawienia, którymi możn
 Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune, a następnie przypisywane lub wdrażane na urządzeniach z systemem Windows 10.
 
 > [!Note]
-> Nie wszystkie opcje są dostępne we wszystkich wersjach systemu Windows
+> Nie wszystkie opcje są dostępne we wszystkich wersjach systemu Windows. Aby wyświetlić obsługiwanych wersji, zapoznaj się [zasad CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider) (otwiera innej witryny sieci web firmy Microsoft).
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
@@ -59,13 +59,13 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 - **Odnajdowanie Bluetooth**: umożliwia wykrycie urządzenia przez inne urządzenia obsługujące technologię Bluetooth.
 - **Wstępne parowanie przy użyciu połączenia Bluetooth**: umożliwia skonfigurowanie automatycznego łączenia się określonych urządzeń Bluetooth z urządzeniem hosta.
 - **Rozgłaszanie Bluetooth**: umożliwia odbieranie reklam przez urządzenie za pośrednictwem połączenia Bluetooth.
-- **Usługa podłączonych urządzeń**: określa, czy zezwalać na używanie usługi podłączonych urządzeń, która umożliwia odnajdowanie i nawiązywanie połączenia z innymi urządzeniami Bluetooth.
-- **NFC**: umożliwia użytkownikowi włączanie i konfigurowanie funkcji komunikacji zbliżeniowej (NFC) na urządzeniu.
+- **Usługa podłączonych urządzeń**: umożliwia wybranie, czy zezwalać na używanie usługi podłączonych urządzeń, która umożliwia odnajdowanie i nawiązywanie połączenia z innymi urządzeniami Bluetooth.
+- **NFC**: umożliwia użytkownikowi włączanie i konfigurowanie funkcji komunikacji zbliżeniowej (NFC, Near Field Communications) na urządzeniu.
 - **Wi-Fi**: umożliwia użytkownikowi włączanie i konfigurowanie sieci Wi-Fi na urządzeniu (tylko system Windows 10 Mobile).
 - **Automatycznie łącz się z hotspotami Wi-Fi**: umożliwia automatyczne łączenie się przy użyciu urządzenia z bezpłatnymi hotspotami Wi-Fi oraz automatyczne akceptowanie wszelkich warunków i postanowień związanych z połączeniem.
 - **Ręczna konfiguracja sieci Wi-Fi**: określa, czy użytkownik może konfigurować własne połączenia sieci Wi-Fi, czy używać tylko połączeń skonfigurowanych przez profil sieci Wi-Fi (tylko system Windows 10 Mobile).
-- **Interwał skanowania sieci Wi-Fi**: pozwala określić, jak często urządzenie ma wyszukiwać sieci Wi-Fi. Podaj wartość z zakresu od 1 (najczęściej) do 500 (najrzadziej).
-- **Dozwolone usługi Bluetooth**: lista dozwolonych usług i profilów Bluetooth określana w postaci ciągów szesnastkowych.
+- **Interwał skanowania sieci Wi-Fi**: wprowadź wartość określającą, jak często urządzenie ma wyszukiwać sieci Wi-Fi. Wprowadź wartość z zakresu od 1 (najczęściej) do 500 (najrzadziej).
+- **Dozwolone usługi Bluetooth**: wprowadź listę dozwolonych usług i profilów Bluetooth w postaci ciągów szesnastkowych.
 
 ## <a name="cloud-and-storage"></a>Chmura i magazyn
 
@@ -145,7 +145,6 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 
 - **Kończyć procesy w Menedżerze zadań**: to ustawienie określa, czy użytkowników niebędących administratorami Menedżera zadań można użyć do zakończenia zadań. Pozycja **Blokuj** uniemożliwia użytkownikom standardowym (niebędącym administratorami) używanie Menedżera zadań do zakończenia procesu lub zadania na urządzeniu. **Nieskonfigurowane** (wartość domyślna) umożliwia użytkownikom standardowym zakończenie procesu lub zadania za pomocą Menedżera zadań.
 
-
 ## <a name="locked-screen-experience"></a>Środowisko ekranu blokady
 
 - **Powiadomienia centrum akcji (tylko dla urządzeń przenośnych)**: włącza powiadomienia z centrum akcji na ekranie blokady urządzenia (tylko system Windows 10 Mobile).
@@ -168,25 +167,25 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 Zmienić dostępne ustawienia w zależności od dokonanego wyboru. Dostępne opcje:
 
 - **Nie** (ustawienie domyślne): Microsoft Edge nie jest uruchomiony w trybie kiosku. Wszystkie ustawienia Microsoft Edge są dostępne dla Ciebie zmiany i skonfigurować.
-- **Znakowania cyfrowego/Interactive (kiosk z pojedynczą aplikacją)**: ustawienia krawędzi filtry, które są odpowiednie dla trybu kiosku usługi Edge znakowania cyfrowego/Interactive tylko na kioski pojedynczej aplikacji systemu Windows 10. Wybierz to ustawienie, aby otworzyć ekran pełny adres URL, a tylko Wyświetla zawartość w tej witrynie sieci Web. [Konfigurowanie cyfrowego podpisuje](https://docs.microsoft.com/windows/configuration/setup-digital-signage) zawiera więcej informacji na temat tej funkcji.
-- **Publiczne przeglądania inPrivate (kiosk z pojedynczą aplikacją)**: ustawienia krawędzi filtry, które są odpowiednie dla trybu InPrivate przeglądania krawędzi kiosku publicznego do użycia na kioski pojedynczej aplikacji systemu Windows 10. Z wersją wieloma kartami Microsoft Edge.
-- **Tryb normalny (kiosk z wieloma aplikacjami)**: ustawienia krawędzi filtry, które są odpowiednie dla trybu kiosku usługi Edge normalny. Uruchamia pełnej wersji programu Microsoft Edge z wszystkich funkcji przeglądania.
-- **Publiczne przeglądania (kiosk z wieloma aplikacjami)**: ustawienia filtry Edge, które mają zastosowanie do przeglądania publicznego na kiosk z wieloma aplikacjami systemu Windows 10.  Z wersją wieloma kartami InPrivate przeglądarki Microsoft Edge.
+- **Znakowania cyfrowego/Interactive (kiosk z pojedynczą aplikacją)**: ustawienia przeglądarki Microsoft Edge filtry, które są odpowiednie dla trybu kiosku krawędź firmy Microsoft znakowania cyfrowego/Interactive tylko na kioski pojedynczej aplikacji systemu Windows 10. Wybierz to ustawienie, aby otworzyć ekran pełny adres URL, a tylko Wyświetla zawartość w tej witrynie sieci Web. [Konfigurowanie cyfrowego podpisuje](https://docs.microsoft.com/windows/configuration/setup-digital-signage) zawiera więcej informacji na temat tej funkcji.
+- **Publiczne przeglądania inPrivate (kiosk z pojedynczą aplikacją)**: ustawienia przeglądarki Microsoft Edge filtry, które są odpowiednie dla trybu InPrivate przeglądania Microsoft Edge kiosku publicznego do użycia na kioski pojedynczej aplikacji systemu Windows 10. Z wersją wieloma kartami Microsoft Edge.
+- **Tryb normalny (kiosk z wieloma aplikacjami)**: ustawienia przeglądarki Microsoft Edge filtry, które są odpowiednie dla trybu kiosku krawędź firmy Microsoft normalny. Uruchamia pełnej wersji programu Microsoft Edge z wszystkich funkcji przeglądania.
+- **Publiczne przeglądania (kiosk z wieloma aplikacjami)**: ustawienia przeglądarki Microsoft Edge filtry, które są odpowiednie dla publicznej przeglądania na kiosk z wieloma aplikacjami systemu Windows 10.  Z wersją wieloma kartami InPrivate przeglądarki Microsoft Edge.
 
 > [!TIP]
 > Aby uzyskać więcej informacji na temat działania tych opcji, zobacz [typów konfiguracji trybu kiosku Microsoft Edge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
 Ten profil ograniczeń urządzenia są bezpośrednio związane z profilu kiosku możesz utworzyć przy użyciu [ustawienia kiosku Windows](kiosk-settings-windows.md). Podsumowując:
 
-1. Tworzenie [ustawienia kiosku Windows](kiosk-settings-windows.md) profilu do uruchomienia urządzenia w trybie kiosku. Wybierz Microsoft Edge jako aplikacja i ustaw tryb kiosku krawędzi w profilu kiosku.
-2. Tworzenie profilu ograniczeń urządzenia, które są opisane w tym artykule i skonfiguruj określonych funkcji i ustawień w programie Microsoft Edge. Pamiętaj wybrać ten sam typ trybu kiosku krawędzi wybierany w Twoim profilu kiosku ([ustawienia kiosku Windows](kiosk-settings-windows.md)). 
+1. Tworzenie [ustawienia kiosku Windows](kiosk-settings-windows.md) profilu do uruchomienia urządzenia w trybie kiosku. Wybierz Microsoft Edge jako aplikacja i ustaw tryb kiosku programu Microsoft Edge w profilu kiosku.
+2. Tworzenie profilu ograniczeń urządzenia, które są opisane w tym artykule i skonfiguruj określonych funkcji i ustawień w programie Microsoft Edge. Pamiętaj wybrać ten sam typ trybu kiosku Microsoft Edge wybierany w Twoim profilu kiosku ([ustawienia kiosku Windows](kiosk-settings-windows.md)). 
 
     [Obsługiwane ustawienia trybu kiosku](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-policies-for-kiosk-mode) jest doskonałym zasobem.
 
 > [!IMPORTANT] 
 > Pamiętaj przypisać ten profil Microsoft Edge do tych samych urządzeń jako profilu kiosku ([ustawienia kiosku Windows](kiosk-settings-windows.md)).
 
-Dostawcy usług Kryptograficznych: [ConfigureKioskMode](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-configurekioskmode)
+[ConfigureKioskMode dostawcy usług Kryptograficznych](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-configurekioskmode)
 
 ### <a name="start-experience"></a>Środowisko rozpoczynania pracy
 
@@ -204,7 +203,7 @@ Dostawcy usług Kryptograficznych: [ConfigureKioskMode](https://docs.microsoft.c
   - **Niestandardowy adres URL przycisku Strona główna**: jest otwierana opcja wybrana dla ustawienia **Adres URL przycisku Strona główna**
   - **Ukryj przycisk Strona główna**: ukrywa przycisk Strona główna
 - **Użytkownik może zmieniać przycisk Strona główna**: pozycja **Zezwalaj** umożliwia użytkownikom zmienianie przycisku strony głównej. Zmiany wprowadzone przez użytkownika zastępują wszelkie ustawienia administratora, które dotyczą przycisku strony głównej. Pozycja **Nieskonfigurowane** używa domyślnego zachowania systemu operacyjnego na urządzeniu, które może uniemożliwiać użytkownikom zmianę sposobu skonfigurowania przycisku Strona główna przez administratora.
-- **Pokaż stronę pierwszego uruchomienia**: pozycja **Blokuj** blokuje wyświetlanie strony wprowadzenia przy pierwszym uruchomieniu przeglądarki Microsoft Edge. Ta funkcja umożliwia przedsiębiorstwom, takim jak zarejestrowane w konfiguracjach zeroemisyjnych, na blokowanie tej strony. Pozycja **Nieskonfigurowane** powoduje wyświetlanie strony wprowadzenia.
+- **Pokaż stronę pierwszego uruchomienia**: pozycja **Blokuj** blokuje wyświetlanie strony wprowadzenia przy pierwszym uruchomieniu przeglądarki Microsoft Edge. Ta funkcja umożliwia przedsiębiorstwom, takim jak organizacje zarejestrowane w konfiguracjach zeroemisyjnych, na blokowanie tej strony. Pozycja **Nieskonfigurowane** powoduje wyświetlanie strony wprowadzenia.
   - **Adres URL pierwszego uruchomienia**: wprowadź adres URL strony do wyświetlenia, gdy użytkownik po raz pierwszy uruchamia przeglądarkę Microsoft Edge (tylko system Windows 10 Mobile).
 - **Odśwież przeglądarkę po bezczynności**: Wprowadź liczbę minut bezczynności, aż przeglądarka zostanie odświeżona, od 0 do 1440 minut. Wartość domyślna to `5` minut. Po ustawieniu `0` (zero), przeglądarka odświeżanie nie odbywa się po okresie bezczynności.
 
@@ -300,7 +299,7 @@ Dostawcy usług Kryptograficznych: [ConfigureKioskMode](https://docs.microsoft.c
 - **Hasło**: wymaga od użytkownika końcowego wprowadzenia hasła w celu uzyskania dostępu do urządzenia.
   - **Wymagany typ hasła**: określa, czy hasło musi być wyłącznie numeryczne, czy też alfanumeryczne.
   - **Minimalna długość hasła**: dotyczy tylko systemu Windows 10 Mobile.
-  - **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia**: jeśli na urządzeniu z systemem Windows 10 została włączona funkcja BitLocker, po określonej liczbie nieudanych prób logowania zostanie ono przełączone w tryb odzyskiwania funkcji BitLocker. Jeśli na urządzeniu nie została włączona funkcja BitLocker, to ustawienie nie będzie miało zastosowania. Na urządzeniach z systemem Windows 10 Mobile: po określonej liczbie niepowodzeń logowania urządzenie zostanie wyczyszczone.
+  - **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia**: jeśli na urządzeniu z systemem Windows 10 została włączona funkcja BitLocker, po określonej liczbie nieudanych prób logowania zostanie ono przełączone w tryb odzyskiwania funkcji BitLocker. Jeśli na urządzeniu nie została włączona funkcja BitLocker, to ustawienie nie będzie miało zastosowania. Na urządzeniach z systemem Windows 10 Mobile: po wprowadzonej liczbie niepowodzeń logowania urządzenie zostanie wyczyszczone.
   - **Maksymalna liczba minut braku aktywności przed zablokowaniem ekranu**: określa, jak długo urządzenie musi pozostawać w stanie bezczynności, zanim ekran zostanie automatycznie zablokowany.
   - **Wygaśnięcie hasła (dni)**: określa czas, po którym należy zmienić hasło urządzenia.
   - **Zapobiegaj ponownemu użyciu starych haseł**: określa liczbę poprzednich haseł zapamiętywanych przez urządzenie.
@@ -331,7 +330,7 @@ Możesz dodawać aplikacje, dla których chcesz określić inne zachowanie dotyc
 - **Telefon**: określ, czy ta aplikacja może uzyskiwać dostęp do telefonu.
 - **Urządzenia radiowe**: niektóre aplikacje używają urządzeń radiowych (np. Bluetooth) w urządzeniu do wysyłania lub odbierania danych i muszą te urządzenia radiowe włączać lub wyłączać. Określ, czy ta aplikacja będzie mogła sterować tymi urządzeniami radiowymi.
 - **Zadania**: określ, czy ta aplikacja może uzyskiwać dostęp do zadań.
-- **Zaufane urządzenia**: określ, czy ta aplikacja może używać zaufanych urządzeń, czyli sprzętu, z którym już nawiązano połączenie, lub dołączonego do urządzenia. Jako zaufanych urządzeń można na przykład użyć telewizorów, projektorów itd.
+- **Zaufane urządzenia**: Wybierz, jeśli ta aplikacja może używać zaufanych urządzeń. Zaufane urządzenia to sprzęt, z którym już nawiązano połączenie, lub sprzęt dołączony do urządzenia. Jako zaufanych urządzeń można na przykład użyć telewizorów, projektorów itd.
 - **Opinie i diagnostyka**: określ, czy ta aplikacja może uzyskiwać dostęp do informacji diagnostycznych.
 - **Synchronizacja z urządzeniami**: wybierz, czy ta aplikacja może automatycznie udostępniać informacje i synchronizować je z urządzeniami bezprzewodowymi, które nie są jawnie sparowane z tym urządzeniem.
 
@@ -352,7 +351,7 @@ Możesz dodawać aplikacje, dla których chcesz określić inne zachowanie dotyc
 - **Publikuj działania użytkownika**: pozycja **Blokuj** uniemożliwia udostępnianie środowisk i odnajdywanie ostatnio używanych zasobów w przełączniku zadań.
 - **Tylko działania lokalne**: pozycja **Blokuj** uniemożliwia udostępnianie środowisk i odnajdywanie ostatnio używanych zasobów w przełączniku zadań jedynie na podstawie działań lokalnych.
 
-Można skonfigurować informacje, do których mogą uzyskiwać dostęp wszystkie aplikacje na urządzeniu. Można także zdefiniować wyjątki dla poszczególnych aplikacji, korzystając z opcji **Wyjątki prywatności dla aplikacji**.
+Można skonfigurować informacje, do których mogą uzyskiwać dostęp wszystkie aplikacje na urządzeniu. Ponadto należy zdefiniować wyjątki dla poszczególnych aplikacji, korzystając z opcji **Wyjątki prywatności dla aplikacji**.
 
 ### <a name="exceptions"></a>Wyjątki
 
@@ -371,7 +370,7 @@ Można skonfigurować informacje, do których mogą uzyskiwać dostęp wszystkie
 - **Telefon**: określ, czy ta aplikacja może uzyskiwać dostęp do telefonu.
 - **Urządzenia radiowe**: niektóre aplikacje używają urządzeń radiowych (np. Bluetooth) w urządzeniu do wysyłania lub odbierania danych i muszą te urządzenia radiowe włączać lub wyłączać. Określ, czy ta aplikacja będzie mogła sterować tymi urządzeniami radiowymi.
 - **Zadania**: określ, czy ta aplikacja może uzyskiwać dostęp do zadań.
-- **Zaufane urządzenia**: Wybierz, jeśli ta aplikacja może używać zaufanych urządzeń. Zaufane urządzenia to sprzęt, z którym już nawiązano połączenie, lub dołączony do urządzenia. Jako zaufanych urządzeń można na przykład użyć telewizorów, projektorów itd.
+- **Zaufane urządzenia**: Wybierz, jeśli ta aplikacja może używać zaufanych urządzeń. Zaufane urządzenia to sprzęt, z którym już nawiązano połączenie, lub sprzęt dołączony do urządzenia. Jako zaufanych urządzeń można na przykład użyć telewizorów, projektorów itd.
 - **Opinie i diagnostyka**: określ, czy ta aplikacja może uzyskiwać dostęp do informacji diagnostycznych.
 - **Synchronizacja z urządzeniami** — określ, czy ta aplikacja może automatycznie udostępniać informacje i synchronizować je z urządzeniami bezprzewodowymi, które nie są jawnie sparowane z tym komputerem, tabletem lub telefonem.
 
@@ -393,7 +392,7 @@ Można skonfigurować informacje, do których mogą uzyskiwać dostęp wszystkie
   - **Wysyłaj tylko dane intranetowe**: umożliwia administratorowi wysyłanie historii danych intranetowych
   - **Wysyłaj tylko dane internetowe**: umożliwia administratorowi wysyłanie historii danych internetowych
   - **Wysyłaj dane intranetowe i internetowe**: umożliwia administratorowi wysyłanie historii danych intranetowych i internetowych
-- **Serwer proxy telemetrii**: wprowadź w pełni kwalifikowaną nazwę domeny (FQDN) lub adres IP serwera proxy do przekazywania żądań środowisk i telemetrii połączonego użytkownika przy użyciu połączenia SSL (Secure Sockets Layer). Format dla tego ustawienia to: *serwer*:*port*. Jeśli nazwany serwer proxy ulegnie awarii lub jeśli serwer proxy nie będzie określony w momencie włączenia tych zasad, dane środowisk i telemetrii połączonego użytkownika nie zostaną przesłane i pozostaną na urządzeniu lokalnym.
+- **Serwer proxy telemetrii**: wprowadź w pełni kwalifikowaną nazwę domeny (FQDN) lub adres IP serwera proxy do przekazywania żądań środowisk i telemetrii połączonego użytkownika przy użyciu połączenia SSL (Secure Sockets Layer). Format dla tego ustawienia to: *serwer*:*port*. Jeśli nazwany serwer proxy ulegnie awarii lub jeśli serwer proxy nie zostanie wprowadzony w momencie włączenia tych zasad, dane środowisk i telemetrii połączonego użytkownika nie zostaną wysłane i pozostaną na urządzeniu lokalnym.
 
   Przykładowe formaty:
 
@@ -467,24 +466,46 @@ Można skonfigurować informacje, do których mogą uzyskiwać dostęp wszystkie
 - **Skanuj wszystkie pobrane pliki**: określa, czy usługa Defender ma skanować wszystkie pliki pobierane z Internetu.
 - **Skanuj skrypty ładowane w przeglądarkach internetowych firmy Microsoft**: umożliwia usłudze Defender skanowanie skryptów używanych przez przeglądarkę Internet Explorer.
 - **Dostęp użytkownika końcowego do narzędzia Defender**: określa, czy interfejs użytkownika programu Windows Defender jest ukryty dla użytkowników końcowych. Zmiany tego ustawienia zostaną wprowadzone po następnym ponownym uruchomieniu komputera użytkownika.
-- **Interwał aktualizacji sygnatur (w godzinach)**: określa interwał sprawdzania dostępności nowych plików sygnatur przez usługę Defender.
+- **Interwał aktualizacji sygnatur (w godzinach)**: wprowadź interwał sprawdzania dostępności nowych plików sygnatur przez usługę Defender.
 - **Monitoruj działanie plików i programów**: zezwala usłudze Defender na monitorowanie działania plików i programów na urządzeniach.
-- **Dni przed usunięciem złośliwego oprogramowania poddanego kwarantannie**: umożliwia usłudze Defender kontynuowanie śledzenia wykrytego złośliwego oprogramowania przez podaną liczbę dni, co pozwala ręcznie sprawdzać urządzenia, które wcześniej zostały zainfekowane. Jeśli liczba dni zostanie ustawiona na **0**, złośliwe oprogramowanie pozostanie w folderze kwarantanny i nie będzie automatycznie usuwane.
-- **Limit wykorzystania procesora CPU podczas skanowania**: pozwala ograniczyć użycie procesora CPU dozwolone dla procesów skanowania (w skali od **1** do **100**).
+- **Dni przed usunięciem szkodliwego oprogramowania w kwarantannie**: kontynuować śledzenie usuniętego złośliwego oprogramowania liczbę dni, możesz wprowadzić, pozwala na ręczne sprawdzenie wcześniej wpływ na urządzenia. Jeśli liczba dni zostanie ustawiona na **0**, złośliwe oprogramowanie pozostanie w folderze kwarantanny i nie będzie automatycznie usuwane.
+- **Limit wykorzystania procesora CPU podczas skanowania**: ogranicz użycie procesora dozwolone dla procesów skanowania w skali od **1** do **100**.
 - **Skanuj pliki archiwów**: zezwala usłudze Defender na skanowanie plików archiwów, na przykład plików zip i cab.
 - **Skanuj przychodzące wiadomości e-mail**: zezwala usłudze Defender na skanowanie wiadomości e-mail dostarczanych do urządzenia.
 - **Skanuj dyski wymienne podczas pełnego skanowania**: umożliwia usłudze Defender skanowanie dysków wymiennych, na przykład dysków USB.
 - **Skanuj zamapowane dyski sieciowe podczas pełnego skanowania**: umożliwia usłudze Defender skanowanie plików na zamapowanych dyskach sieciowych.
   Jeśli pliki na dysku są plikami tylko do odczytu, usługa Defender nie będzie mogła usunąć z nich wykrytego złośliwego oprogramowania.
 - **Skanuj pliki otwierane z folderów sieciowych**: umożliwia usłudze Defender skanowanie plików na udostępnionych dyskach sieciowych (np. dyskach dostępnych za pośrednictwem ścieżki UNC). Jeśli pliki na dysku są plikami tylko do odczytu, usługa Defender nie będzie mogła usunąć z nich wykrytego złośliwego oprogramowania.
-- **Ochrona w chmurze**: zezwala usłudze Microsoft Active Protection na odbieranie informacji o działaniu złośliwego oprogramowania z zarządzanych urządzeń lub blokuje tę możliwość. Te informacje służą ulepszaniu usługi w przyszłości.
+- **Ochrona w chmurze**: zezwala usłudze Microsoft Active Protection na odbieranie informacji o działaniu złośliwego oprogramowania z zarządzanych urządzeń lub blokuje tę możliwość. Tych informacji usprawnia usługi w przyszłości.
 - **Monituj użytkowników przed przesłaniem próbki**: określa, czy do firmy Microsoft są automatycznie wysyłane potencjalnie złośliwe pliki, które mogą wymagać dalszej analizy.
-- **Godzina przeprowadzania codziennego szybkiego skanowania**: umożliwia zaplanowanie szybkiego skanowania wykonywanego codziennie o wybranej godzinie.
-- **Typ skanowania systemu do wykonania**: wprowadź poziom skanowania uruchamianego w przypadku planowania skanowania systemu.
+- **Godzina przeprowadzania codziennego szybkiego skanowania**: Wybierz godzinę uruchamiaj codzienne szybkie skanowanie. **Nieskonfigurowane** codzienne skanowanie nie zostanie uruchomiona. Jeśli większym stopniu, należy skonfigurować **typ skanowania systemu do wykonania** ustawienie.
+
+  [Defender/ScheduleQuickScanTime CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulequickscantime) (Zasady zabezpieczeń zawartości Defender/ScheduleQuickScanTime)
+- **Typ skanowania systemu do wykonania**: Zaplanuj skanowanie systemu, w tym poziom skanowania i dzień i godzinę, aby uruchomić skanowanie. Dostępne opcje:
+  - **Nieskonfigurowane**: nie Zaplanuj skanowanie systemu na urządzeniu. Użytkownicy końcowi mogą ręcznie uruchomić skanowania jako wymagane lub niepożądane, na swoich urządzeniach.
+  - **Wyłącz**: wyłącza każdego systemu, skanowania na urządzeniu. Wybierz tę opcję, jeśli używasz rozwiązania partnerskiego oprogramowanie antywirusowe skanuje urządzeń.
+  - **Szybkie skanowanie w poszukiwaniu**: typowe lokalizacje, w przypadku, gdy istnieje złośliwe oprogramowanie może być zarejestrowane, takie jak klucze rejestru i znane foldery uruchamiania Windows.
+    - **Zaplanowany dzień**: Wybierz dzień, aby uruchomić skanowanie.
+    - **Zaplanowana godzina**: Wybierz godzinę, aby uruchomić skanowanie.
+  - **Pełne skanowanie w poszukiwaniu**: typowe lokalizacje, w których może być złośliwego oprogramowania rejestrowane i również przeskanuje każdego pliku i folderu na urządzeniu.
+    - **Zaplanowany dzień**: Wybierz dzień, aby uruchomić skanowanie.
+    - **Zaplanowana godzina**: Wybierz godzinę, aby uruchomić skanowanie.
+
+  To ustawienie może spowodować konflikt z **godzina przeprowadzania codziennego szybkiego skanowania** ustawienie. Niektóre rekomendacje:
+
+  - Aby uruchomić codzienne szybkie skanowanie, należy skonfigurować **godzina przeprowadzania codziennego szybkiego skanowania** ustawienie.
+  - Aby uruchomić codziennego szybkiego skanowania i pełne skanowanie w poszukiwaniu co tydzień, następnie skonfiguruj **godzina przeprowadzania codziennego szybkiego skanowania**i ustaw **typ skanowania systemu do wykonania** do pełnego skanowania za pomocą datę i godzinę.
+  - Nie należy konfigurować **godzina przeprowadzania codziennego szybkiego skanowania** ustawienie równocześnie z **typ skanowania systemu do wykonania** równa **szybkie skanowanie w poszukiwaniu**. Te ustawienia mogą powodować konflikt, a skanowanie może nie działać.
+  - Aby uruchomić szybkie skanowanie każdy wtorek o 6: 00, należy skonfigurować **typ skanowania systemu do wykonania** ustawienie.
+
+  [Usługa Defender/ScanParameter dostawcy usług Kryptograficznych](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-scanparameter)  
+  [Usługa Defender/ScheduleScanDay dostawcy usług Kryptograficznych](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)  
+  [Usługa Defender/ScheduleScanTime dostawcy usług Kryptograficznych](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescantime)
+
 - **Wykrywaj potencjalnie niepożądane aplikacje**: pozwala wybrać poziom ochrony w przypadku wykrycia potencjalnie niechcianych aplikacji przez system Windows:
   - **Zablokuj**
   - **Inspekcja** Aby uzyskać więcej informacji dotyczących potencjalnie niepożądanych aplikacji, zobacz temat [Detect and block potentially unwanted applications](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus) (Wykrywanie i blokowanie potencjalnie niepożądanych aplikacji).
-- **Akcje do podjęcia wobec wykrytych zagrożeń związanych ze złośliwym oprogramowaniem**: użyj tej opcji w celu wskazania akcji, które ma podejmować usługa Defender po wykryciu zagrożenia określonego poziomu (niski, umiarkowany, wysoki i poważny). Dostępne opcje:
+- **Akcje do podjęcia wobec wykrytych zagrożeń związanych ze złośliwym oprogramowaniem**: wybierz akcje, które ma podejmować usługa Defender po wykryciu zagrożenia określonego poziomu, takiego jak: niski, umiarkowany, wysoki i poważny. Dostępne opcje:
   - **Wyczyść**
   - **Kwarantanna**
   - **Usuń**

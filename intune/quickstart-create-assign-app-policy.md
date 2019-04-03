@@ -1,12 +1,12 @@
 ---
 title: Szybki start — tworzenie i przypisywanie zasad ochrony aplikacji
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: W tym przewodniku Szybki start utworzysz i przypiszesz za pomocą usługi Microsoft Intune zasady ochrony aplikacji.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/09/2018
+ms.date: 03/26/2019
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7dee5407b39d9299081bf526b117c64b5883a106
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 5d7e63542563425606cf1f9a8509a7bf0c09b9a9
+ms.sourcegitcommit: 79baf89e4a7a7b1cecb8ccf5cb976736ae6a7286
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57393366"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58871365"
 ---
 # <a name="quickstart-create-and-assign-an-app-protection-policy"></a>Szybki start: Tworzenie i przypisywanie zasad ochrony aplikacji
 
@@ -72,7 +72,7 @@ Aby przypisać zasady ochrony aplikacji, wykonaj następujące kroki:
 3.  Wybierz pozycję **Przypisania**.
 4.  Na karcie **Dołączanie** wybierz pozycję **Wybierz grupy do uwzględnienia**.
 5.  Jako grupę do dołączenia wybierz grupę **Testerzy firmy Contoso**.
-6.  Kliknij pozycję **Wybierz**. 
+6.  Kliknij kolejno pozycje **Wybierz** > **Zapisz**. 
 
 Zasady ochrony aplikacji zostały przypisane.
 

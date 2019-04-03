@@ -1,12 +1,12 @@
 ---
 title: Samouczek — chronienie poczty e-mail usługi Exchange Online na urządzeniach zarządzanych przez usługę Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Dowiedz się, jak zabezpieczać usługę Exchange Online przy użyciu zasad zgodności usługi Intune dla systemu iOS oraz dostępu warunkowego usługi Azure AD w celu wymagania zarządzanych urządzeń i aplikacji Outlook.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/19/2018
+ms.date: 03/26/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6c76a22fec1342481a67029147c757347a06447c
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: f4a8e873c48ceb59bfb8ac98fec9a29fa51d6cd3
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57528211"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799772"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>Samouczek: Chronienie poczty e-mail usługi Exchange Online na urządzeniach zarządzanych
 Dowiedz się więcej na temat używania zasad zgodności urządzeń z dostępem warunkowym w celu zagwarantowania, że urządzenia z systemem iOS będą mogły uzyskiwać dostęp do poczty e-mail usługi Exchange Online tylko wtedy, gdy będą zarządzane przez usługę Intune i będą korzystać z zatwierdzonej aplikacji poczty e-mail. 
@@ -43,7 +43,7 @@ Jeśli nie masz subskrypcji usługi Intune, [utwórz konto bezpłatnej wersji pr
 
 ## <a name="sign-in-to-intune"></a>Logowanie się do usługi Intune
 
-Zaloguj się w usłudze [Intune](https://aka.ms/intuneportal) jako administrator globalny lub administrator usługi Intune. Dostęp do usługi Intune można uzyskać w witrynie Azure Portal, wybierając pozycję **Wszystkie usługi** > **Intune**.
+Zaloguj się w usłudze [Intune](https://aka.ms/intuneportal) jako administrator globalny lub administrator usługi Intune. Jeśli utworzono subskrypcję wersji próbnej usługi Intune, konto, którego użyto do utworzenia subskrypcji, jest administratorem globalnym.
 
 ## <a name="create-the-ios-device-compliance-policy"></a>Tworzenie zasad zgodności urządzenia z systemem iOS
 Skonfiguruj zasady zgodności urządzeń z systemem iOS w usłudze Intune w celu ustawienia warunków, które urządzenie musi spełniać, aby zostało uznane za zgodne. W tym samouczku utworzymy zasady zgodności urządzeń z systemem iOS. Zasady zgodności są specyficzne dla platformy, dlatego potrzebujesz osobnych zasad zgodności dla każdej platformy urządzeń przeznaczonych do oceny.
@@ -93,7 +93,7 @@ Teraz utworzymy zasady dostępu warunkowego, które wymagają zarejestrowania ws
 5.  W obszarze **Przypisania** wybierz kolejno pozycje **Warunki** > **Platformy urządzeń**.
      
     1. W obszarze **Konfiguruj** wybierz pozycję **Tak**.
-    2. Na karcie **Dołączanie** wybierz pozycję **wszystkich platform (w tym nieobsługiwane)**, a następnie wybierz pozycję **Gotowe**. 
+    2. Na karcie **Dołączanie** wybierz pozycję **Dowolne urządzenie**, a następnie wybierz pozycję **Gotowe**. 
     3. Ponownie wybierz pozycję **Gotowe**.
    
     ![Wybieranie aplikacji Office 365 Exchange Online](media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-cloud-device-platforms.png)

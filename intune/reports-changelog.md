@@ -6,7 +6,7 @@ keywords: Magazyn danych usługi Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/22/2019
+ms.date: 03/21/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,18 +18,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 20c9c1bf5eea12407cba2e00288a039b74fcaca7
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: d7d69c602471e8508744f2a00008294cbd335204
+ms.sourcegitcommit: 93286c22426dcb59191a99e3cf2af4ff6ff16522
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565642"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58358262"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Dziennik zmian dla interfejsu API magazynu danych usługi Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Bądź na bieżąco z aktualizacjami magazynu danych usługi Intune.
+
+## <a name="1903"></a>1903
+_Wydanie: marzec 2019 r._
+
+### <a name="v10-changes-reflecting-back-to-beta"></a>Zmiany w wersji 1.0 odzwierciedlający do wersji beta
+Gdy V1.0 została wprowadzona w 1808, różnił się pod pewnymi względami znaczne z wersji beta interfejsu API. W 1903 te zmiany zostaną odzwierciedlone na wersji beta interfejsu API. Jeśli masz ważne raporty, które używają wersji interfejsu API w wersji beta, zdecydowanie zalecamy przełączanie tych raportów można uniknąć istotne zmiany w wersji 1.0. Zapoznaj się [informacje o wersji interfejsu API](reports-api-url.md) Aby uzyskać więcej informacji na temat wersji interfejsu API magazynu danych i do tyłu zgodności. 
 
 ## <a name="1902"></a>1902 
 _Wydane w lutym 2019 r._
@@ -42,9 +48,9 @@ Dostęp do magazynu danych usługi Intune w usłudze Power BI Online przy użyci
 > Istnieją dwa dodatkowe filtry, które można zastosować do aplikacji usługi Intune zgodność.
 
 #### <a name="add-additional-filters-to-the-intune-compliance-app"></a>Dodawanie dodatkowych filtrów do aplikacji zgodności usługi Intune
-1. Otwórz [zgodności usługi Intune (Data Warehouse)](https://app.powerbi.com/groups/me/getapps/services/Intune_dw_compliance) aplikacji w browers usługi sieci web.
+1. Otwórz [zgodności usługi Intune (Data Warehouse)](https://app.powerbi.com/groups/me/getapps/services/Intune_dw_compliance) aplikacji w swojej przeglądarki sieci web.
 2. Kliknij przycisk **niezgodne urządzenia** i wybierz **niezgodne** w **complianceStatus** filtru. 
-3. Kliknij pozycję **nieznane urządzenia** i wybierz **nie jest jeszcze dostępna** w **complianceStatus** filtru. 
+3. Kliknij pozycję **nieznanym urządzeniom** i wybierz **nie jest jeszcze dostępna** w **complianceStatus** filtru. 
 
 ## <a name="1812"></a>1812 
 _Wydanie: grudzień 2018 r._
@@ -93,7 +99,7 @@ Parametru <code>$select</code> można użyć jako parametru zapytania OData. Bie
 
 ### <a name="new-entities-in-the-in-data-warehouse-data-model----2077804---"></a>Nowe jednostki w modelu danych magazynu danych <!-- 2077804 -->
 
- - Dodano jednostkę [**MobileAppDeviceuserInstallStatus**](reports-ref-application.md#mobileappdeviceuserinstallstatus). Jednostka **MobileAppDeviceUserInstallStatus** reprezentuje stan instalacji aplikacji mobilnej dla danego urządzenia i użytkownika.
+ - Dodano jednostkę [**MobileAppDeviceuserInstallStatus**](reports-ref-application.md). Jednostka **MobileAppDeviceUserInstallStatus** reprezentuje stan instalacji aplikacji mobilnej dla danego urządzenia i użytkownika.
  - Dodano jednostkę [**MobileAppInstallStatus**](reports-ref-application.md#mobileappinstallstate). Jednostka **MobileAppInstallState** reprezentuje stan instalacji aplikacji mobilnej po jej przypisaniu do grupy zawierającej urządzenia, użytkowników lub obie te kategorie. 
 
 ## <a name="1710"></a>1710

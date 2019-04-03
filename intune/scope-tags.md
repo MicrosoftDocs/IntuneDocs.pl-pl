@@ -15,16 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bca2d52bb47a149c6a36bc1b8cbc4d65e50c0f4c
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: HT
+ms.openlocfilehash: fb57ea2ef5c99c58968ee25b3a75b2165ece787a
+ms.sourcegitcommit: 0adb41c0640743d5cb726e66ad2427e3ad6faf20
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57756806"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658553"
 ---
-# <a name="use-rbac-and-scope-tags-for-distributed-it"></a>Dla rozproszonych za pomocą tagów RBAC i zakresu IT
+# <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Użyj kontroli dostępu opartej na rolach (RBAC) i tagi zakresu dla rozproszonego IT
 
-Aby upewnić się, że odpowiednie Administratorzy mają odpowiednich uprawnień dostępu i widoczność odpowiednie obiekty usługi Intune, można użyć kontroli dostępu opartej na rolach (RBAC) i tagi zakresu. Role określają, jakie dostępu administratorzy mieli do obiektów. Tagi zakresu określić obiekty, które Administratorzy mogą zobaczyć.
+Aby upewnić się, że odpowiednie Administratorzy mają odpowiednich uprawnień dostępu i widoczność odpowiednie obiekty usługi Intune, można użyć tagów kontroli i zakres dostępu opartej na rolach. Role określają, jakie dostępu administratorzy mieli do obiektów. Tagi zakresu określić obiekty, które Administratorzy mogą zobaczyć.
 
 Na przykład załóżmy, że administrator biuro regionalne Seattle przypisany do roli Menedżer zasad i profilów. Chcesz, aby ten administrator zobaczenie i zarządzanie tylko profile i zasady, które dotyczą tylko urządzeń z Seattle. Aby to zrobić, jak:
 
@@ -83,6 +83,21 @@ Na przykład załóżmy, że administrator biuro regionalne Seattle przypisany d
 3. W obszarze **zaznacz znaczniki**, wybierać znaczniki, które chcesz dodać do profilu.
 4. Wybierz **wybierz** > **OK** > **Zapisz**.
 
+## <a name="to-assign-a-scope-tag-to-an-app-configuration-policy"></a>Aby przypisać tagu zakresu zasad konfiguracji aplikacji
+W przypadku urządzeń z **typ rejestracji urządzenia** równa **urządzeń zarządzanych przy użyciu**:
+1. Wybierz **aplikacje klienckie** > **zasady konfiguracji aplikacji** > Wybierz zasady konfiguracji aplikacji.
+2. Wybierz **właściwości** > **zakres (tagi)** > wybierać znaczniki, którą chcesz przypisać do zasad.
+
+W przypadku urządzeń z **typ rejestracji urządzenia** równa **aplikacje zarządzane przez**:
+1. Wybierz **aplikacje klienckie** > **zasady konfiguracji aplikacji** > Wybierz zasady konfiguracji aplikacji.
+2. Wybierz **zakres (tagi)** > wybierać znaczniki, którą chcesz przypisać do zasad.
+
+
+## <a name="to-assign-a-scope-tag-to-an-ios-app-provisioning-profile"></a>Przypisywanie tagu zakresu do profilu aprowizacji aplikacji systemu iOS
+1. W usłudze Intune, wybierz **aplikacje klienckie** > **profilów aprowizacji aplikacji dla systemu iOS** > Wybierz profil.
+2. Wybierz **właściwości** > **zakres (tagi)** > Wybierz znaczników według których chcesz przypisać do profilu.
+3. Wybierz **wybierz** > **OK** > **Zapisz**.
+
 ## <a name="scope-tag-details"></a>Szczegóły tagu zakresu
 Podczas pracy z tagami zakres, należy pamiętać o tych szczegółów:
 
@@ -96,20 +111,13 @@ Podczas pracy z tagami zakres, należy pamiętać o tych szczegółów:
     - Zasady konfiguracji aplikacji — zarządzanych urządzeń
     - Skrypty środowiska Powershell
     - Tokeny usługi DEP
+    - Profil aprowizowania aplikacji dla systemu iOS
 - Gdy administrator tworzy obiekt w usłudze Intune, wszystkie tagi zakresu przypisane do tego administratora zostanie automatycznie przypisany do nowego obiektu.
 - Kontroli RBAC usługi Intune nie ma zastosowania do ról usługi Azure Active Directory. Dlatego role Administratorzy usługi Intune i Administratorzy globalni mają administratora pełnego dostępu do usługi Intune, niezależnie od tego, jakie tagi zakresu mają.
 - Administratorzy w przypisaniu roli, przy użyciu tagów zakresu można również wyświetlić obiekty usługi Intune z Brak tagów zakresu.
 - Można przypisać tylko tag zakresu, które masz w swoje przypisania roli.
 - Możesz to zrobić tylko grup docelowych, które są wymienione w zakres (grupy) przypisanie roli.
 - Tag zakresu przypisane do roli użytkownika nie może usunąć wszystkie tagi zakresu do obiektu usługi Intune. Wymagany jest co najmniej jeden zakres znacznik.
-- Jeśli użytkownik ma wiele przypisania ról, uprawnieniami w tych przypisań ról dotyczyć różnych obiektów w następujący sposób:
-    - Przypisz uprawnienia dotyczą tylko do obiektów (takich jak zasady lub aplikacje) w tej roli w przypisaniu zakres (grupy). Przypisz uprawnienia nie mają zastosowania do obiektów w innych przypisań ról, chyba że inne przypisania jawnie nada im.
-    - W żadnym z przypisania użytkownika do wszystkich obiektów tego samego typu (np. wszystkie zasady lub wszystkie aplikacje) mają zastosowanie inne uprawnienia (na przykład utworzenia i odczytu).
-    - Uprawnienia dla obiektów różnych typów (na przykład zasad lub aplikacji), nie mają zastosowania do siebie nawzajem. Uprawnienie do odczytu dla zasad, na przykład nie zapewnia uprawnienia odczytu do aplikacji w przypisaniach użytkownika.
-
-
-
-
 
 ## <a name="next-steps"></a>Następne kroki
 

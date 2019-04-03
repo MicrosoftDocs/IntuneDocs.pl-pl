@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/11/2019
+ms.date: 03/20/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2cdf7ea715a13809c860e77412914e3fd2b45a28
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 5f2a9f2512f4f6fb12a65d0e7c4982fd351f1770
+ms.sourcegitcommit: 93286c22426dcb59191a99e3cf2af4ff6ff16522
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57400487"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58358321"
 ---
 #  <a name="intune-data-warehouse-collections"></a>Kolekcje magazynu danych usługi Intune
 
@@ -116,7 +116,7 @@ Poniższa tabela zawiera podsumowanie stanu przypisania zasad zgodności do urz�
 
 |  complianceStatus  |                       Opis                      |
 |:------------------:|:------------------------------------------------------:|
-|    Nieznane         |    Nieznana.                                                                        |
+|    Nieznane         |    Nieznane.                                                                        |
 |    Zgodny       |    Zgodne.                                                                      |
 |    Niezgodny    |       Urządzenie jest niezgodne i użycie w nim zasobów firmowych zostało zablokowane.             |
 |    Konflikt        |    Konflikt z innymi regułami.                                                      |
@@ -281,7 +281,7 @@ Jednostka **deviceType** reprezentuje typ urządzenia przywoływany przez inne j
 | 12           | ISocConsumer      | Urządzenie iSoc Consumer                                |
 | 13           | Unix              | Urządzenie z systemem UNIX                                         |
 | 14           | MacMDM            | Urządzenie z systemem Mac OS X zarządzane za pomocą wbudowanego agenta MDM |
-| 15           | HoloLens          | Urządzenie HoloLens                                    |
+| 15           | HoloLens          | Urządzenia HoloLens                                       |
 | 16           | SurfaceHub        | Urządzenie Surface Hub                                  |
 | 17           | AndroidForWork    | Urządzenie z systemem Android zarządzane przy pomocy właściciela profilu systemu Android  |
 | 18           | AndroidEnterprise | Urządzenie z systemem Android Enterprise.                          |
@@ -369,7 +369,7 @@ Jednostka **EnrollmentFailureCategory** wskazuje, dlaczego rejestracja urządzen
 | FeatureNotSupported             | Funkcje używane przez tę rejestrację nie są obsługiwane dla tego konta.                                        |
 | EnrollmentRestrictionsEnforced  | Ograniczenia rejestracji skonfigurowane przez administratora spowodowały zablokowanie rejestracji.                                          |
 | ClientDisconnected              | Upłynął limit czasu dla klienta lub rejestracja została przerwana przez użytkownika końcowego.                                                        |
-| UserAbandonment                 | Rejestracja została porzucona przez użytkownika końcowego. (Użytkownik końcowy rozpoczął dołączanie, ale go nie ukończył w odpowiednim czasie)  |
+| UserAbandonment                 | Rejestracja została porzucona przez użytkownika końcowego. (Użytkownik końcowy rozpoczął dołączanie, ale nie ukończył go w odpowiednim czasie)  |
 
 ## <a name="enrollmentfailurereasons"></a>enrollmentFailureReasons  
 Jednostka **EnrollmentFailureReason** wskazuje bardziej szczegółową przyczynę niepowodzenia rejestracji urządzenia w ramach kategorii niepowodzenia.  
@@ -398,7 +398,7 @@ Jednostka **EnrollmentFailureReason** wskazuje bardziej szczegółową przyczyn�
 | EnrollmentCriteriaNotMet         | Rejestracja tego urządzenia nie powiodła się ze względu na skonfigurowaną regułę ograniczeń rejestracji.                                                                                                                          |
 | BulkDeviceNotPreregistered       | Nie odnaleziono numeru IMEI (International Mobile Equipment Identity) lub numeru seryjnego urządzenia.  Bez tego identyfikatora urządzenia są rozpoznawane jako urządzenia osobiste, które są obecnie zablokowane.  |
 | FeatureNotSupported              | Użytkownik próbował uzyskać dostęp do funkcji, która nie została jeszcze udostępniona wszystkim klientom lub nie jest zgodna z konfiguracją usługi Intune.                                                            |
-| UserAbandonment                  | Rejestracja została porzucona przez użytkownika końcowego. (Użytkownik końcowy rozpoczął dołączanie, ale go nie ukończył w odpowiednim czasie)                                                                                           |
+| UserAbandonment                  | Rejestracja została porzucona przez użytkownika końcowego. (Użytkownik końcowy rozpoczął dołączanie, ale nie ukończył go w odpowiednim czasie)                                                                                           |
 | APNSCertificateExpired           | Nie można zarządzać urządzeniami firmy Apple, jeśli certyfikat wypychania MDM firmy Apple wygasł.                                                                                                                            |
 
 ## <a name="intunemanagementextensions"></a>intuneManagementExtensions
@@ -448,7 +448,7 @@ Jednostka **managementAgentTypes** reprezentuje agentów używanych do zarządza
 | 5                     | EasIntuneClient                   | Urządzenie jest zarządzane zarówno przez program Exchange Active Sync, jak i agenta PC usługi Intune |
 | 8                     | ConfigManagerClient               | Urządzenie jest zarządzane przez agenta programu System Center Configuration Manager     |
 | 10                    | ConfigurationManagerClientMdm     | Urządzenie jest zarządzane przez program Configuration Manager i oprogramowanie MDM.                    |
-| 11                    | ConfigurationManagerCLientMdmEas  | Urządzenie jest zarządzane przez program Configuration Manager, oprogramowanie MDM i rozwiązanie Eas.               |
+| 11                    | ConfigurationManagerCLientMdmEas  | Urządzenie jest zarządzane przez Menedżera konfiguracji i zarządzania urządzeniami Przenośnymi programu Exchange Active Sync.               |
 | 16                    | Nieznane                           | Nieznany typ agenta zarządzania                                              |
 | 32                    | Jamf                              | Atrybuty urządzenia są pobierane z narzędzia Jamf.                               |
 | 64                    | GoogleCloudDevicePolicyController |  Urządzenie jest zarządzane przez rozwiązanie CloudDPC firmy Google.                                 |
@@ -617,7 +617,7 @@ Kolekcja jednostek **user** zawiera dane użytkowników. Te rekordy obejmują st
 | UserKey                    | Unikatowy identyfikator użytkownika w magazynie danych — klucz zastępczy.                                                                                                                                                         | 123                                  |
 | UserId                     | Unikatowy identyfikator użytkownika — podobny do UserKey, ale jest kluczem naturalnym.                                                                                                                                                    | b66bc706-ffff-7437-0340-032819502773 |
 | UserEmail                  | Adres e-mail użytkownika.                                                                                                                                                                                                     | John@constoso.com                    |
-| UPN                        | Główna nazwa użytkownika.                                                                                                                                                                                               | John@constoso.com                    |
+| userPrincipalName                        | Główna nazwa użytkownika.                                                                                                                                                                                               | John@constoso.com                    |
 | Nazwa wyświetlana                | Nazwa wyświetlana użytkownika.                                                                                                                                                                                                      | Michał                                 |
 | IntuneLicensed             | Określa, czy użytkownik ma licencję usługi Intune, czy nie.                                                                                                                                                                              | True/False                           |
 | IsDeleted                  | Wskazuje, czy wszystkie licencje użytkownika wygasły i czy użytkownik został z tego powodu usunięty z usługi Intune. Dla pojedynczego rekordu ta flaga nie zmienia się. Zamiast tego tworzony jest nowy rekord odpowiadający nowemu stanowi użytkownika. | Prawda/Fałsz                           |

@@ -1,12 +1,12 @@
 ---
 title: Szybki start — wysyłanie powiadomień do niezgodnych urządzeń
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: W tym przewodniku Szybki start użyjesz usługi Microsoft Intune w celu wysyłania powiadomień e-mail do niezgodnych urządzeń.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/09/2018
+ms.date: 03/26/2019
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 757191515ca88cedf1a5edcdb243b1ecb730ec3c
-ms.sourcegitcommit: fdc6261f4ed695986e06d18353c10660a4735362
+ms.openlocfilehash: ba835eb76dae19a13985a6175b4eceee0bae7f12
+ms.sourcegitcommit: 79baf89e4a7a7b1cecb8ccf5cb976736ae6a7286
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57991120"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58871437"
 ---
 # <a name="quickstart-send-notifications-to-noncompliant-devices"></a>Szybki start: Wysyłanie powiadomień do niezgodnych urządzeń
 
@@ -40,7 +40,7 @@ Jeśli nie masz subskrypcji usługi Intune, [utwórz konto bezpłatnej wersji pr
 
 ## <a name="sign-in-to-intune"></a>Logowanie się do usługi Intune
 
-Zaloguj się w usłudze [Intune](https://aka.ms/intuneportal) jako [administrator globalny](users-add.md#types-of-administrators) lub [administrator usługi](users-add.md#types-of-administrators) Intune. 
+Zaloguj się w usłudze [Intune](https://aka.ms/intuneportal) jako [administrator globalny](users-add.md#types-of-administrators) lub [administrator usługi](users-add.md#types-of-administrators) Intune. Jeśli utworzono subskrypcję wersji próbnej usługi Intune, konto, którego użyto do utworzenia subskrypcji, jest administratorem globalnym.
 
 ## <a name="create-a-notification-message-template"></a>Tworzenie szablonu wiadomości z powiadomieniem
 
@@ -83,14 +83,13 @@ Poniższe kroki umożliwiają utworzenie zasad zgodności dla urządzeń z syste
 5. W obszarze **Wymagaj hasła do odblokowania urządzeń przenośnych** wybierz pozycję **Wymagaj**. To ustawienie określa, czy użytkownicy mają wpisywać hasło przed uzyskaniem dostępu do informacji zapisanych na urządzeniu przenośnym. 
 6. Ustaw **minimalną długość hasła** na **6**. To ustawienie określa minimalną liczbę cyfr lub znaków hasła.
 
-    ![Ustawienia zabezpieczeń systemu dla nowych zasad zgodności](./media/quickstart-send-notification-02.png) 
+    <img alt="System Security settings for a new compliance policy" src="./media/quickstart-send-notification-02.png" width="600">
 
 7. Kliknij kolejno pozycje **OK**, **OK** i **Utwórz**, aby utworzyć zasady zgodności.
-8. Wybierz nazwę nowych zasad: **Zgodność systemu Windows 10**.
-9. Wybierz kolejno pozycje **Właściwości** > **Akcja dotycząca niezgodności** > **Dodaj**.
-10. W polu listy rozwijanej **Akcja** sprawdź, czy wybrano pozycję **Wyślij wiadomość e-mail do użytkowników końcowych**.
-11. Wybierz kolejno pozycje **Szablon wiadomości** > **Administrator firmy Contoso** > **Wybierz**, aby wybrać szablon wiadomości utworzony we wcześniejszej części tego tematu.
-12. Wybierz kolejno pozycje **OK** > **OK** > **Zapisz**, aby zapisać zmiany.
+8. Wybierz kolejno pozycje **Właściwości** > **Akcja dotycząca niezgodności** > **Dodaj**.
+9. W polu listy rozwijanej **Akcja** sprawdź, czy wybrano pozycję **Wyślij wiadomość e-mail do użytkowników końcowych**.
+10. Wybierz kolejno pozycje **Szablon wiadomości** > **Administrator firmy Contoso** > **Wybierz**, aby wybrać szablon wiadomości utworzony we wcześniejszej części tego tematu.
+11. Wybierz kolejno pozycje **DODAJ** > **OK** > **Zapisz**, aby zapisać zmiany.
 
 ## <a name="assign-the-policy"></a>Przypisywanie zasad
 
