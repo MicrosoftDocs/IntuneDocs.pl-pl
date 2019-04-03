@@ -1,12 +1,12 @@
 ---
 title: Przewodnik Szybki start — tworzenie profilu urządzenia poczty e-mail dla systemu iOS
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Dowiedz się, jak za pomocą usługi Microsoft Intune utworzyć profil urządzenia poczty e-mail, aby umożliwić bezpieczne łączenie się urządzeń z systemem iOS z firmową pocztą e-mail.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/29/2018
+ms.date: 03/26/2019
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c0c96ffdabca3a29b2e0ac5d0a26d5e23b0dabda
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: b252c9d3d719847c8c0911b6cbce06c83bb4bf0e
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57390461"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799286"
 ---
 # <a name="quickstart-create-an-email-device-profile-for-ios"></a>Szybki start: tworzenie profilu urządzenia poczty e-mail dla systemu iOS
 
@@ -33,7 +33,7 @@ Jeśli nie masz subskrypcji usługi Intune, [utwórz konto bezpłatnej wersji pr
 
 ## <a name="sign-in-to-intune"></a>Logowanie się do usługi Intune
 
-Zaloguj się w usłudze [Intune](https://aka.ms/intuneportal) jako administrator globalny lub administrator usługi Intune. Dostęp do usługi Intune można uzyskać w witrynie Azure Portal, wybierając pozycję **Wszystkie usługi** > **Intune**.
+Zaloguj się w usłudze [Intune](https://aka.ms/intuneportal) jako administrator globalny lub administrator usługi Intune. Jeśli utworzono subskrypcję wersji próbnej usługi Intune, konto, którego użyto do utworzenia subskrypcji, jest administratorem globalnym.
 
 ## <a name="create-an-ios-email-profile"></a>Tworzenie profilu poczty e-mail dla systemu iOS
 1. W obszarze Intune wybierz pozycję **Konfiguracja urządzeń**, a następnie **Profile**.

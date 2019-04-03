@@ -6,19 +6,19 @@ author: ErikjeMS
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.topic: quickstart
-ms.date: 11/05/2018
+ms.date: 03/26/2019
 ms.author: erikje
 ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 810adbf06ddcd0aabb5c758f6a71c898116a9cee
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 3b81525034f69b43abeb60f562e4d6ee6a46b866
+ms.sourcegitcommit: d38ca1bf44e17211097aea481e00b6c1e87effae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57394312"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58514284"
 ---
 # <a name="quickstart-set-up-automatic-enrollment-for-windows-10-devices"></a>Szybki start: Konfigurowanie automatycznego rejestrowania urządzeń z systemem Windows 10
 
@@ -33,7 +33,7 @@ Jeśli nie masz subskrypcji usługi Intune, [utwórz konto bezpłatnej wersji pr
 
 ## <a name="sign-in-to-intune"></a>Logowanie się do usługi Intune
 
-Zaloguj się w usłudze [Intune](https://aka.ms/intuneportal) jako administrator globalny lub administrator usługi Intune.
+Zaloguj się w usłudze [Intune](https://aka.ms/intuneportal) jako administrator globalny lub administrator usługi Intune. Jeśli utworzono subskrypcję wersji próbnej usługi Intune, konto, którego użyto do utworzenia subskrypcji, jest administratorem globalnym.
 
 ## <a name="set-up-windows-10-automatic-enrollment"></a>Konfigurowanie automatycznego rejestrowania urządzeń z systemem Windows 10
 
