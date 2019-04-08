@@ -1,6 +1,6 @@
 ---
 title: Żądanie i zapewnianie pomocy zdalnej dla komputerów z systemem Windows
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: W tym artykule opisano kroki, jakie muszą wykonać użytkownicy i administratorzy IT, aby uzyskać pomoc zdalną dla komputerów z systemem Windows zarządzanych jako komputery osobiste, oraz kroki zdalnego uruchamiania komputera.
 keywords: ''
 author: dougeby
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b57bae0c0e7a734071be79318286714a97d0fbf
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: b7004d72328d606f6adc5cd84e79ce4830409059
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57460601"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798541"
 ---
 # <a name="request-and-provide-remote-assistance-for-windows-pcs"></a>Żądanie i zapewnianie pomocy zdalnej dla komputerów z systemem Windows
 

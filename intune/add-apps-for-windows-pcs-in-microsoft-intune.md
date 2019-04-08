@@ -1,6 +1,6 @@
 ---
 title: Dodawanie aplikacji dla komputerów z systemem Windows, na których jest uruchomione oprogramowanie klienckie usługi Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: W tym temacie przedstawiono informacje na temat sposobu dodawania aplikacji na komputerach do usługi Intune przed ich wdrożeniem.
 keywords: ''
 author: dougeby
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7aaeabeebc636e58eac2058b0f482efef34878f0
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: e4f6a8c3e460e9806aabadd710ec102aa77d44ab
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57460941"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798897"
 ---
 # <a name="add-apps-for-windows-pcs-that-run-the-intune-software-client"></a>Dodawanie aplikacji dla komputerów z systemem Windows, na których jest uruchomione oprogramowanie klienckie usługi Intune
 

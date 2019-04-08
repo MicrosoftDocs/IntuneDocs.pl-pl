@@ -1,6 +1,6 @@
 ---
 title: Program Endpoint Protection dla komputerów z systemem Windows
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Zabezpiecz zarządzane komputery przy użyciu programu Endpoint Protection, który zapewnia ochronę w czasie rzeczywistym przed złośliwym oprogramowaniem.
 keywords: ''
 author: dougeby
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 188242f870e5b7218a5b58a201782bf4bed4c25e
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 7192d7c71d1737a624f2c76e3253cb232dc1f2af
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57460975"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798982"
 ---
 # <a name="help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune"></a>Zabezpieczanie komputerów z systemem Windows przy użyciu programu Endpoint Protection dla usługi Microsoft Intune
 

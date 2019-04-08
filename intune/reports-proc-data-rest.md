@@ -1,12 +1,12 @@
 ---
 title: Pobieranie danych z interfejsu API magazynu danych za pomocą klienta REST
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: W tym temacie opisano sposób pobierania danych z magazynu danych usługi Microsoft Intune przy użyciu interfejsu API RESTful.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/10/2019
+ms.date: 04/02/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0e57d197cadf2ba6586aa39fdc5dbb9cddba554c
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 5aa85ee044eae5fba9dcb7c380a29dda727c6492
+ms.sourcegitcommit: 79baf89e4a7a7b1cecb8ccf5cb976736ae6a7286
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566577"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58871454"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Pobieranie danych z interfejsu API magazynu danych usługi Intune za pomocą klienta REST
 
@@ -98,11 +98,11 @@ Potrzebny jest również punkt końcowy. Aby uzyskać punkt końcowy magazynu da
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
 2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
 3. Wybierz pozycję **Skonfiguruj magazyn danych usługi Intune** w obszarze **Inne zadania**.
-4. Skopiuj adres URL niestandardowego źródła danych w obszarze **Użyj usług raportowania innych firm**. Powinien on wyglądać następująco: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta`
+4. Skopiuj adres URL niestandardowego źródła danych w obszarze **Użyj usług raportowania innych firm**. Powinien on wyglądać następująco: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=v1.0`
 
 Punkt końcowy ma następujący format: `https://fef.{yourtenant}.manage.microsoft.com/ReportingService/DataWarehouseFEService/{entity}?api-version={verson-number}`
 
-Na przykład jednostka **dates** wygląda następująco: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=beta`
+Na przykład jednostka **dates** wygląda następująco: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
 
 Aby uzyskać więcej informacji, zobacz [Punkt końcowy interfejsu API magazynu danych usługi Intune](reports-api-url.md).
 
@@ -116,7 +116,7 @@ Aby uzyskać nowy token dostępu dla narzędzia Postman, należy dodać adres UR
 2.  Otwórz narzędzie Postman. Wybierz operację HTTP **GET**.
 3.  Wklej adres URL punktu końcowego do adresu. Powinien wyglądać następująco:  
 
-    `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=beta`
+    `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
 4.  Wybierz kartę **Authorization** (Autoryzacja) i z listy **Type** (Typ) wybierz pozycję **OAuth 2.0**.
 5.  Wybierz pozycję **Get New Access Token** (Uzyskaj nowy token dostępu).
 6.  Sprawdź, czy dodano już adresu URL wywołania zwrotnego do aplikacji na platformie Azure. Adres URL wywołania zwrotnego to `https://www.getpostman.com/oauth2/callback`.
@@ -197,7 +197,7 @@ Następujący przykład zawiera prostego klienta REST. W kodzie użyto klasy **h
    var emailAddress = "intuneadmin@yourcompany.com";
    var password = "password_of(intuneadmin@yourcompany.com)";
    var applicationId = "<Application ID>";
-   var warehouseUrl = "https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta";
+   var warehouseUrl = "https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=v1.0";
    var collectionName = "dates";
 
    var adalContext = new AuthenticationContext("https://login.windows.net/common/oauth2/token");
