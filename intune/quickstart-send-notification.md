@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/26/2019
+ms.date: 03/27/2019
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba835eb76dae19a13985a6175b4eceee0bae7f12
-ms.sourcegitcommit: 79baf89e4a7a7b1cecb8ccf5cb976736ae6a7286
+ms.openlocfilehash: 4b5e6ac4683284dc71c9171f4367e72d5ec45c59
+ms.sourcegitcommit: 699427f36dbf31dc7921fb75da647b736eafd79b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58871437"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58899015"
 ---
 # <a name="quickstart-send-notifications-to-noncompliant-devices"></a>Szybki start: Wysyłanie powiadomień do niezgodnych urządzeń
 
@@ -85,7 +85,7 @@ Poniższe kroki umożliwiają utworzenie zasad zgodności dla urządzeń z syste
 
     <img alt="System Security settings for a new compliance policy" src="./media/quickstart-send-notification-02.png" width="600">
 
-7. Kliknij kolejno pozycje **OK**, **OK** i **Utwórz**, aby utworzyć zasady zgodności.
+7. Kliknij kolejno pozycje **OK** > **OK** > **Utwórz**, aby utworzyć zasady zgodności.
 8. Wybierz kolejno pozycje **Właściwości** > **Akcja dotycząca niezgodności** > **Dodaj**.
 9. W polu listy rozwijanej **Akcja** sprawdź, czy wybrano pozycję **Wyślij wiadomość e-mail do użytkowników końcowych**.
 10. Wybierz kolejno pozycje **Szablon wiadomości** > **Administrator firmy Contoso** > **Wybierz**, aby wybrać szablon wiadomości utworzony we wcześniejszej części tego tematu.
