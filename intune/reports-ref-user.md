@@ -6,7 +6,7 @@ keywords: Magazyn danych usługi Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/20/2019
+ms.date: 04/09/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16084e2cd33f6aac9313bb1f8e9fba0467a3ce73
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: 4e650f8cb713d76c44d3f3399612ee5fd6d02426
+ms.sourcegitcommit: 601327125ac8ae912d8159422de8aac7dbdc25f6
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58797861"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59429148"
 ---
 # <a name="reference-for-user-entity"></a>Informacje dotyczące jednostki User (Użytkownik)
 
@@ -35,16 +35,17 @@ Jednostka **User** zawiera listę wszystkich użytkowników usługi Azure Active
 
 Kolekcja jednostek **User** zawiera dane użytkownika. Te rekordy obejmują stany użytkowników w okresie zbierania danych, nawet jeśli użytkownik został usunięty. Na przykład w ciągu ostatniego miesiąca użytkownik mógł zostać dodany do usługi Intune, a następnie z niej usunięty. Chociaż ten użytkownik nie występuje w chwili tworzenia raportu, on i jego stan znajdują się jednak w danych z poprzedniego miesiąca. Możesz utworzyć raport, który pokazuje okres historycznej obecności użytkownika w Twoich danych.
 
-| Właściwość  | Opis | Przykład |
-|---------|------------|--------|
-| UserKey |Unikatowy identyfikator użytkownika w magazynie danych — klucz zastępczy. |123 |
-| UserId |Unikatowy identyfikator użytkownika — podobny do UserKey, ale jest kluczem naturalnym. |b66bc706-ffff-7437-0340-032819502773 |
-| UserEmail |Adres e-mail użytkownika. |John@constoso.com |
-| userPrincipalName | Główna nazwa użytkownika. | John@constoso.com |
-| Nazwa wyświetlana |Nazwa wyświetlana użytkownika. |Michał |
-| IntuneLicensed |Określa, czy użytkownik ma licencję usługi Intune, czy nie. |True/False |
-| IsDeleted | Wskazuje, czy wszystkie licencje użytkownika wygasły i czy użytkownik został z tego powodu usunięty z usługi Intune. Dla pojedynczego rekordu ta flaga nie zmienia się. Zamiast tego tworzony jest nowy rekord odpowiadający nowemu stanowi użytkownika. |Prawda/Fałsz |
-| RowLastModifiedDateTimeUTC |Data i godzina ostatniej modyfikacji rekordu w magazynie danych (w formacie UTC)  |2016-11-23 12:00:00 |
+|          Właściwość          |                                                                                                           Opis                                                                                                          |                Przykład               |
+|:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------:|
+| UserKey                    | Unikatowy identyfikator użytkownika w magazynie danych — klucz zastępczy.                                                                                                                                                         | 123                                  |
+| UserId                     | Unikatowy identyfikator użytkownika — podobny do UserKey, ale jest kluczem naturalnym.                                                                                                                                                    | b66bc706-ffff-7437-0340-032819502773 |
+| UserEmail                  | Adres e-mail użytkownika.                                                                                                                                                                                                     | John@constoso.com                    |
+| userPrincipalName                        | Główna nazwa użytkownika.                                                                                                                                                                                               | John@constoso.com                    |
+| Nazwa wyświetlana                | Nazwa wyświetlana użytkownika.                                                                                                                                                                                                      | Michał                                 |
+| IntuneLicensed             | Określa, czy użytkownik ma licencję usługi Intune, czy nie.                                                                                                                                                                              | True/False                           |
+| IsDeleted                  | Wskazuje, czy wszystkie licencje użytkownika wygasły i czy użytkownik został z tego powodu usunięty z usługi Intune. Dla pojedynczego rekordu ta flaga nie zmienia się. Zamiast tego tworzony jest nowy rekord odpowiadający nowemu stanowi użytkownika. | Prawda/Fałsz                           |
+| RowLastModifiedDateTimeUTC | Data i godzina ostatniej modyfikacji rekordu w magazynie danych w formacie UTC                                                                                                                                                 | 23.11.2016 0:00                      |
+
 
 ## <a name="next-steps"></a>Następne kroki
  - Aby ograniczyć dane użytkownika do użytkowników, którzy są obecnie aktywni, można użyć kolekcji jednostek **Bieżący użytkownik**. Aby uzyskać więcej informacji, zobacz temat [Dokumentacja jednostki bieżącego użytkownika](reports-ref-current-user.md).
