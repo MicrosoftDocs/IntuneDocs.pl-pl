@@ -3,24 +3,26 @@ title: Tworzenie certyfikatów SECP lub PKCS w usłudze Microsoft Intune — Azu
 titleSuffix: ''
 description: Administratorzy mogą użyć akcji czyszczenia lub wycofywania, aby usunąć certyfikaty z usługi Microsoft Intune. W pewnych scenariuszach, takich jak anulowanie rejestracji urządzenia lub usuwanie zasad zgodności, certyfikaty są automatycznie usuwane. W innych scenariuszach, takich jak utrata lub usunięcie licencji usługi Intune, certyfikaty automatycznie pozostają w urządzeniu. Zapoznaj się z różnymi sytuacjami dotyczącymi urządzeń z systemem Android, Android Enterprise, iOS, macOS i Windows.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 01/08/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 977e7006d39ae76516d5b06019e463d1018aaa79
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.reviewer: lacranda
+ms.openlocfilehash: 6a1280ca2a78853ae188ad68620f0b82846a365a
+ms.sourcegitcommit: 9daaeba9a960c50efcc951856234fbfec3635737
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57229262"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59569262"
 ---
 # <a name="remove-scep-and-pkcs-certificates-in-microsoft-intune"></a>Usuwanie certyfikatów SCEP i PKCS w usłudze Microsoft Intune
 

@@ -1,15 +1,16 @@
 ---
 title: Co to jest zarządzanie aplikacjami w usłudze Microsoft Intune?
-titlesuffix: ''
+titleSuffix: ''
 description: Dowiedz się więcej o możliwościach zarządzania aplikacjami klienckimi według platformy w usłudze Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/19/2018
+ms.date: 04/03/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0f2c5da7772ff137e44fead66f00fe34004bb1f4
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 34807edabf99a107c259fdfae5e43db18084fb67
+ms.sourcegitcommit: 219bbbfb44eba70ac2b751970d8b4b778cd28416
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850912"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "59569067"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co to jest zarządzanie aplikacjami w usłudze Microsoft Intune?
 
@@ -44,7 +45,7 @@ Usługa Intune oferuje szeroką gamę możliwości, które pomogą Ci uzyskać d
 |-------------------------------------------------------------------------------------|---------|-----|-------|------------|-------------------|
 | Dodawanie aplikacji i przypisywanie ich do urządzeń i użytkowników | Tak | Tak | Tak | Tak | Tak |
 | Przypisywanie aplikacji do urządzeń, które nie zostały zarejestrowane za pomocą usługi Intune | Tak | Tak | Nie | Nie | Nie |
-| Użycie zasad konfiguracji aplikacji do sterowania zachowaniem aplikacji podczas uruchamiania | Nie | Tak | Nie | Nie | Nie |
+| Użycie zasad konfiguracji aplikacji do sterowania zachowaniem aplikacji podczas uruchamiania | Tak | Tak | Nie | Nie | Nie |
 | Użycie zasad aprowizowania aplikacji mobilnych do odnowienia wygasłych aplikacji | Nie | Tak | Nie | Nie | Nie |
 | Ochrona danych firmy w aplikacjach z zasadami ochrony aplikacji | Tak | Tak | Nie | Nie1 | Nie |
 | Usuwanie jedynie danych firmowych z zainstalowanej aplikacji (Selektywne czyszczenie aplikacji) | Tak | Tak | Nie | Tak | Tak |
@@ -103,7 +104,7 @@ Aby uzyskać więcej informacji na temat tej sekcji, zobacz [Zarządzanie aplika
 
 Aby uzyskać więcej informacji na temat tej sekcji, zobacz [Monitorowanie aplikacji](apps-monitor.md).
 
-### <a name="set-up"></a>Konfigurowanie
+### <a name="set-up"></a>Konfiguruj
 - **Tokeny programu VPP dla systemu iOS**: stosowanie i wyświetlanie licencji Volume Purchase Program (VPP) dla systemu iOS. Aby uzyskać więcej informacji, zobacz:
     - [Aplikacje systemu iOS nabyte w ramach zakupów zbiorczych](vpp-apps-ios.md)
 - **Certyfikat przedsiębiorstwa systemu Windows**: stosowanie lub wyświetlanie stanu certyfikatu podpisywania kodu używanego do dystrybuowania aplikacji biznesowych na zarządzanych urządzeniach z systemem Windows.
