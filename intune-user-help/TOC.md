@@ -8,10 +8,12 @@
 
 ## [Logowanie się w aplikacji Portal firmy](sign-in-to-the-company-portal.md)
 
-## [Korzystanie z urządzenia z systemem Android](using-your-android-device-with-intune.md)
-### [Co się dzieje po zarejestrowaniu urządzenia z systemem Android?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md)
-### [Rejestrowanie urządzenia](enroll-your-device-in-Intune-android.md)
-#### [Rejestrowanie urządzenia z programem Android for Work](create-a-work-profile-and-enroll-your-device-in-intune-android.md)
+## Korzystanie z urządzenia z systemem Android
+### [Dlaczego warto zarejestrować urządzenie z systemem Android](why-enroll-android-device.md)
+### Zarejestruj urządzenie
+#### [Rejestracja urządzenia z systemem Android](enroll-device-android-company-portal.md)  
+#### [Rejestracja przy użyciu profilu służbowego systemu Android](create-a-work-profile-and-enroll-your-device-in-intune-android.md)
+#### [Rejestracja przy użyciu aplikacji Microsoft Intune](enroll-device-android-microsoft-intune-app.md)
 ### [Korzystanie z aplikacji zarządzanych na urządzeniu](use-managed-apps-on-your-device-android.md)
 ### [Szyfrowanie urządzenia](encrypt-your-device-android.md)
 ### [Ustawianie numeru PIN lub hasła](set-your-pin-or-password-android.md)
@@ -23,16 +25,15 @@
 #### [Wyrejestrowywanie urządzenia](unenroll-your-device-from-intune-android.md)
 #### [Wyrejestrowywanie urządzenia w przypadku odrzucenia warunków użytkowania](unenroll-your-device-from-intune-if-you-declined-terms-of-use-android.md)
 
-### [Rozwiązywanie typowych problemów z systemem Android](troubleshoot-your-device-android.md)
+### Rozwiązywanie typowych problemów z systemem Android
 #### [Sprawdzanie zgodności urządzeń](check-compliance-on-your-device-android.md)
 #### [Fixing common issues with Samsung Knox (Rozwiązywanie typowych problemów z systemem Samsung Knox)](samsung-knox-errors-android.md)
 #### [Aktualizacja urządzenia w celu zainstalowania programu Outlook](update-device-outlook-android.md)
 
-#### Korzystanie z dzienników w celu rozwiązywania problemów
+#### Rejestrowanie
 ##### [Włączanie pełnego rejestrowania](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
-##### [Wysyłanie dzienników pocztą e-mail](send-logs-to-your-it-admin-by-email-android.md)
+##### [Przekazywanie dzienników i wysyłanie ich pocztą e-mail](send-logs-to-your-it-admin-by-email-android.md)
 ##### [Wysyłanie dzienników przy użyciu kabla USB](send-logs-to-your-it-admin-using-cable-android.md)
-##### [Przesyłanie błędów rejestracji](send-enrollment-errors-to-your-it-admin-android.md)
 ##### [Wysyłanie błędów do firmy Microsoft](send-logs-to-microsoft-android.md)
 
 ### Kwestie dotyczące systemu operacyjnego
