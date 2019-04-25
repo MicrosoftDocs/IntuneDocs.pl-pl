@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f4a8e873c48ceb59bfb8ac98fec9a29fa51d6cd3
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58799772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61512278"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>Samouczek: Chronienie poczty e-mail usługi Exchange Online na urządzeniach zarządzanych
 Dowiedz się więcej na temat używania zasad zgodności urządzeń z dostępem warunkowym w celu zagwarantowania, że urządzenia z systemem iOS będą mogły uzyskiwać dostęp do poczty e-mail usługi Exchange Online tylko wtedy, gdy będą zarządzane przez usługę Intune i będą korzystać z zatwierdzonej aplikacji poczty e-mail. 
