@@ -9,17 +9,18 @@ ms.date: 7/31/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 680853446b40949309ef406a6cab5b6b0181798a
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 4bdaf5768c1b78fbd07a732ee6690e59638fcff1
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57233087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61513769"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Konfigurowanie profilów sieci komórkowej karty eSIM w usłudze Intune — publiczna wersja zapoznawcza
 
@@ -128,7 +129,7 @@ Przypisz profil do grupy usługi Azure AD, która zawiera urządzenia obsługuj�
 
 Kodów aktywacji karty eSIM można użyć tylko raz. Po zainstalowaniu kodu na urządzeniu w usłudze Intune moduł karty eSIM kontaktuje się z operatorem sieci komórkowej w celu pobrania profilu sieci komórkowej. Ten kontakt kończy rejestrację urządzenia w sieci operatora.
 
-## <a name="step-4-monitor-deployment"></a>Krok 4. Monitorowanie wdrożenia
+## <a name="step-4-monitor-deployment"></a>Krok 4. Monitorowanie wdrożenia
 
 #### <a name="review-the-deployment-status"></a>Sprawdzanie stanu wdrożenia
 
@@ -194,7 +195,7 @@ Profil karty eSIM zostanie również usunięty, jeśli urządzenie zostanie [wyc
 - Upewnij się, że plik csv jest poprawnie sformatowany. Upewnij się, że plik nie zawiera zduplikowanych kodów, nie obejmuje wielu operatorów sieci komórkowych i nie zawiera różnych planów taryfowych. Pamiętaj, że każdy plik musi być unikatowy dla operatora sieci komórkowej i planu taryfowego.
 - Utwórz grupę usługi Azure AD urządzeń statycznych, która będzie zawierała wyłącznie docelowe urządzenia obsługujące kartę eSIM.
 - Jeśli wystąpi problem ze stanem wdrożenia, sprawdź następujące elementy:
-  - **Nieprawidłowy format pliku**: Patrz **Krok 1: Dodawanie kodów aktywacji sieci komórkowej** (w tym artykule), aby zapoznać się z prawidłowym formatem pliku.
+  - **Nieprawidłowy format pliku**: Patrz **Krok 1. Dodawanie kodów aktywacji sieci komórkowej** (w tym artykule), aby zapoznać się z prawidłowym formatem pliku.
   - **Aktywacja sieci komórkowej zakończyła się niepowodzeniem, skontaktuj się z operatorem sieci komórkowej**: kod aktywacji nie został aktywowany w sieci. Możliwe również, że pobieranie profilu i aktywacja w sieci komórkowej zakończyły się niepowodzeniem.
 
 ## <a name="next-steps"></a>Następne kroki

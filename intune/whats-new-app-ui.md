@@ -1,49 +1,97 @@
 ---
 title: Aktualizacje interfejsu użytkownika dla aplikacji użytkownika końcowego usługi Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Dowiedz się więcej na temat zmian interfejsu użytkownika dla aplikacji, które działają na urządzeniach użytkownika końcowego z usługą Microsoft Intune.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/13/2018
-ms.topic: article
+ms.date: 04/04/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: b782e382-8deb-48a7-a437-d7c5a17163f1
 ms.reviewer: priyar
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 0d6a798f9f16f4eaa0e882fb7d90203be912051f
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 753c261ea08ce304176f19e1c64389053b055d5f
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61518174"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizacje interfejsu użytkownika dla aplikacji użytkownika końcowego usługi Intune
-Dowiedz się, jakie aktualizacje wprowadzono w interfejsie użytkownika dla aplikacji, które użytkownicy końcowi zobaczą w tej wersji usługi Microsoft Intune. Zrozumienie tych aktualizacji może ułatwić komunikację z użytkownikami oraz aktualizowanie wszystkich dokumentów niestandardowych, które utworzono w celu obsługi wdrożenia. Może to także ułatwić zrozumienie, jak lepiej rozwiązywać problemy, z jakimi borykają się użytkownicy, gdy dzwonią do działu pomocy technicznej przy użyciu aplikacji Portal firmy.
+Dowiedz się więcej o najnowszych aktualizacjach aplikacji usługi Microsoft Intune. Regularnie dodajemy nowe funkcje do aplikacji i witryny internetowej Portal firmy w usłudze Intune oraz usprawniamy te istniejące. Jeśli jesteś administratorem usługi Intune lub osobą odpowiedzialną za pomoc techniczną, ten artykuł zawiera informacje wymagane do wykonywania następujących czynności:
+
+* Informowanie uczniów i pracowników o zmianach dotyczących aplikacji i rejestracji.
+* Aktualizowanie dokumentacji lub procedur pomocy technicznej w Twojej organizacji.  
+
+Jeśli jesteś pracownikiem lub uczniem, sprawdź zrzuty ekranu i linki do dokumentacji pomocy aplikacji Portal firmy. Więcej informacji o sposobie korzystania z aplikacji Portal firmy zawiera [dokumentacja pomocy dla użytkowników aplikacji Portal firmy](https://docs.microsoft.com/intune-user-help/).  
 
 <!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/account-move-rom-iwp-user-1712.png)--->
+
+## <a name="week-of-april-15-2019"></a>Tydzień od 15 kwietnia 2019 r.  
+
+### <a name="new-end-user-app-microsoft-intune-app---3903244---"></a>Nowa aplikacja użytkownika końcowego (aplikacja usługi Microsoft Intune) <!--3903244 -->  
+Istnieje nowa aplikacja użytkownika końcowego dla w pełni zarządzanych urządzeń z systemem Android o nazwie **Microsoft Intune**. Ta nowa aplikacja jest lekka i nowoczesna oraz zapewnia podobne funkcje jak aplikacja Portal firmy, ale dla w pełni zarządzanych urządzeń firmowych. Aby uzyskać więcej informacji, zobacz [aplikację Microsoft Intune w sklepie Google Play](https://play.google.com/store/apps/details?id=com.microsoft.intune).  
+
+Zrzut ekranu przedstawiający ekran szczegółów urządzenia: 
+
+![Zrzut ekranu aplikacji usługi Microsoft Intune przedstawiający szczegóły urządzenia dla systemu Android użytkownika Jane.](./media/1904-intune-app-device-details.png)   
+
+Przykładowy zrzut ekranu obszaru **konfigurowania dostępu**:  
+
+![Zrzut ekranu aplikacji usługi Microsoft Intune przedstawiający ekran rejestracji dotyczący konfigurowania dostępu.](./media/1904-intune-app-setup-access.png)   
+
+Przykładowy zrzut ekranu przedstawiający menu aplikacji:  
+
+![Zrzut ekranu aplikacji usługi Microsoft Intune przedstawiający menu boczne.](./media/1904-intune-app-navigation-menu.png)   
+
+Przykładowy zrzut ekranu przedstawiający obszar **pomocy**:  
+
+![Zrzut ekranu aplikacji usługi Microsoft Intune przedstawiający ekran pomocy.](./media/1904-intune-app-help.png)   
+
+
+## <a name="week-of-april-1-2019"></a>Tydzień od 1 kwietnia 2019 r.  
+
+### <a name="changes-to-company-portal-enrollment-for-ios-12-device-users---3448635---"></a>Zmiany dotyczące rejestracji za pomocą aplikacji Portal firmy dla użytkowników urządzeń z systemem iOS 12 <!--3448635 -->  
+Ekrany i kroki rejestracji urządzeń z systemem iOS za pomocą aplikacji Portal firmy zostały zaktualizowane, aby były zgodne ze zmianami rejestracji w rozwiązaniu MDM wydanymi w systemie iOS 12.2 firmy Apple. Zaktualizowany przepływ pracy monituje użytkowników o:  
+
+* Zezwolenie przeglądarce Safari na otwarcie witryny internetowej Portal firmy i pobranie profilu zarządzania przed powrotem do aplikacji Portal firmy.  
+* Otwarcie aplikacji Ustawienia w celu zainstalowania profilu zarządzania na urządzeniu użytkownika.  
+* Powrót do aplikacji Portal firmy w celu ukończenia procesu rejestracji.  
+
+Aby zapoznać się ze zaktualizowanymi krokami i ekranami rejestracji, zobacz [Rejestrowanie urządzenia z systemem iOS w usłudze Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-ios).  
+
+### <a name="user-experience-update-for-the-company-portal-app-for-ios----2536024---"></a>Aktualizacja środowiska użytkownika aplikacji Portal firmy dla systemu iOS <!-- 2536024 -->
+Strona główna aplikacji Portal firmy dla urządzeń z systemem iOS została przeprojektowana. Dzięki tej zmianie strona główna będzie bardziej zgodna z wzorcami interfejsu użytkownika systemu iOS, a także będzie zapewniać lepsze możliwości odnajdywania aplikacji i książek elektronicznych.  
+
+## <a name="week-of-february-19-2019"></a>Tydzień od 19 lutego 2019 r.  
+### <a name="new-app-categories-screen-in-the-company-portal-app-for-windows-10---3834780-wnready4review---"></a>Nowy ekran Kategorie aplikacji w aplikacji Portal firmy dla systemu Windows 10<!-- 3834780 WNready4Review -->  
+Dodano nowy ekran o nazwie **Kategorie aplikacji** w celu poprawy środowiska przeglądania i wyboru aplikacji w aplikacji Portal firmy dla systemu Windows 10. Użytkownicy będą teraz widzieli aplikacje posortowane w ramach kategorii, takich jak **Polecane**, **Edukacja** i **Produktywność**. Ta zmiana pojawia się w aplikacji Portal firmy w wersji 10.3.3451.0 i nowszych. Aby uzyskać więcej informacji na temat instalowania aplikacji w Portalu firmy, zobacz [Instalowanie i udostępnianie aplikacji na urządzeniu](/intune-user-help/install-apps-cpapp-windows).  
+
+![Zrzut ekranu aplikacji Portal firmy dla systemu Windows 10 — ekran kategorii aplikacji.](./media/1902_CP_app_categories.png)   
+
 
 ## <a name="week-of-november-12-2018"></a>Tydzień 12 listopada 2018 r.
 
 ### <a name="windows-company-portal-keyboard-shortcuts----2771518---"></a>Skróty klawiaturowe w aplikacji Portal firmy dla systemu Windows <!-- 2771518 -->
-Użytkownicy końcowi będą teraz mogli wyzwalać akcje aplikacji i urządzeń w aplikacji Portal firmy dla systemu Windows za pomocą skrótów klawiaturowych (akceleratorów).
+Użytkownicy końcowi będą teraz mogli wyzwalać akcje aplikacji i urządzeń w aplikacji Portal firmy dla systemu Windows [za pomocą skrótów klawiaturowych (akceleratorów)](https://docs.microsoft.com/intune/company-portal-app#windows-company-portal-keyboard-shortcuts).
 
 ## <a name="week-of-october-22-2018"></a>Tydzień 22 października 2018 r.
 
 ### <a name="add-custom-brand-image-for-company-portal-app----1916266---"></a>Dodawanie obrazu niestandardowego marki dla aplikacji Portal firmy <!-- 1916266 -->
-Jako administrator usługi Microsoft Intune masz możliwość przekazania obrazu niestandardowego marki, który będzie wyświetlany jako obraz tła na stronie profilu użytkownika w aplikacji Portal firmy dla systemu iOS. Aby uzyskać więcej informacji na temat konfigurowania aplikacji Portal firmy, zobacz artykuł [Jak skonfigurować aplikację Portal firmy w usłudze Microsoft Intune](company-portal-app.md).
-
-
+Jako administrator usługi Microsoft Intune masz możliwość przekazania obrazu niestandardowego marki, który będzie wyświetlany jako obraz tła na stronie profilu użytkownika w aplikacji Portal firmy dla systemu iOS. Aby uzyskać więcej informacji na temat konfigurowania aplikacji Portal firmy, zobacz artykuł [Jak skonfigurować aplikację Portal firmy w usłudze Microsoft Intune](company-portal-app.md).  
 
 ## <a name="week-of-august-27-2018"></a>Tydzień od 27 sierpnia 2018 r.  
 
 ### <a name="new-user-experience-update-for-the-company-portal-website---2000968---"></a>Aktualizacja nowego środowiska użytkownika witryny internetowej Portal firmy <!--2000968 -->  
-Na podstawie opinii klientów dodaliśmy nowe funkcje do witryny internetowej Portal firmy. Na swoich urządzeniach zobaczysz znaczące ulepszenia istniejących funkcji i poprawę użyteczności. Obszary witryny &ndash; takie jak szczegółowe informacje o urządzeniu, opinie i pomoc techniczna oraz przegląd urządzenia &ndash; zyskały nowy, nowoczesny i dynamiczny wygląd. [Dokumentacja witryny internetowej Portal firmy usługi Intune](https://docs.microsoft.com/intune-user-help/using-the-intune-company-portal-website) została zaktualizowana w celu odzwierciedlenia tych zmian.   
+Na podstawie opinii klientów dodaliśmy nowe funkcje do witryny internetowej Portal firmy. Na swoich urządzeniach zobaczysz znaczące ulepszenia istniejących funkcji i poprawę użyteczności. Określone obszary witryny, takie jak szczegółowe informacje o urządzeniu, opinie i pomoc techniczna oraz przegląd urządzenia, mają teraz nowy, nowoczesny i dynamiczny wygląd. [Dokumentacja witryny internetowej Portal firmy usługi Intune](https://docs.microsoft.com/intune-user-help/using-the-intune-company-portal-website) została zaktualizowana w celu odzwierciedlenia tych zmian.   
 
 Wyświetlane aktualizacje obejmują:  
 
@@ -63,13 +111,13 @@ Wyświetlane aktualizacje obejmują:
 ## <a name="week-of-july-16-2018"></a>Tydzień od 16 lipca 2018 r.  
 
 ### <a name="more-opportunities-to-sync-in-the-company-portal-app-for-windows"></a>Więcej możliwości synchronizacji w aplikacji Portal firmy dla systemu Windows   
-Aplikacja Portal firmy dla systemu Windows umożliwia teraz zainicjowanie synchronizacji bezpośrednio z poziomu paska zadań i menu Start systemu Windows. Ta funkcja jest szczególnie przydatna, jeśli Twoim jedynym zadaniem jest synchronizowanie urządzeń i uzyskiwanie dostępu do zasobów firmy. Aby skorzystać z nowych funkcji, kliknij prawym przyciskiem myszy ikonę aplikacji Portal firmy przypiętą do paska zadań lub menu Start. W opcjach menu (nazywanych również listą szybkiego dostępu) wybierz pozycję **Synchronizuj to urządzenie**. Spowoduje to otwarcie aplikacji Portal firmy na stronie **Ustawienia** i zainicjowanie synchronizacji.  
+Aplikacja Portal firmy dla systemu Windows umożliwia teraz zainicjowanie synchronizacji bezpośrednio z poziomu paska zadań i menu Start systemu Windows. Ta funkcja jest szczególnie przydatna, jeśli Twoim jedynym zadaniem jest synchronizowanie urządzeń i uzyskiwanie dostępu do zasobów firmy. Aby skorzystać z nowych funkcji, kliknij prawym przyciskiem myszy ikonę aplikacji Portal firmy przypiętą do paska zadań lub menu **Start**. W opcjach menu (nazywanych również listą szybkiego dostępu) wybierz pozycję **Synchronizuj to urządzenie**. Spowoduje to otwarcie aplikacji Portal firmy na stronie **Ustawienia** i zainicjowanie synchronizacji.  
 
 ![Zrzut ekranu paska zadań systemu Windows na pulpicie urządzenia. Kliknięto ikonę aplikacji Portal firmy, aby wyświetlić menu z opcjami „Przypnij do paska zadań”,„Zamknij okno” i „Synchronizuj to urządzenie”.](./media/sync-device-from-start-menu-1807.png)  
 
 ### <a name="new-browsing-experiences-in-the-company-portal-app-for-windows"></a>Nowe środowisko przeglądania w aplikacji Portal firmy dla systemu Windows  
 
-Teraz podczas przeglądania w poszukiwaniu aplikacji lub ich wyszukiwania w aplikacji Portal firmy dla systemu Windows możliwe jest przełączanie się między istniejącym widokiem **Kafelki** a nowo dodanym widokiem **Szczegóły**. W nowym widoku wyświetlane są szczegółowe informacje dotyczące aplikacji, takie jak nazwa, wydawca, data publikacji i stan instalacji.  
+Teraz podczas przeglądania w poszukiwaniu aplikacji lub ich wyszukiwania w aplikacji Portal firmy dla systemu Windows możliwe jest przełączanie się między istniejącym widokiem **Kafelki** a nowym widokiem **Szczegóły**. W tym nowym widoku wyświetlane są szczegółowe informacje dotyczące aplikacji, takie jak nazwa, wydawca, data publikacji i stan instalacji.  
 
 Na stronie **Aplikacje** w widoku **Zainstalowane** dostępne są szczegóły dotyczące zakończonych i trwających instalacji aplikacji.  
 
@@ -253,7 +301,7 @@ Dostęp warunkowy przy użyciu usługi Intune obsługuje bezpieczniejsze uwierzy
 
 
 
-### <a name="intune-mobile-application-management-mam-dialog-boxes-will-have-a-modern-interface----1199015---"></a>Okna dialogowe zarządzania aplikacjami mobilnymi w usłudze Intune (MAM) będą miały nowoczesny interfejs <!-- 1199015 -->
+### <a name="intune-mobile-application-management-mam-dialog-boxes-will-have-a-modern-interface----1199015---"></a>Okna dialogowe zarządzania aplikacjami mobilnymi w usłudze Intune (MAM, Mobile Application Management) będą miały nowoczesny interfejs <!-- 1199015 -->
 
 Okna dialogowe zarządzania aplikacjami mobilnymi w usłudze Intune (MAM) zostaną zaktualizowane do nowoczesnego wyglądu. Okna dialogowe będą działać w taki sam sposób jak w poprzednim stylu.
 
@@ -373,7 +421,7 @@ W odpowiedzi na opinie użytkowników w aplikacji Portal firmy dla systemu Andro
 
 ![Obraz okna dialogowego potwierdzenia, które jest dostępne po wybraniu w menu akcji nowej opcji „usuń portal firmy”. Okno dialogowe informuje użytkownika, że „po usunięciu portalu firmy urządzenie przestanie być zarządzane przez administratora IT, a dostęp do firmowych danych, aplikacji i poczty e-mail może zostać utracony”. Następnie użytkownik jest proszony o potwierdzenie za pomocą przycisku „Tak”, że chce usunąć aplikację Portal firmy.](./media/android_remove_cp_menu_confirmation_after_1705.png)
 
-### <a name="improvements-to-the-app-tiles-in-the-company-portal-app-for-ios---1230777--"></a>Ulepszenia kafelków aplikacji w aplikacji Portal firmy dla systemu iOS <!--1230777-->
+### <a name="improvements-to-the-app-tiles-in-the-company-portal-app-for-ios---1230777--"></a>Ulepszone kafelki aplikacji w Portalu firmy dla systemu iOS <!--1230777-->
 Zaktualizowaliśmy wygląd kafelków aplikacji na stronie głównej, aby odpowiadał on kolorowi ustawionemu dla Portalu firmy.
 
 **Przed**
@@ -470,7 +518,7 @@ Od marca aplikacja Portal firmy dla systemu Android będzie zgodna z [zaleceniam
 
 ## <a name="january-2017"></a>Styczeń 2017
 
-### <a name="modernizing-the-company-portal-website---753980-announced-1701--"></a>Modernizowanie witryny sieci Web Portal firmy <!--753980, announced 1701-->
+### <a name="modernizing-the-company-portal-website---753980-announced-1701--"></a>Modernizowanie witryny internetowej Portal firmy <!--753980, announced 1701-->
 Od lutego witryna sieci Web Portal firmy będzie obsługiwać aplikacje przeznaczone dla użytkowników, którzy nie mają zarządzanych urządzeń. Witryna internetowa zostanie zmieniona tak, aby wyglądała jak witryny innych produktów i usług firmy Microsoft, przy użyciu nowego schematu kontrastujących kolorów, ilustracji dynamicznych i menu typu „hamburger”. ![Mały obraz menu typu „hamburger” dodanego w lewym górnym rogu witryny internetowej Portal firmy,](./media/CP_hamburger_menu.png) które będzie zawierać szczegółowe dane kontaktowe działu pomocy technicznej i informacje o istniejących urządzeniach zarządzanych. Układ strony docelowej zostanie zmieniony tak, aby wyróżnić aplikacje dostępne dla użytkowników, a aplikacje polecane i ostatnio zaktualizowane zostaną oznaczone symbolem karuzeli.
 
 ![Z lewej strony: obraz przedstawiający bieżącą wersję witryny sieci Web Portal firmy z poprzednią wersją widoków Aplikacje, Moje urządzenia oraz Polecane i Kategorie. Z prawej strony: obraz przedstawiający zaktualizowaną wersję witryny sieci Web Portal firmy z odświeżoną karuzelą aplikacji, listą niedawno opublikowanych aplikacji i zaktualizowanym widokiem Kategorie.](./media/CP_Website_BeforeAfter_Feb2016.png)
@@ -479,29 +527,10 @@ Od lutego witryna sieci Web Portal firmy będzie obsługiwać aplikacje przeznac
 Są to plany dotyczące metod ulepszania środowiska użytkownika przez aktualizację interfejsu użytkownika.
 
 > [!Note]
-> Należy pamiętać, że poniższe obrazy mogą być wersjami wstępnymi i zapowiadany produkt może różnić się od prezentowanych wersji.
-
-### <a name="ui-iwp"></a>Aktualizacja nowego środowiska użytkownika witryny internetowej Portal firmy<!--2000968-->
-
-W sierpniu wprowadzimy nowe środowisko witryny internetowej Portal firmy zawierające aktualizacje interfejsu użytkownika, usprawnione przepływy pracy i ulepszone ułatwienia dostępu. Będzie ono obejmować ulepszenia oparte na potrzebach klientów, takie jak udostępnianie aplikacji i lepsza ogólna wydajność, które zapewnią użytkownikom większy komfort pracy.
-
-Na podstawie opinii klientów dodaliśmy nowe funkcje, które znacznie udoskonalą istniejącą funkcjonalność i użyteczność:
-
--   Ulepszenia interfejsu użytkownika w całej witrynie internetowej
--   Możliwość udostępniania bezpośrednich linków do aplikacji
-- Zwiększona wydajność dużych wykazów aplikacji
-
-Nie musisz niczego robić, aby przygotować się do tej zmiany. Powiadomimy Cię, gdy zaktualizowana witryna internetowa Portal firmy będzie dla Ciebie dostępna. Może być jednak konieczne zaktualizowanie zrzutów ekranu w dokumentach użytkownika końcowego. Pamiętaj, że może być też konieczne zaktualizowanie dokumentacji dla aplikacji Portal firmy w systemie iOS, ponieważ witryna internetowa obsługuje sekcję **Aplikacje** aplikacji systemu iOS.  
-
-### <a name="ui-updates-to-the-company-portal-website---1313244-part-2--"></a>Aktualizacje interfejsu użytkownika witryny internetowej Portal firmy <!--1313244 part 2-->
-
-__Aktualizacje sekcji Polecane aplikacje__ — do witryny dodaliśmy dedykowaną stronę, na której użytkownicy mogą przeglądać aplikacje wybrane do polecania. Dostosowaliśmy również interfejs użytkownika w sekcji Polecane na stronie głównej.
-
-![Kolorowe kafelki przedstawiające aplikacje. Są to duże kolorowe kwadraty znajdujące się poniżej każdej aplikacji, których kolor jest określany na podstawie podstawowego koloru logo aplikacji. Sekcja „Polecane aplikacje” jest wyświetlana w górnej części aplikacji Portal firmy.](./media/cp_win10_colorful_tiles_after_1708.png)
+> Poniższe obrazy mogą być wersjami wstępnymi, a zapowiadany produkt może różnić się od prezentowanych wersji.  
 
 
-
-### <a name="see-also"></a>Zobacz też
+### <a name="see-also"></a>Zobacz także
 * [Blog usługi Microsoft Intune](http://go.microsoft.com/fwlink/?LinkID=273882)
 * [Plan platformy w chmurze](https://www.microsoft.com/cloud-platform/roadmap)
 * [Co nowego w usłudze Intune](https://docs.microsoft.com/intune/whats-new)

@@ -9,17 +9,18 @@ ms.date: 12/19/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f580e95bc391db39e89da60e6b3a824eb9a3fbac
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 654d5b86a8a2df8eaddc8ea626b55390d2d32920
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57230079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61509074"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Monitorowanie zasad zgodności urządzeń Intune
 
@@ -164,7 +165,7 @@ Ta funkcja jest uwzględniana w obszarze raportowania stanu urządzenia:
     - Powodzenie: zasady zostały zastosowane.
     - Błąd: nie można zastosować zasad. Ten komunikat jest przeważnie wyświetlany z kodem błędu stanowiącym link do wyjaśnienia. 
     - Konflikt: na tym samym urządzeniu zostały zastosowane dwa ustawienia, a usługa Intune nie może rozwiązać konfliktu. Administrator powinien zapoznać się z tą sytuacją.
-    - Pending: urządzenie nie zostało jeszcze zaewidencjonowane w usłudze Intune w celu odebrania zasad. 
+    - Oczekuje: urządzenie nie zostało jeszcze zaewidencjonowane w usłudze Intune w celu odebrania zasad. 
     - Nie dotyczy: urządzenie nie może odebrać zasad. Na przykład zasady aktualizują ustawienie specyficzne dla systemu iOS 11.1, ale urządzenie używa systemu iOS 10. 
 
 3. Aby wyświetlić szczegóły urządzeń używających danych zasad, wybierz jeden z stanów. Na przykład wybierz pozycję **Powodzenie**. W następnym oknie jest wyświetlana lista szczegółów określonego urządzenia, w tym nazwa i stan jego wdrażania.

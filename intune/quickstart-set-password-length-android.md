@@ -1,12 +1,12 @@
 ---
-title: Szybki start — tworzenie zasad zgodności haseł dla urządzeń z systemem Android
+title: Szybki start — zasady zgodności haseł dla urządzeń z systemem Android
 titleSuffix: Microsoft Intune
 description: W tym przewodniku Szybki start użyjesz usługi Microsoft Intune do ustawienia długości hasła wymaganej w przypadku urządzeń z systemem Android.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/26/2019
+ms.date: 04/15/2019
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4a16272f32b8546e7e9bb12a22f16235ab49aed
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: e71a9a69cfc474f311bc6acd9e8f24c776a44476
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58799662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61512789"
 ---
 # <a name="quickstart-create-a-password-compliance-policy-for-android-devices"></a>Szybki start: Tworzenie zasad zgodności haseł dla urządzeń z systemem Android
 
@@ -32,7 +32,7 @@ W tym przewodniku Szybki start użyjesz usługi Microsoft Intune, aby wymagać o
 Zasady zgodności urządzeń w usłudze Intune określają reguły i ustawienia, które urządzenia muszą spełnić, aby zostały uznane za zgodne. Można wykorzystać zasady zgodności do stosowania dostępu warunkowego, aby zezwolić na dostęp do zasobów firmy lub go zablokować. Można również pobrać raporty urządzeń i podjąć akcje w przypadku niezgodności.
 
 > [!IMPORTANT]
-> Oprócz ustawień hasła należy również rozważyć użycie innych ustawień zabezpieczeń systemu, które pomogą Ci chronić pracowników. Aby uzyskać więcej informacji, zobacz [Ustawienia zabezpieczeń systemu](compliance-policy-create-android-for-work.md#system-security-settings).
+> Oprócz ustawień hasła należy również rozważyć użycie innych ustawień zabezpieczeń systemu, które pomogą Ci chronić pracowników. Aby uzyskać więcej informacji, zobacz [Ustawienia zabezpieczeń systemu](compliance-policy-create-android-for-work.md).
 
 Jeśli nie masz subskrypcji usługi Intune, [utwórz konto bezpłatnej wersji próbnej](free-trial-sign-up.md).
 

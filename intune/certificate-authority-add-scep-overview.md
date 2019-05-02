@@ -6,20 +6,22 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 07/26/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: de0df4878d2461d2f7c0a022a7e3d305e58aef7f
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d042a160d016343c6e8374dff8f74560b9806014
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61508488"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Dodawanie urzędu certyfikacji partnera w usłudze Intune przy użyciu protokołu SCEP
 
@@ -69,7 +71,7 @@ Aby umożliwić serwerowi protokołu SCEP innej firmy uruchamianie walidacji wyz
 
 Upewnij się, że masz wymagane uprawnienia do zarejestrowania aplikacji usługi Azure AD. Lista kroków znajduje się w sekcji [Required permissions (Wymagane uprawnienia)](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal#required-permissions).
 
-**Krok 1. Tworzenie aplikacji usługi Azure AD**
+**Krok 1: Tworzenie aplikacji usługi Azure AD**
 
 1. Zaloguj się do [portalu Azure](https://portal.azure.com).
 2. Wybierz kolejno pozycje **Azure Active Directory** > **Rejestracje aplikacji** > **Rejestrowanie nowej aplikacji**.
@@ -78,7 +80,7 @@ Upewnij się, że masz wymagane uprawnienia do zarejestrowania aplikacji usługi
 
 Temat [Integrowanie aplikacji z usługą Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications) zawiera wskazówki dotyczące tworzenia aplikacji, w tym porady związane z nazwą i adresem URL.
 
-**Krok 2. Udzielanie uprawnień**
+**Krok 2: Udzielanie uprawnień**
 
 Po utworzeniu aplikacji nadaj interfejsowi API usługi Microsoft Intune wymagane uprawnienia:
 
@@ -87,7 +89,7 @@ Po utworzeniu aplikacji nadaj interfejsowi API usługi Microsoft Intune wymagane
 3. W obszarze **Wybieranie uprawnień** wybierz kolejno pozycje **Walidacja wyzwania protokołu SCEP** > **Wybierz**.
 4. Wybierz przycisk **Gotowe**, aby zapisać zmiany.
 
-**Krok 3. Pobieranie identyfikatora aplikacji i klucza uwierzytelniania**
+**Krok 3: Pobieranie identyfikatora aplikacji i klucza uwierzytelniania**
 
 Następnie pobierz wartości identyfikatora i klucza dla aplikacji usługi Azure AD. Potrzebne są następujące wartości:
 
@@ -132,7 +134,7 @@ Jeśli interesuje Cię zintegrowanie urzędu certyfikacji innej firmy z usługą
 - [Intune SCEP API GitHub repository (Repozytorium GitHub interfejsu API protokołu SCEP w usłudze Intune)](http://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation)
 - [Intune SCEP API guidance for third party CAs (Wskazówki dotyczące interfejsu API protokołu SCEP w usłudze Intune dla urzędów certyfikacji innych firm)](scep-libraries-apis.md)
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
 - [Konfigurowanie profilów certyfikatów](certificates-scep-configure.md)
 - [Intune SCEP API GitHub repository (Repozytorium GitHub interfejsu API protokołu SCEP w usłudze Intune)](http://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation)

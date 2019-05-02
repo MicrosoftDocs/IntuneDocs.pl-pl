@@ -6,21 +6,23 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 05/18/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: d1171740-936d-46a5-af37-f418bd6fa63e
 ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 73cd8b4f0cf5bdfa02a301d476df31a01fc9691f
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: eede87fdca31e8e263d1dea78d766fec59f05f58
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61511306"
 ---
 # <a name="data-collection-in-intune"></a>Zbieranie danych w usłudze Intune
 
@@ -55,7 +57,7 @@ Dane identyfikujące zebrane przez usługę Intune obejmują między innymi:
     - Numer telefonu
 - Informacje dziennika inspekcji, w tym dane o następujących działaniach
     - Zarządzanie programem Endpoint Protection usługi
-    - Utworzenie
+    - Utwórz
     - Aktualizowanie (edytowanie)
     - Usuwanie
     - Przypisywanie
@@ -127,10 +129,10 @@ Dane zagregowane zebrane przez usługę Intune obejmują między innymi:
     - Liczba zarejestrowanych urządzeń lub użytkowników
     - Liczba zidentyfikowanych platform urządzeń  
     - Liczba zainstalowanych urządzeń
-    - installedDeviceCount: liczba urządzeń, na których zainstalowano aplikację.
-    - notApplicableDeviceCount: liczba urządzeń, dla których aplikacja nie ma zastosowania.
-    - notInstalledDeviceCount: liczba urządzeń, dla których aplikacja ma zastosowanie, ale nie jest zainstalowana.
-    - pendingInstallDeviceCount: liczba urządzeń, dla których aplikacja ma zastosowanie i oczekuje na instalację.
+    - installedDeviceCount: Liczba urządzeń, na których zainstalowano aplikację.
+    - notApplicableDeviceCount: Liczba urządzeń, dla których aplikacja nie jest przeznaczona.
+    - notInstalledDeviceCount: Liczba urządzeń, dla których aplikacja jest przeznaczona, ale nie jest na nich zainstalowana.
+    - pendingInstallDeviceCount: Liczba urządzeń, dla których aplikacja jest przeznaczona i które oczekują na jej instalację.
     
 ## <a name="next-steps"></a>Następne kroki
 

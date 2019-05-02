@@ -1,15 +1,16 @@
 ---
 title: Tworzenie projektu usługi Microsoft Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Ten artykuł jest pomocny w przypadku tworzenia projektu i implementacji tylko w chmurze usługi Microsoft Intune.
 keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/01/2018
+ms.date: 3/22/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: a8e38e29-f5e3-4a71-a170-d3b1a06e37c6
 ms.reviewer: jeffbu, cgerth
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 22af3d4de296d90a89bb3d812cab0e55983e786b
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 307895935e1cd6fe2489a4ee8ae03333ce97d55b
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57238986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61512723"
 ---
 # <a name="create-a-design"></a>Tworzenie projektu
 
@@ -110,6 +111,10 @@ W celu opracowania własnego planu projektu usługi Intune możesz [pobrać szab
 
 Usługa Intune oferuje dwie opcje wdrożenia: autonomiczną i hybrydową. Opcja autonomiczna dotyczy usługi Intune uruchamianej w chmurze, a opcja hybrydowa dotyczy integracji usługi Intune z programem System Center Configuration Manager. Ten przewodnik jest przeznaczony głównie do użycia opcji autonomicznej. [Określ, która opcja spełnia Twoje wymagania biznesowe](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).
 
+> [!Important]
+>Funkcja dołączania nowych klientów hybrydowego rozwiązania MDM jest przestarzała. Aby uzyskać więcej informacji, zobacz wpis w blogu [Move from Hybrid Mobile Device Management to Intune on Azure](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150) (Przechodzenie z hybrydowego zarządzania urządzeniami przenośnymi do usługi Intune na platformie Azure).
+
+
 ## <a name="intune-tenant-location"></a>Lokalizacja dzierżawy usługi Intune
 
 Jeśli Twoja organizacja działa na całym świecie, upewnij się, że lokalizacja dzierżawy została zaplanowana w momencie subskrybowania usługi. Kraj jest definiowany podczas pierwszego logowania do subskrypcji usługi Intune i jest mapowany na regiony na całym świecie, które zostały wymienione poniżej:
@@ -133,7 +138,7 @@ Zależności zewnętrzne to usługi i produkty, które są niezależne od usług
 
 -   Infrastruktura kluczy publicznych (PKI, Public Key Infrastructure)
 
-Poniżej przyjrzyjmy się bardziej szczegółowo tym typowym zależnościom zewnętrznym
+Poniżej omówimy bardziej szczegółowo te typowe zależności zewnętrzne.
 
 ### <a name="identity"></a>Tożsamość
 
@@ -399,11 +404,9 @@ Poniżej przedstawiono przykład sposobu projektowania zasad zgodności:
 Aby zidentyfikować potrzeby swoich zasad zgodności, możesz [pobrać szablon powyższej tabeli](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0).
 #### <a name="conditional-access-policies"></a>Zasady dostępu warunkowego
 
-Dostęp warunkowy służy do umożliwiania dostępu do poczty e-mail i innych zasobów firmy tylko zgodnym urządzeniom. Usługa Intune współdziała z pakietem Enterprise Mobility + Security (EMS) w celu kontrolowania dostępu do zasobów firmy. Musisz zdecydować, czy wymagany jest dostęp warunkowy, oraz określić elementy, które muszą być chronione. Dowiedz się więcej na temat [dostępu warunkowego](conditional-access.md).
+Dostęp warunkowy służy do umożliwiania dostępu do poczty e-mail i innych zasobów firmy tylko zgodnym urządzeniom. Usługa Intune współdziała z pakietem Enterprise Mobility + Security (EMS) w celu kontrolowania dostępu do zasobów firmy. Zdecyduj, czy potrzebujesz dostępu warunkowego, oraz określ elementy, które muszą być chronione. Dowiedz się więcej na temat [dostępu warunkowego](conditional-access.md).
 
-Na potrzeby dostępu online zdecyduj, których platform i grup użytkowników będą dotyczyć zasady dostępu warunkowego. Ponadto określ, czy należy zainstalować lub skonfigurować łącznik Intune Service To Service Connector na potrzeby usługi Exchange Online lub lokalnej instalacji programu Exchange. Dowiedz się więcej na temat sposobu instalowania i konfigurowania łączników Intune Service to Service Connector: <!---these links are correct--->
-
--   [Usługa Exchange Online](exchange-service-connector-configure.md)
+Na potrzeby dostępu online zdecyduj, których platform i grup użytkowników będą dotyczyć zasady dostępu warunkowego. Ponadto określ, czy należy zainstalować lub skonfigurować łącznik usługi Intune dla lokalnego programu Exchange: 
 
 -   [Lokalna instalacja programu Exchange](exchange-connector-install.md)
 

@@ -5,22 +5,23 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 1/29/2019
-ms.topic: article
+ms.date: 02/22/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: afa2ef4cf1199597f61af99d631243e2d3b51e64
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 036f2ca8302f9b3c2d700a04918c4c49a4c6211a
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55845180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61490572"
 ---
 # <a name="enforce-compliance-for-windows-defender-atp-with-conditional-access-in-intune"></a>Wymuszanie zgodności usługi Windows Defender ATP z dostępem warunkowym w usłudze Intune
 
@@ -109,12 +110,12 @@ Zasady zgodności określają akceptowalny poziom ryzyka na urządzeniu.
 2. Wybierz pozycję **Zgodność urządzeń** > **Zasady** > **Utwórz zasady**.
 3. Uzupełnij pola **Nazwa** i **Opis**.
 4. W polu **Platforma** wybierz pozycję **Windows 10 i nowsze**.
-5. W ustawieniach usługi **Windows Defender ATP** ustaw pozycję **Wymagaj, aby urządzenie było na poziomie niższym lub równym ocenie ryzyka maszyny** na preferowany poziom:
+5. W ustawieniach usługi **Windows Defender ATP** ustaw pozycję **Wymagaj, aby urządzenie było na poziomie niższym lub równym ocenie ryzyka maszyny** na preferowany poziom. Klasyfikacja poziomów zagrożenia jest [określana przez usługę Windows Defender ATP](https://review.docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/alerts-queue-windows-defender-advanced-threat-protection?branch=atp-server2008#sort-filter-and-group-the-alerts-queue).
 
-  - **Czyste**: Ten poziom jest najbardziej bezpieczny. Urządzenie, na którym są obecne jakiekolwiek zagrożenia, nie może uzyskiwać dostępu do zasobów firmy. Jeśli zostaną znalezione jakiekolwiek zagrożenia, urządzenie zostanie ocenione jako niezgodne.
-  - **Niski**: Urządzenie jest zgodne, jeśli istnieją tylko zagrożenia niskiego poziomu. Urządzenia ze średnim lub wysokim poziomem zagrożenia nie są zgodne.
-  - **Średni**: Urządzenie jest zgodne, jeśli znalezione na nim zagrożenia są na poziomie niskim lub średnim. W przypadku wykrycia zagrożeń wysokiego poziomu urządzenie zostanie określone jako niezgodne.
-  - **Wysoki**: Ta opcja jest najmniej bezpieczna, zezwala na wszystkie poziomy zagrożeń. Urządzenia z wysokim, średnim i niskim poziomem zagrożeń są więc uznawane za zgodne.
+   - **Czyste**: Ten poziom jest najbardziej bezpieczny. Urządzenie, na którym są obecne jakiekolwiek zagrożenia, nie może uzyskiwać dostępu do zasobów firmy. Jeśli zostaną znalezione jakiekolwiek zagrożenia, urządzenie zostanie ocenione jako niezgodne. (Usługa Windows Defender ATP używa wartości *Bezpieczny*).
+   - **Niski**: Urządzenie jest zgodne, jeśli istnieją tylko zagrożenia niskiego poziomu. Urządzenia ze średnim lub wysokim poziomem zagrożenia nie są zgodne.
+   - **Średni**: Urządzenie jest zgodne, jeśli znalezione na nim zagrożenia są na poziomie niskim lub średnim. W przypadku wykrycia zagrożeń wysokiego poziomu urządzenie zostanie określone jako niezgodne.
+   - **Wysoki**: Ta opcja jest najmniej bezpieczna, zezwala na wszystkie poziomy zagrożeń. Urządzenia z wysokim, średnim i niskim poziomem zagrożeń są więc uznawane za zgodne.
 
 6. Wybierz opcję **OK** i **Utwórz**, aby zapisać zmiany (i utworzyć zasady).
 
@@ -126,10 +127,13 @@ Zasady zgodności określają akceptowalny poziom ryzyka na urządzeniu.
 4. Dołącz lub wyklucz grupy usługi Azure AD, aby przypisać do nich zasady.
 5. Aby wdrożyć zasady do grup, wybierz przycisk **Zapisz**. Urządzenia użytkowników objęte zasadami zostaną ocenione pod kątem zgodności.
 
-## <a name="create-an-azure-ad-conditional-access-policy"></a>Tworzenie zasad dostępu warunkowego usługi Azure AD
-Zasady dostępu warunkowego blokują dostęp do zasobów, *jeśli* urządzenie jest niezgodne. Dlatego jeśli urządzenie przekroczy poziom zagrożenia, możesz zablokować dostęp do zasobów firmowych, np. do programu SharePoint lub usługi Exchange Online.
+## <a name="create-a-conditional-access-policy"></a>Tworzenie zasad dostępu warunkowego
+Zasady dostępu warunkowego blokują dostęp do zasobów, *jeśli* urządzenie jest niezgodne. Dlatego jeśli urządzenie przekroczy poziom zagrożenia, możesz zablokować dostęp do zasobów firmowych, np. do programu SharePoint lub usługi Exchange Online.  
 
-1. W witrynie [Azure Portal](https://portal.azure.com) wybierz kolejno pozycje **Azure Active Directory** > **Dostęp warunkowy** > **Nowe zasady**.
+> [!TIP]  
+> Dostęp warunkowy to pojęcie z technologii używanej w usłudze Azure Active Directory (Azure AD). Węzeł Dostęp warunkowy dostępny z usługi *Intune* jest tym samym węzłem, do którego dostęp jest uzyskiwany z usługi *Azure AD*.  
+
+1. W witrynie [Azure Portal](https://portal.azure.com) otwórz pozycję **Intune** > **Dostęp warunkowy** > **Nowe zasady**.
 2. W polu **Nazwa** wprowadź nazwę zasad i wybierz pozycję **Użytkownicy i grupy**. Użyj opcji Dołącz lub Wyklucz, aby dodać grupy do zasad, i wybierz opcję **Gotowe**.
 3. Wybierz opcję **Aplikacje w chmurze** i wybierz aplikacje, które będą chronione. Na przykład wybierz pozycję **Wybierz aplikacje**, a następnie pozycje **Office 365 SharePoint Online** i **Office 365 Exchange Online**.
 

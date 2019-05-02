@@ -1,27 +1,29 @@
 ---
 title: Dodawanie wbudowanych aplikacji do urządzeń przenośnych za pomocą usługi Microsoft Intune
-titlesuffix: ''
+titleSuffix: ''
 description: Dowiedz się, jak przy użyciu usługi Intune możesz łatwiej instalować wbudowane aplikacje na urządzeniach przenośnych.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/19/2018
-ms.topic: article
+ms.date: 04/08/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 0ec8de66-5a0f-4c8d-afbf-c2becc7d6eec
 ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: e3bb60d3d6bd7321ea3e378c747e87481b659888
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5f46cd1295c9ecf593765cf26f4c8685eccbffa0
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61506835"
 ---
 # <a name="add-built-in-apps-to-microsoft-intune"></a>Dodawanie wbudowanych aplikacji do usługi Microsoft Intune
 
@@ -55,16 +57,16 @@ Możesz zmodyfikować informacje o wbudowanej aplikacji. Te informacje pomagają
 3. Aby zmodyfikować informacje o wbudowanej aplikacji, wybierz opcję **Konfiguruj**.
 4. W okienku **Informacje o aplikacji** możesz zmodyfikować następujące informacje:
     - **Nazwa**: wprowadź nazwę wbudowanej aplikacji taką, jaka jest wyświetlana w Portalu firmy. Upewnij się, że wszystkie używane nazwy są unikatowe. Jeśli dana nazwa aplikacji występuje dwa razy, użytkownicy Portalu firmy będą widzieć tylko jedną z aplikacji o tej nazwie.
-    - **Opis**: wprowadź opis aplikacji. 
-    - **Wydawca**: wprowadź nazwę wydawcy aplikacji.
+    - **Opis**: Wprowadź opis aplikacji. 
+    - **Wydawca**: Wprowadź nazwę wydawcy aplikacji.
     - **Kategoria**: opcjonalnie wybierz przynajmniej jedną z kategorii wbudowanych aplikacji. Ustawienie tej opcji ułatwi użytkownikom znajdowanie aplikacji podczas przeglądania Portalu firmy.
-    - **Wyświetl jako polecaną aplikację w portalu firmy**: wyróżnij aplikację na stronie głównej portalu firmy dla użytkowników przeglądających aplikacje.
-    - **Adres URL informacji**: opcjonalnie wprowadź adres URL witryny internetowej zawierającej informacje o tej aplikacji. Adres będzie widoczny dla użytkowników Portalu firmy.
-    - **Adres URL zasad ochrony prywatności**: opcjonalnie wprowadź adres URL witryny internetowej zawierającej informacje o zasadach ochrony prywatności w tej aplikacji. Adres będzie widoczny dla użytkowników Portalu firmy.
+    - **Wyświetl jako polecaną aplikację w portalu firmy**: Wyróżnij aplikację na stronie głównej Portalu firmy dla użytkowników przeglądających aplikacje.
+    - **Adres URL informacji**: Opcjonalnie wprowadź adres URL witryny sieci Web zawierającej informacje o tej aplikacji. Adres będzie widoczny dla użytkowników Portalu firmy.
+    - **Adres URL zasad ochrony prywatności**: Opcjonalnie wprowadź adres URL witryny sieci Web zawierającej informacje dotyczące zasad ochrony prywatności w tej aplikacji. Adres będzie widoczny dla użytkowników Portalu firmy.
     - **Deweloper**: opcjonalnie wprowadź nazwę dewelopera aplikacji.
     - **Właściciel**: opcjonalnie wprowadź nazwę właściciela aplikacji (na przykład *Dział kadr*).
     - **Uwagi**: wprowadź wszelkie uwagi, które chcesz skojarzyć z tą aplikacją.
-    - **Przekaż ikonę**: przekaż ikonę, która jest wyświetlana jako ikona aplikacji podczas przeglądania Portalu firmy.
+    - **Przekaż ikonę**: przekaż ikonę, która jest wyświetlana jako ikona aplikacji podczas przeglądania portalu firmy.
 4. Wybierz przycisk **OK**.
 5. W okienku **Właściwości** wybierz pozycję **Zapisz**.
 

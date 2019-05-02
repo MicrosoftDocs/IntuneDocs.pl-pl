@@ -1,26 +1,28 @@
 ---
 title: Przewodnik po migracji funkcji zarządzania urządzeniami mobilnymi do usługi Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Ten przewodnik zawiera szczegółowe instrukcje umożliwiające przejście przez różne etapy migracji od innego dostawcy usług MDM do usługi Microsoft Intune.
 keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.date: 01/02/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: dcfc21f9-1bcd-4371-a46d-f2e18154ec50
 ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
-ms.openlocfilehash: bde445601b6fe3612a1a3d8bcab4f6996a997228
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e293140838cd772dea4cdf810623cfe92fa0fe9e
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61512993"
 ---
 # <a name="intune-migration-guide"></a>Przewodnik po migracji do usługi Intune
 
@@ -34,7 +36,7 @@ Ten przewodnik zawiera szczegółowe instrukcje umożliwiające przejście przez
 
 Ten przewodnik dzieli proces migracji na dwie fazy, z których każda obejmuje zadania, strategie i wskazówki taktyczne, które ułatwiają kompleksowe przejście przez proces migracji funkcji MDM do usługi Intune.
 
--   [Faza 1: Przygotowanie usługi Intune do zarządzania urządzeniami przenośnymi](migration-guide-prepare.md)
+-   [Faza 1. Przygotowanie usługi Intune do zarządzania urządzeniami mobilnymi](migration-guide-prepare.md)
 
     -   [Ocena wymagań dotyczących migracji funkcji MDM](migration-guide-prepare.md#assess-mdm-requirements)
 
@@ -46,7 +48,7 @@ Ten przewodnik dzieli proces migracji na dwie fazy, z których każda obejmuje z
 
     -   [Specjalne zagadnienia dotyczące migracji](migration-guide-considerations.md)
 
--   [Faza 2: Kampania migracji](migration-guide-campaign.md)
+-   [Faza 2. Kampania migracji](migration-guide-campaign.md)
 
     -   [Plan komunikacji](migration-guide-communication-plan.md)
 
@@ -70,4 +72,4 @@ Ważne jest, aby mieć świadomość, że nowe wdrożenie usługi Intune może s
 
 ## <a name="next-steps"></a>Następne kroki
 
-[Faza 1: Przygotowanie usługi Intune do zarządzania urządzeniami przenośnymi](migration-guide-prepare.md)
+[Faza 1. Przygotowanie usługi Intune do zarządzania urządzeniami mobilnymi](migration-guide-prepare.md)

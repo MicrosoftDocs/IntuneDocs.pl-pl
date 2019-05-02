@@ -5,56 +5,87 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/11/2018
-ms.topic: article
+ms.date: 04/04/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cce77976ea0cb31596ca0a1fd6c4becc9e3cee34
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: de73aa069765ce75068781674ff24d097346cdba
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55833603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61505934"
 ---
-# <a name="configure-ios-update-policies-in-intune"></a>Konfigurowanie zasad aktualizacji systemu iOS w usłudze Intune
+# <a name="add-ios-software-update-policies-in-intune"></a>Dodawanie zasad aktualizacji oprogramowania dla systemu iOS w usłudze Intune
 
-Zasady aktualizacji oprogramowania umożliwiają wymuszenie automatycznej instalacji najnowszej dostępnej aktualizacji systemu operacyjnego na urządzeniach nadzorowanych z systemem iOS. Ta funkcja jest dostępna tylko na urządzeniach nadzorowanych. Podczas konfigurowania zasad możesz dodać dni i godziny, kiedy nie chcesz, aby na urządzeniach były instalowane aktualizacje. 
+Zasady aktualizacji oprogramowania umożliwiają wymuszenie automatycznej instalacji najnowszej dostępnej aktualizacji systemu operacyjnego na urządzeniach nadzorowanych z systemem iOS. Podczas konfigurowania zasad możesz dodać dni i godziny, kiedy nie chcesz, aby na urządzeniach były instalowane aktualizacje. 
+
+Ta funkcja ma zastosowanie do:
+
+- systemu iOS w wersji 10.3 lub nowszej (w trybie nadzorowanym)
 
 Urządzenie sprawdza zasady usługi Intune miej więcej co 8 godzin. Jeśli aktualizacja jest dostępna i nie jest to czas zastrzeżony, urządzenie pobiera i instaluje najnowszą aktualizację systemu operacyjnego. Aktualizacja urządzenia nie wymaga interakcji użytkownika. Zasady nie uniemożliwiają użytkownikom ręcznego aktualizowania systemu operacyjnego.
 
-Ta funkcja obsługuje urządzenia z systemem iOS w wersji 10.3 lub nowszej. Ustawienie opóźnienia jest dostępne w systemie iOS w wersji 11.3 i nowszych.
-
 ## <a name="configure-the-policy"></a>Konfigurowanie zasad
-1. Zaloguj się do [portalu Azure](https://portal.azure.com).
-2. Wybierz opcję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
-3. Wybierz pozycję **Aktualizacje oprogramowania** > **Zasady aktualizacji dla systemu iOS** > **Utwórz**.
-4. Wprowadź nazwę i opis zasad.
-5. Wybierz pozycję **Ustawienia**. 
 
-    Wprowadź szczegóły dotyczące czasu, kiedy na urządzeniach z systemem iOS nie jest wymuszana instalacja najnowszych aktualizacji. Te ustawienia tworzą przedział czasu z ograniczeniami. Możesz skonfigurować **dni** tygodnia, **strefę czasową**, **godzinę rozpoczęcia**, **godzinę zakończenia** oraz to, czy **opóźniać widoczność aktualizacji oprogramowania (w dniach)**, aby wprowadzić użytkowników. Możesz wybrać zakres opóźnienia aktualizacji oprogramowania z przedziału od 1 do 90 dni. Po upływie czasu opóźnienia użytkownicy otrzymują powiadomienie o aktualizacji do najnowszej wersji systemu operacyjnego dostępnej w momencie wyzwolenia opóźnienia. Aby zrezygnować z ustawienia opóźnienia aktualizacji oprogramowania, wprowadź wartość 0. Te ustawienia aktualizacji będą stosowane tylko na nadzorowanych urządzeniach z systemem iOS.
-  
-    Na przykład jeśli system iOS 12.a jest dostępny **1 stycznia** i ustawienie **Opóźnij aktualizacje systemu operacyjnego** ma wartość **5 dni**, ta konkretna wersja nie będzie wyświetlana jako dostępna aktualizacja na żadnym urządzeniu użytkownika końcowego przypisanym do tego profilu. **Szóstego dnia** po wydaniu aktualizacja będzie wyświetlana jako dostępna, a wszyscy użytkownicy końcowi będą mogli zainicjować aktualizację.
+1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi**, wpisz nazwę usługi **Intune** w filtrze, a następnie wybierz pozycję **Intune**.
+2. Wybierz pozycję **Aktualizacje oprogramowania** > **Zasady aktualizacji dla systemu iOS** > **Utwórz**.
+3. Podaj następujące ustawienia:
 
+    - **Nazwa**: Wprowadź nazwę zasad aktualizacji oprogramowania. Na przykład wprowadź `iOS restricted update times`.
+    - **Opis**: Wprowadź opis zasad. To ustawienie jest opcjonalne, ale zalecane.
 
-6. Wybierz przycisk **OK**, aby zapisać zmiany. Wybierz pozycję **Utwórz**, aby utworzyć zasady.
+4. Wybierz pozycję **Ustawienia > Konfiguruj**. Podaj następujące ustawienia:
 
-Profil zostanie utworzony i wyświetlony na liście zasad. Zarządzanie urządzeniami mobilnymi firmy Apple nie zezwala na wymuszanie instalowania aktualizacji na urządzeniach według określonej godziny lub daty. 
+    - **Wybierz czas, aby zapobiegać instalowaniu aktualizacji**: Określ ograniczony horyzont czasowy, w którym nie będzie stosowane wymuszanie instalacji aktualizacji. 
+      - Nocne bloki nie są obsługiwane i mogą nie działać. Na przykład nie należy konfigurować zasad z opcją *Godzina rozpoczęcia* ustawioną na godzinę 20:00 i opcją *Godzina zakończenia* ustawioną na godzinę 6:00.
+      - Zasada, która rozpoczyna się o godzinie 12:00 i kończy się o godzinie 12:00, jest wartościowana jako 0 godzin, a nie 24 godziny, co powoduje, że nie są nakładane żadne ograniczenia.
+
+      Podczas ustawiania przedziału czasu z ograniczeniami wprowadź następujące informacje:
+
+      - **Dni**: Wybierz dni tygodnia, w które aktualizacje nie będą instalowane. Na przykład zaznacz pozycje Poniedziałek, Środa i Piątek, aby zapobiec instalowaniu aktualizacji w te dni.
+      - **Strefa czasowa**: Wybierz strefę czasową.
+      - **Godzina rozpoczęcia**: Wybierz godzinę rozpoczęcia horyzontu czasowego z ograniczeniami. Na przykład wprowadzenie wartości 5:00 spowoduje, że aktualizacje nie będą instalowane począwszy od godziny 5:00.
+      - **Godzina zakończenia**: Wybierz godzinę zakończenia horyzontu czasowego z ograniczeniami. Na przykład wprowadzenie wartości 1:00 spowoduje, że aktualizacje będą mogły być instalowane od godziny 1:00.
+
+    - **Opóźnij widoczność aktualizacji oprogramowania dla użytkowników końcowych bez żadnych zmian zaplanowanych aktualizacji (dni)**: 
+
+      **To ustawienie zostało przeniesione do obszaru [Ograniczenia dotyczące urządzeń](device-restrictions-ios.md#general). Zostanie ono usunięte z tej lokalizacji w portalu**. W tym miejscu można wprowadzać tymczasowe zmiany istniejących zasad. W ciągu około miesiąca to ustawienie zostanie usunięte z istniejących zasad.
+
+      Aby ograniczyć wpływ, zalecamy następujące działania:
+        - Usuń istniejące zasady z tej lokalizacji w portalu.
+        - Utwórz nowe [zasady ograniczeń urządzenia](device-restrictions-ios.md#general).
+        - Ustaw docelowych użytkowników takich samych jak w oryginalnych zasadach.
+
+      Jeśli występuje konflikt, to ustawienie nie będzie miało żadnego znaczenia, *chyba że* te dwie wartości są identyczne. Aby uniknąć konfliktu, zmień lub usuń istniejące zasady z tej lokalizacji w portalu.
+      > [! Ważne]  
+      > Zasada, która ma *Godzinę rozpoczęcia* i *Godzinę zakończenia* ustawioną na 12:00, jest wartościowana jako 0 godzin, a nie 24 godziny. W takim przypadku nie będą wprowadzane żadne ograniczenia.  
+
+5. Wybierz opcję **OK** > **Utwórz**, aby zapisać zmiany i utworzyć zasady.
+
+Profil zostanie utworzony i wyświetlony na liście zasad.
+
+Aby uzyskać wskazówki od członków zespołu pomocy technicznej usługi Intune, zobacz [Delay visibility of software updates in Intune for supervised devices (Opóźnianie widoczności aktualizacji oprogramowania w usłudze Intune w przypadku urządzeń nadzorowanych)](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Delaying-visibility-of-software-updates-in-Intune-for-supervised/ba-p/345753).
+
+> [!NOTE]
+> Zarządzanie urządzeniami mobilnymi firmy Apple nie zezwala na wymuszanie instalowania aktualizacji na urządzeniach według określonej godziny lub daty.
 
 ## <a name="change-the-restricted-times-for-the-policy"></a>Zmiana zastrzeżonego czasu dla zasad
 
 1. W obszarze **Aktualizacje oprogramowania** wybierz pozycję **Zasady aktualizacji dla systemu iOS**.
 2. Wybierz istniejące zasady > **Właściwości**.
 3. Zaktualizuj czas z ograniczeniami:
-    
+
     1. Wybieranie dni tygodnia
     2. Wybierz strefę czasową, w której te zasady są stosowane
     3. Wprowadź godzinę rozpoczęcia i zakończenia w przypadku godzin zabronionych
 
     > [!NOTE]
-    > Jeśli zarówno **Czas rozpoczęcia**, jak i **Czas zakończenia** są ustawione na godzinę 00:00, to opcja czasu konserwacji jest wyłączona.
+    > Jeśli pozycje **Godzina rozpoczęcia** i **Godzina zakończenia** są ustawione na wartość 0:00, usługa Intune nie będzie stosowała ograniczeń dotyczących instalowania aktualizacji. Oznacza to, że wszystkie konfiguracje dla opcji **Wybierz czas, aby zapobiegać instalowaniu aktualizacji** będą ignorowane, a aktualizacje będą mogły być instalowane w dowolnym momencie.  
 
 ## <a name="assign-the-policy-to-users"></a>Przypisywanie zasad do użytkowników
 
@@ -68,6 +99,9 @@ Istniejące zasady są przypisywane do grup, użytkowników lub urządzeń. Po p
 Urządzenia, którymi posługują się użytkownicy objęci zasadami, zostaną ocenione pod kątem zgodności aktualizacji. Te zasady obsługują również urządzenia bez użytkowników.
 
 ## <a name="monitor-device-installation-failures"></a>Monitorowanie niepowodzeń instalacji na urządzeniach
-W obszarze <!-- 1352223 -->
-**Aktualizacje oprogramowania** > **Niepowodzenia instalacji dla urządzeń z systemem iOS** jest wyświetlana lista nadzorowanych urządzeń z systemem iOS objętych zasadami aktualizacji, dla których podjęto próbę aktualizacji i które nie mogły zostać zaktualizowane. Dla każdego urządzenia można wyświetlić stan z informacją, dlaczego urządzenie nie zostało zaktualizowane automatycznie. Aktualne urządzenia w dobrej kondycji nie są wyświetlane na liście. Stan „Aktualne” oznacza urządzenie korzystające z najnowszej aktualizacji, którą obsługuje.
+<!-- 1352223 -->
+W obszarze **Aktualizacje oprogramowania** > **Niepowodzenia instalacji dla urządzeń z systemem iOS** jest wyświetlana lista nadzorowanych urządzeń z systemem iOS objętych zasadami aktualizacji, dla których podjęto próbę aktualizacji i które nie mogły zostać zaktualizowane. Dla każdego urządzenia można wyświetlić stan z informacją, dlaczego urządzenie nie zostało zaktualizowane automatycznie. Aktualne urządzenia w dobrej kondycji nie są wyświetlane na liście. Stan „Aktualne” oznacza urządzenie korzystające z najnowszej aktualizacji, którą obsługuje.
 
+## <a name="next-steps"></a>Następne kroki
+
+[Przypisywanie profilu](device-profile-assign.md) i [monitorowanie jego stanu](device-profile-monitor.md).

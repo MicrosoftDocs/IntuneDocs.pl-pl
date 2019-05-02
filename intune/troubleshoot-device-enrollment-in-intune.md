@@ -1,32 +1,34 @@
 ---
 title: Rozwiązywanie problemów z rejestrowaniem urządzeń
-description: Sugestie dotyczące rozwiązywania problemów z rejestracją urządzenia.
+titleSuffix: Microsoft Intune
+description: Sugestie dotyczące rozwiązywania problemów z rejestracją urządzenia w usłudze Microsoft Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 11/09/2018
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 6982ba0e-90ff-4fc4-9594-55797e504b62
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-classic
+ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b2d345ba84eb963600a921c0f77f7a93ed6aa1b0
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 06a8bd8d0a46b7d7eed8efb4cb8b4c2d4e21f77d
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57238680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61509225"
 ---
-# <a name="troubleshoot-device-enrollment-in-intune"></a>Rozwiązywanie problemów dotyczących rejestrowania urządzeń w usłudze Intune
+# <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Rozwiązywanie problemów dotyczących rejestrowania urządzeń w usłudze Microsoft Intune
 
-Ten artykuł zawiera sugestie dotyczące rozwiązywania problemów z rejestracją urządzenia. Jeśli te informacje nie pomogą rozwiązać problemu, zobacz [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](get-support.md), aby znaleźć więcej sposobów uzyskania pomocy.
+Ten artykuł zawiera sugestie dotyczące rozwiązywania problemów z [rejestracją urządzenia](device-enrollment.md). Jeśli te informacje nie pomogą rozwiązać problemu, zobacz [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](get-support.md), aby znaleźć więcej sposobów uzyskania pomocy.
 
 
 ## <a name="initial-troubleshooting-steps"></a>Początkowe kroki rozwiązywania problemów
@@ -100,7 +102,7 @@ Aby uniknąć osiągania górnych limitów urządzeń, pamiętaj o usuwaniu niea
 
 1.  Sprawdź, czy urząd MDM został [odpowiednio ustawiony](mdm-authority-set.md).
     
-2.  Sprawdź, czy poświadczenia użytkownika zostały prawidłowo zsynchronizowane z usługą Azure Active Directory. W portalu usługi Office 365 możesz sprawdzić, czy nazwa UPN użytkownika jest zgodna z informacjami usługi Active Directory.
+2.  Sprawdź, czy poświadczenia użytkownika zostały prawidłowo zsynchronizowane z usługą Azure Active Directory. W centrum administracyjnym usługi Microsoft 365 możesz sprawdzić, czy nazwa UPN użytkownika jest zgodna z informacjami usługi Active Directory.
     Jeśli nazwa UPN jest niezgodna z informacjami z usługi Active Directory:
 
     1.  Wyłącz narzędzie DirSync na serwerze lokalnym.
@@ -131,7 +133,7 @@ Aby uniknąć osiągania górnych limitów urządzeń, pamiętaj o usuwaniu niea
 ### <a name="unable-to-create-policy-or-enroll-devices-if-the-company-name-contains-special-characters"></a>Nie można utworzyć zasad lub zarejestrować urządzeń, jeśli nazwa firmy zawiera znaki specjalne.
 **Problem:** Nie można utworzyć zasad lub zarejestrować urządzeń.
 
-**Rozwiązanie:** W [centrum administracyjnym usługi Office 365](https://portal.office.com/) usuń znaki specjalne z nazwy firmy i zapisz informacje o firmie.
+**Rozwiązanie:** W [centrum administracyjnym usługi Microsoft 365](https://admin.microsoft.com/) usuń znaki specjalne z nazwy firmy i zapisz informacje o firmie.
 
 ### <a name="unable-to-sign-in-or-enroll-devices-when-you-have-multiple-verified-domains"></a>Nie można się zalogować lub zarejestrować urządzeń w przypadku korzystania z wielu zweryfikowanych domen
 **Problem:** Ten problem może wystąpić po dodaniu drugiej zweryfikowanej domeny do usługi AD FS. Możliwe, że użytkownicy z sufiksem głównej nazwy użytkownika (nazwy UPN) drugiej domeny nie będą mogli zalogować się do portali lub rejestrować urządzeń.
@@ -225,7 +227,7 @@ Jeśli rozwiązanie 2 nie działa, poproś użytkowników o wykonanie poniższyc
 
 **Rozwiązanie 1**:
 
-Użytkownik może mieć możliwość pobrania brakującego certyfikatu przez wykonanie instrukcji podanych w temacie [Brak wymaganego certyfikatu urządzenia](/intune-user-help/your-device-is-missing-a-required-certificate-android#your-device-is-missing-a-certificate-required-by-your-it-administrator). Jeśli błąd będzie się powtarzać, spróbuj zastosować rozwiązanie 2.
+Użytkownik może mieć możliwość pobrania brakującego certyfikatu przez wykonanie instrukcji podanych w temacie [Brak wymaganego certyfikatu urządzenia](/intune-user-help/your-device-is-missing-a-required-certificate-android). Jeśli błąd będzie się powtarzać, spróbuj zastosować rozwiązanie 2.
 
 **Rozwiązanie 2**:
 

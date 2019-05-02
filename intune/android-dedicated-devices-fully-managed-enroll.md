@@ -1,15 +1,16 @@
 ---
-title: Rejestrowanie dedykowanych lub w pełni zarządzanych urządzeń z systemem Android w usłudze Intune
-titlesuffix: Microsoft Intune
+title: Rejestrowanie dedykowanych lub w pełni zarządzanych urządzeń rozwiązania Android Enterprise w usłudze Intune
+titleSuffix: Microsoft Intune
 description: Dowiedz się, jak rejestrować dedykowane lub w pełni zarządzane urządzenia z systemem Android Enterprise w usłudze Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 1/15/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
 ms.reviewer: chrisbal
@@ -17,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2a83676f67866bc81ea81f7bb721dec5825a95c9
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: f56e2987fefcc514911f762c5fd82ca1ebc6779c
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55843446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61503879"
 ---
-# <a name="enroll-your-android-dedicated-devices-or-fully-managed-devices-preview"></a>Rejestrowanie dedykowanych lub w pełni zarządzanych urządzeń z systemem Android (wersja zapoznawcza)
+# <a name="enroll-your-android-enterprise-dedicated-devices-or-fully-managed-devices-preview"></a>Rejestrowanie dedykowanych lub w pełni zarządzanych urządzeń z systemem Android Enterprise (wersja zapoznawcza)
 
-Po skonfigurowaniu [dedykowanych](android-kiosk-enroll.md) lub [w pełni zarządzanych](android-fully-managed-enroll.md) urządzeń z systemem Android w usłudze Intune możesz zarejestrować te urządzenia. Sposób rejestrowania urządzeń z systemem Android zależy od systemu operacyjnego.
+Po skonfigurowaniu [dedykowanych](android-kiosk-enroll.md) lub [w pełni zarządzanych](android-fully-managed-enroll.md) urządzeń z systemem Android Enterprise w usłudze Intune możesz zarejestrować te urządzenia. Sposób rejestrowania urządzeń z systemem Android Enterprise zależy od systemu operacyjnego.
 
 | Metoda rejestracji | Minimalna wersja systemu operacyjnego Android dla urządzeń dedykowanych i w pełni zarządzanych |
 | ----- | ----- |

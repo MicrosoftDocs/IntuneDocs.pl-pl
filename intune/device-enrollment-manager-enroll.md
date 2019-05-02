@@ -1,6 +1,6 @@
 ---
 title: Rejestrowanie urządzeń przy użyciu konta menedżera rejestracji urządzeń
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Użycie konta menedżera rejestracji urządzeń w celu zarejestrowania urządzeń w usłudze Intune.
 keywords: ''
 author: ErikjeMS
@@ -10,6 +10,7 @@ ms.date: 02/22/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 7196b33e-d303-4415-ad0b-2ecdb14230fd
 ms.reviewer: damionw
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a12d162b9877bbbc73ecbcc7bb2ed2f1e0095b9e
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 6bb3289bf2136506903d1fefe6c5170580a6fc11
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57228294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61509825"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Rejestrowanie urządzeń w usłudze Intune przy użyciu konta menedżera rejestracji urządzeń
 
@@ -32,12 +33,14 @@ Przy użyciu jednego konta usługi Azure Active Directory możesz zarejestrować
 
 Konta użytkowników DEM i urządzenia zarejestrowane przy użyciu konta użytkownika DEM mają następujące ograniczenia:
 
+  - Do użytkownika konta DEM musi być przypisana licencja usługi Intune.
   - Nie można wykonać czyszczenia z poziomu Portalu firmy. Urządzenie zarejestrowane przy użyciu konta użytkownika DEM można wyczyścić z poziomu usługi Intune w witrynie Azure Portal.
   - W aplikacji lub witrynie internetowej Portal firmy widoczne jest tylko urządzenie lokalne.
   - Konta użytkowników DEM nie mogą używać aplikacji z programu Apple Volume Purchase Program (VPP) z licencjami użytkowników programu VPP ze względu na wymagania dotyczące identyfikatora Apple ID dla poszczególnych użytkowników na potrzeby zarządzania aplikacjami.
   - Urządzenia mogą instalować aplikacje VPP, jeśli mają licencje urządzeń programu VPP.
   - Dostęp warunkowy w urządzeniach został zablokowany, z wyjątkiem systemu Windows 10 1803+.
-  - Każde urządzenie zarejestrowane przy użyciu konta programu DEM musi mieć własną licencję urządzenia usługi Intune.
+  - Wszystkie urządzenia zarejestrowane przy użyciu konta DEM muszą mieć odpowiednie licencje, aby można było nimi zarządzać za pomocą usługi Intune. Licencja może być licencją użytkownika usługi Intune lub licencją urządzenia usługi Intune.
+
 
 
 ## <a name="add-a-device-enrollment-manager"></a>Dodawanie menedżera rejestracji urządzeń

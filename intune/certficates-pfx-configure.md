@@ -1,14 +1,15 @@
 ---
-title: Używanie certyfikatów kluczy prywatnych i publicznych w usłudze Microsoft Intune — Azure | Micrososft Docs
-description: Dodawanie lub tworzenie certyfikatów Public Key Cryptography Standards (PKCS) za pomocą usługi Microsoft Intune, w tym kroki eksportowania certyfikatu głównego, konfigurowania szablonu certyfikatów, pobierania i instalowania Łącznika certyfikatów usługi Microsoft Intune (NDES), tworzenia profilu konfiguracji urządzenia oraz tworzenia profilu certyfikatu PKCS na platformie Azure i w Twoim urzędzie certyfikacji.
+title: Używanie certyfikatów kluczy prywatnych i publicznych w usłudze Microsoft Intune — Azure | Microsoft Docs
+description: Dodawanie lub tworzenie certyfikatów PKCS (Public Key Cryptography Standards) za pomocą usługi Microsoft Intune, w tym kroki eksportowania certyfikatu głównego, konfigurowania szablonu certyfikatów, pobierania i instalowania Łącznika certyfikatów usługi Intune (NDES), tworzenia profilu konfiguracji urządzenia oraz tworzenia profilu certyfikatu PKCS na platformie Azure i w urzędzie certyfikacji.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/10/2018
-ms.topic: conceptual
+ms.date: 04/03/2019
+ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
 ms.reviewer: lacranda
@@ -16,65 +17,80 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87a7f7f77914b899b7173b8bfacb82cd0c50c6e7
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: b8b05b7f2a0b56321023bc8444528578aeface0b
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57230044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61508581"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurowanie certyfikatów PKCS i korzystanie z nich za pomocą usługi Intune
 
-Certyfikaty służą do uwierzytelniania i zabezpieczania dostępu do zasobów firmowych, takich jak sieć VPN lub sieć WiFi. Certyfikaty używające pary kluczy, prywatnego i publicznego, znane także jako certyfikaty PKCS, są używane w wielu organizacjach. Usługa Microsoft Intune obejmuje wbudowane ustawienia umożliwiające korzystanie z certyfikatów PKCS na potrzeby dostępu do zasobów organizacji i uwierzytelniania w nich. Te ustawienia są wypychane do urządzeń (wdrażane na nich) przy użyciu profili konfiguracji urządzeń w usłudze Intune.
+Usługa Intune obsługuje korzystanie z certyfikatów pary kluczy prywatny-publiczny (PKCS). Ten artykuł ułatwia skonfigurowanie wymaganej infrastruktury, takiej jak lokalne łączniki certyfikatów, wyeksportowanie certyfikatu PKCS, a następnie dodanie certyfikatu do profilu konfiguracji urządzenia w usłudze Intune.
 
-W tym artykule umieszczono listę wymagań, które należy spełnić, aby używać certyfikatów PKCS, oraz pokazano, jak wyeksportować certyfikat PKCS i dodać go do profilu konfiguracji urządzenia w usłudze Intune.
+Usługa Microsoft Intune obejmuje wbudowane ustawienia umożliwiające korzystanie z certyfikatów PKCS na potrzeby dostępu do zasobów organizacji i uwierzytelniania w nich. Certyfikaty służą do uwierzytelniania i zabezpieczania dostępu do zasobów firmowych, takich jak sieć VPN lub sieć WiFi. Te ustawienia wdraża się na urządzeniach przy użyciu profilów konfiguracji urządzeń w usłudze Intune.
+
 
 ## <a name="requirements"></a>Wymagania
 
 Aby korzystać z certyfikatów PKCS za pomocą usługi Intune, musisz mieć następującą infrastrukturę:
 
-- **Domena usługi Active Directory**: Wszystkie serwery wymienione w tej sekcji muszą być dołączone do Twojej domeny usługi Active Directory.
+- **Domena usługi Active Directory**:  
+  Wszystkie serwery wymienione w tej sekcji muszą być dołączone do Twojej domeny usługi Active Directory.
 
-  Aby uzyskać więcej informacji na temat instalowania i konfigurowania usługi AD DS, zobacz [Projekt i planowanie AD DS](https://docs.microsoft.com/windows-server/identity/ad-ds/plan/ad-ds-design-and-planning).
+  Aby uzyskać więcej informacji na temat instalowania i konfigurowania usługi Active Directory Domain Services (AD DS), zobacz [Projekt i planowanie AD DS](https://docs.microsoft.com/windows-server/identity/ad-ds/plan/ad-ds-design-and-planning).
 
-- **Urząd certyfikacji**: Urząd certyfikacji przedsiębiorstwa
+- **Urząd certyfikacji**:  
+   Urząd certyfikacji przedsiębiorstwa.
 
-  Aby uzyskać więcej informacji o sposobie instalowania i konfigurowania Usług certyfikatów Active Directory (AD CS), zobacz [Active Directory Certificate Services Step-by-Step Guide](https://technet.microsoft.com/library/cc772393) (Usługi certyfikatów Active Directory — przewodnik krok po kroku).
+  Aby uzyskać informacje o sposobie instalowania i konfigurowania Usług certyfikatów Active Directory (AD CS), zobacz [Usługi certyfikatów Active Directory — przewodnik krok po kroku](https://technet.microsoft.com/library/cc772393).
 
-  > [!WARNING]
+  > [!WARNING]  
   > Usługa Intune wymaga uruchomienia usług AD CS z urzędu certyfikacji przedsiębiorstwa (CA), a nie autonomicznego urzędu certyfikacji.
 
-- **Klient**: Aby nawiązać połączenie z urzędem certyfikacji przedsiębiorstwa
+- **Klient**:  
+  Na potrzeby nawiązania połączenia z urzędem certyfikacji przedsiębiorstwa.
 
-- **Certyfikat główny**: Wyeksportowana kopia certyfikatu głównego z urzędu certyfikacji przedsiębiorstwa
+- **Certyfikat główny**:  
+  Wyeksportowana kopia certyfikatu głównego z urzędu certyfikacji przedsiębiorstwa.
 
-- **Łącznik certyfikatów usługi Microsoft Intune**: Używając witryny Azure Portal, pobierz instalator **łącznika certyfikatów** (**NDESConnectorSetup.exe**). 
+- **Łącznik certyfikatów usługi Intune** (nazywany także *Łącznikiem certyfikatów usługi NDES*):  
+  W portalu usługi Intune przejdź do pozycji **Konfiguracja urządzenia** > **Łączniki certyfikatu** > **Dodaj** i postępuj zgodnie z *krokami instalowania łącznika dla standardu PKCS #12*. Użyj linku pobierania w portalu, aby rozpocząć pobieranie instalatora łącznika certyfikatów w postaci pliku **NDESConnectorSetup.exe**.  
 
-  Łącznik przetwarza żądania certyfikatu PKCS używane do uwierzytelniania lub podpisywania wiadomości e-mail za pomocą protokołu S/MIME.
+  Ten łącznik przetwarza żądania certyfikatu PKCS używane do uwierzytelniania lub podpisywania wiadomości e-mail za pomocą protokołu S/MIME.
 
   Łącznik certyfikatów usługi NDES obsługuje też tryb Federal Information Processing Standard (FIPS). Tryb FIPS nie jest wymagany, ale gdy jest on włączony, możesz wystawiać i odwoływać certyfikaty.
 
-- **Łącznik certyfikatów PFX dla usługi Microsoft Intune**: Jeśli zamierzasz używać szyfrowania wiadomości e-mail za pomocą protokołu S/MIME, użyj witryny Azure Portal do pobrania instalatora **łącznika certyfikatów PFX dla usługi Microsoft Intune** ( **PfxCertificateConnectorBootstrapper.exe**). Łącznik obsługuje żądania plików PFX zaimportowanych do usługi Intune na potrzeby szyfrowania wiadomości e-mail za pomocą protokołu S/MIME dla określonego użytkownika.
+- **Łącznik certyfikatów PFX dla usługi Microsoft Intune**:  
+   Jeśli planujesz szyfrowanie wiadomości e-mail za pomocą protokołu S/MIME, użyj portalu usługi Intune do pobrania łącznika dla *zaimportowanych certyfikatów PFX*.  Przejdź do pozycji **Konfiguracja urządzenia** > **Łączniki certyfikatu** > **Dodaj** i postępuj zgodnie z *krokami instalowania łącznika dla zaimportowanych certyfikatów PFX*. Użyj linku pobierania w portalu, aby rozpocząć pobieranie instalatora **PfxCertificateConnectorBootstrapper.exe**. 
 
-- **Windows Server**: Hostuje następujące składniki:
+  Ten łącznik obsługuje żądania dotyczące plików PFX zaimportowanych do usługi Intune na potrzeby szyfrowania wiadomości e-mail za pomocą protokołu S/MIME dla określonego użytkownika.  
 
-  - Łącznik certyfikatów usługi Microsoft Intune (NDESConnectorSetup.exe) na potrzeby scenariuszy uwierzytelniania i szyfrowania wiadomości e-mail za pomocą protokołu S/MIME
-  - Łącznik certyfikatów PFX dla usługi Microsoft Intune (PfxCertificateConnectorBootstrapper.exe) na potrzeby scenariuszy szyfrowania wiadomości e-mail za pomocą protokołu S/MIME.
+  Ten łącznik może zaktualizować się automatycznie po udostępnieniu nowej wersji. Aby używać możliwości aktualizacji:
+  - Zainstaluj Łącznik zaimportowanych certyfikatów PFX dla usługi Microsoft Intune na serwerze.
+  - Aby automatycznie otrzymywać ważne aktualizacje, upewnij się, że zapory są otwarte, umożliwiając łącznikowi komunikację z hostem **autoupdate.msappproxy.net** na porcie **443**.  
 
-  Możesz uruchomić oba łączniki (**Łącznik certyfikatów usługi Microsoft Intune** i **Łącznik certyfikatów PFX dla usługi Microsoft Intune**) na tym samym serwerze.
+
+- **Windows Server**:  
+  Używasz systemu Windows Server do hostowania:
+
+  - Łącznik certyfikatów usługi Microsoft Intune — na potrzeby scenariuszy uwierzytelniania i szyfrowania wiadomości e-mail za pomocą protokołu S/MIME
+  - Łącznik certyfikatów PFX dla usługi Microsoft Intune — na potrzeby scenariuszy szyfrowania wiadomości e-mail za pomocą protokołu S/MIME.
+
+  Możesz zainstalować oba łączniki (*Łącznik certyfikatów usługi Microsoft Intune* i *Łącznik certyfikatów PFX*) na tym samym serwerze.
 
 ## <a name="export-the-root-certificate-from-the-enterprise-ca"></a>Eksportowanie certyfikatu głównego z urzędu certyfikacji przedsiębiorstwa
 
-Do uwierzytelniania w ramach sieci VPN, sieci WiFi lub innych zasobów na każdym urządzeniu wymagany jest certyfikat głównego lub pośredniego urzędu certyfikacji. Poniższe kroki objaśniają, jak uzyskać wymagany certyfikat z Twojego urzędu certyfikacji przedsiębiorstwa.
+Do uwierzytelnienia urządzenia za pomocą sieci VPN, sieci WiFi lub innych zasobów urządzenie potrzebuje certyfikatu głównego lub pośredniego urzędu certyfikacji. Poniższe kroki objaśniają, jak uzyskać wymagany certyfikat z Twojego urzędu certyfikacji przedsiębiorstwa.
 
-1. Zaloguj się do swojego urzędu certyfikacji przedsiębiorstwa za pomocą konta z uprawnieniami administracyjnymi.
-2. Otwórz wiersz polecenia jako administrator.
-3. Wyeksportuj certyfikat głównego urzędu certyfikacji (.cer) do lokalizacji, w której można będzie później uzyskać do niego dostęp.
-4. Po zakończeniu działania kreatora, ale przed jego zamknięciem, kliknij pozycję **Uruchom interfejs użytkownika łącznika certyfikatów**.
+**Użyj wiersza polecenia**:  
+1. Zaloguj się do serwera głównego urzędu certyfikacji przy użyciu konta administratora.
+ 
+2. Przejdź do pozycji **Start** > **Uruchom**, a następnie wpisz **Cmd**, aby otworzyć wiersz polecenia. 
+    
+3. Podaj polecenie **certutil -ca.cert ca_name.cer**, aby wyeksportować certyfikat główny jako plik o nazwie *ca_name.cer*.
 
-   `certutil -ca.cert certnew.cer`
 
-   Aby uzyskać więcej informacji, zobacz temat [Zadania polecenia certutil służące do zarządzania certyfikatami](https://technet.microsoft.com/library/cc772898.aspx#BKMK_ret_sign).
 
 ## <a name="configure-certificate-templates-on-the-ca"></a>Konfigurowanie szablonów certyfikatów w urzędzie certyfikacji
 
@@ -118,14 +134,15 @@ Do uwierzytelniania w ramach sieci VPN, sieci WiFi lub innych zasobów na każdy
 
 ### <a name="microsoft-intune-certificate-connector"></a>Łącznik certyfikatów usługi Microsoft Intune
 
-> [!IMPORTANT] 
-> Łącznik certyfikatów usługi Microsoft Intune **musi** zostać zainstalowany na osobnym serwerze systemu Windows. Nie można go zainstalować w wystawiającym urzędzie certyfikacji.
+> [!IMPORTANT]  
+> Łącznika certyfikatów usługi Microsoft Intune nie można zainstalować na hoście wystawiającego urzędu certyfikacji, a zamiast tego należy zainstalować go na osobnym serwerze z systemem Windows.  
 
 1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi**, filtruj według ciągu **Intune**, a następnie wybierz pozycję **Intune**.
-2. Wybierz kolejno pozycje **Konfiguracja urządzeń** > **Urząd certyfikacji** > **Dodaj**.
-3. Pobierz i zapisz plik łącznika. Zapisz go w lokalizacji dostępnej z serwera, na którym zamierzasz zainstalować łącznik.
+2. Wybierz pozycję **Konfiguracja urządzenia** > **Łączniki certyfikatu** > **Dodaj**.
+3. Pobierz i zapisz plik łącznika w lokalizacji dostępnej z serwera, na którym ma zostać zainstalowany łącznik.
 
-    ![ConnectorDownload][ConnectorDownload]
+    ![Pobieranie łącznika usługi NDES](media/certificates-pfx-configure/download-ndes-connector.png)
+ 
 
 4. Po zakończeniu pobierania zaloguj się na serwerze. Następnie:
 
@@ -136,32 +153,31 @@ Do uwierzytelniania w ramach sieci VPN, sieci WiFi lub innych zasobów na każdy
 5. Łącznik NDES otworzy kartę **Rejestracja**. Aby włączyć połączenie z usługą Intune, **zaloguj się** i wprowadź nazwę konta z globalnymi uprawnieniami administracyjnymi.
 6. Na karcie **Zaawansowane** zaleca się pozostawienie zaznaczonej pozycji **Użyj konta SYSTEM na tym komputerze (domyślnie)**.
 7. **Zastosuj** > **Zamknij**
-8. Wróć do witryny Azure Portal (**Intune** > **Konfiguracja urządzeń** > **Urząd certyfikacji**). Po kilku chwilach zostanie wyświetlony zielony znacznik wyboru, a **Stan połączenia** będzie ustawiony na **Aktywny**. Twój serwer łącznika może się teraz komunikować z usługą Intune.
+8. Wróć do portalu usługi Intune (**Intune** > **Konfiguracja urządzeń** > **Łączniki certyfikatu**). Po kilku chwilach zostanie wyświetlony zielony znacznik wyboru, a **Stan połączenia** będzie ustawiony na **Aktywny**. Twój serwer łącznika może się teraz komunikować z usługą Intune.
 9. Jeśli masz internetowy serwer proxy w środowisku sieciowym, może być wymagana dodatkowa konfiguracja, aby łącznik działał. Aby uzyskać więcej informacji, zobacz [Praca z istniejącymi lokalnymi serwerami proxy](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers) w dokumentacji usługi Azure Active Directory.
 
-> [!NOTE]
-> Obsługa protokołu TLS 1.2 jest dołączona do łącznika certyfikatów usługi Microsoft Intune. Jeśli więc serwer z zainstalowanym łącznikiem certyfikatów usługi Microsoft Intune obsługuje protokół TLS 1.2, używany jest protokół TLS 1.2. Jeśli serwer nie obsługuje protokołu TLS 1.2, jest używany protokół TLS 1.1. Obecnie protokół TLS 1.1 jest używany do uwierzytelniania między urządzeniami a serwerem.
+> [!NOTE]  
+> Łącznik certyfikatów usługi Microsoft Intune obsługuje protokół TLS 1.2. Jeśli protokół TLS 1.2 jest zainstalowany na serwerze hostującym łącznik, łącznik będzie używać protokołu TLS 1.2. W przeciwnym razie będzie używany protokół TLS 1.1. Obecnie protokół TLS 1.1 jest używany do uwierzytelniania między urządzeniami a serwerem.
 
 ### <a name="pfx-certificate-connector-for-microsoft-intune"></a>Łącznik certyfikatów PFX dla usługi Microsoft Intune
 
 1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
-2. Wybierz kolejno pozycje **Konfiguracja urządzenia** > **Urząd certyfikacji** > **Dodaj**.
+2. Wybierz pozycję **Konfiguracja urządzenia** > **Łączniki certyfikatu** > **Dodaj**.
 3. Pobierz i zapisz łącznik certyfikatów PFX w usłudze Microsoft Intune. Zapisz go w lokalizacji dostępnej z serwera, na którym zamierzasz zainstalować łącznik.
 4. Po zakończeniu pobierania zaloguj się na serwerze. Następnie:
 
     1. Upewnij się, że jest zainstalowany program .NET 4.6 Framework lub nowszy, ponieważ jest on wymagany przez łącznik certyfikatów PFX dla usługi Microsoft Intune. Jeśli program .NET 4.6 Framework nie jest zainstalowany, instalator zainstaluje go automatycznie.
-    2. Uruchom instalator (plik PfxCertificateConnectorBootstrapper.exe) i zaakceptuj lokalizację domyślną. Spowoduje ona zainstalowanie łącznika w ścieżce `Program Files\Microsoft Intune\PFXCertificateConnector`.
+    2. Uruchom instalator (plik PfxCertificateConnectorBootstrapper.exe) i zaakceptuj lokalizację domyślną, co spowoduje zainstalowanie łącznika w folderze `Program Files\Microsoft Intune\PFXCertificateConnector`.
     3. Usługa łącznika jest uruchamiana na koncie systemu lokalnego. Jeśli serwer proxy jest wymagany na potrzeby dostępu do Internetu, potwierdź, że konto usługi lokalnej może uzyskać dostęp do ustawień serwera proxy na serwerze.
 
 5. Łącznik certyfikatów PFX dla usługi Microsoft Intune otwiera kartę **Rejestracja** po zakończeniu instalacji. Aby włączyć połączenie z usługą Intune, **zaloguj się** i wprowadź nazwę konta z globalnymi uprawnieniami administratora platformy Azure lub uprawnieniami administratora usługi Intune.
 6. Zamknij okno.
-7. Wróć do witryny Azure Portal (**Intune** > **Konfiguracja urządzeń** > **Urząd certyfikacji**). Po kilku chwilach zostanie wyświetlony zielony znacznik wyboru, a **Stan połączenia** będzie ustawiony na **Aktywny**. Twój serwer łącznika może się teraz komunikować z usługą Intune.
+7. Wróć do witryny Azure Portal (**Intune** > **Konfiguracja urządzeń** > **Łączniki certyfikatu**). Po kilku chwilach zostanie wyświetlony zielony znacznik wyboru, a **Stan połączenia** będzie ustawiony na **Aktywny**. Twój serwer łącznika może się teraz komunikować z usługą Intune.
 
 ## <a name="create-a-trusted-certificate-profile"></a>Tworzenie profilu zaufanego certyfikatu
 
 1. W witrynie [Azure Portal](https://portal.azure.com) przejdź do pozycji **Intune** > **Konfiguracja urządzenia** > **Profile** > **Utwórz profil**.
-
-   ![NavigateIntune][NavigateIntune]
+    ![Przejdź do usługi Intune i utwórz nowy profil zaufanego certyfikatu](media/certificates-pfx-configure/certificates-pfx-configure-profile-new.png)
 
 2. Wprowadź następujące właściwości:
 
@@ -175,7 +191,7 @@ Do uwierzytelniania w ramach sieci VPN, sieci WiFi lub innych zasobów na każdy
    > [!NOTE]
    > W zależności od platformy wybranej w ramach **Kroku 3** możesz mieć możliwość wyboru **Magazynu docelowego** certyfikatu lub jej nie mieć.
 
-   ![ProfileSettings][ProfileSettings]
+   ![Tworzenie profilu i przekazanie zaufanego certyfikatu](media/certificates-pfx-configure/certificates-pfx-configure-profile-fill.png) 
 
 4. Wybierz kolejno pozycje **OK** > **Utwórz**, aby zapisać profil.
 5. Aby przypisać nowy profil do jednego lub wielu urządzeń, zobacz opis [przypisywania profilów urządzeń usługi Microsoft Intune](device-profile-assign.md).
@@ -228,6 +244,26 @@ Po zaimportowaniu certyfikatów do usługi Intune należy utworzyć profil **zai
 
 4. Wybierz kolejno pozycje **OK** > **Utwórz**, aby zapisać profil.
 5. Aby przypisać nowy profil do jednego lub wielu urządzeń, zobacz opis [przypisywania profilów urządzeń usługi Microsoft Intune](device-profile-assign.md).
+
+## <a name="whats-new-for-connectors"></a>Nowości dotyczące łączników
+Okresowo są publikowane aktualizacje dla dwóch łączników certyfikatów. Po zaktualizowaniu łącznika możesz przeczytać w tym miejscu o wprowadzonych zmianach. 
+
+*Łącznik certyfikatów PFX* [obsługuje aktualizacje automatyczne](#requirements), a Łącznik certyfikatów usługi Intune należy aktualizować ręcznie.
+ 
+### <a name="april-2-2019"></a>2 kwietnia 2019 r.
+- **Łącznik certyfikatów usługi NDES — wersja 6.1904.1.0**  
+  Zmiany w tej wersji:  
+  - Rozwiązano problem powodujący niepowodzenie rejestracji łącznika w usłudze Intune po zalogowaniu się do łącznika przy użyciu konta administratora globalnego.  
+  - Obejmuje poprawki dotyczące niezawodności odwoływania certyfikatów.  
+  - Obejmuje poprawki dotyczące podwyższenia wydajności przetwarzania żądań certyfikatów PKCS.  
+
+- **Łącznik certyfikatów PFX — wersja 6.1904.0.401**
+  > [!NOTE]  
+  > Automatyczna aktualizacja dla tej wersji łącznika PFX nie będzie dostępna do 11 kwietnia 2019 r.  
+
+  Zmiany w tej wersji:  
+  - Rozwiązano problem powodujący niepowodzenie rejestracji łącznika w usłudze Intune po zalogowaniu się do łącznika przy użyciu konta administratora globalnego.  
+
 
 ## <a name="next-steps"></a>Następne kroki
 

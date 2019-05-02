@@ -5,22 +5,23 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/22/2019
+ms.date: 03/05/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: lacranda
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cdc0f02aa09edd05314d0d4a6a2abacc98c94bf2
-ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
+ms.openlocfilehash: 6f1cdacf4b4d26e9db9b4090805f697927a399c5
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56742741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61510128"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurowanie certyfikatów SCEP i korzystanie z nich w usłudze Intune
 
@@ -36,9 +37,9 @@ Ten artykuł zawiera informacje dotyczące konfigurowania infrastruktury oraz tw
 - **Serwer usługi NDES**: w systemie Windows Server 2012 R2 lub nowszym należy skonfigurować rolę serwera usługi rejestracji urządzeń sieciowych (NDES). Usługa Intune nie obsługuje usługi NDES na serwerze, na którym jest uruchomiony urząd certyfikacji przedsiębiorstwa. Temat [Wskazówki dotyczące usługi rejestracji urządzeń sieciowych](http://technet.microsoft.com/library/hh831498.aspx) zawiera instrukcje dotyczące sposobu konfiguracji systemu Windows Server 2012 R2 do hostowania usługi NDES.
 Serwer usługi NDES musi być dołączony do domeny w tym samym lesie co urząd certyfikacji przedsiębiorstwa. Więcej informacji na temat wdrażania serwera usługi NDES w oddzielnym lesie, sieci izolowanej lub domenie wewnętrznej można znaleźć w temacie [Używanie modułu zasad z usługą rejestracji urządzeń sieciowych](https://technet.microsoft.com/library/dn473016.aspx).
 
-- **Łącznik certyfikatów usługi Microsoft Intune**: pobierz instalator **łącznika certyfikatów** (**NDESConnectorSetup.exe**) z portalu administracyjnego usługi Intune. Należy uruchomić ten instalator na serwerze z rolą usługi NDES.  
+- **Łącznik certyfikatów usługi Microsoft Intune**: W portalu usługi Intune przejdź do pozycji **Konfiguracja urządzenia** > **Łączniki certyfikatu** > **Dodaj** i postępuj zgodnie z *krokami instalowania łącznika protokołu SCEP*. Użyj linku pobierania w portalu, aby rozpocząć pobieranie instalatora łącznika certyfikatów w postaci pliku **NDESConnectorSetup.exe**.  Należy uruchomić ten instalator na serwerze z rolą usługi NDES.  
 
-  - Łącznik certyfikatów usługi NDES obsługuje też tryb Federal Information Processing Standard (FIPS). Tryb FIPS nie jest wymagany, ale gdy jest on włączony, możesz wystawiać i odwoływać certyfikaty.
+Łącznik certyfikatów usługi NDES obsługuje też tryb Federal Information Processing Standard (FIPS). Tryb FIPS nie jest wymagany, ale gdy jest on włączony, możesz wystawiać i odwoływać certyfikaty.
 
 - **Serwer proxy aplikacji internetowej** (opcjonalnie): użyj serwera, na którym system Windows Server 2012 R2 lub nowszy działa jako serwer proxy aplikacji internetowej (WAP). Ta konfiguracja:
   - Umożliwia urządzeniom otrzymywanie certyfikatów przy użyciu połączenia internetowego.
@@ -298,12 +299,13 @@ W tym kroku:
 > Łącznik certyfikatów usługi Microsoft Intune **musi** zostać zainstalowany na osobnym serwerze systemu Windows. Nie można go zainstalować w wystawiającym urzędzie certyfikacji. **Musi** także być zainstalowany na tym samym serwerze jako rola usługi rejestracji urządzeń sieciowych (NDES).
 
 1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
-2. Wybierz kolejno pozycje **Konfiguracja urządzenia** > **Urząd certyfikacji** > **Dodaj**.
-3. Pobierz i zapisz plik łącznika. Zapisz go w lokalizacji dostępnej z serwera, na którym zamierzasz zainstalować łącznik.
+2. Wybierz pozycję **Konfiguracja urządzenia** > **Łączniki certyfikatu** > **Dodaj**.
+3. Pobierz i zapisz plik łącznika protokołu SCEP. Zapisz go w lokalizacji dostępnej z serwera, na którym zamierzasz zainstalować łącznik.
 
-    ![ConnectorDownload](./media/certificates-download-connector.png)
+   ![ConnectorDownload](./media/certificates-scep-configure/download-certificates-connector.png)
 
-4. Po zakończeniu pobierania przejdź do serwera hostującego rolę usługi rejestracji urządzeń sieciowych (NDES). Następnie:
+
+4. Po zakończeniu pobierania przejdź do serwera hostującego usługę rejestracji urządzeń sieciowych (NDES). Następnie:
 
     1. Upewnij się, że jest zainstalowany program .NET 4.5 Framework, ponieważ jest on wymagany przez łącznik certyfikatów usługi NDES. Program .NET 4.5 Framework jest automatycznie dołączany do systemu Windows Server 2012 R2 i nowszych wersji.
     2. Uruchom instalator (**NDESConnectorSetup.exe**). Instalator zainstaluje też moduł zasad dla usługi NDES i usługę sieci Web CRP. Usługa internetowa CRP, CertificateRegistrationSvc, jest uruchamiana jako aplikacja w usługach IIS.
@@ -323,7 +325,7 @@ W tym kroku:
     > [!TIP]
     > Jeśli kreator zostanie zamknięty przed uruchomieniem interfejsu użytkownika łącznika certyfikatów, możesz uruchomić go za pomocą następującego polecenia:
     >
-    > <install_Path>\NDESConnectorUI\NDESConnectorUI.exe
+    > <ścieżka_instalacji>\NDESConnectorUI\NDESConnectorUI.exe
 
 7. W interfejsie użytkownika **łącznika certyfikatów** :
 
@@ -363,8 +365,8 @@ Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i podaj nas
 5. Z listy rozwijanej **Typ profilu** wybierz pozycję **Certyfikat SCEP**.
 6. Podaj następujące ustawienia:
 
-   - **Typ certyfikatu**: wybierz pozycję **Użytkownik** w przypadku certyfikatów użytkownika. Wybierz pozycję **Urządzenie** w przypadku urządzeń bez użytkowników, takich jak kioski. Certyfikaty typu **Urządzenie** są dostępne dla następujących platform:  
-     - Android Enterprise
+   - **Typ certyfikatu**: wybierz pozycję **Użytkownik** w przypadku certyfikatów użytkownika. Certyfikat typu **Użytkownik** może zawierać atrybuty użytkownika i urządzenia w temacie i nazwie SAN certyfikatu.  Wybierz opcję **Urządzenie** w przypadku scenariuszy obejmujących urządzenia bez użytkowników, takie jak kioski, lub urządzenia z systemem Windows, umieszczając certyfikat w magazynie certyfikatów Komputer lokalny. Certyfikaty typu **Urządzenie** mogą zawierać tylko atrybuty urządzenia w temacie i nazwie SAN certyfikatu.  Certyfikaty typu **Urządzenie** są dostępne dla następujących platform:  
+     - Android Enterprise — profil służbowy
      - iOS
      - macOS
      - Windows 8.1 i nowsze

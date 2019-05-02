@@ -2,25 +2,27 @@
 title: Tworzenie profilów certyfikatów w usłudze Microsoft Intune — Azure | Microsoft Docs
 description: Dodaj lub utwórz profil certyfikatu dla urządzeń poprzez skonfigurowanie środowiska certyfikatu SCEP lub PKCS, wyeksportowanie certyfikatu publicznego, utworzenie profilu w witrynie Azure Portal, a następnie przypisanie środowiska SCEP lub PKCS do profilów certyfikatów w usłudze Microsoft Intune w witrynie Azure Portal
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 07/23/2018
-ms.topic: article
+ms.date: 04/08/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 5eccfa11-52ab-49eb-afef-a185b4dccde1
-ms.reviewer: heenamac
+ms.reviewer: lacranda
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 1a70e8a5e9ad973f5d2c94a146a9f263f461d0ab
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 569ddd9be0c59cf9a4bd7ba1f8b114183ce46d7d
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61508280"
 ---
 # <a name="configure-a-certificate-profile-for-your-devices-in-microsoft-intune"></a>Konfigurowanie profilu certyfikatu dla urządzeń w usłudze Microsoft Intune
 
@@ -33,33 +35,37 @@ Możesz użyć usługi Intune w celu przypisania tych certyfikatów do zarządza
 
 Każdy z tych typów certyfikatów ma własne wymagania wstępne i wymagania dotyczące infrastruktury.
 
+
 ## <a name="overview"></a>Przegląd
 
 1. Upewnij się, że skonfigurowano odpowiednią infrastrukturę certyfikatów. Możesz użyć [certyfikatów protokołu SCEP](certificates-scep-configure.md) i [certyfikatów protokołu PKCS](certficates-pfx-configure.md).
 
-2. Zainstaluj certyfikat główny lub certyfikat pośredniego urzędu certyfikacji (CA) na każdym urządzeniu, aby urządzenia rozpoznawały urząd certyfikacji jako wiarygodny. W tym celu należy utworzyć i przypisać **profil zaufanego certyfikatu**. Po przypisaniu tego profilu urządzenia zarządzane przy użyciu usługi Intune zażądają certyfikatu głównego i otrzymają go. Dla każdej platformy należy utworzyć oddzielny profil. Profile zaufanego certyfikatu są dostępne dla następujących platform:
+2. Zainstaluj certyfikat główny lub certyfikat pośredniego urzędu certyfikacji (CA) na każdym urządzeniu, aby urządzenia rozpoznawały urząd certyfikacji jako wiarygodny. Aby zainstalować certyfikat, utwórz **profil zaufanego certyfikatu** i przypisz go do każdego urządzenia. Po przypisaniu tego profilu urządzenia zarządzane przy użyciu usługi Intune zażądają certyfikatu głównego i otrzymają go. Dla każdej platformy należy utworzyć oddzielny profil. Profile zaufanego certyfikatu są dostępne dla następujących platform:
 
     - System iOS 8.0 i nowsze
     - System macOS 10.11 i nowsze
     - Android 4.0 i nowsze
-    - Profil służbowy systemu Android
+    - Android Enterprise  
     - Windows 8.1 i nowsze
     - System Windows Phone 8.1 lub nowszy
     - System Windows 10 lub nowszy
 
-3. Utwórz profile certyfikatów, aby mieć pewność, że poszczególne urządzenia żądają certyfikatu w celu jego użycia do uwierzytelniania dostępu do poczty e-mail, sieci VPN i sieci Wi-Fi. Na potrzeby urządzeń korzystających z następujących platform można tworzyć i przypisywać profile certyfikatów protokołów **PKCS** i **SCEP**:
+    > [!NOTE]  
+    > Profile certyfikatów nie są obsługiwane na urządzeniach z systemem *Android Enterprise dla urządzeń dedykowanych*.
 
-   - System iOS 8.0 i nowsze
-   - Android 4.0 i nowsze
-   - Profil służbowy systemu Android
-   - System Windows 10 (Desktop i Mobile) i nowsze
+3. Utwórz profile certyfikatów, aby mieć pewność, że poszczególne urządzenia żądają certyfikatu w celu jego użycia do uwierzytelniania dostępu do poczty e-mail, sieci VPN i sieci Wi-Fi. Następujące typy profilów są dostępne dla różnych platform:  
 
-   Profilu certyfikatu protokołu **SCEP** możesz użyć wyłącznie na urządzeniach z następującymi platformami:
+   | Platforma     |Certyfikat PKCS|Certyfikat SCEP| Zaimportowany certyfikat PKCS | 
+   |--------------|----------------|----------------|-------------------|
+   | Android                | Tak    | Tak    | Tak    |
+   | Android Enterprise     | Tak    | Tak    | Tak    |
+   | iOS                    | Tak    | Tak    | Tak    |
+   | macOS                  |        | Tak    | Tak    |
+   | Windows Phone 8,1      |        | Tak    | Tak    |
+   | Windows 8.1 i nowsze  |        | Tak    |        |
+   | System Windows 10 lub nowszy   | Tak    | Tak    | Tak    |
 
-   - System macOS 10.9 i nowsze
-   - System Windows Phone 8.1 lub nowszy
-
-Dla każdej platformy urządzenia należy utworzyć oddzielny profil. Po utworzeniu certyfikatu należy go skojarzyć z utworzonym profilem zaufanego certyfikatu głównego.
+   Dla każdej platformy urządzenia należy utworzyć oddzielny profil. Po utworzeniu certyfikatu należy go skojarzyć z utworzonym profilem zaufanego certyfikatu głównego.
 
 ### <a name="further-considerations"></a>Dodatkowe uwagi
 
@@ -68,21 +74,21 @@ Dla każdej platformy urządzenia należy utworzyć oddzielny profil. Po utworze
 - Niezależnie od tego, czy zamierzasz używać profilów certyfikatów protokołu SCEP, czy PKCS, pobierz i skonfiguruj łącznik certyfikatów usługi Microsoft Intune
 
 
-## <a name="step-1-configure-your-certificate-infrastructure"></a>Krok 1 — Konfigurowanie infrastruktury certyfikatów
+## <a name="step-1-configure-your-certificate-infrastructure"></a>Krok 1. Konfigurowanie infrastruktury certyfikatów
 
-Aby uzyskać pomoc dotyczącą konfigurowania infrastruktury dla każdego z typów profilów certyfikatu, zobacz następujące tematy:
+Aby uzyskać pomoc dotyczącą konfigurowania infrastruktury dla każdego z typów profilów certyfikatu, zobacz następujące artykuły:
 
 - [Konfigurowanie certyfikatów protokołu SCEP i zarządzanie nimi za pomocą usługi Intune](certificates-scep-configure.md)
 - [Konfigurowanie certyfikatów PKCS i zarządzanie nimi za pomocą usługi Intune](certficates-pfx-configure.md)
 
 
-## <a name="step-2-export-your-trusted-root-ca-certificate"></a>Krok 2 — Eksportowanie certyfikatu zaufanego głównego urzędu certyfikacji
+## <a name="step-2-export-your-trusted-root-ca-certificate"></a>Krok 2: Eksportowanie certyfikatu zaufanego głównego urzędu certyfikacji
 
 Wyeksportuj certyfikat zaufanego głównego urzędu certyfikacji w formacie certyfikatu publicznego (cer) z wystawiającego urzędu certyfikacji lub dowolnego urządzenia traktującego wystawiający urząd certyfikacji jako zaufany. Nie eksportuj klucza prywatnego (pfx).
 
 Ten certyfikat zostanie zaimportowany podczas konfigurowania profilu zaufanego certyfikatu.
 
-## <a name="step-3-create-trusted-certificate-profiles"></a>Krok 3 — Tworzenie profilów zaufanych certyfikatów
+## <a name="step-3-create-trusted-certificate-profiles"></a>Krok 3: Tworzenie profilów zaufanych certyfikatów
 Aby móc utworzyć profil certyfikatu protokołu SCEP lub PKCS, utwórz profil zaufanego certyfikatu. Dla każdej platformy urządzenia wymagany jest profil zaufanego certyfikatu oraz profil SCEP lub PKCS. Procedura tworzenia zaufanych certyfikatów jest podobna dla każdej platformy urządzeń.
 
 1. Zaloguj się do [portalu Azure](https://portal.azure.com).
@@ -92,7 +98,7 @@ Aby móc utworzyć profil certyfikatu protokołu SCEP lub PKCS, utwórz profil z
 5. Z listy rozwijanej **Platforma** wybierz platformę urządzenia dla danego zaufanego certyfikatu. Dostępne opcje:
 
     - **Android**
-    - **Android enterprise**
+    - **Android Enterprise**
     - **iOS**
     - **macOS**
     - **Windows Phone 8.1**
@@ -100,7 +106,7 @@ Aby móc utworzyć profil certyfikatu protokołu SCEP lub PKCS, utwórz profil z
     - **Windows 10 lub nowszy**
 
 6. Z listy rozwijanej **Typ profilu** wybierz pozycję **Zaufany certyfikat**.
-7. Przejdź do lokalizacji certyfikatu zapisanego w zadaniu 1, a następnie wybierz przycisk **OK**.
+7. Przejdź do certyfikatu zapisanego w punkcie [Krok 2. Eksportowanie certyfikatu zaufanego głównego urzędu certyfikacji](#step-2-export-your-trusted-root-ca-certificate), a następnie wybierz przycisk **OK**.
 8. Dotyczy wyłącznie urządzeń z systemem Windows 8.1 i Windows 10: wybierz dla zaufanego certyfikatu **magazyn docelowy** spośród wymienionych poniżej:
 
     - **Magazyn certyfikatów komputera — główny**
@@ -111,11 +117,12 @@ Aby móc utworzyć profil certyfikatu protokołu SCEP lub PKCS, utwórz profil z
 
 Profil zostanie utworzony i wyświetlony na liście. Aby przypisać ten profil do grup, zobacz [przypisywanie profilów urządzeń](device-profile-assign.md).
 
-Na urządzeniach z systemem Android może zostać wyświetlony komunikat o przeprowadzeniu instalacji zaufanego certyfikatu przez osobę trzecią.
+   >[!NOTE]
+   > Na urządzeniach z systemem Android może zostać wyświetlony komunikat o przeprowadzeniu instalacji zaufanego certyfikatu przez osobę trzecią.
 
-## <a name="step-4-create-scep-or-pkcs-certificate-profiles"></a>Krok 4 — Tworzenie profilów certyfikatów protokołu SCEP lub PKCS
+## <a name="step-4-create-scep-or-pkcs-certificate-profiles"></a>Krok 4. Tworzenie profilów certyfikatów protokołu SCEP lub PKCS
 
-Aby uzyskać pomoc dotyczącą konfigurowania i przypisywania każdego z typów profilów certyfikatu, zobacz odpowiednio tematy:
+Aby uzyskać pomoc dotyczącą konfigurowania i przypisywania każdego z typów profilów certyfikatu, zobacz odpowiedni artykuł:
 
 - [Konfigurowanie certyfikatów protokołu SCEP i zarządzanie nimi za pomocą usługi Intune](certificates-scep-configure.md)
 - [Konfigurowanie certyfikatów PKCS i zarządzanie nimi za pomocą usługi Intune](certficates-pfx-configure.md)

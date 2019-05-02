@@ -5,26 +5,27 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/28/2019
-ms.topic: article
+ms.date: 03/18/2019
+ms.topic: troubleshooting
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4f93ab1cd2c662cb97dafd19684b353268087f6
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: fb33a1207e165323de2e82467c7a0dd5239d9713
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55842579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61507374"
 ---
 # <a name="send-log-data-to-storage-event-hubs-or-log-analytics-in-intune-preview"></a>Wysyłanie danych dzienników do magazynu, centrów zdarzeń lub analizy dzienników w usłudze Intune (wersja zapoznawcza)
 
-Usługa Microsoft Intune obejmuje wbudowane dzienniki, które zawierają informacje o środowisku. **Dzienniki inspekcji** zawierają szczegółowe informacje dotyczące różnych zdarzeń lub zadań, które zachodzą w usłudze Intune. **Dzienniki operacyjne (wersja zapoznawcza)** zawierają szczegółowe informacje dotyczące użytkowników i urządzeń, których rejestracja zakończyła się powodzeniem (lub niepowodzeniem).
+Usługa Microsoft Intune obejmuje wbudowane dzienniki, które zawierają informacje o środowisku. **Dzienniki inspekcji** zawierają szczegółowe informacje dotyczące różnych zdarzeń lub zadań, które zachodzą w usłudze Intune. **Dzienniki operacyjne (wersja zapoznawcza)** zawierają szczegółowe informacje dotyczące użytkowników i urządzeń, których rejestracja zakończyła się powodzeniem (lub niepowodzeniem). Dostępne są również informacje o niezgodnych urządzeniach.
 
 Te dzienniki można również wysyłać do usługi Azure Monitor, łącznie z informacjami na temat kont magazynu, centrów zdarzeń i analizy dzienników. W szczególności możesz wykonywać następujące czynności:
 
@@ -33,7 +34,7 @@ Te dzienniki można również wysyłać do usługi Azure Monitor, łącznie z in
 * Integrowanie dzienników usługi Intune z własnymi niestandardowymi rozwiązaniami do obsługi dzienników przez ich przesyłanie strumieniowe do centrum zdarzeń.
 * Wysyłanie dzienników usługi Intune do usługi Log Analytics w celu umożliwienia korzystania z rozbudowanych wizualizacji, monitorowania i obsługi alertów dotyczących połączonych danych.
 
-Te funkcje są częścią **ustawień diagnostyki** w usłudze Intune. 
+Te funkcje są częścią **ustawień diagnostyki** w usłudze Intune.
 
 W tym artykule dowiesz się, jak używać **ustawień diagnostyki** do wysyłania danych dzienników do różnych usług, zapoznasz się z przykładami i szacowanymi kosztami oraz znajdziesz odpowiedzi na często zadawane pytania.
 
@@ -82,7 +83,7 @@ W zależności od tego, dokąd chcesz przekierowywać dane z dziennika inspekcji
 
       Jeśli chcesz użyć konta magazynu, wprowadź również liczbę dni zachowywania danych (okres przechowywania). Aby zachować dane na zawsze, należy ustawić pozycję **Przechowywanie (dni)** na `0` (zero).
 
-    - **LOG** > **OperationalLogs**: Dzienniki operacyjne (wersja zapoznawcza) przedstawiają powodzenie lub niepowodzenie użytkowników i urządzeń rejestrowanych w usłudze Intune. Wybierz tę opcję, aby wysyłać dzienniki rejestracji w usłudze Intune do konta magazynu, centrum zdarzeń lub analizy dzienników.
+    - **LOG** > **OperationalLogs**: Dzienniki operacyjne (wersja zapoznawcza) zawierają informacje dotyczące użytkowników i urządzeń, których rejestracja w usłudze Intune zakończyła się powodzeniem (lub niepowodzeniem). Dostępne są również informacje o niezgodnych urządzeniach. Wybierz tę opcję, aby wysyłać dzienniki rejestracji w usłudze Intune do konta magazynu, centrum zdarzeń lub analizy dzienników.
 
       Jeśli chcesz użyć konta magazynu, wprowadź również liczbę dni zachowywania danych (okres przechowywania). Aby zachować dane na zawsze, należy ustawić pozycję **Przechowywanie (dni)** na `0` (zero).
 
@@ -94,6 +95,19 @@ W zależności od tego, dokąd chcesz przekierowywać dane z dziennika inspekcji
     ![Przykładowy obraz przedstawiający wysyłanie dzienników inspekcji w usłudze Intune na konto usługi Azure Storage](media/diagnostics-settings-example.png)
 
 4. **Zapisz** zmiany. Ustawienie zostanie wyświetlone na liście. Po jego utworzeniu można zmienić ustawienia, wybierając kolejno pozycje **Edytuj ustawienie** > **Zapisz**.
+
+## <a name="use-audit-logs-throughout-intune"></a>Korzystanie z dzienników inspekcji w usłudze Intune
+
+Eksportowane dzienniki inspekcji mogą także zawierać informacje z innych części usługi Intune, m.in. dotyczące rejestracji, zgodności, konfiguracji, urządzeń i aplikacji klienckich.
+
+Na przykład aby wyeksportować dzienniki inspekcji z modułu zgodności urządzeń:
+
+1. W witrynie [Azure Portal](https://portal.azure.com/) wybierz pozycję **Wszystkie usługi**, wpisz nazwę usługi **Intune** w filtrze, a następnie wybierz pozycję **Intune**.
+2. Wybierz pozycję **Zgodność urządzeń** > **Monitor** > **Dzienniki inspekcji**:
+
+    ![Wybieranie dzienników inspekcji w celu przesłania danych usługi Intune do magazynu usługi Azure Monitor, centrów zdarzeń lub analizy](media/audit-logs-under-monitor-in-compliance.png)
+
+3. Wybierz pozycję **Eksportuj ustawienia danych**. Możesz włączyć opcję **Ustawienia diagnostyki**, jeśli jeszcze nie jest włączona. Możesz również wybrać miejsce, do którego mają zostać wysłane dzienniki, co zostało opisane w temacie [Wysyłanie dzienników do usługi Azure Monitor](#send-logs-to-azure-monitor) (w tym artykule).
 
 ## <a name="cost-considerations"></a>Zagadnienia dotyczące kosztów
 

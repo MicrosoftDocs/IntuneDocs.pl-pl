@@ -1,26 +1,29 @@
 ---
-title: Zarządzanie przesyłaniem danych między aplikacjami systemu iOS | Microsoft Intune
+title: Zarządzanie przesyłaniem danych między aplikacjami systemu iOS
+titleSuffix: Microsoft Intune
 description: Informacje na temat używania zasad zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune do zarządzania przesyłaniem danych między aplikacjami.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/28/2018
-ms.topic: article
+ms.date: 04/08/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: d10b2d64-8c72-4e9b-bd06-ab9d9486ba5e
 ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 8e223301b15a408c5f5a444a1904fca9826929ac
-ms.sourcegitcommit: 0142020a7cd75348c6367facf072ed94238e667f
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: bb109f8c837fe8848ad8cb19c930de765ed381d1
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55229903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61509520"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Jak zarządzać przesyłaniem danych między aplikacjami systemu iOS w usłudze Microsoft Intune
 
@@ -49,11 +52,15 @@ Skonfigurowanie ustawienia nazwy UPN użytkownika jest **wymagane** w przypadku 
 
 2.  Wdróż aplikacje i profil poczty e-mail, które mają być zarządzane za pośrednictwem usługi Intune lub rozwiązania do zarządzania urządzeniami przenośnymi innych firm, korzystając z poniższych ogólnych instrukcji. Opisano to również w *Przykładzie 1*.
 
-3.  Wdróż aplikację z następującymi ustawieniami konfiguracji aplikacji:
+3.  Wdróż aplikację z następującymi ustawieniami konfiguracji aplikacji na urządzeniu zarządzanym:
 
       **key** = IntuneMAMUPN, **value** = <username@company.com>
 
       Przykład: [‘IntuneMAMUPN’, ‘jondoe@microsoft.com’]
+      
+       > [!NOTE]
+       > W usłudze Intune zasady Konfiguracja aplikacji muszą dotyczyć typu rejestracji „Urządzenia zarządzane”.
+       > Aplikacja musi być także zainstalowana z Portalu firmy usługi Intune, jeśli jest ustawiona jako dostępna, lub wypchnięta na urządzenie zgodnie z wymaganiami. 
 
 4.  Wdróż zasadę funkcji **Otwórz w** przy użyciu usługi Intune lub dostawcy rozwiązania do zarządzania urządzeniami przenośnymi innej firmy na zarejestrowanych urządzeniach.
 

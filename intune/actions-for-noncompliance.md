@@ -5,35 +5,38 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/01/2018
-ms.topic: article
+ms.date: 4/19/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 5bd8bfe0230e4d49ce5ae4372e0f373a014c00ce
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e642573311d1452a970dce798dabdc705e4a44f7
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61504222"
 ---
-# <a name="automate-email-and-add-actions-for-noncompliant-devices---intune"></a>Automatyzowanie poczty e-mail i dodawanie akcji dla niezgodnych urządzeń — Intune
+# <a name="automate-email-and-add-actions-for-noncompliant-devices-in-intune"></a>Automatyzowanie poczty e-mail i dodawanie akcji dla niezgodnych urządzeń w usłudze Intune
 
-Dostępna jest funkcja **Akcje w przypadku braku zgodności**, za pomocą której można skonfigurować uporządkowaną w czasie sekwencję akcji. Te akcje dotyczą urządzeń, które nie są zgodne z zasadami zgodności. 
+W przypadku urządzeń, które nie są zgodne z zasadami lub regułami zgodności, możesz dodać **Akcje w przypadku niezgodności**. Ta funkcja umożliwia skonfigurowanie uporządkowanej w czasie sekwencji akcji, takich jak wysyłanie wiadomości e-mail do użytkownika końcowego i nie tylko.
 
 ## <a name="overview"></a>Przegląd
-Domyślnie po wykryciu przez usługę Intune urządzenia, które nie jest zgodne, usługa Intune natychmiast oznacza to urządzenie jako niezgodne. [Dostęp warunkowy](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) usługi Azure Active Directory (AD) blokuje wtedy dane urządzenie. **Akcje dotyczące niezgodności** zapewniają także elastyczność w przypadku podejmowania decyzji o postępowaniu z urządzeniami niezgodnymi. Możesz na przykład zdecydować, aby nie blokować urządzenia natychmiast i przyznać użytkownikowi okres prolongaty, aby mógł zapewnić zgodność.
+
+Domyślnie po wykryciu przez usługę Intune urządzenia, które nie jest zgodne, usługa Intune natychmiast oznacza to urządzenie jako niezgodne. [Dostęp warunkowy](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) usługi Azure Active Directory (AD) blokuje wtedy dane urządzenie. **Akcja w przypadku niezgodności** zapewnia także elastyczność w przypadku podejmowania decyzji o postępowaniu z urządzeniami niezgodnymi. Możesz na przykład zdecydować, aby nie blokować urządzenia natychmiast i przyznać użytkownikowi okres prolongaty, aby mógł zapewnić zgodność.
 
 Istnieje kilka typów działań:
 
-- **Wyślij wiadomość e-mail do użytkownika końcowego**: dostosuj powiadomienie e-mail przed wysłaniem go do użytkownika końcowego. Możesz dostosować adresatów, temat oraz treść wiadomości, w tym logo firmy oraz informacje kontaktowe.
+- **Wyślij wiadomość e-mail do użytkownika końcowego**: umożliwia dostosowanie powiadomienia e-mail przed wysłaniem go do użytkownika końcowego. Możesz dostosować adresatów, temat oraz treść wiadomości, w tym logo firmy oraz informacje kontaktowe.
 
     Ponadto usługa Intune dołącza do powiadomienia e-mail szczegółowe informacje dotyczące niezgodnych urządzeń.
 
-- **Zdalnie zablokuj niezgodne urządzenie**: w przypadku urządzeń, które nie są zgodne, możesz zastosować zdalną blokadę. Następnie wyświetlany jest monit, w którym użytkownik jest proszony o podanie numeru PIN lub hasła w celu odblokowania urządzenia. Więcej informacji na temat funkcji [zdalnego blokowania](device-remote-lock.md). 
+- **Zdalne zablokowanie niezgodnego urządzenia**: w przypadku urządzeń, które nie są zgodne, możesz zastosować zdalną blokadę. Następnie wyświetlany jest monit, w którym użytkownik jest proszony o podanie numeru PIN lub hasła w celu odblokowania urządzenia. Więcej informacji na temat funkcji [zdalnego blokowania](device-remote-lock.md). 
 
 - **Oznacz urządzenie jako niezgodne**: utwórz harmonogram z liczbą dni, po których urządzenie zostanie oznaczone jako niezgodne. Akcję można skonfigurować tak, by następowała od razu, ale można również przyznać użytkownikowi okres prolongaty.
 
@@ -72,10 +75,10 @@ Aby wysyłać wiadomości e-mail do użytkowników, należy utworzyć szablon wi
 
    ![Przykład powiadomienia dotyczącego zgodności w usłudze Intune](./media/actionsfornoncompliance-1.PNG)
 
-4. Gdy skończysz dodawać informacje, wybierz pozycję **Utwórz**. Szablon wiadomości z powiadomieniem jest gotowy do użytku. Pamiętaj, że logo przekazane w ramach znakowania Portalu firmy będzie używane w szablonach wiadomości e-mail. Aby uzyskać więcej informacji na temat znakowania Portalu firmy, zobacz [Dostosowywanie znakowania tożsamości firmy](company-portal-app.md#company-identity-branding-customization).  
+4. Gdy skończysz dodawać informacje, wybierz pozycję **Utwórz**. Szablon wiadomości z powiadomieniem jest gotowy do użytku. Logo przekazane w ramach znakowania Portalu firmy jest używane w szablonach wiadomości e-mail. Aby uzyskać więcej informacji na temat znakowania Portalu firmy, zobacz [Dostosowywanie znakowania tożsamości firmy](company-portal-app.md#company-identity-branding-customization).
 
 > [!NOTE]
-> Można również edytować wcześniej utworzony szablon powiadomienia.
+> Możesz również zmienić lub zaktualizować istniejący szablon powiadomienia, który został wcześniej utworzony.
 
 ## <a name="add-actions-for-noncompliance"></a>Dodawanie akcji w przypadku niezgodności
 
@@ -99,11 +102,15 @@ Podczas tworzenia zasady zgodności lub aktualizowania istniejącej zasady możn
          - Wybierz wcześniej utworzony **szablon wiadomości**
          - Wprowadź dowolnych **dodatkowych adresatów** przez wybranie grup
     
-    - **Zdalnie zablokuj niezgodne urządzenie:**: zablokuj urządzenie, gdy jest ono niezgodne. Ta akcja wymusza wprowadzenie przez użytkownika numeru PIN lub hasła w celu odblokowania urządzenia. 
-    
-    - **Harmonogram**: wprowadź liczbę dni (od 0 do 365), jaka ma upłynąć od stwierdzenia niezgodności, w celu wyzwolenia akcji na urządzeniach użytkowników. Po tym okresie prolongaty można wymusić zasady dostępu warunkowego. Jeśli wprowadzisz **0** jako liczbę dni, dostęp warunkowy będzie obowiązywać **natychmiast**. Na przykład można natychmiastowo zablokować dostęp do zasobów firmowych, jeśli urządzenie jest niezgodne.
+    - **Zdalne zablokowanie niezgodnego urządzenia**: zablokuj urządzenie, gdy urządzenie jest niezgodne. Ta akcja wymusza wprowadzenie przez użytkownika numeru PIN lub hasła w celu odblokowania urządzenia. 
 
-5. Po zakończeniu wybierz pozycję **Dodaj** > **OK**, aby zapisać zmiany.
+    - **Wycofaj urządzenie niezgodne**: usuń wszystkie dane firmowe z urządzenia i usuń urządzenie z zarządzania usługi Intune, gdy urządzenie jest niezgodne. Aby zapobiec przypadkowemu czyszczeniu urządzenia, ta akcja obsługuje harmonogram o minimalnej wartości wynoszącej **30** dni.  
+
+    
+5. Skonfiguruj **Harmonogram**: wprowadź liczbę dni (od 0 do 365), jaka ma upłynąć od stwierdzenia niezgodności, w celu wyzwolenia akcji na urządzeniach użytkowników. Po tym okresie prolongaty można wymusić zasady dostępu warunkowego. Jeśli wprowadzisz **0** (zero) jako liczbę dni, dostęp warunkowy będzie obowiązywać **natychmiast**. Na przykład można natychmiastowo zablokować dostęp do zasobów firmowych, jeśli urządzenie jest niezgodne.
+
+6. Po zakończeniu wybierz pozycję **Dodaj** > **OK**, aby zapisać zmiany.
 
 ## <a name="next-steps"></a>Następne kroki
-[Monitorowanie aktywności zgodności urządzeń](device-compliance-monitor.md).
+
+[Monitorowanie zasad](compliance-policy-monitor.md).

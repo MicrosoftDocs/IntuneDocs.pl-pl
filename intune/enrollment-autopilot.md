@@ -10,6 +10,7 @@ ms.date: 10/5/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: a2dc5594-a373-48dc-ba3d-27aff0c3f944
 ms.reviewer: angerobe
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f9b0cb07e6dcf192aa25c13e8637934c46d6799
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 65c19f58e41e4f8a739ae16a1b56703fb743b738
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57235331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61513105"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Rejestrowanie urządzeń z systemem Windows w usłudze Intune za pomocą rozwiązania Windows Autopilot  
 Rozwiązanie Windows Autopilot upraszcza rejestrowanie urządzeń w usłudze Intune. Tworzenie i konserwacja niestandardowych obrazów systemów operacyjnych zajmuje dużo czasu. Trzeba również poświęcić czas na stosowanie tych niestandardowych obrazów systemów operacyjnych na nowych urządzeniach w celu przygotowania ich do użycia przed przekazaniem użytkownikom końcowym. Dzięki usłudze Microsoft Intune i rozwiązaniu Autopilot można przekazać nowe urządzenia użytkownikom końcowym bez konieczności tworzenia, konserwowania i stosowania niestandardowych obrazów systemów operacyjnych do urządzeń. Jeśli do zarządzania urządzeniami z rozwiązaniem Autopilot używasz usługi Intune, możesz zarządzać zasadami, profilami, aplikacjami i nie tylko po ich zarejestrowaniu. Aby zapoznać się z korzyściami, scenariuszami i wymaganiami wstępnymi, zobacz [Overview of Windows Autopilot (Przegląd rozwiązania Windows Autopilot)](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -102,6 +103,7 @@ Profile wdrażania rozwiązania Autopilot służą do konfigurowania urządzeń 
 2. W bloku określonego profilu wybierz pozycję **Przypisania**. 
 3. Wybierz pozycję **Wybierz grupy**, a następnie w bloku **Wybieranie grup** wybierz grupy, do których chcesz przypisać profil, a następnie wybierz pozycję **Wybierz**.
 
+
 > [!NOTE]
 > Usługa Intune będzie okresowo sprawdzać, czy w przypisanych grupach znajdują się nowe urządzenia, a następnie rozpoczynać proces przypisywania profili do tych urządzeń. Ten proces może potrwać kilka minut. Przed wdrożeniem urządzenia upewnij się, że ten proces został zakończony.  Stan profilu powinien się zmienić z „Nieprzypisane” na „Przypisywanie”, a następnie na „Przypisano” w obszarze **Rejestrowanie urządzeń** > **Rejestracja urządzeń z systemem Windows** > **Urządzenia**.
 
@@ -117,7 +119,7 @@ Po utworzeniu profilu wdrażania rozwiązania Autopilot możesz edytować niekt�
 > [!NOTE]
 > Zmiany w profilu są stosowane do urządzeń przypisanych do tego profilu. Zaktualizowany profil nie zostanie jednak zastosowany do urządzenia już zarejestrowanego w usłudze Intune, dopóki nie zostanie zresetowane i ponownie zarejestrowane.
 
-## <a name="alerts-for-windows-autopilot-unassigned-devices-----163236---"></a>Alerty dla urządzeń nieprzypisanych w rozwiązaniu Windows Autopilot <!-- 163236 -->  
+## <a name="alerts-for-windows-autopilot-unassigned-devices-----163236---"></a>Alerty dla urządzeń nieprzypisanych w rozwiązaniu Windows Autopilot  <!-- 163236 -->  
 
 Alerty pokażą, ile urządzeń rozwiązania Autopilot nie ma profilów wdrażania rozwiązania Autopilot. Skorzystaj z informacji w alercie, aby utworzyć profile i przypisać je do nieprzypisanych urządzeń. Po kliknięciu alertu zostanie wyświetlona pełna lista urządzeń rozwiązania Windows Autopilot.
 

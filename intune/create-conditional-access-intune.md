@@ -1,33 +1,34 @@
 ---
 title: Konfigurowanie dostępu warunkowego opartego na urządzeniach przy użyciu usługi Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Dowiedz się, jak utworzyć zasady dostępu warunkowego opartego na urządzeniach na podstawie zgodności urządzeń usługi Microsoft Intune i zarządzania aplikacjami mobilnymi.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/11/2018
+ms.date: 02/22/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 03ca9a65d5a62c75c45541b42c9b2aa5c4871a18
-ms.sourcegitcommit: e0374b3ced83c8876a4f78b326869c10588a55e5
+ms.openlocfilehash: aaf9b82bc810dd3a616eb25f39f4b5830b1c3e6f
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56307791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61508693"
 ---
 # <a name="create-a-device-based-conditional-access-policy"></a>Tworzenie zasad dostępu warunkowego opartego na urządzeniach
 
-Usługa Intune umożliwia rozszerzenie dostępu warunkowego w usłudze Azure Active Directory przez dodanie zgodności urządzeń przenośnych do metod kontroli dostępu. Po utworzeniu zasad zgodności usługi Intune, które definiują wymagania dotyczące zgodności urządzeń, można użyć stanu zgodności urządzenia do zezwolenia na dostęp do aplikacji i usług lub do zablokowania tego dostępu. W tym celu można utworzyć zasady dostępu warunkowego, które używają ustawienia **Wymagaj, aby urządzenie było oznaczone jako zgodne**. 
+Usługa Intune umożliwia rozszerzenie dostępu warunkowego w usłudze Azure Active Directory przez dodanie zgodności urządzeń przenośnych do metod kontroli dostępu. Po utworzeniu zasad zgodności usługi Intune, które definiują wymagania dotyczące zgodności urządzeń, można użyć stanu zgodności urządzenia do zezwolenia na dostęp do aplikacji i usług lub do zablokowania tego dostępu. W tym celu można utworzyć zasady dostępu warunkowego, które używają ustawienia **Wymagaj, aby urządzenie było oznaczone jako zgodne**.  
 
-Zasady dostępu warunkowego określają aplikację lub usługi, które chcesz chronić, warunki uzyskiwania dostępu do aplikacji lub usług oraz użytkowników, w przypadku których zasady mają zastosowanie. Dostęp warunkowy to funkcja usługi Azure AD w wersji Premium, którą można skonfigurować w usłudze Azure Active Directory. Te same zasady można jednak skonfigurować w portalu usługi Intune. 
+Zasady dostępu warunkowego określają aplikację lub usługi, które chcesz chronić, warunki uzyskiwania dostępu do aplikacji lub usług oraz użytkowników, w przypadku których zasady mają zastosowanie. Dostęp warunkowy to funkcja usługi Azure AD w wersji Premium, którą można skonfigurować w usłudze Azure Active Directory. Te same zasady można jednak skonfigurować w portalu usługi Intune. Węzeł Dostęp warunkowy dostępny z usługi *Intune* jest tym samym węzłem, do którego dostęp jest uzyskiwany z usługi *Azure AD*.  
 
 > [!IMPORTANT]
 > Przed skonfigurowaniem dostępu warunkowego należy skonfigurować zasady zgodności urządzeń usługi Intune, które będą oceniać, czy urządzenia spełniają określone wymagania. Zobacz [Wprowadzenie do zasad zgodności urządzeń w usłudze Intune](device-compliance-get-started.md).

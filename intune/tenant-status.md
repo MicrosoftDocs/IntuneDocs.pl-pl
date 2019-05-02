@@ -6,30 +6,31 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/09/2019
-ms.topic: article
+ms.date: 02/23/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f8bdb74c19e6b996bafc9284bfedaf0608fdf8fb
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 0cde1977b0c126f478abae06860110acc2f10444
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55834623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61514178"
 ---
 # <a name="intune-tenant-status-page"></a>Strona Stan dzierżawy w usłudze Intune
-Strona Stan dzierżawy to centralna lokalizacja, zapewniająca bieżący dostęp do ważnych informacji dotyczących Twojej dzierżawy, dostępności i użycia licencji, stanu łączników oraz ważnych komunikatów na temat usługi Intune.  
+Strona Stan dzierżawy pełni funkcję centrum, które udostępnia aktualne, ważne informacje o dzierżawie. Szczegółowe informacje obejmują dostępność i użycie licencji, stan łącznika oraz ważne komunikaty dotyczące usługi Intune.  
 
 Aby wyświetlić ten pulpit nawigacyjny, w witrynie Azure Portal przejdź do pozycji **Intune > Stan dzierżawy**.  Stan dzierżawy zostanie wyświetlony w obszarze **Pomoc i obsługa techniczna**.  
 
 Strona jest podzielona na cztery obszary:
 
 ## <a name="tenant-details"></a>Szczegóły dzierżawy
-Obszar Szczegóły dzierżawy zapewnia natychmiastowy dostęp do informacji na temat dzierżawy. Możesz wyświetlić takie informacje, jak na przykład nazwa dzierżawy i jej lokalizacja, urząd zarządzania urządzeniami przenośnymi oraz numer wydania usługi dzierżawy. Numer wydania usługi dzierżawy to link, który otwiera artykuł *Co nowego w usłudze Intune* w dokumentacji firmy Microsoft, gdzie możesz zapoznać się z najnowszymi funkcjami i aktualizacjami usługi Microsoft Intune.  
+Obszar Szczegóły dzierżawy zapewnia natychmiastowy dostęp do informacji na temat dzierżawy. Możesz wyświetlić takie informacje, jak na przykład nazwa dzierżawy i jej lokalizacja, urząd zarządzania urządzeniami przenośnymi oraz numer wydania usługi dzierżawy. Numer wydania usługi to link, który prowadzi do artykułu *Co nowego w usłudze Intune* w witrynie Microsoft Docs. Artykuł *Co nowego* zawiera informacje o najnowszych funkcjach i aktualizacjach w usłudze Intune.  
 
 Ta sekcja udostępnia również podstawowe informacje na temat dostępnych licencji oraz tego, ile z nich jest przypisanych do użytkowników. Licencje dla urządzeń nie są wyświetlane.
 
@@ -40,11 +41,11 @@ Stan łączników to centralna lokalizacja służąca do wyświetlania stanu wsz
 - **Skonfigurowane połączenia z zewnętrznymi usługami**. Na przykład z usługą *Apple Volume Purchase Program* lub *Windows Autopilot*.  Stan tego typu łącznika jest określany na podstawie czasu ostatniej pomyślnej synchronizacji.
 - **Certyfikaty lub poświadczenia, które są wymagane do połączenia z niezarządzaną usługą zewnętrzną**, na przykład certyfikaty *Apple Push Notification Service* (APNS). Stan tego typu łącznika jest określany na podstawie znacznika czasu wygaśnięcia certyfikatu lub poświadczenia.  
 
-Domyślnie wyświetlanych jest tylko pięć łączników. Możesz wybrać opcję **Zobacz wszystkie łączniki**, aby rozwinąć tę listę i wyświetlić wszystkie dostępne łączniki, w tym te, które nie zostały skonfigurowane do użycia.  
-
-Jeśli jest więcej niż jeden łącznik dowolnego typu, stan łącznika to podsumowanie stanu wszystkich takich samych łączników. Najgorsza kondycja łącznika jest używana jako kondycja całej grupy.  
+Domyślnie wyświetlanych jest maksymalnie pięć łączników. Możesz wybrać opcję **Zobacz wszystkie łączniki**, aby rozwinąć tę listę i wyświetlić wszystkie dostępne łączniki, w tym te, które nie zostały skonfigurowane do użycia.  
 
 Łączniki w złej kondycji są zawsze wyświetlane na początku listy. Poniżej wymienione są łączniki z ostrzeżeniami, a następnie łączniki w dobrej kondycji. Łączniki, których jeszcze nie skonfigurowano, znajdują się na końcu.
+
+Jeśli jest więcej niż jeden łącznik dowolnego typu, stan łącznika to podsumowanie stanu wszystkich takich samych łączników. Najgorsza kondycja łącznika jest używana jako kondycja całej grupy.  
 
 **Stan łącznika:**
 - **Zła kondycja:**
@@ -60,11 +61,11 @@ Jeśli jest więcej niż jeden łącznik dowolnego typu, stan łącznika to pods
 Po wybraniu łącznika na liście w portalu zostanie wyświetlona strona tworzenia lub konfigurowania tego łącznika.  Na przykład po wybraniu łącznika **Data ważności VPP** otwiera się strona **Tokeny programu Volume Purchase Program systemu iOS**, na której można wyświetlić więcej informacji na temat tego łącznika. Możesz utworzyć nową konfigurację lub edytować istniejącą i rozwiązywać problemy w niej występujące.  
 
 ## <a name="intune-service-health"></a>Kondycja usługi Intune  
-Możesz wyświetlać szczegóły aktywnych zdarzeń i ostrzeżenia bez konieczności przechodzenia do pulpitu nawigacyjnego usługi Microsoft 365 Service Health lub Centrum wiadomości, które są zlokalizowane w Centrum administracyjnym usługi Microsoft 365 pod adresem https://portal.office.com. Wyświetlane są wyłącznie te zdarzenia, które miały wpływ na Twoją dzierżawę.  
+Możesz wyświetlać szczegóły aktywnych zdarzeń i ostrzeżenia bez konieczności przechodzenia do pulpitu nawigacyjnego usługi Microsoft 365 Service Health lub Centrum wiadomości, które są zlokalizowane w [Centrum administracyjnym usługi Microsoft 365](https://admin.microsoft.com). Wyświetlane są wyłącznie te zdarzenia, które miały wpływ na Twoją dzierżawę.  
 
 Po wybraniu zdarzenia szczegóły zdarzenia są przedstawiane bezpośrednio na stronie Stan dzierżawy. Aby wyświetlić wcześniejsze ostrzeżenia i zdarzenia, wybierz pozycję **Zobacz wcześniejsze zdarzenia/ostrzeżenia**. Zostanie otwarte Centrum administracyjne usługi Microsoft 365, gdzie możesz wyświetlać ostrzeżenia i zdarzenia dotyczące dzierżawy z ostatnich 30 dni.  
 
-Aby wyświetlać informacje na temat *kondycji usługi Intune*, Twoje konto musi mieć rolę**Administrator globalny** lub **Administrator usługi** w usłudze Azure Active Directory lub w portalu administracyjnym usługi Office. Aby przypisać te uprawnienia, zaloguj się do [Centrum administracyjnego usługi Microsoft 365](https://portal.officeppe.com/AdminPortal/Home#/homepage) z uprawnieniami administratora globalnego. Wybierz kolejno pozycje **Użytkownicy > Aktywni użytkownicy**, a następnie wybierz konto, które wymaga dostępu. Wybierz opcję **Edytuj** w obszarze Role, wybierz rolę *Administrator usługi* lub *Administrator globalny*, a następnie wybierz polecenie **Zapisz**, aby przypisać uprawnienia.  
+Aby wyświetlać informacje na temat *kondycji usługi Intune*, Twoje konto musi mieć rolę**Administrator globalny** lub **Administrator usługi** w usłudze Azure Active Directory lub w Centrum administracyjnym usługi Microsoft 365. Aby przypisać te uprawnienia, zaloguj się do [Centrum administracyjnego usługi Microsoft 365](https://admin.microsoft.com) z uprawnieniami administratora globalnego. Wybierz kolejno pozycje **Użytkownicy > Aktywni użytkownicy**, a następnie wybierz konto, które wymaga dostępu. Wybierz opcję **Edytuj** w obszarze Role, wybierz rolę *Administrator usługi* lub *Administrator globalny*, a następnie wybierz polecenie **Zapisz**, aby przypisać uprawnienia.  
 
 Preferencje dotyczące komunikacji dla funkcji Kondycja usługi Intune możesz skonfigurować wyłącznie za pośrednictwem Centrum administracyjnego usługi Microsoft 365.
 
@@ -73,6 +74,6 @@ Wyświetlaj komunikaty informacyjne od zespołu usługi Intune bez konieczności
 
 Domyślnie wyświetlanych jest ostatnich 10 aktywnych wiadomości. Aby wyświetlić starsze wiadomości, wybierz polecenie **Zobacz wcześniejsze wiadomości**, aby otworzyć *Centrum wiadomości* w portalu Centrum administracyjne usługi Microsoft 365.  
 
-Aby wyświetlić informacje na temat funkcji Wiadomości w usłudze Intune, musisz mieć rolę **Administrator globalny** lub **Administrator usługi** w usłudze Azure Active Directory lub mieć przypisaną rolę **czytelnika Centrum wiadomości** w portalu administracyjnym pakietu Office.  Aby przypisać to uprawnienie, zaloguj się do [Centrum administracyjnego usługi Microsoft 365](https://portal.officeppe.com/AdminPortal/Home#/homepage) z uprawnieniami administratora. Wybierz kolejno pozycje **Użytkownicy > Aktywni użytkownicy**, a następnie wybierz konto, które wymaga dostępu. Wybierz opcję **Edytuj** w polu *Role*, wybierz opcję *Administrator komunikacji w usłudze Teams*, a następnie **Zapisz** zmiany, aby przypisać uprawnienia.  
+Aby wyświetlić informacje na temat funkcji Wiadomości w usłudze Intune, musisz mieć rolę **Administrator globalny** lub **Administrator usługi** w usłudze Azure Active Directory lub mieć przypisaną rolę **czytelnika Centrum wiadomości** w portalu Centrum administracyjne usługi Microsoft 365.  Aby przypisać to uprawnienie, zaloguj się do [Centrum administracyjnego usługi Microsoft 365](https://admin.microsoft.com) z uprawnieniami administratora. Wybierz kolejno pozycje **Użytkownicy > Aktywni użytkownicy**, a następnie wybierz konto, które wymaga dostępu. Wybierz opcję **Edytuj** w polu *Role*, wybierz opcję *Administrator komunikacji w usłudze Teams*, a następnie **Zapisz** zmiany, aby przypisać uprawnienia.  
 
 Preferencje dotyczące komunikacji dla funkcji Wiadomości w usłudze Intune możesz skonfigurować wyłącznie za pośrednictwem Centrum administracyjnego usługi Microsoft 365.

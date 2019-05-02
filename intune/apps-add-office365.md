@@ -1,32 +1,33 @@
 ---
-title: Instalowanie aplikacji usługi Office 365 na urządzeniach przy użyciu usługi Microsoft Intune
-titlesuffix: ''
-description: Dowiedz się, jak przy użyciu usługi Microsoft Intune można ułatwić instalowanie aplikacji usługi Office 365 na urządzeniach z systemem Windows 10.
+title: Przypisywanie aplikacji usługi Office 365 do urządzeń z systemem Windows 10 przy użyciu usługi Microsoft Intune
+titleSuffix: ''
+description: Dowiedz się, jak przy użyciu usługi Microsoft Intune możesz zainstalować aplikacje usługi Office 365 na urządzeniach z systemem Windows 10.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/11/2018
+ms.date: 04/08/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
-ms.reviewer: aiwang
+ms.reviewer: craigma
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
+ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d3db1449ec583678924fadb0db930146c3cd848
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: c640e3e02d7d016785b87d681443b2c49f7a6281
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57229755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61507141"
 ---
 # <a name="assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Przypisywanie aplikacji usługi Office 365 do urządzeń z systemem Windows 10 przy użyciu usługi Microsoft Intune
 
-Ten typ aplikacji ułatwia przypisywanie aplikacji usługi Office 365 do zarządzanych przez Ciebie urządzeń z systemem Windows 10. Możesz także zainstalować aplikacje dla klienta klasycznego usługi Microsoft Project Online i programu Microsoft Visio Pro dla usługi Office 365, jeśli masz ich licencje. Wybrane aplikacje są wyświetlane jako pojedynczy wpis na liście aplikacji w konsoli usługi Intune.
+Aby móc przypisywać, monitorować, konfigurować lub zabezpieczać aplikacje, trzeba je najpierw dodać do usługi Intune. Jednym z dostępnych [typów aplikacji](apps-add.md#app-types-in-microsoft-intune) są aplikacje usługi Office 365 dla urządzeń z systemem Windows 10. Po wybraniu tego typu aplikacji w usłudze Intune możesz przypisać i zainstalować aplikacji usługi Office 365 na zarządzanych urządzeniach z systemem Windows 10. Możesz także przypisać i zainstalować aplikacje dla klienta klasycznego usługi Microsoft Project Online i programu Microsoft Visio Online Plan 2, jeśli masz ich licencje. Dostępne aplikacje usługi Office 365 są wyświetlane jako pojedynczy wpis na liście aplikacji w konsoli usługi Intune na platformie Azure.
 
 > [!NOTE]
 > Aplikacje usługi Office 365 ProPlus wdrożone za pośrednictwem usługi Microsoft Intune należy aktywować za pomocą licencji usługi Office 365 ProPlus. Obecnie usługa Intune nie obsługuje wersji Office 365 Business.
@@ -54,18 +55,25 @@ Ten typ aplikacji ułatwia przypisywanie aplikacji usługi Office 365 do zarząd
 5. Wybierz pozycję **Dodaj**.
 6. W okienku **Dodawanie aplikacji** na liście **Typ aplikacji** w obszarze **Pakiet Office 365** wybierz pozycję **Windows 10**.
 
-Możesz teraz skonfigurować pakiet aplikacji.
+## <a name="select-settings-format"></a>Wybieranie formatu ustawień
 
-## <a name="configure-the-app-suite"></a>Konfigurowanie pakietu aplikacji
+Wybierając pozycję **Format ustawień**, możesz wybrać metodę konfigurowania ustawień aplikacji. Do wyboru są następujące opcje formatu ustawień:
+- Projektant konfiguracji
+- Wprowadzanie danych XML
 
-Wybierz aplikacje pakietu Office, które chcesz przypisać do urządzeń.
+Po wybraniu opcji **Projektant konfiguracji** blok **Dodawanie aplikacji** zmieni się i będzie można na nim wybrać dwie dodatkowe opcje ustawień:
+- Skonfiguruj pakiet aplikacji
+- Ustawienia pakietu aplikacji
 
-1. W okienku **Dodawanie aplikacji** wybierz pozycję **Konfiguruj pakiet aplikacji**.
-2. W okienku **Konfigurowanie pakietu aplikacji** wybierz standardowe aplikacje pakietu Office, które chcesz przypisać do urządzeń.  
-    Ponadto możesz zainstalować aplikacje dla klienta klasycznego usługi Microsoft Project Online i programu Microsoft Visio Pro dla usługi Office 365, jeśli masz ich licencje.
-3. Wybierz przycisk **OK**.
+<img alt="Add Office 365 - Configuration designer" src="./media/apps-add-office365/apps-add-office365-02.png" width="700">
 
-## <a name="configure-app-information"></a>Konfigurowanie informacji o aplikacji
+Po wybraniu pozycji **Wprowadzanie danych XML** w bloku **Dodawanie aplikacji** zostanie wyświetlona opcja **Wprowadź dane XML**. Wybierz tę opcję, aby wyświetlić blok **Plik konfiguracji**. 
+
+![Dodawanie projektanta konfiguracji usługi Office 365](./media/apps-add-office365/apps-add-office365-01.png)
+    
+Aby uzyskać więcej informacji na temat opcji **Wprowadzanie danych XML**, zobacz [Wprowadzanie danych XML](apps-add-office365.md#enter-xml-format) poniżej.
+
+## <a name="configure-app-suite-information"></a>Konfigurowanie informacji o pakiecie aplikacji
 
 W tym kroku podajesz informacje o pakiecie aplikacji. Te informacje pomagają zidentyfikować pakiet aplikacji w usłudze Intune i ułatwiają użytkownikom wyszukiwanie tego pakietu w portalu firmy.
 
@@ -84,9 +92,18 @@ W tym kroku podajesz informacje o pakiecie aplikacji. Te informacje pomagają zi
     - **Logo**: logo usługi Office 365 jest wyświetlane razem z nazwą aplikacji podczas przeglądania portalu firmy.
 3. Wybierz przycisk **OK**.
 
-## <a name="configure-app-settings"></a>Konfigurowanie ustawień aplikacji
+## <a name="configure-app-suite"></a>Konfigurowanie pakietu aplikacji
 
-W tym kroku skonfigurujesz opcje instalacji pakietu aplikacji. Ustawienia są stosowane do wszystkich aplikacji dodawanych do pakietu.
+Po wybraniu opcji **Projektant konfiguracji** z listy rozwijanej **Format ustawień** zostanie wyświetlona opcja **Skonfiguruj pakiet aplikacji** w bloku **Dodawanie aplikacji**. Wybierz aplikacje pakietu Office, które chcesz przypisać do urządzeń.
+
+1. W okienku **Dodawanie aplikacji** wybierz pozycję **Konfiguruj pakiet aplikacji**.
+2. W okienku **Konfigurowanie pakietu aplikacji** wybierz standardowe aplikacje pakietu Office, które chcesz przypisać do urządzeń.  
+    Ponadto możesz zainstalować aplikacje dla klienta klasycznego usługi Microsoft Project Online i programu Microsoft Visio Online Plan 2, jeśli masz ich licencje.
+3. Wybierz przycisk **OK**.
+
+## <a name="configure-app-suite-settings"></a>Konfigurowanie ustawień pakietu aplikacji
+
+Po wybraniu opcji **Projektant konfiguracji** z listy rozwijanej **Format ustawień** zostanie wyświetlona opcja **Ustawienia pakietu aplikacji** w bloku **Dodawanie aplikacji**. W tym kroku skonfigurujesz opcje instalacji pakietu aplikacji. Ustawienia są stosowane do wszystkich aplikacji dodawanych do pakietu.
 
 1. W okienku **Dodawanie aplikacji** wybierz pozycję **Ustawienia pakietu aplikacji**.
 2. W okienku **Ustawienia pakietu aplikacji** wykonaj następujące czynności:
@@ -110,6 +127,10 @@ W tym kroku skonfigurujesz opcje instalacji pakietu aplikacji. Ustawienia są st
     - **Użyj aktywacji na komputerze udostępnionym**: wybierz tę opcję, jeśli wielu użytkowników współużytkuje komputer. Aby uzyskać więcej informacji, zobacz [omówienie aktywacji na komputerze udostępnionym dla usługi Office 365](https://docs.microsoft.com/DeployOffice/overview-of-shared-computer-activation-for-office-365-proplus).
     - **Języki**: pakiet Office jest automatycznie instalowany we wszystkich obsługiwanych językach, które zostały zainstalowane w systemie Windows na urządzeniu użytkownika końcowego. Wybierz tę opcję, jeśli chcesz zainstalować dodatkowe języki z pakietem aplikacji. <p></p>
     Dla aplikacji pakietu Office 365 Pro Plus zarządzanych przez usługę Intune możesz wdrożyć dodatkowe języki. Lista dostępnych języków uwzględnia **Typ** pakietu językowego (podstawowy, częściowy i weryfikujący). W witrynie Azure Portal wybierz pozycję **Microsoft Intune** > **Aplikacje klienckie** > **Aplikacje** > **Dodaj**. Na liście **Typ aplikacji** w bloku **Dodaj aplikację** wybierz pozycję **Windows 10** w obszarze **Pakiet Office 365**. Wybierz pozycję **Języki** w bloku **Ustawienia pakietu aplikacji**. Aby uzyskać więcej informacji, zobacz artykuł [Overview of deploying languages in Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-of-deploying-languages-in-office-365-proplus) (Omówienie wdrażania języków w usłudze Office 365 ProPlus).
+
+## <a name="enter-xml-format"></a>Wprowadzanie formatu XML
+
+Po wybraniu opcji **Wprowadź dane XML** z listy rozwijanej **Format ustawień** zostanie wyświetlona opcja **Wprowadź format XML** w bloku **Dodawanie aplikacji**. Aby uzyskać więcej informacji, zobacz [Configuration options for the Office Deployment Tool (Opcje konfiguracji narzędzia wdrażania pakietu Office)](https://docs.microsoft.com/DeployOffice/configuration-options-for-the-office-2016-deployment-tool).
 
 ## <a name="finish-up"></a>Zakończenie
 

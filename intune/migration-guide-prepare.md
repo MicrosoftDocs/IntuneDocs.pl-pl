@@ -1,28 +1,30 @@
 ---
 title: Przygotowanie usługi Intune do zarządzania urządzeniami mobilnymi
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Przed migracją do usługi Microsoft Intune należy ocenić wymagania techniczne i biznesowe.
 keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.date: 01/02/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 58591442-6606-4f39-a06b-f17a1f25af25
 ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
-ms.openlocfilehash: 1e21fef5102b22dfe698a9adb73736508452acfe
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e527ed11e451ec0ef2f6d2fde42e0c8fd53408f3
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61508365"
 ---
-# <a name="phase-1-prepare-microsoft-intune-for-mobile-device-management-mdm"></a>Faza 1: Przygotowanie usługi Microsoft Intune do zarządzania urządzeniami przenośnymi (MDM)
+# <a name="phase-1-prepare-microsoft-intune-for-mobile-device-management-mdm"></a>Faza 1. Przygotowanie usługi Microsoft Intune do zarządzania urządzeniami przenośnymi (MDM)
 
 Przed szczegółowym zapoznaniem się z zagadnieniami dotyczącymi konfigurowania usługi Intune przyjrzyjmy się wymaganiom organizacji w zakresie zarządzania urządzeniami przenośnymi (MDM, Mobile Device Management). Przydatne może być uruchomienie raportów aktywnych użytkowników w bieżącym dostawcy rozwiązania do zarządzania urządzeniami przenośnymi w celu zidentyfikowania krytycznych grup użytkowników. Następnie można rozpocząć odpowiadanie na pytania z sekcji [Określanie wymagań w zakresie MDM](migration-guide-prepare.md#assess-mdm-requirements).
 

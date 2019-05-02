@@ -1,26 +1,28 @@
 ---
 title: Wspieranie przyjęcia rozwiązania przez użytkowników końcowych przy użyciu dostępu warunkowego
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Dowiedz się, jak używać dostępu warunkowego do rejestracji dysku w usłudze Microsoft Intune.
 keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.date: 01/02/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: c2d7ce3f-fe97-4044-ad9e-25ac8fa301c9
 ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
-ms.openlocfilehash: 4fad67bcde44246e7673d6ebe12afcdcf14fc8cd
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 803bcda24b7d6fa1cf923ff28848b8d2b71cf62e
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52183812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61508161"
 ---
 # <a name="drive-end-user-adoption-with-conditional-access-in-microsoft-intune"></a>Wspieranie przyjęcia rozwiązania przez użytkowników końcowych przy użyciu dostępu warunkowego w usłudze Microsoft Intune
 
@@ -55,7 +57,7 @@ Jest to jedno z wielu możliwych podejść. Można wybrać prostszy proces, któ
 
 ## <a name="task-list-for-conditional-access"></a>Lista zadań związanych z konfiguracją dostępu warunkowego
 
-### <a name="task-1-decide-how-you-are-going-to-implement-conditional-access"></a>Zadanie 1: Podjęcie decyzji o sposobie wdrożenia dostępu warunkowego
+### <a name="task-1-decide-how-you-are-going-to-implement-conditional-access"></a>Zadanie 1. Podjęcie decyzji o sposobie wdrożenia dostępu warunkowego
 
 [Typowe sposoby korzystania z dostępu warunkowego](conditional-access-intune-common-ways-use.md).
 

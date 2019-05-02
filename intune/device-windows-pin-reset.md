@@ -6,20 +6,22 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 03/07/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 5027d012-d6c2-4971-a9ac-217f91d67d87
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 36ed7a4dda91cfcc3cc4b97cc9ab8872b0a2c80e
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b53ffbed93195b84544570e6a740fa614e219458
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61513552"
 ---
 # <a name="reset-the-passcode-on-windows-devices-using-intune"></a>Resetowanie kodu dostępu na urządzeniach z systemem Windows przy użyciu usługi Intune
 
@@ -40,9 +42,9 @@ Następujące platformy **nie są** obsługiwane:
 Aby zresetować kod dostępu na urządzeniach z systemem Windows, dołącz usługę resetowania numerów PIN do dzierżawy usługi Intune.
 
 1. Przejdź do obszaru [produkcji usługi resetowania numerów PIN firmy Microsoft](https://login.windows.net/common/oauth2/authorize?response_type=code&client_id=b8456c59-1230-44c7-a4a2-99b085333e84&resource=https%3A%2F%2Fgraph.windows.net&redirect_uri=https%3A%2F%2Fcred.microsoft.com&state=e9191523-6c2f-4f1d-a4f9-c36f26f89df0&prompt=admin_consent), a następnie zaloguj się przy użyciu konta administratora dzierżawy.
-2. **Zaakceptuj** zgodę, aby usługa resetowania numerów PIN mogła uzyskać dostęp do Twojego konta: ![Akceptowanie żądania uprawnień serwera resetowania numerów PIN](./media/pin-reset-service-home-screen.png)
+2. **Wyraź** zgodę na uzyskiwanie dostępu do Twojego konta przez usługę resetowania numerów PIN: ![Akceptowanie żądania uprawnień serwera resetowania numerów PIN](./media/pin-reset-service-home-screen.png)
 3. Przejdź do obszaru [produkcji klienta usługi resetowania numerów PIN firmy Microsoft](https://login.windows.net/common/oauth2/authorize?response_type=code&client_id=9115dd05-fad5-4f9c-acc7-305d08b1b04e&resource=https%3A%2F%2Fcred.microsoft.com%2F&redirect_uri=ms-appx-web%3A%2F%2FMicrosoft.AAD.BrokerPlugin%2F9115dd05-fad5-4f9c-acc7-305d08b1b04e&state=6765f8c5-f4a7-4029-b667-46a6776ad611&prompt=admin_consent), a następnie zaloguj się przy użyciu konta administratora dzierżawy. **Zaakceptuj** zgodę, aby klient usługi resetowania numerów PIN mógł uzyskać dostęp do Twojego konta.
-4. W witrynie [Azure Portal](https://portal.azure.com) potwierdź, że usługi resetowania numerów PIN są wymieniane na liście aplikacji dla przedsiębiorstw (Wszystkie aplikacje): ![Strona uprawnień usługi resetowania numerów PIN](./media/pin-reset-service-application.png)
+4. W witrynie [Azure Portal](https://portal.azure.com) potwierdź, że usługi resetowania numerów PIN są widoczne na liście aplikacji dla przedsiębiorstw (Wszystkie aplikacje): ![Strona uprawnień usługi resetowania numeru PIN](./media/pin-reset-service-application.png)
 
 > [!NOTE]
 > Po zaakceptowaniu żądań usługi resetowania numerów PIN możesz otrzymać komunikat `Page not found`. Może też wydawać się, że nic się nie stało. To zachowanie jest normalne. Pamiętaj, aby upewnić się, że dwie aplikacje resetowania numerów PIN znajdują się na liście dla Twojej dzierżawy.

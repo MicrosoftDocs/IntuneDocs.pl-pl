@@ -9,18 +9,20 @@ ms.date: 05/30/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 40fa5a2e-6c0f-4150-9740-d5ddc0cdbda0
 ms.reviewer: cacamp
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
-ms.openlocfilehash: 675e45a7f49a943cb57135c141a9331ba24fabe7
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d43c999cf5dc90d62b9409e3c4565502b773ddf4
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61508238"
 ---
 # <a name="microsoft-intune-service-description"></a>Opis usługi Microsoft Intune
 
@@ -35,7 +37,7 @@ Usługa Intune jest ściśle zintegrowana z usługą Azure Active Directory (Azu
 Aby dowiedzieć się więcej o zarządzaniu urządzeniami i aplikacjami oraz o ochronie danych firmowych za pomocą usługi Intune, zobacz [Dokumentacja usługi Intune](https://docs.microsoft.com/intune/).
 
 ## <a name="30-day-free-trial"></a>30-dniowa bezpłatna wersja próbna
-Możesz rozpocząć korzystanie z usługi Intune w ramach 30-dniowej bezpłatnej wersji próbnej, która zawiera 100 licencji użytkowników. Aby rozpocząć korzystanie z bezpłatnej wersji próbnej, [odwiedź stronę rejestracji w usłudze Intune](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20). Jeśli Twoja organizacja ma umowę Enterprise Agreement lub równoważną umowę licencjonowania zbiorowego, skontaktuj się z przedstawicielem firmy Microsoft, aby skonfigurować bezpłatną wersję próbną.
+Możesz rozpocząć korzystanie z usługi Intune w ramach 30-dniowej bezpłatnej wersji próbnej, która zawiera 100 licencji użytkowników. Aby rozpocząć korzystanie z bezpłatnej wersji próbnej, [odwiedź stronę rejestracji w usłudze Intune](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20). Jeśli Twoja organizacja ma umowę Enterprise Agreement lub równoważną umowę licencjonowania zbiorowego, skontaktuj się z przedstawicielem firmy Microsoft, aby skonfigurować bezpłatną wersję próbną.
 
 > [!NOTE]
 > Jeśli Twoja organizacja ma konto służbowe usług Microsoft Online Services i zamierzasz kontynuować tę subskrypcję usługi Intune w środowisku produkcyjnym po zakończeniu okresu próbnego, wybierz opcję **Zaloguj** na tej stronie i uwierzytelnij się przy użyciu konta administratora globalnego Twojej organizacji. Ta akcja zagwarantuje, że wersja próbna usługi Intune zostanie połączona z istniejącym kontem służbowym.
@@ -57,7 +59,7 @@ Ponieważ ekosystem zarządzania urządzeniami przenośnymi często się zmienia
 
 - [Co nowego w usłudze Microsoft Intune](whats-new.md). Ten temat jest aktualizowany wraz z comiesięczną lub cotygodniową aktualizacją usługi, na przykład po pojawieniu się nowej wersji aplikacji Portal firmy.
 
-- Ponadto informacje o ważnych aktualizacjach usługi są ogłaszane w Centrum wiadomości [portalu zarządzania usługi Office 365](https://portal.office.com/Admin/Default.aspx). Jeśli zainstalujesz towarzyszącą [aplikację mobilną Office 365 Admin](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a), możesz otrzymywać powiadomienia na urządzeniu przenośnym. Dowiedz się więcej na temat sposobu pracy z [Centrum wiadomości usługi Office 365](https://support.office.com/client/results?Shownav=true&ns=O365ENTADMIN&version=15&ver=15&HelpID=O365E_MCManageUpdates).
+- Ponadto informacje o ważnych aktualizacjach usługi są ogłaszane w Centrum wiadomości [centrum administracyjnego platformy Microsoft 365](https://admin.microsoft.com/). Jeśli zainstalujesz towarzyszącą [aplikację mobilną Office 365 Admin](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a), możesz otrzymywać powiadomienia na urządzeniu przenośnym. Dowiedz się więcej na temat sposobu pracy z [Centrum wiadomości usługi Office 365](https://support.office.com/client/results?Shownav=true&ns=O365ENTADMIN&version=15&ver=15&HelpID=O365E_MCManageUpdates).
 
     Kilka przydatnych wskazówek:
 
@@ -76,7 +78,7 @@ Ponieważ ekosystem zarządzania urządzeniami przenośnymi często się zmienia
     - [Blog dotyczący pomocy technicznej usługi Intune](https://blogs.technet.microsoft.com/intunesupport/)
 
 >[!Note]
->Kondycję usługi Intune możesz monitorować w [portalu zarządzania usługi Office 365](https://portal.office.com/Admin/Default.aspx). Wybierz pozycję **Kondycja usługi** w lewym okienku. Można również użyć [aplikacji mobilnej Office 365 Admin](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a), aby wyświetlić informacje o kondycji usługi.
+>Kondycję usługi Intune możesz monitorować w [centrum administracyjnym platformy Microsoft 365](https://admin.microsoft.com). Wybierz pozycję **Kondycja usługi** w lewym okienku. Można również użyć [aplikacji mobilnej Office 365 Admin](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a), aby wyświetlić informacje o kondycji usługi.
 
 ## <a name="types-of-notices-microsoft-provides-about-the-intune-service"></a>Oto typy powiadomień dotyczących usługi Intune udostępniane przez firmę Microsoft
 

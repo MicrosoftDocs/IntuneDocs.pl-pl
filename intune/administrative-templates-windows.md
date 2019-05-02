@@ -5,37 +5,35 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/09/2019
-ms.topic: article
+ms.date: 02/27/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36076aab02f16937066cb3d47d573f7c74dd6277
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 704abe5e03410b52d54c7729e1832e527ae4dfb6
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55833620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61504314"
 ---
-# <a name="windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Szablony systemu Windows 10 umożliwiające konfigurowanie ustawień zasad grupy w usłudze Microsoft Intune
+# <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Korzystanie z szablonów systemu Windows 10 umożliwiających konfigurowanie ustawień zasad grupy w usłudze Microsoft Intune
 
 Podczas zarządzania urządzeniami w organizacji można utworzyć grupę ustawień stosowanych do różnych grup urządzeń. Na przykład masz kilka grup urządzeń. Dla grupy A chcesz przypisać określony zestaw ustawień. Dla grupy B chcesz przypisać inny zestaw ustawień. Możesz też użyć prostego widoku ustawień, który można skonfigurować.
 
-Możesz wykonać to zadanie przy użyciu **szablonów administracyjnych** w usłudze Microsoft Intune. Szablony administracyjne obejmują setki ustawień, które sterują funkcjami w programie Internet Explorer, w programach pakietu Microsoft Office i na pulpicie zdalnym oraz dostępem do usługi OneDrive, a także pozwalają użyć hasła obrazkowego lub numeru PIN, aby się zalogować i nie tylko. Te szablony przypominają ustawienia zasad grupy (GPO) w usłudze Active Directory (AD) i obejmują [ustawienia obsługiwane przez format ADMX](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies) używające formatu XML. Jednak szablony w usłudze Intune są w pełni oparte na chmurze. Umożliwiają prostsze konfigurowanie ustawień i znajdowanie odpowiednich ustawień.
+Możesz wykonać to zadanie przy użyciu **szablonów administracyjnych** w usłudze Microsoft Intune. Szablony administracyjne obejmują setki ustawień, które sterują funkcjami w programie Internet Explorer, w programach pakietu Microsoft Office i na pulpicie zdalnym oraz dostępem do usługi OneDrive, a także pozwalają użyć hasła obrazkowego lub numeru PIN, aby się zalogować i nie tylko. Te szablony przypominają ustawienia zasad grupy (GPO) w usłudze Active Directory (AD) i obejmują [ustawienia obsługiwane przez format ADMX](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies) (powoduje otwarcie innej witryny Docs) używające formatu XML. Jednak szablony w usłudze Intune są w pełni oparte na chmurze. Umożliwiają prostsze konfigurowanie ustawień i znajdowanie odpowiednich ustawień.
 
 **Szablony administracyjne** są wbudowane w usłudze Intune i nie wymagają dostosowywania, w tym korzystania z identyfikatora OMA-URI. W ramach rozwiązania do zarządzania urządzeniami przenośnymi (MDM) użyj tych ustawień szablonu jako pojedynczego miejsca do zarządzania urządzeniami z systemem Windows 10.
 
 W tym artykule przedstawiono procedurę tworzenia szablonu dla urządzeń z systemem Windows 10 i pokazano, jak filtrować wszystkie dostępne ustawienia w usłudze Microsoft Intune. Podczas tworzenia szablonu jest tworzony profil konfiguracji urządzenia. Następnie można przypisać lub wdrożyć ten profil w urządzeniach z systemem Windows 10 w organizacji.
 
-> [!NOTE]
-> Szablony administracyjne są obsługiwane w przypadku urządzeń autonomicznych. Nie są one obecnie obsługiwane przez współzarządzane urządzenia programu System Center Configuration Manager (SCCM).
-
-## <a name="create-a-template"></a>Utworzenie szablonu
+## <a name="create-a-template"></a>Tworzenie szablonu
 
 1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi**, wpisz nazwę usługi **Intune** w filtrze, a następnie wybierz pozycję **Intune**.
 2. Wybierz pozycję **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
@@ -75,6 +73,8 @@ W tych szablonach istnieją setki dostępnych ustawień. Aby ułatwić znajdowan
   ![Kliknij pozycję Ścieżka, aby posortować listę alfabetycznie](./media/administrative-templates-windows/search-copy-settings.png)
 
   W następnym przykładzie wyszukaj `microsoft word`. Zostaną wyświetlone wszystkie ustawienia, które można ustawić dla programu Microsoft Word. Wyszukaj `explorer`, aby wyświetlić wszystkie ustawienia programu Internet Explorer, które można dodać do szablonu.
+
+Ta funkcja korzysta z [dostawców CSP zasad systemu Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#admx-backed-policies) (powoduje otwarcie innej witryny Docs). Dostawcy CSP działają w różnych wersjach systemu Windows, takich jak Home, Professional, Enterprise i tak dalej. Aby sprawdzić, czy dostawca CSP działa w określonej wersji, przejdź do artykułu dotyczącego [dostawców CSP zasad systemu Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#admx-backed-policies) (powoduje otwarcie innej witryny Docs).
 
 ## <a name="next-steps"></a>Następne kroki
 

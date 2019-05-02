@@ -1,27 +1,29 @@
 ---
 title: Proces dołączania do usługi Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Ten artykuł zawiera wszystkie szczegółowe informacje, które należy wziąć pod uwagę podczas dołączania opartego tylko na chmurze rozwiązania Microsoft Intune do własnego środowiska.
 keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.date: 01/02/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ac7bd764-5365-4920-8fd0-ea57d5ebe039
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: d5c1fb2b6b20c9687418e14f8e35543c04833a25
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 9cd9f14d48c86119acf862e2d335fe88fb2a9a1c
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61513974"
 ---
 # <a name="implement-your-microsoft-intune-plan"></a>Implementowanie planu dotyczącego usługi Microsoft Intune
 
@@ -74,43 +76,43 @@ Może być konieczne dodanie użytkowników lub grup zabezpieczeń w usłudze Ac
 
 
 
-### <a name="task-4-assign-intune-and-office-365-user-licenses"></a>Zadanie 4. Przypisywanie licencji użytkowników usługi Intune i Office 365
+### <a name="task-4-assign-intune-and-office-365-user-licenses"></a>Zadanie 4. Przypisywanie licencji użytkowników usług Intune i Office 365
 
-Wszyscy użytkownicy objęci wdrożeniem pakietu EMS/usługi Intune i usługi Office 365 muszą mieć przypisaną licencję. Licencje pakietu EMS/usługi Intune i usługi Office 365 można przypisać w portalu Centrum administracyjnego usługi Office 365.
+Wszyscy użytkownicy objęci wdrożeniem pakietu EMS/usługi Intune i usługi Office 365 muszą mieć przypisaną licencję. Licencje pakietu EMS/usługi Intune i usługi Office 365 można przypisać w centrum administracyjnym platformy Microsoft 365.
 
 -   Dowiedz się więcej na temat [przypisywania licencji usługi Intune](licenses-assign.md).
 
-### <a name="task-5-set-mobile-device-management-authority-to-intune"></a>Zadanie 5. Ustawianie usługi Intune jako urzędu zarządzania urządzeniami przenośnymi
+### <a name="task-5-set-mobile-device-management-authority-to-intune"></a>Zadanie 5. Ustawianie usługi Intune jako urzędu zarządzania urządzeniami przenośnymi
 
 Przed rozpoczęciem instalacji, konfigurowania i rejestrowania urządzeń oraz zarządzania nimi za pomocą usługi Intune należy ustawić usługę Intune jako urząd zarządzania urządzeniami.
 
 -   Dowiedz się więcej na temat [ustawiania urzędu zarządzania urządzeniami](mdm-authority-set.md).
 
-### <a name="task-6-enable-device-platforms"></a>Zadanie 6. Włączanie platformy urządzeń
+### <a name="task-6-enable-device-platforms"></a>Zadanie 6. Włączanie platform urządzeń
 
 Domyślnie większość platform urządzeń jest włączona — z wyjątkiem urządzeń firmy Apple (system iOS i komputery Mac). Zanim możliwe będzie zarejestrowanie urządzeń z systemem iOS w usłudze Intune i zarządzanie nimi należy włączyć platformę urządzenia. Aby to zrobić, należy utworzyć certyfikat wypychania MDM i dodać go do usługi Intune.
 
 -   Dowiedz się więcej o [włączaniu urządzeń firmy Apple do rejestracji](apple-mdm-push-certificate-get.md).
 
-### <a name="task-7-add-and-deploy-terms-and-conditions-policies"></a>Zadanie 7. Dodawanie i wdrażanie zasad dotyczących warunków i postanowień
+### <a name="task-7-add-and-deploy-terms-and-conditions-policies"></a>Zadanie 7. Dodawanie i wdrażanie zasad dotyczących warunków i postanowień
 
 Usługa Intune obsługuje zasady dotyczące warunków i postanowień. Dodaj odpowiednie zasady dotyczące warunków i postanowień i wdróż je w grupach docelowych na podstawie przypadków użycia i wymagań dotyczących wdrożenia.
 
 -   Dowiedz się więcej na temat [dodawania i wdrażania zasad dotyczących warunków i postanowień](terms-and-conditions-create.md).
 
-### <a name="task-8-add-and-deploy-configuration-policies"></a>Zadanie 8. Dodawanie i wdrażanie zasad konfiguracji
+### <a name="task-8-add-and-deploy-configuration-policies"></a>Zadanie 8. Dodawanie i wdrażanie zasad konfiguracji
 
 Usługa Intune obsługuje dwa typy zasad konfiguracji — ogólne i niestandardowe. Dodaj odpowiednie zasady konfiguracji i wdróż je w grupach docelowych na podstawie przypadków użycia i wymagań dotyczących wdrożenia.
 
 -   Dowiedz się więcej na temat [dodawania i wdrażania zasad konfiguracji](device-profiles.md).
 
-### <a name="task-9-add-and-deploy-resource-profiles"></a>Zadanie 9. Dodawanie i wdrażanie profilów zasobów
+### <a name="task-9-add-and-deploy-resource-profiles"></a>Zadanie 9. Dodawanie i wdrażanie profilów zasobów
 
 Usługa Intune obsługuje profile poczty e-mail, sieci Wi-Fi i sieci VPN. Dodaj odpowiednie profile i wdróż je w grupach docelowych na podstawie przypadków użycia i wymagań dotyczących wdrożenia.
 
 -   Dowiedz się więcej na temat [sposobów zapewniania dostępu do zasobów firmy przy użyciu usługi Intune](device-profiles.md).
 
-### <a name="task-10-add-and-deploy-apps"></a>Zadanie 10. Dodawanie i wdrażanie aplikacji
+### <a name="task-10-add-and-deploy-apps"></a>Zadanie 10. Dodawanie i wdrażanie aplikacji
 
 Usługa Intune obsługuje wdrażanie aplikacji internetowych, aplikacji biznesowych i publicznych aplikacji ze Sklepu. Dodatkowo możliwe jest zarządzanie aplikacjami, w których zintegrowano zestaw Intune SDK przez skojarzenie ich z zasadami ochrony aplikacji. Dodaj odpowiednie aplikacje i wdróż je w grupach docelowych na podstawie przypadków użycia i wymagań dotyczących wdrożenia.
 

@@ -1,43 +1,43 @@
 ---
-title: Usługa Mobile Threat Defense w usłudze Microsoft Intune | Microsoft Intune
+title: Usługa Mobile Threat Defense w usłudze Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Usługa Mobile Threat Defense (MTD) w usłudze Intune razem z partnerem usługi Mobile Threat Defense umożliwia ochronę dostępu do zasobów firmy na podstawie ryzyka dotyczącego urządzeń.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/28/2017
-ms.topic: article
+ms.date: 03/20/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ac77b590-a7ec-45a0-9516-ebf5243b6210
 ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 18161e8293ae92420f9437dab18e008e8e57b93a
-ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e364ad88591b8ecc945702659255d9378723624f
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53816603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61513038"
 ---
 # <a name="what-is-mobile-threat-defense-integration-with-intune"></a>Co to jest integracja usługi Mobile Threat Defense z usługą Intune?
-
-
-Łączniki Mobile Threat Defense usługi Intune umożliwiają wykorzystanie wybranego dostawcy narzędzie Mobile Threat Defense jako źródła informacji dla zasad zgodności i zasad dostępu warunkowego. Umożliwia to administratorom IT dodanie warstwy zabezpieczeń do zasobów firmy, takich jak Exchange i Sharepoint, w szczególności związanych z zagrożonymi urządzeniami przenośnymi.
+Usługa Intune może integrować dane od dostawcy usługi Mobile Threat Defense jako źródło informacji dla zasad zgodności i reguł dostępu warunkowego. Informacje te ułatwiają ochronę firmowych zasobów, takich jak programy Exchange i SharePoint, ponieważ umożliwiają blokowanie dostępu z urządzeń przenośnych, których bezpieczeństwo zostało naruszone.  
 
 ## <a name="what-problem-does-this-solve"></a>Jaki problem to rozwiązuje?
+Integracja informacji od dostawcy usługi Mobile Threat Defense ułatwia ochronę zasobów firmy przed zagrożeniami występującymi na platformach urządzeń przenośnych.  
 
-Firmy muszą chronić dane poufne przed pojawiającymi się zagrożeniami, do których zalicza się zagrożenia fizyczne, związane z aplikacją lub siecią, a także luki w zabezpieczeniach systemu operacyjnego.
-
-Wcześniej firmy aktywnie chroniły komputery przed atakami, pozostawiając urządzenia przenośne bez monitorowania i ochrony. Platformy urządzeń przenośnych mają wbudowaną ochronę polegającą na izolacji aplikacji i weryfikacji sklepów z aplikacjami, ale platformy te nadal są narażone na zaawansowane ataki. Obecnie coraz więcej pracowników korzysta w swojej pracy z urządzeń i wymaga dostępu do poufnych informacji. Urządzenia muszą być chronione przed coraz bardziej zaawansowanymi atakami.
+Zazwyczaj firmy aktywnie chronią komputery przed atakami i lukami w zabezpieczeniach, ale urządzenia przenośne są pozostawiane bez monitorowania i ochrony. Platformy urządzeń przenośnych mają wbudowaną ochronę polegającą na izolacji aplikacji i weryfikacji sklepów z aplikacjami, ale platformy te nadal są narażone na zaawansowane ataki. Coraz więcej osób korzysta w swojej pracy z urządzeń i wymaga dostępu do poufnych informacji. Informacje od dostawcy usługi Mobile Threat Defense pomagają chronić urządzenia i zasoby przed coraz bardziej zaawansowanymi atakami.  
 
 ## <a name="how-do-the-intune-mobile-threat-defense-connectors-work"></a>Jak działają łączniki Mobile Threat Defense usługi Intune?
 
-Łącznik chroni zasoby firmy, tworząc kanał komunikacji między usługą Intune a wybranym dostawcą narzędzi Mobile Threat Defense. Partnerzy narzędzi Mobile Threat Defense usługi Intune oferują intuicyjne, łatwe do wdrożenia aplikacje dla urządzeń przenośnych, które aktywnie skanują i analizują informacje o zagrożeniach oraz udostępniają je usłudze Intune do celów raportowania lub wymuszania. 
+Łącznik Mobile Threat Defense pozwala utworzyć kanał komunikacji między usługą Intune a wybranym dostawcą narzędzi Mobile Threat Defense. Partnerzy udostępniający rozwiązanie Mobile Threat Defense dla usługi Intune oferują intuicyjne, łatwe do wdrożenia aplikacje dla urządzeń przenośnych. Aplikacje te aktywnie skanują i analizują informacje o zagrożeniach w celu udostępniania ich usłudze Intune. Usługa Intune może użyć tych danych do tworzenia raportów lub wymuszania stosowania zasad.  
 
-Jeśli na przykład połączona aplikacja Mobile Threat Defense zgłasza dostawcy narzędzi Mobile Threat Defense, że telefon w sieci jest podłączony do sieci narażonej na ataki typu Man in the Middle, informacja ta jest udostępniana i przypisywana do odpowiedniego poziomu ryzyka (niski/średni/wysoki). Dane te można porównać ze skonfigurowanymi w usłudze Intune dozwolonymi poziomami ryzyka w celu określenia, czy dostęp do określonych wybranych zasobów należy cofnąć na czas zagrożenia urządzenia.
+Przykład: Połączona aplikacja Mobile Threat Defense przesyła do dostawcy usługi Mobile Threat Defense informację o tym, że telefon w Twojej sieci jest aktualnie połączony z siecią, która jest narażona na ataki typu Man in the Middle. Informacja ta jest przypisywana do odpowiedniego poziomu ryzyka (niski, średni lub wysoki). Dane te są następnie porównywane ze skonfigurowanymi w usłudze Intune dozwolonymi poziomami ryzyka. Na podstawie tego porównania można cofnąć dostęp do wybranych zasobów na czas zagrożenia urządzenia.
 
 ## <a name="what-data-does-intune-collect-for-mobile-threat-defense"></a>Jakie dane zbiera usługa Intune na potrzeby ochrony przed zagrożeniami mobilnymi?
 
@@ -80,3 +80,5 @@ Dowiedz się, jak chronić dostęp do zasobów firmy na podstawie ryzyka dotycz�
 - [Zimperium](zimperium-mobile-threat-defense-connector.md)
 - [Pradeo](pradeo-mobile-threat-defense-connector.md)
 - [Better Mobile](better-mobile-threat-defense-connector.md)
+- Sophos (szczegóły dostępne wkrótce)
+- Wandera (szczegóły dostępne wkrótce)

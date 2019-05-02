@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/03/2019
+ms.date: 04/16/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 844342d0d21110f46ac9a344edbd7409f7d779cb
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: cc29e7bb56c5a5e21264e275cfecf0ea4b0e9273
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "59567221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61501377"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Zasady konfiguracji aplikacji usługi Microsoft Intune
 
@@ -31,16 +31,16 @@ Zasady konfiguracji aplikacji w usłudze Microsoft Intune umożliwiają określe
 
 Zasady konfiguracji aplikacji możesz przypisać do grupy użytkowników i urządzeń za pomocą kombinacji dołączania i wykluczania przypisań. Po dodaniu zasad konfiguracji aplikacji możesz ustawić przypisania zasad konfiguracji aplikacji. Po ustawieniu przypisań dla zasad możesz dołączać i wykluczać grupy użytkowników, dla których zasady będą stosowane. Po wybraniu dołączenia co najmniej jednej grupy możesz wybrać określone grupy do dołączenia lub wybrać wbudowane grupy. Wbudowane grupy to **Wszyscy użytkownicy**, **Wszystkie urządzenia** oraz **Wszyscy użytkownicy i wszystkie urządzenia**.
 
-Aplikacja może wymagać na przykład określenia następujących szczegółów:
+Ustawienie konfiguracji aplikacji może wymagać na przykład określenia następujących szczegółów:
 
 - Niestandardowy numer portu
 - Ustawienia języka
 - Ustawienia zabezpieczeń
 - Ustawienia oznaczeń marki, takich jak logo firmy
 
-Nieprawidłowe określenie tych ustawień przez użytkowników może zwiększyć obciążenie działu pomocy technicznej i spowolnić wdrażanie technologii nowych aplikacji.
+Jeśli zamiast tego użytkownicy mieliby sami wprowadzać te ustawienia, mogliby wprowadzić je nieprawidłowo, co mogłoby zwiększyć obciążenie działu pomocy technicznej i spowolnić wdrażanie nowych aplikacji.
 
-Zasady konfiguracji aplikacji mogą pomóc wyeliminować te problemy, umożliwiając przypisanie tych ustawień do użytkowników w zasadach, zanim uruchomią oni aplikację. Ustawienia są następnie określane automatycznie, a użytkownicy nie muszą podejmować żadnej akcji.
+Zasady konfiguracji aplikacji mogą pomóc w wyeliminowaniu problemów z konfigurowaniem aplikacji, umożliwiając przypisywanie ustawień konfiguracji do zasad, które są przypisywane do użytkowników, zanim uruchomią oni aplikację. Ustawienia są następnie określane automatycznie, a użytkownicy nie muszą podejmować żadnej akcji.
 
 Ustawienia konfiguracji są używane za każdym razem, gdy aplikacja je wyszukuje. Zazwyczaj aplikacja wyszukuje ustawienia konfiguracji podczas pierwszego uruchomienia przez użytkownika.
 

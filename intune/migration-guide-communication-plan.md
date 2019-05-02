@@ -1,26 +1,28 @@
 ---
 title: Planowanie komunikacji dotyczącej migracji
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: W tym artykule zawarto plan i strategię dotyczące komunikacji w zakresie migracji podczas migrowania do usługi Microsoft Intune.
 keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.date: 01/02/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: e6a52506-2d29-41f7-a171-5d684a740dd4
 ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
-ms.openlocfilehash: e19ce1aa39d6402ccf1de93af493457b0a10d0b8
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 08fcda324d2c3c397deb99924d731ed4d4512651
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52183740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61490158"
 ---
 # <a name="plan-communications"></a>Planowanie komunikacji
 
@@ -30,19 +32,19 @@ W przypadku migracji do usługi Intune plan komunikacji stanowi niezwykle ważny
 
 Zaleca się użycie następującego planu komunikacji za pośrednictwem poczty e-mail. Przygotowane szablony można dostosować do planu komunikacji:
 
--   **Wiadomość e-mail \# 1:** należy w niej przedstawić korzyści i oczekiwania oraz harmonogram migracji. Możesz także skorzystać z okazji i zaprezentować w wiadomości inne nowe usługi, do których dostęp zostanie przyznany na urządzeniach zarządzanych przez usługę Intune.<br/><br/>
+-   **Wiadomość e-mail \#1:** należy w niej przedstawić korzyści i oczekiwania oraz harmonogram migracji. Możesz także skorzystać z okazji i zaprezentować w wiadomości inne nowe usługi, do których dostęp zostanie przyznany na urządzeniach zarządzanych przez usługę Intune.<br/><br/>
 
 
     -   [Pobierz \#szablon 1](https://gallery.technet.microsoft.com/Intune-migration-guide-end-e3209b35) wiadomości e-mail
 <br></br>
 
--   **Wiadomość e-mail \# 2:** należy poinformować w niej użytkowników, że do usług można już uzyskać dostęp za pośrednictwem usługi Intune. Zachęć użytkowników do niezwłocznego zarejestrowania się. Przypomnij korzyści i strategiczne przyczyny, dla jakich podjęto decyzję o przeprowadzeniu migracji.<br/><br/>
+-   **Wiadomość e-mail \#2:** należy poinformować w niej użytkowników, że do usług można już uzyskać dostęp za pośrednictwem usługi Intune. Zachęć użytkowników do niezwłocznego zarejestrowania się. Przypomnij korzyści i strategiczne przyczyny, dla jakich podjęto decyzję o przeprowadzeniu migracji.<br/><br/>
 
 
     -   [Pobierz \#szablon 2](https://gallery.technet.microsoft.com/Intune-migration-guide-end-a9d25eb5) wiadomości e-mail
 <br></br>
 
--   **Wiadomość e-mail \#3:** przekaż użytkownikom oś czasu, zanim będzie to mieć wpływ na ich dostęp. Ponownie przypomnij użytkownikom korzyści i strategiczne przyczyny, dla jakich podjęto decyzję o przeprowadzeniu migracji. Wysyłkę wiadomości e-mail należy zaplanować z uwzględnieniem terminów realizacji faz. Przykładowo w czerwcu wyślij wiadomość e-mail \#1 do użytkowników z fazy 1, wiadomość \#2 do użytkowników z fazy 2 i wiadomość \#3 do użytkowników z fazy 3.<br/><br/>
+-   **Wiadomość e-mail \#3:** należy w niej przekazać użytkownikom oś czasu, zanim będzie to mieć wpływ na ich dostęp. Ponownie przypomnij użytkownikom korzyści i strategiczne przyczyny, dla jakich podjęto decyzję o przeprowadzeniu migracji. Wysyłkę wiadomości e-mail należy zaplanować z uwzględnieniem terminów realizacji faz. Przykładowo w czerwcu wyślij wiadomość e-mail \#1 do użytkowników z fazy 1, wiadomość \#2 do użytkowników z fazy 2 i wiadomość \#3 do użytkowników z fazy 3.<br/><br/>
 
     -   [Pobierz \#szablon 3 wiadomości e-mail](https://gallery.technet.microsoft.com/Intune-migration-guide-end-831521b5)
 
@@ -57,6 +59,8 @@ W usłudze Intune dostępne są dodatkowe szablony zachęcające użytkowników 
 -   [Szablon rejestracji użytkowników końcowych usługi Intune dla administratorów IT](https://gallery.technet.microsoft.com/End-user-Intune-enrollment-55dfd64a) to modyfikowalny dokument programu Word, który objaśnia, jak zarejestrować urządzenia z systemem Android, iOS i Mac w usłudze Intune.
 
 -   [Przewodniki z instrukcjami i wiadomości e-mail dostępne w ramach usługi FastTrack dla pakietu EMS](https://gallery.technet.microsoft.com/FastTrack-for-EMS-How-To-f170da4c) można dostosować, używając logo swojej firmy, aby promować wdrożenia usługi Intune i pakietu EMS w danej organizacji.
+
+-   Udostępnij [adres URL aplikacji Portal firmy](http://go.microsoft.com/fwlink/?LinkID=396941) użytkownikom systemów Android, iOS i Windows. Ten adres URL przekierowuje do odpowiedniej listy aplikacji Portal firmy na urządzeniach z systemem Android, iOS i Windows.
 
 ## <a name="next-steps"></a>Następne kroki
 

@@ -5,10 +5,11 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/22/2018
+ms.date: 03/26/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 149def73-9d08-494b-97b7-4ba1572f0623
 ms.reviewer: erikre
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 69cc0d732c9dc850d55acedf4e6dbae0f43f350a
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 21d773b0ab2227f59f1ee0b2091d39b7c9799721
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57232063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61506818"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Często zadawane pytania dotyczące zarządzania aplikacjami mobilnymi (MAM) i ochrony aplikacji
 
@@ -62,7 +63,7 @@ Każdą aplikacją zintegrowaną z zestawem [Intune App SDK](/intune/app-sdk) lu
 
 - Użytkownik końcowy musi mieć licencję usługi Microsoft Intune przypisaną do swojego konta usługi Azure Active Directory. Zobacz temat [Zarządzanie licencjami usługi Intune](/intune/licenses-assign), aby dowiedzieć się, jak przypisać licencje usługi Intune użytkownikom końcowym.
 
-- Użytkownik końcowy musi należeć do grupy zabezpieczeń objętej zasadami ochrony aplikacji. Te same zasady ochrony aplikacji muszą obejmować określoną używaną aplikację. Zasady ochrony aplikacji można tworzyć i wdrażać w konsoli usługi Intune w [portalu Azure](https://portal.azure.com). Grupy zabezpieczeń można obecnie tworzyć w [portalu Office](https://portal.office.com).
+- Użytkownik końcowy musi należeć do grupy zabezpieczeń objętej zasadami ochrony aplikacji. Te same zasady ochrony aplikacji muszą obejmować określoną używaną aplikację. Zasady ochrony aplikacji można tworzyć i wdrażać w konsoli usługi Intune w [portalu Azure](https://portal.azure.com). Grupy zabezpieczeń można obecnie tworzyć w [centrum administracyjnym platformy Microsoft 365](https://admin.microsoft.com).
 
 - Użytkownik końcowy musi zalogować się do aplikacji przy użyciu konta usługi AAD.
 
@@ -77,7 +78,7 @@ Każdą aplikacją zintegrowaną z zestawem [Intune App SDK](/intune/app-sdk) lu
 
 **Jakie są dodatkowe wymagania dotyczące korzystania z aplikacji [Word, Excel i PowerPoint](https://products.office.com/business/office)?**
 
-- Użytkownik końcowy musi mieć licencję usługi [Office 365 Business lub Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) przypisaną do swojego konta usługi Azure Active Directory. Subskrypcja musi obejmować aplikacje pakietu Office na urządzeniach przenośnych i może uwzględniać konto magazynu w chmurze w ramach usługi [OneDrive dla Firm](https://onedrive.live.com/about/business/). Licencje usługi Office 365 można przypisać w [portalu Office](https://portal.office.com), wykonując poniższe [instrukcje](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
+- Użytkownik końcowy musi mieć licencję usługi [Office 365 Business lub Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) przypisaną do swojego konta usługi Azure Active Directory. Subskrypcja musi obejmować aplikacje pakietu Office na urządzeniach przenośnych i może uwzględniać konto magazynu w chmurze w ramach usługi [OneDrive dla Firm](https://onedrive.live.com/about/business/). Licencje usługi Office 365 można przypisać w [centrum administracyjnym platformy Microsoft 365](https://admin.microsoft.com), wykonując te [instrukcje](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
 
 - Użytkownik końcowy musi mieć zarządzaną lokalizację skonfigurowaną przy użyciu funkcji szczegółowego zapisywania jako — w ramach ustawienia „Nie zezwalaj na używanie polecenia Zapisz jako” w zasadach ochrony aplikacji. Przykładowo — jeśli zarządzana lokalizacja to OneDrive, aplikację [OneDrive](https://onedrive.live.com/about/) należy skonfigurować w aplikacji Word, Excel lub PowerPoint użytkownika końcowego.
 
@@ -170,6 +171,27 @@ Zasady ochrony aplikacji usługi Intune dla dostępu będą stosowane w określo
 
 Podczas pracy z różnymi typami ustawień pierwszeństwo ma wymaganie dotyczące wersji aplikacji, a następnie wymaganie dotyczące wersji systemu operacyjnego Android i wymaganie dotyczące wersji poprawki zabezpieczeń systemu Android. Następnie sprawdzane są ostrzeżenia dla wszystkich typów ustawień w tej samej kolejności.
 
+**Dzięki zasadom ochrony aplikacji usługi Intune administratorzy mogą wymagać, aby urządzenia użytkowników końcowych przechodziły pomyślnie testy zaświadczeń rozwiązania SafetyNet firmy Google dla urządzeń z systemem Android. Jak często nowy wynik zaświadczania SafetyNet jest wysyłany do usługi?** <br><br> Nowe określenia usługi Google Play będą zgłaszane do administratora IT w odstępach czasu określonych przez usługę Intune. Częstotliwość wywołań usługi jest ograniczana ze względu na obciążenie, dlatego ta wartość jest przechowywana wewnętrznie i nie można jej konfigurować. Wszelkie akcje skonfigurowane przez administratora IT względem ustawienia zaświadczeń rozwiązania SafetyNet firmy Google będą podejmowane na podstawie ostatniego wyniku zgłoszonego do usługi Intune w czasie warunkowego uruchamiania. W przypadku braku danych dostęp będzie udzielany w zależności od tego, czy zakończyły się niepowodzeniem jakieś inne sprawdzania uruchomienia warunkowego. „Komunikacja dwukierunkowa” usługi Google Play mająca na celu określenie wyników zaświadczania rozpocznie się na zapleczu i będzie monitować użytkownika asynchronicznie, jeśli urządzenie ulegnie awarii. Jeśli dane są przestarzałe, dostęp zostanie zablokowany lub udzielony w zależności od ostatniego zgłoszonego wyniku. Podobnie jak w poprzednim przypadku „komunikacja dwukierunkowa” usługi Google Play mająca na celu określenie wyników zaświadczania rozpocznie się i będzie monitować użytkownika asynchronicznie, jeśli urządzenie ulegnie awarii.
+
+**Dzięki zasadom ochrony aplikacji usługi Intune administratorzy mogą wymagać, aby urządzenia użytkowników końcowych wysyłały sygnały za pomocą interfejsu API Verify Apps firmy Google dla urządzeń z systemem Android. W jaki sposób użytkownicy końcowi mogą włączyć skanowanie aplikacji, aby z tego powodu nie został im zablokowany dostęp?**<br><br> Instrukcje wykonania tego zadania różnią się nieznacznie między urządzeniami. Ogólnie należy przejść do sklepu Google Play i kliknąć pozycję **Moje gry i aplikacje**. Następnie kliknięcie wyniku ostatniego skanowania aplikacji spowoduje wyświetlenie menu Play Protect. Upewnij się, że włączono przełącznik **Skanuj urządzenie pod kątem zagrożeń**.
+
+**Co w rzeczywistości sprawdza interfejs API zaświadczania SafetyNet firmy Google na urządzeniach z systemem Android? Jaka jest różnica między możliwymi do skonfigurowania wartościami opcji „Sprawdź podstawową integralność” i „Sprawdź podstawową integralność i certyfikowane urządzenia”?** <br><br>
+Usługa Intune wykorzystuje interfejsy API SafetyNet usługi Google Play Protect do dodania sprawdzeń dotyczących wykrywania rootingu dla urządzeń niezarejestrowanych. Firma Google opracowała ten zestaw interfejsów API dla aplikacji systemu Android i obsługuje go w celu stwierdzenia, czy aplikacje nie są uruchamiane na urządzeniach z odblokowanym dostępem. Ten zestaw został na przykład wprowadzony w aplikacji Android Pay. Ponieważ firma Google nie udostępnia publicznie wszystkich informacji dotyczących procesów zachodzących podczas wykrywania rootingu, oczekujemy, że te interfejsy API wykrywają użytkowników, którzy odblokowali dostęp do konta root na swoich urządzeniach. Dostęp tych użytkowników można następnie zablokować lub wyczyścić ich konta firmowe z aplikacji obsługujących zasady. Opcja „Sprawdź podstawową integralność” informuje o ogólnej integralności urządzenia. W przypadku urządzeń z odblokowanym dostępem do konta root, emulatorów, urządzeń wirtualnych i urządzeń z oznakami naruszenia podstawowa integralność kończy się niepowodzeniem. Opcja „Sprawdź podstawową integralność i certyfikowane urządzenia” informuje o zgodności urządzenia z usługami Google. Tylko sprawdzanie niemodyfikowanych urządzeń, które były certyfikowane przez firmę Google, może zakończyć się powodzeniem. Sprawdzanie zakończy się niepowodzeniem w przypadku następujących urządzeń:
+* Urządzenia, w przypadku których test podstawowej integralności kończy się niepowodzeniem
+* Urządzenia z odblokowanym programem rozruchowym
+* Urządzenia z niestandardowym obrazem systemu/pamięcią ROM
+* Urządzenia, w przypadku których producent nie zwrócił się do firmy Google o przeprowadzenie procesu certyfikacji, lub urządzenia, które takiej certyfikacji nie przeszły 
+* Urządzenia z obrazem systemu skompilowanym bezpośrednio na podstawie plików źródłowych programu Android Open Source
+* Urządzenia z obrazem systemu w wersji beta lub deweloperskiej wersji zapoznawczej
+
+Aby poznać szczegóły techniczne, zobacz [dokumentację firmy Google dotyczącą zaświadczania SafetyNet](https://developer.android.com/training/safetynet/attestation).
+
+**Podczas tworzenia zasad ochrony aplikacji usługi Intune dla urządzeń z systemem Android w sekcji Uruchamianie warunkowe istnieją dwa podobne testy. Czy należy wybrać ustawienie „Zaświadczanie urządzeń SafetyNet”, czy „Urządzenia, w przypadku których wykonano jailbreak lub zapewniono dostęp do konta root”?** <br><br>
+Sprawdzania wykonywane przez interfejs API SafetyNet usługi Google Play Protect wymagają, aby użytkownik końcowy był w trybie online co najmniej przez czas wykonywania „komunikacji dwukierunkowej” podczas określania wyników zaświadczania. Jeśli użytkownik końcowy jest w trybie offline, administrator IT może nadal oczekiwać, że wynik będzie egzekwowany dzięki ustawieniu „Urządzenia, w przypadku których wykonano jailbreak lub zapewniono dostęp do konta root”. Jak już wspomniano, jeśli użytkownik końcowy będzie zbyt długo w trybie offline, zacznie obowiązywać opcja „Okres karencji w trybie offline”. Po osiągnięciu wartości czasomierza zostanie zablokowany dostęp do wszystkich danych służbowych do czasu uzyskania dostępu do sieci. Włączenie obu tych ustawień umożliwia utrzymanie w dobrej kondycji urządzeń użytkowników w rozwiązaniu warstwowym, co jest szczególnie ważne, kiedy użytkownicy końcowi uzyskują dostęp do danych służbowych za pomocą urządzeń przenośnych. 
+
+**Ustawienia zasad ochrony aplikacji korzystających z interfejsów API usługi Google Play Protect wymagają działających usług Google Play. Co zrobić, jeśli usługi Google Play nie są dozwolone w lokalizacji, w której może znajdować się użytkownik końcowy?**<br><br>
+Zarówno ustawienie „Zaświadczanie urządzeń SafetyNet”, jak i ustawienie „Skanowanie aplikacji pod kątem zagrożeń” do poprawnego działania wymagają określonej przez firmę Google wersji usług Google Play. Ponieważ te ustawienia dotyczą zabezpieczeń, to po ich włączeniu użytkownik końcowy zostanie zablokowany, jeśli nie będzie miał odpowiedniej wersji usług Google Play lub nie będzie miał do nich dostępu. 
+
 ## <a name="app-experience-on-ios"></a>Środowisko aplikacji w systemie iOS
 **Co się dzieje po dodaniu lub usunięciu odcisku palca lub twarzy na moim urządzeniu?**
 Zasady ochrony aplikacji w usłudze Intune umożliwiają ograniczenie dostępu do aplikacji tylko do użytkowników mających licencję usługi Intune. Jednym ze sposobów kontrolowania dostępu do aplikacji jest wymaganie korzystania z funkcji Touch ID lub Face ID firmy Apple na obsługiwanych urządzeniach. Usługa Intune implementuje zachowanie, w którym po jakiejkolwiek zmianie w bazie danych biometrycznych urządzenia usługa monituje użytkownika o podanie numeru PIN przy najbliższym osiągnięciu wartości limitu czasu bezczynności. Zmiany w danych biometrycznych obejmują dodawanie i usuwanie odcisku palca lub twarzy. Jeśli użytkownik usługi Intune nie ma ustawionego numer PIN, zostanie poprowadzony przez procedurę konfigurowania numeru PIN usługi Intune.
@@ -184,20 +206,13 @@ Zasady ochrony aplikacji usługi Intune dla dostępu będą stosowane w określo
 
 Podczas pracy z różnymi typami ustawień pierwszeństwo ma wymaganie dotyczące wersji zestawu SDK aplikacji usługi Intune, następnie wymaganie dotyczące wersji aplikacji, a potem wymaganie dotyczące wersji systemu operacyjnego iOS. Następnie sprawdzane są ostrzeżenia dla wszystkich typów ustawień w tej samej kolejności. Zaleca się, aby wymaganie dotyczące wersji zestawu SDK aplikacji usługi Intune było konfigurowane tylko na podstawie wskazówek od zespołu produktu usługi Intune dla podstawowych scenariuszy blokowania.
 
-## <a name="app-protection-policies---policy-refresh"></a>Zasady ochrony aplikacji — odświeżanie zasad
-- Aplikacje są zaewidencjonowane w usłudze App Service co 30 minut.
-- 30-minutowy próg opiera się na czasomierzu.
-    - Jeśli aplikacja jest aktywna w 30 minucie, zostanie zaewidencjonowana w 30 minucie.
-    - Jeśli aplikacja jest uśpiona w 30 minucie, zostanie zaewidencjonowana w następnym cyklu.
-- Jeśli do użytkownika nie przypisano żadnych zasad, zaewidencjonowanie następuje co osiem godzin.
-- Jeśli nie przypisano żadnej licencji usługi Intune, zaewidencjonowanie następuje co 24 godziny.
 
-
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 - [Implementowanie własnego planu dotyczącego usługi Intune](planning-guide-onboarding.md)
 - [Testowanie i sprawdzanie poprawności w usłudze Intune](planning-guide-test-validation.md)
 - [Ustawienia zasad zarządzania aplikacjami mobilnymi systemu Android w usłudze Microsoft Intune](app-protection-policy-settings-android.md)
 - [Ustawienia zasad zarządzania aplikacjami mobilnymi systemu iOS](app-protection-policy-settings-ios.md)
-- [Weryfikowanie zasad ochrony aplikacji](app-protection-policies-validate.md)
+- [Zasady ochrony aplikacji — odświeżanie zasad](app-protection-policy-delivery.md)
+- [Weryfikowanie zasad ochrony aplikacji](https://docs.microsoft.com/en-us/intune/app-protection-policy-delivery)
 - [Dodawanie zasad konfiguracji aplikacji dla zarządzanych aplikacji bez rejestracji urządzeń](app-configuration-policies-managed-app.md)
 - [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](get-support.md)
