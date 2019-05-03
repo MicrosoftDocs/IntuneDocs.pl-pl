@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2019
+ms.date: 04/02/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5106a4f147828310fc1b4a41ef4065d10bdaeecf
-ms.sourcegitcommit: 44095bbd1502b02201a01604531f4105401fbb92
+ms.openlocfilehash: 0d0623e9d12132ac470813d65510bc2c76379109
+ms.sourcegitcommit: 79baf89e4a7a7b1cecb8ccf5cb976736ae6a7286
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58490730"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58871475"
 ---
 # <a name="ios-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem iOS umożliwiające działanie funkcji lub ich ograniczanie przy użyciu usługi Intune
 
@@ -195,7 +195,7 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 
 #### <a name="safari"></a>Safari
 
-- **Safari**: opcja **Blokuj** uniemożliwia korzystanie z przeglądarki Safari na urządzeniu. Pozycja **Nieskonfigurowane** pozwala użytkownikom na używanie przeglądarki Safari.
+- **Safari (tylko tryb nadzorowany)**: pozycja **Blokuj** uniemożliwia korzystanie z przeglądarki Safari na urządzeniu. Pozycja **Nieskonfigurowane** pozwala użytkownikom na używanie przeglądarki Safari.
 - **Autowypełnianie**: pozycja **Blokuj** powoduje wyłączenie funkcji automatycznego wypełniania w przeglądarce Safari na urządzeniu. Pozycja **Nieskonfigurowane** umożliwia użytkownikom zmianę ustawień automatycznego uzupełniania w przeglądarce internetowej.
 - **Pliki cookie**: wybierz sposób obsługi plików cookie na urządzeniu. Dostępne opcje:
   - Zezwalaj
@@ -290,7 +290,7 @@ Aby dodać aplikacje do tych list, możesz:
 ## <a name="cloud-and-storage"></a>Chmura i magazyn
 
 - **Tworzenie kopii zapasowych w usłudze iCloud**: pozycja **Nieskonfigurowane** umożliwia użytkownikowi tworzenie kopii zapasowych urządzenia w usłudze iCloud. Pozycja **Blokuj** uniemożliwia użytkownikowi tworzenie kopii zapasowych urządzenia w usłudze iCloud.
-- **Blokuj synchronizację dokumentów w usłudze iCloud**: opcja **Nieskonfigurowane** umożliwia synchronizowanie dokumentów i par klucz-wartość w obszarze magazynu usługi iCloud. Pozycja **Blokuj** uniemożliwia synchronizowanie dokumentów i danych w usłudze iCloud.
+- **Synchronizowanie dokumentów z usługą iCloud (tylko tryb nadzorowany)**: pozycja **Nieskonfigurowane** umożliwia synchronizowanie dokumentów i par klucz-wartość w obszarze magazynu usługi iCloud. Pozycja **Blokuj** uniemożliwia synchronizowanie dokumentów i danych w usłudze iCloud.
 - **Synchronizowanie strumienia zdjęć z usługą iCloud**: pozycja **Nieskonfigurowane** umożliwia użytkownikom włączanie funkcji **Mój strumień zdjęć** na urządzeniu, co pozwala na synchronizowanie z usługą iCloud i udostępnianie zdjęć na wszystkich urządzeniach użytkownika. Pozycja **Blokuj** zezwala na synchronizację funkcji Strumień zdjęć w usłudze iCloud.
 - **Szyfrowana kopia zapasowa**: pozycja **Wymagaj** umożliwia wymaganie szyfrowania wszystkich kopii zapasowych urządzenia.
 - **Biblioteka zdjęć usługi iCloud**: ustaw tę opcję na pozycję **Blokuj**, aby wyłączyć możliwość używania biblioteki zdjęć usługi iCloud do przechowywania zdjęć i klipów wideo w chmurze. Wszystkie zdjęcia, które nie zostały w pełni pobrane z biblioteki zdjęć iCloud na urządzenie, są usuwane z urządzenia. Pozycja **Nieskonfigurowane** umożliwia używanie biblioteki zdjęć iCloud.

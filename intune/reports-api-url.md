@@ -1,6 +1,6 @@
 ---
 title: Punkt końcowy interfejsu API magazynu danych usługi Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: W tym temacie referencyjnym opisano strukturę adresu URL interfejsu API magazynu danych usługi Microsoft Intune. Podano też przykłady filtrów.
 keywords: Magazyn danych usługi Intune
 author: Erikre
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e0e56c2dd4e26c68a82d5cb9d902e4480e1b98c8
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: MTE75
+ms.openlocfilehash: 50be11f9ada92670c201fc2540499effa5a7edef
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57396489"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798505"
 ---
 # <a name="intune-data-warehouse-api-endpoint"></a>Punkt końcowy interfejsu API magazynu danych usługi Intune
 
@@ -53,7 +53,7 @@ Adres URL zawiera następujące elementy:
 |-------------------|------------|--------------------------------------------------------------------------------------------------------------------|
 | location | msua06 | Bazowy adres URL można znaleźć, wyświetlając blok interfejsu API magazynu danych w witrynie Azure Portal. |
 | entity-collection | daty | Nazwa kolekcji jednostek usługi OData. Aby uzyskać więcej informacji na temat kolekcji i jednostek w modelu danych, zobacz [Model danych](reports-ref-data-model.md). |
-| api-version | beta | Wersja interfejsu API, do którego chcesz uzyskać dostęp. Aby uzyskać więcej informacji, zobacz [Wersja](#API-version-information). |
+| api-version | beta | Wersja interfejsu API, do którego chcesz uzyskać dostęp. Aby uzyskać więcej informacji, zobacz [Wersja](reports-api-url.md#api-version-information). |
 | maxhistorydays | 7 | (Opcjonalnie) Maksymalna liczba dni historii do pobrania. Ten parametr można podać dla każdej kolekcji, ale zostanie on zastosowany tylko do tych kolekcji, które zawierają ciąg `dateKey` jako część właściwości klucza. Aby uzyskać więcej informacji, zobacz [Filtry zakresów DateKey](reports-api-url.md#datekey-range-filters). |
 
 ## <a name="api-version-information"></a>Informacje o wersji interfejsu API

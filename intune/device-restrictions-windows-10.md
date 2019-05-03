@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/20/2019
+ms.date: 04/08/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ca34826f3a235fe620b5ac0dcb95d57dabf4c71
-ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
-ms.translationtype: MTE75
+ms.openlocfilehash: 8957c8d8aad2eaa1741b1a625afd4b5a41a8bb51
+ms.sourcegitcommit: 02803863eba37ecf3d8823a7f1cd7c4f8e3bb42c
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58395004"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59423700"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem Windows 10 (i nowszym) w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune
 
@@ -138,7 +138,10 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 - **Okno dialogowe błędu karty SIM (tylko urządzenia przenośne)**: w przypadku, gdy karta SIM nie zostanie wykryta, blokuje wyświetlanie komunikatu o błędzie na urządzeniu.
 - **Obszar roboczy pisma odręcznego**: blokuje dostęp użytkowników do obszaru roboczego pisma odręcznego. Pozycja **Nieskonfigurowane** włącza obszar roboczy pisma odręcznego, a użytkownik może używać go na ekranie blokady urządzenia.
 - **Automatyczne ponowne wdrażanie**: pozwala użytkownikom z uprawnieniami administracyjnymi usunąć wszystkie dane użytkownika i ustawienia za pomocą kombinacji klawiszy **CTRL+Win+R** na ekranie blokady urządzenia. Urządzenie jest automatycznie ponownie konfigurowane i rejestrowane do zarządzania.
-- **Wymagaj od użytkowników nawiązania połączenia z siecią podczas konfigurowania urządzenia (tylko niejawny program testów systemu Windows)**: wybierz pozycję **Wymagane**, aby urządzenia łączyły się z siecią przed wyjściem poza stronę Sieć podczas instalacji systemu Windows 10. Chociaż ta funkcja jest obecnie w wersji zapoznawczej, niejawny program testów systemu Windows (kompilacja 1809 lub nowsza) jest wymagany, aby użyć tego ustawienia.
+- **Wymagaj od użytkowników nawiązania połączenia z siecią podczas konfigurowania urządzenia (tylko niejawny program testów systemu Windows)**: wybierz pozycję **Wymagane**, aby urządzenia łączyły się z siecią przed wyjściem poza stronę Sieć podczas instalacji systemu Windows 10.
+
+  Ustawienie staje się obowiązująca następnym razem urządzenia jest wyczyszczone lub przywrócone. Podobnie jak dowolnej innej konfiguracji usługi Intune urządzenie musi zarejestrowanych i zarządzanych przez usługę Intune, aby zastosować ustawienia konfiguracji. Jednak po zarejestrowaniu i odbieranie zasad, następnie zresetowanie urządzenia wymusza ustawienie podczas następnego Instalatora Windows.
+
 - **Bezpośredni dostęp do pamięci**: opcja **Blokuj** uniemożliwia bezpośredni dostęp do pamięci dla wszystkich podrzędnych portów PCI z możliwością podłączenia podczas pracy, dopóki użytkownik nie zaloguje się do systemu Windows. Pozycja **Włączone** (wartość domyślna) zezwala na bezpośredni dostęp do pamięci nawet wtedy, gdy użytkownik nie jest zalogowany.
 
   Dostawca usług kryptograficznych: [DataProtection/AllowDirectMemoryAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection#dataprotection-allowdirectmemoryaccess)
@@ -305,6 +308,29 @@ Ten profil ograniczeń urządzenia są bezpośrednio związane z profilu kiosku 
   - **Zapobiegaj ponownemu użyciu starych haseł**: określa liczbę poprzednich haseł zapamiętywanych przez urządzenie.
   - **Wymagaj hasła przy powrocie urządzenia ze stanu bezczynności**: określa, że użytkownik musi wprowadzić hasło, aby odblokować urządzenie (tylko system Windows 10 Mobile).
   - **Proste hasła**: umożliwia korzystanie z prostych haseł, takich jak 1111 lub 1234. To ustawienie zezwala również na używanie haseł obrazkowych systemu Windows lub blokuje tę możliwość.
+- **Automatyczne szyfrowanie podczas AADJ**: **bloku** uniemożliwia automatyczne szyfrowanie urządzenia funkcji BitLocker, gdy urządzenie jest gotowy do pierwszego użycia, gdy urządzenie jest dołączone do usługi Azure AD. **Nieskonfigurowane** (domyślnie) korzysta z domyślnego systemu operacyjnego, który może włączyć szyfrowanie. Więcej na temat [funkcji BitLocker Szyfrowanie urządzenia](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10#bitlocker-device-encryption).
+
+  [Zabezpieczenia/PreventAutomaticDeviceEncryptionForAzureADJoinedDevices dostawcy usług Kryptograficznych](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-security#security-preventautomaticdeviceencryptionforazureadjoineddevices)
+
+- **Federalny Standard FIPS (Information Processing) zasad**: **Zezwalaj** używa zasad Federalny Standard FIPS (Information Processing), czyli Rządu Stanów Zjednoczonych standardowego dla celów szyfrowania, mieszania i podpisywania. **Nieskonfigurowane** (domyślnie) korzysta z domyślnego systemu operacyjnego, która nie korzysta ze standardem FIPS.
+
+  [Kryptografia/AllowFipsAlgorithmPolicy dostawcy usług Kryptograficznych](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-cryptography#cryptography-allowfipsalgorithmpolicy)
+
+- **Uwierzytelnianie urządzeń Windows Hello**: **Zezwalaj** użytkownikom użycie Windows Hello urządzenia towarzyszącego, takie jak telefon, przydatności poza pasmem lub urządzeń IoT do logowania się na komputerze z systemem Windows 10. **Nieskonfigurowane** (domyślnie) korzysta z domyślnego systemu operacyjnego, które mogą uniemożliwić uwierzytelnianie przy użyciu Windows urządzenia towarzyszące Windows Hello.
+
+  [Uwierzytelnianie/AllowSecondaryAuthenticationDevice dostawcy usług Kryptograficznych](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-allowsecondaryauthenticationdevice)
+
+- **Zaloguj się w sieci Web**: włącza Windows logowania obsługi dostawcy federacyjnego innego niż AD FS (Active Directory Federation Services), takie jak Assertion Markup języka SAML (Security). SAML używa bezpiecznych tokenów, które zapewniają, że środowisko przeglądarki sieci web, logowania jednokrotnego (SSO). Dostępne opcje:
+
+  - **Nieskonfigurowane** (ustawienie domyślne): używa domyślnego systemu operacyjnego na urządzeniu.
+  - **Włączone**: Dostawca poświadczeń sieci Web jest włączona dla logowania.
+  - **Wyłączone**: Dostawca poświadczeń sieci Web jest wyłączona w przypadku logowania.
+
+  [Uwierzytelnianie/EnableWebSignIn dostawcy usług Kryptograficznych](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-enablewebsignin)
+
+- **Preferowane domena dzierżawy usługi Azure AD**: Wprowadź istniejącej nazwy domeny w Twojej organizacji usługi Azure AD. Po zalogowaniu się użytkownicy w tej domenie nie muszą oni wpisz nazwę domeny. Na przykład wprowadź `contoso.com`. Użytkownicy w `contoso.com` domeny można zalogować się przy użyciu nazwy użytkownika, takie jak "abby" zamiast "abby@contoso.com".
+
+  [Uwierzytelnianie/PreferredAadTenantDomainName dostawcy usług Kryptograficznych](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-preferredaadtenantdomainname)
 
 ## <a name="per-app-privacy-exceptions"></a>Wyjątki prywatności dla aplikacji
 

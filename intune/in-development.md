@@ -1,12 +1,12 @@
 ---
 title: W trakcie opracowywania — Microsoft Intune
-titlesuffix: ''
+titleSuffix: ''
 description: Funkcje programu Microsoft Intune w trakcie opracowywania
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/29/2019
+ms.date: 04/15/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3e068e2c9834290b705e8e7bc2f895636415f9ba
-ms.sourcegitcommit: 69aaf89140f82f344404e75a69dc59d8a1585b10
+ms.openlocfilehash: aa38a684a32756d4f2c3be3b750f8e79b66e98f6
+ms.sourcegitcommit: 8c795b041cd39e3896595f64f53ace48be0ec84c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675446"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59587386"
 ---
 # <a name="in-development-for-microsoft-intune---april-2019"></a>Podczas tworzenia usługi Microsoft Intune — kwiecień 2019 r
 
 Aby pomóc w swojej gotowości i planowania, ta strona listy aktualizacji interfejsu użytkownika usługi Intune i funkcje są w fazie projektowania, ale nie została jeszcze ogólnie. Ponadto:
 
-- Przewidujemy, należy podjąć działania przed zmianą, opublikujemy bezpłatnych wpis w Centrum wiadomości usługi Office.
+- Przewidujemy, należy podjąć działania przed zmianą, opublikujemy dodatkowe wpis w Centrum wiadomości usługi Office.
 - Gdy funkcja jest uruchamiana w środowisku produkcyjnym, albo w wersji zapoznawczej lub ogólnie dostępna, opis funkcji przeniesie wyłączone na tej stronie i na [co to jest nowa strona](whats-new.md).
 - Na tej stronie i [co to jest nowa strona](whats-new.md) są okresowo aktualizowane. Odwiedź ją ponownie, aby sprawdzić dodatkowe aktualizacje.
 - Zapoznaj się [plan M365](https://www.microsoft.com/microsoft-365/roadmap?rtc=2&filters=EMS) strategiczne cele do zrealizowania i osi czasu.
@@ -60,18 +60,6 @@ Wkrótce będzie można zarządzać niestandardowych reguł zapory na komputerac
 
 ### <a name="require-app-protection-conditional-access----1634317---"></a>Wymagają dostępu warunkowego ochrony aplikacji  <!--1634317 -->
 Będzie można użyć *zasad ochrony aplikacji zarządzania wymagają*, potwierdzenie zasad jest stosowany do aplikacji przez użytkownika przed ukończeniem logowania, aby uniemożliwić użytkownikom uzyskiwanie dostępu do danych, możesz chronić przy użyciu dostępu warunkowego. Podczas gdy zasady assurance może spowolnić pierwsze doświadczenie użycia, pomaga chronić przed problemy z siecią, administracyjne błędów konfiguracji lub zamierzone działań mających na celu utrudniają zasad ochrony aplikacji. 
-
-### <a name="deployment-of-online-licensed-microsoft-store-for-business-apps----16726660---"></a>Wdrażanie aplikacji ze sklepu Microsoft Store dla Firm licencjonowanych w trybie online <!-- 16726660 -->
-Będzie możliwe przypisywanie w kontekście urządzenia wymaganych, licencjonowanych w trybie online aplikacji ze sklepu Microsoft Store dla Firm. Wdrożona w ten sposób aplikacja ze sklepu Microsoft Store dla Firm będzie mogła być zainstalowana dla wszystkich użytkowników urządzenia. Dotyczy to tylko urządzeń stacjonarnych z systemem Windows 10 w wersji RS4 lub nowszej. Możliwość instalacji w kontekście urządzenia jest dostępna na stronie przypisywania aplikacji klienckich dla aplikacji MSFB licencjonowanych w trybie online.
-
-### <a name="include-and-exclude-mixture-of-user-groups-and-device-groups-when-assigning-policies-and-profiles----1807547---"></a>Dołączanie i wykluczanie grup użytkowników i grup urządzeń podczas przypisywania zasad i profilów <!-- 1807547 -->
-Podczas przypisywania zasad zgodności lub profilów konfiguracji, można przypisać do grup zabezpieczeń, za pomocą użytkowników lub urządzeń. Obecnie można dołączyć i wykluczyć tylko grupy użytkowników, *lub* dołączać i wykluczać tylko grupy urządzeń. Nie obejmują i wykluczyć kombinację grup, takich jak obejmują grupy użytkowników *i* wykluczyć grupy urządzeń.
-
-Będzie można dołączać i wykluczać różnych grup użytkowników i grup urządzeń. Możesz uwzględnić grupy użytkowników i Wyklucz grupy urządzeń. Na przykład można przypisać lub wdrożyć profil konfiguracji urządzeń do grupy użytkowników, ale wykluczyć urządzeń osobistych.
-
-[Przypisywanie profilów konfiguracji urządzeń](device-profile-assign.md) zawiera więcej informacji na temat przypisywania profilów do grup użytkowników i grup urządzeń.
-
-Dotyczy: wszystkie platformy
 
 ### <a name="retire-noncompliant-devices----1827291---"></a>Wycofywanie urządzeń niezgodnych <!-- 1827291 -->
 Zamierzamy dodać nową akcję zgodności wycofywania urządzenia niezgodne. Wycofywanie niezgodne urządzenia powoduje usunięcie wszystkich danych firmowych z niego, a następnie spowoduje również usunięcie urządzenia z zarządzania przez usługę Intune. Ta akcja jest uruchamiany, gdy wartość skonfigurowana w dniach zostanie osiągnięty. Wartość minimalna to 30 dni. 
@@ -142,7 +130,7 @@ Dotyczy: system android dla firm w pełni zarządzane urządzenia
 ### <a name="check-for-a-tpm-chipset-in-a-windows-10-device-compliance-policy----3617671---"></a>Sprawdź, czy mikroukład modułu TPM, w zasadach zgodności urządzenia systemu Windows 10 <!-- 3617671 -->
 Wiele systemów Windows 10 i nowszym mają mikroukładami Trusted Platform Module (TPM). Nowym ustawieniem zgodności sprawdzi, czy modułu TPM na urządzeniu.
 
-[Windows 10 i nowszych ustawienia zasad zgodności](compliance-policy-create-windows.md#windows-10-and-later-policy-settings) Wyświetla listę bieżących ustawień.
+[Windows 10 i nowszych ustawienia zasad zgodności](compliance-policy-create-windows.md) Wyświetla listę bieżących ustawień.
 
 Dotyczy: 
 - System Windows 10 lub nowszy
@@ -177,15 +165,6 @@ Dodajemy nowe ustawienie do pierścienia aktualizacji Windows, który można uż
 
 ### <a name="windows-update-notifications----3316782---"></a>Powiadomienia o aktualizacji Windows <!-- 3316782 -->
 Dodajemy obsługę konfiguracje pierścienia aktualizacji Windows, dzięki czemu będzie można skonfigurować powiadomienia Windows Update, które widzą użytkownicy. To ustawienie nie będzie dostępny z poziomu portalu, ale można skonfigurować przy użyciu interfejsu API programu Graph usługi Intune.
-
-### <a name="changes-to-company-portal-enrollment-for-ios-12-device-users---3448635---"></a>Zmiany do rejestracji w aplikacji Portal firmy dla użytkowników urządzeń z systemem iOS 12 <!--3448635 --> 
-Portal firmy dla systemu iOS zostanie zaktualizowany w ekrany rejestracji aplikacji i kroki, aby wyrównać ze zmianami rejestracji MDM ogólnie dostępnych w systemie iOS firmy Apple 12.2. Zaktualizowano przepływ pracy będzie monitować użytkowników o:
-
-- Zezwalaj na Safari do otwierania witryny internetowej Portal firmy (za pośrednictwem przeglądarki Safari) i Pobierz profil zarządzania przed powrotem do aplikacji Portal firmy.
-- Otwórz aplikację ustawienia w celu zainstalowania profilu zarządzania na urządzeniu.
-- Wróć do aplikacji Portal firmy w celu ukończenia procesu rejestrowania.
-
-Aby uzyskać więcej informacji na temat jak można przygotować pod kątem tych zmian, zobacz [wpis społeczności technicznej firmy Microsoft](https://aka.ms/CP_changes_iOS12). W międzyczasie, aby zapewnić obsługę systemu iOS na nowe rejestracje w aplikacji Portal firmy, Zaktualizowaliśmy kroki opisane w [rejestrowanie urządzenia z systemem iOS w usłudze Intune](https://docs.microsoft.com/en-us/intune/ios-enroll). Te zmiany dokumentu będą na żywo, po Apple wersje systemu iOS w wersji 12.2. 
 
 ### <a name="easier-access-to-diagnostic-settings----3804627---"></a>Ułatwienia dostępu do ustawień diagnostycznych <!-- 3804627 -->
 Dodajemy nową opcję **dzienniki inspekcji** bloku w każdym obciążeniu dziennika inspekcji, w konsoli usługi Intune, które można użyć, aby otworzyć bezpośrednio *ustawień diagnostycznych* strony.

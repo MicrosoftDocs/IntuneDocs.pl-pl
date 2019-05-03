@@ -1,11 +1,11 @@
 ---
 title: Tworzenie zasad zgodności urządzeń z systemem Android w usłudze Microsoft Intune — Azure | Microsoft Docs
-description: Można tworzyć i konfigurować zasady zgodności w usłudze Microsoft Intune dla urządzeń z systemem Android. Można wybrać, czy zezwolić na dostęp urządzeniom z wyłączonymi zabezpieczeniami systemu, ustawić dopuszczalny poziom zagrożenia, sprawdzić, czy jest zainstalowana aplikacja Google Play, wprowadzić minimalną i maksymalną wersję systemu operacyjnego, określić wymagania dotyczące hasła i zezwalać na aplikacje ładowane bezpośrednio.
+description: Wyświetlenie listy wszystkich ustawień których można użyć, gdy ustawienia zgodności dla urządzeń z systemem Android w programie Microsoft Intune. Ustaw reguły hasła, wybierz wersję systemu operacyjnego minimalnej lub maksymalnej, ograniczyć określone aplikacje, uniemożliwić ponowne używanie haseł i innych.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/19/2018
+ms.date: 04/08/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,51 +17,28 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0dc4fc0a0f16717bd0c21db3a9e7e57daf7867bc
-ms.sourcegitcommit: fdc6261f4ed695986e06d18353c10660a4735362
-ms.translationtype: MTE75
+ms.openlocfilehash: 7670af46657fed048bfe10b8659eae6d45db7620
+ms.sourcegitcommit: 02803863eba37ecf3d8823a7f1cd7c4f8e3bb42c
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58069274"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59423581"
 ---
-# <a name="add-a-device-compliance-policy-for-android-devices-in-intune"></a>Dodawanie zasad zgodności dla urządzeń z systemem Android w usłudze Intune
+# <a name="android-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Ustawienia systemu android na potrzeby oznaczania urządzenia jako zgodne lub niezgodne, przy użyciu usługi Intune
 
-Zasady zgodności urządzeń w usłudze Intune dla systemu Android określają reguły i ustawienia, które urządzenia z systemem Android muszą spełnić, aby zostały uznane za zgodne. Można je wykorzystać do stosowania [dostępu warunkowego](conditional-access.md), aby zezwolić na dostęp do zasobów organizacji lub go zablokować. Można również pobrać raporty urządzeń i podjąć akcje w przypadku niezgodności. 
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Aby dowiedzieć się więcej na temat zasad zgodności i wymagań wstępnych, zobacz [Wprowadzenie do zasad zgodności urządzeń](device-compliance-get-started.md).
+W tym artykule wymieniono i opisano ustawienia zgodności różnych, które można skonfigurować na urządzeniach z systemem Android w usłudze Intune. W ramach rozwiązania do zarządzania (urządzeniami przenośnymi MDM) urządzenia przenośnego te ustawienia służą do oznaczania urządzenia z odblokowanym dostępem (których zdjęto zabezpieczenia systemu) jako niezgodne, Ustaw dozwolony poziom zagrożenia, należy włączyć Google Play Protect i nie tylko.
 
-Ten temat zawiera listę ustawień, których możesz używać w zasadach zgodności dla urządzeń z systemem Android.
+Ta funkcja ma zastosowanie do:
 
-## <a name="non-compliance-and-conditional-access"></a>Brak zgodności i dostęp warunkowy
+- Android
 
-W poniższej tabeli opisano sposób postępowania z niezgodnymi ustawieniami w przypadku, gdy zasady zgodności są używane wraz z zasadami dostępu warunkowego.
+Jako administrator usługi Intune należy użyć tych ustawień zgodności w celu ochrony zasobów organizacji. Aby dowiedzieć się więcej na temat zasad zgodności i wymagań wstępnych, zobacz [Wprowadzenie do zasad zgodności urządzeń](device-compliance-get-started.md).
 
---------------------
+## <a name="before-you-begin"></a>Przed rozpoczęciem
 
-|**Ustawienie zasad**| **System Android 4.0 lub nowszy, system Samsung Knox Standard 4.0 lub nowszy** |
-| --- | ----|
-| **Konfiguracja kodu PIN lub hasła** |  Poddane kwarantannie |
-| **Szyfrowanie urządzenia** | Poddane kwarantannie |
-| **Urządzenie ze złamanymi ograniczeniami lub z odblokowanym dostępem** | Poddane kwarantannie (to nie jest ustawienie) |
-| **profil e-mail** | Nie dotyczy |
-| **Minimalna wersja systemu operacyjnego** | Poddane kwarantannie |
-| **Maksymalna wersja systemu operacyjnego** |   Poddane kwarantannie |
-| **Zaświadczanie o kondycji systemu Windows** | Nie dotyczy |
-
---------------------------
-
-**Skorygowane** — system operacyjny urządzenia wymusza zgodność. Na przykład użytkownik jest zmuszony do ustawienia kodu PIN.
-
-**Poddane kwarantannie** — system operacyjny urządzenia nie wymusza zgodności. Na przykład urządzenia z systemem Android nie zmuszają użytkownika do szyfrowania urządzeń. Gdy urządzenie nie jest zgodne, zostaną wykonane następujące akcje:
-
-  - Urządzenie zostanie zablokowane, jeśli użytkownik podlega zasadom dostępu warunkowego.
-  - Portal firmy powiadomi użytkownika o wszelkich problemach ze zgodnością.
-
-## <a name="create-a-device-compliance-policy"></a>Tworzenie zasad zgodności urządzenia
-
-[!INCLUDE [new-device-compliance-policy](./includes/new-device-compliance-policy.md)]
-4. W polu **Platforma** wybierz opcję **Android**. 
-5. Wybierz pozycję **Konfiguruj ustawienia**. Wprowadź wartości ustawień **Kondycja urządzenia**, **Właściwości urządzenia** i **Zabezpieczenia systemu** zgodnie z opisem w tym artykule.
+[Utwórz zasady zgodności](create-compliance-policy.md#create-the-policy). W polu **Platforma** wybierz opcję **Android**.
 
 ## <a name="device-health"></a>Device health
 
@@ -71,6 +48,9 @@ W poniższej tabeli opisano sposób postępowania z niezgodnymi ustawieniami w p
   - **Niski**: urządzenie jest oceniane jako zgodne, jeśli istnieją tylko zagrożenia niskiego poziomu. Jakiekolwiek zagrożenia wyższego poziomu spowodują, że urządzenie będzie miało status urządzenia niezgodnego.
   - **Średni**: urządzenie jest oceniane jako zgodne, jeśli istniejące zagrożenia są na poziomie niskim lub średnim. W przypadku wykrycia na urządzeniu zagrożeń wysokiego poziomu zostanie ono określone jako niezgodne.
   - **Wysoki**: ta opcja jest najmniej bezpieczna i zezwala na wszystkie poziomy zagrożeń. To ustawienie może być przydatne, jeśli rozwiązanie jest używane tylko na potrzeby raportowania.
+
+### <a name="google-play-protect"></a>Ochrona sklepu Google Play
+
 - **Skonfigurowano usługi Google Play**: **Wymagaj** zainstalowania i włączenia aplikacji usług Google Play. Usługi Google Play umożliwiają aktualizacje zabezpieczeń i stanowią zależność na poziomie podstawowym dla wielu funkcji zabezpieczeń w urządzeniach certyfikowanych przez firmę Google. W przypadku wybrania opcji **Nieskonfigurowane** (wartość domyślna), to ustawienie nie jest oceniane na potrzeby określenia zgodności.
 - **Aktualny dostawca zabezpieczeń**: **Wymagaj**, aby zaktualizowany dostawca zabezpieczeń mógł chronić urządzenie przed znanymi lukami w zabezpieczeniach. W przypadku wybrania opcji **Nieskonfigurowane** (wartość domyślna), to ustawienie nie jest oceniane na potrzeby określenia zgodności.
 - **Skanowanie aplikacji pod kątem zagrożeń**: **Wymagaj** włączenia w systemie Android funkcji **Weryfikuj aplikacje**. W przypadku wybrania opcji **Nieskonfigurowane** (wartość domyślna), to ustawienie nie jest oceniane na potrzeby określenia zgodności.
@@ -82,6 +62,9 @@ W poniższej tabeli opisano sposób postępowania z niezgodnymi ustawieniami w p
   - **Nieskonfigurowane** (wartość domyślna): ustawienie nie jest oceniane na potrzeby określenia zgodności.
   - **Sprawdź podstawową integralność**
   - **Sprawdź podstawową integralność i certyfikowane urządzenia**
+
+> [!NOTE]
+> Aby skonfigurować ustawienia usługi Google Play Protect wiadomości przy użyciu zasad ochrony aplikacji, zobacz [ustawienia zasad ochrony aplikacji usługi Intune](app-protection-policy-settings-android.md#conditional-launch) w systemie Android.
 
 ## <a name="device-property-settings"></a>Ustawienia właściwości urządzenia
 
@@ -133,41 +116,18 @@ W poniższej tabeli opisano sposób postępowania z niezgodnymi ustawieniami w p
 - **Minimalny poziom poprawki bezpieczeństwa** (Android 6.0 lub nowszy): wybierz poziom najstarszej poprawki zabezpieczeń, która może znajdować się w urządzeniu. Urządzenia, które nie mają co najmniej tego poziomu poprawek, są niezgodne. Data musi być wprowadzona w formacie `YYYY-MM-DD`.
 - **Ograniczone aplikacje**: wprowadź wartości **Nazwa aplikacji** oraz **Identyfikator pakietu aplikacji** dla aplikacji, które mają być ograniczone. Wybierz pozycję **Dodaj**. Urządzenie, na którym zainstalowano co najmniej jedną ograniczoną aplikację, jest oznaczane jako niezgodne.
 
-Po zakończeniu wybierz przycisk **OK** > **OK**, aby zapisać zmiany.
+Wybierz kolejno pozycje **OK** > **Utwórz**, aby zapisać zmiany.
 
-## <a name="locations"></a>Lokalizacje
+## <a name="locations"></a>Lokalizacje:
 
-W swoich zasadach dokonuj wyboru spośród istniejących lokalizacji. Nie masz jeszcze lokalizacji? Wskazówki możesz znaleźć w temacie [Korzystanie z lokalizacji (ogrodzenia sieci) w usłudze Intune](use-network-locations.md).
+W zasadach możesz wymusić zgodność z przepisami według lokalizacji urządzenia. Wybierz z istniejących lokalizacji. Nie masz jeszcze lokalizacji? Wskazówki możesz znaleźć w temacie [Korzystanie z lokalizacji (ogrodzenia sieci) w usłudze Intune](use-network-locations.md).
 
-1. Wybierz pozycję **Lokalizacje**.
-2. Na liście zaznacz swoją lokalizację, a następnie wybierz pozycję **Wybierz**.
+1. Wybierz **lokalizacje** > **wybierz lokalizacje**.
+2. Z listy, sprawdź swoją lokalizację > **wybierz**.
 3. **Zapisz** zasady.
 
-## <a name="actions-for-noncompliance"></a>Akcje w przypadku niezgodności
-
-Wybierz pozycję **Akcje w przypadku niezgodności**. Domyślna akcja natychmiast oznacza urządzenie jako niezgodne.
-
-Ten harmonogram oznaczania urządzenia jako niezgodnego możesz zmienić (np. oznaczać je po jednym dniu). Możesz również skonfigurować drugą akcję, która wysyła wiadomość e-mail do użytkownika, gdy urządzenie nie jest zgodne.
-
-Sekcja dotycząca [dodawania akcji dla niezgodnych urządzeń](actions-for-noncompliance.md) zawiera więcej informacji, między innymi o tworzeniu wiadomości e-mail z powiadomieniem do użytkowników.
-
-Na przykład używasz funkcji Lokalizacje i dodasz lokalizację w zasadach zgodności. Domyślna akcja w przypadku niezgodności jest stosowana, gdy zostanie wybrana co najmniej jedna lokalizacja. Jeśli urządzenie nie jest połączone z wybranymi lokalizacjami, jest natychmiast uznawane za niezgodne. Użytkownikom można przyznać okres prolongaty, np. jeden dzień.
-
-## <a name="scope-tags"></a>Tagi zakresu
-
-Tagi zakresu to doskonały sposób przypisywania zasad do określonych grup, np. Sprzedaż, Inżynieria, Kadry itd. Tagi zakresu można dodać do zasad zgodności. Zobacz [Używanie tagów zakresu do filtrowania zasad](scope-tags.md). 
-
-## <a name="assign-user-groups"></a>Przypisywanie grup użytkowników
-
-Po utworzeniu zasady nie działają, dopóki nie zostaną przypisane. Aby przypisać zasady: 
-
-1. Wybierz skonfigurowane przez siebie zasady. Dostęp do istniejących zasad można uzyskać po wybraniu pozycji **Zgodność urządzeń** > **Zasady**.
-2. Wybierz zasady, a następnie wybierz opcję **Przypisania**. Możesz włączyć lub wyłączyć grupy zabezpieczeń usługi Azure Active Directory (AD).
-3. Wybierz opcję **Wybrane grupy**, aby wyświetlić grupy zabezpieczeń usługi Azure AD. Wybierz grupy użytkowników, których mają dotyczyć te zasady, a następnie opcję **Zapisz**, aby je wdrożyć.
-
-Zasady zostały zastosowane do użytkowników. Urządzenia, którymi posługują się użytkownicy objęci zasadami, będą oceniane pod kątem zgodności.
-
 ## <a name="next-steps"></a>Następne kroki
-[Automatyzowanie poczty e-mail i dodawanie akcji dla niezgodnych urządzeń](actions-for-noncompliance.md)  
-[Monitorowanie zasad zgodności urządzeń Intune](compliance-policy-monitor.md)  
-[Ustawienia zasad zgodności dla rozwiązania Android Enterprise](compliance-policy-create-android-for-work.md)
+
+- [Dodawanie akcji dla niezgodnych urządzeń](actions-for-noncompliance.md) i [za pomocą tagów zakresu zasad filtr](scope-tags.md).
+- [Monitorowanie zasad zgodności](compliance-policy-monitor.md).
+- [Ustawienia zasad zgodności dla rozwiązania Android Enterprise](compliance-policy-create-android-for-work.md)

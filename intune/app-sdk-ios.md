@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/13/2018
+ms.date: 04/10/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b19a0100a53cebe66dae9805ac0cc5b5314e8ad
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: MTE75
+ms.openlocfilehash: 1a834b1f35bdefd91abfc1ec9ca8b44d4eb593cd
+ms.sourcegitcommit: af2512a1342d8037a96a61c8cc2c63e107913733
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566781"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59533613"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu iOS
 
@@ -86,7 +86,7 @@ Aby włączyć zestaw SDK aplikacji usługi Intune, wykonaj następujące kroki:
 1. **Opcja 1 (zalecana)**: połącz strukturę `IntuneMAM.framework` z projektem. Przeciągnij element `IntuneMAM.framework` na listę **Embedded Binaries** (Osadzone pliki binarne) obiektu docelowego projektu.
 
    > [!NOTE]
-   > W przypadku używania struktury należy ręcznie usunąć architektury symulatora z uniwersalnej struktury przed przesłaniem aplikacji do sklepu App Store. Więcej szczegółów można znaleźć w sekcji [Przesyłanie aplikacji do sklepu App Store](#Submit-your-app-to-the-App-Store).
+   > W przypadku używania struktury należy ręcznie usunąć architektury symulatora z uniwersalnej struktury przed przesłaniem aplikacji do sklepu App Store. Więcej szczegółów można znaleźć w sekcji [Przesyłanie aplikacji do sklepu App Store](#submit-your-app-to-the-app-store).
 
    **Opcja 2**: połącz z biblioteką `libIntuneMAM.a`. Przeciągnij bibliotekę `libIntuneMAM.a` na listę **Linked Frameworks and Libraries** (Połączone struktury i biblioteki) obiektu docelowego projektu.
 
@@ -179,7 +179,7 @@ Wykonaj następujące czynności, aby połączyć aplikację z plikami binarnymi
 
 3. Jeśli dla Twojej aplikacji nie zdefiniowano żadnych grup dostępu łańcucha kluczy, dodaj identyfikator pakietu aplikacji jako pierwszą grupę.
 
-4. Włącz logowanie jednokrotne do biblioteki ADAL, dodając elementy `com.microsoft.adalcache` i `com.microsoft.workplacejoin` do grup dostępu pęku kluczy.
+4. Włącz logowanie jednokrotne do biblioteki ADAL, dodając element `com.microsoft.adalcache` do grup dostępu pęku kluczy.
 
 5. W przypadku ustawiania w sposób jawny grupy łańcucha kluczy udostępnionej pamięci podręcznej biblioteki ADAL upewnij się, że jest ona ustawiona na wartość `<appidprefix>.com.microsoft.adalcache`. Biblioteka ADAL ustawi tę grupę za Ciebie, chyba że ją zastąpisz. Jeśli chcesz określić niestandardową grupę łańcucha kluczy w celu zastąpienia grupy `com.microsoft.adalcache`, określ ją w pliku Info.plist w obszarze „IntuneMAMSettings” przy użyciu klucza `ADALCacheKeychainGroupOverride`.
 
@@ -267,7 +267,7 @@ Aplikacje, które używają już biblioteki ADAL, powinny po pomyślnym uwierzyt
 (void)registerAndEnrollAccount:(NSString *)identity;
 ```
 
-Przez wywołanie metody `registerAndEnrollAccount` zestaw SDK zarejestruje konto użytkownika i spróbuje zarejestrować aplikację w imieniu tego konta. Jeśli z jakiegokolwiek powodu rejestracja nie powiedzie się, zestaw SDK automatycznie ponowi próbę rejestracji po upływie 24 godzin. Do celów debugowania aplikacja może odbierać [powiadomienia](#Status-result-and-debug-notifications) o wynikach żądań rejestracji za pośrednictwem delegata.
+Przez wywołanie metody `registerAndEnrollAccount` zestaw SDK zarejestruje konto użytkownika i spróbuje zarejestrować aplikację w imieniu tego konta. Jeśli z jakiegokolwiek powodu rejestracja nie powiedzie się, zestaw SDK automatycznie ponowi próbę rejestracji po upływie 24 godzin. Do celów debugowania aplikacja może odbierać [powiadomienia](#status-result-and-debug-notifications) o wynikach żądań rejestracji za pośrednictwem delegata.
 
 Po wywołaniu tego interfejsu API aplikacja może kontynuować normalne działanie. Jeśli rejestracja powiedzie się, zestaw SDK powiadomi użytkownika, że wymagane jest ponowne uruchomienie aplikacji. Wtedy użytkownik może natychmiast ponownie uruchomić aplikację.
 
@@ -291,7 +291,7 @@ Aplikacje, które nie logują użytkownika za pomocą biblioteki ADAL, mogą mim
 
 W przypadku wywołania tej metody zestaw SDK będzie monitował użytkownika o poświadczenia, jeśli nie można znaleźć istniejącego tokenu. Zestaw SDK podejmie następnie próbę zarejestrowania aplikacji przy użyciu usługi MAM w usłudze Intune w imieniu podanego konta użytkownika. Metodę można wywołać z tożsamością „zero”. W tym przypadku zestaw SDK zarejestruje istniejącego zarządzanego użytkownika na urządzeniu (w przypadku zarządzania urządzeniami mobilnymi) lub będzie monitować o nazwę użytkownika, jeśli istniejący użytkownik nie zostanie znaleziony.
 
-W razie niepowodzenia rejestracji aplikacja powinna rozważyć wywołanie tego interfejsu API ponownie w przyszłości, w zależności od szczegółów błędu. Aplikacja może otrzymywać [powiadomienia](#Status-result-and-debug-notifications) o wynikach żądań rejestracji (za pośrednictwem delegata).
+W razie niepowodzenia rejestracji aplikacja powinna rozważyć wywołanie tego interfejsu API ponownie w przyszłości, w zależności od szczegółów błędu. Aplikacja może otrzymywać [powiadomienia](#status-result-and-debug-notifications) o wynikach żądań rejestracji (za pośrednictwem delegata).
 
 Po wywołaniu tego interfejsu API aplikacja może kontynuować normalne działanie. Jeśli rejestracja powiedzie się, zestaw SDK powiadomi użytkownika, że wymagane jest ponowne uruchomienie aplikacji.
 

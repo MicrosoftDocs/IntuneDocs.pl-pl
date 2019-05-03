@@ -1,12 +1,12 @@
 ---
 title: Korzyści z zestawu SDK aplikacji usługi Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Zestaw SDK aplikacji usługi Intune jest dostępny na platformach iOS i Android. Udostępnia on funkcje zarządzania aplikacjami mobilnymi za pomocą usługi Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/21/2018
+ms.date: 04/08/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 065535bc6bb4dc586ab45ffa0a9a1250c0a1c908
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: MTE75
+ms.openlocfilehash: 046c82a1b149f33e20a21adf931a30cc812e3f10
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566492"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59292453"
 ---
 # <a name="microsoft-intune-app-sdk-overview"></a>Omówienie zestawu SDK aplikacji usługi Microsoft Intune
 Korzystając z zestawu SDK aplikacji usługi Intune dostępnego dla systemów iOS i Android, możesz obsługiwać [zasady ochrony aplikacji](app-protection-policy.md) usługi Intune w swojej aplikacji. Gdy aplikacja ma zastosowano zasady ochrony aplikacji, mogą być zarządzane przez usługę Intune i jest rozpoznawany przez usługę Intune jako zarządzaną aplikację. Zestaw SDK kładzie nacisk na minimalizację liczby zmian kodu wymaganych od dewelopera aplikacji. Większość funkcji zestawu SDK możesz włączyć bez zmiany zachowania aplikacji. W przypadku rozszerzonego środowiska użytkownika końcowego i administratora IT możesz użyć interfejsów API zestawu SDK, aby dostosować zachowanie aplikacji pod kątem obsługi funkcji, które wymagają współdziałania ze strony aplikacji.

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/13/2019
+ms.date: 04/01/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 34f0869b46323606d69891c3761bfbc154f3b6a3
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: MTE75
+ms.openlocfilehash: c2a94be7ebc369005f92809d57c8e55076972df3
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566628"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799269"
 ---
 # <a name="ios-device-settings-to-use-common-ios-features-in-intune"></a>Ustawienia urządzenia z systemem iOS korzystanie z typowych funkcji systemu iOS w usłudze Intune
 
@@ -96,6 +96,9 @@ Ustawienia okienka **Dock** umożliwiają dodanie do sześciu elementów lub fol
 
       3. Wybierz pozycję **Dodaj**. Można dodać maksymalnie **20** stron do obszaru Dock urządzenia.
       4. Wybierz przycisk **OK**, aby zapisać zmiany.
+
+> [!NOTE]
+> Po dodaniu ikony przy użyciu ustawień dokowania, ikony na ekran główny i strony są zablokowane i nie może zostać przeniesiony. Może to być zgodnie z projektem przy użyciu systemu iOS i zasad MDM firmy Apple.
 
 #### <a name="example"></a>Przykład
 

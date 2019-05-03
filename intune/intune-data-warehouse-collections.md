@@ -1,12 +1,12 @@
 ---
 title: Kolekcje magazynu danych usługi Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Kolekcje magazynu danych usługi Intune udostępniają szczegółowe informacje związane z interfejsem API magazynu danych.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/20/2019
+ms.date: 04/09/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5f2a9f2512f4f6fb12a65d0e7c4982fd351f1770
-ms.sourcegitcommit: 93286c22426dcb59191a99e3cf2af4ff6ff16522
+ms.openlocfilehash: 00a0bd4936d1ad8ba8dd52f1839e7d42505db60e
+ms.sourcegitcommit: 601327125ac8ae912d8159422de8aac7dbdc25f6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58358321"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59429228"
 ---
 #  <a name="intune-data-warehouse-collections"></a>Kolekcje magazynu danych usługi Intune
 
@@ -427,6 +427,85 @@ Jednostka **IntuneManagementExtensionVersion** wyświetla listę wszystkich wers
 |:-------------------:|:-------------------------------------------------------------:|:-------:|
 | ExtensionVersionKey | Unikatowy identyfikator wersji jednostki IntuneManagementExtension. | 1       |
 | ExtensionVersion    | Czterocyfrowy numer wersji.                                   | 1.0.2.0 |
+
+## <a name="mamapplications"></a>MamApplications
+
+Jednostka **MamApplication** tworzy listę aplikacji biznesowych (LOB), które są zarządzane za pomocą zarządzania aplikacjami mobilnymi (MAM) bez rejestracji w Twoim przedsiębiorstwie.
+
+| Właściwość | Opis | Przykład |
+|---------|------------|--------|
+| mamApplicationKey |Unikatowy identyfikator aplikacji MAM. | 432 |
+| mamApplicationName |Nazwa aplikacji MAM. |Zarządzanie aplikacjami Mobilnymi aplikacja przykładowa nazwa |
+| mamApplicationId |Identyfikator aplikacji dla aplikacji MAM. | 123 |
+| IsDeleted |Wskazuje, czy ten rekord aplikacji MAM został zaktualizowany. <br>True — aplikacja MAM ma nowy rekord ze zaktualizowanymi polami w tej tabeli. <br>False — to jest najnowszy rekord dla tej aplikacji MAM. |Prawda/Fałsz |
+| StartDateInclusiveUTC |Data i godzina w formacie UTC utworzenia tej aplikacji MAM w magazynie danych. |2016-11-23 12:00:00 |
+| DeletedDateUTC |Data i godzina w formacie UTC zmiany właściwości IsDeleted na wartość True. |2016-11-23 12:00:00 |
+| RowLastModifiedDateTimeUTC |Data i godzina w formacie UTC ostatniej modyfikacji tej aplikacji MAM w magazynie danych. |2016-11-23 12:00:00 |
+
+
+## <a name="mamapplicationinstances"></a>MamApplicationInstances
+
+Jednostka **MamApplicationInstance** tworzy listę zarządzanych aplikacji zarządzania aplikacjami mobilnymi (MAM) jako pojedynczych wystąpień na użytkownika na urządzeniu. Wszyscy użytkownicy i urządzenia wymienieni w jednostce są chronieni, jakby mieli przypisane do siebie co najmniej jedne zasady MAM.
+
+
+|          Właściwość          |                                                                                                  Opis                                                                                                  |               Przykład                |
+|----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
+|   ApplicationInstanceKey   |                                                               Unikatowy identyfikator wystąpienia aplikacji MAM w magazynie danych — klucz zastępczy.                                                                |                 123                  |
+|           UserId           |                                                                              Identyfikator użytkownika, który ma zainstalowaną tę aplikację MAM.                                                                              | b66bc706-ffff-7437-0340-032819502773 |
+|   ApplicationInstanceId    |                                              Unikatowy identyfikator wystąpienia aplikacji MAM — podobny do wartości ApplicationInstanceKey, ale identyfikator jest kluczem naturalnym.                                              | b66bc706-ffff-7437-0340-032819502773 |
+| mamApplicationId | Identyfikator aplikacji Mam, dla którego utworzono tego wystąpienia aplikacji Mam.   | 2016-11-23 12:00:00   |
+|     ApplicationVersion     |                                                                                     Wersja aplikacji dla tej aplikacji MAM.                                                                                      |                  2                   |
+|        CreatedDate         |                                                                 Data utworzenia tego rekordu wystąpienia aplikacji MAM. Wartość może być równa null.                                                                 |        2016-11-23 12:00:00        |
+|          Platforma          |                                                                          Platforma urządzenia, na której zainstalowano tę aplikację MAM.                                                                           |                  2                   |
+|      PlatformVersion       |                                                                      Wersja platformy urządzenia, na której jest zainstalowana ta aplikacja MAM.                                                                       |                 2.2                  |
+|         SdkVersion         |                                                                            Wersja zestawu SDK MAM, za pomocą którego aplikacja MAM została opakowana.                                                                            |                 3.2                  |
+| mamDeviceId | Identyfikator urządzenia dla urządzenia, z którym skojarzony jest wystąpienia aplikacji MAM.   | 2016-11-23 12:00:00   |
+| mamDeviceType | Typ urządzenia, urządzenia, z którym skojarzony jest wystąpienia aplikacji MAM.   | 2016-11-23 12:00:00   |
+| mamDeviceName | Nazwa urządzenia dla urządzenia, z którym skojarzony jest wystąpienia aplikacji MAM.   | 2016-11-23 12:00:00   |
+|         IsDeleted          | Wskazuje, czy ten rekord wystąpienia aplikacji MAM został zaktualizowany. <br>True — to wystąpienie aplikacji MAM ma nowy rekord ze zaktualizowanymi polami w tej tabeli. <br>False — to jest najnowszy rekord dla tego wystąpienia aplikacji MAM. |              Prawda/Fałsz              |
+|   StartDateInclusiveUTC    |                                                              Data i godzina w formacie UTC utworzenia tego wystąpienia aplikacji MAM w magazynie danych.                                                               |        2016-11-23 12:00:00        |
+|       DeletedDateUTC       |                                                                             Data i godzina w formacie UTC zmiany właściwości IsDeleted na wartość True.                                                                              |        2016-11-23 12:00:00        |
+| RowLastModifiedDateTimeUTC |                                                           Data i godzina w formacie UTC ostatniej modyfikacji tego wystąpienia aplikacji MAM w magazynie danych.                                                            |        2016-11-23 12:00:00        |
+
+## <a name="mamcheckins"></a>MamCheckins
+
+Jednostka **MamCheckin** reprezentuje dane zebrane po zameldowaniu wystąpienia aplikacji zarządzania aplikacjami mobilnymi (MAM) przez usługę Intune. 
+
+> [!Note]  
+> Gdy wystąpienie aplikacji zostanie zameldowane wiele razy w ciągu dnia, magazyn danych zapisuje to jako jedno zameldowanie.
+
+| Właściwość | Opis | Przykład |
+|---------|------------|--------|
+| DateKey |Klucz daty zarejestrowania zameldowania aplikacji MAM w magazynie danych. | 20160703 |
+| ApplicationInstanceKey |Klucz wystąpienia aplikacji skojarzony z zameldowaniem tej aplikacji MAM. | 123 |
+| UserKey |Klucz użytkownika skojarzony z zameldowaniem tej aplikacji MAM. | 4323 |
+| mamApplicationKey |Aplikacji klucza z aplikacji skojarzonej z ewidencjonowanie aplikacji zarządzania aplikacjami Mobilnymi. | 432 |
+| DeviceHealthKey |Klucz kondycji urządzenia skojarzony z zameldowaniem tej aplikacji MAM. | 321 |
+| PlatformKey |Reprezentuje platformę urządzenia skojarzonego z zameldowaniem tej aplikacji MAM. |123 |
+| LastCheckInDate |Data i godzina ostatniego zameldowania tej aplikacji MAM. Wartość może być równa null. |2016-11-23 12:00:00 |
+
+## <a name="mamdevicehealths"></a>MamDeviceHealths
+
+Jednostka **MamDeviceHealth** reprezentuje urządzenia, które mają wdrożone zasady zarządzania aplikacjami mobilnymi (MAM), nawet jeśli zdjęto z nich zabezpieczenia systemu.
+
+| Właściwość | Opis | Przykład |
+|---------|------------|--------|
+| DeviceHealthKey |Unikatowy identyfikator urządzenia i jego skojarzonej kondycji w magazynie danych — klucz zastępczy. |123 |
+| DeviceHealth |Unikatowy identyfikator urządzenia i jego skojarzonej kondycji — podobny do wartości DeviceHealthKey, ale identyfikator jest kluczem naturalnym. |b66bc706-ffff-7777-0340-032819502773 |
+| DeviceHealthName |Reprezentuje stan urządzenia. <br>Not available — brak informacji o tym urządzeniu. <br>Healthy — urządzenie nie ma zdjętych zabezpieczeń systemu. <br>Unhealthy — urządzenie ma zdjęte zabezpieczenia systemu. |Not Available Healthy Unhealthy |
+| RowLastModifiedDateTimeUTC |Data i godzina w formacie UTC ostatniej modyfikacji kondycji konkretnego urządzenia MAM w magazynie danych. |2016-11-23 12:00:00 |
+
+## <a name="mamplatforms"></a>MamPlatforms
+
+Jednostka **MamPlatform** tworzy listę nazw platform i typów, na których zainstalowano aplikację zarządzania aplikacjami mobilnymi (MAM).
+
+
+|          Właściwość          |                                    Opis                                    |                         Przykład                         |
+|----------------------------|-----------------------------------------------------------------------------------|---------------------------------------------------------|
+|        PlatformKey         |     Unikatowy identyfikator platformy w magazynie danych — klucz zastępczy.      |                           123                           |
+|          Platforma          | Unikatowy identyfikator platformy — podobny do wartości PlatformKey, ale jest kluczem naturalnym. |                           123                           |
+|        PlatformName        |                                   Nazwa platformy                                   | Niedostępny <br>Brak <br>Windows <br>System iOS <br>Urządzenia z systemem Android. |
+| RowLastModifiedDateTimeUTC | Data i godzina w formacie UTC ostatniej modyfikacji tej platformy w magazynie danych.  |                 2016-11-23 12:00:00                  |
 
 ## <a name="managementagenttypes"></a>managementAgentTypes
 Jednostka **managementAgentTypes** reprezentuje agentów używanych do zarządzania urządzeniem.
