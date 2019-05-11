@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: bbad42e478fadcb40f35d621e805367e60944a00
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.translationtype: MTE75
+ms.contentlocale: pl-PL
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61490481"
+---
   > [!NOTE]
   > Utrzymywanie aktualności urządzenia zapewnia dostęp do najnowszych funkcji oraz gwarantuje, że urządzenie ma najbezpieczniejszą wersję systemu operacyjnego. Firma Microsoft oraz większość najważniejszych dostawców zaleca używanie najnowszych dostępnych wersji oprogramowania na urządzeniach zarówno osobistych, jak i firmowych.
 
