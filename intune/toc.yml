@@ -397,36 +397,6 @@
             - name: Usługa Mobile Threat Defense
               href: mobile-threat-defense.md
               items:
-                - name: Konfigurowanie usługi Lookout
-                  href: lookout-mobile-threat-defense-connector.md
-                  items:
-                    - name: Integracja usług Lookout i Intune
-                      href: lookout-mtd-connector-integration.md
-                - name: Konfigurowanie usługi Symantec
-                  href: skycure-mobile-threat-defense-connector.md
-                  items:
-                    - name: Integracja usług Symantec i Intune
-                      href: skycure-mtd-connector-integration.md
-                - name: Konfigurowanie aplikacji Check Point
-                  href: checkpoint-sandblast-mobile-mobile-threat-defense-connector.md
-                  items:
-                    - name: Integracja aplikacji Check Point i usługi Intune
-                      href: checkpoint-sandblast-mobile-mtd-connector-integration.md
-                - name: Konfigurowanie rozwiązania Zimperium
-                  href: zimperium-mobile-threat-defense-connector.md
-                  items:
-                    - name: Integracja rozwiązania Zimperium i usługi Intune
-                      href: zimperium-mtd-connector-integration.md
-                - name: Konfigurowanie usługi Pradeo
-                  href: pradeo-mobile-threat-defense-connector.md
-                  items:
-                    - name: Integracja usług Pradeo i Intune
-                      href: pradeo-mtd-connector-integration.md
-                - name: Konfigurowanie usługi Better Mobile
-                  href: better-mobile-threat-defense-connector.md
-                  items:
-                    - name: Integracja usług Better Mobile i Intune
-                      href: better-mobile-mtd-connector-integration.md
                 - name: Konfigurowanie usługi Intune na potrzeby usługi MTD
                   items:
                     - name: Dodawanie aplikacji MTD
@@ -435,6 +405,43 @@
                       href: mtd-device-compliance-policy-create.md
                     - name: Włączanie usługi MTD w usłudze Intune
                       href: mtd-connector-enable.md
+                - name: Aplikacje usługi MTD
+                  items:
+                    - name: Konfigurowanie usługi Lookout
+                      href: lookout-mobile-threat-defense-connector.md
+                      items:
+                        - name: Integracja usług Lookout i Intune
+                          href: lookout-mtd-connector-integration.md
+                    - name: Konfigurowanie usługi Symantec
+                      href: skycure-mobile-threat-defense-connector.md
+                      items:
+                        - name: Integracja usług Symantec i Intune
+                          href: skycure-mtd-connector-integration.md
+                    - name: Konfigurowanie aplikacji Check Point
+                      href: checkpoint-sandblast-mobile-mobile-threat-defense-connector.md
+                      items:
+                        - name: Integracja aplikacji Check Point i usługi Intune
+                          href: checkpoint-sandblast-mobile-mtd-connector-integration.md
+                    - name: Konfigurowanie rozwiązania Zimperium
+                      href: zimperium-mobile-threat-defense-connector.md
+                      items:
+                        - name: Integracja rozwiązania Zimperium i usługi Intune
+                          href: zimperium-mtd-connector-integration.md
+                    - name: Konfigurowanie usługi Pradeo
+                      href: pradeo-mobile-threat-defense-connector.md
+                      items:
+                        - name: Integracja usług Pradeo i Intune
+                          href: pradeo-mtd-connector-integration.md
+                    - name: Konfigurowanie usługi Better Mobile
+                      href: better-mobile-threat-defense-connector.md
+                      items:
+                        - name: Integracja usług Better Mobile i Intune
+                          href: better-mobile-mtd-connector-integration.md
+                    - name: Konfigurowanie usługi Sophos Mobile
+                      href: sophos-mtd-connector.md
+                      items:
+                        - name: Integracja usług Sophos Mobile i Intune
+                          href: sophos-mtd-connector-integration.md
             - name: Zaawansowana ochrona przed zagrożeniami w usłudze Windows Defender
               href: advanced-threat-protection.md
             - name: Linie bazowe zabezpieczeń
@@ -709,6 +716,8 @@
                   href: wi-fi-settings-ios.md
                 - name: Niestandardowy
                   href: custom-settings-ios.md
+                - name: Identyfikatory pakietów dla aplikacji wbudowanych
+                  href: bundle-ids-built-in-ios-apps.md
         - name: macOS
           items:
             - name: Ustawienia zasad zgodności
