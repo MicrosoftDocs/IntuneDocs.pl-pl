@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 4/19/2019
+ms.date: 05/01/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e642573311d1452a970dce798dabdc705e4a44f7
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 751d89ef023bea07d3c8bdb69904605d88c9e0b6
+ms.sourcegitcommit: dde4b8788e96563edeab63f612347fa222d8ced0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61504222"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65135221"
 ---
 # <a name="automate-email-and-add-actions-for-noncompliant-devices-in-intune"></a>Automatyzowanie poczty e-mail i dodawanie akcji dla niezgodnych urządzeń w usłudze Intune
 
@@ -103,9 +103,6 @@ Podczas tworzenia zasady zgodności lub aktualizowania istniejącej zasady możn
          - Wprowadź dowolnych **dodatkowych adresatów** przez wybranie grup
     
     - **Zdalne zablokowanie niezgodnego urządzenia**: zablokuj urządzenie, gdy urządzenie jest niezgodne. Ta akcja wymusza wprowadzenie przez użytkownika numeru PIN lub hasła w celu odblokowania urządzenia. 
-
-    - **Wycofaj urządzenie niezgodne**: usuń wszystkie dane firmowe z urządzenia i usuń urządzenie z zarządzania usługi Intune, gdy urządzenie jest niezgodne. Aby zapobiec przypadkowemu czyszczeniu urządzenia, ta akcja obsługuje harmonogram o minimalnej wartości wynoszącej **30** dni.  
-
     
 5. Skonfiguruj **Harmonogram**: wprowadź liczbę dni (od 0 do 365), jaka ma upłynąć od stwierdzenia niezgodności, w celu wyzwolenia akcji na urządzeniach użytkowników. Po tym okresie prolongaty można wymusić zasady dostępu warunkowego. Jeśli wprowadzisz **0** (zero) jako liczbę dni, dostęp warunkowy będzie obowiązywać **natychmiast**. Na przykład można natychmiastowo zablokować dostęp do zasobów firmowych, jeśli urządzenie jest niezgodne.
 

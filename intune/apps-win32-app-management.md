@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c2cac99ba45ccd91629e6db32d91735d90d706e
-ms.sourcegitcommit: 6d6f43d69462f7f8fadc421c4ba566dc6ec20c36
+ms.openlocfilehash: 24e783bc4586709d0cde6a2ebd19c2b5ca30ab6b
+ms.sourcegitcommit: dde4b8788e96563edeab63f612347fa222d8ced0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62426157"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65135117"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Autonomiczna usługa Intune — zarządzanie aplikacjami Win32
 
@@ -142,8 +142,8 @@ W poniższych krokach przedstawiono wskazówki ułatwiające dodanie aplikacji s
     Na przykład jeśli nazwa pliku aplikacji to **MyApp123**, dodaj następujące polecenie:<br>
     `msiexec /p “MyApp123.msp”`<p>
     Jeśli dodatkowo aplikacja to `ApplicationName.exe`, polecenie będzie nazwą aplikacji z następującymi po niej argumentami polecenia (przełącznikami) obsługiwanymi przez pakiet. <br>Przykład:<br>
-    `ApplicationName.exe /quite`<br>
-    W powyższym poleceniu pakiet `ApplicaitonName.exe` obsługuje argument polecenia `/quite`.<p> Aby uzyskać konkretne argumenty obsługiwane przez pakiet aplikacji, skontaktuj się z dostawcą aplikacji.
+    `ApplicationName.exe /quiet`<br>
+    W powyższym poleceniu pakiet `ApplicationName.exe` obsługuje argument polecenia `/quiet`.<p> Aby uzyskać konkretne argumenty obsługiwane przez pakiet aplikacji, skontaktuj się z dostawcą aplikacji.
 
 3.  Dodaj pełny wiersz polecenia dezinstalacji, który umożliwia odinstalowanie aplikacji na podstawie identyfikatora GUID aplikacji. 
 
@@ -282,9 +282,6 @@ W tym momencie wykonywanie kroków dodawania aplikacji Win32 do usługi Intune z
 ## <a name="app-dependencies"></a>Zależności aplikacji
 
 Zależności aplikacji to aplikacje, które należy zainstalować przed zainstalowaniem aplikacji Win32. Możesz wymagać, aby inne aplikacje były instalowane jako zależności. W szczególności na urządzeniu muszą zostać zainstalowane aplikacje zależne przed zainstalowaniem aplikacji Win32. Maksymalnie można użyć 100 zależności, co obejmuje zależności wszystkich dołączonych zależności, a także samą aplikację. Zależności aplikacji Win32 możesz dodać tylko po dodaniu i przekazaniu aplikacji Win32 do usługi Intune. Po dodaniu aplikacji Win32 zostanie wyświetlona opcja **Zależności** w bloku aplikacji Win32. 
-
-> [!NOTE]
-> Funkcja zależności aplikacji będzie dostępna dopiero wtedy, gdy agent zarządzania usługi Intune zostanie uaktualniony do wersji 1904 (nowszej niż 1.18.120.0), co może nastąpić tydzień lub dwa tygodnie po uaktualnieniu usługi do wersji 1904.
 
 Podczas dodawania zależności aplikacji możesz przeprowadzić wyszukiwanie na podstawie nazwy aplikacji i wydawcy. Ponadto możesz sortować dodane zależności na podstawie nazwy aplikacji i wydawcy. Wcześniej dodanych zależności aplikacji nie można wybrać na liście dodanych zależności aplikacji. 
 
