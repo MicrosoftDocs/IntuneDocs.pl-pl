@@ -44,8 +44,8 @@ Jednostka **MamApplication** tworzy listę aplikacji biznesowych (LOB), które s
 | Właściwość | Opis | Przykład |
 |---------|------------|--------|
 | mamApplicationKey |Unikatowy identyfikator aplikacji MAM. | 432 |
-| mamApplicationName |Nazwa aplikacji MAM. |Zarządzanie aplikacjami Mobilnymi aplikacja przykładowa nazwa |
-| mamApplicationId |Identyfikator aplikacji dla aplikacji MAM. | 123 |
+| mamApplicationName |Nazwa aplikacji MAM. |Przykładowa nazwa aplikacji MAM |
+| mamApplicationId |Identyfikator aplikacji MAM. | 123 |
 | IsDeleted |Wskazuje, czy ten rekord aplikacji MAM został zaktualizowany. <br>True — aplikacja MAM ma nowy rekord ze zaktualizowanymi polami w tej tabeli. <br>False — to jest najnowszy rekord dla tej aplikacji MAM. |Prawda/Fałsz |
 | StartDateInclusiveUTC |Data i godzina w formacie UTC utworzenia tej aplikacji MAM w magazynie danych. |2016-11-23 12:00:00 |
 | DeletedDateUTC |Data i godzina w formacie UTC zmiany właściwości IsDeleted na wartość True. |2016-11-23 12:00:00 |
@@ -62,15 +62,15 @@ Jednostka **MamApplicationInstance** tworzy listę zarządzanych aplikacji zarz�
 |   ApplicationInstanceKey   |                                                               Unikatowy identyfikator wystąpienia aplikacji MAM w magazynie danych — klucz zastępczy.                                                                |                 123                  |
 |           UserId           |                                                                              Identyfikator użytkownika, który ma zainstalowaną tę aplikację MAM.                                                                              | b66bc706-ffff-7437-0340-032819502773 |
 |   ApplicationInstanceId    |                                              Unikatowy identyfikator wystąpienia aplikacji MAM — podobny do wartości ApplicationInstanceKey, ale identyfikator jest kluczem naturalnym.                                              | b66bc706-ffff-7437-0340-032819502773 |
-| mamApplicationId | Identyfikator aplikacji Mam, dla którego utworzono tego wystąpienia aplikacji Mam.   | 2016-11-23 12:00:00   |
+| mamApplicationId | Identyfikator aplikacji MAM, dla której utworzono to wystąpienie aplikacji MAM.   | 2016-11-23 12:00:00   |
 |     ApplicationVersion     |                                                                                     Wersja aplikacji dla tej aplikacji MAM.                                                                                      |                  2                   |
 |        CreatedDate         |                                                                 Data utworzenia tego rekordu wystąpienia aplikacji MAM. Wartość może być równa null.                                                                 |        2016-11-23 12:00:00        |
 |          Platforma          |                                                                          Platforma urządzenia, na której zainstalowano tę aplikację MAM.                                                                           |                  2                   |
 |      PlatformVersion       |                                                                      Wersja platformy urządzenia, na której jest zainstalowana ta aplikacja MAM.                                                                       |                 2.2                  |
 |         SdkVersion         |                                                                            Wersja zestawu SDK MAM, za pomocą którego aplikacja MAM została opakowana.                                                                            |                 3.2                  |
-| mamDeviceId | Identyfikator urządzenia dla urządzenia, z którym skojarzony jest wystąpienia aplikacji MAM.   | 2016-11-23 12:00:00   |
-| mamDeviceType | Typ urządzenia, urządzenia, z którym skojarzony jest wystąpienia aplikacji MAM.   | 2016-11-23 12:00:00   |
-| mamDeviceName | Nazwa urządzenia dla urządzenia, z którym skojarzony jest wystąpienia aplikacji MAM.   | 2016-11-23 12:00:00   |
+| mamDeviceId | Identyfikator urządzenia, z którym jest skojarzone wystąpienie aplikacji MAM.   | 2016-11-23 12:00:00   |
+| mamDeviceType | Typ urządzenia, z którym jest skojarzone wystąpienie aplikacji MAM.   | 2016-11-23 12:00:00   |
+| mamDeviceName | Nazwa urządzenia, z którym jest skojarzone wystąpienie aplikacji MAM.   | 2016-11-23 12:00:00   |
 |         IsDeleted          | Wskazuje, czy ten rekord wystąpienia aplikacji MAM został zaktualizowany. <br>True — to wystąpienie aplikacji MAM ma nowy rekord ze zaktualizowanymi polami w tej tabeli. <br>False — to jest najnowszy rekord dla tego wystąpienia aplikacji MAM. |              Prawda/Fałsz              |
 |   StartDateInclusiveUTC    |                                                              Data i godzina w formacie UTC utworzenia tego wystąpienia aplikacji MAM w magazynie danych.                                                               |        2016-11-23 12:00:00        |
 |       DeletedDateUTC       |                                                                             Data i godzina w formacie UTC zmiany właściwości IsDeleted na wartość True.                                                                              |        2016-11-23 12:00:00        |
@@ -89,7 +89,7 @@ Jednostka **MamCheckin** reprezentuje dane zebrane po zameldowaniu wystąpienia 
 | DateKey |Klucz daty zarejestrowania zameldowania aplikacji MAM w magazynie danych. | 20160703 |
 | ApplicationInstanceKey |Klucz wystąpienia aplikacji skojarzony z zameldowaniem tej aplikacji MAM. | 123 |
 | UserKey |Klucz użytkownika skojarzony z zameldowaniem tej aplikacji MAM. | 4323 |
-| mamApplicationKey |Aplikacji klucza z aplikacji skojarzonej z ewidencjonowanie aplikacji zarządzania aplikacjami Mobilnymi. | 432 |
+| mamApplicationKey |Klucz aplikacji skojarzonej z zameldowaniem aplikacji MAM. | 432 |
 | DeviceHealthKey |Klucz kondycji urządzenia skojarzony z zameldowaniem tej aplikacji MAM. | 321 |
 | PlatformKey |Reprezentuje platformę urządzenia skojarzonego z zameldowaniem tej aplikacji MAM. |123 |
 | EffectiveAppliedPolicyKey |Reprezentuje efektywnie zastosowane zasady skojarzone z aplikacją MAM, która została zameldowana. Efektywne zastosowanie zasad jest wynikiem scalenia wszystkich zasad dotyczących danej aplikacji i użytkownika. | 322 |

@@ -46,4 +46,4 @@ Jednym z podstawowych zadań administratora IT jest [ochrona zarządzanych kompu
 
 ## <a name="see-also"></a>Zobacz także
 
-[Typowe pytania, problemy i rozwiązania przy użyciu zasad i profilów](device-profile-troubleshoot.md)
+[Common questions, issues and resolutions with device policies and profiles (Typowe pytania, problemy i rozwiązania związane z zasadami i profilami urządzeń)](device-profile-troubleshoot.md)

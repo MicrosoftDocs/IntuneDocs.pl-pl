@@ -1,6 +1,6 @@
 ---
-title: Tworzenie zasad zgodności urządzeń z systemem Android w usłudze Microsoft Intune — Azure | Microsoft Docs
-description: Wyświetlenie listy wszystkich ustawień których można użyć, gdy ustawienia zgodności dla urządzeń z systemem Android w programie Microsoft Intune. Ustaw reguły hasła, wybierz wersję systemu operacyjnego minimalnej lub maksymalnej, ograniczyć określone aplikacje, uniemożliwić ponowne używanie haseł i innych.
+title: Ustawienia zgodności dla urządzeń z systemem Android w usłudze Microsoft Intune — Azure | Microsoft Docs
+description: Zapoznaj się z listą ustawień umożliwiających skonfigurowanie zgodności dla urządzeń z systemem Android w usłudze Microsoft Intune. Możesz między innymi ustawić reguły dotyczące haseł, wybrać minimalną lub maksymalną wersję systemu operacyjnego, ograniczyć określone aplikacje czy zablokować ponowne używanie haseł.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -24,17 +24,17 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/09/2019
 ms.locfileid: "59423581"
 ---
-# <a name="android-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Ustawienia systemu android na potrzeby oznaczania urządzenia jako zgodne lub niezgodne, przy użyciu usługi Intune
+# <a name="android-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Ustawienia urządzeń z systemem Android umożliwiające oznaczenie ich jako zgodne lub niezgodne w usłudze Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-W tym artykule wymieniono i opisano ustawienia zgodności różnych, które można skonfigurować na urządzeniach z systemem Android w usłudze Intune. W ramach rozwiązania do zarządzania (urządzeniami przenośnymi MDM) urządzenia przenośnego te ustawienia służą do oznaczania urządzenia z odblokowanym dostępem (których zdjęto zabezpieczenia systemu) jako niezgodne, Ustaw dozwolony poziom zagrożenia, należy włączyć Google Play Protect i nie tylko.
+W tym artykule wymieniono i opisano różne ustawienia zgodności, które można skonfigurować na urządzeniach z systemem Android za pomocą usługi Intune. Możesz stosować te ustawienia w ramach rozwiązania do zarządzania urządzeniami mobilnymi (MDM), aby między innymi oznaczać urządzenia z odblokowanym dostępem do konta root lub zdjętymi zabezpieczeniami systemu jako niezgodne, określać dozwolony poziom zagrożenia, czy włączać funkcję Google Play Protect.
 
 Ta funkcja ma zastosowanie do:
 
 - Android
 
-Jako administrator usługi Intune należy użyć tych ustawień zgodności w celu ochrony zasobów organizacji. Aby dowiedzieć się więcej na temat zasad zgodności i wymagań wstępnych, zobacz [Wprowadzenie do zasad zgodności urządzeń](device-compliance-get-started.md).
+Jako administrator usługi Intune możesz użyć tych ustawień zgodności, aby chronić zasoby organizacji. Aby dowiedzieć się więcej na temat zasad zgodności i ich działania, zobacz [Wprowadzenie do zasad zgodności urządzeń](device-compliance-get-started.md).
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
@@ -49,7 +49,7 @@ Jako administrator usługi Intune należy użyć tych ustawień zgodności w cel
   - **Średni**: urządzenie jest oceniane jako zgodne, jeśli istniejące zagrożenia są na poziomie niskim lub średnim. W przypadku wykrycia na urządzeniu zagrożeń wysokiego poziomu zostanie ono określone jako niezgodne.
   - **Wysoki**: ta opcja jest najmniej bezpieczna i zezwala na wszystkie poziomy zagrożeń. To ustawienie może być przydatne, jeśli rozwiązanie jest używane tylko na potrzeby raportowania.
 
-### <a name="google-play-protect"></a>Ochrona sklepu Google Play
+### <a name="google-play-protect"></a>Funkcja Google Play Protect
 
 - **Skonfigurowano usługi Google Play**: **Wymagaj** zainstalowania i włączenia aplikacji usług Google Play. Usługi Google Play umożliwiają aktualizacje zabezpieczeń i stanowią zależność na poziomie podstawowym dla wielu funkcji zabezpieczeń w urządzeniach certyfikowanych przez firmę Google. W przypadku wybrania opcji **Nieskonfigurowane** (wartość domyślna), to ustawienie nie jest oceniane na potrzeby określenia zgodności.
 - **Aktualny dostawca zabezpieczeń**: **Wymagaj**, aby zaktualizowany dostawca zabezpieczeń mógł chronić urządzenie przed znanymi lukami w zabezpieczeniach. W przypadku wybrania opcji **Nieskonfigurowane** (wartość domyślna), to ustawienie nie jest oceniane na potrzeby określenia zgodności.
@@ -64,7 +64,7 @@ Jako administrator usługi Intune należy użyć tych ustawień zgodności w cel
   - **Sprawdź podstawową integralność i certyfikowane urządzenia**
 
 > [!NOTE]
-> Aby skonfigurować ustawienia usługi Google Play Protect wiadomości przy użyciu zasad ochrony aplikacji, zobacz [ustawienia zasad ochrony aplikacji usługi Intune](app-protection-policy-settings-android.md#conditional-launch) w systemie Android.
+> Aby skonfigurować ustawienia funkcji Google Play Protect za pomocą zasad ochrony aplikacji, zobacz [Ustawienia zasad ochrony aplikacji usługi Intune](app-protection-policy-settings-android.md#conditional-launch) dla systemu Android.
 
 ## <a name="device-property-settings"></a>Ustawienia właściwości urządzenia
 
@@ -118,16 +118,16 @@ Jako administrator usługi Intune należy użyć tych ustawień zgodności w cel
 
 Wybierz kolejno pozycje **OK** > **Utwórz**, aby zapisać zmiany.
 
-## <a name="locations"></a>Lokalizacje:
+## <a name="locations"></a>Lokalizacje
 
-W zasadach możesz wymusić zgodność z przepisami według lokalizacji urządzenia. Wybierz z istniejących lokalizacji. Nie masz jeszcze lokalizacji? Wskazówki możesz znaleźć w temacie [Korzystanie z lokalizacji (ogrodzenia sieci) w usłudze Intune](use-network-locations.md).
+Używając zasad, możesz wymuszać zgodność urządzenia na podstawie lokalizacji. Wybierz jedną z istniejących lokalizacji. Nie masz jeszcze lokalizacji? Wskazówki możesz znaleźć w artykule [Korzystanie z lokalizacji (ogrodzenia sieci) w usłudze Intune](use-network-locations.md).
 
-1. Wybierz **lokalizacje** > **wybierz lokalizacje**.
-2. Z listy, sprawdź swoją lokalizację > **wybierz**.
+1. Wybierz pozycję **Lokalizacje** > **Wybierz lokalizacje**.
+2. Na liście zaznacz swoją lokalizację, a następnie wybierz pozycję **Wybierz**.
 3. **Zapisz** zasady.
 
 ## <a name="next-steps"></a>Następne kroki
 
-- [Dodawanie akcji dla niezgodnych urządzeń](actions-for-noncompliance.md) i [za pomocą tagów zakresu zasad filtr](scope-tags.md).
-- [Monitorowanie zasad zgodności](compliance-policy-monitor.md).
-- [Ustawienia zasad zgodności dla rozwiązania Android Enterprise](compliance-policy-create-android-for-work.md)
+- [Dodaj akcje dla niezgodnych urządzeń](actions-for-noncompliance.md) i [użyj tagów zakresu do filtrowania zasad](scope-tags.md).
+- [Zastosuj monitorowanie zasad zgodności](compliance-policy-monitor.md).
+- Zobacz [Ustawienia zasad zgodności dla urządzeń z rozwiązaniem Android Enterprise](compliance-policy-create-android-for-work.md).

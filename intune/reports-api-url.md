@@ -64,7 +64,7 @@ Możesz zapoznać się z najnowszymi funkcjami magazynu danych, korzystając z w
 
 ## <a name="odata-query-options"></a>Opcje zapytania OData
 
-Bieżąca wersja obsługuje następujące parametry zapytania OData: `$filter`, `$select`, `$skip,` i `$top`. W `$filter`, tylko `DateKey` lub `RowLastModifiedDateTimeUTC` może obsługiwać kolumn są stosowane, gdy inne właściwości wywołałoby złe żądanie.
+Bieżąca wersja obsługuje następujące parametry zapytania OData: `$filter`, `$select`, `$skip,` i `$top`. W przypadku parametru `$filter` mogą być obsługiwane tylko wartości `DateKey` lub `RowLastModifiedDateTimeUTC`, jeśli te kolumny są dostępne, a wszelkie inne właściwości będą wyzwalać nieprawidłowe żądanie.
 
 ## <a name="datekey-range-filters"></a>Filtry zakresów DateKey
 
@@ -84,4 +84,4 @@ Filtry zakresów `DateKey` pozwalają ograniczyć ilość danych do pobrania dla
 |    `$filter=DateKey eq 20180214`                                 |    Pełna                                      |    Zwraca dane o wartości `DateKey` równej 20180214.                                                    |
 |    `$filter=DateKey ge 20180214 and DateKey lt 20180221`         |    Pełna                                      |    Zwraca dane o wartości `DateKey` z zakresu od 20180214 do 20180220.                                     |
 |    `maxhistorydays=7&$filter=DateKey eq 20180214`                |    Pełna                                      |    Zwraca dane o wartości `DateKey` równej 20180214. Parametr `maxhistorydays` jest ignorowany.                            |
-|    `$filter=RowLastModifiedDateTimeUTC ge 2018-02-21T23:18:51.3277273Z`                                |    Pełna                                       |    Zwracanych danych `RowLastModifiedDateTimeUTC` jest większa niż lub równe `2018-02-21T23:18:51.3277273Z`                             |
+|    `$filter=RowLastModifiedDateTimeUTC ge 2018-02-21T23:18:51.3277273Z`                                |    Pełna                                       |    Zwraca dane o wartości `RowLastModifiedDateTimeUTC` większej lub równej `2018-02-21T23:18:51.3277273Z`.                             |

@@ -1,11 +1,11 @@
 ---
-title: Tworzenie zasad zgodności urządzeń z systemem iOS w usłudze Microsoft Intune — Azure | Microsoft Docs
-description: Utwórz lub skonfiguruj zasady zgodności urządzenia w usłudze Microsoft Intune dla urządzeń z systemem macOS w celu skorzystania z ochrony integralności systemu, ustaw minimalną i maksymalną wersję systemu operacyjnego, określ wymagania dotyczące hasła i zaszyfruj magazyn danych.
+title: Ustawienia zgodności dla urządzeń z systemem macOS w usłudze Microsoft Intune — Azure | Microsoft Docs
+description: Zapoznaj się z listą ustawień umożliwiających skonfigurowanie zgodności dla urządzeń z systemem macOS w usłudze Microsoft Intune. Możesz między innymi wymagać stosowania ochrony integralności systemu firmy Apple, określać ograniczenia dotyczące haseł, wymagać zapory oraz zezwalać na użycie programu Gatekeeper.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/14/2018
+ms.date: 04/04/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,47 +16,32 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 21eca671d40f1ee2f2f9176a272cab5754140a26
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: MTE75
+ms.openlocfilehash: b3224e7400ad56f971488aba53bb073a0d33bb9d
+ms.sourcegitcommit: 02803863eba37ecf3d8823a7f1cd7c4f8e3bb42c
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566611"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59423649"
 ---
-# <a name="add-a-device-compliance-policy-for-macos-devices-with-intune"></a>Dodawanie zasad zgodności dla urządzeń z systemem macOS w usłudze Intune
+# <a name="macos-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Ustawienia urządzeń z systemem macOS umożliwiające oznaczenie ich jako zgodne lub niezgodne w usłudze Intune
 
-Zasady zgodności urządzeń z systemem macOS w usłudze Intune określają reguły i ustawienia, które urządzenia z systemem macOS muszą spełniać, aby zapewnić zgodność. Gdy zasady zgodności urządzeń są używane z zasadami dostępu warunkowego, można umożliwić lub zablokować dostęp do zasobów firmy. Można również pobrać raporty urządzeń i podjąć akcje w przypadku niezgodności. Zasady zgodności urządzeń są tworzone dla każdej platformy w witrynie Azure Portal usługi Intune. Aby dowiedzieć się więcej na temat zasad zgodności i wymagań wstępnych, zobacz [Wprowadzenie do zasad zgodności urządzeń](device-compliance-get-started.md).
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-W poniższej tabeli opisano sposób postępowania z niezgodnymi ustawieniami w przypadku, gdy zasady zgodności są używane wraz z zasadami dostępu warunkowego:
+W tym artykule wymieniono i opisano różne ustawienia zgodności, które można skonfigurować na urządzeniach z systemem macOS za pomocą usługi Intune. Możesz zastosować te ustawienia w ramach rozwiązania do zarządzania urządzeniami mobilnymi (MDM), aby między innymi określić minimalną lub maksymalną wersję systemu operacyjnego lub ustawić wygasanie haseł.
 
----------------------------
+Ta funkcja ma zastosowanie do:
 
-| Ustawienie zasad | System macOS 10.11 i nowsze |
-| --- | --- |
-| **Konfiguracja kodu PIN lub hasła** | Skorygowane |   
-| **Szyfrowanie urządzenia** | Skorygowane (przez ustawienie kodu PIN) |
-| **Profil e-mail** | Poddane kwarantannie |
-|**Minimalna wersja systemu operacyjnego** | Poddane kwarantannie |
-| **Maksymalna wersja systemu operacyjnego** | Poddane kwarantannie |
+- macOS
 
----------------------------
+Jako administrator usługi Intune możesz użyć tych ustawień zgodności, aby chronić zasoby organizacji. Aby dowiedzieć się więcej na temat zasad zgodności i ich działania, zobacz [Wprowadzenie do zasad zgodności urządzeń](device-compliance-get-started.md).
 
-**Skorygowane** — system operacyjny urządzenia wymusza zgodność. Na przykład użytkownik jest zmuszony do ustawienia kodu PIN.
+## <a name="before-you-begin"></a>Przed rozpoczęciem
 
-**Poddane kwarantannie** — system operacyjny urządzenia nie wymusza zgodności. (Na przykład urządzenie z systemem Android nie zmusza użytkownika do szyfrowania urządzenia). Gdy urządzenie nie jest zgodne, zostaną wykonane następujące akcje:
-
-- Urządzenie zostanie zablokowane, jeśli użytkownik podlega zasadom dostępu warunkowego.
-- Portal firmy powiadomi użytkownika o wszelkich problemach ze zgodnością.
-
-## <a name="create-a-device-compliance-policy"></a>Tworzenie zasad zgodności urządzenia
-
-[!INCLUDE [new-device-compliance-policy](./includes/new-device-compliance-policy.md)]
-4. W polu **Platforma** wybierz opcję **macOS**. 
-5. Wybierz opcję **Konfigurowanie ustawień** i wprowadź wartości ustawień **Kondycja urządzenia**, **Właściwości urządzenia** i **Zabezpieczenia systemu** opisanych w tym artykule. Po zakończeniu wybierz kolejno przycisk **OK** i pozycję **Utwórz**.
+[Utwórz zasady zgodności](create-compliance-policy.md#create-the-policy). W polu **Platforma** wybierz opcję **macOS**.
 
 ## <a name="device-health"></a>Kondycja urządzenia
 
-- **Wymagaj ochrony integralności systemu**: ustaw tę opcję na wartość **Wymagaj** w celu sprawdzenia, czy urządzenia z systemem macOS mają włączone ustawienie [Ochrona integralności systemu](https://support.apple.com/HT204899).
+- **Wymagaj ochrony integralności systemu**: ustaw tę opcję na wartość **Wymagaj** w celu sprawdzenia, czy urządzenia z systemem macOS mają włączone ustawienie [Ochrona integralności systemu](https://support.apple.com/HT204899) (link otwiera witrynę internetową firmy Apple). W przypadku wybrania opcji **Nieskonfigurowane** (wartość domyślna) to ustawienie nie jest oceniane na potrzeby określenia zgodności.
 
 ## <a name="device-properties"></a>Właściwości urządzenia
 
@@ -73,7 +58,7 @@ W poniższej tabeli opisano sposób postępowania z niezgodnymi ustawieniami w p
 - **Proste hasła**: ustaw wartość **Blokuj**, aby uniemożliwić użytkownikom tworzenie prostych haseł, takich jak **1234** lub **1111**. Ustaw wartość **Nieskonfigurowane**, aby umożliwić użytkownikom tworzenie haseł, takich jak **1234** lub **1111**.
 - **Minimalna długość hasła**: wprowadź minimalną liczbę cyfr lub znaków, które musi zawierać hasło.
 - **Typ hasła**: określ, czy hasło ma zawierać tylko znaki **numeryczne**, czy też ma być dopuszczalna kombinacja cyfr i innych znaków (**Alfanumeryczne**).
-- **Liczba znaków innych niż alfanumeryczne w haśle**: określ minimalną liczbę znaków specjalnych (takich jak &, #, % i !), którą musi zawierać hasło.
+- **Liczba znaków innych niż alfanumeryczne w haśle**: określ minimalną liczbę znaków specjalnych (takich jak `&`, `#`, `%` i `!`), którą musi zawierać hasło.
 
     Ustawienie większej liczby wymaga wprowadzenia bardziej skomplikowanego hasła przez użytkownika.
 
@@ -89,13 +74,16 @@ W poniższej tabeli opisano sposób postępowania z niezgodnymi ustawieniami w p
 - **Szyfrowanie magazynu danych na urządzeniu**: wybierz pozycję **Wymagaj**, aby szyfrować magazyn danych na urządzeniach.
 
 ### <a name="device-security"></a>Zabezpieczenia urządzeń
+
 Zapora chroni urządzenia przed nieautoryzowanym dostępem sieciowym. Zapora umożliwia sterowanie połączeniami dla poszczególnych aplikacji. 
 
 - **Zapora**: wybierz pozycję **Włącz**, aby ułatwić ochronę urządzeń przed nieautoryzowanym dostępem. Włączenie tej funkcji umożliwia obsługę przychodzących połączeń internetowych i używanie trybu niewidzialności. Wybranie pozycji **Nieskonfigurowane** (wartość domyślna) spowoduje wyłączenie zapory i zezwolenie na ruch sieciowy (nie będzie on blokowany).
-- **Połączenia przychodzące**: **blokuj** wszystkie przychodzące połączenia sieciowe poza wymaganymi dla podstawowych usług internetowych, np. DHCP, Bonjour i IPSec. To ustawienie blokuje również wszystkie usługi udostępniania, w tym udostępnianie ekranu, dostęp zdalny, udostępnianie utworów muzycznych w usłudze iTunes i inne. Wybranie pozycji **Nieskonfigurowane** (wartość domyślna) spowoduje zezwolenie na połączenia przychodzące i udostępnianie usług. 
-- **Tryb niewidzialności**: **włącz** tryb niewidzialności, aby zapobiegać odpowiadaniu przez komputer na żądania sondowania, które mogą być wykonywane przez złośliwych użytkowników. Gdy ta opcja jest włączona, urządzenie nadal odpowiada na przychodzące żądania w przypadku autoryzowanych aplikacji. Wybranie pozycji **Nieskonfigurowane** (wartość domyślna) spowoduje wyłączenie trybu niewidzialności.
+- **Połączenia przychodzące**: wybierz opcję **Blokuj**, aby blokować wszystkie połączenia przychodzące poza połączeniami wymaganymi dla podstawowych usług internetowych, np. DHCP, Bonjour i IPSec. To ustawienie blokuje również wszystkie usługi udostępniania, w tym udostępnianie ekranu, dostęp zdalny, udostępnianie utworów muzycznych w usłudze iTunes i inne. Wybranie pozycji **Nieskonfigurowane** (wartość domyślna) spowoduje zezwolenie na połączenia przychodzące i udostępnianie usług.
+- **Tryb niewidzialności**: wybierz pozycję **Włącz**, aby zapobiegać odpowiadaniu przez komputer na żądania sondowania, które mogą być wykonywane przez złośliwych użytkowników. Gdy ta opcja jest włączona, urządzenie nadal odpowiada na przychodzące żądania w przypadku autoryzowanych aplikacji. Wybranie pozycji **Nieskonfigurowane** (wartość domyślna) spowoduje wyłączenie trybu niewidzialności.
 
 ### <a name="gatekeeper"></a>Program Gatekeeper
+
+Aby uzyskać więcej informacji, zobacz [Gatekeeper on macOS (Program Gatekeeper w systemie macOS](https://support.apple.com/HT202491) — link otwiera witrynę internetową firmy Apple).
 
 **Zezwalaj na aplikacje pobrane z tych lokalizacji**: umożliwia instalowanie na urządzeniach obsługiwanych aplikacji z różnych lokalizacji. Dostępne opcje lokalizacji:
 
@@ -104,19 +92,10 @@ Zapora chroni urządzenia przed nieautoryzowanym dostępem sieciowym. Zapora umo
 - **Mac App Store i zidentyfikowani deweloperzy**: zezwala na instalowanie aplikacji ze sklepu Mac App Store oraz od zidentyfikowanych deweloperów. System macOS sprawdza tożsamość deweloperów oraz przeprowadza kilka innych testów, aby zweryfikować integralność aplikacji. Jeśli użytkownik wybierze program Gatekeeper w celu zainstalowania aplikacji z innego źródła, urządzenie zostanie uznane za niezgodne.
 - **Dowolne miejsce**: instalować można aplikacje z dowolnego miejsca i od dowolnego dewelopera. To najmniej bezpieczna opcja.
 
-Aby uzyskać więcej szczegółowych informacji z dokumentacji firmy Apple, zobacz [Program Gatekeeper w systemie macOS](https://support.apple.com/HT202491).
-
-## <a name="assign-user-groups"></a>Przypisywanie grup użytkowników
-
-1. Wybierz skonfigurowane przez siebie zasady. Dostęp do istniejących zasad można uzyskać po wybraniu pozycji **Zgodność urządzeń** > **Zasady**.
-2. Wybierz zasady, a następnie wybierz opcję **Przypisania**. Możesz włączyć lub wyłączyć grupy zabezpieczeń usługi Azure Active Directory (AD).
-3. Wybierz opcję **Wybrane grupy**, aby wyświetlić grupy zabezpieczeń usługi Azure AD. Wybierz grupy użytkowników, których mają dotyczyć te zasady, a następnie opcję **Zapisz**, aby je wdrożyć.
-
-> [!TIP]
-> Domyślnie urządzenia sprawdzają zgodność co 8 godzin. Jednak użytkownicy mogą wymusić uruchomienie tego procesu za pomocą aplikacji Portal firmy w usłudze Intune.
-
-Zasady zostały zastosowane do użytkowników. Urządzenia, którymi posługują się użytkownicy objęci zasadami, zostaną ocenione pod kątem zgodności.
+Wybierz kolejno pozycje **OK** > **Utwórz**, aby zapisać zmiany.
 
 ## <a name="next-steps"></a>Następne kroki
-[Automatyzowanie poczty e-mail i dodawanie akcji dla niezgodnych urządzeń](actions-for-noncompliance.md)  
-[Monitorowanie zasad zgodności urządzeń Intune](compliance-policy-monitor.md)
+
+- [Dodaj akcje dla niezgodnych urządzeń](actions-for-noncompliance.md) i [użyj tagów zakresu do filtrowania zasad](scope-tags.md).
+- [Zastosuj monitorowanie zasad zgodności](compliance-policy-monitor.md).
+- Zobacz [Ustawienia zasad zgodności dla urządzeń z systemem iOS](compliance-policy-create-ios.md).

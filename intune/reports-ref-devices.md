@@ -66,7 +66,7 @@ Jednostka **DeviceTypes** reprezentuje typ urządzenia przywoływany przez inne 
 | 11 |Android |Urządzenie z systemem Android zarządzane przy użyciu administratora urządzenia |
 | 12 |ISocConsumer |Urządzenie iSoc Consumer |
 | 14 |MacMDM |Urządzenie z systemem Mac OS X zarządzane za pomocą wbudowanego agenta MDM |
-| 15 |HoloLens |Urządzenia HoloLens |
+| 15 |HoloLens |Urządzenie HoloLens |
 | 16 |SurfaceHub |Urządzenie Surface Hub |
 | 17 |AndroidForWork |Urządzenie z systemem Android zarządzane przy pomocy właściciela profilu systemu Android |
 | 100 |Blackberry |Urządzenie Blackberry |
@@ -167,10 +167,10 @@ Jednostka **EnrollmentTypes** wskazuje, czy urządzenie jest firmowe, osobiste c
 |---------|------------|--------|
 | ownerTypeID |Unikatowy identyfikator typu właściciela. | |
 | ownerTypeKey |Unikatowy identyfikator typu właściciela w magazynie danych — klucz zastępczy. | |
-| ownerTypeName |Reprezentuje typ właściciela urządzeń:  <br>Firmowe — urządzenie jest własnością przedsiębiorstwa. <br>Personal — urządzenie jest własnością osobistą (BYOD).  <br>Unknown — brak informacji o tym urządzeniu. |Nieznany osobistych firmowych |
+| ownerTypeName |Reprezentuje typ właściciela urządzeń:  <br>Corporate — urządzenie jest własnością przedsiębiorstwa. <br>Personal — urządzenie jest własnością osobistą (BYOD).  <br>Unknown — brak informacji o tym urządzeniu. |Corporate Personal Unknown |
 
 > [!Note]  
-> Aby uzyskać `ownerTypeName` w usługi Azure AD podczas tworzenia grup dynamicznych w przypadku urządzeń, należy ustawić wartość filtru `deviceOwnership` jako `Company`. Aby uzyskać więcej informacji, zobacz [reguły dla urządzeń](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
+> Na potrzeby właściwości `ownerTypeName` w usłudze Azure AD należy podczas tworzenia grup dynamicznych dla urządzeń ustawić wartość filtru `deviceOwnership` na `Company`. Aby uzyskać więcej informacji, zobacz [Reguły urządzeń](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
 
 ## <a name="managementstates"></a>ManagementStates
 

@@ -23,11 +23,11 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/01/2019
 ms.locfileid: "58799269"
 ---
-# <a name="ios-device-settings-to-use-common-ios-features-in-intune"></a>Ustawienia urządzenia z systemem iOS korzystanie z typowych funkcji systemu iOS w usłudze Intune
+# <a name="ios-device-settings-to-use-common-ios-features-in-intune"></a>Ustawienia urządzeń z systemem iOS dotyczące korzystania z typowych funkcji systemu iOS w usłudze Intune
 
 Usługa Intune ma niektóre wbudowane ustawienia umożliwiające użytkownikom systemu iOS korzystanie z różnych funkcji firmy Apple na urządzeniach. Na przykład administratorzy mogą kontrolować sposób używania drukarki AirPrint przez użytkowników systemu iOS, dodawać aplikacje i foldery do obszaru dokowania i stron na ekranie głównym, pokazywać powiadomienia w aplikacji, pokazywać szczegóły tagu zasobu na ekranie blokady, korzystać z uwierzytelniania logowania jednokrotnego i uwierzytelniać użytkowników za pomocą certyfikatów.
 
-Użyj tych funkcji do kontrolowania urządzeń z systemem iOS w ramach rozwiązania do zarządzania (urządzeniami przenośnymi MDM) urządzenia przenośnego.
+Za pomocą tych funkcji możesz sterować urządzeniami z systemem iOS w ramach swojego rozwiązania do zarządzania urządzeniami mobilnymi (MDM).
 
 Ten artykuł zawiera listę tych ustawień i opisy zadań poszczególnych ustawień.
 
@@ -76,9 +76,9 @@ Ustawienia okienka **Dock** umożliwiają dodanie do sześciu elementów lub fol
 1. W obszarze **Ustawienia** wybierz pozycję **Układ ekranu głównego (tylko tryb nadzorowany)** > **Dock** > **Dodaj**. Możesz dodać maksymalnie **sześć** elementów (łącznie aplikacji i folderów) w obszarze Dock urządzenia.
 2. W obszarze **Typ** wybierz opcję dodania **aplikacji** lub **folderu**.
 
-    - **Dodaj aplikację**: wybierz tę opcję, aby dodać aplikacje do doku na ekranie. Wprowadź:
+    - **Dodaj aplikację**: wybierz tę opcję, aby dodać aplikacje do doku na ekranie. Wprowadź następujące informacje:
 
-      - **Nazwa aplikacji**: Wprowadź nazwę aplikacji. Ta nazwa jest używana w celach referencyjnych w witrynie Azure Portal. *Nie jest* ona wyświetlana na urządzeniu z systemem iOS.
+      - **Nazwa aplikacji**: wprowadź nazwę aplikacji. Ta nazwa jest używana w celach referencyjnych w witrynie Azure Portal. *Nie jest* ona wyświetlana na urządzeniu z systemem iOS.
       - **Identyfikator pakietu aplikacji**: podaj identyfikator pakietu aplikacji. Przykłady można znaleźć w sekcji [Identyfikatory pakietów dla wbudowanych aplikacji systemu iOS](#bundle-ids-for-built-in-ios-apps) (w tym artykule).
 
       Wybierz przycisk **OK**, aby zapisać zmiany.
@@ -90,15 +90,15 @@ Ustawienia okienka **Dock** umożliwiają dodanie do sześciu elementów lub fol
       1. Wprowadź **nazwę folderu**. Ta nazwa jest widoczna na urządzeniach użytkowników.
       2. Wybierz pozycję **Dodaj**, a następnie wprowadź następujące właściwości:
 
-          - **Nazwa strony**: Wprowadź nazwę dla strony. Ta nazwa jest używana w celach referencyjnych w witrynie Azure Portal. *Nie jest* ona wyświetlana na urządzeniu z systemem iOS.
-          - **Nazwa aplikacji**: Wprowadź nazwę aplikacji. Ta nazwa jest używana w celach referencyjnych w witrynie Azure Portal. *Nie jest* ona wyświetlana na urządzeniu z systemem iOS.
+          - **Nazwa strony**: wprowadź nazwę strony. Ta nazwa jest używana w celach referencyjnych w witrynie Azure Portal. *Nie jest* ona wyświetlana na urządzeniu z systemem iOS.
+          - **Nazwa aplikacji**: wprowadź nazwę aplikacji. Ta nazwa jest używana w celach referencyjnych w witrynie Azure Portal. *Nie jest* ona wyświetlana na urządzeniu z systemem iOS.
           - **Identyfikator pakietu aplikacji**: podaj identyfikator pakietu aplikacji. Przykłady można znaleźć w sekcji [Identyfikatory pakietów dla wbudowanych aplikacji systemu iOS](#bundle-ids-for-built-in-ios-apps) (w tym artykule).
 
       3. Wybierz pozycję **Dodaj**. Można dodać maksymalnie **20** stron do obszaru Dock urządzenia.
       4. Wybierz przycisk **OK**, aby zapisać zmiany.
 
 > [!NOTE]
-> Po dodaniu ikony przy użyciu ustawień dokowania, ikony na ekran główny i strony są zablokowane i nie może zostać przeniesiony. Może to być zgodnie z projektem przy użyciu systemu iOS i zasad MDM firmy Apple.
+> Gdy dodasz ikony za pomocą ustawień obszaru Dock, ikony na ekranie głównym i na stronach zostaną zablokowane i nie można będzie ich przenosić. Może to być celowe działanie zasad zarządzania urządzeniami mobilnymi firmy Apple i systemu iOS.
 
 #### <a name="example"></a>Przykład
 
@@ -124,9 +124,9 @@ Dodaj strony, które mają być wyświetlane na ekranie głównym, oraz aplikacj
 
 3. W obszarze **Typ** wybierz opcję dodania **aplikacji** lub **folderu**.
 
-    - **Dodaj aplikację**: wybierz tę opcję, aby dodać aplikacje do strony na ekranie. Wprowadź:
+    - **Dodaj aplikację**: wybierz tę opcję, aby dodać aplikacje do strony na ekranie. Wprowadź następujące informacje:
 
-      - **Nazwa aplikacji**: Wprowadź nazwę aplikacji. Ta nazwa jest używana w celach referencyjnych w witrynie Azure Portal. *Nie jest* ona wyświetlana na urządzeniu z systemem iOS.
+      - **Nazwa aplikacji**: wprowadź nazwę aplikacji. Ta nazwa jest używana w celach referencyjnych w witrynie Azure Portal. *Nie jest* ona wyświetlana na urządzeniu z systemem iOS.
       - **Identyfikator pakietu aplikacji**: podaj identyfikator pakietu aplikacji. Przykłady można znaleźć w sekcji [Identyfikatory pakietów dla wbudowanych aplikacji systemu iOS](#bundle-ids-for-built-in-ios-apps) (w tym artykule).
 
       Wybierz przycisk **OK**, aby zapisać zmiany.
@@ -138,8 +138,8 @@ Dodaj strony, które mają być wyświetlane na ekranie głównym, oraz aplikacj
       1. Wprowadź **nazwę folderu**. Ta nazwa jest widoczna na urządzeniach użytkowników.
       2. Wybierz pozycję **Dodaj**, a następnie wprowadź następujące właściwości:
 
-          - **Nazwa strony**: Wprowadź nazwę dla strony. Ta nazwa jest używana w celach referencyjnych w witrynie Azure Portal. *Nie jest* ona wyświetlana na urządzeniu z systemem iOS.
-          - **Nazwa aplikacji**: Wprowadź nazwę aplikacji. Ta nazwa jest używana w celach referencyjnych w witrynie Azure Portal. *Nie jest* ona wyświetlana na urządzeniu z systemem iOS.
+          - **Nazwa strony**: wprowadź nazwę strony. Ta nazwa jest używana w celach referencyjnych w witrynie Azure Portal. *Nie jest* ona wyświetlana na urządzeniu z systemem iOS.
+          - **Nazwa aplikacji**: wprowadź nazwę aplikacji. Ta nazwa jest używana w celach referencyjnych w witrynie Azure Portal. *Nie jest* ona wyświetlana na urządzeniu z systemem iOS.
           - **Identyfikator pakietu aplikacji**: podaj identyfikator pakietu aplikacji. Przykłady można znaleźć w sekcji [Identyfikatory pakietów dla wbudowanych aplikacji systemu iOS](#bundle-ids-for-built-in-ios-apps) (w tym artykule).
 
       3. Wybierz pozycję **Dodaj**.
@@ -175,7 +175,7 @@ Wybierz sposób, w jaki aplikacje na urządzeniu z systemem iOS wysyłają powia
          - **Brak**: powiadomienia nie są wyświetlane.
          - **Transparent**: wraz z powiadomieniem jest krótko wyświetlany transparent.
          - **Modalne**: zostanie wyświetlone powiadomienie, które użytkownik będzie musiał ręcznie zamknąć przed kontynuowaniem korzystania z urządzenia.
-       - **Znaczek na ikonie aplikacji**: Wybierz **Włącz** do Dodaj znaczek na ikonie aplikacji. Znaczek oznacza, że aplikacja wysłała powiadomienie.
+       - **Znaczek na ikonie aplikacji**: wybierz pozycję **Włącz**, aby dodać znaczek do ikony aplikacji. Znaczek oznacza, że aplikacja wysłała powiadomienie.
        - **Dźwięki**: wybierz opcję **Włącz**, aby odtwarzać dźwięk po dostarczeniu powiadomienia.
 
 3. Wybierz przycisk **OK**, aby zapisać zmiany. Kontynuuj dodawanie wybranych aplikacji. Po zakończeniu wybierz przycisk **OK**.
@@ -269,7 +269,7 @@ Te ustawienia kontrolują dostęp za pomocą adresu URL przeglądarki na urządz
 
     - **Konfiguruj adresy URL**: użyj wbudowanego filtru internetowego firmy Apple, który wyszukuje słownictwo przeznaczone dla osób dorosłych, w tym przekleństwa i słowa o charakterze seksualnym. Ta funkcja ocenia każdą stronę internetową podczas ładowania oraz identyfikuje i blokuje nieodpowiednią zawartość. Możesz również dodać adresy URL, które nie mają być sprawdzane przez filtr. Ponadto możesz zablokować określone adresy URL, niezależnie od ustawień filtru firmy Apple.
 
-      - **Dozwolone adresy URL**: **Dodaj** adresów URL, aby zezwolić. Te adresy URL są pomijane przez filtr internetowy firmy Apple.
+      - **Dozwolone adresy URL**: **dodaj** adresy URL, na które chcesz zezwolić. Te adresy URL są pomijane przez filtr internetowy firmy Apple.
 
         > [!NOTE]
         > Wprowadzone adresy to adresy URL, które nie mają być oceniane przez filtr internetowy firmy Apple. Te adresy URL nie stanowią listy dozwolonych witryn internetowych. Aby utworzyć listę dozwolonych witryn internetowych, należy ustawić **typ filtru** na pozycję **Tylko określone witryny internetowe**.
@@ -283,7 +283,7 @@ Te ustawienia kontrolują dostęp za pomocą adresu URL przeglądarki na urządz
     - **Tylko określone witryny internetowe** (dotyczy wyłącznie przeglądarki Safari): te adresy URL są dodawane do zakładek przeglądarki Safari. Użytkownik jest uprawniony **wyłącznie** do odwiedzania tych witryn internetowych; nie będzie można otwierać żadnych innych witryn. Użyj tej opcji tylko wtedy, gdy znasz dokładną listę adresów URL, do których użytkownicy mogą uzyskiwać dostęp.
 
       - **Adres URL**: podaj adres URL dozwolonej witryny internetowej. Na przykład wprowadź `https://www.contoso.com`.
-      - **Ścieżka do zakładki**: wprowadź ścieżkę do przechowywania zakładki. Na przykład wprowadź `/Contoso/Business Apps`. Jeśli nie dodasz ścieżki, zakładka zostanie dodana do domyślnego folderu zakładek na urządzeniu.
+      - **Ścieżka do zakładki**: wprowadź ścieżkę na potrzeby przechowywania zakładki. Na przykład wprowadź `/Contoso/Business Apps`. Jeśli nie dodasz ścieżki, zakładka zostanie dodana do domyślnego folderu zakładek na urządzeniu.
       - **Tytuł**: podaj opisowy tytuł zakładki.
 
       Jeśli nie wprowadzisz żadnych adresów URL, użytkownicy końcowi nie będą mogli uzyskiwać dostęp do żadnych witryn internetowych, z wyjątkiem `microsoft.com`, `microsoft.net`, i `apple.com`. Usługa Intune automatycznie zezwala na dostęp do tych adresów URL.
@@ -296,11 +296,11 @@ Dodaj niestandardowy obrazu PNG, JPG lub JPEG na urządzeniach nadzorowanych z s
 
 Jeśli profil bez obrazu zostanie przypisany do urządzeń z istniejącym obrazem, mogą wystąpić nieoczekiwane zachowania. Na przykład profil zostanie utworzony bez obrazu. Ten profil jest przypisany do urządzeń, które mają już obraz. W tym scenariuszu obraz może zostać zmieniony na obraz domyślny urządzenia lub oryginalny obraz może pozostać na urządzeniu. To zachowanie jest kontrolowane i ograniczane przez platformę MDM firmy Apple.
 
-- **Lokalizacja wyświetlania tapety**: Wybierz lokalizację na urządzeniu, aby wyświetlić obraz. Dostępne opcje:
-  - **Nieskonfigurowane**: niestandardowy obraz nie jest dodawany do urządzenia. Urządzenie używa wartości domyślnej systemu operacyjnego.
-  - **Ekran blokady**: dodaje obrazu ekranu blokady.
-  - **Ekran główny**: dodaje obrazu do ekranu głównego.
-  - **Blokada ekranu i na ekranie głównym**: używa tego samego obrazu na ekranie blokady i na ekranie głównym.
+- **Lokalizacja wyświetlania tapety**: wybierz lokalizację wyświetlania obrazu na urządzeniu. Dostępne opcje:
+  - **Nieskonfigurowane**: obraz niestandardowy nie jest dodawany do urządzenia. Urządzenie używa wartości domyślnej systemu operacyjnego.
+  - **Ekran blokady**: dodaje obraz do ekranu blokady.
+  - **Ekran główny**: dodaje obraz do ekranu głównego.
+  - **Ekran blokady i ekran główny**: używa tego samego obrazu na ekranie blokady i na ekranie głównym.
 - **Obraz tapety**: przekaż istniejący obraz PNG, JPG lub JPEG, którego chcesz użyć. Upewnij się, że rozmiar pliku jest mniejszy niż 750 KB. Możesz również **usunąć** obraz, który został dodany.
 
 > [!TIP]

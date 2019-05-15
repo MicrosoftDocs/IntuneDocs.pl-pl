@@ -33,34 +33,34 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
-[Tworzenie profilu konfiguracji urządzenia ograniczenia](device-restrictions-configure.md#create-the-profile).
+[Utwórz profil konfiguracji ograniczeń urządzenia](device-restrictions-configure.md#create-the-profile).
 
 ## <a name="general"></a>Ogólne
 
 - **Udostępnij dane użycia**: wybierz pozycję **Blokuj**, aby uniemożliwić urządzeniu wysyłanie danych diagnostycznych i danych użycia do firmy Apple. Pozycja **Nieskonfigurowane** (domyślna) umożliwia wysyłanie tych danych.
-  - **Modyfikowanie ustawień przesyłania danych diagnostycznych (tylko tryb nadzorowany)**: **bloku** uniemożliwia użytkownikowi zmianę diagnostycznych ustawień analizy przesyłania danych i aplikacji w **diagnostyczne i dane użycia**(ustawieniach urządzenia). Pozycja **Nieskonfigurowane** (domyślna) umożliwia użytkownikowi zmianę tych ustawień urządzenia.
+  - **Modyfikacja ustawień przesyłania danych diagnostycznych (tylko nadzorowany)**: pozycja **Blokuj** uniemożliwia użytkownikowi zmianę ustawień analizy aplikacji i przesyłania danych diagnostycznych w obszarze **Diagnostyka i użycie** (ustawienia urządzenia). Pozycja **Nieskonfigurowane** (domyślna) umożliwia użytkownikowi zmianę tych ustawień urządzenia.
 
     Ta funkcja ma zastosowanie do:  
     - System iOS 9.3.2 lub nowszy
 
-- **Przechwytywanie ekranu**: wybierz pozycję **Blokuj**, aby uniemożliwić tworzenie zrzutów ekranu i przechwytywanie ekranów w urządzeniu. W systemie iOS 9.0 i nowsze również w tym nagrania ekranu blokowania. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia użytkownikowi przechwytywanie zawartości ekranu w formie obrazu lub pliku wideo.
+- **Przechwytywanie ekranu**: wybierz pozycję **Blokuj**, aby uniemożliwić tworzenie zrzutów ekranu i przechwytywanie ekranów w urządzeniu. W systemie iOS 9.0 i nowszych wersjach obejmuje to również blokadę rejestrowania ekranu. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia użytkownikowi przechwytywanie zawartości ekranu w formie obrazu lub pliku wideo.
   - **Zdalny podgląd ekranu za pomocą aplikacji Classroom (tylko nadzorowany)**: wybierz pozycję **Blokuj**, aby uniemożliwić aplikacji Classroom zdalne wyświetlanie podglądu ekranu w urządzeniach. Pozycja **Nieskonfigurowane** (domyślna) umożliwia aplikacji Classroom firmy Apple wyświetlanie ekranu.
 
     Ta funkcja ma zastosowanie do:  
     - iOS 9.3 i nowsze
 
-  - **Obserwacja ekranu bez monitowania za pomocą aplikacji Classroom (tylko tryb nadzorowany)**: w przypadku ustawienia opcji **Zezwalaj** nauczyciele mogą dyskretnie obserwować ekrany urządzeń z systemem iOS przy użyciu aplikacji Classroom bez wiedzy uczniów. Urządzenia uczniów zarejestrowanych na zajęcia za pomocą aplikacji Classroom automatycznie udzielają uprawnień nauczycielowi na danym kursie. **Nieskonfigurowane** (ustawienie domyślne) zapobiega tej funkcji.
-- **Niezaufane certyfikaty protokołu TLS**: wybierz pozycję **Blokuj**, aby uniemożliwić używanie niezaufanych certyfikatów protokołu Transport Layer Security (TLS) na urządzeniu. **Nieskonfigurowane** (ustawienie domyślne) umożliwia certyfikaty protokołu TLS.
+  - **Obserwacja ekranu bez monitowania za pomocą aplikacji Classroom (tylko tryb nadzorowany)**: w przypadku ustawienia opcji **Zezwalaj** nauczyciele mogą dyskretnie obserwować ekrany urządzeń z systemem iOS przy użyciu aplikacji Classroom bez wiedzy uczniów. Urządzenia uczniów zarejestrowanych na zajęcia za pomocą aplikacji Classroom automatycznie udzielają uprawnień nauczycielowi na danym kursie. Pozycja **Nie skonfigurowano** (ustawienie domyślne) blokuje tę funkcję.
+- **Niezaufane certyfikaty protokołu TLS**: wybierz pozycję **Blokuj**, aby uniemożliwić używanie niezaufanych certyfikatów protokołu Transport Layer Security (TLS) na urządzeniu. Pozycja **Nieskonfigurowane** (ustawienie domyślne) pozwala na korzystanie z certyfikatów protokołu TLS.
 - **Zaufanie do aplikacji dla przedsiębiorstw**: wybierz pozycję **Blokuj**, aby usunąć przycisk **Ufaj deweloperowi aplikacji dla przedsiębiorstw** w obszarze Ustawienia > Ogólne > Zarządzanie profilami i urządzeniami na urządzeniu. Opcja **Nieskonfigurowane** (domyślna) umożliwia użytkownikowi określenie, że ufa aplikacjom, które nie zostały pobrane ze sklepu z aplikacjami.
 - **Modyfikacja konta (tylko nadzorowany)**: po ustawieniu pozycji **Blokuj** użytkownik nie może aktualizować ustawień specyficznych dla urządzenia z poziomu aplikacji obsługującej ustawienia systemu iOS. Na przykład użytkownik nie może tworzyć nowych kont urządzenia lub zmieniać nazwy użytkownika albo hasła. Opcja **Nieskonfigurowane** (domyślna) umożliwia użytkownikom zmianę tych ustawień.
 
   Ta funkcja ma również zastosowanie w przypadku ustawień dostępnych z poziomu aplikacji z ustawieniami dla systemu iOS, takich jak Poczta, Kontakty, Kalendarz, Twitter i inne. Ta funkcja nie ma zastosowania w przypadku aplikacji z ustawieniami konta, których nie można skonfigurować z poziomu aplikacji obsługującej ustawienia dla systemu iOS, na przykład aplikacji Microsoft Outlook.
-- **Ekranu (tylko tryb nadzorowany) czasu**: Wybierz **bloku** aby uniemożliwić użytkownikom ustawianie ich własnych ograniczeń w czasu ekranu (ustawienia urządzenia). **Nieskonfigurowane** zezwala użytkownikowi na Konfigurowanie ograniczeń urządzenia (na przykład kontroli rodzicielskiej lub zawartości i ograniczeń związanych z prywatnością) na urządzeniu.
+- **Czas korzystania z urządzenia (tylko tryb nadzorowany)**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom określanie własnych ograniczeń w obszarze ustawień urządzenia Czas korzystania z urządzenia. Pozycja **Nieskonfigurowane** zezwala użytkownikowi na konfigurowanie ograniczeń urządzenia (na przykład kontroli rodzicielskiej oraz ograniczeń dotyczących zawartości i prywatności) na urządzeniu.
 
-  To ustawienie Nazwa została zmieniona z **włączenie ograniczeń w ustawieniach urządzenia**. Wpływ tej zmiany:  
+  Poprzednio to ustawienie nosiło nazwę **Włączenie ograniczeń w ustawieniach urządzenia**. Wpływ tej zmiany:  
   
-  - System iOS 11.4.1 i starsze: opcja **Blokuj** uniemożliwia użytkownikom końcowym ustawianie własnych ograniczeń w ustawieniach urządzenia. To jest taka sama; i nie ma zmian dla użytkowników końcowych.
-  - iOS 12.0 i nowsze: **bloku** uniemożliwia użytkownikom ustawianie ich własnych **czasu ekranu** w ustawieniach urządzenia (Ustawienia > Ogólne > czasu ekranu), włączając w to ograniczenia zawartości i zachowania. Uaktualnione do systemu iOS 12.0 urządzenia nie będzie widoczna na karcie ograniczeń w ustawieniach urządzenia już (Ustawienia > Ogólne > Zarządzanie urządzeniami > Profil zarządzania > ograniczenia). Te ustawienia znajdują się teraz w obszarze **Czas korzystania z urządzenia**.
+  - System iOS 11.4.1 i starsze: opcja **Blokuj** uniemożliwia użytkownikom końcowym ustawianie własnych ograniczeń w ustawieniach urządzenia. Działanie jest takie samo, nie wprowadzono zmian dotyczących użytkowników końcowych.
+  - System iOS 12.0 i nowsze: opcja **Blokuj** uniemożliwia użytkownikom końcowym określanie własnych ustawień w obszarze **Czas korzystania z urządzenia** w ustawieniach urządzenia (Ustawienia > Ogólne > Czas korzystania z urządzenia), w tym ograniczeń dotyczących zawartości i prywatności. Na urządzeniach uaktualnionych do wersji systemu iOS 12.0 w ustawieniach urządzenia nie będzie już wyświetlana karta ograniczeń (Ustawienia > Ogólne > Zarządzanie urządzeniami > Profil zarządzania > Ograniczenia). Te ustawienia znajdują się teraz w obszarze **Czas korzystania z urządzenia**.
   
 - **Użyj funkcji wymazania całej zawartości i wszystkich ustawień z urządzenia (tylko nadzorowany)**: wybierz pozycję **Blokuj**, aby użytkownicy nie mogli korzystać z opcji wymazywania całej zawartości i wszystkich ustawień z urządzenia (tylko tryb nadzorowany). Opcja **Nieskonfigurowane** (domyślna) zapewnia użytkownikom dostęp do tych ustawień.
 - **Modyfikacja nazwy urządzenia (tylko nadzorowany)**: wybierz pozycję **Blokuj**, aby nie można było zmienić nazwy urządzenia. Opcja **Nieskonfigurowane** (domyślna) umożliwia użytkownikowi zmianę nazwy urządzenia.
@@ -70,38 +70,38 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 - **Zmiany profilu konfiguracji (tylko nadzorowany)**: pozycja **Blokuj** uniemożliwia zmiany profilów konfiguracji na urządzeniu. Opcja **Nieskonfigurowane** (domyślna) zezwala użytkownikowi na instalowanie profilów konfiguracji.
 - **Blokada aktywacji (tylko nadzorowany)**: wybierz pozycję **Zezwalaj**, aby umożliwić stosowanie blokady aktywacji na nadzorowanych urządzeniach z systemem iOS. Blokada aktywacji utrudnia ponowne aktywowanie utraconego lub skradzionego urządzenia.
 - **Blokuj usuwanie aplikacji (tylko nadzorowany)**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom usuwanie aplikacji. Opcja **Nieskonfigurowane** (domyślna) pozwala użytkownikom na usuwanie aplikacji z urządzenia.
-- **Blokuje tryb ograniczony USB (tylko tryb nadzorowany)**: wybierz pozycję **Blokuj**, aby wyłączyć tryb ograniczony USB na urządzeniach w trybie nadzorowanym. Tryb ograniczony USB uniemożliwia akcesoriom USB wymienianie danych z urządzeniem zablokowanym przez ponad godzinę. **Nieskonfigurowane** (wartość domyślna) zezwala na tryb ograniczonego USB.
+- **Blokuje tryb ograniczony USB (tylko tryb nadzorowany)**: wybierz pozycję **Blokuj**, aby wyłączyć tryb ograniczony USB na urządzeniach w trybie nadzorowanym. Tryb ograniczony USB uniemożliwia akcesoriom USB wymienianie danych z urządzeniem zablokowanym przez ponad godzinę. Pozycja **Nieskonfigurowane** (ustawienie domyślne) zezwala na stosowanie trybu ograniczonego USB.
 - **Wymuszanie automatycznej daty i godziny (tylko nadzorowany)**: pozycja **Wymagaj** wymusza automatyczne ustawianie daty i godziny na urządzeniach nadzorowanych. Strefa czasowa urządzenia jest aktualizowana, gdy urządzenie ma połączenie komórkowe lub sieć Wi-Fi z włączonymi usługami lokalizacji.
 - **Wymagaj, aby uczniowie prosili o zezwolenie na opuszczenie kursu aplikacji Classroom (tylko tryb nadzorowany)**: pozycja **Wymagaj** wymusza, aby uczniowie zarejestrowani na niezarządzanych zajęciach prosili nauczyciela o pozwolenie na opuszczenie kursu przy użyciu aplikacji Classroom. Opcja **Nieskonfigurowane** (domyślna) oznacza, że uczeń nie musi prosić o pozwolenie.
 
   Ta funkcja ma zastosowanie do:  
   - System iOS 11.3 i nowsze
 
-- **Zezwalaj na klasy, aby zablokować do aplikacji i zablokować urządzenie bez monitowania użytkownika (tylko tryb nadzorowany)**: **Włącz** umożliwia dla nauczycieli zablokować aplikacje lub zablokować urządzenie przy użyciu aplikacji Classroom bez monitowania dla uczniów. Blokowanie aplikacji oznacza, że urządzenie może tylko dla nauczycieli dostęp do określonych aplikacji. **Nieskonfigurowane** (ustawienie domyślne) zapobiega nauczycieli blokowania aplikacji lub urządzeń, za pomocą aplikacji Classroom bez monitowania dla uczniów. 
+- **Zezwalaj środowisku Classroom na blokowanie aplikacji i blokowanie urządzenia bez monitu (tylko tryb nadzorowany)**: pozycja **Włącz** umożliwia nauczycielowi blokowanie aplikacji lub urządzeń za pomocą aplikacji Classroom bez monitowania uczniów. Blokowanie aplikacji oznacza, że na urządzeniu można uzyskać dostęp tylko do aplikacji określonych przez nauczyciela. Pozycja **Nieskonfigurowane** (ustawienie domyślne) uniemożliwia nauczycielowi blokowanie aplikacji lub urządzeń za pomocą aplikacji Classroom bez monitowania uczniów. 
 
   Ta funkcja ma zastosowanie do:  
   - System iOS 11.0 i nowsze
 
-- **Automatycznie sprzężenia klas Classroom bez monitowania użytkownika (tylko tryb nadzorowany)**: **Włącz** automatycznie umożliwia uczniom do dołączenia do klasy, który znajduje się w aplikacji Classroom bez monitowania dla nauczycieli. **Nieskonfigurowane** (ustawienie domyślne) wyświetla monit dla nauczycieli, który studentów, aby dołączyć klasę, która znajduje się w aplikacji Classroom.
+- **Automatycznie dołączaj do zajęć w środowisku Classroom bez monitu (tylko tryb nadzorowany)**: pozycja **Włącz** automatycznie zezwala uczniom na dołączanie do zajęć w aplikacji Classroom bez monitowania nauczyciela. Pozycja **Nieskonfigurowane** (ustawienie domyślne) powoduje wyświetlenie nauczycielowi monitu o uczniach, którzy chcą dołączyć do zajęć w aplikacji Classroom.
 
   Ta funkcja ma zastosowanie do:  
   - System iOS 11.0 i nowsze
 
 - **Zezwalaj na bezprzewodowe aktualizacje infrastruktury PKI**: pozycja **Zezwalaj** pozwala użytkownikom na otrzymywanie aktualizacji oprogramowania bez podłączania urządzeń do komputera.
-- **Ograniczanie śledzenia reklam**: wybierz pozycję **Ogranicz**, aby wyłączyć identyfikator treści reklamowych urządzenia. **Nieskonfigurowane** (ustawienie domyślne) utrzymuje je włączyć.
+- **Ograniczanie śledzenia reklam**: wybierz pozycję **Ogranicz**, aby wyłączyć identyfikator treści reklamowych urządzenia. Pozycja **Nieskonfigurowane** (ustawienie domyślne) powoduje, że identyfikator pozostaje włączony.
 - **Blokowanie tworzenia sieci VPN (tylko tryb nadzorowany)**: pozycja **Blokuj** uniemożliwia użytkownikom tworzenie ustawień konfiguracji sieci VPN. Opcja **Nieskonfigurowane** (domyślna) pozwala użytkownikom na tworzenie sieci VPN na urządzeniu.
-- **Modyfikowanie ustawień karty eSIM (tylko tryb nadzorowany)**: **bloku** uniemożliwia użytkownikom usunięcie lub dodanie komórkowej plan do karty eSIM na urządzeniu. Opcja **Nieskonfigurowane** (domyślna) umożliwia użytkownikom zmianę tych ustawień.
+- **Modyfikowanie ustawień karty eSIM (tylko tryb nadzorowany)**: pozycja **Blokuj** uniemożliwia użytkownikom dodawanie i usuwanie planów komórkowych w ustawieniach karty eSIM tego urządzenia. Opcja **Nieskonfigurowane** (domyślna) umożliwia użytkownikom zmianę tych ustawień.
 
   Ta funkcja ma zastosowanie do:  
   - System iOS 12.1 i nowsze
 
-- **Odroczenie aktualizacji oprogramowania (tylko tryb nadzorowany)**: po ustawieniu **nieskonfigurowane** (ustawienie domyślne), aktualizacje oprogramowania są wyświetlane na urządzeniu z Apple zwalnia je. Na przykład jeśli aktualizacji systemu iOS pobiera wydany przez firmę Apple w określonym dniu, następnie aktualizacja naturalnie pojawia się na urządzeniu wokół daty wydania.
+- **Odrocz aktualizacje oprogramowania (tylko tryb nadzorowany)**: jeśli jest wybrana opcja **Nieskonfigurowane** (ustawienie domyślne), aktualizacje oprogramowania są wyświetlane na urządzeniu w momencie ich publikacji przez firmę Apple. Na przykład jeśli firma Apple opublikuje aktualizację systemu iOS określonego dnia, ta aktualizacja będzie naturalnie widoczna na urządzeniu w okolicy tego terminu.
 
-  **Włącz** umożliwia opóźnienie podczas aktualizacji oprogramowania są wyświetlane na urządzeniach z 0 – 90 dni. To ustawienie nie kontroluje, kiedy aktualizacje są lub nie są zainstalowane. 
+  Pozycja **Włącz** umożliwia opóźnienie momentu wyświetlenia aktualizacji oprogramowania na urządzeniach o określony czas z przedziału 0–90 dni. To ustawienie nie określa momentu instalowania lub nieinstalowania aktualizacji. 
 
-  - **Opóźnienie widoczność aktualizacji oprogramowania**: wprowadź wartość z zakresu od 0 – 90 dni. Po upływie czasu opóźnienia użytkownicy otrzymują powiadomienie o aktualizacji do najnowszej wersji systemu operacyjnego dostępnej w momencie wyzwolenia opóźnienia.
+  - **Opóźnij widoczność aktualizacji oprogramowania**: wprowadź wartość z zakresu 0–90 dni. Po upływie czasu opóźnienia użytkownicy otrzymują powiadomienie o aktualizacji do najnowszej wersji systemu operacyjnego dostępnej w momencie wyzwolenia opóźnienia.
 
-    Na przykład jeśli dla systemu iOS 12.a jest dostępny na **1 stycznia**, i **opóźnienie widoczność** jest ustawiona na **5 dni**, następnie iOS 12.a nie jest wyświetlana jako dostępna aktualizacja, na urządzeniach użytkowników końcowych. Na **szósty dzień** opublikowania wersji, że jest dostępna aktualizacja, a użytkownicy końcowi mogą zainstalować ją.
+    Na przykład jeśli wersja systemu iOS 12.a została udostępniona **1 stycznia**, a ustawienie **Opóźnij widoczność** ma wartość **5 dni**, wersja systemu iOS 12.a nie będzie początkowo widoczna na urządzeniach użytkowników końcowych jako dostępna aktualizacja. Będzie ona dostępna do instalacji przez użytkowników końcowych **szóstego dnia** po publikacji.
 
     To ustawienie ma zastosowanie do:  
     - System iOS 11.3 i nowsze
@@ -135,7 +135,7 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 
 - **Blokuj zbliżeniowe żądania haseł (tylko tryb nadzorowany)**: wybierz pozycję **Blokuj**, aby urządzenie użytkownika nie żądało haseł od urządzeń znajdujących się w pobliżu. Pozycja **Nieskonfigurowane** (wartość domyślna) zezwala na te żądania haseł.
 - **Blokuj udostępnianie haseł (tylko tryb nadzorowany)**: pozycja **Blokuj** uniemożliwia udostępnianie haseł między urządzeniami przy użyciu funkcji AirDrop. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia udostępnianie haseł.
-- **Wymagaj uwierzytelniania funkcji Touch ID i Face ID dla informacje hasła lub karty kredytowej Autowypełnianie (tylko tryb nadzorowany)**: po ustawieniu **wymagają**, użytkownicy muszą uwierzytelniać się przy użyciu funkcji TouchID lub FaceID przed hasła lub karty kredytowej informacje mogą być automatycznie wypełniony w przeglądarkach Safari i innych aplikacji. **Nieskonfigurowane** (ustawienie domyślne), umożliwiającą użytkownikom określanie tej funkcji w ustawieniach urządzenia.
+- **Wymagaj uwierzytelniania za pomocą funkcji Touch ID lub Face ID przy automatycznym wypełnianiu haseł lub informacji o kartach kredytowych (tylko tryb nadzorowany)**: jeśli jest ustawiona opcja **Wymagaj**, użytkownicy będą musieli uwierzytelnić się za pomocą funkcji TouchID lub FaceID, aby w przeglądarce Safari lub innych aplikacjach mogły zostać automatycznie wypełnione hasła lub informacje o kartach kredytowych. Pozycja **Nieskonfigurowane** (ustawienie domyślne) umożliwia użytkownikom samodzielne decydowanie o tej funkcji w ustawieniach urządzenia.
 
   Ta funkcja ma zastosowanie do:  
   - System iOS 11.0 i nowsze
@@ -159,12 +159,12 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 - **Jawna zawartość programu iTunes — muzyka, podcasty lub wiadomości (tylko tryb nadzorowany)**: wybierz pozycję **Blokuj**, aby uniemożliwić ujawnianie zawartości programu iTunes: muzyki, podkastów lub wiadomości. Pozycja **Nieskonfigurowane** zezwala urządzeniu na dostęp do zawartości w sklepie sklasyfikowanej jako zawartość dla dorosłych.
 - **Pobieranie ze sklepu iBook zawartości oznaczonej jako „Erotyka”**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom pobieranie ze sklepu iBook multimediów oznaczonych jako erotyka. Pozycja **Nieskonfigurowane** zezwala użytkownikom na pobieranie ze sklepu iBook książek z kategorii „Erotyka”.
 - **Wyświetlanie dokumentów firmowych w aplikacjach niezarządzanych**: pozycja **Blokuj** uniemożliwia wyświetlanie dokumentów firmowych w aplikacjach niezarządzanych. Pozycja **Nieskonfigurowane** zezwala na wyświetlanie dokumentów firmowych w dowolnej aplikacji. Na przykład chcesz uniemożliwić użytkownikom zapisywanie plików z aplikacji OneDrive w aplikacji Dropbox. Skonfiguruj to ustawienie jako **Blokuj**. Jeśli urządzenie otrzymało zasady (na przykład po ponownym uruchomieniu), nie ma już możliwości zapisywania.
-  - **Zezwalaj zarządzanym aplikacjom na zapisuj kontakty do kont niezarządzanych kontakty**: po ustawieniu **Zezwalaj**, użytkownicy mogą dodać lub synchronizowania informacji skontaktuj się z pomocą programu Outlook każda osoba, łącznie z firmy i kontakty firmowe do wbudowana aplikacja kontakty na urządzeniu. Po ustawieniu opcji **Nieskonfigurowane** użytkownicy nie mogą dodawać kontaktów programu Outlook do wbudowanej aplikacji Kontakty na urządzeniu.
+  - **Zezwalaj zarządzanym aplikacjom na zapisywanie kontaktów na niezarządzanych kontach kontaktów**: po ustawieniu opcji **Zezwalaj** użytkownicy mogą dodawać lub synchronizować informacje kontaktowe dowolnej osoby w programie Outlook, w tym kontakty biznesowe i firmowe, przy użyciu wbudowanej aplikacji Kontakty na urządzeniu. Po ustawieniu opcji **Nieskonfigurowane** użytkownicy nie mogą dodawać kontaktów programu Outlook do wbudowanej aplikacji Kontakty na urządzeniu.
   
     Aby użyć tego ustawienia, skonfiguruj ustawienie **Wyświetlanie dokumentów firmowych w aplikacjach niezarządzanych** na wartość **Blokuj**.
   
 - **Wyświetlanie dokumentów innych niż firmowe w aplikacjach niezarządzanych**: pozycja **Blokuj** uniemożliwia wyświetlanie dokumentów innych niż firmowe w aplikacjach firmowych. Pozycja **Nieskonfigurowane** zezwala na wyświetlanie dowolnych dokumentów w zarządzanych aplikacjach firmowych.
-  - **Umożliwiają niezarządzanym aplikacjom odczytywanie kontaktów zarządzanych kont**: po ustawieniu **Zezwalaj**, użytkownicy mogą dodawać informacje kontaktowe aplikacji iContacts każda osoba w programie Outlook. Ustawienie opcji **Nieskonfigurowane** zapobiega odczytywaniu informacji z wbudowanej aplikacji Kontakty na urządzeniu oraz uniemożliwia usuwanie duplikatów.
+  - **Zezwalaj niezarządzanym aplikacjom na odczytywanie danych z zarządzanych kont kontaktów**: ustawienie opcji **Zezwalaj** powoduje, że użytkownicy mogą dodawać informacje kontaktowe dowolnej osoby z aplikacji iContacts do programu Outlook. Ustawienie opcji **Nieskonfigurowane** zapobiega odczytywaniu informacji z wbudowanej aplikacji Kontakty na urządzeniu oraz uniemożliwia usuwanie duplikatów.
   
     Aby użyć tego ustawienia, skonfiguruj ustawienie **Wyświetlanie dokumentów innych niż firmowe w aplikacjach firmowych** na wartość **Blokuj**.
   
@@ -250,12 +250,12 @@ Aby dodać aplikacje do tych list, możesz:
 - **Wybieranie głosowe**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom korzystanie z funkcji wybierania głosowego na urządzeniu. Opcja **Nieskonfigurowane** (domyślna) umożliwia wybieranie głosowe na urządzeniu.
 - **Roaming połączeń głosowych**: wybierz pozycję **Blokuj**, aby uniemożliwić roaming połączeń danych w sieci komórkowej. Opcja **Nieskonfigurowane** (domyślna) zezwala na roaming połączeń głosowych, gdy urządzenie jest w sieci komórkowej.
 - **Zmiany ustawień użycia danych komórkowych aplikacji (tylko nadzorowany)**: wybierz pozycję **Blokuj**, aby uniemożliwić zmiany ustawień użycia danych komórkowych aplikacji. Opcja **Nieskonfigurowane** (domyślna) umożliwia użytkownikowi kontrolowanie, które aplikacje mogą korzystać z danych komórkowych.
-- **Zmiany ustawień planu sieci komórkowej (tylko tryb nadzorowany)**: **bloku** uniemożliwia użytkownikom Zmiana jakichkolwiek ustawień w planie sieci komórkowej. **Nieskonfigurowane** (ustawienie domyślne) pozwala użytkownikom na dokonanie zmiany.
+- **Zmiany w ustawieniach planu komórkowego (tylko tryb nadzorowany)**: pozycja **Blokuj** uniemożliwia użytkownikom zmianę jakichkolwiek ustawień planu komórkowego. Opcja **Nieskonfigurowane** (ustawienie domyślne) umożliwia użytkownikom wprowadzanie zmian.
 
   Ta funkcja ma zastosowanie do:  
   - System iOS 11.0 i nowsze
 
-- **Osobisty Hotspot**: **bloku** wyłącza osobisty hotspot na urządzeniu użytkownika przy każdej synchronizacji urządzenia. To ustawienie może być niezgodne w przypadku niektórych operatorów. **Nieskonfigurowane** (ustawienie domyślne) przechowuje konfigurację osobisty hotspot jako domyślnej ustawionej przez użytkownika.
+- **Osobisty hotspot**: opcja **Blokuj** wyłącza osobisty hotspot na urządzeniu użytkownika przy każdej synchronizacji urządzenia. To ustawienie może być niezgodne w przypadku niektórych operatorów. Opcja **Nieskonfigurowane** (ustawienie domyślne) zachowuje domyślną konfigurację osobistego hotspotu ustawioną przez użytkownika.
 - **Dołączaj do sieci Wi-Fi wyłącznie za pomocą profilów konfiguracji (tylko nadzorowany)**: pozycja **Wymagaj** wymusza użycie na urządzeniu tylko sieci Wi-Fi, które zostały skonfigurowane przy użyciu profilu konfiguracji usługi Intune. Opcja **Nieskonfigurowane** (domyślna) zezwala urządzeniu na korzystanie z innych sieci Wi-Fi.
 - **Zasady użycia danych komórkowych (tylko aplikacje zarządzane)**: zdefiniuj typy danych, których aplikacje zarządzane mogą używać podczas pracy w sieciach komórkowych. Dostępne opcje:
   - **Zablokuj użycie danych komórkowych**: zablokuj użycie danych komórkowych dla **wszystkich zarządzanych aplikacji** lub **wybierz określone aplikacje**.
@@ -273,7 +273,7 @@ Aby dodać aplikacje do tych list, możesz:
   - **Blokuj przechowywanie poświadczeń AirPrint w pęku kluczy (tylko tryb nadzorowany)**: pozycja **Blokuj** uniemożliwia korzystanie z magazynu pęku kluczy do przechowywania nazwy użytkownika i hasła na urządzeniu. Opcja **Nieskonfigurowane** (domyślna) umożliwia przechowywanie nazwy użytkownika i hasła funkcji AirPrint w aplikacji pęku kluczy.
   - **Wymagaj zaufanego certyfikatu TLS na potrzeby funkcji AirPrint (tylko tryb nadzorowany)**: pozycja **Wymagaj** wymusza użycie zaufanych certyfikatów na potrzeby komunikacji dotyczącej drukowania przy użyciu protokołu TLS.
   - **Blokuj odnajdywanie drukarek AirPrint za pomocą protokołu iBeacon (tylko tryb nadzorowany)**: pozycja **Blokuj** uniemożliwia złośliwym sygnałom nawigacyjnym funkcji AirPrint Bluetooth wyłudzanie informacji dotyczących ruchu sieciowego. Opcja **Nieskonfigurowane** (domyślna) zezwala na ogłaszanie drukarek AirPrint na urządzeniu.
-- **Blokuj ustawienie zapasowej nowe pobliskich urządzeń (tylko tryb nadzorowany)**: **bloku** wyłącza monit Aby skonfigurować nowe urządzenia, które są w pobliżu. **Nieskonfigurowane** (wartość domyślna) zezwala na monity dotyczące użytkownikom nawiązywanie połączeń z urządzeniami firmy Apple w pobliżu.
+- **Blokuj konfigurowanie nowych urządzeń w pobliżu (tylko tryb nadzorowany)**: pozycja **Blokuj** wyłącza monitowanie o konfigurację nowych urządzeń znajdujących się w pobliżu. Opcja **Nieskonfigurowane** (ustawienie domyślne) zezwala na monitowanie użytkowników o połączenie z innymi urządzeniami firmy Apple znajdującymi się w pobliżu.
 
   Ta funkcja ma zastosowanie do:  
   - System iOS 11.0 i nowsze
@@ -290,7 +290,7 @@ Aby dodać aplikacje do tych list, możesz:
 ## <a name="cloud-and-storage"></a>Chmura i magazyn
 
 - **Tworzenie kopii zapasowych w usłudze iCloud**: pozycja **Nieskonfigurowane** umożliwia użytkownikowi tworzenie kopii zapasowych urządzenia w usłudze iCloud. Pozycja **Blokuj** uniemożliwia użytkownikowi tworzenie kopii zapasowych urządzenia w usłudze iCloud.
-- **Synchronizowanie dokumentów z usługą iCloud (tylko tryb nadzorowany)**: pozycja **Nieskonfigurowane** umożliwia synchronizowanie dokumentów i par klucz-wartość w obszarze magazynu usługi iCloud. Pozycja **Blokuj** uniemożliwia synchronizowanie dokumentów i danych w usłudze iCloud.
+- **Blokuj synchronizowanie dokumentów z usługą iCloud (tylko tryb nadzorowany)**: pozycja **Nieskonfigurowane** umożliwia synchronizowanie dokumentów i par klucz-wartość w obszarze magazynu usługi iCloud. Pozycja **Blokuj** uniemożliwia synchronizowanie dokumentów i danych w usłudze iCloud.
 - **Synchronizowanie strumienia zdjęć z usługą iCloud**: pozycja **Nieskonfigurowane** umożliwia użytkownikom włączanie funkcji **Mój strumień zdjęć** na urządzeniu, co pozwala na synchronizowanie z usługą iCloud i udostępnianie zdjęć na wszystkich urządzeniach użytkownika. Pozycja **Blokuj** zezwala na synchronizację funkcji Strumień zdjęć w usłudze iCloud.
 - **Szyfrowana kopia zapasowa**: pozycja **Wymagaj** umożliwia wymaganie szyfrowania wszystkich kopii zapasowych urządzenia.
 - **Biblioteka zdjęć usługi iCloud**: ustaw tę opcję na pozycję **Blokuj**, aby wyłączyć możliwość używania biblioteki zdjęć usługi iCloud do przechowywania zdjęć i klipów wideo w chmurze. Wszystkie zdjęcia, które nie zostały w pełni pobrane z biblioteki zdjęć iCloud na urządzenie, są usuwane z urządzenia. Pozycja **Nieskonfigurowane** umożliwia używanie biblioteki zdjęć iCloud.
@@ -313,10 +313,10 @@ Aby dodać aplikacje, możesz wykonać następujące czynności:
 ## <a name="kiosk-supervised-only"></a>Kiosk (tylko nadzorowany)
 
 - **Aplikacja do uruchomienia w trybie kiosku**: wybierz typ aplikacji, które chcesz uruchomić w trybie kiosku. Dostępne opcje:
-  - **Nieskonfigurowane**: nie są stosowane ustawienia kiosku. Urządzenie nie zostanie uruchomiony w trybie kiosku.
+  - **Nieskonfigurowane**: ustawienia kiosku nie są stosowane. Urządzenie nie zostanie uruchomione w trybie kiosku.
   - **Aplikacja ze sklepu**: podaj adres URL aplikacji w sklepie iTunes.
   - **Zarządzana aplikacja**: wybierz aplikację dodaną do usługi Intune.
-  - **Wbudowana aplikacja**: wprowadź [identyfikator pakietu](#bundle-ids-for-built-in-ios-apps) (w tym artykule) wbudowanej aplikacji.
+  - **Wbudowana aplikacja**: wprowadź [identyfikator pakietu](#bundle-ids-for-built-in-ios-apps) wbudowanej aplikacji (zgodnie z opisem w tym artykule).
 
 - **Obsługa dotykowa z ułatwieniami**: pozycja **Wymagaj** wymusza ustawienie ułatwień dostępu Obsługa dotykowa z ułatwieniami na urządzeniu. Ta funkcja pomaga użytkownikom wykonywać na ekranie gesty, które mogą okazać się trudne. Pozycja **Nieskonfigurowane** nie uruchamia ani nie włącza tej funkcji w trybie kiosku.
 - **Odwróć kolory**: pozycja **Wymagaj** wymusza użycie ułatwień dostępu Odwróć kolory, co umożliwia użytkownikom niedowidzącym zmienianie ustawień ekranu. Pozycja **Nieskonfigurowane** nie uruchamia ani nie włącza tej funkcji w trybie kiosku.
@@ -341,11 +341,11 @@ Aby dodać aplikacje, możesz wykonać następujące czynności:
 
 ## <a name="domains"></a>Domains
 
-- **Nieoznaczone domeny poczty e-mail** > **adres URL domeny poczty E-mail**: Dodaj co najmniej jeden adres URL do listy. Gdy użytkownicy końcowi otrzymają wiadomość e-mail z domeny innej niż wprowadzona, wiadomość e-mail zostanie oznaczona w aplikacji Mail dla systemu iOS jako niezaufana.
+- **Nieoznaczone domeny poczty e-mail** > **Adres URL poczty e-mail**: dodaj do listy co najmniej jeden adres URL. Gdy użytkownicy końcowi otrzymają wiadomość e-mail z domeny innej niż wprowadzona, wiadomość e-mail zostanie oznaczona w aplikacji Mail dla systemu iOS jako niezaufana.
 
-- **Zarządzane domeny sieci web** > **adres URL domeny sieci Web**; Dodaj co najmniej jeden adres URL do listy. Dokumenty pobierane z wprowadzonych domen są uznawane za zarządzane. To ustawienie ma zastosowanie wyłącznie do dokumentów pobieranych przy użyciu przeglądarki Safari.
+- **Zarządzane domeny sieci Web** > **Adres URL domeny sieci Web**: dodaj do listy co najmniej jeden adres URL. Dokumenty pobierane z wprowadzonych domen są uznawane za zarządzane. To ustawienie ma zastosowanie wyłącznie do dokumentów pobieranych przy użyciu przeglądarki Safari.
 
-- **Domeny automatycznego wypełniania haseł w przeglądarce Safari** > **adres URL domeny**: Dodaj co najmniej jeden adres URL do listy. Użytkownicy mogą zapisywać wyłącznie hasła witryn sieci Web dla adresów URL znajdujących się na tej liście. To ustawienie dotyczy wyłącznie przeglądarki Safari oraz urządzeń z systemem iOS w wersji 9.3 lub nowszym działających w trybie nadzorowanym. Jeśli nie podasz żadnych adresów URL, użytkownicy będą mogli zapisywać hasła ze wszystkich witryn sieci Web.
+- **Domeny automatycznego wypełniania haseł w programie Safari** > **Adres URL domeny**: dodaj do listy co najmniej jeden adres URL. Użytkownicy mogą zapisywać wyłącznie hasła witryn sieci Web dla adresów URL znajdujących się na tej liście. To ustawienie dotyczy wyłącznie przeglądarki Safari oraz urządzeń z systemem iOS w wersji 9.3 lub nowszym działających w trybie nadzorowanym. Jeśli nie podasz żadnych adresów URL, użytkownicy będą mogli zapisywać hasła ze wszystkich witryn sieci Web.
 
 ## <a name="bundle-ids-for-built-in-ios-apps"></a>Identyfikatory pakietów dla wbudowanych aplikacji systemu iOS
 
@@ -450,4 +450,4 @@ Tryb nadzorowany systemu iOS można włączyć tylko podczas początkowego konfi
 
 [Przypisywanie profilu](device-profile-assign.md) i [monitorowanie jego stanu](device-profile-monitor.md).
 
-Można również ograniczyć funkcji i ustawień urządzenia, na [macOS](device-restrictions-macos.md) urządzeń.
+Możesz również skonfigurować ograniczenia dotyczące funkcji i ustawień urządzenia z systemem [macOS](device-restrictions-macos.md).

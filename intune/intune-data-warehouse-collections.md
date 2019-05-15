@@ -281,7 +281,7 @@ Jednostka **deviceType** reprezentuje typ urządzenia przywoływany przez inne j
 | 12           | ISocConsumer      | Urządzenie iSoc Consumer                                |
 | 13           | Unix              | Urządzenie z systemem UNIX                                         |
 | 14           | MacMDM            | Urządzenie z systemem Mac OS X zarządzane za pomocą wbudowanego agenta MDM |
-| 15           | HoloLens          | Urządzenia HoloLens                                       |
+| 15           | HoloLens          | Urządzenie HoloLens                                       |
 | 16           | SurfaceHub        | Urządzenie Surface Hub                                  |
 | 17           | AndroidForWork    | Urządzenie z systemem Android zarządzane przy pomocy właściciela profilu systemu Android  |
 | 18           | AndroidEnterprise | Urządzenie z systemem Android Enterprise.                          |
@@ -435,8 +435,8 @@ Jednostka **MamApplication** tworzy listę aplikacji biznesowych (LOB), które s
 | Właściwość | Opis | Przykład |
 |---------|------------|--------|
 | mamApplicationKey |Unikatowy identyfikator aplikacji MAM. | 432 |
-| mamApplicationName |Nazwa aplikacji MAM. |Zarządzanie aplikacjami Mobilnymi aplikacja przykładowa nazwa |
-| mamApplicationId |Identyfikator aplikacji dla aplikacji MAM. | 123 |
+| mamApplicationName |Nazwa aplikacji MAM. |Przykładowa nazwa aplikacji MAM |
+| mamApplicationId |Identyfikator aplikacji MAM. | 123 |
 | IsDeleted |Wskazuje, czy ten rekord aplikacji MAM został zaktualizowany. <br>True — aplikacja MAM ma nowy rekord ze zaktualizowanymi polami w tej tabeli. <br>False — to jest najnowszy rekord dla tej aplikacji MAM. |Prawda/Fałsz |
 | StartDateInclusiveUTC |Data i godzina w formacie UTC utworzenia tej aplikacji MAM w magazynie danych. |2016-11-23 12:00:00 |
 | DeletedDateUTC |Data i godzina w formacie UTC zmiany właściwości IsDeleted na wartość True. |2016-11-23 12:00:00 |
@@ -453,15 +453,15 @@ Jednostka **MamApplicationInstance** tworzy listę zarządzanych aplikacji zarz�
 |   ApplicationInstanceKey   |                                                               Unikatowy identyfikator wystąpienia aplikacji MAM w magazynie danych — klucz zastępczy.                                                                |                 123                  |
 |           UserId           |                                                                              Identyfikator użytkownika, który ma zainstalowaną tę aplikację MAM.                                                                              | b66bc706-ffff-7437-0340-032819502773 |
 |   ApplicationInstanceId    |                                              Unikatowy identyfikator wystąpienia aplikacji MAM — podobny do wartości ApplicationInstanceKey, ale identyfikator jest kluczem naturalnym.                                              | b66bc706-ffff-7437-0340-032819502773 |
-| mamApplicationId | Identyfikator aplikacji Mam, dla którego utworzono tego wystąpienia aplikacji Mam.   | 2016-11-23 12:00:00   |
+| mamApplicationId | Identyfikator aplikacji MAM, dla której utworzono to wystąpienie aplikacji MAM.   | 2016-11-23 12:00:00   |
 |     ApplicationVersion     |                                                                                     Wersja aplikacji dla tej aplikacji MAM.                                                                                      |                  2                   |
 |        CreatedDate         |                                                                 Data utworzenia tego rekordu wystąpienia aplikacji MAM. Wartość może być równa null.                                                                 |        2016-11-23 12:00:00        |
 |          Platforma          |                                                                          Platforma urządzenia, na której zainstalowano tę aplikację MAM.                                                                           |                  2                   |
 |      PlatformVersion       |                                                                      Wersja platformy urządzenia, na której jest zainstalowana ta aplikacja MAM.                                                                       |                 2.2                  |
 |         SdkVersion         |                                                                            Wersja zestawu SDK MAM, za pomocą którego aplikacja MAM została opakowana.                                                                            |                 3.2                  |
-| mamDeviceId | Identyfikator urządzenia dla urządzenia, z którym skojarzony jest wystąpienia aplikacji MAM.   | 2016-11-23 12:00:00   |
-| mamDeviceType | Typ urządzenia, urządzenia, z którym skojarzony jest wystąpienia aplikacji MAM.   | 2016-11-23 12:00:00   |
-| mamDeviceName | Nazwa urządzenia dla urządzenia, z którym skojarzony jest wystąpienia aplikacji MAM.   | 2016-11-23 12:00:00   |
+| mamDeviceId | Identyfikator urządzenia, z którym jest skojarzone wystąpienie aplikacji MAM.   | 2016-11-23 12:00:00   |
+| mamDeviceType | Typ urządzenia, z którym jest skojarzone wystąpienie aplikacji MAM.   | 2016-11-23 12:00:00   |
+| mamDeviceName | Nazwa urządzenia, z którym jest skojarzone wystąpienie aplikacji MAM.   | 2016-11-23 12:00:00   |
 |         IsDeleted          | Wskazuje, czy ten rekord wystąpienia aplikacji MAM został zaktualizowany. <br>True — to wystąpienie aplikacji MAM ma nowy rekord ze zaktualizowanymi polami w tej tabeli. <br>False — to jest najnowszy rekord dla tego wystąpienia aplikacji MAM. |              Prawda/Fałsz              |
 |   StartDateInclusiveUTC    |                                                              Data i godzina w formacie UTC utworzenia tego wystąpienia aplikacji MAM w magazynie danych.                                                               |        2016-11-23 12:00:00        |
 |       DeletedDateUTC       |                                                                             Data i godzina w formacie UTC zmiany właściwości IsDeleted na wartość True.                                                                              |        2016-11-23 12:00:00        |
@@ -479,7 +479,7 @@ Jednostka **MamCheckin** reprezentuje dane zebrane po zameldowaniu wystąpienia 
 | DateKey |Klucz daty zarejestrowania zameldowania aplikacji MAM w magazynie danych. | 20160703 |
 | ApplicationInstanceKey |Klucz wystąpienia aplikacji skojarzony z zameldowaniem tej aplikacji MAM. | 123 |
 | UserKey |Klucz użytkownika skojarzony z zameldowaniem tej aplikacji MAM. | 4323 |
-| mamApplicationKey |Aplikacji klucza z aplikacji skojarzonej z ewidencjonowanie aplikacji zarządzania aplikacjami Mobilnymi. | 432 |
+| mamApplicationKey |Klucz aplikacji skojarzonej z zameldowaniem aplikacji MAM. | 432 |
 | DeviceHealthKey |Klucz kondycji urządzenia skojarzony z zameldowaniem tej aplikacji MAM. | 321 |
 | PlatformKey |Reprezentuje platformę urządzenia skojarzonego z zameldowaniem tej aplikacji MAM. |123 |
 | LastCheckInDate |Data i godzina ostatniego zameldowania tej aplikacji MAM. Wartość może być równa null. |2016-11-23 12:00:00 |
@@ -527,7 +527,7 @@ Jednostka **managementAgentTypes** reprezentuje agentów używanych do zarządza
 | 5                     | EasIntuneClient                   | Urządzenie jest zarządzane zarówno przez program Exchange Active Sync, jak i agenta PC usługi Intune |
 | 8                     | ConfigManagerClient               | Urządzenie jest zarządzane przez agenta programu System Center Configuration Manager     |
 | 10                    | ConfigurationManagerClientMdm     | Urządzenie jest zarządzane przez program Configuration Manager i oprogramowanie MDM.                    |
-| 11                    | ConfigurationManagerCLientMdmEas  | Urządzenie jest zarządzane przez Menedżera konfiguracji i zarządzania urządzeniami Przenośnymi programu Exchange Active Sync.               |
+| 11                    | ConfigurationManagerCLientMdmEas  | Urządzenie jest zarządzane przez program Configuration Manager, oprogramowanie MDM i rozwiązanie Exchange Active Sync.               |
 | 16                    | Nieznane                           | Nieznany typ agenta zarządzania                                              |
 | 32                    | Jamf                              | Atrybuty urządzenia są pobierane z narzędzia Jamf.                               |
 | 64                    | GoogleCloudDevicePolicyController |  Urządzenie jest zarządzane przez rozwiązanie CloudDPC firmy Google.                                 |
@@ -586,10 +586,10 @@ Jednostka **ownerType** wskazuje, czy urządzenie jest firmowe, osobiste czy nie
 |:-------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------:|
 | ownerTypeID   | Unikatowy identyfikator typu właściciela.                                                                                                                                               |                            |
 | ownerTypeKey  | Unikatowy identyfikator typu właściciela w magazynie danych — klucz zastępczy.                                                                                                       |                            |
-| ownerTypeName | Reprezentuje typ właściciela urządzenia: Corporate — urządzenie jest własnością przedsiębiorstwa.  Personal — urządzenie jest własnością osobistą (BYOD).   Unknown — brak informacji o tym urządzeniu. | Nieznany osobistych firmowych |
+| ownerTypeName | Reprezentuje typ właściciela urządzenia: Corporate — urządzenie jest własnością przedsiębiorstwa.  Personal — urządzenie jest własnością osobistą (BYOD).   Unknown — brak informacji o tym urządzeniu. | Corporate Personal Unknown |
 
 > [!Note]  
-> Aby uzyskać `ownerTypeName` filtru w usługi Azure AD podczas tworzenia grup dynamicznych w przypadku urządzeń, należy ustawić wartość `deviceOwnership` jako `Company`. Aby uzyskać więcej informacji, zobacz [reguły dla urządzeń](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
+> Na potrzeby filtru `ownerTypeName` w usłudze Azure AD należy podczas tworzenia grup dynamicznych dla urządzeń ustawić wartość parametru `deviceOwnership` na `Company`. Aby uzyskać więcej informacji, zobacz [Reguły urządzeń](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
 
 ## <a name="policies"></a>policies
 Jednostka **Policy** zawiera listę profilów konfiguracji urządzeń, profilów konfiguracji aplikacji i zasad zgodności. Za pomocą funkcji zarządzania urządzeniami przenośnymi (MDM) możesz przypisać zasady grupie w przedsiębiorstwie.

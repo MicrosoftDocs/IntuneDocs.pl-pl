@@ -1,11 +1,11 @@
 ---
-title: Sprawdzanie zgodności urządzeń z systemem Windows w usłudze Microsoft Intune — Azure | Microsoft Docs
-description: 'Utwórz lub skonfiguruj zasady zgodności urządzenia w usłudze Microsoft Intune w przypadku urządzeń z systemem Windows Phone 8.1, Windows 8.1 i nowszym oraz Windows 10 i nowszym. Sprawdź zgodność następujących elementów: minimalna i maksymalna wersja systemu operacyjnego, ustawianie ograniczeń i długości hasła, wymaganie funkcji BitLocker, sprawdzanie rozwiązań antywirusowych innych firm, ustawianie dopuszczalnego poziomu zagrożenia i włączanie szyfrowania w magazynie danych, z uwzględnieniem urządzeń Surface Hub i systemu Windows Holographic for Business.'
+title: Ustawienia zgodności dla systemu Windows 10 w usłudze Microsoft Intune — Azure | Microsoft Docs
+description: Zapoznaj się z listą ustawień umożliwiających skonfigurowanie zgodności dla urządzeń z systemem Windows 10 lub Windows Holographic oraz urządzeń Surface Hub w usłudze Microsoft Intune. Możesz między innymi sprawdzać zgodność z wymaganiami dotyczącymi minimalnej i maksymalnej wersji systemu operacyjnego, określać długość hasła i inne ograniczenia, sprawdzać stosowanie partnerskich rozwiązań antywirusowych czy włączać szyfrowanie magazynu danych.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/20/2019
+ms.date: 04/04/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,122 +15,54 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: acf14ea6f1b667cb631a424223a40e44a8338edd
-ms.sourcegitcommit: 768430b5296573c6e007ae4e13d57aeda4be4b7e
-ms.translationtype: MTE75
+ms.openlocfilehash: 8d956526d483a74ca5929180a48ea2dcd8b3eab7
+ms.sourcegitcommit: 02803863eba37ecf3d8823a7f1cd7c4f8e3bb42c
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306846"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59423632"
 ---
-# <a name="add-a-device-compliance-policy-for-windows-devices-in-intune"></a>Dodawanie zasad zgodności urządzeń z systemem Windows w usłudze Intune
+# <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Ustawienia urządzeń z systemem Windows 10 lub nowszym umożliwiające oznaczenie ich jako zgodne lub niezgodne w usłudze Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Zasady zgodności urządzeń w usłudze Intune obejmują reguły i ustawienia, które urządzenia muszą spełnić, aby zostały uznane za zgodne. Tych zasad można użyć w celu zastosowania dostępu warunkowego, aby zezwolić na dostęp do zasobów organizacji lub go zablokować. Można również pobrać raporty urządzeń i podjąć akcje w przypadku niezgodności.
+W tym artykule wymieniono i opisano różne ustawienia zgodności, które można skonfigurować na urządzeniach z systemem Windows 10 lub nowszym za pomocą usługi Intune. Możesz stosować te ustawienia w ramach rozwiązania do zarządzania urządzeniami mobilnymi (MDM), aby między innymi wymagać korzystania z funkcji BitLocker, określać minimalną i maksymalną wersję systemu operacyjnego oraz określać poziom ryzyka na potrzeby zaawansowanej ochrony przed zagrożeniami w usłudze Windows Defender.
 
-Aby dowiedzieć się więcej na temat zasad zgodności i wymagań wstępnych, zobacz [Wprowadzenie do zasad zgodności urządzeń](device-compliance-get-started.md).
+Ta funkcja ma zastosowanie do:
 
-W poniższej tabeli opisano sposób postępowania z niezgodnymi ustawieniami w przypadku, gdy zasady zgodności są używane wraz z zasadami dostępu warunkowego.
+- System Windows 10 lub nowszy
+- Windows Holographic for Business
+- Surface Hub
 
----------------------------
+Jako administrator usługi Intune możesz użyć tych ustawień zgodności, aby chronić zasoby organizacji. Aby dowiedzieć się więcej na temat zasad zgodności i ich działania, zobacz [Wprowadzenie do zasad zgodności urządzeń](device-compliance-get-started.md).
 
-| **Ustawienie zasad** | **Windows 8.1 lub nowszy** | **Windows Phone 8.1 lub nowszy** |
-|----| ----| --- |
-| **Konfiguracja kodu PIN lub hasła** | Skorygowane | Skorygowane |   
-| **Szyfrowanie urządzenia** | Nie dotyczy | Skorygowane |   
-| **Urządzenie ze złamanymi ograniczeniami lub z odblokowanym dostępem** | Nie dotyczy | Nie dotyczy |  
-| **Profil e-mail** | Nie dotyczy | Nie dotyczy |   
-| **Minimalna wersja systemu operacyjnego** | Poddane kwarantannie | Poddane kwarantannie |   
-| **Maksymalna wersja systemu operacyjnego** | Poddane kwarantannie | Poddane kwarantannie |   
-| **Zaświadczanie o kondycji systemu Windows** | Poddane kwarantannie: Windows 10 i Windows 10 Mobile|Nie dotyczy: Windows 8.1 |
+## <a name="before-you-begin"></a>Przed rozpoczęciem
 
--------------------------------
+[Utwórz zasady zgodności](create-compliance-policy.md#create-the-policy). W polu **Platforma** wybierz pozycję **Windows 10 i nowsze**.
 
-**Skorygowane** — system operacyjny urządzenia wymusza zgodność. (Na przykład użytkownik jest zmuszony do ustawienia kodu PIN).
+## <a name="device-health"></a>Device health
 
-**Poddane kwarantannie** — system operacyjny urządzenia nie wymusza zgodności. (Na przykład urządzenie z systemem Android nie zmusza użytkownika do szyfrowania urządzenia). Gdy urządzenie nie jest zgodne, zostaną wykonane następujące akcje:
+- **Wymagaj funkcji BitLocker**: po wybraniu opcji **Wymagaj** urządzenie może chronić dane przechowywane na dysku przed nieautoryzowanym dostępem, gdy system jest wyłączony lub przechodzi w stan hibernacji. Szyfrowanie dysków funkcją BitLocker szyfruje wszystkie dane przechowywane na woluminie systemu operacyjnego Windows. Funkcja BitLocker używa modułu TPM do ochrony systemu operacyjnego i danych użytkownika. Pomaga także zagwarantować, że zabezpieczenia nie zostaną naruszone nawet wtedy, gdy komputer zostanie zgubiony, skradziony lub pozostawiony bez nadzoru. Jeśli komputer jest wyposażony w zgodny moduł TPM, funkcja BitLocker używa go do zablokowania kluczy szyfrowania służących do ochrony danych. W związku z tym klucze będą niedostępne, dopóki moduł TPM nie zweryfikuje stanu komputera.
 
-- Urządzenie zostanie zablokowane, jeśli użytkownik podlega zasadom dostępu warunkowego.
-- Portal firmy powiadomi użytkownika o wszelkich problemach ze zgodnością.
+  W przypadku wybrania opcji **Nieskonfigurowane** (wartość domyślna) to ustawienie nie jest oceniane na potrzeby określenia zgodności.
 
-## <a name="create-a-device-compliance-policy"></a>Tworzenie zasad zgodności urządzenia
+- **Wymagaj włączenia bezpiecznego rozruchu w urządzeniu**: po wybraniu opcji **Wymagaj** system musi włączać się do fabrycznie zaufanego stanu. W takiej sytuacji podstawowe składniki używane do uruchamiania urządzenia muszą mieć prawidłowe podpisy kryptograficzne, uznawane za zaufane przez organizację, która wyprodukowała urządzenie. Oprogramowanie układowe UEFI sprawdza podpis, zanim pozwoli na uruchomienie komputera. Jeśli jakiekolwiek pliki zostaną naruszone, co spowoduje uszkodzenie ich podpisu, system nie zostanie uruchomiony.
 
-[!INCLUDE [new-device-compliance-policy](./includes/new-device-compliance-policy.md)]
-5. W obszarze **Platforma** wybierz pozycję **Windows Phone 8.1**, **Windows 8.1 i nowsze** lub **Windows 10 i nowsze**.
-6. Wybierz pozycję **Konfiguruj ustawienia** i wprowadź wartości ustawień **Kondycja urządzenia**, **Właściwości urządzenia** i **Zabezpieczenia systemu**. Po zakończeniu wybierz kolejno przycisk **OK** i pozycję **Utwórz**.
-
-<!--- 4. Choose **Actions for noncompliance** to say what actions should happen when a device is determined as noncompliant with this policy.
-5. In the **Actions for noncompliance** pane, choose **Add** to create a new action.  The action parameters pane allows you to specify the action, email recipients that should receive the notification in addition to the user of the device, and the content of the notification that you want to send.
-6. The message template option allows you to create several custom emails depending on when the action is set to take. For example, you can create a message for notifications that are sent for the first time and a different message for final warning before access is blocked. The custom messages that you create can be used for all your device compliance policy.
-7. Specify the **Grace period** which determines when that action to take place.  For example, you may want to send a notification as soon as the device is evaluated as noncompliant, but allow some time before enforcing the conditional access policy to block access to company resources like SharePoint online.
-8. Choose **Add** to finish creating the action.
-9. You can create multiple actions and the sequence in which they should occur. Choose **Ok** when you are finished creating all the actions.--->
-
-## <a name="windows-81-devices-policy-settings"></a>Ustawienia zasad dla urządzeń z systemem Windows 8.1
-
-Te ustawienia zasad są stosowane do urządzeń z następującymi platformami:
-
-- Windows Phone 8,1
-- Windows 8.1 i nowsze
-
-### <a name="device-properties"></a>Właściwości urządzenia
-
-- **Wymagana minimalna wersja systemu operacyjnego:** jeśli urządzenie nie spełnia wymagań dotyczących minimalnej wersji systemu operacyjnego, będzie zgłaszane jako niezgodne. Zostanie wyświetlony link ze wskazówkami dotyczącymi uaktualniania. Użytkownik końcowy może zdecydować się na uaktualnienie swojego urządzenia, co umożliwi mu dostęp do zasobów firmy.
-- **Dozwolona maksymalna wersja systemu operacyjnego**: jeśli urządzenie korzysta z wersji systemu operacyjnego nowszej niż określona w regule, spowoduje to zablokowanie dostępu do zasobów firmy. Użytkownik zostanie poproszony o kontakt z administratorem IT. Urządzenie nie może uzyskiwać dostępu do zasobów organizacji do momentu zmiany reguły na dopuszczającą daną wersję systemu operacyjnego.
-
-Komputery z systemem Windows 8.1 zwracają wersję **3**. Jeśli ustawiono regułę wersji systemu operacyjnego Windows na wartość Windows 8.1, urządzenie jest zgłaszane jako niezgodne nawet wtedy, gdy działa na nim system Windows 8.1.
-
-### <a name="system-security"></a>Zabezpieczenia systemu
-
-#### <a name="password"></a>Hasło
-
-- **Wymagaj hasła do odblokowania urządzeń przenośnych**: wybierz pozycję **Wymagaj**, aby wymagać od użytkowników podania hasła przed uzyskaniem dostępu do urządzenia.
-- **Proste hasła**: ustaw wartość **Blokuj**, aby uniemożliwić użytkownikom tworzenie prostych haseł, takich jak **1234** lub **1111**. Ustaw wartość **Nieskonfigurowane**, aby umożliwić użytkownikom tworzenie haseł, takich jak **1234** lub **1111**.
-- **Minimalna długość hasła**: wprowadź minimalną liczbę cyfr lub znaków, które musi zawierać hasło.
-
-  W przypadku urządzeń z systemem Windows, które są dostępne przy użyciu konta Microsoft, sprawdzanie zasad zgodności zakończy się niepowodzeniem:
-  - Jeśli minimalna długość hasła jest większa niż osiem znaków
-  - Lub jeśli minimalna liczba zestawów znaków jest większa niż dwa
-
-- **Typ hasła**: określ, czy hasło ma zawierać tylko znaki **numeryczne**, czy też ma być dopuszczalna kombinacja cyfr i innych znaków (**Alfanumeryczne**).
-  
-  - **Liczba znaków innych niż alfanumeryczne w haśle**: jeśli pozycja **Wymagany typ hasła** została ustawiona na wartość **Alfanumeryczne**, to ustawienie określa minimalną wymaganą liczbę zestawów znaków do użycia w haśle. Są cztery zestawy znaków:
-    - Małe litery
-    - Wielkie litery
-    - Symbole
-    - Liczby
-
-    Ustawienie większej liczby wymaga wprowadzenia bardziej skomplikowanego hasła przez użytkownika. W przypadku urządzeń, które są dostępne przy użyciu konta Microsoft, sprawdzanie zasad zgodności zakończy się niepowodzeniem:
-
-    - Jeśli minimalna długość hasła jest większa niż osiem znaków
-    - Lub jeśli minimalna liczba zestawów znaków jest większa niż dwa
-
-- **Maksymalny czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**: wprowadź czas bezczynności, po którym użytkownik musi ponownie wprowadzić hasło.
-- **Wygaśnięcie hasła (dni)**: wybierz liczbę dni, po których hasło wygasa i należy utworzyć nowe.
-- **Liczba poprzednich haseł, których nie można użyć ponownie**: wprowadź liczbę poprzednio używanych haseł, których ponowne użycie nie jest możliwe.
-
-#### <a name="encryption"></a>Szyfrowanie
-
-- **Wymagaj szyfrowania na urządzeniu przenośnym**: wartość **Wymagaj** oznacza, że urządzenie musi zostać zaszyfrowane w celu połączenia się z zasobami magazynu danych.
-
-## <a name="windows-10-and-later-policy-settings"></a>Ustawienia zasad dla systemu Windows 10 i nowszych
-
-### <a name="device-health"></a>Device health
-
-- **Wymagaj funkcji BitLocker**: po włączeniu funkcji BitLocker urządzenie może chronić dane przechowywane na dysku przed nieautoryzowanym dostępem, gdy system jest wyłączony lub przechodzi w stan hibernacji. Szyfrowanie dysków funkcją BitLocker szyfruje wszystkie dane przechowywane na woluminie systemu operacyjnego Windows. Funkcja BitLocker używa modułu TPM do ochrony systemu operacyjnego i danych użytkownika. Pomaga także zagwarantować, że zabezpieczenia nie zostaną naruszone nawet wtedy, gdy komputer zostanie zgubiony, skradziony lub pozostawiony bez nadzoru. Jeśli komputer jest wyposażony w zgodny moduł TPM, funkcja BitLocker używa go do zablokowania kluczy szyfrowania służących do ochrony danych. W związku z tym klucze będą niedostępne, dopóki moduł TPM nie zweryfikuje stanu komputera.
-- **Wymagaj włączenia bezpiecznego rozruchu w urządzeniu**: po włączeniu funkcji bezpiecznego rozruchu system musi włączać się do fabrycznie zaufanego stanu. Ponadto po włączeniu funkcji bezpiecznego rozruchu podstawowe składniki używane do uruchamiania urządzenia muszą mieć prawidłowe podpisy kryptograficzne, które są podpisami zaufanymi dla organizacji, która wyprodukowała urządzenie. Oprogramowanie układowe UEFI sprawdza podpis, zanim pozwoli na uruchomienie komputera. Jeśli jakiekolwiek pliki zostaną naruszone, co spowoduje uszkodzenie ich podpisu, system nie zostanie uruchomiony.
+  W przypadku wybrania opcji **Nieskonfigurowane** (wartość domyślna) to ustawienie nie jest oceniane na potrzeby określenia zgodności.
 
   > [!NOTE]
-  > Ustawienie **Wymagaj włączenia bezpiecznego rozruchu na urządzeniu** jest obsługiwane na niektórych urządzeniach z modułami TPM 1.2 i 2.0. W przypadku urządzeń, które nie obsługują modułu TPM 2.0 ani nowszego, stan zasad w usłudze Intune ma wartość **Niezgodne**. Aby uzyskać więcej informacji na temat obsługiwanych wersji, zobacz [zaświadczanie o kondycji urządzenia](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation).
+  > Ustawienie **Wymagaj włączenia bezpiecznego rozruchu na urządzeniu** jest obsługiwane na niektórych urządzeniach z modułami TPM 1.2 i 2.0. W przypadku urządzeń, które nie obsługują modułu TPM 2.0 ani nowszego, stan zasad w usłudze Intune ma wartość **Niezgodne**. Aby uzyskać więcej informacji na temat obsługiwanych wersji, zobacz [Device Health Attestation (Zaświadczanie o kondycji urządzenia)](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation).
 
-- **Wymagaj integralności kodu**: integralność kodu jest funkcją, która weryfikuje integralność pliku sterownika lub pliku systemowego zawsze wtedy, gdy jest ładowany do pamięci. Funkcja integralności kodu wykrywa, czy do jądra jest ładowany niepodpisany plik sterownika lub plik systemowy. Wykrywa ona także sytuację, w której plik systemowy został zmodyfikowany przez złośliwe oprogramowanie uruchomione przez konto użytkownika z uprawnieniami administratora.
+- **Wymagaj integralności kodu**: integralność kodu jest funkcją, która weryfikuje integralność pliku sterownika lub pliku systemowego zawsze wtedy, gdy jest ładowany do pamięci. Po wybraniu opcji **Wymagaj** funkcja integralności kodu wykrywa, czy do jądra jest ładowany niepodpisany plik sterownika lub plik systemowy. Wykrywa ona także sytuację, w której plik systemowy został zmieniony przez złośliwe oprogramowanie uruchomione przez konto użytkownika z uprawnieniami administratora.
 
-Dodatkowe zasoby:
+  W przypadku wybrania opcji **Nieskonfigurowane** (wartość domyślna) to ustawienie nie jest oceniane na potrzeby określenia zgodności.
+
+Więcej zasobów:
 
 - Artykuł [Health Attestation CSP](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp) (Zaświadczanie o kondycji CSP) zawiera szczegółowe informacje na temat sposobu działania usługi HAS.
-- [Porada pomocy technicznej: Przy użyciu ustawienia zaświadczania o kondycji urządzenia jako część zasad zgodności usługi Intune ](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643)
+- [Support Tip: Using Device Health Attestation Settings as Part of Your Intune Compliance Policy (Porada pomocy technicznej: korzystanie z ustawień zaświadczania o kondycji urządzenia w ramach zasad zgodności usługi Intune)](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643)
 
-### <a name="device-properties"></a>Właściwości urządzenia
+## <a name="device-properties"></a>Właściwości urządzenia
 
 - **Minimalna wersja systemu operacyjnego**: wprowadź minimalną dozwoloną wersję w formacie numerycznym **główna.pomocnicza.kompilacja.aktualizacja_zbiorcza**. Aby uzyskać prawidłową wartość, otwórz wiersz polecenia i wpisz `ver`. Polecenie `ver` zwraca wersję w następującym formacie:
 
@@ -142,7 +74,7 @@ Dodatkowe zasoby:
 
   `Microsoft Windows [Version 10.0.17134.1]`
 
-  Jeśli urządzenie korzysta z wersji systemu operacyjnego późniejszej niż wprowadzona w regule, spowoduje to zablokowanie dostępu do zasobów firmy i wyświetlenie monitu o kontakt z administratorem IT. Urządzenie nie będzie mogło uzyskiwać dostępu do zasobów firmy, dopóki reguła nie zostanie zmieniona tak, aby dopuszczać daną wersję systemu operacyjnego.
+  Jeśli urządzenie korzysta z wersji systemu operacyjnego nowszej niż określona, powoduje to zablokowanie dostępu do zasobów organizacji. Użytkownik końcowy zostanie poproszony o kontakt z administratorem IT. Urządzenie nie będzie mogło uzyskiwać dostępu do zasobów organizacji, dopóki reguła nie zostanie zmieniona tak, aby dopuszczać daną wersję systemu operacyjnego.
 
 - **Wymagana minimalna wersja systemu operacyjnego dla urządzeń przenośnych**: wprowadź minimalną dozwoloną wersję w formacie numerycznym główna.pomocnicza.kompilacja.
 
@@ -150,23 +82,23 @@ Dodatkowe zasoby:
 
 - **Wymagana maksymalna wersja systemu operacyjnego dla urządzeń przenośnych**: wprowadź maksymalną dozwoloną wersję w formacie numerycznym główna.pomocnicza.kompilacja.
 
-  Jeśli urządzenie korzysta z wersji systemu operacyjnego późniejszej niż wprowadzona, spowoduje to zablokowanie dostępu do zasobów firmy i wyświetlenie monitu o kontakt z administratorem IT. Urządzenie nie będzie mogło uzyskiwać dostępu do zasobów firmy, dopóki reguła nie zostanie zmieniona tak, aby dopuszczać daną wersję systemu operacyjnego.
+  Jeśli urządzenie korzysta z wersji systemu operacyjnego nowszej niż określona, powoduje to zablokowanie dostępu do zasobów organizacji. Użytkownik końcowy zostanie poproszony o kontakt z administratorem IT. Urządzenie nie będzie mogło uzyskiwać dostępu do zasobów organizacji, dopóki reguła nie zostanie zmieniona tak, aby dopuszczać daną wersję systemu operacyjnego.
 
 - **Prawidłowe kompilacje systemów operacyjnych**: wprowadź zakres dopuszczalnych wersji systemu operacyjnego, w tym wersję minimalną i maksymalną. Możesz również **wyeksportować** listę plików wartości rozdzielanych przecinkami (CSV), która będzie zawierać dopuszczalne numery kompilacji systemu operacyjnego.
 
-### <a name="configuration-manager-compliance"></a>Zgodność w programie Configuration Manager
+## <a name="configuration-manager-compliance"></a>Zgodność w programie Configuration Manager
 
 Dotyczy tylko współzarządzanych urządzeń z systemem Windows 10 lub nowszym. Urządzenia przeznaczone tylko dla usługi Intune zwracają stan Niedostępne.
 
-- **Wymagaj zgodności urządzenia w programie System Center Configuration Manager**: Wybierz **wymagają** wymusić in System Center Configuration Manager by następowała wszystkich ustawień (elementów konfiguracji). 
+- **Wymagaj zgodności urządzenia z poziomu programu System Center Configuration Manager**: wybierz pozycję **Wymagaj**, aby wymuszać zgodność wszystkich ustawień (elementów konfiguracji) w programie System Center Configuration Manager. 
 
   Na przykład można wymagać, aby na urządzeniach były zainstalowane wszystkie aktualizacje oprogramowania. W programie Configuration Manager to wymaganie ma stan „Zainstalowano”. Jeśli jakiekolwiek programy na urządzeniu mają nieznany stan, to urządzenie jest niezgodne w usłudze Intune.
   
   Pozycja **Nieskonfigurowane** oznacza, że usługa Intune nie sprawdza zgodności żadnego z ustawień programu Configuration Manager.
 
-### <a name="system-security-settings"></a>Ustawienia zabezpieczeń systemu
+## <a name="system-security"></a>Zabezpieczenia systemu
 
-#### <a name="password"></a>Hasło
+### <a name="password"></a>Hasło
 
 - **Wymagaj hasła do odblokowania urządzeń przenośnych**: wybierz pozycję **Wymagaj**, aby wymagać od użytkowników podania hasła przed uzyskaniem dostępu do urządzenia.
 - **Proste hasła**: ustaw wartość **Blokuj**, aby uniemożliwić użytkownikom tworzenie prostych haseł, takich jak **1234** lub **1111**. Ustaw wartość **Nieskonfigurowane**, aby umożliwić użytkownikom tworzenie haseł, takich jak **1234** lub **1111**.
@@ -186,27 +118,30 @@ Dotyczy tylko współzarządzanych urządzeń z systemem Windows 10 lub nowszym.
 - **Liczba poprzednich haseł, których nie można użyć ponownie**: wprowadź liczbę poprzednio używanych haseł, których ponowne użycie nie jest możliwe.
 - **Wymagaj hasła, gdy urządzenie wraca ze stanu bezczynności (Mobile i Holographic)**: wymuszaj wprowadzanie haseł przez użytkowników za każdym razem, gdy urządzenie wraca ze stanu bezczynności.
 
-#### <a name="encryption"></a>Szyfrowanie
+### <a name="encryption"></a>Szyfrowanie
 
 - **Szyfrowanie magazynu danych na urządzeniu**: wybierz pozycję **Wymagaj**, aby szyfrować magazyn danych na urządzeniach.
 
   > [!NOTE]
   > Ustawienie **Szyfrowanie magazynu danych na urządzeniu** ogólnie sprawdza, czy na urządzeniu jest stosowane szyfrowanie. Aby uzyskać bardziej niezawodne ustawienie szyfrowania, rozważ użycie opcji **Wymagaj funkcji BitLocker**, która korzysta z zaświadczania o kondycji urządzenia systemu Windows w celu weryfikowania stanu funkcji BitLocker na poziomie modułu TPM.
 
-#### <a name="device-security"></a>Zabezpieczenia urządzeń
+### <a name="device-security"></a>Zabezpieczenia urządzeń
 
 - **Oprogramowanie antywirusowe**: w przypadku wybrania opcji **Wymagaj** możesz sprawdzić zgodność przy użyciu rozwiązań antywirusowych zarejestrowanych w [Centrum zabezpieczeń systemu Windows](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), na przykład rozwiązań firmy Symantec i usługi Windows Defender. W przypadku wybrania ustawienia **Nieskonfigurowane** usługa Intune nie będzie wykonywać sprawdzania w poszukiwaniu jakichkolwiek rozwiązań antywirusowych zainstalowanych na urządzeniu.
 - **Program antyszpiegowski**: w przypadku wybrania opcji **Wymagaj** możesz sprawdzić zgodność przy użyciu rozwiązań antyszpiegowskich zarejestrowanych w [Centrum zabezpieczeń systemu Windows](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), na przykład rozwiązań firmy Symantec i usługi Windows Defender. W przypadku wybrania ustawienia **Nieskonfigurowane** usługa Intune nie będzie wykonywać sprawdzania w poszukiwaniu jakichkolwiek rozwiązań antyszpiegowskich zainstalowanych na urządzeniu.
 
-### <a name="windows-defender-atp"></a>Zaawansowana ochrona przed zagrożeniami w usłudze Windows Defender
+## <a name="windows-defender-atp"></a>Zaawansowana ochrona przed zagrożeniami w usłudze Windows Defender
 
 - **Wymagaj, aby urządzenie było na poziomie niższym lub równym ocenie ryzyka maszyny**: użyj tego ustawienia, aby uzyskać ocenę ryzyka z usług ochrony przed zagrożeniami jako warunek zgodności. Wybierz maksymalny dozwolony poziom zagrożenia:
-  - **Czyste**: ta opcja jest najbezpieczniejsza, ponieważ urządzenie nie może mieć żadnych zagrożeń. Jeśli urządzenie zostanie wykryte jako posiadające jakikolwiek poziom zagrożenia, zostanie ocenione jako niezgodne.
+
+  - **Czyste**: ta opcja jest najbezpieczniejsza, ponieważ urządzenie nie może mieć żadnych zagrożeń. W przypadku wykrycia na urządzeniu zagrożeń dowolnego poziomu zostanie ono ocenione jako niezgodne.
   - **Niski**: urządzenie jest oceniane jako zgodne, jeśli istnieją tylko zagrożenia niskiego poziomu. Jakiekolwiek zagrożenia wyższego poziomu spowodują, że urządzenie będzie miało status urządzenia niezgodnego.
   - **Średni**: urządzenie jest oceniane jako zgodne, jeśli istniejące zagrożenia są na poziomie niskim lub średnim. W przypadku wykrycia na urządzeniu zagrożeń wysokiego poziomu zostanie ono określone jako niezgodne.
   - **Wysoki**: ta opcja jest najmniej bezpieczna i zezwala na wszystkie poziomy zagrożeń. To ustawienie może być przydatne, jeśli rozwiązanie jest używane tylko na potrzeby raportowania.
   
   Aby skonfigurować usługę Windows Defender ATP (Advanced Threat Protection) jako usługę do ochrony przed zagrożeniami, zobacz [Włączanie usługi Windows Defender ATP z dostępem warunkowym](advanced-threat-protection.md).
+
+Wybierz kolejno pozycje **OK** > **Utwórz**, aby zapisać zmiany.
 
 ## <a name="windows-holographic-for-business"></a>Windows Holographic for Business
 
@@ -217,18 +152,13 @@ System Windows Holographic for Business używa platformy **Windows 10 i nowsze**
 Aby sprawdzić szyfrowanie urządzenia na urządzeniu Microsoft HoloLens, zobacz [Verify device encryption](https://docs.microsoft.com/hololens/hololens-encryption#verify-device-encryption) (Weryfikowanie szyfrowania urządzenia).
 
 ## <a name="surface-hub"></a>Surface Hub
-Urządzenie Surface Hub używa platformy **Windows 10 i nowsze**. Urządzenia Surface Hub są obsługiwane pod kątem zgodności i dostępu warunkowego. Aby włączyć te funkcje na urządzeniach Surface Hub, zalecamy [włączenie automatycznej rejestracji systemu Windows 10](windows-enroll.md) w usłudze Intune (wymaga to również użycia usługi Azure Active Directory (Azure AD)) i ustawienie urządzeń Surface Hub jako docelowych grup urządzeń. Urządzenia Surface Hub należy przyłączyć do usługi Azure AD, aby funkcje zgodności i dostępu warunkowego działały.
+
+Urządzenie Surface Hub używa platformy **Windows 10 i nowsze**. Urządzenia Surface Hub są obsługiwane pod kątem zgodności i dostępu warunkowego. Aby włączyć te funkcje na urządzeniach Surface Hub, zalecamy [włączenie automatycznej rejestracji systemu Windows 10](windows-enroll.md) w usłudze Intune (wymaga to użycia usługi Azure Active Directory — Azure AD) i ustawienie urządzeń Surface Hub jako docelowych grup urządzeń. Urządzenia Surface Hub należy przyłączyć do usługi Azure AD, aby funkcje zgodności i dostępu warunkowego działały.
 
 Zobacz temat [Konfigurowanie rejestracji dla urządzeń z systemem Windows](windows-enroll.md) w celu uzyskania wytycznych.
 
-## <a name="assign-user-or-device-groups"></a>Przypisywanie grup użytkowników lub urządzeń
-
-1. Wybierz skonfigurowane przez siebie zasady. Dostęp do istniejących zasad można uzyskać po wybraniu pozycji **Zgodność urządzeń** > **Zasady**.
-2. Wybierz zasady, a następnie pozycję **Przypisania**. Możesz włączyć lub wyłączyć grupy zabezpieczeń usługi Azure AD.
-3. Wybierz pozycję **Wybrane grupy**, aby wyświetlić grupy zabezpieczeń usługi Azure AD. Wybierz grupy użytkowników lub urządzeń, których mają dotyczyć te zasady, a następnie wybierz pozycję **Zapisz**, aby wdrożyć zasady.
-
-Zasady zostały zastosowane. Urządzenia, którymi posługują się użytkownicy objęci zasadami, będą oceniane pod kątem zgodności.
-
 ## <a name="next-steps"></a>Następne kroki
-[Automatyzowanie poczty e-mail i dodawanie akcji dla niezgodnych urządzeń](actions-for-noncompliance.md)  
-[Monitorowanie zasad zgodności urządzeń Intune](compliance-policy-monitor.md)
+
+- [Dodaj akcje dla niezgodnych urządzeń](actions-for-noncompliance.md) i [użyj tagów zakresu do filtrowania zasad](scope-tags.md).
+- [Zastosuj monitorowanie zasad zgodności](compliance-policy-monitor.md).
+- Zobacz [Ustawienia zasad zgodności dla urządzeń z systemem Windows 8.1](compliance-policy-create-windows-8-1.md).

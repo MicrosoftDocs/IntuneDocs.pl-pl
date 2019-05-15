@@ -1,6 +1,6 @@
 ---
-title: Ustawienia usług edukacyjnych systemu Windows 8.1 w usłudze Microsoft Intune — Azure | Microsoft Docs
-description: Wyświetlenie listy wszystkich ustawień których można użyć, gdy ustawienia zgodności dla urządzeń Windows 8.1 i Windows Phone 8.1 w programie Microsoft Intune. Sprawdzanie zgodności na minimalną i maksymalną systemu operacyjnego, ustawianie hasła ograniczeń i długość, włączyć szyfrowanie na magazyn danych i nie tylko.
+title: Ustawienia zgodności dla systemu Windows 8.1 w usłudze Microsoft Intune — Azure | Microsoft Docs
+description: Zapoznaj się z listą ustawień umożliwiających skonfigurowanie zgodności dla urządzeń z systemem Windows 8.1 i Windows Phone 8.1 w usłudze Microsoft Intune. Możesz między innymi sprawdzać zgodność z wymaganiami dotyczącymi minimalnej i maksymalnej wersji systemu operacyjnego, określać długość hasła i inne ograniczenia, czy włączać szyfrowanie magazynu danych.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -22,27 +22,27 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 04/09/2019
 ms.locfileid: "59424957"
 ---
-# <a name="windows-81-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Windows 8.1 ustawienia na potrzeby oznaczania urządzenia jako zgodne lub niezgodne, przy użyciu usługi Intune
+# <a name="windows-81-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Ustawienia urządzeń z systemem Windows 8.1 umożliwiające oznaczenie ich jako zgodne lub niezgodne w usłudze Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-W tym artykule wymieniono i opisano ustawienia zgodności różnych, które można skonfigurować na urządzeniach Windows 8.1 w usłudze Intune. W ramach rozwiązania do zarządzania (urządzeniami przenośnymi MDM) urządzeń przenośnych Użyj tych ustawień do Blokuj proste hasła, należy ustawić co najmniej oraz maksymalna wersja systemu operacyjnego i nie tylko.
+W tym artykule wymieniono i opisano różne ustawienia zgodności, które można skonfigurować na urządzeniach z systemem Windows 8.1 za pomocą usługi Intune. Możesz zastosować te ustawienia w ramach rozwiązania do zarządzania urządzeniami mobilnymi (MDM), aby między innymi blokować zbyt proste hasła czy określić minimalną lub maksymalną wersję systemu operacyjnego.
 
 Ta funkcja ma zastosowanie do:
 
 - Windows Phone 8,1
 - Windows 8.1 i nowsze
 
-Jako administrator usługi Intune należy użyć tych ustawień zgodności w celu ochrony zasobów organizacji. Aby dowiedzieć się więcej na temat zasad zgodności i wymagań wstępnych, zobacz [Wprowadzenie do zasad zgodności urządzeń](device-compliance-get-started.md).
+Jako administrator usługi Intune możesz użyć tych ustawień zgodności, aby chronić zasoby organizacji. Aby dowiedzieć się więcej na temat zasad zgodności i ich działania, zobacz [Wprowadzenie do zasad zgodności urządzeń](device-compliance-get-started.md).
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
-[Utwórz zasady zgodności](create-compliance-policy.md#create-the-policy). Aby uzyskać **platformy**, wybierz opcję **Windows Phone 8.1** lub **Windows 8.1 i nowsze**.
+[Utwórz zasady zgodności](create-compliance-policy.md#create-the-policy). W obszarze **Platforma** wybierz pozycję **Windows Phone 8.1** lub **Windows 8.1 i nowsze**.
 
 ## <a name="device-properties"></a>Właściwości urządzenia
 
-- **Wymagana minimalna wersja systemu operacyjnego**: wprowadź minimalną dozwoloną wersję. jeśli urządzenie nie spełnia wymagań dotyczących minimalnej wersji systemu operacyjnego, będzie zgłaszane jako niezgodne. Zostanie wyświetlony link ze wskazówkami dotyczącymi uaktualniania. Użytkownik końcowy może zdecydować się na uaktualnienie swojego urządzenia, co umożliwi mu dostęp do zasobów firmy.
-- **Dozwolona maksymalna wersja systemu operacyjnego**: Wprowadź maksymalną dozwoloną wersję. jeśli urządzenie korzysta z wersji systemu operacyjnego nowszej niż wprowadzona w regule, powoduje to zablokowanie dostępu do zasobów firmy. Użytkownik zostanie poproszony o kontakt z administratorem IT. Urządzenie nie może uzyskiwać dostępu do zasobów organizacji do momentu zmiany reguły na dopuszczającą daną wersję systemu operacyjnego.
+- **Wymagana minimalna wersja systemu operacyjnego**: wprowadź minimalną wymaganą wersję. Jeśli urządzenie nie spełnia wymagań dotyczących minimalnej wersji systemu operacyjnego, będzie zgłaszane jako niezgodne. Zostanie wyświetlony link ze wskazówkami dotyczącymi uaktualniania. Użytkownik końcowy może zdecydować się na uaktualnienie swojego urządzenia, co umożliwi mu dostęp do zasobów firmy.
+- **Dozwolona maksymalna wersja systemu operacyjnego**: wprowadź maksymalną dozwoloną wersję. jeśli urządzenie korzysta z wersji systemu operacyjnego nowszej niż wprowadzona w regule, powoduje to zablokowanie dostępu do zasobów firmy. Użytkownik zostanie poproszony o kontakt z administratorem IT. Urządzenie nie może uzyskiwać dostępu do zasobów organizacji do momentu zmiany reguły na dopuszczającą daną wersję systemu operacyjnego.
 
 Komputery z systemem Windows 8.1 zwracają wersję **3**. Jeśli ustawiono regułę wersji systemu operacyjnego Windows na wartość Windows 8.1, urządzenie jest zgłaszane jako niezgodne nawet wtedy, gdy działa na nim system Windows 8.1.
 
@@ -83,6 +83,6 @@ Wybierz kolejno pozycje **OK** > **Utwórz**, aby zapisać zmiany.
 
 ## <a name="next-steps"></a>Następne kroki
 
-- [Dodawanie akcji dla niezgodnych urządzeń](actions-for-noncompliance.md) i [za pomocą tagów zakresu zasad filtr](scope-tags.md).
-- [Monitorowanie zasad zgodności](compliance-policy-monitor.md).
-- Zobacz [ustawienia zasad zgodności dla systemu Windows 10 i nowszych](compliance-policy-create-windows.md) urządzeń.
+- [Dodaj akcje dla niezgodnych urządzeń](actions-for-noncompliance.md) i [użyj tagów zakresu do filtrowania zasad](scope-tags.md).
+- [Zastosuj monitorowanie zasad zgodności](compliance-policy-monitor.md).
+- Zobacz [Ustawienia zasad zgodności dla urządzeń z systemem Windows 10 i nowszym](compliance-policy-create-windows.md).

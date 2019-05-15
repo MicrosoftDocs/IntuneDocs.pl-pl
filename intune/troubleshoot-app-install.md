@@ -28,7 +28,7 @@ ms.locfileid: "58799505"
 
 Na urządzeniach zarządzanych przez oprogramowanie MDM w usłudze Microsoft Intune czasami operacje instalacji aplikacji mogą zakończyć się niepowodzeniem. W takich sytuacjach zrozumienie przyczyny niepowodzenia lub rozwiązanie problemu może okazać się wyzwaniem. Usługa Microsoft Intune udostępnia szczegóły niepowodzeń instalacji aplikacji, które ułatwiają operatorom pomocy technicznej i administratorom usługi Intune wyświetlanie informacji o aplikacji pomocnych podczas obsługi żądań użytkowników dotyczących pomocy. Okienko rozwiązywania problemów w usłudze Intune zawiera szczegóły niepowodzenia, w tym szczegółowe informacje o aplikacjach zarządzanych na urządzeniu użytkownika. W obszarze każdego urządzenia w okienku **Aplikacje zarządzane** są dostępne kompleksowe szczegóły cyklu eksploatacji. Można zapoznać się z problemami dotyczącymi instalacji, takimi jak występujące podczas tworzenia, modyfikowania i wybierania aplikacji oraz dostarczania jej na urządzenie. 
 
-## <a name="app-troubleshooting-details"></a>Szczegóły dotyczące rozwiązywania problemów aplikacji
+## <a name="app-troubleshooting-details"></a>Szczegóły dotyczące rozwiązywania problemów z aplikacją
 
 Usługa Intune dostarcza szczegółowe informacje na temat rozwiązywania problemów z aplikacją w oparciu o aplikacje zainstalowane na urządzeniu określonego użytkownika.
 
@@ -53,46 +53,46 @@ Szczegóły błędu instalacji aplikacji będą wskazywać problem. Tych szczeg�
 > [!Note]  
 > Dostęp do okienka **Rozwiązywanie problemów** można też uzyskać przez przejście w przeglądarce do strony [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting).
 
-## <a name="win32-app-installation-troubleshooting"></a>Win32 aplikacji Rozwiązywanie problemów z instalacją
+## <a name="win32-app-installation-troubleshooting"></a>Rozwiązywanie problemów z instalacją aplikacji Win32
 
-Wybierz aplikację Win32, który został wdrożony za pomocą rozszerzenie zarządzania usługi Intune. Możesz wybrać **zbieranie dzienników** opcji w przypadku niepowodzenia instalacja aplikacji Win32. 
+Wybierz aplikację Win32 wdrożoną za pomocą rozszerzenia do zarządzania usługi Intune. Jeśli instalacja aplikacji Win32 kończy się niepowodzeniem, możesz zaznaczyć opcję **Zbieraj dzienniki**. 
 
 > [!IMPORTANT]
-> **Zbieranie dzienników** opcja nie zostanie włączona, gdy aplikacja Win32 został pomyślnie zainstalowany na urządzeniu.<p>Aby można było zebrać informacje w dzienniku aplikacji Win32, rozszerzenie zarządzania usługi Intune musi być zainstalowany na komputerze klienckim Windows. Rozszerzenie zarządzania usługi Intune jest instalowane, gdy skrypt programu PowerShell lub aplikacja Win32 jest wdrażana do grupy zabezpieczeń użytkowników lub urządzeń. Aby uzyskać więcej informacji, zobacz [rozszerzenie zarządzania usługi Intune — wymagania wstępne](intune-management-extension.md#prerequisites).
+> Opcja **Zbieraj dzienniki** nie będzie dostępna, jeśli aplikacja Win32 została pomyślnie zainstalowana na urządzeniu.<p>Aby móc zbierać informacje dzienników aplikacji Win32, na kliencie z systemem Windows musi być zainstalowane rozszerzenie do zarządzania usługi Intune. Rozszerzenie zarządzania usługi Intune jest instalowane, gdy skrypt programu PowerShell lub aplikacja Win32 jest wdrażana do grupy zabezpieczeń użytkowników lub urządzeń. Aby uzyskać więcej informacji, zobacz [Intune Management extension — Prerequisites (Rozszerzenie do zarządzania usługi Intune — wymagania wstępne)](intune-management-extension.md#prerequisites).
 
-### <a name="collect-log-file"></a>Zbieranie pliku dziennika
+### <a name="collect-log-file"></a>Zbieranie plików dziennika
 
-Aby zbierać dzienniki instalacji aplikacji Win32, najpierw wykonaj kroki podane w sekcji [szczegóły rozwiązywania problemów aplikacji](troubleshoot-app-install.md#app-troubleshooting-details). Następnie kontynuuj wykonując następujące kroki:
+Aby zbierać dzienniki instalacji aplikacji Win32, najpierw wykonaj czynności przedstawione w sekcji [Szczegóły dotyczące rozwiązywania problemów z aplikacją](troubleshoot-app-install.md#app-troubleshooting-details). Następnie wykonaj następujące czynności:
 
-1. Kliknij przycisk **zbieranie dzienników** opcja **szczegółowe informacje dotyczące instalacji** bloku.
+1. Kliknij opcję **Zbieraj dzienniki** w bloku **Szczegóły instalacji**.
 
     <image alt="Win32 app installation details - Collect log option" src="media/troubleshoot-app-install-04.png" width="500" />
 
-2. Udostępnianie ścieżki do plików dziennika nazw plików, aby rozpocząć proces zbierania plików dziennika, a następnie kliknij przycisk **OK**.
+2. Podaj ścieżki do plików oraz nazwy plików dziennika, aby rozpocząć proces zbierania plików dziennika, a następnie kliknij przycisk **OK**.
     
     > [!NOTE]
-    > Zbieranie dzienników potrwa mniej niż dwie godziny. Obsługiwane typy plików: *.log, txt, .dmp, cab, .zip, XML, evtx i .evtl*. Maksymalnie 25 ścieżki plików są dozwolone.
+    > Zbieranie dzienników potrwa mniej niż dwie godziny. Obsługiwane typy plików to *log, txt, dmp, cab, zip, xml, evtx i evtl*. Maksymalna liczba ścieżek do plików to 25.
 
-3. Po zebraniu pliki dziennika można wybrać **dzienniki** link, aby pobrać pliki dziennika.
+3. Po zebraniu plików dziennika możesz je pobrać, wybierając link **dzienniki**.
 
     <image alt="Win32 app log details - Download logs" src="media/troubleshoot-app-install-05.png" width="500" />
 
     > [!NOTE]
-    > Pojawi się powiadomienie o powodzeniu zbierania dzienników aplikacji.
+    > Zostanie wyświetlone powiadomienie o powodzeniu zbierania dzienników aplikacji.
 
 #### <a name="win32-log-collection-requirements"></a>Wymagania dotyczące zbierania dzienników Win32
 
-Istnieją określone wymagania, które należy wykonać, aby zbierać pliki dziennika:
+Aby możliwe było zbieranie plików dziennika, muszą zostać spełnione określone wymagania:
 
-- Należy określić pełną ścieżkę do pliku. 
-- Można określić zmienne środowiskowe dla optymalizacji zbierania dzienników, takie jak następujące:<br>
-  *% PROGRAMFILES %, % PROGRAMDATA % %D PUBLICZNYCH %, % WINDIR %, % TEMP %, % TMP %*
-- Tylko rozszerzenia plików są dozwolone, takie jak:<br>
-  *log, txt, .dmp cab, .zip, .xml*
-- Maksymalna plik dziennika do przekazania jest 60 MB lub 25 plików, zależnie co nastąpi wcześniej. 
-- Zbieranie dzienników instalacji aplikacji Win32 jest włączone dla aplikacji, które spełniają wymagane, dostępne, a intencja przypisywanie aplikacji odinstalowania.
-- Przechowywane dzienniki są szyfrowane, aby chronić wszelkie informacje wrażliwych danych osobowych zawartych w dziennikach.
-- Podczas otwierania obsługi biletów dla błędów aplikacji Win32, Dołącz do dzienników błędów powiązanych, za pomocą powyższych kroków.
+- Należy podać pełną ścieżkę do pliku. 
+- Można podać zmienne środowiskowe na potrzeby zbierania dzienników, na przykład:<br>
+  *%PROGRAMFILES%, %PROGRAMDATA% %PUBLIC%, %WINDIR%, %TEMP%, %TMP%*
+- Dozwolone są tylko dokładne rozszerzenia plików, na przykład:<br>
+  *log, txt, dmp, cab, .zip, .xml*
+- Maksymalnie można przekazać 60 MB danych lub 25 plików, w zależności od tego, który limit zostanie wyczerpany wcześniej. 
+- Opcja zbierania dzienników instalacji aplikacji Win32 jest dostępna w przypadku aplikacji z intencją przypisywania aplikacji „wymagane”, „dostępne” oraz „odinstaluj”.
+- Przechowywane dzienniki są szyfrowane, aby chronić wszelkie dane osobowe zawarte w dziennikach.
+- Otwierając bilet pomocy technicznej dotyczący błędów aplikacji Win32, dołącz do niego odpowiednie dzienniki błędów, korzystając z powyższych instrukcji.
 
 ## <a name="app-installation-errors"></a>Błędy instalacji aplikacji
 
@@ -114,7 +114,7 @@ Następujące komunikaty o błędach oraz opisy zapewniają szczegółowe inform
 
 ### <a name="ios-errors"></a>Błędy systemu iOS
 
-| Komunikat o błędzie/kod | Wskazówki dotyczące opisu/Rozwiązywanie problemów |
+| Komunikat o błędzie/kod | Opis/wskazówki dotyczące rozwiązywania problemów |
 |------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | (0x87D12906) | Agent MDM firmy Apple zwrócił informację, że polecenie instalacji nie powiodło się. |
 | (0x87D1313C) | Utracono połączenie sieciowe, gdy zaktualizowany adres URL usługi pobierania został wysłany na urządzenie. W szczególności nie można odnaleźć serwera z określoną nazwą hosta. |
@@ -126,16 +126,16 @@ Następujące komunikaty o błędach oraz opisy zapewniają szczegółowe inform
 | Użytkownik odrzucił ofertę zainstalowania aplikacji. (0x87D13B62) | Podczas początkowej instalacji aplikacji użytkownik kliknął przycisk Anuluj. |
 | Użytkownik odrzucił ofertę zaktualizowania aplikacji. (0x87D13B63) | Użytkownik końcowy kliknął przycisk Anuluj podczas procesu aktualizacji. |
 | Nieznany błąd (0x87D103E8) | Wystąpił nieznany błąd instalacji aplikacji. Jest to błąd wynikowy, gdy nie wystąpią inne błędy. |
-| Aplikacje programu VPP można zainstalować tylko na udostępnione urządzenie iPad (-2016330861). | Aplikacje należy uzyskać przy użyciu programu Apple Volume Purchase Program do zainstalowania na udostępnione urządzenie iPad. |
-| Nie można instalować aplikacji, po wyłączeniu App Store (-2016330860).  | Store aplikacji musi być włączony dla użytkownika o zainstalowanie aplikacji. |
-| Nie można odnaleźć licencji VPP dla aplikacji (-2016330859).  | Spróbuj odwoływanie i ponowne przypisywanie licencji aplikacji. |
-| Nie można zainstalować aplikacje systemu przy użyciu dostawcy zarządzania urządzeniami Przenośnymi (-2016330858). | Instalowanie aplikacji, które są wstępnie zainstalowane przez system operacyjny z systemem iOS nie jest obsługiwanym scenariuszem. |
-| Nie można instalować aplikacji, gdy urządzenie jest w trybie utraconym (-2016330857). | Wszystkie przypadki użycia urządzenie jest zablokowane w trybie utraconym.   Wyłączenie trybu utraty na instalowanie aplikacji. |
-| Nie można instalować aplikacji, gdy urządzenie jest w trybie kiosku (-2016330856). | Spróbuj dodać to urządzenie do grupy wykluczonych zasad konfiguracji trybu kiosku na instalowanie aplikacji. |
-| Nie można zainstalować aplikacji 32-bitowych na tym urządzeniu (-2016330852). | Urządzenie nie obsługuje instalowania 32-bitowych aplikacji. Spróbuj wdrażania 64-bitowej wersji aplikacji. |
-| Użytkownik musi zarejestrować się do App Store (-2016330855). | Użytkownik musi zalogować się do Store aplikacji można było zainstalować aplikację. |
-| Nieznany problem. Spróbuj ponownie (-2016330854). | Instalacja aplikacji nie powiodło się z nieznanej przyczyny.   Spróbuj ponownie później. |
-| Instalacja aplikacji nie powiodła się. Usługa Intune spróbuje ponownie przy kolejnym synchronizuje urządzenia (-2016330853). | Instalacja aplikacji wystąpił błąd urządzenia. Synchronizować urządzenie, aby ponownie spróbuj zainstalować aplikację. |
+| Aplikacje VPP można instalować tylko na udostępnionym urządzeniu iPad (-2016330861). | Aby móc zainstalować aplikacje na udostępnionym tablecie iPad, należy uzyskać je w ramach programu Apple Volume Purchase Program. |
+| Nie można instalować aplikacji, gdy sklep App Store jest wyłączony (-2016330860).  | Aby użytkownik mógł zainstalować aplikację, musi być włączony sklep App Store. |
+| Nie można znaleźć licencji VPP dla aplikacji (-2016330859).  | Spróbuj odwołać i ponownie przypisać licencję do aplikacji. |
+| Nie można instalować aplikacji systemu przy użyciu dostawcy MDM (-2016330858). | Instalowanie aplikacji wstępnie zainstalowanych przez system operacyjny iOS nie jest obsługiwane. |
+| Nie można instalować aplikacji, gdy urządzenie jest w trybie zgubienia (-2016330857). | W trybie zgubienia wszystkie sposoby korzystania z urządzenia są zablokowane.   Aby móc instalować aplikacje, wyłącz tryb zgubienia. |
+| Nie można instalować aplikacji, gdy urządzenie jest w trybie kiosku (-2016330856). | Aby móc instalować aplikacje, spróbuj dodać to urządzenie do grupy wykluczonych w zasadach konfiguracji trybu kiosku. |
+| Na tym urządzeniu nie można instalować 32-bitowych aplikacji (-2016330852). | Urządzenie nie obsługuje instalowania aplikacji 32-bitowych. Spróbuj wdrożyć 64-bitową wersję aplikacji. |
+| Użytkownik musi się zalogować w sklepie App Store (-2016330855). | Aby móc zainstalować aplikację, użytkownik musi zalogować się w sklepie App Store. |
+| Nieznany problem. Spróbuj ponownie (-2016330854). | Instalacja aplikacji nie powiodła się z nieznanej przyczyny.   Spróbuj ponownie później. |
+| Instalacja aplikacji nie powiodła się. Usługa Intune ponowi próbę przy następnej synchronizacji urządzenia (-2016330853). | Podczas instalacji aplikacji wystąpił błąd urządzenia. Zsynchronizuj urządzenie, aby ponowić próbę instalacji aplikacji. |
 
 ### <a name="other-installation-errors"></a>Inne błędy instalacji
 
