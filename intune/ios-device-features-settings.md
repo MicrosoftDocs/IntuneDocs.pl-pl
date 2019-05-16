@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/01/2019
+ms.date: 04/23/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c2a94be7ebc369005f92809d57c8e55076972df3
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
-ms.translationtype: HT
+ms.openlocfilehash: 1bcd3a5d0b9f7abc1aa2e0b4d96c30c956b6b4c7
+ms.sourcegitcommit: b0cf661145ccc6e3518db620af199786a623a0d9
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58799269"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64764902"
 ---
 # <a name="ios-device-settings-to-use-common-ios-features-in-intune"></a>Ustawienia urządzeń z systemem iOS dotyczące korzystania z typowych funkcji systemu iOS w usłudze Intune
 
@@ -35,22 +35,18 @@ Ten artykuł zawiera listę tych ustawień i opisy zadań poszczególnych ustawi
 
 [Utwórz profil konfiguracji urządzenia z systemem iOS](device-features-configure.md#create-a-device-profile).
 
-## <a name="airprint-settings"></a>Ustawienia funkcji AirPrint
+## <a name="airprint"></a>Funkcja AirPrint
 
-Ta funkcja umożliwia użytkownikom systemu iOS drukowanie do znanych drukarek funkcji AirPrint.
+- **Adres IP**: podaj adres IPv4 lub IPv6 drukarki. Jeśli do identyfikowania drukarek używasz nazw hostów, możesz uzyskać adres IP, wysyłając polecenie ping do terminala. Dalsze szczegółowe informacje można znaleźć w sekcji Uzyskiwanie adresu IP i ścieżki (w tym artykule).
+- **Ścieżka**: w przypadku drukarek w sieci ścieżka to zazwyczaj `ipp/print`. Dalsze szczegółowe informacje można znaleźć w sekcji Uzyskiwanie adresu IP i ścieżki (w tym artykule).
+- **Port**: podaj port nasłuchiwania miejsca docelowego funkcji AirPrint. Jeśli ta właściwość pozostanie pusta, funkcja AirPrint będzie używać portu domyślnego. Ustawienie dostępne w systemie iOS 11.0 i jego nowszych wersjach.
+- **TLS**: wybierz pozycję **Włącz**, aby zabezpieczyć połączenia funkcji AirPrint przy użyciu protokołu Transport Layer Security (TLS). Ustawienie dostępne w systemie iOS 11.0 i jego nowszych wersjach.
 
-1. W obszarze **Ustawienia** wybierz pozycję **AirPrint**. Wprowadź następujące właściwości serwera funkcji AirPrint:
+Opcja **Dodaj** powoduje dodanie serwera funkcji AirPrint do listy. Można dodać wiele serwerów z funkcją AirPrint. Możesz również **zaimportować** plik rozdzielany przecinkami (CSV) z tymi informacjami. Po utworzeniu listy możesz także **wyeksportować** listę serwerów z funkcją AirPrint.
 
-    - **Adres IP**: podaj adres IPv4 lub IPv6 drukarki. Jeśli do identyfikowania drukarek używasz nazw hostów, możesz uzyskać adres IP, wysyłając polecenie ping do terminala. Dalsze szczegółowe informacje można znaleźć w sekcji Uzyskiwanie adresu IP i ścieżki (w tym artykule).
-    - **Ścieżka**: w przypadku drukarek w sieci ścieżka to zazwyczaj `ipp/print`. Dalsze szczegółowe informacje można znaleźć w sekcji Uzyskiwanie adresu IP i ścieżki (w tym artykule).
-    - **Port**: podaj port nasłuchiwania miejsca docelowego funkcji AirPrint. Jeśli ta właściwość pozostanie pusta, funkcja AirPrint będzie używać portu domyślnego. Ustawienie dostępne w systemie iOS 11.0 i jego nowszych wersjach.
-    - **TLS**: wybierz pozycję **Włącz**, aby zabezpieczyć połączenia funkcji AirPrint przy użyciu protokołu Transport Layer Security (TLS). Ustawienie dostępne w systemie iOS 11.0 i jego nowszych wersjach.
+Wybierz przycisk **OK**, aby zapisać listę.
 
-2. Wybierz pozycję **Dodaj**. Serwer funkcji AirPrint został dodany do listy. Można dodać wiele serwerów z funkcją AirPrint.
-
-    Możesz również **zaimportować** plik rozdzielany przecinkami (CSV) z tymi informacjami. Po utworzeniu listy możesz także **wyeksportować** listę serwerów z funkcją AirPrint.
-
-3. Po zakończeniu wybierz przycisk **OK**, aby zapisać listę.
+### <a name="get-server-ip-address-resource-path-and-port"></a>Uzyskanie adresu IP serwera, ścieżki zasobu i portu
 
 Aby dodać serwery funkcji AirPrinter, potrzebujesz adresu IP drukarki, ścieżki zasobu i portu. Poniższe kroki przedstawiają sposób uzyskiwania tych informacji.
 
@@ -73,29 +69,32 @@ Te ustawienia umożliwiają konfigurowanie układu aplikacji i folderów w obsza
 
 Ustawienia okienka **Dock** umożliwiają dodanie do sześciu elementów lub folderów do obszaru Dock na ekranie systemu iOS. Wiele urządzeń obsługuje mniejszą liczbę elementów. Na przykład urządzenia iPhone obsługują maksymalnie cztery elementy. W takim przypadku na urządzeniu wyświetlane są tylko pierwsze cztery dodane elementy.
 
-1. W obszarze **Ustawienia** wybierz pozycję **Układ ekranu głównego (tylko tryb nadzorowany)** > **Dock** > **Dodaj**. Możesz dodać maksymalnie **sześć** elementów (łącznie aplikacji i folderów) w obszarze Dock urządzenia.
-2. W obszarze **Typ** wybierz opcję dodania **aplikacji** lub **folderu**.
+Możesz dodać maksymalnie **sześć** elementów (łącznie aplikacji i folderów) w obszarze Dock urządzenia.
 
-    - **Dodaj aplikację**: wybierz tę opcję, aby dodać aplikacje do doku na ekranie. Wprowadź następujące informacje:
+- **Dodaj**: umożliwia dodanie aplikacji lub folderów do obszaru Dock urządzenia.
+- **Typ**: umożliwia dodanie **aplikacji** lub **folderu**:
 
+  - **Aplikacja**: wybierz tę opcję, aby dodać aplikacje do obszaru Dock na ekranie. Wprowadź następujące informacje:
+
+    - **Nazwa aplikacji**: wprowadź nazwę aplikacji. Ta nazwa jest używana w celach referencyjnych w witrynie Azure Portal. *Nie jest* ona wyświetlana na urządzeniu z systemem iOS.
+    - **Identyfikator pakietu aplikacji**: podaj identyfikator pakietu aplikacji. Przykłady można znaleźć w artykule [Identyfikatory pakietów dla wbudowanych aplikacji systemu iOS](bundle-ids-built-in-ios-apps.md).
+
+    Wybierz przycisk **OK**, aby zapisać zmiany.
+
+  - **Folder**: wybierz tę opcję, aby dodać folder do obszaru Dock na ekranie.
+
+    Aplikacje dodawane do strony w folderze są rozmieszczane od lewej do prawej i w takiej samej kolejności jak na liście. Jeśli dodanych zostanie więcej aplikacji, niż mieści się na stronie, aplikacje zostaną przeniesione na inną stronę.
+
+    - **Nazwa folderu**: wprowadź nazwę folderu. Ta nazwa jest widoczna na urządzeniach użytkowników.
+    - **Lista stron**: **dodaj** stronę, a następnie wprowadź następujące właściwości:
+
+      - **Nazwa strony**: wprowadź nazwę strony. Ta nazwa jest używana w celach referencyjnych w witrynie Azure Portal. *Nie jest* ona wyświetlana na urządzeniu z systemem iOS.
       - **Nazwa aplikacji**: wprowadź nazwę aplikacji. Ta nazwa jest używana w celach referencyjnych w witrynie Azure Portal. *Nie jest* ona wyświetlana na urządzeniu z systemem iOS.
-      - **Identyfikator pakietu aplikacji**: podaj identyfikator pakietu aplikacji. Przykłady można znaleźć w sekcji [Identyfikatory pakietów dla wbudowanych aplikacji systemu iOS](#bundle-ids-for-built-in-ios-apps) (w tym artykule).
+      - **Identyfikator pakietu aplikacji**: podaj identyfikator pakietu aplikacji. Przykłady można znaleźć w artykule [Identyfikatory pakietów dla wbudowanych aplikacji systemu iOS](bundle-ids-built-in-ios-apps.md).
 
-      Wybierz przycisk **OK**, aby zapisać zmiany.
+      Można dodać maksymalnie **20** stron do obszaru Dock urządzenia.
 
-    - **Dodaj folder**: wybierz tę opcję, aby dodać folder do doku na ekranie. 
-
-      Aplikacje dodawane do strony w folderze są rozmieszczane od lewej do prawej i w takiej samej kolejności jak na liście. Jeśli dodanych zostanie więcej aplikacji, niż mieści się na stronie, aplikacje zostaną przeniesione na inną stronę.
-
-      1. Wprowadź **nazwę folderu**. Ta nazwa jest widoczna na urządzeniach użytkowników.
-      2. Wybierz pozycję **Dodaj**, a następnie wprowadź następujące właściwości:
-
-          - **Nazwa strony**: wprowadź nazwę strony. Ta nazwa jest używana w celach referencyjnych w witrynie Azure Portal. *Nie jest* ona wyświetlana na urządzeniu z systemem iOS.
-          - **Nazwa aplikacji**: wprowadź nazwę aplikacji. Ta nazwa jest używana w celach referencyjnych w witrynie Azure Portal. *Nie jest* ona wyświetlana na urządzeniu z systemem iOS.
-          - **Identyfikator pakietu aplikacji**: podaj identyfikator pakietu aplikacji. Przykłady można znaleźć w sekcji [Identyfikatory pakietów dla wbudowanych aplikacji systemu iOS](#bundle-ids-for-built-in-ios-apps) (w tym artykule).
-
-      3. Wybierz pozycję **Dodaj**. Można dodać maksymalnie **20** stron do obszaru Dock urządzenia.
-      4. Wybierz przycisk **OK**, aby zapisać zmiany.
+    Wybierz przycisk **OK**, aby zapisać zmiany.
 
 > [!NOTE]
 > Gdy dodasz ikony za pomocą ustawień obszaru Dock, ikony na ekranie głównym i na stronach zostaną zablokowane i nie można będzie ich przenosić. Może to być celowe działanie zasad zarządzania urządzeniami mobilnymi firmy Apple i systemu iOS.
@@ -117,33 +116,37 @@ Dodaj strony, które mają być wyświetlane na ekranie głównym, oraz aplikacj
 > [!TIP]
 > Aby zmieniać kolejność elementów na dowolnych listach stron i ekranu głównego, można je przeciągać i upuszczać.
 
-1. W obszarze **Ustawienia** wybierz pozycję **Układ ekranu głównego (tylko tryb nadzorowany)** > **Strony** > **Dodaj**. Możesz dodać maksymalnie **40** stron na urządzeniu.
-2. Wprowadź **nazwę strony**. Jest to nazwa, do której można się odwołać w witrynie Azure Portal, i która *nie jest* wyświetlana na urządzeniu z systemem iOS. 
+Możesz dodać maksymalnie **40** stron na urządzeniu.
 
-    Wybierz pozycję **Dodaj**. Możesz dodać maksymalnie **60** elementów (łącznie aplikacji i folderów) na urządzeniu.
+- **Lista stron**: **dodaj** stronę, a następnie wprowadź następujące właściwości:
 
-3. W obszarze **Typ** wybierz opcję dodania **aplikacji** lub **folderu**.
+  - **Nazwa strony**: wprowadź nazwę strony. Jest to nazwa, do której można się odwołać w witrynie Azure Portal, i która *nie jest* wyświetlana na urządzeniu z systemem iOS.
 
-    - **Dodaj aplikację**: wybierz tę opcję, aby dodać aplikacje do strony na ekranie. Wprowadź następujące informacje:
+  Możesz dodać maksymalnie **60** elementów (łącznie aplikacji i folderów) na urządzeniu.
 
-      - **Nazwa aplikacji**: wprowadź nazwę aplikacji. Ta nazwa jest używana w celach referencyjnych w witrynie Azure Portal. *Nie jest* ona wyświetlana na urządzeniu z systemem iOS.
-      - **Identyfikator pakietu aplikacji**: podaj identyfikator pakietu aplikacji. Przykłady można znaleźć w sekcji [Identyfikatory pakietów dla wbudowanych aplikacji systemu iOS](#bundle-ids-for-built-in-ios-apps) (w tym artykule).
+  - **Dodaj**: umożliwia dodanie aplikacji lub folderów do strony na urządzeniu.
+
+    - **Typ**: umożliwia dodanie **aplikacji** lub **folderu**:
+
+      - **Aplikacja**: wybierz tę opcję, aby dodać aplikacje do strony na ekranie. Wprowadź też następujące ustawienia:
+
+        - **Nazwa aplikacji**: wprowadź nazwę aplikacji. Ta nazwa jest używana w celach referencyjnych w witrynie Azure Portal. *Nie jest* ona wyświetlana na urządzeniu z systemem iOS.
+        - **Identyfikator pakietu aplikacji**: podaj identyfikator pakietu aplikacji. Przykłady można znaleźć w artykule [Identyfikatory pakietów dla wbudowanych aplikacji systemu iOS](bundle-ids-built-in-ios-apps.md).
 
       Wybierz przycisk **OK**, aby zapisać zmiany.
 
-    - **Dodaj folder**: wybierz tę opcję, aby dodać folder do doku na ekranie. 
+      - **Folder**: wybierz tę opcję, aby dodać folder do obszaru Dock na ekranie.
 
-      Aplikacje dodawane do strony w folderze są rozmieszczane od lewej do prawej i w takiej samej kolejności jak na liście. Jeśli dodanych zostanie więcej aplikacji, niż mieści się na stronie, aplikacje zostaną przeniesione na inną stronę.
+        Aplikacje dodawane do strony w folderze są rozmieszczane od lewej do prawej i w takiej samej kolejności jak na liście. Jeśli dodanych zostanie więcej aplikacji, niż mieści się na stronie, aplikacje zostaną przeniesione na inną stronę.
 
-      1. Wprowadź **nazwę folderu**. Ta nazwa jest widoczna na urządzeniach użytkowników.
-      2. Wybierz pozycję **Dodaj**, a następnie wprowadź następujące właściwości:
+        - **Nazwa folderu**: wprowadź nazwę folderu. Ta nazwa jest widoczna na urządzeniach użytkowników.
+        - **Dodaj**: umożliwia dodanie stron do folderu. Wprowadź także następujące właściwości:
 
           - **Nazwa strony**: wprowadź nazwę strony. Ta nazwa jest używana w celach referencyjnych w witrynie Azure Portal. *Nie jest* ona wyświetlana na urządzeniu z systemem iOS.
           - **Nazwa aplikacji**: wprowadź nazwę aplikacji. Ta nazwa jest używana w celach referencyjnych w witrynie Azure Portal. *Nie jest* ona wyświetlana na urządzeniu z systemem iOS.
-          - **Identyfikator pakietu aplikacji**: podaj identyfikator pakietu aplikacji. Przykłady można znaleźć w sekcji [Identyfikatory pakietów dla wbudowanych aplikacji systemu iOS](#bundle-ids-for-built-in-ios-apps) (w tym artykule).
+          - **Identyfikator pakietu aplikacji**: podaj identyfikator pakietu aplikacji. Przykłady można znaleźć w artykule [Identyfikatory pakietów dla wbudowanych aplikacji systemu iOS](bundle-ids-built-in-ios-apps.md).
 
-      3. Wybierz pozycję **Dodaj**.
-      4. Wybierz przycisk **OK**, aby zapisać zmiany.
+      Wybierz przycisk **OK**, aby zapisać zmiany.
 
 #### <a name="example"></a>Przykład
 
@@ -159,50 +162,43 @@ Po przypisaniu zasad do telefonu iPhone wygląd strony tego urządzenia jest zbl
 
 Wybierz sposób, w jaki aplikacje na urządzeniu z systemem iOS wysyłają powiadomienia. Te ustawienia obsługują nadzorowane urządzenia z systemem iOS w wersji 9.3 i nowszych.
 
-1. W obszarze **Ustawienia** wybierz kolejno pozycje **Powiadomienia w aplikacji (tylko tryb nadzorowany)** > **Dodaj**:
+- **Dodaj**: umożliwia dodanie powiadomień dla aplikacji:
 
     ![Dodawanie powiadomienia w aplikacji w profilu systemu iOS w usłudze Intune](./media/ios-macos-app-notifications.png)
 
-2. Wprowadź następujące właściwości:
+  - **Identyfikator pakietu aplikacji**: podaj **identyfikator pakietu aplikacji**, którą chcesz dodać. Przykłady można znaleźć w artykule [Identyfikatory pakietów dla wbudowanych aplikacji systemu iOS](bundle-ids-built-in-ios-apps.md).
+  - **Nazwa aplikacji**: podaj nazwę aplikacji, którą chcesz dodać. Ta nazwa jest używana w celach referencyjnych w witrynie Azure Portal. *Nie jest* ona wyświetlana na urządzeniu.
+  - **Wydawca**: podaj wydawcę dodawanej aplikacji. Ta nazwa jest używana w celach referencyjnych w witrynie Azure Portal. *Nie jest* ona wyświetlana na urządzeniu.
+  - **Powiadomienia**: opcja **Włącz** lub **Wyłącz** określa, czy aplikacja wysyła powiadomienia do urządzenia.
+    - **Pokaż w centrum powiadomień**: opcja **Włącz** zezwala aplikacji na wyświetlanie powiadomień w centrum powiadomień na urządzeniu. **Wyłączenie** tego ustawienia uniemożliwia aplikacji wyświetlanie powiadomień w centrum powiadomień.
+    - **Pokaż na ekranie blokady**: opcja **Włącz** powoduje, że powiadomienia z aplikacji będą wyświetlane na ekranie blokady urządzenia. **Wyłączenie** uniemożliwia aplikacji wyświetlanie powiadomień na ekranie blokady.
+    - **Typ alertu**: po odblokowaniu urządzenia wybierz sposób wyświetlania powiadomienia. Dostępne opcje:
+      - **Brak**: powiadomienia nie są wyświetlane.
+      - **Transparent**: wraz z powiadomieniem jest krótko wyświetlany transparent.
+      - **Modalne**: zostanie wyświetlone powiadomienie, które użytkownik będzie musiał ręcznie zamknąć przed kontynuowaniem korzystania z urządzenia.
+    - **Znaczek na ikonie aplikacji**: wybierz pozycję **Włącz**, aby dodać znaczek do ikony aplikacji. Znaczek oznacza, że aplikacja wysłała powiadomienie.
+    - **Dźwięki**: wybierz opcję **Włącz**, aby odtwarzać dźwięk po dostarczeniu powiadomienia.
 
-    - **Identyfikator pakietu aplikacji**: podaj **identyfikator pakietu aplikacji**, którą chcesz dodać. Przykłady można znaleźć w sekcji [Identyfikatory pakietów dla wbudowanych aplikacji systemu iOS](#bundle-ids-for-built-in-ios-apps) (w tym artykule).
-    - **Nazwa aplikacji**: podaj nazwę aplikacji, którą chcesz dodać. Ta nazwa jest używana w celach referencyjnych w witrynie Azure Portal. *Nie jest* ona wyświetlana na urządzeniu.
-    - **Wydawca**: podaj wydawcę dodawanej aplikacji. Ta nazwa jest używana w celach referencyjnych w witrynie Azure Portal. *Nie jest* ona wyświetlana na urządzeniu.
-    - **Powiadomienia**: opcja **Włącz** lub **Wyłącz** określa, czy aplikacja wysyła powiadomienia do urządzenia.
-       - **Pokaż w centrum powiadomień**: opcja **Włącz** zezwala aplikacji na wyświetlanie powiadomień w centrum powiadomień na urządzeniu. **Wyłączenie** tego ustawienia uniemożliwia aplikacji wyświetlanie powiadomień w centrum powiadomień.
-       - **Pokaż na ekranie blokady**: opcja **Włącz** powoduje, że powiadomienia z aplikacji będą wyświetlane na ekranie blokady urządzenia. **Wyłączenie** uniemożliwia aplikacji wyświetlanie powiadomień na ekranie blokady.
-       - **Typ alertu**: po odblokowaniu urządzenia wybierz sposób wyświetlania powiadomienia. Dostępne opcje:
-         - **Brak**: powiadomienia nie są wyświetlane.
-         - **Transparent**: wraz z powiadomieniem jest krótko wyświetlany transparent.
-         - **Modalne**: zostanie wyświetlone powiadomienie, które użytkownik będzie musiał ręcznie zamknąć przed kontynuowaniem korzystania z urządzenia.
-       - **Znaczek na ikonie aplikacji**: wybierz pozycję **Włącz**, aby dodać znaczek do ikony aplikacji. Znaczek oznacza, że aplikacja wysłała powiadomienie.
-       - **Dźwięki**: wybierz opcję **Włącz**, aby odtwarzać dźwięk po dostarczeniu powiadomienia.
-
-3. Wybierz przycisk **OK**, aby zapisać zmiany. Kontynuuj dodawanie wybranych aplikacji. Po zakończeniu wybierz przycisk **OK**.
+Wybierz przycisk **OK**, aby zapisać zmiany.
 
 ## <a name="lock-screen-message-settings"></a>Ustawienia komunikatów na ekranie blokady
 
 Te ustawienia pozwalają wyświetlać niestandardowe komunikaty lub tekst w oknie logowania i na ekranie blokady. Można na przykład wprowadzić komunikat „W razie zgubienia zwróć do” oraz informacje dotyczące tagu zasobu. 
 
-Ta funkcja obsługuje urządzenia nadzorowane z następującymi systemami:
+Ta funkcja obsługuje nadzorowane urządzenia z systemem iOS w wersji 9.3 i nowszych.
 
-- iOS 9.3 i nowsze
+- **Informacje dotyczące tagu zasobu**: podaj informacje o tagu zasobu urządzenia. Na przykład wprowadź adres `Owned by Contoso Corp` lub `Serial Number: {{serialnumber}}`.
 
-1. W polu **Ustawienia** wybierz pozycję **Komunikat ekranu blokady (tylko tryb nadzorowany)**.
-2. Podaj następujące ustawienia:
+  Wprowadzony tekst zostanie wyświetlony w oknie logowania i na ekranie blokady w urządzeniu.
 
-    - **Informacje dotyczące tagu zasobu**: podaj informacje o tagu zasobu urządzenia. Na przykład wprowadź adres `Owned by Contoso Corp` lub `Serial Number: {{serialnumber}}`. 
+- **Przypis dolny ekranu blokady**: podaj informacje, które mogą ułatwić zwrot urządzenia w przypadku jego utraty lub kradzieży. Możesz podać dowolny tekst. Na przykład wpisz coś takiego: `If found, call Contoso at ...`.
 
-      Wprowadzony tekst zostanie wyświetlony w oknie logowania i na ekranie blokady w urządzeniu.
+  Możesz też dodać w tych polach informacje dotyczące konkretnych urządzeń za pomocą tokenów urządzeń. Aby na przykład wyświetlić numer seryjny, wprowadź `Serial Number: {{serialnumber}}`. Na ekranie blokady zostanie wyświetlony tekst podobny do tego: `Serial Number 123456789ABC`. Podczas wprowadzania zmiennych użyj nawiasów klamrowych `{{ }}`. [Tokeny konfiguracji aplikacji](app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) zawierają listę zmiennych, których można użyć. Możesz też użyć wartości `deviceName` lub innej wartości specyficznej dla urządzenia.
 
-    - **Przypis dolny ekranu blokady**: podaj informacje, które mogą ułatwić zwrot urządzenia w przypadku jego utraty lub kradzieży. Możesz podać dowolny tekst. Na przykład wpisz coś takiego: `If found, call Contoso at ...`.
+  > [!NOTE]
+  > Zmienne nie są weryfikowane w interfejsie użytkownika. Dlatego mogą pojawić się profile zapisane z niepoprawnymi danymi wejściowymi. Na przykład jeśli podano wartość `{{Devicename}}` zamiast `{{devicename}}`, to zostanie wyświetlony literał ciągu zamiast unikatowej nazwy urządzenia.
 
-    Możesz też dodać w tych polach informacje dotyczące konkretnych urządzeń za pomocą tokenów urządzeń. Aby na przykład wyświetlić numer seryjny, wprowadź `Serial Number: {{serialnumber}}`. Na ekranie blokady zostanie wyświetlony tekst podobny do tego: `Serial Number 123456789ABC`. Podczas wprowadzania zmiennych użyj nawiasów klamrowych `{{ }}`. [Tokeny konfiguracji aplikacji](app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) zawierają listę zmiennych, których można użyć. Możesz też użyć wartości `deviceName` lub innej wartości specyficznej dla urządzenia.
-
-    > [!NOTE]
-    > Zmienne nie są weryfikowane w interfejsie użytkownika. Dlatego mogą pojawić się profile zapisane z niepoprawnymi danymi wejściowymi. Na przykład jeśli podano wartość `{{Devicename}}` zamiast `{{devicename}}`, to zostanie wyświetlony literał ciągu zamiast unikatowej nazwy urządzenia.
-
-3. Po zakończeniu wybierz przycisk **OK**, aby zapisać zmiany.
+Wybierz przycisk **OK**, aby zapisać zmiany.
 
 ## <a name="single-sign-on-settings"></a>Ustawienia logowania jednokrotnego
 
@@ -213,82 +209,77 @@ Aby korzystać z logowania jednokrotnego, upewnij się, że masz:
 - Aplikację poszukującą magazynu poświadczeń użytkownika w logowaniu jednokrotnym na urządzeniu.
 - Usługa Intune musi być skonfigurowana na potrzeby logowania jednokrotnego dla urządzeń z systemem iOS.
 
-1. W obszarze **Ustawienia** wybierz pozycję **Logowanie jednokrotne**:
+![Okienko Logowanie jednokrotne](./media/sso-blade.png)
 
-   ![Okienko Logowanie jednokrotne](./media/sso-blade.png)
+- **Atrybut nazwy użytkownika z usługi AAD**: usługa Intune szuka tego atrybutu dla każdego użytkownika w usłudze Azure AD. Następnie usługa Intune wypełnia odpowiednie pole (na przykład nazwę UPN) przed wygenerowaniem kodu XML instalowanego na urządzeniu. Dostępne opcje:
 
-2. Podaj następujące ustawienia:
+  - **Główna nazwa użytkownika**: nazwa UPN jest analizowana w następujący sposób:
 
-    - **Atrybut nazwy użytkownika z usługi AAD**: usługa Intune szuka tego atrybutu dla każdego użytkownika w usłudze Azure AD. Następnie usługa Intune wypełnia odpowiednie pole (na przykład nazwę UPN) przed wygenerowaniem kodu XML instalowanego na urządzeniu. Dostępne opcje:
+    ![Atrybut nazwy użytkownika](media/User-name-attribute.png)
 
-      - **Główna nazwa użytkownika**: nazwa UPN jest analizowana w następujący sposób:
+    Można również zastąpić obszar tekstem wpisywanym w polu tekstowym **Obszar**.
 
-        ![Atrybut nazwy użytkownika](media/User-name-attribute.png)
+    Na przykład firma Contoso ma kilka regionów, w tym takich jak Europa, Azja i Ameryka Północna. Firma Contoso chce, aby użytkownicy z regionu Azja korzystali z logowania jednokrotnego, natomiast aplikacja wymaga nazwy UPN w formacie `username@asia.contoso.com`. Jeśli zostanie wybrana wartość **Główna nazwa użytkownika**, obszar dla każdego użytkownika zostanie pobrany z usługi Azure AD i może on mieć wartość `contoso.com`. Dlatego dla użytkowników w Azji wybierz pozycję **Główna nazwa użytkownika**, a następnie wprowadź `asia.contoso.com`. Nazwa UPN użytkownika końcowego będzie miała wartość `username@asia.contoso.com` zamiast `username@contoso.com`.
 
-        Można również zastąpić obszar tekstem wpisywanym w polu tekstowym **Obszar**.
+  - **Identyfikator urządzenia usługi Intune**: usługa Intune automatycznie wybiera identyfikator urządzenia usługi Intune.
 
-        Na przykład firma Contoso ma kilka regionów, w tym takich jak Europa, Azja i Ameryka Północna. Firma Contoso chce, aby użytkownicy z regionu Azja korzystali z logowania jednokrotnego, natomiast aplikacja wymaga nazwy UPN w formacie `username@asia.contoso.com`. Jeśli zostanie wybrana wartość **Główna nazwa użytkownika**, obszar dla każdego użytkownika zostanie pobrany z usługi Azure AD i może on mieć wartość `contoso.com`. Dlatego dla użytkowników w Azji wybierz pozycję **Główna nazwa użytkownika**, a następnie wprowadź `asia.contoso.com`. Nazwa UPN użytkownika końcowego będzie miała wartość `username@asia.contoso.com` zamiast `username@contoso.com`.
+    Domyślnie dla aplikacji wymagany jest tylko identyfikator urządzenia. Jeśli natomiast aplikacja korzysta z obszaru oraz z identyfikatora urządzenia, możesz wpisać obszar w polu tekstowym Obszar.
 
-      - **Identyfikator urządzenia usługi Intune**: usługa Intune automatycznie wybiera identyfikator urządzenia usługi Intune.
+    > [!NOTE]
+    > Domyślnie nie wpisuj żadnej wartości w polu Obszar, jeśli używasz identyfikatora urządzenia.
 
-        Domyślnie dla aplikacji wymagany jest tylko identyfikator urządzenia. Jeśli natomiast aplikacja korzysta z obszaru oraz z identyfikatora urządzenia, możesz wpisać obszar w polu tekstowym Obszar.
+  - **Identyfikator urządzenia usługi Azure AD**
 
-        > [!NOTE]
-        > Domyślnie nie wpisuj żadnej wartości w polu Obszar, jeśli używasz identyfikatora urządzenia.
+- **Obszar**: podaj część adresu URL oznaczającą domenę. Na przykład wprowadź `contoso.com`.
+- **Przedrostki adresów URL, które będą korzystały z logowania jednokrotnego**: **dodaj** wszystkie adresy URL w organizacji, które wymagają uwierzytelniania za pomocą logowania jednokrotnego użytkownika.
 
-      - **Identyfikator urządzenia usługi Azure AD**
+  Kiedy na przykład użytkownik nawiązuje połączenie z dowolną z tych witryn, urządzenie z systemem iOS używa poświadczeń logowania jednokrotnego. Użytkownik nie musi wprowadzać żadnych dodatkowych poświadczeń. Jeśli włączone jest uwierzytelnianie wieloskładnikowe, użytkownicy muszą wykonać drugie uwierzytelnianie.
 
-    - **Obszar**: podaj część adresu URL oznaczającą domenę. Na przykład wprowadź `contoso.com`.
-    - **Przedrostki adresów URL, które będą korzystały z logowania jednokrotnego**: **dodaj** wszystkie adresy URL w organizacji, które wymagają uwierzytelniania za pomocą logowania jednokrotnego użytkownika.
+  > [!NOTE]
+  > Te adresy URL muszą być poprawnie sformatowanymi nazwami FQDN. Firma Apple wymaga, aby miały one format `http://<yourURL.domain>`.
 
-        Kiedy na przykład użytkownik nawiązuje połączenie z dowolną z tych witryn, urządzenie z systemem iOS używa poświadczeń logowania jednokrotnego. Użytkownik nie musi wprowadzać żadnych dodatkowych poświadczeń. Jeśli włączone jest uwierzytelnianie wieloskładnikowe, użytkownicy muszą wykonać drugie uwierzytelnianie.
+  Wzorce dopasowań adresów URL muszą rozpoczynać się od ciągu `http://` lub `https://`. Uruchamiane jest proste dopasowanie ciągu, które wykaże, że prefiks adresu URL `http://www.contoso.com/` jest niezgodny z ciągiem `http://www.contoso.com:80/`. W przypadku systemów iOS 10.0 lub nowszych można użyć pojedynczego symbolu wieloznacznego \*, aby wprowadzić wszystkie zgodne wartości. Na przykład wzorzec `http://*.contoso.com/` jest zgodny zarówno z adresem URL `http://store.contoso.com/`, jak i `http://www.contoso.com`.
 
-        > [!NOTE]
-        > Te adresy URL muszą być poprawnie sformatowanymi nazwami FQDN. Firma Apple wymaga, aby miały one format `http://<yourURL.domain>`.
+  Wzorce `http://.com` i `https://.com` są zgodne odpowiednio ze wszystkimi adresami URL protokołów HTTP i HTTPS.
 
-        Wzorce dopasowań adresów URL muszą rozpoczynać się od ciągu `http://` lub `https://`. Uruchamiane jest proste dopasowanie ciągu, które wykaże, że prefiks adresu URL `http://www.contoso.com/` jest niezgodny z ciągiem `http://www.contoso.com:80/`. W przypadku systemów iOS 10.0 lub nowszych można użyć pojedynczego symbolu wieloznacznego \*, aby wprowadzić wszystkie zgodne wartości. Na przykład wzorzec `http://*.contoso.com/` jest zgodny zarówno z adresem URL `http://store.contoso.com/`, jak i `http://www.contoso.com`.
+- **Aplikacje, które będą korzystały z logowania jednokrotnego**: **dodaj** aplikacje na urządzeniach użytkowników końcowych, które mogą używać logowania jednokrotnego.
 
-        Wzorce `http://.com` i `https://.com` są zgodne odpowiednio ze wszystkimi adresami URL protokołów HTTP i HTTPS.
+  Tablica `AppIdentifierMatches` musi uwzględniać ciągi zgodne z identyfikatorami pakietu aplikacji. Te ciągi mogą być dokładnymi dopasowaniami (przykład: `com.contoso.myapp`) lub możesz wprowadzić dopasowanie prefiksu w ramach identyfikatora pakietu za pomocą symbolu wieloznacznego \*. Symbol wieloznaczny musi występować po znaku kropki (.) i może zostać użyty tylko raz — na końcu ciągu, na przykład: `com.contoso.*`. Jeśli symbol wieloznaczny zostanie użyty, to dowolna aplikacja o identyfikatorze pakietu rozpoczynającym się od prefiksu uzyskuje dostęp do konta.
 
-    - **Aplikacje, które będą korzystały z logowania jednokrotnego**: **dodaj** aplikacje na urządzeniach użytkowników końcowych, które mogą używać logowania jednokrotnego.
+  Użyj pola **Nazwa aplikacji**, aby wprowadzić przyjazną nazwę, która ułatwia rozpoznanie identyfikatora pakietu.
 
-        Tablica `AppIdentifierMatches` musi uwzględniać ciągi zgodne z identyfikatorami pakietu aplikacji. Te ciągi mogą być dokładnymi dopasowaniami (przykład: `com.contoso.myapp`) lub możesz wprowadzić dopasowanie prefiksu w ramach identyfikatora pakietu za pomocą symbolu wieloznacznego \*. Symbol wieloznaczny musi występować po znaku kropki (.) i może zostać użyty tylko raz — na końcu ciągu, na przykład: `com.contoso.*`. Jeśli symbol wieloznaczny zostanie użyty, to dowolna aplikacja o identyfikatorze pakietu rozpoczynającym się od prefiksu uzyskuje dostęp do konta.
+- **Certyfikat odnowy poświadczeń**: w przypadku używania certyfikatów w celu uwierzytelniania (nie haseł) wybierz istniejący certyfikat SCEP lub PFX jako certyfikat uwierzytelniania. Zazwyczaj jest to ten sam certyfikat, który został wdrożony dla użytkownika na potrzeby innych profilów, takich jak profil sieci VPN lub Wi-Fi bądź profil poczty e-mail.
 
-        Użyj pola **Nazwa aplikacji**, aby wprowadzić przyjazną nazwę, która ułatwia rozpoznanie identyfikatora pakietu.
-
-    - **Certyfikat odnowy poświadczeń**: w przypadku używania certyfikatów w celu uwierzytelniania (nie haseł) wybierz istniejący certyfikat SCEP lub PFX jako certyfikat uwierzytelniania. Zazwyczaj jest to ten sam certyfikat, który został wdrożony dla użytkownika na potrzeby innych profilów, takich jak profil sieci VPN lub Wi-Fi bądź profil poczty e-mail.
-
-3. Po zakończeniu wybierz przycisk **OK**, aby zapisać zmiany.
+Wybierz przycisk **OK**, aby zapisać zmiany.
 
 ## <a name="web-content-filter-settings"></a>Ustawienia filtru zawartości internetowej
 
 Te ustawienia kontrolują dostęp za pomocą adresu URL przeglądarki na urządzeniach z systemem iOS.
 
-1. W obszarze **Ustawienia** wybierz pozycję **Filtr zawartości internetowej (tylko tryb nadzorowany)**.
-2. Wybierz **typ filtru**. Dostępne opcje:
+- **Typ filtru**: wybierz, aby zezwolić na określone witryny internetowe. Dostępne opcje:
 
-    - **Konfiguruj adresy URL**: użyj wbudowanego filtru internetowego firmy Apple, który wyszukuje słownictwo przeznaczone dla osób dorosłych, w tym przekleństwa i słowa o charakterze seksualnym. Ta funkcja ocenia każdą stronę internetową podczas ładowania oraz identyfikuje i blokuje nieodpowiednią zawartość. Możesz również dodać adresy URL, które nie mają być sprawdzane przez filtr. Ponadto możesz zablokować określone adresy URL, niezależnie od ustawień filtru firmy Apple.
+  - **Konfiguruj adresy URL**: użyj wbudowanego filtru internetowego firmy Apple, który wyszukuje słownictwo przeznaczone dla osób dorosłych, w tym przekleństwa i słowa o charakterze seksualnym. Ta funkcja ocenia każdą stronę internetową podczas ładowania oraz identyfikuje i blokuje nieodpowiednią zawartość. Możesz również dodać adresy URL, które nie mają być sprawdzane przez filtr. Ponadto możesz zablokować określone adresy URL, niezależnie od ustawień filtru firmy Apple.
 
-      - **Dozwolone adresy URL**: **dodaj** adresy URL, na które chcesz zezwolić. Te adresy URL są pomijane przez filtr internetowy firmy Apple.
+    - **Dozwolone adresy URL**: **dodaj** adresy URL, na które chcesz zezwolić. Te adresy URL są pomijane przez filtr internetowy firmy Apple.
 
-        > [!NOTE]
+      > [!NOTE]
         > Wprowadzone adresy to adresy URL, które nie mają być oceniane przez filtr internetowy firmy Apple. Te adresy URL nie stanowią listy dozwolonych witryn internetowych. Aby utworzyć listę dozwolonych witryn internetowych, należy ustawić **typ filtru** na pozycję **Tylko określone witryny internetowe**.
 
-        Wybierz przycisk **OK**, aby zapisać zmiany.
+      Wybierz przycisk **OK**, aby zapisać zmiany.
 
-      - **Zablokowane adresy URL**: użyj opcji **Dodaj**, aby dodać adresy URL, których otwieranie ma zostać zatrzymane niezależnie od ustawień filtru internetowego firmy Apple.
-
-        Wybierz przycisk **OK**, aby zapisać zmiany.
-
-    - **Tylko określone witryny internetowe** (dotyczy wyłącznie przeglądarki Safari): te adresy URL są dodawane do zakładek przeglądarki Safari. Użytkownik jest uprawniony **wyłącznie** do odwiedzania tych witryn internetowych; nie będzie można otwierać żadnych innych witryn. Użyj tej opcji tylko wtedy, gdy znasz dokładną listę adresów URL, do których użytkownicy mogą uzyskiwać dostęp.
-
-      - **Adres URL**: podaj adres URL dozwolonej witryny internetowej. Na przykład wprowadź `https://www.contoso.com`.
-      - **Ścieżka do zakładki**: wprowadź ścieżkę na potrzeby przechowywania zakładki. Na przykład wprowadź `/Contoso/Business Apps`. Jeśli nie dodasz ścieżki, zakładka zostanie dodana do domyślnego folderu zakładek na urządzeniu.
-      - **Tytuł**: podaj opisowy tytuł zakładki.
-
-      Jeśli nie wprowadzisz żadnych adresów URL, użytkownicy końcowi nie będą mogli uzyskiwać dostęp do żadnych witryn internetowych, z wyjątkiem `microsoft.com`, `microsoft.net`, i `apple.com`. Usługa Intune automatycznie zezwala na dostęp do tych adresów URL.
+    - **Zablokowane adresy URL**: użyj opcji **Dodaj**, aby dodać adresy URL, których otwieranie ma zostać zatrzymane niezależnie od ustawień filtru internetowego firmy Apple.
 
       Wybierz przycisk **OK**, aby zapisać zmiany.
+
+  - **Tylko określone witryny internetowe** (dotyczy wyłącznie przeglądarki Safari): te adresy URL są dodawane do zakładek przeglądarki Safari. Użytkownik jest uprawniony **wyłącznie** do odwiedzania tych witryn internetowych; nie będzie można otwierać żadnych innych witryn. Użyj tej opcji tylko wtedy, gdy znasz dokładną listę adresów URL, do których użytkownicy mogą uzyskiwać dostęp.
+
+    - **Adres URL**: podaj adres URL dozwolonej witryny internetowej. Na przykład wprowadź `https://www.contoso.com`.
+    - **Ścieżka do zakładki**: wprowadź ścieżkę na potrzeby przechowywania zakładki. Na przykład wprowadź `/Contoso/Business Apps`. Jeśli nie dodasz ścieżki, zakładka zostanie dodana do domyślnego folderu zakładek na urządzeniu.
+    - **Tytuł**: podaj opisowy tytuł zakładki.
+
+    Jeśli nie wprowadzisz żadnych adresów URL, użytkownicy końcowi nie będą mogli uzyskiwać dostęp do żadnych witryn internetowych, z wyjątkiem `microsoft.com`, `microsoft.net`, i `apple.com`. Usługa Intune automatycznie zezwala na dostęp do tych adresów URL.
+
+    Wybierz przycisk **OK**, aby zapisać zmiany.
 
 ## <a name="wallpaper-settings"></a>Ustawienia tapety
 
@@ -305,57 +296,6 @@ Jeśli profil bez obrazu zostanie przypisany do urządzeń z istniejącym obraze
 
 > [!TIP]
 > Aby wyświetlać różne obrazy na ekranie blokady i na ekranie głównym, utwórz profil przy użyciu obrazu ekranu blokady. Utwórz inny profil przy użyciu obrazu ekranu głównego. Przypisz obydwa profile do grup użytkowników lub urządzeń systemu iOS.
-
-## <a name="bundle-ids-for-built-in-ios-apps"></a>Identyfikatory pakietów dla wbudowanych aplikacji systemu iOS
-
-Następująca lista zawiera identyfikatory pakietu typowych wbudowanych aplikacji systemu iOS. Aby wyszukać identyfikatory pakietu innych aplikacji, skontaktuj się z dostawcą oprogramowania.
-
-| Identyfikator pakietu                   | Nazwa aplikacji     | Wydawca |
-|-----------------------------|--------------|-----------|
-| com.apple.AppStore          | App Store    | Apple     |
-| com.apple.calculator        | Kalkulator   | Apple     |
-| com.apple.mobilecal         | Kalendarz     | Apple     |
-| com.apple.camera            | Aparat fotograficzny       | Apple     |
-| com.apple.mobiletimer       | Zegar        | Apple     |
-| com.apple.compass           | Kompas      | Apple     |
-| com.apple.MobileAddressBook | Kontakty     | Apple     |
-| com.apple.facetime          | FaceTime     | Apple     |
-| com.apple.DocumentsApp      | Pliki        | Apple     |
-| com.apple.mobileme.fmf1     | Moi znajomi | Apple     |
-| com.apple.mobileme.fmip1    | Znajdź mój iPhone  | Apple     |
-| com.apple.gamecenter        | Centrum gier  | Apple     |
-| com.apple.mobilegarageband  | GarageBand   | Apple     |
-| com.apple.Health            | Kondycja       | Apple     |
-| com.apple.Home              | Domowy         | Apple     |
-| com.apple.iBooks            | iBooks       | Apple     |
-| com.apple.iMovie            | iMovie       | Apple     |
-| com.apple.itunesconnect.mobile | iTunes Connect | Apple |
-| com.apple.MobileStore       | iTunes Store | Apple     |
-| com.apple.itunesu           | iTunes U     | Apple     |
-| com.apple.Keynote           | Keynote      | Apple     |
-| com.apple.mobilemail        | Mail         | Apple     |
-| com.apple.Maps              | Mapy         | Apple     |
-| com.apple.MobileSMS         | Komunikaty     | Apple     |
-| com.apple.Music             | Muzyka        | Apple     |
-| com.apple.news              | News         | Apple     |
-| com.apple.mobilenotes       | Uwagi        | Apple     |
-| com.apple.Numbers           | Liczby      | Apple     |
-| com.apple.Pages             | Pages        | Apple     |
-| com.apple.Photo-Booth       | Photo Booth  | Apple     |
-| com.apple.mobileslideshow   | Zdjęcia       | Apple     |
-| com.apple.podcasts          | Podcasty     | Apple     |
-| com.apple.reminders         | Przypomnienia    | Apple     |
-| com.apple.mobilesafari      | Safari       | Apple     |
-| com.apple.Preferences       | Ustawienia     | Apple     |
-| com.apple.SiriViewService   | Siri         | Apple     |
-| com.apple.stocks            | Giełda       | Apple     |
-| com.apple.tips              | Porady         | Apple     |
-| com.apple.TV                | TV           | Apple     |
-| com.apple.videos            | Filmy       | Apple     |
-| com.apple.VoiceMemos        | Dyktafon   | Apple     |
-| com.apple.Passbook          | Wallet       | Apple     |
-| com.apple.Bridge            | Zegarek        | Apple     |
-| com.apple.weather           | Pogoda      | Apple     |
 
 ## <a name="next-steps"></a>Następne kroki
 
