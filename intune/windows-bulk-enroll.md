@@ -1,6 +1,6 @@
 ---
 title: Rejestracja zbiorcza urządzeń z systemem Windows 10
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Tworzenie pakietu rejestracji zbiorczej dla usługi Microsoft Intune
 keywords: ''
 author: ErikjeMS
@@ -10,18 +10,19 @@ ms.date: 5/21/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: damionw
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7df624f0a3db11b058498c650a9f9c3dd95e8d12
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 064d11f1992d63df9dacbedb8d53e849425e9b1f
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57236810"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "59568170"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Rejestracja zbiorcza urządzeń z systemem Windows
 
@@ -29,7 +30,7 @@ ms.locfileid: "57236810"
 
 Jako administrator możesz dołączyć dużą liczbę nowych urządzeń z systemem Windows do usługi Azure Active Directory i Intune. W celu umożliwienia zbiorczego rejestrowania urządzeń dla dzierżawy usługi Azure AD utwórz pakiet aprowizacyjny przy użyciu aplikacji Windows Configuration Designer (WCD). Zastosowanie pakietu aprowizacyjnego do urządzeń stanowiących własność firmy powoduje ich dołączenie do dzierżawy usługi Azure AD i zarejestrowanie w usłudze Intune w celu umożliwienia zarządzania nimi. Po zastosowaniu pakietu użytkownicy usługi Azure AD mogą się zalogować.
 
-Użytkownicy usługi Azure AD są standardowymi użytkownikami tych urządzeń i otrzymują przypisane zasady usługi Intune oraz wymagane aplikacje. Scenariusze samoobsługowe i scenariusze użycia witryny internetowej Portal firmy nie są w tej chwili obsługiwane.
+Użytkownicy usługi Azure AD są standardowymi użytkownikami tych urządzeń i otrzymują przypisane zasady usługi Intune oraz wymagane aplikacje. Urządzenia z systemem Windows zarejestrowane w usłudze Intune przy użyciu rejestracji zbiorczej systemu Windows mogą instalować dostępne aplikacje przy użyciu aplikacji Portal firmy. 
 
 ## <a name="prerequisites-for-windows-devices-bulk-enrollment"></a>Wymagania wstępne dotyczące rejestracji zbiorczej urządzeń z systemem Windows
 

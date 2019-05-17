@@ -6,10 +6,11 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/14/2018
+ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: dec6f258-ee1b-4824-bf66-29053051a1ae
 ms.reviewer: mghadial
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c61eb47f29b201997d04fa6b1405ad2f186e4fcc
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 33f24a3d7b30973855bb303bb97bf703cd4dc5fa
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57237201"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "59567273"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Jak skonfigurować aplikację Portal firmy w usłudze Microsoft Intune
 
@@ -33,7 +34,7 @@ Portal firmy usługi Microsoft Intune jest miejscem, w którym użytkownicy uzys
 > [!Tip]        
 > Podczas dostosowywania Portalu firmy konfiguracje mają zastosowanie do witryny sieci Web Portal firmy i aplikacji Portal firmy. Należy pamiętać, że użytkownicy muszą mieć przypisaną licencję usługi Intune, aby uzyskiwać dostęp do witryny internetowej Portal firmy.
 
-Dostosowywanie portalu firmy ułatwia zapewnienie znanego i przydatnego środowiska dla użytkowników końcowych. W tym celu w obciążeniu **Aplikacje klienckie** wybierz kolejno pozycje **Konfiguracja** > **Znakowanie Portalu firmy**, po czym skonfiguruj wymagane ustawienia.  
+Dostosowanie Portalu firmy ułatwi zapewnienie znanego i przydatnego środowiska dla użytkowników końcowych. W tym celu w portalu usługi Intune wybierz pozycję **Aplikacje klienckie** > **Znakowanie i dostosowywanie**, a następnie skonfiguruj wymagane ustawienia. 
 
 > [!Note]       
 > Jeśli używasz platformy Azure Government, użytkownik końcowy ma możliwość zdecydowania o sposobie udostępnienia dzienników aplikacji, gdy rozpocznie proces uzyskiwania pomocy dotyczącej problemu. Jeśli jednak nie używasz platformy Azure Government, aplikacja Portal firmy w systemie Windows 10 będzie wysyłać dzienniki aplikacji bezpośrednio do firmy Microsoft, gdy użytkownik zainicjuje proces w celu uzyskania pomocy dotyczącej problemu. Wysłanie dzienników aplikacji do firmy Microsoft ułatwi rozwiązywanie i usuwanie problemów. 
@@ -90,7 +91,7 @@ Możesz wyświetlać obraz marki Twojej firmy. Po zapisaniu zmian można wybrać
 
 |Nazwa pola|Więcej informacji|
 |---|---|
-|**Przekaż obraz marki**| Ta opcja umożliwia wyświetlanie obrazu tła na stronie profilu użytkownika w aplikacji Portal firmy.<p>*Uwaga*: wyświetlany obraz może wyglądać inaczej na różnych platformach.<p><ul><li>Zalecana szerokość obrazu: mniej niż 1125 pikseli, ale nie mniej niż 640 pikseli</li><li>Maksymalny rozmiar obrazu: 1,3 MB</li><li>Typ pliku: PNG, JPG lub JPEG</li></ul>|
+|**Przekaż obraz marki**| Ta opcja umożliwia wyświetlanie obrazu marki. W aplikacji Portal firmy dla systemu iOS jest on wyświetlany jako obraz tła na stronie profilu użytkownika.<p><ul><li>Zalecana szerokość obrazu: mniej niż 1125 pikseli, ale nie mniej niż 640 pikseli</li><li>Maksymalny rozmiar obrazu: 1,3 MB</li><li>Typ pliku: PNG, JPG lub JPEG</li></ul>|
 
 Odpowiedni obraz marki wzmacnia pozytywne wrażenie marki, co pozwala zwiększyć zaufanie użytkownika w Portalu firmy. Poniżej przedstawiono porady, które warto wziąć pod uwagę podczas nabywania, wybierania i optymalizowania obrazu dla Portalu firmy. 
 

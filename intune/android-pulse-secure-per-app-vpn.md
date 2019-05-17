@@ -1,27 +1,29 @@
 ---
 title: Niestandardowy profil sieci VPN dla poszczególnych aplikacji dla systemu Android
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Instrukcje dotyczące tworzenia profilu sieci VPN dla poszczególnych aplikacji dla urządzeń z systemem Android zarządzanych przez usługę Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 04/05/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: d035ebf5-85f4-4001-a249-75d24325061a
 ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 48f1227da6260217105120d31301f60b6e06110c
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 38763d5c16d5cba36220c03e9d74b30a465d752b
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186022"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "59568469"
 ---
 # <a name="use-a-microsoft-intune-custom-profile-to-create-a-per-app-vpn-profile-for-android-devices"></a>Korzystanie z niestandardowego profilu usługi Microsoft Intune w celu tworzenia profilu sieci VPN dla aplikacji dla urządzeń z systemem Android
 
@@ -51,7 +53,7 @@ Po przypisaniu zasad w grupach użytkowników lub na urządzeniu z systemem Andr
 
 Zapisz **nazwę połączenia** — wartość określaną podczas tworzenia profilu sieci VPN. Będzie ona potrzebna w następnym kroku. Przykład: **mój_profil_VPN_aplikacji**.
 
-## <a name="step-2-create-a-custom-configuration-policy"></a>Krok 2. Tworzenie niestandardowych zasad konfiguracji
+## <a name="step-2-create-a-custom-configuration-policy"></a>Krok 2: Tworzenie niestandardowych zasad konfiguracji
 
 1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
 2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
@@ -81,6 +83,6 @@ Alternatywnie możesz użyć wartości **WHITELIST**, aby określić listę apli
 
 
 
-## <a name="step-3-assign-both-policies"></a>Krok 3: Przypisanie obu zasad
+## <a name="step-3-assign-both-policies"></a>Krok 3: Przypisywanie obu zasad
 
 Postępuj zgodnie z instrukcjami zawartymi w artykule [How to assign device profiles](device-profile-assign.md) (Sposoby przypisywania profilów urządzeń), aby przypisać oba profile do wymaganych użytkowników lub urządzeń.

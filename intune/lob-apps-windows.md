@@ -1,15 +1,16 @@
 ---
 title: Dodawanie aplikacji biznesowych dla systemu Windows do usługi Microsoft Intune
-titlesuffix: ''
+titleSuffix: ''
 description: Dowiedz się, jak dodać aplikację biznesową (LOB) dla systemu Windows przy użyciu usługi Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2019
+ms.date: 04/10/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: f81c5f82-5cfa-4b97-9f73-d6cf77c06896
 ms.reviewer: mghadial
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7776c1bddb459347679cb4aea3bc4e14e05e1418
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: ca41e12136911cc0aecb6968a949fb738e2e2d77
+ms.sourcegitcommit: d1116c70bd0f2382d590091e0e66095de3925324
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57238782"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59570770"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>Dodawanie aplikacji biznesowych dla systemu Windows do usługi Microsoft Intune
 
@@ -30,7 +31,7 @@ ms.locfileid: "57238782"
 
 Aplikacja biznesowa (LOB) to aplikacja dodawana za pomocą pliku instalacyjnego aplikacji. Aplikacja tego typu jest zwykle pisana w firmie. W poniższych krokach przedstawiono wskazówki ułatwiające dodawanie aplikacji biznesowych dla systemu Windows do usługi Microsoft Intune.
 
-## <a name="step-1-specify-the-software-setup-file"></a>Krok 1: Określanie pliku konfiguracji oprogramowania
+## <a name="step-1-specify-the-software-setup-file"></a>Krok 1. Określanie pliku konfiguracji oprogramowania
 
 1. Zaloguj się do [portalu Azure](https://portal.azure.com).
 2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
@@ -69,12 +70,12 @@ Aplikacja biznesowa (LOB) to aplikacja dodawana za pomocą pliku instalacyjnego 
     - **Logo**: przekaż ikonę skojarzoną z aplikacją. Będzie ona wyświetlana jako ikona aplikacji podczas przeglądania portalu firmy.
 3. Po zakończeniu wybierz przycisk **OK**.
 
-## <a name="step-4-finish-up"></a>Krok 4: Zakończenie
+## <a name="step-4-finish-up"></a>Krok 4. Zakończenie
 
 1. W okienku **Dodaj aplikację** sprawdź poprawność skonfigurowanych informacji.
 2. Wybierz pozycję **Dodaj**, aby przekazać aplikację do usługi Intune.
 
-## <a name="step-5-update-a-line-of-business-app"></a>Krok 5: Aktualizowanie aplikacji biznesowej
+## <a name="step-5-update-a-line-of-business-app"></a>Krok 5. Aktualizowanie aplikacji biznesowej
 
 [!INCLUDE [shared-proc-lob-updateapp](./includes/shared-proc-lob-updateapp.md)]
 
@@ -92,4 +93,4 @@ Ta możliwość jest przydatna, aby uniknąć sytuacji wyścigu. Na przykład sy
 
 - Dowiedz się więcej o sposobach, w jakie możesz monitorować właściwości i przypisania Twojej aplikacji. Zobacz [Monitorowanie informacji o aplikacji i przypisań](apps-monitor.md).
 
-- Dowiedz się więcej o kontekście swojej aplikacji w usłudze Intune. Zobacz temat [Przegląd cyklów życia urządzeń i aplikacji](introduction-device-app-lifecycles.md).
+- Dowiedz się więcej o kontekście swojej aplikacji w usłudze Intune. Zobacz temat [Przegląd cyklu życia aplikacji w usłudze Microsoft Intune](app-lifecycle.md).

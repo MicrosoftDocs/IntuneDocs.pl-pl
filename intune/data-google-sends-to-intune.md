@@ -7,21 +7,23 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 04/18/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: c379c8db-788a-454e-9098-665ea3bc7b56
 ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a0678e562ab7b63c99f10c455837cf03ee30da21
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 89d6b21fd5bbc690d533695ead0b5b207ddeb6c0
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52178783"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57392272"
 ---
 # <a name="data-google-sends-to-intune"></a>Dane wysyłane do usługi Intune przez Google
 
@@ -32,7 +34,7 @@ Gdy zarządzanie urządzeniami przedsiębiorstwa z systemem Android zostanie wł
 Poniższa tabela zawiera dane, które firma Google wysyła do usługi Intune po włączeniu zarządzania urządzeniami na urządzeniu:
 
 
-| Dane wysyłane do usługi Intune przez firmę Google | Szczegóły | Służy do | Przykład |
+| Dane wysyłane do usługi Intune przez firmę Google | Szczegóły | Sposób użycia | Przykład |
 |:---:|:---:|:---:|:---:|
 | Dane przedsiębiorstwa | Identyfikatory przedsiębiorstwa dla klienta w firmie Google. | Łączy informacje o kliencie między usługą Intune i firmą Google. | **enterpriseId** — przykład: LC04eik8a6.<br>**Nazwa**. Nazwa administratora wprowadzona podczas konfigurowania przedsiębiorstwa z systemem Android. Przykład: Jan Kowalski.<br>**Adres e-mail administratora**. Adres YourAdmin@gmail.com użyty podczas konfigurowania przedsiębiorstwa używającego systemu Android. |
 | Dane aplikacji | Dane związane z zarządzanymi aplikacjami ze Sklepu Play. | Określanie aplikacji docelowych dla użytkowników lub urządzeń jako dostępnych lub wymaganych. | **Nazwa aplikacji** — przykład: Aplikacja spisu magazynowego Contoso.<br>**Unikatowy identyfikator reprezentujący aplikację** — przykład: app:com.Contoso.Warehouse.InventoryTracking |

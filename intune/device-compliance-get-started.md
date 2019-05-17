@@ -1,45 +1,45 @@
 ---
 title: Zasady zgodności urządzeń w usłudze Microsoft Intune na platformie Azure | Microsoft Docs
-description: Wymagania dotyczące korzystania z zasad zgodności urządzeń, omówienie stanu i poziomów ważności, korzystanie ze stanu InGracePeriod, praca z dostępem warunkowym, obsługa urządzeń bez przypisanych zasad oraz różnice w zgodności między witryną Azure Portal i portalem klasycznym w usłudze Microsoft Intune
+description: 'Wprowadzenie do następujących zagadnień: korzystanie z zasad zgodności urządzeń, omówienie stanu i poziomów ważności, korzystanie ze stanu InGracePeriod, praca z dostępem warunkowym, obsługa urządzeń bez przypisanych zasad oraz różnice w zgodności między witryną Azure Portal i portalem klasycznym w usłudze Microsoft Intune'
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/28/2019
-ms.topic: article
+ms.date: 04/08/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a2a3a9838043d4e9b69c6369da87a6f54087f76c
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: fbed6185abe7656c3269805d1d5ed09eccbaf05e
+ms.sourcegitcommit: 02803863eba37ecf3d8823a7f1cd7c4f8e3bb42c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850006"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59570432"
 ---
-# <a name="get-started-with-device-compliance-policies-in-intune"></a>Wprowadzenie do zasad zgodności urządzeń w usłudze Intune
+# <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Ustawianie zasad na urządzeniach w celu umożliwienia dostępu do zasobów w organizacji za pomocą usługi Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Wiele rozwiązań do zarządzania urządzeniami mobilnymi (MDM) pomaga chronić dane organizacji, wymagając od użytkowników i urządzeń spełnienia pewnych wymagań. W usłudze Intune ta funkcja jest nazywana „zasadami zgodności”. Zasady zgodności definiują reguły i ustawienia, które użytkownicy i urządzenia muszą spełnić, aby były zgodne. Używając tych zasad w połączeniu z dostępem warunkowym, administratorzy mogą blokować użytkowników i urządzenia niespełniające warunków reguł. Na przykład administrator usługi Intune może wymagać, aby:
+Wiele rozwiązań do zarządzania urządzeniami mobilnymi (MDM) pomaga chronić dane organizacji, wymagając od użytkowników i urządzeń spełnienia pewnych wymagań. W usłudze Intune ta funkcja jest nazywana „zasadami zgodności”. Zasady zgodności definiują reguły i ustawienia, które użytkownicy i urządzenia muszą spełnić, aby były zgodne. Używając tych zasad w połączeniu z dostępem warunkowym, administratorzy mogą blokować użytkowników i urządzenia niespełniające warunków reguł.
+
+Na przykład administrator usługi Intune może wymagać, aby:
 
 - Użytkownicy końcowi używali hasła do uzyskiwania dostępu do danych organizacji na urządzeniach przenośnych
-
 - Urządzenie nie miało złamanych zabezpieczeń ani odblokowanego dostępu do konta root
-
 - Na urządzeniu zainstalowano minimalną lub maksymalną wersję systemu operacyjnego
-
 - Poziom zagrożenia urządzenia był niższy lub równy podanemu poziomowi zagrożenia
 
-Zasady zgodności urządzeń mogą być również używane do monitorowania stanu zgodności na urządzeniach.
+Ta funkcja służy również do monitorowania stanu zgodności na urządzeniach w organizacji.
 
 > [!IMPORTANT]
-> Usługa Intune wykonuje wszystkie oceny zgodności na urządzeniu zgodnie z jego harmonogramem ewidencjonowania. [Dowiedz się więcej o harmonogramie ewidencjonowania urządzenia](https://docs.microsoft.com/intune/device-profile-troubleshoot#how-long-does-it-take-for-mobile-devices-to-get-a-policy-or-apps-after-they-have-been-assigned).
+> Usługa Intune wykonuje wszystkie oceny zgodności na urządzeniu zgodnie z jego harmonogramem ewidencjonowania. [Dowiedz się więcej o harmonogramie ewidencjonowania urządzenia](device-profile-troubleshoot.md#how-long-does-it-take-for-mobile-devices-to-get-a-policy-or-apps-after-they-have-been-assigned).
 
 <!---### Actions for noncompliance
 
@@ -64,121 +64,74 @@ compliance issues on the device. You can also use this time to create your actio
 
 Remember that you need to implement conditional access policies in addition to compliance policies in order for access to company resources to be blocked.--->
 
-## <a name="prerequisites"></a>Wymagania wstępne
+## <a name="device-compliance-policies-work-with-azure-ad"></a>Współdziałanie zasad zgodności urządzeń z usługą Azure AD
 
-Aby korzystać z zasad zgodności urządzeń, upewnij się, że spełniono następujące warunki:
+Usługa Intune używa [dostępu warunkowego](https://docs.microsoft.com/azure/active-directory/conditional-access/overview) usługi Azure Active Directory (AD) (link otwiera inną witrynę internetową Docs), aby ułatwić wymuszanie zgodności. Gdy urządzenie jest rejestrowane w usłudze Intune, rozpoczyna się proces rejestracji w usłudze Azure AD, a informacje o urządzeniu są aktualizowane w usłudze Azure AD. Jedną z kluczowych informacji jest stan zgodności urządzenia. Stan zgodności jest używany przez zasady dostępu warunkowego do blokowania lub udostępniania poczty e-mail i innych zasobów organizacji.
 
-- Użyj następujących subskrypcji:
+- Artykuł [Co to jest zarządzanie urządzeniami w usłudze Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-introduction) to fantastyczny zasób dotyczący przyczyn i sposobów rejestrowania urządzeń w usłudze Azure AD.
 
-  - Intune
-  - Usługa Azure Active Directory (AD) — wersja Premium
-
-- Użyj obsługiwanej platformy:
-
-  - Android
-  - iOS
-  - macOS (wersja zapoznawcza)
-  - Windows 8.1
-  - Windows Phone 8,1
-  - Windows 10
-
-- Urządzenia zostały zarejestrowane w usłudze Intune, co pozwala na wyświetlenie stanu zgodności
-
-- Urządzenia zostały zarejestrowane dla jednego użytkownika lub bez użytkownika podstawowego. Urządzenia zarejestrowane dla wielu użytkowników nie są obsługiwane.
-
-## <a name="how-device-compliance-policies-work-with-azure-ad"></a>Jak zasady zgodności urządzeń działają z usługą Azure AD
-
-Gdy urządzenie jest rejestrowane w usłudze Intune, rozpoczyna się proces rejestracji w usłudze Azure AD, który aktualizuje atrybuty urządzenia w usłudze Azure AD. Jedną z kluczowych informacji jest stan zgodności urządzenia. Stan zgodności jest używany przez zasady dostępu warunkowego do blokowania lub udostępniania poczty e-mail i innych zasobów firmy.
-
-Artykuł [Azure AD registration process (Proces rejestracji w usłudze Azure AD)](https://docs.microsoft.com/azure/active-directory/device-management-introduction) zawiera więcej informacji.
-
-## <a name="refresh-cycle-times"></a>Czasy cyklu odświeżania
-
-Podczas sprawdzania zgodności usługa Intune używa tego samego cyklu odświeżania, co w przypadku profilów konfiguracji. Mówiąc ogólnie, są używane następujące czasy:
-
-- iOS: co sześć godzin
-- macOS: co sześć godzin
-- Android: co osiem godzin
-- Komputery z systemem Windows 10 zarejestrowane jako urządzenia: co osiem godzin
-- Windows Phone: co osiem godzin
-- Windows 8.1: co osiem godzin
-
-Sprawdzanie zgodności jest przeprowadzane częściej od razu po zarejestrowaniu urządzenia.
-
-### <a name="assign-an-ingraceperiod-status"></a>Przypisywanie stanu InGracePeriod
-
-Stan InGracePeriod zasad zgodności jest wartością. Tę wartość określa kombinacja okresu prolongaty urządzenia oraz rzeczywistego stanu urządzenia dla zasad zgodności.
-
-W szczególności gdy urządzenie ma stan niezgodności (NonCompliant) dla przypisanych zasad zgodności oraz:
-
-- do urządzenia nie przypisano okresu prolongaty — przypisaną wartością zasad zgodności jest NonCompliant
-- do urządzenia przypisano okres prolongaty, który wygasł — przypisaną wartością zasad zgodności jest NonCompliant
-- do urządzenia przypisano okres prolongaty, którego termin przypada w przyszłości — przypisaną wartością zasad zgodności jest InGracePeriod
-
-Poniższa tabela zawiera podsumowanie tych informacji:
-
-|Rzeczywisty stan zgodności|Wartość przypisanego okresu prolongaty|Ostateczny stan zgodności|
-|---------|---------|---------|
-|NonCompliant |Nie przypisano okresu prolongaty |NonCompliant |
-|NonCompliant |Data przeszła|NonCompliant|
-|NonCompliant |Data przyszła|InGracePeriod|
-
-Aby uzyskać więcej informacji na temat monitorowania zasad zgodności urządzeń, zobacz [Monitor Intune Device compliance policies](compliance-policy-monitor.md) (Monitorowanie zasad zgodności urządzeń w usłudze Intune).
-
-### <a name="assign-a-resulting-compliance-policy-status"></a>Przypisywanie wynikowego stanu zasad zgodności
-
-Jeśli urządzenie ma wiele zasad zgodności i dla co najmniej dwóch przypisanych zasad zgodności ma ono różne stany zgodności, zostanie przypisany jeden wynikowy stan zgodności. To przypisanie jest oparte na poziomie ważności koncepcyjnej przypisanym do poszczególnych stanów zgodności. Poszczególnym stanom zgodności odpowiadają następujące poziomy ważności:
-
-|Stan  |Ważność  |
-|---------|---------|
-|Nieznane     |1|
-|NotApplicable     |2|
-|Zgodny|3|
-|InGracePeriod|4|
-|NonCompliant|5|
-|Error|6|
-
-Jeśli urządzenie ma wiele zasad zgodności, do urządzenia jest przypisywany najwyższy spośród poziomów ważności wszystkich zasad.
-
-Na przykład urządzenie może mieć przypisane trzy rodzaje zasad zgodności: stan Unknown (nieznany, ważność = 1), stan Compliant (zgodne, ważność = 3) i stan InGracePeriod (prolongata, ważność = 4). Stan InGracePeriod ma najwyższy poziom ważności, dlatego wszystkie trzy zasady mają stan zgodności InGracePeriod.
+- Ta funkcja została opisana w sekcjach dotyczących [dostępu warunkowego](conditional-access.md) i [typowych sposobów korzystania z dostępu warunkowego](conditional-access-intune-common-ways-use.md), ponieważ jest związana z usługą Intune.
 
 ## <a name="ways-to-use-device-compliance-policies"></a>Sposoby korzystania z zasad zgodności urządzeń
 
 #### <a name="with-conditional-access"></a>Z dostępem warunkowym
-W przypadku urządzeń zgodnych z regułami zasad możesz udzielić im dostępu do poczty e-mail i innych zasobów firmy. Jeśli urządzenia nie są zgodne z regułami zasad, to nie uzyskają dostępu do zasobów firmy. To jest dostęp warunkowy.
+
+W przypadku urządzeń zgodnych z regułami zasad możesz udzielić im dostępu do poczty e-mail i innych zasobów organizacji. Jeśli urządzenia nie są zgodne z regułami zasad, nie uzyskają dostępu do zasobów organizacji. To jest dostęp warunkowy.
 
 #### <a name="without-conditional-access"></a>Bez dostępu warunkowego
+
 Zasady zgodności można również stosować bez dostępu warunkowego. Jeśli zasady zgodności są stosowane niezależnie, urządzenia docelowe są oceniane, po czym generowany jest raport z ich stanem zgodności. Na przykład można uzyskać raport z liczbą urządzeń, które nie są szyfrowane, lub z informacją o urządzeniach, w których zdjęto zabezpieczenia systemu albo uzyskano dostęp do konta root. Jeśli zasady zgodności są stosowane bez dostępu warunkowego, dostęp do zasobów organizacji nie jest ograniczany.
 
 ## <a name="ways-to-deploy-device-compliance-policies"></a>Sposoby wdrażania zasad zgodności urządzeń
+
 Zasady zgodności można wdrożyć dla użytkowników w grupach użytkowników lub urządzeń w grupach urządzeń. Gdy zasady zgodności są wdrażane dla użytkownika, sprawdzana jest zgodność wszystkich urządzeń użytkownika. Na urządzeniach z systemem Windows 10 w wersji 1803 lub nowszej zaleca się wdrażanie do grupy urządzeń, *jeśli* użytkownik podstawowy nie zarejestrował urządzenia. Użycie grup urządzeń w tym scenariuszu ułatwia raportowanie zgodności.
 
-Zestaw wbudowanych ustawień zasad zgodności (**Intune** > **Zgodność urządzenia**) jest oceniany na wszystkich urządzeniach zarejestrowanych w usłudze Intune. Należą do nich następujące elementy:
+Usługa Intune oferuje również zestaw wbudowanych ustawień zasad zgodności. Następujące zasady wbudowane są oceniane na wszystkich urządzeniach zarejestrowanych w usłudze Intune:
 
 - **Oznacz urządzenia bez przypisanych zasad zgodności jako**: ta właściwość ma dwie wartości:
 
   - **Zgodne**: funkcja zabezpieczeń wyłączona
   - **Niezgodne** (domyślna): funkcja zabezpieczeń włączona
 
-  Jeśli urządzenie nie ma przypisanych zasad zgodności, jest ono traktowane jako niezgodne. Domyślnie urządzenia są oznaczone za pomocą wartości **Niezgodne**. Jeśli korzystasz z dostępu warunkowego, zalecamy zmianę ustawienia na **Niezgodne**. Jeśli użytkownik jest niezgodny, ponieważ zasady nie zostały przypisane, w aplikacji Portal firmy zostanie wyświetlony komunikat `No compliance policies have been assigned`.
+  Jeśli urządzenie nie ma przypisanych zasad zgodności, jest ono traktowane jako niezgodne. Domyślnie urządzenia są oznaczone za pomocą wartości **Niezgodne**. Jeśli korzystasz z dostępu warunkowego, zalecamy zmianę ustawienia na **Niezgodne**. Jeśli użytkownik końcowy jest niezgodny, ponieważ zasady nie zostały przypisane, w [aplikacji Portal firmy](company-portal-app.md) zostanie wyświetlony komunikat `No compliance policies have been assigned`.
 
 - **Rozszerzone wykrywanie jailbreaku**: włączenie tego ustawienia powoduje, że urządzenia z systemem iOS są częściej ewidencjonowane w usłudze Intune. Włączenie tej właściwości powoduje użycie usług lokalizacyjnych urządzenia i wpływa na użycie baterii. Dane lokalizacji użytkownika nie są przechowywane przez usługę Intune.
 
   Włączenie tego ustawienia wymaga, aby na urządzeniach:
-  - Włączyć usługi lokalizacyjne na poziomie systemu operacyjnego
-  - Zezwolić aplikacji Portal firmy na użycie usług lokalizacyjnych
+  - Włączyć usługi lokalizacyjne na poziomie systemu operacyjnego.
+  - Zezwolić aplikacji Portal firmy na użycie usług lokalizacyjnych.
   - Oceniać i zgłaszać stan jailbreaku do usługi Intune co najmniej raz na 72 godziny. Jeśli te warunki nie są spełnione, urządzenie jest oznaczane jako niezgodne. Ocena jest wyzwalana przez otwarcie aplikacji Portal firmy lub fizyczne przeniesienie urządzenia o 500 metrów lub więcej. Jeśli urządzenie nie zostanie przeniesione o 500 metrów w ciągu 72 godzin, użytkownik musi otworzyć aplikację Portal firmy w celu przeprowadzenia rozszerzonej oceny pod kątem wykonania jailbreaku.
 
 - **Okres ważności stanu zgodności (dni)**: podaj okres zgłaszania stanu urządzenia dla wszystkich odebranych zasad zgodności. Urządzenia, które nie zwrócą stanu w tym okresie, są traktowane jako niezgodne. Wartość domyślna to 30 dni.
 
-Wszystkie urządzenia mają **wbudowane zasady zgodności urządzeń** (witryna Azure Portal > Zgodność urządzenia > Zgodność z zasadami). Wbudowane zasady umożliwiają monitorowanie tych ustawień.
+Te wbudowane zasady umożliwiają monitorowanie tych ustawień. Usługa Intune również [odświeża lub sprawdza aktualizacje](create-compliance-policy.md#refresh-cycle-times) w różnych interwałach w zależności od platformy urządzenia. Pomocnym zasobem jest artykuł [Typowe pytania, problemy i rozwiązania związane z zasadami i profilami urządzeń w usłudze Microsoft Intune](device-profile-troubleshoot.md).
 
-Aby uzyskać informacje o czasie potrzebnym na odebranie zasad przez urządzenia mobilne po wdrożeniu tych zasad, zobacz artykuł [Rozwiązywanie problemów z profilami urządzeń](device-profile-troubleshoot.md#how-long-does-it-take-for-mobile-devices-to-get-a-policy-or-apps-after-they-have-been-assigned).
+Raporty zgodności to doskonały sposób na sprawdzanie stanu urządzeń. Wskazówki można znaleźć w artykule [Monitor compliance policies](compliance-policy-monitor.md) (Monitorowanie zasad zgodności).
 
-Raporty zgodności to doskonały sposób na sprawdzanie stanu urządzeń. Przewodnik znajduje się w artykule [Monitor compliance policies (Monitorowanie zasad zgodności)](compliance-policy-monitor.md).
+## <a name="non-compliance-and-conditional-access-on-the-different-platforms"></a>Niezgodność i dostęp warunkowy na różnych platformach
 
-### <a name="actions-for-noncompliance"></a>Akcje w przypadku niezgodności
-Istnieje możliwość skonfigurowania uporządkowanej w czasie sekwencji akcji, które stosują się do urządzeń niespełniających kryteriów zasad zgodności. Te akcje dotyczące niezgodności można zautomatyzować zgodnie z opisem w artykule [Automate actions for noncompliance (Automatyzowanie akcji dla stanu niezgodności)](actions-for-noncompliance.md).
+W poniższej tabeli opisano sposób postępowania z niezgodnymi ustawieniami w przypadku, gdy zasady zgodności są używane wraz z zasadami dostępu warunkowego.
+
+---------------------------
+
+|**Ustawienie zasad**| **Platforma** |
+| --- | ----|
+| **Konfiguracja kodu PIN lub hasła** | - **System Android 4.0 lub nowszy**: Poddane kwarantannie</br>- **System Samsung Knox Standard 4.0 lub nowszy**: Poddane kwarantannie</br>- **System Android Enterprise**: Poddane kwarantannie</br></br>- **System iOS 8.0 lub nowszy**: Skorygowane</br>- **System macOS 10.11 lub nowszy**: Skorygowane</br></br>- **System Windows 8.1 lub nowszy**: Skorygowane</br>- **System Windows Phone 8.1 lub nowszy**: Skorygowane|
+| **Szyfrowanie urządzenia** | - **System Android 4.0 lub nowszy**: Poddane kwarantannie</br>- **System Samsung Knox Standard 4.0 lub nowszy**: Poddane kwarantannie</br>- **System Android Enterprise**: Poddane kwarantannie</br></br>- **System iOS 8.0 lub nowszy**: Skorygowane (przez ustawienie kodu PIN)</br>- **System macOS 10.11 lub nowszy**: Skorygowane (przez ustawienie kodu PIN)</br></br>- **System Windows 8.1 lub nowszy**: Nie dotyczy</br>- **System Windows Phone 8.1 lub nowszy**: Skorygowane |
+| **Urządzenie ze złamanymi ograniczeniami lub z odblokowanym dostępem** | - **System Android 4.0 lub nowszy**: Poddane kwarantannie (to nie jest ustawienie)</br>- **System Samsung Knox Standard 4.0 lub nowszy**: Poddane kwarantannie (to nie jest ustawienie)</br>- **System Android Enterprise**: Poddane kwarantannie (to nie jest ustawienie)</br></br>- **System iOS 8.0 lub nowszy**: Poddane kwarantannie (to nie jest ustawienie)</br>- **System macOS 10.11 lub nowszy**: Nie dotyczy</br></br>- **System Windows 8.1 lub nowszy**: Nie dotyczy</br>- **System Windows Phone 8.1 lub nowszy**: Nie dotyczy |
+| **Profil e-mail** | - **System Android 4.0 lub nowszy**: Nie dotyczy</br>- **System Samsung Knox Standard 4.0 lub nowszy**: Nie dotyczy</br>- **System Android Enterprise**: Nie dotyczy</br></br>- **System iOS 8.0 lub nowszy**: Poddane kwarantannie</br>- **System macOS 10.11 lub nowszy**: Poddane kwarantannie</br></br>- **System Windows 8.1 lub nowszy**: Nie dotyczy</br>- **System Windows Phone 8.1 lub nowszy**: Nie dotyczy |
+| **Minimalna wersja systemu operacyjnego** | - **System Android 4.0 lub nowszy**: Poddane kwarantannie</br>- **System Samsung Knox Standard 4.0 lub nowszy**: Poddane kwarantannie</br>- **System Android Enterprise**: Poddane kwarantannie</br></br>- **System iOS 8.0 lub nowszy**: Poddane kwarantannie</br>- **System macOS 10.11 lub nowszy**: Poddane kwarantannie</br></br>- **System Windows 8.1 lub nowszy**: Poddane kwarantannie</br>- **System Windows Phone 8.1 lub nowszy**: Poddane kwarantannie |
+| **Maksymalna wersja systemu operacyjnego** | - **System Android 4.0 lub nowszy**: Poddane kwarantannie</br>- **System Samsung Knox Standard 4.0 lub nowszy**: Poddane kwarantannie</br>- **System Android Enterprise**: Poddane kwarantannie</br></br>- **System iOS 8.0 lub nowszy**: Poddane kwarantannie</br>- **System macOS 10.11 lub nowszy**: Poddane kwarantannie</br></br>- **System Windows 8.1 lub nowszy**: Poddane kwarantannie</br>- **System Windows Phone 8.1 lub nowszy**: Poddane kwarantannie |
+| **Zaświadczanie o kondycji systemu Windows** | - **System Android 4.0 lub nowszy**: Nie dotyczy</br>- **System Samsung Knox Standard 4.0 lub nowszy**: Nie dotyczy</br>- **System Android Enterprise**: Nie dotyczy</br></br>- **System iOS 8.0 lub nowszy**: Nie dotyczy</br>- **System macOS 10.11 lub nowszy**: Nie dotyczy</br></br>- **Systemy Windows 10 i Windows 10 Mobile**: Poddane kwarantannie</br>- **System Windows 8.1 lub nowszy**: Poddane kwarantannie</br>- **System Windows Phone 8.1 lub nowszy**: Nie dotyczy |
+
+---------------------------
+
+**Skorygowane**: system operacyjny urządzenia wymusza zgodność. Na przykład użytkownik jest zmuszony do ustawienia kodu PIN.
+
+**Poddane kwarantannie**: system operacyjny urządzenia nie wymusza zgodności. Na przykład urządzenia z systemami Android i Android Enterprise nie zmuszają użytkownika do szyfrowania urządzeń. Gdy urządzenie nie jest zgodne, zostaną wykonane następujące akcje:
+
+  - Jeśli użytkownik podlega zasadom dostępu warunkowego, urządzenie zostanie zablokowane.
+  - Aplikacja Portal firmy powiadomi użytkownika o wszelkich problemach ze zgodnością.
 
 ## <a name="azure-classic-portal-vs-azure-portal"></a>Klasyczny portal Azure a Witryna Azure Portal
 
@@ -187,11 +140,9 @@ Główna różnica w przypadku korzystania z zasad zgodności urządzeń w witry
 - W witrynie Azure Portal zasady zgodności są tworzone oddzielnie dla każdej z obsługiwanych platform.
 - W klasycznym portalu Azure zasady zgodności urządzeń są wspólne dla wszystkich obsługiwanych platform.
 
-<!--- -   In the Azure portal, you have the ability to specify actions and notifications that are intiated when a device is determined to be noncompliant. This ability does not exist in the Intune admin console.
+<!--- -   In the Azure portal, you have the ability to specify actions and notifications that are initiated when a device is determined to be noncompliant. This ability does not exist in the Intune admin console.
 
 -   In the Azure portal, you can set a grace period to allow time for the end-user to get their device back to compliance status before they completely lose the ability to get company data on their device. This is not available in the Intune admin console.--->
-
-## <a name="device-compliance-policies-in-the-classic-portal-and-azure-portal"></a>Zasady zgodności urządzeń w klasycznym portalu Azure i w witrynie Azure Portal
 
 Zasady zgodności urządzeń tworzone w [klasycznym portalu Azure](https://manage.microsoft.com) nie są dostępne w [witrynie Azure Portal](https://portal.azure.com). Nadal jednak będą one stosowane dla użytkowników i będzie możliwe zarządzanie nimi za pośrednictwem klasycznego portalu Azure.
 
@@ -199,12 +150,14 @@ Aby korzystać z funkcji dotyczących zgodności urządzeń w witrynie Azure Por
 
 ## <a name="next-steps"></a>Następne kroki
 
-- Utwórz zasady zgodności urządzeń dla następujących platform:
+- [Utwórz zasady](create-compliance-policy.md) i wyświetl wymagania wstępne.
+- Zobacz ustawienia zgodności dla różnych platform urządzeń:
 
   - [Android](compliance-policy-create-android.md)
-  - [Profil służbowy systemu Android](compliance-policy-create-android-for-work.md)
+  - [Android Enterprise](compliance-policy-create-android-for-work.md)
   - [iOS](compliance-policy-create-ios.md)
   - [macOS](compliance-policy-create-mac-os.md)
-  - [Windows](compliance-policy-create-windows.md)
+  - [Windows 10 lub nowszy](compliance-policy-create-windows.md)
+  - [Windows 8.1 i Windows Phone 8.1](compliance-policy-create-windows-8-1.md)
 
-- Aby uzyskać informacje na temat jednostek zasad magazynu danych usługi Intune, zobacz [Dokumentacja jednostek zasad](reports-ref-policy.md).
+- [Dokumentacja jednostek zasad](reports-ref-policy.md) zawiera informacje na temat jednostek zasad magazynu Data Warehouse w usłudze Intune.

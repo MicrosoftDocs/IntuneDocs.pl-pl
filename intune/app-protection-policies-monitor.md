@@ -1,15 +1,16 @@
 ---
 title: Monitorowanie zasad ochrony aplikacji
 titleSuffix: Microsoft Intune
-description: Monitorowanie stanu zgodności zasad zarządzania aplikacjami mobilnymi w usłudze Intune.
+description: W tym temacie opisano sposób monitorowania stanu zgodności zasad zarządzania aplikacjami mobilnymi w usłudze Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/08/2019
-ms.topic: article
+ms.date: 02/20/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 9b0afb7d-cd4e-4fc6-83e2-3fc0da461d02
 ms.reviewer: joglocke
@@ -17,24 +18,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7efa888344b91c74672563730bbdea6c7424214b
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 2d8c34f1947a0abaa4cdf0bbcd65dcf31e4c11ff
+ms.sourcegitcommit: 93286c22426dcb59191a99e3cf2af4ff6ff16522
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55835099"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "59566792"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Monitorowanie zasad ochrony aplikacji
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Możesz monitorować stan zgodności zasad zarządzania aplikacjami mobilnymi (MAM, Mobile Application Management), które zostały zastosowane do użytkowników w okienku ochrony aplikacji usługi Intune w [witrynie Azure Portal](https://portal.azure.com). Dostępne są informacje o użytkownikach, których dotyczą zasady zarządzania aplikacjami mobilnymi, o ich stanie zgodności, a także o wszelkich problemach, które mogą napotykać użytkownicy.
+Możesz monitorować stan zgodności zasad zarządzania aplikacjami mobilnymi (MAM), które zostały zastosowane do użytkowników w okienku ochrony aplikacji usługi Intune w witrynie [Azure Portal](https://portal.azure.com). Ponadto możesz wyszukiwać informacje o użytkownikach, których dotyczą zasady zarządzania aplikacjami mobilnymi, o stanie zgodności tych zasad, a także o wszelkich problemach, które mogą napotykać użytkownicy.
 
-Monitorowanie stanu zgodności jest możliwe w trzech miejscach:
-
+Monitorowanie stanu zgodności zasad zarządzania aplikacjami mobilnymi jest możliwe w trzech miejscach:
 -   Widok podsumowania
-
 -   Widok szczegółowy
-
 -   Widok raportowania
 
 > [!NOTE]
@@ -49,27 +47,31 @@ Monitorowanie stanu zgodności jest możliwe w trzech miejscach:
 
 ![Kafelek podsumowania w okienku zarządzania aplikacjami mobilnymi usługi Intune](./media/app-protection-user-status-summary.png)
 
--   **Przypisani użytkownicy**: Całkowita liczba przypisanych użytkowników w firmie korzystających z aplikacji, którzy są powiązani z zasadami w kontekście służbowym oraz są chronieni i licencjonowani, jak również przypisanych użytkowników, którzy są niechronieni i nielicencjonowani.
--   **Oflagowani użytkownicy:** liczba użytkowników, którzy napotykają problemy. Urządzenia ze zdjętymi zabezpieczeniami systemu są zgłaszane w sekcji **Oflagowani użytkownicy**.
--   **Stan użytkownika dla systemu iOS** i **Stan użytkownika dla systemu Android**: Liczba użytkowników, którzy korzystali z aplikacji i mają przypisane zasady w kontekście służbowym dla powiązanej platformy. Zawiera liczbę użytkowników zarządzanych przez zasady, jak również liczbę użytkowników, którzy korzystają z aplikacji, ale nie są objęci żadnymi zasadami w kontekście służbowym. Można rozważyć dodanie tych użytkowników do zasad.
+- **Przypisani użytkownicy**: Całkowita liczba przypisanych użytkowników w firmie korzystających z aplikacji, którzy są powiązani z zasadami w kontekście służbowym oraz są chronieni i licencjonowani, jak również przypisanych użytkowników, którzy są niechronieni i nielicencjonowani.
+- **Oflagowani użytkownicy:** liczba użytkowników, którzy napotykają problemy. Urządzenia ze zdjętymi zabezpieczeniami systemu (iOS) i z dostępem do konta root (Android) są zgłaszane w sekcji **Oflagowani użytkownicy**. W tym miejscu są zgłaszani użytkownicy urządzeń oflagowanych podczas sprawdzania zaświadczania urządzenia rozwiązania Google SafetyNet (jeśli zostało włączone przez administratora IT). 
+- **Stan użytkownika dla systemu iOS** i **Stan użytkownika dla systemu Android**: Liczba użytkowników, którzy korzystali z aplikacji i mają przypisane zasady w kontekście służbowym dla powiązanej platformy. Zawiera liczbę użytkowników zarządzanych przez zasady, jak również liczbę użytkowników, którzy korzystają z aplikacji, ale nie są objęci żadnymi zasadami w kontekście służbowym. Można rozważyć dodanie tych użytkowników do zasad.
+- **Najlepsze chronione aplikacje systemu iOS**: ta informacja to liczba chronionych i niechronionych aplikacji systemu iOS określana w oparciu o najczęściej częściej używane aplikacje systemu iOS.
+- **Najlepsze chronione aplikacje systemu Android**: ta informacja to liczba chronionych i niechronionych aplikacji systemu Android określana w oparciu o najczęściej częściej używane aplikacje systemu Android.
+- **Najważniejsze skonfigurowane aplikacje systemu iOS bez rejestracji**: ta informacja to liczba skonfigurowanych aplikacji systemu iOS określana w oparciu o najczęściej częściej używane aplikacje systemu iOS dla niezarejestrowanych urządzeń.
+- **Najważniejsze skonfigurowane aplikacje systemu Android bez rejestracji**: ta informacja to liczba skonfigurowanych aplikacji systemu Android określana w oparciu o najczęściej używane aplikacje systemu Android dla niezarejestrowanych urządzeń.
 
     > [!NOTE]
-    > Jeśli istnieje wiele zasad dla platformy, użytkownik jest traktowany jako zarządzany przez zasady, gdy ma przypisane co najmniej jedne zasady.
+    > Jeśli istnieje wiele zasad dla poszczególnych platform, użytkownik jest traktowany jako zarządzany przez zasady, gdy ma przypisane co najmniej jedne zasady.
 
 ## <a name="detailed-view"></a>Widok szczegółowy
 Aby uzyskać szczegółowy widok podsumowania, wybierz kafelek **Stan użytkownika** (odpowiednio do platformy systemu operacyjnego urządzenia) i kafelek **Oflagowani użytkownicy**.
 
 ### <a name="user-status"></a>Stan użytkownika
 Możesz wyszukać pojedynczego użytkownika i sprawdzić jego stan zgodności. Okienko **Raportowanie aplikacji** pokazuje następujące informacje dotyczące wybranego użytkownika:
-- Urządzenia, które są skojarzone z kontem użytkownika
-
-- Aplikacje z zasadami zarządzania aplikacjami mobilnymi na urządzeniu
-
-- Stan:
-
+- **Ikona**: wskazuje, czy stan aplikacji jest aktualny.
+- **Nazwa aplikacji**: Nazwa aplikacji.
+- **Nazwa urządzenia**: urządzenia skojarzone z kontem użytkownika.
+- **Typ urządzenia**: typ urządzenia lub system operacyjny uruchomiony na urządzeniu.
+- **Zasady**: zasady skojarzone z aplikacją.
+- **Stan**:
   - **Zaewidencjonowano:** zasady zostały wdrożone względem użytkownika, a aplikacja została co najmniej raz użyta w kontekście służbowym.
-
   - **Nie zaewidencjonowano:** zasady zostały wdrożone względem użytkownika, ale od tego momentu aplikacja nie była używana w kontekście służbowym.
+- **Ostatnia synchronizacja**: czas ostatniej synchronizacji urządzenia.
 
 >[!NOTE]
 > Jeśli poszukiwany użytkownik nie ma wdrożonych zasad zarządzania aplikacjami mobilnymi, pojawi się komunikat z informacją, że użytkownik nie jest objęty przez żadne zasady dotyczące zarządzania aplikacjami mobilnymi.
@@ -87,11 +89,11 @@ Aby wyświetlić raportowanie dla użytkownika, wykonaj następujące kroki:
 3. Wybierz użytkownika z listy. Zostaną wyświetlone szczegółowe informacje o stanie zgodności tego użytkownika.
 
 ### <a name="flagged-users"></a>Oflagowani użytkownicy
-W widoku szczegółowym wyświetlane są: komunikat o błędzie, aplikacja używana w momencie wystąpienia błędu, platforma systemu operacyjnego urządzenia, której dotyczy błąd, oraz sygnatura czasowa.
+W widoku szczegółowym wyświetlane są: komunikat o błędzie, aplikacja używana w momencie wystąpienia błędu, platforma systemu operacyjnego urządzenia, której dotyczy błąd, oraz sygnatura czasowa. W tym miejscu są zgłaszani użytkownicy urządzeń oflagowanych podczas sprawdzania zaświadczania urządzenia rozwiązania Google SafetyNet z przyczyną zgłoszoną przez firmę Google.
 
 ## <a name="reporting-view"></a>Widok raportowania
 
-Możesz znaleźć te same raporty w bloku **Stan ochrony aplikacji**.
+Te same raporty możesz znaleźć w górnej części bloku **Stan ochrony aplikacji**.
 
 > [!NOTE]
 > Usługa Intune udostępnia dodatkowe pola raportów dotyczących urządzeń, takie jak na przykład identyfikator rejestracji aplikacji, producent systemu Android, model i wersja poprawki zabezpieczeń, a także model urządzenia z systemem iOS. W usłudze Intune te pola są dostępne po wybraniu opcji **Aplikacje klienckie** > **Stan ochrony aplikacji** i wybraniu pozycji **Raport ochrony aplikacji: iOS, Android**. Ponadto te parametry będą pomocne w przypadku konfigurowania listy **dozwolonych** dla producenta urządzenia (Android), listy **dozwolonych** dla modelu urządzenia (Android i iOS) oraz ustawienia minimalnej wersji poprawki zabezpieczeń systemu Android. 
@@ -101,32 +103,32 @@ Są dostępne dodatkowe raporty, które ułatwiają sprawdzanie stanu zgodności
 Blok **Raporty** zawiera kilka raportów utworzonych na podstawie użytkownika i aplikacji, w tym między innymi:
 
 
--   **Raport użytkownika**: Ten raport zawiera te same informacje, które znajdują się w raporcie **Stan użytkownika** w sekcji widoku szczegółowego opisanej powyżej.
+- **Raport użytkownika**: ten raport zawiera te same informacje, które znajdują się w raporcie **Stan użytkownika** w sekcji [Widok szczegółowy](app-protection-policies-monitor.md#detailed-view) opisanej powyżej.
 
--   **Raport aplikacji**: Ten raport zawiera dwa różne stany ochrony aplikacji, które administratorzy mogą wybrać przed wygenerowaniem raportu. Te stany to: chronione lub niechronione.
+- **Raport aplikacji**: oprócz opcji wybrania platformy i aplikacji ten raport zawiera dwa różne stany ochrony aplikacji, które administratorzy mogą wybrać przed wygenerowaniem raportu. Te stany to **Chronione** lub **Niechronione**.
 
-    -   Stan użytkownika odnoszący się do zarządzanych działań z zakresu zarządzania aplikacjami mobilnymi (chroniony): ten raport podsumowuje działanie każdej zarządzanej aplikacji objętej zarządzaniem aplikacjami mobilnymi, przy czym dane odnoszą się do poszczególnych użytkowników.
-
-        -   Raport uwzględnia wszystkie aplikacje objęte zasadami zarządzania aplikacjami mobilnymi dla każdego z użytkowników i określa stan każdej aplikacji, który może sygnalizować, że aplikacja została zaewidencjonowana z użyciem zasad zarządzania aplikacjami mobilnymi lub że podlegała im, ale nie została nigdy zaewidencjonowana.
-<br><br>
-    -   Stan użytkownika dla niezarządzanego działania z zakresu zarządzania aplikacjami mobilnymi (niechroniony): ten raport podsumowuje działanie aplikacji z włączonym zarządzaniem aplikacjami mobilnymi, które nie są obecnie zarządzane, przy czym dane odnoszą się do poszczególnych użytkowników. Przyczyny takiej sytuacji mogą być następujące:
-
+    -   Stan użytkownika odnoszący się do zarządzanych działań z zakresu zarządzania aplikacjami mobilnymi (**Chronione**): ten raport podsumowuje działanie każdej zarządzanej aplikacji objętej zarządzaniem aplikacjami mobilnymi, przy czym dane odnoszą się do poszczególnych użytkowników. Raport uwzględnia wszystkie aplikacje objęte zasadami zarządzania aplikacjami mobilnymi dla każdego z użytkowników i określa stan każdej aplikacji, który może sygnalizować, że aplikacja została zaewidencjonowana z użyciem zasad zarządzania aplikacjami mobilnymi lub że podlegała im, ale nie została nigdy zaewidencjonowana.
+    -   Stan użytkownika dla niezarządzanego działania z zakresu zarządzania aplikacjami mobilnymi (**Niechronione**): ten raport podsumowuje działanie aplikacji z włączonym zarządzaniem aplikacjami mobilnymi, które nie są obecnie zarządzane, przy czym dane odnoszą się do poszczególnych użytkowników. Przyczyny takiej sytuacji mogą być następujące:
         -   Aplikacje te są używane przez użytkownika lub przez aplikację, w odniesieniu do których nie mają obecnie zastosowania żadne zasady zarządzania aplikacjami mobilnymi.
-
         -   Wszystkie aplikacje są zaewidencjonowane, nie są jednak objęte żadnymi zasadami zarządzania aplikacjami mobilnymi.
 
-![Zrzut ekranu przedstawiający blok raportowania aplikacji użytkownika ze szczegółami dla 3 aplikacji](./media/MAM-reporting-4.png)
+        ![Zrzut ekranu przedstawiający blok raportowania aplikacji użytkownika ze szczegółami dla 3 aplikacji](./media/MAM-reporting-4.png)
+
+- **Raport dotyczący konfiguracji użytkownika**: w oparciu o wybranego użytkownika ten raport zawiera szczegółowe informacje o konfiguracjach aplikacji odebranych przez użytkownika.
+- **Raport dotyczący konfiguracji aplikacji**: o oparciu o wybraną platformę i aplikację ten raport zawiera szczegółowe informacje o użytkownikach, którzy otrzymali konfiguracje wybranej aplikacji.
+- **Raport dotyczący uczenia aplikacji na potrzeby rozwiązania Windows Information Protection**: ten raport przedstawia aplikacje, które próbują przekroczyć granice między zasadami.
+- **Uczenie dotyczące witryn internetowych na potrzeby rozwiązania Windows Information Protection**: ten raport przedstawia witryny internetowe, które próbują przekroczyć granice między zasadami.
 
 ## <a name="table-grouping"></a>Grupowanie tabel
 
-Gdy zostanie wyświetlony **Raport użytkownika dotyczący ochrony aplikacji**, możesz zagregować dane według następujących właściwości:
+Gdy zostaną wyświetlone dane z **Raportu użytkownika dotyczącego ochrony aplikacji**, możesz zagregować je według następujących właściwości:
 
 - **Wynik weryfikacji:** wyświetlane dane są pogrupowane według stanu ochrony aplikacji; możliwe stany to niepowodzenie, ostrzeżenie lub powodzenie.
 - **Nazwa aplikacji:** Wyświetlane dane są pogrupowane według rzeczywistych nazw aplikacji, dla których jest także określony stan: niepowodzenie, ostrzeżenie lub powodzenie.
 
 ## <a name="export-app-protection-activities-to-csv"></a>Eksportowanie działań z zakresu ochrony aplikacji do formatu CSV
 
-Możesz wyeksportować wszystkie działania z zakresu zasad ochrony aplikacji do jednego pliku o rozszerzeniu .csv. Tego rodzaju plik może okazać się przydatny podczas analizy wszystkich stanów ochrony aplikacji zgłaszanych przez użytkowników.
+Możesz wyeksportować wszystkie działania z zakresu zasad ochrony aplikacji do jednego pliku o rozszerzeniu *csv*. Tego rodzaju plik może okazać się przydatny podczas analizy wszystkich stanów ochrony aplikacji zgłaszanych przez użytkowników.
 
 Wykonaj następujące kroki, aby wygenerować raport dotyczący ochrony aplikacji:
 
@@ -134,12 +136,11 @@ Wykonaj następujące kroki, aby wygenerować raport dotyczący ochrony aplikacj
 
     ![Zrzut ekranu przedstawiający link pobierania raportu dotyczącego ochrony aplikacji](./media/app-protection-report-csv-2.png)
 
-2. Wybierz opcję Tak, aby zapisać raport, a następnie wybierz polecenie Zapisz jako i wybierz folder, w którym chcesz zapisać raport.
+2. Wybierz pozycję **Tak**, aby zapisać raport, a następnie wybierz pozycję **Zapisz jako** i wybierz folder, w którym chcesz zapisać raport.
 
     ![Zrzut ekranu przedstawiający okno dialogowe z potwierdzeniem opcji Zapisz raport](./media/app-protection-report-csv-1.png)
 
 ## <a name="see-also"></a>Zobacz także
-[Zarządzanie przesyłaniem danych między aplikacjami systemu iOS](data-transfer-between-apps-manage-ios.md)
-
-* [Czego można oczekiwać, gdy aplikacja dla systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji](app-protection-enabled-apps-android.md)
-* [Czego można oczekiwać, gdy aplikacja systemu iOS jest zarządzana przy użyciu zasad ochrony aplikacji](app-protection-enabled-apps-ios.md)
+- [Zarządzanie przesyłaniem danych między aplikacjami systemu iOS](data-transfer-between-apps-manage-ios.md)
+- [Czego można oczekiwać, gdy aplikacja dla systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji](app-protection-enabled-apps-android.md)
+- [Czego można oczekiwać, gdy aplikacja systemu iOS jest zarządzana przy użyciu zasad ochrony aplikacji](app-protection-enabled-apps-ios.md)

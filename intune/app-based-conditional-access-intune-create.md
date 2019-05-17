@@ -1,15 +1,15 @@
 ---
 title: Konfigurowanie zasad dostępu warunkowego opartego na aplikacji w usłudze Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Dowiedz się, jak utworzyć zasady dostępu warunkowego na podstawie aplikacji przy użyciu usługi Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/26/2018
-ms.topic: article
+ms.date: 02/22/2019
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: d1693515-de18-4553-91ef-801976cd3ec7
 ms.reviewer: chrisgre
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b2026a446ffef3bd845affe45a7732ef3ab8ec24
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 1514fe9dfcd09e2b77967b0fed8c36fb7a06634f
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55842921"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "59567494"
 ---
 # <a name="set-up-app-based-conditional-access-policies-with-intune"></a>Konfigurowanie zasad dostępu warunkowego na podstawie aplikacji
 
@@ -33,19 +33,18 @@ Skonfiguruj zasady dostępu warunkowego na podstawie aplikacji dla aplikacji zna
 > [!IMPORTANT]
 > W tym artykule przedstawiono kroki dodawania zasad dostępu warunkowego opartego na aplikacji. Tych samych kroków można używać podczas dodawania aplikacji takich jak SharePoint Online, Microsoft Teams i Microsoft Exchange Online z listy zatwierdzonych aplikacji.
 
-## <a name="create-app-based-conditional-access-policies-in-azure-ad-workload"></a>Tworzenie zasad dostępu warunkowego bazujących na aplikacjach w obciążeniu usługi Azure AD
-
-Administratorzy mogą tworzyć zasady dostępu warunkowego opartego na aplikacjach z obciążenia usługi Azure AD. Dzięki temu nie trzeba przełączać się między obciążeniami platformy Azure i usługi Intune.
+## <a name="create-app-based-conditional-access-policies"></a>Tworzenie zasad dostępu warunkowego opartego na aplikacji
+Dostęp warunkowy to pojęcie z technologii używanej w usłudze Azure Active Directory (Azure AD). Węzeł Dostęp warunkowy dostępny z usługi *Intune* jest tym samym węzłem, do którego dostęp jest uzyskiwany z usługi *Azure AD*. Oznacza to, że nie trzeba przełączać się między usługami Intune i Azure AD, aby skonfigurować zasady.
 
 > [!IMPORTANT]
-> Aby utworzyć zasady dostępu warunkowego usługi Azure AD w portalu Intune Azure, potrzebna jest licencja usługi Azure AD w wersji Premium.
+> Do utworzenia zasad dostępu warunkowego w portalu usługi Intune potrzebna jest licencja usługi Azure AD w wersji Premium.
 
 ### <a name="to-create-an-app-based-conditional-access-policy"></a>Tworzenie zasad dostępu warunkowego opartego na aplikacji
 
 > [!IMPORTANT]
 > Zanim zaczniesz korzystać z zasad dostępu warunkowego bazującego na aplikacjach, musisz do swoich aplikacji zastosować [zasady ochrony aplikacji usługi Intune](app-protection-policies.md).
 
-1. Na **pulpicie nawigacyjnym Intune** wybierz pozycję **Dostęp warunkowy**.
+1. Na **pulpicie nawigacyjnym usługi Intune** wybierz pozycję **Dostęp warunkowy**.
 
 2. W okienku **Zasady** wybierz pozycję **Nowe zasady**, aby utworzyć nowe zasady dostępu warunkowego na podstawie aplikacji.
 

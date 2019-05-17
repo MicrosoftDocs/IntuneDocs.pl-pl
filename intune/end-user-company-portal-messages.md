@@ -1,6 +1,6 @@
 ---
 title: Komunikaty aplikacji Portal firmy, które mogą być wyświetlane na urządzeniach użytkowników
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Wyjaśnienie różnych komunikatów, które użytkownicy końcowi mogą zobaczyć w aplikacji Portal firmy.
 keywords: ''
 author: lenewsad
@@ -10,18 +10,19 @@ ms.date: 03/09/2017
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 3df993aa-48c5-4799-b68d-c85fe4f7b02c
 ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a2fd42ece4a0df60ebe6f15b67c91bba46f210ff
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 700bded8930385c5576a198dc0364c64066121e5
+ms.sourcegitcommit: 71314481e644025c005019b478b4cbeaf2390ea9
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57233167"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59569132"
 ---
 # <a name="help-end-users-understand-company-portal-app-messages"></a>Pomaganie użytkownikom końcowym w zrozumieniu komunikatów aplikacji Portal firmy
 
@@ -110,6 +111,34 @@ Jeśli aplikacja Portal firmy nie została dodana do listy **Dozwolone aplikacje
 ### <a name="what-it-means"></a>Znaczenie
 
 Dodaj Portal firmy do listy **Dozwolone aplikacje** lub **Aplikacje wykluczone** w zasadach ochrony aplikacji usługi Windows Information Protection (WIP). Aby uzyskać więcej informacji, zobacz [Tworzenie i wdrażanie zasad ochrony aplikacji w funkcji Windows Information Protection (WIP) za pomocą usługi Intune](windows-information-protection-policy-create.md).
+
+## <a name="approve-a-ios-company-app-line-of-business-app-on-your-ios-device"></a>Zatwierdź aplikację firmową systemu iOS (aplikacja biznesowa) na urządzeniu z systemem iOS 
+
+### <a name="where-it-appears"></a>Gdzie jest dostępny
+Aplikacje systemu iOS opracowywane przez organizację, które nie są dostępne w sklepie App Store, domyślnie nie są traktowane przez urządzenie jako zaufane. Gdy zainstalujesz takie aplikacje przy użyciu aplikacji Portal firmy, a następnie uruchomisz aplikację, zostanie wyświetlony następujący komunikat:
+
+![Komunikat aplikacji systemu iOS — niezaufany twórca programów firmowych](./media/end-user-company-portal-messages/end-user-company-portal-messages-01.png)
+
+### <a name="what-it-means"></a>Znaczenie
+Ten komunikat oznacza, że musisz zmodyfikować ustawienia urządzenia z systemem iOS w celu zatwierdzenia i zainstalowania aplikacji opracowanej przez firmę na urządzeniu z systemem iOS.
+
+Gdy zainstalujesz takie aplikacje przy użyciu aplikacji Portal firmy, a następnie uruchomisz aplikację, wykonaj poniższe kroki w celu zatwierdzenia pobranej aplikacji:
+
+1. Po uruchomieniu zainstalowanej aplikacji firmowej (aplikacji biznesowej) zobaczysz komunikat „Niezaufany twórca programów firmowych”. <br>
+   Naciśnij przycisk **Anuluj**.
+2. Przejdź do pozycji **Ustawienia** > **Ogólne** > **Zarządzanie urządzeniami**.
+
+   ![Interfejs użytkownika urządzenia z systemem iOS — zarządzanie urządzeniami](./media/end-user-company-portal-messages/end-user-company-portal-messages-02.png)
+
+3. Wybierz pozycję **Profil zarządzania** > **Aplikacja przedsiębiorstwa**.
+4. Wybierz nazwę dewelopera.
+5. Naciśnij klawisz **Ufaj deweloperowi _nazwa dewelopera_**.
+6. Potwierdź aplikację, wybierając przycisk **Ufaj** w wyskakującym okienku z komunikatem dotyczącym instalacji aplikacji.
+
+   ![Interfejs użytkownika urządzenia z systemem iOS — komunikat dotyczący zaufania w aplikacji](./media/end-user-company-portal-messages/end-user-company-portal-messages-03.png)
+
+    Teraz uruchomienie aplikacji i korzystanie z niej powinno być możliwe.
+
 
 ### <a name="see-also"></a>Zobacz także
 [Co powinni wiedzieć użytkownicy końcowi na temat korzystania z usługi Intune](end-user-educate.md)

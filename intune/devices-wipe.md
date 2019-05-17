@@ -5,28 +5,29 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: ''
-ms.topic: article
+ms.date: 04/08/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e24043bb1c41d68de04669ff27cc659624dc56c1
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 896008594e17c3773831edede263c8c47cde3c48
+ms.sourcegitcommit: 601327125ac8ae912d8159422de8aac7dbdc25f6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55846829"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59570549"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Usuwanie urządzeń przy użyciu czyszczenia, wycofywania lub ręcznego wyrejestrowywania urządzenia
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Za pomocą akcji **Wycofaj** lub **Wyczyść** możesz usunąć z usługi Intune urządzenia, które nie są już potrzebne, mają inne zastosowanie lub zostały zagubione. Użytkownicy mogą też w aplikacji Portal firmy usługi Intune wydać polecenie zdalne do urządzeń będących własnością prywatną i zarejestrowanych w usłudze Intune.
+Za pomocą akcji **Wycofaj** lub **Wyczyść** możesz usunąć z usługi Intune urządzenia, które nie są już potrzebne, mają inne zastosowanie lub zostały zagubione. Użytkownicy mogą też w aplikacji Portal firmy usługi Intune wydać polecenie zdalne do urządzeń zarejestrowanych w usłudze Intune.
 
 > [!NOTE]
 > Zanim usuniesz użytkownika z usługi Azure Active Directory, użyj akcji **Wyczyść** lub **Wycofaj** na wszystkich urządzeniach skojarzonych z tym użytkownikiem. Jeśli usuniesz użytkowników mających zarządzane urządzenia z usługi Azure AD, usługa Intune nie będzie już mogła wydawać tym urządzeniom poleceń wyczyszczenia lub wycofania.
@@ -130,7 +131,7 @@ Urządzenia kiosku możesz tylko wyczyścić. Nie możesz wycofywać urządzeń 
 
 |Typ danych|Windows 8.1 (MDM) i Windows RT 8.1|Windows RT|Windows Phone 8.1 i Windows Phone 8|Windows 10|
 |-------------|----------------------------------------------------------------|--------------|-----------------------------------------|--------|
-|Aplikacje firmowe i skojarzone dane zainstalowane za pomocą usługi Intune|Klucze dla plików chronionych przez system szyfrowania plików są odwoływane. Użytkownik nie może otworzyć plików.|Aplikacje firmowe nie są usuwane.|Aplikacje zainstalowane pierwotnie za pośrednictwem portalu firmy są odinstalowywane. Dane aplikacji firmowych zostaną usunięte.|Aplikacje zostaną odinstalowane. Klucze ładowania bezpośredniego są usuwane.<br>W przypadku systemu Windows 10 w wersji 1703 (aktualizacja dla twórców) lub nowszej aplikacje usługi Office 365 ProPlus nie są usuwane.|
+|Aplikacje firmowe i skojarzone dane zainstalowane za pomocą usługi Intune|Klucze dla plików chronionych przez system szyfrowania plików są odwoływane. Użytkownik nie może otworzyć plików.|Aplikacje firmowe nie są usuwane.|Aplikacje zainstalowane pierwotnie za pośrednictwem portalu firmy są odinstalowywane. Dane aplikacji firmowych zostaną usunięte.|Aplikacje zostaną odinstalowane. Klucze ładowania bezpośredniego są usuwane.<br>W przypadku systemu Windows 10 w wersji 1703 (aktualizacja dla twórców) lub nowszej aplikacje usługi Office 365 ProPlus nie są usuwane. Aplikacje Win32 zainstalowane za pomocą rozszerzenia do zarządzania usługi Intune nie zostaną odinstalowane na wyrejestrowanych urządzeniach. Administratorzy mogą korzystać z wykluczania przypisania, aby nie oferować aplikacji Win32 na urządzeniach BYOD.|
 |Ustawienia|Konfiguracje, które były ustawione przez zasady usługi Intune, nie są już wymuszane. Użytkownicy mogą zmieniać ustawienia.|Konfiguracje, które były ustawione przez zasady usługi Intune, nie są już wymuszane. Użytkownicy mogą zmieniać ustawienia.|Konfiguracje, które były ustawione przez zasady usługi Intune, nie są już wymuszane. Użytkownicy mogą zmieniać ustawienia.|Konfiguracje, które były ustawione przez zasady usługi Intune, nie są już wymuszane. Użytkownicy mogą zmieniać ustawienia.|
 |Ustawienia profili sieci Wi-Fi i sieci VPN|Usuwane.|Usuwane.|Nieobsługiwane.|Usuwane.|
 |Ustawienia profili certyfikatów|Certyfikaty zostaną usunięte i odwołane.|Certyfikaty zostaną usunięte i odwołane.|Nieobsługiwane.|Certyfikaty zostaną usunięte i odwołane.|
@@ -166,7 +167,7 @@ Usługę Intune można skonfigurować tak, aby automatycznie usuwała urządzeni
 
 Usunięcie urządzeń z usługi Azure AD może być konieczne z powodu problemów z komunikacją lub braku urządzeń. Za pomocą akcji **Usuń** możesz usunąć rekordy urządzeń z witryny Azure Portal, gdy wiesz, że urządzenia są niedostępne i najprawdopodobniej nie będą się ponownie komunikować z platformą Azure. Akcja **Usuń** nie usuwa urządzenia z zarządzania.
 
-1.  Zaloguj się do [usługi Azure Active Directory w witrynie Azure Portal](http://aka.ms/accessaad) przy użyciu poświadczeń administratora. Możesz też zalogować się do [portalu usługi Office 365](https://portal.office.com). Z menu wybierz pozycję **Centra administracyjne** > **Azure AD**.
+1.  Zaloguj się do [usługi Azure Active Directory w witrynie Azure Portal](http://aka.ms/accessaad) przy użyciu poświadczeń administratora. Możesz również zalogować się do [centrum administracyjnego platformy Microsoft 365](https://admin.microsoft.com). Z menu wybierz pozycję **Centra administracyjne** > **Azure AD**.
 2.  Utwórz subskrypcję platformy Azure, jeśli jej nie masz. Jeśli masz płatne konto, ta operacja nie powinna wymagać uiszczenia płatności ani podania danych karty kredytowej (wybierz link do subskrypcji **Zarejestruj bezpłatny katalog Azure Active Directory**).
 3.  Wybierz pozycję **Azure Active Directory**, a następnie wybierz organizację.
 4.  Wybierz kartę **Użytkownicy** .

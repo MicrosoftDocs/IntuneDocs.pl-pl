@@ -1,40 +1,52 @@
 ---
-title: Zarządzanie dostępem do Internetu z przeglądarką zabezpieczoną przy użyciu zasad
-titlesuffix: Microsoft Intune
-description: Użyj przeglądarki zabezpieczonej przy użyciu zasad, aby ograniczyć przeglądanie oraz transfer danych w Internecie.
+title: Zarządzanie dostępem do Internetu w firmie za pomocą przeglądarki zabezpieczonej przy użyciu zasad
+titleSuffix: Microsoft Intune
+description: Użyj przeglądarki zabezpieczonej przy użyciu zasad i przypisanej przez usługę Intune, aby zarządzać w firmie przeglądaniem oraz transferem danych w Internecie.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/11/2018
-ms.topic: article
+ms.date: 04/08/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
 ms.reviewer: ilwu
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
+ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 64cd4aa629e980bf69557d6cd2c40f8bee7bd3c6
-ms.sourcegitcommit: c0b954c82cd732b5328f92b618947bf425bf0a91
+ms.openlocfilehash: 8f32cfbb5e05958ec9d8f303809d3ffa28c3a3ec
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56086220"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59569730"
 ---
-# <a name="manage-internet-access-using-a-microsoft-intune-policy-protected-browser"></a>Zarządzanie dostępem do Internetu za pomocą przeglądarki zabezpieczonej przy użyciu zasad w usłudze Microsoft Intune
+# <a name="manage-web-access-using-a-microsoft-intune-policy-protected-browser"></a>Zarządzanie dostępem do Internetu za pomocą przeglądarki zabezpieczonej przy użyciu zasad w usłudze Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Korzystając z przeglądarki zabezpieczonej przy użyciu zasad usługi Intune (Microsoft Edge lub Intune Managed Browser), możesz upewnić się, że do witryn internetowych zawsze uzyskuje się dostęp z zastosowanymi zabezpieczeniami.  W przypadku skonfigurowania przy użyciu usługi Intune przeglądarki chronione mogą korzystać z następujących funkcji:
 
-- Zasady ochrony aplikacji.
-- Dostęp warunkowy.
-- Logowanie jednokrotne.
-- Ustawienia konfiguracji aplikacji.
-- Integracja serwera proxy aplikacji platformy Azure.
+- Zasady ochrony aplikacji
+- Dostęp warunkowy
+- Logowanie jednokrotne
+- Ustawienia konfiguracji aplikacji
+- Integracja serwera proxy aplikacji platformy Azure
+
+## <a name="microsoft-edge-support"></a>Obsługa przeglądarki Microsoft Edge
+
+Przeglądarki Microsoft Edge można używać do obsługi scenariuszy przedsiębiorstwa na urządzeniach z systemem iOS i Android. Przeglądarka Microsoft Edge obsługuje wszystkie te same scenariusze zarządzania, co program Intune Managed Browser, dodając ulepszenia środowiska użytkownika końcowego. W przedsiębiorstwie dostępne są następujące funkcje przeglądarki Microsoft Edge włączane przy użyciu zasad usługi Intune. Te funkcje przedsiębiorstwa to na przykład:
+
+1. **Podwójna tożsamość** — użytkownicy mogą dodawać konta służbowe i osobiste na potrzeby przeglądania. Te dwie tożsamości są całkowicie oddzielone, co przypomina architekturę i środowisko usługi Office 365 oraz programu Outlook. Administratorzy usługi Intune będą mogli ustawić żądane zasady dla chronionego środowiska przeglądania w ramach konta służbowego. 
+2. **Integracja zasad ochrony aplikacji usługi Intune** — administratorzy mogą teraz używać zasad ochrony w przeglądarce Microsoft Edge, w tym kontrolować funkcje wycinania, kopiowania i wklejania, zapobiegać tworzeniu zrzutów ekranu oraz zapewniać, że linki wybrane przez użytkownika będzie można otwierać tylko w innych aplikacjach zarządzanych.
+3. **Integracja serwera proxy aplikacji platformy Azure** — administratorzy mogą kontrolować dostęp do aplikacji SaaS i aplikacji internetowych, co pomaga zagwarantować, że tylko aplikacje oparte na przeglądarce będą uruchamiane w bezpiecznej przeglądarce Microsoft Edge, bez względu na to, czy użytkownicy końcowi nawiązują połączenie z sieci firmowej, czy też z Internetu. 
+4. **Skróty do zarządzanych ulubionych i strony głównej** — w celu ułatwienia dostępu administratorzy mogą ustawić adresy URL tak, aby były wyświetlane w obszarze Ulubione, gdy użytkownicy końcowi będą pracować w kontekście firmy. Administratorzy mogą ustawić skrót do strony głównej, który będzie wyświetlany jako skrót podstawowy, gdy użytkownik firmowy otworzy nową stronę lub nową kartę w przeglądarce Microsoft Edge.
+
+Zasady ochrony usługi Microsoft Intune dla przeglądarki Microsoft Edge pomagają w ochronie danych i zasobów organizacji. Chroniona przez usługę Intune przeglądarka Microsoft Edge zapewnia, że zasoby firmy są chronione nie tylko w aplikacjach zainstalowanych natywnie, ale także gdy dostęp jest uzyskiwany za pośrednictwem przeglądarki internetowej.
 
 ## <a name="getting-started"></a>Wprowadzenie
 
@@ -72,11 +84,15 @@ Kiedy aplikacje Managed Browser lub Microsoft Edge nie są zarządzane przez us�
 
 ## <a name="conditional-access-for-protected-browsers"></a>Dostęp warunkowy dla przeglądarek chronionych
 
-Aplikacja Managed Browser jest teraz zatwierdzoną aplikacją kliencką dla dostępu warunkowego. Oznacza to, że możesz ograniczyć dostęp przeglądarki mobilnej do aplikacji internetowych połączonych z usługą Azure AD, aby użytkownicy mogli używać tylko aplikacji Managed Browser, a dostęp był zablokowany z innych niezabezpieczonych przeglądarek, takich jak Safari czy Chrome. Taką ochronę można zastosować do zasobów platformy Azure, takich jak usługi Exchange Online i SharePoint Online, portal usługi Office, a nawet witryny lokalne, które są dostępne dla użytkowników zewnętrznych za pośrednictwem [serwera proxy aplikacji usługi Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started). 
+Aplikacja Managed Browser jest teraz zatwierdzoną aplikacją kliencką dla dostępu warunkowego. Oznacza to, że możesz ograniczyć dostęp przeglądarki mobilnej do aplikacji internetowych połączonych z usługą Azure AD, aby użytkownicy mogli używać tylko aplikacji Managed Browser, a dostęp był zablokowany z innych niezabezpieczonych przeglądarek, takich jak Safari czy Chrome. Taką ochronę można zastosować do zasobów platformy Azure, takich jak usługi Exchange Online i SharePoint Online, centrum administracyjne platformy Microsoft 365, a nawet witryny lokalne, które są dostępne dla użytkowników zewnętrznych za pośrednictwem [serwera proxy aplikacji usługi Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started). 
 
-Aby ograniczyć aplikacje internetowe usługi Azure AD do używania aplikacji Intune Managed Browser na platformach urządzeń przenośnych, możesz utworzyć zasady dostępu warunkowego usługi Azure AD wymagające zatwierdzonych aplikacji klienckich. 
+Aby ograniczyć aplikacje internetowe usługi Azure AD do używania aplikacji Intune Managed Browser na platformach urządzeń przenośnych, możesz utworzyć zasady dostępu warunkowego wymagające zatwierdzonych aplikacji klienckich. 
 
-1. W witrynie Azure Portal wybierz pozycję **Azure Active Directory** > **Aplikacje dla przedsiębiorstw** > **Dostęp warunkowy** > **Nowe zasady**. 
+> [!TIP]  
+> Dostęp warunkowy to pojęcie z technologii używanej w usłudze Azure Active Directory (Azure AD). Węzeł Dostęp warunkowy dostępny z usługi *Intune* jest tym samym węzłem, do którego dostęp jest uzyskiwany z usługi *Azure AD*.  
+
+
+1. W portalu usługi Intune wybierz kolejno pozycje **Dostęp warunkowy** > **Nowe zasady**. 
 2. Następnie wybierz pozycję **Udziel** w sekcji **Kontrole dostępów** bloku. 
 3. Kliknij pozycję **Wymagaj zatwierdzonej aplikacji klienckiej**. 
 4. Kliknij pozycję **Wybierz** w bloku **Udziel**. Te zasady należy przypisać do aplikacji w chmurze, które mają być dostępne tylko dla aplikacji Intune Managed Browser.
@@ -264,17 +280,17 @@ Poniższe informacje dotyczą dopuszczalnych formatów i symboli wieloznacznych,
   - `http://www.contoso.com: /*`
 ## <a name="opening-links-within-the-intune-managed-browser-vs-microsoft-edge"></a>Otwieranie linków w programie Intune Managed Browser i przeglądarce Microsoft Edge 
 
-Obydwa programy — Intune Managed Browser i Microsoft Edge — są obecnie traktowane jako przeglądarki zarządzane przez zasady / przeglądarki chronione. Obecne zasady ochrony aplikacji powodują otwieranie linków internetowych z aplikacji zarządzanych przez usługę Intune w określonej przeglądarce w zależności od scenariusza i platformy. 
+Obydwa programy — Intune Managed Browser i Microsoft Edge — są obecnie traktowane jako przeglądarki zarządzane przez zasady/przeglądarki chronione. Obecne zasady ochrony aplikacji powodują otwieranie linków internetowych z aplikacji zarządzanych przez usługę Intune w określonej przeglądarce w zależności od scenariusza i platformy. 
 
 W systemie Android: 
-* Managed Browser, jeśli na urządzeniu znajduje się zarówno przeglądarka MB, jak i Microsoft Edge — chyba że ustawienie „com.microsoft.intune.useEdge” ma wartość „true” dla wszystkich zarządzanych przez usługę Intune aplikacji wymagających wskazania przeglądarki zarządzanej na podstawie zasad.  
-* Microsoft Edge, jeśli na urządzeniu znajduje się tylko ta przeglądarka i jest ona objęta zasadami.
-* Managed Browser, jeśli na urządzeniu znajduje się tylko ta przeglądarka i jest ona objęta zasadami. 
+* Program Managed Browser będzie otwierany, jeśli użytkownik na swoim urządzeniu pobrane programy Managed Browser i Microsoft Edge. Aby zapewnić, że zamiast programu Managed Browser będzie otwierana przeglądarka Microsoft Edge, ustaw ustawienie konfiguracji aplikacji „com.microsoft.intune.useEdge” ma wartość „true” dla wszystkich zarządzanych przez usługę Intune aplikacji wymagających wskazania przeglądarki zarządzanej na podstawie zasad.  
+* Przeglądarka Microsoft Edge będzie otwierana, jeśli na urządzeniu znajduje się tylko ta przeglądarka i jest ona objęta zasadami.
+* Program Managed Browser będzie otwierany, jeśli na urządzeniu znajduje się tylko ten program i jest on objęty zasadami. 
 
 W systemie iOS w przypadku aplikacji, które mają zintegrowany zestaw SDK usługi Intune dla systemu iOS w wersji 9.0.9+: 
-* Managed Browser, jeśli na urządzeniu znajduje się zarówno przeglądarka MB, jak i Microsoft Edge — chyba że ustawienie „com.microsoft.intune.useEdge” ma wartość „true” dla wszystkich zarządzanych przez usługę Intune aplikacji wymagających wskazania przeglądarki zarządzanej na podstawie zasad **LUB** Microsoft Edge, jeśli przeglądarka ta jest zainstalowana i skonfigurowano dla niej zasady. 
-* Microsoft Edge, jeśli na urządzeniu znajduje się tylko ta przeglądarka, jest ona objęta zasadami i zostały one dla niej skonfigurowane. 
-* Managed Browser, jeśli na urządzeniu znajduje się tylko ta przeglądarka, jest ona objęta zasadami i zostały one dla niej skonfigurowane.
+* Program Managed Browser, jeśli na urządzeniu znajduje się zarówno przeglądarka MB, jak i Edge, chyba że ustawienie „com.microsoft.intune.useEdge” ma wartość „true” dla wszystkich zarządzanych przez usługę Intune aplikacji wymagających wskazania przeglądarki zarządzanej na podstawie zasad **lub** przeglądarka Microsoft Edge, jeśli została zainstalowana i skonfigurowano dla niej zasady. 
+* Przeglądarka Microsoft Edge, jeśli na urządzeniu znajduje się tylko ta przeglądarka, jest ona objęta zasadami i zostały one dla niej skonfigurowane. 
+* Program Managed Browser, jeśli na urządzeniu znajduje się tylko ta przeglądarka, jest ona objęta zasadami i zostały one dla niej skonfigurowane.
 
 ## <a name="how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios"></a>Jak uzyskać dostęp do dzienników zarządzanych aplikacji przy użyciu programu Managed Browser w systemie iOS
 

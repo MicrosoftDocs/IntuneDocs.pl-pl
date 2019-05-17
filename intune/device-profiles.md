@@ -1,14 +1,15 @@
 ---
 title: Ustawienia i funkcje urządzeń w usłudze Microsoft Intune — Azure | Microsoft Docs
-description: Przegląd różnych profilów urządzeń usługi Microsoft Intune, takich jak na przykład funkcje, ograniczenia, poczta e-mail, sieć Wi-Fi, sieć VPN, wiedza, certyfikaty, uaktualnianie systemu Windows 10, funkcji BitLocker i usługi Windows Defender, usługa Windows Information Protection, szablony administracyjne i niestandardowe ustawienia konfiguracji w witrynie Azure Portal. Te profile służą do zarządzania danymi i urządzeniami oraz ich ochrony w Twojej firmie.
+description: Omówienie różnych profilów urządzeń usługi Microsoft Intune. Uzyskaj informacje na temat funkcji, ograniczeń, poczty e-mail, sieci Wi-Fi, sieć VPN, wiedzy, certyfikatów, uaktualniania systemu Windows 10, funkcji BitLocker i usługi Windows Defender, usługi Windows Information Protection, szablonów administracyjnych i niestandardowych ustawień konfiguracji w witrynie Azure Portal. Te profile służą do zarządzania danymi i urządzeniami oraz ich ochrony w Twojej firmie.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/29/2019
+ms.date: 04/08/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
 ms.reviewer: ''
@@ -16,90 +17,35 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4b9bd8aaca9aaf6e39c7a120518eeca1cef31511
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 4dc68071886b8f2a0852feb69bf78c2c265f046d
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55845095"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59570354"
 ---
-# <a name="apply-features-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Stosowanie ustawień funkcji w urządzeniach przy użyciu profili urządzeń w usłudze Microsoft Intune
+# <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Stosowanie funkcji i ustawień w urządzeniach przy użyciu profilów urządzeń w usłudze Microsoft Intune
 
-Usługa Microsoft Intune obejmuje ustawienia i funkcje, które można włączać lub wyłączać na różnych urządzeniach w organizacji. Te ustawienia i funkcje są dodawane do „profili konfiguracji”. Możesz tworzyć profile dla różnych urządzeń różnych platform, w tym systemów iOS, Android i Windows, a następnie zastosować profil za pomocą usługi Intune do urządzeń w Twojej organizacji.
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Oto kilka przykładów profilów:
+Usługa Microsoft Intune obejmuje ustawienia i funkcje, które można włączać lub wyłączać na różnych urządzeniach w organizacji. Te ustawienia i funkcje są dodawane do „profili konfiguracji”. Możesz utworzyć profile dla różnych urządzeń i różnych platform, w tym systemów iOS, Android i Windows. Następnie użyj usługi Intune, aby zastosować lub „przypisać” profil na urządzeniach.
+
+Jako część rozwiązania do zarządzania urządzeniami przenośnymi (MDM) użyj tych profilów konfiguracji w celu wykonywania różnych zadań. Oto kilka przykładów profilów:
 
 - W urządzeniach z systemem Windows 10 użyj szablonu profilu, który blokuje kontrolki ActiveX w programie Internet Explorer.
 - W urządzeniach z systemem iOS lub macOS zezwól użytkownikom na korzystanie z drukarek AirPrint w Twojej organizacji.
 - Umożliwiaj lub blokuj dostęp do funkcji Bluetooth w urządzeniu.
 - Utwórz profil sieci WiFi lub VPN, który zapewnia różnym urządzeniom dostęp do sieci firmowej.
 - Zarządzaj aktualizacjami oprogramowania, łącznie z czasem ich instalacji.
-- Uruchom dedykowane urządzenie kiosku z systemem Android, które umożliwia uruchamianie jednej lub wielu aplikacji.
+- Uruchom urządzenie z systemem Android jako dedykowane urządzenie kiosku, które umożliwia uruchamianie jednej lub wielu aplikacji.
 
-Ten artykuł zawiera instrukcje dotyczące tworzenia profilu oraz omówienie różnych typów profili, które można utworzyć. Profile te umożliwiają lub uniemożliwiają korzystanie z niektórych funkcji urządzenia.
-
-## <a name="create-the-profile"></a>Tworzenie profilu
-
-1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi**, wpisz nazwę usługi **Intune** w filtrze, a następnie wybierz pozycję **Intune**.
-
-2. Wybierz pozycję **Konfiguracja urządzenia**. Do wyboru są następujące opcje:
-
-    - **Omówienie**: lista stanów profilów oraz dodatkowe szczegółowe informacje o profilach przypisanych do użytkowników i urządzeń.
-    - **Zarządzanie**: tworzenie profili urządzeń, przekazywanie niestandardowych [skryptów programu PowerShell](intune-management-extension.md) do uruchamiania w profilu i dodawanie planów danych do urządzeń korzystających z karty [eSIM](esim-device-configuration.md).
-    - **Monitorowanie**: sprawdzanie stanu profilu (powodzenie lub niepowodzenie) oraz wyświetlanie dzienników dotyczących profili.
-    - **Instalator**: dodawanie urzędu certyfikacji SCEP lub PFX albo włączanie [zarządzania wydatkami telekomunikacyjnymi](telecom-expenses-monitor.md) w profilu.
-
-3. Wybierz pozycję **Profile**  >  **Utwórz profil**. Wprowadź następujące właściwości:
-
-   - **Nazwa**: Wprowadź opisową nazwę profilu.
-   - **Opis**: Wprowadź opis profilu. To ustawienie jest opcjonalne, ale zalecane.
-   - **Platforma**: Wybierz platformę urządzeń. Dostępne opcje:  
-
-       - **Android**
-       - **Android enterprise**
-       - **iOS**
-       - **macOS**
-       - **Windows Phone 8.1**
-       - **Windows 8.1 lub nowszy**
-       - **Windows 10 lub nowszy**
-
-   - **Typ profilu**: Wybierz typ ustawień, który chcesz utworzyć. Wyświetlana lista zależy od wybranej **platformy**:
-
-       - [Szablony administracyjne](administrative-templates-windows.md)
-       - [Niestandardowe](custom-settings-configure.md)
-       - [Optymalizacja dostarczania](delivery-optimization-windows.md)
-       - [Funkcje urządzenia](device-features-configure.md)
-       - [Ograniczenia dotyczące urządzeń](device-restrictions-configure.md)
-       - [Uaktualnianie wersji i przełącznik trybów](edition-upgrade-configure-windows-10.md)
-       - [Edukacja](education-settings-configure.md)
-       - [Poczta e-mail](email-settings-configure.md)
-       - [Program Endpoint Protection](endpoint-protection-configure.md)
-       - [Identity Protection](identity-protection-configure.md)  
-       - [Kiosk](kiosk-settings.md)
-       - [Certyfikat PKCS](certficates-pfx-configure.md)
-       - [Certyfikat SCEP](certificates-scep-configure.md)
-       - [Zaufany certyfikat](certificates-configure.md)
-       - [Zasady aktualizacji](software-updates-ios.md)
-       - [VPN](vpn-settings-configure.md)
-       - [Wi-Fi](wi-fi-settings-configure.md)
-       - [Zaawansowana ochrona przed zagrożeniami w usłudze Windows Defender](advanced-threat-protection.md)
-       - [Rozwiązanie Windows Information Protection](windows-information-protection-configure.md)
-
-     Jeśli na przykład wybierzesz platformę **iOS**, opcje typu profilu będą wyglądać podobnie do następujących:
-
-     ![Tworzenie profilu systemu iOS w usłudze Intune](./media/create-device-profile.png)
-
-4. Wybierz pozycję **Ustawienia**. Ustawienia są zorganizowane według kategorii. Wybierz kategorię, aby wyświetlić listę wszystkich ustawień, które można skonfigurować.
-
-5. Po zakończeniu wybierz pozycję **OK**  >  **Utwórz**, aby zapisać zmiany.
-
-Aby dowiedzieć się więcej na temat różnych typów profili, przeczytaj następne sekcje w tym artykule.
+Ten artykuł zawiera omówienie różnych profilów, które możesz utworzyć. Profile te umożliwiają lub uniemożliwiają korzystanie z niektórych funkcji urządzenia.
 
 ## <a name="administrative-templates-preview"></a>Szablony administracyjne (wersja zapoznawcza)
 
-[Szablony administracyjne](administrative-templates-windows.md) obejmują setki ustawień, które można skonfigurować dla programu Internet Explorer, usługi OneDrive, pulpitu zdalnego, programów Word, Excel i innych programów pakietu Office oraz wiele innych ustawień.
+[Szablony administracyjne](administrative-templates-windows.md) obejmują setki ustawień, które można skonfigurować dla programu Internet Explorer, usługi OneDrive, pulpitu zdalnego, programów Word, Excel i innych programów pakietu Office.
 
-Te szablony zapewniają administratorom uproszczony widok ustawień przypominający zasady grupy, ale są w pełni oparte na chmurze. 
+Te szablony zapewniają administratorom uproszczony widok ustawień przypominający zasady grupy, ale są w pełni oparte na chmurze.
 
 Ta funkcja obsługuje systemy:
 
@@ -164,7 +110,7 @@ Ta funkcja obsługuje systemy:
 
 - System Windows 10 lub nowszy
 
-Ustawienia kiosku są również dostępne jako ograniczenia urządzenia z systemem [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#kiosk-settings) i [ios](device-restrictions-ios.md#kiosk-supervised-only).
+Ustawienia kiosku są również dostępne jako ograniczenia urządzenia z systemem [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings) i [ios](device-restrictions-ios.md#kiosk-supervised-only).
 
 ## <a name="email"></a>Poczta e-mail
 
@@ -173,6 +119,7 @@ W obszarze [Ustawienia poczty e-mail](email-settings-configure.md) można tworzy
 Ta funkcja obsługuje systemy: 
 
 - Android
+- Android Enterprise
 - iOS
 - Windows Phone 8,1
 - System Windows 10 lub nowszy
@@ -186,6 +133,7 @@ Wirtualne sieci prywatne (VPN) zapewniają Twoim użytkownikom bezpieczny dostę
 Ta funkcja obsługuje systemy: 
 
 - Android
+- Android Enterprise
 - iOS
 - macOS
 - Windows Phone 8,1
@@ -199,6 +147,7 @@ Profil [Ustawienia sieci Wi-Fi](wi-fi-settings-configure.md) przypisuje ustawien
 Ta funkcja obsługuje systemy: 
 
 - Android
+- Android Enterprise
 - iOS
 - macOS
 - Windows 8.1 (tylko import)
@@ -235,12 +184,14 @@ Ta funkcja obsługuje systemy:
 
 ## <a name="certificates"></a>Certyfikaty
 
-Profil [Certyfikaty](certificates-configure.md) umożliwia skonfigurowanie zaufanych certyfikatów oraz certyfikatów SCEP i PKCS, które są przypisywane do urządzeń i być używane do uwierzytelniania sieci Wi-Fi, sieci VPN oraz profilów poczty e-mail.
+[Certyfikaty](certificates-configure.md) umożliwiają konfigurowanie certyfikatów zaufanych, SCEP i PKCS przypisywanych do urządzenia. Te certyfikaty uwierzytelniają profile sieci Wi-Fi i VPN oraz profile poczty e-mail.
 
 Ta funkcja obsługuje systemy: 
 
 - Android
+- Android Enterprise
 - iOS
+- macOS
 - Windows Phone 8,1
 - Windows 8.1
 - System Windows 10 lub nowszy
@@ -255,7 +206,7 @@ Ta funkcja obsługuje systemy:
 
 ## <a name="shared-multi-user-device"></a>Urządzenie udostępnione używane przez wielu użytkowników
 
-Profile [Windows 10](shared-user-device-settings-windows.md) i [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md) obejmują ustawienia zarządzania urządzeniami z wieloma użytkownikami, nazywanymi urządzeniami udostępnionymi lub komputerami udostępnionymi. Możesz określić, czy użytkownik zalogowany do urządzenia może zmieniać opcje uśpienia lub zapisywać pliki w urządzeniu. W innym przykładzie możesz utworzyć zasady, które usuwają nieaktywne poświadczeń z urządzeń Windows HoloLens, aby zaoszczędzić miejsce.
+Profile [Windows 10](shared-user-device-settings-windows.md) i [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md) obejmują ustawienia zarządzania urządzeniami z wieloma użytkownikami, nazywanymi urządzeniami udostępnionymi lub komputerami udostępnionymi. Możesz określić, czy użytkownik zalogowany do urządzenia może zmieniać opcje uśpienia lub zapisywać pliki w urządzeniu. W innym przykładzie w celu zaoszczędzenia miejsca możesz utworzyć profil, który usuwa nieaktywne poświadczenia z urządzeń Windows HoloLens.
 
 Te ustawienia urządzeń udostępnionych z wieloma użytkownikami pozwalają administratorowi sterowanie niektórymi funkcjami urządzeń i zarządzać tymi urządzeniami udostępnionymi przy użyciu usługi Intune.
 
@@ -264,21 +215,30 @@ Ta funkcja obsługuje systemy:
 - System Windows 10 lub nowszy
 - Windows Holographic for Business
 
-## <a name="custom-profile"></a>Profil niestandardowy
+## <a name="zebra-mobility-extensions-mx"></a>Zebra Mobility Extensions (MX)
 
-[Ustawienia niestandardowe](custom-settings-configure.md) umożliwiają administratorom przypisywanie ustawień urządzenia, które nie są wbudowane w usługę Intune. Na przykład na urządzeniach z systemem Android można wprowadzić wartości identyfikatora OMA-URI. W przypadku urządzeń z systemem iOS można zaimportować plik konfiguracyjny utworzony za pomocą programu Apple Configurator. 
+Funkcja [Zebra Mobility Extensions (MX)](android-zebra-mx-overview.md) pozwala administratorom na używanie urządzeń Zebra i zarządzanie nimi w usłudze Intune. Należy utworzyć profile rozwiązania StageNow z wybranymi ustawieniami, a następnie przypisać i wdrożyć te profile na urządzeniach Zebra przy użyciu usługi Intune. Artykuł [StageNow logs and common issues](android-zebra-mx-logs-troubleshoot.md) (Dzienniki rozwiązania StageNow i typowe problemy) jest doskonałym zasobem ułatwiającym rozwiązywanie problemów z profilami oraz zapoznanie się potencjalnym problemami w przypadku korzystania z rozwiązania StageNow.
 
 Ta funkcja obsługuje systemy:
 
 - Android
+
+## <a name="custom-profile"></a>Profil niestandardowy
+
+[Ustawienia niestandardowe](custom-settings-configure.md) umożliwiają administratorom przypisywanie ustawień urządzenia, które nie są wbudowane w usługę Intune. Na urządzeniach z systemem Android można wprowadzić wartości identyfikatora OMA-URI. W przypadku urządzeń z systemem iOS można zaimportować plik konfiguracyjny utworzony za pomocą programu Apple Configurator.
+
+Ta funkcja obsługuje systemy:
+
+- Android
+- Android Enterprise
 - iOS
 - macOS
 - Windows Phone 8,1
 
 ## <a name="manage-and-troubleshoot"></a>Zarządzanie i rozwiązywanie problemów
 
-[Zarządzaj profilami](device-profile-monitor.md), aby sprawdzić stan urządzeń i przypisane profile. Możesz też pomóc w rozwiązywaniu konfliktów, sprawdzając ustawienia powodujące konflikt i profile, które zawierają te ustawienia. [Typowe problemy i rozwiązania](device-profile-troubleshoot.md) obejmują pytania i odpowiedzi ułatwiające pracę z profilami, w tym zachowanie w przypadku usunięcia profilu, przyczyny wysyłania powiadomień do urządzeń i nie tylko.
+[Zarządzaj profilami](device-profile-monitor.md), aby sprawdzić stan urządzeń i przypisane profile. Możesz też pomóc w rozwiązywaniu konfliktów, sprawdzając ustawienia powodujące konflikt i profile, które uwzględniają te ustawienia. Artykuł [Typowe problemy i rozwiązania](device-profile-troubleshoot.md) pomaga administratorom w pracy z profilami. Pokazuje on, co się dzieje podczas usuwania profilu, co powoduje wysyłanie powiadomień do urządzeń i przedstawia inne informacje.
 
 ## <a name="next-steps"></a>Następne kroki
-Wybierz platformę i rozpocznij pracę:
 
+Wybierz platformę i rozpocznij pracę.

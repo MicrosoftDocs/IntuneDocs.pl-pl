@@ -6,23 +6,24 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/11/2018
+ms.date: 04/08/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 1c086943-84a0-4d99-8295-490a2bc5be4b
 ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure; get-started
+ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dbb6a8f159aebe837fabf671a84dd96223298227
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 45e9f50881ff7da0554a4731712441b5fedb01d8
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55836357"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59569418"
 ---
 # <a name="what-are-app-protection-policies"></a>Co to są zasady ochrony aplikacji?
 
@@ -50,7 +51,7 @@ Zasady ochrony aplikacji można skonfigurować dla aplikacji uruchamianych na ur
 > [!IMPORTANT]
 > Możesz tworzyć zasady zarządzania aplikacjami mobilnymi dla aplikacji mobilnych pakietu Office łączących się z usługą Office 365. Możesz także chronić dostęp do lokalnych skrzynek pocztowych programu Exchange, tworząc zasady ochrony aplikacji usługi Intune dla aplikacji Outlook dla systemów iOS i Android, obsługiwane przez hybrydowe nowoczesne uwierzytelnianie. Przed użyciem tej funkcji upewnij się, że spełnione są [Wymagania dotyczące programu Outlook dla systemów iOS i Android](https://technet.microsoft.com/library/mt846639(v=exchg.160).aspx). Zasady ochrony aplikacji nie są obsługiwane w przypadku innych aplikacji łączących się z lokalnymi usługami Exchange lub SharePoint.
 
-**Do istotnych korzyści zapewnianych przez zasady ochrony aplikacji należą:**
+**Do istotnych korzyści zapewnianych przez zasady ochrony aplikacji należą**:
 
 -   Ochrona danych firmy na poziomie aplikacji. Ponieważ zarządzanie aplikacjami mobilnymi nie wymaga zarządzania urządzeniami, dane firmowe można chronić zarówno na urządzeniach zarządzanych, jak i niezarządzanych. Zarządzanie skupia się na tożsamości użytkownika, co eliminuje konieczność zarządzania urządzeniem.
 
@@ -69,8 +70,8 @@ Dodatkowe korzyści można uzyskać, używając jednocześnie rozwiązań MDM i 
 ### <a name="supported-platforms-for-app-protection-policies"></a>Platformy obsługiwane przez zasady ochrony aplikacji
 Obsługa platformy zasad ochrony aplikacji usługi Intune jest powiązana z obsługą platformy aplikacji mobilnych pakietu Office dla urządzeń z systemem Android i iOS. Aby uzyskać szczegółowe informacje, zobacz sekcję **Aplikacje mobilne** w temacie [Wymagania systemowe pakietu Office](https://products.office.com/office-system-requirements#coreui-contentrichblock-9r05pwg).
 
-Urządzenia z systemem Windows nie są obecne obsługiwane. Możesz jednak użyć rozwiązania Windows Information Protection, które oferuje podobne funkcje. Aby uzyskać szczegółowe informacje, zobacz [Protect your enterprise data using Windows Information Protection](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip) (Chronienie danych przedsiębiorstwa przy użyciu rozwiązania Windows Information Protection).
-
+> [!IMPORTANT]
+> Urządzenie musi mieć zainstalowaną aplikację Intune — Portal firmy, aby otrzymywać zasady ochrony aplikacji w systemie Android. Aby uzyskać więcej informacji, zobacz [Intune Company Portal access apps requirements](end-user-mam-apps-android.md#access-apps) (Wymagania dotyczące aplikacji z dostępem do aplikacji Intune — Portal firmy).
 
 ## <a name="how-app-protection-policies-protect-app-data"></a>W jaki sposób zasady ochrony aplikacji chronią dane aplikacji
 

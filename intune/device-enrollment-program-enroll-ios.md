@@ -7,9 +7,10 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 05/04/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 7ddbf360-0c61-11e8-ba89-0ed5f89f718b
 ms.reviewer: dagerrit
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 60364d01f4ba4ca83ff91226f7738ec095e9152e
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 19f0fbf401fee4bad660e946bb135544a29de310
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55849254"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57566509"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Automatyczne rejestrowanie urządzeń z systemem iOS w ramach programu Device Enrollment Program
 
@@ -102,8 +103,13 @@ W usłudze Intune w witrynie Azure Portal podaj identyfikator Apple ID do użytk
 
 ![Zrzut ekranu przedstawiający wprowadzanie identyfikatora Apple ID używanego do utworzenia tokenu programu rejestracji i przechodzenie do tokenu programu rejestracji.](./media/device-enrollment-program-enroll-ios/image03.png)
 
-### <a name="step-4-upload-your-token"></a>Krok 4. Przekaż token.
-W polu **Token Apple** przejdź do pliku certyfikatu (.pem), wybierz pozycję **Otwórz**, a następnie kliknij **Utwórz**. Dzięki certyfikatowi wypychania usługa Intune może rejestrować urządzenia z systemem iOS i zarządzać nimi, wypychając zasady do zarejestrowanych urządzeń przenośnych. Usługa Intune automatycznie synchronizuje dane z firmą Apple, co pozwala wyświetlić konto programu rejestracji.
+### <a name="step-4-upload-your-token-and-choose-scope-tags"></a>Krok 4. Przekaż token i wybierz tagi zakresu.
+
+1. W polu **Token Apple** przejdź do pliku certyfikatu (pem) i wybierz pozycję **Otwórz**.
+2. Jeśli chcesz zastosować [tagi zakresu](scope-tags.md) do tego tokenu DEP, wybierz pozycję **Zakres (tagi)** i wybierz tagi zakresu. Tagi zakresu stosowane do tokenu będą dziedziczone przez profile i urządzenia dodawane do tego tokenu.
+3. Wybierz pozycję **Utwórz**.
+
+Dzięki certyfikatowi wypychania usługa Intune może rejestrować urządzenia z systemem iOS i zarządzać nimi, wypychając zasady do zarejestrowanych urządzeń przenośnych. Usługa Intune automatycznie synchronizuje dane z firmą Apple, co pozwala wyświetlić konto programu rejestracji.
 
 ## <a name="create-an-apple-enrollment-profile"></a>Tworzenie profilu rejestracji firmy Apple
 
@@ -145,6 +151,8 @@ Teraz, po zainstalowaniu tokenu, możesz utworzyć profil rejestracji dla urząd
 
 7. Jeśli wybierzesz token dla opcji **Instaluj aplikację Portal firmy przy użyciu programu VPP**, masz opcję zablokowania urządzenia w trybie pojedynczej aplikacji (aplikacji Portal firmy) natychmiast po zakończeniu pracy Asystenta konfiguracji. Wybierz opcję **Tak** w pozycji **Uruchom aplikację Portal firmy w trybie pojedynczej aplikacji do momentu uwierzytelnienia**, aby ustawić tę opcję. Aby użyć urządzenia, użytkownik musi najpierw uwierzytelnić się poprzez zalogowanie w aplikacji Portal firmy.
     Ta funkcja jest tylko obsługiwana w systemie iOS 11.3.1 i jego nowszych wersjach.
+
+   ![Zrzut ekranu przedstawiający tryb pojedynczej aplikacji.](./media/device-enrollment-program-enroll-ios/single-app-mode.png)
 
 8. Wybierz pozycję **Ustawienia zarządzania urządzeniami** i określ, czy chcesz, żeby urządzenia korzystające z tego profilu były nadzorowane.
 

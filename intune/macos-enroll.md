@@ -1,6 +1,6 @@
 ---
 title: Konfigurowanie rejestracji dla urządzeń z systemem macOS
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Informacje dotyczące rejestrowania urządzeń z systemem macOS w usłudze Intune.
 keywords: ''
 author: ErikjeMS
@@ -10,6 +10,7 @@ ms.date: 08/13/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 46429114-2e26-4ba7-aa21-b2b1a5643e01
 ms.reviewer: chrisbal
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d23d03169cdbf3c88be257cafe6aa84dc8c5257f
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: c2a968334ecf3ddb90a3f97841cc191c553b39ca
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57236765"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "59568326"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Konfigurowanie rejestracji dla urządzeń z systemem macOS w usłudze Intune
 
@@ -40,7 +41,7 @@ Przed rozpoczęciem konfigurowania rejestracji urządzeń z systemem macOS nale�
 - [Ustawienie urzędu zarządzania urządzeniami przenośnymi](mdm-authority-set.md)
 - [Tworzenie grup](groups-add.md)
 - [Skonfigurowanie aplikacji Portal firmy](company-portal-app.md)
-- Przypisanie licencji użytkowników w [portalu usługi Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854)
+- Przypisanie licencji użytkowników w [Centrum administracyjnym platformy Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854)
 - [Uzyskiwanie certyfikatu wypychania MDM firmy Apple](apple-mdm-push-certificate-get.md)
 
 ## <a name="user-owned-macos-devices-byod"></a>Urządzenia z systemem macOS należące do użytkownika (BYOD)

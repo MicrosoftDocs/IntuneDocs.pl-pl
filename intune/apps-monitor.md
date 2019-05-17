@@ -1,27 +1,29 @@
 ---
 title: Monitorowanie informacji o aplikacji i przypisań
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Informacje pozwalające monitorować stan aplikacji przypisanej do użytkowników lub urządzeń.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/10/2018
-ms.topic: article
+ms.date: 03/26/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 64e5133d-1e23-4ee6-b556-f5d32c0e95da
 ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: bff4e2b3afe684fe12243fa0f410728eb16eeaba
-ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 2b3cba546be350f47c1a57f47b8eddf85323dc74
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53325181"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "59567234"
 ---
 # <a name="monitor-app-information-and-assignments-with-microsoft-intune"></a>Monitorowanie informacji o aplikacji i przypisań z użyciem usługi Microsoft Intune
 
@@ -42,14 +44,14 @@ Usługa Intune oferuje kilka sposobów monitorowania właściwości zarządzanyc
 
 W okienku aplikacji możesz przejrzeć szczegółowe informacje dotyczące stanu aplikacji w środowisku.
 
-### <a name="essentials"></a>Podstawy
+### <a name="essentials"></a>Essentials
 Sekcja **Podstawy** zawiera następujące informacje dotyczące aplikacji:
 
  | **Szczegóły aplikacji**            | **Opis**                                                      |
 |------------------------|------------------------------------------------------------------|
 | **Wydawca**          | Wydawca aplikacji.                                            |
 | **System operacyjny**   | System operacyjny aplikacji (Windows, iOS, Android itp.). |
-| **Utworzono**             | Data i godzina utworzenia tej poprawki.                         |
+| **Utworzono**             | Data i godzina utworzenia tej poprawki. <b>**Uwaga**: ta wartość daty jest aktualizowana, gdy administrator IT zmienia metadane aplikacji, takie jak kategoria aplikacji lub opis aplikacji.                        |
 | **Przypisane**           | Czy aplikacja została przypisana (**Tak** lub **Nie**).                  |
 
 ### <a name="device-and-user-status-graphs"></a>Wykresy stanu urządzenia i użytkowników
@@ -80,7 +82,7 @@ Lista stanu urządzenia zostanie pokazana po wybraniu pozycji **Stan instalacji 
 | **Nazwa urządzenia**      | Nazwa urządzenia na platformach, które umożliwiają nadanie nazwy urządzeniu. Na innych platformach usługa Intune utworzy nazwę na podstawie innych właściwości. Ten atrybut jest niedostępny w przypadku innych urządzeń.                                                                       |
 | **Nazwa użytkownika**        | Nazwa użytkownika.                                                                                                                                                                                                                                      |
 | **Platforma**         | System operacyjny urządzenia (Windows, iOS, Android itp.).                                                                                                                                                                                           |
-| **Wersja**          | Numer wersji aplikacji. W przypadku aplikacji biznesowych jest pokazywany pełny numer wersji. Pełny numer wersji identyfikuje określone wydanie aplikacji. Numer ma postać _wersja_(_kompilacja_), Na przykład 2.2(2.2.17560800). |
+| **Wersja**          | Numer wersji aplikacji. W przypadku aplikacji biznesowych (LOB) jest pokazywany pełny numer wersji. Pełny numer wersji identyfikuje określone wydanie aplikacji. Numer ma postać _wersja_(_kompilacja_), Na przykład 2.2(2.2.17560800). W przypadku aplikacji ze sklepu wersje nie są wyświetlane. |
 | **Stan**           | Stan aplikacji.                                                                                                                                                                                                                                     |
 | **Szczegóły stanu**   | Szczegółowe informacje o stanie.                                                                                                                                                                                                                                     |
 | **Ostatnie zaewidencjonowanie**    | Data ostatniej synchronizacji urządzenia z usługą Intune.                                                                                                                                                                                                                  |

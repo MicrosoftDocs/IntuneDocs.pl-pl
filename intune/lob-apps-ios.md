@@ -1,15 +1,16 @@
 ---
 title: Dodawanie do usługi Microsoft Intune aplikacji biznesowych dla systemu iOS
-titlesuffix: ''
+titleSuffix: ''
 description: Dowiedz się, jak dodać aplikację biznesową (LOB) dla systemu iOS do usługi Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/10/2018
+ms.date: 04/15/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 099101e8-4b22-40ac-ba19-82ba5c71944c
 ms.reviewer: mghadial
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7206a29bea5a53bf13b43a9881c629f27e949dbb
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 1bb213230db5a699be913929cc3b68b90a8f019a
+ms.sourcegitcommit: a2cd14c30949cef17bfc6576513e7660a8015669
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57230010"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59571760"
 ---
 # <a name="add-an-ios-line-of-business-app-to-microsoft-intune"></a>Dodawanie do usługi Microsoft Intune aplikacji biznesowych dla systemu iOS
 
@@ -32,6 +33,8 @@ Informacje przedstawione w tym artykule ułatwiają dodawanie aplikacji biznesow
 
 >[!NOTE]
 >Użytkownicy urządzeń z systemem iOS mogą usuwać niektóre wbudowane aplikacje dla systemu iOS, takie jak Stocks i Maps. Nie można użyć usługi Intune do ponownego wdrożenia tych aplikacji. Jeśli użytkownicy usunęli te aplikacje, muszą przejść do sklepu z aplikacjami i ponownie ręcznie je zainstalować.
+>
+>Aplikacje LOB systemu iOS mają maksymalny limit rozmiaru wynoszący 4 GB na aplikację.
 
 ## <a name="step-1-specify-the-software-setup-file"></a>Krok 1. Określanie pliku konfiguracji oprogramowania
 
@@ -67,7 +70,7 @@ Informacje przedstawione w tym artykule ułatwiają dodawanie aplikacji biznesow
     - **Logo**: przekaż ikonę skojarzoną z aplikacją. Będzie ona wyświetlana jako ikona aplikacji podczas przeglądania Portalu firmy.
 3. Po zakończeniu wybierz przycisk **OK**.
 
-## <a name="step-4-finish-up"></a>Krok 4. Zakończenie
+## <a name="step-4-finish-up"></a>Krok 4. Zakończenie
 
 1. W okienku **Dodaj aplikację** sprawdź poprawność szczegółów aplikacji.
 2. Wybierz opcję **Dodaj**, aby przekazać aplikację do usługi Intune.

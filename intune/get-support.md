@@ -1,14 +1,16 @@
 ---
-title: Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune | Microsoft Intune
+title: Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Uzyskaj pomoc techniczną online i telefoniczną dla płatnych i próbnych subskrypcji usługi Microsoft Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/04/2019
+ms.date: 04/05/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 7fc95d17-098e-4da5-8a09-a96476569dd9
 ms.reviewer: cacamp
@@ -16,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 01cffe9143034b9f4221cd760f9cb91f1cceebce
-ms.sourcegitcommit: da9ee02de327f202b00be44c79bf7abd35b9929b
+ms.openlocfilehash: cf1e87d40459d194f2c4aa0ff702a137e45504ab
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334973"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59569756"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune
 
@@ -29,16 +31,28 @@ ms.locfileid: "57334973"
 
 Firma Microsoft zapewnia globalne wsparcie dotyczące kwestii technicznych, przedsprzedaży, rozliczeń i subskrypcji dla usługi Microsoft Intune. Pomoc techniczna jest dostępna online i telefonicznie w przypadku subskrypcji wersji próbnych i płatnych. Pomoc techniczna online jest dostępna w języku angielskim i japońskim. Telefoniczna pomoc techniczna i pomoc online związana z rozliczeniami są dostępne w dodatkowych językach.
 
+Jako administrator usługi Intune możesz za pomocą opcji **Pomoc i obsługa techniczna** zgłosić bilet pomocy technicznej online dla usługi Intune w witrynie Azure Portal. Aby utworzyć zdarzenie pomocy technicznej i zarządzać nim, konto musi mieć przypisaną rolę usługi Azure Active Directory (Azure AD), która zawiera *akcję* **microsoft.office365.supportTickets/allEntities/allTasks**. Aby uzyskać informacje na temat ról i uprawnień usługi Azure AD, które są wymagane do utworzenia biletu pomocy technicznej, zapoznaj się z [rolami administratora w usłudze Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal). 
+
+**Znane problemy dotyczące tworzenia zdarzeń pomocy technicznej**
+
+Jeśli konto ma wymagane uprawnienia, ale nie można pomyślnie uzyskać dostępu do pomocy i obsługi technicznej ani utworzyć zdarzenia pomocy technicznej albo nim zarządzać, zapoznaj się z następującymi znanymi problemami i rozwiązaniami:  
+- Nieaktualny token użytkownika dla konta. Aby rozwiązać ten problem, wyloguj się ze wszystkich aktywnych sesji konsoli, zaloguj się ponownie, a następnie ponów próbę utworzenia zdarzenia pomocy technicznej lub zarządzania nim. 
+- Wiele aktywnych sesji. Jeśli zalogujesz się za pomocą więcej niż jednego użytkownika lub sesji, wyloguj się ze wszystkich konsoli oprócz jednej. Następnie w ramach jednej aktywnej sesji spróbuj utworzyć zdarzenie pomocy technicznej lub zarządzać nim.
+
+Dodatkowe akcje, które mogą być niezbędne do rozwiązania problemów z dostępem:
+- Wyczyść wszystkie pliki cookie aktywnej sesji przeglądarki, a następnie spróbuj ponownie utworzyć zdarzenie pomocy technicznej lub nim zarządzać.
+- Użyj sesji przeglądania InPrivate, aby zalogować się w usłudze Intune, i spróbuj ponownie utworzyć zdarzenie pomocy technicznej lub nim zarządzać.  
+
+Jeśli poprzednie obejścia nie pomogą, przejdź do [centrum administracyjnego platformy Microsoft 365](https://admin.microsoft.com) i utwórz w nim bilet pomocy technicznej. Obecnie pracujemy nad poprawką, która zostanie udostępniona pod koniec lata. 
+
+
+
 >[!IMPORTANT]  
 > Aby uzyskać pomoc techniczną dotyczącą produktów innych firm, które działają z usługą Intune (na przykład Saaswedo, Cisco lub Lookout), najpierw skontaktuj się z dostawcą danego produktu. Zanim utworzysz żądanie obsługi usługi Intune, upewnij się, że produkt został poprawnie skonfigurowany.
 >
 > Aby uzyskać informacje na temat rozwiązywania problemów z usługą Microsoft Intune, zobacz sekcję [Rozwiązywanie problemów](help-desk-operators.md) w dokumentacji usługi Intune.
 
-Jako administrator informatyczny możesz za pomocą opcji **Pomoc i obsługa techniczna** zgłosić bilet pomocy technicznej online dla usługi Intune w witrynie Azure Portal. Aby utworzyć bilet pomocy technicznej, musisz mieć konto z przypisaną jedną z następujących [ról administratora w usłudze Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
 
-- Administrator usługi Intune
-- Administrator globalny
-- Administrator usługi  
 
 
 ## <a name="help-and-support-experience"></a>Środowisko pomocy i obsługi technicznej
@@ -50,9 +64,9 @@ Jako administrator informatyczny możesz za pomocą opcji **Pomoc i obsługa tec
 ![Bloki w usłudze Intune](./media/get-support/intune-blades.png)
 
 
-To nowe środowisko jest podobne do środowiska w [centrum administracyjnym rozwiązania Microsoft 365](https://portal.office.com/AdminPortal/Home) i zastępuje [poprzednie środowisko pomocy i obsługi technicznej](#azure-help-+-support-experience). 
+To nowe środowisko jest podobne do środowiska w [centrum administracyjnym platformy Microsoft 365](https://admin.microsoft.com/) oraz zastępuje poprzednie środowisko pomocy i obsługi technicznej. 
 
-Aby uzyskać dostęp do pomocy i obsługi technicznej, wykonaj następujące czynności:  
+Aby uzyskać dostęp do pomocy i obsługi technicznej, użyj następujących opcji:  
 - **Pulpit nawigacyjny zarządzania urządzeniami:**
    - Wybierz dowolną dostępną opcję dla pozycji **Pomoc i obsługa techniczna**
    - Wybierz ikonę **?** w prawym górnym rogu portalu
@@ -73,7 +87,7 @@ W tym widoku możesz wykonać następujące czynności:
 4. [Wyświetlanie spraw pomocy technicznej](#view-support-cases), które zostały otwarte wcześniej przy użyciu tego nowego przepływu pracy  
 
 ### <a name="specify-details-about-an-issue"></a>Określanie szczegółów problemu
-Po otwarciu Pomocy i obsługi technicznej z lokalizacji, która jest obsługiwana przez nowe środowisko, zostanie otwarta strona **Potrzebujesz pomocy?**  . Na tej stronie możesz określić szczegóły problemu. Podczas wprowadzania informacji w konsoli będą wyświetlane typowe zapytania na podstawie używanych słów kluczowych. Możesz wybrać oferowaną podpowiedź lub dokończyć własny opis problemu. Jeśli wprowadzisz własny opis, wybierz pozycję **Uzyskaj pomoc**, aby go przesłać. Gdy prześlesz zapytanie, konsola zwróci informacje kontekstowe, które ułatwią rozwiązanie problemu.
+Po otwarciu pomocy i obsługi technicznej z lokalizacji, która jest obsługiwana przez nowe środowisko, zostanie otwarta strona **Potrzebujesz pomocy?**. Na tej stronie możesz określić szczegóły problemu. Podczas wprowadzania informacji w konsoli będą wyświetlane typowe zapytania na podstawie używanych słów kluczowych. Wybierz oferowaną podpowiedź lub dokończ własny opis problemu. Jeśli wprowadzisz własny opis, wybierz pozycję **Uzyskaj pomoc**, aby go przesłać. Gdy prześlesz zapytanie, konsola zwróci informacje kontekstowe, które ułatwią rozwiązanie problemu.
 
 Oto przykłady zapytań, które możesz przesłać:
   
@@ -113,11 +127,11 @@ Wybierz przycisk historii, aby wyświetlić utworzone przez siebie zdarzenia pom
 
 
 ## <a name="azure-help--support-experience"></a>Środowisko pomocy i obsługi technicznej platformy Azure
-Poniższe informacje zawierają opis środowiska pomocy i obsługi technicznej platformy Azure, które jest nadal dostępne w witrynie Azure Portal po wybraniu pozycji **Pomoc i obsługa techniczna** w lewym okienku nawigacji lub po wybraniu ikony **?** w prawym górnym rogu witryny Azure Portal. Począwszy od stycznia 2019 r., nie można uzyskać dostępu do środowiska *Pomoc i obsługa techniczna* platformy Azure za pomocą opcji *Pomoc i obsługa techniczna* w blokach usługi Intune.  
+Poniższe informacje zawierają opis środowiska pomocy i obsługi technicznej platformy Azure, które jest nadal dostępne w witrynie Azure Portal po wybraniu pozycji **Pomoc i obsługa techniczna** w lewym okienku nawigacji lub po wybraniu ikony **?** w prawym górnym rogu witryny Azure Portal. Od stycznia 2019 r. nie można uzyskać dostępu do środowiska *Pomoc i obsługa techniczna* platformy Azure za pomocą opcji *Pomoc i obsługa techniczna* w blokach usługi Intune.  
 
 ### <a name="create-an-online-support-ticket"></a>Tworzenie biletu pomocy technicznej online
 
-1. Zaloguj się w witrynie Azure Portal (<https://portal.azure.com>) przy użyciu poświadczeń administracyjnych usługi Intune, wybierz ikonę **?** w prawym górnym rogu portalu, a następnie wybierz pozycję **Pomoc i obsługa techniczna**, aby przejść do strony [Pomoc i obsługa techniczna Azure](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
+1. Zaloguj się w witrynie Azure Portal (<https://portal.azure.com>) przy użyciu poświadczeń administracyjnych usługi Intune, wybierz ikonę **?** w prawym górnym rogu portalu, a następnie wybierz pozycję **Pomoc i obsługa techniczna**, aby przejść do strony [Pomoc i obsługa techniczna Azure](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
 
    ![Obraz przedstawiający link w postaci znaku zapytania z wyróżnionym linkiem Pomoc i obsługa techniczna](./media/azure-get-support.png)
 
@@ -131,7 +145,7 @@ Poniższe informacje zawierają opis środowiska pomocy i obsługi technicznej p
    - **Usługa**: **Microsoft Intune**
    - **Typ problemu**: wybierz typ problemu z menu rozwijanego.
    - **Podtyp problemu**: wybierz podtyp problemu z menu rozwijanego.
-   - **Temat**: krótko opisz występujący problem.
+   - **Temat**: krótko opisz problem, dla którego potrzebujesz pomocy.
 
    ![Obraz przedstawiający kartę Podstawy na stronie Pomoc i obsługa techniczna — nowe żądanie pomocy technicznej](./media/get-support/help-new-support-case-basics.png)
 
@@ -175,17 +189,16 @@ Poniższe informacje zawierają opis środowiska pomocy i obsługi technicznej p
 6. Choose **Create** to submit your support request.
 -->
 >[!IMPORTANT]
->W przypadku pytań dotyczących rozliczeń lub subskrypcji możesz utworzyć sprawę w celu uzyskania pomocy za pośrednictwem [Centrum administracyjnego pakietu Office](https://portal.office.com/Support/SupportEntry.aspx).
+>W przypadku pytań dotyczących rozliczeń lub subskrypcji możesz utworzyć sprawę w celu uzyskania pomocy za pośrednictwem [centrum administracyjnego platformy Microsoft 365](https://admin.microsoft.com/Support/SupportEntry.aspx).
 
 ### <a name="view-support-requests"></a>Wyświetlanie wszystkich żądań pomocy technicznej
 Żądanie pomocy technicznej można wyświetlić w witrynie Azure Portal. W tym celu:
 
-1. Zaloguj się na platformie Azure (<https://portal.azure.com>) przy użyciu poświadczeń administracyjnych usługi Intune, wybierz ikonę **?** w prawym górnym rogu portalu, a następnie wybierz pozycję **Pomoc i obsługa techniczna**, aby przejść do strony [Pomoc i obsługa techniczna Azure](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
+1. Zaloguj się na platformie Azure (<https://portal.azure.com>) przy użyciu poświadczeń administracyjnych usługi Intune, wybierz ikonę **?** w prawym górnym rogu portalu, a następnie wybierz pozycję **Pomoc i obsługa techniczna**, aby przejść do strony [Pomoc i obsługa techniczna Azure](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
 
 2. Na stronie **Pomoc i obsługa techniczna** możesz przejrzeć listę **Najnowsze żądania pomocy technicznej** i wybierać pozycje na tej liście w celu wyświetlenia dodatkowych szczegółów.
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
-- [Kontakt z telefoniczną asystowaną pomocą techniczną dla usługi Microsoft Intune](phone-support-contact.md)
 - [Pomoc dotycząca rozliczeń i subskrypcji](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)
 - [Licencjonowanie zbiorowe](https://go.microsoft.com/fwlink/p/?LinkID=282015)
 - [Rozwiązywanie problemów z usługą Intune](help-desk-operators.md)

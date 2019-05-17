@@ -1,15 +1,16 @@
 ---
 title: Profile aprowizowania aplikacji systemu iOS w usłudze Microsoft Intune
-titlesuffix: ''
+titleSuffix: ''
 description: Usługa Intune udostępnia narzędzia umożliwiające aktywne przypisywanie nowego profilu aprowizowania do urządzeń, na których znajdują się aplikacje bliskie wygaśnięcia.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/19/2018
+ms.date: 04/08/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: bbc3ba4a-df48-4aeb-988b-69a177764e3a
 ms.reviewer: mghadial
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f02e4416f68fef7531f6d6ffa617273904b752c
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 888c136934deca80877d75879e270807af194a1e
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57233852"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59569561"
 ---
 # <a name="use-ios-app-provisioning-profiles-to-prevent-your-apps-from-expiring"></a>Użycie profilów aprowizowania aplikacji systemu iOS w celu zapobiegania wygaśnięciu aplikacji
 
@@ -51,7 +52,7 @@ Jako administrator możesz dołączać lub wykluczać grupy zabezpieczeń, aby p
 3. W okienku **Tworzenie profilu** skonfiguruj następujące wartości:
     - **Nazwa** — podaj nazwę dla tego profilu aprowizowania aplikacji mobilnych.
     - **Opis** — opcjonalnie wprowadź opis zasad.
-    - **Przekaż plik profilu** — wybierz pozycję **Importuj**, a następnie wybierz plik profilu konfiguracji Apple Mobile (z rozszerzeniem `.mobileprovision`) pobrany z witryny internetowej dla deweloperów firmy Apple.
+    - **Przekaż plik profilu** — wybierz ikonę **Otwórz**, a następnie wybierz plik profilu konfiguracji Apple Mobile (z rozszerzeniem `.mobileprovision`) pobrany z [witryny internetowej dla deweloperów firmy Apple](https://developer.apple.com/).
 4. Po wykonaniu tych czynności wybierz przycisk **Utwórz**.
 
 ## <a name="next-steps"></a>Następne kroki

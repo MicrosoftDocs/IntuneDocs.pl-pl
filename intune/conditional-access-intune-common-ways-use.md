@@ -1,26 +1,28 @@
 ---
-title: Scenariusze dostępu warunkowego | Microsoft Intune
+title: Scenariusze dostępu warunkowego
+titleSuffix: Microsoft Intune
 description: Dowiedz się, w jaki sposób dostęp warunkowy usługi Intune jest powszechnie używany dla dostępu warunkowego opartego na urządzeniach i dostępu warunkowego na podstawie aplikacji.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/25/2018
+ms.date: 03/31/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: a0b8e55e-c3d8-4599-be25-dc10c1027b62
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bd29f52b4d108173b8f08b68cf8b85ce291a0077
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 666a62e9aa42212bacba0e0222a828d89d780eef
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55842766"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59569379"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Jakie są typowe sposoby korzystania z dostępu warunkowego przy użyciu usługi Intune?
 
@@ -31,7 +33,7 @@ Istnieją dwa typy dostępu warunkowego w usłudze Intune: dostęp warunkowy opa
 Poniższe informacje pomagają zrozumieć sposób korzystania z możliwości zapewnienia zgodności *urządzenia* przenośnego w usłudze Intune i możliwości zarządzania *aplikacjami* mobilnymi (MAM) w usłudze Intune. 
 
 > [!NOTE]
-> Dostęp warunkowy jest funkcją usługi Azure Active Directory dostępną w wersji Premium licencji tej usługi. Usługa Intune rozszerza tę funkcję, dodając do rozwiązania zgodność urządzeń przenośnych oraz zarządzanie aplikacjami mobilnymi.
+> Dostęp warunkowy jest funkcją usługi Azure Active Directory dostępną w wersji Premium licencji tej usługi. Usługa Intune rozszerza tę funkcję, dodając do rozwiązania zgodność urządzeń przenośnych oraz zarządzanie aplikacjami mobilnymi. Węzeł Dostęp warunkowy dostępny z usługi *Intune* jest tym samym węzłem, do którego dostęp jest uzyskiwany z usługi *Azure AD*.  
 
 ## <a name="device-based-conditional-access"></a>Dostęp warunkowy oparty na urządzeniach
 
@@ -71,13 +73,13 @@ Jeśli urządzenia nie spełniają warunków, użytkownik jest przeprowadzany pr
 
 Program Intune Exchange Connector pobiera wszystkie rekordy Exchange Active Sync (EAS) znajdujące się na serwerze programu Exchange, by usługa Intune mogła pobrać te rekordy EAS i zamapować je na rekordy urządzeń usługi Intune. Rekordami tymi są urządzenia zarejestrowane w usłudze Intune i przez nią rozpoznane. Ten proces zezwala na dostęp do poczty e-mail lub go blokuje.
 
-Jeśli rekord EAS jest całkowicie nowy i usługa Intune nie została o tym powiadomiona, usługa Intune uruchamia polecenie cmdlet, które blokuje dostęp do poczty e-mail. Poniżej przedstawiono bardziej szczegółowe informacje dotyczące tego procesu:
+Jeśli rekord EAS jest całkowicie nowy i usługa Intune nie została o tym powiadomiona, usługa Intune uruchamia polecenie cmdlet (wymowa: „command-let”), które blokuje dostęp do poczty e-mail. Poniżej przedstawiono bardziej szczegółowe informacje dotyczące tego procesu:
 
 ![Schemat blokowy lokalnego programu Exchange z urzędem certyfikacji](./media/ca-intune-common-ways-1.png)
 
 1.  Użytkownik próbuje uzyskać dostęp do firmowej poczty e-mail, która jest hostowana w lokalnym programie Exchange 2010 SP1 lub w jego nowszej wersji.
 
-2.  Jeśli urządzenie nie jest zarządzane przez usługę Intune, dostęp do poczty e-mail zostaje zablokowany. Usługa Intune wysyła powiadomienie o zablokowaniu do klienta EAS.
+2.  Jeśli urządzenie nie jest zarządzane przez usługę Intune, dostęp do poczty e-mail zostanie zablokowany. Usługa Intune wysyła powiadomienie o zablokowaniu do klienta EAS.
 
 3.  Program EAS odbiera powiadomienie o zablokowaniu, przenosi urządzenie do kwarantanny i wysyła wiadomość e-mail informującą o kwarantannie z krokami korygującymi zawierającymi linki pozwalające użytkownikom na zarejestrowanie urządzeń.
 

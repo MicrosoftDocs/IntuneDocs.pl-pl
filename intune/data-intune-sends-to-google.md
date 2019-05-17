@@ -7,21 +7,23 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 04/18/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: a5c3bec4-18ed-11e8-accf-0ed5f89f718b
 ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: bb205472c4407dab6ff990e33737a8bd8b24a010
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 2a6d99cc83be1b20ef2839acd77cb83c9d6b247e
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52188657"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57393587"
 ---
 # <a name="data-intune-sends-to-google"></a>Dane wysyłane przez usługę Intune do Google
 
@@ -32,7 +34,7 @@ Gdy zarządzanie urządzeniami przedsiębiorstwa z systemem Android jest włącz
 Poniższa tabela zawiera dane, które usługa Microsoft Intune wysyła do firmy Google, gdy zarządzanie urządzeniem jest włączone na urządzeniu:
 
 
-| Dane wysyłane do firmy Google | Szczegóły | Służy do | Przykład |
+| Dane wysyłane do firmy Google | Szczegóły | Sposób użycia | Przykład |
 |:---:|:---:|:---:|:---:|
 | EnterpriseId | Tworzony przez firmę Google podczas wiązania konta Gmail z usługą Intune. | Podstawowy identyfikator służący do komunikacji między usługą Intune i firmą Google.  Ta komunikacja obejmuje ustawianie zasad, zarządzanie urządzeniami i wiązanie/usuwanie powiązania przedsiębiorstwa z systemem Android przy użyciu usługi Intune. | Unikatowy identyfikator, przykładowy format: LC04eik8a6 |
 | Treść zasad | Tworzona w usłudze Intune podczas zapisywania nowej aplikacji lub zasad konfiguracji. | Stosowanie zasad do urządzeń. | To jest kolekcja wszystkich skonfigurowanych ustawień zasad aplikacji lub konfiguracji. Może zawierać informacje o kliencie, jeśli zostanie udostępniona jako część zasad, np. nazwy sieci, nazwy aplikacji oraz ustawienia specyficzne dla aplikacji. |

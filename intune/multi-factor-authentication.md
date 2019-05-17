@@ -1,27 +1,28 @@
 ---
 title: Wymaganie uwierzytelniania wieloskładnikowego na potrzeby rejestracji urządzeń w usłudze Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Instrukcje ustawiania wymogu uwierzytelniania wieloskładnikowego w usłudze Azure AD do celów rejestracji urządzeń w usłudze Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 01/10/2018
-ms.topic: article
+ms.date: 02/22/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 94280c73-c05c-4e72-b0dd-a7cb997782f9
 ROBOTS: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 71d551ca64f85c3ba6a807fac70e3b0662e1b89a
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: cf5611b3b9292222582d66cae39b4f751279dcec
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55834096"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "59568794"
 ---
 # <a name="require-multi-factor-authentication-for-intune-device-enrollments"></a>Wymaganie uwierzytelniania wieloskładnikowego na potrzeby rejestracji urządzeń w usłudze Intune
 
@@ -50,11 +51,10 @@ Aby ustawić wymóg uwierzytelniania wieloskładnikowego na etapie rejestracji u
 >Nie konfiguruj opcji **Reguły dostępu na podstawie urządzeń** pod kątem rejestracji w usłudze Microsoft Intune.
 
 1. Zaloguj się do [witryny Microsoft Azure Portal](https://portal.azure.com) przy użyciu swoich poświadczeń.
-2. W portalu przejdź do pozycji **[Azure Active Directory](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)**.
-3. W usłudze **Azure Active Directory** w obszarze Zabezpieczenia wybierz pozycję **[Dostęp warunkowy](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConditionalAccessBlade/Policies)**.
+2. W portalu przejdź do usługi **Intune** i wybierz pozycję **Dostęp warunkowy**. Węzeł Dostęp warunkowy dostępny z usługi *Intune* jest tym samym węzłem, do którego dostęp jest uzyskiwany z usługi *Azure AD*.
 4. Wybierz pozycję **Nowe zasady**.
 5. W obszarze **Nowe zasady** wpisz nazwę opisową zasad.
-6. W sekcji **Przypisania** wybierz pozycję **Użytkownicy i grupy**.
+6. W sekcji **Przypisania** wybierz pozycję **Użytkownicy i grupy**. 
 7. W obszarze **Użytkownicy i grupy** wybierz polecenie **Wybierz użytkowników lub grupy** i zaznacz opcję **Użytkownicy i grupy**. Następnie wybierz użytkowników lub grupy, które mają otrzymać te zasady, a następnie wybierz pozycję **Gotowe**.
 8. W sekcji **Przypisania** wybierz pozycję **Aplikacje w chmurze**.
 9. Na karcie **Uwzględnianie** w obszarze **Aplikacje w chmurze** wybierz pozycję **Wybierz aplikacje,**, a następnie wybierz kolejno pozycje **Wybierz** > **Rejestracja w usłudze Microsoft Intune**, a następnie wybierz pozycję **Gotowe**.

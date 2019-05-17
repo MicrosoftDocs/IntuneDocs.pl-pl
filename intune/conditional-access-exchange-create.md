@@ -1,27 +1,28 @@
 ---
-title: Tworzenie zasad dostępu warunkowego programu Exchange | Microsoft Intune
-titlesuffix: Microsoft Intune
+title: Tworzenie zasad dostępu warunkowego programu Exchange
+titleSuffix: Microsoft Intune
 description: Konfigurowanie dostępu warunkowego do lokalnego programu Exchange i starszej wersji usługi Exchange Online w wersji dedykowanej w usłudze Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/22/2018
-ms.topic: article
+ms.date: 04/15/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b4f35dba38dd1b69f770a3a10689ce87eaf3a27
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 003e6e5aa78440861e6aff5be138c4a302171c1b
+ms.sourcegitcommit: a2cd14c30949cef17bfc6576513e7660a8015669
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55840403"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59571743"
 ---
 # <a name="create-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated"></a>Tworzenie zasad dostępu warunkowego do lokalnego programu Exchange i starszej wersji usługi Exchange Online w wersji dedykowanej w usłudze Intune
 
@@ -79,50 +80,52 @@ Natywna aplikacja **do obsługi poczty** w systemie Windows 8.1 lub nowszym (w p
 
 1. Przejdź do witryny [Azure Portal](https://portal.azure.com/) i zaloguj się przy użyciu swoich poświadczeń usługi Intune.
 
-1. Po pomyślnym zalogowaniu zostanie wyświetlony **pulpit nawigacyjny platformy Azure**.
+2. Przejdź do pozycji **Intune** > **Dostęp do programu Exchange**, a następnie wybierz pozycję **Dostęp do lokalnego wystąpienia programu Exchange**. 
 
-1. W menu po lewej stronie wybierz pozycję **Wszystkie usługi**, a następnie w filtrze pola tekstowego wpisz **Intune**.
+3. W okienku **Dostęp do lokalnego wystąpienia programu Exchange** wybierz pozycję **Tak**, aby *włączyć kontrolę dostępu do lokalnego programu Exchange*.
 
-1. Wybierz pozycję **Intune**, aby wyświetlić **Pulpit nawigacyjny Intune**.
+4. W menu po lewej stronie wybierz pozycję **Wszystkie usługi**, a następnie w filtrze pola tekstowego wpisz **Intune**.
 
-1. Wybierz pozycję **Dostęp lokalny**. W okienku **Dostęp lokalny** wyświetlany jest stan zasad dostępu warunkowego oraz urządzeń, których dotyczą.
+5. Wybierz pozycję **Intune**, aby wyświetlić **Pulpit nawigacyjny Intune**.
 
-1. W obszarze **Zarządzaj** wybierz pozycję **Dostęp do lokalnego programu Exchange**.
+6. Wybierz pozycję **Dostęp lokalny**. W okienku **Dostęp lokalny** wyświetlany jest stan zasad dostępu warunkowego oraz urządzeń, których dotyczą.
 
-1. W okienku **Dostęp do lokalnego programu Exchange** wybierz pozycję **Tak**, aby włączyć kontrolę dostępu do lokalnego programu Exchange.
+7. W obszarze **Zarządzaj** wybierz pozycję **Dostęp do lokalnego programu Exchange**.
+
+8. W okienku **Dostęp do lokalnego programu Exchange** wybierz pozycję **Tak**, aby włączyć kontrolę dostępu do lokalnego programu Exchange.
 
     > [!NOTE]
     > Jeśli łącznik lokalnego programu Exchange Active Sync nie został skonfigurowany, opcja ta będzie wyłączona.  Należy najpierw zainstalować i skonfigurować co najmniej jeden łącznik przed włączeniem dostępu warunkowego do lokalnego programu Exchange. Więcej szczegółowych informacji znajduje się w temacie [Install the Intune On-premises Exchange Connector](exchange-connector-install.md) (Instalowanie łącznika lokalnego programu Exchange w usłudze Intune)
 
-1. W obszarze **Przypisanie** wybierz pozycję **Objęte grupy**.  Użyj grupy zabezpieczeń użytkowników, która powinna mieć przypisany dostęp warunkowy. W wyniku tej akcji użytkownicy będą musieli zarejestrować swoje urządzenia w usłudze Intune i zachować zgodność z profilami zgodności.
+9. W obszarze **Przypisanie** wybierz pozycję **Objęte grupy**.  Użyj grupy zabezpieczeń użytkowników, która powinna mieć przypisany dostęp warunkowy. W wyniku tej akcji użytkownicy będą musieli zarejestrować swoje urządzenia w usłudze Intune i zachować zgodność z profilami zgodności.
 
-1. Jeśli chcesz wykluczyć niektóre grupy użytkowników, możesz to zrobić, wybierając pozycję **Wykluczone grupy** i grupy użytkowników, które nie będą wymagać rejestracji urządzeń i zgodności.
+10. Jeśli chcesz wykluczyć niektóre grupy użytkowników, możesz to zrobić, wybierając pozycję **Wykluczone grupy** i grupy użytkowników, które nie będą wymagać rejestracji urządzeń i zgodności.
 
-1. W obszarze **Ustawienia** wybierz pozycję **Powiadomienia użytkowników**, aby zmodyfikować domyślną wiadomość e-mail. Ta wiadomość jest wysyłana do użytkownika, jeśli urządzenie nie jest zgodne, a chce on uzyskać dostęp do lokalnego programu Exchange. W szablonie wiadomości jest używany język znaczników.  Podczas pisania widać również podgląd wiadomości.
+11. W obszarze **Ustawienia** wybierz pozycję **Powiadomienia użytkowników**, aby zmodyfikować domyślną wiadomość e-mail. Ta wiadomość jest wysyłana do użytkownika, jeśli urządzenie nie jest zgodne, a chce on uzyskać dostęp do lokalnego programu Exchange. W szablonie wiadomości jest używany język znaczników.  Podczas pisania widać również podgląd wiadomości.
     > [!TIP]
     > Aby dowiedzieć się więcej o języku znaczników, zobacz ten [artykuł](https://en.wikipedia.org/wiki/Markup_language) w Wikipedii.
 
-1. W okienku **Zaawansowane ustawienia dostępu do programu Exchange Active Sync** ustaw globalną zasadę domyślną dostępu z urządzeń, które nie są zarządzane przez usługę Intune, oraz zasady platformy zgodnie z opisem w dwóch następnych krokach.
+12. W okienku **Zaawansowane ustawienia dostępu do programu Exchange Active Sync** ustaw globalną zasadę domyślną dostępu z urządzeń, które nie są zarządzane przez usługę Intune, oraz zasady platformy zgodnie z opisem w dwóch następnych krokach. Aby uzyskać dostęp do okienka ustawień zaawansowanych, w widoku *Dostęp do programu Exchange — dostęp do lokalnego wystąpienia programu Exchange* wybierz pozycję *Exchange ActiveSync — łącznik lokalny*.
 
-1. Urządzeniom, których nie dotyczy dostęp warunkowy ani inne zasady, można zezwolić na dostęp do programu Exchange lub go zablokować.
+13. Urządzeniom, których nie dotyczy dostęp warunkowy ani inne zasady, można zezwolić na dostęp do programu Exchange lub go zablokować.
 
    - Po ustawieniu zezwolenia na dostęp wszystkie urządzenia będą mogły natychmiast uzyskać dostęp do lokalnego programu Exchange.  Urządzenia, które należą do użytkowników w pozycji **Objęte grupy**, są blokowane, jeśli zostaną później ocenione jako niezgodne ze zgodnymi zasadami lub niezarejestrowane w usłudze Intune.
    - Po ustawieniu zablokowania dostępu początkowy dostęp wszystkich urządzeń do lokalnego programu Exchange zostanie natychmiast zablokowany.  Urządzenia, które należą do użytkowników w pozycji **Objęte grupy**, uzyskają dostęp po zarejestrowaniu urządzenia w usłudze Intune i ocenieniu go jako zgodnego. Na urządzeniach z systemem Android nieobsługujących systemu Samsung Knox Standard dostęp będzie zawsze zablokowany, gdyż nie obsługują one tego ustawienia.
 
-1. W obszarze **Wyjątki dla platform urządzeń** wybierz przycisk **Dodaj**, aby określić platformy. Jeśli ustawienie **dostęp do urządzeń niezarządzanych** zostało ustawione na wartość **zablokowany**, urządzenia, które są zarejestrowane i zgodne, będą odblokowane, nawet jeśli występuje wyjątek dla platformy określający ich zablokowanie. Wybierz przycisk **Ok**, aby zapisać ustawienia.
+14. W obszarze **Wyjątki dla platform urządzeń** wybierz przycisk **Dodaj**, aby określić platformy. Jeśli ustawienie **dostęp do urządzeń niezarządzanych** zostało ustawione na wartość **zablokowany**, urządzenia, które są zarejestrowane i zgodne, będą odblokowane, nawet jeśli występuje wyjątek dla platformy określający ich zablokowanie. Wybierz przycisk **Ok**, aby zapisać ustawienia.
 
-1. W okienku **Lokalne** kliknij pozycję **Zapisz**, aby zapisać zasady dostępu warunkowego.
+15. W okienku **Lokalne** kliknij pozycję **Zapisz**, aby zapisać zasady dostępu warunkowego.
 
 ## <a name="create-azure-ad-conditional-access-policies-in-intune"></a>Tworzenie zasad dostępu warunkowego usługi Azure AD w usłudze Intune
 
-Począwszy od usługi Intune w wersji 1704, administratorzy mogą tworzyć zasady dostępu warunkowego usługi Azure AD w witrynie Azure Portal usługi Intune. Zapewnia to wygodę, gdyż nie ma konieczności przełączania między obciążeniami usług Azure i Intune.
+Dostęp warunkowy to pojęcie z technologii używanej w usłudze Azure Active Directory (Azure AD). Węzeł Dostęp warunkowy dostępny z usługi *Intune* jest tym samym węzłem, do którego dostęp jest uzyskiwany z usługi *Azure AD*.  
 
 > [!IMPORTANT]
 > Aby utworzyć zasady dostępu warunkowego usługi Azure AD w portalu Intune Azure, potrzebna jest licencja usługi Azure AD w wersji Premium.
 
-### <a name="to-create-azure-ad-conditional-access-policy"></a>Tworzenie zasad dostępu warunkowego usługi Azure AD
+### <a name="to-create-a-conditional-access-policy"></a>Aby utworzyć zasady dostępu warunkowego
 
-1. Na **pulpicie nawigacyjnym Intune** wybierz pozycję **Dostęp warunkowy**.
+1. Na **pulpicie nawigacyjnym usługi Intune** wybierz pozycję **Dostęp warunkowy**.
 
 2. W okienku **Zasady** wybierz pozycję **Nowe zasady**, aby utworzyć nowe zasady dostępu warunkowego usługi Azure AD.
 

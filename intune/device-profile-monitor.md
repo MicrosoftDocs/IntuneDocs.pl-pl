@@ -6,21 +6,23 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 06/25/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 9deaed87-fb4b-4689-ba88-067bc61686d7
 ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: dc3a9620532951bd78e545e87b0d43dd6be3efe5
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 786cd6e7d0acaeb6e78035d8ec580c30d29d09e7
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186600"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57391707"
 ---
 # <a name="monitor-device-profiles-in-microsoft-intune"></a>Monitorowanie profilów urządzeń w usłudze Microsoft Intune
 
@@ -66,8 +68,8 @@ Po utworzeniu profilu urządzenia usługa Intune udostępnia wykresy graficzne. 
 5. Na liście **Profile** wybierz określony profil. Możesz również zmienić istniejące właściwości:
   - **Właściwości**: zmień nazwę lub zaktualizuj dowolne istniejące ustawienia.
   - **Przypisania**: dołącz lub wyklucz urządzenia, których mają dotyczyć zasady. Wybierz pozycję **Wybrane grupy**, aby wybrać określone grupy.
-  - **Stan urządzenia**: lista urządzeń przypisanych do tego profilu oraz informacja o tym, czy profil został pomyślnie wdrożony. Można wybrać określone urządzenie, aby uzyskać więcej szczegółów, na przykład listę zainstalowanych aplikacji.
-  - **Stan użytkownika**: wyświetla listę nazw użytkowników z urządzeniami, które wpływa ten profil, oraz informację o tym, czy profil został pomyślnie wdrożony. Można wybrać określonego użytkownika, aby uzyskać więcej szczegółów.
+  - **Stan urządzenia**: Zawiera ono listę urządzeń przypisanych do tego profilu oraz informację o tym, czy profil został pomyślnie wdrożony. Można wybrać określone urządzenie, aby uzyskać więcej szczegółów, na przykład listę zainstalowanych aplikacji.
+  - **Stan użytkownika**: wyświetla listę nazw użytkowników z urządzeniami, na które wpływa ten profil, oraz informację o tym, czy profil został pomyślnie wdrożony. Można wybrać określonego użytkownika, aby uzyskać więcej szczegółów.
   - **Stan ustawień**: filtruje dane wyjściowe, pokazując poszczególne ustawienia w profilu i informację o tym, czy ustawienie zostało pomyślnie zastosowane.
 
 ## <a name="view-conflicts"></a>Wyświetl konflikty

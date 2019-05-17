@@ -1,15 +1,16 @@
 ---
 title: Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem Android
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Zasady konfiguracji aplikacji w usłudze Microsoft Intune umożliwiają określanie ustawień podczas uruchamiania aplikacji profilu służbowego systemu Android przez użytkowników.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/26/2018
-ms.topic: article
+ms.date: 02/21/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: d0b6f3fe-2bd4-4518-a6fe-b9fd115ed5e0
 ms.reviewer: chrisbal
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 512fc924f71ba9a9fdd46ba8f5f5c087de83c2dd
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: dccbfe597fa4bd461bb71cb86d38ffdfd52d719a
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55840420"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "59567429"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-devices"></a>Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem Android
 
@@ -44,13 +45,13 @@ Zasady konfiguracji aplikacji w usłudze Microsoft Intune umożliwiają określa
 6. Dla opcji **Platforma** wybierz pozycję **Android**.
 7. Wybierz pozycję **Skojarzona aplikacja**, aby wybrać aplikację, dla której chcesz zdefiniować zasady konfiguracji aplikacji. Wybierz z listy aplikacji profilu służbowego systemu Android aplikacje zatwierdzone i zsynchronizowane z usługą Intune.
 8. Wybierz pozycję **Uprawnienia**. Konfigurację możesz ustawić przy użyciu następujących narzędzi:
-    - [projektant konfiguracji](#Use-the-configuration-designer)
-    - [edytor JSON](#Enter-the-JSON-editor)
+    - [projektant konfiguracji](#use-the-configuration-designer)
+    - [edytor JSON](#enter-the-json-editor)
 9. Wybierz **OK**, a następnie wybierz pozycję **Dodaj**.
 
 ## <a name="use-the-configuration-designer"></a>Korzystanie z projektanta konfiguracji
 
-W przypadku aplikacji systemu Android obsługujących konfigurację możesz użyć projektanta konfiguracji. Konfiguracja będzie mieć zastosowanie wobec urządzeń zarejestrowanych w usłudze Intune. Projektant umożliwia określanie konkretnych wartości konfiguracji dla ustawień ujawnianych przez aplikację.
+W przypadku aplikacji systemu Android zaprojektowanych pod kątem obsługi ustawień konfiguracji możesz użyć projektanta konfiguracji. Konfiguracja będzie mieć zastosowanie wobec urządzeń zarejestrowanych w usłudze Intune. Projektant umożliwia określanie konkretnych wartości konfiguracji dla ustawień ujawnianych przez aplikację.
 
 Wybierz opcję **Dodaj**, aby wybrać listę ustawień konfiguracji, które chcesz określić dla aplikacji.  
 Dla każdego klucza i wartości konfiguracji ustaw następujące elementy:

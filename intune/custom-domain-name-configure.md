@@ -1,6 +1,6 @@
 ---
 title: Konfigurowanie niestandardowej nazwy domeny
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Dodawanie niestandardowej nazwy domeny dla subskrypcji usługi Microsoft Intune
 keywords: ''
 author: dougeby
@@ -10,18 +10,20 @@ ms.date: 02/22/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 2382f36f-13d8-4a32-81ad-6cfa604889c3
 ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
-ms.openlocfilehash: a4227399eb5cf1d2cc2e265215eccb2c05d73ac5
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 4d0c3d11eb3a031f34704dcd9ecf16f3312ac818
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181500"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "59567247"
 ---
 # <a name="configure-a-custom-domain-name"></a>Konfigurowanie niestandardowej nazwy domeny
 
@@ -42,14 +44,14 @@ Nie można zmienić ani usunąć początkowej nazwy domeny onmicrosoft.com. Moż
 
 ## <a name="to-add-and-verify-your-custom-domain"></a>Aby dodać i zweryfikować domenę niestandardową
 
-1. Przejdź do [portalu zarządzania usługi Office 365](https://portal.office.com/Admin/Default.aspx) i zaloguj się na swoim koncie administratora.
+1. Przejdź do [centrum administracyjnego platformy Microsoft 365](https://admin.microsoft.com/) i zaloguj się do konta administratora.
 
 2. W okienku nawigacji wybierz pozycje **Konfiguracja** &gt; **Domeny**.
 
 3. Wybierz pozycję **Dodaj domenę** i wpisz niestandardową nazwę domeny. Wybierz pozycję **Dalej**.
-   ![Zrzut ekranu z Centrum administracji Office 365 z wybranymi ustawieniami Ustawienia > Domeny oraz dodawaną nową nazwą domeny](./media/domain-custom-add.png)
+   ![Zrzut ekranu centrum administracyjnego platformy Microsoft 365 z wybranymi opcjami Ustawienia > Domeny oraz dodawaną nową nazwą domeny](./media/domain-custom-add.png)
 4. Zostanie otwarte okno dialogowe **Weryfikowanie domeny** udostępniające wartości do utworzenia rekordu TXT u dostawcy hostingu DNS.
-    - **Użytkownicy serwisu GoDaddy**: Portal zarządzania usługi Office 365 przekieruje Cię do strony logowania serwisu GoDaddy. Rekord TXT zostanie utworzony automatycznie po wprowadzeniu poświadczeń i zaakceptowaniu umowy uprawnień do zmiany domeny. Możesz też [utworzyć nowy rekord TXT](https://support.office.com/article/Create-DNS-records-at-GoDaddy-for-Office-365-f40a9185-b6d5-4a80-bb31-aa3bb0cab48a).
+    - **Użytkownicy serwisu GoDaddy**: centrum administracyjne platformy Microsoft 365 przekieruje Cię do strony logowania do serwisu GoDaddy. Rekord TXT zostanie utworzony automatycznie po wprowadzeniu poświadczeń i zaakceptowaniu umowy uprawnień do zmiany domeny. Możesz też [utworzyć nowy rekord TXT](https://support.office.com/article/Create-DNS-records-at-GoDaddy-for-Office-365-f40a9185-b6d5-4a80-bb31-aa3bb0cab48a).
     - **Użytkownicy serwisu Register.com**: postępuj zgodnie z [instrukcjami krok po kroku](https://support.office.com/article/Create-DNS-records-at-Register-com-for-Office-365-55bd8c38-3316-48ae-a368-4959b2c1684e#BKMK_verify), aby utworzyć rekord TXT.
 
 Kroki umożliwiające dodanie i zweryfikowanie domeny niestandardowej można również [wykonać w usłudze Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-add-domain/).

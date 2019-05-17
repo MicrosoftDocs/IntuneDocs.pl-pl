@@ -10,6 +10,7 @@ ms.date: 04/19/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: cf27fdb8-f408-425c-9a7c-146de1534425
 ms.reviewer: ''
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af600f6f2f66cec665322b405ce7eddc3dceac48
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 4362983bbcdb78f82ce7b16f675c6f61fbefd1e1
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57238068"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57396349"
 ---
 # <a name="data-apple-sends-to-intune"></a>Dane wysyłane do usługi Intune przez firmę Apple
 
@@ -39,7 +40,7 @@ Zanim usługa Microsoft Intune będzie mogła nawiązać połączenie, musisz ut
 
 W poniższej tabeli wymieniono dane, które urządzenie firmy Apple wysyła do usługi Intune. [Usługa Intune wysyła również dane do firmy Apple](data-intune-sends-to-apple.md). 
 
-| Usługa | Wiadomość | Dane wysyłane do usługi Intune | Służy do |
+| Usługa | Wiadomość | Dane wysyłane do usługi Intune | Sposób użycia |
 |:---:|:---:|:---:| ---|
 | [APNs](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Uwierzytelnianie | MessageType | Typ komunikatu: uwierzytelnianie. |
 | [APNs](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Uwierzytelnianie | Temat | Temat, który będzie nasłuchiwany przez urządzenie. |

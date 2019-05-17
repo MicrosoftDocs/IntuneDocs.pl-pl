@@ -10,6 +10,7 @@ ms.date: 02/26/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: b204a956-18ec-11e8-accf-0ed5f89f718b
 ms.reviewer: ''
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f860c3f02408c169fcf5b5dbfe5450751fceabbb
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: f1fbf8f37b989112025bd6d54328dd61246913f7
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57238034"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57400215"
 ---
 # <a name="data-intune-sends-to-apple"></a>Dane wysyłane przez usługę Intune do Apple
 
@@ -39,7 +40,7 @@ Zanim usługa Microsoft Intune będzie mogła nawiązać połączenie, musisz ut
 
 Poniższa tabela zawiera dane wysyłane przez usługę Microsoft Intune z urządzenia do włączonych usług Apple. 
 
-| Usługa | Dane wysyłane do firmy Apple | Służy do |
+| Usługa | Dane wysyłane do firmy Apple | Sposób użycia |
 |---|---| ---|
 | [APNS](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Token, PushMagic | Jeśli serwer zaakceptuje urządzenie, urządzenie udostępni serwerowi token powiadomienia push urządzenia. Serwer powinien używać tego tokenu do wysyłania komunikatów push do urządzenia. Ten komunikat zaewidencjonowania zawiera również ciąg PushMagic. Serwer musi zapamiętać ten ciąg i uwzględnić go we wszystkich komunikatach push, które wysyła do urządzenia. |
 | [ASM/DEP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Token serwera | Token powiadomienia push urządzenia używany do uwierzytelniania usługi Apple. |

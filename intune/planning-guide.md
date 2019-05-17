@@ -1,27 +1,29 @@
 ---
 title: Wprowadzenie do planowania i projektowania usługi Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Ten artykuł stanowi wprowadzenie do wszystkich sekcji dotyczących planowania, projektowania i implementowania usługi Microsoft Intune. Narzędzia ułatwiające określanie celów, scenariuszy przypadków użycia i wymagań, tworzenie planów wdrożenia i komunikacji, a także planowanie pomocy technicznej, testowania i walidacji.
 keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.date: 01/02/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: a65efa6e-4a48-47f3-8f6e-34a85ca64ced
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: b2ddf29157255feaa7d336913640a1cf434f921c
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5b8a4a76e59604038ae133701b3378c573e862aa
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52185784"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "59568638"
 ---
 # <a name="intune-deployment-planning-design-and-implementation-guide"></a>Przewodnik planowania, projektowania i implementowania wdrożenia usługi Intune
 
@@ -41,7 +43,7 @@ Ten przewodnik zawiera sekcje, w których szczegółowo przedstawiono pełny pro
 
 -   [Sekcja 4. Opracowywanie planu wdrażania](planning-guide-rollout-plan.md)
 
--   [Sekcja 5. Opracowywanie planu informowania o wdrożeniu](planning-guide-communication-plan.md)
+-   [Sekcja 5. Opracowywanie planu komunikacji dotyczącej wdrażania](planning-guide-communication-plan.md)
 
 -   [Sekcja 6. Opracowywanie planu pomocy technicznej](planning-guide-support-plan.md)
 
@@ -49,7 +51,7 @@ Ten przewodnik zawiera sekcje, w których szczegółowo przedstawiono pełny pro
 
 -   [Sekcja 8. Implementacja usługi Intune](planning-guide-onboarding.md)
 
--   [Sekcja 9. Testowanie i weryfikowanie usługi Intune](planning-guide-test-validation.md)
+-   [Sekcja 9. Testowanie i walidacja](planning-guide-test-validation.md)
 
 Ten przewodnik zawiera też dodatkowe informacje techniczne i szablony tabel, które mogą pomóc w planowaniu, projektowaniu i implementowaniu wdrożenia usługi Intune.
 

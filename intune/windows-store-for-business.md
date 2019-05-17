@@ -1,35 +1,36 @@
 ---
-title: Zarządzanie aplikacjami zakupionymi w Sklepie Microsoft dla Firm
-titlesuffix: Microsoft Intune
-description: Informacje dotyczące synchronizacji aplikacji ze sklepu Microsoft Store dla Firm w usłudze Intune, a następnie przypisywania i śledzenia tych aplikacji.
+title: Zarządzanie aplikacjami zakupionymi zbiorczo lub aplikacjami bezpłatnymi ze sklepu Microsoft Store dla Firm
+titleSuffix: Microsoft Intune
+description: Informacje dotyczące synchronizacji aplikacji zakupionych (lub bezpłatnych) w usłudze Intune z poziomu sklepu Microsoft Store dla Firm.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/22/2019
+ms.date: 04/15/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 2ed5d3f0-2749-45cd-b6bf-fd8c7c08bc1b
 ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
+ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 75e6cdd97bbc591a76e541874152455c4fe258c0
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 67d99977776657219638980eb6de8a4079384185
+ms.sourcegitcommit: 8c795b041cd39e3896595f64f53ace48be0ec84c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57234940"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59587505"
 ---
-# <a name="how-to-manage-apps-you-purchased-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Jak zarządzać aplikacjami zakupionymi w Sklepie Microsoft dla Firm za pomocą usługi Microsoft Intune
+# <a name="how-to-manage-volume-purchased-or-free-apps-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Jak zarządzać aplikacjami zakupionymi zbiorczo (lub bezpłatnymi) w sklepie Microsoft Store dla Firm za pomocą usługi Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 [Sklep Microsoft dla Firm](https://www.microsoft.com/business-store) to miejsce, w którym można znaleźć i zakupić aplikacje dla całej organizacji, pojedynczo lub zbiorczo. Łącząc sklep z usługą Microsoft Intune, można zarządzać aplikacjami nabytymi w ramach zakupów zbiorczych bezpośrednio w witrynie Azure Portal. Przykład:
-* Można zsynchronizować listę aplikacji zakupionych w sklepie za pośrednictwem usługi Intune.
+* Można zsynchronizować listę aplikacji zakupionych w sklepie (lub bezpłatnych) za pośrednictwem usługi Intune.
 * Zsynchronizowane aplikacje są wyświetlane w konsoli administracyjnej usługi Intune. Można je przypisać w taki sam sposób, jak wszystkie inne aplikacje.
 * Można śledzić liczbę dostępnych i używanych licencji w konsoli administracyjnej usługi Intune.
 * Usługa Intune blokuje przypisywanie i instalację aplikacji, jeśli nie ma wystarczającej liczby dostępnych licencji.
@@ -80,7 +81,7 @@ Teraz możesz przejść do konfigurowania synchronizacji w konsoli Intune.
 
 ## <a name="assign-apps"></a>Przypisywanie aplikacji
 
-Aplikacje ze sklepu przypisuje się w taki sam sposób, jak każdą inną aplikację usługi Intune. Aby uzyskać więcej informacji, zobacz artykuł [How to assign apps to groups with Microsoft Intune](apps-deploy.md) (Jak przypisać aplikacje do grup w usłudze Microsoft Intune). Jednak zamiast przypisywać aplikacje ze strony **Wszystkie aplikacje**, można przypisać je ze strony **Aplikacje z licencją**.
+Aplikacje ze sklepu przypisuje się w taki sam sposób, jak każdą inną aplikację usługi Intune. Aby uzyskać więcej informacji, zobacz artykuł [How to assign apps to groups with Microsoft Intune](apps-deploy.md) (Jak przypisać aplikacje do grup w usłudze Microsoft Intune). 
 
 Aplikacje w trybie offline można zastosować do grup użytkowników, grup urządzeń lub grup użytkowników i urządzeń.
 Aplikacje w trybie offline można zainstalować dla określonego użytkownika na urządzeniu lub dla wszystkich użytkowników na urządzeniu. 

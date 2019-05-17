@@ -1,15 +1,16 @@
 ---
-title: Łączenie konta usługi Intune z kontem rozwiązania Android enterprise
-titlesuffix: Microsoft Intune
-description: Dowiedz się, jak połączyć konto usługi Intune z kontem rozwiązania Android enterprise.
+title: Łączenie konta usługi Intune z kontem zarządzanego sklepu Google Play.
+titleSuffix: Microsoft Intune
+description: Dowiedz się, jak połączyć konto usługi Intune z kontem zarządzanego sklepu Google Play.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 6/21/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
 ms.reviewer: chrisbal
@@ -17,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 421d9c56f959fe30d35c0c55ce34017a7a0ba5a6
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 19efd0821deeac0e76c60ee67e6230da554391a0
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55838264"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "59567390"
 ---
-# <a name="connect-your-intune-account-to-your-android-enterprise-account"></a>Łączenie konta usługi Intune z kontem rozwiązania Android enterprise
+# <a name="connect-your-intune-account-to-your-managed-google-play-account"></a>Łączenie konta usługi Intune z kontem zarządzanego sklepu Google Play
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Aby obsługiwać [urządzenia z profilami służbowymi](android-work-profile-enroll.md), [w pełni zarządzane urządzenia](android-fully-managed-enroll.md) i [urządzenia dedykowane](android-kiosk-enroll.md) z systemem Android, należy połączyć konto dzierżawy usługi Intune ze swoim kontem rozwiązania Android enterprise.  
+Aby obsługiwać [urządzenia z profilami służbowymi systemu Android Enterprise](android-work-profile-enroll.md), [w pełni zarządzane urządzenia z systemem Android Enterprise](android-fully-managed-enroll.md) i [urządzenia dedykowane z systemem Android Enterprise](android-kiosk-enroll.md), należy połączyć konto dzierżawy usługi Intune z kontem zarządzanego sklepu Google Play.  
 
 > [!NOTE]
 > Ze względu na interakcję między domenami firm Google i Microsoft ten krok może wymagać dostosowania ustawień przeglądarki.  Upewnij się, że adresy „portal.azure.com” i „play.google.com” znajdują się w tej samej strefie zabezpieczeń w przeglądarce.
@@ -42,7 +43,7 @@ Aby obsługiwać [urządzenia z profilami służbowymi](android-work-profile-enr
    
 4. Wybierz pozycję **Uruchom usługę Google, aby połączyć teraz**, aby otworzyć witrynę internetową zarządzanego sklepu Google Play. Witryna internetowa jest otwierana w nowej karcie w przeglądarce.
   
-5. Na stronie logowania do usługi Google wprowadź konto Google, które zostanie skojarzone ze wszystkimi zadaniami zarządzania rozwiązania Android enterprise dla tej dzierżawy. Jest to konto Google używane przez administratorów IT organizacji do zarządzania aplikacjami i ich publikowania w konsoli sklepu Google Play. Możesz użyć istniejącego konta Google lub utworzyć nowe konto. Wybrane konto nie może być skojarzone z domeną G-Suite.
+5. Na stronie logowania do usługi Google wprowadź konto Google, które zostanie skojarzone ze wszystkimi zadaniami zarządzania systemu Android Enterprise dla tej dzierżawy. Jest to konto Google używane przez administratorów IT organizacji do zarządzania aplikacjami i ich publikowania w konsoli sklepu Google Play. Możesz użyć istniejącego konta Google lub utworzyć nowe konto. Wybrane konto nie może być skojarzone z domeną G-Suite.
     
     > [!Note]
     > Jeśli używasz przeglądarki Microsoft Edge, kliknij pozycję **Zaloguj** w prawym górnym rogu, aby zalogować się do swojego konta Google.
@@ -51,9 +52,9 @@ Aby obsługiwać [urządzenia z profilami służbowymi](android-work-profile-enr
 
 7. Zaakceptuj warunki umowy systemu Android, a następnie wybierz pozycję **Confirm** (Potwierdź). Twoje żądanie zostanie przetworzone.
 
-## <a name="disconnect-your-android-enterprise-administrative-account"></a>Rozłączanie konta administracyjnego rozwiązania Android enterprise
+## <a name="disconnect-your-android-enterprise-administrative-account"></a>Rozłączanie konta administracyjnego systemu Android Enterprise
 
-Rejestrację rozwiązania Android enterprise i zarządzanie w ramach niego możesz wyłączyć. Aby to zrobić, należy najpierw wycofać wszystkie zarejestrowane urządzenia z profilem służbowym systemu Android. Następnie wybierz pozycję **Rozłącz** w konsoli administracyjnej usługi Intune, aby usunąć wszystkie zarejestrowanych urządzenia z profilem służbowym systemu Android z rejestracji. Usunięte zostaną również relacje między kontem rozwiązania Android enterprise a usługą Intune.
+Rejestrację systemu Android Enterprise i zarządzanie w tym systemu możesz wyłączyć. W tym celu najpierw wycofaj wszystkie zarejestrowane urządzenia z profilem służbowym systemu Android Enterprise. Następnie wybierz pozycję **Rozłącz** w konsoli administracyjnej usługi Intune, aby usunąć wszystkie zarejestrowane urządzenia z profilem służbowym systemu Android Enterprise i urządzenia dedykowane z rejestracji. Zostanie również usunięta relacja między kontem zarządzanego sklepu Google Play i usługą Intune.
 
 1. Jako administrator usługi Intune wybierz w witrynie [Azure Portal](https://portal.azure.com) pozycję **Wszystkie usługi** > **Monitorowanie i zarządzanie** > **Intune**.
 2. Wybierz pozycję **Rejestracja urządzeń** > **Rejestracja systemu Android** > **Zarządzany sklep Google Play** > **Rozłącz**.
@@ -61,4 +62,4 @@ Rejestrację rozwiązania Android enterprise i zarządzanie w ramach niego może
 
 ## <a name="next-steps"></a>Następne kroki
 
-Po nawiązaniu połączenia z kontem rozwiązania Android enterprise możesz [skonfigurować urządzenia z profilem służbowym systemu Android](android-work-profile-enroll.md) i [skonfigurować urządzenia kiosku z systemem Android](android-kiosk-enroll.md).
+Po nawiązaniu połączenia z kontem zarządzanego sklepu Google Play możesz [skonfigurować urządzenia z profilem służbowym systemu Android Enterprise](android-work-profile-enroll.md) i [skonfigurować dedykowane urządzenia z systemem Android Enterprise](android-kiosk-enroll.md).

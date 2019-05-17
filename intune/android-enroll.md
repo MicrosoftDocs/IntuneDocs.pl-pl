@@ -1,15 +1,16 @@
 ---
 title: Rejestrowanie urządzeń z systemem Android w usłudze Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Informacje o sposobie rejestrowania urządzeń z systemem Android w usłudze Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 12/31/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: f276d98c-b077-452a-8835-41919d674db5
 ms.reviewer: chrisbal
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 866db22b79f2ca9255f9eccdfdba28dc353836ed
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 363a7d0ef32aee0c21c6e5cecbd55cc3087f4613
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55846761"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "59568677"
 ---
 # <a name="enroll-android-devices"></a>Rejestrowanie urządzeń z systemem Android
 
@@ -30,10 +31,10 @@ ms.locfileid: "55846761"
 
 Jako administrator usługi Intune możesz zarządzać następującymi urządzeniami z systemem Android:
 - Urządzenia z systemem Android, w tym urządzenia z systemem Samsung Knox Standard.
-- Urządzenia z rozwiązaniem Android enterprise, w tym:
-    - **Urządzenia z profilami służbowymi systemu Android**: Urządzenia osobiste z uprawnieniami dostępu do danych firmowych. Administratorzy mogą zarządzać kontami służbowymi, aplikacjami i danymi. Dane osobiste na urządzeniu są oddzielone od danych służbowych, a administratorzy nie kontrolują ustawień ani danych osobistych. 
-    - **Urządzenia dedykowane z systemem Android**: Urządzenia należące do firmy przeznaczone do użytku w jednym celu, takim jak znakowanie cyfrowe, drukowanie biletów czy zarządzanie zapasami. Administratorzy ograniczają użycie urządzenia do zdefiniowanego zestawu aplikacji i linków internetowych. Uniemożliwia to również użytkownikom dodawanie innych aplikacji i wykonywanie innych akcji na urządzeniu.
-    - **W pełni zarządzane urządzenia systemu Android**: Urządzenia należące do firmy wykorzystywane przez jednego użytkownika w celach wyłącznie służbowych, a nie osobistych. Administratorzy mogą zarządzać całym urządzeniem i wymuszać kontrolki zasad niedostępne dla profilów służbowych. 
+- Urządzenia z rozwiązaniem Android Enterprise, w tym:
+    - **Urządzenia z profilami służbowymi w rozwiązaniu Android Enterprise**: Urządzenia osobiste z uprawnieniami dostępu do danych firmowych. Administratorzy mogą zarządzać kontami służbowymi, aplikacjami i danymi. Dane osobiste na urządzeniu są oddzielone od danych służbowych, a administratorzy nie kontrolują ustawień ani danych osobistych. 
+    - **Dedykowane urządzenia z rozwiązaniem Android Enterprise**: Urządzenia należące do firmy przeznaczone do użytku w jednym celu, takim jak znakowanie cyfrowe, drukowanie biletów czy zarządzanie zapasami. Administratorzy ograniczają użycie urządzenia do zdefiniowanego zestawu aplikacji i linków internetowych. Uniemożliwia to również użytkownikom dodawanie innych aplikacji i wykonywanie innych akcji na urządzeniu.
+    - **W pełni zarządzane urządzenia z rozwiązaniem Android Enterprise**: Urządzenia należące do firmy wykorzystywane przez jednego użytkownika w celach wyłącznie służbowych, a nie osobistych. Administratorzy mogą zarządzać całym urządzeniem i wymuszać kontrolki zasad niedostępne dla profilów służbowych. 
 
 ## <a name="prerequisite"></a>Wymaganie wstępne
 
@@ -52,13 +53,13 @@ Aby uzyskać informacje o innych zadaniach użytkowników, zobacz następujące 
 
 Aby zablokować rejestrowanie urządzeń z systemem Android lub tylko urządzeń z systemem Android będących własnością użytkowników, zobacz [Ustawianie ograniczeń typu urządzeń](enrollment-restrictions-set.md).
 
-## <a name="set-up-android-enterprise-enrollment"></a>Konfigurowanie rejestracji rozwiązania Android enterprise
+## <a name="set-up-android-enterprise-enrollment"></a>Konfigurowanie rejestracji rozwiązania Android Enterprise
 
-Android enterprise to zestaw funkcji i usług dostępnych na urządzeniach z systemem Android, które oddzielają osobiste aplikacje i dane od profilu służbowego zawierającego służbowe aplikacje i dane. Urządzenia z rozwiązaniem Android enterprise obejmują urządzenia z profilem służbowym, w pełni zarządzane urządzenia i urządzenia dedykowane. 
+System Android Enterprise oferuje zestaw opcji rejestracji, które zapewniają użytkownikom najbardziej aktualne i bezpieczne funkcje. Opcje rejestracji systemu Android Enterprise obejmują urządzenia z profilem służbowym, w pełni zarządzane i dedykowane.
 
-- [Konfigurowanie rejestracji profilu służbowego systemu Android](android-work-profile-enroll.md)
-- [Konfigurowanie rejestracji dedykowanych urządzeń z systemem Android](android-kiosk-enroll.md)
-- [Konfigurowanie w pełni zarządzanej rejestracji systemu Android](android-fully-managed-enroll.md)
+- [Set up Android Enterprise work profile enrollments](android-work-profile-enroll.md) (Konfigurowanie rejestracji profilów służbowych systemu Android Enterprise)
+- [Set up Android Enterprise dedicated device enrollments](android-kiosk-enroll.md) (Konfigurowanie rejestracji dedykowanych urządzeń systemu Android Enterprise)
+- [Set up Android Enterprise fully managed enrollments](android-fully-managed-enroll.md) (Konfigurowanie w pełni zarządzanych rejestracji systemu Android Enterprise)
 
 ## <a name="end-user-experience-when-enrolling-a-samsung-knox-device"></a>Środowisko użytkownika końcowego podczas rejestrowania urządzenia z rozwiązaniem Samsung Knox
 
@@ -76,6 +77,6 @@ Podczas rejestrowania urządzeń z rozwiązaniem Samsung Knox należy uwzględni
 
 ## <a name="next-steps"></a>Następne kroki
 
-- [Konfigurowanie rejestracji profilu służbowego systemu Android](android-work-profile-enroll.md)
-- [Konfigurowanie rejestracji dedykowanych urządzeń z systemem Android](android-kiosk-enroll.md)
-- [Konfigurowanie w pełni zarządzanej rejestracji systemu Android](android-fully-managed-enroll.md)
+- [Set up Android Enterprise work profile enrollments](android-work-profile-enroll.md) (Konfigurowanie rejestracji profilów służbowych systemu Android Enterprise)
+- [Set up Android Enterprise dedicated device enrollments](android-kiosk-enroll.md) (Konfigurowanie rejestracji dedykowanych urządzeń systemu Android Enterprise)
+- [Set up Android Enterprise fully managed enrollments](android-fully-managed-enroll.md) (Konfigurowanie w pełni zarządzanych rejestracji systemu Android Enterprise)
