@@ -16,12 +16,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b2a5e2bbd6d06cc4ec0cf71ee815229b01040a8
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 70638228875f1fb063a2ea22dc424c00f3940a30
+ms.sourcegitcommit: ef4bc7318449129af3dc8c0154e54a264b7bf4e5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61490691"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65197624"
 ---
 # <a name="create-a-windows-10-security-baseline-in-intune"></a>Tworzenie punktu odniesienia zabezpieczeń systemu Windows 10 w usłudze Intune
 
@@ -61,7 +61,7 @@ W przypadku używania urządzeń współzarządzanych musisz przełączyć obci�
 ## <a name="create-the-profile"></a>Tworzenie profilu
 
 1. W witrynie [Azure Portal](https://portal.azure.com/) wybierz pozycję **Wszystkie usługi**, wpisz nazwę usługi **Intune** w filtrze, a następnie wybierz pozycję **Intune**.
-2. Wybierz pozycję **Punkty odniesienia zabezpieczeń (wersja zapoznawcza)**. Zostanie wyświetlona lista dostępnych punktów odniesienia. Po dodaniu kolejnych punktów odniesienia zobaczysz je tutaj:
+2. Wybierz pozycję **Zabezpieczenia urządzenia** > **Linie bazowe zabezpieczeń (wersja zapoznawcza)**. Zostanie wyświetlona lista dostępnych punktów odniesienia. Po dodaniu kolejnych punktów odniesienia zobaczysz je tutaj:
 
     ![Wyświetlanie listy aktualnie dostępnych punktów odniesienia zabezpieczeń w usłudze Intune](./media/security-baselines/available-baselines.png)
 

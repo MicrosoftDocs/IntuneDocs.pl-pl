@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/03/2019
+ms.date: 05/08/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8b05b7f2a0b56321023bc8444528578aeface0b
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 491610fcefa1b20159ebfe487c9e2d95a6f5e7c6
+ms.sourcegitcommit: 586114e1beee31aa8553f69c0ba4d731afcb45e8
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61508581"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65402063"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurowanie certyfikatów PKCS i korzystanie z nich za pomocą usługi Intune
 
@@ -189,7 +189,7 @@ Do uwierzytelnienia urządzenia za pomocą sieci VPN, sieci WiFi lub innych zaso
 3. Przejdź do pozycji **Ustawienia**, a następnie wprowadź plik cer wcześniej wyeksportowanego certyfikatu głównego urzędu certyfikacji.
 
    > [!NOTE]
-   > W zależności od platformy wybranej w ramach **Kroku 3** możesz mieć możliwość wyboru **Magazynu docelowego** certyfikatu lub jej nie mieć.
+   > W zależności od platformy wybranej w ramach **Kroku 2** możesz mieć możliwość wyboru **Magazynu docelowego** certyfikatu lub jej nie mieć.
 
    ![Tworzenie profilu i przekazanie zaufanego certyfikatu](media/certificates-pfx-configure/certificates-pfx-configure-profile-fill.png) 
 
@@ -248,16 +248,21 @@ Po zaimportowaniu certyfikatów do usługi Intune należy utworzyć profil **zai
 ## <a name="whats-new-for-connectors"></a>Nowości dotyczące łączników
 Okresowo są publikowane aktualizacje dla dwóch łączników certyfikatów. Po zaktualizowaniu łącznika możesz przeczytać w tym miejscu o wprowadzonych zmianach. 
 
-*Łącznik certyfikatów PFX* [obsługuje aktualizacje automatyczne](#requirements), a Łącznik certyfikatów usługi Intune należy aktualizować ręcznie.
+*Łącznik certyfikatów PFX dla usługi Microsoft Intune* [obsługuje aktualizacje automatyczne](#requirements), zaś *Łącznik certyfikatów usługi Intune* należy aktualizować ręcznie.
+
+### <a name="may-6-2019"></a>6 maja 2019 r.
+- **Łącznik certyfikatów PFX dla usługi Microsoft Intune — wersja 6.1905.0.402**  
+  Zmiany w tej wersji:  
+  - Odstęp czasu sondowania dla łącznika został skrócony z 5 minut do 30 sekund.
  
 ### <a name="april-2-2019"></a>2 kwietnia 2019 r.
-- **Łącznik certyfikatów usługi NDES — wersja 6.1904.1.0**  
+- **Łącznik certyfikatów usługi Intune — wersja 6.1904.1.0**  
   Zmiany w tej wersji:  
   - Rozwiązano problem powodujący niepowodzenie rejestracji łącznika w usłudze Intune po zalogowaniu się do łącznika przy użyciu konta administratora globalnego.  
   - Obejmuje poprawki dotyczące niezawodności odwoływania certyfikatów.  
   - Obejmuje poprawki dotyczące podwyższenia wydajności przetwarzania żądań certyfikatów PKCS.  
 
-- **Łącznik certyfikatów PFX — wersja 6.1904.0.401**
+- **Łącznik certyfikatów PFX dla usługi Microsoft Intune — wersja 6.1904.0.401**
   > [!NOTE]  
   > Automatyczna aktualizacja dla tej wersji łącznika PFX nie będzie dostępna do 11 kwietnia 2019 r.  
 

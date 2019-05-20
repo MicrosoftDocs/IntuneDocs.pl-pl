@@ -18,14 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ab718cd087757211ad4e84cbba39808cf9de7d3
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: be0598d09f10403892fa6a82e109ecc90015ccf9
+ms.sourcegitcommit: 47d8ca144ea4e8b8817e95ac4b8c6bd8591fcc06
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61515577"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619435"
 ---
-# <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot-preview"></a>Wdrażanie urządzeń przyłączonych do hybrydowej usługi Azure AD przy użyciu usługi Intune i rozwiązania Windows Autopilot (wersja zapoznawcza)
+# <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Wdrażanie urządzeń przyłączonych do hybrydowej usługi Azure AD przy użyciu usługi Intune i rozwiązania Windows Autopilot
 Za pomocą usługi Intune i rozwiązania Windows Autopilot można skonfigurować urządzenia przyłączone do hybrydowej usługi Azure Active Directory (Azure AD). Aby to zrobić, wykonaj kroki opisane w tym artykule.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
@@ -35,7 +35,7 @@ Pomyślnie skonfigurowano [urządzenia przyłączone do hybrydowej usługi Azure
 Urządzenia, które mają zostać zarejestrowane, muszą spełniać również następujące warunki:
 - Muszą działać pod kontrolą systemu Windows 10 z [aktualizacją z października 2018 roku](https://blogs.windows.com/windowsexperience/2018/10/02/how-to-get-the-windows-10-october-2018-update/).
 - Muszą mieć dostęp do Internetu.
-- Muszą mieć dostęp do usługi Active Directory (połączenie sieci VPN nie jest obsługiwane).
+- Muszą mieć dostęp do usługi Active Directory (połączenie sieci VPN nie jest obecnie obsługiwane).
 - Muszą przejść przez proces OOBE (Out-of-Box Experience).
 - Muszą mieć możliwość wykonania polecenie ping względem kontrolera domeny, do której chcesz dołączyć.
 
@@ -211,7 +211,14 @@ Zmiana stanu urządzenia z wartości *Nieprzypisane* do wartości *Przypisywanie
 1. Wybierz pozycję **Ustawienia**, a następnie podaj wartości w polach **Prefiks nazwy komputera**, **Nazwa domeny** i (opcjonalnie) **Jednostka organizacyjna** w [formacie DN](https://docs.microsoft.com/windows/desktop/ad/object-names-and-identities#distinguished-name). 
 1. Wybierz pozycje **OK** > **Utwórz**.  
     Profil zostanie utworzony i wyświetlony na liście.
-1. Aby przypisać ten profil, wykonaj kroki w obszarze [Przypisywanie profilu urządzenia](device-profile-assign.md#assign-a-device-profile). 
+1. Aby przypisać ten profil, wykonaj kroki przedstawione w części [Przypisywanie profilu urządzenia](device-profile-assign.md#assign-a-device-profile) i przypisz profil do tej samej grupy co użyta w kroku [Tworzenie grupy urządzeń](windows-autopilot-hybrid.md#create-a-device-group)
+   - Wdrażanie wielu profilów przyłączania do domeny
+   
+     a. Utwórz grupę dynamiczną, która zawiera wszystkie Twoje urządzenia rozwiązania Autopilot z określonym profilem wdrażania rozwiązania Autopilot, wprowadzając polecenie (device.enrollmentProfileName -eq "Nazwa profilu rozwiązania Autopilot"). 
+     
+     b. Zastąp ciąg „Nazwa profilu rozwiązania Autopilot” nazwą wyświetlaną profilu utworzonego w sekcji [Tworzenie i przypisywanie profilu wdrażania rozwiązania Autopilot](windows-autopilot-hybrid.md#create-and-assign-an-autopilot-deployment-profile). 
+     
+     c. Utwórz wiele profilów wdrażania rozwiązania Autopilot i przypisz to urządzenie do profilu określonego w tej grupie dynamicznej.
 
 > [!NOTE]
 > Możliwości nazewnictwa dla rozwiązania Windows Autopilot na potrzeby dołączania do hybrydowej usługi Azure AD nie obsługują zmiennych, takich jak %SERIAL%, oraz obsługują prefiksy tylko dla nazwy komputera.

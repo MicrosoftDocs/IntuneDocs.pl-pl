@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/22/2019
+ms.date: 04/25/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6dff7e28daff503570350950b60ae974cd048c5c
-ms.sourcegitcommit: 6d6f43d69462f7f8fadc421c4ba566dc6ec20c36
+ms.openlocfilehash: 401bc833b2b864983ec301972950ffbd04fe2229
+ms.sourcegitcommit: dde4b8788e96563edeab63f612347fa222d8ced0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62426234"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65135188"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co nowego w usłudze Microsoft Intune
 
@@ -46,6 +46,25 @@ Dowiedz się co tydzień, co nowego w usłudze Microsoft Intune. Możesz równie
 -->  
 
 <!-- ########################## -->
+
+## <a name="week-of-may-6-2019"></a>Tydzień od 6 maja 2019 r. 
+
+### <a name="device-configuration"></a>Konfiguracja urządzenia
+
+#### <a name="network-access-control-nac-support-for-f5-access-for-ios-devices----4500808---"></a>Obsługa kontrolo dostępu do sieci (NAC) dla aplikacji F5 Access dla urządzeń z systemem iOS <!-- 4500808 -->
+
+Firma F5 opublikowała aktualizację systemu BIG-IP 13 udostępniającą funkcje kontroli dostępu do sieci dla aplikacji F5 Access w systemie iOS w usłudze Intune. Aby użyć tej funkcji:
+
+- Zaktualizuj system BIG-IP do odświeżonej wersji 13.1.1.5. System BIG-IP 14 nie jest obsługiwany.
+- Zintegruj system BIG-IP z usługą Intune, aby móc korzystać z kontroli dostępu do sieci. Kroki opisano na stronie [Overview: Configuring APM for device posture checks with endpoint management systems](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) (Omówienie: Konfigurowania programu APM pod kątem kontroli stanu urządzenia za pomocą systemów zarządzania punktem końcowym).
+- Sprawdź ustawienie **Włącz kontrolę dostępu do sieci (NAC)** w profilu sieci VPN w usłudze Intune.
+
+Aby wyświetlić dostępne ustawienia, przejdź na stronę [Konfigurowanie ustawień sieci VPN w urządzeniach z systemem iOS](vpn-settings-ios.md).
+
+Dotyczy: iOS
+
+#### <a name="updated-pfx-certificate-connector-for-microsoft-intune----doc-vso-1521237----"></a>Zaktualizowany łącznik certyfikatów PFX dla usługi Microsoft Intune <!-- doc-vso 1521237  -->  
+Udostępniliśmy aktualizację [łącznika certyfikatów PFX dla usługi Microsoft Intune](certficates-pfx-configure.md#whats-new-for-connectors), która skraca odstęp czasu sondowania z 5 minut do 30 sekund.
 
 ## <a name="week-of-april-22-2019"></a>Tydzień od 22 kwietnia 2019 r.
 
@@ -75,7 +94,7 @@ W poniższym przykładzie zostanie wyświetlony podział kontroli RODO. Firma Mi
 Zasady ochrony aplikacji usługi Intune na urządzeniach z systemem Android używają teraz biblioteki szyfrowania OpenSSL zgodnej ze standardem FIPS 140-2. Aby uzyskać więcej informacji, zobacz sekcję [szyfrowanie](app-protection-policy-settings-android.md#encryption) w artykule [Ustawienia zasad ochrony aplikacji systemu Android w usłudze Microsoft Intune](app-protection-policy-settings-android.md).
 
 #### <a name="enable-win32-app-dependencies----2617348----"></a>Włączanie zależności aplikacji Win32 <!-- 2617348  -->
-Jako administrator możesz wymagać zainstalowania innych aplikacji jako zależności przed zainstalowaniem aplikacji Win32. W szczególności na urządzeniu muszą zostać zainstalowane aplikacje zależne przed zainstalowaniem aplikacji Win32. W usłudze Intune wybierz pozycję **Aplikacje klienckie** > **Aplikacje** > **Dodaj**, aby wyświetlić blok **Dodaj aplikację**. Wybierz pozycję **Aplikacja systemu Windows (Win32)** jako **typ aplikacji**. Po dodaniu aplikacji możesz wybrać pozycję **Zależności**, aby dodać aplikacje zależne, które należy zainstalować przed zainstalowaniem aplikacji Win32. Aby uzyskać więcej informacji, zobacz [Autonomiczna usługa Intune — zarządzanie aplikacjami Win32](apps-win32-app-management.md). Ta funkcja będzie dostępna dopiero wtedy, gdy agent zarządzania usługi Intune zostanie uaktualniony do wersji 1904 (nowszej niż 1.18.120.0), co może nastąpić jeden lub dwa tygodnie po uaktualnieniu usługi do wersji 1904.
+Jako administrator możesz wymagać zainstalowania innych aplikacji jako zależności przed zainstalowaniem aplikacji Win32. W szczególności na urządzeniu muszą zostać zainstalowane aplikacje zależne przed zainstalowaniem aplikacji Win32. W usłudze Intune wybierz pozycję **Aplikacje klienckie** > **Aplikacje** > **Dodaj**, aby wyświetlić blok **Dodaj aplikację**. Wybierz pozycję **Aplikacja systemu Windows (Win32)** jako **typ aplikacji**. Po dodaniu aplikacji możesz wybrać pozycję **Zależności**, aby dodać aplikacje zależne, które należy zainstalować przed zainstalowaniem aplikacji Win32. Aby uzyskać więcej informacji, zobacz [Autonomiczna usługa Intune — zarządzanie aplikacjami Win32](apps-win32-app-management.md). 
 
 #### <a name="app-version-installation-information-for-microsoft-store-for-business-apps----3537391-----"></a>Informacje o instalacji wersji aplikacji dla aplikacji ze sklepu Microsoft Store dla Firm <!-- 3537391   -->
 Raporty dotyczące instalacji aplikacji obejmują informacje o wersji aplikacji w przypadku aplikacji ze sklepu Microsoft Store dla Firm. W usłudze Intune wybierz pozycję **Aplikacje klienckie** > **Aplikacje**. Wybierz pozycję **Microsoft Store dla firm**, a następnie wybierz pozycję **Stan instalacji urządzenia** w sekcji **Monitorowanie**.
@@ -91,6 +110,9 @@ Na stronie Przegląd urządzenia będzie wyświetlany użytkownik podstawowy, na
 
 #### <a name="additional-managed-google-play-app-reporting-for-android-enterprise-work-profile-devices----4105925----"></a>Dodatkowe raportowanie aplikacji z zarządzanego sklepu Google Play dla urządzeń z profilem służbowym rozwiązania Android Enterprise <!-- 4105925  -->
 W przypadku aplikacji z zarządzanego sklepu Google Play wdrożonych na urządzeniach z profilem służbowym rozwiązania Android Enterprise można wyświetlić numer wersji aplikacji zainstalowanej na urządzeniu. Dotyczy to tylko wymaganych aplikacji. Ta sama funkcja dla dostępnych aplikacji zostanie włączona w przyszłej wersji. 
+
+#### <a name="ios-third-party-keyboards----4111843-idready-eeready---"></a>Klawiatury innych firm dla systemu iOS <!-- 4111843 idready eeready -->
+Obsługa zasad ochrony aplikacji usługi Intune dla ustawienia **Klawiatury innych firm** dotyczącego systemu iOS zostanie zakończona z powodu zmiany na platformie iOS. Nie będzie można skonfigurować tego ustawienia w konsoli administracyjnej usługi Intune i nie będzie ono wymuszane na kliencie w zestawie SDK aplikacji usługi Intune.
 
 ### <a name="device-configuration"></a>Konfiguracja urządzenia
 
@@ -124,7 +146,7 @@ Aby dowiedzieć się więcej na temat tej funkcji, zobacz artykuł [Use and mana
 Dotyczy: Android Enterprise
 
 #### <a name="windows-update-notifications-----3316758-3316782----"></a>Powiadomienia usługi Windows Update  <!-- 3316758, 3316782  -->
-Dodaliśmy dwa *Ustawienia środowiska użytkownika* do konfiguracji pierścienia usługi Windows Update, którymi można zarządzać z poziomu konsoli usługi Intune. Teraz możesz:
+Dodaliśmy dwa *ustawienia środowiska użytkownika* do konfiguracji pierścienia usługi Windows Update, którymi można zarządzać z poziomu konsoli usługi Intune. Teraz możesz:
 - Blokować lub zezwalać użytkownikom na [skanowanie w poszukiwaniu aktualizacji systemu Windows](windows-update-settings.md#block-user-from-scanning-for-windows-updates).
 - Zarządzać [poziomem powiadomień witryny Windows Update](windows-update-settings.md#windows-update-notification-level) widocznym dla użytkowników.
 
@@ -207,7 +229,7 @@ Teraz możesz dodać tagi zakresu do tokenów VPP firmy Apple. Tylko użytkownic
 ### <a name="device-configuration"></a>Konfiguracja urządzenia
 
 #### <a name="updated-certificate-connectors-----icm-113304612---"></a>Zaktualizowane łączniki certyfikatów  <!-- ICM 113304612 -->
-Wydaliśmy aktualizacje dla [łącznika certyfikatów usługi Intune i łącznika certyfikatów PFX](certficates-pfx-configure.md#whats-new-for-connectors). Nowe wersje rozwiązują kilka znanych problemów.  
+Wydaliśmy aktualizacje dla [łącznika certyfikatów usługi Intune i łącznika certyfikatów PFX dla usługi Microsoft Intune](certficates-pfx-configure.md#whats-new-for-connectors). Nowe wersje rozwiązują kilka znanych problemów.  
 
 ### <a name="app-management"></a>Zarządzanie aplikacjami
 
@@ -376,7 +398,7 @@ W usłudze Intune wybierz pozycję **Aplikacje klienckie** > **Aplikacje** > „
 Dodano nowy ekran o nazwie **Kategorie aplikacji** w celu poprawy środowiska przeglądania i wyboru aplikacji w aplikacji Portal firmy dla systemu Windows 10. Użytkownicy będą teraz widzieli aplikacje posortowane w ramach kategorii, takich jak **Polecane**, **Edukacja** i **Produktywność**. Ta zmiana pojawia się w aplikacji Portal firmy w wersji 10.3.3451.0 i nowszych. Aby wyświetlić nowy ekran, zobacz [co nowego w interfejsie użytkownika aplikacji](https://docs.microsoft.com/intune/whats-new-app-ui). Aby uzyskać więcej informacji na temat aplikacji w Portalu firmy, zobacz [Instalowanie i udostępnianie aplikacji na urządzeniu](/intune-user-help/install-apps-cpapp-windows).  
 
 #### <a name="power-bi-compliance-app----1455231-doc-work-item---"></a>Aplikacja Power BI Compliance <!-- 1455231 doc-work-item -->
-Można uzyskiwać dostęp do magazynu danych usługi Intune w usłudze Power BI Online przy użyciu aplikacji [Intune Compliance (Data Warehouse)](https://app.powerbi.com/groups/me/getapps/services/Intune_dw_compliance). Za pomocą tej aplikacji usługi Power BI możesz teraz uzyskiwać dostęp do wstępnie utworzonych raportów i udostępniać je bez żadnej konfiguracji i bez opuszczania przeglądarki internetowej. Aby uzyskać więcej informacji, zobacz [Dziennik zmian — aplikacja Power BI Compliance](reports-changelog.md#power-bi-compliance-app).
+Można uzyskiwać dostęp do magazynu danych usługi Intune w usłudze Power BI Online przy użyciu aplikacji [Intune Compliance (Data Warehouse)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp). Za pomocą tej aplikacji usługi Power BI możesz teraz uzyskiwać dostęp do wstępnie utworzonych raportów i udostępniać je bez żadnej konfiguracji i bez opuszczania przeglądarki internetowej. Aby uzyskać więcej informacji, zobacz [Dziennik zmian — aplikacja Power BI Compliance](reports-changelog.md#power-bi-compliance-app).
 
 
 ### <a name="device-configuration"></a>Konfiguracja urządzenia

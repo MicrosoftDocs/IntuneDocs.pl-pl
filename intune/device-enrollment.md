@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/11/2018
+ms.date: 4/24/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d089d0e9724a1ce150fa7e8697c80734fb0d7e9c
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: 68f5fad9d05787b6e79792d594480547ce10cf81
+ms.sourcegitcommit: b0cf661145ccc6e3518db620af199786a623a0d9
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "59568430"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64764915"
 ---
 # <a name="what-is-device-enrollment"></a>Co to jest rejestrowanie urządzenia?
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -67,11 +67,19 @@ Domyślnie w usłudze Intune mogą być rejestrowane urządzenia dla dowolnej pl
 
 ## <a name="android-enrollment-methods"></a>Metody rejestracji systemu Android
 
-| **Metoda** |  **Wymagane zresetowanie** |    **Koligacja użytkownika**   |   **Zablokowane** | **Szczegóły**|
+| **Osobiste** | **Metody rejestracji** | **Wymagane zresetowanie** | **Koligacja użytkownika** | **Zablokowane** | **Szczegóły**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](#bring-your-own-device)** | Nie|   Tak |   Nie | [Więcej informacji](./android-enroll.md)|
-|**[Menedżer rejestracji urządzeń](#device-enrollment-manager)**| Nie |Nie |Nie  |[Więcej informacji](./device-enrollment-manager-enroll.md)|
-|**Profile służbowe systemu Android**| Nie | Tak | Nie| [Więcej informacji](./android-work-profile-enroll.md) |
+|**Administrator urządzenia z systemem Android**|**Inicjowane przez użytkownika za pośrednictwem Portalu firmy** | Nie | Tak | Nie | [Więcej informacji](https://docs.microsoft.com/intune-user-help/enroll-device-android-company-portal)|
+|**Android Enterprise — profil służbowy**|**Inicjowane przez użytkownika za pośrednictwem Portalu firmy**| Nie | Tak | Nie | [Więcej informacji](./android-work-profile-enroll.md)|
+
+
+| **Firmowe** | **Metody rejestracji** | **Wymagane zresetowanie** | **Koligacja użytkownika** | **Zablokowane** | **Szczegóły**|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|**Administrator urządzenia z systemem Android**|**Inicjowane przez [menedżera rejestracji urządzeń](#device-enrollment-manager) za pośrednictwem Portalu firmy**| Nie | Nie | Nie |[Więcej informacji](./device-enrollment-manager-enroll.md)|
+|**Administrator urządzenia z systemem Android**|**(Zadeklarowany wstępnie numer IMEI lub SN) Inicjowane przez użytkownika za pośrednictwem Portalu firmy**| Nie | Tak | Nie | [Więcej informacji](./corporate-identifiers-add.md)|
+|**Administrator urządzenia z systemem Android przy użyciu rozszerzeń mobilności Zebra**|**Inicjowane przez użytkownika lub [menedżera rejestracji urządzeń](#device-enrollment-manager) za pośrednictwem Portalu firmy**| Nie | Tak, jeśli inicjowana przez użytkownika, nie, jeśli inicjowana przez [menedżera rejestracji urządzeń](#device-enrollment-manager) | Nie | [Więcej informacji](./android-zebra-mx-overview.md)|
+|**Android Enterprise (dedykowane)**|**NFC, token, kod QR, Zero Touch**| Tak | Nie | Można konfigurować za pomocą zasad | [Więcej informacji](./android-kiosk-enroll.md)|
+|**W pełni zarządzane z rozwiązaniem Android Enterprise (wersja zapoznawcza)**|**NFC, token, kod QR, Zero Touch**| Tak | Tak | Można konfigurować za pomocą zasad | [Więcej informacji](./android-dedicated-devices-fully-managed-enroll.md)|
 
 
 ## <a name="bring-your-own-device"></a>Korzystanie z własnych urządzeń

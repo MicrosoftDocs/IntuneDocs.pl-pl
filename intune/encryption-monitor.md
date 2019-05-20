@@ -17,12 +17,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a18c579853b162024aaa93d5dad2bfd854d8c0d2
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 52b92483ddafadf460911caaa472825a0bc0a20f
+ms.sourcegitcommit: b4483c8476a209de83102e8993d8074dbb323493
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61512937"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65527217"
 ---
 # <a name="monitor-bitlocker-and-device-encryption"></a>Monitorowanie funkcji BitLocker i szyfrowania urządzeń  
 Usługa Intune udostępnia scentralizowaną lokalizację na potrzeby określania stanu szyfrowania urządzeń z systemem Windows 10 oraz ułatwia dostęp do ważnych informacji dotyczących funkcji BitLocker z urządzeń znajdujących się w usłudze Azure Active Directory (Azure AD).  

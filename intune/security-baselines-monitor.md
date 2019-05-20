@@ -16,12 +16,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dc82653355ae57830684270fc8f7b9f1f3ae2491
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: a013698e56b342953e52296270e7571a257db860
+ms.sourcegitcommit: dde4b8788e96563edeab63f612347fa222d8ced0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61507058"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65135094"
 ---
 # <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>Monitorowanie profilów i punktu odniesienia zabezpieczeń w usłudze Microsoft Intune  
 
@@ -35,7 +35,7 @@ Więcej szczegółów funkcji punktów odniesienia zabezpieczeń w usłudze Micr
 
 W przypadku monitorowania punktu odniesienia uzyskujesz szczegółowe informacje na temat stanu zabezpieczeń urządzeń na podstawie rekomendacji firmy Microsoft. Możesz wyświetlić te szczegółowe informacje w okienku Przegląd punktu odniesienia zabezpieczeń w konsoli usługi Intune.  Wyświetlenie danych po pierwszym przypisaniu punktu odniesienia może potrwać do 24 godzin. Późniejsze zmiany pojawiają się w ciągu sześciu godzin.  
 
-Aby wyświetlić dane monitorowania dotyczące punktu odniesienia i urządzeń, zaloguj się do [portalu usługi Intune](https://aka.ms/intuneportal). Następnie wybierz pozycję **Punkty odniesienia zabezpieczeń (wersja zapoznawcza)**, wybierz punkt odniesienia i wyświetl okienko **Przegląd**.
+Aby wyświetlić dane monitorowania dotyczące punktu odniesienia i urządzeń, zaloguj się do [portalu usługi Intune](https://go.microsoft.com/fwlink/?linkid=2090973). Następnie wybierz pozycję **Zabezpieczenia urządzenia** > **Punkty odniesienia zabezpieczeń (wersja zapoznawcza)**, wybierz punkt odniesienia i wyświetl okienko **Przegląd**.
 
 Okienko **Przegląd** udostępnia dwie metody monitorowania stanu:
 - **Widok urządzenia** — podsumowanie liczby urządzeń znajdujących się w każdej kategorii stanu dla punktu odniesienia.  

@@ -18,18 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65c19f58e41e4f8a739ae16a1b56703fb743b738
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 6545724294eefc83789f56f851549c0b5fee7f22
+ms.sourcegitcommit: 01117021dfaebb5507aa146b7369447c3d5a403d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61513105"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626430"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Rejestrowanie urządzeń z systemem Windows w usłudze Intune za pomocą rozwiązania Windows Autopilot  
 Rozwiązanie Windows Autopilot upraszcza rejestrowanie urządzeń w usłudze Intune. Tworzenie i konserwacja niestandardowych obrazów systemów operacyjnych zajmuje dużo czasu. Trzeba również poświęcić czas na stosowanie tych niestandardowych obrazów systemów operacyjnych na nowych urządzeniach w celu przygotowania ich do użycia przed przekazaniem użytkownikom końcowym. Dzięki usłudze Microsoft Intune i rozwiązaniu Autopilot można przekazać nowe urządzenia użytkownikom końcowym bez konieczności tworzenia, konserwowania i stosowania niestandardowych obrazów systemów operacyjnych do urządzeń. Jeśli do zarządzania urządzeniami z rozwiązaniem Autopilot używasz usługi Intune, możesz zarządzać zasadami, profilami, aplikacjami i nie tylko po ich zarejestrowaniu. Aby zapoznać się z korzyściami, scenariuszami i wymaganiami wstępnymi, zobacz [Overview of Windows Autopilot (Przegląd rozwiązania Windows Autopilot)](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
 
 
 ## <a name="prerequisites"></a>Wymagania wstępne
+- [Subskrypcja usługi Intune](licenses.md)
 - [Włączona funkcja automatycznej rejestracji w systemie Windows](windows-enroll.md#enable-windows-10-automatic-enrollment)
 - [Subskrypcja usługi Azure Active Directory — wersja Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](http://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
 
@@ -150,15 +151,17 @@ Wymagania wstępne: Skonfigurowany Portal firmy usługi Azure Active Directory o
 
 ## <a name="delete-autopilot-devices"></a>Usuwanie urządzeń rozwiązania Autopilot
 
-Możesz usuwać urządzenia rozwiązania Windows Autopilot, które nie zostały zarejestrowane.
+Możesz usuwać urządzenia rozwiązania Windows Autopilot, które nie zostały zarejestrowane w usłudze Intune:
 
-1. Jeśli urządzenia są zarejestrowane w usłudze Intune, musisz najpierw [usunąć je z portalu usługi Azure Active Directory](devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).
+- Usuń urządzenia z rozwiązania Windows Autopilot, wybierając pozycje **Rejestracja urządzenia** > **Rejestracja w systemie Windows** > **Urządzenia**. Wybierz urządzenia, które chcesz usunąć, a następnie wybierz pozycję **Usuń**. Usuwanie urządzenia z rozwiązania Windows Autopilot może potrwać kilka minut.
 
-2. W usłudze [Intune w witrynie Azure Portal](https://aka.ms/intuneportal) wybierz kolejno pozycje **Rejestrowanie urządzenia** > **Rejestracja w systemie Windows** > **Urządzenia**.
+Całkowite usunięcie urządzenia z dzierżawy wymaga usunięcia rekordów urządzenia z usług Intune i Azure Active Directory oraz rozwiązania Windows Autopilot. Wszystko to można zrobić z usługi Intune:
 
-3. W obszarze **urządzeń rozwiązania Autopilot z systemem Windows** wybierz urządzenia do usunięcia, a następnie wybierz pozycję **Usuń**.
+1. Jeśli urządzenia są zarejestrowane w usłudze Intune, musisz najpierw [usunąć je z bloku wszystkich urządzeń w usłudze Intune](devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).
 
-4. Potwierdź usunięcie, wybierając pozycję **Tak**. Proces usuwania może potrwać kilka minut.
+2. Usuń urządzenia z urządzeń usługi Azure Active Directory, wybierając pozycje **Urządzenia** > **Urządzenia usługi Azure AD**.
+
+3. Usuń urządzenia z rozwiązania Windows Autopilot, wybierając pozycje **Rejestracja urządzenia** > **Rejestracja w systemie Windows** > **Urządzenia**. Wybierz urządzenia, które chcesz usunąć, a następnie wybierz pozycję **Usuń**. Usuwanie urządzenia z rozwiązania Windows Autopilot może potrwać kilka minut.
 
 ## <a name="using-autopilot-in-other-portals"></a>Używanie rozwiązania Autopilot w innych portalach
 Jeśli nie interesuje Cię zarządzanie urządzeniami przenośnymi, rozwiązania Autopilot możesz używać w innych portalach. Używanie innych portali jest opcjonalne. My zalecamy, aby do zarządzania wdrożeniami rozwiązania Autopilot używać samej usługi Intune. Gdy używasz usługi Intune i innego portalu, usługa Intune nie może:  

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4a1c81b1b2f54b15397e9e1d7451ee7ed911848
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: 024c4eb37d1b9991db6d1ca0b5c528e9dd333422
+ms.sourcegitcommit: b0cf661145ccc6e3518db620af199786a623a0d9
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58798747"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64764797"
 ---
 # <a name="quickstart-add-and-assign-a-client-app"></a>Szybki start: Dodawanie i przypisywanie aplikacji klienckiej
 
@@ -51,7 +51,7 @@ Aby dodać aplikację do usługi Intune, wykonaj następujące czynności:
 4. Kliknij przycisk **OK**, aby zaakceptować domyślnie wybrane aplikacje.
 5. Wybierz pozycję **Informacje o pakiecie aplikacji**.
 6. Wprowadź tekst **Pakiet aplikacji usługi Microsoft Office 365** w polu **Nazwa pakietu**.
-7. Wprowadź tekst **Pakiet aplikacji usługi Microsoft Office 365** w polu **Opis pakietu**.
+7. Wprowadź **Pakiet aplikacji usługi Microsoft Office 365** jako **Opis pakietu**.
 8. Kliknij przycisk **Tak** obok pozycji **Wyświetl jako polecaną aplikację w Portalu firmy**.
 9. Kliknij przycisk **OK**.
 

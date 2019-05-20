@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/19/2018
+ms.date: 04/25/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48228d0baea204fd94175750075c04771116a74d
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: cbef2059f42a209a63e4ba3f1e83aec410237d02
+ms.sourcegitcommit: dde4b8788e96563edeab63f612347fa222d8ced0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61513809"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65135136"
 ---
 # <a name="network-access-control-nac-integration-with-intune"></a>Integracja kontroli dostępu do sieci (NAC) z usługą Intune
 
@@ -63,27 +63,39 @@ Poniższa lista stanowi omówienie działania integracji kontroli dostępu do si
 9. Połączenie jest pomyślnie ustanawiane, co umożliwia urządzeniu dostęp do zasobów firmy.
 
 ## <a name="use-nac-for-vpn-on-your-ios-devices"></a>Używanie kontroli dostępu do sieci VPN w urządzeniach z systemem iOS  
-Rozwiązanie NAC dla aplikacji Cisco Legacy AnyConnect, F5 Access Legacy i Citrix VPN jest obsługiwane bez konieczności włączania kontroli dostępu do sieci w profilu sieci VPN.
 
-Obsługiwane jest również rozwiązanie NAC dla aplikacji Citrix SSO. Aby włączyć rozwiązanie NAC dla aplikacji Citrix SSO w systemie iOS:
-- Użyj rozwiązania Citrix Gateway 12.0.59 lub nowszego.  
-- Użytkownicy muszą mieć zainstalowaną aplikację Citrix SSO 1.1.6 lub nowszą.
-- [Zintegruj program NetScaler z usługą Intune na potrzeby rozwiązania NAC](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html) zgodnie z opisem w dokumentacji produktów firmy Citrix.
-- W konfiguracji podstawowych ustawień sieci VPN dla pozycji **Włączanie kontrolę dostępu do sieci (NAC)** zaznacz pole wyboru **Zgadzam się**.
+- Kontrola dostępu do sieci jest dostępna w następujących sieciach VPN bez włączania kontroli dostępu do sieci w profilu sieci VPN:
 
-W przypadku używania aplikacji Citrix SSO dla systemu iOS połączenie sieci VPN jest rozłączane co 24 godziny ze względów bezpieczeństwa. Połączenie z siecią VPN można od razu nawiązać ponownie.
+  - Kontrola dostępu do sieci dla starszej wersji programu Cisco AnyConnect
+  - Starsza wersja programu F5 Access
+  - Citrix VPN
 
+- Kontrola dostępu do sieci jest również dostępna dla aplikacji Citrix SSO i F5 Access. Aby włączyć kontrolę dostępu do sieci dla aplikacji Citrix SSO:
 
-**Kontrola dostępu do sieci nie jest obecnie obsługiwana przez następujących klientów sieci VPN w systemie iOS**:
--   Cisco AnyConnect
--   F5 Access
+  - Użyj rozwiązania Citrix Gateway 12.0.59 lub nowszego.  
+  - Użytkownicy muszą mieć zainstalowaną aplikację Citrix SSO 1.1.6 lub nowszą.
+  - [Zintegruj program NetScaler z usługą Intune na potrzeby rozwiązania NAC](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html) zgodnie z opisem w dokumentacji produktów firmy Citrix.
+  - W profilu sieci VPN wybierz pozycję **Podstawowe ustawienia** > **Włącz kontrolę dostępu do sieci (NAC)** > wybierz pozycję **Zgadzam się**.
 
-Współpracujemy z naszymi partnerami, aby udostępnić rozwiązanie NAC dla nowszych klientów. Gdy rozwiązania będą gotowe, zaktualizujemy ten artykuł przy użyciu dodatkowych informacji. 
+  Połączenie sieci VPN jest rozłączane co 24 godziny ze względów bezpieczeństwa. Połączenie z siecią VPN można od razu nawiązać ponownie.
 
+- Aby włączyć kontrolę dostępu do sieci dla programu F5 Access:
+
+  - Użyj systemu F5 BIG-IP 13.1.1.5. System BIG-IP 14 nie jest obsługiwany.
+  - Zintegruj system BIG-IP z usługą Intune, aby móc korzystać z kontroli dostępu do sieci. Listę kroków można znaleźć w przewodniku firmy F5 [Overview: Configuring APM for device posture checks with endpoint management systems](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) (Omówienie: Konfigurowania programu APM pod kątem kontroli stanu urządzenia za pomocą systemów zarządzania punktem końcowym).
+  - W profilu sieci VPN wybierz pozycję **Podstawowe ustawienia** > **Włącz kontrolę dostępu do sieci (NAC)** > wybierz pozycję **Zgadzam się**.
+
+  Połączenie sieci VPN jest rozłączane co 24 godziny ze względów bezpieczeństwa. Połączenie z siecią VPN można od razu nawiązać ponownie.
+
+- Kontrola dostępu do sieci nie jest obsługiwana dla następującego klienta sieci VPN w systemie iOS:
+  - Cisco AnyConnect
+
+Współpracujemy z naszymi partnerami, aby udostępnić rozwiązanie NAC dla nowszych klientów. Gdy rozwiązania będą gotowe, zaktualizujemy ten artykuł o dodatkowe informacje.
 
 ## <a name="next-steps"></a>Następne kroki
 
 - [Integracja platformy Cisco ISE z usługą Intune](http://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html)
 - [Integracja modułu Citrix NetScaler z usługą Intune](http://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html)
+- [Integracja programu F5 BIG-IP Access Policy Manager z usługą Intune](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-13-0-0/6.html)
 - [Integracja rozwiązania HP Aruba ClearPass z usługą Intune](https://support.arubanetworks.com/Documentation/tabid/77/DMXModule/512/Command/Core_Download/Default.aspx?EntryId=31271)
 - [Integracja rozwiązania Squadra security Removable Media Manager (secRMM) z usługą Intune](http://www.squadratechnologies.com/StaticContent/ProductDownload/secRMM/9.9.0.0/secRMMIntuneAccessControlSetupGuide.pdf)
