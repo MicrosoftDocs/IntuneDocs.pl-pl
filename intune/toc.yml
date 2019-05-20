@@ -442,11 +442,16 @@
                       items:
                         - name: Integracja usług Sophos Mobile i Intune
                           href: sophos-mtd-connector-integration.md
-            - name: Zaawansowana ochrona przed zagrożeniami w usłudze Windows Defender
-              href: advanced-threat-protection.md
-            - name: Linie bazowe zabezpieczeń
-              href: security-baselines.md
+            - name: Usługa Microsoft Defender
               items:
+                - name: Usługa Microsoft Defender ATP
+                  href: advanced-threat-protection.md
+                - name: Zadania zabezpieczeń
+                  href: atp-manage-vulnerabilities.md
+            - name: Linie bazowe zabezpieczeń
+              items:
+                - name: Linie bazowe zabezpieczeń
+                  href: security-baselines.md
                 - name: Monitorowanie linii bazowych
                   href: security-baselines-monitor.md
             - name: Program Endpoint Protection
@@ -552,7 +557,7 @@
               href: app-configuration-policies-use-ios.md
             - name: Android urządzenia zarządzane
               href: app-configuration-policies-use-android.md
-            - name: Aplikacja Managed Home Screen dla rozwiązania Android Enterprise
+            - name: Konfigurowanie aplikacji Zarządzany ekran główny
               href: app-configuration-managed-home-screen-app.md
             - name: Aplikacje zarządzane
               href: app-configuration-policies-managed-app.md
@@ -770,8 +775,12 @@
                   href: shared-user-device-settings-windows.md
                 - name: Niestandardowy
                   href: custom-settings-windows-10.md
-            - name: Ustawienia punktu odniesienia zabezpieczeń
-              href: security-baseline-settings-windows.md
+            - name: Linie bazowe zabezpieczeń
+              items:
+                - name: Ustawienia punktu odniesienia systemu Windows 10
+                  href: security-baseline-settings-windows.md
+                - name: Ustawienia punktu odniesienia usługi Microsoft Defender ATP
+                  href: security-baseline-settings-defender-atp.md
             - name: Ustawienia aktualizacji systemu Windows
               href: windows-update-settings.md
         - name: Windows Holographic for Business
