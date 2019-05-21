@@ -7,110 +7,45 @@ ms.topic: include
 ms.date: 03/28/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 073115d33f9a4f22fe3706ef15860c2a8d8a68ee
-ms.sourcegitcommit: 69aaf89140f82f344404e75a69dc59d8a1585b10
-ms.translationtype: MTE75
+ms.openlocfilehash: ffcef5b4d78856709f8563ee1f667ec7e5d993b3
+ms.sourcegitcommit: d2e04a38e024b0f5afb0ca202823227de9da3ad1
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675497"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65732603"
 ---
-Te powiadomienia zawierają ważne informacje, które mogą ułatwić przygotowanie nadchodzących zmianach w usłudze Intune i funkcji. 
+Te powiadomienia zawierają ważne informacje, które mogą ułatwić przygotowanie się na nadchodzące zmiany i nowe funkcje w usłudze Intune. 
 
-### <a name="change-in-enrollment-workflow-with-intune-company-portal-on-corporate-ios-devices-authenticating-with-setup-assistant----1927359---"></a>Zmiany w przepływie pracy rejestracji z portalu firmy usługi Intune na urządzeniach firmowych z systemem iOS z uwierzytelniania przy użyciu Asystenta ustawień <!-- 1927359 -->
-Ma ona nadchodzące zmiany w przepływie pracy na potrzeby rejestracji urządzeń z systemem iOS za pomocą jednego metod firmy Apple urządzeń firmowych rejestracji — programu Apple Configurator, kierownika firmy Apple, Apple School Manager lub Apple Device Enrollment Program (DEP), gdy za pomocą Instalatora Asystenta ustawień dla uwierzytelniania. Ta zmiana dotyczy tylko urządzeń przenośnych zarejestrowanych za pomocą koligacji użytkownika.
+### <a name="change-in-enrollment-workflow-with-intune-company-portal-on-corporate-ios-devices-authenticating-with-setup-assistant----1927359---"></a>Zmiana w przepływie pracy rejestracji w Portalu firmy usługi Intune na firmowych urządzeniach z systemem iOS uwierzytelniających się przy użyciu Asystenta ustawień <!-- 1927359 -->
+Zbliża się zmiana w przepływie pracy rejestracji urządzeń z systemem iOS za pomocą jednej z metod rejestracji firmowych urządzeń Apple — programu Apple Configurator lub usług Apple Business Manager, Apple School Manager bądź Apple Device Enrollment Program (DEP), w sytuacji gdy do uwierzytelniania używany jest Asystent ustawień. Ta zmiana dotyczy tylko urządzeń zarejestrowanych za pomocą koligacji użytkownika.
 
 #### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
-Po wprowadzeniu tej zmiany w ~~marcu~~ kwietniu profile rejestracji w usłudze Intune w witrynie Azure Portal zostaną zaktualizowane, tak aby określić sposób uwierzytelniania urządzeń oraz wskazać, czy otrzymują aplikację Portal firmy. Będzie ulepszony przepływ pracy, aby zarejestrować urządzenia z systemem iOS za pomocą metod wymienionych powyżej. 
+Po wprowadzeniu tej zmiany profile rejestracji w usłudze Intune w witrynie Azure Portal zostaną zaktualizowane, tak aby określić sposób uwierzytelniania urządzeń oraz wskazać, czy otrzymują aplikację Portal firmy. Przepływ pracy dotyczący rejestracji urządzeń z systemem iOS za pomocą metod wymienionych powyżej zostanie usprawniony. 
 
-- Podczas rejestrowania nowych urządzeń i uwierzytelniania przy użyciu Asystenta ustawień, można wybrać, czy automatycznie wdrożyć aplikację portalu firmy. Użytkownicy końcowi zobaczą już na ekranie "Identyfikacji urządzenia" i "Potwierdź urządzenia" ekranu w procesie rejestracji.  
-- Na urządzeniach, które już zarejestrowane za pośrednictwem Asystenta ustawień za pomocą jednej z metod rejestracji urządzeń firmowych firmy Apple należy podjąć odpowiednie działania, jeśli chcesz włączyć dostęp warunkowy. Musisz skonfigurować zasady konfiguracji aplikacji za pomocą określonego xml do wypychania aplikacji Portal firmy do tych urządzeń. W tym celu rosną wpis w blogu w linku dodatkowe informacje. Jeśli zdecydujesz się wypychanie aplikacji Portal firmy w taki sposób, użytkownicy końcowi zobaczą już na ekranie "Identyfikacji urządzenia" i "Potwierdź urządzenia" ekranu w usłudze flow rejestracji 
-- Po tej zmiany jest wdrażana, jeśli nie zostały wdrożone portalu firmy przy użyciu profilu konfiguracji aplikacji wymienionych powyżej i jeśli pobieranie użytkowników końcowych w aplikacji Portal firmy z aplikacji są przechowywane, mógł się zalogować, ale zostanie wyświetlony komunikat o błędzie. Nie będą mogli korzystać z aplikacji dla dostępu warunkowego. 
+- W przypadku rejestrowania nowych urządzeń i uwierzytelniania przy użyciu Asystenta ustawień będzie można wybrać, czy należy automatycznie wdrożyć aplikację Portal firmy. Użytkownicy końcowi nie zobaczą już ekranów „Identyfikowanie urządzenia” i „Potwierdzanie urządzenia” w procesie rejestracji.  
+- Na urządzeniach, które są już zarejestrowane za pośrednictwem Asystenta ustawień za pomocą jednej z metod rejestracji urządzeń firmowych firmy Apple, w celu włączenia dostępu warunkowego należy podjąć odpowiednie działania. Trzeba [skonfigurować zasady konfiguracji aplikacji](https://aka.ms/enrollment_setup_assistant) za pomocą określonego pliku xml w celu wypychania aplikacji Portal firmy do tych urządzeń.  Jeśli zdecydujesz się na wypychanie aplikacji Portal firmy w taki sposób, użytkownicy końcowi nie zobaczą już ekranów „Identyfikowanie urządzenia” i „Potwierdzanie urządzenia” w procesie rejestracji. 
+- Po wdrożeniu tej zmiany, jeśli Portal firmy nie zostanie wdrożony przy użyciu profilu konfiguracji aplikacji wymienionego powyżej, a użytkownicy końcowi pobiorą aplikację Portal firmy ze sklepu z aplikacjami, będą mogli się zalogować, ale zostanie wyświetlony komunikat o błędzie. Nie będą mogli korzystać z tej aplikacji na potrzeby dostępu warunkowego. 
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Co należy zrobić, aby przygotować się do tej zmiany?
-Jeśli planujesz użycie zmodyfikowanego przepływu pracy, należy zaktualizować swoje wskazówki użytkowników końcowych w celu wskazania, że:
+Jeśli planujesz używanie zmodyfikowanego przepływu pracy, należy zaktualizować wskazówki dla użytkowników końcowych, podając informacje, że:
 
-- Użytkownicy końcowi będą widzieli już dwa ekrany, które podano powyżej w procedurę rejestracji. 
-- One musisz zalogować się do portalu firmy, gdy aplikacja jest wdrożona automatycznie, a nie pobierać je ze sklepu z aplikacjami. 
+- Użytkownicy końcowi nie będą już widzieli dwóch wspomnianych powyżej ekranów w procedurze rejestracji. 
+- Będą musieli zalogować się do aplikacji Portal firmy, gdy zostanie wdrożona automatycznie, a nie pobierać ją ze sklepu z aplikacjami. 
 
-Można teraz utworzyć zasady konfiguracji aplikacji, jeśli to konieczne, w ramach przygotowania do tej zmiany. Ten nowy przepływ pracy można zaobserwować zobaczysz profile rejestracji zaktualizowane w konsoli. Firma Microsoft będzie również informują o wdrożenia za pośrednictwem Centrum wiadomości. Po tym należy podjąć działania, dzięki czemu użytkownicy końcowi mogą rejestrować za pomocą programu DEP przy użyciu Asystenta ustawień i aplikacji Portal firmy można użyć dla dostępu warunkowego.
-
-Zobacz nasz blog pomocy technicznej, napisz linku dodatkowe informacje, aby uzyskać więcej informacji na temat tej zmiany.
+Jeśli chcesz, możesz teraz utworzyć zasady konfiguracji aplikacji w ramach przygotowania do tej zmiany. Kiedy nowy przepływ pracy zostanie wdrożony, zobaczysz zaktualizowane profile rejestracji w konsoli. Firma Microsoft poinformuje również o tym wdrożeniu za pośrednictwem Centrum wiadomości. Wtedy trzeba będzie podjąć odpowiednie działania, dzięki czemu użytkownicy końcowi będą mogli rejestrować się za pomocą programu DEP z uwierzytelnianiem przy użyciu Asystenta ustawień, a aplikacji Portal firmy będzie można użyć na potrzeby dostępu warunkowego.
 
 #### <a name="additional-information"></a>Dodatkowe informacje 
 [https://aka.ms/enrollment_setup_assistant](https://aka.ms/enrollment_setup_assistant)
 
-### <a name="plan-for-change-user-experience-update-to-intune-company-portal-app-for-ios"></a>Planowanie zmian: aktualizacja środowiska użytkownika aplikacji Portal firmy usługi Intune dla systemu iOS
-Z radością informujemy, że w usłudze Intune wkrótce zostanie udostępniona znacząca aktualizacja środowiska obsługi użytkownika aplikacji Portal firmy dla systemu iOS. Aktualizacja będzie zawierała wizualne zmiany strony głównej, na której zostaną dodane zaawansowane filtry i szybszy dostęp do aplikacji i książek.
+
+### <a name="update-your-android-company-portal-app-to-the-latest-version---4536963--"></a>Aktualizacja aplikacji Portal firmy dla systemu Android do najnowszej wersji <!--4536963-->
+W ramach usługi Intune okresowo wydawane są aktualizacje aplikacji Portal firmy dla systemu Android. W listopadzie 2018 roku opublikowaliśmy aktualizację portalu firmy, która uwzględnia przełącznik zaplecza, aby przygotować się do zmiany wprowadzonej przez firmę Google, która przechodzi ze swojej dotychczasowej platformy powiadomień do usługi Google Firebase Cloud Messaging (FCM). Po wycofaniu przez Google obecnej platformy powiadomień i przejściu do usługi FCM użytkownicy końcowi będą musieli zaktualizować swoją aplikację portalu firmy do wersji z listopada 2018 r. lub nowszej, aby zachować możliwość komunikowania się ze sklepem Google Play.
 
 #### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
-Ta aktualizacja środowiska użytkownika nie zmieni bieżącej funkcjonalności aplikacji Portal firmy dla systemu iOS, będzie natomiast zawierać następujące elementy:
-- Strona główna o wyglądzie i działaniu natywnym dla systemu iOS 
-- Funkcje filtrowania list zawartości i wyszukiwania z uwzględnieniem możliwości filtrowania według typu zawartości (aplikacje lub książki elektroniczne) oraz dostępności (zarządzanie urządzeniem wymagane lub dostępne bez rejestracji)
-- Możliwość wyszukiwania książek elektronicznych
-- Historia wyszukiwania dla aplikacji i książek elektronicznych
-
-Jeśli bierzesz udział w programie Apple TestFlight, otrzymasz powiadomienie o wstępnej wersji zaktualizowanej aplikacji Portal firmy usługi Intune dla systemu iOS, gdy będzie dostępna. Jeśli nie bierzesz udziału w programie Apple TestFlight, nie jest za późno, aby się zarejestrować. Rejestracja umożliwi korzystanie ze zaktualizowanej aplikacji Portal firmy, zanim będzie ona dostępna dla Twoich użytkowników końcowych. Możesz również przekazywać opinie z zespołem usługi Intune.  
-
-#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Co zrobić, aby przygotować się do tej zmiany?
-Nie trzeba podejmować żadnych działań, te zmiany zostaną wprowadzone w nadchodzącym wydaniu aplikacji Portal firmy dla systemu iOS. 
-
-#### <a name="additional-information"></a>Dodatkowe informacje
-[https://aka.ms/cp_update_iOS](https://aka.ms/cp_update_iOS)
-
-### <a name="check-your-delay-visibility-of-software-updates-setting-in-intune"></a>Sprawdź ustawienia "Opóźnienie widoczność aktualizacji oprogramowania" w usłudze Intune 
-
-Firma Microsoft jest udostępniane w MC171466, który możemy zostały poruszania się kilka ustawień w konsoli. Za pomocą Marcowa aktualizacja usługi Intune całkowicie usuniemy ustawienie "Aktualizacje opóźnienie widoczność oprogramowania" w bloku zasad aktualizacji systemu iOS. Nie spowoduje to zmianę sposobu zastosowania Twoje zaplanowane aktualizacje oprogramowania, ale może wpływać na czas opóźnienia widoczność aktualizacji dla użytkowników końcowych. Może być konieczne podejmij działanie przed końcem marca, jeśli używasz tego ustawienia. 
-
-#### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
-Po aktualizacji usługa Intune lutego zauważysz, że ustawienie jest wyświetlane w profilów ograniczeń dotyczących urządzeń w konsoli, a w systemie iOS aktualizacji zasad w bloku aktualizacji oprogramowania. Po wyświetleniu tej zmiany zostaną uwzględnione w konsoli Oto, co trzeba zrobić.
-
-- Dla istniejącej zasady aktualizacji systemu iOS: w przypadku niestandardowych skonfigurować tego ustawienia, aby coś innego niż domyślny 30 dni i chcesz istniejącej konfiguracji dla ustawień widoczności opóźnienia kontynuować stosowanie po zakończeniu marca, musisz utworzyć nowy Profil ograniczeń urządzenia z systemem iOS. W tym miejscu ustawienie widoczności opóźnienie musisz mieć takie same wartości jak istniejące zasady aktualizacji systemu iOS i przeznaczone do tych samych grup. Po Marcowa aktualizacja usługi nie będzie już można edytować wartości dla tego ustawienia w istniejących zasad aktualizacji systemu iOS, ponieważ już nie będą widoczne w tym bloku. Zamiast tego zostanie skonfigurowane ustawienie w nowych profilów.
-  Jeśli wartość przez liczbę dni można opóźnić widoczność nie jest zgodny w obu lokalizacjach, w przypadku wartości niestandardowe skonfigurowane ustawienie widoczności opóźnienia, ustawienie nie będzie działać, i użytkownicy końcowi będą widzieli aktualizacji na swoich urządzeniach, jak jest ona dostępna. Może to mieć znaczenie minimalne dla większości klientów, ponieważ inne ustawienia w bloku zasad aktualizacji oprogramowania zawsze miały pierwszeństwo za pośrednictwem tego ustawienia w konsoli.
-- Aby uzyskać nowe zasady aktualizacji systemu iOS: Jeśli spróbujesz utworzyć nowe zasady w bloku aktualizacji oprogramowania po aktualizacji usługa Intune lutego, zostanie wyświetlony, to ustawienie, wygaszone out. Zobaczysz notatki w konsoli, przekierowywanie do bloku konfiguracji urządzenia, jeśli chcesz opóźnienie widoczność aktualizacji.
-
-#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Co zrobić, aby przygotować się do tej zmiany?
-Nie trzeba podjąć działania, jeśli nie używaj tego ustawienia, lub nie powinien być opóźnienie widoczność aktualizacji oprogramowania dla użytkowników końcowych.
-
-W razie potrzeby opóźnienia widoczność aktualizacje rozpocząć konfigurowanie ustawienia w nowych profilów w bloku konfiguracji urządzenia w ramach ograniczenia dotyczące urządzeń > Ogólne. Jeśli masz to niestandardowe ustawienie skonfigurowane w systemie iOS istniejące zasady aktualizacji, utworzyć nowy profil ograniczeń urządzenia równoważne z taką samą wartość "dni" opóźnienia widoczność aktualizacji dla użytkowników, po lutym przed marca przedaktualizacyjnych i wprowadza. 
-
-Możesz zaktualizować swoje wskazówki specjalistów IT i poinformuj techniczną.
-
-Zobacz nasz blog pomocy technicznej, Opublikuj informacje dodatkowe, aby uzyskać szczegółowe informacje dotyczące sposobu konfigurowania tego ustawienia.
-
-#### <a name="additional-information"></a>Dodatkowe informacje 
-[https://aka.ms/Delay_visibility_setting_iOS](https://aka.ms/Delay_visibility_setting_iOS)
-
-### <a name="plan-for-change-upcoming-fix-for-windows-10-email-profiles-in-intune---3904031--"></a>Planowanie zmian: planowanej poprawce dla profilów poczty e-mail w systemie Windows 10 w usłudze Intune <!--3904031-->
-Aktualizujemy sposób, w jaki usługa Intune zapisuje wiadomość e-mail, które profile dla systemu Windows 10 w kwietniu aktualizacji do usługi Intune, aby naprawić błąd również, aby upewnić się, że Twoje profile poczty e-mail w dalszym ciągu działać w przyszłych wersjach systemu Windows 10. Brak akcji, którą należy wykonać po wdrożeniu tej poprawki.
-
-#### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
-Ta zmiana wpływa na, jeśli używasz profilów poczty e-mail systemu Windows 10 za pomocą
-- Natywnego klienta poczty E-mail na komputerach stacjonarnych z systemem Windows 10 lub
-- Klient poczty e-mail programu Outlook na Windows 10 Mobile
-
-Ma to wpływ na obu autonomicznego i hybrydowego zarządzania urządzeniami przenośnymi (MDM) klientów usługi Intune.
-
-Po aktualizacji kwietnia wprowadza, należy ponownie utworzyć te profile w konsoli usługi Intune (w konsoli administracyjnej programu Configuration Manager, jeśli korzystasz z hybrydowego zarządzania urządzeniami Przenośnymi).
-
-Jeśli nie podejmiesz działania, Oto zobaczysz dla profilów utworzonych przed aktualizacją z kwietnia:
-
-- Istniejące profile poczty e-mail będą widoczne w stan błędu w konsoli usługi Intune lub konsoli administracyjnej programu Configuration Manager, ale użytkownicy końcowi będą nadal mieć dostęp do poczty e-mail. Jednak po kolejnych aktualizacji Windows można zaobserwować te profile nie będzie działać. Użytkownicy końcowi na urządzeniach docelowych i związanych z tych profilów utraci dostęp do poczty e-mail.
-- Zmiany wprowadzone do tych profilów po kwietnia nie zostaną odzwierciedlone w docelowe urządzenia.
-- Selektywne czyszczenie danych nie będzie działać do usuwania tych profilów, nawet po zakończeniu poprawki jest udostępniona w kwietniu.
-
-Jeśli podejmować działania i ponownie utworzyć profile poczty e-mail, użytkownicy końcowi będą musi przechodzić przez kroki podobne do tych po wdrożeniu profilu poczty e-mail po raz pierwszy. Wiadomości e-mail będzie zablokowany, synchronizowanie do momentu zaakceptowania aktualizację, która dotyczy nowy profil.
+Nasza telemetria wskazuje, że masz urządzenia z aplikacją Portal firmy w wersji wcześniejszej niż 5.0.4269.0. Jeśli ta lub nowsza wersja aplikacji portalu firmy nie zostanie zainstalowana, akcje inicjowane na urządzeniu przez specjalistę IT, takie jak czyszczenie, resetowanie hasła, instalowanie dostępnych i wymaganych aplikacji oraz rejestrowanie certyfikatów mogą nie działać zgodnie z oczekiwaniami. Jeśli Twoje urządzenia są zarejestrowane w usłudze Intune za pomocą rozwiązania MDM, wersje aplikacji portalu firmy oraz użytkowników możesz wyświetlić, przechodząc do obszaru Aplikacje klienckie — Odnalezione aplikacje. Wybierając wcześniejsze wersje aplikacji Portal firmy, będzie można zobaczyć, którzy użytkownicy końcowi mają urządzenia z niezaktualizowaną wersją portalu firmy.
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Co należy zrobić, aby przygotować się do tej zmiany?
-Należy podjąć działania, tylko wtedy, gdy poprawka jest wdrażana wraz z aktualizacją z kwietnia. Firma Microsoft będzie skontaktować się z Tobą za pośrednictwem Centrum wiadomości po tej zmianie przechodzi na żywo, aby można było zacząć ponownie utworzyć profilów w usłudze Intune.
-
-Jeśli używasz profilów poczty e-mail w systemie Windows 10 w usłudze Intune, należy wykonać następujące czynności:
-
-1. Przechwytywanie istniejących ustawień profilu w systemie Windows 10
-2. Cofanie przypisania i/lub usuń istniejące profile
-3. Tworzenie nowych profilów przy użyciu ustawień przechwycony i przypisać profile nowy do tych samych grup
-
-Może być konieczne, Powiadom użytkowników końcowych i pozwól techniczną wiedzieć o tej zmianie. Zajrzyj do pomocy technicznej wpis w blogu informacje dodatkowe szczegóły błędu i instrukcje dotyczące ponownego tworzenia tych profilów.
+Poproś użytkowników końcowych urządzeń z systemem Android, które nie zostały zaktualizowane, aby zaktualizowali portal firmy za pośrednictwem sklepu Google Play. Powiadom dział pomocy technicznej w przypadku, gdy użytkownik nie ma wybranej opcji automatycznego aktualizowania aplikacji portalu firmy. Skorzystaj z linku w sekcji Dodatkowe informacje, aby dowiedzieć się więcej na temat platformy FCM i zmiany wprowadzanej przez firmę Google.
 
 #### <a name="additional-information"></a>Dodatkowe informacje
-https://aka.ms/Win10EmailProfiles
-
+https://firebase.google.com/docs/cloud-messaging/
