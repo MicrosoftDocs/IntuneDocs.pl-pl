@@ -7,7 +7,6 @@ ms.author: brenduns
 manager: dougeby
 ms.date: 03/05/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1d9d095db4d10630555e5696610535bb828f0b5f
-ms.sourcegitcommit: f8bbd9bac2016a77f36461bec260f716e2155b4a
-ms.translationtype: HT
+ms.openlocfilehash: 92aa438e436c4612ede29564f61c3fc529f789c0
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65733063"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66045051"
 ---
 # <a name="windows-security-baseline-settings-for-intune"></a>Ustawienia punktów odniesienia zabezpieczeń usługi Intune  
 
@@ -226,12 +225,12 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
     - **Usuń zgodne urządzenia sprzętowe**    
     To ustawienie jest dostępne tylko wtedy, gdy ustawienie *Instalacja urządzeń sprzętowych według klas konfiguracji* ma wartość *Blokuj instalację urządzeń sprzętowych*.  
 
-      **Domyślne:**: *brak konfiguracji domyślnej*  
+      **Domyślne:** : *brak konfiguracji domyślnej*  
   
     - **Zablokowane identyfikatory urządzeń sprzętowych**  
       To ustawienie jest dostępne tylko wtedy, gdy ustawienie *Instalacja urządzeń sprzętowych według klas konfiguracji* ma wartość *Blokuj instalację urządzeń sprzętowych*.
       
-      **Domyślne:**: *brak konfiguracji domyślnej*  
+      **Domyślne:** : *brak konfiguracji domyślnej*  
 
 ## <a name="device-lock"></a>Blokada urządzenia  
 Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji zasad — DeviceLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) w dokumentacji systemu Windows.  
@@ -973,7 +972,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   To ustawienie zabezpieczeń określa, który protokół uwierzytelniania typu żądanie/odpowiedź będzie używany podczas logowania do sieci. Ten wybór ma wpływ na poziom protokołu uwierzytelniania używanego przez klientów, poziom wynegocjowanych zabezpieczeń sesji i poziom uwierzytelniania akceptowany przez serwery w następujący sposób:  
   - *Wysyłaj odpowiedzi LM i NTLM*: klienci korzystają z uwierzytelniania LM oraz NTLM i nigdy nie używają zabezpieczeń sesji NTLMv2; kontrolery domeny akceptują uwierzytelnianie LM, NTLM i NTLMv2. 
   - *Wysyłaj odpowiedzi LM i NTLM — NTLMv2, jeśli zostaną wynegocjowane*: klienci korzystają z uwierzytelniania LM oraz NTLM i używają zabezpieczeń sesji NTLMv2, jeśli są one obsługiwane przez serwer; kontrolery domeny akceptują uwierzytelnianie LM, NTLM i NTLMv2. 
-  - *Wysyłaj tylko odpowiedź NTLM:*: klienci korzystają tylko z uwierzytelniania NTLM i używają zabezpieczeń sesji NTLMv2, jeśli są one obsługiwane przez serwer; kontrolery domeny akceptują uwierzytelnianie LM, NTLM i NTLMv2. 
+  - *Wysyłaj tylko odpowiedź NTLM:* : klienci korzystają tylko z uwierzytelniania NTLM i używają zabezpieczeń sesji NTLMv2, jeśli są one obsługiwane przez serwer; kontrolery domeny akceptują uwierzytelnianie LM, NTLM i NTLMv2. 
   - *Wysyłaj tylko odpowiedź NTLMv2*: klienci korzystają tylko z uwierzytelniania NTLMv2 i używają zabezpieczeń sesji NTLMv2, jeśli są one obsługiwane przez serwer; kontrolery domeny akceptują uwierzytelnianie LM, NTLM i NTLMv2. 
   - *Wysyłaj tylko odpowiedź NTLMv2. Odrzucaj odpowiedzi LM*: klienci korzystają tylko z uwierzytelniania NTLMv2 i używają zabezpieczeń sesji NTLMv2, jeśli są one obsługiwane przez serwer; kontrolery domeny odrzucają uwierzytelnianie LM (akceptują tylko uwierzytelnianie NTLM i NTLMv2). 
   - *Wysyłaj tylko odpowiedź NTLMv2. Odrzucaj odpowiedzi LM i NTLM*: klienci korzystają tylko z uwierzytelniania NTLMv2 i używają zabezpieczeń sesji NTLMv2, jeśli są one obsługiwane przez serwer; kontrolery domeny odrzucają uwierzytelnianie LM i NTLM (akceptują tylko uwierzytelnianie NTLMv2). 
@@ -1086,7 +1085,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   **Domyślne**: Tak
 
 - **Wirtualizuj błędy zapisu w plikach i rejestrze w lokalizacjach poszczególnych użytkowników**  
-  To ustawienie zasad kontroluje, czy błędy zapisu aplikacji są przekierowywane do zdefiniowanych lokalizacji rejestru i systemu plików. To ustawienie zasad ogranicza liczbę aplikacji uruchamianych w trybie administratora i zapisuje dane aplikacji w czasie wykonywania w katalogu *%ProgramFiles%*, *%Windir%*, *%Windir%\system32* lub *HKLM\Software*.
+  To ustawienie zasad kontroluje, czy błędy zapisu aplikacji są przekierowywane do zdefiniowanych lokalizacji rejestru i systemu plików. To ustawienie zasad ogranicza liczbę aplikacji uruchamianych w trybie administratora i zapisuje dane aplikacji w czasie wykonywania w katalogu *%ProgramFiles%* , *%Windir%* , *%Windir%\system32* lub *HKLM\Software*.
   
   **Domyślne**: Tak
 
@@ -1160,7 +1159,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   **Domyślne**: włączone
   
 - **Blokuj przekierowywanie dysków**  
-  To ustawienie zasad określa, czy zapobiegać mapowaniu dysków klienta w ramach sesji usług pulpitu zdalnego (przekierowywaniu dysków). Domyślnie serwer hosta sesji usług pulpitu zdalnego automatycznie mapuje dyski klienta po podłączeniu. Zamapowane dyski są wyświetlane w drzewie folderów sesji w Eksploratorze plików lub na komputerze w formacie *\<litera_dysku>* na *\<nazwa_komputera>*. To ustawienie zasad umożliwia zmianę tego zachowania. Jeśli to ustawienie zasad zostanie włączone, przekierowywanie dysków klienta nie będzie dozwolone w ramach sesji usług pulpitu zdalnego, a przekierowywanie kopii plików ze Schowka nie będzie dozwolone na komputerach z systemami Windows Server 2003, Windows 8 i Windows XP. Jeśli to ustawienie zasad zostanie wyłączone, przekierowywanie dysków klienta będzie zawsze dozwolone. Ponadto przekierowywanie kopii plików ze Schowka będzie zawsze dozwolone, gdy będzie dozwolone przekierowywanie Schowka. Jeśli to ustawienie zasad nie zostanie skonfigurowane, przekierowywanie dysków klienta i przekierowywanie kopii plików ze Schowka nie będzie określane na poziomie zasad grupy.
+  To ustawienie zasad określa, czy zapobiegać mapowaniu dysków klienta w ramach sesji usług pulpitu zdalnego (przekierowywaniu dysków). Domyślnie serwer hosta sesji usług pulpitu zdalnego automatycznie mapuje dyski klienta po podłączeniu. Zamapowane dyski są wyświetlane w drzewie folderów sesji w Eksploratorze plików lub na komputerze w formacie *\<litera_dysku>* na *\<nazwa_komputera>* . To ustawienie zasad umożliwia zmianę tego zachowania. Jeśli to ustawienie zasad zostanie włączone, przekierowywanie dysków klienta nie będzie dozwolone w ramach sesji usług pulpitu zdalnego, a przekierowywanie kopii plików ze Schowka nie będzie dozwolone na komputerach z systemami Windows Server 2003, Windows 8 i Windows XP. Jeśli to ustawienie zasad zostanie wyłączone, przekierowywanie dysków klienta będzie zawsze dozwolone. Ponadto przekierowywanie kopii plików ze Schowka będzie zawsze dozwolone, gdy będzie dozwolone przekierowywanie Schowka. Jeśli to ustawienie zasad nie zostanie skonfigurowane, przekierowywanie dysków klienta i przekierowywanie kopii plików ze Schowka nie będzie określane na poziomie zasad grupy.
   
   **Domyślne**: włączone
   
