@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36aa9ad733e2ae5e0f4a292b073fbebd5f5f5f8f
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: c2d137945325d8ec11801aec225fd0e89196ed05
+ms.sourcegitcommit: f8bbd9bac2016a77f36461bec260f716e2155b4a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61511543"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65732993"
 ---
 # <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>Samouczek: Rejestrowanie urządzeń z systemem Windows w usłudze Intune przy użyciu rozwiązania Autopilot
 Rozwiązanie Windows Autopilot upraszcza rejestrowanie urządzeń. Dzięki usłudze Microsoft Intune i rozwiązaniu Autopilot można przekazać nowe urządzenia użytkownikom końcowym bez konieczności tworzenia, konserwowania i stosowania niestandardowych obrazów systemów operacyjnych. 
@@ -90,23 +90,20 @@ Następnie utworzysz grupę urządzeń i umieścisz w niej właśnie załadowane
 Po utworzeniu grupy urządzeń musisz utworzyć profil wdrażania, aby umożliwić konfigurowanie urządzeń rozwiązania Autopilot.
 
 1. W usłudze [Intune w witrynie Azure Portal](https://aka.ms/intuneportal) wybierz kolejno pozycje **Rejestrowanie urządzenia**  >  **Rejestracja w systemie Windows**  >  **Profile wdrażania**  >  **Utwórz profil**.
-2. W obszarze **Nazwa** wprowadź frazę *Profil rozwiązania Autopilot*. W obszarze **Opis** wprowadź frazę *Profil testowy dla urządzeń rozwiązania Autopilot*.
+2. Na stronie **Podstawy** w polu **Nazwa** wprowadź *Profil rozwiązania Autopilot*. W obszarze **Opis** wprowadź frazę *Profil testowy dla urządzeń rozwiązania Autopilot*.
 3. Ustaw pozycję **Konwertuj wszystkie urządzenia docelowe na rozwiązanie Autopilot** na **Tak**. To ustawienie gwarantuje, że wszystkie urządzenia na liście zostaną zarejestrowane przy użyciu usługi wdrażania rozwiązania Autopilot. Przetwarzanie rejestracji może potrwać do 48 godzin.
-4. W obszarze **Tryb wdrożenia** wybierz pozycję **Sterowane przez użytkownika**. Urządzenia z tym profilem są skojarzone z użytkownikiem rejestrującym urządzenie. Poświadczenia użytkownika są wymagane do rejestracji urządzenia.
-5. W polu **Dołącz do usługi Azure AD jako** wybierz pozycję **Dołączono do usługi Azure AD**.
-6. Wybierz pozycję **Środowisko gotowe do użycia (OOBE, Out-of-box experience)**, skonfiguruj poniższe opcje i pozostaw inne ustawione na wartość domyślną, a następnie wybierz przycisk **Zapisz**:
+4. Wybierz pozycję **Dalej**.
+5. Na stronie **Środowisko gotowe do użycia (OOBE, Out-of-box experience)** dla pozycji **Tryb wdrożenia** wybierz pozycję **Sterowane przez użytkownika**. Urządzenia z tym profilem są skojarzone z użytkownikiem rejestrującym urządzenie. Poświadczenia użytkownika są wymagane do rejestracji urządzenia.
+6. W polu **Dołącz do usługi Azure AD jako** wybierz pozycję **Dołączono do usługi Azure AD**.
+7. Skonfiguruj następujące opcje i pozostaw inne ustawione na wartość domyślną:
     - **Umowa licencyjna użytkownika oprogramowania (EULA)**: **Ukryj**
     - **Ustawienia prywatności**: **Pokaż**
     - **Typ konta użytkownika**: **Standardowy**
-
-6. Wybierz pozycję **Utwórz**, aby utworzyć profil. Profil wdrażania rozwiązania Autopilot jest teraz dostępny do przypisania do urządzeń.
-
-## <a name="assign-an-autopilot-deployment-profile-to-a-device-group"></a>Przypisywanie profilu wdrażania rozwiązania Autopilot do grupy urządzeń
-
-Teraz, gdy profil wdrażania został utworzony, należy przypisać go do grupy urządzeń.
-1. W usłudze [Intune w witrynie Azure Portal](https://aka.ms/intuneportal) wybierz kolejno pozycje **Rejestrowanie urządzenia**  >  **Rejestracja w systemie Windows**  >  **Profile wdrażania**, a następnie wybierz profil.
-2. W bloku określonego profilu wybierz pozycję **Przypisania**. 
-3. Wybierz pozycję **Wybierz grupy**, a następnie w bloku **Wybieranie grup** wybierz pozycję **Grupa rozwiązania Autopilot** i pozycję **Wybierz**.
+8. Wybierz pozycję **Dalej**.
+9. Na stronie **Przypisania** wybierz opcję **Wybrane grupy** dla ustawienia **Przypisz do**.
+10. Wybierz pozycję **Wybierz grupy do uwzględnienia** i wybierz pozycję **Grupa rozwiązania Autopilot**.
+11. Wybierz pozycję **Dalej**.
+12. Na stronie **Przeglądanie + tworzenie** wybierz pozycję **Utwórz**, aby utworzyć profil.
 
 ## <a name="distribute-devices-to-users"></a>Przekazywanie urządzeń użytkownikom
 

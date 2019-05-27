@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 569ddd9be0c59cf9a4bd7ba1f8b114183ce46d7d
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 40d8b3d14411827642661b01929d17e83a5198ad
+ms.sourcegitcommit: 4980c094faaca452f8ec8ddded04f47b3229ff38
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61508280"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65765358"
 ---
 # <a name="configure-a-certificate-profile-for-your-devices-in-microsoft-intune"></a>Konfigurowanie profilu certyfikatu dla urządzeń w usłudze Microsoft Intune
 
@@ -133,3 +133,9 @@ Po utworzeniu profilu zaufanego certyfikatu należy utworzyć profile certyfikat
 [Przypisywanie profilów urządzeń](device-profile-assign.md)  
 [Używanie protokołu S/MIME do podpisywania i szyfrowania wiadomości e-mail](certificates-s-mime-encryption-sign.md)  
 [Używanie urzędu certyfikacji innej firmy](certificate-authority-add-scep-overview.md)
+
+## <a name="see-also"></a>Zobacz także
+
+[Troubleshooting NDES configuration for use with Microsoft Intune certificate profiles](https://support.microsoft.com/help/4459540) (Rozwiązywanie problemów z konfiguracją usługi NDES do użycia z profilami certyfikatów usługi Microsoft Intune)
+
+[Troubleshooting SCEP certificate profile deployment in Microsoft Intune](https://support.microsoft.com/help/4457481) (Rozwiązywanie problemów z wdrażaniem profilu certyfikatu SCEP w usłudze Microsoft Intune)

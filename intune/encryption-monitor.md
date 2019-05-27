@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/23/2019
+ms.date: 05/17/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,23 +17,23 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 52b92483ddafadf460911caaa472825a0bc0a20f
-ms.sourcegitcommit: b4483c8476a209de83102e8993d8074dbb323493
+ms.openlocfilehash: 72121aa48e7b5d46e25aac28ad386832b6b4ea72
+ms.sourcegitcommit: f8bbd9bac2016a77f36461bec260f716e2155b4a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65527217"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65733099"
 ---
 # <a name="monitor-bitlocker-and-device-encryption"></a>Monitorowanie funkcji BitLocker i szyfrowania urządzeń  
 Usługa Intune udostępnia scentralizowaną lokalizację na potrzeby określania stanu szyfrowania urządzeń z systemem Windows 10 oraz ułatwia dostęp do ważnych informacji dotyczących funkcji BitLocker z urządzeń znajdujących się w usłudze Azure Active Directory (Azure AD).  
 
-- Funkcja [Raport szyfrowania (publiczna wersja zapoznawcza)](#encryption-report) udostępnia szczegółowe informacje dotyczące stanu szyfrowania urządzeń i ich gotowości. Szczegóły raportu mogą pomóc w zidentyfikowaniu problemów uniemożliwiających pomyślne zaszyfrowanie urządzeń, które mają być chronione.  
-- Funkcja [Wyświetl szczegóły funkcji BitLocker (publiczna wersja zapoznawcza)](#bitlocker-recovery-keys) umożliwia pobranie identyfikatora klucza i kluczy odzyskiwania dla urządzeń z portalu usługi Intune.  
+- Funkcja [Raport szyfrowania](#encryption-report) udostępnia szczegółowe informacje dotyczące stanu szyfrowania urządzeń i ich gotowości. Szczegóły raportu mogą pomóc w zidentyfikowaniu problemów uniemożliwiających pomyślne zaszyfrowanie urządzeń, które mają być chronione.  
+- Funkcja [Wyświetl szczegóły funkcji BitLocker](#bitlocker-recovery-keys) umożliwia pobranie identyfikatora klucza i kluczy odzyskiwania dla urządzeń z portalu usługi Intune.  
 
 ## <a name="encryption-report"></a>Raport szyfrowania
-Funkcja Raport szyfrowania (publiczna wersja zapoznawcza) umożliwia wyświetlenie szczegółów dotyczących stanu szyfrowania urządzeń z systemem Windows 10.  
+Funkcja Raport szyfrowania umożliwia wyświetlenie szczegółów dotyczących stanu szyfrowania urządzeń z systemem Windows 10.  
 
-Aby znaleźć raport, zaloguj się do usługi [Intune](https://aka.ms/intuneportal) i przejdź do pozycji **Konfiguracja urządzenia**, a następnie w obszarze *Monitor* wybierz opcję **Raport szyfrowania (wersja zapoznawcza)**.  
+Aby znaleźć raport, zaloguj się do usługi [Intune](https://aka.ms/intuneportal) i przejdź do pozycji **Konfiguracja urządzenia**, a następnie w obszarze *Monitor* wybierz opcję **Raport szyfrowania**.  
 
 ### <a name="prerequisites"></a>Wymagania wstępne:
 Aby urządzenie pojawiło się w raporcie, musi działać na nim system Windows w wersji 1607 lub nowszej.  
@@ -95,9 +95,9 @@ Okienko zawiera następujące szczegółowe informacje:
    - Sieć jest niedostępna, a jest to wymagane do utworzenia kopii zapasowej klucza odzyskiwania.  
 
 ## <a name="bitlocker-recovery-keys"></a>Klucze odzyskiwania funkcji BitLocker
-W publicznej wersji zapoznawczej usługa Intune udostępnia blok usługi Azure AD dla funkcji BitLocker, dzięki czemu można wyświetlić identyfikatory klucza i klucze odzyskiwania funkcji BitLocker dla urządzeń z systemem Windows 10 z poziomu portalu usługi Intune.  Aby urządzenie było dostępne, jego klucze muszą znajdować się w depozycie usługi Azure AD. 
+Usługa Intune udostępnia blok usługi Azure AD dla funkcji BitLocker, dzięki czemu można wyświetlić identyfikatory klucza i klucze odzyskiwania funkcji BitLocker dla urządzeń z systemem Windows 10 z poziomu portalu usługi Intune.  Aby urządzenie było dostępne, jego klucze muszą znajdować się w depozycie usługi Azure AD. 
 1. Zaloguj się do usługi [Intune](https://aka.ms/intuneportal), przejdź do pozycji **Urządzenia**, a następnie w obszarze *Zarządzaj* wybierz opcję **Wszystkie urządzenia**.
-2. Wybierz urządzenie z listy, a następnie w obszarze *Monitor* wybierz opcję **Klucze odzyskiwania — wersja zapoznawcza**.  
+2. Wybierz urządzenie z listy, a następnie w obszarze *Monitor* wybierz opcję **Klucze odzyskiwania**.  
   
 Jeśli klucze są dostępne w usłudze Azure AD, są wyświetlane następujące informacje:
 - Identyfikator klucza funkcji BitLocker
