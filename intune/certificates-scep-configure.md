@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f1cdacf4b4d26e9db9b4090805f697927a399c5
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 96a0da69cdb77ae36ce2456186593f5c334c870c
+ms.sourcegitcommit: 4980c094faaca452f8ec8ddded04f47b3229ff38
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61510128"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65765414"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurowanie certyfikatów SCEP i korzystanie z nich w usłudze Intune
 
@@ -273,8 +273,8 @@ W tym kroku:
 
 2. Wybierz pozycję **Edytuj ustawienia funkcji**, a następnie podaj następujące wartości:
 
-    - **Długość ciągu zapytania (w bajtach)** = **65534**
-    - **Maksymalna długość adresu URL (w bajtach)** = **65534**
+    - **Długość ciągu zapytania (w bajtach)**  = **65534**
+    - **Maksymalna długość adresu URL (w bajtach)**  = **65534**
 
 3. Sprawdź następujący klucz rejestru:
 
@@ -385,17 +385,17 @@ Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i podaj nas
         - **Nazwa pospolita jako adres e-mail**
         - **Unikatowe międzynarodowe numery identyfikujące urządzenia przenośne (IMEI)**
         - **Numer seryjny**
-        - **Niestandardowy**: po wybraniu tej opcji zostanie również wyświetlone pole tekstowe **Niestandardowy**. Użyj tego pola do wprowadzenia niestandardowego formatu nazwy podmiotu, w tym zmiennych. Format niestandardowy obsługuje dwie zmienne: **Nazwa pospolita (CN)** i **Adres e-mail (E)**. Dla wartości **Nazwa pospolita (CN)** można ustawić jedną z następujących zmiennych:
+        - **Niestandardowy**: po wybraniu tej opcji zostanie również wyświetlone pole tekstowe **Niestandardowy**. Użyj tego pola do wprowadzenia niestandardowego formatu nazwy podmiotu, w tym zmiennych. Format niestandardowy obsługuje dwie zmienne: **Nazwa pospolita (CN)** i **Adres e-mail (E)** . Dla wartości **Nazwa pospolita (CN)** można ustawić jedną z następujących zmiennych:
 
-            - **CN={{UserName}}**: główna nazwa użytkownika, taka jak janedoe@contoso.com
-            - **CN={{AAD_Device_ID}}**: identyfikator przypisany podczas rejestrowania urządzenia w usłudze Azure Active Directory (AD). Ten identyfikator jest zazwyczaj używany do uwierzytelniania za pomocą usługi Azure AD.
-            - **CN={{SERIALNUMBER}}**: unikatowy numer seryjny (SN) używany zwykle przez producenta do identyfikowania urządzenia
-            - **CN={{IMEINumber}}**: unikatowy numer IMEI (International Mobile Equipment Identity) używany do identyfikowania telefonu komórkowego
-            - **CN={{OnPrem_Distinguished_Name}}**: sekwencja względnych nazw wyróżniających rozdzielonych przecinkami, taka jak `CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com`
+            - **CN={{UserName}}** : główna nazwa użytkownika, taka jak janedoe@contoso.com
+            - **CN={{AAD_Device_ID}}** : identyfikator przypisany podczas rejestrowania urządzenia w usłudze Azure Active Directory (AD). Ten identyfikator jest zazwyczaj używany do uwierzytelniania za pomocą usługi Azure AD.
+            - **CN={{SERIALNUMBER}}** : unikatowy numer seryjny (SN) używany zwykle przez producenta do identyfikowania urządzenia
+            - **CN={{IMEINumber}}** : unikatowy numer IMEI (International Mobile Equipment Identity) używany do identyfikowania telefonu komórkowego
+            - **CN={{OnPrem_Distinguished_Name}}** : sekwencja względnych nazw wyróżniających rozdzielonych przecinkami, taka jak `CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com`
 
                 Aby użyć zmiennej `{{OnPrem_Distinguished_Name}}`, zsynchronizuj atrybut użytkownika `onpremisesdistingishedname` z usługą Azure AD za pomocą programu [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect).
 
-            - **CN={{onPremisesSamAccountName}}**: administratorzy mogą synchronizować atrybut samAccountName z usługi Active Directory do usługi Azure AD za pomocą programu Azure AD Connect do atrybutu o nazwie `onPremisesSamAccountName`. Usługa Intune może podstawić zmienną jako część żądania wystawienia certyfikatu w podmiocie certyfikatu SCEP.  Atrybut samAccountName jest nazwą logowania użytkownika, która jest używana do obsługi klientów i serwerów z poprzedniej wersji systemu Windows (starszej niż Windows 2000). Nazwa logowania użytkownika ma format: `DomainName\testUser` lub tylko `testUser`.
+            - **CN={{onPremisesSamAccountName}}** : administratorzy mogą synchronizować atrybut samAccountName z usługi Active Directory do usługi Azure AD za pomocą programu Azure AD Connect do atrybutu o nazwie `onPremisesSamAccountName`. Usługa Intune może podstawić zmienną jako część żądania wystawienia certyfikatu w podmiocie certyfikatu SCEP.  Atrybut samAccountName jest nazwą logowania użytkownika, która jest używana do obsługi klientów i serwerów z poprzedniej wersji systemu Windows (starszej niż Windows 2000). Nazwa logowania użytkownika ma format: `DomainName\testUser` lub tylko `testUser`.
 
                 Aby użyć zmiennej `{{onPremisesSamAccountName}}`, zsynchronizuj atrybut użytkownika `onPremisesSamAccountName` z usługą Azure AD za pomocą programu [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect).
 
@@ -427,7 +427,7 @@ Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i podaj nas
 
         > [!IMPORTANT]
         >  - W statycznym tekście podmiotu nawiasy klamrowe **{}** nie otaczające zmiennej spowodują błąd. 
-        >  - W przypadku stosowania zmiennej certyfikatu urządzenia należy ją ująć w nawiasy klamrowe **{}**.
+        >  - W przypadku stosowania zmiennej certyfikatu urządzenia należy ją ująć w nawiasy klamrowe **{}** .
         >  - Zmienna `{{FullyQualifiedDomainName}}` działa tylko w przypadku urządzeń z systemem Windows i urządzeń przyłączonych do domeny. 
         >  -  W przypadku korzystania z właściwości urządzenia, takich jak numer IMEI, numer seryjny i w pełni kwalifikowana nazwa domeny w obrębie podmiotu lub nazwy SAN dla certyfikatu urządzenia, należy pamiętać, że te właściwości mogą zostać sfałszowane przez osobę z dostępem do urządzenia.
         >  - Profil nie zostanie zainstalowany na urządzeniu, jeśli określone zmienne urządzenia nie są obsługiwane. Na przykład jeśli zmienna {{IMEI}} zostanie użyta w nazwie podmiotu profilu protokołu SCEP przypisanego do urządzenia, które nie ma numeru IMEI, instalacja profilu zakończy się niepowodzeniem. 
@@ -469,8 +469,8 @@ Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i podaj nas
         Te zmienne można dodawać z tekstem statycznym w polu tekstowym wartości niestandardowej. Na przykład atrybut systemu DNS można dodać jako `DNS name = {{AzureADDeviceId}}.domain.com`.
 
         > [!IMPORTANT]
-        >  - W tekście statycznym nazwy SAN nawiasy klamrowe **{ }**, symbole potoku **|** i średniki **;** nie będą działać. 
-        >  - W przypadku stosowania zmiennej certyfikatu urządzenia należy ją ująć w nawiasy klamrowe **{}**.
+        >  - W tekście statycznym nazwy SAN nawiasy klamrowe **{ }** , symbole potoku **|** i średniki **;** nie będą działać. 
+        >  - W przypadku stosowania zmiennej certyfikatu urządzenia należy ją ująć w nawiasy klamrowe **{}** .
         >  - Zmienna `{{FullyQualifiedDomainName}}` działa tylko w przypadku urządzeń z systemem Windows i urządzeń przyłączonych do domeny. 
         >  -  W przypadku korzystania z właściwości urządzenia, takich jak numer IMEI, numer seryjny i w pełni kwalifikowana nazwa domeny w obrębie podmiotu lub nazwy SAN dla certyfikatu urządzenia, należy pamiętać, że te właściwości mogą zostać sfałszowane przez osobę z dostępem do urządzenia.
         >  - Profil nie zostanie zainstalowany na urządzeniu, jeśli określone zmienne urządzenia nie są obsługiwane. Na przykład jeśli zmienna {{IMEI}} zostanie użyta w alternatywnej nazwie podmiotu profilu protokołu SCEP przypisanego do urządzenia, które nie ma numeru IMEI, instalacja profilu zakończy się niepowodzeniem.  
@@ -485,12 +485,12 @@ Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i podaj nas
    - **Użycie klucza**: podaj opcje użycia klucza certyfikatu. Dostępne opcje:
      - **Szyfrowanie klucza**: zezwalaj na wymianę kluczy tylko wtedy, gdy klucz jest zaszyfrowany
      - **Podpis cyfrowy**: zezwalaj na wymianę kluczy tylko wtedy, gdy w ochronie klucza pomaga podpis cyfrowy
-   - **Rozmiar klucza (bity)**: wybierz liczbę bitów zawartych w kluczu
+   - **Rozmiar klucza (bity)** : wybierz liczbę bitów zawartych w kluczu
    - **Algorytm wyznaczania wartości skrótu** (Android, Windows Phone 8.1, Windows 8.1, Windows 10): Wybierz jeden z dostępnych typów algorytmu wyznaczania wartości skrótu do użycia z tym certyfikatem. Wybierz najwyższy poziom zabezpieczeń obsługiwany przez podłączane urządzenia.
    - **Certyfikat główny**: wybierz profil certyfikatu głównego urzędu certyfikacji, który został uprzednio skonfigurowany i przypisany do użytkownika i/lub urządzenia. Ten certyfikat urzędu certyfikacji musi być certyfikatem głównym urzędu certyfikacji wystawiającego certyfikat skonfigurowany w ramach danego profilu certyfikatu. Przypisz ten profil zaufanego certyfikatu głównego do tej samej grupy, która jest przypisana w profilu certyfikatu SCEP.
    - **Rozszerzone użycie klucza**: **dodaj** wartości w zależności od celu certyfikatu. W większości przypadków jest wymagane wprowadzenie wartości **Uwierzytelnianie klienta** dla certyfikatu, aby zapewnić użytkownikom lub urządzeniom możliwość uwierzytelnienia na serwerze. Można jednak dodać również inne użycia klucza, zgodnie z potrzebami.
    - **Ustawienia rejestracji**
-     - **Próg odnawiania (%)**: wprowadź wartość procentową pozostałego okresu ważności certyfikatu, przy której urządzenie ma żądać odnowienia certyfikatu.
+     - **Próg odnawiania (%)** : wprowadź wartość procentową pozostałego okresu ważności certyfikatu, przy której urządzenie ma żądać odnowienia certyfikatu.
      - **Adresy URL serwerów SCEP**: wprowadź co najmniej jeden adres URL dla serwerów usługi NDES, które wystawiają certyfikaty za pośrednictwem protokołu SCEP. Na przykład wprowadź adres podobny do następującego: `https://ndes.contoso.com/certsrv/mscep/mscep.dll`.
      - Wybierz pozycję **OK**, a następnie **Utwórz**, aby utworzyć profil.
 
@@ -567,4 +567,6 @@ Począwszy od wersji 6.1806.x.x, usługa łącznika Intune rejestruje zdarzenia 
 
 - [Używanie certyfikatów PKCS](certficates-pfx-configure.md) lub [wystawianie certyfikatów PKCS z poziomu usługi internetowej Symantec PKI Manager](certificates-symantec-configure.md)
 - [Dodawanie urzędu certyfikacji innej firmy w celu korzystania z protokołu SCEP w usłudze Intune](certificate-authority-add-scep-overview.md)
-- Dodatkową pomoc można uzyskać w przewodniku [Troubleshooting SCEP certificate profile deployment in Microsoft Intune](https://support.microsoft.com/help/4457481/troubleshooting-scep-certificate-profile-deployment-in-intune) (Rozwiązywanie problemów z wdrażaniem profilu certyfikatu SCEP w usłudze Microsoft Intune).
+- Aby uzyskać dodatkową pomoc, skorzystaj z następujących przewodników:
+  - [Troubleshooting SCEP certificate profile deployment in Microsoft Intune](https://support.microsoft.com/help/4457481) (Rozwiązywanie problemów z wdrażaniem profilu certyfikatu SCEP w usłudze Microsoft Intune)
+  - [Troubleshooting NDES configuration for use with Microsoft Intune certificate profiles](https://support.microsoft.com/help/4459540) (Rozwiązywanie problemów z konfiguracją usługi NDES do użycia z profilami certyfikatów usługi Microsoft Intune)

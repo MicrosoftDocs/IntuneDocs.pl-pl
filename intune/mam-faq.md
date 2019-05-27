@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/26/2019
+ms.date: 05/21/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 21d773b0ab2227f59f1ee0b2091d39b7c9799721
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 31b5697d9673866d378cc526a3735138d6a120b3
+ms.sourcegitcommit: 6de06b475f16893710dc34027096138aa697e482
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61506818"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65992899"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Często zadawane pytania dotyczące zarządzania aplikacjami mobilnymi (MAM) i ochrony aplikacji
 
@@ -51,6 +51,13 @@ Zasady ochrony aplikacji to reguły, które mogą zagwarantować, że dane organ
 
 **Jakie są przykłady zasad ochrony aplikacji?**<br></br>
 Zobacz tematy [Android app protection policy settings](app-protection-policy-settings-android.md) (Ustawienia zasad ochrony aplikacji systemu Android) i [iOS app protection policy settings](app-protection-policy-settings-ios.md) (Ustawienia zasad ochrony aplikacji systemu iOS), aby uzyskać szczegółowe informacje dotyczące poszczególnych ustawień zasad ochrony aplikacji.
+
+**Czy istnieje możliwość stosowania zarówno zasad MAM, jak i usługi MDM dla tego samego użytkownika, w tym samym czasie i na różnych urządzeniach? Na przykład w przypadku, gdy użytkownik powinien być w stanie uzyskać dostęp do zasobów służbowych z własnej maszyny objętej zarządzaniem aplikacjami mobilnymi, ale również może przyjść do pracy i korzystać z urządzenia zarządzanego przez usługę Intune MDM. Czy istnieją jakieś zastrzeżenia do tego pomysłu?**<br></br>
+Jeśli zasady zarządzania aplikacjami mobilnymi są stosowane do użytkownika bez ustawiania stanu urządzenia, te zasady będą działać dla użytkownika zarówno w przypadku użycia własnych urządzeń (BYOD), jak i urządzeń zarządzanych przez usługę Intune. Można także zastosować zasady zarządzania aplikacjami mobilnymi w oparciu o stan zarządzany. W tym celu podczas tworzenia zasad ochrony aplikacji dla pozycji Dotyczy wszystkich typów aplikacji należy wybrać opcję Nie. Następnie należy wykonać jedną z następujących czynności:
+- Zastosowanie mniej rygorystycznych zasad zarządzania aplikacjami mobilnymi do urządzeń zarządzanych przez usługę Intune oraz bardziej rygorystycznych zasad zarządzania aplikacjami mobilnymi do urządzeń niezarejestrowanych w usłudze MDM.
+- Zastosowanie zasad zarządzania aplikacjami mobilnymi tylko do niezarejestrowanych urządzeń.
+
+Aby uzyskać więcej informacji, zobacz [Monitorowanie zasad ochrony aplikacji](app-protection-policies-monitor.md).
 
 ## <a name="apps-you-can-manage-with-app-protection-policies"></a>Aplikacje, którymi można zarządzać za pomocą zasad ochrony aplikacji
 
