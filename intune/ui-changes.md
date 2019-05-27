@@ -8,7 +8,6 @@ ms.author: dougeby
 manager: dougeby
 ms.date: 1/4/2018
 ms.topic: archived
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: def09c1782db5b888257b7283074a997abbfa625
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 207a3f950d6fca2d6fcbe024f24fbf05487f2151
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57460788"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66040388"
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Dokąd została przeniesiona funkcja usługi Intune na platformie Azure?
 Przenosząc usługę Intune do witryny Azure Portal, skorzystaliśmy z okazji, aby uporządkować niektóre zadania w bardziej logiczny sposób. Jednak każde ulepszenie wymaga nauczenia się nowego porządku. Ten przewodnik jest przeznaczony dla osób, które doskonale znają usługę Intune w portalu klasycznym i zastanawiają się, jak zrobić coś w usłudze Intune w witrynie Azure Portal. Jeśli w tym artykule nie została uwzględniona funkcja, której szukasz, pozostaw komentarz na końcu artykułu, abyśmy mogli go zaktualizować.
@@ -124,7 +123,7 @@ Aby zarejestrować urządzenia iOS za pomocą programu Device Enrollment Program
 
 ![Ilustracja przedstawiająca klasyczne profile rejestracji urządzeń](./media/14-classic-corp-profiles.png)
 
-Na tej liście znajdują się profile przeznaczone do użytku z programem Device Enrollment Program firmy Apple (**DEP wł.**) oraz profil przeznaczony wyłącznie do użytku z narzędziem Apple Configurator (**DEP wył.**).
+Na tej liście znajdują się profile przeznaczone do użytku z programem Device Enrollment Program firmy Apple (**DEP wł.** ) oraz profil przeznaczony wyłącznie do użytku z narzędziem Apple Configurator (**DEP wył.** ).
 
 Aby ułatwić rozróżnienie tych dwóch typów profilów i ograniczyć liczbę potencjalnie niedopasowanych przypisań (profilu w programie DEP do urządzeń w narzędziu Configurator i na odwrót), podzieliliśmy funkcje tworzenia profilów programu rejestracji (obsługujących program Device Enrollment Program firmy Apple i Apple School Manager) i profilów narzędzia Apple Configurator oraz zarządzania nimi:
 

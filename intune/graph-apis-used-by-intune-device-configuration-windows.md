@@ -8,7 +8,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 03/04/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -16,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 177448eaebfb7e78ead7bc2e0eb7443a7d8c7d49
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: ce35a3fd3b9aa86efb09a903d661affd197f8a2a
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61514161"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66041798"
 ---
 # <a name="graph-apis-and-matching-windows-10-csps-used-in-intune"></a>Interfejsy API programu Graph i pasującą dostawców usług kryptograficznych systemu Windows 10 jest używany w usłudze Intune
 
@@ -2984,7 +2983,7 @@ Aby wyświetlić wersje systemu Windows 10, zastosuj następujące interfejsy AP
 **Przesunięcie URI**: /Config/Update/SetDisablePauseUXAccess
 
 
-## <a name="next-steps"></a>Kolejne kroki
+## <a name="next-steps"></a>Następne kroki
 
 - [Omówienie konfiguracji urządzeń](device-profiles.md)
 - [Odwołanie do dostawcy usługi konfiguracji](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) (otwiera innej witryny Docs)

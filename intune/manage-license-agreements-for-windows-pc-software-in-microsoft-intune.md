@@ -8,7 +8,6 @@ ms.author: dougeby
 manager: dougeby
 ms.date: 01/01/2018
 ms.topic: archived
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 92262a9d1f07b8756ced8788feee586ffa30088a
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: 417d244cbe64af967e61112f67dbf7829ce7feda
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58798805"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66046952"
 ---
 # <a name="manage-license-agreements-for-windows-pc-software-in-microsoft-intune"></a>Zarządzanie umowami licencyjnymi na oprogramowanie na komputerze z systemem Windows w usłudze Microsoft Intune
 
@@ -68,7 +67,7 @@ Umowy licencjonowania zbiorowego usługi Intune zawierają informacje o licencji
 
         -   Są obsługiwane tylko znaki ACSII.
 
-        -   Następujące znaki są niedozwolone w nazwie umowy: **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /**. Nazwa może zawierać spacje.
+        -   Następujące znaki są niedozwolone w nazwie umowy: **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /** . Nazwa może zawierać spacje.
 
         -   Długość nazwy pliku nie może przekraczać 128 znaków.
 
@@ -94,7 +93,7 @@ Umowy licencjonowania zbiorowego usługi Intune zawierają informacje o licencji
 
         -   **Nazwa umowy** — podaj unikatową nazwę umowy.
 
-            Nazwa umowy może mieć co najwyżej 256 znaków i nie może zawierać następujących znaków: **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /**. Nazwa może zawierać spacje.
+            Nazwa umowy może mieć co najwyżej 256 znaków i nie może zawierać następujących znaków: **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /** . Nazwa może zawierać spacje.
 
         -   **Numer autoryzacji/umowy** — podaj numer autoryzacji/umowy pary licencji.
 
@@ -103,7 +102,7 @@ Umowy licencjonowania zbiorowego usługi Intune zawierają informacje o licencji
         > [!NOTE]
         > Jeśli dodasz kilka par numerów umów, usługa Intune utworzy jedną umowę o podanej nazwie, a wszystkie dodane pary będą częścią tej umowy.
 
-    Możesz kliknąć przycisk **+**, aby dodać kolejną parę numerów umowy, lub przycisk **-**, aby usunąć podaną już parę numerów umowy.
+    Możesz kliknąć przycisk **+**, aby dodać kolejną parę numerów umowy, lub przycisk **-** , aby usunąć podaną już parę numerów umowy.
 
 4.  W obszarze **Wybierz grupę licencji** wykonaj jedno z następujących działań:
 
@@ -147,7 +146,7 @@ Oprócz umów licencjonowania zbiorowego firmy Microsoft do usługi Intune może
 
 4.  W obszarze **Dodaj szczegóły umowy** podaj następujące informacje:
 
-    -   **Agreement name** (wymagane). Nazwa umowy może mieć co najwyżej 256 znaków i nie może zawierać następujących znaków: **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /**. Nazwa może zawierać spacje.
+    -   **Agreement name** (wymagane). Nazwa umowy może mieć co najwyżej 256 znaków i nie może zawierać następujących znaków: **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /** . Nazwa może zawierać spacje.
 
     -   **Wydawca** (wymagane). Podczas wpisywania nazwy wydawcy usługa pobiera nazwy wszystkich wydawców zawierające wpisane litery. Na przykład jeśli wpiszesz „soft”, usługa pobierze wszystkie nazwy wydawców zawierające ciąg „soft”, takie jak „Microsoft” i „Microsoft Research”. Nazwy wydawców są pobierane z katalogu zasobów oprogramowania. Musisz wybrać wydawcę, aby można było podać nazwę produktu.
 

@@ -19,20 +19,20 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 16a610050a7c4ce094005617304249acdb961878
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57335109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61497570"
 ---
 # <a name="enroll-your-windows-phone-81-device-in-intune"></a>Rejestrowanie urządzenia z systemem Windows Phone 8.1 w usłudze Intune  
 
-Rejestrować urządzenia w celu uzyskania dostępu do pracy lub szkolny adres e-mail, plików i innych zasobów. Po zarejestrowaniu urządzeń organizacja może zapewnić bezpieczeństwo danych firmowych. Aby uzyskać więcej informacji o rejestracji, zobacz [Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia w usłudze Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) i [Lista rzeczy, jakie dział pomocy technicznej Twojej firmy może zobaczyć na Twoim urządzeniu i jakich nie może](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).  
+Rejestracja urządzeń umożliwia dostęp do służbowego konta e-mail, plików i innych zasobów. Po zarejestrowaniu urządzeń organizacja może zapewnić bezpieczeństwo danych firmowych. Aby uzyskać więcej informacji o rejestracji, zobacz [Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia w usłudze Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) i [Lista rzeczy, jakie dział pomocy technicznej Twojej firmy może zobaczyć na Twoim urządzeniu i jakich nie może](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).  
 
-Aby zarejestrować urządzenie w usłudze Intune, postępuj zgodnie z zestawu instrukcji, które są zgodne z uprawnienia lub stan bieżącego konta.
+Aby zarejestrować urządzenie w usłudze Intune, postępuj zgodnie z instrukcjami odpowiadającymi Twoim uprawnieniom lub bieżącemu stanowi konta.
 
-## <a name="enroll-through-company-portal"></a>Rejestrowanie za pośrednictwem portalu firmy  
-Po zainstalowaniu aplikacji Portal firmy od Microsoft Store, wykonaj następujące kroki. 
+## <a name="enroll-through-company-portal"></a>Rejestracja za pośrednictwem aplikacji Portal firmy  
+Po zainstalowaniu aplikacji Portal firmy ze sklepu Microsoft Store wykonaj następujące kroki. 
 
 1.  Naciśnij kolejno pozycje **Start** > **Sklep**.  
 
@@ -77,8 +77,8 @@ Rejestrowanie urządzenia:
 
     ![Ekran po dodaniu konta](./media/WP81-enroll-4-account-added.png)  
 
-## <a name="enroll-through-settings-app"></a>Rejestrowanie za pomocą ustawień aplikacji  
-Wykonaj następujące kroki, jeśli nie masz dostępu do Microsoft Store na urządzeniu Windows Phone lub jeśli nie masz Account firmy Microsoft.
+## <a name="enroll-through-settings-app"></a>Rejestracja za pośrednictwem aplikacji Ustawienia  
+Jeśli nie możesz uzyskać dostępu do sklepu Microsoft Store na urządzeniu z systemem Windows Phone lub nie masz konta Microsoft, wykonaj następujące kroki.
 
 1.  Naciśnij kolejno pozycje **Ustawienia** &gt; **Miejsce pracy**.  
 

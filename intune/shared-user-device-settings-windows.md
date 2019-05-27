@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 04/01/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 535f66c68b066454ce9706b1dd1d7a4fce5c265c
-ms.sourcegitcommit: e63e3debb5f4d9a757f767913e72e39742137b17
-ms.translationtype: HT
+ms.openlocfilehash: 67393f83ecd76250e01deef3eee20aa1206b3f99
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58788491"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66040548"
 ---
 # <a name="windows-10-and-later-settings-to-manage-shared-devices-using-intune"></a>Ustawienia systemu Windows 10 oraz nowszych wersji służące do zarządzania urządzeniami udostępnionymi przy użyciu usługi Intune
 
@@ -47,16 +46,16 @@ Aby uzyskać więcej informacji na temat tej funkcji w usłudze Intune, zobacz [
   - **Gość i domena**: tworzy konto gościa lokalnie na urządzeniu i w usłudze Azure Active Directory (AD).
 - **Zarządzanie kontami**: ustaw pozycję **Włącz**, aby automatycznie usuwać konta lokalne utworzone przez gości oraz konta w usługach AD i Azure AD. Gdy użytkownik wyloguje się z urządzenia lub gdy zostanie uruchomiona konserwacja systemu, te konta zostaną usunięte. Gdy to ustawienie jest włączone, należy również skonfigurować:
   - **Usuwanie kont**: określ, kiedy będą usuwane konta — **Po przekroczeniu progu przestrzeni dyskowej**, **Po przekroczeniu progu przestrzeni dyskowej i czasu nieaktywności** lub **Natychmiast po wylogowaniu**. Wprowadź też następujące ustawienia:
-    - **Próg rozpoczęcia usuwania (%)**: wprowadź wartość procentową miejsca na dysku (od 0 do 100). Gdy łączna ilość miejsca na dysku/w pamięci urządzenia spadnie poniżej wprowadzonej wartości, konta zostaną usunięte z pamięci podręcznej. Konta są usuwane w trybie ciągłym w celu odzyskiwania miejsca dyskowego. Konta, które są nieaktywne najdłużej, są usuwane w pierwszej kolejności.
-    - **Próg zatrzymania usuwania (%)**: wprowadź wartość procentową miejsca na dysku (od 0 do 100). Gdy łączna ilość miejsca na dysku/w pamięci urządzenia będzie odpowiadać wprowadzonej wartości, proces usuwania zostanie zatrzymany.
+    - **Próg rozpoczęcia usuwania (%)** : wprowadź wartość procentową miejsca na dysku (od 0 do 100). Gdy łączna ilość miejsca na dysku/w pamięci urządzenia spadnie poniżej wprowadzonej wartości, konta zostaną usunięte z pamięci podręcznej. Konta są usuwane w trybie ciągłym w celu odzyskiwania miejsca dyskowego. Konta, które są nieaktywne najdłużej, są usuwane w pierwszej kolejności.
+    - **Próg zatrzymania usuwania (%)** : wprowadź wartość procentową miejsca na dysku (od 0 do 100). Gdy łączna ilość miejsca na dysku/w pamięci urządzenia będzie odpowiadać wprowadzonej wartości, proces usuwania zostanie zatrzymany.
 
   Ustaw w pozycji **Wyłącz**, aby zachować konta lokalne, konta usługi AD oraz Azure AD utworzone przez gości.
 
 - **Magazyn lokalny**: wybierz opcję **Włączone**, aby uniemożliwić użytkownikom zapisywanie i wyświetlanie plików na dysku twardym urządzenia. Wybierz opcję **Wyłączone**, aby umożliwić użytkownikom wyświetlanie i zapisywanie plików lokalnie za pomocą Eksploratora plików. Domyślna opcja **Nieskonfigurowane** oznacza, że to ustawienie jest niezarządzane przez usługę Intune i nie wypycha żadnych zasad w celu kontroli tego ustawienia na urządzeniu.
 - **Zasady dotyczące zasilania**: po ustawieniu opcji **Włączone** użytkownicy nie mogą wyłączyć opcji hibernacji, nie mogą zmieniać działań związanych z trybem uśpienia (na przykład zamykania pokrywy) ani nie mogą zmieniać ustawień zasilania. Po ustawieniu opcji **Wyłączone**, użytkownicy mogą wprowadzić urządzenie w tryb hibernacji, mogą zamknąć pokrywę, aby wprowadzić urządzenie w stan uśpienia, i mogą zmieniać ustawienia zasilania. Domyślna opcja **Nieskonfigurowane** oznacza, że to ustawienie jest niezarządzane przez usługę Intune i nie wypycha żadnych zasad w celu kontroli tego ustawienia na urządzeniu.
-- **Limit czasu uśpienia (w sekundach)**: wpisz, po ilu sekundach (od 0 do 100) nieaktywności urządzenie przejdzie w stan uśpienia. Jeśli nie ustawisz czasu, urządzenie przejdzie w stan uśpienia po upływie 60 minut.
+- **Limit czasu uśpienia (w sekundach)** : wpisz, po ilu sekundach (od 0 do 100) nieaktywności urządzenie przejdzie w stan uśpienia. Jeśli nie ustawisz czasu, urządzenie przejdzie w stan uśpienia po upływie 60 minut.
 - **Zaloguj, kiedy komputer wznowi pracę po uśpieniu**: ustaw opcję **Włączone**, aby użytkownicy musieli zalogować się przy użyciu hasła, gdy urządzenie wznawia pracę po uśpieniu. Wybierz opcję **Wyłączone**, aby użytkownicy nie musieli wprowadzać nazwy użytkownika i hasła. Domyślna opcja **Nieskonfigurowane** oznacza, że to ustawienie jest niezarządzane przez usługę Intune i nie wypycha żadnych zasad w celu kontroli tego ustawienia na urządzeniu.
-- **Godzina rozpoczęcia konserwacji (w minutach od północy)**: wprowadź czas w minutach (od 0 do 1440), po którym zostaną uruchomione automatyczne zadania konserwacji, na przykład Windows Update. Domyślna godzina rozpoczęcia to północ, czyli zero (`0`) minut. Zmień czas rozpoczęcia, wprowadzając czas rozpoczęcia w minutach po północy. Jeśli chcesz na przykład, aby konserwacja rozpoczynała się o 2:00, wprowadź liczbę `120`. Jeśli chcesz, aby konserwacja rozpoczynała się o 20:00, wprowadź liczbę `1200`.
+- **Godzina rozpoczęcia konserwacji (w minutach od północy)** : wprowadź czas w minutach (od 0 do 1440), po którym zostaną uruchomione automatyczne zadania konserwacji, na przykład Windows Update. Domyślna godzina rozpoczęcia to północ, czyli zero (`0`) minut. Zmień czas rozpoczęcia, wprowadzając czas rozpoczęcia w minutach po północy. Jeśli chcesz na przykład, aby konserwacja rozpoczynała się o 2:00, wprowadź liczbę `120`. Jeśli chcesz, aby konserwacja rozpoczynała się o 20:00, wprowadź liczbę `1200`.
 - **Zasady dotyczące edukacji**: wybierz opcję **Włączone**, aby używać ustawień zalecanych, które są bardziej restrykcyjne, podczas korzystania z urządzeń w szkołach. Wybierz opcję **Wyłączone**, aby nie korzystać z domyślnych i zalecanych ustawień dotyczących edukacji. Domyślna opcja **Nieskonfigurowane** oznacza, że to ustawienie jest niezarządzane przez usługę Intune i nie wypycha żadnych zasad w celu kontroli tego ustawienia na urządzeniu.
 
   Aby uzyskać więcej informacji na temat zasad dotyczących edukacji, zobacz [Windows 10 configuration recommendations for education customers (Zalecenia konfiguracji systemu Windows 10 dla klientów w instytucjach edukacyjnych)](https://docs.microsoft.com/education/windows/configure-windows-for-education).

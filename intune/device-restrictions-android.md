@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 11/13/2018
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -16,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: edb01e1cbe5fdbc79b48ee90e39fe45a2ccefb2a
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: eeb70727a187a769e56a9cfd517ecd7b583ba1c1
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566356"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66042466"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Listy ustawień ograniczeń urządzeń z systemami Android i Samsung Knox Standard w usłudze Intune
 
@@ -33,17 +32,17 @@ W tym artykule opisano wszystkie ustawienia ograniczeń urządzenia, które moż
 ## <a name="general"></a>Ogólne
 
 - **Aparat fotograficzny**: wybierz pozycję **Blokuj**, aby uniemożliwić dostęp do aparatu. Pozycja **Nieskonfigurowane** zezwala na dostęp do aparatu urządzenia.
-- **Kopiuj i wklej (tylko rozwiązanie Samsung Knox)**: wybierz pozycję **Blokuj**, aby uniemożliwić kopiowanie i wklejanie. Pozycja **Nieskonfigurowane** umożliwia używanie funkcji kopiowania i wklejania na urządzeniu.
-- **Udostępnianie schowka między aplikacjami (tylko rozwiązanie Samsung Knox)**: wybierz pozycję **Blokuj**, aby uniemożliwić korzystanie ze schowka w celu kopiowania i wklejania między aplikacjami. Pozycja **Nieskonfigurowane** umożliwia wykorzystanie schowka do kopiowania i wklejania między aplikacjami.
-- **Przesyłanie danych diagnostycznych (tylko rozwiązanie Samsung Knox)**: pozycja **Blokuj** uniemożliwia użytkownikowi przesyłanie danych diagnostycznych z urządzenia. Pozycja **Nieskonfigurowane** zezwala użytkownikowi na przesyłanie danych.
-- **Czyszczenie (tylko rozwiązanie Samsung Knox)**: umożliwia użytkownikowi uruchamianie akcji [czyszczenia](devices-wipe.md).
-- **Geolokalizacja (tylko rozwiązanie Samsung Knox)**: wybierz pozycję **Blokuj**, aby wyłączyć używanie informacji o lokalizacji na urządzeniu. Pozycja **Nieskonfigurowane** umożliwia urządzeniu korzystanie z informacji o lokalizacji.
-- **Wyłączanie zasilania (tylko rozwiązanie Samsung Knox)**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikowi wyłączanie zasilania urządzenia. Jeśli to ustawienie zostanie wyłączone, nie będzie można zdefiniować ustawienia **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia** i nie będzie ono działać. Pozycja **Nieskonfigurowane** umożliwia użytkownikowi wyłączanie urządzenia.
-- **Przechwytywanie ekranu (tylko rozwiązanie Samsung Knox)**: wybierz pozycję **Blokuj**, aby uniemożliwić tworzenie zrzutów ekranu. Pozycja **Nieskonfigurowane** umożliwia użytkownikowi przechwytywanie zawartości ekranu w formie obrazu.
-- **Asystent głosowy (tylko rozwiązanie Samsung Knox)**: wybierz pozycję **Blokuj**, aby wyłączyć usługę S Voice. Pozycja **Nieskonfigurowane** umożliwia korzystanie z usługi i aplikacji S Voice na urządzeniu. To ustawienie nie ma zastosowania w przypadku asystenta Bixby ani asystenta głosowego ułatwień dostępu, który odczytuje zawartość ekranu na głos.
-- **YouTube (tylko rozwiązanie Samsung Knox)**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom korzystanie z aplikacji YouTube. Pozycja **Nieskonfigurowane** umożliwia używanie aplikacji YouTube na urządzeniu.
-- **Urządzenia udostępnione (tylko rozwiązanie Samsung Knox)**: umożliwia skonfigurowanie zarządzanego urządzenia z systemem Samsung Knox Standard jako urządzenia udostępnionego. Po wybraniu ustawienia**Zezwalaj** użytkownicy końcowi mogą zalogować się na urządzeniu i wylogować się z niego przy użyciu swoich poświadczeń usługi Azure AD. Urządzenie pozostaje zarządzane, niezależnie od tego, czy jest używane.</br>Gdy jest używana z profilem certyfikatu SCEP, funkcja ta umożliwia użytkownikom końcowym udostępnianie urządzenia z tym samym zestawem aplikacji wszystkim użytkownikom. Jednak każdy użytkownik ma własny certyfikat użytkownika SCEP. Gdy użytkownicy się wylogują, wszystkie dane aplikacji są usuwane. Funkcja ta jest ograniczona tylko do aplikacji LOB. </br>Pozycja **Nieskonfigurowane** uniemożliwia wielu użytkownikom końcowym logowanie do aplikacji Portal firmy na urządzeniu przy użyciu poświadczeń usługi Azure AD.
-- **Zablokuj możliwość zmiany daty i godziny (Samsung Knox)**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikowi zmianę ustawień daty i godziny na urządzeniu. Pozycja **Nieskonfigurowane** umożliwia użytkownikom zmianę ustawień daty i godziny.
+- **Kopiuj i wklej (tylko rozwiązanie Samsung Knox)** : wybierz pozycję **Blokuj**, aby uniemożliwić kopiowanie i wklejanie. Pozycja **Nieskonfigurowane** umożliwia używanie funkcji kopiowania i wklejania na urządzeniu.
+- **Udostępnianie schowka między aplikacjami (tylko rozwiązanie Samsung Knox)** : wybierz pozycję **Blokuj**, aby uniemożliwić korzystanie ze schowka w celu kopiowania i wklejania między aplikacjami. Pozycja **Nieskonfigurowane** umożliwia wykorzystanie schowka do kopiowania i wklejania między aplikacjami.
+- **Przesyłanie danych diagnostycznych (tylko rozwiązanie Samsung Knox)** : pozycja **Blokuj** uniemożliwia użytkownikowi przesyłanie danych diagnostycznych z urządzenia. Pozycja **Nieskonfigurowane** zezwala użytkownikowi na przesyłanie danych.
+- **Czyszczenie (tylko rozwiązanie Samsung Knox)** : umożliwia użytkownikowi uruchamianie akcji [czyszczenia](devices-wipe.md).
+- **Geolokalizacja (tylko rozwiązanie Samsung Knox)** : wybierz pozycję **Blokuj**, aby wyłączyć używanie informacji o lokalizacji na urządzeniu. Pozycja **Nieskonfigurowane** umożliwia urządzeniu korzystanie z informacji o lokalizacji.
+- **Wyłączanie zasilania (tylko rozwiązanie Samsung Knox)** : wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikowi wyłączanie zasilania urządzenia. Jeśli to ustawienie zostanie wyłączone, nie będzie można zdefiniować ustawienia **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia** i nie będzie ono działać. Pozycja **Nieskonfigurowane** umożliwia użytkownikowi wyłączanie urządzenia.
+- **Przechwytywanie ekranu (tylko rozwiązanie Samsung Knox)** : wybierz pozycję **Blokuj**, aby uniemożliwić tworzenie zrzutów ekranu. Pozycja **Nieskonfigurowane** umożliwia użytkownikowi przechwytywanie zawartości ekranu w formie obrazu.
+- **Asystent głosowy (tylko rozwiązanie Samsung Knox)** : wybierz pozycję **Blokuj**, aby wyłączyć usługę S Voice. Pozycja **Nieskonfigurowane** umożliwia korzystanie z usługi i aplikacji S Voice na urządzeniu. To ustawienie nie ma zastosowania w przypadku asystenta Bixby ani asystenta głosowego ułatwień dostępu, który odczytuje zawartość ekranu na głos.
+- **YouTube (tylko rozwiązanie Samsung Knox)** : wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom korzystanie z aplikacji YouTube. Pozycja **Nieskonfigurowane** umożliwia używanie aplikacji YouTube na urządzeniu.
+- **Urządzenia udostępnione (tylko rozwiązanie Samsung Knox)** : umożliwia skonfigurowanie zarządzanego urządzenia z systemem Samsung Knox Standard jako urządzenia udostępnionego. Po wybraniu ustawienia**Zezwalaj** użytkownicy końcowi mogą zalogować się na urządzeniu i wylogować się z niego przy użyciu swoich poświadczeń usługi Azure AD. Urządzenie pozostaje zarządzane, niezależnie od tego, czy jest używane.</br>Gdy jest używana z profilem certyfikatu SCEP, funkcja ta umożliwia użytkownikom końcowym udostępnianie urządzenia z tym samym zestawem aplikacji wszystkim użytkownikom. Jednak każdy użytkownik ma własny certyfikat użytkownika SCEP. Gdy użytkownicy się wylogują, wszystkie dane aplikacji są usuwane. Funkcja ta jest ograniczona tylko do aplikacji LOB. </br>Pozycja **Nieskonfigurowane** uniemożliwia wielu użytkownikom końcowym logowanie do aplikacji Portal firmy na urządzeniu przy użyciu poświadczeń usługi Azure AD.
+- **Zablokuj możliwość zmiany daty i godziny (Samsung Knox)** : wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikowi zmianę ustawień daty i godziny na urządzeniu. Pozycja **Nieskonfigurowane** umożliwia użytkownikom zmianę ustawień daty i godziny.
 
 ## <a name="password"></a>Hasło
 
@@ -55,7 +54,7 @@ W tym artykule opisano wszystkie ustawienia ograniczeń urządzenia, które moż
 - **Minimalna długość hasła**: wprowadź minimalną długość hasła, które musi podać użytkownik (od 4 do 16 znaków).
 - **Maksymalna liczba minut braku aktywności przed zablokowaniem ekranu**: wprowadź maksymalną dopuszczalną liczbę minut braku aktywności przed automatycznym zablokowaniem ekranu. Na urządzeniu użytkownik końcowy nie może ustawić wartości czasu przekraczającej czas skonfigurowany w profilu. Użytkownik końcowy może ustawić niższą wartość czasu. Na przykład jeśli profil jest ustawiony na 15 minut, użytkownik końcowy może ustawić tę wartość na 5 minut. Użytkownik końcowy nie może ustawić tej wartości na 30 minut. 
 - **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia**: wprowadź liczbę dopuszczalnych nieudanych logowań przed wyczyszczeniem zawartości urządzenia.
-- **Wygaśnięcie hasła (dni)**: wprowadź liczbę dni, po której należy zmienić hasło urządzenia.
+- **Wygaśnięcie hasła (dni)** : wprowadź liczbę dni, po której należy zmienić hasło urządzenia.
 - **Wymagany typ hasła**: wprowadź wymagany poziom złożoności hasła oraz określ możliwość stosowania urządzeń biometrycznych. Dostępne opcje:
   - **Ustawienie domyślne urządzenia**
   - **Zabezpieczenia biometryczne na niskim poziomie**
@@ -65,7 +64,7 @@ W tym artykule opisano wszystkie ustawienia ograniczeń urządzenia, które moż
   - **Co najmniej alfanumeryczne**
   - **Co najmniej alfanumeryczne z symbolami**
 - **Zapobiegaj ponownemu używaniu poprzednich haseł**: nie dopuszcza do tego, by użytkownik końcowy utworzył hasło, które było wcześniej używane.
-- **Odblokowywanie odciskiem palca (tylko rozwiązanie Samsung Knox)**: wybierz pozycję **Blokuj**, aby uniemożliwić użycie odcisku palca do odblokowywania urządzenia. Pozycja **Nieskonfigurowane** zezwala użytkownikowi na odblokowywanie urządzenia przy użyciu odcisku palca.
+- **Odblokowywanie odciskiem palca (tylko rozwiązanie Samsung Knox)** : wybierz pozycję **Blokuj**, aby uniemożliwić użycie odcisku palca do odblokowywania urządzenia. Pozycja **Nieskonfigurowane** zezwala użytkownikowi na odblokowywanie urządzenia przy użyciu odcisku palca.
 - **Blokada Smart Lock i inni agenci zaufania**: wybierz pozycję **Blokuj**, aby uniemożliwić funkcji Smart Lock lub innym agentom zaufania dostosowywanie ustawień blokady ekranu (Samsung KNOX Standard 5.0+). Ta funkcja telefonu, zwana również czasami agentem zaufania, umożliwia wyłączenie lub obejście hasła ekranu blokady urządzenia, jeśli urządzenie znajduje się w zaufanej lokalizacji. Na przykład można skorzystać z tej funkcji, gdy urządzenie zostało połączone z konkretnym urządzeniem Bluetooth lub znajduje się w pobliżu tagu NFC. Możesz użyć tego ustawienia, aby uniemożliwić użytkownikom konfigurowanie funkcji blokady inteligentnej.
 - **Szyfrowanie**: wybierz pozycję **Wymagaj**, aby szyfrować pliki na urządzeniu. Nie wszystkie urządzenia obsługują szyfrowanie. W celu użycia tej funkcji można również: 
   1. Ustawić opcję **Hasło** na **Wymagaj**.
@@ -84,7 +83,7 @@ W przypadku ustawienia opcji **Wymagany typ hasła** na **Złożona wartość li
 
 ## <a name="google-play-store"></a>Sklep Google Play
 
-- **Sklep Google Play (tylko rozwiązanie Samsung Knox)**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom korzystanie ze sklepu Google Play. Pozycja **Nieskonfigurowane** umożliwia użytkownikowi uzyskiwanie dostępu do sklepu Google Play na urządzeniu.
+- **Sklep Google Play (tylko rozwiązanie Samsung Knox)** : wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom korzystanie ze sklepu Google Play. Pozycja **Nieskonfigurowane** umożliwia użytkownikowi uzyskiwanie dostępu do sklepu Google Play na urządzeniu.
 
 ## <a name="restricted-apps"></a>Aplikacje z ograniczeniami
 
@@ -103,15 +102,15 @@ Aby dodać aplikację do tych list, możesz:
 
 ## <a name="browser"></a>Przeglądarka
 
-- **Przeglądarka internetowa (tylko rozwiązanie Samsung Knox)**: wybierz pozycję **Blokuj**, aby uniemożliwić używanie domyślnej przeglądarki internetowej na urządzeniu. Pozycja **Nieskonfigurowane** umożliwia korzystanie z domyślnej przeglądarki internetowej urządzenia.
-- **Autowypełnianie (tylko rozwiązanie Samsung Knox)**: wybierz pozycję **Blokuj**, aby uniemożliwić automatyczne uzupełnianie tekstu w przeglądarce. Pozycja **Nieskonfigurowane** umożliwia korzystanie z funkcji automatycznego wypełniania w przeglądarce internetowej.
-- **Pliki cookie (tylko rozwiązanie Samsung Knox)**: wybierz sposób obsługi plików cookie z witryn internetowych na urządzeniu. Dostępne opcje:
+- **Przeglądarka internetowa (tylko rozwiązanie Samsung Knox)** : wybierz pozycję **Blokuj**, aby uniemożliwić używanie domyślnej przeglądarki internetowej na urządzeniu. Pozycja **Nieskonfigurowane** umożliwia korzystanie z domyślnej przeglądarki internetowej urządzenia.
+- **Autowypełnianie (tylko rozwiązanie Samsung Knox)** : wybierz pozycję **Blokuj**, aby uniemożliwić automatyczne uzupełnianie tekstu w przeglądarce. Pozycja **Nieskonfigurowane** umożliwia korzystanie z funkcji automatycznego wypełniania w przeglądarce internetowej.
+- **Pliki cookie (tylko rozwiązanie Samsung Knox)** : wybierz sposób obsługi plików cookie z witryn internetowych na urządzeniu. Dostępne opcje:
   - Zezwalaj
   - Blokuj wszystkie pliki cookie
   - Zezwalaj na pliki cookie z odwiedzonych witryn internetowych
   - Zezwalaj na pliki cookie z aktualnej witryny internetowej
-- **JavaScript (tylko rozwiązanie Samsung Knox)**: wybierz pozycję **Blokuj**, aby uniemożliwić uruchamianie skryptów języka Java w przeglądarce internetowej. Pozycja **Nieskonfigurowane** umożliwia przeglądarce internetowej urządzenia uruchamianie skryptów Java.
-- **Wyskakujące okienka (tylko rozwiązanie Samsung Knox)**: wybierz pozycję **Blokuj**, aby uniemożliwić wyświetlanie wyskakujących okienek w przeglądarce internetowej. Pozycja **Nieskonfigurowane** umożliwia wyświetlane wyskakujących okienek w przeglądarce internetowej.
+- **JavaScript (tylko rozwiązanie Samsung Knox)** : wybierz pozycję **Blokuj**, aby uniemożliwić uruchamianie skryptów języka Java w przeglądarce internetowej. Pozycja **Nieskonfigurowane** umożliwia przeglądarce internetowej urządzenia uruchamianie skryptów Java.
+- **Wyskakujące okienka (tylko rozwiązanie Samsung Knox)** : wybierz pozycję **Blokuj**, aby uniemożliwić wyświetlanie wyskakujących okienek w przeglądarce internetowej. Pozycja **Nieskonfigurowane** umożliwia wyświetlane wyskakujących okienek w przeglądarce internetowej.
 
 ## <a name="allow-or-block-apps"></a>Zezwalanie na aplikacje lub ich blokowanie
 
@@ -131,21 +130,21 @@ Dla każdego ustawienia dodaj listę aplikacji. Dostępne opcje:
 
 ## <a name="cloud-and-storage"></a>Chmura i magazyn
 
-- **Kopia zapasowa Google (tylko rozwiązanie Samsung Knox)**: wybierz pozycję **Blokuj**, aby uniemożliwić synchronizowanie urządzenia z kopią zapasową Google. Pozycja **Nieskonfigurowane** pozwala na korzystanie z kopii zapasowych w usłudze Google.
-- **Automatyczna synchronizacja z kontem Google (tylko rozwiązanie Samsung Knox)**: wybierz pozycję **Blokuj**, aby uniemożliwić działanie funkcji automatycznej synchronizacji konta Google na urządzeniu. Pozycja **Nieskonfigurowane** zezwala na automatyczną synchronizację ustawień konta Google.
-- **Magazyn wymienny (tylko rozwiązanie Samsung Knox)**: wybierz **Blokuj**, aby uniemożliwić korzystanie z magazynu wymiennego na urządzeniu. Pozycja **Nieskonfigurowane** umożliwia używanie na urządzeniu magazynu wymiennego, takiego jak karta SD.
-- **Szyfrowanie na kartach pamięci (tylko rozwiązanie Samsung Knox)**: pozycja **Wymagaj** wymusza szyfrowanie kart pamięci. Pozycja **Nieskonfigurowane** zezwala na używanie niezaszyfrowanych kart pamięci. Nie wszystkie urządzenia obsługują szyfrowanie kart pamięci. Aby to sprawdzić, skontaktuj się z producentem urządzenia.
+- **Kopia zapasowa Google (tylko rozwiązanie Samsung Knox)** : wybierz pozycję **Blokuj**, aby uniemożliwić synchronizowanie urządzenia z kopią zapasową Google. Pozycja **Nieskonfigurowane** pozwala na korzystanie z kopii zapasowych w usłudze Google.
+- **Automatyczna synchronizacja z kontem Google (tylko rozwiązanie Samsung Knox)** : wybierz pozycję **Blokuj**, aby uniemożliwić działanie funkcji automatycznej synchronizacji konta Google na urządzeniu. Pozycja **Nieskonfigurowane** zezwala na automatyczną synchronizację ustawień konta Google.
+- **Magazyn wymienny (tylko rozwiązanie Samsung Knox)** : wybierz **Blokuj**, aby uniemożliwić korzystanie z magazynu wymiennego na urządzeniu. Pozycja **Nieskonfigurowane** umożliwia używanie na urządzeniu magazynu wymiennego, takiego jak karta SD.
+- **Szyfrowanie na kartach pamięci (tylko rozwiązanie Samsung Knox)** : pozycja **Wymagaj** wymusza szyfrowanie kart pamięci. Pozycja **Nieskonfigurowane** zezwala na używanie niezaszyfrowanych kart pamięci. Nie wszystkie urządzenia obsługują szyfrowanie kart pamięci. Aby to sprawdzić, skontaktuj się z producentem urządzenia.
 
 ## <a name="cellular-and-connectivity"></a>Sieć komórkowa i łączność
 
-- **Roaming danych (tylko rozwiązanie Samsung Knox)**: wybierz pozycję **Blokuj**, aby uniemożliwić roaming danych w sieci komórkowej. Pozycja **Nieskonfigurowane** zezwala na roaming danych, gdy urządzenie jest w sieci komórkowej.
-- **Wiadomości SMS/MMS (tylko rozwiązanie Samsung Knox)**: wybierz pozycję **Blokuj**, aby uniemożliwić obsługę wiadomości tekstowych na urządzeniu. Pozycja **Nieskonfigurowane** umożliwia korzystanie z wiadomości SMS i MMS na urządzeniu.
-- **Wybieranie głosowe (tylko rozwiązanie Samsung Knox)**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom korzystanie z funkcji wybierania głosowego na urządzeniu. Pozycja **Nieskonfigurowane** umożliwia wybieranie głosowe na urządzeniu.
-- **Roaming połączeń głosowych (tylko rozwiązanie Samsung Knox)**: wybierz pozycję **Blokuj**, aby uniemożliwić roaming połączeń głosowych w sieci komórkowej. Pozycja **Nieskonfigurowane** zezwala na roaming połączeń głosowych, gdy urządzenie jest w sieci komórkowej.
-- **Bluetooth (tylko rozwiązanie Samsung Knox)**: wybierz pozycję **Blokuj**, aby uniemożliwić używanie połączenia Bluetooth na urządzeniu. Pozycja **Nieskonfigurowane** umożliwia używanie połączenia Bluetooth na urządzeniu.
-- **NFC (tylko rozwiązanie Samsung Knox)**: wybierz pozycję **Blokuj**, aby zatrzymać działanie technologii NFC (Near Field Communication). Pozycja **Nieskonfigurowane** umożliwia wykonywanie operacji korzystających z komunikacji zbliżeniowej na obsługiwanych urządzeniach.
-- **Wi-Fi (tylko rozwiązanie Samsung Knox)**: wybierz pozycję **Blokuj**, aby uniemożliwić używanie sieci Wi-Fi na urządzeniu. Pozycja **Nieskonfigurowane** umożliwia używanie funkcji sieci Wi-Fi na urządzeniu.
-- **Tethering Wi-Fi (tylko rozwiązanie Samsung Knox)**: wybierz pozycję **Blokuj**, aby uniemożliwić używanie tetheringu sieci Wi-Fi na urządzeniu. Pozycja **Nieskonfigurowane** umożliwia korzystanie z funkcji tetheringu sieci Wi-Fi urządzenia.
+- **Roaming danych (tylko rozwiązanie Samsung Knox)** : wybierz pozycję **Blokuj**, aby uniemożliwić roaming danych w sieci komórkowej. Pozycja **Nieskonfigurowane** zezwala na roaming danych, gdy urządzenie jest w sieci komórkowej.
+- **Wiadomości SMS/MMS (tylko rozwiązanie Samsung Knox)** : wybierz pozycję **Blokuj**, aby uniemożliwić obsługę wiadomości tekstowych na urządzeniu. Pozycja **Nieskonfigurowane** umożliwia korzystanie z wiadomości SMS i MMS na urządzeniu.
+- **Wybieranie głosowe (tylko rozwiązanie Samsung Knox)** : wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom korzystanie z funkcji wybierania głosowego na urządzeniu. Pozycja **Nieskonfigurowane** umożliwia wybieranie głosowe na urządzeniu.
+- **Roaming połączeń głosowych (tylko rozwiązanie Samsung Knox)** : wybierz pozycję **Blokuj**, aby uniemożliwić roaming połączeń głosowych w sieci komórkowej. Pozycja **Nieskonfigurowane** zezwala na roaming połączeń głosowych, gdy urządzenie jest w sieci komórkowej.
+- **Bluetooth (tylko rozwiązanie Samsung Knox)** : wybierz pozycję **Blokuj**, aby uniemożliwić używanie połączenia Bluetooth na urządzeniu. Pozycja **Nieskonfigurowane** umożliwia używanie połączenia Bluetooth na urządzeniu.
+- **NFC (tylko rozwiązanie Samsung Knox)** : wybierz pozycję **Blokuj**, aby zatrzymać działanie technologii NFC (Near Field Communication). Pozycja **Nieskonfigurowane** umożliwia wykonywanie operacji korzystających z komunikacji zbliżeniowej na obsługiwanych urządzeniach.
+- **Wi-Fi (tylko rozwiązanie Samsung Knox)** : wybierz pozycję **Blokuj**, aby uniemożliwić używanie sieci Wi-Fi na urządzeniu. Pozycja **Nieskonfigurowane** umożliwia używanie funkcji sieci Wi-Fi na urządzeniu.
+- **Tethering Wi-Fi (tylko rozwiązanie Samsung Knox)** : wybierz pozycję **Blokuj**, aby uniemożliwić używanie tetheringu sieci Wi-Fi na urządzeniu. Pozycja **Nieskonfigurowane** umożliwia korzystanie z funkcji tetheringu sieci Wi-Fi urządzenia.
 
 ## <a name="kiosk"></a>Kiosk
 

@@ -8,7 +8,6 @@ ms.author: erikre
 manager: dougeby
 ms.date: 04/09/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 30d7b2acb6acf48699df92075349b06e5ad9e742
-ms.sourcegitcommit: 617bd653c34c1e6a4e2ad61811c5912f8dab775c
+ms.openlocfilehash: 4edf6e1e2b0ed57ec221e445bc171895fb9e0072
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/10/2019
-ms.locfileid: "59476514"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66042672"
 ---
 # <a name="intune-data-warehouse-application-only-authentication"></a>Uwierzytelnianie tylko aplikacji w magazynie danych usługi Intune
 
@@ -79,7 +78,7 @@ W tej sekcji opisano przyznawanie uprawnień do aplikacji.
 1.  W bloku **Ustawienia** wybierz pozycję **Wymagane uprawnienia**.
 2.  Kliknij pozycję **Dodaj**.
 3.  Wybierz pozycję **Dodaj interfejs API**, aby wyświetlić blok **Wybierz interfejs API**.
-4.  Wybierz pozycję **Interfejs API usługi Microsoft Intune (MicrosoftIntuneAPI)**, a następnie kliknij pozycję **Wybierz** w bloku **Wybierz interfejs API**. Zostanie wybrany krok **Wybierz uprawnienia** i wyświetli się blok **Włącz dostęp**.
+4.  Wybierz pozycję **Interfejs API usługi Microsoft Intune (MicrosoftIntuneAPI)** , a następnie kliknij pozycję **Wybierz** w bloku **Wybierz interfejs API**. Zostanie wybrany krok **Wybierz uprawnienia** i wyświetli się blok **Włącz dostęp**.
 5.  Wybierz opcję **Uzyskaj dane magazynu danych z programu Microsoft Intune** w sekcji **Uprawnienia aplikacji**.
 6.  Kliknij przycisk **Wybierz** w bloku **Włącz dostęp**.
 7.  Kliknij przycisk **Gotowe** w bloku **Dodaj dostęp do interfejsu API**.
@@ -90,8 +89,8 @@ W tej sekcji opisano przyznawanie uprawnień do aplikacji.
 Za pomocą programu Visual Studio utwórz projekt aplikacji konsoli (.NET Framework), który obsługuje program .NET Framework i używa języka C#.
 
 1.  Wybierz kolejno pozycje **Plik** > **Nowe** > **Projekt**, aby wyświetlić okno dialogowe **Nowy projekt**.
-2.  Po lewej stronie wybierz pozycję **Visual C#**, aby wyświetlić wszystkie projekty programu .NET Framework.
-3.  Wybierz pozycję **Aplikacja konsoli (.NET Framework)**, dodaj nazwę aplikacji, a następnie kliknij przycisk **OK**, aby utworzyć aplikację.
+2.  Po lewej stronie wybierz pozycję **Visual C#** , aby wyświetlić wszystkie projekty programu .NET Framework.
+3.  Wybierz pozycję **Aplikacja konsoli (.NET Framework)** , dodaj nazwę aplikacji, a następnie kliknij przycisk **OK**, aby utworzyć aplikację.
 4.  W **Eksploratorze rozwiązań** wybierz pozycję **Program.cs**, aby wyświetlić kod.
 5.  W menu podręcznym wybierz pozycje **Dodaj** > **Nowy element**. Zostanie wyświetlone okno dialogowe **Dodaj nowy element**.
 6.  Po lewej stronie w obszarze **Visual C#** wybierz pozycję **Kod**.

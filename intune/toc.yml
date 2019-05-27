@@ -473,8 +473,8 @@
               href: certificates-s-mime-encryption-sign.md
             - name: Używanie urzędu certyfikacji innej firmy za pomocą protokołu SCEP
               href: certificate-authority-add-scep-overview.md
-            - name: Usługa internetowa Symantec PKI Manager
-              href: certificates-symantec-configure.md
+            - name: Używanie infrastruktury kluczy publicznych aplikacji DigiCert
+              href: certificates-digicert-configure.md
             - name: Usuwanie certyfikatów protokołu SCEP lub PKCS
               href: remove-certificates.md
         - name: Profile sieci komórkowej eSIM

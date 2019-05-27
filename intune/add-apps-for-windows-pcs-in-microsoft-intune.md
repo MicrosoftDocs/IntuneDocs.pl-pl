@@ -8,7 +8,6 @@ ms.author: dougeby
 manager: dougeby
 ms.date: 08/29/2018
 ms.topic: archived
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4f6a8c3e460e9806aabadd710ec102aa77d44ab
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: 86cbea29233d792006bce68fcd2a36fb1a7ec0a6
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58798897"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66050197"
 ---
 # <a name="add-apps-for-windows-pcs-that-run-the-intune-software-client"></a>Dodawanie aplikacji dla komputerów z systemem Windows, na których jest uruchomione oprogramowanie klienckie usługi Intune
 
@@ -78,7 +77,7 @@ Wydawca oprogramowania usługi Intune służy do skonfigurowania właściwości 
 5. Na stronie **Reguły wykrywania** można skonfigurować reguły wykrywania, czy konfigurowana aplikacja została już zainstalowana na komputerze PC. Można też użyć domyślnych reguł wykrywania do automatycznego zastępowania wszystkich zainstalowanych wcześniej wersji aplikacji. Ta opcja dotyczy Instalatora Windows (tylko pliki EXE).
 
    Dostępne są następujące reguły możliwe do skonfigurowania:
-   - **Plik istnieje**. Określ ścieżkę do pliku, który chcesz wykryć. Możesz wyszukiwać w folderze **%ProgramFiles%** (co spowoduje wyszukiwanie w folderach **Program Files**\&lt;ścieżka&gt; i **Program Files (x86)**\&lt;ścieżka&gt;) na komputerze lub w folderze **%SystemDrive%** (co spowoduje wyszukiwanie na dysku głównym komputera; zwykle jest to dysk C).
+   - **Plik istnieje**. Określ ścieżkę do pliku, który chcesz wykryć. Możesz wyszukiwać w folderze **%ProgramFiles%** (co spowoduje wyszukiwanie w folderach **Program Files**\&lt;ścieżka&gt; i **Program Files (x86)** \&lt;ścieżka&gt;) na komputerze lub w folderze **%SystemDrive%** (co spowoduje wyszukiwanie na dysku głównym komputera; zwykle jest to dysk C).
    - **Kod produktu MSI istnieje**. Wybierz pozycję **Przeglądaj**, aby wybrać plik Instalatora Windows (MSI), który chcesz wykryć.
    - <strong>Klucz rejestru istnieje</strong>. Określ klucz rejestru rozpoczynający się od ciągu <strong>HKEY_LOCAL_MACHINE\</strong>. Przeszukiwane są ścieżki rejestru w wersji 32-bitowej i 64-bitowej. Jeśli określony klucz istnieje w jednej z tych lokalizacji, reguła wykrywania zostanie spełniona.
 

@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 6/14/2018
 ms.topic: troubleshooting
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0e7ec762e7e7299e400fefedbf7a8810e1da929f
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 000f48f062e9e7300337ade04c8cf872d96eab2a
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57461349"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66040229"
 ---
 # <a name="troubleshoot-software-updates-in-microsoft-intune"></a>Rozwiązywanie problemów z aktualizacjami oprogramowania w usłudze Microsoft Intune
 
@@ -142,7 +141,7 @@ Poniższa tabela zawiera listę kodów błędów programu **Update Agent** usłu
 |**0x80cf3FFD**|OM_E_NON_UI_MODE|Nie można wyświetlić interfejsu użytkownika w trybie innym niż tryb interfejsu użytkownika. Moduły interfejsu użytkownika klienta usługi Windows Update mogą nie być zainstalowane.|
 |**0x80cf3FFE**|OM_E_WUCLTUI_UNSUPPORTED_VERSION|Ta wersja funkcji wyeksportowanych z interfejsu użytkownika klienta usługi Windows Update jest nieobsługiwana.|
 |**0x80cf3FFF**|OM_E_AUCLIENT_UNEXPECTED|Wystąpił błąd interfejsu użytkownika, który nie pasuje do żadnego innego kodu błędu OM_E_AUCLIENT_&#42;.|
-|**0x80cf4007**|OM_E_PT_SOAPCLIENT_SOAPFAULT|Taki sam jak **SOAPCLIENT_SOAPFAULT**. Wystąpił błąd klienta protokołu SOAP z powodu błędu protokołu SOAP, którego typ kodu błędu to **OM_E_PT_SOAP_&#42;**.|
+|**0x80cf4007**|OM_E_PT_SOAPCLIENT_SOAPFAULT|Taki sam jak **SOAPCLIENT_SOAPFAULT**. Wystąpił błąd klienta protokołu SOAP z powodu błędu protokołu SOAP, którego typ kodu błędu to **OM_E_PT_SOAP_&#42;** .|
 |**0x80cf4008**|OM_E_PT_SOAPCLIENT_PARSEFAULT|Taki sam jak **SOAPCLIENT_PARSEFAULT_ERROR**.  Klient protokołu SOAP nie może przeanalizować błędu protokołu SOAP.|
 |**0x80cf400A**|OM_E_PT_SOAPCLIENT_PARSE|Taki sam jak **SOAPCLIENT_PARSE_ERROR**.  Klient protokołu SOAP nie może przeanalizować odpowiedzi z serwera.|
 |**0x80cf400B**|OM_E_PT_SOAP_VERSION|Taki sam jak **SOAP_E_VERSION_MISMATCH**. Klient protokołu SOAP odnalazł nierozpoznawalną przestrzeń nazw dla koperty protokołu SOAP.|
@@ -173,7 +172,7 @@ Poniższa tabela zawiera listę kodów błędów programu **Update Agent** usłu
 |**0x80cf4028**|OM_E_PT_NO_AUTH_COOKIES_CREATED|Agent nie mógł utworzyć żadnych prawidłowych plików cookie uwierzytelniania.|
 |**0x80cf4029**|OM_E_PT_INVALID_CONFIG_PROP|Wartość właściwości konfiguracji jest nieprawidłowa.|
 |**0x80cf402A**|OM_E_PT_CONFIG_PROP_MISSING|Brak wartości właściwości konfiguracji.|
-|**0x80cf402B**|OM_E_PT_HTTP_STATUS_NOT_MAPPED|Nie można ukończyć żądania HTTP, a przyczyna nie odpowiada żadnemu kodowi błędu **OM_E_PT_HTTP_&#42;**.|
+|**0x80cf402B**|OM_E_PT_HTTP_STATUS_NOT_MAPPED|Nie można ukończyć żądania HTTP, a przyczyna nie odpowiada żadnemu kodowi błędu **OM_E_PT_HTTP_&#42;** .|
 |**0x80cf402C**|OM_E_PT_WINHTTP_NAME_NOT_RESOLVED|Taki sam jak **ERROR_WINHTTP_NAME_NOT_RESOLVED**. Nie można ustalić nazwy serwera proxy lub serwera docelowego.|
 |**0x80cf402F**|OM_E_PT_ECP_SUCCEEDED_WITH_ERRORS|Przetwarzanie zewnętrznych plików CAB zostało ukończone z pewnymi błędami.|
 |**0x80cf4030**|OM_E_PT_ECP_INIT_FAILED|Nie ukończono inicjalizacji procesora zewnętrznych plików CAB.|
@@ -182,7 +181,7 @@ Poniższa tabela zawiera listę kodów błędów programu **Update Agent** usłu
 |**0x80cf4033**|OM_E_PT_ECP_FAILURE_TO_EXTRACT_DIGEST|Nie można wyodrębnić skrótu pliku z zewnętrznego pliku CAB.|
 |**0x80cf4034**|OM_E_PT_ECP_FAILURE_TO_DECOMPRESS_CAB_FILE|Nie można zdekompresować zewnętrznego pliku CAB.|
 |**0x80cf4035**|OM_E_PT_ECP_FILE_LOCATION_ERROR|Procesor zewnętrznych plików CAB nie może pobrać lokalizacji plików.|
-|**0x80cf4FFF**|OM_E_PT_UNEXPECTED|Wystąpił błąd komunikacji, który nie pasuje do żadnego innego kodu błędu **OM_E_PT_&#42;**.|
+|**0x80cf4FFF**|OM_E_PT_UNEXPECTED|Wystąpił błąd komunikacji, który nie pasuje do żadnego innego kodu błędu **OM_E_PT_&#42;** .|
 |**0x80cf6001**|OM_E_DM_URLNOTAVAILABLE|Nie można ukończyć operacji menedżera pobierania, ponieważ żądany plik nie ma adresu URL.|
 |**0x80cf6002**|OM_E_DM_INCORRECTFILEHASH|Nie można ukończyć operacji menedżera pobierania, ponieważ nie został rozpoznany skrót pliku.|
 |**0x80cf6003**|OM_E_DM_UNKNOWNALGORITHM|Nie można ukończyć operacji menedżera pobierania, ponieważ metadane pliku zażądały nierozpoznanego algorytmu wyznaczania wartości skrótu.|
@@ -192,7 +191,7 @@ Poniższa tabela zawiera listę kodów błędów programu **Update Agent** usłu
 |**0x80cf6009**|OM_E_DM_BITSTRANSFERERROR|Operacja menedżera pobierania nie powiodła się z powodu nieokreślonego błędu transferu usługi inteligentnego transferu w tle (BITS).|
 |**0x80cf600a**|OM_E_DM_DOWNLOADLOCATIONCHANGED|Pobieranie musi zostać ponownie uruchomione, ponieważ lokalizacja źródła pobierania została zmieniona.|
 |**0x80cf600B**|OM_E_DM_CONTENTCHANGED|Pobieranie musi zostać ponownie uruchomione, ponieważ zawartość aktualizacji została zmieniona w nowej wersji.|
-|**0x80cf6FFF**|OM_E_DM_UNEXPECTED|Wystąpił błąd menedżera pobierania, który nie pasuje do żadnego innego kodu błędu **OM_E_DM_&#42;**.|
+|**0x80cf6FFF**|OM_E_DM_UNEXPECTED|Wystąpił błąd menedżera pobierania, który nie pasuje do żadnego innego kodu błędu **OM_E_DM_&#42;** .|
 |**0x80cf7003**|OM_E_INVALID_EVENT_PAYLOAD|Określono nieprawidłowy ładunek zdarzenia.|
 |**0x80cf7004**|OM_E_INVALID_EVENT_PAYLOADSIZE|Rozmiar przekazanego ładunku zdarzenia jest nieprawidłowy.|
 |**0x80cf7005**|OM_E_SERVICE_NOT_REGISTERED|Usługa jest niezarejestrowana.|
@@ -224,13 +223,13 @@ Poniższa tabela zawiera listę kodów błędów programu **Update Agent** usłu
 |**0x80cf801B**|OM_E_DS_SCHEMAMISMATCH|Schemat bieżącego magazynu danych i schemat tabeli w kopii zapasowej dokumentu XML są niezgodne.|
 |**0x80cf801C**|OM_E_DS_RESETREQUIRED|Magazyn danych wymaga zresetowania sesji. Zwolnij sesję, a następnie ponów próbę w nowej sesji.|
 |**0x80cf801D**|OM_E_DS_IMPERSONATED|Nie można ukończyć operacji magazynu danych, ponieważ zażądano jej przy użyciu tożsamości spersonifikowanej.|
-|**0x80cf8FFF**|OM_E_DS_UNEXPECTED|Wystąpił błąd magazynu danych, który nie pasuje do żadnego innego kodu **OM_E_DS_&#42;**.|
+|**0x80cf8FFF**|OM_E_DS_UNEXPECTED|Wystąpił błąd magazynu danych, który nie pasuje do żadnego innego kodu **OM_E_DS_&#42;** .|
 |**0x80cfA000**|OM_E_AU_NOSERVICE|Usługa Aktualizacje automatyczne nie może obsłużyć żądań przychodzących.|
 |**0x80cfA004**|OM_E_AU_PAUSED|Usługa Aktualizacje automatyczne nie może przetworzyć żądań przychodzących, ponieważ została wstrzymana.|
 |**0x80cfA005**|OM_E_AU_NO_REGISTERED_SERVICE|W usłudze Aktualizacje automatyczne nie została zarejestrowana żadna usługa niezarządzana.|
 |**0x80cfA006**|OM_E_AU_DETECT_SVCID_MISMATCH|Podczas wyszukiwania została zmieniona usługa domyślna zarejestrowana w usłudze Aktualizacje automatyczne.|
 |**0x80cfA007**|OM_E_AU_ALREADY_PROMPTING_FOR_REBOOT|W usłudze Aktualizacje automatyczne jest już wyświetlany użytkownikowi monit o ponowne uruchomienie.|
-|**0x80cfAFFF**|OM_E_AU_UNEXPECTED|Wystąpił błąd usługi Aktualizacje automatyczne, który nie pasuje do żadnego innego kodu **OM_E_AU &#42;**.|
+|**0x80cfAFFF**|OM_E_AU_UNEXPECTED|Wystąpił błąd usługi Aktualizacje automatyczne, który nie pasuje do żadnego innego kodu **OM_E_AU &#42;** .|
 |**0x80cfE001**|OM_E_EE_UNKNOWN_EXPRESSION|Nie można ukończyć operacji ewaluatora wyrażeń, ponieważ wyrażenie nie zostało rozpoznane.|
 |**0x80cfE002**|OM_E_EE_INVALID_EXPRESSION|Nie można ukończyć operacji ewaluatora wyrażeń, ponieważ wyrażenie jest nieprawidłowe.|
 |**0x80cfE003**|OM_E_EE_MISSING_METADATA|Nie można ukończyć operacji ewaluatora wyrażeń, ponieważ wyrażenie zawiera niewłaściwą liczbę węzłów metadanych.|
@@ -238,7 +237,7 @@ Poniższa tabela zawiera listę kodów błędów programu **Update Agent** usłu
 |**0x80cfE005**|OM_E_EE_NOT_INITIALIZED|Nie można zainicjować ewaluatora wyrażeń.|
 |**0x80cfE006**|OM_E_EE_INVALID_ATTRIBUTEDATA|Nie można ukończyć operacji ewaluatora wyrażeń, ponieważ atrybut jest nieprawidłowy.|
 |**0x80cfE007**|OM_E_EE_CLUSTER_ERROR|Nie można ukończyć operacji ewaluatora wyrażeń, ponieważ nie można ustalić stanu klastra komputera.|
-|**0x80cfEFFF**|OM_E_EE_UNEXPECTED|Wystąpił błąd ewaluatora wyrażeń, który nie pasuje do żadnego innego kodu błędu **OM_E_EE_&#42;**.|
+|**0x80cfEFFF**|OM_E_EE_UNEXPECTED|Wystąpił błąd ewaluatora wyrażeń, który nie pasuje do żadnego innego kodu błędu **OM_E_EE_&#42;** .|
 |**0x80cfF001**|OM_E_REPORTER_EVENTCACHECORRUPT|Plik pamięci podręcznej zdarzeń jest uszkodzony.|
 |**0x80cfF002**|OM_E_REPORTER_EVENTNAMESPACEPARSEFAILED|Nie można przeanalizować kodu XML w deskryptorze przestrzeni nazw zdarzeń.|
 |**0x80cfF003**|OM_E_INVALID_EVENT|Kod XML w deskryptorze przestrzeni nazw zdarzeń jest nieprawidłowy.|

@@ -7,7 +7,6 @@ manager: dougeby
 ms.date: 03/29/2019
 ms.topic: conceptual
 audience: ITPro
-ms.prod: microsoft-365-enterprise
 ms.service: ''
 ms.technology: ''
 ms.custom: intune
@@ -16,12 +15,12 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 15f908a34f0a9315552acfad56cbf560a23fa26d
-ms.sourcegitcommit: e63e3debb5f4d9a757f767913e72e39742137b17
-ms.translationtype: HT
+ms.openlocfilehash: 452cb8e4163b82d699347a33fd8dfda9c792b6fc
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58788449"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66050271"
 ---
 # <a name="what-is-device-management"></a>Co to jest zarządzanie urządzeniami? 
 
@@ -66,9 +65,9 @@ Kluczowym zadaniem dowolnego rozwiązania do zarządzania urządzeniami jest zap
 
 ## <a name="choose-the-device-management-solution-thats-right-for-you"></a>Wybieranie odpowiedniego rozwiązania do zarządzania urządzeniami
 
-Istnieje kilka różnych metod zarządzania urządzeniami. Po pierwsze można zarządzać różnymi aspektami urządzeń przy użyciu funkcji wbudowanych w usługę Intune. Takie podejście nazywane jest **zarządzaniem urządzeniami mobilnymi (MDM)**. W takim przypadku użytkownicy „rejestrują” urządzenia i komunikują się z usługą Intune przy użyciu certyfikatów. Administrator IT może między innymi wypychać aplikacje na urządzenia, ograniczać urządzenia do określonego systemu operacyjnego i blokować urządzenia osobiste. Jeśli jakieś urządzenie zostanie kiedykolwiek zgubione lub skradzione, może on też usunąć z niego wszystkie dane. 
+Istnieje kilka różnych metod zarządzania urządzeniami. Po pierwsze można zarządzać różnymi aspektami urządzeń przy użyciu funkcji wbudowanych w usługę Intune. Takie podejście nazywane jest **zarządzaniem urządzeniami mobilnymi (MDM)** . W takim przypadku użytkownicy „rejestrują” urządzenia i komunikują się z usługą Intune przy użyciu certyfikatów. Administrator IT może między innymi wypychać aplikacje na urządzenia, ograniczać urządzenia do określonego systemu operacyjnego i blokować urządzenia osobiste. Jeśli jakieś urządzenie zostanie kiedykolwiek zgubione lub skradzione, może on też usunąć z niego wszystkie dane. 
 
-W przypadku drugiej metody zarządza się aplikacjami na urządzeniach. To podejście nazywane jest **zarządzaniem aplikacjami mobilnymi (MAM)**. W tym przypadku użytkownicy mogą uzyskiwać dostęp do zasobów organizacji za pomocą urządzeń osobistych. Podczas otwierania aplikacji, takich jak poczta e-mail lub program SharePoint, użytkownicy są monitowani o dodatkowe uwierzytelnienie. Jeśli jakieś urządzenie zostanie kiedykolwiek zgubione lub skradzione, można usunąć z niego wszystkie dane organizacji. 
+W przypadku drugiej metody zarządza się aplikacjami na urządzeniach. To podejście nazywane jest **zarządzaniem aplikacjami mobilnymi (MAM)** . W tym przypadku użytkownicy mogą uzyskiwać dostęp do zasobów organizacji za pomocą urządzeń osobistych. Podczas otwierania aplikacji, takich jak poczta e-mail lub program SharePoint, użytkownicy są monitowani o dodatkowe uwierzytelnienie. Jeśli jakieś urządzenie zostanie kiedykolwiek zgubione lub skradzione, można usunąć z niego wszystkie dane organizacji. 
 
 Można również używać połączenia metod [MDM i MAM](https://docs.microsoft.com/intune/byod-technology-decisions).
 

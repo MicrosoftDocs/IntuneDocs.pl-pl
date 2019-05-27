@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/6/2018
+ms.date: 04/25/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d914ea9bffe9485d2e37f8ede4d168f597f9e200
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: MTE75
+ms.openlocfilehash: c40146f37ff6477663dc63468d1081a73ac2544a
+ms.sourcegitcommit: dde4b8788e96563edeab63f612347fa222d8ced0
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565940"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65135156"
 ---
 # <a name="configure-vpn-settings-on-ios-devices-in-microsoft-intune"></a>Konfigurowanie ustawień sieci VPN dla urządzeń z systemem iOS w usłudze Microsoft Intune
 
@@ -42,7 +42,7 @@ Umożliwia wybór typu połączenia sieci VPN z poniższej listy dostawców:
 - **Cisco (IPSec)**
 - **Sieć VPN Citrix**
 - **Citrix SSO**
-- **Zscaler**: wymaga integracji rozwiązania Zscaler Private Access (ZPA) z kontem usługi Azure AD. Aby uzyskać szczegółowe instrukcje, zobacz [dokumentację rozwiązania Zscaler](https://help.zscaler.com/zpa/configuration-example-microsoft-azure-ad#Azure_UserSSO). 
+- **Zscaler**: korzystanie z dostępu warunkowego lub umożliwianie użytkownikom pomijania ekranu logowania Zscaler wymaga integracji rozwiązania Zscaler Private Access (ZPA) z kontem usługi Azure AD. Aby uzyskać szczegółowe instrukcje, zobacz [dokumentację rozwiązania Zscaler](https://help.zscaler.com/zpa/configuration-example-microsoft-azure-ad#Azure_UserSSO). 
 - **Niestandardowa sieć VPN**
 
 > [!NOTE]
@@ -70,19 +70,28 @@ Ustawienia wymienione na poniższej liście są określane przez wybrany typ po�
 - **Identyfikator sieci VPN** (niestandardowa sieć VPN, Zscaler i Citrix): identyfikator używanej aplikacji sieci VPN udostępniany przez dostawcę sieci VPN.
   - **Podaj pary klucz/wartość dla atrybutów niestandardowej sieci VPN Twojej organizacji**: dodaj lub zaimportuj **klucze** i **wartości**, aby dostosować połączenie swojej sieci VPN. Pamiętaj, że te wartości są zwykle dostarczane przez dostawcę sieci VPN.
 
-- **Włączanie kontroli dostępu do sieci (NAC)** (tylko aplikacja Citrix SSO): po wybraniu pozycji **Zgadzam się** identyfikator urządzenia będzie uwzględniany w profilu sieci VPN. Ten identyfikator może służyć do uwierzytelniania w sieci VPN w celu zezwolenia na dostęp do sieci lub uniemożliwienia tego dostępu.
+- **Włączanie kontroli dostępu do sieci (NAC)** (Citrix SSO, F5 Access): po wybraniu pozycji **Zgadzam się** identyfikator urządzenia będzie uwzględniany w profilu sieci VPN. Ten identyfikator może służyć do uwierzytelniania w sieci VPN w celu zezwolenia na dostęp do sieci lub uniemożliwienia tego dostępu.
+
+  **W przypadku korzystania z programu F5 Access** pamiętaj, aby:
+
+  - Upewnić się, że używasz systemu F5 BIG-IP w wersji 13.1.1.5. System BIG-IP w wersji 14 nie jest obsługiwany.
+  - Zintegrować system BIG-IP z usługą Intune, aby móc korzystać z kontroli dostępu do sieci. Zobacz przewodnik po systemie F5 [Overview: Configuring APM for device posture checks with endpoint management systems (Omówienie: Konfigurowanie programu APM pod kątem kontroli stanu urządzenia za pomocą systemów zarządzania punktem końcowym)](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89).
+  - Włączyć kontrolę dostępu do sieci w profilu sieci VPN.
 
   **W przypadku korzystania z aplikacji Citrix SSO z aplikacją Gateway** pamiętaj, aby:
 
   - Upewnić się, że używasz aplikacji Citrix Gateway 12.0.59 lub nowszej.
   - Upewnić się, że użytkownicy zainstalowali na swoich urządzeniach aplikację Citrix SSO 1.1.6 lub nowszą.
-  - Zintegrować aplikację Citrix Gateway z usługą Intune na potrzeby kontroli dostępu do sieci zgodnie z opisem w przewodniku wdrażania [Integrating Microsoft Intune/Enterprise Mobility Suite with NetScaler (LDAP+OTP Scenario)](https://www.citrix.com/content/dam/citrix/en_us/documents/guide/integrating-microsoft-intune-enterprise-mobility-suite-with-netscaler.pdf) (Integrowanie usługi Microsoft Intune/pakietu Enterprise Mobility Suite z rozwiązaniem NetScaler (scenariusz LDAP+OTP)) firmy Citrix.
+  - Zintegrować aplikację Citrix Gateway z usługą Intune, aby móc korzystać z kontroli dostępu do sieci. Zobacz przewodnik po wdrażaniu produktów firmy Citrix [Integrating Microsoft Intune/Enterprise Mobility Suite with NetScaler (LDAP+OTP Scenario) (Integrowanie usługi Microsoft Intune/pakietu Enterprise Mobility Suite z rozwiązaniem NetScaler — scenariusz LDAP+OTP)](https://www.citrix.com/content/dam/citrix/en_us/documents/guide/integrating-microsoft-intune-enterprise-mobility-suite-with-netscaler.pdf).
   - Włączyć kontrolę dostępu do sieci w profilu sieci VPN.
 
-  Ważne informacje:  
+  **Ważne informacje**:  
 
-  - Po włączeniu kontroli dostępu do sieci połączenie z siecią VPN jest rozłączane co 24 godziny.
-  - Identyfikator urządzenia jest częścią profilu, ale nie jest widoczny w usłudze Intune. Ten identyfikator nie jest nigdzie zapisywany przez firmę Microsoft ani nie jest przez nią udostępniany. Po dodaniu obsługi przez partnerów sieci VPN klient sieci VPN, taki jak Citrix SSO, będzie mógł pobrać identyfikator i wysłać zapytanie do usługi Intune, aby potwierdzić, że urządzenie jest zarejestrowane, oraz określić, czy profil sieci VPN jest zgodny.
+  - Po włączeniu kontroli dostępu do sieci połączenie z siecią VPN jest rozłączane co 24 godziny. Połączenie z siecią VPN można od razu nawiązać ponownie.
+  - Identyfikator urządzenia jest częścią profilu, ale nie jest widoczny w usłudze Intune. Ten identyfikator nie jest nigdzie zapisywany przez firmę Microsoft ani nie jest przez nią udostępniany.
+
+  Identyfikator urządzenia, który jest obsługiwany przez partnera udostępniającego sieć VPN, jest dostępny dla klienta sieci VPN, takiego jak Citrix SSO. Klient sieci VPN może następnie wysłać zapytanie do usługi Intune w celu potwierdzenia rejestracji urządzenia oraz ustalenia, czy profil sieci VPN jest zgodny.
+
   - Aby usunąć to ustawienie, ponownie utwórz profil i nie wybieraj pozycji **Zgadzam się**. Następnie ponownie przypisz profil.
 
 ## <a name="automatic-vpn-settings"></a>Ustawienia automatycznego połączenia VPN
@@ -92,7 +101,7 @@ Ustawienia wymienione na poniższej liście są określane przez wybrany typ po�
   - Podczas korzystania z profilów **Sieć VPN dla aplikacji** w systemie iOS przy użyciu typu połączenia Pulse Secure lub niestandardowej sieci VPN wybierz tunelowanie w warstwie aplikacji (app-proxy) lub tunelowanie w warstwie pakietów (packet-tunnel). Ustaw opcję **Typ dostawcy** na wartość **app-proxy** w celu tunelowania w warstwie aplikacji lub **packet-tunnel** w celu tunelowania w warstwie pakietów. Jeśli nie masz pewności, której wartości użyć, zapoznaj się z dokumentacją dostawcy sieci VPN.
   - **Adresy URL przeglądarki Safari wyzwalające tę sieć VPN**: dodaj jeden lub wiele adresów URL witryn internetowych. Gdy te adresy URL zostaną otwarte za pomocą przeglądarki Safari na urządzeniu, połączenie sieci VPN zostanie nawiązane automatycznie.
 
-- **Sieć VPN na żądanie**: skonfiguruj reguły warunkowe, które kontrolują moment rozpoczęcia połączenia sieci VPN. Na przykład utwórz warunek określający, że połączenie sieci VPN jest używane tylko w sytuacji, gdy urządzenie nie jest połączone z siecią Wi-Fi firmy. Inna możliwość to utworzenie warunku, zgodnie z którym połączenie sieci VPN nie będzie inicjowane, jeśli urządzenie nie może uzyskać dostępu do wprowadzonej domeny wyszukiwania DNS.
+- **Sieć VPN na żądanie**: skonfiguruj reguły warunkowe, które kontrolują moment rozpoczęcia połączenia sieci VPN. Na przykład utwórz warunek określający, że połączenie sieci VPN jest używane tylko w sytuacji, gdy urządzenie nie jest połączone z siecią Wi-Fi firmy. Można też utworzyć warunek — połączenie sieci VPN nie jest inicjowane, jeśli urządzenie nie może uzyskać dostępu do wprowadzonej domeny wyszukiwania DNS.
 
   - **Identyfikatory SSID lub domeny wyszukiwania DNS**: wybierz, czy ten warunek będzie używać **identyfikatorów SSID** sieci bezprzewodowej, czy **domen wyszukiwania DNS**. Kliknij przycisk **Dodaj**, aby skonfigurować co najmniej jeden identyfikator SSID lub domenę wyszukiwania.
   - **Sonda ciągu adresu URL**: opcjonalne. Podaj adres URL, którego reguła używa jako adresu testowego. Jeśli urządzenie z tym profilem uzyska dostęp do tego adresu URL bez przekierowania, połączenie sieci VPN zostanie zainicjowane. Następnie urządzenie połączy się z docelowym adresem URL. Użytkownik nie widzi witryny sondy ciągu adresu URL. Przykładem sondy ciągu adresu URL jest adres inspekcji serwera internetowego, który umożliwia sprawdzenie zgodności urządzeń przed nawiązaniem połączenia z siecią VPN. Inną możliwością jest testowanie przez adres URL możliwości łączenia się sieci VPN z witryną, zanim urządzenie połączy się z docelowym adresem URL za pośrednictwem sieci VPN.

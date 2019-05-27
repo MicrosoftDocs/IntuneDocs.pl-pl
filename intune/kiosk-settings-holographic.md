@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 01/22/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -15,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f38803d3be05182639ac8eca2578e9ce121f7c2f
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: aef2db158e0572c1eec056a1d6e33b4b97aea77a
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566016"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66047014"
 ---
 # <a name="windows-holographic-for-business-device-settings-to-run-as-a-kiosk-in-intune"></a>Ustawienia urządzeń z systemem Windows Holographic for Business na potrzeby uruchamiania jako kiosku w usłudze Intune
 
@@ -60,7 +59,7 @@ Aplikacje w tym trybie są dostępne w menu Start. Te aplikacje to jedyne aplika
 
   - **Logowanie automatyczne**: nie jest obsługiwane na platformie Windows Holographic for Business.
   - **Konta użytkownika lokalnego**: **dodaj** konto użytkownika lokalnego (w urządzeniu). Wprowadzone konto jest używane do logowania się do kiosku.
-  - **Użytkownik lub grupa usługi Azure AD (system Windows 10 w wersji 1803 i nowszych)**: wymaga poświadczeń użytkownika do zalogowania na urządzeniu. Wybierz pozycję **Dodaj**, aby wybrać użytkowników lub grupy usługi Azure AD z listy. Można wybrać wielu użytkowników lub wiele grup. Wybierz przycisk **Wybierz**, aby zapisać zmiany.
+  - **Użytkownik lub grupa usługi Azure AD (system Windows 10 w wersji 1803 i nowszych)** : wymaga poświadczeń użytkownika do zalogowania na urządzeniu. Wybierz pozycję **Dodaj**, aby wybrać użytkowników lub grupy usługi Azure AD z listy. Można wybrać wielu użytkowników lub wiele grup. Wybierz przycisk **Wybierz**, aby zapisać zmiany.
   - **Gość HaloLens**: konto gościa, które nie wymaga żadnych poświadczeń użytkownika ani uwierzytelniania, zgodnie z opisem w sekcji [Shared PC mode concepts (Pojęcia związane z trybem komputera udostępnionego)](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
 
 - **Aplikacje**: dodaj aplikacje do uruchamiania w urządzeniu kiosku. Pamiętaj, że możesz dodać kilka aplikacji.
@@ -70,7 +69,7 @@ Aplikacje w tym trybie są dostępne w menu Start. Te aplikacje to jedyne aplika
   - **Dodaj według identyfikatora AUMID**: użyj tej opcji, aby dodać aplikacje skrzynki odbiorczej systemu Windows. Wprowadź następujące właściwości: 
 
     - **Nazwa aplikacji**: wymagana. Wprowadź nazwę aplikacji.
-    - **Identyfikator modelu użytkownika aplikacji (AUMID)**: wymagany. Wprowadź identyfikator modelu użytkownika aplikacji (AUMID) dla aplikacji systemu Windows. Aby uzyskać ten identyfikator, zobacz [Znajdowanie identyfikatora modelu użytkownika aplikacji zainstalowanej aplikacji](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+    - **Identyfikator modelu użytkownika aplikacji (AUMID)** : wymagany. Wprowadź identyfikator modelu użytkownika aplikacji (AUMID) dla aplikacji systemu Windows. Aby uzyskać ten identyfikator, zobacz [Znajdowanie identyfikatora modelu użytkownika aplikacji zainstalowanej aplikacji](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
     - **Rozmiar kafelka**: wymagany. Wybierz mały, średni, szeroki lub duży rozmiar kafelka aplikacji.
 
 - **Ustawienia przeglądarki kiosku**: nie są obsługiwane na platformie Windows Holographic for Business.

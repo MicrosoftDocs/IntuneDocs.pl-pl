@@ -15,11 +15,11 @@ ms.technology: ''
 ms.assetid:
 - GET ONE FROM guidgenerator.com
 ms.openlocfilehash: d05559a46cfd2bf9e092378e7cff779022e21792
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "20283573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61509646"
 ---
 # <a name="metadata-and-markdown-template"></a>Szablon metadanych i języka Markdown
 
@@ -37,7 +37,7 @@ Pełen blok metadanych znajduje się powyżej i jest podzielony na pola wymagane
 - Dwukropki w wartości (np. tytule) przerywają działanie analizatora składni metadanych. Zamiast nich należy użyć kodu HTML &#58 (np. „title: Azure Rights Management&#58; podstawy | Azure RMS”).
 - **title**: ten tytuł pojawi się w wynikach wyszukiwarki. Tytuł powinien kończyć się symbolem kreski pionowej (|), po którym następuje nazwa usługi (zobacz przykład powyżej). Tytuł nie musi (i prawdopodobnie nie powinien) być taki sam jak tytuł w nagłówku H1. Powinien zawierać około 65 znaków (łącznie z ciągiem | NAZWA USŁUGI)
 - **author**, **manager**, **reviewer**: pole „author” powinno zawierać **nazwę użytkownika usługi Github** autora, a nie jego alias.  Z kolei pola „manager” i „reviewer” powinny zawierać aliasy. Wartość ms.reviewer określa imię i nazwisko kierownika projektu powiązanego z artykułem lub usługą.
-- **ms.assetid**: identyfikator GUID artykułu z witryny CAPS. Podczas tworzenia nowego pliku markdown Uzyskaj identyfikator GUID z [ https://www.guidgenerator.com ](https://www.guidgenerator.com). 
+- **ms.assetid**: identyfikator GUID artykułu z witryny CAPS. Tworząc nowy plik markdown, należy uzyskać identyfikator GUID w witrynie [https://www.guidgenerator.com](https://www.guidgenerator.com). 
 - **ms.prod**, **ms.service**, **ms.technology**, **ms.devlang**, **ms.topic**, **ms.tgt_pltfrm**: możliwe wartości tych elementów można znaleźć [tutaj](https://microsoft.sharepoint.com/teams/STBCSI/Insights/_layouts/15/WopiFrame.aspx?sourcedoc=%7b7A321BF1-0611-4184-84DA-A0E964C435FA%7d&file=WEDCS_MasterList_CSIValues.xlsx&action=default).
 
 ## <a name="basic-markdown-and-gfm"></a>Podstawy składni języka Markdown i GFM

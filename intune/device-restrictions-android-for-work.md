@@ -1,11 +1,11 @@
 ---
 title: Ustawienia urządzeń z systemem Android Enterprise w usłudze Microsoft Intune — Azure | Microsoft Docs
-description: W urządzeniach z systemem Android Enterprise lub Android for Work możesz ograniczyć ustawienia, w tym kopiowanie i wklejanie, pokazywanie powiadomień, uprawnienia aplikacji, udostępnianie danych, długość hasła, błędy logowania, używanie odcisku palca do odblokowywania, ponowne używanie haseł oraz włączanie udostępniania kontaktów służbowych za pomocą technologii Bluetooth. Skonfigurować urządzenia jako kiosku urządzenia dedykowane do uruchamiania aplikacji lub wielu aplikacji.
+description: W urządzeniach z systemem Android Enterprise lub Android for Work możesz ograniczyć ustawienia, w tym kopiowanie i wklejanie, pokazywanie powiadomień, uprawnienia aplikacji, udostępnianie danych, długość hasła, błędy logowania, używanie odcisku palca do odblokowywania, ponowne używanie haseł oraz włączanie udostępniania kontaktów służbowych za pomocą technologii Bluetooth. Skonfiguruj urządzenie jako kiosk urządzenia dedykowanego w celu uruchamiania jednej aplikacji lub wielu aplikacji.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/20/2019
+ms.date: 04/10/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 493a5be89e747c2de1eca3a63907b79228fcdfa2
-ms.sourcegitcommit: aab39bf86707ccaef45fd6527fff4f1c89336710
-ms.translationtype: MTE75
+ms.openlocfilehash: 4840ccac35f37e956c363a1f6103da623ef27782
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58429758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61505781"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem Android Enterprise w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune
 
@@ -65,32 +65,24 @@ W tym artykule wymieniono i opisano różne ustawienia, którymi można sterowa�
 
   Pozycja **Nieskonfigurowane** uniemożliwia użytkownikom włączanie funkcji wyjścia bezpieczeństwa sieci na urządzeniu.
 
-- **Zezwalaj na instalację z nieznanych źródeł**: wybierz pozycję **Zezwalaj**, aby umożliwić użytkownikom włączanie opcji **Nieznane źródła**. To ustawienie umożliwia instalowanie aplikacji z nieznanych źródeł. Pozycja **Nieskonfigurowane** uniemożliwia użytkownikom włączanie opcji **Nieznane źródła**.
 - **Aktualizacja systemu**: wybierz opcję, aby określić sposób obsługi aktualizacji bezprzewodowych przez urządzenie:
   - **Ustawienie domyślne urządzenia**: użyte zostaną ustawienia domyślne urządzenia.
   - **Automatyczne**: aktualizacje są automatycznie instalowane bez interakcji z użytkownikiem. Ustawienie tych zasad powoduje natychmiastowe instalowanie wszystkich oczekujących aktualizacji.
   - **Odłożone**: instalowanie aktualizacji jest odkładane o 30 dni. Po upływie tych 30 dni system Android monituje użytkownika o zainstalowanie aktualizacji. Producenci urządzeń i operatorzy mogą uniemożliwiać (wykluczać) odkładanie ważnych aktualizacji zabezpieczeń. Aktualizacja podlegająca takiemu wykluczeniu powoduje wyświetlenie użytkownikowi powiadomienia systemowego na urządzeniu. 
   - **Okno obsługi**: aktualizacje są instalowane automatycznie w ramach codziennego okna obsługi skonfigurowanego w usłudze Intune. Próba instalacji jest podejmowana codziennie przez 30 dni i może zakończyć się niepowodzeniem ze względu na brak miejsca lub niski poziom baterii. Po upływie 30 dni system Android monituje użytkownika o instalację. To okno jest też używane do instalowania aktualizacji aplikacji ze sklepu Play. Tej opcji należy używać w przypadku urządzeń dedykowanych, takich jak kioski, ponieważ umożliwia ona aktualizowanie aplikacji na pierwszym planie dedykowanych urządzeń z pojedynczymi aplikacjami.
-- **Automatyczne aktualizacje aplikacji**: wybierz moment instalowania aktualizacji automatycznych. Dostępne opcje:
-  - **Nieskonfigurowany**
-  - **Wybór użytkownika**
-  - **Nigdy**
-  - **Tylko sieć Wi-Fi**
-  - **Zawsze**
 
 - **Okna powiadomień**: po ustawieniu opcji **Wyłącz** powiadomienia wyświetlane w oknach, w tym wyskakujące powiadomienia, powiadomienia o połączeniach przychodzących, połączeniach wychodzących, alerty systemowe i błędy systemowe, nie są wyświetlane na urządzeniu. Po ustawieniu opcji **Nieskonfigurowane** zostanie użyte domyślne ustawienie systemu operacyjnego, co może prowadzić do wyświetlania powiadomień.
 - **Pomiń wskazówki podczas pierwszego użycia**: wybierz opcję **Włącz**, aby ukrywać lub pomijać sugestie aplikacji dotyczące skorzystania z samouczków lub przeczytania wskazówek wprowadzających podczas uruchamiania aplikacji. Po ustawieniu opcji **Nieskonfigurowane** zostanie użyte domyślne ustawienie systemu operacyjnego, co może prowadzić do wyświetlania tych sugestii podczas uruchamiania aplikacji.
 
-
 ### <a name="system-security-settings"></a>Ustawienia zabezpieczeń systemu
 
-- **Skanowanie aplikacji pod kątem zagrożeń**: pozycja **Wymagaj** wymusza włączenie ustawienia **Weryfikuj aplikacje** w profilach służbowych i osobistych.
+- **Skanowanie aplikacji pod kątem zagrożeń**: wybranie opcji **Wymagaj** (ustawienie domyślne) umożliwia skanowanie aplikacji przez usługę Google Play Protect przed instalacją i po instalacji. W przypadku wykrycia zagrożenia może pojawić się monit o usunięcie aplikacji z urządzenia. Wybranie opcji **Nieskonfigurowane** uniemożliwia skanowanie aplikacji przez usługę Google Play Protect.
 
-### <a name="dedicated-device-settings"></a>Ustawienia urządzenia dedykowane
+### <a name="dedicated-device-settings"></a>Ustawienia dedykowanego urządzenia
 
-Użyj tych ustawień, aby skonfigurować środowisko kiosku stylu na urządzeniach z systemem dedykowanym. Urządzenie można skonfigurować do uruchamiania pojedynczej aplikacji lub wielu aplikacji. Gdy urządzenie jest ustawione w trybie kiosku, dostępne są tylko dodane aplikacje. Te ustawienia mają zastosowanie do urządzeń przedsiębiorstwa z systemem Android w wersji dedykowanej. Nie mają zastosowania do urządzeń i w pełni zarządzana przedsiębiorstwa z systemem Android.
+Te ustawienia umożliwiają skonfigurowanie trybu kiosku na dedykowanych urządzeniach. Urządzenie można skonfigurować do uruchamiania pojedynczej aplikacji lub wielu aplikacji. Gdy urządzenie jest ustawione w trybie kiosku, dostępne są tylko dodane aplikacje. Te ustawienia mają zastosowanie do urządzeń dedykowanych z systemem Android Enterprise. Nie mają one zastosowania do w pełni zarządzanych urządzeń z systemem Android Enterprise.
 
-**Tryb kiosku**: Wybierz, czy urządzenie jest uruchamiana jedna aplikacja lub uruchamia wiele aplikacji.
+**Tryb kiosku**: wybierz, czy na urządzeniu będzie uruchamiana jedna aplikacja czy wiele aplikacji.
 
 - **Pojedyncza aplikacja**: użytkownicy mogą uzyskiwać dostęp tylko do jednej aplikacji na urządzeniu. Po uruchomieniu urządzenia zostanie uruchomiona tylko określona aplikacja. Użytkownicy nie mogą otwierać nowych aplikacji ani zmieniać uruchomionej aplikacji.
 
@@ -117,30 +109,63 @@ Użyj tych ustawień, aby skonfigurować środowisko kiosku stylu na urządzenia
     Na urządzeniu możesz również dodać inne [aplikacje dla systemu Android](apps-add-android-for-work.md) i [aplikacje internetowe](web-app.md) utworzone przez organizację. Pamiętaj, aby [przypisać aplikację](apps-deploy.md) do grupy urządzeń utworzonej na potrzeby dedykowanych urządzeń.
 
   - **Wirtualny przycisk ekranu głównego**: wybierz pozycję **Włącz**, aby przycisk ekranu głównego był wyświetlany na dedykowanych urządzeniach. Po wybraniu tego przycisku użytkownik wróci na ekran główny urządzenia. Ułatwia to użytkownikom przełączanie między aplikacjami. Na niektórych urządzeniach z systemem Android użytkownicy będą musieli przesunąć ekran w górę, aby przycisk ekranu głównego został wyświetlony. Pozycja **Wyłącz** powoduje, że przycisk ekranu głównego nie pojawia się, a użytkownicy muszą używać przycisku Wstecz do przełączania się między aplikacjami.
-  - **Wyjdź z trybu kiosku**: wybierz pozycję **Włącz**, aby umożliwić administratorom tymczasowe wstrzymywanie trybu kiosku w celu zaktualizowania urządzenia. Aby użyć tej funkcji, administrator: 
+  - **Wyjdź z trybu kiosku**: wybierz pozycję **Włącz**, aby umożliwić administratorom tymczasowe wstrzymywanie trybu kiosku w celu zaktualizowania urządzenia. Aby skorzystać z tej funkcji, administrator wykonuje następujące czynności: 
   
     1. Wybiera przycisk Wstecz do momentu wyświetlenia przycisku „Wyjdź z kiosku”. 
     2. Wybiera przycisk, a następnie wprowadza numer PIN dla opcji **Kod wychodzenia z trybu kiosku**.
     3. Po zakończeniu wprowadzania zmian wybiera aplikację **Zarządzany ekran główny**. Ten krok powoduje ponowne zablokowanie urządzenia w trybie kiosku z wieloma aplikacjami. 
-    
+
     Pozycja **Wyłącz** nie oferuje możliwości wstrzymywania trybu kiosku. Jeśli administrator wybiera przycisk Wstecz, a następnie przycisk „Wyjdź z kiosku”, pojawia się komunikat z informacją o tym, że kod dostępu jest wymagany.
-    
+
     - **Kod wychodzenia z trybu kiosku**: wprowadź numer PIN składający się z 4–6 cyfr. Administrator używa tego numeru PIN do tymczasowego wstrzymywania trybu kiosku.
- 
+
   - **Ustaw tło przy użyciu niestandardowego adresu URL**: wprowadź adres URL, aby dostosować ekran tła na dedykowanym urządzeniu.
+    
+    > [!NOTE]
+    > W większości przypadków na początku zaleca się wybranie następujących rozmiarów obrazów:
+    >
+    > - Telefon: 1080 x 1920 pikseli
+    > - Tablet: 1920 x 1080 pikseli
+    >    
+    > Aby uzyskać najlepszy komfort i najwyższy poziom szczegółowości obrazu, zaleca się tworzenie zasobów obrazów dla poszczególnych urządzeń zgodnie ze specyfikacją wyświetlacza.
+    >
+    > Nowoczesne wyświetlacze mają wyższe gęstości pikseli i umożliwiają wyświetlanie obrazów 2K/4K.
+  - **Konfiguracja sieci Wi-Fi**: Wybierz opcję **Włącz**, aby zezwolić użytkownikom końcowym na łączenie się z różnymi sieciami Wi-Fi. Włączenie tej funkcji powoduje włączenie lokalizacji urządzenia. Wybranie opcji **Nieskonfigurowane** (ustawienie domyślne) uniemożliwia użytkownikom łączenie się z sieciami Wi-Fi, gdy jest aktywna aplikacja Managed Home Screen (tryb blokady zadania).
+
+    Więcej informacji na temat [trybu blokady zadania](https://developer.android.com/work/dpc/dedicated-devices/lock-task-mode) (zostanie otwarta witryna internetowa systemu Android).
+
+  - **Konfiguracja połączenia Bluetooth**: wybierz opcję **Włącz**, aby włączyć funkcję Bluetooth na urządzeniu i zezwalać użytkownikom końcowym na parowanie urządzeń za pośrednictwem połączenia Bluetooth. Włączenie tej funkcji powoduje włączenie lokalizacji urządzenia. Wybranie opcji **Nieskonfigurowane** (ustawienie domyślne) uniemożliwia użytkownikom konfigurowanie funkcji Bluetooth i parowanie urządzeń, gdy jest aktywna aplikacja Managed Home Screen (tryb blokady zadania). 
+
+    Więcej informacji na temat [trybu blokady zadania](https://developer.android.com/work/dpc/dedicated-devices/lock-task-mode) (zostanie otwarta witryna internetowa systemu Android).
 
 ### <a name="device-password-settings"></a>Ustawienia haseł urządzeń
 
-- **Blokada klawiatury**: wybierz pozycję **Wyłącz**, aby uniemożliwić użytkownikom używanie funkcji blokady ekranu Blokada klawiatury na urządzeniu. Pozycja **Nieskonfigurowane** zezwala użytkownikowi na korzystanie z funkcji blokady klawiatury.
-- **Wyłączone funkcje funkcję blokowania klawiatury**: po włączeniu funkcję blokowania klawiatury na urządzeniu należy wybrać funkcje, które można wyłączyć. Na przykład po zaznaczeniu opcji **Zabezpiecz aparat** funkcja aparatu zostanie wyłączona na urządzeniu. Wszystkie funkcje, które nie są zaznaczone, są włączone na urządzeniu.
+- **Wyłącz pozycję Zablokuj ekran**: wybierz pozycję **Wyłącz**, aby uniemożliwić użytkownikom używanie funkcji blokady ekranu Blokada klawiatury na urządzeniu. Pozycja **Nieskonfigurowane** zezwala użytkownikowi na korzystanie z funkcji blokady klawiatury.
+- **Wyłączone funkcje ekranu blokady**: jeśli blokada klawiatury jest włączona na urządzeniu, wybierz funkcje, które mają zostać wyłączone. Na przykład po zaznaczeniu opcji **Zabezpiecz aparat** funkcja aparatu zostanie wyłączona na urządzeniu. Wszystkie funkcje, które nie są zaznaczone, są włączone na urządzeniu.
+
+  Te funkcje są dostępne dla użytkowników, gdy urządzenie jest zablokowane. Zaznaczone funkcje nie będą widoczne ani dostępne dla użytkowników.
+
 - **Wymagany typ hasła**: określ typ hasła wymagany dla urządzenia. Dostępne opcje:
-  - **Co najmniej numeryczne**
-  - **Złożona wartość liczbowa**: powtarzające się lub kolejne cyfry, np. „1111” lub „1234”, są niedozwolone.
-  - **Co najmniej alfabetyczne**
-  - **Co najmniej alfanumeryczne**
-  - **Co najmniej alfanumeryczne z symbolami**
-- **Minimalna długość hasła**: wprowadź minimalną długość hasła, które musi podać użytkownik (od 4 do 16 znaków).
-- **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia**: wprowadź liczbę dopuszczalnych nieudanych logowań przed wyczyszczeniem urządzenia (od 1 do 11).
+  - **Ustawienie domyślne urządzenia**
+  - **Hasło jest wymagane, brak ograniczeń**
+  - **Słabe elementy biometryczne**: [silne i słabe elementy biometryczne](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (zostanie otwarta witryna internetowa systemu Android)
+  - **Numeryczne**: hasło może się składać tylko z cyfr, takich jak `123456789`. Podaj **minimalną długość hasła**, które musi wprowadzić użytkownik (od 4 do 16 znaków).
+  - **Złożona wartość liczbowa**: powtarzające się lub kolejne cyfry, np. „1111” lub „1234”, są niedozwolone. Podaj **minimalną długość hasła**, które musi wprowadzić użytkownik (od 4 do 16 znaków).
+  - **Alfabetyczne**: wymagane są litery alfabetu. Cyfry ani symbole nie są wymagane. Podaj **minimalną długość hasła**, które musi wprowadzić użytkownik (od 4 do 16 znaków).
+  - **Alfanumeryczne**: obejmuje wielkie litery, małe litery i cyfry. Podaj **minimalną długość hasła**, które musi wprowadzić użytkownik (od 4 do 16 znaków).
+  - **Alfanumeryczne z symbolami**: obejmuje wielkie litery, małe litery, cyfry, znaki interpunkcyjne i symbole. Wprowadź też następujące ustawienia:
+
+    - **Minimalna długość hasła**: podaj minimalną długość hasła (od 4 do 16 znaków).
+    - **Wymagana liczba znaków**: podaj wymaganą liczbę znaków w haśle (od 0 do 16 znaków).
+    - **Wymagana liczba małych liter**: podaj wymaganą liczbę małych liter w haśle (od 0 do 16 znaków).
+    - **Wymagana liczba wielkich liter**: podaj wymaganą liczbę wielkich liter w haśle (od 0 do 16 znaków).
+    - **Wymagana liczba znaków innych niż litery**: podaj wymaganą liczbę znaków innych niż litery w alfabecie, które muszą być zawarte w haśle (od 0 do 16 znaków).
+    - **Wymagana liczba znaków numerycznych**: podaj wymaganą liczbę cyfr (`1`, `2`, `3` itd.) w haśle (od 0 do 16 znaków).
+    - **Wymagana liczba symboli**: podaj wymaganą liczbę symboli (`&`, `#`, `%` itd.) w haśle (od 0 do 16 znaków).
+
+- **Liczba dni, po których hasło wygasa**: podaj liczbę dni, po której należy zmienić hasło urządzenia (od 1 do 365). Na przykład aby wymusić zmianę hasła po upływie 60 dni, wprowadź `60`. Gdy hasło wygaśnie, użytkownicy będą monitowani o utworzenie nowego hasła.
+- **Wymagana liczba haseł przed ponownym użyciem starego hasła przez użytkownika**: podaj liczbę kolejnych haseł, których nie można użyć ponownie (od 1 do 24). To ustawienie można wykorzystać w celu ograniczenia użytkownikowi możliwości tworzenia wcześniej używanych haseł.
+- **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia**: wprowadź liczbę dopuszczalnych nieudanych logowań przed wyczyszczeniem urządzenia (od 4 do 11).
 
 ### <a name="power-settings"></a>Ustawienia zasilania
 
@@ -152,6 +177,17 @@ Użyj tych ustawień, aby skonfigurować środowisko kiosku stylu na urządzenia
 - **Dodawanie nowych użytkowników**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom dodawanie nowych użytkowników. Każdy użytkownik ma na urządzeniu obszar osobisty, który zawiera niestandardowe ekrany główne, konta, aplikacje i ustawienia. Pozycja **Nieskonfigurowane** umożliwia użytkownikom dodawanie innych użytkowników do urządzenia.
 - **Usuwanie użytkowników**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom usuwanie użytkowników. Pozycja **Nieskonfigurowane** umożliwia użytkownikom usuwanie innych użytkowników z urządzenia.
 - **Zmiany dotyczące konta**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom modyfikowanie kont. Pozycja **Nieskonfigurowane** umożliwia użytkownikom aktualizowanie kont użytkowników na urządzeniu.
+
+### <a name="applications"></a>Aplikacje
+
+- **Zezwalaj na instalację z nieznanych źródeł**: wybierz pozycję **Zezwalaj**, aby umożliwić użytkownikom włączanie opcji **Nieznane źródła**. To ustawienie umożliwia instalację aplikacji z nieznanych źródeł, innych niż Sklep Google Play. Pozycja **Nieskonfigurowane** uniemożliwia użytkownikom włączanie opcji **Nieznane źródła**.
+- **Zezwalaj na dostęp do wszystkich aplikacji w sklepie Google Play**: po ustawieniu opcji **Zezwalaj** użytkownicy mogą uzyskiwać dostęp do wszystkich aplikacji w Sklepie Google Play. Nie mają oni dostępu do aplikacji zablokowanych przez administratora w obszarze [Aplikacje klienckie](apps-add-android-for-work.md). Po wybraniu opcji **Nieskonfigurowane** użytkownicy mogą uzyskiwać dostęp tylko do aplikacji udostępnionych przez administratora w Sklepie Google Play lub wymaganych w obszarze [Aplikacje klienckie](apps-add-android-for-work.md).
+- **Automatyczne aktualizacje aplikacji**: wybierz moment instalowania aktualizacji automatycznych. Dostępne opcje:
+  - **Nieskonfigurowany**
+  - **Wybór użytkownika**
+  - **Nigdy**
+  - **Tylko sieć Wi-Fi**
+  - **Zawsze**
 
 ### <a name="connectivity"></a>Łączność
 

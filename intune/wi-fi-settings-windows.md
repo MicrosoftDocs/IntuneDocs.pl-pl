@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 11/8/2018
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.reviewer: tycast
@@ -16,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 880a81b49a78e7afd83aca510f85133e91416cf4
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 502babf80b4286adb19a09988d16bd56562d4925
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566272"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66046666"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Dodawanie ustawień sieci Wi-Fi dla urządzeń z systemem Windows 10 lub nowszym w usłudze Intune
 
@@ -37,7 +36,7 @@ W tym artykule opisano te ustawienia.
 
 - **Typ sieci Wi-Fi**: wybierz pozycję **Podstawowa**. 
 
-- **Nazwa sieci (SSID)**: identyfikator zestawu usług. Ta wartość to prawdziwa nazwa sieci bezprzewodowej, z którą łączą się urządzenia. Podczas wybierania połączenia użytkownicy widzą jednak tylko skonfigurowaną przez Ciebie **nazwę połączenia**.
+- **Nazwa sieci (SSID)** : identyfikator zestawu usług. Ta wartość to prawdziwa nazwa sieci bezprzewodowej, z którą łączą się urządzenia. Podczas wybierania połączenia użytkownicy widzą jednak tylko skonfigurowaną przez Ciebie **nazwę połączenia**.
 
 - **Nazwa połączenia**: wprowadź przyjazną dla użytkownika nazwę tego połączenia sieci Wi-Fi. Wprowadzany tekst to nazwa, którą użytkownicy zobaczą podczas przeglądania dostępnych połączeń na swoim urządzeniu.
 
@@ -56,7 +55,7 @@ W tym artykule opisano te ustawienia.
   - **Zmienny**: użyj tej opcji, jeśli opłaty w przypadku ruchu sieciowego są naliczane za bajt (koszt na bajt).
 
 - **Typ zabezpieczeń sieci bezprzewodowej**: wprowadź protokół zabezpieczeń używany do uwierzytelniania urządzeń w sieci. Dostępne opcje to:
-  - **Otwórz (bez uwierzytelniania)**: tej opcji można używać tylko, jeśli sieć jest niezabezpieczona.
+  - **Otwórz (bez uwierzytelniania)** : tej opcji można używać tylko, jeśli sieć jest niezabezpieczona.
   - **WPA/WPA2-Personal**: opcja zapewniająca większe bezpieczeństwo, która jest często używana w przypadku łączności Wi-Fi. Aby uzyskać lepsze zabezpieczenia, możesz także wprowadzić hasło w postaci klucza wstępnego lub klucz sieci. 
 
     - **Klucz wstępny** (PSK): opcjonalnie. Wyświetlana po wybraniu typu zabezpieczeń **WPA/WPA2-Personal**. Podczas ustawiania lub konfigurowania sieci organizacji jest również konfigurowane hasło lub klucz sieciowy. Wprowadź to hasło lub klucz sieciowy dla wartości klucza wstępnego. Wprowadź ciąg zawierający od 8 do 64 znaków. Jeśli hasło lub klucz sieci ma 64 znaki, wprowadź znaki szesnastkowe.
@@ -75,7 +74,7 @@ Wybierz kolejno pozycje **OK** > **Utwórz**, aby zapisać zmiany. Profil zostan
 
 - **Typ sieci Wi-Fi**: wybierz pozycję **Przedsiębiorstwo**. 
 
-- **Nazwa sieci (SSID)**: identyfikator zestawu usług. Ta wartość to prawdziwa nazwa sieci bezprzewodowej, z którą łączą się urządzenia. Podczas wybierania połączenia użytkownicy widzą jednak tylko skonfigurowaną przez Ciebie **nazwę połączenia**.
+- **Nazwa sieci (SSID)** : identyfikator zestawu usług. Ta wartość to prawdziwa nazwa sieci bezprzewodowej, z którą łączą się urządzenia. Podczas wybierania połączenia użytkownicy widzą jednak tylko skonfigurowaną przez Ciebie **nazwę połączenia**.
 
 - **Nazwa połączenia**: wprowadź przyjazną dla użytkownika nazwę tego połączenia sieci Wi-Fi. Wprowadzany tekst to nazwa, którą użytkownicy zobaczą podczas przeglądania dostępnych połączeń na swoim urządzeniu.
 
@@ -126,11 +125,11 @@ Wybierz kolejno pozycje **OK** > **Utwórz**, aby zapisać zmiany. Profil zostan
 
         **Certyfikat główny walidacji serwera**: należy używać z następującymi typami protokołu EAP: **EAP-TLS**, **EAP-TTLS** lub **PEAP**. Wybierz profil zaufanych certyfikatów głównych używany do uwierzytelniania połączenia.  
 
-        **Prywatność tożsamości (tożsamość zewnętrzna)**: należy używać z typem protokołu EAP **PEAP**. Wprowadź tekst, który będzie wysyłany w odpowiedzi na żądanie podania tożsamości zgłaszane przez protokół EAP. Ten tekst może mieć dowolną wartość. Podczas uwierzytelniania na początku wysyłana jest ta tożsamość anonimowa, a po niej — tożsamość rzeczywista, która jest wysyłana w bezpiecznym tunelu.  
+        **Prywatność tożsamości (tożsamość zewnętrzna)** : należy używać z typem protokołu EAP **PEAP**. Wprowadź tekst, który będzie wysyłany w odpowiedzi na żądanie podania tożsamości zgłaszane przez protokół EAP. Ten tekst może mieć dowolną wartość. Podczas uwierzytelniania na początku wysyłana jest ta tożsamość anonimowa, a po niej — tożsamość rzeczywista, która jest wysyłana w bezpiecznym tunelu.  
 
       - **Uwierzytelnianie klienta**
 
-        **Certyfikat klienta na potrzeby uwierzytelniania klienta (certyfikat tożsamości)**: należy używać z typem protokołu EAP **EAP-TLS**. Wybierz profil certyfikatu używany do uwierzytelniania połączenia.
+        **Certyfikat klienta na potrzeby uwierzytelniania klienta (certyfikat tożsamości)** : należy używać z typem protokołu EAP **EAP-TLS**. Wybierz profil certyfikatu używany do uwierzytelniania połączenia.
 
         **Metoda uwierzytelniania**: należy używać z typem protokołu EAP **EAP-TTLS**. Wybierz metodę uwierzytelniania dla połączenia:  
 
@@ -142,7 +141,7 @@ Wybierz kolejno pozycje **OK** > **Utwórz**, aby zapisać zmiany. Profil zostan
             - **Microsoft CHAP (MS-CHAP)**
             - **Microsoft CHAP wersja 2 (MS-CHAP v2)**
 
-        **Prywatność tożsamości (tożsamość zewnętrzna)**: należy używać z typem protokołu EAP **EAP-TTLS**. Wprowadź tekst, który będzie wysyłany w odpowiedzi na żądanie podania tożsamości zgłaszane przez protokół EAP. Ten tekst może mieć dowolną wartość. Podczas uwierzytelniania na początku wysyłana jest ta tożsamość anonimowa, a po niej — tożsamość rzeczywista, która jest wysyłana w bezpiecznym tunelu.
+        **Prywatność tożsamości (tożsamość zewnętrzna)** : należy używać z typem protokołu EAP **EAP-TTLS**. Wprowadź tekst, który będzie wysyłany w odpowiedzi na żądanie podania tożsamości zgłaszane przez protokół EAP. Ten tekst może mieć dowolną wartość. Podczas uwierzytelniania na początku wysyłana jest ta tożsamość anonimowa, a po niej — tożsamość rzeczywista, która jest wysyłana w bezpiecznym tunelu.
 
 - **Ustawienia serwera proxy firmy**: wybierz sposób użycia ustawień serwera proxy w organizacji. Dostępne opcje:
   - **Brak**: nie są konfigurowane żadne ustawienia serwera proxy.
