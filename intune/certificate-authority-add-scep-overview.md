@@ -2,10 +2,10 @@
 title: Korzystanie z urzędu certyfikacji innej firmy przy użyciu protokołu SCEP w usłudze Microsoft Intune — Azure | Microsoft Docs
 description: W usłudze Microsoft Intune można dodać dostawcę lub urząd certyfikacji innej firmy, aby wystawiać certyfikaty na urządzeniach przenośnych przy użyciu protokołu SCEP. W tym omówieniu aplikacja usługi Azure Active Directory (Azure AD) przyznaje usłudze Microsoft Intune uprawnienia do weryfikowania certyfikatów. Następnie należy użyć identyfikatora aplikacji, klucza uwierzytelniania i identyfikatora dzierżawy aplikacji usługi AAD w konfiguracji serwera protokołu SCEP do wystawiania certyfikatów.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 07/26/2018
+ms.date: 05/16/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d042a160d016343c6e8374dff8f74560b9806014
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 5e87b7397d994b089a30fedd9ccedc0107bf0cef
+ms.sourcegitcommit: f8bbd9bac2016a77f36461bec260f716e2155b4a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61508488"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65732493"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Dodawanie urzędu certyfikacji partnera w usłudze Intune przy użyciu protokołu SCEP
 
@@ -69,47 +69,40 @@ Przed zintegrowaniem urzędów certyfikacji innych firm z usługą Intune upewni
 
 Aby umożliwić serwerowi protokołu SCEP innej firmy uruchamianie walidacji wyzwań niestandardowych za pomocą usługi Intune, należy utworzyć aplikację w usłudze Azure AD. Ta aplikacja przyznaje delegowane prawa do usługi Intune w celu walidowania żądań SCEP.
 
-Upewnij się, że masz wymagane uprawnienia do zarejestrowania aplikacji usługi Azure AD. Lista kroków znajduje się w sekcji [Required permissions (Wymagane uprawnienia)](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal#required-permissions).
+Upewnij się, że masz wymagane uprawnienia do zarejestrowania aplikacji usługi Azure AD. Zobacz temat [Wymagane uprawnienia](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal#required-permissions) w dokumentacji usługi Azure AD.
 
-**Krok 1: Tworzenie aplikacji usługi Azure AD**
+#### <a name="create-an-application-in-azure-active-directory"></a>Utworzenie aplikacji w usłudze Azure Active Directory  
 
-1. Zaloguj się do [portalu Azure](https://portal.azure.com).
-2. Wybierz kolejno pozycje **Azure Active Directory** > **Rejestracje aplikacji** > **Rejestrowanie nowej aplikacji**.
-3. Wprowadź nazwę i adres URL logowania. Wybierz pozycję **Aplikacja internetowa/interfejs API** jako typ aplikacji.
-4. Wybierz przycisk **Utwórz**.
+1. W witrynie [Azure Portal](https://portal.azure.com) przejdź kolejno do pozycji **Azure Active Directory** > **Rejestracje aplikacji**, a następnie wybierz pozycję **Nowa rejestracja**.  
 
-Temat [Integrowanie aplikacji z usługą Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications) zawiera wskazówki dotyczące tworzenia aplikacji, w tym porady związane z nazwą i adresem URL.
+2. Na stronie **Zarejestruj aplikację** określ następujące informacje:  
+   - W sekcji **Nazwa** wprowadź opisową nazwę aplikacji.  
+   - W sekcji **Obsługiwane typy kont** wybierz pozycję **Konta w dowolnym katalogu organizacyjnym**.  
+   - W polu **Identyfikator URI przekierowania** pozostaw wartość domyślną sieci Web, a następnie określ adres URL logowania do serwera SCEP innej firmy.  
 
-**Krok 2: Udzielanie uprawnień**
+3. Wybierz opcję **Zarejestruj**, aby utworzyć aplikację i otworzyć stronę przeglądu dotyczącą nowej aplikacji.  
 
-Po utworzeniu aplikacji nadaj interfejsowi API usługi Microsoft Intune wymagane uprawnienia:
+4. Na stronie **Przegląd** aplikacji skopiuj wartość **Identyfikator klienta aplikacji** i zapisz ją w celu późniejszego użycia. Ta wartość będzie potrzebna później.  
 
-1. W aplikacji usługi Azure AD otwórz obszar **Ustawienia** > **Wymagane uprawnienia**.  
-2. Wybierz kolejno pozycje **Dodaj** > **Wybierz interfejs API** > wybierz **interfejs API usługi Microsoft Intune** > **Wybierz**.
-3. W obszarze **Wybieranie uprawnień** wybierz kolejno pozycje **Walidacja wyzwania protokołu SCEP** > **Wybierz**.
-4. Wybierz przycisk **Gotowe**, aby zapisać zmiany.
+5. W okienku nawigacji w aplikacji przejdź do pozycji **Certyfikaty i klucze tajne** w obszarze **Zarządzaj**. Wybierz przycisk **Nowy klucz tajny klienta**. Wprowadź opis, wybierz dowolną opcję w polu **Wygasa**, a następnie wybierz opcję **Dodaj**, aby wygenerować *wartość* klucza tajnego klienta. 
+   > [!IMPORTANT]  
+   > Zanim opuścisz tę stronę, skopiuj wartość klucza tajnego klienta i zapisz ją do późniejszego użycia z implementacją urzędu certyfikacji innej firmy. Ta wartość nie zostanie wyświetlona ponownie. Pamiętaj, aby zapoznać się ze wskazówkami urzędu certyfikacji innej firmy dotyczącymi wymaganej konfiguracji identyfikatora aplikacji, klucza uwierzytelniania i identyfikatora dzierżawy.  
 
-**Krok 3: Pobieranie identyfikatora aplikacji i klucza uwierzytelniania**
+6. Zapisz swój **identyfikator dzierżawy**. Identyfikator dzierżawy to tekst domeny po znaku @ w nazwie konta. Jeśli na przykład Twoje konto to *admin@name.onmicrosoft.com*, identyfikatorem dzierżawy będzie **name.onmicrosoft.com**.  
 
-Następnie pobierz wartości identyfikatora i klucza dla aplikacji usługi Azure AD. Potrzebne są następujące wartości:
+7. W okienku nawigacji w aplikacji przejdź do pozycji **Uprawnienia interfejsu API** w obszarze **Zarządzaj**, a następnie wybierz pozycję **Dodaj uprawnienie**.  
 
-- Identyfikator aplikacji
-- Klucz uwierzytelniania
-- Identyfikator dzierżawy
+8. Na stronie **Żądanie uprawnień interfejsu API** wybierz opcję **Intune**, a następnie wybierz pozycję **Uprawnienia aplikacji**. Zaznacz pole wyboru **scep_challenge_provider** (walidacja wyzwania protokołu SCEP).  
 
-**Aby pobrać identyfikator aplikacji i klucz uwierzytelniania**:
+   Wybierz opcję **Dodaj uprawnienia**, aby zapisać tę konfigurację.  
 
-1. W usłudze Azure AD wybierz swoją nową aplikację (**Rejestracje aplikacji**).
-2. Skopiuj **identyfikator aplikacji** i zapisz go w kodzie aplikacji.
-3. Następnie wygeneruj klucz uwierzytelniania. W aplikacji usługi Azure AD otwórz obszar **Ustawienia** > **Klucze**.
-4. W obszarze **Hasła** wprowadź opis i wybierz czas trwania klucza. **Zapisz** zmiany. Skopiuj i zapisz wyświetloną wartość.
+9. Pozostań na stronie **Uprawnienia interfejsu API** i wybierz kolejno opcje **Wyraź zgodę administratora dla Microsoft** oraz **Tak**.  
+   
+   Proces rejestracji aplikacji w usłudze Azure AD został ukończony.
 
-    > [!IMPORTANT]
-    > Od razu skopiuj i zapisz ten klucz, ponieważ nie będzie ponownie wyświetlany. Ta wartość klucza jest potrzebna podczas implementacji urzędu certyfikacji innej firmy. Pamiętaj, aby zapoznać się ze wskazówkami dotyczącymi wymaganej konfiguracji identyfikatora aplikacji, klucza uwierzytelniania i identyfikatora dzierżawy.
 
-**Identyfikator dzierżawy** to tekst domeny po zalogowaniu @ na koncie. Jeśli na przykład Twoje konto to `admin@name.onmicrosoft.com`, identyfikatorem dzierżawy będzie **name.onmicrosoft.com**.
 
-Sekcja [Get application ID and authentication key (Pobieranie identyfikatora aplikację i klucza uwierzytelniania)](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-application-id-and-authentication-key) zawiera listę czynności wymaganych do uzyskania tych wartości oraz więcej szczegółów na temat aplikacji usługi Azure AD.
+
 
 ### <a name="configure-and-deploy-a-scep-certificate-profile"></a>Konfigurowanie i wdrażanie profilu certyfikatu protokołu SCEP
 Jako administrator utwórz profil certyfikatu protokołu SCEP do skierowania do użytkowników lub urządzeń. Następnie przypisz profil.
@@ -128,6 +121,9 @@ Następujące urzędy certyfikacji innych firm obsługują usługę Intune:
 - [Entrust Datacard](http://www.entrustdatacard.com/resource-center/documents/documentation)
 - [Wersja repozytorium GitHub EJBCA typu open-source](https://github.com/agerbergt/intune-ejbca-connector)
 - [EverTrust](https://evertrust.fr/en/products/)
+- [GlobalSign](https://downloads.globalsign.com/acton/attachment/2674/f-6903f60b-9111-432d-b283-77823cc65500/1/-/-/-/-/globalsign-aeg-microsoft-intune-integration-guide.pdf)
+- [IDnomic](https://www.idnomic.com/)
+- [Sectigo](https://sectigo.com/products)
 
 Jeśli interesuje Cię zintegrowanie urzędu certyfikacji innej firmy z usługą Intune, zapoznaj się ze wskazówkami dotyczącymi interfejsu API:
 
