@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4840ccac35f37e956c363a1f6103da623ef27782
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: d2eac8c396e63fa2f3a4e8ef2c2b88b883c87433
+ms.sourcegitcommit: b7f3a6d67f7ae2356bbca1934056d28cdfc6e45e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61505781"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65836454"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem Android Enterprise w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune
 
@@ -222,7 +222,7 @@ Te ustawienia umożliwiają skonfigurowanie trybu kiosku na dedykowanych urządz
 #### <a name="general"></a>Ogólne
 
 - **Kopiuj i wklejaj między profilem służbowym a osobistym**: wybierz pozycję **Blokuj**, aby uniemożliwić kopiowanie i wklejanie między aplikacjami służbowymi i osobistymi. Pozycja **Nieskonfigurowane** umożliwia użytkownikom udostępnianie danych aplikacjom w profilu osobistym przy użyciu kopiowania i wklejania. 
-- **Udostępnianie danych między profilami służbowym i osobistym**: wybierz, czy aplikacje w profilu służbowym mogą udostępniać dane aplikacjom w profilu osobistym. Możesz na przykład sterować akcjami udostępniania, takimi jak opcja **Udostępnij…**, w aplikacjach. w przeglądarce Chrome. To ustawienie nie ma zastosowania do zachowania schowka w zakresie kopiowania/wklejania. Opcje udostępniania:
+- **Udostępnianie danych między profilami służbowym i osobistym**: wybierz, czy aplikacje w profilu służbowym mogą udostępniać dane aplikacjom w profilu osobistym. Możesz na przykład sterować akcjami udostępniania, takimi jak opcja **Udostępnij…** , w aplikacjach. w przeglądarce Chrome. To ustawienie nie ma zastosowania do zachowania schowka w zakresie kopiowania/wklejania. Opcje udostępniania:
   - **Domyślne ograniczenia udostępniania**: domyślne zachowanie urządzenia w zakresie udostępniania, które różni się w zależności od wersji systemu Android. Udostępnianie danych z profilu osobistego w profilu służbowym jest domyślnie dozwolone. Udostępnianie danych z profilu służbowego w profilu osobistym jest domyślnie zablokowane. To ustawienie zapobiega udostępnianiu danych z profilu służbowego w profilu osobistym. Firma Google nie blokuje udostępniania z profilu osobistego do profilu służbowego na urządzeniach z systemem w wersji 6.0 lub nowszej.
   - **Aplikacje w profilu służbowym mogą obsługiwać żądania udostępnienia z profilu osobistego**: umożliwia włączenie wbudowanej funkcji systemu Android pozwalającej na udostępnianie danych z profilu osobistego w profilu służbowym. Gdy ta opcja jest włączona, żądanie udostępnienia z aplikacji w profilu osobistym umożliwi udostępnianie danych aplikacjom w profilu służbowym. Jest to domyślne ustawienie w przypadku urządzeń z systemem Android w wersji wcześniejszej niż 6.0.
   - **Zezwalaj na udostępnianie przez granice**: umożliwia udostępnianie przez granicę profilu służbowego w obu kierunkach. Po wybraniu tego ustawienia aplikacje w profilu służbowym mogą udostępniać dane niewskazanym aplikacjom w profilu osobistym. To ustawienie pozwala zarządzanym aplikacjom z profilu służbowego udostępniać dane aplikacjom w niezarządzanym obszarze urządzenia. Dlatego należy go używać ostrożnie.
@@ -254,7 +254,7 @@ Te ustawienia umożliwiają skonfigurowanie trybu kiosku na dedykowanych urządz
 - **Minimalna długość hasła**: określ minimalną liczbę znaków, które musi zawierać hasło użytkownika (**4**-**16**).
 - **Maksymalna liczba minut braku aktywności przed zablokowaniem profilu służbowego**: określ, po jakim czasie następuje zablokowanie profilu służbowego. Użytkownik musi następnie wprowadzić swoje poświadczenia, aby odzyskać dostęp.
 - **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia**: określ, ile razy może zostać podane nieprawidłowe hasło, zanim profil służbowy zostanie wyczyszczony z urządzenia.
-- **Wygaśnięcie hasła (dni)**: określ liczbę dni, po których użytkownik końcowy musi zmienić hasło (**1**-**255**).
+- **Wygaśnięcie hasła (dni)** : określ liczbę dni, po których użytkownik końcowy musi zmienić hasło (**1**-**255**).
 - **Wymagany typ hasła**: wybierz typ hasła, które musi zostać ustawione na urządzeniu. Wybierz spośród opcji:
   - **Ustawienie domyślne urządzenia**
   - **Zabezpieczenia biometryczne na niskim poziomie**
@@ -275,7 +275,7 @@ Te ustawienia hasła są stosowane w profilach osobistych na urządzeniach korzy
 - **Minimalna długość hasła**: określ minimalną liczbę znaków, które musi zawierać hasło użytkownika (**4**-**14**).
 - **Maksymalna liczba minut braku aktywności przed zablokowaniem ekranu**: określ, po jakim czasie braku aktywności następuje automatyczne zablokowanie urządzenia
 - **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia**: określ, ile razy może zostać podane nieprawidłowe hasło, zanim zostaną wyczyszczone wszystkie dane z urządzenia
-- **Wygaśnięcie hasła (dni)**: określ liczbę dni, po których użytkownik końcowy musi zmienić hasło (**1**-**255**)
+- **Wygaśnięcie hasła (dni)** : określ liczbę dni, po których użytkownik końcowy musi zmienić hasło (**1**-**255**)
 - **Wymagany typ hasła**: wybierz typ hasła, które musi zostać ustawione na urządzeniu. Wybierz spośród opcji:
   - **Ustawienie domyślne urządzenia**
   - **Zabezpieczenia biometryczne na niskim poziomie**
@@ -327,3 +327,7 @@ Te ustawienia hasła są stosowane w profilach osobistych na urządzeniach korzy
 [Przypisywanie profilu](device-profile-assign.md) i [monitorowanie jego stanu](device-profile-monitor.md).
 
 Możesz również utworzyć profile kiosku urządzenia dedykowanego dla urządzeń z systemem [Android](device-restrictions-android.md#kiosk) i [Windows 10](kiosk-settings.md).
+
+## <a name="see-also"></a>Zobacz także
+
+[Configuring and troubleshooting Android enterprise devices in Microsoft Intune](https://support.microsoft.com/help/4476974) (Konfigurowanie urządzeń z systemem Android Enterprise i rozwiązywanie problemów z nimi w usłudze Microsoft Intune)
