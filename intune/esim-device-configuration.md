@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 7/31/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -15,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4bdaf5768c1b78fbd07a732ee6690e59638fcff1
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 0bb4d94048025f4b0b6c984c4bf0972b432707b6
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61513769"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66041871"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Konfigurowanie profilów sieci komórkowej karty eSIM w usłudze Intune — publiczna wersja zapoznawcza
 
@@ -38,7 +37,7 @@ W usłudze Intune można importować jednorazowe kody aktywacji uzyskane od oper
 Aby wdrożyć kartę eSIM na urządzeniach za pomocą usługi Intune, potrzebne są następujące elementy:
 
 - **Urządzenia obsługujące kartę eSIM** takie jak Surface LTE: Sprawdź, [czy Twoje urządzenie obsługuje kartę eSIM](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data). Możesz też wyświetlić listę [niektórych znanych urządzeń obsługujących karty eSIM](#esim-capable-devices) (w tym artykule).
-- **Komputer PC z systemem Windows 10 i aktualizacją Fall Creators Update**  (wersja 1709 lub nowsza) zarejestrowany w usłudze Intune i zarządzany za pomocą funkcji MDM.
+- **Komputer PC z systemem Windows 10 i aktualizacją Fall Creators Update ** (wersja 1709 lub nowsza) zarejestrowany w usłudze Intune i zarządzany za pomocą funkcji MDM.
 - **Kody aktywacji** dostarczone przez operatora sieci komórkowej. Te jednorazowe kody aktywacji są dodawane do usługi Intune i wdrażane na urządzeniach obsługujących kartę eSIM. Skontaktuj się z operatorem sieci komórkowej, aby uzyskać kody aktywacji karty eSIM.
 
 ## <a name="deploy-esim-to-devices---overview"></a>Wdrażanie karty eSIM na urządzeniach — omówienie

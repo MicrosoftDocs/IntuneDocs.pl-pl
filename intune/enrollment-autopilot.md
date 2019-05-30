@@ -8,7 +8,6 @@ ms.author: erikje
 manager: dougeby
 ms.date: 10/5/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2615c058c5de04842e8d607b717a290663b1a9b1
-ms.sourcegitcommit: bc5e4dff18f5f9b79077a888f8a58dcc490708c0
+ms.openlocfilehash: 03d5d4b9cb69e2d95706357280e324c58656a866
+ms.sourcegitcommit: 876719180e0d73b69fc053cf67bb8cc40b364056
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65983268"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66264136"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Rejestrowanie urządzeń z systemem Windows w usłudze Intune za pomocą rozwiązania Windows Autopilot  
 Rozwiązanie Windows Autopilot upraszcza rejestrowanie urządzeń w usłudze Intune. Tworzenie i konserwacja niestandardowych obrazów systemów operacyjnych zajmuje dużo czasu. Trzeba również poświęcić czas na stosowanie tych niestandardowych obrazów systemów operacyjnych na nowych urządzeniach w celu przygotowania ich do użycia przed przekazaniem użytkownikom końcowym. Dzięki usłudze Microsoft Intune i rozwiązaniu Autopilot można przekazać nowe urządzenia użytkownikom końcowym bez konieczności tworzenia, konserwowania i stosowania niestandardowych obrazów systemów operacyjnych do urządzeń. Jeśli do zarządzania urządzeniami z rozwiązaniem Autopilot używasz usługi Intune, możesz zarządzać zasadami, profilami, aplikacjami i nie tylko po ich zarejestrowaniu. Aby zapoznać się z korzyściami, scenariuszami i wymaganiami wstępnymi, zobacz [Overview of Windows Autopilot (Przegląd rozwiązania Windows Autopilot)](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -48,7 +47,8 @@ Urządzenia rozwiązania Autopilot z systemem Windows można dodawać przez zaim
 
     ![Zrzut ekranu przedstawiający urządzenia rozwiązania Autopilot z systemem Windows](media/enrollment-autopilot/autopilot-import-device.png)
 
-2. W obszarze **Dodawanie urządzeń rozwiązania AutoPilot z systemem Windows** przejdź do pliku CSV z informacjami o urządzeniach, które chcesz dodać. Plik powinien zawierać listę numerów seryjnych, identyfikatorów produktów systemu Windows, skrótów sprzętu i opcjonalnie tagów grup urządzeń.
+2. W obszarze **Dodawanie urządzeń rozwiązania AutoPilot z systemem Windows** przejdź do pliku CSV z informacjami o urządzeniach, które chcesz dodać. Plik CSV powinien zawierać listę numerów seryjnych, opcjonalnych identyfikatorów produktów systemu Windows, skrótów sprzętu i opcjonalnie tagów grup urządzeń. Lista możesz mieć maksymalnie 500 wierszy. Użyj poniższego formatu nagłówka i wiersza: `Device Serial Number,Windows Product ID,Hardware Hash,GroupTag`
+    `<serialNumber>,<optionalProductID>,<hardwareHash>,<optionalGroupTag>`
 
     ![Zrzut ekranu przedstawiający dodawanie urządzeń rozwiązania Autopilot z systemem Windows](media/enrollment-autopilot/autopilot-import-device2.png)
 
@@ -86,20 +86,23 @@ Profile wdrażania rozwiązania Autopilot służą do konfigurowania urządzeń 
 4. Wybierz pozycję **Dalej**.
 5. Na stronie **Środowisko gotowe do użycia (OOBE, Out-of-box experience)** dla pozycji **Tryb wdrożenia** wybierz jedną z następujących dwóch opcji:
     - **Sterowane przez użytkownika**: Urządzenia z tym profilem są skojarzone z użytkownikiem rejestrującym urządzenie. Poświadczenia użytkownika są wymagane do rejestracji urządzenia.
-    - **Wdrażanie samodzielne (wersja zapoznawcza)** : (wymaga systemu Windows 10 w wersji 1809 lub nowszej) urządzenia z tym profilem nie są skojarzone z użytkownikiem rejestrującym urządzenie. Poświadczenia użytkownika nie są wymagane do zarejestrowania urządzenia.
+    - **Wdrażanie samodzielne (wersja zapoznawcza)**: (wymaga systemu Windows 10 w wersji 1809 lub nowszej) urządzenia z tym profilem nie są skojarzone z użytkownikiem rejestrującym urządzenie. Poświadczenia użytkownika nie są wymagane do zarejestrowania urządzenia.
 
     ![Zrzut ekranu strony OOBE](media/enrollment-autopilot/create-profile-outofbox.png)
 
 6. W polu **Dołącz do usługi Azure AD jako** wybierz pozycję **Dołączono do usługi Azure AD**.
 7. Skonfiguruj następujące opcje:
-    - **Umowa licencyjna użytkownika oprogramowania (EULA)** : (system Windows 10 w wersji 1709 lub nowszej) wybierz, jeśli chcesz, aby umowa licencyjna użytkownika oprogramowania była pokazywana użytkownikom.
+    - **Umowa licencyjna użytkownika oprogramowania (EULA)**: (system Windows 10 w wersji 1709 lub nowszej) wybierz, jeśli chcesz, aby umowa licencyjna użytkownika oprogramowania była pokazywana użytkownikom.
     - **Ustawienia prywatności**: wybierz, jeśli chcesz, aby ustawienia prywatności były pokazywane użytkownikom.
-    - **Ukryj zmianę opcji konta (wymaga systemu Windows 10 w wersji 1809 lub nowszej)** : wybierz pozycję **Ukryj**, aby zapobiec wyświetlaniu zmian opcji konta na stronach logowania i błędów domeny firmy. Ta opcja wymaga [skonfigurowania znakowania firmowego w usłudze Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding).
+    >[!IMPORTANT]
+    >W przypadku wdrożeń rozwiązania Autopilot w urządzeniach z systemem Windows 10 w wersji 1903 lub nowszej domyślnie dane diagnostyczne mają automatycznie ustawienie Pełne. Aby uzyskać więcej informacji, zobacz [Dane diagnostyczne systemu Windows](https://docs.microsoft.com/en-us/windows/privacy/windows-diagnostic-data) <br>
+    
+    - **Ukryj zmianę opcji konta (wymaga systemu Windows 10 w wersji 1809 lub nowszej)**: wybierz pozycję **Ukryj**, aby zapobiec wyświetlaniu zmian opcji konta na stronach logowania i błędów domeny firmy. Ta opcja wymaga [skonfigurowania znakowania firmowego w usłudze Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding).
     - **Typ konta użytkownika**: wybierz typ konta użytkownika (**Administrator** lub **Standardowe** konto użytkownika).
     - **Zezwalaj na tryb OOBE White Glove**: wybierz pozycję **Tak**, aby zezwolić na obsługę trybu White Glove.
     - **Zastosuj szablon nazwy urządzenia**: wybierz pozycję **Tak**, aby utworzyć szablon do stosowania podczas określania nazwy urządzenia w trakcie rejestracji. Nazwy mogą mieć co najwyżej 15 znaków i zawierać litery, cyfry i łączniki. Nazwy nie mogą zawierać samych cyfr. Użyj [makro %SERIAL%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp), aby dodać numer seryjny specyficzny dla sprzętu. Ewentualnie możesz zastosować [makro %RAND:x%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp), aby dodać losowy ciąg cyfr, gdzie x odpowiada liczbie cyfr do dodania. 
-    - **Język (region)** \*: wybierz język do użycia dla urządzenia. Ta opcja jest dostępna tylko w przypadku wybrania pozycji **Wdrażanie samodzielne** dla ustawienia **Tryb wdrażania**.
-    - **Automatycznie skonfiguruj klawiaturę**\*: jeśli wybrano pozycję **Język (region)** , wybierz pozycję **Tak**, aby pominąć stronę wyboru klawiatury. Ta opcja jest dostępna tylko w przypadku wybrania pozycji **Wdrażanie samodzielne** dla ustawienia **Tryb wdrażania**.
+    - **Język (region)**\*: wybierz język do użycia dla urządzenia. Ta opcja jest dostępna tylko w przypadku wybrania pozycji **Wdrażanie samodzielne** dla ustawienia **Tryb wdrażania**.
+    - **Automatycznie skonfiguruj klawiaturę**\*: jeśli wybrano pozycję **Język (region)**, wybierz pozycję **Tak**, aby pominąć stronę wyboru klawiatury. Ta opcja jest dostępna tylko w przypadku wybrania pozycji **Wdrażanie samodzielne** dla ustawienia **Tryb wdrażania**.
 8. Wybierz pozycję **Dalej**.
 9. Na stronie **Tagi zakresu** opcjonalnie dodaj tagi zakresu, które chcesz zastosować do tego profilu. Więcej informacji na temat tagów zakresu można znaleźć w artykule [Use role-based access control and scope tags for distributed IT](scope-tags.md) (Używanie kontroli dostępu opartej na rolach (RBAC) i tagów zakresu w rozproszonej infrastrukturze informatycznej).
 10. Wybierz pozycję **Dalej**.

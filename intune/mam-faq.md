@@ -7,7 +7,6 @@ ms.author: erikre
 manager: dougeby
 ms.date: 05/21/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31b5697d9673866d378cc526a3735138d6a120b3
-ms.sourcegitcommit: 6de06b475f16893710dc34027096138aa697e482
+ms.openlocfilehash: 1fb3b02cd9d9b978f1de5e98634d647c4c81cde0
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65992899"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66041656"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Często zadawane pytania dotyczące zarządzania aplikacjami mobilnymi (MAM) i ochrony aplikacji
 
@@ -220,6 +219,6 @@ Podczas pracy z różnymi typami ustawień pierwszeństwo ma wymaganie dotycząc
 - [Ustawienia zasad zarządzania aplikacjami mobilnymi systemu Android w usłudze Microsoft Intune](app-protection-policy-settings-android.md)
 - [Ustawienia zasad zarządzania aplikacjami mobilnymi systemu iOS](app-protection-policy-settings-ios.md)
 - [Zasady ochrony aplikacji — odświeżanie zasad](app-protection-policy-delivery.md)
-- [Weryfikowanie zasad ochrony aplikacji](https://docs.microsoft.com/en-us/intune/app-protection-policy-delivery)
+- [Weryfikowanie zasad ochrony aplikacji](app-protection-policy-delivery.md)
 - [Dodawanie zasad konfiguracji aplikacji dla zarządzanych aplikacji bez rejestracji urządzeń](app-configuration-policies-managed-app.md)
 - [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](get-support.md)

@@ -6,9 +6,8 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/16/2019
+ms.date: 05/21/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf40c3b8f31e042a501e1502097f147d48fc328d
-ms.sourcegitcommit: bc5e4dff18f5f9b79077a888f8a58dcc490708c0
+ms.openlocfilehash: 25a3acda374266a0fbd16feabde7787204555ea2
+ms.sourcegitcommit: 876719180e0d73b69fc053cf67bb8cc40b364056
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65975817"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66264173"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co nowego w usłudze Microsoft Intune
 
@@ -45,8 +44,20 @@ Dowiedz się co tydzień, co nowego w usłudze Microsoft Intune. Możesz równie
 
 -->  
 
-
 <!-- ########################## -->
+
+## <a name="week-of-may-20-2019"></a>Tydzień od 20 maja 2019 r. 
+
+### <a name="app-management"></a>Zarządzanie aplikacjami
+
+#### <a name="windows-company-portal-app----3316993---"></a>Aplikacja Portal firmy dla systemu Windows <!-- 3316993 -->
+Aplikacja Portal firmy w systemie Windows będzie teraz mieć nową stronę z etykietą **Urządzenia**. Strona **Urządzenia** przedstawia użytkowników końcowych wszystkich zarejestrowanych urządzeń. Użytkownicy zobaczą tę zmianę w Portalu firmy, jeśli korzystają z wersji 10.3.4291.0 lub nowszej. Aby uzyskać informacje na temat konfigurowania Portalu firmy, zobacz [Jak skonfigurować aplikację Portal firmy w usłudze Microsoft Intune](company-portal-app.md).
+
+### <a name="device-enrollment"></a>Rejestrowanie urządzeń
+
+#### <a name="autopilot-device-orderid-attribute-name-changed-to-group-tag----4659453---"></a>Zmieniono nazwę atrybutu OrderID urządzenia rozwiązania Autopilot na tag grupy <!-- 4659453 -->
+
+Aby zwiększyć intuicyjność, zmieniono nazwę atrybutu **OrderID** w urządzeniach rozwiązania Autopilot na **Tag grupy**. W przypadku przekazywania informacji o urządzeniu rozwiązania Autopilot za pomocą plików CSV jako nagłówka kolumny należy użyć tagu grupy, a nie atrybutu OrderID.  
 
 ## <a name="week-of-may-13-2019"></a>Tydzień od 13 maja 2019 r. 
 
@@ -64,7 +75,7 @@ Na urządzeniach, które zostały już zarejestrowane za pomocą Asystenta ustaw
 
 Jeśli użytkownicy zainstalują aplikację Portal firmy ze sklepu z aplikacjami, a następnie podejmą próbę zarejestrowania urządzeń przy jej użyciu, wystąpi błąd. Oczekuje się, że te urządzenia będą używać aplikacji Portal firmy tylko w sytuacji, gdy nastąpi automatyczne wypchnięcie przez usługę Intune podczas rejestracji. Profile rejestracji w usłudze Intune w witrynie Azure Portal zostaną zaktualizowane tak, aby określić sposób uwierzytelniania urządzeń oraz wskazać, czy otrzymują aplikację Portal firmy. Jeśli chcesz, aby użytkownicy urządzenia DEP mieli aplikację Portal firmy, musisz określić swoje preferencje w profilu rejestracji. 
 
-Ponadto ekran **Identyfikowanie urządzenia** w aplikacji Portal firmy dla systemu iOS jest usuwany. W związku z tym administratorzy, którzy chcą włączyć dostęp warunkowy lub wdrażać aplikacje firmowe, muszą zaktualizować profil rejestracji w programie DEP. To wymaganie ma zastosowanie tylko, jeśli rejestracja w programie DEP jest uwierzytelniana przy użyciu Asystenta ustawień. W takim przypadku należy wypchnąć aplikację Portal firmy do urządzenia. W tym celu wybierz pozycję **Intune** > **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Tokeny programu rejestracji** > wybierz token > **Profile** > wybierz profil > **Właściwości** > ustaw pozycję **Zainstaluj Portal firmy** na wartość **Prawda**.
+Ponadto ekran **Identyfikowanie urządzenia** w aplikacji Portal firmy dla systemu iOS jest usuwany. W związku z tym administratorzy, którzy chcą włączyć dostęp warunkowy lub wdrażać aplikacje firmowe, muszą zaktualizować profil rejestracji w programie DEP. To wymaganie ma zastosowanie tylko, jeśli rejestracja w programie DEP jest uwierzytelniana przy użyciu Asystenta ustawień. W takim przypadku należy wypchnąć aplikację Portal firmy do urządzenia. W tym celu wybierz pozycję **Intune** > **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Tokeny programu rejestracji** > wybierz token > **Profile** > wybierz profil > **Właściwości** > ustaw pozycję **Zainstaluj Portal firmy** na wartość **Tak**.
 
 Aby zainstalować Portal firmy na już zarejestrowanych urządzeniach objętych programem DEP, należy przejść do usługi Intune > Aplikacje klienckie i wypchnąć ją jako aplikację zarządzaną przy użyciu zasad konfiguracji aplikacji. 
 
@@ -432,7 +443,7 @@ Konsola usługi Intune nie obsługuje już wyświetlania urządzeń typu „tylk
 - Używanie kontrolek programu Exchange zgodnie z opisem w artykule [Clients and mobile in Exchange Online](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/clients-and-mobile-in-exchange-online) (Klienci i urządzenia przenośne w usłudze Exchange Online)
 
 ### <a name="search-the-all-devices-page-for-an-exact-device-by-using-name---4254930---"></a>Wyszukiwanie dokładnej nazwy urządzenia na stronie Wszystkie urządzenia przy użyciu elementu [name] <!--4254930 -->
-Możesz teraz wyszukać dokładną nazwę urządzenia. Przejdź do strony **Intune** > **Urządzenia** > **Wszystkie urządzenia** > w polu wyszukiwania wprowadź nazwę urządzenia ujętą w nawiasy {}, aby wyszukać dokładne dopasowanie. Na przykład **{Urządzenie12345}**.
+Możesz teraz wyszukać dokładną nazwę urządzenia. Przejdź do strony **Intune** > **Urządzenia** > **Wszystkie urządzenia** > w polu wyszukiwania wprowadź nazwę urządzenia ujętą w nawiasy {}, aby wyszukać dokładne dopasowanie. Na przykład **{Urządzenie12345}** .
 
 ### <a name="monitor-and-troubleshoot"></a>Monitorowanie i rozwiązywanie problemów
 
@@ -581,8 +592,8 @@ Android Enterprise
 #### <a name="safari-and-delaying-user-software-update-visibility-ios-settings-are-moving-in-the-intune-ui----3640850-3803313-----"></a>Ustawienia systemu iOS dotyczące przeglądarki Safari i opóźniania widoczności aktualizacji oprogramowania użytkownika są przenoszone w interfejsie użytkownika usługi Intune <!-- 3640850, 3803313   -->
 W przypadku urządzeń z systemem iOS można skonfigurować ustawienia przeglądarki Safari i aktualizacje oprogramowania. W ramach tej aktualizacji wymienione ustawienia są przenoszone do różnych części interfejsu użytkownika usługi Intune:
 
-- Ustawienia przeglądarki Safari zostały przeniesione z pozycji **Safari**(**Konfiguracja urządzenia** > **Profile** > **Nowy profil** > **iOS** dla platformy > **Ograniczenia urządzenia** dla typu profilu) do pozycji **[Aplikacje wbudowane](device-restrictions-ios.md#built-in-apps)**.
-- Ustawienie **Opóźnianie widoczności aktualizacji oprogramowania użytkownika dla urządzeń z systemem iOS w trybie nadzorowanym** (**Aktualizacje oprogramowania** > **Aktualizuj zasady dla systemu iOS**) jest przenoszone do obszaru **Ograniczenia urządzeń** > **[Ogólne](device-restrictions-ios.md#general)**.  Aby uzyskać szczegółowe informacje o wpływie na istniejące zasady, zobacz [aktualizacje oprogramowania systemu iOS](software-updates-ios.md#configure-the-policy). 
+- Ustawienia przeglądarki Safari zostały przeniesione z pozycji **Safari**(**Konfiguracja urządzenia** > **Profile** > **Nowy profil** > **iOS** dla platformy > **Ograniczenia urządzenia** dla typu profilu) do pozycji **[Aplikacje wbudowane](device-restrictions-ios.md#built-in-apps)** .
+- Ustawienie **Opóźnianie widoczności aktualizacji oprogramowania użytkownika dla urządzeń z systemem iOS w trybie nadzorowanym** (**Aktualizacje oprogramowania** > **Aktualizuj zasady dla systemu iOS**) jest przenoszone do obszaru **Ograniczenia urządzeń** >  **[Ogólne](device-restrictions-ios.md#general)** .  Aby uzyskać szczegółowe informacje o wpływie na istniejące zasady, zobacz [aktualizacje oprogramowania systemu iOS](software-updates-ios.md#configure-the-policy). 
 
 Aby uzyskać listę ustawień, zobacz:
 
@@ -594,7 +605,7 @@ Ta funkcja ma zastosowanie do:
 - iOS
 
 #### <a name="enabling-restrictions-in-the-device-settings-is-renamed-to-screen-time-on-ios-devices----3699164-----"></a>Nazwa opcji Włączanie ograniczeń w ustawieniach urządzenia zostanie zmieniona na Czas korzystania z urządzenia na urządzeniach z systemem iOS <!-- 3699164   -->
-Istnieje możliwość skonfigurowania pozycji **Włączanie ograniczeń w ustawieniach urządzenia** na urządzeniach nadzorowanych z systemem iOS (**Konfiguracja urządzenia** > **Profile** > **Nowy profil** > **iOS** dla platformy > **Ograniczenia urządzenia** dla typu profilu > **Ogólne**). W ramach tej aktualizacji nazwa tego ustawienia zostanie zmieniona na **Czas korzystania z urządzenia (tylko nadzorowane)**. 
+Istnieje możliwość skonfigurowania pozycji **Włączanie ograniczeń w ustawieniach urządzenia** na urządzeniach nadzorowanych z systemem iOS (**Konfiguracja urządzenia** > **Profile** > **Nowy profil** > **iOS** dla platformy > **Ograniczenia urządzenia** dla typu profilu > **Ogólne**). W ramach tej aktualizacji nazwa tego ustawienia zostanie zmieniona na **Czas korzystania z urządzenia (tylko nadzorowane)** . 
 
 Zachowanie jest takie samo. W szczególności: 
 
@@ -1122,7 +1133,7 @@ Nowy moduł programu PowerShell, który zapewnia obsługę interfejsu API usług
 ## <a name="week-of-october-15-2018"></a>Tydzień 15 października 2018 r.
 
 ### <a name="pin-prompt-when-you-change-fingerprints-or-face-id-on-an-ios-device-----2637704----"></a>Monit o podanie numeru PIN podczas zmieniania odcisków palców lub twarzy w funkcji Face ID na urządzeniu z systemem iOS  <!-- 2637704  -->
-Użytkownicy są teraz monitowani o podanie numeru PIN po wprowadzeniu zmian biometrycznych na urządzeniu z systemem iOS. Obejmuje to zmiany zarejestrowanych odcisków palców lub twarzy w funkcji Face ID. Chronometraż monitu zależy od konfiguracji limitu czasu *Ponownie sprawdź wymagania dostępu po (minuty)*.  Jeśli numer PIN nie jest ustawiony, użytkownik jest monitowany o ustawienie go. 
+Użytkownicy są teraz monitowani o podanie numeru PIN po wprowadzeniu zmian biometrycznych na urządzeniu z systemem iOS. Obejmuje to zmiany zarejestrowanych odcisków palców lub twarzy w funkcji Face ID. Chronometraż monitu zależy od konfiguracji limitu czasu *Ponownie sprawdź wymagania dostępu po (minuty)* .  Jeśli numer PIN nie jest ustawiony, użytkownik jest monitowany o ustawienie go. 
  
 Ta funkcja jest dostępna tylko dla systemów iOS i wymaga udziału aplikacji, w których zintegrowany jest zestaw SDK zasad ochrony aplikacji usługi Intune dla systemu iOS w wersji 9.0.1 lub nowszej. Integracja zestawu SDK jest konieczna, aby można było wymusić to zachowanie w aplikacjach docelowych. Ta integracja jest przeprowadzana w sposób ciągły i zależy od zespołów zajmujących się określonymi aplikacjami. Dotyczy to między innymi aplikacji WXP, Outlook, Managed Browser i Yammer.
 
