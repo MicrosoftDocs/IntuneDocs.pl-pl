@@ -1,11 +1,11 @@
 ---
-title: Rejestrowanie urządzenia z systemem Windows 10 w aplikacji Portal firmy usługi Intune | Dokumentacja firmy Microsoft
-description: Instrukcje dotyczące rejestrowania urządzeń z systemem Windows 10 w aplikacji Portal firmy usługi Intune
+title: Rejestrowanie urządzenia z systemem Windows 10 w aplikacji Intune — Portal firmy | Microsoft Docs
+description: Instrukcje dotyczące rejestrowania urządzeń z systemem Windows 10 w aplikacji Intune — Portal firmy
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/11/2019
+ms.date: 05/21/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,27 +18,27 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4eb5dbb150559de7ad30a598fb78a4fa78033c42
-ms.sourcegitcommit: fdc6261f4ed695986e06d18353c10660a4735362
+ms.openlocfilehash: cbb6c3b771ae768fe45bea1eecb21f7083003010
+ms.sourcegitcommit: d258bcf6716c8a2589d3f8dada819905ee80f233
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58069165"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66196850"
 ---
-# <a name="enroll-windows-10-devices-with-intune-company-portal"></a>Rejestrowanie urządzeń z systemem Windows 10 przy użyciu portalu firmy usługi Intune
+# <a name="enroll-windows-10-devices-with-intune-company-portal"></a>Rejestrowanie urządzenia z systemem Windows 10 w aplikacji Intune — Portal firmy
 
-Portal firmy usługi Intune umożliwia rejestrowanie urządzenia z systemem Windows 10 w ramach zarządzania Twojej organizacji. W tym artykule opisano sposób rejestrowania urządzeń z systemem Windows 10 w wersji 1607 i nowszych oraz systemu Windows 10 w wersji 1511 lub wcześniejszej. Przed rozpoczęciem upewnij się, że [sprawdź wersję na urządzeniu z systemem](windows-enrollment-company-portal.md#find-windows-10-version-number) tak, aby wykonać odpowiednie kroki.  
+Aplikacja Intune — Portal firmy umożliwia zarejestrowanie urządzenia z systemem Windows 10 na potrzeby zarządzania przez organizację. W tym artykule opisano sposób rejestrowania urządzeń z systemem Windows 10 w wersjach 1607 i nowszych oraz systemem Windows 10 w wersjach 1511 i starszych. Przed rozpoczęciem [sprawdź, jaką masz wersję na swoim urządzeniu](windows-enrollment-company-portal.md#find-windows-10-version-number), aby wykonać odpowiednie kroki.  
 
-Windows 10 są obsługiwane w różnych typów urządzeń, w tym pulpit, telefony i tablety. Instrukcje dotyczące rejestracji są takie same, niezależnie od urządzenia używasz. Jednak ekranu mogą różnić się nieco od obrazów przedstawione w tym artykule.  
+System Windows 10 jest obsługiwany na urządzeniach różnego typu, w tym na komputerach, telefonach i tabletach. Kroki rejestracji są takie same, niezależnie od używanego urządzenia. Twój ekran może jednak różnić się od ilustracji przedstawionych w tym artykule.  
+</br>
+> [!VIDEO https://www.youtube.com/embed/TKQxEckBHiE?rel=0]
 
-> [!VIDEO https://channel9.msdn.com/Series/IntuneEnrollment/Windows-Enrollment/player]  
+## <a name="enroll-windows-10-version-1607-and-later-device"></a>Rejestrowanie urządzenia z systemem Windows 10 w wersjach 1607 i nowszych 
+Opisano tutaj kroki umożliwiające zarejestrowanie urządzenia, na którym działa system Windows 10 w wersji 1607 lub nowszej.  
 
-## <a name="enroll-windows-10-version-1607-and-later-device"></a>Rejestrowanie systemu Windows 10 w wersji 1607 i nowszych urządzenia 
-Poniższe kroki opisują sposób rejestrowania urządzenia, na które jest uruchamiane w systemie Windows 10 w wersji 1607 i nowszych.  
+1. Przejdź do pozycji **Start**. Jeśli masz urządzenie z systemem Windows 10 Mobile, przejdź do listy **Wszystkie aplikacje**.
 
-1. Przejdź do pozycji **Start**. Jeśli na urządzeniu z systemem Windows 10 Mobile, w dalszym ciągu **wszystkie aplikacje** listy.
-
-2. Otwórz aplikację **Ustawienia**. Jeśli aplikacja nie jest łatwo dostępne na liście aplikacji, przejdź do paska wyszukiwania i wpisz "ustawienia".
+2. Otwórz aplikację **Ustawienia**. Jeśli ta aplikacja nie jest wymieniona na liście aplikacji, przejdź do paska wyszukiwania i wpisz „ustawienia”.
 
 3. Wybierz kolejno pozycje **Konta** > **Uzyskaj dostęp do miejsca pracy lub nauki** > **Połącz**.  
 
@@ -57,25 +57,25 @@ Poniższe kroki opisują sposób rejestrowania urządzenia, na które jest uruch
 
     W końcu pojawi się komunikat informujący o tym, że firma lub szkoła rejestruje urządzenie.
 
-6. Jeśli Twoja organizacja wymaga skonfigurować numer PIN dla Windows Hello, możesz wyświetlony monit o podanie kodu weryfikacyjnego. Wprowadź kod i kontynuuj pracę na ekranie kroki umożliwiające utworzenie kodu PIN.  
+6. Jeśli Twoja organizacja wymaga skonfigurowania numeru PIN dla systemu Windows Hello, zostanie wyświetlony monit o podanie kodu weryfikacyjnego. Wprowadź kod i postępuj według wskazówek na ekranie, aby utworzyć kod PIN.  
 
 7. Na ekranie **Wszystko jest gotowe!** wybierz pozycję **Gotowe**. Urządzenie jest teraz zarejestrowane.  
 
-8. Aby dokładnie sprawdzić połączenie, wróć do obszaru **ustawienia** > **kont** > **dostęp do zasobów służbowych**.  Teraz powinny być wymienione na koncie.  
+8. Aby dokładnie sprawdzić połączenie, wróć do obszaru **Ustawienia** > **Konta** > **Uzyskaj dostęp do miejsca pracy lub nauki**.  Teraz Twoje konto powinno znajdować się na liście.  
 
 
     ![Sprawdź, czy połączenie zostało poprawnie skonfigurowane](./media/w10-enroll-rs1-validate-successful-enrollment.png)  
 
-Wciąż nie możesz uzyskać dostępu do swoich plików lub poczty służbowej albo innych danych? Dowiedz się, jak [Rozwiązywanie problemów z kontem](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-access-work-or-school).  
+Wciąż nie możesz uzyskać dostępu do swoich plików lub poczty służbowej albo innych danych? Dowiedz się, jak [rozwiązywać problemy z kontem](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-access-work-or-school).  
 
-## <a name="enroll-windows-10-version-1511-and-earlier-device"></a>Rejestrowanie systemu Windows 10 w wersji 1511 i starszych urządzeń  
-Poniższe kroki opisują sposób zarejestrować urządzenie, które jest uruchamiane w systemie Windows 10 w wersji 1511 lub wcześniejszej.  
+## <a name="enroll-windows-10-version-1511-and-earlier-device"></a>Rejestrowanie urządzenia z systemem Windows 10 w wersjach 1511 i starszych  
+Opisano tutaj kroki umożliwiające zarejestrowanie urządzenia, na którym działa system Windows 10 w wersji 1511 lub starszej.  
 
-1. Przejdź do pozycji **Start**. Jeśli na urządzeniu z systemem Windows 10 Mobile, w dalszym ciągu **wszystkie aplikacje** listy.
+1. Przejdź do pozycji **Start**. Jeśli masz urządzenie z systemem Windows 10 Mobile, przejdź do listy **Wszystkie aplikacje**.
 
-2. Otwórz aplikację **Ustawienia**. Jeśli aplikacja nie jest łatwo dostępne na liście aplikacji, przejdź do paska wyszukiwania i wpisz "ustawienia".
+2. Otwórz aplikację **Ustawienia**. Jeśli ta aplikacja nie jest wymieniona na liście aplikacji, przejdź do paska wyszukiwania i wpisz „ustawienia”.
 
-3. Wybierz **kont** > **konta**.  
+3. Wybierz pozycję **Konta** > **Twoje konto**.  
 
 
     ![Wybieranie konta](./media/W10-enroll-2-accounts-your-account.png)  
@@ -90,11 +90,14 @@ Poniższe kroki opisują sposób zarejestrować urządzenie, które jest urucham
 
     ![Zaloguj się](./media/W10-enroll-4-sign-in.png)  
 
-Wciąż nie możesz uzyskać dostępu do swoich plików lub poczty służbowej albo innych danych? Dowiedz się, jak [Rozwiązywanie problemów z kontem](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-your-account).   
+Wciąż nie możesz uzyskać dostępu do swoich plików lub poczty służbowej albo innych danych? Dowiedz się, jak [rozwiązywać problemy związane z kontem](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-your-account) podczas rejestracji.  
+
+## <a name="it-administrator-support"></a>Pomoc techniczna dla administratora IT   
+
+Jeśli jako administrator IT napotkasz problemy podczas rejestrowania urządzeń, zobacz [Troubleshooting Windows device enrollment problems in Microsoft Intune (Rozwiązywanie problemów z rejestrowaniem urządzeń z systemem Windows w usłudze Microsoft Intune)](https://support.microsoft.com/help/4469913). W tym artykule wymieniono typowe błędy, ich przyczyny i kroki prowadzące do ich usunięcia. 
 
 ## <a name="next-steps"></a>Następne kroki  
-
-Aby uzyskać pomoc, skontaktuj się z działem pomocy technicznej Twojej firmy. Można znaleźć w organizacji IT informacji na temat [witryny internetowej Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980). Zaloguj się do witryny przy użyciu konta służbowego.  
+Jeśli potrzebujesz pomocy dotyczącej portalu firmy lub procesu rejestracji, skontaktuj się z zespołem pomocy technicznej IT w Twojej organizacji. Odpowiednie informacje kontaktowe znajdziesz w [witrynie internetowej Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980). Zaloguj się do witryny przy użyciu konta służbowego.  
 
  
 

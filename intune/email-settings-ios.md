@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 12/11/2018
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -15,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1cf1daf42d1dfcd8dd25304040e868581a056943
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 0faf9220b4859c41ef8c4393fe15f385eaac8cc3
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566417"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66042113"
 ---
 # <a name="email-profile-settings-for-ios-devices-in-intune"></a>Ustawienia profilu poczty e-mail dla urządzeń z systemem iOS w usłudze Intune
 
@@ -76,20 +75,20 @@ W tym artykule wymieniono i opisano wszystkie ustawienia poczty e-mail dostępne
   Gdy używasz protokołu S/MIME w wiadomościach e-mail, potwierdzasz autentyczność nadawcy oraz integralność i poufność wiadomości.
 
   - **Włączone podpisywanie S/MIME**: wybierz opcję **Włącz**, aby umożliwić użytkownikom cyfrowe podpisywanie wychodzących wiadomości e-mail dla podanego konta. Dzięki podpisywaniu użytkownicy odbierający wiadomości mogą być pewni, że wiadomość pochodzi od określonego nadawcy, a nie od kogoś, kto udaje, że jest tym nadawcą. Wybranie opcji **Wyłącz** powoduje, że użytkownicy nie mogą cyfrowo podpisywać wiadomości.
-    - **Zezwalaj użytkownikom na zmianę ustawienia**: Wybierz **Włącz** umożliwia użytkownikom zmianę zachowania podpisywania S/MIME. Wybranie opcji **Wyłącz** uniemożliwia użytkownikom zmienianie skonfigurowanego ustawienia podpisywania S/MIME. Dostępne w systemie iOS 12 lub nowszym.
+    - **Zezwalaj użytkownikowi na zmianę ustawienia**: wybierz opcję **Włącz**, aby umożliwić użytkownikom zmianę zachowania podpisywania S/MIME. Wybranie opcji **Wyłącz** uniemożliwia użytkownikom zmienianie skonfigurowanego ustawienia podpisywania S/MIME. Dostępne w systemie iOS 12 lub nowszym.
 
   - **Certyfikat podpisywania S/MIME**: wybierz istniejący profil certyfikatu PKCS lub SCEP, który jest używany do podpisywania wiadomości e-mail.
-    - **Zezwalaj użytkownikom na zmianę ustawienia**: Wybierz **Włącz** umożliwia użytkownikom zmianę certyfikatu podpisywania. Wybranie opcji **Wyłącz** uniemożliwia użytkownikom zmienianie certyfikatu podpisywania i wymusza na użytkownikach stosowanie skonfigurowanego przez Ciebie certyfikatu. Dostępne w systemie iOS 12 lub nowszym.
+    - **Zezwalaj użytkownikowi na zmianę ustawienia**: wybierz opcję **Włącz**, aby umożliwić użytkownikom zmianę certyfikatu podpisywania. Wybranie opcji **Wyłącz** uniemożliwia użytkownikom zmienianie certyfikatu podpisywania i wymusza na użytkownikach stosowanie skonfigurowanego przez Ciebie certyfikatu. Dostępne w systemie iOS 12 lub nowszym.
 
-  - **Szyfruj domyślnie**: **Włącz** szyfruje wszystkie wiadomości jako zachowanie domyślne. Wybranie opcji **Wyłącz** powoduje, że szyfrowanie wiadomości nie jest zachowaniem domyślnym.
-    - **Zezwalaj użytkownikom na zmianę ustawienia**: Wybierz **Włącz** aby użytkownicy mogli zmienić domyślne zachowanie szyfrowania. Wybranie opcji **Wyłącz** uniemożliwia użytkownikom zmienianie domyślnego zachowania szyfrowania i wymusza na użytkownikach stosowanie skonfigurowanego przez Ciebie ustawienia. Dostępne w systemie iOS 12 lub nowszym.
+  - **Szyfruj domyślnie**: wybranie opcji **Włącz** powoduje domyślne szyfrowanie wszystkich wiadomości. Wybranie opcji **Wyłącz** powoduje, że szyfrowanie wiadomości nie jest zachowaniem domyślnym.
+    - **Zezwalaj użytkownikowi na zmianę ustawienia**: wybierz opcję **Włącz**, aby umożliwić użytkownikom zmienianie domyślnego zachowania szyfrowania. Wybranie opcji **Wyłącz** uniemożliwia użytkownikom zmienianie domyślnego zachowania szyfrowania i wymusza na użytkownikach stosowanie skonfigurowanego przez Ciebie ustawienia. Dostępne w systemie iOS 12 lub nowszym.
 
   - **Wymuś szyfrowanie poszczególnych wiadomości**: funkcja szyfrowania poszczególnych wiadomości umożliwia użytkownikom wybranie, które wiadomości e-mail mają być szyfrowane przed wysłaniem. Wybierz opcję **Włącz**, aby wyświetlić opcję szyfrowania poszczególnych wiadomości podczas tworzenia nowej wiadomości e-mail. Dzięki temu użytkownicy mogą wybrać opcję zaszyfrowania wiadomości lub z niej zrezygnować. Wybranie opcji **Wyłącz** powoduje, że opcja szyfrowania poszczególnych wiadomości nie jest widoczna.
 
     Jeśli ustawienie **Szyfruj domyślnie** jest włączone, włączenie szyfrowania poszczególnych wiadomości umożliwia użytkownikom zrezygnowanie z szyfrowania pojedynczych wiadomości. Jeśli ustawienie **Szyfruj domyślnie** jest wyłączone, włączenie szyfrowania poszczególnych wiadomości umożliwia użytkownikom wybranie szyfrowania pojedynczych wiadomości.
 
   - **Certyfikat szyfrowania S/MIME**: wybierz istniejący profil certyfikatu PKCS lub SCEP, który jest używany do szyfrowania wiadomości e-mail.
-    - **Zezwalaj użytkownikom na zmianę ustawienia**: Wybierz **Włącz** umożliwia użytkownikom zmianę certyfikatu szyfrowania. Wybranie opcji **Wyłącz** uniemożliwia użytkownikom zmienianie certyfikatu szyfrowania i wymusza na użytkownikach stosowanie skonfigurowanego przez Ciebie certyfikatu. Dostępne w systemie iOS 12 lub nowszym.
+    - **Zezwalaj użytkownikowi na zmianę ustawienia**: wybierz opcję **Włącz**, aby umożliwić użytkownikom zmianę certyfikatu szyfrowania. Wybranie opcji **Wyłącz** uniemożliwia użytkownikom zmienianie certyfikatu szyfrowania i wymusza na użytkownikach stosowanie skonfigurowanego przez Ciebie certyfikatu. Dostępne w systemie iOS 12 lub nowszym.
 - **Liczba wiadomości e-mail do synchronizacji**: wybierz liczbę dni, z których chcesz zsynchronizować pocztę e-mail. Możesz też wybrać pozycję **Nieograniczone**, aby zsynchronizować wszystkie dostępne wiadomości e-mail.
 - **Zezwalaj na przenoszenie wiadomości na inne konta poczty e-mail**: wybierz pozycję **Włącz**, aby umożliwić użytkownikom przenoszenie wiadomości e-mail między różnymi kontami skonfigurowanymi na ich urządzeniu.
 - **Zezwalaj na wysyłanie wiadomości e-mail przy użyciu aplikacji innych firm**: wybierz pozycję **Włącz**, aby zezwalać użytkownikowi na wybranie jego profilu jako domyślnego konta do wysyłania poczty e-mail. Umożliwia to aplikacjom innych firm otwieranie wiadomości e-mail w natywnej aplikacji poczty e-mail, na przykład w celu dołączania plików do wiadomości e-mail.

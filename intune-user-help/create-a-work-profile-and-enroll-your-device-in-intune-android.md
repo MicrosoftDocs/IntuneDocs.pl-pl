@@ -1,11 +1,11 @@
 ---
-title: Rejestrowanie urządzenia przy użyciu profilu służbowego | Microsoft Docs
-description: Jak zwiększyć bezpieczeństwo urządzeń z systemem Android za pomocą profilów służbowych.
+title: Rejestrowanie urządzenia przy użyciu profilu służbowego systemu Android | Microsoft Docs
+description: Jak utworzyć profil służbowy i zarejestrować urządzenie
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/05/2017
+ms.date: 04/19/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,20 +18,20 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eab28cdd4515561ad34a433773e351150a87f626
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 6fb5911f8a706f38e3e880c32113d203369ed870
+ms.sourcegitcommit: d258bcf6716c8a2589d3f8dada819905ee80f233
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57334956"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66196933"
 ---
-# <a name="create-a-work-profile-and-enroll-your-device-in-intune"></a>Tworzenie profilu służbowego i rejestrowanie urządzenia w usłudze Intune
+# <a name="enroll-device-with-android-work-profile"></a>Rejestrowanie urządzenia przy użyciu profilu służbowego systemu Android
 
-Rejestrowanie urządzenia z systemem Android umożliwia dostęp do firmowej poczty e-mail, aplikacji i innych danych służbowych. W ramach rejestracji konfigurowany jest profil pracy, który oddziela dane osobiste na urządzeniu od danych służbowych.
+Zarejestruj swoje prywatne urządzenie z systemem Android, aby uzyskać dostęp do firmowej poczty e-mail, aplikacji i innych danych służbowych. Podczas rejestracji skonfigurujesz profil służbowy systemu Android. Ten profil oddziela dane osobiste od danych służbowych na urządzeniu. Pomoc techniczna Twojej firmy zarządza tylko profilem służbowym, na który składają się pliki i dane służbowe. Dział pomocy technicznej Twojej firmy nie może zarządzać danymi osobistymi znajdującymi się na urządzeniu. Dowiedz się więcej o tym, [co się stanie po utworzeniu profilu służbowego](what-happens-when-you-create-a-work-profile-android.md).  
+</br>
+> [!VIDEO https://www.youtube.com/embed/9Dl8HsGk4tI?rel=0]
 
-Dział pomocy technicznej Twojej firmy może zarządzać tylko profilem służbowym, który zawiera dane służbowe. Dział pomocy technicznej Twojej firmy nie może zarządzać danymi osobistymi znajdującymi się na urządzeniu. Dowiedz się więcej o tym, [co się stanie po utworzeniu profilu służbowego](what-happens-when-you-create-a-work-profile-android.md).
-
-Aby utworzyć profil służbowy:
+## <a name="create-work-profile-and-enroll-device"></a>Tworzenie profilu służbowego i rejestrowanie urządzenia
 
 1.  Na **ekranie powitalnym** portalu firmy dla systemu Android naciśnij przycisk **Zaloguj**, a następnie zaloguj się przy użyciu swojego konta służbowego. Jeśli jeszcze nie masz zainstalowanej bezpłatnej aplikacji, pobierz i zainstaluj ją ze sklepu [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal).
 
@@ -82,5 +82,7 @@ Aby utworzyć profil służbowy:
     Możesz teraz uzyskać aplikacje firmowe ze Sklepu Play dla firm.
 
     ![Strona aplikacji Sklepu Play dla firm](./media/andr-afw-tap-work-play-store-icon.png)
+
+## <a name="next-steps"></a>Następne kroki  
 
 Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).

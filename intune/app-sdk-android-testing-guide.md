@@ -1,13 +1,12 @@
 ---
 title: Przewodnik testowania dla deweloperów po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android
-description: Microsoft Intune App SDK dla systemu Android przewodnik testowania pomaga testować swoją aplikację dla systemu Android zarządzane przez usługę Intune.
+description: Przewodnik testowania po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android ułatwia przetestowanie zarządzanej przez usługę Intune aplikacji dla systemu Android.
 keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 03/14/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -17,114 +16,114 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4203f424c395399cb0ed1e7472b006602aa0b210
-ms.sourcegitcommit: db7a6b8fc9e82dae4f2111ca0b2d3c14e33658f9
+ms.openlocfilehash: 9f8fa8f361e886c8eac697bb585ccf15eb9152f1
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072474"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66043844"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developers-testing-guide"></a>Przewodnik testowania dla deweloperów po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android
 
-Microsoft Intune App SDK dla systemu Android przewodnik testowania zaprojektowano ułatwia testowanie aplikacji systemu Android zarządzane przez usługę Intune.  
+Przewodnik testowania po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android zaprojektowano, aby ułatwić przetestowanie zarządzanej przez usługę Intune aplikacji dla systemu Android.  
 
-## <a name="prerequisite-test-accounts"></a>Konta testowania wymagań wstępnych
-Można tworzyć nowych kont z lub bez wstępnie wygenerowane dane. Aby utworzyć nowe konto:
-1. Przejdź do [Demos Microsoft](https://demos.microsoft.com/environments/create/tenant) lokacji. 
-2. [Konfigurowanie usługi Intune](https://docs.microsoft.com/intune/setup-steps) umożliwiające zarządzanie urządzeniami przenośnymi (MDM).
-3. [Tworzenie użytkowników](https://docs.microsoft.com/intune/users-add).
+## <a name="prerequisite-test-accounts"></a>Wymagane wstępnie konta do testowania
+Nowe konta można utworzyć z wstępnie wygenerowanymi danymi i bez nich. Aby utworzyć nowe konto:
+1. Przejdź do witryny [Microsoft Demos](https://demos.microsoft.com/environments/create/tenant). 
+2. [Skonfiguruj usługę Intune](https://docs.microsoft.com/intune/setup-steps), aby włączyć zarządzanie urządzeniami mobilnymi (MDM, Mobile Device Management).
+3. [Utwórz użytkowników](https://docs.microsoft.com/intune/users-add).
 4. [Tworzenie grup](https://docs.microsoft.com/intune/groups-add).
-5. [Przypisywanie licencji](https://docs.microsoft.com/intune/licenses-assign) odpowiednio na potrzeby testów.
+5. Odpowiednio [przypisz licencje](https://docs.microsoft.com/intune/licenses-assign) na potrzeby testów.
 
 
-## <a name="azure-portal-policy-configuration"></a>Konfiguracja zasad portalu Azure
-[Tworzenie i przypisywanie zasad ochrony aplikacji](https://docs.microsoft.com/intune/app-protection-policies) w [bloku Intune witryny Azure portal](https://portal.azure.com/?feature.customportal=false#blade/Microsoft_Intune_Apps/MainMenu/14/selectedMenuItem/Overview). Twoje [zasady konfiguracji aplikacji](https://docs.microsoft.com/intune/app-configuration-policies-overview) również można tworzyć i przypisana w bloku usługi Intune.
+## <a name="azure-portal-policy-configuration"></a>Konfiguracja zasad w witrynie Azure Portal
+[Utwórz i przypisz zasady ochrony aplikacji](https://docs.microsoft.com/intune/app-protection-policies) w [bloku usługi Intune w witrynie Azure Portal](https://portal.azure.com/?feature.customportal=false#blade/Microsoft_Intune_Apps/MainMenu/14/selectedMenuItem/Overview). [Zasady konfiguracji aplikacji](https://docs.microsoft.com/intune/app-configuration-policies-overview) również można utworzyć i przypisać w bloku usługi Intune.
 
 > [!NOTE]
-> Jeśli aplikacja nie znajduje się w witrynie Azure portal, możesz wybrać docelową go za pomocą zasad, wybierając **większej liczby aplikacji** opcja i podając nazwę pakietu, w polu tekstowym.
+> Jeśli aplikacji nie ma na liście w witrynie Azure Portal, możesz wybrać ją jako docelową za pomocą zasad, wybierając opcję **więcej aplikacji** i podając nazwę pakietu w polu tekstowym.
 
 > [!IMPORTANT]
-> Zasad konfiguracji aplikacji zastosować, rejestrowanie użytkowników musi być objęta [zasad ochrony aplikacji usługi Intune](https://docs.microsoft.com/intune/app-protection-policy).
+> Aby zasady konfiguracji aplikacji były stosowane, rejestrujący użytkownik musi być objęty [zasadami ochrony aplikacji usługi Intune](https://docs.microsoft.com/intune/app-protection-policy).
 
 ## <a name="test-cases"></a>Przypadki testowe
 
-Następujące przypadki testowe zawierają opis etapów konfiguracji i potwierdzenia. Skorzystać z poniższych wskazówek, aby ułatwić rozwiązywanie problemów z aplikacjami dla systemu Android zarządzane przez usługę Intune.
+W następujących przypadkach testowych przedstawiono kroki konfiguracji i potwierdzania. Wskazówki te ułatwią Ci rozwiązywanie problemów z zarządzanymi przez usługę Intune aplikacjami dla systemu Android.
 
-### <a name="required-pin-and-corporate-credentials"></a>Wymagaj numeru PIN i poświadczeń firmowych
+### <a name="required-pin-and-corporate-credentials"></a>Wymaganie PIN-u i poświadczeń firmowych
 
-Może wymagać numeru pin umożliwiającego dostęp do zasobów firmy. Ponadto można wymusić uwierzytelnianie firmy, zanim użytkownicy mogą korzystać z aplikacji zarządzanych. Aby ustawić te wymagania, wykonaj następujące kroki:
+Możesz wymagać podania PIN-u przed uzyskaniem dostępu do zasobów firmy. Możesz też wymuszać uwierzytelnianie firmowe, zanim użytkownicy będą mogli korzystać z aplikacji zarządzanych. Aby skonfigurować te wymagania, wykonaj następujące czynności:
 
-1. Konfigurowanie **Wymagaj numeru PIN, aby uzyskać dostęp do** i **Wymagaj poświadczeń firmowych w celu udzielenia dostępu** do **tak**. Aby uzyskać więcej informacji, zobacz [Ustawienia zasad ochrony aplikacji systemu Android w usłudze Microsoft Intune](app-protection-policy-settings-android.md#access-requirements).
+1. Dla ustawień **Wymagaj numeru PIN w celu uzyskania dostępu** i **Wymagaj poświadczeń firmowych w celu udzielenia dostępu** skonfiguruj wartość **Tak**. Aby uzyskać więcej informacji, zobacz [Ustawienia zasad ochrony aplikacji systemu Android w usłudze Microsoft Intune](app-protection-policy-settings-android.md#access-requirements).
 2. Potwierdź następujące warunki:
-    - Uruchamianie aplikacji powinni przedstawić potwierdzenie odpowiedniego monit o podanie numeru PIN, dane wejściowe/Konfiguracja i/lub produkcji użytkownika, którego użyto podczas rejestracji w portalu firmy.
-    - Nie można przedstawić prawidłowy monit logowania może być spowodowany niepoprawnie skonfigurowany manifest systemu android, w szczególności wartości integracji usługi ADAL (element SkipBroker, identyfikatora klienta i uprawnienia).
-    - Niewysłanie dowolnego wiersza może wynikać z niepoprawnie zintegrowane `MAMActivity` wartość. Aby uzyskać więcej informacji na temat `MAMActivity`, zobacz [Microsoft Intune App SDK for przewodnik dewelopera systemu Android](app-sdk-android.md).
+    - Podczas uruchamiania aplikacji powinien pojawiać się monit o podanie PIN-u bądź jego skonfigurowanie i (lub) konto użytkownika produkcyjnego, za pomocą którego dokonano rejestracji w aplikacji Portal firmy.
+    - Jeśli właściwy monit logowania się nie pojawia, może to być spowodowane niepoprawnie skonfigurowanym manifestem systemu Android, w szczególności wartościami integracji ADAL (SkipBroker, ClientID i Authority).
+    - Jeśli nie pojawia się żaden monit, może to być spowodowane niepoprawnie zintegrowaną wartością `MAMActivity`. Aby uzyskać więcej informacji na temat klasy `MAMActivity`, zobacz [Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android](app-sdk-android.md).
 
 > [!NOTE] 
-> Jeśli powyższe testu nie działa, poniższe testy prawdopodobnie zakończy się niepowodzeniem także. Przegląd [SDK](app-sdk-android.md##sdk-integration) i [ADAL](app-sdk-android.md#configure-azure-active-directory-authentication-library-adal) integracji.
+> Jeśli powyższy test nie działa, poniższe testy prawdopodobnie również zakończą się niepowodzeniem. Zapoznaj się z informacjami o zestawie [SDK](app-sdk-android.md##sdk-integration) i integracji [ADAL](app-sdk-android.md#configure-azure-active-directory-authentication-library-adal).
 
-### <a name="restrict-transferring-and-receiving-data-with-other-apps"></a>Ograniczanie transferu i odbierania danych z innych aplikacji
-Można kontrolować transfer danych między firmowych zarządzanych aplikacji w następujący sposób:
+### <a name="restrict-transferring-and-receiving-data-with-other-apps"></a>Ograniczanie przesyłania i odbierania danych z innych aplikacji
+Przesyłaniem danych między zarządzanymi przez firmę aplikacjami możesz sterować w następujący sposób:
 
-1. Ustaw **Zezwalaj aplikacji na przesyłanie danych do innych aplikacji** do **aplikacje zarządzane przez zasady**.
-2. Dla pozycji **Zezwalaj aplikacji na odbieranie danych z innych aplikacji** ustaw opcję **Wszystkie aplikacje**. Użycie intencje i dostawców zawartości będzie mieć wpływ tych zasad.
+1. Dla ustawienia **Zezwalaj aplikacji na przesyłanie danych do innych aplikacji** skonfiguruj wartość **Aplikacje zarządzane przez zasady**.
+2. Dla pozycji **Zezwalaj aplikacji na odbieranie danych z innych aplikacji** ustaw opcję **Wszystkie aplikacje**. Te zasady wpłyną na intencje i dostawców zawartości.
 3. Potwierdź następujące warunki:
-    - Otwieranie z niezarządzanych aplikacji do aplikacji funkcji poprawnie.
+    - Otwieranie z poziomu aplikacji niezarządzanej do funkcji aplikacji działa poprawnie.
     - Udostępnianie zawartości między aplikacjami zarządzanymi jest dozwolone.
-    - Udostępnianie danych z aplikacji zarządzanych do niezarządzanych aplikacji (na przykład przeglądarka Chrome) jest zablokowany.
+    - Udostępnianie z aplikacji zarządzanych do aplikacji niezarządzanych (na przykład do przeglądarki Chrome) jest zablokowane.
 
 ### <a name="restrict-cut-copy-and-paste"></a>Ogranicz wycinanie, kopiowanie i wklejanie
-Schowek systemu można ograniczyć do aplikacji zarządzanych, w następujący sposób:
+Schowek systemu możesz ograniczyć do aplikacji zarządzanych w następujący sposób:
 
-1. Ustaw **Ogranicz wycinanie, kopiowanie i wklejanie w innych aplikacjach** do **zarządzane przez zasady z funkcją wklejania**.
+1. Dla ustawienia **Ogranicz wycinanie, kopiowanie i wklejanie w innych aplikacjach** skonfiguruj wartość **Aplikacje zarządzane przez zasady z funkcją wklejania**.
 2. Potwierdź następujące warunki:
-    - Kopiowanie tekstu z aplikacją do zarządzanej niezarządzanej aplikacji (na przykład wiadomości) jest zablokowany.
+    - Kopiowanie tekstu z aplikacji zarządzanej do aplikacji niezarządzanej (na przykład do aplikacji Wiadomości) jest zablokowane.
 
 ### <a name="prevent-save-as"></a>Nie zezwalaj na używanie polecenia **Zapisz jako**
-Możesz kontrolować **Zapisz jako** funkcji w następujący sposób:
+Działaniem polecenia **Zapisz jako** możesz sterować w następujący sposób:
 
-1. Jeśli aplikacja wymaga [zintegrowane kontrolki "Zapisz jako"](app-sdk-android.md#example-determine-if-saving-to-device-or-cloud-storage-is-permitted)ustaw **Zapobiegaj "Zapisz jako"** do **tak**.
+1. Jeśli aplikacja wymaga [zintegrowanych kontrolek polecenia „Zapisz jako”](app-sdk-android.md#example-determine-if-saving-to-device-or-cloud-storage-is-permitted), dla ustawienia **Nie zezwalaj na używanie polecenia „Zapisz jako”** skonfiguruj wartość **Tak**.
 2. Potwierdź następujące warunki:
-    - Zapisz jest ograniczony do odpowiednich zarządzanych lokalizacji.
+    - Zapisywanie jest ograniczone do odpowiednich lokalizacji zarządzanych.
 
 ### <a name="file-encryption"></a>Szyfrowanie plików
-Można zaszyfrować dane na urządzeniu w następujący sposób:
+Dane na urządzeniu możesz szyfrować w następujący sposób:
 
-1. Ustaw **Szyfruj dane aplikacji** do **tak**.
+1. Dla ustawienia **Szyfruj dane aplikacji** skonfiguruj wartość **Tak**.
 2. Potwierdź następujące warunki:
-    - Nie ma wpływu na zachowanie normalne aplikacji.
+    - Nie wpływa to na normalne zachowanie aplikacji.
 
 ### <a name="prevent-android-backups"></a>Blokuj kopie zapasowe systemu Android
-Kopia zapasowa aplikacji można kontrolować w następujący sposób:
+Kopiami zapasowymi aplikacji możesz sterować w następujący sposób:
 
-1. Jeśli ustawiono [zintegrowane ograniczenia tworzenia kopii zapasowej](app-sdk-android.md#protecting-backup-data), skonfiguruj **kopie zapasowe zapobiec systemu Android** do **tak**.
+1. Jeśli zostały ustawione [zintegrowane ograniczenia dotyczące kopii zapasowej](app-sdk-android.md#protecting-backup-data), dla ustawienia **Nie zezwalaj na kopie zapasowe systemu Android** skonfiguruj wartość **Tak**.
 2. Potwierdź następujące warunki:
     - Kopie zapasowe są ograniczone.
 
-### <a name="unenrollment"></a>Wyrejestrowanie
-Zdalnie czyścić zarządzane aplikacje z zawierającego firmowej poczty e-mail i dokumenty i dane osobowe zostaną odszyfrowane, gdy jest podawana nie jest już w następujący sposób:
+### <a name="unenrollment"></a>Wyrejestrowywanie
+W następujący sposób możesz zdalnie wyczyścić w aplikacjach zarządzanych firmowe wiadomości e-mail i dokumenty, a wyłączenie administrowania spowoduje odszyfrowanie danych osobowych:
 
-1. W witrynie Azure portal [czyszczenie danych](https://docs.microsoft.com/intune/apps-selective-wipe).
-2. Jeśli aplikacja nie zarejestrować do obsługi dowolnej czyszczenia Potwierdź następujące warunki:
-    - Występuje, pełnego czyszczenia danych aplikacji.
-3. Jeśli aplikacja została zarejestrowana dla `WIPE_USER_DATA` lub `WIPE_USER_AUXILARY_DATA`, potwierdź następujące warunki:
-    - Zawartości zarządzanej zostanie usunięty z aplikacji. Aby uzyskać więcej informacji, zobacz [Intune App SDK for przewodnik dewelopera systemu Android — selektywne czyszczenie](app-sdk-android.md#selective-wipe).
+1. W witrynie Azure Portal [wydaj polecenie wyczyszczenia danych](https://docs.microsoft.com/intune/apps-selective-wipe).
+2. Jeśli dla aplikacji nie zarejestrowano żadnych procedur obsługi czyszczenia, potwierdź następujące warunki:
+    - Przeprowadzane jest pełne czyszczenie aplikacji.
+3. Jeśli dla aplikacji nie zarejestrowano procedury `WIPE_USER_DATA` ani `WIPE_USER_AUXILARY_DATA`, potwierdź następujące warunki:
+    - Zawartość zarządzana zostaje usunięta z aplikacji. Aby uzyskać więcej informacji, zobacz [Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android — selektywne czyszczenie](app-sdk-android.md#selective-wipe).
 
 ### <a name="multi-identity"></a>Wiele tożsamości
-Integrowanie [obsługą wielu tożsamości](app-sdk-android.md#multi-identity-optional) zmiany o wysokim ryzyku, który musi być sprawdzone. Najczęściej spotykanych problemów będzie ze względu na niepoprawne ustawienia tożsamości (context, a poziom zagrożenia) i również śledzenia plików (`MAMFileProtectionManager`).
+Integracja [obsługi wielu tożsamości](app-sdk-android.md#multi-identity-optional) to zmiana, z którą wiąże się istotne ryzyko, należy więc ją dokładnie przetestować. Najczęstsze problemy wynikają z niepoprawnego ustawienia tożsamości (kontekst a poziom zagrożenia) i śledzenia plików (`MAMFileProtectionManager`).
 
-Co najmniej następujące scenariusze związane z obsługą wielu tożsamości powinien być sprawdzony ponownie:
+Należy przeanalizować co najmniej poniższe scenariusze związane z obsługą wielu tożsamości:
 
-- **Zapisz jako** zasada działa prawidłowo dla zarządzanych tożsamości.
-- Kopiowanie, wklejanie, który ograniczenia są prawidłowo wymuszane z kodu zarządzanego do osobistych.
-- Tylko dane należące do tożsamości zarządzanej są szyfrowane i pliki osobiste nie są modyfikowane.
-- Selektywne czyszczenie danych podczas wyrejestrowywania tylko usunięcie danych zarządzanych tożsamości.
-- Użytkownik jest monitowany o warunkowego uruchamiania, podczas zmiany z niezarządzanego konta zarządzanego (tylko pierwszy raz).
+- Zasady polecenia **Zapisz jako** działają poprawnie dla tożsamości zarządzanych.
+- Ograniczenia dotyczące kopiowania i wklejania są poprawnie wymuszane ze środowisk zarządzanych do osobistych.
+- Tylko dane należące do tożsamości zarządzanej są szyfrowane, a pliki osobiste nie są modyfikowane.
+- Selektywne czyszczenie podczas wyrejestrowywania powoduje usunięcie tylko danych tożsamości zarządzanych.
+- Użytkownik końcowy jest monitowany o uruchomienie warunkowe podczas przełączania z konta niezarządzanego na zarządzane (tylko pierwszy raz).
 
-### <a name="app-configuration-optional"></a>Konfiguracja aplikacji (opcjonalnie)
-Działanie aplikacji zarządzanej można skonfigurować w następujący sposób:
+### <a name="app-configuration-optional"></a>Konfiguracja aplikacji (opcjonalna)
+Działanie aplikacji zarządzanych możesz skonfigurować w następujący sposób:
 
-1. Jeśli aplikacja wykorzystuje wszystkie ustawienia konfiguracji aplikacji, należy sprawdzić, że aplikacja poprawnie obsługuje wszystkie wartości, które (jako administrator) można ustawić. [Zasady konfiguracji aplikacji](https://docs.microsoft.com/intune/app-configuration-policies-overview) utworzone i przypisane przy użyciu usługi Intune.
+1. Jeśli aplikacja używa jakichkolwiek ustawień konfiguracji aplikacji, należy sprawdzić, czy poprawnie obsługuje ona wszystkie wartości, które (jako administrator) możesz ustawić. [Zasady konfiguracji aplikacji](https://docs.microsoft.com/intune/app-configuration-policies-overview) można utworzyć i przypisać za pomocą usługi Intune.
 
 ## <a name="next-steps"></a>Następne kroki
 

@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/05/2019
+ms.date: 05/24/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d0c7ac239a67a51ba7165771206883f3c46f5f55
-ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
-ms.translationtype: HT
+ms.openlocfilehash: bef0eb545f5f0ca0f85365a08e6bc5d726d6979e
+ms.sourcegitcommit: d258bcf6716c8a2589d3f8dada819905ee80f233
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59292428"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66196860"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Konfigurowanie urządzenia z systemem iOS do uzyskiwania dostępu do zasobów firmy  
 
@@ -31,7 +31,9 @@ Zarejestruj urządzenie z systemem iOS przy użyciu aplikacji Portal firmy w us�
 
 Zarejestrowane urządzenie staje się urządzeniem *zarządzanym*. Organizacja może przypisywać zasady i aplikacje do urządzenia za pośrednictwem dostawcy zarządzania urządzeniami przenośnymi (MDM), takiego jak usługa Intune.  
 
-Aby zachować możliwość dostępu do informacji służbowych lub szkolnych za pomocą urządzenia, należy skonfigurować to urządzenie tak, aby dopasować je do preferowanych ustawień organizacji. W tym artykule opisano, jak za pomocą aplikacji Portal firmy zarejestrować urządzenie i dostosować się do ustawień wymaganych przez organizację. 
+Aby zachować możliwość dostępu do informacji służbowych lub szkolnych za pomocą urządzenia, należy skonfigurować to urządzenie tak, aby dopasować je do preferowanych ustawień organizacji. W tym artykule opisano, jak za pomocą aplikacji Portal firmy zarejestrować urządzenie i dostosować się do ustawień wymaganych przez organizację.  
+</br>
+> [!VIDEO https://www.youtube.com/embed/mJyv6YcHi7c?rel=0]
 
 > [!NOTE]
 > Jeśli nastąpiła próba dostępu do firmowej poczty e-mail w aplikacji poczty, a następnie został wyświetlony monit o przekazanie urządzenia do zarządzania, jesteś w odpowiednim miejscu. Aby uzyskać dostęp do poczty e-mail i innych zasobów firmy na swoim urządzeniu z systemem iOS, postępuj zgodnie z poniższymi instrukcjami.  
@@ -39,7 +41,7 @@ Aby zachować możliwość dostępu do informacji służbowych lub szkolnych za 
 ## <a name="what-to-expect-from-the-company-portal-app"></a>Czego można oczekiwać od aplikacji Portal firmy  
 
 ### <a name="security"></a>Zabezpieczenia  
-Podczas początkowej konfiguracji aplikacja wymaga uwierzytelnienia użytkownika w organizacji. Następnie informuje użytkownika o wszelkich wymaganych aktualizacjach ustawieniach urządzenia. Na przykład organizacje często ustawiają wymagania dotyczące minimalnej i maksymalnej długości haseł, które trzeba spełnić.     
+Podczas początkowej konfiguracji aplikacja wymaga uwierzytelnienia użytkownika w organizacji. Następnie informuje użytkownika o wszelkich wymaganych aktualizacjach ustawieniach urządzenia. Na przykład organizacje często ustawiają wymagania dotyczące minimalnej i maksymalnej długości haseł, które trzeba spełnić.
 
 ### <a name="protection"></a>Protection  
 Po zarejestrowaniu urządzenia aplikacja Portal firmy będzie nadal upewniać się, że urządzenie jest chronione. Jeśli przykładowo zainstalujesz aplikację z niezaufanego źródła, aplikacja będzie wysyłać alerty i czasami odwoływać dostęp do danych firmowych. Tego typu zasady są często stosowane w organizacjach i często wymagają odinstalowania niezaufanych aplikacji w celu odzyskania dostępu.  
@@ -69,7 +71,7 @@ Wstrzymanie rejestracji na więcej niż kilka minut może spowodować zamknięci
 
 4. Zapoznaj się z listą informacji o urządzeniu, które będą widoczne i niewidoczne dla Twojej organizacji. Następnie naciśnij przycisk **Kontynuuj**.  
 
-5. Zapoznaj się z instrukcjami na ekranie **Co dalej?**. Gdy wszystko będzie gotowe do pobrania i zainstalowania profilu zarządzania, naciśnij przycisk **Kontynuuj**.  
+5. Zapoznaj się z instrukcjami na ekranie **Co dalej?** . Gdy wszystko będzie gotowe do pobrania i zainstalowania profilu zarządzania, naciśnij przycisk **Kontynuuj**.  
 
  > [!IMPORTANT]
 > Kolejne ekrany i czynności do wykonania będą różnić się w zależności od używanej wersji systemu iOS. Postępuj zgodnie z instrukcjami dotyczącymi używanej wersji systemu iOS. 
@@ -118,6 +120,9 @@ Wstrzymanie rejestracji na więcej niż kilka minut może spowodować zamknięci
 
 > [!Note]
 > Jeśli w Twojej organizacji są monitorowane limity danych i połączeń głosowych lub są udostępniane urządzenia należące do firmy, może być konieczne wykonanie kilku dodatkowych czynności. Jeśli zostanie wyświetlony monit o instalację aplikacji **Datalert**, zobacz [Rejestrowanie urządzenia w rozwiązaniu do zarządzania wydatkami telekomunikacyjnymi](enroll-your-device-with-telecom-expense-management-ios.md). Jeśli Twoja organizacja uczestniczy w programie Device Enrollment Program firmy Apple, zobacz [jak zarejestrować urządzenie należące do firmy](enroll-your-device-dep-ios.md).  
+
+## <a name="it-administrator-support"></a>Pomoc techniczna dla administratora IT  
+Jeśli jako administrator IT napotkasz problemy podczas rejestrowania urządzeń, zobacz [Troubleshooting iOS device enrollment problems in Microsoft Intune (Rozwiązywanie problemów z rejestrowaniem urządzeń z systemem iOS w usłudze Microsoft Intune)](https://support.microsoft.com/en-us/help/4039809). W tym artykule wymieniono typowe błędy, ich przyczyny i kroki prowadzące do ich usunięcia.  
 
 ## <a name="next-steps"></a>Następne kroki  
 Znajdź aplikacje, które pomogą Ci w pracy lub szkole. Dowiedz się, [jak są udostępniane aplikacje](use-managed-apps-on-your-device-ios.md) za pośrednictwem aplikacji Portal firmy.  

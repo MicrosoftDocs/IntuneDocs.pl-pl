@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 01/29/2019
 ms.topic: troubleshooting
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6d1f790aeedff1e13ecc220ed7a6d8f311e12585
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: MTE75
+ms.openlocfilehash: a0f8e9e7fec0bea759d408f3ca3d94aa46748bf8
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57460516"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66044616"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Rozwiązywanie problemów związanych z zasadami i profilami w usłudze Intune
 
@@ -56,19 +55,19 @@ W tym artykule wymieniono niektóre typowe techniki rozwiązywania problemów i 
 
       - Zasady ochrony aplikacji (zarządzanie aplikacjami mobilnymi) nie wymagają, aby urządzenia były zarejestrowane. Aby uzyskać więcej informacji, zobacz [Tworzenie i przypisywanie zasad ochrony aplikacji](app-protection-policies.md).
 
-    - **Azure AD Join typu**: powinien być ustawiony na **pracy** lub **AzureAD**.
+    - **Typ dołączenia do usługi Azure AD**: powinna to być wartość **Obszar roboczy** lub **AzureAD**.
  
       - Jeśli ta kolumna ma wartość **Niezarejestrowane**, może to oznaczać problem z rejestracją. Zazwyczaj wyrejestrowywanie i ponowne zarejestrowanie urządzenia rozwiązuje ten problem.
 
-    - **Zgodne z usługą Intune**: powinien być **tak**. Jeśli jest wyświetlana wartość **Nie**, może to oznaczać problem z zasadami zgodności lub urządzenie nie łączy się z usługą Intune. Na przykład urządzenie może być wyłączone lub nie mieć połączenia sieciowego. Po pewnym czasie urządzenie stanie się niezgodne, prawdopodobnie po upływie 30 dni.
+    - **Zgodne z usługą Intune**: powinna to być wartość **Tak**. Jeśli jest wyświetlana wartość **Nie**, może to oznaczać problem z zasadami zgodności lub urządzenie nie łączy się z usługą Intune. Na przykład urządzenie może być wyłączone lub nie mieć połączenia sieciowego. Po pewnym czasie urządzenie stanie się niezgodne, prawdopodobnie po upływie 30 dni.
 
       Aby uzyskać więcej informacji, zobacz [Wprowadzenie do zasad zgodności urządzeń](device-compliance-get-started.md).
 
-    - **Zgodne z usługi Azure AD**: powinien być **tak**. Jeśli jest wyświetlana wartość **Nie**, może to oznaczać problem z zasadami zgodności lub urządzenie nie łączy się z usługą Intune. Na przykład urządzenie może być wyłączone lub nie mieć połączenia sieciowego. Po pewnym czasie urządzenie stanie się niezgodne, prawdopodobnie po upływie 30 dni.
+    - **Zgodne z usługą Azure AD**: powinna to być wartość **Tak**. Jeśli jest wyświetlana wartość **Nie**, może to oznaczać problem z zasadami zgodności lub urządzenie nie łączy się z usługą Intune. Na przykład urządzenie może być wyłączone lub nie mieć połączenia sieciowego. Po pewnym czasie urządzenie stanie się niezgodne, prawdopodobnie po upływie 30 dni.
 
       Aby uzyskać więcej informacji, zobacz [Wprowadzenie do zasad zgodności urządzeń](device-compliance-get-started.md).
 
-    - **Ostatnie zaewidencjonowania**: powinien być datę i godzinę ostatnio. Domyślnie urządzenia w usłudze Intune są ewidencjonowane co 8 godzin.
+    - **Ostatnie zaewidencjonowanie**: powinna to być niedawna godzina i data. Domyślnie urządzenia w usłudze Intune są ewidencjonowane co 8 godzin.
 
       - Jeśli **Ostatnie zaewidencjonowanie** ma wartość większą niż 24 godziny, może to oznaczać problem z urządzeniem. Urządzenie, którego nie można zaewidencjonować, nie może odbierać zasad z usługi Intune.
 
@@ -87,7 +86,7 @@ W tym artykule wymieniono niektóre typowe techniki rozwiązywania problemów i 
 
       **Stany zasad**:
 
-      - **Nie dotyczy**: ta zasada nie jest obsługiwana na tej platformie. Na przykład zasady systemu iOS nie działają w systemie Android. Zasady systemu Samsung KNOX nie działają na urządzeniach z systemem Windows.
+      - **Nie dotyczy**: te zasady nie są obsługiwane na tej platformie. Na przykład zasady systemu iOS nie działają w systemie Android. Zasady systemu Samsung KNOX nie działają na urządzeniach z systemem Windows.
       - **Konflikt**: na urządzeniu istnieje ustawienie, którego usługa Intune nie może zastąpić. Lub wdrożono dwie zasady z tym samym ustawieniem przy użyciu różnych wartości.
       - **Oczekiwanie**: urządzenie nie zostało zaewidencjonowane w usłudze Intune w celu otrzymania zasad. Lub urządzenie odebrało zasady, ale nie zgłosiło stanu usłudze Intune.
       - **Błędy**: wyszukaj błędy i możliwe rozwiązania w artykule [Rozwiązywanie problemów z dostępem do zasobów firmy](troubleshoot-company-resource-access-problems.md).
@@ -110,7 +109,7 @@ W tym artykule wymieniono niektóre typowe techniki rozwiązywania problemów i 
 
     - **Oczekiwanie**: profil został wysłany do urządzenia, ale nie zgłosiło ono stanu usłudze Intune. Na przykład szyfrowanie w systemie Android wymaga od użytkownika końcowego włączenia szyfrowania, dlatego może być wyświetlany stan Oczekujące.
 
-**Przydatne łącza**: [monitorować profile urządzeń w konfiguracji](device-profile-monitor.md)
+**Przydatny link**: [monitorowanie profilów urządzeń konfiguracji](device-profile-monitor.md)
 
 > [!NOTE]
 > Jeśli dwie zasady z różnymi poziomami ograniczeń dotyczą tego samego urządzenia lub użytkownika, zostaną zastosowane zasady bardziej restrykcyjne.

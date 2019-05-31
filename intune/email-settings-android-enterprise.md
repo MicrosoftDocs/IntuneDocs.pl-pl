@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 01/10/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -15,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6c6c6e3e999e44ad6a07b4d8bdc1ddf9c400cf7
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 7e37d6a2b7371cf20cd36a6f3f75a4dd252c332f
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565455"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66048047"
 ---
 # <a name="android-enterprise-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Ustawienia urządzeń z systemem Android Enterprise do konfigurowania poczty e-mail, uwierzytelniania i synchronizacji w usłudze Intune
 
@@ -43,15 +42,15 @@ Aby dowiedzieć się więcej na temat profilów poczty e-mail w usłudze Intune,
   - **Główna nazwa użytkownika**: pobiera nazwę, taką jak `user1` lub `user1@contoso.com`
   - **Nazwa użytkownika**: pobiera tylko nazwę, taką jak `user1`
 
-- **Atrybut adresu e-mail z usługi AAD**: Ta nazwa jest atrybut poczty e-mail, usługa Intune pobiera z usługi Azure AD. Usługa Intune dynamicznie generuje adres e-mail używany przez ten profil. Dostępne opcje:
+- **Atrybut adresu e-mail z usługi AAD**: ta nazwa to atrybut adresu e-mail pobierany przez usługę Intune z usługi Azure AD. Usługa Intune dynamicznie generuje adres e-mail używany przez ten profil. Dostępne opcje:
   - **Główna nazwa użytkownika**: używa pełnej nazwy głównej, takiej jak `user1@contoso.com` lub `user1`, jako adresu e-mail.
-  - **Podstawowy adres SMTP**: używa podstawowego adresu SMTP, takich jak `user1@contoso.com`, aby zalogować się do programu Exchange.
+  - **Podstawowy adres SMTP**: używa podstawowego adresu SMTP, takiego jak `user1@contoso.com`, do logowania się do programu Exchange.
 
 - **Metoda uwierzytelniania** — wybierz metodę uwierzytelniania stosowaną w profilu e-mail: **Certyfikaty** lub **Nazwa użytkownika i hasło**.
   - W przypadku wybrania opcji **Certyfikat** wybierz wcześniej utworzony profil certyfikatu SCEP lub PKCS klienta, który będzie używany do uwierzytelniania połączenia z programem Exchange.
 - **Protokół SSL**: wybierz pozycję **Włącz**, aby użyć komunikacji SSL (Secure Sockets Layer) podczas wysyłania i odbierania wiadomości e-mail oraz komunikacji z serwerem programu Exchange.
-- **Liczba wiadomości e-mail do synchronizowania**: Wybierz ilość czasu, wiadomość e-mail, którą chcesz synchronizować. Możesz też wybrać pozycję **Nieograniczone**, aby zsynchronizować wszystkie dostępne wiadomości e-mail.
-- **Typ zawartości do zsynchronizowania** (tylko Nine Work): Wybierz dane, które chcesz zsynchronizować na urządzeniach. Dostępne opcje:
+- **Liczba wiadomości e-mail do synchronizacji**: wybierz czas, z którego chcesz zsynchronizować pocztę e-mail. Możesz też wybrać pozycję **Nieograniczone**, aby zsynchronizować wszystkie dostępne wiadomości e-mail.
+- **Typ zawartości do synchronizowania** (tylko aplikacja Nine Work): wybierz dane, które chcesz zsynchronizować na urządzeniach. Dostępne opcje:
   - **Kontakty**: wybierz pozycję **Włącz**, aby zezwolić użytkownikom końcowym na synchronizowanie kontaktów z urządzeniami.
   - **Kalendarz**: wybierz pozycję **Włącz**, aby zezwolić użytkownikom końcowym na synchronizowanie kalendarza z urządzeniami.
   - **Zadania**: wybierz pozycję **Włącz**, aby zezwolić użytkownikom końcowym na synchronizowanie dowolnych zadań z urządzeniami.

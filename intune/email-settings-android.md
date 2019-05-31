@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 01/15/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -15,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 94f907ee8805c5f0559e8751a7cd69bacf1612ee
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 647e1cd6925df27d42186599ad6786e866742b44
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565507"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66042278"
 ---
 # <a name="android-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Ustawienia urządzeń z systemem Android do konfigurowania poczty e-mail, uwierzytelniania i synchronizacji w usłudze Intune
 
@@ -52,9 +51,9 @@ Aby dowiedzieć się więcej na temat profilów poczty e-mail w usłudze Intune,
       Podczas wybierania atrybutów **Niestandardowe** wprowadź następujące ustawienia:
       - **Nazwa domeny niestandardowej do użycia**: wprowadź wartość używaną przez usługę Intune jako nazwa domeny, taką jak `contoso.com` lub `contoso`
 
-- **Atrybut adresu e-mail z usługi AAD**: Ta nazwa jest atrybut poczty e-mail, usługa Intune pobiera z usługi Azure AD. Usługa Intune dynamicznie generuje adres e-mail używany przez ten profil. Dostępne opcje:
+- **Atrybut adresu e-mail z usługi AAD**: ta nazwa to atrybut adresu e-mail pobierany przez usługę Intune z usługi Azure AD. Usługa Intune dynamicznie generuje adres e-mail używany przez ten profil. Dostępne opcje:
   - **Główna nazwa użytkownika**: używa pełnej nazwy głównej, takiej jak `user1@contoso.com` lub `user1`, jako adresu e-mail.
-  - **Podstawowy adres SMTP**: używa podstawowego adresu SMTP, takich jak `user1@contoso.com`, aby zalogować się do programu Exchange.
+  - **Podstawowy adres SMTP**: używa podstawowego adresu SMTP, takiego jak `user1@contoso.com`, do logowania się do programu Exchange.
 
 - **Metoda uwierzytelniania** — wybierz metodę uwierzytelniania stosowaną w profilu e-mail: **Certyfikaty** lub **Nazwa użytkownika i hasło**.
   - W przypadku wybrania opcji **Certyfikat** wybierz wcześniej utworzony profil certyfikatu SCEP lub PKCS klienta, który będzie używany do uwierzytelniania połączenia z programem Exchange.
