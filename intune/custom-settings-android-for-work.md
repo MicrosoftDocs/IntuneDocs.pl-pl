@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 852d4b169e2e6a43934babf3e1c26d91341050ab
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: b5f1b4c0fd0c9d8cfdc443b2af3c6f90a6f32756
+ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66043195"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66373635"
 ---
 # <a name="use-custom-settings-for-android-enterprise-devices-in-microsoft-intune"></a>Używanie ustawień niestandardowych dla urządzeń z systemem Android Enterprise w usłudze Microsoft Intune
 
@@ -35,7 +35,7 @@ W tym artykule pokazano, jak utworzyć profil niestandardowy dla urządzeń z sy
 
 ## <a name="create-the-profile"></a>Tworzenie profilu
 
-1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Wybierz pozycję **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
 3. Podaj następujące ustawienia:
 
@@ -70,7 +70,7 @@ W tym artykule pokazano, jak utworzyć profil niestandardowy dla urządzeń z sy
 
 W tym przykładzie utworzysz profil niestandardowy, który ogranicza możliwość wykonywania akcji kopiowania i wklejania między aplikacjami służbowymi i osobistymi na urządzeniach z systemem Android Enterprise.
 
-1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Wybierz pozycję **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
 3. Podaj następujące ustawienia:
 

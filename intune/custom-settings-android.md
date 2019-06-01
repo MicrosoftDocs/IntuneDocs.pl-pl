@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e4f94ead5ecc42f8ac67c596fc9424b112c2065
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 39aba38d808a770ee04f5d165ca8037b43576812
+ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66048583"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66374019"
 ---
 # <a name="use-custom-settings-for-android-devices-in-microsoft-intune"></a>Używanie ustawień niestandardowych dla urządzeń z systemem Android w usłudze Microsoft Intune
 
@@ -42,7 +42,7 @@ W tym artykule pokazano, jak utworzyć profil niestandardowy dla urządzeń z sy
 
 ## <a name="create-the-profile"></a>Tworzenie profilu
 
-1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Wybierz pozycję **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
 3. Podaj następujące ustawienia:
 
