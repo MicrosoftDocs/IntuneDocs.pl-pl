@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 68fce40c194c831e65fb6631bf079f8703b039af
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 6a80ff2ca7c2265da358f57291032f59d47d22dd
+ms.sourcegitcommit: 063177c6c365fef3642edd7c455790958469aad9
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66047965"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66412346"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>Dodawanie ustawień poczty e-mail do urządzeń przy użyciu usługi Intune
 
@@ -38,7 +38,7 @@ W tym artykule przedstawiono sposób tworzenia profilu poczty e-mail w usłudze 
 
 ## <a name="create-a-device-profile"></a>Tworzenie profilu urządzenia
 
-1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi** > wpisz nazwę usługi **Intune** w filtrze > wybierz pozycję **Microsoft Intune**.
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Wybierz pozycję **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
 3. Wprowadź **nazwę** i **opis** profilu poczty e-mail.
 4. Wybierz **platformę** z listy rozwijanej. Dostępne opcje:

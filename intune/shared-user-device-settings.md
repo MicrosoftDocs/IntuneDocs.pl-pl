@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0a5064a9065dba75f3594f2e6bb6fb36b42be2e2
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: dc1fca439f0edf4a5d4caaad4ff4f9e0bae5972b
+ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66044961"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66374049"
 ---
 # <a name="control-access-accounts-and-power-features-on-shared-pc-or-multi-user-devices-using-intune"></a>Kontrola dostępu, konta i funkcje zasilania na udostępnianych komputerach lub urządzeniach obsługujących wielu użytkowników w usłudze Intune
 
@@ -41,7 +41,7 @@ Po utworzeniu profilu w usłudze Intune możesz wdrożyć lub przypisać profil 
 
 ## <a name="create-the-profile"></a>Tworzenie profilu
 
-1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi**, wpisz nazwę usługi **Intune** w filtrze, a następnie wybierz pozycję **Intune**.
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Wybierz kolejno pozycje **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
 3. Wprowadź następujące właściwości:
 

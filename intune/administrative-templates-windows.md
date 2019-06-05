@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0965d08dc2981fbd35bcb5aa3c2652726a96ccd5
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 9309b110d37795f840e10f22b71b06507aea4c62
+ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050094"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66373720"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Korzystanie z szablonów systemu Windows 10 umożliwiających konfigurowanie ustawień zasad grupy w usłudze Microsoft Intune
 
@@ -34,14 +34,14 @@ W tym artykule przedstawiono procedurę tworzenia szablonu dla urządzeń z syst
 
 ## <a name="create-a-template"></a>Tworzenie szablonu
 
-1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi**, wpisz nazwę usługi **Intune** w filtrze, a następnie wybierz pozycję **Intune**.
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Wybierz pozycję **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
 3. Wprowadź następujące właściwości:
 
     - **Nazwa**: Wprowadź nazwę profilu.
     - **Opis**: Wprowadź opis profilu. To ustawienie jest opcjonalne, ale zalecane.
     - **Platforma**: Wybierz pozycję **Windows 10 i nowsze**.
-    - **Typ profilu**: Wybierz pozycję **Szablony administracyjne (wersja zapoznawcza)**.
+    - **Typ profilu**: Wybierz pozycję **Szablony administracyjne (wersja zapoznawcza)** .
 
 4. Wybierz przycisk **Utwórz**. W nowym oknie wybierz pozycję **Ustawienia**. Zostanie wyświetlone każde ustawienie. Można użyć strzałek Wstecz i Dalej, aby zobaczyć więcej ustawień:
 
@@ -54,7 +54,7 @@ Kontynuuj przeglądanie listy ustawień, a następnie skonfiguruj ustawienia, kt
 
 - Użyj ustawienia **Ustawienia powiadomień makr języka VBA**, aby obsługiwać makra języka VBA w różnych programach pakietu Microsoft Office, łącznie z programami Word i Excel.
 - Użyj ustawienia **Zezwalaj na pobieranie plików**, aby umożliwić lub uniemożliwić pobieranie z programu Internet Explorer.
-- Użyj ustawienia **Wymagaj hasła przy wznawianiu pracy komputera (podłączony zasilacz)**, aby monitować użytkowników o podanie hasła podczas wznawiania pracy urządzenia z trybu uśpienia.
+- Użyj ustawienia **Wymagaj hasła przy wznawianiu pracy komputera (podłączony zasilacz)** , aby monitować użytkowników o podanie hasła podczas wznawiania pracy urządzenia z trybu uśpienia.
 - Użyj ustawienia **Pobierz niepodpisane kontrolki ActiveX**, aby uniemożliwić użytkownikom pobieranie niepodpisanych kontrolek ActiveX z programu Internet Explorer.
 - Użyj ustawienia **Wyłącz Przywracanie systemu**, aby umożliwić lub uniemożliwić użytkownikom uruchamianie przywracania systemu w urządzeniu.
 - I wiele więcej...

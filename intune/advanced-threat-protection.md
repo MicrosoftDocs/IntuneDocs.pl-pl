@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a53ae7f43f135f7316b665672dc410812ef14d08
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: abbd226f2b812e1062d56a1d66b3e10bc9d68036
+ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050134"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66374082"
 ---
 # <a name="enforce-compliance-for-windows-defender-atp-with-conditional-access-in-intune"></a>Wymuszanie zgodności usługi Windows Defender ATP z dostępem warunkowym w usłudze Intune
 
@@ -60,7 +60,7 @@ Aby używać usługi ATP z usługą Intune, należy się upewnić, że następuj
 
 4. W usłudze **Windows Defender Security Center**:
     1. Wybierz pozycję **Ustawienia** > **Funkcje zaawansowane**.
-    2. Dla pozycji **Połączenie z usługą Microsoft Intune** wybierz ustawienie **Wł.**:
+    2. Dla pozycji **Połączenie z usługą Microsoft Intune** wybierz ustawienie **Wł.** :
 
         ![Włączanie połączenia z usługą Intune](./media/atp-security-center-intune-toggle.png)
 
@@ -83,11 +83,11 @@ Po dodaniu urządzenia przy użyciu pakietu konfiguracji nie musisz tego robić 
 
 ### <a name="create-the-configuration-profile"></a>Tworzenie profilu konfiguracji
 
-1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Wybierz kolejno pozycje **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
 3. Uzupełnij pola **Nazwa** i **Opis**.
 4. W polu **Platforma** wybierz pozycję **Windows 10 i nowsze**.
-5. W polu **Typ profilu** wybierz pozycję **Windows Defender ATP (Windows 10 Desktop)**.
+5. W polu **Typ profilu** wybierz pozycję **Windows Defender ATP (Windows 10 Desktop)** .
 6. Skonfiguruj ustawienia:
 
   - **Typ pakietu konfiguracji klienta usługi Windows Defender ATP**: Wybierz pozycję **Dodaj**, aby dodać pakiet konfiguracyjny do profilu. Wybierz pozycję **Odłącz**, aby usunąć pakiet konfiguracyjny z profilu.
@@ -105,11 +105,11 @@ Po dodaniu urządzenia przy użyciu pakietu konfiguracji nie musisz tego robić 
 ## <a name="create-the-compliance-policy"></a>Tworzenie zasad zgodności
 Zasady zgodności określają akceptowalny poziom ryzyka na urządzeniu.
 
-1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Wybierz pozycję **Zgodność urządzeń** > **Zasady** > **Utwórz zasady**.
 3. Uzupełnij pola **Nazwa** i **Opis**.
 4. W polu **Platforma** wybierz pozycję **Windows 10 i nowsze**.
-5. W ustawieniach usługi **Windows Defender ATP** ustaw pozycję **Wymagaj, aby urządzenie było na poziomie niższym lub równym ocenie ryzyka maszyny** na preferowany poziom. Klasyfikacja poziomów zagrożenia jest [określana przez usługę Windows Defender ATP](https://review.docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/alerts-queue-windows-defender-advanced-threat-protection?branch=atp-server2008#sort-filter-and-group-the-alerts-queue).
+5. W ustawieniach usługi **Windows Defender ATP** ustaw pozycję **Wymagaj, aby urządzenie było na poziomie niższym lub równym ocenie ryzyka maszyny** na preferowany poziom. Klasyfikacja poziomów zagrożenia jest [określana przez usługę Windows Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/alerts-queue-windows-defender-advanced-threat-protection).
 
    - **Czyste**: Ten poziom jest najbardziej bezpieczny. Urządzenie, na którym są obecne jakiekolwiek zagrożenia, nie może uzyskiwać dostępu do zasobów firmy. Jeśli zostaną znalezione jakiekolwiek zagrożenia, urządzenie zostanie ocenione jako niezgodne. (Usługa Windows Defender ATP używa wartości *Bezpieczny*).
    - **Niski**: Urządzenie jest zgodne, jeśli istnieją tylko zagrożenia niskiego poziomu. Urządzenia ze średnim lub wysokim poziomem zagrożenia nie są zgodne.
@@ -120,7 +120,7 @@ Zasady zgodności określają akceptowalny poziom ryzyka na urządzeniu.
 
 ## <a name="assign-the-policy"></a>Przypisywanie zasad
 
-1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Wybierz kolejno pozycje **Zgodność urządzeń** > **Zasady**> i wybierz zasady zgodności usługi Windows Defender ATP.
 3. Wybierz pozycję **Przypisania**.
 4. Dołącz lub wyklucz grupy usługi Azure AD, aby przypisać do nich zasady.
@@ -153,7 +153,7 @@ Przydatne informacje znajdują się w artykule [Co to jest dostęp warunkowy?](c
 ## <a name="monitor-device-compliance"></a>Monitorowanie zgodności urządzenia
 Następnie monitoruj stan urządzeń objętych zasadami zgodności usługi Windows Defender ATP.
 
-1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Wybierz kolejno pozycje **Zgodność urządzeń** > **Zgodność z zasadami**.
 3. Znajdź na liście zasady usługi Windows Defender ATP i zobacz, które urządzenia są zgodne, a które niezgodne.
 

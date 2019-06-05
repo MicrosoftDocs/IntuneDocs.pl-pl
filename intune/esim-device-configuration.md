@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0bb4d94048025f4b0b6c984c4bf0972b432707b6
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 68a0372180cf516f5a0111cd8fdb7cbd9535f075
+ms.sourcegitcommit: a97b6139770719afbd713501f8e50f39636bc202
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041871"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402737"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Konfigurowanie profilów sieci komórkowej karty eSIM w usłudze Intune — publiczna wersja zapoznawcza
 
@@ -37,7 +37,7 @@ W usłudze Intune można importować jednorazowe kody aktywacji uzyskane od oper
 Aby wdrożyć kartę eSIM na urządzeniach za pomocą usługi Intune, potrzebne są następujące elementy:
 
 - **Urządzenia obsługujące kartę eSIM** takie jak Surface LTE: Sprawdź, [czy Twoje urządzenie obsługuje kartę eSIM](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data). Możesz też wyświetlić listę [niektórych znanych urządzeń obsługujących karty eSIM](#esim-capable-devices) (w tym artykule).
-- **Komputer PC z systemem Windows 10 i aktualizacją Fall Creators Update ** (wersja 1709 lub nowsza) zarejestrowany w usłudze Intune i zarządzany za pomocą funkcji MDM.
+- **Komputer PC z systemem Windows 10 i aktualizacją Fall Creators Update**  (wersja 1709 lub nowsza) zarejestrowany w usłudze Intune i zarządzany za pomocą funkcji MDM.
 - **Kody aktywacji** dostarczone przez operatora sieci komórkowej. Te jednorazowe kody aktywacji są dodawane do usługi Intune i wdrażane na urządzeniach obsługujących kartę eSIM. Skontaktuj się z operatorem sieci komórkowej, aby uzyskać kody aktywacji karty eSIM.
 
 ## <a name="deploy-esim-to-devices---overview"></a>Wdrażanie karty eSIM na urządzeniach — omówienie
@@ -68,7 +68,6 @@ Następujące urządzenia obsługujące kartę eSIM są dostępne na rynku lub z
 - Surface Pro LTE
 - HP Spectre Folio 13
 - Lenovo Yoga C630
-- Samsung Galaxy Book 2
 
 ## <a name="step-1-add-cellular-activation-codes"></a>Krok 1. Dodawanie kodów aktywacji sieci komórkowej
 

@@ -12,12 +12,12 @@ ms.localizationpriority: high
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf07f942feeab0a73c01625f90c04ec3b989c1c2
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 5a5c9dea847ace51c7d6f06cfa43c44beead18f8
+ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66044853"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66373411"
 ---
 # <a name="add-ios-software-update-policies-in-intune"></a>Dodawanie zasad aktualizacji oprogramowania dla systemu iOS w usłudze Intune
 
@@ -31,7 +31,7 @@ Urządzenie sprawdza zasady usługi Intune miej więcej co 8 godzin. Jeśli aktu
 
 ## <a name="configure-the-policy"></a>Konfigurowanie zasad
 
-1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi**, wpisz nazwę usługi **Intune** w filtrze, a następnie wybierz pozycję **Intune**.
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Wybierz pozycję **Aktualizacje oprogramowania** > **Zasady aktualizacji dla systemu iOS** > **Utwórz**.
 3. Podaj następujące ustawienia:
 
@@ -51,7 +51,7 @@ Urządzenie sprawdza zasady usługi Intune miej więcej co 8 godzin. Jeśli aktu
       - **Godzina rozpoczęcia**: Wybierz godzinę rozpoczęcia horyzontu czasowego z ograniczeniami. Na przykład wprowadzenie wartości 5:00 spowoduje, że aktualizacje nie będą instalowane począwszy od godziny 5:00.
       - **Godzina zakończenia**: Wybierz godzinę zakończenia horyzontu czasowego z ograniczeniami. Na przykład wprowadzenie wartości 1:00 spowoduje, że aktualizacje będą mogły być instalowane od godziny 1:00.
 
-    - **Opóźnij widoczność aktualizacji oprogramowania dla użytkowników końcowych bez żadnych zmian zaplanowanych aktualizacji (dni)**: 
+    - **Opóźnij widoczność aktualizacji oprogramowania dla użytkowników końcowych bez żadnych zmian zaplanowanych aktualizacji (dni)** : 
 
       **To ustawienie zostało przeniesione do obszaru [Ograniczenia dotyczące urządzeń](device-restrictions-ios.md#general). Zostanie ono usunięte z tej lokalizacji w portalu**. W tym miejscu można wprowadzać tymczasowe zmiany istniejących zasad. W ciągu około miesiąca to ustawienie zostanie usunięte z istniejących zasad.
 

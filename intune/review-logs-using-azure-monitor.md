@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 803d556150d60d0a3d60ec03c029d65f0f935f67
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 8d13cb9fed28bb759007f1be1cb6df6139c19d3b
+ms.sourcegitcommit: 063177c6c365fef3642edd7c455790958469aad9
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045287"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66412699"
 ---
 # <a name="send-log-data-to-storage-event-hubs-or-log-analytics-in-intune-preview"></a>Wysyłanie danych dzienników do magazynu, centrów zdarzeń lub analizy dzienników w usłudze Intune (wersja zapoznawcza)
 
@@ -53,7 +53,7 @@ W zależności od tego, dokąd chcesz przekierowywać dane z dziennika inspekcji
 
 ## <a name="send-logs-to-azure-monitor"></a>Wysyłanie dzienników do usługi Azure Monitor
 
-1. W witrynie [Azure Portal](https://portal.azure.com/) wybierz pozycję **Wszystkie usługi**, wpisz nazwę usługi **Intune** w filtrze, a następnie wybierz pozycję **Intune**.
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. W obszarze **Monitorowanie** wybierz pozycję **Ustawienia diagnostyki**. Po pierwszym otwarciu tej funkcji włącz ją:
 
     ![Włączanie ustawień diagnostyki w usłudze Intune w celu wysyłania dzienników do usługi Azure Monitor](media/diagnostics-settings-turn-on.png)
@@ -101,7 +101,7 @@ Eksportowane dzienniki inspekcji mogą także zawierać informacje z innych czę
 
 Na przykład aby wyeksportować dzienniki inspekcji z modułu zgodności urządzeń:
 
-1. W witrynie [Azure Portal](https://portal.azure.com/) wybierz pozycję **Wszystkie usługi**, wpisz nazwę usługi **Intune** w filtrze, a następnie wybierz pozycję **Intune**.
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Wybierz pozycję **Zgodność urządzeń** > **Monitor** > **Dzienniki inspekcji**:
 
     ![Wybieranie dzienników inspekcji w celu przesłania danych usługi Intune do magazynu usługi Azure Monitor, centrów zdarzeń lub analizy](media/audit-logs-under-monitor-in-compliance.png)
