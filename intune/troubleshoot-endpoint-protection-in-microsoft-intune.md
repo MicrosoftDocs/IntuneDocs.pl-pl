@@ -1,11 +1,11 @@
 ---
-title: Rozwiązywanie problemów z programem Endpoint Protection w usłudze Intune — Azure — | Microsoft Docs
-description: Rozwiąż problem, używając programu Microsoft Intune Endpoint Protection.
+title: Najczęstsze komunikaty dotyczące ochrony punktu końcowego w usłudze Microsoft Intune — Azure | Microsoft Docs
+description: Poznaj najczęstsze komunikaty, które mogą wyświetlać się podczas korzystania z ochrony punktu końcowego i usługi Windows Defender w usłudze Microsoft Intune, a także sposoby rozwiązywania typowych problemów.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/14/2018
+ms.date: 05/29/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,36 +17,70 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec655a53018c2e45d1cb771c1ce9c0aad376b2b1
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: a4f749ab85d283ed9743d227476f8229dc1cf7c3
+ms.sourcegitcommit: a97b6139770719afbd713501f8e50f39636bc202
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040148"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402647"
 ---
-# <a name="troubleshoot-endpoint-protection-in-intune"></a>Rozwiązywanie problemów z programem Endpoint Protection w usłudze Intune
+# <a name="endpoint-protection-issues-and-possible-solutions-in-microsoft-intune"></a>Problemy dotyczące ochrony punktu końcowego w usłudze Microsoft Intune i ich możliwe rozwiązania
 
-Skorzystaj z informacji, aby rozwiązać problemy występujące podczas korzystania z programu Endpoint Protection. Możesz również [zapoznać się z dziennikami zdarzeń i kodami błędów, aby rozwiązywać problemy z programem antywirusowym Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/troubleshoot-windows-defender-antivirus).
+Ten artykuł zawiera opisy możliwych przyczyn problemów oraz potencjalne rozwiązania niektórych błędów i ostrzeżeń. Podane tu informacje ułatwią rozwiązywanie problemów związanych z korzystaniem z ochrony punktu końcowego.
 
-Jeśli te informacje nie pomogą w rozwiązaniu problemu, możesz również [uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](get-support.md).
+## <a name="windows-defender-error-codes"></a>Kody błędów usługi Windows Defender
 
-### <a name="error-messages"></a>Komunikaty o błędach
-W tej sekcji opisano możliwe przyczyny i potencjalne rozwiązania poniższych błędów i ostrzeżeń.
+Zapoznaj się z dziennikami zdarzeń i kodami błędów, aby [rozwiązać problemy z Programem antywirusowym Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/troubleshoot-windows-defender-antivirus).
 
-|Pozycja w okienku stanu|Możliwe przyczyny|Potencjalne rozwiązania|
-|---------------|--------------------|-----------------------|
-|**Aparat programu Endpoint Protection jest niedostępny**|Aparat programu Endpoint Protection w usłudze Intune uległ uszkodzeniu lub został usunięty.|Jeśli aparat programu Endpoint Protection w usłudze Intune jest uszkodzony, możesz spróbować zaktualizować lub ponownie zainstalować oprogramowanie.<br /><br />Aby wymusić natychmiastową aktualizację, wybierz pozycję **Aktualizuj** w oprogramowaniu klienckim programu Endpoint Protection (które można znaleźć na pasku zadań na zarządzanych komputerach).<br /><br />Jeśli nie można zaktualizować aparatu programu Endpoint Protection, trzeba ponownie zainstalować ten aparat.<br /><br />Na liście zainstalowanych programów w Panelu sterowania na zarządzanym komputerze odszukaj pozycję **Agent programu Endpoint Protection usługi Microsoft Intune**, a następnie odinstaluj tę aplikację.<br /><br />Podczas następnej synchronizacji aktualizacji Menedżer usługi Microsoft Online Management Update wykryje brakujący program i zainstaluje go ponownie o zaplanowanej godzinie instalacji.|
-|**Program Endpoint Protection jest wyłączony**|Program Endpoint Protection w usłudze Intune został wyłączony przez administratora przy użyciu profilu konfiguracji lub przez użytkownika na zarządzanym komputerze.|Włącz program Endpoint Protection. Zobacz [Dodawanie ustawień programu Endpoint Protection](endpoint-protection-configure.md) w usłudze Intune lub [Włączanie usługi Windows Defender w celu uzyskiwania dostępu do zasobów firmy](/intune-user-help/turn-on-defender-windows).|
-|**Ochrona w czasie rzeczywistym jest wyłączona**|Ochrona w czasie rzeczywistym została wyłączona przez administratora (przy użyciu profilu) lub przez użytkownika na zarządzanym komputerze.|Włącz program Endpoint Protection. Zobacz [Program antywirusowy Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus) w usłudze Intune lub [Włączanie usługi Windows Defender w celu uzyskiwania dostępu do zasobów firmy](/intune-user-help/turn-on-defender-windows). |
-|**Skanowanie pobierania jest wyłączone**|Skanowanie pobierania zostało wyłączone przez administratora przy użyciu profilu lub przez użytkownika na zarządzanym komputerze.|Włącz skanowanie. Zobacz [Program antywirusowy Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus) w usłudze Intune lub [Włączanie usługi Windows Defender w celu uzyskiwania dostępu do zasobów firmy](/intune-user-help/turn-on-defender-windows). |
-|**Monitorowanie działania plików i programów jest wyłączone**|Monitorowanie działania plików i programów zostało wyłączone przez administratora przy użyciu profilu lub przez użytkownika na zarządzanym komputerze.|Włącz działanie plików i programów. Zobacz [Program antywirusowy Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus) w usłudze Intune lub [Włączanie usługi Windows Defender w celu uzyskiwania dostępu do zasobów firmy](/intune-user-help/turn-on-defender-windows). |
-|**Monitorowanie zachowania jest wyłączone**|Monitorowanie zachowania zostało wyłączone przez administratora przy użyciu profilu lub przez użytkownika na zarządzanym komputerze.|Włącz monitorowanie zachowania. Zobacz [Program antywirusowy Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus) w usłudze Intune lub [Włączanie usługi Windows Defender w celu uzyskiwania dostępu do zasobów firmy](/intune-user-help/turn-on-defender-windows). |
-|**Skanowanie skryptu jest wyłączone**|Skanowanie skryptów zostało wyłączone przez administratora przy użyciu profilu lub przez użytkownika na zarządzanym komputerze.|Włącz skanowanie skryptów. Zobacz [Program antywirusowy Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus) w usłudze Intune lub [Włączanie usługi Windows Defender w celu uzyskiwania dostępu do zasobów firmy](/intune-user-help/turn-on-defender-windows). |
-|**System inspekcji sieci jest wyłączony**|System Network Inspection System został wyłączony przez administratora przy użyciu profilu lub przez użytkownika na zarządzanym komputerze.|Włącz system Network Inspection System. Zobacz [Program antywirusowy Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus) w usłudze Intune lub [Włączanie usługi Windows Defender w celu uzyskiwania dostępu do zasobów firmy](/intune-user-help/turn-on-defender-windows). |
-|**Definicje złośliwego oprogramowania są nieaktualne**|Komputer mógł być odłączony od Internetu przez dłuższy czas i jego definicje złośliwego oprogramowania mogły jeszcze nie zostać zaktualizowane. Ten stan jest wyświetlany, gdy definicje złośliwego oprogramowania na komputerze są nieaktualne (pochodzą sprzed co najmniej 14 dni).|Jeśli definicje złośliwego oprogramowania są nieaktualne, możesz je zaktualizować, korzystając [programu antywirusowego Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus).|
-|**Zaległe pełne skanowanie**|Nie wykonano pełnego skanowania w ciągu ostatnich 14 dni. Może to być spowodowane ponownym uruchomieniem komputera podczas pełnego skanowania.|Jeśli pełne skanowanie jest zaległe, możesz uruchomić jednorazowe pełne skanowanie lub zaplanować cykliczne pełne skanowanie. Zobacz [Program antywirusowy Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus). |
-|**Zaległe szybkie skanowanie**|Nie wykonano szybkiego skanowania w ciągu ostatnich 14 dni. Może to być spowodowane ponownym uruchomieniem komputera podczas szybkiego skanowania.|Jeśli szybkie skanowanie jest zaległe, możesz uruchomić jednorazowe szybkie skanowanie lub zaplanować cykliczne szybkie skanowanie. Zobacz [Program antywirusowy Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus).|
-|**Uruchomiona jest inna aplikacja ochrony punktu końcowego**|Uruchomiona jest inna aplikacja ochrony punktu końcowego, a komputer jest w dobrej kondycji.|Domyślnie, jeśli jest zainstalowana inna aplikacja Endpoint Protection i usługa Intune wykryje tę aplikację, urządzenie może stać się niestabilne.|
+## <a name="common-intune-errors-and-possible-resolutions"></a>Typowe błędy usługi Intune i możliwe rozwiązania
 
-### <a name="next-steps"></a>Następne kroki
-Jeśli te informacje nie pomogą w rozwiązaniu problemu, możesz również [uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](get-support.md).
+#### <a name="endpoint-protection-engine-unavailable"></a>Aparat programu Endpoint Protection jest niedostępny
+
+**Możliwa przyczyna**: aparat programu Endpoint Protection usługi Intune został uszkodzony lub usunięty.
+
+**Możliwe rozwiązania**:
+
+- Jeśli ochrona punktu końcowego jest uszkodzona lub nie można jej zaktualizować, należy zaktualizować lub ponownie zainstalować program.
+- Wymuś natychmiastową aktualizację. W programie klienckim ochrony punktu końcowego (np. na pasku zadań) kliknij opcję **Aktualizuj**.
+- W obszarze Panel sterowania > Programy kliknij pozycję **Agent programu Microsoft Intune Endpoint Protection**. Odinstaluj aplikację.
+- Podczas następnej synchronizacji aktualizacji Menedżer usługi Microsoft Online Management Update wykryje brakujący program i zainstaluje go ponownie o zaplanowanej godzinie instalacji.
+
+#### <a name="features-are-disabled"></a>Funkcje są wyłączone
+
+Może pojawiać się komunikat, że niektóre funkcje są wyłączone. Przyczyną może być to, że administrator wyłączył ochronę punktu końcowego w usłudze Intune lub usługę Windows Defender przy użyciu profilu konfiguracji. Na urządzeniu mógł je też wyłączyć użytkownik końcowy. Komunikaty, które mogą się wyswietlać:
+
+`Endpoint Protection disabled`  
+`Real-time protection disabled`  
+`Download scanning disabled`  
+`File and program activity monitoring disabled`  
+`Behavior monitoring disabled`  
+`Script scanning disabled`  
+`Network Inspection System disabled`  
+
+**Możliwe rozwiązania**: włącz te funkcje. Więcej informacji zawierają te artykuły:
+
+- [Dodawanie ustawień ochrony punktu końcowego](endpoint-protection-configure.md)
+- [Program antywirusowy Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus)
+- [Użytkownicy końcowi: włączanie ochrony w czasie rzeczywistym w celu uzyskiwania dostępu do zasobów firmy](/intune-user-help/turn-on-defender-windows)
+
+#### <a name="malware-definitions-out-of-date"></a>Definicje złośliwego oprogramowania są nieaktualne
+
+Ten stan jest wyświetlany, gdy definicje złośliwego oprogramowania na urządzeniu są nieaktualne (pochodzą sprzed co najmniej 14 dni). Komunikat może wyświetlać się na przykład wtedy, gdy urządzenie utraci połączenie z Internetem lub gdy definicje złośliwego oprogramowania są nieaktualne.
+
+**Możliwe rozwiązania**: jeśli definicje złośliwego oprogramowania są nieaktualne, zaktualizuj je, korzystając z [Programu antywirusowego Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus).
+
+#### <a name="full-scan-overdue-or-quick-scan-overdue"></a>Zaległe skanowanie — pełne lub szybkie
+
+Pełne lub szybkie skanowanie nie zostało wykonane od 14 dni. Ten błąd może wystąpić, jeśli urządzenie zostanie ponownie uruchomione podczas pełnego skanowania.
+
+**Możliwe rozwiązania**: jeśli skanowanie jest zaległe, możesz uruchomić jednorazowe skanowanie lub zaplanować skanowanie cykliczne. Zobacz [Program antywirusowy Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus).
+
+#### <a name="another-endpoint-protection-application-running"></a>Uruchomiona jest inna aplikacja ochrony punktu końcowego
+
+Uruchomiona jest inna aplikacja ochrony punktu końcowego, a komputer jest w dobrej kondycji.
+
+**Możliwe rozwiązania**: jeśli jest zainstalowana inna aplikacja ochrony punktu końcowego i usługa Intune ją wykryje, urządzenie może zacząć działać niestabilnie.
+
+## <a name="next-steps"></a>Następne kroki
+
+Uzyskaj [pomoc techniczną od firmy Microsoft](get-support.md) lub skorzystaj z [forum społeczności](https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune).

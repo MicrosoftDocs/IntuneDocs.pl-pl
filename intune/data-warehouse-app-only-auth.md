@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/09/2019
+ms.date: 05/31/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4edf6e1e2b0ed57ec221e445bc171895fb9e0072
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: b9d3cd7dfb28d26451da95861fe9a3011c2556b1
+ms.sourcegitcommit: f90cba0b2c2672ea733052269bcc372a80772945
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66042672"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454036"
 ---
 # <a name="intune-data-warehouse-application-only-authentication"></a>Uwierzytelnianie tylko aplikacji w magazynie danych usługi Intune
 
@@ -92,10 +92,11 @@ Za pomocą programu Visual Studio utwórz projekt aplikacji konsoli (.NET Framew
 2.  Po lewej stronie wybierz pozycję **Visual C#** , aby wyświetlić wszystkie projekty programu .NET Framework.
 3.  Wybierz pozycję **Aplikacja konsoli (.NET Framework)** , dodaj nazwę aplikacji, a następnie kliknij przycisk **OK**, aby utworzyć aplikację.
 4.  W **Eksploratorze rozwiązań** wybierz pozycję **Program.cs**, aby wyświetlić kod.
-5.  W menu podręcznym wybierz pozycje **Dodaj** > **Nowy element**. Zostanie wyświetlone okno dialogowe **Dodaj nowy element**.
-6.  Po lewej stronie w obszarze **Visual C#** wybierz pozycję **Kod**.
-7.  Wybierz pozycję **Klasa**, zmień nazwę klasy na *IntuneDataWarehouseClass.cs* i kliknij przycisk **Dodaj**.
-8.  Dodaj następujący kod do metody <code>Main</code>:
+5.  W Eksploratorze rozwiązań dodaj odwołanie do zestawu `System.Configuration`.
+6.  W menu podręcznym wybierz pozycje **Dodaj** > **Nowy element**. Zostanie wyświetlone okno dialogowe **Dodaj nowy element**.
+7.  Po lewej stronie w obszarze **Visual C#** wybierz pozycję **Kod**.
+8.  Wybierz pozycję **Klasa**, zmień nazwę klasy na *IntuneDataWarehouseClass.cs* i kliknij przycisk **Dodaj**.
+9.  Dodaj następujący kod do metody <code>Main</code>:
 
     ``` csharp
          var applicationId = ConfigurationManager.AppSettings["appId"].ToString();
@@ -110,7 +111,7 @@ Za pomocą programu Visual Studio utwórz projekt aplikacji konsoli (.NET Framew
                  new SecureClientSecret(applicationSecret))).Result;
     ``` 
 
-9. Dodaj dodatkowe przestrzenie nazw, dodając następujący kod w górnej części pliku kodu:
+10. Dodaj dodatkowe przestrzenie nazw, dodając następujący kod w górnej części pliku kodu:
 
     ``` csharp
      using System.Security;
@@ -118,7 +119,7 @@ Za pomocą programu Visual Studio utwórz projekt aplikacji konsoli (.NET Framew
      using System.Configuration;
     ``` 
 
-10. Po metodzie <code>Main</code> dodaj następującą prywatną metodę do przetwarzania i konwersji klucza aplikacji:
+11. Po metodzie <code>Main</code> dodaj następującą prywatną metodę do przetwarzania i konwersji klucza aplikacji:
 
     ``` csharp
     private static SecureString ConvertToSecureStr(string appkey)
@@ -136,10 +137,10 @@ Za pomocą programu Visual Studio utwórz projekt aplikacji konsoli (.NET Framew
     }
     ```
 
-11. W **Eksploratorze rozwiązań** kliknij prawym przyciskiem myszy pozycję **Odwołania**, a następnie wybierz pozycję **Zarządzaj pakietami NuGet**.
-12. Wyszukaj pozycję *Microsoft.IdentityModel.Clients.ActiveDirectory* i zainstaluj powiązany pakiet Microsoft NuGet.
-13. W **Eksploratorze rozwiązań** wybierz i otwórz plik *App.config*.
-14. Dodaj sekcję <code>appSettings</code>, aby plik xml wyglądał następująco:
+12. W **Eksploratorze rozwiązań** kliknij prawym przyciskiem myszy pozycję **Odwołania**, a następnie wybierz pozycję **Zarządzaj pakietami NuGet**.
+13. Wyszukaj pozycję *Microsoft.IdentityModel.Clients.ActiveDirectory* i zainstaluj powiązany pakiet Microsoft NuGet.
+14. W **Eksploratorze rozwiązań** wybierz i otwórz plik *App.config*.
+15. Dodaj sekcję <code>appSettings</code>, aby plik xml wyglądał następująco:
 
     ``` xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -155,8 +156,8 @@ Za pomocą programu Visual Studio utwórz projekt aplikacji konsoli (.NET Framew
     </configuration>
     ``` 
 
-15. Zaktualizuj wartości <code>appId</code>, <code>appKey</code> i <code>tenantDomain</code> odpowiadające unikatowym wartościom aplikacji.
-16. Skompiluj aplikację.
+16. Zaktualizuj wartości <code>appId</code>, <code>appKey</code> i <code>tenantDomain</code> odpowiadające unikatowym wartościom aplikacji.
+17. Skompiluj aplikację.
 
     >[!NOTE] 
     > Aby wyświetlić dodatkowy kod implementacji, zobacz [przykładowy kod magazynu danych usługi Intune](https://github.com/Microsoft/Intune-Data-Warehouse/tree/master/Samples/CSharp ).

@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/20/2019
+ms.date: 05/30/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: ''
@@ -15,16 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26f43523589da0d59afb3b667eb4ead8357f7a60
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
-ms.translationtype: HT
+ms.openlocfilehash: 7ff5b411f14fef4ad294b0dd8b265680fd67df08
+ms.sourcegitcommit: a97b6139770719afbd713501f8e50f39636bc202
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66049022"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402762"
 ---
 # <a name="bundle-ids-for-built-in-ios-apps-you-can-use-in-intune"></a>Identyfikatory pakietów dla wbudowanych aplikacji dla systemu iOS, których można używać w usłudze Intune
 
-Podczas konfigurowania funkcji na urządzeniach z systemem iOS można również dodawać wbudowane aplikacje. W tym artykule wymieniono identyfikatory pakietów niektórych typowych wbudowanych aplikacji dla systemu iOS. Aby wyszukać identyfikatory pakietu innych aplikacji, skontaktuj się z dostawcą oprogramowania.
+Podczas konfigurowania funkcji na urządzeniach z systemem iOS można również dodawać wbudowane aplikacje. W tym artykule wymieniono identyfikatory pakietów niektórych typowych wbudowanych aplikacji dla systemu iOS. Aby wyszukać identyfikatory pakietu innych aplikacji, skontaktuj się z dostawcą oprogramowania. Zobacz listę [identyfikatorów pakietów dla systemu iOS](https://support.apple.com/guide/mdm/ios-bundle-ids-mdm90f60c1ce/web) (otwiera witrynę firmy Apple).
 
 ## <a name="bundle-ids"></a>Identyfikatory pakietów
 
@@ -59,6 +59,7 @@ Podczas konfigurowania funkcji na urządzeniach z systemem iOS można również 
 | com.apple.mobilenotes       | Uwagi        | Apple     |
 | com.apple.Numbers           | Liczby      | Apple     |
 | com.apple.Pages             | Pages        | Apple     |
+| com.apple.mobilephone       | Telefon        | Apple     |
 | com.apple.Photo-Booth       | Photo Booth  | Apple     |
 | com.apple.mobileslideshow   | Zdjęcia       | Apple     |
 | com.apple.podcasts          | Podcasty     | Apple     |

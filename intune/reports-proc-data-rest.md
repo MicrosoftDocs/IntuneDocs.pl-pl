@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 894ce1fcf270af0169661359c2ab088bb30fab62
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 733ac8eee551a3ddba7a5219827c09357659a06e
+ms.sourcegitcommit: 063177c6c365fef3642edd7c455790958469aad9
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041156"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66412717"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Pobieranie danych z interfejsu API magazynu danych usługi Intune za pomocą klienta REST
 
@@ -94,9 +94,8 @@ Do wykonania wywołania REST przy użyciu narzędzia Postman potrzebne są nast�
 
 Potrzebny jest również punkt końcowy. Aby uzyskać punkt końcowy magazynu danych, potrzebny będzie adres URL niestandardowego źródła danych. Punkt końcowy OData można pobrać z okienka Magazyn danych.
 
-1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
-3. Wybierz pozycję **Skonfiguruj magazyn danych usługi Intune** w obszarze **Inne zadania**.
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+3. Otwórz okienko **Magazyn danych usługi Intune**, klikając link Magazyn danych w obszarze **Inne zadania** po prawej stronie bloku **Microsoft Intune — omówienie**.
 4. Skopiuj adres URL niestandardowego źródła danych w obszarze **Użyj usług raportowania innych firm**. Powinien on wyglądać następująco: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=v1.0`
 
 Punkt końcowy ma następujący format: `https://fef.{yourtenant}.manage.microsoft.com/ReportingService/DataWarehouseFEService/{entity}?api-version={verson-number}`

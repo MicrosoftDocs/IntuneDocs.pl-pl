@@ -5,7 +5,7 @@ description: Ustawienia punktów odniesienia zabezpieczeń obsługiwane przez us
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/17/2019
+ms.date: 05/29/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,16 +16,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f96393e0d6071b1b56700e954714324b01ffcf25
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: c6feae4d7caeeefbf9638e5018ba7b653a260f5c
+ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040741"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66373510"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Ustawienia punktów odniesienia zabezpieczeń usługi Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender dla usługi Intune
 
 Zapoznaj się z ustawieniami punktów odniesienia zabezpieczeń usługi Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender (wcześniej Zaawansowana ochrona przed zagrożeniami w usłudze Windows Defender), które są obsługiwane przez usługę Microsoft Intune. Wartości domyślne w tym artykule reprezentują domyślną konfigurację punktów odniesienia dla usługi Intune. Te wartości domyślne reprezentują zalecaną konfigurację w usłudze Intune i mogą nie odpowiadać wartościom domyślnym systemu Windows.
+
+  Punkty odniesienia zabezpieczeń usługi Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender są dostępne, jeśli środowisko spełnia wymagania wstępne dotyczące korzystania z [Zaawansowanej ochrony przed zagrożeniami w usłudze Microsoft Defender](advanced-threat-protection.md#prerequisites).
+
+
+
 
 > [!NOTE]  
 > Ustawienia punktów odniesienia usługi WDATP są dostępne w **wersji zapoznawczej**. W okresie obowiązywania wersji zapoznawczej lista dostępnych ustawień oraz kolejność prezentowania tych ustawień może nie być zgodna z tym, co jest dostępne w portalu. 

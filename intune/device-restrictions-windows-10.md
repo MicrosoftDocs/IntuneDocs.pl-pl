@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/18/2019
+ms.date: 05/29/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 18f8e072037d0ca9065201e0d0db2a9a2f6074ce
-ms.sourcegitcommit: 0f771585d3556c0af14500428d5c4c13c89b9b05
-ms.translationtype: HT
+ms.openlocfilehash: 2950ddf4b130222e23fd9ea23f7c9e5793f8638a
+ms.sourcegitcommit: 229816afef86a9767eaca816d644c77ec4babed5
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66174197"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354222"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem Windows 10 (i nowszym) w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune
 
@@ -58,6 +58,24 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad ApplicationMana
 - **Instaluj aplikacje na dysku systemowym**: ustawienie **Blokuj** uniemożliwia instalowanie aplikacji na dysku systemowym urządzenia. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia instalowanie aplikacji na dysku systemowym.
 - **DVR z gry** (tylko komputery): ustawienie **Blokuj** wyłącza nagrywanie i transmitowanie gier w systemie Windows. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia nagrywanie i transmitowanie gier.
 - **Tylko aplikacje ze sklepu**: ustawienie **Wymagaj** wymusza na użytkownikach końcowych instalowanie aplikacji wyłącznie ze sklepu Windows App Store. Ustawienie **Nie skonfigurowano** umożliwia użytkownikom końcowym instalowanie aplikacji spoza sklepu Windows App Store.
+- **Wymuś ponowne uruchamianie aplikacji w przypadku niepowodzenia aktualizacji**: aplikacja może się nie zaktualizować, jeśli jest właśnie używana. To ustawienie pozwala wymusić jej ponowne uruchomienie. **Nieskonfigurowane**: (domyślne) to ustawienie nie wymusza ponownego uruchomienia aplikacji. **Wymagaj**: pozwala administratorom na wymuszenie ponownego uruchomienia w określonym dniu i o podanej godzinie lub zgodnie z cyklicznym harmonogramem. Ustawienie **Wymagaj** powoduje też konieczność skonfigurowania następujących opcji:
+
+  - **Data/godzina rozpoczęcia**: wybierz datę i godzinę ponownego uruchamiania aplikacji.
+  - **Cykl**: wybierz powtarzanie codziennie, co tydzień lub co miesiąc.
+
+  [Dostawca usługi konfiguracji ApplicationManagement/ScheduleForceRestartForUpdateFailures](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures)
+
+- **Kontrola użytkownika nad instalacjami**: po wybraniu ustawienia **Nieskonfigurowane** (domyślnie) Instalator Windows uniemożliwia użytkownikom zmianę opcji instalacji, które są zwykle zastrzeżone dla administratorów systemu. Dotyczy to np. wejścia do katalogu w celu zainstalowania plików. **Zablokuj**: pozwala użytkownikom na zmianę tych opcji instalacji. Niektóre funkcje zabezpieczeń Instalatora Windows są pomijane.
+
+  [Dostawca usługi konfiguracji ApplicationManagement/MSIAllowUserControlOverInstall](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-msiallowusercontroloverinstall)
+
+- **Instalowanie aplikacji z podniesionymi uprawnieniami**: po wybraniu ustawienia **Nieskonfigurowane** (domyślnie) podczas instalowania programów, których nie wdraża ani nie udostępnia administrator systemu, system stosuje uprawnienia bieżącego użytkownika. **Zablokuj**: zezwala Instalatorowi Windows na użycie podniesionych uprawnień podczas instalowania dowolnego programu w systemie. Uprawnienia te są rozszerzone na wszystkie programy.
+
+  [Dostawca usługi konfiguracji ApplicationManagement/MSIAlwaysInstallWithElevatedPrivileges](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-msialwaysinstallwithelevatedprivileges)
+
+- **Aplikacje autostartu**: wprowadź listę aplikacji, które będą otwierane, gdy użytkownik zaloguje się na urządzeniu. Lista musi zawierać aplikacje systemu Windows wymienione jako nazwy rodzin pakietów (PFN) rozdzielone średnikami. Aby ta zasada działała, manifest aplikacji systemu Windows musi zawierać zadanie startowe.
+
+  [Dostawca usługi konfiguracji ApplicationManagement/LaunchAppAfterLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-launchappafterlogon)
 
 Wybierz przycisk **OK**, aby zapisać zmiany.
 
@@ -408,6 +426,10 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad DeviceLock](htt
     - **Numeryczne**: hasło może się składać tylko z cyfr.
     - **Alfanumeryczne**: hasło musi zawierać kombinację liter i cyfr.
   - **Minimalna długość hasła**: wprowadź minimalną liczbą wymaganych znaków z zakresu 4–16. Na przykład wprowadź `6`, aby wymagać hasła o długości co najmniej 6 znaków.
+  
+    > [!IMPORTANT]
+    > Kiedy wymóg dotyczący hasła zostanie zmieniony na komputerze z systemem Windows, użytkownicy będą musieli się do niego dostosować przy następnym logowaniu, ponieważ to właśnie wtedy urządzenie przechodzi ze stanu bezczynności w stan aktywności. Użytkownicy, których hasła spełniają wymagania, także zostaną poproszeniu o zmianę hasła.
+    
   - **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia**: wprowadź liczbę dopuszczalnych nieudanych uwierzytelnień przed wyczyszczeniem zawartości urządzenia z zakresu 1–11. `0` (zero) może spowodować wyłączenie funkcje czyszczenia urządzenia.
 
     Wpływ tego ustawienia zależy od wersji. Aby uzyskać szczegółowe informacje, zobacz [Dostawca usługi konfiguracji DeviceLock/MaxDevicePasswordFailedAttempts](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts).
@@ -755,7 +777,7 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad usługi Defende
 
   Aby uzyskać więcej informacji dotyczących potencjalnie niepożądanych aplikacji, zobacz temat [Wykrywanie i blokowanie potencjalnie niepożądanych aplikacji](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus).
 
-- **Akcje do podjęcia wobec wykrytych zagrożeń związanych ze złośliwym oprogramowaniem**: wybierz akcje, które ma podejmować usługa Defender po wykryciu zagrożenia określonego poziomu, takiego jak: niski, umiarkowany, wysoki i poważny. Dostępne opcje:
+- **Akcje do podjęcia wobec wykrytych zagrożeń związanych ze złośliwym oprogramowaniem**: wybierz akcje, które ma podejmować usługa Defender po wykryciu zagrożenia określonego poziomu, takiego jak: niski, umiarkowany, wysoki i poważny. Jeśli nie będzie to możliwe, usługa Windows Defender wybierze najlepszą opcję pozwalającą na wyeliminowanie zagrożenia. Dostępne opcje:
   - **Wyczyść**
   - **Kwarantanna**
   - **Usuń**

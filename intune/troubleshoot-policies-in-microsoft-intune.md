@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/29/2019
+ms.date: 05/29/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0f8e9e7fec0bea759d408f3ca3d94aa46748bf8
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
-ms.translationtype: HT
+ms.openlocfilehash: 1bed0fda1c19df181dacb36c832a2a4c94e61aff
+ms.sourcegitcommit: a97b6139770719afbd713501f8e50f39636bc202
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66044616"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402658"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Rozwiązywanie problemów związanych z zasadami i profilami w usłudze Intune
 
@@ -32,13 +32,12 @@ W tym artykule wymieniono niektóre typowe techniki rozwiązywania problemów i 
 
 ## <a name="use-built-in-troubleshooting"></a>Korzystanie z wbudowanej funkcji rozwiązywania problemów
 
-1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi**, wpisz nazwę usługi **Intune** w filtrze, a następnie wybierz pozycję **Intune**.
-2. Wybierz pozycję **Rozwiązywanie problemów**:
+1. W usłudze [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) wybierz pozycję **Rozwiązywanie problemów**:
 
     ![W usłudze Intune przejdź do obszaru Pomoc i obsługa techniczna, a następnie wybierz pozycję Rozwiązywanie problemów.](./media/help-and-support-troubleshoot.png)
 
-3. Wybierz pozycję **Wybierz użytkownika** > zaznacz użytkownika, który napotkał problem > wybierz pozycję **Wybierz**.
-4. Upewnij się, że przy pozycjach **Licencja usługi Intune** oraz **Stan konta** wyświetlane są zielone znaczniki wyboru:
+2. Wybierz pozycję **Wybierz użytkownika** > zaznacz użytkownika, który napotkał problem > wybierz pozycję **Wybierz**.
+3. Upewnij się, że przy pozycjach **Licencja usługi Intune** oraz **Stan konta** wyświetlane są zielone znaczniki wyboru:
 
     ![W usłudze Intune wybierz użytkownika i upewnij się, że przy pozycjach Stan konta i Licencja usługi Intune wyświetlane są zielone znaczniki wyboru.](./media/account-status-intune-license-show-green.png)
 
@@ -47,7 +46,7 @@ W tym artykule wymieniono niektóre typowe techniki rozwiązywania problemów i 
     - [Przypisywanie licencji, aby użytkownicy mogli rejestrować urządzenia](licenses-assign.md)
     - [Dodawanie użytkowników do usługi Intune](users-add.md)
 
-5. W obszarze **Urządzenia** znajdź urządzenie, które napotkało problem. Przejrzyj różne kolumny:
+4. W obszarze **Urządzenia** znajdź urządzenie, które napotkało problem. Przejrzyj różne kolumny:
 
     - **Zarządzane**: aby urządzenie mogło odbierać zasady zgodności lub konfiguracji, ta właściwość musi mieć wartość **MDM** lub **EAS/MDM**.
 
@@ -98,7 +97,7 @@ W tym artykule wymieniono niektóre typowe techniki rozwiązywania problemów i 
 
 ## <a name="youre-unsure-if-a-profile-is-correctly-applied"></a>Nie masz pewności, czy poprawnie zastosowano profil
 
-1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi**, wpisz nazwę usługi **Intune** w filtrze, a następnie wybierz pozycję **Intune**.
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Wybierz pozycję **Urządzenia** > **Wszystkie urządzenia** > wybierz urządzenie > **Konfiguracja urządzenia**. 
 
     Każde urządzenie ma listę swoich profilów. Każdy profil ma **Stan**. Stan ma zastosowanie, gdy wszystkie przypisane profile, w tym sprzęt oraz wymagania i ograniczenia systemu operacyjnego, są uwzględniane razem. Dostępne są następujące stany:
@@ -164,4 +163,6 @@ Aby rozwiązać ten problem, ustaw czas sytemu lokalnego na wartość jak najbli
 
 ## <a name="next-steps"></a>Następne kroki
 
-Jeśli nadal potrzebujesz pomocy, możesz [uzyskać pomoc dotyczącą usługi Microsoft Intune](get-support.md).
+[Typowe problemy dotyczące profilów poczty e-mail i sposoby ich rozwiązania](troubleshoot-email-profiles-in-microsoft-intune.md)
+
+Uzyskaj [pomoc techniczną od firmy Microsoft](get-support.md) lub skorzystaj z [forum społeczności](https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune).
