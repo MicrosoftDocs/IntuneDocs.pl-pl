@@ -1,6 +1,6 @@
 - name: Dokumentacja usługi Microsoft Intune
   href: index.yml
-- name: Przegląd
+- name: Omówienie
   expanded: true
   items:
     - name: Co to jest usługa Intune?
@@ -76,7 +76,7 @@
       href: windows-information-protection-configure.md
     - name: CZĘSTO ZADAWANE PYTANIA DOTYCZĄCE ZARZĄDZANIA APLIKACJAMI MOBILNYMI
       href: mam-faq.md
-- name: Przewodniki
+- name: Przewodniki z instrukcjami
   items:
     - name: Planowanie wdrożenia
       items:
@@ -101,7 +101,7 @@
               href: planning-guide-onboarding.md
             - name: Testowanie i walidacja
               href: planning-guide-test-validation.md
-            - name: Dodatkowe zasoby
+            - name: Zasoby dodatkowe
               href: planning-guide-resources.md
         - name: Przewodnik migracji
           href: migration-guide.md
@@ -135,6 +135,10 @@
           items:
             - name: Konfiguracja sieci
               href: network-bandwidth-use.md
+            - name: Punkty końcowe usługi Intune
+              href: intune-endpoints.md
+            - name: Punkty końcowe usługi Intune dla instytucji rządowych USA
+              href: intune-us-government-endpoints.md
         - name: Logowanie się do usługi Intune
           href: account-sign-up.md
         - name: Konfigurowanie domen
@@ -666,7 +670,7 @@
               href: troubleshoot-exchange-connector.md
         - name: Uzyskiwanie pomocy technicznej
           href: get-support.md
-- name: Tematy pomocy
+- name: Dokumentacja
   items:
     - name: Listy ustawień
       items:
@@ -799,7 +803,7 @@
                   href: kiosk-settings-holographic.md
                 - name: Niestandardowy
                   href: custom-settings-windows-holographic.md
-        - name: Windows 8.1
+        - name: "Windows\_8.1"
           items:
             - name: Ustawienia zasad zgodności
               href: compliance-policy-create-windows-8-1.md
