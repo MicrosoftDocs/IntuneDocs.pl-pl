@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/21/2019
+ms.date: 06/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,19 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1fb3b02cd9d9b978f1de5e98634d647c4c81cde0
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 9884f1c5d794b527aeaf8fb522d9118d59468b3b
+ms.sourcegitcommit: 095fd4c324850aae8ebe32be43fa074361816a4b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041656"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66506884"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Często zadawane pytania dotyczące zarządzania aplikacjami mobilnymi (MAM) i ochrony aplikacji
 
 Ten artykuł zawiera odpowiedzi na niektóre często zadawane pytania dotyczące zarządzania aplikacjami mobilnymi (MAM) usługi Intune i ochrony aplikacji usługi Intune.
 
 ## <a name="mam-basics"></a>Zarządzanie aplikacjami mobilnymi — podstawowe informacje
-
 
 **Co to jest MAM?**<br></br>
 [Zarządzanie aplikacjami mobilnymi (MAM) usługi Intune](/intune/app-lifecycle) obejmuje zestaw funkcji zarządzania usługi Intune, które umożliwiają publikowanie, wypychanie, konfigurowanie, zabezpieczanie, monitorowanie i aktualizowanie aplikacji mobilnych dla użytkowników.
@@ -45,7 +44,7 @@ Zarządzanie aplikacjami mobilnymi usługi Intune obsługuje dwie konfiguracje:
 
 ## <a name="app-protection-policies"></a>Zasady ochrony aplikacji
 
-**Co to są zasady ochrony aplikacji**?<br></br>
+**Co to są zasady ochrony aplikacji?**<br></br>
 Zasady ochrony aplikacji to reguły, które mogą zagwarantować, że dane organizacji pozostaną bezpieczne lub nie zostaną pobrane z zarządzanej aplikacji. Zasady mogą być regułą, która jest wymuszana w przypadku próby uzyskania dostępu do danych firmowych lub ich przeniesienia przez użytkownika albo zestawem akcji, które są zabronione lub monitorowane, gdy użytkownik korzysta z aplikacji.
 
 **Jakie są przykłady zasad ochrony aplikacji?**<br></br>
@@ -72,6 +71,13 @@ Każdą aplikacją zintegrowaną z zestawem [Intune App SDK](/intune/app-sdk) lu
 - Użytkownik końcowy musi należeć do grupy zabezpieczeń objętej zasadami ochrony aplikacji. Te same zasady ochrony aplikacji muszą obejmować określoną używaną aplikację. Zasady ochrony aplikacji można tworzyć i wdrażać w konsoli usługi Intune w [portalu Azure](https://portal.azure.com). Grupy zabezpieczeń można obecnie tworzyć w [centrum administracyjnym platformy Microsoft 365](https://admin.microsoft.com).
 
 - Użytkownik końcowy musi zalogować się do aplikacji przy użyciu konta usługi AAD.
+
+**Co zrobić, jeśli chcę włączyć usługę Intune App Protection dla aplikacji, która nie korzysta z obsługiwanej platformy programistycznej?** 
+
+Zespół programistyczny zajmujący się zestawem Intune SDK aktywnie przeprowadza testy i zapewnia obsługę aplikacji z natywnych platform Android, iOS (Obj-C, Swift), Xamarin, Xamarin.Forms i Cordova. Niektórym klientom udało się zintegrować zestaw Intune SDK z innymi platformami (takimi jak React Native i NativeScript), ale nie udostępniamy deweloperom żadnych wskazówek ani wtyczek dotyczących nieobsługiwanych przez nas platform.
+
+**Czy zestaw SDK rozwiązania App Policy Protection usługi Intune obsługuje bibliotekę Microsoft Authentication Library (MSAL) lub konta społecznościowe?**<br></br>
+Zestaw Intune APP SDK rozwiązania używa niektórych zaawansowanych możliwości biblioteki ADAL dla zestawu SDK zarówno w wersjach własnych, jak i innych firm. W efekcie biblioteka MSAL nie działa dobrze w przypadku wielu naszych podstawowych scenariuszy, takich jak uwierzytelnianie w usłudze Intune App Protection i uruchamianie warunkowe. Biorąc pod uwagę, że zgodnie z ogólnymi wytycznymi nasz zespół ds. tożsamości zaleca przejście na bibliotekę MSAL dla wszystkich aplikacji pakietu Microsoft Office, zestaw SDK usługi Intune będzie musiał w końcu ją obsługiwać — obecnie nie ma jednak konkretnego planu.
 
 **Jakie są dodatkowe wymagania dotyczące korzystania z [aplikacji mobilnej Outlook](https://products.office.com/outlook)?**
 
@@ -164,8 +170,7 @@ Ochrona aplikacji usługi Intune zależy od zgodności tożsamości użytkownika
 **Czy istnieje bezpieczny sposób na otwieranie linków sieci Web z zarządzanych aplikacji?**<br></br>
 Tak! Administrator IT może wdrożyć i ustawić zasady ochrony aplikacji dla [aplikacji Intune Managed Browser](app-configuration-managed-browser.md), przeglądarki sieci Web opracowanej przez Microsoft Intune, którą można łatwo zarządzać za pomocą usługi Intune. Administrator IT może wymagać, aby wszystkie linki internetowe w aplikacjach zarządzanych przez usługę Intune były otwierane przy użyciu aplikacji Managed Browser.
 
-**Czy zestaw SDK rozwiązania App Policy Protection usługi Intune obsługuje bibliotekę Microsoft Authentication Library (MSAL) lub konta społecznościowe?**
-Zestaw Intune APP SDK rozwiązania używa niektórych zaawansowanych możliwości biblioteki ADAL dla zestawu SDK zarówno w wersjach własnych, jak i innych firm. W efekcie biblioteka MSAL nie działa dobrze w przypadku wielu naszych podstawowych scenariuszy, takich jak uwierzytelnianie w usłudze Intune App Protection i uruchamianie warunkowe. Obecnie nie ma żadnych planów, aby to obsługiwać.
+
 
 ## <a name="app-experience-on-android"></a>Środowisko aplikacji w systemie Android
 
@@ -199,7 +204,7 @@ Sprawdzania wykonywane przez interfejs API SafetyNet usługi Google Play Protect
 Zarówno ustawienie „Zaświadczanie urządzeń SafetyNet”, jak i ustawienie „Skanowanie aplikacji pod kątem zagrożeń” do poprawnego działania wymagają określonej przez firmę Google wersji usług Google Play. Ponieważ te ustawienia dotyczą zabezpieczeń, to po ich włączeniu użytkownik końcowy zostanie zablokowany, jeśli nie będzie miał odpowiedniej wersji usług Google Play lub nie będzie miał do nich dostępu. 
 
 ## <a name="app-experience-on-ios"></a>Środowisko aplikacji w systemie iOS
-**Co się dzieje po dodaniu lub usunięciu odcisku palca lub twarzy na moim urządzeniu?**
+**Co się dzieje po dodaniu lub usunięciu odcisku palca lub twarzy na moim urządzeniu?**<br></br>
 Zasady ochrony aplikacji w usłudze Intune umożliwiają ograniczenie dostępu do aplikacji tylko do użytkowników mających licencję usługi Intune. Jednym ze sposobów kontrolowania dostępu do aplikacji jest wymaganie korzystania z funkcji Touch ID lub Face ID firmy Apple na obsługiwanych urządzeniach. Usługa Intune implementuje zachowanie, w którym po jakiejkolwiek zmianie w bazie danych biometrycznych urządzenia usługa monituje użytkownika o podanie numeru PIN przy najbliższym osiągnięciu wartości limitu czasu bezczynności. Zmiany w danych biometrycznych obejmują dodawanie i usuwanie odcisku palca lub twarzy. Jeśli użytkownik usługi Intune nie ma ustawionego numer PIN, zostanie poprowadzony przez procedurę konfigurowania numeru PIN usługi Intune.
  
 Intencją tego zachowania jest zapewnienie utrzymywania bezpieczeństwa i ochrony danych organizacji w aplikacji na poziomie aplikacji. Ta funkcja jest dostępna tylko dla systemów iOS i wymaga udziału aplikacji, w których zintegrowany jest zestaw SDK zasad ochrony aplikacji usługi Intune dla systemu iOS w wersji 9.0.1 lub nowszej. Integracja zestawu SDK jest konieczna, aby można było wymusić to zachowanie w aplikacjach docelowych. Ta integracja jest przeprowadzana w sposób ciągły i zależy od zespołów zajmujących się określonymi aplikacjami. Dotyczy to między innymi aplikacji WXP, Outlook, Managed Browser i Yammer. 

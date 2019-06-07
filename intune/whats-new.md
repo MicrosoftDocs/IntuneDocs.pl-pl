@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/21/2019
+ms.date: 05/31/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 25a3acda374266a0fbd16feabde7787204555ea2
-ms.sourcegitcommit: 876719180e0d73b69fc053cf67bb8cc40b364056
+ms.openlocfilehash: 72b96714e8740fe4077583cfa5d9f148c2ee0908
+ms.sourcegitcommit: f41b22f65286a64a8002e2cbe80debfdd6692278
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66264173"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66469590"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co nowego w usłudze Microsoft Intune
 
@@ -45,6 +45,13 @@ Dowiedz się co tydzień, co nowego w usłudze Microsoft Intune. Możesz równie
 -->  
 
 <!-- ########################## -->
+
+## <a name="week-of-may-27-2019"></a>Tydzień od 27 maja 2019 r. 
+
+### <a name="app-management"></a>Zarządzanie aplikacjami
+
+#### <a name="reporting-for-potentially-harmful-apps-on-android-devices----4223162---"></a>Raporty dotyczące potencjalnie szkodliwych aplikacji na urządzeniach z systemem Android <!-- 4223162 -->
+Usługa Intune udostępnia teraz dodatkowe raporty na temat potencjalnie szkodliwych aplikacji na urządzeniach z systemem Android. 
 
 ## <a name="week-of-may-20-2019"></a>Tydzień od 20 maja 2019 r. 
 
@@ -134,7 +141,7 @@ Aby wyświetlić dostępne ustawienia, przejdź do sekcji [Ustawienia systemu iO
 Dotyczy: iOS
 
 ####  <a name="microsoft-defender-advanced-threat-protection--baseline--preview------3754134---"></a>Punkty odniesienia usługi Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender (wersja zapoznawcza)  <!--  3754134 -->
-Dodaliśmy wersję zapoznawczą punktów odniesienia zabezpieczeń dla ustawień usługi [Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender](security-baseline-settings-defender-atp.md).  
+Dodaliśmy wersję zapoznawczą punktów odniesienia zabezpieczeń dla ustawień usługi [Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender](security-baseline-settings-defender-atp.md). Ten punkt odniesienia jest dostępny, jeśli środowisko spełnia wymagania wstępne dotyczące korzystania z [Zaawansowanej ochrony przed zagrożeniami w usłudze Microsoft Defender](advanced-threat-protection.md#prerequisites).
 
 ### <a name="device-enrollment"></a>Rejestrowanie urządzeń
 
@@ -153,6 +160,14 @@ W przypadku wyszukiwania **wszystkich urządzeń** nie trzeba uwzględniać spac
 
 #### <a name="deleting-a-device-in-the-apple-portal-will-be-reflected-in-the-intune-portal---2489996---"></a>Usunięcie urządzenia w portalu firmy Apple zostanie odzwierciedlone w portalu usługi Intune <!--2489996 -->
 Jeśli urządzenie zostanie usunięte z portalu usługi Device Enrollment Program firmy Apple lub portalu Apple Business Manager, to zostanie też automatycznie usunięte z usługi Intune podczas następnej synchronizacji.
+
+### <a name="the-enrollment-status-page-now-tracks-win32-apps----2714451---"></a>Strona Stan rejestracji śledzi teraz aplikacje Win32 <!-- 2714451 -->
+Dotyczy to tylko urządzeń z systemem Windows 10 w wersji 1903 lub nowszej. Aby uzyskać więcej informacji, zobacz [Konfigurowanie strony ze stanem rejestracji](windows-enrollment-status.md).
+
+### <a name="device-management"></a>Zarządzanie urządzeniami
+
+#### <a name="reset-and-wipe-devices-in-bulk-by-using-the-graph-api----3295288---"></a>Zbiorcze resetowanie i czyszczenie urządzeń za pomocą interfejsu API programu Graph <!-- 3295288 -->
+Za pomocą interfejsu API programu Graph można teraz zbiorczo zresetować i wyczyścić do 100 urządzeń.
 
 
 ### <a name="monitor-and-troubleshoot"></a>Monitorowanie i rozwiązywanie problemów
@@ -227,7 +242,7 @@ Można przypisać aplikacje Win32, które mają być instalowane na urządzeniac
 Na stronie Przegląd urządzenia będzie wyświetlany użytkownik podstawowy, nazywany również użytkownikiem koligacji urządzenia użytkownika (UDA). Aby zobaczyć użytkownika podstawowego dla urządzenia, wybierz pozycję **Intune** > **Urządzenia** > **Wszystkie urządzenia** > wybierz urządzenie. Użytkownik podstawowy będzie wyświetlany w górnej części strony **Przegląd**.
 
 #### <a name="additional-managed-google-play-app-reporting-for-android-enterprise-work-profile-devices----4105925----"></a>Dodatkowe raportowanie aplikacji z zarządzanego sklepu Google Play dla urządzeń z profilem służbowym rozwiązania Android Enterprise <!-- 4105925  -->
-W przypadku aplikacji z zarządzanego sklepu Google Play wdrożonych na urządzeniach z profilem służbowym rozwiązania Android Enterprise można wyświetlić numer wersji aplikacji zainstalowanej na urządzeniu. Dotyczy to tylko wymaganych aplikacji. Ta sama funkcja dla dostępnych aplikacji zostanie włączona w przyszłej wersji. 
+W przypadku aplikacji z zarządzanego sklepu Google Play wdrożonych na urządzeniach z profilem służbowym rozwiązania Android Enterprise można wyświetlić numer wersji aplikacji zainstalowanej na urządzeniu. Dotyczy to tylko wymaganych aplikacji.  
 
 #### <a name="ios-third-party-keyboards----4111843-----"></a>Klawiatury innych firm dla systemu iOS <!-- 4111843   -->
 Obsługa zasad ochrony aplikacji usługi Intune dla ustawienia **Klawiatury innych firm** dotyczącego systemu iOS zostanie zakończona z powodu zmiany na platformie iOS. Nie będzie można skonfigurować tego ustawienia w konsoli administracyjnej usługi Intune i nie będzie ono wymuszane na kliencie w zestawie SDK aplikacji usługi Intune.
@@ -277,7 +292,7 @@ Dotyczy: W pełni zarządzane urządzenia z rozwiązaniem Android Enterprise
 
 #### <a name="check-for-a-tpm-chipset-in-a-windows-10-device-compliance-policy----3617671---"></a>Sprawdzanie mikroukładu modułu TPM w zasadach zgodności urządzeń z systemem Windows 10 <!-- 3617671 -->
 
-Ta funkcja jest opóźniona i powinna być uwzględniona w przyszłej wersji.
+Ta funkcja jest opóźniona, a jej wdrożenie zaplanowano na później.
 
 #### <a name="updated-ui-changes-for-microsoft-edge-browser-on-windows-10-and-later-devices----3775833-----"></a>Zaktualizowano zmiany interfejsu użytkownika dla przeglądarki Microsoft Edge na urządzeniach z systemem Windows 10 lub nowszym <!-- 3775833   -->
 Podczas tworzenia profilu konfiguracji urządzenia można umożliwić lub ograniczyć działanie funkcji przeglądarki Microsoft Edge na urządzeniach z systemem Windows 10 lub nowszym (**Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **System Windows 10 lub nowszy** dla platformy > **Ograniczenia dotyczące urządzeń** dla typu profilu > **Przeglądarka Microsoft Edge**). Po wprowadzeniu tej aktualizacji ustawienia przeglądarki Microsoft Edge są bardziej opisowe i łatwiejsze do zrozumienia. 
@@ -320,7 +335,7 @@ Zaktualizowaliśmy domyślny komunikat limitu czasu wyświetlany dla użytkownik
 ### <a name="device-management"></a>Zarządzanie urządzeniami
 
 #### <a name="retire-noncompliant-devices-----1827291-----"></a>Wycofywanie niezgodnych urządzeń  <!-- 1827291   -->
-Ta funkcja została odroczona i pojawi się w przyszłej wersji.
+Ta funkcja została odroczona, a jej wdrożenie jest planowane w przyszłej wersji.
 
 
 ### <a name="monitor-and-troubleshoot"></a>Monitorowanie i rozwiązywanie problemów
@@ -878,7 +893,7 @@ Nowe środowisko pozwala opisać problem własnymi słowami i uzyskać szczegó�
 ### <a name="role-based-access-control"></a>Kontrola dostępu oparta na rolach
 
 #### <a name="scope-tags-for-apps----1081941---"></a>Tagi zakresu dla aplikacji <!-- 1081941 -->
-Możesz tworzyć tagi zakresu w celu ograniczenia dostępu do ról i aplikacji. Możesz dodać tag zakresu do aplikacji, tak aby tylko osoby z rolą przypisaną do tego tagu zakresu miały dostęp do aplikacji. Obecnie aplikacjom dodawanym do usługi Intune z zarządzanego sklepu Google Play lub aplikacjom kupowanym w ramach programu Apple Volume Purchase Program (VPP) nie można przypisywać tagów zakresu (ich obsługa będzie dostępna w przyszłości). Aby uzyskać więcej informacji, zobacz [Używanie tagów zakresu do filtrowania zasad](scope-tags.md).
+Możesz tworzyć tagi zakresu w celu ograniczenia dostępu do ról i aplikacji. Możesz dodać tag zakresu do aplikacji, tak aby tylko osoby z rolą przypisaną do tego tagu zakresu miały dostęp do aplikacji. Obecnie do aplikacji dodanych do usługi Intune z zarządzanego sklepu Google Play lub aplikacji kupionych w ramach programu Apple Volume Purchase Program (VPP) nie można przypisywać tagów zakresu. Planowane jest wprowadzenie tej funkcji w przyszłości. Aby uzyskać więcej informacji, zobacz [Używanie tagów zakresu do filtrowania zasad](scope-tags.md).
 
 <!-- ########################## -->
 ## <a name="week-of-december-10-2018"></a>Tydzień 10 grudnia 2018 r.
@@ -908,7 +923,7 @@ Usługa Intune wymaga teraz systemu macOS w wersji 10.12 lub nowszego. Urządzen
 Można usunąć dowolną aplikację na nadzorowanych urządzeniach z systemem iOS należących do firmy. Dowolną aplikację można usunąć, określając jako cel grupę użytkowników lub urządzeń za pomocą typu przypisania **Odinstaluj**. W przypadku osobistych lub nienadzorowanych urządzeń z systemem iOS będzie można w dalszym ciągu usunąć tylko aplikacje zainstalowane przy użyciu usługi Intune.
 
 #### <a name="downloading-intune-win32-app-content----2617320---"></a>Pobieranie zawartości aplikacji usługi Intune Win32 <!-- 2617320 -->
-System Windows 10 RS3 i nowsi klienci będą pobierać zawartość aplikacji Win32 w usłudze Intune przy użyciu składnika Optymalizacja dostarczania w obrębie klienta systemu Windows 10. Optymalizacja dostarczania udostępnia funkcję Sieć równorzędna, która jest włączana domyślnie. Optymalizację dostarczania można skonfigurować przy użyciu zasad grupy, a w przyszłości za oprogramowania MDM w usłudze Intune. Aby uzyskać więcej informacji, zobacz [Delivery Optimization for Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) (Optymalizacja dostarczania w systemie Windows 10). 
+System Windows 10 RS3 i nowsi klienci będą pobierać zawartość aplikacji Win32 w usłudze Intune przy użyciu składnika Optymalizacja dostarczania w obrębie klienta systemu Windows 10. Optymalizacja dostarczania udostępnia funkcję Sieć równorzędna, która jest włączana domyślnie. Optymalizację dostarczania można obecnie skonfigurować przy użyciu zasad grupy. Aby uzyskać więcej informacji, zobacz [Delivery Optimization for Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) (Optymalizacja dostarczania w systemie Windows 10). 
 
 #### <a name="end-user-device-and-app-content-menu----2771453---"></a>Menu kontekstowe na urządzeniach użytkowników końcowych i w aplikacjach <!-- 2771453 -->
 Użytkownicy końcowi mogą teraz korzystać z menu kontekstowego na urządzeniach i aplikacjach w celu wyzwolenia typowych akcji, takich jak zmiana nazwy urządzenia lub sprawdzenie zgodności.

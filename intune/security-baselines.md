@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/17/2019
+ms.date: 05/29/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: feb2bda30547779680a001b3c598b54d236f70ed
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 0e4d5c23d598641256c196cd7217797f87f99d1c
+ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045102"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66374135"
 ---
 # <a name="create-a-windows-10-security-baseline-in-intune"></a>Tworzenie punktu odniesienia zabezpieczeń systemu Windows 10 w usłudze Intune
 
@@ -54,7 +54,8 @@ Poniższe punkty odniesienia zabezpieczeń są dostępne do użycia z usługą I
   [Wyświetl ustawienia](security-baseline-settings-windows.md)
 
 - **WERSJA ZAPOZNAWCZA: punkt odniesienia usługi Windows Defender ATP**  
-  [Wyświetl ustawienia](security-baseline-settings-defender-atp.md)
+  [Wyświetl ustawienia](security-baseline-settings-defender-atp.md)  
+  *(Ten punkt odniesienia jest dostępny, jeśli środowisko spełnia wymagania wstępne dotyczące korzystania z [Zaawansowanej ochrony przed zagrożeniami w usłudze Microsoft Defender](advanced-threat-protection.md#prerequisites))*.
 
 
 ## <a name="prerequisites"></a>Wymagania wstępne
@@ -73,7 +74,8 @@ W przypadku używania urządzeń współzarządzanych musisz przełączyć obci�
 
     ![Wybór puntu odniesienia zabezpieczeń do skonfigurowania](./media/security-baselines/available-baselines.png)
 
-
+   >[!TIP]  
+   > Punkt odniesienia usługi Windows Defender ATP jest dostępny, jeśli środowisko spełnia wymagania wstępne dotyczące korzystania z [Zaawansowanej ochrony przed zagrożeniami w usłudze Windows Defender](advanced-threat-protection.md#prerequisites).
 2. Wybierz punkt odniesienia, którego chcesz użyć, a następnie wybierz opcję **Utwórz profil**.  
 
 3. Na karcie **Podstawowe** określ następujące właściwości:

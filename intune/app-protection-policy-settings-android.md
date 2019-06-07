@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/28/2019
+ms.date: 05/30/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a9f421a54319878c4f985ecc08252d4e03a00919
-ms.sourcegitcommit: 95572ed540e90471963833c0bbf71478477b1813
+ms.openlocfilehash: 79edbf77f4f6b188d9fa4bf75ce8cacbad9dcf9c
+ms.sourcegitcommit: a97b6139770719afbd713501f8e50f39636bc202
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66270009"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402787"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Ustawienia zasad ochrony aplikacji systemu Android w usłudze Microsoft Intune
 W tym artykule opisano ustawienia zasad ochrony aplikacji dla urządzeń z systemem Android. Opisane ustawienia zasad można [skonfigurować](app-protection-policies.md) dla zasad ochrony aplikacji w bloku **Ustawienia** w witrynie Azure Portal.
@@ -36,7 +36,7 @@ Istnieją trzy kategorie ustawień zasad: ustawienia ochrony danych, wymagania d
 | Ustawienie | Sposób użycia | Wartość domyślna |
 |------|------|------|
 | **Twórz kopie zapasowe danych organizacji w usługach kopii zapasowych systemu Android** | Wybierz pozycję **Blokuj**, aby uniemożliwić tej aplikacji tworzenie kopii zapasowej danych służbowych w usłudze [Android Backup Service](https://developer.android.com/google/backup/index.html).<br><br> Wybierz pozycję **Zezwalaj**, aby umożliwić tej aplikacji tworzenie kopii zapasowej danych służbowych.| **Zezwalaj** |
-| **Wyślij dane organizacji do innych aplikacji** | Określ, które aplikacje mogą odbierać dane z tej aplikacji: <ul><li> **Aplikacje zarządzane przez zasady**: zezwalaj na przesyłanie danych tylko do innych aplikacji zarządzanych przez zasady.</li> <li>**Wszystkie aplikacje**: zezwalaj na przesyłanie do dowolnej aplikacji. </li> <li>**Brak**: nie zezwalaj na transfer danych do żadnych aplikacji, w tym również innych aplikacji zarządzanych przez zasady.</li></ul> <p>Istnieją pewne aplikacje i usługi, w przypadku których usługa Intune może domyślnie zezwolić na przesyłanie danych. Ponadto możesz utworzyć własne wyjątki, jeśli musisz zezwolić na przesyłanie danych do aplikacji, która nie obsługuje zasad ochrony aplikacji usługi Intune. Aby uzyskać więcej informacji, zobacz [Wyjątki w transferze danych](app-protection-policy-settings-android.md#data-transfer-exemptions).<p>Te zasady mogą dotyczyć także linków aplikacji systemu Android.  Ogólne linki internetowe są zarządzane przez ustawienie zasad **Otwieraj linki aplikacji w przeglądarce Intune Managed Browser**.<p>**Uwaga:** *usługa Intune nie obsługuje obecnie funkcji Android Instant Apps. Usługa Intune zablokuje wszelkie połączenia danych do i z aplikacji. Aby uzyskać więcej informacji, zobacz [Android Instant Apps](https://developer.android.com/topic/instant-apps/index.html) w dokumentacji dewelopera systemu Android.*</p>| **Wszystkie aplikacje** | 
+| **Wyślij dane organizacji do innych aplikacji** | Określ, które aplikacje mogą odbierać dane z tej aplikacji: <ul><li> **Aplikacje zarządzane przez zasady**: zezwalaj na przesyłanie danych tylko do innych aplikacji zarządzanych przez zasady.</li> <li>**Wszystkie aplikacje**: zezwalaj na przesyłanie do dowolnej aplikacji. </li> <li>**Brak**: nie zezwalaj na transfer danych do żadnych aplikacji, w tym również innych aplikacji zarządzanych przez zasady.</li></ul> <p>Istnieją pewne aplikacje i usługi, w przypadku których usługa Intune może domyślnie zezwolić na przesyłanie danych. Ponadto możesz utworzyć własne wyjątki, jeśli musisz zezwolić na przesyłanie danych do aplikacji, która nie obsługuje zasad ochrony aplikacji usługi Intune. Aby uzyskać więcej informacji, zobacz [Wyjątki w transferze danych](app-protection-policy-settings-android.md#data-transfer-exemptions).<p>Te zasady mogą dotyczyć także linków aplikacji systemu Android.  Ogólne linki internetowe są zarządzane przez ustawienie zasad **Otwieraj linki aplikacji w przeglądarce Intune Managed Browser**.<p><div class="NOTE"><p>Uwaga</p><p>usługa Intune nie obsługuje obecnie funkcji Android Instant Apps. Usługa Intune zablokuje wszelkie połączenia danych do i z aplikacji. Aby uzyskać więcej informacji, zobacz artykuł na temat [aplikacji błyskawicznych](https://developer.android.com/topic/instant-apps/index.html) systemu Android w witrynie Android Developers.</p><p>Jeśli opcja **Wyślij dane organizacji do innych aplikacji** ma ustawienie **Wszystkie aplikacje**, dane tekstowe mogą być nadal przekazywane przez udostępnienie ich w schowku za pośrednictwem systemu operacyjnego.</p></div> | **Wszystkie aplikacje** | 
 |<ul><ui> **Wybierz aplikacje, które mają być zwolnione** | Ta opcja jest dostępna po wcześniejszym wybraniu opcji *Aplikacje zarządzane przez zasady*. | |
 | **Odbierz dane z innych aplikacji** | Określ, jakie aplikacje mogą przesyłać dane do tej aplikacji: <ul><li>**Aplikacje zarządzane przez zasady**: zezwalaj na transfer danych tylko z innych aplikacji zarządzanych przez zasady.</li><li>**Wszystkie aplikacje**: zezwalaj na transfer danych z dowolnej aplikacji.</li><li>**Brak**: nie zezwalaj na transfer danych z żadnych aplikacji, w tym również innych aplikacji zarządzanych przez zasady. </li></ul> <p>Istnieją pewne aplikacje i usługi, w przypadku których usługa Intune może zezwolić na przesyłanie danych z tych aplikacji i usług. Sekcja [Wyjątki w transferze danych](app-protection-policy-settings-android.md#data-transfer-exemptions) zawiera pełną listę aplikacji i usług. | **Wszystkie aplikacje** |
 | **Zapisz kopie danych organizacji** | Wybierz pozycję **Blokuj**, aby wyłączyć używanie opcji Zapisz jako w tej aplikacji. Wybierz pozycję **Zezwalaj**, jeśli chcesz zezwolić na używanie opcji Zapisz jako. **Uwaga:** *to ustawienie jest obsługiwane w przypadku programów Microsoft Excel, OneNote, PowerPoint i Word. Może ono być też obsługiwane przez aplikacje innych firm i aplikacje biznesowe (LOB).*| **Zezwalaj** |  
