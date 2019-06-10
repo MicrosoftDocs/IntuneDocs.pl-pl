@@ -1,6 +1,6 @@
 - name: Dokumentacja usługi Microsoft Intune
   href: index.yml
-- name: Omówienie
+- name: Przegląd
   expanded: true
   items:
     - name: Co to jest usługa Intune?
@@ -76,7 +76,7 @@
       href: windows-information-protection-configure.md
     - name: CZĘSTO ZADAWANE PYTANIA DOTYCZĄCE ZARZĄDZANIA APLIKACJAMI MOBILNYMI
       href: mam-faq.md
-- name: Przewodniki z instrukcjami
+- name: Przewodniki
   items:
     - name: Planowanie wdrożenia
       items:
@@ -101,7 +101,7 @@
               href: planning-guide-onboarding.md
             - name: Testowanie i walidacja
               href: planning-guide-test-validation.md
-            - name: Zasoby dodatkowe
+            - name: Dodatkowe zasoby
               href: planning-guide-resources.md
         - name: Przewodnik migracji
           href: migration-guide.md
@@ -576,10 +576,12 @@
                   href: windows-store-for-business.md
                 - name: Książki elektroniczne dla systemu iOS
                   href: vpp-ebooks-ios.md
-            - name: Konfigurowanie aplikacji Portal firmy
+            - name: Konfigurowanie Portalu firmy
               href: company-portal-app.md
             - name: Konfigurowanie programu Managed Browser
               href: app-configuration-managed-browser.md
+            - name: Konfigurowanie usługi Microsoft Edge
+              href: manage-microsoft-edge.md
             - name: Konfigurowanie programu Outlook
               href: app-configuration-policies-outlook.md
         - name: Chronienie aplikacji
@@ -670,7 +672,7 @@
               href: troubleshoot-exchange-connector.md
         - name: Uzyskiwanie pomocy technicznej
           href: get-support.md
-- name: Dokumentacja
+- name: Tematy pomocy
   items:
     - name: Listy ustawień
       items:
@@ -803,7 +805,7 @@
                   href: kiosk-settings-holographic.md
                 - name: Niestandardowy
                   href: custom-settings-windows-holographic.md
-        - name: "Windows\_8.1"
+        - name: Windows 8.1
           items:
             - name: Ustawienia zasad zgodności
               href: compliance-policy-create-windows-8-1.md
