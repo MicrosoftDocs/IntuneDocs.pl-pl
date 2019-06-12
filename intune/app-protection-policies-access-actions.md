@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 490c7312f510651cafc6ade516e5f7dca8131b3a
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: cd323fce7f7bdbf17697c82935a9d2d5f47bb7ee
+ms.sourcegitcommit: 6e07c35145f70b008cf170bae57143248a275b67
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66043967"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66804685"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-access-actions-in-intune"></a>Selektywne czyszczenie danych przy użyciu akcji dostępu zasad ochrony aplikacji w usłudze Intune
 
@@ -32,9 +32,7 @@ Za pomocą tych ustawień możesz jawnie wyczyścić dane firmowe z urządzenia 
 
 ## <a name="create-an-app-protection-policy-using-access-actions"></a>Tworzenie zasad ochrony aplikacji przy użyciu akcji dostępu
 
-1. Zaloguj się do [portalu Azure](https://portal.azure.com).
-2. Wybierz pozycję **Wszystkie usługi** > **Intune**.  
-    Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. W okienku **Intune** wybierz pozycję **Aplikacje klienckie** > **Zasady ochrony aplikacji**.
 4. Kliknij pozycję **Dodaj zasady**. Możesz również edytować istniejące zasady. 
 5. Kliknij pozycję **Skonfiguruj wymagane ustawienia**, aby wyświetlić listę ustawień dostępnych do skonfigurowania na potrzeby zasad. 

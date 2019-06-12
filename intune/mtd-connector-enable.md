@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b7998eb82b27a7e70d5a77374950e544fd603f6d
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 1929b811a5a5320bc0ceefcef4f05ed2443ac070
+ms.sourcegitcommit: cc5d757018d05fc03ac9ea3d30f563df9bfd61ed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046293"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66819649"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune"></a>Włączanie łącznika Mobile Threat Defense w usłudze Intune
 
@@ -33,11 +33,7 @@ Podczas konfiguracji usługi Mobile Threat Defense (MTD) skonfigurowano zasady s
 
 ## <a name="to-enable-the-mtd-connector"></a>Aby włączyć łącznik MTD
 
-1. Przejdź do witryny [Azure Portal](https://portal.azure.com) i zaloguj się przy użyciu swoich poświadczeń usługi Intune. Po pomyślnym zalogowaniu zostanie wyświetlona strona **Pulpit nawigacyjny Azure**.
-
-2. Na stronie **Pulpit nawigacyjny platformy Azure** w menu po lewej stronie wybierz pozycję **Wszystkie usługi**, a następnie w filtrze pola tekstowego wpisz wartość **Intune**.
-
-3. Wybierz pozycję **Intune**. Zostanie otwarta strona **Pulpit nawigacyjny platformy Azure**.
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 
 4. Na stronie **Pulpit nawigacyjny usługi Intune** wybierz opcję **Zgodność urządzeń**, a następnie wybierz opcję **Mobile Threat Defense** pod sekcją **Instalator**.
 
@@ -63,7 +59,7 @@ Zgodnie z wymaganiami danej organizacji można określić, które opcje przełą
 
 - **Blokuj nieobsługiwane wersje systemu operacyjnego**: blokowanie, gdy na urządzeniu jest zainstalowany system operacyjny o niższym numerze wersji niż minimalna obsługiwana wersja.
 
-- **Liczba dni, po których partner otrzyma stan „brak odpowiedzi”**: liczba dni braku aktywności, zanim usługa Intune uzna partnera za nieodpowiadającego z powodu utraty połączenia. Usługa Intune ignoruje stan zgodności dla partnerów MTD w stanie „brak odpowiedzi”.
+- **Liczba dni, po których partner otrzyma stan „brak odpowiedzi”** : liczba dni braku aktywności, zanim usługa Intune uzna partnera za nieodpowiadającego z powodu utraty połączenia. Usługa Intune ignoruje stan zgodności dla partnerów MTD w stanie „brak odpowiedzi”.
 
 > [!IMPORTANT] 
 > Jeśli to możliwe, zalecamy dodać i przypisać aplikacje MTD przed utworzeniem reguł zasad dotyczących zgodności urządzeń oraz dostępu warunkowego. Dzięki temu dana aplikacja MTD będzie gotowa i dostępna do zainstalowania dla użytkowników końcowych, zanim będą oni mogli uzyskać dostęp do poczty e-mail lub innych zasobów firmy.

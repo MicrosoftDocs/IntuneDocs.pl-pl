@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 37938287cc5ddde6285ec09aa0fffea56f98b3c3
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: e0e0eda1c60e420adcdab9364ecb0da1f52fe4e6
+ms.sourcegitcommit: 337b554f9becc40cdea2f5f47a4a129ac491f64c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66048943"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713903"
 ---
 # <a name="configure-a-certificate-profile-for-your-devices-in-microsoft-intune"></a>Konfigurowanie profilu certyfikatu dla urządzeń w usłudze Microsoft Intune
 
@@ -90,8 +90,7 @@ Ten certyfikat zostanie zaimportowany podczas konfigurowania profilu zaufanego c
 ## <a name="step-3-create-trusted-certificate-profiles"></a>Krok 3: Tworzenie profilów zaufanych certyfikatów
 Aby móc utworzyć profil certyfikatu protokołu SCEP lub PKCS, utwórz profil zaufanego certyfikatu. Dla każdej platformy urządzenia wymagany jest profil zaufanego certyfikatu oraz profil SCEP lub PKCS. Procedura tworzenia zaufanych certyfikatów jest podobna dla każdej platformy urządzeń.
 
-1. Zaloguj się do [portalu Azure](https://portal.azure.com).
-2. Wybierz opcję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. Wybierz pozycję **Konfiguracja urządzenia** > **Zarządzaj** > **Profile** > **Utwórz profil**.
 4. Uzupełnij pola **Nazwa** i **Opis** odnoszące się do profilu zaufanego certyfikatu.
 5. Z listy rozwijanej **Platforma** wybierz platformę urządzenia dla danego zaufanego certyfikatu. Dostępne opcje:
