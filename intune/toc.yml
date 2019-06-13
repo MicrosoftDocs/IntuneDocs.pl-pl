@@ -270,7 +270,7 @@
         - name: Wymazywanie urządzenia z systemem macOS
           href: device-erase.md
         - name: Zdalne sterowanie urządzeniami przenośnymi
-          href: device-profile-android-teamviewer.md
+          href: teamviewer-support.md
         - name: Resetowanie numeru PIN w systemie Windows 10
           href: device-windows-pin-reset.md
         - name: Synchronizowanie urządzenia
