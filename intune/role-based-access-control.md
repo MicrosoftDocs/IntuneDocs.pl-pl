@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7419a316018ed5c883f89a51090a852680cd9e38
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 4c4b9f1d1dd0072555d8438940969b7abd0a9fff
+ms.sourcegitcommit: 6e07c35145f70b008cf170bae57143248a275b67
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040665"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66804481"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Kontrola dostępu oparta na rolach (RBAC) w usłudze Microsoft Intune
 
@@ -30,6 +30,8 @@ Kontrola dostępu oparta na rolach (RBAC) ułatwia zarządzanie osobami mającym
 Aby możliwe było tworzenie, edytowanie i przypisywanie ról, konto musi mieć w usłudze Azure AD jedno z następujących uprawnień:
 - **Administrator globalny**
 - **Administrator usługi Intune** (znany także jako **administrator Intune**)
+
+Porady i sugestie dotyczące kontroli RBAC usługi Intune możesz znaleźć w tej serii pięciu filmów wideo, które zawierają przykłady i przewodniki: [1](https://www.youtube.com/watch?v=5deXLMLcnKY), [2](https://www.youtube.com/watch?v=38dnMBLuxbQ), [3](https://www.youtube.com/watch?v=6vqg9cAkMbY), [4](https://www.youtube.com/watch?v=5yOLajFFMHE), [5](https://www.youtube.com/watch?v=P5DDvsSF4Wk).
 
 ## <a name="roles"></a>Role
 Rola definiuje zestaw uprawnień przyznawanych dla użytkowników przypisanych do tej roli.
@@ -84,8 +86,8 @@ Aby wyświetlić przypisanie roli, wybierz pozycję **Intune** > **Role** > **Ws
 
 -   **Właściwości**: nazwa przypisania, jego opis, rola, członkowie, zakresy i tagi.
 -   **Elementy członkowskie**: wszyscy użytkownicy w wyświetlonych grupach mają uprawnienie do zarządzania użytkownikami/urządzeniami, które są wymienione w obszarze Zakres (grupy).
--   **Zakres (grupy)**: wszyscy użytkownicy i wszystkie urządzenia w ramach tych grup mogą być zarządzane przez użytkowników wymienionych w obszarze Członkowie.
--   **[Zakres (tagi)](scope-tags.md)**: użytkownicy wymienieni w obszarze Członkowie mogą wyświetlać zasoby mające te same tagi zakresu.
+-   **Zakres (grupy)** : wszyscy użytkownicy i wszystkie urządzenia w ramach tych grup mogą być zarządzane przez użytkowników wymienionych w obszarze Członkowie.
+-   **[Zakres (tagi)](scope-tags.md)** : użytkownicy wymienieni w obszarze Członkowie mogą wyświetlać zasoby mające te same tagi zakresu.
 
 ### <a name="multiple-role-assignments"></a>Przypisania wielu ról
 Jeśli użytkownik ma wiele przypisań ról, uprawnienia w ramach tych przypisań ról mają wpływ na różne obiekty w następujący sposób:

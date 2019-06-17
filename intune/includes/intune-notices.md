@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 03/28/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 1073a38da8a5b2467b1ff8c97b32b93f92e34e4c
-ms.sourcegitcommit: f90cba0b2c2672ea733052269bcc372a80772945
+ms.openlocfilehash: fab8f2be48a30f6ad058b3eeb6874a44ff04e6ac
+ms.sourcegitcommit: 7ceae61e036ccf8b33704751b0b39fee81944072
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66454129"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744320"
 ---
 Te powiadomienia zawierają ważne informacje, które mogą ułatwić przygotowanie się na nadchodzące zmiany i nowe funkcje w usłudze Intune. 
 
@@ -40,3 +40,35 @@ Nie trzeba podejmować żadnych działań, ale w razie potrzeby można rozważy�
 
 #### <a name="additional-information"></a>Dodatkowe informacje 
 https://aka.ms/intune_fullscreen
+
+### <a name="plan-for-change-intune-moving-to-support-ios-11-and-higher-in-september----4665342--"></a>Planowanie zmian: W usłudze Intune nastąpi przejście do obsługi systemu iOS 11 i nowszych wersji we wrześniu <!-- 4665342-->
+Oczekujemy, że we wrześniu firma Apple wyda system iOS 13. Rejestracja w usłudze Intune, aplikacja Portal firmy oraz program Managed Browser zostaną przeniesione do obsługi systemu iOS 11 i jego nowszych wersji wkrótce po wydaniu systemu iOS 13.
+
+#### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
+Pod warunkiem, że aplikacje mobilne usługi Office 365 będą obsługiwane w systemie iOS 11.0 lub nowszym, może nie mieć to wpływu na Ciebie; Twój system operacyjny lub urządzenia zostały już prawdopodobnie uaktualnione. Jednak jeśli masz dowolne z wymienionych poniżej urządzeń lub chcesz zarejestrować dowolne z tych urządzeń, pamiętaj, że poniższe urządzenia nie obsługują systemów operacyjnych nowszych niż iOS 10. Następujące urządzenia trzeba będzie uaktualnić tak, aby obsługiwały system iOS 11 lub nowszy:
+
+- iPhone 5
+- iPhone 5c
+- iPad (4. generacja)
+
+Od lipca urządzenia zarejestrowane w usłudze MDM z systemem iOS 10 i aplikacją Portal firmy będą otrzymywać monit o uaktualnienie systemu operacyjnego lub urządzenia. Jeśli używasz zasad ochrony aplikacji (APP, Application Protection Policies), możesz również zdefiniować ustawienie dostępu „Wymagaj minimalnej wersji systemu operacyjnego iOS (tylko ostrzeżenie)”.
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Co należy zrobić, aby przygotować się do tej zmiany?
+Sprawdź raporty usługi Intune, aby zobaczyć, na które urządzenia lub użytkowników może to mieć wpływ. Przejdź do pozycji **Urządzenia** > **Wszystkie urządzenia** i filtruj zawartość według systemu operacyjnego. Możesz dodać dodatkowe kolumny, które ułatwiają określenie, kto w organizacji ma urządzenia z systemem iOS 10. Poproś użytkowników końcowych, aby do września uaktualnili urządzenia do obsługiwanej wersji systemu operacyjnego.
+
+### <a name="plan-for-change-support-for-version-811-and-higher-of-intune-app-sdk-for-ios----3586942--"></a>Planowanie zmian: Obsługa wersji 8.1.1 i nowszych zestawu SDK aplikacji usługi Intune dla systemu iOS <!-- 3586942-->
+Od września 2019 r. usługa Intune zostanie przeniesiona do obsługi aplikacji dla systemu iOS przy użyciu zestawu Intune App SDK w wersji 8.1.1 i nowszych. Aplikacje skompilowane za pomocą zestawu SDK w wersjach starszych niż 8.1.1 nie będą już obsługiwane. Ta zmiana będzie obowiązywać od wydania przez firmę Apple systemu iOS 13, co jest oczekiwane w okolicy września i zostało ogłoszone w artykule MC181399.
+
+#### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
+Dzięki integracji zestawu SDK aplikacji usługi Intune lub narzędzia opakowującego aplikacje można chronić dane firmowe z niezatwierdzonych aplikacji i od niezatwierdzonych użytkowników za pomocą szyfrowania danych. Zestaw SDK aplikacji usługi Intune dla systemu iOS będzie domyślnie używać 256-bitowych kluczy szyfrowania po włączeniu szyfrowania przy użyciu zasad rozwiązania Intune App Protection (APP) w usłudze Intune. Po tej zmianie wszystkie aplikacje systemu iOS w wersjach zestawu SDK wcześniejszych niż 8.1.1, które używają 128-bitowych kluczy szyfrowania, nie będą już mogły udostępniać danych aplikacjom zintegrowanym za pomocą zestawu SDK 8.1.1 lub kluczy 256-bitowych. Wszystkie aplikacje dla systemu iOS będą musiały mieć zestaw SDK w wersji 8.1.1 lub nowszej, aby umożliwić udostępnianie chronionych danych.
+
+#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Co zrobić, aby przygotować się do tej zmiany?
+Sprawdź aplikacje firmy Microsoft, innych firm i biznesowe (LOB). Upewnij się, że wszystkie Twoje aplikacje chronione za pomocą zasad ochrony aplikacji usługi Intune korzystają z zestawu SDK w wersji 8.1.1 lub nowszej.
+
+- Aplikacje LOB: Może być konieczne ponowne opublikowanie aplikacji zintegrowanych z zestawem SDK w wersji 8.1.1 lub nowszej. Zalecamy użycie najnowszej wersji zestawu SDK. Aby uzyskać informacje na temat przygotowywania aplikacji biznesowych do użycia zasad ochrony aplikacji, zobacz [Przygotowanie aplikacji biznesowych pod kątem zasad ochrony aplikacji](../apps-prepare-mobile-application-management.md).
+- Aplikacje firmy Microsoft/innych firm: Upewnij się, że wdrażasz najnowszą wersję tych aplikacji dla użytkowników.
+
+Należy również zaktualizować dokumentację lub wskazówki dla deweloperów (jeśli ma to zastosowanie), aby uwzględnić tę zmianę w ramach obsługi dla zestawu SDK.
+
+#### <a name="additional-information"></a>Dodatkowe informacje
+https://docs.microsoft.com/intune/apps-prepare-mobile-application-management

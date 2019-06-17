@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/14/2019
+ms.date: 06/06/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b3a566fd5c040e1c0007c10b1b57a64788a2323
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: d8c4813d94a269ed6b8f944585814b54f36fef8c
+ms.sourcegitcommit: 6e07c35145f70b008cf170bae57143248a275b67
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66043819"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66804706"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Autonomiczna usługa Intune — zarządzanie aplikacjami Win32
 
@@ -97,10 +97,9 @@ W poniższych krokach przedstawiono wskazówki ułatwiające dodanie aplikacji s
 
 ### <a name="step-1-specify-the-software-setup-file"></a>Krok 1. Określanie pliku konfiguracji oprogramowania
 
-1.  Zaloguj się do [portalu Azure](https://portal.azure.com/).
-2.  Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3.  W okienku **Intune** wybierz pozycję **Aplikacje klienckie** > **Aplikacje** > **Dodaj**.
-4.  W okienku aplikacji **Dodawanie** wybierz z listy rozwijanej pozycję **Aplikacja systemu Windows (Win32)**.
+4.  W okienku aplikacji **Dodawanie** wybierz z listy rozwijanej pozycję **Aplikacja systemu Windows (Win32)** .
 
     ![Zrzut ekranu przedstawiający blok dodawania aplikacji — pole listy rozwijanej dodawania typu](./media/apps-win32-app-01.png)
 
@@ -163,10 +162,10 @@ W poniższych krokach przedstawiono wskazówki ułatwiające dodanie aplikacji s
 2.  W okienku **Dodawanie reguły wymagania** skonfiguruj następujące informacje. Niektóre wartości w tym okienku mogą zostać wypełnione automatycznie.
     - **Architektura systemu operacyjnego**: wybierz architekturę wymaganą do zainstalowania aplikacji.
     - **Minimalna wersja systemu operacyjnego**: wybierz minimalną wersję systemu operacyjnego wymaganą do zainstalowania aplikacji.
-    - **Wymagane miejsce na dysku (MB)**: opcjonalnie określ ilość wolnego miejsca na dysku systemowym wymaganego do zainstalowania aplikacji.
-    - **Wymagana pamięć fizyczna (MB)**: opcjonalnie określ ilość pamięci fizycznej (RAM) wymaganej do zainstalowania aplikacji.
+    - **Wymagane miejsce na dysku (MB)** : opcjonalnie określ ilość wolnego miejsca na dysku systemowym wymaganego do zainstalowania aplikacji.
+    - **Wymagana pamięć fizyczna (MB)** : opcjonalnie określ ilość pamięci fizycznej (RAM) wymaganej do zainstalowania aplikacji.
     - **Wymagana minimalna liczba procesorów logicznych**: opcjonalnie określ minimalną liczbę procesorów logicznych wymaganą do zainstalowania aplikacji.
-    - **Wymagana minimalna szybkość procesora (MHz)**: opcjonalnie określ minimalną szybkość procesora wymaganą do zainstalowania aplikacji.
+    - **Wymagana minimalna szybkość procesora (MHz)** : opcjonalnie określ minimalną szybkość procesora wymaganą do zainstalowania aplikacji.
 
 3. Kliknij pozycję **Dodaj**, aby wyświetlić blok **Dodawanie reguły wymagania** i skonfigurować dodatkowe reguły wymagań. Wybierz pozycję **Typ wymagania**, aby wybrać typ reguły, który będzie używany do określenia sposobu weryfikacji wymagania. Reguły wymagań mogą opierać się na informacji o systemie plików, wartościach rejestru lub skryptach programu PowerShell. 
     - **Plik**: Po wybraniu **pliku** jako **typu wymagania** reguła wymagania musi wykryć plik lub folder, datę, wersję lub rozmiar. 
@@ -291,7 +290,7 @@ Możesz wybrać, czy poszczególne aplikacje zależne mają być instalowane aut
 Aby dodać zależność aplikacji do aplikacji Win32, wykonaj następujące kroki:
 
 1. W usłudze Intune wybierz pozycję **Aplikacje klienckie** > **Aplikacje**, aby wyświetlić listę dodanych aplikacji klienckich. 
-2. Wybierz dodaną aplikację **Aplikacja systemu Windows (Win32)**. 
+2. Wybierz dodaną aplikację **Aplikacja systemu Windows (Win32)** . 
 3. Wybierz pozycję **Zależności**, aby dodać aplikacje zależne, które należy zainstalować przed zainstalowaniem aplikacji Win32. 
 4. Kliknij pozycję **Dodaj**, aby dodać zależność aplikacji.
 5. Po dodaniu aplikacji zależnych kliknij pozycję **Wybierz**.
@@ -342,12 +341,50 @@ Typowa lokalizacja dzienników agenta na maszynie klienta to `C:\ProgramData\Mic
 > *C:\Program Files\Microsoft Intune Management Extension\Content*<br>
 > *C:\windows\IMECache*
 
-Aby uzyskać więcej informacji na temat rozwiązywania problemów z aplikacjami Win32, zobacz [Rozwiązywanie problemów z instalacją aplikacji Win32](troubleshoot-app-install.md#win32-app-installation-troubleshooting).
+### <a name="detecting-the-win32-app-file-version-using-powershell"></a>Wykrywanie wersji pliku aplikacji Win32 przy użyciu programu PowerShell
 
-### <a name="troubleshooting-areas-to-consider"></a>Obszary rozwiązywania problemów do uwzględnienia
+Jeśli masz trudności z wykrywaniem wersji pliku aplikacji Win32, rozważ użycie lub zmodyfikowanie następującego polecenia programu PowerShell:
+
+``` PowerShell
+
+$FileVersion = [System.Diagnostics.FileVersionInfo]::GetVersionInfo("<path to binary file>").FileVersion
+#The below line trims the spaces before and after the version name
+$FileVersion = $FileVersion.Trim();
+if ("<file version of successfully detected file>" -eq $FileVersion)
+{
+#Write the version to STDOUT by default
+$FileVersion
+exit 0
+}
+else
+{
+#Exit with non-zero failure code
+exit 1
+}
+
+```
+W powyższym poleceniu programu PowerShell zastąp ciąg `<path to binary file>` ścieżką do pliku aplikacji Win32. Przykładowa ścieżka będzie podobna do następującej:<br>
+`C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\ssms.exe`
+
+Zastąp również ciąg `<file version of successfully detected file>` wersją pliku, którą chcesz wykryć. Przykładowy ciąg wersji pliku będzie podobny do następującego:<br>
+`2019.0150.18118.00 ((SSMS_Rel).190420-0019)`
+
+Jeśli potrzebujesz informacji o wersji aplikacji Win32, możesz użyć następującego polecenia programu PowerShell:
+
+``` PowerShell
+
+[System.Diagnostics.FileVersionInfo]::GetVersionInfo("<path to binary file>").FileVersion
+
+```
+
+W powyższym poleceniu programu PowerShell zastąp ciąg `<path to binary file>` swoją ścieżką pliku.
+
+### <a name="additional-troubleshooting-areas-to-consider"></a>Dodatkowe obszary rozwiązywania problemów do uwzględnienia
 - Sprawdź ustawienie celu, aby upewnić się, że agent jest zainstalowany na urządzeniu — aplikacja Win32 przeznaczona dla grupy lub skrypt programu PowerShell przeznaczony dla grupy spowoduje utworzenie zasad instalacji agenta dla grupy zabezpieczeń.
 - Sprawdź wersję systemu operacyjnego — system Windows 10 1607 lub nowszy.  
 - Sprawdź jednostkę SKU systemu Windows 10 — system Windows 10 S lub system Windows z włączonym trybem S nie obsługują instalacji za pomocą pliku MSI.
+
+Aby uzyskać więcej informacji na temat rozwiązywania problemów z aplikacjami Win32, zobacz [Rozwiązywanie problemów z instalacją aplikacji Win32](troubleshoot-app-install.md#win32-app-installation-troubleshooting).
 
 ## <a name="next-steps"></a>Następne kroki
 

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ed95507d8a7486bc1c1cca2c2a067658239eed8
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 5124796166f27823b7a13b0f3dd239446f778850
+ms.sourcegitcommit: 337b554f9becc40cdea2f5f47a4a129ac491f64c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66043538"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713869"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Dodawanie urzędu certyfikacji partnera w usłudze Intune przy użyciu protokołu SCEP
 
@@ -87,7 +87,7 @@ Upewnij się, że masz wymagane uprawnienia do zarejestrowania aplikacji usługi
    > [!IMPORTANT]  
    > Zanim opuścisz tę stronę, skopiuj wartość klucza tajnego klienta i zapisz ją do późniejszego użycia z implementacją urzędu certyfikacji innej firmy. Ta wartość nie zostanie wyświetlona ponownie. Pamiętaj, aby zapoznać się ze wskazówkami urzędu certyfikacji innej firmy dotyczącymi wymaganej konfiguracji identyfikatora aplikacji, klucza uwierzytelniania i identyfikatora dzierżawy.  
 
-6. Zapisz swój **identyfikator dzierżawy**. Identyfikator dzierżawy to tekst domeny po znaku @ w nazwie konta. Jeśli na przykład Twoje konto to *admin@name.onmicrosoft.com*, identyfikatorem dzierżawy będzie **name.onmicrosoft.com**.  
+6. Zapisz swój **identyfikator dzierżawy**. Identyfikator dzierżawy to tekst domeny po znaku @ w nazwie konta. Jeśli na przykład Twoje konto to *admin@name.onmicrosoft.com* , identyfikatorem dzierżawy będzie **name.onmicrosoft.com**.  
 
 7. W okienku nawigacji w aplikacji przejdź do pozycji **Uprawnienia interfejsu API** w obszarze **Zarządzaj**, a następnie wybierz pozycję **Dodaj uprawnienie**.  
 
@@ -123,6 +123,7 @@ Następujące urzędy certyfikacji innych firm obsługują usługę Intune:
 - [GlobalSign](https://downloads.globalsign.com/acton/attachment/2674/f-6903f60b-9111-432d-b283-77823cc65500/1/-/-/-/-/globalsign-aeg-microsoft-intune-integration-guide.pdf)
 - [IDnomic](https://www.idnomic.com/)
 - [Sectigo](https://sectigo.com/products)
+- [DigiCert](https://knowledge.digicert.com/tutorials/microsoft-intune.html)
 
 Jeśli interesuje Cię zintegrowanie urzędu certyfikacji innej firmy z usługą Intune, zapoznaj się ze wskazówkami dotyczącymi interfejsu API:
 

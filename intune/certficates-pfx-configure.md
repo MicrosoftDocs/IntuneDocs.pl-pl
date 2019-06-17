@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/08/2019
+ms.date: 06/05/2019
 ms.topic: article
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 13858b257c1adbc8ce3147710d450c4a09ec9dc2
-ms.sourcegitcommit: f90cba0b2c2672ea733052269bcc372a80772945
+ms.openlocfilehash: c1119a5681033574ec0a114442b122990da872bf
+ms.sourcegitcommit: cb76efd3db60a422a65478ebce83d3aea7b5eeed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66454058"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749811"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurowanie certyfikatów PKCS i korzystanie z nich za pomocą usługi Intune
 
@@ -249,12 +249,17 @@ Okresowo są publikowane aktualizacje dla dwóch łączników certyfikatów. Po 
 
 *Łącznik certyfikatów PFX dla usługi Microsoft Intune* [obsługuje aktualizacje automatyczne](#requirements), zaś *Łącznik certyfikatów usługi Intune* należy aktualizować ręcznie.
 
-### <a name="may-6-2019"></a>6 maja 2019 r.
+### <a name="may-17-2019"></a>17 maja 2019 r.  
+- **Łącznik certyfikatów PFX dla usługi Microsoft Intune — wersja 6.1905.0.404**  
+  Zmiany w tej wersji:  
+  - Rozwiązano problem polegający na tym, że istniejące certyfikaty PFX były nadal ponownie przetwarzane, co powodowało zatrzymywanie przetwarzania nowych żądań przez łącznik. 
+
+### <a name="may-6-2019"></a>6 maja 2019 r.  
 - **Łącznik certyfikatów PFX dla usługi Microsoft Intune — wersja 6.1905.0.402**  
   Zmiany w tej wersji:  
   - Odstęp czasu sondowania dla łącznika został skrócony z 5 minut do 30 sekund.
  
-### <a name="april-2-2019"></a>2 kwietnia 2019 r.
+### <a name="april-2-2019"></a>2 kwietnia 2019 r.  
 - **Łącznik certyfikatów usługi Intune — wersja 6.1904.1.0**  
   Zmiany w tej wersji:  
   - Rozwiązano problem powodujący niepowodzenie rejestracji łącznika w usłudze Intune po zalogowaniu się do łącznika przy użyciu konta administratora globalnego.  

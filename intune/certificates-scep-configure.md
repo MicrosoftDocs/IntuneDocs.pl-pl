@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/05/2019
+ms.date: 06/06/2019
 ms.topic: article
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee0f7ce806b1ed2a17b59add467b1b0af2a40578
-ms.sourcegitcommit: 023b1293b47314b77eb80997bbd8aa679db90880
+ms.openlocfilehash: e170fe0c1b461bad140b89ac01a2ad817e2082e5
+ms.sourcegitcommit: 7ceae61e036ccf8b33704751b0b39fee81944072
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66448113"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744341"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurowanie certyfikatów SCEP i korzystanie z nich w usłudze Intune
 
@@ -115,7 +115,8 @@ W tym kroku:
    - Na karcie **Zabezpieczenia** dodaj konto usługi NDES i nadaj mu uprawnienia **Rejestracja** do szablonu. Administratorzy usługi Intune, którzy tworzą profile SCEP, muszą mieć prawa **Odczyt**, aby mogli przechodzić do szablonu podczas tworzenia profilów SCEP.
 
      > [!NOTE]
-     > Aby można było odwołać certyfikaty, konto usługi NDES musi mieć prawa *Wystawianie certyfikatów i zarządzanie nimi* do każdego szablonu certyfikatu używanego przez profil certyfikatu.
+     > Aby można było odwołać certyfikaty, konto usługi NDES musi mieć prawa *Wystawianie certyfikatów i zarządzanie nimi* w urzędzie certyfikacji. Aby delegować to uprawnienie, otwórz konsolę zarządzania urzędu certyfikacji, a następnie kliknij prawym przyciskiem myszy nazwę urzędu certyfikacji. Następnie na karcie Zabezpieczenia dodaj lub wybierz konto i zaznacz pole wyboru **Wystawianie certyfikatów i zarządzanie nimi**.
+
 
 3. Sprawdź **Okres ważności** na karcie **Ogólne** szablonu. Domyślnie usługa Intune używa wartości skonfigurowanej w szablonie. Urząd certyfikacji można jednak skonfigurować tak, aby umożliwiał żądającemu podanie innej wartości, którą można następnie ustawić przy użyciu konsoli administratora usługi Intune. Jeśli chcesz, aby zawsze była używana wartość określona w szablonie, pomiń pozostałe czynności w tym kroku.
 
@@ -272,8 +273,8 @@ W tym kroku:
 
 2. Wybierz pozycję **Edytuj ustawienia funkcji**, a następnie podaj następujące wartości:
 
-    - **Długość ciągu zapytania (w bajtach)** = **65534**
-    - **Maksymalna długość adresu URL (w bajtach)** = **65534**
+    - **Długość ciągu zapytania (w bajtach)**  = **65534**
+    - **Maksymalna długość adresu URL (w bajtach)**  = **65534**
 
 3. Sprawdź następujący klucz rejestru:
 
@@ -299,15 +300,15 @@ W tym kroku:
 
 1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Wybierz pozycję **Konfiguracja urządzenia** > **Łączniki certyfikatu** > **Dodaj**.
-3. Pobierz i zapisz plik łącznika protokołu SCEP. Zapisz go w lokalizacji dostępnej z serwera, na którym zamierzasz zainstalować łącznik.
+3. Pobierz i zapisz plik łącznika protokołu SCEP. Zapisz go w lokalizacji dostępnej z serwera usługi rejestracji urządzeń sieciowych (NDES), na którym zamierzasz zainstalować łącznik.
 
    ![ConnectorDownload](./media/certificates-scep-configure/download-certificates-connector.png)
 
 
-4. Po zakończeniu pobierania przejdź do serwera hostującego usługę rejestracji urządzeń sieciowych (NDES). Następnie:
+4. Po zakończeniu pobierania przejdź do serwera NDES hostującego usługę rejestracji urządzeń sieciowych (NDES). Następnie:
 
     1. Upewnij się, że jest zainstalowany program .NET 4.5 Framework, ponieważ jest on wymagany przez łącznik certyfikatów usługi NDES. Program .NET 4.5 Framework jest automatycznie dołączany do systemu Windows Server 2012 R2 i nowszych wersji.
-    2. Uruchom instalator (**NDESConnectorSetup.exe**). Instalator zainstaluje też moduł zasad dla usługi NDES i usługę sieci Web CRP. Usługa internetowa CRP, CertificateRegistrationSvc, jest uruchamiana jako aplikacja w usługach IIS.
+    2. Użyj konta z uprawnieniami administracyjnymi do serwera, aby uruchomić instalatora (**NDESConnectorSetup.exe**). Instalator zainstaluje też moduł zasad dla usługi NDES i usługę sieci Web CRP. Usługa internetowa CRP, CertificateRegistrationSvc, jest uruchamiana jako aplikacja w usługach IIS.
 
     > [!NOTE]
     > Podczas instalacji usługi NDES dla autonomicznej usługi Intune usługa CRP jest instalowana automatycznie wraz z łącznikiem certyfikatów. W przypadku używania usługi Intune z programem Configuration Manager punkt rejestracji certyfikatu (CRP) jest instalowany jako osobna rola systemu lokacji.
@@ -335,7 +336,7 @@ W tym kroku:
 
     Jeśli Twoja organizacja korzysta z serwera proxy i serwer usługi NDES wymaga go na potrzeby dostępu do Internetu, wybierz pozycję **Użyj serwera proxy**. Następnie wprowadź nazwę serwera proxy, port oraz poświadczenia konta, aby nawiązać połączenie.
 
-    Wybierz kartę **Zaawansowane** i podaj poświadczenia konta z uprawnieniem **Wystawianie certyfikatów i zarządzanie nimi** dla wystawiającego urzędu certyfikacji. **Zastosuj** zmiany.
+    Wybierz kartę **Zaawansowane** i podaj poświadczenia konta z uprawnieniem **Wystawianie certyfikatów i zarządzanie nimi** dla wystawiającego urzędu certyfikacji. **Zastosuj** zmiany. Jeśli to uprawnienie zostało delegowane do konta usługi NDES podczas [konfigurowania urzędu certyfikacji](#configure-the-certification-authority), w tym miejscu wybierz to konto. 
 
     Teraz możesz zamknąć interfejs użytkownika łącznika certyfikatów.
 
@@ -384,17 +385,17 @@ Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i podaj nas
         - **Nazwa pospolita jako adres e-mail**
         - **Unikatowe międzynarodowe numery identyfikujące urządzenia przenośne (IMEI)**
         - **Numer seryjny**
-        - **Niestandardowy**: po wybraniu tej opcji zostanie również wyświetlone pole tekstowe **Niestandardowy**. Użyj tego pola do wprowadzenia niestandardowego formatu nazwy podmiotu, w tym zmiennych. Format niestandardowy obsługuje dwie zmienne: **Nazwa pospolita (CN)** i **Adres e-mail (E)**. Dla wartości **Nazwa pospolita (CN)** można ustawić jedną z następujących zmiennych:
+        - **Niestandardowy**: po wybraniu tej opcji zostanie również wyświetlone pole tekstowe **Niestandardowy**. Użyj tego pola do wprowadzenia niestandardowego formatu nazwy podmiotu, w tym zmiennych. Format niestandardowy obsługuje dwie zmienne: **Nazwa pospolita (CN)** i **Adres e-mail (E)** . Dla wartości **Nazwa pospolita (CN)** można ustawić jedną z następujących zmiennych:
 
-            - **CN={{UserName}}**: główna nazwa użytkownika, taka jak janedoe@contoso.com
-            - **CN={{AAD_Device_ID}}**: identyfikator przypisany podczas rejestrowania urządzenia w usłudze Azure Active Directory (AD). Ten identyfikator jest zazwyczaj używany do uwierzytelniania za pomocą usługi Azure AD.
-            - **CN={{SERIALNUMBER}}**: unikatowy numer seryjny (SN) używany zwykle przez producenta do identyfikowania urządzenia
-            - **CN={{IMEINumber}}**: unikatowy numer IMEI (International Mobile Equipment Identity) używany do identyfikowania telefonu komórkowego
-            - **CN={{OnPrem_Distinguished_Name}}**: sekwencja względnych nazw wyróżniających rozdzielonych przecinkami, taka jak `CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com`
+            - **CN={{UserName}}** : główna nazwa użytkownika, taka jak janedoe@contoso.com
+            - **CN={{AAD_Device_ID}}** : identyfikator przypisany podczas rejestrowania urządzenia w usłudze Azure Active Directory (AD). Ten identyfikator jest zazwyczaj używany do uwierzytelniania za pomocą usługi Azure AD.
+            - **CN={{SERIALNUMBER}}** : unikatowy numer seryjny (SN) używany zwykle przez producenta do identyfikowania urządzenia
+            - **CN={{IMEINumber}}** : unikatowy numer IMEI (International Mobile Equipment Identity) używany do identyfikowania telefonu komórkowego
+            - **CN={{OnPrem_Distinguished_Name}}** : sekwencja względnych nazw wyróżniających rozdzielonych przecinkami, taka jak `CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com`
 
                 Aby użyć zmiennej `{{OnPrem_Distinguished_Name}}`, zsynchronizuj atrybut użytkownika `onpremisesdistingishedname` z usługą Azure AD za pomocą programu [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect).
 
-            - **CN={{onPremisesSamAccountName}}**: administratorzy mogą synchronizować atrybut samAccountName z usługi Active Directory do usługi Azure AD za pomocą programu Azure AD Connect do atrybutu o nazwie `onPremisesSamAccountName`. Usługa Intune może podstawić zmienną jako część żądania wystawienia certyfikatu w podmiocie certyfikatu SCEP.  Atrybut samAccountName jest nazwą logowania użytkownika, która jest używana do obsługi klientów i serwerów z poprzedniej wersji systemu Windows (starszej niż Windows 2000). Nazwa logowania użytkownika ma format: `DomainName\testUser` lub tylko `testUser`.
+            - **CN={{onPremisesSamAccountName}}** : administratorzy mogą synchronizować atrybut samAccountName z usługi Active Directory do usługi Azure AD za pomocą programu Azure AD Connect do atrybutu o nazwie `onPremisesSamAccountName`. Usługa Intune może podstawić zmienną jako część żądania wystawienia certyfikatu w podmiocie certyfikatu SCEP.  Atrybut samAccountName jest nazwą logowania użytkownika, która jest używana do obsługi klientów i serwerów z poprzedniej wersji systemu Windows (starszej niż Windows 2000). Nazwa logowania użytkownika ma format: `DomainName\testUser` lub tylko `testUser`.
 
                 Aby użyć zmiennej `{{onPremisesSamAccountName}}`, zsynchronizuj atrybut użytkownika `onPremisesSamAccountName` z usługą Azure AD za pomocą programu [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect).
 
@@ -426,7 +427,7 @@ Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i podaj nas
 
         > [!IMPORTANT]
         >  - W statycznym tekście podmiotu nawiasy klamrowe **{}** nie otaczające zmiennej spowodują błąd. 
-        >  - W przypadku stosowania zmiennej certyfikatu urządzenia należy ją ująć w nawiasy klamrowe **{}**.
+        >  - W przypadku stosowania zmiennej certyfikatu urządzenia należy ją ująć w nawiasy klamrowe **{}** .
         >  - Zmienna `{{FullyQualifiedDomainName}}` działa tylko w przypadku urządzeń z systemem Windows i urządzeń przyłączonych do domeny. 
         >  -  W przypadku korzystania z właściwości urządzenia, takich jak numer IMEI, numer seryjny i w pełni kwalifikowana nazwa domeny w obrębie podmiotu lub nazwy SAN dla certyfikatu urządzenia, należy pamiętać, że te właściwości mogą zostać sfałszowane przez osobę z dostępem do urządzenia.
         >  - Profil nie zostanie zainstalowany na urządzeniu, jeśli określone zmienne urządzenia nie są obsługiwane. Na przykład jeśli zmienna {{IMEI}} zostanie użyta w nazwie podmiotu profilu protokołu SCEP przypisanego do urządzenia, które nie ma numeru IMEI, instalacja profilu zakończy się niepowodzeniem. 
@@ -468,8 +469,8 @@ Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i podaj nas
         Te zmienne można dodawać z tekstem statycznym w polu tekstowym wartości niestandardowej. Na przykład atrybut systemu DNS można dodać jako `DNS name = {{AzureADDeviceId}}.domain.com`.
 
         > [!IMPORTANT]
-        >  - W tekście statycznym nazwy SAN nawiasy klamrowe **{ }**, symbole potoku **|** i średniki **;** nie będą działać. 
-        >  - W przypadku stosowania zmiennej certyfikatu urządzenia należy ją ująć w nawiasy klamrowe **{}**.
+        >  - W tekście statycznym nazwy SAN nawiasy klamrowe **{ }** , symbole potoku **|** i średniki **;** nie będą działać. 
+        >  - W przypadku stosowania zmiennej certyfikatu urządzenia należy ją ująć w nawiasy klamrowe **{}** .
         >  - Zmienna `{{FullyQualifiedDomainName}}` działa tylko w przypadku urządzeń z systemem Windows i urządzeń przyłączonych do domeny. 
         >  -  W przypadku korzystania z właściwości urządzenia, takich jak numer IMEI, numer seryjny i w pełni kwalifikowana nazwa domeny w obrębie podmiotu lub nazwy SAN dla certyfikatu urządzenia, należy pamiętać, że te właściwości mogą zostać sfałszowane przez osobę z dostępem do urządzenia.
         >  - Profil nie zostanie zainstalowany na urządzeniu, jeśli określone zmienne urządzenia nie są obsługiwane. Na przykład jeśli zmienna {{IMEI}} zostanie użyta w alternatywnej nazwie podmiotu profilu protokołu SCEP przypisanego do urządzenia, które nie ma numeru IMEI, instalacja profilu zakończy się niepowodzeniem.  
@@ -484,12 +485,12 @@ Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i podaj nas
    - **Użycie klucza**: podaj opcje użycia klucza certyfikatu. Dostępne opcje:
      - **Szyfrowanie klucza**: zezwalaj na wymianę kluczy tylko wtedy, gdy klucz jest zaszyfrowany
      - **Podpis cyfrowy**: zezwalaj na wymianę kluczy tylko wtedy, gdy w ochronie klucza pomaga podpis cyfrowy
-   - **Rozmiar klucza (bity)**: wybierz liczbę bitów zawartych w kluczu
+   - **Rozmiar klucza (bity)** : wybierz liczbę bitów zawartych w kluczu
    - **Algorytm wyznaczania wartości skrótu** (Android, Windows Phone 8.1, Windows 8.1, Windows 10): Wybierz jeden z dostępnych typów algorytmu wyznaczania wartości skrótu do użycia z tym certyfikatem. Wybierz najwyższy poziom zabezpieczeń obsługiwany przez podłączane urządzenia.
    - **Certyfikat główny**: wybierz profil certyfikatu głównego urzędu certyfikacji, który został uprzednio skonfigurowany i przypisany do użytkownika i/lub urządzenia. Ten certyfikat urzędu certyfikacji musi być certyfikatem głównym urzędu certyfikacji wystawiającego certyfikat skonfigurowany w ramach danego profilu certyfikatu. Przypisz ten profil zaufanego certyfikatu głównego do tej samej grupy, która jest przypisana w profilu certyfikatu SCEP.
    - **Rozszerzone użycie klucza**: **dodaj** wartości w zależności od celu certyfikatu. W większości przypadków jest wymagane wprowadzenie wartości **Uwierzytelnianie klienta** dla certyfikatu, aby zapewnić użytkownikom lub urządzeniom możliwość uwierzytelnienia na serwerze. Można jednak dodać również inne użycia klucza, zgodnie z potrzebami.
    - **Ustawienia rejestracji**
-     - **Próg odnawiania (%)**: wprowadź wartość procentową pozostałego okresu ważności certyfikatu, przy której urządzenie ma żądać odnowienia certyfikatu.
+     - **Próg odnawiania (%)** : wprowadź wartość procentową pozostałego okresu ważności certyfikatu, przy której urządzenie ma żądać odnowienia certyfikatu.
      - **Adresy URL serwerów SCEP**: wprowadź co najmniej jeden adres URL dla serwerów usługi NDES, które wystawiają certyfikaty za pośrednictwem protokołu SCEP. Na przykład wprowadź adres podobny do następującego: `https://ndes.contoso.com/certsrv/mscep/mscep.dll`.
      - Wybierz pozycję **OK**, a następnie **Utwórz**, aby utworzyć profil.
 

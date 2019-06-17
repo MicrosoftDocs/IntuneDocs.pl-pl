@@ -16,51 +16,38 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 80292fab9a8e35db23163f7c5a0dfc1c01b65848
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 864e43bf644bf4e4f959c6ad826d9d5bade617a5
+ms.sourcegitcommit: 6e07c35145f70b008cf170bae57143248a275b67
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050546"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66804672"
 ---
-# <a name="plan-communications"></a>Planowanie komunikacji
+# <a name="plan-communications"></a>Planowanie komunikacji 
+W przypadku migracji do usługi Intune plan komunikacji stanowi niezwykle ważny element. Poniższe narzędzia i szablony pomogą Ci w szkoleniu użytkowników końcowych. Zestaw wdrażania usługi Intune zawiera szablony wiadomości e-mail, przewodnik rejestracji w usłudze Intune i linki do filmów instruktażowych dotyczących rejestracji użytkowników końcowych.  
 
-W przypadku migracji do usługi Intune plan komunikacji stanowi niezwykle ważny element. Możesz wykorzystać ten sam plan komunikacji w każdej fazie migracji.
+Pliki do pobrania:  [Zestaw wdrażania usługi Intune](http://aka.ms/IntuneAdoptionKit)
 
-## <a name="email-templates"></a>Szablony wiadomości e-mail
-
+## <a name="email-templates"></a>Szablony wiadomości e-mail 
 Zaleca się użycie następującego planu komunikacji za pośrednictwem poczty e-mail. Przygotowane szablony można dostosować do planu komunikacji:
+- **Wiadomość e-mail 1**: należy w niej przedstawić korzyści i oczekiwania oraz harmonogram migracji. Możesz także skorzystać z okazji i zaprezentować w wiadomości inne nowe usługi, do których dostęp zostanie przyznany na urządzeniach zarządzanych przez usługę Intune. 
 
--   **Wiadomość e-mail \#1:** należy w niej przedstawić korzyści i oczekiwania oraz harmonogram migracji. Możesz także skorzystać z okazji i zaprezentować w wiadomości inne nowe usługi, do których dostęp zostanie przyznany na urządzeniach zarządzanych przez usługę Intune.<br/><br/>
-
-
-    -   [Pobierz \#szablon 1](https://gallery.technet.microsoft.com/Intune-migration-guide-end-e3209b35) wiadomości e-mail
-<br></br>
-
--   **Wiadomość e-mail \#2:** należy poinformować w niej użytkowników, że do usług można już uzyskać dostęp za pośrednictwem usługi Intune. Zachęć użytkowników do niezwłocznego zarejestrowania się. Przypomnij korzyści i strategiczne przyczyny, dla jakich podjęto decyzję o przeprowadzeniu migracji.<br/><br/>
-
-
-    -   [Pobierz \#szablon 2](https://gallery.technet.microsoft.com/Intune-migration-guide-end-a9d25eb5) wiadomości e-mail
-<br></br>
-
--   **Wiadomość e-mail \#3:** należy w niej przekazać użytkownikom oś czasu, zanim będzie to mieć wpływ na ich dostęp. Ponownie przypomnij użytkownikom korzyści i strategiczne przyczyny, dla jakich podjęto decyzję o przeprowadzeniu migracji. Wysyłkę wiadomości e-mail należy zaplanować z uwzględnieniem terminów realizacji faz. Przykładowo w czerwcu wyślij wiadomość e-mail \#1 do użytkowników z fazy 1, wiadomość \#2 do użytkowników z fazy 2 i wiadomość \#3 do użytkowników z fazy 3.<br/><br/>
-
-    -   [Pobierz \#szablon 3 wiadomości e-mail](https://gallery.technet.microsoft.com/Intune-migration-guide-end-831521b5)
-
+- **Wiadomość e-mail 2**: należy poinformować w niej użytkowników, że do usług można już uzyskać dostęp za pośrednictwem usługi Intune. Zachęć użytkowników do niezwłocznego zarejestrowania się.  należy w niej przekazać użytkownikom oś czasu, zanim będzie to mieć wpływ na ich dostęp. Przypomnij korzyści i strategiczne przyczyny, dla jakich podjęto decyzję o przeprowadzeniu migracji.
 Po pewnym czasie można zacząć wymuszać zgodność za pomocą zasad dostępu warunkowego i wykorzystywać ją jako kryterium dostępu do danych firmowych, jak wytłumaczono w artykule [Wspieranie przyjęcia rozwiązania przez użytkowników końcowych przy użyciu dostępu warunkowego](migration-guide-drive-adoption.md).
 
-## <a name="additional-communication-templates"></a>Dodatkowe szablony do komunikacji
+## <a name="intune-enrollment-guide"></a>Przewodnik dotyczący rejestracji w usłudze Intune 
+Ten załącznik w formacie PDF można przekazać do użytkowników w obecnej postaci. Można również dostosować wersję programu Word tak, aby uwzględnić zasoby wewnętrzne i informacje kontaktowe.
 
-W usłudze Intune dostępne są dodatkowe szablony zachęcające użytkowników do rejestracji urządzeń:
-
--   [Jak przekazywać wiedzę użytkownikom końcowym na temat usługi Microsoft Intune](end-user-educate.md) omawia kroki rejestracji związane z platformą systemu operacyjnego dla urządzeń przenośnych.
-
--   [Szablon rejestracji użytkowników końcowych usługi Intune dla administratorów IT](https://gallery.technet.microsoft.com/End-user-Intune-enrollment-55dfd64a) to modyfikowalny dokument programu Word, który objaśnia, jak zarejestrować urządzenia z systemem Android, iOS i Mac w usłudze Intune.
-
--   [Przewodniki z instrukcjami i wiadomości e-mail dostępne w ramach usługi FastTrack dla pakietu EMS](https://gallery.technet.microsoft.com/FastTrack-for-EMS-How-To-f170da4c) można dostosować, używając logo swojej firmy, aby promować wdrożenia usługi Intune i pakietu EMS w danej organizacji.
-
--   Udostępnij [adres URL aplikacji Portal firmy](http://go.microsoft.com/fwlink/?LinkID=396941) użytkownikom systemów Android, iOS i Windows. Ten adres URL przekierowuje do odpowiedniej listy aplikacji Portal firmy na urządzeniach z systemem Android, iOS i Windows.
+## <a name="instructional-videos"></a>Filmy instruktażowe
+Utworzyliśmy krótkie filmy wideo z instrukcjami krok po kroku, aby pomóc użytkownikom w łatwym rejestrowaniu urządzeń w usłudze Intune.
+- [Rejestracja urządzenia z systemem Android](https://www.youtube.com/watch?v=k0Q_sGLSx6o&t=1s)
+- [Enroll your Android Work Profile device (Rejestrowanie urządzenia z profilem służbowym systemu Android)](https://www.youtube.com/watch?v=9Dl8HsGk4tI&t=3s)
+- [Rejestrowanie urządzenia z systemem iOS](https://www.youtube.com/watch?v=mJyv6YcHi7c)
+- [Rejestrowanie urządzenia z systemem macOS](https://www.youtube.com/watch?v=Pa2pfhwq_yk)
+- [Enroll your Windows (Rejestrowanie w przypadku systemu Windows)](https://www.youtube.com/watch?v=TKQxEckBHiE)
 
 ## <a name="next-steps"></a>Następne kroki
-
-[Wspieranie przyjęcia rozwiązania przez użytkowników końcowych przy użyciu dostępu warunkowego](migration-guide-drive-adoption.md).
+W usłudze Intune są dostępne dodatkowe zasoby zachęcające użytkowników do rejestracji urządzeń:
+- [Jak przekazywać wiedzę użytkownikom końcowym na temat usługi Microsoft Intune](https://docs.microsoft.com/intune/end-user-educate) omawia kroki rejestracji związane z platformą systemu operacyjnego dla urządzeń przenośnych. 
+- W temacie [Rejestracja urządzeń z usługą Intune dla administratorów IT](https://docs.microsoft.com/intune/device-enrollment) wyjaśniono, jak zarejestrować urządzenia z systemem Android, iOS i Mac w usłudze Intune.
+- Udostępnij [adres URL aplikacji Portal firmy](http://go.microsoft.com/fwlink/?LinkID=396941) użytkownikom systemów Android, iOS i Windows. Ten adres URL przekierowuje do odpowiedniej listy aplikacji Portal firmy na urządzeniach z systemem Android, iOS i Windows.

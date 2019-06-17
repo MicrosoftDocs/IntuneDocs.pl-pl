@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: abbd226f2b812e1062d56a1d66b3e10bc9d68036
-ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
+ms.openlocfilehash: 78c34345804f600aa62ff5e25ef27a23591e0f5c
+ms.sourcegitcommit: cc5d757018d05fc03ac9ea3d30f563df9bfd61ed
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66374082"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66819874"
 ---
 # <a name="enforce-compliance-for-windows-defender-atp-with-conditional-access-in-intune"></a>Wymuszanie zgodności usługi Windows Defender ATP z dostępem warunkowym w usłudze Intune
 
@@ -52,8 +52,7 @@ Aby używać usługi ATP z usługą Intune, należy się upewnić, że następuj
 
 ## <a name="enable-windows-defender-atp-in-intune"></a>Włączanie usługi Windows Defender ATP w usłudze Intune
 
-1. Zaloguj się do [portalu Azure](https://portal.azure.com).
-2. Wybierz opcję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. Wybierz kolejno pozycje **Zgodność urządzeń** > **Windows Defender ATP** > **Otwórz usługę Windows Defender Security Center**.
 
     ![Wybieranie pozycji otwierającej usługę Windows Defender Security Center](./media/atp-device-compliance-open-windows-defender.png)
@@ -132,7 +131,7 @@ Zasady dostępu warunkowego blokują dostęp do zasobów, *jeśli* urządzenie j
 > [!TIP]  
 > Dostęp warunkowy to pojęcie z technologii używanej w usłudze Azure Active Directory (Azure AD). Węzeł Dostęp warunkowy dostępny z usługi *Intune* jest tym samym węzłem, do którego dostęp jest uzyskiwany z usługi *Azure AD*.  
 
-1. W witrynie [Azure Portal](https://portal.azure.com) otwórz pozycję **Intune** > **Dostęp warunkowy** > **Nowe zasady**.
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), a następnie wybierz kolejno pozycje **Dostęp warunkowy** > **Nowe zasady**.
 2. W polu **Nazwa** wprowadź nazwę zasad i wybierz pozycję **Użytkownicy i grupy**. Użyj opcji Dołącz lub Wyklucz, aby dodać grupy do zasad, i wybierz opcję **Gotowe**.
 3. Wybierz opcję **Aplikacje w chmurze** i wybierz aplikacje, które będą chronione. Na przykład wybierz pozycję **Wybierz aplikacje**, a następnie pozycje **Office 365 SharePoint Online** i **Office 365 Exchange Online**.
 
