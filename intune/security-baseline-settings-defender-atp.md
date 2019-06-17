@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c6feae4d7caeeefbf9638e5018ba7b653a260f5c
-ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
+ms.openlocfilehash: a58095612d6e76d4a1cb633e69260267dcfd9999
+ms.sourcegitcommit: cb76efd3db60a422a65478ebce83d3aea7b5eeed
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66373510"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749912"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Ustawienia punktów odniesienia zabezpieczeń usługi Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender dla usługi Intune
 
-Zapoznaj się z ustawieniami punktów odniesienia zabezpieczeń usługi Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender (wcześniej Zaawansowana ochrona przed zagrożeniami w usłudze Windows Defender), które są obsługiwane przez usługę Microsoft Intune. Wartości domyślne w tym artykule reprezentują domyślną konfigurację punktów odniesienia dla usługi Intune. Te wartości domyślne reprezentują zalecaną konfigurację w usłudze Intune i mogą nie odpowiadać wartościom domyślnym systemu Windows.
+Zapoznaj się z ustawieniami punktów odniesienia zabezpieczeń usługi Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender (wcześniej Zaawansowana ochrona przed zagrożeniami w usłudze Windows Defender), które są obsługiwane przez usługę Microsoft Intune. Ustawienia domyślne punktu odniesienia usługi Zaawansowana ochrona przed zagrożeniami (ATP) reprezentują zalecaną konfigurację usługi ATP i mogą nie odpowiadać wartościom domyślnym innych punktów odniesienia zabezpieczeń.  
 
   Punkty odniesienia zabezpieczeń usługi Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender są dostępne, jeśli środowisko spełnia wymagania wstępne dotyczące korzystania z [Zaawansowanej ochrony przed zagrożeniami w usłudze Microsoft Defender](advanced-threat-protection.md#prerequisites).
 
@@ -33,7 +33,7 @@ Zapoznaj się z ustawieniami punktów odniesienia zabezpieczeń usługi Zaawanso
 
 
 > [!NOTE]  
-> Ustawienia punktów odniesienia usługi WDATP są dostępne w **wersji zapoznawczej**. W okresie obowiązywania wersji zapoznawczej lista dostępnych ustawień oraz kolejność prezentowania tych ustawień może nie być zgodna z tym, co jest dostępne w portalu. 
+> Ustawienia punktów odniesienia usługi ATP są dostępne w **wersji zapoznawczej**. W okresie obowiązywania wersji zapoznawczej lista dostępnych ustawień oraz kolejność prezentowania tych ustawień może nie być zgodna z tym, co jest dostępne w portalu.  
 >
 > Po przeniesieniu ustawień punktów odniesienia poza wersję zapoznawczą ta zawartość zostanie zaktualizowana tak, aby odzwierciedlać aktualną listę ustawień punktów odniesienia zabezpieczeń obsługiwanych przez usługę Intune.
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6276f38eed4d20e7e81437c2ba3e2c9bc58ae1c1
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 4d838d0cd0d0f92cb344592d18d9e04e18d7e456
+ms.sourcegitcommit: cc5d757018d05fc03ac9ea3d30f563df9bfd61ed
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66047745"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66819739"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Jak używać usługi Azure AD do uzyskiwania dostępu do interfejsów API usługi Intune w programie Microsoft Graph
 
@@ -61,7 +61,7 @@ Aby dowiedzieć się więcej, zobacz następujące artykuły:
 
 Aby zarejestrować aplikację do korzystania z interfejsu API programu Microsoft Graph:
 
-1.  Zaloguj się w witrynie [Azure Portal](https://portal.azure.com) przy użyciu poświadczeń administracyjnych.
+1.  Zaloguj się do [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) przy użyciu poświadczeń administracyjnych.
 
     Zgodnie z potrzebami możesz wykorzystać:
     - Konto administratora dzierżawy.

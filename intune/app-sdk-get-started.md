@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/29/2019
+ms.date: 06/04/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35f4007d03ca66ada5721de1ffe20dd87bfe4527
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
-ms.translationtype: MTE75
+ms.openlocfilehash: b5672963c6737d51e720a8b1597dd90318f33a05
+ms.sourcegitcommit: 095fd4c324850aae8ebe32be43fa074361816a4b
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66043790"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66506874"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Wprowadzenie do zestawu SDK aplikacji usługi Microsoft Intune
 
@@ -81,11 +81,11 @@ Warto utworzyć konto usługi GitHub, które pozwoli rozwidlać nasze repozytori
 
 Aby ułatwić zintegrowanie zestawu SDK aplikacji usługi Intune z aplikacją, będzie potrzebny jeden z następujących przewodników dla deweloperów:
 
-* **[Przewodnik dla deweloperów korzystających z zestawu SDK aplikacji usługi Intune dla systemu iOS](app-sdk-ios.md)**: ten dokument zawiera szczegółowe instrukcje dotyczące włączania aplikacji natywnej systemu iOS przy użyciu zestawu SDK aplikacji usługi Intune.
+* **[Przewodnik dla deweloperów korzystających z zestawu SDK aplikacji usługi Intune dla systemu iOS](app-sdk-ios.md)** : ten dokument zawiera szczegółowe instrukcje dotyczące włączania aplikacji natywnej systemu iOS przy użyciu zestawu SDK aplikacji usługi Intune.
 
-* **[Przewodnik dla deweloperów korzystających z zestawu SDK aplikacji usługi Intune dla systemu Android](app-sdk-android.md)**: ten dokument zawiera szczegółowe instrukcje dotyczące włączania aplikacji natywnej systemu Android przy użyciu zestawu SDK aplikacji usługi Intune.
+* **[Przewodnik dla deweloperów korzystających z zestawu SDK aplikacji usługi Intune dla systemu Android](app-sdk-android.md)** : ten dokument zawiera szczegółowe instrukcje dotyczące włączania aplikacji natywnej systemu Android przy użyciu zestawu SDK aplikacji usługi Intune.
 
-* **[Przewodnik powiązań platformy Xamarin dla zestawu Intune App SDK](app-sdk-xamarin.md)**: ten dokument pomoże Ci tworzyć aplikacje dla systemów Android i iOS przy użyciu oprogramowania Xamarin i zasad ochrony aplikacji usługi Intune.
+* **[Przewodnik powiązań platformy Xamarin dla zestawu Intune App SDK](app-sdk-xamarin.md)** : ten dokument pomoże Ci tworzyć aplikacje dla systemów Android i iOS przy użyciu oprogramowania Xamarin i zasad ochrony aplikacji usługi Intune.
 
 
 
@@ -174,15 +174,12 @@ Jeśli aplikacja używa własnych niestandardowych ustawień usługi Azure Activ
 Gdy aplikacja zostanie zarejestrowana w dzierżawie platformy Azure i pojawi się w obszarze **Wszystkie aplikacje**, musisz udzielić jej dostępu do usługi ochrony aplikacji w usłudze Intune (wcześniej znanej jako usługa MAM). W witrynie Azure Portal:
 
 1.  Przejdź do bloku **Azure Active Directory**.
-2.  Wybierz konfigurację **Rejestracja aplikacji** dla swojej aplikacji.
-3.  W obszarze **Ustawienia** pod nagłówkiem **Dostęp do interfejsu API** wybierz pozycję **Wymagane uprawnienia**. 
-4.  Kliknij przycisk **+ Dodaj**.
-5.  Kliknij pozycję **Wybierz interfejs API**. 
-6.  W polu wyszukiwania wprowadź frazę **Microsoft Mobile Application Management**.
-7.  Na liście interfejsów API wybierz pozycję **Microsoft Mobile Application Management** i kliknij przycisk Wybierz.
-8.  Wybierz pozycję **Odczyt i zapis danych zarządzania aplikacji użytkownika**.
-9.  Kliknij pozycję **Gotowe**.
-10. Kliknij pozycję **Udziel uprawnień**, a następnie kliknij przycisk **Tak**. 
+2.  W obszarze **Rejestracje aplikacji** przejdź do skonfigurowanego wykazu aplikacji.
+3.  Kliknij pozycję **+ Dodaj uprawnienie**.
+4.  Kliknij pozycję **Interfejsy API używane przez moją organizację**. 
+5.  W polu wyszukiwania wprowadź frazę **Microsoft Mobile Application Management**.
+6.  W obszarze **Uprawnienia delegowane** zaznacz pole wyboru **DeviceManagementManagedApps.ReadWrite: odczyt i zapis danych zarządzania aplikacjami użytkownika***.
+7. Kliknij pozycję **Dodaj uprawnienia**.
 
 ### <a name="badge-your-app-optional"></a>Znakowanie aplikacji (opcjonalne)
 

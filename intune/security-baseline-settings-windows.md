@@ -16,19 +16,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 92aa438e436c4612ede29564f61c3fc529f789c0
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 82fa4fc7f9e60dff3c08adf3281351cbfa8eb743
+ms.sourcegitcommit: cb76efd3db60a422a65478ebce83d3aea7b5eeed
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045051"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749932"
 ---
 # <a name="windows-security-baseline-settings-for-intune"></a>Ustawienia punktów odniesienia zabezpieczeń usługi Intune  
 
-Zapoznaj się z [ustawieniami punktu odniesienia systemu Windows](security-baselines.md) obsługiwanymi przez usługę Microsoft Intune.  
+Zapoznaj się z [ustawieniami punktu odniesienia systemu Windows](security-baselines.md) obsługiwanymi przez usługę Microsoft Intune. Ustawienia domyślne systemu Windows reprezentują zalecaną konfigurację systemu Windows i mogą nie odpowiadać wartościom domyślnym innych punktów odniesienia zabezpieczeń.  
 
 > [!NOTE]  
-> Ustawienia punktu odniesienia zabezpieczeń systemu Windows są dostępne w wersji zapoznawczej. Podczas pracy w wersji zapoznawczej lista dostępnych ustawień oraz kolejność prezentowania tych ustawień zależy od tego, co jest dostępne w portalu.  
+> Ustawienia punktu odniesienia zabezpieczeń systemu Windows są dostępne w **wersji zapoznawczej**. Podczas pracy w wersji zapoznawczej lista dostępnych ustawień oraz kolejność prezentowania tych ustawień zależy od tego, co jest dostępne w portalu.  
 >  
 > Po przeniesieniu ustawień punktu odniesienia poza wersję zapoznawczą ta zawartość zostanie zaktualizowana z użyciem listy ustawień punktu odniesienia zabezpieczeń obsługiwanych przez usługę Intune stosowanych poza wersją zapoznawczą.  
 

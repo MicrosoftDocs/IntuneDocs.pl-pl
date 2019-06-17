@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: fc2e17c605af2c9cec021724852bcf1b48012ba8
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 76e6e3186ae0e8bf1d05698d28539994d33486e8
+ms.sourcegitcommit: 6e07c35145f70b008cf170bae57143248a275b67
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "58069077"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66804429"
 ---
 ## <a name="microsoft-open-source-code-of-conduct"></a>Kodeks postępowania społeczności Microsoft Open Source
 
@@ -20,24 +20,24 @@ Znajdujesz się w jednym z repozytoriów serwisu GitHub zawierających źródło
 
 * **Utwórz konto usługi GitHub**: możesz utworzyć konto bezpłatnie w witrynie [GitHub.com](https://www.github.com).
 
-* **Za pomocą przeglądarki**: dostępne są dwie opcje: 
+* **Korzystaj z przeglądarki**: dostępne są dwie opcje: 
 
-    **Opcja 1: Edytuj bezpośrednio z witryny docs.microsoft.com**  
-    1. Przejdź do tematu, takich jak [ https://docs.microsoft.com/intune/troubleshoot-policies-in-microsoft-intune ](https://docs.microsoft.com/ntune/troubleshoot-policies-in-microsoft-intune). 
-    2. Wybierz **Edytuj** (w prawym górnym po prawej stronie). To pokazuje pliku markdown w repozytorium GitHub.
-    3. Wybierz ikonę ołówka. Po umieszczeniu wskaźnika myszy nad ikonę ołówka, zobaczysz **edytować ten plik** etykietki narzędzia. 
-    4. Wprowadź zmiany, a następnie **zatwierdzenia** zmiany. 
+    **Opcja 1. Edytowanie bezpośrednio z witryny docs.microsoft.com**  
+    1. Przejdź do tematu, takiego jak [https://docs.microsoft.com/intune/troubleshoot-policies-in-microsoft-intune](https://docs.microsoft.com/intune/troubleshoot-policies-in-microsoft-intune). 
+    2. Wybierz pozycję **Edytuj** (w prawym górnym rogu). Spowoduje to wyświetlenie pliku markdown w repozytorium usługi GitHub.
+    3. Wybierz ikonę ołówka. Po umieszczeniu wskaźnika myszy na ikonie ołówka zobaczysz etykietkę narzędzia **Edytuj ten plik**. 
+    4. Wprowadź zmiany, a następnie je **zatwierdź**. 
     5. Utwórz żądanie ściągnięcia.
     
-    **Opcja 2: Odszukaj artykuł, w tym repozytorium i zaktualizuj**  
-    1.  Większość tematów należą `https://github.com/MicrosoftDocs/IntuneDocs/tree/master/intune`. W tym folderze wyszukiwanie nazwy tematu, takich jak `troubleshoot-policies-in-microsoft-intune`. 
-    2. Wybierz łącze, a następnie kliknij ikonę ołówka. Po umieszczeniu wskaźnika myszy nad ikonę ołówka, zobaczysz **edytować ten plik** etykietki narzędzia. 
-    3. Wprowadź zmiany, a następnie **zatwierdzenia** zmiany. 
+    **Opcja 2. Wyszukanie i zaktualizowanie artykułu w tym repozytorium**  
+    1.  Większość tematów znajduje się w następującej lokalizacji: `https://github.com/MicrosoftDocs/IntuneDocs/tree/master/intune`. W tym folderze wyszukaj nazwę tematu, taką jak `troubleshoot-policies-in-microsoft-intune`. 
+    2. Wybierz link, a następnie kliknij ikonę ołówka. Po umieszczeniu wskaźnika myszy na ikonie ołówka zobaczysz etykietkę narzędzia **Edytuj ten plik**. 
+    3. Wprowadź zmiany, a następnie je **zatwierdź**. 
     4. Utwórz żądanie ściągnięcia. 
 
   Po wprowadzeniu aktualizacji może pojawić się monit o podpisanie umowy licencyjnej. Wystarczy zrobić to jeden raz. W przypadku wszelkich kolejnych aktualizacji wprowadzonych przy użyciu Twojej nazwy użytkownika usługi GitHub podpisanie umowy nie będzie konieczne. 
   
-  Wartość w `author` metadanych (w górnej części każdego tematu) zawiera listę Autor z serwisu GitHub. W `troubleshoot-policies-in-microsoft-intune` przykładzie zostaną wyświetlone `MandiOhlinger`. W żądaniu ściągnięcia, mogą również zawierać (@*authorValue*) Autor, jeśli chcesz.
+  Wartość w metadanych `author` (w górnej części każdego tematu) wskazuje autora z serwisu GitHub. W przykładzie `troubleshoot-policies-in-microsoft-intune` zostanie wyświetlona wartość `MandiOhlinger`. Jeśli chcesz, możesz również w żądaniu ściągnięcia wspomnieć autora (@*authorValue*).
   
 * **Pracownicy firmy MSFT**: po utworzeniu konta GitHub należy połączyć je ze swoim adresem e-mail w firmie Microsoft. Jeśli konto zostało połączone, nie trzeba podpisywać umowy licencyjnej podczas wprowadzania aktualizacji. Kroki:
 

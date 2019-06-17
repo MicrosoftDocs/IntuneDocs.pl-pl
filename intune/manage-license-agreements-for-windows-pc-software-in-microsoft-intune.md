@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 417d244cbe64af967e61112f67dbf7829ce7feda
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 7068bb96b72861c0647c44261edef0c3e83a120c
+ms.sourcegitcommit: 119962948045079022aa48f968dde3e961d7cd0c
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046952"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67031676"
 ---
 # <a name="manage-license-agreements-for-windows-pc-software-in-microsoft-intune"></a>Zarządzanie umowami licencyjnymi na oprogramowanie na komputerze z systemem Windows w usłudze Microsoft Intune
 
@@ -53,7 +53,7 @@ Ponadto możesz generować raporty, które zawierają liczby instalacji i licenc
 ## <a name="add-microsoft-volume-licensing-agreements"></a>Dodawanie umów w ramach licencjonowania zbiorowego firmy Microsoft
 Umowy licencjonowania zbiorowego usługi Intune zawierają informacje o licencji na oprogramowanie, które zostało zakupione w ramach umów licencjonowania zbiorowego firmy Microsoft. Możesz dodać umowy licencjonowania zbiorowego firmy Microsoft do usługi Intune, podając dopasowane pary numerów umów. Numery umowy lub autoryzacji muszą być zgodne z poprawnymi numerami licencji lub rejestracji. Pary numerów umów są uzyskiwane podczas zakupu umów licencyjnych w [Centrum usługi licencjonowania zbiorowego firmy Microsoft (VLSC)](http://go.microsoft.com/fwlink/?LinkID=223842).
 
-1.  W [konsoli administratora usługi Microsoft Intune](https://account.manage.microsoft.com/admin/default.aspx) wybierz pozycję **Licencje**.
+1.  W [konsoli administratora usługi Microsoft Intune](https://admin.manage.microsoft.com/) wybierz pozycję **Licencje**.
 
 2.  Na stronie **Dodawanie umów** w obszarze **Wybierz typ umowy**wybierz pozycję **Umowa licencjonowania zbiorowego**.
 
@@ -102,7 +102,7 @@ Umowy licencjonowania zbiorowego usługi Intune zawierają informacje o licencji
         > [!NOTE]
         > Jeśli dodasz kilka par numerów umów, usługa Intune utworzy jedną umowę o podanej nazwie, a wszystkie dodane pary będą częścią tej umowy.
 
-    Możesz kliknąć przycisk **+**, aby dodać kolejną parę numerów umowy, lub przycisk **-** , aby usunąć podaną już parę numerów umowy.
+    Możesz kliknąć przycisk **+** , aby dodać kolejną parę numerów umowy, lub przycisk **-** , aby usunąć podaną już parę numerów umowy.
 
 4.  W obszarze **Wybierz grupę licencji** wykonaj jedno z następujących działań:
 
@@ -138,7 +138,7 @@ Oprócz umów licencjonowania zbiorowego firmy Microsoft do usługi Intune może
 
 ### <a name="to-add-other-software-agreements"></a>Dodawanie innych umów dotyczących oprogramowania
 
-1.  W [konsoli administratora usługi Microsoft Intune](https://account.manage.microsoft.com/admin/default.aspx) wybierz pozycję **Licencje**.
+1.  W [konsoli administratora usługi Microsoft Intune](https://admin.manage.microsoft.com/) wybierz pozycję **Licencje**.
 
 2.  Wybierz polecenie **Dodaj umowy** w sekcji **Inne umowy licencyjne na oprogramowanie**.
 

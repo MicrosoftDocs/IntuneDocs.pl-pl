@@ -18,12 +18,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e861348e3ba8e3caef92eac04899d48cc790262a
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: bc2173e2972e422ac629331110d3b86b787765da
+ms.sourcegitcommit: a2bad7465422b98eb3c10f03dc5a24fd99cee78d
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55842807"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67040955"
 ---
 # <a name="install-and-sign-in-to-the-company-portal-app"></a>Instalowanie aplikacji Portal firmy i logowanie się do niej
 
@@ -37,6 +37,6 @@ Zainstaluj aplikację Portal firmy na urządzeniu z systemem iOS, aby uzyskiwać
 
 3.  Otwórz aplikację Portal firmy, podaj służbowy adres e-mail i hasło, a następnie naciśnij pozycję **Zaloguj**.
 
-    Jeśli logujesz się w aplikacji Portal firmy po raz pierwszy, a Twoja firma lub instytucja edukacyjna korzysta z usługi Intune, zostanie wyświetlony monit o zarejestrowanie urządzenia w usłudze Intune. Aby zarejestrować urządzenie, wykonaj czynności opisane w temacie [Rejestrowanie urządzenia z systemem iOS w usłudze Intune](enroll-your-device-in-intune-ios.md). Możesz również [zalogować się przy użyciu innego urządzenia](https://docs.microsoft.com/intune-user-help/sign-in-to-the-company-portal#signing-in-from-another-device).
+    Jeśli logujesz się w aplikacji Portal firmy po raz pierwszy, a Twoja firma lub instytucja edukacyjna korzysta z usługi Intune, zostanie wyświetlony monit o zarejestrowanie urządzenia w usłudze Intune. Aby zarejestrować urządzenie, wykonaj czynności opisane w temacie [Rejestrowanie urządzenia z systemem iOS w usłudze Intune](enroll-your-device-in-intune-ios.md). Możesz również [zalogować się przy użyciu innego urządzenia](https://docs.microsoft.com/intune-user-help/sign-in-to-the-company-portal#sign-in-from-another-device).
 
 Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).

@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/22/2019
+ms.date: 05/28/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 25f1bb6d2d78f5c4188d81bc8d9be2cc0c7de43e
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 19e1ec5cda5a69320820899b1cb1c5d665fd9f16
+ms.sourcegitcommit: 2f32f6d2129bc10cc4a02115732e995edceb37d6
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "56742537"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66828951"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Instalowanie i udostępnianie aplikacji na urządzeniu
 Instaluj aplikacje na swoim urządzeniu przy użyciu aplikacji Portal firmy dla systemu Windows.
@@ -70,6 +70,10 @@ Po udostępnieniu odbiorca otrzyma link i wiadomość z zachętą do wyświetlen
 Twoja organizacja wybiera aplikacje, które są dla Ciebie odpowiednie i przydatne w pracy lub w szkole. Są to jedyne aplikacje, które znajdziesz w aplikacji Portal firmy.  
 
 Aplikacje są również udostępniane na podstawie typu używanego urządzenia. Jeśli na przykład używasz aplikacji Portal firmy dla systemu Windows, będziesz mieć dostęp do aplikacji dla systemu Windows, ale nie dla systemu iOS.  
+
+## <a name="required-apps"></a>Required apps  
+
+Twoja organizacja może wdrażać niektóre aplikacje bezpośrednio na urządzeniu i oznacz je jako **wymagane**. Te aplikacje będą automatycznie instalowane dla Ciebie bez interwencji.
 
 ## <a name="request-an-app-for-work-or-school"></a>Żądanie aplikacji do pracy lub do szkoły  
 Jeśli potrzebujesz jakiejś aplikacji, która nie jest dostępna w aplikacji Portal firmy, zażądaj jej dodania. Informacje kontaktowe do **pomocy technicznej** znajdziesz w aplikacji Portal firmy na stronie Pomoc i obsługa techniczna. Te same informacje kontaktowe znajdują się w [witrynie internetowej Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).    
