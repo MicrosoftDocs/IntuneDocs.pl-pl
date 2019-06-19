@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f2a88e6e807ea78e4a26abe71eb1b5997ea7256
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: c554f2ab9fabf83695489ab5e6acd65e8d28f34c
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66044400"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67046249"
 ---
 # <a name="whats-new-in-the-intune-classic-portal---previous-months"></a>Nowości w portalu klasycznym usługi Intune — poprzednie miesiące
 
@@ -49,7 +49,7 @@ Aktualizacja aplikacji Portal firmy dla systemu Android pokazuje wskaźnik post�
 
 #### <a name="block-apps-from-accessing-sharepoint-online----679339---"></a>Blokowanie dostępu aplikacji do usługi SharePoint Online <!-- 679339 -->
 
-Teraz możesz tworzyć zasady dostępu warunkowego na podstawie aplikacji, aby blokować dostęp do usługi [SharePoint Online](app-based-conditional-access-intune-create.md) aplikacjom, do których nie zastosowano zasad ochrony aplikacji. W tym scenariuszu dostępu warunkowego na podstawie aplikacji można określić aplikacje, które mają mieć dostęp do usługi SharePoint Online, za pomocą portalu Azure.
+Teraz możesz tworzyć zasady dostępu warunkowego na podstawie aplikacji, aby blokować dostęp do usługi [SharePoint Online](app-based-conditional-access-intune-create.md) aplikacjom, do których nie zastosowano zasad ochrony aplikacji. W tym scenariuszu dostępu warunkowego na podstawie aplikacji można określić aplikacje, które mają mieć dostęp do usługi SharePoint Online, za pomocą witryny Azure Portal.
 
 #### <a name="single-sign-on-support-from-the-company-portal-for-ios-to-outlook-for-ios---834012--"></a>Obsługa logowania jednokrotnego z aplikacji Portal firmy dla systemu iOS do programu Outlook dla systemu iOS <!--834012-->
 Użytkownicy nie muszą już logować się w aplikacji Outlook, jeśli zalogowali się na tym samym urządzeniu do aplikacji Portal firmy dla systemu iOS przy użyciu tego samego konta. Gdy użytkownicy uruchamiają aplikację Outlook, mogą wybrać swoje konto i zalogować się automatycznie. Ponadto pracujemy nad dodaniem tej funkcji do innych aplikacji firmy Microsoft.
@@ -135,14 +135,14 @@ Udostępniliśmy wersję aplikacji Portal firmy dla systemu iOS przy użyciu pro
 
 #### <a name="support-for-skycure"></a>Obsługa aplikacji Skycure
 
-Dostęp urządzeń przenośnych do zasobów firmy można obecnie kontrolować z użyciem dostępu warunkowego opartego na ocenie ryzyka przeprowadzanej przez aplikację Skycure. Jest to rozwiązanie chroniące przed zagrożeniami bezpieczeństwa urządzeń przenośnych zintegrowane z usługą Microsoft Intune. Ryzyko jest oceniane na podstawie danych telemetrycznych zebranych z urządzeń z uruchomioną usługą Skycure. Są to na przykład:
+Dostęp urządzeń mobilnych do zasobów firmy można obecnie kontrolować z użyciem dostępu warunkowego na podstawie ocenie ryzyka przeprowadzanej przez aplikację Skycure. Jest to rozwiązanie chroniące przed zagrożeniami bezpieczeństwa urządzeń mobilnych zintegrowane z usługą Microsoft Intune. Ryzyko jest oceniane na podstawie danych telemetrycznych zebranych z urządzeń z uruchomioną usługą Skycure. Są to na przykład:
 
 - Ochrona fizyczna
 - Ochrona sieciowa
 - Ochrona aplikacji
 - Ochrona przed lukami w zabezpieczeniach
 
-Zasady dostępu warunkowego usług EMS można skonfigurować w oparciu o ocenę ryzyka przeprowadzaną przez aplikację Symantec Endpoint Protection Mobile (Skycure) włączaną przy użyciu zasad zgodności urządzeń usługi Intune. Przy użyciu tych zasad można zezwalać na dostęp do zasobów firmowych lub blokować go niezgodnym urządzeniom w oparciu o wykryte zagrożenia. Aby uzyskać więcej informacji, zobacz [Łącznik Symantec Endpoint Protection Mobile](skycure-mobile-threat-defense-connector.md).
+Zasady dostępu warunkowego usług EMS można skonfigurować na podstawie oceny ryzyka przeprowadzonej przez aplikację Symantec Endpoint Protection Mobile (Skycure) włączaną przy użyciu zasad zgodności urządzeń usługi Intune. Przy użyciu tych zasad można zezwalać na dostęp do zasobów firmowych lub blokować go niezgodnym urządzeniom w oparciu o wykryte zagrożenia. Aby uzyskać więcej informacji, zobacz [Łącznik Symantec Endpoint Protection Mobile](skycure-mobile-threat-defense-connector.md).
 
 #### <a name="new-user-experience-for-the-company-portal-app-for-android---621622--"></a>Nowe środowisko użytkownika aplikacji Portal firmy dla systemu Android <!--621622-->
 

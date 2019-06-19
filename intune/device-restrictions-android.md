@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eeb70727a187a769e56a9cfd517ecd7b583ba1c1
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: f13b78e05b9f0b94d98677004c7059f1acaa80f9
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66042466"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045723"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Listy ustawień ograniczeń urządzeń z systemami Android i Samsung Knox Standard w usłudze Intune
 
@@ -49,7 +49,7 @@ W tym artykule opisano wszystkie ustawienia ograniczeń urządzenia, które moż
 - **Hasło**: pozycja **Wymagaj** wymusza wprowadzanie hasła przez użytkownika końcowego w celu uzyskania dostępu do urządzenia. Pozycja **Nieskonfigurowane** umożliwia użytkownikom uzyskiwanie dostępu do urządzenia bez wprowadzania hasła.
 
     > [!NOTE]
-    > Urządzenia Samsung Knox automatycznie wymagają 4-cyfrowego kodu PIN podczas rejestracji w usłudze zarządzania urządzeniami przenośnymi. Urządzenia z natywnym systemem Android mogą automatycznie wymagać kodu PIN w celu osiągnięcia zgodności z dostępem warunkowym.
+    > Urządzenia Samsung Knox automatycznie wymagają 4-cyfrowego kodu PIN podczas rejestracji w usłudze zarządzania urządzeniami przenośnymi. Urządzenia z natywnym systemem Android mogą automatycznie wymagać kodu PIN w celu zapewnienia zgodności z dostępem warunkowym.
 
 - **Minimalna długość hasła**: wprowadź minimalną długość hasła, które musi podać użytkownik (od 4 do 16 znaków).
 - **Maksymalna liczba minut braku aktywności przed zablokowaniem ekranu**: wprowadź maksymalną dopuszczalną liczbę minut braku aktywności przed automatycznym zablokowaniem ekranu. Na urządzeniu użytkownik końcowy nie może ustawić wartości czasu przekraczającej czas skonfigurowany w profilu. Użytkownik końcowy może ustawić niższą wartość czasu. Na przykład jeśli profil jest ustawiony na 15 minut, użytkownik końcowy może ustawić tę wartość na 5 minut. Użytkownik końcowy nie może ustawić tej wartości na 30 minut. 

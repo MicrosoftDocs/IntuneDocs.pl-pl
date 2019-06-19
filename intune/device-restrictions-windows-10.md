@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/29/2019
+ms.date: 06/12/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2950ddf4b130222e23fd9ea23f7c9e5793f8638a
-ms.sourcegitcommit: 229816afef86a9767eaca816d644c77ec4babed5
-ms.translationtype: MTE75
+ms.openlocfilehash: 357d1619fdf051d07ea47c84a79b2aebd1523460
+ms.sourcegitcommit: a2bad7465422b98eb3c10f03dc5a24fd99cee78d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66354222"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041127"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem Windows 10 (i nowszym) w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune
 
@@ -430,9 +430,9 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad DeviceLock](htt
     > [!IMPORTANT]
     > Kiedy wymóg dotyczący hasła zostanie zmieniony na komputerze z systemem Windows, użytkownicy będą musieli się do niego dostosować przy następnym logowaniu, ponieważ to właśnie wtedy urządzenie przechodzi ze stanu bezczynności w stan aktywności. Użytkownicy, których hasła spełniają wymagania, także zostaną poproszeniu o zmianę hasła.
     
-  - **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia**: wprowadź liczbę dopuszczalnych nieudanych uwierzytelnień przed wyczyszczeniem zawartości urządzenia z zakresu 1–11. `0` (zero) może spowodować wyłączenie funkcje czyszczenia urządzenia.
+  - **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia**: wprowadź liczbę nieudanych prób uwierzytelniania dopuszczalnych, zanim zawartość urządzenia może zostać wyczyszczona (maksymalnie 11). Prawidłową liczbę, którą można wprowadzić zależy od wersji. [Dostawcy usług Kryptograficznych DeviceLock/MaxDevicePasswordFailedAttempts](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts) zawiera listę obsługiwanych wartości. `0` (zero) może spowodować wyłączenie funkcji czyszczenia urządzenia.
 
-    Wpływ tego ustawienia zależy od wersji. Aby uzyskać szczegółowe informacje, zobacz [Dostawca usługi konfiguracji DeviceLock/MaxDevicePasswordFailedAttempts](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts).
+    Wpływ tego ustawienia zależy również od wersji. Aby uzyskać szczegółowe informacje, zobacz artykuł [Dostawca usługi konfiguracji DeviceLock/MaxDevicePasswordFailedAttempts](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts).
 
   - **Maksymalna liczba minut braku aktywności przed zablokowaniem ekranu**: określ, jak długo urządzenie musi pozostawać w stanie bezczynności, zanim ekran zostanie automatycznie zablokowany.
   - **Wygaśnięcie hasła (dni)** : określ liczbę dni, po której należy zmienić hasło urządzenia, z zakresu 1–365. Na przykład wprowadź liczbę `90`, aby hasło wygasało po 90 dniach.

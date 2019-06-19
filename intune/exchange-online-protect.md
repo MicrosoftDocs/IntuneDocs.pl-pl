@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 30c0e5af6d7ff0467383294c071d0ffdb96c5dc1
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 9d3e74244315b7345a632a9ecd2bf631a134e5ab
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041837"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045027"
 ---
 # <a name="protect-office-365-exchange-online-without-requiring-device-management"></a>Ochrona usługi Office 365 Exchange Online bez konieczności zarządzania urządzeniami
 
@@ -32,11 +32,11 @@ Jeśli postanowisz skonfigurować system zarządzania urządzeniami, możesz to 
 
 ## <a name="action-plan"></a>Plan działania
 
-1. [Zapoznanie się z dostępem warunkowym](conditional-access.md). 
-2. [Zapoznanie się z dostępem warunkowym opartym na aplikacji](app-based-conditional-access-intune.md).
-3. [Skonfigurowanie zasad dostępu warunkowego opartego na aplikacji dla usługi Exchange Online](app-based-conditional-access-intune-create.md).
+1. [Więcej informacji na temat dostępu warunkowego](conditional-access.md). 
+2. [Więcej informacji na temat dostępu warunkowego na podstawie aplikacji](app-based-conditional-access-intune.md).
+3. [Skonfigurowanie zasad dostępu warunkowego na podstawie aplikacji dla usługi Exchange Online](app-based-conditional-access-intune-create.md).
 4. [Zablokowanie aplikacji, którymi nie można zarządzać](app-modern-authentication-block.md), a w szczególności aplikacji, które nie korzystają z biblioteki uwierzytelniania usługi Azure Active Directory (ADAL).
-5. (Opcjonalnie) [Skonfigurowanie zasad dostępu warunkowego opartego na aplikacji dla usługi SharePoint Online](app-based-conditional-access-intune-create.md). Te zasady blokują dostęp do danych firmowych aplikacjom, którymi nie można zarządzać i których nie można zabezpieczyć. Te zasady ograniczają także dostęp za pośrednictwem programu SharePoint dla urządzeń przenośnych. 
+5. (Opcjonalnie) [Skonfigurowanie zasad dostępu warunkowego na podstawie aplikacji dla usługi SharePoint Online](app-based-conditional-access-intune-create.md). Te zasady blokują dostęp do danych firmowych aplikacjom, którymi nie można zarządzać i których nie można zabezpieczyć. Te zasady ograniczają także dostęp za pośrednictwem programu SharePoint dla urządzeń przenośnych. 
 
 ## <a name="what-to-tell-employees-and-students"></a>Co powiedzieć pracownikom i uczniom
 
@@ -45,7 +45,7 @@ Jeśli postanowisz skonfigurować system zarządzania urządzeniami, możesz to 
 
 ## <a name="next-steps"></a>Następne kroki
 
-Przy użyciu dostępu warunkowego opartego na aplikacji zwiększono bezpieczeństwo danych firmowych. W ramach kolejnych kroków możesz dowiedzieć się więcej o innych sposobach zwiększenia ochrony danych firmowych, takich jak: 
+Przy użyciu dostępu warunkowego na podstawie aplikacji zwiększono bezpieczeństwo danych firmowych. W ramach kolejnych kroków możesz dowiedzieć się więcej o innych sposobach zwiększenia ochrony danych firmowych, takich jak: 
 
 * Skonfigurowanie [dostępu warunkowego opartego na zgodności urządzeń, ryzyku urządzeń, lokalizacji i atrybutów użytkownika w usługach Active Directory i Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal).  
 * Skonfigurowanie zasad ochrony aplikacji w celu ułatwienia ochrony danych firmowych przed zamierzonymi lub przypadkowymi przeciekami danych. 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9a18bceb6b42f06464baf31a4cdd4dea21d19675
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 984b78b271d130618ec0994f76e966f1dc338706
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57461298"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044713"
 ---
 ## <a name="april-2017"></a>Kwiecień 2017
 
@@ -26,7 +26,7 @@ Aktualizacja aplikacji Portal firmy dla systemu Android pokazuje wskaźnik post�
 
 #### <a name="block-apps-from-accessing-sharepoint-online----679339---"></a>Blokowanie dostępu aplikacji do usługi SharePoint Online <!-- 679339 -->
 
-Teraz możesz tworzyć zasady dostępu warunkowego na podstawie aplikacji, aby blokować dostęp do usługi [SharePoint Online](/intune-classic/deploy-use/mam-ca-for-sharepoint-online) aplikacjom, do których nie zastosowano zasad ochrony aplikacji. W tym scenariuszu dostępu warunkowego na podstawie aplikacji można określić aplikacje, które mają mieć dostęp do usługi SharePoint Online, za pomocą portalu Azure.
+Teraz możesz tworzyć zasady dostępu warunkowego na podstawie aplikacji, aby blokować dostęp do usługi [SharePoint Online](/intune-classic/deploy-use/mam-ca-for-sharepoint-online) aplikacjom, do których nie zastosowano zasad ochrony aplikacji. W tym scenariuszu dostępu warunkowego na podstawie aplikacji można określić aplikacje, które mają mieć dostęp do usługi SharePoint Online, za pomocą witryny Azure Portal.
 
 #### <a name="single-sign-in-support-from-the-company-portal-for-ios-to-outlook-for-ios---834012--"></a>Obsługa logowania jednokrotnego z aplikacji Portal firmy dla systemu iOS do programu Outlook dla systemu iOS <!--834012-->
 Użytkownicy nie muszą już logować się w aplikacji Outlook, jeśli zalogowali się na tym samym urządzeniu do aplikacji Portal firmy dla systemu iOS przy użyciu tego samego konta. Gdy użytkownicy uruchamiają aplikację Outlook, mogą wybrać swoje konto i zalogować się automatycznie. Ponadto pracujemy nad dodaniem tej funkcji do innych aplikacji firmy Microsoft.
@@ -112,14 +112,14 @@ Udostępniliśmy wersję aplikacji Portal firmy dla systemu iOS przy użyciu pro
 
 #### <a name="support-for-skycure"></a>Obsługa aplikacji Skycure
 
-Dostęp urządzeń przenośnych do zasobów firmy można obecnie kontrolować z użyciem dostępu warunkowego opartego na ocenie ryzyka przeprowadzanej przez aplikację Skycure. Jest to rozwiązanie chroniące przed zagrożeniami bezpieczeństwa urządzeń przenośnych zintegrowane z usługą Microsoft Intune. Ryzyko jest oceniane na podstawie danych telemetrycznych zebranych z urządzeń z uruchomioną usługą Skycure. Są to na przykład:
+Dostęp urządzeń mobilnych do zasobów firmy można obecnie kontrolować z użyciem dostępu warunkowego na podstawie ocenie ryzyka przeprowadzanej przez aplikację Skycure. Jest to rozwiązanie chroniące przed zagrożeniami bezpieczeństwa urządzeń mobilnych zintegrowane z usługą Microsoft Intune. Ryzyko jest oceniane na podstawie danych telemetrycznych zebranych z urządzeń z uruchomioną usługą Skycure. Są to na przykład:
 
 - Ochrona fizyczna
 - Ochrona sieciowa
 - Ochrona aplikacji
 - Ochrona przed lukami w zabezpieczeniach
 
-Zasady dostępu warunkowego usług EMS można skonfigurować w oparciu o ocenę ryzyka przeprowadzaną przez aplikację Skycure włączaną przy użyciu zasad zgodności urządzeń usługi Intune. Przy użyciu tych zasad można zezwalać na dostęp do zasobów firmowych lub blokować go niezgodnym urządzeniom w oparciu o wykryte zagrożenia. Aby uzyskać więcej informacji, zobacz [Łącznik Skycure Mobile Threat Defense](/intune-classic/deploy-use/skycure-mobile-threat-defense-connector).
+Zasady dostępu warunkowego usług EMS można skonfigurować na podstawie oceny ryzyka przeprowadzonej przez aplikację Skycure włączaną przy użyciu zasad zgodności urządzeń usługi Intune. Przy użyciu tych zasad można zezwalać na dostęp do zasobów firmowych lub blokować go niezgodnym urządzeniom w oparciu o wykryte zagrożenia. Aby uzyskać więcej informacji, zobacz [Łącznik Skycure Mobile Threat Defense](/intune-classic/deploy-use/skycure-mobile-threat-defense-connector).
 
 #### <a name="new-user-experience-for-the-company-portal-app-for-android---621622--"></a>Nowe środowisko użytkownika aplikacji Portal firmy dla systemu Android <!--621622-->
 

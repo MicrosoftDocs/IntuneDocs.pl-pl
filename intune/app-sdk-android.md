@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5808a4b81fcc66d37e78c50cb5bcd2ae7bbe44e2
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: c929965b79d9ee35fcc1094b4ad18cff6d73d80d
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66049598"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045526"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android
 
@@ -732,7 +732,7 @@ Warunkowy dostęp (CA) jest [funkcją](https://docs.microsoft.com/azure/active-d
 4. Sprawdź, czy wszystko jest poprawnie skonfigurowane, włączając [warunkowy dostęp oparty na urządzeniach](https://docs.microsoft.com/intune/conditional-access-intune-common-ways-use) z witryny [Azure Portal](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExchangeConnectorMenu/aad/connectorType/2) i potwierdzając
     - To logowanie do Twojej aplikacji monituje o zainstalowanie i rejestrację w Portalu firmy usługi Intune
     - Po rejestracji logowanie do Twojej aplikacji zakończy się pomyślnie.
-5. Gdy Twoja aplikacja wysłała integrację zestawu SDK aplikacji usługi Intune, napisz na adres msintuneappsdk@microsoft.com, aby dodać aplikację do listy zatwierdzonych aplikacji dla [dostępu warunkowego opartego na aplikacji](https://docs.microsoft.com/intune/conditional-access-intune-common-ways-use#app-based-conditional-access)
+5. Gdy Twoja aplikacja wyśle integrację zestawu SDK aplikacji usługi Intune, napisz na adres msintuneappsdk@microsoft.com, aby dodać aplikację do listy zatwierdzonych aplikacji dla [dostępu warunkowego na podstawie aplikacji](https://docs.microsoft.com/intune/conditional-access-intune-common-ways-use#app-based-conditional-access).
 6. Po dodaniu aplikacji do listy zatwierdzonych przeprowadź weryfikację przez [skonfigurowanie dostępu warunkowego opartego na aplikacji](https://docs.microsoft.com/intune/app-based-conditional-access-intune-create) i sprawdzenie, czy można się pomyślnie zalogować do Twojej aplikacji.
 
 ## <a name="app-protection-policy-without-device-enrollment"></a>Zasady ochrony aplikacji bez rejestracji urządzeń

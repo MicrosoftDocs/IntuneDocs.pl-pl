@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a5aeae0d4256232d01c7e6171b10159a130b513
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: f286ec4928ad4bb026c95d10562d9b339b2ca5f3
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66044668"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67043902"
 ---
 # <a name="troubleshoot-conditional-access"></a>Rozwiązywanie problemów z dostępem warunkowym
 
-Przy użyciu usługi Intune i dostępu warunkowego można zabezpieczyć dostęp do usług Office 365, takich jak Exchange Online, SharePoint Online, Skype dla firm Online, lokalna instalacja programu Exchange i innych usług. Ta możliwość pozwala upewnić się, że dostęp do zasobów firmy jest ograniczony do urządzeń zarejestrowanych w usłudze Intune i zgodnych z zasadami dostępu warunkowego ustawionymi w konsoli administracyjnej usługi Intune lub w usłudze Azure Active Directory. W tym artykule opisano, co zrobić, gdy użytkownicy nie mogą uzyskać dostępu do zasobów chronionych przy użyciu dostępu warunkowego, lub gdy użytkownicy mogą uzyskiwać dostęp do chronionych zasobów, ale powinni być blokowani.
+Przy użyciu usługi Intune i dostępu warunkowego można zabezpieczyć dostęp do usług Office 365, takich jak Exchange Online, SharePoint Online, Skype dla firm Online, lokalna instalacja programu Exchange, a także innych usług. Ta możliwość pozwala upewnić się, że dostęp do zasobów firmy jest ograniczony do urządzeń zarejestrowanych w usłudze Intune i zgodnych z zasadami dostępu warunkowego ustawionymi w konsoli administracyjnej usługi Intune lub w usłudze Azure Active Directory. W tym artykule opisano, co zrobić, gdy użytkownicy nie mogą uzyskać dostępu do zasobów chronionych przy użyciu dostępu warunkowego, lub gdy użytkownicy mogą uzyskiwać dostęp do chronionych zasobów, ale powinni być blokowani.
 
 ## <a name="requirements-for-conditional-access"></a>Wymagania dotyczące dostępu warunkowego
 
@@ -54,7 +54,7 @@ Te warunki można wyświetlić dla każdego urządzenia w witrynie Azure Portal 
 - Niektóre urządzenia z systemem Android mogą wyglądać na zaszyfrowane, jednak aplikacja Portal firmy rozpoznaje je jako niezaszyfrowane, dlatego oznacza je jako niezgodne. W tym scenariuszu w aplikacji Portal firmy zostanie wyświetlone powiadomienie z prośbą o ustawienie startowego kodu dostępu dla urządzenia. Po naciśnięciu powiadomienia i potwierdzeniu istniejącego numeru PIN lub hasła wybierz **Wymagaj numeru PIN do uruchomienia urządzenia** na ekranie **Bezpieczny start**, a następnie naciśnij przycisk **Sprawdź zgodność** dla urządzenia z poziomu aplikacji Portal firmy. Urządzenie powinno teraz zostać wykryte jako zaszyfrowane. 
   > [!NOTE]
   > Niektórzy producenci urządzeń szyfrują urządzenia przy użyciu domyślnego numeru PIN, a nie numeru PIN ustawionego przez użytkownika. Usługa Intune rozpoznaje szyfrowanie przy użyciu domyślnego numeru PIN jako niezabezpieczone i oznaczy te urządzenia jako niezgodne, dopóki użytkownik nie utworzy nowego numeru PIN, innego niż domyślny.
-- Zarejestrowane i zgodne urządzenie z systemem Android nadal może być blokowane i otrzymać powiadomienie o kwarantannie podczas pierwszej próby uzyskania dostępu do zasobów firmy. W takiej sytuacji upewnij się, że aplikacja Portal firmy nie jest uruchomiona, a następnie kliknij link **Rozpocznij teraz** w wiadomości e-mail o kwarantannie, aby wyzwolić ocenę. Należy to zrobić tylko w przypadku, gdy najpierw włączono dostęp warunkowy.
+- Zarejestrowane i zgodne urządzenie z systemem Android nadal może być blokowane i otrzymać powiadomienie o kwarantannie podczas pierwszej próby uzyskania dostępu do zasobów firmy. W takiej sytuacji upewnij się, że aplikacja Portal firmy nie jest uruchomiona, a następnie kliknij link **Rozpocznij teraz** w wiadomości e-mail o kwarantannie, aby wyzwolić ocenę. Należy to zrobić tylko wtedy, gdy najpierw włączono dostęp warunkowy.
 
 ## <a name="devices-are-blocked-and-no-quarantine-email-is-received"></a>Urządzenia są blokowane i nie otrzymano żadnej wiadomości e-mail o kwarantannie
 
@@ -64,9 +64,9 @@ Te warunki można wyświetlić dla każdego urządzenia w witrynie Azure Portal 
 
 ## <a name="devices-are-noncompliant-but-users-are-not-blocked"></a>Urządzenia są niezgodne, ale użytkownicy nie są blokowani
 
-- W przypadku komputerów z systemem Windows dostęp warunkowy blokuje tylko natywną aplikację poczty e-mail, pakiet Office 2013 z nowoczesnym uwierzytelnianiem lub pakiet Office 2016. Blokowanie wcześniejszych wersji programu Outlook lub wszystkich aplikacji poczty na komputerach z systemem Windows wymaga konfiguracji usługi Rejestracja urządzeń w usłudze AAD i usług Active Directory Federation Services (AD FS) zgodnie z opisem w temacie [Konfigurowanie usług SharePoint Online i Exchange Online na potrzeby dostępu warunkowego w usłudze Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-no-modern-authentication). 
+- W przypadku komputerów z systemem Windows dostęp warunkowy blokuje tylko natywną aplikację poczty e-mail, pakiet Office 2013 z nowoczesnym uwierzytelnianiem lub pakiet Office 2016. Blokowanie wcześniejszych wersji programu Outlook lub wszystkich aplikacji poczty na komputerach z systemem Windows wymaga konfiguracji usługi Rejestracja urządzeń w usłudze AAD i usług Active Directory Federation Services (AD FS) zgodnie z opisem w artykule [Konfigurowanie usług SharePoint Online i Exchange Online na potrzeby dostępu warunkowego w usłudze Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-no-modern-authentication). 
 - Jeśli urządzenie zostanie selektywnie wyczyszczone lub wycofane z usługi Intune, może nadal mieć dostęp przez kilka godzin po wycofaniu. Jest to spowodowane tym, że program Exchange buforuje prawa dostępu przez 6 godzin. Należy rozważyć inne sposoby ochrony danych na wycofanych urządzeniach w tym scenariuszu.
-- Urządzenia Surface Hub obsługują dostęp warunkowy, jednak w celu poprawnej oceny należy wdrożyć zasady zgodności w grupach urządzeń (a nie grupach użytkowników).
+- Urządzenia Surface Hub obsługują dostęp warunkowy, ale w celu poprawnej oceny należy wdrożyć zasady zgodności w grupach urządzeń (a nie grupach użytkowników).
 - Sprawdź przypisania zasad zgodności i zasad dostępu warunkowego. Jeśli użytkownik nie należy do grupy, do której przypisano zasady lub znajduje się w grupie wykluczonej, nie będzie blokowany. Tylko urządzenia użytkowników znajdujących się w przypisanej grupie są sprawdzane pod kątem zgodności.
 
 ## <a name="noncompliant-device-is-not-blocked"></a>Niezgodne urządzenie nie jest blokowane

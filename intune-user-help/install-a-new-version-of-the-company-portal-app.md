@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/20/2018
+ms.date: 06/11/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7fcee9a5d721eb3c898c65e18c6fd56189739ffa
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 28121178e2a5a3aa7e6d16b0a5936f1cad627c09
+ms.sourcegitcommit: 1ba785f6e51517b63588a292ab5c45b9d9144b72
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55840558"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "66840951"
 ---
 # <a name="how-to-update-the-company-portal-app"></a>Jak zaktualizować aplikację Portal firmy
 
@@ -29,7 +29,7 @@ W tym artykule opisano sposób aktualizowania wersji aplikacji Portal firmy, gdy
 * Dostępna jest nowsza wersja aplikacji Portal firmy.
 * Twoja wersja aplikacji Portal firmy nie jest już obsługiwana.
 
-Poniższe kroki umożliwiają aktualizowanie aplikacji lub uzyskanie najnowszej wersji aplikacji na urządzeniach z systemem Android, iOS i Windows.    
+Poniższe kroki umożliwiają aktualizowanie aplikacji lub uzyskanie najnowszej wersji aplikacji na urządzeniach z systemem Android, iOS, macOS i Windows.    
 
 ## <a name="update-the-company-portal-app-on-your-android-device"></a>Aktualizowanie aplikacji Portal firmy na urządzeniu z systemem Android  
 
@@ -41,6 +41,16 @@ Po udostępnieniu nowej wersji opcja **Aktualizuj** pojawi się na liście zains
 
 1. Otwórz stronę sklepu App Store i wyszukaj aplikację **Intune**.  
 2. Po znalezieniu aplikacji dotknij pozycji **Aktualizuj**.  
+
+## <a name="update-the-company-portal-app-on-your-macos-device"></a>Aktualizowanie aplikacji Portal firmy na urządzeniu z systemem macOS
+
+Konfigurowanie aplikacji Portal firmy, aby automatycznie zainstalować aktualizacje, gdy tylko staną się dostępne. 
+
+1. Otwórz Portal firmy i przejdź do **pomocy**. 
+2. Wybierz **sprawdzać dostępność aktualizacji**. 
+3. Na ekranie Microsoft AutoUpdate wybierz **automatyczne pobranie i zainstalowanie**. 
+
+Aby wyświetlić dostępne aktualizacje, wybierz **sprawdzać dostępność aktualizacji**.  
 
 ## <a name="update-the-company-portal-app-on-your-windows-device"></a>Aktualizowanie aplikacji Portal firmy na urządzeniu z systemem Windows
 Aby automatycznie pobierać aktualizacje, gdy staną się dostępne, otwórz sklep Microsoft Store i przejdź do pozycji **Ustawienia**. Następnie włącz opcję **Aktualizacje aplikacji**. Aby wyświetlić ostatnie aktualizacje oraz aplikacje oczekujące w kolejce pobierania, przejdź do pozycji **Pobieranie i aktualizacje**.  

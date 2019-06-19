@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 47c5892541359263383621307d269936f01fa2c6
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: e3665a785391d2bff707bf5b8fe0a7e4f6e8a43d
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041531"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044525"
 ---
 # <a name="compare-managing-windows-pcs-as-computers-or-mobile-devices"></a>Porównanie zarządzania komputerami z systemem Windows jako komputerami i jako urządzeniami mobilnymi
 
@@ -43,7 +43,7 @@ Organizacje mogą użyć usługi Microsoft Intune do zarządzania komputerami z 
 |**Inventory** (Spis)|Dostępne <br>[Wyświetlanie spisu sprzętu i oprogramowania dla komputerów z systemem Windows](view-hardware-and-software-inventory-for-windows-pcs-in-microsoft-intune.md)|Dostępne <br>[Monitorowanie informacji o aplikacji](apps-monitor.md)<br>[Co to jest zarządzanie urządzeniami](device-management.md)|
 |**Zasady zapory systemu Windows**|Dostępne <br>[Ochrona komputerów z systemem Windows przy użyciu zasad Zapory systemu Windows](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md) |Dostępne <br>[Zapora Windows Defender](endpoint-protection-windows-10.md#windows-defender-firewall)|
 |**Ochrona przed złośliwym oprogramowaniem**|Ochrona punktu końcowego<br>[Ochrona komputerów z systemem Windows przy użyciu programu Endpoint Protection](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md)|Usługa Windows Defender<br>[Włączanie usługi Windows Defender](advanced-threat-protection.md)|
-|**Pomoc zdalna** |TeamViewer<br>[Żądanie i zapewnianie pomocy zdalnej dla komputerów z systemem Windows](request-and-provide-remote-assistance-for-windows-pcs-in-microsoft-intune.md)|TeamViewer<br> [Używanie programu TeamViewer do zdalnego administrowania urządzeniami usługi Intune](device-profile-android-teamviewer.md) |
+|**Pomoc zdalna** |TeamViewer<br>[Żądanie i zapewnianie pomocy zdalnej dla komputerów z systemem Windows](request-and-provide-remote-assistance-for-windows-pcs-in-microsoft-intune.md)|TeamViewer<br> [Używanie programu TeamViewer do zdalnego administrowania urządzeniami usługi Intune](teamviewer-support.md) |
 |**Wdrażanie aplikacji** | Niedostępne dla Sklepu Microsoft dla firm,<br>tylko pliki .exe, .appx i wieloplikowe instalatory .msi<br>[Dodawanie aplikacji dla komputerów z systemem Windows, na których jest uruchomione oprogramowanie klienckie usługi Intune](add-apps-for-windows-pcs-in-microsoft-intune.md)|Dostępne dla aplikacji ze Sklepu Microsoft i aplikacji biznesowych<br>[Dodawanie aplikacji ze Sklepu Windows](store-apps-windows.md)<br>[Jak dodawać aplikacje biznesowe dla systemu Windows](lob-apps-windows.md)|
 |**Ochrona aplikacji**|Niedostępne|Dostępne <br>[Co to są zasady ochrony aplikacji?](app-protection-policy.md)|
 |**Zaświadczanie o kondycji**|Niedostępne|Dostępne|
