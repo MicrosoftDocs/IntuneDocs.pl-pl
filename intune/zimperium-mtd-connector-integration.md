@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9ddd08baa99ebf7d6e7701d8345e42a72f0dbd57
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: db7f008e67c0523a373da24dd0a04f3556d9dd4c
+ms.sourcegitcommit: 119962948045079022aa48f968dde3e961d7cd0c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046571"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67031375"
 ---
 # <a name="integrate-zimperium-with-intune"></a>Integracja rozwiązania Zimperium z usługą Intune
 
@@ -31,7 +31,7 @@ Aby zintegrować rozwiązanie Zimperium Mobile Threat Defense z usługą Intune,
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
 > [!NOTE]
-> Poniższe kroki należy wykonać w  [konsoli Zimperium MTD](https://sso.zimperium.com/signon/aad/).
+> Poniższe kroki należy wykonać w  [konsoli Zimperium MTD](https://www.zimperium.com/platform).
 
 Przed rozpoczęciem procesu integracji rozwiązania Zimperium z usługą Intune upewnij się, że przygotowano następującą subskrypcję i poświadczenia:
 
@@ -66,7 +66,7 @@ Aby uzyskać więcej informacji na temat zgody i aplikacji usługi Azure Active 
 
 ## <a name="to-set-up-zimperium-integration"></a>Aby skonfigurować integrację rozwiązania Zimperium
 
-1.  Przejdź do [konsoli Zimperium MTD](https://sso.zimperium.com/signon/aad/) i zaloguj się przy użyciu poświadczeń. Aby przeprowadzić proces konfiguracji integracji rozwiązania Zimperium, należy zalogować się jako użytkownik usługi Azure Active Directory, który ma przypisaną rolę administratora globalnego. Podczas tej jednorazowej operacji konfiguracji prawa administratora globalnego są używane w celu udzielenia uprawnień dla aplikacji Zimperium do komunikacji z usługą Intune w organizacji. 
+1.  Przejdź do [konsoli Zimperium MTD](https://www.zimperium.com/platform) i zaloguj się przy użyciu poświadczeń. Aby przeprowadzić proces konfiguracji integracji rozwiązania Zimperium, należy zalogować się jako użytkownik usługi Azure Active Directory, który ma przypisaną rolę administratora globalnego. Podczas tej jednorazowej operacji konfiguracji prawa administratora globalnego są używane w celu udzielenia uprawnień dla aplikacji Zimperium do komunikacji z usługą Intune w organizacji. 
 
 2.  Z menu po lewej stronie wybierz element **Zarządzanie**.
 
