@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a58095612d6e76d4a1cb633e69260267dcfd9999
-ms.sourcegitcommit: cb76efd3db60a422a65478ebce83d3aea7b5eeed
+ms.openlocfilehash: 837442f93bbac2c5eb19b3c433c91f91aa38a17e
+ms.sourcegitcommit: 43ba5a05b2e1dc1997126d3574884f65cde449c7
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66749912"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67197542"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Ustawienia punktów odniesienia zabezpieczeń usługi Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender dla usługi Intune
 
@@ -83,7 +83,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
 
   **Domyślne**: Tak
 
-## <a name="attach-surface-reduction"></a>Zmniejszanie obszaru podatnego na ataki  
+## <a name="attack-surface-reduction"></a>Zmniejszenie obszaru ataków  
 
 - **Uruchamianie typu procesów podrzędnych przez aplikacje pakietu Office**  
   [Reguły zmniejszania obszaru podatnego na ataki](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) — po ustawieniu pozycji *Blokuj* aplikacje pakietu Office nie będą mogły tworzyć procesów podrzędnych. Aplikacje pakietu Office obejmują programy Word, Excel, PowerPoint, OneNote i Access. Tworzenie procesu podrzędnego to typowe zachowanie złośliwego oprogramowania, szczególnie w przypadku ataków opartych na makrach, które polegają na próbie uruchomienia lub pobrania złośliwych plików wykonywalnych za pomocą aplikacji pakietu Office.  

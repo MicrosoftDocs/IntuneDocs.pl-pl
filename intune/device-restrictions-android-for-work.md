@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/10/2019
+ms.date: 06/05/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c44f18d19172498f17f2a3f78ea47bad1d0f3fa7
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: fc91fc685c28beff38dc395dd83b60e99343af57
+ms.sourcegitcommit: 2545ffb75b8d9290718d3a67acdcbea2f279090f
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66048108"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263685"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem Android Enterprise w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune
 
@@ -56,7 +56,7 @@ W tym artykule wymieniono i opisano różne ustawienia, którymi można sterowa�
 - **Przesyłaj dane za pomocą komunikacji NFC**: wybierz pozycję **Blokuj**, aby uniemożliwić używanie technologii NFC (Near Field Communication) do przesyłania danych z aplikacji. Pozycja **Nieskonfigurowane** umożliwia używanie technologii NFC do udostępniania danych między urządzeniami.
 - **Funkcje debugowania**: wybierz pozycję **Zezwalaj**, aby umożliwić użytkownikom korzystanie z funkcji debugowania na urządzeniu. Pozycja **Nieskonfigurowane** uniemożliwia użytkownikom korzystanie z funkcji debugowania na urządzeniu.
 - **Dostosowanie mikrofonu**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom wyłączanie wyciszania mikrofonu i dostosowywanie jego głośności. Pozycja **Nieskonfigurowane** umożliwia użytkownikom używanie i dostosowywanie głośności mikrofonu na urządzeniu.
-- **Adresy e-mail związane z ochroną po zastosowaniu funkcji resetowania do ustawień fabrycznych**: wybierz pozycję **Adresy e-mail konta Google**. Wprowadź adresy e-mail administratorów urządzenia, którzy mogą je odblokować po wyczyszczeniu zawartości. Pamiętaj, aby oddzielić adresy e-mail średnikami w następujący sposób: `admin1@gmail.com;admin2@gmail.com`. Jeśli nie wprowadzono adresu e-mail, każda osoba może odblokować urządzenie po przywróceniu go do ustawień fabrycznych.
+- **Adresy e-mail związane z ochroną po zastosowaniu funkcji resetowania do ustawień fabrycznych**: wybierz pozycję **Adresy e-mail konta Google**. Wprowadź adresy e-mail administratorów urządzenia, którzy mogą je odblokować po wyczyszczeniu zawartości. Pamiętaj, aby oddzielić adresy e-mail średnikami w następujący sposób: `admin1@gmail.com;admin2@gmail.com`. Jeśli nie wprowadzono adresu e-mail, każda osoba może odblokować urządzenie po przywróceniu go do ustawień fabrycznych. Te wiadomości e-mail jest stosowane tylko wtedy, gdy uruchomiono fabrycznych niezwiązanych z użytkownikiem, takie jak uruchamianie, resetowanie do ustawień fabrycznych przy użyciu menu odzyskiwania.
 - **Wyjście bezpieczeństwa sieci**: wybierz pozycję **Włącz**, aby umożliwić użytkownikom włączanie funkcji wyjścia bezpieczeństwa sieci. Jeśli podczas uruchamiania urządzenia nie nawiązano połączenia sieciowego, wyjście bezpieczeństwa wyświetli prośbę o tymczasowe połączenie z siecią i odświeżenie zasad urządzenia. Po zastosowaniu zasad sieć tymczasowa zostanie zapomniana, a urządzenie będzie kontynuować rozruch. Ta funkcja powoduje połączenie urządzeń z siecią, jeśli:
   - W ostatnich zasadach nie ma odpowiedniej sieci.
   - Urządzenie jest uruchamiane w aplikacji w trybie blokady zadania.
@@ -100,6 +100,8 @@ Te ustawienia umożliwiają skonfigurowanie trybu kiosku na dedykowanych urządz
   >   - [Przypisana do grupy urządzeń](apps-deploy.md) utworzonej na potrzeby dedykowanych urządzeń
   > 
   > Aplikacja **Zarządzany ekran główny** nie musi znajdować się w profilu konfiguracji, ale trzeba ją dodać jako aplikację kliencką. Gdy aplikacja **Zarządzany ekran główny** zostanie dodana jako aplikacja kliencka, wszystkie inne aplikacje dodane w profilu konfiguracji będą wyświetlane jako ikony w aplikacji **Zarządzany ekran główny**. 
+  >
+  > Korzystając z trybu kiosku z wieloma aplikacjami za pomocą zarządzanych ekran główny, telefon/phone aplikacje mogą nie działać poprawnie. 
 
   - Wybierz pozycję **Dodaj** i wybierz aplikacje z listy.
 

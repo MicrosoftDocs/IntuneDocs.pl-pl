@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/12/2019
+ms.date: 06/18/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 357d1619fdf051d07ea47c84a79b2aebd1523460
-ms.sourcegitcommit: a2bad7465422b98eb3c10f03dc5a24fd99cee78d
-ms.translationtype: HT
+ms.openlocfilehash: 9af61c89b90a7f31654cd43a3cfc457b27e9700f
+ms.sourcegitcommit: 86aa5fefcba1e71841696b1a5e3ca5bffb1a9528
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67041127"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67234972"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem Windows 10 (i nowszym) w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune
 
@@ -420,7 +420,8 @@ Wybierz przycisk **OK**, aby zapisać zmiany.
 
 Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad DeviceLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock), który zawiera również listę obsługiwanych wersji systemu Windows.
 
-- **Hasło**: pozycja **Wymagaj** wymusza wprowadzanie hasła przez użytkownika końcowego w celu uzyskania dostępu do urządzenia. Ustawienie **Nie skonfigurowano** (domyślne) zezwala na dostęp do urządzenia bez hasła.
+- **Hasło**: pozycja **Wymagaj** wymusza wprowadzanie hasła przez użytkownika końcowego w celu uzyskania dostępu do urządzenia. Ustawienie **Nie skonfigurowano** (domyślne) zezwala na dostęp do urządzenia bez hasła. Dotyczy tylko kont lokalnych. Hasła do kont domeny pozostaną skonfigurowane przez Active Directory (AD) i Azure AD.
+
   - **Wymagany typ hasła**: wybierz typ hasła. Dostępne opcje:
     - **Nie skonfigurowano**: hasło może zawierać cyfry i litery.
     - **Numeryczne**: hasło może się składać tylko z cyfr.
