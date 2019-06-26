@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0e4d5c23d598641256c196cd7217797f87f99d1c
-ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
+ms.openlocfilehash: bb1ddcadcac1ec9b4730a5dcd66abca111d80196
+ms.sourcegitcommit: 14f4e97de5699394684939e6f681062b5d4c1671
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66374135"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67251204"
 ---
 # <a name="create-a-windows-10-security-baseline-in-intune"></a>Tworzenie punktu odniesienia zabezpieczeń systemu Windows 10 w usłudze Intune
 
@@ -55,7 +55,7 @@ Poniższe punkty odniesienia zabezpieczeń są dostępne do użycia z usługą I
 
 - **WERSJA ZAPOZNAWCZA: punkt odniesienia usługi Windows Defender ATP**  
   [Wyświetl ustawienia](security-baseline-settings-defender-atp.md)  
-  *(Ten punkt odniesienia jest dostępny, jeśli środowisko spełnia wymagania wstępne dotyczące korzystania z [Zaawansowanej ochrony przed zagrożeniami w usłudze Microsoft Defender](advanced-threat-protection.md#prerequisites))*.
+  *(Ten punkt odniesienia jest dostępny, jeśli środowisko spełnia wymagania wstępne dotyczące korzystania z [Zaawansowanej ochrony przed zagrożeniami w usłudze Microsoft Defender](advanced-threat-protection.md#prerequisites))* .
 
 
 ## <a name="prerequisites"></a>Wymagania wstępne
@@ -70,7 +70,7 @@ W przypadku używania urządzeń współzarządzanych musisz przełączyć obci�
 
 ## <a name="create-the-profile"></a>Tworzenie profilu
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=20909), a następnie wybierz pozycje **Bezpieczeństwo urządzeń** > **Punkty odniesienia zabezpieczeń (wersja zapoznawcza)**. Zostanie wyświetlona lista dostępnych punktów odniesienia. 
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), a następnie wybierz pozycje **Bezpieczeństwo urządzeń** > **Punkty odniesienia zabezpieczeń (wersja zapoznawcza)** . Zostanie wyświetlona lista dostępnych punktów odniesienia. 
 
     ![Wybór puntu odniesienia zabezpieczeń do skonfigurowania](./media/security-baselines/available-baselines.png)
 
