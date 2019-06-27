@@ -157,6 +157,7 @@
 ### [Resetowanie urządzenia](reset-device-cp-app.md)
 
 ## [Korzystanie z witryny Portal firmy usługi Intune](using-the-intune-company-portal-website.md)
+### [Zarządzanie aplikacjami](manage-apps-cpweb.md)  
 ### [Zdalne blokowanie urządzenia](remote-lock-your-device-cpwebsite.md)  
 ### [Zmienianie nazwy urządzenia](rename-your-device-cpwebsite.md)  
 ### [Usuwanie urządzenia](remove-your-device-cpwebsite.md)  
