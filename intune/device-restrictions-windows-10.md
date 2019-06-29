@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9af61c89b90a7f31654cd43a3cfc457b27e9700f
-ms.sourcegitcommit: 86aa5fefcba1e71841696b1a5e3ca5bffb1a9528
+ms.openlocfilehash: 30e869cbb0311e1855dd4dc09978505ad539970e
+ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67234972"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67403090"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem Windows 10 (i nowszym) w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune
 
@@ -57,7 +57,16 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad ApplicationMana
 - **Instaluj dane aplikacji na woluminie systemowym**: ustawienie **Blokuj** uniemożliwia aplikacjom przechowywanie danych na woluminie systemowym urządzenia. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia aplikacjom przechowywanie danych na woluminie dysku systemowego.
 - **Instaluj aplikacje na dysku systemowym**: ustawienie **Blokuj** uniemożliwia instalowanie aplikacji na dysku systemowym urządzenia. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia instalowanie aplikacji na dysku systemowym.
 - **DVR z gry** (tylko komputery): ustawienie **Blokuj** wyłącza nagrywanie i transmitowanie gier w systemie Windows. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia nagrywanie i transmitowanie gier.
-- **Tylko aplikacje ze sklepu**: ustawienie **Wymagaj** wymusza na użytkownikach końcowych instalowanie aplikacji wyłącznie ze sklepu Windows App Store. Ustawienie **Nie skonfigurowano** umożliwia użytkownikom końcowym instalowanie aplikacji spoza sklepu Windows App Store.
+- **Tylko aplikacje ze sklepu**: to ustawienie określa środowisko użytkownika, gdy użytkownicy instalują aplikacje z miejsc innych niż Microsoft Store. Dostępne opcje:
+
+  - **Nieskonfigurowane** (ustawienie domyślne): umożliwia użytkownikom końcowym i instalować aplikacje z miejsc innych niż Microsoft Store, w tym aplikacje określone w innych ustawień zasad.  
+  - **Gdziekolwiek**: wyłącza zalecenia dotyczące aplikacji, a użytkownicy mogą instalować aplikacji z dowolnego miejsca.  
+  - **Tylko Store**: wymusza użytkownikom końcowym instalować tylko aplikacje z Microsoft Store.
+  - **Zalecenia dotyczące**: podczas instalowania aplikacji z sieci web, która jest dostępna w Microsoft Store, użytkownikom zostanie wyświetlony komunikat zalecania, będą oni mogli pobrać ze sklepu.  
+  - **Preferuj Store**: ostrzega użytkowników po ich instalować aplikacje z miejsc innych niż Microsoft Store.
+
+  [Filtr SmartScreen/EnableAppInstallControl dostawcy usług Kryptograficznych](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enableappinstallcontrol)
+
 - **Wymuś ponowne uruchamianie aplikacji w przypadku niepowodzenia aktualizacji**: aplikacja może się nie zaktualizować, jeśli jest właśnie używana. To ustawienie pozwala wymusić jej ponowne uruchomienie. **Nieskonfigurowane**: (domyślne) to ustawienie nie wymusza ponownego uruchomienia aplikacji. **Wymagaj**: pozwala administratorom na wymuszenie ponownego uruchomienia w określonym dniu i o podanej godzinie lub zgodnie z cyklicznym harmonogramem. Ustawienie **Wymagaj** powoduje też konieczność skonfigurowania następujących opcji:
 
   - **Data/godzina rozpoczęcia**: wybierz datę i godzinę ponownego uruchamiania aplikacji.

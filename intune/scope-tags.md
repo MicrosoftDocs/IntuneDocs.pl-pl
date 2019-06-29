@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 57a14e1e3c4caea570667096fec71cecf2d88ddf
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: ba1d7669e80fd91398f41c57ca2d27ce78a06041
+ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045190"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67403788"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Używanie kontroli dostępu opartej na rolach i tagów zakresu w rozproszonej infrastrukturze informatycznej
 
@@ -42,8 +42,10 @@ Na przykład załóżmy, że administrator biura regionalnego w Seattle ma przyp
 
     ![Zrzut ekranu przedstawiający tworzenie tagu zakresu.](./media/scope-tags/create-scope-tag.png)
 
-2. Podaj **nazwę** i **opis**.
-3. Wybierz pozycję **Utwórz**.
+3. Jeśli chcesz, aby wszystkie urządzenia z określonych grup, wybierz opcję **przypisywanie tagu zakresu do wszystkich urządzeń w wybranych grupach**.
+    1. W **wybierz grupy do uwzględnienia** wybierz grupy zawierające urządzenia, które chcesz przypisać ten tag zakresu do.
+    2. Wybierz pozycję **Wybierz**.
+4. Wybierz pozycję **Utwórz**.
 
 ## <a name="to-assign-a-scope-tag-to-a-role"></a>Aby przypisać tag zakresu do roli
 

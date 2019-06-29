@@ -18,12 +18,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bef0eb545f5f0ca0f85365a08e6bc5d726d6979e
-ms.sourcegitcommit: d258bcf6716c8a2589d3f8dada819905ee80f233
+ms.openlocfilehash: 4c8dfdea552d035c036828bfd2e6695cc5e4cb7b
+ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66196860"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402704"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Konfigurowanie urządzenia z systemem iOS do uzyskiwania dostępu do zasobów firmy  
 
@@ -59,15 +59,15 @@ Wstrzymanie rejestracji na więcej niż kilka minut może spowodować zamknięci
 
 1. Otwórz aplikację Portal firmy i zaloguj się za pomocą konta służbowego. 
 
-    ![Przykładowy zrzut ekranu logowania w aplikacji Portal firmy.](./media/ios-01-cp-enroll-1903.PNG)  
+    ![Przykładowy zrzut ekranu logowania w aplikacji Portal firmy.](./media/ios-01-cp-enroll-1904.PNG)  
 
 2. Po wyświetleniu monitu dotyczącego odbierania powiadomień z aplikacji Portal firmy naciśnij pozycję **Zezwalaj**. Powiadomienia z aplikacji Portal firmy mogą zawierać między innymi alerty dotyczące koniecznych zmian w ustawieniach urządzenia. 
 
-    ![Przykładowy zrzut ekranu monitu o powiadomieniach na stronie głównej aplikacji Portal firmy.](./media/ios-04-cp-enroll-1903.PNG)  
+    ![Przykładowy zrzut ekranu monitu o powiadomieniach na stronie głównej aplikacji Portal firmy.](./media/ios-02-cp-enroll-1904.PNG)  
 
 3. Na ekranie **Konfigurowanie dostępu** wybierz pozycję **Rozpocznij**.  
 
-     ![Przykładowy zrzut ekranu „Konfigurowanie dostępu” w aplikacji Portal firmy.](./media/ios-05-cp-enroll-1903.PNG)  
+     ![Przykładowy zrzut ekranu „Konfigurowanie dostępu” w aplikacji Portal firmy.](./media/ios-03-cp-enroll-1904.PNG)  
 
 4. Zapoznaj się z listą informacji o urządzeniu, które będą widoczne i niewidoczne dla Twojej organizacji. Następnie naciśnij przycisk **Kontynuuj**.  
 
@@ -87,7 +87,7 @@ Wstrzymanie rejestracji na więcej niż kilka minut może spowodować zamknięci
 
 7. Tylko w systemie iOS 12.2 lub nowszym: po wyświetleniu monitu o otwarcie aplikacji Portal firmy naciśnij przycisk **Otwórz**. Na ekranie **Trwa instalowanie profilu zarządzania** znajduje się lista kroków instalacji profilu.
 
-    ![Przykładowy zrzut ekranu Trwa instalowanie profilu zarządzania w aplikacji Portal firmy.](./media/ios-1904-settings-icon.PNG)  
+    ![Przykładowy zrzut ekranu Trwa instalowanie profilu zarządzania w aplikacji Portal firmy.](./media/ios-07-cp-enroll-1904.PNG)  
 
 8. Otwórz aplikację Ustawienia i naciśnij pozycję **Profil pobrany**.  
 
@@ -99,24 +99,24 @@ Wstrzymanie rejestracji na więcej niż kilka minut może spowodować zamknięci
     
 10. Wprowadź hasło urządzenia. Następnie naciśnij przycisk **Zainstaluj**.    
 
-    ![Przykładowy zrzut ekranu instalacji profilu w aplikacji Ustawienia z kursorem na przycisku Zainstaluj.](./media/ios-1904-password-install.PNG)  
+    ![Przykładowy zrzut ekranu instalacji profilu w aplikacji Ustawienia z kursorem na przycisku Zainstaluj.](./media/ios-10-cp-enroll-1904.PNG)  
 
 
 11. Kolejny ekran zawiera standardowe ostrzeżenie systemowe dotyczące zarządzania urządzeniami. Aby kontynuować instalację, naciśnij przycisk **Zainstaluj**. Jeśli zostanie wyświetlony monit dotyczący zaufania na potrzeby zarządzania zdalnego, naciśnij pozycję **Ufaj**.  
 
-    ![Przykładowy zrzut ekranu aplikacji Ustawienia ze standardowym ostrzeżeniem systemowym dotyczącym certyfikatu głównego i zarządzania urządzeniami mobilnymi.](./media/ios-15-cp-enroll-1903.PNG)  
+    ![Przykładowy zrzut ekranu aplikacji Ustawienia ze standardowym ostrzeżeniem systemowym dotyczącym certyfikatu głównego i zarządzania urządzeniami mobilnymi.](./media/ios-11-cp-enroll-1904.PNG)  
 
 12. Po zakończeniu instalacji naciśnij pozycję **Gotowe**. Aby zweryfikować instalację profilu, przejdź do obszaru ustawień **Profile i zarządzanie urządzeniami**. Profil powinien znajdować się na liście w obszarze **Zarządzanie urządzeniami mobilnymi**.   
 
-    ![Przykładowy zrzut ekranu Profile i zarządzanie urządzeniami w aplikacji Ustawienia z widocznym profilem zarządzania.](./media/ios-00-cp-enroll-1903.PNG)  
+    ![Przykładowy zrzut ekranu Profile i zarządzanie urządzeniami w aplikacji Ustawienia z widocznym profilem zarządzania.](./media/ios-12-cp-enroll-1904.PNG)  
 
 13. Wróć do aplikacji Portal firmy. W aplikacji Portal firmy rozpocznie się synchronizowanie i konfigurowanie urządzenia. Może zostać wyświetlony monit o zaktualizowanie dodatkowych ustawień urządzenia. W takim przypadku naciśnij przycisk **Kontynuuj**.  
 
-    ![Przykładowy zrzut ekranu „Konfigurowanie dostępu” w aplikacji Portal firmy z żółtym trójkątem obok wymagania dotyczącego ustawień.](./media/ios-12-cp-enroll-1903.PNG)  
+    ![Przykładowy zrzut ekranu „Konfigurowanie dostępu” w aplikacji Portal firmy z żółtym trójkątem obok wymagania dotyczącego ustawień.](./media/ios-13-cp-enroll-1904.PNG)  
 
 14. Konfiguracja będzie zakończona, gdy obok wszystkich elementów na liście wyświetlona będzie ikona zielonego koła. Naciśnij pozycję **Gotowe**.   
     
-    ![Przykładowy zrzut ekranu „Wszystko gotowe!” w aplikacji Portal firmy z ikoną zielonego koła przy wszystkich elementach.](./media/ios-13-cp-enroll-1903.PNG)  
+    ![Przykładowy zrzut ekranu „Wszystko gotowe!” w aplikacji Portal firmy z ikoną zielonego koła przy wszystkich elementach.](./media/ios-14-cp-enroll-1904.PNG)  
 
 > [!Note]
 > Jeśli w Twojej organizacji są monitorowane limity danych i połączeń głosowych lub są udostępniane urządzenia należące do firmy, może być konieczne wykonanie kilku dodatkowych czynności. Jeśli zostanie wyświetlony monit o instalację aplikacji **Datalert**, zobacz [Rejestrowanie urządzenia w rozwiązaniu do zarządzania wydatkami telekomunikacyjnymi](enroll-your-device-with-telecom-expense-management-ios.md). Jeśli Twoja organizacja uczestniczy w programie Device Enrollment Program firmy Apple, zobacz [jak zarejestrować urządzenie należące do firmy](enroll-your-device-dep-ios.md).  

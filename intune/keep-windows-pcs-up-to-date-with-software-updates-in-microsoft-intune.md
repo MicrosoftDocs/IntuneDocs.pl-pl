@@ -17,16 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 56bbe6d8af43693814a90351acb2f400cff92025
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 3cc84d8215a841b9ff8a70a6b6307d3452696cb0
+ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046992"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67403001"
 ---
 # <a name="keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune"></a>Zapewnianie aktualności oprogramowania na komputerach z systemem Windows za pomocą aktualizacji w usłudze Microsoft Intune
 
 [!INCLUDE [classic-portal](includes/classic-portal.md)]
+
+> [!NOTE]
+> Informacje w tym temacie dotyczą tylko komputerów z systemem Windows, które są zarządzane jako komputery osobiste przy użyciu oprogramowania klienckiego usługi Intune. Jeśli chcesz zarządzać aktualizacjami dla komputerów z systemem Windows zarejestrowane jako urządzenia przenośne, zobacz [zarządzanie aktualizacjami oprogramowania w usłudze Intune](windows-update-for-business-configure.md).
 
 Usługa Microsoft Intune pomaga zabezpieczyć komputery zarządzane na wiele sposobów. Jednym z nich jest zarządzanie aktualizacjami oprogramowania, które zapewniają, że oprogramowanie komputerów jest aktualne, szybko instalując najnowsze poprawki i aktualizacje oprogramowania.
 

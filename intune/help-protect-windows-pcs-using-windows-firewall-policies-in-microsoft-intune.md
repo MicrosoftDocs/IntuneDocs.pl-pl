@@ -17,16 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b289f9edc1522333f70308a6979b2ea2e71b17c6
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: f3b552c42a7a84ad8099a406bfff2db575785915
+ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66047536"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67403013"
 ---
 # <a name="help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune"></a>Ochrona komputerów z systemem Windows przy użyciu zasad Zapory systemu Windows w usłudze Microsoft Intune
 
 [!INCLUDE [classic-portal](includes/classic-portal.md)]
+
+> [!NOTE]
+> Informacje w tym temacie dotyczą tylko komputerów z systemem Windows, które są zarządzane jako komputery osobiste przy użyciu oprogramowania klienckiego usługi Intune. Jeśli chcesz zarządzać ustawieniami zapory dla komputerów z systemem Windows zarejestrowane jako urządzenia przenośne, zobacz [Dodawanie ustawień programu endpoint protection w usłudze Intune](endpoint-protection-configure.md).
 
 Usługa Microsoft Intune może pomóc w zabezpieczaniu komputerów zarządzanych za pomocą klienta usługi Intune na wiele sposobów. Jednym z nich jest udostępnienie zasad, które umożliwiają skonfigurowanie ustawień Zapory systemu Windows na komputerach.
 
