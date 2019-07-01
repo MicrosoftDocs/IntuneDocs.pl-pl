@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/29/2019
+ms.date: 06/17/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,20 +17,29 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e0fe37deb63457fef869df0f7263970a4e53cb29
-ms.sourcegitcommit: a97b6139770719afbd713501f8e50f39636bc202
+ms.openlocfilehash: 2246e3f6faa853f620327558a7faf4dc9d6a6e85
+ms.sourcegitcommit: 43ba5a05b2e1dc1997126d3574884f65cde449c7
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402718"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67197508"
 ---
 # <a name="common-issues-and-resolutions-with-email-profiles-in-microsoft-intune"></a>Typowe problemy dotyczące profilów poczty e-mail w usłudze Microsoft Intune i sposoby ich rozwiązania
 
 Poznaj niektóre typowe problemy dotyczące profilów poczty e-mail oraz sposoby ich rozwiązywania.
 
+## <a name="what-you-need-to-know"></a>Co musisz wiedzieć
+
+- Profile poczty e-mail są wdrażane dla użytkownika, który zarejestrował urządzenie. Aby skonfigurować profil poczty e-mail, usługa Intune używa właściwości usługi Azure Active Directory (AD) w profilu poczty e-mail użytkownika podczas rejestracji. [Dodaj ustawienia poczty e-mail na urządzeniach](email-settings-configure.md) może być dobry zasobem.
+- Po przeprowadzeniu migracji z hybrydowego programu Configuration Manager na autonomiczną usługę Intune, profil poczty e-mail z hybrydowego programu Configuration Manager pozostaje na urządzeniu przez 7 dni. Jest to oczekiwane zachowanie. Jeśli potrzebujesz, aby usunąć wcześniej profilu poczty e-mail, skontaktuj się z pomocą [pomocy technicznej usługi Intune](get-support.md).
+- Dla przedsiębiorstwa z systemem Android wdrażać usługi Gmail lub dziewięć for Work przy użyciu zarządzanych Store Play Google. [Dodaj zarządzany sklep Google Play aplikacje](apps-add-android-for-work.md) zawiera listę czynności.
+- Program Microsoft Outlook dla systemów iOS i Android nie obsługuje profile poczty e-mail. Zamiast tego należy wdrożyć zasady konfiguracji aplikacji. Aby uzyskać więcej informacji, zobacz [ustawienia konfiguracji programu Outlook](app-configuration-policies-outlook.md).
+- Nie można dostarczać profili poczty e-mail, przeznaczone dla grup urządzeń (a nie grup użytkowników) na urządzeniu. Jeśli urządzenie ma być użytkownikami podstawowymi, następnie przeznaczone dla urządzeń powinny działać. Jeśli profil poczty e-mail zawiera certyfikaty użytkownika, pamiętaj, aby docelowe grupy użytkowników.
+- Użytkownicy mogą wielokrotnie monit o wprowadzenie hasła dla profilu poczty e-mail. W tym scenariuszu Sprawdź wszystkie certyfikaty, do którego odwołuje się do profilu poczty e-mail. Jeśli jeden z certyfikatów nie jest przeznaczona do użytkownika, usługa Intune ponawia próbę wdrożenia profilu poczty e-mail.
+
 ## <a name="device-already-has-an-email-profile-installed"></a>Na urządzeniu jest już zainstalowany profil poczty e-mail
 
-Jeśli użytkownicy utworzą profil poczty e-mail przed zarejestrowaniem urządzenia w usłudze Intune, profil poczty e-mail w usłudze Intune może nie działać zgodnie z oczekiwaniami:
+Jeśli użytkownicy tworzą profil poczty e-mail przed zarejestrowaniem w usłudze Intune lub usługi Office 365 MDM, profil poczty e-mail, wdrożona przez usługę Intune mogą nie działać zgodnie z oczekiwaniami:
 
 - **iOS**: usługa Intune wykrywa istniejący, zduplikowany profil poczty e-mail na podstawie nazwy hosta i adresu e-mail. Profil poczty e-mail utworzony przez użytkownika blokuje wdrożenie profilu utworzonego przez usługę Intune. Jest to powszechny problem, ponieważ użytkownicy systemu iOS zwykle najpierw tworzą profil poczty e-mail, a potem rejestrują urządzenie. Aplikacja Portal firmy uznaje profil za niezgodny i może poprosić użytkownika o usunięcie profilu poczty e-mail.
 
@@ -50,19 +59,16 @@ Sprawdź konfigurację profilu EAS urządzenia Samsung KNOX i zasad źródłowyc
 
 ## <a name="unable-to-send-images-from--email-account"></a>Nie można wysyłać obrazów z konta e-mail
 
-Dotyczy usługi Intune w klasycznym portalu Azure.
-
 Użytkownicy, których konta e-mail zostały skonfigurowane automatycznie, nie mogą wysyłać zdjęć ani obrazów ze swoich urządzeń. Taka sytuacja może wystąpić, jeśli nie jest włączona opcja **Zezwalaj na wysyłanie wiadomości e-mail z aplikacji innych firm**.
 
 ### <a name="intune-solution"></a>Rozwiązanie przy użyciu usługi Intune
 
-1. Otwórz konsolę administracyjną usługi Microsoft Intune i wybierz obciążenie **Zasady**  > **Zasady konfiguracji**.
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+2. Wybierz pozycję **Konfiguracja urządzeń** > **Profile**.
+3. Wybierz profil poczty e-mail > **właściwości** > **ustawienia**.
+4. Ustaw **Zezwalaj wiadomości e-mail do wysłania z aplikacji innych firm** ustawienie **Włącz**.
 
-2. Wybierz profil poczty e-mail i wybierz polecenie **Edytuj**.
-
-3. Wybierz pozycję **Zezwalaj na wysyłanie wiadomości e-mail z aplikacji innych firm**.
-
-### <a name="configuration-manager-integrated-with-intune-solution"></a>Rozwiązanie przy użyciu programu Configuration Manager zintegrowanego z usługą Intune
+### <a name="configuration-manager-hybrid"></a>Środowisko hybrydowe programu Configuration Manager
 
 1. Otwórz program Configuration Manager > **Zasoby i zgodność**.
 

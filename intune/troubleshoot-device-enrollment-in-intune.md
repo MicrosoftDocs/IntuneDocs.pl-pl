@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6175fca13f1883338b7f5858538728132183b8db
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 063a288c99f3f773b63bd6fe0040e200a754c888
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040603"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67046295"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Rozwiązywanie problemów dotyczących rejestrowania urządzeń w usłudze Microsoft Intune
 
@@ -143,7 +143,7 @@ Aby uniknąć osiągania górnych limitów urządzeń, pamiętaj o usuwaniu niea
 - mają wiele domen najwyższego poziomu dla sufiksów nazw głównych użytkowników w organizacji (na przykład @contoso.com lub @fabrikam.com).
 
 
-[Zbiorczy pakiet aktualizacji dla usług AD FS 2.0](http://support.microsoft.com/kb/2607496) działa w połączeniu z przełącznikiem <strong>SupportMultipleDomain</strong> w celu włączenia obsługi tego scenariusza przez serwer usług AD FS bez konieczności stosowania dodatkowych serwerów usługi AD FS 2.0. Aby uzyskać więcej informacji, zobacz [ten blog](https://blogs.technet.microsoft.uucom/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
+[Zbiorczy pakiet aktualizacji dla usług AD FS 2.0](http://support.microsoft.com/kb/2607496) działa w połączeniu z przełącznikiem <strong>SupportMultipleDomain</strong> w celu włączenia obsługi tego scenariusza przez serwer usług AD FS bez konieczności stosowania dodatkowych serwerów usługi AD FS 2.0. Aby uzyskać więcej informacji, zobacz [ten blog](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
 
 
 ## <a name="android-issues"></a>Problemy z systemem android
@@ -241,7 +241,7 @@ Aby rozwiązać ten problem, zaimportuj certyfikaty do certyfikatów osobistych 
 3.  Znajdź certyfikat dla komunikacji usług AD FS (certyfikat z podpisem publicznym), a następnie kliknij go dwukrotnie, aby wyświetlić jego właściwości.
 4.  Wybierz kartę **Ścieżka certyfikacji**, aby wyświetlić certyfikaty nadrzędne tego certyfikatu.
 5.  Dla każdego certyfikatu nadrzędnego zaznacz opcję **Wyświetl certyfikat**.
-6.  Wybierz pozycję **Szczegóły** > **Kopiuj do pliku...**.
+6.  Wybierz pozycję **Szczegóły** > **Kopiuj do pliku...** .
 7.  Postępuj zgodnie z instrukcjami kreatora, aby wyeksportować lub zapisać klucz publiczny certyfikatu nadrzędnego do wybranej lokalizacji pliku.
 8.  Kliknij prawym przyciskiem myszy pozycje **Certyfikaty** > **Wszystkie zadania** > **Importuj**.
 9.  Postępuj zgodnie z instrukcjami kreatora, aby zaimportować certyfikaty nadrzędne do katalogu **Komputer lokalny\Osobiste\Certyfikaty**.

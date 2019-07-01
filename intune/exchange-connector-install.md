@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e236548002f2779377e7ac57443077d48869e1f9
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 57684a1f5ef94b12c8f0e52a36d8432583391b8a
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66047700"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045681"
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune"></a>Konfigurowanie lokalnego programu Exchange Connector w usłudze Microsoft Intune
 Informacje przedstawione w tym artykule ułatwiają instalowanie i monitorowanie lokalnego łącznika programu Exchange Active Sync dla usługi Intune.  Po skonfigurowaniu współdziałania lokalnego programu Exchange Connector w usłudze Intune z [zasadami dostępu warunkowego można sterować dostępem do lokalnych skrzynek pocztowych programu Exchange](conditional-access-exchange-create.md). 
@@ -119,7 +119,7 @@ Wykonaj następujące kroki, aby zainstalować lokalny program Exchange Connecto
 
 4. W polach **Nazwa użytkownika (domena\nazwa_użytkownika)** i **Hasło** podaj poświadczenia wymagane do nawiązania połączenia z serwerem Exchange. Wskazane konto musi mieć licencję umożliwiającą korzystanie z usługi Intune. 
 
-5. Podaj poświadczenia, które są niezbędne do wysyłania powiadomień do skrzynek pocztowych użytkowników programie Exchange Server. Ten użytkownik może być przeznaczony jedynie do obsługi powiadomień. Użytkownik powiadomień potrzebuje skrzynki pocztowej programu Exchange, aby móc wysyłać powiadomienia pocztą e-mail. Powiadomienia te można skonfigurować za pomocą zasad dostępu warunkowego w usłudze Intune.  
+5. Podaj poświadczenia, które są niezbędne do wysyłania powiadomień do skrzynek pocztowych użytkowników programie Exchange Server. Ten użytkownik może być przeznaczony jedynie do obsługi powiadomień. Użytkownik powiadomień potrzebuje skrzynki pocztowej programu Exchange, aby móc wysyłać powiadomienia pocztą e-mail. Powiadomienia te można skonfigurować za pomocą reguł dostępu warunkowego w usłudze Intune.  
 
        Ensure that the Autodiscover service and Exchange Web Services are configured on the Exchange Client Access Server. For more information, see [Client Access server](https://technet.microsoft.com/library/dd298114.aspx).
 

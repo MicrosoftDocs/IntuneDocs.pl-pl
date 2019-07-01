@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c84cd0ec61ea08956bbebd040167991c6285d073
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: e3c305cc579fedb9090faaf6c7270fcc546e36eb
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66044982"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044327"
 ---
 # <a name="tutorial-walkthrough-of-microsoft-intune-in-the-azure-portal"></a>Samouczek: przewodnik po usłudze Microsoft Intune w witrynie Azure Portal
 
@@ -104,7 +104,7 @@ Wykonaj poniższe czynności, aby lepiej poznać usługę Intune w witrynie Azur
 
     ![Zrzut ekranu przedstawiający okienko dostępu warunkowego](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-07.png)
 
-    Dostęp warunkowy dotyczy sposobów kontrolowania urządzeń i aplikacji, które mogą nawiązywać połączenie z pocztą e-mail i zasobami firmy. Aby uzyskać informacje dotyczące dostępu warunkowego opartego na urządzeniach i aplikacjach, a także poznać typowe scenariusze dotyczące używania dostępu warunkowego za pomocą usługi Intune, zobacz [Co to jest dostęp warunkowy?](conditional-access.md).
+    Dostęp warunkowy dotyczy sposobów kontrolowania urządzeń i aplikacji, które mogą nawiązywać połączenie z pocztą e-mail i zasobami firmy. Aby uzyskać informacje dotyczące dostępu warunkowego opartego na urządzeniach i aplikacjach, a także poznać typowe scenariusze dotyczące używania dostępu warunkowego za pomocą usługi Intune, zobacz [Co to jest dostęp warunkowy?](conditional-access.md)
 
 8. W usłudze [Intune](https://aka.ms/intuneportal) wybierz pozycję **Użytkownicy**, aby wyświetlić szczegółowe informacje o użytkownikach w usłudze Intune. Ci użytkownicy są pracownikami firmy. 
  

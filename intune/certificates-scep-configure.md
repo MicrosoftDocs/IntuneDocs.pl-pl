@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/06/2019
+ms.date: 06/24/2019
 ms.topic: article
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e170fe0c1b461bad140b89ac01a2ad817e2082e5
-ms.sourcegitcommit: 7ceae61e036ccf8b33704751b0b39fee81944072
+ms.openlocfilehash: 2e8e7e6c244e14e880dddb7ae76ab0c08ef5088a
+ms.sourcegitcommit: edf0f4e791138dcf589dec8b633edc6eda55ef8c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66744341"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344085"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurowanie certyfikatów SCEP i korzystanie z nich w usłudze Intune
 
@@ -68,7 +68,7 @@ Zaleca się opublikowanie serwera usługi NDES za pośrednictwem odwrotnego serw
 |**Szablon certyfikatu**|Skonfiguruj ten szablon na serwerze urzędu wystawiającego certyfikaty.|
 |**Certyfikat uwierzytelniania klienta**|Żądany od urzędu wystawiającego certyfikaty lub publicznego urzędu certyfikacji; instalowany na serwerze usługi NDES.|
 |**Certyfikat uwierzytelniania serwera**|Żądany od urzędu wystawiającego certyfikaty lub publicznego urzędu certyfikacji; certyfikat SSL instalowany i powiązany w usługach IIS na serwerze usługi NDES. Jeśli certyfikat ma ustawione użycie kluczy uwierzytelniania klienta i serwera (**rozszerzenia EKU**), wówczas można użyć tego samego certyfikatu.|
-|**Certyfikat zaufanego głównego urzędu certyfikacji**|Ten certyfikat należy wyeksportować w formacie pliku **cer** z głównego urzędu certyfikacji lub z dowolnego urządzenia traktującego główny urząd certyfikacji jako zaufany. Następnie należy przypisać go do użytkowników i/lub urządzeń, używając profilu certyfikatu zaufanego urzędu certyfikacji.<br /><b>UWAGA:<b /> po przypisaniu profilu certyfikatu SCEP przypisz profil zaufanego certyfikatu głównego, którego dotyczy odwołanie w profilu certyfikatu SCEP, do tej samej grupy użytkowników lub urządzeń.<br /><br />Należy użyć jednego certyfikatu zaufanego głównego urzędu certyfikacji dla każdej platformy systemu operacyjnego i powiązać te certyfikaty z poszczególnymi utworzonymi profilami zaufanych certyfikatów głównych.<br /><br />W razie potrzeby można użyć dodatkowych certyfikatów zaufanego głównego urzędu certyfikacji. Można na przykład zrobić to, aby urząd certyfikacji podpisujący certyfikaty uwierzytelniania serwera dla punktów dostępowych Wi-Fi był traktowany jako zaufany.|
+|**Certyfikat zaufanego głównego urzędu certyfikacji**|Ten certyfikat należy wyeksportować w formacie pliku **cer** z głównego urzędu certyfikacji lub z dowolnego urządzenia traktującego główny urząd certyfikacji jako zaufany. Następnie należy przypisać go do użytkowników i/lub urządzeń, używając profilu certyfikatu zaufanego urzędu certyfikacji.<br /> **UWAGA:<br /> po przypisaniu profilu certyfikatu SCEP przypisz *profil zaufanego certyfikatu głównego*, którego dotyczy odwołanie w profilu certyfikatu SCEP, do tej samej grupy użytkowników lub urządzeń.  Aby utworzyć ten profil, zobacz sekcję [Tworzenie profilu zaufanego certyfikatu](certficates-pfx-configure.md#create-a-trusted-certificate-profile) w artykule dotyczącym profilów certyfikatów PKCS.** <br/><br />Należy użyć jednego certyfikatu zaufanego głównego urzędu certyfikacji dla każdej platformy systemu operacyjnego i powiązać te certyfikaty z poszczególnymi utworzonymi profilami zaufanych certyfikatów głównych. <br /><br />W razie potrzeby można użyć dodatkowych certyfikatów zaufanego głównego urzędu certyfikacji. Można na przykład zrobić to, aby urząd certyfikacji podpisujący certyfikaty uwierzytelniania serwera dla punktów dostępowych Wi-Fi był traktowany jako zaufany.|
 
 ### <a name="accounts"></a>Konta
 
@@ -487,7 +487,7 @@ Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i podaj nas
      - **Podpis cyfrowy**: zezwalaj na wymianę kluczy tylko wtedy, gdy w ochronie klucza pomaga podpis cyfrowy
    - **Rozmiar klucza (bity)** : wybierz liczbę bitów zawartych w kluczu
    - **Algorytm wyznaczania wartości skrótu** (Android, Windows Phone 8.1, Windows 8.1, Windows 10): Wybierz jeden z dostępnych typów algorytmu wyznaczania wartości skrótu do użycia z tym certyfikatem. Wybierz najwyższy poziom zabezpieczeń obsługiwany przez podłączane urządzenia.
-   - **Certyfikat główny**: wybierz profil certyfikatu głównego urzędu certyfikacji, który został uprzednio skonfigurowany i przypisany do użytkownika i/lub urządzenia. Ten certyfikat urzędu certyfikacji musi być certyfikatem głównym urzędu certyfikacji wystawiającego certyfikat skonfigurowany w ramach danego profilu certyfikatu. Przypisz ten profil zaufanego certyfikatu głównego do tej samej grupy, która jest przypisana w profilu certyfikatu SCEP.
+   - **Certyfikat główny**: wybierz [profil zaufanego certyfikatu głównego](certficates-pfx-configure.md#create-a-trusted-certificate-profile), który został uprzednio utworzony i przypisany do użytkownika i/lub urządzenia. Ten certyfikat urzędu certyfikacji musi być certyfikatem głównym urzędu certyfikacji wystawiającego certyfikat skonfigurowany w ramach danego profilu certyfikatu. Przypisz ten profil zaufanego certyfikatu głównego do tej samej grupy, która jest przypisana w profilu certyfikatu SCEP.
    - **Rozszerzone użycie klucza**: **dodaj** wartości w zależności od celu certyfikatu. W większości przypadków jest wymagane wprowadzenie wartości **Uwierzytelnianie klienta** dla certyfikatu, aby zapewnić użytkownikom lub urządzeniom możliwość uwierzytelnienia na serwerze. Można jednak dodać również inne użycia klucza, zgodnie z potrzebami.
    - **Ustawienia rejestracji**
      - **Próg odnawiania (%)** : wprowadź wartość procentową pozostałego okresu ważności certyfikatu, przy której urządzenie ma żądać odnowienia certyfikatu.
@@ -508,6 +508,7 @@ Przed przypisaniem profilów certyfikatów do grup należy wziąć pod uwagę na
 
     > [!NOTE]
     > W przypadku systemu iOS należy oczekiwać występowania wielu kopii certyfikatu w profilu zarządzania, jeśli wdrożono wiele profilów zasobu, które używają tego samego profilu certyfikatu.
+- Jeśli używasz funkcji współzarządzania dla usługi Intune i programu Configuration Manager, w programie Configuration Manager [ustaw suwak obciążenia](https://docs.microsoft.com/sccm/comanage/how-to-switch-workloads) dla *zasad dostępu do zasobów* na **usługę Intune** lub **pilotażową usługę Intune**. To ustawienie umożliwia klientom systemu Windows 10 uruchamianie procesu żądania certyfikatu.  
 
 Informacje dotyczące sposobu przypisywania profilów znajdują się w opisie [przypisywanie profilów urządzeń](device-profile-assign.md).
 
@@ -552,7 +553,7 @@ Począwszy od wersji 6.1806.x.x, usługa łącznika Intune rejestruje zdarzenia 
 | -------------   | -------------   | -------------      |
 | 0x00000000 | Powodzenie  | Powodzenie |
 | 0x00000400 | PKCS_Issue_CA_Unavailable  | Urząd certyfikacji jest nieprawidłowy lub nieosiągalny. Sprawdź, czy urząd certyfikacji jest dostępny i Twój serwer może się z nim komunikować. |
-| 0x00000401 | Symantec_ClientAuthCertNotFound  | Nie odnaleziono certyfikatu autoryzacji klienta firmy Symantec w lokalnym magazynie certyfikatów. Aby uzyskać więcej informacji, zapoznaj się z artykułem [Instalacja certyfikatu autoryzacji firmy Symantec](https://docs.microsoft.com/intune/certificates-symantec-configure#install-the-symantec-registration-authorization-certificate).  |
+| 0x00000401 | Symantec_ClientAuthCertNotFound  | Nie odnaleziono certyfikatu autoryzacji klienta firmy Symantec w lokalnym magazynie certyfikatów. Więcej informacji można znaleźć w artykule [Set up Intune Certificate Connector for DigiCert PKI Platform](https://docs.microsoft.com/intune/certificates-digicert-configure#troubleshooting) (Konfigurowanie łącznika certyfikatów usługi Intune dla platformy infrastruktury kluczy publicznych firmy DigiCert).  |
 | 0x00000402 | RevokeCert_AccessDenied  | Określone konto nie ma uprawnień do odwołania certyfikatu z urzędu certyfikacji. Zobacz pole Nazwa urzędu certyfikacji w szczegółach komunikatu o zdarzeniu, aby określić urząd certyfikacji.  |
 | 0x00000403 | CertThumbprint_NotFound  | Nie można odnaleźć certyfikatu zgodnego z danymi wejściowymi. Zarejestruj łącznik certyfikatów i spróbuj ponownie. |
 | 0x00000404 | Certificate_NotFound  | Nie można odnaleźć certyfikatu zgodnego z podanymi danymi wejściowymi. Ponownie zarejestruj łącznik certyfikatów i spróbuj ponownie. |

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/17/2019
+ms.date: 06/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d90bc17d01a76c9c566210edc3bdc265511fa16d
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: bccfc952202ed9db5bdc5f68bbbba57c61b37b13
+ms.sourcegitcommit: b3a1c5b0b24f0e52cf318defe10f3d27a2770009
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66047829"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67316930"
 ---
 # <a name="monitor-bitlocker-and-device-encryption"></a>Monitorowanie funkcji BitLocker i szyfrowania urządzeń  
 Usługa Intune udostępnia scentralizowaną lokalizację na potrzeby określania stanu szyfrowania urządzeń z systemem Windows 10 oraz ułatwia dostęp do ważnych informacji dotyczących funkcji BitLocker z urządzeń znajdujących się w usłudze Azure Active Directory (Azure AD).  
@@ -51,7 +51,7 @@ Raport zawiera **nazwy urządzeń** z systemem Windows 10 i dotyczące ich ogól
   - **Niegotowe**: Urządzenie nie obsługuje pełnych możliwości szyfrowania, lecz obsługuje szyfrowanie w pewnym stopniu. Na przykład urządzenie może zostać zaszyfrowane ręcznie przez użytkownika lub za pomocą zasad grupy, które można skonfigurować pod kątem szyfrowania bez modułu TPM.
   - **Nie dotyczy**: Nie ma wystarczających informacji do sklasyfikowania urządzenia.  
 
-- **Stan szyfrowania** — określa, czy dysk systemu operacyjnego jest zaszyfrowany.  
+- **Stan szyfrowania** — określa, czy dysk systemu operacyjnego jest zaszyfrowany. 
 
 
 ### <a name="device-encryption-status"></a>Stan szyfrowania urządzenia
@@ -60,7 +60,7 @@ Po wybraniu urządzenia usługa Intune wyświetla okienko **Stan szyfrowania urz
 Okienko zawiera następujące szczegółowe informacje:  
 - **Nazwa urządzenia** — wyświetlana nazwa urządzenia.  
 - **Gotowość szyfrowania** — ocena gotowości urządzenia do obsługi szyfrowania za pomocą funkcji BitLocker. Stan szyfrowania dla urządzenia może mieć wartość *Zaszyfrowane*, nawet jeśli jego gotowość szyfrowania ma wartość *Niegotowe*, ponieważ nie ma modułu TPM. (Zobacz Gotowość szyfrowania w poprzedniej sekcji, aby uzyskać więcej informacji).
-- **Stan szyfrowania** — określa, czy dysk systemu operacyjnego jest zaszyfrowany.  
+- **Stan szyfrowania** — określa, czy dysk systemu operacyjnego jest zaszyfrowany. Do rozpoczęcia raportowania stanu szyfrowania urządzeń lub zmiany tego stanu w usłudze Intune może upłynąć do 24 godzin.  
 - **Profile** — lista profilów *konfiguracji urządzenia*, które dotyczą danego urządzenia, obejmująca następujący typ profilu i następujące ustawienia:  
   - Typ profilu = *Endpoint Protection*  
   - Ustawienia > Szyfrowanie systemu Windows > Szyfruj urządzenia = *Wymagane*  
@@ -95,7 +95,7 @@ Okienko zawiera następujące szczegółowe informacje:
 
 ## <a name="bitlocker-recovery-keys"></a>Klucze odzyskiwania funkcji BitLocker
 Usługa Intune udostępnia blok usługi Azure AD dla funkcji BitLocker, dzięki czemu można wyświetlić identyfikatory klucza i klucze odzyskiwania funkcji BitLocker dla urządzeń z systemem Windows 10 z poziomu portalu usługi Intune.  Aby urządzenie było dostępne, jego klucze muszą znajdować się w depozycie usługi Azure AD. 
-1. Zaloguj się do usługi [Intune](https://aka.ms/intuneportal), przejdź do pozycji **Urządzenia**, a następnie w obszarze *Zarządzaj* wybierz opcję **Wszystkie urządzenia**.
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), przejdź do pozycji **Urządzenia**, a następnie w obszarze *Zarządzaj* wybierz opcję **Wszystkie urządzenia**.
 2. Wybierz urządzenie z listy, a następnie w obszarze *Monitor* wybierz opcję **Klucze odzyskiwania**.  
   
 Jeśli klucze są dostępne w usłudze Azure AD, są wyświetlane następujące informacje:

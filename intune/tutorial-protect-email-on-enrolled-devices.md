@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 80f9d3d2799732f2d019189913c5c47cc6973809
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 3f3d51cfbacfa8ef380531f91e058717cf51d089
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66044587"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044152"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>Samouczek: Chronienie poczty e-mail usługi Exchange Online na urządzeniach zarządzanych
 Dowiedz się więcej na temat używania zasad zgodności urządzeń z dostępem warunkowym w celu zagwarantowania, że urządzenia z systemem iOS będą mogły uzyskiwać dostęp do poczty e-mail usługi Exchange Online tylko wtedy, gdy będą zarządzane przez usługę Intune i będą korzystać z zatwierdzonej aplikacji poczty e-mail. 
@@ -133,9 +133,9 @@ Dzięki utworzonym zasadom dowolne urządzenie z systemem iOS, które próbuje z
 Gdy zasady testowe nie są już potrzebne, można je usunąć.
 1. Zaloguj się w usłudze [Intune](https://aka.ms/intuneportal) jako administrator globalny lub administrator usługi Intune.
 2. Wybierz kolejno pozycje **Zgodność urządzenia** > **Zasady**.
-3. Z listy **Nazwa zasad** wybierz menu kontekstowe (**...**) dla zasad testowych, a następnie wybierz pozycję **Usuń**. Wybierz przycisk **OK**, aby potwierdzić.
+3. Z listy **Nazwa zasad** wybierz menu kontekstowe ( **...** ) dla zasad testowych, a następnie wybierz pozycję **Usuń**. Wybierz przycisk **OK**, aby potwierdzić.
 4. Wybierz kolejno pozycje **Dostęp warunkowy** > **Zasady**.
-5. Z listy **Nazwa zasad** wybierz menu kontekstowe (**...**) dla zasad testowych, a następnie wybierz pozycję **Usuń**. Kliknij przycisk **Tak**, aby potwierdzić.
+5. Z listy **Nazwa zasad** wybierz menu kontekstowe ( **...** ) dla zasad testowych, a następnie wybierz pozycję **Usuń**. Kliknij przycisk **Tak**, aby potwierdzić.
 
  ## <a name="next-steps"></a>Następne kroki 
-W tym samouczku utworzono zasady wymagające zarejestrowania urządzeń z systemem iOS w usłudze Intune oraz użycia aplikacji Outlook w celu uzyskania dostępu do poczty e-mail usługi Exchange Online. Aby dowiedzieć się więcej na temat ochrony innych aplikacji i usług, takich jak klienci programu Exchange ActiveSync dla usługi Office 365 Exchange Online, za pomocą usługi Intune z dostępem warunkowym, zobacz [Konfigurowanie dostępu warunkowego](conditional-access.md).
+W tym samouczku utworzono zasady wymagające zarejestrowania urządzeń z systemem iOS w usłudze Intune oraz użycia aplikacji Outlook w celu uzyskania dostępu do poczty e-mail usługi Exchange Online. Aby dowiedzieć się więcej na temat ochrony innych aplikacji i usług, takich jak klienci programu Exchange ActiveSync dla usługi Office 365 Exchange Online, za pomocą usługi Intune z dostępem warunkowym, zobacz artykuł [Konfigurowanie dostępu warunkowego](conditional-access.md).

@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bbf04d771a9c1fd43cfe695dd2d27b9cfe1a0528
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: bbd8d81dfab46a1e752084aab75fbcf0d8104187
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050304"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044280"
 ---
 # <a name="quickstart-create-an-email-device-profile-for-ios"></a>Szybki start: tworzenie profilu urządzenia poczty e-mail dla systemu iOS
 
-Z tego przewodnika Szybki start dowiesz się, jak utworzyć profil urządzenia poczty e-mail dla urządzeń z systemem iOS. Ten profil określa ustawienia, które są wymagane, aby wbudowana aplikacja poczty e-mail na urządzeniu z systemem iOS mogła łączyć się z firmową pocztą e-mail. Profile urządzeń poczty e-mail ułatwiają standaryzacje ustawień na różnych urządzeniach i umożliwiają użytkownikom końcowym dostęp do firmowej poczty e-mail na ich osobistych urządzeniach bez konieczności przeprowadzania konfiguracji po ich stronie. Aby dodatkowo zabezpieczyć pocztę e-mail, można za pomocą profilu poczty e-mail ustalać, czy urządzenia są zgodne, i skonfigurować dostęp warunkowy w celu zezwalania na dostęp do poczty e-mail tylko zgodnym urządzeniom. Aby uzyskać szczegółowe informacje na temat profilów poczty e-mail, zobacz [How to configure email settings in Microsoft Intune](email-settings-configure.md) (Jak skonfigurować ustawienia poczty e-mail w usłudze Microsoft Intune).
+Z tego przewodnika Szybki start dowiesz się, jak utworzyć profil urządzenia poczty e-mail dla urządzeń z systemem iOS. Ten profil określa ustawienia, które są wymagane, aby wbudowana aplikacja poczty e-mail na urządzeniu z systemem iOS mogła łączyć się z firmową pocztą e-mail. Profile urządzeń poczty e-mail ułatwiają standaryzacje ustawień na różnych urządzeniach i umożliwiają użytkownikom końcowym dostęp do firmowej poczty e-mail na ich osobistych urządzeniach bez konieczności przeprowadzania konfiguracji po ich stronie. Aby dodatkowo zabezpieczyć pocztę e-mail, można za pomocą profilu poczty e-mail ustalić, czy urządzenia są zgodne, i skonfigurować dostęp warunkowy w celu zezwalania na dostęp do poczty e-mail tylko zgodnym urządzeniom. Aby uzyskać szczegółowe informacje na temat profilów poczty e-mail, zobacz [How to configure email settings in Microsoft Intune](email-settings-configure.md) (Jak skonfigurować ustawienia poczty e-mail w usłudze Microsoft Intune).
 
 Jeśli nie masz subskrypcji usługi Intune, [utwórz konto bezpłatnej wersji próbnej](free-trial-sign-up.md).
 
@@ -67,7 +67,7 @@ Zaloguj się w usłudze [Intune](https://aka.ms/intuneportal) jako administrator
 Jeśli nie zamierzasz używać utworzonego profilu w dodatkowych samouczkach ani podczas testowania, możesz go teraz usunąć.
 1. W obszarze Intune wybierz pozycję **Konfiguracja urządzeń**, a następnie **Profile**.
 2. Wybierz utworzony profil testowy **iOS require work email** (iOS — wymagaj służbowego adresu e-mail).
-3. Wybierz wielokropek (**...**) obok profilu, a następnie wybierz pozycję **Usuń**.
+3. Wybierz wielokropek ( **...** ) obok profilu, a następnie wybierz pozycję **Usuń**.
 
 ## <a name="next-steps"></a>Następne kroki
 

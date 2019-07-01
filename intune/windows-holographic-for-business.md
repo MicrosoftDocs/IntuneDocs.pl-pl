@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a10fa6983b8e8c34a1844c647d952ca8cbf0730c
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 1c1400b3786965ab962de01207f24b53aa3a47b1
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050166"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045991"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Zarządzanie urządzeniami z systemem Windows Holographic i urządzeniami HoloLens oraz korzystanie z różnych funkcji zarządzania urządzeniami przy użyciu usługi Intune
 
@@ -33,11 +33,11 @@ Aby korzystać z urządzeń z systemem Windows Holographic przy użyciu usługi 
 
 Usługa Azure Active Directory (AD) jest bardzo pomocna w zarządzaniu i sterowaniu urządzeniami z systemem Windows Holographic for Business. Usługi Intune i Azure AD umożliwiają: 
 
-- **[Dołączanie urządzeń do usługi Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)**: w usłudze Azure Active Directory (AD) możesz dodawać służbowe urządzenia z systemem Windows 10, w tym urządzenia z systemem Windows Holographic for Business. Ta funkcja umożliwia usłudze Azure AD sterowanie urządzeniem. Pomaga ona potwierdzić, że użytkownicy uzyskują dostęp do zasobów firmy z urządzeń, które spełniają Twoje standardy zabezpieczeń i zgodności.
+- **[Dołączanie urządzeń do usługi Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)** : w usłudze Azure Active Directory (AD) możesz dodawać służbowe urządzenia z systemem Windows 10, w tym urządzenia z systemem Windows Holographic for Business. Ta funkcja umożliwia usłudze Azure AD sterowanie urządzeniem. Pomaga ona potwierdzić, że użytkownicy uzyskują dostęp do zasobów firmy z urządzeń, które spełniają Twoje standardy zabezpieczeń i zgodności.
 
   Artykuł [Zarządzanie urządzeniami w usłudze Azure AD](https://docs.microsoft.com/azure/active-directory/devices/overview) zawiera więcej szczegółowych informacji.
 
-- **[Rejestrację zbiorczą urządzeń z systemem Windows](windows-bulk-enroll.md)**: możesz dołączyć dużą liczbę nowych urządzeń z systemem Windows do usługi Azure Active Directory (AD) i Intune. W ramach tej funkcji, nazywanej rejestrowaniem zbiorczym, są używane pakiety aprowizacji. Te pakiety umożliwiają dołączenie urządzeń z systemem Windows Holographic for Business do dzierżawy usługi Azure AD i zarejestrowanie ich w usłudze Intune.
+- **[Rejestrację zbiorczą urządzeń z systemem Windows](windows-bulk-enroll.md)** : możesz dołączyć dużą liczbę nowych urządzeń z systemem Windows do usługi Azure Active Directory (AD) i Intune. W ramach tej funkcji, nazywanej rejestrowaniem zbiorczym, są używane pakiety aprowizacji. Te pakiety umożliwiają dołączenie urządzeń z systemem Windows Holographic for Business do dzierżawy usługi Azure AD i zarejestrowanie ich w usłudze Intune.
 
 ## <a name="company-portal"></a>Portal firmy
 **[Konfigurowanie aplikacji Portal firmy](company-portal-app.md)**
@@ -56,7 +56,7 @@ Przy użyciu aplikacji Portal firmy możesz również uruchomić następujące a
 
 Zasady zgodności to reguły i ustawienia, które urządzenia muszą spełnić, aby były zgodne. Użyj tych zasad z dostępem warunkowym, aby zablokować dostęp do zasobów firmy dla urządzeń, które nie są zgodne. W usłudze Intune utwórz zasady zgodności, aby umożliwić lub zablokować dostęp dla urządzeń z systemem Windows Holographic for Business. Na przykład możesz utworzyć zasady wymagające włączenia funkcji Bitlocker.
 
-Zobacz też **[Wprowadzenie do zasad zgodności](device-compliance-get-started.md)**.
+Zobacz też **[Wprowadzenie do zasad zgodności](device-compliance-get-started.md)** .
 
 ## <a name="deploy-and-manage-apps"></a>Wdrażanie aplikacji i zarządzanie nimi
 **[Dodawanie aplikacji do usługi Intune](apps-add.md)**
@@ -85,11 +85,11 @@ Usługa Intune oferuje pewne wbudowane działania umożliwiające administratoro
 
 W przypadku urządzeń z systemem Windows Holographic for Business można korzystać z następujących działań: 
 
-- **[Czyszczenie](devices-wipe.md#wipe)**: działanie **Czyszczenie** usuwa urządzenie z usługi Intune i przywraca na nim domyślne ustawienia fabryczne. Można zastosować to działanie przed przekazaniem urządzenia nowemu użytkownikowi albo w przypadku kradzieży lub utraty urządzenia.
+- **[Czyszczenie](devices-wipe.md#wipe)** : działanie **Czyszczenie** usuwa urządzenie z usługi Intune i przywraca na nim domyślne ustawienia fabryczne. Można zastosować to działanie przed przekazaniem urządzenia nowemu użytkownikowi albo w przypadku kradzieży lub utraty urządzenia.
 
-- **[Wycofaj](devices-wipe.md#retire)**: działanie **Wycofaj** powoduje usunięcie urządzenia z usługi Intune. Powoduje ono również usunięcie z zarządzanej aplikacji danych, ustawień i profilów poczty e-mail przypisanych przez usługę Intune. Dane osobiste użytkownika pozostają na urządzeniu.
+- **[Wycofaj](devices-wipe.md#retire)** : działanie **Wycofaj** powoduje usunięcie urządzenia z usługi Intune. Powoduje ono również usunięcie z zarządzanej aplikacji danych, ustawień i profilów poczty e-mail przypisanych przez usługę Intune. Dane osobiste użytkownika pozostają na urządzeniu.
 
-- **[Synchronizacja urządzeń w celu pobrania najnowszych zasad i akcji](device-sync.md)**: działanie **Synchronizacja** wymusza natychmiastowe zaewidencjonowanie urządzenia w usłudze Intune. Zaewidencjonowane urządzenie natychmiast odbiera wszelkie przypisane oczekujące akcje lub zasady. Ta funkcja ułatwia weryfikowanie przypisanych zasad i rozwiązywanie dotyczących ich problemów bez konieczności czekania na następne zaplanowane zaewidencjonowanie.
+- **[Synchronizacja urządzeń w celu pobrania najnowszych zasad i akcji](device-sync.md)** : działanie **Synchronizacja** wymusza natychmiastowe zaewidencjonowanie urządzenia w usłudze Intune. Zaewidencjonowane urządzenie natychmiast odbiera wszelkie przypisane oczekujące akcje lub zasady. Ta funkcja ułatwia weryfikowanie przypisanych zasad i rozwiązywanie dotyczących ich problemów bez konieczności czekania na następne zaplanowane zaewidencjonowanie.
 
 Artykuł **[Co to jest zarządzanie urządzeniami w usłudze Microsoft Intune?](device-management.md)** to dobre źródło informacji na temat zarządzania urządzeniami w witrynie Azure Portal. 
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a197b057278ff2f32539169feccc91edbd752386
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: f4fa42a52e104ef1c9cf13c8490159f3dbb2efed
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66048974"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045328"
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Ponowne przypisywanie zasad dostępu warunkowego z klasycznego portalu usługi Intune do witryny Azure Portal
 
@@ -208,4 +208,4 @@ Po ponownym przypisaniu zasad dostępu warunkowego w witrynie Azure Portal nale�
 
 - [Typowe sposoby korzystania z dostępu warunkowego przy użyciu usługi Intune](conditional-access-intune-common-ways-use.md)
 - [Dostęp warunkowy oparty na aplikacji z użyciem usługi Intune](app-based-conditional-access-intune.md)
-- [Dostęp warunkowy w usłudze Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
+- [Conditional Access in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal-get-started) (Dostęp warunkowy w usłudze Azure Active Directory)

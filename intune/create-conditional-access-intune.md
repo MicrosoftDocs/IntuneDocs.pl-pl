@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9cb081dd52999f203420e8a1f0b4f9c52a313f75
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 06dcc730406af3ae2d715cbe7f0795253e2629f0
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66043290"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045099"
 ---
 # <a name="create-a-device-based-conditional-access-policy"></a>Tworzenie zasad dostępu warunkowego opartego na urządzeniach
 

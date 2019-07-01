@@ -269,6 +269,8 @@
           href: device-logout-user.md
         - name: Usuń użytkownika
           href: device-remove-user.md
+        - name: Wyszukiwanie użytkownika podstawowego
+          href: find-primary-user.md
         - name: Wymazywanie urządzenia z systemem macOS
           href: device-erase.md
         - name: Zdalne sterowanie urządzeniami przenośnymi

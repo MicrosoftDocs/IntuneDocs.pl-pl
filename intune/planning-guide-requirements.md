@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 907190d3022e3ed6af06f7304f24f38452f2d4bd
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 98441f03ae2ac9ef23e84de8d06198335da69198
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046261"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044320"
 ---
 # <a name="determine-use-case-scenario-requirements"></a>Określanie wymagań scenariusza przypadku użycia
 
@@ -50,7 +50,7 @@ Możesz [pobrać szablon powyższej tabeli](https://gallery.technet.microsoft.co
 Oto kilka dodatkowych przykładowych elementów, których można użyć w kolumnie „Wymagania”:
 
 - **Bezpieczna poczta e-mail**
-    - Dostęp warunkowy do lokalnego programu Exchange / usługi Exchange Online
+    - Dostęp warunkowy do lokalnego programu Exchange/usługi Exchange Online
     - Zasady ochrony aplikacji Outlook
 
 - **Ustawienia urządzenia**

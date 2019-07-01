@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 940ef3e6df95629dad03d6c1d4e60343e4273473
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: d25012790322491a9038f0bcf9349434d5a45b8d
+ms.sourcegitcommit: 14f4e97de5699394684939e6f681062b5d4c1671
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66048839"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67251085"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Integrowanie narzędzia Jamf Pro z usługą Intune w celu zachowania zgodności
 
@@ -80,7 +80,7 @@ Aby połączyć usługę Intune z narzędziem Jamf Pro:
 
 ## <a name="enable-intune-to-integrate-with-jamf-pro"></a>Włączanie możliwości integracji usługi Intune z narzędziem Jamf Pro
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=20909) i przejdź do pozycji **Microsoft Intune** > **Zgodność urządzenia** > **Zarządzanie urządzeniem partnera**.
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) i przejdź do pozycji **Microsoft Intune** > **Zgodność urządzenia** > **Zarządzanie urządzeniem partnera**.
 
 2. Włącz Łącznik zgodności dla narzędzia Jamf poprzez wklejenie identyfikatora aplikacji zapisanego we wcześniejszej części procedury w polu **Identyfikator aplikacji usługi Azure Active Directory w oprogramowaniu Jamf**.
 

@@ -1,7 +1,7 @@
 ---
 title: Wspieranie przyjęcia rozwiązania przez użytkowników końcowych przy użyciu dostępu warunkowego
 titleSuffix: Microsoft Intune
-description: Dowiedz się, jak używać dostępu warunkowego do rejestracji dysku w usłudze Microsoft Intune.
+description: Dowiedz się, jak używać dostępu warunkowego w celu wspierania rejestracji w usłudze Microsoft Intune.
 keywords: ''
 author: dougeby
 ms.author: dougeby
@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a37d6dac24049a10b5abaed41a44c0c391b095e6
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 2bedaf279d65ee1ed7f8dda4e8d866fb848bade7
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050476"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044590"
 ---
 # <a name="drive-end-user-adoption-with-conditional-access-in-microsoft-intune"></a>Wspieranie przyjęcia rozwiązania przez użytkowników końcowych przy użyciu dostępu warunkowego w usłudze Microsoft Intune
 
@@ -29,7 +29,7 @@ Włączenie w usłudze Intune funkcji dostępu warunkowego, w tym np. blokowania
 
 ## <a name="migration-campaign-with-conditional-access"></a>Kampania migracji uwzględniająca dostęp warunkowy
 
-Poniżej przedstawiono typowe podejście do zwiększenia liczby rejestrowanych urządzeń w ramach kampanii migracji poprzez zastosowanie dostępu warunkowego:
+Poniżej przedstawiono typowe podejście do zwiększenia liczby rejestrowanych urządzeń w ramach kampanii migracji przez zastosowanie dostępu warunkowego:
 
 1.  Ustaw zasady dostępu warunkowego, które zostaną wymuszone dla wszystkich użytkowników, ale wyklucz konkretnie użytkowników, w przypadku których jest wymagana migracja ze starego rozwiązania MDM. Możesz utworzyć grupę użytkowników usługi Azure AD, do której należeć będą wszyscy użytkownicy wykluczeni z dostępu warunkowego.
 
@@ -54,7 +54,7 @@ Jest to jedno z wielu możliwych podejść. Można wybrać prostszy proces, któ
 
 -   Dowiedz się więcej na temat [dostępu warunkowego](conditional-access.md).
 
-## <a name="task-list-for-conditional-access"></a>Lista zadań związanych z konfiguracją dostępu warunkowego
+## <a name="task-list-for-conditional-access"></a>Lista zadań związanych z dostępem warunkowym
 
 ### <a name="task-1-decide-how-you-are-going-to-implement-conditional-access"></a>Zadanie 1. Podjęcie decyzji o sposobie wdrożenia dostępu warunkowego
 
@@ -68,7 +68,7 @@ Wybierz jedną z następujących opcji:
 
 -   [Instalowanie łącznika lokalnego programu Exchange w usłudze Intune](exchange-connector-install.md)
 
--   [Konfigurowanie zasad dostępu warunkowego opartego na aplikacji dla usługi Exchange Online](app-based-conditional-access-intune-create.md)
+-   [Konfigurowanie zasad dostępu warunkowego na podstawie aplikacji dla usługi Exchange Online](app-based-conditional-access-intune-create.md)
 
 -   [Konfigurowanie zasad dostępu warunkowego opartego na aplikacji dla usługi SharePoint Online](app-based-conditional-access-intune-create.md)
 

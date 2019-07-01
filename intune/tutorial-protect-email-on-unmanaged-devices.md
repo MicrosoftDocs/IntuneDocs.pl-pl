@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fc1f877f9b457c6abafef7f1e66e8b04bba2c8e0
-ms.sourcegitcommit: 2f32f6d2129bc10cc4a02115732e995edceb37d6
+ms.openlocfilehash: 624cc72ad9539659e1ce2c8b70f6a6698d5e7ba2
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66828987"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67046272"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>Samouczek: chronienie poczty e-mail usługi Exchange Online na urządzeniach niezarządzanych
 
@@ -166,7 +166,7 @@ Zostały utworzone zasady dostępu warunkowego dla klientów z nowoczesnym uwier
 
 9. Wybierz przycisk **Utwórz**.  
 
-Zasady ochrony aplikacji i dostępu warunkowego zostały teraz utworzone i są gotowe do testowania.  
+Zasady ochrony aplikacji i dostęp warunkowy zostały teraz utworzone i są gotowe do testowania.  
 
 ## <a name="try-it-out"></a>Wypróbowywanie działania  
 Dzięki utworzonym zasadom urządzenia będą musiały zostać zarejestrowane w usłudze Intune i będą musiały używać aplikacji mobilnej Outlook w celu uzyskiwania dostępu do poczty e-mail usługi Office 365. Aby przetestować ten scenariusz w urządzeniu z systemem iOS, zaloguj się do usługi Exchange Online przy użyciu poświadczeń dla użytkownika w dzierżawie testowej.  
@@ -189,4 +189,4 @@ Gdy zasady testowe nie są już potrzebne, można je usunąć.
 5. Z listy **Nazwa zasad** wybierz menu kontekstowe ( **...** ) dla każdej z zasad testowych, a następnie wybierz pozycję **Usuń**. Kliknij przycisk **Tak**, aby potwierdzić.  
 
  ## <a name="next-steps"></a>Następne kroki  
-W tym samouczku utworzono zasady ochrony aplikacji, aby ograniczyć czynności, które użytkownik może wykonać w aplikacji Outlook. Utworzono również zasady dostępu warunkowego, aby wymagać użycia aplikacji Outlook i usługi MFA w przypadku nowoczesnych klientów uwierzytelniania. Aby dowiedzieć się więcej na temat ochrony innych aplikacji i usług za pomocą usługi Intune z dostępem warunkowym, zobacz [Konfigurowanie dostępu warunkowego](conditional-access.md).
+W tym samouczku utworzono zasady ochrony aplikacji, aby ograniczyć czynności, które użytkownik może wykonać w aplikacji Outlook. Utworzono również zasady dostępu warunkowego, aby wymagać użycia aplikacji Outlook i usługi MFA w przypadku nowoczesnych klientów uwierzytelniania. Aby dowiedzieć się więcej na temat ochrony innych aplikacji i usług za pomocą usługi Intune z dostępem warunkowym, zobacz artykuł [Konfigurowanie dostępu warunkowego](conditional-access.md).

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/28/2019
+ms.date: 06/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f17bdf21db61616f88cef4d257fbcd28d941dae8
-ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
+ms.openlocfilehash: 90b3e858a06a6f3a34de6ec8102e1a6c458369a2
+ms.sourcegitcommit: cd451ac487c7ace18ac9722a28b9facfba41f6d3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66373473"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67298420"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Używanie skryptów programu PowerShell na urządzeniach z systemem Windows 10 w usłudze Intune
 
@@ -45,7 +45,7 @@ Rozszerzenie do zarządzania usługi Intune ma poniższe wymagania wstępne. Gdy
 
 - W urządzeniach działa system Windows 10 w wersji 1607 lub nowszej. Jeśli urządzenie zostało zarejestrowane w ramach [automatycznej rejestracji zbiorczej](windows-bulk-enroll.md), w urządzeniach musi działać system Windows 10 w wersji 1703 lub nowszej. Rozszerzenie zarządzania usługi Intune nie jest obsługiwane w systemie Windows 10 w trybie S, ponieważ ten tryb nie zezwala na uruchamianie aplikacji spoza sklepu. 
   
-- Urządzenia przyłączone do usługi Azure Active Directory (AD), w tym:
+- Urządzenia przyłączone do usługi Azure Active Directory (AD), w tym:  
   
   - Dołączone do hybrydowej usługi Azure AD: Urządzenia przyłączone do usługi Azure Active Directory (AD) i lokalnej usługi Active Directory (AD). Aby uzyskać wskazówki, zobacz [Planowanie implementacji przyłączenia do hybrydowej usługi Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan).
 
@@ -55,13 +55,20 @@ Rozszerzenie do zarządzania usługi Intune ma poniższe wymagania wstępne. Gdy
   
   - Urządzenia ręcznie zarejestrowane w usłudze Intune:
   
-    - Użytkownik loguje się do urządzenia przy użyciu konta użytkownika lokalnego, a następnie ręcznie przyłącza urządzenie do usługi Azure AD (automatyczna rejestracja w usłudze Intune jest włączona w usłudze Azure AD).
+    - [Automatyczna rejestracja w usłudze Intune](quickstart-setup-auto-enrollment.md) została włączona w usłudze Azure AD. Użytkownik końcowy loguje się do urządzenia przy użyciu konta użytkownika lokalnego, ręcznie przyłącza urządzenie do usługi Azure AD, a następnie loguje się do urządzenia przy użyciu konta usługi Azure AD.
     
-    Lub
+    LUB  
     
     - Użytkownik loguje się do urządzenia przy użyciu swojego konta usługi Azure AD, a następnie rejestruje się w usłudze Intune.
 
-  - Urządzenia współzarządzane używające programu Configuration Manager i usługi Intune. Aby uzyskać wskazówki, zobacz [Co to jest współzarządzanie](https://docs.microsoft.com/sccm/comanage/overview).
+  - Urządzenia współzarządzane używające programu Configuration Manager i usługi Intune. Upewnij się, że obciążenie **Aplikacje klienckie** zostało ustawione na **pilotażową usługę Intune** lub **usługę Intune**. Zapoznaj się z poniższymi tematami w celu uzyskania wskazówek: 
+  
+    - [Co to jest współzarządzanie](https://docs.microsoft.com/sccm/comanage/overview) 
+    - [Obciążenie Aplikacje klienckie](https://docs.microsoft.com/sccm/comanage/workloads#client-apps)
+    - [Przełączanie obciążeń programu Configuration Manager do usługi Intune](https://docs.microsoft.com/sccm/comanage/how-to-switch-workloads)
+  
+> [!TIP]
+> Upewnij się, że urządzenia zostały [przyłączone](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) do usługi Azure AD. Urządzenia, które zostały tylko [zarejestrowane](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) w usłudze Azure AD, nie będą otrzymywać skryptów.
 
 ## <a name="create-a-script-policy"></a>Tworzenie zasad skryptu 
 
@@ -87,7 +94,7 @@ Rozszerzenie do zarządzania usługi Intune ma poniższe wymagania wstępne. Gdy
 5. Wybierz pozycję **OK** > **Utwórz**, aby zapisać skrypt.
 
 > [!NOTE]
-> Skrypt programu PowerShell jest uruchamiany z uprawnieniami administratora (domyślnie), kiedy skrypt jest ustawiony na kontekst użytkownika, a użytkownik końcowy ma na urządzeniu uprawnienia administratora.
+> Jeśli skrypty zostały ustawione na kontekst użytkownika, a użytkownik końcowy ma uprawnienia administratora, domyślnie skrypt programu PowerShell jest uruchamiany w obrębie uprawnienia administratora.
 
 ## <a name="assign-the-policy"></a>Przypisywanie zasad
 
@@ -156,6 +163,7 @@ Aby sprawdzić, czy urządzenie jest zarejestrowane automatycznie, możesz wykon
     > [!TIP]
     > **Rozszerzenie zarządzania usługi Microsoft Intune** to usługa, która działa w urządzeniu jak inne usługi na liście aplikacji usług (services.msc). Po ponownym uruchomieniu urządzenia ta usługa może również zostać ponownie uruchomiona i może wyszukać przypisane skrypty programu PowerShell w usłudze Intune. Jeśli usługa **Rozszerzenie zarządzania usługi Microsoft Intune** ma ustawienie Ręcznie, nie zostanie ponownie uruchomiona po ponownym uruchomieniu urządzenia.
 
+- Upewnij się, że urządzenia zostały [przyłączone do usługi Azure AD](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network). Urządzenia, które zostały tylko przyłączone do miejsca pracy lub organizacji ([zarejestrowane](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) w usłudze Azure AD), nie będą otrzymywać skryptów.
 - Klient rozszerzenia do zarządzania usługi Intune co godzinę sprawdza, czy nie ma zmian skryptu lub zasad w usłudze Intune.
 - Upewnij się, że rozszerzenie do zarządzania usługi Intune zostało pobrane do folderu `%ProgramFiles(x86)%\Microsoft Intune Management Extension`.
 - Skrypty nie działają na urządzeniach Surface Hub lub w systemie Windows 10 w trybie S.

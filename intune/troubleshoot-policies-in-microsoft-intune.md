@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/29/2019
+ms.date: 06/20/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,18 +17,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1bed0fda1c19df181dacb36c832a2a4c94e61aff
-ms.sourcegitcommit: a97b6139770719afbd713501f8e50f39636bc202
+ms.openlocfilehash: 9314617640d0bfd7f3a7b0cd0ba572e99ede53f9
+ms.sourcegitcommit: cd451ac487c7ace18ac9722a28b9facfba41f6d3
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402658"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67298394"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Rozwiązywanie problemów związanych z zasadami i profilami w usłudze Intune
 
 Usługa Microsoft Intune zawiera kilka wbudowanych funkcji rozwiązywania problemów. Korzystanie z tych funkcji ułatwia rozwiązywanie problemów z zasadami zgodności i profilami konfiguracji w środowisku.
 
 W tym artykule wymieniono niektóre typowe techniki rozwiązywania problemów i opisano niektóre problemy, które mogą wystąpić.
+
+## <a name="check-tenant-status"></a>Sprawdzanie stanu dzierżawy
+Sprawdź [stanu dzierżawy](tenant-status.md) i upewnij się, subskrypcja jest aktywna. Można również wyświetlić szczegółowe informacje dotyczące aktywnymi zdarzeniami i poradniki, które mogą mieć wpływ na wdrożenie profilu lub zasad.
 
 ## <a name="use-built-in-troubleshooting"></a>Korzystanie z wbudowanej funkcji rozwiązywania problemów
 
@@ -113,6 +116,13 @@ W tym artykule wymieniono niektóre typowe techniki rozwiązywania problemów i 
 > [!NOTE]
 > Jeśli dwie zasady z różnymi poziomami ograniczeń dotyczą tego samego urządzenia lub użytkownika, zostaną zastosowane zasady bardziej restrykcyjne.
 
+## <a name="policy-troubleshooting-resources"></a>Zasoby służące do rozwiązywania problemów z zasadami
+
+- [Rozwiązywanie problemów z systemem iOS lub Android zasady nie są stosowane do urządzeń](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154) (otwiera innej witrynie firmy Microsoft)
+- [Rozwiązywanie problemów z błędami zasad systemu Windows 10 w usłudze Intune](http://configmgrdogsarchive.com/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (otwiera blog)
+- [Rozwiązywanie problemów z dostawcy usług Kryptograficznych ustawienia niestandardowe dla systemu Windows 10](https://support.microsoft.com/en-us/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (otwiera innej witrynie firmy Microsoft)
+- [Zasad grupy systemu Windows 10, vs MDM usługi Intune zasady](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/) (otwiera innej witrynie firmy Microsoft)
+
 ## <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>Alert: zapisywanie reguł dostępu do programu Exchange nie powiodło się
 
 **Problem**: w konsoli administracyjnej odebrano alert **Zapisywanie reguł dostępu w programie Exchange nie powiodło się**  .
@@ -125,11 +135,13 @@ Przydatne informacje można znaleźć w artykule [Rozwiązywanie problemów z lo
 
 Urządzenia z systemem Windows Phone nie zezwalają na obniżenie bezpieczeństwa zasad zabezpieczeń ustawionych wcześniej przy użyciu usługi MDM lub EAS. Na przykład po ustawieniu dla zasady **Minimalna liczba znaków hasła** wartości 8 nastąpiła próba jej zmniejszenia do 4. Do urządzenia są stosowane bardziej restrykcyjne zasady.
 
+Urządzenia z systemem Windows 10 nie można usunąć zasad zabezpieczeń, gdy przypisanie zasady (Zatrzymaj wdrożenie). Może być konieczne, pozostaw przypisanych zasad, a następnie zmień ustawienia zabezpieczeń na wartości domyślne.
+
 W zależności od platformy urządzenia jeśli chcesz zmienić zasady na wartość mniej bezpieczną, może być konieczne zresetowanie zasad zabezpieczeń.
 
-Na przykład w systemie Windows na pulpicie przesuń palcem z prawej strony, aby otworzyć pasek **Panele funkcji**. Wybierz pozycję **Ustawienia** > **Panel sterowania** > **Konta użytkowników**. Po lewej stronie wybierz link **Resetuj zasady zabezpieczeń** i wybierz pozycję **Resetuj zasady**.
+Na przykład w systemie Windows 8.1 na pulpicie przesuń palcem z prawej strony, aby otworzyć pasek **Panele funkcji**. Wybierz pozycję **Ustawienia** > **Panel sterowania** > **Konta użytkowników**. Po lewej stronie wybierz link **Resetuj zasady zabezpieczeń** i wybierz pozycję **Resetuj zasady**.
 
-W przypadku innych urządzeń MDM, takich jak urządzenia z systemami Android, iOS czy Windows Phone 8.1, zastosowanie mniej restrykcyjnych zasad może wymagać wycofania i ponownego zarejestrowania urządzenia.
+W przypadku innych platform, takich jak Android, iOS czy Windows Phone 8.1, zastosowanie mniej restrykcyjnych zasad może wymagać wycofania i ponownego zarejestrowania urządzenia.
 
 Przydatne informacje można znaleźć w artykule [Rozwiązywanie problemów z rejestrowaniem urządzeń](troubleshoot-device-enrollment-in-intune.md).
 
@@ -160,6 +172,7 @@ W przypadku komputerów z systemem Windows zarządzanych przy użyciu oprogramow
 Występuje, jeśli godzina w systemie lokalnym różni się o pięć lub więcej minut. Jeśli godzina na komputerze lokalnym nie jest zsynchronizowana, zabezpieczone transakcje zakończą się niepowodzeniem ze względu na nieprawidłowe sygnatury czasowe.
 
 Aby rozwiązać ten problem, ustaw czas sytemu lokalnego na wartość jak najbliższą czasowi internetowemu. Lub ustaw czas zgodny z czasem w kontrolerach domeny w sieci.
+
 
 ## <a name="next-steps"></a>Następne kroki
 

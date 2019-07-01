@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78c34345804f600aa62ff5e25ef27a23591e0f5c
-ms.sourcegitcommit: cc5d757018d05fc03ac9ea3d30f563df9bfd61ed
+ms.openlocfilehash: 186ba1a8813e84b89a23c8aabb3a4ef0bd392da4
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66819874"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045928"
 ---
 # <a name="enforce-compliance-for-windows-defender-atp-with-conditional-access-in-intune"></a>Wymuszanie zgodności usługi Windows Defender ATP z dostępem warunkowym w usłudze Intune
 
@@ -147,7 +147,7 @@ Zasady dostępu warunkowego blokują dostęp do zasobów, *jeśli* urządzenie j
 
 6. Wybierz pozycję **Włącz zasady**, a następnie **Utwórz**, aby zapisać zmiany.
 
-Przydatne informacje znajdują się w artykule [Co to jest dostęp warunkowy?](conditional-access.md).
+Przydatne informacje znajdują się w artykule [Co to jest dostęp warunkowy?](conditional-access.md)
 
 ## <a name="monitor-device-compliance"></a>Monitorowanie zgodności urządzenia
 Następnie monitoruj stan urządzeń objętych zasadami zgodności usługi Windows Defender ATP.
