@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2f065849bd15a23558aa9bb7f82730dca9d4b3fa
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 506bdc73717ed9af11ab8db0e5f459145ab27f83
+ms.sourcegitcommit: 6bba9f2ef4d1ec699f5713a4da4f960e7317f1cd
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66043640"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67407107"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Powiązania Xamarin zestawu SDK aplikacji usługi Microsoft Intune
 
@@ -74,7 +74,7 @@ Jeśli aplikacja jest już skonfigurowana do używania biblioteki ADAL lub MSAL 
       ```
       Aplikacje mogą podać wartość null, jeśli główna nazwa użytkownika nie jest znana w momencie wywołania. W takim przypadku użytkownicy otrzymają monit o podanie zarówno adresu e-mail, jak i hasła.
       
-      Jeśli aplikacja już korzysta z biblioteki ADAL lub MSAL do uwierzytelniania użytkowników, można skonfigurować logowanie jednokrotne pomiędzy aplikacją a zestawem SDK usługi Intune. Najpierw należy skonfigurować bibliotekę ADAL/MSAL do przechowywania tokenów w grupie dostępu łańcucha kluczy używanej przez powiązania platformy Xamarin usługi Intune dla systemu iOS (com.microsoft.adalcache). W przypadku biblioteki ADAL można to zrobić, [ustawiając właściwość KeychainSecurityGroup obiektu AuthenticationContext](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet/wiki/Token-cache-serialization#enable-token-cache-sharing-across-ios-applications). W przypadku biblioteki MSAL należy [skonfigurować właściwość KeychainSecurityGroup obiektu PublicClientApplication](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/msal-net-2-released#you-can-now-enable-sso-between-adal-and-msal-apps-on-xamarinios). Następnie należy zastąpić domyślne ustawienia usługi AAD używane w zestawie SDK usługi Intune ustawieniami Twojej aplikacji. Można to zrobić za pomocą słownika IntuneMAMSettings w pliku Info.plist aplikacji, zgodnie z informacjami w [przewodniku dewelopera dotyczącym zestawu SDK aplikacji usługi Intune dla systemu iOS](app-sdk-ios.md#configure-settings-for-the-intune-app-sdk). Możesz również użyć właściwości zastąpienia AAD wystąpienia IntuneMAMPolicyManager. Metoda z użyciem pliku Info.plist jest zalecana w przypadku aplikacji korzystających ze statycznych ustawień biblioteki ADAL, natomiast właściwości zastąpienia są rekomendowane dla aplikacji, które określają te wartości w środowisku uruchomieniowym. Gdy wszystkie ustawienia logowania jednokrotnego zostaną już skonfigurowane, aplikacja powinna przekazać nazwę główną użytkownika do metody RegisterAndEnrollAccount obiektu IntuneMAMEnrollmentManager po pomyślnym uwierzytelnieniu:
+      Jeśli aplikacja już korzysta z biblioteki ADAL lub MSAL do uwierzytelniania użytkowników, można skonfigurować logowanie jednokrotne pomiędzy aplikacją a zestawem SDK usługi Intune. Najpierw należy skonfigurować bibliotekę ADAL/MSAL do przechowywania tokenów w grupie dostępu łańcucha kluczy używanej przez powiązania platformy Xamarin usługi Intune dla systemu iOS (com.microsoft.adalcache). W przypadku biblioteki ADAL można to zrobić, [ustawiając właściwość iOSKeychainSecurityGroup obiektu AuthenticationContext](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet/wiki/iOS-Keychain-Access). W przypadku biblioteki MSAL należy [skonfigurować właściwość iOSKeychainSecurityGroup obiektu PublicClientApplication](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/Xamarin-iOS-specifics#enable-keychain-access). Następnie należy zastąpić domyślne ustawienia usługi AAD używane w zestawie SDK usługi Intune ustawieniami Twojej aplikacji. Można to zrobić za pomocą słownika IntuneMAMSettings w pliku Info.plist aplikacji, zgodnie z informacjami w [przewodniku dewelopera dotyczącym zestawu SDK aplikacji usługi Intune dla systemu iOS](app-sdk-ios.md#configure-settings-for-the-intune-app-sdk). Możesz również użyć właściwości zastąpienia AAD wystąpienia IntuneMAMPolicyManager. Metoda z użyciem pliku Info.plist jest zalecana w przypadku aplikacji korzystających ze statycznych ustawień biblioteki ADAL, natomiast właściwości zastąpienia są rekomendowane dla aplikacji, które określają te wartości w środowisku uruchomieniowym. Gdy wszystkie ustawienia logowania jednokrotnego zostaną już skonfigurowane, aplikacja powinna przekazać nazwę główną użytkownika do metody RegisterAndEnrollAccount obiektu IntuneMAMEnrollmentManager po pomyślnym uwierzytelnieniu:
       ```csharp
       IntuneMAMEnrollmentManager.Instance.RegisterAndEnrollAccount(string identity);
       ```

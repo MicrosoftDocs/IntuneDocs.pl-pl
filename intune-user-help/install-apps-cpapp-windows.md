@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/28/2019
+ms.date: 06/27/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19e1ec5cda5a69320820899b1cb1c5d665fd9f16
-ms.sourcegitcommit: 2f32f6d2129bc10cc4a02115732e995edceb37d6
+ms.openlocfilehash: f9cb8168075badda65b3cd02f8ae059119769c7c
+ms.sourcegitcommit: 9c06d8071b9affeda32e367bfe85d89bc524ed0b
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66828951"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413889"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Instalowanie i udostępnianie aplikacji na urządzeniu
 Instaluj aplikacje na swoim urządzeniu przy użyciu aplikacji Portal firmy dla systemu Windows.
@@ -37,10 +37,9 @@ Instaluj aplikacje na swoim urządzeniu przy użyciu aplikacji Portal firmy dla 
 
     * **Strona główna**: wybierz opcję z listy aplikacji polecanych w swojej organizacji.  
     * **Pokaż wszystkie**: w sekcji **Strona główna** > **Aplikacje** kliknij opcję **Pokaż wszystkie**, aby wyświetlić wszystkie dostępne aplikacje.  
-    * **Wszystkie aplikacje**: wybierz tę stronę w okienku nawigacji, aby wyświetlić wszystkie dostępne aplikacje, w tym zainstalowane i polecane.  
+    * **Wszystkie aplikacje**: wybierz tę stronę w okienku nawigacji, aby wyświetlić wszystkie dostępne aplikacje, w tym zainstalowane i polecane. Wyświetlanie, sortować i filtrować aplikacje. Wyniki wyszukiwania są sortowane automatycznie według istotności.  
     * **Kategorie aplikacji**: Wybierz tę stronę w okienku nawigacji, aby wybrać aplikacje na podstawie typu lub funkcji. Aplikacje są sortowane w obszarze kategorii, takich jak **polecane**, **Education**, i **produktywność**.  
     * **Wyszukaj aplikacje**: w okienku nawigacji aplikacji znajduje się statyczny pasek wyszukiwania.  Aby znaleźć dostępne aplikacje, wyszukaj je według nazw aplikacji lub wydawców.  
-    * **Wszystkie aplikacje**: przeglądanie, sortowanie i filtrowanie wszystkich dostępnych aplikacji. Wyniki wyszukiwania są sortowane automatycznie według istotności.  
 
 3. Wybierz aplikację.   
 4. Na stronie szczegółów aplikacji kliknij pozycję **Zainstaluj**. Po zakończeniu instalacji zostanie wyświetlony stan **Zainstalowano**.  
@@ -49,9 +48,12 @@ Instaluj aplikacje na swoim urządzeniu przy użyciu aplikacji Portal firmy dla 
     
     ![Aplikacja Portal firmy dla systemu Windows 10, strona szczegółów aplikacji, wyświetlony stan Zainstalowano po zainstalowaniu aplikacji. Przycisk Zainstaluj zmienia się na czerwony przycisk Zainstaluj ponownie.](./media/RS1_AppDetailsPage_Installed_01.png)    
 
- W zależności od wielkości firmy może istnieć wiele wersji pakietu Office dostępnych do pobrania z aplikacji Portal firmy. Aby uzyskać szczegółowe informacje dotyczące pakietu Office dla urządzeń z systemem Windows, zobacz artykuł [Instalowanie usługi Office 365 na urządzeniu z systemem Windows](./install-office-windows.md).
+> [!IMPORTANT]
+> Jeśli wymagana aplikacja, nie można zainstalować, a Twoja organizacja udostępnia można ręcznie zainstalować, wybierz **ponów**. Może upłynąć do 10 minut, aby zobaczyć zaktualizowany stan. Jeśli wybierzesz **ponów** ponownie podczas tego czasu i wystąpi błąd, który jest poprawny. Przejdź do 10 minut, aby uzyskać zaktualizowany stan oczekiwania.   
 
-## <a name="share-apps-with-others"></a>Udostępnianie aplikacji innym osobom  
+W zależności od wielkości firmy może istnieć wiele wersji pakietu Office dostępnych do pobrania z aplikacji Portal firmy. Aby uzyskać szczegółowe informacje dotyczące pakietu Office dla urządzeń z systemem Windows, zobacz artykuł [Instalowanie usługi Office 365 na urządzeniu z systemem Windows](./install-office-windows.md).
+
+## <a name="share-apps"></a>Udostępnianie aplikacji  
 Udostępniaj i polecaj aplikacje kontaktom służbowym. W poniższych krokach opisano, jak udostępnić link bezpośrednio z aplikacji Portal firmy.
 
 1. W aplikacji Portal firmy kliknij prawym przyciskiem myszy lub naciśnij i przytrzymaj dowolną aplikację, aby otworzyć jej [menu kontekstowe](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus).  
@@ -65,20 +67,34 @@ Udostępniaj i polecaj aplikacje kontaktom służbowym. W poniższych krokach op
 
 Po udostępnieniu odbiorca otrzyma link i wiadomość z zachętą do wyświetlenia szczegółów aplikacji. Link umożliwia otwarcie strony **Szczegóły aplikacji** w aplikacji Portal firmy. 
 
-## <a name="available-apps"></a>Aplikacje dostępne  
+## <a name="available-and-required-apps"></a>Dostępne i wymagane aplikacje
+Aplikacje są przypisane do Ciebie przez Twoją organizację i oznaczone w aplikacji Portal firmy jako **dostępne** lub **wymagane**. 
 
-Twoja organizacja wybiera aplikacje, które są dla Ciebie odpowiednie i przydatne w pracy lub w szkole. Są to jedyne aplikacje, które znajdziesz w aplikacji Portal firmy.  
+* Dostępne aplikacje: te aplikacje są zaznaczone przez Twoją organizację, a są właściwe i przydatne do pracy lub nauki. Opcjonalne, aby zainstalować, a to jedyne aplikacje, które znajdują się w portalu firmy do zainstalowania. 
 
-Aplikacje są również udostępniane na podstawie typu używanego urządzenia. Jeśli na przykład używasz aplikacji Portal firmy dla systemu Windows, będziesz mieć dostęp do aplikacji dla systemu Windows, ale nie dla systemu iOS.  
+* Aplikacje wymagane: te aplikacje są niezbędne do pracy lub szkoła i są wdrażane bezpośrednio na urządzeniu. Te aplikacje są instalowane automatycznie dla Ciebie, bez konieczności interwencji. 
 
-## <a name="required-apps"></a>Required apps  
-
-Twoja organizacja może wdrażać niektóre aplikacje bezpośrednio na urządzeniu i oznacz je jako **wymagane**. Te aplikacje będą automatycznie instalowane dla Ciebie bez interwencji.
+Aplikacje są również udostępniane na podstawie typu używanego urządzenia. Jeśli na przykład używasz aplikacji Portal firmy dla systemu Windows, będziesz mieć dostęp do aplikacji dla systemu Windows, ale nie dla systemu iOS.
 
 ## <a name="request-an-app-for-work-or-school"></a>Żądanie aplikacji do pracy lub do szkoły  
 Jeśli potrzebujesz jakiejś aplikacji, która nie jest dostępna w aplikacji Portal firmy, zażądaj jej dodania. Informacje kontaktowe do **pomocy technicznej** znajdziesz w aplikacji Portal firmy na stronie Pomoc i obsługa techniczna. Te same informacje kontaktowe znajdują się w [witrynie internetowej Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).    
 
   ![Strona Pomoc i obsługa techniczna aplikacji Portal firmy dla systemu Windows 10 z wyróżnionymi szczegółowymi danymi działu pomocy technicznej. ](./media/1812_UCP_Help_Support_helpdesk.png)  
 
+## <a name="view-installed-apps"></a>Wyświetl zainstalowane aplikacje  
+Wyświetlanie listy wszystkich aplikacji zainstalowanej na urządzeniu. **Zainstalowane aplikacje** strona zawiera następujące szczegółowe informacje o każdej aplikacji:
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).  
+* Nazwa: nazwa aplikacji. nazwa aplikacji.Dostępne aplikacje zawiera łącza do **szczegóły aplikacji** strony.
+* Typ przypisania: jak przypisane i stają się dostępne dla aplikacji. 
+* Wydawca: Nazwa dla deweloperów lub firmie, która rozproszonych aplikacji. Wydawca jest zwykle dostawcy oprogramowania lub w organizacji.  
+* Opublikowano daty: Termin aplikacja została udostępniona do pobrania. Opublikuj datę można pokazać początkowej wersji aplikacji lub aplikacji najnowszych aktualizacji.
+* Stan: Bieżący stan instalacji aplikacji na urządzeniu. Aplikacje można wyświetlić jako instalacji, należy zainstalować, a następnie zainstaluj nie powiodło się. Wymagane aplikacje może potrwać do 10 minut, aby wyświetlić aktualny stan. Zobacz uwagi pod [instalować aplikacje](#install-apps) ważne szczegółowe informacje na temat instalowania wymaganej aplikacji. 
+
+Aby uzyskać dostęp do tej strony, przejdź do menu nawigacji, a następnie wybierz **zainstalowane aplikacje**. 
+
+  ![Zrzut ekranu aplikacji Portal firmy dla systemu Windows 10, strona aplikacje zainstalowane. ](./media/installed-apps-cp-1906.png)  
+
+
+Użyj **sortować według** zmienić typ przypisania aplikacji, wydawca, alfabetycznie według nazwy lub chronologicznie opublikowanie daty. Użyj **filtrowanie według** Aby ograniczyć aplikacje według stanu instalacji.  Jeśli nie ma dostępnych aplikacji, zobaczysz komunikat, że nie aplikacje firmowe zostały zainstalowane.  
+
+Potrzebujesz dodatkowej pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).  

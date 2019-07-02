@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/23/2019
+ms.date: 06/27/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b31c7778ea167b98468a0a9ad9e37047c30ce201
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 43b87a90f90130a014817819b87ed5946b1ba15b
+ms.sourcegitcommit: 9c06d8071b9affeda32e367bfe85d89bc524ed0b
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66047183"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413808"
 ---
 # <a name="ios-device-settings-to-use-common-ios-features-in-intune"></a>Ustawienia urządzeń z systemem iOS dotyczące korzystania z typowych funkcji systemu iOS w usłudze Intune
 
@@ -195,7 +195,7 @@ Ta funkcja obsługuje nadzorowane urządzenia z systemem iOS w wersji 9.3 i nows
   Możesz też dodać w tych polach informacje dotyczące konkretnych urządzeń za pomocą tokenów urządzeń. Aby na przykład wyświetlić numer seryjny, wprowadź `Serial Number: {{serialnumber}}`. Na ekranie blokady zostanie wyświetlony tekst podobny do tego: `Serial Number 123456789ABC`. Podczas wprowadzania zmiennych użyj nawiasów klamrowych `{{ }}`. [Tokeny konfiguracji aplikacji](app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) zawierają listę zmiennych, których można użyć. Możesz też użyć wartości `deviceName` lub innej wartości specyficznej dla urządzenia.
 
   > [!NOTE]
-  > Zmienne nie są weryfikowane w interfejsie użytkownika. Dlatego mogą pojawić się profile zapisane z niepoprawnymi danymi wejściowymi. Na przykład jeśli podano wartość `{{Devicename}}` zamiast `{{devicename}}`, to zostanie wyświetlony literał ciągu zamiast unikatowej nazwy urządzenia.
+  > Zmienne nie są weryfikowane w interfejsie użytkownika i jest uwzględniana wielkość liter. Dlatego mogą pojawić się profile zapisane z niepoprawnymi danymi wejściowymi. Na przykład jeśli podano wartość `{{DeviceID}}` zamiast `{{deviceid}}`, zostanie wyświetlony literał ciągu zamiast unikatowego identyfikatora urządzenia. Pamiętaj wprowadzić poprawne informacje.
 
 Wybierz przycisk **OK**, aby zapisać zmiany.
 
