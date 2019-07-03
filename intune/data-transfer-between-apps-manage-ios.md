@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9be961908920420dbb4111c2c3ba108b7e11c09f
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: f97b3365036271a7f41e7c3274e8a3bd966407f3
+ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66042788"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512140"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Jak zarządzać przesyłaniem danych między aplikacjami systemu iOS w usłudze Microsoft Intune
 
@@ -34,7 +34,7 @@ Aby chronić dane firmy, ogranicz przesyłanie plików tylko do aplikacji, któr
 
 **Zarządzanie funkcją Otwórz w** dla urządzeń z systemem iOS umożliwia ograniczenie przesyłania plików między aplikacjami wdrożonymi za pośrednictwem **kanału zarządzania urządzeniami przenośnymi**. Ustaw ograniczenia *zarządzania funkcją Otwórz w* w ustawieniach konfiguracji i wdróż je za pomocą rozwiązania do zarządzania urządzeniami przenośnymi.  Ograniczenia są stosowane w przypadku zainstalowania wdrożonej aplikacji przez użytkownika.
 
-##  <a name="use-app-protection-with-ios-apps"></a>Używanie ochrony aplikacji w przypadku aplikacji systemu iOS
+## <a name="use-app-protection-with-ios-apps"></a>Używanie ochrony aplikacji w przypadku aplikacji systemu iOS
 Zasady ochrony aplikacji są używane z funkcją **zarządzania funkcją Otwórz w** systemu iOS w celu ochrony danych firmy na następujące sposoby:
 
 -   **Urządzenia pracowników, które nie są zarządzane przez żadne rozwiązanie MDM:** można skonfigurować zasady ochrony aplikacji z ustawieniem **Allow app to transfer data to only Policy Managed apps** (Zezwalaj aplikacji na przesyłanie danych tylko do aplikacji zarządzanych przez zasady). Zachowanie funkcji *Otwórz w* w aplikacji zarządzanej przez zasady przedstawia tylko inne aplikacje zarządzane przez zasady jako opcje udostępniania. Jeśli użytkownik próbuje wysłać plik chroniony przez zasady w formie załącznika z usługi OneDrive przy użyciu natywnej aplikacji poczty, nie można tego pliku odczytać.

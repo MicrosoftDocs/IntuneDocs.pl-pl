@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9884f1c5d794b527aeaf8fb522d9118d59468b3b
-ms.sourcegitcommit: 095fd4c324850aae8ebe32be43fa074361816a4b
+ms.openlocfilehash: 54511e29bd44b862a5ad06bdfda2067ed7248677
+ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66506884"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67494278"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Często zadawane pytania dotyczące zarządzania aplikacjami mobilnymi (MAM) i ochrony aplikacji
 
@@ -86,7 +86,7 @@ Zestaw Intune APP SDK rozwiązania używa niektórych zaawansowanych możliwośc
 - Użytkownik końcowy musi mieć skrzynkę pocztową usługi [Office 365 Exchange Online](https://products.office.com/exchange/exchange-online) oraz licencję powiązaną z kontem usługi Azure Active Directory.
 
   >[!NOTE]
-  > Aplikacja mobilna Outlook aktualnie obsługuje tylko usługę Intune App Protection dla usługi Microsoft Exchange Online oraz [program Exchange Server z nowoczesnym uwierzytelnianiem hybrydowym](https://technet.microsoft.com/en-us/library/mt846639(v=exchg.160).aspx), a nie obsługuje programu Exchange w ramach usługi Office 365 Dedicated.
+  > Aplikacja mobilna Outlook aktualnie obsługuje tylko usługę Intune App Protection dla usługi Microsoft Exchange Online oraz [program Exchange Server z nowoczesnym uwierzytelnianiem hybrydowym](https://technet.microsoft.com/library/mt846639(v=exchg.160).aspx), a nie obsługuje programu Exchange w ramach usługi Office 365 Dedicated.
 
 **Jakie są dodatkowe wymagania dotyczące korzystania z aplikacji [Word, Excel i PowerPoint](https://products.office.com/business/office)?**
 
@@ -210,7 +210,7 @@ Zasady ochrony aplikacji w usłudze Intune umożliwiają ograniczenie dostępu d
 Intencją tego zachowania jest zapewnienie utrzymywania bezpieczeństwa i ochrony danych organizacji w aplikacji na poziomie aplikacji. Ta funkcja jest dostępna tylko dla systemów iOS i wymaga udziału aplikacji, w których zintegrowany jest zestaw SDK zasad ochrony aplikacji usługi Intune dla systemu iOS w wersji 9.0.1 lub nowszej. Integracja zestawu SDK jest konieczna, aby można było wymusić to zachowanie w aplikacjach docelowych. Ta integracja jest przeprowadzana w sposób ciągły i zależy od zespołów zajmujących się określonymi aplikacjami. Dotyczy to między innymi aplikacji WXP, Outlook, Managed Browser i Yammer. 
   
 **Mogę otwierać dane służbowe lub szkolne w aplikacjach niezarządzanych przy użyciu rozszerzenia udostępniania systemu iOS, nawet wtedy, gdy zasady transferu danych mają wartość „tylko aplikacje zarządzane” lub „brak aplikacji”. Czy nie powoduje to wycieku danych?**<br></br>
-Zasady ochrony aplikacji usługi Intune nie mogą kontrolować rozszerzenia udostępniania systemu iOS bez zarządzania danym urządzeniem. W związku z tym usługa Intune _**szyfruje dane „firmowe” przed ich udostępnieniem poza aplikację**_. Aby to sprawdzić, spróbuj otworzyć plik „firmowy” poza zarządzaną aplikacją. Plik powinien być zaszyfrowany i jego otwarcie poza zarządzaną aplikacją nie powinno być możliwe.
+Zasady ochrony aplikacji usługi Intune nie mogą kontrolować rozszerzenia udostępniania systemu iOS bez zarządzania danym urządzeniem. W związku z tym usługa Intune _**szyfruje dane „firmowe” przed ich udostępnieniem poza aplikację**_ . Aby to sprawdzić, spróbuj otworzyć plik „firmowy” poza zarządzaną aplikacją. Plik powinien być zaszyfrowany i jego otwarcie poza zarządzaną aplikacją nie powinno być możliwe.
 
 **W jaki sposób wiele ustawień dostępu zasad ochrony aplikacji usługi Intune skonfigurowanych dla tego samego zestawu aplikacji i użytkowników działa w systemie iOS?**<br></br>
 Zasady ochrony aplikacji usługi Intune dla dostępu będą stosowane w określonej kolejności na urządzeniach użytkowników końcowych, kiedy będą próbowali uzyskać dostęp do aplikacji docelowej ze swojego konta firmowego. Ogólnie rzecz biorąc, pierwszeństwo miałoby czyszczenie, następnie blokada, a następnie ostrzeżenie z możliwością odrzucenia. Na przykład jeśli ma zastosowanie do określonego użytkownika/aplikacji, ustawienie minimalnej wersji systemu operacyjnego iOS, które ostrzega użytkownika o konieczności uaktualnienia wersji systemu iOS, zostanie zastosowane po ustawieniu minimalnej wersji systemu operacyjnego iOS, które blokuje dostęp użytkownika. Dlatego w scenariuszu, w którym administrator IT skonfigurował minimalną wersję systemu operacyjnego iOS na 11.0.0.0 i minimalną wersję systemu operacyjnego iOS (tylko ostrzeżenie) na 11.1.0.0, a urządzenie próbujące uzyskać dostęp do aplikacji ma system operacyjny iOS 10, użytkownik końcowy zostałby zablokowany na podstawie bardziej restrykcyjnego ustawienia minimalnej wersji systemu operacyjnego iOS, które powoduje zablokowanie dostępu.

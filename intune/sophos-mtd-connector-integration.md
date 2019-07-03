@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eeddbf39093210e640125db3be6ddd6bcad7d59b
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: ec60a618280caf6a5b7ef242c192cc64b5d839de
+ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66044999"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67511911"
 ---
 # <a name="integrate-sophos-mobile-with-intune"></a>Integracja usługi Sophos Mobile z usługą Intune  
 
@@ -52,11 +52,11 @@ Przebieg procesu autoryzacji aplikacji Sophos Mobile jest następujący:
 2. Na stronie **Dodawanie łącznika** użyj listy rozwijanej i wybierz pozycję **Sophos**. Następnie wybierz pozycję **Utwórz**.  
 3. Wybierz link *Otwórz konsolę administracyjną Sophos*.  
 4. Zaloguj się do [konsoli administracyjnej Sophos](https://central.sophos.com/) przy użyciu swoich poświadczeń Sophos.  
-5. Przejdź do pozycji **Mobile (Urządzenie przenośne)** > **Settings (Ustawienia)** > **Setup (Konfiguracja)** > **Sophos Setup (Konfiguracja rozwiązania Sophos)**.  
+5. Przejdź do pozycji **Mobile (Urządzenie przenośne)**  > **Settings (Ustawienia)**  > **Setup (Konfiguracja)**  > **Sophos Setup (Konfiguracja rozwiązania Sophos)** .  
 6. Na stronie **Sophos setup (Konfiguracja rozwiązania Sophos)** wybierz kartę **Intune MTD**.  
    ![Konfiguracja rozwiązania Sophos](./media/sophos-mtd-connector-integration/sophos-setup.png) 
  
-7. Wybierz pozycję **Bind (Powiąż)**, a następnie wybierz pozycję **Yes (Tak)**. Rozwiązanie Sophos nawiąże połączenie z usługą Intune i poprosi o zalogowanie się do subskrypcji usługi Intune. 
+7. Wybierz pozycję **Bind (Powiąż)** , a następnie wybierz pozycję **Yes (Tak)** . Rozwiązanie Sophos nawiąże połączenie z usługą Intune i poprosi o zalogowanie się do subskrypcji usługi Intune. 
 8. W oknie uwierzytelniania usługi Microsoft Intune wprowadź swoje poświadczenia usługi Intune i **zaakceptuj** żądanie uprawnień do usługi *Sophos Mobile Thread Defense*.  
    ![Uwierzytelnianie w usłudze Intune](./media/sophos-mtd-connector-integration/intune-authentication.png)
 

@@ -16,17 +16,17 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73cdd0f802ce3b52a566bbdddd7cf5cca2e2bef2
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: d207d1ac51da5b34f48aeffd83791bdbb40bf971
+ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044607"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67494572"
 ---
 # <a name="plan-communications"></a>Planowanie komunikacji 
 W przypadku migracji do usługi Intune plan komunikacji stanowi niezwykle ważny element. Poniższe narzędzia i szablony pomogą Ci w szkoleniu użytkowników końcowych. Zestaw wdrażania usługi Intune zawiera szablony wiadomości e-mail, przewodnik rejestracji w usłudze Intune i linki do filmów instruktażowych dotyczących rejestracji użytkowników końcowych.  
 
-Pliki do pobrania:  [Zestaw wdrażania usługi Intune](http://aka.ms/IntuneAdoptionKit)
+Pliki do pobrania:  [Zestaw wdrażania usługi Intune](https://aka.ms/IntuneAdoptionKit)
 
 ## <a name="email-templates"></a>Szablony wiadomości e-mail 
 Zaleca się użycie następującego planu komunikacji za pośrednictwem poczty e-mail. Przygotowane szablony można dostosować do planu komunikacji:

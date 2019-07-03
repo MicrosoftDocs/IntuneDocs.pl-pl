@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0d146b211c42c20b1381b238311db6a10295ef4a
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: be2e9371288961d0afdf7ad6e8cfec8f734087f6
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044938"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67529871"
 ---
 # <a name="set-up-lookout-mobile-endpoint-security-integration-with-intune"></a>Konfigurowanie integracji usługi Lookout Mobile Endpoint Security z usługą Intune
 Jeśli środowisko spełnia [wymagania wstępne](lookout-mobile-threat-defense-connector.md#prerequisites), można zintegrować usługę Lookout Mobile Endpoint Security z usługą Intune. Informacje przedstawione w tym artykule ułatwią skonfigurowanie integracji oraz ważnych ustawień w usłudze Lookout do użycia z usługą Intune.  

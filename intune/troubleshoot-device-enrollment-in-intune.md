@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 063a288c99f3f773b63bd6fe0040e200a754c888
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 9c304cafa03d9a88831048a271fa4d74b17a944f
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67046295"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528752"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Rozwiązywanie problemów dotyczących rejestrowania urządzeń w usłudze Microsoft Intune
 
@@ -34,10 +34,10 @@ Ten artykuł zawiera sugestie dotyczące rozwiązywania problemów z [rejestracj
 
 Przed rozpoczęciem rozwiązywania problemów sprawdź, czy usługa Intune została prawidłowo skonfigurowana w celu umożliwienia rejestracji. O tych wymaganiach dotyczących konfiguracji można przeczytać w następujących tematach:
 
--   [Przygotowanie do rejestracji urządzeń w usłudze Microsoft Intune](setup-steps.md)
--   [Konfigurowanie zarządzania systemem iOS i komputerami Mac](ios-enroll.md)
--   [Konfigurowanie zarządzania urządzeniami z systemem Windows](windows-enroll.md)
--   [Konfigurowanie zarządzania urządzeniami z systemem Android](android-enroll.md) — nie są wymagane dodatkowe kroki
+- [Przygotowanie do rejestracji urządzeń w usłudze Microsoft Intune](setup-steps.md)
+- [Konfigurowanie zarządzania systemem iOS i komputerami Mac](ios-enroll.md)
+- [Konfigurowanie zarządzania urządzeniami z systemem Windows](windows-enroll.md)
+- [Konfigurowanie zarządzania urządzeniami z systemem Android](android-enroll.md) — nie są wymagane dodatkowe kroki
 
 Można również upewnić się, czy data i godzina są prawidłowo ustawione na urządzeniu użytkownika:
 
@@ -236,15 +236,15 @@ Błąd certyfikatu występuje, ponieważ urządzenia z systemem Android wymagaj�
 
 Aby rozwiązać ten problem, zaimportuj certyfikaty do certyfikatów osobistych komputerów na serwerze usług AD FS lub serwerach proxy w następujący sposób:
 
-1.  Na serwerach usług AD FS i serwerach proxy kliknij prawym przyciskiem myszy pozycję **Start** > **Uruchom** > **certlm.msc** w celu uruchomienia konsoli zarządzania certyfikatami komputera lokalnego.
-2.  Rozwiń węzeł **Osobiste** i wybierz pozycję **Certyfikaty**.
-3.  Znajdź certyfikat dla komunikacji usług AD FS (certyfikat z podpisem publicznym), a następnie kliknij go dwukrotnie, aby wyświetlić jego właściwości.
-4.  Wybierz kartę **Ścieżka certyfikacji**, aby wyświetlić certyfikaty nadrzędne tego certyfikatu.
-5.  Dla każdego certyfikatu nadrzędnego zaznacz opcję **Wyświetl certyfikat**.
-6.  Wybierz pozycję **Szczegóły** > **Kopiuj do pliku...** .
-7.  Postępuj zgodnie z instrukcjami kreatora, aby wyeksportować lub zapisać klucz publiczny certyfikatu nadrzędnego do wybranej lokalizacji pliku.
-8.  Kliknij prawym przyciskiem myszy pozycje **Certyfikaty** > **Wszystkie zadania** > **Importuj**.
-9.  Postępuj zgodnie z instrukcjami kreatora, aby zaimportować certyfikaty nadrzędne do katalogu **Komputer lokalny\Osobiste\Certyfikaty**.
+1. Na serwerach usług AD FS i serwerach proxy kliknij prawym przyciskiem myszy pozycję **Start** > **Uruchom** > **certlm.msc** w celu uruchomienia konsoli zarządzania certyfikatami komputera lokalnego.
+2. Rozwiń węzeł **Osobiste** i wybierz pozycję **Certyfikaty**.
+3. Znajdź certyfikat dla komunikacji usług AD FS (certyfikat z podpisem publicznym), a następnie kliknij go dwukrotnie, aby wyświetlić jego właściwości.
+4. Wybierz kartę **Ścieżka certyfikacji**, aby wyświetlić certyfikaty nadrzędne tego certyfikatu.
+5. Dla każdego certyfikatu nadrzędnego zaznacz opcję **Wyświetl certyfikat**.
+6. Wybierz pozycję **Szczegóły** > **Kopiuj do pliku...** .
+7. Postępuj zgodnie z instrukcjami kreatora, aby wyeksportować lub zapisać klucz publiczny certyfikatu nadrzędnego do wybranej lokalizacji pliku.
+8. Kliknij prawym przyciskiem myszy pozycje **Certyfikaty** > **Wszystkie zadania** > **Importuj**.
+9. Postępuj zgodnie z instrukcjami kreatora, aby zaimportować certyfikaty nadrzędne do katalogu **Komputer lokalny\Osobiste\Certyfikaty**.
 10. Uruchom ponownie serwery usług AD FS.
 11. Powtórz powyższe kroki na wszystkich serwerach usług AD FS i serwerach proxy.
 

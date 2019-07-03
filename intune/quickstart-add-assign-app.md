@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17db2227303fe3937156ad6afa610dce48bd1992
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 1fa23deb26dbf54f8e3e98ec0b9604859a34a90d
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041351"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528307"
 ---
 # <a name="quickstart-add-and-assign-a-client-app"></a>Szybki start: Dodawanie i przypisywanie aplikacji klienckiej
 
@@ -69,7 +69,7 @@ Po dodaniu aplikacji do usługi Microsoft Intune należy ją przypisać do grup 
 
 Aby przypisać aplikację do grupy, wykonaj następujące czynności:
 1. W usłudze [Intune](https://aka.ms/intuneportal) wybierz pozycję **Aplikacje klienckie** > **Aplikacje**. 
-2. Wybierz aplikację, którą chcesz przypisać do grupy.   
+2. Wybierz aplikację, którą chcesz przypisać do grupy.
 3. Kliknij pozycję **Przypisania** > **Dodaj grupę** w celu wyświetlenia bloku **Dodawanie grupy**.
 4. Wybierz pozycję **Dostępne dla zarejestrowanych urządzeń** z listy rozwijanej **Typ przypisania**. 
 5. Wybierz pozycję **Objęte grupy** > **Wybierz grupy do uwzględnienia** > **Contoso Testers** (Testerzy Contoso).

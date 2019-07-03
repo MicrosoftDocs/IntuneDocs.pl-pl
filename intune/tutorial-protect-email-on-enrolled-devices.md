@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3f3d51cfbacfa8ef380531f91e058717cf51d089
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: a7ab0ecd2802e68dbac32b757e472a74e697da13
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044152"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67530745"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>Samouczek: Chronienie poczty e-mail usługi Exchange Online na urządzeniach zarządzanych
 Dowiedz się więcej na temat używania zasad zgodności urządzeń z dostępem warunkowym w celu zagwarantowania, że urządzenia z systemem iOS będą mogły uzyskiwać dostęp do poczty e-mail usługi Exchange Online tylko wtedy, gdy będą zarządzane przez usługę Intune i będą korzystać z zatwierdzonej aplikacji poczty e-mail. 
@@ -47,19 +47,19 @@ Zaloguj się w usłudze [Intune](https://aka.ms/intuneportal) jako administrator
 ## <a name="create-the-ios-device-compliance-policy"></a>Tworzenie zasad zgodności urządzenia z systemem iOS
 Skonfiguruj zasady zgodności urządzeń z systemem iOS w usłudze Intune w celu ustawienia warunków, które urządzenie musi spełniać, aby zostało uznane za zgodne. W tym samouczku utworzymy zasady zgodności urządzeń z systemem iOS. Zasady zgodności są specyficzne dla platformy, dlatego potrzebujesz osobnych zasad zgodności dla każdej platformy urządzeń przeznaczonych do oceny.
 
-1.  W usłudze Intune wybierz pozycję **Zgodność urządzeń** > **Zasady** > **Utwórz zasady**.
-2.  W obszarze **Nazwa** wprowadź frazę **Test zasad zgodności dla systemu iOS**. 
-3.  W obszarze **Opis** wprowadź frazę **Test zasad zgodności dla systemu iOS**.
-4.  W polu **Platforma** wybierz pozycję **iOS**. 
-5.  Wybierz kolejno pozycje **Ustawienia** > **Poczta e-mail**. 
+1. W usłudze Intune wybierz pozycję **Zgodność urządzeń** > **Zasady** > **Utwórz zasady**.
+2. W obszarze **Nazwa** wprowadź frazę **Test zasad zgodności dla systemu iOS**. 
+3. W obszarze **Opis** wprowadź frazę **Test zasad zgodności dla systemu iOS**.
+4. W polu **Platforma** wybierz pozycję **iOS**. 
+5. Wybierz kolejno pozycje **Ustawienia** > **Poczta e-mail**. 
      
     1.  Obok pozycji **Wymagaj, aby urządzenia przenośne miały zarządzany profil poczty e-mail** wybierz pozycję **Wymagaj**.
     2. Wybierz przycisk **OK**.
 
     ![Ustawianie zasad zgodności poczty e-mail do wymagania zarządzanego profilu poczty e-mail](media/tutorial-protect-email-on-enrolled-devices/ios-compliance-policy-email.png)
     
-6.  Wybierz pozycję **Kondycja urządzenia**. Obok pozycji **Urządzenia ze zdjętymi zabezpieczeniami systemu** wybierz pozycję **Zablokuj**, a następnie wybierz przycisk **OK**.
-7.  Wybierz pozycję **Zabezpieczenia systemu** i wprowadź ustawienia w obszarze **Hasło**. Na potrzeby tego samouczka wybierz następujące zalecane ustawienia:
+6. Wybierz pozycję **Kondycja urządzenia**. Obok pozycji **Urządzenia ze zdjętymi zabezpieczeniami systemu** wybierz pozycję **Zablokuj**, a następnie wybierz przycisk **OK**.
+7. Wybierz pozycję **Zabezpieczenia systemu** i wprowadź ustawienia w obszarze **Hasło**. Na potrzeby tego samouczka wybierz następujące zalecane ustawienia:
      
     - W obszarze **Wymagaj hasła do odblokowania urządzeń przenośnych** wybierz pozycję **Wymagaj**.
     - W obszarze **Proste hasła** wybierz pozycję **Zablokuj**.
@@ -71,16 +71,16 @@ Skonfiguruj zasady zgodności urządzeń z systemem iOS w usłudze Intune w celu
  
     ![Konfigurowanie ustawień hasła dla zasad zgodności poczty e-mail](media/tutorial-protect-email-on-enrolled-devices/ios-compliance-policy-system-security.png)
 
-8.  Wybierz przycisk **OK**, a następnie ponownie wybierz przycisk **OK**.
-9.  Wybierz przycisk **Utwórz**.
+8. Wybierz przycisk **OK**, a następnie ponownie wybierz przycisk **OK**.
+9. Wybierz przycisk **Utwórz**.
 
 ## <a name="create-the-conditional-access-policy"></a>Tworzenie zasad dostępu warunkowego
 Teraz utworzymy zasady dostępu warunkowego, które wymagają zarejestrowania wszystkich platform urządzeń w Intune oraz ich zgodności z naszymi zasadami zgodności usługi Intune przed uzyskaniem dostępu do usługi Exchange Online. Będziemy również wymagać aplikacji Outlook na potrzeby dostępu do poczty e-mail. Zasady dostępu warunkowego można konfigurować w portalu usługi Azure AD lub w portalu usługi Intune. Ponieważ pracujemy już w portalu usługi Intune zasady także utworzymy w tym miejscu.
-1.  W usłudze Intune wybierz kolejno pozycje **Dostęp warunkowy** > **Zasady** > **Nowe zasady**.
+1. W usłudze Intune wybierz kolejno pozycje **Dostęp warunkowy** > **Zasady** > **Nowe zasady**.
 1.  W polu **Nazwa** wprowadź frazę **Testowe zasady do obsługi poczty e-mail usługi Office 365**. 
-3.  W obszarze **Przypisania** wybierz pozycję **Użytkownicy i grupy**. Na karcie **Dołączanie** wybierz pozycję **Wszyscy użytkownicy**, a następnie wybierz pozycję **Gotowe**.
+3. W obszarze **Przypisania** wybierz pozycję **Użytkownicy i grupy**. Na karcie **Dołączanie** wybierz pozycję **Wszyscy użytkownicy**, a następnie wybierz pozycję **Gotowe**.
 
-4.  W obszarze **Przypisania** wybierz pozycję **Aplikacje w chmurze**. Ponieważ chcemy chronić pocztę e-mail usługi Office 365 Exchange Online, wybierzemy ją, wykonując następujące kroki:
+4. W obszarze **Przypisania** wybierz pozycję **Aplikacje w chmurze**. Ponieważ chcemy chronić pocztę e-mail usługi Office 365 Exchange Online, wybierzemy ją, wykonując następujące kroki:
      
     1. Na karcie **Dołączanie** wybierz pozycję **Wybierz aplikacje**.
     2. Wybierz pozycję **Wybierz**. 
@@ -89,7 +89,7 @@ Teraz utworzymy zasady dostępu warunkowego, które wymagają zarejestrowania ws
   
     ![Wybieranie aplikacji Office 365 Exchange Online](media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-cloud-apps.png)
 
-5.  W obszarze **Przypisania** wybierz kolejno pozycje **Warunki** > **Platformy urządzeń**.
+5. W obszarze **Przypisania** wybierz kolejno pozycje **Warunki** > **Platformy urządzeń**.
      
     1. W obszarze **Konfiguruj** wybierz pozycję **Tak**.
     2. Na karcie **Dołączanie** wybierz pozycję **Dowolne urządzenie**, a następnie wybierz pozycję **Gotowe**. 
@@ -97,7 +97,7 @@ Teraz utworzymy zasady dostępu warunkowego, które wymagają zarejestrowania ws
    
     ![Wybieranie aplikacji Office 365 Exchange Online](media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-cloud-device-platforms.png)
 
-6.  W obszarze **Przypisania** wybierz pozycję **Warunki** > **Aplikacje klienckie**.
+6. W obszarze **Przypisania** wybierz pozycję **Warunki** > **Aplikacje klienckie**.
      
     1. W obszarze **Konfiguruj** wybierz pozycję **Tak**.
     2. Na potrzeby tego samouczka wybierz pozycje **Aplikacje mobilne i klienci stacjonarni** i **Klienci nowoczesnego uwierzytelniania** (które odnoszą się do aplikacji, takich jak program Outlook dla systemu iOS i Outlook dla systemu Android). Usuń zaznaczenia wszystkich pozostałych pól wyboru.
@@ -105,7 +105,7 @@ Teraz utworzymy zasady dostępu warunkowego, które wymagają zarejestrowania ws
     
     ![Wybieranie aplikacji Office 365 Exchange Online](media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-client-apps.png)
 
-7.  W obszarze **Kontrole dostępu** wybierz pozycję **Udziel**. 
+7. W obszarze **Kontrole dostępu** wybierz pozycję **Udziel**. 
      
     1. W okienku **Udzielanie** wybierz pozycję **Udziel dostępu**.
     2. Wybierz pozycję **Wymagaj, aby urządzenie było oznaczone jako zgodne**. 
@@ -115,11 +115,11 @@ Teraz utworzymy zasady dostępu warunkowego, które wymagają zarejestrowania ws
      
     ![Wybieranie aplikacji Office 365 Exchange Online](media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-grant-access.png)
 
-8.  W obszarze **Włącz zasady** wybierz pozycję **na**.
+8. W obszarze **Włącz zasady** wybierz pozycję **na**.
      
     ![Wybieranie aplikacji Office 365 Exchange Online](media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-enable-policy.png)
 
-9.  Wybierz przycisk **Utwórz**.
+9. Wybierz przycisk **Utwórz**.
 
 ## <a name="try-it-out"></a>Wypróbowywanie działania
 Dzięki utworzonym zasadom dowolne urządzenie z systemem iOS, które próbuje zalogować się do poczty e-mail usługi Office 365, musi zostać zarejestrowanie w usłudze Intune i musi używać aplikacji mobilnej Outlook dla systemu iOS. Aby przetestować ten scenariusz w urządzeniu z systemem iOS, zaloguj się do usługi Exchange Online przy użyciu poświadczeń dla użytkownika w dzierżawie testowej. Zostanie wyświetlony monit o zarejestrowanie urządzenia i zainstalowanie aplikacji mobilnej Outlook.
@@ -137,5 +137,5 @@ Gdy zasady testowe nie są już potrzebne, można je usunąć.
 4. Wybierz kolejno pozycje **Dostęp warunkowy** > **Zasady**.
 5. Z listy **Nazwa zasad** wybierz menu kontekstowe ( **...** ) dla zasad testowych, a następnie wybierz pozycję **Usuń**. Kliknij przycisk **Tak**, aby potwierdzić.
 
- ## <a name="next-steps"></a>Następne kroki 
+## <a name="next-steps"></a>Następne kroki 
 W tym samouczku utworzono zasady wymagające zarejestrowania urządzeń z systemem iOS w usłudze Intune oraz użycia aplikacji Outlook w celu uzyskania dostępu do poczty e-mail usługi Exchange Online. Aby dowiedzieć się więcej na temat ochrony innych aplikacji i usług, takich jak klienci programu Exchange ActiveSync dla usługi Office 365 Exchange Online, za pomocą usługi Intune z dostępem warunkowym, zobacz artykuł [Konfigurowanie dostępu warunkowego](conditional-access.md).

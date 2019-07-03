@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee0e6ad7e46abe8da4c1b03e836eb9ba2f5991d0
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: eaefcc904d9969c7f356e3eceb924e8d153f912d
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044165"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528237"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Kontrola dostępu oparta na rolach (RBAC) w usłudze Microsoft Intune
 
@@ -38,9 +38,9 @@ Rola definiuje zestaw uprawnień przyznawanych dla użytkowników przypisanych d
 Możesz używać zarówno ról wbudowanych, jak i niestandardowych. Role wbudowane sprawdzają się dobrze w typowych scenariuszach usługi Intune. Możesz też [tworzyć własne role niestandardowe](create-custom-role.md) z dokładnym zestawem wymaganych uprawnień. Niektóre role usługi Azure Active Directory mają uprawnienia usługi Intune.
 Aby wyświetlić rolę, wybierz pozycję **Intune** > **Role** > **Wszystkie role** i wybierz konkretną rolę. Zostaną wyświetlone następujące strony:
 
--   **Właściwości**: nazwa roli, jej opis, typ, przypisania i tagi zakresu. 
--   **Uprawnienia**: długa lista przełączników definiujących uprawnienia, jakie ma rola.
--   **Przypisania**: lista [przypisań ról]( assign-role.md) określających, którzy użytkownicy mają dostęp do konkretnych użytkowników/urządzeń. Rola może mieć wiele przypisań, a użytkownik może występować w wielu przypisaniach.
+- **Właściwości**: nazwa roli, jej opis, typ, przypisania i tagi zakresu. 
+- **Uprawnienia**: długa lista przełączników definiujących uprawnienia, jakie ma rola.
+- **Przypisania**: lista [przypisań ról]( assign-role.md) określających, którzy użytkownicy mają dostęp do konkretnych użytkowników/urządzeń. Rola może mieć wiele przypisań, a użytkownik może występować w wielu przypisaniach.
 
 ### <a name="built-in-roles"></a>Wbudowane role
 Wbudowane role można przypisywać do grup bez konieczności dalszej konfiguracji. Nie można usuwać ani edytować nazwy, opisu, typu ani uprawnień roli wbudowanej. Aby uzyskać pełną listę uprawnień dla poszczególnych ról wbudowanych, zobacz [Tabela kontroli RBAC przy użyciu usługi Intune](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a).
@@ -84,10 +84,10 @@ Przypisanie roli definiuje:
 Do użytkowników można przypisywać zarówno role niestandardowe, jak i wbudowane. Aby mieć przypisaną rolę usługi Intune, użytkownik musi mieć licencję usługi Intune.
 Aby wyświetlić przypisanie roli, wybierz pozycję **Intune** > **Role** > **Wszystkie role**, a następnie wybierz rolę i przypisanie. Zostaną wyświetlone następujące strony:
 
--   **Właściwości**: nazwa przypisania, jego opis, rola, członkowie, zakresy i tagi.
--   **Elementy członkowskie**: wszyscy użytkownicy w wyświetlonych grupach mają uprawnienie do zarządzania użytkownikami/urządzeniami, które są wymienione w obszarze Zakres (grupy).
--   **Zakres (grupy)** : wszyscy użytkownicy i wszystkie urządzenia w ramach tych grup mogą być zarządzane przez użytkowników wymienionych w obszarze Członkowie.
--   **[Zakres (tagi)](scope-tags.md)** : użytkownicy wymienieni w obszarze Członkowie mogą wyświetlać zasoby mające te same tagi zakresu.
+- **Właściwości**: nazwa przypisania, jego opis, rola, członkowie, zakresy i tagi.
+- **Elementy członkowskie**: wszyscy użytkownicy w wyświetlonych grupach mają uprawnienie do zarządzania użytkownikami/urządzeniami, które są wymienione w obszarze Zakres (grupy).
+- **Zakres (grupy)** : wszyscy użytkownicy i wszystkie urządzenia w ramach tych grup mogą być zarządzane przez użytkowników wymienionych w obszarze Członkowie.
+- **[Zakres (tagi)](scope-tags.md)** : użytkownicy wymienieni w obszarze Członkowie mogą wyświetlać zasoby mające te same tagi zakresu.
 
 ### <a name="multiple-role-assignments"></a>Przypisania wielu ról
 Jeśli użytkownik ma wiele przypisań ról, uprawnienia w ramach tych przypisań ról mają wpływ na różne obiekty w następujący sposób:

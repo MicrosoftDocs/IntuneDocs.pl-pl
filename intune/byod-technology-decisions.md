@@ -14,12 +14,12 @@ ms.assetid: ''
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3400169aab9598624216fcbc9ef7694e1d5441cc
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: c2e8c475cd52e199519db7a3d7ea83e6dbfef1a3
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045781"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67530652"
 ---
 # <a name="technology-decisions-for-enabling-byod-with-microsoft-enterprise-mobility--security-ems"></a>Podejmowanie kluczowych decyzji technologicznych dotyczących włączania modelu BYOD za pomocą pakietu Microsoft Enterprise Mobility + Security
 
@@ -56,7 +56,7 @@ Jak wspomniano wcześniej, dostęp warunkowy może zachęcić użytkownika do za
 
 * Użytkownik, który próbuje uzyskać dostęp
 * Czy lokalizacja jest zaufana, czy nie
-*   Poziom ryzyka dotyczący logowania
+* Poziom ryzyka dotyczący logowania
 * Platforma urządzeń
 
 Wiele organizacji ma często określone zagrożenia, które ich dotyczą.  W poniższej tabeli wymieniono typowe zagadnienia i odpowiedzi na nie w przypadku usługi zarządzania urządzeniami przenośnymi i usługi zarządzania aplikacjami mobilnymi.

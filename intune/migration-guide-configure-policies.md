@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3d3e36dbeb1fb7c90dfc5cc4c18fb30140c761db
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 9a5f28f01d0c8be6692deaf27391e52619fcdcab
+ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046496"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512270"
 ---
 # <a name="configure-device-compliance-and-app-management-policies-when-migrating-to-microsoft-intune"></a>Konfigurowanie zasad zgodności urządzeń i zasad zarządzania aplikacjami podczas migracji do usługi Microsoft Intune
 
@@ -59,7 +59,7 @@ Profile dostępu do zasobów dostarczają certyfikaty i konfiguracje dostępu za
 
 Musisz utworzyć profil konfiguracji urządzeń, aby wymusić stosowanie ustawień na poziomie urządzenia, na przykład wyłączyć aparat i sklep z aplikacjami, skonfigurować ekran główny i tryb pojedynczej aplikacji itd. Dowiedz się więcej o [profilach urządzeń](device-profiles.md).
 
-####  <a name="directly-import-ios-configuration-profiles-optional"></a>Bezpośrednie importowanie profilów konfiguracji systemu iOS (opcjonalnie)
+#### <a name="directly-import-ios-configuration-profiles-optional"></a>Bezpośrednie importowanie profilów konfiguracji systemu iOS (opcjonalnie)
 
 -   **Profile programu Apple Configurator dla systemu iOS (system iOS 7.1 lub nowszy):** jeśli istniejące rozwiązanie MDM używa profilów programu Apple Configurator (plików mobileconfig), można je bezpośrednio zaimportować do usługi Intune jako niestandardowe zasady konfiguracji.
 

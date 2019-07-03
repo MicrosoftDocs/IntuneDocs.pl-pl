@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 06dcc730406af3ae2d715cbe7f0795253e2629f0
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: ed6259c996772817ceaa8ec827c8ac506adfd399
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045099"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67530471"
 ---
 # <a name="create-a-device-based-conditional-access-policy"></a>Tworzenie zasad dostępu warunkowego opartego na urządzeniach
 
@@ -34,12 +34,12 @@ Zasady dostępu warunkowego określają aplikację lub usługi, które chcesz ch
 
 ## <a name="create-conditional-access-policy"></a>Tworzenie zasad dostępu warunkowego
 
-1.  W portalu usługi Intune wybierz kolejno pozycje **Dostęp warunkowy** > **Zasady** > **Nowe zasady**.
+1. W portalu usługi Intune wybierz kolejno pozycje **Dostęp warunkowy** > **Zasady** > **Nowe zasady**.
    
     ![Tworzenie nowych zasad dostępu warunkowego](media/create-conditional-access-intune/create-ca.png)
  
-2.  W obszarze **Przypisania** wybierz pozycję **Użytkownicy i grupy**. 
-3.  Na karcie **Dołączanie** wskaż użytkowników lub grupy, których mają dotyczyć zasady dostępu warunkowego. Po wybraniu osób można użyć karty **Wykluczanie**, jeśli istnieją użytkownicy, role lub grupy do wykluczenia z tych zasad.  
+2. W obszarze **Przypisania** wybierz pozycję **Użytkownicy i grupy**. 
+3. Na karcie **Dołączanie** wskaż użytkowników lub grupy, których mają dotyczyć zasady dostępu warunkowego. Po wybraniu osób można użyć karty **Wykluczanie**, jeśli istnieją użytkownicy, role lub grupy do wykluczenia z tych zasad.  
     - **Wszyscy użytkownicy**: wybierz tę opcję, aby zastosować zasady do wszystkich użytkowników i grup, w tym do użytkowników wewnętrznych i gości.
   
     - **Wybierz użytkowników i grupy**: wybierz tę opcję i określ co najmniej jedną z następujących opcji:
@@ -52,9 +52,9 @@ Zasady dostępu warunkowego określają aplikację lub usługi, które chcesz ch
      
        > [!TIP]  
        > Przetestuj zasady w mniejszej grupie użytkowników, aby upewnić się, że działają zgodnie z oczekiwaniami.
-4.  Wybierz pozycję **Gotowe**.
-5.  W obszarze **Przypisania** wybierz pozycję **Aplikacje w chmurze**. 
-6.  Na karcie **Dołączanie** zidentyfikuj aplikacje i usługi, które chcesz chronić za pomocą zasad dostępu warunkowego. Następnie możesz użyć karty **Wykluczanie**, jeśli istnieją aplikacje lub usługi, które chcesz wykluczyć z tych zasad.
+4. Wybierz pozycję **Gotowe**.
+5. W obszarze **Przypisania** wybierz pozycję **Aplikacje w chmurze**. 
+6. Na karcie **Dołączanie** zidentyfikuj aplikacje i usługi, które chcesz chronić za pomocą zasad dostępu warunkowego. Następnie możesz użyć karty **Wykluczanie**, jeśli istnieją aplikacje lub usługi, które chcesz wykluczyć z tych zasad.
     - **Wszystkie aplikacje w chmurze**: wybierz tę opcję, aby zastosować zasady do wszystkich aplikacji.
       > [!IMPORTANT]  
       > Na tej liście znajduje się aplikacja Microsoft Azure Management służąca do uzyskiwania dostępu do witryny Azure Portal. Pamiętaj, aby użyć karty **Wykluczanie** w tym miejscu lub w obszarze opcji **Użytkownicy i grupy** w celu upewnienia się, że użytkownik (albo wyznaczeni użytkownicy lub grupy) będzie mógł zalogować się do witryny Azure Portal. 
@@ -63,8 +63,8 @@ Zasady dostępu warunkowego określają aplikację lub usługi, które chcesz ch
     
       ![Tworzenie nowych zasad dostępu warunkowego](media/create-conditional-access-intune/create-ca-select-apps.png)
 
-7.  Wybierz pozycję **Gotowe**.
-8.  W obszarze **Przypisania** wybierz pozycję **Warunki**.
+7. Wybierz pozycję **Gotowe**.
+8. W obszarze **Przypisania** wybierz pozycję **Warunki**.
     - **Ryzyko logowania**: wybierz pozycję Tak, aby wraz z tym zasadami używać funkcji wykrywania ryzyka logowania usługi Azure AD Identity Protection, a następnie wybierz poziomy ryzyka logowania, do których będą stosowane zasady.
     - **Platformy urządzeń**: Na karcie **Dołączanie** zidentyfikuj platformy urządzeń, do których mają zostać zastosowane te zasady dostępu warunkowego. Użyj karty **Wykluczanie**, aby wykluczyć platformy z tych zasad.
     - **Lokalizacje**: Na karcie **Dołączanie** określ, czy zasady mają zastosowanie do dowolnej lokalizacji, zaufanych lokalizacji sieciowych kontrolowanych przez dział IT lub określonych lokalizacji sieciowych. Użyj karty **Wykluczanie**, aby wykluczyć lokalizacje sieciowe z tych zasad. 
@@ -76,7 +76,7 @@ Zasady dostępu warunkowego określają aplikację lub usługi, które chcesz ch
       > [!TIP]  
       > Jeśli chcesz chronić **nowoczesnych klientów uwierzytelniania** i **klientów programu Exchange ActiveSync**, utwórz dwie oddzielne zasady dostępu warunkowego, jedną dla każdego typu klienta. Mimo że program Exchange ActiveSync obsługuje nowoczesne uwierzytelnianie, jedynym warunkiem obsługiwanym przez program Exchange ActiveSync jest platforma. Inne warunki, w tym uwierzytelnianie wieloskładnikowe, nie są obsługiwane. Aby skutecznie chronić dostęp do usługi Exchange Online z programu Exchange ActiveSync, utwórz zasady dostępu warunkowego określające aplikację w chmurze Office 365 Exchange Online i aplikację kliencką programu Exchange ActiveSync z wybraną opcją Zastosuj zasady tylko do obsługiwanych platform.
 
-9.  Wybierz pozycję **Gotowe**.
+9. Wybierz pozycję **Gotowe**.
 10. W obszarze **Kontrole dostępu** wybierz pozycję **Udziel**. Skonfiguruj zachowanie w zależności od skonfigurowanych warunków.  Możesz wybrać jedną z następujących opcji:
     - **Blokuj dostęp**: w przypadku użytkowników określonych w zasadach nastąpi odmowa dostępu do aplikacji zgodnie z określonymi przez Ciebie warunkami.
     - **Udziel dostępu**: użytkownicy określeni w ramach tych zasad otrzymują prawa dostępu, ale możesz wymagać wykonania dowolnych spośród następujących dodatkowych czynności:

@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 624cc72ad9539659e1ce2c8b70f6a6698d5e7ba2
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 7868d5f9ef97f4b054457deff6f24cd91d6c31d8
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67046272"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528684"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>Samouczek: chronienie poczty e-mail usługi Exchange Online na urządzeniach niezarządzanych
 
@@ -74,7 +74,7 @@ W tym samouczku skonfigurujemy zasady ochrony aplikacji usługi Intune dla aplik
 
     Wybierz przycisk **OK**, aby wrócić do okienka Ustawienia.  
 
-7.  W okienku Ustawienia wybierz przycisk **OK**, a następnie w okienku tworzenia zasad wybierz pozycję **Utwórz**.
+7. W okienku Ustawienia wybierz przycisk **OK**, a następnie w okienku tworzenia zasad wybierz pozycję **Utwórz**.
 
 Zostały utworzone zasady ochrony aplikacji dla programu Outlook. Następnie skonfigurujesz dostęp warunkowy, aby urządzenia musiały korzystać z aplikacji Outlook.
 
@@ -188,5 +188,5 @@ Gdy zasady testowe nie są już potrzebne, można je usunąć.
 4. Wybierz kolejno pozycje **Dostęp warunkowy** > **Zasady**.  
 5. Z listy **Nazwa zasad** wybierz menu kontekstowe ( **...** ) dla każdej z zasad testowych, a następnie wybierz pozycję **Usuń**. Kliknij przycisk **Tak**, aby potwierdzić.  
 
- ## <a name="next-steps"></a>Następne kroki  
+## <a name="next-steps"></a>Następne kroki  
 W tym samouczku utworzono zasady ochrony aplikacji, aby ograniczyć czynności, które użytkownik może wykonać w aplikacji Outlook. Utworzono również zasady dostępu warunkowego, aby wymagać użycia aplikacji Outlook i usługi MFA w przypadku nowoczesnych klientów uwierzytelniania. Aby dowiedzieć się więcej na temat ochrony innych aplikacji i usług za pomocą usługi Intune z dostępem warunkowym, zobacz artykuł [Konfigurowanie dostępu warunkowego](conditional-access.md).

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 546694409e6f87d85c5ef934b5d084b0955e0bf7
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: c15bd301b60481f4d8b15617512851e2cc29034a
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041864"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67529761"
 ---
 # <a name="incomplete-user-enrollments-report"></a>Raport Nieukończone rejestracje użytkowników
 
@@ -35,9 +35,9 @@ Dzięki tym informacjom możesz zaktualizować swoje dokumenty dotyczące dołą
 
 Nieukończona rejestracja to sytuacja, w której użytkownik wykonuje jedną z następujących czynności:
 
--   Jawnie wybiera akcję zatrzymującą rejestrację.
--   Zamyka Portal firmy podczas rejestracji.
--   Spędza ponad 30 minut między sekcjami rejestracji.
+- Jawnie wybiera akcję zatrzymującą rejestrację.
+- Zamyka Portal firmy podczas rejestracji.
+- Spędza ponad 30 minut między sekcjami rejestracji.
 
 Jeśli użytkownik decyduje się na wielokrotne zatrzymanie i ponowne rozpoczęcie rejestracji, jest to wyświetlane jako wiele prób i wiele nieukończonych rejestracji. Jeśli użytkownik czeka 30 minut między różnymi ekranami rejestracji, jest to uznawane za wiele nieukończonych rejestracji.
 
@@ -53,18 +53,18 @@ Wybierając pozycję **Filtruj**, możesz filtrować według zakresu dat, system
 
 W górnej części raportu znajduje się liczba i wartość procentowa nieukończonych rejestracji w odniesieniu do wszystkich rejestracji.
 
--   Zainicjowane rejestracje: liczba prób rejestracji.
--   Nieukończone rejestracje: liczba prób rejestracji, których rezultatem nie było w pełni zarejestrowane i zgodne urządzenie.
--   Współczynnik nieukończenia: wartość procentowa prób rejestracji, które zostały porzucone (porzucone rejestracje / zainicjowane rejestracje).
+- Zainicjowane rejestracje: liczba prób rejestracji.
+- Nieukończone rejestracje: liczba prób rejestracji, których rezultatem nie było w pełni zarejestrowane i zgodne urządzenie.
+- Współczynnik nieukończenia: wartość procentowa prób rejestracji, które zostały porzucone (porzucone rejestracje / zainicjowane rejestracje).
 
 ### <a name="line-graph"></a>Wykres liniowy
 
 Wykres liniowy przedstawia codzienne nieukończone rejestracje dla każdej z czterech podstawowych sekcji rejestracji:
 
--   Lista kontrolna ustawień
--   Ekrany platformy
--   Warunki użytkowania
--   Zgodność/aktywacja
+- Lista kontrolna ustawień
+- Ekrany platformy
+- Warunki użytkowania
+- Zgodność/aktywacja
 
 ### <a name="user-abandonment-actions"></a>Akcje porzucenia użytkownika
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bad416e738f1a0481c67480d9a83157a4781c71b
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 6ec42d122bf3da3fbacef513d6af2dbe124b196c
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050338"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67530777"
 ---
 # <a name="quickstart-create-and-assign-an-app-protection-policy"></a>Szybki start: Tworzenie i przypisywanie zasad ochrony aplikacji
 
@@ -66,12 +66,12 @@ Po utworzeniu zasad ochrony aplikacji w usłudze Intune można je przypisać do 
 
 Aby przypisać zasady ochrony aplikacji, wykonaj następujące kroki:
 
-1.  W usłudze [Intune](https://aka.ms/intuneportal) wybierz pozycje **Intune** > **Aplikacje klienckie** > **Zasady ochrony aplikacji**. 
-2.  Wybierz zasady ochrony aplikacji utworzone wcześniej. W tym przewodniku Szybki start są to zasady **Ochrona zawartości w systemie Windows 10**.
-3.  Wybierz pozycję **Przypisania**.
-4.  Na karcie **Dołączanie** wybierz pozycję **Wybierz grupy do uwzględnienia**.
-5.  Jako grupę do dołączenia wybierz grupę **Testerzy firmy Contoso**.
-6.  Kliknij kolejno pozycje **Wybierz** > **Zapisz**. 
+1. W usłudze [Intune](https://aka.ms/intuneportal) wybierz pozycje **Intune** > **Aplikacje klienckie** > **Zasady ochrony aplikacji**. 
+2. Wybierz zasady ochrony aplikacji utworzone wcześniej. W tym przewodniku Szybki start są to zasady **Ochrona zawartości w systemie Windows 10**.
+3. Wybierz pozycję **Przypisania**.
+4. Na karcie **Dołączanie** wybierz pozycję **Wybierz grupy do uwzględnienia**.
+5. Jako grupę do dołączenia wybierz grupę **Testerzy firmy Contoso**.
+6. Kliknij kolejno pozycje **Wybierz** > **Zapisz**. 
 
 Zasady ochrony aplikacji zostały przypisane.
 

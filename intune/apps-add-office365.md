@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1aa79bbaa6765a0d4b6009468bdfa184222c5f00
-ms.sourcegitcommit: f90cba0b2c2672ea733052269bcc372a80772945
+ms.openlocfilehash: 095c2ee0aba0680de0c5fc55c1406dba41111b92
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66454085"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67527443"
 ---
 # <a name="assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Przypisywanie aplikacji usługi Office 365 do urządzeń z systemem Windows 10 przy użyciu usługi Microsoft Intune
 
@@ -129,7 +129,7 @@ Po wybraniu opcji **Projektant konfiguracji** z listy rozwijanej **Format ustawi
 ## <a name="select-scope-tags-optional"></a>Wybieranie tagów zakresu (opcjonalnie)
 Za pomocą tagów zakresu można określić, kto będzie mógł wyświetlać informacje o aplikacji klienckiej w usłudze Intune. Więcej informacji o tagach zakresu zawiera artykuł [Używanie kontroli dostępu opartej na rolach i tagów zakresu w rozproszonej infrastrukturze informatycznej](scope-tags.md).
 
-1. Wybierz pozycję **Zakres (tagi)** > **Dodaj**.
+1. Wybierz pozycję **Zakres (tagi)**  > **Dodaj**.
 2. Użyj pola **Wybierz**, aby wyszukać tagi zakresu.
 3. Zaznacz pole wyboru obok tagów zakresu, które chcesz przypisać do aplikacji.
 4. Wybierz pozycję **Wybierz** > **OK**.

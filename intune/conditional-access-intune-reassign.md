@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4fa42a52e104ef1c9cf13c8490159f3dbb2efed
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: dbebcb495298f3e8b17007d1fb00f0362ead4ab8
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045328"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67530681"
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Ponowne przypisywanie zasad dostępu warunkowego z klasycznego portalu usługi Intune do witryny Azure Portal
 
@@ -81,7 +81,7 @@ Blok **Intune App Protection** w witrynie Azure Portal umożliwia administratoro
 3. Podaj nazwę zasad.
 
 4. W sekcji **Przypisania** wybierz pozycję **Użytkownicy i grupy**, aby wybrać użytkowników i grupy docelowe dla nowych zasad dostępu warunkowego.
-    
+
     ![Obraz przedstawiający porównanie interfejsu użytkownika grup użytkowników w portalu usługi Intune i witrynie Azure Portal](./media/reassign-ca-1.png)
 
     > [!IMPORTANT] 
