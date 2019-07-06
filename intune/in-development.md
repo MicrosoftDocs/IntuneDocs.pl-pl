@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 633bf52084ad261f768cb4e59aaf4ce0ab5cd5bc
-ms.sourcegitcommit: 46f4d3d160e18aeab9de7477eedc8351fbb78c85
-ms.translationtype: HT
+ms.openlocfilehash: f7dd6f62cb53dd0cc373fb3f2ffa7d9434b135cd
+ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67468725"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67494238"
 ---
 # <a name="in-development-for-microsoft-intune---july-2019"></a>Funkcje usługi Microsoft Intune w trakcie opracowywania — lipiec 2019 r.
 
@@ -58,8 +58,6 @@ Aby ułatwić Ci planowanie, na tej stronie udostępniamy listę aktualizacji in
 <!-- ***********************************************-->
 ## <a name="app-management"></a>Zarządzanie aplikacjami
 
-### <a name="device-users-can-view-all-managed-apps-theyve-installed-or-tried-to-install----2352913---"></a>Użytkownicy urządzeń mogą wyświetlać wszystkie zarządzane aplikacje, które zainstalowali lub próbowali zainstalować <!-- 2352913 -->
-W aplikacji Portal firmy dla systemu Windows będzie dostępna lista wszystkich zarządzanych aplikacji (zarówno wymaganych, jak i dostępnych), które zainstalowano na urządzeniu użytkownika. Użytkownicy będą mogli wyświetlać aplikacje, które próbowano zainstalować lub które oczekują na instalację, wraz z bieżącym stanem. Jeśli organizacja nie określa aplikacji jako wymagane lub dostępne, użytkownicy zobaczą komunikat z informacją, że nie zainstalowano żadnych aplikacji firmowych. Użytkownicy będą również mogli sortować lub filtrować swoje aplikacje według stanu instalacji.
 
 ### <a name="customized-notifications-for-users-and-groups-------16766574-----"></a>Niestandardowe powiadomienia dla użytkowników i grup    <!-- 16766574   -->
 Wkrótce będzie można wysyłać powiadomienia wypychane ad-hoc niestandardowego z aplikacji Portal firmy dla użytkowników w systemach iOS i urządzenia z systemem Android, którymi można zarządzać za pomocą usługi Intune. Te niestandardowe powiadomienia nie są związane z określonych funkcji usługi Intune i może służyć do jakiegokolwiek celu, które wymagają, w tym ogólne powiadomienia, które chcesz wysyłać do niektórych lub wszystkich pracowników.  

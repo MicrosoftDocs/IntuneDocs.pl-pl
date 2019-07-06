@@ -18,12 +18,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 30135c69b95ba9731682af52ad0da3bb9df193e9
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 328ec3111aae5f8363f2743d423a56eafc47d765
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57335075"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546251"
 ---
 # <a name="sync-your-windows-device-manually"></a>Ręczne synchronizowanie urządzenia z systemem Windows
 
@@ -41,9 +41,9 @@ Za pomocą aplikacji Ustawienia na urządzeniu można synchronizować wszystkie 
 ## <a name="sync-directly-from-company-portal-app-for-windows"></a>Synchronizacja bezpośrednio z aplikacji Portal firmy dla systemu Windows
 Wykonaj następujące kroki, aby ręcznie zsynchronizować wszystkie urządzenia z systemem Windows 10 zawierającym aktualizację Creator’s Update (wersja 1703) lub nowszą.
 
-1.  Otwórz aplikację Portal firmy na urządzeniu.
+1. Otwórz aplikację Portal firmy na urządzeniu.
 
-2.  Wybierz **Ustawienia** > **Synchronizacja**.
+2. Wybierz **Ustawienia** > **Synchronizacja**.
 
     ![Zrzut ekranu strony głównej aplikacji Portal firmy, wyróżnione Ustawienia](./media/RS1_homePage_settings_04.png)  
     
@@ -96,7 +96,7 @@ Wykonaj następujące kroki, aby ręcznie zsynchronizować urządzenia Microsoft
 
 #### <a name="work-access-steps"></a>Czynności dla opcji Dostęp z miejsca pracy
 
-1.  Kliknij **Dostęp z miejsca pracy**.
+1. Kliknij **Dostęp z miejsca pracy**.
 
     ![Wybieranie dostępu z miejsca pracy jako typu konta](./media/win10pc-sync-3-work-access.png)
 
@@ -128,12 +128,12 @@ Wykonaj następujące kroki, aby ręcznie zsynchronizować urządzenia Microsoft
        ![Wybieranie ikony Synchronizuj](./media/win10m-sync-4-tap-sync.png)  
 ### <a name="microsoft-hololens"></a>Microsoft HoloLens  
 Te instrukcje dotyczą urządzeń HoloLens z systemem Windows 10 z aktualizacją Anniversary Update (znanej także jako RS1). 
-1.  Otwórz na urządzeniu aplikację Ustawienia.  
+1. Otwórz na urządzeniu aplikację Ustawienia.  
 
-2.  Wybierz **Konta** > **Dostęp z miejsca pracy**.  
+2. Wybierz **Konta** > **Dostęp z miejsca pracy**.  
     ![Zrzut ekranu aplikacji Ustawienia na urządzeniu HoloLens, wyróżniony link kont](./media/RS1_holoLens_SettingsRS1_Accounts_06.png)  
 
-3.  Wybierz swoje połączone konto > **Synchronizacja**. ![Zrzut ekranu aplikacji Ustawienia na urządzeniu HoloLens, wyróżniony przycisk synchronizacji](./media/RS1_holoLens_SyncRS1_Sync_08.png)  
+3. Wybierz swoje połączone konto > **Synchronizacja**.  ![Zrzut ekranu aplikacji Ustawienia na urządzeniu HoloLens, wyróżniony przycisk synchronizacji](./media/RS1_holoLens_SyncRS1_Sync_08.png)  
 
 ### <a name="windows-phone-81"></a>Windows Phone 8,1
 

@@ -18,12 +18,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd05c600553ec23085b03eb560e0e736c9d7a764
-ms.sourcegitcommit: 25e17a1d002ee1faa49bb89648eb59373528539f
+ms.openlocfilehash: f2cd69725ad10c08f7c137f4444cce831160dd88
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58163432"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546798"
 ---
 # <a name="how-to-reset-your-device-passcode-from-the-company-portal-website"></a>Jak zresetować kod dostępu urządzenia z poziomu witryny sieci Web Portal firmy
 
@@ -36,13 +36,13 @@ Jeśli używasz urządzenia zarejestrowanego przez firmę, możesz nie widzieć 
 
 ## <a name="reset-your-passcode"></a>Resetowanie kodu dostępu
 
-1.  Otwórz [witrynę internetową Portal firmy](https://portal.manage.microsoft.com), wybierz przycisk __Menu__, a następnie wybierz pozycję __Urządzenia__.  
+1. Otwórz [witrynę internetową Portal firmy](https://portal.manage.microsoft.com), wybierz przycisk __Menu__, a następnie wybierz pozycję __Urządzenia__.  
 
 2. Wybierz urządzenie, które wymaga zresetowania kodu dostępu.  
 
     ![Zrzut ekranu przedstawiający stronę Urządzenia z dwoma kafelkami, które przedstawiają niezidentyfikowane urządzenia z ogólną nazwą. Bezpośrednio pod urządzeniami wyświetlany jest szary baner zawierający monit dla użytkownika z prośbą o identyfikację używanego urządzenia lub dodanie nowego.](./media/rename-reset-device-step2-1808.png) 
 
-3. Wybierz pozycję **Zresetuj kod dostępu**. Jeśli opcja resetowania kodu dostępu nie jest widoczna w górnej części strony, wybierz opcję **Więcej (...)** > **Zresetuj kod dostępu**.   
+3. Wybierz pozycję **Zresetuj kod dostępu**. Jeśli opcja resetowania kodu dostępu nie jest widoczna w górnej części strony, wybierz opcję **Więcej (...)**  > **Zresetuj kod dostępu**.   
 
    ![Strona szczegółów urządzenia dla wybranego urządzenia w witrynie Portal firmy, z listą linków w górnej części z opcjami Zmień nazwę, Usuń, Resetuj urządzenie, Resetuj kod dostępu oraz Zdalne blokowanie. ](./media/rename-reset-device-1808.png)   
 
@@ -79,7 +79,7 @@ W tej sekcji opisano resetowanie kodu dostępu oraz zachowanie związane z hasł
 **iOS**: usuwa istniejący kod dostępu i nie tworzy tymczasowego kodu dostępu. Jeśli używasz czytnika linii papilarnych Touch ID do otwierania urządzenia lub dokonywania zakupów, musisz ponownie go skonfigurować.  
 
 **Windows 10 Mobile**: usuwa istniejący kod dostępu i tworzy tymczasowy kod dostępu składający się z liter i cyfr. Po skonfigurowaniu rozpoznawanie twarzy Windows Hello nadal będzie działać na urządzeniu.
-    
+
 **Windows Phone 8.1**: usuwa istniejący kod dostępu i powoduje utworzenie tymczasowego kodu dostępu składającego się z cyfr.  
 
 Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).  

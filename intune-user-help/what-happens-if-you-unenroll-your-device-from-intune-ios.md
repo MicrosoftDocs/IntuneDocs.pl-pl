@@ -18,30 +18,30 @@ ms.reviewer: esmich, elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 85f6ae657361bea0ab89b8afa73976273fa000f4
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 4ba5705fa04d9eb28e74128228ca8a862f1cb772
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55844250"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545678"
 ---
 # <a name="what-happens-if-you-unenroll-your-ios-or-macos-device-from-intune"></a>Co się dzieje w przypadku wyrejestrowania urządzenia z systemem iOS lub macOS z usługi Intune?
 
 W przypadku wyrejestrowania urządzenia z systemem iOS lub macOS z usługi Intune:
 
--   Urządzenie nie jest już wyświetlane w Portalu firmy.
+- Urządzenie nie jest już wyświetlane w Portalu firmy.
 
--   Nie będzie już można instalować aplikacji z poziomu Portalu firmy.
+- Nie będzie już można instalować aplikacji z poziomu Portalu firmy.
 
--   Wszystkie ustawienia w urządzeniu zmienione podczas dodawania go (np. wyłączenie aparatu lub wymaganie hasła o określonej długości) nie mają już zastosowania.
+- Wszystkie ustawienia w urządzeniu zmienione podczas dodawania go (np. wyłączenie aparatu lub wymaganie hasła o określonej długości) nie mają już zastosowania.
 
--   Możesz utracić dostęp z urządzenia do niektórych zasobów firmy, takich jak udziały plików lub wewnętrzne witryny sieci Web.
+- Możesz utracić dostęp z urządzenia do niektórych zasobów firmy, takich jak udziały plików lub wewnętrzne witryny sieci Web.
 
--   Nie będzie można dłużej korzystać z aplikacji oraz danych firmy na urządzeniu.
+- Nie będzie można dłużej korzystać z aplikacji oraz danych firmy na urządzeniu.
 
--   Nawiązanie połączenia z siecią firmową za pośrednictwem sieci Wi-Fi lub VPN (Virtual Private Network) może być niemożliwe.
+- Nawiązanie połączenia z siecią firmową za pośrednictwem sieci Wi-Fi lub VPN (Virtual Private Network) może być niemożliwe.
 
--   Profile firmowej poczty e-mail zostaną usunięte z urządzenia.
+- Profile firmowej poczty e-mail zostaną usunięte z urządzenia.
 
 Aby uzyskać instrukcje na temat sposobu wyrejestrowywania, zobacz [Wyrejestrowywanie urządzenia z usługi Intune](unenroll-your-device-from-intune-ios.md).
 

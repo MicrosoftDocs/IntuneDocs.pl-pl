@@ -18,12 +18,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9f328577ba2da97595c116efc51626176a14931a
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 1ad21f9197f32f8ff06cc0537719261f3daec7cb
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55840760"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545744"
 ---
 # <a name="what-happens-if-you-reset-your-ios-device-using-the-company-portal"></a>Co się dzieje w przypadku zresetowania urządzenia z systemem iOS przy użyciu Portalu firmy?
 
@@ -31,14 +31,14 @@ W przypadku zresetowania telefonu iPhone lub tabletu iPad za pomocą Portalu fir
 
 **Urządzeniem przenośnym zarządza dział pomocy technicznej Twojej firmy**
 
--   Urządzenie nie będzie już wyświetlane w Portalu firmy.
+- Urządzenie nie będzie już wyświetlane w Portalu firmy.
 
--   W urządzeniu zostaną przywrócone domyślne ustawienia fabryczne producenta oraz zostaną usunięte dane osobowe, aplikacje i ustawienia.
+- W urządzeniu zostaną przywrócone domyślne ustawienia fabryczne producenta oraz zostaną usunięte dane osobowe, aplikacje i ustawienia.
 
 **Urządzenie może uzyskiwać dostęp tylko do firmowej poczty e-mail**
 
--   Urządzenie nie będzie już wyświetlane w Portalu firmy.
+- Urządzenie nie będzie już wyświetlane w Portalu firmy.
 
--   Konto firmowej poczty e-mail oraz niezapisane wiadomości e-mail zostaną usunięte.
+- Konto firmowej poczty e-mail oraz niezapisane wiadomości e-mail zostaną usunięte.
 
 Jeśli masz pytania, skontaktuj się z działem pomocy technicznej Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).

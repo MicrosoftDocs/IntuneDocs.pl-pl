@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 76e6e3186ae0e8bf1d05698d28539994d33486e8
-ms.sourcegitcommit: 6e07c35145f70b008cf170bae57143248a275b67
+ms.openlocfilehash: 1c716f48a46e4fd2dc24d203426c364dd4cd88c0
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66804429"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545236"
 ---
 ## <a name="microsoft-open-source-code-of-conduct"></a>Kodeks postępowania społeczności Microsoft Open Source
 
@@ -30,7 +30,7 @@ Znajdujesz się w jednym z repozytoriów serwisu GitHub zawierających źródło
     5. Utwórz żądanie ściągnięcia.
     
     **Opcja 2. Wyszukanie i zaktualizowanie artykułu w tym repozytorium**  
-    1.  Większość tematów znajduje się w następującej lokalizacji: `https://github.com/MicrosoftDocs/IntuneDocs/tree/master/intune`. W tym folderze wyszukaj nazwę tematu, taką jak `troubleshoot-policies-in-microsoft-intune`. 
+    1. Większość tematów znajduje się w następującej lokalizacji: `https://github.com/MicrosoftDocs/IntuneDocs/tree/master/intune`. W tym folderze wyszukaj nazwę tematu, taką jak `troubleshoot-policies-in-microsoft-intune`. 
     2. Wybierz link, a następnie kliknij ikonę ołówka. Po umieszczeniu wskaźnika myszy na ikonie ołówka zobaczysz etykietkę narzędzia **Edytuj ten plik**. 
     3. Wprowadź zmiany, a następnie je **zatwierdź**. 
     4. Utwórz żądanie ściągnięcia. 

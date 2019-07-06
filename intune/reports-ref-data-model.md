@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8756ad134853bdd19155c3d8f50d1f07960e80f
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: f90568b3939d37bb4e7fbeff72d5e357bc57bd6e
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045370"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67547888"
 ---
 # <a name="microsoft-intune-data-warehouse-data-model"></a>Model danych magazynu danych usługi Microsoft Intune
 
@@ -32,22 +32,22 @@ Magazyn danych usługi Intune codziennie próbkuje dane w celu udostępnienia hi
 
 Magazyn uwidacznia dane w następujących kategoriach wysokiego poziomu:
 
-  -  Aplikacje z włączoną ochroną aplikacji i ich użycie
-  -  Zarejestrowane urządzenia, właściwości i spis
-  -  Spis aplikacji i oprogramowania
-  -  Zasady zgodności i konfiguracji urządzenia
+  - Aplikacje z włączoną ochroną aplikacji i ich użycie
+  - Zarejestrowane urządzenia, właściwości i spis
+  - Spis aplikacji i oprogramowania
+  - Zasady zgodności i konfiguracji urządzenia
 
 Te obszary zawierają jednostki, które mają znaczenie dla danego środowiska usługi Intune. Szczegółowe informacje dotyczące zestawów jednostek można znaleźć w następujących tematach:
 
-  -  [Aplikacja](reports-ref-application.md)
-  -  [Data](reports-ref-date.md)
-  -  [Urządzenia](reports-ref-devices.md)
-  -  [Rozszerzenie do zarządzania usługi Intune](reports-ref-intunemanagementextension.md)
-  -  [Zasady](reports-ref-policy.md)
-  -  [Zarządzanie aplikacjami mobilnymi (MAM)](reports-ref-mobile-app-management.md)
-  -  [User](reports-ref-user.md)
-  -  [Bieżący użytkownik](reports-ref-current-user.md)
-  -  [Skojarzenie urządzenia użytkownika](reports-ref-user-device.md)
+  - [Aplikacja](reports-ref-application.md)
+  - [Data](reports-ref-date.md)
+  - [Urządzenia](reports-ref-devices.md)
+  - [Rozszerzenie do zarządzania usługi Intune](reports-ref-intunemanagementextension.md)
+  - [Zasady](reports-ref-policy.md)
+  - [Zarządzanie aplikacjami mobilnymi (MAM)](reports-ref-mobile-app-management.md)
+  - [User](reports-ref-user.md)
+  - [Bieżący użytkownik](reports-ref-current-user.md)
+  - [Skojarzenie urządzenia użytkownika](reports-ref-user-device.md)
 
 ## <a name="relationships-star-schema-model"></a>Relacje: Model o schemacie gwiazdy
 

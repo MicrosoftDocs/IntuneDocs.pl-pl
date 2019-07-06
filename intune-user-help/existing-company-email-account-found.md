@@ -18,12 +18,12 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a02a7b69245b9b6e7b8f62fdb9be8acb83d42981
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 8326693717ac96a0e9d32617e7d7080d50206ac6
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55834759"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545428"
 ---
 # <a name="an-existing-company-email-account-was-found"></a>Znaleziono istniejące konto firmowej poczty e-mail
 
@@ -34,7 +34,7 @@ Być może *zanim* urządzenie przenośne zostało objęte zarządzaniem, użytk
 
 Kroki te zapewnią, że urządzenie będzie spełniać wymagania dotyczące zabezpieczeń w firmie i że wiadomości e-mail pozostaną bezpieczne.
 
-1.  Na urządzeniu przejdź do pozycji **Ustawienia** i znajdź połączone konta. Na przykład na urządzeniu z systemem iOS 11+ wybierz pozycję **Hasło i konta**.
+1. Na urządzeniu przejdź do pozycji **Ustawienia** i znajdź połączone konta. Na przykład na urządzeniu z systemem iOS 11+ wybierz pozycję **Hasło i konta**.
  
 2. Wybierz i usuń służbowe konto e-mail.
 

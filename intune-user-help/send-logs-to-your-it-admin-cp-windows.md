@@ -18,12 +18,12 @@ ms.reviewer: scottduf
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c9ecf976ea973fdb1a9b8025fec0bf49d7f87d0c
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 5df4fce5c07f416d5fa53ef653d62d9166fb1a11
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55836476"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528773"
 ---
 # <a name="email-your-company-support-about-problem-from-company-portal-for-windows"></a>Wysyłanie wiadomości e-mail dotyczącej problemu z Portalu firmy w systemie Windows do działu pomocy technicznej firmy
 
@@ -32,7 +32,7 @@ Rozwiązywanie problemów z aplikacjami w aplikacji Portal firmy dla systemu Win
 Gdy poprosisz o pomoc, zostanie otwarta wstępnie wypełniona wiadomość e-mail umożliwiająca szczegółowe opisanie problemu. Zawiera ona również identyfikator dziennika diagnostycznego. Jeśli zespół pomocy technicznej nie będzie mógł rozwiązać tego problemu na podstawie Twojego opisu, skontaktuje się z firmą Microsoft w celu uzyskania pomocy. Firma Microsoft potrzebuje identyfikatora diagnostycznego do użycia w dziennikach aplikacji.   
 
 
-> [!Note]       
+> [!Note]
 > Po kliknięciu przycisku **Uzyskaj pomoc** aplikacja Portal firmy automatycznie wyśle dzienniki do zespołu pomocy technicznej firmy Microsoft. Jest to proaktywny krok, który ułatwia diagnozowanie i rozwiązywanie problemów eskalowanych do pomocy technicznej firmy Microsoft. Jak wspomniano powyżej, zespół pomocy technicznej firmy Microsoft może ściągać dzienniki przy użyciu identyfikatora diagnostycznego w wiadomości e-mail.  
 
 ## <a name="what-is-a-diagnostic-log"></a>Co to jest dziennik diagnostyczny?

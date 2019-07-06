@@ -18,26 +18,26 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 32dfb275e96ecf1d8c60f115881d7ceb0593a3b2
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 73e9c42f69517d145c797b13ae9fa5aa779ebc5d
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55837441"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546513"
 ---
 # <a name="what-happens-if-you-unenroll-your-android-device-from-intune"></a>Co się dzieje w przypadku wyrejestrowania urządzenia z systemem Android z usługi Intune?
 
 Wyrejestrowanie urządzenia z systemem Android z usługi Intune oznacza, że:
 
--   Dział pomocy technicznej Twojej firmy nie zarządza już tym urządzeniem.
+- Dział pomocy technicznej Twojej firmy nie zarządza już tym urządzeniem.
 
--   Nie masz już dostępu do danych i zasobów firmy.
+- Nie masz już dostępu do danych i zasobów firmy.
 
--   Urządzenie nie jest już wyświetlane w Portalu firmy.
+- Urządzenie nie jest już wyświetlane w Portalu firmy.
 
--   Nie będzie już można instalować aplikacji z poziomu Portalu firmy.
+- Nie będzie już można instalować aplikacji z poziomu Portalu firmy.
 
--   Wszystkie ustawienia w urządzeniu zmienione podczas dodawania go (np. wyłączenie aparatu lub wymaganie hasła o określonej długości) nie mają już zastosowania.
+- Wszystkie ustawienia w urządzeniu zmienione podczas dodawania go (np. wyłączenie aparatu lub wymaganie hasła o określonej długości) nie mają już zastosowania.
 
 Jeśli urządzenie jest skonfigurowane tylko do pobierania firmowych wiadomości e-mail i zostanie wyrejestrowane, urządzenie nie będzie już wyświetlane w Portalu firmy.
 

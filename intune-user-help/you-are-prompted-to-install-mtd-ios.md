@@ -16,12 +16,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 582b4615941dae8c2fc696ce5dfc87e2bbe4b98b
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 0c72fb6e7ace6c603410ff0ffc9a96e4a0ff528d
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55846251"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67527634"
 ---
 # <a name="install-mobile-threat-defense-on-your-ios-device"></a>Instalacja aplikacji Mobile Threat Defense na urządzeniu z systemem iOS
 
@@ -38,12 +38,12 @@ Twoja firma wymaga, aby przed uzyskaniem dostępu do swoich danych zainstalować
 
 Usługa Mobile Threat Defense umożliwia firmom zabezpieczenie urządzeń przed aplikacjami, które mogą próbować wykraść informacje firmowe. Dodanie tej metody ochrony wymaga raportowania dodatkowych informacji dotyczących aplikacji na urządzeniach do usługi Mobile Threat Defense używanej przez firmę. Firma nie ma wglądu w dane w Twoich aplikacjach osobistych. Wszystkie aplikacje na urządzeniu są dodawane do [zawartości widocznej dla firmy](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md), gdy korzystają z usługi Mobile Threat Defense. Oto części aplikacji widoczne dla Twojej firmy:
 
-*   Nazwa aplikacji
+* Nazwa aplikacji
 * Identyfikator aplikacji: unikatowa nazwa identyfikująca aplikację w sklepie z aplikacjami
-*   Wersja aplikacji i krótki numer wersji: numery określonej wersji aplikacji
+* Wersja aplikacji i krótki numer wersji: numery określonej wersji aplikacji
 * Zbiór aplikacji i dynamiczny rozmiar: ilość miejsca na urządzeniu używanego przez aplikację
 * Ważność aplikacji: określa, czy aplikacja jest zatwierdzona do użycia
-*   Stan zarządzania aplikacji: określa, czy aplikacja jest zarządzana przez firmę czy jest aplikacją osobistą
+* Stan zarządzania aplikacji: określa, czy aplikacja jest zarządzana przez firmę czy jest aplikacją osobistą
 
 ## <a name="if-the-installation-doesnt-work"></a>Jeśli instalacja nie działa
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c929965b79d9ee35fcc1094b4ad18cff6d73d80d
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 4530c1ec573560924b54aa8fd21d39a86cefe97e
+ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045526"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67558418"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android
 
@@ -111,10 +111,10 @@ apply plugin: 'com.microsoft.intune.mam'
 
 Domyślnie wtyczka będzie działać **tylko** dla zależności `project`.
 Nie ma to wpływu na kompilację testową. Konfiguracja może być dostarczona do listy
-*  Projekty do wykluczenia
-*  [Zależności zewnętrzne do uwzględnienia](#usage-of-includeexternallibraries) 
-*  Określone klasy do wykluczenia z przetwarzania
-*  Warianty do wykluczenia z przetwarzania. Mogą odwoływać się do kompletnej nazwy wariantu lub pojedynczej właściwości. Na przykład
+* Projekty do wykluczenia
+* [Zależności zewnętrzne do uwzględnienia](#usage-of-includeexternallibraries) 
+* Określone klasy do wykluczenia z przetwarzania
+* Warianty do wykluczenia z przetwarzania. Mogą odwoływać się do kompletnej nazwy wariantu lub pojedynczej właściwości. Na przykład
      * jeśli Twoja aplikacja ma typy kompilacji `debug` i `release` z właściwościami {`savory`, `sweet`} oraz {`vanilla`, `chocolate`}, możesz określić
      * `savory`, aby wykluczyć wszystkie warianty z właściwością savory lub `savoryVanillaRelease`, aby wykluczyć tylko ten konkretny wariant.
 
@@ -834,7 +834,7 @@ void updateToken(String upn, String aadId, String resourceId, String token);
     ```java
     class MAMAuthCallback implements MAMServiceAuthenticationCallback {
         public String acquireToken(String upn, String aadId, String resourceId) {
-        return mAuthContext.acquireTokenSilentSync(resourceId, ClientID, aadId).getAccessToken();
+            return mAuthContext.acquireTokenSilentSync(resourceId, ClientID, aadId).getAccessToken();
         }
     }
     ```
@@ -1187,7 +1187,7 @@ W podręczniku tworzenia kopii zapasowych danych opisano ogólny algorytm przywr
 Domyślnie zestaw SDK aplikacji usługi Intune będzie stosować zasady do aplikacji jako całości. Wiele tożsamości to opcjonalna funkcja ochrony aplikacji usługi Intune, którą można włączyć w celu zezwolenia na stosowanie zasad na poziomie poszczególnych tożsamości. Wymaga to znacznie pełniejszego uczestnictwa aplikacji niż inne funkcje ochrony aplikacji.
 
 > [!NOTE]
->  Brak odpowiedniego udziału aplikacji może spowodować wycieki danych i inne problemy z zabezpieczeniami.
+> Brak odpowiedniego udziału aplikacji może spowodować wycieki danych i inne problemy z zabezpieczeniami.
 
 Po zarejestrowaniu urządzenia lub aplikacji przez użytkownika zestaw SDK rejestruje tę tożsamość i uznaje ją za podstawową tożsamość zarządzaną w usłudze Intune. Inni użytkownicy w aplikacji są traktowani jako niezarządzani z nieograniczonymi ustawieniami zasad.
 
@@ -1317,7 +1317,7 @@ Oprócz możliwości ustawiania tożsamości przez aplikację tożsamość wątk
 
   1. Jeśli działanie zostanie uruchomione z klasy `Intent` wysłanej przez inną aplikację z funkcją MAM, tożsamość tego działania zostanie ustawiona na podstawie obowiązującej tożsamości w drugiej aplikacji w chwili wysłania klasy `Intent`.
 
-  2.  W przypadku usług tożsamość wątku zostanie ustawiona w podobny sposób na czas trwania wywołania metody `onStart` lub `onBind`. Wywołania do klasy `Binder` zwrócone z metody `onBind` także powodują tymczasowe ustawienie tożsamości wątku.
+  2. W przypadku usług tożsamość wątku zostanie ustawiona w podobny sposób na czas trwania wywołania metody `onStart` lub `onBind`. Wywołania do klasy `Binder` zwrócone z metody `onBind` także powodują tymczasowe ustawienie tożsamości wątku.
 
   3. Wywołania do klasy `ContentProvider` podobnie ustawią tożsamość wątku na czas ich trwania.
 
@@ -1429,12 +1429,12 @@ public final class MAMFileProtectionManager {
     * this method will silently do nothing.
     *
     * @param identity
-    *       Identity to set.
+    *        Identity to set.
     * @param file
-    *       File to protect.
+    *        File to protect.
     *
     * @throws IOException
-    *       If the file cannot be protected.
+    *         If the file cannot be protected.
     */
    public static void protect(final File file, final String identity) throws IOException;
 
@@ -1742,8 +1742,8 @@ Włącz rejestrację domyślną, wykonując następujące kroki:
 
 Ograniczenia formatu pliku wykonywalnego dla platformy Dalvik mogą stać się problemem w przypadku uruchamiania dużych baz kodu bez narzędzia [ProGuard](http://proguard.sourceforge.net/). W szczególności mogą wystąpić następujące ograniczenia:
 
-1.  Limit 65 000 dla pól.
-2.  Limit 65 000 dla metod.
+1. Limit 65 000 dla pól.
+2. Limit 65 000 dla metod.
 
 ### <a name="policy-enforcement-limitations"></a>Ograniczenia wymuszania zasad
 

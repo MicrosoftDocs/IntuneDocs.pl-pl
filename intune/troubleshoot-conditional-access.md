@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f286ec4928ad4bb026c95d10562d9b339b2ca5f3
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: e8ebc708f76ed1f55f512edda75206d3ed5890a0
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67043902"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67530717"
 ---
 # <a name="troubleshoot-conditional-access"></a>Rozwiązywanie problemów z dostępem warunkowym
 
@@ -35,8 +35,8 @@ Aby dostęp warunkowy działał, muszą być spełnione następujące wymagania:
 - Urządzenie musi być zarejestrowane i zarządzane przez usługę Intune.
 - Użytkownik i urządzenie muszą być zgodni z przypisanymi zasadami zgodności usługi Intune.
 - Domyślnie użytkownikowi muszą być przypisane zasady zgodności urządzenia. Może to zależeć od sposobu skonfigurowania ustawienia **Oznacz urządzenia bez przypisanych zasad zgodności jako** w obszarze **Zgodność urządzeń** > **Ustawienia zasad zgodności** w portalu administracyjnym usługi Intune.
--   Na urządzeniu musi być aktywowany program Exchange ActiveSync, jeśli użytkownik korzysta z natywnego klienta poczty urządzenia, a nie z programu Outlook. Dzieje się to automatycznie w przypadku urządzeń z systemem iOS, Windows Phone i Android.
--   Program Intune Exchange Connector musi być prawidłowo skonfigurowany. Więcej informacji można znaleźć w artykule [Rozwiązywanie problemów z programem Exchange Connector w usłudze Microsoft Intune](troubleshoot-exchange-connector.md).
+- Na urządzeniu musi być aktywowany program Exchange ActiveSync, jeśli użytkownik korzysta z natywnego klienta poczty urządzenia, a nie z programu Outlook. Dzieje się to automatycznie w przypadku urządzeń z systemem iOS, Windows Phone i Android.
+- Program Intune Exchange Connector musi być prawidłowo skonfigurowany. Więcej informacji można znaleźć w artykule [Rozwiązywanie problemów z programem Exchange Connector w usłudze Microsoft Intune](troubleshoot-exchange-connector.md).
 
 Te warunki można wyświetlić dla każdego urządzenia w witrynie Azure Portal i w raporcie ze spisu urządzeń.
 

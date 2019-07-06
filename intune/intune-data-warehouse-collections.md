@@ -17,14 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8581d047e76ac1734b2d6c7816facf601e397957
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 816ac1d97e7be485717905fe9d5d62b812408446
+ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041717"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512214"
 ---
-#  <a name="intune-data-warehouse-collections"></a>Kolekcje magazynu danych usługi Intune
+# <a name="intune-data-warehouse-collections"></a>Kolekcje magazynu danych usługi Intune
 
 Poniższe kolekcje magazynu danych usługi Intune zawierają właściwości, opisy i przykłady dotyczące kolekcji jednostek interfejsu API magazynu danych w wersji 1.0. 
 
@@ -129,7 +129,7 @@ Jednostka **date** reprezentuje daty, które są przywoływane przez wiele jedno
 |     Właściwość    |                       Opis                      |    Przykład    |
 |:---------------:|:------------------------------------------------------:|:-------------:|
 | DateKey         | Unikatowy identyfikator danej daty w magazynie danych. | 20160703      |
-| FullDate        | Ta data jest reprezentowana w pełnym formacie data/godzina.        | 3.07.2016 0:00 |
+| FullDate        | Ta data jest reprezentowana w pełnym formacie data/godzina.        | 3\.07.2016 0:00 |
 | DayOfWeek       | Dzień tygodnia                                            | 1             |
 | DayOfMonth      | Dzień miesiąca                                           | 3             |
 | DayOfYear       | Dzień roku                                            | 185           |
@@ -138,7 +138,7 @@ Jednostka **date** reprezentuje daty, które są przywoływane przez wiele jedno
 | CalendarQuarter | Kwartał kalendarzowy                                       | 3             |
 | CalendarYear    | Rok kalendarzowy                                          | 2016          |
 | DateKey         | Unikatowy identyfikator danej daty w magazynie danych. | 20160703      |
-| FullDate        | Ta data jest reprezentowana w pełnym formacie data/godzina.        | 3.07.2016 0:00 |
+| FullDate        | Ta data jest reprezentowana w pełnym formacie data/godzina.        | 3\.07.2016 0:00 |
 | DayOfWeek       | Dzień tygodnia                                            | 1             |
 | DayOfMonth      | Dzień miesiąca                                           | 3             |
 | DayOfYear       | Dzień roku                                            | 185           |
