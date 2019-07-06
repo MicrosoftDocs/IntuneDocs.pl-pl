@@ -16,12 +16,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6daeaaac7fb554e2c29f6ac150eaff8308d670b0
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 13a12da72577edfee1d6ba23c2cd5e56d1fe397e
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55850560"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67527575"
 ---
 # <a name="install-symantec-endpoint-protection-mobile-on-your-ios-device"></a>Instalowanie aplikacji Symantec Endpoint Protection Mobile na urządzeniu z systemem iOS
 
@@ -29,7 +29,7 @@ Twoja firma wymaga, aby przed uzyskaniem dostępu do swoich danych zainstalować
 
 ## <a name="what-you-need-to-do"></a>Co należy zrobić
 
-1.  Jeśli zobaczysz następujący monit, naciśnij pozycję **Zainstaluj**, aby umożliwić instalację aplikacji SEP Mobile na urządzeniu.
+1. Jeśli zobaczysz następujący monit, naciśnij pozycję **Zainstaluj**, aby umożliwić instalację aplikacji SEP Mobile na urządzeniu.
 
 2. Jeśli zobaczysz następujący komunikat, naciśnij pozycję **Ustawienia**, włącz opcję **Usługi lokalizacji**, a następnie naciśnij przycisk **Kontynuuj**.
 

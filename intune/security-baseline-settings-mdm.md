@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d3b9f69e745baffd21b55274e173bb75e8581525
-ms.sourcegitcommit: 690e680e854b7d707421c5e06f134e493f4f4194
-ms.translationtype: HT
+ms.openlocfilehash: 8fa5589f62900027b90659b8f570e7caa10b1cd8
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67418949"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549058"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Ustawienia punktów odniesienia zabezpieczeń oprogramowania MDM dla usługi Intune  
 
@@ -32,7 +32,7 @@ Najnowsza wersja linii bazowej jest **linii bazowej zabezpieczeń zarządzania u
 Aby dowiedzieć się, co się zmieniło w najnowszej wersji tego punktu odniesienia z poprzedniej wersji, zobacz [co zmieniono w nowym szablonie](#whats-changed-in-the-new-template).  
 
 > [!NOTE]  
-> W czerwcu 2019 linii bazowej zabezpieczeń dla zarządzania urządzeniami Przenośnymi (wersja zapoznawcza) została zastąpiona wersji *linii bazowej zabezpieczeń zarządzania urządzeniami Przenośnymi dla Spring 2019 Update (19 godz. 1)* szablonu, który jest generaly dostępne (nie w wersji zapoznawczej). Profile, które zostały utworzone przed dostępności *linii bazowej zabezpieczeń zarządzania urządzeniami Przenośnymi dla Spring 2019 Update (19 godz. 1)* punktu odniesienia nie będzie aktualizowana w celu odzwierciedlenia ustawienia i wartości, które znajdują się w linii bazowej zabezpieczeń zarządzania urządzeniami Przenośnymi dla Spring 2019 Update () 19 godz. 1) wersji.  Mimo że nie można utworzyć nowych profilów na podstawie szablonu w wersji zapoznawczej, można edytować i kontynuować do korzystania z profilów utworzonych wcześniej, które są oparte na szablonie (wersja zapoznawcza).   
+> W czerwcu 2019 linii bazowej zabezpieczeń dla zarządzania urządzeniami Przenośnymi (wersja zapoznawcza) została zastąpiona wersji *linii bazowej zabezpieczeń zarządzania urządzeniami Przenośnymi dla Spring 2019 Update (19 godz. 1)* szablonu, który jest generaly dostępne (nie w wersji zapoznawczej). Profile, które zostały utworzone przed dostępności *linii bazowej zabezpieczeń zarządzania urządzeniami Przenośnymi dla Spring 2019 Update (19 godz. 1)* punktu odniesienia nie będzie aktualizowana w celu odzwierciedlenia ustawienia i wartości, które znajdują się w linii bazowej zabezpieczeń zarządzania urządzeniami Przenośnymi dla Spring 2019 Update (19 godz. 1 ) wersji.  Mimo że nie można utworzyć nowych profilów na podstawie szablonu w wersji zapoznawczej, można edytować i kontynuować do korzystania z profilów utworzonych wcześniej, które są oparte na szablonie (wersja zapoznawcza).   
   
 Aby dowiedzieć się, przy użyciu wartości bazowych zabezpieczeń w usłudze Intune, zobacz [korzystać z planów bazowych bezpieczeństwa](security-baselines.md).  
 
@@ -57,7 +57,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
 
 - **Konta Microsoft opcjonalne dla aplikacji ze Sklepu Windows**  
   To ustawienie zasad umożliwia kontrolowanie, czy konta Microsoft są opcjonalne dla aplikacji ze Sklepu Windows, które wymagają konta do zalogowania. Te zasady dotyczy tylko aplikacji ze Sklepu Windows, które je obsługują. Jeśli to ustawienie zasad zostanie włączone, aplikacje ze Sklepu Windows, które zwykle wymagają konta Microsoft do zalogowania się, umożliwią użytkownikom logowanie się za pomocą konta przedsiębiorstwa. Jeśli to ustawienie zasad jest wyłączone lub nieskonfigurowane, użytkownicy muszą logować się przy użyciu konta Microsoft.  
-    [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067104)  
+  [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067104)  
   
   **Domyślne**: włączone  
 
@@ -68,7 +68,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   To ustawienie zasad pozwala użytkownikom, aby zmienić opcje instalacji, które zazwyczaj są dostępne tylko dla administratorów systemu. Jeśli włączysz to ustawienie zasad, niektóre funkcje zabezpieczeń programu Windows Installer są pomijane. Pozwala na ukończenie instalacji, która byłaby zatrzymana z powodu naruszenia zabezpieczeń. Jeśli zostanie wyłączone lub nieskonfigurowane to ustawienie zasad, funkcje zabezpieczeń programu Windows Installer uniemożliwić użytkownikom zmianę opcji instalacji zarezerwowanych dla administratorów systemów, takich jak określanie katalogu, w którym przechowywane są pliki. Jeśli Instalator Windows wykryje, że pakiet instalacyjny zezwala użytkownikowi na zmianę opcji chronionych, spowoduje zatrzymanie instalacji i zostanie wyświetlony komunikat. Te funkcje zabezpieczeń działają tylko wtedy, gdy program instalacyjny jest uruchomiony w kontekście zabezpieczeń, w której ma dostęp do katalogów, w których zablokowana jest możliwość użytkownika. To ustawienie zasad jest przeznaczona dla środowisk mniej restrykcyjne uprawnienia. Może służyć do obejścia błędów w programie instalacyjnym, który uniemożliwia instalację oprogramowania.  
   [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067060)  
 
-    **Domyślne**: Tak
+  **Domyślne**: Tak
 
 - **Instalacje aplikacji MSI blok z podwyższonym poziomem uprawnień**  
   To ustawienie zasad zezwala Instalatorowi Windows na użycie podniesionych uprawnień podczas instalowania dowolnego programu w systemie.  
@@ -828,7 +828,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
 - **Uprawnienia języka Java w strefie zaufanej programu Internet Explorer**   
   To ustawienie zasad umożliwia zarządzanie uprawnieniami dotyczącymi apletów Java. Jeśli to ustawienie zasad zostanie włączone, będzie można wybierać opcje z listy rozwijanej. Ustawienie Niestandardowe umożliwia kontrolowanie ustawień uprawnień pojedynczo. Ustawienie Niski poziom zabezpieczeń umożliwia apletom wykonywanie wszystkich operacji. Ustawienie Średni poziom zabezpieczeń umożliwia uruchamianie apletów w ich piaskownicy (obszarze pamięci, poza którym program nie może wykonywać wywołań) oraz udostępnia funkcje, takie jak obszar na pliki tymczasowe (bezpieczny obszar magazynu na komputerze klienckim) i kontrolowane przez użytkownika operacje we/wy na plikach. Ustawienie Wysoki poziom zabezpieczeń umożliwia uruchamianie apletów w ich piaskownicy. Wyłącz język Java, aby uniemożliwić uruchamianie jakichkolwiek apletów. Jeśli to ustawienie zasad zostanie wyłączone, nie będzie można uruchamiać apletów Java. Jeśli to ustawienie zasad nie zostanie skonfigurowane, zostaną ustawione uprawnienia Niski poziom zabezpieczeń.  
-    [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067200)  
+  [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067200)  
   
   **Domyślne**: Wysoki poziom zabezpieczeń  
   
@@ -1829,7 +1829,7 @@ Te ustawienia są:
 - *Zaktualizowany* w jakiś sposób, w sposób ustawienia znajdowały się w poprzedniej wersji. 
 
 *[New]*  [ **Blokadzie**](#above-lock):
--  **Głos aktywowania aplikacji z ekranu blokady**    
+- **Głos aktywowania aplikacji z ekranu blokady**    
 
 *[Nowe]* [**Zarządzanie aplikacjami**](#application-management): 
 - **Blok kontrola użytkownika nad procesem instalacji**  
@@ -2602,7 +2602,7 @@ For more information, see [Policy CSP - InternetExplorer](https://docs.microsoft
   **Default**: Disable  
   
 - **Internet Explorer internet zone logon options**  
-  This policy setting allows you to manage settings for sign in options. If you enable this policy setting, you can choose from the following sign in options. Anonymous log on to disable HTTP authentication and use the guest account only for the Common Internet File System (CIFS) protocol. Prompt for user name and password to query users for user IDs and passwords. After a user is queried, these values can be used silently for the remainder of the session. Automatic log on only in Intranet zone to query users for user IDs and passwords in other zones. After a user is queried, these values can be used silently for the rest of the session. Automatic sign in with current user name and password to attempt log on using Windows NT Challenge Response (also known as NTLM authentication). If the server supports Windows NT Challenge Response, the sign in uses the user's network user name and password for log on. If If the server doesn't support Windows NT Challenge Response, the user is queried to provide the user name and password. If you disable this policy setting, sign in is set to Automatic log on only in Intranet zone. If you don't configure this policy setting, sign in is set to Automatic sign in only in Intranet zone.
+  This policy setting allows you to manage settings for sign in options. If you enable this policy setting, you can choose from the following sign in options. Anonymous log on to disable HTTP authentication and use the guest account only for the Common Internet File System (CIFS) protocol. Prompt for user name and password to query users for user IDs and passwords. After a user is queried, these values can be used silently for the remainder of the session. Automatic log on only in Intranet zone to query users for user IDs and passwords in other zones. After a user is queried, these values can be used silently for the rest of the session. Automatic sign in with current user name and password to attempt log on using Windows NT Challenge Response (also known as NTLM authentication). If the server supports Windows NT Challenge Response, the sign in uses the user's network user name and password for log on. If the server doesn't support Windows NT Challenge Response, the user is queried to provide the user name and password. If you disable this policy setting, sign in is set to Automatic log on only in Intranet zone. If you don't configure this policy setting, sign in is set to Automatic sign in only in Intranet zone.
   
   **Default**: Prompt  
   

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97e9042b6c7c1890cd1829f803c05fbab7ae9b44
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: b612a245e0a12384f8f9e7ec4a2c970afc2fd628
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040206"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548821"
 ---
 # <a name="use-policies-to-simplify-windows-pc-management"></a>Korzystanie z zasad w celu uproszczenia zarządzania komputerami z systemem Windows
 
@@ -35,13 +35,13 @@ Do zarządzania komputerami z systemem Windows jako komputerami osobistymi, uruc
 ### <a name="manage-the-microsoft-intune-center"></a>Zarządzanie programem Microsoft Intune Center
 Użytkownicy widzą klienta oprogramowania usługi Intune jako **Microsoft Intune Center**. Program Microsoft Intune Center umożliwia użytkownikom:
 
--   Pobieranie aplikacji z Portalu firmy.
+- Pobieranie aplikacji z Portalu firmy.
 
--   Wyszukiwanie aktualizacji.
+- Wyszukiwanie aktualizacji.
 
--   Zarządzanie programem Endpoint Protection usługi Microsoft Intune.
+- Zarządzanie programem Endpoint Protection usługi Microsoft Intune.
 
--  Wysyłanie żądań pomocy zdalnej.
+- Wysyłanie żądań pomocy zdalnej.
 
 Program Microsoft Intune Center jest instalowany na wszystkich zarządzanych komputerach. W zasadach usługi Intune można skonfigurować następujące ustawienia (są one widoczne dla użytkowników programu Microsoft Intune Center):
 

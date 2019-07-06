@@ -18,12 +18,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3ecc93ae788179991fd27545405d8d7319f74481
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 45937f54926178615cf9d84230feb63d1ef242b5
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61495280"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545552"
 ---
 # <a name="how-to-enroll-your-windows-81-or-windows-rt-81-device-in-intune"></a>Jak zarejestrować urządzenie z systemem Windows 8.1 lub Windows RT 8.1 w usłudze Intune  
 
@@ -32,23 +32,23 @@ Jeśli firma lub szkoła używa usługi Microsoft Intune, możesz zarejestrować
 
 Aby zarejestrować urządzenie z systemem Windows 8.1 lub Windows RT 8.1:  
 
-1.  Na urządzeniu naciśnij kolejno pozycje **Ustawienia** &gt; **Ustawienia komputera** &gt; **Sieć** &gt; **Miejsce pracy**.  
+1. Na urządzeniu naciśnij kolejno pozycje **Ustawienia** &gt; **Ustawienia komputera** &gt; **Sieć** &gt; **Miejsce pracy**.  
 
     ![nav-to-workplace](./media/W81-1-workplacejoin.png)  
 
-2.  Wprowadź służbowy adres e-mail jako identyfikator użytkownika, jeśli jest wymagany, a następnie naciśnij pozycję **Dołącz**. Jeśli identyfikator użytkownika nie jest wymagany, używany jest adres e-mail wprowadzony podczas logowania na tym urządzeniu.  
+2. Wprowadź służbowy adres e-mail jako identyfikator użytkownika, jeśli jest wymagany, a następnie naciśnij pozycję **Dołącz**. Jeśli identyfikator użytkownika nie jest wymagany, używany jest adres e-mail wprowadzony podczas logowania na tym urządzeniu.  
 
-3.  Wprowadź hasło dla służbowego adresu e-mail.  
+3. Wprowadź hasło dla służbowego adresu e-mail.  
 
 
     ![type-password](./media/W81-2-workplacesettings_signin.png)  
 
-4.  W obszarze **Włączanie zarządzania urządzeniami** naciśnij pozycję **Włącz**.  
+4. W obszarze **Włączanie zarządzania urządzeniami** naciśnij pozycję **Włącz**.  
 
 
     ![turn-on-device-management](./media/W81-3-dev-mgt-turn-on.png)  
 
-5.  W oknie dialogowym **Zezwalanie na aplikacje i usługi od działu pomocy technicznej firmy** zaznacz pole wyboru **Zgadzam się**, a następnie naciśnij pozycję **Włącz**.  
+5. W oknie dialogowym **Zezwalanie na aplikacje i usługi od działu pomocy technicznej firmy** zaznacz pole wyboru **Zgadzam się**, a następnie naciśnij pozycję **Włącz**.  
 
 
     ![turn-on-allow-apps-services](./media/W81-4-agree-allow-apps-services.png)  
@@ -60,12 +60,12 @@ Aby zarejestrować urządzenie z systemem Windows 8.1 lub Windows RT 8.1:
 
 Zalecane jest również zainstalowanie aplikacji Portal firmy, dzięki której możesz łatwo znaleźć i uzyskać aplikacje firmowe związane z Tobą i Twoim stanowiskiem. W zależności od tego, jak usługa Intune została skonfigurowana w firmie, aplikacja Portal firmy może zostać zainstalowana w ramach procesu rejestracji. Aby sprawdzić, czy masz tę aplikację, poszukaj nazwy **Portal firmy** na liście aplikacji. Jeśli lista nie zawiera aplikacji Portal firmy, wykonaj następujące kroki, aby ją zainstalować.
 
-1.  Naciśnij kolejno pozycje **Start** &gt; **Sklep**.  
+1. Naciśnij kolejno pozycje **Start** &gt; **Sklep**.  
 
-2.  Naciśnij pozycję **Wyszukaj** i wpisz **portal firmy**.  
+2. Naciśnij pozycję **Wyszukaj** i wpisz **portal firmy**.  
 
-3.  Na liście wyników naciśnij pozycję **Portal firmy**.  
+3. Na liście wyników naciśnij pozycję **Portal firmy**.  
 
-4.  Naciśnij pozycję **Zainstaluj** lub **Bezpłatne**. Wyświetlana opcja zależy od konfiguracji aplikacji w firmie.  
+4. Naciśnij pozycję **Zainstaluj** lub **Bezpłatne**. Wyświetlana opcja zależy od konfiguracji aplikacji w firmie.  
 
 Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).  

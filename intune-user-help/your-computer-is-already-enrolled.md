@@ -18,12 +18,12 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c7265eb7b4679d72fa6ab348c17f9f4f7508482e
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: f6e73b784f0e938058dcb9d6001082f86ac800ff
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55836435"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545663"
 ---
 # <a name="your-computer-is-already-enrolled"></a>Twój komputer jest już zarejestrowany
 
@@ -31,11 +31,11 @@ Jeśli wystąpi błąd z informacją, że Twój komputer jest już zarejestrowan
 
 Aby połączyć komputer:
 
-1.  Na komputerze, który chcesz połączyć ze swoim kontem, wybierz pozycję **Start**, a następnie wybierz pozycję **Microsoft Intune Center**.
+1. Na komputerze, który chcesz połączyć ze swoim kontem, wybierz pozycję **Start**, a następnie wybierz pozycję **Microsoft Intune Center**.
 
-2.  Otwórz Portal firmy.
+2. Otwórz Portal firmy.
 
-3.  Postępuj zgodnie z monitami, aby połączyć komputer ze swoim kontem użytkownika.
+3. Postępuj zgodnie z monitami, aby połączyć komputer ze swoim kontem użytkownika.
 
 Jeśli wolisz wyrejestrować urządzenie, skorzystaj z instrukcji dotyczących odpowiedniego typu urządzenia: [Android](unenroll-your-device-from-intune-android.md), [iOS](unenroll-your-device-from-intune-ios.md) lub [Windows](unenroll-your-device-from-intune-windows.md).
 

@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 913e157e8b2f16376eccf8fc93af137792015eb9
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: ef8dbcda214e2c7cd260fe237e4b9cfd0b7ff326
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55848002"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546269"
 ---
 # <a name="how-to-set-the-amount-of-time-before-your-android-device-locks-its-screen"></a>Jak ustawić czas, po jakim urządzenie z systemem Android zablokuje ekran
 
@@ -31,18 +31,18 @@ Aby ponownie połączyć się ze swoimi zasobami z pracy, musisz ustawić limit 
 
 ## <a name="native-non-samsung-knox-device"></a>Urządzenie z systemem natywnym (innym niż Samsung Knox)
 
-1.  W obszarze **Settings** (Ustawienia) na urządzeniu naciśnij pozycję **Security** (Zabezpieczenia) &gt; **Automatically Lock** (Zablokuj automatycznie). Na niektórych urządzeniach ta opcja ma nazwę **Lock phone after** (Zablokuj telefon po).
+1. W obszarze **Settings** (Ustawienia) na urządzeniu naciśnij pozycję **Security** (Zabezpieczenia) &gt; **Automatically Lock** (Zablokuj automatycznie). Na niektórych urządzeniach ta opcja ma nazwę **Lock phone after** (Zablokuj telefon po).
 
     Jeśli pozycja **Automatically Lock** („Zablokuj automatycznie”; na niektórych urządzeniach: **Lock phone after** — „Zablokuj telefon po”) nie jest wyświetlana, upewnij się, że zostało ustawione prawidłowe hasło w obszarze **Ustawienia** &gt;**Blokada ekranu** &gt;**Hasło**.
 
-2.  Wybierz wartość limitu czasu hasła.
+2. Wybierz wartość limitu czasu hasła.
 
 ## <a name="samsung-knox-device"></a>Urządzenie z systemem Samsung Knox
 
-1.  W sekcji **Settings** (Ustawienia) na urządzeniu naciśnij opcję **Lock screen and security** (Ekran blokady i zabezpieczenia) &gt; **Lock automatically** (Zablokuj automatycznie).
+1. W sekcji **Settings** (Ustawienia) na urządzeniu naciśnij opcję **Lock screen and security** (Ekran blokady i zabezpieczenia) &gt; **Lock automatically** (Zablokuj automatycznie).
 
     Jeśli pozycja **Automatically Lock** (Zablokuj automatycznie) — na niektórych urządzeniach **Lock phone after** (Zablokuj telefon po) — nie jest wyświetlana, upewnij się, że zostało ustawione prawidłowe hasło w obszarze **Settings** (Ustawienia) &gt; **Screen Lock** (Blokada ekranu) &gt; **Password** (Hasło).
 
-2.  Wybierz wartość limitu czasu hasła.
+2. Wybierz wartość limitu czasu hasła.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).

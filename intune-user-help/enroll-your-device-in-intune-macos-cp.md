@@ -18,12 +18,12 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fea76693fe929338b29d110c299277e753134cc6
-ms.sourcegitcommit: d258bcf6716c8a2589d3f8dada819905ee80f233
+ms.openlocfilehash: ee17e963964b6d2e4aa9d3e05c7a562f3c61bbf5
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66196784"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545733"
 ---
 # <a name="enroll-your-macos-device-in-intune-with-the-company-portal-app"></a>Rejestrowanie urządzenia z systemem macOS w usłudze Intune przy użyciu aplikacji Portal firmy
 
@@ -63,7 +63,7 @@ Wykonaj poniższe kroki, aby zarejestrować urządzenia z systemem operacyjnym m
     * Jeśli nie masz żadnych urządzeń, transparent wyświetla tekst: **Nie masz żadnych zarządzanych urządzeń. Dodaj urządzenie, naciskając tutaj.** Kliknij transparent, aby dodać urządzenie.  
 
      ![Zrzut ekranu przedstawiający stronę Urządzenia z czerwonym kwadratem wokół opcji transparentu wyróżniającym miejsce, w którym należy kliknąć.](./media/CP-enroll-MACOS-1808.png)  
-5.  Wykonaj poniższy krok dopasowany do obecnie wyświetlanej wiadomości w aplikacji Portal firmy.  
+5. Wykonaj poniższy krok dopasowany do obecnie wyświetlanej wiadomości w aplikacji Portal firmy.  
     * Jeśli dodajesz urządzenie po raz pierwszy, zostanie wyświetlony monit o pobranie aplikacji Portal firmy na urządzenie. Kliknij przycisk **Pobierz**, aby kontynuować.  
 
          ![Zrzut ekranu przedstawiający monit o pobranie aplikacji Portal firmy dla systemu macOS. Użytkownik ma możliwość kliknięcia niebieskiego przycisku Pobierz w lewym dolnym rogu monitu lub szarego przycisku Anuluj w prawym dolnym rogu.](./media/CP-enroll-download-macOS-1808.png)  

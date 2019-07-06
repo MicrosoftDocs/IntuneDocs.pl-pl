@@ -18,30 +18,30 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f2bcae8e48fd9c6558d77aced73d12b15e54b2f7
-ms.sourcegitcommit: a2bad7465422b98eb3c10f03dc5a24fd99cee78d
+ms.openlocfilehash: fe6cd46f6a85204d5859993a69ac5bf5b253e048
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67040946"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546344"
 ---
 # <a name="install-the-company-portal-app-for-android"></a>Instalowanie aplikacji Portal firmy dla systemu Android
 
 Portal firmy to aplikacja umożliwiająca uzyskiwanie dostępu do firmowych lub szkolnych aplikacji, poczty e-mail i sieci. Aplikacja ta pomaga zagwarantować bezpieczeństwo wszelkich danych organizacji poprzez zapewnienie bezpieczeństwa urządzenia — na przykład poprzez aktualizowanie aplikacji firmowych lub automatyczne blokowanie urządzenia po upływie określonego czasu. Aby dowiedzieć się więcej na temat funkcji w aplikacji Portal firmy i jej część w usłudze zarządzania urządzeniami, zobacz [Dlaczego warto zarejestrować urządzenie z systemem Android](why-enroll-android-device.md).  
 
-1.  Naciśnij kolejno pozycje **Strona główna** > **Sklep Play**.
+1. Naciśnij kolejno pozycje **Strona główna** > **Sklep Play**.
 
-2.  W polu **Wyszukaj** wpisz **portal firmy Intune**.  
+2. W polu **Wyszukaj** wpisz **portal firmy Intune**.  
 
-3.  Naciśnij pozycję **Portal firmy w usłudze Intune**.
+3. Naciśnij pozycję **Portal firmy w usłudze Intune**.
 
     ![android-search-company-portal](./media/and-cpinstall-1-search-cp.png)
 
-4.  Naciśnij przycisk **ZAINSTALUJ**.
+4. Naciśnij przycisk **ZAINSTALUJ**.
 
     ![android-install-company-portal](./media/and-cpinstall-2-install.png)
 
-5.  Naciśnij przycisk **ZAAKCEPTUJ**.
+5. Naciśnij przycisk **ZAAKCEPTUJ**.
 
     ![android-accept-company-portal-terms](./media/and-cpinstall-3-cp-accept.png)
 

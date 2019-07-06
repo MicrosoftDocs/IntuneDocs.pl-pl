@@ -18,12 +18,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b39cc879c9e1232335c38e8d95c0861a12662c6a
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 4784bcb706dd8eef395763729e04503682197f78
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57564469"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545268"
 ---
 # <a name="how-to-protect-your-windows-device-using-encryption"></a>Jak zapewnić ochronę urządzenia z systemem Windows za pomocą szyfrowania
 
@@ -37,8 +37,8 @@ Jeśli masz telefon z systemem Windows i zarejestrujesz go, urządzenie zostanie
 
 Jeśli masz urządzenie stacjonarne, poniższe instrukcje opisują sposób jego szyfrowania.
 
-1.  Wyszukaj aplikację **Zarządzaj funkcją BitLocker**, a następnie ją uruchom.
+1. Wyszukaj aplikację **Zarządzaj funkcją BitLocker**, a następnie ją uruchom.
 
-2.  Kliknij pozycję **Włącz funkcję BitLocker**, a następnie postępuj zgodnie z instrukcjami dotyczącymi szyfrowania poszczególnych dysków.
+2. Kliknij pozycję **Włącz funkcję BitLocker**, a następnie postępuj zgodnie z instrukcjami dotyczącymi szyfrowania poszczególnych dysków.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).

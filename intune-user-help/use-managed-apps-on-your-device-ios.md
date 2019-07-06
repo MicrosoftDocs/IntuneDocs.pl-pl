@@ -18,12 +18,12 @@ ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35d77c9aa739096f36f4dbf4b75a4186e55a3381
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 5ae4e454a0ca41858cb670790fd5acd4d6bf998a
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55835067"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546618"
 ---
 # <a name="use-managed-apps-on-your-ios-device"></a>Korzystanie z aplikacji zarządzanych na urządzeniu z systemem iOS
 
@@ -38,9 +38,9 @@ Gdy uzyskujesz dostęp do danych firmowych w aplikacji zarządzanej, jest wyświ
 ## <a name="how-do-i-get-managed-apps"></a>Jak uzyskać aplikacje zarządzane?  
 Aplikacje zarządzane można uzyskać na kilka sposobów:
 
--   Gdy urządzenie jest zarejestrowane w usłudze Microsoft Intune, zainstaluj aplikację z aplikacji Portal firmy lub witryny internetowej Portal firmy. Aplikację może również zainstalować na Twoim urządzeniu dział pomocy technicznej Twojej firmy. Aby uzyskać informacje na temat rejestrowania, zobacz artykuł [Rejestrowanie urządzenia z systemem iOS w usłudze Intune](enroll-your-device-in-intune-ios.md) lub [Rejestrowanie urządzenia z systemem macOS w usłudze Intune](enroll-your-device-in-intune-macos.md).
+- Gdy urządzenie jest zarejestrowane w usłudze Microsoft Intune, zainstaluj aplikację z aplikacji Portal firmy lub witryny internetowej Portal firmy. Aplikację może również zainstalować na Twoim urządzeniu dział pomocy technicznej Twojej firmy. Aby uzyskać informacje na temat rejestrowania, zobacz artykuł [Rejestrowanie urządzenia z systemem iOS w usłudze Intune](enroll-your-device-in-intune-ios.md) lub [Rejestrowanie urządzenia z systemem macOS w usłudze Intune](enroll-your-device-in-intune-macos.md).
 
--   Zainstaluj aplikację ze sklepu App Store, a następnie zaloguj się przy użyciu firmowego konta użytkownika, które jest zarządzane przez usługę Intune.
+- Zainstaluj aplikację ze sklepu App Store, a następnie zaloguj się przy użyciu firmowego konta użytkownika, które jest zarządzane przez usługę Intune.
 
 Dział pomocy technicznej Twojej firmy może czasami zakupić wiele licencji dla instalowanej przez Ciebie aplikacji. Jeśli zostanie wyświetlony komunikat z prośbą o zaakceptowanie umowy programu Apple Volume Purchase Program, jest to zjawisko normalne i można go zaakceptować. Jeśli go nie zaakceptujesz, nie będzie można zainstalować aplikacji.
 
@@ -56,22 +56,22 @@ Dział pomocy technicznej Twojej firmy może czasami zakupić wiele licencji dla
 ## <a name="what-can-my-company-support-manage-in-an-app"></a>Czym dział pomocy technicznej mojej firmy może zarządzać w aplikacji?  
 Oto kilka przykładowych opcji, którymi dział pomocy technicznej Twojej firmy może zarządzać w aplikacji i które mogą wpływać na interakcję z danymi firmowymi na urządzeniu:
 
--   Dostęp do określonych witryn sieci Web
+- Dostęp do określonych witryn sieci Web
 
--   Transfery danych między aplikacjami
+- Transfery danych między aplikacjami
 
--   Zapisywanie plików
+- Zapisywanie plików
 
--   Operacje kopiowania i wklejania
+- Operacje kopiowania i wklejania
 
--   Wymagania dotyczące uzyskiwania dostępu za pomocą numeru PIN
+- Wymagania dotyczące uzyskiwania dostępu za pomocą numeru PIN
 
--   Logowanie przy użyciu poświadczeń firmowych
+- Logowanie przy użyciu poświadczeń firmowych
 
--   Możliwość tworzenia kopii zapasowej w chmurze
+- Możliwość tworzenia kopii zapasowej w chmurze
 
--   Możliwość tworzenia zrzutów ekranu
+- Możliwość tworzenia zrzutów ekranu
 
--   Wymagania dotyczące szyfrowania danych
+- Wymagania dotyczące szyfrowania danych
 
 Aby uzyskać więcej informacji o aplikacjach zarządzanych na Twoim urządzeniu, skontaktuj się z działem pomocy technicznej Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).

@@ -18,12 +18,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dbf35b77c843b4dc084916b2c283b6c66d5f066d
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: fb4ac87bef7c822111e95c18f149fa8d0598c36e
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55849237"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546631"
 ---
 # <a name="remove-your-device-from-management-if-you-declined-terms-of-use"></a>Usuwanie urządzenia z zarządzania w przypadku odrzucenia warunków użytkowania
 
@@ -37,11 +37,11 @@ Przed odinstalowaniem aplikacji Portal firmy musisz przejść do ustawienia **Ad
 
 Aby usunąć urządzenie z usługi Intune i odinstalować aplikację Portal firmy:
 
-1.  Przejdź do pozycji **Ustawienia** &gt; **Zabezpieczenia &amp; Blokada ekranu** &gt; **Administratorzy urządzenia**.
+1. Przejdź do pozycji **Ustawienia** &gt; **Zabezpieczenia &amp; Blokada ekranu** &gt; **Administratorzy urządzenia**.
 
     Wykonanie tego kroku powoduje natychmiastowe wyrejestrowanie urządzenia.
 
-2.  Wyczyść pole wyboru obok pozycji **Portal firmy** lub wyłącz ją.
+2. Wyczyść pole wyboru obok pozycji **Portal firmy** lub wyłącz ją.
 
     Teraz możesz odinstalować aplikację Portal firmy.
 

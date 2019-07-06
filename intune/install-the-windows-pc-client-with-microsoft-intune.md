@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5ebca73344b88778a4d734e0690615d0aa3a20b5
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 4dd9fc00475c8a8eea28bef2150f25639ac38e15
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041778"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572602"
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Instalowanie klienta oprogramowania usługi Intune na komputerach z systemem Windows
 
@@ -68,34 +68,34 @@ Na komputerach, na których ma zostać zainstalowane oprogramowanie klienckie, p
 
 ## <a name="deploy-the-client-software-by-using-group-policy"></a>Wdrażanie oprogramowania klienckiego za pomocą zasad grupy
 
-1.  W folderze zawierającym pliki **Microsoft_Intune_Setup.exe** i **MicrosoftIntune.accountcert** uruchom następujące polecenie, aby wyodrębnić programy instalacyjne oparte na Instalatorze Windows dla komputerów 32-bitowych i 64-bitowych:
+1. W folderze zawierającym pliki **Microsoft_Intune_Setup.exe** i **MicrosoftIntune.accountcert** uruchom następujące polecenie, aby wyodrębnić programy instalacyjne oparte na Instalatorze Windows dla komputerów 32-bitowych i 64-bitowych:
 
     ```
     Microsoft_Intune_Setup.exe/Extract <destination folder>
     ```
 
-2.  Skopiuj pliki **Microsoft_Intune_x86.msi**, **Microsoft_Intune_x64.msi** i **MicrosoftIntune.accountcert** do lokalizacji sieciowej dostępnej dla wszystkich komputerów, na których ma zostać zainstalowane oprogramowanie klienckie.
+2. Skopiuj pliki **Microsoft_Intune_x86.msi**, **Microsoft_Intune_x64.msi** i **MicrosoftIntune.accountcert** do lokalizacji sieciowej dostępnej dla wszystkich komputerów, na których ma zostać zainstalowane oprogramowanie klienckie.
 
     > [!IMPORTANT]
     > Nie należy rozdzielać plików ani zmieniać ich nazw, ponieważ spowoduje to niepowodzenie instalacji oprogramowania klienckiego.
 
-3.  Wdróż oprogramowanie na komputerach w sieci za pomocą zasad grupy.
+3. Wdróż oprogramowanie na komputerach w sieci za pomocą zasad grupy.
 
     Aby uzyskać więcej informacji o automatycznym wdrażaniu oprogramowania za pomocą zasad grupy, zapoznaj się z artykułem [Group Policy for Beginners](https://technet.microsoft.com/library/hh147307.aspx) (Zasady grupy dla początkujących użytkowników).
 
 ## <a name="deploy-the-client-software-as-part-of-an-image"></a>Wdrażanie oprogramowania klienckiego jako części obrazu
 Oprogramowanie klienckie usługi Intune można wdrożyć na komputerach jako część obrazu systemu operacyjnego, postępując według następującej procedury:
 
-1.  Skopiuj pliki instalacyjne klienta (**Microsoft_Intune_Setup.exe** i **MicrosoftIntune.accountcert**) do folderu **%Systemdrive%\Temp\Microsoft_Intune_Setup** na komputerze odniesienia.
+1. Skopiuj pliki instalacyjne klienta (**Microsoft_Intune_Setup.exe** i **MicrosoftIntune.accountcert**) do folderu **%Systemdrive%\Temp\Microsoft_Intune_Setup** na komputerze odniesienia.
 
-2.  Utwórz wpis rejestru **WindowsIntuneEnrollPending**, dodając następujące polecenie do skryptu **SetupComplete.cmd** :
+2. Utwórz wpis rejestru **WindowsIntuneEnrollPending**, dodając następujące polecenie do skryptu **SetupComplete.cmd** :
 
     ```
     %windir%\system32\reg.exe add HKEY_LOCAL_MACHINE\Software\Microsoft\Onlinemanagement\Deployment /v
     WindowsIntuneEnrollPending /t REG_DWORD /d 1
     ```
 
-3.  Dodaj następujące polecenie do pliku **SetupComplete.cmd**, aby uruchomić pakiet rejestracyjny z argumentem wiersza polecenia /PrepareEnroll:
+3. Dodaj następujące polecenie do pliku **SetupComplete.cmd**, aby uruchomić pakiet rejestracyjny z argumentem wiersza polecenia /PrepareEnroll:
 
     ```
     %systemdrive%\temp\Microsoft_Intune_Setup\Microsoft_Intune_Setup.exe /PrepareEnroll
@@ -103,9 +103,9 @@ Oprogramowanie klienckie usługi Intune można wdrożyć na komputerach jako cz�
     > [!TIP]
     > Skrypt **SetupComplete.cmd** umożliwia Instalatorowi systemu Windows wprowadzenie modyfikacji systemu przed zalogowaniem się użytkownika. Argument wiersza polecenia **/PrepareEnroll** powoduje przygotowanie komputera docelowego do automatycznej rejestracji w usłudze Intune po zakończeniu działania Instalatora systemu Windows.
 
-4.  Umieść skrypt **SetupComplete.cmd** w folderze **%Windir%\Setup\Scripts** na komputerze odniesienia.
+4. Umieść skrypt **SetupComplete.cmd** w folderze **%Windir%\Setup\Scripts** na komputerze odniesienia.
 
-5.  Przechwyć obraz komputera odniesienia, a następnie wdróż go na komputerach docelowych.
+5. Przechwyć obraz komputera odniesienia, a następnie wdróż go na komputerach docelowych.
 
     Gdy komputer docelowy zostanie uruchomiony ponownie po ukończeniu działania Instalatora systemu Windows, nastąpi utworzenie klucza rejestru **WindowsIntuneEnrollPending** . Pakiet rejestracyjny sprawdza, czy komputer jest zarejestrowany. Jeśli komputer jest zarejestrowany, nie są wykonywane żadne dalsze działania. Jeśli komputer nie jest zarejestrowany, pakiet rejestracyjny tworzy zadanie automatycznej rejestracji w usłudze Microsoft Intune.
 
@@ -125,7 +125,7 @@ Jeśli użytkownikom przypisano licencję usługi Intune i ustawiono usługę In
 
 - Dla użytkowników komputerów z systemem Windows 10 lub Windows 8.1 są wyświetlane dwie opcje rejestracji:
 
-  -  **Zarejestruj komputer jako urządzenie przenośne**: użytkownicy wybierają przycisk **Dowiedz się, jak zarejestrować** i przechodzą do instrukcji dotyczących sposobu rejestracji komputera jako urządzenia przenośnego. Ten przycisk jest zawsze wyświetlany, ponieważ rejestracja w zarządzaniu urządzeniami przenośnymi jest uznawana za domyślną i preferowaną opcję rejestracji. Jednak opcja zarządzania urządzeniami przenośnymi nie została uwzględniona w tym temacie, który obejmuje tylko instalację oprogramowania klienckiego.
+  - **Zarejestruj komputer jako urządzenie przenośne**: użytkownicy wybierają przycisk **Dowiedz się, jak zarejestrować** i przechodzą do instrukcji dotyczących sposobu rejestracji komputera jako urządzenia przenośnego. Ten przycisk jest zawsze wyświetlany, ponieważ rejestracja w zarządzaniu urządzeniami przenośnymi jest uznawana za domyślną i preferowaną opcję rejestracji. Jednak opcja zarządzania urządzeniami przenośnymi nie została uwzględniona w tym temacie, który obejmuje tylko instalację oprogramowania klienckiego.
   - **Zarejestruj komputer przy użyciu oprogramowania klienckiego usługi Intune**: należy poinformować użytkowników, aby wybrali link **Kliknij tutaj, aby je pobrać**, który poprowadzi ich przez proces instalacji oprogramowania klienckiego.
 
 Poniższa tabela zawiera podsumowanie opcji.
@@ -171,19 +171,19 @@ Użyj jednej z poniższych procedur ułatwiających monitorowanie i weryfikowani
 
 ### <a name="to-verify-the-installation-of-the-client-software-from-the-microsoft-intune-administrator-console"></a>Aby zweryfikować instalację oprogramowania klienckiego z poziomu konsoli administratora usługi Microsoft Intune
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) kliknij pozycję **Grupy** &gt; **Wszystkie urządzenia** &gt; **Wszystkie komputery**.
+1. W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) kliknij pozycję **Grupy** &gt; **Wszystkie urządzenia** &gt; **Wszystkie komputery**.
 
-2.  Na liście znajdź komputery komunikujące się z usługą Intune, albo wyszukaj określony zarządzany komputer, wpisując jego nazwę (lub dowolną część nazwy) w polu **Wyszukaj urządzenia**.
+2. Na liście znajdź komputery komunikujące się z usługą Intune, albo wyszukaj określony zarządzany komputer, wpisując jego nazwę (lub dowolną część nazwy) w polu **Wyszukaj urządzenia**.
 
-3.  Sprawdź stan komputera w dolnym okienku konsoli. Usuń wszelkie błędy.
+3. Sprawdź stan komputera w dolnym okienku konsoli. Usuń wszelkie błędy.
 
 ### <a name="to-create-a-computer-inventory-report-to-display-all-enrolled-computers"></a>Aby utworzyć raport ze spisu komputerów w celu wyświetlenia wszystkich zarejestrowanych komputerów
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) kliknij pozycje **Raporty** &gt; **Raporty ze spisu komputerów**.
+1. W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) kliknij pozycje **Raporty** &gt; **Raporty ze spisu komputerów**.
 
-2.  Na stronie **Tworzenie nowego raportu** pozostaw wartości domyślne we wszystkich polach (chyba że chcesz zastosować filtry), a następnie kliknij pozycję **Wyświetl raport**.
+2. Na stronie **Tworzenie nowego raportu** pozostaw wartości domyślne we wszystkich polach (chyba że chcesz zastosować filtry), a następnie kliknij pozycję **Wyświetl raport**.
 
-3.  W nowym oknie zostanie otwarta strona **Raport o spisie komputerów** zawierająca wszystkie komputery, które zostały pomyślnie zarejestrowane w usłudze Intune.
+3. W nowym oknie zostanie otwarta strona **Raport o spisie komputerów** zawierająca wszystkie komputery, które zostały pomyślnie zarejestrowane w usłudze Intune.
 
     > [!TIP]
     > Kliknij nagłówek dowolnej kolumny w raporcie, aby posortować listę według zawartości tej kolumny.
@@ -258,7 +258,7 @@ Sprawdź folder „%ProgramFiles%\Microsoft\OnlineManagement” i upewnij się, 
 
 Operacja wyrejestrowania nie usuwa folderu OnlineManagement. Odczekaj 30 minut po odinstalowaniu, a następnie uruchom to polecenie. Jeśli zostanie ono uruchomione zbyt szybko, odinstalowanie może pozostać w nieznanym stanie. Aby usunąć folder, uruchom wiersz polecenia z podwyższonym poziomem uprawnień:
 
-    "rd /s /q %ProgramFiles%\Microsoft\OnlineManagement".
+    "rd /s /q %ProgramFiles%\Microsoft\OnlineManagement".
 
 ### <a name="next-steps"></a>Następne kroki
 [Typowe zadania związane z zarządzaniem komputerem z systemem Windows za pomocą klienta oprogramowania usługi Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)

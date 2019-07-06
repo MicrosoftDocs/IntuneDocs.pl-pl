@@ -18,32 +18,32 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1119c9602d2577f8041ad528d012adf9652dc641
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 5ebf8d43bd18629d38be24929b3df5c12a7e244b
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55837377"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546529"
 ---
 # <a name="using-the-intune-company-portal-website"></a>Korzystanie z witryny Portal firmy usługi Intune
 Użyj [witryny internetowej Portal firmy](https://portal.manage.microsoft.com), aby wyświetlać, edytować, dodawać i usuwać zarządzane urządzenia.
 
 Z poziomu witryny internetowej Portal firmy możesz wykonać dowolną z następujących akcji:
 
--   [Zmienianie nazwy urządzenia](rename-your-device-cpwebsite.md)
+- [Zmienianie nazwy urządzenia](rename-your-device-cpwebsite.md)
 
--   [Usuwanie urządzenia](remove-your-device-cpwebsite.md)
+- [Usuwanie urządzenia](remove-your-device-cpwebsite.md)
 
--   [Resetowanie urządzenia](reset-erase-your-device-cpwebsite.md)
+- [Resetowanie urządzenia](reset-erase-your-device-cpwebsite.md)
 
--   [Resetowanie kodu dostępu urządzenia](reset-your-passcode-cpwebsite.md)
+- [Resetowanie kodu dostępu urządzenia](reset-your-passcode-cpwebsite.md)
 
--   [Zdalne blokowanie urządzenia](remote-lock-your-device-cpwebsite.md)
+- [Zdalne blokowanie urządzenia](remote-lock-your-device-cpwebsite.md)
 
--   Znajdowanie informacji kontaktowych działu pomocy technicznej Twojej firmy (jeśli zostały one skonfigurowane)
+- Znajdowanie informacji kontaktowych działu pomocy technicznej Twojej firmy (jeśli zostały one skonfigurowane)
 
--   Sprawdzanie stanu zgodności
+- Sprawdzanie stanu zgodności
 
--   Zdalne zarządzanie komputerem
+- Zdalne zarządzanie komputerem
 
 Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).

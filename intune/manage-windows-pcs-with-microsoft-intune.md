@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96ace484d0c4e832470ae9a6e4ffc69290c7d657
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 733cb20c43b34393003f2e9f4f4466922f3f581e
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044951"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572559"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Zarządzanie komputerami z systemem Windows przy użyciu oprogramowania klienckiego usługi Intune
 
@@ -70,16 +70,16 @@ Jako administrator usługi Intune możesz udostępnić użytkownikom oprogramowa
 ## <a name="computer-management-capabilities-with-the-intune-client-software"></a>Funkcje zarządzania komputerami przy użyciu oprogramowania klienckiego usługi Intune
 W większości przypadków będziesz rejestrować urządzenia w usłudze Microsoft Intune, co zapewnia większe możliwości. Możesz jednak także zarządzać komputerami, korzystając z klienta oprogramowania usługi Intune, który zapewnia następujące funkcje:
 
--   **[Zarządzanie aktualizacjami oprogramowania](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md)** — aktualizowanie komputerów i zarządzanie harmonogramem stosowania aktualizacji.
+- **[Zarządzanie aktualizacjami oprogramowania](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md)** — aktualizowanie komputerów i zarządzanie harmonogramem stosowania aktualizacji.
 
--   **[Zasady Zapory systemu Windows](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md)** — zapewnianie, że żaden komputer używany w firmie nie ma nieaktywnej ani nieprawidłowo skonfigurowanej Zapory systemu Windows.
+- **[Zasady Zapory systemu Windows](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md)** — zapewnianie, że żaden komputer używany w firmie nie ma nieaktywnej ani nieprawidłowo skonfigurowanej Zapory systemu Windows.
 
--   **[Ochrona przed złośliwym oprogramowaniem](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md)** — usługa Intune obejmuje program Endpoint Protection, który pomaga chronić komputery przed złośliwym oprogramowaniem.
+- **[Ochrona przed złośliwym oprogramowaniem](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md)** — usługa Intune obejmuje program Endpoint Protection, który pomaga chronić komputery przed złośliwym oprogramowaniem.
 
--   **[Pomoc zdalna](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)** — usługa Intune umożliwia użytkownikom kontaktowanie się z pracownikami działu pomocy technicznej IT, którzy mogą udzielić im pomocy przy użyciu funkcji pulpitu zdalnego dostępnej w usłudze Intune (wymagane jest oprogramowanie TeamViewer).
+- **[Pomoc zdalna](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)** — usługa Intune umożliwia użytkownikom kontaktowanie się z pracownikami działu pomocy technicznej IT, którzy mogą udzielić im pomocy przy użyciu funkcji pulpitu zdalnego dostępnej w usłudze Intune (wymagane jest oprogramowanie TeamViewer).
 
--   **[Zarządzanie licencjami na oprogramowanie](manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md)** — śledzenie liczby dostępnych licencji na oprogramowanie oraz liczby dostępnych licencji będących w użyciu.
--   **[Wdrażanie aplikacji](add-apps-for-windows-pcs-in-microsoft-intune.md)** — wdrażanie oprogramowania na zarządzanych komputerach. Niektóre funkcje zarządzania aplikacjami są niedostępne, jeśli zarządzasz komputerami za pomocą klienta oprogramowania.
+- **[Zarządzanie licencjami na oprogramowanie](manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md)** — śledzenie liczby dostępnych licencji na oprogramowanie oraz liczby dostępnych licencji będących w użyciu.
+- **[Wdrażanie aplikacji](add-apps-for-windows-pcs-in-microsoft-intune.md)** — wdrażanie oprogramowania na zarządzanych komputerach. Niektóre funkcje zarządzania aplikacjami są niedostępne, jeśli zarządzasz komputerami za pomocą klienta oprogramowania.
 
 <!-- - **Compliance settings reporting** -->
 
@@ -113,8 +113,8 @@ Aby uzyskać więcej informacji o powyższych, zobacz [typowe zadania zarządzan
 
 Niektóre opcje zarządzania, których można użyć do zarządzania komputerami jako urządzeniami przenośnymi, nie mogą zostać użyte w przypadku komputerów zarządzanych przy użyciu oprogramowania klienckiego usługi Intune:
 
--   Pełne czyszczenie (selektywne czyszczenie jest dostępne)
--   Dostęp warunkowy
+- Pełne czyszczenie (selektywne czyszczenie jest dostępne)
+- Dostęp warunkowy
 
 Należy również pamiętać, że w konsoli administracyjnej usługi Intune niektóre sekcje, takie jak **Aktualizacje**, **Ochrona** i **Licencje**, pojawiają się tylko w przypadku urządzeń zarejestrowanych za pomocą oprogramowania klienckiego usługi Intune.
 

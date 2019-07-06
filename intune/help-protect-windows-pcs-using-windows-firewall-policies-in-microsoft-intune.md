@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f3b552c42a7a84ad8099a406bfff2db575785915
-ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
+ms.openlocfilehash: eade2a1bc19e4b0c477faf2ad8e262196da8cc30
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67403013"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572512"
 ---
 # <a name="help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune"></a>Ochrona komputerów z systemem Windows przy użyciu zasad Zapory systemu Windows w usłudze Microsoft Intune
 
@@ -48,14 +48,14 @@ Zasady Zapory systemu Windows umożliwiają tworzenie i wdrażanie ustawień ste
 > [!IMPORTANT]
 > Aby móc zarządzać Zaporą systemu Windows za pomocą usługi Intune, na zarządzanych komputerach muszą być włączone następujące dwie usługi:
 >
-> -   Zapora systemu Windows
-> -   Agent zasad IPsec
+> - Zapora systemu Windows
+> - Agent zasad IPsec
 
 ## <a name="configure-a-windows-firewall-policy"></a>Konfiguracja zasad Zapory systemu Windows
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) wybierz kolejno pozycje **Zasady** &gt; **Dodaj zasady**.
+1. W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) wybierz kolejno pozycje **Zasady** &gt; **Dodaj zasady**.
 
-2.  Skonfiguruj i wdroż zasady **ustawień Zapory systemu Windows** . Możesz użyć zalecanych ustawień lub dostosować je. Aby uzyskać więcej informacji dotyczących sposobu tworzenia i wdrażania zasad, zobacz [Typowe zadania związane z zarządzaniem komputerem z systemem Windows za pomocą klienta komputerowego usługi Microsoft Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).
+2. Skonfiguruj i wdroż zasady **ustawień Zapory systemu Windows** . Możesz użyć zalecanych ustawień lub dostosować je. Aby uzyskać więcej informacji dotyczących sposobu tworzenia i wdrażania zasad, zobacz [Typowe zadania związane z zarządzaniem komputerem z systemem Windows za pomocą klienta komputerowego usługi Microsoft Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).
 
     W poniższej sekcji przedstawiono ustawienia możliwe do skonfigurowania w ramach zasad oraz ich wartości domyślne, które zostaną użyte, jeśli zrezygnujesz z dostosowania zasad.
 

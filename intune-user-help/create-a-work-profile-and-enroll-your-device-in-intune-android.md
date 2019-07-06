@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6fb5911f8a706f38e3e880c32113d203369ed870
-ms.sourcegitcommit: d258bcf6716c8a2589d3f8dada819905ee80f233
+ms.openlocfilehash: f0a8b0b633f64a2ed6e3e14d5d884df80342067a
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66196933"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545462"
 ---
 # <a name="enroll-device-with-android-work-profile"></a>Rejestrowanie urządzenia przy użyciu profilu służbowego systemu Android
 
@@ -33,7 +33,7 @@ Zarejestruj swoje prywatne urządzenie z systemem Android, aby uzyskać dostęp 
 
 ## <a name="create-work-profile-and-enroll-device"></a>Tworzenie profilu służbowego i rejestrowanie urządzenia
 
-1.  Na **ekranie powitalnym** portalu firmy dla systemu Android naciśnij przycisk **Zaloguj**, a następnie zaloguj się przy użyciu swojego konta służbowego. Jeśli jeszcze nie masz zainstalowanej bezpłatnej aplikacji, pobierz i zainstaluj ją ze sklepu [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal).
+1. Na **ekranie powitalnym** portalu firmy dla systemu Android naciśnij przycisk **Zaloguj**, a następnie zaloguj się przy użyciu swojego konta służbowego. Jeśli jeszcze nie masz zainstalowanej bezpłatnej aplikacji, pobierz i zainstaluj ją ze sklepu [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal).
 
     ![Ekran powitalny aplikacji Portal firmy dla systemu Android](./media/and-enroll-0-welcome-screen.png)
 
@@ -41,15 +41,15 @@ Zarejestruj swoje prywatne urządzenie z systemem Android, aby uzyskać dostęp 
 
     ![Ekran Konfiguracja dostępu do zasobów firmy](/intune/media/android_cp_enroll_01_1709_new.png)
 
-3.  Na ekranie **Po co tworzyć profil służbowy?** przeczytaj, co możesz zrobić, a następnie naciśnij pozycję **KONTYNUUJ**.
+3. Na ekranie **Po co tworzyć profil służbowy?** przeczytaj, co możesz zrobić, a następnie naciśnij pozycję **KONTYNUUJ**.
 
     ![Po co tworzyć profil służbowy](./media/andr-afw-why-create-a-work-profile.png)
 
-4.  Przejrzyj listę rzeczy, które dział pomocy technicznej Twojej firmy może zobaczyć na Twoim urządzeniu i których nie może zobaczyć, a następnie naciśnij pozycję **KONTYNUUJ**.
+4. Przejrzyj listę rzeczy, które dział pomocy technicznej Twojej firmy może zobaczyć na Twoim urządzeniu i których nie może zobaczyć, a następnie naciśnij pozycję **KONTYNUUJ**.
 
     ![Lista rzeczy, które dział pomocy technicznej Twojej firmy może zobaczyć na Twoim urządzeniu i których nie może zobaczyć](/intune/media/android_cp_enroll_02_after_1710.png)
 
-5.  Na ekranie **Co dalej?** przeczytaj, co będzie się działo podczas rejestrowania, a następnie naciśnij pozycję **ZAREJESTRUJ**.
+5. Na ekranie **Co dalej?** przeczytaj, co będzie się działo podczas rejestrowania, a następnie naciśnij pozycję **ZAREJESTRUJ**.
 
     ![Ekran Co dalej](/intune/media/android_work_cp_enroll_03_after_1710.png)
 

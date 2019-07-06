@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3b0aff29db5402de7e91282e74cd6d69a103545
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 9e9a50855a26b72b2f6589d9f44ce6deea0588fa
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045813"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67529183"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Wprowadzenie do zestawu SDK aplikacji usługi Microsoft Intune
 
@@ -160,8 +160,8 @@ Po wykonaniu czynności niezbędnych do zintegrowania Twojej aplikacji systemu i
     * Jeśli jesteś niezależnym dostawcą oprogramowania i włączasz obsługę ochrony aplikacji usługi Intune dla swoich aplikacji systemu iOS lub Android ze sklepu, po dokonaniu rejestracji w usłudze Microsoft Intune w sposób opisany w kroku rejestracji otrzymasz kod promocyjny. Kod ten pozwala zarejestrować się w celu korzystania z wersji próbnej usługi Microsoft Intune przez dodatkowy rok.
 
     * Jeśli opracowujesz aplikację biznesową, która nie zostanie dostarczona do sklepu, dostęp do usługi Microsoft Intune możesz uzyskiwać za pośrednictwem swojej organizacji. Możesz też zarejestrować się w celu skorzystania z miesięcznej bezpłatnej wersji próbnej usługi [Microsoft Intune](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0).
-    
-    * Jeśli testujesz aplikację na urządzeniu przenośnym przy użyciu konta użytkownika końcowego, upewnij się, że do konta przypisano licencję usługi Intune w witrynie internetowej centrum administracyjnego Microsoft 365 po zalogowaniu się przy użyciu konta administratora. Zobacz [Assign Microsoft Intune license (Przypisywanie licencji usługi Microsoft Intune)](https://docs.microsoft.com/en-ca/intune/licenses-assign).
+
+    * Jeśli testujesz aplikację na urządzeniu przenośnym przy użyciu konta użytkownika końcowego, upewnij się, że do konta przypisano licencję usługi Intune w witrynie internetowej centrum administracyjnego Microsoft 365 po zalogowaniu się przy użyciu konta administratora. Zobacz [Assign Microsoft Intune license (Przypisywanie licencji usługi Microsoft Intune)](https://docs.microsoft.com/intune/licenses-assign).
 
 * **Zasady ochrony aplikacji usługi Intune**: aby przetestować wszystkie zasady ochrony aplikacji usługi Intune w swojej aplikacji, musisz znać oczekiwane zachowanie każdego ustawienia zasad. Zobacz opisy [zasad ochrony aplikacji systemu iOS](app-protection-policy-settings-ios.md) i [zasad ochrony aplikacji systemu Android](app-protection-policy-settings-android.md). Jeśli aplikacja została zintegrowana z zestawem SDK usługi Intune, ale nie ma jej jeszcze na liście aplikacji docelowych w witrynie Azure Portal, możesz wybrać ją jako docelową za pomocą zasad, wybierając opcję „+ Więcej aplikacji” i podając identyfikator pakietu (iOS) lub nazwę pakietu (Android) w polu tekstowym.
 
@@ -173,12 +173,12 @@ Jeśli aplikacja używa własnych niestandardowych ustawień usługi Azure Activ
 
 Gdy aplikacja zostanie zarejestrowana w dzierżawie platformy Azure i pojawi się w obszarze **Wszystkie aplikacje**, musisz udzielić jej dostępu do usługi ochrony aplikacji w usłudze Intune (wcześniej znanej jako usługa MAM). W witrynie Azure Portal:
 
-1.  Przejdź do bloku **Azure Active Directory**.
-2.  W obszarze **Rejestracje aplikacji** przejdź do skonfigurowanego wykazu aplikacji.
-3.  Kliknij pozycję **+ Dodaj uprawnienie**.
-4.  Kliknij pozycję **Interfejsy API używane przez moją organizację**. 
-5.  W polu wyszukiwania wprowadź frazę **Microsoft Mobile Application Management**.
-6.  W obszarze **Uprawnienia delegowane** zaznacz pole wyboru **DeviceManagementManagedApps.ReadWrite: odczyt i zapis danych zarządzania aplikacjami użytkownika***.
+1. Przejdź do bloku **Azure Active Directory**.
+2. W obszarze **Rejestracje aplikacji** przejdź do skonfigurowanego wykazu aplikacji.
+3. Kliknij pozycję **+ Dodaj uprawnienie**.
+4. Kliknij pozycję **Interfejsy API używane przez moją organizację**. 
+5. W polu wyszukiwania wprowadź frazę **Microsoft Mobile Application Management**.
+6. W obszarze **Uprawnienia delegowane** zaznacz pole wyboru **DeviceManagementManagedApps.ReadWrite: odczyt i zapis danych zarządzania aplikacjami użytkownika***.
 7. Kliknij pozycję **Dodaj uprawnienia**.
 
 ### <a name="badge-your-app-optional"></a>Znakowanie aplikacji (opcjonalne)

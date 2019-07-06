@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 52f6caf8e48cd9781648acf1de0152ec107d5246
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 20bdfcce6574d31c37442a7bad58582aa7ea2fb6
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55850911"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546130"
 ---
 # <a name="send-logs-to-the-company-portal-developers-for-android-devices"></a>Wysyłanie dzienników urządzeń z systemem Android do deweloperów aplikacji Portal firmy
 
@@ -34,16 +34,16 @@ Czasami aplikacja Portal firmy może zostać nieoczekiwanie zamknięta. Dewelope
 
 Aby wysłać dzienniki do firmy Microsoft:
 
-1.  Otwórz aplikację Portal firmy.
+1. Otwórz aplikację Portal firmy.
 
-2.  Naciśnij pozycję **Menu** > **Pomoc** > **Pomoc techniczna pocztą e-mail**.
+2. Naciśnij pozycję **Menu** > **Pomoc** > **Pomoc techniczna pocztą e-mail**.
 
     > [!NOTE]
     > Przycisk **Menu** może być przyciskiem programowym lub sprzętowym, w zależności od posiadanego urządzenia z systemem Android.
 
-3.  Naciśnij pozycję **Przekaż tylko dzienniki**.
+3. Naciśnij pozycję **Przekaż tylko dzienniki**.
 
-4.  Po zakończeniu przekazywania otrzymasz identyfikator zdarzenia. Zapisz identyfikator na przyszłość.
+4. Po zakończeniu przekazywania otrzymasz identyfikator zdarzenia. Zapisz identyfikator na przyszłość.
 
 Aby skontaktować się z zespołem aplikacji Portal firmy dla systemu Android, wyślij wiadomość e-mail na adres <a href="mailto:wintunedroidfbk@microsoft.com?subject=Send logs to Microsoft&body=Describe the issue you are having.">wintunedroidfbk@microsoft.com</a>. 
 

@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 95862c006baef40bfb219e5cff50d5622c8c00b4
-ms.sourcegitcommit: fdc6261f4ed695986e06d18353c10660a4735362
+ms.openlocfilehash: 767788d702db45686d686e21018cbf0c5b038412
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58069110"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546668"
 ---
 # <a name="set-your-pin-or-password"></a>Ustaw swój numer PIN lub hasło
 
@@ -31,9 +31,9 @@ Jeśli korzystasz z usługi Intune w celu uzyskiwania dostępu do danych służb
 
 Następujące kroki służą do ustawiania numeru PIN i hasła.
 
-1.  Naciśnij pozycję **Ustawienia** > **Zabezpieczenia** > **Blokada ekranu** > **Hasło**.
+1. Naciśnij pozycję **Ustawienia** > **Zabezpieczenia** > **Blokada ekranu** > **Hasło**.
 
-2.  Wybierz i potwierdź nowe hasło.
+2. Wybierz i potwierdź nowe hasło.
 
 W przypadku niektórych urządzeń może być konieczne ustawienie startowego numeru PIN oprócz hasła do odblokowywania ekranu. Można spróbować rozwiązać ten problem, wyszukując tę opcję w aplikacji Ustawienia. Na przykład na urządzeniu Samsung Galaxy S7 bezpieczne uruchamianie włącza się przy użyciu opcji **Ustawienia** > **Ekran blokady i zabezpieczenia** > **Bezpieczne uruchamianie**. Dowiedz się więcej [tutaj](/intune-user-help/your-device-appears-encrypted-but-cp-says-otherwise-android). 
 

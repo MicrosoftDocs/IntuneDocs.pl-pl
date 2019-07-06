@@ -18,12 +18,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46f2193a3a13183d41b10f03b6efe7100f0d9f9d
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 50833b33583dcc1b49eb9009995b8ccd6c79e1f0
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55840369"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546645"
 ---
 # <a name="remove-your-windows-device-from-management"></a>Usuwanie urządzenia z systemem Windows z zarządzania
 
@@ -76,24 +76,24 @@ Aby usunąć urządzenie z systemem Windows 10 z zarządzania, wykonaj poniższe
 ## <a name="remove-your-windows-81-computer"></a>Usuwanie komputera z systemem Windows 8.1
 Aby usunąć komputer z systemem Windows 8.1 z usługi Intune, wykonaj poniższe kroki.
 
-1.  Przejdź kolejno do pozycji **Ustawienia komputera** > **Sieć** > **Miejsce pracy**.
-2.  W obszarze **Dołącz do miejsca pracy** wybierz pozycję **Opuść**.
-3.  W obszarze **Włączanie zarządzania urządzeniami** wybierz pozycję **Wyłącz**.
-4.  W otwartym oknie podręcznym wybierz pozycję **Wyłącz**.
+1. Przejdź kolejno do pozycji **Ustawienia komputera** > **Sieć** > **Miejsce pracy**.
+2. W obszarze **Dołącz do miejsca pracy** wybierz pozycję **Opuść**.
+3. W obszarze **Włączanie zarządzania urządzeniami** wybierz pozycję **Wyłącz**.
+4. W otwartym oknie podręcznym wybierz pozycję **Wyłącz**.
 
 ## <a name="remove-your-windows-81-phone"></a>Usuwanie telefonu z systemem Windows 8.1
 Aby usunąć telefon z systemem Windows 8.1 z usługi Intune, wykonaj poniższe kroki.
 
-1.  Przejdź do pozycji **Ustawienia** > **Miejsce pracy**.
-2.  Naciśnij konto firmowe, które chcesz wyrejestrować.
-3.  W dolnej części ekranu naciśnij pozycję **Usuń**.
-4.  W oknie dialogowym **Usuń konto** naciśnij opcję **Usuń**.  
+1. Przejdź do pozycji **Ustawienia** > **Miejsce pracy**.
+2. Naciśnij konto firmowe, które chcesz wyrejestrować.
+3. W dolnej części ekranu naciśnij pozycję **Usuń**.
+4. W oknie dialogowym **Usuń konto** naciśnij opcję **Usuń**.  
 ## <a name="removing-your-personal-information-after-removing-the-company-portal"></a>Usuwanie danych osobowych po usunięciu aplikacji Portal firmy  
 
 Istnieją dwa rodzaje danych, które aplikacja Portal firmy przechowuje na urządzeniu z systemem Windows:
 
--   **Dzienniki diagnostyczne**: dane o aktywności standardowej aplikacji gromadzone przez firmę Microsoft. Są one automatycznie usuwane po odinstalowaniu aplikacji Portal firmy. Do danych o aktywności aplikacji należą na przykład dane informujące o tym, jak długo aplikacja była otwarta lub czy miała miejsce awaria aplikacji.
--   **Pamięć podręczna aplikacji**: wybrane pliki pomocnicze wymagane do działania aplikacji, np. ikony i ustawienia.
+- **Dzienniki diagnostyczne**: dane o aktywności standardowej aplikacji gromadzone przez firmę Microsoft. Są one automatycznie usuwane po odinstalowaniu aplikacji Portal firmy. Do danych o aktywności aplikacji należą na przykład dane informujące o tym, jak długo aplikacja była otwarta lub czy miała miejsce awaria aplikacji.
+- **Pamięć podręczna aplikacji**: wybrane pliki pomocnicze wymagane do działania aplikacji, np. ikony i ustawienia.
 
 Aby usunąć przechowywane dzienniki i pamięć podręczna, wykonaj jeden z następujących kroków:
 

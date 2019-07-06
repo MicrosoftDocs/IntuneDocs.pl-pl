@@ -18,12 +18,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d9f29e2d737dfd7bef709f239d6c8506c3bb746c
-ms.sourcegitcommit: d258bcf6716c8a2589d3f8dada819905ee80f233
+ms.openlocfilehash: df0afecb006ef8837f888b3b9209d5892d90a228
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66196878"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546382"
 ---
 # <a name="windows-device-enrollment-in-intune-company-portal"></a>Rejestrowanie urządzenia z systemem Windows w aplikacji Portal firmy usługi Intune  
 
@@ -61,17 +61,17 @@ Kroki rejestracji różnią się dla różnych wersji urządzeń z systemem Wind
 
 4. Jeśli masz wersję  
 
-    *  __1607 lub nowszą__: zarejestruj urządzenie, wybierając kolejno pozycje [**Ustawienia** > **Konto** > **Uzyskaj dostęp do miejsca pracy lub nauki**](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
+    * __1607 lub nowszą__: zarejestruj urządzenie, wybierając kolejno pozycje [**Ustawienia** > **Konto** > **Uzyskaj dostęp do miejsca pracy lub nauki**](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
     * __1511 lub starszą__: zarejestruj urządzenie, wybierając kolejno pozycje [**Ustawienia** > **Konto** > **Twoje konta**](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
 
-### <a name="windows-10-mobile-devices"></a>Urządzenia z systemem Windows 10 Mobile       
+### <a name="windows-10-mobile-devices"></a>Urządzenia z systemem Windows 10 Mobile
 
-1.  Przejdź do ekranu __Wszystkie aplikacje__ i wybierz aplikację __Ustawienia__.  
-2.  Wybierz pozycje __System__ > __Informacje__.      
-3.  W obszarze __Informacje o urządzeniu__ znajdź pozycję __Wersja__.  
+1. Przejdź do ekranu __Wszystkie aplikacje__ i wybierz aplikację __Ustawienia__.
+2. Wybierz pozycje __System__ > __Informacje__.
+3. W obszarze __Informacje o urządzeniu__ znajdź pozycję __Wersja__.  
 4. Jeśli masz wersję  
 
-    *  __1607 lub nowszą__: zarejestruj urządzenie, wybierając kolejno pozycje [**Ustawienia** > **Uzyskaj dostęp do miejsca pracy lub nauki**](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
+    * __1607 lub nowszą__: zarejestruj urządzenie, wybierając kolejno pozycje [**Ustawienia** > **Uzyskaj dostęp do miejsca pracy lub nauki**](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
     * __1511 lub starszą__: zarejestruj urządzenie, wybierając kolejno pozycje [**Ustawienia** > **Konta**](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
 
 ## <a name="enroll-non-windows-10-devices"></a>Rejestrowanie urządzeń z systemem innym niż Windows 10  

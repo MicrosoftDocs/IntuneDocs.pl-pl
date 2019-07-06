@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a1a725ff5ba5a677a41fe2a89b999f1ae41b3b6f
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: a58339f8a956e4250064bc81e2f291a72c27c27f
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040905"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549154"
 ---
 # <a name="request-and-provide-remote-assistance-for-windows-pcs"></a>Żądanie i zapewnianie pomocy zdalnej dla komputerów z systemem Windows
 
@@ -79,13 +79,13 @@ Z menu **Akcje** okna programu **TeamViewer** wybierz polecenie **Zakończ sesj�
 ## <a name="remotely-restart-a-windows-pc"></a>Zdalne ponowne uruchamianie komputera z systemem Windows
 W trakcie udzielania pomocy użytkownikom w rozwiązywaniu problemów od czasu do czasu może okazać się konieczne ponowne uruchomienie komputera zdalnie. Wykonaj następujące kroki, aby zdalnie ponownie uruchomić komputer z systemem Windows.
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) wybierz pozycję **Grupy** &gt; **Wszystkie urządzenia** (lub inną grupę zawierającą komputer osobisty, który chcesz ponownie uruchomić).
+1. W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) wybierz pozycję **Grupy** &gt; **Wszystkie urządzenia** (lub inną grupę zawierającą komputer osobisty, który chcesz ponownie uruchomić).
 
-2.  Wybierz co najmniej jeden komputer osobisty, a następnie wybierz kolejno pozycje **Zadania zdalne** &gt; **Uruchom ponownie komputer**.
+2. Wybierz co najmniej jeden komputer osobisty, a następnie wybierz kolejno pozycje **Zadania zdalne** &gt; **Uruchom ponownie komputer**.
 
-3.  Aby wyświetlić stan zadania, wybierz pozycję **Zadania zdalne** w prawym dolnym rogu strony.
+3. Aby wyświetlić stan zadania, wybierz pozycję **Zadania zdalne** w prawym dolnym rogu strony.
 
-4.  W oknie dialogowym **Stan zadania** przejrzyj bieżące zadania zdalne, stan zadania, nazwę urządzenia i wszystkie zgłoszone błędy.
+4. W oknie dialogowym **Stan zadania** przejrzyj bieżące zadania zdalne, stan zadania, nazwę urządzenia i wszystkie zgłoszone błędy.
 
 ### <a name="see-also"></a>Zobacz także
 
