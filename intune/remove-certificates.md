@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/08/2019
+ms.date: 06/27/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,24 +16,31 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: lacranda
-ms.openlocfilehash: 99f51662894cac04e6ebcd821806b433dbf3117e
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: de2f201e6a7d0181847db5d212625c9eed9ea698
+ms.sourcegitcommit: 9c06d8071b9affeda32e367bfe85d89bc524ed0b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041241"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413770"
 ---
 # <a name="remove-scep-and-pkcs-certificates-in-microsoft-intune"></a>Usuwanie certyfikatów SCEP i PKCS w usłudze Microsoft Intune
 
-Usługa Microsoft Intune umożliwia dodawanie do urządzeń certyfikatów prostego protokołu rejestrowania certyfikatów (SCEP) i certyfikatów PKCS (Public Key Cryptography Standards). Te certyfikaty mogą być również usuwane podczas [czyszczenia](devices-wipe.md#wipe) lub [wycofywania](devices-wipe.md#retire) urządzenia. 
+Usługa Microsoft Intune umożliwia dodawanie certyfikatów do urządzeń przy użyciu profilu prostego protokołu rejestrowania certyfikatów (SCEP) i profilu certyfikatów PKCS (Public Key Cryptography Standards). 
 
-Istnieje określone scenariusze, w których certyfikaty są automatycznie usuwane, i scenariusze, w których certyfikaty pozostają w urządzeniu. W tym artykule opisano niektóre typowe scenariusze oraz ich wpływ na certyfikaty PKCS i SCEP.
+Te certyfikaty mogą być usuwane podczas [czyszczenia](devices-wipe.md#wipe) lub [wycofywania](devices-wipe.md#retire) urządzenia. Istnieje również scenariusze, w których certyfikaty są automatycznie usuwane, i scenariusze, w których certyfikaty pozostają na urządzeniu. W tym artykule opisano niektóre typowe scenariusze oraz ich wpływ na certyfikaty PKCS i SCEP.
 
 > [!NOTE]
 > Aby usunąć i odwołać certyfikaty dla użytkownika usuwanego z lokalnej usługi Active Directory lub Azure Active Directory (Azure AD), wykonaj poniższe kroki w następującej kolejności:
 >
 > 1. Wyczyszczenie lub wycofanie urządzenia użytkownika.
 > 2. Usunięcie użytkownika z lokalnej usługi Active Directory lub Azure AD.
+
+## <a name="manually-deleted-certificates"></a>Certyfikaty usuwane ręcznie  
+
+Ręczne usuwanie certyfikatu to scenariusz, który ma zastosowanie na różnych platformach i do certyfikatów aprowizowanych za pomocą profilów certyfikatów SCEP i PKCS. Na przykład użytkownik może usunąć certyfikat z urządzenia, gdy na urządzaniu nadal obowiązuje zasada certyfikatu.  
+
+W tym scenariuszu po usunięciu certyfikatu, gdy urządzenie następnym razem będzie sprawdzać zasady usługi Intune, zostanie określone jako niezgodne, ponieważ nie będzie zawierać oczekiwanego certyfikatu. Usługa Intune wystawi nowy certyfikat, aby przywrócić zgodność urządzenia. Aby przywrócić certyfikat, nie jest wymagana żadna dodatkowa akcja.  
+
 
 ## <a name="windows-devices"></a>Urządzenia z systemem Windows
 

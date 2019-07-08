@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c19c02c8d4c9ece66d03b3510071bb90e7f35ad3
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: e9b32b7b7bc3bfa7735a7e4437e8238630e56884
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66047516"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548777"
 ---
 # <a name="help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune"></a>Zabezpieczanie komputerów z systemem Windows przy użyciu programu Endpoint Protection dla usługi Microsoft Intune
 
@@ -46,15 +46,15 @@ Jednym z podstawowych zadań administratora IT jest ochrona zarządzanych komput
 
 Aby zmienić obecnie używaną aplikację ochrony punktu końcowego na program Endpoint Protection usługi Microsoft Intune, wykonaj następujące czynności:
 
-1.  Pozostaw włączoną aktualnie używaną aplikację ochrony punktu końcowego i wdróż oprogramowanie klienckie usługi Intune na komputerach.
+1. Pozostaw włączoną aktualnie używaną aplikację ochrony punktu końcowego i wdróż oprogramowanie klienckie usługi Intune na komputerach.
 
-2.  Upewnij się, że program Endpoint Protection usługi Microsoft Intune jest zainstalowany i pomaga chronić komputery klienckie.
+2. Upewnij się, że program Endpoint Protection usługi Microsoft Intune jest zainstalowany i pomaga chronić komputery klienckie.
 
-3.  Usuń oprogramowanie ochrony punktu końcowego innej firmy, wykonując następujące czynności:
+3. Usuń oprogramowanie ochrony punktu końcowego innej firmy, wykonując następujące czynności:
 
-    -   Przy użyciu dystrybucji oprogramowania usługi Intune wdróż narzędzie do usuwania oprogramowania dostarczone przez producenta aplikacji ochrony punktu końcowego innej firmy. Aby uzyskać więcej informacji, zobacz [Wdrażanie aplikacji przy użyciu usługi Microsoft Intune](apps-deploy.md).
+    - Przy użyciu dystrybucji oprogramowania usługi Intune wdróż narzędzie do usuwania oprogramowania dostarczone przez producenta aplikacji ochrony punktu końcowego innej firmy. Aby uzyskać więcej informacji, zobacz [Wdrażanie aplikacji przy użyciu usługi Microsoft Intune](apps-deploy.md).
 
-    -   Usuń ręcznie aplikację ochrony punktu końcowego innej firmy.
+    - Usuń ręcznie aplikację ochrony punktu końcowego innej firmy.
 
 > [!NOTE]
 > Usługa Intune nie odinstaluje automatycznie aplikacji ochrony punktu końcowego innych firm.
@@ -62,9 +62,9 @@ Aby zmienić obecnie używaną aplikację ochrony punktu końcowego na program E
 ## <a name="configure-microsoft-intune-endpoint-protection"></a>Konfigurowanie programu Endpoint Protection usługi Microsoft Intune
 Aby skonfigurować program Endpoint Protection usługi Microsoft Intune, wykonaj następujące czynności.
 
-1.  W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) wybierz pozycję **Zasady** > **Dodaj zasady**.
+1. W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) wybierz pozycję **Zasady** > **Dodaj zasady**.
 
-2.  Rozwiń węzeł **Zarządzanie komputerem**, a następnie wybierz pozycję **Ustawienia agenta usługi Microsoft Intune**. Wybierz pozycję **Utwórz zasady niestandardowe i przeprowadź ich wdrożenie**, aby określić zasady ustawień programu Endpoint Protection. Następnie wybierz przycisk **Utwórz zasady**.
+2. Rozwiń węzeł **Zarządzanie komputerem**, a następnie wybierz pozycję **Ustawienia agenta usługi Microsoft Intune**. Wybierz pozycję **Utwórz zasady niestandardowe i przeprowadź ich wdrożenie**, aby określić zasady ustawień programu Endpoint Protection. Następnie wybierz przycisk **Utwórz zasady**.
 
 Możesz użyć zalecanych ustawień lub dostosować je. Aby uzyskać więcej informacji dotyczących sposobu tworzenia i wdrażania zasad, zobacz temat [Typowe zadania związane z zarządzaniem komputerem z systemem Windows za pomocą klienta komputerowego usługi Microsoft Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).
 

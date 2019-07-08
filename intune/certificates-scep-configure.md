@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/24/2019
+ms.date: 06/28/2019
 ms.topic: article
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e8e7e6c244e14e880dddb7ae76ab0c08ef5088a
-ms.sourcegitcommit: edf0f4e791138dcf589dec8b633edc6eda55ef8c
+ms.openlocfilehash: 7a952a5aa3de20159247f022d91d3e4302262290
+ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344085"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67494303"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurowanie certyfikatów SCEP i korzystanie z nich w usłudze Intune
 
@@ -30,10 +30,10 @@ Ten artykuł zawiera informacje dotyczące konfigurowania infrastruktury oraz tw
 
 - **Domena usługi Active Directory**: Wszystkie serwery wymienione w tej części (z wyjątkiem serwera proxy aplikacji internetowych) muszą należeć do Twojej domeny usługi Active Directory.
 
-- **Urząd certyfikacji**: wymagany jest urząd certyfikacji przedsiębiorstwa firmy Microsoft z systemem Windows Server 2008 R2 lub nowszym w wersji Enterprise. Autonomiczny urząd certyfikacji nie jest obsługiwany. Aby uzyskać szczegółowe informacje, zobacz temat [Instalowanie urzędu certyfikacji](http://technet.microsoft.com/library/jj125375.aspx).
+- **Urząd certyfikacji**: wymagany jest urząd certyfikacji przedsiębiorstwa firmy Microsoft z systemem Windows Server 2008 R2 lub nowszym w wersji Enterprise. Autonomiczny urząd certyfikacji nie jest obsługiwany. Aby uzyskać szczegółowe informacje, zobacz temat [Instalowanie urzędu certyfikacji](https://technet.microsoft.com/library/jj125375.aspx).
     Jeśli na serwerze urzędu certyfikacji jest zainstalowany system Windows Server 2008 R2, należy najpierw [zainstalować poprawkę z tematu KB2483564](http://support.microsoft.com/kb/2483564/).
 
-- **Serwer usługi NDES**: w systemie Windows Server 2012 R2 lub nowszym należy skonfigurować rolę serwera usługi rejestracji urządzeń sieciowych (NDES). Usługa Intune nie obsługuje usługi NDES na serwerze, na którym jest uruchomiony urząd certyfikacji przedsiębiorstwa. Temat [Wskazówki dotyczące usługi rejestracji urządzeń sieciowych](http://technet.microsoft.com/library/hh831498.aspx) zawiera instrukcje dotyczące sposobu konfiguracji systemu Windows Server 2012 R2 do hostowania usługi NDES.
+- **Serwer usługi NDES**: w systemie Windows Server 2012 R2 lub nowszym należy skonfigurować rolę serwera usługi rejestracji urządzeń sieciowych (NDES). Usługa Intune nie obsługuje usługi NDES na serwerze, na którym jest uruchomiony urząd certyfikacji przedsiębiorstwa. Temat [Wskazówki dotyczące usługi rejestracji urządzeń sieciowych](https://technet.microsoft.com/library/hh831498.aspx) zawiera instrukcje dotyczące sposobu konfiguracji systemu Windows Server 2012 R2 do hostowania usługi NDES.
 Serwer usługi NDES musi być dołączony do domeny w tym samym lesie co urząd certyfikacji przedsiębiorstwa. Więcej informacji na temat wdrażania serwera usługi NDES w oddzielnym lesie, sieci izolowanej lub domenie wewnętrznej można znaleźć w temacie [Używanie modułu zasad z usługą rejestracji urządzeń sieciowych](https://technet.microsoft.com/library/dn473016.aspx). Nie jest możliwe użycie serwera usługi NDES, który jest już używany z inną usługą MDM.
 
 - **Łącznik certyfikatów usługi Microsoft Intune**: W portalu usługi Intune przejdź do pozycji **Konfiguracja urządzenia** > **Łączniki certyfikatu** > **Dodaj** i postępuj zgodnie z *krokami instalowania łącznika protokołu SCEP*. Użyj linku pobierania w portalu, aby rozpocząć pobieranie instalatora łącznika certyfikatów w postaci pliku **NDESConnectorSetup.exe**.  Należy uruchomić ten instalator na serwerze z rolą usługi NDES.  
@@ -507,7 +507,8 @@ Przed przypisaniem profilów certyfikatów do grup należy wziąć pod uwagę na
 - Mimo że każdy profil należy przypisać osobno, konieczne jest również przypisanie profilu zaufanego certyfikatu głównego urzędu certyfikacji oraz profilu protokołu SCEP lub PKCS. W przeciwnym razie zasady certyfikatu protokołu SCEP lub PKCS nie będą działać.
 
     > [!NOTE]
-    > W przypadku systemu iOS należy oczekiwać występowania wielu kopii certyfikatu w profilu zarządzania, jeśli wdrożono wiele profilów zasobu, które używają tego samego profilu certyfikatu.
+    > Na urządzeniu z systemem iOS, kiedy profil certyfikatu SCEP jest skojarzony z dodatkowym profilem, takim jak profil sieci Wi-Fi lub VPN, urządzenie otrzymuje certyfikat dla każdego z tych dodatkowych profilów. W wyniku urządzenie z systemem iOS ma wiele certyfikatów dostarczonych przez żądanie certyfikatu SCEP.  
+
 - Jeśli używasz funkcji współzarządzania dla usługi Intune i programu Configuration Manager, w programie Configuration Manager [ustaw suwak obciążenia](https://docs.microsoft.com/sccm/comanage/how-to-switch-workloads) dla *zasad dostępu do zasobów* na **usługę Intune** lub **pilotażową usługę Intune**. To ustawienie umożliwia klientom systemu Windows 10 uruchamianie procesu żądania certyfikatu.  
 
 Informacje dotyczące sposobu przypisywania profilów znajdują się w opisie [przypisywanie profilów urządzeń](device-profile-assign.md).

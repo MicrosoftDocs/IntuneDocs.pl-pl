@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4877920821b2471f752f9fdb8941e87576d937ba
-ms.sourcegitcommit: 9c06d8071b9affeda32e367bfe85d89bc524ed0b
+ms.openlocfilehash: 9ec0ab28f2b32cf3c60d6d674cfac5a5b21d094d
+ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413857"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67558409"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu iOS
 
@@ -70,6 +70,7 @@ Następujące pliki nagłówka zawierają interfejsy API, typy danych oraz proto
     * IntuneMAMDataProtectionInfo.h
     * IntuneMAMDataProtectionManager.h
     * IntuneMAMDefs.h
+    * IntuneMAMDiagnosticConsole.h
     * IntuneMAMEnrollmentDelegate.h
     * IntuneMAMEnrollmentManager.h
     * IntuneMAMEnrollmentStatus.h
@@ -735,6 +736,10 @@ Tak, administrator IT może wysłać polecenie selektywnego czyszczenia danych d
 ### <a name="is-there-a-sample-app-that-demonstrates-how-to-integrate-the-sdk"></a>Czy istnieje przykładowa aplikacja, która demonstruje sposób integracji zestawu SDK?
 
 Tak! Niedawno odnowiliśmy naszą przykładową aplikację typu open-source [Wagr dla systemu iOS](https://github.com/Microsoft/Wagr-Sample-Intune-iOS-App). Aplikacja Wagr obsługuje teraz zasady ochrony aplikacji przy użyciu zestawu SDK aplikacji usługi Intune.
+
+### <a name="how-can-i-troubleshoot-my-app"></a>Jak można rozwiązywać mojej aplikacji?
+
+Zestaw SDK usługi Intune dla systemu iOS 9.0.3+ obsługuje możliwość dodawania konsoli diagnostyki w aplikacji mobilnej dla testowania zasad i rejestrowania błędów. `IntuneMAMDiagnosticConsole.h` definiuje `IntuneMAMDiagnosticConsole` interfejsu klasy, które deweloperzy mogą używać do wyświetlania w konsoli diagnostyki usługi Intune. Dzięki temu użytkownicy końcowi lub deweloperów podczas testu do zbierania i Udostępnij dzienniki usługi Intune, aby pomóc zdiagnozować wszelkie problemy, które mogą mieć. Ten interfejs API jest opcjonalny w przypadku integratorzy.
 
 ## <a name="submit-your-app-to-the-app-store"></a>Przesyłanie aplikacji do sklepu App Store
 

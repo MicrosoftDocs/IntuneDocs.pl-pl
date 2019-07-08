@@ -8,7 +8,6 @@ ms.author: erikje
 manager: dougeby
 ms.date: 5/21/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,16 +16,14 @@ ms.reviewer: damionw
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 064d11f1992d63df9dacbedb8d53e849425e9b1f
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: 996380a4938ca73bbf5f71c82e99814f772001a4
+ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "59568170"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67403483"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Rejestracja zbiorcza urządzeń z systemem Windows
-
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Jako administrator możesz dołączyć dużą liczbę nowych urządzeń z systemem Windows do usługi Azure Active Directory i Intune. W celu umożliwienia zbiorczego rejestrowania urządzeń dla dzierżawy usługi Azure AD utwórz pakiet aprowizacyjny przy użyciu aplikacji Windows Configuration Designer (WCD). Zastosowanie pakietu aprowizacyjnego do urządzeń stanowiących własność firmy powoduje ich dołączenie do dzierżawy usługi Azure AD i zarejestrowanie w usłudze Intune w celu umożliwienia zarządzania nimi. Po zastosowaniu pakietu użytkownicy usługi Azure AD mogą się zalogować.
 
@@ -51,6 +48,7 @@ Użytkownicy usługi Azure AD są standardowymi użytkownikami tych urządzeń i
    - **Description** (Opis) — opcjonalny opis projektu ![Zrzut ekranu przedstawiający proces wpisywania nazwy, folderu projektu i opisu w aplikacji Windows Configuration Designer](media/bulk-enroll-name.png)
 
 4. Wprowadź unikatową nazwę dla każdego z urządzeń. Nazwy mogą zawierać numer seryjny (%SERIAL%) lub losowy zestaw znaków. Opcjonalnie można także wprowadzić klucz produktu (w przypadku uaktualniania wersji systemu Windows), skonfigurować urządzenie pod kątem współużytkowania i usunąć wstępnie zainstalowane oprogramowanie.
+   
    ![Zrzut ekranu przedstawiający proces określania nazwy i klucza produktu w aplikacji Windows Configuration Designer](media/bulk-enroll-device.png)
 
 5. Opcjonalnie można skonfigurować sieć Wi-Fi, z którą urządzenia połączą się po pierwszym uruchomieniu.  Jeśli urządzenia sieciowe nie zostaną skonfigurowane, podczas pierwszego uruchomienia urządzenia wymagane będzie połączenie sieci przewodowej.
@@ -91,9 +89,6 @@ Aprowizacja to funkcja przeznaczona do użycia na nowych urządzeniach z systeme
 
 - Pakiet aprowizacyjny, który próbuje przyłączyć urządzenie do domeny usługi Active Directory lub dzierżawy usługi Azure Active Directory, która nie tworzy konta lokalnego, może spowodować, że urządzenie będzie nieosiągalne w przypadku niepowodzenia procesu przyłączania do domeny w wyniku braku łączności sieciowej.
 - Skrypty są uruchamiane przez pakiet aprowizacyjny w kontekście systemu. Skrypty mogą wprowadzać dowolne zmiany w systemie plików i konfiguracji urządzenia. Złośliwy lub nieprawidłowy skrypt może spowodować, że urządzenie znajdzie się w stanie, którego naprawienie będzie wymagać odtwarzania z obrazu lub wyczyszczenia danych z urządzenia.
-
-### <a name="problems-with-bulk-enrollment-and-company-portal"></a>Problemy z rejestracją zbiorczą i Portalem firmy
-Jeśli użytkownik próbuje zarejestrować urządzenie przy użyciu Portalu firmy, ale zostało ono wcześniej zarejestrowane zbiorczo, otrzyma ostrzeżenie, że jego urządzenie wymaga dalszych akcji: konfiguracji albo rejestracji. Urządzenie jest zarejestrowane, ale rejestracja nie jest rozpoznawana przez witrynę internetową lub aplikację Portal firmy.
 
 ### <a name="bulk-enrollment-with-wi-fi"></a>Rejestrowanie zbiorcze za pomocą sieci Wi-Fi 
 

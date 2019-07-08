@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d8c4813d94a269ed6b8f944585814b54f36fef8c
-ms.sourcegitcommit: 6e07c35145f70b008cf170bae57143248a275b67
+ms.openlocfilehash: 3cfe2aef93fb8b7c420ee6513945f11bee5bd0be
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66804706"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67529710"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Autonomiczna usługa Intune — zarządzanie aplikacjami Win32
 
@@ -65,7 +65,7 @@ Jeśli uruchamiasz plik `IntuneWinAppUtil.exe` w oknie polecenia bez parametrów
 |:------------------------------:|:----------------------------------------------------------:|
 |    `-h`     |    Pomoc    |
 |    `-c <setup_folder>`     |    Folder dla wszystkich plików instalacji. Wszystkie pliki w tym folderze zostaną skompresowane do pliku *intunewin*.    |
-|   ` -s <setup_file>`     |    Plik instalacji (taki jak *setup.exe* lub *setup.msi*).    |
+|    `-s <setup_file>`     |    Plik instalacji (taki jak *setup.exe* lub *setup.msi*).    |
 |    `-o <output_folder>`     |    Folder wyjściowy dla wygenerowanego pliku *intunewin*.    |
 |    `-q`       |    Tryb cichy    |
 
@@ -98,28 +98,28 @@ W poniższych krokach przedstawiono wskazówki ułatwiające dodanie aplikacji s
 ### <a name="step-1-specify-the-software-setup-file"></a>Krok 1. Określanie pliku konfiguracji oprogramowania
 
 1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3.  W okienku **Intune** wybierz pozycję **Aplikacje klienckie** > **Aplikacje** > **Dodaj**.
-4.  W okienku aplikacji **Dodawanie** wybierz z listy rozwijanej pozycję **Aplikacja systemu Windows (Win32)** .
+3. W okienku **Intune** wybierz pozycję **Aplikacje klienckie** > **Aplikacje** > **Dodaj**.
+4. W okienku aplikacji **Dodawanie** wybierz z listy rozwijanej pozycję **Aplikacja systemu Windows (Win32)** .
 
     ![Zrzut ekranu przedstawiający blok dodawania aplikacji — pole listy rozwijanej dodawania typu](./media/apps-win32-app-01.png)
 
 ### <a name="step-2-upload-the-app-package-file"></a>Krok 2: Przekazywanie pliku pakietu aplikacji
 
-1.  W okienku **Dodawanie aplikacji** wybierz pozycję **Dodaj plik pakietu**, aby wybrać plik. Zostanie wyświetlone okienko Plik pakietu aplikacji.
+1. W okienku **Dodawanie aplikacji** wybierz pozycję **Dodaj plik pakietu**, aby wybrać plik. Zostanie wyświetlone okienko Plik pakietu aplikacji.
 
     ![Zrzut ekranu przedstawiający blok pliku pakietu aplikacji](./media/apps-win32-app-02.png)
 
-2.  W okienku **Plik pakietu aplikacji** wybierz przycisk przeglądania. Następnie wybierz plik instalacyjny systemu Windows z rozszerzeniem *intunewin*.
+2. W okienku **Plik pakietu aplikacji** wybierz przycisk przeglądania. Następnie wybierz plik instalacyjny systemu Windows z rozszerzeniem *intunewin*.
 
     > [!IMPORTANT]
     > Upewnij się, że używasz najnowszej wersji narzędzia Microsoft Win32 Content Prep Tool. Jeśli nie użyjesz najnowszej wersji, zostanie wyświetlone ostrzeżenie z informacją, że aplikacja została spakowana przy użyciu starszej wersji narzędzia Microsoft Win32 Content Prep Tool. 
 
-3.  Po zakończeniu wybierz przycisk **OK**.
+3. Po zakończeniu wybierz przycisk **OK**.
 
 ### <a name="step-3-configure-app-information"></a>Krok 3: Konfigurowanie informacji o aplikacji
 
-1.  Aby skonfigurować aplikację, w okienku **Dodaj aplikację** wybierz pozycję **Informacje o aplikacji**.
-2.  W okienku **Informacje o aplikacji** skonfiguruj następujące informacje. Niektóre wartości w tym okienku mogą zostać wypełnione automatycznie.
+1. Aby skonfigurować aplikację, w okienku **Dodaj aplikację** wybierz pozycję **Informacje o aplikacji**.
+2. W okienku **Informacje o aplikacji** skonfiguruj następujące informacje. Niektóre wartości w tym okienku mogą zostać wypełnione automatycznie.
     - **Nazwa**: wprowadź nazwę aplikacji wyświetlaną w portalu firmy. Jeśli dana nazwa aplikacji występuje dwa razy, obie aplikacje będą wyświetlane w portalu firmy.
     - **Opis**: Wprowadź opis aplikacji. Opis będzie widoczny w portalu firmy.
     - **Wydawca**: Wprowadź nazwę wydawcy aplikacji.
@@ -131,19 +131,20 @@ W poniższych krokach przedstawiono wskazówki ułatwiające dodanie aplikacji s
     - **Właściciel**: opcjonalnie wprowadź nazwę właściciela aplikacji. Przykładem może być **Dział kadr**.
     - **Uwagi**: wprowadź wszelkie uwagi, które chcesz skojarzyć z tą aplikacją.
     - **Logo**: przekaż ikonę skojarzoną z aplikacją. Będzie ona wyświetlana jako ikona aplikacji podczas przeglądania portalu firmy.
-3.  Po zakończeniu wybierz przycisk **OK**.
+3. Po zakończeniu wybierz przycisk **OK**.
 
 ### <a name="step-4-configure-app-installation-details"></a>Krok 4. Konfigurowanie szczegółów instalacji aplikacji
-1.  W okienku **Dodawanie aplikacji** wybierz pozycję **Program**, aby skonfigurować polecenia instalacji i usuwania aplikacji.
-2.  Dodaj pełny wiersz polecenia instalacji, który umożliwia zainstalowanie aplikacji. 
+1. W okienku **Dodawanie aplikacji** wybierz pozycję **Program**, aby skonfigurować polecenia instalacji i usuwania aplikacji.
+2. Dodaj pełny wiersz polecenia instalacji, który umożliwia zainstalowanie aplikacji. 
 
     Na przykład jeśli nazwa pliku aplikacji to **MyApp123**, dodaj następujące polecenie:<br>
     `msiexec /p “MyApp123.msp”`<p>
     Jeśli dodatkowo aplikacja to `ApplicationName.exe`, polecenie będzie nazwą aplikacji z następującymi po niej argumentami polecenia (przełącznikami) obsługiwanymi przez pakiet. <br>Przykład:<br>
     `ApplicationName.exe /quiet`<br>
-    W powyższym poleceniu pakiet `ApplicationName.exe` obsługuje argument polecenia `/quiet`.<p> Aby uzyskać konkretne argumenty obsługiwane przez pakiet aplikacji, skontaktuj się z dostawcą aplikacji.
+    W powyższym poleceniu pakiet `ApplicationName.exe` obsługuje argument polecenia `/quiet`.<p> 
+    Aby uzyskać konkretne argumenty obsługiwane przez pakiet aplikacji, skontaktuj się z dostawcą aplikacji.
 
-3.  Dodaj pełny wiersz polecenia dezinstalacji, który umożliwia odinstalowanie aplikacji na podstawie identyfikatora GUID aplikacji. 
+3. Dodaj pełny wiersz polecenia dezinstalacji, który umożliwia odinstalowanie aplikacji na podstawie identyfikatora GUID aplikacji. 
 
     Na przykład: `msiexec /x “{12345A67-89B0-1234-5678-000001000000}”`
 
@@ -154,12 +155,12 @@ W poniższych krokach przedstawiono wskazówki ułatwiające dodanie aplikacji s
     > 
     > Instalowanie i odinstalowywanie aplikacji Win32 będzie wykonywane w ramach uprawnień administratora (domyślnie), gdy aplikacja zostanie ustawiona na instalowanie w kontekście użytkownika, a użytkownik końcowy na urządzeniu ma uprawnienia administratora.
 
-4.  Po zakończeniu wybierz przycisk **OK**.
+4. Po zakończeniu wybierz przycisk **OK**.
 
 ### <a name="step-5-configure-app-requirements"></a>Krok 5. Konfigurowanie wymagań aplikacji
 
-1.  W okienku **Dodawanie aplikacji** wybierz pozycję **Wymagania**, aby skonfigurować wymagania, które urządzenia muszą spełniać, aby można było zainstalować aplikację.
-2.  W okienku **Dodawanie reguły wymagania** skonfiguruj następujące informacje. Niektóre wartości w tym okienku mogą zostać wypełnione automatycznie.
+1. W okienku **Dodawanie aplikacji** wybierz pozycję **Wymagania**, aby skonfigurować wymagania, które urządzenia muszą spełniać, aby można było zainstalować aplikację.
+2. W okienku **Dodawanie reguły wymagania** skonfiguruj następujące informacje. Niektóre wartości w tym okienku mogą zostać wypełnione automatycznie.
     - **Architektura systemu operacyjnego**: wybierz architekturę wymaganą do zainstalowania aplikacji.
     - **Minimalna wersja systemu operacyjnego**: wybierz minimalną wersję systemu operacyjnego wymaganą do zainstalowania aplikacji.
     - **Wymagane miejsce na dysku (MB)** : opcjonalnie określ ilość wolnego miejsca na dysku systemowym wymaganego do zainstalowania aplikacji.
@@ -184,32 +185,32 @@ W poniższych krokach przedstawiono wskazówki ułatwiające dodanie aplikacji s
         - **Uruchom ten skrypt, korzystając z poświadczeń użytych do logowania**: Wybierz pozycję **Tak**, aby uruchomić skrypt przy użyciu poświadczeń zalogowanego urządzenia**.
         - **Wymuszaj sprawdzanie podpisu skryptu** — wybierz opcję **Tak**, aby zweryfikować, że skrypt jest podpisany przez zaufanego wydawcę, co umożliwi uruchamianie skryptu bez wyświetlania ostrzeżeń ani monitów. Skrypt będzie uruchamiany bez blokowania. Wybierz opcję **Nie** (domyślną), aby uruchamiać skrypt z potwierdzeniem przez użytkownika końcowego i bez weryfikacji podpisu.
         - **Wybierz typ danych wyjściowych**: Wybierz typ danych używany podczas określania dopasowania reguły wymagania.
-4.  Po zakończeniu wybierz przycisk **OK**.
+4. Po zakończeniu wybierz przycisk **OK**.
 
 ### <a name="step-6-configure-app-detection-rules"></a>Krok 6. Konfigurowanie reguł wykrywania aplikacji
 
-1.  W okienku **Dodawanie aplikacji** wybierz pozycję **Reguły wykrywania**, aby skonfigurować reguły wykrywania obecności aplikacji.
-2.  W polu **Format reguł** wybierz sposób wykrywania obecności aplikacji. Reguły wykrywania obecności aplikacji możesz skonfigurować ręcznie lub przy użyciu niestandardowego skryptu. Musisz wybrać co najmniej jedną regułę wykrywania. 
+1. W okienku **Dodawanie aplikacji** wybierz pozycję **Reguły wykrywania**, aby skonfigurować reguły wykrywania obecności aplikacji.
+2. W polu **Format reguł** wybierz sposób wykrywania obecności aplikacji. Reguły wykrywania obecności aplikacji możesz skonfigurować ręcznie lub przy użyciu niestandardowego skryptu. Musisz wybrać co najmniej jedną regułę wykrywania. 
 
     > [!NOTE]
     > W okienku **Reguły wykrywania** możesz dodać wiele reguł. Wykrycie aplikacji wymaga spełnienia **wszystkich** reguł.
 
     - **Ręcznie skonfiguruj reguły wykrywania** — możesz wybrać jeden z następujących typów reguły:
-        1.  **MSI** — weryfikacja oparta na sprawdzeniu wersji pliku MSI. Tę opcję można dodać tylko raz. Po wybraniu reguły tego typu są dostępne dwa ustawienia:
+        1. **MSI** — weryfikacja oparta na sprawdzeniu wersji pliku MSI. Tę opcję można dodać tylko raz. Po wybraniu reguły tego typu są dostępne dwa ustawienia:
             - **Kod produktu MSI** — dodaj prawidłowy kod produktu MSI dla aplikacji.
             - **Sprawdzenie wersji produktu MSI** — wybierz opcję **Tak**, aby zweryfikować wersję produktu MSI w dodatku do kodu produktu MSI.
-        2.  **Plik** — weryfikacja oparta na wykryciu pliku lub folderu, dacie, wersji lub rozmiarze.
+        2. **Plik** — weryfikacja oparta na wykryciu pliku lub folderu, dacie, wersji lub rozmiarze.
             - **Ścieżka** — pełna ścieżka folderu zawierającego plik lub folder do wykrycia.
             - **Plik lub folder** — plik lub folder do wykrycia.
             - **Metoda wykrywania** — wybierz typ metody wykrywania używanej do weryfikowania obecności aplikacji.
             - **Skojarzone z aplikacją 32-bitową na klientach 64-bitowych** — wybierz opcję **Tak**, aby rozwijać wszystkie zmienne środowiskowe ścieżki w kontekście 32-bitowym na klientach 64-bitowych. Wybierz opcję **Nie** (domyślną), aby rozwijać wszystkie zmienne ścieżki w kontekście 64-bitowym na klientach 64-bitowych. Klienci 32-bitowi będą zawsze używać kontekstu 32-bitowego.
             
             **Przykłady wykrywania opartego na plikach**
-            1.  Sprawdzenie obecności pliku.
+            1. Sprawdzenie obecności pliku.
          
                 ![Zrzut ekranu okienka Reguła wykrywania — obecność pliku](./media/apps-win32-app-03.png)
         
-            2.  Sprawdzenie obecności folderu.
+            2. Sprawdzenie obecności folderu.
          
                 ![Zrzut ekranu okienka Reguła wykrywania — obecność folderu](./media/apps-win32-app-04.png)
         
@@ -220,62 +221,62 @@ W poniższych krokach przedstawiono wskazówki ułatwiające dodanie aplikacji s
             - **Skojarzone z aplikacją 32-bitową na klientach 64-bitowych** — wybierz opcję **Tak**, aby przeszukiwać rejestr 32-bitowy na klientach 64-bitowych. Wybierz opcję **Nie** (domyślną), aby przeszukiwać rejestr 64-bitowy na klientach 64-bitowych. Klienci 32-bitowi zawsze przeszukują 32-bitowy rejestr.
             
             **Przykłady wykrywania opartego na rejestrze**
-            1.  Sprawdzenie obecności klucza rejestru.
+            1. Sprawdzenie obecności klucza rejestru.
             
                 ![Zrzut ekranu okienka Reguła wykrywania — obecność klucza rejestru](./media/apps-win32-app-05.png)    
             
-            2.  Sprawdź, czy wartość rejestru istnieje.
+            2. Sprawdź, czy wartość rejestru istnieje.
         
                 ![Zrzut okienka Reguła wykrywania — obecność wartości rejestru](./media/apps-win32-app-06.png)    
         
-            3.  Sprawdzenie równości dla ciągu wartości rejestru.
+            3. Sprawdzenie równości dla ciągu wartości rejestru.
         
                 ![Zrzut okienka Reguła wykrywania — równość ciągu wartości rejestru](./media/apps-win32-app-07.png)    
      
     - **Użyj niestandardowego skryptu wykrywania** — określ skrypt programu PowerShell, który będzie używany do wykrywania aplikacji. 
     
-        1.  **Plik skryptu** — wybierz skrypt programu PowerShell, który wykryje obecność aplikacji na kliencie. Aplikacja zostanie wykryta, gdy skrypt zwróci wartość 0 jako kod zakończenia i zapisze wartość ciągu do strumienia STDOUT.
+        1. **Plik skryptu** — wybierz skrypt programu PowerShell, który wykryje obecność aplikacji na kliencie. Aplikacja zostanie wykryta, gdy skrypt zwróci wartość 0 jako kod zakończenia i zapisze wartość ciągu do strumienia STDOUT.
 
-        2.  **Uruchom skrypt jako proces 32-bitowy na klientach 64-bitowych**: wybierz pozycję **Tak**, aby uruchamiać skrypt w procesie 32-bitowym na klientach 64-bitowych. Wybierz pozycję **Nie** (ustawienie domyślne), aby uruchamiać skrypt w procesie 64-bitowym na klientach 64-bitowych. Klienci 32-bitowi uruchamiają skrypt w procesie 32-bitowym.
+        2. **Uruchom skrypt jako proces 32-bitowy na klientach 64-bitowych**: wybierz pozycję **Tak**, aby uruchamiać skrypt w procesie 32-bitowym na klientach 64-bitowych. Wybierz pozycję **Nie** (ustawienie domyślne), aby uruchamiać skrypt w procesie 64-bitowym na klientach 64-bitowych. Klienci 32-bitowi uruchamiają skrypt w procesie 32-bitowym.
 
-        3.  **Wymuszaj sprawdzanie podpisu skryptu** — wybierz opcję **Tak**, aby zweryfikować, że skrypt jest podpisany przez zaufanego wydawcę, co umożliwi uruchamianie skryptu bez wyświetlania ostrzeżeń ani monitów. Skrypt będzie uruchamiany bez blokowania. Wybierz opcję **Nie** (domyślną), aby uruchamiać skrypt z potwierdzeniem przez użytkownika końcowego i bez weryfikacji podpisu.
+        3. **Wymuszaj sprawdzanie podpisu skryptu** — wybierz opcję **Tak**, aby zweryfikować, że skrypt jest podpisany przez zaufanego wydawcę, co umożliwi uruchamianie skryptu bez wyświetlania ostrzeżeń ani monitów. Skrypt będzie uruchamiany bez blokowania. Wybierz opcję **Nie** (domyślną), aby uruchamiać skrypt z potwierdzeniem przez użytkownika końcowego i bez weryfikacji podpisu.
     
             Agent usługi Intune sprawdza wyniki ze skryptu. Odczytuje wartości zapisane przez skrypt do strumienia wyjścia standardowego (STDOUT) i standardowego strumienia błędów (STDERR) oraz kod zakończenia. Jeśli skrypt zwróci wartość różną od zera, jego wykonanie zakończy się niepowodzeniem, a stan wykrywania aplikacji będzie wskazywać, że nie jest zainstalowana. Jeśli kod zakończenia ma wartość zero, a strumień STDOUT zawiera dane, stan wykrywania aplikacji to Zainstalowano. 
 
             > [!NOTE]
             > Firma Microsoft zaleca kodowanie skryptu jako zestaw znaków UTF-8. Jeśli kod zakończenia skryptu to 0, oznacza to pomyślne wykonanie skryptu. Drugi kanał wyjściowy wskazuje wykrycie aplikacji — dane w strumieniu STDOUT oznaczają, że aplikacja została wykryta na kliencie. Nie szukamy konkretnego ciągu w strumieniu STDOUT.
 
-        4.  Po dodaniu reguł wybierz polecenie **Dodaj** > **OK**.
+        4. Po dodaniu reguł wybierz polecenie **Dodaj** > **OK**.
 
 ### <a name="step-7-configure-app-return-codes"></a>Krok 7. Konfigurowanie kodów powrotnych aplikacji
 
-1.  W okienku **Dodawanie aplikacji** wybierz pozycję **Kody powrotne**, aby dodać kody powrotne używane do określenia zachowania ponowienia instalacji aplikacji lub zachowania po instalacji. Pozycje kodów powrotnych są dodawane domyślnie podczas tworzenia aplikacji. Istnieje jednak możliwość dodania kolejnych kodów powrotnych lub zmiany istniejących kodów powrotnych. 
-2.  W okienku **Kody powrotne** dodaj kolejne kody powrotne lub zmodyfikuj istniejące kody powrotne.
+1. W okienku **Dodawanie aplikacji** wybierz pozycję **Kody powrotne**, aby dodać kody powrotne używane do określenia zachowania ponowienia instalacji aplikacji lub zachowania po instalacji. Pozycje kodów powrotnych są dodawane domyślnie podczas tworzenia aplikacji. Istnieje jednak możliwość dodania kolejnych kodów powrotnych lub zmiany istniejących kodów powrotnych. 
+2. W okienku **Kody powrotne** dodaj kolejne kody powrotne lub zmodyfikuj istniejące kody powrotne.
     - **Niepowodzenie** — wartość zwracana, która wskazuje błąd instalacji aplikacji.
     - **Ponowny rozruch sprzętowy** — kod powrotny ponownego uruchomienia sprzętowego nie zezwala na zainstalowanie następnej aplikacji Win32 na kliencie bez ponownego uruchomienia. 
     - **Ponowny rozruch systemowy** — kod powrotny ponownego uruchomienia systemowego umożliwia zainstalowanie następnej aplikacji Win32 bez ponownego uruchomienia klienta. Ponowne uruchomienie jest niezbędne do ukończenia instalacji bieżącej aplikacji.
     - **Ponów** — w przypadku kodu powrotnego ponowienia agent spróbuje zainstalować aplikację trzy razy. Między próbami agent będzie czekać 5 minut. 
     - **Powodzenie** — wartość zwracana, która wskazuje pomyślne zainstalowanie aplikacji.
-3.  Wybierz pozycję **OK** po dodaniu lub zmodyfikowaniu listy kodów powrotnych.
+3. Wybierz pozycję **OK** po dodaniu lub zmodyfikowaniu listy kodów powrotnych.
 
 ### <a name="step-8-add-the-app"></a>Krok 8. Dodawanie aplikacji
 
-1.  W okienku **Dodaj aplikację** sprawdź poprawność skonfigurowanych informacji.
-2.  Wybierz pozycję **Dodaj**, aby przekazać aplikację do usługi Intune.
+1. W okienku **Dodaj aplikację** sprawdź poprawność skonfigurowanych informacji.
+2. Wybierz pozycję **Dodaj**, aby przekazać aplikację do usługi Intune.
 
 ### <a name="step-9-assign-the-app"></a>Krok 9. Przypisywanie aplikacji
 
-1.  W okienku aplikacji wybierz pozycję **Przypisania**.
-2.  Wybierz pozycję **Dodaj grupę**, aby otworzyć okienko **Dodawanie grupy** powiązane z aplikacją.
-3.  Dla określonej aplikacji wybierz **typ przypisania**:
+1. W okienku aplikacji wybierz pozycję **Przypisania**.
+2. Wybierz pozycję **Dodaj grupę**, aby otworzyć okienko **Dodawanie grupy** powiązane z aplikacją.
+3. Dla określonej aplikacji wybierz **typ przypisania**:
     - **Dostępne dla zarejestrowanych urządzeń**: użytkownicy instalują aplikację z aplikacji Portal firmy lub witryny internetowej Portal firmy.
     - **Wymagane**: aplikacja jest instalowana na urządzeniach w wybranych grupach.
     - **Odinstalowywanie**: aplikacja jest odinstalowywana z urządzeń w wybranych grupach.
-4.  Wybierz pozycję **Objęte grupy** i przypisz grupy, które będą używać aplikacji.
-5.  W okienku **Przypisywanie** wybierz przycisk **OK**, aby ukończyć wybieranie uwzględnionych grup.
-6.  Jeśli chcesz wykluczyć wszystkie grupy użytkowników z objęcia wpływem tego przypisania aplikacji, wybierz pozycję **Wykluczenie grup**.
-7.  W okienku **Dodawanie grupy** wybierz przycisk **OK**.
-8.  W okienku **Przypisania** aplikacji wybierz pozycję **Zapisz**.
+4. Wybierz pozycję **Objęte grupy** i przypisz grupy, które będą używać aplikacji.
+5. W okienku **Przypisywanie** wybierz przycisk **OK**, aby ukończyć wybieranie uwzględnionych grup.
+6. Jeśli chcesz wykluczyć wszystkie grupy użytkowników z objęcia wpływem tego przypisania aplikacji, wybierz pozycję **Wykluczenie grup**.
+7. W okienku **Dodawanie grupy** wybierz przycisk **OK**.
+8. W okienku **Przypisania** aplikacji wybierz pozycję **Zapisz**.
 
 W tym momencie wykonywanie kroków dodawania aplikacji Win32 do usługi Intune zostało zakończone. Aby uzyskać informacje dotyczące przypisywania i monitorowania aplikacji, zobacz [Przypisywanie aplikacji do grup w usłudze Microsoft Intune](https://docs.microsoft.com/intune/apps-deploy) i [Monitorowanie informacji o aplikacji i przypisań z użyciem usługi Microsoft Intune](https://docs.microsoft.com/intune/apps-monitor).
 

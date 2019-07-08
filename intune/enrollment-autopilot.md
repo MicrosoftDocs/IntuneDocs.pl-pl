@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28c3da6d2e3390d20aecc3673cac38e8424ef57a
-ms.sourcegitcommit: a63b9eaa59867ab2b0a6aa415c19d9fff4fda874
+ms.openlocfilehash: cbd73d22c2e42f0a379ec2a97179f9e3c4dec224
+ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67389303"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512110"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Rejestrowanie urządzeń z systemem Windows w usłudze Intune za pomocą rozwiązania Windows Autopilot  
 Rozwiązanie Windows Autopilot upraszcza rejestrowanie urządzeń w usłudze Intune. Tworzenie i konserwacja niestandardowych obrazów systemów operacyjnych zajmuje dużo czasu. Trzeba również poświęcić czas na stosowanie tych niestandardowych obrazów systemów operacyjnych na nowych urządzeniach w celu przygotowania ich do użycia przed przekazaniem użytkownikom końcowym. Dzięki usłudze Microsoft Intune i rozwiązaniu Autopilot można przekazać nowe urządzenia użytkownikom końcowym bez konieczności tworzenia, konserwowania i stosowania niestandardowych obrazów systemów operacyjnych do urządzeń. Jeśli do zarządzania urządzeniami z rozwiązaniem Autopilot używasz usługi Intune, możesz zarządzać zasadami, profilami, aplikacjami i nie tylko po ich zarejestrowaniu. Aby zapoznać się z korzyściami, scenariuszami i wymaganiami wstępnymi, zobacz [Overview of Windows Autopilot (Przegląd rozwiązania Windows Autopilot)](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -35,7 +35,7 @@ Rozwiązanie Windows Autopilot upraszcza rejestrowanie urządzeń w usłudze Int
 
 ## <a name="how-to-get-the-csv-for-import-in-intune"></a>Jak uzyskać plik CSV do zaimportowania w usłudze Intune
 
-Zobacz artykuł przedstawiający polecenie cmdlet programu powershell, aby uzyskać więcej informacji na temat jego użycia.
+Aby uzyskać więcej informacji, zobacz artykuł objaśniający polecenie cmdlet programu PowerShell.
 
 - [Get-WindowsAutoPilotInfo](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo/1.3/Content/Get-WindowsAutoPilotInfo.ps1)
 
@@ -47,8 +47,9 @@ Urządzenia rozwiązania Autopilot z systemem Windows można dodawać przez zaim
 
     ![Zrzut ekranu przedstawiający urządzenia rozwiązania Autopilot z systemem Windows](media/enrollment-autopilot/autopilot-import-device.png)
 
-2. W obszarze **Dodawanie urządzeń rozwiązania AutoPilot z systemem Windows** przejdź do pliku CSV z informacjami o urządzeniach, które chcesz dodać. Plik CSV powinien zawierać listę numerów seryjnych, opcjonalnych identyfikatorów produktów systemu Windows, skrótów sprzętu i opcjonalnie tagów grup urządzeń. Lista możesz mieć maksymalnie 500 wierszy. Użyj poniższego formatu nagłówka i wiersza: `Device Serial Number,Windows Product ID,Hardware Hash,Group Tag`
-    `<serialNumber>,<optionalProductID>,<hardwareHash>,<optionalGroupTag>`
+2. W obszarze **Dodawanie urządzeń rozwiązania AutoPilot z systemem Windows** przejdź do pliku CSV z informacjami o urządzeniach, które chcesz dodać. Plik CSV powinien zawierać listę numerów seryjnych, identyfikatorów produktów systemu Windows, skrótów sprzętu i opcjonalnie tagów grup, przypisanych użytkowników i identyfikatorów zamówień dla urządzeń. Lista możesz mieć maksymalnie 500 wierszy. Użyj poniższego formatu nagłówka i wiersza:
+
+    `Device Serial Number,Windows Product ID,Hardware Hash,Group Tag,Assigned User, Order ID` `<serialNumber>,<ProductID>,<hardwareHash>,<optionalGroupTag>,<optionalAssignedUser>,<optionalOrderID>`
 
     ![Zrzut ekranu przedstawiający dodawanie urządzeń rozwiązania Autopilot z systemem Windows](media/enrollment-autopilot/autopilot-import-device2.png)
 
@@ -69,7 +70,7 @@ Urządzenia rozwiązania Autopilot z systemem Windows można dodawać przez zaim
     Urządzenia rozwiązania Autopilot, które nie zostały jeszcze zarejestrowane, to urządzenia, których nazwa jest taka sama jak ich numer seryjny.
 4. Jeśli powyżej wybrano pozycję **Urządzenie dynamiczne** dla ustawienia **Typ członkostwa**, to w bloku **Grupa** wybierz pozycję **Dynamiczne urządzenia członkowskie** i wpisz dowolny poniższy kod w polu **Reguła zaawansowana**.
     - Aby utworzyć grupę obejmującą wszystkie urządzenia rozwiązania Autopilot, wpisz: `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`
-    - Pole tagu grupy usługi Intune jest mapowane na atrybut OrderID urządzenia w usłudze Azure AD. Aby utworzyć grupę obejmującą wszystkie urządzenia rozwiązania Autopilot z określonym tagiem grupy (OrderID), trzeba wpisać: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881") `
+    - Pole tagu grupy usługi Intune jest mapowane na atrybut OrderID urządzenia w usłudze Azure AD. Aby utworzyć grupę obejmującą wszystkie urządzenia rozwiązania Autopilot z określonym tagiem grupy (OrderID), trzeba wpisać: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
     - Aby utworzyć grupę obejmującą wszystkie urządzenia rozwiązania Autopilot z określonym identyfikatorem zamówienia zakupu, wpisz: `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`
     
     Po dodaniu kodu w polu **Reguła zaawansowana** wybierz pozycję **Zapisz**.
@@ -95,7 +96,7 @@ Profile wdrażania rozwiązania Autopilot służą do konfigurowania urządzeń 
     - **Umowa licencyjna użytkownika oprogramowania (EULA)** : (system Windows 10 w wersji 1709 lub nowszej) wybierz, jeśli chcesz, aby umowa licencyjna użytkownika oprogramowania była pokazywana użytkownikom.
     - **Ustawienia prywatności**: wybierz, jeśli chcesz, aby ustawienia prywatności były pokazywane użytkownikom.
     >[!IMPORTANT]
-    >W przypadku wdrożeń rozwiązania Autopilot w urządzeniach z systemem Windows 10 w wersji 1903 lub nowszej domyślnie dane diagnostyczne mają automatycznie ustawienie Pełne. Aby uzyskać więcej informacji, zobacz [Dane diagnostyczne systemu Windows](https://docs.microsoft.com/en-us/windows/privacy/windows-diagnostic-data) <br>
+    >W przypadku wdrożeń rozwiązania Autopilot w urządzeniach z systemem Windows 10 w wersji 1903 lub nowszej domyślnie dane diagnostyczne mają automatycznie ustawienie Pełne. Aby uzyskać więcej informacji, zobacz [Dane diagnostyczne systemu Windows](https://docs.microsoft.com/windows/privacy/windows-diagnostic-data) <br>
     
     - **Ukryj zmianę opcji konta (wymaga systemu Windows 10 w wersji 1809 lub nowszej)** : wybierz pozycję **Ukryj**, aby zapobiec wyświetlaniu zmian opcji konta na stronach logowania i błędów domeny firmy. Ta opcja wymaga [skonfigurowania znakowania firmowego w usłudze Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding).
     - **Typ konta użytkownika**: wybierz typ konta użytkownika (**Administrator** lub **Standardowe** konto użytkownika).

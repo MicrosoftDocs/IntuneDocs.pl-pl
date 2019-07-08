@@ -17,25 +17,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 45f93416a8fd6190549a958f1b1a7e5f3bdf6df1
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 2b1fe488ed7d295a40b42c1fb17a76693004be4d
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045298"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67547916"
 ---
 # <a name="reference-for-devices-entities"></a>Odwołanie do jednostek urządzeń
 
 Kategoria **Urządzenia** zawiera jednostki dla urządzeń przenośnych, które śledzą informacje takie jak:
 
-  -  Typ urządzenia
-  -  Rejestrowanie urządzenia i stan rejestracji
-  -  Własność urządzeń
-  -  Stan zarządzania urządzeniem
-  -  Przynależność urządzenia do stanu usługi Azure AD
-  -  Stan rejestracji
-  -  Historyczne informacje o urządzeniu
-  -  Spis aplikacji na urządzeniu
+  - Typ urządzenia
+  - Rejestrowanie urządzenia i stan rejestracji
+  - Własność urządzeń
+  - Stan zarządzania urządzeniem
+  - Przynależność urządzenia do stanu usługi Azure AD
+  - Stan rejestracji
+  - Historyczne informacje o urządzeniu
+  - Spis aplikacji na urządzeniu
 
 ## <a name="devicetypes"></a>DeviceTypes
 

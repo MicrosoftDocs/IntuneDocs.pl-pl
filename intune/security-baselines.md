@@ -1,11 +1,11 @@
 ---
 title: Używanie punktów odniesienia zabezpieczeń w usłudze Microsoft Intune — Azure | Microsoft Docs
-description: Dodaj lub skonfiguruj zalecane ustawienia zabezpieczeń grup w celu ochrony użytkowników i danych na urządzeniach przy użyciu usługi Microsoft Intune w ramach zarządzania urządzeniami przenośnymi. Włącz funkcję BitLocker, skonfiguruj Zaawansowaną ochronę przed zagrożeniami w usłudze Microsoft Defender, kontroluj program Internet Explorer, używaj filtru SmartScreen, ustawiaj lokalne zasady zabezpieczeń, wymagaj hasła, blokuj materiały do pobrania z Internetu i nie tylko.
+description: Dodaj lub skonfiguruj zalecane ustawienia zabezpieczeń systemu Windows w celu ochrony użytkowników i danych na urządzeniach za pomocą usługi Microsoft Intune w ramach zarządzania urządzeniami przenośnymi. Włącz funkcję BitLocker, skonfiguruj Zaawansowaną ochronę przed zagrożeniami w usłudze Microsoft Defender, kontroluj program Internet Explorer, używaj filtru SmartScreen, ustawiaj lokalne zasady zabezpieczeń, wymagaj hasła, blokuj materiały do pobrania z Internetu i nie tylko.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/29/2019
+ms.date: 06/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,52 +15,71 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bb1ddcadcac1ec9b4730a5dcd66abca111d80196
-ms.sourcegitcommit: 14f4e97de5699394684939e6f681062b5d4c1671
+ms.openlocfilehash: 93e470175829008b72b5b8991188f3c92e38a567
+ms.sourcegitcommit: 690e680e854b7d707421c5e06f134e493f4f4194
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67251204"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67416832"
 ---
-# <a name="create-a-windows-10-security-baseline-in-intune"></a>Tworzenie punktu odniesienia zabezpieczeń systemu Windows 10 w usłudze Intune
+# <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Konfigurowanie urządzeń z systemem Windows 10 w usłudze Intune przy użyciu punktów odniesienia zabezpieczeń
 
-Punkty odniesienia zabezpieczeń to funkcja w wersji zapoznawczej, która jest dostępna dla urządzeń z systemem Windows 10 i nowszymi wersjami. Ta funkcja obejmuje wiele ustawień obsługiwanych przez usługę Intune, które ułatwiają zabezpieczanie i ochronę użytkowników i urządzeń. Ustawia ona również automatycznie te ustawienia na wartości zalecane przez zespoły zajmujące się zabezpieczeniami. Na przykład punkt odniesienia automatycznie włącza funkcję BitLocker, automatycznie wymaga podania hasła przed odblokowaniem urządzenia, automatycznie wyłącza uwierzytelnianie podstawowe i wykonuje inne czynności.
+Punkty odniesienia zabezpieczeń usługi Intune pomogą Ci zabezpieczyć i chronić użytkowników i urządzenia. Punkty odniesienia zabezpieczeń to wstępnie skonfigurowane grupy ustawień systemu Windows, które ułatwiają stosowanie znanych grup ustawień i wartości domyślnych zalecanych przez odpowiednie zespoły ds. zabezpieczeń. Tworząc profil punktu odniesienia zabezpieczeń w usłudze Intune, tworzysz profil *konfiguracji urządzenia*.
 
 Ta funkcja ma zastosowanie do:
 
 - System Windows 10 w wersji 1809 lub nowszej
 
-> [!NOTE]
-> W okresie obowiązywania wersji zapoznawczej punktów odniesienia zabezpieczeń firma Microsoft nie zaleca używania profilów w środowisku produkcyjnym, ponieważ punkty odniesienia mogą zmieniać się w trakcie korzystania z wersji zapoznawczej. Gdy punkty odniesienia zabezpieczeń staną się ogólnie dostępne, istniejące profile nie zostaną przekonwertowane na najnowsze obsługiwane profile.
+Punkty odniesienia zabezpieczeń wdraża się dla grup użytkowników lub urządzeń w usłudze Intune, a ustawienia są stosowane do urządzeń z systemem Windows 10 lub nowszym. Na przykład *punkt odniesienia zabezpieczeń rozwiązania MDM* automatycznie włącza funkcję BitLocker dla dysków wymiennych, automatycznie wymaga podania hasła przed odblokowaniem urządzenia, automatycznie wyłącza uwierzytelnianie podstawowe i wykonuje inne czynności. Jeśli wartość domyślna nie sprawdza się w Twoim środowisku, dostosuj punkt odniesienia, aby zastosować ustawienia, których potrzebujesz.  
 
-Celem użycia punktów odniesienia zabezpieczeń jest zapewnienie kompleksowego, bezpiecznego przepływu pracy podczas pracy z usługą Microsoft 365. Oto niektóre korzyści:
+Poszczególne typy punktów odniesienia mogą zawierać te same ustawienia, ale używać różnych wartości domyślnych dla tych ustawień. Ważne jest, aby poznać wartości domyślne w punktach odniesienia, których zdecydujesz się użyć, a następnie zmodyfikować każdy punkt odniesienia tak, aby spełniał potrzeby Twojej organizacji.  
+
+> [!NOTE]
+> Firma Microsoft nie zaleca używania wersji zapoznawczych punktów odniesienia zabezpieczeń w środowisku produkcyjnym. Ustawienia punktu odniesienia w wersji zapoznawczej mogą ulec zmianie w trakcie trwania tej wersji zapoznawczej. 
+
+Celem użycia punktów odniesienia zabezpieczeń jest zapewnienie kompleksowego, bezpiecznego przepływu pracy podczas korzystania z rozwiązania Microsoft 365. Oto niektóre korzyści:
 
 - Punkt odniesienia zabezpieczeń oferuje najlepsze rozwiązania i rekomendacje dotyczące ustawień, które mają wpływ na zabezpieczenia. Usługa Intune współpracuje z tym samym zespołem ds. zabezpieczeń systemu Windows, który tworzy punkty odniesienia zabezpieczeń dla zasad grupy. Te rekomendacje opierają się na wskazówkach i rozbudowanym środowisku.
 - Jeśli zaczynasz używać usługi Intune i nie wiesz, od czego zacząć, warto skorzystać z punktów odniesienia. Można szybko tworzyć i wdrażać bezpieczny profil, wiedząc, że pomagasz chronić zasoby i dane organizacji.
 - Jeśli obecnie używasz zasad grupy, migrowanie do usługi Intune na potrzeby zarządzania jest znacznie łatwiejsze z użyciem tych punktów odniesienia. Punkty odniesienia są natywnie wbudowane w usłudze Intune i oferują nowoczesne środowisko zarządzania.
 
-Punkty odniesienia zabezpieczeń tworzą „profil zabezpieczeń” w usłudze Intune. Ten profil zawiera wszystkie ustawienia w punkcie odniesienia. Profil jest następnie stosowany lub przypisywany do użytkowników, grup i urządzeń.
 
-Po przypisaniu profilu można monitorować sam profil i punkt odniesienia. Można na przykład sprawdzić, które urządzenia są zgodne — lub nie — z punktem odniesienia.
-
-Treść tego artykułu pomoże Ci używać punktów odniesienia zabezpieczeń w celu utworzenia, przypisania i monitorowania profilu.
 
 Artykuł [Windows security baselines](https://docs.microsoft.com/windows/security/threat-protection/windows-security-baselines) (Punkty odniesienia zabezpieczeń systemu Windows) to doskonały zasób, z którego dowiesz się więcej na temat tej funkcji. Artykuł [Mobile device management](https://docs.microsoft.com/windows/client-management/mdm/) (MDM) (Zarządzanie urządzeniami mobilnymi) to doskonały zasób zawierający informacje na temat funkcji MDM i czynności, które można wykonywać na urządzeniach z systemem Windows.
 
-## <a name="available-security-baselines"></a>Dostępne punkty odniesienia zabezpieczeń  
+## <a name="security-baseline-versions-and-instances"></a>Wystąpienia i wersje punktu odniesienia zabezpieczeń
+Od czasu do czasu udostępniane są nowe aktualizacje dla punktu odniesienia. Każde nowe wystąpienie wersji punktu odniesienia może dodawać lub usuwać ustawienia oraz wprowadzać inne zmiany. Jeśli na przykład w nowych wersjach systemu Windows 10 udostępniane są nowe ustawienia systemu Windows 10, punkt odniesienia zabezpieczeń rozwiązania MDM może otrzymać nowe wystąpienie wersji, które obejmuje te najnowsze ustawienia.  
 
-Poniższe punkty odniesienia zabezpieczeń są dostępne do użycia z usługą Intune.
-- **Wersja zapoznawcza: punkt odniesienia rozwiązania MDM z października 2018 r.**  
-  [Wyświetl ustawienia](security-baseline-settings-windows.md)
+W konsoli usługi Intune można sprawdzić, które punkty odniesienia zabezpieczeń są dostępne, i wyświetlić informacje na ich temat. Dostępne informacje obejmują liczbę Twoich profili, które korzystają z punktu odniesienia danego typu, liczbę dostępnych oddzielnych wystąpień punktu odniesienia danego typu oraz termin udostępnienia lub opublikowania najnowszego wystąpienia.  Poniższy przykład pokazuje kafelek powszechnie używanego punktu odniesienia zabezpieczeń rozwiązania MDM:  
 
-- **WERSJA ZAPOZNAWCZA: punkt odniesienia usługi Windows Defender ATP**  
-  [Wyświetl ustawienia](security-baseline-settings-defender-atp.md)  
-  *(Ten punkt odniesienia jest dostępny, jeśli środowisko spełnia wymagania wstępne dotyczące korzystania z [Zaawansowanej ochrony przed zagrożeniami w usłudze Microsoft Defender](advanced-threat-protection.md#prerequisites))* .
+![Kafelek punktu odniesienia](./media/security-baselines/baseline-tile.png)
 
+Aby wyświetlić informacje o używanych wersjach punktów odniesienia, wybierz punkt odniesienia, a następnie wybierz pozycję **Wersje**. Usługa Intune wyświetli szczegółowe informacje o wersjach używanych przez Twoje profile. W okienku wersji możesz wybrać jedną wersję, aby wyświetlić bardziej szczegółowe informacje o profilach, które używają tej wersji. Możesz również wybrać dwie różne wersje, a następnie wybrać pozycję **Porównaj punkty odniesienia**, aby pobrać plik CSV ze szczegółami różnic.  
+
+![Porównywanie punktów odniesienia](./media/security-baselines/compare-baselines.png)
+
+Kiedy tworzysz *profil* punktu odniesienia zabezpieczeń, ten profil automatycznie używa ostatnio wydanego wystąpienia punktu odniesienia zabezpieczeń.  Nadal możesz używać i edytować profile, które zostały utworzone wcześniej i które korzystają z wcześniejszego wystąpienia wersji punktu odniesienia, w tym z punktów odniesienia utworzonych przy użyciu wersji zapoznawczej. 
+
+Profile punktów odniesienia zabezpieczeń obsługują [zmianę wersji](#change-the-baseline-instance-for-a-profile) używanego punktu odniesienia. Oznacza to, że po wydaniu nowej wersji nie musisz tworzyć nowego profilu punktu odniesienia, aby z niej skorzystać. Zamiast tego, gdy wszystko będzie gotowe, możesz wybrać profil punktu odniesienia, a następnie użyć wbudowanej opcji, aby zmienić wersję wystąpienia dla tego profilu.  
+
+## <a name="available-security-baselines"></a>Dostępne punkty odniesienia zabezpieczeń 
+
+Poniższe wystąpienia punktów odniesienia zabezpieczeń są dostępne do użycia z usługą Intune. Użyj linków, aby wyświetlić ustawienia dla najnowszego wystąpienia każdego punktu odniesienia. 
+
+- **Punkt odniesienia zabezpieczeń rozwiązania MDM**
+  - [Punkt odniesienia zabezpieczeń rozwiązania MDM z wiosny 2019 r. (19H1)](security-baseline-settings-mdm.md)
+  - [Wersja zapoznawcza: punkt odniesienia rozwiązania MDM z października 2018 r.](security-baseline-settings-mdm-archive.md)
+
+- **Punkt odniesienia usługi Windows Defender ATP**  
+  *(Aby móc używać tego punktu odniesienia, środowisko musi spełniać wymagania wstępne dotyczące korzystania z [Zaawansowanej ochrony przed zagrożeniami w usłudze Microsoft Defender](advanced-threat-protection.md#prerequisites))* .
+  - [Wersja zapoznawcza: punkt odniesienia usługi Windows Defender ATP](security-baseline-settings-defender-atp.md)  
+
+Nadal możesz używać i edytować profile, które zostały utworzone wcześniej na podstawie szablonu wersji zapoznawczej, nawet jeśli ten szablon wersji zapoznawczej nie jest już dostępny do tworzenia nowych profilów. 
 
 ## <a name="prerequisites"></a>Wymagania wstępne
-Aby móc zarządzać planami bazowymi w usłudze Intune, Twoje konto musi mieć wbudowaną rolę [Menedżer zasad i profilów](role-based-access-control.md#built-in-roles).
+- Aby móc zarządzać planami bazowymi w usłudze Intune, Twoje konto musi mieć wbudowaną rolę [Menedżer zasad i profilów](role-based-access-control.md#built-in-roles).
 
+- Korzystanie z niektórych punktów odniesienia może wymagać aktywnej subskrypcji dodatkowych usług, takich jak Microsoft Defender ATP.  
 
 ## <a name="co-managed-devices"></a>Urządzenia współzarządzane
 
@@ -70,37 +89,91 @@ W przypadku używania urządzeń współzarządzanych musisz przełączyć obci�
 
 ## <a name="create-the-profile"></a>Tworzenie profilu
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), a następnie wybierz pozycje **Bezpieczeństwo urządzeń** > **Punkty odniesienia zabezpieczeń (wersja zapoznawcza)** . Zostanie wyświetlona lista dostępnych punktów odniesienia. 
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), a następnie wybierz pozycję **Bezpieczeństwo urządzeń** > **Punkty odniesienia zabezpieczeń**, aby wyświetlić listę dostępnych punktów odniesienia.
+
 
     ![Wybór puntu odniesienia zabezpieczeń do skonfigurowania](./media/security-baselines/available-baselines.png)
 
-   >[!TIP]  
-   > Punkt odniesienia usługi Windows Defender ATP jest dostępny, jeśli środowisko spełnia wymagania wstępne dotyczące korzystania z [Zaawansowanej ochrony przed zagrożeniami w usłudze Windows Defender](advanced-threat-protection.md#prerequisites).
 2. Wybierz punkt odniesienia, którego chcesz użyć, a następnie wybierz opcję **Utwórz profil**.  
 
 3. Na karcie **Podstawowe** określ następujące właściwości:
 
-    - **Nazwa**: wprowadź nazwę profilu punktu odniesienia zabezpieczeń. Na przykład *Profil standardowy dla usługi Defender ATP*.
-    - **Opis**: wprowadź tekst opisujący zadania wykonywane przez dany punkt odniesienia. W polu opisu możesz wprowadzić dowolny wybrany tekst. Jest to opcjonalne, ale zdecydowanie zalecane.
+    - **Nazwa**: wprowadź nazwę profilu punktu odniesienia zabezpieczeń. Na przykład wpisz *Profil standardowy dla usługi Defender ATP*.
 
-4. Wybierz kartę **Konfiguracja**, aby wyświetlić dostępne grupy **ustawień** w tym punkcie odniesienia. Wybierz grupę, aby ją rozwinąć i wyświetlić poszczególne ustawienia, które zawiera. Ustawienia mają domyślne konfiguracje dla punktu odniesienia zabezpieczeń. Zmień ustawienia domyślne stosownie do swoich potrzeb biznesowych.  
+    - **Opis**: wprowadź tekst opisujący zadania wykonywane przez dany punkt odniesienia. W polu opisu możesz wprowadzić dowolny wybrany tekst. Jest to opcjonalne, ale zalecane.  
+
+   Wybierz **Dalej**, aby przejść do następnej karty. Po przejściu do nowej karty możesz wybrać nazwę karty, aby wrócić do poprzedniej karty.  
+
+4. Na karcie Ustawienia konfiguracji przejrzyj grupy **ustawień** dostępnych w wybranym punkcie odniesienia. Możesz rozwinąć grupę, aby wyświetlić ustawienia w tej grupie i wartości domyślne dla ustawień w danym punkcie odniesienia. Aby znaleźć określone ustawienia:
+   - Wybierz grupę, aby rozwinąć i przejrzeć dostępne ustawienia.  
+   - Użyj paska *Wyszukaj*, a następnie określ słowa kluczowe filtrujące widok, aby wyświetlić tylko te grupy, które zawierają podane kryteria wyszukiwania.  
+ 
+   Każde ustawienie w punkcie odniesienia ma konfigurację domyślną dla tej wersji punktu odniesienia. Zmień ustawienia domyślne stosownie do swoich potrzeb biznesowych. Różne punkty odniesienia mogą zawierać to samo ustawienie i używać różnych wartości domyślnych dla tego ustawienia w zależności od przeznaczenia punktu odniesienia. 
 
     ![Rozwijanie grupy w celu wyświetlenia ustawień dla tej grupy](./media/security-baselines/sample-list-of-settings.png)
 
-5. Wybierz kartę **Przypisania**, aby przypisać punkt odniesienia do grup. Aby ukończyć konfigurację, przypisz punkt odniesienia do istniejącej grupy lub utwórz nową grupę za pomocą standardowego procesu w konsoli usługi Intune.  
+5. Na karcie **Tagi zakresu** wybierz pozycję **Wybierz tagi zakresu**, aby otworzyć okienko *Wybieranie tagów* w celu przypisania tagów zakresu do profilu. 
+
+6. Na karcie **Przypisania** wybierz pozycję **Wybierz grupy do uwzględnienia**, a następnie przypisz punkt odniesienia do co najmniej jednej grupy. Użyj opcji **Wybierz grupy do wykluczenia**, aby dopracować przypisanie.  
 
    ![Przypisywanie profilu](./media/security-baselines/assignments.png)
   
-6. Gdy wszystko będzie gotowe do wdrożenia punktu odniesienia, wybierz kartę **Przeglądanie + tworzenie**, aby przejrzeć szczegóły punktu odniesienia. Następnie wybierz opcję **Zapisz profil**, aby zapisać i wdrożyć profil. 
+7. Gdy wszystko będzie gotowe do wdrożenia punktu odniesienia, przejdź na kartę **Przeglądanie + tworzenie**, aby przejrzeć szczegóły punktu odniesienia. Wybierz pozycję **Utwórz**, aby zapisać i wdrożyć profil.  
+
+   Jak tylko profil zostanie utworzony, jest on wypychany do przypisanej grupy i można go natychmiast zastosować.
+
+   > [!TIP]  
+   > Jeśli zapiszesz profil bez przypisywania go do grup, możesz później edytować profil, aby to zrobić.  
 
    ![Przegląd punktu odniesienia](./media/security-baselines/review.png) 
 
-   Po zapisaniu profil będzie wypychany do urządzeń w momencie ich zaewidencjonowania w usłudze Intune. Może więc zdarzyć się to natychmiast.
+  
+8. Po utworzeniu profilu można go edytować. W tym celu wybierz pozycję **Bezpieczeństwo urządzeń** > **Punkty odniesienia zabezpieczeń**, wybierz skonfigurowany typ punktu odniesienia, a następnie wybierz pozycję **Profile**.  Wybierz profil z listy dostępnych profilów, a następnie wybierz pozycję **Właściwości**. Możesz edytować ustawienia na wszystkich dostępnych kartach konfiguracji. Następnie wybierz pozycję **Przejrzyj i zapisz**, aby zatwierdzić zmiany.  
 
-   > [!TIP]  
-   > Można zapisać profil bez wcześniejszego przypisania go do grup. Profil można edytować później, aby dodać grupy. 
+## <a name="change-the-baseline-instance-for-a-profile"></a>Zmienianie wystąpienia punktu odniesienia dla profilu
+Profile punktów odniesienia obsługują zmianę wystąpienia punktu odniesienia, z którego korzysta dany profil. Możesz wybrać starsze wystąpienie lub, co się zdarza częściej, nowsze wystąpienie tego samego punktu odniesienia.  Nie można zmienić punktu odniesienia na inny, na przykład nie można zmienić w profilu punktu odniesienia dla usługi Defender ATP na punkt odniesienia zabezpieczeń rozwiązania MDM. 
 
-7. Po utworzeniu profilu można go edytować. W tym celu przejdź do opcji **Bezpieczeństwo urządzeń** > **Punkty odniesienia zabezpieczeń**, wybierz skonfigurowany punkt odniesienia, a następnie wybierz opcję **Profile**.  Wybierz profil, wybierz pozycję **Właściwości**, aby edytować ustawienia, a następnie wybierz pozycję **Przypisania**, aby edytować grupy, które otrzymują ten punkt odniesienia. 
+Podczas konfigurowania zmiany wersji punktu odniesienia będziesz mieć możliwość pobrania pliku CSV, który zawiera listę zmian między dwoma wybranymi wersjami punktu odniesienia. Możesz również wybrać, czy chcesz zachować wszystkie dostosowania z oryginalnej wersji punktu odniesienia i zastosować je do nowej wersji, czy zaimplementować wszystkie wartości domyślne nowej wersji punktu odniesienia. 
+
+Podczas zapisywania, po zakończeniu konwersji, punkt odniesienia jest od razu wdrażany ponownie w przypisanych grupach.  
+
+**Podczas konwersji**:
+- Nowe ustawienia, których nie było w oryginalnej, używanej przez Ciebie wersji, są dodawane i są dla nich ustawiane wartości domyślne.  
+
+- Ustawienia, których nie ma w nowej, wybranej przez Ciebie wersji punktu odniesienia, są usuwane i nie są już wymuszane przez ten profil punktu odniesienia zabezpieczeń.  
+
+  Kiedy ustawienie nie jest już zarządzane przez profil punktu odniesienia, to ustawienie nie jest resetowane na urządzeniu. Zamiast tego ustawienie na urządzeniu pozostaje ustawione zgodnie ze swoją ostatnią konfiguracją, dopóki inny proces nie będzie nim zarządzać i go nie zmieni. Przykłady procesów, które mogą zmienić ustawienie, gdy przestaniesz nim zarządzać, obejmują inny profil punktu odniesienia, ustawienie zasad grupy lub ręczną konfigurację urządzenia. 
+
+### <a name="to-change-the-instance-for-a-baseline"></a>Aby zmienić wystąpienie dla punktu odniesienia  
+
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), wybierz pozycję **Bezpieczeństwo urządzeń** > **Punkty odniesienia zabezpieczeń**, a następnie wybierz kafelek dla typu punktu odniesienia zawierającego profil, który chcesz zmienić.  
+
+2. Następnie wybierz pozycję **Profile**, zaznacz pole wyboru dla profilu, który chcesz edytować, a następnie wybierz pozycję **Zmień wersję**.  
+
+   ![wybierz punkt odniesienia](./media/security-baselines/select-baseline.png)  
+
+3. W okienku **Zmień wersję** użyj listy rozwijanej **Select a security baseline to update to** (Wybierz punkt odniesienia zabezpieczeń, do którego chcesz aktualizować) i wybierz wystąpienie wersji, którego chcesz użyć.  
+
+   ![wybierz wersję](./media/security-baselines/select-instance.png)  
+ 
+4. Wybierz pozycję **Review update** (Przejrzyj aktualizację), aby pobrać plik CSV, który pokazuje różnice między bieżącą wersją wystąpienia profilu i nową, wybraną przez Ciebie wersją. Przejrzyj ten plik, aby dowiedzieć się, które ustawienia zostaną dodane, które usunięte, oraz jakie są wartości domyślne dla tych ustawień w zaktualizowanym profilu.  
+
+   Gdy wszystko będzie gotowe, przejdź do następnego kroku.  
+
+5. Wybierz jedną z dwóch opcji dla pozycji **Select a method to update the profile** (Wybierz metodę aktualizowania profilu): 
+   - **Accept baseline changes but keep my existing setting customizations** (Akceptuj zmiany punktu odniesienia, ale zachowaj istniejące dostosowania ustawień) — Ta opcja zachowuje dostosowania wprowadzone do profilu punktu odniesienia i stosuje je w nowej wersji wybranej przez Ciebie do użycia.
+   - **Accept baseline changes and discard existing setting customizations** (Akceptuj zmiany punktu odniesienia i odrzuć istniejące dostosowania ustawień) — Ta opcja całkowicie zastępuje Twój oryginalny profil. Zaktualizowany profil użyje wartości domyślnych dla wszystkich ustawień.  
+
+6. Wybierz pozycję **Prześlij**. Profil zostanie zaktualizowany do wybranej wersji punktu odniesienia i po zakończeniu konwersji punkt odniesienia zostanie natychmiastowo wdrożony ponownie w przypisanych grupach.
+
+## <a name="remove-a-security-baseline-assignment"></a>Usuwanie przypisania punktu odniesienia zabezpieczeń
+Kiedy ustawienie punktu odniesienia zabezpieczeń nie będzie miało już zastosowania do urządzenia lub ustawienia w punkcie odniesienia będą miały wartość *Nieskonfigurowane*, dla tych ustawień na urządzeniu nie zostanie przywrócona konfiguracja sprzed zarządzania. Zamiast tego, zarządzane wcześniej ustawienia na urządzeniu zachowają swoją ostatnią konfigurację pobraną z punktu odniesienia, dopóki jakiś inny proces nie zaktualizuje tych ustawień na urządzeniu.  
+
+Inne procesy, które mogą później zmienić ustawienia na urządzeniu, obejmują inny lub nowy punkt odniesienia zabezpieczeń, profil konfiguracji urządzenia, konfigurację zasad grupy lub ręczną edycję ustawienia na urządzeniu.  
+
+
+
+
 
 ## <a name="q--a"></a>Pytania i odpowiedzi
 
@@ -122,8 +195,11 @@ Ten sam zespół firmy Microsoft wybrał i zorganizował ustawienia dla każdego
 
 - Wielu klientów używa rekomendacji punktów odniesienia usługi Intune jako punktu startowego, a następnie dostosowuje go tak, aby spełniał wymagania dotyczące infrastruktury IT i zabezpieczeń. Pierwszy punkt odniesienia do wydania to **punkt odniesienia dotyczący oprogramowania MDM** w systemie Windows 10 RS5 firmy Microsoft. Ten punkt odniesienia został stworzony jako ogólna infrastruktura, która umożliwia klientom ostateczne importowanie innych punktów odniesienia w oparciu o standardy CIS, NIST i inne. Obecnie to rozwiązanie jest dostępne dla systemu Windows, a w przyszłości będzie również obejmować systemy iOS i Android.
 
-- Migracja z lokalnych zasad grupy usługi Active Directory do rozwiązania działającego wyłącznie w chmurze przy użyciu usługi Azure Active Directory (AD) w usłudze Microsoft Intune to podróż. Aby ją ułatwić, można korzystać z towarzyszących obiektów zasad grupy dla hybrydowych urządzeń usługi AS i przyłączonych do usługi Azure AD. W razie potrzeby te urządzenia mogą uzyskać ustawienia zarządzania urządzeniami przenośnymi z chmury (usługi Intune), a ustawienia zasad grupy z kontrolerów domeny w środowisku lokalnym.
+- Migracja z lokalnych zasad grupy usługi Active Directory do rozwiązania działającego wyłącznie w chmurze przy użyciu usługi Azure Active Directory (AD) w usłudze Microsoft Intune to podróż. Aby ułatwić ten proces, można skorzystać z szablonów zasad grupy zawartych w zestawie narzędzi [Security Compliance Toolkit](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10), które są pomocne w zarządzaniu urządzeniami przyłączonymi do hybrydowej usługi Azure AD i do usługi Azure AD. W razie potrzeby te urządzenia mogą uzyskać ustawienia zarządzania urządzeniami przenośnymi z chmury (usługi Intune), a ustawienia zasad grupy z kontrolerów domeny w środowisku lokalnym.
 
 ## <a name="next-steps"></a>Następne kroki
-- Zapoznaj się z [ustawieniami punktu odniesienia systemu Windows](security-baseline-settings-windows.md) obsługiwanymi przez usługę Intune.  
+- Przejrzyj ustawienia w najnowszych wersjach dostępnych punktów odniesienia:  
+  - [Punkt odniesienia zabezpieczeń rozwiązania MDM](security-baseline-settings-mdm.md)  
+  - [Punkt odniesienia usługi Windows Defender ATP](security-baseline-settings-defender-atp.md)  
+
 - Sprawdź stan oraz monitoruj [punkt odniesienia i profil](security-baselines-monitor.md).

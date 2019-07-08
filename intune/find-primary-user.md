@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6a20ccec2ef0cbaba87637b3c44c2cc2be094ab
-ms.sourcegitcommit: b3a1c5b0b24f0e52cf318defe10f3d27a2770009
+ms.openlocfilehash: 21f62ad44d992d1f4adbb1945bdba02e526d9138
+ms.sourcegitcommit: 2db7dc2baea0c159f70338e6a0529acc89580773
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67325533"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500648"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>Znajdowanie użytkownika podstawowego urządzenia usługi Intune
 
@@ -60,8 +60,8 @@ Usługa Intune automatycznie dodaje użytkownika podstawowego na urządzeniach p
 | Windows | Przyłączanie do usługi Azure AD (gotowe środowisko) | Użytkownik rejestrujący | Podczas rejestracji | 
 | Windows | Przyłączanie do usługi Azure AD (gotowe środowisko rozwiązania Autopilot) | Użytkownik rejestrujący | Podczas rejestracji | 
 | Windows | Rejestrowanie tylko w oprogramowaniu MDM | Użytkownik rejestrujący | Podczas rejestracji | 
-| Windows | Hybrydowa funkcja AADJ i obiekt zasad grupy automatycznej rejestracji | Pierwszy zalogowany użytkownik | Gdy pierwszy użytkownik się zaloguje | 
-| Windows | Współzarządzanie | Pierwszy zalogowany użytkownik | Gdy pierwszy użytkownik się zaloguje | 
+| Windows | Hybrydowa funkcja AADJ i obiekt zasad grupy automatycznej rejestracji | Pierwszy użytkownik zalogowany w systemie Windows | Kiedy pierwszy użytkownik zaloguje się w systemie Windows| 
+| Windows | Współzarządzanie | Pierwszy użytkownik zalogowany w systemie Windows | Kiedy pierwszy użytkownik zaloguje się w systemie Windows | 
 | Windows | Przyłączanie do usługi Azure AD (token rejestracji zbiorczej) | Brak | Nie dotyczy | 
 | Windows | Przyłączanie do usługi Azure AD (tryb samowdrażania rozwiązania Autopilot) | Brak | Nie dotyczy | 
 | Wiele platform | Rejestracja sterowana przez użytkownika za pomocą aplikacji Portal firmy | Użytkownik rejestrujący | Podczas rejestracji |

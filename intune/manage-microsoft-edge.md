@@ -17,21 +17,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ad8a3298a801b07e021b84bd5eea9c91f01f1a2
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 50574a2d3dc4ba5731b1a90f563ddd1a08e7f833
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044881"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67529643"
 ---
 # <a name="manage-web-access-using-microsoft-edge-with-microsoft-intune"></a>Zarządzanie dostępem do Internetu przy użyciu przeglądarki Microsoft Edge w usłudze Microsoft Intune
 
 Używanie zasad ochrony aplikacji usługi Intune z przeglądarką Microsoft Edge może zapewnić, że dostęp do firmowych witryn internetowych będzie zawsze uzyskiwany z zastosowaniem środków bezpieczeństwa. W przedsiębiorstwie dostępne są następujące funkcje przeglądarki Microsoft Edge włączane przy użyciu zasad usługi Intune. Te funkcje przedsiębiorstwa to na przykład:
 
-1.  **Podwójna tożsamość** — użytkownicy mogą dodawać konta służbowe i osobiste na potrzeby przeglądania. Te dwie tożsamości są całkowicie oddzielone, co przypomina architekturę i środowisko usługi Office 365 oraz programu Outlook. Administratorzy usługi Intune będą mogli ustawić żądane zasady dla chronionego środowiska przeglądania w ramach konta służbowego.
-2.  **Integracja zasad ochrony aplikacji usługi Intune** — ponieważ przeglądarka Microsoft Edge jest zintegrowana z zestawem SDK usługi Intune, można określić zasady ochrony aplikacji, aby zapewnić ochronę przed utratą danych. Te możliwości obejmują kontrolowanie użycia funkcji wycinania, kopiowania i wklejania, zapobieganie przechwytywaniu ekranu oraz zapewnianie, że wybierane przez użytkowników linki są otwierane tylko w innych zarządzanych aplikacjach.
-3.  **Integracja serwera proxy aplikacji platformy Azure** — możesz kontrolować dostęp do aplikacji SaaS i aplikacji internetowych, co pomaga zagwarantować, że tylko aplikacje oparte na przeglądarce będą uruchamiane w bezpiecznej przeglądarce Microsoft Edge, bez względu na to, czy użytkownicy końcowi nawiązują połączenie z sieci firmowej, czy też z Internetu.
-4.  **Konfiguracja aplikacji** — można używać ustawień konfiguracji aplikacji w celu zwiększania poziomu bezpieczeństwa organizacji i konfigurowania łatwych w użyciu funkcji dla użytkowników końcowych. Można na przykład można zdefiniować zakładki, skrót do strony głównej, witryny dozwolone/zablokowane, serwer proxy aplikacji platformy Azure i inne elementy.
+1. **Podwójna tożsamość** — użytkownicy mogą dodawać konta służbowe i osobiste na potrzeby przeglądania. Te dwie tożsamości są całkowicie oddzielone, co przypomina architekturę i środowisko usługi Office 365 oraz programu Outlook. Administratorzy usługi Intune będą mogli ustawić żądane zasady dla chronionego środowiska przeglądania w ramach konta służbowego.
+2. **Integracja zasad ochrony aplikacji usługi Intune** — ponieważ przeglądarka Microsoft Edge jest zintegrowana z zestawem SDK usługi Intune, można określić zasady ochrony aplikacji, aby zapewnić ochronę przed utratą danych. Te możliwości obejmują kontrolowanie użycia funkcji wycinania, kopiowania i wklejania, zapobieganie przechwytywaniu ekranu oraz zapewnianie, że wybierane przez użytkowników linki są otwierane tylko w innych zarządzanych aplikacjach.
+3. **Integracja serwera proxy aplikacji platformy Azure** — możesz kontrolować dostęp do aplikacji SaaS i aplikacji internetowych, co pomaga zagwarantować, że tylko aplikacje oparte na przeglądarce będą uruchamiane w bezpiecznej przeglądarce Microsoft Edge, bez względu na to, czy użytkownicy końcowi nawiązują połączenie z sieci firmowej, czy też z Internetu.
+4. **Konfiguracja aplikacji** — można używać ustawień konfiguracji aplikacji w celu zwiększania poziomu bezpieczeństwa organizacji i konfigurowania łatwych w użyciu funkcji dla użytkowników końcowych. Można na przykład można zdefiniować zakładki, skrót do strony głównej, witryny dozwolone/zablokowane, serwer proxy aplikacji platformy Azure i inne elementy.
 Zasady ochrony usługi Microsoft Intune dla przeglądarki Microsoft Edge pomagają w ochronie danych i zasobów organizacji. Użycie tych zasad z przeglądarką Microsoft Edge zapewnia, że zasoby firmy są chronione nie tylko w aplikacjach zainstalowanych natywnie, ale także gdy dostęp jest uzyskiwany za pośrednictwem przeglądarki internetowej.
 
 ## <a name="getting-started"></a>Wprowadzenie
@@ -115,8 +115,8 @@ Poniższe kroki umożliwiają tworzenie konfiguracji chronionych aplikacji przeg
     > [!NOTE]
     > Aplikacja Microsoft Edge używa tych samych par klucza i wartości co aplikacja Managed Browser. 
 
-8.  Gdy wszystko będzie gotowe, kliknij przycisk **OK**.
-9.  W bloku **Dodaj zasady konfiguracji** wybierz pozycję **Dodaj**.<br>
+8. Gdy wszystko będzie gotowe, kliknij przycisk **OK**.
+9. W bloku **Dodaj zasady konfiguracji** wybierz pozycję **Dodaj**.<br>
     Nowa konfiguracja zostanie utworzona i wyświetlona w bloku **Konfiguracja aplikacji**.
 
 ## <a name="assign-the-configuration-settings-you-created"></a>Przypisywanie utworzonych ustawień konfiguracji 
@@ -184,7 +184,7 @@ Użyj następujących par klucz/wartość w celu skonfigurowania zakładek zarz�
 
 |    Klucz    |    Wartość    |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    com.microsoft.intune.mam.managedbrowser.bookmarks    |    Wartość dla tej konfiguracji to lista zakładek. Każda zakładka składa się z tytułu zakładki i jej adresu URL. Tytuł i adres URL oddziel za pomocą znaku `|`.      **Przykład:**<br>`Microsoft Bing|https://www.bing.com`<p>Aby skonfigurować wiele zakładek, każdą parę oddziel podwójnym znakiem `||`.<p>**Przykład:**<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
+|    com.microsoft.intune.mam.managedbrowser.bookmarks    |    Wartość dla tej konfiguracji to lista zakładek. Każda zakładka składa się z tytułu zakładki i jej adresu URL. Tytuł i adres URL oddziel za pomocą znaku `|`.      **Przykład:**<br>`Microsoft Bing|https://www.bing.com`<br>Aby skonfigurować wiele zakładek, każdą parę oddziel podwójnym znakiem `||`.<p>**Przykład:**<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
 
 ## <a name="how-to-display-myapps-within-microsoft-edge-bookmarks"></a>Jak wyświetlić aplikację MyApps w ramach zakładek przeglądarki Microsoft Edge
 
@@ -201,16 +201,17 @@ Możesz użyć poniższych par klucz/wartość, aby skonfigurować listę dozwol
 
 |    Klucz    |    Wartość    |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    Wybierz spośród opcji:<p>1. Określ dozwolone adresy URL (tylko te adresy URL są dozwolone; nie można uzyskać dostępu do żadnych innych witryn):<br>`com.microsoft.intune.mam.managedbrowser.AllowListURLs`<p>2. Określ zablokowane adresy URL (wszystkie inne witryny będą dostępne):<br>`com.microsoft.intune.mam.managedbrowser.BlockListURLs`    |    Wartość klucza to lista adresów URL. Wszystkie adresy URL, które mają być dozwolone lub blokowane, należy wprowadzać jako pojedyncze wartości rozdzielane znakiem pionowej kreski `|`.<p>**Przykłady:**<br>`URL1|URL2|URL3`<br>`http://.contoso.com/|https://.bing.com/|https://expenses.contoso.com`  |
+|    Wybierz spośród opcji:<p>1. Określ dozwolone adresy URL (tylko te adresy URL są dozwolone; nie można uzyskać dostępu do żadnych innych witryn):<br>`com.microsoft.intune.mam.managedbrowser.AllowListURLs`<p>2. Określ zablokowane adresy URL (wszystkie inne witryny będą dostępne):<br>`com.microsoft.intune.mam.managedbrowser.BlockListURLs`    |    Wartość klucza to lista adresów URL. Wszystkie adresy URL, które mają być dozwolone lub blokowane, należy wprowadzać jako pojedyncze wartości rozdzielane znakiem pionowej kreski `|`.<br>**Przykłady:**<br>`URL1|URL2|URL3`<br>`http://.contoso.com/|https://.bing.com/|https://expenses.contoso.com`  |
 
 ### <a name="url-formats-for-allowed-and-blocked-site-list"></a>Formaty adresów URL dla listy witryn dozwolonych i zablokowanych 
 Możesz użyć różnych formatów adresów URL do tworzenia listy witryn dozwolonych/zablokowanych. Te dozwolone wzorce zostały szczegółowo opisane w poniższej tabeli. Przed rozpoczęciem pracy zapoznaj się z poniższymi uwagami: 
 - Upewnij się, że wszystkie adresy URL dodawane do listy będą mieć prefiks **http** lub **https**.
-- Symbol wieloznaczny (*) może być używany zgodnie z regułami z poniższej listy dozwolonych wzorców.
+- Symbol wieloznaczny (\*) może być używany zgodnie z regułami z poniższej listy dozwolonych wzorców.
+- Symbol wieloznaczny może odpowiadać wyłącznie całemu składnikowi nazwy hosta (oddzielane kropkami) lub całym częściom ścieżki (oddzielane ukośnikami). Na przykład adres `http://*contoso.com` **nie** jest obsługiwany.
 - W adresie można określić numery portów. Jeśli nie określisz numeru portu, będą używane następujące wartości:
     - Port 80 dla protokołu http
     - Port 443 dla protokołu https
-- Symboli wieloznacznych **nie** można używać w numerze portu. Na przykład adresy `http://www.contoso.com:*` i `http://www.contoso.com:*/` nie są obsługiwane.
+- Symboli wieloznacznych **nie** można używać w numerze portu. Na przykład adresy `http://www.contoso.com:*` i `http://www.contoso.com:*/` nie są obsługiwane. 
 
     |    Adres URL    |    Szczegóły    |    Jest zgodny z    |    Nie jest zgodny z    |
     |-------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
@@ -232,6 +233,7 @@ Możesz użyć różnych formatów adresów URL do tworzenia listy witryn dozwol
     - Adresy IP
     - `https://*`
     - `http://*`
+    - `https://*contoso.com`
     - `http://www.contoso.com:*`
     - `http://www.contoso.com: /*`
   
@@ -247,13 +249,13 @@ Użyj poniższej pary klucz/wartość, aby wskazać, czy takie programowe przej�
 
 ## <a name="directing-users-to-microsoft-edge-instead-of-the-intune-managed-browser"></a>Kierowanie użytkowników do Microsoft Edge zamiast do aplikacji Intune Managed Browser 
 
-Obydwa programy — Intune Managed Browser i Microsoft Edge — mogą być obecnie traktowane jako przeglądarki zarządzane przez zasady. Aby upewnić się, że użytkownicy są kierowani do odpowiedniej przeglądarki, użyj we wszystkich aplikacjach zarządzanych przez usługę Intune (np. Outlook i OneDrive) następującego ustawienia konfiguracji:
+Obydwa programy — Intune Managed Browser i Microsoft Edge — mogą być obecnie traktowane jako przeglądarki zarządzane przez zasady. Aby upewnić się, że użytkownicy są kierowani do odpowiedniej przeglądarki, użyj we wszystkich aplikacjach zarządzanych przez usługę Intune (np. Outlook, OneDrive i SharePoint) następującego ustawienia konfiguracji:
 
 |    Klucz    |    Wartość    |
 |------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    `com.microsoft.intune.useEdge`    |    Wartość `true` spowoduje przekierowanie użytkowników tak, aby używali przeglądarki Microsoft Edge.<p>Wartość `false` spowoduje przekierowanie użytkowników tak, aby używali aplikacji Intune Managed Browser.    |
+|    `com.microsoft.intune.useEdge`    |    Wartość `true` spowoduje przekierowanie użytkowników tak, aby pobrali i używali przeglądarki Microsoft Edge.<br>Wartość `false` pozwoli użytkownikom na używanie aplikacji Intune Managed Browser.    |
 
-Jeśli ta wartość konfiguracji aplikacji nie zostanie ustawiona, poniższa logika określi, która przeglądarka będzie służyć do otwierania linków firmowych.
+Jeśli ta wartość konfiguracji aplikacji **nie** zostanie ustawiona, poniższa logika określi, która przeglądarka będzie służyć do otwierania linków firmowych.
 
 W systemie Android:
 - Program Intune Managed Browser będzie otwierany, jeśli użytkownik na swoim urządzeniu pobrane programy Intune Managed Browser i Microsoft Edge. 

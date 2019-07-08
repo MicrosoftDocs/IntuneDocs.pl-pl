@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/09/2019
+ms.date: 04/19/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3ba4ca5ccc9083f2132a8b8893c3bc2070ed3c50
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: efcb622681e4f3b3fba7b686551cca7db6bb4c3a
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55841338"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546038"
 ---
 # <a name="use-managed-apps-on-your-android-device"></a>Korzystanie z aplikacji zarządzanych na urządzeniu z systemem Android
 Aplikacje zarządzane są konfigurowane tak, aby spełniały wymagania organizacji dotyczące bezpieczeństwa oraz chroniły dane służbowe. Te aplikacje są udostępniane w urządzeniu z możliwością automatycznego instalowania lub używania. 
@@ -45,25 +45,25 @@ Gdy po raz pierwszy uzyskujesz dostęp do danych służbowych w aplikacji zarzą
 ## <a name="commonly-managed-apps"></a>Popularne aplikacje zarządzane  
 Oto przykładowe często wymagane lub dostępne aplikacje zarządzane w miejscach pracy i nauki:
 
--   Microsoft Edge
+- Microsoft Edge
 
--   Microsoft Outlook
+- Microsoft Outlook
 
--   Microsoft Word, Excel i PowerPoint
+- Microsoft Word, Excel i PowerPoint
 
 ## <a name="how-do-i-get-managed-apps"></a>Jak uzyskać aplikacje zarządzane?
-Najpierw należy zainstalować aplikację Portal firmy, a w razie potrzeby objąć urządzenie zarządzaniem. Następnie należy skorzystać z jednego z trzech sposobów uzyskania aplikacji zarządzanych.
-* Organizacja automatycznie instaluje aplikacje w urządzeniu w momencie rejestracji. Aby uzyskać informacje na temat rejestracji, zobacz [Rejestrowanie urządzenia w usłudze Intune](enroll-your-device-in-Intune-android.md).
-* Organizacja udostępnia aplikacje zarządzane przeznaczone dla Ciebie w aplikacji Portal firmy. Przejdź do witryny internetowej lub aplikacji Portal firmy, aby wyszukiwać, przeglądać i instalować te aplikacje. 
-* Instalujesz aplikację ze sklepu Google Play, a następnie logujesz się do niej przy użyciu konta służbowego.  
+Istnieją trzy sposoby pobierania aplikacji zarządzanych.  
+* Organizacja automatycznie instaluje aplikacje w urządzeniu w momencie rejestracji.  
+* Instalujesz aplikację ze sklepu Google Play, a następnie logujesz się do niej przy użyciu konta służbowego.    
+* Organizacja udostępnia aplikacje zarządzane przeznaczone dla Ciebie w aplikacji Portal firmy. Przejdź do witryny internetowej lub aplikacji Portal firmy, aby wyszukiwać, przeglądać i instalować dostępne aplikacje. Aby uzyskać więcej informacji na temat tych aplikacji, zobacz następną sekcję — [dostępne aplikacje](#available-apps).  
 
- ## <a name="available-apps"></a>Aplikacje dostępne   
- Twoja organizacja wybiera aplikacje, które są dla Ciebie odpowiednie i przydatne w pracy lub w szkole. Są to jedyne aplikacje, które znajdziesz w aplikacji Portal firmy.   
+### <a name="available-apps"></a>Aplikacje dostępne   
+ Twoja organizacja można wybrać aplikacje, które są właściwe i przydatne dla Ciebie w pracy lub nauki i zapewnić ich dostępność w aplikacji Portal firmy.  
 
  Aplikacje są również udostępniane na podstawie typu używanego urządzenia. Jeśli na przykład używasz aplikacji Portal firmy dla systemu Android, będziesz mieć dostęp do aplikacji dla systemu Android, ale nie dla systemu iOS.   
 
- ## <a name="request-an-app-for-work-or-school"></a>Żądanie aplikacji do pracy lub do szkoły   
- Jeśli potrzebujesz jakiejś aplikacji, która nie jest dostępna w aplikacji Portal firmy, możesz o nią poprosić. Informacje kontaktowe do **pomocy technicznej** znajdziesz w aplikacji Portal firmy na karcie **Kontakt z działem IT**. Te same informacje kontaktowe znajdują się w [witrynie internetowej Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).   
+## <a name="request-an-app-for-work-or-school"></a>Żądanie aplikacji do pracy lub do szkoły   
+ Jeśli potrzebujesz jakiejś aplikacji, która nie jest dostępna w aplikacji Portal firmy, możesz o nią poprosić. Informacje kontaktowe dla użytkownika **pomocy technicznej** w obu aplikacji **kontakt z działem IT** kartę. Te same informacje kontaktowe znajdują się w [witrynie internetowej Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).   
 
 ## <a name="what-can-my-company-support-manage-in-an-app"></a>Czym dział pomocy technicznej mojej firmy może zarządzać w aplikacji?  
 Poniższa lista zawiera opis ustawień, którymi dział pomocy technicznej w firmie może zarządzać w aplikacji. Te ustawienia mają wpływ na sposób wyświetlania danych służbowych w urządzeniu, uzyskiwania do nich dostępu oraz używania ich w inny sposób:

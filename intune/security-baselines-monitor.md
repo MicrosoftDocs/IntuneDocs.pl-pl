@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/19/2019
+ms.date: 06/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a87b54dde9afe9803d71f7cbef62f7c55375f51b
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: e3bf59f75d41d50cfd9280251e20964a35a149a8
+ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040657"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67403573"
 ---
 # <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>Monitorowanie profilów i punktu odniesienia zabezpieczeń w usłudze Microsoft Intune  
 
@@ -34,7 +34,7 @@ Więcej szczegółów funkcji punktów odniesienia zabezpieczeń w usłudze Micr
 
 W przypadku monitorowania punktu odniesienia uzyskujesz szczegółowe informacje na temat stanu zabezpieczeń urządzeń na podstawie rekomendacji firmy Microsoft. Możesz wyświetlić te szczegółowe informacje w okienku Przegląd punktu odniesienia zabezpieczeń w konsoli usługi Intune.  Wyświetlenie danych po pierwszym przypisaniu punktu odniesienia może potrwać do 24 godzin. Późniejsze zmiany pojawiają się w ciągu sześciu godzin.  
 
-Aby wyświetlić dane monitorowania dotyczące punktu odniesienia i urządzeń, zaloguj się do [portalu usługi Intune](https://go.microsoft.com/fwlink/?linkid=2090973). Następnie wybierz pozycję **Zabezpieczenia urządzenia** > **Punkty odniesienia zabezpieczeń (wersja zapoznawcza)**, wybierz punkt odniesienia i wyświetl okienko **Przegląd**.
+Aby wyświetlić dane monitorowania dotyczące punktu odniesienia i urządzeń, zaloguj się do [portalu usługi Intune](https://go.microsoft.com/fwlink/?linkid=2090973). Następnie wybierz pozycję **Zabezpieczenia urządzeń** > **Punkty odniesienia zabezpieczeń**, wybierz punkt odniesienia i wyświetl okienko **Przegląd**.
 
 Okienko **Przegląd** udostępnia dwie metody monitorowania stanu:
 - **Widok urządzenia** — podsumowanie liczby urządzeń znajdujących się w każdej kategorii stanu dla punktu odniesienia.  

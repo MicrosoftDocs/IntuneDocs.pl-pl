@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/24/2018
+ms.date: 07/01/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,20 +16,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b5f1b4c0fd0c9d8cfdc443b2af3c6f90a6f32756
-ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
+ms.openlocfilehash: aea4a3d6f8d28e4277435b1d9fc092e68adb9e55
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66373635"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67530322"
 ---
 # <a name="use-custom-settings-for-android-enterprise-devices-in-microsoft-intune"></a>Używanie ustawień niestandardowych dla urządzeń z systemem Android Enterprise w usłudze Microsoft Intune
 
-Za pomocą usługi Microsoft Intune można dodawać lub tworzyć ustawienia niestandardowe dla urządzeń z systemem Android Enterprise przy użyciu „profilu niestandardowego”. Profile niestandardowe to funkcja w usłudze Intune. Służą one do dodawania ustawień i funkcji urządzeń, które nie są wbudowane w usłudze Intune.
+Za pomocą usługi Microsoft Intune można dodawać lub tworzyć ustawienia niestandardowe dla urządzeń z profilem roboczym Android Enterprise przy użyciu „profilu niestandardowego”. Profile niestandardowe to funkcja w usłudze Intune. Służą one do dodawania ustawień i funkcji urządzeń, które nie są wbudowane w usłudze Intune.
 
 Profile niestandardowe systemu Android Enterprise używają ustawień jednolitego identyfikatora zasobów Open Mobile Alliance (OMA-URI, Open Mobile Alliance Uniform Resource Identifier) w celu kontrolowania funkcji na urządzeniach z systemem Android Enterprise. Te ustawienia są zwykle używane przez producentów urządzeń przenośnych w celu kontrolowania tych funkcji.
 
-Usługa Intune obsługuje ograniczoną liczbę profilów niestandardowych systemu Android.
+Usługa Intune obsługuje ograniczoną liczbę profilów niestandardowych przedsiębiorstwa z systemem Android, w tym:
+
+- ./Vendor/MSFT/WiFi/Profile/SSID/ustawienia: [utworzyć profil sieci Wi-Fi z użyciem klucza wstępnego](wi-fi-profile-shared-key.md) ma kilka przykładów.
+- ./Vendor/MSFT/VPN/Profile/Name/PackageList: [tworzenia profilu sieci VPN dla aplikacji](android-pulse-secure-per-app-vpn.md) ma kilka przykładów.
+- ./Vendor/MSFT/WorkProfile/DisallowCrossProfileCopyPaste: zobacz [przykład](#example) (w tym artykule).
+
+Jeśli potrzebujesz dodatkowych ustawień, zobacz [OEMConfig dla programu Android Enterprise](android-oem-configuration-overview.md).
 
 W tym artykule pokazano, jak utworzyć profil niestandardowy dla urządzeń z systemem Android Enterprise. Zawiera także przykład profilu niestandardowego, który blokuje kopiowanie i wklejanie.
 
