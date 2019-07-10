@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a5f28f01d0c8be6692deaf27391e52619fcdcab
-ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
+ms.openlocfilehash: 86aefbfc37db7929f9748d4783db319cf97d4545
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67512270"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548465"
 ---
 # <a name="configure-device-compliance-and-app-management-policies-when-migrating-to-microsoft-intune"></a>Konfigurowanie zasad zgodności urządzeń i zasad zarządzania aplikacjami podczas migracji do usługi Microsoft Intune
 
@@ -30,13 +30,13 @@ Głównym celem migracji do usługi Intune jest zarejestrowanie wszystkich urzą
 
 Poszczególne platformy urządzeń oferują różne ustawienia, ale zasady dotyczące urządzeń w usłudze Intune udostępniają następujące możliwości zarządzania urządzeniami przenośnymi, które zapewniają obsługę wszystkich platform:
 
--   Określanie liczby urządzeń, które może zarejestrować każdy użytkownik.
+- Określanie liczby urządzeń, które może zarejestrować każdy użytkownik.
 
--   Zarządzanie ustawieniami urządzeń (na przykład szyfrowaniem na poziomie urządzenia, długością hasła czy użyciem aparatu fotograficznego).
+- Zarządzanie ustawieniami urządzeń (na przykład szyfrowaniem na poziomie urządzenia, długością hasła czy użyciem aparatu fotograficznego).
 
--   Dostarczanie aplikacji, profilów poczty e-mail, profilów sieci VPN itp.
+- Dostarczanie aplikacji, profilów poczty e-mail, profilów sieci VPN itp.
 
--   Ocenianie na poziomie urządzenia kryteriów dotyczących zasad zgodności z zabezpieczeniami.
+- Ocenianie na poziomie urządzenia kryteriów dotyczących zasad zgodności z zabezpieczeniami.
 
 > [!IMPORTANT]
 > Zasady zarządzania urządzeniami nie są przypisywane bezpośrednio do poszczególnych urządzeń lub użytkowników, ale do grup użytkowników. Zasady te mogą być stosowane bezpośrednio do grupy użytkowników, a tym samym do urządzeń używanych przez te osoby, lub do grupy urządzeń, a tym samym do elementów członkowskich grupy.
@@ -61,9 +61,9 @@ Musisz utworzyć profil konfiguracji urządzeń, aby wymusić stosowanie ustawie
 
 #### <a name="directly-import-ios-configuration-profiles-optional"></a>Bezpośrednie importowanie profilów konfiguracji systemu iOS (opcjonalnie)
 
--   **Profile programu Apple Configurator dla systemu iOS (system iOS 7.1 lub nowszy):** jeśli istniejące rozwiązanie MDM używa profilów programu Apple Configurator (plików mobileconfig), można je bezpośrednio zaimportować do usługi Intune jako niestandardowe zasady konfiguracji.
+- **Profile programu Apple Configurator dla systemu iOS (system iOS 7.1 lub nowszy):** jeśli istniejące rozwiązanie MDM używa profilów programu Apple Configurator (plików mobileconfig), można je bezpośrednio zaimportować do usługi Intune jako niestandardowe zasady konfiguracji.
 
--   **Zasady konfiguracji aplikacji mobilnych dla systemu iOS:** jeśli istniejące rozwiązanie MDM używa zasad konfiguracji aplikacji mobilnych dla systemu iOS, można je bezpośrednio zaimportować do usługi Intune, o ile są one zgodne z formatem XML list właściwości określonym przez firmę Apple.
+- **Zasady konfiguracji aplikacji mobilnych dla systemu iOS:** jeśli istniejące rozwiązanie MDM używa zasad konfiguracji aplikacji mobilnych dla systemu iOS, można je bezpośrednio zaimportować do usługi Intune, o ile są one zgodne z formatem XML list właściwości określonym przez firmę Apple.
 
 - Dowiedz się, jak dodać niestandardowe zasady dla systemu [iOS](custom-settings-ios.md).
 
@@ -71,25 +71,25 @@ Musisz utworzyć profil konfiguracji urządzeń, aby wymusić stosowanie ustawie
 
 Zasady zgodności urządzeń umożliwiają ocenę ustawień związanych z zabezpieczeniami i udostępniają raporty na temat zgodności urządzeń ze standardami firmowymi. Te ustawienia obejmują:
 
--   Długość numeru PIN
+- Długość numeru PIN
 
--   Stan zabezpieczeń systemowych
+- Stan zabezpieczeń systemowych
 
--   Wersja systemu operacyjnego
+- Wersja systemu operacyjnego
 
 Zapoznaj się z dodatkowymi materiałami dotyczącymi ustawień zgodności urządzeń:
 
--   Dowiedz się więcej o [zasadach zgodności urządzeń](device-compliance.md).
+- Dowiedz się więcej o [zasadach zgodności urządzeń](device-compliance.md).
 
--   Dowiedz się, [jak utworzyć zasady zgodności urządzeń](device-compliance-get-started.md).
+- Dowiedz się, [jak utworzyć zasady zgodności urządzeń](device-compliance-get-started.md).
 
 ### <a name="task-5-publish-and-deploy-apps"></a>Zadanie 5. Publikowanie i wdrażanie aplikacji
 
 Funkcje MDM usługi Intune umożliwiają dostarczanie aplikacji przez wymaganie ich automatycznej instalacji lub ich udostępnienie w Portalu firmy.
 
--   [Jak dodawać aplikacje](apps-add.md).
+- [Jak dodawać aplikacje](apps-add.md).
 
--   [Jak wdrażać aplikacje](apps-deploy.md).
+- [Jak wdrażać aplikacje](apps-deploy.md).
 
 ### <a name="task-6-enable-device-enrollment"></a>Zadanie 6. Włączanie rejestracji urządzeń
 

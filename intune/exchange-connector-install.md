@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ffaf29d34c7f6a08d48717f7560926d53cfa8ba2
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: da828b162e008541cb5cb2b5d15092d0fce417c5
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67529765"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572530"
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune"></a>Konfigurowanie lokalnego programu Exchange Connector w usłudze Microsoft Intune
 Informacje przedstawione w tym artykule ułatwiają instalowanie i monitorowanie lokalnego łącznika programu Exchange Active Sync dla usługi Intune.  Po skonfigurowaniu współdziałania lokalnego programu Exchange Connector w usłudze Intune z [zasadami dostępu warunkowego można sterować dostępem do lokalnych skrzynek pocztowych programu Exchange](conditional-access-exchange-create.md). 
@@ -58,18 +58,18 @@ Poniższa tabela zawiera listę wymagań dotyczących komputera, na którym ma b
 Utwórz konto użytkownika usługi Active Directory, które będzie używane przez lokalny program Exchange Connector. Konto musi mieć uprawnienia do uruchamiania następujących wymaganych poleceń cmdlet programu Exchange w środowisku Windows PowerShell:
 
 
- -   Get-ActiveSyncOrganizationSettings, Set-ActiveSyncOrganizationSettings
- -   Get-CasMailbox, Set-CasMailbox
- -   Get-ActiveSyncMailboxPolicy, Set-ActiveSyncMailboxPolicy, New-ActiveSyncMailboxPolicy, Remove-ActiveSyncMailboxPolicy
- -   Get-ActiveSyncDeviceAccessRule, Set-ActiveSyncDeviceAccessRule, New-ActiveSyncDeviceAccessRule, Remove-ActiveSyncDeviceAccessRule
- -   Get-ActiveSyncDeviceStatistics
- -   Get-ActiveSyncDevice
- -   Get-ExchangeServer
- -   Get-ActiveSyncDeviceClass
- -   Get-Recipient
- -   Clear-ActiveSyncDevice, Remove-ActiveSyncDevice
- -   Set-ADServerSettings
- -   Get-Command
+ - Get-ActiveSyncOrganizationSettings, Set-ActiveSyncOrganizationSettings
+ - Get-CasMailbox, Set-CasMailbox
+ - Get-ActiveSyncMailboxPolicy, Set-ActiveSyncMailboxPolicy, New-ActiveSyncMailboxPolicy, Remove-ActiveSyncMailboxPolicy
+ - Get-ActiveSyncDeviceAccessRule, Set-ActiveSyncDeviceAccessRule, New-ActiveSyncDeviceAccessRule, Remove-ActiveSyncDeviceAccessRule
+ - Get-ActiveSyncDeviceStatistics
+ - Get-ActiveSyncDevice
+ - Get-ExchangeServer
+ - Get-ActiveSyncDeviceClass
+ - Get-Recipient
+ - Clear-ActiveSyncDevice, Remove-ActiveSyncDevice
+ - Set-ADServerSettings
+ - Get-Command
 
 ## <a name="download-the-on-premises-exchange-connector-software-installation-package"></a>Pobieranie pakietu instalacyjnego lokalnego programu Exchange Connector
 

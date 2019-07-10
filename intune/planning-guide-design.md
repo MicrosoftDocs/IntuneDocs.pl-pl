@@ -17,79 +17,79 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c279e21abf47d6ec067f3c75b36ecc7b58681e7e
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 02dcaa26e51f3b8c4632aed0fbc87131cc617532
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044403"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572281"
 ---
 # <a name="create-a-design"></a>Tworzenie projektu
 
 Twój projekt usługi Intune będzie opierać się na zbieranych przez Ciebie informacjach oraz decyzjach podejmowanych podczas wykonywania innych [sekcji tego przewodnika](planning-guide.md). Będzie on pomocny podczas przygotowywania następujących elementów:
 
--   Bieżące środowisko
+- Bieżące środowisko
 
--   Opcje wdrożenia usługi Intune
+- Opcje wdrożenia usługi Intune
 
--   Wymagania dotyczące tożsamości dla zależności zewnętrznych
+- Wymagania dotyczące tożsamości dla zależności zewnętrznych
 
--   Uwagi dotyczące platform urządzeń
+- Uwagi dotyczące platform urządzeń
 
--   Wymagania do spełnienia  
+- Wymagania do spełnienia  
 
 Chociaż wymagania dotyczące infrastruktury lokalnej są minimalne, plan projektu jest nadal pomocny, aby zapewnić istnienie prawidłowego rozwiązania do zarządzania urządzeniami mobilnymi spełniającego Twoje cele, zamierzenia i wymagania.
 
-Omówmy teraz każde z tych zagadnień w bardziej szczegółowy sposób. 
+Omówmy teraz każde z tych zagadnień w bardziej szczegółowy sposób. 
 
 ## <a name="record-your-current-environment"></a>Rejestrowanie bieżącego środowiska
 Ponadto często mają miejsce zmiany projektu w fazach wdrażania i testowania. Użyj swojego planu projektu do dokumentowania tych zmian i ich uzasadnień w miarę ich występowania.
 
 Twoje bieżące środowisko może mieć wpływ na decyzje projektowe i powinno być udokumentowane i sprawdzane w momencie podejmowania innych decyzji dotyczących projektu usługi Intune. Poniżej przedstawiono kilka przykładów sposobu rejestrowania bieżącego środowiska:
 
--   **Tożsamość w chmurze**
+- **Tożsamość w chmurze**
 
-    -   Czy używasz narzędzia DirSync lub programu Azure Active Directory (AAD) Connect?
+    - Czy używasz narzędzia DirSync lub programu Azure Active Directory (AAD) Connect?
 
-    -   Czy Twoje środowisko jest federacyjne?
+    - Czy Twoje środowisko jest federacyjne?
 
-    -   Czy włączono uwierzytelnianie wieloskładnikowe (MFA)?
+    - Czy włączono uwierzytelnianie wieloskładnikowe (MFA)?
 
--   **Środowisko poczty e-mail**
+- **Środowisko poczty e-mail**
 
-    -   Czy używasz programu Exchange? Czy działa on lokalnie, czy w chmurze?
+    - Czy używasz programu Exchange? Czy działa on lokalnie, czy w chmurze?
 
-    -   Czy jesteś w trakcie projektu migracji programu Exchange do chmury?
+    - Czy jesteś w trakcie projektu migracji programu Exchange do chmury?
 
--   **Bieżące rozwiązanie do zarządzania urządzeniami mobilnymi (MDM)**
+- **Bieżące rozwiązanie do zarządzania urządzeniami mobilnymi (MDM)**
 
-    -   Czy obecnie używasz innych rozwiązań do zarządzania urządzeniami przenośnymi?
+    - Czy obecnie używasz innych rozwiązań do zarządzania urządzeniami przenośnymi?
 
-    -   Jakich rozwiązań MDM używasz dla następujących scenariuszy przypadków użycia: firmowego i modelu „Przynieś własne urządzenie” (BYOD, Bring Your Own Device)?
+    - Jakich rozwiązań MDM używasz dla następujących scenariuszy przypadków użycia: firmowego i modelu „Przynieś własne urządzenie” (BYOD, Bring Your Own Device)?
 
-    -   Z jakich możliwości korzystasz (na przykład: ustawienia urządzenia aplikacji, konfiguracje sieci Wi-Fi)?
+    - Z jakich możliwości korzystasz (na przykład: ustawienia urządzenia aplikacji, konfiguracje sieci Wi-Fi)?
 
-    -   Jakie platformy urządzeń są obsługiwane?
+    - Jakie platformy urządzeń są obsługiwane?
 
-    -   Przez jakie grupy i ilu użytkowników używane jest rozwiązanie do zarządzania urządzeniami przenośnymi?
+    - Przez jakie grupy i ilu użytkowników używane jest rozwiązanie do zarządzania urządzeniami przenośnymi?
 
--   **Rozwiązanie związane z certyfikatem**
+- **Rozwiązanie związane z certyfikatem**
 
-    -   Czy wdrożone zostało rozwiązanie związane z certyfikatem?
+    - Czy wdrożone zostało rozwiązanie związane z certyfikatem?
 
-    -   Jakie typy certyfikatów są używane?
+    - Jakie typy certyfikatów są używane?
 
--   **Zarządzanie systemami**
+- **Zarządzanie systemami**
 
-    -   W jaki sposób zarządzasz środowiskiem komputera PC i serwera?
+    - W jaki sposób zarządzasz środowiskiem komputera PC i serwera?
 
-    -   Czy używasz programu System Center Configuration Manager? Czy używasz platformy zarządzania systemami innej firmy?
+    - Czy używasz programu System Center Configuration Manager? Czy używasz platformy zarządzania systemami innej firmy?
 
--   **Rozwiązanie sieci VPN**
+- **Rozwiązanie sieci VPN**
 
-    -   Jakie jest Twoje rozwiązanie sieci VPN?
+    - Jakie jest Twoje rozwiązanie sieci VPN?
 
-    -   Czy używasz go w obu scenariuszach przypadków użycia: firmowym i BYOD?
+    - Czy używasz go w obu scenariuszach przypadków użycia: firmowym i BYOD?
 
 Upewnij się, że uwzględniono wszystkie istniejące projekty i inne plany, które mogłyby wpłynąć na Twoje środowisko podczas rejestrowania bieżącego środowiska zarządzania urządzeniami mobilnymi. Poniżej przedstawiono przykładowy sposób rejestrowania bieżącego środowiska podczas tworzenia projektu usługi Intune:
 
@@ -118,11 +118,11 @@ Usługa Intune oferuje dwie opcje wdrożenia: autonomiczną i hybrydową. Opcja 
 
 Jeśli Twoja organizacja działa na całym świecie, upewnij się, że lokalizacja dzierżawy została zaplanowana w momencie subskrybowania usługi. Kraj jest definiowany podczas pierwszego logowania do subskrypcji usługi Intune i jest mapowany na regiony na całym świecie, które zostały wymienione poniżej:
 
--   Ameryka Północna
+- Ameryka Północna
 
--   Europa, Bliski Wschód i Afryka
+- Europa, Bliski Wschód i Afryka
 
--   Azja i Pacyfik
+- Azja i Pacyfik
 
 >[!IMPORTANT]
 > Zmiana kraju lub lokalizacji dzierżawy nie jest później możliwa.
@@ -131,11 +131,11 @@ Jeśli Twoja organizacja działa na całym świecie, upewnij się, że lokalizac
 
 Zależności zewnętrzne to usługi i produkty, które są niezależne od usługi Intune, ale są przez tę usługę wymagane lub mogą się z nią integrować. Istotne jest, aby zidentyfikować wymagania dotyczące tożsamości dla wszelkich zależności zewnętrznych oraz określić sposób ich konfiguracji. Do niektórych przykładów typowych zależności zewnętrznych należą:
 
--   Tożsamość
+- Tożsamość
 
--   Grupy użytkowników i urządzeń
+- Grupy użytkowników i urządzeń
 
--   Infrastruktura kluczy publicznych (PKI, Public Key Infrastructure)
+- Infrastruktura kluczy publicznych (PKI, Public Key Infrastructure)
 
 Poniżej omówimy bardziej szczegółowo te typowe zależności zewnętrzne.
 
@@ -157,9 +157,9 @@ Grupy użytkowników i urządzeń określają cel wdrożenia, a w tym zasady, ap
 
 Zalecamy utworzenie wszystkich grup w lokalnej usłudze Active Directory, a następnie zsynchronizowanie z usługą Azure AD. Dowiedz się więcej na temat planowania i tworzenia grup użytkowników i urządzeń:
 
--   [Planowanie własnych grup użytkowników i urządzeń](users-add.md).
+- [Planowanie własnych grup użytkowników i urządzeń](users-add.md).
 
--   [Sposoby tworzenia grup użytkowników i urządzeń](groups-add.md).
+- [Sposoby tworzenia grup użytkowników i urządzeń](groups-add.md).
 
 ### <a name="public-key-infrastructure-pki"></a>Infrastruktura kluczy publicznych (PKI, Public Key Infrastructure)
 Infrastruktura kluczy publicznych dostarcza na urządzenia lub użytkownikom certyfikaty, które służą do bezpiecznego uwierzytelniania w usłudze. Usługa Intune obsługuje infrastrukturę PKI firmy Microsoft. Certyfikaty użytkowników i urządzeń mogą być wystawiane na urządzenie przenośne w celu spełnienia wymagań uwierzytelniania opartego na certyfikatach. Przed użyciem certyfikatów określ, czy są one potrzebne, czy infrastruktura sieciowa może obsługiwać uwierzytelnianie oparte na certyfikatach oraz czy certyfikaty są aktualnie używane w istniejącym środowisku.
@@ -170,11 +170,11 @@ Ponadto, jeśli będą wystawiane certyfikaty SCEP, określ, który serwer będz
 
 Dowiedz się więcej na następujące tematy:
 
--   [Jak skonfigurować profile certyfikatów usługi Intune](certificates-configure.md)
+- [Jak skonfigurować profile certyfikatów usługi Intune](certificates-configure.md)
 
--   [Jak skonfigurować infrastrukturę certyfikatów dla profilu SCEP](certificates-scep-configure.md)
+- [Jak skonfigurować infrastrukturę certyfikatów dla profilu SCEP](certificates-scep-configure.md)
 
--   [Jak skonfigurować infrastrukturę certyfikatów dla profilu PFX](certficates-pfx-configure.md)
+- [Jak skonfigurować infrastrukturę certyfikatów dla profilu PFX](certficates-pfx-configure.md)
 
 
 
@@ -183,13 +183,13 @@ Dowiedz się więcej na następujące tematy:
 
 Przyjrzyj się bliżej następującym aspektom swoich urządzeń, aby zrozumieć sposób poprawnego zarządzania nimi.
 
--   Obsługiwane platformy urządzeń
+- Obsługiwane platformy urządzeń
 
--   Devices
+- Devices
 
--   Własność urządzeń
+- Własność urządzeń
 
--   Rejestrowanie zbiorcze
+- Rejestrowanie zbiorcze
 
 Omówmy teraz te zagadnienia w bardziej szczegółowy sposób.
 
@@ -226,17 +226,17 @@ Zobacz [Sekcja 3: Określanie wymagań scenariuszy przypadków użycia](planning
 
 W tych sekcjach omówimy następujące funkcje i możliwości dopasowane do wymagań Twojego scenariusza przypadków użycia:
 
--   Zasady dotyczące warunków i postanowień
+- Zasady dotyczące warunków i postanowień
 
--   Zasady konfiguracji
+- Zasady konfiguracji
 
--   Profile zasobów
+- Profile zasobów
 
--   Aplikacje
+- Aplikacje
 
--   Zasady zgodności
+- Zasady zgodności
 
--   Dostęp warunkowy
+- Dostęp warunkowy
 
 Omówmy teraz każde z tych zagadnień w bardziej szczegółowy sposób.
 
@@ -274,13 +274,13 @@ Aby zidentyfikować potrzeby swojego zestawu zasad konfiguracji, możesz [pobra�
 
 Użycie profilów ułatwia połączenie użytkownika końcowego z danymi firmy. Usługa Intune obsługuje wiele typów profilów. Zobacz przypadki użycia i wymagania, aby określić, kiedy profile zostaną skonfigurowane. Wszystkie profile urządzeń są podzielone na kategorie według typu platformy i powinny zostać uwzględnione w dokumentacji projektu.
 
--   Profile certyfikatów
+- Profile certyfikatów
 
--   Profil sieci Wi-Fi
+- Profil sieci Wi-Fi
 
--   Profil sieci VPN
+- Profil sieci VPN
 
--   Profil e-mail
+- Profil e-mail
 
 Omówmy teraz każdy typ profilu w bardziej szczegółowy sposób.
 
@@ -288,11 +288,11 @@ Omówmy teraz każdy typ profilu w bardziej szczegółowy sposób.
 
 Profile certyfikatów umożliwiają usłudze Intune wystawienie certyfikatu dla użytkownika lub urządzenia. Usługa Intune obsługuje następujące certyfikaty:
 
--   Prosty protokół rejestrowania certyfikatów (SCEP, Simple Certificate Enrollment Protocol)
+- Prosty protokół rejestrowania certyfikatów (SCEP, Simple Certificate Enrollment Protocol)
 
--   Zaufany certyfikat główny
+- Zaufany certyfikat główny
 
--   Certyfikat PFX.
+- Certyfikat PFX.
 
 Zalecamy udokumentowanie, która grupa użytkowników potrzebuje certyfikatu, jak wiele profilów certyfikatów będzie potrzebnych i w których grupach użytkowników mają one zostać wdrożone.
 
@@ -353,27 +353,27 @@ Aby zidentyfikować potrzeby swojego profilu poczty e-mail, możesz [pobrać sza
 
 Usługi Intune możesz użyć do dostarczania aplikacji użytkownikom lub do urządzeń na kilka sposobów. Typy aplikacji obejmują aplikacje instalatora oprogramowania, aplikacje z publicznego sklepu z aplikacjami, linki zewnętrzne lub zarządzane aplikacje dla systemu iOS. Oprócz pojedynczych wdrożeń aplikacji możesz zarządzać aplikacjami nabytymi w ramach zakupów zbiorczych i wdrażać je za pomocą programów zakupów zbiorczych dla systemu iOS i Windows. Dowiedz się więcej na następujące tematy:
 
--   [Typy aplikacji, które możesz dostarczać](app-management.md)
+- [Typy aplikacji, które możesz dostarczać](app-management.md)
 
--   [iOS Volume Purchase Program for Business (VPP)](vpp-apps-ios.md)
+- [iOS Volume Purchase Program for Business (VPP)](vpp-apps-ios.md)
 
--   [Aplikacje ze Sklepu Microsoft dla Firm](windows-store-for-business.md)
+- [Aplikacje ze Sklepu Microsoft dla Firm](windows-store-for-business.md)
 
 #### <a name="app-type-requirements"></a>Wymagania dotyczące typu aplikacji
 
 Ponieważ aplikacje można wdrożyć dla użytkowników i na urządzeniach, zalecamy podjęcie decyzji, które aplikacje będą zarządzane przez usługę Intune. Podczas wypełniania listy spróbuj odpowiedzieć na następujące pytania:
 
--   Czy aplikacje wymagają integracji z usługami w chmurze?
+- Czy aplikacje wymagają integracji z usługami w chmurze?
 
--   Czy wszystkie aplikacje będą dostępne dla użytkowników pracujących w modelu BYOD?
+- Czy wszystkie aplikacje będą dostępne dla użytkowników pracujących w modelu BYOD?
 
--   Jakie są opcje wdrażania dostępne dla tych aplikacji?
+- Jakie są opcje wdrażania dostępne dla tych aplikacji?
 
--   Czy Twoja firma musi zapewniać dostęp do danych aplikacji oprogramowania jako usługi (SaaS) swoim partnerom?
+- Czy Twoja firma musi zapewniać dostęp do danych aplikacji oprogramowania jako usługi (SaaS) swoim partnerom?
 
--   Czy aplikacje będą wymagały dostępu do Internetu na urządzeniach użytkowników?
+- Czy aplikacje będą wymagały dostępu do Internetu na urządzeniach użytkowników?
 
--   Czy aplikacje są publicznie dostępne w sklepie z aplikacjami, czy też są one niestandardowymi aplikacjami biznesowymi (LOB)?
+- Czy aplikacje są publicznie dostępne w sklepie z aplikacjami, czy też są one niestandardowymi aplikacjami biznesowymi (LOB)?
 
 
 #### <a name="app-protection-policies"></a>Zasady ochrony aplikacji
@@ -407,7 +407,7 @@ Dostęp warunkowy służy do umożliwiania dostępu do poczty e-mail i innych za
 
 Na potrzeby dostępu online zdecyduj, których platform i grup użytkowników będą dotyczyć zasady dostępu warunkowego. Ponadto określ, czy należy zainstalować lub skonfigurować łącznik usługi Intune dla lokalnego programu Exchange: 
 
--   [Lokalna instalacja programu Exchange](exchange-connector-install.md)
+- [Lokalna instalacja programu Exchange](exchange-connector-install.md)
 
 Oto przykład sposobu dokumentowania zasad dostępu warunkowego:
 

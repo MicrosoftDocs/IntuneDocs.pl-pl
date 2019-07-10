@@ -17,24 +17,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 57ec922d76ca08639139a7d130fb14c5e8bfa413
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 7e69236f7babc974bca0db32245de2323627e494
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046225"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548347"
 ---
 # <a name="develop-a-rollout-communication-plan"></a>Opracowywanie planu komunikacji dotyczącej wdrażania
 
 Dobre zarządzanie zmianami polega na jasnej i pomocnej komunikacji dotyczącej nadchodzących zmian. Aby uprościć wdrożenie usługi Intune, plan komunikacji dotyczącej wprowadzania powinien obejmować cztery obszary:
 
--   Rodzaj przekazywanych informacji
+- Rodzaj przekazywanych informacji
 
--   Metoda dostarczania używana do komunikacji
+- Metoda dostarczania używana do komunikacji
 
--   Adresaci komunikacji
+- Adresaci komunikacji
 
--   Oś czasu komunikacji
+- Oś czasu komunikacji
 
 Opiszmy dokładniej każdy z tych obszarów.
 
@@ -56,13 +56,13 @@ Określenie, jakie informacje mają być przekazywane, zależy od tego, w który
 
 Istnieje kilka metod dostarczania, których można użyć do przekazywania informacji dotyczących wdrażania usługi Intune docelowym grupom organizacyjnym i użytkownikom. Poniższa lista przedstawia kilka przykładów i etap, w ramach którego możesz użyć metody:
 
--   Organizowane w całej organizacji spotkania (zarówno osobiste, jak i w aplikacji Microsoft Teams) na etapie rozpoczęcia projektu
+- Organizowane w całej organizacji spotkania (zarówno osobiste, jak i w aplikacji Microsoft Teams) na etapie rozpoczęcia projektu
 
--   Poczta e-mail wykorzystywana na etapie poprzedzającym rejestrację, podczas rejestracji i po jej przeprowadzeniu
+- Poczta e-mail wykorzystywana na etapie poprzedzającym rejestrację, podczas rejestracji i po jej przeprowadzeniu
 
--   Witryny internetowe organizacji używane na wszystkich etapach
+- Witryny internetowe organizacji używane na wszystkich etapach
 
--   Usługa Yammer oraz plakaty i ulotki stosowane na etapie rozpoczęcia i poprzedzającym rejestrację
+- Usługa Yammer oraz plakaty i ulotki stosowane na etapie rozpoczęcia i poprzedzającym rejestrację
 
 ## <a name="communications-timeline"></a>Oś czasu komunikacji
 

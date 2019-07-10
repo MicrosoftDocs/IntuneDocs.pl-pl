@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/11/2019
+ms.date: 07/09/2019
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 325428f99c50ac4d2eede35d4aaadd858cd8b136
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 2ec03471e4ff3940f09fe4a9bef53b86e32bafa8
+ms.sourcegitcommit: 63b55e81122e5c15893302b109ae137c30855b55
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66047666"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67713344"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Szybki start: bezpłatna wersja próbna usługi Microsoft Intune 
 
@@ -61,7 +61,7 @@ Usługę Intune można bezpłatnie testować przez 30 dni. Jeśli masz już kont
 
 ## <a name="sign-in-to-the-azure-portal"></a>Logowanie się w witrynie Azure Portal
 
-1. Otwórz nowe okno przeglądarki i na pasku adresu wpisz adres **https://portal.azure.com**. 
+1. Otwórz nowe okno przeglądarki i na pasku adresu wpisz adres **https://portal.azure.com** . 
 2. Zaloguj się przy użyciu poświadczeń podanych w procedurze powyżej.
 
     ![Obraz przedstawiający stronę logowania witryny Azure Portal](./media/azure-portal-signin.png)
@@ -81,7 +81,7 @@ Po zarejestrowaniu się w witrynie Azure Portal i wybraniu usługi Intune może 
 
 Aby ustawić usługę Intune jako urząd MDM, wykonaj następujące czynności.
 
-1. Otwórz nowe okno przeglądarki i na pasku adresu wpisz adres **https://portal.azure.com**. 
+1. Otwórz nowe okno przeglądarki i na pasku adresu wpisz adres **https://portal.azure.com** . 
 2. Wybierz pozycję **Wszystkie usługi** > **Microsoft Intune**.
 3. Wybierz baner wskazujący, że zarządzanie urządzeniami nie zostało włączone, lub, jeśli baner nie zostanie wyświetlony natychmiast, wybierz pozycję **Rejestracja urządzeń**. Blok **Wybór urzędu MDM** zostanie wyświetlony, jeśli zarządzanie urządzeniami nie zostało jeszcze włączone.
 

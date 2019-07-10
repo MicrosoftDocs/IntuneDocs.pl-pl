@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4bd03075e6088b4cf06237429a723e93e87029fd
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 0656c199d2f6179429415161ec02ef8a9037bf6b
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67494588"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548356"
 ---
 # <a name="phase-1-prepare-microsoft-intune-for-mobile-device-management-mdm"></a>Faza 1. Przygotowanie usługi Microsoft Intune do zarządzania urządzeniami przenośnymi (MDM)
 
@@ -31,30 +31,30 @@ Przed szczegółowym zapoznaniem się z zagadnieniami dotyczącymi konfigurowani
 
 ### <a name="what-kinds-of-devices-do-you-need-to-manage"></a>Jakimi urządzeniami trzeba zarządzać?
 
--   Które [platformy](supported-devices-browsers.md) muszą mieć zapewnioną obsługę?
+- Które [platformy](supported-devices-browsers.md) muszą mieć zapewnioną obsługę?
 
--   Czy obsługiwane urządzenia należą do firmy czy są osobiste?
+- Czy obsługiwane urządzenia należą do firmy czy są osobiste?
 
--   Jakie połączenia są używane? Wi-Fi, VPN czy sieć komórkowa?
+- Jakie połączenia są używane? Wi-Fi, VPN czy sieć komórkowa?
 
 ### <a name="what-do-your-users-need-to-do-on-managed-devices"></a>Jakie czynności będą wykonywać użytkownicy na zarządzanych urządzeniach?
 
--   Czy trzeba aprowizować aplikacje dla użytkowników końcowych?
+- Czy trzeba aprowizować aplikacje dla użytkowników końcowych?
 
--   Czy są używane niestandardowe aplikacje biznesowe? Czy tylko aplikacje z publicznego sklepu?
+- Czy są używane niestandardowe aplikacje biznesowe? Czy tylko aplikacje z publicznego sklepu?
 
--   Czy trzeba aprowizować konta e-mail?
+- Czy trzeba aprowizować konta e-mail?
 
 ### <a name="what-kinds-of-users"></a>Jacy użytkownicy będą korzystać z rozwiązania?
 
--   Ilu użytkowników będzie korzystać z jednego urządzenia?
+- Ilu użytkowników będzie korzystać z jednego urządzenia?
 
--   Jakie warunki użytkowania są potrzebne?
+- Jakie warunki użytkowania są potrzebne?
 
-    -   Na tym etapie należy odpowiednio wcześnie konsultować się z działem prawnym.
-    -   Jaka lokalizacja jest wymagana?
+    - Na tym etapie należy odpowiednio wcześnie konsultować się z działem prawnym.
+    - Jaka lokalizacja jest wymagana?
 
--   Czy użytkownicy są ogólnie obeznani z technologiami i rozwiązaniami informatycznymi?
+- Czy użytkownicy są ogólnie obeznani z technologiami i rozwiązaniami informatycznymi?
 
 ### <a name="what-is-your-device-security-policy"></a>Jakie zasady zabezpieczeń urządzeń są używane?
 
@@ -68,11 +68,11 @@ Przed szczegółowym zapoznaniem się z zagadnieniami dotyczącymi konfigurowani
 
 - Jakie rodzaje uwierzytelniania muszą być obsługiwane? Jeśli potrzebne jest uwierzytelnianie oparte na certyfikatach, to jakie certyfikaty należy aprowizować?
   - Usługa Intune może aprowizować certyfikaty z profilami dostępu do zasobów dla zarejestrowanych urządzeń.
-  -   Jaka infrastruktura kluczy publicznych (PKI) musi być obsługiwana?
+  - Jaka infrastruktura kluczy publicznych (PKI) musi być obsługiwana?
   <br></br>
 - Czy obsługa wirtualnych sieci prywatnych (VPN) odbywa się na poziomie aplikacji czy urządzenia?
 
-  -   Intune może udostępniać konfiguracje sieci VPN dla innych dostawców sieci VPN.
+  - Intune może udostępniać konfiguracje sieci VPN dla innych dostawców sieci VPN.
   <br/><br/>
 - Czy jest dopuszczalne stosowanie tymczasowych wyjątków dla niektórych wymagań w celu uniknięcia przestoju? Czy urządzenia z dostępem muszą zawsze spełniać wszystkie wymagania dotyczące zabezpieczeń?
 

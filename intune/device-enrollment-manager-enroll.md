@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f8bbb1c7ec7151a09c8eeae33f4252781e5338f7
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 2ea1ca5f2661d51088efae79d97da40ce8737b7e
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66048326"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546709"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Rejestrowanie urządzeń w usłudze Intune przy użyciu konta menedżera rejestracji urządzeń
 
@@ -44,11 +44,11 @@ Konta użytkowników DEM i urządzenia zarejestrowane przy użyciu konta użytko
 
 ## <a name="add-a-device-enrollment-manager"></a>Dodawanie menedżera rejestracji urządzeń
 
-1.  W usłudze [Intune w witrynie Azure Portal](https://aka.ms/intuneportal) wybierz pozycję **Rejestrowanie urządzenia** > **Menedżerowie rejestracji urządzeń**.
+1. W usłudze [Intune w witrynie Azure Portal](https://aka.ms/intuneportal) wybierz pozycję **Rejestrowanie urządzenia** > **Menedżerowie rejestracji urządzeń**.
 
-2.  Wybierz pozycję **Dodaj**.
+2. Wybierz pozycję **Dodaj**.
 
-3.  W bloku **Dodaj użytkownika** wprowadź główną nazwę użytkownika dla użytkownika DEM i wybierz pozycję **Dodaj**. Użytkownik DEM zostanie dodany do listy użytkowników DEM.
+3. W bloku **Dodaj użytkownika** wprowadź główną nazwę użytkownika dla użytkownika DEM i wybierz pozycję **Dodaj**. Użytkownik DEM zostanie dodany do listy użytkowników DEM.
 
 ## <a name="permissions-for-dem"></a>Uprawnienia dla użytkownika DEM
 

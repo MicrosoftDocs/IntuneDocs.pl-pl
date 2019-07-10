@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e409683c294b9d0321458f40c9b7f66bc3660ac
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 546d62fdea3d1b5b7ae34f1c69423bcd0adb2025
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046510"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549421"
 ---
 # <a name="phase-2-migration-campaign"></a>Faza 2. Kampania migracji
 
@@ -31,39 +31,39 @@ Należy wybrać podejście do migracji najodpowiedniejsze z punktu widzenia potr
 
 Oto czynniki kluczowe do pomyślnego przeprowadzenia migracji z rozwiązania MDM innej firmy do usługi Intune:
 
--   Zrozumiałe i pomocne komunikaty mogą zminimalizować niezadowolenie i przestoje użytkowników końcowych.
+- Zrozumiałe i pomocne komunikaty mogą zminimalizować niezadowolenie i przestoje użytkowników końcowych.
 
--   Należy pamiętać o przygotowaniu konkretnych, szczegółowych instrukcji dotyczących migracji.
+- Należy pamiętać o przygotowaniu konkretnych, szczegółowych instrukcji dotyczących migracji.
 
--   Wszystkie zarządzane urządzenia muszą zostać wyrejestrowane z istniejącej usługi MDM, zanim możliwa będzie ich rejestracja w usłudze Intune.
+- Wszystkie zarządzane urządzenia muszą zostać wyrejestrowane z istniejącej usługi MDM, zanim możliwa będzie ich rejestracja w usłudze Intune.
 
--   Użytkownikom końcowym należy przekazać wskazówki od istniejącego dostawcy usług MDM dotyczące sposobu wyrejestrowania urządzeń.
+- Użytkownikom końcowym należy przekazać wskazówki od istniejącego dostawcy usług MDM dotyczące sposobu wyrejestrowania urządzeń.
 
--   Kampanię należy realizować etapami. Warto rozpocząć od programu pilotażowego obejmującego swoim zasięgiem małą grupę użytkowników, a następnie stopniowo dodawać kolejne grupy użytkowników — aż do pełnego wdrożenia.
+- Kampanię należy realizować etapami. Warto rozpocząć od programu pilotażowego obejmującego swoim zasięgiem małą grupę użytkowników, a następnie stopniowo dodawać kolejne grupy użytkowników — aż do pełnego wdrożenia.
 
--   W każdym cyklu należy monitorować obciążenie zespołu pomocy technicznej i śledzić wskaźnik pomyślnych rejestracji. Należy uwzględnić w harmonogramie dodatkowy czas, aby móc dokonać oceny kryteriów powodzenia dla każdej z grup przed migracją kolejnej grupy. Wdrożenie pilotażowe powinno pozwolić określić, czy:
+- W każdym cyklu należy monitorować obciążenie zespołu pomocy technicznej i śledzić wskaźnik pomyślnych rejestracji. Należy uwzględnić w harmonogramie dodatkowy czas, aby móc dokonać oceny kryteriów powodzenia dla każdej z grup przed migracją kolejnej grupy. Wdrożenie pilotażowe powinno pozwolić określić, czy:
 
-    -   Wskaźniki pomyślnych rejestracji i niepowodzeń są zgodne z oczekiwaniami.
+    - Wskaźniki pomyślnych rejestracji i niepowodzeń są zgodne z oczekiwaniami.
 
-    -   Produktywność użytkowników:
+    - Produktywność użytkowników:
 
-        -   Zasoby firmowe, takie jak sieć VPN, sieć Wi-Fi, poczta e-mail i certyfikaty, działają prawidłowo.
+        - Zasoby firmowe, takie jak sieć VPN, sieć Wi-Fi, poczta e-mail i certyfikaty, działają prawidłowo.
 
-        -   Aprowizowane aplikacje są dostępne.
+        - Aprowizowane aplikacje są dostępne.
 
-    -   Bezpieczeństwo danych:
+    - Bezpieczeństwo danych:
 
-        -   Raportowanie zgodności jest realizowane.
+        - Raportowanie zgodności jest realizowane.
 
-        -   Zabezpieczenia aplikacji mobilnych są wymuszane.
+        - Zabezpieczenia aplikacji mobilnych są wymuszane.
 
 Jeśli pierwsza faza migracji przebiegła pomyślnie, można powtórzyć [cykl migracji](migration-guide-cycle.md) w celu przeprowadzenia kolejnej fazy.
 
--   Powtarzaj realizowane etapowo cykle, aż wszyscy użytkownicy zostaną zmigrowani do usługi Intune.
+- Powtarzaj realizowane etapowo cykle, aż wszyscy użytkownicy zostaną zmigrowani do usługi Intune.
 
--   Upewnij się, że zespół pomocy technicznej jest w stanie zapewnić wsparcie użytkownikom końcowym w toku całej kampanii migracji. Umożliwiaj użytkownikom dobrowolną migrację do czasu oszacowania, jak duże obciążenie zespołu pomocy technicznej powoduje migracja.
+- Upewnij się, że zespół pomocy technicznej jest w stanie zapewnić wsparcie użytkownikom końcowym w toku całej kampanii migracji. Umożliwiaj użytkownikom dobrowolną migrację do czasu oszacowania, jak duże obciążenie zespołu pomocy technicznej powoduje migracja.
 
--   Nie wyznaczaj ostatecznego terminu rejestracji urządzeń do czasu, gdy zespół pomocy technicznej będzie w stanie zapewnić obsługę pozostałym użytkownikom.
+- Nie wyznaczaj ostatecznego terminu rejestracji urządzeń do czasu, gdy zespół pomocy technicznej będzie w stanie zapewnić obsługę pozostałym użytkownikom.
 
 > [!IMPORTANT]
 > Nie konfiguruj równocześnie usługi Intune i istniejącego rozwiązania MDM innej firmy pod kątem kontroli dostępu do zasobów takich, jak usługi Exchange i SharePoint Online. Co więcej, urządzenia nie mogą być jednocześnie zarejestrowane w dwóch rozwiązaniach.

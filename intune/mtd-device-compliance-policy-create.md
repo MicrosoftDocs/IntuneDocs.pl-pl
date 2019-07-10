@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b58ee82e44e8aa8d68c0fb00c4497cc0455ed21d
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 2315136fe277f06f6dbb11c13139a9dc193ce6f7
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528626"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549366"
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>Tworzenie zasad zgodności urządzeń usługi Mobile Threat Defense (MTD) za pomocą usługi Intune
 
@@ -37,23 +37,23 @@ W ramach procesu konfiguracji usługi MTD w konsoli tej usługi zostały utworzo
 
 Wymagania wstępne dotyczące zasad zgodności urządzeń i usługi MTD:
 
--   Skonfigurowanie integracji z usługą MTD w usłudze Intune
+- Skonfigurowanie integracji z usługą MTD w usłudze Intune
 
 ## <a name="to-create-an-mtd-device-compliance-policy"></a>Aby utworzyć zasady zgodności urządzenia usługi MTD
 
-1.  Przejdź do witryny [Azure Portal](https://portal.azure.com/) i zaloguj się przy użyciu swoich poświadczeń usługi Intune.
+1. Przejdź do witryny [Azure Portal](https://portal.azure.com/) i zaloguj się przy użyciu swoich poświadczeń usługi Intune.
 
-2.  Na stronie **Pulpit nawigacyjny platformy Azure** w menu po lewej stronie wybierz pozycję **Wszystkie usługi**, a następnie w filtrze pola tekstowego wpisz wartość **Intune**.
+2. Na stronie **Pulpit nawigacyjny platformy Azure** w menu po lewej stronie wybierz pozycję **Wszystkie usługi**, a następnie w filtrze pola tekstowego wpisz wartość **Intune**.
 
-3.  Wybierz pozycję **Intune**. Zostanie otwarty **Pulpit nawigacyjny Intune**.
+3. Wybierz pozycję **Intune**. Zostanie otwarty **Pulpit nawigacyjny Intune**.
 
 4. Na stronie **Pulpit nawigacyjny usługi Intune** wybierz pozycję **Zgodność urządzeń**, a następnie wybierz pozycję **Zasady** w sekcji **Zarządzanie**.
 
-5.  Wybierz pozycję **Utwórz zasady**, wypełnij pola **Nazwa** i **Opis** dotyczące zgodności urządzeń, zaznacz pozycję **Platforma**, a następnie wybierz pozycję **Konfiguruj** w sekcji **Ustawienia**.
+5. Wybierz pozycję **Utwórz zasady**, wypełnij pola **Nazwa** i **Opis** dotyczące zgodności urządzeń, zaznacz pozycję **Platforma**, a następnie wybierz pozycję **Konfiguruj** w sekcji **Ustawienia**.
 
-6.  W okienku **Zasady zgodności** wybierz pozycję **Kondycja urządzenia**.
+6. W okienku **Zasady zgodności** wybierz pozycję **Kondycja urządzenia**.
 
-7.  W okienku **Kondycja urządzenia** wybierz poziom zagrożeń mobilnych z listy rozwijanej w obszarze **Wymagaj od urządzenia, aby jego poziom zagrożenia był niższy lub równy poziomowi zagrożenia urządzenia**.
+7. W okienku **Kondycja urządzenia** wybierz poziom zagrożeń mobilnych z listy rozwijanej w obszarze **Wymagaj od urządzenia, aby jego poziom zagrożenia był niższy lub równy poziomowi zagrożenia urządzenia**.
 
     a.  **Zabezpieczone**: Ten poziom jest najbardziej bezpieczny. Urządzenie, na którym są obecne jakiekolwiek zagrożenia, nie może uzyskiwać dostępu do zasobów firmy. Jeśli zostaną znalezione jakiekolwiek zagrożenia, urządzenie zostanie ocenione jako niezgodne.
 
@@ -63,7 +63,7 @@ Wymagania wstępne dotyczące zasad zgodności urządzeń i usługi MTD:
 
     d.  **Wysoki**: ten poziom jest najmniej bezpieczny. Zezwala na wszystkie poziomy zagrożenia i wykorzystuje usługę Mobile Threat Defense w programie Skycure tylko do celów raportowania. Na urządzeniach musi znajdować się aplikacja MTD, w której to ustawienie zostało aktywowane.
 
-8.  Kliknij przycisk **OK** dwa razy, a następnie wybierz pozycję **Utwórz**.
+8. Kliknij przycisk **OK** dwa razy, a następnie wybierz pozycję **Utwórz**.
 
 > [!IMPORTANT]
 > W przypadku tworzenia zasad dostępu warunkowego dla usługi Office 365 lub innych usług ta ocena zgodności urządzeń jest oceniana i dostęp niezgodnych urządzeń do tych zasobów firmowych jest blokowany do momentu usunięcia zagrożenia na urządzeniu.

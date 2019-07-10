@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ce8d87a653e87a2b9ba91552f6857fdab6bee12
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 28e48d64ba220f75f412ef117a08b07dfd477d06
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045991"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549283"
 ---
 # <a name="identify-mobile-device-management-use-case-scenarios"></a>Identyfikowanie scenariuszy przypadków użycia zarządzania urządzeniami mobilnymi
 
@@ -33,9 +33,9 @@ Omówmy kilka przykładów, aby ułatwić organizacji identyfikowanie scenariusz
 ## <a name="device-ownership"></a>Własność urządzeń
 Można rozpocząć od określenia celów wdrażania usługi Intune w organizacji, aby pomóc w określeniu głównych scenariuszy przypadków użycia dla danego wdrożenia. W zakresie planu wdrożenia usługi Intune należy odpowiedzieć na następujące pytania:
 
--   Czy planowana jest obsługa urządzeń należących do firmy?
+- Czy planowana jest obsługa urządzeń należących do firmy?
 
--   Czy planowana jest obsługa urządzeń, które są własnością osobistą (BYOD)?
+- Czy planowana jest obsługa urządzeń, które są własnością osobistą (BYOD)?
 
 Nie są to opcje wzajemnie wykluczające. Może się okazać, że aby spełnić cele organizacji, potrzebna będzie obsługa obu form własności urządzeń. Podrzędne przypadki użycia ułatwią ustalenie, gdzie można zastosować różne zasady zarządzania urządzeniami.
 
@@ -43,11 +43,11 @@ Nie są to opcje wzajemnie wykluczające. Może się okazać, że aby spełnić 
 
 Ustal, czy każdy scenariusz przypadków użycia obejmuje również podrzędne przypadki użycia. Na przykład organizacja mogła zidentyfikować wymagania związane z obsługą firmowego scenariusza przypadków użycia, który zawiera dodatkowe podrzędne przypadki użycia w oparciu o typ użytkownika lub rolę urządzenia, np.:
 
--   Pracownik przetwarzający informacje
+- Pracownik przetwarzający informacje
 
--   Kierownik
+- Kierownik
 
--   Kiosk
+- Kiosk
 
 Oto kilka przykładów scenariuszy przypadków użycia i podrzędnych przypadków użycia:
 

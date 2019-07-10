@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 400de55e26076a8d612ac31388d5c5daec68d4a0
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 926d31e226bd25890afe5214b9e8c9247f7316a2
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044540"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572178"
 ---
 # <a name="network-access-control-nac-integration-with-intune"></a>Integracja kontroli dostępu do sieci (NAC) z usługą Intune
 
@@ -39,7 +39,7 @@ Jeśli urządzenie zostało zarejestrowane i jest zgodne z usługą Intune, rozw
 
 Urządzenia objęte aktywną synchronizacją z usługą Intune nie mogą przechodzić ze stanów **Zgodne** / **Niezgodne** na **Niezsynchronizowane** (lub **Nieznane**). Stan **Nieznane** jest zarezerwowany dla nowo zarejestrowanych urządzeń, które nie zostały jeszcze ocenione pod kątem zgodności.
 
-W przypadku urządzeń z zablokowanym dostępem do zasobów usługa blokowania powinna przekierować wszystkich użytkowników do [portalu zarządzania](https://portal.manage.microsoft.com), aby ustalić, dlaczego urządzenie zostało zablokowane.  Gdy użytkownicy odwiedzą tę stronę, ich urządzenia zostaną synchronicznie ponownie ocenione pod kątem zgodności.
+W przypadku urządzeń z zablokowanym dostępem do zasobów usługa blokowania powinna przekierować wszystkich użytkowników do [portalu zarządzania](https://portal.manage.microsoft.com), aby ustalić, dlaczego urządzenie zostało zablokowane.  Gdy użytkownicy odwiedzą tę stronę, ich urządzenia zostaną synchronicznie ponownie ocenione pod kątem zgodności.
 
 ## <a name="nac-and-conditional-access"></a>Kontrola dostępu do sieci i dostęp warunkowy
 

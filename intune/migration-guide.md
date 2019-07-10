@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 384b940182b86e769868e2fabce3a9674e695094
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: b34143e17245de61026a536cc0b8c5e8a7f80107
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528280"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549398"
 ---
 # <a name="intune-migration-guide"></a>Przewodnik po migracji do usługi Intune
 
@@ -35,39 +35,39 @@ Ten przewodnik zawiera szczegółowe instrukcje umożliwiające przejście przez
 
 Ten przewodnik dzieli proces migracji na dwie fazy, z których każda obejmuje zadania, strategie i wskazówki taktyczne, które ułatwiają kompleksowe przejście przez proces migracji funkcji MDM do usługi Intune.
 
--   [Faza 1. Przygotowanie usługi Intune do zarządzania urządzeniami mobilnymi](migration-guide-prepare.md)
+- [Faza 1. Przygotowanie usługi Intune do zarządzania urządzeniami mobilnymi](migration-guide-prepare.md)
 
-    -   [Ocena wymagań dotyczących migracji funkcji MDM](migration-guide-prepare.md#assess-mdm-requirements)
+    - [Ocena wymagań dotyczących migracji funkcji MDM](migration-guide-prepare.md#assess-mdm-requirements)
 
-    -   [Konfiguracja podstawowa](migration-guide-setup.md)
+    - [Konfiguracja podstawowa](migration-guide-setup.md)
 
-    -   [Konfiguracja zasad zarządzania urządzeniami i aplikacjami](migration-guide-configure-policies.md)
+    - [Konfiguracja zasad zarządzania urządzeniami i aplikacjami](migration-guide-configure-policies.md)
 
-    -   [Konfiguracja zasad ochrony aplikacji](migration-guide-app-protection-policies.md)
+    - [Konfiguracja zasad ochrony aplikacji](migration-guide-app-protection-policies.md)
 
-    -   [Specjalne zagadnienia dotyczące migracji](migration-guide-considerations.md)
+    - [Specjalne zagadnienia dotyczące migracji](migration-guide-considerations.md)
 
--   [Faza 2. Kampania migracji](migration-guide-campaign.md)
+- [Faza 2. Kampania migracji](migration-guide-campaign.md)
 
-    -   [Plan komunikacji](migration-guide-communication-plan.md)
+    - [Plan komunikacji](migration-guide-communication-plan.md)
 
-    -   [Wspieranie przyjęcia rozwiązania przez użytkowników końcowych przy użyciu dostępu warunkowego](migration-guide-drive-adoption.md)
+    - [Wspieranie przyjęcia rozwiązania przez użytkowników końcowych przy użyciu dostępu warunkowego](migration-guide-drive-adoption.md)
 
-    -   [Typowy cykl migracji](migration-guide-cycle.md)
-        -   [Monitorowanie migracji](migration-guide-cycle.md#monitoring-migration)
-        -   [Zadania po migracji](migration-guide-cycle.md#post-migration)
+    - [Typowy cykl migracji](migration-guide-cycle.md)
+        - [Monitorowanie migracji](migration-guide-cycle.md#monitoring-migration)
+        - [Zadania po migracji](migration-guide-cycle.md#post-migration)
 
 ## <a name="assumptions"></a>Założenia
 
--   Usługa Intune została już oceniona w środowisku weryfikacji koncepcji i zamierzasz jej używać jako rozwiązania MDM w Twojej organizacji.
+- Usługa Intune została już oceniona w środowisku weryfikacji koncepcji i zamierzasz jej używać jako rozwiązania MDM w Twojej organizacji.
 
--   Znasz już usługę Intune i jej funkcje.
+- Znasz już usługę Intune i jej funkcje.
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
 Ważne jest, aby mieć świadomość, że nowe wdrożenie usługi Intune może się różnić od starego wdrożenia funkcji MDM. W przeciwieństwie do tradycyjnych usług MDM działanie usługi Intune skupia się na kontroli dostępu opartej na tożsamościach. Oznacza to, że do kontrolowania dostępu do danych firmowych z urządzeń przenośnych spoza obwodu sieci organizacji nie jest wymagane sieciowe urządzenie proxy. Firma Microsoft oferuje rozwiązania do zabezpieczania usług danych w samej chmurze. Jest to pakiet ściśle zintegrowanych usług w chmurze, zbiorczo określany jako rozwiązanie Enterprise Client + Security.
 
--   Przejrzyj [typowe sposoby korzystania z usługi Intune](common-scenarios.md).
+- Przejrzyj [typowe sposoby korzystania z usługi Intune](common-scenarios.md).
 
 ## <a name="next-steps"></a>Następne kroki
 

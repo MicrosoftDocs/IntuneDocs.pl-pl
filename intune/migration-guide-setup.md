@@ -15,12 +15,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 233b093ba9c062618740fd8f14c5ea306647acdd
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 76f5188a866e744c034fd592f9b1dfcbc9061ffa
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050514"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549387"
 ---
 # <a name="basic-setup"></a>Konfiguracja podstawowa
 
@@ -32,15 +32,15 @@ Po dokonaniu oceny środowiska należy rozpocząć konfigurowanie usługi Micros
 
 Usługa Intune wymaga usługi Azure Active Directory (AAD) jako dostawcy tożsamości i grup użytkowników. Dowiedz się więcej na następujące tematy:
 
--  [Wymagania dotyczące tożsamości](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
+- [Wymagania dotyczące tożsamości](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
 
--   [Wymagania dotyczące synchronizacji katalogu](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements)
+- [Wymagania dotyczące synchronizacji katalogu](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements)
 
--   [Uwierzytelnianie wieloskładnikowe](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks)
+- [Uwierzytelnianie wieloskładnikowe](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks)
 
--   [Planowanie grup użytkowników i urządzeń](users-add.md)
+- [Planowanie grup użytkowników i urządzeń](users-add.md)
 
--   [Sposoby tworzenia grup użytkowników i urządzeń](groups-get-started.md)
+- [Sposoby tworzenia grup użytkowników i urządzeń](groups-get-started.md)
 
 Jeśli Twoja organizacja używa już usługi Office 365, usługa Intune musi używać tego samego środowiska usługi Azure Active Directory.
 
@@ -48,9 +48,9 @@ Jeśli Twoja organizacja używa już usługi Office 365, usługa Intune musi uż
 
 Jeśli w usłudze Intune planowane jest użycie uwierzytelniania opartego na certyfikatach wraz z profilami sieci VPN, sieci Wi-Fi lub poczty e-mail, należy upewnić się, że istnieje obsługiwana [infrastruktura PKI](certificates-configure.md), za pomocą której można tworzyć i wdrażać profile certyfikatów. Dowiedz się więcej o konfigurowaniu certyfikatów w usłudze Intune:
 
--   [Jak skonfigurować infrastrukturę certyfikatów dla profilu SCEP](/intune/certificates-scep-configure)
+- [Jak skonfigurować infrastrukturę certyfikatów dla profilu SCEP](/intune/certificates-scep-configure)
 
--   [Jak skonfigurować infrastrukturę certyfikatów dla profilu PFX](/intune/certficates-pfx-configure).
+- [Jak skonfigurować infrastrukturę certyfikatów dla profilu PFX](/intune/certficates-pfx-configure).
 
 
 ## <a name="task-list-for-an-intune-setup"></a>Lista zadań konfiguracji usługi Intune
@@ -59,17 +59,17 @@ Jeśli w usłudze Intune planowane jest użycie uwierzytelniania opartego na cer
 
 Aby można było przeprowadzić migrację do usługi Intune, należy dysponować subskrypcją usługi Intune.
 
--   Na [tej stronie](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0) można znaleźć instrukcje dotyczące poniższych zagadnień:
+- Na [tej stronie](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0) można znaleźć instrukcje dotyczące poniższych zagadnień:
 
-    -   Tworzenie nowej subskrypcji usługi Intune połączonej z nową dzierżawą usługi AAD.
+    - Tworzenie nowej subskrypcji usługi Intune połączonej z nową dzierżawą usługi AAD.
 
-    -   Łączenie subskrypcji usługi Intune przez zalogowanie się do istniejącej dzierżawy usługi AAD.
+    - Łączenie subskrypcji usługi Intune przez zalogowanie się do istniejącej dzierżawy usługi AAD.
 
 ### <a name="task-2-assign-intune-user-licenses"></a>Zadanie 2. Przypisanie licencji użytkowników usługi Intune
 
--   Dowiedz się, [jak przypisać licencje użytkowników usługi Intune](licenses-assign.md).
+- Dowiedz się, [jak przypisać licencje użytkowników usługi Intune](licenses-assign.md).
 
--   Jeśli masz nową dzierżawę usługi Azure Active Directory, dowiedz się, [jak utworzyć nowych użytkowników lub zsynchronizować użytkowników z lokalnej usługi Active Directory (AD)](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect).
+- Jeśli masz nową dzierżawę usługi Azure Active Directory, dowiedz się, [jak utworzyć nowych użytkowników lub zsynchronizować użytkowników z lokalnej usługi Active Directory (AD)](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect).
 
 ### <a name="task-3-set-your-mdm-authority-to-intune"></a>Zadanie 3. Ustawianie usługi Intune jako urzędu rozwiązania MDM
 

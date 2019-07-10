@@ -16,12 +16,12 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2820007f167b2f79b8dd98ca31d7e50968ac1969
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 7aaeb94aad7e31c3346b088239024c14f9e190da
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046053"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549352"
 ---
 # <a name="intune-testing-and-validation"></a>Testowanie i sprawdzanie poprawności usługi Intune
 
@@ -33,17 +33,17 @@ Zalecamy uwzględnienie w fazie testowania pracowników wsparcia/pomocy technicz
 
 Zalecamy udokumentowanie następujących informacji:
 
--   **Kryteria testowania:** identyfikują testy porównawcze, względem których będą przeprowadzane pomiary.
+- **Kryteria testowania:** identyfikują testy porównawcze, względem których będą przeprowadzane pomiary.
 
--   **Składniki projektu:** muszą istnieć w co najmniej jednym kryterium testowania.
+- **Składniki projektu:** muszą istnieć w co najmniej jednym kryterium testowania.
 
 Jeśli składnika projektu nie ma w żadnym kryterium testowania zgodnym z wymaganiem lub scenariuszem, zdecyduj, czy składnik projektu jest wymagany. Dodatkowo upewnij się, że masz następujące elementy:
 
--   **Konta:** konta testowe z licencjami pakietu EMS i usługi Office 365, aby można było przetestować wszystkie scenariusze przypadków użycia.
+- **Konta:** konta testowe z licencjami pakietu EMS i usługi Office 365, aby można było przetestować wszystkie scenariusze przypadków użycia.
 
--   **Urządzenia:** urządzenia testowe, które mogą być czyszczone lub na których możliwe jest przywrócenie ustawień fabrycznych.
+- **Urządzenia:** urządzenia testowe, które mogą być czyszczone lub na których możliwe jest przywrócenie ustawień fabrycznych.
 
--   **Składniki integracji:** wszystkie składniki integracji (łączniki certyfikatów i łącznik usługi Intune dla lokalnego programu Exchange) należy zainstalować i skonfigurować w razie potrzeby.
+- **Składniki integracji:** wszystkie składniki integracji (łączniki certyfikatów i łącznik usługi Intune dla lokalnego programu Exchange) należy zainstalować i skonfigurować w razie potrzeby.
 
 Aby przezwyciężyć nieprzewidziane trudności, konieczne może być wprowadzenie zmian w projekcie. Dodatkowo wszystkie zmiany projektu powinny być w pełni udokumentowane wraz z podaniem przyczyn wprowadzenia poszczególnych zmian. Oto przykład zmiany:
 
@@ -51,9 +51,9 @@ Aby przezwyciężyć nieprzewidziane trudności, konieczne może być wprowadzen
 
 Podczas testowania i walidacji mogą pojawić się wyzwania lub problemy wymagające zastosowania pomocy technicznej lub wyspecjalizowanych procedur rozwiązywania problemów. Zalecamy korzystanie z pomocy za pośrednictwem kanałów pomocy technicznej firmy Microsoft.
 
--   [Dowiedz się, jak uzyskać pomoc techniczną dla usługi Intune](get-support.md)
+- [Dowiedz się, jak uzyskać pomoc techniczną dla usługi Intune](get-support.md)
 
--   [Kontakt z telefoniczną asystowaną pomocą techniczną dla usługi Microsoft Intune](get-support.md)
+- [Kontakt z telefoniczną asystowaną pomocą techniczną dla usługi Microsoft Intune](get-support.md)
 
 ## <a name="functional-validation-testing"></a>Testowanie poprawności funkcjonalnej
 
