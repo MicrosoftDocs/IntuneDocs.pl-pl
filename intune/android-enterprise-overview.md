@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f59ff42f7707ace92442bf37ddac9679e36448f
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 1649c6256e4df61b538e2adee87512617b677bb4
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045889"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67547491"
 ---
 # <a name="manage-android-work-profile-devices-with-intune"></a>Zarządzanie urządzeniami z profilem służbowym systemu Android za pomocą usługi Intune
 
@@ -68,9 +68,9 @@ Stosowane zasady ochrony aplikacji są w pełni obsługiwane w profilu służbow
 
 Obsługa sieci VPN działa podobnie do profilów sieci VPN systemu Android. Na potrzeby zarządzania rozwiązaniem Android Enterprise dostępni są ci sami dostawcy sieci VPN oraz takie same podstawowe opcje konfiguracji z dwiema różnicami:
 
--  **Połączenia VPN ograniczone do profilu służbowego** — połączenia w sieci VPN są ograniczone tylko do aplikacji wdrożonych w profilu służbowym. Z połączenia VPN mogą korzystać tylko aplikacje zarządzane przez rozwiązanie Android Enterprise. Aplikacje osobiste zainstalowane na urządzeniu nie mogą używać zarządzanego połączenia VPN. Aby uzyskać więcej informacji, zobacz [Ustawienia sieci VPN dla rozwiązania Android Enterprise](vpn-settings-android.md#android-enterprise-vpn-settings).
+- **Połączenia VPN ograniczone do profilu służbowego** — połączenia w sieci VPN są ograniczone tylko do aplikacji wdrożonych w profilu służbowym. Z połączenia VPN mogą korzystać tylko aplikacje zarządzane przez rozwiązanie Android Enterprise. Aplikacje osobiste zainstalowane na urządzeniu nie mogą używać zarządzanego połączenia VPN. Aby uzyskać więcej informacji, zobacz [Ustawienia sieci VPN dla rozwiązania Android Enterprise](vpn-settings-android.md#android-enterprise-vpn-settings).
 
--  **Sieć VPN specyficzna dla aplikacji** — sieć VPN specyficzną dla aplikacji można skonfigurować w usłudze Intune, jeśli dostawca sieci VPN zapewnia obsługę następujących funkcji:
+- **Sieć VPN specyficzna dla aplikacji** — sieć VPN specyficzną dla aplikacji można skonfigurować w usłudze Intune, jeśli dostawca sieci VPN zapewnia obsługę następujących funkcji:
     - Konfiguracja sieci VPN specyficznej dla aplikacji.
     - Możliwość skonfigurowania sieci VPN dla aplikacji za pomocą profilu konfiguracji aplikacji rozwiązania Android Enterprise.
     Aby uzyskać więcej informacji, zobacz [Korzystanie z niestandardowego profilu usługi Microsoft Intune w celu tworzenia profilu sieci VPN dla aplikacji dla urządzeń z systemem Android](android-pulse-secure-per-app-vpn.md).
@@ -79,9 +79,9 @@ Obsługa sieci VPN działa podobnie do profilów sieci VPN systemu Android. Na p
 
 Opcje konfiguracji profilów certyfikatów, które są dostępne w funkcji zarządzania systemem Android, są również dostępne dla urządzeń z profilem służbowym systemu Android Enterprise. Rozwiązanie Android Enterprise umożliwia korzystanie z rozszerzonych interfejsów API zarządzania certyfikatami. Rozszerzone zarządzanie certyfikatami pozwala korzystać z następujących funkcji:
 
--  Zapewnia dyskretne i bezproblemowe wdrożenie certyfikatu z perspektywy użytkownika.
--  Zapewnia usunięcie wdrożonych certyfikatów w przypadku wycofania urządzenia z usługi Intune i usunięcia profilu służbowego.
--  Usprawnia obsługę komunikatów, co pozwala poinformować użytkowników o wdrożeniu certyfikatu i skonfigurowaniu go przez dział IT za pomocą usługi zarządzania.
+- Zapewnia dyskretne i bezproblemowe wdrożenie certyfikatu z perspektywy użytkownika.
+- Zapewnia usunięcie wdrożonych certyfikatów w przypadku wycofania urządzenia z usługi Intune i usunięcia profilu służbowego.
+- Usprawnia obsługę komunikatów, co pozwala poinformować użytkowników o wdrożeniu certyfikatu i skonfigurowaniu go przez dział IT za pomocą usługi zarządzania.
 
 Aby uzyskać więcej informacji, zobacz [Konfigurowanie profilu certyfikatu dla urządzeń w usłudze Microsoft Intune](certificates-configure.md).
 

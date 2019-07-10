@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dbebcb495298f3e8b17007d1fb00f0362ead4ab8
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 8bcc9aa527ed27ef35db901117ceb8f4c8d10c97
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67530681"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546881"
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Ponowne przypisywanie zasad dostępu warunkowego z klasycznego portalu usługi Intune do witryny Azure Portal
 
@@ -51,13 +51,13 @@ Jeśli wszystko jest już gotowe do przejścia na witrynę Azure Portal, wykonaj
 
 ### <a name="to-verify-your-device-based-conditional-access-policies-in-the-intune-classic-portal"></a>Aby zweryfikować w portalu klasycznym usługi Intune zasady dostępu warunkowego opartego na urządzeniach
 
-1.  Przejdź do [portalu klasycznego usługi Intune](https://manage.microsoft.com) i zaloguj się przy użyciu swoich poświadczeń.
+1. Przejdź do [portalu klasycznego usługi Intune](https://manage.microsoft.com) i zaloguj się przy użyciu swoich poświadczeń.
 
-2.  Z menu po lewej stronie wybierz pozycję **Zasady**.
+2. Z menu po lewej stronie wybierz pozycję **Zasady**.
 
-3.  Wybierz pozycję **Dostęp warunkowy**, a następnie wybierz usługi w chmurze firmy Microsoft (na przykład Exchange Online lub SharePoint Online), dla których zostały utworzone zasady dostępu warunkowego.
+3. Wybierz pozycję **Dostęp warunkowy**, a następnie wybierz usługi w chmurze firmy Microsoft (na przykład Exchange Online lub SharePoint Online), dla których zostały utworzone zasady dostępu warunkowego.
 
-4.  Zanotuj ustawienia dostępu warunkowego i użyj ich podczas tworzenia tych samych zasad dostępu warunkowego w witrynie Azure Portal.
+4. Zanotuj ustawienia dostępu warunkowego i użyj ich podczas tworzenia tych samych zasad dostępu warunkowego w witrynie Azure Portal.
 
 ### <a name="app-and-device-based-conditional-access-policies-working-together"></a>Współdziałanie zasad dostępu warunkowego opartego na aplikacji i na urządzeniach
 
@@ -194,13 +194,13 @@ Po ponownym przypisaniu zasad dostępu warunkowego w witrynie Azure Portal nale�
 
 ### <a name="to-disable-the-conditional-access-policies"></a>Aby wyłączyć zasady dostępu warunkowego
 
-1.  Przejdź do [portalu klasycznego usługi Intune](https://manage.microsoft.com) i zaloguj się przy użyciu swoich poświadczeń.
+1. Przejdź do [portalu klasycznego usługi Intune](https://manage.microsoft.com) i zaloguj się przy użyciu swoich poświadczeń.
 
-2.  Z menu po lewej stronie wybierz pozycję **Zasady**.
+2. Z menu po lewej stronie wybierz pozycję **Zasady**.
 
-3.  Wybierz pozycję **Dostęp warunkowy**, a następnie wybierz usługi w chmurze firmy Microsoft (na przykład Exchange Online lub SharePoint Online), dla których zostały utworzone zasady dostępu warunkowego.
+3. Wybierz pozycję **Dostęp warunkowy**, a następnie wybierz usługi w chmurze firmy Microsoft (na przykład Exchange Online lub SharePoint Online), dla których zostały utworzone zasady dostępu warunkowego.
 
-4.  Usuń zaznaczenie opcji **Włącz zasady dostępu warunkowego**, a następnie kliknij pozycję **Zapisz**.
+4. Usuń zaznaczenie opcji **Włącz zasady dostępu warunkowego**, a następnie kliknij pozycję **Zapisz**.
 
     ![Obraz przedstawiający wyłączanie zasad dostępu warunkowego w portalu klasycznym usługi Intune](./media/reassign-ca-18.png)
 

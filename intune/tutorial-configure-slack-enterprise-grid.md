@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da6c9b544d86c9c4b09c061c0f1500ed8612a047
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: e7ff4e1fd9f055268a461d1a81b8a2e31fe3d32b
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67530708"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548992"
 ---
 # <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>Samouczek: konfigurowanie usługi Slack do używania usługi Intune na potrzeby konfiguracji rozwiązania EMM i aplikacji
 
@@ -62,8 +62,8 @@ Dodaj aplikację Slack for EMM jako zarządzaną aplikację systemu iOS w usłud
 6. Na pasku wyszukiwania wprowadź frazę „Slack for EMM”, a następnie wybierz właśnie dodaną aplikację.
 7. Z obszaru zarządzania wybierz pozycję **Przypisania**.
 8. Wybierz pozycję **Dodaj grupę**. W zależności od tego, na kogo ma wpływać włączenie rozwiązania EMM dla usługi Slack, w obszarze **Typ przypisania** możesz wybrać pozycję:
-    -  **Dostępne dla zarejestrowanych urządzeń** w przypadku wybrania opcji „Wszyscy członkowie (w tym goście)” LUB
-    -  **Dostępne z rejestracją lub bez nie** w przypadku wybrania opcji „Wszyscy członkowie (z wyjątkiem gości)" lub „Opcjonalnie”.
+    - **Dostępne dla zarejestrowanych urządzeń** w przypadku wybrania opcji „Wszyscy członkowie (w tym goście)” LUB
+    - **Dostępne z rejestracją lub bez nie** w przypadku wybrania opcji „Wszyscy członkowie (z wyjątkiem gości)" lub „Opcjonalnie”.
 9. Wybierz pozycję **Objęte grupy** i w obszarze Udostępnij tę aplikację wszystkim użytkownikom wybierz pozycję **Tak**.
 10. Kliknij przycisk **OK**, a następnie kliknij ponownie przycisk **OK**.
 11. Kliknij polecenie **Zapisz**.
@@ -77,7 +77,7 @@ Dodaj zasady konfiguracji aplikacji Slack for EMM dla systemu iOS. Zasady konfig
 5. Wybierz pozycję **Skojarzona aplikacja**.
 6. Na pasku wyszukiwania wprowadź frazę „Slack for EMM” i wybierz aplikację.
 7. Kliknij przycisk **OK**, a następnie wybierz pozycję **Ustawienia konfiguracji**. 
-    -   Aby uzyskać informacje na temat kluczy konfiguracji i ich wartości, zapoznaj się z dokumentacją na karcie „Technical” (Informacje techniczne) [strony internetowej AppConfig usługi Slack](https://www.appconfig.org/company/slack/).
+    - Aby uzyskać informacje na temat kluczy konfiguracji i ich wartości, zapoznaj się z dokumentacją na karcie „Technical” (Informacje techniczne) [strony internetowej AppConfig usługi Slack](https://www.appconfig.org/company/slack/).
 8. Wybierz przycisk **OK**, a następnie pozycję **Dodaj**.
 9. Na pasku wyszukiwania wprowadź frazę „Test zasad konfiguracji aplikacji Slack”, a następnie wybierz właśnie dodane zasady.
 10. Z obszaru zarządzania wybierz pozycję **Przypisania**.
@@ -92,13 +92,13 @@ Skonfiguruj zasady zgodności urządzeń z systemem iOS w usłudze Intune w celu
 4. W polu Platforma wybierz pozycję **iOS**.
 5. Wybierz pozycję **Kondycja urządzenia**. Obok pozycji Urządzenia ze zdjętymi zabezpieczeniami systemu wybierz pozycję **Blokuj**, a następnie wybierz przycisk **OK**.
 6. Wybierz pozycję **Zabezpieczenia systemu** i wprowadź ustawienia w obszarze Hasło. Na potrzeby tego samouczka wybierz następujące zalecane ustawienia:
-    -   W obszarze Wymagaj hasła do odblokowania urządzeń przenośnych wybierz pozycję **Wymagaj**.
-    -   W obszarze Proste hasła wybierz pozycję **Blokuj**.
-    -   W obszarze Minimalna długość hasła wprowadź wartość 4.
-    -   W obszarze Wymagany typ hasła wybierz pozycję **Alfanumeryczne**.
-    -   W obszarze Maksymalna liczba minut po zablokowaniu ekranu, po których jest wymagane wprowadzenie hasła wybierz pozycję **Natychmiast**.
-    -   W obszarze Wygaśnięcie hasła (dni) wprowadź wartość 41.
-    -   W obszarze Liczba poprzednich haseł, których nie można użyć ponownie wprowadź wartość 5.
+    - W obszarze Wymagaj hasła do odblokowania urządzeń przenośnych wybierz pozycję **Wymagaj**.
+    - W obszarze Proste hasła wybierz pozycję **Blokuj**.
+    - W obszarze Minimalna długość hasła wprowadź wartość 4.
+    - W obszarze Wymagany typ hasła wybierz pozycję **Alfanumeryczne**.
+    - W obszarze Maksymalna liczba minut po zablokowaniu ekranu, po których jest wymagane wprowadzenie hasła wybierz pozycję **Natychmiast**.
+    - W obszarze Wygaśnięcie hasła (dni) wprowadź wartość 41.
+    - W obszarze Liczba poprzednich haseł, których nie można użyć ponownie wprowadź wartość 5.
 7. Kliknij przycisk **OK**, a następnie ponownie wybierz przycisk **OK**.
 8. Kliknij przycisk **Utwórz**.
 
@@ -114,8 +114,8 @@ Dodaj aplikację Slack jako aplikację z zarządzanego sklepu Google Play w usł
 5. Na pasku wyszukiwania wprowadź wyraz „Slack”, a następnie wybierz właśnie dodaną aplikację.
 6. Z obszaru zarządzania wybierz pozycję **Przypisania**.
 7. Wybierz pozycję **Dodaj grupę**. W zależności od tego, na kogo ma wpływać włączenie rozwiązania EMM dla usługi Slack, w obszarze **Typ przypisania** możesz wybrać pozycję:
-    -   **Dostępne dla zarejestrowanych urządzeń** w przypadku wybrania opcji „Wszyscy członkowie (w tym goście)” LUB
-    -   **Dostępne z rejestracją lub bez nie** w przypadku wybrania opcji „Wszyscy członkowie (z wyjątkiem gości)" lub „Opcjonalnie”.
+    - **Dostępne dla zarejestrowanych urządzeń** w przypadku wybrania opcji „Wszyscy członkowie (w tym goście)” LUB
+    - **Dostępne z rejestracją lub bez nie** w przypadku wybrania opcji „Wszyscy członkowie (z wyjątkiem gości)" lub „Opcjonalnie”.
 8. Wybierz pozycję Objęte grupy i w obszarze Udostępnij tę aplikację wszystkim użytkownikom wybierz pozycję **Tak**.
 9. Kliknij przycisk **OK**, a następnie kliknij ponownie przycisk **OK**.
 10. Kliknij polecenie **Zapisz**.
@@ -129,7 +129,7 @@ Dodaj zasady konfiguracji aplikacji dla aplikacji Slack. Zasady konfiguracji apl
 5. Wybierz pozycję **Skojarzona aplikacja**.
 6. Na pasku wyszukiwania wprowadź wyraz „Slack” i wybierz aplikację.
 7. Wybierz przycisk **OK**, a następnie wybierz pozycję **Ustawienia konfiguracji**.
-    -   Aby uzyskać informacje na temat kluczy konfiguracji i ich wartości, zapoznaj się z dokumentacją na karcie „Technical” (Informacje techniczne) [strony internetowej AppConfig usługi Slack](https://www.appconfig.org/company/slack/).
+    - Aby uzyskać informacje na temat kluczy konfiguracji i ich wartości, zapoznaj się z dokumentacją na karcie „Technical” (Informacje techniczne) [strony internetowej AppConfig usługi Slack](https://www.appconfig.org/company/slack/).
 8. Kliknij przycisk **OK**, a następnie wybierz pozycję **Dodaj**.
 9. Na pasku wyszukiwania wprowadź frazę „Test zasad konfiguracji aplikacji Slack”, a następnie wybierz właśnie dodane zasady.
 10. Z obszaru zarządzania wybierz pozycję **Przypisania**.
@@ -145,12 +145,12 @@ Skonfiguruj zasady zgodności urządzeń z systemem iOS w usłudze Intune w celu
 5. W obszarze Typ profilu wybierz pozycję **Profil służbowy**.
 6. Wybierz pozycję **Kondycja urządzenia**. Obok pozycji Urządzenia z odblokowanym dostępem wybierz pozycję **Blokuj**, a następnie wybierz przycisk **OK**.
 7. Wybierz pozycję **Zabezpieczenia systemu** i wprowadź **ustawienia w obszarze Hasło**. Na potrzeby tego samouczka wybierz następujące zalecane ustawienia:
-    -   W obszarze Wymagaj hasła do odblokowania urządzeń przenośnych wybierz pozycję **Wymagaj**.
-    -   W obszarze Wymagany typ hasła wybierz pozycję **Co najmniej numeryczne**.
-    -   W obszarze Minimalna długość hasła wprowadź wartość 4.
-    -   W obszarze Maksymalna liczba minut po zablokowaniu ekranu, po których jest wymagane wprowadzenie hasła wybierz pozycję **15 minut**.
-    -   W obszarze Wygaśnięcie hasła (dni) wprowadź wartość 41.
-    -   W obszarze Liczba poprzednich haseł, których nie można użyć ponownie wprowadź wartość 5.
+    - W obszarze Wymagaj hasła do odblokowania urządzeń przenośnych wybierz pozycję **Wymagaj**.
+    - W obszarze Wymagany typ hasła wybierz pozycję **Co najmniej numeryczne**.
+    - W obszarze Minimalna długość hasła wprowadź wartość 4.
+    - W obszarze Maksymalna liczba minut po zablokowaniu ekranu, po których jest wymagane wprowadzenie hasła wybierz pozycję **15 minut**.
+    - W obszarze Wygaśnięcie hasła (dni) wprowadź wartość 41.
+    - W obszarze Liczba poprzednich haseł, których nie można użyć ponownie wprowadź wartość 5.
 8. Kliknij przycisk **OK**, a następnie kliknij ponownie przycisk **OK**.
 9. Kliknij przycisk **Utwórz**.
 

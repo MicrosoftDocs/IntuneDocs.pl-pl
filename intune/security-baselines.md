@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93e470175829008b72b5b8991188f3c92e38a567
-ms.sourcegitcommit: 690e680e854b7d707421c5e06f134e493f4f4194
+ms.openlocfilehash: 3e4e1040913daef5418f0b4fa1e56f6ef827dd67
+ms.sourcegitcommit: 63b55e81122e5c15893302b109ae137c30855b55
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67416832"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67713272"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Konfigurowanie urządzeń z systemem Windows 10 w usłudze Intune przy użyciu punktów odniesienia zabezpieczeń
 
@@ -155,7 +155,7 @@ Podczas zapisywania, po zakończeniu konwersji, punkt odniesienia jest od razu w
 3. W okienku **Zmień wersję** użyj listy rozwijanej **Select a security baseline to update to** (Wybierz punkt odniesienia zabezpieczeń, do którego chcesz aktualizować) i wybierz wystąpienie wersji, którego chcesz użyć.  
 
    ![wybierz wersję](./media/security-baselines/select-instance.png)  
- 
+   
 4. Wybierz pozycję **Review update** (Przejrzyj aktualizację), aby pobrać plik CSV, który pokazuje różnice między bieżącą wersją wystąpienia profilu i nową, wybraną przez Ciebie wersją. Przejrzyj ten plik, aby dowiedzieć się, które ustawienia zostaną dodane, które usunięte, oraz jakie są wartości domyślne dla tych ustawień w zaktualizowanym profilu.  
 
    Gdy wszystko będzie gotowe, przejdź do następnego kroku.  

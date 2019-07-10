@@ -17,24 +17,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 64349d2e4c681bf0fac8cf231085cc63e42ffc62
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: c654b8e05cabf132324e8dafe70e5991a67bd516
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041461"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548328"
 ---
 # <a name="develop-a-support-plan"></a>Opracowywanie planu pomocy technicznej
 
 Opracowanie planu pomocy technicznej usługi Intune może być pomocne w efektywniejszym identyfikowaniu problemów związanych z usługą Intune i ich rozwiązywaniu. To z kolei usprawnia ogólny sposób obsługi środowiska Intune przez użytkowników. Poniżej zamieszczono kilka pytań, które należy wziąć pod uwagę podczas opracowywania planu pomocy technicznej usługi Intune:
 
--   Które zespoły będą odpowiedzialne za świadczenie pomocy technicznej usługi Intune?
+- Które zespoły będą odpowiedzialne za świadczenie pomocy technicznej usługi Intune?
 
--   Jaki proces będzie wykorzystywany na potrzeby świadczenia pomocy technicznej usługi Intune?
+- Jaki proces będzie wykorzystywany na potrzeby świadczenia pomocy technicznej usługi Intune?
 
--   W jaki sposób planuje się przeprowadzanie szkoleń dotyczących pomocy technicznej usługi Intune?
+- W jaki sposób planuje się przeprowadzanie szkoleń dotyczących pomocy technicznej usługi Intune?
 
--   Jakie są możliwości wczesnego zaangażowania zespołu pomocy technicznej w proces wdrażania usługi Intune?
+- Jakie są możliwości wczesnego zaangażowania zespołu pomocy technicznej w proces wdrażania usługi Intune?
 
 Opiszmy dokładniej każdy z tych obszarów.
 
@@ -50,23 +50,23 @@ Dowiedz się więcej o [pomocy technicznej usługi Intune](/intune/get-support).
 
 W przypadku początkowych faz wprowadzania produkcyjnego do obsługi rozmów pomostowych lub rozmów przez Skype'a mogą być wykorzystywane wszystkie trzy warstwy. Poniżej przedstawiono przykładowy sposób implementacji przepływu pracy wsparcia informatycznego lub pomocy technicznej w organizacji:
 
-1.  Użytkownik końcowy kontaktuje się z warstwą 1 wsparcia informatycznego lub pomocy technicznej w sprawie problemu dotyczącego rejestracji.
+1. Użytkownik końcowy kontaktuje się z warstwą 1 wsparcia informatycznego lub pomocy technicznej w sprawie problemu dotyczącego rejestracji.
 
-2.  Warstwa 1 wsparcia informatycznego lub pomocy technicznej nie potrafi określić głównej przyczyny i przekazuje problem do warstwy 2.
+2. Warstwa 1 wsparcia informatycznego lub pomocy technicznej nie potrafi określić głównej przyczyny i przekazuje problem do warstwy 2.
 
-3.  Warstwa 2 wsparcia informatycznego lub pomocy technicznej bada problem, ale nie może go rozwiązać i przekazuje go do warstwy 3 razem z dodatkowymi informacjami uzyskanymi podczas badania.
+3. Warstwa 2 wsparcia informatycznego lub pomocy technicznej bada problem, ale nie może go rozwiązać i przekazuje go do warstwy 3 razem z dodatkowymi informacjami uzyskanymi podczas badania.
 
-4.  Warstwa 3 wsparcia informatycznego lub pomocy technicznej prowadzi dalsze badania, określa główną przyczynę i przekazuje rozwiązanie do warstw 2 i 1.
+4. Warstwa 3 wsparcia informatycznego lub pomocy technicznej prowadzi dalsze badania, określa główną przyczynę i przekazuje rozwiązanie do warstw 2 i 1.
 
-5.  Warstwa 1 wsparcia informatycznego/pomocy technicznej kontaktuje się następnie z klientem i rozwiązuje jego problem.
+5. Warstwa 1 wsparcia informatycznego/pomocy technicznej kontaktuje się następnie z klientem i rozwiązuje jego problem.
 
 Takie podejście (szczególnie we wczesnych etapach wprowadzania usługi Intune) przynosi wiele korzyści, na przykład:
 
--   Wspomaganie podczas poznawania technologii i zwiększania obciążenia.
+- Wspomaganie podczas poznawania technologii i zwiększania obciążenia.
 
--   Szybkie identyfikowanie problemów i ich rozwiązywanie.
+- Szybkie identyfikowanie problemów i ich rozwiązywanie.
 
--   Ulepszanie ogólnego środowiska użytkownika.
+- Ulepszanie ogólnego środowiska użytkownika.
 
 ## <a name="how-you-plan-to-provide-intune-support-training"></a>W jaki sposób planuje się przeprowadzanie szkoleń dotyczących pomocy technicznej usługi Intune?
 
@@ -74,15 +74,15 @@ Ważną rzeczą jest zapewnienie szkolenia technicznego dotyczącego usługi Int
 
 Poniżej zamieszczono przykładowy plan szkolenia pracowników pomocy technicznej usługi Intune.
 
--   Przegląd planu pomocy technicznej usługi Intune
+- Przegląd planu pomocy technicznej usługi Intune
 
--   Omówienie usługi Intune
+- Omówienie usługi Intune
 
--   Rozwiązywanie typowych problemów
+- Rozwiązywanie typowych problemów
 
--   Narzędzia i zasoby
+- Narzędzia i zasoby
 
--   Pytania i odpowiedzi
+- Pytania i odpowiedzi
 
 [Dokumentacja usługi Intune](https://docs.microsoft.com/intune/) zawiera omówienie usługi Intune, szczegółowe opisy funkcji i pewne informacje na temat rozwiązywania problemów. [Forum usługi Intune](https://social.technet.microsoft.com/Forums/home) oferuje zasoby społecznościowe obejmujące pytania i tematy nieuwzględnione w dokumentacji usługi Intune.
 

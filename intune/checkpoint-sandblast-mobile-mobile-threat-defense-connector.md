@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ef0c4f5fd3f8c92d1d78ed37946663a127df440f
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: f9438c3c566dc62acfa7567428ebe3a6a6be4777
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67530694"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572577"
 ---
 # <a name="check-point-sandblast-mobile-threat-defense-connector-with-intune"></a>Łącznik rozwiązania Check Point SandBlast Mobile Threat Defense z usługą Intune
 
@@ -45,11 +45,11 @@ Poniżej przedstawiono kilka typowych scenariuszy:
 
 Po wykryciu na urządzeniach złośliwego oprogramowania możesz zablokować na nich następujące funkcje do czasu usunięcia zagrożenia:
 
--   Łączenie z firmową pocztą e-mail
+- Łączenie z firmową pocztą e-mail
 
--   Synchronizowanie plików firmowych za pomocą aplikacji OneDrive do pracy
+- Synchronizowanie plików firmowych za pomocą aplikacji OneDrive do pracy
 
--   Uzyskiwanie dostępu do aplikacji firmowych
+- Uzyskiwanie dostępu do aplikacji firmowych
 
 **Blokowanie po wykryciu złośliwych aplikacji:**
 
@@ -61,7 +61,7 @@ Po wykryciu na urządzeniach złośliwego oprogramowania możesz zablokować na 
 
 ### <a name="control-access-based-on-threat-to-network"></a>Kontrola dostępu oparta na zagrożeniu dla sieci
 
-Wykrywanie w sieci zagrożeń, takich jak ataki typu  **Man-in-the-middle** , i ochrona dostępu do sieci Wi-Fi na podstawie ryzyka dotyczącego urządzeń.
+Wykrywanie w sieci zagrożeń, takich jak ataki typu **Man-in-the-middle**, i ochrona dostępu do sieci Wi-Fi w oparciu o ryzyko dotyczące urządzenia.
 
 **Blokowanie dostępu do sieci za pośrednictwem sieci Wi-Fi:**
 
@@ -73,7 +73,7 @@ Wykrywanie w sieci zagrożeń, takich jak ataki typu  **Man-in-the-middle** , 
 
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Kontrola dostępu do usługi SharePoint Online oparta na zagrożeniu dla sieci
 
-Wykrywanie w sieci zagrożeń, takich jak ataki typu  **Man-in-the-middle** , i blokowanie synchronizacji plików firmowych na podstawie ryzyka dotyczącego urządzeń.
+Wykrywanie w sieci zagrożeń, takich jak ataki typu **Man-in-the-middle**, i blokowanie synchronizacji plików firmowych w oparciu o ryzyko dotyczące urządzenia.
 
 **Blokowanie usługi SharePoint Online po wykryciu zagrożeń sieciowych:**
 
@@ -85,18 +85,18 @@ Wykrywanie w sieci zagrożeń, takich jak ataki typu  **Man-in-the-middle** , 
 
 ## <a name="supported-platforms"></a>Obsługiwane platformy
 
--   **Android 4.1 i nowsze**
+- **Android 4.1 i nowsze**
 
--   **iOS 8 i nowsze**
+- **iOS 8 i nowsze**
 
 ## <a name="pre-requisites"></a>Wymagania wstępne
 
--   Azure Active Directory Premium
+- Azure Active Directory Premium
 
--   Subskrypcja usługi Microsoft Intune
+- Subskrypcja usługi Microsoft Intune
 
--   Subskrypcja usługi Check Point SandBlast Mobile Threat Defense
-    -   Zobacz [witrynę internetową Check Point SandBlast](https://www.checkpoint.com/), aby uzyskać więcej informacji.
+- Subskrypcja usługi Check Point SandBlast Mobile Threat Defense
+    - Zobacz [witrynę internetową Check Point SandBlast](https://www.checkpoint.com/), aby uzyskać więcej informacji.
 
 ## <a name="next-steps"></a>Następne kroki
 

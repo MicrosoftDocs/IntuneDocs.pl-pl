@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8134b9db0e478efa69391edeb570b39c91a41c9
-ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
+ms.openlocfilehash: 473de0ae24cb3ee2a9f7fbd84ef78e6c25ef6ce6
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67511774"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67547288"
 ---
 # <a name="better-mobile-threat-defense-connector-with-intune"></a>Łącznik Better Mobile Threat Defense z usługą Intune
 
@@ -41,11 +41,11 @@ Poniżej przedstawiono kilka typowych scenariuszy.
 
 Po wykryciu na urządzeniach złośliwego oprogramowania można zablokować na tych urządzeniach następujące akcje do czasu usunięcia zagrożenia:
 
--   Łączenie z firmową pocztą e-mail
+- Łączenie z firmową pocztą e-mail
 
--   Synchronizowanie plików firmowych za pomocą aplikacji OneDrive do pracy
+- Synchronizowanie plików firmowych za pomocą aplikacji OneDrive do pracy
 
--   Uzyskiwanie dostępu do aplikacji firmowych
+- Uzyskiwanie dostępu do aplikacji firmowych
 
 **Blokowanie po wykryciu złośliwych aplikacji:**
 
@@ -81,19 +81,19 @@ Wykrywanie zagrożeń dla sieci, takich jak ataki typu **Man-in-the-middle** i b
 
 ## <a name="supported-platforms"></a>Obsługiwane platformy
 
--   **Android 4.1 i nowsze**
+- **Android 4.1 i nowsze**
 
--   **System iOS 8.0 lub nowszy**
+- **System iOS 8.0 lub nowszy**
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
--   Azure Active Directory Premium
+- Azure Active Directory Premium
 
--   Subskrypcja usługi Microsoft Intune
+- Subskrypcja usługi Microsoft Intune
 
--   Subskrypcja usługi Better Mobile Threat Defense
+- Subskrypcja usługi Better Mobile Threat Defense
 
-    -   Aby uzyskać więcej informacji, zobacz [witrynę internetową usługi Better Mobile](https://www.better.mobi/).
+    - Aby uzyskać więcej informacji, zobacz [witrynę internetową usługi Better Mobile](https://www.better.mobi/).
 
 ## <a name="next-steps"></a>Następne kroki
 

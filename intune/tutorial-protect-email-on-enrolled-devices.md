@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a7ab0ecd2802e68dbac32b757e472a74e697da13
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 91c2ab71cb393bdf885c947c8f3cd93a5bb196c3
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67530745"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548040"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>Samouczek: Chronienie poczty e-mail usługi Exchange Online na urządzeniach zarządzanych
 Dowiedz się więcej na temat używania zasad zgodności urządzeń z dostępem warunkowym w celu zagwarantowania, że urządzenia z systemem iOS będą mogły uzyskiwać dostęp do poczty e-mail usługi Exchange Online tylko wtedy, gdy będą zarządzane przez usługę Intune i będą korzystać z zatwierdzonej aplikacji poczty e-mail. 
@@ -53,7 +53,7 @@ Skonfiguruj zasady zgodności urządzeń z systemem iOS w usłudze Intune w celu
 4. W polu **Platforma** wybierz pozycję **iOS**. 
 5. Wybierz kolejno pozycje **Ustawienia** > **Poczta e-mail**. 
      
-    1.  Obok pozycji **Wymagaj, aby urządzenia przenośne miały zarządzany profil poczty e-mail** wybierz pozycję **Wymagaj**.
+    1. Obok pozycji **Wymagaj, aby urządzenia przenośne miały zarządzany profil poczty e-mail** wybierz pozycję **Wymagaj**.
     2. Wybierz przycisk **OK**.
 
     ![Ustawianie zasad zgodności poczty e-mail do wymagania zarządzanego profilu poczty e-mail](media/tutorial-protect-email-on-enrolled-devices/ios-compliance-policy-email.png)
@@ -77,7 +77,7 @@ Skonfiguruj zasady zgodności urządzeń z systemem iOS w usłudze Intune w celu
 ## <a name="create-the-conditional-access-policy"></a>Tworzenie zasad dostępu warunkowego
 Teraz utworzymy zasady dostępu warunkowego, które wymagają zarejestrowania wszystkich platform urządzeń w Intune oraz ich zgodności z naszymi zasadami zgodności usługi Intune przed uzyskaniem dostępu do usługi Exchange Online. Będziemy również wymagać aplikacji Outlook na potrzeby dostępu do poczty e-mail. Zasady dostępu warunkowego można konfigurować w portalu usługi Azure AD lub w portalu usługi Intune. Ponieważ pracujemy już w portalu usługi Intune zasady także utworzymy w tym miejscu.
 1. W usłudze Intune wybierz kolejno pozycje **Dostęp warunkowy** > **Zasady** > **Nowe zasady**.
-1.  W polu **Nazwa** wprowadź frazę **Testowe zasady do obsługi poczty e-mail usługi Office 365**. 
+1. W polu **Nazwa** wprowadź frazę **Testowe zasady do obsługi poczty e-mail usługi Office 365**. 
 3. W obszarze **Przypisania** wybierz pozycję **Użytkownicy i grupy**. Na karcie **Dołączanie** wybierz pozycję **Wszyscy użytkownicy**, a następnie wybierz pozycję **Gotowe**.
 
 4. W obszarze **Przypisania** wybierz pozycję **Aplikacje w chmurze**. Ponieważ chcemy chronić pocztę e-mail usługi Office 365 Exchange Online, wybierzemy ją, wykonując następujące kroki:

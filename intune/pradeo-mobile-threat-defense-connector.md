@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: cde4d389-1770-4226-85a3-a2f3b3fb92a3
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 980138015cdbe063d6d4b05eb6dd8ab70be4b601
-ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
+ms.openlocfilehash: 2f0a4b9a957948c9bda0b0ad2d9829ff9560f217
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67512240"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548485"
 ---
 # <a name="pradeo-mobile-threat-defense-connector-with-intune"></a>Łącznik Pradeo Mobile Threat Defense z usługą Intune
 
@@ -41,11 +41,11 @@ Poniżej przedstawiono kilka typowych scenariuszy.
 
 Po wykryciu na urządzeniach złośliwego oprogramowania można zablokować na tych urządzeniach następujące akcje do czasu usunięcia zagrożenia:
 
--   Łączenie z firmową pocztą e-mail
+- Łączenie z firmową pocztą e-mail
 
--   Synchronizowanie plików firmowych za pomocą aplikacji OneDrive do pracy
+- Synchronizowanie plików firmowych za pomocą aplikacji OneDrive do pracy
 
--   Uzyskiwanie dostępu do aplikacji firmowych
+- Uzyskiwanie dostępu do aplikacji firmowych
 
 **Blokowanie po wykryciu złośliwych aplikacji:**
 
@@ -81,19 +81,19 @@ Wykrywanie zagrożeń dla sieci, takich jak ataki typu **Man-in-the-middle** i b
 
 ## <a name="supported-platforms"></a>Obsługiwane platformy
 
--   **System Android 4.0.3 i nowsze**
+- **System Android 4.0.3 i nowsze**
 
--   **System iOS 7 i nowsze**
+- **System iOS 7 i nowsze**
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
--   Azure Active Directory Premium
+- Azure Active Directory Premium
 
--   Subskrypcja usługi Microsoft Intune
+- Subskrypcja usługi Microsoft Intune
 
--   Subskrypcja usługi Pradeo Security for Mobile Threat Defense
+- Subskrypcja usługi Pradeo Security for Mobile Threat Defense
 
-    -   Aby uzyskać więcej informacji, zobacz [witrynę internetową Pradeo](https://www.pradeo.com/en-US/mobile-threat-protection).
+    - Aby uzyskać więcej informacji, zobacz [witrynę internetową Pradeo](https://www.pradeo.com/en-US/mobile-threat-protection).
 
 ## <a name="next-steps"></a>Następne kroki
 
