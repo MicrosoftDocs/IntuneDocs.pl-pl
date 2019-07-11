@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3cfe2aef93fb8b7c420ee6513945f11bee5bd0be
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 39b5581ae7dd2a93554c0371da3858f59d6e62b4
+ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67529710"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735449"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Autonomiczna usługa Intune — zarządzanie aplikacjami Win32
 
@@ -362,8 +362,8 @@ else
 #Exit with non-zero failure code
 exit 1
 }
-
 ```
+
 W powyższym poleceniu programu PowerShell zastąp ciąg `<path to binary file>` ścieżką do pliku aplikacji Win32. Przykładowa ścieżka będzie podobna do następującej:<br>
 `C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\ssms.exe`
 
