@@ -16,25 +16,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8fa5589f62900027b90659b8f570e7caa10b1cd8
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 30cdb6903caa7e1071a6781db13c761e64f8bd7a
+ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549058"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735770"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Ustawienia punktów odniesienia zabezpieczeń oprogramowania MDM dla usługi Intune  
 
-Wyświetl ustawienia punktu odniesienia zabezpieczeń zarządzania urządzeniami Przenośnymi, które są obsługiwane przez program Microsoft Intune dla urządzeń z systemem Windows 10 lub nowszym. Wartości domyślne ustawień w tej linii bazowej reprezentują to zalecana konfiguracja w przypadku urządzeń mających zastosowanie i może nie odpowiadać domyślne punktu odniesienia z innych wartości bazowych zabezpieczeń.  
+Wyświetl ustawienia linii bazowej zabezpieczeń MDM obsługiwane przez Microsoft Intune dla urządzeń z systemem Windows 10 lub nowszym. Wartości domyślne dla ustawień w tej linii bazowej reprezentują zalecaną konfigurację dla odpowiednich urządzeń i mogą nie być zgodne z wartościami domyślnymi linii bazowej z innych linii bazowych zabezpieczeń.  
 
-Najnowsza wersja linii bazowej jest **linii bazowej zabezpieczeń zarządzania urządzeniami Przenośnymi dla Spring 2019 Update (19 godz. 1)**  
+Najnowsza wersja linii bazowej to **linia bazowa zabezpieczeń MDM dla aktualizacji wiosenn 2019 (19H1)**  
 
-Aby dowiedzieć się, co się zmieniło w najnowszej wersji tego punktu odniesienia z poprzedniej wersji, zobacz [co zmieniono w nowym szablonie](#whats-changed-in-the-new-template).  
+Aby dowiedzieć się więcej o zmianach w najnowszej wersji tego planu bazowego z poprzedniej wersji, zobacz [co zmieniono w nowym szablonie](#whats-changed-in-the-new-template).  
 
 > [!NOTE]  
-> W czerwcu 2019 linii bazowej zabezpieczeń dla zarządzania urządzeniami Przenośnymi (wersja zapoznawcza) została zastąpiona wersji *linii bazowej zabezpieczeń zarządzania urządzeniami Przenośnymi dla Spring 2019 Update (19 godz. 1)* szablonu, który jest generaly dostępne (nie w wersji zapoznawczej). Profile, które zostały utworzone przed dostępności *linii bazowej zabezpieczeń zarządzania urządzeniami Przenośnymi dla Spring 2019 Update (19 godz. 1)* punktu odniesienia nie będzie aktualizowana w celu odzwierciedlenia ustawienia i wartości, które znajdują się w linii bazowej zabezpieczeń zarządzania urządzeniami Przenośnymi dla Spring 2019 Update (19 godz. 1 ) wersji.  Mimo że nie można utworzyć nowych profilów na podstawie szablonu w wersji zapoznawczej, można edytować i kontynuować do korzystania z profilów utworzonych wcześniej, które są oparte na szablonie (wersja zapoznawcza).   
+> W czerwcu 2019 linia bazowa zabezpieczeń MDM (wersja zapoznawcza) została zastąpiona przez wydanie *linii bazowej zabezpieczeń MDM dla szablonu 2019 wiosennej aktualizacji (19H1)* , który jest ogólnie dostępny (nie w wersji zapoznawczej). Profile, które zostały utworzone przed udostępnieniem linii bazowej *zabezpieczeń MDM dla linii bazowych aktualizacji sprężyn 2019 Update (19H1)* , nie zostaną zaktualizowane w celu odzwierciedlenia ustawień i wartości, które znajdują się w linii bazowej zabezpieczeń MDM dla wersji sprężyn 2019 Update (19H1).  Chociaż nie można tworzyć nowych profilów opartych na szablonie wersji zapoznawczej, można edytować i nadal używać wcześniej utworzonych profilów, które są oparte na szablonie wersji zapoznawczej.   
   
-Aby dowiedzieć się, przy użyciu wartości bazowych zabezpieczeń w usłudze Intune, zobacz [korzystać z planów bazowych bezpieczeństwa](security-baselines.md).  
+Aby dowiedzieć się więcej o korzystaniu z linii bazowych zabezpieczeń w usłudze Intune, zobacz [Korzystanie z linii bazowych zabezpieczeń](security-baselines.md).  
 
 
    
@@ -47,7 +47,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
 
   **Domyślne**: Tak  
 
-- **Głos aktywowania aplikacji z ekranu blokady**  
+- **Aktywuj aplikacje na zablokowanym ekranie**  
 
   **Domyślne**: wyłączone
 
@@ -64,16 +64,16 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
 ## <a name="application-management"></a>Zarządzanie aplikacjami   
 Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji zasad — ApplicationManagement](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement) w dokumentacji systemu Windows.  
 
-- **Blok kontrola użytkownika nad procesem instalacji**  
-  To ustawienie zasad pozwala użytkownikom, aby zmienić opcje instalacji, które zazwyczaj są dostępne tylko dla administratorów systemu. Jeśli włączysz to ustawienie zasad, niektóre funkcje zabezpieczeń programu Windows Installer są pomijane. Pozwala na ukończenie instalacji, która byłaby zatrzymana z powodu naruszenia zabezpieczeń. Jeśli zostanie wyłączone lub nieskonfigurowane to ustawienie zasad, funkcje zabezpieczeń programu Windows Installer uniemożliwić użytkownikom zmianę opcji instalacji zarezerwowanych dla administratorów systemów, takich jak określanie katalogu, w którym przechowywane są pliki. Jeśli Instalator Windows wykryje, że pakiet instalacyjny zezwala użytkownikowi na zmianę opcji chronionych, spowoduje zatrzymanie instalacji i zostanie wyświetlony komunikat. Te funkcje zabezpieczeń działają tylko wtedy, gdy program instalacyjny jest uruchomiony w kontekście zabezpieczeń, w której ma dostęp do katalogów, w których zablokowana jest możliwość użytkownika. To ustawienie zasad jest przeznaczona dla środowisk mniej restrykcyjne uprawnienia. Może służyć do obejścia błędów w programie instalacyjnym, który uniemożliwia instalację oprogramowania.  
+- **Blokuj kontrolę użytkownika nad instalacjami**  
+  To ustawienie zasad umożliwia użytkownikom zmianę opcji instalacji, które zwykle są dostępne tylko dla administratorów systemu. Jeśli włączysz to ustawienie zasad, niektóre funkcje zabezpieczeń Instalator Windows są pomijane. Zezwala na ukończenie instalacji, które w przeciwnym razie zostałyby zatrzymane ze względu na naruszenie zabezpieczeń. Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, funkcje zabezpieczeń Instalator Windows uniemożliwiają użytkownikom zmianę opcji instalacji zwykle zarezerwowanych dla administratorów systemu, takich jak określenie katalogu, do którego pliki są zainstalowane. Jeśli Instalator Windows wykryje, że pakiet instalacyjny zezwolił użytkownikowi na zmianę opcji chronionej, zatrzyma instalację i wyświetli komunikat. Te funkcje zabezpieczeń działają tylko wtedy, gdy program instalacyjny jest uruchomiony w kontekście zabezpieczeń uprzywilejowanych, w którym ma dostęp do katalogów zabronionych dla użytkownika. To ustawienie zasad jest przeznaczone dla mniej restrykcyjnych środowisk. Może służyć do obejścia błędów w programie instalacyjnym, który uniemożliwia instalację oprogramowania.  
   [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067060)  
 
   **Domyślne**: Tak
 
-- **Instalacje aplikacji MSI blok z podwyższonym poziomem uprawnień**  
+- **Blokuj instalacje aplikacji MSI z podniesionymi uprawnieniami**  
   To ustawienie zasad zezwala Instalatorowi Windows na użycie podniesionych uprawnień podczas instalowania dowolnego programu w systemie.  
-  - *Jeśli włączysz to ustawienie zasad*, zostają rozszerzone uprawnienia, aby wszystkie programy. Te uprawnienia są zazwyczaj zarezerwowana dla programów, które są przypisane do użytkownika (oferowanych na pulpicie), przypisany do f zainstalowany (automatycznie) lub udostępnione w aplecie Dodaj lub usuń programy w Panelu sterowania. To ustawienie profilu pozwala instalować programy, które wymagają dostępu do katalogów użytkownika może nie mieć uprawnień, aby wyświetlić lub zmienić, włącznie z katalogami na komputerach zastrzeżonych.
-  - *Jeśli zostanie wyłączone lub nieskonfigurowane to ustawienie zasad*, system zastosuje uprawnienia bieżącego użytkownika, podczas instalacji programów, które administrator systemu nie jest w stanie dystrybucji lub oferty. Uwaga: to ustawienie zasad jest dostępne w folderach Konfiguracja komputera i Konfiguracja użytkownika. Aby zastosować to ustawienie zasad, należy ją włączyć w obu folderów. Uwaga: Zaawansowanych użytkowników korzystać z zalet uprawnienia te zasady, ustawienie przyznaje, aby zmienić swoje uprawnienia i uzyskania stałego dostępu do zastrzeżonych plików i folderów. Należy zauważyć, że wersja konfiguracji użytkownika to ustawienie zasad nie jest gwarantowane do zabezpieczenia.  
+  - *Włączenie tego ustawienia zasad*spowoduje, że uprawnienia zostaną rozszerzone na wszystkie programy. Te uprawnienia są zwykle zastrzeżone dla programów przypisanych do użytkownika (oferowanych na pulpicie), przypisanych do komputera (instalowanych automatycznie) f lub dostępnych w aplecie Dodaj lub usuń programy w panelu sterowania. To ustawienie profilu umożliwia użytkownikom instalowanie programów, które wymagają dostępu do katalogów, do których użytkownik może nie mieć uprawnień do wyświetlania lub zmieniania, w tym katalogów na komputerach z wysoce ograniczonymi uprawnieniami.
+  - *Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane*, system zastosuje uprawnienia bieżącego użytkownika podczas instalowania programów niedystrybuowanych lub oferowanych przez administratora systemu. Uwaga: to ustawienie zasad jest dostępne w folderach Konfiguracja komputera i Konfiguracja użytkownika. Aby to ustawienie zasad zaczęło obowiązywać, należy włączyć je w obu folderach. Uwaga: Użytkownicy z wykwalifikowanymi użytkownikami mogą korzystać z uprawnień tych ustawień zasad, aby zmienić ich uprawnienia i uzyskać stały dostęp do ograniczonych plików i folderów. Należy pamiętać, że nie ma gwarancji, że wersja konfiguracji użytkownika tego ustawienia zasad nie jest bezpieczna.  
   
   [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067134)    
 
@@ -270,44 +270,44 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
   **Domyślne**: Tak  
   
-    Jeśli pozycja *Wymagaj hasła* została ustawiona na *Tak*, są dostępne następujące ustawienia.
+  Jeśli pozycja *Wymagaj hasła* została ustawiona na *Tak*, są dostępne następujące ustawienia.
 
-    - **Minimalna liczba zestawów znaków hasła**  
-      Liczba typów elementów (dużych i małych liter, liczb oraz znaków interpunkcyjnych) wymaganych do uznania hasła lub numeru PIN za silne. Numer PIN wymusza następujące zachowanie na komputerach stacjonarnych i urządzeniach przenośnych: 1 — Tylko cyfry 2 — Cyfry i małe litery są wymagane 3 — Cyfry, małe i wielkie litery są wymagane. Nie jest obsługiwane przez klasyczne konta Microsoft i konta domen. 4 — Cyfry, małe i wielkie litery oraz znaki specjalne są wymagane. Nieobsługiwane w wersji klasycznej. Wartość domyślna to 1.  
-      [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067055)  
+  - **Minimalna liczba zestawów znaków hasła**  
+    Liczba typów elementów (dużych i małych liter, liczb oraz znaków interpunkcyjnych) wymaganych do uznania hasła lub numeru PIN za silne. Numer PIN wymusza następujące zachowanie na komputerach stacjonarnych i urządzeniach przenośnych: 1 — Tylko cyfry 2 — Cyfry i małe litery są wymagane 3 — Cyfry, małe i wielkie litery są wymagane. Nie jest obsługiwane przez klasyczne konta Microsoft i konta domen. 4 — Cyfry, małe i wielkie litery oraz znaki specjalne są wymagane. Nieobsługiwane w wersji klasycznej. Wartość domyślna to 1.  
+    [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067055)  
+    
+    **Domyślne**: 3  
+
+  - **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia**  
+    Liczba dozwolonych błędów uwierzytelniania przed wyczyszczeniem urządzenia. Wartość 0 powoduje wyłączenie funkcji czyszczenia urządzenia.  
+    [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067030)  
       
-      **Domyślne**: 3  
-  
-    - **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia**  
-      Liczba dozwolonych błędów uwierzytelniania przed wyczyszczeniem urządzenia. Wartość 0 powoduje wyłączenie funkcji czyszczenia urządzenia.  
-      [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067030)  
-        
-      **Domyślne**: 10  
-  
-    - **Dni do wygaśnięcia hasła**  
-      Ustawienie zasad maksymalnego wieku hasła określa, jak długo (w dniach) można używać hasła, zanim system będzie wymagać od użytkownika zmiany hasła. Możesz ustawić, aby hasła wygasały po pewnej liczbie dni (od 1 do 999), lub aby nigdy nie wygasały (ustawienie 0 dni). Jeśli maksymalny wiek hasła wynosi od 1 do 999 dni, minimalny wiek hasła musi być mniejszy niż maksymalny wiek hasła. Jeśli maksymalny wiek hasła jest równy 0, minimalny wiek hasła może być dowolną wartością od 0 do 998 dni.  
-      [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067028)  
-      
-      **Domyślne**: 60  
-  
-    - **Wymagany typ hasła**  
-      Określa wymagany typ numeru PIN lub hasła.  
-      [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067027)  
-      
-      **Domyślne**: Alfanumeryczne  
-  
-    - **Minimalna długość hasła**  
-      Ustawienie zasad minimalnej długości hasła określa najmniejszą dozwoloną liczbę znaków hasła konta użytkownika. Możesz ustawić wartość z zakresu od 1 do 14 znaków lub określić, że hasło nie jest wymagane, przez ustawienie wartości 0 znaków.  
-      [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067024)  
-      
-      **Domyślne**: 8  
-  
-    - **Blokuj proste hasła**  
-      Określa, czy dozwolone są numery PIN i hasła, takie jak „1111” lub „1234”. W wersji klasycznej steruje również użyciem haseł obrazkowych.  
-      [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067127) 
-      
-      **Domyślne**: Tak  
-        *Ustawienie Tak uniemożliwia używanie prostych haseł.* 
+    **Domyślne**: 10  
+
+  - **Dni do wygaśnięcia hasła**  
+    Ustawienie zasad maksymalnego wieku hasła określa, jak długo (w dniach) można używać hasła, zanim system będzie wymagać od użytkownika zmiany hasła. Możesz ustawić, aby hasła wygasały po pewnej liczbie dni (od 1 do 999), lub aby nigdy nie wygasały (ustawienie 0 dni). Jeśli maksymalny wiek hasła wynosi od 1 do 999 dni, minimalny wiek hasła musi być mniejszy niż maksymalny wiek hasła. Jeśli maksymalny wiek hasła jest równy 0, minimalny wiek hasła może być dowolną wartością od 0 do 998 dni.  
+    [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067028)  
+    
+    **Domyślne**: 60  
+
+  - **Wymagany typ hasła**  
+    Określa wymagany typ numeru PIN lub hasła.  
+    [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067027)  
+    
+    **Domyślne**: Alfanumeryczne  
+
+  - **Minimalna długość hasła**  
+    Ustawienie zasad minimalnej długości hasła określa najmniejszą dozwoloną liczbę znaków hasła konta użytkownika. Możesz ustawić wartość z zakresu od 1 do 14 znaków lub określić, że hasło nie jest wymagane, przez ustawienie wartości 0 znaków.  
+    [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067024)  
+    
+    **Domyślne**: 8  
+
+  - **Blokuj proste hasła**  
+    Określa, czy dozwolone są numery PIN i hasła, takie jak „1111” lub „1234”. W wersji klasycznej steruje również użyciem haseł obrazkowych.  
+    [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067127) 
+    
+    **Domyślne**: Tak  
+      *Ustawienie Tak uniemożliwia używanie prostych haseł.* 
 
   - **Zapobiegaj ponownemu używaniu poprzednich haseł**  
     Określa, ile haseł, których nie można użyć, ma być przechowywanych w historii. Wartość zawiera bieżące hasło użytkownika. Na przykład ustawienie *1* powoduje, że użytkownik nie może ponownie użyć swojego bieżącego hasła podczas wybierania nowego hasła. Ustawienie *5* oznacza, że użytkownik nie może ustawić nowego hasła na bieżące hasło ani na dowolne z czterech poprzednich haseł.  
@@ -331,7 +331,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
 ## <a name="dma-guard"></a>DMA Guard  
 Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji zasad — DmaGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard) w dokumentacji systemu Windows.
 - **Wyliczanie urządzeń zewnętrznych niezgodnych z ochroną DMA jądra**  
-  Ta zasada ma, aby zapewnić dodatkową ochronę przed zewnętrznych urządzeń obsługujących program DMA. Zapewniają one lepszą kontrolę nad wyliczaniem zewnętrznych urządzeń obsługujących technologię DMA, które są niezgodne z ponownym mapowaniem/izolacją pamięci urządzenia przy użyciu technologii DMA. Te zasady są stosowane tylko wtedy, gdy ochrona DMA jądra jest obsługiwana i włączana przez systemowe oprogramowanie układowe. Ochrona DMA jądra jest funkcją platformy, która nie mogą być kontrolowane za pomocą zasad lub przez użytkownika końcowego. Musi ona być obsługiwana przez system w momencie produkcji. Aby sprawdzić, czy system obsługuje ochrony DMA jądra, sprawdź, czy pole ochrony DMA jądra na stronie podsumowania MSINFO32.exe.  
+  Te zasady mają na celu zapewnienie dodatkowych zabezpieczeń przed zewnętrznymi urządzeniami z obsługą DMA. Zapewniają one lepszą kontrolę nad wyliczaniem zewnętrznych urządzeń obsługujących technologię DMA, które są niezgodne z ponownym mapowaniem/izolacją pamięci urządzenia przy użyciu technologii DMA. Te zasady są stosowane tylko wtedy, gdy ochrona DMA jądra jest obsługiwana i włączana przez systemowe oprogramowanie układowe. Ochrona przed jądrem jest funkcją platformy, która nie może być kontrolowana za pośrednictwem zasad ani przez użytkownika końcowego. Musi ona być obsługiwana przez system w momencie produkcji. Aby sprawdzić, czy system obsługuje ochronę przed jądrem DMA, sprawdź pole jądra ochrony DMA na stronie Podsumowanie programu MSINFO32. exe.  
   [Dowiedz się więcej](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
 
   **Domyślne**: Blokuj wszystko   
@@ -532,10 +532,10 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   **Domyślne**: Żadne witryny  
 
 - **Obsługa szyfrowania w programie Internet Explorer**  
-  To ustawienie zasad pozwala wyłączyć obsługę zabezpieczeń TLS (Transport Layer) 1.0, TLS 1.1, TLS 1.2, Secure Sockets Layer (SSL) w wersji 2.0 lub protokołu SSL 3.0 w przeglądarce. Protokoły TLS i SSL są protokoły, które pomagają w ochronie komunikację między przeglądarką a serwerem docelowym. Jeśli przeglądarka próbuje skonfigurować ochronę komunikacji z serwerem docelowym, przeglądarką i serwerem negocjowania które protokołu i wersję do użycia. Przeglądarką i serwerem podjęcia próby dopasowania siebie nawzajem listę obsługiwanych protokołów i wersji, a użytkownik wybierze najbardziej preferowaną dopasowania. Jeśli włączysz to ustawienie zasad, przeglądarka negocjuje lub Negocjuj tunelu szyfrowania przy użyciu metody szyfrowania, które należy wybrać z listy rozwijanej. Jeśli zostanie wyłączone lub nieskonfigurowane to ustawienie zasad, użytkownik może wybrać szyfrowanie, które obsługuje metody przeglądarki.  
+  To ustawienie zasad umożliwia wyłączenie obsługi Transport Layer Security (TLS) 1,0, TLS 1,1, TLS 1,2, SSL (SSL) 2,0 lub SSL 3,0 w przeglądarce. Protokoły TLS i SSL są protokołami chroniącymi komunikację między przeglądarką a serwerem docelowym. Gdy przeglądarka próbuje skonfigurować chronioną komunikację z serwerem docelowym, przeglądarka i serwer negocjują protokół i wersję do użycia. Przeglądarka i serwer próbują dopasować listę obsługiwanych protokołów i wersji, a następnie wybrać najbardziej preferowane dopasowanie. Jeśli to ustawienie zasad zostanie włączone, przeglądarka negocjuje lub nie negocjuje tunelu szyfrowania przy użyciu metod szyfrowania wybranych z listy rozwijanej. Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, użytkownik będzie mógł wybrać metodę szyfrowania obsługiwaną przez przeglądarkę.  
   [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067057)
 
-  **Domyślne**: elementy: 2: protokołu TLS 1.1 i TLS 1.2  
+  **Wartość domyślna**: 2 elementy: TLS v 1.1 i TLS v 1.2  
   *Wybierz strzałkę w dół, aby wyświetlić opcje, które można wybrać dla tego ustawienia.*
   
 - **Blokada filtra SmartScreen w strefie internetowej programu Internet Explorer**  
@@ -940,7 +940,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
   **Domyślne**: włączone  
   
-- **Skryptlety strefy internet programu Internet Explorer**  
+- **Skryptlety strefy internetowej programu Internet Explorer**  
   To ustawienie zasad pozwala określić, czy użytkownik może uruchamiać skryptlety. Jeśli to ustawienie zasad zostanie włączone, użytkownik będzie mógł uruchamiać skryptlety. Jeśli to ustawienie zasad zostanie wyłączone, użytkownik nie będzie mógł uruchamiać skryptletów. Jeśli to ustawienie zasad nie zostanie skonfigurowane, użytkownik będzie mógł włączać lub wyłączać skryptlety.  
   [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067176)  
   
@@ -1387,28 +1387,28 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
 
 ## <a name="remote-assistance"></a>Pomoc zdalna
 - **Żądanie pomocy zdalnej**  
-  To ustawienie zasad pozwala włączyć lub wyłączyć funkcję Pomoc zdalna Solicited (poproś o) na tym komputerze. 
-  - *Jeśli włączysz to ustawienie zasad*, użytkownicy na tym komputerze mogą korzystać z poczty e-mail lub transferu pliku, aby poprosić kogoś, aby uzyskać pomoc. Ponadto użytkownicy mogą używać komunikatory, aby zezwolić na połączenia z tym komputerem i można skonfigurować dodatkowe ustawienia pomocy zdalnej. 
-  - *Jeśli wyłączysz to ustawienie zasad*, użytkownicy na tym komputerze nie mogą za pomocą poczty e-mail lub transferu pliku poproszenie o pomoc. Ponadto użytkownicy nie mogą używać komunikatory umożliwia nawiązywanie połączeń z tym komputerem. 
-  - *Jeśli to ustawienie zasad nie jest skonfigurowane*, użytkownicy mogą włączyć lub wyłączyć funkcję Pomoc zdalna Solicited (poproś o) się we właściwościach systemu w Panelu sterowania. Użytkownicy mogą również skonfigurować ustawienia pomocy zdalnej. 
+  To ustawienie zasad umożliwia włączenie lub wyłączenie pomocy zdalnej na żądanie na tym komputerze. 
+  - *Włączenie tego ustawienia zasad*spowoduje, że użytkownicy na tym komputerze będą mogli korzystać z poczty e-mail lub transferu plików, aby poprosił kogoś o pomoc. Ponadto użytkownicy mogą używać programów do obsługi wiadomości błyskawicznych, aby zezwalać na połączenia z tym komputerem i można skonfigurować dodatkowe ustawienia pomocy zdalnej. 
+  - *Jeśli to ustawienie zasad zostanie wyłączone*, użytkownicy na tym komputerze nie będą mogli korzystać z poczty e-mail ani transferu plików, aby poprosił kogoś o pomoc. Użytkownicy nie mogą również używać programów do obsługi wiadomości błyskawicznych, aby zezwalać na połączenia z tym komputerem. 
+  - *Jeśli to ustawienie zasad nie zostanie skonfigurowane*, użytkownicy mogą włączać lub wyłączać samodzielną pomoc zdalną w oknie właściwości systemu w panelu sterowania. Użytkownicy mogą również konfigurować ustawienia pomocy zdalnej. 
 
-  Jeśli włączysz to ustawienie zasad, masz Pomocnik może świadczyć pomoc zdalną na dwa sposoby: "Zezwalaj pomocnicy do widoku tylko komputer" lub "Zezwalaj pomocnicy do zdalnego sterowania na komputerze". "Czas biletu maksymalnie" ustawienie zasad ustawia limit czasu, przez który zaproszenie Pomocy zdalnej, utworzone za pomocą poczty e-mail lub transferu pliku mogą pozostawać otwarte. "Wybierz metodę wysyłania pocztą e-mail zaproszenia" ustawienie określa, jaki standard poczty e-mail do wysłania zaproszenia Pomocy zdalnej. W zależności od programu poczty e-mail można użyć standardowego Mailto (adresat zaproszenia nawiązuje połączenie za pośrednictwem połączenie internetowe) lub interfejsu SMAPI (Simple MAPI) standardowa (zaproszenia jest dołączony do wiadomości e-mail). To ustawienie zasad nie jest dostępne w Windows Vista, ponieważ interfejs SMAPI jest jedyną metodą, które są obsługiwane. Jeśli włączysz to ustawienie zasad należy również włączyć wyjątki zapory odpowiednie umożliwić komunikację zdalną.  
+  Jeśli włączysz to ustawienie zasad, masz dwa sposoby zezwalania pomocnikom na zapewnienie pomocy zdalnej: "Zezwalaj pomocnikom tylko na wyświetlanie komputera" lub "Zezwalaj pomocnikom na zdalne sterowanie komputerem". Ustawienie zasad "maksymalny czas biletu" określa limit czasu, przez który zaproszenie pomocy zdalnej utworzone przy użyciu poczty e-mail lub transferu plików może pozostać otwarte. Ustawienie "Wybierz metodę wysyłania zaproszeń e-mail" określa, który Standard poczty e-mail ma być używany do wysyłania zaproszeń pomocy zdalnej. W zależności od programu poczty e-mail można użyć standardu mailto (odbiorca zaproszenia za pośrednictwem linku internetowego) lub standardu SMAPI (Simple MAPI) (zaproszenie jest dołączone do wiadomości e-mail). To ustawienie zasad nie jest dostępne w systemie Windows Vista, ponieważ jedyna obsługiwana metoda to SMAPI. Jeśli to ustawienie zasad zostanie włączone, należy również włączyć odpowiednie wyjątki zapory, aby umożliwić komunikację zdalną.  
   [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067198)
 
-  **Domyślne**: Wyłącz pomocy zdalnej
+  **Domyślne**: Wyłącz pomoc zdalną
 
-  Po ustawieniu *włączyć pomocy zdalnej*, skonfiguruj następujące ustawienia dodatkowe:  
-  - **Uprawnienia na żądanie pomocy zdalnej**  
+  Po ustawieniu opcji *Włącz pomoc zdalną*skonfiguruj następujące ustawienia dodatkowe:  
+  - **Uprawnienie do pomocy zdalnej**  
     **Domyślne**: Wyświetl  
 
-  - **Wartość czasu maksymalna biletu**  
+  - **Maksymalna wartość czasu biletu**  
     **Domyślne**: *Nieskonfigurowane*  
 
-  - **Bilet maksymalny okres**  
-    **Domyślne**: minuty    
+  - **Maksymalny okres biletu**  
+    **Wartość domyślna**: minuty    
 
-  - **Metoda zaproszenie w wiadomości e-Mail**  
-    **Domyślne**: prosty MAPI
+  - **Metoda zaproszenia E-Mail**  
+    **Domyślnie**: Simple MAPI
 
   
 ## <a name="remote-desktop-services"></a>Usługi pulpitu zdalnego  
@@ -1660,7 +1660,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   **Domyślne**: Tak
   
 - **Monitorowanie zachowania**  
-  Zezwala lub nie zezwala na monitorowanie zachowania usługi Windows Defender funkcji. Osadzone w systemie Windows 10 czujniki zbierają i przetwarzają sygnały dotyczące zachowania z systemu operacyjnego i wysyłają te dane czujników do prywatnego izolowanego wystąpienia usługi Microsoft Defender ATP w chmurze.  
+  Zezwala lub nie zezwala na działanie funkcji monitorowania zachowań Windows Defender. Osadzone w systemie Windows 10 czujniki zbierają i przetwarzają sygnały dotyczące zachowania z systemu operacyjnego i wysyłają te dane czujników do prywatnego izolowanego wystąpienia usługi Microsoft Defender ATP w chmurze.  
   [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067111)  
   
   **Domyślne**: Tak
@@ -1709,9 +1709,9 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   **Domyślne**: Blokuj
 
 ## <a name="windows-defender-firewall"></a>Zapora Windows Defender  
-Aby uzyskać więcej informacji, zobacz [2.2.2 FW_PROFILE_TYPOE]( https://docs.microsoft.com/openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc) w dokumentacji programu Windows protokołów.  
+Aby uzyskać więcej informacji, zobacz [2.2.2 FW_PROFILE_TYPOE]( https://docs.microsoft.com/openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc) w dokumentacji protokołów systemu Windows.  
 
-- **Zapora profil domeny**  
+- **Domena profilu zapory**  
   Określa profile, do których należy reguła: Domena, Prywatny, Publiczny. Ta wartość reprezentuje profil sieci, które zostały połączone z domeną.  
   [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2066796)  
 
@@ -1727,7 +1727,7 @@ Aby uzyskać więcej informacji, zobacz [2.2.2 FW_PROFILE_TYPOE]( https://docs.m
   - **Zapora włączona**  
     **Domyślne**: Dozwolone
 
-- **Profil zapory publiczne**  
+- **Publiczny profil zapory**  
   Określa profile, do których należy reguła: Domena, Prywatny, Publiczny. Ta wartość reprezentuje profil sieci publicznych. Te sieci są klasyfikowane jako publiczne przez administratorów na hoście serwera. Klasyfikacja odbywa się po pierwszym połączeniu hosta z siecią. Przeważnie takie sieci znajdują się na lotniskach, w kawiarniach i w innych miejscach, w których elementy równorzędne w sieci lub administrator sieci nie jest zaufany.  
   [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067143)  
 
@@ -1749,11 +1749,11 @@ Aby uzyskać więcej informacji, zobacz [2.2.2 FW_PROFILE_TYPOE]( https://docs.m
   - **Reguły zasad niescalone z zasad grupy**  
     **Domyślne**: Tak
 
-- **Profil zapory prywatne**  
+- **Prywatny profil zapory**  
   Określa profile, do których należy reguła: Domena, Prywatny, Publiczny. Ta wartość reprezentuje profil sieci prywatnych.  
   [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067041)  
 
-   - **Połączenia przychodzące zablokowane**  
+  - **Połączenia przychodzące zablokowane**  
     **Domyślne**: Tak
 
   - **Połączenia wychodzące wymagane**  
@@ -1767,7 +1767,7 @@ Aby uzyskać więcej informacji, zobacz [2.2.2 FW_PROFILE_TYPOE]( https://docs.m
 
 ## <a name="windows-hello-for-business"></a>Windows Hello for Business  
 - **Wymagaj rozszerzonej ochrony przed fałszowaniem, jeśli jest dostępna**  
-  Jeśli tak, urządzenia użyje rozszerzonej ochrony przed fałszowaniem, jeśli jest dostępna. Jeśli nie, ochrony przed fałszowaniem jest blokowana. Nieskonfigurowane spowoduje zastosowanie konfiguracji na komputerze klienckim przeprowadzonych.  
+  Jeśli tak, urządzenia będą używać rozszerzonej ochrony przed fałszowaniem, jeśli jest dostępna. Jeśli nie, ochrona przed fałszowaniem zostanie zablokowana. Nieskonfigurowane, będą honorować konfiguracje wykonywane na kliencie.  
   [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067192)
 
   **Domyślne**: Tak
@@ -1778,22 +1778,22 @@ Aby uzyskać więcej informacji, zobacz [2.2.2 FW_PROFILE_TYPOE]( https://docs.m
   **Domyślne**: Tak
 
 - **Wymagaj małych liter w numerze PIN**  
-  Jeśli jest to wymagane, numer PIN użytkownika musi zawierać co najmniej jednej małej litery.
+  W razie potrzeby numer PIN użytkownika musi zawierać co najmniej jedną małą literę.
 
   **Domyślne**: Dozwolone
 
 - **Wymagaj znaków specjalnych w numerze PIN**  
-  Jeśli jest to wymagane, numer PIN użytkownika musi zawierać co najmniej jeden znak specjalny.
+  W razie potrzeby numer PIN użytkownika musi zawierać co najmniej jeden znak specjalny.
 
   **Domyślne**: Dozwolone
 
 - **Minimalna długość numeru PIN**  
-  Minimalna długość numeru PIN musi mieć od 4 do 127.
+  Minimalna długość numeru PIN musi należeć do zakresu od 4 do 127.
 
   **Domyślne**: 6
 
 - **Wymagaj wielkich liter w numerze PIN**  
-  Jeśli jest to wymagane, numer PIN użytkownika musi zawierać co najmniej jedną wielką literę.
+  W razie potrzeby numer PIN użytkownika musi zawierać co najmniej jedną wielką literę.
 
   **Domyślne**: Dozwolone
 
@@ -1819,35 +1819,35 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
 
   **Domyślne**: włączone
 
-## <a name="whats-changed-in-the-new-template"></a>Co się zmieniło w nowy szablon
-*Linii bazowej zabezpieczeń zarządzania urządzeniami Przenośnymi dla Spring 2019 Update (19 godz. 1)* szablon zawiera następujące zmiany z *Podgląd* szablonu.
+## <a name="whats-changed-in-the-new-template"></a>Co zostało zmienione w nowym szablonie
+*Linia bazowa zabezpieczeń MDM dla szablonu wiosny 2019 Update (19H1)* ma następujące zmiany w szablonie *wersji* zapoznawczej.
 
-### <a name="changes-to-the-baseline-settings"></a>Zmiany ustawień punktu odniesienia
+### <a name="changes-to-the-baseline-settings"></a>Zmiany ustawień linii bazowej
 Te ustawienia są:
-- *Nowe* w tym najnowszej wersji linii bazowej.
-- *Usunięte* z najnowszej wersji linii bazowej, ale były obecne w poprzedniej wersji.
-- *Zaktualizowany* w jakiś sposób, w sposób ustawienia znajdowały się w poprzedniej wersji. 
+- *Nowość* w tej najnowszej wersji linii bazowej.
+- *Usunięte* z tej najnowszej wersji linii bazowej, ale były obecne w poprzedniej wersji.
+- *Poprawiono* w inny sposób od tego, jak ustawienia pojawiły się w poprzedniej wersji. 
 
-*[New]*  [ **Blokadzie**](#above-lock):
-- **Głos aktywowania aplikacji z ekranu blokady**    
+*[Nowy]* [**Powyżej blokady**](#above-lock):
+- **Aktywuj aplikacje na zablokowanym ekranie**    
 
 *[Nowe]* [**Zarządzanie aplikacjami**](#application-management): 
-- **Blok kontrola użytkownika nad procesem instalacji**  
-- **Instalacje aplikacji MSI blok z podwyższonym poziomem uprawnień**  
+- **Blokuj kontrolę użytkownika nad instalacjami**  
+- **Blokuj instalacje aplikacji MSI z podniesionymi uprawnieniami**  
 
-*[Usunięty]*  [ **Funkcji Bitlocker**](#bitlocker):  
-- Bit skrytki wymiennym zasady > **metodę szyfrowania**
-- **Skrytka bit stałej dysku zasad** *(wszystkie ustawienia)*
-- **Bit zasad dysków systemu skrytki** *(wszystkie ustawienia)*
+*[Usunięto]* [**Funkcja BitLocker**](#bitlocker):  
+- Zasada dysku wymiennego blokowania bitowego > **Metoda szyfrowania**
+- **Zasady stałego dysku blokady bitowego** *(wszystkie ustawienia)*
+- **Zasady dysku systemowego blokowania bitowego** *(wszystkie ustawienia)*
 
 *[Nowe]* [**Łączność**](#connectivity):
-- **Konfigurowanie bezpiecznego dostępu do ścieżki UNC**
+- **Skonfiguruj bezpieczny dostęp do ścieżek UNC**
 
 *[Nowe]* [**Device Guard**](#device-guard):
 - **Zabezpieczenia oparte na wirtualizacji**
 
 
-*[New]*  [ **Ochrona DMA**](#dma-guard):
+*[Nowy]* [**Ochrona DMA**](#dma-guard):
 - **Wyliczanie urządzeń zewnętrznych niezgodnych z ochroną DMA jądra**  
 
 *[Nowe]* [**Internet Explorer**](#internet-explorer):
@@ -1857,15 +1857,15 @@ Te ustawienia są:
 - **Strefa Komputer lokalny w programie Internet Explorer nie uruchamia oprogramowania chroniącego przed złośliwym oprogramowaniem względem kontrolek ActiveX**
 - **Obsługa szyfrowania w programie Internet Explorer**  
 
-*[Zmian]*  [ **Programu Internet Explorer**](#internet-explorer):
-- **Automatyczne wiersza strefy internet programu Internet Explorer do pobierania plików** > domyślną wartością jest teraz **wyłączone**. W wersji zapoznawczej to został ustawiony na włączone.
+*[Poprawione]* [**Internet Explorer**](#internet-explorer):
+- **Automatyczna Monituj o pobieranie plików w strefie internetowej programu Internet Explorer** > wartość domyślna jest teraz **wyłączona**. W wersji zapoznawczej ustawiono wartość włączone.
 
 *[Nowe]* [**Pomoc zdalna**](#remote-assistance):  
 - **Żądanie pomocy zdalnej** 
-  - **Uprawnienia na żądanie pomocy zdalnej**
-  - **Wartość czasu maksymalna biletu**  
-  - **Bilet maksymalny okres**  
-  - **Metoda zaproszenie w wiadomości e-Mail**
+  - **Uprawnienie do pomocy zdalnej**
+  - **Maksymalna wartość czasu biletu**  
+  - **Maksymalny okres biletu**  
+  - **Metoda zaproszenia E-Mail**
 
 
 *[Nowe]* [**Windows Defender**](#windows-defender):
@@ -1873,19 +1873,19 @@ Te ustawienia są:
 - **Uruchamianie aplikacji komunikacyjnych pakietu Office w procesie podrzędnym** 
 
 *[Nowe]* [**Zapora Windows Defender**](#windows-defender-firewall)
-- **Zapora profil domeny**  
+- **Domena profilu zapory**  
   - **Połączenia przychodzące zablokowane**  
   - **Połączenia wychodzące wymagane**  
   - **Powiadomienia przychodzące zablokowane**  
   - **Zapora włączona**  
-- **Profil zapory publiczne**  
+- **Publiczny profil zapory**  
   - **Połączenia przychodzące zablokowane**  
   - **Połączenia wychodzące wymagane**  
   - **Powiadomienia przychodzące zablokowane**  
   - **Zapora włączona** 
   - **Reguły zabezpieczeń połączeń niescalone z zasad grupy**   
   - **Reguły zasad niescalone z zasad grupy**  
-- **Profil zapory prywatne**  
+- **Prywatny profil zapory**  
   - **Połączenia przychodzące zablokowane**  
   - **Połączenia wychodzące wymagane**  
   - **Powiadomienia przychodzące zablokowane**  
