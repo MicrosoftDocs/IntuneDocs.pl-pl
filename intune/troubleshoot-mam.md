@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/21/2019
+ms.date: 07/03/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,16 +16,16 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bde64e9bbe756b61b41dd8e7d55ba327491ae55b
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 1cf8f7753a92ad45a68f976359560ef6da2d1cec
+ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67046225"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67648721"
 ---
 # <a name="troubleshoot-mobile-application-management"></a>Rozwiązywanie problemów związanych z zarządzaniem aplikacjami mobilnymi
 
-Ten temat zawiera rozwiązania typowych problemów, które wystąpiły podczas zarządzania aplikacjami mobilnymi usługi Intune.
+Ten temat zawiera rozwiązania typowych problemów, które wystąpiły podczas korzystania z Intune App Protection (nazywanego również MAM lub zarządzaniem aplikacjami mobilnymi).
 
 Jeśli te informacje nie pomogą rozwiązać problemu, zobacz [How to get support for Microsoft Intune](get-support.md) (Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune), aby znaleźć więcej sposobów uzyskania pomocy.
 
@@ -37,7 +37,7 @@ Są to typowe problemy, które administrator IT może napotkać podczas korzysta
 | -- | -- | -- |
 | Zasady nie są stosowane w przypadku programu Skype dla firm | Zasady ochrony aplikacji bez rejestracji urządzenia wprowadzone w witrynie Azure Portal nie są stosowane do aplikacji Skype dla firm na urządzeniach z systemem iOS i Android. | Skonfiguruj aplikację Skype dla firm do korzystania z nowoczesnego uwierzytelniania.  Postępuj zgodnie z instrukcjami podanymi w temacie [Zapewnianie dzierżawcy możliwości nowoczesnego uwierzytelniania](https://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx), aby skonfigurować nowoczesne uwierzytelnianie dla aplikacji Skype. |
 | Zasady aplikacji pakietu Office nie są stosowane | Zasady ochrony aplikacji nie są stosowane do żadnej [obsługiwanej aplikacji pakietu Office](https://www.microsoft.com/cloud-platform/microsoft-intune-partners) dla jakiegokolwiek użytkownika. | Potwierdź, że użytkownik ma licencję na usługę Intune oraz że aplikacje pakietu Office są objęte wdrożonymi zasadami ochrony aplikacji. Zastosowanie nowo wdrożonych zasad ochrony aplikacji może potrwać do 8 godzin. |
-| Administrator nie może skonfigurować zasad ochrony aplikacji w witrynie Azure Portal | Użytkownik będący administratorem IT nie może skonfigurować zasad ochrony aplikacji w portalu Azure Portal. | Następujące role użytkownika mają dostęp do portalu Azure Portal: <ul><li>Administrator globalny, którego można skonfigurować w [centrum administracyjnym platformy Microsoft 365](https://admin.microsoft.com/).</li><li>Właściciel, którego można skonfigurować w [portalu Azure](https://portal.azure.com/).</li><li>Współautor, którego można skonfigurować w [portalu Azure](https://portal.azure.com/).</li></ul> W celu uzyskania pomocy podczas konfigurowania tych ról zapoznaj się z tematem [Kontrola dostępu na podstawie ról (kontrola RBAC) w usłudze Microsoft Intune](role-based-access-control.md).|
+| Administrator nie może skonfigurować zasad ochrony aplikacji w witrynie Azure Portal | Użytkownik będący administratorem IT nie może skonfigurować zasad ochrony aplikacji w witrynie Azure Portal. | Następujące role użytkownika mają dostęp do witryny Azure Portal: <ul><li>Administrator globalny, którego można skonfigurować w [centrum administracyjnym platformy Microsoft 365](https://admin.microsoft.com/).</li><li>Właściciel, którego można skonfigurować w witrynie [Azure Portal](https://portal.azure.com/).</li><li>Współautor, którego można skonfigurować w witrynie [Azure Portal](https://portal.azure.com/).</li></ul> W celu uzyskania pomocy podczas konfigurowania tych ról zapoznaj się z tematem [Kontrola dostępu na podstawie ról (kontrola RBAC) w usłudze Microsoft Intune](role-based-access-control.md).|
 |W raportach zasad ochrony aplikacji brakuje kont użytkowników | W raportach konsoli administratora nie są widoczne konta użytkowników, dla których niedawno wdrożono zasady ochrony aplikacji. | W przypadku użytkownika niedawno objętego zasadami ochrony aplikacji wyświetlenie informacji na jego temat w raportach może nastąpić po upływie nawet 24 godzin. |
 | Zmiany zasad nie działają | Zastosowanie zmian i aktualizacji zasad ochrony aplikacji może potrwać nawet 8 godzin. | Jeśli to konieczne, użytkownik końcowy może wylogować się z aplikacji i zalogować się do niej ponownie, aby wymusić synchronizację z usługą. |
 | Zasady ochrony aplikacji nie działają z programem DEP | Zasady ochrony aplikacji nie są stosowane do urządzeń korzystających z programu DEP firmy Apple. | Upewnij się, że używasz koligacji użytkownika na potrzeby programu Device Enrollment Program (DEP) firmy Apple. Koligacja użytkownika jest wymagana dla każdej aplikacji, która wymaga uwierzytelniania użytkownika w ramach programu DEP. <br><br>Artykuł [Automatyczne rejestrowanie urządzeń z systemem iOS w ramach programu Device Enrollment Program firmy Apple](device-enrollment-program-enroll-ios.md) zawiera dalsze informacje na temat rejestracji w ramach programu DEP dla systemu iOS.|
@@ -57,8 +57,16 @@ Typowe problemy użytkowników końcowych są podzielone na następujące katego
 
 Platforma | Scenariusz | Objaśnienie |
 ---| --- | --- |
-iOS | Użytkownik końcowy może otwierać dane służbowe w aplikacjach niezarządzanych przy użyciu rozszerzenia udostępniania systemu iOS nawet wtedy, gdy zasady transferu danych mają wartość **Tylko aplikacje zarządzane** lub **Brak aplikacji**. Czy te dane nie wyciekają? | Zasady ochrony aplikacji usługi Intune nie mogą kontrolować rozszerzenia udostępniania systemu iOS bez zarządzania tym urządzeniem. W związku z tym **usługa Intune szyfruje dane „firmowe” przed ich udostępnieniem poza aplikację**. Aby to sprawdzić, spróbuj otworzyć plik „firmowy” poza aplikacją zarządzaną. Plik powinien być zaszyfrowany, a jego otworzenie poza aplikacją zarządzaną powinno być niemożliwe.
+iOS | Użytkownik końcowy może otwierać dane służbowe w aplikacjach niezarządzanych przy użyciu rozszerzenia udostępniania systemu iOS nawet wtedy, gdy zasady transferu danych mają wartość **Tylko aplikacje zarządzane** lub **Brak aplikacji**. Czy te dane nie wyciekają? | Zasady ochrony aplikacji usługi Intune nie mogą kontrolować rozszerzenia udostępniania systemu iOS bez zarządzania tym urządzeniem. W związku z tym **usługa Intune szyfruje dane „firmowe” przed ich udostępnieniem poza aplikację**. Aby to sprawdzić, spróbuj otworzyć plik „firmowy” poza aplikacją zarządzaną. Plik powinien być zaszyfrowany i jego otwarcie poza zarządzaną aplikacją nie powinno być możliwe.
+iOS | Dlaczego użytkownik końcowy **wyświetli monit o zainstalowanie aplikacji Microsoft Authenticator** | Jest to konieczne w przypadku zastosowania dostępu warunkowego opartego na aplikacji, zobacz temat [Wymagaj zatwierdzonej aplikacji klienckiej](https://docs.microsoft.com/azure/active-directory/conditional-access/app-based-conditional-access).
 Android | Dlaczego użytkownik końcowy **musi instalować aplikację Portal firmy** nawet wtedy, gdy używam ochrony aplikacji zarządzania aplikacjami mobilnymi bez rejestracji urządzeń?  | W systemie Android wiele funkcji ochrony aplikacji jest wbudowanych w aplikację Portal firmy. **Rejestracja urządzeń nie jest konieczna, mimo że aplikacja Portal firmy jest zawsze wymagana**. Aby korzystać z ochrony aplikacji bez rejestracji, użytkownik końcowy po prostu musi mieć zainstalowaną aplikację Portal firmy na urządzeniu.
+iOS/Android | Zasady ochrony aplikacji nie zostały zastosowane w wersji próbnej wiadomości e-mail w aplikacji Outlook | Ponieważ program Outlook obsługuje zarówno kontekst firmowy, jak i prywatny, nie wymusza MAM na roboczej wiadomości e-mail.
+iOS/Android | Zasady ochrony aplikacji nie są stosowane do nowych dokumentów w programie WXP (Word, Excel, PowerPoint) | Ponieważ WXP obsługuje zarówno kontekst firmowy, jak i prywatny, nie wymusza MAM w nowych dokumentach, dopóki nie zostaną zapisane w zidentyfikowanej lokalizacji firmowej, takiej jak OneDrive.
+iOS/Android | Aplikacje, które nie zezwalają na zapisywanie jako do magazynu lokalnego, gdy zasady są włączone | Zachowanie aplikacji dla tego ustawienia jest kontrolowane przez dewelopera aplikacji.
+Android | System Android ma więcej ograniczeń niż iOS, w których "natywne" aplikacje mogą uzyskiwać dostęp do zawartości chronionej MAM | Android jest otwartą platformą, a użytkownik końcowy może zmienić skojarzenie aplikacji "natywne" z potencjalnie niebezpiecznymi aplikacjami. Zastosuj [wyjątki zasad transferu danych](app-protection-policies-exception.md) , aby wykluczyć określone aplikacje.
+Android | Azure Information Protection (w stanie) można zapisać jako plik PDF, gdy jest to blokowane | W przypadku użycia pozycji Zapisz jako plik PDF, podczas gdy jest używany element "Disable as", należy przestrzegać zasad MAM.
+iOS | Otwieranie załączników PDF w aplikacji Outlook kończy się niepowodzeniem z "akcją niedozwoloną | Taka sytuacja może wystąpić, jeśli użytkownik nie został uwierzytelniony do programu Acrobat Reader dla usługi Intune lub użył odcisku palca do uwierzytelnienia w organizacji. Otwórz program Acrobat Reader wcześniej i Uwierzytelnij się przy użyciu poświadczeń nazwy UPN.
+
 
 ### <a name="normal-usage-dialogs"></a>Okna dialogowe normalnego użycia
 
@@ -82,7 +90,7 @@ Okno dialogowe błędu lub komunikat o błędzie | Przyczyna | Korekty |
 **Niezgodne urządzenie**: nie można użyć tej aplikacji, ponieważ używasz urządzenia z usuniętymi ograniczeniami. Skontaktuj się z administratorem IT, aby uzyskać pomoc. | Usługa Intune wykryła, że użytkownik korzysta z urządzenia ze zdjętymi zabezpieczeniami systemu. | Przywróć ustawienia fabryczne urządzenia. Postępuj zgodnie z [tymi instrukcjami](https://support.apple.com/HT201274) z witryny pomocy technicznej firmy Apple.
 **Wymagane jest połączenie z Internetem**: Aby zweryfikować, czy możesz używać tej aplikacji, musisz mieć połączenie z Internetem. | Urządzenie nie jest połączone z Internetem. | Połącz urządzenie z siecią Wi-Fi lub siecią transmisji danych.
 **Nieznany błąd**: Spróbuj ponownie uruchomić tę aplikację. Jeśli ten problem będzie nadal występować, skontaktuj się z administratorem działu IT w celu uzyskania pomocy. | Wystąpił nieznany błąd. | Poczekaj chwilę i spróbuj ponownie. Jeśli błąd będzie nadal występować, utwórz [bilet pomocy technicznej](get-support.md#create-an-online-support-ticket) w usłudze Intune.
-**Uzyskiwanie dostępu do danych organizacji**: Podane konto służbowe nie ma dostępu do tej aplikacji. Może być konieczne zalogowanie się przy użyciu innego konta. Skontaktuj się z administratorem IT, aby uzyskać pomoc. | Usługa Intune wykryła, że użytkownik próbował zalogować się przy użyciu drugiego konta służbowego, które różni się od konta zarejestrowanego w oprogramowaniu do zarządzania aplikacjami mobilnymi (MAM) dla tego urządzenia. Oprogramowanie MAM może zarządzać jednocześnie tylko jednym kontem służbowym na danym urządzeniu. | Zaloguj się przy użyciu konta, którego nazwa użytkownika jest wstępnie wypełniona na ekranie logowania. <br> <br> Ewentualnie zaloguj się przy użyciu nowego konta służbowego i usuń istniejące konto zarejestrowane w oprogramowaniu MAM.
+**Uzyskiwanie dostępu do danych organizacji**: Podane konto służbowe nie ma dostępu do tej aplikacji. Może być konieczne zalogowanie się przy użyciu innego konta. Skontaktuj się z administratorem IT, aby uzyskać pomoc. | Usługa Intune wykryła, że użytkownik próbował zalogować się przy użyciu drugiego konta służbowego, które różni się od konta zarejestrowanego w oprogramowaniu do zarządzania aplikacjami mobilnymi (MAM) dla tego urządzenia. Oprogramowanie MAM może zarządzać jednocześnie tylko jednym kontem służbowym na danym urządzeniu. | Zaloguj się przy użyciu konta, którego nazwa użytkownika jest wstępnie wypełniona na ekranie logowania. Może być konieczne [skonfigurowanie ustawienia nazwy UPN użytkownika dla usługi Intune](https://docs.microsoft.com/intune/data-transfer-between-apps-manage-ios#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). <br> <br> Ewentualnie zaloguj się przy użyciu nowego konta służbowego i usuń istniejące konto zarejestrowane w oprogramowaniu MAM.
 **Problem z połączeniem**: Wystąpił nieoczekiwany problem z połączeniem. Sprawdź połączenie i spróbuj ponownie.  |  Nieoczekiwany błąd. | Poczekaj chwilę i spróbuj ponownie. Jeśli błąd będzie nadal występować, utwórz [bilet pomocy technicznej](get-support.md#create-an-online-support-ticket) w usłudze Intune.
 **Alert**: Nie można już używać tej aplikacji. Aby uzyskać więcej informacji, skontaktuj się z administratorem działu IT. | Nie można zweryfikować certyfikatu aplikacji. | Upewnij się, że używana wersja aplikacji jest aktualna. <br><br> Zainstaluj aplikację ponownie.
 **Błąd**: Ta aplikacja napotkała problem i musi zostać zamknięta. Jeśli ten błąd będzie się powtarzać, skontaktuj się z administratorem działu IT. | Nie można odczytać numeru PIN aplikacji MAM z pęku kluczy systemu Apple iOS. | Uruchom urządzenie ponownie. Upewnij się, że używana wersja aplikacji jest aktualna. <br><br> Zainstaluj aplikację ponownie.
@@ -103,6 +111,7 @@ Okno dialogowe/komunikat o błędzie | Przyczyna | Korekty |
 ## <a name="next-steps"></a>Następne kroki
 
 - [Weryfikowanie konfiguracji zarządzania aplikacjami mobilnymi](app-protection-policies-validate.md)
+- Informacje na temat rozwiązywania problemów z zasadami Intune App Protection przy użyciu plików dzienników można znaleźć w temacie[https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-Intune-app-protection-policy-using/ba-p/330372](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-Intune-app-protection-policy-using/ba-p/330372)
 - Aby uzyskać dodatkowe informacje dotyczące rozwiązywania problemów z usługą Intune, zobacz [Korzystanie z portalu rozwiązywania problemów, aby pomóc użytkownikom w firmie](help-desk-operators.md). 
 - Dowiedz się więcej o wszelkich znanych problemach w usłudze Microsoft Intune. Aby uzyskać więcej informacji, zobacz [Znane problemy w usłudze Microsoft Intune](known-issues.md).
 - Potrzebujesz dodatkowej pomocy? Zobacz [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](get-support.md).
