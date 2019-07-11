@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 07/01/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,26 +17,27 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0bf75aca7035eb2873f84f76d3c9ee0e00df7fb3
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 81e50c3f79ffe9a3b9bc8068d49ba966c35dbbfd
+ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67494530"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67649100"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Wdrażanie urządzeń przyłączonych do hybrydowej usługi Azure AD przy użyciu usługi Intune i rozwiązania Windows Autopilot
 Za pomocą usługi Intune i rozwiązania Windows Autopilot można skonfigurować urządzenia przyłączone do hybrydowej usługi Azure Active Directory (Azure AD). Aby to zrobić, wykonaj kroki opisane w tym artykule.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Pomyślnie skonfigurowano [urządzenia przyłączone do hybrydowej usługi Azure AD](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan). [Sprawdzono rejestrację urządzenia]( https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains#verify-the-registration) za pomocą polecenia cmdlet Get-MsolDevice.
+Pomyślnie skonfigurowano [urządzenia przyłączone do hybrydowej usługi Azure AD](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan). [Sprawdzono rejestrację urządzenia](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains#verify-the-registration) za pomocą polecenia cmdlet Get-MsolDevice.
 
 Urządzenia, które mają zostać zarejestrowane, muszą spełniać również następujące warunki:
 - Muszą działać w systemie Windows 10 w wersji 1809 lub nowszej.
-- Muszą mieć dostęp do Internetu.
-- Muszą mieć dostęp do usługi Active Directory (połączenie sieci VPN nie jest obecnie obsługiwane).
-- Muszą przejść przez proces OOBE (Out-of-Box Experience).
+- Muszą mieć dostęp do Internetu [zgodnie z udokumentowanymi wymaganiami sieciowymi rozwiązania Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements#networking-requirements).
+- Muszą mieć dostęp do kontrolera domeny usługi Active Directory, więc muszą być podłączone do sieci organizacji (w której mogą rozpoznawać rekordy DNS dla domeny usługi AD i kontrolera domeny usługi AD oraz komunikować się z kontrolerem domeny w celu uwierzytelnienia użytkownika. Połączenie sieci VPN obecnie nie jest obsługiwane).
 - Muszą mieć możliwość wykonania polecenie ping względem kontrolera domeny, do której chcesz dołączyć.
+- Jeśli używasz serwera proxy, należy włączyć i skonfigurować opcję ustawień serwera proxy WPAD.
+- Muszą przejść przez proces OOBE (Out-of-Box Experience).
 
 ## <a name="set-up-windows-10-automatic-enrollment"></a>Konfigurowanie automatycznego rejestrowania urządzeń z systemem Windows 10
 
@@ -139,7 +140,7 @@ Jeśli w środowisku sieciowym znajduje się internetowy serwer proxy, upewnij s
 
 1. Jeśli jako typ członkostwa wybrano pozycję **Urządzenie dynamiczne**, to w bloku **Grupa** wybierz pozycję **Dynamiczne urządzenia członkowskie**, a następnie w polu **Reguła zaawansowana** wykonaj jedną z poniższych czynności:
     - Aby utworzyć grupę obejmującą wszystkie urządzenia rozwiązania Autopilot, wprowadź `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`.
-    - Pole tagu grupy usługi Intune jest mapowane na atrybut OrderID urządzenia w usłudze Azure AD. Aby utworzyć grupę obejmującą wszystkie urządzenia rozwiązania Autopilot z określonym tagiem grupy (OrderID), trzeba wpisać:  `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
+    - Pole tagu grupy usługi Intune jest mapowane na atrybut OrderID urządzenia w usłudze Azure AD. Aby utworzyć grupę obejmującą wszystkie urządzenia rozwiązania Autopilot z określonym tagiem grupy (OrderID), trzeba wpisać: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
     - Aby utworzyć grupę obejmującą wszystkie urządzenia rozwiązania Autopilot z określonym identyfikatorem zamówienia zakupu, wprowadź `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`.
     
 1. Wybierz pozycję **Zapisz**.

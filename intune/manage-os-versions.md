@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 361ef17b-1ee0-4879-b7b1-d678b0787f5a
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b490d5ff083d344a1b39d27a2298503bdfa1f130
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: bc785e7f714320d410d20e254125858f44131677
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044923"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548750"
 ---
 # <a name="manage-operating-system-versions-with-intune"></a>Zarządzanie wersjami systemu operacyjnego w usłudze Intune
 Na nowoczesnych platformach urządzeń przenośnych i komputerów ważne aktualizacje, poprawki i nowe wersje pojawiają się bardzo często. Aktualizacjami i poprawkami dla systemu Windows możesz zarządzać w pełni, ale w przypadku systemów iOS i Android wymagane jest uczestnictwo użytkowników końcowych w tym procesie.  Usługa Microsoft Intune ma funkcje pomagające uporządkować zarządzanie wersjami systemów operacyjnych na różnych platformach.
@@ -77,7 +77,7 @@ Z funkcji usługi Intune opisanych w tym artykule można korzystać, aby przejś
 - **Krok 1**. Użyj ograniczeń rejestrowania, aby wymagać systemu operacyjnego v2 jako minimalnej wersji koniecznej do zarejestrowania urządzenia. Zagwarantuje to, że nowe urządzenia użytkowników końcowych będą zgodne w chwili rejestracji.
 - **Krok 2a**. Użyj zasad ochrony aplikacji usługi Intune, aby po otwarciu aplikacji lub wznowieniu jej działania ostrzegać użytkowników, że wymagany jest system operacyjny v2.
 - **Krok 2b**. Użyj zasad zgodności urządzeń, aby wymagać systemu operacyjnego v2 jako minimalnej wersji do zgodności urządzenia. Użyj **akcji** dotyczących braku zgodności, aby zezwolić na 7-dniowy okres prolongaty i wysłać do użytkowników końcowych powiadomienie e-mail z osią czasu i wymaganiami.
-  -  Te zasady będą informować użytkowników końcowych o konieczności zaktualizowania istniejących urządzeń za pośrednictwem poczty e-mail, w Portalu firmy usługi Intune i podczas otwierania aplikacji z obsługą zasad ochrony aplikacji.
+  - Te zasady będą informować użytkowników końcowych o konieczności zaktualizowania istniejących urządzeń za pośrednictwem poczty e-mail, w Portalu firmy usługi Intune i podczas otwierania aplikacji z obsługą zasad ochrony aplikacji.
   - Aby zobaczyć, którzy użytkownicy są niezgodni, można uruchomić raport zgodności. 
 - **Krok 3a**. Użyj zasad ochrony aplikacji usługi Intune, aby zablokować użytkowników urządzeń bez systemu operacyjnego v2 po uruchomieniu aplikacji lub wznowieniu jej działania.
 - **Krok 3b**. Użyj zasad zgodności urządzeń, aby wymagać systemu operacyjnego v2 jako minimalnej wersji do zgodności urządzenia.

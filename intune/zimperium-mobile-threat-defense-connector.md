@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c0dc8d7cca42898db92412e2cec41252a9a9a4d4
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 39c3b606033ca8575e079bef9a627b087a3d3318
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67046102"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572461"
 ---
 # <a name="zimperium-mobile-threat-defense-connector-with-intune"></a>Łącznik rozwiązania Zimperium Mobile Threat Defense z usługą Intune
 
@@ -44,11 +44,11 @@ Poniżej znajduje się kilka scenariuszy dotyczących integracji rozwiązania Zi
 
 Po wykryciu na urządzeniach złośliwego oprogramowania możesz zablokować na nich następujące funkcje do czasu usunięcia zagrożenia:
 
--   Łączenie z firmową pocztą e-mail
+- Łączenie z firmową pocztą e-mail
 
--   Synchronizowanie plików firmowych za pomocą aplikacji OneDrive do pracy
+- Synchronizowanie plików firmowych za pomocą aplikacji OneDrive do pracy
 
--   Uzyskiwanie dostępu do aplikacji firmowych
+- Uzyskiwanie dostępu do aplikacji firmowych
 
 **Blokowanie po wykryciu złośliwych aplikacji:**
 
@@ -60,7 +60,7 @@ Po wykryciu na urządzeniach złośliwego oprogramowania możesz zablokować na 
 
 ### <a name="control-access-based-on-threat-to-network"></a>Kontrola dostępu oparta na zagrożeniu dla sieci
 
-Wykrywanie w sieci zagrożeń, takich jak ataki typu  **Man-in-the-middle** , i ochrona dostępu do sieci Wi-Fi na podstawie ryzyka dotyczącego urządzeń.
+Wykrywanie w sieci zagrożeń, takich jak ataki typu **Man-in-the-middle**, i ochrona dostępu do sieci Wi-Fi w oparciu o ryzyko dotyczące urządzenia.
 
 **Blokowanie dostępu do sieci za pośrednictwem sieci Wi-Fi:**
 
@@ -72,7 +72,7 @@ Wykrywanie w sieci zagrożeń, takich jak ataki typu  **Man-in-the-middle** , 
 
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Kontrola dostępu do usługi SharePoint Online oparta na zagrożeniu dla sieci
 
-Wykrywanie w sieci zagrożeń, takich jak ataki typu  **Man-in-the-middle** , i blokowanie synchronizacji plików firmowych na podstawie ryzyka dotyczącego urządzeń.
+Wykrywanie w sieci zagrożeń, takich jak ataki typu **Man-in-the-middle**, i blokowanie synchronizacji plików firmowych w oparciu o ryzyko dotyczące urządzenia.
 
 **Blokowanie usługi SharePoint Online po wykryciu zagrożeń sieciowych:**
 
@@ -84,19 +84,19 @@ Wykrywanie w sieci zagrożeń, takich jak ataki typu  **Man-in-the-middle** , 
 
 ## <a name="supported-platforms"></a>Obsługiwane platformy
 
--   **Android 4.1 i nowsze**
+- **Android 4.1 i nowsze**
 
--   **iOS 8 i nowsze**
+- **iOS 8 i nowsze**
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
--   Azure Active Directory Premium
+- Azure Active Directory Premium
 
--   Subskrypcja usługi Microsoft Intune
+- Subskrypcja usługi Microsoft Intune
 
--   Subskrypcja usługi Zimperium Mobile Threat Defense
+- Subskrypcja usługi Zimperium Mobile Threat Defense
 
-    -   Aby uzyskać więcej informacji, odwiedź  [witrynę internetową Zimperium](https://www.zimperium.com/zips-mobile-ips).
+    - Aby uzyskać więcej informacji, odwiedź [witrynę internetową Zimperium](https://www.zimperium.com/zips-mobile-ips).
 
 ## <a name="next-steps"></a>Następne kroki
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 095c2ee0aba0680de0c5fc55c1406dba41111b92
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 00712b891790fbf437e9fed024f7610f37fee129
+ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67527443"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67648708"
 ---
 # <a name="assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Przypisywanie aplikacji usługi Office 365 do urządzeń z systemem Windows 10 przy użyciu usługi Microsoft Intune
 
@@ -42,6 +42,7 @@ Aby móc przypisywać, monitorować, konfigurować lub zabezpieczać aplikacje, 
 - Ta metoda instalacji nie jest obsługiwana na urządzeniach z systemem Windows 10 S, Windows Home, Windows Team, Windows Holographic lub Windows Holographic for Business.
 - Usługa Intune nie obsługuje instalowania aplikacji komputerowych usługi Office 365 ze sklepu Microsoft Store (znanych jako aplikacje pakietu Office Centennial) na urządzeniach, na których już wdrożono aplikacje usługi Office 365 przy użyciu usługi Intune. Jeśli zainstalujesz tę konfigurację, może dojść do utraty lub uszkodzenia danych.
 - Wielokrotne wymagane lub dostępne przypisania aplikacji nie są dodawane. Nowsze przypisanie aplikacji spowoduje zastąpienie zainstalowanych wcześniej przypisań aplikacji. Jeśli na przykład pierwszy zestaw aplikacji pakietu Office zawiera program Word, a późniejszy go nie zawiera, program Word zostanie odinstalowany. Ten warunek nie dotyczy aplikacji Visio ani Project.
+- Wielokrotne wdrożenia usługi Office 365 nie są obecnie obsługiwane. Na urządzenie można dostarczyć tylko jedno wdrożenie.
 - **Wersja pakietu Office**: wybierz, czy chcesz przypisać 32-bitową, czy 64-bitową wersję pakietu Office. Wersję 32-bitową można zainstalować na urządzeniach 32-bitowych i 64-bitowych, ale wersję 64-bitową można zainstalować tylko na urządzeniach 64-bitowych.
 - **Usuń plik MSI z urządzeń użytkownika końcowego** — wybierz, czy chcesz usunąć wcześniej istniejące aplikacje MSI pakietu Office z urządzeń użytkownika końcowego. Instalacja nie powiedzie się, jeśli na urządzeniach użytkownika końcowego są wcześniej istniejące aplikacje MSI. Aplikacje do odinstalowania nie są ograniczone tylko do aplikacji wybranych do instalacji w okienku **Konfigurowanie pakietu aplikacji**, ponieważ zostaną usunięte wszystkie aplikacje pakietu Office (MSI) na urządzeniu użytkownika końcowego. Aby uzyskać więcej informacji, zobacz [Remove existing MSI versions of Office when upgrading to Office 365 ProPlus (Usuwanie istniejących wersji MSI pakietu Office podczas uaktualniania do usługi Office 365 ProPlus)](https://docs.microsoft.com/deployoffice/upgrade-from-msi-version). Podczas ponownego instalowania pakietu Office na maszynach użytkowników końcowych przez usługę Intune użytkownicy końcowi automatycznie uzyskają te same pakiety językowe, które mieli z poprzednimi instalacjami MSI pakietu Office.
 
@@ -142,7 +143,14 @@ Po wybraniu opcji **Wprowadź dane XML** z listy rozwijanej **Format ustawień**
 
 Po zakończeniu w okienku **Dodawanie aplikacji** wybierz pozycję **Dodaj**. Utworzona aplikacja jest wyświetlana na liście aplikacji.
 
+## <a name="troubleshooting"></a>Rozwiązywanie problemów
+Usługa Intune używa [narzędzia wdrażania pakietu Office](https://docs.microsoft.com/DeployOffice/overview-of-the-office-2016-deployment-tool) do pobrania i wdrożenia usługi Office 365 ProPlus do komputerów klienckich przy użyciu [sieci CDN usługi Office 365](https://docs.microsoft.com/office365/enterprise/content-delivery-networks). Skorzystaj z najlepszych rozwiązań opisanych w temacie [Managing Office 365 endpoints](https://docs.microsoft.com/office365/enterprise/managing-office-365-endpoints) (Zarządzanie punktami końcowymi usługi Office 365), aby upewnić się, że konfiguracja sieci umożliwia klientom bezpośredni dostęp do sieci CDN zamiast kierowania ruchu CDN za pośrednictwem centralnych serwerów proxy, co pozwoli uniknąć niepotrzebnego opóźnienia.
+
+Jeśli wystąpią problemy podczas instalacji lub w czasie wykonywania, uruchom program [Asystent odzyskiwania i pomocy technicznej firmy Microsoft dla usługi Office 365 ](https://diagnostics.office.com) na urządzeniu docelowym.
+
 ## <a name="errors-during-installation-of-the-app-suite"></a>Błędy podczas instalacji pakietu aplikacji
+
+Informacje na temat wyświetlania pełnych dzienników instalacji zawiera artykuł [How to enable Office 365 ProPlus ULS logging](https://blogs.technet.microsoft.com/odsupport/2018/06/18/how-to-enable-office-365-proplus-uls-logging) (Jak włączyć rejestrowanie zdarzeń usługi Office 365 ProPlus w usłudze ULS).
 
 W poniższej tabeli przedstawiono listę kodów typowych błędów, które mogą wystąpić, oraz ich znaczenie.
 

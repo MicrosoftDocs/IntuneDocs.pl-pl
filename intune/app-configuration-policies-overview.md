@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/16/2019
+ms.date: 07/08/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec65325592fbddc29e75b1d84c94e67558faab62
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 10dad24ee41f63dcc304d95e9b733f7de3f1b71a
+ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67494055"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67649020"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Zasady konfiguracji aplikacji usługi Microsoft Intune
 
-Zasady konfiguracji aplikacji w usłudze Microsoft Intune umożliwiają określenie ustawień konfiguracji dla aplikacji systemu iOS lub Android. Dzięki tym ustawieniom konfiguracji aplikację można dostosować. Zasad konfiguracji nie można przypisywać bezpośrednio do użytkowników i urządzeń. Zamiast tego należy skojarzyć je z aplikacją, a następnie przypisać tę aplikację. Ustawienia zasad konfiguracji są stosowane, gdy aplikacja je wyszukuje (zazwyczaj podczas pierwszego uruchomienia).
+Zasady konfiguracji aplikacji w usłudze Microsoft Intune umożliwiają określenie ustawień konfiguracji dla aplikacji systemu iOS lub Android. Te ustawienia konfiguracji umożliwiają dostosowanie aplikacji przy użyciu standardowego podejścia do konfigurowania aplikacji i zarządzania nimi. Ustawienia zasad konfiguracji są stosowane, gdy aplikacja je wyszukuje (zazwyczaj podczas pierwszego uruchomienia).
 
 Zasady konfiguracji aplikacji możesz przypisać do grupy użytkowników i urządzeń za pomocą kombinacji dołączania i wykluczania przypisań. Po dodaniu zasad konfiguracji aplikacji możesz ustawić przypisania zasad konfiguracji aplikacji. Po ustawieniu przypisań dla zasad możesz dołączać i wykluczać grupy użytkowników, dla których zasady będą stosowane. Po wybraniu dołączenia co najmniej jednej grupy możesz wybrać określone grupy do dołączenia lub wybrać wbudowane grupy. Wbudowane grupy to **Wszyscy użytkownicy**, **Wszystkie urządzenia** oraz **Wszyscy użytkownicy i wszystkie urządzenia**.
 
@@ -52,9 +52,11 @@ Dostępne są dwie opcje używania konfiguracji aplikacji z usługą Intune:
 
 ## <a name="apps-that-support-app-configuration"></a>Aplikacje obsługujące konfigurację aplikacji
 
-Można używać zasad konfiguracji aplikacji w przypadku aplikacji, które je obsługują. Aby można było używać konfiguracji aplikacji w usłudze Intune, aplikacje muszą być napisane tak, aby obsługiwały korzystanie z konfiguracji aplikacji. Aby uzyskać więcej informacji, skontaktuj się z dostawcą aplikacji.
+### <a name="managed-devices"></a>Urządzenia zarządzane
+Można używać zasad konfiguracji aplikacji w przypadku aplikacji, które je obsługują. Aby można było używać konfiguracji aplikacji w usłudze Intune, aplikacje muszą być napisane tak, aby obsługiwały korzystanie z konfiguracji aplikacji w sposób zdefiniowany przez społeczność [AppConfig Community](https://www.appconfig.org/members). Aby uzyskać więcej informacji, skontaktuj się z dostawcą aplikacji.
 
-Aplikacje biznesowe można przygotować, włączając do aplikacji zestaw SDK aplikacji usługi Intune lub opakowując opracowaną aplikację. Korzystając z zestawu SDK aplikacji usługi Intune, dostępnego dla systemów iOS i Android, możesz obsługiwać zasady konfiguracji aplikacji usługi Intune w swojej aplikacji. Położono w nim nacisk na minimalizację liczby zmian kodu wymaganych od dewelopera aplikacji. Aby uzyskać więcej informacji, zobacz [Omówienie zestawu SDK aplikacji usługi Intune](app-sdk.md).
+### <a name="managed-apps"></a>Aplikacje zarządzane
+Aplikacje biznesowe można przygotować, włączając do aplikacji zestaw SDK aplikacji usługi Intune lub opakowując opracowaną aplikację. Korzystając z zestawu SDK aplikacji usługi Intune, dostępnego dla systemów iOS i Android, możesz obsługiwać zasady konfiguracji ochrony aplikacji usługi Intune w swojej aplikacji. Położono w nim nacisk na minimalizację liczby zmian kodu wymaganych od dewelopera aplikacji. Aby uzyskać więcej informacji, zobacz [Omówienie zestawu SDK aplikacji usługi Intune](app-sdk.md).
 
 ## <a name="graph-api-support-for-app-configuration"></a>Obsługa interfejsu API programu Graph w konfiguracji aplikacji
 

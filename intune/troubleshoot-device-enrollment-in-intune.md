@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c304cafa03d9a88831048a271fa4d74b17a944f
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 03b3b38819ea6bd0a34eff5b7eb8decfc2b9eb49
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528752"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548085"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Rozwiązywanie problemów dotyczących rejestrowania urządzeń w usłudze Microsoft Intune
 
@@ -84,47 +84,47 @@ Aby uniknąć osiągania górnych limitów urządzeń, pamiętaj o usuwaniu niea
 
 **Rozwiązanie:**
 
-1.  Usuń aplikację Portal firmy dla usługi Intune z urządzenia.
+1. Usuń aplikację Portal firmy dla usługi Intune z urządzenia.
 
-2.  Na urządzeniu otwórz przeglądarkę, przejdź do witryny [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) i spróbuj zalogować użytkownika.
+2. Na urządzeniu otwórz przeglądarkę, przejdź do witryny [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) i spróbuj zalogować użytkownika.
 
-3.  Jeśli użytkownik nie może się zalogować, powinien spróbować skorzystać z innej sieci.
+3. Jeśli użytkownik nie może się zalogować, powinien spróbować skorzystać z innej sieci.
 
-4.  Jeśli ten sposób również zawiedzie, sprawdź, czy poświadczenia użytkownika zostały prawidłowo zsynchronizowane z usługą Azure Active Directory.
+4. Jeśli ten sposób również zawiedzie, sprawdź, czy poświadczenia użytkownika zostały prawidłowo zsynchronizowane z usługą Azure Active Directory.
 
-5.  Jeśli logowanie użytkownika przebiegnie pomyślnie, na urządzeniu z systemem iOS zostanie wyświetlony monit o zainstalowanie aplikacji Portal firmy dla usługi Intune i zarejestrowanie. Na urządzeniu z systemem Android należy ręcznie zainstalować aplikację Portal firmy dla usługi Intune, po czym będzie można ponowić próbę rejestracji.
+5. Jeśli logowanie użytkownika przebiegnie pomyślnie, na urządzeniu z systemem iOS zostanie wyświetlony monit o zainstalowanie aplikacji Portal firmy dla usługi Intune i zarejestrowanie. Na urządzeniu z systemem Android należy ręcznie zainstalować aplikację Portal firmy dla usługi Intune, po czym będzie można ponowić próbę rejestracji.
 
 ### <a name="mdm-authority-not-defined"></a>Niezdefiniowany urząd MDM
 **Problem:** Występuje błąd **Nie zdefiniowano urzędu MDM**.
 
 **Rozwiązanie:**
 
-1.  Sprawdź, czy urząd MDM został [odpowiednio ustawiony](mdm-authority-set.md).
+1. Sprawdź, czy urząd MDM został [odpowiednio ustawiony](mdm-authority-set.md).
     
-2.  Sprawdź, czy poświadczenia użytkownika zostały prawidłowo zsynchronizowane z usługą Azure Active Directory. W centrum administracyjnym usługi Microsoft 365 możesz sprawdzić, czy nazwa UPN użytkownika jest zgodna z informacjami usługi Active Directory.
+2. Sprawdź, czy poświadczenia użytkownika zostały prawidłowo zsynchronizowane z usługą Azure Active Directory. W centrum administracyjnym usługi Microsoft 365 możesz sprawdzić, czy nazwa UPN użytkownika jest zgodna z informacjami usługi Active Directory.
     Jeśli nazwa UPN jest niezgodna z informacjami z usługi Active Directory:
 
-    1.  Wyłącz narzędzie DirSync na serwerze lokalnym.
+    1. Wyłącz narzędzie DirSync na serwerze lokalnym.
 
-    2.  Usuń niezgodnego użytkownika z listy użytkowników w **portalu konta usługi Intune** .
+    2. Usuń niezgodnego użytkownika z listy użytkowników w **portalu konta usługi Intune** .
 
-    3.  Poczekaj około jednej godziny, aby umożliwić usunięcie nieprawidłowych danych z usługi Azure.
+    3. Poczekaj około jednej godziny, aby umożliwić usunięcie nieprawidłowych danych z usługi Azure.
 
-    4.  Włącz ponownie narzędzie DirSync i sprawdź, czy użytkownik jest teraz prawidłowo synchronizowany.
+    4. Włącz ponownie narzędzie DirSync i sprawdź, czy użytkownik jest teraz prawidłowo synchronizowany.
 
-3.  W przypadku, gdy używasz usługi Intune z programem System Center Configuration Manager, sprawdź, czy użytkownik ma prawidłowy identyfikator użytkownika chmury:
+3. W przypadku, gdy używasz usługi Intune z programem System Center Configuration Manager, sprawdź, czy użytkownik ma prawidłowy identyfikator użytkownika chmury:
 
-    1.  Otwórz program SQL Management Studio.
+    1. Otwórz program SQL Management Studio.
 
-    2.  Nawiąż połączenie z odpowiednią bazą danych.
+    2. Nawiąż połączenie z odpowiednią bazą danych.
 
-    3.  Otwórz folder baz danych i znajdź, a następnie otwórz folder **CM_DBName**, gdzie DBName to nazwa bazy danych klienta.
+    3. Otwórz folder baz danych i znajdź, a następnie otwórz folder **CM_DBName**, gdzie DBName to nazwa bazy danych klienta.
 
-    4.  U góry wybierz pozycję **Nowa kwerenda** i wykonaj następujące zapytania:
+    4. U góry wybierz pozycję **Nowa kwerenda** i wykonaj następujące zapytania:
 
-        -   Aby wyświetlić wszystkich użytkowników: `select * from [CM_ DBName].[dbo].[User_DISC]`
+        - Aby wyświetlić wszystkich użytkowników:   `select * from [CM_ DBName].[dbo].[User_DISC]`
 
-        -   Aby wyświetlić konkretnych użytkowników, użyj następującego zapytania, gdzie %testuser1% jest symbolem zastępczy wartości username@domain.com dla użytkownika, którego chcesz wyszukać: `select * from [CM_ DBName].[dbo].[User_DISC] where User_Principal_Name0 like '%testuser1%'`
+        - Aby wyświetlić konkretnych użytkowników, użyj następującego zapytania, gdzie %testuser1% jest symbolem zastępczym wartości username@domain.com dla użytkownika, którego chcesz wyszukać:   `select * from [CM_ DBName].[dbo].[User_DISC] where User_Principal_Name0 like '%testuser1%'`
 
         Po zapisaniu zapytania wybierz pozycję **!Wykonaj**.
         Po zwróceniu wyników poszukaj identyfikatora użytkownika chmury.  Jeśli identyfikator nie zostanie znaleziony, oznacza to, że użytkownik nie ma licencji na korzystanie z usługi Intune.
@@ -212,13 +212,13 @@ Jeśli rozwiązanie 2 nie działa, poproś użytkowników o wykonanie poniższyc
 
 **Rozwiązanie:**
 
-1.  Upewnij się, że użytkownik ma przypisaną odpowiednią licencję dla używanej wersji usługi Intune.
+1. Upewnij się, że użytkownik ma przypisaną odpowiednią licencję dla używanej wersji usługi Intune.
 
-2.  Sprawdź, czy urządzenie nie zostało już zarejestrowane za pomocą innego dostawcy MDM.
+2. Sprawdź, czy urządzenie nie zostało już zarejestrowane za pomocą innego dostawcy MDM.
 
 3. Upewnij się, że urządzenie nie ma jeszcze zainstalowanego profilu zarządzania.
 
-4.  Upewnij się, że domyślną przeglądarką w systemie jest program Chrome dla systemu Android oraz że pliki cookie są włączone.
+4. Upewnij się, że domyślną przeglądarką w systemie jest program Chrome dla systemu Android oraz że pliki cookie są włączone.
 
 ### <a name="android-certificate-issues"></a>Problemy z certyfikatami systemu Android
 
@@ -321,15 +321,15 @@ Aby uzyskać więcej informacji, zobacz artykuł [Najlepsze rozwiązania dotycz�
 
 ### <a name="troubleshooting-steps-for-failed-profile-installation"></a>Kroki rozwiązywania problemów dotyczących niepowodzenia instalacji profilu
 
-1.  Upewnij się, że użytkownik ma przypisaną odpowiednią licencję dla używanej wersji usługi Intune.
+1. Upewnij się, że użytkownik ma przypisaną odpowiednią licencję dla używanej wersji usługi Intune.
 
-2.  Sprawdź, czy urządzenie nie zostało już zarejestrowane za pomocą innego dostawcy MDM.
+2. Sprawdź, czy urządzenie nie zostało już zarejestrowane za pomocą innego dostawcy MDM.
 
 3. Upewnij się, że urządzenie jeszcze nie ma zainstalowanego profilu zarządzania.
 
-4.  Gdy zostanie wyświetlony monit, przejdź do witryny [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) i spróbuj zainstalować profil.
+4. Gdy zostanie wyświetlony monit, przejdź do witryny [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) i spróbuj zainstalować profil.
 
-5.  Upewnij się, że domyślną przeglądarką jest program Safari dla systemu iOS oraz że pliki cookie są włączone.
+5. Upewnij się, że domyślną przeglądarką jest program Safari dla systemu iOS oraz że pliki cookie są włączone.
 
 ### <a name="enrolled-ios-device-doesnt-appear-in-console-when-using-system-center-configuration-manager-with-intune"></a>Zarejestrowane urządzenie z systemem iOS nie jest wyświetlane w konsoli podczas korzystania z programu System Center Configuration Manager z usługą Intune
 **Problem:** Użytkownik rejestruje urządzenie z systemem iOS, ale nie jest ono wyświetlane w konsoli administracyjnej programu Configuration Manager. Urządzenie nie wskazuje, że zostało zarejestrowane. Możliwe przyczyny:
@@ -428,17 +428,17 @@ Aby to zweryfikować i sprawdzić, który proces lub które konto użytkownika u
 
 #### <a name="check-how-device-was-removed"></a>Sprawdzanie sposobu usunięcia urządzenia
 
-1.  W konsoli administracyjnej programu Configuration Manager wybierz pozycje **Monitorowanie** &gt; **Stan systemu** &gt; **Kwerendy komunikatów o stanie**.
+1. W konsoli administracyjnej programu Configuration Manager wybierz pozycje **Monitorowanie** &gt; **Stan systemu** &gt; **Kwerendy komunikatów o stanie**.
 
-2.  Kliknij prawym przyciskiem myszy pozycję **Ręcznie usunięte zasoby członka kolekcji** i wybierz polecenie **Pokaż komunikaty**.
+2. Kliknij prawym przyciskiem myszy pozycję **Ręcznie usunięte zasoby członka kolekcji** i wybierz polecenie **Pokaż komunikaty**.
 
-3.  Wybierz odpowiednią datę i godzinę lub ostatnie 12 godzin.
+3. Wybierz odpowiednią datę i godzinę lub ostatnie 12 godzin.
 
-4.  Znajdź dane urządzenie i sprawdź, jak zostało ono usunięte. W poniższym przykładzie pokazano sytuację, w której konto SCCMInstall usunęło urządzenie za pomocą nieznanej aplikacji.
+4. Znajdź dane urządzenie i sprawdź, jak zostało ono usunięte. W poniższym przykładzie pokazano sytuację, w której konto SCCMInstall usunęło urządzenie za pomocą nieznanej aplikacji.
 
     ![Zrzut ekranu przedstawiający diagnostykę usuwania urządzeń](./media/troubleshoot-device-enrollment-in-intune/CM_With_Intune_Unknown_App_Deleted_Device.jpg)
 
-5.  Upewnij się, że program Configuration Manager nie ma zaplanowanego zadania, skryptu ani innego procesu, który mógłby automatycznie usuwać urządzenia nienależące do domeny, urządzenia przenośne lub pokrewne.
+5. Upewnij się, że program Configuration Manager nie ma zaplanowanego zadania, skryptu ani innego procesu, który mógłby automatycznie usuwać urządzenia nienależące do domeny, urządzenia przenośne lub pokrewne.
 
 ### <a name="other-ios-enrollment-errors"></a>Inne błędy rejestracji urządzeń z systemem iOS
 Lista błędów rejestracji urządzeń z systemem iOS znajduje się w naszej dokumentacji w artykule [Rozwiązywanie problemów z rejestracją urządzeń z systemem iOS w usłudze Microsoft Intune](https://support.microsoft.com/help/4039809/troubleshooting-ios-device-enrollment-in-intune).

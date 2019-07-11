@@ -1,7 +1,7 @@
 ---
-title: Czyszczenie danych przy użyciu akcji dostępu zasad ochrony aplikacji
+title: Czyszczenie danych przy użyciu akcji uruchamiania warunkowego zasad ochrony aplikacji
 titleSuffix: Microsoft Intune
-description: Dowiedz się, jak selektywnie czyścić dane przy użyciu akcji dostępu zasad ochrony aplikacji w usłudze Microsoft Intune.
+description: Dowiedz się, jak selektywnie czyścić dane przy użyciu akcji uruchamiania warunkowego zasad ochrony aplikacji w usłudze Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -17,26 +17,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cd323fce7f7bdbf17697c82935a9d2d5f47bb7ee
-ms.sourcegitcommit: 6e07c35145f70b008cf170bae57143248a275b67
+ms.openlocfilehash: 65115f6520122cd4b3429411db67052481984617
+ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66804685"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67558438"
 ---
-# <a name="selectively-wipe-data-using-app-protection-policy-access-actions-in-intune"></a>Selektywne czyszczenie danych przy użyciu akcji dostępu zasad ochrony aplikacji w usłudze Intune
+# <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Selektywne czyszczenie danych przy użyciu akcji uruchamiania warunkowego zasad ochrony aplikacji w usłudze Intune
 
 Za pomocą zasad ochrony aplikacji usługi Intune można skonfigurować ustawienia służące do blokowania użytkownikom końcowym dostępu do aplikacji lub konta w firmie. Te ustawienia dotyczą relokacji danych i wymagań dostępu ustawianych w Twojej organizacji i mogą być na przykład związane z urządzeniami, w przypadku których wykonano jailbreak, i minimalnymi wersjami systemu operacyjnego.
  
 Za pomocą tych ustawień możesz jawnie wyczyścić dane firmowe z urządzenia użytkownika końcowego w ramach akcji do wykonania w wyniku niezgodności. W przypadku niektórych ustawień możliwe będzie skonfigurowanie wielu akcji, takich jak blokowanie dostępu i czyszczenie danych na podstawie różnych określonych wartości.
 
-## <a name="create-an-app-protection-policy-using-access-actions"></a>Tworzenie zasad ochrony aplikacji przy użyciu akcji dostępu
+## <a name="create-an-app-protection-policy-using-conditional-launch-actions"></a>Tworzenie zasad ochrony aplikacji przy użyciu akcji uruchamiania warunkowego
 
 1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. W okienku **Intune** wybierz pozycję **Aplikacje klienckie** > **Zasady ochrony aplikacji**.
 4. Kliknij pozycję **Dodaj zasady**. Możesz również edytować istniejące zasady. 
 5. Kliknij pozycję **Skonfiguruj wymagane ustawienia**, aby wyświetlić listę ustawień dostępnych do skonfigurowania na potrzeby zasad. 
-6. Przewinięcie w dół w oknie Ustawienia spowoduje wyświetlenie sekcji o nazwie **Akcje dostępu**, w której będzie się znajdowała edytowalna tabela.
+6. Przewinięcie w dół w okienku Ustawienia spowoduje wyświetlenie sekcji o nazwie **Uruchamianie warunkowe**, w której będzie się znajdowała edytowalna tabela.
 
     ![Zrzut ekranu przedstawiający akcje dostępu zasad ochrony aplikacji usługi Intune](./media/apps-selective-wipe-access-actions01.png)
 
@@ -52,13 +52,13 @@ Tabela ustawień zasad ochrony aplikacji zawiera kolumny **Ustawienie**, **Warto
 
 ### <a name="ios-policy-settings"></a>Ustawienia zasad systemu iOS
 W przypadku systemu iOS za pomocą listy rozwijanej **Ustawienie** możliwe będzie skonfigurowanie akcji dla następujących ustawień:
--  Maksymalna liczba prób wpisania numeru PIN
--  Okres karencji w trybie offline
--  Urządzenia, w przypadku których wykonano jailbreak lub zapewniono dostęp do konta root
--  Minimalna wersja systemu operacyjnego
--  Minimalna wersja aplikacji
--  Minimalna wersja zestawu SDK
--  Modele urządzeń
+- Maksymalna liczba prób wpisania numeru PIN
+- Okres karencji w trybie offline
+- Urządzenia, w przypadku których wykonano jailbreak lub zapewniono dostęp do konta root
+- Minimalna wersja systemu operacyjnego
+- Minimalna wersja aplikacji
+- Minimalna wersja zestawu SDK
+- Modele urządzeń
 
 Aby użyć ustawienia **Modele urządzeń**, wprowadź rozdzielaną średnikami listę identyfikatorów modeli urządzeń z systemem iOS. Identyfikator modelu urządzenia z systemem iOS można znaleźć w kolumnie Typ urządzenia w [dokumentacji pomocy technicznej usługi HockeyApp](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types).<br>
 Przykładowe dane wejściowe: *iPhone5,2; iPhone5,3*
@@ -74,15 +74,15 @@ W przypadku wystąpienia konfliktu wartości skonfigurowanych dla dwóch zasad o
 ### <a name="android-policy-settings"></a>Ustawienia zasad systemu Android
 
 W przypadku systemu Android za pomocą listy rozwijanej **Ustawienie** możliwe będzie skonfigurowanie akcji dla następujących ustawień:
--  Maksymalna liczba prób wpisania numeru PIN
--  Okres karencji w trybie offline
--  Urządzenia, w przypadku których wykonano jailbreak lub zapewniono dostęp do konta root
--  Minimalna wersja systemu operacyjnego
--  Minimalna wersja aplikacji
--  Minimalna wersja poprawki
--  Producenci urządzeń
--  Zaświadczanie urządzeń SafetyNet
--  Skanowanie aplikacji pod kątem zagrożeń
+- Maksymalna liczba prób wpisania numeru PIN
+- Okres karencji w trybie offline
+- Urządzenia, w przypadku których wykonano jailbreak lub zapewniono dostęp do konta root
+- Minimalna wersja systemu operacyjnego
+- Minimalna wersja aplikacji
+- Minimalna wersja poprawki
+- Producenci urządzeń
+- Zaświadczanie urządzeń SafetyNet
+- Skanowanie aplikacji pod kątem zagrożeń
 
 Aby użyć ustawienia **Producenci urządzeń**, wprowadź rozdzielaną średnikami listę producentów urządzeń z systemem Android. Producenta urządzenia z systemem Android można znaleźć w ustawieniach urządzenia.<br>
 Przykładowe dane wejściowe: *Producent A;Producent B* 
@@ -105,9 +105,9 @@ Domyślnie w tabeli będą znajdowały się wypełnione wiersze jako ustawienia 
 Aby skonfigurować ustawienie, wybierz ustawienie z listy rozwijanej w kolumnie **Ustawienie**. Po wybraniu ustawienia w tym samym wierszu w kolumnie **Wartość** zostanie włączone edytowalne pole tekstowe, jeśli wymagane jest ustawienie wartości. Zostanie również włączona lista rozwijana w kolumnie **Akcja** zawierająca zestaw warunkowo uruchamianych akcji mających zastosowanie dla danego ustawienia. 
 
 Poniższa lista zawiera typowe akcje:
--  **Zablokuj dostęp** — zablokuj użytkownikowi końcowemu dostęp do aplikacji firmowej.
--  **Wyczyść dane** — wyczyść dane firmowe z urządzenia użytkownika końcowego.
--  **Ostrzegaj** — wyświetl okno dialogowe użytkownikowi końcowemu jako ostrzeżenie.
+- **Zablokuj dostęp** — zablokuj użytkownikowi końcowemu dostęp do aplikacji firmowej.
+- **Wyczyść dane** — wyczyść dane firmowe z urządzenia użytkownika końcowego.
+- **Ostrzegaj** — wyświetl okno dialogowe użytkownikowi końcowemu jako ostrzeżenie.
 
 W niektórych przypadkach, na przykład dla ustawienia **Minimalna wersja systemu operacyjnego**, można skonfigurować ustawienie w taki sposób, aby poszczególne odpowiednie akcje były wykonywane w zależności od numeru wersji. 
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a9a61b89f07bfacf1dc41be1412f79509e1e147d
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: c3955710dfbe57023533f737f0ae69df80f863e6
+ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66049950"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735699"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>Konfigurowanie aplikacji Microsoft Managed Home Screen dla rozwiązania Android Enterprise
 
@@ -74,12 +74,12 @@ Poniższa tabela zawiera listę dostępnych kluczy konfiguracji aplikacji Manage
 | Enable home screen feed (Włącz źródło danych ekranu głównego) | wartość logiczna | FAŁSZ | Włącza źródło danych ekranu głównego, które można zobaczyć po szybkim przesunięciu w lewo ekranu głównego. To źródło danych wyświetla zróżnicowaną zawartość, taką jak wiadomości, kalendarz, często używane aplikacje użytkownika, karta asystenta głosowego Cortana itd. Jeśli zostanie to włączone, użytkownik końcowy będzie mógł przejść do kanału informacyjnego, szybko przesuwając palcem w lewo ekran główny. |
 | Enable overview mode (Włącz tryb omówienia) | wartość logiczna | FAŁSZ | Umożliwia użytkownikom końcowym dodawanie lub usuwanie różnych stron na ekranie głównym, do których dostęp jest możliwy po szybkim przesunięciu w prawo bezpośrednio z domyślnego ekranu. Jeśli to włączysz, użytkownik końcowy będzie mógł dodać strony z prawej strony domyślnej strony ekranu głównego, będzie miał możliwość zmiany domyślnej strony, jak również będzie mógł uzyskać dostęp do ustawień na zarządzanym ekranie głównym. |
 | Enable device telemetry (Włącz telemetrię urządzenia) | wartość logiczna | FAŁSZ | Włącza wszystkie dane telemetryczne przechwytywane dla zarządzanego ekranu głównego. Jeśli to włączysz, firma Microsoft będzie mogła przechwytywać dane telemetryczne użycia urządzenia, takie jak liczba uruchomień konkretnej aplikacji na tym urządzeniu. |
-| Set whitelisted applications (Ustaw dozwolone aplikacje) | bundleArray | FAŁSZ | Umożliwia wybranie zestawu aplikacji widocznych na ekranie głównym spośród aplikacji zainstalowanych na urządzeniu. Aplikacje możesz określić, wprowadzając nazwę pakietu dla aplikacji, którą chcesz wyświetlać, na przykład com.android.settings spowoduje udostępnienie ustawień na ekranie głównym. Aplikacje dozwolone w tej sekcji powinny już być zainstalowane na urządzeniu, aby były widoczne na ekranie głównym. |
+| Set allow-listed applications (Ustaw dozwolone aplikacje) | bundleArray | FAŁSZ | Umożliwia wybranie zestawu aplikacji widocznych na ekranie głównym spośród aplikacji zainstalowanych na urządzeniu. Aplikacje możesz określić, wprowadzając nazwę pakietu dla aplikacji, którą chcesz wyświetlać — na przykład com.microsoft.emmx spowoduje udostępnienie ustawień na ekranie głównym. Aplikacje dozwolone w tej sekcji powinny już być zainstalowane na urządzeniu, aby były widoczne na ekranie głównym. |
 | Set pinned web links (Ustaw przypięte linki internetowe) | bundleArray | FAŁSZ | Umożliwia przypięcie witryn internetowych jako ikon szybkiego uruchamiania na ekranie głównym. W przypadku tej konfiguracji możesz określić adres URL i dodać go do ekranu głównego, aby użytkownik końcowy mógł go uruchomić w przeglądarce jednym naciśnięciem. |
 | Enable search bar (Włącz pasek wyszukiwania) | wartość logiczna | FAŁSZ | Włącza pasek wyszukiwania na ekranie głównym. Jeśli zostanie to włączone, użytkownicy urządzenia zobaczą pasek wyszukiwania na ekranie głównym, gdzie będą mieć możliwość wprowadzania tego, co chcą wyszukać w Internecie. |
 | Disable settings app (Wyłącz aplikację ustawień) | wartość logiczna | FAŁSZ | Wyłącza stronę ustawień dla aplikacji Managed Home Screen. Jeśli to wyłączysz, użytkownik końcowy urządzenia nie będzie mieć możliwości przejścia do ustawień aplikacji Managed Home Screen. |
 | Enable screen saver (Włącz wygaszacz ekranu) | wartość logiczna | FAŁSZ | Umożliwia włączenie lub wyłączenie trybu wygaszacza ekranu. Jeśli jest ustawiona wartość true, możesz skonfigurować wartości **screen_saver_image**, **screen_saver_show_time**, **inactive_time_to_show_screen_saver** i **media_detect_ screen_saver**. |
-| Screen saver image (Obraz wygaszacza ekranu) | ciąg |   | Ustaw adres URL obrazu wygaszacza ekranu. Jeśli nie zostanie ustawiony żaden adres URL, po uaktywnieniu wygaszacza ekranu urządzenia będą wyświetlać domyślny ekran.  |
+| Screen saver image (Obraz wygaszacza ekranu) | ciąg |   | Ustaw adres URL obrazu wygaszacza ekranu. Jeśli nie zostanie ustawiony żaden adres URL, po uaktywnieniu wygaszacza ekranu urządzenia będą wyświetlać domyślny obraz wygaszacza ekranu. Domyślny obraz pokazuje ikonę aplikacji Managed Home Screen.  |
 | Screen saver show time (Czas wyświetlania wygaszacza ekranu) | liczba całkowita | 0 | Udostępnia opcję ustawiania czasu (w sekundach) wyświetlania przez urządzenie wygaszacza ekranu w trybie wygaszacza ekranu. Jeśli ustawisz wartość 0, wygaszacz ekranu będzie widoczny przez czas nieokreślony (do chwili aktywowania urządzenia).  |
 | Inactive time to enable   screen saver (Czas nieaktywności umożliwiający włączenie wygaszacza ekranu) | liczba całkowita | 30 | Liczba sekund, przez które urządzenie jest nieaktywne przed wyzwoleniem wygaszacza ekranu. Jeśli ustawisz wartość 0, urządzenie nigdy nie przejdzie w tryb wygaszacza ekranu. |
 | Media detect before showing screen saver (Wykrywanie multimediów przed pokazaniem wygaszacza ekranu) | wartość logiczna | PRAWDA | Wybierz, czy ekran urządzenia ma wyświetlać wygaszacz ekranu, jeśli na urządzeniu jest odtwarzane nagranie audio/wideo. Jeśli ustawisz wartość true, urządzenie nie będzie odtwarzać nagrania audio/wideo niezależnie od wartości **inactive_time_to_show_scree_saver**. Jeśli ustawisz wartość false, ekran urządzenia pokaże wygaszacz ekranu zgodnie z ustawioną wartością **inactive_time_to_show_screen_saver**.   |
@@ -89,6 +89,9 @@ Poniższa tabela zawiera listę dostępnych kluczy konfiguracji aplikacji Manage
 | Exit lock task mode password (Hasło wyjścia z trybu blokady zadania) | ciąg |   | Wprowadź 4-6-cyfrowy kod pozwalający na czasowe wyjście z trybu blokady zadania w celu rozwiązania problemu. |
 | Show Wi-Fi setting (Pokaż ustawienia sieci Wi-Fi) | wartość logiczna | FAŁSZ | Ustawienie wartości `True` dla tego ustawienia umożliwia użytkownikowi końcowemu włączanie lub wyłączanie sieci Wi-Fi oraz nawiązywanie połączenia z innymi sieciami Wi-Fi.  |
 | Show Bluetooth setting (Pokaż ustawienia funkcji Bluetooth) | wartość logiczna | FAŁSZ | Ustawienie wartości `True` dla tego ustawienia umożliwia użytkownikowi końcowemu włączanie lub wyłączanie funkcji Bluetooth oraz nawiązywanie połączenia z różnymi urządzeniami obsługującymi łączność Bluetooth.   |
+| Applications in folder are ordered by name (Aplikacje w folderze są uporządkowane według nazwy) | wartość logiczna | PRAWDA | Ustawienie wartości `False` dla tego ustawienia powoduje, że elementy w folderze będą wyświetlane w kolejności, w której są określone. W przeciwnym razie będą wyświetlane w kolejności alfabetycznej.   |
+| Application order enabled (Kolejność aplikacji włączona) | wartość logiczna | FAŁSZ | Ustawienie wartości `True` dla tego ustawienia umożliwia włączenie funkcji określania kolejności aplikacji, linków internetowych i folderów w aplikacji Managed Home Screen. Po włączeniu tego ustawienia należy ustawić kolejność za pomocą ustawienia **app_order**.   |
+| Application order (Kolejność aplikacji) | bundleArray | FAŁSZ | Umożliwia określenie kolejności aplikacji, linków internetowych i folderów w aplikacji Managed Home Screen. Aby można było korzystać z tego ustawienia, opcja **Lock Home Screen** (Blokuj ekran główny) musi być włączona, opcja **Set grid size** (Ustaw rozmiar siatki) musi być określona oraz opcja **Application order enabled** (Kolejność aplikacji włączona) musi być ustawiona na `True`.   |
 
 ## <a name="enter-json-data"></a>Wprowadzanie danych JSON
 
@@ -111,10 +114,6 @@ Poniżej przedstawiono przykładowy skrypt JSON zawierający wszystkie dostępne
     "kind": "androidenterprise#managedConfiguration",
     "productId": "com.microsoft.launcher.enterprise",
     "managedProperty": [
-        {
-            "key": "grid_size",
-            "valueString": "Auto"
-        },
         {
             "key": "keep_page_header",
             "valueBool": true
@@ -238,6 +237,87 @@ Poniżej przedstawiono przykładowy skrypt JSON zawierający wszystkie dostępne
             "valueBool": false
         },
         {
+            "key": "grid_size",
+            "valueString": "4;5"
+        },
+        {
+            "key": "app_order_enabled",
+            "valueBool": true
+        },
+        {
+            "key": "apps_in_folder_ordered_by_name",
+            "valueBool": true
+        },
+        {
+            "key": "app_orders",
+            "valueBundleArray": [
+                {
+                    "managedProperty": [
+                        {
+                            "key": "package",
+                            "valueString": "com.Microsoft.emmx"
+                        },
+                        {
+                            "key": "type",
+                            "valueString": "application"
+                        },
+                        {
+                            "key": "container",
+                            "valueInteger": 1
+                        },
+                        {
+                            "key": "position",
+                            "valueInteger": 1
+                        }
+                    ]
+                },
+                {
+                    "managedProperty": [
+                        {
+                            "key": "folder_name",
+                            "valueString": "Work"
+                        },
+                        {
+                            "key": "type",
+                            "valueString": "managed_folder"
+                        },
+                        {
+                            "key": "container",
+                            "valueInteger": 1
+                        },
+                        {
+                            "key": "position",
+                            "valueInteger": 2
+                        }
+                    ]
+                },
+                {
+                    "managedProperty": [
+                        {
+                            "key": "package",
+                            "valueString": "com.microsoft.launcher.enterprise"
+                        },
+                        {
+                            "key": "type",
+                            "valueString": "application"
+                        },
+                        {
+                            "key": "class",
+                            "valueString": "com.microsoft.launcher.launcher"
+                        },
+                        {
+                            "key": "container",
+                            "valueInteger": 1
+                        },
+                        {
+                            "key": "position",
+                            "valueInteger": 3
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "key": "managed_folders",
             "valueBundleArray": [
                 {
@@ -302,8 +382,8 @@ Poniżej przedstawiono przykładowy skrypt JSON zawierający wszystkie dostępne
         }
     ]
 }
-
 ```
+
 ## <a name="next-steps"></a>Następne kroki
 
 - Aby uzyskać więcej informacji o urządzeniach dedykowanych dla rozwiązania Android Enterprise, zobacz [Konfigurowanie rejestracji urządzeń dedykowanych dla rozwiązania Android Enterprise w usłudze Intune](android-kiosk-enroll.md).
