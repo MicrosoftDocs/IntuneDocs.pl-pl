@@ -1,7 +1,7 @@
 ---
-title: Archiwum — ustawienia linie bazowe zabezpieczeń zarządzania urządzeniami Przenośnymi usługi Intune dla systemu Windows 10
+title: Archiwum — ustawienia linii bazowych zabezpieczeń MDM usługi Intune dla systemu Windows 10
 titleSuffix: Microsoft Intune
-description: Archiwum poprzednich wersji systemu linii bazowej zabezpieczeń MDM do zarządzania systemem Windows 10 w usłudze Microsoft Intune
+description: Archiwum wcześniejszych wersji wydania ustawień linii bazowej zabezpieczeń MDM na potrzeby zarządzania systemem Windows 10 z Microsoft Intune
 author: brenduns
 ms.author: brenduns
 manager: dougeby
@@ -16,29 +16,29 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8e83aa6b13f192da87a78690b0040e545d8943e
-ms.sourcegitcommit: 690e680e854b7d707421c5e06f134e493f4f4194
+ms.openlocfilehash: bb6cd7b1d717cd289b65e1e05566bd07471ad84f
+ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67418962"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735791"
 ---
 <!-- This article contains the exact baseline details for baseline versions that were previously published in security-baseline-settings-mdm.md.  -->
 
-# <a name="archive-of-mdm-security-baseline-settings"></a>Archiwum ustawienia linii bazowej zabezpieczeń zarządzania urządzeniami Przenośnymi  
+# <a name="archive-of-mdm-security-baseline-settings"></a>Archiwum ustawień linii bazowej zabezpieczeń MDM  
 
-Wyświetl szczegóły zarchiwizowane wersje linii bazowej zabezpieczeń zarządzania urządzeniami Przenośnymi usługi Intune.  
+Wyświetl szczegóły zarchiwizowanych wersji linii bazowej zabezpieczeń MDM dla usługi Intune.  
 
-Gdy zwalnia nowej linii bazowej zabezpieczeń zarządzania urządzeniami Przenośnymi, na poprzedniej liście ustawień przenosi się z artykułem ustawienia linii bazowej zabezpieczeń na to archiwum. To archiwum są udostępniane ułatwiają zrozumienie wartości domyślne dla starszych wersji linii bazowej i te wersje są nadal obsługiwane do użytku.
+W przypadku nowych wersji linii bazowej zabezpieczeń MDM poprzednią listę ustawień przenoszone z artykułu ustawienia linii bazowej zabezpieczeń do tego archiwum. Te wersje nadal są obsługiwane, a to archiwum jest udostępniane, aby pomóc w zrozumieniu ustawień domyślnych dla starszych wersji linii bazowej.
 
-Gdy w wersji linii bazowej nie jest przeznaczony do użytku, następnie zostaną usunięte z tego artykułu.
+Jeśli wersja linii bazowej nie jest już obsługiwana, zostanie usunięta z tego artykułu.
 
-- Wyświetl ustawienia, które są dostępne w [bieżącej linii bazowej zabezpieczeń zarządzania urządzeniami Przenośnymi](security-baseline-settings-mdm.md) 
-- Dowiedz się więcej o [wartości bazowych zabezpieczeń](security-baselines.md)oraz sposobu uaktualniania wersji linii bazowej w profilach linii bazowej zabezpieczeń.
+- Wyświetlanie ustawień dostępnych w [bieżącej linii bazowej zabezpieczeń MDM](security-baseline-settings-mdm.md) 
+- Dowiedz [się więcej o](security-baselines.md)punktach odniesienia zabezpieczeń oraz jak uaktualnić wersję bazową w profilach linii bazowej zabezpieczeń.
 
 ## <a name="preview-mdm-security-baseline-for-october-2018"></a>Wersja zapoznawcza: punkt odniesienia zabezpieczeń oprogramowania MDM z października 2018 r.  
 
-*Ten punkt odniesienia został zastąpiony przez [linii bazowej zabezpieczeń zarządzania urządzeniami Przenośnymi dla platformy Spring 2019 r (19 godz. 1)](security-baseline-settings-mdm.md)*
+*Ta linia bazowa jest zastępowana [przez linię bazową zabezpieczeń MDM dla sprężyny 2019 (19H1)](security-baseline-settings-mdm.md)*
 
 ### <a name="above-lock"></a>Wyłączona blokada  
 
@@ -261,38 +261,38 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
   **Domyślne**: Tak  
   
-    Jeśli pozycja *Wymagaj hasła* została ustawiona na *Tak*, są dostępne następujące ustawienia.
+  Jeśli pozycja *Wymagaj hasła* została ustawiona na *Tak*, są dostępne następujące ustawienia.
 
-    - **Minimalna liczba zestawów znaków hasła**  
-      Liczba typów elementów (dużych i małych liter, liczb oraz znaków interpunkcyjnych) wymaganych do uznania hasła lub numeru PIN za silne. Numer PIN wymusza następujące zachowanie na komputerach stacjonarnych i urządzeniach przenośnych: 1 — Tylko cyfry 2 — Cyfry i małe litery są wymagane 3 — Cyfry, małe i wielkie litery są wymagane. Nie jest obsługiwane przez klasyczne konta Microsoft i konta domen. 4 — Cyfry, małe i wielkie litery oraz znaki specjalne są wymagane. Nieobsługiwane w wersji klasycznej. Wartość domyślna to 1. 
-      
-      **Domyślne**: 3  
+  - **Minimalna liczba zestawów znaków hasła**  
+    Liczba typów elementów (dużych i małych liter, liczb oraz znaków interpunkcyjnych) wymaganych do uznania hasła lub numeru PIN za silne. Numer PIN wymusza następujące zachowanie na komputerach stacjonarnych i urządzeniach przenośnych: 1 — Tylko cyfry 2 — Cyfry i małe litery są wymagane 3 — Cyfry, małe i wielkie litery są wymagane. Nie jest obsługiwane przez klasyczne konta Microsoft i konta domen. 4 — Cyfry, małe i wielkie litery oraz znaki specjalne są wymagane. Nieobsługiwane w wersji klasycznej. Wartość domyślna to 1. 
+    
+    **Domyślne**: 3  
   
-    - **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia**  
-      Liczba dozwolonych błędów uwierzytelniania przed wyczyszczeniem urządzenia. Wartość 0 powoduje wyłączenie funkcji czyszczenia urządzenia.
-        
-      **Domyślne**: 10  
+  - **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia**  
+    Liczba dozwolonych błędów uwierzytelniania przed wyczyszczeniem urządzenia. Wartość 0 powoduje wyłączenie funkcji czyszczenia urządzenia.
+    
+    **Domyślne**: 10  
   
-    - **Dni do wygaśnięcia hasła**  
-      Ustawienie zasad maksymalnego wieku hasła określa, jak długo (w dniach) można używać hasła, zanim system będzie wymagać od użytkownika zmiany hasła. Możesz ustawić, aby hasła wygasały po pewnej liczbie dni (od 1 do 999), lub aby nigdy nie wygasały (ustawienie 0 dni). Jeśli maksymalny wiek hasła wynosi od 1 do 999 dni, minimalny wiek hasła musi być mniejszy niż maksymalny wiek hasła. Jeśli maksymalny wiek hasła jest równy 0, minimalny wiek hasła może być dowolną wartością od 0 do 998 dni.
-      
-      **Domyślne**: 60  
+  - **Dni do wygaśnięcia hasła**  
+    Ustawienie zasad maksymalnego wieku hasła określa, jak długo (w dniach) można używać hasła, zanim system będzie wymagać od użytkownika zmiany hasła. Możesz ustawić, aby hasła wygasały po pewnej liczbie dni (od 1 do 999), lub aby nigdy nie wygasały (ustawienie 0 dni). Jeśli maksymalny wiek hasła wynosi od 1 do 999 dni, minimalny wiek hasła musi być mniejszy niż maksymalny wiek hasła. Jeśli maksymalny wiek hasła jest równy 0, minimalny wiek hasła może być dowolną wartością od 0 do 998 dni.
+    
+    **Domyślne**: 60  
   
-    - **Wymagany typ hasła**  
-      Określa wymagany typ numeru PIN lub hasła.
-      
-      **Domyślne**: Alfanumeryczne  
+  - **Wymagany typ hasła**  
+    Określa wymagany typ numeru PIN lub hasła.
+    
+    **Domyślne**: Alfanumeryczne  
   
-    - **Minimalna długość hasła**  
-      Ustawienie zasad minimalnej długości hasła określa najmniejszą dozwoloną liczbę znaków hasła konta użytkownika. Możesz ustawić wartość z zakresu od 1 do 14 znaków lub określić, że hasło nie jest wymagane, przez ustawienie wartości 0 znaków.
-      
-      **Domyślne**: 8  
-  
-    - **Blokuj proste hasła**  
-      Określa, czy dozwolone są numery PIN i hasła, takie jak „1111” lub „1234”. W wersji klasycznej steruje również użyciem haseł obrazkowych.
-      
-      **Domyślne**: Tak  
-        *Ustawienie Tak uniemożliwia używanie prostych haseł.* 
+  - **Minimalna długość hasła**  
+    Ustawienie zasad minimalnej długości hasła określa najmniejszą dozwoloną liczbę znaków hasła konta użytkownika. Możesz ustawić wartość z zakresu od 1 do 14 znaków lub określić, że hasło nie jest wymagane, przez ustawienie wartości 0 znaków.
+    
+    **Domyślne**: 8  
+
+  - **Blokuj proste hasła**  
+    Określa, czy dozwolone są numery PIN i hasła, takie jak „1111” lub „1234”. W wersji klasycznej steruje również użyciem haseł obrazkowych.
+    
+    **Domyślne**: Tak  
+      *Ustawienie Tak uniemożliwia używanie prostych haseł.* 
 
   - **Zapobiegaj ponownemu używaniu poprzednich haseł**  
     Określa, ile haseł, których nie można użyć, ma być przechowywanych w historii. Wartość zawiera bieżące hasło użytkownika. Na przykład ustawienie *1* powoduje, że użytkownik nie może ponownie użyć swojego bieżącego hasła podczas wybierania nowego hasła. Ustawienie *5* oznacza, że użytkownik nie może ustawić nowego hasła na bieżące hasło ani na dowolne z czterech poprzednich haseł.
@@ -344,10 +344,10 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
     Określa, czy zezwalać na sugestie dotyczące aplikacji i zawartości pochodzące od innych wydawców oprogramowania w funkcjach W centrum uwagi Windows, takich jak W centrum uwagi na ekranie blokady, sugerowane aplikacje w menu Start i porady dotyczące systemu Windows. Użytkownicy mogą nadal otrzymywać sugestie dotyczące funkcji, aplikacji i usług firmy Microsoft.
       
     **Domyślne**: Tak  
-   - **Blokuj funkcje dla konsumentów**  
-      Umożliwia administratorom IT włączanie funkcji przeznaczonych zwykle tylko dla konsumentów, takich jak sugestie w menu Start, powiadomienia dotyczące członkostwa, instalacja aplikacji po uruchomieniu środowiska OOBE i kafelki przekierowania.
-      
-     **Domyślne**: Tak  
+  - **Blokuj funkcje dla konsumentów**  
+    Umożliwia administratorom IT włączanie funkcji przeznaczonych zwykle tylko dla konsumentów, takich jak sugestie w menu Start, powiadomienia dotyczące członkostwa, instalacja aplikacji po uruchomieniu środowiska OOBE i kafelki przekierowania.
+    
+    **Domyślne**: Tak  
 
 
 ### <a name="exploit-guard"></a>Exploit Guard  
@@ -1440,5 +1440,5 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
  
 ## <a name="next-steps"></a>Następne kroki  
 
-[Widok bieżącej wersji linii bazowej](security-baseline-settings-mdm.md)  
-[Uaktualnij profile służące do nowej wersji linii bazowej](security-baselines.md#change-the-baseline-instance-for-a-profile)
+[Wyświetl bieżącą wersję linii bazowej](security-baseline-settings-mdm.md)  
+[Uaktualnij profile, aby użyć nowej wersji linii bazowej](security-baselines.md#change-the-baseline-instance-for-a-profile)
