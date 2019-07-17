@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02dcaa26e51f3b8c4632aed0fbc87131cc617532
-ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
+ms.openlocfilehash: 3870918378a2b3dd115d6449c3c83d37fe8e96c5
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572281"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884875"
 ---
 # <a name="create-a-design"></a>Tworzenie projektu
 
@@ -49,47 +49,47 @@ Twoje bieżące środowisko może mieć wpływ na decyzje projektowe i powinno b
 
 - **Tożsamość w chmurze**
 
-    - Czy używasz narzędzia DirSync lub programu Azure Active Directory (AAD) Connect?
+  - Czy używasz narzędzia DirSync lub programu Azure Active Directory (AAD) Connect?
 
-    - Czy Twoje środowisko jest federacyjne?
+  - Czy Twoje środowisko jest federacyjne?
 
-    - Czy włączono uwierzytelnianie wieloskładnikowe (MFA)?
+  - Czy włączono uwierzytelnianie wieloskładnikowe (MFA)?
 
 - **Środowisko poczty e-mail**
 
-    - Czy używasz programu Exchange? Czy działa on lokalnie, czy w chmurze?
+  - Czy używasz programu Exchange? Czy działa on lokalnie, czy w chmurze?
 
-    - Czy jesteś w trakcie projektu migracji programu Exchange do chmury?
+  - Czy jesteś w trakcie projektu migracji programu Exchange do chmury?
 
 - **Bieżące rozwiązanie do zarządzania urządzeniami mobilnymi (MDM)**
 
-    - Czy obecnie używasz innych rozwiązań do zarządzania urządzeniami przenośnymi?
+  - Czy obecnie używasz innych rozwiązań do zarządzania urządzeniami przenośnymi?
 
-    - Jakich rozwiązań MDM używasz dla następujących scenariuszy przypadków użycia: firmowego i modelu „Przynieś własne urządzenie” (BYOD, Bring Your Own Device)?
+  - Jakich rozwiązań MDM używasz dla następujących scenariuszy przypadków użycia: firmowego i modelu „Przynieś własne urządzenie” (BYOD, Bring Your Own Device)?
 
-    - Z jakich możliwości korzystasz (na przykład: ustawienia urządzenia aplikacji, konfiguracje sieci Wi-Fi)?
+  - Z jakich możliwości korzystasz (na przykład: ustawienia urządzenia aplikacji, konfiguracje sieci Wi-Fi)?
 
-    - Jakie platformy urządzeń są obsługiwane?
+  - Jakie platformy urządzeń są obsługiwane?
 
-    - Przez jakie grupy i ilu użytkowników używane jest rozwiązanie do zarządzania urządzeniami przenośnymi?
+  - Przez jakie grupy i ilu użytkowników używane jest rozwiązanie do zarządzania urządzeniami przenośnymi?
 
 - **Rozwiązanie związane z certyfikatem**
 
-    - Czy wdrożone zostało rozwiązanie związane z certyfikatem?
+  - Czy wdrożone zostało rozwiązanie związane z certyfikatem?
 
-    - Jakie typy certyfikatów są używane?
+  - Jakie typy certyfikatów są używane?
 
 - **Zarządzanie systemami**
 
-    - W jaki sposób zarządzasz środowiskiem komputera PC i serwera?
+  - W jaki sposób zarządzasz środowiskiem komputera PC i serwera?
 
-    - Czy używasz programu System Center Configuration Manager? Czy używasz platformy zarządzania systemami innej firmy?
+  - Czy używasz programu System Center Configuration Manager? Czy używasz platformy zarządzania systemami innej firmy?
 
 - **Rozwiązanie sieci VPN**
 
-    - Jakie jest Twoje rozwiązanie sieci VPN?
+  - Jakie jest Twoje rozwiązanie sieci VPN?
 
-    - Czy używasz go w obu scenariuszach przypadków użycia: firmowym i BYOD?
+  - Czy używasz go w obu scenariuszach przypadków użycia: firmowym i BYOD?
 
 Upewnij się, że uwzględniono wszystkie istniejące projekty i inne plany, które mogłyby wpłynąć na Twoje środowisko podczas rejestrowania bieżącego środowiska zarządzania urządzeniami mobilnymi. Poniżej przedstawiono przykładowy sposób rejestrowania bieżącego środowiska podczas tworzenia projektu usługi Intune:
 

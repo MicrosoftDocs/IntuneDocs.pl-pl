@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 88ca608027e6509eb56fad74a8edae405fa915fa
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: c813e413d0d3447955f785e0aff1e0edd3501b6a
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549434"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882878"
 ---
 # <a name="microsoft-intune-service-description"></a>Opis usługi Microsoft Intune
 
@@ -60,24 +60,24 @@ Ponieważ ekosystem zarządzania urządzeniami przenośnymi często się zmienia
 
 - Ponadto informacje o ważnych aktualizacjach usługi są ogłaszane w Centrum wiadomości [centrum administracyjnego platformy Microsoft 365](https://admin.microsoft.com/). Jeśli zainstalujesz towarzyszącą [aplikację mobilną Office 365 Admin](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a), możesz otrzymywać powiadomienia na urządzeniu przenośnym. Dowiedz się więcej na temat sposobu pracy z [Centrum wiadomości usługi Office 365](https://support.office.com/client/results?Shownav=true&ns=O365ENTADMIN&version=15&ver=15&HelpID=O365E_MCManageUpdates).
 
-    Kilka przydatnych wskazówek:
+  Kilka przydatnych wskazówek:
 
-    - Komunikaty w Centrum wiadomości usługi Office 365 są kierowane do konkretnej grupy docelowej. To oznacza, że jeśli Twoja firma nie korzysta z oferty usługi Intune for EDU, to nie prześlemy jej komunikatów na temat usługi Intune for EDU.
+  - Komunikaty w Centrum wiadomości usługi Office 365 są kierowane do konkretnej grupy docelowej. To oznacza, że jeśli Twoja firma nie korzysta z oferty usługi Intune for EDU, to nie prześlemy jej komunikatów na temat usługi Intune for EDU.
 
-    - Komunikaty wygasają. Na przykład powiadomienie o aktualizacji usługi z linkiem do strony „Co nowego” prawdopodobnie wygaśnie przed następnym powiadomieniem o aktualizacji usługi. W przeciwnym razie powstałaby długa lista starszych wpisów, które mogłyby nie być już istotne.
+  - Komunikaty wygasają. Na przykład powiadomienie o aktualizacji usługi z linkiem do strony „Co nowego” prawdopodobnie wygaśnie przed następnym powiadomieniem o aktualizacji usługi. W przeciwnym razie powstałaby długa lista starszych wpisów, które mogłyby nie być już istotne.
 
-    - Aplikacja mobilna Office 365 Admin umożliwia przeszukiwanie wszystkich komunikatów i przekazywanie dalej powiadomienia, które chcesz udostępnić współpracownikom ze swojej organizacji.
+  - Aplikacja mobilna Office 365 Admin umożliwia przeszukiwanie wszystkich komunikatów i przekazywanie dalej powiadomienia, które chcesz udostępnić współpracownikom ze swojej organizacji.
 
-    - W obszarze Edycja preferencji Centrum wiadomości zostanie dodany przełącznik dla usługi **Intune**, aby umożliwić wyświetlanie tych komunikatów w ramach subskrypcji usługi Intune. Jeśli widzisz opcję Zarządzanie urządzeniami mobilnymi w usłudze Office 365, jest to usługa inna niż Intune.
+  - W obszarze Edycja preferencji Centrum wiadomości zostanie dodany przełącznik dla usługi **Intune**, aby umożliwić wyświetlanie tych komunikatów w ramach subskrypcji usługi Intune. Jeśli widzisz opcję Zarządzanie urządzeniami mobilnymi w usłudze Office 365, jest to usługa inna niż Intune.
 
 - Ponadto używamy dwóch blogów do przekazywania komunikatów na temat usług EMS i najlepszych rozwiązań pomocy technicznej usługi Intune:
 
-    - [Blog dotyczący pakietu Enterprise Mobility + Security](https://blogs.technet.microsoft.com/enterprisemobility/)
+  - [Blog dotyczący pakietu Enterprise Mobility + Security](https://blogs.technet.microsoft.com/enterprisemobility/)
 
-    - [Blog dotyczący pomocy technicznej usługi Intune](https://blogs.technet.microsoft.com/intunesupport/)
+  - [Blog dotyczący pomocy technicznej usługi Intune](https://blogs.technet.microsoft.com/intunesupport/)
 
->[!Note]
->Kondycję usługi Intune możesz monitorować w [centrum administracyjnym platformy Microsoft 365](https://admin.microsoft.com). Wybierz pozycję **Kondycja usługi** w lewym okienku. Można również użyć [aplikacji mobilnej Office 365 Admin](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a), aby wyświetlić informacje o kondycji usługi.
+> [!Note]
+> Kondycję usługi Intune możesz monitorować w [centrum administracyjnym platformy Microsoft 365](https://admin.microsoft.com). Wybierz pozycję **Kondycja usługi** w lewym okienku. Można również użyć [aplikacji mobilnej Office 365 Admin](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a), aby wyświetlić informacje o kondycji usługi.
 
 ## <a name="types-of-notices-microsoft-provides-about-the-intune-service"></a>Oto typy powiadomień dotyczących usługi Intune udostępniane przez firmę Microsoft
 

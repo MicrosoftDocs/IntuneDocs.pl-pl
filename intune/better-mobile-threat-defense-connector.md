@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 473de0ae24cb3ee2a9f7fbd84ef78e6c25ef6ce6
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 55d4e327d99c8987e6fdc0dea0ac046dd0dc167e
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67547288"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883805"
 ---
 # <a name="better-mobile-threat-defense-connector-with-intune"></a>Łącznik Better Mobile Threat Defense z usługą Intune
 
@@ -93,7 +93,7 @@ Wykrywanie zagrożeń dla sieci, takich jak ataki typu **Man-in-the-middle** i b
 
 - Subskrypcja usługi Better Mobile Threat Defense
 
-    - Aby uzyskać więcej informacji, zobacz [witrynę internetową usługi Better Mobile](https://www.better.mobi/).
+  - Aby uzyskać więcej informacji, zobacz [witrynę internetową usługi Better Mobile](https://www.better.mobi/).
 
 ## <a name="next-steps"></a>Następne kroki
 

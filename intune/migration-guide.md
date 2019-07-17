@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b34143e17245de61026a536cc0b8c5e8a7f80107
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 97a0d9074b8617dec2fb28ed59168e08ada57fba
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549398"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882769"
 ---
 # <a name="intune-migration-guide"></a>Przewodnik po migracji do usługi Intune
 
@@ -37,25 +37,25 @@ Ten przewodnik dzieli proces migracji na dwie fazy, z których każda obejmuje z
 
 - [Faza 1. Przygotowanie usługi Intune do zarządzania urządzeniami mobilnymi](migration-guide-prepare.md)
 
-    - [Ocena wymagań dotyczących migracji funkcji MDM](migration-guide-prepare.md#assess-mdm-requirements)
+  - [Ocena wymagań dotyczących migracji funkcji MDM](migration-guide-prepare.md#assess-mdm-requirements)
 
-    - [Konfiguracja podstawowa](migration-guide-setup.md)
+  - [Konfiguracja podstawowa](migration-guide-setup.md)
 
-    - [Konfiguracja zasad zarządzania urządzeniami i aplikacjami](migration-guide-configure-policies.md)
+  - [Konfiguracja zasad zarządzania urządzeniami i aplikacjami](migration-guide-configure-policies.md)
 
-    - [Konfiguracja zasad ochrony aplikacji](migration-guide-app-protection-policies.md)
+  - [Konfiguracja zasad ochrony aplikacji](migration-guide-app-protection-policies.md)
 
-    - [Specjalne zagadnienia dotyczące migracji](migration-guide-considerations.md)
+  - [Specjalne zagadnienia dotyczące migracji](migration-guide-considerations.md)
 
 - [Faza 2. Kampania migracji](migration-guide-campaign.md)
 
-    - [Plan komunikacji](migration-guide-communication-plan.md)
+  - [Plan komunikacji](migration-guide-communication-plan.md)
 
-    - [Wspieranie przyjęcia rozwiązania przez użytkowników końcowych przy użyciu dostępu warunkowego](migration-guide-drive-adoption.md)
+  - [Wspieranie przyjęcia rozwiązania przez użytkowników końcowych przy użyciu dostępu warunkowego](migration-guide-drive-adoption.md)
 
-    - [Typowy cykl migracji](migration-guide-cycle.md)
-        - [Monitorowanie migracji](migration-guide-cycle.md#monitoring-migration)
-        - [Zadania po migracji](migration-guide-cycle.md#post-migration)
+  - [Typowy cykl migracji](migration-guide-cycle.md)
+    - [Monitorowanie migracji](migration-guide-cycle.md#monitoring-migration)
+    - [Zadania po migracji](migration-guide-cycle.md#post-migration)
 
 ## <a name="assumptions"></a>Założenia
 

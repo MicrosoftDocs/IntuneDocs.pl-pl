@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8168cdaec4d6616b12fa4da225c84fa2d239994d
-ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
+ms.openlocfilehash: 804c6485252883672de13bf13729b28a4d7d2f94
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67648655"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883834"
 ---
 # <a name="windows-10-app-deployment-using-microsoft-intune"></a>Wdrażanie aplikacji systemu Windows 10 w usłudze Microsoft Intune 
 
@@ -47,22 +47,22 @@ Aplikacje ze sklepu Microsoft dla Firm to nowoczesne aplikacje zakupione w porta
 W zależności od typu aplikacji aplikację można zainstalować na urządzeniu z systemem Windows 10, korzystając z jednego z dwóch sposobów:
 
 - **Kontekst użytkownika**: po wdrożeniu aplikacji w kontekście użytkownika zarządzana aplikacja zostanie zainstalowana na urządzeniu tego użytkownika, gdy zaloguje się on na urządzeniu. Należy pamiętać, że instalacja aplikacji nie powiedzie się, jeśli użytkownik nie zaloguje się na urządzeniu. 
-    - Nowoczesne aplikacje biznesowe i aplikacje ze sklepu Microsoft dla Firm (zarówno w trybie online, jak i offline) mogą być wdrażane w kontekście użytkownika i będą obsługiwały zarówno wymaganą, jak i dostępną intencję.
-    - Aplikacje Win32 tworzone jako aplikacje typu **Tryb użytkownika** lub **Tryb podwójny** mogą być wdrażane w kontekście użytkownika i będą obsługiwały zarówno **wymaganą**, jak i **dostępną** intencję. 
+  - Nowoczesne aplikacje biznesowe i aplikacje ze sklepu Microsoft dla Firm (zarówno w trybie online, jak i offline) mogą być wdrażane w kontekście użytkownika i będą obsługiwały zarówno wymaganą, jak i dostępną intencję.
+  - Aplikacje Win32 tworzone jako aplikacje typu **Tryb użytkownika** lub **Tryb podwójny** mogą być wdrażane w kontekście użytkownika i będą obsługiwały zarówno **wymaganą**, jak i **dostępną** intencję. 
 - **Kontekst urządzenia**: po wdrożeniu aplikacji w kontekście urządzenia zarządzana aplikacja zostanie zainstalowana bezpośrednio na urządzeniu przez usługę Intune.
-    - Tylko nowoczesne aplikacje biznesowe oraz aplikacje ze sklepu Microsoft Store dla Firm licencjonowane offline mogą być wdrażane w kontekście urządzenia i będą obsługiwały wyłącznie wymaganą intencję.
-    - Aplikacje Win32 tworzone jako aplikacje typu **Tryb komputera** lub **Tryb podwójny** mogą być wdrażane w kontekście użytkownika i będą obsługiwały tylko **wymaganą** intencję.
+  - Tylko nowoczesne aplikacje biznesowe oraz aplikacje ze sklepu Microsoft Store dla Firm licencjonowane offline mogą być wdrażane w kontekście urządzenia i będą obsługiwały wyłącznie wymaganą intencję.
+  - Aplikacje Win32 tworzone jako aplikacje typu **Tryb komputera** lub **Tryb podwójny** mogą być wdrażane w kontekście użytkownika i będą obsługiwały tylko **wymaganą** intencję.
 
 > [!NOTE]
 > Dla aplikacji Win32 tworzonych jako aplikacje typu **Tryb podwójny** administrator musi dla wszystkich przypisań skojarzonych z tym wystąpieniem określić, czy aplikacja będzie działać jako aplikacja **trybu użytkownika**, czy aplikacja **trybu komputera**. Nie można zmienić kontekstu wdrożenia dla poszczególnych przypisań.  
 
 Po wdrożeniu aplikacji w kontekście urządzenia instalacja zakończy się powodzeniem pod warunkiem, że wskazane urządzenie obsługuje kontekst urządzenia. Ponadto wdrażanie w kontekście urządzenia podlega następującym warunkom:
 - Jeśli aplikacja jest wdrażana w kontekście urządzenia i wskazany jest użytkownik, instalacja zakończy się niepowodzeniem, a w konsoli administratora zostanie wyświetlony następujący stan i komunikat o błędzie:
-    - Stan: Niepowodzenie.
-    - Błąd: Dla użytkownika nie można przeprowadzić instalacji z kontekstu urządzenia.
+  - Stan: Niepowodzenie.
+  - Błąd: Dla użytkownika nie można przeprowadzić instalacji z kontekstu urządzenia.
 - Jeśli aplikacja jest wdrożona w kontekście urządzenia, ale wskazane jest urządzenie, które nie obsługuje kontekstu urządzenia, instalacja zakończy się niepowodzeniem, a w konsoli administratora zostanie wyświetlony następujący stan i komunikat o błędzie:
-    - Stan: Niepowodzenie.
-    - Błąd: Ta platforma nie obsługuje instalacji w kontekście urządzenia. 
+  - Stan: Niepowodzenie.
+  - Błąd: Ta platforma nie obsługuje instalacji w kontekście urządzenia. 
 
 > [!Note]
 > Po zapisaniu przypisania aplikacji w konkretnym wdrożeniu nie można zmienić kontekstu dla tego przypisania. Wyjątkiem są nowoczesne aplikacje. W przypadku nowoczesnych aplikacji można zmienić kontekst z kontekstu użytkownika na kontekst urządzenia. 

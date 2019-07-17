@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 68a0372180cf516f5a0111cd8fdb7cbd9535f075
-ms.sourcegitcommit: a97b6139770719afbd713501f8e50f39636bc202
+ms.openlocfilehash: e241dc534427b97086013a12391f06bd2f342779
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402737"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883270"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Konfigurowanie profilów sieci komórkowej karty eSIM w usłudze Intune — publiczna wersja zapoznawcza
 
@@ -160,12 +160,12 @@ Szczegółową listę urządzeń możesz wyświetlać i monitorować w obszarze 
 1. Wybierz kolejno pozycje **Konfiguracja urządzeń** > **Profile sieci komórkowej eSIM**, a następnie wybierz istniejącą subskrypcję.
 2. Wybierz pozycję **Stan urządzenia**. W usłudze Intune wyświetlane są dodatkowe informacje dotyczące urządzenia:
 
-  - **Nazwa urządzenia**: nazwa urządzenia docelowego
-  - **Użytkownik**: użytkownik zarejestrowanego urządzenia
-  - **Identyfikator ICCID**: unikatowy kod dostarczony przez operatora sieci komórkowej w ramach kodu aktywacji zainstalowanego na urządzeniu
-  - **Stan aktywacji**: stan dostarczenia i instalacji kodu aktywacji na urządzeniu w usłudze Intune
-  - **Stan sieci komórkowej**: stan dostarczony przez operatora sieci komórkowej. Skontaktuj się z operatorem sieci komórkowej, aby rozwiązać problem.
-  - **Ostatnie zaewidencjonowanie**: data ostatniej komunikacji urządzenia z usługą Intune
+    - **Nazwa urządzenia**: nazwa urządzenia docelowego
+    - **Użytkownik**: użytkownik zarejestrowanego urządzenia
+    - **Identyfikator ICCID**: unikatowy kod dostarczony przez operatora sieci komórkowej w ramach kodu aktywacji zainstalowanego na urządzeniu
+    - **Stan aktywacji**: stan dostarczenia i instalacji kodu aktywacji na urządzeniu w usłudze Intune
+    - **Stan sieci komórkowej**: stan dostarczony przez operatora sieci komórkowej. Skontaktuj się z operatorem sieci komórkowej, aby rozwiązać problem.
+    - **Ostatnie zaewidencjonowanie**: data ostatniej komunikacji urządzenia z usługą Intune
 
 #### <a name="monitor-esim-profile-details-on-the-actual-device"></a>Monitorowanie szczegółów profilu karty eSIM na urządzeniu
 

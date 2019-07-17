@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0656c199d2f6179429415161ec02ef8a9037bf6b
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 29ae889e99a843a8569782bad2b1303c7bb4304c
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548356"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882841"
 ---
 # <a name="phase-1-prepare-microsoft-intune-for-mobile-device-management-mdm"></a>Faza 1. Przygotowanie usługi Microsoft Intune do zarządzania urządzeniami przenośnymi (MDM)
 
@@ -51,8 +51,8 @@ Przed szczegółowym zapoznaniem się z zagadnieniami dotyczącymi konfigurowani
 
 - Jakie warunki użytkowania są potrzebne?
 
-    - Na tym etapie należy odpowiednio wcześnie konsultować się z działem prawnym.
-    - Jaka lokalizacja jest wymagana?
+  - Na tym etapie należy odpowiednio wcześnie konsultować się z działem prawnym.
+  - Jaka lokalizacja jest wymagana?
 
 - Czy użytkownicy są ogólnie obeznani z technologiami i rozwiązaniami informatycznymi?
 
@@ -63,8 +63,8 @@ Przed szczegółowym zapoznaniem się z zagadnieniami dotyczącymi konfigurowani
 - Jaka jest bieżąca długość kodów dostępu/kodów PIN do urządzeń?
 
 - Czy konieczne jest wyłączenie funkcji urządzeń lub nałożenie ograniczeń na wybrane elementy ich działania? Przy użyciu profilów konfiguracji urządzeń można kontrolować różne ustawienia specyficzne dla danej platformy — można na przykład:
-    - Wyłączyć aparat fotograficzny
-    - Wymusić tryb korzystania tylko z jednej aplikacji<br/>
+  - Wyłączyć aparat fotograficzny
+  - Wymusić tryb korzystania tylko z jednej aplikacji<br/>
 
 - Jakie rodzaje uwierzytelniania muszą być obsługiwane? Jeśli potrzebne jest uwierzytelnianie oparte na certyfikatach, to jakie certyfikaty należy aprowizować?
   - Usługa Intune może aprowizować certyfikaty z profilami dostępu do zasobów dla zarejestrowanych urządzeń.

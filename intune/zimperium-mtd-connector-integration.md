@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e78c9034058a5f60f01056711465b28deca77d83
-ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
+ms.openlocfilehash: 3eb18c45f81e427f1d14ce77086e0d7684994e82
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572161"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884160"
 ---
 # <a name="integrate-zimperium-with-intune"></a>Integracja rozwiązania Zimperium z usługą Intune
 
@@ -39,13 +39,13 @@ Przed rozpoczęciem procesu integracji rozwiązania Zimperium z usługą Intune 
 
 - Poświadczenia administratora globalnego usługi Azure Active Directory umożliwiające przyznanie następujących uprawnień:
 
-    - Logowanie i odczyt profilu użytkownika
+  - Logowanie i odczyt profilu użytkownika
 
-    - Dostęp do katalogu jako zalogowany użytkownik
+  - Dostęp do katalogu jako zalogowany użytkownik
 
-    - Odczyt danych katalogu
+  - Odczyt danych katalogu
 
-    - Wysyłanie informacji o urządzeniu do usługi Intune
+  - Wysyłanie informacji o urządzeniu do usługi Intune
 
 - Poświadczenia administratora służące do uzyskania dostępu do konsoli Zimperium MTD.
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 714a595263475da98a48c982e0ed24d691440097
-ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
+ms.openlocfilehash: 8cc4a109aac22617f2785a74de701e4d1d7bdf09
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572261"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67885015"
 ---
 # <a name="determine-deployment-goals-objectives-and-challenges"></a>Określanie celów, zamierzeń i wyzwań związanych z wdrożeniem
 
@@ -34,27 +34,27 @@ Cele wdrożenia to długoterminowe osiągnięcia, jakie mają być uzyskane popr
 
 - **Integracja z usługą Office 365 i obsługa korzystania z aplikacji mobilnych pakietu Office**
 
-    - **Opis:** Zapewnia ścisłą integrację z usługą Office 365 i umożliwia korzystanie z aplikacji mobilnych pakietu Office objętych ochroną aplikacji.
+  - **Opis:** Zapewnia ścisłą integrację z usługą Office 365 i umożliwia korzystanie z aplikacji mobilnych pakietu Office objętych ochroną aplikacji.
 
-    - **Wartość biznesowa:** Bezpieczne i ulepszone środowisko pracy, w którym użytkownicy mogą korzystać ze znanych i preferowanych aplikacji.
+  - **Wartość biznesowa:** Bezpieczne i ulepszone środowisko pracy, w którym użytkownicy mogą korzystać ze znanych i preferowanych aplikacji.
 
 - **Zapewnianie dostępu do wewnętrznych usług firmy na urządzeniach przenośnych**
 
-    - **Opis:** Umożliwia pracownikom produktywne działanie w każdym miejscu pracy i przy użyciu najodpowiedniejszego dla nich urządzenia. W ramach tego projektu wskazane jest umożliwienie produktywnej pracy na urządzeniach przenośnych i dostępu do danych firmowych w bezpieczny sposób.
+  - **Opis:** Umożliwia pracownikom produktywne działanie w każdym miejscu pracy i przy użyciu najodpowiedniejszego dla nich urządzenia. W ramach tego projektu wskazane jest umożliwienie produktywnej pracy na urządzeniach przenośnych i dostępu do danych firmowych w bezpieczny sposób.
 
-    - **Wartość biznesowa:** Dzięki zapewnieniu pracownikom elastyczności i możliwości pracy z dowolnego miejsca firma jest bardziej konkurencyjna i oferuje atrakcyjniejsze środowisko pracy.
+  - **Wartość biznesowa:** Dzięki zapewnieniu pracownikom elastyczności i możliwości pracy z dowolnego miejsca firma jest bardziej konkurencyjna i oferuje atrakcyjniejsze środowisko pracy.
 
 - **Zapewnianie ochrony danych na urządzeniach przenośnych**
 
-    - **Opis:** W przypadku, gdy dane są przechowywane na urządzeniu przenośnym, powinny być chronione przed złośliwą lub przypadkową utratą bądź udostępnieniem.
+  - **Opis:** W przypadku, gdy dane są przechowywane na urządzeniu przenośnym, powinny być chronione przed złośliwą lub przypadkową utratą bądź udostępnieniem.
 
-    - **Wartość biznesowa:** Ochrona danych jest niezbędna do zapewnienia stałej konkurencyjności firmy. Sprawia również, że klienci i ich dane są traktowani z najwyższą starannością.
+  - **Wartość biznesowa:** Ochrona danych jest niezbędna do zapewnienia stałej konkurencyjności firmy. Sprawia również, że klienci i ich dane są traktowani z najwyższą starannością.
 
 - **Obniżenie kosztów**
 
-    - **Opis:** Jeśli to możliwe, projekt zmniejsza koszty wdrożenia i operacyjne.
+  - **Opis:** Jeśli to możliwe, projekt zmniejsza koszty wdrożenia i operacyjne.
 
-    - **Wartość biznesowa:** Dzięki efektywnemu użyciu zasobów firma może inwestować w innych obszarach, konkurować skuteczniej i oferować klientom lepszą obsługę.
+  - **Wartość biznesowa:** Dzięki efektywnemu użyciu zasobów firma może inwestować w innych obszarach, konkurować skuteczniej i oferować klientom lepszą obsługę.
 
 ## <a name="deployment-objectives"></a>Zamierzenia wdrożenia
 
@@ -62,19 +62,19 @@ Zamierzenia wdrożenia to akcje, które organizacja może podjąć w celu osiąg
 
 - **Zmniejszenie liczby rozwiązań do zarządzania urządzeniami**
 
-    - **Implementacja:** Konsolidacja w ramach pojedynczego rozwiązania do zarządzania urządzeniami przenośnymi: usługa Microsoft Intune na potrzeby ochrony danych w aplikacjach i na urządzeniach w ramach całej firmy.
+  - **Implementacja:** Konsolidacja w ramach pojedynczego rozwiązania do zarządzania urządzeniami przenośnymi: usługa Microsoft Intune na potrzeby ochrony danych w aplikacjach i na urządzeniach w ramach całej firmy.
 
 - **Zapewnianie bezpiecznego dostępu do programu Exchange i usługi SharePoint Online**
 
-    - **Implementacja:** Zastosowanie dostępu warunkowego dla programu Exchange i usługi SharePoint Online.
+  - **Implementacja:** Zastosowanie dostępu warunkowego dla programu Exchange i usługi SharePoint Online.
 
 - **Zapobieganie przechowywaniu danych firmowych w usługach innych niż firmowe na urządzeniu mobilnym oraz przekazywaniu danych do tych usług**
 
-    - **Implementacja:** Zastosowanie zasad ochrony aplikacji w usłudze Intune dla aplikacji pakietu Microsoft Office i biznesowych.
+  - **Implementacja:** Zastosowanie zasad ochrony aplikacji w usłudze Intune dla aplikacji pakietu Microsoft Office i biznesowych.
 
 - **Oferowanie możliwości czyszczenia danych firmowych z urządzenia**
 
-    - **Implementacja:** Rejestrowanie urządzeń w usłudze Intune. Daje to możliwość wykonywania zdalnego czyszczenia danych firmowych i zasobów, gdy jest to konieczne.
+  - **Implementacja:** Rejestrowanie urządzeń w usłudze Intune. Daje to możliwość wykonywania zdalnego czyszczenia danych firmowych i zasobów, gdy jest to konieczne.
 
 ## <a name="deployment-challenges"></a>Wyzwania związane z wdrożeniem
 
@@ -82,15 +82,15 @@ Wyzwania związane z wdrożeniem to najważniejsze dla organizacji problemy, kt�
 
 - Przygotowanie do udzielania pomocy technicznej oraz środowisko użytkownika końcowego nie są uwzględnione w początkowym zakresie projektu. Prowadzi to do niechętnego przyjęcia rozwiązania przez użytkowników końcowych i stwarza wyzwania dla organizacji udzielającej pomocy technicznej.
 
-    - **Środki zaradcze:** Wprowadzenie szkoleń w zakresie pomocy technicznej. Sprawdzenie środowiska użytkownika końcowego z użyciem metryk sukcesu określonych w planie wdrożenia.
+  - **Środki zaradcze:** Wprowadzenie szkoleń w zakresie pomocy technicznej. Sprawdzenie środowiska użytkownika końcowego z użyciem metryk sukcesu określonych w planie wdrożenia.
 
 - Brak jasno określonych celów i metryk sukcesu skutkuje brakiem konkretnych wyników. Może także spowodować działanie organizacji w trybie reaktywnym w momencie wystąpienia problemów.
 
-    - **Środki zaradcze:** Zdefiniowanie celów i metryk sukcesu na wczesnym etapie projektowania i użycie tych punktów danych podczas opracowywania pozostałych faz wdrażania. Upewnij się, że cele są zgodne z zasadą SMART (są skonkretyzowane, mierzalne, osiągalne, realne i określone w czasie). Zaplanuj pomiar wyników względem celów w każdej fazie i upewnij się, że projekt wdrożenia jest realizowany zgodnie z planem.
+  - **Środki zaradcze:** Zdefiniowanie celów i metryk sukcesu na wczesnym etapie projektowania i użycie tych punktów danych podczas opracowywania pozostałych faz wdrażania. Upewnij się, że cele są zgodne z zasadą SMART (są skonkretyzowane, mierzalne, osiągalne, realne i określone w czasie). Zaplanuj pomiar wyników względem celów w każdej fazie i upewnij się, że projekt wdrożenia jest realizowany zgodnie z planem.
 
 - Pominięcie tworzenia, weryfikacji i intensywnego przekazywania zrozumiałych informacji o korzyściach odpowiadających potrzebom organizacji. Często skutkuje to ograniczonym przyjęciem rozwiązania i brakiem zwrotu z inwestycji.
 
-    - **Środki zaradcze:** Choć natychmiastowe rozpoczęcie projektu może być kuszące, upewnij się, że masz jasno zdefiniowane cele i zamierzenia. Uwzględnij te informacje we wszystkich działaniach związanych ze zwiększaniem świadomości i szkoleniach, aby ułatwić użytkownikom zrozumienie, dlaczego organizacja wybrała usługę Intune.
+  - **Środki zaradcze:** Choć natychmiastowe rozpoczęcie projektu może być kuszące, upewnij się, że masz jasno zdefiniowane cele i zamierzenia. Uwzględnij te informacje we wszystkich działaniach związanych ze zwiększaniem świadomości i szkoleniach, aby ułatwić użytkownikom zrozumienie, dlaczego organizacja wybrała usługę Intune.
 
 ## <a name="next-steps"></a>Następne kroki
 

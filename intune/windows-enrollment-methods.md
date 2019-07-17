@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: ''
-ms.openlocfilehash: cbe533e6a219adf1984c656506ceb7a3b95556ec
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 4a0df4f32513eb37bd7396d8e6249f9c6e71a4e4
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548668"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884179"
 ---
 # <a name="intune-enrollment-methods-for-windows-devices"></a>Metody rejestracji w usłudze Intune dla urządzeń z systemem Windows
 
@@ -36,8 +36,8 @@ Istnieją dwa sposoby rejestrowania urządzeń w usłudze Intune:
 Użytkownicy mogą samodzielnie rejestrować swoje urządzenia z systemem Windows za pomocą jednej z następujących metod:
 
 - [„Przynieś własne urządzenie” (BYOD, bring your own device)](https://docs.microsoft.com/intune-user-help/enroll-windows-10-device): Użytkownicy rejestrują swoje prywatne urządzenia, wybierając połączenie konta **służbowego** z obszaru **Ustawienia** urządzenia. Podczas tego procesu ma miejsce:
-    - Rejestrowanie urządzenia w usłudze Azure Active Directory w celu uzyskania dostępu do zasobów firmy, takich jak poczta e-mail.
-    - Rejestrowanie urządzenia w usłudze Intune jako urządzenie BYOD.
+  - Rejestrowanie urządzenia w usłudze Azure Active Directory w celu uzyskania dostępu do zasobów firmy, takich jak poczta e-mail.
+  - Rejestrowanie urządzenia w usłudze Intune jako urządzenie BYOD.
 Jeśli administrator skonfigurował automatyczne rejestrowanie (dostępne w przypadku subskrypcji Premium usługi Azure AD), użytkownik musi tylko raz wprowadzić swoje poświadczenia. W przeciwnym razie konieczne będzie wykonanie osobnej rejestracji tylko dla funkcji MDM i ponowne wprowadzenie poświadczeń.  
 - **Rejestracja tylko dla funkcji MDM** umożliwia użytkownikom rejestrowanie w usłudze Intune istniejącej grupy roboczej, usługi Active Directory lub komputera przyłączonego do usługi Azure Active Directory. Użytkownicy rejestrują się z poziomu ustawień na istniejącym komputerze z systemem Windows. Ta metoda nie jest zalecana, ponieważ nie powoduje zarejestrowania urządzenia w usłudze Azure Active Directory. Uniemożliwia ona również korzystanie z takich funkcji jak dostęp warunkowy.
 - [Przyłączanie do usługi Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) — przyłącza urządzenie do usługi Azure Active Directory i umożliwia użytkownikom logowanie się do systemu Windows przy użyciu poświadczeń usługi Azure AD. Jeśli włączono rejestrację automatyczną, urządzenie jest automatycznie rejestrowane w usłudze Intune. Zaletą rejestracji automatycznej jest proces wymagający wykonania tylko jednego kroku przez użytkownika. W przeciwnym razie konieczne będzie wykonanie osobnej rejestracji tylko dla funkcji MDM i ponowne wprowadzenie poświadczeń. Użytkownicy rejestrują się w ten sposób z poziomu ustawień lub podczas początkowego procesu OOBE w systemie Windows. Urządzenie jest oznaczone jako firmowe w usłudze Intune.

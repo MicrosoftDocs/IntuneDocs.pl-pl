@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91c2ab71cb393bdf885c947c8f3cd93a5bb196c3
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: a5a355c82455e135319b7683756eb0ef5c032876
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882363"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>Samouczek: Chronienie poczty e-mail usługi Exchange Online na urządzeniach zarządzanych
 Dowiedz się więcej na temat używania zasad zgodności urządzeń z dostępem warunkowym w celu zagwarantowania, że urządzenia z systemem iOS będą mogły uzyskiwać dostęp do poczty e-mail usługi Exchange Online tylko wtedy, gdy będą zarządzane przez usługę Intune i będą korzystać z zatwierdzonej aplikacji poczty e-mail. 
@@ -35,10 +35,10 @@ Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
 Jeśli nie masz subskrypcji usługi Intune, [utwórz konto bezpłatnej wersji próbnej](free-trial-sign-up.md).
 
 ## <a name="prerequisites"></a>Wymagania wstępne
-  - W tym samouczku będziesz potrzebować dzierżawy testowej z następującymi subskrypcjami:
-    - Azure Active Directory Premium ([bezpłatna wersja próbna](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
-    - Subskrypcja Office 365 Business obejmująca program Exchange ([bezpłatna wersja próbna](https://go.microsoft.com/fwlink/p/?LinkID=510938))
-  - Przed rozpoczęciem pracy utwórz profil testowy urządzenia dla urządzeń z systemem iOS, wykonując kroki opisane w przewodniku [Szybki start: Tworzenie profilu poczty e-mail urządzenia dla systemu iOS](quickstart-email-profile.md).
+- W tym samouczku będziesz potrzebować dzierżawy testowej z następującymi subskrypcjami:
+  - Azure Active Directory Premium ([bezpłatna wersja próbna](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
+  - Subskrypcja Office 365 Business obejmująca program Exchange ([bezpłatna wersja próbna](https://go.microsoft.com/fwlink/p/?LinkID=510938))
+- Przed rozpoczęciem pracy utwórz profil testowy urządzenia dla urządzeń z systemem iOS, wykonując kroki opisane w przewodniku [Szybki start: Tworzenie profilu poczty e-mail urządzenia dla systemu iOS](quickstart-email-profile.md).
 
 ## <a name="sign-in-to-intune"></a>Logowanie się do usługi Intune
 

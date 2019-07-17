@@ -14,12 +14,12 @@ ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d3b6aeb7efc60d32891f4b1c69b387a61a2bc25
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 946d46baf17a5ffdd4b567adca32b651cacb72bb
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040512"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882221"
 ---
 # <a name="intune-tenant-status-page"></a>Strona Stan dzierżawy w usłudze Intune
 Strona Stan dzierżawy pełni funkcję centrum, które udostępnia aktualne, ważne informacje o dzierżawie. Szczegółowe informacje obejmują dostępność i użycie licencji, stan łącznika oraz ważne komunikaty dotyczące usługi Intune.  
@@ -48,14 +48,14 @@ Jeśli jest więcej niż jeden łącznik dowolnego typu, stan łącznika to pods
 
 **Stan łącznika:**
 - **Zła kondycja:**
-    - Certyfikat lub poświadczenie wygasło
-    - Ostatnia synchronizacja została przeprowadzona co najmniej trzy dni temu
+  - Certyfikat lub poświadczenie wygasło
+  - Ostatnia synchronizacja została przeprowadzona co najmniej trzy dni temu
 - **Ostrzeżenie:**
-    - Certyfikat lub poświadczenie wygaśnie w ciągu siedmiu dni
-    - Ostatnia synchronizacja została przeprowadzona co najmniej jeden dzień temu
+  - Certyfikat lub poświadczenie wygaśnie w ciągu siedmiu dni
+  - Ostatnia synchronizacja została przeprowadzona co najmniej jeden dzień temu
 - **Dobra kondycja:**
-    - Certyfikat lub poświadczenie nie wygaśnie w ciągu następnych siedmiu dni
-    - Ostania synchronizacja została przeprowadzona mniej niż jeden dzień temu  
+  - Certyfikat lub poświadczenie nie wygaśnie w ciągu następnych siedmiu dni
+  - Ostania synchronizacja została przeprowadzona mniej niż jeden dzień temu  
 
 Po wybraniu łącznika na liście w portalu zostanie wyświetlona strona tworzenia lub konfigurowania tego łącznika.  Na przykład po wybraniu łącznika **Data ważności VPP** otwiera się strona **Tokeny programu Volume Purchase Program systemu iOS**, na której można wyświetlić więcej informacji na temat tego łącznika. Możesz utworzyć nową konfigurację lub edytować istniejącą i rozwiązywać problemy w niej występujące.  
 

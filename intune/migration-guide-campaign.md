@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 546d62fdea3d1b5b7ae34f1c69423bcd0adb2025
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 35c0c6e6b65350d3b27c9dc1d9ab55d375dac070
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549421"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882860"
 ---
 # <a name="phase-2-migration-campaign"></a>Faza 2. Kampania migracji
 
@@ -43,19 +43,19 @@ Oto czynniki kluczowe do pomyślnego przeprowadzenia migracji z rozwiązania MDM
 
 - W każdym cyklu należy monitorować obciążenie zespołu pomocy technicznej i śledzić wskaźnik pomyślnych rejestracji. Należy uwzględnić w harmonogramie dodatkowy czas, aby móc dokonać oceny kryteriów powodzenia dla każdej z grup przed migracją kolejnej grupy. Wdrożenie pilotażowe powinno pozwolić określić, czy:
 
-    - Wskaźniki pomyślnych rejestracji i niepowodzeń są zgodne z oczekiwaniami.
+  - Wskaźniki pomyślnych rejestracji i niepowodzeń są zgodne z oczekiwaniami.
 
-    - Produktywność użytkowników:
+  - Produktywność użytkowników:
 
-        - Zasoby firmowe, takie jak sieć VPN, sieć Wi-Fi, poczta e-mail i certyfikaty, działają prawidłowo.
+    - Zasoby firmowe, takie jak sieć VPN, sieć Wi-Fi, poczta e-mail i certyfikaty, działają prawidłowo.
 
-        - Aprowizowane aplikacje są dostępne.
+    - Aprowizowane aplikacje są dostępne.
 
-    - Bezpieczeństwo danych:
+  - Bezpieczeństwo danych:
 
-        - Raportowanie zgodności jest realizowane.
+    - Raportowanie zgodności jest realizowane.
 
-        - Zabezpieczenia aplikacji mobilnych są wymuszane.
+    - Zabezpieczenia aplikacji mobilnych są wymuszane.
 
 Jeśli pierwsza faza migracji przebiegła pomyślnie, można powtórzyć [cykl migracji](migration-guide-cycle.md) w celu przeprowadzenia kolejnej fazy.
 

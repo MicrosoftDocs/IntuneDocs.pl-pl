@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 82872ba6-80f8-4cc9-adf4-0ccd8ff26dd2
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec3685df5865d22874b68a8bf42539d37fb486d7
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: b51f310d370876058b8f1a1f872dd0b0e41bd42c
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549240"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884841"
 ---
 # <a name="integrate-pradeo-with-intune"></a>Integracja usługi Pradeo z usługą Intune
 
@@ -36,13 +36,13 @@ Przed rozpoczęciem procesu integracji rozwiązania Pradeo z usługą Intune upe
 
 - Poświadczenia administratora usługi Azure Active Directory umożliwiające przyznanie następujących uprawnień:
 
-    - Logowanie i odczyt profilu użytkownika
+  - Logowanie i odczyt profilu użytkownika
 
-    - Dostęp do katalogu jako zalogowany użytkownik
+  - Dostęp do katalogu jako zalogowany użytkownik
 
-    - Odczyt danych katalogu
+  - Odczyt danych katalogu
 
-    - Wysyłanie informacji o urządzeniu do usługi Intune
+  - Wysyłanie informacji o urządzeniu do usługi Intune
 
 - Poświadczenia administratora służące do uzyskania dostępu do konsoli zabezpieczeń Pradeo.
 

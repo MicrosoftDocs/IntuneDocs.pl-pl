@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ce08545931d3580ce5ae524b1023d2b734b88f7b
-ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
+ms.openlocfilehash: 1dc78f8126e0fa9c65fdbe70cfd909da70391e3e
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66373655"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884515"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-for-ios-devices-in-intune"></a>Konfigurowanie wirtualnej sieci prywatnej dla aplikacji na urządzeniach z systemem iOS w usłudze Intune
 
@@ -150,16 +150,16 @@ Za pomocą skonfigurowanej i skojarzonej z aplikacją sieci VPN dla aplikacji sp
 
 ### <a name="before-you-attempt-to-connect"></a>Przed podjęciem próby nawiązania połączenia
 
- - Upewnij się, że wszystkie wyżej wymienione zasady zostały wdrożone do tej samej grupy. W przeciwnym przypadku środowisko sieci VPN dla aplikacji nie będzie działać.
- - Jeśli używasz aplikacji sieci VPN połączenia Pulse Secure lub niestandardowej aplikacji klienckiej sieci VPN, możesz użyć warstwy aplikacji lub tunelowania w warstwie pakietów. Ustaw opcję **Typ dostawcy** na wartość **app-proxy** w celu tunelowania w warstwie aplikacji lub **packet-tunnel** w celu tunelowania w warstwie pakietów. Sprawdź dokumentację dostawcy sieci VPN, aby upewnić się, że używasz poprawnej wartości.
+- Upewnij się, że wszystkie wyżej wymienione zasady zostały wdrożone do tej samej grupy. W przeciwnym przypadku środowisko sieci VPN dla aplikacji nie będzie działać.
+- Jeśli używasz aplikacji sieci VPN połączenia Pulse Secure lub niestandardowej aplikacji klienckiej sieci VPN, możesz użyć warstwy aplikacji lub tunelowania w warstwie pakietów. Ustaw opcję **Typ dostawcy** na wartość **app-proxy** w celu tunelowania w warstwie aplikacji lub **packet-tunnel** w celu tunelowania w warstwie pakietów. Sprawdź dokumentację dostawcy sieci VPN, aby upewnić się, że używasz poprawnej wartości.
 
 ### <a name="connect-using-the-per-app-vpn"></a>Nawiązywanie połączenia przy użyciu sieci VPN dla aplikacji
 
 Sprawdź środowisko bezobsługowe, nawiązując połączenie bez konieczności wyboru sieci VPN lub wprowadzania swoich poświadczeń. Środowisko bezobsługowe oznacza, że:
 
- - Urządzenie nie pyta o zaufanie serwerowi sieci VPN. To znaczy, że okno dialogowe **Zaufanie dynamiczne** nie jest wyświetlane.
- - Użytkownik nie musi podawać poświadczeń.
- - Urządzenie użytkownika łączy się z siecią VPN, gdy użytkownik otworzy jedną ze skojarzonych aplikacji.
+- Urządzenie nie pyta o zaufanie serwerowi sieci VPN. To znaczy, że okno dialogowe **Zaufanie dynamiczne** nie jest wyświetlane.
+- Użytkownik nie musi podawać poświadczeń.
+- Urządzenie użytkownika łączy się z siecią VPN, gdy użytkownik otworzy jedną ze skojarzonych aplikacji.
 
 <!-- ## Troubleshooting the per-app VPN
 

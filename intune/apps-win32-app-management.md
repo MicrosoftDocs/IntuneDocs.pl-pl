@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 39b5581ae7dd2a93554c0371da3858f59d6e62b4
-ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
+ms.openlocfilehash: 19b8693a5d2c2df042bd9339cb74bbcde0da626d
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67735449"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884050"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Autonomiczna usługa Intune — zarządzanie aplikacjami Win32
 
@@ -37,9 +37,9 @@ Aby skorzystać z funkcji zarządzania aplikacjami Win32, upewnij się, że spe�
 
 - System Windows 10 w wersji 1607 lub nowszej (wersje Enterprise, Pro i Education)
 - Klient z systemem Windows 10 musi być: 
-    - Urządzenia muszą zostać dołączone do usługi Azure AD i automatycznie zarejestrowane. Rozszerzenie do zarządzania usługi Intune obsługuje urządzenia dołączone do usługi Azure AD, urządzenia dołączone do domeny hybrydowej oraz urządzenia zarejestrowane w ramach zasad grupowych. 
-    > [!NOTE]
-    > W przypadku scenariusza rejestrowania w ramach zasad grupowych użytkownik końcowy korzysta z konta użytkownika lokalnego w celu dołączenia do usługi AAD urządzenia z systemem Windows 10. Użytkownik musi zalogować się do urządzenia przy użyciu konta użytkownika usługi AAD i zarejestrować się w usłudze Intune. Usługa Intune zainstaluje rozszerzenie do zarządzania usługi Intune na urządzeniu, jeśli skrypt programu PowerShell lub aplikacja Win32 jest przeznaczona dla użytkownika lub urządzenia.
+  - Urządzenia muszą zostać dołączone do usługi Azure AD i automatycznie zarejestrowane. Rozszerzenie do zarządzania usługi Intune obsługuje urządzenia dołączone do usługi Azure AD, urządzenia dołączone do domeny hybrydowej oraz urządzenia zarejestrowane w ramach zasad grupowych. 
+  > [!NOTE]
+  > W przypadku scenariusza rejestrowania w ramach zasad grupowych użytkownik końcowy korzysta z konta użytkownika lokalnego w celu dołączenia do usługi AAD urządzenia z systemem Windows 10. Użytkownik musi zalogować się do urządzenia przy użyciu konta użytkownika usługi AAD i zarejestrować się w usłudze Intune. Usługa Intune zainstaluje rozszerzenie do zarządzania usługi Intune na urządzeniu, jeśli skrypt programu PowerShell lub aplikacja Win32 jest przeznaczona dla użytkownika lub urządzenia.
 - Rozmiar aplikacji systemu Windows jest ograniczony do 8 GB na aplikację.
 
 ## <a name="prepare-the-win32-app-content-for-upload"></a>Przygotowanie zawartości aplikacji Win32 do przekazania

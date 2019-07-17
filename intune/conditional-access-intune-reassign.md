@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8bcc9aa527ed27ef35db901117ceb8f4c8d10c97
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 9a24c4b45b962f77846b4f7f7add3872daf38635
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67546881"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883787"
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Ponowne przypisywanie zasad dostępu warunkowego z klasycznego portalu usługi Intune do witryny Azure Portal
 
@@ -38,14 +38,14 @@ Jeśli wszystko jest już gotowe do przejścia na witrynę Azure Portal, wykonaj
 
 - Po sprawdzeniu, czy nowe zasady w witrynie Azure Portal działają prawidłowo, wyłącz zasady dostępu warunkowego w portalu klasycznym usługi Intune.
 <br /><br />
-    - **Przed wyłączeniem** zasad dostępu warunkowego w portalu klasycznym usługi Intune zaplanuj przeniesienie użytkowników, aby mogli korzystać z nowych zasad. Dostępne są dwie opcje:
+  - **Przed wyłączeniem** zasad dostępu warunkowego w portalu klasycznym usługi Intune zaplanuj przeniesienie użytkowników, aby mogli korzystać z nowych zasad. Dostępne są dwie opcje:
 <br /><br />
-        - **Użyj tej samej grupy użytkowników uwzględnionych, która będzie objęta zasadami utworzonymi w witrynie Azure Portal, i utwórz grupę użytkowników wykluczonych, która będzie używana z zasadami stosowanymi przez klasyczny portal usługi Intune**.
-            - Stopniowo przenoś użytkowników do grupy wykluczonych określonej w portalu klasycznym. Zapobiega to stosowaniu zasad przez klasyczny portal usługi Intune. Oprócz zasad stosowanych w klasycznym portalu usługi Intune stosowane są także zasady utworzone i przeznaczone dla tej samej grupy użytkowników w witrynie Azure Portal. 
+    - **Użyj tej samej grupy użytkowników uwzględnionych, która będzie objęta zasadami utworzonymi w witrynie Azure Portal, i utwórz grupę użytkowników wykluczonych, która będzie używana z zasadami stosowanymi przez klasyczny portal usługi Intune**.
+      - Stopniowo przenoś użytkowników do grupy wykluczonych określonej w portalu klasycznym. Zapobiega to stosowaniu zasad przez klasyczny portal usługi Intune. Oprócz zasad stosowanych w klasycznym portalu usługi Intune stosowane są także zasady utworzone i przeznaczone dla tej samej grupy użytkowników w witrynie Azure Portal. 
 <br /><br />
-        - **Utwórz nową grupę docelową dla zasad dostępu warunkowego w witrynie Azure Portal**. Jeśli wybierzesz tę opcję, musisz wykonać następujące czynności:
-            - Stopniowo usuwaj użytkowników z grup zabezpieczeń, które mają przypisane zasady dostępu warunkowego w portalu klasycznym usługi Intune.
-            - Po sprawdzeniu, czy nowe zasady dla tych użytkowników działają, można je wyłączyć w portalu klasycznym usługi Intune. 
+    - **Utwórz nową grupę docelową dla zasad dostępu warunkowego w witrynie Azure Portal**. Jeśli wybierzesz tę opcję, musisz wykonać następujące czynności:
+      - Stopniowo usuwaj użytkowników z grup zabezpieczeń, które mają przypisane zasady dostępu warunkowego w portalu klasycznym usługi Intune.
+      - Po sprawdzeniu, czy nowe zasady dla tych użytkowników działają, można je wyłączyć w portalu klasycznym usługi Intune. 
 <br /><br />
 - Jeśli ustawienia zasad dostępu warunkowego zostały skonfigurowane w portalu klasycznym usługi Intune do używania protokołu EAS (Exchange ActiveSync), za pomocą [instrukcji w tym temacie](#reassign-intune-device-based-conditional-access-policies-for-eas-clients) **przypisz ponownie ustawienia zasad dostępu warunkowego EAS w witrynie Azure Portal**.
 
@@ -64,10 +64,10 @@ Jeśli wszystko jest już gotowe do przejścia na witrynę Azure Portal, wykonaj
 Blok **Intune App Protection** w witrynie Azure Portal umożliwia administratorom konfigurowanie reguł warunkowych opartych na aplikacji. Umożliwia to udostępnienie zasobów firmowych tylko aplikacjom obsługującym zasady ochrony aplikacji w usłudze Intune. Można zdecydować, ze zasady dostępu warunkowego opartego na aplikacji mają być używane w połączeniu z zasadami dostępu warunkowego opartego na urządzeniach. Zasady dostępu warunkowego opartego na aplikacji i opartego na urządzeniach można połączyć (operator logiczny ORAZ) lub udostępnić jako opcje (operator logiczny LUB). Jeśli Twoje wymagania dotyczące zasad dostępu warunkowego:
 
 - Wymagają zgodnego urządzenia **ORAZ** korzystają z zatwierdzonej aplikacji.
-    - Należy skonfigurować zasady dostępu warunkowego za pomocą [bloku dostępu warunkowego usługi Azure Active Directory](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConditionalAccessBlade/Policies) i [bloku Intune App Protection](https://portal.azure.com/#blade/Microsoft_Intune/SummaryBlade/0).
+  - Należy skonfigurować zasady dostępu warunkowego za pomocą [bloku dostępu warunkowego usługi Azure Active Directory](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConditionalAccessBlade/Policies) i [bloku Intune App Protection](https://portal.azure.com/#blade/Microsoft_Intune/SummaryBlade/0).
 <br /><br />
 - Wymagają zgodnego urządzenia **LUB** korzystają z zatwierdzonej aplikacji.
-    - Należy skonfigurować zasady dostępu warunkowego za pomocą [portalu klasycznego usługi Intune](https://manage.microsoft.com) i [bloku Intune App Protection](https://portal.azure.com/#blade/Microsoft_Intune/SummaryBlade/0).
+  - Należy skonfigurować zasady dostępu warunkowego za pomocą [portalu klasycznego usługi Intune](https://manage.microsoft.com) i [bloku Intune App Protection](https://portal.azure.com/#blade/Microsoft_Intune/SummaryBlade/0).
 
 > [!TIP] 
 > W tym temacie przedstawiono zrzuty ekranu umożliwiające porównanie środowiska użytkownika w portalu klasycznym usługi Intune i witrynie Azure Portal.

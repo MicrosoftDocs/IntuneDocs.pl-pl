@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1649c6256e4df61b538e2adee87512617b677bb4
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: e6a003e4ab912452f278c838c600f75ddec0c1f5
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67547491"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67885139"
 ---
 # <a name="manage-android-work-profile-devices-with-intune"></a>Zarządzanie urządzeniami z profilem służbowym systemu Android za pomocą usługi Intune
 
@@ -71,9 +71,9 @@ Obsługa sieci VPN działa podobnie do profilów sieci VPN systemu Android. Na p
 - **Połączenia VPN ograniczone do profilu służbowego** — połączenia w sieci VPN są ograniczone tylko do aplikacji wdrożonych w profilu służbowym. Z połączenia VPN mogą korzystać tylko aplikacje zarządzane przez rozwiązanie Android Enterprise. Aplikacje osobiste zainstalowane na urządzeniu nie mogą używać zarządzanego połączenia VPN. Aby uzyskać więcej informacji, zobacz [Ustawienia sieci VPN dla rozwiązania Android Enterprise](vpn-settings-android.md#android-enterprise-vpn-settings).
 
 - **Sieć VPN specyficzna dla aplikacji** — sieć VPN specyficzną dla aplikacji można skonfigurować w usłudze Intune, jeśli dostawca sieci VPN zapewnia obsługę następujących funkcji:
-    - Konfiguracja sieci VPN specyficznej dla aplikacji.
-    - Możliwość skonfigurowania sieci VPN dla aplikacji za pomocą profilu konfiguracji aplikacji rozwiązania Android Enterprise.
-    Aby uzyskać więcej informacji, zobacz [Korzystanie z niestandardowego profilu usługi Microsoft Intune w celu tworzenia profilu sieci VPN dla aplikacji dla urządzeń z systemem Android](android-pulse-secure-per-app-vpn.md).
+  - Konfiguracja sieci VPN specyficznej dla aplikacji.
+  - Możliwość skonfigurowania sieci VPN dla aplikacji za pomocą profilu konfiguracji aplikacji rozwiązania Android Enterprise.
+  Aby uzyskać więcej informacji, zobacz [Korzystanie z niestandardowego profilu usługi Microsoft Intune w celu tworzenia profilu sieci VPN dla aplikacji dla urządzeń z systemem Android](android-pulse-secure-per-app-vpn.md).
 
 ## <a name="certificate-profiles"></a>Profile certyfikatów
 

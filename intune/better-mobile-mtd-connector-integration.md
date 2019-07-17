@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a7072d7d3d24578e0f82ea21eb653906dfa30b4c
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 861c2dd73e3a78fd833a24500728bd977d1186a2
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67546975"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883735"
 ---
 # <a name="integrate-better-mobile-with-intune"></a>Integrowanie usługi Better Mobile z usługą Intune
 
@@ -36,13 +36,13 @@ Przed rozpoczęciem procesu integracji rozwiązania Better Mobile z usługą Int
 
 - Poświadczenia administratora usługi Azure Active Directory umożliwiające przyznanie następujących uprawnień:
 
-    - Logowanie i odczyt profilu użytkownika
+  - Logowanie i odczyt profilu użytkownika
 
-    - Dostęp do katalogu jako zalogowany użytkownik
+  - Dostęp do katalogu jako zalogowany użytkownik
 
-    - Odczyt danych katalogu
+  - Odczyt danych katalogu
 
-    - Wysyłanie informacji o urządzeniu do usługi Intune
+  - Wysyłanie informacji o urządzeniu do usługi Intune
 
 - Poświadczenia administratora umożliwiające dostęp do konsoli administracyjnej rozwiązania Better Mobile.
 

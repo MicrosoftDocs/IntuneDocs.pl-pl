@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9cb08757732aa5cad08ed0a4b535fb20c0aa1df0
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 703509c316a22995d26223f6c386de0a2ec66c31
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528260"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882717"
 ---
 # <a name="determine-use-case-scenario-requirements"></a>Określanie wymagań scenariusza przypadku użycia
 
@@ -50,21 +50,21 @@ Możesz [pobrać szablon powyższej tabeli](https://gallery.technet.microsoft.co
 Oto kilka dodatkowych przykładowych elementów, których można użyć w kolumnie „Wymagania”:
 
 - **Bezpieczna poczta e-mail**
-    - Dostęp warunkowy do lokalnego programu Exchange/usługi Exchange Online
-    - Zasady ochrony aplikacji Outlook
+  - Dostęp warunkowy do lokalnego programu Exchange/usługi Exchange Online
+  - Zasady ochrony aplikacji Outlook
 
 - **Ustawienia urządzenia**
-    - Ustawienie 4- lub 6-znakowego numeru PIN
-    - Ograniczenie możliwości tworzenia kopii zapasowej w chmurze
+  - Ustawienie 4- lub 6-znakowego numeru PIN
+  - Ograniczenie możliwości tworzenia kopii zapasowej w chmurze
 
 - **Profile**
-    - Wi-Fi
-    - VPN
-    - Poczta e-mail (Windows 10 Mobile)
+  - Wi-Fi
+  - VPN
+  - Poczta e-mail (Windows 10 Mobile)
 
 - **Aplikacje**
-    - Usługa Office 365 z zasadami ochrony aplikacji
-    - Aplikacje biznesowe z zasadami ochrony aplikacji
+  - Usługa Office 365 z zasadami ochrony aplikacji
+  - Aplikacje biznesowe z zasadami ochrony aplikacji
 
 ## <a name="next-steps"></a>Następne kroki
 

@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: bccfc952202ed9db5bdc5f68bbbba57c61b37b13
-ms.sourcegitcommit: b3a1c5b0b24f0e52cf318defe10f3d27a2770009
+ms.openlocfilehash: b4c7e4b2d35eb2662ca74660e2133dcd2c89f0a1
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67316930"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883374"
 ---
 # <a name="monitor-bitlocker-and-device-encryption"></a>Monitorowanie funkcji BitLocker i szyfrowania urządzeń  
 Usługa Intune udostępnia scentralizowaną lokalizację na potrzeby określania stanu szyfrowania urządzeń z systemem Windows 10 oraz ułatwia dostęp do ważnych informacji dotyczących funkcji BitLocker z urządzeń znajdujących się w usłudze Azure Active Directory (Azure AD).  
@@ -76,22 +76,22 @@ Okienko zawiera następujące szczegółowe informacje:
 
   Poniżej przedstawiono przykłady szczegółów stanu, które może raportować usługa Intune:  
 
-   - Zasady funkcji BitLocker wymagają zgody użytkownika na uruchomienie Kreatora szyfrowania dysków funkcją BitLocker w celu rozpoczęcia szyfrowania woluminu systemu operacyjnego, lecz użytkownik nie wyraził zgody.  
-   - Metoda szyfrowania woluminu systemu operacyjnego nie jest zgodna z zasadami funkcji BitLocker.  
-   - Zasady funkcji BitLocker wymagają ochrony woluminu systemu operacyjnego za pomocą modułu TPM, lecz moduł TPM nie jest używany.  
-   - Zasady funkcji BitLocker wymagają ochrony woluminu systemu operacyjnego wyłącznie za pomocą modułu TPM, lecz ochrona za pomocą modułu TPM nie jest używana.  
-   - Zasady funkcji BitLocker wymagają ochrony woluminu systemu operacyjnego za pomocą modułu TPM i numeru PIN, lecz ochrona za pomocą modułu TPM i numeru PIN nie jest używana.  
-   - Zasady funkcji BitLocker wymagają ochrony woluminu systemu operacyjnego za pomocą modułu TPM i klucza uruchomienia, lecz ochrona za pomocą modułu TPM i klucza uruchomienia nie jest używana.  
-   - Zasady funkcji BitLocker wymagają ochrony woluminu systemu operacyjnego za pomocą modułu TPM, numeru PIN i klucza uruchomienia, lecz ochrona za pomocą modułu TPM, numeru PIN i klucza uruchomienia nie jest używana.  
-   - Wolumin systemu operacyjnego nie jest chroniony.  
-   - Utworzenie kopii zapasowej klucza odzyskiwania nie powiodło się.  
-   - Dysk stały nie jest chroniony.  
-   - Metoda szyfrowania dysku stałego nie jest zgodna z zasadami funkcji BitLocker.  
-   - Zasady funkcji BitLocker dotyczące szyfrowania dysków wymagają, aby użytkownik był zalogowany jako Administrator, lub, jeśli urządzenie jest dołączone do usługi Azure AD, zasady AllowStandardUserEncryption muszą mieć wartość 1.  
-   - Środowisko odzyskiwania systemu Windows (WinRE) nie jest skonfigurowane.  
-   - Moduł TPM nie jest dostępny dla funkcji BitLocker, ponieważ nie ma go, dostęp do niego został zablokowany w rejestrze lub system operacyjny znajduje się na dysku wymiennym.  
-   - Moduł TPM nie jest gotowy do użycia przez funkcję BitLocker.  
-   - Sieć jest niedostępna, a jest to wymagane do utworzenia kopii zapasowej klucza odzyskiwania.  
+  - Zasady funkcji BitLocker wymagają zgody użytkownika na uruchomienie Kreatora szyfrowania dysków funkcją BitLocker w celu rozpoczęcia szyfrowania woluminu systemu operacyjnego, lecz użytkownik nie wyraził zgody.  
+  - Metoda szyfrowania woluminu systemu operacyjnego nie jest zgodna z zasadami funkcji BitLocker.  
+  - Zasady funkcji BitLocker wymagają ochrony woluminu systemu operacyjnego za pomocą modułu TPM, lecz moduł TPM nie jest używany.  
+  - Zasady funkcji BitLocker wymagają ochrony woluminu systemu operacyjnego wyłącznie za pomocą modułu TPM, lecz ochrona za pomocą modułu TPM nie jest używana.  
+  - Zasady funkcji BitLocker wymagają ochrony woluminu systemu operacyjnego za pomocą modułu TPM i numeru PIN, lecz ochrona za pomocą modułu TPM i numeru PIN nie jest używana.  
+  - Zasady funkcji BitLocker wymagają ochrony woluminu systemu operacyjnego za pomocą modułu TPM i klucza uruchomienia, lecz ochrona za pomocą modułu TPM i klucza uruchomienia nie jest używana.  
+  - Zasady funkcji BitLocker wymagają ochrony woluminu systemu operacyjnego za pomocą modułu TPM, numeru PIN i klucza uruchomienia, lecz ochrona za pomocą modułu TPM, numeru PIN i klucza uruchomienia nie jest używana.  
+  - Wolumin systemu operacyjnego nie jest chroniony.  
+  - Utworzenie kopii zapasowej klucza odzyskiwania nie powiodło się.  
+  - Dysk stały nie jest chroniony.  
+  - Metoda szyfrowania dysku stałego nie jest zgodna z zasadami funkcji BitLocker.  
+  - Zasady funkcji BitLocker dotyczące szyfrowania dysków wymagają, aby użytkownik był zalogowany jako Administrator, lub, jeśli urządzenie jest dołączone do usługi Azure AD, zasady AllowStandardUserEncryption muszą mieć wartość 1.  
+  - Środowisko odzyskiwania systemu Windows (WinRE) nie jest skonfigurowane.  
+  - Moduł TPM nie jest dostępny dla funkcji BitLocker, ponieważ nie ma go, dostęp do niego został zablokowany w rejestrze lub system operacyjny znajduje się na dysku wymiennym.  
+  - Moduł TPM nie jest gotowy do użycia przez funkcję BitLocker.  
+  - Sieć jest niedostępna, a jest to wymagane do utworzenia kopii zapasowej klucza odzyskiwania.  
 
 ## <a name="bitlocker-recovery-keys"></a>Klucze odzyskiwania funkcji BitLocker
 Usługa Intune udostępnia blok usługi Azure AD dla funkcji BitLocker, dzięki czemu można wyświetlić identyfikatory klucza i klucze odzyskiwania funkcji BitLocker dla urządzeń z systemem Windows 10 z poziomu portalu usługi Intune.  Aby urządzenie było dostępne, jego klucze muszą znajdować się w depozycie usługi Azure AD. 

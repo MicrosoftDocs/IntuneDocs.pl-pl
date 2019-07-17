@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7868d5f9ef97f4b054457deff6f24cd91d6c31d8
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: a7907889a1419ad6ff37b3975fa65adb02389ab6
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528684"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884510"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>Samouczek: chronienie poczty e-mail usługi Exchange Online na urządzeniach niezarządzanych
 
@@ -32,10 +32,10 @@ Dowiedz się więcej na temat używania zasad ochrony aplikacji z dostępem waru
 > * Tworzenie zasad dostępu warunkowego usługi Azure Active Directory (Azure AD) zezwalających tylko aplikacji Outlook na uzyskiwanie dostępu do firmowej poczty e-mail w usłudze Exchange Online. Będziesz również wymagać uwierzytelniania wieloskładnikowego (MFA) w przypadku klientów z nowoczesnym uwierzytelnianiem, takich jak program Outlook dla systemów iOS i Android.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
-  - W tym samouczku będziesz potrzebować dzierżawy testowej z następującymi subskrypcjami:
-    - Azure Active Directory Premium ([bezpłatna wersja próbna](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
-    - Subskrypcja usługi Intune ([bezpłatna wersja próbna](free-trial-sign-up.md))
-    - Subskrypcja Office 365 Business obejmująca program Exchange ([bezpłatna wersja próbna](https://go.microsoft.com/fwlink/p/?LinkID=510938))
+- W tym samouczku będziesz potrzebować dzierżawy testowej z następującymi subskrypcjami:
+  - Azure Active Directory Premium ([bezpłatna wersja próbna](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
+  - Subskrypcja usługi Intune ([bezpłatna wersja próbna](free-trial-sign-up.md))
+  - Subskrypcja Office 365 Business obejmująca program Exchange ([bezpłatna wersja próbna](https://go.microsoft.com/fwlink/p/?LinkID=510938))
 
 ## <a name="sign-in-to-intune"></a>Logowanie się do usługi Intune
 

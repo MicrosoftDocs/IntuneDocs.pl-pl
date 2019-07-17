@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d94f2bd9237e92b22b9d73e4f7777dc0faf3f0fe
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: ca51fc38a7469d865640840647280375eaa74bbe
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67529624"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883028"
 ---
 # <a name="enroll-ios-devices-in-intune"></a>Rejestrowanie urządzeń z systemem iOS w usłudze Intune
 
@@ -67,9 +67,9 @@ Dowiedz się więcej na temat [rejestrowanie programu Apple Configurator](apple-
 Urządzenia skonfigurowane z koligacją użytkownika mogą instalować i uruchamiać aplikację Portal firmy w celu pobierania aplikacji i zarządzania urządzeniami. Po otrzymaniu urządzeń użytkownicy muszą wykonać kilka dodatkowych czynności w celu ukończenia działania Asystenta ustawień i zainstalowania aplikacji Portal firmy.
 
 Koligacja użytkownika jest wymagana do obsługi:
-  - Aplikacji do zarządzania aplikacjami mobilnymi
-  - Dostępu warunkowego do poczty e-mail i danych firmowych
-  - Aplikacji Portal firmy
+- Aplikacji do zarządzania aplikacjami mobilnymi
+- Dostępu warunkowego do poczty e-mail i danych firmowych
+- Aplikacji Portal firmy
 
 **Jak użytkownicy rejestrują urządzenia firmowe z systemem iOS z koligacją użytkownika**
 1. Po włączeniu urządzenia użytkownicy są monitowani o ukończenie działania Asystenta ustawień. 
