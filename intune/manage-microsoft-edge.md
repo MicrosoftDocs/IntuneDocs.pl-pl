@@ -1,5 +1,5 @@
 ---
-title: Zarządzanie dostępem do Internetu przy użyciu przeglądarki Microsoft Edge w usłudze Microsoft Intune
+title: Zarządzanie przeglądarką Microsoft Edge dla systemów iOS i Android przy użyciu usługi Intune
 titleSuffix: ''
 description: Używaj zasad ochrony aplikacji usługi Intune z przeglądarką Microsoft Edge, aby upewnić się, że dostęp do firmowych witryn internetowych będzie zawsze uzyskiwany z zastosowaniem środków bezpieczeństwa.
 keywords: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 147547577615c6e74a9c5b3dd8b200ba387bad79
-ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
+ms.openlocfilehash: bc18ba2210719cbebe77cd5b37024be4bb7b0d3e
+ms.sourcegitcommit: a01f0f3070932e3be44a4f545d4de11d715381ea
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67648462"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68287220"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Zarządzanie dostępem do Internetu przy użyciu przeglądarki Microsoft Edge w usłudze Microsoft Intune
 
@@ -157,7 +157,7 @@ Poniżej przedstawiono niektóre przykładowe scenariusze zastosowania serwera p
 ### <a name="before-you-start"></a>Przed rozpoczęciem
 
 - Skonfiguruj aplikacje wewnętrzne przy użyciu serwera proxy aplikacji usługi Azure AD.
-    - Aby skonfigurować serwer proxy aplikacji i publikować aplikacje, zobacz [dokumentację dotyczącą konfiguracji](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
+  - Aby skonfigurować serwer proxy aplikacji i publikować aplikacje, zobacz [dokumentację dotyczącą konfiguracji](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
 - Aplikacja Microsoft Edge musi mieć przypisane [zasady ochrony aplikacji usługi Intune](app-protection-policy.md).
 
 > [!NOTE]
@@ -228,34 +228,34 @@ Możesz użyć różnych formatów adresów URL do tworzenia listy witryn dozwol
 - Symbol wieloznaczny (\*) może być używany zgodnie z regułami z poniższej listy dozwolonych wzorców.
 - Symbol wieloznaczny może odpowiadać wyłącznie całemu składnikowi nazwy hosta (oddzielane kropkami) lub całym częściom ścieżki (oddzielane ukośnikami). Na przykład adres `http://*contoso.com` **nie** jest obsługiwany.
 - W adresie można określić numery portów. Jeśli nie określisz numeru portu, będą używane następujące wartości:
-    - Port 80 dla protokołu http
-    - Port 443 dla protokołu https
+  - Port 80 dla protokołu http
+  - Port 443 dla protokołu https
 - Symboli wieloznacznych **nie** można używać w numerze portu. Na przykład adresy `http://www.contoso.com:*` i `http://www.contoso.com:*/` nie są obsługiwane. 
 
     |    Adres URL    |    Szczegóły    |    Jest zgodny z    |    Nie jest zgodny z    |
     |-------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
     |    `http://www.contoso.com`    |    Zgodny z pojedynczą stroną    |    `www.contoso.com`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`contoso.com/`    |
     |    `http://contoso.com`    |    Zgodny z pojedynczą stroną    |    `contoso.com/`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com`    |
-    |    `http://www.contoso.com/&#42;`   |    Zgodny ze wszystkimi adresami URL rozpoczynającymi się od ciągu `www.contoso.com`    |    `www.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com/videos/tvshows`    |    `host.contoso.com`<br>`host.contoso.com/images`    |
-    |    `http://*.contoso.com/*`    |    Zgodny ze wszystkimi domenami podrzędnymi w domenie `contoso.com`    |    `developer.contoso.com/resources`<br>`news.contoso.com/images`<br>`news.contoso.com/videos`    |    `contoso.host.com`    |
-    |    `http://www.contoso.com/images`    |    Zgodny z pojedynczym folderem    |    `www.contoso.com/images`    |    `www.contoso.com/images/dogs`    |
+    |    `http://www.contoso.com/*;`   |    Zgodny ze wszystkimi adresami URL rozpoczynającymi się od ciągu `www.contoso.com`    |    `www.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com/videos/tvshows`    |    `host.contoso.com`<br>`host.contoso.com/images`    |
+    |    `http://*.contoso.com/*`    |    Zgodny ze wszystkimi domenami podrzędnymi w domenie `contoso.com`    |    `developer.contoso.com/resources`<br>`news.contoso.com/images`<br>`news.contoso.com/videos`    |    `contoso.host.com`    |    `http://*contoso.com/*`    |    Zgodny ze wszystkimi domenami podrzędnymi kończącymi się ciągiem `contoso.com/`    |    `http://news-contoso.com`<br>`http://news-contoso.com.com/daily`    |    `http://news-contoso.host.com`    |
+    `http://www.contoso.com/images`    |    Zgodny z pojedynczym folderem    |    `www.contoso.com/images`    |    `www.contoso.com/images/dogs`    |
     |    `http://www.contoso.com:80`    |    Zgodny z pojedynczą stroną z użyciem numeru portu    |    `http://www.contoso.com:80`    |         |
     |    `https://www.contoso.com`    |    Zgodny z pojedynczą, bezpieczną stroną    |    `https://www.contoso.com`    |    `http://www.contoso.com`    |
     |    `http://www.contoso.com/images/*`    |    Zgodny z pojedynczym folderem ze wszystkimi podfolderami    |    `www.contoso.com/images/dogs`<br>`www.contoso.com/images/cats`    |    `www.contoso.com/videos`    |
   
 - Poniżej przedstawiono przykłady niektórych niedozwolonych wzorców:
-    - `*.com`
-    - `*.contoso/*`
-    - `www.contoso.com/*images`
-    - `www.contoso.com/*images*pigs`
-    - `www.contoso.com/page*`
-    - Adresy IP
-    - `https://*`
-    - `http://*`
-    - `https://*contoso.com`
-    - `http://www.contoso.com:*`
-    - `http://www.contoso.com: /*`
-  
+  - `*.com`
+  - `*.contoso/*`
+  - `www.contoso.com/*images`
+  - `www.contoso.com/*images*pigs`
+  - `www.contoso.com/page*`
+  - Adresy IP
+  - `https://*`
+  - `http://*`
+  - `https://*contoso.com`
+  - `http://www.contoso.com:*`
+  - `http://www.contoso.com: /*`
+
 ## <a name="define-behavior-when-users-try-to-access-a-blocked-site"></a>Definiowanie zachowania w sytuacji, gdy użytkownicy próbują uzyskać dostęp do zablokowanej witryny
 
 Dzięki modelowi podwójnej tożsamości wbudowanemu w przeglądarce Microsoft Edge można zwiększyć elastyczność środowiska dla użytkowników końcowych jeszcze bardziej niż było to możliwe w przypadku aplikacji Intune Managed Browser. Gdy użytkownicy przejdą do zablokowanej witryny w przeglądarce Microsoft Edge, możesz włączyć wyświetlanie monitu o otwarcie linku w kontekście osobistym, a nie kontekście służbowym. Dzięki temu użytkownicy będą chronieni, a zasoby firmowe pozostaną bezpieczne. Jeśli na przykład użytkownik wyśle link do artykułu z wiadomościami za pośrednictwem programu Outlook, będzie mógł otworzyć ten link w swoim kontekście osobistym lub na karcie InPrivate. Kontekst służbowy nie zezwala na korzystanie z witryn internetowych z wiadomościami. Domyślnie takie przejścia są dozwolone.

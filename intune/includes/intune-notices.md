@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 03/28/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: fab8f2be48a30f6ad058b3eeb6874a44ff04e6ac
-ms.sourcegitcommit: 7ceae61e036ccf8b33704751b0b39fee81944072
+ms.openlocfilehash: d907c5256469e86410c9916d117d3e322d43cfc3
+ms.sourcegitcommit: 2614d1b08b8a78cd792aebd2ca9848f391df8550
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66744320"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67812509"
 ---
 Te powiadomienia zawierają ważne informacje, które mogą ułatwić przygotowanie się na nadchodzące zmiany i nowe funkcje w usłudze Intune. 
 
@@ -72,3 +72,19 @@ Należy również zaktualizować dokumentację lub wskazówki dla deweloperów (
 
 #### <a name="additional-information"></a>Dodatkowe informacje
 https://docs.microsoft.com/intune/apps-prepare-mobile-application-management
+
+### <a name="plan-for-change-new-windows-updates-settings-in-intune----4464404---"></a>Planowanie zmian: Nowe ustawienia aktualizacji systemu Windows w usłudze Intune <!-- 4464404 -->
+Od sierpniowego wydania usługi Intune lub wersji 1908 dodamy nowy obszar „Ustawienia terminu ostatecznego”, który można będzie skonfigurować zamiast ustawień obszaru „Zezwalaj użytkownikowi na ponowne uruchamianie (ponowne uruchamianie wymagające interwencji użytkownika)”. Ustawienia ponownego uruchomienia wymagającego interwencji użytkownika w interfejsie użytkownika planujemy wyłączyć w wersji 1909 lub aktualizacji z września. Do końca października ustawienia te zostaną całkowicie usunięte z konsoli. 
+
+#### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
+Jeśli zarządzasz urządzeniami z systemem Windows 10 w swoim środowisku: 
+- W aktualizacji usługi Intune z sierpnia lub wersji 1908 zobaczysz w konsoli nowe ustawienia terminu ostatecznego jako dodatek do starych ustawień ponownego uruchomienia wymagającego interwencji użytkownika.
+- W przypadku skonfigurowania starych i nowych ustawień wartości ustawień terminu ostatecznego będą zastępować wartości ustawień ponownego uruchomienia wymagającego interwencji użytkownika.
+- Ustawienia terminu ostatecznego zastąpią opcję „Zezwalaj użytkownikowi na ponowne uruchamianie (ponowne uruchamianie wymagające interwencji użytkownika)” w konsoli w aktualizacji 1910.
+
+#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Co zrobić, aby przygotować się do tej zmiany?
+Zacznij korzystać z ustawień terminu ostatecznego w wersji 1908, konfigurując ich żądane wartości. Po wykonaniu tej czynności będzie można ustawić wartość ustawienia ponownego uruchomienia wymagającego interwencji użytkownika na „Nieskonfigurowane”, aby przygotować się do jego usunięcia z konsoli w październiku.
+
+W razie potrzeby zaktualizuj dokumentację i skrypty automatyzacji. 
+
+Będziemy Cię informować na bieżąco, a przed usunięciem ustawień ponownego uruchomienia wymagającego interwencji użytkownika opublikujemy przypomnienie w Centrum wiadomości.

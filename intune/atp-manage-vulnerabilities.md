@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/17/2019
+ms.date: 07/12/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa6dfef745157ae96736f8405fd5cafc33d4335f
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: b58b27264e2f6955ae4f16843bb3493e5fdc993e
+ms.sourcegitcommit: fe67741c62749fc9114e9191092ed8b786dd4ffa
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045292"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68270294"
 ---
 # <a name="use-intune-to-remediate-vulnerabilities-identified-by-microsoft-defender-atp"></a>Używanie usługi Intune do korygowania luk w zabezpieczeniach znalezionych przez usługę Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender  
 
@@ -32,7 +32,7 @@ Po zintegrowaniu usługi Intune z usługą Zaawansowana ochrona przed zagrożeni
 
 Po połączeniu usługi Intune z Zaawansowaną ochroną przed zagrożeniami w usłudze Microsoft Defender usługa Zaawansowana ochrona przed zagrożeniami odbiera szczegóły zagrożeń i luk w zabezpieczeniach z urządzeń zarządzanych.  
 
-W konsoli usługi Windows Defender Security Center administratorzy zabezpieczeń Zaawansowanej ochrony przed zagrożeniami mogą przeglądać dane dotyczące luk w zabezpieczeniach punktów końcowych. Administratorzy mogą następnie za pomocą jednego kliknięcia utworzyć zadania zabezpieczeń, które będą oflagowywać urządzenia narażone na ryzyko jako przeznaczone do skorygowania. Zadania zabezpieczeń są od razu przekazywane do konsoli usługi Intune, w której administratorzy usługi Intune mogą je przeglądać. Zadanie zabezpieczeń identyfikuje typ luki w zabezpieczeniach, priorytet, stan i czynności umożliwiające jej skorygowanie. Administrator usługi Intune wybiera opcję zaakceptowania lub odrzucenia zadania.  
+W konsoli usługi Microsoft Defender Security Center administratorzy zabezpieczeń Zaawansowanej ochrony przed zagrożeniami mogą przeglądać dane dotyczące luk w zabezpieczeniach punktów końcowych. Administratorzy mogą następnie za pomocą jednego kliknięcia utworzyć zadania zabezpieczeń, które będą oflagowywać urządzenia narażone na ryzyko jako przeznaczone do skorygowania. Zadania zabezpieczeń są od razu przekazywane do konsoli usługi Intune, w której administratorzy usługi Intune mogą je przeglądać. Zadanie zabezpieczeń identyfikuje typ luki w zabezpieczeniach, priorytet, stan i czynności umożliwiające jej skorygowanie. Administrator usługi Intune wybiera opcję zaakceptowania lub odrzucenia zadania.  
 
 Po zaakceptowaniu zadania administrator usługi Intune koryguje lukę w zabezpieczeniach za pośrednictwem usługi Intune, korzystając z wytycznych przedstawionych w ramach zadania zabezpieczenia.  
 
@@ -67,7 +67,7 @@ Przykładowy przepływ pracy:
 **Konfiguracje usługi Intune dla Zaawansowanej ochrony przed zagrożeniami**:  
 - Skonfigurowanie połączenia między usługami za pomocą Zaawansowanej ochrony przed zagrożeniami w usłudze Microsoft Defender.  
 - Wdrożenie zasad zgodności urządzeń za pomocą profilu typu **Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender (Windows 10 Desktop)** na urządzeniach, dla których ryzyko będzie oceniane przy użyciu Zaawansowanej ochrony przed zagrożeniami.
-  Aby uzyskać informacje dotyczące sposobu konfigurowania usługi Intune do pracy z Zaawansowaną ochrony przed zagrożeniami, zobacz [Wymuszanie zgodności dla Zaawansowanej ochrony przed zagrożeniami z dostępem warunkowym w usłudze Intune](https://docs.microsoft.com/intune/advanced-threat-protection#enable-windows-defender-atp-in-intune).  
+  Aby uzyskać informacje dotyczące sposobu konfigurowania usługi Intune do pracy z Zaawansowaną ochrony przed zagrożeniami, zobacz [Wymuszanie zgodności dla Zaawansowanej ochrony przed zagrożeniami z dostępem warunkowym w usłudze Intune](https://docs.microsoft.com/intune/advanced-threat-protection#enable-microsoft-defender-atp-in-intune).  
 
 ## <a name="work-with-security-tasks"></a>Praca z zadaniami zabezpieczeń  
 

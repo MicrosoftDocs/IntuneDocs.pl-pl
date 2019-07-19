@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/20/2019
+ms.date: 07/12/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3e4e1040913daef5418f0b4fa1e56f6ef827dd67
-ms.sourcegitcommit: 63b55e81122e5c15893302b109ae137c30855b55
+ms.openlocfilehash: 16586ece687b5d50ea89b28bfd524f50e65ceb46
+ms.sourcegitcommit: 5ce8726278004bbf072149a9c924091bb0654b7c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67713272"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67851479"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Konfigurowanie urządzeń z systemem Windows 10 w usłudze Intune przy użyciu punktów odniesienia zabezpieczeń
 
@@ -70,9 +70,9 @@ Poniższe wystąpienia punktów odniesienia zabezpieczeń są dostępne do użyc
   - [Punkt odniesienia zabezpieczeń rozwiązania MDM z wiosny 2019 r. (19H1)](security-baseline-settings-mdm.md)
   - [Wersja zapoznawcza: punkt odniesienia rozwiązania MDM z października 2018 r.](security-baseline-settings-mdm-archive.md)
 
-- **Punkt odniesienia usługi Windows Defender ATP**  
+- **Punkt odniesienia usługi Microsoft Defender ATP**  
   *(Aby móc używać tego punktu odniesienia, środowisko musi spełniać wymagania wstępne dotyczące korzystania z [Zaawansowanej ochrony przed zagrożeniami w usłudze Microsoft Defender](advanced-threat-protection.md#prerequisites))* .
-  - [Wersja zapoznawcza: punkt odniesienia usługi Windows Defender ATP](security-baseline-settings-defender-atp.md)  
+  - [Wersja zapoznawcza: punkt odniesienia usługi Microsoft Defender ATP](security-baseline-settings-defender-atp.md)  
 
 Nadal możesz używać i edytować profile, które zostały utworzone wcześniej na podstawie szablonu wersji zapoznawczej, nawet jeśli ten szablon wersji zapoznawczej nie jest już dostępny do tworzenia nowych profilów. 
 
@@ -200,6 +200,6 @@ Ten sam zespół firmy Microsoft wybrał i zorganizował ustawienia dla każdego
 ## <a name="next-steps"></a>Następne kroki
 - Przejrzyj ustawienia w najnowszych wersjach dostępnych punktów odniesienia:  
   - [Punkt odniesienia zabezpieczeń rozwiązania MDM](security-baseline-settings-mdm.md)  
-  - [Punkt odniesienia usługi Windows Defender ATP](security-baseline-settings-defender-atp.md)  
+  - [Punkt odniesienia usługi Microsoft Defender ATP](security-baseline-settings-defender-atp.md)  
 
 - Sprawdź stan oraz monitoruj [punkt odniesienia i profil](security-baselines-monitor.md).

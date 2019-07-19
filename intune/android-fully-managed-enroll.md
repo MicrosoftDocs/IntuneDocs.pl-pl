@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f1b1197671b54cb5374bd79b6acbeb8137c0135c
-ms.sourcegitcommit: cc5d757018d05fc03ac9ea3d30f563df9bfd61ed
+ms.openlocfilehash: 54d9fa1016ff39fcf1e7da9c21391ce70f7acaac
+ms.sourcegitcommit: e451295ca3ee3efc31bf9ee360e599b28ef643ea
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66819894"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67863079"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices-preview"></a>Konfiguracja rejestracji w usłudze Intune dla w pełni zarządzanych urządzeń z systemem Android Enterprise (wersja zapoznawcza)
 
 W pełni zarządzane urządzenia z systemem Android Enterprise to urządzenia należące do firmy skojarzone z jednym użytkownikiem i wykorzystywane wyłącznie do pracy, a nie do celów osobistych. Administratorzy mogą zarządzać całym urządzeniem i wymuszać kontrolki zasad niedostępne dla profilów służbowych, takie jak:
-- zezwalanie na instalowanie aplikacji tylko z zarządzanego sklepu Google Play,
-- blokowanie dezinstalacji aplikacji zarządzanych,
-- uniemożliwianie użytkownikom przywracania ustawień fabrycznych urządzenia i tak dalej.
+- Zezwalanie na instalowanie aplikacji tylko z zarządzanego sklepu Google Play.
+- Blokowanie dezinstalacji aplikacji zarządzanych.
+- Uniemożliwianie użytkownikom przywracania ustawień fabrycznych urządzenia itd.
 
 Usługa Intune ułatwia wdrażanie aplikacji i ustawień na urządzeniach z rozwiązaniem Android Enterprise, w tym na w pełni zarządzanych urządzeniach z systemem Android Enterprise. Aby uzyskać szczegółowe informacje na temat rozwiązania Android Enterprise, zobacz [wymagania dotyczące rozwiązania Android Enterprise](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
 
@@ -58,8 +58,8 @@ Aby skonfigurować zarządzanie w pełni zarządzanymi urządzeniami z systemem 
 1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) i wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja systemu Android** > **W pełni zarządzane urządzenia użytkowników należące do firmy (wersja zapoznawcza)** .
 2. W obszarze **Zezwalaj użytkownikom na rejestrowanie urządzeń będących własnością firmy** wybierz pozycję **Tak**.
 
-[!NOTE]
-Jeśli masz zdefiniowane zasady dostępu warunkowego usługi Azure AD, które korzystają z opcji kontroli *Wymagaj, aby urządzenie zostało oznaczone jako zgodne* i dotyczą **wszystkich aplikacji w chmurze**, **systemu Android** oraz **przeglądarek** — musisz wykluczyć aplikację **Microsoft Intune** w chmurze z tych zasad. Dzieje się tak, ponieważ podczas procesów instalacji systemu Android karta przeglądarki Chrome jest używana do uwierzytelniania użytkowników podczas rejestracji. Aby uzyskać więcej informacji, zapoznaj się z [dokumentacją dotyczącą dostępu warunkowego w usłudze Azure AD](https://docs.microsoft.com/azure/active-directory/conditional-access/).
+> [!NOTE]
+> Jeśli masz zdefiniowane zasady dostępu warunkowego usługi Azure AD, które korzystają z opcji kontroli *Wymagaj, aby urządzenie zostało oznaczone jako zgodne* i dotyczą **wszystkich aplikacji w chmurze**, **systemu Android** oraz **przeglądarek** — musisz wykluczyć aplikację **Microsoft Intune** w chmurze z tych zasad. Dzieje się tak, ponieważ podczas procesów instalacji systemu Android karta przeglądarki Chrome jest używana do uwierzytelniania użytkowników podczas rejestracji. Aby uzyskać więcej informacji, zapoznaj się z [dokumentacją dotyczącą dostępu warunkowego w usłudze Azure AD](https://docs.microsoft.com/azure/active-directory/conditional-access/).
 
 Jeśli to ustawienie będzie miało wartość **Tak**, udostępni Ci token rejestrowania (ciąg losowy) i kod QR dla dzierżawy usługi Intune. Ten jeden token rejestracji jest ważny dla wszystkich użytkowników i nigdy nie wygasa. W zależności od systemu operacyjnego Android i wersji urządzenia możesz użyć tokenu lub kodu QR, aby zarejestrować urządzenie kiosku.
 
