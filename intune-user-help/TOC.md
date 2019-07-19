@@ -12,7 +12,7 @@
 ### [Dlaczego warto zarejestrować urządzenie z systemem Android](why-enroll-android-device.md)
 ### Zarejestruj urządzenie
 #### [Rejestracja urządzenia z systemem Android](enroll-device-android-company-portal.md)  
-#### [Rejestracja przy użyciu profilu służbowego systemu Android](create-a-work-profile-and-enroll-your-device-in-intune-android.md)
+#### [Rejestracja przy użyciu profilu służbowego systemu Android](enroll-device-android-work-profile.md)
 #### [Rejestracja przy użyciu aplikacji Microsoft Intune](enroll-device-android-microsoft-intune-app.md)
 ### [Korzystanie z aplikacji zarządzanych na urządzeniu](use-managed-apps-on-your-device-android.md)
 ### [Szyfrowanie urządzenia](encrypt-your-device-android.md)
