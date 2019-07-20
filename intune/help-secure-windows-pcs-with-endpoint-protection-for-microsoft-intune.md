@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e9b32b7b7bc3bfa7735a7e4437e8238630e56884
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 61e0a7fa4fa63e17a1fa4165042d9e82a2ffacc2
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548777"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354105"
 ---
 # <a name="help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune"></a>Zabezpieczanie komputerów z systemem Windows przy użyciu programu Endpoint Protection dla usługi Microsoft Intune
 
@@ -145,8 +145,8 @@ Ustawienie **Rozszerzenia plików, które mają zostać wykluczone podczas przep
 
 ### <a name="specify-microsoft-active-protection-service-settings"></a>Określanie ustawień usługi Microsoft Active Protection
 Usługa Microsoft Active Protection to społeczność online ułatwiająca odpowiadanie na potencjalne zagrożenia. Społeczność ta pomaga także w zatrzymywaniu rozpowszechniania nowych infekcji złośliwym oprogramowaniem. Możesz użyć opcji **Dołącz do społeczności Microsoft Active Protection Service**, wybierając pozycję **Tak**, a następnie podając swój **Poziom członkostwa**:
-  - **Podstawowe** — do firmy Microsoft są wysyłane podstawowe informacje dotyczące wykrytego złośliwego oprogramowania. Zawierają one informacje o pochodzeniu oprogramowania, działaniach podjętych przez użytkownika lub automatycznie przez program Endpoint Protection, a także informacje o tym, czy działania były skuteczne.
-  - **Zaawansowane** — do firmy Microsoft są wysyłane dodatkowe informacje dotyczące złośliwego i potencjalnie niechcianego oprogramowania oraz programów szpiegujących. Obejmują one informacje o lokalizacji oprogramowania, nazwach plików, sposobie działania oprogramowania oraz jego wpływie na komputer.
+- **Podstawowe** — do firmy Microsoft są wysyłane podstawowe informacje dotyczące wykrytego złośliwego oprogramowania. Zawierają one informacje o pochodzeniu oprogramowania, działaniach podjętych przez użytkownika lub automatycznie przez program Endpoint Protection, a także informacje o tym, czy działania były skuteczne.
+- **Zaawansowane** — do firmy Microsoft są wysyłane dodatkowe informacje dotyczące złośliwego i potencjalnie niechcianego oprogramowania oraz programów szpiegujących. Obejmują one informacje o lokalizacji oprogramowania, nazwach plików, sposobie działania oprogramowania oraz jego wpływie na komputer.
 
 Możesz też **odbierać definicje dynamiczne utworzone na podstawie raportów społeczności Microsoft Active Protection Service**.
 
@@ -197,5 +197,5 @@ Usługa Intune może uruchomić pełne albo szybkie skanowanie w poszukiwaniu z�
 ## <a name="need-more-help"></a>Potrzebujesz dodatkowej pomocy?
 Aby uzyskać dalszą pomoc i wsparcie techniczne, zobacz [Rozwiązywanie problemów z programem Endpoint Protection w usłudze Microsoft Intune](troubleshoot-endpoint-protection-in-microsoft-intune.md).
 
-### <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 [Zasady ochrony komputerów z systemem Windows](policies-to-protect-windows-pcs-in-microsoft-intune.md)

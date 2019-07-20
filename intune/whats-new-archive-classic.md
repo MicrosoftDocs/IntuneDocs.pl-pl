@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 29aa32b02f5ab97707ce76eb10a84a8913a9f702
-ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
+ms.openlocfilehash: d09a996e3e1a47cae33e8a4189b4406a940acfe3
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572304"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353276"
 ---
 # <a name="whats-new-in-the-intune-classic-portal---previous-months"></a>Nowości w portalu klasycznym usługi Intune — poprzednie miesiące
 
@@ -375,5 +375,5 @@ __Do pobrania certyfikatu podpisywania firmy Symantec nie jest już wymagana pod
 __Obsługa aplikacji Portal firmy dla systemu Windows Phone 8__ Pomoc techniczna dla aplikacji Portal firmy systemu Windows Phone 8 zostanie wycofana. Obsługa platform systemów Windows Phone 8 i WinRT została zakończona w październiku 2016 r. Obsługa Portalu firmy dla systemu Windows 8 została również zakończona w październiku 2016 r.
 
 
-### <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz także
 Aby dowiedzieć się więcej o najnowszych zmianach, zobacz [Co nowego w usłudze Microsoft Intune](whats-new.md).

@@ -17,24 +17,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5b903cfa9a6700b8931ccedea0f44a9de0d8011
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 7c832fd423a2486fa7c2252513202d82dc432859
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549221"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882566"
 ---
 # <a name="microsoft-intune-data-warehouse-api"></a>Interfejs API magazynu danych usługi Microsoft Intune
 
 Przy użyciu interfejsu API magazynu danych usługi Intune możesz uzyskać dostęp do danych usługi Intune w formacie czytelnym dla komputerów i użyć tych danych w swoim ulubionym narzędziu analitycznym. Przy użyciu interfejsu API możesz tworzyć raporty zapewniające wgląd w środowisko mobilne przedsiębiorstwa. Interfejs API korzysta z protokołu OData, który jest zgodny z wzorcami standardowymi w następujących kwestiach:
 
-  - Nagłówki żądania i odpowiedzi
-  - Kody stanu
-  - Metody HTTP
-  - Konwencje adresów URL
-  - Typy multimediów
-  - Formaty ładunków
-  - Opcje zapytania
+- Nagłówki żądania i odpowiedzi
+- Kody stanu
+- Metody HTTP
+- Konwencje adresów URL
+- Typy multimediów
+- Formaty ładunków
+- Opcje zapytania
 
 OData (Open Data Protocol) to organizacja zajmująca się rozwojem standardu informacji strukturyzowanych (OASIS, Organization for the Advancement of Structured Information Standards), który definiuje najlepsze rozwiązania w zakresie tworzenia i używania interfejsów API RESTful. Magazyn danych usługi Intune korzysta z protokołu OData w wersji 4.0.
 
@@ -56,8 +56,8 @@ Aby uzyskać więcej informacji, zobacz [Pobieranie danych z interfejsu API maga
 
 Interfejs API wymaga autoryzacji w usłudze Azure AD. Usługa Azure AD korzysta z protokołu OAuth 2.0. Po autoryzacji możesz uzyskać dane z interfejsu API, używając czasownika HTTP GET i kontaktując się z uwidocznionymi kolekcjami jednostek. Aby uzyskać szczegółowe informacje, zobacz:
 
- - [Autoryzacja](reports-api-url.md)
- - [Struktura adresu URL interfejsu API](reports-api-url.md)
+- [Autoryzacja](reports-api-url.md)
+- [Struktura adresu URL interfejsu API](reports-api-url.md)
 
 ## <a name="intune-data-warehouse-data-model"></a>Model danych magazynu danych usługi Intune
 

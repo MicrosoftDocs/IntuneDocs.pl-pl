@@ -1,7 +1,7 @@
 ---
-title: Tworzenie profilu urządzenia rozszerzenia jądra systemu macOS usłudze Microsoft Intune — Azure | Dokumentacja firmy Microsoft
+title: Tworzenie profilu urządzenia rozszerzeń jądra macOS Microsoft Intune na platformie Azure | Microsoft Docs
 titleSuffix: ''
-description: Dodawanie lub tworzenie profilu urządzenia z systemem macOS, a następnie skonfiguruj rozszerzenia jądra, aby zezwolić na zastąpienie użytkowników, Dodawanie identyfikatora zespołu i identyfikator pakietu i zespołu w programie Microsoft Intune.
+description: Dodaj lub Utwórz profil urządzenia macOS, a następnie skonfiguruj rozszerzenia jądra, aby zezwalać na przesłonięcie użytkowników, Dodawanie identyfikatora zespołu oraz pakiet i identyfikator zespołu w Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -15,54 +15,54 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd2e03c09cb2bed49ee7607283bf63e2c3ae67da
-ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
+ms.openlocfilehash: eca4692189af9272d3d1fc427b4eba638d8b5b27
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67403909"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882981"
 ---
-# <a name="add-macos-kernel-extensions-in-intune"></a>Dodawanie rozszerzeń do jądra systemu macOS w usłudze Intune
+# <a name="add-macos-kernel-extensions-in-intune"></a>Dodawanie rozszerzeń jądra macOS w usłudze Intune
 
-Na urządzeniach z systemem macOS można dodać funkcje na poziomie jądra. Te funkcje dostępu do części systemu operacyjnego, które programy regularne nie może uzyskać dostępu. Twoja organizacja może mieć określonych potrzeb i wymagań, które nie są dostępne w aplikacji, funkcja urządzenia i tak dalej. 
+Na urządzeniach z systemem macOS można dodawać funkcje na poziomie jądra. Te funkcje uzyskują dostęp do części systemu operacyjnego, do których nie mogą uzyskać dostępu zwykłe programy. Organizacja może mieć określone potrzeby lub wymagania, które nie są dostępne w aplikacji, funkcji urządzenia i tak dalej. 
 
-Aby dodać rozszerzenia jądra, które są zawsze mogą ładować na urządzeniach, należy dodać "jądra rozszerzenia" (KEXT) Microsoft Intune, a następnie Wdróż te rozszerzenia na urządzeniach z systemem.
+Aby dodać rozszerzenia jądra, które są zawsze dozwolone do ładowania na urządzeniach, należy dodać "rozszerzenia jądra" (KEXT) w Microsoft Intune, a następnie wdrożyć te rozszerzenia na urządzeniach.
 
-Na przykład masz program skanowanie wirusów, skanowania urządzenia pod kątem złośliwej zawartości. Można dodać tego antywirusowe rozszerzenia jądra programu jako rozszerzenie jądra dozwolonych w usłudze Intune. Następnie "Przypisz" rozszerzenie dla urządzeń z systemem macOS.
+Na przykład masz program skanujący wirusa, który skanuje urządzenie pod kątem złośliwej zawartości. To rozszerzenie jądra programu antywirusowego można dodać jako dozwolone rozszerzenie jądra w usłudze Intune. Następnie "Przypisz" rozszerzenie do urządzeń z macOS.
 
-Za pomocą tej funkcji Administratorzy mogą umożliwiać użytkownikom do zastąpienia rozszerzenia jądra, Dodaj identyfikatory zespołu i dodawanie rozszerzenia jądra określonej w usłudze Intune.
+Dzięki tej funkcji Administratorzy mogą zezwalać użytkownikom na przesłanianie rozszerzeń jądra, Dodawanie identyfikatorów zespołów i dodawanie określonych rozszerzeń jądra w usłudze Intune.
 
 Ta funkcja ma zastosowanie do:
 
 - System macOS 10.13.2 lub nowszy
 
-Aby użyć tej funkcji, urządzenia muszą być:
+Aby można było korzystać z tej funkcji, urządzenia muszą być:
 
-- Zarejestrowane w usłudze Intune przy użyciu programu Apple Device Enrollment Program (DEP). [Automatyczne rejestrowanie urządzeń z systemem macOS](device-enrollment-program-enroll-macos.md) zawiera więcej informacji.
+- Zarejestrowane w usłudze Intune przy użyciu Device Enrollment Program firmy Apple (DEP). [Automatyczne rejestrowanie urządzeń macOS](device-enrollment-program-enroll-macos.md) ma więcej informacji.
 
   LUB
 
-- Zarejestrowane w usłudze Intune przy użyciu "rejestracji użytkownika zatwierdzone" (warunek firmy Apple). [Przygotowanie do zmiany z rozszerzeniami jądra w systemie macOS High Sierra](https://support.apple.com/en-us/HT208019) (otwiera witrynę sieci web firmy Apple) zawiera więcej informacji.
+- Zarejestrowane w usłudze Intune z "rejestracją zatwierdzone przez użytkownika" (termin firmy Apple). [Przygotowanie do zmian rozszerzeń jądra w MacOS High Sierra](https://support.apple.com/en-us/HT208019) (otwiera witrynę sieci Web firmy Apple) zawiera więcej informacji.
 
 „Profile konfiguracji” są używane w usłudze Intune do tworzenia i dostosowywania tych ustawień na potrzeby organizacji. Po dodaniu tych funkcji w profilu można następnie wypychać lub wdrażać profil na urządzeniach z systemem macOS w organizacji.
 
-W tym artykule pokazano, jak utworzyć profil konfiguracji urządzenia w usłudze Intune przy użyciu rozszerzenia jądra.
+W tym artykule opisano sposób tworzenia profilu konfiguracji urządzenia przy użyciu rozszerzeń jądra w usłudze Intune.
 
 > [!TIP]
-> Aby uzyskać więcej informacji na temat rozszerzeń jądra, zobacz [Przegląd rozszerzeń jądra](https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Extend/Extend.html) (otwiera witrynę sieci web firmy Apple).
+> Aby uzyskać więcej informacji na temat rozszerzeń jądra, zobacz [Omówienie rozszerzenia jądra](https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Extend/Extend.html) (otwiera witrynę sieci Web firmy Apple).
 
 ## <a name="what-you-need-to-know"></a>Co musisz wiedzieć
 
-- Można dodać rozszerzenia bez znaku starszych jądra.
-- Pamiętaj wprowadzić identyfikator właściwego zespołu i identyfikator rozszerzenia jądra. Usługa Intune nie weryfikuje wartości, które należy wprowadzić. Jeśli wprowadzasz błędne informacje, rozszerzenie nie będzie działać na urządzeniu.
+- Można dodać niepodpisane starsze rozszerzenia jądra.
+- Upewnij się, że wprowadzono poprawny identyfikator zespołu i identyfikator pakietu rozszerzenia jądra. Usługa Intune nie sprawdza poprawności wprowadzonych wartości. Jeśli wprowadzisz nieprawidłowe informacje, rozszerzenie nie będzie działało na urządzeniu.
 
 > [!NOTE]
-> Apple opublikowała informacje dotyczące podpisywania i notarization całego oprogramowania. W systemie macOS 10.14.5 i nowsze, jądra rozszerzenia wdrożone za pośrednictwem usługi Intune trzeba było zgodne z zasadami notarization firmy Apple.
+> Firma Apple wydała informacje dotyczące podpisywania i notarization dla całego oprogramowania. W systemie macOS 10.14.5 i nowszych rozszerzenia jądra wdrożone za poorednictwem usługi Intune nie muszą spełniać zasad notarization firmy Apple.
 >
-> Instrukcje dotyczące tych zasad notarization i wszelkie aktualizacje i zmiany zobacz następujące zasoby:
+> Aby uzyskać informacje o tych zasadach notarization oraz o wszelkich aktualizacjach lub zmianach, zobacz następujące zasoby:
 >
->  - [Przed dystrybucją aplikacji notarizing](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution) (otwiera witrynę sieci web firmy Apple) 
->  - [Przygotowanie do zmiany z rozszerzeniami jądra w systemie macOS High Sierra](https://support.apple.com/en-us/HT208019) (otwiera witrynę sieci web firmy Apple)
+> - [Notarizing aplikację przed dystrybucją](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution) (otwiera witrynę sieci Web firmy Apple) 
+> - [Przygotowanie do zmian rozszerzeń jądra w MacOS High Sierra](https://support.apple.com/en-us/HT208019) (otwiera witrynę sieci Web firmy Apple)
 
 ## <a name="create-the-profile"></a>Tworzenie profilu
 
@@ -73,7 +73,7 @@ W tym artykule pokazano, jak utworzyć profil konfiguracji urządzenia w usłudz
     - **Nazwa**: wprowadź opisową nazwę nowego profilu.
     - **Opis:** wprowadź opis profilu. To ustawienie jest opcjonalne, ale zalecane.
     - **Platforma**: wybierz pozycję **macOS**
-    - **Typ profilu**: Wybierz **rozszerzenia**.
+    - **Typ profilu**: wybierz pozycję **rozszerzenia**.
     - **Ustawienia**: wprowadź ustawienia, które chcesz skonfigurować. Listę wszystkich ustawień i ich zadań można znaleźć w temacie:
 
         - [macOS](kernel-extensions-settings-macos.md)

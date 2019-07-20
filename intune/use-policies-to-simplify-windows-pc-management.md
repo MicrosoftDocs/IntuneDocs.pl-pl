@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b612a245e0a12384f8f9e7ec4a2c970afc2fd628
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: eb9f7eef1f7f0e4a712bdf3e8a3706374ac002a8
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548821"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353316"
 ---
 # <a name="use-policies-to-simplify-windows-pc-management"></a>Korzystanie z zasad w celu uproszczenia zarządzania komputerami z systemem Windows
 
@@ -32,7 +32,7 @@ Do zarządzania komputerami z systemem Windows jako komputerami osobistymi, uruc
 
 ![Szablon zasad dla komputerów z systemem Windows](media/pc_policy_template.png)
 
-### <a name="manage-the-microsoft-intune-center"></a>Zarządzanie programem Microsoft Intune Center
+## <a name="manage-the-microsoft-intune-center"></a>Zarządzanie programem Microsoft Intune Center
 Użytkownicy widzą klienta oprogramowania usługi Intune jako **Microsoft Intune Center**. Program Microsoft Intune Center umożliwia użytkownikom:
 
 - Pobieranie aplikacji z Portalu firmy.
@@ -63,6 +63,6 @@ Zobacz następujące zasoby, aby uzyskać informacje o zasadach i ustawieniach, 
 - [Ochrona komputerów z systemem Windows przy użyciu zasad Zapory systemu Windows w usłudze Microsoft Intune](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md) — Te zasady upraszczają administrację ustawień zapory systemu Windows na komputerach zarządzanych.
 
 
-### <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz także
 
 [Typowe zadania związane z zarządzaniem komputerem z systemem Windows za pomocą klienta oprogramowania usługi Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)

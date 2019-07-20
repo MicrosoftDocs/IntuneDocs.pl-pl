@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a58339f8a956e4250064bc81e2f291a72c27c27f
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 41b6109d956272d6368ae294788a8bd54f2fb8f8
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549154"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353485"
 ---
 # <a name="request-and-provide-remote-assistance-for-windows-pcs"></a>Żądanie i zapewnianie pomocy zdalnej dla komputerów z systemem Windows
 
@@ -87,6 +87,6 @@ W trakcie udzielania pomocy użytkownikom w rozwiązywaniu problemów od czasu d
 
 4. W oknie dialogowym **Stan zadania** przejrzyj bieżące zadania zdalne, stan zadania, nazwę urządzenia i wszystkie zgłoszone błędy.
 
-### <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz także
 
 [Typowe zadania związane z zarządzaniem komputerem z systemem Windows za pomocą klienta oprogramowania usługi Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)

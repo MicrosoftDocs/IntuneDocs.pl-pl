@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4dad2d22b742b62ca35bd7fb98c7f7e8241cbb4
-ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
+ms.openlocfilehash: 0eca9dfddbf9ea2c68cf58b1da64d9b046df7e77
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402900"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353644"
 ---
 # <a name="manage-user-device-linking-for-windows-pcs"></a>Zarządzanie łączeniem użytkownik-urządzenie dla komputerów z systemem Windows
 
@@ -32,7 +32,7 @@ Informacje w tym temacie dotyczą tylko komputerów z systemem Windows, które s
 
 Przed wdrożeniem oprogramowania dla użytkownika należy połączyć użytkownika z komputerem. Użytkownika można połączyć z wieloma komputerami, ale każdy komputer można połączyć tylko z jednym użytkownikiem. Użytkownicy są automatycznie łączeni ze wszystkimi komputerami, które są przez nich rejestrowane w usłudze Intune przy użyciu portalu firmy.
 
-Aby uzyskać więcej informacji o użytkowniku podstawowym urządzenia, zobacz [głównego użytkownika Znajdź](find-primary-user.md).
+Aby uzyskać więcej informacji o podstawowym użytkowniku urządzenia, zobacz [Find Primary User](find-primary-user.md).
 
 Aby połączyć użytkownika z komputerem:
 
@@ -53,6 +53,6 @@ Aby połączyć użytkownika z komputerem:
 > [!TIP]
 > Jeśli chcesz ograniczyć użytkownikom końcowym możliwość łączenia z komputerami, włącz opcję **Ogranicz użytkownikowi możliwość łączenia z komputerami** w zasadach **Ustawienia agenta usługi Microsoft Intune**.
 
-### <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz także
 
 [Typowe zadania związane z zarządzaniem komputerem z systemem Windows za pomocą klienta oprogramowania usługi Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)

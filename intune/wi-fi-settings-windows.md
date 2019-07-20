@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 502babf80b4286adb19a09988d16bd56562d4925
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 3bbd90b5a317629bd5b4d87b619d89023053518d
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046666"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884256"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Dodawanie ustawień sieci Wi-Fi dla urządzeń z systemem Windows 10 lub nowszym w usłudze Intune
 
@@ -119,29 +119,29 @@ Wybierz kolejno pozycje **OK** > **Utwórz**, aby zapisać zmiany. Profil zostan
     > [!NOTE]
     > Obecnie profile certyfikatów SCEP są obsługiwane tylko w przypadku korzystania z typu protokołu EAP. Profile certyfikatów PKCS nie są obsługiwane. Pamiętaj, aby za każdym razem, gdy użytkownik zostanie poproszony o wprowadzenie certyfikatu, wybierać certyfikat protokołu SCEP.
 
-      - **Zaufanie serwera**  
+    - **Zaufanie serwera**  
 
-        **Nazwy serwerów certyfikatów**: należy używać z następującymi typami protokołu EAP: **EAP-TLS**, **EAP-TTLS** lub **PEAP**. Wprowadź jedną lub więcej nazw pospolitych używanych w certyfikatach wystawionych przez zaufany urząd certyfikacji (CA). Jeśli te informacje zostaną wprowadzone, można pominąć dynamiczne okno dialogowe zaufania pokazywane na urządzeniach użytkowników próbujących nawiązać połączenie z siecią Wi-Fi.  
+      **Nazwy serwerów certyfikatów**: należy używać z następującymi typami protokołu EAP: **EAP-TLS**, **EAP-TTLS** lub **PEAP**. Wprowadź jedną lub więcej nazw pospolitych używanych w certyfikatach wystawionych przez zaufany urząd certyfikacji (CA). Jeśli te informacje zostaną wprowadzone, można pominąć dynamiczne okno dialogowe zaufania pokazywane na urządzeniach użytkowników próbujących nawiązać połączenie z siecią Wi-Fi.  
 
-        **Certyfikat główny walidacji serwera**: należy używać z następującymi typami protokołu EAP: **EAP-TLS**, **EAP-TTLS** lub **PEAP**. Wybierz profil zaufanych certyfikatów głównych używany do uwierzytelniania połączenia.  
+      **Certyfikat główny walidacji serwera**: należy używać z następującymi typami protokołu EAP: **EAP-TLS**, **EAP-TTLS** lub **PEAP**. Wybierz profil zaufanych certyfikatów głównych używany do uwierzytelniania połączenia.  
 
-        **Prywatność tożsamości (tożsamość zewnętrzna)** : należy używać z typem protokołu EAP **PEAP**. Wprowadź tekst, który będzie wysyłany w odpowiedzi na żądanie podania tożsamości zgłaszane przez protokół EAP. Ten tekst może mieć dowolną wartość. Podczas uwierzytelniania na początku wysyłana jest ta tożsamość anonimowa, a po niej — tożsamość rzeczywista, która jest wysyłana w bezpiecznym tunelu.  
+      **Prywatność tożsamości (tożsamość zewnętrzna)** : należy używać z typem protokołu EAP **PEAP**. Wprowadź tekst, który będzie wysyłany w odpowiedzi na żądanie podania tożsamości zgłaszane przez protokół EAP. Ten tekst może mieć dowolną wartość. Podczas uwierzytelniania na początku wysyłana jest ta tożsamość anonimowa, a po niej — tożsamość rzeczywista, która jest wysyłana w bezpiecznym tunelu.  
 
-      - **Uwierzytelnianie klienta**
+    - **Uwierzytelnianie klienta**
 
-        **Certyfikat klienta na potrzeby uwierzytelniania klienta (certyfikat tożsamości)** : należy używać z typem protokołu EAP **EAP-TLS**. Wybierz profil certyfikatu używany do uwierzytelniania połączenia.
+      **Certyfikat klienta na potrzeby uwierzytelniania klienta (certyfikat tożsamości)** : należy używać z typem protokołu EAP **EAP-TLS**. Wybierz profil certyfikatu używany do uwierzytelniania połączenia.
 
-        **Metoda uwierzytelniania**: należy używać z typem protokołu EAP **EAP-TTLS**. Wybierz metodę uwierzytelniania dla połączenia:  
+      **Metoda uwierzytelniania**: należy używać z typem protokołu EAP **EAP-TTLS**. Wybierz metodę uwierzytelniania dla połączenia:  
 
-          - **Certyfikaty**: wybierz certyfikat klienta, który jest certyfikatem tożsamości przesłanym do serwera.
-          - **Nazwa użytkownika i hasło**: wprowadź metodę **Metoda inna niż protokół EAP (tożsamość wewnętrzna)** na potrzeby uwierzytelniania. Dostępne opcje:
+      - **Certyfikaty**: wybierz certyfikat klienta, który jest certyfikatem tożsamości przesłanym do serwera.
+      - **Nazwa użytkownika i hasło**: wprowadź metodę **Metoda inna niż protokół EAP (tożsamość wewnętrzna)** na potrzeby uwierzytelniania. Dostępne opcje:
 
-            - **Hasło nieszyfrowane (PAP)**
-            - **Challenge Handshake (CHAP)**
-            - **Microsoft CHAP (MS-CHAP)**
-            - **Microsoft CHAP wersja 2 (MS-CHAP v2)**
+        - **Hasło nieszyfrowane (PAP)**
+        - **Challenge Handshake (CHAP)**
+        - **Microsoft CHAP (MS-CHAP)**
+        - **Microsoft CHAP wersja 2 (MS-CHAP v2)**
 
-        **Prywatność tożsamości (tożsamość zewnętrzna)** : należy używać z typem protokołu EAP **EAP-TTLS**. Wprowadź tekst, który będzie wysyłany w odpowiedzi na żądanie podania tożsamości zgłaszane przez protokół EAP. Ten tekst może mieć dowolną wartość. Podczas uwierzytelniania na początku wysyłana jest ta tożsamość anonimowa, a po niej — tożsamość rzeczywista, która jest wysyłana w bezpiecznym tunelu.
+      **Prywatność tożsamości (tożsamość zewnętrzna)** : należy używać z typem protokołu EAP **EAP-TTLS**. Wprowadź tekst, który będzie wysyłany w odpowiedzi na żądanie podania tożsamości zgłaszane przez protokół EAP. Ten tekst może mieć dowolną wartość. Podczas uwierzytelniania na początku wysyłana jest ta tożsamość anonimowa, a po niej — tożsamość rzeczywista, która jest wysyłana w bezpiecznym tunelu.
 
 - **Ustawienia serwera proxy firmy**: wybierz sposób użycia ustawień serwera proxy w organizacji. Dostępne opcje:
   - **Brak**: nie są konfigurowane żadne ustawienia serwera proxy.

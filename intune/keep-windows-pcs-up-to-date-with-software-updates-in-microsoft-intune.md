@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 70818e038be915a1b756eb391129e6cdb74fb069
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: a94c327c8595e83ec9808ed41e788c5756d5510a
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548651"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353879"
 ---
 # <a name="keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune"></a>Zapewnianie aktualności oprogramowania na komputerach z systemem Windows za pomocą aktualizacji w usłudze Microsoft Intune
 
 [!INCLUDE [classic-portal](includes/classic-portal.md)]
 
 > [!NOTE]
-> Informacje w tym temacie dotyczą tylko komputerów z systemem Windows, które są zarządzane jako komputery osobiste przy użyciu oprogramowania klienckiego usługi Intune. Jeśli chcesz zarządzać aktualizacjami dla komputerów z systemem Windows zarejestrowane jako urządzenia przenośne, zobacz [zarządzanie aktualizacjami oprogramowania w usłudze Intune](windows-update-for-business-configure.md).
+> Informacje w tym temacie dotyczą tylko komputerów z systemem Windows, które są zarządzane jako komputery osobiste przy użyciu oprogramowania klienckiego usługi Intune. Aby zarządzać aktualizacjami komputerów z systemem Windows zarejestrowanych jako urządzenia przenośne, zobacz [Zarządzanie aktualizacjami oprogramowania w usłudze Intune](windows-update-for-business-configure.md).
 
 Usługa Microsoft Intune pomaga zabezpieczyć komputery zarządzane na wiele sposobów. Jednym z nich jest zarządzanie aktualizacjami oprogramowania, które zapewniają, że oprogramowanie komputerów jest aktualne, szybko instalując najnowsze poprawki i aktualizacje oprogramowania.
 
@@ -260,5 +260,5 @@ Po wybraniu aktualizacji z listy zostaną udostępnione dodatkowe polecenia umo�
 6. Przypomnienia dotyczące aktualizacji są dostępne w okienku szczegółów na dole strony **Wszystkie aktualizacje** .
 
 
-### <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz także
 [Zasady ochrony komputerów z systemem Windows](policies-to-protect-windows-pcs-in-microsoft-intune.md)

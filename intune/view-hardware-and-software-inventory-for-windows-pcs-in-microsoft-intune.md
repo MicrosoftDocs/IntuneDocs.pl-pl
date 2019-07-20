@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ba447153996383b3f057c4776b643a7a4ccd48b
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 2b9d17426bf3dde3fd1684c12113adf0c5095d5f
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67547966"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353305"
 ---
 # <a name="view-hardware-and-software-inventory-for-windows-pcs"></a>Wyświetlanie spisu sprzętu i oprogramowania dla komputerów z systemem Windows
 
 [!INCLUDE [classic-portal](includes/classic-portal.md)]
 
 > [!NOTE]
-> Informacje w tym temacie dotyczą tylko komputerów z systemem Windows, które są zarządzane jako komputery osobiste przy użyciu oprogramowania klienckiego usługi Intune. Jeśli chcesz wyświetlić spis dla komputerów z systemem Windows zarejestrowane jako urządzenia przenośne, zobacz [wyświetlanie szczegółów urządzeń w usłudze Intune](device-inventory.md).
+> Informacje w tym temacie dotyczą tylko komputerów z systemem Windows, które są zarządzane jako komputery osobiste przy użyciu oprogramowania klienckiego usługi Intune. Aby wyświetlić spis dla komputerów z systemem Windows zarejestrowanych jako urządzenia przenośne, zobacz [Wyświetlanie szczegółów urządzenia w usłudze Intune](device-inventory.md).
 
 Usługa Intune zbiera szczegółowe informacje dotyczące sprzętu i oprogramowania komputerów zarządzanych jako komputery osobiste za pomocą oprogramowania klienckiego usługi Intune. Poniżej opisano kroki procedur:
 
@@ -71,6 +71,6 @@ Usługa Intune zbiera szczegółowe informacje dotyczące sprzętu i oprogramowa
 
     W oknie dialogowym **Stan zadania** są wyświetlane bieżące zadania zdalne, stan zadania, nazwa urządzenia i wszelkie zgłoszone błędy. Okno zawiera również link do informacji dotyczących rozwiązywania problemów.
 
-### <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz także
 
 [Typowe zadania związane z zarządzaniem komputerem z systemem Windows za pomocą klienta oprogramowania usługi Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)

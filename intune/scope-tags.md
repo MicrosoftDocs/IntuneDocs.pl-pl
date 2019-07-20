@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba1d7669e80fd91398f41c57ca2d27ce78a06041
-ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
+ms.openlocfilehash: 627899eafb2175b2d3034045bd765a10f4a203d6
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67403788"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882505"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Używanie kontroli dostępu opartej na rolach i tagów zakresu w rozproszonej infrastrukturze informatycznej
 
@@ -42,8 +42,8 @@ Na przykład załóżmy, że administrator biura regionalnego w Seattle ma przyp
 
     ![Zrzut ekranu przedstawiający tworzenie tagu zakresu.](./media/scope-tags/create-scope-tag.png)
 
-3. Jeśli chcesz, aby wszystkie urządzenia z określonych grup, wybierz opcję **przypisywanie tagu zakresu do wszystkich urządzeń w wybranych grupach**.
-    1. W **wybierz grupy do uwzględnienia** wybierz grupy zawierające urządzenia, które chcesz przypisać ten tag zakresu do.
+3. Jeśli chcesz, aby wszystkie urządzenia były określone w określonych grupach, wybierz pozycję **Przypisz tag zakresu do wszystkich urządzeń w wybranych grupach**.
+    1. Na stronie **Wybierz grupy do** dołączenia wybierz grupy zawierające urządzenia, do których chcesz przypisać ten tag zakresu.
     2. Wybierz pozycję **Wybierz**.
 4. Wybierz pozycję **Utwórz**.
 
@@ -108,17 +108,17 @@ W przypadku urządzeń z ustawieniem **Typ rejestracji urządzenia** o wartości
 Podczas pracy z tagami zakresu należy pamiętać o następujących szczegółach:
 
 - Obecnie tagi zakresu można przypisać do następujących elementów:
-    - Przypisania ról
-    - Zasady zgodności urządzenia
-    - Profile konfiguracji urządzeń
-    - Pierścienie aktualizacji systemu Windows 10
-    - Urządzenia zarządzane
-    - Aplikacje
-    - Zasady konfiguracji aplikacji — urządzenia zarządzane
-    - Skrypty środowiska Powershell
-    - Tokeny usługi DEP
-    - Profil aprowizowania aplikacji dla systemu iOS
-    - Tokeny programu zakupów zbiorczych VPP (Volume Purchase Program)
+  - Przypisania ról
+  - Zasady zgodności urządzenia
+  - Profile konfiguracji urządzeń
+  - Pierścienie aktualizacji systemu Windows 10
+  - Urządzenia zarządzane
+  - Aplikacje
+  - Zasady konfiguracji aplikacji — urządzenia zarządzane
+  - Skrypty środowiska Powershell
+  - Tokeny usługi DEP
+  - Profil aprowizowania aplikacji dla systemu iOS
+  - Tokeny programu zakupów zbiorczych VPP (Volume Purchase Program)
 - Gdy administrator utworzy obiekt w usłudze Intune, wszelkie tagi zakresu przypisane do tego administratora zostaną automatycznie przypisane do tego nowego obiektu.
 - Kontrola dostępu oparta na rolach usługi Intune nie ma zastosowania do ról usługi Azure Active Directory. W związku z tym role administratorów usługi Intune i administratorów globalnych mają pełny dostęp administracyjny do usługi Intune niezależnie od tego, jakie mają tagi zakresu.
 - Administratorzy w przypisaniu roli z tagami zakresu widzą też obiekty usługi Intune bez tagów zakresu.

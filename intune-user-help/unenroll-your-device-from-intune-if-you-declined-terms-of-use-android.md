@@ -18,12 +18,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fb4ac87bef7c822111e95c18f149fa8d0598c36e
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 12e3b111572758ca8d77406287134df8cdf7e027
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67546631"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883961"
 ---
 # <a name="remove-your-device-from-management-if-you-declined-terms-of-use"></a>Usuwanie urządzenia z zarządzania w przypadku odrzucenia warunków użytkowania
 
@@ -49,8 +49,8 @@ Aby usunąć urządzenie z usługi Intune i odinstalować aplikację Portal firm
 
 Aby usunąć wszystkie dane przechowywane przez aplikację Portal firmy dla systemu Android z urządzenia:
 
-  - Wyczyść dane aplikacji: przejdź do obszaru Aplikacje, a następnie kliknij aplikację i przycisk „Wyczyść dane”
-  - Usuń folder „\storage\internal storage\Android\data\com.microsoft.windowsintune.companyportal”
+- Wyczyść dane aplikacji: przejdź do obszaru Aplikacje, a następnie kliknij aplikację i przycisk „Wyczyść dane”
+- Usuń folder „\storage\internal storage\Android\data\com.microsoft.windowsintune.companyportal”
 
 
 Nadal potrzebujesz pomocy? Skontaktuj się z działem pomocy technicznej Twojej firmy (sprawdź [witrynę internetową Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980), aby uzyskać informacje kontaktowe) lub napisz do <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having unenrolling my Android device&body=Describe the issue you're experiencing here.">zespołu ds. systemu Android w firmie Microsoft</a>.

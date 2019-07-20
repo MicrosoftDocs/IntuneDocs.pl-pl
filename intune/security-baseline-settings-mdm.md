@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 30cdb6903caa7e1071a6781db13c761e64f8bd7a
-ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
+ms.openlocfilehash: 7f70d54404dc20d6d6aabd5974dff9c5102b759f
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67735770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882291"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Ustawienia punktów odniesienia zabezpieczeń oprogramowania MDM dla usługi Intune  
 
@@ -116,8 +116,8 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
 
   W przypadku zasad dysków wymiennych funkcji BitLocker skonfiguruj następujące ustawienie:
 
-    - **Wymagaj szyfrowania do zapisu**  
-      **Domyślne**: Tak  
+  - **Wymagaj szyfrowania do zapisu**  
+    **Domyślne**: Tak  
   
 
 ## <a name="browser"></a>Przeglądarka  
@@ -226,17 +226,17 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
   **Domyślne**: blokuj instalację urządzeń sprzętowych  
 
-    W przypadku wybrania pozycji *Blokuj instalację urządzeń sprzętowych* są dostępne następujące ustawienia.
-  
-    - **Usuń zgodne urządzenia sprzętowe**   
+  W przypadku wybrania pozycji *Blokuj instalację urządzeń sprzętowych* są dostępne następujące ustawienia.
+
+  - **Usuń zgodne urządzenia sprzętowe**   
     To ustawienie jest dostępne tylko wtedy, gdy ustawienie *Instalacja urządzeń sprzętowych według identyfikatorów urządzeń* ma wartość *Blokuj instalację urządzeń sprzętowych*.
-      
-      **Domyślne**: Tak
-  
-    - **Zablokowane identyfikatory urządzeń sprzętowych**  
-       To ustawienie jest dostępne tylko wtedy, gdy ustawienie *Instalacja urządzeń sprzętowych według identyfikatorów urządzeń* ma wartość *Blokuj instalację urządzeń sprzętowych*.
-      
-      **Domyślne**: Tak  
+    
+    **Domyślne**: Tak
+
+  - **Zablokowane identyfikatory urządzeń sprzętowych**  
+    To ustawienie jest dostępne tylko wtedy, gdy ustawienie *Instalacja urządzeń sprzętowych według identyfikatorów urządzeń* ma wartość *Blokuj instalację urządzeń sprzętowych*.
+    
+    **Domyślne**: Tak  
   
 - **Instalacja urządzeń sprzętowych według klas konfiguracji**  
   To ustawienie zasad umożliwia określenie listy unikatowych identyfikatorów globalnych (GUID) klas konfiguracji urządzeń dla sterowników urządzeń, których nie można zainstalować w systemie Windows. To ustawienie zasad ma pierwszeństwo przed innymi ustawieniami zasad, które umożliwiają zainstalowanie urządzenia w systemie Windows. Jeśli to ustawienie zasad zostanie włączone, system Windows nie będzie mógł instalować ani aktualizować sterowników urządzeń, których identyfikatory GUID klas konfiguracji urządzeń są na utworzonej przez Ciebie liście. Jeśli włączysz to ustawienie zasad na serwerze usług pulpitu zdalnego, będzie ono wpływać na przekierowywanie określonych urządzeń z klienta usług pulpitu zdalnego na serwer usług pulpitu zdalnego. Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, system Windows będzie mógł instalować i aktualizować urządzenia zgodnie z innymi ustawieniami zasad.  
@@ -244,16 +244,16 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
   **Domyślne**: blokuj instalację urządzeń sprzętowych  
 
-    W przypadku wybrania pozycji *Blokuj instalację urządzeń sprzętowych* są dostępne następujące ustawienia.
-    - **Usuń zgodne urządzenia sprzętowe**    
+  W przypadku wybrania pozycji *Blokuj instalację urządzeń sprzętowych* są dostępne następujące ustawienia.
+  - **Usuń zgodne urządzenia sprzętowe**    
     To ustawienie jest dostępne tylko wtedy, gdy ustawienie *Instalacja urządzeń sprzętowych według klas konfiguracji* ma wartość *Blokuj instalację urządzeń sprzętowych*.  
 
-      **Domyślne:** : *brak konfiguracji domyślnej*  
-  
-    - **Zablokowane identyfikatory urządzeń sprzętowych**  
-      To ustawienie jest dostępne tylko wtedy, gdy ustawienie *Instalacja urządzeń sprzętowych według klas konfiguracji* ma wartość *Blokuj instalację urządzeń sprzętowych*.
-      
-      **Domyślne:** : *brak konfiguracji domyślnej*  
+    **Domyślne:** : *brak konfiguracji domyślnej*  
+
+  - **Zablokowane identyfikatory urządzeń sprzętowych**  
+    To ustawienie jest dostępne tylko wtedy, gdy ustawienie *Instalacja urządzeń sprzętowych według klas konfiguracji* ma wartość *Blokuj instalację urządzeń sprzętowych*.
+    
+    **Domyślne:** : *brak konfiguracji domyślnej*  
 
 ## <a name="device-lock"></a>Blokada urządzenia  
 Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji zasad — DeviceLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) w dokumentacji systemu Windows.  
@@ -1186,12 +1186,12 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
 - **Działanie monitu o podniesienie uprawnień administratora**  
   To ustawienie zasad steruje działaniem monitu o podniesienie uprawnień w przypadku administratorów. Dostępne są następujące opcje: 
-    - *Podnieś bez monitowania* — umożliwia uprzywilejowanym kontom wykonanie operacji, która wymaga podniesienia uprawnień, bez konieczności wymagania zgody lub poświadczeń. Uwaga: tej opcji należy używać tylko w środowiskach z największymi ograniczeniami. 
-    - *Monituj o podanie poświadczeń na bezpiecznym pulpicie* — jeśli operacja wymaga podniesienia uprawnień, na bezpiecznym pulpicie zostanie wyświetlony monit o wprowadzenie nazwy i hasła uprzywilejowanego użytkownika. Jeśli użytkownik wprowadzi prawidłowe poświadczenia, operacja będzie kontynuowana przy użyciu najwyższych dostępnych uprawnień użytkownika. 
-    - *Monituj o zgodę na bezpiecznym pulpicie* — jeśli operacja wymaga podniesienia uprawnień, na bezpiecznym pulpicie zostanie wyświetlony monit o wybranie pozycji Zezwól lub Odmów. Jeśli użytkownik wybierze pozycję Zezwól, operacja będzie kontynuowana przy użyciu najwyższych dostępnych uprawnień użytkownika. 
-    - *Monituj o poświadczenia* — jeśli operacja wymaga podniesienia uprawnień, zostanie wyświetlony monit o wprowadzenie nazwy i hasła użytkownika administracyjnego. Jeśli użytkownik wprowadzi prawidłowe poświadczenia, operacja będzie kontynuowana przy użyciu odpowiednich uprawnień. 
-    - *Monituj o zgodę* — jeśli operacja wymaga podniesienia uprawnień, zostanie wyświetlony monit o wybranie pozycji Zezwól lub Odmów. Jeśli użytkownik wybierze pozycję Zezwól, operacja będzie kontynuowana przy użyciu najwyższych dostępnych uprawnień użytkownika.  
-    - *Monituj o zgodę w przypadku plików binarnych z systemem innym niż Windows* — jeśli operacja dotycząca aplikacji firmy innej niż Microsoft wymaga podniesienia uprawnień, na bezpiecznym pulpicie zostanie wyświetlony monit o wybranie pozycji Zezwól lub Odmów. Jeśli użytkownik wybierze pozycję Zezwól, operacja będzie kontynuowana przy użyciu najwyższych dostępnych uprawnień użytkownika. 
+  - *Podnieś bez monitowania* — umożliwia uprzywilejowanym kontom wykonanie operacji, która wymaga podniesienia uprawnień, bez konieczności wymagania zgody lub poświadczeń. Uwaga: tej opcji należy używać tylko w środowiskach z największymi ograniczeniami. 
+  - *Monituj o podanie poświadczeń na bezpiecznym pulpicie* — jeśli operacja wymaga podniesienia uprawnień, na bezpiecznym pulpicie zostanie wyświetlony monit o wprowadzenie nazwy i hasła uprzywilejowanego użytkownika. Jeśli użytkownik wprowadzi prawidłowe poświadczenia, operacja będzie kontynuowana przy użyciu najwyższych dostępnych uprawnień użytkownika. 
+  - *Monituj o zgodę na bezpiecznym pulpicie* — jeśli operacja wymaga podniesienia uprawnień, na bezpiecznym pulpicie zostanie wyświetlony monit o wybranie pozycji Zezwól lub Odmów. Jeśli użytkownik wybierze pozycję Zezwól, operacja będzie kontynuowana przy użyciu najwyższych dostępnych uprawnień użytkownika. 
+  - *Monituj o poświadczenia* — jeśli operacja wymaga podniesienia uprawnień, zostanie wyświetlony monit o wprowadzenie nazwy i hasła użytkownika administracyjnego. Jeśli użytkownik wprowadzi prawidłowe poświadczenia, operacja będzie kontynuowana przy użyciu odpowiednich uprawnień. 
+  - *Monituj o zgodę* — jeśli operacja wymaga podniesienia uprawnień, zostanie wyświetlony monit o wybranie pozycji Zezwól lub Odmów. Jeśli użytkownik wybierze pozycję Zezwól, operacja będzie kontynuowana przy użyciu najwyższych dostępnych uprawnień użytkownika.  
+  - *Monituj o zgodę w przypadku plików binarnych z systemem innym niż Windows* — jeśli operacja dotycząca aplikacji firmy innej niż Microsoft wymaga podniesienia uprawnień, na bezpiecznym pulpicie zostanie wyświetlony monit o wybranie pozycji Zezwól lub Odmów. Jeśli użytkownik wybierze pozycję Zezwól, operacja będzie kontynuowana przy użyciu najwyższych dostępnych uprawnień użytkownika. 
   
   [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067215)   
   
@@ -1208,11 +1208,11 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   **Domyślne**: wymagaj protokołu NTLM V2 i szyfrowania 128-bitowego
   
 - **Zachowanie po wyjęciu karty inteligentnej**  
-    To ustawienie zabezpieczeń określa, co się stanie, gdy karta inteligentna zalogowanego użytkownika zostanie usunięta z czytnika kart inteligentnych. Dostępne są następujące opcje:
-     - *Brak akcji*. 
-     - *Zablokuj stację roboczą* — stacja robocza jest blokowana po wyjęciu karty inteligentnej, dzięki czemu użytkownicy mogą opuścić obszar, zabierając ze sobą kartę inteligentną, i nadal utrzymywać chronioną sesję.
-     - *Wymuszaj wylogowanie* — użytkownik jest automatycznie wylogowywany po wyjęciu karty inteligentnej.
-     - *Rozłącz sesję pulpitu zdalnego* — usunięcie karty inteligentnej powoduje rozłączenie sesji bez wylogowywania użytkownika. Umożliwia to użytkownikowi włożenie karty inteligentnej i wznowienie sesji w późniejszym czasie lub na innym komputerze z czytnikiem kart inteligentnych bez konieczności ponownego logowania się. Jeśli sesja jest lokalna, te zasady działają tak samo, jak w przypadku opcji Zablokuj stację roboczą.
+  To ustawienie zabezpieczeń określa, co się stanie, gdy karta inteligentna zalogowanego użytkownika zostanie usunięta z czytnika kart inteligentnych. Dostępne są następujące opcje:
+  - *Brak akcji*. 
+  - *Zablokuj stację roboczą* — stacja robocza jest blokowana po wyjęciu karty inteligentnej, dzięki czemu użytkownicy mogą opuścić obszar, zabierając ze sobą kartę inteligentną, i nadal utrzymywać chronioną sesję.
+  - *Wymuszaj wylogowanie* — użytkownik jest automatycznie wylogowywany po wyjęciu karty inteligentnej.
+  - *Rozłącz sesję pulpitu zdalnego* — usunięcie karty inteligentnej powoduje rozłączenie sesji bez wylogowywania użytkownika. Umożliwia to użytkownikowi włożenie karty inteligentnej i wznowienie sesji w późniejszym czasie lub na innym komputerze z czytnikiem kart inteligentnych bez konieczności ponownego logowania się. Jeśli sesja jest lokalna, te zasady działają tak samo, jak w przypadku opcji Zablokuj stację roboczą.
   
   [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067331) 
     

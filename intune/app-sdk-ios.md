@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 961470b9f5671dc39864dac45fdcb49862de4da9
-ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
+ms.openlocfilehash: 673dd0cb751fcdd2a7036dc2bf52dd731a4b04ff
+ms.sourcegitcommit: 8d12ab22e23552f9addaef4c28b732fb211945a2
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67735558"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68306749"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu iOS
 
@@ -162,15 +162,15 @@ Aby włączyć zestaw SDK aplikacji usługi Intune, wykonaj następujące kroki:
     
     c. Dodaj grupę `com.microsoft.adalcache` do Twoich istniejących grup dostępu.
     
-        ![Intune App SDK iOS: keychain sharing](./media/intune-app-sdk-ios-keychain-sharing.png)
+      ![Zestaw SDK aplikacji usługi Intune dla systemu iOS: udostępnianie łańcucha kluczy](./media/intune-app-sdk-ios-keychain-sharing.png)
     
     d. Jeśli edytujesz plik uprawnień bezpośrednio, a nie za pomocą przedstawionego powyżej interfejsu użytkownika środowiska Xcode, aby utworzyć grupy dostępu pęku kluczy, dołącz grupy dostępu pęku kluczy przy użyciu elementu `$(AppIdentifierPrefix)` (środowisko Xcode wykonuje tę czynność automatycznie). Przykład:
     
-        - `$(AppIdentifierPrefix)com.microsoft.intune.mam`
-        - `$(AppIdentifierPrefix)com.microsoft.adalcache`
+      - `$(AppIdentifierPrefix)com.microsoft.intune.mam`
+      - `$(AppIdentifierPrefix)com.microsoft.adalcache`
     
-        > [!NOTE]
-        > An entitlements file is an XML file that is unique to your mobile application. It is used to specify special permissions and capabilities in your iOS app. If your app did not previously have an entitlements file, enabling keychain sharing (step 3) should have caused Xcode to generate one for your app. Ensure the app's bundle ID is the first entry in the list.
+      > [!NOTE]
+      > Plik uprawnień to plik XML, który jest unikatowy dla Twojej aplikacji mobilnej. Służy do określania specjalnych uprawnień i możliwości w Twojej aplikacji dla systemu iOS. Jeśli aplikacja nie miała wcześniej pliku uprawnień, włączenie udostępniania pęku kluczy (krok 3) powinno spowodować wygenerowanie takiego pliku dla aplikacji w środowisku Xcode. Upewnij się, że identyfikator pakietu aplikacji jest pierwszym wpisem na liście.
 
 6. Uwzględnij każdy protokół przekazywany przez aplikację do procedury `UIApplication canOpenURL`, w tablicy `LSApplicationQueriesSchemes` pliku Info.plist aplikacji. Pamiętaj o zapisaniu zmian przed przejściem do następnego kroku.
 

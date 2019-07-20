@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eade2a1bc19e4b0c477faf2ad8e262196da8cc30
-ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
+ms.openlocfilehash: b79f488fcaa221523b5833aa1cebcf872d5f9b3d
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572512"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354005"
 ---
 # <a name="help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune"></a>Ochrona komputerów z systemem Windows przy użyciu zasad Zapory systemu Windows w usłudze Microsoft Intune
 
 [!INCLUDE [classic-portal](includes/classic-portal.md)]
 
 > [!NOTE]
-> Informacje w tym temacie dotyczą tylko komputerów z systemem Windows, które są zarządzane jako komputery osobiste przy użyciu oprogramowania klienckiego usługi Intune. Jeśli chcesz zarządzać ustawieniami zapory dla komputerów z systemem Windows zarejestrowane jako urządzenia przenośne, zobacz [Dodawanie ustawień programu endpoint protection w usłudze Intune](endpoint-protection-configure.md).
+> Informacje w tym temacie dotyczą tylko komputerów z systemem Windows, które są zarządzane jako komputery osobiste przy użyciu oprogramowania klienckiego usługi Intune. Jeśli chcesz zarządzać ustawieniami zapory dla komputerów z systemem Windows zarejestrowanych jako urządzenia przenośne, zobacz [Dodawanie ustawień programu Endpoint Protection w usłudze Intune](endpoint-protection-configure.md).
 
 Usługa Microsoft Intune może pomóc w zabezpieczaniu komputerów zarządzanych za pomocą klienta usługi Intune na wiele sposobów. Jednym z nich jest udostępnienie zasad, które umożliwiają skonfigurowanie ustawień Zapory systemu Windows na komputerach.
 
@@ -140,5 +140,5 @@ Możesz skonfigurować wyjątki, które zezwalają na przesyłanie konkretnych r
 |**Windows Virtual PC**<br>(system Windows 7 lub nowszy)|Umożliwia maszynom wirtualnym komunikowanie się z innymi komputerami.|
 |**Bezprzewodowe urządzenia przenośne**|Umożliwia transferowanie multimediów z kamery sieciowej lub urządzenia multimedialnego do zarządzanych komputerów przy użyciu protokołu transferu multimediów (MTP). To ustawienie powoduje użycie usługi SSDP i protokołów sieciowych UPnP.|
 
-### <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz także
 [Zasady ochrony komputerów z systemem Windows](policies-to-protect-windows-pcs-in-microsoft-intune.md)

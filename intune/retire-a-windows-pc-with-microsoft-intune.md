@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2b6326d30650aa62777ac9ce9c70394904b678f3
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: fefb8feee7f308fca3d3455487aae5f2802d9c5d
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549160"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353400"
 ---
 # <a name="retire-a-windows-pc"></a>Wycofanie komputera z systemem Windows
 
@@ -59,6 +59,6 @@ W przypadku wycofywania komputera:
 
     Jeśli odinstalowanie klienta nie powiedzie się, zapoznaj się z sekcją [Rozwiązywanie problemów z programem Endpoint Protection](/intune/troubleshoot-endpoint-protection-in-microsoft-intune), aby uzyskać dalszą pomoc.
 
-### <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz także
 
 [Typowe zadania związane z zarządzaniem komputerem z systemem Windows za pomocą klienta oprogramowania usługi Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)

@@ -18,12 +18,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 85435acffbad3117f6adbbafe60e1993b2d18bdb
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: b55368f5c512ff3efd4059d420717321729450ee
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55835781"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884064"
 ---
 # <a name="remotely-lock-your-device-from-the-company-portal-website"></a>Zdalne blokowanie urządzenia z poziomu witryny sieci Web Portal firmy
 
@@ -44,7 +44,7 @@ Ustawienie zdalnej blokady działa na następujących platformach:
 
     ![Zrzut ekranu przedstawiający stronę Urządzenia z dwoma kafelkami, które przedstawiają niezidentyfikowane urządzenia z ogólną nazwą. Bezpośrednio pod urządzeniami wyświetlany jest szary baner zawierający monit dla użytkownika z prośbą o identyfikację używanego urządzenia lub dodanie nowego.](./media/rename-reset-device-step2-1808.png) 
 
-3. Wybierz opcję **Zdalne blokowanie**. Jeśli opcja blokady nie jest widoczna u góry strony, wybierz opcję **Więcej (...)** > **Zdalne blokowanie**.  
+3. Wybierz opcję **Zdalne blokowanie**. Jeśli opcja blokady nie jest widoczna u góry strony, wybierz opcję **Więcej (...)**  > **Zdalne blokowanie**.  
 
    ![Strona szczegółów urządzenia dla wybranego urządzenia w witrynie Portal firmy, z listą linków w górnej części z opcjami Zmień nazwę, Usuń, Resetuj urządzenie, Resetuj kod dostępu oraz Zdalne blokowanie. ](./media/rename-reset-device-1808.png) 
 
@@ -56,9 +56,9 @@ Po potwierdzeniu witryna Portal firmy spróbuje zablokować urządzenie. W tym c
 
 Stan zdalnego blokowania jest wyświetlany w trzech miejscach:
 
-   * Obszar powiadomień witryny sieci Web.
-   * Strona **Szczegóły** urządzenia.
-   * Kafelek, na którym jest wyświetlana nazwa urządzenia, w sekcji **Urządzenia**.  
+* Obszar powiadomień witryny sieci Web.
+* Strona **Szczegóły** urządzenia.
+* Kafelek, na którym jest wyświetlana nazwa urządzenia, w sekcji **Urządzenia**.  
 
 > [!Note]
 > Jeśli widzisz powiadomienie, że zdalne blokowanie nie powiodło się, odczekaj kilka minut. Następnie spróbuj ponownie zablokować urządzenie. Stan zmieni się ponownie na „Zdalne blokowanie oczekuje”. Jeśli ponowienie próby nie zadziała, skontaktuj się z działem pomocy technicznej w firmie, aby uzyskać pomoc.

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dc2b324c8c6e1687b8ce5563aa85c155e21fc197
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: a7baa95d6719dfa3161ae6644bbc9351d3f3d9f0
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040713"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882381"
 ---
 # <a name="use-apis-to-add-third-party-cas-for-scep-to-intune"></a>Dodawanie urzędów certyfikacji innych firm dla protokołu SCEP do usługi Intune za pomocą interfejsów API
 
@@ -176,8 +176,8 @@ Wyjątki:
 
 **Uwagi dotyczące zabezpieczeń**  
 
-  - Jeśli ta metoda zgłasza wyjątek, serwer SCEP **nie może** wystawić certyfikatu klientowi.
-  - Niepowodzenia walidacji żądania certyfikatu SCEP mogą wskazywać na problem z infrastrukturą usługi Intune. Mogą również wskazywać na próbę uzyskania certyfikatu przez osobę niepowołaną.
+- Jeśli ta metoda zgłasza wyjątek, serwer SCEP **nie może** wystawić certyfikatu klientowi.
+- Niepowodzenia walidacji żądania certyfikatu SCEP mogą wskazywać na problem z infrastrukturą usługi Intune. Mogą również wskazywać na próbę uzyskania certyfikatu przez osobę niepowołaną.
 
 ##### <a name="sendsuccessnotification-method"></a>Metoda SendSuccessNotification
 
@@ -217,8 +217,8 @@ Wyjątki:
 
 **Uwagi dotyczące zabezpieczeń**
 
-  - Jeśli ta metoda zgłasza wyjątek, serwer SCEP **nie może** wystawić certyfikatu klientowi.
-  - Niepowodzenia walidacji żądania certyfikatu SCEP mogą wskazywać na problem z infrastrukturą usługi Intune. Mogą również wskazywać na próbę uzyskania certyfikatu przez osobę niepowołaną.
+- Jeśli ta metoda zgłasza wyjątek, serwer SCEP **nie może** wystawić certyfikatu klientowi.
+- Niepowodzenia walidacji żądania certyfikatu SCEP mogą wskazywać na problem z infrastrukturą usługi Intune. Mogą również wskazywać na próbę uzyskania certyfikatu przez osobę niepowołaną.
 
 ##### <a name="sendfailurenotification-method"></a>Metoda SendFailureNotification
 
@@ -254,8 +254,8 @@ Wyjątki:
 
 **Uwagi dotyczące zabezpieczeń**
 
-  - Jeśli ta metoda zgłasza wyjątek, serwer SCEP **nie może** wystawić certyfikatu klientowi.
-  - Niepowodzenia walidacji żądania certyfikatu SCEP mogą wskazywać na problem z infrastrukturą usługi Intune. Mogą również wskazywać na próbę uzyskania certyfikatu przez osobę niepowołaną.
+- Jeśli ta metoda zgłasza wyjątek, serwer SCEP **nie może** wystawić certyfikatu klientowi.
+- Niepowodzenia walidacji żądania certyfikatu SCEP mogą wskazywać na problem z infrastrukturą usługi Intune. Mogą również wskazywać na próbę uzyskania certyfikatu przez osobę niepowołaną.
 
 ##### <a name="setsslsocketfactory-method"></a>Metoda SetSslSocketFactory
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4f749ab85d283ed9743d227476f8229dc1cf7c3
-ms.sourcegitcommit: a97b6139770719afbd713501f8e50f39636bc202
+ms.openlocfilehash: 5159ee595a6699eb457b194162d21038d4667063
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402647"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353342"
 ---
 # <a name="endpoint-protection-issues-and-possible-solutions-in-microsoft-intune"></a>Problemy dotyczące ochrony punktu końcowego w usłudze Microsoft Intune i ich możliwe rozwiązania
 
@@ -34,7 +34,7 @@ Zapoznaj się z dziennikami zdarzeń i kodami błędów, aby [rozwiązać proble
 
 ## <a name="common-intune-errors-and-possible-resolutions"></a>Typowe błędy usługi Intune i możliwe rozwiązania
 
-#### <a name="endpoint-protection-engine-unavailable"></a>Aparat programu Endpoint Protection jest niedostępny
+### <a name="endpoint-protection-engine-unavailable"></a>Aparat programu Endpoint Protection jest niedostępny
 
 **Możliwa przyczyna**: aparat programu Endpoint Protection usługi Intune został uszkodzony lub usunięty.
 
@@ -45,7 +45,7 @@ Zapoznaj się z dziennikami zdarzeń i kodami błędów, aby [rozwiązać proble
 - W obszarze Panel sterowania > Programy kliknij pozycję **Agent programu Microsoft Intune Endpoint Protection**. Odinstaluj aplikację.
 - Podczas następnej synchronizacji aktualizacji Menedżer usługi Microsoft Online Management Update wykryje brakujący program i zainstaluje go ponownie o zaplanowanej godzinie instalacji.
 
-#### <a name="features-are-disabled"></a>Funkcje są wyłączone
+### <a name="features-are-disabled"></a>Funkcje są wyłączone
 
 Może pojawiać się komunikat, że niektóre funkcje są wyłączone. Przyczyną może być to, że administrator wyłączył ochronę punktu końcowego w usłudze Intune lub usługę Windows Defender przy użyciu profilu konfiguracji. Na urządzeniu mógł je też wyłączyć użytkownik końcowy. Komunikaty, które mogą się wyswietlać:
 
@@ -63,19 +63,19 @@ Może pojawiać się komunikat, że niektóre funkcje są wyłączone. Przyczyn�
 - [Program antywirusowy Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus)
 - [Użytkownicy końcowi: włączanie ochrony w czasie rzeczywistym w celu uzyskiwania dostępu do zasobów firmy](/intune-user-help/turn-on-defender-windows)
 
-#### <a name="malware-definitions-out-of-date"></a>Definicje złośliwego oprogramowania są nieaktualne
+### <a name="malware-definitions-out-of-date"></a>Definicje złośliwego oprogramowania są nieaktualne
 
 Ten stan jest wyświetlany, gdy definicje złośliwego oprogramowania na urządzeniu są nieaktualne (pochodzą sprzed co najmniej 14 dni). Komunikat może wyświetlać się na przykład wtedy, gdy urządzenie utraci połączenie z Internetem lub gdy definicje złośliwego oprogramowania są nieaktualne.
 
 **Możliwe rozwiązania**: jeśli definicje złośliwego oprogramowania są nieaktualne, zaktualizuj je, korzystając z [Programu antywirusowego Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus).
 
-#### <a name="full-scan-overdue-or-quick-scan-overdue"></a>Zaległe skanowanie — pełne lub szybkie
+### <a name="full-scan-overdue-or-quick-scan-overdue"></a>Zaległe skanowanie — pełne lub szybkie
 
 Pełne lub szybkie skanowanie nie zostało wykonane od 14 dni. Ten błąd może wystąpić, jeśli urządzenie zostanie ponownie uruchomione podczas pełnego skanowania.
 
 **Możliwe rozwiązania**: jeśli skanowanie jest zaległe, możesz uruchomić jednorazowe skanowanie lub zaplanować skanowanie cykliczne. Zobacz [Program antywirusowy Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus).
 
-#### <a name="another-endpoint-protection-application-running"></a>Uruchomiona jest inna aplikacja ochrony punktu końcowego
+### <a name="another-endpoint-protection-application-running"></a>Uruchomiona jest inna aplikacja ochrony punktu końcowego
 
 Uruchomiona jest inna aplikacja ochrony punktu końcowego, a komputer jest w dobrej kondycji.
 

@@ -18,12 +18,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 210a11cbd6e2c3be85ed0b0f97c2bb4ab59d11e6
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 2eb47240516737f03c10d1280887fea275c5ed99
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67546593"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883938"
 ---
 # <a name="remove-your-ios-device-from-intune"></a>Usuwanie urządzenia z systemem iOS z usługi Intune
 
@@ -44,25 +44,25 @@ Aby usunąć urządzenie z usługi Intune, wykonaj następujące czynności lub 
     |![Zrzut ekranu przedstawiający ekran Urządzenia aplikacji Portal firmy, na którym wyświetlono opcje dostępne po kliknięciu przycisku Usuń urządzenie przez użytkownika. Przedstawia podświetlony na czerwono przycisk „Usuń” oraz podświetlone na niebiesko przyciski „Dowiedz się więcej” i „Anuluj”.](/intune-user-help/media/cp_ios_unenroll_after_1804_002.png)|
 
 
-  Po wyrejestrowaniu urządzenia z usługi Intune:
+    Po wyrejestrowaniu urządzenia z usługi Intune:
 
-  - Urządzenie nie będzie już wyświetlane w Portalu firmy.
+    - Urządzenie nie będzie już wyświetlane w Portalu firmy.
 
-  - Nie będzie już można instalować aplikacji z poziomu Portalu firmy.
+    - Nie będzie już można instalować aplikacji z poziomu Portalu firmy.
 
-  - Wszystkie ustawienia w urządzeniu zmienione podczas dodawania go, np. wyłączenie aparatu lub wymaganie hasła o określonej długości, nie będą miały dłużej zastosowania.
+    - Wszystkie ustawienia w urządzeniu zmienione podczas dodawania go, np. wyłączenie aparatu lub wymaganie hasła o określonej długości, nie będą miały dłużej zastosowania.
 
-  - Użytkownik może utracić dostęp za pośrednictwem urządzenia do niektórych zasobów firmy, takich jak udziały plików lub wewnętrzne witryny sieci Web.
+    - Użytkownik może utracić dostęp za pośrednictwem urządzenia do niektórych zasobów firmy, takich jak udziały plików lub wewnętrzne witryny sieci Web.
 
-  - Nie będzie można dłużej korzystać z aplikacji oraz danych firmy na urządzeniu.
+    - Nie będzie można dłużej korzystać z aplikacji oraz danych firmy na urządzeniu.
 
-  - Nawiązanie połączenia z siecią firmową za pośrednictwem sieci Wi-Fi lub VPN (Virtual Private Network) może być niemożliwe.
+    - Nawiązanie połączenia z siecią firmową za pośrednictwem sieci Wi-Fi lub VPN (Virtual Private Network) może być niemożliwe.
 
-  - Profile firmowej poczty e-mail zostaną usunięte z urządzenia.
+    - Profile firmowej poczty e-mail zostaną usunięte z urządzenia.
 
-  - Urządzenia, które są skonfigurowane tylko do obsługi poczty e-mail, nie będą wyświetlane w aplikacji Portal firmy ani w witrynie sieci Web Portalu firmy.
-  
-  - Aplikacje zostaną odinstalowane. Dane aplikacji firmowych zostaną usunięte.
+    - Urządzenia, które są skonfigurowane tylko do obsługi poczty e-mail, nie będą wyświetlane w aplikacji Portal firmy ani w witrynie sieci Web Portalu firmy.
+
+    - Aplikacje zostaną odinstalowane. Dane aplikacji firmowych zostaną usunięte.
 
 ## <a name="removing-data-collected-by-the-company-portal-app"></a>Usuwanie danych zebranych przez aplikację Portal firmy
 

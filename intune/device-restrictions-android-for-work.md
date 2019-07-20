@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fc91fc685c28beff38dc395dd83b60e99343af57
-ms.sourcegitcommit: 2545ffb75b8d9290718d3a67acdcbea2f279090f
+ms.openlocfilehash: d4ab90a36254de49eb27e326086ffb137c782005
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67263685"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883431"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem Android Enterprise w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune
 
@@ -56,7 +56,7 @@ W tym artykule wymieniono i opisano różne ustawienia, którymi można sterowa�
 - **Przesyłaj dane za pomocą komunikacji NFC**: wybierz pozycję **Blokuj**, aby uniemożliwić używanie technologii NFC (Near Field Communication) do przesyłania danych z aplikacji. Pozycja **Nieskonfigurowane** umożliwia używanie technologii NFC do udostępniania danych między urządzeniami.
 - **Funkcje debugowania**: wybierz pozycję **Zezwalaj**, aby umożliwić użytkownikom korzystanie z funkcji debugowania na urządzeniu. Pozycja **Nieskonfigurowane** uniemożliwia użytkownikom korzystanie z funkcji debugowania na urządzeniu.
 - **Dostosowanie mikrofonu**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom wyłączanie wyciszania mikrofonu i dostosowywanie jego głośności. Pozycja **Nieskonfigurowane** umożliwia użytkownikom używanie i dostosowywanie głośności mikrofonu na urządzeniu.
-- **Adresy e-mail związane z ochroną po zastosowaniu funkcji resetowania do ustawień fabrycznych**: wybierz pozycję **Adresy e-mail konta Google**. Wprowadź adresy e-mail administratorów urządzenia, którzy mogą je odblokować po wyczyszczeniu zawartości. Pamiętaj, aby oddzielić adresy e-mail średnikami w następujący sposób: `admin1@gmail.com;admin2@gmail.com`. Jeśli nie wprowadzono adresu e-mail, każda osoba może odblokować urządzenie po przywróceniu go do ustawień fabrycznych. Te wiadomości e-mail jest stosowane tylko wtedy, gdy uruchomiono fabrycznych niezwiązanych z użytkownikiem, takie jak uruchamianie, resetowanie do ustawień fabrycznych przy użyciu menu odzyskiwania.
+- **Adresy e-mail związane z ochroną po zastosowaniu funkcji resetowania do ustawień fabrycznych**: wybierz pozycję **Adresy e-mail konta Google**. Wprowadź adresy e-mail administratorów urządzenia, którzy mogą je odblokować po wyczyszczeniu zawartości. Pamiętaj, aby oddzielić adresy e-mail średnikami w następujący sposób: `admin1@gmail.com;admin2@gmail.com`. Jeśli nie wprowadzono adresu e-mail, każda osoba może odblokować urządzenie po przywróceniu go do ustawień fabrycznych. Te wiadomości e-mail mają zastosowanie tylko w przypadku uruchomienia resetowania do ustawień fabrycznych, takich jak uruchomienie resetowania do ustawień fabrycznych za pomocą menu odzyskiwanie.
 - **Wyjście bezpieczeństwa sieci**: wybierz pozycję **Włącz**, aby umożliwić użytkownikom włączanie funkcji wyjścia bezpieczeństwa sieci. Jeśli podczas uruchamiania urządzenia nie nawiązano połączenia sieciowego, wyjście bezpieczeństwa wyświetli prośbę o tymczasowe połączenie z siecią i odświeżenie zasad urządzenia. Po zastosowaniu zasad sieć tymczasowa zostanie zapomniana, a urządzenie będzie kontynuować rozruch. Ta funkcja powoduje połączenie urządzeń z siecią, jeśli:
   - W ostatnich zasadach nie ma odpowiedniej sieci.
   - Urządzenie jest uruchamiane w aplikacji w trybie blokady zadania.
@@ -101,7 +101,7 @@ Te ustawienia umożliwiają skonfigurowanie trybu kiosku na dedykowanych urządz
   > 
   > Aplikacja **Zarządzany ekran główny** nie musi znajdować się w profilu konfiguracji, ale trzeba ją dodać jako aplikację kliencką. Gdy aplikacja **Zarządzany ekran główny** zostanie dodana jako aplikacja kliencka, wszystkie inne aplikacje dodane w profilu konfiguracji będą wyświetlane jako ikony w aplikacji **Zarządzany ekran główny**. 
   >
-  > Korzystając z trybu kiosku z wieloma aplikacjami za pomocą zarządzanych ekran główny, telefon/phone aplikacje mogą nie działać poprawnie. 
+  > W przypadku korzystania z trybu kiosku z wieloma aplikacjami z zarządzanym ekranem głównym aplikacje telefonujące i usługi telefonii mogą nie działać prawidłowo. 
 
   - Wybierz pozycję **Dodaj** i wybierz aplikacje z listy.
 
@@ -208,9 +208,9 @@ Te ustawienia umożliwiają skonfigurowanie trybu kiosku na dedykowanych urządz
     - **Identyfikator pakietu**: wprowadź identyfikator pakietu aplikacji w sklepie Google Play. Jeśli na przykład adresem URL aplikacji w sklepie Play jest `https://play.google.com/store/details?id=com.contosovpn.android.prod`, to identyfikatorem pakietu jest `com.contosovpn.android.prod`.
 
   > [!IMPORTANT]
-  >  - Wybrany klient sieci VPN musi być zainstalowany na urządzeniu i musi obsługiwać sieć VPN dla aplikacji w profilach służbowych. W przeciwnym razie wystąpi błąd. 
-  >  - Należy zatwierdzić aplikację klienta sieci VPN w **zarządzanymi sklepie Google Play**, zsynchronizować aplikację z usługą Intune i wdrożyć aplikację na urządzeniu. Po wykonaniu tej czynności aplikacja jest zainstalowana w profilu służbowym użytkownika.
-  >  - Mogą wystąpić znane problemy podczas korzystania z sieci VPN dla aplikacji z programem F5 Access dla systemu Android 3.0.4. Aby uzyskać więcej informacji, zobacz [opublikowane przez firmę F5 informacje o wersji programu F5 Access dla systemu Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android).
+  > - Wybrany klient sieci VPN musi być zainstalowany na urządzeniu i musi obsługiwać sieć VPN dla aplikacji w profilach służbowych. W przeciwnym razie wystąpi błąd. 
+  > - Należy zatwierdzić aplikację klienta sieci VPN w **zarządzanymi sklepie Google Play**, zsynchronizować aplikację z usługą Intune i wdrożyć aplikację na urządzeniu. Po wykonaniu tej czynności aplikacja jest zainstalowana w profilu służbowym użytkownika.
+  > - Mogą wystąpić znane problemy podczas korzystania z sieci VPN dla aplikacji z programem F5 Access dla systemu Android 3.0.4. Aby uzyskać więcej informacji, zobacz [opublikowane przez firmę F5 informacje o wersji programu F5 Access dla systemu Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android).
 
 - **Tryb blokady**: wybierz pozycję **Włącz**, aby wymusić korzystanie z tunelu sieci VPN przez cały ruch sieciowy. Jeśli nie nawiązano połączenia z siecią VPN, urządzenie nie będzie mieć dostępu do sieci.
 
@@ -315,9 +315,9 @@ Te ustawienia hasła są stosowane w profilach osobistych na urządzeniach korzy
     - **Identyfikator pakietu**: wprowadź identyfikator pakietu aplikacji w sklepie Google Play. Jeśli na przykład adresem URL aplikacji w sklepie Play jest `https://play.google.com/store/details?id=com.contosovpn.android.prod`, to identyfikatorem pakietu jest `com.contosovpn.android.prod`.
 
   > [!IMPORTANT]
-  >  - Wybrany klient sieci VPN musi być zainstalowany na urządzeniu i musi obsługiwać sieć VPN dla aplikacji w profilach służbowych. W przeciwnym razie wystąpi błąd. 
-  >  - Należy zatwierdzić aplikację klienta sieci VPN w **zarządzanymi sklepie Google Play**, zsynchronizować aplikację z usługą Intune i wdrożyć aplikację na urządzeniu. Po wykonaniu tej czynności aplikacja jest zainstalowana w profilu służbowym użytkownika.
-  >  - Mogą wystąpić znane problemy podczas korzystania z sieci VPN dla aplikacji z programem F5 Access dla systemu Android 3.0.4. Aby uzyskać więcej informacji, zobacz [opublikowane przez firmę F5 informacje o wersji programu F5 Access dla systemu Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android).
+  > - Wybrany klient sieci VPN musi być zainstalowany na urządzeniu i musi obsługiwać sieć VPN dla aplikacji w profilach służbowych. W przeciwnym razie wystąpi błąd. 
+  > - Należy zatwierdzić aplikację klienta sieci VPN w **zarządzanymi sklepie Google Play**, zsynchronizować aplikację z usługą Intune i wdrożyć aplikację na urządzeniu. Po wykonaniu tej czynności aplikacja jest zainstalowana w profilu służbowym użytkownika.
+  > - Mogą wystąpić znane problemy podczas korzystania z sieci VPN dla aplikacji z programem F5 Access dla systemu Android 3.0.4. Aby uzyskać więcej informacji, zobacz [opublikowane przez firmę F5 informacje o wersji programu F5 Access dla systemu Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android).
 
 - **Tryb blokady**: wybierz pozycję **Włącz**, aby wymusić korzystanie z tunelu sieci VPN przez cały ruch sieciowy. Jeśli nie nawiązano połączenia z siecią VPN, urządzenie nie będzie mieć dostępu do sieci.
 

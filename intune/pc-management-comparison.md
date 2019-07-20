@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3665a785391d2bff707bf5b8fe0a7e4f6e8a43d
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: fec72636a5d76ce4eb1fa0c28978eeb70d1e61b5
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044525"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353555"
 ---
 # <a name="compare-managing-windows-pcs-as-computers-or-mobile-devices"></a>Porównanie zarządzania komputerami z systemem Windows jako komputerami i jako urządzeniami mobilnymi
 
@@ -49,7 +49,7 @@ Organizacje mogą użyć usługi Microsoft Intune do zarządzania komputerami z 
 |**Zaświadczanie o kondycji**|Niedostępne|Dostępne|
 
 
-### <a name="advantages-of-mdm-windows-pc-management"></a>Zalety zarządzania komputerami z systemem Windows z użyciem rozwiązania MDM
+## <a name="advantages-of-mdm-windows-pc-management"></a>Zalety zarządzania komputerami z systemem Windows z użyciem rozwiązania MDM
 Zarządzanie komputerami z systemem Windows z użyciem nowoczesnego zarządzania urządzeniami mobilnymi ma następujące zalety:
 - **Skalowalność** — zarządzanie MDM skaluje się dzięki zarządzaniu w chmurze w usłudze Intune. Oprogramowanie klienckie usługi Intune jest ograniczone do 7000 komputerów.
 - **Prostota** — korzystanie z nowoczesnych możliwości zarządzania zawartych w systemie operacyjnym bez konieczności pobierania oprogramowania klienckiego

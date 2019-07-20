@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f182d356c151c569b9cf49adfe2f2c0cc34f1a54
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: b655dc64958350623ea62caf848043f6baf3787c
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548902"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883296"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Jak używać usługi Azure AD do uzyskiwania dostępu do interfejsów API usługi Intune w programie Microsoft Graph
 
@@ -30,13 +30,13 @@ Dostęp do interfejsów API usługi Intune w programie Microsoft Graph wymaga el
 
 - Identyfikator aplikacji z:
 
-    - Uprawnieniem do wywołania usługi Azure AD i interfejsów API programu Microsoft Graph.
-    - Zakresy uprawnień odpowiednich do określonych zadań aplikacji.
+  - Uprawnieniem do wywołania usługi Azure AD i interfejsów API programu Microsoft Graph.
+  - Zakresy uprawnień odpowiednich do określonych zadań aplikacji.
 
 - Poświadczenia użytkownika z:
 
-    - Uprawnieniem dostępu do dzierżawy usługi Azure AD skojarzonej z aplikacją.
-    - Uprawnieniami roli wymaganymi do obsługi zakresów uprawnień aplikacji.
+  - Uprawnieniem dostępu do dzierżawy usługi Azure AD skojarzonej z aplikacją.
+  - Uprawnieniami roli wymaganymi do obsługi zakresów uprawnień aplikacji.
 
 - Użytkownikiem końcowym z udzielonym uprawnieniem do aplikacji do wykonywania zadań aplikacji dla swojej dzierżawy Azure.
 
@@ -61,7 +61,7 @@ Aby dowiedzieć się więcej, zobacz następujące artykuły:
 
 Aby zarejestrować aplikację do korzystania z interfejsu API programu Microsoft Graph:
 
-1. Zaloguj się do [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) przy użyciu poświadczeń administracyjnych.
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) przy użyciu poświadczeń administracyjnych.
 
     Zgodnie z potrzebami możesz wykorzystać:
     - Konto administratora dzierżawy.
@@ -164,10 +164,10 @@ Aktualnie wszystkie zakresy uprawnień usługi Intune wymagają dostępu adminis
 - Ustawienie **Włącz dostęp**: __odczyt aplikacji usługi Microsoft Intune__
 
 - Zezwala na dostęp do właściwości i stanu następujących elementów w trybie do odczytu:
-    - Aplikacje klienckie
-    - Kategorie aplikacji mobilnych
-    - Zasady ochrony aplikacji
-    - Konfiguracje aplikacji
+  - Aplikacje klienckie
+  - Kategorie aplikacji mobilnych
+  - Zasady ochrony aplikacji
+  - Konfiguracje aplikacji
 
 ### <a name="app-rw"></a>DeviceManagementApps.ReadWrite.All
 
@@ -177,19 +177,19 @@ Aktualnie wszystkie zakresy uprawnień usługi Intune wymagają dostępu adminis
 
 - Dodatkowo umożliwia wprowadzanie zmian w następujących elementach:
 
-    - Aplikacje klienckie
-    - Kategorie aplikacji mobilnych
-    - Zasady ochrony aplikacji
-    - Konfiguracje aplikacji
+  - Aplikacje klienckie
+  - Kategorie aplikacji mobilnych
+  - Zasady ochrony aplikacji
+  - Konfiguracje aplikacji
 
 ### <a name="cfg-ro"></a>DeviceManagementConfiguration.Read.All
 
 - Ustawienie **Włącz dostęp**: __odczyt konfiguracji i zasad urządzeń Microsoft Intune__
 
 - Zezwala na dostęp do właściwości i stanu następujących elementów w trybie do odczytu:
-    - Konfiguracja urządzenia
-    - Zasady zgodności urządzeń
-    - Opcje komunikatów powiadomień
+  - Konfiguracja urządzenia
+  - Zasady zgodności urządzeń
+  - Opcje komunikatów powiadomień
 
 ### <a name="cfg-ra"></a>DeviceManagementConfiguration.ReadWrite.All
 
@@ -198,34 +198,34 @@ Aktualnie wszystkie zakresy uprawnień usługi Intune wymagają dostępu adminis
 - Umożliwia wykonywanie tych samych operacji co __DeviceManagementConfiguration.Read.All__
 
 - Aplikacje mogą również tworzyć, przypisywać, usuwać i wprowadzać zmiany w następujących elementach:
-    - Konfiguracja urządzenia
-    - Zasady zgodności urządzeń
-    - Opcje komunikatów powiadomień
+  - Konfiguracja urządzenia
+  - Zasady zgodności urządzeń
+  - Opcje komunikatów powiadomień
 
 ### <a name="mgd-po"></a>DeviceManagementManagedDevices.PrivilegedOperations.All
 
 - Ustawienie **Włącz dostęp**: __wykonywanie akcji zdalnych wpływających na użytkownika na urządzeniach Microsoft Intune__
 
 - Zezwala na wykonywanie następujących zdalnych akcji na zarządzanym urządzeniu:
-    - Wycofaj
-    - Czyszczenie danych
-    - Resetowanie/odzyskiwanie kodu dostępu
-    - Zdalne blokowanie
-    - Włączenie/wyłączenie trybu zgubienia
-    - Czyszczenie komputera
-    - Ponowny rozruch
-    - Usunięcie użytkownika z urządzenia udostępnionego
+  - Wycofaj
+  - Czyszczenie danych
+  - Resetowanie/odzyskiwanie kodu dostępu
+  - Zdalne blokowanie
+  - Włączenie/wyłączenie trybu zgubienia
+  - Czyszczenie komputera
+  - Ponowny rozruch
+  - Usunięcie użytkownika z urządzenia udostępnionego
 
 ### <a name="mgd-ro"></a>DeviceManagementManagedDevices.Read.All
 
 - Ustawienie **Włącz dostęp**: __odczyt z urządzeń Microsoft Intune__
 
 - Zezwala na dostęp do właściwości i stanu następujących elementów w trybie do odczytu:
-    - Zarządzane urządzenie
-    - Kategoria urządzenia
-    - Wykryta aplikacja
-    - Akcje zdalne
-    - Informacje o złośliwym oprogramowaniu
+  - Zarządzane urządzenie
+  - Kategoria urządzenia
+  - Wykryta aplikacja
+  - Akcje zdalne
+  - Informacje o złośliwym oprogramowaniu
 
 ### <a name="mgd-rw"></a>DeviceManagementManagedDevices.ReadWrite.All
 
@@ -234,22 +234,22 @@ Aktualnie wszystkie zakresy uprawnień usługi Intune wymagają dostępu adminis
 - Umożliwia wykonywanie tych samych operacji co __DeviceManagementManagedDevices.Read.All__
 
 - Aplikacje mogą również tworzyć, usuwać i wprowadzać zmiany w następujących elementach:
-    - Zarządzane urządzenie
-    - Kategoria urządzenia
+  - Zarządzane urządzenie
+  - Kategoria urządzenia
 
 - Dozwolone jest również wykonywanie następujących akcji zdalnych:
-    - Lokalizowanie urządzeń
-    - Zastosowanie obejścia blokady aktywacji
-    - Wysyłanie żądań pomocy zdalnej
+  - Lokalizowanie urządzeń
+  - Zastosowanie obejścia blokady aktywacji
+  - Wysyłanie żądań pomocy zdalnej
 
 ### <a name="rac-ro"></a>DeviceManagementRBAC.Read.All
 
 - Ustawienie **Włącz dostęp**: __odczyt ustawień kontroli RBAC usługi Microsoft Intune__
 
 - Zezwala na dostęp do właściwości i stanu następujących elementów w trybie do odczytu:
-    - Przypisania ról
-    - Definicje ról
-    - Operacje zasobów
+  - Przypisania ról
+  - Definicje ról
+  - Operacje zasobów
 
 ### <a name="rac-rw"></a>DeviceManagementRBAC.ReadWrite.All
 
@@ -258,24 +258,24 @@ Aktualnie wszystkie zakresy uprawnień usługi Intune wymagają dostępu adminis
 - Umożliwia wykonywanie tych samych operacji co __DeviceManagementRBAC.Read.All__
 
 - Aplikacje mogą również tworzyć, przypisywać, usuwać i wprowadzać zmiany w następujących elementach:
-    - Przypisania ról
-    - Definicje ról
+  - Przypisania ról
+  - Definicje ról
 
 ### <a name="svc-ro"></a>DeviceManagementServiceConfig.Read.All
 
 - Ustawienie **Włącz dostęp**: __odczyt konfiguracji usługi Microsoft Intune__
 
 - Zezwala na dostęp do właściwości i stanu następujących elementów w trybie do odczytu:
-    - Rejestrowanie urządzenia
-    - Certyfikat usługi Apple Push Notification
-    - Program Device Enrollment Program firmy Apple
-    - Program Apple Volume Purchase Program
-    - Exchange Connector
-    - Warunki i postanowienia
-    - Zarządzanie kosztami telekomunikacji
-    - Infrastruktura PKI w chmurze
-    - Znakowanie
-    - Usługa Mobile Threat Defense
+  - Rejestrowanie urządzenia
+  - Certyfikat usługi Apple Push Notification
+  - Program Device Enrollment Program firmy Apple
+  - Program Apple Volume Purchase Program
+  - Exchange Connector
+  - Warunki i postanowienia
+  - Zarządzanie kosztami telekomunikacji
+  - Infrastruktura PKI w chmurze
+  - Znakowanie
+  - Usługa Mobile Threat Defense
 
 ### <a name="svc-rw"></a>DeviceManagementServiceConfig.ReadWrite.All
 
@@ -284,16 +284,16 @@ Aktualnie wszystkie zakresy uprawnień usługi Intune wymagają dostępu adminis
 - Umożliwia wykonywanie tych samych operacji co DeviceManagementServiceConfig.Read.All_
 
 - Aplikacje mogą również konfigurować następujące funkcje:
-    - Rejestrowanie urządzenia
-    - Certyfikat usługi Apple Push Notification
-    - Program Device Enrollment Program firmy Apple
-    - Program Apple Volume Purchase Program
-    - Exchange Connector
-    - Warunki i postanowienia
-    - Zarządzanie kosztami telekomunikacji
-    - Infrastruktura PKI w chmurze
-    - Znakowanie
-    - Usługa Mobile Threat Defense
+  - Rejestrowanie urządzenia
+  - Certyfikat usługi Apple Push Notification
+  - Program Device Enrollment Program firmy Apple
+  - Program Apple Volume Purchase Program
+  - Exchange Connector
+  - Warunki i postanowienia
+  - Zarządzanie kosztami telekomunikacji
+  - Infrastruktura PKI w chmurze
+  - Znakowanie
+  - Usługa Mobile Threat Defense
 
 ## <a name="azure-ad-authentication-examples"></a>Przykłady uwierzytelniania w usłudze Azure AD
 
