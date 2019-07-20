@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bb6cd7b1d717cd289b65e1e05566bd07471ad84f
-ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
+ms.openlocfilehash: 220327c48712881e57efa1a91b9d00a64ba3e0be
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67735791"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884687"
 ---
 <!-- This article contains the exact baseline details for baseline versions that were previously published in security-baseline-settings-mdm.md.  -->
 
@@ -34,11 +34,11 @@ W przypadku nowych wersji linii bazowej zabezpieczeń MDM poprzednią listę ust
 Jeśli wersja linii bazowej nie jest już obsługiwana, zostanie usunięta z tego artykułu.
 
 - Wyświetlanie ustawień dostępnych w [bieżącej linii bazowej zabezpieczeń MDM](security-baseline-settings-mdm.md) 
-- Dowiedz [się więcej o](security-baselines.md)punktach odniesienia zabezpieczeń oraz jak uaktualnić wersję bazową w profilach linii bazowej zabezpieczeń.
+- Dowiedz się więcej o [punktach odniesienia zabezpieczeń](security-baselines.md)oraz jak uaktualnić wersję bazową w profilach linii bazowej zabezpieczeń.
 
 ## <a name="preview-mdm-security-baseline-for-october-2018"></a>Wersja zapoznawcza: punkt odniesienia zabezpieczeń oprogramowania MDM z października 2018 r.  
 
-*Ta linia bazowa jest zastępowana [przez linię bazową zabezpieczeń MDM dla sprężyny 2019 (19H1)](security-baseline-settings-mdm.md)*
+*Ta linia bazowa jest zastępowana przez [linię bazową zabezpieczeń MDM dla sprężyny 2019 (19H1)](security-baseline-settings-mdm.md)*
 
 ### <a name="above-lock"></a>Wyłączona blokada  
 
@@ -97,23 +97,23 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
 
   W przypadku zasad dysków wymiennych funkcji BitLocker skonfiguruj następujące ustawienia:
 
-    - **Wymagaj szyfrowania do zapisu**  
-      **Domyślne**: Tak  
-  
-    - **Metoda szyfrowania**  
-      **Domyślne**: 256-bitowe szyfrowanie AES CBC  
+  - **Wymagaj szyfrowania do zapisu**  
+    **Domyślne**: Tak  
+
+  - **Metoda szyfrowania**  
+    **Domyślne**: 256-bitowe szyfrowanie AES CBC  
 
 - **Zasady dysków stałych funkcji BitLocker**  
   To ustawienie zasad pozwala określić metodę i siłę szyfrowania. Wartości tych zasad określają siłę szyfrowania funkcji BitLocker. Przedsiębiorstwa mogą kontrolować poziom szyfrowania w celu zwiększenia bezpieczeństwa (szyfrowanie AES-256 jest silniejsze niż szyfrowanie AES-128). Jeśli włączysz to ustawienie, możesz skonfigurować algorytm szyfrowania i siłę klucza szyfrowania osobno dla stałych dysków danych, dysków systemu operacyjnego i wymiennych dysków danych. W przypadku dysków stałych i dysków systemu operacyjnego zalecamy użycie algorytmu XTS-AES. W przypadku dysków wymiennych użyj 128-bitowego lub 256-bitowego szyfrowania AES-CBC, jeśli dysk jest używany w innych urządzeniach, które nie mają systemu Windows 10 w wersji 1511 lub nowszej. Metoda szyfrowania nie zmienia się, jeśli dysk jest już zaszyfrowany lub jeśli szyfrowanie jest w toku. W takich przypadkach to ustawienie zasad jest ignorowane.  
  
-   W przypadku zasad dysków stałych funkcji BitLocker skonfiguruj następujące ustawienia: 
-   - **Metoda szyfrowania**
-     **Domyślne**: 256-bitowe szyfrowanie AES XTS  
+  W przypadku zasad dysków stałych funkcji BitLocker skonfiguruj następujące ustawienia: 
+  - **Metoda szyfrowania**  
+    **Domyślne**: AES 256bit XTS  
 
 - **Zasady dysków systemowych funkcji BitLocker**  
   To ustawienie zasad pozwala określić metodę i siłę szyfrowania. Wartości tych zasad określają siłę szyfrowania funkcji BitLocker. Przedsiębiorstwa mogą kontrolować poziom szyfrowania w celu zwiększenia bezpieczeństwa (szyfrowanie AES-256 jest silniejsze niż szyfrowanie AES-128). Jeśli włączysz to ustawienie, możesz skonfigurować algorytm szyfrowania i siłę klucza szyfrowania osobno dla stałych dysków danych, dysków systemu operacyjnego i wymiennych dysków danych. W przypadku dysków stałych i dysków systemu operacyjnego zalecamy użycie algorytmu XTS-AES. W przypadku dysków wymiennych użyj 128-bitowego lub 256-bitowego szyfrowania AES-CBC, jeśli dysk jest używany w innych urządzeniach, które nie mają systemu Windows 10 w wersji 1511 lub nowszej. Metoda szyfrowania nie zmienia się, jeśli dysk jest już zaszyfrowany lub jeśli szyfrowanie jest w toku. W takich przypadkach to ustawienie zasad jest ignorowane.  
 
-   W przypadku zasad dysków systemowych funkcji BitLocker skonfiguruj następujące ustawienia:
+  W przypadku zasad dysków systemowych funkcji BitLocker skonfiguruj następujące ustawienia:
   - **Metoda szyfrowania**  
     **Domyślne**: AES 256bit XTS  
 
@@ -219,33 +219,33 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
   **Domyślne**: blokuj instalację urządzeń sprzętowych  
 
-    W przypadku wybrania pozycji *Blokuj instalację urządzeń sprzętowych* są dostępne następujące ustawienia.
-  
-    - **Usuń zgodne urządzenia sprzętowe**   
-    To ustawienie jest dostępne tylko wtedy, gdy ustawienie *Instalacja urządzeń sprzętowych według identyfikatorów urządzeń* ma wartość *Blokuj instalację urządzeń sprzętowych*.
-      
-      **Domyślne**: Tak
-  
-    - **Zablokowane identyfikatory urządzeń sprzętowych**  
-       To ustawienie jest dostępne tylko wtedy, gdy ustawienie *Instalacja urządzeń sprzętowych według identyfikatorów urządzeń* ma wartość *Blokuj instalację urządzeń sprzętowych*.
-      
-      **Domyślne**: Tak  
+  W przypadku wybrania pozycji *Blokuj instalację urządzeń sprzętowych* są dostępne następujące ustawienia.
+
+  - **Usuń zgodne urządzenia sprzętowe**   
+  To ustawienie jest dostępne tylko wtedy, gdy ustawienie *Instalacja urządzeń sprzętowych według identyfikatorów urządzeń* ma wartość *Blokuj instalację urządzeń sprzętowych*.
+    
+    **Domyślne**: Tak
+
+  - **Zablokowane identyfikatory urządzeń sprzętowych**  
+      To ustawienie jest dostępne tylko wtedy, gdy ustawienie *Instalacja urządzeń sprzętowych według identyfikatorów urządzeń* ma wartość *Blokuj instalację urządzeń sprzętowych*.
+    
+    **Domyślne**: Tak  
   
 - **Instalacja urządzeń sprzętowych według klas konfiguracji**  
   To ustawienie zasad umożliwia określenie listy unikatowych identyfikatorów globalnych (GUID) klas konfiguracji urządzeń dla sterowników urządzeń, których nie można zainstalować w systemie Windows. To ustawienie zasad ma pierwszeństwo przed innymi ustawieniami zasad, które umożliwiają zainstalowanie urządzenia w systemie Windows. Jeśli to ustawienie zasad zostanie włączone, system Windows nie będzie mógł instalować ani aktualizować sterowników urządzeń, których identyfikatory GUID klas konfiguracji urządzeń są na utworzonej przez Ciebie liście. Jeśli włączysz to ustawienie zasad na serwerze usług pulpitu zdalnego, będzie ono wpływać na przekierowywanie określonych urządzeń z klienta usług pulpitu zdalnego na serwer usług pulpitu zdalnego. Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, system Windows będzie mógł instalować i aktualizować urządzenia zgodnie z innymi ustawieniami zasad.
   
   **Domyślne**: blokuj instalację urządzeń sprzętowych  
 
-    W przypadku wybrania pozycji *Blokuj instalację urządzeń sprzętowych* są dostępne następujące ustawienia.
-    - **Usuń zgodne urządzenia sprzętowe**    
-    To ustawienie jest dostępne tylko wtedy, gdy ustawienie *Instalacja urządzeń sprzętowych według klas konfiguracji* ma wartość *Blokuj instalację urządzeń sprzętowych*.  
+  W przypadku wybrania pozycji *Blokuj instalację urządzeń sprzętowych* są dostępne następujące ustawienia.
+  - **Usuń zgodne urządzenia sprzętowe**    
+  To ustawienie jest dostępne tylko wtedy, gdy ustawienie *Instalacja urządzeń sprzętowych według klas konfiguracji* ma wartość *Blokuj instalację urządzeń sprzętowych*.  
 
-      **Domyślne:** : *brak konfiguracji domyślnej*  
-  
-    - **Zablokowane identyfikatory urządzeń sprzętowych**  
-      To ustawienie jest dostępne tylko wtedy, gdy ustawienie *Instalacja urządzeń sprzętowych według klas konfiguracji* ma wartość *Blokuj instalację urządzeń sprzętowych*.
-      
-      **Domyślne:** : *brak konfiguracji domyślnej*  
+    **Domyślne:** : *brak konfiguracji domyślnej*  
+
+  - **Zablokowane identyfikatory urządzeń sprzętowych**  
+    To ustawienie jest dostępne tylko wtedy, gdy ustawienie *Instalacja urządzeń sprzętowych według klas konfiguracji* ma wartość *Blokuj instalację urządzeń sprzętowych*.
+    
+    **Domyślne:** : *brak konfiguracji domyślnej*  
 
 ### <a name="device-lock"></a>Blokada urządzenia  
 
@@ -992,12 +992,12 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   
 - **Działanie monitu o podniesienie uprawnień administratora**  
   To ustawienie zasad steruje działaniem monitu o podniesienie uprawnień w przypadku administratorów. Dostępne są następujące opcje: 
-    - *Podnieś bez monitowania*: umożliwia uprzywilejowanym kontom wykonanie operacji, która wymaga podniesienia uprawnień, bez konieczności wymagania zgody lub poświadczeń. Uwaga: tej opcji należy używać tylko w środowiskach z największymi ograniczeniami. 
-    - *Monituj o podanie poświadczeń na bezpiecznym pulpicie*: jeśli operacja wymaga podniesienia uprawnień, na bezpiecznym pulpicie zostanie wyświetlony monit o wprowadzenie nazwy i hasła uprzywilejowanego użytkownika. Jeśli użytkownik wprowadzi prawidłowe poświadczenia, operacja będzie kontynuowana przy użyciu najwyższych dostępnych uprawnień użytkownika. 
-    - *Monituj o zgodę na bezpiecznym pulpicie*: jeśli operacja wymaga podniesienia uprawnień, na bezpiecznym pulpicie zostanie wyświetlony monit o wybranie pozycji Zezwól lub Odmów. Jeśli użytkownik wybierze pozycję Zezwól, operacja będzie kontynuowana przy użyciu najwyższych dostępnych uprawnień użytkownika. 
-    - *Monituj o poświadczenia*: jeśli operacja wymaga podniesienia uprawnień, zostanie wyświetlony monit o wprowadzenie nazwy i hasła użytkownika administracyjnego. Jeśli użytkownik wprowadzi prawidłowe poświadczenia, operacja będzie kontynuowana przy użyciu odpowiednich uprawnień. 
-    - *Monituj o zgodę*: jeśli operacja wymaga podniesienia uprawnień, zostanie wyświetlony monit o wybranie pozycji Zezwól lub Odmów. Jeśli użytkownik wybierze pozycję Zezwól, operacja będzie kontynuowana przy użyciu najwyższych dostępnych uprawnień użytkownika.  
-    - *Monitowanie o zgodę w przypadku plików binarnych z systemem innym niż Windows*: jeśli operacja dotycząca aplikacji firmy innej niż Microsoft wymaga podniesienia uprawnień, na bezpiecznym pulpicie zostanie wyświetlony monit o wybranie pozycji Zezwól lub Odmów. Jeśli użytkownik wybierze pozycję Zezwól, operacja będzie kontynuowana przy użyciu najwyższych dostępnych uprawnień użytkownika.   
+  - *Podnieś bez monitowania*: umożliwia uprzywilejowanym kontom wykonanie operacji, która wymaga podniesienia uprawnień, bez konieczności wymagania zgody lub poświadczeń. Uwaga: tej opcji należy używać tylko w środowiskach z największymi ograniczeniami. 
+  - *Monituj o podanie poświadczeń na bezpiecznym pulpicie*: jeśli operacja wymaga podniesienia uprawnień, na bezpiecznym pulpicie zostanie wyświetlony monit o wprowadzenie nazwy i hasła uprzywilejowanego użytkownika. Jeśli użytkownik wprowadzi prawidłowe poświadczenia, operacja będzie kontynuowana przy użyciu najwyższych dostępnych uprawnień użytkownika. 
+  - *Monituj o zgodę na bezpiecznym pulpicie*: jeśli operacja wymaga podniesienia uprawnień, na bezpiecznym pulpicie zostanie wyświetlony monit o wybranie pozycji Zezwól lub Odmów. Jeśli użytkownik wybierze pozycję Zezwól, operacja będzie kontynuowana przy użyciu najwyższych dostępnych uprawnień użytkownika. 
+  - *Monituj o poświadczenia*: jeśli operacja wymaga podniesienia uprawnień, zostanie wyświetlony monit o wprowadzenie nazwy i hasła użytkownika administracyjnego. Jeśli użytkownik wprowadzi prawidłowe poświadczenia, operacja będzie kontynuowana przy użyciu odpowiednich uprawnień. 
+  - *Monituj o zgodę*: jeśli operacja wymaga podniesienia uprawnień, zostanie wyświetlony monit o wybranie pozycji Zezwól lub Odmów. Jeśli użytkownik wybierze pozycję Zezwól, operacja będzie kontynuowana przy użyciu najwyższych dostępnych uprawnień użytkownika.  
+  - *Monitowanie o zgodę w przypadku plików binarnych z systemem innym niż Windows*: jeśli operacja dotycząca aplikacji firmy innej niż Microsoft wymaga podniesienia uprawnień, na bezpiecznym pulpicie zostanie wyświetlony monit o wybranie pozycji Zezwól lub Odmów. Jeśli użytkownik wybierze pozycję Zezwól, operacja będzie kontynuowana przy użyciu najwyższych dostępnych uprawnień użytkownika.   
   
   **Domyślne**: monituj o zgodę na bezpiecznym pulpicie
   
@@ -1010,12 +1010,12 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   **Domyślne**: wymagaj protokołu NTLM V2 i szyfrowania 128-bitowego
   
 - **Zachowanie po wyjęciu karty inteligentnej**  
-    To ustawienie zabezpieczeń określa, co się stanie, gdy karta inteligentna zalogowanego użytkownika zostanie usunięta z czytnika kart inteligentnych. Dostępne są następujące opcje:
-     - *Brak akcji*. 
-     - *Zablokuj stację roboczą* — stacja robocza jest blokowana po wyjęciu karty inteligentnej, dzięki czemu użytkownicy mogą opuścić obszar, zabierając ze sobą kartę inteligentną, i nadal utrzymywać chronioną sesję.
-     - *Wymuszaj wylogowanie* — użytkownik jest automatycznie wylogowywany po wyjęciu karty inteligentnej.
-     - *Rozłącz sesję pulpitu zdalnego* — usunięcie karty inteligentnej powoduje rozłączenie sesji bez wylogowywania użytkownika. Umożliwia to użytkownikowi włożenie karty inteligentnej i wznowienie sesji w późniejszym czasie lub na innym komputerze z czytnikiem kart inteligentnych bez konieczności ponownego logowania się. Jeśli sesja jest lokalna, te zasady działają tak samo, jak w przypadku opcji Zablokuj stację roboczą.  <br><br>
-    
+  To ustawienie zabezpieczeń określa, co się stanie, gdy karta inteligentna zalogowanego użytkownika zostanie usunięta z czytnika kart inteligentnych. Dostępne są następujące opcje:
+  - *Brak akcji*. 
+  - *Zablokuj stację roboczą* — stacja robocza jest blokowana po wyjęciu karty inteligentnej, dzięki czemu użytkownicy mogą opuścić obszar, zabierając ze sobą kartę inteligentną, i nadal utrzymywać chronioną sesję.
+  - *Wymuszaj wylogowanie* — użytkownik jest automatycznie wylogowywany po wyjęciu karty inteligentnej.
+  - *Rozłącz sesję pulpitu zdalnego* — usunięcie karty inteligentnej powoduje rozłączenie sesji bez wylogowywania użytkownika. Umożliwia to użytkownikowi włożenie karty inteligentnej i wznowienie sesji w późniejszym czasie lub na innym komputerze z czytnikiem kart inteligentnych bez konieczności ponownego logowania się. Jeśli sesja jest lokalna, te zasady działają tak samo, jak w przypadku opcji Zablokuj stację roboczą.  <br><br>
+
   **Domyślne**: Zablokuj stację roboczą
   
 - **Blokuj anonimowe wyliczanie kont SAM i udziałów**  

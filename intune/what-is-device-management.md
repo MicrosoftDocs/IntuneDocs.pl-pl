@@ -15,12 +15,12 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d5614f0657175658c1a8442d650e16c8550c1ac1
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: f476c3129f3f3da4cde98fd0cd9960c223ffd6ae
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67043844"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884267"
 ---
 # <a name="what-is-device-management"></a>Co to jest zarządzanie urządzeniami? 
 
@@ -58,8 +58,8 @@ Kluczowym zadaniem dowolnego rozwiązania do zarządzania urządzeniami jest zap
 
 - Program **Windows Defender** zawiera wiele funkcji zabezpieczeń ułatwiających chronienie urządzeń z systemem Windows 10. Używanie usługi Intune i programu Windows Defender w połączeniu umożliwia na przykład: 
 
-    - Wyszukiwanie podejrzanych działań w plikach i aplikacjach na urządzeniach przenośnych za pomocą [filtru Windows Defender SmartScreen](https://docs.microsoft.com/intune/endpoint-protection-windows-10). 
-    - Zapobieganie naruszeniom zabezpieczeń na urządzeniach przenośnych za pomocą [zaawansowanej ochrony przed zagrożeniami w usłudze Windows Defender](https://docs.microsoft.com/intune/advanced-threat-protection). Ograniczanie skutków naruszenia zabezpieczeń przez zablokowanie dostępu użytkownika do zasobów firmowych.
+  - Wyszukiwanie podejrzanych działań w plikach i aplikacjach na urządzeniach przenośnych za pomocą [filtru Windows Defender SmartScreen](https://docs.microsoft.com/intune/endpoint-protection-windows-10). 
+  - Zapobieganie naruszeniom zabezpieczeń na urządzeniach przenośnych za pomocą [zaawansowanej ochrony przed zagrożeniami w usłudze Windows Defender](https://docs.microsoft.com/intune/advanced-threat-protection). Ograniczanie skutków naruszenia zabezpieczeń przez zablokowanie dostępu użytkownika do zasobów firmowych.
 
 - **Dostęp warunkowy** to funkcja usługi Azure Active Directory, która jest bardzo dobrze zintegrowana z usługą Intune. Za pomocą [dostępu warunkowego](https://docs.microsoft.com/intune/conditional-access) można zadbać o to, aby dostęp do poczty e-mail, programu SharePoint i innych aplikacji miały tylko zgodne urządzenia. 
 

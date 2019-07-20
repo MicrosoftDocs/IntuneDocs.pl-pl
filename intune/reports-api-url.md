@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6d2e6c99d9493d935f4a8f87c6525af19796b5f6
-ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
+ms.openlocfilehash: 59e2a681c542da46a2e938c7bf07e7185925aab2
+ms.sourcegitcommit: c3ac858bbadb63d248ed54069e48160d703bbaf2
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67648796"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313742"
 ---
 # <a name="intune-data-warehouse-api-endpoint"></a>Punkt końcowy interfejsu API magazynu danych usługi Intune
 
@@ -51,7 +51,7 @@ Adres URL zawiera następujące elementy:
 | Element | Przykład | Opis |
 |-------------------|------------|--------------------------------------------------------------------------------------------------------------------|
 | location | msua06 | Bazowy adres URL można znaleźć, wyświetlając blok interfejsu API magazynu danych w witrynie Azure Portal. |
-| entity-collection | daty | Nazwa kolekcji jednostek usługi OData. Aby uzyskać więcej informacji na temat kolekcji i jednostek w modelu danych, zobacz [Model danych](reports-ref-data-model.md). |
+| entity-collection | devicePropertyHistories | Nazwa kolekcji jednostek usługi OData. Aby uzyskać więcej informacji na temat kolekcji i jednostek w modelu danych, zobacz [Model danych](reports-ref-data-model.md). |
 | api-version | beta | Wersja interfejsu API, do którego chcesz uzyskać dostęp. Aby uzyskać więcej informacji, zobacz [Wersja](reports-api-url.md#api-version-information). |
 | maxhistorydays | 7 | (Opcjonalnie) Maksymalna liczba dni historii do pobrania. Ten parametr można podać dla każdej kolekcji, ale zostanie on zastosowany tylko do tych kolekcji, które zawierają ciąg `dateKey` jako część właściwości klucza. Aby uzyskać więcej informacji, zobacz [Filtry zakresów DateKey](reports-api-url.md#datekey-range-filters). |
 

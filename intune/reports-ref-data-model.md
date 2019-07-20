@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f90568b3939d37bb4e7fbeff72d5e357bc57bd6e
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 21f4f55c028c6ff06730e50d9f9862e85d0a9ef1
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67547888"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884761"
 ---
 # <a name="microsoft-intune-data-warehouse-data-model"></a>Model danych magazynu danych usługi Microsoft Intune
 
@@ -32,22 +32,22 @@ Magazyn danych usługi Intune codziennie próbkuje dane w celu udostępnienia hi
 
 Magazyn uwidacznia dane w następujących kategoriach wysokiego poziomu:
 
-  - Aplikacje z włączoną ochroną aplikacji i ich użycie
-  - Zarejestrowane urządzenia, właściwości i spis
-  - Spis aplikacji i oprogramowania
-  - Zasady zgodności i konfiguracji urządzenia
+- Aplikacje z włączoną ochroną aplikacji i ich użycie
+- Zarejestrowane urządzenia, właściwości i spis
+- Spis aplikacji i oprogramowania
+- Zasady zgodności i konfiguracji urządzenia
 
 Te obszary zawierają jednostki, które mają znaczenie dla danego środowiska usługi Intune. Szczegółowe informacje dotyczące zestawów jednostek można znaleźć w następujących tematach:
 
-  - [Aplikacja](reports-ref-application.md)
-  - [Data](reports-ref-date.md)
-  - [Urządzenia](reports-ref-devices.md)
-  - [Rozszerzenie do zarządzania usługi Intune](reports-ref-intunemanagementextension.md)
-  - [Zasady](reports-ref-policy.md)
-  - [Zarządzanie aplikacjami mobilnymi (MAM)](reports-ref-mobile-app-management.md)
-  - [User](reports-ref-user.md)
-  - [Bieżący użytkownik](reports-ref-current-user.md)
-  - [Skojarzenie urządzenia użytkownika](reports-ref-user-device.md)
+- [Aplikacja](reports-ref-application.md)
+- [Data](reports-ref-date.md)
+- [Urządzenia](reports-ref-devices.md)
+- [Rozszerzenie do zarządzania usługi Intune](reports-ref-intunemanagementextension.md)
+- [Zasady](reports-ref-policy.md)
+- [Zarządzanie aplikacjami mobilnymi (MAM)](reports-ref-mobile-app-management.md)
+- [User](reports-ref-user.md)
+- [Bieżący użytkownik](reports-ref-current-user.md)
+- [Skojarzenie urządzenia użytkownika](reports-ref-user-device.md)
 
 ## <a name="relationships-star-schema-model"></a>Relacje: Model o schemacie gwiazdy
 
@@ -63,6 +63,6 @@ Magazyn jest elementem podrzędnym względem danych w usłudze Intune. Usługa I
 
 ## <a name="next-steps"></a>Następne kroki
 
- - Więcej informacji na temat sposobu, w jaki magazyn danych śledzi okres istnienia użytkownika w usłudze Intune, można znaleźć w temacie [Reprezentacja okresu istnienia użytkownika w magazynie danych usługi Intune](reports-ref-user-timeline.md).
- - Więcej informacji na temat pracy z magazynami danych można znaleźć w temacie [Create First Data WareHouse](https://www.codeproject.com/Articles/652108/Create-First-Data-WareHouse) (Tworzenie pierwszego magazynu danych).
- - Więcej na temat pracy z usługą Power BI i magazynem danych można dowiedzieć się z tematu [Create a new Power BI report by importing a dataset](https://powerbi.microsoft.com/documentation/powerbi-service-create-a-new-report/) (Tworzenie nowego raportu usługi Power BI przez importowanie zestawu danych). 
+- Więcej informacji na temat sposobu, w jaki magazyn danych śledzi okres istnienia użytkownika w usłudze Intune, można znaleźć w temacie [Reprezentacja okresu istnienia użytkownika w magazynie danych usługi Intune](reports-ref-user-timeline.md).
+- Więcej informacji na temat pracy z magazynami danych można znaleźć w temacie [Create First Data WareHouse](https://www.codeproject.com/Articles/652108/Create-First-Data-WareHouse) (Tworzenie pierwszego magazynu danych).
+- Więcej na temat pracy z usługą Power BI i magazynem danych można dowiedzieć się z tematu [Create a new Power BI report by importing a dataset](https://powerbi.microsoft.com/documentation/powerbi-service-create-a-new-report/) (Tworzenie nowego raportu usługi Power BI przez importowanie zestawu danych). 

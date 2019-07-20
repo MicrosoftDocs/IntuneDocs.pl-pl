@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2cad30b0cf446d6591cba2997261f049ad6ae983
-ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
+ms.openlocfilehash: b033052ebd5d3d26976482ea2435c8a0d7314c8e
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67735635"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67885043"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android
 
@@ -116,8 +116,8 @@ Nie ma to wpływu na kompilację testową. Konfiguracja może być dostarczona d
 * [Zależności zewnętrzne do uwzględnienia](#usage-of-includeexternallibraries) 
 * Określone klasy do wykluczenia z przetwarzania
 * Warianty do wykluczenia z przetwarzania. Mogą odwoływać się do kompletnej nazwy wariantu lub pojedynczej właściwości. Na przykład
-     * jeśli Twoja aplikacja ma typy kompilacji `debug` i `release` z właściwościami {`savory`, `sweet`} oraz {`vanilla`, `chocolate`}, możesz określić
-     * `savory`, aby wykluczyć wszystkie warianty z właściwością savory lub `savoryVanillaRelease`, aby wykluczyć tylko ten konkretny wariant.
+  * jeśli Twoja aplikacja ma typy kompilacji `debug` i `release` z właściwościami {`savory`, `sweet`} oraz {`vanilla`, `chocolate`}, możesz określić
+  * `savory`, aby wykluczyć wszystkie warianty z właściwością savory lub `savoryVanillaRelease`, aby wykluczyć tylko ten konkretny wariant.
 
 #### <a name="example-partial-buildgradle"></a>Przykład częściowego rozwiązania build.gradle
 
@@ -680,15 +680,15 @@ Aby skonfigurować aplikację i włączyć odpowiednie uwierzytelnianie, dodaj n
 
 * **NonBrokerRedirectURI** to identyfikator URI przekierowania usługi AAD, który ma być używany w przypadkach braku obsługi przez brokera. W przypadku braku określenia wartości używana jest wartość domyślna `urn:ietf:wg:oauth:2.0:oob`. Ustawienie domyślne jest odpowiednie dla większości aplikacji.
 
-    * Identyfikator NonBrokerRedirectURI jest używany tylko w sytuacji, gdy element SkipBroker ma wartość „true”.
+  * Identyfikator NonBrokerRedirectURI jest używany tylko w sytuacji, gdy element SkipBroker ma wartość „true”.
 
 * **Element SkipBroker** służy do zastępowania domyślnego zachowania udziału biblioteki ADAL logowania jednokrotnego. Parametr SkipBroker powinien zostać podany tylko dla aplikacji, które określają identyfikator ClientID **oraz** nie obsługują pośrednictwa w zakresie uwierzytelniania/logowania jednokrotnego na całym urządzeniu. W takim przypadku należy ustawić dla niego wartość „true”. W większości aplikacji nie należy ustawiać parametru SkipBroker.
 
-    * Identyfikator ClientID **musi** zostać podany w manifeście, aby móc określić wartość parametru SkipBroker.
+  * Identyfikator ClientID **musi** zostać podany w manifeście, aby móc określić wartość parametru SkipBroker.
 
-    * Jeśli zostanie podany identyfikator ClientID, wartość domyślna to „false”.
+  * Jeśli zostanie podany identyfikator ClientID, wartość domyślna to „false”.
 
-    * Jeśli parametr SkipBroker ma wartość „true”, zostanie użyty identyfikator NonBrokerRedirectURI. Aplikacje, które nie integrują się z biblioteką ADAL (i w związku z tym nie mają identyfikatora ClientID), będą również mieć wartość domyślną „true”.
+  * Jeśli parametr SkipBroker ma wartość „true”, zostanie użyty identyfikator NonBrokerRedirectURI. Aplikacje, które nie integrują się z biblioteką ADAL (i w związku z tym nie mają identyfikatora ClientID), będą również mieć wartość domyślną „true”.
 
 ### <a name="common-adal-configurations"></a>Typowe konfiguracje biblioteki ADAL
 
@@ -1317,48 +1317,48 @@ Oprócz możliwości ustawiania tożsamości przez aplikację tożsamość wątk
 
 #### <a name="examples"></a>Przykłady
 
-  1. Jeśli działanie zostanie uruchomione z klasy `Intent` wysłanej przez inną aplikację z funkcją MAM, tożsamość tego działania zostanie ustawiona na podstawie obowiązującej tożsamości w drugiej aplikacji w chwili wysłania klasy `Intent`.
+1. Jeśli działanie zostanie uruchomione z klasy `Intent` wysłanej przez inną aplikację z funkcją MAM, tożsamość tego działania zostanie ustawiona na podstawie obowiązującej tożsamości w drugiej aplikacji w chwili wysłania klasy `Intent`.
 
-  2. W przypadku usług tożsamość wątku zostanie ustawiona w podobny sposób na czas trwania wywołania metody `onStart` lub `onBind`. Wywołania do klasy `Binder` zwrócone z metody `onBind` także powodują tymczasowe ustawienie tożsamości wątku.
+2. W przypadku usług tożsamość wątku zostanie ustawiona w podobny sposób na czas trwania wywołania metody `onStart` lub `onBind`. Wywołania do klasy `Binder` zwrócone z metody `onBind` także powodują tymczasowe ustawienie tożsamości wątku.
 
-  3. Wywołania do klasy `ContentProvider` podobnie ustawią tożsamość wątku na czas ich trwania.
-
-
-  Ponadto interakcja użytkownika z działaniem może spowodować niejawne przełączenie tożsamości.
-
-  **Przykład:** naciśnięcie przez użytkownika przycisku anulowania w monicie o uwierzytelnienie podczas operacji `Resume`, spowoduje niejawne przełączenie do pustej tożsamości.
-
-  Aplikacja ma możliwość otrzymania powiadomienia o tych zmianach i może ich zabronić, jeśli będzie to konieczne. Klasy `MAMService` i `MAMContentProvider` prezentują następującą metodę, którą mogą zastąpić podklasy:
-
-  ```java
-  public void onMAMIdentitySwitchRequired(final String identity,
-    final AppIdentitySwitchResultCallback callback);
-  ```
-
-  W przypadku klasy `MAMActivity` dodatkowy parametr znajduje się w metodzie:
-
-  ```java
-  public void onMAMIdentitySwitchRequired(final String identity,
-    final AppIdentitySwitchReason reason,
-    final AppIdentitySwitchResultCallback callback);
-  ```
-
-  * Parametr `AppIdentitySwitchReason` przechwytuje źródło niejawnego przełączenia i może akceptować wartości `CREATE`, `RESUME_CANCELLED` i `NEW_INTENT`.  Przyczyna `RESUME_CANCELLED` jest używana wówczas, gdy wznowienie działania powoduje wyświetlenie monitu o podanie kodu PIN, uwierzytelnienie lub innego interfejsu użytkownika zgodności i użytkownik próbuje anulować ten interfejs użytkownika, na ogół korzystając z przycisku Wstecz.
+3. Wywołania do klasy `ContentProvider` podobnie ustawią tożsamość wątku na czas ich trwania.
 
 
-  * Metoda `AppIdentitySwitchResultCallback` wygląda następująco:
+    Ponadto interakcja użytkownika z działaniem może spowodować niejawne przełączenie tożsamości.
+
+    **Przykład:** naciśnięcie przez użytkownika przycisku anulowania w monicie o uwierzytelnienie podczas operacji `Resume`, spowoduje niejawne przełączenie do pustej tożsamości.
+
+    Aplikacja ma możliwość otrzymania powiadomienia o tych zmianach i może ich zabronić, jeśli będzie to konieczne. Klasy `MAMService` i `MAMContentProvider` prezentują następującą metodę, którą mogą zastąpić podklasy:
 
     ```java
-    public interface AppIdentitySwitchResultCallback {
-        /**
-         * @param result
-         *            whether the identity switch can proceed.
-         */
-        void reportIdentitySwitchResult(AppIdentitySwitchResult result);
-    }
+    public void onMAMIdentitySwitchRequired(final String identity,
+      final AppIdentitySwitchResultCallback callback);
     ```
 
-    Gdzie parametr ```AppIdentitySwitchResult``` ma wartość `SUCCESS` lub `FAILURE`.
+    W przypadku klasy `MAMActivity` dodatkowy parametr znajduje się w metodzie:
+
+    ```java
+    public void onMAMIdentitySwitchRequired(final String identity,
+      final AppIdentitySwitchReason reason,
+      final AppIdentitySwitchResultCallback callback);
+    ```
+
+    * Parametr `AppIdentitySwitchReason` przechwytuje źródło niejawnego przełączenia i może akceptować wartości `CREATE`, `RESUME_CANCELLED` i `NEW_INTENT`.  Przyczyna `RESUME_CANCELLED` jest używana wówczas, gdy wznowienie działania powoduje wyświetlenie monitu o podanie kodu PIN, uwierzytelnienie lub innego interfejsu użytkownika zgodności i użytkownik próbuje anulować ten interfejs użytkownika, na ogół korzystając z przycisku Wstecz.
+
+
+    * Metoda `AppIdentitySwitchResultCallback` wygląda następująco:
+
+      ```java
+      public interface AppIdentitySwitchResultCallback {
+          /**
+            * @param result
+            *            whether the identity switch can proceed.
+            */
+          void reportIdentitySwitchResult(AppIdentitySwitchResult result);
+        }
+        ```
+
+      Gdzie parametr ```AppIdentitySwitchResult``` ma wartość `SUCCESS` lub `FAILURE`.
 
 Metoda `onMAMIdentitySwitchRequired` jest wywoływana dla wszystkich niejawnych zmian tożsamości z wyjątkiem tych wykonywanych za pośrednictwem klasy Binder zwróconych z klasy `MAMService.onMAMBind`. Implementacje domyślne klasy `onMAMIdentitySwitchRequired` powodują natychmiastowe wywołanie metody:
 
@@ -1498,13 +1498,13 @@ public interface MAMFileProtectionInfo {
 Funkcja MAM nie może automatycznie wywnioskować relacji między odczytywanymi plikami i danymi wyświetlanymi w obszarze `Activity`. Aplikacje *muszą* odpowiednio ustawić tożsamość interfejsu użytkownika przed wyświetleniem danych firmowych. Obejmuje to odczyt danych z plików. Jeśli plik pochodzi spoza aplikacji (z obiektu `ContentProvider` lub odczytu z publicznie zapisywalnej lokalizacji), aplikacja *musi* podjąć próbę określenia tożsamości pliku (przy użyciu metody `MAMFileProtectionManager.getProtectionInfo`) przed wyświetleniem informacji odczytanych z pliku. Jeśli metoda `getProtectionInfo` zgłosi niepustą tożsamość o wartości innej niż null, tożsamość interfejsu użytkownika *musi* zostać ustawiona w taki sposób, aby była zgodna z tą tożsamością (przy użyciu metody `MAMActivity.switchMAMIdentity` lub `MAMPolicyManager.setUIPolicyIdentity`). Jeśli przełączenie tożsamości nie powiedzie się, dane z pliku *nie mogą* zostać wyświetlone.
 
 Przykładowy przepływ może wyglądać podobnie do poniższego:
-  * Użytkownik wybiera dokument do otwarcia w aplikacji.
-  * Podczas przepływu otwierania, ale przed odczytaniem danych z dysku, aplikacja potwierdza tożsamość, która powinna zostać użyta do wyświetlenia zawartości
-    * MAMFileProtectionInfo info = MAMFileProtectionManager.getProtectionInfo(docPath)
-    * if(info) MAMPolicyManager.setUIPolicyIdentity(activity, info.getIdentity(), callback)
-    * Aplikacja oczekuje na zgłoszenie wyniku do wywołania zwrotnego
-    * Jeśli zgłoszony wynik oznacza niepowodzenie, aplikacja nie wyświetla dokumentu.
-  * Aplikacja otwiera i renderuje plik.
+* Użytkownik wybiera dokument do otwarcia w aplikacji.
+* Podczas przepływu otwierania, ale przed odczytaniem danych z dysku, aplikacja potwierdza tożsamość, która powinna zostać użyta do wyświetlenia zawartości
+  * MAMFileProtectionInfo info = MAMFileProtectionManager.getProtectionInfo(docPath)
+  * if(info) MAMPolicyManager.setUIPolicyIdentity(activity, info.getIdentity(), callback)
+  * Aplikacja oczekuje na zgłoszenie wyniku do wywołania zwrotnego
+  * Jeśli zgłoszony wynik oznacza niepowodzenie, aplikacja nie wyświetla dokumentu.
+* Aplikacja otwiera i renderuje plik.
   
 #### <a name="single-identity-to-multi-identity-transition"></a>Przejście z obsługi jednej tożsamości do obsługi wielu tożsamości
 Jeśli aplikacja, która wcześniej została wydana z obsługą integracji jednej tożsamości usługi Intune, później integruje się z wieloma tożsamościami, względem wcześniej zainstalowanych aplikacji zostanie zastosowane przejście (nie jest to widoczne dla użytkownika, ponieważ nie istnieje skojarzone środowisko użytkownika). Dla aplikacji nie jest *wymagane* wykonanie żadnych czynności, aby mogła ona obsłużyć to przejście. Wszystkie pliki utworzone przed przejściem będą nadal traktowane jako zarządzane (dzięki czemu pozostaną zaszyfrowane, jeśli zasady szyfrowania są włączone). Jeśli jest to pożądane, można wykryć uaktualnienie i użyć klasy `MAMFileProtectionManager.protect` w celu otagowania określonych plików lub katalogów przy użyciu pustej tożsamości (spowoduje to usunięcie szyfrowania, jeśli te elementy były zaszyfrowane).
@@ -1513,11 +1513,11 @@ Jeśli aplikacja, która wcześniej została wydana z obsługą integracji jedne
 
 Na znakowanie tożsamości pliku ma wpływ tryb offline. Należy uwzględnić następujące kwestie:
 
-  * Jeśli nie zainstalowano aplikacji Portal firmy, nie można tagować tożsamości plików.
+* Jeśli nie zainstalowano aplikacji Portal firmy, nie można tagować tożsamości plików.
 
-  * Jeśli aplikacja Portal firmy została zainstalowana, ale aplikacja nie ma zasad zarządzania aplikacjami mobilnymi usługi Intune, tagowanie tożsamości plików nie będzie niezawodne.
+* Jeśli aplikacja Portal firmy została zainstalowana, ale aplikacja nie ma zasad zarządzania aplikacjami mobilnymi usługi Intune, tagowanie tożsamości plików nie będzie niezawodne.
 
-  * Po udostępnieniu tagowania tożsamości plików wszystkie wcześniej utworzone pliki będą traktowane jako osobiste/niezarządzane (należące do tożsamości o pustym ciągu), chyba że aplikacja została wcześniej zainstalowana jako aplikacja zarządzana z obsługą jednej tożsamości — w takim przypadku będą one traktowane jako należące do zarejestrowanego użytkownika.
+* Po udostępnieniu tagowania tożsamości plików wszystkie wcześniej utworzone pliki będą traktowane jako osobiste/niezarządzane (należące do tożsamości o pustym ciągu), chyba że aplikacja została wcześniej zainstalowana jako aplikacja zarządzana z obsługą jednej tożsamości — w takim przypadku będą one traktowane jako należące do zarejestrowanego użytkownika.
 
 ### <a name="directory-protection"></a>Ochrona katalogu
 

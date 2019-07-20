@@ -1,7 +1,7 @@
 ---
-title: Wykres interfejsów API, aby skonfigurować urządzenia w Microsoft Intune — Azure | Dokumentacja firmy Microsoft
+title: Interfejsy API programu Graph do konfigurowania urządzeń w Microsoft Intune na platformie Azure | Microsoft Docs
 titleSuffix: ''
-description: Wyświetlenie listy wszystkich jednostek interfejsu API programu Graph przy użyciu zgodnych Windows dostawcy usług Kryptograficznych i Przesunięcie identyfikatora URI na urządzeniach z systemem Windows 10 i nowszych używane podczas konfigurowania urządzenia w programie Microsoft Intune. Zobacz zgodnych interfejsów API i dostawcy usług Kryptograficznych dla udostępnionych komputerów z systemem, program endpoint protection, ochrona przed zagrożeniami usługi Windows Defender advanced, ochrony tożsamości, systemu Windows 10 zespołów, kiosku i Windows Update dla firm.
+description: Zapoznaj się z listą wszystkich interfejs API programu Graph jednostek o pasującym dostawcy CSP systemu Windows i przesunięciu identyfikatora URI na urządzeniach z systemem Windows 10 i nowszych używanych podczas konfigurowania urządzeń w programie Microsoft Intune. Zobacz pasujący interfejs API i dostawcę CSP dla udostępnionych komputerów, programu Endpoint Protection, usługi Windows Defender Advanced Threat Protection, usługi Identity Protection, zespołów systemu Windows 10, kiosku i Windows Update dla firm.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -15,2975 +15,2975 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ce35a3fd3b9aa86efb09a903d661affd197f8a2a
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 3732a4539c13ad05ae8c95621246429b7f38987e
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041798"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354420"
 ---
-# <a name="graph-apis-and-matching-windows-10-csps-used-in-intune"></a>Interfejsy API programu Graph i pasującą dostawców usług kryptograficznych systemu Windows 10 jest używany w usłudze Intune
+# <a name="graph-apis-and-matching-windows-10-csps-used-in-intune"></a>Interfejsy API programu Graph i pasujące dostawcy CSP systemu Windows 10 używane w usłudze Intune
 
-Microsoft Intune używa [jednostki interfejsu API programu Graph](https://docs.microsoft.com/graph/api/resources/intune-graph-overview) (otwiera innej witryny Docs) do skonfigurowania urządzeń (**Intune** > **konfiguracji urządzenia**) z systemu Windows 10 lub nowszy. Interfejs API programu Graph używa dostawcy usługi konfiguracji (CSP) do odczytu, ustawić, zmienić lub usunąć ustawienia konfiguracji na urządzeniach.
+Microsoft Intune używa [jednostek interfejs API programu Graph](https://docs.microsoft.com/graph/api/resources/intune-graph-overview) (otwiera kolejną witrynę docs) do konfigurowania urządzeń (**Konfiguracja urządzeń**usługi**Intune** > ) z systemem Windows 10 lub nowszym. Interfejs API programu Graph używa dostawców usług konfiguracji (CSP) do odczytywania, ustawiania, zmiany i/lub usuwania ustawień konfiguracji na urządzeniach.
 
-Ta lista mają zastosowanie do:
+Ta lista ma zastosowanie do:
 
 - System Windows 10 lub nowszy
 
-W tym artykule wymieniono jednostki programu Graph i ich zgodnego systemu Windows 10 dostawców usług kryptograficznych i przesunięcia identyfikatorów URI.
+W tym artykule wymieniono jednostki wykresu i ich pasujące dostawcy CSP systemu Windows 10 i przesunięcia identyfikatorów URI.
 
-Te informacje są przydatne w przypadku różnych scenariuszy. Na przykład co jest używane przez usługę Intune można znaleźć ustawienia, aby uwzględnić w konfiguracje niestandardowe OMA-URI i tak dalej. 
+Te informacje są przydatne w różnych scenariuszach. Na przykład Zobacz, co jest używane przez usługę Intune, zobacz Ustawienia do uwzględnienia w niestandardowych konfiguracjach OMA-URI i tak dalej. 
 
-## <a name="windows-10-csps"></a>Dostawcy usług kryptograficznych systemu Windows 10
+## <a name="windows-10-csps"></a>Dostawcy CSP dla systemu Windows 10
 
-Aby uzyskać więcej informacji na temat dostawców usługi konfiguracji systemu Windows 10, zobacz [odwołania do dostawcy usługi konfiguracji](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) (otwiera innej witryny Docs).
+Aby uzyskać więcej informacji na temat dostawców usług konfiguracji systemu Windows 10, zobacz [Dokumentacja dostawcy usługi konfiguracji](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) (otwiera kolejną witrynę docs).
 
-## <a name="graph-api-properties-to-csp-mapping"></a>Właściwości interfejsu API programu Graph w celu mapowania dostawcy usług Kryptograficznych
+## <a name="graph-api-properties-to-csp-mapping"></a>interfejs API programu Graph właściwości na potrzeby mapowania dostawcy usług kryptograficznych
 
-Na poniższej liście przedstawiono większość jednostki interfejsu API programu Graph, używane przez program Microsoft Intune dla konfiguracji urządzenia z systemem Windows 10. Zawiera również dostawcy usług Kryptograficznych odpowiedniego systemu Windows 10 i przesunięcia identyfikatora URI.
+Na poniższej liście przedstawiono większość jednostek interfejs API programu Graph używanych przez Microsoft Intune do konfiguracji urządzeń z systemem Windows 10. Przedstawiono w nim również odpowiedni Dostawca CSP systemu Windows 10 i przesunięty identyfikator URI.
 
-Aby wyświetlić wersje systemu Windows 10, zastosuj następujące interfejsy API, należy użyć systemu Windows 10 [odwołania do dostawcy usługi konfiguracji](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) (otwiera innej witryny Docs).
+Aby zapoznać się z wersjami systemu Windows 10, należy zastosować następujące interfejsy API dla systemu Windows [10 (otwiera](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) kolejną witrynę docs).
 
-#### <a name="editionupgradeconfigurationlicense"></a>EditionUpgradeConfiguration.License 
-**CSP**: ./Device/Vendor/MSFT/WindowsLicensing  
-**Przesunięcie URI**: /UpgradeEditionWithLicense
+### <a name="editionupgradeconfigurationlicense"></a>EditionUpgradeConfiguration.License 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/WindowsLicensing  
+**Identyfikator URI przesunięcia**:/UpgradeEditionWithLicense
 
-#### <a name="editionupgradeconfigurationlicensetype"></a>EditionUpgradeConfiguration.LicenseType 
-**CSP**: ./Device/Vendor/MSFT/WindowsLicensing  
-**Przesunięcie URI**: /LicenseKeyType
+### <a name="editionupgradeconfigurationlicensetype"></a>EditionUpgradeConfiguration.LicenseType 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/WindowsLicensing  
+**Identyfikator URI przesunięcia**:/LicenseKeyType
 
-#### <a name="editionupgradeconfigurationproductkey"></a>EditionUpgradeConfiguration.ProductKey 
-**CSP**: ./Device/Vendor/MSFT/WindowsLicensing  
-**Przesunięcie URI**: /UpgradeEditionWithProductKey
+### <a name="editionupgradeconfigurationproductkey"></a>EditionUpgradeConfiguration.ProductKey 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/WindowsLicensing  
+**Identyfikator URI przesunięcia**:/UpgradeEditionWithProductKey
 
-#### <a name="editionupgradeconfigurationwindowssmode"></a>EditionUpgradeConfiguration.WindowsSMode 
-**CSP**: ./Device/Vendor/MSFT/WindowsLicensing  
-**Przesunięcie URI**: / SMode/SwitchingPolicy
+### <a name="editionupgradeconfigurationwindowssmode"></a>EditionUpgradeConfiguration.WindowsSMode 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/WindowsLicensing  
+**Identyfikator URI przesunięcia**:/SMode/SwitchingPolicy
 
-#### <a name="sharedpcconfigurationaccountmanagerpolicy"></a>SharedPCConfiguration.AccountManagerPolicy 
+### <a name="sharedpcconfigurationaccountmanagerpolicy"></a>SharedPCConfiguration.AccountManagerPolicy 
 **CSP**: ./Vendor/MSFT/SharedPC  
-**Przesunięcie URI**: /DeletionPolicy /DiskLevelCaching, /InactiveThreshold, /DiskLevelDeletion
+**Przesunięty identyfikator URI**:/DeletionPolicy,/DiskLevelCaching,/InactiveThreshold,/DiskLevelDeletion
 
-#### <a name="sharedpcconfigurationaccountmanagerpolicy-windows-holographic-for-business-edition-targeted-devices"></a>SharedPCConfiguration.AccountManagerPolicy (Windows Holographic for Business edition docelowe urządzenia) 
+### <a name="sharedpcconfigurationaccountmanagerpolicy-windows-holographic-for-business-edition-targeted-devices"></a>SharedPCConfiguration. AccountManagerPolicy (urządzenia z systemem Windows Holographic for Business Edition) 
 **CSP**: ./Vendor/MSFT/AccountManagement  
-**Przesunięcie URI**: /DeletionPolicy /StorageCapacityStartDeletion, /StorageCapacityStopDeletion, /ProfileInactivityThreshold
+**Przesunięty identyfikator URI**:/DeletionPolicy,/StorageCapacityStartDeletion,/StorageCapacityStopDeletion,/ProfileInactivityThreshold
 
-#### <a name="sharedpcconfigurationallowedaccounts"></a>SharedPCConfiguration.AllowedAccounts 
+### <a name="sharedpcconfigurationallowedaccounts"></a>SharedPCConfiguration.AllowedAccounts 
 **CSP**: ./Vendor/MSFT/SharedPC  
-**Przesunięcie URI**: /AccountModel
+**Identyfikator URI przesunięcia**:/AccountModel
 
-#### <a name="sharedpcconfigurationallowlocalstorage"></a>SharedPCConfiguration.AllowLocalStorage 
+### <a name="sharedpcconfigurationallowlocalstorage"></a>SharedPCConfiguration.AllowLocalStorage 
 **CSP**: ./Vendor/MSFT/SharedPC  
-**Przesunięcie URI**: /RestrictLocalStorage
+**Identyfikator URI przesunięcia**:/RestrictLocalStorage
 
-#### <a name="sharedpcconfigurationdisableaccountmanager"></a>SharedPCConfiguration.DisableAccountManager 
+### <a name="sharedpcconfigurationdisableaccountmanager"></a>SharedPCConfiguration.DisableAccountManager 
 **CSP**: ./Vendor/MSFT/SharedPC  
-**Przesunięcie URI**: /EnableAccountManager
+**Identyfikator URI przesunięcia**:/EnableAccountManager
 
-#### <a name="sharedpcconfigurationdisableedupolicies"></a>SharedPCConfiguration.DisableEduPolicies 
+### <a name="sharedpcconfigurationdisableedupolicies"></a>SharedPCConfiguration.DisableEduPolicies 
 **CSP**: ./Vendor/MSFT/SharedPC  
-**Przesunięcie URI**: /SetEduPolicies
+**Identyfikator URI przesunięcia**:/SetEduPolicies
 
-#### <a name="sharedpcconfigurationdisablepowerpolicies"></a>SharedPCConfiguration.DisablePowerPolicies 
+### <a name="sharedpcconfigurationdisablepowerpolicies"></a>SharedPCConfiguration.DisablePowerPolicies 
 **CSP**: ./Vendor/MSFT/SharedPC  
-**Przesunięcie URI**: /SetPowerPolicies
+**Identyfikator URI przesunięcia**:/SetPowerPolicies
 
-#### <a name="sharedpcconfigurationdisablesigninonresume"></a>SharedPCConfiguration.DisableSignInOnResume 
+### <a name="sharedpcconfigurationdisablesigninonresume"></a>SharedPCConfiguration.DisableSignInOnResume 
 **CSP**: ./Vendor/MSFT/SharedPC  
-**Przesunięcie URI**: /SignInOnResume
+**Identyfikator URI przesunięcia**:/SignInOnResume
 
-#### <a name="sharedpcconfigurationenabled"></a>SharedPCConfiguration.Enabled 
+### <a name="sharedpcconfigurationenabled"></a>SharedPCConfiguration.Enabled 
 **CSP**: ./Vendor/MSFT/SharedPC  
-**Przesunięcie URI**: /EnableSharedPCMode
+**Identyfikator URI przesunięcia**:/EnableSharedPCMode
 
-#### <a name="sharedpcconfigurationidletimebeforesleepinseconds"></a>SharedPCConfiguration.IdleTimeBeforeSleepInSeconds 
+### <a name="sharedpcconfigurationidletimebeforesleepinseconds"></a>SharedPCConfiguration.IdleTimeBeforeSleepInSeconds 
 **CSP**: ./Vendor/MSFT/SharedPC  
-**Przesunięcie URI**: /InactiveThreshold
+**Identyfikator URI przesunięcia**:/InactiveThreshold
 
-#### <a name="sharedpcconfigurationkioskappdisplayname"></a>SharedPCConfiguration.KioskAppDisplayName 
+### <a name="sharedpcconfigurationkioskappdisplayname"></a>SharedPCConfiguration.KioskAppDisplayName 
 **CSP**: ./Vendor/MSFT/SharedPC  
 **Offset URI**: /KioskModeUserTileDisplayText
 
-#### <a name="sharedpcconfigurationkioskappusermodelid"></a>SharedPCConfiguration.KioskAppUserModelId 
+### <a name="sharedpcconfigurationkioskappusermodelid"></a>SharedPCConfiguration.KioskAppUserModelId 
 **CSP**: ./Vendor/MSFT/SharedPC  
-**Przesunięcie URI**: /KioskModeAUMID
+**Identyfikator URI przesunięcia**:/KioskModeAUMID
 
-#### <a name="sharedpcconfigurationlocalstorage"></a>SharedPCConfiguration.LocalStorage 
+### <a name="sharedpcconfigurationlocalstorage"></a>SharedPCConfiguration.LocalStorage 
 **CSP**: ./Vendor/MSFT/SharedPC  
-**Przesunięcie URI**: /RestrictLocalStorage
+**Identyfikator URI przesunięcia**:/RestrictLocalStorage
 
-#### <a name="sharedpcconfigurationmaintenancestarttime"></a>SharedPCConfiguration.MaintenanceStartTime 
+### <a name="sharedpcconfigurationmaintenancestarttime"></a>SharedPCConfiguration.MaintenanceStartTime 
 **CSP**: ./Vendor/MSFT/SharedPC  
-**Przesunięcie URI**: /MaintenanceStartTime
+**Identyfikator URI przesunięcia**:/MaintenanceStartTime
 
-#### <a name="sharedpcconfigurationsetaccountmanager"></a>SharedPCConfiguration.SetAccountManager
+### <a name="sharedpcconfigurationsetaccountmanager"></a>SharedPCConfiguration.SetAccountManager
 **CSP**: ./Vendor/MSFT/SharedPC  
-**Przesunięcie URI**: /EnableAccountManager
+**Identyfikator URI przesunięcia**:/EnableAccountManager
 
-#### <a name="sharedpcconfigurationsetedupolicies"></a>SharedPCConfiguration.SetEduPolicies 
+### <a name="sharedpcconfigurationsetedupolicies"></a>SharedPCConfiguration.SetEduPolicies 
 **CSP**: ./Vendor/MSFT/SharedPC  
-**Przesunięcie URI**: /SetEduPolicies
+**Identyfikator URI przesunięcia**:/SetEduPolicies
 
-#### <a name="sharedpcconfigurationsetpowerpolicies"></a>SharedPCConfiguration.SetPowerPolicies 
+### <a name="sharedpcconfigurationsetpowerpolicies"></a>SharedPCConfiguration.SetPowerPolicies 
 **CSP**: ./Vendor/MSFT/SharedPC  
-**Przesunięcie URI**: /SetPowerPolicies
+**Identyfikator URI przesunięcia**:/SetPowerPolicies
 
-#### <a name="sharedpcconfigurationsigninonresume"></a>SharedPCConfiguration.SignInOnResume 
+### <a name="sharedpcconfigurationsigninonresume"></a>SharedPCConfiguration.SignInOnResume 
 **CSP**: ./Vendor/MSFT/SharedPC  
-**Przesunięcie URI**: /SignInOnResume
+**Identyfikator URI przesunięcia**:/SignInOnResume
 
-#### <a name="windows10endpointconfigurationsmartscreenblockoverrideforfiles"></a>Windows10endpointconfiguration.smartScreenBlockOverrideForFiles 
+### <a name="windows10endpointconfigurationsmartscreenblockoverrideforfiles"></a>Windows10endpointconfiguration.smartScreenBlockOverrideForFiles 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/SmartScreen/PreventOverrideForFilesInShell
+**Identyfikator URI przesunięcia**:/config/SmartScreen/PreventOverrideForFilesInShell
 
-#### <a name="windows10endpointprotectionconfigurationapplicationguardallowfilesaveonhost"></a>Windows10EndpointProtectionConfiguration.ApplicationGuardAllowFileSaveOnHost 
-**CSP**: ./Device/Vendor/MSFT/WindowsDefenderApplicationGuard  
-**Przesunięcie URI**: / Settings/zapisywanie plików na hoście
+### <a name="windows10endpointprotectionconfigurationapplicationguardallowfilesaveonhost"></a>Windows10EndpointProtectionConfiguration.ApplicationGuardAllowFileSaveOnHost 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/WindowsDefenderApplicationGuard  
+**Identyfikator URI przesunięcia**:/Settings/SaveFilesToHost
 
-#### <a name="windows10endpointprotectionconfigurationapplicationguardallowpersistence"></a>Windows10EndpointProtectionConfiguration.ApplicationGuardAllowPersistence 
-**CSP**: ./Device/Vendor/MSFT/WindowsDefenderApplicationGuard  
-**Przesunięcie URI**: / Settings/AllowPersistence
+### <a name="windows10endpointprotectionconfigurationapplicationguardallowpersistence"></a>Windows10EndpointProtectionConfiguration.ApplicationGuardAllowPersistence 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/WindowsDefenderApplicationGuard  
+**Identyfikator URI przesunięcia**:/Settings/AllowPersistence
 
-#### <a name="windows10endpointprotectionconfigurationapplicationguardallowprinttolocalprinters"></a>Windows10EndpointProtectionConfiguration.ApplicationGuardAllowPrintToLocalPrinters 
-**CSP**: ./Device/Vendor/MSFT/WindowsDefenderApplicationGuard  
-**Przesunięcie URI**: / Settings/PrintingSettings
+### <a name="windows10endpointprotectionconfigurationapplicationguardallowprinttolocalprinters"></a>Windows10EndpointProtectionConfiguration.ApplicationGuardAllowPrintToLocalPrinters 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/WindowsDefenderApplicationGuard  
+**Identyfikator URI przesunięcia**:/Settings/PrintingSettings
 
-#### <a name="windows10endpointprotectionconfigurationapplicationguardallowprinttonetworkprinters"></a>Windows10EndpointProtectionConfiguration.ApplicationGuardAllowPrintToNetworkPrinters 
-**CSP**: ./Device/Vendor/MSFT/WindowsDefenderApplicationGuard  
-**Przesunięcie URI**: / Settings/PrintingSettings
+### <a name="windows10endpointprotectionconfigurationapplicationguardallowprinttonetworkprinters"></a>Windows10EndpointProtectionConfiguration.ApplicationGuardAllowPrintToNetworkPrinters 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/WindowsDefenderApplicationGuard  
+**Identyfikator URI przesunięcia**:/Settings/PrintingSettings
 
-#### <a name="windows10endpointprotectionconfigurationapplicationguardallowprinttopdf"></a>Windows10EndpointProtectionConfiguration.ApplicationGuardAllowPrintToPDF 
-**CSP**: ./Device/Vendor/MSFT/WindowsDefenderApplicationGuard  
-**Przesunięcie URI**: / Settings/PrintingSettings
+### <a name="windows10endpointprotectionconfigurationapplicationguardallowprinttopdf"></a>Windows10EndpointProtectionConfiguration.ApplicationGuardAllowPrintToPDF 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/WindowsDefenderApplicationGuard  
+**Identyfikator URI przesunięcia**:/Settings/PrintingSettings
 
-#### <a name="windows10endpointprotectionconfigurationapplicationguardallowprinttoxps"></a>Windows10EndpointProtectionConfiguration.ApplicationGuardAllowPrintToXPS 
-**CSP**: ./Device/Vendor/MSFT/WindowsDefenderApplicationGuard  
-**Przesunięcie URI**: / Settings/PrintingSettings
+### <a name="windows10endpointprotectionconfigurationapplicationguardallowprinttoxps"></a>Windows10EndpointProtectionConfiguration.ApplicationGuardAllowPrintToXPS 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/WindowsDefenderApplicationGuard  
+**Identyfikator URI przesunięcia**:/Settings/PrintingSettings
 
-#### <a name="windows10endpointprotectionconfigurationapplicationguardallowvirtualgpu"></a>Windows10EndpointProtectionConfiguration.ApplicationGuardAllowVirtualGPU 
-**CSP**: ./Device/Vendor/MSFT/WindowsDefenderApplicationGuard  
-**Przesunięcie URI**: / Settings/AllowVirtualGPU
+### <a name="windows10endpointprotectionconfigurationapplicationguardallowvirtualgpu"></a>Windows10EndpointProtectionConfiguration.ApplicationGuardAllowVirtualGPU 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/WindowsDefenderApplicationGuard  
+**Identyfikator URI przesunięcia**:/Settings/AllowVirtualGPU
 
-#### <a name="windows10endpointprotectionconfigurationapplicationguardblockclipboardsharing"></a>Windows10EndpointProtectionConfiguration.ApplicationGuardBlockClipboardSharing 
-**CSP**: ./Device/Vendor/MSFT/WindowsDefenderApplicationGuard  
-**Przesunięcie URI**: / Settings/ClipboardSettings
+### <a name="windows10endpointprotectionconfigurationapplicationguardblockclipboardsharing"></a>Windows10EndpointProtectionConfiguration.ApplicationGuardBlockClipboardSharing 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/WindowsDefenderApplicationGuard  
+**Identyfikator URI przesunięcia**:/Settings/ClipboardSettings
 
-#### <a name="windows10endpointprotectionconfigurationapplicationguardblockfiletransfer"></a>Windows10EndpointProtectionConfiguration.ApplicationGuardBlockFileTransfer 
-**CSP**: ./Device/Vendor/MSFT/WindowsDefenderApplicationGuard  
-**Przesunięcie URI**: / Settings/ClipboardFileType
+### <a name="windows10endpointprotectionconfigurationapplicationguardblockfiletransfer"></a>Windows10EndpointProtectionConfiguration.ApplicationGuardBlockFileTransfer 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/WindowsDefenderApplicationGuard  
+**Identyfikator URI przesunięcia**:/Settings/ClipboardFileType
 
-#### <a name="windows10endpointprotectionconfigurationapplicationguardblocknonenterprisecontent"></a>Windows10EndpointProtectionConfiguration.ApplicationGuardBlockNonEnterpriseContent 
-**CSP**: ./Device/Vendor/MSFT/WindowsDefenderApplicationGuard  
-**Offset URI**: /Settings/BlockNonEnterpriseContent
+### <a name="windows10endpointprotectionconfigurationapplicationguardblocknonenterprisecontent"></a>Windows10EndpointProtectionConfiguration.ApplicationGuardBlockNonEnterpriseContent 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/WindowsDefenderApplicationGuard  
+**Identyfikator URI przesunięcia**:/Settings/BlockNonEnterpriseContent
 
-#### <a name="windows10endpointprotectionconfigurationapplicationguardenabled"></a>Windows10EndpointProtectionConfiguration.ApplicationGuardEnabled 
-**CSP**: ./Device/Vendor/MSFT/WindowsDefenderApplicationGuard  
-**Offset URI**: /Settings/AllowWindowsDefenderApplicationGuard
+### <a name="windows10endpointprotectionconfigurationapplicationguardenabled"></a>Windows10EndpointProtectionConfiguration.ApplicationGuardEnabled 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/WindowsDefenderApplicationGuard  
+**Identyfikator URI przesunięcia**:/Settings/AllowWindowsDefenderApplicationGuard
 
-#### <a name="windows10endpointprotectionconfigurationapplicationguardforceauditing"></a>Windows10EndpointProtectionConfiguration.ApplicationGuardForceAuditing 
-**CSP**: ./Device/Vendor/MSFT/WindowsDefenderApplicationGuard  
-**Przesunięcie URI**: / inspekcji/AuditApplicationGuard
+### <a name="windows10endpointprotectionconfigurationapplicationguardforceauditing"></a>Windows10EndpointProtectionConfiguration.ApplicationGuardForceAuditing 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/WindowsDefenderApplicationGuard  
+**Identyfikator URI przesunięcia**:/Audit/AuditApplicationGuard
 
-#### <a name="windows10endpointprotectionconfigurationbitlockerallowstandarduserencryption"></a>Windows10EndpointProtectionConfiguration.BitLockerAllowStandardUserEncryption 
+### <a name="windows10endpointprotectionconfigurationbitlockerallowstandarduserencryption"></a>Windows10EndpointProtectionConfiguration.BitLockerAllowStandardUserEncryption 
 **CSP**: ./Device/Vendor/MSFT/BitLocker  
-**Przesunięcie URI**: /AllowStandardUserEncryption
+**Identyfikator URI przesunięcia**:/AllowStandardUserEncryption
 
-#### <a name="windows10endpointprotectionconfigurationbitlockerdisablewarningforotherdiskencryption"></a>Windows10EndpointProtectionConfiguration.BitLockerDisableWarningForOtherDiskEncryption 
+### <a name="windows10endpointprotectionconfigurationbitlockerdisablewarningforotherdiskencryption"></a>Windows10EndpointProtectionConfiguration.BitLockerDisableWarningForOtherDiskEncryption 
 **CSP**: ./Device/Vendor/MSFT/BitLocker  
-**Przesunięcie URI**: /AllowWarningForOtherDiskEncryption
+**Identyfikator URI przesunięcia**:/AllowWarningForOtherDiskEncryption
 
-#### <a name="windows10endpointprotectionconfigurationbitlockerenablestoragecardencryptiononmobile"></a>Windows10EndpointProtectionConfiguration.BitLockerEnableStorageCardEncryptionOnMobile 
+### <a name="windows10endpointprotectionconfigurationbitlockerenablestoragecardencryptiononmobile"></a>Windows10EndpointProtectionConfiguration.BitLockerEnableStorageCardEncryptionOnMobile 
 **CSP**: ./Device/Vendor/MSFT/BitLocker  
-**Przesunięcie URI**: /RequireStorageCardEncryption
+**Identyfikator URI przesunięcia**:/RequireStorageCardEncryption
 
-#### <a name="windows10endpointprotectionconfigurationbitlockerencryptdevice"></a>Windows10EndpointProtectionConfiguration.BitLockerEncryptDevice 
+### <a name="windows10endpointprotectionconfigurationbitlockerencryptdevice"></a>Windows10EndpointProtectionConfiguration.BitLockerEncryptDevice 
 **CSP**: ./Device/Vendor/MSFT/BitLocker  
-**Przesunięcie URI**: /RequireDeviceEncryption
+**Identyfikator URI przesunięcia**:/RequireDeviceEncryption
 
-#### <a name="windows10endpointprotectionconfigurationbitlockerfixeddrivepolicy"></a>Windows10EndpointProtectionConfiguration.BitLockerFixedDrivePolicy 
+### <a name="windows10endpointprotectionconfigurationbitlockerfixeddrivepolicy"></a>Windows10EndpointProtectionConfiguration.BitLockerFixedDrivePolicy 
 **CSP**: ./Device/Vendor/MSFT/BitLocker  
-**Przesunięcie URI**: /EncryptionMethodByDriveType, /FixedDrivesRequireEncryption, /FixedDrivesRecoveryOptions
+**Przesunięty identyfikator URI**:/EncryptionMethodByDriveType,/FixedDrivesRequireEncryption,/FixedDrivesRecoveryOptions
 
-#### <a name="windows10endpointprotectionconfigurationbitlockerremovabledrivepolicy"></a>Windows10EndpointProtectionConfiguration.BitLockerRemovableDrivePolicy 
+### <a name="windows10endpointprotectionconfigurationbitlockerremovabledrivepolicy"></a>Windows10EndpointProtectionConfiguration.BitLockerRemovableDrivePolicy 
 **CSP**: ./Device/Vendor/MSFT/BitLocker  
-**Przesunięcie URI**: /EncryptionMethodByDriveType, /RemovableDrivesRequireEncryption
+**Przesunięty identyfikator URI**:/EncryptionMethodByDriveType,/RemovableDrivesRequireEncryption
 
-#### <a name="windows10endpointprotectionconfigurationbitlockersystemdrivepolicy"></a>Windows10EndpointProtectionConfiguration.BitLockerSystemDrivePolicy 
+### <a name="windows10endpointprotectionconfigurationbitlockersystemdrivepolicy"></a>Windows10EndpointProtectionConfiguration.BitLockerSystemDrivePolicy 
 **CSP**: ./Device/Vendor/MSFT/BitLocker  
-**Przesunięcie URI**: /EncryptionMethodByDriveType /SystemDrivesRequireStartupAuthentication, /SystemDrivesMinimumPINLength, /SystemDrivesRecoveryMessage, /SystemDrivesRecoveryOptions
+**Przesunięty identyfikator URI**:/EncryptionMethodByDriveType,/SystemDrivesRequireStartupAuthentication,/SystemDrivesMinimumPINLength,/SystemDrivesRecoveryMessage,/SystemDrivesRecoveryOptions
 
-#### <a name="windows10endpointprotectionconfigurationclientconnectionencryptionlevel"></a>windows10endpointprotectionconfiguration.clientConnectionEncryptionLevel 
+### <a name="windows10endpointprotectionconfigurationclientconnectionencryptionlevel"></a>windows10endpointprotectionconfiguration.clientConnectionEncryptionLevel 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/RemoteDesktopServices/ClientConnectionEncryptionLevel
+**Identyfikator URI przesunięcia**:/config/RemoteDesktopServices/ClientConnectionEncryptionLevel
 
-#### <a name="windows10endpointprotectionconfigurationconfiguresmbv1clientdriver"></a>windows10endpointprotectionconfiguration.configureSMBV1ClientDriver 
+### <a name="windows10endpointprotectionconfigurationconfiguresmbv1clientdriver"></a>windows10endpointprotectionconfiguration.configureSMBV1ClientDriver 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/MSSecurityGuide/ConfigureSMBV1ClientDriver
+**Identyfikator URI przesunięcia**:/config/MSSecurityGuide/ConfigureSMBV1ClientDriver
 
-#### <a name="windows10endpointprotectionconfigurationconnectivitydownloadingofprintdriversoverhttp"></a>Windows10EndpointProtectionConfiguration.ConnectivityDownloadingOfPrintDriversOverHttp 
+### <a name="windows10endpointprotectionconfigurationconnectivitydownloadingofprintdriversoverhttp"></a>Windows10EndpointProtectionConfiguration.ConnectivityDownloadingOfPrintDriversOverHttp 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Connectivity/DisableDownloadingOfPrintDriversOverHTTP
+**Identyfikator URI przesunięcia**:/config/Connectivity/DisableDownloadingOfPrintDriversOverHTTP
 
-#### <a name="windows10endpointprotectionconfigurationconnectivityhardeneduncpaths"></a>Windows10EndpointProtectionConfiguration.ConnectivityHardenedUncPaths 
+### <a name="windows10endpointprotectionconfigurationconnectivityhardeneduncpaths"></a>Windows10EndpointProtectionConfiguration.ConnectivityHardenedUncPaths 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Connectivity/HardenedUNCPaths
+**Identyfikator URI przesunięcia**:/config/Connectivity/HardenedUNCPaths
 
-#### <a name="windows10endpointprotectionconfigurationconnectivityinternetdownloadforwebpublishingandonlineorderingwizards"></a>Windows10EndpointProtectionConfiguration.ConnectivityInternetDownloadForWebPublishingAndOnlineOrderingWizards 
+### <a name="windows10endpointprotectionconfigurationconnectivityinternetdownloadforwebpublishingandonlineorderingwizards"></a>Windows10EndpointProtectionConfiguration.ConnectivityInternetDownloadForWebPublishingAndOnlineOrderingWizards 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Connectivity/DisableInternetDownloadForWebPublishingAndOnlineOrderingWizards
+**Identyfikator URI przesunięcia**:/config/Connectivity/DisableInternetDownloadForWebPublishingAndOnlineOrderingWizards
 
-#### <a name="windows10endpointprotectionconfigurationconnectivityprintingoverhttp"></a>Windows10EndpointProtectionConfiguration.ConnectivityPrintingOverHttp 
+### <a name="windows10endpointprotectionconfigurationconnectivityprintingoverhttp"></a>Windows10EndpointProtectionConfiguration.ConnectivityPrintingOverHttp 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Connectivity/DiablePrintingOverHTTP
+**Identyfikator URI przesunięcia**:/config/Connectivity/DiablePrintingOverHTTP
 
-#### <a name="windows10endpointprotectionconfigurationcredentialsuienumerateadministrators"></a>Windows10EndpointProtectionConfiguration.CredentialsUIEnumerateAdministrators 
+### <a name="windows10endpointprotectionconfigurationcredentialsuienumerateadministrators"></a>Windows10EndpointProtectionConfiguration.CredentialsUIEnumerateAdministrators 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/CredentialsUI/EnumerateAdministrators
+**Identyfikator URI przesunięcia**:/config/CredentialsUI/EnumerateAdministrators
 
-#### <a name="windows10endpointprotectionconfigurationdefenderadditionalguardedfolders"></a>Windows10EndpointProtectionConfiguration.DefenderAdditionalGuardedFolders 
-**CSP**: ./Device/Vendor/MSFT/Policy **Offset URI**: /Config/Defender/ControlledFolderAccessProtectedFolders
+### <a name="windows10endpointprotectionconfigurationdefenderadditionalguardedfolders"></a>Windows10EndpointProtectionConfiguration.DefenderAdditionalGuardedFolders 
+**Dostawca CSP**:./Device/Vendor/MSFT/Policy — **Identyfikator URI**:/config/Defender/ControlledFolderAccessProtectedFolders
 
-#### <a name="windows10endpointprotectionconfigurationdefenderadvancedransomewareprotectiontype"></a>Windows10EndpointProtectionConfiguration.DefenderAdvancedRansomewareProtectionType 
+### <a name="windows10endpointprotectionconfigurationdefenderadvancedransomewareprotectiontype"></a>Windows10EndpointProtectionConfiguration.DefenderAdvancedRansomewareProtectionType 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/AttackSurfaceReductionRules
+**Identyfikator URI przesunięcia**:/config/Defender/AttackSurfaceReductionRules
 
-#### <a name="windows10endpointprotectionconfigurationdefenderattacksurfacereductionexcludedpaths"></a>Windows10EndpointProtectionConfiguration.DefenderAttackSurfaceReductionExcludedPaths 
+### <a name="windows10endpointprotectionconfigurationdefenderattacksurfacereductionexcludedpaths"></a>Windows10EndpointProtectionConfiguration.DefenderAttackSurfaceReductionExcludedPaths 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/AttackSurfaceReductionOnlyExclusions
+**Identyfikator URI przesunięcia**:/config/Defender/AttackSurfaceReductionOnlyExclusions
 
-#### <a name="windows10endpointprotectionconfigurationdefenderemailcontentexecution"></a>Windows10EndpointProtectionConfiguration.DefenderEmailContentExecution 
+### <a name="windows10endpointprotectionconfigurationdefenderemailcontentexecution"></a>Windows10EndpointProtectionConfiguration.DefenderEmailContentExecution 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/AllowEmailScanning
+**Identyfikator URI przesunięcia**:/config/Defender/AllowEmailScanning
 
-#### <a name="windows10endpointprotectionconfigurationdefenderemailcontentexecutiontype"></a>Windows10EndpointProtectionConfiguration.DefenderEmailContentExecutionType 
+### <a name="windows10endpointprotectionconfigurationdefenderemailcontentexecutiontype"></a>Windows10EndpointProtectionConfiguration.DefenderEmailContentExecutionType 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/AttackSurfaceReductionRules (dostawcy usług Kryptograficznych/konfiguracja wymaga właściwości wykresu: windows10endpointprotection/Configuration.defenderOfficeAppsOtherProcessInjectionType, windows10endpointprotection / Configuration.defenderOfficeAppsExecutableContentCreationOrLaunchType, windows10endpointprotection/Configuration.defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection / Configuration.defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration.defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration.defenderScriptDownloadedPayloadExecutionType , windows10endpointprotection/Configuration.defenderEmailContentExecutionType, windows10endpointprotection/Configuration.defenderPreventCredentialStealingType, windows10endpointprotection / Configuration.defenderUntrustedUSBProcessType
+**Przesunięty identyfikator URI**:/config/Defender/AttackSurfaceReductionRules (dostawca CSP/konfiguracja wymaga właściwości wykresu: Windows10endpointprotection/Configuration. defenderOfficeAppsOtherProcessInjectionType, windows10endpointprotection/ Configuration. defenderOfficeAppsExecutableContentCreationOrLaunchType, windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection/ Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration. defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration. defenderScriptDownloadedPayloadExecutionType , windows10endpointprotection/Configuration. defenderEmailContentExecutionType, windows10endpointprotection/Configuration. defenderPreventCredentialStealingType, windows10endpointprotection/ Configuration. defenderUntrustedUSBProcessType
 
-#### <a name="windows10endpointprotectionconfigurationdefenderexploitprotectionxml"></a>Windows10EndpointProtectionConfiguration.DefenderExploitProtectionXml 
-**CSP**: ./Device/Vendor/MSFT/Policy **Offset URI**: /Config/ExploitGuard/ExploitProtectionSettings
+### <a name="windows10endpointprotectionconfigurationdefenderexploitprotectionxml"></a>Windows10EndpointProtectionConfiguration.DefenderExploitProtectionXml 
+**Dostawca CSP**:./Device/Vendor/MSFT/Policy — **Identyfikator URI**:/config/ExploitGuard/ExploitProtectionSettings
 
-#### <a name="windows10endpointprotectionconfigurationdefenderexploitprotectionxmlfilename"></a>Windows10EndpointProtectionConfiguration.DefenderExploitProtectionXmlFileName 
+### <a name="windows10endpointprotectionconfigurationdefenderexploitprotectionxmlfilename"></a>Windows10EndpointProtectionConfiguration.DefenderExploitProtectionXmlFileName 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/ExploitGuard/ExploitProtectionSettings
+**Identyfikator URI przesunięcia**:/config/ExploitGuard/ExploitProtectionSettings
 
-#### <a name="windows10endpointprotectionconfigurationdefenderguardedfoldersallowedapppaths"></a>Windows10EndpointProtectionConfiguration.DefenderGuardedFoldersAllowedAppPaths 
-**Dostawcy usług Kryptograficznych**: ./Device/Vendor/MSFT/Policy **przesunięcie URI**: /Config/Defender/ControlledFolderAccessAllowedApplications
+### <a name="windows10endpointprotectionconfigurationdefenderguardedfoldersallowedapppaths"></a>Windows10EndpointProtectionConfiguration.DefenderGuardedFoldersAllowedAppPaths 
+**Dostawca CSP**:./Device/Vendor/MSFT/Policy — **Identyfikator URI**:/config/Defender/ControlledFolderAccessAllowedApplications
 
-#### <a name="windows10endpointprotectionconfigurationdefenderguardmyfolderstype"></a>Windows10EndpointProtectionConfiguration.DefenderGuardMyFoldersType 
+### <a name="windows10endpointprotectionconfigurationdefenderguardmyfolderstype"></a>Windows10EndpointProtectionConfiguration.DefenderGuardMyFoldersType 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/EnableControlledFolderAccess
+**Identyfikator URI przesunięcia**:/config/Defender/EnableControlledFolderAccess
 
-#### <a name="windows10endpointprotectionconfigurationdefendernetworkprotectiontype"></a>Windows10EndpointProtectionConfiguration.DefenderNetworkProtectionType 
-**Dostawcy usług Kryptograficznych**: ./Device/Vendor/MSFT/Policy **przesunięcie URI**: /Config/Defender/EnableNetworkProtection
+### <a name="windows10endpointprotectionconfigurationdefendernetworkprotectiontype"></a>Windows10EndpointProtectionConfiguration.DefenderNetworkProtectionType 
+**Dostawca CSP**:./Device/Vendor/MSFT/Policy — **Identyfikator URI**:/config/Defender/EnableNetworkProtection
 
-#### <a name="windows10endpointprotectionconfigurationdefenderofficeappsexecutablecontentcreationorlaunch"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeAppsExecutableContentCreationOrLaunch 
+### <a name="windows10endpointprotectionconfigurationdefenderofficeappsexecutablecontentcreationorlaunch"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeAppsExecutableContentCreationOrLaunch 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/AttackSurfaceReductionRules
+**Identyfikator URI przesunięcia**:/config/Defender/AttackSurfaceReductionRules
 
-#### <a name="windows10endpointprotectionconfigurationdefenderofficeappsexecutablecontentcreationorlaunchtype"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeAppsExecutableContentCreationOrLaunchType
+### <a name="windows10endpointprotectionconfigurationdefenderofficeappsexecutablecontentcreationorlaunchtype"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeAppsExecutableContentCreationOrLaunchType
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/AttackSurfaceReductionRules (dostawcy usług Kryptograficznych/konfiguracja wymaga właściwości wykresu: windows10endpointprotection/Configuration.defenderOfficeAppsOtherProcessInjectionType, windows10endpointprotection / Configuration.defenderOfficeAppsExecutableContentCreationOrLaunchType, windows10endpointprotection/Configuration.defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection / Configuration.defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration.defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration.defenderScriptDownloadedPayloadExecutionType , windows10endpointprotection/Configuration.defenderEmailContentExecutionType, windows10endpointprotection/Configuration.defenderPreventCredentialStealingType, windows10endpointprotection / Configuration.defenderUntrustedUSBProcessType
+**Przesunięty identyfikator URI**:/config/Defender/AttackSurfaceReductionRules (dostawca CSP/konfiguracja wymaga właściwości wykresu: Windows10endpointprotection/Configuration. defenderOfficeAppsOtherProcessInjectionType, windows10endpointprotection/ Configuration. defenderOfficeAppsExecutableContentCreationOrLaunchType, windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection/ Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration. defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration. defenderScriptDownloadedPayloadExecutionType , windows10endpointprotection/Configuration. defenderEmailContentExecutionType, windows10endpointprotection/Configuration. defenderPreventCredentialStealingType, windows10endpointprotection/ Configuration. defenderUntrustedUSBProcessType
 
-#### <a name="windows10endpointprotectionconfigurationdefenderofficeappslaunchchildprocess"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeAppsLaunchChildProcess 
+### <a name="windows10endpointprotectionconfigurationdefenderofficeappslaunchchildprocess"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeAppsLaunchChildProcess 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/AttackSurfaceReductionRules
+**Identyfikator URI przesunięcia**:/config/Defender/AttackSurfaceReductionRules
 
-#### <a name="windows10endpointprotectionconfigurationdefenderofficeappslaunchchildprocesstype"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeAppsLaunchChildProcessType 
+### <a name="windows10endpointprotectionconfigurationdefenderofficeappslaunchchildprocesstype"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeAppsLaunchChildProcessType 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/AttackSurfaceReductionRules (dostawcy usług Kryptograficznych/konfiguracja wymaga właściwości wykresu: windows10endpointprotection/Configuration.defenderOfficeAppsOtherProcessInjectionType, windows10endpointprotection / Configuration.defenderOfficeAppsExecutableContentCreationOrLaunchType, windows10endpointprotection/Configuration.defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection / Configuration.defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration.defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration.defenderScriptDownloadedPayloadExecutionType , windows10endpointprotection/Configuration.defenderEmailContentExecutionType, windows10endpointprotection/Configuration.defenderPreventCredentialStealingType, windows10endpointprotection / Configuration.defenderUntrustedUSBProcessType
+**Przesunięty identyfikator URI**:/config/Defender/AttackSurfaceReductionRules (dostawca CSP/konfiguracja wymaga właściwości wykresu: Windows10endpointprotection/Configuration. defenderOfficeAppsOtherProcessInjectionType, windows10endpointprotection/ Configuration. defenderOfficeAppsExecutableContentCreationOrLaunchType, windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection/ Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration. defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration. defenderScriptDownloadedPayloadExecutionType , windows10endpointprotection/Configuration. defenderEmailContentExecutionType, windows10endpointprotection/Configuration. defenderPreventCredentialStealingType, windows10endpointprotection/ Configuration. defenderUntrustedUSBProcessType
 
-#### <a name="windows10endpointprotectionconfigurationdefenderofficeappsotherprocessinjection"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeAppsOtherProcessInjection 
+### <a name="windows10endpointprotectionconfigurationdefenderofficeappsotherprocessinjection"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeAppsOtherProcessInjection 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/AttackSurfaceReductionRules
+**Identyfikator URI przesunięcia**:/config/Defender/AttackSurfaceReductionRules
 
-#### <a name="windows10endpointprotectionconfigurationdefenderofficeappsotherprocessinjectiontype"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeAppsOtherProcessInjectionType 
+### <a name="windows10endpointprotectionconfigurationdefenderofficeappsotherprocessinjectiontype"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeAppsOtherProcessInjectionType 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/AttackSurfaceReductionRules (dostawcy usług Kryptograficznych/konfiguracja wymaga właściwości wykresu: windows10endpointprotection/Configuration.defenderOfficeAppsOtherProcessInjectionType, windows10endpointprotection / Configuration.defenderOfficeAppsExecutableContentCreationOrLaunchType, windows10endpointprotection/Configuration.defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection / Configuration.defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration.defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration.defenderScriptDownloadedPayloadExecutionType , windows10endpointprotection/Configuration.defenderEmailContentExecutionType, windows10endpointprotection/Configuration.defenderPreventCredentialStealingType, windows10endpointprotection / Configuration.defenderUntrustedUSBProcessType 
+**Przesunięty identyfikator URI**:/config/Defender/AttackSurfaceReductionRules (dostawca CSP/konfiguracja wymaga właściwości wykresu: Windows10endpointprotection/Configuration. defenderOfficeAppsOtherProcessInjectionType, windows10endpointprotection/ Configuration. defenderOfficeAppsExecutableContentCreationOrLaunchType, windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection/ Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration. defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration. defenderScriptDownloadedPayloadExecutionType , windows10endpointprotection/Configuration. defenderEmailContentExecutionType, windows10endpointprotection/Configuration. defenderPreventCredentialStealingType, windows10endpointprotection/ Configuration. defenderUntrustedUSBProcessType 
 
-#### <a name="windows10endpointprotectionconfigurationdefenderofficemacrocodeallowwin32imports"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeMacroCodeAllowWin32Imports 
+### <a name="windows10endpointprotectionconfigurationdefenderofficemacrocodeallowwin32imports"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeMacroCodeAllowWin32Imports 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/AttackSurfaceReductionRules
+**Identyfikator URI przesunięcia**:/config/Defender/AttackSurfaceReductionRules
 
-#### <a name="windows10endpointprotectionconfigurationdefenderofficemacrocodeallowwin32importstype"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeMacroCodeAllowWin32ImportsType 
+### <a name="windows10endpointprotectionconfigurationdefenderofficemacrocodeallowwin32importstype"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeMacroCodeAllowWin32ImportsType 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/AttackSurfaceReductionRules (dostawcy usług Kryptograficznych/konfiguracja wymaga właściwości wykresu: windows10endpointprotection/Configuration.defenderOfficeAppsOtherProcessInjectionType, windows10endpointprotection / Configuration.defenderOfficeAppsExecutableContentCreationOrLaunchType, windows10endpointprotection/Configuration.defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection / Configuration.defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration.defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration.defenderScriptDownloadedPayloadExecutionType , windows10endpointprotection/Configuration.defenderEmailContentExecutionType, windows10endpointprotection/Configuration.defenderPreventCredentialStealingType, windows10endpointprotection / Configuration.defenderUntrustedUSBProcessType
+**Przesunięty identyfikator URI**:/config/Defender/AttackSurfaceReductionRules (dostawca CSP/konfiguracja wymaga właściwości wykresu: Windows10endpointprotection/Configuration. defenderOfficeAppsOtherProcessInjectionType, windows10endpointprotection/ Configuration. defenderOfficeAppsExecutableContentCreationOrLaunchType, windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection/ Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration. defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration. defenderScriptDownloadedPayloadExecutionType , windows10endpointprotection/Configuration. defenderEmailContentExecutionType, windows10endpointprotection/Configuration. defenderPreventCredentialStealingType, windows10endpointprotection/ Configuration. defenderUntrustedUSBProcessType
 
-#### <a name="windows10endpointprotectionconfigurationdefenderpreventcredentialstealingtype"></a>Windows10EndpointProtectionConfiguration.DefenderPreventCredentialStealingType 
+### <a name="windows10endpointprotectionconfigurationdefenderpreventcredentialstealingtype"></a>Windows10EndpointProtectionConfiguration.DefenderPreventCredentialStealingType 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/AttackSurfaceReductionRules (dostawcy usług Kryptograficznych/konfiguracja wymaga właściwości wykresu: windows10endpointprotection/Configuration.defenderOfficeAppsOtherProcessInjectionType, windows10endpointprotection / Configuration.defenderOfficeAppsExecutableContentCreationOrLaunchType, windows10endpointprotection/Configuration.defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection / Configuration.defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration.defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration.defenderScriptDownloadedPayloadExecutionType , windows10endpointprotection/Configuration.defenderEmailContentExecutionType, windows10endpointprotection/Configuration.defenderPreventCredentialStealingType, windows10endpointprotection / Configuration.defenderUntrustedUSBProcessType
+**Przesunięty identyfikator URI**:/config/Defender/AttackSurfaceReductionRules (dostawca CSP/konfiguracja wymaga właściwości wykresu: Windows10endpointprotection/Configuration. defenderOfficeAppsOtherProcessInjectionType, windows10endpointprotection/ Configuration. defenderOfficeAppsExecutableContentCreationOrLaunchType, windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection/ Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration. defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration. defenderScriptDownloadedPayloadExecutionType , windows10endpointprotection/Configuration. defenderEmailContentExecutionType, windows10endpointprotection/Configuration. defenderPreventCredentialStealingType, windows10endpointprotection/ Configuration. defenderUntrustedUSBProcessType
 
-#### <a name="windows10endpointprotectionconfigurationdefenderprocesscreation"></a>Windows10EndpointProtectionConfiguration.DefenderProcessCreation 
+### <a name="windows10endpointprotectionconfigurationdefenderprocesscreation"></a>Windows10EndpointProtectionConfiguration.DefenderProcessCreation 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/AttackSurfaceReductionRules
+**Identyfikator URI przesunięcia**:/config/Defender/AttackSurfaceReductionRules
 
-#### <a name="windows10endpointprotectionconfigurationdefenderprocesscreationtype"></a>Windows10EndpointProtectionConfiguration.DefenderProcessCreationType 
+### <a name="windows10endpointprotectionconfigurationdefenderprocesscreationtype"></a>Windows10EndpointProtectionConfiguration.DefenderProcessCreationType 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/AttackSurfaceReductionRules
+**Identyfikator URI przesunięcia**:/config/Defender/AttackSurfaceReductionRules
 
-#### <a name="windows10endpointprotectionconfigurationdefenderprotectagainstpotentiallyunwantedapplications"></a>Windows10EndpointProtectionConfiguration.DefenderProtectAgainstPotentiallyUnwantedApplications 
+### <a name="windows10endpointprotectionconfigurationdefenderprotectagainstpotentiallyunwantedapplications"></a>Windows10EndpointProtectionConfiguration.DefenderProtectAgainstPotentiallyUnwantedApplications 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/MSSecurityGuide/TurnOnWindowsDefenderProtectionAgainstPotentiallyUnwantedApplications
+**Identyfikator URI przesunięcia**:/config/MSSecurityGuide/TurnOnWindowsDefenderProtectionAgainstPotentiallyUnwantedApplications
 
-#### <a name="windows10endpointprotectionconfigurationdefenderscriptdownloadedpayloadexecution"></a>Windows10EndpointProtectionConfiguration.DefenderScriptDownloadedPayloadExecution 
+### <a name="windows10endpointprotectionconfigurationdefenderscriptdownloadedpayloadexecution"></a>Windows10EndpointProtectionConfiguration.DefenderScriptDownloadedPayloadExecution 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/AttackSurfaceReductionRules
+**Identyfikator URI przesunięcia**:/config/Defender/AttackSurfaceReductionRules
 
-#### <a name="windows10endpointprotectionconfigurationdefenderscriptdownloadedpayloadexecutiontype"></a>Windows10EndpointProtectionConfiguration.DefenderScriptDownloadedPayloadExecutionType 
+### <a name="windows10endpointprotectionconfigurationdefenderscriptdownloadedpayloadexecutiontype"></a>Windows10EndpointProtectionConfiguration.DefenderScriptDownloadedPayloadExecutionType 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/AttackSurfaceReductionRules (dostawcy usług Kryptograficznych/konfiguracja wymaga właściwości wykresu: windows10endpointprotection/Configuration.defenderOfficeAppsOtherProcessInjectionType, windows10endpointprotection / Configuration.defenderOfficeAppsExecutableContentCreationOrLaunchType, windows10endpointprotection/Configuration.defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection / Configuration.defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration.defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration.defenderScriptDownloadedPayloadExecutionType , windows10endpointprotection/Configuration.defenderEmailContentExecutionType, windows10endpointprotection/Configuration.defenderPreventCredentialStealingType, windows10endpointprotection / Configuration.defenderUntrustedUSBProcessType
+**Przesunięty identyfikator URI**:/config/Defender/AttackSurfaceReductionRules (dostawca CSP/konfiguracja wymaga właściwości wykresu: Windows10endpointprotection/Configuration. defenderOfficeAppsOtherProcessInjectionType, windows10endpointprotection/ Configuration. defenderOfficeAppsExecutableContentCreationOrLaunchType, windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection/ Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration. defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration. defenderScriptDownloadedPayloadExecutionType , windows10endpointprotection/Configuration. defenderEmailContentExecutionType, windows10endpointprotection/Configuration. defenderPreventCredentialStealingType, windows10endpointprotection/ Configuration. defenderUntrustedUSBProcessType
 
-#### <a name="windows10endpointprotectionconfigurationdefenderscriptobfuscatedmacrocode"></a>Windows10EndpointProtectionConfiguration.DefenderScriptObfuscatedMacroCode 
+### <a name="windows10endpointprotectionconfigurationdefenderscriptobfuscatedmacrocode"></a>Windows10EndpointProtectionConfiguration.DefenderScriptObfuscatedMacroCode 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/AttackSurfaceReductionRules
+**Identyfikator URI przesunięcia**:/config/Defender/AttackSurfaceReductionRules
 
-#### <a name="windows10endpointprotectionconfigurationdefenderscriptobfuscatedmacrocodetype"></a>Windows10EndpointProtectionConfiguration.DefenderScriptObfuscatedMacroCodeType 
+### <a name="windows10endpointprotectionconfigurationdefenderscriptobfuscatedmacrocodetype"></a>Windows10EndpointProtectionConfiguration.DefenderScriptObfuscatedMacroCodeType 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/AttackSurfaceReductionRules (dostawcy usług Kryptograficznych/konfiguracja wymaga właściwości wykresu: windows10endpointprotection/Configuration.defenderOfficeAppsOtherProcessInjectionType, windows10endpointprotection / Configuration.defenderOfficeAppsExecutableContentCreationOrLaunchType, windows10endpointprotection/Configuration.defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection / Configuration.defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration.defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration.defenderScriptDownloadedPayloadExecutionType , windows10endpointprotection/Configuration.defenderEmailContentExecutionType, windows10endpointprotection/Configuration.defenderPreventCredentialStealingType, windows10endpointprotection / Configuration.defenderUntrustedUSBProcessType
+**Przesunięty identyfikator URI**:/config/Defender/AttackSurfaceReductionRules (dostawca CSP/konfiguracja wymaga właściwości wykresu: Windows10endpointprotection/Configuration. defenderOfficeAppsOtherProcessInjectionType, windows10endpointprotection/ Configuration. defenderOfficeAppsExecutableContentCreationOrLaunchType, windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection/ Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration. defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration. defenderScriptDownloadedPayloadExecutionType , windows10endpointprotection/Configuration. defenderEmailContentExecutionType, windows10endpointprotection/Configuration. defenderPreventCredentialStealingType, windows10endpointprotection/ Configuration. defenderUntrustedUSBProcessType
 
-#### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterblockexploitprotectionoverride"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterBlockExploitProtectionOverride 
+### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterblockexploitprotectionoverride"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterBlockExploitProtectionOverride 
 **CSP**: ./Device/Vendor/MSFT/Policy **Offset URI**: /Config/WindowsDefenderSecurityCenter/DisallowExploitProtectionOverride
 
-#### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterdisableaccountui"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterDisableAccountUI 
+### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterdisableaccountui"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterDisableAccountUI 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/WindowsDefenderSecurityCenter/DisableAccountProtectionUI
+**Identyfikator URI przesunięcia**:/config/WindowsDefenderSecurityCenter/DisableAccountProtectionUI
 
-#### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterdisableappbrowserui"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterDisableAppBrowserUI 
+### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterdisableappbrowserui"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterDisableAppBrowserUI 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/WindowsDefenderSecurityCenter/DisableAppBrowserUI
+**Identyfikator URI przesunięcia**:/config/WindowsDefenderSecurityCenter/DisableAppBrowserUI
 
-#### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterdisablefamilyui"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterDisableFamilyUI 
+### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterdisablefamilyui"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterDisableFamilyUI 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/WindowsDefenderSecurityCenter/DisableFamilyUI
+**Identyfikator URI przesunięcia**:/config/WindowsDefenderSecurityCenter/DisableFamilyUI
 
-#### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterdisablehealthui"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterDisableHealthUI 
+### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterdisablehealthui"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterDisableHealthUI 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/WindowsDefenderSecurityCenter/DisableHealthUI
+**Identyfikator URI przesunięcia**:/config/WindowsDefenderSecurityCenter/DisableHealthUI
 
-#### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterdisablenetworkui"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterDisableNetworkUI 
+### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterdisablenetworkui"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterDisableNetworkUI 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/WindowsDefenderSecurityCenter/DisableNetworkUI
+**Identyfikator URI przesunięcia**:/config/WindowsDefenderSecurityCenter/DisableNetworkUI
 
-#### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterdisablesecurebootui"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterDisableSecureBootUI 
+### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterdisablesecurebootui"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterDisableSecureBootUI 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/WindowsDefenderSecurityCenter/HideSecureBoot
+**Identyfikator URI przesunięcia**:/config/WindowsDefenderSecurityCenter/HideSecureBoot
 
-#### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterdisabletroubleshootingui"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterDisableTroubleshootingUI 
+### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterdisabletroubleshootingui"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterDisableTroubleshootingUI 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/WindowsDefenderSecurityCenter/HideTPMTroubleshooting
+**Identyfikator URI przesunięcia**:/config/WindowsDefenderSecurityCenter/HideTPMTroubleshooting
 
-#### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterdisablevirusui"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterDisableVirusUI 
+### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterdisablevirusui"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterDisableVirusUI 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/WindowsDefenderSecurityCenter/DisableVirusUI
+**Identyfikator URI przesunięcia**:/config/WindowsDefenderSecurityCenter/DisableVirusUI
 
-#### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterhelpemail"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterHelpEmail 
+### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterhelpemail"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterHelpEmail 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/WindowsDefenderSecurityCenter/Email
+**Identyfikator URI przesunięcia**:/config/WindowsDefenderSecurityCenter/email
 
-#### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterhelpphone"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterHelpPhone 
+### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterhelpphone"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterHelpPhone 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/WindowsDefenderSecurityCenter/Phone
+**Identyfikator URI przesunięcia**:/config/WindowsDefenderSecurityCenter/Phone
 
-#### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterhelpurl"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterHelpURL 
+### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterhelpurl"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterHelpURL 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/WindowsDefenderSecurityCenter/URL
+**Identyfikator URI przesunięcia**:/config/WindowsDefenderSecurityCenter/URL
 
-#### <a name="windows10endpointprotectionconfigurationdefendersecuritycenteritcontactdisplay"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterITContactDisplay 
+### <a name="windows10endpointprotectionconfigurationdefendersecuritycenteritcontactdisplay"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterITContactDisplay 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: EnableCustomizedToasts/WindowsDefenderSecurityCenter /, / WindowsDefenderSecurityCenter/EnableInAppCustomization
+**Przesunięty identyfikator URI**:/WindowsDefenderSecurityCenter/EnableCustomizedToasts,/WindowsDefenderSecurityCenter/EnableInAppCustomization
 
-#### <a name="windows10endpointprotectionconfigurationdefendersecuritycenternotificationsfromapp"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterNotificationsFromApp 
+### <a name="windows10endpointprotectionconfigurationdefendersecuritycenternotificationsfromapp"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterNotificationsFromApp 
 **CSP**: ./Device/Vendor/MSFT/Policy  
 **Offset URI**: /Config/WindowsDefenderSecurityCenter/HideWindowsSecurityNotificationAreaControl
 
-#### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterorganizationdisplayname"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterOrganizationDisplayName 
+### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterorganizationdisplayname"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterOrganizationDisplayName 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/WindowsDefenderSecurityCenter/CompanyName
+**Identyfikator URI przesunięcia**:/config/WindowsDefenderSecurityCenter/CompanyName
 
-#### <a name="windows10endpointprotectionconfigurationdefenderuntrustedexecutable"></a>Windows10EndpointProtectionConfiguration.DefenderUntrustedExecutable 
+### <a name="windows10endpointprotectionconfigurationdefenderuntrustedexecutable"></a>Windows10EndpointProtectionConfiguration.DefenderUntrustedExecutable 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/AttackSurfaceReductionRules
+**Identyfikator URI przesunięcia**:/config/Defender/AttackSurfaceReductionRules
 
-#### <a name="windows10endpointprotectionconfigurationdefenderuntrustedexecutabletype"></a>Windows10EndpointProtectionConfiguration.DefenderUntrustedExecutableType 
+### <a name="windows10endpointprotectionconfigurationdefenderuntrustedexecutabletype"></a>Windows10EndpointProtectionConfiguration.DefenderUntrustedExecutableType 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/AttackSurfaceReductionRules
+**Identyfikator URI przesunięcia**:/config/Defender/AttackSurfaceReductionRules
 
-#### <a name="windows10endpointprotectionconfigurationdefenderuntrustedusbprocess"></a>Windows10EndpointProtectionConfiguration.DefenderUntrustedUSBProcess 
+### <a name="windows10endpointprotectionconfigurationdefenderuntrustedusbprocess"></a>Windows10EndpointProtectionConfiguration.DefenderUntrustedUSBProcess 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/AttackSurfaceReductionRules
+**Identyfikator URI przesunięcia**:/config/Defender/AttackSurfaceReductionRules
 
-#### <a name="windows10endpointprotectionconfigurationdefenderuntrustedusbprocesstype"></a>Windows10EndpointProtectionConfiguration.DefenderUntrustedUSBProcessType 
+### <a name="windows10endpointprotectionconfigurationdefenderuntrustedusbprocesstype"></a>Windows10EndpointProtectionConfiguration.DefenderUntrustedUSBProcessType 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/AttackSurfaceReductionRules (dostawcy usług Kryptograficznych/konfiguracja wymaga właściwości wykresu: windows10endpointprotection/Configuration.defenderOfficeAppsOtherProcessInjectionType, windows10endpointprotection / Configuration.defenderOfficeAppsExecutableContentCreationOrLaunchType, windows10endpointprotection/Configuration.defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection / Configuration.defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration.defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration.defenderScriptDownloadedPayloadExecutionType , windows10endpointprotection/Configuration.defenderEmailContentExecutionType, windows10endpointprotection/Configuration.defenderPreventCredentialStealingType, windows10endpointprotection / Configuration.defenderUntrustedUSBProcessType
+**Przesunięty identyfikator URI**:/config/Defender/AttackSurfaceReductionRules (dostawca CSP/konfiguracja wymaga właściwości wykresu: Windows10endpointprotection/Configuration. defenderOfficeAppsOtherProcessInjectionType, windows10endpointprotection/ Configuration. defenderOfficeAppsExecutableContentCreationOrLaunchType, windows10endpointprotection/Configuration. defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection/ Configuration. defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration. defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration. defenderScriptDownloadedPayloadExecutionType , windows10endpointprotection/Configuration. defenderEmailContentExecutionType, windows10endpointprotection/Configuration. defenderPreventCredentialStealingType, windows10endpointprotection/ Configuration. defenderUntrustedUSBProcessType
 
-#### <a name="windows10endpointprotectionconfigurationdeviceguardenablesecurebootwithdma"></a>Windows10EndpointProtectionConfiguration.DeviceGuardEnableSecureBootWithDMA 
+### <a name="windows10endpointprotectionconfigurationdeviceguardenablesecurebootwithdma"></a>Windows10EndpointProtectionConfiguration.DeviceGuardEnableSecureBootWithDMA 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/DeviceGuard/RequirePlatformSecurityFeatures
+**Identyfikator URI przesunięcia**:/config/DeviceGuard/RequirePlatformSecurityFeatures
 
-#### <a name="windows10endpointprotectionconfigurationdeviceguardenablevirtualizationbasedsecurity"></a>Windows10EndpointProtectionConfiguration.DeviceGuardEnableVirtualizationBasedSecurity 
+### <a name="windows10endpointprotectionconfigurationdeviceguardenablevirtualizationbasedsecurity"></a>Windows10EndpointProtectionConfiguration.DeviceGuardEnableVirtualizationBasedSecurity 
 **CSP**: ./Device/Vendor/MSFT/Policy **Offset URI**: /Config/DeviceGuard/EnableVirtualizationBasedSecurity
 
-#### <a name="windows10endpointprotectionconfigurationdeviceguardlaunchsystemguard"></a>Windows10EndpointProtectionConfiguration.DeviceGuardLaunchSystemGuard 
+### <a name="windows10endpointprotectionconfigurationdeviceguardlaunchsystemguard"></a>Windows10EndpointProtectionConfiguration.DeviceGuardLaunchSystemGuard 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/DeviceGuard/ConfigureSystemGuardLaunch
+**Identyfikator URI przesunięcia**:/config/DeviceGuard/ConfigureSystemGuardLaunch
 
-#### <a name="windows10endpointprotectionconfigurationdeviceguardlocalsystemauthoritycredentialguardsettings"></a>Windows10EndpointProtectionConfiguration.DeviceGuardLocalSystemAuthorityCredentialGuardSettings 
+### <a name="windows10endpointprotectionconfigurationdeviceguardlocalsystemauthoritycredentialguardsettings"></a>Windows10EndpointProtectionConfiguration.DeviceGuardLocalSystemAuthorityCredentialGuardSettings 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/DeviceGuard/LsaCfgFlags
+**Identyfikator URI przesunięcia**:/config/DeviceGuard/LsaCfgFlags
 
-#### <a name="windows10endpointprotectionconfigurationdmaguarddeviceenumerationpolicy"></a>Windows10EndpointProtectionConfiguration.DmaGuardDeviceEnumerationPolicy 
+### <a name="windows10endpointprotectionconfigurationdmaguarddeviceenumerationpolicy"></a>Windows10EndpointProtectionConfiguration.DmaGuardDeviceEnumerationPolicy 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/DmaGuard/DeviceEnumerationPolicy
+**Identyfikator URI przesunięcia**:/config/DmaGuard/DeviceEnumerationPolicy
 
-#### <a name="windows10endpointprotectionconfigurationeventlogserviceapplicationlogmaximumfilesizeinkb"></a>Windows10EndpointProtectionConfiguration.EventLogServiceApplicationLogMaximumFileSizeInKb 
+### <a name="windows10endpointprotectionconfigurationeventlogserviceapplicationlogmaximumfilesizeinkb"></a>Windows10EndpointProtectionConfiguration.EventLogServiceApplicationLogMaximumFileSizeInKb 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/EventLogService/SpecifyMaximumFileSizeApplicationLog
+**Identyfikator URI przesunięcia**:/config/EventLogService/SpecifyMaximumFileSizeApplicationLog
 
-#### <a name="windows10endpointprotectionconfigurationeventlogservicesecuritylogmaximumfilesizeinkb"></a>Windows10EndpointProtectionConfiguration.EventLogServiceSecurityLogMaximumFileSizeInKb 
+### <a name="windows10endpointprotectionconfigurationeventlogservicesecuritylogmaximumfilesizeinkb"></a>Windows10EndpointProtectionConfiguration.EventLogServiceSecurityLogMaximumFileSizeInKb 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/EventLogService/SpecifyMaximumFileSizeSecurityLog
+**Identyfikator URI przesunięcia**:/config/EventLogService/SpecifyMaximumFileSizeSecurityLog
 
-#### <a name="windows10endpointprotectionconfigurationeventlogservicesystemlogmaximumfilesizeinkb"></a>Windows10EndpointProtectionConfiguration.EventLogServiceSystemLogMaximumFileSizeInKb 
+### <a name="windows10endpointprotectionconfigurationeventlogservicesystemlogmaximumfilesizeinkb"></a>Windows10EndpointProtectionConfiguration.EventLogServiceSystemLogMaximumFileSizeInKb 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/EventLogService/SpecifyMaximumFileSizeSystemLog
+**Identyfikator URI przesunięcia**:/config/EventLogService/SpecifyMaximumFileSizeSystemLog
 
-#### <a name="windows10endpointprotectionconfigurationexplorerdataexecutionprevention"></a>Windows10EndpointProtectionConfiguration.ExplorerDataExecutionPrevention 
+### <a name="windows10endpointprotectionconfigurationexplorerdataexecutionprevention"></a>Windows10EndpointProtectionConfiguration.ExplorerDataExecutionPrevention 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/FileExplorer/TurnOffDataExecutionPreventionForExplorer
+**Identyfikator URI przesunięcia**:/config/FileExplorer/TurnOffDataExecutionPreventionForExplorer
 
-#### <a name="windows10endpointprotectionconfigurationexplorerheapterminationoncorruption"></a>Windows10EndpointProtectionConfiguration.ExplorerHeapTerminationOnCorruption 
+### <a name="windows10endpointprotectionconfigurationexplorerheapterminationoncorruption"></a>Windows10EndpointProtectionConfiguration.ExplorerHeapTerminationOnCorruption 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/FileExplorer/TurnOffHeapTerminationOnCorruption
+**Identyfikator URI przesunięcia**:/config/FileExplorer/TurnOffHeapTerminationOnCorruption
 
-#### <a name="windows10endpointprotectionconfigurationfirewallblockstatefulftp"></a>Windows10EndpointProtectionConfiguration.FirewallBlockStatefulFTP 
-**Dostawcy usług Kryptograficznych**: ./Vendor/MSFT/Firewall  
-**Przesunięcie URI**: /MdmStore/Global/DisableStatefulFtp
+### <a name="windows10endpointprotectionconfigurationfirewallblockstatefulftp"></a>Windows10EndpointProtectionConfiguration.FirewallBlockStatefulFTP 
+**Dostawca usług kryptograficznych**:./Vendor/MSFT/firewall  
+**Identyfikator URI przesunięcia**:/MdmStore/Global/DisableStatefulFtp
 
-#### <a name="windows10endpointprotectionconfigurationfirewallcertificaterevocationlistcheckmethod"></a>Windows10EndpointProtectionConfiguration.FirewallCertificateRevocationListCheckMethod 
-**Dostawcy usług Kryptograficznych**: ./Vendor/MSFT/Firewall  
-**Przesunięcie URI**: /MdmStore/Global/CRLcheck
+### <a name="windows10endpointprotectionconfigurationfirewallcertificaterevocationlistcheckmethod"></a>Windows10EndpointProtectionConfiguration.FirewallCertificateRevocationListCheckMethod 
+**Dostawca usług kryptograficznych**:./Vendor/MSFT/firewall  
+**Identyfikator URI przesunięcia**:/MdmStore/Global/CRLcheck
 
-#### <a name="windows10endpointprotectionconfigurationfirewallidletimeoutforsecurityassociationinseconds"></a>Windows10EndpointProtectionConfiguration.FirewallIdleTimeoutForSecurityAssociationInSeconds 
-**Dostawcy usług Kryptograficznych**: ./Vendor/MSFT/Firewall  
-**Przesunięcie URI**: /MdmStore/Global/SaIdleTime
+### <a name="windows10endpointprotectionconfigurationfirewallidletimeoutforsecurityassociationinseconds"></a>Windows10EndpointProtectionConfiguration.FirewallIdleTimeoutForSecurityAssociationInSeconds 
+**Dostawca usług kryptograficznych**:./Vendor/MSFT/firewall  
+**Identyfikator URI przesunięcia**:/MdmStore/Global/SaIdleTime
 
-#### <a name="windows10endpointprotectionconfigurationfirewallipsecexemptionsallowdhcp"></a>Windows10EndpointProtectionConfiguration.FirewallIPSecExemptionsAllowDHCP 
-**Dostawcy usług Kryptograficznych**: ./Vendor/MSFT/Firewall  
-**Przesunięcie URI**: /MdmStore/Global/IPsecExempt
+### <a name="windows10endpointprotectionconfigurationfirewallipsecexemptionsallowdhcp"></a>Windows10EndpointProtectionConfiguration.FirewallIPSecExemptionsAllowDHCP 
+**Dostawca usług kryptograficznych**:./Vendor/MSFT/firewall  
+**Identyfikator URI przesunięcia**:/MdmStore/Global/IPsecExempt
 
-#### <a name="windows10endpointprotectionconfigurationfirewallipsecexemptionsallowicmp"></a>Windows10EndpointProtectionConfiguration.FirewallIPSecExemptionsAllowICMP 
-**Dostawcy usług Kryptograficznych**: ./Vendor/MSFT/Firewall  
-**Przesunięcie URI**: /MdmStore/Global/IPsecExempt
+### <a name="windows10endpointprotectionconfigurationfirewallipsecexemptionsallowicmp"></a>Windows10EndpointProtectionConfiguration.FirewallIPSecExemptionsAllowICMP 
+**Dostawca usług kryptograficznych**:./Vendor/MSFT/firewall  
+**Identyfikator URI przesunięcia**:/MdmStore/Global/IPsecExempt
 
-#### <a name="windows10endpointprotectionconfigurationfirewallipsecexemptionsallowneighbordiscovery"></a>Windows10EndpointProtectionConfiguration.FirewallIPSecExemptionsAllowNeighborDiscovery 
-**Dostawcy usług Kryptograficznych**: ./Vendor/MSFT/Firewall  
-**Przesunięcie URI**: /MdmStore/Global/IPsecExempt
+### <a name="windows10endpointprotectionconfigurationfirewallipsecexemptionsallowneighbordiscovery"></a>Windows10EndpointProtectionConfiguration.FirewallIPSecExemptionsAllowNeighborDiscovery 
+**Dostawca usług kryptograficznych**:./Vendor/MSFT/firewall  
+**Identyfikator URI przesunięcia**:/MdmStore/Global/IPsecExempt
 
-#### <a name="windows10endpointprotectionconfigurationfirewallipsecexemptionsallowrouterdiscovery"></a>Windows10EndpointProtectionConfiguration.FirewallIPSecExemptionsAllowRouterDiscovery 
-**Dostawcy usług Kryptograficznych**: ./Vendor/MSFT/Firewall  
-**Przesunięcie URI**: /MdmStore/Global/IPsecExempt
+### <a name="windows10endpointprotectionconfigurationfirewallipsecexemptionsallowrouterdiscovery"></a>Windows10EndpointProtectionConfiguration.FirewallIPSecExemptionsAllowRouterDiscovery 
+**Dostawca usług kryptograficznych**:./Vendor/MSFT/firewall  
+**Identyfikator URI przesunięcia**:/MdmStore/Global/IPsecExempt
 
-#### <a name="windows10endpointprotectionconfigurationfirewallmergekeyingmodulesettings"></a>Windows10EndpointProtectionConfiguration.FirewallMergeKeyingModuleSettings 
-**Dostawcy usług Kryptograficznych**: ./Vendor/MSFT/Firewall  
-**Przesunięcie URI**: /MdmStore/Global/OpportunisticallyMatchAuthSetPerKM
+### <a name="windows10endpointprotectionconfigurationfirewallmergekeyingmodulesettings"></a>Windows10EndpointProtectionConfiguration.FirewallMergeKeyingModuleSettings 
+**Dostawca usług kryptograficznych**:./Vendor/MSFT/firewall  
+**Identyfikator URI przesunięcia**:/MdmStore/Global/OpportunisticallyMatchAuthSetPerKM
 
-#### <a name="windows10endpointprotectionconfigurationfirewallpacketqueueingmethod"></a>Windows10EndpointProtectionConfiguration.FirewallPacketQueueingMethod 
-**Dostawcy usług Kryptograficznych**: ./Vendor/MSFT/Firewall  
-**Przesunięcie URI**: /MdmStore/Global/EnablePacketQueue
+### <a name="windows10endpointprotectionconfigurationfirewallpacketqueueingmethod"></a>Windows10EndpointProtectionConfiguration.FirewallPacketQueueingMethod 
+**Dostawca usług kryptograficznych**:./Vendor/MSFT/firewall  
+**Identyfikator URI przesunięcia**:/MdmStore/Global/EnablePacketQueue
 
-#### <a name="windows10endpointprotectionconfigurationfirewallpresharedkeyencodingmethod"></a>Windows10EndpointProtectionConfiguration.FirewallPreSharedKeyEncodingMethod 
-**Dostawcy usług Kryptograficznych**: ./Vendor/MSFT/Firewall  
-**Przesunięcie URI**: /MdmStore/Global/PresharedKeyEncoding
+### <a name="windows10endpointprotectionconfigurationfirewallpresharedkeyencodingmethod"></a>Windows10EndpointProtectionConfiguration.FirewallPreSharedKeyEncodingMethod 
+**Dostawca usług kryptograficznych**:./Vendor/MSFT/firewall  
+**Identyfikator URI przesunięcia**:/MdmStore/Global/PresharedKeyEncoding
 
-#### <a name="windows10endpointprotectionconfigurationfirewallprofiledomain"></a>Windows10EndpointProtectionConfiguration.FirewallProfileDomain 
-**Dostawcy usług Kryptograficznych**: ./Vendor/MSFT/Firewall  
-**Przesunięcie URI**: /EnableFirewall, /DisableStealthMode, / z osłoną, /DisableUnicastResponsesToMulticastBroadcast /DisableInboundNotifications, /AuthAppsAllowUserPrefMerge, /GlobalPortsAllowUserPrefMerge, /AllowLocalPolicyMerge , /DefaultOutboundAction /DefaultInboundAction, /DisableStealthModeIpsecSecuredPacketExemption, /AllowLocalIpsecPolicyMerge
+### <a name="windows10endpointprotectionconfigurationfirewallprofiledomain"></a>Windows10EndpointProtectionConfiguration.FirewallProfileDomain 
+**Dostawca usług kryptograficznych**:./Vendor/MSFT/firewall  
+**Przesunięty identyfikator URI**:/EnableFirewall,/DisableStealthMode,/Shielded,/DisableUnicastResponsesToMulticastBroadcast,/DisableInboundNotifications,/AuthAppsAllowUserPrefMerge,/GlobalPortsAllowUserPrefMerge,/AllowLocalPolicyMerge,/ DefaultOutboundAction, /DefaultInboundAction, /DisableStealthModeIpsecSecuredPacketExemption, /AllowLocalIpsecPolicyMerge
 
-#### <a name="windows10endpointprotectionconfigurationfirewallprofiledomaininboundconnectionsblocked"></a>windows10endpointprotectionconfiguration.firewallProfileDomain.inboundConnectionsBlocked 
-**Dostawcy usług Kryptograficznych**: ./Device/Vendor/MSFT/Firewall  
-**Przesunięcie URI**: /MdmStore/DomainProfile/DefaultInboundAction
+### <a name="windows10endpointprotectionconfigurationfirewallprofiledomaininboundconnectionsblocked"></a>windows10endpointprotectionconfiguration.firewallProfileDomain.inboundConnectionsBlocked 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/firewall  
+**Identyfikator URI przesunięcia**:/MdmStore/DomainProfile/DefaultInboundAction
 
-#### <a name="windows10endpointprotectionconfigurationfirewallprofiledomaininboundnotificationsblocked"></a>windows10endpointprotectionconfiguration.firewallProfileDomain.inboundNotificationsBlocked 
-**Dostawcy usług Kryptograficznych**: ./Device/Vendor/MSFT/Firewall  
-**Przesunięcie URI**: /MdmStore/DomainProfile/DisableInboundNotifications
+### <a name="windows10endpointprotectionconfigurationfirewallprofiledomaininboundnotificationsblocked"></a>windows10endpointprotectionconfiguration.firewallProfileDomain.inboundNotificationsBlocked 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/firewall  
+**Identyfikator URI przesunięcia**:/MdmStore/DomainProfile/DisableInboundNotifications
 
-#### <a name="windows10endpointprotectionconfigurationfirewallprofiledomaininboundnotificationsblocked"></a>windows10endpointprotectionconfiguration.firewallProfileDomain.inboundNotificationsBlocked 
-**Dostawcy usług Kryptograficznych**: ./Device/Vendor/MSFT/Firewall  
-**Przesunięcie URI**: /MdmStore/DomainProfile/EnableFirewall
+### <a name="windows10endpointprotectionconfigurationfirewallprofiledomaininboundnotificationsblocked"></a>windows10endpointprotectionconfiguration.firewallProfileDomain.inboundNotificationsBlocked 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/firewall  
+**Identyfikator URI przesunięcia**:/MdmStore/DomainProfile/EnableFirewall
 
-#### <a name="windows10endpointprotectionconfigurationfirewallprofiledomainoutboundconnectionsblocked"></a>windows10endpointprotectionconfiguration.firewallProfileDomain.outboundConnectionsBlocked 
-**Dostawcy usług Kryptograficznych**: ./Device/Vendor/MSFT/Firewall  
-**Przesunięcie URI**: /MdmStore/DomainProfile/DefaultOutboundAction
+### <a name="windows10endpointprotectionconfigurationfirewallprofiledomainoutboundconnectionsblocked"></a>windows10endpointprotectionconfiguration.firewallProfileDomain.outboundConnectionsBlocked 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/firewall  
+**Identyfikator URI przesunięcia**:/MdmStore/DomainProfile/DefaultOutboundAction
 
-#### <a name="windows10endpointprotectionconfigurationfirewallprofileprivate"></a>Windows10EndpointProtectionConfiguration.FirewallProfilePrivate 
-**Dostawcy usług Kryptograficznych**: ./Vendor/MSFT/Firewall  
-**Przesunięcie URI**: /EnableFirewall, /DisableStealthMode, / z osłoną, /DisableUnicastResponsesToMulticastBroadcast /DisableInboundNotifications, /AuthAppsAllowUserPrefMerge, /GlobalPortsAllowUserPrefMerge, /AllowLocalPolicyMerge , /DefaultOutboundAction /DefaultInboundAction, /DisableStealthModeIpsecSecuredPacketExemption, /AllowLocalIpsecPolicyMerge
+### <a name="windows10endpointprotectionconfigurationfirewallprofileprivate"></a>Windows10EndpointProtectionConfiguration.FirewallProfilePrivate 
+**Dostawca usług kryptograficznych**:./Vendor/MSFT/firewall  
+**Przesunięty identyfikator URI**:/EnableFirewall,/DisableStealthMode,/Shielded,/DisableUnicastResponsesToMulticastBroadcast,/DisableInboundNotifications,/AuthAppsAllowUserPrefMerge,/GlobalPortsAllowUserPrefMerge,/AllowLocalPolicyMerge,/ DefaultOutboundAction, /DefaultInboundAction, /DisableStealthModeIpsecSecuredPacketExemption, /AllowLocalIpsecPolicyMerge
 
-#### <a name="windows10endpointprotectionconfigurationfirewallprofileprivatefirewallenabled"></a>windows10endpointprotectionconfiguration.firewallProfilePrivate.firewallEnabled 
-**Dostawcy usług Kryptograficznych**: ./Device/Vendor/MSFT/Firewall  
-**Przesunięcie URI**: /MdmStore/PrivateProfile/EnableFirewall
+### <a name="windows10endpointprotectionconfigurationfirewallprofileprivatefirewallenabled"></a>windows10endpointprotectionconfiguration.firewallProfilePrivate.firewallEnabled 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/firewall  
+**Identyfikator URI przesunięcia**:/MdmStore/PrivateProfile/EnableFirewall
 
-#### <a name="windows10endpointprotectionconfigurationfirewallprofileprivateinboundconnectionsblocked"></a>windows10endpointprotectionconfiguration.firewallProfilePrivate.inboundConnectionsBlocked 
-**Dostawcy usług Kryptograficznych**: ./Device/Vendor/MSFT/Firewall  
-**Przesunięcie URI**: /MdmStore/PrivateProfile/DefaultInboundAction
+### <a name="windows10endpointprotectionconfigurationfirewallprofileprivateinboundconnectionsblocked"></a>windows10endpointprotectionconfiguration.firewallProfilePrivate.inboundConnectionsBlocked 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/firewall  
+**Identyfikator URI przesunięcia**:/MdmStore/PrivateProfile/DefaultInboundAction
 
-#### <a name="windows10endpointprotectionconfigurationfirewallprofileprivateinboundnotificationsblocked"></a>windows10endpointprotectionconfiguration.firewallProfilePrivate.inboundNotificationsBlocked 
-**Dostawcy usług Kryptograficznych**: ./Device/Vendor/MSFT/Firewall  
-**Przesunięcie URI**: /MdmStore/PrivateProfile/DisableInboundNotifications
+### <a name="windows10endpointprotectionconfigurationfirewallprofileprivateinboundnotificationsblocked"></a>windows10endpointprotectionconfiguration.firewallProfilePrivate.inboundNotificationsBlocked 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/firewall  
+**Identyfikator URI przesunięcia**:/MdmStore/PrivateProfile/DisableInboundNotifications
 
-#### <a name="windows10endpointprotectionconfigurationfirewallprofileprivateoutboundconnectionsblocked"></a>windows10endpointprotectionconfiguration.firewallProfilePrivate.outboundConnectionsBlocked 
-**Dostawcy usług Kryptograficznych**: ./Device/Vendor/MSFT/Firewall  
-**Przesunięcie URI**: /MdmStore/PrivateProfile/DefaultOutboundAction
+### <a name="windows10endpointprotectionconfigurationfirewallprofileprivateoutboundconnectionsblocked"></a>windows10endpointprotectionconfiguration.firewallProfilePrivate.outboundConnectionsBlocked 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/firewall  
+**Identyfikator URI przesunięcia**:/MdmStore/PrivateProfile/DefaultOutboundAction
 
-#### <a name="windows10endpointprotectionconfigurationfirewallprofilepublic"></a>Windows10EndpointProtectionConfiguration.FirewallProfilePublic 
-**Dostawcy usług Kryptograficznych**: ./Vendor/MSFT/Firewall  
-**Przesunięcie URI**: /EnableFirewall, /DisableStealthMode, / z osłoną, /DisableUnicastResponsesToMulticastBroadcast /DisableInboundNotifications, /AuthAppsAllowUserPrefMerge, /GlobalPortsAllowUserPrefMerge, /AllowLocalPolicyMerge , /DefaultOutboundAction /DefaultInboundAction, /DisableStealthModeIpsecSecuredPacketExemption, /AllowLocalIpsecPolicyMerge
+### <a name="windows10endpointprotectionconfigurationfirewallprofilepublic"></a>Windows10EndpointProtectionConfiguration.FirewallProfilePublic 
+**Dostawca usług kryptograficznych**:./Vendor/MSFT/firewall  
+**Przesunięty identyfikator URI**:/EnableFirewall,/DisableStealthMode,/Shielded,/DisableUnicastResponsesToMulticastBroadcast,/DisableInboundNotifications,/AuthAppsAllowUserPrefMerge,/GlobalPortsAllowUserPrefMerge,/AllowLocalPolicyMerge,/ DefaultOutboundAction, /DefaultInboundAction, /DisableStealthModeIpsecSecuredPacketExemption, /AllowLocalIpsecPolicyMerge
 
-#### <a name="windows10endpointprotectionconfigurationfirewallprofilepublicconnectionsecurityrulesfromgrouppolicymerged"></a>windows10endpointprotectionconfiguration.firewallProfilePublic.connectionSecurityRulesFromGroupPolicyMerged 
-**Dostawcy usług Kryptograficznych**: ./Device/Vendor/MSFT/Firewall  
-**Przesunięcie URI**: /MdmStore/PublicProfile/AllowLocalIpsecPolicyMerge
+### <a name="windows10endpointprotectionconfigurationfirewallprofilepublicconnectionsecurityrulesfromgrouppolicymerged"></a>windows10endpointprotectionconfiguration.firewallProfilePublic.connectionSecurityRulesFromGroupPolicyMerged 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/firewall  
+**Identyfikator URI przesunięcia**:/MdmStore/publicprofile/AllowLocalIpsecPolicyMerge
 
-#### <a name="windows10endpointprotectionconfigurationfirewallprofilepublicfirewallenabled"></a>windows10endpointprotectionconfiguration.firewallProfilePublic.firewallEnabled 
-**Dostawcy usług Kryptograficznych**: ./Device/Vendor/MSFT/Firewall  
-**Przesunięcie URI**: /MdmStore/PublicProfile/EnableFirewall
+### <a name="windows10endpointprotectionconfigurationfirewallprofilepublicfirewallenabled"></a>windows10endpointprotectionconfiguration.firewallProfilePublic.firewallEnabled 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/firewall  
+**Identyfikator URI przesunięcia**:/MdmStore/publicprofile/EnableFirewall
 
-#### <a name="windows10endpointprotectionconfigurationfirewallprofilepublicinboundconnectionsblocked"></a>windows10endpointprotectionconfiguration.firewallProfilePublic.inboundConnectionsBlocked 
-**Dostawcy usług Kryptograficznych**: ./Device/Vendor/MSFT/Firewall  
-**Przesunięcie URI**: /MdmStore/PublicProfile/DefaultInboundAction
+### <a name="windows10endpointprotectionconfigurationfirewallprofilepublicinboundconnectionsblocked"></a>windows10endpointprotectionconfiguration.firewallProfilePublic.inboundConnectionsBlocked 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/firewall  
+**Identyfikator URI przesunięcia**:/MdmStore/publicprofile/DefaultInboundAction
 
-#### <a name="windows10endpointprotectionconfigurationfirewallprofilepublicinboundnotificationsblocked"></a>windows10endpointprotectionconfiguration.firewallProfilePublic.inboundNotificationsBlocked 
-**Dostawcy usług Kryptograficznych**: ./Device/Vendor/MSFT/Firewall  
-**Przesunięcie URI**: /MdmStore/PublicProfile/DisableInboundNotifications
+### <a name="windows10endpointprotectionconfigurationfirewallprofilepublicinboundnotificationsblocked"></a>windows10endpointprotectionconfiguration.firewallProfilePublic.inboundNotificationsBlocked 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/firewall  
+**Identyfikator URI przesunięcia**:/MdmStore/publicprofile/DisableInboundNotifications
 
-#### <a name="windows10endpointprotectionconfigurationfirewallprofilepublicoutboundconnectionsblocked"></a>windows10endpointprotectionconfiguration.firewallProfilePublic.outboundConnectionsBlocked 
-**Dostawcy usług Kryptograficznych**: ./Device/Vendor/MSFT/Firewall  
-**Przesunięcie URI**: /MdmStore/PublicProfile/DefaultOutboundAction
+### <a name="windows10endpointprotectionconfigurationfirewallprofilepublicoutboundconnectionsblocked"></a>windows10endpointprotectionconfiguration.firewallProfilePublic.outboundConnectionsBlocked 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/firewall  
+**Identyfikator URI przesunięcia**:/MdmStore/publicprofile/DefaultOutboundAction
 
-#### <a name="windows10endpointprotectionconfigurationfirewallprofilepublicpolicyrulesfromgrouppolicymerged"></a>windows10endpointprotectionconfiguration.firewallProfilePublic.policyRulesFromGroupPolicyMerged 
-**Dostawcy usług Kryptograficznych**: ./Device/Vendor/MSFT/Firewall  
-**Przesunięcie URI**: /MdmStore/PublicProfile/AllowLocalPolicyMerge
+### <a name="windows10endpointprotectionconfigurationfirewallprofilepublicpolicyrulesfromgrouppolicymerged"></a>windows10endpointprotectionconfiguration.firewallProfilePublic.policyRulesFromGroupPolicyMerged 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/firewall  
+**Identyfikator URI przesunięcia**:/MdmStore/publicprofile/AllowLocalPolicyMerge
 
-#### <a name="windows10endpointprotectionconfigurationlanmanagerauthenticationlevel"></a>Windows10EndpointProtectionConfiguration.LanManagerAuthenticationLevel 
+### <a name="windows10endpointprotectionconfigurationlanmanagerauthenticationlevel"></a>Windows10EndpointProtectionConfiguration.LanManagerAuthenticationLevel 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/LocalPoliciesSecurityOptions/NetworkSecurity\_LANManagerAuthenticationLevel
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/NetworkSecurity\_LANManagerAuthenticationLevel
 
-#### <a name="windows10endpointprotectionconfigurationlanmanagerworkstationdisableinsecureguestlogons"></a>Windows10EndpointProtectionConfiguration.LanManagerWorkstationDisableInsecureGuestLogons 
+### <a name="windows10endpointprotectionconfigurationlanmanagerworkstationdisableinsecureguestlogons"></a>Windows10EndpointProtectionConfiguration.LanManagerWorkstationDisableInsecureGuestLogons 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/LanmanWorkstation/EnableInsecureGuestLogons
+**Identyfikator URI przesunięcia**:/config/LanmanWorkstation/EnableInsecureGuestLogons
 
-#### <a name="windows10endpointprotectionconfigurationlanmanagerworkstationenableinsecureguestlogons"></a>Windows10EndpointProtectionConfiguration.LanManagerWorkstationEnableInsecureGuestLogons 
+### <a name="windows10endpointprotectionconfigurationlanmanagerworkstationenableinsecureguestlogons"></a>Windows10EndpointProtectionConfiguration.LanManagerWorkstationEnableInsecureGuestLogons 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/LanmanWorkstation/EnableInsecureGuestLogons
+**Identyfikator URI przesunięcia**:/config/LanmanWorkstation/EnableInsecureGuestLogons
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsadministratoraccountname"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAdministratorAccountName 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsadministratoraccountname"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAdministratorAccountName 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/LocalPoliciesSecurityOptions/Accounts\_RenameAdministratorAccount
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/accounts\_RenameAdministratorAccount
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsadministratorelevationpromptbehavior"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAdministratorElevationPromptBehavior
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsadministratorelevationpromptbehavior"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAdministratorElevationPromptBehavior
 **CSP**: ./Vendor/MSFT/Policy  
-**Offset URI**: /Config/LocalPoliciesSecurityOptions/UserAccountControl\_BehaviorOfTheElevationPromptForAdministrators
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/userAccountControl\_BehaviorOfTheElevationPromptForAdministrators
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowanonymousenumerationofsamaccountsandshares"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowanonymousenumerationofsamaccountsandshares"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowAnonymousEnumerationOfSAMAccountsAndShares 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/LocalPoliciesSecurityOptions/NetworkAccess\_DoNotAllowAnonymousEnumerationOfSamAccountsAndShares
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/NetworkAccess\_DoNotAllowAnonymousEnumerationOfSamAccountsAndShares
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowpku2uauthenticationrequests"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowPKU2UAuthenticationRequests 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowpku2uauthenticationrequests"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowPKU2UAuthenticationRequests 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/LocalPoliciesSecurityOptions/NetworkSecurity\_AllowPKU2UAuthenticationRequests
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/NetworkSecurity\_AllowPKU2UAuthenticationRequests
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowremotecallstosecurityaccountsmanager"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManager 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowremotecallstosecurityaccountsmanager"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManager 
 **CSP**: ./Vendor/MSFT/Policy  
 **Offset URI**: /Config/LocalPoliciesSecurityOptions/NetworkAccess\_RestrictClientsAllowedToMakeRemoteCallsToSAM
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowremotecallstosecurityaccountsmanagerhelperbool"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowremotecallstosecurityaccountsmanagerhelperbool"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowRemoteCallsToSecurityAccountsManagerHelperBool 
 **CSP**: ./Device/Vendor/MSFT/Policy  
 **Offset URI**: /Config/LocalPoliciesSecurityOptions/NetworkAccess\_RestrictClientsAllowedToMakeRemoteCallsToSAM
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowsystemtobeshutdownwithouthavingtologon"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowsystemtobeshutdownwithouthavingtologon"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowSystemToBeShutDownWithoutHavingToLogOn 
 **CSP**: ./Vendor/MSFT/Policy  
-**Offset URI**: /Config/LocalPoliciesSecurityOptions/Shutdown\_AllowSystemToBeShutDownWithoutHavingToLogOn
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/Shutdown\_AllowSystemToBeShutDownWithoutHavingToLogOn
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowuiaccessapplicationelevation"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowUIAccessApplicationElevation 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowuiaccessapplicationelevation"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowUIAccessApplicationElevation 
 **CSP**: ./Vendor/MSFT/Policy  
-**Offset URI**: /Config/LocalPoliciesSecurityOptions/UserAccountControl\_AllowUIAccessApplicationsToPromptForElevation
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/userAccountControl\_AllowUIAccessApplicationsToPromptForElevation
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowuiaccessapplicationsforsecurelocations"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowUIAccessApplicationsForSecureLocations 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowuiaccessapplicationsforsecurelocations"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowUIAccessApplicationsForSecureLocations 
 **CSP**: ./Vendor/MSFT/Policy  
-**Offset URI**: /Config/LocalPoliciesSecurityOptions/UserAccountControl\_OnlyElevateUIAccessApplicationsThatAreInstalledInSecureLocations
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/userAccountControl\_OnlyElevateUIAccessApplicationsThatAreInstalledInSecureLocations
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowundockwithouthavingtologon"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowUndockWithoutHavingToLogon 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsallowundockwithouthavingtologon"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsAllowUndockWithoutHavingToLogon 
 **CSP**: ./Vendor/MSFT/Policy  
-**Offset URI**: /Config/LocalPoliciesSecurityOptions/Devices\_AllowUndockWithoutHavingToLogon
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/Devices\_AllowUndockWithoutHavingToLogon
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsblockmicrosoftaccounts"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsBlockMicrosoftAccounts 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsblockmicrosoftaccounts"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsBlockMicrosoftAccounts 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/LocalPoliciesSecurityOptions/Accounts\_BlockMicrosoftAccounts
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/accounts\_BlockMicrosoftAccounts
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsblockremotelogonwithblankpassword"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsBlockRemoteLogonWithBlankPassword 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsblockremotelogonwithblankpassword"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsBlockRemoteLogonWithBlankPassword 
 **CSP**: ./Vendor/MSFT/Policy  
 **Offset URI**: /Config/LocalPoliciesSecurityOptions/Accounts\_LimitLocalAccountUseOfBlankPasswordsToConsoleLogonOnly
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsblockremoteopticaldriveaccess"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsBlockRemoteOpticalDriveAccess 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsblockremoteopticaldriveaccess"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsBlockRemoteOpticalDriveAccess 
 **CSP**: ./Vendor/MSFT/Policy  
-**Offset URI**: /Config/LocalPoliciesSecurityOptions/Devices\_RestrictCDROMAccessToLocallyLoggedOnUserOnly
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/Devices\_RestrictCDROMAccessToLocallyLoggedOnUserOnly
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsblockusersinstallingprinterdrivers"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsBlockUsersInstallingPrinterDrivers 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsblockusersinstallingprinterdrivers"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsBlockUsersInstallingPrinterDrivers 
 **CSP**: ./Vendor/MSFT/Policy  
-**Offset URI**: /Config/LocalPoliciesSecurityOptions/Devices\_PreventUsersFromInstallingPrinterDriversWhenConnectingToSharedPrinters
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/Devices\_PreventUsersFromInstallingPrinterDriversWhenConnectingToSharedPrinters
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsclearvirtualmemorypagefile"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsClearVirtualMemoryPageFile 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsclearvirtualmemorypagefile"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsClearVirtualMemoryPageFile 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/LocalPoliciesSecurityOptions/Shutdown\_ClearVirtualMemoryPageFile
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/Shutdown\_ClearVirtualMemoryPageFile
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsclientdigitallysigncommunicationsalways"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsClientDigitallySignCommunicationsAlways 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsclientdigitallysigncommunicationsalways"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsClientDigitallySignCommunicationsAlways 
 **CSP**: ./Vendor/MSFT/Policy  
-**Offset URI**: /Config/LocalPoliciesSecurityOptions/MicrosoftNetworkClient\_DigitallySignCommunicationsAlways
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/MicrosoftNetworkClient\_DigitallySignCommunicationsAlways
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsclientsendunencryptedpasswordtothirdpartysmbservers"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsclientsendunencryptedpasswordtothirdpartysmbservers"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsClientSendUnencryptedPasswordToThirdPartySMBServers 
 **CSP**: ./Vendor/MSFT/Policy  
-**Offset URI**: /Config/LocalPoliciesSecurityOptions/MicrosoftNetworkClient\_SendUnencryptedPasswordToThirdPartySMBServers
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/MicrosoftNetworkClient\_SendUnencryptedPasswordToThirdPartySMBServers
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdetectapplicationinstallationsandpromptforelevation"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDetectApplicationInstallationsAndPromptForElevation 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdetectapplicationinstallationsandpromptforelevation"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDetectApplicationInstallationsAndPromptForElevation 
 **CSP**: ./Vendor/MSFT/Policy  
-**Offset URI**: /Config/LocalPoliciesSecurityOptions/UserAccountControl\_DetectApplicationInstallationsAndPromptForElevation
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/userAccountControl\_DetectApplicationInstallationsAndPromptForElevation
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdisableadministratoraccount"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDisableAdministratorAccount 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdisableadministratoraccount"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDisableAdministratorAccount 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/LocalPoliciesSecurityOptions/Accounts\_EnableAdministratorAccountStatus
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/accounts\_EnableAdministratorAccountStatus
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdisableclientdigitallysigncommunicationsifserveragrees"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdisableclientdigitallysigncommunicationsifserveragrees"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDisableClientDigitallySignCommunicationsIfServerAgrees 
 **CSP**: ./Vendor/MSFT/Policy  
-**Offset URI**: /Config/LocalPoliciesSecurityOptions/MicrosoftNetworkClient\_DigitallySignCommunicationsIfServerAgrees
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/MicrosoftNetworkClient\_DigitallySignCommunicationsIfServerAgrees
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdisableguestaccount"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDisableGuestAccount 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdisableguestaccount"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDisableGuestAccount 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/LocalPoliciesSecurityOptions/Accounts\_EnableGuestAccountStatus
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/accounts\_EnableGuestAccountStatus
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdisableserverdigitallysigncommunicationsalways"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDisableServerDigitallySignCommunicationsAlways 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdisableserverdigitallysigncommunicationsalways"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDisableServerDigitallySignCommunicationsAlways 
 **CSP**: ./Vendor/MSFT/Policy  
-**Offset URI**: /Config/LocalPoliciesSecurityOptions/MicrosoftNetworkServer\_DigitallySignCommunicationsAlways
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/MicrosoftNetworkServer\_DigitallySignCommunicationsAlways
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdisableserverdigitallysigncommunicationsifclientagrees"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdisableserverdigitallysigncommunicationsifclientagrees"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDisableServerDigitallySignCommunicationsIfClientAgrees 
 **CSP**: ./Vendor/MSFT/Policy  
-**Offset URI**: /Config/LocalPoliciesSecurityOptions/MicrosoftNetworkServer\_DigitallySignCommunicationsIfClientAgrees
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/MicrosoftNetworkServer\_DigitallySignCommunicationsIfClientAgrees
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdonotallowanonymousenumerationofsamaccounts"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdonotallowanonymousenumerationofsamaccounts"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts 
 **CSP**: ./Vendor/MSFT/Policy  
-**Offset URI**: /Config/LocalPoliciesSecurityOptions/NetworkAccess\_DoNotAllowAnonymousEnumerationOfSAMAccounts
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/NetworkAccess\_DoNotAllowAnonymousEnumerationOfSAMAccounts
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdonotrequirectrlaltdel"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDoNotRequireCtrlAltDel 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdonotrequirectrlaltdel"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDoNotRequireCtrlAltDel 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/LocalPoliciesSecurityOptions/InteractiveLogon\_DoNotRequireCTRLALTDEL
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/InteractiveLogon\_DoNotRequireCTRLALTDEL
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdonotstorelanmanagerhashvalueonnextpasswordchange"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsdonotstorelanmanagerhashvalueonnextpasswordchange"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/LocalPoliciesSecurityOptions/NetworkSecurity\_DoNotStoreLANManagerHashValueOnNextPasswordChange
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/NetworkSecurity\_DoNotStoreLANManagerHashValueOnNextPasswordChange
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsenableadministratoraccount"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsEnableAdministratorAccount 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsenableadministratoraccount"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsEnableAdministratorAccount 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/LocalPoliciesSecurityOptions/Accounts\_EnableAdministratorAccountStatus
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/accounts\_EnableAdministratorAccountStatus
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsenableguestaccount"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsEnableGuestAccount 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsenableguestaccount"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsEnableGuestAccount 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/LocalPoliciesSecurityOptions/Accounts\_EnableGuestAccountStatus
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/accounts\_EnableGuestAccountStatus
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsformatandejectofremovablemediaalloweduser"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsformatandejectofremovablemediaalloweduser"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/LocalPoliciesSecurityOptions/Devices\_AllowedToFormatAndEjectRemovableMedia
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/Devices\_AllowedToFormatAndEjectRemovableMedia
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsguestaccountname"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsGuestAccountName 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsguestaccountname"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsGuestAccountName 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/LocalPoliciesSecurityOptions/Accounts\_RenameGuestAccount
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/accounts\_RenameGuestAccount
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionshidelastsignedinuser"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsHideLastSignedInUser 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionshidelastsignedinuser"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsHideLastSignedInUser 
 **CSP**: ./Vendor/MSFT/Policy  
 **Offset URI**: /Config/LocalPoliciesSecurityOptions/InteractiveLogon\_DoNotDisplayLastSignedIn
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionshideusernameatsignin"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsHideUsernameAtSignIn 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionshideusernameatsignin"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsHideUsernameAtSignIn 
 **CSP**: ./Vendor/MSFT/Policy  
-**Offset URI**: /Config/LocalPoliciesSecurityOptions/InteractiveLogon\_DoNotDisplayUsernameAtSignIn
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/InteractiveLogon\_DoNotDisplayUsernameAtSignIn
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsinformationdisplayedonlockscreen"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsInformationDisplayedOnLockScreen 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsinformationdisplayedonlockscreen"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsInformationDisplayedOnLockScreen 
 **CSP**: ./Vendor/MSFT/Policy  
-**Offset URI**: /Config/LocalPoliciesSecurityOptions/InteractiveLogon\_DisplayUserInformationWhenTheSessionIsLocked
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/InteractiveLogon\_DisplayUserInformationWhenTheSessionIsLocked
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsinformationshownonlockscreen"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsInformationShownOnLockScreen 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsinformationshownonlockscreen"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsInformationShownOnLockScreen 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/LocalPoliciesSecurityOptions/InteractiveLogon\_DisplayUserInformationWhenTheSessionIsLocked
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/InteractiveLogon\_DisplayUserInformationWhenTheSessionIsLocked
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionslogonmessagetext"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsLogOnMessageText 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionslogonmessagetext"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsLogOnMessageText 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/LocalPoliciesSecurityOptions/InteractiveLogon\_MessageTextForUsersAttemptingToLogOn
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/InteractiveLogon\_MessageTextForUsersAttemptingToLogOn
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionslogonmessagetitle"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsLogOnMessageTitle 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionslogonmessagetitle"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsLogOnMessageTitle 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/LocalPoliciesSecurityOptions/InteractiveLogon\_MessageTitleForUsersAttemptingToLogOn
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/InteractiveLogon\_MessageTitleForUsersAttemptingToLogOn
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsmachineinactivitylimit"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsMachineInactivityLimit 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsmachineinactivitylimit"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsMachineInactivityLimit 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/LocalPoliciesSecurityOptions/InteractiveLogon\_MachineInactivityLimit
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/InteractiveLogon\_MachineInactivityLimit
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsmachineinactivitylimitinminutes"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsMachineInactivityLimitInMinutes 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsmachineinactivitylimitinminutes"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsMachineInactivityLimitInMinutes 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/LocalPoliciesSecurityOptions/InteractiveLogon\_MachineInactivityLimit
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/InteractiveLogon\_MachineInactivityLimit
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsminimumsessionsecurityforntlmsspbasedclients"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsminimumsessionsecurityforntlmsspbasedclients"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsMinimumSessionSecurityForNtlmSspBasedClients 
 **CSP**: ./Vendor/MSFT/Policy  
-**Offset URI**: /Config/LocalPoliciesSecurityOptions/NetworkSecurity\_MinimumSessionSecurityForNTLMSSPBasedClients
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/NetworkSecurity\_MinimumSessionSecurityForNTLMSSPBasedClients
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsminimumsessionsecurityforntlmsspbasedservers"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsminimumsessionsecurityforntlmsspbasedservers"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsMinimumSessionSecurityForNtlmSspBasedServers 
 **CSP**: ./Vendor/MSFT/Policy  
-**Offset URI**: /Config/LocalPoliciesSecurityOptions/NetworkSecurity\_MinimumSessionSecurityForNTLMSSPBasedServers
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/NetworkSecurity\_MinimumSessionSecurityForNTLMSSPBasedServers
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsonlyelevatesignedexecutables"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsOnlyElevateSignedExecutables 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsonlyelevatesignedexecutables"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsOnlyElevateSignedExecutables 
 **CSP**: ./Vendor/MSFT/Policy  
-**Offset URI**: /Config/LocalPoliciesSecurityOptions/UserAccountControl\_OnlyElevateExecutableFilesThatAreSignedAndValidated
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/userAccountControl\_OnlyElevateExecutableFilesThatAreSignedAndValidated
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsrestrictanonymousaccesstonamedpipesandshares"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsrestrictanonymousaccesstonamedpipesandshares"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsRestrictAnonymousAccessToNamedPipesAndShares 
 **CSP**: ./Vendor/MSFT/Policy  
-**Offset URI**: /Config/LocalPoliciesSecurityOptions/NetworkAccess\_RestrictAnonymousAccessToNamedPipesAndShares
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/NetworkAccess\_RestrictAnonymousAccessToNamedPipesAndShares
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionssmartcardremovalbehavior"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsSmartCardRemovalBehavior 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionssmartcardremovalbehavior"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsSmartCardRemovalBehavior 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/LocalPoliciesSecurityOptions/InteractiveLogon\_SmartCardRemovalBehavior
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/InteractiveLogon\_SmartCardRemovalBehavior
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsstandarduserelevationpromptbehavior"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsStandardUserElevationPromptBehavior 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsstandarduserelevationpromptbehavior"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsStandardUserElevationPromptBehavior 
 **CSP**: ./Vendor/MSFT/Policy  
-**Offset URI**: /Config/LocalPoliciesSecurityOptions/UserAccountControl\_BehaviorOfTheElevationPromptForStandardUsers
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/userAccountControl\_BehaviorOfTheElevationPromptForStandardUsers
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsswitchtosecuredesktopwhenpromptingforelevation"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsswitchtosecuredesktopwhenpromptingforelevation"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/LocalPoliciesSecurityOptions/UserAccountControl\_SwitchToTheSecureDesktopWhenPromptingForElevation
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/userAccountControl\_SwitchToTheSecureDesktopWhenPromptingForElevation
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsuseadminapprovalmode"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsUseAdminApprovalMode 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsuseadminapprovalmode"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsUseAdminApprovalMode 
 **CSP**: ./Vendor/MSFT/Policy  
 **Offset URI**: /Config/LocalPoliciesSecurityOptions/UserAccountControl\_UseAdminApprovalMode
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsuseadminapprovalmodeforadministrators"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsUseAdminApprovalModeForAdministrators 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsuseadminapprovalmodeforadministrators"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsUseAdminApprovalModeForAdministrators 
 **CSP**: ./Vendor/MSFT/Policy  
-**Offset URI**: /Config/LocalPoliciesSecurityOptions/UserAccountControl\_RunAllAdministratorsInAdminApprovalMode
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/userAccountControl\_RunAllAdministratorsInAdminApprovalMode
 
-#### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsvirtualizefileandregistrywritefailurestoperuserlocations"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations 
+### <a name="windows10endpointprotectionconfigurationlocalsecurityoptionsvirtualizefileandregistrywritefailurestoperuserlocations"></a>Windows10EndpointProtectionConfiguration.LocalSecurityOptionsVirtualizeFileAndRegistryWriteFailuresToPerUserLocations 
 **CSP**: ./Vendor/MSFT/Policy  
-**Offset URI**: /Config/LocalPoliciesSecurityOptions/UserAccountControl\_VirtualizeFileAndRegistryWriteFailuresToPerUserLocations
+**Przesunięty identyfikator URI**:/config/LocalPoliciesSecurityOptions/userAccountControl\_VirtualizeFileAndRegistryWriteFailuresToPerUserLocations
 
-#### <a name="windows10endpointprotectionconfigurationnetworkicmpredirectsoverrideospfgeneratedroutes"></a>Windows10EndpointProtectionConfiguration.NetworkIcmpRedirectsOverrideOspfGeneratedRoutes 
+### <a name="windows10endpointprotectionconfigurationnetworkicmpredirectsoverrideospfgeneratedroutes"></a>Windows10EndpointProtectionConfiguration.NetworkIcmpRedirectsOverrideOspfGeneratedRoutes 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/MSSLegacy/AllowICMPRedirectsToOverrideOSPFGeneratedRoutes
+**Identyfikator URI przesunięcia**:/config/MSSLegacy/AllowICMPRedirectsToOverrideOSPFGeneratedRoutes
 
-#### <a name="windows10endpointprotectionconfigurationnetworkignorenetbiosnamereleaserequestsexceptfromwinsservers"></a>Windows10EndpointProtectionConfiguration.NetworkIgnoreNetBiosNameReleaseRequestsExceptFromWinsServers 
+### <a name="windows10endpointprotectionconfigurationnetworkignorenetbiosnamereleaserequestsexceptfromwinsservers"></a>Windows10EndpointProtectionConfiguration.NetworkIgnoreNetBiosNameReleaseRequestsExceptFromWinsServers 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/MSSLegacy/AllowTheComputerToIgnoreNetBIOSNameReleaseRequestsExceptFromWINSServers
+**Identyfikator URI przesunięcia**:/config/MSSLegacy/AllowTheComputerToIgnoreNetBIOSNameReleaseRequestsExceptFromWINSServers
 
-#### <a name="windows10endpointprotectionconfigurationnetworkipsourceroutingprotectionlevel"></a>Windows10EndpointProtectionConfiguration.NetworkIpSourceRoutingProtectionLevel 
+### <a name="windows10endpointprotectionconfigurationnetworkipsourceroutingprotectionlevel"></a>Windows10EndpointProtectionConfiguration.NetworkIpSourceRoutingProtectionLevel 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/MSSLegacy/IPSourceRoutingProtectionLevel
+**Identyfikator URI przesunięcia**:/config/MSSLegacy/IPSourceRoutingProtectionLevel
 
-#### <a name="windows10endpointprotectionconfigurationnetworkipv6sourceroutingprotectionlevel"></a>Windows10EndpointProtectionConfiguration.NetworkIpV6SourceRoutingProtectionLevel 
+### <a name="windows10endpointprotectionconfigurationnetworkipv6sourceroutingprotectionlevel"></a>Windows10EndpointProtectionConfiguration.NetworkIpV6SourceRoutingProtectionLevel 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/MSSLegacy/IPv6SourceRoutingProtectionLevel
+**Identyfikator URI przesunięcia**:/config/MSSLegacy/IPv6SourceRoutingProtectionLevel
 
-#### <a name="windows10endpointprotectionconfigurationpasswordpinlogon"></a>Windows10EndpointProtectionConfiguration.PasswordPinLogOn 
+### <a name="windows10endpointprotectionconfigurationpasswordpinlogon"></a>Windows10EndpointProtectionConfiguration.PasswordPinLogOn 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/CredentialProviders/AllowPINLogon
+**Identyfikator URI przesunięcia**:/config/CredentialProviders/AllowPINLogon
 
-#### <a name="windows10endpointprotectionconfigurationpowershellshellscriptblocklogging"></a>Windows10EndpointProtectionConfiguration.PowerShellShellScriptBlockLogging 
+### <a name="windows10endpointprotectionconfigurationpowershellshellscriptblocklogging"></a>Windows10EndpointProtectionConfiguration.PowerShellShellScriptBlockLogging 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/WindowsPowerShell/TurnOnPowerShellScriptBlockLogging
+**Identyfikator URI przesunięcia**:/config/WindowsPowerShell/TurnOnPowerShellScriptBlockLogging
 
-#### <a name="windows10endpointprotectionconfigurationremoteassistancesolicitedsetting"></a>Windows10EndpointProtectionConfiguration.RemoteAssistanceSolicitedSetting 
+### <a name="windows10endpointprotectionconfigurationremoteassistancesolicitedsetting"></a>Windows10EndpointProtectionConfiguration.RemoteAssistanceSolicitedSetting 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Connectivity/HardenedUNCPaths
+**Identyfikator URI przesunięcia**:/config/Connectivity/HardenedUNCPaths
 
-#### <a name="windows10endpointprotectionconfigurationremotedesktopservicesclientconnectionencryptionlevel"></a>Windows10EndpointProtectionConfiguration.RemoteDesktopServicesClientConnectionEncryptionLevel 
+### <a name="windows10endpointprotectionconfigurationremotedesktopservicesclientconnectionencryptionlevel"></a>Windows10EndpointProtectionConfiguration.RemoteDesktopServicesClientConnectionEncryptionLevel 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/RemoteDesktopServices/ClientConnectionEncryptionLevel
+**Identyfikator URI przesunięcia**:/config/RemoteDesktopServices/ClientConnectionEncryptionLevel
 
-#### <a name="windows10endpointprotectionconfigurationremotedesktopservicesdriveredirection"></a>Windows10EndpointProtectionConfiguration.RemoteDesktopServicesDriveRedirection 
+### <a name="windows10endpointprotectionconfigurationremotedesktopservicesdriveredirection"></a>Windows10EndpointProtectionConfiguration.RemoteDesktopServicesDriveRedirection 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/RemoteDesktopServices/DoNotAllowDriveRedirection
+**Identyfikator URI przesunięcia**:/config/RemoteDesktopServices/DoNotAllowDriveRedirection
 
-#### <a name="windows10endpointprotectionconfigurationremotedesktopservicespasswordsaving"></a>Windows10EndpointProtectionConfiguration.RemoteDesktopServicesPasswordSaving 
+### <a name="windows10endpointprotectionconfigurationremotedesktopservicespasswordsaving"></a>Windows10EndpointProtectionConfiguration.RemoteDesktopServicesPasswordSaving 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/RemoteDesktopServices/DoNotAllowPasswordSaving
+**Identyfikator URI przesunięcia**:/config/RemoteDesktopServices/DoNotAllowPasswordSaving
 
-#### <a name="windows10endpointprotectionconfigurationremotedesktopservicespromptforpassworduponconnection"></a>Windows10EndpointProtectionConfiguration.RemoteDesktopServicesPromptForPasswordUponConnection 
+### <a name="windows10endpointprotectionconfigurationremotedesktopservicespromptforpassworduponconnection"></a>Windows10EndpointProtectionConfiguration.RemoteDesktopServicesPromptForPasswordUponConnection 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/RemoteDesktopServices/PromptForPasswordUponConnection
+**Identyfikator URI przesunięcia**:/config/RemoteDesktopServices/PromptForPasswordUponConnection
 
-#### <a name="windows10endpointprotectionconfigurationremotedesktopservicessecurerpccommunication"></a>Windows10EndpointProtectionConfiguration.RemoteDesktopServicesSecureRpcCommunication 
+### <a name="windows10endpointprotectionconfigurationremotedesktopservicessecurerpccommunication"></a>Windows10EndpointProtectionConfiguration.RemoteDesktopServicesSecureRpcCommunication 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/RemoteDesktopServices/RequireSecureRPCCommunication
+**Identyfikator URI przesunięcia**:/config/RemoteDesktopServices/RequireSecureRPCCommunication
 
-#### <a name="windows10endpointprotectionconfigurationremotehostdelegationofnonexportablecredentials"></a>Windows10EndpointProtectionConfiguration.RemoteHostDelegationOfNonExportableCredentials 
+### <a name="windows10endpointprotectionconfigurationremotehostdelegationofnonexportablecredentials"></a>Windows10EndpointProtectionConfiguration.RemoteHostDelegationOfNonExportableCredentials 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/CredentialsDelegation/RemoteHostAllowsDelegationOfNonExportableCredentials
+**Identyfikator URI przesunięcia**:/config/CredentialsDelegation/RemoteHostAllowsDelegationOfNonExportableCredentials
 
-#### <a name="windows10endpointprotectionconfigurationremotemanagementclientbasicauthentication"></a>Windows10EndpointProtectionConfiguration.RemoteManagementClientBasicAuthentication 
+### <a name="windows10endpointprotectionconfigurationremotemanagementclientbasicauthentication"></a>Windows10EndpointProtectionConfiguration.RemoteManagementClientBasicAuthentication 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/RemoteManagement/AllowBasicAuthentication\_klienta
+**Przesunięty identyfikator URI**: klient/config/RemoteManagement/AllowBasicAuthentication\_
 
-#### <a name="windows10endpointprotectionconfigurationremotemanagementclientdigestauthentication"></a>Windows10EndpointProtectionConfiguration.RemoteManagementClientDigestAuthentication 
+### <a name="windows10endpointprotectionconfigurationremotemanagementclientdigestauthentication"></a>Windows10EndpointProtectionConfiguration.RemoteManagementClientDigestAuthentication 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/RemoteManagement/DisallowDigestAuthentication
+**Identyfikator URI przesunięcia**:/config/RemoteManagement/DisallowDigestAuthentication
 
-#### <a name="windows10endpointprotectionconfigurationremotemanagementclientunencryptedtraffic"></a>Windows10EndpointProtectionConfiguration.RemoteManagementClientUnencryptedTraffic 
+### <a name="windows10endpointprotectionconfigurationremotemanagementclientunencryptedtraffic"></a>Windows10EndpointProtectionConfiguration.RemoteManagementClientUnencryptedTraffic 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/RemoteManagement/AllowUnencryptedTraffic\_klienta
+**Przesunięty identyfikator URI**: klient/config/RemoteManagement/AllowUnencryptedTraffic\_
 
-#### <a name="windows10endpointprotectionconfigurationremotemanagementservicebasicauthentication"></a>Windows10EndpointProtectionConfiguration.RemoteManagementServiceBasicAuthentication 
+### <a name="windows10endpointprotectionconfigurationremotemanagementservicebasicauthentication"></a>Windows10EndpointProtectionConfiguration.RemoteManagementServiceBasicAuthentication 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/RemoteManagement/AllowBasicAuthentication\_usługi
+**Przesunięty identyfikator URI**: usługa/config/RemoteManagement/AllowBasicAuthentication\_
 
-#### <a name="windows10endpointprotectionconfigurationremotemanagementservicestoringrunascredentials"></a>Windows10EndpointProtectionConfiguration.RemoteManagementServiceStoringRunAsCredentials 
+### <a name="windows10endpointprotectionconfigurationremotemanagementservicestoringrunascredentials"></a>Windows10EndpointProtectionConfiguration.RemoteManagementServiceStoringRunAsCredentials 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/RemoteManagement/DisallowStoringOfRunAsCredentials
+**Identyfikator URI przesunięcia**:/config/RemoteManagement/DisallowStoringOfRunAsCredentials
 
-#### <a name="windows10endpointprotectionconfigurationremotemanagementserviceunencryptedtraffic"></a>Windows10EndpointProtectionConfiguration.RemoteManagementServiceUnencryptedTraffic 
+### <a name="windows10endpointprotectionconfigurationremotemanagementserviceunencryptedtraffic"></a>Windows10EndpointProtectionConfiguration.RemoteManagementServiceUnencryptedTraffic 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/RemoteManagement/AllowUnencryptedTraffic\_usługi
+**Przesunięty identyfikator URI**: usługa/config/RemoteManagement/AllowUnencryptedTraffic\_
 
-#### <a name="windows10endpointprotectionconfigurationrpcunauthenticatedclientoptions"></a>Windows10EndpointProtectionConfiguration.RpcUnauthenticatedClientOptions 
+### <a name="windows10endpointprotectionconfigurationrpcunauthenticatedclientoptions"></a>Windows10EndpointProtectionConfiguration.RpcUnauthenticatedClientOptions 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/RemoteProcedureCall/RestrictUnauthenticatedRPCClients
+**Identyfikator URI przesunięcia**:/config/RemoteProcedureCall/RestrictUnauthenticatedRPCClients
 
-#### <a name="windows10endpointprotectionconfigurationsecurityguideapplyuacrestrictionstolocalaccountsonnetworklogon"></a>Windows10EndpointProtectionConfiguration.SecurityGuideApplyUacRestrictionsToLocalAccountsOnNetworkLogon 
+### <a name="windows10endpointprotectionconfigurationsecurityguideapplyuacrestrictionstolocalaccountsonnetworklogon"></a>Windows10EndpointProtectionConfiguration.SecurityGuideApplyUacRestrictionsToLocalAccountsOnNetworkLogon 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/MSSecurityGuide/ApplyUACRestrictionsToLocalAccountsOnNetworkLogon
+**Identyfikator URI przesunięcia**:/config/MSSecurityGuide/ApplyUACRestrictionsToLocalAccountsOnNetworkLogon
 
-#### <a name="windows10endpointprotectionconfigurationsecurityguidesmbv1clientdriverstartconfiguration"></a>Windows10EndpointProtectionConfiguration.SecurityGuideSmbV1ClientDriverStartConfiguration 
+### <a name="windows10endpointprotectionconfigurationsecurityguidesmbv1clientdriverstartconfiguration"></a>Windows10EndpointProtectionConfiguration.SecurityGuideSmbV1ClientDriverStartConfiguration 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/MSSecurityGuide/ConfigureSMBV1ClientDriver
+**Identyfikator URI przesunięcia**:/config/MSSecurityGuide/ConfigureSMBV1ClientDriver
 
-#### <a name="windows10endpointprotectionconfigurationsecurityguidesmbv1server"></a>Windows10EndpointProtectionConfiguration.SecurityGuideSmbV1Server 
+### <a name="windows10endpointprotectionconfigurationsecurityguidesmbv1server"></a>Windows10EndpointProtectionConfiguration.SecurityGuideSmbV1Server 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/MSSecurityGuide/ConfigureSMBV1Server
+**Identyfikator URI przesunięcia**:/config/MSSecurityGuide/ConfigureSMBV1Server
 
-#### <a name="windows10endpointprotectionconfigurationsecurityguidestructuredexceptionhandlingoverwriteprotection"></a>Windows10EndpointProtectionConfiguration.SecurityGuideStructuredExceptionHandlingOverwriteProtection 
+### <a name="windows10endpointprotectionconfigurationsecurityguidestructuredexceptionhandlingoverwriteprotection"></a>Windows10EndpointProtectionConfiguration.SecurityGuideStructuredExceptionHandlingOverwriteProtection 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/MSSecurityGuide/EnableStructuredExceptionHandlingOverwriteProtection
+**Identyfikator URI przesunięcia**:/config/MSSecurityGuide/EnableStructuredExceptionHandlingOverwriteProtection
 
-#### <a name="windows10endpointprotectionconfigurationsecurityguidewdigestauthentication"></a>Windows10EndpointProtectionConfiguration.SecurityGuideWDigestAuthentication 
+### <a name="windows10endpointprotectionconfigurationsecurityguidewdigestauthentication"></a>Windows10EndpointProtectionConfiguration.SecurityGuideWDigestAuthentication 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/MSSecurityGuide/WDigestAuthentication
+**Identyfikator URI przesunięcia**:/config/MSSecurityGuide/WDigestAuthentication
 
-#### <a name="windows10endpointprotectionconfigurationsmartscreenblockoverrideforfiles"></a>Windows10EndpointProtectionConfiguration.SmartScreenBlockOverrideForFiles 
-**Dostawcy usług Kryptograficznych**: ./Device/Vendor/MSFT/Policy **przesunięcie URI**: /Config/DeviceGuard/RequirePlatformSecurityFeatures
+### <a name="windows10endpointprotectionconfigurationsmartscreenblockoverrideforfiles"></a>Windows10EndpointProtectionConfiguration.SmartScreenBlockOverrideForFiles 
+**Dostawca CSP**:./Device/Vendor/MSFT/Policy — **Identyfikator URI**:/config/DeviceGuard/RequirePlatformSecurityFeatures
 
-#### <a name="windows10endpointprotectionconfigurationsmartscreenenableinshell"></a>Windows10EndpointProtectionConfiguration.SmartScreenEnableInShell 
-**Dostawcy usług Kryptograficznych**: ./Device/Vendor/MSFT/Policy **przesunięcie URI**: /Config/SmartScreen/EnableSmartScreenInShell
+### <a name="windows10endpointprotectionconfigurationsmartscreenenableinshell"></a>Windows10EndpointProtectionConfiguration.SmartScreenEnableInShell 
+**Dostawca CSP**:./Device/Vendor/MSFT/Policy — **Identyfikator URI**:/config/SmartScreen/EnableSmartScreenInShell
 
-#### <a name="windows10endpointprotectionconfigurationsolicitedremoteassistance"></a>windows10endpointprotectionconfiguration.solicitedRemoteAssistance 
+### <a name="windows10endpointprotectionconfigurationsolicitedremoteassistance"></a>windows10endpointprotectionconfiguration.solicitedRemoteAssistance 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/RemoteAssistance/SolicitedRemoteAssistance
+**Identyfikator URI przesunięcia**:/config/RemoteAssistance/SolicitedRemoteAssistance
 
-#### <a name="windows10endpointprotectionconfigurationuserrightsaccesscredentialmanagerastrustedcaller"></a>Windows10EndpointProtectionConfiguration.UserRightsAccessCredentialManagerAsTrustedCaller 
+### <a name="windows10endpointprotectionconfigurationuserrightsaccesscredentialmanagerastrustedcaller"></a>Windows10EndpointProtectionConfiguration.UserRightsAccessCredentialManagerAsTrustedCaller 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/UserRights/AccessCredentialManagerAsTrustedCaller
+**Identyfikator URI przesunięcia**:/config/UserRights/AccessCredentialManagerAsTrustedCaller
 
-#### <a name="windows10endpointprotectionconfigurationuserrightsaccessfromnetwork"></a>windows10EndpointProtectionConfiguration.UserRightsAccessFromNetwork 
+### <a name="windows10endpointprotectionconfigurationuserrightsaccessfromnetwork"></a>windows10EndpointProtectionConfiguration.UserRightsAccessFromNetwork 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/UserRights/AccessFromNetwork
+**Identyfikator URI przesunięcia**:/config/UserRights/AccessFromNetwork
 
-#### <a name="windows10endpointprotectionconfigurationuserrightsactaspartoftheoperatingsystem"></a>Windows10EndpointProtectionConfiguration.userRightsActAsPartOfTheOperatingSystem 
+### <a name="windows10endpointprotectionconfigurationuserrightsactaspartoftheoperatingsystem"></a>Windows10EndpointProtectionConfiguration.userRightsActAsPartOfTheOperatingSystem 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/UserRights/ActAsPartOfTheOperatingSystem
+**Identyfikator URI przesunięcia**:/config/UserRights/ActAsPartOfTheOperatingSystem
 
-#### <a name="windows10endpointprotectionconfigurationuserrightsallowaccessfromnetwork"></a>Windows10EndpointProtectionConfiguration.UserRightsAllowAccessFromNetwork 
+### <a name="windows10endpointprotectionconfigurationuserrightsallowaccessfromnetwork"></a>Windows10EndpointProtectionConfiguration.UserRightsAllowAccessFromNetwork 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/UserRights/AccessFromNetwork
+**Identyfikator URI przesunięcia**:/config/UserRights/AccessFromNetwork
 
-#### <a name="windows10endpointprotectionconfigurationuserrightsbackupdata"></a>Windows10EndpointProtectionConfiguration.UserRightsBackupData 
+### <a name="windows10endpointprotectionconfigurationuserrightsbackupdata"></a>Windows10EndpointProtectionConfiguration.UserRightsBackupData 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/UserRights/BackupFilesAndDirectories
+**Identyfikator URI przesunięcia**:/config/UserRights/BackupFilesAndDirectories
 
-#### <a name="windows10endpointprotectionconfigurationuserrightsblockaccessfromnetwork"></a>Windows10EndpointProtectionConfiguration.UserRightsBlockAccessFromNetwork 
+### <a name="windows10endpointprotectionconfigurationuserrightsblockaccessfromnetwork"></a>Windows10EndpointProtectionConfiguration.UserRightsBlockAccessFromNetwork 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/UserRights/DenyAccessFromNetwork
+**Identyfikator URI przesunięcia**:/config/UserRights/DenyAccessFromNetwork
 
-#### <a name="windows10endpointprotectionconfigurationuserrightschangesystemtime"></a>Windows10EndpointProtectionConfiguration.UserRightsChangeSystemTime 
+### <a name="windows10endpointprotectionconfigurationuserrightschangesystemtime"></a>Windows10EndpointProtectionConfiguration.UserRightsChangeSystemTime 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/UserRights/ChangeSystemTime
+**Identyfikator URI przesunięcia**:/config/UserRights/ChangeSystemTime
 
-#### <a name="windows10endpointprotectionconfigurationuserrightscreateglobalobjects"></a>Windows10EndpointProtectionConfiguration.UserRightsCreateGlobalObjects 
+### <a name="windows10endpointprotectionconfigurationuserrightscreateglobalobjects"></a>Windows10EndpointProtectionConfiguration.UserRightsCreateGlobalObjects 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/UserRights/CreateGlobalObjects
+**Identyfikator URI przesunięcia**:/config/UserRights/CreateGlobalObjects
 
-#### <a name="windows10endpointprotectionconfigurationuserrightscreatepagefile"></a>Windows10EndpointProtectionConfiguration.UserRightsCreatePageFile 
+### <a name="windows10endpointprotectionconfigurationuserrightscreatepagefile"></a>Windows10EndpointProtectionConfiguration.UserRightsCreatePageFile 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/UserRights/CreatePageFile
+**Identyfikator URI przesunięcia**:/config/UserRights/CreatePageFile
 
-#### <a name="windows10endpointprotectionconfigurationuserrightscreatepermanentsharedobjects"></a>Windows10EndpointProtectionConfiguration.UserRightsCreatePermanentSharedObjects 
+### <a name="windows10endpointprotectionconfigurationuserrightscreatepermanentsharedobjects"></a>Windows10EndpointProtectionConfiguration.UserRightsCreatePermanentSharedObjects 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/UserRights/CreatePermanentSharedObjects
+**Identyfikator URI przesunięcia**:/config/UserRights/CreatePermanentSharedObjects
 
-#### <a name="windows10endpointprotectionconfigurationuserrightscreatesymboliclinks"></a>Windows10EndpointProtectionConfiguration.UserRightsCreateSymbolicLinks 
+### <a name="windows10endpointprotectionconfigurationuserrightscreatesymboliclinks"></a>Windows10EndpointProtectionConfiguration.UserRightsCreateSymbolicLinks 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/UserRights/CreateSymbolicLinks
+**Identyfikator URI przesunięcia**:/config/UserRights/CreateSymbolicLinks
 
-#### <a name="windows10endpointprotectionconfigurationuserrightscreatetoken"></a>Windows10EndpointProtectionConfiguration.UserRightsCreateToken 
+### <a name="windows10endpointprotectionconfigurationuserrightscreatetoken"></a>Windows10EndpointProtectionConfiguration.UserRightsCreateToken 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/UserRights/CreateToken
+**Identyfikator URI przesunięcia**:/config/UserRights/CreateToken
 
-#### <a name="windows10endpointprotectionconfigurationuserrightsdebugprograms"></a>Windows10EndpointProtectionConfiguration.UserRightsDebugPrograms 
+### <a name="windows10endpointprotectionconfigurationuserrightsdebugprograms"></a>Windows10EndpointProtectionConfiguration.UserRightsDebugPrograms 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/UserRights/DebugPrograms
+**Identyfikator URI przesunięcia**:/config/UserRights/DebugPrograms
 
-#### <a name="windows10endpointprotectionconfigurationuserrightsdelegation"></a>Windows10EndpointProtectionConfiguration.UserRightsDelegation 
+### <a name="windows10endpointprotectionconfigurationuserrightsdelegation"></a>Windows10EndpointProtectionConfiguration.UserRightsDelegation 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/UserRights/EnableDelegation
+**Identyfikator URI przesunięcia**:/config/UserRights/EnableDelegation
 
-#### <a name="windows10endpointprotectionconfigurationuserrightsdenyaccessfromnetwork"></a>windows10EndpointProtectionConfiguration.UserRightsDenyAccessFromNetwork 
+### <a name="windows10endpointprotectionconfigurationuserrightsdenyaccessfromnetwork"></a>windows10EndpointProtectionConfiguration.UserRightsDenyAccessFromNetwork 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/UserRights/DenyAccessFromNetwork
+**Identyfikator URI przesunięcia**:/config/UserRights/DenyAccessFromNetwork
 
-#### <a name="windows10endpointprotectionconfigurationuserrightsgeneratesecurityaudits"></a>Windows10EndpointProtectionConfiguration.UserRightsGenerateSecurityAudits 
+### <a name="windows10endpointprotectionconfigurationuserrightsgeneratesecurityaudits"></a>Windows10EndpointProtectionConfiguration.UserRightsGenerateSecurityAudits 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/UserRights/GenerateSecurityAudits
+**Identyfikator URI przesunięcia**:/config/UserRights/GenerateSecurityAudits
 
-#### <a name="windows10endpointprotectionconfigurationuserrightsimpersonateclient"></a>Windows10EndpointProtectionConfiguration.UserRightsImpersonateClient 
+### <a name="windows10endpointprotectionconfigurationuserrightsimpersonateclient"></a>Windows10EndpointProtectionConfiguration.UserRightsImpersonateClient 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/UserRights/ImpersonateClient
+**Identyfikator URI przesunięcia**:/config/UserRights/ImpersonateClient
 
-#### <a name="windows10endpointprotectionconfigurationuserrightsincreaseschedulingpriority"></a>Windows10EndpointProtectionConfiguration.UserRightsIncreaseSchedulingPriority 
+### <a name="windows10endpointprotectionconfigurationuserrightsincreaseschedulingpriority"></a>Windows10EndpointProtectionConfiguration.UserRightsIncreaseSchedulingPriority 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/UserRights/IncreaseSchedulingPriority
+**Identyfikator URI przesunięcia**:/config/UserRights/IncreaseSchedulingPriority
 
-#### <a name="windows10endpointprotectionconfigurationuserrightsloadunloaddrivers"></a>Windows10EndpointProtectionConfiguration.UserRightsLoadUnloadDrivers 
+### <a name="windows10endpointprotectionconfigurationuserrightsloadunloaddrivers"></a>Windows10EndpointProtectionConfiguration.UserRightsLoadUnloadDrivers 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/UserRights/LoadUnloadDeviceDrivers
+**Identyfikator URI przesunięcia**:/config/UserRights/LoadUnloadDeviceDrivers
 
-#### <a name="windows10endpointprotectionconfigurationuserrightslocallogon"></a>Windows10EndpointProtectionConfiguration.UserRightsLocalLogOn 
+### <a name="windows10endpointprotectionconfigurationuserrightslocallogon"></a>Windows10EndpointProtectionConfiguration.UserRightsLocalLogOn 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/UserRights/AllowLocalLogOn
+**Identyfikator URI przesunięcia**:/config/UserRights/AllowLocalLogOn
 
-#### <a name="windows10endpointprotectionconfigurationuserrightslockmemory"></a>Windows10EndpointProtectionConfiguration.UserRightsLockMemory 
+### <a name="windows10endpointprotectionconfigurationuserrightslockmemory"></a>Windows10EndpointProtectionConfiguration.UserRightsLockMemory 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/UserRights/LockMemory
+**Identyfikator URI przesunięcia**:/config/UserRights/LockMemory
 
-#### <a name="windows10endpointprotectionconfigurationuserrightsmanageauditingandsecuritylogs"></a>Windows10EndpointProtectionConfiguration.UserRightsManageAuditingAndSecurityLogs 
+### <a name="windows10endpointprotectionconfigurationuserrightsmanageauditingandsecuritylogs"></a>Windows10EndpointProtectionConfiguration.UserRightsManageAuditingAndSecurityLogs 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/UserRights/ManageAuditingAndSecurityLog
+**Identyfikator URI przesunięcia**:/config/UserRights/ManageAuditingAndSecurityLog
 
-#### <a name="windows10endpointprotectionconfigurationuserrightsmanagevolumes"></a>Windows10EndpointProtectionConfiguration.UserRightsManageVolumes 
+### <a name="windows10endpointprotectionconfigurationuserrightsmanagevolumes"></a>Windows10EndpointProtectionConfiguration.UserRightsManageVolumes 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/UserRights/ManageVolume
+**Identyfikator URI przesunięcia**:/config/UserRights/ManageVolume
 
-#### <a name="windows10endpointprotectionconfigurationuserrightsmodifyfirmwareenvironment"></a>Windows10EndpointProtectionConfiguration.UserRightsModifyFirmwareEnvironment 
+### <a name="windows10endpointprotectionconfigurationuserrightsmodifyfirmwareenvironment"></a>Windows10EndpointProtectionConfiguration.UserRightsModifyFirmwareEnvironment 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/UserRights/ModifyFirmwareEnvironment
+**Identyfikator URI przesunięcia**:/config/UserRights/ModifyFirmwareEnvironment
 
-#### <a name="windows10endpointprotectionconfigurationuserrightsmodifyobjectlabels"></a>Windows10EndpointProtectionConfiguration.UserRightsModifyObjectLabels 
+### <a name="windows10endpointprotectionconfigurationuserrightsmodifyobjectlabels"></a>Windows10EndpointProtectionConfiguration.UserRightsModifyObjectLabels 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/UserRights/ModifyObjectLabel
+**Identyfikator URI przesunięcia**:/config/UserRights/ModifyObjectLabel
 
-#### <a name="windows10endpointprotectionconfigurationuserrightsprofilesingleprocess"></a>Windows10EndpointProtectionConfiguration.UserRightsProfileSingleProcess 
+### <a name="windows10endpointprotectionconfigurationuserrightsprofilesingleprocess"></a>Windows10EndpointProtectionConfiguration.UserRightsProfileSingleProcess 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/UserRights/ProfileSingleProcess
+**Identyfikator URI przesunięcia**:/config/UserRights/ProfileSingleProcess
 
-#### <a name="windows10endpointprotectionconfigurationuserrightsregisterprocessasservice"></a>Windows10EndpointProtectionConfiguration.UserRightsRegisterProcessAsService 
+### <a name="windows10endpointprotectionconfigurationuserrightsregisterprocessasservice"></a>Windows10EndpointProtectionConfiguration.UserRightsRegisterProcessAsService 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/UserRights/DenyLocalLogOn
+**Identyfikator URI przesunięcia**:/config/UserRights/DenyLocalLogOn
 
-#### <a name="windows10endpointprotectionconfigurationuserrightsremotedesktopserviceslogon"></a>Windows10EndpointProtectionConfiguration.UserRightsRemoteDesktopServicesLogOn 
+### <a name="windows10endpointprotectionconfigurationuserrightsremotedesktopserviceslogon"></a>Windows10EndpointProtectionConfiguration.UserRightsRemoteDesktopServicesLogOn 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/UserRights/DenyRemoteDesktopServicesLogOn
+**Identyfikator URI przesunięcia**:/config/UserRights/DenyRemoteDesktopServicesLogOn
 
-#### <a name="windows10endpointprotectionconfigurationuserrightsremoteshutdown"></a>Windows10EndpointProtectionConfiguration.UserRightsRemoteShutdown 
+### <a name="windows10endpointprotectionconfigurationuserrightsremoteshutdown"></a>Windows10EndpointProtectionConfiguration.UserRightsRemoteShutdown 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/UserRights/RemoteShutdown
+**Identyfikator URI przesunięcia**:/config/UserRights/RemoteShutdown
 
-#### <a name="windows10endpointprotectionconfigurationuserrightsrestoredata"></a>Windows10EndpointProtectionConfiguration.UserRightsRestoreData 
+### <a name="windows10endpointprotectionconfigurationuserrightsrestoredata"></a>Windows10EndpointProtectionConfiguration.UserRightsRestoreData 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/UserRights/RestoreFilesAndDirectories
+**Identyfikator URI przesunięcia**:/config/UserRights/RestoreFilesAndDirectories
 
-#### <a name="windows10endpointprotectionconfigurationuserrightstakeownership"></a>Windows10EndpointProtectionConfiguration.UserRightsTakeOwnership 
+### <a name="windows10endpointprotectionconfigurationuserrightstakeownership"></a>Windows10EndpointProtectionConfiguration.UserRightsTakeOwnership 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/UserRights/TakeOwnership
+**Identyfikator URI przesunięcia**:/config/UserRights/TakeOwnership
 
-#### <a name="windows10endpointprotectionconfigurationwindowsconnectionmanagerconnectiontonondomainnetworks"></a>Windows10EndpointProtectionConfiguration.WindowsConnectionManagerConnectionToNonDomainNetworks 
+### <a name="windows10endpointprotectionconfigurationwindowsconnectionmanagerconnectiontonondomainnetworks"></a>Windows10EndpointProtectionConfiguration.WindowsConnectionManagerConnectionToNonDomainNetworks 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/WindowsConnectionManager/ProhitConnectionToNonDomainNetworksWhenConnectedToDomainAuthenticatedNetwork
+**Identyfikator URI przesunięcia**:/config/WindowsConnectionManager/ProhitConnectionToNonDomainNetworksWhenConnectedToDomainAuthenticatedNetwork
 
-#### <a name="windows10endpointprotectionconfigurationwindowslogonsigninlastinteractiveuseraftersysteminitiatedrestart"></a>Windows10EndpointProtectionConfiguration.WindowsLogOnSignInLastInteractiveUserAfterSystemInitiatedRestart 
+### <a name="windows10endpointprotectionconfigurationwindowslogonsigninlastinteractiveuseraftersysteminitiatedrestart"></a>Windows10EndpointProtectionConfiguration.WindowsLogOnSignInLastInteractiveUserAfterSystemInitiatedRestart 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/WindowsLogon/SignInLastInteractiveUserAutomaticallyAfterASystemInitiatedRestart
+**Identyfikator URI przesunięcia**:/config/WindowsLogon/SignInLastInteractiveUserAutomaticallyAfterASystemInitiatedRestart
 
-#### <a name="windows10endpointprotectionconfigurationxboxservicesaccessorymanagementservicestartupmode"></a>Windows10EndpointProtectionConfiguration.XboxServicesAccessoryManagementServiceStartupMode 
+### <a name="windows10endpointprotectionconfigurationxboxservicesaccessorymanagementservicestartupmode"></a>Windows10EndpointProtectionConfiguration.XboxServicesAccessoryManagementServiceStartupMode 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/SystemServices/ConfigureXboxAccessoryManagementServiceStartupMode
+**Identyfikator URI przesunięcia**:/config/SystemServices/ConfigureXboxAccessoryManagementServiceStartupMode
 
-#### <a name="windows10endpointprotectionconfigurationxboxservicesenablexboxgamesavetask"></a>Windows10EndpointProtectionConfiguration.XboxServicesEnableXboxGameSaveTask 
+### <a name="windows10endpointprotectionconfigurationxboxservicesenablexboxgamesavetask"></a>Windows10EndpointProtectionConfiguration.XboxServicesEnableXboxGameSaveTask 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/TaskScheduler/EnableXboxGameSaveTask
+**Identyfikator URI przesunięcia**:/config/TaskScheduler/EnableXboxGameSaveTask
 
-#### <a name="windows10endpointprotectionconfigurationxboxservicesliveauthmanagerservicestartupmode"></a>Windows10EndpointProtectionConfiguration.XboxServicesLiveAuthManagerServiceStartupMode 
+### <a name="windows10endpointprotectionconfigurationxboxservicesliveauthmanagerservicestartupmode"></a>Windows10EndpointProtectionConfiguration.XboxServicesLiveAuthManagerServiceStartupMode 
 **CSP**: ./Vendor/MSFT/Policy  
-**Offset URI**: /Config/SystemServices/ConfigureXboxLiveAuthManagerServiceStartupMode
+**Identyfikator URI przesunięcia**:/config/SystemServices/ConfigureXboxLiveAuthManagerServiceStartupMode
 
-#### <a name="windows10endpointprotectionconfigurationxboxserviceslivegamesaveservicestartupmode"></a>Windows10EndpointProtectionConfiguration.XboxServicesLiveGameSaveServiceStartupMode 
+### <a name="windows10endpointprotectionconfigurationxboxserviceslivegamesaveservicestartupmode"></a>Windows10EndpointProtectionConfiguration.XboxServicesLiveGameSaveServiceStartupMode 
 **CSP**: ./Vendor/MSFT/Policy  
-**Offset URI**: /Config/SystemServices/XboxServicesLiveGameSaveServiceStartupMode
+**Identyfikator URI przesunięcia**:/config/SystemServices/XboxServicesLiveGameSaveServiceStartupMode
 
-#### <a name="windows10endpointprotectionconfigurationxboxserviceslivenetworkingservicestartupmode"></a>Windows10EndpointProtectionConfiguration.XboxServicesLiveNetworkingServiceStartupMode 
+### <a name="windows10endpointprotectionconfigurationxboxserviceslivenetworkingservicestartupmode"></a>Windows10EndpointProtectionConfiguration.XboxServicesLiveNetworkingServiceStartupMode 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/SystemServices/ConfigureXboxLiveNetworkingServiceStartupMode
+**Identyfikator URI przesunięcia**:/config/SystemServices/ConfigureXboxLiveNetworkingServiceStartupMode
 
-#### <a name="windows10enterprisemodernappmanagementconfigurationuninstallbuiltinapps"></a>Windows10EnterpriseModernAppManagementConfiguration.UninstallBuiltInApps
-**CSP**: Wywołanie interfejsu API programu Graph nie dotyczy tylko **przesunięcie URI**: Tylko wywołania interfejsu API programu Graph n/d
+### <a name="windows10enterprisemodernappmanagementconfigurationuninstallbuiltinapps"></a>Windows10EnterpriseModernAppManagementConfiguration.UninstallBuiltInApps
+**CSP**: N/A interfejs API programu Graph przesunięty tylko **Identyfikator URI**: Tylko wywołania interfejs API programu Graph
 
-#### <a name="windows10generalconfigurationaccountsblockaddingnonmicrosoftaccountemail"></a>Windows10GeneralConfiguration.AccountsBlockAddingNonMicrosoftAccountEmail 
+### <a name="windows10generalconfigurationaccountsblockaddingnonmicrosoftaccountemail"></a>Windows10GeneralConfiguration.AccountsBlockAddingNonMicrosoftAccountEmail 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Accounts/AllowAddingNonMicrosoftAccountsManually
+**Identyfikator URI przesunięcia**:/config/accounts/AllowAddingNonMicrosoftAccountsManually
 
-#### <a name="windows10generalconfigurationantitheftmodeblocked"></a>Windows10GeneralConfiguration.AntiTheftModeBlocked 
+### <a name="windows10generalconfigurationantitheftmodeblocked"></a>Windows10GeneralConfiguration.AntiTheftModeBlocked 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Security/AntiTheftMode
+**Identyfikator URI przesunięcia**:/config/Security/AntiTheftMode
 
-#### <a name="windows10generalconfigurationappmanagementmsiallowusercontroloverinstall"></a>Windows10GeneralConfiguration.AppManagementMSIAllowUserControlOverInstall 
+### <a name="windows10generalconfigurationappmanagementmsiallowusercontroloverinstall"></a>Windows10GeneralConfiguration.AppManagementMSIAllowUserControlOverInstall 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/ApplicationManagement/MSIAllowUserControlOverInstall
+**Identyfikator URI przesunięcia**:/config/ApplicationManagement/MSIAllowUserControlOverInstall
 
-#### <a name="windows10generalconfigurationappmanagementmsialwaysinstallwithelevatedprivileges"></a>Windows10GeneralConfiguration.AppManagementMSIAlwaysInstallWithElevatedPrivileges 
+### <a name="windows10generalconfigurationappmanagementmsialwaysinstallwithelevatedprivileges"></a>Windows10GeneralConfiguration.AppManagementMSIAlwaysInstallWithElevatedPrivileges 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/ApplicationManagement/MSIAlwaysInstallWithElevatedPrivileges
+**Identyfikator URI przesunięcia**:/config/ApplicationManagement/MSIAlwaysInstallWithElevatedPrivileges
 
-#### <a name="windows10generalconfigurationappsallowtrustedappssideloading"></a>Windows10GeneralConfiguration.AppsAllowTrustedAppsSideloading 
+### <a name="windows10generalconfigurationappsallowtrustedappssideloading"></a>Windows10GeneralConfiguration.AppsAllowTrustedAppsSideloading 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/ApplicationManagement/AllowAllTrustedApps
+**Identyfikator URI przesunięcia**:/config/ApplicationManagement/AllowAllTrustedApps
 
-#### <a name="windows10generalconfigurationappsblockwindowsstoreoriginatedapps"></a>Windows10GeneralConfiguration.AppsBlockWindowsStoreOriginatedApps 
+### <a name="windows10generalconfigurationappsblockwindowsstoreoriginatedapps"></a>Windows10GeneralConfiguration.AppsBlockWindowsStoreOriginatedApps 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/ApplicationManagement/DisableStoreOriginatedApps
+**Identyfikator URI przesunięcia**:/config/ApplicationManagement/DisableStoreOriginatedApps
 
-#### <a name="windows10generalconfigurationappsmicrosoftaccountsoptional"></a>Windows10GeneralConfiguration.AppsMicrosoftAccountsOptional 
+### <a name="windows10generalconfigurationappsmicrosoftaccountsoptional"></a>Windows10GeneralConfiguration.AppsMicrosoftAccountsOptional 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/AppRuntime/AllowMicrosoftAccountsToBeOptional
+**Identyfikator URI przesunięcia**:/config/AppRuntime/AllowMicrosoftAccountsToBeOptional
 
-#### <a name="windows10generalconfigurationassignedaccessmultimodeprofiles"></a>Windows10GeneralConfiguration.AssignedAccessMultiModeProfiles 
-**CSP**: ./Device/Vendor/MSFT/AssignedAccess  
-**Przesunięcie URI**: / Configuration
+### <a name="windows10generalconfigurationassignedaccessmultimodeprofiles"></a>Windows10GeneralConfiguration.AssignedAccessMultiModeProfiles 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/AssignedAccess  
+**Identyfikator URI przesunięcia**:/Konfiguracja
 
-#### <a name="windows10generalconfigurationassignedaccesssinglemodeappusermodelid"></a>Windows10GeneralConfiguration.AssignedAccessSingleModeAppUserModelId 
-**CSP**: ./Device/Vendor/MSFT/AssignedAccess  
-**Przesunięcie URI**: / Configuration
+### <a name="windows10generalconfigurationassignedaccesssinglemodeappusermodelid"></a>Windows10GeneralConfiguration.AssignedAccessSingleModeAppUserModelId 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/AssignedAccess  
+**Identyfikator URI przesunięcia**:/Konfiguracja
 
-#### <a name="windows10generalconfigurationassignedaccesssinglemodeusername"></a>Windows10GeneralConfiguration.AssignedAccessSingleModeUserName 
-**CSP**: ./Device/Vendor/MSFT/AssignedAccess  
-**Przesunięcie URI**: / Configuration
+### <a name="windows10generalconfigurationassignedaccesssinglemodeusername"></a>Windows10GeneralConfiguration.AssignedAccessSingleModeUserName 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/AssignedAccess  
+**Identyfikator URI przesunięcia**:/Konfiguracja
 
-#### <a name="windows10generalconfigurationauthenticationallowfidodevice"></a>Windows10GeneralConfiguration.AuthenticationAllowFIDODevice 
+### <a name="windows10generalconfigurationauthenticationallowfidodevice"></a>Windows10GeneralConfiguration.AuthenticationAllowFIDODevice 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Authentication/AllowFidoDeviceSignon
+**Identyfikator URI przesunięcia**:/config/Authentication/AllowFidoDeviceSignon
 
-#### <a name="windows10generalconfigurationauthenticationallowsecondarydevice"></a>Windows10GeneralConfiguration.AuthenticationAllowSecondaryDevice 
+### <a name="windows10generalconfigurationauthenticationallowsecondarydevice"></a>Windows10GeneralConfiguration.AuthenticationAllowSecondaryDevice 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Authentication/AllowSecondaryAuthenticationDevice
+**Identyfikator URI przesunięcia**:/config/Authentication/AllowSecondaryAuthenticationDevice
 
-#### <a name="windows10generalconfigurationauthenticationpreferredazureadtenantdomainname"></a>Windows10GeneralConfiguration.AuthenticationPreferredAzureADTenantDomainName 
+### <a name="windows10generalconfigurationauthenticationpreferredazureadtenantdomainname"></a>Windows10GeneralConfiguration.AuthenticationPreferredAzureADTenantDomainName 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Authentication/PreferredAadTenantDomainName
+**Identyfikator URI przesunięcia**:/config/Authentication/PreferredAadTenantDomainName
 
-#### <a name="windows10generalconfigurationauthenticationwebsignin"></a>Windows10GeneralConfiguration.AuthenticationWebSignIn 
+### <a name="windows10generalconfigurationauthenticationwebsignin"></a>Windows10GeneralConfiguration.AuthenticationWebSignIn 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Authentication/EnableWebSignIn
+**Identyfikator URI przesunięcia**:/config/Authentication/EnableWebSignIn
 
-#### <a name="windows10generalconfigurationautoplaydefaultautorunbehavior"></a>Windows10GeneralConfiguration.AutoPlayDefaultAutoRunBehavior 
+### <a name="windows10generalconfigurationautoplaydefaultautorunbehavior"></a>Windows10GeneralConfiguration.AutoPlayDefaultAutoRunBehavior 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Autoplay/SetDefaultAutoRunBehavior
+**Identyfikator URI przesunięcia**:/config/Autoplay/SetDefaultAutoRunBehavior
 
-#### <a name="windows10generalconfigurationautoplayfornonvolumedevices"></a>Windows10GeneralConfiguration.AutoPlayForNonVolumeDevices 
+### <a name="windows10generalconfigurationautoplayfornonvolumedevices"></a>Windows10GeneralConfiguration.AutoPlayForNonVolumeDevices 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Autoplay/DisallowAutoplayForNonVolumeDevices
+**Identyfikator URI przesunięcia**:/config/Autoplay/DisallowAutoplayForNonVolumeDevices
 
-#### <a name="windows10generalconfigurationautoplaymode"></a>Windows10GeneralConfiguration.AutoPlayMode 
+### <a name="windows10generalconfigurationautoplaymode"></a>Windows10GeneralConfiguration.AutoPlayMode 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Autoplay/TurnOffAutoPlay
+**Identyfikator URI przesunięcia**:/config/Autoplay/TurnOffAutoPlay
 
-#### <a name="windows10generalconfigurationbluetoothallowedservices"></a>Windows10GeneralConfiguration.BluetoothAllowedServices 
+### <a name="windows10generalconfigurationbluetoothallowedservices"></a>Windows10GeneralConfiguration.BluetoothAllowedServices 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Bluetooth/ServicesAllowedList
+**Identyfikator URI przesunięcia**:/config/Bluetooth/ServicesAllowedList
 
-#### <a name="windows10generalconfigurationbluetoothblockadvertising"></a>Windows10GeneralConfiguration.BluetoothBlockAdvertising 
+### <a name="windows10generalconfigurationbluetoothblockadvertising"></a>Windows10GeneralConfiguration.BluetoothBlockAdvertising 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Bluetooth/AllowAdvertising
+**Identyfikator URI przesunięcia**:/config/Bluetooth/AllowAdvertising
 
-#### <a name="windows10generalconfigurationbluetoothblockdiscoverablemode"></a>Windows10GeneralConfiguration.BluetoothBlockDiscoverableMode 
+### <a name="windows10generalconfigurationbluetoothblockdiscoverablemode"></a>Windows10GeneralConfiguration.BluetoothBlockDiscoverableMode 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Bluetooth/AllowDiscoverableMode
+**Identyfikator URI przesunięcia**:/config/Bluetooth/AllowDiscoverableMode
 
-#### <a name="windows10generalconfigurationbluetoothblocked"></a>Windows10GeneralConfiguration.BluetoothBlocked 
+### <a name="windows10generalconfigurationbluetoothblocked"></a>Windows10GeneralConfiguration.BluetoothBlocked 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Connectivity/AllowBluetooth
+**Identyfikator URI przesunięcia**:/config/Connectivity/AllowBluetooth
 
-#### <a name="windows10generalconfigurationbluetoothblockprepairing"></a>Windows10GeneralConfiguration.BluetoothBlockPrePairing 
+### <a name="windows10generalconfigurationbluetoothblockprepairing"></a>Windows10GeneralConfiguration.BluetoothBlockPrePairing 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Bluetooth/AllowPrepairing
+**Identyfikator URI przesunięcia**:/config/Bluetooth/AllowPrepairing
 
-#### <a name="windows10generalconfigurationbluetoothblockpromptedproximalconnections"></a>Windows10GeneralConfiguration.BluetoothBlockPromptedProximalConnections 
+### <a name="windows10generalconfigurationbluetoothblockpromptedproximalconnections"></a>Windows10GeneralConfiguration.BluetoothBlockPromptedProximalConnections 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Bluetooth/AllowPromptedProximalConnections
+**Identyfikator URI przesunięcia**:/config/Bluetooth/AllowPromptedProximalConnections
 
-#### <a name="windows10generalconfigurationbluetoothdevicename"></a>Windows10GeneralConfiguration.BluetoothDeviceName 
+### <a name="windows10generalconfigurationbluetoothdevicename"></a>Windows10GeneralConfiguration.BluetoothDeviceName 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Bluetooth/LocalDeviceName
+**Identyfikator URI przesunięcia**:/config/Bluetooth/LocalDeviceName
 
-#### <a name="windows10generalconfigurationbootstartdriverinitialization"></a>windows10generalconfiguration.bootStartDriverInitialization 
+### <a name="windows10generalconfigurationbootstartdriverinitialization"></a>windows10generalconfiguration.bootStartDriverInitialization 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/System/BootStartDriverInitialization
+**Identyfikator URI przesunięcia**:/config/system/BootStartDriverInitialization
 
-#### <a name="windows10generalconfigurationcamerablocked"></a>Windows10GeneralConfiguration.CameraBlocked 
+### <a name="windows10generalconfigurationcamerablocked"></a>Windows10GeneralConfiguration.CameraBlocked 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Camera/AllowCamera
+**Identyfikator URI przesunięcia**:/config/Camera/AllowCamera
 
-#### <a name="windows10generalconfigurationcellularblockdatawhenroaming"></a>Windows10GeneralConfiguration.CellularBlockDataWhenRoaming 
+### <a name="windows10generalconfigurationcellularblockdatawhenroaming"></a>Windows10GeneralConfiguration.CellularBlockDataWhenRoaming 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Connectivity/AllowCellularDataRoaming
+**Identyfikator URI przesunięcia**:/config/Connectivity/AllowCellularDataRoaming
 
-#### <a name="windows10generalconfigurationcellularblockvpn"></a>Windows10GeneralConfiguration.CellularBlockVpn 
+### <a name="windows10generalconfigurationcellularblockvpn"></a>Windows10GeneralConfiguration.CellularBlockVpn 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Connectivity/AllowVPNOverCellular
+**Identyfikator URI przesunięcia**:/config/Connectivity/AllowVPNOverCellular
 
-#### <a name="windows10generalconfigurationcellularblockvpnwhenroaming"></a>Windows10GeneralConfiguration.CellularBlockVpnWhenRoaming 
+### <a name="windows10generalconfigurationcellularblockvpnwhenroaming"></a>Windows10GeneralConfiguration.CellularBlockVpnWhenRoaming 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Connectivity/AllowVPNRoamingOverCellular
+**Identyfikator URI przesunięcia**:/config/Connectivity/AllowVPNRoamingOverCellular
 
-#### <a name="windows10generalconfigurationcellulardata"></a>Windows10GeneralConfiguration.CellularData 
+### <a name="windows10generalconfigurationcellulardata"></a>Windows10GeneralConfiguration.CellularData 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Connectivity/AllowCellularData
+**Identyfikator URI przesunięcia**:/config/Connectivity/AllowCellularData
 
-#### <a name="windows10generalconfigurationcertificatesblockmanualrootcertificateinstallation"></a>Windows10GeneralConfiguration.CertificatesBlockManualRootCertificateInstallation 
+### <a name="windows10generalconfigurationcertificatesblockmanualrootcertificateinstallation"></a>Windows10GeneralConfiguration.CertificatesBlockManualRootCertificateInstallation 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Security/AllowManualRootCertificateInstallation
+**Identyfikator URI przesunięcia**:/config/Security/AllowManualRootCertificateInstallation
 
-#### <a name="windows10generalconfigurationconnecteddevicesserviceblocked"></a>Windows10GeneralConfiguration.ConnectedDevicesServiceBlocked 
+### <a name="windows10generalconfigurationconnecteddevicesserviceblocked"></a>Windows10GeneralConfiguration.ConnectedDevicesServiceBlocked 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Connectivity/AllowConnectedDevices
+**Identyfikator URI przesunięcia**:/config/Connectivity/AllowConnectedDevices
 
-#### <a name="windows10generalconfigurationcopypasteblocked"></a>Windows10GeneralConfiguration.CopyPasteBlocked 
+### <a name="windows10generalconfigurationcopypasteblocked"></a>Windows10GeneralConfiguration.CopyPasteBlocked 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Experience/AllowCopyPaste
+**Identyfikator URI przesunięcia**:/config/Experience/AllowCopyPaste
 
-#### <a name="windows10generalconfigurationcortanablocked"></a>Windows10GeneralConfiguration.CortanaBlocked 
+### <a name="windows10generalconfigurationcortanablocked"></a>Windows10GeneralConfiguration.CortanaBlocked 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/AboveLock/AllowCortanaAboveLock
+**Identyfikator URI przesunięcia**:/config/AboveLock/AllowCortanaAboveLock
 
-#### <a name="windows10generalconfigurationcryptographyallowfipsalgorithmpolicy"></a>Windows10GeneralConfiguration.CryptographyAllowFipsAlgorithmPolicy 
+### <a name="windows10generalconfigurationcryptographyallowfipsalgorithmpolicy"></a>Windows10GeneralConfiguration.CryptographyAllowFipsAlgorithmPolicy 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Cryptography/AllowFipsAlgorithmPolicy
+**Identyfikator URI przesunięcia**:/config/Cryptography/AllowFipsAlgorithmPolicy
 
-#### <a name="windows10generalconfigurationdataprotectionblockdirectmemoryaccess"></a>Windows10GeneralConfiguration.DataProtectionBlockDirectMemoryAccess 
+### <a name="windows10generalconfigurationdataprotectionblockdirectmemoryaccess"></a>Windows10GeneralConfiguration.DataProtectionBlockDirectMemoryAccess 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/DataProtection/AllowDirectMemoryAccess
+**Identyfikator URI przesunięcia**:/config/dataprotection/AllowDirectMemoryAccess
 
-#### <a name="windows10generalconfigurationdefenderblockenduseraccess"></a>Windows10GeneralConfiguration.DefenderBlockEndUserAccess 
+### <a name="windows10generalconfigurationdefenderblockenduseraccess"></a>Windows10GeneralConfiguration.DefenderBlockEndUserAccess 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/AllowUserUIAccess
+**Identyfikator URI przesunięcia**:/config/Defender/AllowUserUIAccess
 
-#### <a name="windows10generalconfigurationdefenderblockonaccessprotection"></a>Windows10GeneralConfiguration.DefenderBlockOnAccessProtection 
+### <a name="windows10generalconfigurationdefenderblockonaccessprotection"></a>Windows10GeneralConfiguration.DefenderBlockOnAccessProtection 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/AllowOnAccessProtection
+**Identyfikator URI przesunięcia**:/config/Defender/AllowOnAccessProtection
 
-#### <a name="windows10generalconfigurationdefendercloudblocklevel"></a>Windows10GeneralConfiguration.DefenderCloudBlockLevel 
+### <a name="windows10generalconfigurationdefendercloudblocklevel"></a>Windows10GeneralConfiguration.DefenderCloudBlockLevel 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/CloudBlockLevel
+**Identyfikator URI przesunięcia**:/config/Defender/CloudBlockLevel
 
-#### <a name="windows10generalconfigurationdefendercloudextendedtimeout"></a>Windows10GeneralConfiguration.DefenderCloudExtendedTimeout 
+### <a name="windows10generalconfigurationdefendercloudextendedtimeout"></a>Windows10GeneralConfiguration.DefenderCloudExtendedTimeout 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/CloudExtendedTimeout
+**Identyfikator URI przesunięcia**:/config/Defender/CloudExtendedTimeout
 
-#### <a name="windows10generalconfigurationdefendercloudextendedtimeoutinseconds"></a>Windows10GeneralConfiguration.DefenderCloudExtendedTimeoutInSeconds 
+### <a name="windows10generalconfigurationdefendercloudextendedtimeoutinseconds"></a>Windows10GeneralConfiguration.DefenderCloudExtendedTimeoutInSeconds 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/CloudExtendedTimeout
+**Identyfikator URI przesunięcia**:/config/Defender/CloudExtendedTimeout
 
-#### <a name="windows10generalconfigurationdefenderdaysbeforedeletingquarantinedmalware"></a>Windows10GeneralConfiguration.DefenderDaysBeforeDeletingQuarantinedMalware 
+### <a name="windows10generalconfigurationdefenderdaysbeforedeletingquarantinedmalware"></a>Windows10GeneralConfiguration.DefenderDaysBeforeDeletingQuarantinedMalware 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/DaysToRetainCleanedMalware
+**Identyfikator URI przesunięcia**:/config/Defender/DaysToRetainCleanedMalware
 
-#### <a name="windows10generalconfigurationdefenderdetectedmalwareactions"></a>Windows10GeneralConfiguration.DefenderDetectedMalwareActions 
+### <a name="windows10generalconfigurationdefenderdetectedmalwareactions"></a>Windows10GeneralConfiguration.DefenderDetectedMalwareActions 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/ThreatSeverityDefaultAction
+**Identyfikator URI przesunięcia**:/config/Defender/ThreatSeverityDefaultAction
 
-#### <a name="windows10generalconfigurationdefenderfileextensionstoexclude"></a>Windows10GeneralConfiguration.DefenderFileExtensionsToExclude 
+### <a name="windows10generalconfigurationdefenderfileextensionstoexclude"></a>Windows10GeneralConfiguration.DefenderFileExtensionsToExclude 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/ExcludedExtensions
+**Identyfikator URI przesunięcia**:/config/Defender/ExcludedExtensions
 
-#### <a name="windows10generalconfigurationdefenderfilesandfolderstoexclude"></a>Windows10GeneralConfiguration.DefenderFilesAndFoldersToExclude 
+### <a name="windows10generalconfigurationdefenderfilesandfolderstoexclude"></a>Windows10GeneralConfiguration.DefenderFilesAndFoldersToExclude 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/ExcludedPaths
+**Identyfikator URI przesunięcia**:/config/Defender/ExcludedPaths
 
-#### <a name="windows10generalconfigurationdefendermonitorfileactivity"></a>Windows10GeneralConfiguration.DefenderMonitorFileActivity 
+### <a name="windows10generalconfigurationdefendermonitorfileactivity"></a>Windows10GeneralConfiguration.DefenderMonitorFileActivity 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/AllowRealtimeMonitoring
+**Identyfikator URI przesunięcia**:/config/Defender/AllowRealtimeMonitoring
 
-#### <a name="windows10generalconfigurationdefenderpotentiallyunwantedappaction"></a>Windows10GeneralConfiguration.DefenderPotentiallyUnwantedAppAction 
+### <a name="windows10generalconfigurationdefenderpotentiallyunwantedappaction"></a>Windows10GeneralConfiguration.DefenderPotentiallyUnwantedAppAction 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/PUAProtection
+**Identyfikator URI przesunięcia**:/config/Defender/PUAProtection
 
-#### <a name="windows10generalconfigurationdefenderpotentiallyunwantedappactionsetting"></a>Windows10GeneralConfiguration.DefenderPotentiallyUnwantedAppActionSetting 
+### <a name="windows10generalconfigurationdefenderpotentiallyunwantedappactionsetting"></a>Windows10GeneralConfiguration.DefenderPotentiallyUnwantedAppActionSetting 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/PUAProtection
+**Identyfikator URI przesunięcia**:/config/Defender/PUAProtection
 
-#### <a name="windows10generalconfigurationdefenderprocessestoexclude"></a>Windows10GeneralConfiguration.DefenderProcessesToExclude 
+### <a name="windows10generalconfigurationdefenderprocessestoexclude"></a>Windows10GeneralConfiguration.DefenderProcessesToExclude 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/ExcludedProcesses
+**Identyfikator URI przesunięcia**:/config/Defender/ExcludedProcesses
 
-#### <a name="windows10generalconfigurationdefenderpromptforsamplesubmission"></a>Windows10GeneralConfiguration.DefenderPromptForSampleSubmission 
+### <a name="windows10generalconfigurationdefenderpromptforsamplesubmission"></a>Windows10GeneralConfiguration.DefenderPromptForSampleSubmission 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/SubmitSamplesConsent
+**Identyfikator URI przesunięcia**:/config/Defender/SubmitSamplesConsent
 
-#### <a name="windows10generalconfigurationdefenderrequirebehaviormonitoring"></a>Windows10GeneralConfiguration.DefenderRequireBehaviorMonitoring 
+### <a name="windows10generalconfigurationdefenderrequirebehaviormonitoring"></a>Windows10GeneralConfiguration.DefenderRequireBehaviorMonitoring 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/AllowBehaviorMonitoring
+**Identyfikator URI przesunięcia**:/config/Defender/AllowBehaviorMonitoring
 
-#### <a name="windows10generalconfigurationdefenderrequirecloudprotection"></a>Windows10GeneralConfiguration.DefenderRequireCloudProtection 
+### <a name="windows10generalconfigurationdefenderrequirecloudprotection"></a>Windows10GeneralConfiguration.DefenderRequireCloudProtection 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/Defender/AllowCloudProtection
+**Identyfikator URI przesunięcia**:/config/Defender/AllowCloudProtection
 
-#### <a name="windows10generalconfigurationdefenderrequirenetworkinspectionsystem"></a>Windows10GeneralConfiguration.DefenderRequireNetworkInspectionSystem 
+### <a name="windows10generalconfigurationdefenderrequirenetworkinspectionsystem"></a>Windows10GeneralConfiguration.DefenderRequireNetworkInspectionSystem 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/AllowIntrusionPreventionSystem
+**Identyfikator URI przesunięcia**:/config/Defender/AllowIntrusionPreventionSystem
 
-#### <a name="windows10generalconfigurationdefenderrequirerealtimemonitoring"></a>Windows10GeneralConfiguration.DefenderRequireRealTimeMonitoring 
+### <a name="windows10generalconfigurationdefenderrequirerealtimemonitoring"></a>Windows10GeneralConfiguration.DefenderRequireRealTimeMonitoring 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/AllowRealtimeMonitoring
+**Identyfikator URI przesunięcia**:/config/Defender/AllowRealtimeMonitoring
 
-#### <a name="windows10generalconfigurationdefenderscanarchivefiles"></a>Windows10GeneralConfiguration.DefenderScanArchiveFiles 
+### <a name="windows10generalconfigurationdefenderscanarchivefiles"></a>Windows10GeneralConfiguration.DefenderScanArchiveFiles 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/AllowArchiveScanning
+**Identyfikator URI przesunięcia**:/config/Defender/AllowArchiveScanning
 
-#### <a name="windows10generalconfigurationdefenderscandownloads"></a>Windows10GeneralConfiguration.DefenderScanDownloads 
+### <a name="windows10generalconfigurationdefenderscandownloads"></a>Windows10GeneralConfiguration.DefenderScanDownloads 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/AllowIOAVProtection
+**Identyfikator URI przesunięcia**:/config/Defender/AllowIOAVProtection
 
-#### <a name="windows10generalconfigurationdefenderscanincomingmail"></a>Windows10GeneralConfiguration.DefenderScanIncomingMail 
+### <a name="windows10generalconfigurationdefenderscanincomingmail"></a>Windows10GeneralConfiguration.DefenderScanIncomingMail 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/Defender/AllowScanningNetworkFiles
+**Identyfikator URI przesunięcia**:/config/Defender/AllowScanningNetworkFiles
 
-#### <a name="windows10generalconfigurationdefenderscanmappednetworkdrivesduringfullscan"></a>Windows10GeneralConfiguration.DefenderScanMappedNetworkDrivesDuringFullScan 
+### <a name="windows10generalconfigurationdefenderscanmappednetworkdrivesduringfullscan"></a>Windows10GeneralConfiguration.DefenderScanMappedNetworkDrivesDuringFullScan 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/Defender/AllowFullScanOnMappedNetworkDrives
+**Identyfikator URI przesunięcia**:/config/Defender/AllowFullScanOnMappedNetworkDrives
 
-#### <a name="windows10generalconfigurationdefenderscanmaxcpu"></a>Windows10GeneralConfiguration.DefenderScanMaxCpu 
+### <a name="windows10generalconfigurationdefenderscanmaxcpu"></a>Windows10GeneralConfiguration.DefenderScanMaxCpu 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/AvgCPULoadFactor
+**Identyfikator URI przesunięcia**:/config/Defender/AvgCPULoadFactor
 
-#### <a name="windows10generalconfigurationdefenderscannetworkfiles"></a>Windows10GeneralConfiguration.DefenderScanNetworkFiles 
+### <a name="windows10generalconfigurationdefenderscannetworkfiles"></a>Windows10GeneralConfiguration.DefenderScanNetworkFiles 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/Defender/AllowScanningNetworkFiles
+**Identyfikator URI przesunięcia**:/config/Defender/AllowScanningNetworkFiles
 
-#### <a name="windows10generalconfigurationdefenderscanremovabledrivesduringfullscan"></a>Windows10GeneralConfiguration.DefenderScanRemovableDrivesDuringFullScan 
+### <a name="windows10generalconfigurationdefenderscanremovabledrivesduringfullscan"></a>Windows10GeneralConfiguration.DefenderScanRemovableDrivesDuringFullScan 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/Defender/AllowFullScanRemovableDriveScanning
+**Identyfikator URI przesunięcia**:/config/Defender/AllowFullScanRemovableDriveScanning
 
-#### <a name="windows10generalconfigurationdefenderscanscriptsloadedininternetexplorer"></a>Windows10GeneralConfiguration.DefenderScanScriptsLoadedInInternetExplorer 
+### <a name="windows10generalconfigurationdefenderscanscriptsloadedininternetexplorer"></a>Windows10GeneralConfiguration.DefenderScanScriptsLoadedInInternetExplorer 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/AllowScriptScanning
+**Identyfikator URI przesunięcia**:/config/Defender/AllowScriptScanning
 
-#### <a name="windows10generalconfigurationdefenderscantype"></a>Windows10GeneralConfiguration.DefenderScanType 
+### <a name="windows10generalconfigurationdefenderscantype"></a>Windows10GeneralConfiguration.DefenderScanType 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/ScanParameter
+**Identyfikator URI przesunięcia**:/config/Defender/ScanParameter
 
-#### <a name="windows10generalconfigurationdefenderscheduledquickscantime"></a>Windows10GeneralConfiguration.DefenderScheduledQuickScanTime 
+### <a name="windows10generalconfigurationdefenderscheduledquickscantime"></a>Windows10GeneralConfiguration.DefenderScheduledQuickScanTime 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/ScheduleQuickScanTime
+**Identyfikator URI przesunięcia**:/config/Defender/ScheduleQuickScanTime
 
-#### <a name="windows10generalconfigurationdefenderscheduledscantime"></a>Windows10GeneralConfiguration.DefenderScheduledScanTime 
+### <a name="windows10generalconfigurationdefenderscheduledscantime"></a>Windows10GeneralConfiguration.DefenderScheduledScanTime 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/ScheduleScanTime
+**Identyfikator URI przesunięcia**:/config/Defender/ScheduleScanTime
 
-#### <a name="windows10generalconfigurationdefenderschedulescanday"></a>Windows10GeneralConfiguration.DefenderScheduleScanDay 
+### <a name="windows10generalconfigurationdefenderschedulescanday"></a>Windows10GeneralConfiguration.DefenderScheduleScanDay 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/ScheduleScanDay
+**Identyfikator URI przesunięcia**:/config/Defender/ScheduleScanDay
 
-#### <a name="windows10generalconfigurationdefendersignatureupdateintervalinhours"></a>Windows10GeneralConfiguration.DefenderSignatureUpdateIntervalInHours 
+### <a name="windows10generalconfigurationdefendersignatureupdateintervalinhours"></a>Windows10GeneralConfiguration.DefenderSignatureUpdateIntervalInHours 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/SignatureUpdateInterval
+**Identyfikator URI przesunięcia**:/config/Defender/SignatureUpdateInterval
 
-#### <a name="windows10generalconfigurationdefendersubmitsamplesconsenttype"></a>Windows10GeneralConfiguration.DefenderSubmitSamplesConsentType 
+### <a name="windows10generalconfigurationdefendersubmitsamplesconsenttype"></a>Windows10GeneralConfiguration.DefenderSubmitSamplesConsentType 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/SubmitSamplesConsent
+**Identyfikator URI przesunięcia**:/config/Defender/SubmitSamplesConsent
 
-#### <a name="windows10generalconfigurationdefendersystemscanschedule"></a>Windows10GeneralConfiguration.DefenderSystemScanSchedule 
+### <a name="windows10generalconfigurationdefendersystemscanschedule"></a>Windows10GeneralConfiguration.DefenderSystemScanSchedule 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Defender/ScheduleScanDay
+**Identyfikator URI przesunięcia**:/config/Defender/ScheduleScanDay
 
-#### <a name="windows10generalconfigurationdeveloperunlocksetting"></a>Windows10GeneralConfiguration.DeveloperUnlockSetting 
+### <a name="windows10generalconfigurationdeveloperunlocksetting"></a>Windows10GeneralConfiguration.DeveloperUnlockSetting 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/ApplicationManagement/AllowDeveloperUnlock
+**Identyfikator URI przesunięcia**:/config/ApplicationManagement/AllowDeveloperUnlock
 
-#### <a name="windows10generalconfigurationdevicemanagementblockfactoryresetonmobile"></a>Windows10GeneralConfiguration.DeviceManagementBlockFactoryResetOnMobile 
+### <a name="windows10generalconfigurationdevicemanagementblockfactoryresetonmobile"></a>Windows10GeneralConfiguration.DeviceManagementBlockFactoryResetOnMobile 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/System/AllowUserToResetPhone
+**Identyfikator URI przesunięcia**:/config/system/AllowUserToResetPhone
 
-#### <a name="windows10generalconfigurationdevicemanagementblockmanualunenroll"></a>Windows10GeneralConfiguration.DeviceManagementBlockManualUnenroll 
+### <a name="windows10generalconfigurationdevicemanagementblockmanualunenroll"></a>Windows10GeneralConfiguration.DeviceManagementBlockManualUnenroll 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Experience/AllowManualMDMUnenrollment
+**Identyfikator URI przesunięcia**:/config/Experience/AllowManualMDMUnenrollment
 
-#### <a name="windows10generalconfigurationdiagnosticsdatasubmissionmode"></a>Windows10GeneralConfiguration.DiagnosticsDataSubmissionMode 
+### <a name="windows10generalconfigurationdiagnosticsdatasubmissionmode"></a>Windows10GeneralConfiguration.DiagnosticsDataSubmissionMode 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/System/AllowTelemetry
+**Identyfikator URI przesunięcia**:/config/system/AllowTelemetry
 
-#### <a name="windows10generalconfigurationdisplayapplistwithgdidpiscalingturnedoff"></a>Windows10GeneralConfiguration.DisplayAppListWithGdiDPIScalingTurnedOff 
+### <a name="windows10generalconfigurationdisplayapplistwithgdidpiscalingturnedoff"></a>Windows10GeneralConfiguration.DisplayAppListWithGdiDPIScalingTurnedOff 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Display/TurnOffGdiDPIScalingForApps
+**Identyfikator URI przesunięcia**:/config/display/TurnOffGdiDPIScalingForApps
 
-#### <a name="windows10generalconfigurationdisplayapplistwithgdidpiscalingturnedon"></a>Windows10GeneralConfiguration.DisplayAppListWithGdiDPIScalingTurnedOn 
+### <a name="windows10generalconfigurationdisplayapplistwithgdidpiscalingturnedon"></a>Windows10GeneralConfiguration.DisplayAppListWithGdiDPIScalingTurnedOn 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Display/TurnOnGdiDPIScalingForApps
+**Identyfikator URI przesunięcia**:/config/display/TurnOnGdiDPIScalingForApps
 
-#### <a name="windows10generalconfigurationedgeallowstartpagesmodification"></a>Windows10GeneralConfiguration.EdgeAllowStartPagesModification 
+### <a name="windows10generalconfigurationedgeallowstartpagesmodification"></a>Windows10GeneralConfiguration.EdgeAllowStartPagesModification 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/HomePages
+**Identyfikator URI przesunięcia**:/config/Browser/homepages
 
-#### <a name="windows10generalconfigurationedgeblockaccesstoaboutflags"></a>Windows10GeneralConfiguration.EdgeBlockAccessToAboutFlags 
+### <a name="windows10generalconfigurationedgeblockaccesstoaboutflags"></a>Windows10GeneralConfiguration.EdgeBlockAccessToAboutFlags 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/PreventAccessToAboutFlagsInMicrosoftEdge
+**Identyfikator URI przesunięcia**:/config/Browser/PreventAccessToAboutFlagsInMicrosoftEdge
 
-#### <a name="windows10generalconfigurationedgeblockaddressbardropdown"></a>Windows10GeneralConfiguration.EdgeBlockAddressBarDropdown 
+### <a name="windows10generalconfigurationedgeblockaddressbardropdown"></a>Windows10GeneralConfiguration.EdgeBlockAddressBarDropdown 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/AllowAddressBarDropdown
+**Identyfikator URI przesunięcia**:/config/Browser/AllowAddressBarDropdown
 
-#### <a name="windows10generalconfigurationedgeblockautofill"></a>Windows10GeneralConfiguration.EdgeBlockAutofill 
+### <a name="windows10generalconfigurationedgeblockautofill"></a>Windows10GeneralConfiguration.EdgeBlockAutofill 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/AllowAutofill
+**Identyfikator URI przesunięcia**:/config/Browser/AllowAutofill
 
-#### <a name="windows10generalconfigurationedgeblockcompatibilitylist"></a>Windows10GeneralConfiguration.EdgeBlockCompatibilityList 
+### <a name="windows10generalconfigurationedgeblockcompatibilitylist"></a>Windows10GeneralConfiguration.EdgeBlockCompatibilityList 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/AllowMicrosoftCompatibilityList
+**Identyfikator URI przesunięcia**:/config/Browser/AllowMicrosoftCompatibilityList
 
-#### <a name="windows10generalconfigurationedgeblockdevelopertools"></a>Windows10GeneralConfiguration.EdgeBlockDeveloperTools 
+### <a name="windows10generalconfigurationedgeblockdevelopertools"></a>Windows10GeneralConfiguration.EdgeBlockDeveloperTools 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/AllowDeveloperTools
+**Identyfikator URI przesunięcia**:/config/Browser/AllowDeveloperTools
 
-#### <a name="windows10generalconfigurationedgeblocked"></a>Windows10GeneralConfiguration.EdgeBlocked 
+### <a name="windows10generalconfigurationedgeblocked"></a>Windows10GeneralConfiguration.EdgeBlocked 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/AllowBrowser
+**Identyfikator URI przesunięcia**:/config/Browser/AllowBrowser
 
-#### <a name="windows10generalconfigurationedgeblockeditfavorites"></a>Windows10GeneralConfiguration.EdgeBlockEditFavorites 
+### <a name="windows10generalconfigurationedgeblockeditfavorites"></a>Windows10GeneralConfiguration.EdgeBlockEditFavorites 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/LockdownFavorites
+**Identyfikator URI przesunięcia**:/config/Browser/LockdownFavorites
 
-#### <a name="windows10generalconfigurationedgeblockextensions"></a>Windows10GeneralConfiguration.EdgeBlockExtensions 
+### <a name="windows10generalconfigurationedgeblockextensions"></a>Windows10GeneralConfiguration.EdgeBlockExtensions 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/AllowExtensions
+**Identyfikator URI przesunięcia**:/config/Browser/AllowExtensions
 
-#### <a name="windows10generalconfigurationedgeblockfullscreenmode"></a>Windows10GeneralConfiguration.EdgeBlockFullScreenMode 
+### <a name="windows10generalconfigurationedgeblockfullscreenmode"></a>Windows10GeneralConfiguration.EdgeBlockFullScreenMode 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/AllowFullScreenMode
+**Identyfikator URI przesunięcia**:/config/Browser/AllowFullScreenMode
 
-#### <a name="windows10generalconfigurationedgeblockinprivatebrowsing"></a>Windows10GeneralConfiguration.EdgeBlockInPrivateBrowsing 
+### <a name="windows10generalconfigurationedgeblockinprivatebrowsing"></a>Windows10GeneralConfiguration.EdgeBlockInPrivateBrowsing 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/AllowInPrivate
+**Identyfikator URI przesunięcia**:/config/Browser/AllowInPrivate
 
-#### <a name="windows10generalconfigurationedgeblocklivetiledatacollection"></a>Windows10GeneralConfiguration.EdgeBlockLiveTileDataCollection 
+### <a name="windows10generalconfigurationedgeblocklivetiledatacollection"></a>Windows10GeneralConfiguration.EdgeBlockLiveTileDataCollection 
 **CSP**: ./Vendor/MSFT/Policy  
-**Offset URI**: /Config/Browser/PreventLiveTileDataCollection
+**Identyfikator URI przesunięcia**:/config/Browser/PreventLiveTileDataCollection
 
-#### <a name="windows10generalconfigurationedgeblockpasswordmanager"></a>Windows10GeneralConfiguration.EdgeBlockPasswordManager 
+### <a name="windows10generalconfigurationedgeblockpasswordmanager"></a>Windows10GeneralConfiguration.EdgeBlockPasswordManager 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/AllowPasswordManager
+**Identyfikator URI przesunięcia**:/config/Browser/AllowPasswordManager
 
-#### <a name="windows10generalconfigurationedgeblockpopups"></a>Windows10GeneralConfiguration.EdgeBlockPopups 
+### <a name="windows10generalconfigurationedgeblockpopups"></a>Windows10GeneralConfiguration.EdgeBlockPopups 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/AllowPopups
+**Identyfikator URI przesunięcia**:/config/Browser/AllowPopups
 
-#### <a name="windows10generalconfigurationedgeblockprelaunch"></a>Windows10GeneralConfiguration.EdgeBlockPrelaunch 
+### <a name="windows10generalconfigurationedgeblockprelaunch"></a>Windows10GeneralConfiguration.EdgeBlockPrelaunch 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/AllowPrelaunch
+**Identyfikator URI przesunięcia**:/config/Browser/AllowPrelaunch
 
-#### <a name="windows10generalconfigurationedgeblockprinting"></a>Windows10GeneralConfiguration.EdgeBlockPrinting 
+### <a name="windows10generalconfigurationedgeblockprinting"></a>Windows10GeneralConfiguration.EdgeBlockPrinting 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/AllowPrinting
+**Identyfikator URI przesunięcia**:/config/Browser/AllowPrinting
 
-#### <a name="windows10generalconfigurationedgeblocksavinghistory"></a>Windows10GeneralConfiguration.EdgeBlockSavingHistory 
+### <a name="windows10generalconfigurationedgeblocksavinghistory"></a>Windows10GeneralConfiguration.EdgeBlockSavingHistory 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/AllowSavingHistory
+**Identyfikator URI przesunięcia**:/config/Browser/AllowSavingHistory
 
-#### <a name="windows10generalconfigurationedgeblocksearchsuggestions"></a>Windows10GeneralConfiguration.EdgeBlockSearchSuggestions 
+### <a name="windows10generalconfigurationedgeblocksearchsuggestions"></a>Windows10GeneralConfiguration.EdgeBlockSearchSuggestions 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/AllowSearchSuggestionsinAddressBar
+**Identyfikator URI przesunięcia**:/config/Browser/AllowSearchSuggestionsinAddressBar
 
-#### <a name="windows10generalconfigurationedgeblocksendingdonottrackheader"></a>Windows10GeneralConfiguration.EdgeBlockSendingDoNotTrackHeader 
+### <a name="windows10generalconfigurationedgeblocksendingdonottrackheader"></a>Windows10GeneralConfiguration.EdgeBlockSendingDoNotTrackHeader 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/AllowDoNotTrack
+**Identyfikator URI przesunięcia**:/config/Browser/AllowDoNotTrack
 
-#### <a name="windows10generalconfigurationedgeblocksendingintranettraffictointernetexplorer"></a>Windows10GeneralConfiguration.EdgeBlockSendingIntranetTrafficToInternetExplorer 
+### <a name="windows10generalconfigurationedgeblocksendingintranettraffictointernetexplorer"></a>Windows10GeneralConfiguration.EdgeBlockSendingIntranetTrafficToInternetExplorer 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/SendIntranetTraffictoInternetExplorer
+**Identyfikator URI przesunięcia**:/config/Browser/SendIntranetTraffictoInternetExplorer
 
-#### <a name="windows10generalconfigurationedgeblocksideloadingextensions"></a>Windows10GeneralConfiguration.EdgeBlockSideloadingExtensions 
+### <a name="windows10generalconfigurationedgeblocksideloadingextensions"></a>Windows10GeneralConfiguration.EdgeBlockSideloadingExtensions 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/AllowSideloadingOfExtensions
+**Identyfikator URI przesunięcia**:/config/Browser/AllowSideloadingOfExtensions
 
-#### <a name="windows10generalconfigurationedgeblocktabpreloading"></a>Windows10GeneralConfiguration.EdgeBlockTabPreloading 
+### <a name="windows10generalconfigurationedgeblocktabpreloading"></a>Windows10GeneralConfiguration.EdgeBlockTabPreloading 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/AllowTabPreloading
+**Identyfikator URI przesunięcia**:/config/Browser/AllowTabPreloading
 
-#### <a name="windows10generalconfigurationedgeblockwebcontentonnewtabpage"></a>Windows10GeneralConfiguration.EdgeBlockWebContentOnNewTabPage 
+### <a name="windows10generalconfigurationedgeblockwebcontentonnewtabpage"></a>Windows10GeneralConfiguration.EdgeBlockWebContentOnNewTabPage 
 **CSP**: ./Vendor/MSFT/Policy  
-**Offset URI**: /Config/Browser/AllowWebContentOnNewTabPage
+**Identyfikator URI przesunięcia**:/config/Browser/AllowWebContentOnNewTabPage
 
-#### <a name="windows10generalconfigurationedgeclearbrowsingdataonexit"></a>Windows10GeneralConfiguration.EdgeClearBrowsingDataOnExit 
+### <a name="windows10generalconfigurationedgeclearbrowsingdataonexit"></a>Windows10GeneralConfiguration.EdgeClearBrowsingDataOnExit 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/ClearBrowsingDataOnExit
+**Identyfikator URI przesunięcia**:/config/Browser/ClearBrowsingDataOnExit
 
-#### <a name="windows10generalconfigurationedgecookiepolicy"></a>Windows10GeneralConfiguration.EdgeCookiePolicy 
+### <a name="windows10generalconfigurationedgecookiepolicy"></a>Windows10GeneralConfiguration.EdgeCookiePolicy 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/AllowCookies
+**Identyfikator URI przesunięcia**:/config/Browser/AllowCookies
 
-#### <a name="windows10generalconfigurationedgedisablefirstrunpage"></a>Windows10GeneralConfiguration.EdgeDisableFirstRunPage 
+### <a name="windows10generalconfigurationedgedisablefirstrunpage"></a>Windows10GeneralConfiguration.EdgeDisableFirstRunPage 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/PreventFirstRunPage
+**Identyfikator URI przesunięcia**:/config/Browser/PreventFirstRunPage
 
-#### <a name="windows10generalconfigurationedgeenterprisemodesitelistlocation"></a>Windows10GeneralConfiguration.EdgeEnterpriseModeSiteListLocation 
+### <a name="windows10generalconfigurationedgeenterprisemodesitelistlocation"></a>Windows10GeneralConfiguration.EdgeEnterpriseModeSiteListLocation 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/EnterpriseSiteListServiceUrl
+**Identyfikator URI przesunięcia**:/config/Browser/EnterpriseSiteListServiceUrl
 
-#### <a name="windows10generalconfigurationedgefavoritesbarvisibility"></a>Windows10GeneralConfiguration.EdgeFavoritesBarVisibility 
+### <a name="windows10generalconfigurationedgefavoritesbarvisibility"></a>Windows10GeneralConfiguration.EdgeFavoritesBarVisibility 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/ConfigureFavoritesBar
+**Identyfikator URI przesunięcia**:/config/Browser/ConfigureFavoritesBar
 
-#### <a name="windows10generalconfigurationedgefavoriteslistlocation"></a>Windows10GeneralConfiguration.EdgeFavoritesListLocation 
+### <a name="windows10generalconfigurationedgefavoriteslistlocation"></a>Windows10GeneralConfiguration.EdgeFavoritesListLocation 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/ProvisionFavorites
+**Identyfikator URI przesunięcia**:/config/Browser/ProvisionFavorites
 
-#### <a name="windows10generalconfigurationedgefirstrunurl"></a>Windows10GeneralConfiguration.EdgeFirstRunUrl 
+### <a name="windows10generalconfigurationedgefirstrunurl"></a>Windows10GeneralConfiguration.EdgeFirstRunUrl 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/FirstRunURL
+**Identyfikator URI przesunięcia**:/config/Browser/FirstRunURL
 
-#### <a name="windows10generalconfigurationedgehomebuttonconfiguration"></a>Windows10GeneralConfiguration.EdgeHomeButtonConfiguration 
+### <a name="windows10generalconfigurationedgehomebuttonconfiguration"></a>Windows10GeneralConfiguration.EdgeHomeButtonConfiguration 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/SetHomeButtonURL
+**Identyfikator URI przesunięcia**:/config/Browser/SetHomeButtonURL
 
-#### <a name="windows10generalconfigurationedgehomebuttonconfigurationenabled"></a>Windows10GeneralConfiguration.EdgeHomeButtonConfigurationEnabled 
+### <a name="windows10generalconfigurationedgehomebuttonconfigurationenabled"></a>Windows10GeneralConfiguration.EdgeHomeButtonConfigurationEnabled 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/ConfigureHomeButton
+**Identyfikator URI przesunięcia**:/config/Browser/ConfigureHomeButton
 
-#### <a name="windows10generalconfigurationedgehomepageurls"></a>Windows10GeneralConfiguration.EdgeHomepageUrls 
+### <a name="windows10generalconfigurationedgehomepageurls"></a>Windows10GeneralConfiguration.EdgeHomepageUrls 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/SetHomeButtonURL
+**Identyfikator URI przesunięcia**:/config/Browser/SetHomeButtonURL
 
-#### <a name="windows10generalconfigurationedgenewtabpageurl"></a>Windows10GeneralConfiguration.EdgeNewTabPageURL 
+### <a name="windows10generalconfigurationedgenewtabpageurl"></a>Windows10GeneralConfiguration.EdgeNewTabPageURL 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/SetNewTabPageURL
+**Identyfikator URI przesunięcia**:/config/Browser/SetNewTabPageURL
 
-#### <a name="windows10generalconfigurationedgeopenswith"></a>Windows10GeneralConfiguration.EdgeOpensWith 
+### <a name="windows10generalconfigurationedgeopenswith"></a>Windows10GeneralConfiguration.EdgeOpensWith 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/ConfigureOpenMicrosoftEdgeWith
+**Identyfikator URI przesunięcia**:/config/Browser/ConfigureOpenMicrosoftEdgeWith
 
-#### <a name="windows10generalconfigurationedgepreventcertificateerroroverride"></a>Windows10GeneralConfiguration.EdgePreventCertificateErrorOverride 
+### <a name="windows10generalconfigurationedgepreventcertificateerroroverride"></a>Windows10GeneralConfiguration.EdgePreventCertificateErrorOverride 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/PreventCertErrorOverrides
+**Identyfikator URI przesunięcia**:/config/Browser/PreventCertErrorOverrides
 
-#### <a name="windows10generalconfigurationedgerequiresmartscreen"></a>Windows10GeneralConfiguration.EdgeRequireSmartScreen 
+### <a name="windows10generalconfigurationedgerequiresmartscreen"></a>Windows10GeneralConfiguration.EdgeRequireSmartScreen 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/AllowSmartScreen
+**Identyfikator URI przesunięcia**:/config/Browser/AllowSmartScreen
 
-#### <a name="windows10generalconfigurationedgesearchengine"></a>Windows10GeneralConfiguration.EdgeSearchEngine 
+### <a name="windows10generalconfigurationedgesearchengine"></a>Windows10GeneralConfiguration.EdgeSearchEngine 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/SetDefaultSearchEngine
+**Identyfikator URI przesunięcia**:/config/Browser/SetDefaultSearchEngine
 
-#### <a name="windows10generalconfigurationedgesendintranettraffictointernetexplorer"></a>Windows10GeneralConfiguration.EdgeSendIntranetTrafficToInternetExplorer 
+### <a name="windows10generalconfigurationedgesendintranettraffictointernetexplorer"></a>Windows10GeneralConfiguration.EdgeSendIntranetTrafficToInternetExplorer 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/SendIntranetTraffictoInternetExplorer
+**Identyfikator URI przesunięcia**:/config/Browser/SendIntranetTraffictoInternetExplorer
 
-#### <a name="windows10generalconfigurationedgeshowmessagewhenopeninginternetexplorersites"></a>Windows10GeneralConfiguration.EdgeShowMessageWhenOpeningInternetExplorerSites 
+### <a name="windows10generalconfigurationedgeshowmessagewhenopeninginternetexplorersites"></a>Windows10GeneralConfiguration.EdgeShowMessageWhenOpeningInternetExplorerSites 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/ShowMessageWhenOpeningSitesInInternetExplorer
+**Identyfikator URI przesunięcia**:/config/Browser/ShowMessageWhenOpeningSitesInInternetExplorer
 
-#### <a name="windows10generalconfigurationedgesyncfavoriteswithinternetexplorer"></a>Windows10GeneralConfiguration.EdgeSyncFavoritesWithInternetExplorer 
+### <a name="windows10generalconfigurationedgesyncfavoriteswithinternetexplorer"></a>Windows10GeneralConfiguration.EdgeSyncFavoritesWithInternetExplorer 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/SyncFavoritesBetweenIEAndMicrosoftEdge
+**Identyfikator URI przesunięcia**:/config/Browser/SyncFavoritesBetweenIEAndMicrosoftEdge
 
-#### <a name="windows10generalconfigurationedgetelemetryformicrosoft365analytics"></a>Windows10GeneralConfiguration.EdgeTelemetryForMicrosoft365Analytics 
+### <a name="windows10generalconfigurationedgetelemetryformicrosoft365analytics"></a>Windows10GeneralConfiguration.EdgeTelemetryForMicrosoft365Analytics 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/ConfigureTelemetryForMicrosoft365Analytics
+**Identyfikator URI przesunięcia**:/config/Browser/ConfigureTelemetryForMicrosoft365Analytics
 
-#### <a name="windows10generalconfigurationenableautomaticredeployment"></a>Windows10GeneralConfiguration.EnableAutomaticRedeployment 
+### <a name="windows10generalconfigurationenableautomaticredeployment"></a>Windows10GeneralConfiguration.EnableAutomaticRedeployment 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/CredentialProviders/DisableAutomaticReDeploymentCredentials
+**Identyfikator URI przesunięcia**:/config/CredentialProviders/DisableAutomaticReDeploymentCredentials
 
-#### <a name="windows10generalconfigurationenterprisecloudprintdiscoveryendpoint"></a>Windows10GeneralConfiguration.EnterpriseCloudPrintDiscoveryEndPoint 
+### <a name="windows10generalconfigurationenterprisecloudprintdiscoveryendpoint"></a>Windows10GeneralConfiguration.EnterpriseCloudPrintDiscoveryEndPoint 
 **CSP**: ./User/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/EnterpriseCloudPrint/CloudPrinterDiscoveryEndPoint
+**Identyfikator URI przesunięcia**:/config/EnterpriseCloudPrint/CloudPrinterDiscoveryEndPoint
 
-#### <a name="windows10generalconfigurationenterprisecloudprintdiscoverymaxlimit"></a>Windows10GeneralConfiguration.EnterpriseCloudPrintDiscoveryMaxLimit 
+### <a name="windows10generalconfigurationenterprisecloudprintdiscoverymaxlimit"></a>Windows10GeneralConfiguration.EnterpriseCloudPrintDiscoveryMaxLimit 
 **CSP**: ./User/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/EnterpriseCloudPrint/DiscoveryMaxPrinterLimit
+**Identyfikator URI przesunięcia**:/config/EnterpriseCloudPrint/DiscoveryMaxPrinterLimit
 
-#### <a name="windows10generalconfigurationenterprisecloudprintmopriadiscoveryresourceidentifier"></a>Windows10GeneralConfiguration.EnterpriseCloudPrintMopriaDiscoveryResourceIdentifier 
+### <a name="windows10generalconfigurationenterprisecloudprintmopriadiscoveryresourceidentifier"></a>Windows10GeneralConfiguration.EnterpriseCloudPrintMopriaDiscoveryResourceIdentifier 
 **CSP**: ./User/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/EnterpriseCloudPrint/MopriaDiscoveryResourceId
+**Identyfikator URI przesunięcia**:/config/EnterpriseCloudPrint/MopriaDiscoveryResourceId
 
-#### <a name="windows10generalconfigurationenterprisecloudprintoauthauthority"></a>Windows10GeneralConfiguration.EnterpriseCloudPrintOAuthAuthority 
+### <a name="windows10generalconfigurationenterprisecloudprintoauthauthority"></a>Windows10GeneralConfiguration.EnterpriseCloudPrintOAuthAuthority 
 **CSP**: ./User/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/EnterpriseCloudPrint/CloudPrintOAuthAuthority
+**Identyfikator URI przesunięcia**:/config/EnterpriseCloudPrint/CloudPrintOAuthAuthority
 
-#### <a name="windows10generalconfigurationenterprisecloudprintoauthclientidentifier"></a>Windows10GeneralConfiguration.EnterpriseCloudPrintOAuthClientIdentifier 
+### <a name="windows10generalconfigurationenterprisecloudprintoauthclientidentifier"></a>Windows10GeneralConfiguration.EnterpriseCloudPrintOAuthClientIdentifier 
 **CSP**: ./User/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/EnterpriseCloudPrint/CloudPrintOAuthAuthority
+**Identyfikator URI przesunięcia**:/config/EnterpriseCloudPrint/CloudPrintOAuthAuthority
 
-#### <a name="windows10generalconfigurationenterprisecloudprintresourceidentifier"></a>Windows10GeneralConfiguration.EnterpriseCloudPrintResourceIdentifier 
+### <a name="windows10generalconfigurationenterprisecloudprintresourceidentifier"></a>Windows10GeneralConfiguration.EnterpriseCloudPrintResourceIdentifier 
 **CSP**: ./User/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/EnterpriseCloudPrint/CloudPrintResourceId
+**Identyfikator URI przesunięcia**:/config/EnterpriseCloudPrint/CloudPrintResourceId
 
-#### <a name="windows10generalconfigurationexperienceblockconsumerspecificfeatures"></a>Windows10GeneralConfiguration.ExperienceBlockConsumerSpecificFeatures 
+### <a name="windows10generalconfigurationexperienceblockconsumerspecificfeatures"></a>Windows10GeneralConfiguration.ExperienceBlockConsumerSpecificFeatures 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Experience/AllowWindowsConsumerFeatures
+**Identyfikator URI przesunięcia**:/config/Experience/AllowWindowsConsumerFeatures
 
-#### <a name="windows10generalconfigurationexperienceblockdevicediscovery"></a>Windows10GeneralConfiguration.ExperienceBlockDeviceDiscovery 
+### <a name="windows10generalconfigurationexperienceblockdevicediscovery"></a>Windows10GeneralConfiguration.ExperienceBlockDeviceDiscovery 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Experience/AllowDeviceDiscovery
+**Identyfikator URI przesunięcia**:/config/Experience/AllowDeviceDiscovery
 
-#### <a name="windows10generalconfigurationexperienceblockerrordialogwhennosim"></a>Windows10GeneralConfiguration.ExperienceBlockErrorDialogWhenNoSIM 
+### <a name="windows10generalconfigurationexperienceblockerrordialogwhennosim"></a>Windows10GeneralConfiguration.ExperienceBlockErrorDialogWhenNoSIM 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Experience/AllowSIMErrorDialogPromptWhenNoSIM
+**Identyfikator URI przesunięcia**:/config/Experience/AllowSIMErrorDialogPromptWhenNoSIM
 
-#### <a name="windows10generalconfigurationexperienceblocktaskswitcher"></a>Windows10GeneralConfiguration.ExperienceBlockTaskSwitcher 
+### <a name="windows10generalconfigurationexperienceblocktaskswitcher"></a>Windows10GeneralConfiguration.ExperienceBlockTaskSwitcher 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Experience/AllowTaskSwitcher
+**Identyfikator URI przesunięcia**:/config/Experience/AllowTaskSwitcher
 
-#### <a name="windows10generalconfigurationexperienceblockwindowsspotlight"></a>Windows10GeneralConfiguration.ExperienceBlockWindowsSpotlight 
+### <a name="windows10generalconfigurationexperienceblockwindowsspotlight"></a>Windows10GeneralConfiguration.ExperienceBlockWindowsSpotlight 
 **CSP**: ./User/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Experience/AllowWindowsSpotlight
+**Identyfikator URI przesunięcia**:/config/Experience/AllowWindowsSpotlight
 
-#### <a name="windows10generalconfigurationexperiencedonotsyncbrowsersettings"></a>Windows10GeneralConfiguration.ExperienceDoNotSyncBrowserSettings 
+### <a name="windows10generalconfigurationexperiencedonotsyncbrowsersettings"></a>Windows10GeneralConfiguration.ExperienceDoNotSyncBrowserSettings 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Experience/DoNotSyncBrowserSettings
+**Identyfikator URI przesunięcia**:/config/Experience/DoNotSyncBrowserSettings
 
-#### <a name="windows10generalconfigurationgamedvrblocked"></a>Windows10GeneralConfiguration.GameDvrBlocked 
+### <a name="windows10generalconfigurationgamedvrblocked"></a>Windows10GeneralConfiguration.GameDvrBlocked 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/ApplicationManagement/AllowGameDVR
+**Identyfikator URI przesunięcia**:/config/ApplicationManagement/AllowGameDVR
 
-#### <a name="windows10generalconfigurationhardwaredeviceinstallationbydeviceidentifiers"></a>Windows10GeneralConfiguration.HardwareDeviceInstallationByDeviceIdentifiers 
+### <a name="windows10generalconfigurationhardwaredeviceinstallationbydeviceidentifiers"></a>Windows10GeneralConfiguration.HardwareDeviceInstallationByDeviceIdentifiers 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/DeviceInstallation/PreventInstallationOfMatchingDeviceIDs
+**Identyfikator URI przesunięcia**:/config/DeviceInstallation/PreventInstallationOfMatchingDeviceIDs
 
-#### <a name="windows10generalconfigurationhardwaredeviceinstallationbysetupclasses"></a>Windows10GeneralConfiguration.HardwareDeviceInstallationBySetupClasses 
+### <a name="windows10generalconfigurationhardwaredeviceinstallationbysetupclasses"></a>Windows10GeneralConfiguration.HardwareDeviceInstallationBySetupClasses 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/DeviceInstallation/PreventInstallationOfMatchingDeviceSetupClasses
+**Identyfikator URI przesunięcia**:/config/DeviceInstallation/PreventInstallationOfMatchingDeviceSetupClasses
 
-#### <a name="windows10generalconfigurationinkworkspaceaccess"></a>Windows10GeneralConfiguration.InkWorkspaceAccess 
+### <a name="windows10generalconfigurationinkworkspaceaccess"></a>Windows10GeneralConfiguration.InkWorkspaceAccess 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/WindowsInkWorkspace/AllowWindowsInkWorkspace
+**Identyfikator URI przesunięcia**:/config/WindowsInkWorkspace/AllowWindowsInkWorkspace
 
-#### <a name="windows10generalconfigurationinkworkspaceaccessstate"></a>Windows10GeneralConfiguration.InkWorkspaceAccessState 
+### <a name="windows10generalconfigurationinkworkspaceaccessstate"></a>Windows10GeneralConfiguration.InkWorkspaceAccessState 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/WindowsInkWorkspace/AllowWindowsInkWorkspace
+**Identyfikator URI przesunięcia**:/config/WindowsInkWorkspace/AllowWindowsInkWorkspace
 
-#### <a name="windows10generalconfigurationinkworkspaceblocksuggestedapps"></a>Windows10GeneralConfiguration.InkWorkspaceBlockSuggestedApps 
+### <a name="windows10generalconfigurationinkworkspaceblocksuggestedapps"></a>Windows10GeneralConfiguration.InkWorkspaceBlockSuggestedApps 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/WindowsInkWorkspace/AllowSuggestedAppsInWindowsInkWorkspace
+**Identyfikator URI przesunięcia**:/config/WindowsInkWorkspace/AllowSuggestedAppsInWindowsInkWorkspace
 
-#### <a name="windows10generalconfigurationinternetexploreractivexcontrolsinprotectedmode"></a>Windows10GeneralConfiguration.InternetExplorerActiveXControlsInProtectedMode 
+### <a name="windows10generalconfigurationinternetexploreractivexcontrolsinprotectedmode"></a>Windows10GeneralConfiguration.InternetExplorerActiveXControlsInProtectedMode 
 **CSP**: ./Device/Vendor/MSFT/Policy  
 **Offset URI**: /Config/InternetExplorer/DoNotAllowActiveXControlsInProtectedMode
 
-#### <a name="windows10generalconfigurationinternetexplorerautocomplete"></a>Windows10GeneralConfiguration.InternetExplorerAutoComplete 
+### <a name="windows10generalconfigurationinternetexplorerautocomplete"></a>Windows10GeneralConfiguration.InternetExplorerAutoComplete 
 **CSP**: ./User/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/AllowAutoComplete
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/AllowAutoComplete
 
-#### <a name="windows10generalconfigurationinternetexplorerblockoutdatedactivexcontrols"></a>Windows10GeneralConfiguration.InternetExplorerBlockOutdatedActiveXControls 
+### <a name="windows10generalconfigurationinternetexplorerblockoutdatedactivexcontrols"></a>Windows10GeneralConfiguration.InternetExplorerBlockOutdatedActiveXControls 
 **CSP**: ./Device/Vendor/MSFT/Policy  
 **Offset URI**: /Config/InternetExplorer/DoNotBlockOutdatedActiveXControls
 
-#### <a name="windows10generalconfigurationinternetexplorerbypasssmartscreenwarnings"></a>Windows10GeneralConfiguration.InternetExplorerBypassSmartScreenWarnings 
+### <a name="windows10generalconfigurationinternetexplorerbypasssmartscreenwarnings"></a>Windows10GeneralConfiguration.InternetExplorerBypassSmartScreenWarnings 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/DisableBypassOfSmartScreenWarnings
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/DisableBypassOfSmartScreenWarnings
 
-#### <a name="windows10generalconfigurationinternetexplorerbypasssmartscreenwarningsaboutuncommonfiles"></a>Windows10GeneralConfiguration.InternetExplorerBypassSmartScreenWarningsAboutUncommonFiles 
+### <a name="windows10generalconfigurationinternetexplorerbypasssmartscreenwarningsaboutuncommonfiles"></a>Windows10GeneralConfiguration.InternetExplorerBypassSmartScreenWarningsAboutUncommonFiles 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/DisableBypassOfSmartScreenWarningsAboutUncommonFiles
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/DisableBypassOfSmartScreenWarningsAboutUncommonFiles
 
-#### <a name="windows10generalconfigurationinternetexplorercertificateaddressmismatchwarning"></a>Windows10GeneralConfiguration.InternetExplorerCertificateAddressMismatchWarning 
+### <a name="windows10generalconfigurationinternetexplorercertificateaddressmismatchwarning"></a>Windows10GeneralConfiguration.InternetExplorerCertificateAddressMismatchWarning 
 **CSP**: ./Device/Vendor/MSFT/Policy  
 **Offset URI**: /Config/InternetExplorer/AllowCertificateAddressMismatchWarning
 
-#### <a name="windows10generalconfigurationinternetexplorercheckservercertificaterevocation"></a>Windows10GeneralConfiguration.InternetExplorerCheckServerCertificateRevocation 
+### <a name="windows10generalconfigurationinternetexplorercheckservercertificaterevocation"></a>Windows10GeneralConfiguration.InternetExplorerCheckServerCertificateRevocation 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/CheckServerCertificateRevocation
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/CheckServerCertificateRevocation
 
-#### <a name="windows10generalconfigurationinternetexplorerchecksignaturesondownloadedprograms"></a>Windows10GeneralConfiguration.InternetExplorerCheckSignaturesOnDownloadedPrograms 
+### <a name="windows10generalconfigurationinternetexplorerchecksignaturesondownloadedprograms"></a>Windows10GeneralConfiguration.InternetExplorerCheckSignaturesOnDownloadedPrograms 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/CheckSignaturesOnDownloadedPrograms
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/CheckSignaturesOnDownloadedPrograms
 
-#### <a name="windows10generalconfigurationinternetexplorercrashdetection"></a>Windows10GeneralConfiguration.InternetExplorerCrashDetection 
+### <a name="windows10generalconfigurationinternetexplorercrashdetection"></a>Windows10GeneralConfiguration.InternetExplorerCrashDetection 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/DisableCrashDetection
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/DisableCrashDetection
 
-#### <a name="windows10generalconfigurationinternetexplorerdisableprocessesinenhancedprotectedmode"></a>Windows10GeneralConfiguration.InternetExplorerDisableProcessesInEnhancedProtectedMode 
+### <a name="windows10generalconfigurationinternetexplorerdisableprocessesinenhancedprotectedmode"></a>Windows10GeneralConfiguration.InternetExplorerDisableProcessesInEnhancedProtectedMode 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/DisableProcessesInEnhancedProtectedMode
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/DisableProcessesInEnhancedProtectedMode
 
-#### <a name="windows10generalconfigurationinternetexplorerdownloadenclosures"></a>Windows10GeneralConfiguration.InternetExplorerDownloadEnclosures 
+### <a name="windows10generalconfigurationinternetexplorerdownloadenclosures"></a>Windows10GeneralConfiguration.InternetExplorerDownloadEnclosures 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/DisableEnclosureDownloading
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/DisableEnclosureDownloading
 
-#### <a name="windows10generalconfigurationinternetexplorerencryptionsupport"></a>Windows10GeneralConfiguration.InternetExplorerEncryptionSupport 
+### <a name="windows10generalconfigurationinternetexplorerencryptionsupport"></a>Windows10GeneralConfiguration.InternetExplorerEncryptionSupport 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/DisableEncryptionSupport
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/DisableEncryptionSupport
 
-#### <a name="windows10generalconfigurationinternetexplorerenhancedprotectedmode"></a>Windows10GeneralConfiguration.InternetExplorerEnhancedProtectedMode 
+### <a name="windows10generalconfigurationinternetexplorerenhancedprotectedmode"></a>Windows10GeneralConfiguration.InternetExplorerEnhancedProtectedMode 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/AllowEnhancedProtectedMode
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/AllowEnhancedProtectedMode
 
-#### <a name="windows10generalconfigurationinternetexplorerfallbacktossl3"></a>Windows10GeneralConfiguration.InternetExplorerFallbackToSsl3 
+### <a name="windows10generalconfigurationinternetexplorerfallbacktossl3"></a>Windows10GeneralConfiguration.InternetExplorerFallbackToSsl3 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/AllowFallbackToSSL3
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/AllowFallbackToSSL3
 
-#### <a name="windows10generalconfigurationinternetexplorerignorecertificateerrors"></a>Windows10GeneralConfiguration.InternetExplorerIgnoreCertificateErrors 
+### <a name="windows10generalconfigurationinternetexplorerignorecertificateerrors"></a>Windows10GeneralConfiguration.InternetExplorerIgnoreCertificateErrors 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/DisableIgnoringCertificateErrors
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/DisableIgnoringCertificateErrors
 
-#### <a name="windows10generalconfigurationinternetexplorerincludeallnetworkpaths"></a>Windows10GeneralConfiguration.InternetExplorerIncludeAllNetworkPaths 
+### <a name="windows10generalconfigurationinternetexplorerincludeallnetworkpaths"></a>Windows10GeneralConfiguration.InternetExplorerIncludeAllNetworkPaths 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/IncludeAllNetworkPaths
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/IncludeAllNetworkPaths
 
-#### <a name="windows10generalconfigurationinternetexplorerinternetzoneaccesstodatasources"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneAccessToDataSources 
+### <a name="windows10generalconfigurationinternetexplorerinternetzoneaccesstodatasources"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneAccessToDataSources 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/InternetZoneAllowAccessToDataSources
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/InternetZoneAllowAccessToDataSources
 
-#### <a name="windows10generalconfigurationinternetexplorerinternetzoneallowonlyapproveddomainstouseactivexcontrols"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneAllowOnlyApprovedDomainsToUseActiveXControls 
+### <a name="windows10generalconfigurationinternetexplorerinternetzoneallowonlyapproveddomainstouseactivexcontrols"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneAllowOnlyApprovedDomainsToUseActiveXControls 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/InternetZoneAllowOnlyApprovedDomainsToUseActiveXControls
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/InternetZoneAllowOnlyApprovedDomainsToUseActiveXControls
 
-#### <a name="windows10generalconfigurationinternetexplorerinternetzoneallowonlyapproveddomainstousetdcactivexcontrols"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneAllowOnlyApprovedDomainsToUseTdcActiveXControls 
+### <a name="windows10generalconfigurationinternetexplorerinternetzoneallowonlyapproveddomainstousetdcactivexcontrols"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneAllowOnlyApprovedDomainsToUseTdcActiveXControls 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/InternetZoneAllowOnlyApprovedDomainsToUseTDCActiveXControl
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/InternetZoneAllowOnlyApprovedDomainsToUseTDCActiveXControl
 
-#### <a name="windows10generalconfigurationinternetexplorerinternetzoneallowvbscripttorun"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneAllowVBScriptToRun 
+### <a name="windows10generalconfigurationinternetexplorerinternetzoneallowvbscripttorun"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneAllowVBScriptToRun 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/InternetZoneAllowVBScriptToRunInInternetExplorer
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/InternetZoneAllowVBScriptToRunInInternetExplorer
 
-#### <a name="windows10generalconfigurationinternetexplorerinternetzoneautomaticpromptforfiledownloads"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneAutomaticPromptForFileDownloads 
+### <a name="windows10generalconfigurationinternetexplorerinternetzoneautomaticpromptforfiledownloads"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneAutomaticPromptForFileDownloads 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/InternetZoneAllowAutomaticPromptingForFileDownloads
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/InternetZoneAllowAutomaticPromptingForFileDownloads
 
-#### <a name="windows10generalconfigurationinternetexplorerinternetzonecopyandpasteviascript"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneCopyAndPasteViaScript 
+### <a name="windows10generalconfigurationinternetexplorerinternetzonecopyandpasteviascript"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneCopyAndPasteViaScript 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/InternetZoneAllowCopyPasteViaScript
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/InternetZoneAllowCopyPasteViaScript
 
-#### <a name="windows10generalconfigurationinternetexplorerinternetzonecrosssitescriptingfilter"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneCrossSiteScriptingFilter 
+### <a name="windows10generalconfigurationinternetexplorerinternetzonecrosssitescriptingfilter"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneCrossSiteScriptingFilter 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/InternetZoneEnableCrossSiteScriptingFilter
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/InternetZoneEnableCrossSiteScriptingFilter
 
-#### <a name="windows10generalconfigurationinternetexplorerinternetzonedonotrunantimalwareagainstactivexcontrols"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneDoNotRunAntimalwareAgainstActiveXControls 
+### <a name="windows10generalconfigurationinternetexplorerinternetzonedonotrunantimalwareagainstactivexcontrols"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneDoNotRunAntimalwareAgainstActiveXControls 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/InternetZoneDoNotRunAntimalwareAgainstActiveXControls
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/InternetZoneDoNotRunAntimalwareAgainstActiveXControls
 
-#### <a name="windows10generalconfigurationinternetexplorerinternetzonedotnetframeworkreliantcomponents"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneDotNetFrameworkReliantComponents 
+### <a name="windows10generalconfigurationinternetexplorerinternetzonedotnetframeworkreliantcomponents"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneDotNetFrameworkReliantComponents 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/InternetZoneAllowNETFrameworkReliantComponents
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/InternetZoneAllowNETFrameworkReliantComponents
 
-#### <a name="windows10generalconfigurationinternetexplorerinternetzonedownloadsignedactivexcontrols"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneDownloadSignedActiveXControls 
+### <a name="windows10generalconfigurationinternetexplorerinternetzonedownloadsignedactivexcontrols"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneDownloadSignedActiveXControls 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/InternetZoneDownloadSignedActiveXControls
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/InternetZoneDownloadSignedActiveXControls
 
-#### <a name="windows10generalconfigurationinternetexplorerinternetzonedownloadunsignedactivexcontrols"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneDownloadUnsignedActiveXControls 
+### <a name="windows10generalconfigurationinternetexplorerinternetzonedownloadunsignedactivexcontrols"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneDownloadUnsignedActiveXControls 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/InternetZoneDownloadUnsignedActiveXControls
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/InternetZoneDownloadUnsignedActiveXControls
 
-#### <a name="windows10generalconfigurationinternetexplorerinternetzonedraganddroporcopyandpastefiles"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneDragAndDropOrCopyAndPasteFiles 
+### <a name="windows10generalconfigurationinternetexplorerinternetzonedraganddroporcopyandpastefiles"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneDragAndDropOrCopyAndPasteFiles 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/InternetZoneAllowDragAndDropCopyAndPasteFiles
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/InternetZoneAllowDragAndDropCopyAndPasteFiles
 
-#### <a name="windows10generalconfigurationinternetexplorerinternetzonedragcontentfromdifferentdomainsacrosswindows"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneDragContentFromDifferentDomainsAcrossWindows 
+### <a name="windows10generalconfigurationinternetexplorerinternetzonedragcontentfromdifferentdomainsacrosswindows"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneDragContentFromDifferentDomainsAcrossWindows 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/InternetZoneEnableDraggingOfContentFromDifferentDomainsAcrossWindows
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/InternetZoneEnableDraggingOfContentFromDifferentDomainsAcrossWindows
 
-#### <a name="windows10generalconfigurationinternetexplorerinternetzonedragcontentfromdifferentdomainswithinwindows"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneDragContentFromDifferentDomainsWithinWindows 
+### <a name="windows10generalconfigurationinternetexplorerinternetzonedragcontentfromdifferentdomainswithinwindows"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneDragContentFromDifferentDomainsWithinWindows 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/InternetZoneEnableDraggingOfContentFromDifferentDomainsWithinWindows
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/InternetZoneEnableDraggingOfContentFromDifferentDomainsWithinWindows
 
-#### <a name="windows10generalconfigurationinternetexplorerinternetzoneincludelocalpathwhenuploadingfilestoserver"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneIncludeLocalPathWhenUploadingFilesToServer 
+### <a name="windows10generalconfigurationinternetexplorerinternetzoneincludelocalpathwhenuploadingfilestoserver"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneIncludeLocalPathWhenUploadingFilesToServer 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/InternetZoneIncludeLocalPathWhenUploadingFilesToServer
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/InternetZoneIncludeLocalPathWhenUploadingFilesToServer
 
-#### <a name="windows10generalconfigurationinternetexplorerinternetzoneinitializeandscriptactivexcontrolsnotmarkedassafe"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneInitializeAndScriptActiveXControlsNotMarkedAsSafe 
+### <a name="windows10generalconfigurationinternetexplorerinternetzoneinitializeandscriptactivexcontrolsnotmarkedassafe"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneInitializeAndScriptActiveXControlsNotMarkedAsSafe 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/InternetZoneInitializeAndScriptActiveXControls
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/InternetZoneInitializeAndScriptActiveXControls
 
-#### <a name="windows10generalconfigurationinternetexplorerinternetzonejavapermissions"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneJavaPermissions 
+### <a name="windows10generalconfigurationinternetexplorerinternetzonejavapermissions"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneJavaPermissions 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/InternetZoneJavaPermissions
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/InternetZoneJavaPermissions
 
 
-#### <a name="windows10generalconfigurationinternetexplorerinternetzonelaunchapplicationsandfilesinaniframe"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneLaunchApplicationsAndFilesInAnIFrame 
+### <a name="windows10generalconfigurationinternetexplorerinternetzonelaunchapplicationsandfilesinaniframe"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneLaunchApplicationsAndFilesInAnIFrame 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/InternetZoneLaunchingApplicationsAndFilesInIFRAME
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/InternetZoneLaunchingApplicationsAndFilesInIFRAME
 
-#### <a name="windows10generalconfigurationinternetexplorerinternetzonelessprivilegedsites"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneLessPrivilegedSites 
+### <a name="windows10generalconfigurationinternetexplorerinternetzonelessprivilegedsites"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneLessPrivilegedSites 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/InternetZoneAllowLessPrivilegedSites
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/InternetZoneAllowLessPrivilegedSites
 
-#### <a name="windows10generalconfigurationinternetexplorerinternetzoneloadingofxamlfiles"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneLoadingOfXamlFiles 
+### <a name="windows10generalconfigurationinternetexplorerinternetzoneloadingofxamlfiles"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneLoadingOfXamlFiles 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/InternetZoneAllowLoadingOfXAMLFiles
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/InternetZoneAllowLoadingOfXAMLFiles
 
-#### <a name="windows10generalconfigurationinternetexplorerinternetzonelogonoptions"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneLogonOptions 
+### <a name="windows10generalconfigurationinternetexplorerinternetzonelogonoptions"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneLogonOptions 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/InternetZoneLogonOptions
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/InternetZoneLogonOptions
 
-#### <a name="windows10generalconfigurationinternetexplorerinternetzonenavigatewindowsandframesacrossdifferentdomains"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneNavigateWindowsAndFramesAcrossDifferentDomains 
+### <a name="windows10generalconfigurationinternetexplorerinternetzonenavigatewindowsandframesacrossdifferentdomains"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneNavigateWindowsAndFramesAcrossDifferentDomains 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/InternetZoneNavigateWindowsAndFrames
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/InternetZoneNavigateWindowsAndFrames
 
-#### <a name="windows10generalconfigurationinternetexplorerinternetzonepopupblocker"></a>Windows10GeneralConfiguration.InternetExplorerInternetZonePopupBlocker 
+### <a name="windows10generalconfigurationinternetexplorerinternetzonepopupblocker"></a>Windows10GeneralConfiguration.InternetExplorerInternetZonePopupBlocker 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/InternetZoneUsePopupBlocker
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/InternetZoneUsePopupBlocker
 
-#### <a name="windows10generalconfigurationinternetexplorerinternetzoneprotectedmode"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneProtectedMode 
+### <a name="windows10generalconfigurationinternetexplorerinternetzoneprotectedmode"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneProtectedMode 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/InternetZoneEnableProtectedMode
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/InternetZoneEnableProtectedMode
 
-#### <a name="windows10generalconfigurationinternetexplorerinternetzonerundotnetframeworkreliantcomponentssignedwithauthenticode"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneRunDotNetFrameworkReliantComponentsSignedWithAuthenticode 
+### <a name="windows10generalconfigurationinternetexplorerinternetzonerundotnetframeworkreliantcomponentssignedwithauthenticode"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneRunDotNetFrameworkReliantComponentsSignedWithAuthenticode 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/InternetZoneRunNETFrameworkReliantComponentsSignedWithAuthenticode
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/InternetZoneRunNETFrameworkReliantComponentsSignedWithAuthenticode
 
-#### <a name="windows10generalconfigurationinternetexplorerinternetzonescriptingofwebbrowsercontrols"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneScriptingOfWebBrowserControls 
+### <a name="windows10generalconfigurationinternetexplorerinternetzonescriptingofwebbrowsercontrols"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneScriptingOfWebBrowserControls 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/InternetZoneAllowScriptingOfInternetExplorerWebBrowserControls
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/InternetZoneAllowScriptingOfInternetExplorerWebBrowserControls
 
-#### <a name="windows10generalconfigurationinternetexplorerinternetzonescriptinitiatedwindows"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneScriptInitiatedWindows 
+### <a name="windows10generalconfigurationinternetexplorerinternetzonescriptinitiatedwindows"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneScriptInitiatedWindows 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/InternetZoneAllowScriptInitiatedWindows
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/InternetZoneAllowScriptInitiatedWindows
 
-#### <a name="windows10generalconfigurationinternetexplorerinternetzonescriptlets"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneScriptlets 
+### <a name="windows10generalconfigurationinternetexplorerinternetzonescriptlets"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneScriptlets 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/InternetZoneAllowScriptlets
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/InternetZoneAllowScriptlets
 
-#### <a name="windows10generalconfigurationinternetexplorerinternetzonesecuritywarningforpotentiallyunsafefiles"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneSecurityWarningForPotentiallyUnsafeFiles 
+### <a name="windows10generalconfigurationinternetexplorerinternetzonesecuritywarningforpotentiallyunsafefiles"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneSecurityWarningForPotentiallyUnsafeFiles 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/InternetZoneShowSecurityWarningForPotentiallyUnsafeFiles
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/InternetZoneShowSecurityWarningForPotentiallyUnsafeFiles
 
-#### <a name="windows10generalconfigurationinternetexplorerinternetzonesmartscreen"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneSmartScreen 
+### <a name="windows10generalconfigurationinternetexplorerinternetzonesmartscreen"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneSmartScreen 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/InternetZoneAllowSmartScreenIE
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/InternetZoneAllowSmartScreenIE
 
-#### <a name="windows10generalconfigurationinternetexplorerinternetzoneupdatestostatusbarviascript"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneUpdatesToStatusBarViaScript 
+### <a name="windows10generalconfigurationinternetexplorerinternetzoneupdatestostatusbarviascript"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneUpdatesToStatusBarViaScript 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/InternetZoneAllowUpdatesToStatusBarViaScript
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/InternetZoneAllowUpdatesToStatusBarViaScript
 
-#### <a name="windows10generalconfigurationinternetexplorerinternetzoneuserdatapersistence"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneUserDataPersistence 
+### <a name="windows10generalconfigurationinternetexplorerinternetzoneuserdatapersistence"></a>Windows10GeneralConfiguration.InternetExplorerInternetZoneUserDataPersistence 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/InternetZoneAllowUserDataPersistence
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/InternetZoneAllowUserDataPersistence
 
-#### <a name="windows10generalconfigurationinternetexplorerintranetzonedonotrunantimalwareagainstactivexcontrols"></a>Windows10GeneralConfiguration.InternetExplorerIntranetZoneDoNotRunAntimalwareAgainstActiveXControls 
+### <a name="windows10generalconfigurationinternetexplorerintranetzonedonotrunantimalwareagainstactivexcontrols"></a>Windows10GeneralConfiguration.InternetExplorerIntranetZoneDoNotRunAntimalwareAgainstActiveXControls 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/IntranetZoneDoNotRunAntimalwareAgainstActiveXControls
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/IntranetZoneDoNotRunAntimalwareAgainstActiveXControls
 
-#### <a name="windows10generalconfigurationinternetexplorerintranetzoneinitializeandscriptactivexcontrolsnotmarkedassafe"></a>Windows10GeneralConfiguration.InternetExplorerIntranetZoneInitializeAndScriptActiveXControlsNotMarkedAsSafe 
+### <a name="windows10generalconfigurationinternetexplorerintranetzoneinitializeandscriptactivexcontrolsnotmarkedassafe"></a>Windows10GeneralConfiguration.InternetExplorerIntranetZoneInitializeAndScriptActiveXControlsNotMarkedAsSafe 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/IntranetZoneInitializeAndScriptActiveXControls
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/IntranetZoneInitializeAndScriptActiveXControls
 
-#### <a name="windows10generalconfigurationinternetexplorerintranetzonejavapermissions"></a>Windows10GeneralConfiguration.InternetExplorerIntranetZoneJavaPermissions 
+### <a name="windows10generalconfigurationinternetexplorerintranetzonejavapermissions"></a>Windows10GeneralConfiguration.InternetExplorerIntranetZoneJavaPermissions 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/IntranetZoneJavaPermissions
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/IntranetZoneJavaPermissions
 
-#### <a name="windows10generalconfigurationinternetexplorerlocalmachinezonedonotrunantimalwareagainstactivexcontrols"></a>Windows10GeneralConfiguration.InternetExplorerLocalMachineZoneDoNotRunAntimalwareAgainstActiveXControls 
+### <a name="windows10generalconfigurationinternetexplorerlocalmachinezonedonotrunantimalwareagainstactivexcontrols"></a>Windows10GeneralConfiguration.InternetExplorerLocalMachineZoneDoNotRunAntimalwareAgainstActiveXControls 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/LocalMachineZoneDoNotRunAntimalwareAgainstActiveXControls
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/LocalMachineZoneDoNotRunAntimalwareAgainstActiveXControls
 
-#### <a name="windows10generalconfigurationinternetexplorerlocalmachinezonejavapermissions"></a>Windows10GeneralConfiguration.InternetExplorerLocalMachineZoneJavaPermissions 
+### <a name="windows10generalconfigurationinternetexplorerlocalmachinezonejavapermissions"></a>Windows10GeneralConfiguration.InternetExplorerLocalMachineZoneJavaPermissions 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/LocalMachineZoneJavaPermissions
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/LocalMachineZoneJavaPermissions
 
-#### <a name="windows10generalconfigurationinternetexplorerlockeddowninternetzonesmartscreen"></a>Windows10GeneralConfiguration.InternetExplorerLockedDownInternetZoneSmartScreen 
+### <a name="windows10generalconfigurationinternetexplorerlockeddowninternetzonesmartscreen"></a>Windows10GeneralConfiguration.InternetExplorerLockedDownInternetZoneSmartScreen 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/LockedDownInternetZoneAllowSmartScreenIE
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/LockedDownInternetZoneAllowSmartScreenIE
 
-#### <a name="windows10generalconfigurationinternetexplorerlockeddownintranetzonejavapermissions"></a>Windows10GeneralConfiguration.InternetExplorerLockedDownIntranetZoneJavaPermissions 
+### <a name="windows10generalconfigurationinternetexplorerlockeddownintranetzonejavapermissions"></a>Windows10GeneralConfiguration.InternetExplorerLockedDownIntranetZoneJavaPermissions 
 **CSP**: ./Device/Vendor/MSFT/Policy  
 **Offset URI**: /Config/InternetExplorer/LockedDownIntranetJavaPermissions
 
-#### <a name="windows10generalconfigurationinternetexplorerlockeddownlocalmachinezonejavapermissions"></a>Windows10GeneralConfiguration.InternetExplorerLockedDownLocalMachineZoneJavaPermissions 
+### <a name="windows10generalconfigurationinternetexplorerlockeddownlocalmachinezonejavapermissions"></a>Windows10GeneralConfiguration.InternetExplorerLockedDownLocalMachineZoneJavaPermissions 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/LockedDownLocalMachineZoneJavaPermissions
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/LockedDownLocalMachineZoneJavaPermissions
 
-#### <a name="windows10generalconfigurationinternetexplorerlockeddownrestrictedzonejavapermissions"></a>Windows10GeneralConfiguration.InternetExplorerLockedDownRestrictedZoneJavaPermissions 
+### <a name="windows10generalconfigurationinternetexplorerlockeddownrestrictedzonejavapermissions"></a>Windows10GeneralConfiguration.InternetExplorerLockedDownRestrictedZoneJavaPermissions 
 **CSP**: ./Device/Vendor/MSFT/Policy  
 **Offset URI**: /Config/InternetExplorer/LockedDownRestrictedSitesZoneJavaPermissions
 
-#### <a name="windows10generalconfigurationinternetexplorerlockeddownrestrictedzonesmartscreen"></a>Windows10GeneralConfiguration.InternetExplorerLockedDownRestrictedZoneSmartScreen 
+### <a name="windows10generalconfigurationinternetexplorerlockeddownrestrictedzonesmartscreen"></a>Windows10GeneralConfiguration.InternetExplorerLockedDownRestrictedZoneSmartScreen 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/LockedDownRestrictedSitesZoneAllowSmartScreenIE
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/LockedDownRestrictedSitesZoneAllowSmartScreenIE
 
-#### <a name="windows10generalconfigurationinternetexplorerlockeddowntrustedzonejavapermissions"></a>Windows10GeneralConfiguration.InternetExplorerLockedDownTrustedZoneJavaPermissions 
+### <a name="windows10generalconfigurationinternetexplorerlockeddowntrustedzonejavapermissions"></a>Windows10GeneralConfiguration.InternetExplorerLockedDownTrustedZoneJavaPermissions 
 **CSP**: ./Device/Vendor/MSFT/Policy  
 **Offset URI**: /Config/InternetExplorer/LockedDownTrustedSitesZoneJavaPermissions
 
-#### <a name="windows10generalconfigurationinternetexplorerpreventmanagingsmartscreenfilter"></a>Windows10GeneralConfiguration.InternetExplorerPreventManagingSmartScreenFilter 
+### <a name="windows10generalconfigurationinternetexplorerpreventmanagingsmartscreenfilter"></a>Windows10GeneralConfiguration.InternetExplorerPreventManagingSmartScreenFilter 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/PreventManagingSmartScreenFilter
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/PreventManagingSmartScreenFilter
 
-#### <a name="windows10generalconfigurationinternetexplorerpreventperuserinstallationofactivexcontrols"></a>Windows10GeneralConfiguration.InternetExplorerPreventPerUserInstallationOfActiveXControls 
+### <a name="windows10generalconfigurationinternetexplorerpreventperuserinstallationofactivexcontrols"></a>Windows10GeneralConfiguration.InternetExplorerPreventPerUserInstallationOfActiveXControls 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/PreventPerUserInstallationOfActiveXControls
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/PreventPerUserInstallationOfActiveXControls
 
-#### <a name="windows10generalconfigurationinternetexplorerprocessesconsistentmimehandling"></a>Windows10GeneralConfiguration.InternetExplorerProcessesConsistentMimeHandling 
+### <a name="windows10generalconfigurationinternetexplorerprocessesconsistentmimehandling"></a>Windows10GeneralConfiguration.InternetExplorerProcessesConsistentMimeHandling 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/ConsistentMimeHandlingInternetExplorerProcesses
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/ConsistentMimeHandlingInternetExplorerProcesses
 
-#### <a name="windows10generalconfigurationinternetexplorerprocessesmimesniffingsafetyfeature"></a>Windows10GeneralConfiguration.InternetExplorerProcessesMimeSniffingSafetyFeature 
+### <a name="windows10generalconfigurationinternetexplorerprocessesmimesniffingsafetyfeature"></a>Windows10GeneralConfiguration.InternetExplorerProcessesMimeSniffingSafetyFeature 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/MimeSniffingSafetyFeatureInternetExplorerProcesses
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/MimeSniffingSafetyFeatureInternetExplorerProcesses
 
-#### <a name="windows10generalconfigurationinternetexplorerprocessesmkprotocolsecurityrestriction"></a>Windows10GeneralConfiguration.InternetExplorerProcessesMKProtocolSecurityRestriction 
+### <a name="windows10generalconfigurationinternetexplorerprocessesmkprotocolsecurityrestriction"></a>Windows10GeneralConfiguration.InternetExplorerProcessesMKProtocolSecurityRestriction 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/MKProtocolSecurityRestrictionInternetExplorerProcesses
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/MKProtocolSecurityRestrictionInternetExplorerProcesses
 
-#### <a name="windows10generalconfigurationinternetexplorerprocessesnotificationbar"></a>Windows10GeneralConfiguration.InternetExplorerProcessesNotificationBar 
+### <a name="windows10generalconfigurationinternetexplorerprocessesnotificationbar"></a>Windows10GeneralConfiguration.InternetExplorerProcessesNotificationBar 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/NotificationBarInternetExplorerProcesses
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/NotificationBarInternetExplorerProcesses
 
-#### <a name="windows10generalconfigurationinternetexplorerprocessesprotectionfromzoneelevation"></a>Windows10GeneralConfiguration.InternetExplorerProcessesProtectionFromZoneElevation 
+### <a name="windows10generalconfigurationinternetexplorerprocessesprotectionfromzoneelevation"></a>Windows10GeneralConfiguration.InternetExplorerProcessesProtectionFromZoneElevation 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/ProtectionFromZoneElevationInternetExplorerProcesses
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/ProtectionFromZoneElevationInternetExplorerProcesses
 
-#### <a name="windows10generalconfigurationinternetexplorerprocessesrestrictactivexinstall"></a>Windows10GeneralConfiguration.InternetExplorerProcessesRestrictActiveXInstall 
+### <a name="windows10generalconfigurationinternetexplorerprocessesrestrictactivexinstall"></a>Windows10GeneralConfiguration.InternetExplorerProcessesRestrictActiveXInstall 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/RestrictActiveXInstallInternetExplorerProcesses
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/RestrictActiveXInstallInternetExplorerProcesses
 
-#### <a name="windows10generalconfigurationinternetexplorerprocessesrestrictfiledownload"></a>Windows10GeneralConfiguration.InternetExplorerProcessesRestrictFileDownload 
+### <a name="windows10generalconfigurationinternetexplorerprocessesrestrictfiledownload"></a>Windows10GeneralConfiguration.InternetExplorerProcessesRestrictFileDownload 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/RestrictFileDownloadInternetExplorerProcesses
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/RestrictFileDownloadInternetExplorerProcesses
 
-#### <a name="windows10generalconfigurationinternetexplorerprocessesscriptedwindowsecurityrestrictions"></a>Windows10GeneralConfiguration.InternetExplorerProcessesScriptedWindowSecurityRestrictions 
+### <a name="windows10generalconfigurationinternetexplorerprocessesscriptedwindowsecurityrestrictions"></a>Windows10GeneralConfiguration.InternetExplorerProcessesScriptedWindowSecurityRestrictions 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/ScriptedWindowSecurityRestrictionsInternetExplorerProcesses
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/ScriptedWindowSecurityRestrictionsInternetExplorerProcesses
 
-#### <a name="windows10generalconfigurationinternetexplorerremoverunthistimebuttonforoutdatedactivexcontrols"></a>Windows10GeneralConfiguration.InternetExplorerRemoveRunThisTimeButtonForOutdatedActiveXControls 
+### <a name="windows10generalconfigurationinternetexplorerremoverunthistimebuttonforoutdatedactivexcontrols"></a>Windows10GeneralConfiguration.InternetExplorerRemoveRunThisTimeButtonForOutdatedActiveXControls 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/RemoveRunThisTimeButtonForOutdatedActiveXControls
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/RemoveRunThisTimeButtonForOutdatedActiveXControls
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzoneaccesstodatasources"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneAccessToDataSources 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzoneaccesstodatasources"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneAccessToDataSources 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/RestrictedSitesZoneAllowAccessToDataSources
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/RestrictedSitesZoneAllowAccessToDataSources
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzoneactivescripting"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneActiveScripting 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzoneactivescripting"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneActiveScripting 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/RestrictedSitesZoneAllowActiveScripting
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/RestrictedSitesZoneAllowActiveScripting
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzoneallowonlyapproveddomainstouseactivexcontrols"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneAllowOnlyApprovedDomainsToUseActiveXControls 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzoneallowonlyapproveddomainstouseactivexcontrols"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneAllowOnlyApprovedDomainsToUseActiveXControls 
 **CSP**: ./Device/Vendor/MSFT/Policy  
 **Offset URI**: /Config/InternetExplorer/RestrictedSitesZoneAllowOnlyApprovedDomainsToUseActiveXControls
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzoneallowonlyapproveddomainstousetdcactivexcontrols"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneAllowOnlyApprovedDomainsToUseTdcActiveXControls 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzoneallowonlyapproveddomainstousetdcactivexcontrols"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneAllowOnlyApprovedDomainsToUseTdcActiveXControls 
 **CSP**: ./Device/Vendor/MSFT/Policy  
 **Offset URI**: /Config/InternetExplorer/RestrictedSitesZoneAllowOnlyApprovedDomainsToUseTDCActiveXControl
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzoneallowvbscripttorun"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneAllowVBScriptToRun 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzoneallowvbscripttorun"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneAllowVBScriptToRun 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/RestrictedSitesZoneAllowVBScriptToRunInInternetExplorer
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/RestrictedSitesZoneAllowVBScriptToRunInInternetExplorer
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzoneautomaticpromptforfiledownloads"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneAutomaticPromptForFileDownloads 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzoneautomaticpromptforfiledownloads"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneAutomaticPromptForFileDownloads 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/RestrictedSitesZoneAllowAutomaticPromptingForFileDownloads
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/RestrictedSitesZoneAllowAutomaticPromptingForFileDownloads
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzonebinaryandscriptbehaviors"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneBinaryAndScriptBehaviors 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzonebinaryandscriptbehaviors"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneBinaryAndScriptBehaviors 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/RestrictedSitesZoneAllowBinaryAndScriptBehaviors
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/RestrictedSitesZoneAllowBinaryAndScriptBehaviors
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzonecopyandpasteviascript"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneCopyAndPasteViaScript 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzonecopyandpasteviascript"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneCopyAndPasteViaScript 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/RestrictedSitesZoneAllowCopyPasteViaScript
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/RestrictedSitesZoneAllowCopyPasteViaScript
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzonecrosssitescriptingfilter"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneCrossSiteScriptingFilter 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzonecrosssitescriptingfilter"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneCrossSiteScriptingFilter 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/RestrictedSitesZoneEnableCrossSiteScriptingFilter
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/RestrictedSitesZoneEnableCrossSiteScriptingFilter
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzonedonotrunantimalwareagainstactivexcontrols"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneDoNotRunAntimalwareAgainstActiveXControls 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzonedonotrunantimalwareagainstactivexcontrols"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneDoNotRunAntimalwareAgainstActiveXControls 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/RestrictedSitesZoneDoNotRunAntimalwareAgainstActiveXControls
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/RestrictedSitesZoneDoNotRunAntimalwareAgainstActiveXControls
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzonedotnetframeworkreliantcomponents"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneDotNetFrameworkReliantComponents 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzonedotnetframeworkreliantcomponents"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneDotNetFrameworkReliantComponents 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/RestrictedSitesZoneAllowNETFrameworkReliantComponents
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/RestrictedSitesZoneAllowNETFrameworkReliantComponents
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzonedownloadsignedactivexcontrols"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneDownloadSignedActiveXControls 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzonedownloadsignedactivexcontrols"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneDownloadSignedActiveXControls 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/RestrictedSitesZoneDownloadSignedActiveXControls
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/RestrictedSitesZoneDownloadSignedActiveXControls
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzonedownloadunsignedactivexcontrols"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneDownloadUnsignedActiveXControls 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzonedownloadunsignedactivexcontrols"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneDownloadUnsignedActiveXControls 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/RestrictedSitesZoneDownloadUnsignedActiveXControls
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/RestrictedSitesZoneDownloadUnsignedActiveXControls
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzonedraganddroporcopyandpastefiles"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneDragAndDropOrCopyAndPasteFiles 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzonedraganddroporcopyandpastefiles"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneDragAndDropOrCopyAndPasteFiles 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/RestrictedSitesZoneAllowDragAndDropCopyAndPasteFiles
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/RestrictedSitesZoneAllowDragAndDropCopyAndPasteFiles
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzonedragcontentfromdifferentdomainsacrosswindows"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneDragContentFromDifferentDomainsAcrossWindows 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzonedragcontentfromdifferentdomainsacrosswindows"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneDragContentFromDifferentDomainsAcrossWindows 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/RestrictedSitesZoneEnableDraggingOfContentFromDifferentDomainsAcrossWindows
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/RestrictedSitesZoneEnableDraggingOfContentFromDifferentDomainsAcrossWindows
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzonedragcontentfromdifferentdomainswithinwindows"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneDragContentFromDifferentDomainsWithinWindows 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzonedragcontentfromdifferentdomainswithinwindows"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneDragContentFromDifferentDomainsWithinWindows 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/RestrictedSitesZoneEnableDraggingOfContentFromDifferentDomainsWithinWindows
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/RestrictedSitesZoneEnableDraggingOfContentFromDifferentDomainsWithinWindows
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzonefiledownloads"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneFileDownloads 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzonefiledownloads"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneFileDownloads 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/RestrictedSitesZoneAllowFileDownloads
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/RestrictedSitesZoneAllowFileDownloads
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzoneincludelocalpathwhenuploadingfilestoserver"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneIncludeLocalPathWhenUploadingFilesToServer 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzoneincludelocalpathwhenuploadingfilestoserver"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneIncludeLocalPathWhenUploadingFilesToServer 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/RestrictedSitesZoneIncludeLocalPathWhenUploadingFilesToServer
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/RestrictedSitesZoneIncludeLocalPathWhenUploadingFilesToServer
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzoneinitializeandscriptactivexcontrolsnotmarkedassafe"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneInitializeAndScriptActiveXControlsNotMarkedAsSafe 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzoneinitializeandscriptactivexcontrolsnotmarkedassafe"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneInitializeAndScriptActiveXControlsNotMarkedAsSafe 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/RestrictedSitesZoneInitializeAndScriptActiveXControls
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/RestrictedSitesZoneInitializeAndScriptActiveXControls
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzonejavapermissions"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneJavaPermissions 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzonejavapermissions"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneJavaPermissions 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/RestrictedSitesZoneJavaPermissions
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/RestrictedSitesZoneJavaPermissions
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzonelaunchapplicationsandfilesinaniframe"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneLaunchApplicationsAndFilesInAnIFrame 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzonelaunchapplicationsandfilesinaniframe"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneLaunchApplicationsAndFilesInAnIFrame 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/RestrictedSitesZoneLaunchingApplicationsAndFilesInIFRAME
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/RestrictedSitesZoneLaunchingApplicationsAndFilesInIFRAME
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzonelessprivilegedsites"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneLessPrivilegedSites 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzonelessprivilegedsites"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneLessPrivilegedSites 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/RestrictedSitesZoneAllowLessPrivilegedSites
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/RestrictedSitesZoneAllowLessPrivilegedSites
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzoneloadingofxamlfiles"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneLoadingOfXamlFiles 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzoneloadingofxamlfiles"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneLoadingOfXamlFiles 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/RestrictedSitesZoneAllowLoadingOfXAMLFiles
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/RestrictedSitesZoneAllowLoadingOfXAMLFiles
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzonelogonoptions"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneLogonOptions 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzonelogonoptions"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneLogonOptions 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/RestrictedSitesZoneLogonOptions
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/RestrictedSitesZoneLogonOptions
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzonemetarefresh"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneMetaRefresh 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzonemetarefresh"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneMetaRefresh 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/RestrictedSitesZoneAllowMETAREFRESH
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/RestrictedSitesZoneAllowMETAREFRESH
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzonenavigatewindowsandframesacrossdifferentdomains"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneNavigateWindowsAndFramesAcrossDifferentDomains 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzonenavigatewindowsandframesacrossdifferentdomains"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneNavigateWindowsAndFramesAcrossDifferentDomains 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/RestrictedSitesZoneNavigateWindowsAndFrames
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/RestrictedSitesZoneNavigateWindowsAndFrames
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzonepopupblocker"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZonePopupBlocker 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzonepopupblocker"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZonePopupBlocker 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/RestrictedSitesZoneUsePopupBlocker
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/RestrictedSitesZoneUsePopupBlocker
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzoneprotectedmode"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneProtectedMode 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzoneprotectedmode"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneProtectedMode 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/RestrictedSitesZoneTurnOnProtectedMode
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/RestrictedSitesZoneTurnOnProtectedMode
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzonerunactivexcontrolsandplugins"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneRunActiveXControlsAndPlugins 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzonerunactivexcontrolsandplugins"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneRunActiveXControlsAndPlugins 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/RestrictedSitesZoneRunActiveXControlsAndPlugins
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/RestrictedSitesZoneRunActiveXControlsAndPlugins
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzonerundotnetframeworkreliantcomponentssignedwithauthenticode"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneRunDotNetFrameworkReliantComponentsSignedWithAuthenticode 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzonerundotnetframeworkreliantcomponentssignedwithauthenticode"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneRunDotNetFrameworkReliantComponentsSignedWithAuthenticode 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/RestrictedSitesZoneRunNETFrameworkReliantComponentsSignedWithAuthenticode
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/RestrictedSitesZoneRunNETFrameworkReliantComponentsSignedWithAuthenticode
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzonescriptactivexcontrolsmarkedsafeforscripting"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneScriptActiveXControlsMarkedSafeForScripting 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzonescriptactivexcontrolsmarkedsafeforscripting"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneScriptActiveXControlsMarkedSafeForScripting 
 **CSP**: ./Device/Vendor/MSFT/Policy  
 **Offset URI**: /Config/InternetExplorer/RestrictedSitesZoneScriptActiveXControlsMarkedSafeForScripting
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzonescriptingofjavaapplets"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneScriptingOfJavaApplets 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzonescriptingofjavaapplets"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneScriptingOfJavaApplets 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/RestrictedSitesZoneScriptingOfJavaApplets
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/RestrictedSitesZoneScriptingOfJavaApplets
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzonescriptingofwebbrowsercontrols"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneScriptingOfWebBrowserControls 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzonescriptingofwebbrowsercontrols"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneScriptingOfWebBrowserControls 
 **CSP**: ./Device/Vendor/MSFT/Policy  
 **Offset URI**: /Config/InternetExplorer/RestrictedSitesZoneAllowScriptingOfInternetExplorerWebBrowserControls
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzonescriptinitiatedwindows"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneScriptInitiatedWindows 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzonescriptinitiatedwindows"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneScriptInitiatedWindows 
 **CSP**: ./Device/Vendor/MSFT/Policy  
 **Offset URI**: /Config/InternetExplorer/RestrictedSitesZoneAllowScriptInitiatedWindows
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzonescriptlets"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneScriptlets 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzonescriptlets"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneScriptlets 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/RestrictedSitesZoneAllowScriptlets
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/RestrictedSitesZoneAllowScriptlets
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzonesecuritywarningforpotentiallyunsafefiles"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneSecurityWarningForPotentiallyUnsafeFiles 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzonesecuritywarningforpotentiallyunsafefiles"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneSecurityWarningForPotentiallyUnsafeFiles 
 **CSP**: ./Device/Vendor/MSFT/Policy  
 **Offset URI**: /Config/InternetExplorer/RestrictedSitesZoneShowSecurityWarningForPotentiallyUnsafeFiles
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzonesmartscreen"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneSmartScreen 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzonesmartscreen"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneSmartScreen 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/RestrictedSitesZoneAllowSmartScreenIE
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/RestrictedSitesZoneAllowSmartScreenIE
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzoneupdatestostatusbarviascript"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneUpdatesToStatusBarViaScript 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzoneupdatestostatusbarviascript"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneUpdatesToStatusBarViaScript 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/RestrictedSitesZoneAllowUpdatesToStatusBarViaScript
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/RestrictedSitesZoneAllowUpdatesToStatusBarViaScript
 
-#### <a name="windows10generalconfigurationinternetexplorerrestrictedzoneuserdatapersistence"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneUserDataPersistence 
+### <a name="windows10generalconfigurationinternetexplorerrestrictedzoneuserdatapersistence"></a>Windows10GeneralConfiguration.InternetExplorerRestrictedZoneUserDataPersistence 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/RestrictedSitesZoneAllowUserDataPersistence
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/RestrictedSitesZoneAllowUserDataPersistence
 
-#### <a name="windows10generalconfigurationinternetexplorersecuritysettingscheck"></a>Windows10GeneralConfiguration.InternetExplorerSecuritySettingsCheck 
+### <a name="windows10generalconfigurationinternetexplorersecuritysettingscheck"></a>Windows10GeneralConfiguration.InternetExplorerSecuritySettingsCheck 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/DisableSecuritySettingsCheck
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/DisableSecuritySettingsCheck
 
-#### <a name="windows10generalconfigurationinternetexplorersecurityzonesuseonlymachinesettings"></a>Windows10GeneralConfiguration.InternetExplorerSecurityZonesUseOnlyMachineSettings 
+### <a name="windows10generalconfigurationinternetexplorersecurityzonesuseonlymachinesettings"></a>Windows10GeneralConfiguration.InternetExplorerSecurityZonesUseOnlyMachineSettings 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/SecurityZonesUseOnlyMachineSettings
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/SecurityZonesUseOnlyMachineSettings
 
-#### <a name="windows10generalconfigurationinternetexplorersoftwarewhensignatureisinvalid"></a>Windows10GeneralConfiguration.InternetExplorerSoftwareWhenSignatureIsInvalid 
+### <a name="windows10generalconfigurationinternetexplorersoftwarewhensignatureisinvalid"></a>Windows10GeneralConfiguration.InternetExplorerSoftwareWhenSignatureIsInvalid 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/AllowSoftwareWhenSignatureIsInvalid
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/AllowSoftwareWhenSignatureIsInvalid
 
-#### <a name="windows10generalconfigurationinternetexplorertrustedzonedonotrunantimalwareagainstactivexcontrols"></a>Windows10GeneralConfiguration.InternetExplorerTrustedZoneDoNotRunAntimalwareAgainstActiveXControls 
+### <a name="windows10generalconfigurationinternetexplorertrustedzonedonotrunantimalwareagainstactivexcontrols"></a>Windows10GeneralConfiguration.InternetExplorerTrustedZoneDoNotRunAntimalwareAgainstActiveXControls 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/TrustedSitesZoneDoNotRunAntimalwareAgainstActiveXControls
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/TrustedSitesZoneDoNotRunAntimalwareAgainstActiveXControls
 
-#### <a name="windows10generalconfigurationinternetexplorertrustedzoneinitializeandscriptactivexcontrolsnotmarkedassafe"></a>Windows10GeneralConfiguration.InternetExplorerTrustedZoneInitializeAndScriptActiveXControlsNotMarkedAsSafe 
+### <a name="windows10generalconfigurationinternetexplorertrustedzoneinitializeandscriptactivexcontrolsnotmarkedassafe"></a>Windows10GeneralConfiguration.InternetExplorerTrustedZoneInitializeAndScriptActiveXControlsNotMarkedAsSafe 
 **CSP**: ./Device/Vendor/MSFT/Policy  
 **Offset URI**: /Config/InternetExplorer/TrustedSitesZoneInitializeAndScriptActiveXControls
 
-#### <a name="windows10generalconfigurationinternetexplorertrustedzonejavapermissions"></a>Windows10GeneralConfiguration.InternetExplorerTrustedZoneJavaPermissions 
+### <a name="windows10generalconfigurationinternetexplorertrustedzonejavapermissions"></a>Windows10GeneralConfiguration.InternetExplorerTrustedZoneJavaPermissions 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/TrustedSitesZoneJavaPermissions
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/TrustedSitesZoneJavaPermissions
 
-#### <a name="windows10generalconfigurationinternetexploreruseactivexinstallerservice"></a>Windows10GeneralConfiguration.InternetExplorerUseActiveXInstallerService 
+### <a name="windows10generalconfigurationinternetexploreruseactivexinstallerservice"></a>Windows10GeneralConfiguration.InternetExplorerUseActiveXInstallerService 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/InternetExplorer/SpecifyUseOfActiveXInstallerService
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/SpecifyUseOfActiveXInstallerService
 
-#### <a name="windows10generalconfigurationinternetexplorerusersaddingsites"></a>Windows10GeneralConfiguration.InternetExplorerUsersAddingSites 
+### <a name="windows10generalconfigurationinternetexplorerusersaddingsites"></a>Windows10GeneralConfiguration.InternetExplorerUsersAddingSites 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/DoNotAllowUsersToAddSites
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/DoNotAllowUsersToAddSites
 
-#### <a name="windows10generalconfigurationinternetexploreruserschangingpolicies"></a>Windows10GeneralConfiguration.InternetExplorerUsersChangingPolicies 
+### <a name="windows10generalconfigurationinternetexploreruserschangingpolicies"></a>Windows10GeneralConfiguration.InternetExplorerUsersChangingPolicies 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/InternetExplorer/DoNotAllowUsersToChangePolicies
+**Identyfikator URI przesunięcia**:/config/InternetExplorer/DoNotAllowUsersToChangePolicies
 
-#### <a name="windows10generalconfigurationinternetsharingblocked"></a>Windows10GeneralConfiguration.InternetSharingBlocked 
+### <a name="windows10generalconfigurationinternetsharingblocked"></a>Windows10GeneralConfiguration.InternetSharingBlocked 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/WiFi/AllowInternetSharing
+**Identyfikator URI przesunięcia**:/config/WiFi/AllowInternetSharing
 
-#### <a name="windows10generalconfigurationlocationservicesblocked"></a>Windows10GeneralConfiguration.LocationServicesBlocked 
+### <a name="windows10generalconfigurationlocationservicesblocked"></a>Windows10GeneralConfiguration.LocationServicesBlocked 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/System/AllowLocation
+**Identyfikator URI przesunięcia**:/config/system/AllowLocation
 
-#### <a name="windows10generalconfigurationlockscreenallowtimeoutconfiguration"></a>Windows10GeneralConfiguration.LockScreenAllowTimeoutConfiguration 
+### <a name="windows10generalconfigurationlockscreenallowtimeoutconfiguration"></a>Windows10GeneralConfiguration.LockScreenAllowTimeoutConfiguration 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/DeviceLock/AllowScreenTimeoutWhileLockedUser/Config
+**Identyfikator URI przesunięcia**:/config/DeviceLock/AllowScreenTimeoutWhileLockedUser/config
 
-#### <a name="windows10generalconfigurationlockscreenblockactioncenternotifications"></a>Windows10GeneralConfiguration.LockScreenBlockActionCenterNotifications 
+### <a name="windows10generalconfigurationlockscreenblockactioncenternotifications"></a>Windows10GeneralConfiguration.LockScreenBlockActionCenterNotifications 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/AboveLock/AllowActionCenterNotifications
+**Identyfikator URI przesunięcia**:/config/AboveLock/AllowActionCenterNotifications
 
-#### <a name="windows10generalconfigurationlockscreenblockcortana"></a>Windows10GeneralConfiguration.LockScreenBlockCortana 
+### <a name="windows10generalconfigurationlockscreenblockcortana"></a>Windows10GeneralConfiguration.LockScreenBlockCortana 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/AboveLock/AllowCortanaAboveLock
+**Identyfikator URI przesunięcia**:/config/AboveLock/AllowCortanaAboveLock
 
-#### <a name="windows10generalconfigurationlockscreenblocktoastnotifications"></a>Windows10GeneralConfiguration.LockScreenBlockToastNotifications 
+### <a name="windows10generalconfigurationlockscreenblocktoastnotifications"></a>Windows10GeneralConfiguration.LockScreenBlockToastNotifications 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/AboveLock/AllowToasts
+**Identyfikator URI przesunięcia**:/config/AboveLock/AllowToasts
 
-#### <a name="windows10generalconfigurationlockscreencamera"></a>Windows10GeneralConfiguration.LockScreenCamera 
+### <a name="windows10generalconfigurationlockscreencamera"></a>Windows10GeneralConfiguration.LockScreenCamera 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/DeviceLock/PreventEnablingLockScreenCamera
+**Identyfikator URI przesunięcia**:/config/DeviceLock/PreventEnablingLockScreenCamera
 
-#### <a name="windows10generalconfigurationlockscreenhidenetworkselectionui"></a>Windows10GeneralConfiguration.LockScreenHideNetworkSelectionUI 
+### <a name="windows10generalconfigurationlockscreenhidenetworkselectionui"></a>Windows10GeneralConfiguration.LockScreenHideNetworkSelectionUI 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/WindowsLogon/DontDisplayNetworkSelectionUI
+**Identyfikator URI przesunięcia**:/config/WindowsLogon/DontDisplayNetworkSelectionUI
 
-#### <a name="windows10generalconfigurationlockscreenslideshow"></a>Windows10GeneralConfiguration.LockScreenSlideShow 
+### <a name="windows10generalconfigurationlockscreenslideshow"></a>Windows10GeneralConfiguration.LockScreenSlideShow 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/DeviceLock/PreventLockScreenSlideShow
+**Identyfikator URI przesunięcia**:/config/DeviceLock/PreventLockScreenSlideShow
 
-#### <a name="windows10generalconfigurationlockscreentimeoutinseconds"></a>Windows10GeneralConfiguration.LockScreenTimeoutInSeconds 
+### <a name="windows10generalconfigurationlockscreentimeoutinseconds"></a>Windows10GeneralConfiguration.LockScreenTimeoutInSeconds 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/DeviceLock/ScreenTimeoutWhileLocked
+**Identyfikator URI przesunięcia**:/config/DeviceLock/ScreenTimeoutWhileLocked
 
-#### <a name="windows10generalconfigurationlogonblockfastuserswitching"></a>Windows10GeneralConfiguration.LogonBlockFastUserSwitching 
+### <a name="windows10generalconfigurationlogonblockfastuserswitching"></a>Windows10GeneralConfiguration.LogonBlockFastUserSwitching 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/WindowsLogon/HideFastUserSwitching
+**Identyfikator URI przesunięcia**:/config/WindowsLogon/HideFastUserSwitching
 
-#### <a name="windows10generalconfigurationmessagingblockmms"></a>Windows10GeneralConfiguration.MessagingBlockMMS 
+### <a name="windows10generalconfigurationmessagingblockmms"></a>Windows10GeneralConfiguration.MessagingBlockMMS 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Messaging/AllowMMS
+**Identyfikator URI przesunięcia**:/config/Messaging/AllowMMS
 
-#### <a name="windows10generalconfigurationmessagingblockrichcommunicationservices"></a>Windows10GeneralConfiguration.MessagingBlockRichCommunicationServices 
+### <a name="windows10generalconfigurationmessagingblockrichcommunicationservices"></a>Windows10GeneralConfiguration.MessagingBlockRichCommunicationServices 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Messaging/AllowRCS
+**Identyfikator URI przesunięcia**:/config/Messaging/AllowRCS
 
-#### <a name="windows10generalconfigurationmessagingblocksync"></a>Windows10GeneralConfiguration.MessagingBlockSync 
+### <a name="windows10generalconfigurationmessagingblocksync"></a>Windows10GeneralConfiguration.MessagingBlockSync 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Messaging/AllowMessageSync
+**Identyfikator URI przesunięcia**:/config/Messaging/AllowMessageSync
 
-#### <a name="windows10generalconfigurationmicrosoftaccountblocked"></a>Windows10GeneralConfiguration.MicrosoftAccountBlocked 
+### <a name="windows10generalconfigurationmicrosoftaccountblocked"></a>Windows10GeneralConfiguration.MicrosoftAccountBlocked 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Accounts/AllowMicrosoftAccountConnection
+**Identyfikator URI przesunięcia**:/config/accounts/AllowMicrosoftAccountConnection
 
-#### <a name="windows10generalconfigurationmicrosoftaccountblocksettingssync"></a>Windows10GeneralConfiguration.MicrosoftAccountBlockSettingsSync 
+### <a name="windows10generalconfigurationmicrosoftaccountblocksettingssync"></a>Windows10GeneralConfiguration.MicrosoftAccountBlockSettingsSync 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Experience/AllowSyncMySettings
+**Identyfikator URI przesunięcia**:/config/Experience/AllowSyncMySettings
 
-#### <a name="windows10generalconfigurationmicrosoftaccountsigninassistantsettings"></a>Windows10GeneralConfiguration.MicrosoftAccountSignInAssistantSettings 
-**CSP**: ./Device/Vendor/MSFT/Accounts  
-**Przesunięcie URI**: /AllowMicrosoftAccountSignInAssistant
+### <a name="windows10generalconfigurationmicrosoftaccountsigninassistantsettings"></a>Windows10GeneralConfiguration.MicrosoftAccountSignInAssistantSettings 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/accounts  
+**Identyfikator URI przesunięcia**:/AllowMicrosoftAccountSignInAssistant
 
-#### <a name="windows10generalconfigurationnetworkproxyapplysettingsdevicewide"></a>Windows10GeneralConfiguration.NetworkProxyApplySettingsDeviceWide 
+### <a name="windows10generalconfigurationnetworkproxyapplysettingsdevicewide"></a>Windows10GeneralConfiguration.NetworkProxyApplySettingsDeviceWide 
 **CSP**: ./Device/Vendor/MSFT/NetworkProxy  
-**Przesunięcie URI**: /ProxySettingsPerUser
+**Identyfikator URI przesunięcia**:/ProxySettingsPerUser
 
-#### <a name="windows10generalconfigurationnetworkproxyautomaticconfigurationurl"></a>Windows10GeneralConfiguration.NetworkProxyAutomaticConfigurationUrl 
+### <a name="windows10generalconfigurationnetworkproxyautomaticconfigurationurl"></a>Windows10GeneralConfiguration.NetworkProxyAutomaticConfigurationUrl 
 **CSP**: ./Device/Vendor/MSFT/NetworkProxy  
-**Przesunięcie URI**: /SetupScriptUrl
+**Identyfikator URI przesunięcia**:/SetupScriptUrl
 
-#### <a name="windows10generalconfigurationnetworkproxydisableautodetect"></a>Windows10GeneralConfiguration.NetworkProxyDisableAutoDetect 
+### <a name="windows10generalconfigurationnetworkproxydisableautodetect"></a>Windows10GeneralConfiguration.NetworkProxyDisableAutoDetect 
 **CSP**: ./Device/Vendor/MSFT/NetworkProxy  
-**Przesunięcie URI**: /AutoDetect
+**Identyfikator URI przesunięcia**:/AutoDetect
 
-#### <a name="windows10generalconfigurationnetworkproxyserver"></a>Windows10GeneralConfiguration.NetworkProxyServer 
+### <a name="windows10generalconfigurationnetworkproxyserver"></a>Windows10GeneralConfiguration.NetworkProxyServer 
 **CSP**: ./Vendor/MSFT/NetworkProxy  
-**Przesunięcie URI**: / proxyaddress, /Exceptions i /UseProxyForLocalAddresses
+**Przesunięty identyfikator URI**:/ProxyAddress,/Exceptions i/UseProxyForLocalAddresses
 
-#### <a name="windows10generalconfigurationnfcblocked"></a>Windows10GeneralConfiguration.NfcBlocked 
+### <a name="windows10generalconfigurationnfcblocked"></a>Windows10GeneralConfiguration.NfcBlocked 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Connectivity/AllowNFC
+**Identyfikator URI przesunięcia**:/config/Connectivity/AllowNFC
 
-#### <a name="windows10generalconfigurationonedrivedisablefilesync"></a>Windows10GeneralConfiguration.OneDriveDisableFileSync 
+### <a name="windows10generalconfigurationonedrivedisablefilesync"></a>Windows10GeneralConfiguration.OneDriveDisableFileSync 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/System/DisableOneDriveFileSync
+**Identyfikator URI przesunięcia**:/config/system/DisableOneDriveFileSync
 
-#### <a name="windows10generalconfigurationpasswordblocksimple"></a>Windows10GeneralConfiguration.PasswordBlockSimple 
+### <a name="windows10generalconfigurationpasswordblocksimple"></a>Windows10GeneralConfiguration.PasswordBlockSimple 
 **CSP**: ./Vendor/MSFT/Policy  
-**Offset URI**: /Config/DeviceLock/AllowSimpleDevicePassword
+**Identyfikator URI przesunięcia**:/config/DeviceLock/AllowSimpleDevicePassword
 
-#### <a name="windows10generalconfigurationpasswordexpirationdays"></a>Windows10GeneralConfiguration.PasswordExpirationDays 
+### <a name="windows10generalconfigurationpasswordexpirationdays"></a>Windows10GeneralConfiguration.PasswordExpirationDays 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/DeviceLock/DevicePasswordExpiration
+**Identyfikator URI przesunięcia**:/config/DeviceLock/DevicePasswordExpiration
 
-#### <a name="windows10generalconfigurationpasswordminimumageindays"></a>Windows10GeneralConfiguration.PasswordMinimumAgeInDays 
+### <a name="windows10generalconfigurationpasswordminimumageindays"></a>Windows10GeneralConfiguration.PasswordMinimumAgeInDays 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/DeviceLock/MinimumPasswordAge
+**Identyfikator URI przesunięcia**:/config/DeviceLock/MinimumPasswordAge
 
-#### <a name="windows10generalconfigurationpasswordminimumcharactersetcount"></a>Windows10GeneralConfiguration.PasswordMinimumCharacterSetCount 
+### <a name="windows10generalconfigurationpasswordminimumcharactersetcount"></a>Windows10GeneralConfiguration.PasswordMinimumCharacterSetCount 
 **CSP**: ./Vendor/MSFT/Policy  
-**Offset URI**: /Config/DeviceLock/MinDevicePasswordComplexCharacters
+**Identyfikator URI przesunięcia**:/config/DeviceLock/MinDevicePasswordComplexCharacters
 
-#### <a name="windows10generalconfigurationpasswordminimumlength"></a>Windows10GeneralConfiguration.PasswordMinimumLength 
+### <a name="windows10generalconfigurationpasswordminimumlength"></a>Windows10GeneralConfiguration.PasswordMinimumLength 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/DeviceLock/MinDevicePasswordLength
+**Identyfikator URI przesunięcia**:/config/DeviceLock/MinDevicePasswordLength
 
-#### <a name="windows10generalconfigurationpasswordminutesofinactivitybeforescreentimeout"></a>Windows10GeneralConfiguration.PasswordMinutesOfInactivityBeforeScreenTimeout 
+### <a name="windows10generalconfigurationpasswordminutesofinactivitybeforescreentimeout"></a>Windows10GeneralConfiguration.PasswordMinutesOfInactivityBeforeScreenTimeout 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/DeviceLock/MaxInactivityTimeDeviceLock
+**Identyfikator URI przesunięcia**:/config/DeviceLock/MaxInactivityTimeDeviceLock
 
-#### <a name="windows10generalconfigurationpasswordpreviouspasswordblockcount"></a>Windows10GeneralConfiguration.PasswordPreviousPasswordBlockCount 
+### <a name="windows10generalconfigurationpasswordpreviouspasswordblockcount"></a>Windows10GeneralConfiguration.PasswordPreviousPasswordBlockCount 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/DeviceLock/DevicePasswordHistory
+**Identyfikator URI przesunięcia**:/config/DeviceLock/DevicePasswordHistory
 
-#### <a name="windows10generalconfigurationpasswordrequired"></a>Windows10GeneralConfiguration.PasswordRequired 
+### <a name="windows10generalconfigurationpasswordrequired"></a>Windows10GeneralConfiguration.PasswordRequired 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/DeviceLock/DevicePasswordEnabled
+**Identyfikator URI przesunięcia**:/config/DeviceLock/DevicePasswordEnabled
 
-#### <a name="windows10generalconfigurationpasswordrequiredtype"></a>Windows10GeneralConfiguration.PasswordRequiredType 
+### <a name="windows10generalconfigurationpasswordrequiredtype"></a>Windows10GeneralConfiguration.PasswordRequiredType 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/DeviceLock/AlphanumericDevicePasswordRequired
+**Identyfikator URI przesunięcia**:/config/DeviceLock/AlphanumericDevicePasswordRequired
 
-#### <a name="windows10generalconfigurationpasswordrequirewhenresumefromidlestate"></a>Windows10GeneralConfiguration.PasswordRequireWhenResumeFromIdleState 
+### <a name="windows10generalconfigurationpasswordrequirewhenresumefromidlestate"></a>Windows10GeneralConfiguration.PasswordRequireWhenResumeFromIdleState 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/DeviceLock/AllowIdleReturnWithoutPassword
+**Identyfikator URI przesunięcia**:/config/DeviceLock/AllowIdleReturnWithoutPassword
 
-#### <a name="windows10generalconfigurationpasswordsigninfailurecountbeforefactoryreset"></a>Windows10GeneralConfiguration.PasswordSignInFailureCountBeforeFactoryReset 
+### <a name="windows10generalconfigurationpasswordsigninfailurecountbeforefactoryreset"></a>Windows10GeneralConfiguration.PasswordSignInFailureCountBeforeFactoryReset 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/DeviceLock/MaxDevicePasswordFailedAttempts
+**Identyfikator URI przesunięcia**:/config/DeviceLock/MaxDevicePasswordFailedAttempts
 
-#### <a name="windows10generalconfigurationpersonalizationdesktopimageurl"></a>Windows10GeneralConfiguration.PersonalizationDesktopImageUrl 
-**CSP**: ./Device/Vendor/MSFT/Personalization  
-**Przesunięcie URI**: /DesktopImageUrl
+### <a name="windows10generalconfigurationpersonalizationdesktopimageurl"></a>Windows10GeneralConfiguration.PersonalizationDesktopImageUrl 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/Personalization  
+**Identyfikator URI przesunięcia**:/DesktopImageUrl
 
-#### <a name="windows10generalconfigurationpersonalizationlockscreenimageurl"></a>Windows10GeneralConfiguration.PersonalizationLockScreenImageUrl 
-**CSP**: ./Device/Vendor/MSFT/Personalization  
-**Przesunięcie URI**: /LockScreenImageUrl
+### <a name="windows10generalconfigurationpersonalizationlockscreenimageurl"></a>Windows10GeneralConfiguration.PersonalizationLockScreenImageUrl 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/Personalization  
+**Identyfikator URI przesunięcia**:/LockScreenImageUrl
 
-#### <a name="windows10generalconfigurationpowerrequirepasswordonwakewhileonbattery"></a>Windows10GeneralConfiguration.PowerRequirePasswordOnWakeWhileOnBattery 
+### <a name="windows10generalconfigurationpowerrequirepasswordonwakewhileonbattery"></a>Windows10GeneralConfiguration.PowerRequirePasswordOnWakeWhileOnBattery 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Power/RequirePasswordWhenComputerWakesOnBattery
+**Identyfikator URI przesunięcia**:/config/Power/RequirePasswordWhenComputerWakesOnBattery
 
-#### <a name="windows10generalconfigurationpowerrequirepasswordonwakewhilepluggedin"></a>Windows10GeneralConfiguration.PowerRequirePasswordOnWakeWhilePluggedIn 
+### <a name="windows10generalconfigurationpowerrequirepasswordonwakewhilepluggedin"></a>Windows10GeneralConfiguration.PowerRequirePasswordOnWakeWhilePluggedIn 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Power/RequirePasswordWhenComputerWakesPluggedIn
+**Identyfikator URI przesunięcia**:/config/Power/RequirePasswordWhenComputerWakesPluggedIn
 
-#### <a name="windows10generalconfigurationpowerstandbystateswhensleepingwhileonbattery"></a>Windows10GeneralConfiguration.PowerStandbyStatesWhenSleepingWhileOnBattery 
+### <a name="windows10generalconfigurationpowerstandbystateswhensleepingwhileonbattery"></a>Windows10GeneralConfiguration.PowerStandbyStatesWhenSleepingWhileOnBattery 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Power/AllowStandbyStatesWhenSleepingOnBattery
+**Identyfikator URI przesunięcia**:/config/Power/AllowStandbyStatesWhenSleepingOnBattery
 
-#### <a name="windows10generalconfigurationpowerstandbystateswhensleepingwhilepluggedin"></a>Windows10GeneralConfiguration.PowerStandbyStatesWhenSleepingWhilePluggedIn 
+### <a name="windows10generalconfigurationpowerstandbystateswhensleepingwhilepluggedin"></a>Windows10GeneralConfiguration.PowerStandbyStatesWhenSleepingWhilePluggedIn 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Power/AllowStandbyWhenSleepingPluggedIn
+**Identyfikator URI przesunięcia**:/config/Power/AllowStandbyWhenSleepingPluggedIn
 
-#### <a name="windows10generalconfigurationpreventinstallationofmatchingdeviceids"></a>windows10generalconfiguration.preventInstallationOfMatchingDeviceIDs 
+### <a name="windows10generalconfigurationpreventinstallationofmatchingdeviceids"></a>windows10generalconfiguration.preventInstallationOfMatchingDeviceIDs 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/DeviceInstallation/PreventInstallationOfMatchingDeviceIDs
+**Identyfikator URI przesunięcia**:/config/DeviceInstallation/PreventInstallationOfMatchingDeviceIDs
 
-#### <a name="windows10generalconfigurationpreventinstallationofmatchingdevicesetupclasses"></a>windows10generalconfiguration.preventInstallationOfMatchingDeviceSetupClasses 
+### <a name="windows10generalconfigurationpreventinstallationofmatchingdevicesetupclasses"></a>windows10generalconfiguration.preventInstallationOfMatchingDeviceSetupClasses 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/DeviceInstallation/PreventInstallationOfMatchingDeviceSetupClasses
+**Identyfikator URI przesunięcia**:/config/DeviceInstallation/PreventInstallationOfMatchingDeviceSetupClasses
 
-#### <a name="windows10generalconfigurationprinterblockaddition"></a>Windows10GeneralConfiguration.PrinterBlockAddition 
+### <a name="windows10generalconfigurationprinterblockaddition"></a>Windows10GeneralConfiguration.PrinterBlockAddition 
 **CSP**: ./User/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Education/PreventAddingNewPrinters
+**Identyfikator URI przesunięcia**:/config/Education/PreventAddingNewPrinters
 
-#### <a name="windows10generalconfigurationprinterdefaultname"></a>Windows10GeneralConfiguration.PrinterDefaultName 
+### <a name="windows10generalconfigurationprinterdefaultname"></a>Windows10GeneralConfiguration.PrinterDefaultName 
 **CSP**: ./User/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Education/DefaultPrinterName
+**Identyfikator URI przesunięcia**:/config/Education/DefaultPrinterName
 
-#### <a name="windows10generalconfigurationprinternames"></a>Windows10GeneralConfiguration.PrinterNames 
+### <a name="windows10generalconfigurationprinternames"></a>Windows10GeneralConfiguration.PrinterNames 
 **CSP**: ./User/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Education/PrinterNames
+**Identyfikator URI przesunięcia**:/config/Education/PrinterNames
 
-#### <a name="windows10generalconfigurationprivacyadvertisingid"></a>Windows10GeneralConfiguration.PrivacyAdvertisingId 
+### <a name="windows10generalconfigurationprivacyadvertisingid"></a>Windows10GeneralConfiguration.PrivacyAdvertisingId 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Privacy/DisableAdvertisingID
+**Identyfikator URI przesunięcia**:/config/privacy/DisableAdvertisingID
 
-#### <a name="windows10generalconfigurationprivacyautoacceptpairingandconsentprompts"></a>Windows10GeneralConfiguration.PrivacyAutoAcceptPairingAndConsentPrompts 
+### <a name="windows10generalconfigurationprivacyautoacceptpairingandconsentprompts"></a>Windows10GeneralConfiguration.PrivacyAutoAcceptPairingAndConsentPrompts 
 **CSP**: ./Vendor/MSFT/Policy  
-**Offset URI**: /Config/Privacy/AllowAutoAcceptPairingAndPrivacyConsentPrompts
+**Identyfikator URI przesunięcia**:/config/privacy/AllowAutoAcceptPairingAndPrivacyConsentPrompts
 
-#### <a name="windows10generalconfigurationprivacyblockactivityfeed"></a>Windows10GeneralConfiguration.PrivacyBlockActivityFeed 
+### <a name="windows10generalconfigurationprivacyblockactivityfeed"></a>Windows10GeneralConfiguration.PrivacyBlockActivityFeed 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Privacy/EnableActivityFeed
+**Identyfikator URI przesunięcia**:/config/privacy/EnableActivityFeed
 
-#### <a name="windows10generalconfigurationprivacyblockinputpersonalization"></a>Windows10GeneralConfiguration.PrivacyBlockInputPersonalization 
+### <a name="windows10generalconfigurationprivacyblockinputpersonalization"></a>Windows10GeneralConfiguration.PrivacyBlockInputPersonalization 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Privacy/AllowInputPersonalization
+**Identyfikator URI przesunięcia**:/config/privacy/AllowInputPersonalization
 
-#### <a name="windows10generalconfigurationprivacyblockpublishuseractivities"></a>Windows10GeneralConfiguration.PrivacyBlockPublishUserActivities 
+### <a name="windows10generalconfigurationprivacyblockpublishuseractivities"></a>Windows10GeneralConfiguration.PrivacyBlockPublishUserActivities 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Privacy/PublishUserActivities
+**Identyfikator URI przesunięcia**:/config/privacy/PublishUserActivities
 
-#### <a name="windows10generalconfigurationsafesearchfilter"></a>Windows10GeneralConfiguration.SafeSearchFilter 
+### <a name="windows10generalconfigurationsafesearchfilter"></a>Windows10GeneralConfiguration.SafeSearchFilter 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Search/SafeSearchPermissions
+**Identyfikator URI przesunięcia**:/config/Search/SafeSearchPermissions
 
-#### <a name="windows10generalconfigurationscreencaptureblocked"></a>Windows10GeneralConfiguration.ScreenCaptureBlocked 
+### <a name="windows10generalconfigurationscreencaptureblocked"></a>Windows10GeneralConfiguration.ScreenCaptureBlocked 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Experience/AllowScreenCapture
+**Identyfikator URI przesunięcia**:/config/Experience/AllowScreenCapture
 
-#### <a name="windows10generalconfigurationsearchblockdiacritics"></a>Windows10GeneralConfiguration.SearchBlockDiacritics 
+### <a name="windows10generalconfigurationsearchblockdiacritics"></a>Windows10GeneralConfiguration.SearchBlockDiacritics 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Search/AllowUsingDiacritics
+**Identyfikator URI przesunięcia**:/config/Search/AllowUsingDiacritics
 
-#### <a name="windows10generalconfigurationsearchblockwebresults"></a>Windows10GeneralConfiguration.SearchBlockWebResults 
+### <a name="windows10generalconfigurationsearchblockwebresults"></a>Windows10GeneralConfiguration.SearchBlockWebResults 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Search/DoNotUseWebResults
+**Identyfikator URI przesunięcia**:/config/Search/DoNotUseWebResults
 
-#### <a name="windows10generalconfigurationsearchdisableautolanguagedetection"></a>Windows10GeneralConfiguration.SearchDisableAutoLanguageDetection 
+### <a name="windows10generalconfigurationsearchdisableautolanguagedetection"></a>Windows10GeneralConfiguration.SearchDisableAutoLanguageDetection 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Search/AlwaysUseAutoLangDetection
+**Identyfikator URI przesunięcia**:/config/Search/AlwaysUseAutoLangDetection
 
-#### <a name="windows10generalconfigurationsearchdisableindexerbackoff"></a>Windows10GeneralConfiguration.SearchDisableIndexerBackoff 
+### <a name="windows10generalconfigurationsearchdisableindexerbackoff"></a>Windows10GeneralConfiguration.SearchDisableIndexerBackoff 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Search/DisableBackoff
+**Identyfikator URI przesunięcia**:/config/Search/DisableBackoff
 
-#### <a name="windows10generalconfigurationsearchdisableindexingencrypteditems"></a>Windows10GeneralConfiguration.SearchDisableIndexingEncryptedItems 
+### <a name="windows10generalconfigurationsearchdisableindexingencrypteditems"></a>Windows10GeneralConfiguration.SearchDisableIndexingEncryptedItems 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/Search/AllowIndexingEncryptedStoresOrItems
+**Identyfikator URI przesunięcia**:/config/Search/AllowIndexingEncryptedStoresOrItems
 
-#### <a name="windows10generalconfigurationsearchdisableindexingremovabledrive"></a>Windows10GeneralConfiguration.SearchDisableIndexingRemovableDrive 
+### <a name="windows10generalconfigurationsearchdisableindexingremovabledrive"></a>Windows10GeneralConfiguration.SearchDisableIndexingRemovableDrive 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Search/DisableRemovableDriveIndexing
+**Identyfikator URI przesunięcia**:/config/Search/DisableRemovableDriveIndexing
 
-#### <a name="windows10generalconfigurationsearchdisablelocation"></a>Windows10GeneralConfiguration.SearchDisableLocation 
+### <a name="windows10generalconfigurationsearchdisablelocation"></a>Windows10GeneralConfiguration.SearchDisableLocation 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Search/AllowSearchToUseLocation
+**Identyfikator URI przesunięcia**:/config/Search/AllowSearchToUseLocation
 
-#### <a name="windows10generalconfigurationsearchdisableuselocation"></a>Windows10GeneralConfiguration.SearchDisableUseLocation 
+### <a name="windows10generalconfigurationsearchdisableuselocation"></a>Windows10GeneralConfiguration.SearchDisableUseLocation 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Search/AllowSearchToUseLocation
+**Identyfikator URI przesunięcia**:/config/Search/AllowSearchToUseLocation
 
-#### <a name="windows10generalconfigurationsearchenableautomaticindexsizemanangement"></a>Windows10GeneralConfiguration.SearchEnableAutomaticIndexSizeManangement 
+### <a name="windows10generalconfigurationsearchenableautomaticindexsizemanangement"></a>Windows10GeneralConfiguration.SearchEnableAutomaticIndexSizeManangement 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Search/PreventIndexingLowDiskSpaceMB
+**Identyfikator URI przesunięcia**:/config/Search/PreventIndexingLowDiskSpaceMB
 
-#### <a name="windows10generalconfigurationsearchenableremotequeries"></a>Windows10GeneralConfiguration.SearchEnableRemoteQueries 
+### <a name="windows10generalconfigurationsearchenableremotequeries"></a>Windows10GeneralConfiguration.SearchEnableRemoteQueries 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Search/PreventRemoteQueries
+**Identyfikator URI przesunięcia**:/config/Search/PreventRemoteQueries
 
-#### <a name="windows10generalconfigurationsecurityblockazureadjoineddevicesautoencryption"></a>Windows10GeneralConfiguration.SecurityBlockAzureADJoinedDevicesAutoEncryption 
+### <a name="windows10generalconfigurationsecurityblockazureadjoineddevicesautoencryption"></a>Windows10GeneralConfiguration.SecurityBlockAzureADJoinedDevicesAutoEncryption 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Security/PreventAutomaticDeviceEncryptionForAzureADJoinedDevices
+**Identyfikator URI przesunięcia**:/config/Security/PreventAutomaticDeviceEncryptionForAzureADJoinedDevices
 
-#### <a name="windows10generalconfigurationsettingsblockaccountspage"></a>Windows10GeneralConfiguration.SettingsBlockAccountsPage 
+### <a name="windows10generalconfigurationsettingsblockaccountspage"></a>Windows10GeneralConfiguration.SettingsBlockAccountsPage 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Settings/PageVisibilityList
+**Identyfikator URI przesunięcia**:/config/Settings/PageVisibilityList
 
-#### <a name="windows10generalconfigurationsettingsblockaddprovisioningpackage"></a>Windows10GeneralConfiguration.SettingsBlockAddProvisioningPackage 
+### <a name="windows10generalconfigurationsettingsblockaddprovisioningpackage"></a>Windows10GeneralConfiguration.SettingsBlockAddProvisioningPackage 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Security/AllowAddProvisioningPackage
+**Identyfikator URI przesunięcia**:/config/Security/AllowAddProvisioningPackage
 
-#### <a name="windows10generalconfigurationsettingsblockappspage"></a>Windows10GeneralConfiguration.SettingsBlockAppsPage 
+### <a name="windows10generalconfigurationsettingsblockappspage"></a>Windows10GeneralConfiguration.SettingsBlockAppsPage 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Settings/PageVisibilityList
+**Identyfikator URI przesunięcia**:/config/Settings/PageVisibilityList
 
-#### <a name="windows10generalconfigurationsettingsblockchangelanguage"></a>Windows10GeneralConfiguration.SettingsBlockChangeLanguage 
+### <a name="windows10generalconfigurationsettingsblockchangelanguage"></a>Windows10GeneralConfiguration.SettingsBlockChangeLanguage 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Settings/AllowLanguage
+**Identyfikator URI przesunięcia**:/config/Settings/AllowLanguage
 
-#### <a name="windows10generalconfigurationsettingsblockchangepowersleep"></a>Windows10GeneralConfiguration.SettingsBlockChangePowerSleep 
+### <a name="windows10generalconfigurationsettingsblockchangepowersleep"></a>Windows10GeneralConfiguration.SettingsBlockChangePowerSleep 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Settings/AllowPowerSleep
+**Identyfikator URI przesunięcia**:/config/Settings/AllowPowerSleep
 
-#### <a name="windows10generalconfigurationsettingsblockchangeregion"></a>Windows10GeneralConfiguration.SettingsBlockChangeRegion 
+### <a name="windows10generalconfigurationsettingsblockchangeregion"></a>Windows10GeneralConfiguration.SettingsBlockChangeRegion 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Settings/AllowRegion
+**Identyfikator URI przesunięcia**:/config/Settings/AllowRegion
 
-#### <a name="windows10generalconfigurationsettingsblockchangesystemtime"></a>Windows10GeneralConfiguration.SettingsBlockChangeSystemTime 
+### <a name="windows10generalconfigurationsettingsblockchangesystemtime"></a>Windows10GeneralConfiguration.SettingsBlockChangeSystemTime 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Settings/AllowDateTime
+**Identyfikator URI przesunięcia**:/config/Settings/AllowDateTime
 
-#### <a name="windows10generalconfigurationsettingsblockdevicespage"></a>Windows10GeneralConfiguration.SettingsBlockDevicesPage 
+### <a name="windows10generalconfigurationsettingsblockdevicespage"></a>Windows10GeneralConfiguration.SettingsBlockDevicesPage 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Settings/PageVisibilityList
+**Identyfikator URI przesunięcia**:/config/Settings/PageVisibilityList
 
-#### <a name="windows10generalconfigurationsettingsblockeaseofaccesspage"></a>Windows10GeneralConfiguration.SettingsBlockEaseOfAccessPage 
+### <a name="windows10generalconfigurationsettingsblockeaseofaccesspage"></a>Windows10GeneralConfiguration.SettingsBlockEaseOfAccessPage 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Settings/PageVisibilityList
+**Identyfikator URI przesunięcia**:/config/Settings/PageVisibilityList
 
-#### <a name="windows10generalconfigurationsettingsblockeditdevicename"></a>Windows10GeneralConfiguration.SettingsBlockEditDeviceName 
+### <a name="windows10generalconfigurationsettingsblockeditdevicename"></a>Windows10GeneralConfiguration.SettingsBlockEditDeviceName 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Settings/AllowEditDeviceName
+**Identyfikator URI przesunięcia**:/config/Settings/AllowEditDeviceName
 
-#### <a name="windows10generalconfigurationsettingsblockgamingpage"></a>Windows10GeneralConfiguration.SettingsBlockGamingPage 
+### <a name="windows10generalconfigurationsettingsblockgamingpage"></a>Windows10GeneralConfiguration.SettingsBlockGamingPage 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Settings/PageVisibilityList
+**Identyfikator URI przesunięcia**:/config/Settings/PageVisibilityList
 
-#### <a name="windows10generalconfigurationsettingsblocknetworkinternetpage"></a>Windows10GeneralConfiguration.SettingsBlockNetworkInternetPage 
+### <a name="windows10generalconfigurationsettingsblocknetworkinternetpage"></a>Windows10GeneralConfiguration.SettingsBlockNetworkInternetPage 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Settings/PageVisibilityList
+**Identyfikator URI przesunięcia**:/config/Settings/PageVisibilityList
 
-#### <a name="windows10generalconfigurationsettingsblockpersonalizationpage"></a>Windows10GeneralConfiguration.SettingsBlockPersonalizationPage 
+### <a name="windows10generalconfigurationsettingsblockpersonalizationpage"></a>Windows10GeneralConfiguration.SettingsBlockPersonalizationPage 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Settings/PageVisibilityList
+**Identyfikator URI przesunięcia**:/config/Settings/PageVisibilityList
 
-#### <a name="windows10generalconfigurationsettingsblockprivacypage"></a>Windows10GeneralConfiguration.SettingsBlockPrivacyPage 
+### <a name="windows10generalconfigurationsettingsblockprivacypage"></a>Windows10GeneralConfiguration.SettingsBlockPrivacyPage 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Settings/PageVisibilityList
+**Identyfikator URI przesunięcia**:/config/Settings/PageVisibilityList
 
-#### <a name="windows10generalconfigurationsettingsblockremoveprovisioningpackage"></a>Windows10GeneralConfiguration.SettingsBlockRemoveProvisioningPackage 
+### <a name="windows10generalconfigurationsettingsblockremoveprovisioningpackage"></a>Windows10GeneralConfiguration.SettingsBlockRemoveProvisioningPackage 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Security/AllowRemoveProvisioningPackage
+**Identyfikator URI przesunięcia**:/config/Security/AllowRemoveProvisioningPackage
 
-#### <a name="windows10generalconfigurationsettingsblocksystempage"></a>Windows10GeneralConfiguration.SettingsBlockSystemPage 
+### <a name="windows10generalconfigurationsettingsblocksystempage"></a>Windows10GeneralConfiguration.SettingsBlockSystemPage 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Settings/PageVisibilityList
+**Identyfikator URI przesunięcia**:/config/Settings/PageVisibilityList
 
-#### <a name="windows10generalconfigurationsettingsblocktimelanguagepage"></a>Windows10GeneralConfiguration.SettingsBlockTimeLanguagePage 
+### <a name="windows10generalconfigurationsettingsblocktimelanguagepage"></a>Windows10GeneralConfiguration.SettingsBlockTimeLanguagePage 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Settings/PageVisibilityList
+**Identyfikator URI przesunięcia**:/config/Settings/PageVisibilityList
 
-#### <a name="windows10generalconfigurationsettingsblockupdatesecuritypage"></a>Windows10GeneralConfiguration.SettingsBlockUpdateSecurityPage 
+### <a name="windows10generalconfigurationsettingsblockupdatesecuritypage"></a>Windows10GeneralConfiguration.SettingsBlockUpdateSecurityPage 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Settings/PageVisibilityList
+**Identyfikator URI przesunięcia**:/config/Settings/PageVisibilityList
 
-#### <a name="windows10generalconfigurationshareduserappdataallowed"></a>Windows10GeneralConfiguration.SharedUserAppDataAllowed 
+### <a name="windows10generalconfigurationshareduserappdataallowed"></a>Windows10GeneralConfiguration.SharedUserAppDataAllowed 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/ApplicationManagement/AllowSharedUserAppData
+**Identyfikator URI przesunięcia**:/config/ApplicationManagement/AllowSharedUserAppData
 
-#### <a name="windows10generalconfigurationsmartscreenblockpromptoverride"></a>Windows10GeneralConfiguration.SmartScreenBlockPromptOverride 
+### <a name="windows10generalconfigurationsmartscreenblockpromptoverride"></a>Windows10GeneralConfiguration.SmartScreenBlockPromptOverride 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/PreventSmartScreenPromptOverride
+**Identyfikator URI przesunięcia**:/config/Browser/PreventSmartScreenPromptOverride
 
-#### <a name="windows10generalconfigurationsmartscreenblockpromptoverrideforfiles"></a>Windows10GeneralConfiguration.SmartScreenBlockPromptOverrideForFiles 
+### <a name="windows10generalconfigurationsmartscreenblockpromptoverrideforfiles"></a>Windows10GeneralConfiguration.SmartScreenBlockPromptOverrideForFiles 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/PreventSmartScreenPromptOverrideForFiles
+**Identyfikator URI przesunięcia**:/config/Browser/PreventSmartScreenPromptOverrideForFiles
 
-#### <a name="windows10generalconfigurationsmartscreenenableappinstallcontrol"></a>Windows10GeneralConfiguration.SmartScreenEnableAppInstallControl 
+### <a name="windows10generalconfigurationsmartscreenenableappinstallcontrol"></a>Windows10GeneralConfiguration.SmartScreenEnableAppInstallControl 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/SmartScreen/EnableAppInstallControl
+**Identyfikator URI przesunięcia**:/config/SmartScreen/EnableAppInstallControl
 
-#### <a name="windows10generalconfigurationstartblockunpinningappsfromtaskbar"></a>Windows10GeneralConfiguration.StartBlockUnpinningAppsFromTaskbar 
+### <a name="windows10generalconfigurationstartblockunpinningappsfromtaskbar"></a>Windows10GeneralConfiguration.StartBlockUnpinningAppsFromTaskbar 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Start/NoPinningToTaskbar
+**Identyfikator URI przesunięcia**:/config/Start/NoPinningToTaskbar
 
-#### <a name="windows10generalconfigurationstartmenuapplistvisibility"></a>Windows10GeneralConfiguration.StartMenuAppListVisibility 
+### <a name="windows10generalconfigurationstartmenuapplistvisibility"></a>Windows10GeneralConfiguration.StartMenuAppListVisibility 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Start/HideAppList
+**Identyfikator URI przesunięcia**:/config/Start/HideAppList
 
-#### <a name="windows10generalconfigurationstartmenuhidechangeaccountsettings"></a>Windows10GeneralConfiguration.StartMenuHideChangeAccountSettings 
+### <a name="windows10generalconfigurationstartmenuhidechangeaccountsettings"></a>Windows10GeneralConfiguration.StartMenuHideChangeAccountSettings 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Start/HideChangeAccountSettings
+**Identyfikator URI przesunięcia**:/config/Start/HideChangeAccountSettings
 
-#### <a name="windows10generalconfigurationstartmenuhidefrequentlyusedapps"></a>Windows10GeneralConfiguration.StartMenuHideFrequentlyUsedApps 
+### <a name="windows10generalconfigurationstartmenuhidefrequentlyusedapps"></a>Windows10GeneralConfiguration.StartMenuHideFrequentlyUsedApps 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Start/HideFrequentlyUsedApps
+**Identyfikator URI przesunięcia**:/config/Start/HideFrequentlyUsedApps
 
-#### <a name="windows10generalconfigurationstartmenuhidehibernate"></a>Windows10GeneralConfiguration.StartMenuHideHibernate 
+### <a name="windows10generalconfigurationstartmenuhidehibernate"></a>Windows10GeneralConfiguration.StartMenuHideHibernate 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Start/HideHibernate
+**Identyfikator URI przesunięcia**:/config/Start/HideHibernate
 
-#### <a name="windows10generalconfigurationstartmenuhidelock"></a>Windows10GeneralConfiguration.StartMenuHideLock 
+### <a name="windows10generalconfigurationstartmenuhidelock"></a>Windows10GeneralConfiguration.StartMenuHideLock 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Start/HideLock
+**Identyfikator URI przesunięcia**:/config/Start/HideLock
 
-#### <a name="windows10generalconfigurationstartmenuhidepowerbutton"></a>Windows10GeneralConfiguration.StartMenuHidePowerButton 
+### <a name="windows10generalconfigurationstartmenuhidepowerbutton"></a>Windows10GeneralConfiguration.StartMenuHidePowerButton 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Start/HidePowerButton
+**Identyfikator URI przesunięcia**:/config/Start/HidePowerButton
 
-#### <a name="windows10generalconfigurationstartmenuhiderecentjumplists"></a>Windows10GeneralConfiguration.StartMenuHideRecentJumpLists 
+### <a name="windows10generalconfigurationstartmenuhiderecentjumplists"></a>Windows10GeneralConfiguration.StartMenuHideRecentJumpLists 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Start/HideRecentJumplists
+**Identyfikator URI przesunięcia**:/config/Start/HideRecentJumplists
 
-#### <a name="windows10generalconfigurationstartmenuhiderecentlyaddedapps"></a>Windows10GeneralConfiguration.StartMenuHideRecentlyAddedApps 
+### <a name="windows10generalconfigurationstartmenuhiderecentlyaddedapps"></a>Windows10GeneralConfiguration.StartMenuHideRecentlyAddedApps 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Start/HideRecentlyAddedApps
+**Identyfikator URI przesunięcia**:/config/Start/HideRecentlyAddedApps
 
-#### <a name="windows10generalconfigurationstartmenuhiderestartoptions"></a>Windows10GeneralConfiguration.StartMenuHideRestartOptions 
+### <a name="windows10generalconfigurationstartmenuhiderestartoptions"></a>Windows10GeneralConfiguration.StartMenuHideRestartOptions 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Start/HideRestart
+**Identyfikator URI przesunięcia**:/config/Start/HideRestart
 
-#### <a name="windows10generalconfigurationstartmenuhideshutdown"></a>Windows10GeneralConfiguration.StartMenuHideShutDown 
+### <a name="windows10generalconfigurationstartmenuhideshutdown"></a>Windows10GeneralConfiguration.StartMenuHideShutDown 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Start/HideShutDown
+**Identyfikator URI przesunięcia**:/config/Start/HideShutDown
 
-#### <a name="windows10generalconfigurationstartmenuhidesignout"></a>Windows10GeneralConfiguration.StartMenuHideSignOut 
+### <a name="windows10generalconfigurationstartmenuhidesignout"></a>Windows10GeneralConfiguration.StartMenuHideSignOut 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Start/HideSignOut
+**Identyfikator URI przesunięcia**:/config/Start/HideSignOut
 
-#### <a name="windows10generalconfigurationstartmenuhidesleep"></a>Windows10GeneralConfiguration.StartMenuHideSleep 
+### <a name="windows10generalconfigurationstartmenuhidesleep"></a>Windows10GeneralConfiguration.StartMenuHideSleep 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Start/HideSleep
+**Identyfikator URI przesunięcia**:/config/Start/HideSleep
 
-#### <a name="windows10generalconfigurationstartmenuhideswitchaccount"></a>Windows10GeneralConfiguration.StartMenuHideSwitchAccount 
+### <a name="windows10generalconfigurationstartmenuhideswitchaccount"></a>Windows10GeneralConfiguration.StartMenuHideSwitchAccount 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Start/HideSwitchAccount
+**Identyfikator URI przesunięcia**:/config/Start/HideSwitchAccount
 
-#### <a name="windows10generalconfigurationstartmenuhideusertile"></a>Windows10GeneralConfiguration.StartMenuHideUserTile 
+### <a name="windows10generalconfigurationstartmenuhideusertile"></a>Windows10GeneralConfiguration.StartMenuHideUserTile 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Start/HideUserTile
+**Identyfikator URI przesunięcia**:/config/Start/HideUserTile
 
-#### <a name="windows10generalconfigurationstartmenulayoutedgeassetsxml"></a>Windows10GeneralConfiguration.StartMenuLayoutEdgeAssetsXml 
+### <a name="windows10generalconfigurationstartmenulayoutedgeassetsxml"></a>Windows10GeneralConfiguration.StartMenuLayoutEdgeAssetsXml 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Start/ImportEdgeAssets
+**Identyfikator URI przesunięcia**:/config/Start/ImportEdgeAssets
 
-#### <a name="windows10generalconfigurationstartmenulayoutxml"></a>Windows10GeneralConfiguration.StartMenuLayoutXml 
+### <a name="windows10generalconfigurationstartmenulayoutxml"></a>Windows10GeneralConfiguration.StartMenuLayoutXml 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Start/StartLayout
+**Identyfikator URI przesunięcia**:/config/Start/StartLayout
 
-#### <a name="windows10generalconfigurationstartmenumode"></a>Windows10GeneralConfiguration.StartMenuMode 
+### <a name="windows10generalconfigurationstartmenumode"></a>Windows10GeneralConfiguration.StartMenuMode 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Start/ForceStartSize
+**Identyfikator URI przesunięcia**:/config/Start/ForceStartSize
 
-#### <a name="windows10generalconfigurationstartmenupinnedfolderdocuments"></a>Windows10GeneralConfiguration.StartMenuPinnedFolderDocuments 
+### <a name="windows10generalconfigurationstartmenupinnedfolderdocuments"></a>Windows10GeneralConfiguration.StartMenuPinnedFolderDocuments 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Start/AllowPinnedFolderDocuments
+**Identyfikator URI przesunięcia**:/config/Start/AllowPinnedFolderDocuments
 
-#### <a name="windows10generalconfigurationstartmenupinnedfolderdownloads"></a>Windows10GeneralConfiguration.StartMenuPinnedFolderDownloads 
+### <a name="windows10generalconfigurationstartmenupinnedfolderdownloads"></a>Windows10GeneralConfiguration.StartMenuPinnedFolderDownloads 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Start/AllowPinnedFolderDownloads
+**Identyfikator URI przesunięcia**:/config/Start/AllowPinnedFolderDownloads
 
-#### <a name="windows10generalconfigurationstartmenupinnedfolderfileexplorer"></a>Windows10GeneralConfiguration.StartMenuPinnedFolderFileExplorer 
+### <a name="windows10generalconfigurationstartmenupinnedfolderfileexplorer"></a>Windows10GeneralConfiguration.StartMenuPinnedFolderFileExplorer 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Start/AllowPinnedFolderFileExplorer
+**Identyfikator URI przesunięcia**:/config/Start/AllowPinnedFolderFileExplorer
 
-#### <a name="windows10generalconfigurationstartmenupinnedfolderhomegroup"></a>Windows10GeneralConfiguration.StartMenuPinnedFolderHomeGroup 
+### <a name="windows10generalconfigurationstartmenupinnedfolderhomegroup"></a>Windows10GeneralConfiguration.StartMenuPinnedFolderHomeGroup 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Start/AllowPinnedFolderHomeGroup
+**Identyfikator URI przesunięcia**:/config/Start/AllowPinnedFolderHomeGroup
 
-#### <a name="windows10generalconfigurationstartmenupinnedfoldermusic"></a>Windows10GeneralConfiguration.StartMenuPinnedFolderMusic 
+### <a name="windows10generalconfigurationstartmenupinnedfoldermusic"></a>Windows10GeneralConfiguration.StartMenuPinnedFolderMusic 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Start/AllowPinnedFolderMusic
+**Identyfikator URI przesunięcia**:/config/Start/AllowPinnedFolderMusic
 
-#### <a name="windows10generalconfigurationstartmenupinnedfoldernetwork"></a>Windows10GeneralConfiguration.StartMenuPinnedFolderNetwork 
+### <a name="windows10generalconfigurationstartmenupinnedfoldernetwork"></a>Windows10GeneralConfiguration.StartMenuPinnedFolderNetwork 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Start/AllowPinnedFolderNetwork
+**Identyfikator URI przesunięcia**:/config/Start/AllowPinnedFolderNetwork
 
-#### <a name="windows10generalconfigurationstartmenupinnedfolderpersonalfolder"></a>Windows10GeneralConfiguration.StartMenuPinnedFolderPersonalFolder 
+### <a name="windows10generalconfigurationstartmenupinnedfolderpersonalfolder"></a>Windows10GeneralConfiguration.StartMenuPinnedFolderPersonalFolder 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Start/AllowPinnedFolderPersonalFolder
+**Identyfikator URI przesunięcia**:/config/Start/AllowPinnedFolderPersonalFolder
 
-#### <a name="windows10generalconfigurationstartmenupinnedfolderpictures"></a>Windows10GeneralConfiguration.StartMenuPinnedFolderPictures 
+### <a name="windows10generalconfigurationstartmenupinnedfolderpictures"></a>Windows10GeneralConfiguration.StartMenuPinnedFolderPictures 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Start/AllowPinnedFolderPictures
+**Identyfikator URI przesunięcia**:/config/Start/AllowPinnedFolderPictures
 
-#### <a name="windows10generalconfigurationstartmenupinnedfoldersettings"></a>Windows10GeneralConfiguration.StartMenuPinnedFolderSettings 
+### <a name="windows10generalconfigurationstartmenupinnedfoldersettings"></a>Windows10GeneralConfiguration.StartMenuPinnedFolderSettings 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Start/AllowPinnedFolderSettings
+**Identyfikator URI przesunięcia**:/config/Start/AllowPinnedFolderSettings
 
-#### <a name="windows10generalconfigurationstartmenupinnedfoldervideos"></a>Windows10GeneralConfiguration.StartMenuPinnedFolderVideos 
+### <a name="windows10generalconfigurationstartmenupinnedfoldervideos"></a>Windows10GeneralConfiguration.StartMenuPinnedFolderVideos 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Start/AllowPinnedFolderVideos
+**Identyfikator URI przesunięcia**:/config/Start/AllowPinnedFolderVideos
 
-#### <a name="windows10generalconfigurationstorageblockremovablestorage"></a>Windows10GeneralConfiguration.StorageBlockRemovableStorage 
+### <a name="windows10generalconfigurationstorageblockremovablestorage"></a>Windows10GeneralConfiguration.StorageBlockRemovableStorage 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/System/AllowStorageCard
+**Identyfikator URI przesunięcia**:/config/system/AllowStorageCard
 
-#### <a name="windows10generalconfigurationstoragerequiremobiledeviceencryption"></a>Windows10GeneralConfiguration.StorageRequireMobileDeviceEncryption 
+### <a name="windows10generalconfigurationstoragerequiremobiledeviceencryption"></a>Windows10GeneralConfiguration.StorageRequireMobileDeviceEncryption 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Security/RequireDeviceEncryption
+**Identyfikator URI przesunięcia**:/config/Security/RequireDeviceEncryption
 
-#### <a name="windows10generalconfigurationstoragerestrictappdatatosystemvolume"></a>Windows10GeneralConfiguration.StorageRestrictAppDataToSystemVolume 
+### <a name="windows10generalconfigurationstoragerestrictappdatatosystemvolume"></a>Windows10GeneralConfiguration.StorageRestrictAppDataToSystemVolume 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/ApplicationManagement/RestrictAppDataToSystemVolume
+**Identyfikator URI przesunięcia**:/config/ApplicationManagement/RestrictAppDataToSystemVolume
 
-#### <a name="windows10generalconfigurationstoragerestrictappinstalltosystemvolume"></a>Windows10GeneralConfiguration.StorageRestrictAppInstallToSystemVolume 
+### <a name="windows10generalconfigurationstoragerestrictappinstalltosystemvolume"></a>Windows10GeneralConfiguration.StorageRestrictAppInstallToSystemVolume 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/ApplicationManagement/RestrictAppToSystemVolume
+**Identyfikator URI przesunięcia**:/config/ApplicationManagement/RestrictAppToSystemVolume
 
-#### <a name="windows10generalconfigurationsystembootstartdriverinitialization"></a>Windows10GeneralConfiguration.SystemBootStartDriverInitialization 
+### <a name="windows10generalconfigurationsystembootstartdriverinitialization"></a>Windows10GeneralConfiguration.SystemBootStartDriverInitialization 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/System/BootStartDriverInitialization
+**Identyfikator URI przesunięcia**:/config/system/BootStartDriverInitialization
 
-#### <a name="windows10generalconfigurationsystemtelemetryproxyserver"></a>Windows10GeneralConfiguration.SystemTelemetryProxyServer 
+### <a name="windows10generalconfigurationsystemtelemetryproxyserver"></a>Windows10GeneralConfiguration.SystemTelemetryProxyServer 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/System/TelemetryProxy
+**Identyfikator URI przesunięcia**:/config/system/TelemetryProxy
 
-#### <a name="windows10generalconfigurationtaskmanagerblockendtask"></a>Windows10GeneralConfiguration.TaskManagerBlockEndTask 
+### <a name="windows10generalconfigurationtaskmanagerblockendtask"></a>Windows10GeneralConfiguration.TaskManagerBlockEndTask 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/TaskManager/AllowEndTask
+**Identyfikator URI przesunięcia**:/config/taskmanager/AllowEndTask
 
-#### <a name="windows10generalconfigurationtenantlockdownrequirenetworkduringoutofboxexperience"></a>Windows10GeneralConfiguration.TenantLockdownRequireNetworkDuringOutOfBoxExperience 
-**CSP**: ./Vendor/MSFT/TenantLockdown  
-**Przesunięcie URI**: /RequireNetworkInOOBE
+### <a name="windows10generalconfigurationtenantlockdownrequirenetworkduringoutofboxexperience"></a>Windows10GeneralConfiguration.TenantLockdownRequireNetworkDuringOutOfBoxExperience 
+**Dostawca usług kryptograficznych**:./Vendor/MSFT/TenantLockdown  
+**Identyfikator URI przesunięcia**:/RequireNetworkInOOBE
 
-#### <a name="windows10generalconfigurationusbblocked"></a>Windows10GeneralConfiguration.UsbBlocked 
+### <a name="windows10generalconfigurationusbblocked"></a>Windows10GeneralConfiguration.UsbBlocked 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Connectivity/AllowUSBConnection
+**Identyfikator URI przesunięcia**:/config/Connectivity/AllowUSBConnection
 
-#### <a name="windows10generalconfigurationvoicerecordingblocked"></a>Windows10GeneralConfiguration.VoiceRecordingBlocked 
+### <a name="windows10generalconfigurationvoicerecordingblocked"></a>Windows10GeneralConfiguration.VoiceRecordingBlocked 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Experience/AllowVoiceRecording
+**Identyfikator URI przesunięcia**:/config/Experience/AllowVoiceRecording
 
-#### <a name="windows10generalconfigurationwebrtcblocklocalhostipaddress"></a>Windows10GeneralConfiguration.WebRtcBlockLocalhostIpAddress 
+### <a name="windows10generalconfigurationwebrtcblocklocalhostipaddress"></a>Windows10GeneralConfiguration.WebRtcBlockLocalhostIpAddress 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/PreventUsingLocalHostIPAddressForWebRTC
+**Identyfikator URI przesunięcia**:/config/Browser/PreventUsingLocalHostIPAddressForWebRTC
 
-#### <a name="windows10generalconfigurationwifiblockautomaticconnecthotspots"></a>Windows10GeneralConfiguration.WiFiBlockAutomaticConnectHotspots 
+### <a name="windows10generalconfigurationwifiblockautomaticconnecthotspots"></a>Windows10GeneralConfiguration.WiFiBlockAutomaticConnectHotspots 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/WiFi/AllowAutoConnectToWiFiSenseHotspots
+**Identyfikator URI przesunięcia**:/config/WiFi/AllowAutoConnectToWiFiSenseHotspots
 
-#### <a name="windows10generalconfigurationwifiblocked"></a>Windows10GeneralConfiguration.WiFiBlocked 
+### <a name="windows10generalconfigurationwifiblocked"></a>Windows10GeneralConfiguration.WiFiBlocked 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Wifi/AllowWiFi
+**Identyfikator URI przesunięcia**:/config/WiFi/AllowWiFi
 
-#### <a name="windows10generalconfigurationwifiblockmanualconfiguration"></a>Windows10GeneralConfiguration.WiFiBlockManualConfiguration 
+### <a name="windows10generalconfigurationwifiblockmanualconfiguration"></a>Windows10GeneralConfiguration.WiFiBlockManualConfiguration 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/WiFi/AllowManualWiFi/Configuration
+**Identyfikator URI przesunięcia**:/config/WiFi/AllowManualWiFi/Configuration
 
-#### <a name="windows10generalconfigurationwifiscaninterval"></a>Windows10GeneralConfiguration.WiFiScanInterval 
+### <a name="windows10generalconfigurationwifiscaninterval"></a>Windows10GeneralConfiguration.WiFiScanInterval 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/WiFi/WLANScanMode
+**Identyfikator URI przesunięcia**:/config/WiFi/WLANScanMode
 
-#### <a name="windows10generalconfigurationwindowslogonlocalusersondomainjoinedcomputers"></a>Windows10GeneralConfiguration.WindowsLogOnLocalUsersOnDomainJoinedComputers 
+### <a name="windows10generalconfigurationwindowslogonlocalusersondomainjoinedcomputers"></a>Windows10GeneralConfiguration.WindowsLogOnLocalUsersOnDomainJoinedComputers 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/WindowsLogon/EnumerateLocalUsersOnDomainJoinedComputers
+**Identyfikator URI przesunięcia**:/config/WindowsLogon/EnumerateLocalUsersOnDomainJoinedComputers
 
-#### <a name="windows10generalconfigurationwindowsspotlightblockconsumerspecificfeatures"></a>Windows10GeneralConfiguration.WindowsSpotlightBlockConsumerSpecificFeatures 
+### <a name="windows10generalconfigurationwindowsspotlightblockconsumerspecificfeatures"></a>Windows10GeneralConfiguration.WindowsSpotlightBlockConsumerSpecificFeatures 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Experience/AllowWindowsConsumerFeatures
+**Identyfikator URI przesunięcia**:/config/Experience/AllowWindowsConsumerFeatures
 
-#### <a name="windows10generalconfigurationwindowsspotlightblocked"></a>Windows10GeneralConfiguration.WindowsSpotlightBlocked 
+### <a name="windows10generalconfigurationwindowsspotlightblocked"></a>Windows10GeneralConfiguration.WindowsSpotlightBlocked 
 **CSP**: ./User/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Experience/AllowWindowsSpotlight
+**Identyfikator URI przesunięcia**:/config/Experience/AllowWindowsSpotlight
 
-#### <a name="windows10generalconfigurationwindowsspotlightblockonactioncenter"></a>Windows10GeneralConfiguration.WindowsSpotlightBlockOnActionCenter 
+### <a name="windows10generalconfigurationwindowsspotlightblockonactioncenter"></a>Windows10GeneralConfiguration.WindowsSpotlightBlockOnActionCenter 
 **CSP**: ./User/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Experience/AllowWindowsSpotlightOnActionCenter
+**Identyfikator URI przesunięcia**:/config/Experience/AllowWindowsSpotlightOnActionCenter
 
-#### <a name="windows10generalconfigurationwindowsspotlightblocktailoredexperiences"></a>Windows10GeneralConfiguration.WindowsSpotlightBlockTailoredExperiences 
+### <a name="windows10generalconfigurationwindowsspotlightblocktailoredexperiences"></a>Windows10GeneralConfiguration.WindowsSpotlightBlockTailoredExperiences 
 **CSP**: ./User/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Experience/AllowTailoredExperiencesWithDiagnosticData
+**Identyfikator URI przesunięcia**:/config/Experience/AllowTailoredExperiencesWithDiagnosticData
 
-#### <a name="windows10generalconfigurationwindowsspotlightblockthirdpartynotifications"></a>Windows10GeneralConfiguration.WindowsSpotlightBlockThirdPartyNotifications 
+### <a name="windows10generalconfigurationwindowsspotlightblockthirdpartynotifications"></a>Windows10GeneralConfiguration.WindowsSpotlightBlockThirdPartyNotifications 
 **CSP**: ./User/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Experience/AllowThirdPartySuggestionsInWindowsSpotlight
+**Identyfikator URI przesunięcia**:/config/Experience/AllowThirdPartySuggestionsInWindowsSpotlight
 
-#### <a name="windows10generalconfigurationwindowsspotlightblockwelcomeexperience"></a>Windows10GeneralConfiguration.WindowsSpotlightBlockWelcomeExperience 
+### <a name="windows10generalconfigurationwindowsspotlightblockwelcomeexperience"></a>Windows10GeneralConfiguration.WindowsSpotlightBlockWelcomeExperience 
 **CSP**: ./User/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Experience/AllowWindowsSpotlightWindowsWelcomeExperience
+**Identyfikator URI przesunięcia**:/config/Experience/AllowWindowsSpotlightWindowsWelcomeExperience
 
-#### <a name="windows10generalconfigurationwindowsspotlightblockwindowstips"></a>Windows10GeneralConfiguration.WindowsSpotlightBlockWindowsTips 
+### <a name="windows10generalconfigurationwindowsspotlightblockwindowstips"></a>Windows10GeneralConfiguration.WindowsSpotlightBlockWindowsTips 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Experience/AllowWindowsTips
+**Identyfikator URI przesunięcia**:/config/Experience/AllowWindowsTips
 
-#### <a name="windows10generalconfigurationwindowsspotlightconfigureonlockscreen"></a>Windows10GeneralConfiguration.WindowsSpotlightConfigureOnLockScreen 
+### <a name="windows10generalconfigurationwindowsspotlightconfigureonlockscreen"></a>Windows10GeneralConfiguration.WindowsSpotlightConfigureOnLockScreen 
 **CSP**: ./User/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Experience/ConfigureWindowsSpotlightOnLockScreen
+**Identyfikator URI przesunięcia**:/config/Experience/ConfigureWindowsSpotlightOnLockScreen
 
-#### <a name="windows10generalconfigurationwindowsstoreblockautoupdate"></a>Windows10GeneralConfiguration.WindowsStoreBlockAutoUpdate 
+### <a name="windows10generalconfigurationwindowsstoreblockautoupdate"></a>Windows10GeneralConfiguration.WindowsStoreBlockAutoUpdate 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/ApplicationManagement/AllowAppStoreAutoUpdate
+**Identyfikator URI przesunięcia**:/config/ApplicationManagement/AllowAppStoreAutoUpdate
 
-#### <a name="windows10generalconfigurationwindowsstoreblocked"></a>Windows10GeneralConfiguration.WindowsStoreBlocked 
+### <a name="windows10generalconfigurationwindowsstoreblocked"></a>Windows10GeneralConfiguration.WindowsStoreBlocked 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/ApplicationManagement/AllowStore
+**Identyfikator URI przesunięcia**:/config/ApplicationManagement/AllowStore
 
-#### <a name="windows10generalconfigurationwindowsstoreenableprivatestoreonly"></a>Windows10GeneralConfiguration.WindowsStoreEnablePrivateStoreOnly 
+### <a name="windows10generalconfigurationwindowsstoreenableprivatestoreonly"></a>Windows10GeneralConfiguration.WindowsStoreEnablePrivateStoreOnly 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/ApplicationManagement/RequirePrivateStoreOnly
+**Identyfikator URI przesunięcia**:/config/ApplicationManagement/RequirePrivateStoreOnly
 
-#### <a name="windows10generalconfigurationwirelessdisplayblockprojectiontothisdevice"></a>Windows10GeneralConfiguration.WirelessDisplayBlockProjectionToThisDevice 
+### <a name="windows10generalconfigurationwirelessdisplayblockprojectiontothisdevice"></a>Windows10GeneralConfiguration.WirelessDisplayBlockProjectionToThisDevice 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/WirelessDisplay/AllowProjectionToPC
+**Identyfikator URI przesunięcia**:/config/WirelessDisplay/AllowProjectionToPC
 
-#### <a name="windows10generalconfigurationwirelessdisplayblockuserinputfromreceiver"></a>Windows10GeneralConfiguration.WirelessDisplayBlockUserInputFromReceiver 
+### <a name="windows10generalconfigurationwirelessdisplayblockuserinputfromreceiver"></a>Windows10GeneralConfiguration.WirelessDisplayBlockUserInputFromReceiver 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/WirelessDisplay/AllowUserInputFromWirelessDisplayReceiver
+**Identyfikator URI przesunięcia**:/config/WirelessDisplay/AllowUserInputFromWirelessDisplayReceiver
 
-#### <a name="windows10generalconfigurationwirelessdisplayrequirepinforpairing"></a>Windows10GeneralConfiguration.WirelessDisplayRequirePinForPairing 
+### <a name="windows10generalconfigurationwirelessdisplayrequirepinforpairing"></a>Windows10GeneralConfiguration.WirelessDisplayRequirePinForPairing 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/WirelessDisplay/RequirePINForPairing
+**Identyfikator URI przesunięcia**:/config/WirelessDisplay/RequirePINForPairing
 
-#### <a name="windows10networkboundaryconfigurationwindowsnetworkisolationpolicy"></a>Windows10NetworkBoundaryConfiguration.WindowsNetworkIsolationPolicy 
+### <a name="windows10networkboundaryconfigurationwindowsnetworkisolationpolicy"></a>Windows10NetworkBoundaryConfiguration.WindowsNetworkIsolationPolicy 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/NetworkIsolation/EnterpriseCloudResources /Config/NetworkIsolation/EnterpriseIPRange, /Config/NetworkIsolation/EnterpriseIPRangesAreAuthoritative, / config/NetworkIsolation / EnterpriseInternalProxyServers, /Config/NetworkIsolation/EnterpriseNetworkDomainNames /Config/NetworkIsolation/EnterpriseProxyServers, /Config/NetworkIsolation/EnterpriseProxyServersAreAuthoritative, / config/NetworkIsolation / NeutralResources
+**Przesunięty identyfikator URI**:/config/NetworkIsolation/EnterpriseCloudResources,/config/NetworkIsolation/EnterpriseIPRange,/config/NetworkIsolation/EnterpriseIPRangesAreAuthoritative,/config/NetworkIsolation/ EnterpriseInternalProxyServers, /Config/NetworkIsolation/EnterpriseNetworkDomainNames, /Config/NetworkIsolation/EnterpriseProxyServers, /Config/NetworkIsolation/EnterpriseProxyServersAreAuthoritative, /Config/NetworkIsolation/ NeutralResources
 
-#### <a name="windows10policyoverrideconfigurationprefermdmovergrouppolicy"></a>Windows10PolicyOverrideConfiguration.PreferMdmOverGroupPolicy 
+### <a name="windows10policyoverrideconfigurationprefermdmovergrouppolicy"></a>Windows10PolicyOverrideConfiguration.PreferMdmOverGroupPolicy 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Offset URI**: /Config/ControlPolicyConflict/MDMWinsOverGP
+**Identyfikator URI przesunięcia**:/config/ControlPolicyConflict/MDMWinsOverGP
 
-#### <a name="windows10secureassessmentconfigurationallowprinting"></a>Windows10SecureAssessmentConfiguration.AllowPrinting 
+### <a name="windows10secureassessmentconfigurationallowprinting"></a>Windows10SecureAssessmentConfiguration.AllowPrinting 
 **CSP**: ./Vendor/MSFT/SecureAssessment  
-**Przesunięcie URI**: /RequirePrinting
+**Identyfikator URI przesunięcia**:/RequirePrinting
 
-#### <a name="windows10secureassessmentconfigurationallowscreencapture"></a>Windows10SecureAssessmentConfiguration.AllowScreenCapture 
+### <a name="windows10secureassessmentconfigurationallowscreencapture"></a>Windows10SecureAssessmentConfiguration.AllowScreenCapture 
 **CSP**: ./Vendor/MSFT/SecureAssessment  
-**Przesunięcie URI**: /AllowScreenMonitoring
+**Identyfikator URI przesunięcia**:/AllowScreenMonitoring
 
-#### <a name="windows10secureassessmentconfigurationallowtextsuggestion"></a>Windows10SecureAssessmentConfiguration.AllowTextSuggestion 
+### <a name="windows10secureassessmentconfigurationallowtextsuggestion"></a>Windows10SecureAssessmentConfiguration.AllowTextSuggestion 
 **CSP**: ./Vendor/MSFT/SecureAssessment  
-**Przesunięcie URI**: /AllowTextSuggestions
+**Identyfikator URI przesunięcia**:/AllowTextSuggestions
 
-#### <a name="windows10secureassessmentconfigurationconfigurationaccount"></a>Windows10SecureAssessmentConfiguration.ConfigurationAccount 
+### <a name="windows10secureassessmentconfigurationconfigurationaccount"></a>Windows10SecureAssessmentConfiguration.ConfigurationAccount 
 **CSP**: ./Vendor/MSFT/SecureAssessment  
-**Przesunięcie URI**: /TesterAccount
+**Identyfikator URI przesunięcia**:/TesterAccount
 
-#### <a name="windows10secureassessmentconfigurationconfigurationaccounttype"></a>Windows10SecureAssessmentConfiguration.ConfigurationAccountType 
+### <a name="windows10secureassessmentconfigurationconfigurationaccounttype"></a>Windows10SecureAssessmentConfiguration.ConfigurationAccountType 
 **CSP**: ./Vendor/MSFT/SecureAssessment  
-**Przesunięcie URI**: /TesterAccount
+**Identyfikator URI przesunięcia**:/TesterAccount
 
-#### <a name="windows10secureassessmentconfigurationlaunchuri"></a>Windows10SecureAssessmentConfiguration.LaunchUri 
+### <a name="windows10secureassessmentconfigurationlaunchuri"></a>Windows10SecureAssessmentConfiguration.LaunchUri 
 **CSP**: ./Vendor/MSFT/SecureAssessment  
-**Przesunięcie URI**: /LaunchURI
+**Identyfikator URI przesunięcia**:/LaunchURI
 
-#### <a name="windows10teamgeneralconfigurationazureoperationalinsightsblocktelemetry"></a>Windows10TeamGeneralConfiguration.AzureOperationalInsightsBlockTelemetry 
+### <a name="windows10teamgeneralconfigurationazureoperationalinsightsblocktelemetry"></a>Windows10TeamGeneralConfiguration.AzureOperationalInsightsBlockTelemetry 
 **CSP**: ./Vendor/MSFT/SurfaceHub  
-**Przesunięcie URI**: / MOMAgent/identyfikator WorkspaceID i klucz WorkspaceKey/MOMAgent /
+**Identyfikator URI przesunięcia**:/MOMAgent/WorkspaceID i/MOMAgent/WorkspaceKey
 
-#### <a name="windows10teamgeneralconfigurationazureoperationalinsightsworkspaceid"></a>Windows10TeamGeneralConfiguration.AzureOperationalInsightsWorkspaceId 
+### <a name="windows10teamgeneralconfigurationazureoperationalinsightsworkspaceid"></a>Windows10TeamGeneralConfiguration.AzureOperationalInsightsWorkspaceId 
 **CSP**: ./Vendor/MSFT/SurfaceHub  
-**Przesunięcie URI**: / MOMAgent/identyfikator obszaru roboczego
+**Identyfikator URI przesunięcia**:/MOMAgent/WorkspaceID
 
-#### <a name="windows10teamgeneralconfigurationazureoperationalinsightsworkspacekey"></a>Windows10TeamGeneralConfiguration.AzureOperationalInsightsWorkspaceKey 
+### <a name="windows10teamgeneralconfigurationazureoperationalinsightsworkspacekey"></a>Windows10TeamGeneralConfiguration.AzureOperationalInsightsWorkspaceKey 
 **CSP**: ./Vendor/MSFT/SurfaceHub  
-**Przesunięcie URI**: / MOMAgent/klucz WorkspaceKey
+**Identyfikator URI przesunięcia**:/MOMAgent/WorkspaceKey
 
-#### <a name="windows10teamgeneralconfigurationconnectappblockautolaunch"></a>Windows10TeamGeneralConfiguration.ConnectAppBlockAutoLaunch 
+### <a name="windows10teamgeneralconfigurationconnectappblockautolaunch"></a>Windows10TeamGeneralConfiguration.ConnectAppBlockAutoLaunch 
 **CSP**: ./Vendor/MSFT/SurfaceHub  
-**Przesunięcie URI**: /InBoxApps/Connect/AutoLaunch
+**Identyfikator URI przesunięcia**:/InBoxApps/Connect/AUTOLAUNCH
 
-#### <a name="windows10teamgeneralconfigurationdeviceaccountblockexchangeservices"></a>Windows10TeamGeneralConfiguration.DeviceAccountBlockExchangeServices 
+### <a name="windows10teamgeneralconfigurationdeviceaccountblockexchangeservices"></a>Windows10TeamGeneralConfiguration.DeviceAccountBlockExchangeServices 
 **CSP**: ./Vendor/MSFT/SurfaceHub  
-**Przesunięcie URI**: / DeviceAccount/Poczta E-mail
+**Identyfikator URI przesunięcia**:/DeviceAccount/email
 
-#### <a name="windows10teamgeneralconfigurationdeviceaccountemailaddress"></a>Windows10TeamGeneralConfiguration.DeviceAccountEmailAddress 
+### <a name="windows10teamgeneralconfigurationdeviceaccountemailaddress"></a>Windows10TeamGeneralConfiguration.DeviceAccountEmailAddress 
 **CSP**: ./Vendor/MSFT/SurfaceHub  
-**Przesunięcie URI**: / DeviceAccount/Poczta E-mail
+**Identyfikator URI przesunięcia**:/DeviceAccount/email
 
-#### <a name="windows10teamgeneralconfigurationdeviceaccountexchangeserveraddress"></a>Windows10TeamGeneralConfiguration.DeviceAccountExchangeServerAddress 
+### <a name="windows10teamgeneralconfigurationdeviceaccountexchangeserveraddress"></a>Windows10TeamGeneralConfiguration.DeviceAccountExchangeServerAddress 
 **CSP**: ./Vendor/MSFT/SurfaceHub  
-**Przesunięcie URI**: / DeviceAccount/ExchangeServer
+**Identyfikator URI przesunięcia**:/DeviceAccount/ExchangeServer
 
-#### <a name="windows10teamgeneralconfigurationdeviceaccountrequirepasswordrotation"></a>Windows10TeamGeneralConfiguration.DeviceAccountRequirePasswordRotation 
+### <a name="windows10teamgeneralconfigurationdeviceaccountrequirepasswordrotation"></a>Windows10TeamGeneralConfiguration.DeviceAccountRequirePasswordRotation 
 **CSP**: ./Vendor/MSFT/SurfaceHub  
-**Przesunięcie URI**: / DeviceAccount/PasswordRotationEnabled
+**Identyfikator URI przesunięcia**:/DeviceAccount/PasswordRotationEnabled
 
-#### <a name="windows10teamgeneralconfigurationdeviceaccountsessioninitiationprotocoladdress"></a>Windows10TeamGeneralConfiguration.DeviceAccountSessionInitiationProtocolAddress 
+### <a name="windows10teamgeneralconfigurationdeviceaccountsessioninitiationprotocoladdress"></a>Windows10TeamGeneralConfiguration.DeviceAccountSessionInitiationProtocolAddress 
 **CSP**: ./Vendor/MSFT/SurfaceHub  
-**Przesunięcie URI**: / DeviceAccount/SipAddress
+**Identyfikator URI przesunięcia**:/DeviceAccount/SipAddress
 
-#### <a name="windows10teamgeneralconfigurationmaintenancewindowblocked"></a>Windows10TeamGeneralConfiguration.MaintenanceWindowBlocked 
+### <a name="windows10teamgeneralconfigurationmaintenancewindowblocked"></a>Windows10TeamGeneralConfiguration.MaintenanceWindowBlocked 
 **CSP**: ./Vendor/MSFT/SurfaceHub  
-**Przesunięcie URI**: /MaintenanceHoursSimple/Hours/Duration i /MaintenanceHoursSimple/Hours/StartTime
+**Identyfikator URI przesunięcia**:/MaintenanceHoursSimple/hours/Duration i/MaintenanceHoursSimple/hours/StartTime
 
-#### <a name="windows10teamgeneralconfigurationmaintenancewindowdurationinhours"></a>Windows10TeamGeneralConfiguration.MaintenanceWindowDurationInHours 
+### <a name="windows10teamgeneralconfigurationmaintenancewindowdurationinhours"></a>Windows10TeamGeneralConfiguration.MaintenanceWindowDurationInHours 
 **CSP**: ./Vendor/MSFT/SurfaceHub  
-**Przesunięcie URI**: /MaintenanceHoursSimple/Hours/Duration
+**Identyfikator URI przesunięcia**:/MaintenanceHoursSimple/hours/Duration
 
-#### <a name="windows10teamgeneralconfigurationmaintenancewindowstarttime"></a>Windows10TeamGeneralConfiguration.MaintenanceWindowStartTime 
+### <a name="windows10teamgeneralconfigurationmaintenancewindowstarttime"></a>Windows10TeamGeneralConfiguration.MaintenanceWindowStartTime 
 **CSP**: ./Vendor/MSFT/SurfaceHub  
-**Przesunięcie URI**: /MaintenanceHoursSimple/Hours/StartTime
+**Identyfikator URI przesunięcia**:/MaintenanceHoursSimple/hours/StartTime
 
-#### <a name="windows10teamgeneralconfigurationmiracastblocked"></a>Windows10TeamGeneralConfiguration.MiracastBlocked 
+### <a name="windows10teamgeneralconfigurationmiracastblocked"></a>Windows10TeamGeneralConfiguration.MiracastBlocked 
 **CSP**: ./Vendor/MSFT/SurfaceHub  
-**Przesunięcie URI**: /InBoxApps/WirelessProjection/Enabled
+**Identyfikator URI przesunięcia**:/InBoxApps/WirelessProjection/Enabled
 
-#### <a name="windows10teamgeneralconfigurationmiracastchannel"></a>Windows10TeamGeneralConfiguration.MiracastChannel 
+### <a name="windows10teamgeneralconfigurationmiracastchannel"></a>Windows10TeamGeneralConfiguration.MiracastChannel 
 **CSP**: ./Vendor/MSFT/SurfaceHub  
-**Przesunięcie URI**: InBoxApps/WirelessProjection/kanału
+**Identyfikator URI przesunięcia**:/InBoxApps/WirelessProjection/Channel
 
-#### <a name="windows10teamgeneralconfigurationmiracastrequirepin"></a>Windows10TeamGeneralConfiguration.MiracastRequirePin 
+### <a name="windows10teamgeneralconfigurationmiracastrequirepin"></a>Windows10TeamGeneralConfiguration.MiracastRequirePin 
 **CSP**: ./Vendor/MSFT/SurfaceHub  
-**Przesunięcie URI**: /InBoxApps/WirelessProjection/PINRequired
+**Identyfikator URI przesunięcia**:/InBoxApps/WirelessProjection/PINRequired
 
-#### <a name="windows10teamgeneralconfigurationsettingsblockmymeetingsandfiles"></a>Windows10TeamGeneralConfiguration.SettingsBlockMyMeetingsAndFiles 
+### <a name="windows10teamgeneralconfigurationsettingsblockmymeetingsandfiles"></a>Windows10TeamGeneralConfiguration.SettingsBlockMyMeetingsAndFiles 
 **CSP**: ./Vendor/MSFT/SurfaceHub  
-**Przesunięcie URI**: / właściwości/DoNotShowMyMeetingsAndFiles
+**Identyfikator URI przesunięcia**:/Properties/DoNotShowMyMeetingsAndFiles
 
-#### <a name="windows10teamgeneralconfigurationsettingsblocksessionresume"></a>Windows10TeamGeneralConfiguration.SettingsBlockSessionResume 
+### <a name="windows10teamgeneralconfigurationsettingsblocksessionresume"></a>Windows10TeamGeneralConfiguration.SettingsBlockSessionResume 
 **CSP**: ./Vendor/MSFT/SurfaceHub  
-**Przesunięcie URI**: / właściwości/AllowSessionResume
+**Identyfikator URI przesunięcia**:/Properties/AllowSessionResume
 
-#### <a name="windows10teamgeneralconfigurationsettingsblocksigninsuggestions"></a>Windows10TeamGeneralConfiguration.SettingsBlockSigninSuggestions 
+### <a name="windows10teamgeneralconfigurationsettingsblocksigninsuggestions"></a>Windows10TeamGeneralConfiguration.SettingsBlockSigninSuggestions 
 **CSP**: ./Vendor/MSFT/SurfaceHub  
-**Przesunięcie URI**: / właściwości/DisableSigninSuggestions
+**Identyfikator URI przesunięcia**:/Properties/DisableSigninSuggestions
 
-#### <a name="windows10teamgeneralconfigurationsettingsdefaultvolume"></a>Windows10TeamGeneralConfiguration.SettingsDefaultVolume 
+### <a name="windows10teamgeneralconfigurationsettingsdefaultvolume"></a>Windows10TeamGeneralConfiguration.SettingsDefaultVolume 
 **CSP**: ./Vendor/MSFT/SurfaceHub  
-**Przesunięcie URI**: / właściwości/DefaultVolume
+**Identyfikator URI przesunięcia**:/Properties/DefaultVolume
 
-#### <a name="windows10teamgeneralconfigurationsettingsscreentimeoutinminutes"></a>Windows10TeamGeneralConfiguration.SettingsScreenTimeoutInMinutes 
+### <a name="windows10teamgeneralconfigurationsettingsscreentimeoutinminutes"></a>Windows10TeamGeneralConfiguration.SettingsScreenTimeoutInMinutes 
 **CSP**: ./Vendor/MSFT/SurfaceHub  
-**Przesunięcie URI**: / właściwości/ScreenTimeout
+**Identyfikator URI przesunięcia**:/Properties/ScreenTimeout
 
-#### <a name="windows10teamgeneralconfigurationsettingssessiontimeoutinminutes"></a>Windows10TeamGeneralConfiguration.SettingsSessionTimeoutInMinutes 
+### <a name="windows10teamgeneralconfigurationsettingssessiontimeoutinminutes"></a>Windows10TeamGeneralConfiguration.SettingsSessionTimeoutInMinutes 
 **CSP**: ./Vendor/MSFT/SurfaceHub  
-**Przesunięcie URI**: / właściwości/SessionTimeout
+**Identyfikator URI przesunięcia**:/Properties/SessionTimeout
 
-#### <a name="windows10teamgeneralconfigurationsettingssleeptimeoutinminutes"></a>Windows10TeamGeneralConfiguration.SettingsSleepTimeoutInMinutes 
+### <a name="windows10teamgeneralconfigurationsettingssleeptimeoutinminutes"></a>Windows10TeamGeneralConfiguration.SettingsSleepTimeoutInMinutes 
 **CSP**: ./Vendor/MSFT/SurfaceHub  
-**Przesunięcie URI**: / właściwości/SleepTimeout
+**Identyfikator URI przesunięcia**:/Properties/SleepTimeout
 
-#### <a name="windows10teamgeneralconfigurationwelcomescreenbackgroundimageurl"></a>Windows10TeamGeneralConfiguration.WelcomeScreenBackgroundImageUrl 
+### <a name="windows10teamgeneralconfigurationwelcomescreenbackgroundimageurl"></a>Windows10TeamGeneralConfiguration.WelcomeScreenBackgroundImageUrl 
 **CSP**: ./Vendor/MSFT/SurfaceHub  
-**Przesunięcie URI**: /InBoxApps/Welcome/CurrentBackgroundPath
+**Identyfikator URI przesunięcia**:/InBoxApps/Welcome/CurrentBackgroundPath
 
-#### <a name="windows10teamgeneralconfigurationwelcomescreenblockautomaticwakeup"></a>Windows10TeamGeneralConfiguration.WelcomeScreenBlockAutomaticWakeUp 
+### <a name="windows10teamgeneralconfigurationwelcomescreenblockautomaticwakeup"></a>Windows10TeamGeneralConfiguration.WelcomeScreenBlockAutomaticWakeUp 
 **CSP**: ./Vendor/MSFT/SurfaceHub  
-**Przesunięcie URI**: /InBoxApps/Welcome/AutoWakeScreen
+**Identyfikator URI przesunięcia**:/InBoxApps/Welcome/AutoWakeScreen
 
-#### <a name="windows10teamgeneralconfigurationwelcomescreenmeetinginformation"></a>Windows10TeamGeneralConfiguration.WelcomeScreenMeetingInformation 
+### <a name="windows10teamgeneralconfigurationwelcomescreenmeetinginformation"></a>Windows10TeamGeneralConfiguration.WelcomeScreenMeetingInformation 
 **CSP**: ./Vendor/MSFT/SurfaceHub  
-**Przesunięcie URI**: /InBoxApps/Welcome/MeetingInfoOption
+**Identyfikator URI przesunięcia**:/InBoxApps/Welcome/MeetingInfoOption
 
-#### <a name="windowsdefenderadvancedthreatprotectionconfigurationadvancedthreatprotectionoffboardingblob"></a>WindowsDefenderAdvancedThreatProtectionConfiguration.AdvancedThreatProtectionOffboardingBlob 
+### <a name="windowsdefenderadvancedthreatprotectionconfigurationadvancedthreatprotectionoffboardingblob"></a>WindowsDefenderAdvancedThreatProtectionConfiguration.AdvancedThreatProtectionOffboardingBlob 
 **CSP**: ./Device/Vendor/MSFT/WindowsAdvancedThreatProtection  
-**Przesunięcie URI**: /Offboarding 
+**Identyfikator URI przesunięcia**:/Offboarding 
 
-#### <a name="windowsdefenderadvancedthreatprotectionconfigurationadvancedthreatprotectionoffboardingfilename"></a>WindowsDefenderAdvancedThreatProtectionConfiguration.AdvancedThreatProtectionOffboardingFilename
+### <a name="windowsdefenderadvancedthreatprotectionconfigurationadvancedthreatprotectionoffboardingfilename"></a>WindowsDefenderAdvancedThreatProtectionConfiguration.AdvancedThreatProtectionOffboardingFilename
 **CSP**: ./Device/Vendor/MSFT/WindowsAdvancedThreatProtection  
-**Przesunięcie URI**: /Offboarding 
+**Identyfikator URI przesunięcia**:/Offboarding 
 
-#### <a name="windowsdefenderadvancedthreatprotectionconfigurationadvancedthreatprotectiononboardingblob"></a>WindowsDefenderAdvancedThreatProtectionConfiguration.AdvancedThreatProtectionOnboardingBlob 
+### <a name="windowsdefenderadvancedthreatprotectionconfigurationadvancedthreatprotectiononboardingblob"></a>WindowsDefenderAdvancedThreatProtectionConfiguration.AdvancedThreatProtectionOnboardingBlob 
 **CSP**: ./Device/Vendor/MSFT/WindowsAdvancedThreatProtection  
-**Przesunięcie URI**: /Onboarding 
+**Identyfikator URI przesunięcia**:/Onboarding 
 
-#### <a name="windowsdefenderadvancedthreatprotectionconfigurationadvancedthreatprotectiononboardingfilename"></a>WindowsDefenderAdvancedThreatProtectionConfiguration.AdvancedThreatProtectionOnboardingFilename 
+### <a name="windowsdefenderadvancedthreatprotectionconfigurationadvancedthreatprotectiononboardingfilename"></a>WindowsDefenderAdvancedThreatProtectionConfiguration.AdvancedThreatProtectionOnboardingFilename 
 **CSP**: ./Device/Vendor/MSFT/WindowsAdvancedThreatProtection  
-**Przesunięcie URI**: /Onboarding 
+**Identyfikator URI przesunięcia**:/Onboarding 
 
-#### <a name="windowsdefenderadvancedthreatprotectionconfigurationallowsamplesharing"></a>WindowsDefenderAdvancedThreatProtectionConfiguration.AllowSampleSharing 
+### <a name="windowsdefenderadvancedthreatprotectionconfigurationallowsamplesharing"></a>WindowsDefenderAdvancedThreatProtectionConfiguration.AllowSampleSharing 
 **CSP**: ./Device/Vendor/MSFT/WindowsAdvancedThreatProtection  
-**Przesunięcie URI**: / Configuration/SampleSharing
+**Identyfikator URI przesunięcia**:/Configuration/SampleSharing
 
-#### <a name="windowsdefenderadvancedthreatprotectionconfigurationenableexpeditedtelemetryreporting"></a>WindowsDefenderAdvancedThreatProtectionConfiguration.EnableExpeditedTelemetryReporting 
+### <a name="windowsdefenderadvancedthreatprotectionconfigurationenableexpeditedtelemetryreporting"></a>WindowsDefenderAdvancedThreatProtectionConfiguration.EnableExpeditedTelemetryReporting 
 **CSP**: ./Device/Vendor/MSFT/WindowsAdvancedThreatProtection  
-**Przesunięcie URI**: / Configuration/TelemetryReportingFrequency
+**Identyfikator URI przesunięcia**:/Configuration/TelemetryReportingFrequency
 
-#### <a name="windowsdeliveryoptimizationconfigurationdeliveryoptimizationmode"></a>WindowsDeliveryOptimizationConfiguration.DeliveryOptimizationMode 
+### <a name="windowsdeliveryoptimizationconfigurationdeliveryoptimizationmode"></a>WindowsDeliveryOptimizationConfiguration.DeliveryOptimizationMode 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/DeliveryOptimization/DODownloadMode
+**Identyfikator URI przesunięcia**:/config/DeliveryOptimization/DODownloadMode
 
-#### <a name="windowsidentityprotectionconfigurationenhancedantispoofingforfacialfeaturesenabled"></a>WindowsIdentityProtectionConfiguration.EnhancedAntiSpoofingForFacialFeaturesEnabled 
-**CSP**: ./Device/Vendor/MSFT/PassportForWork  
-**Przesunięcie URI**: / biometria/FacialFeaturesUseEnhancedAntiSpoofing
+### <a name="windowsidentityprotectionconfigurationenhancedantispoofingforfacialfeaturesenabled"></a>WindowsIdentityProtectionConfiguration.EnhancedAntiSpoofingForFacialFeaturesEnabled 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/PassportForWork  
+**Identyfikator URI przesunięcia**:/Biometrics/FacialFeaturesUseEnhancedAntiSpoofing
 
-#### <a name="windowsidentityprotectionconfigurationpinexpirationindays"></a>WindowsIdentityProtectionConfiguration.PinExpirationInDays 
+### <a name="windowsidentityprotectionconfigurationpinexpirationindays"></a>WindowsIdentityProtectionConfiguration.PinExpirationInDays 
 **CSP**: ./Vendor/MSFT/PassportForWork  
-**Przesunięcie URI**: / {AADTenantId} / zasady/PINComplexity/wygaśnięcia
+**Identyfikator URI przesunięcia**:/{AADTenantId}/policies/PINComplexity/Expiration
 
-#### <a name="windowsidentityprotectionconfigurationpinlowercasecharactersusage"></a>WindowsIdentityProtectionConfiguration.PinLowercaseCharactersUsage 
+### <a name="windowsidentityprotectionconfigurationpinlowercasecharactersusage"></a>WindowsIdentityProtectionConfiguration.PinLowercaseCharactersUsage 
 **CSP**: ./Vendor/MSFT/PassportForWork  
-**Przesunięcie URI**: / {AADTenantId} / zasady/PINComplexity/LowercaseLetters
+**Identyfikator URI przesunięcia**:/{AADTenantId}/policies/PINComplexity/LowercaseLetters
 
-#### <a name="windowsidentityprotectionconfigurationpinmaximumlength"></a>WindowsIdentityProtectionConfiguration.PinMaximumLength 
+### <a name="windowsidentityprotectionconfigurationpinmaximumlength"></a>WindowsIdentityProtectionConfiguration.PinMaximumLength 
 **CSP**: ./Vendor/MSFT/PassportForWork  
-**Przesunięcie URI**: / {AADTenantId} / zasady/PINComplexity/MaximumPINLength
+**Identyfikator URI przesunięcia**:/{AADTenantId}/policies/PINComplexity/MaximumPINLength
 
-#### <a name="windowsidentityprotectionconfigurationpinminimumlength"></a>WindowsIdentityProtectionConfiguration.PinMinimumLength 
+### <a name="windowsidentityprotectionconfigurationpinminimumlength"></a>WindowsIdentityProtectionConfiguration.PinMinimumLength 
 **CSP**: ./Vendor/MSFT/PassportForWork  
-**Przesunięcie URI**: / {AADTenantId} / zasady/PINComplexity/MinimumPINLength
+**Identyfikator URI przesunięcia**:/{AADTenantId}/policies/PINComplexity/MinimumPINLength
 
-#### <a name="windowsidentityprotectionconfigurationpinpreviousblockcount"></a>WindowsIdentityProtectionConfiguration.PinPreviousBlockCount 
+### <a name="windowsidentityprotectionconfigurationpinpreviousblockcount"></a>WindowsIdentityProtectionConfiguration.PinPreviousBlockCount 
 **CSP**: ./Vendor/MSFT/PassportForWork  
-**Przesunięcie URI**: / {AADTenantId} / zasady/PINComplexity/historii
+**Identyfikator URI przesunięcia**:/{AADTenantId}/policies/PINComplexity/History
 
-#### <a name="windowsidentityprotectionconfigurationpinrecoveryenabled"></a>WindowsIdentityProtectionConfiguration.PinRecoveryEnabled 
+### <a name="windowsidentityprotectionconfigurationpinrecoveryenabled"></a>WindowsIdentityProtectionConfiguration.PinRecoveryEnabled 
 **CSP**: ./Vendor/MSFT/PassportForWork  
-**Przesunięcie URI**: / {AADTenantId} / Policies/EnablePinRecovery
+**Identyfikator URI przesunięcia**:/{AADTenantId}/policies/EnablePinRecovery
 
-#### <a name="windowsidentityprotectionconfigurationpinspecialcharactersusage"></a>WindowsIdentityProtectionConfiguration.PinSpecialCharactersUsage 
+### <a name="windowsidentityprotectionconfigurationpinspecialcharactersusage"></a>WindowsIdentityProtectionConfiguration.PinSpecialCharactersUsage 
 **CSP**: ./Vendor/MSFT/PassportForWork  
-**Przesunięcie URI**: / {AADTenantId} / zasady/PINComplexity/SpecialCharacters
+**Identyfikator URI przesunięcia**:/{AADTenantId}/policies/PINComplexity/SpecialCharacters
 
-#### <a name="windowsidentityprotectionconfigurationpinuppercasecharactersusage"></a>WindowsIdentityProtectionConfiguration.PinUppercaseCharactersUsage
+### <a name="windowsidentityprotectionconfigurationpinuppercasecharactersusage"></a>WindowsIdentityProtectionConfiguration.PinUppercaseCharactersUsage
 **CSP**: ./Vendor/MSFT/PassportForWork  
-**Przesunięcie URI**: / {AADTenantId} / zasady/PINComplexity/UppercaseLetters
+**Identyfikator URI przesunięcia**:/{AADTenantId}/policies/PINComplexity/UppercaseLetters
 
-#### <a name="windowsidentityprotectionconfigurationsecuritydevicerequired"></a>WindowsIdentityProtectionConfiguration.SecurityDeviceRequired 
+### <a name="windowsidentityprotectionconfigurationsecuritydevicerequired"></a>WindowsIdentityProtectionConfiguration.SecurityDeviceRequired 
 **CSP**: ./Vendor/MSFT/PassportForWork  
-**Przesunięcie URI**: / {AADTenantId} / Policies/RequireSecurityDevice
+**Identyfikator URI przesunięcia**:/{AADTenantId}/policies/RequireSecurityDevice
 
-#### <a name="windowsidentityprotectionconfigurationunlockwithbiometricsenabled"></a>WindowsIdentityProtectionConfiguration.UnlockWithBiometricsEnabled 
-**CSP**: ./Device/Vendor/MSFT/PassportForWork  
-**Przesunięcie URI**: / biometria/UseBiometrics
+### <a name="windowsidentityprotectionconfigurationunlockwithbiometricsenabled"></a>WindowsIdentityProtectionConfiguration.UnlockWithBiometricsEnabled 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/PassportForWork  
+**Identyfikator URI przesunięcia**:/Biometrics/UseBiometrics
 
-#### <a name="windowsidentityprotectionconfigurationusecertificatesforonpremisesauthenabled"></a>WindowsIdentityProtectionConfiguration.UseCertificatesForOnPremisesAuthEnabled 
-**CSP**: ./Device/Vendor/MSFT/PassportForWork  
-**Przesunięcie URI**: / {AADTenantId} / Policies/UseCertificateForOnPremAuth
+### <a name="windowsidentityprotectionconfigurationusecertificatesforonpremisesauthenabled"></a>WindowsIdentityProtectionConfiguration.UseCertificatesForOnPremisesAuthEnabled 
+**Dostawca usług kryptograficznych**:./Device/Vendor/MSFT/PassportForWork  
+**Identyfikator URI przesunięcia**:/{AADTenantId}/policies/UseCertificateForOnPremAuth
 
-#### <a name="windowsidentityprotectionconfigurationwindowshelloforbusinessblocked"></a>WindowsIdentityProtectionConfiguration.WindowsHelloForBusinessBlocked 
+### <a name="windowsidentityprotectionconfigurationwindowshelloforbusinessblocked"></a>WindowsIdentityProtectionConfiguration.WindowsHelloForBusinessBlocked 
 **CSP**: ./Vendor/MSFT/PassportForWork  
-**Przesunięcie URI**: / {AADTenantId} / Policies/UsePassportForWork
+**Identyfikator URI przesunięcia**:/{AADTenantId}/policies/UsePassportForWork
 
-#### <a name="windowskioskconfigurationedgekioskenablepublicbrowsing"></a>WindowsKioskConfiguration.EdgeKioskEnablePublicBrowsing 
+### <a name="windowskioskconfigurationedgekioskenablepublicbrowsing"></a>WindowsKioskConfiguration.EdgeKioskEnablePublicBrowsing 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/ConfigureKioskMode
+**Identyfikator URI przesunięcia**:/config/Browser/ConfigureKioskMode
 
-#### <a name="windowskioskconfigurationedgekioskresetafteridletimeinminutes"></a>WindowsKioskConfiguration.EdgeKioskResetAfterIdleTimeInMinutes 
+### <a name="windowskioskconfigurationedgekioskresetafteridletimeinminutes"></a>WindowsKioskConfiguration.EdgeKioskResetAfterIdleTimeInMinutes 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Browser/ConfigureKioskResetAfterIdleTimeout
+**Identyfikator URI przesunięcia**:/config/Browser/ConfigureKioskResetAfterIdleTimeout
 
-#### <a name="windowskioskconfigurationkioskbrowserblockedurlexceptions"></a>WindowsKioskConfiguration.KioskBrowserBlockedUrlExceptions 
+### <a name="windowskioskconfigurationkioskbrowserblockedurlexceptions"></a>WindowsKioskConfiguration.KioskBrowserBlockedUrlExceptions 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/KioskBrowser/BlockedUrlExceptions
+**Identyfikator URI przesunięcia**:/config/KioskBrowser/BlockedUrlExceptions
 
-#### <a name="windowskioskconfigurationkioskbrowserblockedurls"></a>WindowsKioskConfiguration.KioskBrowserBlockedURLs 
+### <a name="windowskioskconfigurationkioskbrowserblockedurls"></a>WindowsKioskConfiguration.KioskBrowserBlockedURLs 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/KioskBrowser/BlockedUrls
+**Identyfikator URI przesunięcia**:/config/KioskBrowser/BlockedUrls
 
-#### <a name="windowskioskconfigurationkioskbrowserdefaulturl"></a>WindowsKioskConfiguration.KioskBrowserDefaultUrl 
+### <a name="windowskioskconfigurationkioskbrowserdefaulturl"></a>WindowsKioskConfiguration.KioskBrowserDefaultUrl 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/KioskBrowser/DefaultUrl
+**Identyfikator URI przesunięcia**:/config/KioskBrowser/DefaultUrl
 
-#### <a name="windowskioskconfigurationkioskbrowserenableendsessionbutton"></a>WindowsKioskConfiguration.KioskBrowserEnableEndSessionButton 
+### <a name="windowskioskconfigurationkioskbrowserenableendsessionbutton"></a>WindowsKioskConfiguration.KioskBrowserEnableEndSessionButton 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/KioskBrowser/EnableEndSessionButton
+**Identyfikator URI przesunięcia**:/config/KioskBrowser/EnableEndSessionButton
 
-#### <a name="windowskioskconfigurationkioskbrowserenablehomebutton"></a>WindowsKioskConfiguration.KioskBrowserEnableHomeButton 
+### <a name="windowskioskconfigurationkioskbrowserenablehomebutton"></a>WindowsKioskConfiguration.KioskBrowserEnableHomeButton 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/KioskBrowser/EnableHomeButton
+**Identyfikator URI przesunięcia**:/config/KioskBrowser/EnableHomeButton
 
-#### <a name="windowskioskconfigurationkioskbrowserenablenavigationbuttons"></a>WindowsKioskConfiguration.KioskBrowserEnableNavigationButtons 
+### <a name="windowskioskconfigurationkioskbrowserenablenavigationbuttons"></a>WindowsKioskConfiguration.KioskBrowserEnableNavigationButtons 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/KioskBrowser/EnableNavigationButtons
+**Identyfikator URI przesunięcia**:/config/KioskBrowser/EnableNavigationButtons
 
-#### <a name="windowskioskconfigurationkioskbrowserrestartonidletimeinminutes"></a>WindowsKioskConfiguration.KioskBrowserRestartOnIdleTimeInMinutes 
+### <a name="windowskioskconfigurationkioskbrowserrestartonidletimeinminutes"></a>WindowsKioskConfiguration.KioskBrowserRestartOnIdleTimeInMinutes 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/KioskBrowser/KioskBrowserRestartOnIdleTimeInMinutes
+**Identyfikator URI przesunięcia**:/config/KioskBrowser/KioskBrowserRestartOnIdleTimeInMinutes
 
-#### <a name="windowsupdateforbusinessconfigurationautomaticupdatemode"></a>WindowsUpdateForBusinessConfiguration.AutomaticUpdateMode 
+### <a name="windowsupdateforbusinessconfigurationautomaticupdatemode"></a>WindowsUpdateForBusinessConfiguration.AutomaticUpdateMode 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Update/AllowAutoUpdate
+**Identyfikator URI przesunięcia**:/config/Update/AllowAutoUpdate
 
-#### <a name="windowsupdateforbusinessconfigurationautorestartnotificationdismissal"></a>WindowsUpdateForBusinessConfiguration.AutoRestartNotificationDismissal 
+### <a name="windowsupdateforbusinessconfigurationautorestartnotificationdismissal"></a>WindowsUpdateForBusinessConfiguration.AutoRestartNotificationDismissal 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Update/AutoRestartRequiredNotificationDismissal
+**Identyfikator URI przesunięcia**:/config/Update/AutoRestartRequiredNotificationDismissal
 
-#### <a name="windowsupdateforbusinessconfigurationbusinessreadyupdatesonly"></a>WindowsUpdateForBusinessConfiguration.BusinessReadyUpdatesOnly 
+### <a name="windowsupdateforbusinessconfigurationbusinessreadyupdatesonly"></a>WindowsUpdateForBusinessConfiguration.BusinessReadyUpdatesOnly 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Update/BranchReadinessLevel
+**Identyfikator URI przesunięcia**:/config/Update/BranchReadinessLevel
 
-#### <a name="windowsupdateforbusinessconfigurationdeliveryoptimizationmode"></a>WindowsUpdateForBusinessConfiguration.DeliveryOptimizationMode 
+### <a name="windowsupdateforbusinessconfigurationdeliveryoptimizationmode"></a>WindowsUpdateForBusinessConfiguration.DeliveryOptimizationMode 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/DeliveryOptimization/DODownloadMode
+**Identyfikator URI przesunięcia**:/config/DeliveryOptimization/DODownloadMode
 
-#### <a name="windowsupdateforbusinessconfigurationdriversexcluded"></a>WindowsUpdateForBusinessConfiguration.DriversExcluded 
+### <a name="windowsupdateforbusinessconfigurationdriversexcluded"></a>WindowsUpdateForBusinessConfiguration.DriversExcluded 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Update/ExcludeWUDriversInQualityUpdate
+**Identyfikator URI przesunięcia**:/config/Update/ExcludeWUDriversInQualityUpdate
 
-#### <a name="windowsupdateforbusinessconfigurationengagedrestartdeadlineforfeatureupdatesindays"></a>WindowsUpdateForBusinessConfiguration.EngagedRestartDeadlineForFeatureUpdatesInDays 
+### <a name="windowsupdateforbusinessconfigurationengagedrestartdeadlineforfeatureupdatesindays"></a>WindowsUpdateForBusinessConfiguration.EngagedRestartDeadlineForFeatureUpdatesInDays 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Update/EngagedRestartDeadlineForFeatureUpdates
+**Identyfikator URI przesunięcia**:/config/Update/EngagedRestartDeadlineForFeatureUpdates
 
-#### <a name="windowsupdateforbusinessconfigurationengagedrestartdeadlineindays"></a>WindowsUpdateForBusinessConfiguration.EngagedRestartDeadlineInDays 
+### <a name="windowsupdateforbusinessconfigurationengagedrestartdeadlineindays"></a>WindowsUpdateForBusinessConfiguration.EngagedRestartDeadlineInDays 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Update/EngagedRestartDeadline
+**Identyfikator URI przesunięcia**:/config/Update/EngagedRestartDeadline
 
-#### <a name="windowsupdateforbusinessconfigurationengagedrestartsnoozescheduleforfeatureupdatesindays"></a>WindowsUpdateForBusinessConfiguration.EngagedRestartSnoozeScheduleForFeatureUpdatesInDays 
+### <a name="windowsupdateforbusinessconfigurationengagedrestartsnoozescheduleforfeatureupdatesindays"></a>WindowsUpdateForBusinessConfiguration.EngagedRestartSnoozeScheduleForFeatureUpdatesInDays 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Update/EngagedRestartSnoozeScheduleForFeatureUpdates
+**Identyfikator URI przesunięcia**:/config/Update/EngagedRestartSnoozeScheduleForFeatureUpdates
 
-#### <a name="windowsupdateforbusinessconfigurationengagedrestartsnoozescheduleindays"></a>WindowsUpdateForBusinessConfiguration.EngagedRestartSnoozeScheduleInDays 
+### <a name="windowsupdateforbusinessconfigurationengagedrestartsnoozescheduleindays"></a>WindowsUpdateForBusinessConfiguration.EngagedRestartSnoozeScheduleInDays 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Update/EngagedRestartSnoozeSchedule
+**Identyfikator URI przesunięcia**:/config/Update/EngagedRestartSnoozeSchedule
 
-#### <a name="windowsupdateforbusinessconfigurationengagedrestarttransitionscheduleforfeatureupdatesindays"></a>WindowsUpdateForBusinessConfiguration.EngagedRestartTransitionScheduleForFeatureUpdatesInDays 
+### <a name="windowsupdateforbusinessconfigurationengagedrestarttransitionscheduleforfeatureupdatesindays"></a>WindowsUpdateForBusinessConfiguration.EngagedRestartTransitionScheduleForFeatureUpdatesInDays 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Update/EngagedRestartTransitionScheduleForFeatureUpdates
+**Identyfikator URI przesunięcia**:/config/Update/EngagedRestartTransitionScheduleForFeatureUpdates
 
-#### <a name="windowsupdateforbusinessconfigurationengagedrestarttransitionscheduleindays"></a>WindowsUpdateForBusinessConfiguration.EngagedRestartTransitionScheduleInDays 
+### <a name="windowsupdateforbusinessconfigurationengagedrestarttransitionscheduleindays"></a>WindowsUpdateForBusinessConfiguration.EngagedRestartTransitionScheduleInDays 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Update/EngagedRestartTransitionSchedule
+**Identyfikator URI przesunięcia**:/config/Update/EngagedRestartTransitionSchedule
 
-#### <a name="windowsupdateforbusinessconfigurationfeatureupdatesdeferralperiodindays"></a>WindowsUpdateForBusinessConfiguration.FeatureUpdatesDeferralPeriodInDays 
+### <a name="windowsupdateforbusinessconfigurationfeatureupdatesdeferralperiodindays"></a>WindowsUpdateForBusinessConfiguration.FeatureUpdatesDeferralPeriodInDays 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Update/DeferFeatureUpdatesPeriodInDays
+**Identyfikator URI przesunięcia**:/config/Update/DeferFeatureUpdatesPeriodInDays
 
-#### <a name="windowsupdateforbusinessconfigurationfeatureupdatespaused"></a>WindowsUpdateForBusinessConfiguration.FeatureUpdatesPaused 
+### <a name="windowsupdateforbusinessconfigurationfeatureupdatespaused"></a>WindowsUpdateForBusinessConfiguration.FeatureUpdatesPaused 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Update/PauseFeatureUpdates
+**Identyfikator URI przesunięcia**:/config/Update/PauseFeatureUpdates
 
-#### <a name="windowsupdateforbusinessconfigurationfeatureupdatespausestartdatetime"></a>WindowsUpdateForBusinessConfiguration.FeatureUpdatesPauseStartDateTime 
+### <a name="windowsupdateforbusinessconfigurationfeatureupdatespausestartdatetime"></a>WindowsUpdateForBusinessConfiguration.FeatureUpdatesPauseStartDateTime 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Update/PauseFeatureUpdatesStartTime
+**Identyfikator URI przesunięcia**:/config/Update/PauseFeatureUpdatesStartTime
 
-#### <a name="windowsupdateforbusinessconfigurationfeatureupdatesrollbackstartdatetime"></a>WindowsUpdateForBusinessConfiguration.FeatureUpdatesRollbackStartDateTime
-**CSP**: N/d — interfejs API programu Graph tylko **przesunięcie URI**: N/d — interfejs API programu Graph tylko
+### <a name="windowsupdateforbusinessconfigurationfeatureupdatesrollbackstartdatetime"></a>WindowsUpdateForBusinessConfiguration.FeatureUpdatesRollbackStartDateTime
+**CSP**: Nie dotyczy — tylko interfejs API programu Graph **przesunięcia identyfikatora URI**: Nie dotyczy tylko interfejs API programu Graph
 
-#### <a name="windowsupdateforbusinessconfigurationfeatureupdateswillberolledback"></a>WindowsUpdateForBusinessConfiguration.FeatureUpdatesWillBeRolledBack 
-**CSP**: N/d — interfejs API programu Graph tylko **przesunięcie URI**: N/d — interfejs API programu Graph tylko
+### <a name="windowsupdateforbusinessconfigurationfeatureupdateswillberolledback"></a>WindowsUpdateForBusinessConfiguration.FeatureUpdatesWillBeRolledBack 
+**CSP**: Nie dotyczy — tylko interfejs API programu Graph **przesunięcia identyfikatora URI**: Nie dotyczy tylko interfejs API programu Graph
 
-#### <a name="windowsupdateforbusinessconfigurationfeatureupdatesrollbackwindowindays"></a>WindowsUpdateForBusinessConfiguration.FeatureUpdatesRollbackWindowInDays
-**CSP**: N/d — interfejs API programu Graph tylko **przesunięcie URI**: N/d — interfejs API programu Graph tylko
+### <a name="windowsupdateforbusinessconfigurationfeatureupdatesrollbackwindowindays"></a>WindowsUpdateForBusinessConfiguration.FeatureUpdatesRollbackWindowInDays
+**CSP**: Nie dotyczy — tylko interfejs API programu Graph **przesunięcia identyfikatora URI**: Nie dotyczy tylko interfejs API programu Graph
 
-#### <a name="windowsupdateforbusinessconfigurationinstallationschedule"></a>WindowsUpdateForBusinessConfiguration.InstallationSchedule
-**Dostawcy usług Kryptograficznych**: ./Device/Vendor/MSFT/Policy **przesunięcie URI**: /Config/Update/ActiveHoursStart /Config/Update/ActiveHoursEnd, /Config/Update/ScheduledInstallDay, /Config/Update/ScheduledInstallTime
+### <a name="windowsupdateforbusinessconfigurationinstallationschedule"></a>WindowsUpdateForBusinessConfiguration.InstallationSchedule
+**CSP**:./Device/Vendor/MSFT/Policy — **Identyfikator URI**:/config/Update/ActiveHoursStart,/config/Update/ActiveHoursEnd,/config/Update/ScheduledInstallDay,/config/Update/ScheduledInstallTime
 
-#### <a name="windowsupdateforbusinessconfigurationmicrosoftupdateserviceallowed"></a>WindowsUpdateForBusinessConfiguration.MicrosoftUpdateServiceAllowed 
+### <a name="windowsupdateforbusinessconfigurationmicrosoftupdateserviceallowed"></a>WindowsUpdateForBusinessConfiguration.MicrosoftUpdateServiceAllowed 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Update/AllowMUUpdateService
+**Identyfikator URI przesunięcia**:/config/Update/AllowMUUpdateService
 
-#### <a name="windowsupdateforbusinessconfigurationpreviewbuildsetting"></a>WindowsUpdateForBusinessConfiguration.PreviewBuildSetting 
+### <a name="windowsupdateforbusinessconfigurationpreviewbuildsetting"></a>WindowsUpdateForBusinessConfiguration.PreviewBuildSetting 
 **CSP**: ./Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Update/ManagePreviewBuilds
+**Identyfikator URI przesunięcia**:/config/Update/ManagePreviewBuilds
 
-#### <a name="windowsupdateforbusinessconfigurationqualityupdatesdeferralperiodindays"></a>WindowsUpdateForBusinessConfiguration.QualityUpdatesDeferralPeriodInDays 
+### <a name="windowsupdateforbusinessconfigurationqualityupdatesdeferralperiodindays"></a>WindowsUpdateForBusinessConfiguration.QualityUpdatesDeferralPeriodInDays 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Update/DeferQualityUpdatesPeriodInDays
+**Identyfikator URI przesunięcia**:/config/Update/DeferQualityUpdatesPeriodInDays
 
-#### <a name="windowsupdateforbusinessconfigurationqualityupdatespaused"></a>WindowsUpdateForBusinessConfiguration.QualityUpdatesPaused 
+### <a name="windowsupdateforbusinessconfigurationqualityupdatespaused"></a>WindowsUpdateForBusinessConfiguration.QualityUpdatesPaused 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Update/PauseQualityUpdates
+**Identyfikator URI przesunięcia**:/config/Update/PauseQualityUpdates
 
-#### <a name="windowsupdateforbusinessconfigurationqualityupdatespausestartdatetime"></a>WindowsUpdateForBusinessConfiguration.QualityUpdatesPauseStartDateTime 
+### <a name="windowsupdateforbusinessconfigurationqualityupdatespausestartdatetime"></a>WindowsUpdateForBusinessConfiguration.QualityUpdatesPauseStartDateTime 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Update/PauseQualityUpdatesStartTime
+**Identyfikator URI przesunięcia**:/config/Update/PauseQualityUpdatesStartTime
 
-#### <a name="windowsupdateforbusinessconfigurationqualityupdatesrollbackstartdatetime"></a>WindowsUpdateForBusinessConfiguration.QualityUpdatesRollbackStartDateTime
-**CSP**: N/d — interfejs API programu Graph tylko **przesunięcie URI**: N/d — interfejs API programu Graph tylko
+### <a name="windowsupdateforbusinessconfigurationqualityupdatesrollbackstartdatetime"></a>WindowsUpdateForBusinessConfiguration.QualityUpdatesRollbackStartDateTime
+**CSP**: Nie dotyczy — tylko interfejs API programu Graph **przesunięcia identyfikatora URI**: Nie dotyczy tylko interfejs API programu Graph
 
-#### <a name="windowsupdateforbusinessconfigurationqualityupdateswillberolledback"></a>WindowsUpdateForBusinessConfiguration.QualityUpdatesWillBeRolledBack 
-**CSP**: N/d — interfejs API programu Graph tylko **przesunięcie URI**: N/d — interfejs API programu Graph tylko
+### <a name="windowsupdateforbusinessconfigurationqualityupdateswillberolledback"></a>WindowsUpdateForBusinessConfiguration.QualityUpdatesWillBeRolledBack 
+**CSP**: Nie dotyczy — tylko interfejs API programu Graph **przesunięcia identyfikatora URI**: Nie dotyczy tylko interfejs API programu Graph
 
-#### <a name="windowsupdateforbusinessconfigurationscheduleimminentrestartwarninginminutes"></a>WindowsUpdateForBusinessConfiguration.ScheduleImminentRestartWarningInMinutes 
+### <a name="windowsupdateforbusinessconfigurationscheduleimminentrestartwarninginminutes"></a>WindowsUpdateForBusinessConfiguration.ScheduleImminentRestartWarningInMinutes 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Update/ScheduleImminentRestartWarning
+**Identyfikator URI przesunięcia**:/config/Update/ScheduleImminentRestartWarning
 
-#### <a name="windowsupdateforbusinessconfigurationschedulerestartwarninginhours"></a>WindowsUpdateForBusinessConfiguration.ScheduleRestartWarningInHours 
+### <a name="windowsupdateforbusinessconfigurationschedulerestartwarninginhours"></a>WindowsUpdateForBusinessConfiguration.ScheduleRestartWarningInHours 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Update/ScheduleRestartWarning
+**Identyfikator URI przesunięcia**:/config/Update/ScheduleRestartWarning
 
-#### <a name="windowsupdateforbusinessconfigurationskipchecksbeforerestart"></a>WindowsUpdateForBusinessConfiguration.SkipChecksBeforeRestart 
+### <a name="windowsupdateforbusinessconfigurationskipchecksbeforerestart"></a>WindowsUpdateForBusinessConfiguration.SkipChecksBeforeRestart 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Update/SetEDURestart
+**Identyfikator URI przesunięcia**:/config/Update/SetEDURestart
 
-#### <a name="windowsupdateforbusinessconfigurationupdateweeks"></a>WindowsUpdateForBusinessConfiguration.UpdateWeeks 
+### <a name="windowsupdateforbusinessconfigurationupdateweeks"></a>WindowsUpdateForBusinessConfiguration.UpdateWeeks 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Update/ScheduledInstallEveryWeek /Config/Update/ScheduledInstallFirstWeek, /Config/Update/ScheduledInstallFourthWeek, /Config/Update/ScheduledInstallSecondWeek, / config/aktualizacji / ScheduledInstallThirdWeek
+**Przesunięty identyfikator URI**:/config/Update/ScheduledInstallEveryWeek,/config/Update/ScheduledInstallFirstWeek,/config/Update/ScheduledInstallFourthWeek,/config/Update/ScheduledInstallSecondWeek,/config/Update/ScheduledInstallThirdWeek
 
-#### <a name="windowsupdateforbusinessconfigurationuserpauseaccess"></a>WindowsUpdateForBusinessConfiguration.UserPauseAccess 
+### <a name="windowsupdateforbusinessconfigurationuserpauseaccess"></a>WindowsUpdateForBusinessConfiguration.UserPauseAccess 
 **CSP**: ./Device/Vendor/MSFT/Policy  
-**Przesunięcie URI**: /Config/Update/SetDisablePauseUXAccess
+**Identyfikator URI przesunięcia**:/config/Update/SetDisablePauseUXAccess
 
 
 ## <a name="next-steps"></a>Następne kroki
 
 - [Omówienie konfiguracji urządzeń](device-profiles.md)
-- [Odwołanie do dostawcy usługi konfiguracji](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) (otwiera innej witryny Docs)
+- [Dokumentacja dostawcy usługi konfiguracji](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) (otwiera kolejną witrynę docs)
