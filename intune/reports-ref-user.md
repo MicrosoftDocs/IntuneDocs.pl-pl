@@ -6,7 +6,7 @@ keywords: Magazyn danych usługi Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/09/2019
+ms.date: 07/09/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,35 +17,35 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0551327bfe2b320bb91699e1176985bbdf94de92
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 80a5e931589aaf48d99080a35ee2df040d11d201
+ms.sourcegitcommit: c3ac858bbadb63d248ed54069e48160d703bbaf2
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045226"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313712"
 ---
 # <a name="reference-for-user-entity"></a>Informacje dotyczące jednostki User (Użytkownik)
 
-Kategoria **Użytkownik** zawiera jednostkę **User**, która definiuje właściwości użytkownika w modelu danych.
+Kategoria **Użytkownicy** zawiera jednostkę **user**, która definiuje właściwości użytkownika w modelu danych.
 
-## <a name="user"></a>Użytkownik
+## <a name="users"></a>użytkownicy
 
-Jednostka **User** zawiera listę wszystkich użytkowników usługi Azure Active Directory (Azure AD) w przedsiębiorstwie wraz z przypisanymi licencjami.
+Jednostka **user** zawiera listę wszystkich użytkowników usługi Azure Active Directory (Azure AD) w przedsiębiorstwie wraz z przypisanymi licencjami.
 
-Kolekcja jednostek **User** zawiera dane użytkownika. Te rekordy obejmują stany użytkowników w okresie zbierania danych, nawet jeśli użytkownik został usunięty. Na przykład w ciągu ostatniego miesiąca użytkownik mógł zostać dodany do usługi Intune, a następnie z niej usunięty. Chociaż ten użytkownik nie występuje w chwili tworzenia raportu, on i jego stan znajdują się jednak w danych z poprzedniego miesiąca. Możesz utworzyć raport, który pokazuje okres historycznej obecności użytkownika w Twoich danych.
+Kolekcja jednostek **user** zawiera dane użytkowników. Te rekordy obejmują stany użytkowników w okresie zbierania danych, nawet jeśli użytkownik został usunięty. Na przykład w ciągu ostatniego miesiąca użytkownik mógł zostać dodany do usługi Intune, a następnie z niej usunięty. Chociaż ten użytkownik nie występuje w chwili tworzenia raportu, on i jego stan znajdują się jednak w danych z poprzedniego miesiąca. Możesz utworzyć raport, który pokazuje okres historycznej obecności użytkownika w Twoich danych.
 
 |          Właściwość          |                                                                                                           Opis                                                                                                          |                Przykład               |
 |:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------:|
-| UserKey                    | Unikatowy identyfikator użytkownika w magazynie danych — klucz zastępczy.                                                                                                                                                         | 123                                  |
-| UserId                     | Unikatowy identyfikator użytkownika — podobny do UserKey, ale jest kluczem naturalnym.                                                                                                                                                    | b66bc706-ffff-7437-0340-032819502773 |
-| UserEmail                  | Adres e-mail użytkownika.                                                                                                                                                                                                     | John@constoso.com                    |
+| userKey                    | Unikatowy identyfikator użytkownika w magazynie danych — klucz zastępczy.                                                                                                                                                         | 123                                  |
+| userId                     | Unikatowy identyfikator użytkownika — podobny do UserKey, ale jest kluczem naturalnym.                                                                                                                                                    | b66bc706-ffff-7437-0340-032819502773 |
+| userEmail                  | Adres e-mail użytkownika.                                                                                                                                                                                                     | John@constoso.com                    |
 | userPrincipalName                        | Główna nazwa użytkownika.                                                                                                                                                                                               | John@constoso.com                    |
-| Nazwa wyświetlana                | Nazwa wyświetlana użytkownika.                                                                                                                                                                                                      | Michał                                 |
-| IntuneLicensed             | Określa, czy użytkownik ma licencję usługi Intune, czy nie.                                                                                                                                                                              | True/False                           |
-| IsDeleted                  | Wskazuje, czy wszystkie licencje użytkownika wygasły i czy użytkownik został z tego powodu usunięty z usługi Intune. Dla pojedynczego rekordu ta flaga nie zmienia się. Zamiast tego tworzony jest nowy rekord odpowiadający nowemu stanowi użytkownika. | Prawda/Fałsz                           |
+| displayName                | Nazwa wyświetlana użytkownika.                                                                                                                                                                                                      | Michał                                 |
+| intuneLicensed             | Określa, czy użytkownik ma licencję usługi Intune, czy nie.                                                                                                                                                                              | Prawda/Fałsz                           |
+| isDeleted                  | Wskazuje, czy wszystkie licencje użytkownika wygasły i czy użytkownik został z tego powodu usunięty z usługi Intune. Dla pojedynczego rekordu ta flaga nie zmienia się. Zamiast tego tworzony jest nowy rekord odpowiadający nowemu stanowi użytkownika. | Prawda/Fałsz                           |
 | RowLastModifiedDateTimeUTC | Data i godzina ostatniej modyfikacji rekordu w magazynie danych w formacie UTC                                                                                                                                                 | 23.11.2016 0:00                      |
 
 
 ## <a name="next-steps"></a>Następne kroki
- - Aby ograniczyć dane użytkownika do użytkowników, którzy są obecnie aktywni, można użyć kolekcji jednostek **Bieżący użytkownik**. Aby uzyskać więcej informacji, zobacz temat [Dokumentacja jednostki bieżącego użytkownika](reports-ref-current-user.md).
- - Więcej informacji na temat sposobu, w jaki magazyn danych śledzi okres istnienia użytkownika w usłudze Intune, można znaleźć w temacie [Reprezentacja okresu istnienia użytkownika w magazynie danych usługi Intune](reports-ref-user-timeline.md).
+- Aby ograniczyć dane użytkownika do użytkowników, którzy są obecnie aktywni, można użyć kolekcji jednostek **Bieżący użytkownik**. Aby uzyskać więcej informacji, zobacz temat [Dokumentacja jednostki bieżącego użytkownika](reports-ref-current-user.md).
+- Więcej informacji na temat sposobu, w jaki magazyn danych śledzi okres istnienia użytkownika w usłudze Intune, można znaleźć w temacie [Reprezentacja okresu istnienia użytkownika w magazynie danych usługi Intune](reports-ref-user-timeline.md).

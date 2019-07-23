@@ -6,7 +6,7 @@ keywords: Magazyn danych usługi Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/10/2019
+ms.date: 07/09/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,42 +17,42 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0baf74515af22fb04f773da0d26b94a7eec5f572
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 16cb03788f8a3dd261a1e6d9dbc3efe4b50f4f73
+ms.sourcegitcommit: c3ac858bbadb63d248ed54069e48160d703bbaf2
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041026"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313831"
 ---
-# <a name="reference-for-date-entity"></a>Odwołanie do jednostki Date
+# <a name="reference-for-dates-entity"></a>Odwołanie do jednostki dat
 
-Kategoria **Data** zawiera jednostkę **Date** służącą do definiowania odwołań do daty w modelu danych.
+Kategoria **dates** zawiera jednostkę **date** służącą do definiowania odwołań do daty w modelu danych.
 
-## <a name="date"></a>Data
+## <a name="dates"></a>daty
 
-Jednostka **Date** reprezentuje daty, które są przywoływane przez wiele jednostek magazynu danych.
+Jednostka **date** reprezentuje daty, które są przywoływane przez wiele jednostek magazynu danych.
 
 
 |    Właściwość     |                      Opis                       |       Przykład        |
 |-----------------|--------------------------------------------------------|----------------------|
-|     DateKey     | Unikatowy identyfikator danej daty w magazynie danych. |       20160703       |
-|    FullDate     |    Ta data jest reprezentowana w pełnym formacie data/godzina.     | 2016-07-03 12:00:00 |
-|    DayOfWeek    |                      Dzień tygodnia                       |          1           |
-|   DayOfMonth    |                      Dzień miesiąca                      |          3           |
-|    DayOfYear    |                      Dzień roku                       |         185          |
-|   WeekOfYear    |                      Tydzień roku                      |          28          |
-|   MonthOfYear   |                   Miesiąc roku                    |          7           |
-| CalendarQuarter |                    Kwartał kalendarzowy                    |          3           |
-|  CalendarYear   |                     Rok kalendarzowy                      |         2016         |
-|     DateKey     | Unikatowy identyfikator danej daty w magazynie danych. |       20160703       |
-|    FullDate     |    Ta data jest reprezentowana w pełnym formacie data/godzina.     | 2016-07-03 12:00:00 |
-|    DayOfWeek    |                      Dzień tygodnia                       |          1           |
-|   DayOfMonth    |                      Dzień miesiąca                      |          3           |
-|    DayOfYear    |                      Dzień roku                       |         185          |
-|   WeekOfYear    |                      Tydzień roku                      |          28          |
-|   MonthOfYear   |                   Miesiąc roku                    |          7           |
-| CalendarQuarter |                    Kwartał kalendarzowy                    |          3           |
-|  CalendarYear   |                     Rok kalendarzowy                      |         2016         |
+|     dateKey     | Unikatowy identyfikator danej daty w magazynie danych. |       20160703       |
+|    fullDate     |    Ta data jest reprezentowana w pełnym formacie data/godzina.     | 2016-07-03 12:00:00 |
+|    dayOfWeek    |                      Dzień tygodnia                       |          1           |
+|   dayOfMonth    |                      Dzień miesiąca                      |          3           |
+|    dayOfYear    |                      Dzień roku                       |         185          |
+|   weekOfYear    |                      Tydzień roku                      |          28          |
+|   monthOfYear   |                   Miesiąc roku                    |          7           |
+| calendarQuarter |                    Kwartał kalendarzowy                    |          3           |
+|  calendarYear   |                     Rok kalendarzowy                      |         2016         |
+|     dateKey     | Unikatowy identyfikator danej daty w magazynie danych. |       20160703       |
+|    fullDate     |    Ta data jest reprezentowana w pełnym formacie data/godzina.     | 2016-07-03 12:00:00 |
+|    dayOfWeek    |                      Dzień tygodnia                       |          1           |
+|   dayOfMonth    |                      Dzień miesiąca                      |          3           |
+|    dayOfYear    |                      Dzień roku                       |         185          |
+|   weekOfYear    |                      Tydzień roku                      |          28          |
+|   monthOfYear   |                   Miesiąc roku                    |          7           |
+| calendarQuarter |                    Kwartał kalendarzowy                    |          3           |
+|  calendarYear   |                     Rok kalendarzowy                      |         2016         |
 
 ## <a name="next-steps"></a>Następne kroki
 

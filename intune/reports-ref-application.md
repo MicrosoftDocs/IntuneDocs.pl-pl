@@ -17,54 +17,54 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46e90d422afb8ebbd356031d4815708b5b0768f0
-ms.sourcegitcommit: 63b55e81122e5c15893302b109ae137c30855b55
+ms.openlocfilehash: a5436de6b972e5cbe8b2b17d42f0974cb38df47e
+ms.sourcegitcommit: c3ac858bbadb63d248ed54069e48160d703bbaf2
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67713139"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313814"
 ---
 # <a name="reference-for-application-entities"></a>Dokumentacja jednostek aplikacji
 
 Kategoria **Aplikacja** zawiera jednostki dla urządzeń przenośnych, które śledzą informacje takie jak:
 
-  - Wersje aplikacji
-  - Źródło instalacji aplikacji
-  - Typ deweloperów, którzy utworzyli aplikację
-  - Zarządzane typy oprogramowania dla aplikacji, na przykład **sidecar** lub **desktop**
-  - Stan Programu zakupów zbiorczych (VPP) aplikacji
+- Wersje aplikacji
+- Źródło instalacji aplikacji
+- Typ deweloperów, którzy utworzyli aplikację
+- Zarządzane typy oprogramowania dla aplikacji, na przykład **sidecar** lub **desktop**
+- Stan Programu zakupów zbiorczych (VPP) aplikacji
 
-## <a name="apprevision"></a>AppRevision
+## <a name="apprevisions"></a>appRevisions
 
-Jednostka **AppRevision** przedstawia wszystkie wersje aplikacji.
+Jednostka **appRevision** przedstawia listę wszystkich wersji aplikacji.
 
 | Właściwość  | Opis | Przykład |
 |---------|------------|--------|
-| AppKey |Unikatowy identyfikator aplikacji. |123 |
-| ApplicationId |Unikatowy identyfikator aplikacji — podobny do AppKey, ale ten klucz jest kluczem naturalnym. |b66bc706-ffff-7437-0340-032819502773 |
-| Przegląd |Wersja zgodna z podaną przez administratora podczas przekazywania pliku binarnego. |2 |
-| Tytuł |Tytuł aplikacji. |Excel |
-| Wydawca |Wydawca aplikacji. |Microsoft |
-| UploadState |Stan przekazania aplikacji. |1 |
-| AppTypeKey |Odwołanie do jednostki AppType opisanej w następującej sekcji. | |
-| VppProgramTypeKey |Odwołanie do jednostki VppProgramType opisanej poniżej. | |
-| CreationTime |Godzina utworzenia tej poprawki. |2016-11-23 12:00:00 |
-| ModifiedTime |Godzina ostatniej zmiany dotyczącej tej poprawki. |2016-11-23 12:00:00 |
-| Size |Rozmiar pliku binarnego. | |
-| StartDateInclusiveUTC |Data i godzina w formacie UTC utworzenia tej poprawki aplikacji w magazynie danych. |2016-11-23 12:00:00 |
-| EndDateExclusiveUTC |Data i godzina w formacie UTC utraty ważności przez tę poprawkę aplikacji. |2016-11-23 12:00:00 |
-| IsCurrent |Wskazuje, czy ta wersja aplikacji jest aktualna w magazynie danych, czy nie. |Prawda/Fałsz |
-| RowLastModifiedDateTimeUTC |Data i godzina w formacie UTC ostatniej modyfikacji tej wersji aplikacji w magazynie danych. |2016-11-23 12:00:00 |
+| appKey |Unikatowy identyfikator aplikacji. |123 |
+| applicationId |Unikatowy identyfikator aplikacji — podobny do AppKey, ale ten klucz jest kluczem naturalnym. |b66bc706-ffff-7437-0340-032819502773 |
+| revision |Wersja zgodna z podaną przez administratora podczas przekazywania pliku binarnego. |2 |
+| title |Tytuł aplikacji. |Excel |
+| publisher |Wydawca aplikacji. |Microsoft |
+| uploadState |Stan przekazania aplikacji. |1 |
+| appTypeKey |Odwołanie do jednostki AppType opisanej w następującej sekcji. | |
+| vppProgramTypeKey |Odwołanie do jednostki VppProgramType opisanej poniżej. | |
+| creationTime |Godzina utworzenia tej poprawki. |2016-11-23 12:00:00 |
+| modifiedTime |Godzina ostatniej zmiany dotyczącej tej poprawki. |2016-11-23 12:00:00 |
+| rozmiar |Rozmiar pliku binarnego. | |
+| startDateInclusiveUTC |Data i godzina w formacie UTC utworzenia tej poprawki aplikacji w magazynie danych. |2016-11-23 12:00:00 |
+| endDateExclusiveUTC |Data i godzina w formacie UTC utraty ważności przez tę poprawkę aplikacji. |2016-11-23 12:00:00 |
+| isCurrent |Wskazuje, czy ta wersja aplikacji jest aktualna w magazynie danych, czy nie. |Prawda/Fałsz |
+| rowLastModifiedDateTimeUTC |Data i godzina w formacie UTC ostatniej modyfikacji tej wersji aplikacji w magazynie danych. |2016-11-23 12:00:00 |
 
-## <a name="apptypes"></a>AppTypes
+## <a name="apptypes"></a>appTypes
 
-Jednostka **AppTypes** przedstawia źródło instalacji aplikacji.
+Jednostka **appType** przedstawia źródło instalacji aplikacji.
 
 | Właściwość  | Opis |
 |---------|------------|
-| AppTypeID |Identyfikator typu |
-| AppTypeKey |Klucz zastępczy klucza |
-| AppTypeName |Typ aplikacji |
+| appTypeID |Identyfikator typu |
+| appTypeKey |Klucz zastępczy klucza |
+| appTypeName |Typ aplikacji |
 
 ### <a name="example"></a>Przykład
 
@@ -85,15 +85,15 @@ Jednostka **AppTypes** przedstawia źródło instalacji aplikacji.
 | 12 |Aplikacja LOB dla systemu Windows Phone | Aplikacja biznesowa dla systemu Windows Phone. |
 
 
-## <a name="vppprogramtypes"></a>VppProgramTypes
+## <a name="vppprogramtypes"></a>vppProgramTypes
 
-Jednostka **VppProgramTypes** zawiera listę możliwych typów programów VPP dla aplikacji.
+Jednostka **vppProgramType** zawiera listę możliwych typów programów VPP dla aplikacji.
 
 | Właściwość  | Opis |
 |---------|------------|
-| VppProgramTypeID | Identyfikator typu. |
-| VppProgramTypeKey | Klucz zastępczy klucza. |
-| VppProgramTypeName | Typ programu VPP. |
+| vppProgramTypeID | Identyfikator typu. |
+| vppProgramTypeKey | Klucz zastępczy klucza. |
+| vppProgramTypeName | Typ programu VPP. |
 
 ### <a name="example"></a>Przykład
 
@@ -105,27 +105,27 @@ Jednostka **VppProgramTypes** zawiera listę możliwych typów programów VPP dl
 
 
 
-## <a name="applicationinventory"></a>ApplicationInventory
+## <a name="applicationinventories"></a>applicationInventories
 
-Jednostka **ApplicationInventory** tworzy listę aplikacji znalezionych na urządzeniu w czasie zbierania spisu.
+Jednostka **applicationInventory** tworzy listę aplikacji znalezionych na urządzeniu w czasie zbierania spisu.
 
 | Właściwość  | Opis |
 |---------|------------|
-| DeviceKey | To jest odwołanie do tabeli urządzenia, która zawiera identyfikator urządzenia usługi Intune. |
-| DateKey | Odwołanie do tabeli dat wskazujące dzień spisu. |
-| ApplicationName | Nazwa aplikacji. |
-| ApplicationVersion | Wersja aplikacji. |
-| BundleSize | Rozmiar aplikacji w bajtach. |
+| deviceKey | To jest odwołanie do tabeli urządzenia, która zawiera identyfikator urządzenia usługi Intune. |
+| dateKey | Odwołanie do tabeli dat wskazujące dzień spisu. |
+| applicationName | Nazwa aplikacji. |
+| applicationVersion | Wersja aplikacji. |
+| bundleSize | Rozmiar aplikacji w bajtach. |
 
-## <a name="mobileappinstallstate"></a>MobileAppInstallState
+## <a name="mobileappinstallstates"></a>mobileAppInstallStates
 
-Jednostka **MobileAppInstallState** reprezentuje stan instalacji aplikacji mobilnej po jej przypisaniu do grupy zawierającej urządzenia, użytkowników lub obie te kategorie.
+Jednostka **mobileAppInstallState** reprezentuje stan instalacji aplikacji mobilnej po przypisaniu jej do grupy zawierającej urządzenia, użytkowników lub obie te kategorie.
 
 | Właściwość | Opis |
 |---|---|
-| AppInstallStateKey | Unikatowy identyfikator stanu instalacji aplikacji dla konta użytkownika. |
-| AppInstallState | Wartość wyliczenia stanu instalacji aplikacji. |
-| AppInstallStateName | Nazwa stanu instalacji aplikacji. |
+| appInstallStateKey | Unikatowy identyfikator stanu instalacji aplikacji dla konta użytkownika. |
+| appInstallState | Wartość wyliczenia stanu instalacji aplikacji. |
+| appInstallStateName | Nazwa stanu instalacji aplikacji. |
 
 
 

@@ -16,20 +16,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5bdd2171853a8db944c910ef4d912f7681d17077
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 40d2b1f58c2892eea6d3f454a3f993b30b9a5c4a
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549121"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354429"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Ustawienia punktów odniesienia zabezpieczeń usługi Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender dla usługi Intune
 
 Zapoznaj się z ustawieniami punktów odniesienia zabezpieczeń usługi Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender (wcześniej Zaawansowana ochrona przed zagrożeniami w usłudze Windows Defender), które są obsługiwane przez usługę Microsoft Intune. Ustawienia domyślne punktu odniesienia usługi Zaawansowana ochrona przed zagrożeniami (ATP) reprezentują zalecaną konfigurację usługi ATP i mogą nie odpowiadać wartościom domyślnym innych punktów odniesienia zabezpieczeń.  
 
-  Punkty odniesienia zabezpieczeń usługi Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender są dostępne, jeśli środowisko spełnia wymagania wstępne dotyczące korzystania z [Zaawansowanej ochrony przed zagrożeniami w usłudze Microsoft Defender](advanced-threat-protection.md#prerequisites).
+Punkty odniesienia zabezpieczeń usługi Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender są dostępne, jeśli środowisko spełnia wymagania wstępne dotyczące korzystania z [Zaawansowanej ochrony przed zagrożeniami w usłudze Microsoft Defender](advanced-threat-protection.md#prerequisites). 
 
-
+Ta linia bazowa jest zoptymalizowana pod kątem urządzeń fizycznych i nie jest obecnie zalecana do użycia w maszynach wirtualnych lub punktach końcowych infrastruktury VDI. Niektóre ustawienia linii bazowej mogą mieć wpływ na zdalne sesje interaktywne w zwirtualizowanych środowiskach. Aby uzyskać więcej informacji, zobacz temat [zwiększanie zgodności do linii bazowej zabezpieczeń usługi Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) w dokumentacji systemu Windows.
 
 
 > [!NOTE]  
@@ -164,22 +164,22 @@ Więcej informacji można znaleźć na stronie [BitLocker Group Policy settings]
 
   W przypadku zasad dysków wymiennych funkcji BitLocker skonfiguruj następujące ustawienia:
 
-    - **Wymagaj szyfrowania do zapisu**  
-      **Domyślne**: Tak
+  - **Wymagaj szyfrowania do zapisu**  
+    **Domyślne**: Tak
 
-    - **Metoda szyfrowania**  
-      **Domyślne**: 128-bitowe szyfrowanie AES CBC
+  - **Metoda szyfrowania**  
+    **Domyślne**: 128-bitowe szyfrowanie AES CBC
 
 - **Zasady dysków stałych funkcji BitLocker**  
   Wartości tych zasad określają siłę szyfru, którego funkcja BitLocker używa do szyfrowania dysków stałych. Przedsiębiorstwa mogą kontrolować poziom szyfrowania w celu zwiększenia bezpieczeństwa (szyfrowanie AES-256 jest silniejsze niż szyfrowanie AES-128). Jeśli włączysz to ustawienie, możesz skonfigurować algorytm szyfrowania i siłę klucza szyfrowania osobno dla stałych dysków danych, dysków systemu operacyjnego i wymiennych dysków danych. W przypadku dysków stałych i dysków systemu operacyjnego zalecamy użycie algorytmu XTS-AES. W przypadku dysków wymiennych użyj 128-bitowego lub 256-bitowego szyfrowania AES-CBC, jeśli dysk jest używany w innych urządzeniach, które nie mają systemu Windows 10 w wersji 1511 lub nowszej. Metoda szyfrowania nie zmienia się, jeśli dysk jest już zaszyfrowany lub jeśli szyfrowanie jest w toku. W takich przypadkach to ustawienie zasad jest ignorowane.
 
   W przypadku zasad dysków stałych funkcji BitLocker skonfiguruj następujące ustawienia:
 
-    - **Wymagaj szyfrowania do zapisu**  
-      **Domyślne**: Tak
+  - **Wymagaj szyfrowania do zapisu**  
+    **Domyślne**: Tak
 
-    - **Metoda szyfrowania**  
-      **Domyślne**: 128-bitowe szyfrowanie AES XTS
+  - **Metoda szyfrowania**  
+    **Domyślne**: 128-bitowe szyfrowanie AES XTS
 
 - **Zasady dysków systemowych funkcji BitLocker**  
   Wartości tych zasad określają siłę szyfru, którego funkcja BitLocker używa do szyfrowania dysku systemowego. Przedsiębiorstwa mogą kontrolować poziom szyfrowania w celu zwiększenia bezpieczeństwa (szyfrowanie AES-256 jest silniejsze niż szyfrowanie AES-128). Jeśli włączysz to ustawienie, możesz skonfigurować algorytm szyfrowania i siłę klucza szyfrowania osobno dla stałych dysków danych, dysków systemu operacyjnego i wymiennych dysków danych. W przypadku dysków stałych i dysków systemu operacyjnego zalecamy użycie algorytmu XTS-AES. W przypadku dysków wymiennych użyj 128-bitowego lub 256-bitowego szyfrowania AES-CBC, jeśli dysk jest używany w innych urządzeniach, które nie mają systemu Windows 10 w wersji 1511 lub nowszej. Metoda szyfrowania nie zmienia się, jeśli dysk jest już zaszyfrowany lub jeśli szyfrowanie jest w toku. W takich przypadkach to ustawienie zasad jest ignorowane.  

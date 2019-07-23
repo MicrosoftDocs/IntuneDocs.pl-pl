@@ -17,27 +17,27 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d7401b5da7629addf03498afd44033a59839d39e
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: c8d24716f65d5ff8afba5fc0a89cfef082712429
+ms.sourcegitcommit: c3ac858bbadb63d248ed54069e48160d703bbaf2
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045316"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313668"
 ---
 # <a name="reference-for-user-device-association-entity"></a>Dokumentacja jednostki Skojarzenie urządzenia użytkownika
 
-Jednostka **UserDeviceAssociation** zawiera skojarzenia urządzeń użytkowników w organizacji.
+Jednostka **userDeviceAssociation** zawiera skojarzenia urządzeń użytkowników w organizacji.
 
-## <a name="userdeviceassociation"></a>UserDeviceAssociation
+## <a name="userdeviceassociations"></a>userDeviceAssociations
 
 
 |        Nazwa        |                                           Opis                                            |        Przykład         |
 |--------------------|--------------------------------------------------------------------------------------------------|------------------------|
-|      UserKey       |              Unikatowy identyfikator użytkownika w magazynie danych. (Klucz zastępczy).               |          123           |
-|     DeviceKey      |                      Unikatowy identyfikator urządzenia w magazynie danych.                      |          123           |
-| CreatedDateTimeUTC |           Data i godzina utworzenia skojarzenia urządzenia użytkownika, w formacie UTC.           | 2016-11-23 12:00:00 |
-|     IsDeleted      | Wskazuje, że użytkownik wyrejestrował urządzenie i skojarzenie nie jest już aktualne. |       Prawda/Fałsz       |
-|  EndedDateTimeUTC  |              Data i godzina (czas UTC) zmiany właściwości IsDeleted na wartość <strong>True</strong>.               | 2017-06-23 12:00:00 |
+|      userKey       |              Unikatowy identyfikator użytkownika w magazynie danych. (Klucz zastępczy).               |          123           |
+|     deviceKey      |                      Unikatowy identyfikator urządzenia w magazynie danych.                      |          123           |
+| createdDateTimeUTC |           Data i godzina utworzenia skojarzenia urządzenia użytkownika, w formacie UTC.           | 2016-11-23 12:00:00 |
+|     isDeleted      | Wskazuje, że użytkownik wyrejestrował urządzenie i skojarzenie nie jest już aktualne. |       Prawda/Fałsz       |
+|  endedDateTimeUTC  |              Data i godzina (czas UTC) zmiany właściwości IsDeleted na wartość <strong>True</strong>.               | 2017-06-23 12:00:00 |
 
 ## <a name="next-steps"></a>Następne kroki
 
