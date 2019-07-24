@@ -1,7 +1,7 @@
 ---
 title: Interfejsy API programu Graph do konfigurowania urządzeń w Microsoft Intune na platformie Azure | Microsoft Docs
 titleSuffix: ''
-description: Zapoznaj się z listą wszystkich interfejs API programu Graph jednostek o pasującym dostawcy CSP systemu Windows i przesunięciu identyfikatora URI na urządzeniach z systemem Windows 10 i nowszych używanych podczas konfigurowania urządzeń w programie Microsoft Intune. Zobacz pasujący interfejs API i dostawcę CSP dla udostępnionych komputerów, programu Endpoint Protection, usługi Windows Defender Advanced Threat Protection, usługi Identity Protection, zespołów systemu Windows 10, kiosku i Windows Update dla firm.
+description: Zapoznaj się z listą wszystkich interfejs API programu Graph jednostek o pasującym dostawcy CSP systemu Windows i przesunięciu identyfikatora URI na urządzeniach z systemem Windows 10 i nowszych używanych podczas konfigurowania urządzeń w programie Microsoft Intune. Zobacz pasujący interfejs API i dostawcę CSP dla udostępnionych komputerów, programu Endpoint Protection, usługi Microsoft Defender Advanced Threat Protection, usługi Identity Protection, zespołów systemu Windows 10, kiosku i Windows Update dla firm.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3732a4539c13ad05ae8c95621246429b7f38987e
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: 9db6be9c61455056f7ad32a9dba3fa6be9f6f5c3
+ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354420"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68427279"
 ---
 # <a name="graph-apis-and-matching-windows-10-csps-used-in-intune"></a>Interfejsy API programu Graph i pasujące dostawcy CSP systemu Windows 10 używane w usłudze Intune
 
