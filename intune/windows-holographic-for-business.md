@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c1400b3786965ab962de01207f24b53aa3a47b1
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 2f3c36e0fac3784828c6a4c0bbf077dea83da369
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045991"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354461"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Zarządzanie urządzeniami z systemem Windows Holographic i urządzeniami HoloLens oraz korzystanie z różnych funkcji zarządzania urządzeniami przy użyciu usługi Intune
 
@@ -105,23 +105,23 @@ Usługa Intune obejmuje ustawienia i funkcje, które można włączać lub wył�
 
 W profilach możesz użyć identyfikatora URI OMA, aby dostosować wybrane ustawienia, utworzyć ograniczenia urządzeń i skonfigurować wirtualną sieć prywatną (VPN) oraz sieć Wi-Fi.
 
-#### <a name="custom-device-settingscustom-settings-windows-holographicmd"></a>[Niestandardowe ustawienia urządzenia](custom-settings-windows-holographic.md)
+### <a name="custom-device-settingscustom-settings-windows-holographicmd"></a>[Niestandardowe ustawienia urządzenia](custom-settings-windows-holographic.md)
 
 Aby skonfigurować ustawienia identyfikatora URI OMA (Open Mobile Alliance Uniform Resource Identifier), możesz utworzyć profil niestandardowy w usłudze Intune. Użyj ustawień identyfikatora URI OMA, aby kontrolować różne funkcje urządzeń z systemem Windows Holographic for Business, np. włączać sieć VPN lub sprawdzać aktualizacje w witrynie Microsoft Update.
 
-#### <a name="configure-kiosk-modekiosk-settings-holographicmd"></a>[Konfigurowanie trybu kiosku](kiosk-settings-holographic.md)
+### <a name="configure-kiosk-modekiosk-settings-holographicmd"></a>[Konfigurowanie trybu kiosku](kiosk-settings-holographic.md)
 
 Za pomocą udostępnionych funkcji lub funkcji komputera gościa usługi Intune możesz skonfigurować urządzenia z systemem Windows Holographic for Business, aby były uruchamiane jako kiosk. Na tych urządzeniach może działać jedna aplikacja (tryb kiosku z jedną aplikacją) lub wiele aplikacji (tryb kiosku z wieloma aplikacjami).
 
-#### <a name="device-restrictionsdevice-restrictions-windows-holographicmd"></a>[Ograniczenia dotyczące urządzeń](device-restrictions-windows-holographic.md)
+### <a name="device-restrictionsdevice-restrictions-windows-holographicmd"></a>[Ograniczenia dotyczące urządzeń](device-restrictions-windows-holographic.md)
 
 Ograniczenia dotyczące urządzeń umożliwiają kontrolowanie różnych ustawień i funkcji na urządzeniach, w tym wymagania hasła, instalowania aplikacji ze sklepu [Microsoft Store](https://www.microsoft.com/store/apps/windows?icid=CNavAppsWindowsApps), włączania funkcji Bluetooth i innych. Ograniczenia te są tworzone w profilu usługi Intune. Profil ten można zastosować do wielu urządzeń z systemem Windows Holographic for Business.
 
-#### <a name="configure-vpnvpn-settings-configuremd"></a>[Konfigurowanie sieci VPN](vpn-settings-configure.md)
+### <a name="configure-vpnvpn-settings-configuremd"></a>[Konfigurowanie sieci VPN](vpn-settings-configure.md)
 
 Wirtualne sieci prywatne (VPN) zapewniają użytkownikom bezpieczny dostęp zdalny do sieci firmowej. W usłudze Intune możesz utworzyć profil sieci VPN, który obejmuje konkretne ustawienia dla urządzeń z systemem Windows Holographic for Business. Na przykład możesz utworzyć profil sieci VPN, aby wszystkie urządzenia z systemem Windows Holographic for Business używały sieci VPN firmy Citrix jako typu połączenia.
 
-#### <a name="configure-wi-fiwi-fi-settings-configuremd"></a>[Konfigurowanie sieci Wi-Fi](wi-fi-settings-configure.md)
+### <a name="configure-wi-fiwi-fi-settings-configuremd"></a>[Konfigurowanie sieci Wi-Fi](wi-fi-settings-configure.md)
 
 Możesz też utworzyć profil sieci Wi-Fi w usłudze Intune, aby przypisać ustawienia sieci bezprzewodowej do urządzeń z systemem Windows Holographic for Business. Jeśli przypiszesz profil sieci Wi-Fi, użytkownicy końcowi otrzymają dostęp do sieci firmowej bez żadnej konfiguracji sieci. Na przykład możesz utworzyć sieć Wi-Fi przeznaczoną wyłącznie dla urządzeń z systemem Windows Holographic for Business.
 

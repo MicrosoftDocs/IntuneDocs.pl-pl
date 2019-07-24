@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e241dc534427b97086013a12391f06bd2f342779
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: e4a171255c545e2f2c55adf4695476107d06aefe
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67883270"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354387"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Konfigurowanie profilów sieci komórkowej karty eSIM w usłudze Intune — publiczna wersja zapoznawcza
 
@@ -79,7 +79,7 @@ Kody aktywacji sieci komórkowej są dostarczane przez operatora sieci komórkow
 4. Wybierz plik CSV zawierający Twoje kody aktywacji.
 5. Wybierz przycisk **OK**, aby zapisać zmiany.
 
-#### <a name="csv-file-requirements"></a>Wymagania dotyczące pliku CSV
+### <a name="csv-file-requirements"></a>Wymagania dotyczące pliku CSV
 
 Podczas pracy z plikiem csv zawierającym kody aktywacji upewnij się, że następujące wymagania są spełnione przez Ciebie i operatora:
 
@@ -89,7 +89,7 @@ Podczas pracy z plikiem csv zawierającym kody aktywacji upewnij się, że nast�
 - Każdy plik powinien odpowiadać jednemu operatorowi sieci komórkowej, a wszystkie kody aktywacji — temu samemu planowi rozliczeniowemu. Usługa Intune losowo rozdziela kody aktywacji pomiędzy urządzenia docelowe. Nie ma żadnej gwarancji, które urządzenie otrzyma określony kod aktywacji.
 - W jednym pliku csv można zaimportować maksymalnie 1000 kodów aktywacji.
 
-#### <a name="csv-file-example"></a>Przykładowy plik CSV
+### <a name="csv-file-example"></a>Przykładowy plik CSV
 
 1. Pierwszy wiersz i pierwsza komórka pliku csv to adres URL usługi aktywacji karty eSIM operatora komórkowego, która nazywa się SM-DP + (serwer przygotowywania danych Menedżera subskrypcji). Adres URL powinien być w pełni kwalifikowaną nazwą domeny (FQDN) bez żadnych przecinków.
 2. Drugi wiersz i wszystkie kolejne to unikatowe jednorazowe kody aktywacji zawierające dwie wartości:
@@ -129,7 +129,7 @@ Kodów aktywacji karty eSIM można użyć tylko raz. Po zainstalowaniu kodu na u
 
 ## <a name="step-4-monitor-deployment"></a>Krok 4. Monitorowanie wdrożenia
 
-#### <a name="review-the-deployment-status"></a>Sprawdzanie stanu wdrożenia
+### <a name="review-the-deployment-status"></a>Sprawdzanie stanu wdrożenia
 
 Po przypisaniu profilu możesz monitorować stan wdrożenia puli subskrypcji.
 
@@ -138,7 +138,7 @@ Po przypisaniu profilu możesz monitorować stan wdrożenia puli subskrypcji.
 3. Wybierz kolejno pozycje **Konfiguracja urządzeń** > **Profile sieci komórkowej eSIM**. Zostanie wyświetlona lista zawierająca wszystkie istniejące pule subskrypcji sieci komórkowej eSIM.
 4. Wybierz subskrypcję i zapoznaj się z jej **stanem wdrożenia**.
 
-#### <a name="check-the-profile-status"></a>Sprawdzanie stanu profilu
+### <a name="check-the-profile-status"></a>Sprawdzanie stanu profilu
 Po utworzeniu profilu urządzenia usługa Intune udostępnia wykresy graficzne. Te wykresy zawierają stan profilu, taki jak pomyślne przypisanie do urządzeń lub wyświetlanie konfliktu w tym profilu.
 
 1. Wybierz kolejno pozycje **Konfiguracja urządzeń** > **Profile sieci komórkowej eSIM**, a następnie wybierz istniejącą subskrypcję.
@@ -167,7 +167,7 @@ Szczegółową listę urządzeń możesz wyświetlać i monitorować w obszarze 
     - **Stan sieci komórkowej**: stan dostarczony przez operatora sieci komórkowej. Skontaktuj się z operatorem sieci komórkowej, aby rozwiązać problem.
     - **Ostatnie zaewidencjonowanie**: data ostatniej komunikacji urządzenia z usługą Intune
 
-#### <a name="monitor-esim-profile-details-on-the-actual-device"></a>Monitorowanie szczegółów profilu karty eSIM na urządzeniu
+### <a name="monitor-esim-profile-details-on-the-actual-device"></a>Monitorowanie szczegółów profilu karty eSIM na urządzeniu
 
 1. Na urządzeniu otwórz **Ustawienia**, a następnie przejdź do pozycji **Sieć i Internet**.
 2. Wybierz pozycję **Sieć komórkowa** > **Zarządzaj profilami karty eSIM**

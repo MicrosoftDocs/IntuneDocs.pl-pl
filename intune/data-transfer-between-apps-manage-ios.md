@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91633aee190b5fb5bda9495f66d4503042aa6a80
-ms.sourcegitcommit: 63b55e81122e5c15893302b109ae137c30855b55
+ms.openlocfilehash: 9a1e370b65d8bfd7e61562347323bf1455dfe55b
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67713326"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354301"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Jak zarządzać przesyłaniem danych między aplikacjami systemu iOS w usłudze Microsoft Intune
 
@@ -109,5 +109,5 @@ Na przykład ustawienie zasad **Wymagaj numeru PIN aplikacji** jest łatwe do pr
 Najpierw [utwórz i przypisz zasady ochrony aplikacji](app-protection-policies.md) do aplikacji w systemie iOS. Zobacz [Weryfikowanie zasad ochrony aplikacji](app-protection-policies-validate.md), aby uzyskać więcej informacji na temat testowania zasad ochrony aplikacji.
 
 
-### <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz także
 [Co to są zasady ochrony aplikacji w usłudze Intune](app-protection-policy.md)

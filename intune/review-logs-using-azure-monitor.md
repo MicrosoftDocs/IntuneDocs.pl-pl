@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d13cb9fed28bb759007f1be1cb6df6139c19d3b
-ms.sourcegitcommit: 063177c6c365fef3642edd7c455790958469aad9
+ms.openlocfilehash: d95b37d18fa609f1c4e98d4fad5cfa600333b90a
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66412699"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354525"
 ---
 # <a name="send-log-data-to-storage-event-hubs-or-log-analytics-in-intune-preview"></a>Wysyłanie danych dzienników do magazynu, centrów zdarzeń lub analizy dzienników w usłudze Intune (wersja zapoznawcza)
 
@@ -174,43 +174,43 @@ Aby zapoznać się z kosztami związanymi z zarządzaniem obszarem roboczym usł
 
 Uzyskaj odpowiedzi na często zadawane pytania oraz informacje o wszelkich znanych problemach z dziennikami usługi Intune w usłudze Azure Monitor.
 
-#### <a name="which-logs-are-included"></a>Które dzienniki są uwzględniane?
+### <a name="which-logs-are-included"></a>Które dzienniki są uwzględniane?
 
 Dzienniki inspekcji i dzienniki operacyjne (wersja zapoznawcza) są dostępne w przypadku routingu wykonywanego przy użyciu tej funkcji.
 
-#### <a name="after-an-action-when-do-the-corresponding-logs-show-up-in-the-event-hub"></a>Kiedy po wykonaniu akcji odpowiednie dzienniki zostaną wyświetlone w centrum zdarzeń?
+### <a name="after-an-action-when-do-the-corresponding-logs-show-up-in-the-event-hub"></a>Kiedy po wykonaniu akcji odpowiednie dzienniki zostaną wyświetlone w centrum zdarzeń?
 
 Dzienniki są zwykle wyświetlane w centrum zdarzeń w ciągu kilku minut po wykonaniu akcji. Więcej informacji można znaleźć w temacie [Co to jest usługa Azure Event Hubs?](https://docs.microsoft.com/azure/event-hubs/).
 
-#### <a name="after-an-action-when-do-the-corresponding-logs-show-up-in-the-storage-account"></a>Kiedy po wykonaniu akcji odpowiednie dzienniki zostaną wyświetlone na koncie magazynu?
+### <a name="after-an-action-when-do-the-corresponding-logs-show-up-in-the-storage-account"></a>Kiedy po wykonaniu akcji odpowiednie dzienniki zostaną wyświetlone na koncie magazynu?
 
 W przypadku kont magazynu platformy Azure opóźnienie wynosi od 5 do 15 minut po uruchomieniu akcji.
 
-#### <a name="what-happens-if-an-administrator-changes-the-retention-period-of-a-diagnostic-setting"></a>Co się stanie, jeśli administrator zmieni okres przechowywania ustawienia diagnostyki?
+### <a name="what-happens-if-an-administrator-changes-the-retention-period-of-a-diagnostic-setting"></a>Co się stanie, jeśli administrator zmieni okres przechowywania ustawienia diagnostyki?
 
 Nowe zasady przechowywania są stosowane do dzienników zebranych po zmianie. Dzienniki zebrane przed zmianą zasad pozostają niezmienione.
 
-#### <a name="how-much-does-it-cost-to-store-my-data"></a>Ile kosztuje przechowywanie moich danych?
+### <a name="how-much-does-it-cost-to-store-my-data"></a>Ile kosztuje przechowywanie moich danych?
 
 Koszty magazynowania zależą od rozmiaru dzienników i wybranego okresu przechowywania. Aby uzyskać listę szacowanych kosztów dzierżaw, które zależą od woluminu wygenerowanego dziennika, zobacz sekcję [Rozmiar magazynu dla dzienników aktywności](#storage-size-for-activity-logs) (w tym artykule).
 
-#### <a name="how-much-does-it-cost-to-stream-my-data-to-an-event-hub"></a>Ile kosztuje przesyłanie strumieniowe moich danych do centrum zdarzeń?
+### <a name="how-much-does-it-cost-to-stream-my-data-to-an-event-hub"></a>Ile kosztuje przesyłanie strumieniowe moich danych do centrum zdarzeń?
 
 Koszty przesyłania strumieniowego zależą od liczby komunikatów, które otrzymujesz za minutę. Szczegółowe informacje na temat sposobu obliczania kosztów oraz szacunkowych kosztów w zależności od liczby komunikatów można znaleźć w sekcji [Komunikaty centrum zdarzeń dla dzienników aktywności](#event-hub-messages-for-activity-logs) (w tym artykule).
 
-#### <a name="how-do-i-integrate-intune-audit-logs-with-my-siem-system"></a>Jak mogę zintegrować dzienniki inspekcji usługi Intune z moim systemem SIEM?
+### <a name="how-do-i-integrate-intune-audit-logs-with-my-siem-system"></a>Jak mogę zintegrować dzienniki inspekcji usługi Intune z moim systemem SIEM?
 
 Użyj usługi Azure Monitor z usługą Event Hubs w celu przesyłania strumieniowego dzienników do systemu SIEM. Najpierw [prześlij strumieniowo dzienniki do centrum zdarzeń](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub). Następnie [skonfiguruj narzędzie SIEM](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-azure-monitor-stream-logs-to-event-hub#access-data-from-your-event-hub) w skonfigurowanym centrum zdarzeń. 
 
-#### <a name="what-siem-tools-are-currently-supported"></a>Które narzędzia SIEM są obecnie obsługiwane?
+### <a name="what-siem-tools-are-currently-supported"></a>Które narzędzia SIEM są obecnie obsługiwane?
 
 Obecnie usługa Azure Monitor jest obsługiwana przez narzędzia [Splunk](https://docs.microsoft.com/azure/active-directory/reports-monitoring/tutorial-integrate-activity-logs-with-splunk), QRadar i [Sumo Logic](https://help.sumologic.com/Send-Data/Applications-and-Other-Data-Sources/Azure_Active_Directory) (link otwiera nową witrynę internetową). Aby uzyskać więcej informacji na temat działania łączników, zobacz temat [Stream Azure monitoring data to an event hub for consumption by an external tool](https://docs.microsoft.com/azure/azure-monitor/platform/stream-monitoring-data-event-hubs) (Przesyłanie strumieniowe danych monitorowania platformy Azure do centrum zdarzeń na potrzeby użycia w narzędziu zewnętrznym).
 
-#### <a name="can-i-access-the-data-from-an-event-hub-without-using-an-external-siem-tool"></a>Czy mogę uzyskiwać dostęp do danych z centrum zdarzeń bez użycia zewnętrznego narzędzia SIEM?
+### <a name="can-i-access-the-data-from-an-event-hub-without-using-an-external-siem-tool"></a>Czy mogę uzyskiwać dostęp do danych z centrum zdarzeń bez użycia zewnętrznego narzędzia SIEM?
 
 Tak. Aby uzyskać dostęp do dzienników z aplikacji niestandardowej, możesz użyć [interfejsu API usługi Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-dotnet-standard-getstarted-receive-eph).
 
-#### <a name="what-data-is-stored"></a>Jakie dane są przechowywane?
+### <a name="what-data-is-stored"></a>Jakie dane są przechowywane?
 
 Usługa Intune nie przechowuje żadnych danych przesyłanych przez potok. Usługa Intune kieruje dane do potoku usługi Azure Monitor w obrębie urzędu dzierżawy. Aby uzyskać więcej informacji, zobacz temat [Azure Monitor — przegląd](https://docs.microsoft.com/azure/azure-monitor/overview).
 

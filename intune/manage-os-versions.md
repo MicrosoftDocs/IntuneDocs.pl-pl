@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 361ef17b-1ee0-4879-b7b1-d678b0787f5a
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc785e7f714320d410d20e254125858f44131677
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: a6425c1346255caf70e73feef2aec1097625f921
+ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548750"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68427100"
 ---
 # <a name="manage-operating-system-versions-with-intune"></a>Zarządzanie wersjami systemu operacyjnego w usłudze Intune
 Na nowoczesnych platformach urządzeń przenośnych i komputerów ważne aktualizacje, poprawki i nowe wersje pojawiają się bardzo często. Aktualizacjami i poprawkami dla systemu Windows możesz zarządzać w pełni, ale w przypadku systemów iOS i Android wymagane jest uczestnictwo użytkowników końcowych w tym procesie.  Usługa Microsoft Intune ma funkcje pomagające uporządkować zarządzanie wersjami systemów operacyjnych na różnych platformach.
@@ -40,7 +40,7 @@ Organizacje używają ograniczeń typu urządzeń, aby kontrolować dostęp do z
 1. Użyj minimalnej wersji systemu operacyjnego, aby użytkownicy końcowi korzystali z aktualnych platform obsługiwanych w Twojej organizacji. 
 2. Nie określaj maksymalnej wersji systemu operacyjnego (brak ograniczenia) albo ustaw ją na ostatnią wersję zweryfikowaną przez Twoją organizację, aby był czas na wewnętrzne testy nowych wersji systemu operacyjnego.
 
-Aby uzyskać szczegółowe informacje, zobacz [Ustawianie ograniczeń typu urządzenia](https://docs.microsoft.com/intune/enrollment-restrictions-set#set-device-type-restrictions).
+Aby uzyskać szczegółowe informacje, zobacz [Ustawianie ograniczeń typu urządzenia](https://docs.microsoft.com/intune/enrollment-restrictions-set#create-a-device-type-restriction).
  
 ## <a name="operating-system-version-reporting-and-compliance-with-intune-mdm-device-compliance-policies"></a>Raportowanie wersji systemu operacyjnego i zgodność z zasadami zgodności urządzeń w systemie MDM usługi Intune
 Zasady zgodności urządzeń systemu MDM usługi Intune zapewniają następujące narzędzia: 
@@ -86,6 +86,6 @@ Z funkcji usługi Intune opisanych w tym artykule można korzystać, aby przejś
 ## <a name="next-steps"></a>Następne kroki
 Użyj następujących zasobów, aby zarządzać wersjami systemów operacyjnych w swojej organizacji: 
 
-- [Ustawianie ograniczeń typu urządzeń](https://docs.microsoft.com/intune/enrollment-restrictions-set#set-device-type-restrictions)
+- [Ustawianie ograniczeń typu urządzeń](https://docs.microsoft.com/intune/enrollment-restrictions-set#create-a-device-type-restriction)
 - [Wprowadzenie do zasad zgodności urządzeń](https://docs.microsoft.com/intune/device-compliance-get-started)
 - [Tworzenie i przypisywanie zasad ochrony aplikacji](https://docs.microsoft.com/intune/app-protection-policies)

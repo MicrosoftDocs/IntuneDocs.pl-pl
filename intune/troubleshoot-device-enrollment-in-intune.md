@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 03b3b38819ea6bd0a34eff5b7eb8decfc2b9eb49
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 9b995841152ee7290e41eed7988ff2b52b6bc66c
+ms.sourcegitcommit: c3a4fefbac8ff7badc42b1711b7ed2da81d1ad67
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548085"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68375235"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Rozwiązywanie problemów dotyczących rejestrowania urządzeń w usłudze Microsoft Intune
 
@@ -69,7 +69,7 @@ Sprawdź, czy użytkownik nie jest przypisany do większej niż maksymalna liczb
 
 3. Jeśli liczba zarejestrowanych urządzeń użytkownika jest już równa limitowi urządzeń, nie będzie można zarejestrować kolejnych urządzeń, dopóki nie zostanie wykonana jedna z następujących czynności:
     - [Usunięcie istniejących urządzeń](devices-wipe.md)
-    - Zwiększenie limitu urządzeń przez [ustawienie ograniczeń urządzeń](enrollment-restrictions-set.md#set-device-limit-restrictions)
+    - Zwiększenie limitu urządzeń przez [ustawienie ograniczeń urządzeń](enrollment-restrictions-set.md)
 
 Aby uniknąć osiągania górnych limitów urządzeń, pamiętaj o usuwaniu nieaktualnych rekordów urządzeń.
 
@@ -499,5 +499,5 @@ Certyfikat poprzedniego konta nadal istnieje na komputerze.
 
 
 
-### <a name="next-steps"></a>Następne kroki
+## <a name="next-steps"></a>Następne kroki
 Jeśli te informacje dotyczące rozwiązywania problemów nie pomogły, skontaktuj się z pomocą techniczną firmy Microsoft zgodnie z opisem w temacie [How to get support for Microsoft Intune](get-support.md) (Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune).

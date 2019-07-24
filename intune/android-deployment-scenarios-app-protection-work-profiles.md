@@ -14,12 +14,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 3ce7ad6b0254b1c3a8e2843cfcbe70a6b718ce88
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: d5814a4aac064394dbd0c7f5902dc3f62459ad1d
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66049914"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353808"
 ---
 # <a name="application-protection-policies-and-work-profiles-on-android-enterprise-devices-in-intune"></a>Zasady ochrony aplikacji i profile służbowe na urządzeniach z systemem Android Enterprise w usłudze Intune
 
@@ -58,7 +58,7 @@ Aby wyświetlić listę aplikacji z włączonymi zasadami ochrony aplikacji, zob
 
 W tej sekcji opisano ważne charakterystyki scenariuszy wdrażania zasad APP-WE i profilów służbowych systemu Android Enterprise.
 
-#### <a name="app-we"></a>APP-WE
+### <a name="app-we"></a>APP-WE
 
 Wdrożenie APP-WE (zasady ochrony aplikacji bez rejestracji) definiuje zasady dotyczące aplikacji, a nie urządzeń. W tym scenariuszu urządzenia zwykle nie są rejestrowane ani zarządzane przez urząd MDM, taki jak usługa Intune. Aby chronić aplikacje i dostęp do danych organizacji, administratorzy korzystają z aplikacji zarządzanych przez zasady APP i stosują zasady ochrony danych do tych aplikacji.
 
@@ -71,7 +71,7 @@ Ta funkcja ma zastosowanie do:
 
 Scenariusze APP-WE są przeznaczone dla użytkowników końcowych, którzy potrzebują niewielkiej ilości danych organizacyjnych na swoich urządzeniach i nie chcą rejestrować się w oprogramowaniu MDM. Jako administrator nadal musisz chronić dane. Te urządzenia nie są zarządzane. Dlatego typowe zadania i funkcje zarządzania urządzeniami przenośnymi, takie jak sieć Wi-Fi, sieć VPN urządzenia i zarządzanie certyfikatami, nie są częścią tego scenariusza wdrażania.
 
-#### <a name="android-enterprise-work-profiles"></a>Profile służbowe w systemie Android Enterprise
+### <a name="android-enterprise-work-profiles"></a>Profile służbowe w systemie Android Enterprise
 
 Profile służbowe to podstawowy scenariusz wdrażania systemu Android Enterprise i jedyny scenariusz przeznaczony dla przypadków użycia strategii BYOD. Profil służbowy to oddzielna partycja utworzona na poziomie systemu operacyjnego Android, która może być zarządzana przez usługę Intune.
 
@@ -95,7 +95,7 @@ Profile służbowe i zasady ochrony aplikacji uzupełniają swoje ustawienia, za
 
 ### <a name="suppress-app-policy-for-work-profiles"></a>Pomijanie zasad ochrony aplikacji w przypadku profilów służbowych
 
-Być może trzeba będzie obsługiwać poszczególnych użytkowników, którzy mają wiele urządzeń — urządzeń niezarządzanych w scenariuszu zasad APP-WE i urządzeń zarządzanych w przypadku profilów służbowych. 
+Być może trzeba będzie obsługiwać poszczególnych użytkowników, którzy mają wiele urządzeń — urządzeń niezarządzanych w scenariuszu zasad APP-WE i urządzeń zarządzanych w przypadku profilów służbowych.
 
 Na przykład wymagasz, aby użytkownicy końcowi wprowadzali numer PIN podczas otwierania aplikacji służbowej. W zależności od urządzenia funkcje numeru PIN są obsługiwane przez zasady ochrony aplikacji lub profil służbowy. W przypadku urządzeń APP-WE zachowanie wymagające podania numeru PIN do uruchomienia jest wymuszane przez zasady ochrony aplikacji. W przypadku urządzeń z profilem służbowym można używać numeru PIN urządzenia lub profilu służbowego wymuszanego przez system operacyjny. Aby korzystać z tego scenariusza, skonfiguruj ustawienia zasad ochrony aplikacji, tak aby nie były stosowane, *gdy* aplikacja będzie wdrażana w profilu służbowym. Jeśli nie skonfigurujesz ich w ten sposób, użytkownik końcowy zobaczy monit o podanie numeru PIN na urządzeniu, a następnie w warstwie zasad ochrony aplikacji.
 
@@ -111,13 +111,13 @@ Aby uzyskać więcej informacji, zobacz temat [Deploy Outlook for iOS and Androi
 
 Istnieje kilka scenariuszy związanych z mobilnością w przedsiębiorstwie, w przypadku których użycie zasad ochrony aplikacji usługi Intune jest najlepszym rozwiązaniem.
 
-#### <a name="older-devices-running-android-44-51-are-being-used"></a>Używanie starszych urządzeń z systemem Android 4.4–5.1
+### <a name="older-devices-running-android-44-51-are-being-used"></a>Używanie starszych urządzeń z systemem Android 4.4–5.1
 
 Oficjalnie wszystkie urządzenia z systemem Android 5.0 lub nowszym i usługami Mobile Services Google obsługują profile służbowe i można nimi zarządzać w ten sposób. Jednak pewne urządzenia z systemami Android 5.0 i 5.1 od niektórych producentów OEM nie obsługują profilów służbowych.
 
 Jeśli używasz wersji, które nie obsługują profilów służbowych, i chcesz zapewnić ochronę przed utratą danych organizacji na urządzeniach, musisz używać funkcji zasad ochrony aplikacji usługi Intune.
 
-#### <a name="no-mdm-no-enrollment-google-services-are-unavailable"></a>Brak oprogramowania MDM, brak rejestracji, usługi Google są niedostępne
+### <a name="no-mdm-no-enrollment-google-services-are-unavailable"></a>Brak oprogramowania MDM, brak rejestracji, usługi Google są niedostępne
 
 Niektórzy klienci nie potrzebują funkcji zarządzania urządzeniami, w tym zarządzania profilami służbowymi, z różnych powodów:
 
