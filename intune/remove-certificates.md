@@ -16,16 +16,16 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: lacranda
-ms.openlocfilehash: de2f201e6a7d0181847db5d212625c9eed9ea698
-ms.sourcegitcommit: 9c06d8071b9affeda32e367bfe85d89bc524ed0b
+ms.openlocfilehash: e5d6bf546a67ef36107aa566de299397959190e3
+ms.sourcegitcommit: c3a4fefbac8ff7badc42b1711b7ed2da81d1ad67
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413770"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68374679"
 ---
 # <a name="remove-scep-and-pkcs-certificates-in-microsoft-intune"></a>Usuwanie certyfikatów SCEP i PKCS w usłudze Microsoft Intune
 
-Usługa Microsoft Intune umożliwia dodawanie certyfikatów do urządzeń przy użyciu profilu prostego protokołu rejestrowania certyfikatów (SCEP) i profilu certyfikatów PKCS (Public Key Cryptography Standards). 
+Usługa Microsoft Intune umożliwia dodawanie certyfikatów do urządzeń przy użyciu profilu prostego protokołu rejestrowania certyfikatów (SCEP) i profilu certyfikatów PKCS (Public Key Cryptography Standards).
 
 Te certyfikaty mogą być usuwane podczas [czyszczenia](devices-wipe.md#wipe) lub [wycofywania](devices-wipe.md#retire) urządzenia. Istnieje również scenariusze, w których certyfikaty są automatycznie usuwane, i scenariusze, w których certyfikaty pozostają na urządzeniu. W tym artykule opisano niektóre typowe scenariusze oraz ich wpływ na certyfikaty PKCS i SCEP.
 
@@ -35,16 +35,15 @@ Te certyfikaty mogą być usuwane podczas [czyszczenia](devices-wipe.md#wipe) lu
 > 1. Wyczyszczenie lub wycofanie urządzenia użytkownika.
 > 2. Usunięcie użytkownika z lokalnej usługi Active Directory lub Azure AD.
 
-## <a name="manually-deleted-certificates"></a>Certyfikaty usuwane ręcznie  
+## <a name="manually-deleted-certificates"></a>Certyfikaty usuwane ręcznie
 
-Ręczne usuwanie certyfikatu to scenariusz, który ma zastosowanie na różnych platformach i do certyfikatów aprowizowanych za pomocą profilów certyfikatów SCEP i PKCS. Na przykład użytkownik może usunąć certyfikat z urządzenia, gdy na urządzaniu nadal obowiązuje zasada certyfikatu.  
+Ręczne usuwanie certyfikatu to scenariusz, który ma zastosowanie na różnych platformach i do certyfikatów aprowizowanych za pomocą profilów certyfikatów SCEP i PKCS. Na przykład użytkownik może usunąć certyfikat z urządzenia, gdy na urządzaniu nadal obowiązuje zasada certyfikatu.
 
-W tym scenariuszu po usunięciu certyfikatu, gdy urządzenie następnym razem będzie sprawdzać zasady usługi Intune, zostanie określone jako niezgodne, ponieważ nie będzie zawierać oczekiwanego certyfikatu. Usługa Intune wystawi nowy certyfikat, aby przywrócić zgodność urządzenia. Aby przywrócić certyfikat, nie jest wymagana żadna dodatkowa akcja.  
-
+W tym scenariuszu po usunięciu certyfikatu, gdy urządzenie następnym razem będzie sprawdzać zasady usługi Intune, zostanie określone jako niezgodne, ponieważ nie będzie zawierać oczekiwanego certyfikatu. Usługa Intune wystawi nowy certyfikat, aby przywrócić zgodność urządzenia. Aby przywrócić certyfikat, nie jest wymagana żadna dodatkowa akcja.
 
 ## <a name="windows-devices"></a>Urządzenia z systemem Windows
 
-#### <a name="scep-certificates"></a>Certyfikaty SCEP
+### <a name="scep-certificates"></a>Certyfikaty SCEP
 
 Certyfikat SCEP jest odwoływany *oraz* usuwany, gdy:
 
@@ -67,7 +66,7 @@ Certyfikaty SCEP *pozostają* w urządzeniu (certyfikaty nie są odwoływane ani
 - Administrator wycofuje licencję usługi Intune.
 - Administrator usuwa użytkownika lub grupę z usługi Azure AD.
 
-#### <a name="pkcs-certificates"></a>Certyfikaty PKCS
+### <a name="pkcs-certificates"></a>Certyfikaty PKCS
 
 Certyfikat PKCS jest odwoływany *oraz* usuwany, gdy:
 
@@ -90,7 +89,7 @@ Certyfikaty PKCS *pozostają* w urządzeniu (certyfikaty nie są odwoływane ani
 
 ## <a name="ios-devices"></a>Urządzenia z systemem iOS
 
-#### <a name="scep-certificates"></a>Certyfikaty SCEP
+### <a name="scep-certificates"></a>Certyfikaty SCEP
 
 Certyfikat SCEP jest odwoływany *oraz* usuwany, gdy:
 
@@ -113,7 +112,7 @@ Certyfikaty SCEP *pozostają* w urządzeniu (certyfikaty nie są odwoływane ani
 - Administrator wycofuje licencję usługi Intune.
 - Administrator usuwa użytkownika lub grupę z usługi Azure AD.
 
-#### <a name="pkcs-certificates"></a>Certyfikaty PKCS
+### <a name="pkcs-certificates"></a>Certyfikaty PKCS
 
 Certyfikat PKCS jest odwoływany *oraz* usuwany, gdy:
 
@@ -123,7 +122,7 @@ Certyfikat PKCS jest odwoływany *oraz* usuwany, gdy:
 
 Certyfikat PKCS jest usuwany, gdy:
 - Profil certyfikatu jest usuwany z przypisania grupy.
-  
+
 Certyfikat główny jest usuwany, gdy:
 - Użytkownik wyrejestrowuje się.
 - Administrator uruchamia akcję [czyszczenia](devices-wipe.md#wipe).
@@ -137,7 +136,7 @@ Certyfikaty PKCS *pozostają* w urządzeniu (certyfikaty nie są odwoływane ani
 
 ## <a name="android-knox-devices"></a>Urządzenia z rozwiązaniem Android KNOX
 
-#### <a name="scep-certificates"></a>Certyfikaty SCEP
+### <a name="scep-certificates"></a>Certyfikaty SCEP
 
 Certyfikat SCEP jest odwoływany *oraz* usuwany, gdy:
 - Użytkownik wyrejestrowuje się.
@@ -160,7 +159,7 @@ Certyfikaty SCEP *pozostają* w urządzeniu (certyfikaty nie są odwoływane ani
 - Administrator wycofuje licencję usługi Intune.
 - Administrator usuwa użytkownika lub grupę z usługi Azure AD.
 
-#### <a name="pkcs-certificates"></a>Certyfikaty PKCS
+### <a name="pkcs-certificates"></a>Certyfikaty PKCS
 
 Certyfikat PKCS jest odwoływany *oraz* usuwany, gdy:
 
@@ -179,14 +178,15 @@ Certyfikaty PKCS *pozostają* w urządzeniu (certyfikaty nie są odwoływane ani
 - Administrator usuwa użytkownika lub grupę z usługi Azure AD.
 - Administrator zmienia lub aktualizuje profil certyfikatu SCEP.
 - Profil certyfikatu jest usuwany z przypisania grupy.
-  
-  
+
+
 > [!NOTE]
-> Urządzenia z programem Android for Work nie są weryfikowane pod kątem powyższych scenariuszy. Na starszych urządzeniach z systemem Android (każdym urządzeniu firmy innej niż Samsung bez profilu służbowego) nie można usuwać certyfikatów. 
+> Urządzenia z programem Android for Work nie są weryfikowane pod kątem powyższych scenariuszy.
+> Na starszych urządzeniach z systemem Android (każdym urządzeniu firmy innej niż Samsung bez profilu służbowego) nie można usuwać certyfikatów.
 
 ## <a name="macos-certificates"></a>Certyfikaty systemu macOS
 
-#### <a name="scep-certificates"></a>Certyfikaty SCEP
+### <a name="scep-certificates"></a>Certyfikaty SCEP
 
 Certyfikat SCEP jest odwoływany *oraz* usuwany, gdy:
 - Użytkownik wyrejestrowuje się.
@@ -205,7 +205,7 @@ Certyfikaty SCEP *pozostają* w urządzeniu (certyfikaty nie są odwoływane ani
 > [!NOTE]
 > Używanie akcji [czyszczenia](devices-wipe.md#wipe) do resetowania urządzeń z systemem macOS do ustawień fabrycznych nie jest obsługiwane.
 
-#### <a name="pkcs-certificates"></a>Certyfikaty PKCS
+### <a name="pkcs-certificates"></a>Certyfikaty PKCS
 
 Certyfikaty PKCS nie są obsługiwane w systemie macOS.
 

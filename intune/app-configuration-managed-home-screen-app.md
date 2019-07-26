@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/16/2019
+ms.date: 07/16/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3955710dfbe57023533f737f0ae69df80f863e6
-ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
+ms.openlocfilehash: 2b1f8308463e76b09a041bb952ad09515435c54c
+ms.sourcegitcommit: c3a4fefbac8ff7badc42b1711b7ed2da81d1ad67
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67735699"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68374844"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>Konfigurowanie aplikacji Microsoft Managed Home Screen dla rozwiązania Android Enterprise
 
@@ -89,7 +89,7 @@ Poniższa tabela zawiera listę dostępnych kluczy konfiguracji aplikacji Manage
 | Exit lock task mode password (Hasło wyjścia z trybu blokady zadania) | ciąg |   | Wprowadź 4-6-cyfrowy kod pozwalający na czasowe wyjście z trybu blokady zadania w celu rozwiązania problemu. |
 | Show Wi-Fi setting (Pokaż ustawienia sieci Wi-Fi) | wartość logiczna | FAŁSZ | Ustawienie wartości `True` dla tego ustawienia umożliwia użytkownikowi końcowemu włączanie lub wyłączanie sieci Wi-Fi oraz nawiązywanie połączenia z innymi sieciami Wi-Fi.  |
 | Show Bluetooth setting (Pokaż ustawienia funkcji Bluetooth) | wartość logiczna | FAŁSZ | Ustawienie wartości `True` dla tego ustawienia umożliwia użytkownikowi końcowemu włączanie lub wyłączanie funkcji Bluetooth oraz nawiązywanie połączenia z różnymi urządzeniami obsługującymi łączność Bluetooth.   |
-| Applications in folder are ordered by name (Aplikacje w folderze są uporządkowane według nazwy) | wartość logiczna | PRAWDA | Ustawienie wartości `False` dla tego ustawienia powoduje, że elementy w folderze będą wyświetlane w kolejności, w której są określone. W przeciwnym razie będą wyświetlane w kolejności alfabetycznej.   |
+| Applications in folder are ordered by name (Aplikacje w folderze są uporządkowane według nazwy) | wartość logiczna | PRAWDA | Ustawienie wartości `False` dla tego ustawienia powoduje, że elementy w folderze będą wyświetlane w kolejności, w której są określone. W przeciwnym razie będą one wyświetlane w kolejności alfabetycznej.   |
 | Application order enabled (Kolejność aplikacji włączona) | wartość logiczna | FAŁSZ | Ustawienie wartości `True` dla tego ustawienia umożliwia włączenie funkcji określania kolejności aplikacji, linków internetowych i folderów w aplikacji Managed Home Screen. Po włączeniu tego ustawienia należy ustawić kolejność za pomocą ustawienia **app_order**.   |
 | Application order (Kolejność aplikacji) | bundleArray | FAŁSZ | Umożliwia określenie kolejności aplikacji, linków internetowych i folderów w aplikacji Managed Home Screen. Aby można było korzystać z tego ustawienia, opcja **Lock Home Screen** (Blokuj ekran główny) musi być włączona, opcja **Set grid size** (Ustaw rozmiar siatki) musi być określona oraz opcja **Application order enabled** (Kolejność aplikacji włączona) musi być ustawiona na `True`.   |
 
@@ -383,6 +383,9 @@ Poniżej przedstawiono przykładowy skrypt JSON zawierający wszystkie dostępne
     ]
 }
 ```
+
+## <a name="googles-android-device-policy-app"></a>Aplikacja Android Device Policy firmy Google
+Aplikacja Managed Home Screen umożliwia teraz dostęp do aplikacji Android Device Policy firmy Google. Aplikacja Managed Home Screen jest niestandardowym modułem uruchamiania używanym w przypadku urządzeń zarejestrowanych w usłudze Intune jako urządzenia dedykowane z systemem Android Enterprise (AE) w trybie kiosku z wieloma aplikacjami. Aplikacja Android Device Policy może być przydatna zarówno dla Ciebie, jak i Twoich użytkowników w celu uzyskania pomocy technicznej lub przeprowadzenia debugowania. Ta funkcja uruchamiania jest dostępna, gdy urządzenie zostanie zarejestrowane i zablokowane w aplikacji Managed Home Screen. Do korzystania z tej funkcji nie są konieczne żadne dodatkowe instalacje.
 
 ## <a name="next-steps"></a>Następne kroki
 

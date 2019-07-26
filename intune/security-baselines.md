@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16586ece687b5d50ea89b28bfd524f50e65ceb46
-ms.sourcegitcommit: 5ce8726278004bbf072149a9c924091bb0654b7c
+ms.openlocfilehash: bbab505d668f0e348b3b4d34fb2c39ac683f340b
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67851479"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353598"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Konfigurowanie urządzeń z systemem Windows 10 w usłudze Intune przy użyciu punktów odniesienia zabezpieczeń
 
@@ -73,6 +73,9 @@ Poniższe wystąpienia punktów odniesienia zabezpieczeń są dostępne do użyc
 - **Punkt odniesienia usługi Microsoft Defender ATP**  
   *(Aby móc używać tego punktu odniesienia, środowisko musi spełniać wymagania wstępne dotyczące korzystania z [Zaawansowanej ochrony przed zagrożeniami w usłudze Microsoft Defender](advanced-threat-protection.md#prerequisites))* .
   - [Wersja zapoznawcza: punkt odniesienia usługi Microsoft Defender ATP](security-baseline-settings-defender-atp.md)  
+
+  > [!NOTE]
+  > Punkt odniesienia zabezpieczeń usługi Microsoft Defender ATP został zoptymalizowany pod kątem urządzeń fizycznych i nie jest obecnie zalecany do użycia na maszynach wirtualnych ani punktach końcowych infrastruktury VDI. Niektóre ustawienia punktu odniesienia mogą mieć wpływ na zdalne sesje interaktywne w zwirtualizowanych środowiskach.  Aby uzyskać więcej informacji, zobacz [Increase compliance to the Microsoft Defender ATP security baseline (Zwiększanie zgodności z punktem odniesienia zabezpieczeń usługi Microsoft Defender ATP)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) w dokumentacji systemu Windows.
 
 Nadal możesz używać i edytować profile, które zostały utworzone wcześniej na podstawie szablonu wersji zapoznawczej, nawet jeśli ten szablon wersji zapoznawczej nie jest już dostępny do tworzenia nowych profilów. 
 
@@ -177,19 +180,19 @@ Inne procesy, które mogą później zmienić ustawienia na urządzeniu, obejmuj
 
 ## <a name="q--a"></a>Pytania i odpowiedzi
 
-#### <a name="why-these-settings"></a>Dlaczego warto używać tych ustawień?
+### <a name="why-these-settings"></a>Dlaczego warto używać tych ustawień?
 
 Zespół ds. zabezpieczeń firmy Microsoft w ciągu wielu lat zdobył doświadczenie w pracy bezpośrednio z deweloperami systemu Windows i społecznością zajmującą się zabezpieczeniami, co pomaga mu w tworzeniu tych rekomendacji. Ustawienia w tym punkcie odniesienia są uważane za najbardziej istotne opcje konfiguracji związane z zabezpieczeniami. W każdej nowej kompilacji systemu Windows zespół dostosowuje rekomendacje w oparciu o nowo wydane funkcje.
 
-#### <a name="is-there-a-difference-in-the-recommendations-for-windows-security-baselines-for-group-policy-vs-intune"></a>Czy istnieje różnica między rekomendacjami dotyczącymi punktów odniesienia zabezpieczeń systemu Windows dla zasad grupy i dla usługi Intune?
+### <a name="is-there-a-difference-in-the-recommendations-for-windows-security-baselines-for-group-policy-vs-intune"></a>Czy istnieje różnica między rekomendacjami dotyczącymi punktów odniesienia zabezpieczeń systemu Windows dla zasad grupy i dla usługi Intune?
 
 Ten sam zespół firmy Microsoft wybrał i zorganizował ustawienia dla każdego punktu odniesienia. Usługa Intune uwzględnia wszystkie odpowiednie ustawienia w punkcie odniesienia zabezpieczeń usługi Intune. W punkcie odniesienia zasad grupy istnieją pewne ustawienia specyficzne dla kontrolera domeny w środowisku lokalnym. Te ustawienia są wykluczane z rekomendacji w usłudze Intune. Wszystkie pozostałe ustawienia są takie same.
 
-#### <a name="are-the-intune-security-baselines-cis-or-nsit-compliant"></a>Czy punkty odniesienia zabezpieczeń usługi Intune są zgodne ze standardami organizacji CIS lub NIST?
+### <a name="are-the-intune-security-baselines-cis-or-nsit-compliant"></a>Czy punkty odniesienia zabezpieczeń usługi Intune są zgodne ze standardami organizacji CIS lub NIST?
 
 Ściśle rzecz biorąc, nie. Zespól ds. zabezpieczeń firmy Microsoft konsultuje się z organizacjami, takimi jak CIS, podczas kompilowania rekomendacji. Ale nie istnieje mapowanie typu „jeden do jednego” między punktami odniesienia „zgodnymi z CIS” i przygotowanymi przez firmę Microsoft.
 
-#### <a name="what-certifications-does-microsofts-security-baselines-have"></a>Jakie certyfikaty mają punkty odniesienia zabezpieczeń firmy Microsoft? 
+### <a name="what-certifications-does-microsofts-security-baselines-have"></a>Jakie certyfikaty mają punkty odniesienia zabezpieczeń firmy Microsoft? 
 
 - Firma Microsoft nadal publikuje punkty odniesienia zabezpieczeń dla zasad grupy (GPO) i zestawu narzędzi [Security Compliance Toolkit](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10), tak jak robiła to przez wiele lat. Te punkty odniesienia są używane przez wiele organizacji. Rekomendacje przedstawione w tych punktach odniesienia są tworzone w trakcie współpracy zespołu ds. zabezpieczeń firmy Microsoft z klientami korporacyjnymi i agencjami zewnętrznymi, w tym z Departamentem Obrony (DoD, Department of Defense), Narodowym Instytutem Standaryzacji i Technologii (NIST, National Institute of Standards and Technology) i innymi. Udostępniamy nasze rekomendacje i punkty odniesienia tym organizacjom. Te organizacje mają również własne rekomendacje, które dokładnie odzwierciedlają rekomendacje firmy Microsoft. Ponieważ funkcja zarządzania urządzeniami przenośnymi (MDM) jest wciąż rozbudowywana w chmurze, firma Microsoft utworzyła równoważne rekomendacje oprogramowania MDM dla tych punktów odniesienia zasad grupy. Te dodatkowe punkty odniesienia są wbudowane w usłudze Microsoft Intune i oferują raporty dotyczące zgodności dla użytkowników, grup i urządzeń, które są zgodne (lub nie) z danym punktem odniesienia.
 
@@ -202,4 +205,5 @@ Ten sam zespół firmy Microsoft wybrał i zorganizował ustawienia dla każdego
   - [Punkt odniesienia zabezpieczeń rozwiązania MDM](security-baseline-settings-mdm.md)  
   - [Punkt odniesienia usługi Microsoft Defender ATP](security-baseline-settings-defender-atp.md)  
 
-- Sprawdź stan oraz monitoruj [punkt odniesienia i profil](security-baselines-monitor.md).
+- Sprawdzanie stanu oraz monitorowanie [punktu odniesienia i profilu](security-baselines-monitor.md)
+

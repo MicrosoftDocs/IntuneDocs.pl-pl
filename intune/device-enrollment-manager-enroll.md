@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f2548e0ff3d4406f64d2091001c38056fe585896
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: bd870a788ff5cac7e0aff47c5b8175c0bdfacff2
+ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67883530"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68427290"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Rejestrowanie urządzeń w usłudze Intune przy użyciu konta menedżera rejestracji urządzeń
 
-Przy użyciu jednego konta usługi Azure Active Directory możesz zarejestrować do 1000 urządzeń przenośnych, korzystając z konta menedżera rejestracji urządzeń (DEM, Device Enrollment Manager). Menedżer DEM to uprawnienie usługi Intune, które można zastosować do konta użytkownika usługi AAD i które umożliwia użytkownikowi zarejestrowanie do 1000 urządzeń. Konto DEM jest przydatne w scenariuszach, w których urządzenia są rejestrowane i przygotowywane przed przekazaniem ich użytkownikom.
+Przy użyciu jednego konta usługi Azure Active Directory możesz zarejestrować do 1000 urządzeń przenośnych, korzystając z konta menedżera rejestracji urządzeń (DEM, Device Enrollment Manager). Menedżer DEM to uprawnienie usługi Intune, które można zastosować do konta użytkownika usługi AAD i które umożliwia użytkownikowi zarejestrowanie do 1000 urządzeń. Konto DEM jest przydatne w scenariuszach, w których urządzenia są rejestrowane i przygotowywane przed przekazaniem ich użytkownikom. Zgodnie z projektem w usłudze Microsoft Intune obowiązuje limit 25 kont menedżera rejestracji urządzeń (DEM).
 
 ## <a name="limitations-of-devices-that-are-enrolled-with-a-dem-account"></a>Ograniczenia urządzeń zarejestrowanych przy użyciu konta DEM
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/20/2019
+ms.date: 06/27/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 90b3e858a06a6f3a34de6ec8102e1a6c458369a2
-ms.sourcegitcommit: cd451ac487c7ace18ac9722a28b9facfba41f6d3
+ms.openlocfilehash: 230f226cba70a7fc61efd236cc0fde0ca6b7fa68
+ms.sourcegitcommit: c3a4fefbac8ff7badc42b1711b7ed2da81d1ad67
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67298420"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68374935"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Używanie skryptów programu PowerShell na urządzeniach z systemem Windows 10 w usłudze Intune
 
@@ -37,11 +37,11 @@ Ta funkcja ma zastosowanie do:
 
 Usługi zarządzania urządzeniami przenośnymi, takie jak Microsoft Intune, mogą zarządzać urządzeniami mobilnymi i stacjonarnymi z systemem Windows 10. Wbudowany klient zarządzania systemu Windows 10 komunikuje się z usługą Intune w celu uruchamiania zadań zarządzania przedsiębiorstwem. Istnieją pewne zadania, których możesz potrzebować, takie jak zaawansowana konfiguracja urządzeń i rozwiązywanie problemów. Na potrzeby zarządzania aplikacjami Win32 możesz użyć funkcji [zarządzania aplikacjami Win32](apps-win32-app-management.md) na urządzeniach z systemem Windows 10.
 
-Rozszerzenie do zarządzania usługi Intune uzupełnia funkcje usług MDM dostarczanych z systemem Windows 10. Można tworzyć skrypty programu PowerShell do uruchamiania na urządzeniach z systemem Windows 10. Można na przykład utworzyć skrypt programu PowerShell, który przeprowadza zaawansowane konfiguracje urządzeń, przekazuje skrypt do usługi Intune, przypisuje go do grupy usługi Azure Active Directory (AD) i uruchamia ten skrypt. Następnie można monitorować stan uruchomienia skryptu od początku do końca.
+Rozszerzenie do zarządzania usługi Intune uzupełnia funkcje usług MDM dostarczanych z systemem Windows 10. Można tworzyć skrypty programu PowerShell do uruchamiania na urządzeniach z systemem Windows 10. Na przykład można utworzyć skrypt programu PowerShell, który wykonuje zaawansowane zadania konfiguracji urządzeń. Następnie można przekazać ten skrypt do usługi Intune, przypisać go do grupy w usłudze Azure Active Directory (AD) i uruchomić. Następnie można monitorować stan uruchomienia skryptu od początku do końca.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Rozszerzenie do zarządzania usługi Intune ma poniższe wymagania wstępne. Gdy zostaną one spełnione, rozszerzenie zarządzania usługi Intune zostanie zainstalowane automatycznie po przypisaniu skryptu programu PowerShell lub aplikacji Win32 do użytkownika lub urządzenia.
+Rozszerzenie do zarządzania usługi Intune ma poniższe wymagania wstępne. Gdy wymagania wstępne zostaną spełnione, rozszerzenie do zarządzania usługi Intune zainstaluje się automatycznie po przypisaniu skryptu programu PowerShell lub aplikacji Win32 do użytkownika bądź urządzenia.
 
 - W urządzeniach działa system Windows 10 w wersji 1607 lub nowszej. Jeśli urządzenie zostało zarejestrowane w ramach [automatycznej rejestracji zbiorczej](windows-bulk-enroll.md), w urządzeniach musi działać system Windows 10 w wersji 1703 lub nowszej. Rozszerzenie zarządzania usługi Intune nie jest obsługiwane w systemie Windows 10 w trybie S, ponieważ ten tryb nie zezwala na uruchamianie aplikacji spoza sklepu. 
   
@@ -61,7 +61,7 @@ Rozszerzenie do zarządzania usługi Intune ma poniższe wymagania wstępne. Gdy
     
     - Użytkownik loguje się do urządzenia przy użyciu swojego konta usługi Azure AD, a następnie rejestruje się w usłudze Intune.
 
-  - Urządzenia współzarządzane używające programu Configuration Manager i usługi Intune. Upewnij się, że obciążenie **Aplikacje klienckie** zostało ustawione na **pilotażową usługę Intune** lub **usługę Intune**. Zapoznaj się z poniższymi tematami w celu uzyskania wskazówek: 
+  - Urządzenia współzarządzane używające programu Configuration Manager i usługi Intune. Upewnij się, że obciążenie **Aplikacje klienckie** zostało ustawione na **pilotażową usługę Intune** lub **usługę Intune**. Zapoznaj się z poniższymi artykułami w celu uzyskania wskazówek: 
   
     - [Co to jest współzarządzanie](https://docs.microsoft.com/sccm/comanage/overview) 
     - [Obciążenie Aplikacje klienckie](https://docs.microsoft.com/sccm/comanage/workloads#client-apps)
@@ -70,15 +70,18 @@ Rozszerzenie do zarządzania usługi Intune ma poniższe wymagania wstępne. Gdy
 > [!TIP]
 > Upewnij się, że urządzenia zostały [przyłączone](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) do usługi Azure AD. Urządzenia, które zostały tylko [zarejestrowane](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) w usłudze Azure AD, nie będą otrzymywać skryptów.
 
-## <a name="create-a-script-policy"></a>Tworzenie zasad skryptu 
+## <a name="create-a-script-policy-and-assign-it"></a>Tworzenie zasad skryptu i ich przypisywanie
 
 1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Wybierz pozycję **Konfiguracja urządzenia** > **Skrypty programu PowerShell** > **Dodaj**.
-3. Wprowadź następujące właściwości:
+
+    ![Dodawanie i używanie skryptów programu PowerShell w usłudze Microsoft Intune](./media/mgmt-extension-add-script.png)
+
+3. W obszarze **Podstawy** wprowadź następujące właściwości i wybierz przycisk **Dalej**:
     - **Nazwa**: Wprowadź nazwę skryptu programu PowerShell. 
-    - **Opis**: Wprowadź opis skryptu programu PowerShell. To ustawienie jest opcjonalne, ale zalecane. 
+    - **Opis**: Wprowadź opis skryptu programu PowerShell. To ustawienie jest opcjonalne, ale zalecane.
+4. W obszarze **Ustawienia skryptu** wprowadź następujące właściwości i wybierz przycisk **Dalej**:
     - **Lokalizacja skryptu**: Przejdź do skryptu programu PowerShell. Rozmiar skryptu musi być mniejszy niż 200 KB (ASCII).
-4. Wybierz pozycję **Konfiguruj**, a następnie wprowadź następujące właściwości:
     - **Uruchom ten skrypt, korzystając z poświadczeń użytych do logowania**: Wybierz opcję **Tak**, aby uruchomić skrypt na urządzeniu przy użyciu poświadczeń użytkownika. Wybierz opcję **Nie** (ustawienie domyślne), aby uruchomić skrypt w kontekście systemu. Wielu administratorów wybiera opcję **Tak**. Jeśli skrypt musi być uruchamiany w kontekście systemu, wybierz opcję **Nie**.
     - **Wymuszaj sprawdzanie podpisu skryptu**: Wybierz opcję **Tak**, jeśli skrypt musi zostać podpisany przez zaufanego wydawcę. Wybierz opcję **Nie** (ustawienie domyślne), jeśli podpis skryptu nie jest wymagany. 
     - **Uruchom skrypt na 64-bitowym hoście programu PowerShell**: Wybierz opcję **Tak**, aby uruchomić skrypt na 64-bitowym hoście programu PowerShell (PS) w 64-bitowej architekturze klienta. Wybierz opcję **Nie** (ustawienie domyślne), aby uruchomić skrypt na 32-bitowym hoście programu PowerShell.
@@ -90,26 +93,34 @@ Rozszerzenie do zarządzania usługi Intune ma poniższe wymagania wstępne. Gdy
       | Nie | 32-bitowa  | 32-bitowy host programu PS jest obsługiwany | Uruchamiany tylko na 32-bitowym hoście programu PS, który działa w architekturach 32-bitowej i 64-bitowej. |
       | Tak | 64-bitowa | Skrypt jest uruchamiany na 64-bitowym hoście programu PS w architekturach 64-bitowych. W przypadku uruchomienia w środowisku 32-bitowym skrypt jest uruchamiany na 32-bitowym hoście programu PS. | Skrypt jest uruchamiany na 32-bitowym hoście programu PS. W przypadku zmiany tego ustawienia na opcję 64-bitową skrypt jest otwierany (nie jest uruchamiany) na 64-bitowym hoście programu PS i następuje raportowanie wyników. W przypadku uruchomienia w środowisku 32-bitowym skrypt jest uruchamiany na 32-bitowym hoście programu PS. |
 
-    ![Dodawanie i używanie skryptów programu PowerShell w usłudze Microsoft Intune](./media/mgmt-extension-add-script.png)
-5. Wybierz pozycję **OK** > **Utwórz**, aby zapisać skrypt.
+5. Wybierz pozycję **Tagi zakresu**. Tagi zakresu są opcjonalne. W artykule [Używanie kontroli dostępu opartej na rolach i tagów zakresu w rozproszonej infrastrukturze informatycznej](scope-tags.md) znajduje się więcej informacji.
 
-> [!NOTE]
-> Jeśli skrypty zostały ustawione na kontekst użytkownika, a użytkownik końcowy ma uprawnienia administratora, domyślnie skrypt programu PowerShell jest uruchamiany w obrębie uprawnienia administratora.
+    Aby dodać tag zakresu:
 
-## <a name="assign-the-policy"></a>Przypisywanie zasad
+    1. Wybierz kolejno pozycje **Wybierz zakres tagów** > wybierz istniejący tag zakresu z listy > **Wybierz**.
 
-1. W obszarze **Skrypty programu PowerShell** wybierz skrypt do przypisania, a następnie wybierz pozycję **Zarządzaj** > **Przypisania**.
+    2. Po zakończeniu wybierz przycisk **Dalej**.
 
-    ![Przypisywanie lub wdrażanie skryptu programu PowerShell do grup urządzeń w usłudze Microsoft Intune](./media/mgmt-extension-assignments.png)
+6. Wybierz pozycję **Przypisania** > **Wybierz grupy do uwzględnienia**. Zostanie wyświetlona Istniejąca lista grup usługi Azure AD.
 
-2. Wybierz pozycję **Wybierz grupy**, aby wyświetlić listę dostępnych grup usługi Azure AD. 
-3. Wybierz co najmniej jedną grupę obejmującą użytkowników, których urządzenia otrzymują skrypt. Użyj pozycji **Wybierz**, aby przypisać zasady do wybranych grup.
+    1. Wybierz co najmniej jedną grupę obejmującą użytkowników, których urządzenia otrzymują skrypt. Wybierz pozycję **Wybierz**. Wybrane grupy zostaną wyświetlone na liście i zostaną im przypisane zasady.
 
-> [!NOTE]
-> - Użytkownicy końcowi nie muszą logować się na urządzeniu, aby wykonywać skrypty programu PowerShell.
-> - Skrypty programu PowerShell w usłudze Intune mogą być przeznaczone dla grup zabezpieczeń urządzeń lub użytkowników usługi Azure AD.
+        > [!NOTE]
+        > Skrypty programu PowerShell w usłudze Intune mogą być przeznaczone dla grup zabezpieczeń urządzeń lub użytkowników usługi Azure AD.
 
-Klient rozszerzenia do zarządzania usługi Intune co godzinę oraz po każdym ponownym uruchomieniu sprawdza, czy w usłudze Intune pojawiły się nowe skrypty lub zmiany skryptów. Po przypisaniu zasad do grup usługi Azure AD skrypt programu PowerShell jest uruchamiany, a wyniki jego działania są zgłaszane. Ponowne wykonanie skryptu następuje dopiero w przypadku zmiany w skrypcie lub zasadach.
+    2. Wybierz pozycję **Dalej**.
+
+        ![Przypisywanie lub wdrażanie skryptu programu PowerShell do grup urządzeń w usłudze Microsoft Intune](./media/mgmt-extension-assignments.png)
+
+7. W obszarze **Przejrzyj i dodaj** zostanie wyświetlone podsumowanie skonfigurowanych ustawień. Wybierz pozycję **Dodaj**, aby zapisać skrypt. Po wybraniu pozycji **Dodaj** zasady zostaną wdrożone w wybranych grupach.
+
+## <a name="important-considerations"></a>Ważne zagadnienia
+
+- Jeśli skrypty zostały ustawione na kontekst użytkownika, a użytkownik końcowy ma uprawnienia administratora, domyślnie skrypt programu PowerShell jest uruchamiany w obrębie uprawnienia administratora.
+
+- Użytkownicy końcowi nie muszą logować się na urządzeniu, aby wykonywać skrypty programu PowerShell.
+
+- Klient rozszerzenia do zarządzania usługi Intune co godzinę oraz po każdym ponownym uruchomieniu sprawdza, czy w usłudze Intune pojawiły się nowe skrypty lub zmiany skryptów. Po przypisaniu zasad do grup usługi Azure AD skrypt programu PowerShell jest uruchamiany, a wyniki jego działania są zgłaszane. Ponowne wykonanie skryptu następuje dopiero w przypadku zmiany w skrypcie lub zasadach.
 
 ## <a name="monitor-run-status"></a>Monitorowanie stanu uruchomienia
 
@@ -120,7 +131,7 @@ W obszarze **Skrypty programu PowerShell** wybierz skrypt do monitorowania, wybi
 - **Stan urządzenia**
 - **Stan użytkownika**
 
-## <a name="troubleshoot-scripts"></a>Rozwiązywanie problemów ze skryptami
+## <a name="intune-management-extension-logs"></a>Dzienniki rozszerzenia do zarządzania usługi Intune
 
 Typowa lokalizacja dzienników agenta na maszynie klienta to folder `\ProgramData\Microsoft\IntuneManagementExtension\Logs`. Do wyświetlenia plików dzienników możesz użyć narzędzia [CMTrace.exe](https://docs.microsoft.com/sccm/core/support/tools). 
 
@@ -132,7 +143,7 @@ W obszarze **Skrypty programu PowerShell** kliknij skrypt prawym przyciskiem mys
 
 ## <a name="common-issues-and-resolutions"></a>Typowe problemy i rozwiązania
 
-#### <a name="issue-intune-management-extension-doesnt-download"></a>Problem: Rozszerzenie do zarządzania usługi Intune nie jest pobierane
+### <a name="issue-intune-management-extension-doesnt-download"></a>Problem: Rozszerzenie do zarządzania usługi Intune nie jest pobierane
 
 **Możliwe rozwiązania**:
 
@@ -151,7 +162,7 @@ Aby sprawdzić, czy urządzenie jest zarejestrowane automatycznie, możesz wykon
 
 [Włączanie automatycznej rejestracji systemu Windows 10](windows-enroll.md#enable-windows-10-automatic-enrollment) obejmuje konfigurację automatycznej rejestracji w usłudze Intune.
 
-#### <a name="issue-powershell-scripts-do-not-run"></a>Problem: Nie można uruchomić skryptów programu PowerShell
+### <a name="issue-powershell-scripts-do-not-run"></a>Problem: Nie można uruchomić skryptów programu PowerShell
 
 **Możliwe rozwiązania**:
 
@@ -167,7 +178,7 @@ Aby sprawdzić, czy urządzenie jest zarejestrowane automatycznie, możesz wykon
 - Klient rozszerzenia do zarządzania usługi Intune co godzinę sprawdza, czy nie ma zmian skryptu lub zasad w usłudze Intune.
 - Upewnij się, że rozszerzenie do zarządzania usługi Intune zostało pobrane do folderu `%ProgramFiles(x86)%\Microsoft Intune Management Extension`.
 - Skrypty nie działają na urządzeniach Surface Hub lub w systemie Windows 10 w trybie S.
-- Sprawdź dzienniki pod kątem błędów. Zobacz [Rozwiązywanie problemów ze skryptami](#troubleshoot-scripts) (w tym artykule).
+- Sprawdź dzienniki pod kątem błędów. Zobacz [Dzienniki rozszerzenia do zarządzania usługi Intune](#intune-management-extension-logs) (w tym artykule).
 - W przypadku ewentualnych problemów z uprawnieniami upewnij się, że właściwości skryptu programu PowerShell zostały ustawione na `Run this script using the logged on credentials`. Sprawdź również, czy zalogowany użytkownik ma odpowiednie uprawnienia do uruchamiania skryptu.
 
 - Aby odizolować problemy ze skryptami, wykonaj następujące czynności:

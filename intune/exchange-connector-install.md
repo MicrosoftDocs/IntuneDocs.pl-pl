@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7663009c7d45171ab6469f7f6e96b4c8f979b744
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: f55ecd98e047dbf77e6e8eb58284577078e21a61
+ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67883281"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68427331"
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune"></a>Konfigurowanie lokalnego programu Exchange Connector w usłudze Microsoft Intune
 Informacje przedstawione w tym artykule ułatwiają instalowanie i monitorowanie lokalnego łącznika programu Exchange Active Sync dla usługi Intune.  Po skonfigurowaniu współdziałania lokalnego programu Exchange Connector w usłudze Intune z [zasadami dostępu warunkowego można sterować dostępem do lokalnych skrzynek pocztowych programu Exchange](conditional-access-exchange-create.md). 
@@ -152,8 +152,22 @@ Wysoka dostępność lokalnego programu Exchange Connector oznacza, że jeśli s
 Aby zapewnić tryb failover, po nawiązaniu połączenia z programem Exchange za pomocą wskazanego serwera dostępu klienta łącznik wykrywa dodatkowe serwery dostępu klienta dla tej organizacji programu Exchange. Umożliwia to łącznikowi przełączenie się do trybu failover na innym serwerze dostępu klienta (jeśli jest dostępny). Inny serwer jest używany do momentu przywrócenia dostępności podstawowego serwera dostępu klienta. Domyślnie odnajdywanie dodatkowych serwerów dostępu klienta jest włączone. Tryb failover można wyłączyć, korzystając z następującej procedury:  
 1. Na serwerze, na którym jest zainstalowany program Exchange Connector, przejdź do folderu %*ProgramData*%\Microsoft\Windows Intune Exchange Connector. 
 2. Za pomocą edytora tekstów otwórz plik **OnPremisesExchangeConnectorServiceConfiguration.xml**.
-3. Zastąp ciąg &lt;IsCasFailoverEnabled&gt;**true**&lt;/IsCasFailoverEnabled&gt; ciągiem &lt;IsCasFailoverEnabled&gt;**false**&lt;/IsCasFailoverEnabled&gt;, aby wyłączyć tę funkcję.    
+3. Zastąp ciąg &lt;IsCasFailoverEnabled&gt;**true**&lt;/IsCasFailoverEnabled&gt; ciągiem &lt;IsCasFailoverEnabled&gt;**false**&lt;/IsCasFailoverEnabled&gt;, aby wyłączyć tę funkcję.  
  
+## <a name="optional-performance-tuning-for-the-exchange-connector"></a>Opcjonalne dostrajanie wydajności łącznika programu Exchange  
+
+Jeśli obsługujesz co najmniej 5000 urządzeń za pomocą programu Exchange ActiveSync, możesz skonfigurować opcjonalne ustawienie poprawiające wydajność łącznika. Zwiększona wydajność jest uzyskiwana przez włączenie w programie Exchange możliwości korzystania z wielu wystąpień obszarów uruchamiania poleceń programu PowerShell. 
+
+Przed wprowadzeniem tej zmiany upewnij się, że konto używane do uruchamiania łącznika programu Exchange nie jest używane do innych zadań zarządzania programem Exchange. Jest to istotne, ponieważ program Exchange ma limit 18 obszarów uruchamiania na konto, z których większość będzie używana przez łącznik. 
+
+Ta zmiana wydajności nie jest odpowiednia dla łączników, które działają na starszym lub wolniejszym sprzęcie.  
+
+1. Na serwerze, na którym zainstalowano łącznik, otwórz katalog instalacyjny łączników.  Jego domyślna lokalizacja to *C:\ProgramData\Microsoft\Windows Intune Exchange Connector*. 
+2. Otwórz plik *OnPremisesExchangeConnectorServiceConfiguration.xml* do edycji.
+3. Znajdź właściwość **EnableParallelCommandSupport** i ustaw dla niej wartość **true**:  
+     
+   \<EnableParallelCommandSupport>true\</EnableParallelCommandSupport>
+4. Zapisz plik, a następnie uruchom ponownie usługę Microsoft Intune Exchange Connector.
 
 ## <a name="reinstall-the-on-premises-exchange-connector"></a>Ponowne instalowanie lokalnego programu Exchange Connector
 Może być konieczne ponowne zainstalowanie łącznika programu Exchange. Ponieważ do łączenia się z daną organizacją programu Exchange można używać jednego łącznika, jeśli zainstalujesz drugi łącznik, zastąpi on pierwotny łącznik.
