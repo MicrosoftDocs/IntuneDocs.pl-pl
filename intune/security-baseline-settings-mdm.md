@@ -5,7 +5,7 @@ description: Ustawienia punktów odniesienia zabezpieczeń usługi Intune służ
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/20/2019
+ms.date: 07/25/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f70d54404dc20d6d6aabd5974dff9c5102b759f
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 2ff902530b6f7001e23300b01f6576f0a7fc2637
+ms.sourcegitcommit: 1d4aec7b79c70d35ec3fc29df6ff9c6a1403412e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67882291"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68491904"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Ustawienia punktów odniesienia zabezpieczeń oprogramowania MDM dla usługi Intune  
 
@@ -1773,7 +1773,12 @@ Aby uzyskać więcej informacji, zobacz [2.2.2 FW_PROFILE_TYPOE]( https://docs.m
   **Domyślne**: Tak
 
 - **Skonfiguruj usługę Windows Hello dla firm**   
-  Funkcja Windows Hello dla firm to alternatywna metoda logowania do systemu Windows przez zastępowanie haseł, kart inteligentnych i wirtualnych kart inteligentnych. Jeśli włączysz to ustawienie zasad lub go nie skonfigurujesz, urządzenie będzie aprowizować funkcję Windows Hello dla firm. Jeśli wyłączysz to ustawienie zasad, urządzenie nie będzie aprowizować funkcji Windows Hello dla firm dla żadnego użytkownika.
+    Funkcja Windows Hello dla firm to alternatywna metoda logowania do systemu Windows przez zastępowanie haseł, kart inteligentnych i wirtualnych kart inteligentnych.  
+
+  - W przypadku ustawienia *opcji tak*Włącz tę zasadę, a urządzenie zainicjuje funkcję Windows Hello dla firm.  
+  - Jeśli ustawiono wartość *nie skonfigurowano*, linia bazowa nie ma wpływu na ustawienie zasad urządzenia. Oznacza to, że jeśli funkcja Windows Hello dla firm została wyłączona na urządzeniu, zostanie wyłączona. Jeśli jest włączona, pozostanie włączona. 
+
+  Nie można wyłączyć usługi Windows Hello dla firm za jej podstawą. Można wyłączyć funkcję Windows Hello dla firm podczas konfigurowania [rejestracji systemu Windows](windows-hello.md)lub jako część profilu konfiguracji urządzenia na potrzeby [ochrony tożsamości](identity-protection-configure.md).  
 
   **Domyślne**: Tak
 

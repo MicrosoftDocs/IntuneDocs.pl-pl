@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/19/2019
+ms.date: 07/25/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d110013c10f0330c0edbbf230c508009fb47b2a6
-ms.sourcegitcommit: 11a31cd39b727f2254e2705b07d18924e103bd2e
-ms.translationtype: HT
+ms.openlocfilehash: 1fe22291c808c498f9c099498b97e131ea531334
+ms.sourcegitcommit: 2bce5e43956b6a5244a518caa618f97f93b4f727
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68341316"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68467415"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>Ustawienia programu Endpoint Protection w usłudze Intune dla systemu MacOS  
 
@@ -92,36 +92,24 @@ Aby uzyskać więcej informacji na temat ustawień Apple FileVault, zobacz [FDEF
   - **Typ klucza odzyskiwania**  
     Klucze *osobiste* odzyskiwania kluczy są tworzone dla urządzeń. Skonfiguruj następujące ustawienia dla klucza osobistego.  
 
-     - **Lokalizacja osobistego klucza odzyskiwania** — Określ krótki komunikat dla użytkownika, który wyjaśnia, w jaki sposób można pobrać własny klucz odzyskiwania. Ten tekst zostanie wstawiony do komunikatu, który użytkownik zobaczy podczas włączania FileVault.  
+    - **Lokalizacja osobistego klucza odzyskiwania** — Określ krótki komunikat dla użytkownika, który wyjaśnia, jak i gdzie można pobrać osobisty klucz odzyskiwania. Ten tekst zostanie wstawiony do komunikatu, który użytkownik widzi na ekranie logowania, gdy zostanie wyświetlony monit o wprowadzenie osobistego klucza odzyskiwania w przypadku zapomnienia hasła.  
       
-     - **Obrót osobistego klucza odzyskiwania** — określ częstotliwość rotacji osobistego klucza odzyskiwania dla urządzenia. Można wybrać wartość domyślną **nieskonfigurowane** lub wartości z przenoszącą od **1** do **12** miesięcy.  
+    - **Obrót osobistego klucza odzyskiwania** — określ częstotliwość rotacji osobistego klucza odzyskiwania dla urządzenia. Można wybrać wartość domyślną **nieskonfigurowane** lub wartości z przenoszącą od **1** do **12** miesięcy.  
 
-  - **Odłóż FileVault do momentu wylogowania** 
-    > [!NOTE]
-    > Obsługa usługi FileVault jest ograniczona do momentu zakończenia wdrożenia w wersji z lipca w ciągu kilku dni. Dopóki nie zostanie wykonane wprowadzanie, w przypadku skonfigurowania FileVault należy ustawić opcję *Odłóż FileVault* do momentu wylogowania się w celu **włączenia**.   
-
-    FileVault nie zostanie włączona do momentu wylogowania się użytkownika. Użytkownik lokalny lub konto urządzenia przenośnego będzie monitowany o włączenie FileVault po wylogowaniu lub następnym zalogowaniu.  
+  - **Wyłącz monit o wylogowaniu**  
+    Uniemożliwiaj użytkownikowi monitowanie o włączenie FileVault podczas wylogowywania się.  Po wybraniu opcji wyłączone monit o wylogowanie jest wyłączony, a zamiast tego użytkownik zostanie poproszony o zalogowanie się.  
     - **Nieskonfigurowany**  
-    - **Włączenie**  
-    
+    - **Wyłącz**  
+
     **Domyślnie**: Nie skonfigurowano  
 
+  - **Liczba dozwolonych przypadków obejścia**  
+  Ustaw, ile razy użytkownik może zignorować komunikaty o włączeniu FileVault przed FileVault będzie wymagane, aby użytkownik mógł się zalogować.  
 
-
-    - **Wyłącz monit o wylogowaniu**  
-      Uniemożliwiaj użytkownikowi monitowanie o włączenie FileVault podczas wylogowywania się.  
-      - **Nieskonfigurowany**  
-      - **Włączenie**  
-
-      **Domyślnie**: Nie skonfigurowano  
-
-    - **Liczba dozwolonych przypadków obejścia**  
-      Ustaw, ile razy użytkownik może zignorować komunikaty o włączeniu FileVault przed FileVault będzie wymagane, aby użytkownik mógł się zalogować.  
-
-      - **Nie skonfigurowano** — szyfrowanie na urządzeniu jest wymagane przed dodaniem kolejnego logowania.  
-      -  **1** do **10** — zezwala użytkownikowi na ignorowanie monitu od 1 do 10 razy przed wymaganiem szyfrowania na urządzeniu.  
-      - **Bez limitu, zawsze Monituj** — użytkownik jest monitowany o włączenie FileVault, ale szyfrowanie nigdy nie jest wymagane.  
+    - **Nie skonfigurowano** — szyfrowanie na urządzeniu jest wymagane przed dodaniem kolejnego logowania.  
+    - **1** do **10** — zezwala użytkownikowi na ignorowanie monitu od 1 do 10 razy przed wymaganiem szyfrowania na urządzeniu.  
+    - **Bez limitu, zawsze Monituj** — użytkownik jest monitowany o włączenie FileVault, ale szyfrowanie nigdy nie jest wymagane.  
  
-      **Domyślnie**: Nie skonfigurowano  
+    **Domyślnie**: Nie skonfigurowano  
 
 

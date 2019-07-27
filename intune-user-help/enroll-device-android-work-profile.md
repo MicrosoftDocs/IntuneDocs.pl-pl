@@ -18,16 +18,20 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e43fccabd142527d9e17317d56fa029844fa270d
-ms.sourcegitcommit: cd03ea890f563b48339a8c8bb50386b8852ba894
+ms.openlocfilehash: bff8f2d74b06d1cd4ee7dffe594917b4d0946d5c
+ms.sourcegitcommit: 2bce5e43956b6a5244a518caa618f97f93b4f727
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329468"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68467311"
 ---
 # <a name="enroll-device-with-android-work-profile"></a>Rejestrowanie urządzenia przy użyciu profilu służbowego systemu Android
 
-Zarejestruj swoje prywatne urządzenie z systemem Android, aby uzyskać dostęp do firmowej poczty e-mail, aplikacji i innych danych służbowych. Podczas rejestracji skonfigurujesz profil służbowy systemu Android. Ten profil oddziela dane osobiste od danych służbowych na urządzeniu. Pomoc techniczna Twojej firmy zarządza tylko profilem służbowym, na który składają się pliki i dane służbowe. Dział pomocy technicznej Twojej firmy nie może zarządzać danymi osobistymi znajdującymi się na urządzeniu. Dowiedz się więcej o tym, [co się stanie po utworzeniu profilu służbowego](what-happens-when-you-create-a-work-profile-android.md).  
+Zarejestruj swoje prywatne urządzenie z systemem Android, aby uzyskać dostęp do firmowej poczty e-mail, aplikacji i innych danych służbowych. Podczas rejestracji skonfigurujesz profil służbowy systemu Android. Ten profil oddziela dane osobiste od danych służbowych na urządzeniu. Pomoc techniczna Twojej firmy zarządza tylko profilem służbowym, na który składają się pliki i dane służbowe. Dział pomocy technicznej Twojej firmy nie może zarządzać danymi osobistymi znajdującymi się na urządzeniu.
+</br>
+> [!VIDEO https://www.youtube.com/embed/9Dl8HsGk4tI]
+
+Dowiedz się więcej o tym, [co się stanie po utworzeniu profilu służbowego](what-happens-when-you-create-a-work-profile-android.md).
 
 ## <a name="create-work-profile-and-enroll-device"></a>Tworzenie profilu służbowego i rejestrowanie urządzenia
 
