@@ -1,6 +1,6 @@
 ---
 title: Ustawienia funkcji urządzeń z systemem iOS w usłudze Microsoft Intune — Azure | Microsoft DocsiOS device feature settings in Microsoft Intune - Azure | Microsoft Docs
-description: Wyświetl wszystkie ustawienia służące do konfigurowania ustawień urządzeń z systemem iOS na potrzeby funkcji AirPrint, układu ekranu głównego, powiadomień aplikacji, urządzenia udostępnionego, logowania jednokrotnego i filtru zawartości internetowej w usłudze Microsoft Intune. Używaj tych ustawień w profilu konfiguracji urządzenia w celu konfigurowania urządzeń z systemem iOS, aby korzystać z różnych funkcji firmy Apple w organizacji.
+description: Wyświetl wszystkie ustawienia służące do konfigurowania ustawień urządzeń z systemem iOS na potrzeby funkcji AirPrint, układu ekranu głównego, powiadomień aplikacji, urządzenia udostępnionego, logowania jednokrotnego i filtru zawartości internetowej w usłudze Microsoft Intune. Używaj tych ustawień w profilu konfiguracji urządzenia w celu konfigurowania urządzeń z systemem iOS do korzystania z tych funkcji firmy Apple w organizacji.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43b87a90f90130a014817819b87ed5946b1ba15b
-ms.sourcegitcommit: 9c06d8071b9affeda32e367bfe85d89bc524ed0b
+ms.openlocfilehash: bac591a625fd915056234a75b26bc2f90f50cae7
+ms.sourcegitcommit: 8023ba7d42e61bd37305c69f52a649cf83bf72e2
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413808"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68387108"
 ---
 # <a name="ios-device-settings-to-use-common-ios-features-in-intune"></a>Ustawienia urządzeń z systemem iOS dotyczące korzystania z typowych funkcji systemu iOS w usłudze Intune
 
@@ -41,7 +41,7 @@ Ten artykuł zawiera listę tych ustawień i opisy zadań poszczególnych ustawi
 - **Port**: podaj port nasłuchiwania miejsca docelowego funkcji AirPrint. Jeśli ta właściwość pozostanie pusta, funkcja AirPrint będzie używać portu domyślnego. Ustawienie dostępne w systemie iOS 11.0 i jego nowszych wersjach.
 - **TLS**: wybierz pozycję **Włącz**, aby zabezpieczyć połączenia funkcji AirPrint przy użyciu protokołu Transport Layer Security (TLS). Ustawienie dostępne w systemie iOS 11.0 i jego nowszych wersjach.
 
-Opcja **Dodaj** powoduje dodanie serwera funkcji AirPrint do listy. Można dodać wiele serwerów z funkcją AirPrint. Możesz również **zaimportować** plik rozdzielany przecinkami (CSV) z tymi informacjami. Po utworzeniu listy możesz także **wyeksportować** listę serwerów z funkcją AirPrint.
+Opcja **Dodaj** powoduje dodanie serwera funkcji AirPrint do listy. Wiele serwerów AirPrint można dodać. Możesz również **zaimportować** plik rozdzielany przecinkami (CSV) z tymi informacjami. **Eksportuj** tworzy listę dodanych serwerów AirPrint.
 
 Wybierz przycisk **OK**, aby zapisać listę.
 
@@ -195,7 +195,7 @@ Ta funkcja obsługuje nadzorowane urządzenia z systemem iOS w wersji 9.3 i nows
   Możesz też dodać w tych polach informacje dotyczące konkretnych urządzeń za pomocą tokenów urządzeń. Aby na przykład wyświetlić numer seryjny, wprowadź `Serial Number: {{serialnumber}}`. Na ekranie blokady zostanie wyświetlony tekst podobny do tego: `Serial Number 123456789ABC`. Podczas wprowadzania zmiennych użyj nawiasów klamrowych `{{ }}`. [Tokeny konfiguracji aplikacji](app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) zawierają listę zmiennych, których można użyć. Możesz też użyć wartości `deviceName` lub innej wartości specyficznej dla urządzenia.
 
   > [!NOTE]
-  > Zmienne nie są weryfikowane w interfejsie użytkownika i jest uwzględniana wielkość liter. Dlatego mogą pojawić się profile zapisane z niepoprawnymi danymi wejściowymi. Na przykład jeśli podano wartość `{{DeviceID}}` zamiast `{{deviceid}}`, zostanie wyświetlony literał ciągu zamiast unikatowego identyfikatora urządzenia. Pamiętaj wprowadzić poprawne informacje.
+  > Zmienne nie są weryfikowane w interfejsie użytkownika i uwzględniają wielkość liter. Dlatego mogą pojawić się profile zapisane z niepoprawnymi danymi wejściowymi. Na przykład jeśli podano wartość `{{DeviceID}}` zamiast `{{deviceid}}`, zostanie wyświetlony literał ciągu zamiast unikatowego identyfikatora urządzenia. Upewnij się, że wprowadzono prawidłowe informacje.
 
 Wybierz przycisk **OK**, aby zapisać zmiany.
 
@@ -253,7 +253,7 @@ Wybierz przycisk **OK**, aby zapisać zmiany.
 
 ## <a name="web-content-filter-settings"></a>Ustawienia filtru zawartości internetowej
 
-Te ustawienia kontrolują dostęp za pomocą adresu URL przeglądarki na urządzeniach z systemem iOS.
+Te ustawienia kontrolują dostęp za pomocą adresu URL przeglądarki na urządzeniach z systemem iOS w trybie kontrolowanym.
 
 - **Typ filtru**: wybierz, aby zezwolić na określone witryny internetowe. Dostępne opcje:
 

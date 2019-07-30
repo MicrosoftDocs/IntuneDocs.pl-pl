@@ -4,7 +4,7 @@ description: Rozwiązanie Microsoft 365 Enterprise obejmuje usługę Microsoft I
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/12/2019
+ms.date: 07/22/2019
 ms.topic: conceptual
 audience: ITPro
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f476c3129f3f3da4cde98fd0cd9960c223ffd6ae
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 5be25e9ab88f4dd44399d6ddc37cfc25955475ba
+ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67884267"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68427308"
 ---
 # <a name="what-is-device-management"></a>Co to jest zarządzanie urządzeniami? 
 
@@ -59,7 +59,7 @@ Kluczowym zadaniem dowolnego rozwiązania do zarządzania urządzeniami jest zap
 - Program **Windows Defender** zawiera wiele funkcji zabezpieczeń ułatwiających chronienie urządzeń z systemem Windows 10. Używanie usługi Intune i programu Windows Defender w połączeniu umożliwia na przykład: 
 
   - Wyszukiwanie podejrzanych działań w plikach i aplikacjach na urządzeniach przenośnych za pomocą [filtru Windows Defender SmartScreen](https://docs.microsoft.com/intune/endpoint-protection-windows-10). 
-  - Zapobieganie naruszeniom zabezpieczeń na urządzeniach przenośnych za pomocą [zaawansowanej ochrony przed zagrożeniami w usłudze Windows Defender](https://docs.microsoft.com/intune/advanced-threat-protection). Ograniczanie skutków naruszenia zabezpieczeń przez zablokowanie dostępu użytkownika do zasobów firmowych.
+  - Zapobieganie naruszeniom zabezpieczeń na urządzeniach przenośnych za pomocą [zaawansowanej ochrony przed zagrożeniami w usłudze Microsoft Defender](https://docs.microsoft.com/intune/advanced-threat-protection). Ograniczanie skutków naruszenia zabezpieczeń przez zablokowanie dostępu użytkownika do zasobów firmowych.
 
 - **Dostęp warunkowy** to funkcja usługi Azure Active Directory, która jest bardzo dobrze zintegrowana z usługą Intune. Za pomocą [dostępu warunkowego](https://docs.microsoft.com/intune/conditional-access) można zadbać o to, aby dostęp do poczty e-mail, programu SharePoint i innych aplikacji miały tylko zgodne urządzenia. 
 
@@ -73,11 +73,11 @@ Można również używać połączenia metod [MDM i MAM](https://docs.microsoft.
 
 Po skonfigurowaniu usługi Intune wybiera się też opcję zarządzania urządzeniami wyłącznie w witrynie Azure Portal lub zarządzania urządzeniami za pomocą połączenia usługi Intune i rozwiązania Microsoft 365. Na stronie [Migrating mobile device management to Intune in the Azure portal (Migracja zarządzania urządzeniami mobilnymi do usługi Intune za pomocą witryny Azure Portal)](https://www.microsoft.com/itshowcase/Article/Content/1042/Migrating-mobile-device-management-to-Intune-in-the-Azure-portal) przedstawiono analizę przypadku działu informatycznego firmy Microsoft. Z tej analizy przypadku dowiesz się, jak dział informatyczny firmy Microsoft wprowadzić nowoczesne podejście do zarządzania urządzeniami, i poznasz wnioski z tej sytuacji.
 
-## <a name="simplify-it-tasks-using-the-device-management-dashboard"></a>Upraszczanie zadań informatycznych za pomocą pulpitu nawigacyjnego zarządzania urządzeniami
+## <a name="simplify-it-tasks-using-the-device-management-admin-center"></a>Upraszczanie zadań informatycznych za pomocą centrum administracyjnego zarządzania urządzeniami
 
-[Pulpit nawigacyjny zarządzania urządzeniami](https://devicemanagement.portal.azure.com/) to pojedyncze miejsce do zarządzania urządzeniami przenośnymi i realizowania związanych z nimi zadań. Ten pulpit nawigacyjny zawiera usługi służące do zarządzania urządzeniami, w tym Intune i Azure Active Directory, a także do zarządzania aplikacjami klienckimi. 
+[Centrum administracyjne zarządzania urządzeniami](https://devicemanagement.portal.azure.com/) to pojedyncze miejsce do zarządzania urządzeniami przenośnymi i realizowania związanych z nimi zadań. Ten obszar roboczy zawiera usługi służące do zarządzania urządzeniami, w tym Intune i Azure Active Directory, a także do zarządzania aplikacjami klienckimi. 
 
-Oto zadania, które można realizować na pulpicie nawigacyjnym zarządzania urządzeniami:
+W centrum administracyjnym zarządzania urządzeniami można:
 
 - [Rejestrowanie urządzeń](https://docs.microsoft.com/intune/device-enrollment)
 - [Ustawianie zgodności urządzenia](https://docs.microsoft.com/intune/device-compliance-get-started)

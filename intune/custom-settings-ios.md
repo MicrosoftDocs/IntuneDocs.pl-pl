@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/24/2018
+ms.date: 06/26/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c4f9f3cabf0826380dfd97b9c0f772f9846912f0
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: f75317678034a488e689461982550bbb0a8afad8
+ms.sourcegitcommit: 7273100afc51fd808558dc05c651358145d4fa6b
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67530265"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68533150"
 ---
 # <a name="use-custom-settings-for-ios-devices-in-microsoft-intune"></a>Używanie ustawień niestandardowych dla urządzeń z systemem iOS w usłudze Microsoft Intune
 
@@ -31,13 +31,17 @@ W przypadku korzystania z urządzeń z systemem iOS istnieją dwa sposoby pobran
 - [Program Apple Configurator](https://itunes.apple.com/app/apple-configurator-2/id1037126344?mt=12)
 - [Program Apple Profile Manager](https://support.apple.com/profile-manager)
 
-Przy użyciu tych narzędzi można wyeksportować ustawienia do profilu konfiguracji. W usłudze Intune można zaimportować ten plik, a następnie przypisać profil do użytkowników systemu iOS i odpowiednich urządzeń. Po przypisaniu ustawienia są rozpowszechniane i tworzą plan bazowy lub standard dla systemu iOS w Twojej organizacji.
+Przy użyciu tych narzędzi można wyeksportować ustawienia do profilu konfiguracji. W usłudze Intune można zaimportować ten plik, a następnie przypisać profil do użytkowników systemu iOS i odpowiednich urządzeń. Po przypisaniu ustawienia są dystrybuowane. Tworzą one również linię bazową lub standard dla systemu iOS w organizacji.
 
-W tym artykule pokazano, jak utworzyć profil niestandardowy dla urządzeń z systemem iOS. Zawiera on również pewne wskazówki na temat korzystania z programów Apple Configurator i Apple Profile Manager.
+W tym artykule przedstawiono wskazówki dotyczące korzystania z programu Apple Configurator i Menedżera profilów firmy Apple oraz opisano właściwości, które można skonfigurować.
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
-- Jeśli tworzysz profil konfiguracji za pomocą programu **Apple Configurator**, upewnij się, że eksportowane ustawienia są zgodne z wersją systemu iOS na używanych urządzeniach. Aby uzyskać informacje o rozwiązywaniu problemów z niezgodnymi ustawieniami, wyszukaj dokumenty **Configuration Profile Reference** i **Mobile Device Management Protocol Reference** w witrynie internetowej [Apple Developer](https://developer.apple.com/).
+[Utwórz profil](device-profile-create.md).
+
+## <a name="what-you-need-to-know"></a>Co musisz wiedzieć
+
+- Jeśli tworzysz profil konfiguracji za pomocą programu **Apple Configurator**, upewnij się, że eksportowane ustawienia są zgodne z wersją systemu iOS na urządzeniach. Aby uzyskać informacje o rozwiązywaniu problemów z niezgodnymi ustawieniami, wyszukaj dokumenty **Configuration Profile Reference** i **Mobile Device Management Protocol Reference** w witrynie internetowej [Apple Developer](https://developer.apple.com/).
 
 - W przypadku używania programu **Apple Profile Manager** wykonaj następujące czynności:
 
@@ -47,25 +51,19 @@ W tym artykule pokazano, jak utworzyć profil niestandardowy dla urządzeń z sy
 
     Pobierz i zapisz ten plik. Ten plik zostanie wprowadzony w profilu usługi Intune.
 
-  - Upewnij się, że ustawienia wyeksportowane z programu Apple Profile Manager są zgodne z wersją systemu iOS na używanych urządzeniach. Aby uzyskać informacje o rozwiązywaniu problemów z niezgodnymi ustawieniami, wyszukaj dokumenty **Configuration Profile Reference** i **Mobile Device Management Protocol Reference** w witrynie internetowej [Apple Developer](https://developer.apple.com/).
+  - Upewnij się, że ustawienia wyeksportowane z programu Apple Profile Manager są zgodne z wersją systemu iOS na urządzeniach. Aby uzyskać informacje o rozwiązywaniu problemów z niezgodnymi ustawieniami, wyszukaj dokumenty **Configuration Profile Reference** i **Mobile Device Management Protocol Reference** w witrynie internetowej [Apple Developer](https://developer.apple.com/).
 
-## <a name="create-the-profile"></a>Tworzenie profilu
+## <a name="custom-configuration-profile-settings"></a>Ustawienia niestandardowego profilu konfiguracji
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Wybierz pozycję **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
-3. Podaj następujące ustawienia:
+- **Nazwa niestandardowego profilu konfiguracji**: wprowadź nazwę zasad. Ta nazwa jest wyświetlana na urządzeniu i w stanie usługi Intune.
+- **Plik profilu konfiguracji**: przejdź do profilu konfiguracji utworzonego przy użyciu programu Apple Configurator lub Apple Profile Manager. Zaimportowany plik jest wyświetlany w obszarze **Zawartość pliku**.
 
-    - **Nazwa**: wprowadź nazwę profilu, na przykład `ios custom profile`.
-    - **Opis:** wprowadź opis profilu.
-    - **Platforma**: wybierz pozycję **iOS**.
-    - **Typ profilu**: wybierz pozycję **Niestandardowy**.
+  Możesz również dodać tokeny urządzeń do niestandardowych plików konfiguracji. Tokeny urządzeń służą do dodawania informacji specyficznych dla urządzenia. Aby na przykład wyświetlić numer seryjny, wprowadź `{{serialnumber}}`. Na urządzeniu tekst będzie wyglądać podobnie `123456789ABC` do tego, który jest unikatowy dla każdego urządzenia. Podczas wprowadzania zmiennych użyj nawiasów klamrowych `{{ }}`. [Tokeny konfiguracji aplikacji](app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) zawierają listę zmiennych, których można użyć. Możesz też użyć wartości `deviceid` lub innej wartości specyficznej dla urządzenia.
 
-4. W polu **Konfiguracja niestandardowa** wprowadź następujące ustawienia:
+  > [!NOTE]
+  > Zmienne nie są weryfikowane w interfejsie użytkownika i uwzględniają wielkość liter. Dlatego mogą pojawić się profile zapisane z niepoprawnymi danymi wejściowymi. Na przykład jeśli podano wartość `{{DeviceID}}` zamiast `{{deviceid}}`, zostanie wyświetlony literał ciągu zamiast unikatowego identyfikatora urządzenia. Upewnij się, że wprowadzono prawidłowe informacje.
 
-    - **Nazwa niestandardowego profilu konfiguracji**: wprowadź nazwę zasad. Ta nazwa jest wyświetlana na urządzeniu i w stanie usługi Intune.
-    - **Plik profilu konfiguracji**: przejdź do profilu konfiguracji utworzonego przy użyciu programu Apple Configurator lub Apple Profile Manager. Zaimportowany plik jest wyświetlany w obszarze **Zawartość pliku**.
-
-5. Wybierz pozycję **OK** > **Utwórz**, aby utworzyć profil usługi Intune. Po utworzeniu profil będzie widoczny na liście **Konfiguracja urządzenia — profile**.
+Wybierz kolejno pozycje **OK** > **Utwórz**, aby zapisać zmiany. Profil zostanie utworzony i wyświetlony na liście profilów.
 
 ## <a name="next-steps"></a>Następne kroki
 

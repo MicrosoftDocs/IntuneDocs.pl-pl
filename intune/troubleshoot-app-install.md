@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/03/2019
+ms.date: 07/25/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ebd8f15a8f8633043f64cb4e004aafbb3c399042
-ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
+ms.openlocfilehash: b93fc8bc1bddbae8b1b0bde4f8b8815e8052fb51
+ms.sourcegitcommit: 2fa20338bd0236884e1f3fde624cf70da89fd254
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67648892"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68507689"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Rozwiązywanie problemów z instalacją aplikacji
 
@@ -156,6 +156,7 @@ Następujące komunikaty o błędach oraz opisy zapewniają szczegółowe inform
 |    0x80073CF3    |    Niepowodzenie aktualizacji, błąd weryfikacji zależności lub konflikt pakietu. Możliwe przyczyny:<ul><li> Przychodzący pakiet powoduje konflikt z zainstalowanym pakietem.</li><li> Określona zależność pakietu nie została odnaleziona.</li><li> Pakiet nie obsługuje poprawnej architektury procesora.</li></ul> Sprawdź dziennik zdarzeń **AppXDeployment-Server**, aby uzyskać informacje. Aby uzyskać więcej informacji, zobacz temat [Troubleshooting packaging, deployment, and query of Windows Store apps](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting) (Rozwiązywanie problemów z pakowaniem, wdrażaniem i zapytaniami aplikacji ze sklepu Windows Store).    |
 |    0x80073CFB    |    Dany pakiet jest już zainstalowany i jego ponowna instalacja została zablokowana. Ten błąd może pojawić się w przypadku instalowania pakietu, który nie jest identyczny z pakietem już zainstalowanym. Upewnij się , że podpis cyfrowy jest również częścią pakietu. Jeśli pakiet został ponownie skompilowany lub ponownie podpisany, nie jest już bitowo identyczny z wcześniej zainstalowanym pakietem. Dostępne są następujące dwie opcje naprawienia tego błędu:<ul><li> Zwiększenie numeru wersji aplikacji, a następnie ponowne skompilowanie i ponowne podpisanie pakietu.</li><li> Usunięcie starego pakietu dla każdego użytkownika w systemie przed zainstalowaniem nowego pakietu.</li></ul> Aby uzyskać więcej informacji, zobacz temat [Troubleshooting packaging, deployment, and query of Windows Store apps](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting) (Rozwiązywanie problemów z pakowaniem, wdrażaniem i zapytaniami aplikacji ze sklepu Windows Store).    |
 |    0x87D1041C    |    Instalacja aplikacji zakończyła się pomyślnie, ale nie wykryto aplikacji. Aplikacja została pomyślnie wdrożona przez usługę Intune, a następnie odinstalowana. Możliwe przyczyny odinstalowania aplikacji:<ul><li> Użytkownik końcowy odinstalował aplikację.</li><li> Informacje o tożsamości w pakiecie są niezgodne z danymi zgłaszanymi przez urządzenie w przypadku nieprawidłowych aplikacji.</li><li>W przypadku samoaktualizujących się instalatorów MSI wersja produktu nie odpowiada informacjom o aplikacji po przeprowadzeniu aktualizacji poza usługą Intune.</li></ul> Poinstruuj użytkownika, aby ponownie zainstalował aplikację z portalu firmy. Pamiętaj, że wymagane aplikacje zostaną automatycznie zainstalowane ponownie po następnym zaewidencjonowaniu urządzenia.    |
+|    0x8000FFFF    |    Podczas instalacji wystąpił nieoczekiwany błąd. Zapoznaj się z dziennikami instalacji, aby uzyskać dodatkowe informacje.    |
 
 ## <a name="troubleshooting-apps-from-the-microsoft-store"></a>Rozwiązywanie problemów z aplikacjami ze Sklepu Microsoft
 

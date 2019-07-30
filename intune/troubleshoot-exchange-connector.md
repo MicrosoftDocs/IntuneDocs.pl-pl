@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2718ee7936e82bffc50126eeb57f1b6f732df22d
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: ea3ae66a32353b4aa6c782b13e6a587ee1f4464e
+ms.sourcegitcommit: 1d4aec7b79c70d35ec3fc29df6ff9c6a1403412e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354473"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68491822"
 ---
 # <a name="troubleshoot-the-intune-on-premises-exchange-connector"></a>Rozwiązywanie problemów z lokalnym łącznikiem Exchange Connector usługi Intune
 
@@ -47,9 +47,9 @@ Zapoznaj się z tematem [Konfiguracja lokalnego łącznika Exchange Connector us
 
 
 ## <a name="using-powershell-to-get-more-data-on-exchange-connector-issues"></a>Uzyskiwanie dodatkowych danych dotyczących problemów z programem Exchange Connector za pomocą programu Powershell
-- Aby uzyskać listę wszystkich urządzeń przenośnych dla skrzynki pocztowej, użyj polecenia Get-ActiveSyncDeviceStatistics -mailbox mbx
-- Aby uzyskać listę adresów SMTP dla skrzynki pocztowej, użyj polecenia Get-Mailbox -Identity user | select emailaddresses | fl
-- Aby uzyskać szczegółowe informacje dotyczące stanu dostępu do urządzenia, użyj polecenia Get-CASMailbox <upn> | fl
+- Aby uzyskać listę wszystkich urządzeń przenośnych dla skrzynki pocztowej, użyj`Get-ActiveSyncDeviceStatistics -mailbox mbx`
+- Aby uzyskać listę adresów SMTP dla skrzynki pocztowej, użyj`Get-Mailbox -Identity user | select emailaddresses | fl`
+- Aby uzyskać szczegółowe informacje dotyczące stanu dostępu do urządzenia, użyj polecenia `Get-CASMailbox <upn> | fl`
 
 ## <a name="next-steps"></a>Następne kroki
 Jeśli te informacje nie pomogą w rozwiązaniu problemu, możesz również [uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](get-support.md).

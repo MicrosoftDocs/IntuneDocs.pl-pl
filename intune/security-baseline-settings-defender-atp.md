@@ -5,7 +5,7 @@ description: Ustawienia punktów odniesienia zabezpieczeń obsługiwane przez us
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/29/2019
+ms.date: 07/25/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 40d2b1f58c2892eea6d3f454a3f993b30b9a5c4a
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: eee3d4187dd513cd3945e86aff478fe96b341660
+ms.sourcegitcommit: 1d4aec7b79c70d35ec3fc29df6ff9c6a1403412e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354429"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68491927"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Ustawienia punktów odniesienia zabezpieczeń usługi Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender dla usługi Intune
 
@@ -29,7 +29,7 @@ Zapoznaj się z ustawieniami punktów odniesienia zabezpieczeń usługi Zaawanso
 
 Punkty odniesienia zabezpieczeń usługi Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender są dostępne, jeśli środowisko spełnia wymagania wstępne dotyczące korzystania z [Zaawansowanej ochrony przed zagrożeniami w usłudze Microsoft Defender](advanced-threat-protection.md#prerequisites). 
 
-Ta linia bazowa jest zoptymalizowana pod kątem urządzeń fizycznych i nie jest obecnie zalecana do użycia w maszynach wirtualnych lub punktach końcowych infrastruktury VDI. Niektóre ustawienia linii bazowej mogą mieć wpływ na zdalne sesje interaktywne w zwirtualizowanych środowiskach. Aby uzyskać więcej informacji, zobacz temat [zwiększanie zgodności do linii bazowej zabezpieczeń usługi Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) w dokumentacji systemu Windows.
+Ta linia bazowa jest zoptymalizowana pod kątem urządzeń fizycznych i nie jest obecnie zalecana do użycia w maszynach wirtualnych lub punktach końcowych infrastruktury VDI. Niektóre ustawienia punktu odniesienia mogą mieć wpływ na zdalne sesje interaktywne w zwirtualizowanych środowiskach. Aby uzyskać więcej informacji, zobacz [Increase compliance to the Microsoft Defender ATP security baseline (Zwiększanie zgodności z punktem odniesienia zabezpieczeń usługi Microsoft Defender ATP)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) w dokumentacji systemu Windows.
 
 
 > [!NOTE]  
@@ -292,7 +292,7 @@ Więcej informacji można znaleźć na stronie [WindowsAdvancedThreatProtection 
 
   **Domyślne**: Tryb inspekcji
 
-## <a name="web-network-protection"></a>Ochrona Internetu  
+## <a name="web--network-protection"></a>Ochrona Internetu i sieci  
 
 - **Typ ochrony sieci**  
   [Defender/EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection) — te zasady umożliwiają włączanie lub wyłączanie ochrony sieci w funkcji Windows Defender Exploit Guard. Ochrona sieci w funkcji Windows Defender Exploit Guard chroni pracowników używających dowolnej aplikacji przed wyłudzeniem informacji, witrynami hostującymi programy wykorzystujące luki w zabezpieczeniach i złośliwą zawartością w Internecie. Obejmuje to blokadę połączeń w przeglądarkach innych firm z niebezpiecznymi witrynami.  
@@ -600,6 +600,13 @@ Więcej informacji można znaleźć na stronie [PassportForWork CSP](https://doc
 
 - **Skonfiguruj funkcję Windows Hello dla firm** - *TenantId/Policies/UsePassportForWork*    
   Funkcja Windows Hello dla firm to alternatywna metoda logowania do systemu Windows przez zastępowanie haseł, kart inteligentnych i wirtualnych kart inteligentnych.  
+
+  - W przypadku ustawienia *opcji tak*Włącz tę zasadę, a urządzenie zainicjuje funkcję Windows Hello dla firm.  
+  - Jeśli ustawiono wartość *nie skonfigurowano*, linia bazowa nie ma wpływu na ustawienie zasad urządzenia. Oznacza to, że jeśli funkcja Windows Hello dla firm została wyłączona na urządzeniu, zostanie wyłączona. Jeśli jest włączona, pozostanie włączona. 
+
+  Nie można wyłączyć usługi Windows Hello dla firm za jej podstawą. Można wyłączyć funkcję Windows Hello dla firm podczas konfigurowania [rejestracji systemu Windows](windows-hello.md)lub jako część profilu konfiguracji urządzenia na potrzeby [ochrony tożsamości](identity-protection-configure.md).  
+
+Funkcja Windows Hello dla firm to alternatywna metoda logowania do systemu Windows przez zastępowanie haseł, kart inteligentnych i wirtualnych kart inteligentnych.  
 
   Jeśli włączysz to ustawienie zasad lub go nie skonfigurujesz, urządzenie będzie aprowizować funkcję Windows Hello dla firm. Jeśli wyłączysz to ustawienie zasad, urządzenie nie będzie aprowizować funkcji Windows Hello dla firm dla żadnego użytkownika.
 
