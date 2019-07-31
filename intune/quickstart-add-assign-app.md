@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/25/2019
+ms.date: 07/24/2019
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1fa23deb26dbf54f8e3e98ec0b9604859a34a90d
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: cd310cea29a3dac7a178d88c0f29d1a4e36ad37d
+ms.sourcegitcommit: d2ac912b834c4840de9cc92ba1815b6ecfbfb52b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528307"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68482809"
 ---
 # <a name="quickstart-add-and-assign-a-client-app"></a>Szybki start: Dodawanie i przypisywanie aplikacji klienckiej
 
@@ -43,7 +43,6 @@ Zaloguj się w usłudze [Intune](https://aka.ms/intuneportal) jako [administrato
 Po dodaniu aplikacji usługa Intune może zarządzać jej aspektami. 
 
 Aby dodać aplikację do usługi Intune, wykonaj następujące czynności:
-
 1. W usłudze [Intune](https://aka.ms/intuneportal) wybierz pozycję **Aplikacje klienckie** > **Aplikacje** > **Dodaj**. 
 2. Wybierz pozycję **Windows 10** w sekcji **Pakiet Office 365** na liście rozwijanej **Typ aplikacji**.
 3. Wybierz pozycję **Skonfiguruj pakiet aplikacji** w celu wybrania aplikacji pakietu Office, który zostaną przypisane do użytkownika usługi Intune.
@@ -56,9 +55,9 @@ Aby dodać aplikację do usługi Intune, wykonaj następujące czynności:
 
     ![Zrzut ekranu przedstawiający dodawanie informacji o aplikacji](media/quickstart-add-assign-app/quickstart-add-assign-app-01.png)
 
-8. Wybierz pozycję **Ustawienia pakietu aplikacji**.
-9. Z listy rozwijanej **Kanał aktualizacji** wybierz pozycję **Co miesiąc**.
-10. Kliknij przycisk **OK** > **Dodaj**.
+10. Wybierz pozycję **Ustawienia pakietu aplikacji**.
+11. Z listy rozwijanej **Kanał aktualizacji** wybierz pozycję **Co miesiąc**.
+12. Kliknij przycisk **OK** > **Dodaj**.
 
 ## <a name="assign-the-app-to-a-group"></a>Przypisywanie aplikacji do grupy
 

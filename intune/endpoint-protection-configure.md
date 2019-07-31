@@ -15,12 +15,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 mr.reviewer: karthib
-ms.openlocfilehash: d0e3e67cd227c5ce8ac2cb42f79bdea1da8e2d75
-ms.sourcegitcommit: c3a4fefbac8ff7badc42b1711b7ed2da81d1ad67
+ms.openlocfilehash: 13e8c7fd0c822a2bdfbf7c183ea6752f99cf7991
+ms.sourcegitcommit: d2ac912b834c4840de9cc92ba1815b6ecfbfb52b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375110"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68482768"
 ---
 # <a name="add-endpoint-protection-settings-in-intune"></a>Dodawanie ustawień programu Endpoint Protection w usłudze Intune  
 
@@ -63,7 +63,7 @@ Planując profile z niestandardowymi regułami zapory, należy wziąć pod uwag�
 - W przypadku każdego profilu obowiązuje zasada, że jeśli chociaż jedna reguła nie zostanie zastosowana, wszystkie reguły w profilu zakończą się niepowodzeniem i żadna z nich nie zostanie zastosowana na urządzeniu.  
 - Jeśli zastosowanie reguły zakończy się niepowodzeniem, stan niepowodzenia jest zgłaszany dla wszystkich reguł w profilu. Usługa Intune nie może określić, która konkretna reguła zakończyła się niepowodzeniem.  
 
-Reguły zapory, które mogą być zarządzane przez usługę Intune, są szczegółowo opisane w artykule dotyczącym [dostawcy usług konfiguracji zapory]( https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) (CSP) systemu Windows. Aby zapoznać się z listą obsługiwanych przez usługę Intune niestandardowych ustawień zapory dla urządzeń z systemem Windows 10, zobacz [Niestandardowe reguły zapory](endpoint-protection-windows-10.md#custom-firewall-rules).  
+Reguły zapory, które mogą być zarządzane przez usługę Intune, są szczegółowo opisane w artykule dotyczącym [dostawcy usług konfiguracji zapory]( https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) (CSP) systemu Windows. Aby zapoznać się z listą obsługiwanych przez usługę Intune niestandardowych ustawień zapory dla urządzeń z systemem Windows 10, zobacz [Niestandardowe reguły zapory](endpoint-protection-windows-10.md#firewall-rules).  
 
 ### <a name="to-add-custom-firewall-rules-to-an-endpoint-protection-profile"></a>Aby dodać niestandardowe reguły zapory do profilu ochrony punktu końcowego  
 
@@ -73,7 +73,7 @@ Reguły zapory, które mogą być zarządzane przez usługę Intune, są szczeg�
 
 3. Wybierz pozycję **Zapora Windows Defender**, aby otworzyć stronę konfiguracji, a następnie w obszarze *Reguły zapory* wybierz pozycję **Dodaj**, aby otworzyć stronę **Utwórz regułę**.  
 
-4. Określ ustawienia reguły zapory, a następnie wybierz przycisk **OK**, aby je zapisać. Aby zapoznać się z dostępnymi opcjami niestandardowych reguł zapory w dokumentacji, zobacz [Niestandardowe reguły zapory](endpoint-protection-windows-10.md#custom-firewall-rules).  
+4. Określ ustawienia reguły zapory, a następnie wybierz przycisk **OK**, aby je zapisać. Aby zapoznać się z dostępnymi opcjami niestandardowych reguł zapory w dokumentacji, zobacz [Niestandardowe reguły zapory](endpoint-protection-windows-10.md#firewall-rules).  
 
 5. Po zapisaniu reguły zostanie ona wyświetlona na stronie *Zapora Windows Defender* na liście reguł.  
 
