@@ -1,7 +1,7 @@
 ---
 title: Dane wysyłane do usługi Intune przez narzędzie JAMF Pro
 titleSuffix: Microsoft Intune
-description: Lista danych, które narzędzie Jamf Pro wysyła do usługi Microsoft Intune
+description: Przejrzyj listę danych wysyłanych przez narzędzie Jamf Pro do usługi Microsoft Intune podczas integrowania narzędzia Jamf Pro w celu zarządzania komputerami Mac w usłudze Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 287ed06ddab0b98117aa4a75942087f360e4656d
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 86f2f47322e668815d1ff37ce6c2de1e4d6cdc16
+ms.sourcegitcommit: 99b74d7849fbfc8f5cf99cba33e858eeb9f537aa
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66048549"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670898"
 ---
 # <a name="data-jamf-pro-sends-to-intune"></a>Dane wysyłane do usługi Intune przez narzędzie Jamf Pro
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/08/2019
+ms.date: 07/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 804c6485252883672de13bf13729b28a4d7d2f94
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: d76e170627d7e08cc3da6fe4a48eb14ee839de98
+ms.sourcegitcommit: 948ff8f56639e6dc7091134a0efd8d44efca63f2
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67883834"
+ms.lasthandoff: 07/27/2019
+ms.locfileid: "68590924"
 ---
 # <a name="windows-10-app-deployment-using-microsoft-intune"></a>Wdrażanie aplikacji systemu Windows 10 w usłudze Microsoft Intune 
 
@@ -41,7 +41,7 @@ Aplikacje biznesowe dla systemu Windows 10 są podpisywane i przesyłane do kons
 
 ## <a name="microsoft-store-for-business-apps"></a>Aplikacje ze Sklepu Microsoft dla Firm
 
-Aplikacje ze sklepu Microsoft dla Firm to nowoczesne aplikacje zakupione w portalu administratora w sklepie Microsoft dla Firm, które następnie są synchronizowane z usługą Microsoft Intune w celu zarządzania nimi. Aplikacje mogą być **licencjonowane w trybie online** lub **licencjonowane w trybie offline**. Aktualizacje aplikacji ze sklepu Microsoft dla firm są zarządzane bezpośrednio przez sklep Microsoft Store, bez konieczności wykonywania dodatkowych czynności przez administratora. Administrator może również uniemożliwić aktualizacje określonych aplikacji przy użyciu niestandardowego identyfikatora URI. Aby uzyskać więcej informacji, zobacz [Enterprise app management — Prevent app from automatic updates (Zarządzanie aplikacjami dla przedsiębiorstw — zapobieganie automatycznym aktualizacjom aplikacji)](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates). Użytkownik końcowy może również wyłączyć aktualizowanie wszystkich aplikacji ze sklepu Microsoft dla Firm na urządzeniu. 
+Aplikacje ze sklepu Microsoft Store dla Firm to nowoczesne aplikacje zakupione w portalu administratora w sklepie Microsoft Store dla Firm, które następnie są synchronizowane z usługą Microsoft Intune w celu zarządzania nimi. Aplikacje mogą być **licencjonowane w trybie online** lub **licencjonowane w trybie offline**. Aktualizacje aplikacji ze sklepu Microsoft Store dla Firm są zarządzane bezpośrednio przez sklep Microsoft Store, bez konieczności wykonywania dodatkowych czynności przez administratora. Administrator może również uniemożliwić aktualizacje określonych aplikacji przy użyciu niestandardowego identyfikatora URI. Aby uzyskać więcej informacji, zobacz [Enterprise app management — Prevent app from automatic updates (Zarządzanie aplikacjami dla przedsiębiorstw — zapobieganie automatycznym aktualizacjom aplikacji)](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates). Użytkownik końcowy może również wyłączyć aktualizowanie wszystkich aplikacji ze sklepu Microsoft dla Firm na urządzeniu. 
 
 ## <a name="installing-apps-on-windows-10-devices"></a>Instalowanie aplikacji na urządzeniach z systemem Windows 10
 W zależności od typu aplikacji aplikację można zainstalować na urządzeniu z systemem Windows 10, korzystając z jednego z dwóch sposobów:

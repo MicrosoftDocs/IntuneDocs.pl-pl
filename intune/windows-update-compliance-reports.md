@@ -1,5 +1,6 @@
 ---
-title: Użycie raportów rozwiązania Update Compliance dla aktualizacji systemu Windows w usłudze Microsoft Intune | Microsoft Docs
+title: Użycie raportów rozwiązania Update Compliance dla aktualizacji systemu Windows w usłudze Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Użyj rozwiązania Update Compliance pakietu OMS do wyświetlenia danych raportów dla aktualizacji systemu Windows wdrożonych za pomocą usługi Intune.
 keywords: ''
 author: brenduns
@@ -14,12 +15,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a2b236d01cb5ffcf5a26e71ac0a9b65bb586dcb1
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 09f3cafc16d8a08885731aa244a089367c6c0933
+ms.sourcegitcommit: c715c93bb242f4fe44bbdf2fd585909854ed72b6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66039664"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68660407"
 ---
 # <a name="intune-compliance-reports-for-updates"></a>Raporty zgodności usługi Intune dla aktualizacji
 Jeśli użyto usługi Intune do wdrożenia aktualizacji systemu Windows na urządzeniach z systemem Windows 10, możesz wyświetlić szczegóły dotyczące zgodności aktualizacji za pomocą usługi Intune lub bezpłatnego rozwiązania o nazwie *Update Compliance*, które jest częścią pakietu Microsoft Operations Management Suite (OMS).

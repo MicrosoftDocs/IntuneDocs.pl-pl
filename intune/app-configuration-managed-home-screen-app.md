@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/16/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2b1f8308463e76b09a041bb952ad09515435c54c
-ms.sourcegitcommit: c3a4fefbac8ff7badc42b1711b7ed2da81d1ad67
+ms.openlocfilehash: 758230d3d2f1dd1cb42532cce9fe1ff530000a16
+ms.sourcegitcommit: d2ac912b834c4840de9cc92ba1815b6ecfbfb52b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68374844"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68482859"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>Konfigurowanie aplikacji Microsoft Managed Home Screen dla rozwiązania Android Enterprise
 
@@ -386,6 +386,9 @@ Poniżej przedstawiono przykładowy skrypt JSON zawierający wszystkie dostępne
 
 ## <a name="googles-android-device-policy-app"></a>Aplikacja Android Device Policy firmy Google
 Aplikacja Managed Home Screen umożliwia teraz dostęp do aplikacji Android Device Policy firmy Google. Aplikacja Managed Home Screen jest niestandardowym modułem uruchamiania używanym w przypadku urządzeń zarejestrowanych w usłudze Intune jako urządzenia dedykowane z systemem Android Enterprise (AE) w trybie kiosku z wieloma aplikacjami. Aplikacja Android Device Policy może być przydatna zarówno dla Ciebie, jak i Twoich użytkowników w celu uzyskania pomocy technicznej lub przeprowadzenia debugowania. Ta funkcja uruchamiania jest dostępna, gdy urządzenie zostanie zarejestrowane i zablokowane w aplikacji Managed Home Screen. Do korzystania z tej funkcji nie są konieczne żadne dodatkowe instalacje.
+
+## <a name="managed-home-screen-debug-screen"></a>Ekran debugowania w aplikacji Managed Home Screen
+Dostęp do ekranu debugowania w aplikacji Managed Home Screen możesz uzyskać, klikając przycisk **Wstecz** do momentu wyświetlenia ekranu debugowania (kliknij przycisk **Wstecz** co najmniej 15 razy). Na tym ekranie debugowania można uruchomić aplikację Android Device Policy, wyświetlić i przekazać dzienniki lub tymczasowo wstrzymać tryb kiosku w celu zaktualizowania urządzenia. Aby uzyskać więcej informacji na temat wstrzymywania trybu kiosku, zobacz pozycję **Opuszczanie trybu kiosku** w [ustawieniach urządzeń dedykowanych](device-restrictions-android-for-work.md#dedicated-device-settings) dla rozwiązania Android Enterprise.
 
 ## <a name="next-steps"></a>Następne kroki
 

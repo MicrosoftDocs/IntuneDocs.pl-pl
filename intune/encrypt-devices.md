@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/19/2019
+ms.date: 07/25/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 57b459efa5b423f1c73a0d6b7b9172f71f4c86d3
-ms.sourcegitcommit: c3a4fefbac8ff7badc42b1711b7ed2da81d1ad67
+ms.openlocfilehash: 3f37b9b0bc16572cc86cbf79be616c7f395aa784
+ms.sourcegitcommit: 2bce5e43956b6a5244a518caa618f97f93b4f727
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375161"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68467468"
 ---
 # <a name="use-device-encryption-with-intune"></a>Szyfrowanie urządzeń w usłudze Intune  
 
@@ -66,10 +66,7 @@ Aby uzyskać szczegółowe informacje na temat ustawień programu FileVault, kt�
 
    Przykład: Aby pobrać zgubiony lub ostatnio obrócony klucz odzyskiwania, zaloguj się do witryny internetowej Intune — Portal firmy z dowolnego urządzenia. W portalu przejdź do pozycji *Urządzenia* i wybierz urządzenie z włączonym programem FileVault, a następnie wybierz pozycję *Pobierz klucz odzyskiwania*. Zostanie wyświetlony bieżący klucz odzyskiwania.  
 
-6. Skonfiguruj pozostałe ustawienia, aby spełniały Twoje potrzeby biznesowe, a następnie wybierz przycisk **OK**.  
-
-   > [!NOTE]
-   > Obsługa programu FileVault jest ograniczona do momentu zakończenia wdrażania wersji z lipca, co powinno nastąpić w ciągu kilku dni. Przed zakończeniem wdrażania, jeśli skonfigurowano program FileVault, należy ustawić opcję *Defer FileVault until sign out* (Odłóż uruchomienie programu FileVault do czasu wylogowania się) na wartość **Włączone**.  
+6. Skonfiguruj pozostałe [ustawienia programu FileVault](endpoint-protection-macos.md#filevault), aby spełniały Twoje potrzeby biznesowe, a następnie wybierz przycisk **OK**.  
 
 7. Ukończ konfigurację dodatkowych ustawień, a następnie zapisz profil.  
 

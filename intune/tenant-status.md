@@ -14,14 +14,14 @@ ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 946d46baf17a5ffdd4b567adca32b651cacb72bb
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: c744878c49dfa5adb1b4f64587abfe06151a69a0
+ms.sourcegitcommit: 99b74d7849fbfc8f5cf99cba33e858eeb9f537aa
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67882221"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670984"
 ---
-# <a name="intune-tenant-status-page"></a>Strona Stan dzierżawy w usłudze Intune
+# <a name="use-the-intune-tenant-status-page"></a>Korzystanie ze strony Stan dzierżawy w usłudze Intune
 Strona Stan dzierżawy pełni funkcję centrum, które udostępnia aktualne, ważne informacje o dzierżawie. Szczegółowe informacje obejmują dostępność i użycie licencji, stan łącznika oraz ważne komunikaty dotyczące usługi Intune.  
 
 Aby wyświetlić ten pulpit nawigacyjny, w witrynie Azure Portal przejdź do pozycji **Intune > Stan dzierżawy**.  Stan dzierżawy zostanie wyświetlony w obszarze **Pomoc i obsługa techniczna**.  

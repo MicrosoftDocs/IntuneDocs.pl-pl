@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b836e754b8c08397fccb0c74b40ba9fe0675076e
-ms.sourcegitcommit: 97a46f0f6a27eda0592ff6518fac46bc2447b622
+ms.openlocfilehash: 1dd836d8bbc4d6f32081c74fb6f9edc42aff2cac
+ms.sourcegitcommit: d2ac912b834c4840de9cc92ba1815b6ecfbfb52b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68411588"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68482962"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Punkty końcowe sieci dla usługi Microsoft Intune  
 
@@ -146,7 +146,7 @@ Aby uzyskać więcej informacji, zobacz tematy [Porty TCP i UDP używane przez p
 
 ## <a name="microsoft-intune-certificate-connector"></a>Łącznik certyfikatów usługi Microsoft Intune  
 
-Serwer, który hostuje Łącznik certyfikatów usługi Microsoft Intune, musi mieć dostęp za pośrednictwem protokołu **TCP** na porcie **443** do publicznych lokalizacji IP wymienionych w poniższej tabeli.  
+Serwer, który hostuje Łącznik certyfikatów usługi Microsoft Intune, musi mieć dostęp za pośrednictwem protokołu **TCP** na porcie **443** do publicznych lokalizacji IP wymienionych w poniższej tabeli. Aby uzyskać więcej informacji na temat certyfikatów, zobacz tematy [Configure and use PKCS certificates with Intune](certficates-pfx-configure.md) (Konfigurowanie i używanie certyfikatów PKCS w usłudze Intune) i [Configure and use SCEP certificates with Intune](certificates-scep-configure.md) (Konfigurowanie i używanie certyfikatów SCEP w usłudze Intune).
 
 |Domains                             |Adres IP       |
 |---------------|--------------------------------------|

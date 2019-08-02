@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b073047455cd21dc3ffe5efcb52f51584db5ff30
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: b6db255cc4c4bb8466d36e25deaf36e5c3480106
+ms.sourcegitcommit: 2bce5e43956b6a5244a518caa618f97f93b4f727
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68353777"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68467498"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurowanie certyfikatów SCEP i korzystanie z nich w usłudze Intune
 
@@ -373,7 +373,14 @@ Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i podaj nas
      - System Windows 10 lub nowszy
 
 
-   - **Format nazwy podmiotu**: wybierz sposób automatycznego tworzenia nazwy podmiotu w żądaniu certyfikatu przez usługę Intune. Opcje zmienią się, jeśli wybierzesz typ certyfikatu **Użytkownik** lub typ certyfikatu **Urządzenie**. 
+   - **Format nazwy podmiotu**: wybierz sposób automatycznego tworzenia nazwy podmiotu w żądaniu certyfikatu przez usługę Intune. Opcje zmienią się, jeśli wybierzesz typ certyfikatu **Użytkownik** lub typ certyfikatu **Urządzenie**.  
+
+     > [!NOTE]  
+     > Istnieje [znany problem](#avoid-certificate-signing-requests-with-escaped-special-characters) związany z używaniem protokołu SCEP do pobrania certyfikatów, gdy nazwa podmiotu w uzyskanym żądaniu podpisania certyfikatu (CSR) zawiera jeden z następujących znaków jako znak o zmienionym znaczeniu (poprzedzony ukośnikiem odwrotnym\\):
+     > - \+
+     > - ;
+     > - ,
+     > - =
 
         **Typ certyfikatu Użytkownik**  
 
@@ -495,6 +502,42 @@ Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i podaj nas
      - Wybierz pozycję **OK**, a następnie **Utwórz**, aby utworzyć profil.
 
 Profil zostanie utworzony i wyświetlony w okienku z listą profilów.
+
+### <a name="avoid-certificate-signing-requests-with-escaped-special-characters"></a>Unikanie żądań podpisania certyfikatu ze znakami specjalnymi o zmienionym znaczeniu
+Istnieje znany problem dotyczący żądań certyfikatów protokołu SCEP, które zawierają nazwę podmiotu (CN) z co najmniej jednym z następujących znaków specjalnych jako znakiem o zmienionym znaczeniu. Nazwy podmiotów, które zawierają jeden z tych znaków specjalnych jako znak o zmienionym znaczeniu, powodują, że powstaje żądanie podpisania certyfikatu z nieprawidłową nazwą podmiotu, co z kolei powoduje niepowodzenie walidacji wyzwania protokołu SCEP w usłudze Intune i certyfikat nie zostaje wydany.  
+
+Znaki specjalne, których dotyczy problem:
+- \+
+- ,
+- ;
+- =
+
+Jeśli nazwa podmiotu zawiera jeden z tych znaków specjalnych, użyj jednej z następujących opcji, aby obejść to ograniczenie:  
+- Hermetyzuj wartość CN, która zawiera znak specjalny, za pomocą cudzysłowów.  
+- Usuń znak specjalny z wartości CN.  
+
+**Przykładowo** masz nazwę podmiotu, która jest wyświetlana jako *Test user (TestCompany, LLC)* .  Problemem jest żądanie CSR zawierające nazwę CN, w której występuje przecinek między *TestCompany* i *LLC*.  Problemowi można zapobiec, umieszczając cudzysłowy wokół całej nazwy CN lub usuwając przecinek pomiędzy *TestCompany* i *LLC*:
+- **Dodanie cudzysłowów**: *CN=* ”Test User (TestCompany, LLC)”,OU=UserAccounts,DC=corp,DC=contoso,DC=com*
+- **Usunięcie przecinka**: *CN=Test User (TestCompany LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com*
+
+ Natomiast próby zmiany znaczenia przecinka przy użyciu znaku ukośnika odwrotnego zakończą się niepowodzeniem i wystąpi błąd w dziennikach CRP:  
+- **Przecinek o zmienionym znaczeniu**: *CN=Test User (TestCompany\\, LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com*
+
+Błąd jest podobny do następującego: 
+
+```
+Subject Name in CSR CN="Test User (TESTCOMPANY\, LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com" and challenge CN=Test User (TESTCOMPANY\, LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com do not match  
+
+  Exception: System.ArgumentException: Subject Name in CSR and challenge do not match
+
+   at Microsoft.ConfigurationManager.CertRegPoint.ChallengeValidation.ValidationPhase3(PKCSDecodedObject pkcsObj, CertEnrollChallenge challenge, String templateName, Int32 skipSANCheck)
+
+Exception:    at Microsoft.ConfigurationManager.CertRegPoint.ChallengeValidation.ValidationPhase3(PKCSDecodedObject pkcsObj, CertEnrollChallenge challenge, String templateName, Int32 skipSANCheck)
+
+   at Microsoft.ConfigurationManager.CertRegPoint.Controllers.CertificateController.VerifyRequest(VerifyChallengeParams value
+```
+
+
 
 ## <a name="assign-the-certificate-profile"></a>Przypisywanie profilu certyfikatu
 

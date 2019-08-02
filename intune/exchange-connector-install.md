@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f55ecd98e047dbf77e6e8eb58284577078e21a61
-ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
+ms.openlocfilehash: 5cf6299f46ed8db4fdca02947ce15a920816d110
+ms.sourcegitcommit: c715c93bb242f4fe44bbdf2fd585909854ed72b6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68427331"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68660942"
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune"></a>Konfigurowanie lokalnego programu Exchange Connector w usłudze Microsoft Intune
 Informacje przedstawione w tym artykule ułatwiają instalowanie i monitorowanie lokalnego łącznika programu Exchange Active Sync dla usługi Intune.  Po skonfigurowaniu współdziałania lokalnego programu Exchange Connector w usłudze Intune z [zasadami dostępu warunkowego można sterować dostępem do lokalnych skrzynek pocztowych programu Exchange](conditional-access-exchange-create.md). 
@@ -121,7 +121,7 @@ Wykonaj następujące kroki, aby zainstalować lokalny program Exchange Connecto
 
 5. Podaj poświadczenia, które są niezbędne do wysyłania powiadomień do skrzynek pocztowych użytkowników programie Exchange Server. Ten użytkownik może być przeznaczony jedynie do obsługi powiadomień. Użytkownik powiadomień potrzebuje skrzynki pocztowej programu Exchange, aby móc wysyłać powiadomienia pocztą e-mail. Powiadomienia te można skonfigurować za pomocą reguł dostępu warunkowego w usłudze Intune.  
 
-       Ensure that the Autodiscover service and Exchange Web Services are configured on the Exchange Client Access Server. For more information, see [Client Access server](https://technet.microsoft.com/library/dd298114.aspx).
+   Upewnij się, że usługa wykrywania automatycznego i usługi sieci Web programu Exchange są skonfigurowane na serwerze dostępu klienta programu Exchange. Aby uzyskać więcej informacji na ten temat, zapoznaj się z artykułem [Client Access server](https://technet.microsoft.com/library/dd298114.aspx) (Serwer dostępu klienta).
 
 6. W polu **Hasło** podaj hasło dla tego konta, aby umożliwić usłudze Intune dostęp do serwera Exchange.
 
@@ -158,7 +158,7 @@ Aby zapewnić tryb failover, po nawiązaniu połączenia z programem Exchange za
 
 Jeśli obsługujesz co najmniej 5000 urządzeń za pomocą programu Exchange ActiveSync, możesz skonfigurować opcjonalne ustawienie poprawiające wydajność łącznika. Zwiększona wydajność jest uzyskiwana przez włączenie w programie Exchange możliwości korzystania z wielu wystąpień obszarów uruchamiania poleceń programu PowerShell. 
 
-Przed wprowadzeniem tej zmiany upewnij się, że konto używane do uruchamiania łącznika programu Exchange nie jest używane do innych zadań zarządzania programem Exchange. Jest to istotne, ponieważ program Exchange ma limit 18 obszarów uruchamiania na konto, z których większość będzie używana przez łącznik. 
+Przed wprowadzeniem tej zmiany upewnij się, że konto używane do uruchamiania łącznika programu Exchange nie jest używane do innych zadań zarządzania programem Exchange. Jest to istotne, ponieważ program Exchange ma ograniczoną liczbę obszarów uruchamiania na konto, z których większość będzie używana przez łącznik. 
 
 Ta zmiana wydajności nie jest odpowiednia dla łączników, które działają na starszym lub wolniejszym sprzęcie.  
 

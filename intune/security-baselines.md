@@ -1,6 +1,6 @@
 ---
 title: Używanie punktów odniesienia zabezpieczeń w usłudze Microsoft Intune — Azure | Microsoft Docs
-description: Dodaj lub skonfiguruj zalecane ustawienia zabezpieczeń systemu Windows w celu ochrony użytkowników i danych na urządzeniach za pomocą usługi Microsoft Intune w ramach zarządzania urządzeniami przenośnymi. Włącz funkcję BitLocker, skonfiguruj Zaawansowaną ochronę przed zagrożeniami w usłudze Microsoft Defender, kontroluj program Internet Explorer, używaj filtru SmartScreen, ustawiaj lokalne zasady zabezpieczeń, wymagaj hasła, blokuj materiały do pobrania z Internetu i nie tylko.
+description: Użyj zalecanych ustawień zabezpieczeń systemu Windows w celu ochrony użytkowników i danych na urządzeniach za pomocą usługi Microsoft Intune w ramach zarządzania urządzeniami przenośnymi. Włącz funkcję szyfrowania, skonfiguruj usługę Microsoft Defender Advanced Threat Protection, kontroluj program Internet Explorer, ustawiaj lokalne zasady zabezpieczeń, wymagaj hasła, blokuj pobieranie materiałów z Internetu i nie tylko.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bbab505d668f0e348b3b4d34fb2c39ac683f340b
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: 252a42b9c8ef6612301bc913e187295be47d27bb
+ms.sourcegitcommit: 99b74d7849fbfc8f5cf99cba33e858eeb9f537aa
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68353598"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671017"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Konfigurowanie urządzeń z systemem Windows 10 w usłudze Intune przy użyciu punktów odniesienia zabezpieczeń
 

@@ -16,14 +16,14 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a04a8b9f1973479fd0695ad0e782488fdef43d10
-ms.sourcegitcommit: c3a4fefbac8ff7badc42b1711b7ed2da81d1ad67
+ms.openlocfilehash: 64bdc59e08a2b17c82e1798d454f0a0403e61b13
+ms.sourcegitcommit: 99b74d7849fbfc8f5cf99cba33e858eeb9f537aa
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375149"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671053"
 ---
-# <a name="monitor-device-encryption"></a>Monitorowanie szyfrowania urządzenia  
+# <a name="monitor-device-encryption-with-intune"></a>Monitorowanie szyfrowania urządzeń w usłudze Intune   
 
 Raport szyfrowania w usłudze Microsoft Intune to scentralizowana lokalizacja umożliwiająca wyświetlanie szczegółowych informacji o stanie szyfrowania urządzeń zarządzanych. Wyświetl szczegóły dotyczące stanu szyfrowania urządzenia i znajdź opcje zarządzania kluczami odzyskiwania urządzeń. Dostępne opcje klucza odzyskiwania zależą od typu urządzenia, którego szczegóły są wyświetlane.  
 
@@ -93,8 +93,6 @@ Po wybraniu urządzenia z raportu szyfrowania usługa Intune wyświetla okienko 
 - **Podsumowanie stanu profilu** — podsumowanie profilów dotyczących tego urządzenia. Podsumowanie reprezentuje najmniej sprzyjające warunki w ramach odpowiednich profilów. Na przykład jeśli tylko jeden z odpowiednich profilów daje w wyniku błąd, w obszarze *Podsumowanie stanu profilu* będzie wyświetlany stan *Błąd*.  
 
 - **Szczegóły stanu** — zaawansowane szczegółowe informacje dotyczące stanu szyfrowania urządzenia.  
-  > [!NOTE]
-  > Obsługa programu FileVault jest ograniczona do momentu zakończenia wdrażania wersji z lipca, co powinno nastąpić w ciągu kilku dni. Do momentu ukończenia wdrażania szczegóły stanu urządzenia i szczegóły szyfrowania urządzenia dla systemu macOS mogą nie być odpowiednio wyświetlane w raporcie szyfrowania.
 
   > [!IMPORTANT]  
   > W przypadku urządzeń z systemem Windows 10 usługa Intune wyświetla *szczegóły stanu* tylko dla urządzeń z systemem *Windows 10 April 2019 Update* lub nowszym.  

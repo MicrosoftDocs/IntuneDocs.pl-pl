@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/22/2019
+ms.date: 07/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1827375dc1905b5c881f743777a73340f0215e0c
-ms.sourcegitcommit: 8023ba7d42e61bd37305c69f52a649cf83bf72e2
+ms.openlocfilehash: 53555a01899cfec15c319e790620b2bfeaa302bc
+ms.sourcegitcommit: 948ff8f56639e6dc7091134a0efd8d44efca63f2
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68388516"
+ms.lasthandoff: 07/27/2019
+ms.locfileid: "68590905"
 ---
 # <a name="intune-discovered-apps"></a>Aplikacje odnalezione przez usługę Intune
 
@@ -30,13 +30,22 @@ ms.locfileid: "68388516"
 
 ## <a name="monitor-discovered-apps-with-intune"></a>Monitorowanie odnalezionych aplikacji za pomocą usługi Intune
 
-Usługa Intune udostępnia listę wykrytych aplikacji na urządzeniach zarejestrowanych w usłudze Intune w Twojej dzierżawie.
+Usługa Intune udostępnia zagregowaną listę aplikacji wykrytych na urządzeniach zarejestrowanych w usłudze Intune w Twojej dzierżawie.
 
 1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. W okienku **Intune** wybierz pozycję **Aplikacje klienckie** > **Odnalezione aplikacje**.
 
 >[!NOTE]
 >Listę odnalezionych aplikacji można wyeksportować do pliku CSV, wybierając pozycję **Eksportuj** w bloku **Odnalezione aplikacje**.
+>
+>W przypadku odnalezionych aplikacji Win32 obecnie nie jest dostępna liczba zagregowana. Ten typ danych można wyświetlać tylko dla poszczególnych urządzeń.
+
+Usługa Intune udostępnia również listę odnalezionych aplikacji dla poszczególnych urządzeń w dzierżawie. 
+
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+2. W okienku usługi Intune wybierz pozycje **Urządzenia** > **Wszystkie urządzenia**.
+3. Wybierz urządzenie.
+4. Aby wyświetlić wykryte aplikacje dla tego urządzenia, wybierz pozycję **Odnalezione aplikacje** w sekcji **Monitoruj**. 
 
 ## <a name="details-of-discovered-apps"></a>Szczegóły odnalezionych aplikacji
 
