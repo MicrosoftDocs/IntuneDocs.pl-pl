@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/01/2018
+ms.date: 07/26/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,22 +18,22 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 494269b82840331041ac2607ea853dbfb1d979de
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 3c764d0bf5cccecef692b8efe1e45af383584cd2
+ms.sourcegitcommit: 3baa9965095bb874d9b8c7a3cbb4aa925ed52cae
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67546330"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68625063"
 ---
 # <a name="install-and-sign-in-to-the-company-portal-app"></a>Instalowanie aplikacji Portal firmy i logowanie się do niej
 
 Zainstaluj aplikację Portal firmy na urządzeniu z systemem iOS, aby uzyskiwać dostęp do służbowych aplikacji, poczty e-mail i sieci. Aplikacja ta umożliwia zarejestrowanie urządzenia w programie Microsoft Intune i zabezpieczenie dostępu do niego przy użyciu zasobów służbowych. Aby uzyskać więcej informacji, zobacz [What happens if you install the Company Portal app and enroll your device in Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md) (Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia w usłudze Intune?).
 
-1. Otwórz stronę sklepu **App Store** i wyszukaj **portal firmy Intune**.
+1. Otwórz stronę sklepu **App Store** i wyszukaj aplikację **Portal firmy usługi Intune**.
 
 2. Pobierz aplikację **Portal firmy w usłudze Intune**.
 
-    ![Zrzut ekranu przedstawiający aplikację Portal firmy w usłudze Intune w sklepie App Store.](./media/CP_iosRedesign_after_1803_04.PNG)
+    ![Zrzut ekranu przedstawiający aplikację Portal firmy w usłudze Intune w sklepie App Store.](./media/cp-ios-redesign-after-1904.PNG)  
 
 3. Otwórz aplikację Portal firmy, podaj służbowy adres e-mail i hasło, a następnie naciśnij pozycję **Zaloguj**.
 

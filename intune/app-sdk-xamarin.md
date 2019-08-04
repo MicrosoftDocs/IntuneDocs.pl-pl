@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7525971f9ab48b92c3274f56cb1046a6fde948a5
-ms.sourcegitcommit: 2614d1b08b8a78cd792aebd2ca9848f391df8550
+ms.openlocfilehash: a8d1ad3648348783306fb0bc1e61defc4197a9d9
+ms.sourcegitcommit: 864fdf995c2b41f104a98a7e2665088c2864774f
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794363"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68680061"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Powiązania Xamarin zestawu SDK aplikacji usługi Microsoft Intune
 
@@ -114,6 +114,9 @@ Aby wykluczyć klasę z mam-zjednoczenia przez ponowne mapowanie, można dodać 
   </PropertyGroup>
 ```
 
+> [!NOTE]
+> W tej chwili problem z funkcją ponownej mapowania uniemożliwia debugowanie w aplikacjach platformy Xamarin. Android. Zaleca się, aby debugować aplikację do momentu rozwiązania tego problemu.
+
 #### <a name="renamed-methodsapp-sdk-androidmdrenamed-methods"></a>[Metody o zmienionej nazwie](app-sdk-android.md#renamed-methods)
 W wielu przypadkach metoda dostępna w klasie systemu Android została oznaczona jako „final” w zastępczej klasie funkcji MAM. W takim przypadku klasa zastępcza funkcji MAM udostępnia metodę o podobnej nazwie (z sufiksem `MAM`), która powinna zostać przesłonięta zamiast niej. Na przykład przy tworzeniu klasy pochodnej klasy `MAMActivity` zamiast przesłaniać metodę `OnCreate()` i wywoływać metodę `base.OnCreate()` działanie `Activity` należy przesłonić metodę `OnMAMCreate()` i wywołać metodę `base.OnMAMCreate()`.
 
@@ -177,7 +180,7 @@ IMAMEnrollmentManager mgr = MAMComponents.Get<IMAMEnrollmentManager>();
 W przypadku aplikacji `Xamarin.Forms` pakiet `Microsoft.Intune.MAM.Remapper` wykonuje automatyczne zastąpienie klas MAM przez wstrzyknięcie klas `MAM` do hierarchii często używanych klas `Xamarin.Forms`. 
 
 > [!NOTE]
-> Oprócz opisanej wyżej integracji platformy Xamarin.Android wymagana jest integracja platformy Xamarin.Forms.
+> Oprócz opisanej wyżej integracji platformy Xamarin.Android wymagana jest integracja platformy Xamarin.Forms. Ponowne mapowanie zachowuje się inaczej w przypadku aplikacji Xamarin. Forms, dzięki czemu ręczne zamiany MAM nadal będą musiały zostać wykonane.
 
 Po dodaniu narzędzia Remapper do projektu należy przeprowadzić zastąpienie równoważnych elementów MAM. Na przykład w aplikacji można nadal używać działań `FormsAppCompatActivity` i `FormsApplicationActivity` pod warunkiem zastąpienia metod `OnCreate` i `OnResume` ich odpowiednikami MAM: `OnMAMCreate` i `OnMAMResume`.
 
@@ -199,6 +202,9 @@ Jest to oczekiwane zachowanie, ponieważ kiedy narzędzie do ponownego mapowania
 
 > [!NOTE]
 > Narzędzie Remapper ponownie zapisze zależność używaną w programie Visual Studio na potrzeby automatycznego uzupełniania IntelliSense. W związku z tym może być konieczne ponowne załadowanie i ponowne skompilowanie projektu po dodaniu narzędzia Remapper, aby funkcja IntelliSense prawidłowo rozpoznała zmiany.
+
+#### <a name="troubleshooting"></a>Rozwiązywanie problemów
+* W przypadku napotkania pustego, białego ekranu w aplikacji podczas uruchamiania, może być konieczne wymuszenie wykonania wywołań nawigacji w wątku głównym.
 
 ### <a name="company-portal-app"></a>Aplikacji Portal firmy
 Powiązania Xamarin zestawu SDK usługi Intune polegają na obecności [Portal firmy](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) aplikacji dla systemu Android na urządzeniu w celu włączenia zasad ochrony aplikacji. Aplikacja Portal firmy pobiera zasady ochrony aplikacji z usługi Intune. Po uruchomieniu aplikacji zostają załadowane zasady i kod umożliwiający wymuszenie danej zasady z aplikacji Portal firmy. Użytkownik nie musi być zalogowany.

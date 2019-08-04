@@ -1,7 +1,7 @@
 ---
 title: Ustawienia punktów odniesienia zabezpieczeń usługi Intune dla systemu Windows 10
 titleSuffix: Microsoft Intune
-description: Ustawienia punktów odniesienia zabezpieczeń usługi Intune służące do zarządzania systemem Windows 10
+description: Przejrzyj wartości domyślne i dostępne ustawienia, które znajdują się w linii bazowej zabezpieczeń systemu Windows MDM dla urządzeń z systemem Windows 10 zarządzanych za pomocą usługi Intune.
 author: brenduns
 ms.author: brenduns
 manager: dougeby
@@ -16,23 +16,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ff902530b6f7001e23300b01f6576f0a7fc2637
-ms.sourcegitcommit: 1d4aec7b79c70d35ec3fc29df6ff9c6a1403412e
+ms.openlocfilehash: 5565ce7a355136a749d79b52e4830af91684440a
+ms.sourcegitcommit: 864fdf995c2b41f104a98a7e2665088c2864774f
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68491904"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68680039"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Ustawienia punktów odniesienia zabezpieczeń oprogramowania MDM dla usługi Intune  
 
 Wyświetl ustawienia linii bazowej zabezpieczeń MDM obsługiwane przez Microsoft Intune dla urządzeń z systemem Windows 10 lub nowszym. Wartości domyślne dla ustawień w tej linii bazowej reprezentują zalecaną konfigurację dla odpowiednich urządzeń i mogą nie być zgodne z wartościami domyślnymi linii bazowej z innych linii bazowych zabezpieczeń.  
 
-Najnowsza wersja linii bazowej to **linia bazowa zabezpieczeń MDM dla aktualizacji wiosenn 2019 (19H1)**  
+Najnowsza wersja linii bazowej to **linia bazowa zabezpieczeń MDM dla 2019 maja**  
 
 Aby dowiedzieć się więcej o zmianach w najnowszej wersji tego planu bazowego z poprzedniej wersji, zobacz [co zmieniono w nowym szablonie](#whats-changed-in-the-new-template).  
 
 > [!NOTE]  
-> W czerwcu 2019 linia bazowa zabezpieczeń MDM (wersja zapoznawcza) została zastąpiona przez wydanie *linii bazowej zabezpieczeń MDM dla szablonu 2019 wiosennej aktualizacji (19H1)* , który jest ogólnie dostępny (nie w wersji zapoznawczej). Profile, które zostały utworzone przed udostępnieniem linii bazowej *zabezpieczeń MDM dla linii bazowych aktualizacji sprężyn 2019 Update (19H1)* , nie zostaną zaktualizowane w celu odzwierciedlenia ustawień i wartości, które znajdują się w linii bazowej zabezpieczeń MDM dla wersji sprężyn 2019 Update (19H1).  Chociaż nie można tworzyć nowych profilów opartych na szablonie wersji zapoznawczej, można edytować i nadal używać wcześniej utworzonych profilów, które są oparte na szablonie wersji zapoznawczej.   
+> W czerwcu 2019 linia bazowa zabezpieczeń MDM (wersja zapoznawcza) została zastąpiona przez wydanie *linii bazowej zabezpieczeń mdm 2019 dla* programu, która jest ogólnie dostępna (nie w wersji zapoznawczej). Profile, które zostały utworzone przed udostępnieniem *linii bazowej zabezpieczeń MDM dla 2019 maja* , nie zostaną zaktualizowane w celu odzwierciedlenia ustawień i wartości, które znajdują się w linii bazowej zabezpieczeń MDM dla maja 2019 wersji.  Chociaż nie można tworzyć nowych profilów opartych na szablonie wersji zapoznawczej, można edytować i nadal używać wcześniej utworzonych profilów, które są oparte na szablonie wersji zapoznawczej.   
   
 Aby dowiedzieć się więcej o korzystaniu z linii bazowych zabezpieczeń w usłudze Intune, zobacz [Korzystanie z linii bazowych zabezpieczeń](security-baselines.md).  
 
@@ -1825,7 +1825,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   **Domyślne**: włączone
 
 ## <a name="whats-changed-in-the-new-template"></a>Co zostało zmienione w nowym szablonie
-*Linia bazowa zabezpieczeń MDM dla szablonu wiosny 2019 Update (19H1)* ma następujące zmiany w szablonie *wersji* zapoznawczej.
+*Linia bazowa zabezpieczeń MDM dla systemu 2019 może* mieć następujące zmiany w szablonie w *wersji* zapoznawczej.
 
 ### <a name="changes-to-the-baseline-settings"></a>Zmiany ustawień linii bazowej
 Te ustawienia są:
