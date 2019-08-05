@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/04/2017
+ms.date: 07/29/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,25 +18,36 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6bdf97e6a36a49bc6df5a182af7676c357440f3e
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: d44af8f40243596bda58d610b369db6f54be6d1e
+ms.sourcegitcommit: 3baa9965095bb874d9b8c7a3cbb4aa925ed52cae
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67529325"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68625125"
 ---
-# <a name="your-android-device-is-missing-a-certificate-required-by-your-company-support"></a>Urządzenie z systemem Android nie ma certyfikatu wymaganego przez dział pomocy technicznej Twojej firmy
+# <a name="install-missing-certificate-required-by-your-organization"></a>Zainstaluj brakujące certyfikaty wymagane przez Twoją organizację  
 
 Jeśli Twoje urządzenie nie zostało zarejestrowane w usłudze Intune i nie ma certyfikatu wymaganego przez dział pomocy technicznej Twojej firmy, nie można zalogować się do aplikacji Portal firmy. Przy próbie zalogowania się zostanie wyświetlony następujący komunikat:
 
 ![screenshot-error-message-about-missing-certificate](./media/andr-cert_install-1-cert_missing.png)
 
-Aby rozwiązać ten problem i uzyskać wymagany certyfikat, wykonaj dwa podstawowe kroki:
+Dostępne są dwie opcje umożliwiające pobranie wymaganego certyfikatu i zarejestrowanie urządzenia. 
 
-- Zidentyfikowanie brakującego certyfikatu przez sprawdzenie komputera służbowego.
-- Pobranie brakującego certyfikatu z Internetu przy użyciu urządzenia.
+- Włącz dostęp do przeglądarki w aplikacji Portal firmy.
+- Zidentyfikuj brakujący certyfikat na komputerze służbowym. Następnie przeszukaj Internet, aby pobrać brakujący certyfikat. 
 
-## <a name="identify-the-missing-certificate-by-looking-on-a-company-or-school-pc"></a>Identyfikowanie brakującego certyfikatu przez sprawdzenie komputera służbowego
+Wykonaj kroki, aby najpierw włączyć dostęp do przeglądarki. Jeśli jednak nadal nie można zarejestrować urządzenia, wykonaj kroki, aby zlokalizować certyfikat w Internecie. 
+
+## <a name="enable-browser-access"></a>Włącz dostęp do przeglądarki
+Wykonaj te kroki, aby włączyć dostęp do przeglądarki. Po włączeniu dostępu Portal firmy zainstaluje odpowiedni certyfikat i kontynuuje rejestrację.    
+
+1. W aplikacji Portal firmy przejdź do odpowiedniego rogu i wybierz menu.  
+2. Wybierz pozycję **Ustawienia**.  
+3. Obok pozycji **Włącz dostęp do przeglądarki** wybierz pozycję **Włącz**.  
+4. Na ekranie administrator urządzenia wybierz pozycję **Aktywuj**. 
+
+## <a name="identify-and-download-the-missing-certificate-through-web-search"></a>Identyfikowanie i pobieranie brakującego certyfikatu za pomocą wyszukiwania w sieci Web
+Wykonaj następujące kroki, aby ręcznie zidentyfikować i zainstalować certyfikat na urządzeniu.  
 
 1. Na komputerze otwórz przeglądarkę Internet Explorer. Jeśli nie masz komputera do użycia w tym celu, skontaktuj się z działem pomocy technicznej Twojej firmy. Aby znaleźć informacje kontaktowe działu pomocy technicznej Twojej firmy, sprawdź [witrynę internetową Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).
 
@@ -52,15 +63,13 @@ Aby rozwiązać ten problem i uzyskać wymagany certyfikat, wykonaj dwa podstawo
 
     ![screenshot-internet-explorer-view-certificates-button-on-website-identification-dialog](./media/andr-missg-cert-ie-view-cert-button.png)
 
-5. W oknie dialogowym **Certyfikat** wybierz kartę **Ścieżka certyfikacji**, a następnie zidentyfikuj certyfikat, który należy pobrać z Internetu. Nazwa potrzebnego certyfikatu będzie znajdować się w tym samym miejscu, które zostało wyróżnione na poprzednim zrzucie ekranu.
+5. Wybierz kartę **Ścieżka certyfikacji**, a następnie zidentyfikuj certyfikat, który należy pobrać z Internetu. Nazwa potrzebnego certyfikatu będzie znajdować się w tym samym miejscu, które zostało wyróżnione na poprzednim zrzucie ekranu.
 
-## <a name="download-and-install-the-missing-certificate-on-your-android-mobile-device"></a>Pobieranie i instalowanie brakującego certyfikatu na urządzenia przenośne z systemem Android
+6. Korzystając z wyszukiwarki, takiej jak Bing czy Google, wyszukaj nazwę brakującego certyfikatu, który został zidentyfikowany w poprzedniej sekcji. Certyfikat może mieć różne rozszerzenia, takie jak „crt”, „pem” itp.
 
-1. Korzystając z wyszukiwarki, takiej jak Bing czy Google, wyszukaj nazwę brakującego certyfikatu, który został zidentyfikowany w poprzedniej sekcji. Certyfikat może mieć różne rozszerzenia, takie jak „crt”, „pem” itp.
+7. Pobierz certyfikat główny z witryny sieci Web.
 
-2. Pobierz certyfikat główny z witryny sieci Web.
-
-3. Po pobraniu certyfikatu przeciągnij w dół od górnej krawędzi urządzenia, aby otworzyć powiadomienia, a następnie wybierz nazwę certyfikatu na liście powiadomień.
+8. Po pobraniu certyfikatu przeciągnij w dół od górnej krawędzi urządzenia, aby otworzyć powiadomienia, a następnie wybierz nazwę certyfikatu na liście powiadomień.
 
 4. W przedstawionym na poniższym zrzucie ekranu oknie dialogowym **Name the Certificate** (Nazywanie certyfikatu) zaakceptuj domyślną nazwę certyfikatu.
 

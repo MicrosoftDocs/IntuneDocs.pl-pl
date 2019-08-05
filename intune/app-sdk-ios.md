@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/10/2019
+ms.date: 07/29/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 673dd0cb751fcdd2a7036dc2bf52dd731a4b04ff
-ms.sourcegitcommit: 8d12ab22e23552f9addaef4c28b732fb211945a2
+ms.openlocfilehash: e8f5f67661dbf33f2b0d6b44e32302a874c3f4de
+ms.sourcegitcommit: 3baa9965095bb874d9b8c7a3cbb4aa925ed52cae
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68306749"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68625089"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu iOS
 
@@ -44,7 +44,7 @@ Dzięki zestawowi SDK aplikacji usługi Microsoft Intune dla systemu iOS możesz
 
 Następujące pliki są istotne dla aplikacji/rozszerzeń, które nie zawierają kodu SWIFT lub są kompilowane przy użyciu wersji Xcode przed 10,2:
 
-* **IntuneMAM.framework**: struktura zestawu SDK aplikacji usługi Intune. Zalecane jest, aby połączyć tę strukturę z aplikacją/rozszerzeniami, aby umożliwić zarządzanie aplikacjami klienckimi usługi Intune. Niektórzy deweloperzy mogą jednak preferować zalety biblioteki statycznej. Zapoznaj się z poniższymi tematami.
+* **IntuneMAM.framework**: struktura zestawu SDK aplikacji usługi Intune. Zalecane jest, aby połączyć tę strukturę z aplikacją/rozszerzeniami, aby umożliwić zarządzanie aplikacjami klienckimi usługi Intune. Niektórzy deweloperzy mogą jednak preferować zalety biblioteki statycznej. Zobacz poniżej.
 
 * **libIntuneMAM.a**: biblioteka statyczna zestawu SDK aplikacji usługi Intune. Deweloperzy mogą wybrać opcję łączenia biblioteki statycznej, a nie platformy. Ze względu na to, że biblioteki statyczne są osadzone bezpośrednio w pliku binarnym aplikacji/rozszerzenia w czasie kompilacji, w przypadku korzystania z biblioteki statycznej istnieją pewne korzyści z wydajności w czasie uruchomienia. Integracja z aplikacją jest jednak bardziej skomplikowany. Jeśli aplikacja zawiera jakiekolwiek rozszerzenia, połączenie biblioteki statycznej z aplikacją i rozszerzenia spowoduje zwiększenie rozmiaru pakietu aplikacji, ponieważ biblioteka statyczna zostanie osadzona w każdym pliku binarnym aplikacji/rozszerzenia. W przypadku korzystania z platformy aplikacje i rozszerzenia mogą współużytkować ten sam plik binarny zestawu SDK usługi Intune, co zmniejsza rozmiar aplikacji.
 
@@ -65,22 +65,22 @@ Następujące pliki są istotne dla wszystkich aplikacji/zakresów:
 
 Następujące pliki nagłówka zawierają interfejsy API, typy danych oraz protokoły, które zestaw SDK aplikacji usługi Intune udostępnia deweloperom:
 
-    * IntuneMAMAppConfig.h
-    * IntuneMAMAppConfigManager.h
-    * IntuneMAMDataProtectionInfo.h
-    * IntuneMAMDataProtectionManager.h
-    * IntuneMAMDefs.h
-    * IntuneMAMDiagnosticConsole.h
-    * IntuneMAMEnrollmentDelegate.h
-    * IntuneMAMEnrollmentManager.h
-    * IntuneMAMEnrollmentStatus.h
-    * IntuneMAMFileProtectionInfo.h
-    * IntuneMAMFileProtectionManager.h
-    * IntuneMAMLogger.h
-    * IntuneMAMPolicy.h
-    * IntuneMAMPolicyDelegate.h
-    * IntuneMAMPolicyManager.h
-    * IntuneMAMVersionInfo.h
+-  IntuneMAMAppConfig.h
+-  IntuneMAMAppConfigManager.h
+-  IntuneMAMDataProtectionInfo.h
+-  IntuneMAMDataProtectionManager.h
+-  IntuneMAMDefs.h
+-  IntuneMAMDiagnosticConsole.h
+-  IntuneMAMEnrollmentDelegate.h
+-  IntuneMAMEnrollmentManager.h
+-  IntuneMAMEnrollmentStatus.h
+-  IntuneMAMFileProtectionInfo.h
+-  IntuneMAMFileProtectionManager.h
+-  IntuneMAMLogger.h
+-  IntuneMAMPolicy.h
+-  IntuneMAMPolicyDelegate.h
+-  IntuneMAMPolicyManager.h
+-  IntuneMAMVersionInfo.h
 
 Deweloperzy mogą udostępnić zawartość wszystkich poprzednich nagłówków, importując tylko plik IntuneMAM.h
 
@@ -130,17 +130,17 @@ Aby włączyć zestaw SDK aplikacji usługi Intune, wykonaj następujące kroki:
     > * Udostępnianie interfejsów API zestawu SDK usługi Intune w języku SWIFT za pośrednictwem instrukcji import modułu (np. import IntuneMAMSwift) nie jest obecnie obsługiwane. Zalecanym podejściem jest użycie nagłówka mostkowania "obiektyw-C".
     
 3. Dodaj następujące struktury systemu iOS do projektu:  
-    * MessageUI.framework  
-    * Security.framework  
-    * MobileCoreServices.framework  
-    * SystemConfiguration.framework  
-    * libsqlite3.tbd  
-    * libc++.tbd  
-    * ImageIO.framework  
-    * LocalAuthentication.framework  
-    * AudioToolbox.framework  
-    * QuartzCore.framework  
-    * WebKit.framework
+-  MessageUI.framework  
+-  Security.framework  
+-  MobileCoreServices.framework  
+-  SystemConfiguration.framework  
+-  libsqlite3.tbd  
+-  libc++.tbd  
+-  ImageIO.framework  
+-  LocalAuthentication.framework  
+-  AudioToolbox.framework  
+-  QuartzCore.framework  
+-  WebKit.framework
 
 4. Włącz udostępnianie łańcucha kluczy (jeśli nie zostało jeszcze włączone), wybierając pozycję **Capabilities** (Możliwości) w każdym obiekcie docelowym projektu i włączając przełącznik **Keychain Sharing** (Udostępnianie łańcucha kluczy). Udostępnianie łańcucha kluczy jest wymagane do przejścia do następnego kroku.
 
