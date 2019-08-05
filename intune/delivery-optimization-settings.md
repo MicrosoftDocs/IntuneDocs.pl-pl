@@ -1,11 +1,12 @@
 ---
-title: Ustawienia usługi optymalizacji dostarczania systemu Windows 10 na potrzeby usługi Intune | Microsoft Docs
+title: Ustawienia usługi optymalizacji dostarczania systemu Windows 10 na potrzeby usługi Intune
+titleSuffix: Microsoft Intune
 description: Ustawienia usługi optymalizacji dostarczania dla urządzeń z systemem Windows 10, które można wdrożyć przy użyciu usługi Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/09/2019
+ms.date: 08/01/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +15,12 @@ ms.reviewer: kerimh
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ab4871da52f5df0aec0a698f31daa5608a57c1c3
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 11361b65735a7ed7e724a77349e3624e0e35ecaf
+ms.sourcegitcommit: 73fbecf7cee4fdfc37d3c30ea2007d2a9a6d2d12
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67493908"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68756566"
 ---
 # <a name="delivery-optimization-settings-for-intune"></a>Ustawienia usługi optymalizacji dostarczania na potrzeby usługi Intune
 
@@ -66,6 +67,15 @@ Aby skonfigurować usługę Intune pod kątem używania tych ustawień, zobacz [
 | [Maksymalny wiek pamięci podręcznej (w dniach)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#max-cache-age)    | 1511         | Określ czas, przez który plik po każdym pomyślnym pobraniu będzie przechowywany w pamięci podręcznej usługi optymalizacji dostarczania na urządzeniu.   <br><br>W usłudze Intune wiek pamięci podręcznej konfigurowany jest w dniach. Zdefiniowana liczba dni jest konwertowana na odpowiednią liczbę sekund, za pomocą której system Windows definiuje to ustawienie. Na przykład konfiguracja usługi Intune wynosząca 3 dni jest konwertowana na urządzeniu na 259 200 sekund (3 dni).  <br><br>**Wartość domyślna**: *żadna wartość nie jest skonfigurowana*     <br><br>**Wartość zalecana**: 7   <br><br>Dostawca usług kryptograficznych zasad: [DOMaxCacheAge](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domaxcacheage)  <br><br>          |
 | Typ maksymalnego rozmiaru pamięci podręcznej  | *Zobacz szczegóły*    | Wybierz sposób zarządzania ilością miejsca na dysku na urządzeniu, które jest używane przez usługę optymalizacji dostarczania. Gdy rozmiar pamięci podręcznej nie jest skonfigurowany, jest domyślnie ustawiany na wartość wynoszącą 20% wolnego miejsca na dysku.  <br><ul><li>**Nie skonfigurowano** (wartość domyślna)</li><br><li>**Wartość bezwzględna** — określ [bezwzględny maksymalny rozmiar pamięci podręcznej (w gigabajtach)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#absolute-max-cache-size), aby skonfigurować maksymalną ilość miejsca na dysku, którą urządzenie może użyć na potrzeby usługi optymalizacji dostarczania. Gdy rozmiar pamięci podręcznej jest ustawiony na wartość 0 (zero), jest on nieograniczony, ale usługa optymalizacji dostarczania wyczyści pamięć podręczną, gdy na urządzeniu będzie brakować miejsca na dysku. <br><br>Wymaga systemu Windows 1607<br><br> Dostawca usług kryptograficznych zasad: [DOAbsoluteMaxCacheSize](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-doabsolutemaxcachesize) </li><br><li>**Wartość procentowa** — określ [maksymalny rozmiar pamięci podręcznej (w procentach)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#max-cache-size), aby skonfigurować maksymalną ilość miejsca na dysku, którą urządzenie może użyć na potrzeby usługi optymalizacji dostarczania. Jest to wartość procentowa miejsca na dysku, a usługa optymalizacji dostarczania stale ocenia dostępne miejsce na dysku i wyczyści pamięć podręczną, aby wartość maksymalnego rozmiaru pamięci podręcznej była niższa niż ustawiona wartość procentowa. <br><br>Wymaga systemu Windows 1511<br><br>Dostawca usług kryptograficznych zasad: [DOMaxCacheSize](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domaxcachesize)  |
 | [Buforowanie równorzędne sieci VPN](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#enable-peer-caching-while-the-device-connects-via-vpn)  | 1709  | Wybierz opcję **Włączone**, aby skonfigurować urządzenie do korzystania z buforowania równorzędnego po nawiązaniu połączenia VPN z siecią domenową. Włączone urządzenia mogą pobierać dane z innych urządzeń w sieci domenowej lub przekazywać dane do nich za pośrednictwem sieci VPN lub firmowej sieci domenowej.  <br><br>**Domyślnie**: Nie skonfigurowano  <br><br>Dostawca usług kryptograficznych zasad: [DOAllowVPNPeerCaching](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domaxcacheage)    |
+
+## <a name="local-server-caching"></a>Buforowanie serwera lokalnego  
+
+|Ustawienie  |Wersja systemu Windows  |Szczegóły  |
+|---------|-----------------|---------|
+|Nazwy hostów serwera pamięci podręcznej | 1809  |Określ adres IP lub nazwę FQDN serwerów pamięci podręcznej sieci, które będą używane przez urządzenia do optymalizacji dostarczania, a następnie wybierz pozycję **Dodaj** , aby dodać ten wpis do listy.  <br><br>**Domyślnie**: Nie skonfigurowano  <br><br>Dostawca CSP zasad: [DOCacheHost](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-docachehost)  |
+|[Rezerwowanie serwera pamięci podręcznej pobierania z opóźnieniem (w sekundach)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#delay-foreground-download-cache-server-fallback-in-secs) | 1903    |Określ czas 0-2592000 (w sekundach) opóźnienia powrotu z serwera pamięci podręcznej do źródła HTTP dla pobierania zawartości na pierwszym planie. Gdy zasady opóźnią pobieranie z pierwszego planu z protokołu HTTP, zostaną one zastosowane w pierwszej kolejności (w celu zezwolenia na pobieranie najpierw z elementów równorzędnych). (0–2592000)    <br><br>**Domyślnie**: 0  <br><br>Zasady dostawcy CSP [DODelayCacheServerFallbackForeground](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dodelaycacheserverfallbackforeground)  |
+|[Rezerwowy serwer pamięci podręcznej pobierania w tle opóźnień (w sekundach)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#delay-background-download-cache-server-fallback-in-secs) | 1903    |Określ czas w sekundach (0-2592000), aby opóźnić rezerwę z serwera pamięci podręcznej do źródła HTTP na potrzeby pobierania zawartości w tle. Po skonfigurowaniu *Opóźnij pobieranie http (w sekundach)* to ustawienie jest stosowane najpierw w celu zezwolenia na pobieranie z elementów równorzędnych. (0–2592000)   <br><br>**Domyślnie**: 0 <br><br>Dostawca CSP zasad: [DODelayCacheServerFallbackBackground](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dodelaycacheserverfallbackbackground)  |
+
 
 ## <a name="next-steps"></a>Następne kroki
 
