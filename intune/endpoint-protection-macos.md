@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/25/2019
+ms.date: 08/02/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1fe22291c808c498f9c099498b97e131ea531334
-ms.sourcegitcommit: 2bce5e43956b6a5244a518caa618f97f93b4f727
+ms.openlocfilehash: d4aa0c47f0aa099ff469eb31b212f387836ad69b
+ms.sourcegitcommit: 73fbecf7cee4fdfc37d3c30ea2007d2a9a6d2d12
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68467415"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68756506"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>Ustawienia programu Endpoint Protection w usłudze Intune dla systemu MacOS  
 
@@ -97,11 +97,18 @@ Aby uzyskać więcej informacji na temat ustawień Apple FileVault, zobacz [FDEF
     - **Obrót osobistego klucza odzyskiwania** — określ częstotliwość rotacji osobistego klucza odzyskiwania dla urządzenia. Można wybrać wartość domyślną **nieskonfigurowane** lub wartości z przenoszącą od **1** do **12** miesięcy.  
 
   - **Wyłącz monit o wylogowaniu**  
-    Uniemożliwiaj użytkownikowi monitowanie o włączenie FileVault podczas wylogowywania się.  Po wybraniu opcji wyłączone monit o wylogowanie jest wyłączony, a zamiast tego użytkownik zostanie poproszony o zalogowanie się.  
+    Uniemożliwiaj użytkownikowi monitowanie o włączenie FileVault podczas wylogowywania się.  Po ustawieniu na wartość Włącz monit o wylogowanie jest wyłączony i zamiast tego użytkownik jest monitowany po zalogowaniu się.  
     - **Nieskonfigurowany**  
-    - **Wyłącz**  
+    - **Włącz** — wyłącza monit przy wylogowaniu.
 
     **Domyślnie**: Nie skonfigurowano  
+
+     > [!IMPORTANT]  
+     > Występuje znany problem, gdy ustawienie **Wyłącz monit o wyłączenie wylogowania** jest ustawione na wartość *włączone*. Po ustawieniu na wartość *enable*, ustawienie dla **liczby dozwolonych przeejść** musi mieć ustawioną opcję i nie może być ustawione *jako nieskonfigurowane* . Jeśli ustawienie *nie zostanie skonfigurowane*, profil nie powiedzie się na urządzeniu. W tym scenariuszu urządzenie raportuje to **Podsumowanie stanu profilu** jako **błąd** bez dalszych szczegółów.
+     > 
+     > Gdy polecenie **Wyłącz monit o wylogowaniu** jest ustawione na *wartość nieskonfigurowane* , **liczba dozwolonych przeejść** nie może być *skonfigurowana* ani mieć wartości.  
+     > 
+     > Ten problem zostanie rozwiązany w przyszłej aktualizacji. 
 
   - **Liczba dozwolonych przypadków obejścia**  
   Ustaw, ile razy użytkownik może zignorować komunikaty o włączeniu FileVault przed FileVault będzie wymagane, aby użytkownik mógł się zalogować.  
