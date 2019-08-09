@@ -39,8 +39,8 @@
 ### Kwestie dotyczące systemu operacyjnego
 #### [Aktualizowanie urządzenia](you-need-to-update-your-android-device.md)
 #### [Nieobsługiwana wersja](your-android-version-isnt-yet-supported.md)
-#### [Na urządzeniu odblokowano dostęp do konta root i nie można nawiązać połączenia](your-device-is-rooted-and-you-cant-connect-android.md)
-#### [Brak wymaganego certyfikatu](your-device-is-missing-a-required-certificate-landing-android.md)
+#### [Urządzenie z odblokowanym dostępem i nie można nawiązać połączenia](your-device-is-rooted-and-you-cant-connect-android.md)
+#### [Brak wymaganego certyfikatu](your-device-is-missing-an-IT-required-certificate-android.md)
 #### [Wyłączenie nieznanych źródeł](you-need-to-turn-off-unknown-sources-android.md)
 #### [Wyłączenie debugowania USB](you-need-to-turn-off-usb-debugging-android.md)
 #### [Włączenie skanowania zagrożeń bezpieczeństwa](you-need-to-turn-on-scanning-for-security-threats-android.md)
