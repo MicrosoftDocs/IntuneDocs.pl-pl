@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 252a42b9c8ef6612301bc913e187295be47d27bb
-ms.sourcegitcommit: 99b74d7849fbfc8f5cf99cba33e858eeb9f537aa
+ms.openlocfilehash: c378fd3b208396f9d2f83b7bd56f50dbf7a7e3f7
+ms.sourcegitcommit: 864fdf995c2b41f104a98a7e2665088c2864774f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671017"
+ms.locfileid: "68679967"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Konfigurowanie urządzeń z systemem Windows 10 w usłudze Intune przy użyciu punktów odniesienia zabezpieczeń
 
@@ -67,7 +67,7 @@ Profile punktów odniesienia zabezpieczeń obsługują [zmianę wersji](#change-
 Poniższe wystąpienia punktów odniesienia zabezpieczeń są dostępne do użycia z usługą Intune. Użyj linków, aby wyświetlić ustawienia dla najnowszego wystąpienia każdego punktu odniesienia. 
 
 - **Punkt odniesienia zabezpieczeń rozwiązania MDM**
-  - [Punkt odniesienia zabezpieczeń rozwiązania MDM z wiosny 2019 r. (19H1)](security-baseline-settings-mdm.md)
+  - [Punkt odniesienia zabezpieczeń rozwiązania MDM z maja 2019](security-baseline-settings-mdm.md)
   - [Wersja zapoznawcza: punkt odniesienia rozwiązania MDM z października 2018 r.](security-baseline-settings-mdm-archive.md)
 
 - **Punkt odniesienia usługi Microsoft Defender ATP**  

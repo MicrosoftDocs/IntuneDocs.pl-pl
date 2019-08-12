@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f576edb5dd0bd4baa960adb3519fa379397fb94c
-ms.sourcegitcommit: cd03ea890f563b48339a8c8bb50386b8852ba894
+ms.openlocfilehash: 128856cf4e81f1ac9fbc93cef1160662e2b5cef0
+ms.sourcegitcommit: 293dfbea2b4756bb9b7df1705a2b5f752dfaa807
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329030"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68700964"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Ustawienia zasad ochrony aplikacji systemu Android w usłudze Microsoft Intune
 W tym artykule opisano ustawienia zasad ochrony aplikacji dla urządzeń z systemem Android. Opisane ustawienia zasad można [skonfigurować](app-protection-policies.md) dla zasad ochrony aplikacji w bloku **Ustawienia** w witrynie Azure Portal.
@@ -93,6 +93,7 @@ Istnieją trzy kategorie ustawień zasad: ustawienia ochrony danych, wymagania d
   | com.skype.raider | Skype | Aplikacja Skype jest dozwolona tylko w przypadku niektórych akcji, których wynikiem jest nawiązanie połączenia telefonicznego. |
   | com.android.providers.media | Dostawca zawartości multimedialnej systemu Android | Dostawca zawartości multimedialnej jest dozwolony tylko w przypadku akcji wybierania dzwonka. |
   | com.google.android.gms; com.google.android.gsf | Pakiety usług Google Play | Ta pakiety są dozwolone tylko w przypadku akcji usługi Google Cloud Messaging takich jak powiadomienia wypychane. |
+  | com.google.android.apps.maps | Mapy Google | Adresy są dozwolone na potrzeby nawigacji |
 
 Aby uzyskać więcej informacji, zobacz [Wyjątki od zasad przesyłania danych dla aplikacji](app-protection-policies-exception.md).
 

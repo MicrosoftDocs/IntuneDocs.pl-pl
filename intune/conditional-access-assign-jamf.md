@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc4fdaea99a0e8fb247ac6a70b853497927cdc04
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: d23e725db965a249522f7f8fa89f8bb27bc24fd8
+ms.sourcegitcommit: 864fdf995c2b41f104a98a7e2665088c2864774f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045201"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68680008"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Wymuszanie zgodności na urządzeniach Mac zarządzanych za pomocą narzędzia Jamf Pro
 
@@ -33,7 +33,10 @@ W celu zapewnienia, że użytkownicy końcowi spełniają wymagania obowiązują
 ## <a name="set-up-device-compliance-policies-in-intune"></a>Konfigurowanie zasad zgodności urządzeń w usłudze Intune
 
 1. Otwórz program Microsoft Azure, a następnie przejdź do opcji **Intune** > **Zgodność urządzenia** > **Zasady**. Możesz utworzyć zasady dla systemu macOS, w tym wybór serii działań (np. wysłanie wiadomości e-mail z ostrzeżeniem) podejmowanych wobec niezgodnych użytkowników i grup.
-2. Wyszukaj żądane grupy, a następnie zastosuj do nich zasady.
+2. Wybierz zasady > Przypisania. Możesz włączyć lub wyłączyć grupy zabezpieczeń usługi Azure Active Directory (AD).
+3. Wybierz pozycję Wybrane grupy, aby wyświetlić grupy zabezpieczeń usługi Azure AD. Wybierz grupy użytkowników, których mają dotyczyć te zasady > Zapisz, aby wdrożyć zasady do użytkowników.
+
+Zasady zostały zastosowane do użytkowników. Urządzenia używane przez użytkowników, których dotyczą zasady, są oceniane pod kątem zgodności i oznaczane jako zgodne dla ustawienia „Wymagaj, aby urządzenie było oznaczone jako zgodne” w usłudze Azure Active Directory.
 
 > [!Note]
 > Aby zachować zgodność z przepisami, usługa Intune wymaga pełnego szyfrowania dysku.

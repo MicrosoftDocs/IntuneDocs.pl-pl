@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a9ac1830bcc407431cf0a5df8e8c11baa0c27c9c
-ms.sourcegitcommit: 3baa9965095bb874d9b8c7a3cbb4aa925ed52cae
+ms.openlocfilehash: 7e0be106b47d933c4407a02369edff3645682b1c
+ms.sourcegitcommit: 293dfbea2b4756bb9b7df1705a2b5f752dfaa807
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68625102"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701000"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Rejestrowanie urządzeń z systemem Windows w usłudze Intune za pomocą rozwiązania Windows Autopilot  
 Rozwiązanie Windows Autopilot upraszcza rejestrowanie urządzeń w usłudze Intune. Tworzenie i konserwacja niestandardowych obrazów systemów operacyjnych zajmuje dużo czasu. Trzeba również poświęcić czas na stosowanie tych niestandardowych obrazów systemów operacyjnych na nowych urządzeniach w celu przygotowania ich do użycia przed przekazaniem użytkownikom końcowym. Dzięki usłudze Microsoft Intune i rozwiązaniu Autopilot można przekazać nowe urządzenia użytkownikom końcowym bez konieczności tworzenia, konserwowania i stosowania niestandardowych obrazów systemów operacyjnych do urządzeń. Jeśli do zarządzania urządzeniami z rozwiązaniem Autopilot używasz usługi Intune, możesz zarządzać zasadami, profilami, aplikacjami i nie tylko po ich zarejestrowaniu. Aby zapoznać się z korzyściami, scenariuszami i wymaganiami wstępnymi, zobacz [Overview of Windows Autopilot (Przegląd rozwiązania Windows Autopilot)](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -99,7 +99,7 @@ Profile wdrażania rozwiązania Autopilot służą do konfigurowania urządzeń 
     - **Umowa licencyjna użytkownika oprogramowania (EULA)** : (system Windows 10 w wersji 1709 lub nowszej) wybierz, jeśli chcesz, aby umowa licencyjna użytkownika oprogramowania była pokazywana użytkownikom.
     - **Ustawienia prywatności**: wybierz, jeśli chcesz, aby ustawienia prywatności były pokazywane użytkownikom.
     >[!IMPORTANT]
-    >W przypadku wdrożeń rozwiązania Autopilot w urządzeniach z systemem Windows 10 w wersji 1903 lub nowszej domyślnie dane diagnostyczne mają automatycznie ustawienie Pełne. Aby uzyskać więcej informacji, zobacz [Dane diagnostyczne systemu Windows](https://docs.microsoft.com/windows/privacy/windows-diagnostic-data) <br>
+    >Wartość domyślna dla ustawienia Dane diagnostyczne różni się w zależności od wersji systemu Windows. W przypadku urządzeń z systemem Windows 10 w wersji 1903 jest ustawiona wartość domyślna Pełne podczas korzystania z gotowego środowiska obsługi. Aby uzyskać więcej informacji, zobacz [Dane diagnostyczne systemu Windows](https://docs.microsoft.com/windows/privacy/windows-diagnostic-data) <br>
     
     - **Ukryj zmianę opcji konta (wymaga systemu Windows 10 w wersji 1809 lub nowszej)** : wybierz pozycję **Ukryj**, aby zapobiec wyświetlaniu zmian opcji konta na stronach logowania i błędów domeny firmy. Ta opcja wymaga [skonfigurowania znakowania firmowego w usłudze Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding).
     - **Typ konta użytkownika**: wybierz typ konta użytkownika (**Administrator** lub **Standardowe** konto użytkownika).

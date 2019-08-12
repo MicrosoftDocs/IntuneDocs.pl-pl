@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/25/2019
+ms.date: 08/02/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 3f37b9b0bc16572cc86cbf79be616c7f395aa784
-ms.sourcegitcommit: 2bce5e43956b6a5244a518caa618f97f93b4f727
+ms.openlocfilehash: 09b5e59f4af534d4919574631568a7581bb3fba9
+ms.sourcegitcommit: 73fbecf7cee4fdfc37d3c30ea2007d2a9a6d2d12
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68467468"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68756543"
 ---
 # <a name="use-device-encryption-with-intune"></a>Szyfrowanie urządzeń w usłudze Intune  
 
@@ -67,6 +67,13 @@ Aby uzyskać szczegółowe informacje na temat ustawień programu FileVault, kt�
    Przykład: Aby pobrać zgubiony lub ostatnio obrócony klucz odzyskiwania, zaloguj się do witryny internetowej Intune — Portal firmy z dowolnego urządzenia. W portalu przejdź do pozycji *Urządzenia* i wybierz urządzenie z włączonym programem FileVault, a następnie wybierz pozycję *Pobierz klucz odzyskiwania*. Zostanie wyświetlony bieżący klucz odzyskiwania.  
 
 6. Skonfiguruj pozostałe [ustawienia programu FileVault](endpoint-protection-macos.md#filevault), aby spełniały Twoje potrzeby biznesowe, a następnie wybierz przycisk **OK**.  
+
+   > [!IMPORTANT]  
+   > Istnieje znany problem, gdy dla ustawienia **Wyłącz monit przy wylogowywaniu** zostanie ustawiona wartość *Włączone*. Gdy zostanie ustawiona wartość *Włączone*, dla ustawienia **Liczba dozwolonych pominięć** należy ustawić wartość i nie może ona wynosić *Nieskonfigurowane*. Jeśli zostanie ustawiona wartość *Nieskonfigurowane*, profil nie będzie działać na urządzeniu. W tym scenariuszu urządzenie raportuje **Podsumowanie stanu profilu** jako **Błąd** bez dalszych szczegółów.
+   > 
+   > Gdy ustawienie **Wyłącz monit przy wylogowywaniu** ma wartość *Nieskonfigurowane*, dla ustawienia **Liczba dozwolonych pominięć** można ustawić opcję *Nieskonfigurowane* lub może ono mieć wartość.  
+   > 
+   > Ten problem zostanie rozwiązany w przyszłej aktualizacji. 
 
 7. Ukończ konfigurację dodatkowych ustawień, a następnie zapisz profil.  
 

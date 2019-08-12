@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3870918378a2b3dd115d6449c3c83d37fe8e96c5
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 269ba2e951ccee2b0fdf2c4cd5a93a9d78aa6923
+ms.sourcegitcommit: e6edfbfd63dd7c2500ce1123205aa2af9a7e8e2e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67884875"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68783237"
 ---
 # <a name="create-a-design"></a>Tworzenie projektu
 
@@ -116,7 +116,7 @@ Usługa Intune oferuje dwie opcje wdrożenia: autonomiczną i hybrydową. Opcja 
 
 ## <a name="intune-tenant-location"></a>Lokalizacja dzierżawy usługi Intune
 
-Jeśli Twoja organizacja działa na całym świecie, upewnij się, że lokalizacja dzierżawy została zaplanowana w momencie subskrybowania usługi. Kraj jest definiowany podczas pierwszego logowania do subskrypcji usługi Intune i jest mapowany na regiony na całym świecie, które zostały wymienione poniżej:
+Jeśli Twoja organizacja działa na całym świecie, upewnij się, że lokalizacja dzierżawy została zaplanowana w momencie subskrybowania usługi. Kraj/region jest definiowany podczas pierwszego logowania do subskrypcji usługi Intune i jest mapowany na kraje/regiony na całym świecie, które zostały wymienione poniżej:
 
 - Ameryka Północna
 
@@ -125,7 +125,7 @@ Jeśli Twoja organizacja działa na całym świecie, upewnij się, że lokalizac
 - Azja i Pacyfik
 
 >[!IMPORTANT]
-> Zmiana kraju lub lokalizacji dzierżawy nie jest później możliwa.
+> Zmiana kraju/regionu lub lokalizacji dzierżawy nie jest później możliwa.
 
 ## <a name="external-dependencies"></a>Zależności zewnętrzne
 

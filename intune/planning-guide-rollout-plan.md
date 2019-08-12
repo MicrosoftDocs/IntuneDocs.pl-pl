@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7a369b3bde7967db04a76ae1794d7b8fb86c21e4
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 4a1ac47fd512323ce809d4ee13c5e98f563ce51c
+ms.sourcegitcommit: e6edfbfd63dd7c2500ce1123205aa2af9a7e8e2e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548413"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68783100"
 ---
 # <a name="develop-a-rollout-plan"></a>Opracowywanie planu wdrażania
 
@@ -55,7 +55,7 @@ Po ukończeniu projektu pilotażowego można rozpocząć pełne wdrożenie produ
 
 - **Działy** <br/>Dla każdego działu może zostać przeprowadzona osobna faza wdrożenia. Proces obejmuje cały dział. W tym typie wdrożenia użytkownicy z każdego działu zwykle używają urządzenia mobilnego w taki sam sposób i będą uzyskiwać dostęp do tych samych aplikacji. Użytkownicy będą mieli prawdopodobnie te same typy zasad.
 
-- **Położenie geograficzne** <br/>W tej metodzie wdrożenie dotyczy wszystkich użytkowników w określonym położeniu geograficznym — może to być ten sam kontynent, kraj, region lub budynek jednej firmy. Ten typ wdrożenia etapowego umożliwia skoncentrowanie się na określonych lokalizacjach użytkowników. Może to zapewnić bardziej [dokładne](#user-assisted-enrollment) podejście z powodu ograniczenia liczby lokalizacji, w których jednocześnie ma miejsce wdrożenie usługi Intune. Ponieważ istnieje możliwość, że różne działy lub przypadki użycia znajdują się w tej samej lokalizacji, różne przypadki użycia mogą być wdrażane w tym samym czasie.
+- **Położenie geograficzne** <br/>W tej metodzie wdrożenie dotyczy wszystkich użytkowników w określonym położeniu geograficznym — może to być ten sam kontynent, kraj/region lub budynek jednej firmy. Ten typ wdrożenia etapowego umożliwia skoncentrowanie się na określonych lokalizacjach użytkowników. Może to zapewnić bardziej [dokładne](#user-assisted-enrollment) podejście z powodu ograniczenia liczby lokalizacji, w których jednocześnie ma miejsce wdrożenie usługi Intune. Ponieważ istnieje możliwość, że różne działy lub przypadki użycia znajdują się w tej samej lokalizacji, różne przypadki użycia mogą być wdrażane w tym samym czasie.
 
 - **Platforma** <br/>Ten typ wdrożenia polega na wdrożeniu podobnych platform w tym samym czasie. Przykładem może być wdrożenie wszystkich urządzeń z systemem iOS w pierwszym miesiącu, następnie urządzeń z system Android, a na końcu urządzeń z systemem Windows. Ten typ wdrożenia etapowego upraszcza pomoc techniczną, ponieważ musiałaby ona obsługiwać jednorazowo tylko jedną platformę.
 
@@ -93,16 +93,16 @@ Oto zaktualizowany przykład powyższego planu wdrożenia usługi Intune obejmuj
 
 | **Faza wdrożenia** | **Lipiec** | **Sierpień** | **Wrzesień** | **Październik** |
 |:---:|:---:|:---:|:---:|:---:|
-| Ograniczony pilotaż |  |  |  |  |                                                         
+| Ograniczony pilotaż |  |  |  |  |
 | Samoobsługa | IT |  |  |  |
-| Rozszerzony pilotaż |  |  |  |  |                                                         
+| Rozszerzony pilotaż |  |  |  |  |
 | Samoobsługa | IT |  |  |  |
 | Dokładny | Kierownictwo działu IT |  |  |  |
 | Faza 1 wdrożenia produkcyjnego |  | Sprzedaż i marketing |  |  |
 | Samoobsługa |  | Sprzedaż i marketing |  |  |
 | Faza 2 wdrożenia produkcyjnego |  |  | Sprzedaż detaliczna |  |
-| Samoobsługa |  |  |  |  |
-| Faza 3 wdrożenia produkcyjnego |  |  | Sprzedaż detaliczna |  |
+| Samoobsługa |  |  | Sprzedaż detaliczna |  |
+| Faza 3 wdrożenia produkcyjnego |  |  |  | Kierownictwo, Kadry, Finanse |
 | Samoobsługa |  |  |  | Kadry, księgowość |
 | Dokładny |  |  |  | Kierownictwo |
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f938afb738e75789194db0c74fee56deb1476dbc
-ms.sourcegitcommit: c715c93bb242f4fe44bbdf2fd585909854ed72b6
+ms.openlocfilehash: 3a4314abec83bc31cd6fe178873ba5bce7bf1a0c
+ms.sourcegitcommit: 864fdf995c2b41f104a98a7e2665088c2864774f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68660384"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68680100"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Wysyłanie powiadomień niestandardowych w usłudze Intune  
 
@@ -38,8 +38,9 @@ Niestandardowe komunikaty powiadomień zawierają krótki tytuł i treść komun
 ## <a name="considerations-for-using-custom-notifications"></a>Zagadnienia dotyczące korzystania z powiadomień niestandardowych  
 
 **Konfiguracja urządzenia**:  
-- Aby użytkownicy mogli odbierać powiadomienia niestandardowe, na urządzeniach musi być zainstalowana aplikacja Portal firmy. Użytkownicy muszą także mieć skonfigurowane uprawnienia, aby umożliwić aplikacji Portal firmy wysyłanie powiadomień push. Aplikacja Portal firmy będzie monitować użytkowników o zezwolenie na powiadomienia.  
+- Aby użytkownicy mogli odbierać powiadomienia niestandardowe, na urządzeniach musi być zainstalowana aplikacja Portal firmy. Użytkownicy muszą także mieć skonfigurowane uprawnienia, aby umożliwić aplikacji Portal firmy wysyłanie powiadomień push. Aplikacja Portal firmy będzie monitować użytkowników o zezwolenie na powiadomienia przy każdej instalacji i aktualizacji.  
 - W systemie Android Usługi Google Play są wymaganą zależnością.  
+- Urządzenie musi być zarejestrowane w usłudze MDM.
 
 **Tworzenie powiadomień**:  
 - Aby utworzyć komunikat, użyj konta z przypisaną rolą usługi Intune obejmującą uprawnienie do **aktualizowania** w **organizacji**. Aby przypisać uprawnienia użytkownikowi, zobacz [Przypisania ról](role-based-access-control.md#role-assignments)  

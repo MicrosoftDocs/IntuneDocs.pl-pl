@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c962085ce61f01613bfc04ef0c80699e6f5a3e8
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 94c92f70844594fd8524f2e49c537f1afaadaf96
+ms.sourcegitcommit: e6edfbfd63dd7c2500ce1123205aa2af9a7e8e2e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67547427"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68783200"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>Automatyczne rejestrowanie urządzeń z systemem Android za pomocą rozwiązania Knox Mobile Enrollment firmy Samsung
 
@@ -44,7 +44,7 @@ Lista identyfikatorów urządzeń (numery seryjne i numery IMEI) jest automatycz
 ## <a name="prerequisites"></a>Wymagania wstępne
 
 Aby rejestrować w usłudze Intune przy użyciu rozwiązania KME, musisz najpierw zarejestrować firmę w portalu Samsung Knox. W tym celu wykonaj następujące czynności:
-1. [Upewnij się, że rozwiązanie KME jest dostępne w Twoim regionie](https://www.samsungknox.com/en/solutions/it-solutions/knox-configure/available-countries): rozwiązanie KME jest dostępne w ponad 55 krajach. Upewnij się, że kraj wdrożenia jest obsługiwany.
+1. [Upewnij się, że rozwiązanie KME jest dostępne w Twoim kraju/regionie](https://www.samsungknox.com/en/solutions/it-solutions/knox-configure/available-countries): Rozwiązanie KME jest dostępne w ponad 55 krajach/regionach. Upewnij się, że kraj/region wdrożenia jest obsługiwany.
 
 2. [Obsługiwane urządzenia](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+): rozwiązanie KME jest dostępne na wszystkich urządzeniach firmy Samsung z platformą Knox co najmniej w wersji 2.4 w przypadku rejestracji urządzeń z systemem Android i z platformą Knox co najmniej w wersji 2.8 w przypadku rejestracji urządzeń z systemem Android Enterprise.
 
