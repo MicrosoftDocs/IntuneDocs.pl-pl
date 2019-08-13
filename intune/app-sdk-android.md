@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f2015bb6997861d8856c7fe89662c21be105f5b
-ms.sourcegitcommit: d2ac912b834c4840de9cc92ba1815b6ecfbfb52b
-ms.translationtype: MTE75
+ms.openlocfilehash: edc193c80960872cc3a0e25438432195de3a7c34
+ms.sourcegitcommit: e6edfbfd63dd7c2500ce1123205aa2af9a7e8e2e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68482945"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68783209"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android
 
@@ -636,7 +636,7 @@ Następujące powiadomienia są wysyłane do aplikacji i niektóre z nich mogą 
 > [!NOTE]
 > Aplikacja w żadnym wypadku nie może być zarejestrowana do otrzymywania jednocześnie powiadomień `WIPE_USER_DATA` i `WIPE_USER_AUXILIARY_DATA`.
 
-### <a name="managementremoved"></a>MANAGEMENT_REMOVED
+### <a name="management_removed"></a>MANAGEMENT_REMOVED
 
 Powiadomienie `MANAGEMENT_REMOVED` oznacza, że użytkownik, który wcześniej był zarządzany przez zasady, już nie będzie zarządzany przez zasady zarządzania aplikacjami mobilnymi usługi Intune. Nie wymaga to czyszczenia danych użytkownika ani jego wylogowywania się (jeśli czyszczenie było wymagane, powinno zostać wysłane powiadomienie `WIPE_USER_DATA`). Wiele aplikacji może w ogóle nie musieć obsługiwać tego powiadomienia, jednak użytkownicy aplikacji korzystających z klasy `MAMDataProtectionManager` powinni [zwróć szczególną uwagę na to powiadomienie](#data-protection).
 
@@ -1370,7 +1370,7 @@ Metoda `onMAMIdentitySwitchRequired` jest wywoływana dla wszystkich niejawnych 
 
   * Jeśli przełączanie tożsamości jest zablokowane, skutek jest taki sam, jak w przypadku uniemożliwienia transferu danych przychodzących przez ustawienia udostępniania `Receive`.
 
-  * Jeśli usługa jest uruchomiona w wątku głównym, klasa `reportIdentitySwitchResult` **musi** być wywoływana synchronicznie, w przeciwnym razie wątek interfejsu użytkownika ulegnie zawieszeniu.
+  * Jeśli usługa jest uruchomiona w wątku głównym, klasa `reportIdentitySwitchResult` **musi** być wywoływana synchronicznie, w przeciwnym razie wątek interfejsu użytkownika przestanie odpowiadać.
 
   * W przypadku tworzenia obiektu **`Activity`** metoda `onMAMIdentitySwitchRequired` zostanie wywołana przed metodą `onMAMCreate`. Jeśli aplikacja musi wyświetlić interfejs użytkownika w celu ustalenia, czy zezwolić na przełączenie tożsamości, ten interfejs użytkownika musi zostać pokazany przy użyciu *innego* działania.
 

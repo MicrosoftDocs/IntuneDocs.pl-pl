@@ -18,16 +18,16 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d44af8f40243596bda58d610b369db6f54be6d1e
-ms.sourcegitcommit: 3baa9965095bb874d9b8c7a3cbb4aa925ed52cae
+ms.openlocfilehash: 16c6708fb730c459f41fec573a939bfb4fb5ddda
+ms.sourcegitcommit: 549352bdea93cc2809e3e0010bfcc10bd44dc728
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68625125"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68862139"
 ---
 # <a name="install-missing-certificate-required-by-your-organization"></a>Zainstaluj brakujące certyfikaty wymagane przez Twoją organizację  
 
-Jeśli Twoje urządzenie nie zostało zarejestrowane w usłudze Intune i nie ma certyfikatu wymaganego przez dział pomocy technicznej Twojej firmy, nie można zalogować się do aplikacji Portal firmy. Przy próbie zalogowania się zostanie wyświetlony następujący komunikat:
+Jeśli urządzenie nie jest zarejestrowane w usłudze Intune i nie ma wymaganego certyfikatu, nie będzie można zalogować się do aplikacji Portal firmy. Przy próbie zalogowania się zostanie wyświetlony następujący komunikat:
 
 ![screenshot-error-message-about-missing-certificate](./media/andr-cert_install-1-cert_missing.png)
 
@@ -43,8 +43,8 @@ Wykonaj te kroki, aby włączyć dostęp do przeglądarki. Po włączeniu dostę
 
 1. W aplikacji Portal firmy przejdź do odpowiedniego rogu i wybierz menu.  
 2. Wybierz pozycję **Ustawienia**.  
-3. Obok pozycji **Włącz dostęp do przeglądarki** wybierz pozycję **Włącz**.  
-4. Na ekranie administrator urządzenia wybierz pozycję **Aktywuj**. 
+3. Obok pozycji **Włącz dostęp do przeglądarki wybierz**pozycję **Włącz**.  
+4. Na ekranie administrator urządzenia wybierz pozycję **Aktywuj.** 
 
 ## <a name="identify-and-download-the-missing-certificate-through-web-search"></a>Identyfikowanie i pobieranie brakującego certyfikatu za pomocą wyszukiwania w sieci Web
 Wykonaj następujące kroki, aby ręcznie zidentyfikować i zainstalować certyfikat na urządzeniu.  
@@ -82,3 +82,7 @@ Wykonaj następujące kroki, aby ręcznie zidentyfikować i zainstalować certyf
 7. Otwórz ponownie aplikację Portal firmy. Zalogowanie się do aplikacji Portal firmy powinno być teraz możliwe. Jeśli potrzebujesz pomocy, skontaktuj się z działem pomocy technicznej Twojej firmy.
 
 Jeśli widzisz tę samą wiadomość „Brak certyfikatu” jak pokazana wcześniej i została już wykonana procedura, oznacza to prawdopodobnie, że istnieje inny certyfikat, który trzeba będzie zainstalować, korzystając z pomocy działu pomocy technicznej Twojej firmy. Skontaktuj się z działem pomocy technicznej Twojej firmy, aby uzyskać pomoc w zakresie korzystania z informacji kontaktowych dostępnych w [witrynie internetowej Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).
+
+## <a name="next-steps"></a>Następne kroki  
+
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).  

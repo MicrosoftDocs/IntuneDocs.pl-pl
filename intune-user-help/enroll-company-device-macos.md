@@ -18,12 +18,12 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3941c41b24d458d14acb1361bc463af657a0ca67
-ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
+ms.openlocfilehash: 273342f7181bcc577a44126404d145ca9b5bff3e
+ms.sourcegitcommit: e6edfbfd63dd7c2500ce1123205aa2af9a7e8e2e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67511930"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68783019"
 ---
 # <a name="enroll-your-organization-provided-macos-device-in-management"></a>Rejestrowanie udostępnionego przez organizację urządzenia z systemem macOS na potrzeby zarządzania
 
@@ -40,10 +40,10 @@ Twoja organizacja mogła zakupić urządzenia za pośrednictwem programu zwanego
 Wykonaj poniższe kroki, aby zarejestrować urządzenie z systemem macOS na potrzeby zarządzania. Jeśli używasz własnego urządzenia, a nie urządzenia dostarczonego przez organizację, wykonaj kroki dotyczące [urządzeń osobistych i przyniesionych przez siebie](enroll-your-device-in-intune-macos-cp.md).  
 
 1. Włącz zasilanie urządzenia z systemem macOS. 
-2. Wybierz kraj i kliknij pozycję **Kontynuuj**.  
+2. Wybierz kraj/region i kliknij pozycję **Kontynuuj**.  
 
    ![Zrzut ekranu przedstawiający ekran powitalny Asystenta konfiguracji urządzenia z systemem macOS z listą języków do wyboru.](./media/macos-dep-welcome-1808.png)   
-3. Wybierz układ klawiatury. Lista zawiera co najmniej jedną opcję na podstawie wybranego kraju. Aby wyświetlić wszystkie opcje układu, bez względu na wybrany kraj, kliknij pozycję **Pokaż wszystko**. Po zakończeniu kliknij przycisk **Kontynuuj**.  
+3. Wybierz układ klawiatury. Lista zawiera co najmniej jedną opcję na podstawie wybranego kraju/regionu. Aby wyświetlić wszystkie opcje układu, bez względu na wybrany kraj/region, kliknij pozycję **Pokaż wszystko**. Po zakończeniu kliknij przycisk **Kontynuuj**.  
 
    ![Zrzut ekranu Układ klawiatury Asystenta ustawień urządzenia z systemem macOS z listą języków klawiatury do wyboru, niezaznaczoną opcją Pokaż wszystkie oraz przyciskami Wstecz i Kontynuuj.](./media/macos-dep-keyboard-1808.png)  
 4. Wybierz sieć Wi-Fi. Musisz mieć połączenie internetowe, aby kontynuować instalację. Jeśli nie widzisz swojej sieci lub jeśli musisz nawiązać połączenie za pośrednictwem sieci przewodowej, kliknij pozycję **Inne opcje sieciowe**. Po zakończeniu kliknij przycisk **Kontynuuj**.  
