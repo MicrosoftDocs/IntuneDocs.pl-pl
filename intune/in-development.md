@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 969e7bc4804e1f66230c76d742bec2c67c2fa006
-ms.sourcegitcommit: 99b74d7849fbfc8f5cf99cba33e858eeb9f537aa
-ms.translationtype: HT
+ms.openlocfilehash: 95eede7c62e728aa0dbade4478eb87f31c252558
+ms.sourcegitcommit: a6775522df49d17a4125ccb31be395f2343bdae8
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68670911"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68833548"
 ---
 # <a name="in-development-for-microsoft-intune---august-2019"></a>W trakcie opracowywania — Microsoft Intune — sierpień 2019 r.
 
@@ -62,7 +62,7 @@ Aby ułatwić Ci planowanie, na tej stronie udostępniamy listę aktualizacji in
 Administratorzy będą mogli zarządzać tym, czy aplikacja zostanie usunięta czy zatrzymana na urządzeniu, gdy urządzenie zostanie wyrejestrowane na poziomie użytkownika lub grupy urządzeń. 
 
 ### <a name="categorize-microsoft-store-for-business-apps----3926922---"></a>Kategoryzowanie aplikacji ze sklepu Microsoft Store dla Firm <!-- 3926922 -->
-Będziesz mieć możliwość kategoryzowania Microsoft Store aplikacji dla firm. Aby to zrobić, wybierz opcję**aplikacje** **klienckie** > usługi **Intune** > > wybierz**kategorię**Microsoft Store dla aplikacji biznesowej > kategorii **informacji o** > aplikacji. Z menu rozwijanego Przypisz kategorię.
+Będziesz mieć możliwość kategoryzowania Microsoft Store aplikacji dla firm. Aby to zrobić, wybierz **kolejno pozycje** > aplikacje  **klienckieusługiIntune** > **aplikacje** dla **aplikacji > Wybierz aplikację Microsoft Store dla aplikacji biznesowej >  Kategoria** > **informacji.** Z menu rozwijanego Przypisz kategorię.
 ### <a name="configure-app-notification-content-for-organization-accounts----2576686---"></a>Skonfiguruj zawartość powiadomienia aplikacji dla kont organizacji <!-- 2576686 -->
 Zasady ochrony aplikacji usługi Intune (aplikacje) na urządzeniach z systemem Android i iOS umożliwiają kontrolowanie zawartości powiadomień aplikacji dla kont organizacji. Ta funkcja będzie wymagała obsługi aplikacji i może być niedostępna dla wszystkich aplikacji z obsługą aplikacji. Aby uzyskać więcej informacji na temat zasad ochrony aplikacji, zobacz [Co to są zasady ochrony aplikacji?](app-protection-policy.md)
 
@@ -73,7 +73,7 @@ W przypadku dostępnych instalacji aplikacji na urządzeniach z profilem służb
 ## <a name="device-configuration"></a>Konfiguracja urządzenia
 
 ### <a name="some-unsupervised-ios-device-restrictions-will-become-supervised-only-with-the-ios-130-release----4867809----"></a>Niektóre ograniczenia nienadzorowanego urządzenia z systemem iOS zostaną nadzorowane — tylko w przypadku wersji iOS 13,0 <!-- 4867809  -->
-Niektóre ustawienia zostaną zastosowane tylko do nadzorowanych urządzeń z systemem iOS 13,0. Należą do nich następujące ustawienia:
+Niektóre ustawienia zostaną zastosowane do urządzeń nadzorowanych, począwszy od wersji 13,0 systemu iOS. Należą do nich następujące ustawienia:
 
 - Sklep App Store, wyświetlanie dokumentów, granie
   - App Store
@@ -98,15 +98,15 @@ Dotyczy:
 - iOS 13,0 i nowsze
 
 ### <a name="new-settings-and-changes-to-existing-settings-to-restrict-features-on-ios-and-macos-devices----4867699-4867709----"></a>Nowe ustawienia i zmiany istniejących ustawień w celu ograniczenia funkcji na urządzeniach z systemem iOS i macOS <!-- 4867699 4867709  -->
-Można utworzyć profile, aby ograniczyć ustawienia na urządzeniach z systemem iOS i macOS (**Profile** > **konfiguracji** > urządzeń**Utwórz profil** > **systemu iOS** lub **macOS** dla platformy Wpisz > **ograniczenia dotyczące urządzeń**). Zostaną dodane następujące funkcje:
+Będziesz w stanie utworzyć profile, aby ograniczyć ustawienia na urządzeniach z systemem iOS i macOS (**profile** >  **konfiguracji** > **urządzeń Utwórz profil**  > **iOS** lub **macOS**dlatypu**platformy >ograniczenia**dotyczące urządzeń). Zostaną dodane następujące funkcje:
 
-- W **przypadku** > **ograniczeń** > **dotyczącychurządzeń**z systemem macOS w chmurze i magazynieUżyj **ustawienia nowe przekazaniedo** Zablokuj użytkownikom możliwość rozpoczęcia pracy na jednym urządzeniu macOS i Kontynuuj pracę na innym urządzeniu macOS lub iOS.
+- W **przypadku**ograniczeń > **dotyczącychurządzeń** > **z systemem macOS w chmurze i magazynieUżyj** ustawienia nowe**przekazaniedo** Zablokuj użytkownikom możliwość rozpoczęcia pracy na jednym urządzeniu macOS i Kontynuuj pracę na innym urządzeniu macOS lub iOS.
   Aby zobaczyć bieżące ustawienia, przejdź do artykułu [Ustawienia urządzeń z systemem macOS umożliwiające działanie funkcji lub ich ograniczanie przy użyciu usługi Intune](device-restrictions-macos.md).
-- W przypadku**ograniczeń urządzenia**z **systemem iOS** > istnieje kilka zmian:
-  - **Wbudowane aplikacje** > **Znajdź mój iPhone (tylko nadzorowany)** : nowe ustawienie, które blokuje tę funkcję w funkcji Znajdź moją aplikację. 
-  - **Wbudowane aplikacje** > **Znajdź moich znajomych (tylko nadzorowany)** : nowe ustawienie, które blokuje tę funkcję w funkcji Znajdź moją aplikację. 
-  - **Modyfikacja sieci bezprzewodowej** > **stanu Wi-Fi (tylko tryb nadzorowany)** : nowe ustawienie, które uniemożliwia użytkownikom włączanie lub wyłączanie sieci Wi-Fi na urządzeniu.
-  - **Klawiatura i słownik** > **QuickPath (tylko tryb nadzorowany)** : nowe ustawienie, które blokuje funkcję QuickPath.
+- W **przypadku**ograniczeń > **urządzeniazsystememiOSistniejekilkazmian:**
+  - **Wbudowane aplikacje** >  **Znajdź mój iPhone (tylko nadzorowany)** : nowe ustawienie, które blokuje tę funkcję w funkcji Znajdź moją aplikację. 
+  - **Wbudowane aplikacje** >  **Znajdź moich znajomych (tylko nadzorowany)** : nowe ustawienie, które blokuje tę funkcję w funkcji Znajdź moją aplikację. 
+  - **Modyfikacja**sieci bezprzewodowej >  **stanu Wi-Fi (tylko tryb nadzorowany)** : nowe ustawienie, które uniemożliwia użytkownikom włączanie lub wyłączanie sieci Wi-Fi na urządzeniu.
+  - **Klawiatura i słownik** >  **QuickPath (tylko tryb nadzorowany)** : nowe ustawienie, które blokuje funkcję QuickPath.
   - **Chmura i magazyn**: **nazwa** kontynuacji**działania została zmieniona na przekazanie.**
 
   Aby zobaczyć bieżące ustawienia, przejdź do artykułu [Ustawienia urządzeń z systemem iOS umożliwiające działanie funkcji lub ich ograniczanie przy użyciu usługi Intune](device-restrictions-ios.md).
@@ -116,7 +116,7 @@ Dotyczy:
 - System iOS 13 lub nowszy
 
 ### <a name="control-the-apps-files-documents-and-folders-that-open-when-user-signs-in-to-macos-devices---3914202----"></a>Kontrolowanie aplikacji, plików, dokumentów i folderów, które są otwierane, gdy użytkownik loguje się do urządzeń macOS <!--3914202  -->
-Będziesz mieć możliwość włączania i konfigurowania funkcji na urządzeniach macOS (**Profile** > **konfiguracji** > urządzeń**Tworzenie profilu** > **macOS** dla funkcji platformy > **urządzeń** dla Typ profilu). 
+Będziesz mieć możliwość włączania i konfigurowania funkcji na urządzeniach macOS (**profile** > **konfiguracji**  > urządzeń **Tworzenie profilu**  >   **macOSdla** funkcjiurządzeń>**platformy** dla typu profilu). 
 
 Dostępne są nowe ustawienia elementów logowania, które umożliwiają kontrolowanie, które aplikacje, pliki, dokumenty i foldery są otwierane, gdy użytkownik zaloguje się do zarejestrowanego urządzenia. 
 
@@ -126,12 +126,12 @@ Dotyczy:
 - macOS
 
 ### <a name="new-features-for-android-enterprise-dedicated-devices-in-multi-app-mode----3755304-3041943-3041946----"></a>Nowe funkcje dla dedykowanych urządzeń z systemem Android Enterprise w trybie wielodostępności <!-- 3755304 3041943 3041946  -->
-W przypadku urządzeń z systemem Android w wersji Enterprise można kontrolować funkcje i ustawienia w stylu kiosku. W tym celu wybierz kolejno pozycje **Konfiguracja** > urządzenia**Profile** > **Utwórz profil** > system**Android Enterprise** dla platformy > **tylko właściciel urządzenia, ograniczenia dotyczące urządzeń** dla typu profilu.
+W przypadku urządzeń z systemem Android w wersji Enterprise można kontrolować funkcje i ustawienia w stylu kiosku. W tym celu **wybierz kolejno pozycje konfiguracja**  >  **urządzeniaprofile** > **Utwórzprofil**systemAndroidEnterprise > **w przypadku** platformy **> tylko właściciel urządzenia ograniczenia** dotyczące urządzenia dla typu profilu.
 
 Zostaną dodane następujące funkcje:
-- **Wiele aplikacji** > **dedykowanych**urządzeń :**wirtualnyprzycisk** Strona główna może być pokazywany przez szybkie przesuwanie na urządzeniu lub przepływanie na ekranie, aby użytkownicy mogli je przenieść.
-- **Wiele aplikacji** > **dedykowanych**urządzeń :**dostępFlashlightumożliwiaużytkownikom** korzystanie z Flashlight. 
-- **Dedykowane urządzenia** >  **— wiele aplikacji**: **sterowanie woluminem multimedialnym** umożliwia użytkownikom kontrolowanie woluminu multimedialnego urządzenia przy użyciu suwaka. 
+- **Wiele aplikacji** > dedykowanych**urządzeń :**wirtualnyprzycisk** Strona główna może być pokazywany przez szybkie przesuwanie na urządzeniu lub przepływanie na ekranie, aby użytkownicy mogli je przenieść.**
+- **Wiele aplikacji** > dedykowanych**urządzeń** :**dostępFlashlightumożliwiaużytkownikom** korzystanie z Flashlight. 
+- **Dedykowane**urządzenia >  **—wieleaplikacji**: **sterowaniewoluminemmultimedialnymumożliwiaużytkownikomkontrolowaniewoluminumultimedialnegourządzeniaprzyużyciusuwaka.** 
 - **Wiele aplikacji** > **dedykowanych urządzeń: Włącz wygaszacz ekranu, Przekaż obraz niestandardowy i określ, kiedy zostanie wyświetlony wygaszacz ekranu.**
 
 Aby zapoznać się z bieżącymi ustawieniami, zobacz artykuł [Android Enterprise device settings to allow or restrict features using Intune](device-restrictions-android-for-work.md#dedicated-device-settings) (Ustawienia urządzeń z systemem Android Enterprise używane w celu zezwolenia na funkcje lub ich ograniczenia za pomocą usługi Intune).
@@ -167,11 +167,11 @@ Można ustawić profile Device Enrollment Program, aby pominąć następujące e
 - Czas korzystania z urządzenia
 - Konfiguracja Touch ID
 
-W tym celu przejdź do pozycji **Rejestrowanie** > urządzenia Rejestracja**Apple** > **tokeny programu rejestracji** > Wybierz > **Profile** , > Wybierz profil > **Właściwości** > **Edytuj** obok pozycji **dostosowanie Asystenta ustawień**.
-Aby uzyskać więcej informacji na temat dostosowywania Asystenta ustawień, zobacz [Tworzenie profilu rejestracji firmy Apple ](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
+W tym celu przejdź do **pozycji rejestrowanie** >  **urządzenia Rejestracja** >  **Apple tokeny programu rejestracji** > Wybierz token > **Profile** > Wybierz profil > **właściwości** > **Edytuj**obok pozycjidostosowanie**asystentaustawień.**
+Aby uzyskać więcej informacji na temat dostosowywania asystenta [ustawień, zobacz Tworzenie profilu ](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile)rejestracji firmy Apple.
 
 ### <a name="android-enrollment-device-administrator-support----4869749----"></a>Obsługa administratora urządzeń rejestracji w systemie Android <!-- 4869749  -->
-Opcja rejestracji administratora urządzenia z systemem Android zostanie dodana do strony rejestracji systemu Android (Rejestracja**urządzeń** > z**systemem**Android w**usłudze Intune** > ). Administrator urządzenia z systemem Android będzie nadal domyślnie włączony dla wszystkich dzierżawców.  
+Opcja rejestracji administratora urządzenia z systemem Android zostanie dodana do strony rejestracji systemu Android (**Rejestracja** >  **urządzenia w usłudze Intune** >  **w systemie Android Rejestracja**). Administrator urządzenia z systemem Android będzie nadal domyślnie włączony dla wszystkich dzierżawców.  
 
 ### <a name="for-ios-devices-customize-the-enrollment-process-privacy-screen-of-the-company-portal----4394993----"></a>W przypadku urządzeń z systemem iOS Dostosuj ekran prywatność procesu rejestracji Portal firmy <!-- 4394993  -->
 Korzystając z promocji, będziesz mieć możliwość dostosowania ekranu prywatności Portal firmy, który użytkownicy końcowi zobaczą podczas rejestracji systemu iOS. W tym celu można dostosować listę rzeczy, które Twoja organizacja nie może zobaczyć ani wykonać na urządzeniu.
@@ -183,7 +183,7 @@ Korzystając z promocji, będziesz mieć możliwość dostosowania ekranu prywat
 Nowy wpis na stronie sprzęt dla każdego urządzenia z systemem Android będzie zawierać numer kompilacji systemu operacyjnego urządzenia.
 
 ### <a name="configure-automatic-device-clean-up-time-limit-down-to-30-days---4231059----"></a>Skonfiguruj automatyczny limit czasu oczyszczania urządzenia do 30 dni <!--4231059  -->
-Możesz ustawić automatyczny limit czasu oczyszczania urządzenia jako krótszy niż 30 dni (zamiast bieżącego limitu 90 dni) od momentu ostatniego logowania. Aby to zrobić, przejdź do pozycji**urządzenia** > usługi **Intune** > **Konfiguracja** > **oczyszczania urządzenia reguły**.
+Możesz ustawić automatyczny limit czasu oczyszczania urządzenia jako krótszy niż 30 dni (zamiast bieżącego limitu 90 dni) od momentu ostatniego logowania. Aby to zrobić, przejdź do **pozycji** > **urządzenia**  >  **usługiIntune** > **konfiguracjaoczyszczaniaurządzenia**reguły.
 
 <!-- ***********************************************-->
 ## <a name="role-based-access-control"></a>Kontrola dostępu oparta na rolach
