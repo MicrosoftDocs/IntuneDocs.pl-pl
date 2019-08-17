@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/18/2019
+ms.date: 08/13/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe155c5b2a18b1931894b05694b53bbc2c497e0b
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 7c75930f3eee35146afbc5714135ececbe7c9643
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67494486"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69550176"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem Windows 10 (i nowszym) w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune
 
@@ -59,13 +59,13 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad ApplicationMana
 - **DVR z gry** (tylko komputery): ustawienie **Blokuj** wyłącza nagrywanie i transmitowanie gier w systemie Windows. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia nagrywanie i transmitowanie gier.
 - **Tylko aplikacje ze sklepu**: to ustawienie określa środowisko użytkownika, gdy użytkownicy instalują aplikacje z miejsc innych niż Microsoft Store. Dostępne opcje:
 
-  - **Nieskonfigurowane** (ustawienie domyślne): umożliwia użytkownikom końcowym i instalować aplikacje z miejsc innych niż Microsoft Store, w tym aplikacje określone w innych ustawień zasad.  
-  - **Gdziekolwiek**: wyłącza zalecenia dotyczące aplikacji, a użytkownicy mogą instalować aplikacji z dowolnego miejsca.  
-  - **Tylko Store**: wymusza użytkownikom końcowym instalować tylko aplikacje z Microsoft Store.
-  - **Zalecenia dotyczące**: podczas instalowania aplikacji z sieci web, która jest dostępna w Microsoft Store, użytkownikom zostanie wyświetlony komunikat zalecania, będą oni mogli pobrać ze sklepu.  
-  - **Preferuj Store**: ostrzega użytkowników po ich instalować aplikacje z miejsc innych niż Microsoft Store.
+  - **Nie skonfigurowano** (domyślnie): użytkownicy końcowi mogą instalować aplikacje z miejsc innych niż Microsoft Store, w tym aplikacji zdefiniowanych w innych ustawieniach zasad.  
+  - **Wszędzie**: wyłącza zalecenia dotyczące aplikacji i umożliwia użytkownikom instalowanie aplikacji z dowolnej lokalizacji.  
+  - **Tylko przechowywanie**: wymusza, aby użytkownicy końcowi mogli instalować tylko aplikacje z Microsoft Store.
+  - **Zalecenia**: podczas instalowania aplikacji z sieci Web dostępnej w Microsoft Store użytkownicy widzą komunikat z zaleceniem pobrania go ze sklepu.  
+  - **Preferuj magazyn**: ostrzega użytkowników, gdy instalują aplikacje z miejsc innych niż Microsoft Store.
 
-  [Filtr SmartScreen/EnableAppInstallControl dostawcy usług Kryptograficznych](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enableappinstallcontrol)
+  [Filtr SmartScreen/EnableAppInstallControl CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enableappinstallcontrol)
 
 - **Wymuś ponowne uruchamianie aplikacji w przypadku niepowodzenia aktualizacji**: aplikacja może się nie zaktualizować, jeśli jest właśnie używana. To ustawienie pozwala wymusić jej ponowne uruchomienie. **Nieskonfigurowane**: (domyślne) to ustawienie nie wymusza ponownego uruchomienia aplikacji. **Wymagaj**: pozwala administratorom na wymuszenie ponownego uruchomienia w określonym dniu i o podanej godzinie lub zgodnie z cyklicznym harmonogramem. Ustawienie **Wymagaj** powoduje też konieczność skonfigurowania następujących opcji:
 
@@ -429,7 +429,7 @@ Wybierz przycisk **OK**, aby zapisać zmiany.
 
 Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad DeviceLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock), który zawiera również listę obsługiwanych wersji systemu Windows.
 
-- **Hasło**: pozycja **Wymagaj** wymusza wprowadzanie hasła przez użytkownika końcowego w celu uzyskania dostępu do urządzenia. Ustawienie **Nie skonfigurowano** (domyślne) zezwala na dostęp do urządzenia bez hasła. Dotyczy tylko kont lokalnych. Hasła do kont domeny pozostaną skonfigurowane przez Active Directory (AD) i Azure AD.
+- **Hasło**: pozycja **Wymagaj** wymusza wprowadzanie hasła przez użytkownika końcowego w celu uzyskania dostępu do urządzenia. Ustawienie **Nie skonfigurowano** (domyślne) zezwala na dostęp do urządzenia bez hasła. Dotyczy tylko kont lokalnych. Hasła kont domeny pozostają skonfigurowane przez Active Directory (AD) i usługę Azure AD.
 
   - **Wymagany typ hasła**: wybierz typ hasła. Dostępne opcje:
     - **Nie skonfigurowano**: hasło może zawierać cyfry i litery.
@@ -440,7 +440,7 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad DeviceLock](htt
     > [!IMPORTANT]
     > Kiedy wymóg dotyczący hasła zostanie zmieniony na komputerze z systemem Windows, użytkownicy będą musieli się do niego dostosować przy następnym logowaniu, ponieważ to właśnie wtedy urządzenie przechodzi ze stanu bezczynności w stan aktywności. Użytkownicy, których hasła spełniają wymagania, także zostaną poproszeniu o zmianę hasła.
     
-  - **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia**: wprowadź liczbę nieudanych prób uwierzytelniania dopuszczalnych, zanim zawartość urządzenia może zostać wyczyszczona (maksymalnie 11). Prawidłową liczbę, którą można wprowadzić zależy od wersji. [Dostawcy usług Kryptograficznych DeviceLock/MaxDevicePasswordFailedAttempts](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts) zawiera listę obsługiwanych wartości. `0` (zero) może spowodować wyłączenie funkcji czyszczenia urządzenia.
+  - **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia**: wprowadź liczbę nieudanych prób uwierzytelniania dopuszczalnych, zanim zawartość urządzenia może zostać wyczyszczona (maksymalnie 11). Poprawna wprowadzona liczba zależy od wersji. [Dostawca CSP DeviceLock/MaxDevicePasswordFailedAttempts](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts) zawiera listę obsługiwanych wartości. `0` (zero) może spowodować wyłączenie funkcji czyszczenia urządzenia.
 
     Wpływ tego ustawienia zależy również od wersji. Aby uzyskać szczegółowe informacje, zobacz artykuł [Dostawca usługi konfiguracji DeviceLock/MaxDevicePasswordFailedAttempts](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts).
 
@@ -753,9 +753,6 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad usługi Defende
 
   [Defender/ScheduleQuickScanTime CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulequickscantime) (Zasady zabezpieczeń zawartości Defender/ScheduleQuickScanTime)
 
-  > [!WARNING]
-  > To ustawienie w usłudze Intune w witrynie Azure Portal może pokazywać stan niepowodzenia. Jest to błąd funkcji raportowania. Po odtworzeniu tego zachowania i rozwiązaniu problemu grupa produktów usługi Intune potwierdziła, że rzeczywisty stan to Powodzenie. Błąd dotyczący raportowania zostanie naprawiony w kolejnej wersji. Szacowany czas udostępnienia nowej wersji nie jest znany, ponieważ terminy ulegają zmianom. Wszelkie aktualizacje dla tej funkcji są ogłaszane na stronie [Funkcje usługi Microsoft Intune w trakcie opracowywania](in-development.md).
-
 - **Typ skanowania systemu do wykonania**: umożliwia zaplanowanie skanowania systemu, w tym poziomu skanowania oraz dnia i godziny uruchomienia skanowania. Dostępne opcje:
   - **Nieskonfigurowane**: skanowanie systemu na urządzeniu nie jest zaplanowane. Użytkownicy końcowi mogą ręcznie uruchamiać skanowanie na urządzeniu stosownie do potrzeb lub oczekiwań.
   - **Wyłącz**: wyłącza wszelkie skanowanie systemu na urządzeniu. Wybierz tę opcję, jeśli korzystasz z partnerskiego rozwiązania antywirusowego, które skanuje urządzenia.
@@ -776,9 +773,6 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad usługi Defende
   [Defender/ScanParameter CSP (Dostawca usługi konfiguracji Defender/ScanParameter)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-scanparameter)  
   [Defender/ScheduleScanDay CSP (Dostawca usługi konfiguracji Defender/ScheduleScanDay)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)  
   [Defender/ScheduleScanTime CSP (Dostawca usługi konfiguracji Defender/ScheduleScanTime)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescantime)
-
-  > [!WARNING]
-  > To ustawienie w usłudze Intune w witrynie Azure Portal może pokazywać stan niepowodzenia. Jest to błąd funkcji raportowania. Po odtworzeniu tego zachowania i rozwiązaniu problemu grupa produktów usługi Intune potwierdziła, że rzeczywisty stan to Powodzenie. Błąd dotyczący raportowania zostanie naprawiony w kolejnej wersji. Szacowany czas udostępnienia nowej wersji nie jest znany, ponieważ terminy ulegają zmianom. Wszelkie aktualizacje dla tej funkcji są ogłaszane na stronie [Funkcje usługi Microsoft Intune w trakcie opracowywania](in-development.md).
 
 - **Wykrywaj potencjalnie niepożądane aplikacje**: pozwala wybrać poziom ochrony w przypadku wykrycia potencjalnie niechcianych aplikacji przez system Windows. Dostępne opcje:
   - **Nie skonfigurowano** (ustawienie domyślne): ochrona usługi Windows Defender przed potencjalnie niepożądanymi aplikacjami jest wyłączona.

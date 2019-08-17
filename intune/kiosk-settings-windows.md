@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/11/2019
+ms.date: 08/15/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a80e4cf4e68235ef9e88943a8b62121e0cfb6623
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 6fb1111a7f660e8c59f45fb1893364dcadd34dca
+ms.sourcegitcommit: 6a8de7bb4870ea19aa08db1f188ea7b5e8a387dd
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046972"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69487750"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Ustawienia urządzenia z systemem Windows 10 lub nowszym, które ma działać jako kiosk w usłudze Intune
 
@@ -66,9 +66,7 @@ Uruchamia tylko jedną aplikację na urządzeniu.
     > [!NOTE]
     > To ustawienie włącza przeglądarkę Microsoft Edge na urządzeniu. Aby skonfigurować ustawienia specyficzne dla przeglądarki Microsoft Edge, należy utworzyć profil konfiguracji urządzenia (**Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **Windows 10** dla platformy > **Ograniczenia dotyczące urządzeń** >  **Przeglądarka Microsoft Edge**). W sekcji [Przeglądarka Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser) wymieniono i opisano dostępne ustawienia.
 
-    Wybierz przycisk **OK**, aby zapisać zmiany.
-
-  - **Dodaj przeglądarkę kiosku**: wybierz pozycję **Ustawienia przeglądarki kiosku**. Te ustawienia umożliwiają kontrolowanie aplikacji przeglądarki internetowej działającej w obrębie kiosku. Upewnij się, że [aplikacja przeglądarki kiosku](https://businessstore.microsoft.com/store/details/kiosk-browser/9NGB5S5XG2KP) została pobrana ze Sklepu, dodana do usługi Intune jako [aplikacja kliencka](apps-add.md), a następnie przypisana do urządzeń kiosku.
+  - **Dodaj przeglądarkę kiosku**: wybierz pozycję **Ustawienia przeglądarki kiosku**. Te ustawienia umożliwiają kontrolowanie aplikacji przeglądarki internetowej działającej w obrębie kiosku. Upewnij się, że masz dostęp do [aplikacji Przeglądarka kiosków](https://businessstore.microsoft.com/store/details/kiosk-browser/9NGB5S5XG2KP) ze sklepu, Dodaj ją do usługi Intune jako [aplikację kliencką](apps-add.md). Następnie przypisz aplikację do urządzeń kiosku.
 
     Podaj następujące ustawienia:
 
@@ -91,15 +89,14 @@ Uruchamia tylko jedną aplikację na urządzeniu.
       `http://bing.com`  
       `https://bing.com`  
       `http://contoso.com/*`  
-      `https://contoso.com/*`  
+      `https://contoso.com/*`
 
-    Wybierz przycisk **OK**, aby zapisać zmiany.
+    > [!NOTE]
+    > Kioski systemu Windows 10 z włączoną funkcją automatycznego logowania przy użyciu przeglądarki Microsoft Kiosk muszą używać licencji offline z Microsoft Store dla firm. Ten wymóg jest spowodowany tym, że logowanie automatyczne używa konta użytkownika lokalnego bez poświadczeń Azure Active Directory (AD). Nie można więc ocenić licencji w trybie online. Aby uzyskać więcej informacji, zobacz [rozpowszechnianie aplikacji w trybie offline](https://docs.microsoft.com/microsoft-store/distribute-offline-apps).
 
   - **Dodaj aplikację ze sklepu**: wybierz pozycję **Dodaj aplikację ze sklepu**, a następnie wybierz aplikację z listy.
 
     Lista nie zawiera żadnych aplikacji? Dodaj aplikacje, wykonując czynności opisane w temacie [Aplikacje klienckie](apps-add.md).
-
-  Wybierz przycisk **OK**, aby zapisać zmiany.
 
 ## <a name="multi-app-kiosks"></a>Kioski z wieloma aplikacjami
 
@@ -132,8 +129,6 @@ Aplikacje w tym trybie są dostępne w menu Start. Te aplikacje to jedyne aplika
       > [!NOTE]
       > To ustawienie włącza przeglądarkę Microsoft Edge na urządzeniu. Aby skonfigurować ustawienia specyficzne dla przeglądarki Microsoft Edge, należy utworzyć profil konfiguracji urządzenia (**Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **Windows 10** dla platformy > **Ograniczenia dotyczące urządzeń** >  **Przeglądarka Microsoft Edge**). W sekcji [Przeglądarka Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser) wymieniono i opisano dostępne ustawienia.
 
-      Wybierz przycisk **OK**, aby zapisać zmiany.
-
     - **Dodaj przeglądarkę kiosku**: te ustawienia umożliwiają kontrolowanie aplikacji przeglądarki internetowej działającej w obrębie kiosku. Upewnij się, że aplikacja przeglądarki internetowej została wdrożona na urządzeniach kiosków przy użyciu usługi [Aplikacje klienckie](apps-add.md).
 
       Podaj następujące ustawienia:
@@ -152,13 +147,12 @@ Aplikacje w tym trybie są dostępne w menu Start. Te aplikacje to jedyne aplika
 
         Aby zezwolić na określone witryny internetowe, przekaż plik CSV zawierający listę dozwolonych witryn internetowych. Jeśli nie dodasz pliku CSV, wszystkie witryny internetowe będą dozwolone.
 
-      Wybierz przycisk **OK**, aby zapisać zmiany.
+      > [!NOTE]
+      > Kioski systemu Windows 10 z włączoną funkcją automatycznego logowania przy użyciu przeglądarki Microsoft Kiosk muszą używać licencji offline z Microsoft Store dla firm. Ten wymóg jest spowodowany tym, że logowanie automatyczne używa konta użytkownika lokalnego bez poświadczeń Azure Active Directory (AD). Nie można więc ocenić licencji w trybie online. Aby uzyskać więcej informacji, zobacz [rozpowszechnianie aplikacji w trybie offline](https://docs.microsoft.com/microsoft-store/distribute-offline-apps).
 
   - **Aplikacje**
 
     - **Dodaj aplikację ze sklepu**: dodaj aplikację ze Microsoft Store dla Firm. Jeśli lista nie zawiera żadnych aplikacji, możesz pobrać aplikacje i [dodać je do usługi Intune](store-apps-windows.md). Można na przykład dodać przeglądarkę kiosku, program Excel, program OneNote i inne.
-
-      Wybierz przycisk **OK**, aby zapisać zmiany.
 
     - **Dodaj aplikację systemu Win32**: aplikacja systemu Win32 to tradycyjna aplikacja klasyczna, taka jak program Visual Studio Code lub Google Chrome. Wprowadź następujące właściwości:
 
@@ -166,14 +160,10 @@ Aplikacje w tym trybie są dostępne w menu Start. Te aplikacje to jedyne aplika
       - **Ścieżka lokalna**: wymagana. Wprowadź ścieżkę do pliku wykonywalnego, taką jak `C:\Program Files (x86)\Microsoft VS Code\Code.exe` lub `C:\Program Files (x86)\Google\Chrome\Application\chrome.exe`.
       - **Identyfikator modelu użytkownika aplikacji (AUMID)** : podaj identyfikator modelu użytkownika aplikacji (AUMID) dla aplikacji Win32. To ustawienie określa początkowy układ kafelka na pulpicie. Informacje na temat uzyskiwania tego identyfikatora zawiera artykuł [Get-StartApps](https://docs.microsoft.com/powershell/module/startlayout/get-startapps?view=win10-ps) (Polecenie Get-StartApps).
 
-      Wybierz przycisk **OK**, aby zapisać zmiany.
-
     - **Dodaj według identyfikatora AUMID**: użyj tej opcji, aby dodać aplikacje skrzynki odbiorczej systemu Windows, na przykład Notatnik lub Kalkulator. Wprowadź następujące właściwości:
 
       - **Nazwa aplikacji**: wymagana. Wprowadź nazwę aplikacji.
       - **Identyfikator modelu użytkownika aplikacji (AUMID)** : wymagany. Wprowadź identyfikator modelu użytkownika aplikacji (AUMID) dla aplikacji systemu Windows. Aby uzyskać ten identyfikator, zobacz [Znajdowanie identyfikatora modelu użytkownika aplikacji zainstalowanej aplikacji](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
-
-      Wybierz przycisk **OK**, aby zapisać zmiany.
 
     - **Autouruchamianie**: opcjonalne. Wybierz aplikację, która będzie automatycznie uruchamiana po zalogowaniu użytkownika. Automatycznie może być uruchamiana tylko jedna aplikacja.
     - **Rozmiar kafelka**: wymagany. Wybierz mały, średni, szeroki lub duży rozmiar kafelka aplikacji.
@@ -186,8 +176,6 @@ Aplikacje w tym trybie są dostępne w menu Start. Te aplikacje to jedyne aplika
 - **Pasek zadań systemu Windows**: wybierz opcję **pokazywania** lub **ukrywania** paska zadań. Domyślnie pasek zadań nie jest wyświetlany. Ikony, takich jak ikona sieci Wi-Fi, są wyświetlane, ale użytkownicy końcowi nie mogą zmieniać ich ustawień.
 
 - **Zezwalaj na dostęp do folderu Pobrane**: wybierz pozycję **Tak**, aby umożliwić użytkownikom dostęp do folderu Pobrane w Eksploratorze Windows. Domyślnie dostęp do folderu Pobrane jest wyłączony. Ta funkcja jest często używana, aby umożliwić użytkownikom końcowym dostęp do elementów pobranych z poziomu przeglądarki.
-
-Wybierz przycisk **OK**, aby zapisać zmiany.
 
 ## <a name="next-steps"></a>Następne kroki
 

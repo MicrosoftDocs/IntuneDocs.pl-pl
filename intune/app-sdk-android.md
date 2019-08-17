@@ -5,7 +5,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/24/2019
+ms.date: 08/12/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: edc193c80960872cc3a0e25438432195de3a7c34
-ms.sourcegitcommit: e6edfbfd63dd7c2500ce1123205aa2af9a7e8e2e
-ms.translationtype: HT
+ms.openlocfilehash: 527d71f0e48627498b05af8ee497579c648d3156
+ms.sourcegitcommit: ec22a186a9cfa489a8490698e387624e480892d8
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68783209"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68960548"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android
 
@@ -1726,7 +1726,7 @@ Włącz rejestrację domyślną, wykonując następujące kroki:
 
 1. Jeśli Twoja aplikacja jest zintegrowana z biblioteką ADAL lub musisz włączyć logowanie jednokrotne, [skonfiguruj bibliotekę ADAL](#configure-azure-active-directory-authentication-library-adal), wykonując punkt 2. opisany w sekcji [Typowe konfiguracje biblioteki ADAL](#common-adal-configurations). W przeciwnym razie możesz pominąć ten krok.
    
-2. Włącz rejestrację domyślną przez umieszczenie w manifeście następującej wartości:
+2. Włącz rejestrację domyślną, dodając następującą wartość do manifestu pod `<application>` tagiem:
 
    ```xml 
    <meta-data android:name="com.microsoft.intune.mam.DefaultMAMServiceEnrollment" android:value="true" />
@@ -1735,7 +1735,7 @@ Włącz rejestrację domyślną, wykonując następujące kroki:
    > [!NOTE] 
    > Musi to być jedyna integracja z usługą MAM-WE w aplikacji. Wszelkie inne próby wywołania interfejsów API MAMEnrollmentManager spowodują konflikty.
 
-3. Włącz wymagane zasady zarządzania aplikacjami mobilnymi przez umieszczenie w manifeście następującej wartości:
+3. Włącz zasady mam wymagane przez dodanie następującej wartości w manifeście `<application>` w tagu:
 
    ```xml 
    <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />

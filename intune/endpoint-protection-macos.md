@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4aa0c47f0aa099ff469eb31b212f387836ad69b
-ms.sourcegitcommit: 73fbecf7cee4fdfc37d3c30ea2007d2a9a6d2d12
+ms.openlocfilehash: 919fef62cf1d979d6a4f67c3653d90af1442fa55
+ms.sourcegitcommit: ec22a186a9cfa489a8490698e387624e480892d8
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68756506"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68960414"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>Ustawienia programu Endpoint Protection w usłudze Intune dla systemu MacOS  
 
@@ -82,6 +82,9 @@ Użyj zapory, aby blokować połączenia według poszczególnych aplikacji, a ni
 ## <a name="filevault"></a>FileVault  
 Aby uzyskać więcej informacji na temat ustawień Apple FileVault, zobacz [FDEFileVault](https://developer.apple.com/documentation/devicemanagement/fdefilevault) w zawartości dla deweloperów firmy Apple. 
 
+> [!IMPORTANT]  
+> Od macOS 10,15 konfiguracja FileVault wymaga zatwierdzenia przez użytkownika rejestracji MDM. 
+
 - **FileVault**  
   Pełne szyfrowanie dysków można *włączyć* przy użyciu XTS-AES 128 z FileVault na urządzeniach z systemem macOS 10,13 lub nowszym.  
   - **Nieskonfigurowany**  
@@ -104,9 +107,9 @@ Aby uzyskać więcej informacji na temat ustawień Apple FileVault, zobacz [FDEF
     **Domyślnie**: Nie skonfigurowano  
 
      > [!IMPORTANT]  
-     > Występuje znany problem, gdy ustawienie **Wyłącz monit o wyłączenie wylogowania** jest ustawione na wartość *włączone*. Po ustawieniu na wartość *enable*, ustawienie dla **liczby dozwolonych przeejść** musi mieć ustawioną opcję i nie może być ustawione *jako nieskonfigurowane* . Jeśli ustawienie *nie zostanie skonfigurowane*, profil nie powiedzie się na urządzeniu. W tym scenariuszu urządzenie raportuje to **Podsumowanie stanu profilu** jako **błąd** bez dalszych szczegółów.
+     > Istnieje znany problem, gdy dla ustawienia **Wyłącz monit przy wylogowywaniu** zostanie ustawiona wartość *Włączone*. Gdy zostanie ustawiona wartość *Włączone*, dla ustawienia **Liczba dozwolonych pominięć** należy ustawić wartość i nie może ona wynosić *Nieskonfigurowane*. Jeśli zostanie ustawiona wartość *Nieskonfigurowane*, profil nie będzie działać na urządzeniu. W tym scenariuszu urządzenie raportuje **Podsumowanie stanu profilu** jako **Błąd** bez dalszych szczegółów.
      > 
-     > Gdy polecenie **Wyłącz monit o wylogowaniu** jest ustawione na *wartość nieskonfigurowane* , **liczba dozwolonych przeejść** nie może być *skonfigurowana* ani mieć wartości.  
+     > Gdy ustawienie **Wyłącz monit przy wylogowywaniu** ma wartość *Nieskonfigurowane*, dla ustawienia **Liczba dozwolonych pominięć** można ustawić opcję *Nieskonfigurowane* lub może ono mieć wartość.  
      > 
      > Ten problem zostanie rozwiązany w przyszłej aktualizacji. 
 
