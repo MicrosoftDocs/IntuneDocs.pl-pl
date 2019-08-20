@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/23/2019
+ms.date: 08/05/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1826498b3bfa2191900d7574f79051af8f758558
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 63f2832dd321425efe8092f1bb12dd0d479ef71b
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041697"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69549923"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Ustawienia funkcji urządzenia z systemem macOS w usłudze Intune
 
@@ -65,6 +65,19 @@ Aby dodać serwery funkcji AirPrinter, potrzebujesz adresu IP drukarki, ścieżk
    Zanotuj adres IP. Zwrócone informacje mogą wyglądać podobnie do następujących: `PING myprinter.local (10.50.25.21)`.
 
 4. Użyj wartości adresu IP i ścieżki zasobu. W tym przykładzie adres IP to `10.50.25.21`, a ścieżka zasobu to `/ipp/port1`.
+
+## <a name="login-items"></a>Elementy logowania
+
+- **Pliki, foldery i aplikacje niestandardowe**: **Dodaj** ścieżkę do pliku, folderu, aplikacji niestandardowej lub aplikacji systemowej, którą chcesz otworzyć, gdy użytkownik zaloguje się na urządzeniu. Aplikacje systemowe lub aplikacje skompilowane lub dostosowane do organizacji zwykle znajdują się w `Applications` folderze o ścieżce podobnej do. `/Applications/AppName.app` 
+
+  Można dodać wiele plików, folderów i aplikacji. Wprowadź na przykład:  
+  
+  - `/Applications/Calculator.app`
+  - `/Applications`
+  - `/Applications/Microsoft Office/root/Office16/winword.exe`
+  - `/Users/UserName/music/itunes.app`
+  
+  Podczas dodawania dowolnej aplikacji, folderu lub pliku upewnij się, że została wprowadzona poprawna ścieżka. Nie wszystkie elementy znajdują się `Applications` w folderze. Jeśli Użytkownik przeniesie element z jednej lokalizacji do drugiej, zmieni się ścieżka. Ten przeniesiony element nie zostanie otwarty po zalogowaniu się użytkownika.
 
 ## <a name="login-window"></a>Okno logowania
 

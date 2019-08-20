@@ -1,11 +1,11 @@
 ---
 title: Urządzenie z systemem Android wydaje się być szyfrowane | Microsoft Docs
-description: ''
+description: Rozwiązywanie stanu szyfrowania w aplikacji Portal firmy i Microsoft Intune
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/14/2017
+ms.date: 08/14/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,60 +18,46 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 55935b2f69f9573d8df5ea5ca32fb4587c652b26
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: d63ecdb23b107d844c37d7a805247092116618e1
+ms.sourcegitcommit: b30a2ba2b67aa2fc3421f0b2f6c5f361a0de612a
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57389461"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69022734"
 ---
-# <a name="your-android-device-seems-to-be-encrypted-but-company-portal-says-otherwise"></a>Urządzenie z systemem Android wydaje się być szyfrowane, ale Portal firmy informuje, że jest inaczej
+# <a name="device-encrypted-but-apps-say-otherwise"></a>Urządzenie zaszyfrowane, ale aplikacje mówią inaczej
 
-Zaszyfrowanie urządzenia polega na zakodowaniu znajdujących się na nim informacji przy użyciu klucza tajnego znanego tylko jego posiadaczowi. Chroni to urządzenie przed dostępem nieautoryzowanych osób. Wiele organizacji wymaga od użytkowników zaszyfrowania swoich urządzeń z systemem Android przed uzyskaniem dostępu do plików, wiadomości e-mail i danych firmy.
+Jeśli Portal firmy lub aplikacja Microsoft Intunea mówi, że urządzenie nie jest zaszyfrowane, ale masz pewność, że jest to możliwe, wypróbuj kroki opisane w tym artykule.  
 
-## <a name="common-issues"></a>Typowe problemy
+## <a name="add-a-startup-pin"></a>Dodaj numer PIN uruchomienia
 
-Nowsze wersje systemu Android, szczególnie od wersji 7.0, wymagają kodu dostępu umożliwiającego uruchomienie, aby zagwarantować, że urządzenie jest w pełni szyfrowane. Różni producenci urządzeń oferują różne opisy i lokalizacje kodu dostępu umożliwiającego uruchomienie. W większości przypadków to ustawienie nazywane jest „Bezpieczne uruchamianie”. 
+Aby zagwarantować bezpieczeństwo urządzenia, niektóre urządzenia z systemem Android wymagają utworzenia numeru PIN uruchomienia. Lokalizacja tego ustawienia będzie znajdować się w aplikacji **ustawień** urządzenia. Nazwa i lokalizacja ustawienia mogą się różnić. Na przykład w przypadku urządzeń z systemem Samsung Galaxy S7 ustawienie to jest nazywane **bezpiecznym uruchamianiem**. Aby włączyć tę funkcję i utworzyć kod dostępu, przejdź do pozycji **Ustawienia** > **ekran blokady i zabezpieczenia** > **bezpieczne uruchamianie**.  
 
-## <a name="solutions"></a>Rozwiązania
+## <a name="encrypt-the-entire-device"></a>Zaszyfruj całe urządzenie
 
-### <a name="add-a-startup-pin"></a>Dodaj numer PIN uruchomienia
+Ta sekcja dotyczy tylko aplikacji Portal firmy. Niektóre urządzenia umożliwiają wybór między szyfrowaniem całego urządzenia i szyfrowaniem tylko używanego miejsca. Wybierz opcję szyfrowania całego urządzenia. Jeśli wybrano szyfrowanie tylko zajętego miejsca:
 
-Aby zagwarantować bezpieczeństwo urządzenia, niektóre urządzenia z systemem Android wymagają utworzenia numeru PIN uruchomienia. Istnieje wiele wersji systemu Android oferowanych przez wielu różnych producentów. Można spróbować rozwiązać ten problem, wyszukując tę opcję w aplikacji Ustawienia. Na przykład na urządzeniu Samsung Galaxy S7 bezpieczne uruchamianie włącza się przy użyciu opcji **Ustawienia** > **Ekran blokady i zabezpieczenia** > **Bezpieczne uruchamianie**.  
+1. [Usuń to urządzenie z Portalu firmy](unenroll-your-device-from-intune-android.md).
+2. Odszyfruj używane miejsce.  
+3. Zaszyfruj całe urządzenie.  
+4. Zarejestruj ponownie urządzenie.  
 
-### <a name="encrypt-the-entire-device"></a>Zaszyfruj całe urządzenie
+## <a name="downgrade-your-version-of-android"></a>Zmień wersję systemu Android na starszą
 
-Niektóre urządzenia umożliwiają wybór między szyfrowaniem całego urządzenia i szyfrowaniem tylko używanego miejsca. Wybierz opcję szyfrowania całego urządzenia zamiast opcji „tylko używane miejsce”. Jeśli masz już zaszyfrowane tylko używane miejsce:
-
-1. [Usuń to urządzenie z Portalu firmy](unenroll-your-device-from-intune-android.md)
-2. Odszyfruj używane miejsce
-3. Zaszyfruj całe urządzenie
-4. Zarejestruj ponownie urządzenie
-
-### <a name="downgrade-your-version-of-android"></a>Zmień wersję systemu Android na starszą
-
-Jeśli Twoje urządzenie umożliwia przeprowadzenie zmiany na wersję Android 6.0+, należy to zrobić. Zmiana wersji urządzenia może wiązać się z ryzykiem utraty danych. W przeciwnym razie zalecane jest skontaktowanie się z działem pomocy technicznej Twojej firmy, aby rozwiązać ten problem. Informacje kontaktowe działu pomocy technicznej Twojej firmy znajdziesz w [witrynie internetowej Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ta sekcja dotyczy tylko aplikacji Portal firmy. Jeśli Twoje urządzenie umożliwia przeprowadzenie zmiany na wersję Android 6.0 nowszą, należy to zrobić. Zmiana wersji urządzenia na starszą może wiązać się z ryzykiem utraty danych. W przeciwnym razie zalecane jest skontaktowanie się z działem pomocy technicznej Twojej firmy, aby rozwiązać ten problem. Uzyskaj informacje kontaktowe działu pomocy technicznej Twojej firmy w [witrynie internetowej Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).  
 
 ## <a name="specific-manufacturer-issues"></a>Problemy z urządzeniami niektórych producentów
 
-Niektóre urządzenia z systemem Android w wersji 7.0+ szyfrują dane metodami, które są niezgodne z pewnymi standardami platformy systemu Android. Te urządzenia mogą wydawać się zaszyfrowane, nawet gdy są całkowicie nowe. Usługa Intune rozpoznaje, że metody szyfrowania używane przez te urządzenia narażają informacje w nich zawarte na zagrożenia. Zagrożenia te są związane głównie ze złośliwymi użytkownikami, którzy mają fizyczny dostęp do urządzenia.
+Niektóre urządzenia z systemem Android w wersji 7.0 lub nowszej szyfrują dane metodami, które są niezgodne z pewnymi standardami platformy systemu Android. Te metody szyfrowania powodują, że informacje o urządzeniu są zagrożone. W związku z tym urządzenia te nie są obsługiwane. 
+
+Aby zapoznać się z niekompletną listą obsługiwanych urządzeń z systemem Android, zobacz artykuł [obsługiwane systemy operacyjne i przeglądarki w usłudze Intune](https://docs.microsoft.com/intune/supported-devices-browsers#supported-samsung-knox-standard-devices). Jeśli urządzenie nie jest wyświetlane na liście, zapoznaj się z producentem urządzenia lub skontaktuj się z pomocą techniczną. 
 
 > [!Note]
 > Firma Microsoft współpracuje z producentami w celu rozwiązania problemów znalezionych podczas testowania lub zgłoszonych nam przez użytkowników. Gdy pojawiają się nowe informacje, aktualizujemy ten artykuł. 
 
-## <a name="known-devices"></a>Znane urządzenia
+## <a name="update-devices"></a>Aktualizowanie urządzeń   
 
-### <a name="known-devices-that-can-be-updated-to-fix-this-issue"></a>Znane urządzenia, które można zaktualizować w celu rozwiązania tego problemu
+Jeśli urządzenie nie zostało zaktualizowane do najnowszej wersji systemu Android, przejdź do aplikacji **Ustawienia** urządzenia i wybierz pozycję **Aktualizuj**.  
 
-Jeśli urządzenie nie była aktualizowana do najnowszej wersji systemu Android, przejdź do Twojego urządzenia **ustawienia** aplikacji i wybierz **aktualizacji**. Te urządzenia mogą pojawić się jako niezgodne, dopóki nie zaktualizujesz:  
-
-- Huawei Honor 8
-- Huawei P9
-
-### <a name="known-devices-that-currently-cannot-be-updated-to-fix-this-issue"></a>Znane urządzenia, których obecnie nie można zaktualizować w celu rozwiązania tego problemu
-Następujące urządzenia zawsze będzie wydawać się zaszyfrowane i nie można uzyskać dostęp do zasobów firmy. Aby uzyskać dostęp do zasobów firmy, należy użyć innego urządzenia.  
-
-- Huawei Mate 8
-- Urządzenia OPPO
-- Urządzenia Vivo
-- Smartfony Xiaomi Mi
+## <a name="next-steps"></a>Następne kroki   
+Nadal potrzebujesz pomocy? Skontaktuj się z działem pomocy technicznej Twojej firmy (sprawdź [witrynę internetową Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980), aby uzyskać informacje kontaktowe) lub napisz do <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with enrolling my Android device&body=Describe the issue you're experiencing here.">zespołu ds. systemu Android w firmie Microsoft</a>.  

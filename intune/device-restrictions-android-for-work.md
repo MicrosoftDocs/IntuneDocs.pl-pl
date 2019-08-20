@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/05/2019
+ms.date: 08/14/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4ab90a36254de49eb27e326086ffb137c782005
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 8bd537315a09c0c7cf338ac0892fc4ae3d1dc8fc
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67883431"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69550192"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem Android Enterprise w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune
 
@@ -85,13 +85,13 @@ Te ustawienia umożliwiają skonfigurowanie trybu kiosku na dedykowanych urządz
 
 - **Pojedyncza aplikacja**: użytkownicy mogą uzyskiwać dostęp tylko do jednej aplikacji na urządzeniu. Po uruchomieniu urządzenia zostanie uruchomiona tylko określona aplikacja. Użytkownicy nie mogą otwierać nowych aplikacji ani zmieniać uruchomionej aplikacji.
 
-  **Kroki**
-  1. Wybierz pozycję **Wybierz zarządzaną aplikację**, a następnie wybierz z listy zarządzaną aplikację ze sklepu Google Play. 
+  - **Wybierz zarządzaną aplikację**: wybierz z listy aplikację z zarządzanego sklepu Google Play.
 
-      Jeśli nie masz listy aplikacji, [dodaj wybrane aplikacje dla systemu Android](apps-add-android-for-work.md) do urządzenia. Pamiętaj, aby [przypisać aplikację](apps-deploy.md) do grupy urządzeń utworzonej na potrzeby dedykowanych urządzeń.
+    Jeśli nie masz listy aplikacji, [dodaj wybrane aplikacje dla systemu Android](apps-add-android-for-work.md) do urządzenia. Pamiętaj, aby [przypisać aplikację](apps-deploy.md) do grupy urządzeń utworzonej na potrzeby dedykowanych urządzeń.
 
-  2. Wybierz przycisk **OK** > **OK**, aby dodać aplikację.
-
+  > [!IMPORTANT]
+  > W przypadku korzystania z trybu kiosku jednostronicowego aplikacje telefoniczne mogą nie działać prawidłowo. 
+  
 - **Wiele aplikacji**: użytkownicy mogą uzyskiwać dostęp do ograniczonego zestawu aplikacji na urządzeniu. Po uruchomieniu urządzenia zostaną uruchomione tylko dodane aplikacje. Można również dodać linki internetowe, które użytkownicy będą mogli otwierać. Po zastosowaniu zasad użytkownicy widzą ikony dozwolonych aplikacji na ekranie głównym.
 
   > [!IMPORTANT]
@@ -101,43 +101,65 @@ Te ustawienia umożliwiają skonfigurowanie trybu kiosku na dedykowanych urządz
   > 
   > Aplikacja **Zarządzany ekran główny** nie musi znajdować się w profilu konfiguracji, ale trzeba ją dodać jako aplikację kliencką. Gdy aplikacja **Zarządzany ekran główny** zostanie dodana jako aplikacja kliencka, wszystkie inne aplikacje dodane w profilu konfiguracji będą wyświetlane jako ikony w aplikacji **Zarządzany ekran główny**. 
   >
-  > W przypadku korzystania z trybu kiosku z wieloma aplikacjami z zarządzanym ekranem głównym aplikacje telefonujące i usługi telefonii mogą nie działać prawidłowo. 
+  > W przypadku korzystania z trybu kiosku dla aplikacji telefoner/aplikacje telefoniczne mogą nie działać prawidłowo. 
 
-  - Wybierz pozycję **Dodaj** i wybierz aplikacje z listy.
+  - **Dodaj**: Wybierz swoje aplikacje z listy.
 
     Jeśli na liście nie ma aplikacji **Zarządzany ekran główny**, [dodaj ją ze sklepu Google Play](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise). Pamiętaj, aby [przypisać aplikację](apps-deploy.md) do grupy urządzeń utworzonej na potrzeby dedykowanych urządzeń.
 
     Na urządzeniu możesz również dodać inne [aplikacje dla systemu Android](apps-add-android-for-work.md) i [aplikacje internetowe](web-app.md) utworzone przez organizację. Pamiętaj, aby [przypisać aplikację](apps-deploy.md) do grupy urządzeń utworzonej na potrzeby dedykowanych urządzeń.
 
-  - **Wirtualny przycisk ekranu głównego**: wybierz pozycję **Włącz**, aby przycisk ekranu głównego był wyświetlany na dedykowanych urządzeniach. Po wybraniu tego przycisku użytkownik wróci na ekran główny urządzenia. Ułatwia to użytkownikom przełączanie między aplikacjami. Na niektórych urządzeniach z systemem Android użytkownicy będą musieli przesunąć ekran w górę, aby przycisk ekranu głównego został wyświetlony. Pozycja **Wyłącz** powoduje, że przycisk ekranu głównego nie pojawia się, a użytkownicy muszą używać przycisku Wstecz do przełączania się między aplikacjami.
-  - **Wyjdź z trybu kiosku**: wybierz pozycję **Włącz**, aby umożliwić administratorom tymczasowe wstrzymywanie trybu kiosku w celu zaktualizowania urządzenia. Aby skorzystać z tej funkcji, administrator wykonuje następujące czynności: 
-  
-    1. Wybiera przycisk Wstecz do momentu wyświetlenia przycisku „Wyjdź z kiosku”. 
-    2. Wybiera przycisk, a następnie wprowadza numer PIN dla opcji **Kod wychodzenia z trybu kiosku**.
-    3. Po zakończeniu wprowadzania zmian wybiera aplikację **Zarządzany ekran główny**. Ten krok powoduje ponowne zablokowanie urządzenia w trybie kiosku z wieloma aplikacjami. 
+  - **Wirtualny przycisk Strona główna**: przycisk miękkiego klawisza, który zwraca użytkowników do zarządzanego ekranu głównego, aby użytkownicy mogli przełączać się między aplikacjami. Dostępne opcje:
 
-    Pozycja **Wyłącz** nie oferuje możliwości wstrzymywania trybu kiosku. Jeśli administrator wybiera przycisk Wstecz, a następnie przycisk „Wyjdź z kiosku”, pojawia się komunikat z informacją o tym, że kod dostępu jest wymagany.
+    - **Nie skonfigurowano** (domyślnie): przycisk Home nie jest wyświetlany. Aby przełączać się między aplikacjami, użytkownicy muszą używać przycisku Wstecz.
+    - **Przesuń w górę**: przycisk Home ukazuje się, gdy użytkownik szybko przesuwa się w urządzeniu.
+    - **Przestawne**: pokazuje trwały, swobodny przycisk na urządzeniu.
+
+  - **Wyjdź z trybu kiosku**: wybierz pozycję **Włącz**, aby umożliwić administratorom tymczasowe wstrzymywanie trybu kiosku w celu zaktualizowania urządzenia. Aby skorzystać z tej funkcji, administrator wykonuje następujące czynności:
+  
+    1. Wybiera przycisk Wstecz do momentu wyświetlenia przycisku **Wyjdź z kiosku**. 
+    2. Wybiera przycisk **Wyjdź z kiosku**, a następnie wprowadza numer PIN dla opcji **Kod wychodzenia z trybu kiosku**.
+    3. Po zakończeniu wybierz zarządzaną aplikację **ekranu głównego** . Ten krok powoduje ponowne zablokowanie urządzenia w trybie kiosku z wieloma aplikacjami.
+
+      Jeśli ustawienie **nie zostanie skonfigurowane**, Administratorzy nie mogą wstrzymać trybu kiosku. Jeśli administrator wybiera przycisk Wstecz, a następnie przycisk **Wyjdź z kiosku**, pojawia się komunikat z informacją o tym, że kod dostępu jest wymagany.
 
     - **Kod wychodzenia z trybu kiosku**: wprowadź numer PIN składający się z 4–6 cyfr. Administrator używa tego numeru PIN do tymczasowego wstrzymywania trybu kiosku.
 
   - **Ustaw tło przy użyciu niestandardowego adresu URL**: wprowadź adres URL, aby dostosować ekran tła na dedykowanym urządzeniu.
-    
+
     > [!NOTE]
     > W większości przypadków na początku zaleca się wybranie następujących rozmiarów obrazów:
     >
     > - Telefon: 1080 x 1920 pikseli
     > - Tablet: 1920 x 1080 pikseli
-    >    
+    >
     > Aby uzyskać najlepszy komfort i najwyższy poziom szczegółowości obrazu, zaleca się tworzenie zasobów obrazów dla poszczególnych urządzeń zgodnie ze specyfikacją wyświetlacza.
     >
     > Nowoczesne wyświetlacze mają wyższe gęstości pikseli i umożliwiają wyświetlanie obrazów 2K/4K.
-  - **Konfiguracja sieci Wi-Fi**: Wybierz opcję **Włącz**, aby zezwolić użytkownikom końcowym na łączenie się z różnymi sieciami Wi-Fi. Włączenie tej funkcji powoduje włączenie lokalizacji urządzenia. Wybranie opcji **Nieskonfigurowane** (ustawienie domyślne) uniemożliwia użytkownikom łączenie się z sieciami Wi-Fi, gdy jest aktywna aplikacja Managed Home Screen (tryb blokady zadania).
 
-    Więcej informacji na temat [trybu blokady zadania](https://developer.android.com/work/dpc/dedicated-devices/lock-task-mode) (zostanie otwarta witryna internetowa systemu Android).
+  - **Konfiguracja sieci Wi-Fi**: wartość **Włącz** pokazuje formant sieci Wi-Fi na zarządzanym ekranie głównym oraz umożliwia użytkownikom końcowym łączenie się z różnymi sieciami WiFi. Włączenie tej funkcji powoduje włączenie lokalizacji urządzenia. **Nie skonfigurowano** (ustawienie domyślne) nie pokazuje kontrolki Wi-Fi na zarządzanym ekranie głównym. Uniemożliwia to użytkownikom łączenie się z sieciami Wi-Fi przy użyciu zarządzanego ekranu głównego.
 
-  - **Konfiguracja połączenia Bluetooth**: wybierz opcję **Włącz**, aby włączyć funkcję Bluetooth na urządzeniu i zezwalać użytkownikom końcowym na parowanie urządzeń za pośrednictwem połączenia Bluetooth. Włączenie tej funkcji powoduje włączenie lokalizacji urządzenia. Wybranie opcji **Nieskonfigurowane** (ustawienie domyślne) uniemożliwia użytkownikom konfigurowanie funkcji Bluetooth i parowanie urządzeń, gdy jest aktywna aplikacja Managed Home Screen (tryb blokady zadania). 
+  - **Konfiguracja Bluetooth**: **enable** wyświetla kontrolkę Bluetooth na zarządzanym ekranie głównym i umożliwia użytkownikom końcowym parowanie urządzeń za pośrednictwem połączenia Bluetooth. Włączenie tej funkcji powoduje włączenie lokalizacji urządzenia. **Nie skonfigurowano** (domyślnie) nie wyświetlaj kontrolki Bluetooth na zarządzanym ekranie głównym. Uniemożliwia to użytkownikom konfigurowanie urządzeń Bluetooth i parowania przy użyciu zarządzanego ekranu głównego.
 
-    Więcej informacji na temat [trybu blokady zadania](https://developer.android.com/work/dpc/dedicated-devices/lock-task-mode) (zostanie otwarta witryna internetowa systemu Android).
+  - **Flashlight Access**: **enable** pokazuje kontrolkę Flashlight na zarządzanym ekranie głównym, a użytkownicy końcowi mogą włączać lub wyłączać Flashlight. **Nie skonfigurowano** (domyślnie) nie pokazuje kontrolki Flashlight na zarządzanym ekranie głównym. Uniemożliwia to użytkownikom korzystanie z Flashlight przy użyciu zarządzanego ekranu głównego.
+
+  - **Sterowanie woluminem multimedialnym**: **enable** pokazuje formant głośności multimediów na zarządzanym ekranie głównym i umożliwia użytkownikom końcowym dostosowanie woluminu multimedialnego urządzenia przy użyciu suwaka. **Nie skonfigurowano** (ustawienie domyślne) nie pokazuje kontroli głośności multimediów na zarządzanym ekranie głównym. Uniemożliwia to użytkownikom dostosowanie woluminu multimedialnego urządzenia przy użyciu zarządzanego ekranu głównego, chyba że ich przyciski sprzętowe go obsługują. 
+
+  - **Tryb wygaszacza ekranu**: **enable** wyświetla wygaszacz ekranu na zarządzanym ekranie głównym, gdy urządzenie jest zablokowane lub przekracza limit czasu. **Nie skonfigurowano** (domyślnie) nie wyświetla wygaszacza ekranu na zarządzanym ekranie głównym.
+
+    Gdy ta funkcja jest włączona, należy również skonfigurować:
+
+    - **Ustaw obraz niestandardowego wygaszacza ekranu**: wprowadź adres URL obrazu niestandardowego. Wprowadź na przykład:
+
+      - `http://www.contoso.com/image.jpg`
+      - `www.contoso.com/image.bmp`
+      - `https://www.contoso.com/image.html`
+
+      Jeśli adres URL nie zostanie wprowadzony, zostanie użyty domyślny obraz urządzenia, jeśli istnieje obraz domyślny.
+
+    - **Liczba sekund, przez które urządzenie wyświetla wygaszacz ekranu przed wyłączeniem ekranu**: Wybierz, jak długo urządzenie ma wyświetlać wygaszacz ekranu. Wprowadź wartość z zakresu od 0-9999999 sekund. Wartość domyślna `0` to s. Gdy pole pozostanie puste, lub ma wartość`0`zero (), wygaszacz ekranu jest aktywny, dopóki użytkownik nie będzie mógł współdziałać z urządzeniem.
+    - **Liczba sekund, przez które urządzenie jest nieaktywne przed wyświetleniem wygaszacza ekranu**: Określ, jak długo urządzenie jest bezczynne przed wyświetleniem ekranu. Wprowadź wartość z zakresu od 1-9999999 sekund. Wartość domyślna `30` to s. Należy wprowadzić liczbę większą od zera (`0`).
+    - **Wykryj nośnik przed uruchomieniem wygaszacza ekranu**: **enable** (domyślnie) nie pokazuje wygaszacza ekranu, jeśli audio lub wideo są odtwarzane na urządzeniu. **Nieskonfigurowane** — wyświetla wygaszacz ekranu, nawet w przypadku odtwarzania dźwięku lub wideo.
 
 ### <a name="device-password-settings"></a>Ustawienia haseł urządzeń
 
