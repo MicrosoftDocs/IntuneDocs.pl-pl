@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e6a003e4ab912452f278c838c600f75ddec0c1f5
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 3a51951d02d73a0d79f6246dd9502c3c7fe89759
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67885139"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69550086"
 ---
 # <a name="manage-android-work-profile-devices-with-intune"></a>Zarządzanie urządzeniami z profilem służbowym systemu Android za pomocą usługi Intune
 
@@ -68,7 +68,7 @@ Stosowane zasady ochrony aplikacji są w pełni obsługiwane w profilu służbow
 
 Obsługa sieci VPN działa podobnie do profilów sieci VPN systemu Android. Na potrzeby zarządzania rozwiązaniem Android Enterprise dostępni są ci sami dostawcy sieci VPN oraz takie same podstawowe opcje konfiguracji z dwiema różnicami:
 
-- **Połączenia VPN ograniczone do profilu służbowego** — połączenia w sieci VPN są ograniczone tylko do aplikacji wdrożonych w profilu służbowym. Z połączenia VPN mogą korzystać tylko aplikacje zarządzane przez rozwiązanie Android Enterprise. Aplikacje osobiste zainstalowane na urządzeniu nie mogą używać zarządzanego połączenia VPN. Aby uzyskać więcej informacji, zobacz [Ustawienia sieci VPN dla rozwiązania Android Enterprise](vpn-settings-android.md#android-enterprise-vpn-settings).
+- **Połączenia VPN ograniczone do profilu służbowego** — połączenia w sieci VPN są ograniczone tylko do aplikacji wdrożonych w profilu służbowym. Z połączenia VPN mogą korzystać tylko aplikacje zarządzane przez rozwiązanie Android Enterprise. Aplikacje osobiste zainstalowane na urządzeniu nie mogą używać zarządzanego połączenia VPN. Aby uzyskać więcej informacji, zobacz [Ustawienia sieci VPN dla rozwiązania Android Enterprise](vpn-settings-android-enterprise.md).
 
 - **Sieć VPN specyficzna dla aplikacji** — sieć VPN specyficzną dla aplikacji można skonfigurować w usłudze Intune, jeśli dostawca sieci VPN zapewnia obsługę następujących funkcji:
   - Konfiguracja sieci VPN specyficznej dla aplikacji.
