@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c75930f3eee35146afbc5714135ececbe7c9643
-ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
+ms.openlocfilehash: 5b3fd474e938e2e85a0a08951a9e3f154d980411
+ms.sourcegitcommit: b64869b4be357c0741ec01b1a2f0bae13efce937
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69550176"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69998943"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem Windows 10 (i nowszym) w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune
 
@@ -66,13 +66,6 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad ApplicationMana
   - **Preferuj magazyn**: ostrzega użytkowników, gdy instalują aplikacje z miejsc innych niż Microsoft Store.
 
   [Filtr SmartScreen/EnableAppInstallControl CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enableappinstallcontrol)
-
-- **Wymuś ponowne uruchamianie aplikacji w przypadku niepowodzenia aktualizacji**: aplikacja może się nie zaktualizować, jeśli jest właśnie używana. To ustawienie pozwala wymusić jej ponowne uruchomienie. **Nieskonfigurowane**: (domyślne) to ustawienie nie wymusza ponownego uruchomienia aplikacji. **Wymagaj**: pozwala administratorom na wymuszenie ponownego uruchomienia w określonym dniu i o podanej godzinie lub zgodnie z cyklicznym harmonogramem. Ustawienie **Wymagaj** powoduje też konieczność skonfigurowania następujących opcji:
-
-  - **Data/godzina rozpoczęcia**: wybierz datę i godzinę ponownego uruchamiania aplikacji.
-  - **Cykl**: wybierz powtarzanie codziennie, co tydzień lub co miesiąc.
-
-  [Dostawca usługi konfiguracji ApplicationManagement/ScheduleForceRestartForUpdateFailures](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures)
 
 - **Kontrola użytkownika nad instalacjami**: po wybraniu ustawienia **Nieskonfigurowane** (domyślnie) Instalator Windows uniemożliwia użytkownikom zmianę opcji instalacji, które są zwykle zastrzeżone dla administratorów systemu. Dotyczy to np. wejścia do katalogu w celu zainstalowania plików. **Zablokuj**: pozwala użytkownikom na zmianę tych opcji instalacji. Niektóre funkcje zabezpieczeń Instalatora Windows są pomijane.
 
