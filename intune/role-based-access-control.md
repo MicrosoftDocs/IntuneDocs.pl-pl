@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eaefcc904d9969c7f356e3eceb924e8d153f912d
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 83b1de6c246baaef54a31c0b3f4c5094d066c64d
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528237"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69549964"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Kontrola dostępu oparta na rolach (RBAC) w usłudze Microsoft Intune
 
@@ -85,16 +85,16 @@ Do użytkowników można przypisywać zarówno role niestandardowe, jak i wbudow
 Aby wyświetlić przypisanie roli, wybierz pozycję **Intune** > **Role** > **Wszystkie role**, a następnie wybierz rolę i przypisanie. Zostaną wyświetlone następujące strony:
 
 - **Właściwości**: nazwa przypisania, jego opis, rola, członkowie, zakresy i tagi.
-- **Elementy członkowskie**: wszyscy użytkownicy w wyświetlonych grupach mają uprawnienie do zarządzania użytkownikami/urządzeniami, które są wymienione w obszarze Zakres (grupy).
-- **Zakres (grupy)** : wszyscy użytkownicy i wszystkie urządzenia w ramach tych grup mogą być zarządzane przez użytkowników wymienionych w obszarze Członkowie.
+- **Elementy członkowskie**: wszyscy użytkownicy w wyświetlonych grupach zabezpieczeń platformy Azure mają uprawnienie do zarządzania użytkownikami/urządzeniami, które są wymienione w obszarze Zakres (grupy).
+- **Zakres (grupy)** : wszyscy użytkownicy i wszystkie urządzenia w ramach tych grup zabezpieczeń platformy mogą być zarządzane przez użytkowników wymienionych w obszarze Członkowie.
 - **[Zakres (tagi)](scope-tags.md)** : użytkownicy wymienieni w obszarze Członkowie mogą wyświetlać zasoby mające te same tagi zakresu.
 
 ### <a name="multiple-role-assignments"></a>Przypisania wielu ról
-Jeśli użytkownik ma wiele przypisań ról, uprawnienia w ramach tych przypisań ról mają wpływ na różne obiekty w następujący sposób:
+Jeśli użytkownik ma wiele przypisań ról, uprawnienia i tagi zakresu w ramach tych przypisań ról mają wpływ na różne obiekty w następujący sposób:
 
-- Przypisane uprawnienia mają zastosowanie tylko do obiektów (takich jak zasady lub aplikacje) będących w zakresie (grupach) tego przypisania roli. Przypisane uprawnienia nie mają zastosowania do obiektów znajdujących się w innych przypisaniach ról, chyba że inne przypisania jawnie je nadają.
-- Inne uprawnienia (np. do tworzenia i odczytu) mają zastosowanie do wszystkich obiektów tego samego typu (na przykład do wszystkich zasad lub wszystkich aplikacji) we wszystkich przypisaniach użytkownika.
-- Uprawnienia do obiektów różnych typów (na przykład do zasad lub aplikacji) nie mają zastosowania do siebie nawzajem. Na przykład uprawnienie do odczytu dla zasad nie zapewnia uprawnienia do odczytu dla aplikacji w przypisaniach użytkownika.
+- Przypisane uprawnienia i tagi zakresu mają zastosowanie tylko do obiektów (takich jak zasady lub aplikacje) będących w zakresie (grupach) tego przypisania roli. Przypisane uprawnienia i tagi zakresu nie mają zastosowania do obiektów znajdujących się w innych przypisaniach ról, chyba że inne przypisania jawnie je nadają.
+- Inne uprawnienia (np. do tworzenia, odczytu, aktualizacji, usuwania) i tagi zakresu mają zastosowanie do wszystkich obiektów tego samego typu (na przykład do wszystkich zasad lub wszystkich aplikacji) we wszystkich przypisaniach użytkownika.
+- Uprawnienia do obiektów różnych typów (na przykład do zasad lub aplikacji) i odpowiednie tagi zakresu nie mają zastosowania do siebie nawzajem. Na przykład uprawnienie do odczytu dla zasad nie zapewnia uprawnienia do odczytu dla aplikacji w przypisaniach użytkownika.
 
 ## <a name="next-steps"></a>Następne kroki
 - [Przypisywanie roli do użytkownika](assign-role.md)

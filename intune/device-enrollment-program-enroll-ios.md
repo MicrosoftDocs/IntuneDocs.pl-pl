@@ -6,9 +6,8 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/04/2018
+ms.date: 05/07/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,22 +17,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19f0fbf401fee4bad660e946bb135544a29de310
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: df090e0e942291d5430b101db378aca296466bf9
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566509"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69549977"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Automatyczne rejestrowanie urządzeń z systemem iOS w ramach programu Device Enrollment Program
 
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
-
-Możesz skonfigurować usługę Intune do rejestracji urządzeń z systemem iOS zakupionych w ramach programu [Device Enrollment Program (DEP)](https://deploy.apple.com) firmy Apple. Rejestrację w ramach programu DEP można włączyć dla dużej liczby urządzeń bez konieczności używania ich. Urządzenia, na przykład iPhone i iPad, można dostarczyć bezpośrednio do użytkowników. Gdy użytkownik włączy urządzenie, Asystent ustawień zostanie uruchomiony ze wstępnie skonfigurowanymi ustawieniami, a urządzenie zostanie zarejestrowane w funkcji zarządzania.
+Możesz skonfigurować usługę Intune do rejestracji urządzeń z systemem iOS zakupionych w ramach programu [Device Enrollment Program (DEP)](https://deploy.apple.com) firmy Apple. Program DEP umożliwia rejestrację dużej liczby urządzeń nawet bez ich dotykania. Urządzenia, na przykład iPhone i iPad, można dostarczyć bezpośrednio do użytkowników. Gdy użytkownik włączy urządzenie, Asystent ustawień zostanie uruchomiony ze wstępnie skonfigurowanymi ustawieniami, a urządzenie zostanie zarejestrowane w funkcji zarządzania.
 
 Włączenie rejestracji w programie DEP wymaga użycia zarówno portalu usługi Intune, jak i portalu DEP firmy Apple. Wymagana jest lista numerów seryjnych lub numerów zamówień zakupu, która pozwala przypisać urządzenia do funkcji zarządzania usługi Intune. Możliwe jest utworzenie profilów rejestracji w ramach programu DEP zawierających ustawienia stosowane względem urządzeń podczas rejestracji.
 
 Należy zwrócić uwagę, że rejestracja w ramach programu DEP nie działa z [menedżerem rejestracji urządzeń](device-enrollment-manager-enroll.md).
+
+## <a name="dep-and-the-company-portal"></a>Program DEP i aplikacja Portal firmy
+Rejestracje programu DEP nie są zgodne z wersją aplikacji Portal firmy ze sklepu z aplikacjami. Możesz przyznać użytkownikom prawa dostępu do aplikacji Portal firmy na urządzeniu DEP. Aby przydzielić prawa dostępu, należy wypchnąć aplikację na urządzenie, korzystając z opcji **Zainstaluj Portal firmy za pomocą programu VPP** (programu zakupów zbiorczych) w profilu programu DEP. Aby uzyskać więcej informacji, zobacz [Automatyczne rejestrowanie urządzeń z systemem iOS w ramach programu Device Enrollment Program firmy Apple](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
+
+ Aplikację Portal firmy można zainstalować na urządzeniach już zarejestrowanych przy użyciu programu DEP. W tym celu wdróż aplikację Portal firmy za pomocą usługi Intune z zastosowanymi [zasadami konfiguracji aplikacji](app-configuration-policies-use-ios.md).
 
 ## <a name="what-is-supervised-mode"></a>Co to jest tryb nadzorowany?
 Firma Apple wprowadziła tryb nadzorowany w systemie iOS 5. Urządzeniem z systemem iOS w trybie nadzorowanym można zarządzać za pomocą większej liczby kontrolek. W efekcie jest szczególnie przydatne w przypadku urządzeń należących do firmy. Usługa Intune obsługuje konfigurowanie urządzeń dla trybu nadzorowanego w ramach programu Device Enrollment Program (DEP) firmy Apple. 
@@ -50,7 +52,7 @@ Obsługa nienadzorowanych urządzeń objętych programem DEP została uznana za 
 -->
 ## <a name="prerequisites"></a>Wymagania wstępne
 - Urządzenia zakupione za pośrednictwem [programu Device Enrollment firmy Apple](http://deploy.apple.com)
-- [Urząd zarządzania urządzeniami przenośnymi](mdm-authority-set.md)
+- [Urząd zarządzania urządzeniami przenośnymi (MDM)](mdm-authority-set.md)
 - [Certyfikat wypychania MDM firmy Apple](apple-mdm-push-certificate-get.md)
 
 ## <a name="get-an-apple-dep-token"></a>Uzyskiwanie tokenu DEP od firmy Apple
@@ -78,12 +80,12 @@ W portalu Apple DEP Portal można utworzyć token programu DEP. W tym portalu mo
 ### <a name="step-2-use-your-key-to-download-a-token-from-apple"></a>Krok 2. Aby pobrać token Apple, należy użyć swojego klucza.
 
 1. Wybierz pozycję **Utwórz token programu Device Enrollment Program firmy Apple**, aby otworzyć portal programu wdrażania firmy Apple i zalogować się przy użyciu firmowego konta Apple ID. Tego identyfikatora firmy Apple możesz użyć do odnowienia tokenu DEP.
-2.  W [portalu programów wdrażania](https://deploy.apple.com) firmy Apple wybierz pozycję **Get Started** (Rozpocznij) dla opcji **Device Enrollment Program**.
+2. W [portalu programów wdrażania](https://deploy.apple.com) firmy Apple wybierz pozycję **Get Started** (Rozpocznij) dla opcji **Device Enrollment Program**.
 
 3. Na stronie **Manage Servers** (Zarządzanie serwerami) wybierz pozycję **Add MDM Server** (Dodaj serwer MDM).
 4. Wprowadź nazwę serwera w polu **MDM Server Name** (Nazwa serwera MDM), a następnie wybierz przycisk **Next**(Dalej). Nazwa serwera służy użytkownikowi do identyfikowania serwera MDM. Nie jest to nazwa ani adres URL serwera usługi Microsoft Intune.
 
-5. Zostanie otwarte okno dialogowe **Add &lt;nazwa_serwera&gt;** (Dodawanie serwera <nazwa_serwera>) z widocznym komunikatem **Upload Your Public Key** (Przekaż klucz publiczny). Kliknij pozycję **Choose File…** (Wybierz plik...) w celu przekazania pliku PEM, a następnie kliknij przycisk **Next** (Dalej).
+5. Zostanie otwarte okno dialogowe **Add &lt;nazwa_serwera&gt;** (Dodawanie serwera <nazwa_serwera>) z widocznym komunikatem **Upload Your Public Key** (Przekaż klucz publiczny). Wybierz pozycję **Choose File…** (Wybierz plik...) w celu przekazania pliku PEM, a następnie kliknij przycisk **Next** (Dalej).
 
 6. Wybierz kolejno pozycje **Deployment Programs** (Programy wdrażania)&gt; **Device Enrollment Program** (Program rejestracji urządzeń) &gt; **Manage Devices** (Zarządzaj urządzeniami).
 7. W obszarze **Choose Devices By** (Sposób wybierania urządzeń) określ sposób identyfikowania urządzeń:
@@ -120,45 +122,55 @@ Teraz, po zainstalowaniu tokenu, możesz utworzyć profil rejestracji dla urząd
  
 
 1. W usłudze Intune w witrynie Azure Portal wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Tokeny programu Enrollment Program**.
-2. Wybierz token, wybierz pozycję **Profile**, a następnie wybierz pozycję **Utwórz profil**.
+2. Wybierz token, wybierz pozycję **Profile** > **Utwórz profil** > **iOS**.
 
     ![Utwórz zrzut ekranu profilu.](./media/device-enrollment-program-enroll-ios/image04.png)
 
-3. W obszarze **Utwórz profil** wprowadź nazwę w polu **Nazwa** i opis w polu **Opis**. Informacje te będą używane do celów administracyjnych. Te szczegóły nie są widoczne dla użytkowników. Możesz użyć pola **Nazwa**, aby utworzyć grupę dynamiczną w usłudze Azure Active Directory. Nazwa profilu umożliwia zdefiniowanie parametru enrollmentProfileName w celu przypisania urządzeń z tym profilem rejestracji. Dowiedz się więcej o [grupach dynamicznych usługi Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#using-attributes-to-create-rules-for-device-objects).
+3. Na stronie **Podstawy** wprowadź nazwę w polu **Nazwa** i opis w polu **Opis** dla profilu. Informacje te będą używane do celów administracyjnych. Te szczegóły nie są widoczne dla użytkowników. Możesz użyć pola **Nazwa**, aby utworzyć grupę dynamiczną w usłudze Azure Active Directory. Nazwa profilu umożliwia zdefiniowanie parametru enrollmentProfileName w celu przypisania urządzeń z tym profilem rejestracji. Dowiedz się więcej o [grupach dynamicznych usługi Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices).
 
     ![Nazwa i opis profilu.](./media/device-enrollment-program-enroll-ios/image05.png)
 
-4. Dla pozycji **Koligacja użytkownika** wybierz, czy urządzenia z tym profilem muszą być rejestrowane z przypisanym użytkownikiem, czy bez niego.
+4. Wybierz pozycję **Dalej: Ustawienia zarządzania urządzeniami**.
+
+5. Dla pozycji **Koligacja użytkownika** wybierz, czy urządzenia z tym profilem muszą być rejestrowane z przypisanym użytkownikiem, czy bez niego.
     - **Zarejestruj z koligacją użytkownika** — tę opcję należy wybrać w przypadku urządzeń należących do użytkowników, którzy chcą korzystać z aplikacji Portal firmy w celu używania usług takich, jak instalowanie aplikacji. Gdy w przypadku korzystania z usług ADFS profil rejestracji ma w pozycji **Uwierzytelnij za pomocą aplikacji Portal firmy zamiast Asystenta konfiguracji** wartość **Nie**, wymagana jest opcja [Nazwa użytkownika protokołu WS-Trust 1.3/mieszanego punktu końcowego](https://technet.microsoft.com/library/adfs2-help-endpoints) [ Dowiedz się więcej](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 
-    - **Zarejestruj bez koligacji użytkownika** — tę opcję należy wybrać w przypadku urządzeń, dla których nie istnieje koligacja z żadnym użytkownikiem. Tej opcji można używać dla urządzeń, które wykonują zadania bez uzyskiwania dostępu do lokalnych danych użytkowników. Aplikacje, takie jak Portal firmy, nie działają.
+    - **Zarejestruj bez koligacji użytkownika** — tę opcję należy wybrać w przypadku urządzeń, dla których nie istnieje koligacja z żadnym użytkownikiem. Użyj tej opcji w przypadku urządzeń, które nie mają dostępu do danych użytkownika lokalnego. Aplikacje, takie jak Portal firmy, nie działają.
 
 5. Jeśli została wybrana opcja **Zarejestruj z użyciem koligacji użytkowników**, można zezwolić użytkownikom na uwierzytelnianie za pomocą aplikacji Portal firmy zamiast Asystenta ustawień firmy Apple.
 
     ![Uwierzytelnianie za pomocą aplikacji Portal firmy.](./media/device-enrollment-program-enroll-ios/authenticatewithcompanyportal.png)
 
     > [!NOTE]
-    > Jeśli chcesz wykonać dowolną z następujących czynności, w pozycji **Uwierzytelnij za pomocą aplikacji Portal firmy zamiast Asystenta konfiguracji firmy Apple** ustaw wartość **Tak**.
+    > Jeśli chcesz wykonać dowolne z poniższych czynności, ustaw opcję **Wybierz miejsce, w którym użytkownicy muszą się uwierzytelniać** na **Portal firmy**.
     >    - Używanie uwierzytelniania wieloskładnikowego
     >    - wyświetlanie monitów dla użytkowników, w przypadku których wymagana jest zmiana hasła podczas pierwszego logowania.
     >    - Monitowanie użytkowników o zresetowanie ich wygasłych haseł podczas rejestracji
     >
     > Nie są one obsługiwane w przypadku uwierzytelniania przy użyciu asystenta ustawień firmy Apple.
 
-6. Jeśli wybrano pozycję **Tak** dla opcji **Uwierzytelniaj się za pomocą Portalu firmy zamiast asystenta ustawień firmy Apple**, masz możliwość użycia tokenu Programu zakupów zbiorczych (VPP, Volume Purchase Program) w celu automatycznego zainstalowania aplikacji Portal firmy na urządzeniu bez podawania przez użytkownika identyfikatora Apple ID. Aby zainstalować aplikację Portal firmy przy użyciu tokenu programu VPP, wybierz token w obszarze **Instalowanie aplikacji Portal firmy przy użyciu programu VPP**. Upewnij się, że token nie wygasł, i że masz wystarczającą liczbę licencji urządzeń dla aplikacji Portal firmy. Jeśli token wygaśnie lub zabraknie dla niego licencji, usługa Intune zainstaluje aplikację Portal firmy ze sklepu App Store (spowoduje to wyświetlenie monitu o podanie identyfikatora Apple ID).
+6. W przypadku wybrania aplikacji **Portal firmy** dla ustawienia **Wybierz miejsce, w którym użytkownicy muszą się uwierzytelniać** możesz używać tokenu programu VPP w celu automatycznego instalowania aplikacji Portal firmy na urządzeniu. W takim przypadku użytkownik nie musi podawać identyfikatora Apple ID. Aby zainstalować aplikację Portal firmy przy użyciu tokenu programu VPP, wybierz token w obszarze **Instalowanie aplikacji Portal firmy przy użyciu programu VPP**. Wymaga, aby Portal firmy został dodany do tokenu programu VPP. Nie należy konfigurować zasad wymagających aplikacji dla użytkowników. Usługa Intune automatycznie zainstaluje aplikację Portal firmy na urządzeniach z zastosowanym tym profilem rejestracji. Upewnij się, że token nie wygasł, i że masz wystarczającą liczbę licencji urządzeń dla aplikacji Portal firmy. Jeśli token wygaśnie lub zabraknie dla niego licencji, usługa Intune zainstaluje aplikację Portal firmy ze sklepu App Store (powoduje to wyświetlenie monitu o podanie identyfikatora Apple ID). 
 
-    ![Zrzut ekranu przedstawiający instalowanie aplikacji Portal firmy przy użyciu programu vpp.](./media/device-enrollment-program-enroll-ios/install-cp-with-vpp.png)
+    > [!NOTE]
+    > Po ustawieniu opcji **Wybierz miejsce, w którym użytkownicy muszą się uwierzytelniać** na **Portal firmy** upewnij się, że proces rejestracji urządzenia zostanie wykonany w ciągu pierwszych 24 godzin od pobrania portalu firmy na urządzenie programu DEP. W przeciwnym razie rejestracja może zakończyć się niepowodzeniem, a w celu zarejestrowania urządzenia będzie konieczne zresetowanie do ustawień fabrycznych.
+    
+    ![Zrzut ekranu przedstawiający instalowanie aplikacji Portal firmy przy użyciu programu VPP.](./media/device-enrollment-program-enroll-ios/install-cp-with-vpp.png)
 
-7. Jeśli wybierzesz token dla opcji **Instaluj aplikację Portal firmy przy użyciu programu VPP**, masz opcję zablokowania urządzenia w trybie pojedynczej aplikacji (aplikacji Portal firmy) natychmiast po zakończeniu pracy Asystenta konfiguracji. Wybierz opcję **Tak** w pozycji **Uruchom aplikację Portal firmy w trybie pojedynczej aplikacji do momentu uwierzytelnienia**, aby ustawić tę opcję. Aby użyć urządzenia, użytkownik musi najpierw uwierzytelnić się poprzez zalogowanie w aplikacji Portal firmy.
+7. Jeśli ustawisz wartość **Asystent ustawień** dla opcji **Wybierz miejsce, w którym użytkownicy muszą się uwierzytelniać**, ale chcesz również korzystać z dostępu warunkowego lub wdrażać aplikacje firmowe na urządzeniach, musisz zainstalować aplikację Portal firmy na urządzeniach. W tym celu wybierz pozycję **Tak** w obszarze **Zainstaluj Portal firmy**.  Jeśli chcesz, aby użytkownicy otrzymywali aplikację Portal firmy bez konieczności uwierzytelniania w sklepie z aplikacjami, wybierz opcję **Zainstaluj Portal firmy za pomocą programu VPP** i wybierz token programu VPP. Upewnij się, że token nie wygasł, i że masz wystarczającą liczbę licencji urządzeń dla aplikacji Portal firmy do przeprowadzenia prawidłowego wdrożenia.
+
+8. Jeśli wybierzesz token dla opcji **Instaluj aplikację Portal firmy przy użyciu programu VPP**, możesz zablokować urządzenie w trybie pojedynczej aplikacji (aplikacji Portal firmy) natychmiast po zakończeniu pracy Asystenta konfiguracji. Wybierz opcję **Tak** w pozycji **Uruchom aplikację Portal firmy w trybie pojedynczej aplikacji do momentu uwierzytelnienia**, aby ustawić tę opcję. Aby użyć urządzenia, użytkownik musi najpierw uwierzytelnić się poprzez zalogowanie w aplikacji Portal firmy.
+
+    Uwierzytelnianie wieloskładnikowe nie jest obsługiwane na pojedynczym urządzeniu zablokowanym w trybie pojedynczej aplikacji. To ograniczenie istnieje, ponieważ urządzenie nie może przełączyć się do innej aplikacji w celu ukończenia drugiego składnika uwierzytelniania. W związku z tym, jeśli chcesz przeprowadzać uwierzytelnianie wieloskładnikowe na urządzeniu w trybie pojedynczej aplikacji, drugi składnik musi znajdować się na innym urządzeniu.
+
     Ta funkcja jest tylko obsługiwana w systemie iOS 11.3.1 i jego nowszych wersjach.
 
    ![Zrzut ekranu przedstawiający tryb pojedynczej aplikacji.](./media/device-enrollment-program-enroll-ios/single-app-mode.png)
 
-8. Wybierz pozycję **Ustawienia zarządzania urządzeniami** i określ, czy chcesz, żeby urządzenia korzystające z tego profilu były nadzorowane.
+9. Jeśli chcesz, aby urządzenia korzystające z tego profilu były nadzorowane, wybierz pozycję **Tak** w obszarze **Nadzorowane**.
 
-    ![Zrzut ekranu pozycji Ustawienia zarządzania urządzeniami.](./media/device-enrollment-program-enroll-ios/devicemanagementsettingsblade.png)
+    ![Zrzut ekranu pozycji Ustawienia zarządzania urządzeniami.](./media/device-enrollment-program-enroll-ios/supervisedmode.png)
 
-    W przypadku urządzeń **nadzorowanych** dostępnych jest więcej opcji zarządzania, a blokada aktywacji jest domyślnie wyłączona. Firma Microsoft zaleca używanie programu DEP jako mechanizmu włączania trybu nadzorowanego, szczególnie w przypadku organizacji, które wdrażają dużą liczbę urządzeń z systemem iOS.
+    W przypadku urządzeń **nadzorowanych** dostępnych jest więcej opcji zarządzania, a blokada aktywacji jest domyślnie wyłączona. Firma Microsoft zaleca używanie programu DEP jako mechanizmu włączania trybu nadzorowanego, szczególnie w przypadku wdrażania dużej liczby urządzeń z systemem iOS.
 
     Użytkownicy są powiadamiani o tym, że ich urządzenia są nadzorowane, na dwa sposoby:
 
@@ -168,15 +180,17 @@ Teraz, po zainstalowaniu tokenu, możesz utworzyć profil rejestracji dla urząd
      > [!NOTE]
      > Urządzenie zarejestrowane bez nadzoru można zresetować do nadzorowanego tylko przy użyciu programu Apple Configurator. Zresetowanie urządzenia w ten sposób wymaga podłączenia urządzenia z systemem iOS do komputera Mac za pomocą kabla USB. Dowiedz się więcej na ten temat w [dokumentacji programu Apple Configurator](http://help.apple.com/configurator/mac/2.3).
 
-9. Wybierz, czy chcesz ustawić rejestrację zablokowaną dla urządzeń używających tego profilu. **Rejestracja zablokowana** wyłącza ustawienia systemu iOS, które umożliwiają usunięcie profilu zarządzania w menu **Ustawienia**. Po rejestracji urządzenia nie można zmienić tego ustawienia bez wyczyszczenia danych z urządzenia. Takie urządzenia muszą mieć ustawiony tryb zarządzania **Nadzorowane** na *Tak*. 
+10. Wybierz, czy chcesz ustawić rejestrację zablokowaną dla urządzeń używających tego profilu. **Rejestracja zablokowana** wyłącza ustawienia systemu iOS, które umożliwiają usunięcie profilu zarządzania w menu **Ustawienia**. Po rejestracji urządzenia nie można zmienić tego ustawienia bez wyczyszczenia danych z urządzenia. Takie urządzenia muszą mieć ustawiony tryb zarządzania **Nadzorowane** na *Tak*. 
 
-10. Wybierz, czy chcesz, aby urządzenia korzystające z tego profilu mogły **synchronizować się z komputerami**. W przypadku wybrania pozycji **Zezwalaj programowi Apple Configurator według certyfikatów** należy wybrać certyfikat w obszarze **Certyfikaty programu Apple Configurator**.
+11. Wybierz, czy chcesz, aby urządzenia korzystające z tego profilu mogły **synchronizować się z komputerami**. W przypadku wybrania pozycji **Zezwalaj programowi Apple Configurator według certyfikatów** należy wybrać certyfikat w obszarze **Certyfikaty programu Apple Configurator**.
 
-11. W przypadku wybrania opcji **Zezwalaj programowi Apple Configurator według certyfikatów** w poprzednim kroku wybierz certyfikat programu Apple Configurator do zaimportowania.
+12. W przypadku wybrania opcji **Zezwalaj programowi Apple Configurator według certyfikatów** w poprzednim kroku wybierz certyfikat programu Apple Configurator do zaimportowania.
 
-12. Wybierz przycisk **OK**.
+13. Można określić format nazewnictwa dla urządzeń, który będzie automatycznie stosowany podczas rejestrowania i po każdym kolejnym zaewidencjonowaniu. Aby utworzyć szablon nazewnictwa, wybierz pozycję **Tak** w obszarze **Zastosuj szablon nazwy urządzenia**. Następnie w polu **Szablon nazwy urządzenia** wprowadź szablon, który ma być używany dla nazw korzystających z tego profilu. Możesz określić format szablonu, który zawiera typ urządzenia i numer seryjny. 
 
-13. Wybierz pozycję **Dostosowywanie Asystenta ustawień**, aby skonfigurować następujące ustawienia profilu: ![Dostosowanie Asystenta ustawień.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
+14. Wybierz pozycję **Dalej: Dostosowanie Asystenta ustawień**.
+
+15. Na stronie **Dostosowywanie Asystenta ustawień** skonfiguruj następujące ustawienia profilu: ![Dostosowanie Asystenta ustawień.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
 
 
     | Ustawienia działu | Opis |
@@ -184,23 +198,23 @@ Teraz, po zainstalowaniu tokenu, możesz utworzyć profil rejestracji dla urząd
     | <strong>Nazwa działu</strong> | Wyświetlane, gdy użytkownicy klikną pozycję <strong>Informacje o konfiguracji</strong> podczas aktywacji. |
     |    <strong>Telefon działu</strong>     | Jest wyświetlany, gdy użytkownik kliknie podczas aktywacji przycisk <strong>Potrzebna pomoc</strong>. |
 
-  Można wybrać opcję pokazywania lub ukrywania różnych ekranów Asystenta ustawień na urządzeniu podczas jego konfigurowania.
-  - Jeśli wybierzesz pozycję **Ukryj**, ekran nie będzie wyświetlany podczas konfigurowania. Po skonfigurowaniu urządzenia użytkownik może nadal przejść do menu **Ustawienia**, aby skonfigurować tę funkcję.
-  - Jeśli wybierzesz pozycję **Pokaż**, ekran będzie wyświetlany podczas konfigurowania. Użytkownik może czasami pominąć ekran bez podejmowania akcji. Później jednak może przejść do menu **Ustawienia** urządzenia, aby skonfigurować tę funkcję. 
+    Podczas konfigurowania użytkownika można ukryć ekrany Asystenta ustawień na urządzeniu.
+    - Jeśli wybierzesz pozycję **Ukryj**, ekran nie będzie wyświetlany podczas konfigurowania. Po skonfigurowaniu urządzenia użytkownik może nadal przejść do menu **Ustawienia**, aby skonfigurować tę funkcję.
+    - Jeśli wybierzesz pozycję **Pokaż**, ekran będzie wyświetlany podczas konfigurowania. Użytkownik może czasami pominąć ekran bez podejmowania akcji. Później jednak może przejść do menu **Ustawienia** urządzenia, aby skonfigurować tę funkcję. 
 
 
-    | Ustawienia ekranu Asystenta ustawień | Jeśli wybierzesz pozycję **Pokaż**, podczas konfigurowania urządzenie będzie... |
+    | Ustawienia ekranu Asystent ustawień | Jeśli wybierzesz pozycję **Pokaż**, podczas konfigurowania urządzenie będzie... |
     |------------------------------------------|------------------------------------------|
-    | <strong>Kod dostępu</strong> | Monitować o wprowadzenie hasła. Zawsze należy wymagać kodu dostępu, chyba że urządzenie zostanie zabezpieczone lub dostęp do niego będzie kontrolowany w inny sposób (tj. zostanie zastosowany tryb kiosku, który ogranicza możliwość użycia urządzenia do jednej aplikacji). |
+    | <strong>Kod dostępu</strong> | Monitować o wprowadzenie hasła. Zawsze należy wymagać kodu dostępu dla urządzeń niezabezpieczonych, chyba że dostęp do niego będzie kontrolowany w inny sposób (np. zostanie zastosowany tryb kiosku, który ogranicza możliwość użycia urządzenia do jednej aplikacji). |
     | <strong>Usługi lokalizacyjne</strong> | Monitować użytkownika o określenie lokalizacji. |
-    | <strong>Przywróć</strong> | Wyświetlać ekran **Aplikacje i dane**. Ten ekran oferuje użytkownikowi opcję przywracania lub przenoszenia danych z kopii zapasowej w usłudze iCloud podczas konfigurowania urządzenia. |
-    | <strong>Identyfikator Apple ID i usługa iCloud</strong> | Oferować użytkownikowi opcję logowania za pomocą **identyfikatora Apple ID** i używania usługi **iCloud**.                         |
+    | <strong>Przywróć</strong> | Wyświetlać ekran Aplikacje i dane. Ten ekran oferuje użytkownikowi opcję przywracania lub przenoszenia danych z kopii zapasowej w usłudze iCloud podczas konfigurowania urządzenia. |
+    | <strong>Identyfikator Apple ID i usługa iCloud</strong> | Oferować użytkownikowi opcję logowania za pomocą identyfikatora Apple ID i używania usługi iCloud.                         |
     | <strong>Warunki i postanowienia</strong> | Wymagać od użytkownika akceptacji warunków i postanowień firmy Apple. |
     | <strong>Touch ID</strong> | Oferować użytkownikowi możliwość konfigurowania identyfikacji za pomocą odcisku palca w urządzeniu. |
     | <strong>Apple Pay</strong> | Oferować użytkownikowi opcję skonfigurowania usługi Apple Pay na urządzeniu. |
     | <strong>Powiększenie</strong> | Oferować użytkownikowi opcję powiększania ekranu podczas konfigurowania urządzenia. |
     | <strong>Siri</strong> | Oferować użytkownikowi opcję konfigurowania programu Siri. |
-    | <strong>Dane diagnostyczne</strong> | Wyświetlać ekran **Diagnostyka** dla użytkownika. Na tym ekranie użytkownik może wybrać opcję wysyłania danych diagnostycznych do firmy Apple. |
+    | <strong>Dane diagnostyczne</strong> | Wyświetlać ekran Diagnostyka dla użytkownika. Na tym ekranie użytkownik może wybrać opcję wysyłania danych diagnostycznych do firmy Apple. |
     | <strong>Wyświetlanie sygnału</strong> | Umożliwiać użytkownikowi włączenie funkcji wyświetlania sygnału. |
     | <strong>Ochrona prywatności</strong> | Wyświetlać użytkownikowi ekran ochrony prywatności. |
     | <strong>Migracja systemu Android</strong> | Umożliwiać użytkownikowi migrację danych z urządzenia z systemem Android. |
@@ -210,18 +224,23 @@ Teraz, po zainstalowaniu tokenu, możesz utworzyć profil rejestracji dla urząd
     | <strong>Czas przed ekranem</strong> | Wyświetlać ekran Czas przed ekranem. |
     | <strong>Aktualizacja oprogramowania</strong> | Wyświetlać ekranu obowiązkowych aktualizacji oprogramowania. |
     | <strong>Instalator SIM</strong> | Umożliwiać użytkownikowi dodawanie planu sieci komórkowej. |
+    | <strong>Wygląd</strong> | Wyświetlać ekran Wygląd dla użytkownika. |
+    | <strong>Język ekspresowy</strong>| Wyświetlać ekran Język ekspresowy dla użytkownika. |
+    | <strong>Preferowany język</strong> | Dawać użytkownikowi możliwość wyboru **preferowanego języka**. |
+    | <strong>Migracja między urządzeniami</strong> | Umożliwiać użytkownikowi migrowanie danych ze starego urządzenia na to urządzenie.|
+    
 
-14. Wybierz przycisk **OK**.
+16. Wybierz pozycję **Dalej**, aby przejść do strony **Recenzja i tworzenie**.
 
-15. Abu zapisać profil, wybierz pozycję **Utwórz**.
+17. Abu zapisać profil, wybierz pozycję **Utwórz**.
 
 ## <a name="sync-managed-devices"></a>Synchronizowanie urządzeń zarządzanych
 Gdy usługa Intune ma uprawnienia do zarządzania urządzeniami, można ją zsynchronizować z danymi firmy Apple, aby wyświetlić zarządzane urządzenia w usłudze Intune w witrynie Azure Portal.
 
-1. W usłudze Intune w witrynie Azure Portal wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Tokeny programu rejestracji** > wybierz token z listy > **Urządzenia** > **Synchronizuj**. ![Zrzut ekranu przedstawiający wybrany węzeł Urządzenia programu Enrollment Program i wybierany link Synchronizuj.](./media/device-enrollment-program-enroll-ios/image06.png)
+1. W usłudze Intune w witrynie Azure Portal wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Tokeny programu rejestracji** > wybierz token z listy > **Urządzenia** > **Synchronizuj**. ![Zrzut ekranu przedstawiający węzeł Urządzenia programu Enrollment Program i link Synchronizuj.](./media/device-enrollment-program-enroll-ios/image06.png)
 
    Aby spełnić warunki firmy Apple dotyczące ruchu w programie rejestracji, usługa Intune nakłada następujące ograniczenia:
-   - Pełną synchronizację można uruchamiać nie częściej niż co siedem dni. Podczas pełnej synchronizacji usługa Intune pobiera pełną zaktualizowaną listę numerów seryjnych przypisanych do serwera MDM firmy Apple połączonego z usługą Intune. Gdy urządzenie uczestniczące w programie rejestracji zostanie usunięte z portalu usługi Intune bez usuwania przypisania z serwera MDM firmy Apple w portalu programu DEP, zostanie ono ponownie zaimportowane do usługi Intune dopiero po uruchomieniu pełnej synchronizacji.   
+   - Pełną synchronizację można uruchamiać nie częściej niż co siedem dni. Podczas pełnej synchronizacji usługa Intune pobiera pełną zaktualizowaną listę numerów seryjnych przypisanych do serwera MDM firmy Apple połączonego z usługą Intune. Jeśli urządzenie programu DEP zostanie usunięte z portalu usługi Intune, powinno zostać cofnięte jego przypisanie do serwera MDM firmy Apple w portalu programu DEP. W przeciwnym razie nie zostanie ono ponownie zaimportowane do usługi Intune do momentu uruchomienia pełnej synchronizacji.   
    - Synchronizacja jest uruchamiana automatycznie co 24 godziny. Można też przeprowadzić synchronizację, klikając przycisk **Synchronizuj** (nie częściej niż raz na 15 minut). Każde żądanie synchronizacji ma przydzielone 15 minut na ukończenie. Przycisk **Synchronizuj** pozostaje wyłączony do ukończenia synchronizacji. Synchronizacja spowoduje odświeżenie stanu bieżącego urządzenia oraz zaimportowanie nowych urządzeń przypisanych do serwera MDM firmy Apple.   
 
 

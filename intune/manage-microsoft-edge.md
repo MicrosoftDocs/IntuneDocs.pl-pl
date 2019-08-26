@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/05/2019
+ms.date: 08/19/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7636e1914e23e7009a25f45f330fe85af2a03536
-ms.sourcegitcommit: 293dfbea2b4756bb9b7df1705a2b5f752dfaa807
+ms.openlocfilehash: 8ec1af80d52a8331c2bef136cd0947b81beaa3ea
+ms.sourcegitcommit: b1ddc7f4a3d520b7d6755c7a423a46d1e2548592
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68701013"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69651173"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Zarządzanie dostępem do Internetu przy użyciu przeglądarki Microsoft Edge w usłudze Microsoft Intune
 
@@ -181,7 +181,22 @@ Użyj następującej pary klucz/wartość, aby skonfigurować skrót do strony g
 |    Klucz    |    Wartość    |
 |-------------------------------------------------------------------|-------------|
 |    com.microsoft.intune.mam.managedbrowser.homepage   |    Określ prawidłowy adres URL. Niepoprawne adresy URL są blokowane ze względów bezpieczeństwa.<br>**Przykład:**  <`https://www.bing.com`>
-    |
+
+## <a name="configure-your-organizations-logo-and-brand-color-for-new-tab-pages-in-microsoft-edge"></a>Konfigurowanie logo i koloru marki organizacji dla nowych stron kart w przeglądarce Microsoft Edge
+
+Te ustawienia umożliwiają dostosowanie strony nowej karty dla przeglądarki Microsoft Edge w celu wyświetlania logo i koloru marki organizacji jako tła strony.
+
+Aby przekazać logo i kolor organizacji, najpierw wykonaj następujące czynności:
+- W witrynie Azure Portal przejdź do usługi Intune —> Aplikacje klienckie —> Znakowanie i dostosowywanie —> Znakowanie tożsamości firmy
+- Aby ustawić logo marki, w obszarze „Wyświetlanie” wybierz pozycję „Tylko logo firmy”. Zalecane jest użycie logo z przezroczystym tłem. 
+- Aby ustawić kolor tła marki, w obszarze „Wyświetlanie” wybierz pozycję „Kolor motywu”. Przeglądarka Microsoft Edge stosuje jaśniejszy odcień koloru na nowej karcie, co gwarantuje, że strona ma wysoką czytelność. 
+
+Następnie użyj następujących par klucz-wartość, aby ściągnąć znakowanie swoich organizacji do przeglądarki Microsoft Edge:
+
+|    Klucz    |    Wartość    |
+|--------------------------------------------------------------------|------------|
+|    com.microsoft.intune.mam.managedbrowser.NewTabPage.BrandLogo    |    Prawda    |
+|    com.microsoft.intune.mam.managedbrowser.NewTabPage.BrandColor    |    Prawda    |
 
 ## <a name="configure-managed-bookmarks-for-microsoft-edge"></a>Konfigurowanie zakładek zarządzanych dla przeglądarki Microsoft Edge
 
@@ -232,7 +247,8 @@ Możesz użyć różnych formatów adresów URL do tworzenia listy witryn dozwol
     |    `http://www.contoso.com`    |    Zgodny z pojedynczą stroną    |    `www.contoso.com`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`contoso.com/`    |
     |    `http://contoso.com`    |    Zgodny z pojedynczą stroną    |    `contoso.com/`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com`    |
     |    `http://www.contoso.com/*;`   |    Zgodny ze wszystkimi adresami URL rozpoczynającymi się od ciągu `www.contoso.com`    |    `www.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com/videos/tvshows`    |    `host.contoso.com`<br>`host.contoso.com/images`    |
-    |    `http://*.contoso.com/*`    |    Zgodny ze wszystkimi domenami podrzędnymi w domenie `contoso.com`    |    `developer.contoso.com/resources`<br>`news.contoso.com/images`<br>`news.contoso.com/videos`    |    `contoso.host.com`    |    `http://*contoso.com/*`    |    Zgodny ze wszystkimi domenami podrzędnymi kończącymi się ciągiem `contoso.com/`    |    `http://news-contoso.com`<br>`http://news-contoso.com.com/daily`    |    `http://news-contoso.host.com`    |
+    |    `http://*.contoso.com/*`    |    Zgodny ze wszystkimi domenami podrzędnymi w domenie `contoso.com`    |    `developer.contoso.com/resources`<br>`news.contoso.com/images`<br>`news.contoso.com/videos`    |    `contoso.host.com`
+    |    `http://*contoso.com/*`    |    Zgodny ze wszystkimi domenami podrzędnymi kończącymi się ciągiem `contoso.com/`    |    `http://news-contoso.com`<br>`http://news-contoso.com.com/daily`    |    `http://news-contoso.host.com`    |
     `http://www.contoso.com/images`    |    Zgodny z pojedynczym folderem    |    `www.contoso.com/images`    |    `www.contoso.com/images/dogs`    |
     |    `http://www.contoso.com:80`    |    Zgodny z pojedynczą stroną z użyciem numeru portu    |    `http://www.contoso.com:80`    |         |
     |    `https://www.contoso.com`    |    Zgodny z pojedynczą, bezpieczną stroną    |    `https://www.contoso.com`    |    `http://www.contoso.com`    |

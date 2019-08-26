@@ -16,12 +16,12 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3ed61f556cadf3ba04f7c33fbede2102c94b18f
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 886241dcde88765c4879357ee42b2b281e7f3408
+ms.sourcegitcommit: 549352bdea93cc2809e3e0010bfcc10bd44dc728
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549321"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68861872"
 ---
 # <a name="additional-resources-for-planning-your-intune-deployment"></a>Dodatkowe zasoby związane z planowaniem wdrożenia usługi Intune
 
@@ -45,17 +45,14 @@ Oto lista szablonów tabel dla każdej sekcji.
 | | Zasady zgodności | |
 | | Zasady dostępu warunkowego|-|
 
-
 ## <a name="further-reading"></a>Dalsze informacje
 
 Poniższe zasoby zawierają dodatkowe informacje, które mogą być przydatne podczas procesu planowania, projektowania i implementowania wdrożenia usługi Intune.
 
-- [Dokumentacja usługi Microsoft Intune](/intune/) — pełny zestaw dokumentacji usługi Intune.
+- [Dokumentacja usługi Microsoft Intune](http://docs.microsoft.com/intune/) — pełny zestaw dokumentacji usługi Intune.
 
-- [Blog usługi Intune](https://blogs.technet.microsoft.com/enterprisemobility/) — wpisy wyjaśniające, jaką rolę usługa Intune odgrywa w obszarze Enterprise Mobility.
+- [Centrum zaufania Microsoft](https://www.microsoft.com/TrustCenter) — informacje na temat podejścia firmy Microsoft do kwestii bezpieczeństwa, ochrony prywatności, zgodności i transparentności we wszystkich produktach i usługach w chmurze firmy Microsoft.
 
-- [Centrum zaufania Microsoft](http://www.microsoft.com/TrustCenter) — informacje na temat podejścia firmy Microsoft do kwestii bezpieczeństwa, ochrony prywatności, zgodności i transparentności we wszystkich produktach i usługach w chmurze firmy Microsoft.
+- [Witryna User Voice dotycząca usługi Intune](https://microsoftintune.uservoice.com/) — chcesz zażądać jakiejś funkcji lub głosować w sprawie funkcji z innymi klientami? Podziel się swoim zdaniem na temat usługi Intune przez witrynę User Voice. Czekamy na opinie.
 
-- [Witryna User Voice dotycząca usługi Intune](http://microsoftintune.uservoice.com/) — chcesz zażądać jakiejś funkcji lub głosować w sprawie funkcji z innymi klientami? Podziel się swoim zdaniem na temat usługi Intune przez witrynę User Voice. Czekamy na opinie.
-
-- [Przewodnik rejestracji](https://gallery.technet.microsoft.com/Intune-End-User-Enrollment-3a0c9b0c?WT.mc_id=Blog_Intune_General_PCIT) — zestaw dokumentów, których możesz użyć w pierwotnej formie lub które możesz zmodyfikować, dopasowując je do swojego planu komunikacji z użytkownikami końcowymi, aby wyjaśnić im, co oznacza rejestracja ich urządzeń osobistych w usłudze Intune.
+- [Planowanie komunikacji](migration-guide-communication-plan.md) — w przypadku wdrażania usługi Intune plan komunikacji stanowi niezwykle ważny element. W tym artykule można pobrać zestaw wdrażania usługi Intune obejmujący szablony wiadomości e-mail, przewodnik rejestracji w usłudze Intune oraz linki do instruktażowych filmów wideo, które ułatwiają przedstawienie użytkownikom końcowym procesu rejestracji.

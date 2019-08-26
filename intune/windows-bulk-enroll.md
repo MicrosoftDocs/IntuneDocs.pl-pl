@@ -16,12 +16,12 @@ ms.reviewer: damionw
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 996380a4938ca73bbf5f71c82e99814f772001a4
-ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
+ms.openlocfilehash: 1775bdf0030968cdd16d87d91794480a43a22d12
+ms.sourcegitcommit: b1ddc7f4a3d520b7d6755c7a423a46d1e2548592
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67403483"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69651037"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Rejestracja zbiorcza urządzeń z systemem Windows
 
@@ -73,7 +73,7 @@ Użytkownicy usługi Azure AD są standardowymi użytkownikami tych urządzeń i
 
 2. Określ, jak użytkownik może zastosować pakiet aprowizacyjny do urządzenia.  Pakiet aprowizacyjny może zostać zastosowany do urządzenia na jeden z następujących sposobów:
    - Umieść pakiet aprowizacyjny na dysku USB, podłącz dysk USB do urządzenia, które ma zostać poddane rejestrowaniu zbiorczemu i zastosuj go podczas konfiguracji wstępnej
-   - Umieść pakiet aprowizacyjny w folderze sieciowym i zastosuj go do urządzenia, aby poddać urządzenie rejestrowaniu zbiorczemu po konfiguracji wstępnej
+   - Umieść pakiet aprowizacyjny w folderze sieciowym i zastosuj go do po konfiguracji wstępnej
 
    Aby uzyskać instrukcje krok po kroku dotyczące stosowania pakietu aprowizacyjnego, zobacz artykuł [Apply a provisioning package](https://technet.microsoft.com/itpro/windows/configure/provisioning-apply-package) (Stosowanie pakietu aprowizacyjnego).
 

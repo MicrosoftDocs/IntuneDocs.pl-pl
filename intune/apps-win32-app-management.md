@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19b8693a5d2c2df042bd9339cb74bbcde0da626d
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 890d398de938680447b71a46d4e329a6bdf52616
+ms.sourcegitcommit: ec22a186a9cfa489a8490698e387624e480892d8
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67884050"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68960585"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Autonomiczna usługa Intune — zarządzanie aplikacjami Win32
 
@@ -283,6 +283,8 @@ W tym momencie wykonywanie kroków dodawania aplikacji Win32 do usługi Intune z
 ## <a name="app-dependencies"></a>Zależności aplikacji
 
 Zależności aplikacji to aplikacje, które należy zainstalować przed zainstalowaniem aplikacji Win32. Możesz wymagać, aby inne aplikacje były instalowane jako zależności. W szczególności na urządzeniu muszą zostać zainstalowane aplikacje zależne przed zainstalowaniem aplikacji Win32. Maksymalnie można użyć 100 zależności, co obejmuje zależności wszystkich dołączonych zależności, a także samą aplikację. Zależności aplikacji Win32 możesz dodać tylko po dodaniu i przekazaniu aplikacji Win32 do usługi Intune. Po dodaniu aplikacji Win32 zostanie wyświetlona opcja **Zależności** w bloku aplikacji Win32. 
+
+Każda zależność aplikacji Win32 musi być również aplikacją systemu Win32. Zależność od innych typów aplikacji, takich jak pojedyncze aplikacje LOB MSI lub aplikacje ze sklepu, nie jest obsługiwana.
 
 Podczas dodawania zależności aplikacji możesz przeprowadzić wyszukiwanie na podstawie nazwy aplikacji i wydawcy. Ponadto możesz sortować dodane zależności na podstawie nazwy aplikacji i wydawcy. Wcześniej dodanych zależności aplikacji nie można wybrać na liście dodanych zależności aplikacji. 
 

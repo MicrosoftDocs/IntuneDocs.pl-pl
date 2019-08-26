@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/23/2019
+ms.date: 08/16/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f2e4870d1a2614ecccc1647db828e214a6aede8
-ms.sourcegitcommit: e9911a6bbfb8532a27e70d70402a214a8b2b6c75
+ms.openlocfilehash: 267eb630b962893d5ab32530a095fe2fd3f7102e
+ms.sourcegitcommit: cbd406e3c6ab8c9a29d58dfda4a18e34277a1594
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68818799"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620215"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co nowego w usłudze Microsoft Intune
 
@@ -51,6 +51,176 @@ Dowiedz się co tydzień, co nowego w usłudze Microsoft Intune. Możesz tu rów
 ### Role-based access control
 
 -->  
+
+<!-- ########################## -->
+
+## <a name="week-of-august-12-2019"></a>Tydzień od 12 sierpnia 2019 r.
+
+### <a name="app-management"></a>Zarządzanie aplikacjami
+
+#### <a name="control-ios-app-uninstall-behavior-at-device-unenrollment----3504144-----"></a>Kontrolowanie zachowania odinstalowywania aplikacji systemu iOS przy wyrejestrowywaniu urządzenia <!-- 3504144   -->
+Administratorzy mogą zarządzać tym, czy aplikacja jest usuwana lub zachowywana na urządzeniu, gdy urządzenie jest wyrejestrowywana na poziomie grupy użytkowników lub grupy urządzeń. 
+
+#### <a name="categorize-microsoft-store-for-business-apps----3926922---"></a>Kategoryzowanie aplikacji ze sklepu Microsoft Store dla Firm <!-- 3926922 -->
+Możesz kategoryzować aplikacje ze sklepu Microsoft Store dla Firm. W tym celu wybierz kolejno pozycje **Intune** > **Aplikacje klienckie** > **Aplikacje** > wybierz aplikację ze sklepu Microsoft Store dla Firm > **Informacje o aplikacji** > **Kategoria**. W menu rozwijanym przypisz kategorię.
+
+#### <a name="customized-notifications-for-microsoft-intune-app-users----4843354----"></a>Dostosowane powiadomienia dla użytkowników aplikacji usługi Microsoft Intune <!-- 4843354  -->
+Aplikacja usługi Microsoft Intune dla systemu Android obsługuje teraz wyświetlanie niestandardowych powiadomień push, dopasowując ją do funkcji pomocy technicznej ostatnio dodanej w aplikacjach Portal firmy dla systemów iOS i Android. Aby uzyskać więcej informacji, zobacz [Wysyłanie powiadomień niestandardowych w usłudze Intune](custom-notifications.md).
+
+### <a name="device-configuration"></a>Konfiguracja urządzenia
+
+#### <a name="new-features-for-android-enterprise-dedicated-devices-in-multi-app-mode----3755304-3041943-3041946-----"></a>Nowe funkcje dla dedykowanych urządzeń z systemem Android Enterprise w trybie kiosku z wieloma aplikacjami <!-- 3755304 3041943 3041946   -->
+W usłudze Intune możesz kontrolować funkcje i ustawienia w środowisku w stylu kiosku na urządzeniach dedykowanych z systemem Android Enterprise (**Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **Android Enterprise** jako platforma > **Tylko właściciel urządzenia, ograniczenia dotyczące urządzeń** jako typ profilu).
+
+W tej aktualizacji są dodawane następujące funkcje:
+
+- **Urządzenia dedykowane** > **Wiele aplikacji**: **Wirtualny przycisk ekranu głównego** można wyświetlić przez szybkie przesunięcie ekranu w górę. Może również być on przyciskiem przestawnym, który użytkownicy mogą przenosić.
+- **Urządzenia dedykowane** > **Wiele aplikacji**: **Dostęp do latarki** umożliwia użytkownikom korzystanie z latarki. 
+- **Urządzenia dedykowane** > **Wiele aplikacji**: **Regulacja głośności multimediów** umożliwia użytkownikom kontrolowanie głośności multimediów urządzenia przy użyciu suwaka. 
+- **Urządzenia dedykowane** > **Wiele aplikacji**:  **Włącz wygaszacz ekranu**, przekaż obraz niestandardowy i określ, kiedy zostanie wyświetlony wygaszacz ekranu.
+
+Aby zapoznać się z bieżącymi ustawieniami, zobacz artykuł [Android Enterprise device settings to allow or restrict features using Intune](device-restrictions-android-for-work.md#dedicated-device-settings) (Ustawienia urządzeń z systemem Android Enterprise używane w celu zezwolenia na funkcje lub ich ograniczenia za pomocą usługi Intune).
+
+Dotyczy:  
+- Dedykowane urządzenia z rozwiązaniem Android Enterprise
+
+#### <a name="new-app-and-configuration-profiles-for-android-enterprise-fully-managed-devices----3574215-3574238-3574235-3574232-----"></a>Nowe profile aplikacji i konfiguracji dla w pełni zarządzanych urządzeń z systemem Android Enterprise <!-- 3574215 3574238 3574235 3574232   -->
+Przy użyciu profilów można skonfigurować ustawienia, które stosują ustawienia sieci VPN, poczty e-mail i sieci Wi-Fi do urządzeń właściciela urządzenia z systemem Android Enterprise (w pełni zarządzanych). W tej aktualizacji możesz:
+
+- Używać [zasad konfiguracji aplikacji](app-configuration-policies-use-android.md) w celu wdrożenia ustawień poczty e-mail dla programów Outlook, Gmail oraz Nine Work.
+- Używać profilów konfiguracji urządzeń w celu wdrożenia [ustawień zaufanych certyfikatów głównych](certificates-configure.md).
+- Używać profilów konfiguracji urządzeń w celu wdrożenia ustawień sieci [VPN](vpn-settings-android-enterprise.md) i [Wi-Fi](wi-fi-settings-android-enterprise.md).
+
+> [!IMPORTANT]
+> Dzięki tej funkcji użytkownicy uwierzytelniają się przy użyciu nazwy użytkownika i hasła na potrzeby profilów sieci VPN, Wi-Fi i poczty e-mail. Obecnie uwierzytelnianie oparte na certyfikatach jest niedostępne. 
+
+Dotyczy:  
+- Właściciel urządzenia z systemem Android Enterprise (w pełni zarządzanego)
+
+#### <a name="control-the-apps-files-documents-and-folders-that-open-when-users-sign-in-to-macos-devices---3914202-----"></a>Kontrolowanie aplikacji, plików, dokumentów i folderów, które są otwierane, gdy użytkownicy logują się do urządzeń z systemem macOS <!--3914202   -->
+Na urządzeniach z systemem macOS można włączać i konfigurować funkcje (**Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **macOS** jako platforma > **Ograniczenia urządzenia** jako typ profilu). 
+
+W tej aktualizacji jest dostępne nowe ustawienie elementów logowania, które umożliwia kontrolowanie aplikacji, plików, dokumentów i folderów otwieranych, gdy użytkownik loguje się do zarejestrowanego urządzenia. 
+
+Aby zapoznać się z bieżącymi ustawieniami, zobacz artykuł [macOS device feature settings in Intune](macos-device-features-settings.md) (Ustawienia funkcji urządzeń z systemem macOS w usłudze Intune).
+
+Dotyczy:  
+- macOS
+
+#### <a name="deadlines-replace-engaged-restart-settings-for-windows-update-rings------4464404----------"></a>Terminy ostateczne zastępują ustawienia ponownego uruchamiania wymagającego interwencji użytkownika dla pierścieni witryny Windows Update   <!-- 4464404        -->
+W celu dostosowana do najnowszych [zmian obsługi systemu Windows](https://docs.microsoft.com/windows/whats-new/whats-new-windows-10-version-1903#servicing) pierścienie aktualizacji systemu Windows 10 w usłudze Intune [obsługują teraz ustawienia terminów ostatecznych](windows-update-settings.md). *Terminy ostateczne* określają, kiedy urządzenie instaluje aktualizacje dotyczące funkcji i zabezpieczeń.  Na urządzeniach z systemem Windows 10 1903 lub nowszym *terminy ostateczne* zastępują konfiguracje *ponownego uruchamiania wymagającego interwencji użytkownika*.  W przyszłości *terminy ostateczne* zastąpią również *ponowne uruchamianie wymagające interwencji użytkownika* w starszych wersjach systemu Windows 10.  
+
+Jeśli nie skonfigurujesz *terminów ostatecznych*, urządzenia będą nadal używać ustawień *ponownego uruchamiania wymagającego interwencji użytkownika*, ale [obsługa ustawień ponownego uruchamiania wymagającego interwencji użytkownika w usłudze Intune zostanie wycofana](whats-new.md#plan-for-change-new-windows-updates-settings-in-intune-) w przyszłej aktualizacji.  
+
+Zaplanuj używanie *terminów ostatecznych* dla wszystkich urządzeń z systemem Windows 10. Po wprowadzeniu ustawień *terminów ostatecznych* można zmienić konfiguracje usługi Intune pod kątem *ponownego uruchamiania wymagającego interwencji użytkownika* na Nieskonfigurowane. Po ustawieniu opcji na Nieskonfigurowane usługa Intune przestanie zarządzać tymi ustawieniami na urządzeniach, ale nie usunie ostatnich konfiguracji ustawienia z urządzenia. Z tego względu ostatnie konfiguracje, które zostały ustawione na potrzeby *ponownego uruchamiania wymagającego interwencji użytkownika*, pozostają aktywne i są używane na urządzeniach, dopóki te ustawienia nie zostaną zmodyfikowane przy użyciu metody innej niż usługa Intune. Później w przypadku zmiany wersji systemu Windows lub rozszerzenia obsługi usługi Intune na potrzeby *terminów ostatecznych* na wersję systemu Windows urządzeń urządzenie rozpocznie korzystanie z nowych ustawień, które zostały już wprowadzone.
+
+#### <a name="support-for-multiple-microsoft-intune-certificate-connectors--------4704642--------"></a>Obsługa łączników certyfikatów usługi Microsoft Intune   <!--   4704642      -->
+Usługa Intune obsługuje teraz instalowanie i używanie wielu [łączników certyfikatów usługi Microsoft Intune dla operacji PKCS](certficates-pfx-configure.md). Ta zmiana obsługuje równoważenie obciążenia i wysoką dostępność łącznika. Każde wystąpienie łącznika może przetwarzać żądania certyfikatów z usługi Intune.  Jeśli jeden łącznik jest niedostępny, inne łączniki kontynuują przetwarzanie żądań. 
+
+Aby używać wielu łączników, nie trzeba uaktualniać oprogramowania łącznika do najnowszej wersji.  
+
+#### <a name="new-settings-and-changes-to-existing-settings-to-restrict-features-on-ios-and-macos-devices----4867699-4867709-----"></a>Nowe ustawienia i zmiany istniejących ustawień w celu ograniczenia funkcji na urządzeniach z systemem iOS i macOS <!-- 4867699 4867709   -->
+Istnieje możliwość utworzenia profilów w celu ograniczenia niektórych ustawień i funkcji na urządzeniach z systemami iOS i macOS (**Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **iOS** lub **macOS** jako platforma > **Ograniczenia urządzenia** jako typ profilu). Ta aktualizacja obejmuje następujące funkcje:
+
+- W obszarze **macOS** > **Ograniczenia urządzenia** > **Chmura i magazyn** użyj nowego ustawienia **Przekazanie**, aby blokować możliwość rozpoczynania pracy przez użytkowników na jednym urządzeniu z systemem macOS i kontynuowania na innym urządzeniu z systemem macOS lub iOS.
+
+  Aby zobaczyć bieżące ustawienia, przejdź do artykułu [Ustawienia urządzeń z systemem macOS umożliwiające działanie funkcji lub ich ograniczanie przy użyciu usługi Intune](device-restrictions-macos.md).
+
+- W obszarze **iOS** > **Ograniczenia urządzenia** wprowadzono kilka zmian:
+
+  - **Aplikacje wbudowane** > **Znajdź mój telefon iPhone (tylko tryb nadzorowany)** : nowe ustawienie, które blokuje tę funkcję w funkcji Znajdź moją aplikację. 
+  - **Aplikacje wbudowane** > **Znajdź moich znajomych (tylko tryb nadzorowany)** : nowe ustawienie, które blokuje tę funkcję w funkcji Znajdź moją aplikację. 
+  - **Bezprzewodowe** > **Modyfikacja stanu sieci Wi-Fi (tylko tryb nadzorowany)** : nowe ustawienie, które uniemożliwia użytkownikom włączanie lub wyłączanie sieci Wi-Fi na urządzeniu.
+  - **Klawiatura i słownik** > **QuickPath (tylko tryb nadzorowany)** : nowe ustawienie, które blokuje funkcję QuickPath.
+  - **Chmura i magazyn**: nazwa opcji **Kontynuacja aktywności** została zmieniona na **Przekazanie**.
+
+  Aby zobaczyć bieżące ustawienia, przejdź do artykułu [Ustawienia urządzeń z systemem iOS umożliwiające działanie funkcji lub ich ograniczanie przy użyciu usługi Intune](device-restrictions-ios.md).
+
+Dotyczy:  
+- System macOS 10.15 i nowsze
+- System iOS 13 i nowsze
+
+#### <a name="some-unsupervised-ios-device-restrictions-will-become-supervised-only-with-the-ios-130-release----4867809-----"></a>Niektóre ograniczenia nienadzorowanego urządzenia z systemem iOS zostaną zmienione na tylko nadzorowane w przypadku wersji iOS 13.0 <!-- 4867809   -->
+W tej aktualizacji niektóre ustawienia mają zastosowanie tylko do nadzorowanych urządzeń z systemem iOS 13.0. Jeśli te ustawienia zostały skonfigurowane i przypisane do urządzeń nienadzorowanych przed wydaniem systemu iOS 13.0, ustawienia są nadal stosowane do tych urządzeń nienadzorowanych. Obowiązują one również po uaktualnieniu urządzeń do systemu iOS 13.0. Ograniczenia są usuwane na urządzeniach nienadzorowanych, których kopie zapasowe są tworzone i przywracane. 
+
+Należą do nich następujące ustawienia:
+
+- Sklep App Store, wyświetlanie dokumentów, granie
+  - App Store
+  - Jawna zawartość programu iTunes — muzyka, podcasty lub wiadomości
+  - Dodawanie znajomych do usługi Game Center
+  - Gry dla wielu graczy
+- Aplikacje wbudowane
+  - Aparat fotograficzny
+    - FaceTime
+  - Safari
+    - Autowypełnianie
+- Chmura i magazyn
+  - Tworzenie kopii zapasowych w usłudze iCloud
+  - Blokuj synchronizowanie dokumentów z usługą iCloud
+  - Blokuj synchronizowanie pęku kluczy z usługą iCloud
+
+Aby zobaczyć bieżące ustawienia, przejdź do artykułu [Ustawienia urządzeń z systemem iOS umożliwiające działanie funkcji lub ich ograniczanie przy użyciu usługi Intune](device-restrictions-ios.md).
+
+Dotyczy:  
+- System iOS 13.0 i nowsze
+
+#### <a name="improved-device-status-for-macos-filevault-encryption-----4944983-----------"></a>Ulepszony stan urządzenia na potrzeby szyfrowania FileVault w systemie macOS  <!-- 4944983         -->
+Zaktualizowaliśmy kilka [komunikatów dotyczących stanu urządzenia](encryption-monitor.md#device-encryption-status) na potrzeby szyfrowania przy użyciu programu FileVault na urządzeniach z systemem macOS.
+
+#### <a name="some-windows-defender-antivirus-scan-settings-in-the-reporting-show-a-failed-status----5119229---"></a>Niektóre ustawienia skanowania programu antywirusowego Windows Defender raportach pokazują stan niepowodzenia <!-- 5119229 -->
+W usłudze Intune możesz utworzyć zasady, aby używać programu antywirusowego Windows Defender do skanowania urządzeń z systemem Windows 10 (**Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **Windows 10 i nowsze** jako platforma > **Ograniczenia urządzenia** jako typ profilu > **Program antywirusowy Windows Defender**). Raporty **Godzina przeprowadzania codziennego szybkiego skanowania** i **Typ skanowania systemu do wykonania** pokazują stan niepowodzenia, gdy w rzeczywistości jest to stan sukcesu. 
+
+W tej aktualizacji to zachowanie zostało naprawione. Oznacza to, że ustawienia **Godzina przeprowadzania codziennego szybkiego skanowania** i **Typ skanowania systemu do wykonania** mają stan sukcesu po pomyślnym ukończeniu skanowania i stan niepowodzenia, jeśli zastosowanie ustawień zakończy się niepowodzeniem. 
+
+Aby uzyskać więcej informacji na temat ustawień programu antywirusowego, zobacz [Ustawienia urządzeń z systemem Windows 10 (i nowszym) w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune](device-restrictions-windows-10.md#windows-defender-antivirus). 
+
+### <a name="device-enrollment"></a>Rejestrowanie urządzeń
+
+#### <a name="default-scope-tags----3702875----"></a>Domyślne tagi zakresu <!-- 3702875  -->
+Nowy, wbudowany domyślny tag zakresu jest teraz dostępny. Wszystkie nieotagowane obiekty usługi Intune, które obsługują tagi zakresu, są automatycznie przypisywane do domyślnego tagu zakresu. **Domyślny** tag zakresu jest dodawany do wszystkich istniejących przypisań ról w celu zapewnienia, że można już korzystać z funkcji administratora. Jeśli nie chcesz, aby administrator widział obiekty usługi Intune z domyślnym tagiem zakresu, usuń domyślny tag zakresu z przypisania roli. Ta funkcja jest podobna do funkcji zakresów zabezpieczeń w programie System Center Configuration Manager. Aby uzyskać więcej informacji, zobacz [Use RBAC and scope tags to for distributed IT](scope-tags.md) (Używanie kontroli RBAC i tagów zakresu w rozproszonej infrastrukturze informatycznej).
+
+#### <a name="android-enrollment-device-administrator-support----4869749-----"></a>Obsługa rejestracji administratora urządzeń z systemem Android <!-- 4869749   -->
+Opcja rejestracji administratora urządzenia z systemem Android została dodana do strony rejestracji systemu Android (**Intune** > **Rejestracja urządzenia** > **Rejestracja systemu Android**). Administrator urządzenia z systemem Android będzie nadal domyślnie włączony dla wszystkich dzierżaw.  Aby uzyskać więcej informacji, zobacz [Rejestracja administratora urządzeń z systemem Android](android-enroll-device-administrator.md).
+
+#### <a name="skip-more-screens-in-setup-assistant---4877451----"></a>Pomijanie większej liczby ekranów w Asystencie ustawień <!--4877451  -->
+Można ustawić profile programu Device Enrollment Program, aby pomijać następujące ekrany Asystenta ustawień:
+- Dla systemu iOS
+    - Wygląd
+    - Język ekspresowy
+    - Preferowany język
+    - Migracja między urządzeniami
+- Dla systemu macOS
+    - Czas korzystania z urządzenia
+    - Konfiguracja funkcji Touch ID
+
+Aby uzyskać więcej informacji na temat dostosowywania Asystenta ustawień, zobacz [Tworzenie profilu rejestracji Apple dla systemu iOS](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) i [Tworzenie profilu rejestracji Apple dla systemu macOS](device-enrollment-program-enroll-macos.md#create-an-apple-enrollment-profile).
+
+#### <a name="add-a-user-column-to-the-autopilot-device-csv-upload-process----3823054---"></a>Dodawanie kolumny użytkownika do procesu przekazywania pliku CSV urządzeń rozwiązania Autopilot <!-- 3823054 -->
+Teraz można dodać kolumnę użytkownika do procesu przekazywania pliku CSV dla urządzeń rozwiązania Android. Umożliwia to zbiorcze przypisywanie użytkowników w momencie importowania pliku CSV. Nowy format wierszy w pliku CSV wygląda następująco: numer seryjny, identyfikator produktu systemu Windows, skrót sprzętu, opcjonalny tag grupy, opcjonalny przypisany użytkownik. Aby uzyskać więcej informacji, zobacz [Rejestrowanie urządzeń z systemem Windows w usłudze Intune za pomocą rozwiązania Windows Autopilot](enrollment-autopilot.md).
+
+
+### <a name="device-management"></a>Zarządzanie urządzeniami
+
+#### <a name="configure-automatic-device-clean-up-time-limit-down-to-30-days---4231059----"></a>Konfigurowanie automatycznego limitu czasu oczyszczania urządzenia na 30 dni <!--4231059  -->
+Możesz ustawić automatyczny limit czasu oczyszczania urządzenia na tylko 30 dni (zamiast poprzedniego limitu wynoszącego 90 dni) po ostatnim zalogowaniu. W tym celu przejdź do pozycji **Intune** > **Urządzenia** > **Konfiguracja** > **Reguły czyszczenia urządzeń**.
+
+#### <a name="build-number-included-on-android-device-hardware-page----4461910-----"></a>Numer kompilacji uwzględniony na stronie Sprzęt urządzenia z systemem Android <!-- 4461910   -->
+Nowy wpis na stronie Sprzęt dla każdego urządzenia z systemem Android zawiera numer kompilacji systemu operacyjnego urządzenia. Aby uzyskać więcej informacji, zobacz [Wyświetlanie szczegółów urządzenia w usłudze Intune](device-inventory.md).
+
+
+<!-- ########################## -->
+
+## <a name="week-of-august-5-2019"></a>Tydzień od 5 sierpnia 2019 r.
+
+### <a name="zebra-technologies-is-a-supported-oem-for-oemconfig-on-android-enterprise-devices-----4843713---"></a>Firma Zebra Technologies jest obsługiwanym producentem OEM aplikacji OEMConfig na urządzeniach z systemem Android Enterprise  <!-- 4843713 -->
+
+W usłudze Intune możesz utworzyć profile konfiguracji urządzenia i zastosować ustawienia do urządzeń z rozwiązaniem Android Enterprise przy użyciu aplikacji OEMConfig (**Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **Android Enterprise** jako platforma > **OEMConfig** jako typ profilu).
+
+W tej aktualizacji firma Zebra Technologies jest producentem oryginalnego sprzętu (OEM) dla aplikacji OEMConfig. Aby uzyskać więcej informacji o aplikacji OEMConfig, przejdź do tematu [Use and manage Android Enterprise devices with OEMConfig](android-oem-configuration-overview.md) (Korzystanie z urządzeń z rozwiązaniem Android Enterprise i zarządzanie nimi za pomocą aplikacji OEMConfig).
+
+Dotyczy:  
+- Android Enterprise
 
 <!-- ########################## -->
 
@@ -138,7 +308,7 @@ Przy użyciu akcji **Zlokalizuj urządzenie** można powiększyć lokalizację u
 
 ### <a name="device-security"></a>Zabezpieczenia urządzeń
 
-#### <a name="advanced-settings-for-windows-defender-firewall--public-preview-------1311949-------"></a>Zaawansowane ustawienia zapory Windows Defender (publiczna wersja zapoznawcza)  <!--  1311949     -->  
+#### <a name="advanced-settings-for-windows-defender-firewall--public-preview------1311949-------"></a>Zaawansowane ustawienia zapory Windows Defender (publiczna wersja zapoznawcza)  <!--  1311949     -->  
 Przy użyciu usługi Intune można zarządzać [niestandardowymi regułami zapory w ramach profilu konfiguracji urządzenia](endpoint-protection-configure.md#add-custom-firewall-rules-for-windows-10-devices) na potrzeby ochrony punktu końcowego w systemie Windows 10. Reguły te mogą określać zachowanie dotyczące ruchu przychodzącego i wychodzącego na poziomie aplikacji, adresów sieciowych i portów. 
 
 #### <a name="updated-ui-for-managing-security-baselines------4091125-------"></a>Zaktualizowany interfejs użytkownika na potrzeby zarządzania punktami odniesienia zabezpieczeń   <!-- 4091125     -->
@@ -269,9 +439,6 @@ W tej aktualizacji funkcja **Aplikacje** została przeniesiona jako element podr
 Dotyczy: iOS
 
 ### <a name="device-enrollment"></a>Rejestrowanie urządzeń
-
-#### <a name="windows-autopilot-reset-removes-the-devices-primary-user----4156123---"></a>Resetowanie w programie Windows Autopilot usuwa podstawowego użytkownika urządzenia <!-- 4156123 -->
-Ta funkcja została opóźniona i zostanie wydana w nadchodzącym przebiegu.    
 
 #### <a name="windows-autopilot-support-for-hybrid-azure-ad-join----4809146--"></a>Obsługa funkcji Windows Autopilot dla dołączania do hybrydowej usługi Azure AD <!-- 4809146-->
 Funkcja Windows Autopilot dla istniejących urządzeń obsługuje teraz dołączanie do hybrydowej usługi Azure AD (oprócz istniejącej obsługi dołączania do usługi Azure AD). Dotyczy urządzeń z systemem Windows 10 w wersji 1809 lub nowszej. Aby uzyskać więcej informacji, zobacz [Rozwiązanie Windows Autopilot dla istniejących urządzeń](https://docs.microsoft.com/windows/deployment/windows-autopilot/existing-devices).
@@ -539,7 +706,7 @@ Możesz utworzyć reguły wymagań na podstawie skryptów programu PowerShell, w
 #### <a name="configure-your-win32-apps-to-be-installed-on-intune-enrolled-azure-ad-joined-devices----3695227----"></a>Konfigurowanie aplikacji Win32 pod kątem instalowania na urządzeniach dołączonych do usługi Azure AD zarejestrowanych w usłudze Intune <!-- 3695227  -->
 Można przypisać aplikacje Win32, które mają być instalowane na urządzeniach dołączonych do usługi Azure AD zarejestrowanych w usłudze Intune. Aby uzyskać więcej informacji o aplikacjach Win32 w usłudze Intune, zobacz [Zarządzanie aplikacjami Win32](apps-win32-app-management.md).
 
-#### <a name="device-overview-shows-primary-user---794259----"></a>Na stronie przeglądu urządzenia jest wyświetlany użytkownik podstawowy <!--794259  -->
+#### <a name="device-overview-shows-primary-user---3794259----"></a>Na stronie przeglądu urządzenia jest wyświetlany użytkownik podstawowy <!--3794259  -->
 Na stronie Przegląd urządzenia będzie wyświetlany użytkownik podstawowy, nazywany również użytkownikiem koligacji urządzenia użytkownika (UDA). Aby zobaczyć użytkownika podstawowego dla urządzenia, wybierz pozycję **Intune** > **Urządzenia** > **Wszystkie urządzenia** > wybierz urządzenie. Użytkownik podstawowy będzie wyświetlany w górnej części strony **Przegląd**.
 
 #### <a name="additional-managed-google-play-app-reporting-for-android-enterprise-work-profile-devices----4105925----"></a>Dodatkowe raportowanie aplikacji z zarządzanego sklepu Google Play dla urządzeń z profilem służbowym rozwiązania Android Enterprise <!-- 4105925  -->
@@ -581,8 +748,8 @@ Dotyczy: Android Enterprise
 
 #### <a name="windows-update-notifications-----3316758-3316782----"></a>Powiadomienia usługi Windows Update  <!-- 3316758, 3316782  -->
 Dodaliśmy dwa *ustawienia środowiska użytkownika* do konfiguracji pierścienia usługi Windows Update, którymi można zarządzać z poziomu konsoli usługi Intune. Teraz możesz:
-- Blokować lub zezwalać użytkownikom na [skanowanie w poszukiwaniu aktualizacji systemu Windows](windows-update-settings.md#block-user-from-scanning-for-windows-updates).
-- Zarządzać [poziomem powiadomień witryny Windows Update](windows-update-settings.md#windows-update-notification-level) widocznym dla użytkowników.
+- Blokować lub zezwalać użytkownikom na [skanowanie w poszukiwaniu aktualizacji systemu Windows](windows-update-settings.md).
+- Zarządzać [poziomem powiadomień witryny Windows Update](windows-update-settings.md) widocznym dla użytkowników.
 
 #### <a name="new-device-restriction-settings-for-android-enterprise-device-owner----3574254----"></a>Nowe ustawienia ograniczeń urządzeń dla rozwiązania Android Enterprise w trybie Właściciel urządzenia <!-- 3574254  -->
 Na urządzeniach z rozwiązaniem Android Enterprise można utworzyć profil ograniczeń urządzenia, aby zezwolić na funkcje lub ograniczyć je, ustawić reguły haseł i nie tylko (**Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > wybierz **Android Enterprise** jako platformę > **Tylko właściciel urządzenia > Ograniczenia dotyczące urządzeń** dla typu profilu). 

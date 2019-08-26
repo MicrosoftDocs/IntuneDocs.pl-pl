@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/12/2019
+ms.date: 08/13/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c378fd3b208396f9d2f83b7bd56f50dbf7a7e3f7
-ms.sourcegitcommit: 864fdf995c2b41f104a98a7e2665088c2864774f
+ms.openlocfilehash: 26ad26fedc6fe0e44328f5c77fa5f093c1230a28
+ms.sourcegitcommit: 6f84e880411a202c5500eb460779b7ef63a7f430
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68679967"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68978506"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Konfigurowanie urządzeń z systemem Windows 10 w usłudze Intune przy użyciu punktów odniesienia zabezpieczeń
 
@@ -37,7 +37,7 @@ Poszczególne typy punktów odniesienia mogą zawierać te same ustawienia, ale 
 > [!NOTE]
 > Firma Microsoft nie zaleca używania wersji zapoznawczych punktów odniesienia zabezpieczeń w środowisku produkcyjnym. Ustawienia punktu odniesienia w wersji zapoznawczej mogą ulec zmianie w trakcie trwania tej wersji zapoznawczej. 
 
-Celem użycia punktów odniesienia zabezpieczeń jest zapewnienie kompleksowego, bezpiecznego przepływu pracy podczas korzystania z rozwiązania Microsoft 365. Oto niektóre korzyści:
+Punkty odniesienia zabezpieczeń mogą ułatwić zapewnienie kompleksowego, bezpiecznego przepływu pracy podczas korzystania z platformy Microsoft 365. Oto niektóre korzyści:
 
 - Punkt odniesienia zabezpieczeń oferuje najlepsze rozwiązania i rekomendacje dotyczące ustawień, które mają wpływ na zabezpieczenia. Usługa Intune współpracuje z tym samym zespołem ds. zabezpieczeń systemu Windows, który tworzy punkty odniesienia zabezpieczeń dla zasad grupy. Te rekomendacje opierają się na wskazówkach i rozbudowanym środowisku.
 - Jeśli zaczynasz używać usługi Intune i nie wiesz, od czego zacząć, warto skorzystać z punktów odniesienia. Można szybko tworzyć i wdrażać bezpieczny profil, wiedząc, że pomagasz chronić zasoby i dane organizacji.
@@ -47,20 +47,21 @@ Celem użycia punktów odniesienia zabezpieczeń jest zapewnienie kompleksowego,
 
 Artykuł [Windows security baselines](https://docs.microsoft.com/windows/security/threat-protection/windows-security-baselines) (Punkty odniesienia zabezpieczeń systemu Windows) to doskonały zasób, z którego dowiesz się więcej na temat tej funkcji. Artykuł [Mobile device management](https://docs.microsoft.com/windows/client-management/mdm/) (MDM) (Zarządzanie urządzeniami mobilnymi) to doskonały zasób zawierający informacje na temat funkcji MDM i czynności, które można wykonywać na urządzeniach z systemem Windows.
 
-## <a name="security-baseline-versions-and-instances"></a>Wystąpienia i wersje punktu odniesienia zabezpieczeń
-Od czasu do czasu udostępniane są nowe aktualizacje dla punktu odniesienia. Każde nowe wystąpienie wersji punktu odniesienia może dodawać lub usuwać ustawienia oraz wprowadzać inne zmiany. Jeśli na przykład w nowych wersjach systemu Windows 10 udostępniane są nowe ustawienia systemu Windows 10, punkt odniesienia zabezpieczeń rozwiązania MDM może otrzymać nowe wystąpienie wersji, które obejmuje te najnowsze ustawienia.  
+## <a name="about-baseline-versions-and-instances"></a>Informacje o wystąpieniach i wersjach punktu odniesienia
 
-W konsoli usługi Intune można sprawdzić, które punkty odniesienia zabezpieczeń są dostępne, i wyświetlić informacje na ich temat. Dostępne informacje obejmują liczbę Twoich profili, które korzystają z punktu odniesienia danego typu, liczbę dostępnych oddzielnych wystąpień punktu odniesienia danego typu oraz termin udostępnienia lub opublikowania najnowszego wystąpienia.  Poniższy przykład pokazuje kafelek powszechnie używanego punktu odniesienia zabezpieczeń rozwiązania MDM:  
+Każde nowe wystąpienie wersji punktu odniesienia może dodawać lub usuwać ustawienia oraz wprowadzać inne zmiany. Jeśli na przykład w nowych wersjach systemu Windows 10 udostępniane są nowe ustawienia systemu Windows 10, punkt odniesienia zabezpieczeń rozwiązania MDM może otrzymać nowe wystąpienie wersji, które obejmuje te najnowsze ustawienia.  
+
+W konsoli usługi Intune kafelek dla każdego punktu odniesienia zawiera nazwę szablonu punktu odniesienia oraz podstawowe informacje o tym punkcie odniesienia. Informacje obejmują liczbę Twoich profili, które korzystają z typu punktu odniesienia, liczbę dostępnych oddzielnych wystąpień (wersji) danego typu punktu odniesienia oraz datę *ostatniej publikacji*, która identyfikuje termin dodania szablonu punktu odniesienia do dzierżawy. Poniższy przykład pokazuje kafelek powszechnie używanego punktu odniesienia zabezpieczeń rozwiązania MDM:  
 
 ![Kafelek punktu odniesienia](./media/security-baselines/baseline-tile.png)
 
-Aby wyświetlić informacje o używanych wersjach punktów odniesienia, wybierz punkt odniesienia, a następnie wybierz pozycję **Wersje**. Usługa Intune wyświetli szczegółowe informacje o wersjach używanych przez Twoje profile. W okienku wersji możesz wybrać jedną wersję, aby wyświetlić bardziej szczegółowe informacje o profilach, które używają tej wersji. Możesz również wybrać dwie różne wersje, a następnie wybrać pozycję **Porównaj punkty odniesienia**, aby pobrać plik CSV ze szczegółami różnic.  
+Aby wyświetlić dalsze informacje o używanych wersjach punktów odniesienia, wybierz kafelek punktu odniesienia, aby otworzyć jego okienko *Omówienie*, a następnie wybierz pozycję **Wersje**. Usługa Intune wyświetli szczegółowe informacje o wersjach punktu odniesienia używanych przez Twoje profile. W okienku wersji możesz wybrać jedną wersję, aby wyświetlić bardziej szczegółowe informacje o profilach, które używają tej wersji. Możesz również wybrać dwie różne wersje, a następnie wybrać pozycję **Porównaj punkty odniesienia**, aby pobrać plik CSV ze szczegółami różnic.  
 
 ![Porównywanie punktów odniesienia](./media/security-baselines/compare-baselines.png)
 
 Kiedy tworzysz *profil* punktu odniesienia zabezpieczeń, ten profil automatycznie używa ostatnio wydanego wystąpienia punktu odniesienia zabezpieczeń.  Nadal możesz używać i edytować profile, które zostały utworzone wcześniej i które korzystają z wcześniejszego wystąpienia wersji punktu odniesienia, w tym z punktów odniesienia utworzonych przy użyciu wersji zapoznawczej. 
 
-Profile punktów odniesienia zabezpieczeń obsługują [zmianę wersji](#change-the-baseline-instance-for-a-profile) używanego punktu odniesienia. Oznacza to, że po wydaniu nowej wersji nie musisz tworzyć nowego profilu punktu odniesienia, aby z niej skorzystać. Zamiast tego, gdy wszystko będzie gotowe, możesz wybrać profil punktu odniesienia, a następnie użyć wbudowanej opcji, aby zmienić wersję wystąpienia dla tego profilu.  
+Można wybrać opcję [zmiany wersji](#change-the-baseline-version-for-a-profile) punktu odniesienia używanego z danym profilem. Oznacza to, że po wydaniu nowej wersji nie musisz tworzyć nowego profilu punktu odniesienia, aby z niej skorzystać. Zamiast tego, gdy wszystko będzie gotowe, możesz wybrać profil punktu odniesienia, a następnie użyć wbudowanej opcji, aby zmienić wersję wystąpienia dla tego profilu na nową.  
 
 ## <a name="available-security-baselines"></a>Dostępne punkty odniesienia zabezpieczeń 
 
@@ -79,18 +80,21 @@ Poniższe wystąpienia punktów odniesienia zabezpieczeń są dostępne do użyc
 
 Nadal możesz używać i edytować profile, które zostały utworzone wcześniej na podstawie szablonu wersji zapoznawczej, nawet jeśli ten szablon wersji zapoznawczej nie jest już dostępny do tworzenia nowych profilów. 
 
-## <a name="prerequisites"></a>Wymagania wstępne
+## <a name="manage-baselines"></a>Zarządzanie punktami odniesienia  
+
+Typowe zadania podczas pracy z punktami odniesienia zabezpieczeń obejmują:
+- [Tworzenie profilu](#create-the-profile) — w celu skonfigurowania ustawień do użycia i przypisania punktu odniesienia do grup.
+- [Zmiana wersji](#change-the-baseline-version-for-a-profile) — zmiana wersji punktu odniesienia używanego przez profil.
+- [Usuwanie przypisania punktu odniesienia](#remove-a-security-baseline-assignment) — dowiedz się, co się dzieje, gdy zatrzymasz zarządzanie ustawieniami przy użyciu punktu odniesienia zabezpieczeń.
+
+
+### <a name="prerequisites"></a>Wymagania wstępne
 - Aby móc zarządzać planami bazowymi w usłudze Intune, Twoje konto musi mieć wbudowaną rolę [Menedżer zasad i profilów](role-based-access-control.md#built-in-roles).
 
 - Korzystanie z niektórych punktów odniesienia może wymagać aktywnej subskrypcji dodatkowych usług, takich jak Microsoft Defender ATP.  
 
-## <a name="co-managed-devices"></a>Urządzenia współzarządzane
 
-Punkty odniesienia zabezpieczeń na urządzeniach zarządzanych przez usługę Intune są podobne do urządzeń współzarządzanych w programie Configuration Manager. Urządzenia współzarządzane używają programu System Center Configuration Manager i usługi Microsoft Intune do równoczesnego zarządzania urządzeniami z systemem Windows 10. Pozwala to na łączenie istniejących inwestycji związanych z programem Configuration Manager z korzyściami dotyczącymi usługi Intune w chmurze. Artykuł [Co-management overview](https://docs.microsoft.com/sccm/comanage/overview) (Omówienie współzarządzania) to doskonały zasób, jeśli używasz programu Configuration Manager i chcesz korzystać z zalet chmury.
-
-W przypadku używania urządzeń współzarządzanych musisz przełączyć obciążenie **Konfiguracja urządzenia** (jego ustawienia) do usługi Intune. Dalsze informacje można znaleźć w części [Device configuration workloads](https://docs.microsoft.com/sccm/comanage/workloads#device-configuration) (Obciążenia konfiguracji urządzenia).
-
-## <a name="create-the-profile"></a>Tworzenie profilu
+### <a name="create-the-profile"></a>Tworzenie profilu
 
 1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), a następnie wybierz pozycję **Bezpieczeństwo urządzeń** > **Punkty odniesienia zabezpieczeń**, aby wyświetlić listę dostępnych punktów odniesienia.
 
@@ -131,12 +135,13 @@ W przypadku używania urządzeń współzarządzanych musisz przełączyć obci�
    ![Przegląd punktu odniesienia](./media/security-baselines/review.png) 
 
   
-8. Po utworzeniu profilu można go edytować. W tym celu wybierz pozycję **Bezpieczeństwo urządzeń** > **Punkty odniesienia zabezpieczeń**, wybierz skonfigurowany typ punktu odniesienia, a następnie wybierz pozycję **Profile**.  Wybierz profil z listy dostępnych profilów, a następnie wybierz pozycję **Właściwości**. Możesz edytować ustawienia na wszystkich dostępnych kartach konfiguracji. Następnie wybierz pozycję **Przejrzyj i zapisz**, aby zatwierdzić zmiany.  
+8. Po utworzeniu profilu można go edytować. W tym celu wybierz pozycję **Bezpieczeństwo urządzeń** > **Punkty odniesienia zabezpieczeń**, wybierz skonfigurowany typ punktu odniesienia, a następnie wybierz pozycję **Profile**. Wybierz profil z listy dostępnych profilów, a następnie wybierz pozycję **Właściwości**. Możesz edytować ustawienia na wszystkich dostępnych kartach konfiguracji. Następnie wybierz pozycję **Przejrzyj i zapisz**, aby zatwierdzić zmiany.  
 
-## <a name="change-the-baseline-instance-for-a-profile"></a>Zmienianie wystąpienia punktu odniesienia dla profilu
-Profile punktów odniesienia obsługują zmianę wystąpienia punktu odniesienia, z którego korzysta dany profil. Możesz wybrać starsze wystąpienie lub, co się zdarza częściej, nowsze wystąpienie tego samego punktu odniesienia.  Nie można zmienić punktu odniesienia na inny, na przykład nie można zmienić w profilu punktu odniesienia dla usługi Defender ATP na punkt odniesienia zabezpieczeń rozwiązania MDM. 
+### <a name="change-the-baseline-version-for-a-profile"></a>Zmienianie wersji punktu odniesienia dla profilu  
 
-Podczas konfigurowania zmiany wersji punktu odniesienia będziesz mieć możliwość pobrania pliku CSV, który zawiera listę zmian między dwoma wybranymi wersjami punktu odniesienia. Możesz również wybrać, czy chcesz zachować wszystkie dostosowania z oryginalnej wersji punktu odniesienia i zastosować je do nowej wersji, czy zaimplementować wszystkie wartości domyślne nowej wersji punktu odniesienia. 
+Możesz zmienić wersję wystąpienia punktu odniesienia, która jest używana z profilem.  Podczas zmiany wersji wybierasz dostępne wystąpienie tego samego punktu odniesienia. Nie można zmienić punktu odniesienia na inny, na przykład nie można zmienić w profilu punktu odniesienia dla usługi Defender ATP na punkt odniesienia zabezpieczeń rozwiązania MDM. 
+
+Podczas konfigurowania zmiany wersji punktu odniesienia możesz pobrać plik CSV, który zawiera listę zmian między dwoma wybranymi wersjami punktu odniesienia. Istnieje również możliwość zachowania wszystkich dostosowań z oryginalnej wersji punktu odniesienia lub zaimplementowania nowej wersji przy użyciu wszystkich wartości domyślnych. Nie możesz wprowadzić zmian w poszczególnych ustawieniach w przypadku zmiany wersji punktu odniesienia dla profilu. 
 
 Podczas zapisywania, po zakończeniu konwersji, punkt odniesienia jest od razu wdrażany ponownie w przypisanych grupach.  
 
@@ -147,7 +152,7 @@ Podczas zapisywania, po zakończeniu konwersji, punkt odniesienia jest od razu w
 
   Kiedy ustawienie nie jest już zarządzane przez profil punktu odniesienia, to ustawienie nie jest resetowane na urządzeniu. Zamiast tego ustawienie na urządzeniu pozostaje ustawione zgodnie ze swoją ostatnią konfiguracją, dopóki inny proces nie będzie nim zarządzać i go nie zmieni. Przykłady procesów, które mogą zmienić ustawienie, gdy przestaniesz nim zarządzać, obejmują inny profil punktu odniesienia, ustawienie zasad grupy lub ręczną konfigurację urządzenia. 
 
-### <a name="to-change-the-instance-for-a-baseline"></a>Aby zmienić wystąpienie dla punktu odniesienia  
+#### <a name="to-change-the-baseline-version-for-a-profile"></a>Aby zmienić wersję punktu odniesienia dla profilu  
 
 1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), wybierz pozycję **Bezpieczeństwo urządzeń** > **Punkty odniesienia zabezpieczeń**, a następnie wybierz kafelek dla typu punktu odniesienia zawierającego profil, który chcesz zmienić.  
 
@@ -159,7 +164,7 @@ Podczas zapisywania, po zakończeniu konwersji, punkt odniesienia jest od razu w
 
    ![wybierz wersję](./media/security-baselines/select-instance.png)  
    
-4. Wybierz pozycję **Review update** (Przejrzyj aktualizację), aby pobrać plik CSV, który pokazuje różnice między bieżącą wersją wystąpienia profilu i nową, wybraną przez Ciebie wersją. Przejrzyj ten plik, aby dowiedzieć się, które ustawienia zostaną dodane, które usunięte, oraz jakie są wartości domyślne dla tych ustawień w zaktualizowanym profilu.  
+4. Wybierz pozycję **Review update** (Przejrzyj aktualizację), aby pobrać plik CSV, który pokazuje różnice między bieżącą wersją wystąpienia profilu i nową, wybraną przez Ciebie wersją. Przejrzyj ten plik, aby dowiedzieć się, które ustawienia są nowe, które zostały usunięte, oraz jakie są wartości domyślne dla tych ustawień w zaktualizowanym profilu.  
 
    Gdy wszystko będzie gotowe, przejdź do następnego kroku.  
 
@@ -169,14 +174,16 @@ Podczas zapisywania, po zakończeniu konwersji, punkt odniesienia jest od razu w
 
 6. Wybierz pozycję **Prześlij**. Profil zostanie zaktualizowany do wybranej wersji punktu odniesienia i po zakończeniu konwersji punkt odniesienia zostanie natychmiastowo wdrożony ponownie w przypisanych grupach.
 
-## <a name="remove-a-security-baseline-assignment"></a>Usuwanie przypisania punktu odniesienia zabezpieczeń
+### <a name="remove-a-security-baseline-assignment"></a>Usuwanie przypisania punktu odniesienia zabezpieczeń
 Kiedy ustawienie punktu odniesienia zabezpieczeń nie będzie miało już zastosowania do urządzenia lub ustawienia w punkcie odniesienia będą miały wartość *Nieskonfigurowane*, dla tych ustawień na urządzeniu nie zostanie przywrócona konfiguracja sprzed zarządzania. Zamiast tego, zarządzane wcześniej ustawienia na urządzeniu zachowają swoją ostatnią konfigurację pobraną z punktu odniesienia, dopóki jakiś inny proces nie zaktualizuje tych ustawień na urządzeniu.  
 
 Inne procesy, które mogą później zmienić ustawienia na urządzeniu, obejmują inny lub nowy punkt odniesienia zabezpieczeń, profil konfiguracji urządzenia, konfigurację zasad grupy lub ręczną edycję ustawienia na urządzeniu.  
 
+## <a name="co-managed-devices"></a>Urządzenia współzarządzane
 
+Punkty odniesienia zabezpieczeń na urządzeniach zarządzanych przez usługę Intune są podobne do urządzeń współzarządzanych w programie Configuration Manager. Urządzenia współzarządzane używają programu System Center Configuration Manager i usługi Microsoft Intune do równoczesnego zarządzania urządzeniami z systemem Windows 10. Pozwala to na łączenie istniejących inwestycji związanych z programem Configuration Manager z korzyściami dotyczącymi usługi Intune w chmurze. Artykuł [Co-management overview](https://docs.microsoft.com/sccm/comanage/overview) (Omówienie współzarządzania) to doskonały zasób, jeśli używasz programu Configuration Manager i chcesz korzystać z zalet chmury.
 
-
+W przypadku używania urządzeń współzarządzanych musisz przełączyć obciążenie **Konfiguracja urządzenia** (jego ustawienia) do usługi Intune. Dalsze informacje można znaleźć w części [Device configuration workloads](https://docs.microsoft.com/sccm/comanage/workloads#device-configuration) (Obciążenia konfiguracji urządzenia).  
 
 ## <a name="q--a"></a>Pytania i odpowiedzi
 

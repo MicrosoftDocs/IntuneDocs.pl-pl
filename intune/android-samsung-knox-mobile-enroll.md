@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 94c92f70844594fd8524f2e49c537f1afaadaf96
-ms.sourcegitcommit: e6edfbfd63dd7c2500ce1123205aa2af9a7e8e2e
+ms.openlocfilehash: a637ae12f3a2ee395503bedd595c490579fdb43c
+ms.sourcegitcommit: db68056e2db17dfdeaa216c684302567742e6416
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68783200"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68993550"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>Automatyczne rejestrowanie urządzeń z systemem Android za pomocą rozwiązania Knox Mobile Enrollment firmy Samsung
 
@@ -52,7 +52,7 @@ Aby rejestrować w usłudze Intune przy użyciu rozwiązania KME, musisz najpier
 
 4. [Zarejestruj się, aby założyć konto Samsung](https://www2.samsungknox.com/en/user/register): konto Samsung jest wymagane do rejestrowania i włączania rozwiązania KME oraz zarządzania wszystkimi uprawnieniami rozwiązania Knox Enterprise w jednym miejscu.
 
-5. Przegląd rejestracji: po ukończeniu i przesłaniu profilu firma Samsung przeprowadza przegląd zgłoszenia i natychmiast je zatwierdza lub przenosi je do stanu oczekiwania na przegląd w celu wykonania dalszych czynności. Po zatwierdzeniu konta można przejść do dalszych czynności.
+5. Przegląd rejestracji: po ukończeniu i przesłaniu profilu firma Samsung przegląda zgłoszenie i natychmiast je zatwierdza lub przenosi je do stanu oczekiwania na przegląd w celu wykonania dalszych czynności. Po zatwierdzeniu konta można kontynuować wykonywanie dalszych czynności.
 
 ## <a name="create-mdm-profile"></a>Tworzenie profilu oprogramowania MDM
 
@@ -68,7 +68,7 @@ Po pomyślnym zarejestrowaniu firmy można utworzyć profil oprogramowania MDM d
 |MDM Agent APK (Plik APK oprogramowania MDM)      | Tak       |https://aka.ms/intune_kme_deviceowner 
 |Włącz tę aplikację jako właściciela urządzenia Google | Tak | Wybierz tę opcję, aby zarejestrować się w systemie Android Enterprise. 
 |Obsługiwane zarządzanie urządzeniami przenośnymi      | Tak       |Microsoft Intune 
-|Pozostaw wszystkie aplikacje systemowe włączone | Nie | Wybierz tę opcję, aby upewnić się, że wszystkie aplikacje są włączone i dostępne dla tego profilu. Jeśli ta opcja nie jest zaznaczona, na pasku aplikacji urządzenia będzie wyświetlany tylko bardzo ograniczony zestaw aplikacji systemowych. Aplikacje takie jak aplikacja poczty e-mail pozostaną ukryte. 
+|Pozostaw wszystkie aplikacje systemowe włączone | Nie | Wybierz tę opcję, aby upewnić się, że wszystkie aplikacje są włączone i dostępne dla tego profilu. Jeśli ta opcja nie jest zaznaczona, na pasku aplikacji urządzenia będzie wyświetlany tylko ograniczony zestaw aplikacji systemowych. Aplikacje takie jak aplikacja poczty e-mail pozostaną ukryte. 
 |Custom JSON (Niestandardowa notacja JSON)        | Nie        |{"com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "Wprowadź ciąg tokenu rejestracji usługi Intune"}. Dowiedz się, jak [utworzyć profil rejestracji](android-kiosk-enroll.md). 
 | Dodaj umowy prawne | Nie | Pozostaw to pole puste. 
 
@@ -82,8 +82,8 @@ Szczegółowe wskazówki można znaleźć w instrukcjach podanych w artykule [Sa
 |Profile Name (Nazwa profilu)       | Tak       |Wprowadź wybraną nazwę profilu.
 |description        | Nie        |Wprowadź tekst opisujący profil.
 |MDM Agent APK (Plik APK oprogramowania MDM)      | Tak       |https://aka.ms/intune_kme
-|Włącz tę aplikację jako właściciela urządzenia Google | Nie | Pozostaw tę opcję niezaznaczoną w przypadku systemu Android. Dotyczy to tylko systemu Android Enterprise.
-|Skip Setup wizard (Pomiń kreatora instalacji)  | Nie        |Wybierz tę opcję, aby pomijać monity dotyczące standardowej instalacji urządzenia w imieniu użytkownika końcowego.
+|Włącz tę aplikację jako właściciela urządzenia Google | Nie | Pozostaw tę opcję niezaznaczoną w przypadku systemu Android. Ta opcja dotyczy tylko systemu Android Enterprise.
+|Skip Setup wizard (Pomiń kreatora instalacji)  | Nie        |Wybierz tę opcję, aby pomijać monity dotyczące standardowej instalacji urządzenia dla użytkownika końcowego.
 |Allow End User to Cancel Enrollment (Zezwalaj użytkownikowi końcowemu na anulowanie rejestracji) | Nie | Wybierz tę opcję, aby użytkownicy mogli anulować rozwiązanie KME.
 |Custom JSON (Niestandardowa notacja JSON)        | Nie        |Pozostaw to pole puste.
 | Dodaj umowy prawne | Nie | Pozostaw to pole puste.
@@ -103,9 +103,9 @@ Przed rozpoczęciem rejestrowania dodanych urządzeń musisz przypisać do nich 
 
 W przypadku urządzeń zarejestrowanych w usłudze Intune przy użyciu rozwiązania KME dla systemu Android można skonfigurować sposób logowania użytkownika końcowego w następujący sposób:
 
-- **Bez skojarzenia nazwy użytkownika:** w portalu rozwiązania Knox w obszarze **Szczegóły urządzenia** dla dodawanych urządzeń pozostaw puste pola **Identyfikator użytkownika** i **Hasło**. W tej sytuacji użytkownicy końcowi będą musieli wprowadzić nazwę użytkownika i hasło podczas rejestrowania w usłudze Intune.
+- **Bez skojarzenia nazwy użytkownika:** w portalu rozwiązania Knox w obszarze **Szczegóły urządzenia** dla dodawanych urządzeń pozostaw puste pola **Identyfikator użytkownika** i **Hasło**. Ta opcja wymaga, aby użytkownicy końcowi wprowadzali nazwę użytkownika i hasło podczas rejestrowania w usłudze Intune.
 
-- **Ze skojarzeniem nazwy użytkownika:** w portalu rozwiązania Knox w obszarze **Szczegóły urządzenia** dla dodawanych urządzeń wypełnij pole **Identyfikator użytkownika** (na przykład nazwa przypisanego użytkownika lub konto [menedżera rejestracji urządzeń](https://docs.microsoft.com/intune/device-enrollment-manager-enroll)). Spowoduje to wstępne wypełnienie nazwy użytkownika, a użytkownik końcowy będzie musiał wprowadzić hasło podczas rejestrowania w usłudze Intune.
+- **Ze skojarzeniem nazwy użytkownika:** w portalu rozwiązania Knox w obszarze **Szczegóły urządzenia** dla dodawanych urządzeń wypełnij pole **Identyfikator użytkownika** (na przykład nazwa przypisanego użytkownika lub konto [menedżera rejestracji urządzeń](https://docs.microsoft.com/intune/device-enrollment-manager-enroll)). Ta opcja spowoduje wstępne wypełnienie nazwy użytkownika, a użytkownik końcowy będzie musiał wprowadzić hasło podczas rejestrowania w usłudze Intune.
 
 > [!NOTE]
 >
@@ -116,11 +116,11 @@ W przypadku urządzeń zarejestrowanych w usłudze Intune przy użyciu rozwiąza
 
 Po utworzeniu i przypisaniu profilu oprogramowania MDM, skojarzeniu nazwy użytkownika i zidentyfikowaniu urządzeń jako należących do firmy w usłudze Intune można dystrybuować urządzenia do użytkowników.
 
-Nadal potrzebujesz pomocy? Zapoznaj się z pełną wersją [podręcznika użytkownika rozwiązania Mobile Knox Enrollment](https://docs.samsungknox.com/KME-Getting-Started/Content/get-started.htm).
+Nadal potrzebujesz pomocy? Zapoznaj się z [kompletnym podręcznikiem użytkownika rozwiązania KME](https://docs.samsungknox.com/KME-Getting-Started/Content/get-started.htm).
 
 ## <a name="frequently-asked-questions"></a>Często zadawane pytania
 
-- **Obsługa właściciela urządzenia:** Usługa Intune obsługuje rejestrowanie urządzeń tylko do trybu kiosku przy użyciu systemu Android Enterprise. Inne tryby właściciela urządzenia systemu Android Enterprise będą obsługiwane, gdy staną się dostępne w usłudze Intune.
+- **Obsługa właściciela urządzenia:**  - **obsługa właściciela urządzenia:** Usługa Intune obsługuje rejestrowanie urządzeń dedykowanych i w pełni zarządzanych przy użyciu portalu KME. Inne tryby właściciela urządzenia systemu Android Enterprise będą obsługiwane, gdy staną się dostępne w usłudze Intune.
 
 - **Brak obsługi profilów roboczych:** rozwiązanie KME jest metodą rejestracji urządzeń firmowych. Na urządzeniach osobistych zarejestrowanych w profilu roboczym systemu Android dane służbowe i dane osobiste są od siebie oddzielone. Z tego powodu rejestracja urządzenia w profilu roboczym przy użyciu rozwiązania KME nie jest scenariuszem obsługiwanym przez usługę Intune.
 

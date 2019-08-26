@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/08/2019
+ms.date: 08/07/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 80be1d39d9a562dbc13b9384c6256eb02c9ef50e
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: f13b5b92ca442f4b5ae05d3567f8385288d92909
+ms.sourcegitcommit: 6b5907046f920279bbda3ee6c93e98594624c05c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67530560"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69582920"
 ---
 # <a name="configure-a-certificate-profile-for-your-devices-in-microsoft-intune"></a>Konfigurowanie profilu certyfikatu dla urządzeń w usłudze Microsoft Intune
 
@@ -88,30 +88,35 @@ Wyeksportuj certyfikat zaufanego głównego urzędu certyfikacji w formacie cert
 Ten certyfikat zostanie zaimportowany podczas konfigurowania profilu zaufanego certyfikatu.
 
 ## <a name="step-3-create-trusted-certificate-profiles"></a>Krok 3: Tworzenie profilów zaufanych certyfikatów
+
 Aby móc utworzyć profil certyfikatu protokołu SCEP lub PKCS, utwórz profil zaufanego certyfikatu. Dla każdej platformy urządzenia wymagany jest profil zaufanego certyfikatu oraz profil SCEP lub PKCS. Procedura tworzenia zaufanych certyfikatów jest podobna dla każdej platformy urządzeń.
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Wybierz pozycję **Konfiguracja urządzenia** > **Zarządzaj** > **Profile** > **Utwórz profil**.
-4. Uzupełnij pola **Nazwa** i **Opis** odnoszące się do profilu zaufanego certyfikatu.
-5. Z listy rozwijanej **Platforma** wybierz platformę urządzenia dla danego zaufanego certyfikatu. Dostępne opcje:
+1. W usłudze [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) wybierz pozycję **Konfiguracja urządzenia** > **Zarządzaj** > **Profile** > **Utwórz profil**.
+2. Wprowadź następujące właściwości:
 
-    - **Android**
-    - **Android Enterprise**
-    - **iOS**
-    - **macOS**
-    - **Windows Phone 8.1**
-    - **Windows 8.1 lub nowszy**
-    - **Windows 10 lub nowszy**
+    - **Nazwa**: Wprowadź opisową nazwę profilu. Nadaj nazwę profilom, aby można było je później łatwo rozpoznać. Na przykład dobrą nazwą profilu jest **Profil zaufanego certyfikatu dla urządzeń właścicieli urządzeń z systemem Android Enterprise** lub **Profil zaufanego certyfikatu dla urządzeń z systemem iOS**.
+    - **Opis**: Wprowadź opis profilu. To ustawienie jest opcjonalne, ale zalecane.
+    - **Platforma**: Wybierz platformę urządzeń. Dostępne opcje:
 
-6. Z listy rozwijanej **Typ profilu** wybierz pozycję **Zaufany certyfikat**.
-7. Przejdź do certyfikatu zapisanego w punkcie [Krok 2. Eksportowanie certyfikatu zaufanego głównego urzędu certyfikacji](#step-2-export-your-trusted-root-ca-certificate), a następnie wybierz przycisk **OK**.
-8. Dotyczy wyłącznie urządzeń z systemem Windows 8.1 i Windows 10: wybierz dla zaufanego certyfikatu **magazyn docelowy** spośród wymienionych poniżej:
+      - **Android**
+      - **Android Enterprise** > **Tylko właściciel urządzenia**
+      - **Android Enterprise** > **Tylko profil służbowy**
+      - **iOS**
+      - **macOS**
+      - **Windows Phone 8.1**
+      - **Windows 8.1 lub nowszy**
+      - **Windows 10 lub nowszy**
 
-    - **Magazyn certyfikatów komputera — główny**
-    - **Magazyn certyfikatów komputera — pośredni**
-    - **Magazyn certyfikatów użytkownika — pośredni**
+    - **Typ profilu**: Wybierz **Zaufany certyfikat**.
 
-9. Gdy skończysz, wybierz opcję **OK**, wróć do okienka **Utwórz profil** i wybierz pozycję **Utwórz**.
+3. Przejdź do certyfikatu zapisanego w punkcie [Krok 2. Eksportowanie certyfikatu zaufanego głównego urzędu certyfikacji](#step-2-export-your-trusted-root-ca-certificate), a następnie wybierz przycisk **OK**.
+4. Dotyczy wyłącznie urządzeń z systemem Windows 8.1 i Windows 10: wybierz dla zaufanego certyfikatu **magazyn docelowy** spośród wymienionych poniżej:
+
+    - **Magazyn certyfikatów komputera — główny** (SCEP)
+    - **Magazyn certyfikatów komputera — pośredni** (SCEP)
+    - **Magazyn certyfikatów użytkownika — pośredni** (PKCS, SCEP)
+
+5. Gdy skończysz, wybierz opcję **OK**, wróć do okienka **Utwórz profil** i wybierz pozycję **Utwórz**.
 
 Profil zostanie utworzony i wyświetlony na liście. Aby przypisać ten profil do grup, zobacz [przypisywanie profilów urządzeń](device-profile-assign.md).
 
@@ -128,6 +133,7 @@ Aby uzyskać pomoc dotyczącą konfigurowania i przypisywania każdego z typów 
 Po utworzeniu profilu zaufanego certyfikatu należy utworzyć profile certyfikatów protokołu SCEP lub PKCS dla wszystkich platform, które będą używane. Podczas tworzenia profilu certyfikatu protokołu SCEP należy wskazać profil zaufanego certyfikatu dla danej platformy. W ten sposób oba profile certyfikatów zostaną połączone, niemniej jednak każdy profil należy przypisać osobno.
 
 ## <a name="next-steps"></a>Następne kroki
+
 [Przypisywanie profilów urządzeń](device-profile-assign.md)  
 [Używanie protokołu S/MIME do podpisywania i szyfrowania wiadomości e-mail](certificates-s-mime-encryption-sign.md)  
 [Używanie urzędu certyfikacji innej firmy](certificate-authority-add-scep-overview.md)

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/19/2019
+ms.date: 08/15/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 64bdc59e08a2b17c82e1798d454f0a0403e61b13
-ms.sourcegitcommit: 99b74d7849fbfc8f5cf99cba33e858eeb9f537aa
+ms.openlocfilehash: 76a0df5933127641d299a2a2f5e01d848e4d5d18
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671053"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69550119"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Monitorowanie szyfrowania urządzeń w usłudze Intune   
 
@@ -102,15 +102,15 @@ Po wybraniu urządzenia z raportu szyfrowania usługa Intune wyświetla okienko 
   Poniżej przedstawiono przykłady szczegółów stanu, które może raportować usługa Intune:  
   
   **macOS**:
-  - Nie można obecnie zainstalować profilu, ponieważ trwa oczekiwanie na wymaganie wstępne.  
+  - Klucz odzyskiwania nie został jeszcze pobrany i zapisany. Najprawdopodobniej urządzenie nie zostało odblokowane lub nie zostało zaewidencjonowane.  
  
-    *Rozważ następujące kwestie: Ten wynik nie musi reprezentować stanu błędu, tylko stan tymczasowy, który może być spowodowany oczekiwaniem urządzenia na skonfigurowanie depozytu dla kluczy odzyskiwania, co musi zostać zrobione przed wysłaniem żądania szyfrowania do urządzenia. Ten wynik może również wskazywać, że urządzenie pozostaje zablokowane lub nie zostało ostatnio zaewidencjonowane w usłudze Intune. Wreszcie, ponieważ szyfrowanie FileVault nie rozpoczyna się, dopóki urządzenie nie zostanie podłączone do zasilania (ładowanie), istnieje możliwość, że użytkownik otrzymał klucz odzyskiwania dla urządzenia, które nie jest jeszcze zaszyfrowane*.  
+    *Rozważ następujące kwestie: Ten wynik nie musi reprezentować stanu błędu, tylko stan tymczasowy, który może być spowodowany oczekiwaniem urządzenia na skonfigurowanie depozytu dla kluczy odzyskiwania, co musi zostać zrobione przed wysłaniem żądania szyfrowania do urządzenia. Ten stan może również wskazywać, że urządzenie pozostaje zablokowane lub nie zostało ostatnio zaewidencjonowane w usłudze Intune. Wreszcie, ponieważ szyfrowanie FileVault nie rozpoczyna się, dopóki urządzenie nie zostanie podłączone do zasilania (ładowanie), istnieje możliwość, że użytkownik otrzymał klucz odzyskiwania dla urządzenia, które nie jest jeszcze zaszyfrowane*.  
 
-  - Profil FileVault jest zainstalowany, ale na urządzeniu nie jest włączona funkcja FileVault.  
+  - Użytkownik ma odroczone szyfrowanie lub obecnie trwa proces szyfrowania.  
  
     *Rozważ następujące kwestie: Użytkownik nie wylogował się jeszcze po odebraniu żądania szyfrowania, co jest czynnością niezbędną, aby program FileVault mógł zaszyfrować urządzenie, lub użytkownik ręcznie odszyfrował urządzenie. Usługa Intune nie może uniemożliwić użytkownikowi odszyfrowania urządzenia.*  
 
-  - Program FileVault został już włączony przez użytkownika, więc usługa Intune nie może zarządzać odzyskiwaniem.  
+  - Urządzenie zostało już zaszyfrowane. Użytkownik urządzenia musi odszyfrować urządzenie, aby kontynuować.  
  
     *Rozważ następujące kwestie: Usługa Intune nie może skonfigurować programu FileVault na urządzeniu, które zostało już zaszyfrowane. Zamiast tego użytkownik musi ręcznie odszyfrować swoje urządzenie, aby można było nim zarządzać przy użyciu zasad konfiguracji urządzeń i usługi Intune*. 
  
@@ -118,9 +118,9 @@ Po wybraniu urządzenia z raportu szyfrowania usługa Intune wyświetla okienko 
  
     *Rozważ następujące kwestie: Począwszy od wersji 10.15 (Catalina) systemu MacOS, zatwierdzenie przez użytkownika ustawień rejestracji może doprowadzić do sytuacji, że użytkownik będzie musiał ręcznie zatwierdzić szyfrowanie FileVault. Aby uzyskać więcej informacji, zobacz [Rejestracja zatwierdzona przez użytkownika](macos-enroll.md) w dokumentacji usługi Intune*.  
 
-  - Urządzenie z systemem iOS zwróciło komunikat NotNow (jest zablokowane).  
+  - Nieznane.  
 
-    *Rozważ następujące kwestie: Urządzenie jest obecnie zablokowane i usługa Intune nie może uruchomić procesu deponowania lub szyfrowania. Po odblokowaniu urządzenia proces będzie kontynuowany*.  
+    *Rozważ następujące kwestie: Jedną z możliwych przyczyn nieznanego stanu jest to, że urządzenie zostało zablokowane, a usługa Intune nie może uruchomić procesu depozytu lub szyfrowania. Po odblokowaniu urządzenia proces będzie kontynuowany*.  
 
   **Windows 10**:  
   - Zasady funkcji BitLocker wymagają zgody użytkownika na uruchomienie Kreatora szyfrowania dysków funkcją BitLocker w celu rozpoczęcia szyfrowania woluminu systemu operacyjnego, lecz użytkownik nie wyraził zgody.  
@@ -161,7 +161,7 @@ Podczas przeglądania okienka Raport szyfrowania możesz wybrać pozycję **Eksp
   
 ![Eksportowanie szczegółów](./media/encryption-monitor/export.png) 
  
-Ten raport może służyć do identyfikowania problemów dotyczących grup urządzeń. Na przykład ten raport może być pomocny przy identyfikowaniu listy urządzeń z systemem macOS, które zgłaszają problem, że *program FileVault został już włączony przez użytkownika*. Pozwala to znaleźć urządzenia, które muszą zostać ręcznie odszyfrowane, zanim usługa Intune będzie mogła rozpocząć zarządzanie ustawieniami programu FileVault.  
+Ten raport może służyć do identyfikowania problemów dotyczących grup urządzeń. Na przykład ten raport może być pomocny przy identyfikowaniu listy urządzeń z systemem macOS, które zgłaszają problem, że *program FileVault został już włączony przez użytkownika*. Pozwala to znaleźć urządzenia, które muszą zostać ręcznie odszyfrowane, zanim usługa Intune będzie mogła zarządzać ustawieniami programu FileVault.  
  
 ## <a name="filevault-recovery-keys"></a>Klucze odzyskiwania programu FileVault   
 Gdy usługa Intune po raz pierwszy szyfruje urządzenie z systemem macOS za pomocą programu FileVault, jest tworzony osobisty klucz odzyskiwania. Po zaszyfrowaniu ten klucz prywatny jest wyświetlany jednorazowo na urządzeniu dla użytkownika końcowego.  

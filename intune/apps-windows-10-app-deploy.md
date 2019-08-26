@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/26/2019
+ms.date: 07/29/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e46eae92dfa145f1fc2b38379285dbb45b24590
-ms.sourcegitcommit: 864fdf995c2b41f104a98a7e2665088c2864774f
+ms.openlocfilehash: c853608f46bb01263ddd08193f729cdfb018fed9
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68680070"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69550071"
 ---
 # <a name="windows-10-app-deployment-using-microsoft-intune"></a>Wdrażanie aplikacji systemu Windows 10 w usłudze Microsoft Intune 
 
@@ -44,6 +44,13 @@ Aplikacje biznesowe dla systemu Windows 10 są podpisywane i przesyłane do kons
 ## <a name="microsoft-store-for-business-apps"></a>Aplikacje ze Sklepu Microsoft dla Firm
 
 Aplikacje ze sklepu Microsoft Store dla Firm to nowoczesne aplikacje zakupione w portalu administratora w sklepie Microsoft Store dla Firm, które następnie są synchronizowane z usługą Microsoft Intune w celu zarządzania nimi. Aplikacje mogą być **licencjonowane w trybie online** lub **licencjonowane w trybie offline**. Aktualizacje aplikacji ze sklepu Microsoft Store dla Firm są zarządzane bezpośrednio przez sklep Microsoft Store, bez konieczności wykonywania dodatkowych czynności przez administratora. Administrator może również uniemożliwić aktualizacje określonych aplikacji przy użyciu niestandardowego identyfikatora URI. Aby uzyskać więcej informacji, zobacz [Enterprise app management — Prevent app from automatic updates (Zarządzanie aplikacjami dla przedsiębiorstw — zapobieganie automatycznym aktualizacjom aplikacji)](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates). Użytkownik końcowy może również wyłączyć aktualizowanie wszystkich aplikacji ze sklepu Microsoft dla Firm na urządzeniu. 
+
+### <a name="categorize-microsoft-store-for-business-apps"></a>Kategoryzowanie aplikacji ze sklepu Microsoft Store dla Firm 
+Aby kategoryzować aplikacje ze sklepu Microsoft Store dla Firm, wykonaj następujące czynności: 
+
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+2. Wybierz kolejno pozycje **Intune** > **Aplikacje** > wybierz aplikację ze sklepu Microsoft Store dla Firm > **Informacje o aplikacji** > **Kategoria**. 
+3. Wybierz kategorię z menu rozwijanego.
 
 ## <a name="installing-apps-on-windows-10-devices"></a>Instalowanie aplikacji na urządzeniach z systemem Windows 10
 W zależności od typu aplikacji aplikację można zainstalować na urządzeniu z systemem Windows 10, korzystając z jednego z dwóch sposobów:

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/20/2019
+ms.date: 08/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ce117f21c1ad78c2c977466398ce6d30989cc6a
-ms.sourcegitcommit: a2bad7465422b98eb3c10f03dc5a24fd99cee78d
+ms.openlocfilehash: 9f8560262d8c501af4127876eaafed293fbc4041
+ms.sourcegitcommit: b1ddc7f4a3d520b7d6755c7a423a46d1e2548592
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67041292"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69651209"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Monitorowanie zasad zgodności urządzeń Intune
 
@@ -152,7 +152,9 @@ Raport **Zgodność urządzenia** > **Zgodność ustawienia** przedstawia łącz
 Po wybraniu określonego ustawienia możesz zobaczyć **stan zgodności**, **alias e-mail użytkownika**, **model urządzenia** oraz **lokalizację** dla każdego urządzenia objętego danym ustawieniem.
 
 > [!NOTE]
-> Urządzenia z systemem Windows 10 dołączone do usługi Azure AD mogą wyświetlać konto systemowe jako niezgodnego użytkownika. Jest to oczekiwane zachowanie i nie ma wpływu na ogólną zgodność urządzenia. 
+> Zasady można przypisać do urządzenia i użytkownika na tym samym urządzeniu. W niektórych scenariuszach urządzenie może zostać zsynchronizowane przed zalogowaniem użytkownika, na przykład po ponownym uruchomieniu urządzenia. Może nastąpić ocena zgodności tego użytkownika i wyświetlenie urządzenia jako niezgodnego. Takie zachowanie może również wyświetlać konto systemowe jako niezgodnego użytkownika.
+>
+> Jest to znany problem dotyczący urządzeń z systemem Windows 10 z obsługą wielu użytkowników. Wszelkie zmiany i aktualizacje dotyczące tego zachowania są ogłaszane w sekcjach dotyczących [rozwiązań w trakcie opracowywania](in-development.md) i/lub [nowości](whats-new.md).
 
 ## <a name="view-status-of-device-policies"></a>Wyświetlanie stanu zasad dotyczących urządzenia
 
