@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6fb1111a7f660e8c59f45fb1893364dcadd34dca
-ms.sourcegitcommit: 6a8de7bb4870ea19aa08db1f188ea7b5e8a387dd
+ms.openlocfilehash: e8300e9a4faf29ada79fad2a11e2470b965b53d1
+ms.sourcegitcommit: b64869b4be357c0741ec01b1a2f0bae13efce937
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69487750"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69998897"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Ustawienia urządzenia z systemem Windows 10 lub nowszym, które ma działać jako kiosk w usłudze Intune
 
@@ -66,7 +66,7 @@ Uruchamia tylko jedną aplikację na urządzeniu.
     > [!NOTE]
     > To ustawienie włącza przeglądarkę Microsoft Edge na urządzeniu. Aby skonfigurować ustawienia specyficzne dla przeglądarki Microsoft Edge, należy utworzyć profil konfiguracji urządzenia (**Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **Windows 10** dla platformy > **Ograniczenia dotyczące urządzeń** >  **Przeglądarka Microsoft Edge**). W sekcji [Przeglądarka Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser) wymieniono i opisano dostępne ustawienia.
 
-  - **Dodaj przeglądarkę kiosku**: wybierz pozycję **Ustawienia przeglądarki kiosku**. Te ustawienia umożliwiają kontrolowanie aplikacji przeglądarki internetowej działającej w obrębie kiosku. Upewnij się, że masz dostęp do [aplikacji Przeglądarka kiosków](https://businessstore.microsoft.com/store/details/kiosk-browser/9NGB5S5XG2KP) ze sklepu, Dodaj ją do usługi Intune jako [aplikację kliencką](apps-add.md). Następnie przypisz aplikację do urządzeń kiosku.
+  - **Dodaj przeglądarkę kiosku**: wybierz pozycję **Ustawienia przeglądarki kiosku**. Te ustawienia umożliwiają kontrolowanie aplikacji przeglądarki internetowej działającej w obrębie kiosku. Upewnij się, że masz dostęp do [aplikacji przeglądarki kiosku](https://businessstore.microsoft.com/store/details/kiosk-browser/9NGB5S5XG2KP) ze sklepu Store, i dodaj ją do usługi Intune jako [aplikację kliencką](apps-add.md). Następnie przypisz aplikację do urządzeń kiosku.
 
     Podaj następujące ustawienia:
 
@@ -92,11 +92,22 @@ Uruchamia tylko jedną aplikację na urządzeniu.
       `https://contoso.com/*`
 
     > [!NOTE]
-    > Kioski systemu Windows 10 z włączoną funkcją automatycznego logowania przy użyciu przeglądarki Microsoft Kiosk muszą używać licencji offline z Microsoft Store dla firm. Ten wymóg jest spowodowany tym, że logowanie automatyczne używa konta użytkownika lokalnego bez poświadczeń Azure Active Directory (AD). Nie można więc ocenić licencji w trybie online. Aby uzyskać więcej informacji, zobacz [rozpowszechnianie aplikacji w trybie offline](https://docs.microsoft.com/microsoft-store/distribute-offline-apps).
+    > Kioski systemu Windows 10 z włączoną funkcją automatycznego logowania przy użyciu przeglądarki Microsoft Kiosk Browser muszą używać licencji offline ze sklepu Microsoft Store dla Firm. Ten wymóg jest spowodowany tym, że logowanie automatyczne używa konta użytkownika lokalnego bez poświadczeń Azure Active Directory (AD). Nie można więc ocenić licencji w trybie online. Aby uzyskać więcej informacji, zobacz sekcję [Rozpowszechnianie aplikacji w trybie offline](https://docs.microsoft.com/microsoft-store/distribute-offline-apps).
 
   - **Dodaj aplikację ze sklepu**: wybierz pozycję **Dodaj aplikację ze sklepu**, a następnie wybierz aplikację z listy.
 
     Lista nie zawiera żadnych aplikacji? Dodaj aplikacje, wykonując czynności opisane w temacie [Aplikacje klienckie](apps-add.md).
+    
+ - **Określ okno obsługi dla ponownych uruchomień aplikacji**: wartość domyślna to „Nie skonfigurowano"; wybierz opcję „Wymagaj”, aby sprawdzić aplikacje wymagające ponownego uruchomienia w celu ukończenia instalacji.
+ 
+     Jeśli używasz przeglądarki kiosku lub innej aplikacji ze sklepu Microsoft Store dla Firm, zdecyduj, jak często należy sprawdzać dostępność aktualizacji aplikacji, które wymagają ponownego uruchomienia, aby ukończyć instalację aplikacji. Jeśli nie zostanie skonfigurowana, sklep Microsoft Store dla Firm zostanie ponownie uruchomiony o niezaplanowanej godzinie 3 dni po zainstalowaniu aktualizacji aplikacji.
+     
+     - **Godzina rozpoczęcia okna obsługi**: wybierz datę i godzinę rozpoczęcia sprawdzania klientów pod kątem aktualizacji aplikacji, które wymagają ponownego uruchomienia. Domyślna godzina rozpoczęcia to północ lub zero minut.
+     
+     - **Cykl okna obsługi**: wartość domyślna to codziennie.
+         Ustaw, jak często będą wykonywane okna obsługi aktualizacji aplikacji. Zalecane jest wykonywanie ich codziennie, aby uniknąć nieplanowanych ponownych uruchomień aplikacji.
+
+  [Dostawca usługi konfiguracji ApplicationManagement/ScheduleForceRestartForUpdateFailures](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures)
 
 ## <a name="multi-app-kiosks"></a>Kioski z wieloma aplikacjami
 
@@ -148,7 +159,7 @@ Aplikacje w tym trybie są dostępne w menu Start. Te aplikacje to jedyne aplika
         Aby zezwolić na określone witryny internetowe, przekaż plik CSV zawierający listę dozwolonych witryn internetowych. Jeśli nie dodasz pliku CSV, wszystkie witryny internetowe będą dozwolone.
 
       > [!NOTE]
-      > Kioski systemu Windows 10 z włączoną funkcją automatycznego logowania przy użyciu przeglądarki Microsoft Kiosk muszą używać licencji offline z Microsoft Store dla firm. Ten wymóg jest spowodowany tym, że logowanie automatyczne używa konta użytkownika lokalnego bez poświadczeń Azure Active Directory (AD). Nie można więc ocenić licencji w trybie online. Aby uzyskać więcej informacji, zobacz [rozpowszechnianie aplikacji w trybie offline](https://docs.microsoft.com/microsoft-store/distribute-offline-apps).
+      > Kioski systemu Windows 10 z włączoną funkcją automatycznego logowania przy użyciu przeglądarki Microsoft Kiosk Browser muszą używać licencji offline ze sklepu Microsoft Store dla Firm. Ten wymóg jest spowodowany tym, że logowanie automatyczne używa konta użytkownika lokalnego bez poświadczeń Azure Active Directory (AD). Nie można więc ocenić licencji w trybie online. Aby uzyskać więcej informacji, zobacz sekcję [Rozpowszechnianie aplikacji w trybie offline](https://docs.microsoft.com/microsoft-store/distribute-offline-apps).
 
   - **Aplikacje**
 

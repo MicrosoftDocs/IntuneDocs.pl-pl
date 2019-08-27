@@ -541,7 +541,7 @@
       items:
         - name: Co to jest zarządzanie aplikacjami w usłudze Intune?
           href: app-management.md
-        - name: Dodawanie aplikacji
+        - name: Dodawanie aplikacji — przegląd
           href: apps-add.md
           displayName: apk; ipa; msi; appx; appxbundle; msix; msixbundle; app
           items:
@@ -645,7 +645,7 @@
               href: apps-selective-wipe.md
             - name: Korzystanie z zasad ochrony aplikacji
               items:
-                - name: Interpretacja zasad ochrony aplikacji
+                - name: Zasady ochrony aplikacji — przegląd
                   href: app-protection-policy.md
                   displayName: app; protection; policy
                 - name: Tworzenie zasad ochrony aplikacji
@@ -934,7 +934,7 @@
               href: reports-changelog.md
             - name: Nawiązywanie połączenia z magazynem danych przy użyciu usługi Power BI
               href: reports-proc-get-a-link-powerbi.md
-            - name: Tworzenie raportu w usłudze Power BI na podstawie źródła danych OData
+            - name: Tworzenie raportu w usłudze Power BI na podstawie kanału informacyjnego OData
               href: reports-proc-create-with-odata.md
         - name: Tworzenie raportów z użyciem interfejsu API magazynu danych usługi Intune
           href: reports-nav-intune-data-warehouse.md
