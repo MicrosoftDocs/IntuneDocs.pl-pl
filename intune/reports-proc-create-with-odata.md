@@ -1,12 +1,12 @@
 ---
-title: Tworzenie raportu w usłudze Power BI na podstawie źródła danych OData
+title: Tworzenie raportu usługi Intune w usłudze Power BI na podstawie kanału informacyjnego OData
 titleSuffix: Microsoft Intune
 description: Tworzenie wizualizacji w formie mapy drzewa w programie Power BI Desktop za pomocą interakcyjnego filtru z interfejsu API magazynu danych usługi Intune.
 keywords: Magazyn danych usługi Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/08/2019
+ms.date: 08/15/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 519ac8529737a870eb4f8ce9a3e06af5b1dcac79
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: e18279fd9cca88de5f04c57a8bcccce1c211c6de
+ms.sourcegitcommit: 4f3fcc6dcbfe2c4e0651d54a130907a25a4ff66e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68353653"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69894318"
 ---
-# <a name="create-a-report-from-the-odata-feed-with-power-bi"></a>Tworzenie raportu w usłudze Power BI na podstawie źródła danych OData
+# <a name="create-an-intune-report-from-the-odata-feed-with-power-bi"></a>Tworzenie raportu usługi Intune w usłudze Power BI na podstawie kanału informacyjnego OData
 
-W tym artykule wyjaśniono, jak utworzyć wizualizację w formie mapy drzewa, posługując się programem Power BI Desktop z interakcyjnym filtrem. Przykładowo dyrektor finansowy mógł poprosić o informacje o tym, jak wygląda ogólny rozkład urządzeń w porównaniu z samymi urządzeniami firmowymi i samymi urządzeniami osobistymi. Mapa drzewa daje wgląd w ogólną liczbę urządzeń różnych typów. Możesz zobaczyć liczbę urządzeń z systemami iOS, Android i Windows, które należą do firmy lub do pracowników.
+W tym artykule opisano sposób tworzenia wizualizacji mapy drzewa danych usługi Intune przy użyciu filtru interaktywnego w aplikacji Power BI Desktop. Na przykład dyrektor finansowy może chcieć wiedzieć, jaki odsetek urządzeń w firmie stanowią urządzenia należące do firmy, a jaki urządzenia osobiste. Mapa drzewa daje wgląd w ogólną liczbę urządzeń różnych typów. Możesz zobaczyć liczbę urządzeń z systemami iOS, Android i Windows, które należą do firmy lub do pracowników.
 
 ## <a name="overview-of-creating-the-chart"></a>Przegląd tworzenia wykresu
 
@@ -42,7 +42,7 @@ Aby utworzyć ten wykres:
 
 W usłudze Power BI pracuje się z tabelami. Tabela zawiera pola danych. Każde pole danych ma typ danych. Pole może zawierać tylko dane o określonym typie danych. Typy danych to liczby, tekst, daty i tak dalej. Tabele w usłudze Power BI są podczas ładowania modelu wypełniane najnowszymi danymi historycznymi dzierżawy. Chociaż konkretne dane zmieniają się w czasie, struktura tabeli pozostaje niezmienna, chyba że zaktualizowany zostanie bazowy model danych.
 
-Nieco mylące może być użycie terminów _jednostka_ i _tabela_. Model danych jest dostępny za pośrednictwem źródła danych OData. Kontenery, które w usłudze Power BI są nazywane tabelami, w środowisku OData nazywane są jednostkami. Oba te terminy odnoszą się do tego samego elementu do przechowywania danych.
+Nieco mylące może być użycie terminów *jednostka* i *tabela*. Model danych jest dostępny za pomocą kanału informacyjnego OData (Open Data Protocol). Kontenery, które w usłudze Power BI są nazywane tabelami, w środowisku OData nazywane są jednostkami. Oba te terminy odnoszą się do tego samego elementu do przechowywania danych. Aby uzyskać więcej informacji na temat protokołu OData, zobacz [Omówienie usługi OData](/odata/overview).
 
 ## <a name="install-power-bi-desktop"></a>Instalowanie programu Power BI Desktop
 
@@ -54,29 +54,29 @@ Zainstaluj najnowszą wersję aplikacji Power BI Desktop. Aplikację Power BI De
 > Wymagane jest uprawnienie do **raportów** w usłudze Intune. Aby uzyskać więcej informacji, zobacz [Autoryzacja](reports-api-url.md).
 
 1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Otwórz okienko **Magazyn danych usługi Intune**, klikając link Magazyn danych w obszarze **Inne zadania** po prawej stronie bloku **Microsoft Intune — omówienie**.
-4. Skopiuj adres URL niestandardowego źródła danych. Na przykład: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta`
-1. Otwórz aplikację Power BI Desktop.
-2. Wybierz kolejno pozycje **Pobierz dane** > **Źródło danych Odata**.
-3. Wklej adres URL niestandardowego źródła danych w polu adresu URL w oknie **Źródło danych OData**.
-4. Wybierz pozycję **Podstawowe**.
+2. Otwórz okienko **Magazyn danych usługi Intune**, klikając link Magazyn danych w obszarze **Inne zadania** po prawej stronie bloku **Microsoft Intune — omówienie**.
+3. Skopiuj adres URL niestandardowego źródła danych. Na przykład: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta`
+4. Otwórz aplikację Power BI Desktop.
+5. Na pasku menu wybierz kolejno pozycje **Plik** > **Pobierz dane** > **Kanał informacyjny OData**.
+6. Wklej niestandardowy adres URL kanału informacyjnego skopiowany z wcześniejszego kroku do pola Adres URL w oknie **Kanał informacyjny OData** .
+7. Wybierz pozycję **Podstawowe**.
 
     ![Źródło danych OData dla magazynu danych usługi Intune dzierżawy](media/reports-create-01-odatafeed.png)
 
-9. Wybierz przycisk **OK**.
-10. Wybierz pozycję **Konto organizacji**, a następnie zaloguj się za pomocą poświadczeń usługi Intune.
+8. Wybierz przycisk **OK**.
+9. Wybierz pozycję **Konto organizacji**, a następnie zaloguj się za pomocą poświadczeń usługi Intune.
 
     ![Poświadczenia konta organizacyjnego](media/reports-create-02-org-account.png)
 
-11. Wybierz polecenie **Połącz**. Zostanie otwarty Nawigator z listą tabel w magazynie danych usługi Intune.
+10. Wybierz polecenie **Połącz**. Zostanie otwarty Nawigator z listą tabel w magazynie danych usługi Intune.
 
     ![Zrzut ekranu przedstawiający Nawigator — lista tabel magazynu danych](media/reports-create-02-loadentities.png)
 
-12. Wybierz tabele **devices** i **ownerTypes**.  Wybierz polecenie **Załaduj**. Usługa Power BI załaduje dane do modelu.
+11. Wybierz tabele **devices** i **ownerTypes**.  Wybierz polecenie **Załaduj**. Usługa Power BI załaduje dane do modelu.
 
 ## <a name="create-a-relationship"></a>Tworzenie relacji
 
-Zaimportować możesz wiele tabel, aby przeanalizować nie tylko dane w pojedynczej tabeli, ale także powiązane dane w różnych tabelach.  Usługa PowerBI ma funkcję o nazwie **autowykrywanie**, która próbuje automatycznie znaleźć i utworzyć relacje. Tabele w magazynie danych zostały zbudowane tak, aby współpracowały z funkcją autowykrywania usługi Power BI. Jednak nawet wtedy, gdy usługa PowerBI nie wykryje automatycznie relacji, nadal masz możliwość zarządzania nimi.
+Zaimportować możesz wiele tabel, aby przeanalizować nie tylko dane w pojedynczej tabeli, ale także powiązane dane w różnych tabelach. Usługa Power BI ma funkcję **autodetect**, która podejmuje próbę znalezienia i utworzenia relacji dla użytkownika. Tabele w magazynie danych zostały zbudowane tak, aby współpracowały z funkcją autowykrywania usługi Power BI. Jednak nawet wtedy, gdy usługa Power BI nie znajdzie automatycznie relacji, nadal możesz nimi zarządzać.
 
 ![Zarządzanie relacjami pokrewnych danych w tabelach](media/reports-create-03-managerelationships.png)
 
@@ -87,15 +87,15 @@ Relacja jest wyświetlana w kolumnach Od i Do. W tym przykładzie pole danych **
 
 ## <a name="create-a-treemap-visualization"></a>Tworzenie wizualizacji w formie mapy drzewa
 
-Wykres mapy drzewa pokazuje hierarchiczne dane w postaci pól zawierających pola. Każda gałąź hierarchii to pole zawierające mniejsze pola reprezentujące podgałęzie. W programie Power BI Desktop możesz utworzyć mapę drzewa z danymi usługi Intune.
+Wykres mapy drzewa pokazuje hierarchiczne dane w postaci pól zawierających pola. Każda gałąź hierarchii to pole zawierające mniejsze pola reprezentujące podgałęzie. Za pomocą aplikacji Power BI Desktop można utworzyć mapę drzewa danych dzierżawy usługi Intune, która pokazuje względne ilości typów producenta urządzenia.
 
 ![Wizualizacje mapy drzewa usługi Power BI](media/reports-create-03-treemap.png)
 
-1. Wybierz typ wykresu. Wybierz pozycję **Mapa drzewa**.
-2. W modelu danych znajdź tabelę **devices**.
-3. Rozwiń **tabelę devices** i w panelu **Pola** wybierz pole danych **manufacturer**.
-4. Przeciągnij pole danych **manufacturer** na wykres mapy drzewa na kanwie raportu.
-5. Przeciągnij pole danych **deviceKey** z tabeli **devices** do sekcji **Wartości** w okienku **Wizualizacje** i upuść je na pole z etykietą **Upuść pole danych tutaj**.  
+1. W okienku **Wizualizacje** znajdź i wybierz pozycję **Mapa drzewa**. Wykres **Mapa drzewa** zostanie dodany do kanwy raportu.
+2. W okienku **Pola** znajdź tabelę `devices`.
+3. Rozwiń tabelę `devices` i wybierz pole danych `manufacturer`.
+4. Przeciągnij pole danych `manufacturer` na kanwę raportu i upuść je na wykresie **Mapa drzewa**.
+5. Przeciągnij pole danych `deviceKey` z tabeli `devices` do okienka **Wizualizacje** i upuść je w sekcji **Wartości** w polu z napisem **Dodaj pola danych tutaj**.  
 
 Masz teraz wizualizację pokazującą rozkład producentów urządzeń w organizacji.
 
@@ -105,18 +105,19 @@ Masz teraz wizualizację pokazującą rozkład producentów urządzeń w organiz
 
 Do mapy drzewa możesz dodać filtr, aby za pomocą aplikacji odpowiedzieć na inne pytania.
 
+1. Aby dodać filtr, wybierz kanwę raportu, a następnie wybierz **ikonę fragmentatora** (![Mapa drzewa z modelem danych i obsługiwanymi relacjami](media/reports-create-slicer.png)) w obszarze **Wizualizacje**. Na kanwie zostanie wyświetlona pusta wizualizacja **Fragmentator**.
+2. W okienku **Pola** znajdź tabelę `ownerTypes`.
+3. Rozwiń tabelę `ownerTypes` i wybierz pole danych `ownerTypeName`.
+4. Przeciągnij pole `onwerTypeName` z tabeli `ownerTypes` do okienka **Filtry** i upuść je w sekcji **Filtry na tej stronie** w polu z napisem **Dodaj pola danych tutaj**.  
 
-1. Aby dodać filtr, wybierz kanwę raportu, a następnie wybierz **ikonę fragmentatora** (![Mapa drzewa z modelem danych i obsługiwanymi relacjami](media/reports-create-slicer.png)) w obszarze **Wizualizacje**.
-2. Znajdź tabelę **ownerTypes** i przeciągnij pole danych **ownerTypeName** do sekcji **Filtry** w panelu **Wizualizacje**.  
-
-   W tabeli devices znajduje się pole danych **OwnerTypeKey**, które zawiera kod informujący o tym, czy urządzenie jest własnością firmy, czy prywatną. Ponieważ za pomocą tego filtru chcesz pokazać przyjazne nazwy, znajdź tabelę **ownerTypes** i przeciągnij pole **ownerTypeName**. Ten przykład pokazuje, jak model danych obsługuje relacje między tabelami.
+   W tabeli `OwnerTypes` znajduje się pole danych o nazwie `OwnerTypeKey`, które zawiera informacje, czy czy urządzenie należy do firmy, czy jest prywatne. Ponieważ w tym filtrze mają być wyświetlane przyjazne nazwy, poszukaj tabeli `ownerTypes` i przeciągnij **ownerTypeName** do fragmentatora. Ten przykład pokazuje, jak model danych obsługuje relacje między tabelami.
 
 ![Mapa drzewa z filtrem — obsługuje relacje między tabelami](media/reports-create-08_ownertype.png)
 
 Masz teraz interakcyjny filtr, za pomocą którego możesz się przełączać między urządzeniami firmowymi i prywatnymi. Użyj tego filtru, aby zobaczyć zmiany w rozkładzie.
 
-1. Wybierz pozycję **Firmowe**, aby zobaczyć rozkład urządzeń firmowych.
-2. Wybierz pozycję **Osobiste**, aby zobaczyć urządzenia prywatne.
+1. Wybierz pozycję **Firmowe** w ramach fragmentatora, aby zobaczyć urządzenia należące do firmy.
+2. Wybierz pozycję **Osobiste** w ramach fragmentatora, aby zobaczyć urządzenia należące do użytkowników.
 
 ## <a name="next-steps"></a>Następne kroki
 
