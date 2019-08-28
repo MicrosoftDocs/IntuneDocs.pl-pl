@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a4314abec83bc31cd6fe178873ba5bce7bf1a0c
-ms.sourcegitcommit: 864fdf995c2b41f104a98a7e2665088c2864774f
+ms.openlocfilehash: 5a75397222117b8e56cb34947363f8624b89b27b
+ms.sourcegitcommit: 58a22f1b4a3fffffb1f7da228f470b3b0774fc42
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68680100"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70021750"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Wysyłanie powiadomień niestandardowych w usłudze Intune  
 
@@ -51,7 +51,6 @@ Niestandardowe komunikaty powiadomień zawierają krótki tytuł i treść komun
 - Grupy mogą obejmować użytkowników lub urządzenia, ale komunikaty są wysyłane tylko do użytkowników i do poszczególnych urządzeń z systemem iOS lub Android, które zostały zarejestrowane przez użytkownika.  
 
 **Dostarczanie**:  
-- Usługa Intune próbuje dostarczyć powiadomienie przez maksymalnie jedną godzinę od jego wysłania.  
 - Usługa Intune wysyła komunikaty do aplikacji Portal firmy użytkowników, która następnie tworzy powiadomienie push. Użytkownicy nie muszą być zalogowani do aplikacji, aby powiadomienie zostało wypchnięte do urządzenia.  
 - Usługa Intune i aplikacja Portal firmy nie mogą zagwarantować dostarczania powiadomienia niestandardowego. Powiadomienia niestandardowe mogą pojawiać się nawet z kilkugodzinnym opóźnieniem, dlatego nie powinny być używane do przesyłania pilnych komunikatów.  
 - Komunikaty powiadomień niestandardowych z usługi Intune są wyświetlane na urządzeniach jako standardowe powiadomienia push. Jeśli aplikacja Portal firmy jest otwarta na urządzeniu z systemem iOS w momencie odebrania powiadomienia, zostanie ono wyświetlone w aplikacji zamiast w postaci powiadomienia push.  
