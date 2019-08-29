@@ -16,12 +16,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: b7c76439b734837b5a4dd7e5fdbba5d21d0681d7
-ms.sourcegitcommit: ec22a186a9cfa489a8490698e387624e480892d8
+ms.openlocfilehash: 5e97e23322150c7a030a3657b6476090d719a448
+ms.sourcegitcommit: a6385b8370c20a44d0869f7920d6b2866edaa5e2
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68960424"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70027403"
 ---
 # <a name="use-device-encryption-with-intune"></a>Szyfrowanie urządzeń w usłudze Intune  
 
@@ -80,6 +80,8 @@ Aby uzyskać szczegółowe informacje na temat ustawień programu FileVault, kt�
 ### <a name="manage-filevault"></a>Zarządzanie programem FileVault  
 
 Po zaszyfrowaniu przez usługę Intune urządzenia z systemem macOS za pomocą programu FileVault można wyświetlać klucze odzyskiwania programu FileVault i zarządzać nimi z poziomu [raportu szyfrowania](encryption-monitor.md) usługi Intune.  
+
+Gdy usługa Intune zaszyfruje urządzenie z systemem macOS za pomocą programu FileVault, możesz wyświetlić osobisty klucz odzyskiwania tego urządzenia w internetowej aplikacji Portal firmy na dowolnym urządzeniu. W aplikacji internetowej Portal firmy wybierz zaszyfrowane urządzenie z systemem macOS, a następnie wybierz pozycję „Pobierz klucz odzyskiwania” jako akcję urządzenia zdalnego. 
 
 ## <a name="bitlocker-encryption-for-windows-10"></a>Szyfrowanie funkcją BitLocker dla systemu Windows 10  
 

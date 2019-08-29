@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/13/2019
+ms.date: 08/27/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26ad26fedc6fe0e44328f5c77fa5f093c1230a28
-ms.sourcegitcommit: 6f84e880411a202c5500eb460779b7ef63a7f430
+ms.openlocfilehash: b7c4cf67c93277ef4b54cdd72a6e06f64dd442e4
+ms.sourcegitcommit: 6c74ff568267d85fd1d44fda75e3e24ead87cb2b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68978506"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70063044"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Konfigurowanie urządzeń z systemem Windows 10 w usłudze Intune przy użyciu punktów odniesienia zabezpieczeń
 
@@ -64,6 +64,12 @@ Kiedy tworzysz *profil* punktu odniesienia zabezpieczeń, ten profil automatyczn
 Można wybrać opcję [zmiany wersji](#change-the-baseline-version-for-a-profile) punktu odniesienia używanego z danym profilem. Oznacza to, że po wydaniu nowej wersji nie musisz tworzyć nowego profilu punktu odniesienia, aby z niej skorzystać. Zamiast tego, gdy wszystko będzie gotowe, możesz wybrać profil punktu odniesienia, a następnie użyć wbudowanej opcji, aby zmienić wersję wystąpienia dla tego profilu na nową.  
 
 ## <a name="available-security-baselines"></a>Dostępne punkty odniesienia zabezpieczeń 
+
+ W środowisku usługi Intune można używać jednocześnie jednego lub kilku z dostępnych punktów odniesienia. Można również używać wielu wystąpień tych samych punktów odniesienia zabezpieczeń, które mają różne dostosowania. 
+
+W przypadku korzystania z wielu punktów odniesienia zabezpieczeń sprawdź ustawienia w każdym z nich, aby określić, kiedy różne punkty odniesienia wprowadzają wartości powodujące konflikt dla tego samego ustawienia. Ze względu na to, że możesz wdrożyć punkty odniesienia zabezpieczeń przeznaczone do różnych celów oraz wdrożyć wiele wystąpień tego samego punktu odniesienia z dostosowanymi ustawieniami, może się zdarzyć, że utworzysz [konflikty konfiguracji dla urządzeń, które należy zbadać i rozwiązać](security-baselines-monitor.md#troubleshoot-using-per-setting-status).  Należy również pamiętać o [profilach konfiguracji urządzeń](device-profiles.md), które mogą konfigurować wiele tych samych ustawień, co punkty odniesienia zabezpieczeń. 
+
+
 
 Poniższe wystąpienia punktów odniesienia zabezpieczeń są dostępne do użycia z usługą Intune. Użyj linków, aby wyświetlić ustawienia dla najnowszego wystąpienia każdego punktu odniesienia. 
 

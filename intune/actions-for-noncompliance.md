@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/01/2019
+ms.date: 08/22/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf808a9a7f5a801997f37bd2ecf4c13e3823c332
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 1c13bffa797d8480ee0ba1db2b72c787ed94274f
+ms.sourcegitcommit: dbb2410de7e4849626f84ef07cf6a2891bcdd542
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044805"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69974261"
 ---
 # <a name="automate-email-and-add-actions-for-noncompliant-devices-in-intune"></a>Automatyzowanie poczty e-mail i dodawanie akcji dla niezgodnych urządzeń w usłudze Intune
 
@@ -103,7 +103,13 @@ Podczas tworzenia zasady zgodności lub aktualizowania istniejącej zasady możn
     
     - **Zdalne zablokowanie niezgodnego urządzenia**: zablokuj urządzenie, gdy urządzenie jest niezgodne. Ta akcja wymusza wprowadzenie przez użytkownika numeru PIN lub hasła w celu odblokowania urządzenia. 
     
-5. Skonfiguruj **Harmonogram**: wprowadź liczbę dni (od 0 do 365), jaka ma upłynąć od stwierdzenia niezgodności, w celu wyzwolenia akcji na urządzeniach użytkowników. Po tym okresie prolongaty można wymusić zasady dostępu warunkowego. Jeśli wprowadzisz **0** (zero) jako liczbę dni, dostęp warunkowy będzie obowiązywać **natychmiast**. Na przykład można natychmiastowo zablokować dostęp do zasobów firmowych, jeśli urządzenie jest niezgodne.
+5. Skonfiguruj **Harmonogram**: wprowadź liczbę dni (od 0 do 365), jaka ma upłynąć od stwierdzenia niezgodności, w celu wyzwolenia akcji na urządzeniach użytkowników. Po tym okresie prolongaty można wymusić zasady [dostępu warunkowego](conditional-access-intune-common-ways-use.md). Jeśli wprowadzisz **0** (zero) jako liczbę dni, dostęp warunkowy będzie obowiązywać **natychmiast**. Jeśli na przykład urządzenie jest niezgodne, użyj dostępu warunkowego, aby natychmiast zablokować dostęp do poczty e-mail, programu SharePoint i innych zasobów organizacji.
+
+    Podczas tworzenia zasad zgodności akcja **Oznacz urządzenie jako niezgodne** jest tworzona automatycznie i jest dla niej ustawiana wartość **0** dni (natychmiast). Z tą akcją urządzenie po zaewidencjonowaniu jest od razu oceniane jako niezgodne. W przypadku korzystania z dostępu warunkowego jest ono uruchamiane natychmiast. Jeśli chcesz zezwolić na okres prolongaty, zmień wartość pozycji **Harmonogram** dla akcji **Oznacz urządzenie jako niezgodne**.
+    
+    W zasadach zgodności warto również powiadomić użytkownika. Można dodać akcję **Wyślij wiadomość e-mail do użytkownika końcowego**. W przypadku tej akcji **Wyślij wiadomość e-mail** dla opcji **Harmonogram** ustaw wartość 2 dni. Jeśli urządzenie lub użytkownik końcowy nadal będą oceniani jako niezgodni w dniu 2, wiadomość e-mail zostanie wysłana w dniu 2. Jeśli chcesz ponownie wysłać wiadomość e-mail do użytkownika 5 dnia niezgodności, dodaj kolejną akcję i ustaw wartość opcji **Harmonogram** na 5 dni.
+
+    Aby uzyskać więcej informacji na temat zgodności oraz wbudowanych akcji, zobacz [omówienie zgodności](device-compliance-get-started.md).
 
 6. Po zakończeniu wybierz pozycję **Dodaj** > **OK**, aby zapisać zmiany.
 

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/15/2019
+ms.date: 08/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,16 +16,16 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 76a0df5933127641d299a2a2f5e01d848e4d5d18
-ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
+ms.openlocfilehash: c64ea07cb87bc980d01864468d788229bfc58a5f
+ms.sourcegitcommit: a6385b8370c20a44d0869f7920d6b2866edaa5e2
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69550119"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70027385"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Monitorowanie szyfrowania urządzeń w usłudze Intune   
 
-Raport szyfrowania w usłudze Microsoft Intune to scentralizowana lokalizacja umożliwiająca wyświetlanie szczegółowych informacji o stanie szyfrowania urządzeń zarządzanych. Wyświetl szczegóły dotyczące stanu szyfrowania urządzenia i znajdź opcje zarządzania kluczami odzyskiwania urządzeń. Dostępne opcje klucza odzyskiwania zależą od typu urządzenia, którego szczegóły są wyświetlane.  
+Raport szyfrowania w usłudze Microsoft Intune to scentralizowana lokalizacja umożliwiająca wyświetlanie szczegółowych informacji o stanie szyfrowania urządzenia i znajdowanie opcji zarządzania kluczami odzyskiwania urządzeń. Dostępne opcje klucza odzyskiwania zależą od typu urządzenia, którego szczegóły są wyświetlane.  
 
 Aby znaleźć raport, zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) i przejdź do pozycji **Konfiguracja urządzenia**, a następnie w obszarze *Monitor* wybierz opcję **Raport szyfrowania**.  
 
@@ -74,9 +74,11 @@ Po wybraniu urządzenia z raportu szyfrowania usługa Intune wyświetla okienko 
 
 - **Gotowość szyfrowania** — ocena gotowości urządzenia do obsługi szyfrowania za pomocą zasad rozwiązania MDM.  
   
-  Przykład: Jeśli gotowość urządzenia z systemem Windows 10 ma wartość *Niegotowe*, takie urządzenie może nadal obsługiwać szyfrowanie. Aby gotowość urządzenia mogła mieć wartość *Gotowe*, urządzenie z systemem Windows 10 musi mieć mikroukład TPM. Mikroukłady TPM nie są wymagane do obsługi szyfrowania. (Zobacz Gotowość szyfrowania w poprzedniej sekcji, aby uzyskać więcej informacji).  
+  Przykład: Jeśli gotowość urządzenia z systemem Windows 10 ma wartość *Niegotowe*, takie urządzenie może nadal obsługiwać szyfrowanie. Aby gotowość urządzenia mogła mieć wartość *Gotowe*, urządzenie z systemem Windows 10 musi mieć mikroukład TPM. Mikroukłady TPM nie są wymagane do obsługi szyfrowania. (Aby uzyskać więcej informacji, zobacz *Gotowość szyfrowania* w poprzedniej sekcji).  
 
-- **Stan szyfrowania** — określa, czy dysk systemu operacyjnego jest zaszyfrowany. Do wyświetlenia raportowania stanu szyfrowania urządzenia lub zmiany tego stanu w usłudze Intune może upłynąć do 24 godzin.  
+- **Stan szyfrowania** — określa, czy dysk systemu operacyjnego jest zaszyfrowany. Do wyświetlenia raportowania stanu szyfrowania urządzenia lub zmiany tego stanu w usłudze Intune może upłynąć do 24 godzin. Ten czas jest potrzebny na szyfrowanie systemu operacyjnego i raport zwrotny urządzenia do usługi Intune.  
+
+  Aby przyspieszyć raportowanie stanu szyfrowania usługi FileVault w celu uzyskania informacji przed standardowym czasem ewidencjonowania urządzenia, poproś użytkowników o zsynchronizowanie urządzeń po zakończeniu szyfrowania.  
 
 - **Profile** — lista profilów *konfiguracji urządzenia*, które dotyczą danego urządzenia i są skonfigurowane z następującymi wartościami:  
 
@@ -91,6 +93,8 @@ Po wybraniu urządzenia z raportu szyfrowania usługa Intune wyświetla okienko 
   Ta lista profilów może być przydatna do identyfikowania poszczególnych zasad na potrzeby przeglądu, jeśli w obszarze *Podsumowanie stanu profilu* są sygnalizowane problemy.  
 
 - **Podsumowanie stanu profilu** — podsumowanie profilów dotyczących tego urządzenia. Podsumowanie reprezentuje najmniej sprzyjające warunki w ramach odpowiednich profilów. Na przykład jeśli tylko jeden z odpowiednich profilów daje w wyniku błąd, w obszarze *Podsumowanie stanu profilu* będzie wyświetlany stan *Błąd*.  
+  
+  Aby wyświetlić więcej szczegółów stanu, przejdź do pozycji **Intune** > **Konfiguracja urządzeń** > **Profile** i wybierz profil. Opcjonalnie wybierz pozycję **Stan urządzenia**, a następnie wybierz urządzenie.  
 
 - **Szczegóły stanu** — zaawansowane szczegółowe informacje dotyczące stanu szyfrowania urządzenia.  
 
@@ -168,7 +172,7 @@ Gdy usługa Intune po raz pierwszy szyfruje urządzenie z systemem macOS za pomo
  
 W przypadku urządzeń zarządzanych usługa Intune może umieścić kopię tego osobistego klucza odzyskiwania w depozycie. Dzięki deponowaniu kluczy administratorzy usługi Intune mogą obracać klucze w celu zapewnienia ochrony urządzeń, a użytkownicy mogą odzyskiwać utracone lub obrócone osobiste klucze odzyskiwania.  
  
-Usługa Intune obsługuje wiele opcji obracania i przywracania osobistych kluczy odzyskiwania. Jednym z powodów, dla których należy obrócić klucz, jest utrata bieżącego klucza osobistego.  
+Usługa Intune obsługuje wiele opcji obracania i przywracania osobistych kluczy odzyskiwania. Jednym z powodów, dla których należy obrócić klucz, jest utrata lub narażenie na ryzyko bieżącego klucza osobistego.  
  
 > [!IMPORTANT]  
 >  Urządzenia, które są szyfrowane przez użytkowników, a nie przez usługę Intune, nie mogą być zarządzane przez tę usługę. Oznacza to, że usługa Intune nie może deponować osobistych kluczy odzyskiwania dla tych urządzeń ani zarządzać obracaniem kluczy odzyskiwania.  Aby usługa Intune mogła zarządzać programem FileVault i kluczami odzyskiwania dla urządzenia, użytkownik musi najpierw odszyfrować swoje urządzenie, a następnie zezwolić usłudze Intune na jego zaszyfrowanie.  
@@ -177,7 +181,7 @@ Usługa Intune obsługuje wiele opcji obracania i przywracania osobistych kluczy
 
 - **Obracanie automatyczne**: Jako administrator możesz skonfigurować ustawienie „Wymiana osobistego klucza odzyskiwania” programu FileVault w taki sposób, aby co pewien czas automatycznie były generowane nowe klucze odzyskiwania.  Nowo wygenerowany klucz dla urządzenia nie jest prezentowany użytkownikowi. Zamiast tego użytkownik musi go uzyskać od administratora lub przy użyciu aplikacji Portal firmy.  
 
-- **Obracanie ręczne**: Jako administrator możesz wyświetlać informacje o urządzeniu zarządzanym za pomocą usługi Intune i zaszyfrowanym przy użyciu programu FileVault. Jeśli chcesz, możesz też zdecydować się na ręczne obracanie klucza odzyskiwania dla urządzeń firmowych. Nie możesz obracać kluczy odzyskiwania dla urządzeń osobistych.  
+- **Obracanie ręczne**: Jako administrator możesz wyświetlać informacje o urządzeniu zarządzanym za pomocą usługi Intune i zaszyfrowanym przy użyciu programu FileVault. Jeśli chcesz, możesz zdecydować się na ręczne obracanie klucza odzyskiwania dla urządzeń firmowych. Nie możesz obracać kluczy odzyskiwania dla urządzeń osobistych.  
 
   Aby obrócić klucz odzyskiwania: 
   1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), przejdź do pozycji  **Urządzenia** , a następnie w obszarze Zarządzaj wybierz opcję  **Wszystkie urządzenia**.  
