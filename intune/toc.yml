@@ -1,6 +1,6 @@
 - name: Dokumentacja usługi Microsoft Intune
   href: index.yml
-- name: Przegląd
+- name: Omówienie
   expanded: true
   items:
     - name: Co to jest usługa Intune?
@@ -82,7 +82,7 @@
       href: windows-information-protection-configure.md
     - name: CZĘSTO ZADAWANE PYTANIA DOTYCZĄCE ZARZĄDZANIA APLIKACJAMI MOBILNYMI
       href: mam-faq.md
-- name: Przewodniki
+- name: Przewodniki z instrukcjami
   items:
     - name: Planowanie wdrożenia
       items:
@@ -107,7 +107,7 @@
               href: planning-guide-onboarding.md
             - name: Testowanie i walidacja
               href: planning-guide-test-validation.md
-            - name: Dodatkowe zasoby
+            - name: Zasoby dodatkowe
               href: planning-guide-resources.md
         - name: Przewodnik migracji
           href: migration-guide.md
@@ -510,8 +510,12 @@
           href: certificates-configure.md
           items:
             - name: SCEP
-              href: certificates-scep-configure.md
-              displayName: ksp
+              items:
+                - name: Infrastruktura SCEP
+                  href: certificates-scep-configure.md
+                  displayName: ksp
+                - name: profile certyfikatów protokołu SCEP
+                  href: certificates-profile-scep.md
             - name: PKCS
               href: certficates-pfx-configure.md
               displayName: ksp
@@ -733,11 +737,13 @@
               href: troubleshoot-email-profiles-in-microsoft-intune.md
             - name: Rozwiązywanie problemów z dostępem warunkowym
               href: troubleshoot-conditional-access.md
+            - name: Rozwiązywanie problemów z łącznikiem certyfikatów
+              href: troubleshoot-certificate-connector-events.md
             - name: Rozwiązywanie problemów z programem Exchange Connector
               href: troubleshoot-exchange-connector.md
         - name: Uzyskiwanie pomocy technicznej
           href: get-support.md
-- name: Tematy pomocy
+- name: Dokumentacja
   items:
     - name: Listy ustawień
       items:
@@ -872,7 +878,7 @@
                   href: kiosk-settings-holographic.md
                 - name: Niestandardowy
                   href: custom-settings-windows-holographic.md
-        - name: Windows 8.1
+        - name: "Windows\_8.1"
           items:
             - name: Ustawienia zasad zgodności
               href: compliance-policy-create-windows-8-1.md
@@ -934,7 +940,7 @@
               href: reports-changelog.md
             - name: Nawiązywanie połączenia z magazynem danych przy użyciu usługi Power BI
               href: reports-proc-get-a-link-powerbi.md
-            - name: Tworzenie raportu w usłudze Power BI na podstawie kanału informacyjnego OData
+            - name: Tworzenie raportu w usłudze Power BI na podstawie źródła danych OData
               href: reports-proc-create-with-odata.md
         - name: Tworzenie raportów z użyciem interfejsu API magazynu danych usługi Intune
           href: reports-nav-intune-data-warehouse.md
