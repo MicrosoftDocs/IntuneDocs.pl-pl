@@ -1,6 +1,6 @@
 - name: Dokumentacja usługi Microsoft Intune
   href: index.yml
-- name: Omówienie
+- name: Przegląd
   expanded: true
   items:
     - name: Co to jest usługa Intune?
@@ -82,7 +82,7 @@
       href: windows-information-protection-configure.md
     - name: CZĘSTO ZADAWANE PYTANIA DOTYCZĄCE ZARZĄDZANIA APLIKACJAMI MOBILNYMI
       href: mam-faq.md
-- name: Przewodniki z instrukcjami
+- name: Przewodniki
   items:
     - name: Planowanie wdrożenia
       items:
@@ -107,7 +107,7 @@
               href: planning-guide-onboarding.md
             - name: Testowanie i walidacja
               href: planning-guide-test-validation.md
-            - name: Zasoby dodatkowe
+            - name: Dodatkowe zasoby
               href: planning-guide-resources.md
         - name: Przewodnik migracji
           href: migration-guide.md
@@ -545,6 +545,7 @@
       items:
         - name: Co to jest zarządzanie aplikacjami w usłudze Intune?
           href: app-management.md
+          displayName: mam-we
         - name: Dodawanie aplikacji — przegląd
           href: apps-add.md
           displayName: apk; ipa; msi; appx; appxbundle; msix; msixbundle; app
@@ -743,7 +744,7 @@
               href: troubleshoot-exchange-connector.md
         - name: Uzyskiwanie pomocy technicznej
           href: get-support.md
-- name: Dokumentacja
+- name: Tematy pomocy
   items:
     - name: Listy ustawień
       items:
@@ -878,7 +879,7 @@
                   href: kiosk-settings-holographic.md
                 - name: Niestandardowy
                   href: custom-settings-windows-holographic.md
-        - name: "Windows\_8.1"
+        - name: Windows 8.1
           items:
             - name: Ustawienia zasad zgodności
               href: compliance-policy-create-windows-8-1.md
