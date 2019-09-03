@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6313741af237478bc5eea0cc5b5524250b5d46ac
-ms.sourcegitcommit: db68056e2db17dfdeaa216c684302567742e6416
+ms.openlocfilehash: e8af18192a3a15fee15dd2204ada572e6a67be1c
+ms.sourcegitcommit: 6c74ff568267d85fd1d44fda75e3e24ead87cb2b
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68993699"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70063003"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Rozwiązywanie problemów dotyczących rejestrowania urządzeń z systemem Windows w usłudze Microsoft Intune
 
@@ -100,9 +100,9 @@ Błąd 0x801c0003: "nie można zarejestrować tego użytkownika. Możesz spróbo
 3. Ustaw pozycję **Użytkownicy mogą dołączać urządzenia do usługi Azure AD** na wartość **Wszystko**.    
 4. Ponownie zarejestruj urządzenie.   
 
-### <a name="the-device-is-already-enrolled"></a>Urządzenie zostało już zarejestrowane.
+### <a name="the-device-is-already-enrolled"></a>Urządzanie zostało już zarejestrowane.
 
-Błąd 8018000a: "Wystąpił problem. Urządzenie zostało już zarejestrowane.  Możesz skontaktować się z administratorem systemu, podając kod błędu 8018000a ".
+Błąd 8018000a: "Wystąpił problem. Urządzanie zostało już zarejestrowane.  Możesz skontaktować się z administratorem systemu, podając kod błędu 8018000a ".
 
 **Przyczyna:** Jeden z następujących warunków jest spełniony:
 - Inny użytkownik zarejestrował już urządzenie w usłudze Intune lub przyłączył urządzenie do usługi Azure AD. Aby określić, czy tak jest, przejdź do pozycji **Ustawienia** > **konta** > **służbowe dostęp**. Poszukaj komunikatu podobnego do następującego: "inny użytkownik w systemie jest już połączony z siecią służbową lub szkołą. Usuń to połączenie służbowe i spróbuj ponownie. "    
@@ -205,7 +205,7 @@ Błąd: "Wystąpił problem. Twoja organizacja nie obsługuje tej wersji systemu
 Aby rozwiązać ten problem w środowisku autonomicznym usługi Intune, wykonaj następujące kroki: 
  
 1. Zaloguj się do [Azure Portal](https://portal.azure.com/) jako administrator.    
-2. Wybierz **pozycję Intune** po lewej stronie, a następnie przejdź do obszaru > **ograniczenia rejestracji**urządzeń.    
+2. Wybierz **pozycję Intune** po lewej stronie, a **następnie przejdź** do obszaru > **ograniczenia rejestracji**urządzeń.    
 3. W obszarze **ograniczenia typu urządzenia**kliknij pozycję **platformy**, a następnie wybierz pozycję **Zezwalaj** na **system Windows (MDM)** .    
 4. Kliknij polecenie **Zapisz**.    
  
@@ -223,7 +223,7 @@ Aby rozwiązać ten problem w przypadku hybrydowego zarządzania urządzeniami p
 #### <a name="resolution"></a>Rozwiązanie
 1. Zaloguj się do [Azure Portal](https://portal.azure.com/) jako administrator.    
 2. Przejdź do pozycji **Azure Active Directory urządzenia > > ustawienia urządzenia**.    
-3. Ustawienie **Użytkownicy mogą dołączać urządzenia do usługi Azure AD** do **wszystkich** lub **wybranych**.
+3. Ustaw pozycję **Użytkownicy mogą dołączać urządzenia do usługi Azure AD** na wartość **Wszystko** lub **Wybrane**.
 
    W przypadku wybrania opcji **wybrane**kliknij pozycję **wybrane**, a następnie kliknij pozycję **Dodaj członków** , aby dodać wszystkich użytkowników, którzy mogą przyłączać swoje urządzenia do usługi Azure AD. Upewnij się, że dodano wszystkie konta usługi Azure AD dla pakietu aprowizacji.
  
@@ -331,7 +331,7 @@ Błąd 0x80070774: Wystąpił problem. Potwierdź, że używasz informacji o pra
 
 Ten problem zwykle występuje przed ponownym uruchomieniem urządzenia w scenariuszu autopilotażu hybrydowego usługi Azure AD, gdy urządzenie przejdzie w trakcie początkowego ekranu logowania. Oznacza to, że nie można odnaleźć kontrolera domeny lub został on pomyślnie osiągnięty ze względu na problemy z łącznością. Lub że urządzenie przeszedł do stanu, którego nie można przyłączyć do domeny.
 
-**Przyczyna:** Najbardziej typową przyczyną jest użycie sprzężenia hybrydowego usługi Azure AD, a funkcja Przypisz użytkownika jest konfigurowana w profilu autopilotażu. Użycie funkcji Assign User powoduje wykonanie sprzężenia usługi Azure AD na urządzeniu podczas początkowego ekranu logowania, który umieszcza urządzenie w stanie, w którym nie może dołączyć do domeny lokalnej. W związku z tym funkcja Assign User powinna być używana tylko w standardowym scenariuszu usługi Azure AD Join.  Ta funkcja powinna być używana w scenariuszach hybrydowego sprzężenia usługi Azure AD.
+**Przyczyna:** Najbardziej typową przyczyną jest użycie sprzężenia hybrydowego usługi Azure AD, a funkcja Przypisz użytkownika jest konfigurowana w profilu autopilotażu. Użycie funkcji Assign User powoduje wykonanie sprzężenia usługi Azure AD na urządzeniu podczas początkowego ekranu logowania, który umieszcza urządzenie w stanie, w którym nie może dołączyć do domeny lokalnej. W związku z tym funkcja Assign User powinna być używana tylko w standardowym scenariuszu usługi Azure AD Join.  Ta funkcja nie powinna być używana w scenariuszach sprzężenia hybrydowego usługi Azure AD.
 
 #### <a name="resolution"></a>Rozwiązanie
 
