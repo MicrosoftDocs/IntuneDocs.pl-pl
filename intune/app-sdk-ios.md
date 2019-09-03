@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ca7e7646f51331e4d24cec9b50d7afae4870ebe3
-ms.sourcegitcommit: 4f3fcc6dcbfe2c4e0651d54a130907a25a4ff66e
-ms.translationtype: HT
+ms.openlocfilehash: 8774b5af7555462b7754e4d0f8a6f50a330854ff
+ms.sourcegitcommit: 58a22f1b4a3fffffb1f7da228f470b3b0774fc42
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69894359"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70021826"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu iOS
 
@@ -42,7 +42,7 @@ Dzięki zestawowi SDK aplikacji usługi Microsoft Intune dla systemu iOS możesz
 
 ## <a name="whats-in-the-sdk-repository"></a>Zawartość repozytorium zestawu SDK
 
-Następujące pliki są istotne dla aplikacji/rozszerzeń, które nie zawierają kodu SWIFT lub są kompilowane przy użyciu wersji Xcode wcześniejszej niż 10.2:
+Następujące pliki są istotne dla aplikacji/rozszerzeń, które nie zawierają kodu Swift lub są kompilowane przy użyciu wersji Xcode wcześniejszej niż 10.2:
 
 * **IntuneMAM.framework**: struktura zestawu SDK aplikacji usługi Intune. Zalecane jest, aby połączyć tę strukturę z aplikacją/rozszerzeniami w celu umożliwienia zarządzania aplikacjami klienckimi usługi Intune. Niektórzy deweloperzy mogą jednak preferować zalety biblioteki statycznej. Zobacz poniżej.
 
@@ -50,11 +50,11 @@ Następujące pliki są istotne dla aplikacji/rozszerzeń, które nie zawierają
 
 * **IntuneMAMResources.Bundle**: pakiet zawierający zasoby, na których bazuje zestaw SDK. Pakiet zasobów jest wymagany tylko w przypadku aplikacji, które integrują bibliotekę statyczną (libIntuneMAM.a).
 
-Następujące pliki są istotne dla aplikacji/rozszerzeń, które zawierają kod SWIFT i są kompilowane przy użyciu Xcode 10.2 lub nowszej wersji:
+Następujące pliki są istotne dla aplikacji/rozszerzeń, które zawierają kod Swift i są kompilowane przy użyciu Xcode 10.2 lub nowszej wersji:
 
-* **IntuneMAMSwift.framework**: struktura SWIFT zestawu SDK aplikacji usługi Intune. Ta struktura zawiera wszystkie nagłówki interfejsów API, które będą wywoływane przez aplikację. Połącz tę strukturę z aplikacją/rozszerzeniami, aby włączyć zarządzanie aplikacjami klienckimi usługi Intune.
+* **IntuneMAMSwift.framework**: struktura Swift zestawu SDK aplikacji usługi Intune. Ta struktura zawiera wszystkie nagłówki interfejsów API, które będą wywoływane przez aplikację. Połącz tę strukturę z aplikacją/rozszerzeniami, aby włączyć zarządzanie aplikacjami klienckimi usługi Intune.
 
-* **IntuneMAMSwiftStub.framework**: struktura zastępcza SWIFT zestawu SDK aplikacji usługi Intune. Jest to wymagana zależność IntuneMAMSwift.framework, z którą musza się łączyć aplikacje/rozszerzenia.
+* **IntuneMAMSwiftStub.framework**: struktura zastępcza Swift zestawu SDK aplikacji usługi Intune. Jest to wymagana zależność IntuneMAMSwift.framework, z którą muszą się łączyć aplikacje/rozszerzenia.
 
 
 Następujące pliki są istotne dla wszystkich aplikacji/rozszerzeń:
@@ -94,14 +94,14 @@ Zestaw SDK aplikacji usługi Intune dla systemu iOS opracowano po to, aby umożl
 
 Aby włączyć zestaw SDK aplikacji usługi Intune, wykonaj następujące kroki:
 
-1. **Opcja 1 — struktura (zalecane)** : jeśli używasz Xcode 10.2 lub nowszej wersji i Twoja aplikacja/rozszerzenie zawiera kod SWIFT, połącz `IntuneMAMSwift.framework` i `IntuneMAMSwiftStub.framework` z obiektem docelowym: przeciągnij `IntuneMAMSwift.framework` i `IntuneMAMSwiftStub.framework` do listy **osadzonych plików binarnych** obiektu docelowego projektu.
+1. **Opcja 1 — struktura (zalecane)** : jeśli używasz Xcode 10.2 lub nowszej wersji i Twoja aplikacja/rozszerzenie zawiera kod Swift, połącz `IntuneMAMSwift.framework` i `IntuneMAMSwiftStub.framework` z obiektem docelowym: przeciągnij `IntuneMAMSwift.framework` i `IntuneMAMSwiftStub.framework` do listy **osadzonych plików binarnych** obiektu docelowego projektu.
 
     W przeciwnym razie połącz `IntuneMAM.framework` z obiektem docelowym: przeciągnij `IntuneMAM.framework` do listy **osadzonych plików binarnych** elementu docelowego projektu.
 
    > [!NOTE]
    > W przypadku używania struktury należy ręcznie usunąć architektury symulatora z uniwersalnej struktury przed przesłaniem aplikacji do sklepu App Store. Więcej szczegółów można znaleźć w sekcji [Przesyłanie aplikacji do sklepu App Store](#submit-your-app-to-the-app-store).
 
-   **Opcja 2 — biblioteka statyczna**: ta opcja jest dostępna tylko dla aplikacji/rozszerzeń, które nie zawierają kodu SWIFT lub zostały skompilowane przy użyciu Xcode w wersji wcześniejszej niż 10.2. utwórz połączenie z biblioteką `libIntuneMAM.a`. Przeciągnij bibliotekę `libIntuneMAM.a` na listę **Linked Frameworks and Libraries** (Połączone struktury i biblioteki) obiektu docelowego projektu.
+   **Opcja 2 — biblioteka statyczna**: ta opcja jest dostępna tylko dla aplikacji/rozszerzeń, które nie zawierają kodu Swift lub zostały skompilowane przy użyciu Xcode w wersji wcześniejszej niż 10.2. utwórz połączenie z biblioteką `libIntuneMAM.a`. Przeciągnij bibliotekę `libIntuneMAM.a` na listę **Linked Frameworks and Libraries** (Połączone struktury i biblioteki) obiektu docelowego projektu.
 
     ![Zestaw SDK aplikacji usługi Intune dla systemu iOS: połączone struktury i biblioteki](./media/intune-app-sdk-ios-linked-frameworks-and-libraries.png)
 
@@ -115,21 +115,8 @@ Aby włączyć zestaw SDK aplikacji usługi Intune, wykonaj następujące kroki:
      Dodaj pakiet zasobów `IntuneMAMResources.bundle` do projektu, przeciągając pakiet zasobów w obszarze **Copy Bundle Resources** (Kopiuj pakiety zasobów) w sekcji **Build Phases** (Fazy kompilacji).
 
      ![Zestaw SDK aplikacji usługi Intune dla systemu iOS: kopiowanie zasobów pakietów](./media/intune-app-sdk-ios-copy-bundle-resources.png)
-     
-2. Jeśli konieczne jest wywołanie dowolnego z interfejsów API usługi Intune z poziomu SWIFT, aplikacja/rozszerzenie musi zaimportować wymagane nagłówki zestawu SDK usługi Intune za pośrednictwem nagłówka mostkowania w języku Objective-C. Jeśli aplikacja/rozszerzenie nie zawiera jeszcze nagłówka mostkowania w języku Objective-C, możesz go określić za pomocą `SWIFT_OBJC_BRIDGING_HEADER` ustawienia konfiguracji kompilacji lub pola **Nagłówek mostkowania języka Objective-C** interfejsu użytkownika Xcode. Nagłówek mostkowania powinien wyglądać następująco:
-
-   ```objc
-      #import <IntuneMAMSwift/IntuneMAM.h>
-   ```
-   
-   Dzięki temu wszystkie interfejsy API zestawu SDK usługi Intune będą dostępne we wszystkich plikach źródłowych języka Swift aplikacji/rozszerzenia. 
-   
-    > [!NOTE]
-    > * Zamiast obejmującego wszystkie nagłówki pliku IntuneMAM.h można wybrać mostkowanie tylko określonych nagłówków zestawu SDK usługi Intune do języka Swift.
-    > * W zależności od zintegrowanej struktury/biblioteki statycznej ścieżka do plików nagłówka może się różnić.
-    > * Udostępnianie interfejsów API zestawu SDK usługi Intune w języku Swift za pośrednictwem instrukcji import modułu (np. import IntuneMAMSwift) nie jest obecnie obsługiwane. Zalecanym podejściem jest użycie nagłówka mostkowania w języku Objective-C.
-    
-3. Dodaj następujące struktury systemu iOS do projektu:  
+         
+2. Dodaj następujące struktury systemu iOS do projektu:  
 -  MessageUI.framework  
 -  Security.framework  
 -  MobileCoreServices.framework  
@@ -142,7 +129,7 @@ Aby włączyć zestaw SDK aplikacji usługi Intune, wykonaj następujące kroki:
 -  QuartzCore.framework  
 -  WebKit.framework
 
-4. Włącz udostępnianie łańcucha kluczy (jeśli nie zostało jeszcze włączone), wybierając pozycję **Capabilities** (Możliwości) w każdym obiekcie docelowym projektu i włączając przełącznik **Keychain Sharing** (Udostępnianie łańcucha kluczy). Udostępnianie łańcucha kluczy jest wymagane do przejścia do następnego kroku.
+3. Włącz udostępnianie łańcucha kluczy (jeśli nie zostało jeszcze włączone), wybierając pozycję **Capabilities** (Możliwości) w każdym obiekcie docelowym projektu i włączając przełącznik **Keychain Sharing** (Udostępnianie łańcucha kluczy). Udostępnianie łańcucha kluczy jest wymagane do przejścia do następnego kroku.
 
    > [!NOTE]
    > Twój profil aprowizacji musi obsługiwać nowe wartości udostępniania łańcucha kluczy. Grupy dostępu łańcucha kluczy powinny obsługiwać symbol wieloznaczny. Możesz to sprawdzić, otwierając plik mobileprovision w edytorze tekstów, wyszukując frazę **keychain-access-groups** i sprawdzając, czy używany jest symbol wieloznaczny. Przykład:
@@ -154,7 +141,7 @@ Aby włączyć zestaw SDK aplikacji usługi Intune, wykonaj następujące kroki:
    >  </array>
    >  ```
 
-5. Po włączeniu udostępniania łańcucha kluczy wykonaj następujące kroki, aby utworzyć oddzielną grupę dostępu, w której będą przechowywane dane zestawu SDK aplikacji usługi Intune. Grupę dostępu łańcucha kluczy możesz utworzyć za pomocą interfejsu użytkownika lub pliku uprawnień. Jeśli używasz interfejsu użytkownika do utworzenia grupy dostępu łańcucha kluczy, koniecznie wykonaj następujące czynności:
+4. Po włączeniu udostępniania łańcucha kluczy wykonaj następujące kroki, aby utworzyć oddzielną grupę dostępu, w której będą przechowywane dane zestawu SDK aplikacji usługi Intune. Grupę dostępu łańcucha kluczy możesz utworzyć za pomocą interfejsu użytkownika lub pliku uprawnień. Jeśli używasz interfejsu użytkownika do utworzenia grupy dostępu łańcucha kluczy, koniecznie wykonaj następujące czynności:
 
      a. Jeśli dla Twojej aplikacji mobilnej nie zdefiniowano żadnych grup dostępu łańcucha kluczy, dodaj identyfikator pakietu aplikacji jako **pierwszą** grupę.
     
@@ -172,11 +159,11 @@ Aby włączyć zestaw SDK aplikacji usługi Intune, wykonaj następujące kroki:
       > [!NOTE]
       > Plik uprawnień to plik XML, który jest unikatowy dla Twojej aplikacji mobilnej. Służy do określania specjalnych uprawnień i możliwości w Twojej aplikacji dla systemu iOS. Jeśli aplikacja nie miała wcześniej pliku uprawnień, włączenie udostępniania pęku kluczy (krok 3) powinno spowodować wygenerowanie takiego pliku dla aplikacji w środowisku Xcode. Upewnij się, że identyfikator pakietu aplikacji jest pierwszym wpisem na liście.
 
-6. Uwzględnij każdy protokół przekazywany przez aplikację do procedury `UIApplication canOpenURL`, w tablicy `LSApplicationQueriesSchemes` pliku Info.plist aplikacji. Pamiętaj o zapisaniu zmian przed przejściem do następnego kroku.
+5. Uwzględnij każdy protokół przekazywany przez aplikację do procedury `UIApplication canOpenURL`, w tablicy `LSApplicationQueriesSchemes` pliku Info.plist aplikacji. Pamiętaj o zapisaniu zmian przed przejściem do następnego kroku.
 
-7. Jeśli Twoja aplikacja nie używa już identyfikatora FaceID, upewnij się, że klucz [NSFaceIDUsageDescription Info.plist](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW75) jest skonfigurowany z domyślnym komunikatem. Jest to wymagane, aby system iOS mógł poinformować użytkownika, jak aplikacja zamierza użyć identyfikatora FaceID. Ustawienie zasad ochrony aplikacji usługi Intune umożliwia używanie identyfikatora FaceID jako metody dostępu do aplikacji, gdy jest to skonfigurowane przez administratora IT.
+6. Jeśli Twoja aplikacja nie używa już identyfikatora FaceID, upewnij się, że klucz [NSFaceIDUsageDescription Info.plist](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW75) jest skonfigurowany z domyślnym komunikatem. Jest to wymagane, aby system iOS mógł poinformować użytkownika, jak aplikacja zamierza użyć identyfikatora FaceID. Ustawienie zasad ochrony aplikacji usługi Intune umożliwia używanie identyfikatora FaceID jako metody dostępu do aplikacji, gdy jest to skonfigurowane przez administratora IT.
 
-8. Użyj narzędzia IntuneMAMConfigurator, które znajduje się w [repozytorium zestawu SDK](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios), aby ukończyć konfigurowanie pliku Info.plist aplikacji. Narzędzie ma trzy parametry:
+7. Użyj narzędzia IntuneMAMConfigurator, które znajduje się w [repozytorium zestawu SDK](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios), aby ukończyć konfigurowanie pliku Info.plist aplikacji. Narzędzie ma trzy parametry:
 
    |Właściwość|Sposób użycia|
    |---------------|--------------------------------|
@@ -188,7 +175,7 @@ Jeśli parametr „-o” nie zostanie określony, plik wejściowy zostanie zmody
 
 ## <a name="configure-adalmsal"></a>Konfigurowanie biblioteki ADAL/MSAL
 
-Zestaw SDK aplikacji usługi Intune może korzystać z [biblioteki uwierzytelniania Azure Active Directory](https://github.com/AzureAD/azure-activedirectory-library-for-objc) lub [biblioteki uwierzytelniania firmy Microsoft](https://github.com/AzureAD/microsoft-authentication-library-for-objc) na potrzeby scenariuszy uwierzytelniania i uruchamiania warunkowego. Korzysta on również z biblioteki ADAL/MSAL do rejestracji tożsamości użytkownika w usłudze MAM w celu zarządzania nieobejmującego scenariuszy rejestracji na urządzeniach.
+Zestaw SDK aplikacji usługi Intune może korzystać z [biblioteki uwierzytelniania usługi Azure Active Directory](https://github.com/AzureAD/azure-activedirectory-library-for-objc) lub [biblioteki uwierzytelniania firmy Microsoft](https://github.com/AzureAD/microsoft-authentication-library-for-objc) na potrzeby scenariuszy uwierzytelniania i uruchamiania warunkowego. Korzysta on również z biblioteki ADAL/MSAL do rejestracji tożsamości użytkownika w usłudze MAM w celu zarządzania nieobejmującego scenariuszy rejestracji na urządzeniach.
 
 Zazwyczaj biblioteka ADAL wymaga od aplikacji zarejestrowania się w usłudze Azure Active Directory (AAD) i uzyskania unikatowego identyfikatora klienta oraz identyfikatora URI przekierowania w celu zagwarantowania bezpieczeństwa tokenów przyznanych aplikacji. Jeśli aplikacja używa już biblioteki ADAL lub MSAL do uwierzytelniania użytkowników, musi używać istniejących wartości rejestracji i zastępować wartości domyślne zestawu SDK aplikacji usługi Intune. Dzięki temu użytkownicy nie będą monitowani o uwierzytelnienie dwukrotnie (raz przez zestaw SDK aplikacji usługi Intune i drugi raz przez aplikację).
 
@@ -228,7 +215,7 @@ Jeśli aplikacja korzysta już z biblioteki ADAL lub MSAL, wymagane są następu
 
 Ponadto aplikacje mogą zastąpić te ustawienia usługi Azure AD w środowisku uruchomieniowym. W tym celu wystarczy ustawić właściwości `aadAuthorityUriOverride`, `aadClientIdOverride` oraz `aadRedirectUriOverride` dla wystąpienia `IntuneMAMPolicyManager`.
 
-4. Upewnij się, że wykonano kroki udzielania uprawnień aplikacji iOS do usługi zasady ochrony aplikacji (APP). Postępuj zgodnie z instrukcjami w [przewodniku zawierającym wprowadzenie do SDK usługi Intune](https://docs.microsoft.com/intune/app-sdk-get-started#next-steps-after-integration) w sekcji „Udzielanie aplikacji dostępu do usługi ochrony aplikacji w usłudze Intune (opcjonalnie)”.  
+4. Upewnij się, że wykonano kroki udzielania uprawnień aplikacji iOS do usługi zasady ochrony aplikacji (APP). Postępuj zgodnie z instrukcjami w [przewodniku zawierającym wprowadzenie do SDK usługi Intune](https://docs.microsoft.com/intune/app-sdk-get-started#next-steps-after-integration) w sekcji „[Udzielanie aplikacji dostępu do usługi ochrony aplikacji w usłudze Intune (opcjonalnie)](https://docs.microsoft.com/intune/app-sdk-get-started#give-your-app-access-to-the-intune-app-protection-service-optional)”.  
 
 > [!NOTE]
 > Metoda z użyciem pliku Info.plist jest zalecana dla wszystkich ustawień, które są statyczne i nie wymagają określania w środowisku uruchomieniowym. Wartości przypisane do właściwości `IntuneMAMPolicyManager` są nadrzędne wobec odpowiednich wartości określonych w pliku Info.plist i obowiązują nawet po ponownym uruchomieniu aplikacji. Zestaw SDK będzie w dalszym ciągu używać ich do zaewidencjonowania zasad, dopóki użytkownik nie zostanie wyrejestrowany lub wartości nie zostaną wyczyszczone lub zmienione.
@@ -243,8 +230,8 @@ MSAL — deweloperzy muszą utworzyć rejestrację aplikacji w usłudze AAD przy
 
 ### <a name="special-considerations-when-using-msal"></a>Kwestie do uwzględnienia podczas korzystania z biblioteki MSAL 
 
-1. **Sprawdź widok sieci Web** — zaleca się, aby aplikacje nie korzystały z SFSafariViewController, SFAuthSession ani ASWebAuthSession jako widoku sieci Web dla wszystkich zainicjowanych przez aplikację operacji uwierzytelniania interaktywnego biblioteki MSAL. Jeśli z jakiegoś powodu aplikacja musi korzystać z jednego z tych widoków sieci Web dla każdej operacji uwierzytelniania interaktywnego biblioteki MSAL, parametr `SafariViewControllerBlockedOverride` w obszarze słownika `IntuneMAMSettings` musi również mieć wartość `true` w pliku Info.plist aplikacji. OSTRZEŻENIE: spowoduje to wyłączenie punktów zaczepienia SafariViewController usługi Intune w celu włączenia sesji uwierzytelniania. Powoduje to ryzyko wycieków danych w innym miejscu w aplikacji, jeśli aplikacja używa SafariViewController do wyświetlania danych firmowych, zatem aplikacja nie powinna wyświetlać danych firmowych w żadnym z tych typów widoków sieci Web.
-2. **Łączenie zarówno biblioteki ADAL, jak i MSAL** — deweloperzy muszą określić, czy chcą, aby usługa Intune preferowała bibliotekę MSAL w tym scenariuszu. Domyślnie usługa Intune będzie preferować obsługiwane wersje biblioteki ADAL, jeśli oba rodzaje bibliotek są połączone w czasie wykonywania. Usługa Intune będzie preferować obsługiwaną wersję biblioteki MSAL tylko wówczas, gdy podczas pierwszego uwierzytelniania w usłudze Intune wartość parametru `IntuneMAMUseMSALOnNextLaunch` wynosi `true` w `NSUserDefaults`. Jeśli wartość parametru `IntuneMAMUseMSALOnNextLaunch` wynosi `false` lub nie jest on ustawiony, usługa Intune powróci do zachowania domyślnego. Jak sugeruje nazwa, zmiana na `IntuneMAMUseMSALOnNextLaunch` zacznie obowiązywać po następnym uruchomieniu.
+1. **Sprawdź widok internetowy** — zaleca się, aby aplikacje nie korzystały z SFSafariViewController, SFAuthSession ani ASWebAuthSession jako widoku internetowego dla wszystkich zainicjowanych przez aplikację operacji uwierzytelniania interaktywnego biblioteki MSAL. Jeśli z jakiegoś powodu aplikacja musi korzystać z jednego z tych widoków internetowych dla każdej operacji uwierzytelniania interaktywnego biblioteki MSAL, parametr `SafariViewControllerBlockedOverride` w obszarze słownika `IntuneMAMSettings` musi również mieć wartość `true` w pliku Info.plist aplikacji. OSTRZEŻENIE: spowoduje to wyłączenie punktów zaczepienia SafariViewController usługi Intune w celu włączenia sesji uwierzytelniania. Powoduje to ryzyko wycieków danych w innym miejscu w aplikacji, jeśli aplikacja używa SafariViewController do wyświetlania danych firmowych, zatem aplikacja nie powinna wyświetlać danych firmowych w żadnym z tych typów widoków internetowych.
+2. **Łączenie zarówno biblioteki ADAL, jak i MSAL** — deweloperzy muszą określić, czy chcą, aby usługa Intune preferowała bibliotekę MSAL w tym scenariuszu. Domyślnie usługa Intune będzie preferować obsługiwane wersje biblioteki ADAL, jeśli oba rodzaje bibliotek są połączone w czasie wykonywania. Usługa Intune będzie preferować obsługiwaną wersję biblioteki MSAL tylko wówczas, gdy podczas pierwszego uwierzytelniania w usłudze Intune wartość parametru `IntuneMAMUseMSALOnNextLaunch` wynosi `true` w `NSUserDefaults`. Jeśli wartość parametru `IntuneMAMUseMSALOnNextLaunch` wynosi `false` lub nie został on ustawiony, usługa Intune powróci do zachowania domyślnego. Jak sugeruje nazwa, zmiana na `IntuneMAMUseMSALOnNextLaunch` zacznie obowiązywać po następnym uruchomieniu.
 
 
 ## <a name="configure-settings-for-the-intune-app-sdk"></a>Konfigurowanie ustawień zestawu SDK aplikacji usługi Intune
@@ -258,7 +245,7 @@ Niektóre z tych ustawień mogły zostać omówione w poprzednich sekcjach, a ni
 Ustawienie  | Typ  | Definicja | Wymagane?
 --       |  --   |   --       |  --
 ADALClientId  | String  | Identyfikator klienta usługi Azure AD aplikacji. | Wymagane dla wszystkich aplikacji korzystających z bibliotek MSAL i dowolnej aplikacji korzystającej z biblioteki ADAL, która uzyskuje dostęp do zasobu usługi AAD spoza usługi Intune. |
-ADALAuthority | String | Urząd usługi Azure AD używany przez aplikację. Należy użyć własnego środowiska, w którym skonfigurowano konta usługi AAD. | Wymagane, jeśli aplikacja używa biblioteki ADAL lub MSAL w celu uzyskania dostępu do zasobu spoza usługi Intune. W przypadku braku tej wartości używana jest wartość domyślna usługi Intune.|
+ADALAuthority | String | Urząd usługi Azure AD używany przez aplikację. Należy użyć własnego środowiska, w którym skonfigurowano konta usługi AAD. | Wymagane, jeśli aplikacja używa biblioteki ADAL lub MSAL w celu uzyskania dostępu do zasobu usługi AAD spoza usługi Intune. W przypadku braku tej wartości używana jest wartość domyślna usługi Intune.|
 ADALRedirectUri  | String  | Identyfikator URI przekierowania usługi Azure AD aplikacji. | Ustawienie ADALRedirectUri lub ADALRedirectScheme jest wymagane dla wszystkich aplikacji korzystających z biblioteki MSAL i dowolnej aplikacji korzystającej z biblioteki ADAL, która uzyskuje dostęp do zasobu usługi AAD spoza usługi Intune.  |
 ADALRedirectScheme  | String  | Schemat przekierowania usługi Azure AD aplikacji. Może być używany zamiast ustawienia ADALRedirectUri, jeśli identyfikator URI przekierowania aplikacji ma format `scheme://bundle_id`. | Ustawienie ADALRedirectUri lub ADALRedirectScheme jest wymagane dla wszystkich aplikacji korzystających z biblioteki MSAL i dowolnej aplikacji korzystającej z biblioteki ADAL, która uzyskuje dostęp do zasobu usługi AAD spoza usługi Intune. |
 ADALLogOverrideDisabled | Boolean  | Określa, czy zestaw SDK będzie kierować wszystkie dzienniki bibliotek ADAL/MSAL (w tym wywołania biblioteki ADAL z aplikacji, jeśli występują) do własnego pliku dziennika. Wartość domyślna to NO (Nie). Ustaw wartość YES (Tak), jeśli aplikacja ustawi własne wywołanie zwrotne dzienników bibliotek ADAL/MSAL. | Opcjonalny. |
@@ -272,7 +259,7 @@ AutoEnrollOnLaunch| Boolean| Określa, czy aplikacja ma podejmować próbę auto
 MAMPolicyRequired| Boolean| Określa, czy uruchamianie aplikacji będzie blokowane, jeśli aplikacja nie ma zasad ochrony aplikacji usługi Intune. Wartość domyślna to NO (Nie). <br><br> Uwagi: Aplikacje nie mogą być przesyłane do sklepu z aplikacjami, jeśli mają ustawienie MAMPolicyRequired o wartości YES (Tak). W przypadku podania wartości YES (Tak) dla ustawienia MAMPolicyRequired ustawienie AutoEnrollOnLaunch również musi mieć wartość YES (Tak). | Opcjonalny. Wartość domyślna to no (Nie). |
 MAMPolicyWarnAbsent | Boolean| Określa, czy użytkownik będzie ostrzegany podczas uruchamiania aplikacji, jeśli aplikacja nie ma zasad ochrony aplikacji usługi Intune. <br><br> Uwaga: użytkownicy będą mogli korzystać z aplikacji bez zasad po odrzuceniu ostrzeżenia. | Opcjonalny. Wartość domyślna to no (Nie). |
 MultiIdentity | Boolean| Określa, czy aplikacja obsługuje wiele tożsamości. | Opcjonalny. Wartość domyślna to no (Nie). |
-SafariViewControllerBlockedOverride | Boolean| Wyłącza punkty zaczepienia SafariViewController usługi Intune w celu włączenia uwierzytelniania MSAL za pośrednictwem SFSafariViewController, SFAuthSession lub ASWebAuthSession. | Opcjonalny. Wartość domyślna to no (Nie). OSTRZEŻENIE: może spowodować wyciek danych, jeśli jest używany nieprawidłowo. Włącz tylko w razie absolutnej konieczności. Aby uzyskać szczegółowe informacje, zobacz sekcję [Kwestie do uwzględnienia podczas korzystania z biblioteki MSAL](#special-considerations-when-using-msal) .  |
+SafariViewControllerBlockedOverride | Boolean| Wyłącza punkty zaczepienia SafariViewController usługi Intune w celu włączenia uwierzytelniania MSAL za pośrednictwem SFSafariViewController, SFAuthSession lub ASWebAuthSession. | Opcjonalny. Wartość domyślna to no (Nie). OSTRZEŻENIE: może spowodować wyciek danych, jeśli jest używany nieprawidłowo. Włącz tylko w razie absolutnej konieczności. Aby uzyskać szczegółowe informacje, zobacz sekcję [Kwestie do uwzględnienia podczas korzystania z biblioteki MSAL](#special-considerations-when-using-msal).  |
 SplashIconFile <br>SplashIconFile~ipad | String  | Określa plik ikony powitalnej (uruchamiania) usługi Intune. | Opcjonalny. |
 SplashDuration | Liczba | Minimalny czas w sekundach, przez który ekran uruchamiania usługi Intune będzie wyświetlany podczas uruchamiania aplikacji. Wartość domyślna to 1,5. | Opcjonalny. |
 BackgroundColor| String| Określa kolor tła ekranu uruchamiania i ekranu numeru PIN. Akceptuje ciąg szesnastkowy RGB w postaci „#XXXXXX”, gdzie „X” może być znakiem z zakresu 0–9 lub A–F. Znak # można pominąć.   | Opcjonalny. Domyślnie jasnoszary. |

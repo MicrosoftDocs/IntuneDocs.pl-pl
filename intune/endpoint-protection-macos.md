@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 919fef62cf1d979d6a4f67c3653d90af1442fa55
-ms.sourcegitcommit: ec22a186a9cfa489a8490698e387624e480892d8
+ms.openlocfilehash: 97674627ac1894aa7fcf3f6a6550677b89e1a150
+ms.sourcegitcommit: 3f0cc80c5dbb4d04519c5aa98eae8426dad8cb30
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68960414"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70158022"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>Ustawienia programu Endpoint Protection w usłudze Intune dla systemu MacOS  
 
@@ -100,14 +100,14 @@ Aby uzyskać więcej informacji na temat ustawień Apple FileVault, zobacz [FDEF
     - **Obrót osobistego klucza odzyskiwania** — określ częstotliwość rotacji osobistego klucza odzyskiwania dla urządzenia. Można wybrać wartość domyślną **nieskonfigurowane** lub wartości z przenoszącą od **1** do **12** miesięcy.  
 
   - **Wyłącz monit o wylogowaniu**  
-    Uniemożliwiaj użytkownikowi monitowanie o włączenie FileVault podczas wylogowywania się.  Po ustawieniu na wartość Włącz monit o wylogowanie jest wyłączony i zamiast tego użytkownik jest monitowany po zalogowaniu się.  
+    Uniemożliwiaj użytkownikowi monitowanie o włączenie FileVault podczas wylogowywania się.  Po wybraniu opcji Wyłącz monit o wylogowanie jest wyłączony, a zamiast tego użytkownik zostanie poproszony o zalogowanie się.  
     - **Nieskonfigurowany**  
-    - **Włącz** — wyłącza monit przy wylogowaniu.
+    - **Wyłącz** — Wyłącz monit przy wylogowaniu.
 
     **Domyślnie**: Nie skonfigurowano  
 
      > [!IMPORTANT]  
-     > Istnieje znany problem, gdy dla ustawienia **Wyłącz monit przy wylogowywaniu** zostanie ustawiona wartość *Włączone*. Gdy zostanie ustawiona wartość *Włączone*, dla ustawienia **Liczba dozwolonych pominięć** należy ustawić wartość i nie może ona wynosić *Nieskonfigurowane*. Jeśli zostanie ustawiona wartość *Nieskonfigurowane*, profil nie będzie działać na urządzeniu. W tym scenariuszu urządzenie raportuje **Podsumowanie stanu profilu** jako **Błąd** bez dalszych szczegółów.
+     > Istnieje znany problem, gdy dla ustawienia **Wyłącz monit przy wylogowywaniu** zostanie ustawiona wartość *Wyłącz*. Gdy zostanie ustawiona wartość *Wyłącz*, dla ustawienia **Liczba dozwolonych pominięć** należy ustawić wartość inną niż *Nieskonfigurowane*. Jeśli zostanie ustawiona wartość *Nieskonfigurowane*, profil nie będzie działać na urządzeniu. W tym scenariuszu urządzenie raportuje **Podsumowanie stanu profilu** jako **Błąd** bez dalszych szczegółów.
      > 
      > Gdy ustawienie **Wyłącz monit przy wylogowywaniu** ma wartość *Nieskonfigurowane*, dla ustawienia **Liczba dozwolonych pominięć** można ustawić opcję *Nieskonfigurowane* lub może ono mieć wartość.  
      > 
@@ -122,4 +122,5 @@ Aby uzyskać więcej informacji na temat ustawień Apple FileVault, zobacz [FDEF
  
     **Domyślnie**: Nie skonfigurowano  
 
+Aby uzyskać więcej informacji na temat FileVault z usługą Intune, zobacz [FileVault Recovery Keys](encryption-monitor.md#filevault-recovery-keys).
 
