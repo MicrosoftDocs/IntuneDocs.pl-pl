@@ -1,11 +1,11 @@
 ---
 title: Używanie szablonów dla urządzeń z systemem Windows 10 w usłudze Microsoft Intune — Azure | Microsoft Docs
-description: Szablony administracyjne w usłudze Microsoft Intune umożliwiają tworzenie grup ustawień dla urządzeń z systemem Windows 10. Użyj tych ustawień w profilu konfiguracji urządzenia, aby sterować programami pakietu Office, zabezpieczać funkcje w programie Internet Explorer, kontrolować dostęp do usługi OneDrive, korzystać z funkcji pulpitu zdalnego, włączać autoodtwarzanie, konfigurować ustawienia zarządzania energią, używać drukowania HTTP, używać różnych opcji logowania użytkowników oraz sterować rozmiarem dziennika zdarzeń.
+description: Szablony administracyjne w usłudze Microsoft Intune umożliwiają tworzenie grup ustawień dla urządzeń z systemem Windows 10. Użyj tych ustawień w profilu konfiguracji urządzenia, aby sterować programami pakietu Office, przeglądarką Microsoft Edge, zabezpieczać funkcje w programie Internet Explorer, kontrolować dostęp do usługi OneDrive, korzystać z funkcji pulpitu zdalnego, włączać autoodtwarzanie, konfigurować ustawienia zarządzania energią, używać drukowania HTTP, używać różnych opcji logowania użytkowników oraz sterować rozmiarem dziennika zdarzeń.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/03/2019
+ms.date: 8/28/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,20 +15,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0bfad3feed6daef1930c235bec9c25e809da46c5
-ms.sourcegitcommit: ce9cae824a79223eab3c291fd5d5e377efac84cb
+ms.openlocfilehash: 608f9045d676a756c4ee7440072040075e497605
+ms.sourcegitcommit: 7269abaefb2857bc8b343896bb2138bdb01bf8dc
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67842791"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70214333"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Korzystanie z szablonów systemu Windows 10 umożliwiających konfigurowanie ustawień zasad grupy w usłudze Microsoft Intune
 
-Podczas zarządzania urządzeniami w organizacji można utworzyć grupę ustawień stosowanych do różnych grup urządzeń. Na przykład masz kilka grup urządzeń. Dla grupy A chcesz przypisać określony zestaw ustawień. Dla grupy B chcesz przypisać inny zestaw ustawień. Możesz też użyć prostego widoku ustawień, który można skonfigurować.
+Podczas zarządzania urządzeniami w organizacji można utworzyć grupy ustawień, które będą stosowane do różnych grup urządzeń. Na przykład masz kilka grup urządzeń. Dla grupy A chcesz przypisać określony zestaw ustawień. Dla grupy B chcesz przypisać inny zestaw ustawień. Możesz też użyć prostego widoku ustawień, który można skonfigurować.
 
-Możesz wykonać to zadanie przy użyciu **szablonów administracyjnych** w usłudze Microsoft Intune. Szablony administracyjne obejmują setki ustawień, które sterują funkcjami w programie Internet Explorer, w programach pakietu Microsoft Office, na pulpicie zdalnym, w usłudze OneDrive, dotyczącymi haseł i numerów PIN i nie tylko. Te ustawienia umożliwiają administratorom grup zarządzanie zasadami grupy przy użyciu chmury.
+Możesz wykonać to zadanie przy użyciu **szablonów administracyjnych** w usłudze Microsoft Intune. Szablony administracyjne obejmują setki ustawień, które sterują funkcjami w przeglądarce Microsoft Edge, programie Internet Explorer, w programach pakietu Microsoft Office, na pulpicie zdalnym, w usłudze OneDrive, dotyczącymi haseł i numerów PIN i nie tylko. Te ustawienia umożliwiają administratorom grup zarządzanie zasadami grupy przy użyciu chmury.
 
-Ustawienia systemu Windows są podobne do ustawień zasad grupy (GPO) w usłudze Active Directory (AD). Te ustawienia są wbudowane w systemie Windows i są [ustawieniami obsługiwanymi przez pliki ADMX](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies) (link powoduje otwarcie innej witryny firmy Microsoft), które używają formatu XML. Ustawienia pakietu Office są pozyskiwane w ramach plików ADMX i używają ustawień ADMX w [plikach szablonów administracyjnych pakietu Office](https://www.microsoft.com/download/details.aspx?id=49030). Jednak szablony usługi Intune są w pełni oparte na chmurze. Umożliwiają proste konfigurowanie ustawień i znajdowanie odpowiednich ustawień.
+Ustawienia systemu Windows są podobne do ustawień zasad grupy (GPO) w usłudze Active Directory (AD). Te ustawienia są wbudowane w systemie Windows i są [ustawieniami obsługiwanymi przez pliki ADMX](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies), które używają formatu XML. Ustawienia pakietu Office są pozyskiwane w ramach plików ADMX i używają ustawień ADMX w [plikach szablonów administracyjnych pakietu Office](https://www.microsoft.com/download/details.aspx?id=49030). Jednak szablony usługi Intune są w pełni oparte na chmurze. Umożliwiają proste konfigurowanie ustawień i znajdowanie odpowiednich ustawień.
 
 **Szablony administracyjne** są wbudowane w usłudze Intune i nie wymagają dostosowywania, w tym korzystania z identyfikatora OMA-URI. W ramach rozwiązania do zarządzania urządzeniami przenośnymi (MDM) użyj tych ustawień szablonu jako pojedynczego miejsca do zarządzania urządzeniami z systemem Windows 10.
 
@@ -38,7 +38,7 @@ W tym artykule przedstawiono procedurę tworzenia szablonu dla urządzeń z syst
 
 - Niektóre z tych ustawień są dostępne od systemu Windows 10 w wersji 1703 (RS2). W celu uzyskania dostępu do najlepszego środowiska zaleca się użycie systemu Windows 10 Enterprise w wersji 1903 (19H1) lub nowszego.
 
-- Ustawienia systemu Windows używają [dostawców CSP zasad systemu Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#admx-backed-policies) (link powoduje otwarcie innej witryny firmy Microsoft). Dostawcy CSP działają w różnych wersjach systemu Windows, takich jak Home, Professional, Enterprise i tak dalej. Aby sprawdzić, czy dostawca CSP działa w określonej wersji, przejdź do artykułu dotyczącego [dostawców CSP zasad systemu Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#admx-backed-policies) (link powoduje otwarcie innej witryny firmy Microsoft).
+- Ustawienia systemu Windows używają [dostawców CSP zasad systemu Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#admx-backed-policies). Dostawcy CSP działają w różnych wersjach systemu Windows, takich jak Home, Professional, Enterprise i tak dalej. Aby sprawdzić, czy dostawca CSP działa w określonej wersji, przejdź do artykułu dotyczącego [dostawców CSP zasad systemu Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#admx-backed-policies).
 
 ## <a name="create-a-template"></a>Tworzenie szablonu
 
@@ -58,9 +58,16 @@ W tym artykule przedstawiono procedurę tworzenia szablonu dla urządzeń z syst
     > [!TIP]
     > Ustawienia systemu Windows w usłudze Intune są skorelowane z lokalną ścieżką zasad grupy wyświetlaną w Edytorze lokalnych zasad grupy (`gpedit`).
 
-5. Domyślnie na liście rozwijanej jest wyświetlana pozycja **Wszystkie produkty**. Na liście można także filtrować ustawienia tak, aby były wyświetlane tylko ustawienia systemu **Windows** lub tylko ustawienia pakietu **Office**:
+5. Domyślnie na liście rozwijanej jest wyświetlana pozycja **Wszystkie produkty**. Na liście można także filtrować ustawienia w celu wyświetlania tylko ustawień systemu **Windows**, tylko ustawień pakietu **Office** lub tylko ustawień przeglądarki **Microsoft Edge**:
 
     ![Filtrowanie listy w celu wyświetlenia wszystkich ustawień systemu Windows lub pakietu Office w szablonach administracyjnych w usłudze Intune](./media/administrative-templates-windows/administrative-templates-choose-windows-office-all-products.png)
+
+    > [!NOTE]
+    > Ustawienia przeglądarki Microsoft Edge dotyczą następujących systemów:
+    >
+    > - Windows 10 RS4 i nowsze z zainstalowaną aktualizacją [KB 4512509](https://support.microsoft.com/kb/4512509).
+    > - Windows 10 RS5 i nowsze z zainstalowaną aktualizacją [KB 4512534](https://support.microsoft.com/kb/4512534).
+    > - Windows 10 19H1 i nowsze z zainstalowaną aktualizacją [KB 4512941](https://support.microsoft.com/kb/4512941).
 
 6. Wybierz dowolne ustawienie. Na przykład odfiltruj listę przy użyciu pozycji **Office**, a następnie wybierz pozycję **Aktywuj przeglądanie z ograniczeniami**. Zostanie wyświetlony szczegółowy opis ustawienia. Wybierz pozycję **Włączone** lub **Wyłączone** albo pozostaw ustawienie **Nieskonfigurowane** (wartość domyślna). Ponadto w szczegółowym opisie wyjaśniono, co się dzieje w przypadku wybrania pozycji **Włączone**, **Wyłączone** lub **Nieskonfigurowane**.
 7. Wybierz przycisk **OK**, aby zapisać zmiany.
@@ -72,6 +79,7 @@ Kontynuuj przeglądanie listy ustawień, a następnie skonfiguruj ustawienia, kt
 - Użyj ustawienia **Wymagaj hasła przy wznawianiu pracy komputera (podłączony zasilacz)** , aby monitować użytkowników o podanie hasła podczas wznawiania pracy urządzenia z trybu uśpienia.
 - Użyj ustawienia **Pobierz niepodpisane kontrolki ActiveX**, aby uniemożliwić użytkownikom pobieranie niepodpisanych kontrolek ActiveX z programu Internet Explorer.
 - Użyj ustawienia **Wyłącz Przywracanie systemu**, aby umożliwić lub uniemożliwić użytkownikom uruchamianie przywracania systemu w urządzeniu.
+- Użyj ustawienia **Zezwalaj na importowanie ulubionych**, aby umożliwić lub uniemożliwić użytkownikom importowanie elementów ulubionych z innej przeglądarki do przeglądarki Microsoft Edge.
 - I wiele więcej...
 
 ## <a name="find-some-settings"></a>Znajdowanie ustawień

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b3c2b5bc0091544136848bf92fc6cef7524ffa54
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: 4893f3484c497ed72352b2bbb229003c2d639107
+ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354507"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122284"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-for-ios-devices-in-intune"></a>Konfigurowanie wirtualnej sieci prywatnej dla aplikacji na urządzeniach z systemem iOS w usłudze Intune
 
@@ -83,7 +83,7 @@ Profil zaufanego certyfikatu głównego umożliwia urządzeniu automatyczne zauf
 
 Aby skonfigurować i przypisać certyfikat uwierzytelniania klienta, zobacz jeden z następujących artykułów:
 
-- [Konfigurowanie certyfikatów protokołu SCEP i zarządzanie nimi za pomocą usługi Intune](certificates-scep-configure.md)
+- [Konfigurowanie infrastruktury do obsługi protokołu SCEP w usłudze Intune](certificates-scep-configure.md)
 - [Konfigurowanie certyfikatów PKCS i zarządzanie nimi za pomocą usługi Intune](certficates-pfx-configure.md)
 
 Pamiętaj o skonfigurowaniu certyfikatu dla uwierzytelniania klienta. Możesz ustawić go bezpośrednio w profilach certyfikatów SCEP (**Rozszerzone użycie klucza** lista > **Uwierzytelnianie klienta**). W przypadku standardu PKCS należy ustawić uwierzytelnianie klienta w szablonie certyfikatu w urzędzie certyfikacji.

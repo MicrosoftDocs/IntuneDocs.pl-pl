@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/16/2019
+ms.date: 08/27/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 267eb630b962893d5ab32530a095fe2fd3f7102e
-ms.sourcegitcommit: cbd406e3c6ab8c9a29d58dfda4a18e34277a1594
+ms.openlocfilehash: 09d80964a417772b1f011478db59398ceede5c5e
+ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620215"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122137"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co nowego w usłudze Microsoft Intune
 
@@ -53,6 +53,18 @@ Dowiedz się co tydzień, co nowego w usłudze Microsoft Intune. Możesz tu rów
 -->  
 
 <!-- ########################## -->
+
+## <a name="week-of-august-26-2019"></a>Tydzień od 26 sierpnia 2019 r.
+
+### <a name="configure-microsoft-edge-settings-using-administrative-templates-for-windows-10-and-newer----5228061---"></a>Konfigurowanie ustawień przeglądarki Microsoft Edge przy użyciu szablonów administracyjnych dla systemu Windows 10 i nowszych <!-- 5228061 -->
+
+Na urządzeniach z systemem Windows 10 lub nowszym można utworzyć szablony administracyjne w celu skonfigurowania ustawień zasad grupy w usłudze Intune. W tej aktualizacji można skonfigurować ustawienia, które mają zastosowanie do przeglądarki Microsoft Edge w wersji 77 lub nowszej.
+
+Aby dowiedzieć się więcej na temat szablonów administracyjnych, zobacz [Konfigurowanie ustawień zasad grupy w usłudze Intune przy użyciu szablonów systemu Windows 10](administrative-templates-windows.md).
+
+Dotyczy:
+
+- System Windows 10 i nowsze (Windows RS4 lub nowszy)
 
 ## <a name="week-of-august-12-2019"></a>Tydzień od 12 sierpnia 2019 r.
 
@@ -1016,8 +1028,8 @@ Wszelkie zmiany nowych lub istniejących zasad haseł przez administratora powod
 Dotyczy:  
 macOS
 
-#### <a name="assign-scep-certificates-to-a-userless-macos-device-----2340521----"></a>Przypisywanie certyfikatów SCEP do urządzenia z systemem macOS bez użytkowników  <!-- 2340521  -->
-Możesz przypisać certyfikaty protokołu Simple Certificate Enrollment Protocol (SCEP) przy użyciu atrybutów urządzenia do urządzeń z systemem macOS, w tym urządzeń bez koligacji użytkownika, i skojarzyć profil certyfikatu z profilami sieci Wi-Fi lub sieci VPN. Powoduje rozszerzenie obsługi [przypisywania certyfikatów protokołu SCEP na urządzeniach z lub bez koligacji użytkownika](certificates-scep-configure.md#create-a-scep-certificate-profile) z systemem Windows, iOS i Android.  Ta aktualizacja dodaje opcję wyboru typu certyfikatu *Urządzenie* podczas konfigurowania profilu certyfikatu protokołu SCEP dla systemu macOS.
+#### <a name="assign-scep-certificates-to-a-userless-macos-device-------2340521------"></a>Przypisywanie certyfikatów SCEP do urządzenia z systemem macOS bez użytkowników    <!-- 2340521    -->
+Możesz przypisać certyfikaty protokołu Simple Certificate Enrollment Protocol (SCEP) przy użyciu atrybutów urządzenia do urządzeń z systemem macOS, w tym urządzeń bez koligacji użytkownika, i skojarzyć profil certyfikatu z profilami sieci Wi-Fi lub sieci VPN. Powoduje rozszerzenie obsługi [przypisywania certyfikatów protokołu SCEP na urządzeniach z lub bez koligacji użytkownika](certificates-profile-scep.md) z systemem Windows, iOS i Android.  Ta aktualizacja dodaje opcję wyboru typu certyfikatu *Urządzenie* podczas konfigurowania profilu certyfikatu protokołu SCEP dla systemu macOS.
 
 Dotyczy: 
 - macOS

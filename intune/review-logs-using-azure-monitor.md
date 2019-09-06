@@ -1,11 +1,11 @@
 ---
-title: Kierowanie dzienników inspekcji w usłudze Azure Monitor przy użyciu usługi Microsoft Intune — Azure | Microsoft Docs
+title: Kierowanie dzienników do usługi Azure Monitor przy użyciu usługi Microsoft Intune — Azure | Microsoft Docs
 description: Używaj ustawień diagnostyki do wysyłania dzienników inspekcji i dzienników operacyjnych w usłudze Microsoft Intune na konto magazynu, centrów zdarzeń lub analizy dzienników na platformie Azure. Wybierz, jak długo chcesz przechowywać dane, i zobacz niektóre szacowane koszty w przypadku użycia innego rozmiaru dzierżaw.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2019
+ms.date: 08/28/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,16 +15,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d95b37d18fa609f1c4e98d4fad5cfa600333b90a
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: ed32ad564f850c06b37b15e1994ac066a929ffaa
+ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354525"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122408"
 ---
 # <a name="send-log-data-to-storage-event-hubs-or-log-analytics-in-intune-preview"></a>Wysyłanie danych dzienników do magazynu, centrów zdarzeń lub analizy dzienników w usłudze Intune (wersja zapoznawcza)
 
-Usługa Microsoft Intune obejmuje wbudowane dzienniki, które zawierają informacje o środowisku. **Dzienniki inspekcji** zawierają szczegółowe informacje dotyczące różnych zdarzeń lub zadań, które zachodzą w usłudze Intune. **Dzienniki operacyjne (wersja zapoznawcza)** zawierają szczegółowe informacje dotyczące użytkowników i urządzeń, których rejestracja zakończyła się powodzeniem (lub niepowodzeniem). Dostępne są również informacje o niezgodnych urządzeniach.
+Usługa Microsoft Intune obejmuje wbudowane dzienniki, które zawierają informacje o środowisku:
+
+- **Dzienniki inspekcji** zawierają szczegółowe informacje dotyczące różnych zdarzeń lub zadań, które zachodzą w usłudze Intune.
+- **Dzienniki operacyjne (wersja zapoznawcza)** zawierają szczegółowe informacje dotyczące użytkowników i urządzeń, których rejestracja zakończyła się powodzeniem (lub niepowodzeniem), a także szczegółowe informacje o niezgodnych urządzeniach.
+- **Dzienniki organizacyjne zgodności urządzeń (wersja zapoznawcza)** zawierają raport organizacyjny dotyczący zgodności urządzeń w usłudze Intune oraz szczegółowe informacje o niezgodnych urządzeniach.
 
 Te dzienniki można również wysyłać do usługi Azure Monitor, łącznie z informacjami na temat kont magazynu, centrów zdarzeń i analizy dzienników. W szczególności możesz wykonywać następujące czynności:
 
@@ -35,7 +39,7 @@ Te dzienniki można również wysyłać do usługi Azure Monitor, łącznie z in
 
 Te funkcje są częścią **ustawień diagnostyki** w usłudze Intune.
 
-W tym artykule dowiesz się, jak używać **ustawień diagnostyki** do wysyłania danych dzienników do różnych usług, zapoznasz się z przykładami i szacowanymi kosztami oraz znajdziesz odpowiedzi na często zadawane pytania.
+W tym artykule dowiesz się, jak używać **ustawień diagnostyki** do wysyłania danych dzienników do różnych usług, zapoznasz się z przykładami i szacowanymi kosztami oraz znajdziesz odpowiedzi na często zadawane pytania. Po włączeniu tej funkcji dzienniki będą kierowane do wybranej usługi Azure Monitor.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -54,7 +58,7 @@ W zależności od tego, dokąd chcesz przekierowywać dane z dziennika inspekcji
 ## <a name="send-logs-to-azure-monitor"></a>Wysyłanie dzienników do usługi Azure Monitor
 
 1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. W obszarze **Monitorowanie** wybierz pozycję **Ustawienia diagnostyki**. Po pierwszym otwarciu tej funkcji włącz ją:
+2. W obszarze **Monitorowanie** wybierz pozycję **Ustawienia diagnostyki**. Po pierwszym otwarciu tej funkcji włącz ją. W przeciwnym razie dodaj ustawienie.
 
     ![Włączanie ustawień diagnostyki w usłudze Intune w celu wysyłania dzienników do usługi Azure Monitor](media/diagnostics-settings-turn-on.png)
 
@@ -87,7 +91,14 @@ W zależności od tego, dokąd chcesz przekierowywać dane z dziennika inspekcji
       Jeśli chcesz użyć konta magazynu, wprowadź również liczbę dni zachowywania danych (okres przechowywania). Aby zachować dane na zawsze, należy ustawić pozycję **Przechowywanie (dni)** na `0` (zero).
 
       > [!NOTE]
-      > Dzienniki operacyjne są dostępne w wersji zapoznawczej. Aby przekazać opinię, w tym informacje uwzględnione w dziennikach operacyjnych, przejdź do witryny [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas/suggestions/36613948-diagnostics-settings-feedback) (link powoduje otwarcie nowej witryny internetowej).
+      > Dzienniki operacyjne są dostępne w wersji zapoznawczej. Aby przekazać opinię, w tym informacje zawarte w dziennikach operacyjnych, przejdź do witryny [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas/suggestions/36613948-diagnostics-settings-feedback).
+
+    - **DZIENNIK** > **DeviceComplianceOrg**: Dzienniki organizacyjne zgodności urządzeń (wersja zapoznawcza) zawierają raport organizacyjny dotyczący zgodności urządzeń w usłudze Intune oraz informacje o niezgodnych urządzeniach. Wybierz tę opcję, aby wysyłać dzienniki zgodności do konta magazynu, centrum zdarzeń lub analizy dzienników.
+
+      Jeśli chcesz użyć konta magazynu, wprowadź również liczbę dni zachowywania danych (okres przechowywania). Aby zachować dane na zawsze, należy ustawić pozycję **Przechowywanie (dni)** na `0` (zero).
+ 
+      > [!NOTE]
+      > Dzienniki organizacyjne zgodności urządzeń są dostępne w wersji zapoznawczej. Aby przekazać opinię, w tym informacje zawarte w raporcie, przejdź do witryny [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas/suggestions/36613948-diagnostics-settings-feedback).
 
     Po zakończeniu ustawienia będą wyglądać podobnie do następujących: 
 

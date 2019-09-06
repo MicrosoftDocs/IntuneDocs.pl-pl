@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 53555a01899cfec15c319e790620b2bfeaa302bc
-ms.sourcegitcommit: 948ff8f56639e6dc7091134a0efd8d44efca63f2
+ms.openlocfilehash: 1d545e5848330e8c4f34eca21a992ad05ca8c85d
+ms.sourcegitcommit: ffbd1542d33810ab97a0be8faf26f8061328c228
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/27/2019
-ms.locfileid: "68590905"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206405"
 ---
 # <a name="intune-discovered-apps"></a>Aplikacje odnalezione przez usługę Intune
 
@@ -62,6 +62,9 @@ Poniższa lista zawiera następujące informacje: typ platformy aplikacji, aplik
 | macOS | Wszystkie aplikacje zainstalowane na urządzeniu | Wszystkie aplikacje zainstalowane na urządzeniu | Co 7 dni od rejestracji urządzenia |
 | Android | Tylko aplikacje zarządzane | Wszystkie aplikacje zainstalowane na urządzeniu | Co 7 dni od rejestracji urządzenia |
 | Android Enterprise | Tylko aplikacje zarządzane | Tylko aplikacje zainstalowane w profilu służbowym | Co 7 dni od rejestracji urządzenia |
+
+> [!NOTE]
+>Urządzenia z systemem Windows 10 dołączone do hybrydowej usługi Azure AD z rozszerzeniem do zarządzania usługi Intune obecnie nie zbierają spisu aplikacji zgodnie z powyższym harmonogramem. Jest to znany problem. Wszelkie zmiany i aktualizacje dotyczące tego zachowania są ogłaszane w sekcjach dotyczących [rozwiązań w trakcie opracowywania](in-development.md) i/lub [nowości](whats-new.md).
 
 Liczba wykrytych aplikacji może być niezgodna z liczbą stanu instalacji aplikacji. Możliwe przyczyny niespójności to:
 - Ukierunkowana zmiana zainstalowanej aplikacji zarządzanej może spowodować spadek liczby instalacji w bloku stanu, ale będzie nadal zgłaszana w wykrytych aplikacjach.

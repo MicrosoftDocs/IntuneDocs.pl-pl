@@ -13,16 +13,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b49595493b5db3e5735e0a4717c27e91f058b8d8
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 398b8c748fddfa032194cfa60547d76322e28c9a
+ms.sourcegitcommit: 2a7d621587471822b1428440b24f08c8722612dd
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61511379"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70234808"
 ---
 # <a name="quickstart-create-a-user-in-intune-and-assign-them-a-license"></a>Szybki start: Tworzenie użytkownika w usłudze Intune i przypisywanie do niego licencji
 
-W tym przewodniku Szybki start utworzysz użytkownika, a następnie przypiszesz do niego usługę Intune. W przypadku korzystania z usługi Intune każda osoba, która ma mieć dostęp do danych firmy, musi mieć własne konto użytkownika. Administratorzy usługi Intune mogą później konfigurować tych użytkowników na potrzeby zarządzania kontrolą dostępu.
+W tym przewodniku Szybki start utworzysz użytkownika, a następnie przypiszesz do niego licencję usługi Intune. W przypadku korzystania z usługi Intune każda osoba, która ma mieć dostęp do danych firmy, musi mieć własne konto użytkownika. Administratorzy usługi Intune mogą później konfigurować tych użytkowników na potrzeby zarządzania kontrolą dostępu.
 
 Jeśli nie masz subskrypcji usługi Intune, [utwórz konto bezpłatnej wersji próbnej](free-trial-sign-up.md).
 

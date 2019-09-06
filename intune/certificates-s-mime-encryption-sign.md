@@ -1,5 +1,5 @@
 ---
-title: Podpisywanie i szyfrowanie poczty e-mail przy użyciu protokołu S/MIME — Microsoft Intune — Azure | Micrososft Docs
+title: Podpisywanie i szyfrowanie poczty e-mail przy użyciu protokołu S/MIME — Microsoft Intune — Azure | Microsoft Docs
 description: Dowiedz się, jak podpisywać i szyfrować wiadomości e-mail w urządzeniach za pomocą certyfikatów cyfrowych w usłudze Microsoft Intune. Są to certyfikaty protokołu S/MIME skonfigurowane przy użyciu profili konfiguracji urządzeń. Certyfikaty podpisywania i szyfrowania używają protokołu PKCS (certyfikatów prywatnych) oraz umożliwiają importowanie certyfikatów za pomocą łącznika.
 keywords: ''
 author: MandiOhlinger
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5dba3866df9ce5c779deb18cf13852b3d8af1b8d
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 755073af455c1ee63fa52f435a397734d2897b47
+ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66048892"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122224"
 ---
 # <a name="smime-overview-to-sign-and-encrypt-email-in-intune"></a>Omówienie protokołu S/MIME w zakresie podpisywania i szyfrowania wiadomości e-mail w usłudze Intune
 
@@ -80,7 +80,7 @@ Po utworzeniu profilów certyfikatów podpisywania i szyfrowania S/MIME można [
 
 ## <a name="next-steps"></a>Następne kroki
 
-- [Używanie certyfikatów SCEP](certificates-scep-configure.md)
+- [Używanie protokołu SCEP dla certyfikatów](certificates-scep-configure.md)
 - [Używanie certyfikatów PKCS](certficates-pfx-configure.md)
 - [Używanie urzędu certyfikacji partnera](certificate-authority-add-scep-overview.md)
 - [Wystawianie certyfikatów PKCS z poziomu usługi internetowej Symantec PKI Manager](certificates-symantec-configure.md)

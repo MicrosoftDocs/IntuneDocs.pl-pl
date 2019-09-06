@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c5ddb32502aa15f6eaf8f5866772ecd32e970d4
-ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
+ms.openlocfilehash: faff917dfafaaedb988cbbfb8174547f0b0ccf3b
+ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67648453"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122267"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Dodawanie urzędu certyfikacji partnera w usłudze Intune przy użyciu protokołu SCEP
 
@@ -42,7 +42,7 @@ Ten artykuł zawiera omówienie tej funkcji z perspektywy administratora, w tym 
 
 ## <a name="overview"></a>Przegląd
 
-W poniższych krokach przedstawiono omówienie procesu wystawiania certyfikatów protokołu SCEP w usłudze Intune:
+W poniższych krokach przedstawiono omówienie procesu wystawiania protokołu SCEP dla certyfikatów w usłudze Intune:
 
 1. W usłudze Intune administrator tworzy profil certyfikatu protokołu SCEP, a następnie kieruje profil do użytkowników lub urządzeń.
 2. Urządzenie zostaje zaewidencjonowane w usłudze Intune.
@@ -106,9 +106,9 @@ Upewnij się, że masz wymagane uprawnienia do zarejestrowania aplikacji usługi
 ### <a name="configure-and-deploy-a-scep-certificate-profile"></a>Konfigurowanie i wdrażanie profilu certyfikatu protokołu SCEP
 Jako administrator utwórz profil certyfikatu protokołu SCEP do skierowania do użytkowników lub urządzeń. Następnie przypisz profil.
 
-- [Tworzenie profilu certyfikatu protokołu SCEP](certificates-scep-configure.md#create-a-scep-certificate-profile)
+- [Tworzenie profilu certyfikatu protokołu SCEP](certificates-profile-scep.md#create-a-scep-certificate-profile)
 
-- [Przypisywanie profilu certyfikatu](certificates-scep-configure.md#assign-the-certificate-profile)
+- [Przypisywanie profilu certyfikatu](certificates-profile-scep.md#assign-the-certificate-profile)
 
 ## <a name="removing-certificates"></a>Usuwanie certyfikatów
 

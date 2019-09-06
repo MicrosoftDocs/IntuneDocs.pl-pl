@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 269ba2e951ccee2b0fdf2c4cd5a93a9d78aa6923
-ms.sourcegitcommit: e6edfbfd63dd7c2500ce1123205aa2af9a7e8e2e
+ms.openlocfilehash: a3055d375c98f9a74d0e738b7e894ba038b31776
+ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68783237"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121864"
 ---
 # <a name="create-a-design"></a>Tworzenie projektu
 
@@ -166,7 +166,7 @@ Infrastruktura kluczy publicznych dostarcza na urządzenia lub użytkownikom cer
 
 Jeśli planujesz użycie certyfikatów wraz z profilami sieci VPN, sieci Wi-Fi lub poczty e-mail przy użyciu usługi Intune, upewnij się, że istnieje obsługiwana [infrastruktura PKI](certificates-configure.md), za pomocą której można tworzyć i wdrażać profile certyfikatów.
 
-Ponadto, jeśli będą wystawiane certyfikaty SCEP, określ, który serwer będzie hostem funkcji Usługi rejestracji urządzeń sieciowych (NDES, Network Device Enrollment Service) i w jaki sposób będzie odbywać się komunikacja.
+Ponadto, jeśli będą używane profile certyfikatów SCEP, określ, który serwer będzie hostem funkcji Usługi rejestracji urządzeń sieciowych (NDES, Network Device Enrollment Service) i w jaki sposób będzie odbywać się komunikacja.
 
 Dowiedz się więcej na następujące tematy:
 
@@ -297,7 +297,7 @@ Profile certyfikatów umożliwiają usłudze Intune wystawienie certyfikatu dla 
 Zalecamy udokumentowanie, która grupa użytkowników potrzebuje certyfikatu, jak wiele profilów certyfikatów będzie potrzebnych i w których grupach użytkowników mają one zostać wdrożone.
 
 >[!NOTE]
-> Należy pamiętać, że zaufany certyfikat główny jest wymagany na potrzeby certyfikatu SCEP, więc należy upewnić się, że wszyscy użytkownicy, dla których przeznaczony jest certyfikat SCEP również otrzymają zaufany certyfikat główny. Jeśli wymagane są certyfikaty SCEP, zaprojektuj potrzebne szablony certyfikatów SCEP i udokumentuj je.
+> Należy pamiętać, że zaufany certyfikat główny jest wymagany na potrzeby profilu certyfikatu SCEP, więc należy upewnić się, że wszyscy użytkownicy, dla których przeznaczony jest profil certyfikatu SCEP również otrzymają zaufany certyfikat główny. Jeśli wymagane są certyfikaty SCEP, zaprojektuj potrzebne szablony certyfikatów SCEP i udokumentuj je.
 
 Oto przykład, jak można udokumentować certyfikaty podczas projektowania:
 
