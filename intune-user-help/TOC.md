@@ -158,6 +158,7 @@
 
 ## [Korzystanie z witryny Portal firmy usługi Intune](using-the-intune-company-portal-website.md)
 ### [Zarządzanie aplikacjami](manage-apps-cpweb.md)  
+### [Uzyskiwanie klucza odzyskiwania](get-recovery-key-cpweb.md)
 ### [Zdalne blokowanie urządzenia](remote-lock-your-device-cpwebsite.md)  
 ### [Zmienianie nazwy urządzenia](rename-your-device-cpwebsite.md)  
 ### [Usuwanie urządzenia](remove-your-device-cpwebsite.md)  
