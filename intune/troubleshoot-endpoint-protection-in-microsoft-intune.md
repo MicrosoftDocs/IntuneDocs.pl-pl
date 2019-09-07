@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/29/2019
+ms.date: 08/26/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5159ee595a6699eb457b194162d21038d4667063
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: c76466acb375fe49afefc542606350733970f416
+ms.sourcegitcommit: 18be0ccc6e51073af32c44abeba421d69a5ae21a
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68353342"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70302349"
 ---
 # <a name="endpoint-protection-issues-and-possible-solutions-in-microsoft-intune"></a>Problemy dotyczące ochrony punktu końcowego w usłudze Microsoft Intune i ich możliwe rozwiązania
 
@@ -60,20 +60,20 @@ Może pojawiać się komunikat, że niektóre funkcje są wyłączone. Przyczyn�
 **Możliwe rozwiązania**: włącz te funkcje. Więcej informacji zawierają te artykuły:
 
 - [Dodawanie ustawień ochrony punktu końcowego](endpoint-protection-configure.md)
-- [Program antywirusowy Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus)
+- [Program antywirusowy Windows Defender](device-restrictions-windows-10.md#microsoft-defender-antivirus)
 - [Użytkownicy końcowi: włączanie ochrony w czasie rzeczywistym w celu uzyskiwania dostępu do zasobów firmy](/intune-user-help/turn-on-defender-windows)
 
 ### <a name="malware-definitions-out-of-date"></a>Definicje złośliwego oprogramowania są nieaktualne
 
 Ten stan jest wyświetlany, gdy definicje złośliwego oprogramowania na urządzeniu są nieaktualne (pochodzą sprzed co najmniej 14 dni). Komunikat może wyświetlać się na przykład wtedy, gdy urządzenie utraci połączenie z Internetem lub gdy definicje złośliwego oprogramowania są nieaktualne.
 
-**Możliwe rozwiązania**: jeśli definicje złośliwego oprogramowania są nieaktualne, zaktualizuj je, korzystając z [Programu antywirusowego Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus).
+**Możliwe rozwiązania**: jeśli definicje złośliwego oprogramowania są nieaktualne, zaktualizuj je, korzystając z [Programu antywirusowego Windows Defender](device-restrictions-windows-10.md#microsoft-defender-antivirus).
 
 ### <a name="full-scan-overdue-or-quick-scan-overdue"></a>Zaległe skanowanie — pełne lub szybkie
 
 Pełne lub szybkie skanowanie nie zostało wykonane od 14 dni. Ten błąd może wystąpić, jeśli urządzenie zostanie ponownie uruchomione podczas pełnego skanowania.
 
-**Możliwe rozwiązania**: jeśli skanowanie jest zaległe, możesz uruchomić jednorazowe skanowanie lub zaplanować skanowanie cykliczne. Zobacz [Program antywirusowy Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus).
+**Możliwe rozwiązania**: jeśli skanowanie jest zaległe, możesz uruchomić jednorazowe skanowanie lub zaplanować skanowanie cykliczne. Zobacz [Program antywirusowy Windows Defender](device-restrictions-windows-10.md#microsoft-defender-antivirus).
 
 ### <a name="another-endpoint-protection-application-running"></a>Uruchomiona jest inna aplikacja ochrony punktu końcowego
 
