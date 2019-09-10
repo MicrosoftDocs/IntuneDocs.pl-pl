@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/13/2019
+ms.date: 08/29/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,16 +14,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b3fd474e938e2e85a0a08951a9e3f154d980411
-ms.sourcegitcommit: b64869b4be357c0741ec01b1a2f0bae13efce937
+ms.openlocfilehash: 5c9bad56a8214cd736208526865b5f9c8b23db00
+ms.sourcegitcommit: 18be0ccc6e51073af32c44abeba421d69a5ae21a
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69998943"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70302294"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem Windows 10 (i nowszym) w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune
 
-W tym artykule wymieniono i opisano wszystkie różne ustawienia, którymi można sterować na urządzeniach z systemem Windows 10 i nowszym. Użyj tych ustawień w ramach swojego rozwiązania do zarządzania urządzeniami mobilnymi (MDM), aby zezwalać na działanie funkcji lub je wyłączać, ustawiać reguły haseł, dostosowywać ekran blokady, korzystać z programu Windows Defender i nie tylko.
+W tym artykule wymieniono i opisano wszystkie różne ustawienia, którymi można sterować na urządzeniach z systemem Windows 10 i nowszym. Użyj tych ustawień w ramach swojego rozwiązania do zarządzania urządzeniami mobilnymi (MDM), aby zezwalać na działanie funkcji lub je wyłączać, ustawiać reguły haseł, dostosowywać ekran blokady, korzystać z programu Microsoft Defender i nie tylko.
 
 Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune, a następnie przypisywane lub wdrażane na urządzeniach z systemem Windows 10.
 
@@ -79,8 +79,6 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad ApplicationMana
 
   [Dostawca usługi konfiguracji ApplicationManagement/LaunchAppAfterLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-launchappafterlogon)
 
-Wybierz przycisk **OK**, aby zapisać zmiany.
-
 ## <a name="cellular-and-connectivity"></a>Sieć komórkowa i łączność
 
 Te ustawienia korzystają z dostawców usługi konfiguracji [zasad łączności](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity) i [zasad sieci Wi-Fi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-wifi) zawierających także listę obsługiwanych wersji systemu Windows.
@@ -114,8 +112,6 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad komunikacji Blu
 
   Więcej informacji o liście usług znajdziesz w artykule [Podręcznik użycia elementu ServicesAllowedList](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#servicesallowedlist-usage-guide).
 
-Wybierz przycisk **OK**, aby zapisać zmiany.
-
 ## <a name="cloud-and-storage"></a>Chmura i magazyn
 
 Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad kont](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-accounts), który zawiera również listę obsługiwanych wersji systemu Windows.
@@ -124,8 +120,6 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad kont](https://d
 - **Konto inne niż Microsoft**: ustawienie **Blokuj** uniemożliwia użytkownikom końcowym dodawanie kont innych niż Microsoft przy użyciu interfejsu użytkownika. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia użytkownikom dodawanie kont e-mail, które nie są skojarzone z kontem Microsoft.
 - **Synchronizacja ustawień dla konta Microsoft**: ustawienie **Nie skonfigurowano** (domyślne) zezwala na synchronizację ustawień urządzenia i aplikacji, które są skojarzone z kontem Microsoft, między różnymi urządzeniami. Ustawienie **Blokuj** uniemożliwia wykonanie synchronizacji.
 - **Asystent logowania za pomocą konta Microsoft**: ustawienie **Nie skonfigurowano** (domyślne) umożliwia użytkownikom końcowym na uruchamiania i zatrzymywanie usługi **Asystent logowania za pomocą konta Microsoft** (wlidsvc). Ta usługa systemu operacyjnego pozwala użytkownikom logować się do swoich kont Microsoft. Ustawienie **Wyłącz** uniemożliwia użytkownikom końcowym sterowanie usługą Asystent logowania za pomocą konta Microsoft (wlidsvc).
-
-Wybierz przycisk **OK**, aby zapisać zmiany.
 
 ## <a name="cloud-printer"></a>Drukarka w chmurze
 
@@ -140,8 +134,6 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad EnterpriseCloud
 
 > [!TIP]
 > Po skonfigurowaniu [hybrydowego drukowania w chmurze systemu Windows Server](https://docs.microsoft.com/windows-server/administration/hybrid-cloud-print/hybrid-cloud-print-overview) można skonfigurować te ustawienia, a następnie wdrożyć je na urządzeniach z systemem Windows.
-
-Wybierz przycisk **OK**, aby zapisać zmiany.
 
 ## <a name="control-panel-and-settings"></a>Panel sterowania i Ustawienia
 
@@ -165,8 +157,6 @@ Wybierz przycisk **OK**, aby zapisać zmiany.
   - **Prywatność**: ustawienie **Blokuj** uniemożliwia dostęp do obszaru Prywatność w aplikacji Ustawienia na urządzeniu. Ustawienie **Nie skonfigurowano** (domyślne) zezwala na dostęp.
   - **Aktualizacja i zabezpieczenia**: ustawienie **Blokuj** uniemożliwia dostęp do obszaru Aktualizacja i zabezpieczenia w aplikacji Ustawienia na urządzeniu. Ustawienie **Nie skonfigurowano** (domyślne) zezwala na dostęp.
 
-Wybierz przycisk **OK**, aby zapisać zmiany.
-
 ## <a name="display"></a>Wyświetlanie
 
 Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad wyświetlania](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-display), który zawiera również listę obsługiwanych wersji systemu Windows.
@@ -182,8 +172,6 @@ Skalowanie DPI z użyciem interfejsu GDI umożliwia rozpoznawanie wartości DPI 
   Skalowanie DPI z użyciem interfejsu GDI jest wyłączone dla wszystkich starszych aplikacji na liście.
 
 Możesz również **zaimportować** plik CSV zawierający listę aplikacji.
-
-Wybierz przycisk **OK**, aby zapisać zmiany.
 
 ## <a name="general"></a>Ogólne
 
@@ -230,8 +218,6 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad środowiska](ht
 
 - **Kończ procesy z Menedżera zadań**: to ustawienie określa, czy użytkownicy niebędący administratorami mogą używać Menedżera zadań do kończenia zadań. Pozycja **Blokuj** uniemożliwia użytkownikom standardowym (niebędącym administratorami) używanie Menedżera zadań do zakończenia procesu lub zadania na urządzeniu. **Nieskonfigurowane** (wartość domyślna) umożliwia użytkownikom standardowym zakończenie procesu lub zadania za pomocą Menedżera zadań.
 
-Wybierz przycisk **OK**, aby zapisać zmiany.
-
 ## <a name="locked-screen-experience"></a>Środowisko ekranu blokady
 
 - **Powiadomienia Centrum akcji (tylko urządzenia przenośne)** : ustawienie **Blokuj** zapobiega wyświetlaniu powiadomień Centrum akcji na ekranie blokady urządzenia. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia użytkownikom wybranie, które aplikacje mogą wyświetlać powiadomienia na ekranie blokady.
@@ -255,8 +241,6 @@ Wybierz przycisk **OK**, aby zapisać zmiany.
 
   [Dostawca usługi konfiguracji DeviceLock/ScreenTimeoutWhileLocked](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-screentimeoutwhilelocked)
 
-Wybierz przycisk **OK**, aby zapisać zmiany.
-
 ## <a name="messaging"></a>Obsługa wiadomości
 
 Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad obsługi wiadomości](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-messaging), który zawiera również listę obsługiwanych wersji systemu Windows.
@@ -264,8 +248,6 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad obsługi wiadom
 - **Synchronizowanie wiadomości (tylko urządzenia przenośne)** : ustawienie **Blokuj** powoduje wyłączenie tworzenia kopii zapasowych i przywracania SMS-ów oraz synchronizowania SMS-ów między urządzeniami z systemem Windows. Wyłączenie tej funkcji pomaga uniknąć przechowywania informacji na serwerach poza kontrolą organizacji. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia użytkownikom zmianę tych ustawień i synchronizowanie SMS-ów.
 - **MMS (tylko urządzenia przenośne)** : ustawienie **Blokuj** powoduje wyłączenie funkcji wysyłania i odbierania MMS-ów na urządzeniu. W przypadku przedsiębiorstw przy użyciu tych zasad możesz wyłączyć MMS-y na urządzeniach w ramach wymagań dotyczących zarządzania lub inspekcji. Ustawienie **Nie skonfigurowano** (domyślne) zezwala na wysyłanie i odbieranie MMS-ów.
 - **RCS (tylko urządzenia przenośne)** : ustawienie **Blokuj** powoduje wyłączenie funkcji wysyłania i odbierania wiadomości Rich Communication Services na urządzeniu. W przypadku przedsiębiorstw przy użyciu tych zasad możesz wyłączyć wiadomości RCS na urządzeniach w ramach wymagań dotyczących zarządzania lub inspekcji. Ustawienie **Nie skonfigurowano** (domyślne) zezwala na wysyłanie i odbieranie wiadomości RCS.
-
-Wybierz przycisk **OK**, aby zapisać zmiany.
 
 ## <a name="microsoft-edge-browser"></a>Przeglądarka Microsoft Edge
 
@@ -327,7 +309,7 @@ Ten profil ograniczeń urządzenia jest bezpośrednio związany z profilem kiosk
 - **Komunikat podczas otwierania witryn w programie Internet Explorer**: to ustawienie służy do konfigurowania przeglądarki Microsoft Edge w celu wyświetlania powiadomienia przed otwarciem witryny w programie Internet Explorer 11. Dostępne opcje:
   - **Nie pokazuj komunikatu**: jest stosowane domyślne zachowanie systemu operacyjnego, co może sprawiać, że komunikat nie będzie wyświetlany.
   - **Pokaż komunikat o otworzeniu witryny w programie Internet Explorer 11**: wyświetlaj komunikat podczas otwierania witryn w programie Internet Explorer. Witryny są otwierane w programie IE. 
-  - **Pokaż komunikat z opcją otwarcia witryn w przeglądarce Microsoft Edge**: wyświetlaj komunikat podczas otwierania witryn w przeglądarce Edge. Komunikat zawiera link **Kontynuuj pracę w przeglądarce Microsoft Edge**, dzięki któremu użytkownicy mogą wybrać przeglądarkę Microsoft Edge zamiast programu Internet Explorer.
+  - **Pokaż komunikat z opcją otwarcia witryn w przeglądarce Microsoft Edge**: wyświetlaj komunikat podczas otwierania witryn w przeglądarce Microsoft Edge. Komunikat zawiera link **Kontynuuj pracę w przeglądarce Microsoft Edge**, dzięki któremu użytkownicy mogą wybrać przeglądarkę Microsoft Edge zamiast programu Internet Explorer.
 
   > [!IMPORTANT]
   > To ustawienie wymaga użycia ustawienia **Lokalizacja listy witryn trybu przedsiębiorstwa**, ustawienia **Wysyłaj ruch intranetowy do programu Internet Explorer** lub obydwu tych ustawień.
@@ -335,8 +317,6 @@ Ten profil ograniczeń urządzenia jest bezpośrednio związany z profilem kiosk
 - **Zezwalaj na używanie listy zgodności firmy Microsoft**: ustawienie **Tak** (domyślne) zezwala na używanie listy zgodności firmy Microsoft. Ustawienie **Nie** uniemożliwia używanie listy zgodności firmy Microsoft w przeglądarce Microsoft Edge. Ta lista firmy Microsoft pomaga przeglądarce Microsoft Edge prawidłowo wyświetlać witryny ze znanymi problemami dotyczącymi zgodności.
 - **Załaduj wstępnie strony początkowe i nową kartę**: ustawienie **Tak** (domyślne) używa domyślnego zachowania systemu operacyjnego, które może powodować wstępne ładowanie tych stron. Wstępne ładowanie minimalizuje czas uruchamiania przeglądarki Microsoft Edge i ładowania nowej karty. Ustawienie **Nie** uniemożliwia wstępne ładowanie stron startowych i strony nowej karty w przeglądarce Microsoft Edge.
 - **Uruchom wstępnie strony początkowe i nową kartę**: ustawienie **Tak** (domyślne) używa domyślnego zachowania systemu operacyjnego, które może powodować wstępne uruchamianie tych stron. Wstępne uruchomienie zwiększa wydajność przeglądarki Microsoft Edge i minimalizuje czas wymagany do uruchomienia tej przeglądarki. Ustawienie **Nie** uniemożliwia wstępne ładowanie stron początkowych i nowej karty w przeglądarce Microsoft Edge.
-
-Wybierz przycisk **OK**, aby zapisać zmiany.
 
 ### <a name="favorites-and-search"></a>Ulubione i wyszukiwanie
 
@@ -357,8 +337,6 @@ Wybierz przycisk **OK**, aby zapisać zmiany.
 - **Zezwalaj na zmiany w wyszukiwarce**: opcja **Tak** (ustawienie domyślne) umożliwia użytkownikom dodawanie nowych wyszukiwarek lub zmianę domyślnej wyszukiwarki w przeglądarce Microsoft Edge. Wybierz opcję **Nie**, aby uniemożliwić użytkownikom dostosowywanie ustawień wyszukiwarki.
 
   To ustawienie jest dostępne tylko w [trybie normalnym (kiosk z wieloma aplikacjami) ](#use-microsoft-edge-kiosk-mode).
-
-Wybierz przycisk **OK**, aby zapisać zmiany.
 
 ### <a name="privacy-and-security"></a>Prywatność i zabezpieczenia
 
@@ -383,8 +361,6 @@ Po wybraniu opcji „Zablokuj i włącz przesłanianie przez użytkownika” uż
 - **Zezwalaj na zbieranie danych dynamicznych kafelków**: ustawienie **Tak** (domyślne) zezwala przeglądarce Microsoft Edge na zbieranie informacji z dynamicznych kafelków przypiętych do menu Start. Ustawienie **Nie** uniemożliwia zbieranie tych informacji, co może spowodować ograniczenie środowiska użytkowników.
 - **Użytkownik może przesłonić błędy certyfikatów**: ustawienie **Tak** (domyślne) zezwala użytkownikom na uzyskiwanie dostępu do witryn internetowych, w przypadku których występują błędy certyfikatu Secure Sockets Layer / Transport Layer Security (SSL/TLS). Ustawienie **Nie** (zalecane w celu zwiększenia bezpieczeństwa) uniemożliwia użytkownikom uzyskiwanie dostępu do witryn internetowych z błędami certyfikatu SSL lub TLS.
 
-Wybierz przycisk **OK**, aby zapisać zmiany.
-
 ### <a name="additional"></a>Dodatkowe
 
 - **Zezwalaj na korzystanie z przeglądarki Microsoft Edge** (tylko urządzenia przenośne): ustawienie **Tak** (domyślne) umożliwia korzystanie z przeglądarki internetowej Microsoft Edge na urządzeniu przenośnym. Ustawienie **Nie** uniemożliwia korzystanie z przeglądarki Microsoft Edge na urządzeniu. Jeśli wybierzesz ustawienie **Nie**, pozostałe poszczególne ustawienia będą dotyczyć tylko komputerów.
@@ -401,8 +377,6 @@ Wybierz przycisk **OK**, aby zapisać zmiany.
 
   Możesz również **zaimportować** plik CSV, który zawiera nazwy rodzin pakietów. Lub możesz **wyeksportować** wprowadzone nazwy rodzin pakietów.
 
-Wybierz przycisk **OK**, aby zapisać zmiany.
-
 ## <a name="network-proxy"></a>Serwer proxy sieci
 
 Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad NetworkProxy](https://docs.microsoft.com/windows/client-management/mdm/networkproxy-csp), który zawiera również listę obsługiwanych wersji systemu Windows.
@@ -415,8 +389,6 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad NetworkProxy](h
   - **Numer portu**: wprowadź numer portu serwera proxy.
   - **Wyjątki serwera proxy**: wprowadź wszystkie adresy URL, w przypadku których korzystanie z serwera proxy będzie zabronione. Rozdziel kolejne elementy średnikiem.
   - **Pomiń serwer proxy dla adresów lokalnych**: ustawienie **Nie skonfigurowano** (domyślne) uniemożliwia używanie serwera proxy dla adresów lokalnych w intranecie. Ustawienie **Zezwalaj** używa serwera proxy dla adresów lokalnych.
-
-Wybierz przycisk **OK**, aby zapisać zmiany.
 
 ## <a name="password"></a>Hasło
 
@@ -466,8 +438,6 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad DeviceLock](htt
 
   [Authentication/PreferredAadTenantDomainName CSP (Dostawca usługi konfiguracji Authentication/PreferredAadTenantDomainName)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-preferredaadtenantdomainname)
 
-Wybierz przycisk **OK**, aby zapisać zmiany.
-
 ## <a name="per-app-privacy-exceptions"></a>Wyjątki prywatności dla aplikacji
 
 Możesz dodawać aplikacje, dla których chcesz określić inne zachowanie dotyczące prywatności niż zachowanie zdefiniowane w domyślnym ustawieniu prywatności.
@@ -496,23 +466,17 @@ Możesz dodawać aplikacje, dla których chcesz określić inne zachowanie dotyc
 - **Opinie i diagnostyka**: określ, czy ta aplikacja może uzyskiwać dostęp do informacji diagnostycznych.
 - **Synchronizacja z urządzeniami**: wybierz, czy ta aplikacja może automatycznie udostępniać informacje i synchronizować je z urządzeniami bezprzewodowymi, które nie są jawnie sparowane z tym urządzeniem.
 
-Wybierz przycisk **OK**, aby zapisać zmiany.
-
 ## <a name="personalization"></a>Personalizacja
 
 Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad personalizacji](https://docs.microsoft.com/windows/client-management/mdm/personalization-csp), który zawiera również listę obsługiwanych wersji systemu Windows.
 
 - **Adres URL obrazu tła pulpitu (tylko komputery)** : wprowadź adres URL obrazu w formacie jpg, jpeg lub png, który będzie używany jako tapeta pulpitu systemu Windows. Użytkownicy nie mogą zmieniać obrazu. Na przykład wprowadź `https://contoso.com/logo.png`.
 
-Wybierz przycisk **OK**, aby zapisać zmiany.
-
 ## <a name="printer"></a>Drukarka
 
 - **Drukarki**: lista dodanych drukarek lokalnych.
 - **Drukarka lokalna**: ustaw tę drukarkę jako domyślną.
 - **Dostęp użytkownika pozwalający na dodanie nowych drukarek**: zezwala na korzystanie z drukarek lokalnych lub je blokuje.
-
-Wybierz przycisk **OK**, aby zapisać zmiany.
 
 ## <a name="privacy"></a>Ochrona prywatności
 
@@ -524,8 +488,6 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad prywatności](h
 - **Tylko działania lokalne**: pozycja **Blokuj** uniemożliwia udostępnianie środowisk i odnajdywanie ostatnio używanych zasobów w przełączniku zadań jedynie na podstawie działań lokalnych. Ustawienie **Nie skonfigurowano** (domyślne) włącza tę funkcję.
 
 Można skonfigurować informacje, do których mogą uzyskiwać dostęp wszystkie aplikacje na urządzeniu. Ponadto należy zdefiniować wyjątki dla poszczególnych aplikacji, korzystając z opcji **Wyjątki prywatności dla aplikacji**.
-
-Wybierz przycisk **OK**, aby zapisać zmiany.
 
 ### <a name="exceptions"></a>Wyjątki
 
@@ -548,8 +510,6 @@ Wybierz przycisk **OK**, aby zapisać zmiany.
 - **Opinie i diagnostyka**: określ, czy ta aplikacja może uzyskiwać dostęp do informacji diagnostycznych.
 - **Synchronizacja z urządzeniami** — określ, czy ta aplikacja może automatycznie udostępniać informacje i synchronizować je z urządzeniami bezprzewodowymi, które nie są jawnie sparowane z tym komputerem, tabletem lub telefonem.
 
-Wybierz przycisk **OK**, aby zapisać zmiany.
-
 ## <a name="projection"></a>Projekcja
 
 Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad WirelessDisplay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-wirelessdisplay), który zawiera również listę obsługiwanych wersji systemu Windows.
@@ -557,8 +517,6 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad WirelessDisplay
 - **Dane wejściowe użytkownika z odbiorników ekranów bezprzewodowych**: ustawienie **Blokuj** blokuje dane wejściowe użytkownika z odbiorników ekranów bezprzewodowych. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia ekranowi bezprzewodowemu na wysyłanie danych wejściowych klawiatury, myszy, pióra i dotyku z powrotem do urządzenia źródłowego.
 - **Projekcja na tym komputerze**: ustawienie **Blokuj** uniemożliwia innym urządzeniom odnajdywanie tego komputera dla celów projekcji. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia odnajdywanie urządzenia oraz projekcję na urządzeniu na ekranie blokady.
 - **Wymagaj kodu PIN do parowania**: wybierz ustawienie **Wymagaj**, aby zawsze wyświetlać monit o kod PIN podczas nawiązywania połączenia z urządzeniem do projekcji. Ustawienie **Nie skonfigurowano** (domyślne) nie wymaga kodu PIN do parowania urządzenia z urządzeniem do projekcji.
-
-Wybierz przycisk **OK**, aby zapisać zmiany.
 
 ## <a name="reporting-and-telemetry"></a>Raportowanie i telemetria
 
@@ -602,8 +560,6 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad wyszukiwania](h
   - **Ścisłe**: najwyższy poziom filtrowania pod kątem blokowania treści dla dorosłych.
   - **Umiarkowany**: umiarkowany poziom filtrowania pod kątem blokowania treści dla dorosłych. Prawidłowe wyniki wyszukiwania nie są filtrowane.
 - **Wyświetl wyniki z Internetu w wyszukiwaniu**: po wybraniu ustawienia **Blokuj** użytkownicy nie będą mogli wykonywać wyszukiwania, a wyniki z Internetu nie będą wyświetlane. Ustawienie **Nie skonfigurowano** (domyślne) zezwala użytkownikom na wyszukiwanie w Internecie, a wyniki są wyświetlane na urządzeniu.
-
-Wybierz przycisk **OK**, aby zapisać zmiany.
 
 ## <a name="start"></a>Początek
 
@@ -675,8 +631,6 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad uruchamiania](h
   - **Ukryj**: skrót jest ukryty, a ustawienie w aplikacji Ustawienia jest wyłączone.
   - **Pokaż**: skrót jest wyświetlany, a ustawienie w aplikacji Ustawienia jest wyłączone.
 
-Wybierz przycisk **OK**, aby zapisać zmiany.
-
 ## <a name="windows-defender-smart-screen"></a>Windows Defender SmartScreen
 
 - **Filtr SmartScreen dla przeglądarki Microsoft Edge**: ustawienie **Wymagaj** powoduje wyłączenie filtra SmartScreen w usłudze Windows Defender i uniemożliwia użytkownikom włączenie go. Ustawienie **Nie skonfigurowano** (domyślne) powoduje włączenie filtru SmartScreen. Pomaga chronić użytkowników przed potencjalnymi zagrożeniami i uniemożliwia użytkownikom wyłączenie go.
@@ -693,8 +647,6 @@ Wybierz przycisk **OK**, aby zapisać zmiany.
 
   [Dostawca usługi konfiguracji Browser/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)
 
-Wybierz przycisk **OK**, aby zapisać zmiany.
-
 ## <a name="windows-spotlight"></a>W centrum uwagi Windows
 
 Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad środowiska](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience), który zawiera również listę obsługiwanych wersji systemu Windows.
@@ -709,38 +661,96 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad środowiska](ht
   - **Personalizacja funkcji W centrum uwagi Windows**: ustawienie **Bloku** uniemożliwia systemowi Windows używanie danych diagnostycznych w celu zapewniania dostosowanych środowisk dla użytkownika. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia firmie Microsoft używanie danych diagnostycznych w celu zapewnienia spersonalizowanych zaleceń, wskazówek i ofert dostosowanych do potrzeb użytkownika systemu Windows.
   - **Środowisko powitalne systemu Windows**: ustawienie **Blokuj** powoduje wyłączenie środowiska powitalnego systemu Windows w funkcji W centrum uwagi Windows. Środowisko powitalne systemu Windows nie będzie wyświetlane, gdy są dostępne aktualizacje i zmiany systemu Windows i jego aplikacji. Ustawienie **Nie skonfigurowano** (domyślne) zezwala na wyświetlanie środowiska powitalnego systemu Windows, w którym są widoczne informacje o nowych lub zaktualizowanych funkcjach.
 
-Wybierz przycisk **OK**, aby zapisać zmiany.
-
-## <a name="windows-defender-antivirus"></a>Program antywirusowy Windows Defender
+## <a name="microsoft-defender-antivirus"></a>Program antywirusowy Microsoft Defender
 
 Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad usługi Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender), który zawiera również listę obsługiwanych wersji systemu Windows.
 
-- **Monitorowanie w czasie rzeczywistym**: ustawienie **Włącz** uniemożliwia skanowanie w czasie rzeczywistym w poszukiwaniu złośliwego oprogramowania, programów szpiegujących i innego niepożądanego oprogramowania. Ustawienie **Nie skonfigurowano** (domyślne) zezwala na korzystanie z tej funkcji.
-- **Monitorowanie zachowania**: ustawienie **Włącz** uniemożliwia usłudze Defender sprawdzanie urządzeń pod kątem określonych wzorców podejrzanej aktywności. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia usłudze Windows Defender monitorowanie zachowania.
-- **Network Inspection System (NIS)** : pomaga w ochronie urządzeń przed sieciowymi atakami wykorzystującymi luki w zabezpieczeniach. System NIS korzysta z sygnatur znanych luk w zabezpieczeniach z centrum programu Microsoft Endpoint Protection, co pomaga wykrywać i blokować złośliwy ruch.
-- **Skanuj wszystkie pobrane pliki**: określa, czy usługa Defender ma skanować wszystkie pliki pobierane z Internetu.
-- **Skanuj skrypty ładowane w przeglądarkach internetowych firmy Microsoft**: ustawienie **Nie skonfigurowano** (domyślne) umożliwia usłudze Defender skanowanie skryptów używanych przez przeglądarkę Internet Explorer. Ustawienie **Włącz** uniemożliwia przeprowadzenie tego skanowania.
-- **Dostęp użytkownika końcowego do usługi Defender**: ustawienie **Blokuj** ukrywa interfejs użytkownika usługi Windows Defender przed użytkownikami końcowymi. Wszystkie powiadomienia usługi Windows Defender również są pomijane. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia użytkownikom uzyskiwanie dostępu do interfejsu użytkownika usługi Windows Defender. Zmiany tego ustawienia zostaną wprowadzone po następnym ponownym uruchomieniu komputera użytkownika.
-- **Interwał aktualizacji sygnatur (w godzinach)** : wprowadź interwał sprawdzania dostępności nowych plików sygnatur przez usługę Defender z zakresu 0–24. Dostępne opcje:
+- **Monitorowanie w czasie rzeczywistym**: ustawienie **Włącz** wyłącza skanowanie w czasie rzeczywistym w poszukiwaniu złośliwego oprogramowania, programów szpiegujących i innego niepożądanego oprogramowania. Ustawienie **Nie skonfigurowano** (domyślne) zezwala na korzystanie z tej funkcji.
 
-  - **Nie skonfigurowano** (wartość domyślna)
-  - **Nie sprawdzaj**: usługa Defender nie sprawdza dostępności nowych plików sygnatur.
+  [Usługa Defender/AllowRealtimeMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
+
+- **Monitorowanie zachowania**: ustawienie **Włącz** wyłącza w usłudze Defender sprawdzanie urządzeń pod kątem określonych wzorców podejrzanej aktywności. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia usłudze Windows Defender monitorowanie zachowania.
+
+  [Usługa Defender/AllowBehaviorMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowbehaviormonitoring)
+
+- **Network Inspection System (NIS)** : pomaga w ochronie urządzeń przed sieciowymi atakami wykorzystującymi luki w zabezpieczeniach. System NIS korzysta z sygnatur znanych luk w zabezpieczeniach z centrum programu Microsoft Endpoint Protection, co pomaga wykrywać i blokować złośliwy ruch.
+
+  **Nie skonfigurowano** (ustawienie domyślne) — wyłącza tę funkcję. Użytkownicy nie mogą łączyć się z znanymi lukami w zabezpieczeniach. Po wybraniu opcji **Włącz**ochronę sieci i blokowanie sieci są włączone, a użytkownicy nie mogą jej wyłączyć. Użytkownicy nie mogą łączyć się z znanymi lukami w zabezpieczeniach.
+
+  [Usługa Defender/EnableNetworkProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
+
+- **Skanuj wszystkie pobrane**pliki: **nie skonfigurowano** (domyślnie) usługa Defender skanuje wszystkie pliki pobrane z Internetu. Po ustawieniu na wartość **enable**ta funkcja jest wyłączona. W związku z tym usługa Defender nie skanuje wszystkich pobranych plików internetowych.
+
+  [Usługa Defender/AllowIOAVProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowioavprotection)
+
+- **Skanuj skrypty ładowane w przeglądarkach internetowych firmy Microsoft**: ustawienie **Nie skonfigurowano** (domyślne) umożliwia usłudze Defender skanowanie skryptów używanych przez przeglądarkę Internet Explorer. Ustawienie **Włącz** uniemożliwia przeprowadzenie tego skanowania.
+
+  [Usługa Defender/AllowScriptScanning CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscriptscanning)
+
+- **Dostęp użytkownika końcowego do usługi Defender**: ustawienie **Blokuj** ukrywa interfejs użytkownika usługi Windows Defender przed użytkownikami końcowymi. Wszystkie powiadomienia usługi Windows Defender również są pomijane. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia użytkownikom uzyskiwanie dostępu do interfejsu użytkownika usługi Windows Defender. Zmiany tego ustawienia zostaną wprowadzone po następnym ponownym uruchomieniu komputera użytkownika.
+
+  [Usługa Defender/AllowUserUIAccess CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowuseruiaccess)
+
+- **Interwał aktualizacji analizy zabezpieczeń (w godzinach)** : wprowadź interwał, przez który usługa Defender sprawdza nową analizę zabezpieczeń z 0-24. Dostępne opcje:
+
+  - **Nie skonfigurowano** (ustawienie domyślne): sprawdzaj dostępność aktualizacji co 8 godzin.
+  - **Nie sprawdzaj**: usługa Defender nie sprawdza, czy są nowe aktualizacje analizy zabezpieczeń.
   - **1–24**: `1` — sprawdza co godzinę `2` — sprawdza co dwie godziny `24` — sprawdza, czy każdy dzień i tak dalej.
-- **Monitoruj działanie plików i programów**: zezwala usłudze Defender na monitorowanie działania plików i programów na urządzeniach.
-- **Dni przed usunięciem złośliwego oprogramowania poddanego kwarantannie**: umożliwia kontynuowanie śledzenia wykrytego złośliwego oprogramowania przez wprowadzoną liczbę dni, co pozwala ręcznie sprawdzać urządzenia, które wcześniej zostały zainfekowane. Jeśli liczba dni zostanie ustawiona na **0**, złośliwe oprogramowanie pozostanie w folderze kwarantanny i nie będzie automatycznie usuwane. Po ustawieniu wartości `90` elementy poddane kwarantannie są przechowywane w systemie przez 90 dni, po czym są usuwane.
-- **Limit wykorzystania procesora CPU podczas skanowania**: ogranicz użycie procesora dozwolone dla procesów skanowania w skali od **1** do **100**.
-- **Skanuj pliki archiwów**: ustawienie **Włącz** uniemożliwia usłudze Defender skanowanie plików zarchiwizowanych, na przykład plików zip i cab. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia to skanowanie.
+  
+  [Usługa Defender/SignatureUpdateInterval CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdateinterval)
+  
+- **Monitoruj działanie plików i programów**: zezwala usłudze Defender na monitorowanie działania plików i programów na urządzeniach. Dostępne opcje:
+
+  - **Nie skonfigurowano** (domyślnie): monitoruje wszystkie pliki
+  - **Monitorowanie wyłączone**
+  - **Monitoruj wszystkie pliki**
+  - **Monitoruj tylko pliki przychodzące**
+  - **Monitoruj tylko pliki wychodzące**
+
+  [Usługa Defender/RealTimeScanDirection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-realtimescandirection)
+
+- **Dni przed usunięciem złośliwego oprogramowania poddanego kwarantannie**: umożliwia kontynuowanie śledzenia wykrytego złośliwego oprogramowania przez wprowadzoną liczbę dni, co pozwala ręcznie sprawdzać urządzenia, które wcześniej zostały zainfekowane. Jeśli liczba dni zostanie ustawiona na `0`, złośliwe oprogramowanie pozostanie w folderze kwarantanny i nie będzie automatycznie usuwane. Po ustawieniu wartości `90` elementy poddane kwarantannie są przechowywane w systemie przez 90 dni, po czym są usuwane.
+
+  [Usługa Defender/DaysToRetainCleanedMalware CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-daystoretaincleanedmalware)
+
+- **Limit wykorzystania procesora CPU podczas skanowania**: ogranicz użycie procesora dozwolone dla procesów skanowania w skali od `0` do `100`.
+- **Skanuj pliki archiwalne**: **Włącz** wyłączenie usługi Defender do skanowania plików archiwalnych, takich jak pliki zip lub cab. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia to skanowanie.
+
+  [Usługa Defender/AllowArchiveScanning CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning)
+
 - **Skanuj przychodzące wiadomości e-mail**: ustawienie **Włącz** umożliwia usłudze Defender skanowanie wiadomości e-mail dostarczanych do urządzenia. Ustawienie **Nie skonfigurowano** (domyślne) uniemożliwia skanowanie wiadomości e-mail.
+
+  [Usługa Defender/AllowEmailScanning CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowemailscanning)
+
 - **Skanuj dyski wymienne podczas pełnego skanowania**: ustawienie **Włącz** uniemożliwia pełne skanowanie dysków wymiennych. Ustawienie **Nie skonfigurowane** (domyślne) umożliwia usłudze Defender skanowanie dysków wymiennych, na przykład dysków USB.
+
+  Podczas szybkiego skanowania dyski wymienne mogą być nadal skanowane.
+
+  [Usługa Defender/AllowFullScanRemovableDriveScanning CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanremovabledrivescanning)
+
 - **Skanuj zamapowane dyski sieciowe podczas pełnego skanowania**: ustawienie **Włącz** umożliwia usłudze Defender skanowanie plików na zamapowanych dyskach sieciowych. Ustawienie **Nie skonfigurowano** (domyślne) uniemożliwia pełne skanowanie. Jeśli pliki na dysku są plikami tylko do odczytu, usługa Defender nie będzie mogła usunąć z nich wykrytego złośliwego oprogramowania.
+
+  Podczas szybkiego skanowania zamapowane dyski sieciowe nadal mogą być skanowane.
+
+  [Usługa Defender/AllowFullScanOnMappedNetworkDrives CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanonmappednetworkdrives)
+
 - **Skanuj pliki otwierane z folderów sieciowych**: ustawienie **Nie skonfigurowano** (domyślne) umożliwia usłudze Defender skanowanie plików na udostępnionych dyskach sieciowych takich jak dyski dostępne za pośrednictwem ścieżki UNC. Ustawienie **Włącz** uniemożliwia przeprowadzenie tego skanowania. Jeśli pliki na dysku są plikami tylko do odczytu, usługa Defender nie będzie mogła usunąć z nich wykrytego złośliwego oprogramowania.
+
+  [Usługa Defender/AllowScanningNetworkFiles CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles)
+
 - **Ochrona w chmurze**: ustawienie **Nie skonfigurowano** (domyślne) umożliwia usłudze Microsoft Active Protection odbieranie informacji o działaniu złośliwego oprogramowania z zarządzanych urządzeń. Ustawienie **Włącz** blokuje tę funkcję.
+
+  [Usługa Defender/AllowCloudProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
+
 - **Monituj użytkowników przed przesłaniem próbki**: określa, czy do firmy Microsoft są automatycznie wysyłane potencjalnie złośliwe pliki, które mogą wymagać dalszej analizy. Dostępne opcje:
-  - **Nieskonfigurowany**
+
+  - **Nie skonfigurowano** (domyślnie): Wyślij bezpieczne próbki automatycznie.
   - **Zawsze pytaj**
   - **Pytaj przed wysłaniem danych osobistych**
   - **Nigdy nie wysyłaj danych**
-  - **Wyślij wszystkie dane bez pytania**: dane są wysyłane automatycznie
+  - **Wyślij wszystkie dane bez pytania**: dane są wysyłane automatycznie.
+
+  [Usługa Defender/SubmitSamplesConsent CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent)
 
 - **Godzina przeprowadzania codziennego szybkiego skanowania**: wybierz godzinę uruchomienia codziennego szybkiego skanowania. W przypadku wybrania opcji **Nieskonfigurowane** codzienne skanowanie nie będzie uruchamiane. Jeśli chcesz bardziej szczegółowo dostosować ustawienia, skonfiguruj ustawienie **Typ skanowania systemu do wykonania**.
 
@@ -756,12 +766,16 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad usługi Defende
     - **Zaplanowany dzień**: wybierz dzień uruchomienia skanowania.
     - **Zaplanowana godzina**: wybierz godzinę uruchomienia skanowania.
 
-  To ustawienie może spowodować konflikt z ustawieniem **Godzina przeprowadzania codziennego szybkiego skanowania**. Niektóre rekomendacje:
-
-  - Aby uruchomić codzienne szybkie skanowanie, skonfiguruj ustawienie **Godzina przeprowadzania codziennego szybkiego skanowania**.
-  - Aby uruchomić codzienne szybkie skanowanie i pełne skanowanie co tydzień, skonfiguruj ustawienie **Godzina przeprowadzania codziennego szybkiego skanowania**. W obszarze **Typ skanowania systemu do wykonania** wybierz Pełne skanowanie wraz z datą i godziną.
-  - Nie należy konfigurować ustawienia **Godzina przeprowadzania codziennego szybkiego skanowania** jednocześnie z opcją **Szybkie skanowanie** w ustawieniu **Typ skanowania systemu do wykonania**. Może to powodować konflikt ustawień i nieuruchomienie skanowania.
-  - Aby uruchamiać szybkie skanowanie co wtorek o 6 rano, skonfiguruj tylko ustawienie **Typ skanowania systemu do wykonania**.
+  > [!TIP]
+  > To ustawienie może spowodować konflikt z ustawieniem **Godzina przeprowadzania codziennego szybkiego skanowania**. Niektóre rekomendacje:  
+  >
+  > - Jeśli chcesz zaplanować codzienne szybkie skanowanie i cotygodniowe pełne skanowanie, wykonaj następujące polecenia:
+  >   1. Skonfiguruj **czas przeprowadzania codziennego szybkiego skanowania** .
+  >   2. Skonfiguruj **Typ skanowania systemu do wykonania w celu przeprowadzenia** pełnego skanowania.
+  > 
+  > - Jeśli potrzebujesz tylko jednego szybkiego skanowania (bez pełnego skanowania), użyj ustawienia: **czas, aby wykonać codzienne szybkie skanowanie** lub **Typ skanowania systemu do wykonania**. Aby na przykład uruchamiać szybkie skanowanie co wtorek o 6 rano, skonfiguruj tylko ustawienie **Typ skanowania systemu do wykonania**.
+  > 
+  > - Nie należy konfigurować ustawienia **Godzina przeprowadzania codziennego szybkiego skanowania** jednocześnie z opcją **Szybkie skanowanie** w ustawieniu **Typ skanowania systemu do wykonania**. Może to powodować konflikt ustawień i nieuruchomienie skanowania.
 
   [Defender/ScanParameter CSP (Dostawca usługi konfiguracji Defender/ScanParameter)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-scanparameter)  
   [Defender/ScheduleScanDay CSP (Dostawca usługi konfiguracji Defender/ScheduleScanDay)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)  
@@ -774,7 +788,10 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad usługi Defende
 
   Aby uzyskać więcej informacji dotyczących potencjalnie niepożądanych aplikacji, zobacz temat [Wykrywanie i blokowanie potencjalnie niepożądanych aplikacji](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus).
 
-- **Akcje do podjęcia wobec wykrytych zagrożeń związanych ze złośliwym oprogramowaniem**: wybierz akcje, które ma podejmować usługa Defender po wykryciu zagrożenia określonego poziomu, takiego jak: niski, umiarkowany, wysoki i poważny. Jeśli nie będzie to możliwe, usługa Windows Defender wybierze najlepszą opcję pozwalającą na wyeliminowanie zagrożenia. Dostępne opcje:
+  [Usługa Defender/PUAProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+
+- **Akcje na wykrytych zagrożeniach złośliwego oprogramowania**: Wybierz, w jaki sposób mają być obsługiwane wątki złośliwego oprogramowania. **Nie skonfigurowano** (domyślnie) umożliwia usłudze Microsoft Defender wybranie najlepszej opcji. W przypadku wybrania pozycji **Włącz** wskaż akcje, które ma podejmować usługa Defender po wykryciu zagrożenia określonego poziomu: niski, umiarkowany, wysoki i poważny. Dostępne opcje:
+  
   - **Wyczyść**
   - **Kwarantanna**
   - **Usuń**
@@ -782,15 +799,15 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad usługi Defende
   - **Zdefiniowane przez użytkownika**
   - **Zablokuj**
 
-Wybierz przycisk **OK**, aby zapisać zmiany.
+  Jeśli akcja nie jest możliwa, usługa Windows Defender wybierze najlepszą opcję, aby upewnić się, że zagrożenie jest korygowane. 
+
+  [Usługa Defender/ThreatSeverityDefaultAction CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-threatseveritydefaultaction)
 
 ### <a name="windows-defender-antivirus-exclusions"></a>Wyjątki programu antywirusowego Windows Defender
 
 - **Pliki i foldery do wyłączenia ze skanów i ochrony w czasie rzeczywistym**: umożliwia dodanie do listy wykluczeń pojedynczych plików lub folderów lub większej ich liczby, na przykład **C:\ścieżka** lub **%ProgramFiles%\ścieżka\nazwa_pliku.exe**. Te pliki i foldery nie są uwzględniane podczas skanowania w czasie rzeczywistym ani zaplanowanego skanowania.
 - **Rozszerzenia plików do wyłączenia ze skanów i ochrony w czasie rzeczywistym**: umożliwia dodanie do listy wykluczeń pojedynczych rozszerzeń plików lub większej ich liczby, np. **JPG** lub **TXT**. Żadne pliki z tymi rozszerzeniami nie będą uwzględniane podczas skanowania w czasie rzeczywistym lub skanowania planowanego.
 - **Procesy do wyłączenia ze skanów i ochrony w czasie rzeczywistym**: umożliwia dodanie do listy wykluczeń pojedynczych procesów typu **EXE**, **COM** lub **SCR** lub większej ich liczby. Te procesy nie są uwzględniane podczas skanowania w czasie rzeczywistym ani podczas zaplanowanego skanowania.
-
-Wybierz przycisk **OK**, aby zapisać zmiany.
 
 ## <a name="next-steps"></a>Następne kroki
 
