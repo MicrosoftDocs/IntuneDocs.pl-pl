@@ -546,10 +546,11 @@
         - name: Co to jest zarządzanie aplikacjami w usłudze Intune?
           href: app-management.md
           displayName: mam-we
-        - name: Dodawanie aplikacji — przegląd
-          href: apps-add.md
-          displayName: apk; ipa; msi; appx; appxbundle; msix; msixbundle; app
+        - name: Dodawanie aplikacji
           items:
+            - name: Dodawanie aplikacji — przegląd
+              href: apps-add.md
+              displayName: apk; ipa; msi; appx; appxbundle; msix; msixbundle; app
             - name: Chronione aplikacje w usłudze Intune
               href: apps-supported-intune-apps.md
             - name: Aplikacje ze Sklepu
@@ -561,9 +562,10 @@
                 - name: Aplikacje ze sklepu dla systemu Windows Phone 8.1
                   href: store-apps-windows-phone-8-1.md
                 - name: Aplikacje ze Sklepu Microsoft
-                  href: store-apps-windows.md
                   items:
-                    - name: Ręczne dodawanie aplikacji Portal firmy
+                    - name: Aplikacja systemu Windows
+                      href: store-apps-windows.md
+                    - name: Aplikacji Portal firmy
                       href: store-apps-company-portal-app.md
                 - name: Aplikacje zarządzane ze sklepu Google Play
                   href: apps-add-android-for-work.md
@@ -571,10 +573,13 @@
                   href: apps-add-office365.md
                 - name: Aplikacje pakietu Office 365 dla systemu macOS
                   href: apps-add-office365-macos.md
+            - name: Aplikacje internetowe
+              href: web-app.md
+              displayName: web; web link; weblink; web-link
+            - name: Aplikacje wbudowane
+              href: apps-add-built-in.md
             - name: Kompilowanie aplikacji (LOB)
               items:
-                - name: Zarządzanie aplikacjami Win32
-                  href: apps-win32-app-management.md
                 - name: Aplikacje LOB dla systemu Android
                   href: lob-apps-android.md
                 - name: Aplikacje LOB dla systemu iOS
@@ -587,11 +592,8 @@
                   href: app-sideload-windows.md
                 - name: aplikacje LOB dla systemu macOS
                   href: lob-apps-macos.md
-            - name: Aplikacje internetowe
-              href: web-app.md
-              displayName: web; web link; weblink; web-link
-            - name: Aplikacje wbudowane
-              href: apps-add-built-in.md
+            - name: Zarządzanie aplikacjami Win32
+              href: apps-win32-app-management.md
             - name: Skrypty środowiska PowerShell
               href: intune-management-extension.md
         - name: Przypisywanie aplikacji
@@ -849,7 +851,7 @@
                   href: vpn-settings-windows-10.md
                 - name: Wi-Fi
                   href: wi-fi-settings-windows.md
-                - name: Edukacja
+                - name: Bezpieczna Ocena
                   href: education-settings-windows.md
                 - name: Urządzenie udostępnione używane przez wielu użytkowników
                   href: shared-user-device-settings-windows.md
