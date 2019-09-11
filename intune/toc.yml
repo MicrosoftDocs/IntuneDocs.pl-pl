@@ -857,8 +857,8 @@
                   href: custom-settings-windows-10.md
             - name: Linie bazowe zabezpieczeń
               items:
-                - name: Ustawienia punktu odniesienia systemu Windows 10
-                  href: security-baseline-settings-mdm.md
+                - name: Ustawienia punktu odniesienia systemu Windows 10 MDM
+                  href: security-baseline-settings-mdm-all.md
                 - name: Ustawienia punktu odniesienia usługi Microsoft Defender ATP
                   href: security-baseline-settings-defender-atp.md
             - name: Ustawienia aktualizacji systemu Windows
@@ -1047,10 +1047,6 @@
               href: troubleshoot-software-updates-in-microsoft-intune.md
             - name: Typowe błędy programu Endpoint Protection
               href: troubleshoot-endpoint-protection-in-microsoft-intune.md
-        - name: Archiwum punktów odniesienia zabezpieczeń
-          items:
-            - name: Zarchiwizowane punkty odniesienia zabezpieczeń rozwiązania MDM
-              href: security-baseline-settings-mdm-archive.md
     - name: Przewodniki po wdrażaniu scenariuszy
       items:
         - name: Ochrona usługi Exchange Online
