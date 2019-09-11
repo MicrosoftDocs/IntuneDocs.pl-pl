@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf4559d03f7dfc8ec8c48242defa391b4b49e41a
-ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
+ms.openlocfilehash: 25beef7e6593865b92e349163768ded5ce3b9e2d
+ms.sourcegitcommit: 5bb46d3c0bf8c5595132c4200849b1c4bcfe7cdb
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122400"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70376934"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurowanie certyfikatów PKCS i korzystanie z nich za pomocą usługi Intune
 
@@ -73,7 +73,7 @@ Aby korzystać z certyfikatów PKCS za pomocą usługi Intune, musisz mieć nast
   - Zainstaluj Łącznik zaimportowanych certyfikatów PFX dla usługi Microsoft Intune na serwerze.  
   - Aby automatycznie otrzymywać ważne aktualizacje, upewnij się, że zapory są otwarte, umożliwiając łącznikowi komunikację z hostem **autoupdate.msappproxy.net** na porcie **443**.   
 
-  Aby uzyskać więcej informacji o wszystkich sieciowych punktach końcowych, do których łącznik musi mieć dostęp, zobacz [Łącznik certyfikatów usługi Microsoft Intune](intune-endpoints.md#microsoft-intune-certificate-connector).
+  Aby uzyskać więcej informacji o wszystkich sieciowych punktach końcowych, do których łącznik musi mieć dostęp, zobacz [Łącznik certyfikatów usługi Microsoft Intune](intune-endpoints.md).
 
 - **Windows Server**:  
   Używasz systemu Windows Server do hostowania:
