@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5cf6299f46ed8db4fdca02947ce15a920816d110
-ms.sourcegitcommit: c715c93bb242f4fe44bbdf2fd585909854ed72b6
+ms.openlocfilehash: 3bc5f8a3f0094c363a705b37b904435ef9e91781
+ms.sourcegitcommit: 47b06bf2d32e2f84c382dec3366d6f4a31d98012
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68660942"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70864474"
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune"></a>Konfigurowanie lokalnego programu Exchange Connector w usłudze Microsoft Intune
 Informacje przedstawione w tym artykule ułatwiają instalowanie i monitorowanie lokalnego łącznika programu Exchange Active Sync dla usługi Intune.  Po skonfigurowaniu współdziałania lokalnego programu Exchange Connector w usłudze Intune z [zasadami dostępu warunkowego można sterować dostępem do lokalnych skrzynek pocztowych programu Exchange](conditional-access-exchange-create.md). 
@@ -124,6 +124,9 @@ Wykonaj następujące kroki, aby zainstalować lokalny program Exchange Connecto
    Upewnij się, że usługa wykrywania automatycznego i usługi sieci Web programu Exchange są skonfigurowane na serwerze dostępu klienta programu Exchange. Aby uzyskać więcej informacji na ten temat, zapoznaj się z artykułem [Client Access server](https://technet.microsoft.com/library/dd298114.aspx) (Serwer dostępu klienta).
 
 6. W polu **Hasło** podaj hasło dla tego konta, aby umożliwić usłudze Intune dostęp do serwera Exchange.
+
+   > [!NOTE]
+   > Aby połączenie zostało pomyślnie nawiązane, konto używane do logowania do dzierżawy musi odpowiadać co najmniej administratorowi usługi Intune. W przeciwnym razie wystąpi następujący błąd połączenia: „Serwer zdalny zwrócił błąd: (400) nieprawidłowe żądanie”.
 
 7. Wybierz polecenie **Połącz**.
 

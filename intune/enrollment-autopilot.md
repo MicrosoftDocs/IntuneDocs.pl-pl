@@ -17,17 +17,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0316138451c6105f22c196d17c1f2ec3b1f2e375
-ms.sourcegitcommit: 6c74ff568267d85fd1d44fda75e3e24ead87cb2b
+ms.openlocfilehash: e0f1f7d937f08e32b30ee9facdcca03d263bc27e
+ms.sourcegitcommit: a25cd79a33feb536d9b2fc11aa7d3e3972f1ca5a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70062936"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70842183"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Rejestrowanie urządzeń z systemem Windows w usłudze Intune za pomocą rozwiązania Windows Autopilot  
 Rozwiązanie Windows Autopilot upraszcza rejestrowanie urządzeń w usłudze Intune. Tworzenie i konserwacja niestandardowych obrazów systemów operacyjnych zajmuje dużo czasu. Trzeba również poświęcić czas na stosowanie tych niestandardowych obrazów systemów operacyjnych na nowych urządzeniach w celu przygotowania ich do użycia przed przekazaniem użytkownikom końcowym. Dzięki usłudze Microsoft Intune i rozwiązaniu Autopilot można przekazać nowe urządzenia użytkownikom końcowym bez konieczności tworzenia, konserwowania i stosowania niestandardowych obrazów systemów operacyjnych do urządzeń. Jeśli do zarządzania urządzeniami z rozwiązaniem Autopilot używasz usługi Intune, możesz zarządzać zasadami, profilami, aplikacjami i nie tylko po ich zarejestrowaniu. Aby zapoznać się z korzyściami, scenariuszami i wymaganiami wstępnymi, zobacz [Overview of Windows Autopilot (Przegląd rozwiązania Windows Autopilot)](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
 
-Istnieją cztery typy wdrażania w rozwiązaniu Autopilot: [Tryb samodzielnego wdrażania](https://docs.microsoft.com/windows/deployment/windows-autopilot/self-deploying) dla kiosków, znakowania cyfrowego lub udostępnionego urządzenia, [White Glove](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove) umożliwiający partnerom lub personelowi działu IT wstępną aprowizację komputera z systemem Windows 10, aby był w pełni skonfigurowany i gotowy do użytku w firmie, rozwiązanie [Autopilot dla istniejących urządzeń](https://docs.microsoft.com/windows/deployment/windows-autopilot/existing-devices) umożliwiające łatwe wdrażanie najnowszej wersji systemu Windows 10 na istniejących urządzeniach, a także [tryb sterowany przez użytkownika](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) dla tradycyjnych użytkowników. 
+Istnieją cztery typy wdrażania w rozwiązaniu Autopilot:
+- [Tryb samodzielnego wdrażania](https://docs.microsoft.com/windows/deployment/windows-autopilot/self-deploying) w przypadku kiosków, znakowania cyfrowego lub udostępnionego urządzenia
+- [White Glove](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove) umożliwiający partnerom lub personelowi działu IT wstępną aprowizację komputera z systemem Windows 10, aby był w pełni skonfigurowany i gotowy do użytku w firmie — rozwiązanie [Autopilot dla istniejących urządzeń](https://docs.microsoft.com/windows/deployment/windows-autopilot/existing-devices) umożliwiające łatwe wdrażanie najnowszej wersji systemu Windows 10 na istniejących urządzeniach
+- [Tryb sterowany przez użytkownika](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) dla tradycyjnych użytkowników. 
 
 
 ## <a name="prerequisites"></a>Wymagania wstępne
@@ -74,9 +77,9 @@ Urządzenia rozwiązania Autopilot z systemem Windows można dodawać przez zaim
     3. Dla ustawienia **Typ członkostwa** wybierz pozycję **Przypisane** lub **Urządzenie dynamiczne**.
 3. Jeśli w poprzednim kroku wybrano pozycję **Przypisane** dla ustawienia **Typ członkostwa**, to w bloku **Grupa** wybierz pozycję **Członkowie** i dodaj urządzenia rozwiązania Autopilot do grupy.
     Urządzenia rozwiązania Autopilot, które nie zostały jeszcze zarejestrowane, to urządzenia, których nazwa jest taka sama jak ich numer seryjny.
-4. Jeśli powyżej wybrano pozycję **Urządzenie dynamiczne** dla ustawienia **Typ członkostwa**, to w bloku **Grupa** wybierz pozycję **Dynamiczne urządzenia członkowskie** i wpisz dowolny poniższy kod w polu **Reguła zaawansowana**.
+4. Jeśli powyżej wybrano pozycję **Urządzenie dynamiczne** dla ustawienia **Typ członkostwa**, to w bloku **Grupa** wybierz pozycję **Dynamiczne urządzenia członkowskie** i wpisz dowolny poniższy kod w polu **Reguła zaawansowana**. Te reguły zbierają tylko urządzenia rozwiązania Autopilot, ponieważ używają one atrybutów docelowych, którymi dysponują tylko urządzenia rozwiązania Autopilot.
     - Aby utworzyć grupę obejmującą wszystkie urządzenia rozwiązania Autopilot, wpisz: `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`
-    - Pole tagu grupy usługi Intune jest mapowane na atrybut OrderID urządzenia w usłudze Azure AD. Aby utworzyć grupę obejmującą wszystkie urządzenia rozwiązania Autopilot z określonym tagiem grupy (OrderID), trzeba wpisać: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
+    - Pole tagu grupy usługi Intune jest mapowane na atrybut OrderID urządzenia w usłudze Azure AD. Aby utworzyć grupę obejmującą wszystkie urządzenia rozwiązania Autopilot z określonym tagiem grupy (identyfikator OrderID urządzenia usługi Azure AD), musisz wpisać: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
     - Aby utworzyć grupę obejmującą wszystkie urządzenia rozwiązania Autopilot z określonym identyfikatorem zamówienia zakupu, wpisz: `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`
     
     Po dodaniu kodu w polu **Reguła zaawansowana** wybierz pozycję **Zapisz**.
@@ -93,7 +96,7 @@ Profile wdrażania rozwiązania Autopilot służą do konfigurowania urządzeń 
 4. Wybierz pozycję **Dalej**.
 5. Na stronie **Środowisko gotowe do użycia (OOBE, Out-of-box experience)** dla pozycji **Tryb wdrożenia** wybierz jedną z następujących dwóch opcji:
     - **Sterowane przez użytkownika**: Urządzenia z tym profilem są skojarzone z użytkownikiem rejestrującym urządzenie. Poświadczenia użytkownika są wymagane do rejestracji urządzenia.
-    - **Wdrażanie samodzielne (wersja zapoznawcza)** : (wymaga systemu Windows 10 w wersji 1809 lub nowszej) urządzenia z tym profilem nie są skojarzone z użytkownikiem rejestrującym urządzenie. Poświadczenia użytkownika nie są wymagane do zarejestrowania urządzenia.
+    - **Wdrażanie samodzielne (wersja zapoznawcza)** : (wymaga systemu Windows 10 w wersji 1809 lub nowszej) urządzenia z tym profilem nie są skojarzone z użytkownikiem rejestrującym urządzenie. Poświadczenia użytkownika nie są wymagane do zarejestrowania urządzenia. Jeśli urządzenie nie ma skojarzonego z nim użytkownika, zasady zgodności oparte na użytkownikach nie mają do niego zastosowania. W przypadku korzystania z trybu samoobsługowego zostaną zastosowane tylko zasady zgodności ukierunkowane na urządzenie.
 
     ![Zrzut ekranu strony OOBE](media/enrollment-autopilot/create-profile-outofbox.png)
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 64a66fde0f501bf2e1e7f6b0cc98eddd871717b2
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: b2947969c1c07d595a0a5baa48be11ba7a941424
+ms.sourcegitcommit: e477e399cba673a2a9e1fa342e8303ed993801eb
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050370"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739228"
 ---
 # <a name="data-storage-and-processing-in-intune"></a>Przechowywanie i przetwarzanie danych w usłudze Intune
 
@@ -41,13 +41,13 @@ Dane telemetryczne (dzienniki usługi, dzienniki wydajności, błędy itd.), kt�
 
 Firma Microsoft oferuje i obsługuje usługi Intune w wielu regionach na całym świecie. Usługa Intune uwzględnia lokalizację przechowywania danych klienta wybraną przez administratora.
 
-Aby uzyskać więcej informacji, zobacz [Microsoft Intune — gdzie są moje dane klienta?](For more information, see Microsoft Intune Where is my customer data?)
+Aby uzyskać więcej informacji, zobacz temat [Gdzie znajdują się Twoje dane?](https://www.microsoft.com/trust-center/privacy/data-location)
 
 ### <a name="personal-data-retention"></a>Przechowywanie danych osobowych
 
-Na ogół dane osobowe są przechowywane przez usługę Intune przez trzydzieści dni po usunięciu użytkownika z zarządzania usługi Intune.
+Na ogół dane osobowe są przechowywane przez usługę Intune przez 30 dni po usunięciu użytkownika z zarządzania usługi Intune.
 
-Dane telemetryczne zebrane w ramach używania usługi Intune są przechowywane przez maksymalnie trzydzieści dni.
+Dane telemetryczne zebrane w ramach używania usługi Intune są przechowywane przez maksymalnie 30 dni.
 
 Dzienniki inspekcji są przechowywane przez maksymalnie jeden rok.
 

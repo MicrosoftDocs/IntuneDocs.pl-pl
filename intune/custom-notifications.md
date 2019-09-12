@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/18/2019
+ms.date: 09/10/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,28 +17,28 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5a75397222117b8e56cb34947363f8624b89b27b
-ms.sourcegitcommit: 58a22f1b4a3fffffb1f7da228f470b3b0774fc42
+ms.openlocfilehash: bffbc96e945d522453c299717a6eb413354a4af4
+ms.sourcegitcommit: 98f2597eec28c6096985d5a1acae72430c2afb1a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70021750"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70878036"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Wysyłanie powiadomień niestandardowych w usłudze Intune  
 
-Za pomocą usługi Microsoft Intune można wysyłać niestandardowe powiadomienia do użytkowników urządzeń zarządzanych z systemami iOS i Android. Te komunikaty są wyświetlane w postaci standardowych powiadomień push z aplikacji Portal firmy na urządzeniu użytkownika, podobnie jak powiadomienia z innych aplikacji wyświetlane na urządzeniu. Powiadomienia niestandardowe usługi Intune nie są obsługiwane na urządzeniach z systemem Windows.   
+Za pomocą usługi Microsoft Intune można wysyłać niestandardowe powiadomienia do użytkowników urządzeń zarządzanych z systemami iOS i Android. Te komunikaty są wyświetlane w postaci standardowych powiadomień push z aplikacji Portal firmy i aplikacji Microsoft Intune na urządzeniu użytkownika, podobnie jak powiadomienia z innych aplikacji wyświetlane na urządzeniu. Powiadomienia niestandardowe usługi Intune nie są obsługiwane na urządzeniach z systemem Windows.   
 
 Niestandardowe komunikaty powiadomień zawierają krótki tytuł i treść komunikatu składającą się maksymalnie z 500 znaków. Te komunikaty można dostosować do wszelkich celów komunikacji ogólnej.
 
 ## <a name="common-scenarios-for-sending-custom-notifications"></a>Typowe scenariusze wysyłania powiadomień niestandardowych  
 
-- Za pomocą powiadomień niestandardowych można na przykład wysyłać alerty dla określonych użytkowników o nowej aplikacji dostępnej w witrynie Portal firmy.  
+- Za pomocą powiadomień niestandardowych można wysyłać alerty dla określonych użytkowników o nowej aplikacji dostępnej w witrynie Portal firmy.  
 - Można również powiadomić wszystkich pracowników o zmianie harmonogramu, na przykład o zamknięciach budynków z powodu niesprzyjających warunków pogodowych.  
 
 ## <a name="considerations-for-using-custom-notifications"></a>Zagadnienia dotyczące korzystania z powiadomień niestandardowych  
 
 **Konfiguracja urządzenia**:  
-- Aby użytkownicy mogli odbierać powiadomienia niestandardowe, na urządzeniach musi być zainstalowana aplikacja Portal firmy. Użytkownicy muszą także mieć skonfigurowane uprawnienia, aby umożliwić aplikacji Portal firmy wysyłanie powiadomień push. Aplikacja Portal firmy będzie monitować użytkowników o zezwolenie na powiadomienia przy każdej instalacji i aktualizacji.  
+- Aby użytkownicy mogli odbierać powiadomienia niestandardowe, na urządzeniach musi być zainstalowana aplikacja Portal firmy lub aplikacja Microsoft Intune. Użytkownicy muszą także mieć skonfigurowane uprawnienia, aby umożliwić aplikacji Portal firmy lub aplikacji Microsoft Intune wysyłanie powiadomień push. W razie potrzeby aplikacje Portal firmy i Microsoft Intune mogą monitować użytkowników o zezwolenie na powiadomienia.  
 - W systemie Android Usługi Google Play są wymaganą zależnością.  
 - Urządzenie musi być zarejestrowane w usłudze MDM.
 
@@ -51,8 +51,8 @@ Niestandardowe komunikaty powiadomień zawierają krótki tytuł i treść komun
 - Grupy mogą obejmować użytkowników lub urządzenia, ale komunikaty są wysyłane tylko do użytkowników i do poszczególnych urządzeń z systemem iOS lub Android, które zostały zarejestrowane przez użytkownika.  
 
 **Dostarczanie**:  
-- Usługa Intune wysyła komunikaty do aplikacji Portal firmy użytkowników, która następnie tworzy powiadomienie push. Użytkownicy nie muszą być zalogowani do aplikacji, aby powiadomienie zostało wypchnięte do urządzenia.  
-- Usługa Intune i aplikacja Portal firmy nie mogą zagwarantować dostarczania powiadomienia niestandardowego. Powiadomienia niestandardowe mogą pojawiać się nawet z kilkugodzinnym opóźnieniem, dlatego nie powinny być używane do przesyłania pilnych komunikatów.  
+- Usługa Intune wysyła komunikaty do aplikacji Portal firmy lub aplikacji Microsoft Intune użytkowników, która następnie tworzy powiadomienie push. Użytkownicy nie muszą być zalogowani do aplikacji, aby powiadomienie zostało wypchnięte do urządzenia.  
+- Usługa Intune oraz aplikacje Portal firmy i Microsoft Intune nie mogą zagwarantować dostarczania powiadomienia niestandardowego. Powiadomienia niestandardowe mogą pojawiać się nawet z kilkugodzinnym opóźnieniem, dlatego nie powinny być używane do przesyłania pilnych komunikatów.  
 - Komunikaty powiadomień niestandardowych z usługi Intune są wyświetlane na urządzeniach jako standardowe powiadomienia push. Jeśli aplikacja Portal firmy jest otwarta na urządzeniu z systemem iOS w momencie odebrania powiadomienia, zostanie ono wyświetlone w aplikacji zamiast w postaci powiadomienia push.  
 - W zależności od ustawień urządzenia powiadomienia niestandardowe mogą być widoczne na ekranach blokady na urządzeniach z systemami iOS i Android.  
 - Na urządzeniach z systemem Android inne aplikacje mogą mieć dostęp do danych powiadomień niestandardowych. Nie używaj ich do przesyłania poufnych komunikatów.  
@@ -80,7 +80,7 @@ Usługa Intune nie śledzi wysyłanych powiadomień niestandardowych, a urządze
 
 ## <a name="receive-a-custom-notification"></a>Odbieranie powiadomień niestandardowych  
 
-Na urządzeniu użytkownicy widzą komunikaty powiadomień niestandardowych wysyłanych przez usługę Intune jako standardowe powiadomienia push z aplikacji Portal firmy. Te powiadomienia są podobne do powiadomień push otrzymywanych przez użytkowników z innych aplikacji na urządzeniu.  
+Na urządzeniu użytkownicy widzą komunikaty powiadomień niestandardowych wysyłanych przez usługę Intune jako standardowe powiadomienia push z aplikacji Portal firmy lub aplikacji Microsoft Intune. Te powiadomienia są podobne do powiadomień push otrzymywanych przez użytkowników z innych aplikacji na urządzeniu.  
 
 Jeśli na urządzeniu z systemem iOS aplikacja Portal firmy jest otwarta w momencie odebrania powiadomienia, zostanie ono wyświetlone w aplikacji zamiast w postaci powiadomienia push.  
 

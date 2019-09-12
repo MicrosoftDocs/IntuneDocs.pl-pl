@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 8/28/2019
+ms.date: 09/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,20 +15,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 608f9045d676a756c4ee7440072040075e497605
-ms.sourcegitcommit: 7269abaefb2857bc8b343896bb2138bdb01bf8dc
+ms.openlocfilehash: c474ac2eccf90e829abe753c82d40bdfae9146ec
+ms.sourcegitcommit: 5bb46d3c0bf8c5595132c4200849b1c4bcfe7cdb
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70214333"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70376921"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Korzystanie z szablonów systemu Windows 10 umożliwiających konfigurowanie ustawień zasad grupy w usłudze Microsoft Intune
 
 Podczas zarządzania urządzeniami w organizacji można utworzyć grupy ustawień, które będą stosowane do różnych grup urządzeń. Na przykład masz kilka grup urządzeń. Dla grupy A chcesz przypisać określony zestaw ustawień. Dla grupy B chcesz przypisać inny zestaw ustawień. Możesz też użyć prostego widoku ustawień, który można skonfigurować.
 
-Możesz wykonać to zadanie przy użyciu **szablonów administracyjnych** w usłudze Microsoft Intune. Szablony administracyjne obejmują setki ustawień, które sterują funkcjami w przeglądarce Microsoft Edge, programie Internet Explorer, w programach pakietu Microsoft Office, na pulpicie zdalnym, w usłudze OneDrive, dotyczącymi haseł i numerów PIN i nie tylko. Te ustawienia umożliwiają administratorom grup zarządzanie zasadami grupy przy użyciu chmury.
+Możesz wykonać to zadanie przy użyciu **szablonów administracyjnych** w usłudze Microsoft Intune. Szablony administracyjne obejmują setki ustawień, które sterują funkcjami w przeglądarce Microsoft Edge w wersji 77 lub nowszej, programie Internet Explorer, w programach pakietu Microsoft Office, na pulpicie zdalnym, w usłudze OneDrive, dotyczącymi haseł i numerów PIN i nie tylko. Te ustawienia umożliwiają administratorom grup zarządzanie zasadami grupy przy użyciu chmury.
 
-Ustawienia systemu Windows są podobne do ustawień zasad grupy (GPO) w usłudze Active Directory (AD). Te ustawienia są wbudowane w systemie Windows i są [ustawieniami obsługiwanymi przez pliki ADMX](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies), które używają formatu XML. Ustawienia pakietu Office są pozyskiwane w ramach plików ADMX i używają ustawień ADMX w [plikach szablonów administracyjnych pakietu Office](https://www.microsoft.com/download/details.aspx?id=49030). Jednak szablony usługi Intune są w pełni oparte na chmurze. Umożliwiają proste konfigurowanie ustawień i znajdowanie odpowiednich ustawień.
+Ustawienia systemu Windows są podobne do ustawień zasad grupy (GPO) w usłudze Active Directory (AD). Te ustawienia są wbudowane w systemie Windows i są [ustawieniami obsługiwanymi przez pliki ADMX](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies), które używają formatu XML. Ustawienia pakietu Office i przeglądarki Microsoft Edge są pozyskiwane w ramach plików ADMX i używają ustawień ADMX w [plikach szablonów administracyjnych pakietu Office](https://www.microsoft.com/download/details.aspx?id=49030) i [plikach szablonów administracyjnych przeglądarki Microsoft Edge](https://www.microsoftedgeinsider.com/enterprise). Jednak szablony usługi Intune są w pełni oparte na chmurze. Umożliwiają proste konfigurowanie ustawień i znajdowanie odpowiednich ustawień.
 
 **Szablony administracyjne** są wbudowane w usłudze Intune i nie wymagają dostosowywania, w tym korzystania z identyfikatora OMA-URI. W ramach rozwiązania do zarządzania urządzeniami przenośnymi (MDM) użyj tych ustawień szablonu jako pojedynczego miejsca do zarządzania urządzeniami z systemem Windows 10.
 
@@ -58,16 +58,17 @@ W tym artykule przedstawiono procedurę tworzenia szablonu dla urządzeń z syst
     > [!TIP]
     > Ustawienia systemu Windows w usłudze Intune są skorelowane z lokalną ścieżką zasad grupy wyświetlaną w Edytorze lokalnych zasad grupy (`gpedit`).
 
-5. Domyślnie na liście rozwijanej jest wyświetlana pozycja **Wszystkie produkty**. Na liście można także filtrować ustawienia w celu wyświetlania tylko ustawień systemu **Windows**, tylko ustawień pakietu **Office** lub tylko ustawień przeglądarki **Microsoft Edge**:
+5. Domyślnie na liście rozwijanej jest wyświetlana pozycja **Wszystkie produkty**. Na liście można także filtrować ustawienia w celu wyświetlania tylko ustawień systemu **Windows**, tylko ustawień pakietu **Office** lub tylko ustawień przeglądarki **Edge w wersji 77 lub nowszej**:
 
     ![Filtrowanie listy w celu wyświetlenia wszystkich ustawień systemu Windows lub pakietu Office w szablonach administracyjnych w usłudze Intune](./media/administrative-templates-windows/administrative-templates-choose-windows-office-all-products.png)
 
     > [!NOTE]
     > Ustawienia przeglądarki Microsoft Edge dotyczą następujących systemów:
     >
-    > - Windows 10 RS4 i nowsze z zainstalowaną aktualizacją [KB 4512509](https://support.microsoft.com/kb/4512509).
-    > - Windows 10 RS5 i nowsze z zainstalowaną aktualizacją [KB 4512534](https://support.microsoft.com/kb/4512534).
-    > - Windows 10 19H1 i nowsze z zainstalowaną aktualizacją [KB 4512941](https://support.microsoft.com/kb/4512941).
+    > - Microsoft Edge w wersji 77 lub nowszej. Aby skonfigurować przeglądarkę Microsoft Edge w wersji 45 lub starszej, zobacz sekcję [Ustawienia ograniczeń urządzenia w przeglądarce Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser).
+    > - Windows 10 RS4 i nowsze z zainstalowaną aktualizacją [KB 4512509](https://support.microsoft.com/kb/4512509)
+    > - Windows 10 RS5 i nowsze z zainstalowaną aktualizacją [KB 4512534](https://support.microsoft.com/kb/4512534)
+    > - Windows 10 19H1 i nowsze z zainstalowaną aktualizacją [KB 4512941](https://support.microsoft.com/kb/4512941)
 
 6. Wybierz dowolne ustawienie. Na przykład odfiltruj listę przy użyciu pozycji **Office**, a następnie wybierz pozycję **Aktywuj przeglądanie z ograniczeniami**. Zostanie wyświetlony szczegółowy opis ustawienia. Wybierz pozycję **Włączone** lub **Wyłączone** albo pozostaw ustawienie **Nieskonfigurowane** (wartość domyślna). Ponadto w szczegółowym opisie wyjaśniono, co się dzieje w przypadku wybrania pozycji **Włączone**, **Wyłączone** lub **Nieskonfigurowane**.
 7. Wybierz przycisk **OK**, aby zapisać zmiany.

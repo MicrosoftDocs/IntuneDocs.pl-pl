@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/27/2019
+ms.date: 09/09/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 09d80964a417772b1f011478db59398ceede5c5e
-ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
+ms.openlocfilehash: 48474ca9fcfafcd050b7ef9c5a64adb56388b9a4
+ms.sourcegitcommit: a25cd79a33feb536d9b2fc11aa7d3e3972f1ca5a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122137"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70842146"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co nowego w usłudze Microsoft Intune
 
@@ -53,6 +53,25 @@ Dowiedz się co tydzień, co nowego w usłudze Microsoft Intune. Możesz tu rów
 -->  
 
 <!-- ########################## -->
+
+## <a name="week-of-september-9-2019"></a>Tydzień od 9 września 2019 r.
+
+### <a name="app-management"></a>Zarządzanie aplikacjami
+
+#### <a name="updates-to-microsoft-intune-app----4997846---"></a>Aktualizacje aplikacji Microsoft Intune <!-- 4997846 -->
+Aplikacja Microsoft Intune dla systemu Android została zaktualizowana przy użyciu następujących ulepszeń:
+- Zaktualizowano i udoskonalono układ tak, aby uwzględnić dolny obszar nawigacji na potrzeby najważniejszych akcji.
+- Dodano dodatkową stronę pokazującą profil użytkownika.
+- Dodano wyświetlanie powiadomień z możliwością wykonywania akcji w aplikacji dla użytkownika. Mogą one dotyczyć na przykład konieczności aktualizacji ustawień urządzenia.
+- Dodano funkcję wyświetlania niestandardowych powiadomień push, dopasowując aplikację do funkcji pomocy technicznej ostatnio dodanej w aplikacji Portal firmy dla systemów iOS i Android. Aby uzyskać więcej informacji, zobacz [Wysyłanie powiadomień niestandardowych w usłudze Intune](custom-notifications.md).
+
+## <a name="week-of-september-2-2019"></a>Tydzień od 2 września 2019 r.
+
+### <a name="monitor-and-troubleshoot"></a>Monitorowanie i rozwiązywanie problemów
+
+#### <a name="intune-user-interface-update--tenant-status-dashboard-----5273210----"></a>Aktualizacja interfejsu użytkownika usługi Intune — pulpit nawigacyjny stanu dzierżawy  <!-- 5273210  -->
+Interfejs użytkownika pulpitu nawigacyjnego stanu dzierżawy został zaktualizowany w celu dostosowania do stylów interfejsu użytkownika platformy Azure. Aby uzyskać więcej informacji, zobacz temat [Stan dzierżawy](tenant-status.md).
+
 
 ## <a name="week-of-august-26-2019"></a>Tydzień od 26 sierpnia 2019 r.
 
@@ -185,7 +204,7 @@ W usłudze Intune możesz utworzyć zasady, aby używać programu antywirusowego
 
 W tej aktualizacji to zachowanie zostało naprawione. Oznacza to, że ustawienia **Godzina przeprowadzania codziennego szybkiego skanowania** i **Typ skanowania systemu do wykonania** mają stan sukcesu po pomyślnym ukończeniu skanowania i stan niepowodzenia, jeśli zastosowanie ustawień zakończy się niepowodzeniem. 
 
-Aby uzyskać więcej informacji na temat ustawień programu antywirusowego, zobacz [Ustawienia urządzeń z systemem Windows 10 (i nowszym) w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune](device-restrictions-windows-10.md#windows-defender-antivirus). 
+Aby uzyskać więcej informacji na temat ustawień programu antywirusowego, zobacz [Ustawienia urządzeń z systemem Windows 10 (i nowszym) w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune](device-restrictions-windows-10.md#microsoft-defender-antivirus). 
 
 ### <a name="device-enrollment"></a>Rejestrowanie urządzeń
 

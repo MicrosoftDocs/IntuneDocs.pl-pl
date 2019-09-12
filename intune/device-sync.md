@@ -1,13 +1,12 @@
 ---
-title: Synchronizacja urządzeń w usłudze Microsoft Intune — Azure | Micrososft Docs
+title: Synchronizowanie urządzeń za pomocą usługi Microsoft Intune — Azure | Microsoft Docs
 description: Synchronizuj urządzenia zarejestrowane lub zarządzane w usłudze Microsoft Intune w celu pobierania najnowszych zasad i akcji. Obejmuje kroki synchronizowania przy użyciu witryny Azure Portal i zawiera listę kodów błędów z możliwością ponowienia próby.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/28/2019
+ms.date: 06/21/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -16,19 +15,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f13e00abad5b48dcd7996cf9df1cc5756f250d3
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 30910de4ae17aa3fde573155bde4643e2c3d67f7
+ms.sourcegitcommit: 1925eba3fb0b30592f07a924119e20b661588d12
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57388116"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70808631"
 ---
 # <a name="sync-devices-to-get-the-latest-policies-and-actions-with-intune"></a>Synchronizacja urządzeń w celu pobierania najnowszych zasad i akcji przy użyciu usługi Intune
 
 
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
-
-Akcja urządzenia **Synchronizacja** wymusza natychmiastowe zaewidencjonowanie wybranego urządzenia w usłudze Intune. Zaewidencjonowane urządzenie natychmiast odbiera wszelkie przypisane do niego oczekujące akcje lub zasady. Ta funkcja ułatwia natychmiastowe weryfikowanie przypisanych zasad i rozwiązywanie dotyczących ich problemów bez konieczności czekania na następne zaplanowane zameldowanie.
+Akcja urządzenia **Synchronizacja** wymusza natychmiastowe zaewidencjonowanie wybranego urządzenia w usłudze Intune. Zaewidencjonowane urządzenie natychmiast odbiera wszelkie przypisane do niego oczekujące akcje lub zasady. Ta funkcja ułatwia natychmiastowe weryfikowanie przypisanych zasad i rozwiązywanie dotyczących ich problemów bez konieczności czekania na następne zaplanowane zameldowanie.
 
 ## <a name="supported-platforms"></a>Obsługiwane platformy
 
@@ -40,15 +37,14 @@ Akcja urządzenia **Synchronizacja** wymusza natychmiastowe zaewidencjonowanie w
 
 ## <a name="sync-a-device"></a>Synchronizowanie urządzenia
 
-1. Zaloguj się do [portalu Azure](https://portal.azure.com).
-2. Wybierz pozycję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**. 
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973). 
 3. W usłudze **Intune** wybierz pozycję **Urządzenia** > **Wszystkie urządzenia**.
-4. Z listy zarządzanych urządzeń wybierz urządzenie, wybierz pozycję **Więcej**, a następnie wybierz opcję **Synchronizuj**.
+4. Z listy zarządzanych urządzeń wybierz urządzenie, aby otworzyć jego okienko *Omówienie*, a następnie wybierz pozycję **Synchronizuj**.
 5. Wybierz pozycję **Tak**, aby potwierdzić.
 
 Aby zobaczyć stan akcji synchronizacji, wybierz kolejno pozycje **Urządzenia**  >  **Akcje urządzenia**.
 
-Standardowe częstotliwości zaewidencjonowania zasad usługi Intune można znaleźć w temacie [Czasy cyklu odświeżania](device-profiles.md).
+Standardowe częstotliwości zaewidencjonowania zasad usługi Intune można znaleźć w temacie [Czasy cyklu odświeżania](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
 ## <a name="retryable-error-codes"></a>Kody błędów z możliwością ponowienia próby
 

@@ -5,22 +5,22 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/26/2019
+ms.date: 09/06/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
-ms.reviewer: joglocke
+ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b148abfaeffaf02178e34c3e9abfe86f70fb529c
-ms.sourcegitcommit: ec22a186a9cfa489a8490698e387624e480892d8
+ms.openlocfilehash: 0d9fe180e81c9e661954dd0986f05ac3b5e749ed
+ms.sourcegitcommit: e477e399cba673a2a9e1fa342e8303ed993801eb
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68960646"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739185"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Wymuszanie zgodności usługi Microsoft Defender ATP z dostępem warunkowym w usłudze Intune  
 
@@ -101,6 +101,7 @@ Po nawiązaniu połączenia z usługą Microsoft Defender ATP usługa Intune otr
 
 Po dołączeniu urządzenia przy użyciu pakietu konfiguracyjnego nie trzeba tego robić ponownie. Można również dodać urządzenia przy użyciu [zasad grupy lub programu System Center Configuration Manager (SCCM)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints).
 
+
 ### <a name="create-the-device-configuration-profile"></a>Tworzenie profilu konfiguracji urządzenia
 
 1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
@@ -122,6 +123,7 @@ Po dołączeniu urządzenia przy użyciu pakietu konfiguracyjnego nie trzeba teg
 
 7. Wybierz opcję **OK** i **Utwórz**, aby zapisać zmiany i utworzyć profil.
 8. [Przypisz profil konfiguracji urządzenia](device-profile-assign.md) do urządzeń, które chcesz ocenić za pomocą usługi Microsoft Defender ATP.  
+
 
 ## <a name="create-and-assign-the-compliance-policy"></a>Tworzenie i przypisywanie zasad zgodności  
 
@@ -179,6 +181,9 @@ Następnie monitoruj stan urządzeń objętych zasadami zgodności usługi Micro
 1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Wybierz kolejno pozycje **Zgodność urządzeń** > **Zgodność z zasadami**.
 3. Znajdź na liście zasady usługi Microsoft Defender ATP i zobacz, które urządzenia są zgodne, a które niezgodne.
+
+## <a name="view-onboarding-status"></a>Wyświetlanie stanu dołączania
+Aby wyświetlić stan dołączania wszystkich urządzeń z systemem Windows 10 zarządzanych przez usługę Intune, można przejść do obszaru **Zgodność urządzenia** > **Microsoft Defender ATP**. Na tej stronie można także zainicjować profil konfiguracji urządzenia umożliwiający dołączanie kolejnych urządzeń do usługi Microsoft Defender ATP.
 
 ## <a name="next-steps"></a>Następne kroki  
 
