@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ff5b411f14fef4ad294b0dd8b265680fd67df08
-ms.sourcegitcommit: a97b6139770719afbd713501f8e50f39636bc202
+ms.openlocfilehash: 04cafd2cf69bbd42a35ade3ae180e8af8789c938
+ms.sourcegitcommit: e8d788d033be4320cd72c98c892b383e1bb77e18
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402762"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70912812"
 ---
 # <a name="bundle-ids-for-built-in-ios-apps-you-can-use-in-intune"></a>Identyfikatory pakietów dla wbudowanych aplikacji dla systemu iOS, których można używać w usłudze Intune
 
@@ -30,11 +30,12 @@ Podczas konfigurowania funkcji na urządzeniach z systemem iOS można również 
 
 | Identyfikator pakietu                   | Nazwa aplikacji     | Wydawca |
 |-----------------------------|--------------|-----------|
-| com.apple.AppStore          | App Store    | Apple     |
+| com. Apple. Store             | App Store    | Apple     |
 | com.apple.calculator        | Kalkulator   | Apple     |
 | com.apple.mobilecal         | Kalendarz     | Apple     |
 | com.apple.camera            | Aparat fotograficzny       | Apple     |
 | com.apple.mobiletimer       | Zegar        | Apple     |
+| com. Apple. clips             | Film        | Apple     |
 | com.apple.compass           | Kompas      | Apple     |
 | com.apple.MobileAddressBook | Kontakty     | Apple     |
 | com.apple.facetime          | FaceTime     | Apple     |
@@ -74,7 +75,7 @@ Podczas konfigurowania funkcji na urządzeniach z systemem iOS można również 
 | com.apple.VoiceMemos        | Dyktafon   | Apple     |
 | com.apple.Passbook          | Wallet       | Apple     |
 | com.apple.Bridge            | Zegarek        | Apple     |
-| com.apple.weather           | Pogoda      | Apple     |
+| com.apple.weather           | Pogoda      | Apple     |      
 
 ## <a name="next-steps"></a>Następne kroki
 
