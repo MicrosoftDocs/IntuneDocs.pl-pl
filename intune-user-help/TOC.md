@@ -1,6 +1,6 @@
 # Pomoc dla użytkowników usługi Intune
 
-## [Wykonywanie pracy przy użyciu urządzeń zarządzanych](use-managed-devices-to-get-work-done.md)
+## [Co to jest rejestrowanie urządzenia?](use-managed-devices-to-get-work-done.md)
 
 ## [Do jakich informacji ma dostęp moja firma dzięki usłudze Intune?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 
