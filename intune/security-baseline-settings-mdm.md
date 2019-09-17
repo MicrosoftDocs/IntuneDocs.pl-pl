@@ -11,17 +11,18 @@ ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
+ROBOTS: NOINDEX
 ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5565ce7a355136a749d79b52e4830af91684440a
-ms.sourcegitcommit: 864fdf995c2b41f104a98a7e2665088c2864774f
+ms.openlocfilehash: d7bba4617aa756c5f7168a2febf1a3f1ffdd2029
+ms.sourcegitcommit: 47b06bf2d32e2f84c382dec3366d6f4a31d98012
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68680039"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70864562"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Ustawienia punktów odniesienia zabezpieczeń oprogramowania MDM dla usługi Intune  
 
@@ -47,7 +48,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
 
   **Domyślne**: Tak  
 
-- **Aktywuj aplikacje na zablokowanym ekranie**  
+- **Głosowe aktywowanie aplikacji przy zablokowanym ekranie**  
 
   **Domyślne**: wyłączone
 
@@ -161,6 +162,16 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067136)  
   
   **Domyślne**: włączone  
+
+- **Skonfiguruj bezpieczny dostęp do ścieżek UNC**  
+  To ustawienie zasad służy do konfigurowania bezpiecznego dostępu do ścieżek UNC. Po włączeniu tych zasad system Windows zezwoli na dostęp do określonych ścieżek UNC po spełnieniu dodatkowych wymagań w zakresie zabezpieczeń.
+  [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067243) 
+
+  **Domyślnie**: Skonfiguruj system Windows tak, aby zezwalał na dostęp do określonych ścieżek UNC po spełnieniu dodatkowych wymagań w zakresie zabezpieczeń
+  
+  Podczas *konfigurowania systemu Windows tak, aby zezwalać na dostęp do określonych ścieżek UNC po wybraniu dodatkowych wymagań w zakresie bezpieczeństwa* , można skonfigurować listę ścieżek UNC * numer.
+  - **Lista ścieżek UNC z ograniczoną funkcjonalnością**  
+    Wybierz pozycję **Dodaj** , aby określić dodatkowe flagi zabezpieczeń i ścieżki serwera.  
 
 - **Blokuj pobieranie sterowników wydruku przez HTTP**  
   To ustawienie zasad określa, czy zezwalać temu klientowi na pobieranie pakietów sterowników wydruku przez HTTP. Aby skonfigurować drukowanie HTTP, należy pobrać przez HTTP sterowniki inne niż te, które były dostarczone z systemem. Uwaga: to ustawienie zasad nie blokuje klientowi możliwości drukowania za pomocą drukarek w intranecie lub Internecie przez HTTP. Uniemożliwia tylko pobieranie sterowników, które nie są już zainstalowane lokalnie. Jeśli to ustawienie zasad zostanie włączone, nie będzie można pobierać sterowników drukarek przez HTTP. Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, użytkownicy będą mogli pobierać sterowniki drukarek przez HTTP.  
@@ -1825,7 +1836,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   **Domyślne**: włączone
 
 ## <a name="whats-changed-in-the-new-template"></a>Co zostało zmienione w nowym szablonie
-*Linia bazowa zabezpieczeń MDM dla systemu 2019 może* mieć następujące zmiany w szablonie w *wersji* zapoznawczej.
+*Linia bazowa zabezpieczeń MDM dla systemu 2019 może* mieć następujące zmiany w szablonie w *wersji zapoznawczej* .
 
 ### <a name="changes-to-the-baseline-settings"></a>Zmiany ustawień linii bazowej
 Te ustawienia są:
@@ -1834,7 +1845,7 @@ Te ustawienia są:
 - *Poprawiono* w inny sposób od tego, jak ustawienia pojawiły się w poprzedniej wersji. 
 
 *[Nowy]* [**Powyżej blokady**](#above-lock):
-- **Aktywuj aplikacje na zablokowanym ekranie**    
+- **Głosowe aktywowanie aplikacji przy zablokowanym ekranie**    
 
 *[Nowe]* [**Zarządzanie aplikacjami**](#application-management): 
 - **Blokuj kontrolę użytkownika nad instalacjami**  

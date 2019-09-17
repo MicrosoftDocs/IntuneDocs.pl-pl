@@ -5,29 +5,29 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/22/2019
+ms.date: 07/03/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 6f4de4bd-3dde-4a8d-8e22-46c5d06c3eea
-ms.reviewer: heenamac
+ms.reviewer: kakyker
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d5c78f72e7ffc580cce6cfec7237a3efe3ceb3e5
-ms.sourcegitcommit: fd2499df5123758ecb093b4cdd486e35f713b040
+ms.openlocfilehash: 07d3488d509339fc48eb8449b12725b757775eb5
+ms.sourcegitcommit: 98f2597eec28c6096985d5a1acae72430c2afb1a
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68230095"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70877977"
 ---
 # <a name="configure-the-take-a-test-app-on-windows-10-devices-using-intune"></a>Konfigurowanie aplikacji Take a Test na urządzeniach z systemem Windows 10 przy użyciu usługi Intune
 
-W tym artykule opisano wszystkie ustawienia edukacyjnej aplikacji Take a Test, które można skonfigurować w usłudze Microsoft Intune na urządzeniach z systemem Windows 10 lub nowszym. Korzystając z tej aplikacji, uczniowie mogą logować się do urządzenia i brać udział w teście.
+Aplikacja Wypełnij test pozwala bezpiecznie administrować testami online na urządzeniach z systemem Windows 10. Aby skonfigurować aplikację Wypełnij test, należy utworzyć profil konfiguracji urządzenia w usłudze Intune i skonfigurować ustawienia dotyczące bezpiecznej oceny. W tym artykule opisano ustawienia, które można znaleźć dla aplikacji Wypełnij test. 
 
-Te ustawienia są dodawane do profilu konfiguracji urządzenia, a następnie przypisywane do urządzeń lub wdrażane na nich przy użyciu usługi Microsoft Intune.
+Po skonfigurowaniu profilu przypisz go uczniom i Wdróż go. 
 
 Artykuł [Aplikacja Take a Test w usłudze Intune](education-settings-configure.md) zawiera więcej informacji na temat tej funkcji.
 
@@ -35,21 +35,26 @@ Artykuł [Aplikacja Take a Test w usłudze Intune](education-settings-configure.
 
 [Utwórz profil konfiguracji urządzenia](education-settings-configure.md#create-a-device-profile).
 
-## <a name="take-a-test-settings"></a>Ustawienia aplikacji Take a Test  
+## <a name="take-a-test-settings"></a>Ustawienia aplikacji Take a Test
+Po utworzeniu profilu konfiguracji urządzenia przejdź do pozycji **Typ profilu** i wybierz pozycję **bezpieczna Ocena (edukacja)** . Możesz znaleźć następujące ustawienia aplikacji Wypełnij test. 
+
 
 - **Typ konta**: wybierz sposób logowania użytkowników do testu. Dostępne opcje:
   - Konto usługi Azure AD
   - Konto domeny
   - Konto lokalne
+  - Lokalne konto gościa: dostępne tylko na urządzeniach z systemem Windows 10 w wersji 1903 lub nowszej.    
 - **Nazwa użytkownika konta**: wprowadź nazwę użytkownika konta używanego z aplikacją Take a Test. Konta można wprowadzić w następującym formacie:
   - `user@contoso.com`
   - `domain\username`
   - `user@contoso.com`
   - `computerName\username`
+- **Nazwa konta**: Aby skonfigurować typ lokalnego konta gościa, wprowadź nazwę konta używanego z aplikacją Wypełnij aplikację testową. Nazwa konta zostanie wyświetlona jako kafelek na ekranie logowania. Studenci klikają kafelek, aby uruchomić test.  
 - **Adres URL oceny**: wprowadź adres URL testu, który mają wykonać użytkownicy. Więcej informacji na temat uzyskiwania adresu URL znajduje się w [dokumentacji aplikacji Take a Test](https://docs.microsoft.com/education/windows/take-tests-in-windows-10).
+- **Połączenie drukarki**: wybierz opcję **Wymagaj** , aby zezwolić na dostęp tylko do aplikacji Take a test z urządzeń, które są podłączone do drukarki. To ustawienie powoduje także udostępnienie przycisku drukowania aplikacji opcji test-uczestnikom. **Nieskonfigurowane** zezwala uczniom na dostęp do aplikacji z urządzeń, które nie są połączone z drukarką.  
 - **Monitorowanie ekranu**: wybierz pozycję **Zezwalaj**, aby monitorować działania ekranu podczas wykonywania testu przez użytkowników. Pozycja **Nieskonfigurowane** uniemożliwia monitorowanie ekranu podczas testu.
-- **Sugestia tekstowa**: wybierz pozycję **Zezwalaj**, aby uczestnicy testu mogą zobaczyć sugestie tekstowe. Pozycja **Nieskonfigurowane** powoduje blokowanie sugestii tekstowych podczas wykonywania testu przez użytkowników.
+- **Podpowiedzi tekstowe**: wybierz pozycję **Zezwalaj**, aby uczestnicy testu mogli zobaczyć podpowiedzi tekstowe. Pozycja **Nieskonfigurowane** powoduje blokowanie sugestii tekstowych podczas wykonywania testu przez użytkowników.
 
 ## <a name="next-steps"></a>Następne kroki
 
-Profil został utworzony, ale może jeszcze nie wykonywać żadnych czynności. Pamiętaj, aby [przypisać profil](device-profile-assign.md) i [monitorować jego stan](device-profile-monitor.md).
+Pamiętaj, aby [przypisać profil](device-profile-assign.md) i [monitorować jego stan](device-profile-monitor.md).
