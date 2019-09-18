@@ -8,17 +8,17 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.date: 03/26/2019
 ms.author: erikje
-ms.reviewer: angerobe
+ms.reviewer: spshumwa
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3b81525034f69b43abeb60f562e4d6ee6a46b866
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: e44bbf9396cd2aff3f2b2b134c72eb871f719a91
+ms.sourcegitcommit: d2989b9992d10d133573d9bc31479659fb7e242c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61511834"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71080118"
 ---
 # <a name="quickstart-set-up-automatic-enrollment-for-windows-10-devices"></a>Szybki start: Konfigurowanie automatycznego rejestrowania urządzeń z systemem Windows 10
 
@@ -39,7 +39,7 @@ Zaloguj się w usłudze [Intune](https://aka.ms/intuneportal) jako administrator
 
 W tym przykładzie użyjesz rejestracji w usłudze zarządzaniami urządzeniami przenośnymi, aby umożliwić automatyczne rejestrowanie urządzeń zarówno firmowych, jak i przynoszonych przez użytkowników (BYOD). Utworzysz bezpłatną subskrypcję usługi Azure Active Directory w wersji Premium.
 
-1. Na platformie Azure wybierz pozycję **Azure Active Directory** > **Mobilność (MDM i MAM)**.
+1. Na platformie Azure wybierz pozycję **Azure Active Directory** > **Mobilność (MDM i MAM)** .
 2. Wybierz pozycję **Uzyskaj bezpłatnie wersję próbną usługi w warstwie Premium, aby korzystać z tej funkcji**. Wybranie tej opcji umożliwi automatyczne zarejestrowanie przy użyciu wersji próbnej usługi Azure Active Directory w wersji Premium. 
 
     ![Wybieranie bezpłatnej wersji próbnej usługi Azure Active Directory w wersji Premium](media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-01.png)

@@ -8,17 +8,17 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.date: 03/26/2019
 ms.author: erikje
-ms.reviewer: angerobe
+ms.reviewer: pjain
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6cf4e365f4e68920ea5d24dc3ce2e1bd5eb9f817
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: f63bbc80c055cfcb3bd52f79e7b810094107ec2a
+ms.sourcegitcommit: d2989b9992d10d133573d9bc31479659fb7e242c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61511594"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71080056"
 ---
 # <a name="quickstart-create-and-assign-a-custom-role"></a>Szybki start: Utworzenie i przypisanie roli niestandardowej
 
@@ -56,10 +56,10 @@ Aby operator zabezpieczeń mógł używać nowych uprawnień, należy przypisać
 1. W usłudze Intune wybierz pozycję **Role** > **Wszystkie role** > **Operacje zabezpieczeń**.
 2. W obszarze **Role usługi Intune** wybierz pozycję **Przypisania** > **Przypisz**.
 3. W polu **Nazwa przypisania** wprowadź tekst *Sec ops* (Operacje zabezpieczeń).
-4. Wybierz pozycję **Członek (grupy)** > **Dodaj**.
+4. Wybierz pozycję **Członek (grupy)**  > **Dodaj**.
 5. Wybierz grupę **Contoso Testers** (Testerzy Contoso).
 6. Wybierz pozycję **Wybierz** > **OK**.
-7. Wybierz pozycję **Zakres (grupy)** > **Wybierz grupy do uwzględnienia** > **Contoso Testers** (Testerzy Contoso).
+7. Wybierz pozycję **Zakres (grupy)**  > **Wybierz grupy do uwzględnienia** > **Contoso Testers** (Testerzy Contoso).
 8. Wybierz pozycję **Wybierz** > **OK** > **OK**.
 
 Teraz wszyscy w grupie są członkami roli *Security operations* (Operacje zabezpieczeń) i mogą przeglądać następujące informacje o urządzeniu: identyfikatory urządzeń firmowych, zasady zgodności urządzeń, konfiguracje urządzeń i informacje o organizacji.
