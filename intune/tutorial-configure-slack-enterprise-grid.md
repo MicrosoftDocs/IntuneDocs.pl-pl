@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97bc1658dcd432bdd5e31c7100022959e96c3039
-ms.sourcegitcommit: a25cd79a33feb536d9b2fc11aa7d3e3972f1ca5a
+ms.openlocfilehash: 83b10bdfacbcf76b9f75b90d99e094b6854d525e
+ms.sourcegitcommit: 27e63a96d15bc4062af68c2764905631bd928e7b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70842065"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71061660"
 ---
 # <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>Samouczek: konfigurowanie usługi Slack do używania usługi Intune na potrzeby konfiguracji rozwiązania EMM i aplikacji
 
@@ -77,7 +77,6 @@ Dodaj zasady konfiguracji aplikacji Slack for EMM dla systemu iOS. Zasady konfig
 5. Wybierz pozycję **Skojarzona aplikacja**.
 6. Na pasku wyszukiwania wprowadź frazę „Slack for EMM” i wybierz aplikację.
 7. Kliknij przycisk **OK**, a następnie wybierz pozycję **Ustawienia konfiguracji**. 
-    - Aby uzyskać informacje na temat kluczy konfiguracji i ich wartości, zapoznaj się z dokumentacją na karcie „Technical” (Informacje techniczne) [strony internetowej AppConfig usługi Slack](https://www.appconfig.org/company/slack/).
 8. Wybierz przycisk **OK**, a następnie pozycję **Dodaj**.
 9. Na pasku wyszukiwania wprowadź frazę „Test zasad konfiguracji aplikacji Slack”, a następnie wybierz właśnie dodane zasady.
 10. Z obszaru zarządzania wybierz pozycję **Przypisania**.

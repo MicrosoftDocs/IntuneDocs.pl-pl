@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 76cd6084815a9f63e653a63d36ba8265a7a0fbd6
-ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
+ms.openlocfilehash: 909dba16e04b11989caa79112c5a89fbb7c52114
+ms.sourcegitcommit: 27e63a96d15bc4062af68c2764905631bd928e7b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122565"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71061394"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Konfigurowanie infrastruktury do obsługi protokołu SCEP w usłudze Intune  
   
@@ -355,7 +355,7 @@ Aby zainstalować łącznik certyfikatów, wykonaj następujące czynności:
 8. Otwórz wiersz polecenia, wpisz **services.msc**, a następnie naciśnij klawisz **Enter**. Kliknij prawym przyciskiem myszy pozycję **Usługa łącznika usługi Intune** > **Uruchom ponownie**.
 
 
-Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i podaj następujący adres URL. Powinien zostać zwrócony błąd **403**: `http://<FQDN_of_your_NDES_server>/certsrv/mscep/mscep.dll`  
+Aby sprawdzić, czy usługa jest uruchomiona, otwórz przeglądarkę i podaj następujący adres URL. Powinien zostać zwrócony błąd **403**: `https://<FQDN_of_your_NDES_server>/certsrv/mscep/mscep.dll`  
 
 > [!NOTE]  
 > Łącznik certyfikatów usługi Intune obsługuje protokół TLS 1.2. Jeśli serwer hostujący łącznik obsługuje protokół TLS 1.2, zostanie użyty protokół TLS 1.2. Jeśli serwer nie obsługuje protokołu TLS 1.2, jest używany protokół TLS 1.1. Obecnie protokół TLS 1.1 jest używany do uwierzytelniania między urządzeniami a serwerem.
