@@ -519,6 +519,8 @@
             - name: PKCS
               href: certficates-pfx-configure.md
               displayName: ksp
+            - name: Importowany protokół PKCS
+              href: certificates-imported-pfx-configure.md
             - name: Używanie protokołu S/MIME do szyfrowania wiadomości e-mail
               href: certificates-s-mime-encryption-sign.md
             - name: Używanie urzędu certyfikacji innej firmy za pomocą protokołu SCEP
@@ -744,6 +746,8 @@
               href: troubleshoot-certificate-connector-events.md
             - name: Rozwiązywanie problemów z programem Exchange Connector
               href: troubleshoot-exchange-connector.md
+        - name: Używanie dokumentów usługi Intune
+          href: use-docs.md
         - name: Uzyskiwanie pomocy technicznej
           href: get-support.md
 - name: Tematy pomocy
