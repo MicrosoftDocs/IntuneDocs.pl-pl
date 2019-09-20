@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 09/09/2019
+ms.date: 09/16/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48474ca9fcfafcd050b7ef9c5a64adb56388b9a4
-ms.sourcegitcommit: a25cd79a33feb536d9b2fc11aa7d3e3972f1ca5a
+ms.openlocfilehash: 7b7b4453d441d2f2367b19a6bf0505dabd8e6e48
+ms.sourcegitcommit: 27e63a96d15bc4062af68c2764905631bd928e7b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70842146"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71061679"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co nowego w usłudze Microsoft Intune
 
@@ -54,6 +54,21 @@ Dowiedz się co tydzień, co nowego w usłudze Microsoft Intune. Możesz tu rów
 
 <!-- ########################## -->
 
+## <a name="week-of-september-16-2019"></a>Tydzień od 16 września 2019 r.
+
+### <a name="app-management"></a>Zarządzanie aplikacjami
+
+#### <a name="macos-support-for-web-apps----3174427---"></a>Obsługa aplikacji internetowych w systemie macOS <!-- 3174427 -->
+Aplikacje internetowe umożliwiające dodanie skrótu do adresu URL w Internecie można zainstalować na Docku, używając aplikacji Portal firmy dla systemu macOS. Użytkownicy końcowi mogą uzyskać dostęp do akcji **Instaluj** na stronie szczegółów aplikacji internetowej w aplikacji Portal firmy dla systemu macOS. Aby uzyskać więcej informacji o aplikacjach typu **Link sieci Web**, zobacz artykuł [Dodawanie aplikacji do usługi Microsoft Intune](apps-add.md) i [Dodawanie aplikacji internetowych do usługi Microsoft Intune](web-app.md).
+
+#### <a name="macos-support-for-vpp-apps----3173501----"></a>Obsługa aplikacji VPP w systemie macOS <!-- 3173501  -->
+Aplikacje dla systemu macOS kupione przy użyciu usługi Apple Business Manager są wyświetlane w konsoli, jeśli tokeny programu VPP firmy Apple są synchronizowane w usłudze Intune. Za pomocą konsoli usługi Intune można przypisywać, odwoływać i ponownie przypisywać dotyczące urządzeń i użytkowników licencje dla grup. Usługa Microsoft Intune ułatwia zarządzanie aplikacjami z programu VPP kupionymi do użycia w firmie w następujący sposób:
+- Raportowanie informacji o licencji ze sklepu z aplikacjami.
+- Śledzenie liczby używanych licencji.
+- Pomoc w zapobieganiu instalacji większej liczby kopii aplikacji, niż jest posiadana.
+
+Aby uzyskać więcej informacji na temat usługi Intune i programu VPP, zobacz [Zarządzanie aplikacjami i książkami kupionymi w ramach zakupów zbiorczych w usłudze Microsoft Intune](vpp-apps.md).
+
 ## <a name="week-of-september-9-2019"></a>Tydzień od 9 września 2019 r.
 
 ### <a name="app-management"></a>Zarządzanie aplikacjami
@@ -64,6 +79,10 @@ Aplikacja Microsoft Intune dla systemu Android została zaktualizowana przy uży
 - Dodano dodatkową stronę pokazującą profil użytkownika.
 - Dodano wyświetlanie powiadomień z możliwością wykonywania akcji w aplikacji dla użytkownika. Mogą one dotyczyć na przykład konieczności aktualizacji ustawień urządzenia.
 - Dodano funkcję wyświetlania niestandardowych powiadomień push, dopasowując aplikację do funkcji pomocy technicznej ostatnio dodanej w aplikacji Portal firmy dla systemów iOS i Android. Aby uzyskać więcej informacji, zobacz [Wysyłanie powiadomień niestandardowych w usłudze Intune](custom-notifications.md).
+
+#### <a name="for-ios-devices-customize-the-enrollment-process-privacy-screen-of-the-company-portal----4394993---"></a>Dostosowywanie ekranu prywatności wyświetlanego podczas rejestracji w aplikacji Portal firmy na urządzeniach z systemem iOS <!-- 4394993 -->
+Przy użyciu języka Markdown można dostosować ekran prywatności w aplikacji Portal firmy, który użytkownicy końcowi widzą podczas rejestracji w systemie iOS. W tym celu można dostosować listę elementów i działań, których Twoja organizacja nie może zobaczyć ani wykonać na urządzeniu. Aby uzyskać więcej informacji, zobacz artykuł [Jak skonfigurować aplikację Portal firmy w usłudze Microsoft Intune](company-portal-app.md#privacy-statement-customization).
+
 
 ## <a name="week-of-september-2-2019"></a>Tydzień od 2 września 2019 r.
 
@@ -228,7 +247,7 @@ Można ustawić profile programu Device Enrollment Program, aby pomijać następ
 Aby uzyskać więcej informacji na temat dostosowywania Asystenta ustawień, zobacz [Tworzenie profilu rejestracji Apple dla systemu iOS](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) i [Tworzenie profilu rejestracji Apple dla systemu macOS](device-enrollment-program-enroll-macos.md#create-an-apple-enrollment-profile).
 
 #### <a name="add-a-user-column-to-the-autopilot-device-csv-upload-process----3823054---"></a>Dodawanie kolumny użytkownika do procesu przekazywania pliku CSV urządzeń rozwiązania Autopilot <!-- 3823054 -->
-Teraz można dodać kolumnę użytkownika do procesu przekazywania pliku CSV dla urządzeń rozwiązania Android. Umożliwia to zbiorcze przypisywanie użytkowników w momencie importowania pliku CSV. Nowy format wierszy w pliku CSV wygląda następująco: numer seryjny, identyfikator produktu systemu Windows, skrót sprzętu, opcjonalny tag grupy, opcjonalny przypisany użytkownik. Aby uzyskać więcej informacji, zobacz [Rejestrowanie urządzeń z systemem Windows w usłudze Intune za pomocą rozwiązania Windows Autopilot](enrollment-autopilot.md).
+Teraz można dodać kolumnę użytkownika do procesu przekazywania pliku CSV dla urządzeń rozwiązania Android. Umożliwia to zbiorcze przypisywanie użytkowników w momencie importowania pliku CSV. Aby uzyskać więcej informacji, zobacz [Rejestrowanie urządzeń z systemem Windows w usłudze Intune za pomocą rozwiązania Windows Autopilot](enrollment-autopilot.md).
 
 
 ### <a name="device-management"></a>Zarządzanie urządzeniami

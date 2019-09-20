@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/04/2019
+ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c474ac2eccf90e829abe753c82d40bdfae9146ec
-ms.sourcegitcommit: 5bb46d3c0bf8c5595132c4200849b1c4bcfe7cdb
+ms.openlocfilehash: 8b41405e2256d6d2608b05a9c7e8a40cbb3ab349
+ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70376921"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71071068"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Korzystanie z szablonów systemu Windows 10 umożliwiających konfigurowanie ustawień zasad grupy w usłudze Microsoft Intune
 
@@ -36,7 +36,7 @@ W tym artykule przedstawiono procedurę tworzenia szablonu dla urządzeń z syst
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
-- Niektóre z tych ustawień są dostępne od systemu Windows 10 w wersji 1703 (RS2). W celu uzyskania dostępu do najlepszego środowiska zaleca się użycie systemu Windows 10 Enterprise w wersji 1903 (19H1) lub nowszego.
+- Niektóre z tych ustawień są dostępne od systemu Windows 10 w wersji 1703 (RS2). Niektóre ustawienia są niedostępne w niektórych wersjach systemu Windows. W celu uzyskania dostępu do najlepszego środowiska zaleca się użycie systemu Windows 10 Enterprise w wersji 1903 (19H1) lub nowszego.
 
 - Ustawienia systemu Windows używają [dostawców CSP zasad systemu Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#admx-backed-policies). Dostawcy CSP działają w różnych wersjach systemu Windows, takich jak Home, Professional, Enterprise i tak dalej. Aby sprawdzić, czy dostawca CSP działa w określonej wersji, przejdź do artykułu dotyczącego [dostawców CSP zasad systemu Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#admx-backed-policies).
 

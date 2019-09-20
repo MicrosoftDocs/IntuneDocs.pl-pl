@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8cf55084951c3a423b79e4588f8814b5e73ce8e8
-ms.sourcegitcommit: 6c74ff568267d85fd1d44fda75e3e24ead87cb2b
+ms.openlocfilehash: a038f55f6dbdd894742a8712c878e77557a77210
+ms.sourcegitcommit: 27e63a96d15bc4062af68c2764905631bd928e7b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70063016"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71061542"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Selektywne czyszczenie danych przy użyciu akcji uruchamiania warunkowego zasad ochrony aplikacji w usłudze Intune
 
@@ -44,7 +44,7 @@ Za pomocą tych ustawień możesz jawnie wyczyścić dane firmowe z urządzenia 
 8. W kolumnie **Akcja** wybierz akcję, którą chcesz wykonać, jeśli użytkownicy nie spełnili Twoich wymagań. W niektórych przypadkach dla pojedynczego ustawienia można skonfigurować wiele akcji. Aby uzyskać szczegółowe informacje, zobacz [Tworzenie i przypisywanie zasad ochrony aplikacji](app-protection-policies.md).
 
 >[!NOTE]
-> Aby użyć ustawienia **Modele urządzeń lub Producenci urządzeń**, wprowadź rozdzielaną średnikami listę identyfikatorów modeli. Unikaj spacji na listach wielu wartości. Te wartości nie uwzględniają wielkości liter. 
+> Aby użyć ustawienia **Modele urządzeń lub Producenci urządzeń**, wprowadź rozdzielaną średnikami listę identyfikatorów modeli (iOS) lub producentów (Android). Unikaj spacji na listach wielu wartości. Te wartości nie uwzględniają wielkości liter. 
 
 ## <a name="policy-settings"></a>Ustawienia zasad 
 

@@ -12,17 +12,17 @@ ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 439c33a6-e80c-4da9-ba09-a51fc36f62ad
-ms.reviewer: dagerrit
+ms.reviewer: tisilver
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2254c1e83764e9b29ab6fb99c016edef75aad43e
-ms.sourcegitcommit: bc3450fc7f19006b500edf5b395c01559b483ea4
+ms.openlocfilehash: 3f7018b791d5ab22ebcf6bbc45ac01963d2c5d42
+ms.sourcegitcommit: d2989b9992d10d133573d9bc31479659fb7e242c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68738280"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71079945"
 ---
 # <a name="enroll-ios-devices-in-intune"></a>Rejestrowanie urządzeń z systemem iOS w usłudze Intune
 
@@ -39,7 +39,7 @@ Aby możliwa była rejestracja urządzeń z systemem iOS, wykonaj następujące 
 
 ## <a name="user-owned-ios-devices-byod"></a>Urządzenia z systemem iOS należące do użytkownika (BYOD)
 
-Możesz umożliwić użytkownikom rejestrowanie swoich urządzeń osobistych na potrzeby zarządzania w usłudze Intune — rozwiązanie to nazywa się „bring your own device”, czyli BYOD. Gdy ukończysz wymagania wstępne i przypiszesz użytkownikom licencje, użytkownicy muszą pobrać aplikację Intune — Portal firmy ze sklepu App Store i postępować zgodnie z instrukcjami w aplikacji dotyczącymi rejestrowania.
+Możesz umożliwić użytkownikom rejestrowanie swoich urządzeń osobistych na potrzeby zarządzania w usłudze Intune — rozwiązanie to nazywa się „bring your own device”, czyli BYOD. Gdy ukończysz wymagania wstępne i przypiszesz użytkownikom licencje, użytkownicy muszą pobrać aplikację Intune — Portal firmy ze sklepu App Store i postępować zgodnie z instrukcjami w aplikacji dotyczącymi rejestrowania. Zasady zachowania poufności informacji dotyczące aplikacji Portal firmy można dostosować na urządzeniach z systemem iOS zgodnie z opisem w sekcji [dostosowywanie zasad zachowania poufności](company-portal-app.md#privacy-statement-customization).
 
 ## <a name="company-owned-ios-devices"></a>Urządzenia z systemem iOS należące do firmy
 W przypadku organizacji, które kupują urządzenia dla swoich użytkowników, usługa Intune obsługuje następujące metody rejestracji urządzeń z systemem iOS należących do firmy:

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/27/2019
+ms.date: 09/16/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 230f226cba70a7fc61efd236cc0fde0ca6b7fa68
-ms.sourcegitcommit: c3a4fefbac8ff7badc42b1711b7ed2da81d1ad67
+ms.openlocfilehash: cbf2031a316b1f7c2e22d165363cca12cfd70291
+ms.sourcegitcommit: 27e63a96d15bc4062af68c2764905631bd928e7b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68374935"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71061575"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Używanie skryptów programu PowerShell na urządzeniach z systemem Windows 10 w usłudze Intune
 
@@ -181,7 +181,7 @@ Aby sprawdzić, czy urządzenie jest zarejestrowane automatycznie, możesz wykon
 - Sprawdź dzienniki pod kątem błędów. Zobacz [Dzienniki rozszerzenia do zarządzania usługi Intune](#intune-management-extension-logs) (w tym artykule).
 - W przypadku ewentualnych problemów z uprawnieniami upewnij się, że właściwości skryptu programu PowerShell zostały ustawione na `Run this script using the logged on credentials`. Sprawdź również, czy zalogowany użytkownik ma odpowiednie uprawnienia do uruchamiania skryptu.
 
-- Aby odizolować problemy ze skryptami, wykonaj następujące czynności:
+- Aby wyizolować problemy dotyczące skryptów, wykonaj następujące czynności:
 
   - Sprawdź konfigurację wykonywania programu PowerShell w urządzeniach. Aby uzyskać wskazówki, zobacz [Zasady wykonywania programu PowerShell](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-6).
   - Uruchom przykładowy skrypt za pomocą rozszerzenia zarządzania usługi Intune. Na przykład utwórz katalog `C:\Scripts` i przydziel wszystkim prawa do pełnej kontroli. Uruchom poniższy skrypt:
@@ -194,7 +194,31 @@ Aby sprawdzić, czy urządzenie jest zarejestrowane automatycznie, możesz wykon
 
   - Aby przetestować wykonywanie skryptu bez usługi Intune, uruchom skrypty na koncie systemu za pomocą [narzędzia psexec](https://docs.microsoft.com/sysinternals/downloads/psexec) w środowisku lokalnym:
 
-    `psexec -i -s`
+    `psexec -i -s`  
+    
+  - Jeśli skrypt zgłasza, że został wykonany, ale w rzeczywistości do tego nie doszło, usługa antywirusowa może umieszczać element AgentExecutor w piaskownicy. Poniższy skrypt zawsze zgłasza błąd w usłudze Intune. Testowo można użyć tego skryptu:
+  
+    ```powershell
+    Write-Error -Message "Forced Fail" -Category OperationStopped
+    mkdir "c:\temp" 
+    echo "Forced Fail" | out-file c:\temp\Fail.txt
+    ```
+
+    Jeśli skrypt zgłasza powodzenie, przyjrzyj plik `AgentExecutor.log`, aby potwierdzić, że występuje błąd. Jeśli skrypt zostaje wykonany, długość powinna wynosić > 2.
+
+  - Aby zapisać pliki .error i .output, poniższy fragment kodu wykonuje skrypt przy użyciu elementu AgentExecutor w PSx86 (`C:\Windows\SysWOW64\WindowsPowerShell\v1.0`). Dzienniki są zapisywane w celu przejrzenia przez użytkownika. Należy pamiętać, że rozszerzenie Intune Management Extension czyści dzienniki po wykonaniu skryptu:
+  
+    ```powershell
+    $scriptPath = read-host "Enter the path to the script file to execute"
+    $logFolder = read-host "Enter the path to a folder to output the logs to"
+    $outputPath = $logFolder+"\output.output"
+    $errorPath =  $logFolder+"\error.error"
+    $timeoutPath =  $logFolder+"\timeout.timeout"
+    $timeoutVal = 60000 
+    $PSFolder = "C:\Windows\SysWOW64\WindowsPowerShell\v1.0"
+    $AgentExec = "C:\Program Files (x86)\Microsoft Intune Management Extension\agentexecutor.exe"
+    &$AgentExec -powershell  $scriptPath $outputPath $errorPath $timeoutPath $timeoutVal $PSFolder 0 0
+    ```
 
 ## <a name="next-steps"></a>Następne kroki
 

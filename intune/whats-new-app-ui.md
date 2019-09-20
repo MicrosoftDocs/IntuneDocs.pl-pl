@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/28/2019
+ms.date: 09/09/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ecfd482df452c52d81621cdc49c6ca78c4d4c1f6
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: 1710fd315803c4b47ad3be343893f93f7d155135
+ms.sourcegitcommit: 27e63a96d15bc4062af68c2764905631bd928e7b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354538"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71061734"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizacje interfejsu użytkownika dla aplikacji użytkownika końcowego usługi Intune
 Dowiedz się więcej o najnowszych aktualizacjach aplikacji usługi Microsoft Intune. Regularnie dodajemy nowe funkcje do aplikacji i witryny internetowej Portal firmy w usłudze Intune oraz usprawniamy te istniejące. Jeśli jesteś administratorem usługi Intune lub osobą odpowiedzialną za pomoc techniczną, ten artykuł zawiera informacje wymagane do wykonywania następujących czynności:
@@ -33,6 +33,23 @@ Dowiedz się więcej o najnowszych aktualizacjach aplikacji usługi Microsoft In
 Jeśli jesteś pracownikiem lub uczniem, sprawdź zrzuty ekranu i linki do dokumentacji pomocy aplikacji Portal firmy. Więcej informacji o sposobie korzystania z aplikacji Portal firmy zawiera [dokumentacja pomocy dla użytkowników aplikacji Portal firmy](https://docs.microsoft.com/intune-user-help/).  
 
 <!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/account-move-rom-iwp-user-1712.png)--->
+
+
+## <a name="week-of-september-9-2019"></a>Tydzień od 9 września 2019 r.
+
+### <a name="updates-to-microsoft-intune-app----4997846---"></a>Aktualizacje aplikacji Microsoft Intune <!-- 4997846 -->
+Aplikacja Microsoft Intune dla systemu Android została zaktualizowana przy użyciu następujących ulepszeń:
+- Zaktualizowano i udoskonalono układ tak, aby uwzględnić dolny obszar nawigacji na potrzeby najważniejszych akcji.
+- Dodano dodatkową stronę pokazującą profil użytkownika.
+- Dodano wyświetlanie powiadomień z możliwością wykonywania akcji w aplikacji dla użytkownika. Mogą one dotyczyć na przykład konieczności aktualizacji ustawień urządzenia.
+- Dodano funkcję wyświetlania niestandardowych powiadomień push, dopasowując aplikację do funkcji pomocy technicznej ostatnio dodanej w aplikacji Portal firmy dla systemów iOS i Android. Aby uzyskać więcej informacji, zobacz [Wysyłanie powiadomień niestandardowych w usłudze Intune](custom-notifications.md).
+
+    Przykładowy profil użytkownika:<br>
+    <img src="./media/intune-app-android-device-profile.png" alt="Screenshot of Microsoft Intune app for Android - User Profile" width="300">   
+
+    Przykładowe powiadomienia i dolna nawigacja:<br>
+    <img src="./media/intune-app-android-device-notify.png" alt="Screenshot of Microsoft Intune app for Android - Notification" width="300">   
+
 
 ## <a name="week-of-june-24-2019"></a>Tydzień od 24 czerwca 2019 r.  
 

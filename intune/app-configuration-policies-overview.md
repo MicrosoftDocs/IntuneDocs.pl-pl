@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cda0453009855d96e7c13e170ba908479a0773ea
-ms.sourcegitcommit: 513e805bbea8bf652c2901dfc5460e34946077df
+ms.openlocfilehash: c0cbc2c7334675e91450b9c2d7129a098498d978
+ms.sourcegitcommit: 27e63a96d15bc4062af68c2764905631bd928e7b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70160582"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71061591"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Zasady konfiguracji aplikacji usługi Microsoft Intune
 
 Zasady konfiguracji aplikacji mogą pomóc w wyeliminowaniu problemów z konfigurowaniem aplikacji, umożliwiając przypisanie ustawień konfiguracji do zasad, które są przypisywane do użytkowników końcowych, zanim uruchomią oni aplikację. Ustawienia są następnie dostarczane automatycznie podczas konfigurowania aplikacji na urządzeniach użytkowników końcowych, a użytkownicy końcowi nie muszą podejmować żadnego działania. Ustawienia konfiguracji są unikatowe dla każdej aplikacji. 
 
-Zasady konfiguracji aplikacji można utworzyć i używać ich w celu dostarczania ustawień konfiguracji dla aplikacji systemu iOS lub Android. Te ustawienia konfiguracji umożliwiają dostosowanie aplikacji przy użyciu [standardowego podejścia](https://www.appconfig.org/) do konfigurowania aplikacji i zarządzania nimi. Ustawienia zasad konfiguracji są stosowane, gdy aplikacja sprawdza te ustawienia (zazwyczaj podczas pierwszego uruchomienia aplikacji). 
+Zasady konfiguracji aplikacji można utworzyć i używać ich w celu dostarczania ustawień konfiguracji dla aplikacji systemu iOS lub Android. Te ustawienia konfiguracji umożliwiają dostosowanie aplikacji przy użyciu zasad konfigurowania aplikacji i zarządzania nią. Ustawienia zasad konfiguracji są stosowane, gdy aplikacja sprawdza te ustawienia (zazwyczaj podczas pierwszego uruchomienia aplikacji). 
 
 Ustawienie konfiguracji aplikacji może wymagać na przykład określenia następujących szczegółów:
 
@@ -60,7 +60,7 @@ Dostępne są dwie opcje używania zasad konfiguracji aplikacji z usługą Intun
 ## <a name="apps-that-support-app-configuration"></a>Aplikacje obsługujące konfigurację aplikacji
 
 ### <a name="managed-devices"></a>Urządzenia zarządzane
-Zasad konfiguracji aplikacji można używać w przypadku aplikacji, które je obsługują. Aby można było używać konfiguracji aplikacji w usłudze Intune, aplikacje muszą być napisane tak, aby obsługiwały korzystanie z konfiguracji aplikacji w sposób zdefiniowany przez społeczność [AppConfig Community](https://www.appconfig.org/members). Aby uzyskać więcej informacji, skontaktuj się z dostawcą aplikacji.
+Zasad konfiguracji aplikacji można używać w przypadku aplikacji, które je obsługują. Aby można było używać konfiguracji aplikacji w usłudze Intune, aplikacje muszą być napisane w sposób umożliwiający korzystanie z konfiguracji aplikacji zdefiniowanych przez system operacyjny. Aby uzyskać szczegółowe informacje o obsługiwanych kluczach konfiguracji aplikacji, skontaktuj się z dostawcą aplikacji.
 
 ### <a name="managed-apps"></a>Aplikacje zarządzane
 Aplikacje biznesowe można przygotować, włączając do aplikacji [zestaw SDK aplikacji usługi Intune](app-sdk.md) lub opakowując opracowaną aplikację przy użyciu [narzędzia opakowującego aplikacje usługi Intune](apps-prepare-mobile-application-management.md). Zestaw SDK aplikacji usługi Intune kładzie nacisk na minimalizację liczby zmian kodu wymaganych od dewelopera aplikacji. Aby uzyskać więcej informacji, zobacz [Omówienie zestawu SDK aplikacji usługi Intune](app-sdk.md). Aby zapoznać się z porównaniem zestawu SDK aplikacji usługi Intune i narzędzia opakowującego aplikacje usługi Intune, zobacz [Przygotowanie aplikacji biznesowych pod kątem zasad ochrony aplikacji](apps-prepare-mobile-application-management.md#feature-comparison).

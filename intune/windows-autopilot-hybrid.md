@@ -12,17 +12,17 @@ ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 8518d8fa-a0de-449d-89b6-8a33fad7b3eb
-ms.reviewer: damionw
+ms.reviewer: priyar
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 399b0c6065c51343e4802d4e8aec29381c6dc468
-ms.sourcegitcommit: 549352bdea93cc2809e3e0010bfcc10bd44dc728
+ms.openlocfilehash: 0bf683aebee50b4f2172f11ce205a910a47d0845
+ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68861850"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71071144"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Wdrażanie urządzeń przyłączonych do hybrydowej usługi Azure AD przy użyciu usługi Intune i rozwiązania Windows Autopilot
 Za pomocą usługi Intune i rozwiązania Windows Autopilot można skonfigurować urządzenia przyłączone do hybrydowej usługi Azure Active Directory (Azure AD). Aby to zrobić, wykonaj kroki opisane w tym artykule.
@@ -106,14 +106,14 @@ Jednostka organizacyjna, której przyznano uprawnienia do tworzenia komputerów,
 
 Łącznik usługi Intune dla usługi Active Directory musi być zainstalowany na komputerze z systemem Windows Server 2016 lub nowszym. Ten komputer musi również mieć dostęp do Internetu i usługi Active Directory. W celu zwiększenia skalowalności i dostępności lub obsługi wielu domen usługi Active Directory można zainstalować wiele łączników w danym środowisku. Zaleca się instalowanie łącznika na serwerze, na którym nie są uruchomione inne łączniki usługi Intune.
 
-1. W usłudze [Intune](https://aka.ms/intuneportal) wybierz pozycję **Rejestracja urządzenia** > **Rejestracja w systemie Windows** > **Łącznik usługi Intune dla usługi Active Directory (wersja zapoznawcza)**  > **Dodaj łącznik**. 
+1. W usłudze [Intune](https://aka.ms/intuneportal) wybierz kolejno pozycje **Rejestracja urządzenia** > **Rejestracja w systemie Windows** > **Łącznik usługi Intune dla usługi Active Directory** > **Dodaj**. 
 2. Postępuj zgodnie z instrukcjami, aby pobrać łącznik.
 3. Otwórz pobrany plik konfiguracji łącznika, *ODJConnectorBootstrapper.exe*, aby zainstalować łącznik.
 4. Na koniec instalacji wybierz pozycję **Konfiguruj**.
 5. Wybierz polecenie **Zaloguj się**.
 6. Wprowadź poświadczenia roli Administrator globalny lub Administrator usługi Intune użytkownika.  
    Konto użytkownika musi mieć przypisaną licencję usługi Intune.
-7. Wybierz pozycję **Rejestracja urządzenia** > **Rejestracja w systemie Windows** > **Łącznik usługi Intune dla usługi Active Directory (wersja zapoznawcza)** i upewnij się, że połączenie jest w stanie **Aktywne**.
+7. Przejdź do pozycji **Rejestracja urządzenia** > **Rejestracja w systemie Windows** > **Łącznik usługi Intune dla usługi Active Directory** i upewnij się, że połączenie ma stan **Aktywne**.
 
 > [!NOTE]
 > Od zalogowania się w łączniku do jego pojawienia się w usłudze [Intune](https://aka.ms/intuneportal) może upłynąć kilka minut. Łącznik pojawi się tylko wtedy, jeśli pomyślnie skomunikuje się z usługą Intune.
@@ -183,14 +183,17 @@ Po zarejestrowaniu urządzeń rozwiązania Autopilot ich nazwy stają się nazwa
 Profile wdrażania rozwiązania Autopilot służą do konfigurowania urządzeń z rozwiązaniem Autopilot.
 
 1. W usłudze [Intune](https://aka.ms/intuneportal) wybierz kolejno pozycje **Rejestracja urządzenia** > **Rejestracja w systemie Windows** > **Profile wdrażania** > **Utwórz profil**.
-1. Wpisz **Nazwę** i opcjonalnie **Opis**.
-1. W obszarze **Tryb wdrożenia** wybierz pozycję **Sterowane przez użytkownika**.
-1. W polu **Dołącz do usługi Azure AD jako** wybierz pozycję **Dołączono hybrydowo do usługi Azure AD (wersja zapoznawcza)** .
-1. Wybierz pozycję **Środowisko gotowe do użycia (OOBE, Out-of-box experience)** , skonfiguruj odpowiednie opcje, a następnie wybierz przycisk **Zapisz**.
-1. Wybierz pozycję **Utwórz**, aby utworzyć profil. 
-1. W okienku profilu wybierz pozycję **Przypisania**.
-1. Wybierz pozycję **Wybierz grupy**.
-1. W okienku **Wybierz grupy** wybierz grupę urządzeń, a następnie kliknij pozycję **Wybierz**.
+2. Na stronie **Podstawowe** wypełnij pole **Nazwa** i opcjonalne pole **Opis**.
+3. Jeśli chcesz, aby wszystkie urządzenia w przypisanych grupach dokonywały automatycznej konwersji do rozwiązania Autopilot, ustaw opcję **Konwertuj wszystkie wybrane urządzenia na potrzeby rozwiązania Autopilot** na wartość **Tak**. Wszystkie urządzenia bez rozwiązania Autopilot w przypisanych grupach będą rejestrować się za pomocą usługi wdrażania rozwiązania Autopilot. Przetwarzanie rejestracji może potrwać do 48 godzin. Jeśli urządzenie nie zostało zarejestrowane i je zresetowano, rozwiązanie Autopilot przeprowadzi jego rejestrację. Po zarejestrowaniu urządzenia w ten sposób wyłączenie tej opcji lub usunięcie przypisania profilu nie spowoduje usunięcia urządzenia z usługi wdrażania rozwiązania Autopilot. Zamiast tego należy [bezpośrednio usunąć urządzenie](enrollment-autopilot.md#delete-autopilot-devices).
+4. Wybierz pozycję **Dalej**.
+5. Na stronie **Środowisko gotowe do użycia (OOBE, Out-of-box experience)** wybierz opcję **Sterowane przez użytkownika** dla pozycji **Tryb wdrożenia**.
+6. W polu **Dołącz do usługi Azure AD jako** wybierz pozycję **Dołączono do hybrydowej usługi Azure AD**.
+7. Skonfiguruj pozostałe opcje na stronie **Środowisko gotowe do użycia (OOBE, Out-of-box experience)** zgodnie ze swoimi potrzebami.
+8. Wybierz pozycję **Dalej**.
+9. Na stronie **Tagi zakresu**wybierz [tagi zakresu](scope-tags.md), które będą używane w tym profilu.
+10. Wybierz pozycję **Dalej**.
+11. Na stronie **Przypisania** kliknij pozycję **Wybierz grupy do uwzględnienia** > wyszukaj i wybierz grupę urządzeń > kliknij **Wybierz**.
+12. Kliknij kolejno opcje **Dalej** > **Utwórz**.
 
 Zmiana stanu urządzenia z wartości *Nieprzypisane* do wartości *Przypisywanie*, a na koniec do wartości *Przypisane* trwa około 15 minut.
 
