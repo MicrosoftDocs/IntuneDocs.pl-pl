@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 44ba77609b3fafd5518378f3edcbbbace0f6a551
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: 2a31c55d030cd8d12bb00a6e0873a24612df70bf
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354081"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167706"
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Instalowanie klienta oprogramowania usługi Intune na komputerach z systemem Windows
 
@@ -48,7 +48,7 @@ Wszystkie metody z wyjątkiem sytuacji, w których użytkownicy samodzielnie ins
 
 1. W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) kliknij pozycję **Administracja** &gt;  **Pobieranie oprogramowania klienckiego**.
 
-   ![Pobieranie klienta komputerowego usługi Intune](./media/https://docs.microsoft.com/intune/media/install-the-windows-pc-client/pc-sa-client-download.png)
+   ![Pobieranie klienta komputerowego usługi Intune](./media/install-the-windows-pc-client/pc-sa-client-download.png)
 
 2. Na stronie **Pobieranie oprogramowania klienckiego** kliknij przycisk **Pobieranie oprogramowania klienckiego**. Następnie zapisz pakiet **Microsoft_Intune_Setup.zip**, który zawiera oprogramowanie, w bezpiecznej lokalizacji w sieci.
 

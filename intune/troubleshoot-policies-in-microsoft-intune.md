@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9314617640d0bfd7f3a7b0cd0ba572e99ede53f9
-ms.sourcegitcommit: cd451ac487c7ace18ac9722a28b9facfba41f6d3
+ms.openlocfilehash: 68ffdcccdd3588ac5127e6c54426acfdcad17d34
+ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67298394"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71071705"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Rozwiązywanie problemów związanych z zasadami i profilami w usłudze Intune
 
@@ -30,8 +30,8 @@ Usługa Microsoft Intune zawiera kilka wbudowanych funkcji rozwiązywania proble
 
 W tym artykule wymieniono niektóre typowe techniki rozwiązywania problemów i opisano niektóre problemy, które mogą wystąpić.
 
-## <a name="check-tenant-status"></a>Sprawdzanie stanu dzierżawy
-Sprawdź [stanu dzierżawy](tenant-status.md) i upewnij się, subskrypcja jest aktywna. Można również wyświetlić szczegółowe informacje dotyczące aktywnymi zdarzeniami i poradniki, które mogą mieć wpływ na wdrożenie profilu lub zasad.
+## <a name="check-tenant-status"></a>Sprawdź stan dzierżawy
+Sprawdź [stan dzierżawy](tenant-status.md) i upewnij się, że subskrypcja jest aktywna. Możesz również wyświetlić szczegóły dotyczące aktywnych zdarzeń i klasyfikatorów, które mogą mieć wpływ na wdrożenie zasad lub profilu.
 
 ## <a name="use-built-in-troubleshooting"></a>Korzystanie z wbudowanej funkcji rozwiązywania problemów
 
@@ -118,10 +118,10 @@ Sprawdź [stanu dzierżawy](tenant-status.md) i upewnij się, subskrypcja jest a
 
 ## <a name="policy-troubleshooting-resources"></a>Zasoby służące do rozwiązywania problemów z zasadami
 
-- [Rozwiązywanie problemów z systemem iOS lub Android zasady nie są stosowane do urządzeń](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154) (otwiera innej witrynie firmy Microsoft)
-- [Rozwiązywanie problemów z błędami zasad systemu Windows 10 w usłudze Intune](http://configmgrdogsarchive.com/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (otwiera blog)
-- [Rozwiązywanie problemów z dostawcy usług Kryptograficznych ustawienia niestandardowe dla systemu Windows 10](https://support.microsoft.com/en-us/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (otwiera innej witrynie firmy Microsoft)
-- [Zasad grupy systemu Windows 10, vs MDM usługi Intune zasady](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/) (otwiera innej witrynie firmy Microsoft)
+- [Rozwiązywanie problemów z zasadami systemu iOS lub Android, które nie mają zastosowania do urządzeń](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154) (otwiera kolejną witrynę firmy Microsoft)
+- [Rozwiązywanie problemów z błędami zasad usługi Intune systemu Windows 10](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (otwiera blog)
+- [Rozwiązywanie problemów z ustawieniami niestandardowymi programu CSP dla systemu Windows 10](https://support.microsoft.com/en-us/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (otwiera kolejną witrynę firmy Microsoft)
+- [Windows 10 zasady grupy zasady zarządzania urządzeniami przenośnymi w usłudze Intune](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/) (otwiera kolejną witrynę firmy Microsoft)
 
 ## <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>Alert: zapisywanie reguł dostępu do programu Exchange nie powiodło się
 
@@ -135,7 +135,7 @@ Przydatne informacje można znaleźć w artykule [Rozwiązywanie problemów z lo
 
 Urządzenia z systemem Windows Phone nie zezwalają na obniżenie bezpieczeństwa zasad zabezpieczeń ustawionych wcześniej przy użyciu usługi MDM lub EAS. Na przykład po ustawieniu dla zasady **Minimalna liczba znaków hasła** wartości 8 nastąpiła próba jej zmniejszenia do 4. Do urządzenia są stosowane bardziej restrykcyjne zasady.
 
-Urządzenia z systemem Windows 10 nie można usunąć zasad zabezpieczeń, gdy przypisanie zasady (Zatrzymaj wdrożenie). Może być konieczne, pozostaw przypisanych zasad, a następnie zmień ustawienia zabezpieczeń na wartości domyślne.
+Urządzenia z systemem Windows 10 mogą nie usuwać zasad zabezpieczeń podczas cofania przypisywania zasad (Zatrzymaj wdrażanie). Może być konieczne pozostawienie przypisanych zasad, a następnie zmiana ustawień zabezpieczeń z powrotem na wartości domyślne.
 
 W zależności od platformy urządzenia jeśli chcesz zmienić zasady na wartość mniej bezpieczną, może być konieczne zresetowanie zasad zabezpieczeń.
 

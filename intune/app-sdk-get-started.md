@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fbaeb5efa2b23a7fad4761878b25118786609447
-ms.sourcegitcommit: a25cd79a33feb536d9b2fc11aa7d3e3972f1ca5a
+ms.openlocfilehash: 4b24387636408d2e28891aae13962c2febf9f329
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70842136"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167195"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Wprowadzenie do zestawu SDK aplikacji usługi Microsoft Intune
 
@@ -161,7 +161,7 @@ Po wykonaniu czynności niezbędnych do zintegrowania Twojej aplikacji systemu i
 
   * Jeśli opracowujesz aplikację biznesową, która nie zostanie dostarczona do sklepu, dostęp do usługi Microsoft Intune możesz uzyskiwać za pośrednictwem swojej organizacji. Możesz też zarejestrować się w celu skorzystania z miesięcznej bezpłatnej wersji próbnej usługi [Microsoft Intune](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0).
 
-  * Jeśli testujesz aplikację na urządzeniu przenośnym przy użyciu konta użytkownika końcowego, upewnij się, że do konta przypisano licencję usługi Intune w witrynie internetowej centrum administracyjnego Microsoft 365 po zalogowaniu się przy użyciu konta administratora. Zobacz [Assign Microsoft Intune license (Przypisywanie licencji usługi Microsoft Intune)](https://docs.microsoft.com/intune/licenses-assign).
+  * Jeśli testujesz aplikację na urządzeniu przenośnym przy użyciu konta użytkownika końcowego, upewnij się, że do konta przypisano licencję usługi Intune w witrynie internetowej centrum administracyjnego Microsoft 365 po zalogowaniu się przy użyciu konta administratora. Zobacz [Assign Microsoft Intune license (Przypisywanie licencji usługi Microsoft Intune)](licenses-assign.md).
 
 * **Zasady ochrony aplikacji usługi Intune**: aby przetestować wszystkie zasady ochrony aplikacji usługi Intune w swojej aplikacji, musisz znać oczekiwane zachowanie każdego ustawienia zasad. Zobacz opisy [zasad ochrony aplikacji systemu iOS](app-protection-policy-settings-ios.md) i [zasad ochrony aplikacji systemu Android](app-protection-policy-settings-android.md). Jeśli aplikacja została zintegrowana z zestawem SDK usługi Intune, ale nie ma jej jeszcze na liście aplikacji docelowych w witrynie Azure Portal, możesz wybrać ją jako docelową za pomocą zasad, wybierając opcję „+ Więcej aplikacji” i podając identyfikator pakietu (iOS) lub nazwę pakietu (Android) w polu tekstowym.
 

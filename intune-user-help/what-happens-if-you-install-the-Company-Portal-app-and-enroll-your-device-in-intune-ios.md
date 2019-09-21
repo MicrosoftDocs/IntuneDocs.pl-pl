@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/06/2017
+ms.date: 09/12/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9333cda33142b9a0a4e0995b4bafe5365f7cb69f
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: c15f2434f67ec08baf04883da6f9525b5f803823
+ms.sourcegitcommit: 8934b1abec96e18cee15a77107d37551766f7666
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67545871"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71099813"
 ---
 # <a name="what-happens-if-you-install-the-company-portal-app-and-enroll-your-ios-device-in-intune"></a>Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia z systemem iOS w usłudze Intune?
 
@@ -37,7 +37,10 @@ Po zainstalowaniu aplikacji Portal firmy i zarejestrowaniu urządzenia z systeme
 
 - Automatycznie konfigurować służbowe konto e-mail.
 
-Rejestrując urządzenie w usłudze Intune, nadajesz działowi pomocy technicznej Twojej firmy uprawnienia do zarządzania urządzeniem, aby chronić zapisane na nim informacje firmowe.
+> [!NOTE]
+> Danych zebranych przez naszą usługę nie sprzedajemy z jakiegokolwiek powodu żadnym osobom trzecim.  
+
+Rejestrując urządzenie w usłudze Intune, nadajesz działowi pomocy technicznej Twojej firmy uprawnienia do zarządzania urządzeniem, aby chronić zapisane na nim informacje firmowe.  
 
 Gdy urządzenie jest zarejestrowane, dział pomocy technicznej Twojej firmy może:
 
@@ -64,5 +67,7 @@ Gdy urządzenie jest zarejestrowane, dział pomocy technicznej Twojej firmy moż
 - Włączać lub wyłączać roaming połączeń głosowych na urządzeniu. Włączenie roamingu połączeń głosowych może wiązać się z naliczeniem opłat.
 
 - Włączać lub wyłączać automatyczną synchronizację plików w trybie roamingu na urządzeniu. Włączenie automatycznej synchronizacji plików może wiązać się z naliczeniem opłat za roaming.
+
+
 
 Jeśli masz pytania, skontaktuj się z działem pomocy technicznej Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).

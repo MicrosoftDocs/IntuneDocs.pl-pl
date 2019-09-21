@@ -18,25 +18,26 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9c25166ed9b004cc4e43e777008e33e88983912
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 2ced8f1ec37f652b7e283328141bc591b5961587
+ms.sourcegitcommit: 8934b1abec96e18cee15a77107d37551766f7666
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55843497"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71099839"
 ---
 # <a name="using-your-ios-device-with-intune-company-portal"></a>Korzystanie z urządzenia z systemem iOS z aplikacją Portal firmy usługi Intune
 Ten artykuł zawiera listę zadań i informacje specyficzne dla aplikacji Portal firmy dla systemu iOS. Ułatwia rozwiązywanie problemów z urządzeniem z systemem iOS i zarządzanie nim. Kliknij dowolny link, aby wyświetlić więcej szczegółów, procedury i zrzuty ekranu.
 
 ## <a name="supported-versions"></a>Obsługiwane wersje
 
-Aplikacja Portal firmy dla systemu iOS obsługuje obecnie system iOS 10.0 i nowsze wersje.
+Aplikacja Portal firmy dla systemu iOS obsługuje obecnie system iOS 10.0 i nowsze wersje.  
+
 
 ## <a name="enrolling-into-intune-and-installing-the-company-portal"></a>Rejestrowanie urządzenia w usłudze Intune i instalowanie aplikacji Portal firmy
 
 - [Instalowanie aplikacji Portal firmy usługi Intune i logowanie się do niej](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
 - [Rejestrowanie urządzenia z systemem iOS w usłudze Intune](enroll-your-device-in-intune-ios.md)
-- [Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia w usłudze Intune?](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-ios.md)
+- [Co się dzieje w przypadku zainstalowania aplikacji Portal firmy i zarejestrowania urządzenia w usłudze Intune?](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-ios.md)  
 
 ## <a name="things-you-can-do-when-your-device-is-enrolled-in-intune"></a>Czynności, które można wykonywać, gdy urządzenie jest zarejestrowane w usłudze Intune
 

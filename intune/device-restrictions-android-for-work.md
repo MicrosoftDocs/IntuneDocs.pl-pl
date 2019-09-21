@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/14/2019
+ms.date: 09/18/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8bd537315a09c0c7cf338ac0892fc4ae3d1dc8fc
-ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
+ms.openlocfilehash: 53a9c3e8b80f611bc9e293ba7e07c1aece0cfc58
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69550192"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163036"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem Android Enterprise w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune
 
@@ -119,7 +119,7 @@ Te ustawienia umożliwiają skonfigurowanie trybu kiosku na dedykowanych urządz
   
     1. Wybiera przycisk Wstecz do momentu wyświetlenia przycisku **Wyjdź z kiosku**. 
     2. Wybiera przycisk **Wyjdź z kiosku**, a następnie wprowadza numer PIN dla opcji **Kod wychodzenia z trybu kiosku**.
-    3. Po zakończeniu wybierz zarządzaną aplikację **ekranu głównego** . Ten krok powoduje ponowne zablokowanie urządzenia w trybie kiosku z wieloma aplikacjami.
+    3. Po zakończeniu wybierz **zarządzaną aplikację ekranu głównego** . Ten krok powoduje ponowne zablokowanie urządzenia w trybie kiosku z wieloma aplikacjami.
 
       Jeśli ustawienie **nie zostanie skonfigurowane**, Administratorzy nie mogą wstrzymać trybu kiosku. Jeśli administrator wybiera przycisk Wstecz, a następnie przycisk **Wyjdź z kiosku**, pojawia się komunikat z informacją o tym, że kod dostępu jest wymagany.
 
@@ -201,6 +201,9 @@ Te ustawienia umożliwiają skonfigurowanie trybu kiosku na dedykowanych urządz
 - **Usuwanie użytkowników**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom usuwanie użytkowników. Pozycja **Nieskonfigurowane** umożliwia użytkownikom usuwanie innych użytkowników z urządzenia.
 - **Zmiany dotyczące konta**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom modyfikowanie kont. Pozycja **Nieskonfigurowane** umożliwia użytkownikom aktualizowanie kont użytkowników na urządzeniu.
 
+  > [!NOTE]
+  > To ustawienie nie jest uznawane za urządzenia właściciel urządzenia (w pełni zarządzane). Jeśli skonfigurujesz to ustawienie, to ustawienie zostanie zignorowane i nie będzie miało wpływu.
+
 ### <a name="applications"></a>Aplikacje
 
 - **Zezwalaj na instalację z nieznanych źródeł**: wybierz pozycję **Zezwalaj**, aby umożliwić użytkownikom włączanie opcji **Nieznane źródła**. To ustawienie umożliwia instalację aplikacji z nieznanych źródeł, innych niż Sklep Google Play. Pozycja **Nieskonfigurowane** uniemożliwia użytkownikom włączanie opcji **Nieznane źródła**.
@@ -270,6 +273,10 @@ Te ustawienia umożliwiają skonfigurowanie trybu kiosku na dedykowanych urządz
 - **Wyszukiwanie kontaktów służbowych w profilu osobistym**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom wyszukiwanie kontaktów służbowych w aplikacjach w profilu osobistym. Pozycja **Niewymagane** umożliwia wyszukiwanie kontaktów służbowych w profilu osobistym.
 
 - **Aparat fotograficzny**: wybierz pozycję **Blokuj**, aby uniemożliwić dostęp do aparatu na urządzeniu w profilu służbowym. To ustawienie nie wpływa na aparat w profilu osobistym. Pozycja **Niewymagane** zezwala na dostęp do aparatu w profilu służbowym.
+
+- **Zezwalaj na widżety z aplikacji profilu służbowego**: **enable** umożliwia użytkownikom końcowym umieszczanie widżetów uwidocznionych przez aplikacje na ekranie głównym. **Nie skonfigurowano** (ustawienie domyślne) — wyłącza tę funkcję.
+
+  Na przykład program Outlook jest instalowany w profilach służbowych użytkowników. Po wybraniu opcji **Włącz**, użytkownicy mogą umieścić widżet porządku na ekranie głównym urządzenia.
 
 #### <a name="work-profile-password"></a>Hasło profilu służbowego
 

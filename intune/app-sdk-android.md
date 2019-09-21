@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 527d71f0e48627498b05af8ee497579c648d3156
-ms.sourcegitcommit: ec22a186a9cfa489a8490698e387624e480892d8
+ms.openlocfilehash: 8d6f0182fed362cba1e4c383ac6b4e083b6baa8e
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68960548"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167167"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android
 
@@ -707,7 +707,7 @@ W razie potrzeby można określić urząd.
 
 Aplikację należy zarejestrować w usłudze Azure AD i zapewnić jej dostęp do usługi zasady ochrony aplikacji:
 * Zobacz [tutaj](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications), aby uzyskać informacje o rejestracji aplikacji przy użyciu usługi Azure AD.
-* Upewnij się, że wykonano kroki udzielania uprawnień aplikacji systemu Android do usługi zasady ochrony aplikacji (APP). Postępuj zgodnie z instrukcjami w [przewodniku zawierającym wprowadzenie do SDK usługi Intune](https://docs.microsoft.com/intune/app-sdk-get-started#next-steps-after-integration) w sekcji „Udzielanie aplikacji dostępu do usługi ochrony aplikacji w usłudze Intune (opcjonalnie)”. 
+* Upewnij się, że wykonano kroki udzielania uprawnień aplikacji systemu Android do usługi zasady ochrony aplikacji (APP). Postępuj zgodnie z instrukcjami w [przewodniku zawierającym wprowadzenie do SDK usługi Intune](app-sdk-get-started.md#next-steps-after-integration) w sekcji „Udzielanie aplikacji dostępu do usługi ochrony aplikacji w usłudze Intune (opcjonalnie)”. 
 
 Zobacz też wymagania dotyczące [dostępu warunkowego](#conditional-access) poniżej.
 
@@ -723,18 +723,18 @@ W razie potrzeby można określić urząd i identyfikator NonBrokerRedirectURI.
 
 ### <a name="conditional-access"></a>Dostęp warunkowy
 
-Warunkowy dostęp (CA) jest [funkcją](https://docs.microsoft.com/azure/active-directory/develop/active-directory-conditional-access-developer) usługi Azure Active Directory, której można użyć do kontrolowania dostępu do zasobów usługi AAD. [Administratorzy usługi Intune mogą zdefiniować reguły warunkowego dostępu](https://docs.microsoft.com/intune/conditional-access) umożliwiające dostęp do zasobów tylko z urządzeń lub aplikacji, które są zarządzane przez usługę Intune. W celu zapewnienia Twojej aplikacji możliwości uzyskania dostępu do zasobów, gdy jest to konieczne, należy wykonać poniższe czynności. Jeśli Twoja aplikacja nie uzyskuje tokenów dostępu usługi AAD lub uzyskuje dostęp tylko do tych zasobów, które nie mogą być chronione przez warunkowy dostęp, możesz pominąć te kroki.
+Warunkowy dostęp (CA) jest [funkcją](https://docs.microsoft.com/azure/active-directory/develop/active-directory-conditional-access-developer) usługi Azure Active Directory, której można użyć do kontrolowania dostępu do zasobów usługi AAD. [Administratorzy usługi Intune mogą zdefiniować reguły warunkowego dostępu](conditional-access.md) umożliwiające dostęp do zasobów tylko z urządzeń lub aplikacji, które są zarządzane przez usługę Intune. W celu zapewnienia Twojej aplikacji możliwości uzyskania dostępu do zasobów, gdy jest to konieczne, należy wykonać poniższe czynności. Jeśli Twoja aplikacja nie uzyskuje tokenów dostępu usługi AAD lub uzyskuje dostęp tylko do tych zasobów, które nie mogą być chronione przez warunkowy dostęp, możesz pominąć te kroki.
 
 1. Postępuj zgodnie z [wytycznymi integracji biblioteki ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-android#how-to-use-this-library). 
    Zobacz szczególnie krok 11 z opisem użycia brokera.
 2. [Zarejestruj swoją aplikację w usłudze Azure Active Directory] (https://docs.microsoft.com/azure/active-directory/active-directory-app-registration). 
    Identyfikator URI przekierowania znajduje się powyżej we wskazówkach dotyczących integracji biblioteki ADAL.
 3. Ustaw parametry metadanych manifestu na [Typowe konfiguracje biblioteki ADAL](#common-adal-configurations), element 2 powyżej.
-4. Sprawdź, czy wszystko jest poprawnie skonfigurowane, włączając [warunkowy dostęp oparty na urządzeniach](https://docs.microsoft.com/intune/conditional-access-intune-common-ways-use) z witryny [Azure Portal](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExchangeConnectorMenu/aad/connectorType/2) i potwierdzając
+4. Sprawdź, czy wszystko jest poprawnie skonfigurowane, włączając [warunkowy dostęp oparty na urządzeniach](conditional-access-intune-common-ways-use.md) z witryny [Azure Portal](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExchangeConnectorMenu/aad/connectorType/2) i potwierdzając
     - To logowanie do Twojej aplikacji monituje o zainstalowanie i rejestrację w Portalu firmy usługi Intune
     - Po rejestracji logowanie do Twojej aplikacji zakończy się pomyślnie.
-5. Gdy Twoja aplikacja wyśle integrację zestawu SDK aplikacji usługi Intune, napisz na adres msintuneappsdk@microsoft.com, aby dodać aplikację do listy zatwierdzonych aplikacji dla [dostępu warunkowego na podstawie aplikacji](https://docs.microsoft.com/intune/conditional-access-intune-common-ways-use#app-based-conditional-access).
-6. Po dodaniu aplikacji do listy zatwierdzonych przeprowadź weryfikację przez [skonfigurowanie dostępu warunkowego opartego na aplikacji](https://docs.microsoft.com/intune/app-based-conditional-access-intune-create) i sprawdzenie, czy można się pomyślnie zalogować do Twojej aplikacji.
+5. Gdy Twoja aplikacja wyśle integrację zestawu SDK aplikacji usługi Intune, napisz na adres msintuneappsdk@microsoft.com, aby dodać aplikację do listy zatwierdzonych aplikacji dla [dostępu warunkowego na podstawie aplikacji](conditional-access-intune-common-ways-use.md#app-based-conditional-access).
+6. Po dodaniu aplikacji do listy zatwierdzonych przeprowadź weryfikację przez [skonfigurowanie dostępu warunkowego opartego na aplikacji](app-based-conditional-access-intune-create.md) i sprawdzenie, czy można się pomyślnie zalogować do Twojej aplikacji.
 
 ## <a name="app-protection-policy-without-device-enrollment"></a>Zasady ochrony aplikacji bez rejestracji urządzeń
 
@@ -1639,7 +1639,7 @@ Domyślne selektywne czyszczenie danych spowoduje poprawne zamknięcie aplikacji
 
 
 ## <a name="enabling-mam-targeted-configuration-for-your-android-applications-optional"></a>Włączanie docelowej konfiguracji funkcji MAM dla aplikacji systemu Android (opcjonalnie)
-Pary klucz-wartość specyficzne dla aplikacji można skonfigurować w konsoli usługi Intune na potrzeby aplikacji [MAM-WE](https://docs.microsoft.com/intune/app-configuration-policies-managed-app) i [aplikacji profilu służbowego systemu Android](https://docs.microsoft.com/intune/app-configuration-policies-use-android).
+Pary klucz-wartość specyficzne dla aplikacji można skonfigurować w konsoli usługi Intune na potrzeby aplikacji [MAM-WE](app-configuration-policies-managed-app.md) i [aplikacji profilu służbowego systemu Android](app-configuration-policies-use-android.md).
 Te pary klucz-wartość nie są w ogóle interpretowane przez usługę Intune, ale są przekazywane do aplikacji. W tym celu aplikacje, które mają otrzymywać taką konfigurację, mogą użyć klas `MAMAppConfigManager` i `MAMAppConfig`. Jeśli wiele zasad jest przeznaczonych dla tej samej aplikacji, może istnieć wiele powodujących konflikt wartości dostępnych dla tego samego klucza.
 
 > [!NOTE] 
@@ -1673,7 +1673,7 @@ Konfiguracja aplikacji wprowadza nowy typ powiadomienia:
 ### <a name="further-reading"></a>Dalsze informacje
 Aby uzyskać więcej informacji o możliwościach interfejsu API programu Graph, zobacz [Dokumentacja interfejsu API programu Graph](https://developer.microsoft.com/graph/docs/concepts/overview). <br>
 
-Więcej informacji na temat tworzenia zasad docelowej konfiguracji aplikacji funkcji MAM w systemie Android można znaleźć w sekcji poświęconej docelowej konfiguracji aplikacji funkcji MAM znajdującej się w artykule [How to use Microsoft Intune app configuration policies for Android](https://docs.microsoft.com/intune/app-configuration-policies-use-android) (Jak używać zasad konfiguracji aplikacji usługi Microsoft Intune dla systemu Android).
+Więcej informacji na temat tworzenia zasad docelowej konfiguracji aplikacji funkcji MAM w systemie Android można znaleźć w sekcji poświęconej docelowej konfiguracji aplikacji funkcji MAM znajdującej się w artykule [How to use Microsoft Intune app configuration policies for Android](app-configuration-policies-use-android.md) (Jak używać zasad konfiguracji aplikacji usługi Microsoft Intune dla systemu Android).
 
 ## <a name="style-customization-optional"></a>Dostosowywanie stylów (opcjonalne)
 

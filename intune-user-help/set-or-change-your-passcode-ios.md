@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/14/2017
+ms.date: 09/18/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,20 +16,21 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 346e6219c10cc8b90d3bf83170adffa677c6c484
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: dddcb16a0067ed6e278ff3f9032695e075a0fb6a
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55849010"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163297"
 ---
 # <a name="set-or-change-your-passcode"></a>Ustawianie lub zmienianie kodu dostępu
 
-Jeśli urządzenie z systemem iOS nie jest zgodne z zasadami kodów dostępu określonymi przez dział pomocy technicznej Twojej firmy, wyświetlany jest komunikat zwięźle opisujący problem i wyjaśniający, co należy zrobić, aby kod dostępu spełniał wymagania.
+Utwórz nowy kod dostępu lub Zmień istniejący w taki sposób, aby spełniał wymagania organizacji. Kod dostępu uniemożliwi nieautoryzowanym osobom odblokowanie i użycie urządzenia. 
 
-Dział pomocy technicznej Twojej firmy może ustawić więcej niż jedno wymaganie dotyczące kodów dostępu. Na przykład może być wymagana określona liczba znaków lub kombinacja cyfr, liter i znaków w kodzie dostępu. Może być ustawione więcej niż jedno wymaganie, dlatego w tych instrukcjach można tylko objaśnić, jak ustawić lub zmienić kod dostępu. Nie objaśniono w nich każdej możliwej kombinacji wymagań. Te kody dostępu są używane na przykład w celu uzyskania dostępu do urządzenia z ekranu blokady.
+Twoja organizacja może ustawić więcej niż jedno wymaganie dotyczące kodów dostępu. Aby uzyskać listę typowych wymagań dotyczących haseł, zobacz [wymagania dotyczące hasła urządzenia dla zarejestrowanych urządzeń](password-does-not-meet-it-administrator-requirements.md).  
 
-Jeśli masz problem z ustawieniem kodu dostępu spełniającego wymagania dotyczące kodów dostępu, skontaktuj się z działem pomocy technicznej Twojej firmy w celu uzyskania pomocy.
+Jeśli masz problemy z tworzeniem lub zmianą kodu dostępu, skontaktuj się z osobą odpowiedzialną za pomoc techniczną IT.  
+
 
 ## <a name="set-your-passcode"></a>Ustawianie kodu dostępu
 

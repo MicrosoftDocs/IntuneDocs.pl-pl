@@ -18,23 +18,25 @@ ms.reviewer: scottduf
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 167d091f212536ed94e3f4ce0c103649e4a2e537
-ms.sourcegitcommit: 9c06d8071b9affeda32e367bfe85d89bc524ed0b
+ms.openlocfilehash: c518e0eeb18f51fa17d15a72735e319aef1d647d
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413824"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167475"
 ---
 # <a name="enable-code-integrity"></a>Włączanie integralności kodu
 
-Twoja organizacja może wymagać na komputerze można włączyć funkcję ochrony przed zagrożeniami *integralność kodu*. Integralność kodu sprawdza sterowniki i pliki systemowe na oznaki uszkodzenia lub złośliwego oprogramowania na urządzeniu. Integralność kodu do pracy na urządzeniu, inna funkcja zabezpieczeń o nazwie [ *Bezpieczny rozruch* ](https://docs.microsoft.com/windows/security/information-protection/secure-the-windows-10-boot-process#secure-boot) musi być także włączona. 
+W organizacji może być wymagane włączenie komputera z funkcją ochrony przed zagrożeniami o nazwie *integralność kodu*. Integralność kodu sprawdza sterowniki i pliki systemowe na urządzeniu pod kątem oznak uszkodzenia lub złośliwego oprogramowania. Aby integralność kodu działała na urządzeniu, należy również włączyć inną funkcję zabezpieczeń o nazwie [*bezpieczny rozruch*](https://docs.microsoft.com/windows/security/information-protection/secure-the-windows-10-boot-process#secure-boot) .
 
-Jeśli komputer nie jest zgodne, ponieważ integralność kodu jest wyłączony, należy skontaktować się ze swojej organizacji IT zespołu pomocy technicznej. Pomogą Ci włączyć bezpieczny rozruch, które wyzwalają integralności kodu przy następnym uruchomieniu urządzenia. 
+Jeśli komputer nie jest zgodny, ponieważ integralność kodu jest wyłączona, należy skontaktować się z zespołem pomocy technicznej IT w Twojej organizacji. Pomogą Ci włączyć bezpieczny rozruch, co spowoduje Wyzwól integralność kodu przy następnym uruchomieniu urządzenia.
 
-Przedstaw się jako użytkownik zaawansowany urządzenia i chcesz wypróbować kroki na własną rękę, zobacz [ponownie włączyć bezpieczny rozruch](https://docs.microsoft.com/windows-hardware/manufacture/desktop/disabling-secure-boot#re-enable-secure-boot).
+Jeśli określisz siebie jako zaawansowanego użytkownika urządzenia i chcesz wypróbować kroki samodzielnie, zobacz [Ponowne uruchamianie bezpiecznego rozruchu](https://docs.microsoft.com/windows-hardware/manufacture/desktop/disabling-secure-boot#re-enable-secure-boot).
 
-## <a name="additional-resources-for-it-administrators"></a>Dodatkowe zasoby dla administratorów IT  
-Jeśli jesteś administratorem usługi Intune i chcesz, aby dowiedzieć się więcej na temat ustawień zgodności kondycji urządzeń w usłudze Intune, zobacz [Dodawanie zasad zgodności dla urządzeń z systemem Windows 10 w usłudze Intune](https://docs.microsoft.com/intune/compliance-policy-create-windows). Aby uzyskać szczegółowy widok zgodności akcje można wykonać w usłudze Intune, zobacz [HealthAttestation dostawcy usług Kryptograficznych](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp#step-8-take-appropriate-policy-action-based-on-evaluation-results).  
+## <a name="additional-resources-for-it-administrators"></a>Dodatkowe zasoby dla administratorów IT
 
-## <a name="next-steps"></a>Następne kroki  
+Jeśli jesteś administratorem usługi Intune i chcesz dowiedzieć się więcej o ustawieniach zgodności z kondycją urządzenia usługi Intune, zobacz [Dodawanie zasad zgodności urządzeń dla urządzeń z systemem Windows 10 w usłudze Intune](https://docs.microsoft.com/intune/compliance-policy-create-windows.md). Szczegółowe zapoznaj się z akcjami zgodności, które można wykonać w usłudze Intune, zobacz [HEALTHATTESTATION CSP](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp#step-8-take-appropriate-policy-action-based-on-evaluation-results).  
+
+## <a name="next-steps"></a>Następne kroki
+
 Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).

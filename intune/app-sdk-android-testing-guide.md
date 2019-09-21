@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa6b07c77b0d92ceb7bdc960d8c2fd754c277499
-ms.sourcegitcommit: 63b55e81122e5c15893302b109ae137c30855b55
+ms.openlocfilehash: 91b7fc7414c3a6d6517cd4b704cb5e99ddcf96d0
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67713231"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167187"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developers-testing-guide"></a>Przewodnik testowania dla deweloperów po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android
 
@@ -30,20 +30,20 @@ Przewodnik testowania po zestawie SDK aplikacji usługi Microsoft Intune dla sys
 ## <a name="prerequisite-test-accounts"></a>Wymagane wstępnie konta do testowania
 Nowe konta można utworzyć z wstępnie wygenerowanymi danymi i bez nich. Aby utworzyć nowe konto:
 1. Przejdź do witryny [Microsoft Demos](https://demos.microsoft.com/environments/create/tenant). 
-2. [Skonfiguruj usługę Intune](https://docs.microsoft.com/intune/setup-steps), aby włączyć zarządzanie urządzeniami mobilnymi (MDM, Mobile Device Management).
-3. [Utwórz użytkowników](https://docs.microsoft.com/intune/users-add).
-4. [Tworzenie grup](https://docs.microsoft.com/intune/groups-add).
-5. Odpowiednio [przypisz licencje](https://docs.microsoft.com/intune/licenses-assign) na potrzeby testów.
+2. [Skonfiguruj usługę Intune](setup-steps.md), aby włączyć zarządzanie urządzeniami mobilnymi (MDM, Mobile Device Management).
+3. [Utwórz użytkowników](users-add.md).
+4. [Tworzenie grup](groups-add.md).
+5. Odpowiednio [przypisz licencje](licenses-assign.md) na potrzeby testów.
 
 
 ## <a name="azure-portal-policy-configuration"></a>Konfiguracja zasad w witrynie Azure Portal
-[Utwórz i przypisz zasady ochrony aplikacji](https://docs.microsoft.com/intune/app-protection-policies) w [bloku usługi Intune w witrynie Azure Portal](https://portal.azure.com/?feature.customportal=false#blade/Microsoft_Intune_Apps/MainMenu/14/selectedMenuItem/Overview). [Zasady konfiguracji aplikacji](https://docs.microsoft.com/intune/app-configuration-policies-overview) również można utworzyć i przypisać w bloku usługi Intune.
+[Utwórz i przypisz zasady ochrony aplikacji](app-protection-policies.md) w [bloku usługi Intune w witrynie Azure Portal](https://portal.azure.com/?feature.customportal=false#blade/Microsoft_Intune_Apps/MainMenu/14/selectedMenuItem/Overview). [Zasady konfiguracji aplikacji](app-configuration-policies-overview.md) również można utworzyć i przypisać w bloku usługi Intune.
 
 > [!NOTE]
 > Jeśli aplikacji nie ma na liście w witrynie Azure Portal, możesz wybrać ją jako docelową za pomocą zasad, wybierając opcję **więcej aplikacji** i podając nazwę pakietu w polu tekstowym.
 
 > [!IMPORTANT]
-> Aby zasady konfiguracji aplikacji były stosowane, rejestrujący użytkownik musi być objęty [zasadami ochrony aplikacji usługi Intune](https://docs.microsoft.com/intune/app-protection-policy).
+> Aby zasady konfiguracji aplikacji były stosowane, rejestrujący użytkownik musi być objęty [zasadami ochrony aplikacji usługi Intune](app-protection-policy.md).
 
 ## <a name="test-cases"></a>Przypadki testowe
 
@@ -103,7 +103,7 @@ Kopiami zapasowymi aplikacji możesz sterować w następujący sposób:
 ### <a name="unenrollment"></a>Wyrejestrowywanie
 W następujący sposób możesz zdalnie wyczyścić w aplikacjach zarządzanych firmowe wiadomości e-mail i dokumenty, a wyłączenie administrowania spowoduje odszyfrowanie danych osobowych:
 
-1. W witrynie Azure Portal [wydaj polecenie wyczyszczenia danych](https://docs.microsoft.com/intune/apps-selective-wipe).
+1. W witrynie Azure Portal [wydaj polecenie wyczyszczenia danych](apps-selective-wipe.md).
 2. Jeśli dla aplikacji nie zarejestrowano żadnych procedur obsługi czyszczenia, potwierdź następujące warunki:
     - Przeprowadzane jest pełne czyszczenie aplikacji.
 3. Jeśli dla aplikacji nie zarejestrowano procedury `WIPE_USER_DATA` ani `WIPE_USER_AUXILARY_DATA`, potwierdź następujące warunki:
@@ -123,7 +123,7 @@ Należy przeanalizować co najmniej poniższe scenariusze związane z obsługą 
 ### <a name="app-configuration-optional"></a>Konfiguracja aplikacji (opcjonalna)
 Działanie aplikacji zarządzanych możesz skonfigurować w następujący sposób:
 
-1. Jeśli aplikacja używa jakichkolwiek ustawień konfiguracji aplikacji, należy sprawdzić, czy poprawnie obsługuje ona wszystkie wartości, które (jako administrator) możesz ustawić. [Zasady konfiguracji aplikacji](https://docs.microsoft.com/intune/app-configuration-policies-overview) można utworzyć i przypisać za pomocą usługi Intune.
+1. Jeśli aplikacja używa jakichkolwiek ustawień konfiguracji aplikacji, należy sprawdzić, czy poprawnie obsługuje ona wszystkie wartości, które (jako administrator) możesz ustawić. [Zasady konfiguracji aplikacji](app-configuration-policies-overview.md) można utworzyć i przypisać za pomocą usługi Intune.
 
 ## <a name="next-steps"></a>Następne kroki
 

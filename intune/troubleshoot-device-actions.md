@@ -12,17 +12,17 @@ ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
 ROBOTS: ''
-ms.reviewer: ''
+ms.reviewer: coferro
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 159e236a079adcd55ba73e8fea6f786c09d08bbd
-ms.sourcegitcommit: 73fbecf7cee4fdfc37d3c30ea2007d2a9a6d2d12
+ms.openlocfilehash: 8324f53d787bd307ac3befd0ccee52cb8153b611
+ms.sourcegitcommit: d2989b9992d10d133573d9bc31479659fb7e242c
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68772363"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71080016"
 ---
 # <a name="troubleshoot-device-actions-in-intune"></a>Rozwiązywanie problemów z akcjami urządzenia w usłudze Intune
 
@@ -53,7 +53,7 @@ Nie. Nie musisz wprowadzać kresek.
 ## <a name="remove-devices-action"></a>Akcja usuwania urządzeń
 
 ### <a name="how-do-i-tell-who-started-a-retirewipe"></a>Jak mogę powiedzieć, kto rozpoczął wycofanie/wymazanie?
-Przejdź do pozycji **urządzenia** >  usługi **Intune** > **Akcje urządzenia** > Sprawdź zainicjowane **przez** kolumnę.
+Przejdź do**pozycji urządzenia usługi** >  **Intune** > **Akcje urządzenia** > Sprawdź **zainicjowane przez** kolumnę.
 Jeśli nie widzisz wpisu, najprawdopodobniej osoba, która zainicjuje akcję, jest użytkownikiem urządzenia. Prawdopodobnie używają aplikacji Portal firmy lub portal.manage.microsoft.com.
 
 ### <a name="why-wasnt-my-application-uninstalled-after-using-retire"></a>Dlaczego moja aplikacja nie została odinstalowana po użyciu wycofania?
@@ -68,7 +68,7 @@ Jest to oczekiwane zachowanie. Firma Google nie pozwala na Resetowanie ustawień
 Ponieważ wycofanie urządzenia nie odwołuje tokenów dostępu. Aby wyeliminować ten warunek, można użyć zasad dostępu warunkowego.
 
 ### <a name="how-can-i-monitor-a-retirewipe-action-after-it-was-issued"></a>Jak mogę monitorować akcję wycofywania/czyszczenia po wydaniu?
-Przejdź do pozycji **urządzenia** >  usługi **Intune** >  **Akcje urządzenia**.
+Przejdź do**pozycji urządzenia usługi** >  **Intune** > **Akcje urządzenia**.
 
 ### <a name="why-do-wipes-sometimes-show-as-pending-indefinitely"></a>Dlaczego wymazywania są czasami wyświetlane jako oczekujące na czas nieokreślony?
 Urządzenia nie zawsze raportują swój stan z powrotem do usługi Intune przed rozpoczęciem resetowania. Dlatego Akcja jest wyświetlana jako oczekująca. Po potwierdzeniu, że akcja zakończyła się pomyślnie, Usuń urządzenie z usługi.

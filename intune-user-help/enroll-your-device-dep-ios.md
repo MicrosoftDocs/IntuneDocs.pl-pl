@@ -18,12 +18,12 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c592b558ace0a2a39059de9f64531f1e078c539d
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 40fe8f1f54779d3ab0a49951ad13c0cb2d0f0ff5
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55847764"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71166799"
 ---
 # <a name="enroll-your-organization-provided-ios-device-in-management"></a>Rejestrowanie udostępnionego przez organizację urządzenia z systemem iOS na potrzeby zarządzania
 
@@ -34,15 +34,16 @@ Urządzenia z systemem iOS, które są dostarczane przez pracodawcę lub szkoł�
 Aby rozpocząć konfigurowanie, włącz zasilanie urządzenia i zaloguj się przy użyciu poświadczeń służbowych. W pozostałej części tego artykułu opisano kroki i ekrany, które zobaczysz w miarę poruszania się po Asystencie ustawień. 
 
 ## <a name="what-is-apple-dep"></a>Co to jest program Apple DEP?
-Twoja organizacja mogła zakupić urządzenia za pośrednictwem programu zwanego *Apple Device Enrollment Program* (DEP). Program Apple DEP umożliwia organizacjom kupowanie wielu urządzeń z systemem iOS lub macOS. Organizacje mogą następnie konfigurować te urządzenia i zarządzać nimi przy użyciu preferowanego dostawcy zarządzania urządzeniami przenośnymi, takimi jak usługa Intune. Jeśli jesteś administratorem i chcesz dowiedzieć się więcej o programie Apple DEP, zobacz [Automatyczne rejestrowanie urządzeń z systemem iOS w ramach programu Device Enrollment Program firmy Apple](https://docs.microsoft.com/intune/device-enrollment-program-enroll-ios).  
 
-## <a name="set-up-your-ios-device"></a>Konfigurowanie urządzenia z systemem iOS  
+Twoja organizacja mogła zakupić urządzenia za pośrednictwem programu zwanego *Apple Device Enrollment Program* (DEP). Program Apple DEP umożliwia organizacjom kupowanie wielu urządzeń z systemem iOS lub macOS. Organizacje mogą następnie konfigurować te urządzenia i zarządzać nimi przy użyciu preferowanego dostawcy zarządzania urządzeniami przenośnymi, takimi jak usługa Intune. Jeśli jesteś administratorem i chcesz dowiedzieć się więcej o programie Apple DEP, zobacz [Automatyczne rejestrowanie urządzeń z systemem iOS w ramach programu Device Enrollment Program firmy Apple](https://docs.microsoft.com/intune/device-enrollment-program-enroll-ios.md).  
+
+## <a name="set-up-your-ios-device"></a>Konfigurowanie urządzenia z systemem iOS
+
 Jeśli używasz własnego urządzenia z systemem iOS, a nie urządzenia dostarczonego przez organizację, wykonaj kroki dotyczące [urządzeń osobistych i przyniesionych przez siebie](enroll-your-device-in-intune-ios.md).  
 
-1. Włącz urządzenie z systemem iOS. 
+1. Włącz urządzenie z systemem iOS.
 2. Po wybraniu **języka** podłącz urządzenie do sieci Wi-Fi.
-3. Na ekranie **Konfiguruj urządzenie z systemem iOS** wybierz opcję, z której chcesz skorzystać: 
- 
+3. Na ekranie **Konfiguruj urządzenie z systemem iOS** wybierz opcję, z której chcesz skorzystać:
    - **Konfiguruj jako nowe urządzenie**
    - **Przywróć z kopii zapasowej w usłudze iCloud**
    - **Przywróć z kopii zapasowej w usłudze iTunes**
@@ -53,7 +54,7 @@ Jeśli używasz własnego urządzenia z systemem iOS, a nie urządzenia dostarcz
  
    **Konfiguracja jest dostarczana przez: zespół ds. iOS [Twoja firma] [Adres]**
 
-5. Zaloguj się przy użyciu swojego identyfikatora Apple ID. Zalogowanie umożliwia zainstalowanie aplikacji Portal firmy i zainstalowanie profilu zarządzania, który umożliwi uzyskanie dostępu do zasobów firmy, takich jak poczta e-mail i aplikacje. 
+5. Zaloguj się przy użyciu swojego identyfikatora Apple ID. Zalogowanie umożliwia zainstalowanie aplikacji Portal firmy i zainstalowanie profilu zarządzania, który umożliwi uzyskanie dostępu do zasobów firmy, takich jak poczta e-mail i aplikacje.
 6. Zaakceptuj **warunki i postanowienia**, a następnie zdecyduj, czy chcesz wysłać firmie Apple informacje diagnostyczne.
 7. Po zakończeniu rejestracji urządzenie może wyświetlać monity o podjęcie dalszych działań. Niektóre z tych kroków mogą wymagać wprowadzenia hasła dostępu do poczty e-mail lub skonfigurowania kodu dostępu.
 

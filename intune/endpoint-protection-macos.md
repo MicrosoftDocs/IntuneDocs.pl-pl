@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/02/2019
+ms.date: 09/19/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97674627ac1894aa7fcf3f6a6550677b89e1a150
-ms.sourcegitcommit: 3f0cc80c5dbb4d04519c5aa98eae8426dad8cb30
+ms.openlocfilehash: 80b904893f118bac1f4d0d79da0cd10498b9f2ed
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70158022"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71162864"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>Ustawienia programu Endpoint Protection w usłudze Intune dla systemu MacOS  
 
@@ -105,13 +105,6 @@ Aby uzyskać więcej informacji na temat ustawień Apple FileVault, zobacz [FDEF
     - **Wyłącz** — Wyłącz monit przy wylogowaniu.
 
     **Domyślnie**: Nie skonfigurowano  
-
-     > [!IMPORTANT]  
-     > Istnieje znany problem, gdy dla ustawienia **Wyłącz monit przy wylogowywaniu** zostanie ustawiona wartość *Wyłącz*. Gdy zostanie ustawiona wartość *Wyłącz*, dla ustawienia **Liczba dozwolonych pominięć** należy ustawić wartość inną niż *Nieskonfigurowane*. Jeśli zostanie ustawiona wartość *Nieskonfigurowane*, profil nie będzie działać na urządzeniu. W tym scenariuszu urządzenie raportuje **Podsumowanie stanu profilu** jako **Błąd** bez dalszych szczegółów.
-     > 
-     > Gdy ustawienie **Wyłącz monit przy wylogowywaniu** ma wartość *Nieskonfigurowane*, dla ustawienia **Liczba dozwolonych pominięć** można ustawić opcję *Nieskonfigurowane* lub może ono mieć wartość.  
-     > 
-     > Ten problem zostanie rozwiązany w przyszłej aktualizacji. 
 
   - **Liczba dozwolonych przypadków obejścia**  
   Ustaw, ile razy użytkownik może zignorować komunikaty o włączeniu FileVault przed FileVault będzie wymagane, aby użytkownik mógł się zalogować.  

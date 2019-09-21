@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d63ecdb23b107d844c37d7a805247092116618e1
-ms.sourcegitcommit: b30a2ba2b67aa2fc3421f0b2f6c5f361a0de612a
+ms.openlocfilehash: 0ec52069c4c53c464cfe5a1e17718ba6725fd0b5
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69022734"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167429"
 ---
 # <a name="device-encrypted-but-apps-say-otherwise"></a>Urządzenie zaszyfrowane, ale aplikacje mówią inaczej
 
@@ -48,16 +48,17 @@ Ta sekcja dotyczy tylko aplikacji Portal firmy. Jeśli Twoje urządzenie umożli
 
 ## <a name="specific-manufacturer-issues"></a>Problemy z urządzeniami niektórych producentów
 
-Niektóre urządzenia z systemem Android w wersji 7.0 lub nowszej szyfrują dane metodami, które są niezgodne z pewnymi standardami platformy systemu Android. Te metody szyfrowania powodują, że informacje o urządzeniu są zagrożone. W związku z tym urządzenia te nie są obsługiwane. 
+Niektóre urządzenia z systemem Android w wersji 7.0 lub nowszej szyfrują dane metodami, które są niezgodne z pewnymi standardami platformy systemu Android. Te metody szyfrowania powodują, że informacje o urządzeniu są zagrożone. W związku z tym urządzenia te nie są obsługiwane.
 
-Aby zapoznać się z niekompletną listą obsługiwanych urządzeń z systemem Android, zobacz artykuł [obsługiwane systemy operacyjne i przeglądarki w usłudze Intune](https://docs.microsoft.com/intune/supported-devices-browsers#supported-samsung-knox-standard-devices). Jeśli urządzenie nie jest wyświetlane na liście, zapoznaj się z producentem urządzenia lub skontaktuj się z pomocą techniczną. 
+Aby zapoznać się z niekompletną listą obsługiwanych urządzeń z systemem Android, zobacz artykuł [obsługiwane systemy operacyjne i przeglądarki w usłudze Intune](https://docs.microsoft.com/intune/supported-devices-browsers.md#supported-samsung-knox-standard-devices). Jeśli urządzenie nie jest wyświetlane na liście, zapoznaj się z producentem urządzenia lub skontaktuj się z pomocą techniczną.
 
 > [!Note]
-> Firma Microsoft współpracuje z producentami w celu rozwiązania problemów znalezionych podczas testowania lub zgłoszonych nam przez użytkowników. Gdy pojawiają się nowe informacje, aktualizujemy ten artykuł. 
+> Firma Microsoft współpracuje z producentami w celu rozwiązania problemów znalezionych podczas testowania lub zgłoszonych nam przez użytkowników. Gdy pojawiają się nowe informacje, aktualizujemy ten artykuł.
 
-## <a name="update-devices"></a>Aktualizowanie urządzeń   
+## <a name="update-devices"></a>Aktualizowanie urządzeń
 
 Jeśli urządzenie nie zostało zaktualizowane do najnowszej wersji systemu Android, przejdź do aplikacji **Ustawienia** urządzenia i wybierz pozycję **Aktualizuj**.  
 
-## <a name="next-steps"></a>Następne kroki   
+## <a name="next-steps"></a>Następne kroki
+
 Nadal potrzebujesz pomocy? Skontaktuj się z działem pomocy technicznej Twojej firmy (sprawdź [witrynę internetową Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980), aby uzyskać informacje kontaktowe) lub napisz do <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with enrolling my Android device&body=Describe the issue you're experiencing here.">zespołu ds. systemu Android w firmie Microsoft</a>.  

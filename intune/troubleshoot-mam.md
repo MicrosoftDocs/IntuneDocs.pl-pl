@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1cf8f7753a92ad45a68f976359560ef6da2d1cec
-ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
+ms.openlocfilehash: a5e1ea8a0f8ea054b2eb75e1c98e60f184b0a45c
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67648721"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71166758"
 ---
 # <a name="troubleshoot-mobile-application-management"></a>Rozwiązywanie problemów związanych z zarządzaniem aplikacjami mobilnymi
 
@@ -90,7 +90,7 @@ Okno dialogowe błędu lub komunikat o błędzie | Przyczyna | Korekty |
 **Niezgodne urządzenie**: nie można użyć tej aplikacji, ponieważ używasz urządzenia z usuniętymi ograniczeniami. Skontaktuj się z administratorem IT, aby uzyskać pomoc. | Usługa Intune wykryła, że użytkownik korzysta z urządzenia ze zdjętymi zabezpieczeniami systemu. | Przywróć ustawienia fabryczne urządzenia. Postępuj zgodnie z [tymi instrukcjami](https://support.apple.com/HT201274) z witryny pomocy technicznej firmy Apple.
 **Wymagane jest połączenie z Internetem**: Aby zweryfikować, czy możesz używać tej aplikacji, musisz mieć połączenie z Internetem. | Urządzenie nie jest połączone z Internetem. | Połącz urządzenie z siecią Wi-Fi lub siecią transmisji danych.
 **Nieznany błąd**: Spróbuj ponownie uruchomić tę aplikację. Jeśli ten problem będzie nadal występować, skontaktuj się z administratorem działu IT w celu uzyskania pomocy. | Wystąpił nieznany błąd. | Poczekaj chwilę i spróbuj ponownie. Jeśli błąd będzie nadal występować, utwórz [bilet pomocy technicznej](get-support.md#create-an-online-support-ticket) w usłudze Intune.
-**Uzyskiwanie dostępu do danych organizacji**: Podane konto służbowe nie ma dostępu do tej aplikacji. Może być konieczne zalogowanie się przy użyciu innego konta. Skontaktuj się z administratorem IT, aby uzyskać pomoc. | Usługa Intune wykryła, że użytkownik próbował zalogować się przy użyciu drugiego konta służbowego, które różni się od konta zarejestrowanego w oprogramowaniu do zarządzania aplikacjami mobilnymi (MAM) dla tego urządzenia. Oprogramowanie MAM może zarządzać jednocześnie tylko jednym kontem służbowym na danym urządzeniu. | Zaloguj się przy użyciu konta, którego nazwa użytkownika jest wstępnie wypełniona na ekranie logowania. Może być konieczne [skonfigurowanie ustawienia nazwy UPN użytkownika dla usługi Intune](https://docs.microsoft.com/intune/data-transfer-between-apps-manage-ios#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). <br> <br> Ewentualnie zaloguj się przy użyciu nowego konta służbowego i usuń istniejące konto zarejestrowane w oprogramowaniu MAM.
+**Uzyskiwanie dostępu do danych organizacji**: Podane konto służbowe nie ma dostępu do tej aplikacji. Może być konieczne zalogowanie się przy użyciu innego konta. Skontaktuj się z administratorem IT, aby uzyskać pomoc. | Usługa Intune wykryła, że użytkownik próbował zalogować się przy użyciu drugiego konta służbowego, które różni się od konta zarejestrowanego w oprogramowaniu do zarządzania aplikacjami mobilnymi (MAM) dla tego urządzenia. Oprogramowanie MAM może zarządzać jednocześnie tylko jednym kontem służbowym na danym urządzeniu. | Zaloguj się przy użyciu konta, którego nazwa użytkownika jest wstępnie wypełniona na ekranie logowania. Może być konieczne [skonfigurowanie ustawienia nazwy UPN użytkownika dla usługi Intune](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). <br> <br> Ewentualnie zaloguj się przy użyciu nowego konta służbowego i usuń istniejące konto zarejestrowane w oprogramowaniu MAM.
 **Problem z połączeniem**: Wystąpił nieoczekiwany problem z połączeniem. Sprawdź połączenie i spróbuj ponownie.  |  Nieoczekiwany błąd. | Poczekaj chwilę i spróbuj ponownie. Jeśli błąd będzie nadal występować, utwórz [bilet pomocy technicznej](get-support.md#create-an-online-support-ticket) w usłudze Intune.
 **Alert**: Nie można już używać tej aplikacji. Aby uzyskać więcej informacji, skontaktuj się z administratorem działu IT. | Nie można zweryfikować certyfikatu aplikacji. | Upewnij się, że używana wersja aplikacji jest aktualna. <br><br> Zainstaluj aplikację ponownie.
 **Błąd**: Ta aplikacja napotkała problem i musi zostać zamknięta. Jeśli ten błąd będzie się powtarzać, skontaktuj się z administratorem działu IT. | Nie można odczytać numeru PIN aplikacji MAM z pęku kluczy systemu Apple iOS. | Uruchom urządzenie ponownie. Upewnij się, że używana wersja aplikacji jest aktualna. <br><br> Zainstaluj aplikację ponownie.

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 052190185159dfdee4adee94d4c43c72ce6f41d4
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: ac74cc547d13e92b87a8e148845ff1bc7be8efe4
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67046321"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71166989"
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Dokąd została przeniesiona funkcja usługi Intune na platformie Azure?
 Przenosząc usługę Intune do witryny Azure Portal, skorzystaliśmy z okazji, aby uporządkować niektóre zadania w bardziej logiczny sposób. Jednak każde ulepszenie wymaga nauczenia się nowego porządku. Ten przewodnik jest przeznaczony dla osób, które doskonale znają usługę Intune w portalu klasycznym i zastanawiają się, jak zrobić coś w usłudze Intune w witrynie Azure Portal. Jeśli w tym artykule nie została uwzględniona funkcja, której szukasz, pozostaw komentarz na końcu artykułu, abyśmy mogli go zaktualizować.
@@ -77,7 +77,7 @@ Jeśli chcesz wyświetlić lub zmienić zasady dostępu warunkowego w witrynie A
 ## <a name="where-did-my-compliance-policies-go"></a>Gdzie się podziały moje zasady zgodności?
 Po przeprowadzeniu migracji dzierżawy do witryny Azure Portal zasady zgodności Twojej dzierżawy są w dalszym ciągu wymuszane. Jednak nie można ich wyświetlić ani zmodyfikować z poziomu usługi Intune w witrynie Azure Portal.
 
-Jeśli chcesz wyświetlić lub zmienić zasady zgodności w witrynie Azure Portal, musisz usunąć stare zasady z portalu klasycznego. Następnie należy utworzyć je ponownie w witrynie Azure Portal. Aby dowiedzieć się więcej na temat zasad zgodności urządzeń, zobacz [Wprowadzenie do zasad zgodności urządzeń w usłudze Intune](https://docs.microsoft.com/intune/device-compliance-get-started). 
+Jeśli chcesz wyświetlić lub zmienić zasady zgodności w witrynie Azure Portal, musisz usunąć stare zasady z portalu klasycznego. Następnie należy utworzyć je ponownie w witrynie Azure Portal. Aby dowiedzieć się więcej na temat zasad zgodności urządzeń, zobacz [Wprowadzenie do zasad zgodności urządzeń w usłudze Intune](device-compliance-get-started.md). 
 
 ## <a name="where-did-apple-dep-go"></a>Dokąd został przeniesiony program DEP firmy Apple?
 W portalu klasycznym można było skonfigurować usługę Intune tak, aby integrowała się z programem Device Enrollment Program firmy Apple, oraz ręcznie zażądać synchronizacji z usługą firmy Apple:

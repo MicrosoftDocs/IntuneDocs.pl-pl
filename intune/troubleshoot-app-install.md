@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa723942c9633a3851f75e3e08bf843cbb4bdf55
-ms.sourcegitcommit: a25cd79a33feb536d9b2fc11aa7d3e3972f1ca5a
+ms.openlocfilehash: 850c7a28c4df1638e9f635713695dcf2e914ffce
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70842164"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71166939"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Rozwiązywanie problemów z instalacją aplikacji
 
@@ -61,7 +61,7 @@ Jeśli masz problemy z instalowaniem aplikacji, należy wziąć pod uwagę nast�
   3. Przejdź do [Azure Active Directory użytkowników](https://portal.azure.com/#blade/Microsoft_AAD_IAM/UsersManagementMenuBlade/AllUsers).
   4. Wybierz użytkownika, którego dotyczy ten użytkownik, a następnie kliknij pozycję **urządzenia**.
   5. Jeśli użytkownik ma ustawiony limit, Usuń wszystkie nieodświeżone rekordy, które nie są już potrzebne.
-- W przypadku urządzeń programu DEP w systemie iOS upewnij się, że użytkownik jest wymieniony jako **zarejestrowany przez użytkownika** w bloku przegląd urządzeń w usłudze Intune. Jeśli jest wyświetlana wartość NA, należy wdrożyć zasady konfiguracji dla Intune — Portal firmy. Aby uzyskać więcej informacji, zobacz [Konfigurowanie aplikacji Portal firmy](https://docs.microsoft.com/intune/app-configuration-policies-use-ios#configure-the-company-portal-app-to-support-ios-dep-devices).
+- W przypadku urządzeń programu DEP w systemie iOS upewnij się, że użytkownik jest wymieniony jako **zarejestrowany przez użytkownika** w bloku przegląd urządzeń w usłudze Intune. Jeśli jest wyświetlana wartość NA, należy wdrożyć zasady konfiguracji dla Intune — Portal firmy. Aby uzyskać więcej informacji, zobacz [Konfigurowanie aplikacji Portal firmy](app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-dep-devices).
 
 ## <a name="win32-app-installation-troubleshooting"></a>Rozwiązywanie problemów z instalacją aplikacji Win32
 
