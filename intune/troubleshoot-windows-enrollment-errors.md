@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8af18192a3a15fee15dd2204ada572e6a67be1c
-ms.sourcegitcommit: 6c74ff568267d85fd1d44fda75e3e24ead87cb2b
+ms.openlocfilehash: 0f78f069f46ce036752fde80519abc03dc7c424c
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70063003"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167775"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Rozwiązywanie problemów dotyczących rejestrowania urządzeń z systemem Windows w usłudze Microsoft Intune
 
@@ -205,7 +205,7 @@ Błąd: "Wystąpił problem. Twoja organizacja nie obsługuje tej wersji systemu
 Aby rozwiązać ten problem w środowisku autonomicznym usługi Intune, wykonaj następujące kroki: 
  
 1. Zaloguj się do [Azure Portal](https://portal.azure.com/) jako administrator.    
-2. Wybierz **pozycję Intune** po lewej stronie, a **następnie przejdź** do obszaru > **ograniczenia rejestracji**urządzeń.    
+2. Wybierz **pozycję Intune** po lewej stronie, a następnie przejdź **do obszaru** > **ograniczenia rejestracji**urządzeń.    
 3. W obszarze **ograniczenia typu urządzenia**kliknij pozycję **platformy**, a następnie wybierz pozycję **Zezwalaj** na **system Windows (MDM)** .    
 4. Kliknij polecenie **Zapisz**.    
  
@@ -388,4 +388,4 @@ Ten problem jest zwykle spowodowany przez nieprawidłowe delegowanie uprawnień 
 - [Zadaj pytanie na forum usługi Intune](https://social.technet.microsoft.com/Forums/%7Blang-locale%7D/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc)
 - [Sprawdź Blog zespołu pomocy technicznej Microsoft Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
 - [Zapoznaj się z blogiem dotyczącym pakietu Microsoft Enterprise Mobility and Security](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)
-- [Uzyskaj pomoc techniczną dotyczącą usługi Microsoft Intune](https://docs.microsoft.com/intune/get-support) 
+- [Uzyskaj pomoc techniczną dotyczącą usługi Microsoft Intune](get-support.md)
