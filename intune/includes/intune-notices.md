@@ -7,18 +7,18 @@ ms.topic: include
 ms.date: 03/28/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 0721c62d44234a44881cdc562376c9bb62412187
-ms.sourcegitcommit: 73fbecf7cee4fdfc37d3c30ea2007d2a9a6d2d12
+ms.openlocfilehash: 041f37e56e85b0ac26a4dd7a9dbbdb49bc0ebd9e
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68775905"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71166343"
 ---
 Te powiadomienia zawierają ważne informacje, które mogą ułatwić przygotowanie się na nadchodzące zmiany i nowe funkcje w usłudze Intune. 
 
 
 ### <a name="decreasing-support-for-android-device-administrator"></a>Zmniejszenie wsparcia dla administratora urządzeń z systemem Android 
-Administrator urządzeń z systemem Android (czasami określany jako „starszy sposób” zarządzania systemem Android, opublikowany z systemem Android 2.2) to metoda zarządzania urządzeniami z systemem Android. Jednak obecnie jest dostępna ulepszona funkcja zarządzania w systemie [Android Enterprise]( https://docs.microsoft.com/intune/connect-intune-android-enterprise) (wydanie z systemem Android 5.0). Dążąc do przejścia do nowoczesnego, bardziej zaawansowanego i bezpieczniejszego zarządzania urządzeniami, firma Google ogranicza wsparcie administratora urządzeń w nowych wersjach systemu Android.
+Administrator urządzeń z systemem Android (czasami określany jako „starszy sposób” zarządzania systemem Android, opublikowany z systemem Android 2.2) to metoda zarządzania urządzeniami z systemem Android. Jednak obecnie jest dostępna ulepszona funkcja zarządzania w systemie [Android Enterprise](../connect-intune-android-enterprise.md) (wydanie z systemem Android 5.0). Dążąc do przejścia do nowoczesnego, bardziej zaawansowanego i bezpieczniejszego zarządzania urządzeniami, firma Google ogranicza wsparcie administratora urządzeń w nowych wersjach systemu Android.
 
 #### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
 Te zmiany w usłudze Google wpłyną na użytkowników usługi Intune w następujący sposób: 
@@ -66,7 +66,7 @@ Nie trzeba podejmować żadnych działań, ale w razie potrzeby można rozważy�
 #### <a name="additional-information"></a>Dodatkowe informacje 
 https://aka.ms/intune_fullscreen
 
-### <a name="plan-for-change-intune-moving-to-support-ios-11-and-higher-in-september----4665342--"></a>Planowanie zmian: W usłudze Intune nastąpi przejście do obsługi systemu iOS 11 i nowszych wersji we wrześniu <!-- 4665342-->
+### <a name="plan-for-change-intune-moving-to-support-ios-11-and-higher-in-september----4665324--"></a>Planowanie zmian: W usłudze Intune nastąpi przejście do obsługi systemu iOS 11 i nowszych wersji we wrześniu <!-- 4665324-->
 Oczekujemy, że we wrześniu firma Apple wyda system iOS 13. Rejestracja w usłudze Intune, aplikacja Portal firmy oraz program Managed Browser zostaną przeniesione do obsługi systemu iOS 11 i jego nowszych wersji wkrótce po wydaniu systemu iOS 13.
 
 #### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
@@ -76,7 +76,7 @@ Pod warunkiem, że aplikacje mobilne usługi Office 365 będą obsługiwane w sy
 - iPhone 5c
 - iPad (4. generacja)
 
-Od lipca urządzenia zarejestrowane w usłudze MDM z systemem iOS 10 i aplikacją Portal firmy będą otrzymywać monit o uaktualnienie systemu operacyjnego lub urządzenia. Jeśli używasz zasad ochrony aplikacji (APP, Application Protection Policies), możesz również zdefiniować ustawienie dostępu „Wymagaj minimalnej wersji systemu operacyjnego iOS (tylko ostrzeżenie)”.
+Jeśli używasz zasad ochrony aplikacji (APP, Application Protection Policies), możesz również zdefiniować ustawienie dostępu „Wymagaj minimalnej wersji systemu operacyjnego iOS (tylko ostrzeżenie)”.
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Co należy zrobić, aby przygotować się do tej zmiany?
 Sprawdź raporty usługi Intune, aby zobaczyć, na które urządzenia lub użytkowników może to mieć wpływ. Przejdź do pozycji **Urządzenia** > **Wszystkie urządzenia** i filtruj zawartość według systemu operacyjnego. Możesz dodać dodatkowe kolumny, które ułatwiają określenie, kto w organizacji ma urządzenia z systemem iOS 10. Poproś użytkowników końcowych, aby do września uaktualnili urządzenia do obsługiwanej wersji systemu operacyjnego.
@@ -96,7 +96,7 @@ Sprawdź aplikacje firmy Microsoft, innych firm i biznesowe (LOB). Upewnij się,
 Należy również zaktualizować dokumentację lub wskazówki dla deweloperów (jeśli ma to zastosowanie), aby uwzględnić tę zmianę w ramach obsługi dla zestawu SDK.
 
 #### <a name="additional-information"></a>Dodatkowe informacje
-https://docs.microsoft.com/intune/apps-prepare-mobile-application-management
+[Przygotowanie aplikacji biznesowych pod kątem zasad ochrony aplikacji](../apps-prepare-mobile-application-management.md)
 
 ### <a name="plan-for-change-new-windows-updates-settings-in-intune----4464404---"></a>Planowanie zmian: Nowe ustawienia aktualizacji systemu Windows w usłudze Intune <!-- 4464404 -->
 Od sierpniowego wydania usługi Intune lub wersji 1908 dodamy nowy obszar „Ustawienia terminu ostatecznego”, który można będzie skonfigurować zamiast ustawień obszaru „Zezwalaj użytkownikowi na ponowne uruchamianie (ponowne uruchamianie wymagające interwencji użytkownika)”. Ustawienia ponownego uruchomienia wymagającego interwencji użytkownika w interfejsie użytkownika planujemy wyłączyć w wersji 1909 lub aktualizacji z września. Do końca października ustawienia te zostaną całkowicie usunięte z konsoli. 
