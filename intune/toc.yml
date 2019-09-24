@@ -321,30 +321,33 @@
           href: device-profiles.md
         - name: Tworzenie profilu
           href: device-profile-create.md
-        - name: Szablony administracyjne
+        - name: Szablony administracyjne w systemie Windows
           href: administrative-templates-windows.md
-        - name: Funkcje urządzenia
+          displayName: 'group policy, gpo, admx'
+        - name: Funkcje urządzeń w systemach iOS i macOS
           href: device-features-configure.md
         - name: Ograniczanie ustawień i funkcji urządzenia
           href: device-restrictions-configure.md
           displayName: Device restrictions
-        - name: Dostarczanie aktualizacji
+        - name: Updates
           href: delivery-optimization-windows.md
-          displayName: delivery optimization; updates
+          displayName: delivery optimization; Windows update
         - name: Uaktualnianie wersji i tryb S mode
           href: edition-upgrade-configure-windows-10.md
-        - name: Konfigurowanie poczty e-mail
+        - name: Poczta e-mail
           href: email-settings-configure.md
-        - name: Włączanie trybu kiosku
+        - name: Kioski i urządzenia dedykowane
           href: kiosk-settings.md
-        - name: Dodawanie sieci VPN
+        - name: Urządzenia udostępnione używane przez wielu użytkowników
+          href: shared-user-device-settings.md
+        - name: VPN
           href: vpn-settings-configure.md
           items:
             - name: Sieć VPN dla poszczególnych aplikacji systemu Android
               href: android-pulse-secure-per-app-vpn.md
             - name: Sieć VPN dla poszczególnych aplikacji systemu iOS
               href: vpn-setting-configure-per-app.md
-        - name: Dodawanie bezprzewodowej sieci Wi-Fi
+        - name: Sieć Wi-Fi
           href: wi-fi-settings-configure.md
           displayName: wifi
           items:
@@ -354,8 +357,6 @@
           href: kernel-extensions-overview-macos.md
         - name: Aplikacja edukacyjna Wypełnij test
           href: education-settings-configure.md
-        - name: Urządzenia udostępnione używane przez wielu użytkowników
-          href: shared-user-device-settings.md
         - name: Rozszerzenia dla mobilności w urządzeniach Zebra
           href: android-zebra-mx-overview.md
           displayName: mx
@@ -594,6 +595,8 @@
                   href: app-sideload-windows.md
                 - name: aplikacje LOB dla systemu macOS
                   href: lob-apps-macos.md
+            - name: Aplikacje systemu Android Enterprise
+              href: apps-ae-system.md
             - name: Zarządzanie aplikacjami Win32
               href: apps-win32-app-management.md
             - name: Skrypty środowiska PowerShell
@@ -623,12 +626,24 @@
               href: app-configuration-policies-use-ios.md
             - name: Android urządzenia zarządzane
               href: app-configuration-policies-use-android.md
-            - name: Konfigurowanie aplikacji Zarządzany ekran główny
-              href: app-configuration-managed-home-screen-app.md
-            - name: Aplikacje zarządzane
+            - name: Konfigurowanie aplikacji zarządzanych bez rejestracji
               href: app-configuration-policies-managed-app.md
             - name: Korzystanie z profilów aprowizacji aplikacji systemu iOS
               href: app-provisioning-profile-ios.md
+            - name: Konfigurowanie określonych aplikacji
+              items:
+                - name: Konfigurowanie aplikacji Zarządzany ekran główny
+                  href: app-configuration-managed-home-screen-app.md
+                - name: Konfigurowanie Portalu firmy
+                  href: company-portal-app.md
+                - name: Konfigurowanie programu Managed Browser
+                  href: app-configuration-managed-browser.md
+                - name: Konfigurowanie aplikacji Microsoft Launcher
+                  href: configure-microsoft-launcher.md
+                - name: Konfigurowanie usługi Microsoft Edge
+                  href: manage-microsoft-edge.md
+                - name: Konfigurowanie programu Outlook
+                  href: app-configuration-policies-outlook.md
             - name: Aplikacje i książki kupione w ramach zakupów zbiorczych
               items:
                 - name: Zarządzanie aplikacjami i książkami programu VPP
@@ -640,14 +655,6 @@
                   href: windows-store-for-business.md
                 - name: Książki elektroniczne dla systemu iOS
                   href: vpp-ebooks-ios.md
-            - name: Konfigurowanie Portalu firmy
-              href: company-portal-app.md
-            - name: Konfigurowanie programu Managed Browser
-              href: app-configuration-managed-browser.md
-            - name: Konfigurowanie usługi Microsoft Edge
-              href: manage-microsoft-edge.md
-            - name: Konfigurowanie programu Outlook
-              href: app-configuration-policies-outlook.md
         - name: Chronienie aplikacji
           items:
             - name: Czyszczenie selektywne aplikacji

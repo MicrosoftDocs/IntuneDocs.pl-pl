@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e18279fd9cca88de5f04c57a8bcccce1c211c6de
-ms.sourcegitcommit: 4f3fcc6dcbfe2c4e0651d54a130907a25a4ff66e
+ms.openlocfilehash: 4494d5f75336f7152668cfa1bb6fa1cd1a94305c
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69894318"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167864"
 ---
 # <a name="create-an-intune-report-from-the-odata-feed-with-power-bi"></a>Tworzenie raportu usługi Intune w usłudze Power BI na podstawie kanału informacyjnego OData
 
-W tym artykule opisano sposób tworzenia wizualizacji mapy drzewa danych usługi Intune przy użyciu filtru interaktywnego w aplikacji Power BI Desktop. Na przykład dyrektor finansowy może chcieć wiedzieć, jaki odsetek urządzeń w firmie stanowią urządzenia należące do firmy, a jaki urządzenia osobiste. Mapa drzewa daje wgląd w ogólną liczbę urządzeń różnych typów. Możesz zobaczyć liczbę urządzeń z systemami iOS, Android i Windows, które należą do firmy lub do pracowników.
+W tym artykule opisano sposób tworzenia wizualizacji mapy drzewa danych usługi Intune przy użyciu filtru interaktywnego w aplikacji Power BI Desktop. Na przykład dyrektor finansowy chce wiedzieć, jaki odsetek urządzeń w firmie stanowią urządzenia należące do firmy, a jaki urządzenia osobiste. Mapa drzewa daje wgląd w ogólną liczbę urządzeń różnych typów. Możesz zobaczyć liczbę urządzeń z systemami iOS, Android i Windows, które należą do firmy lub do pracowników.
 
 ## <a name="overview-of-creating-the-chart"></a>Przegląd tworzenia wykresu
 
@@ -58,7 +58,7 @@ Zainstaluj najnowszą wersję aplikacji Power BI Desktop. Aplikację Power BI De
 3. Skopiuj adres URL niestandardowego źródła danych. Na przykład: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta`
 4. Otwórz aplikację Power BI Desktop.
 5. Na pasku menu wybierz kolejno pozycje **Plik** > **Pobierz dane** > **Kanał informacyjny OData**.
-6. Wklej niestandardowy adres URL kanału informacyjnego skopiowany z wcześniejszego kroku do pola Adres URL w oknie **Kanał informacyjny OData** .
+6. Wklej niestandardowy adres URL kanału informacyjnego skopiowany z wcześniejszego kroku do pola Adres URL w oknie **Kanał informacyjny OData**.
 7. Wybierz pozycję **Podstawowe**.
 
     ![Źródło danych OData dla magazynu danych usługi Intune dzierżawy](media/reports-create-01-odatafeed.png)
@@ -110,7 +110,7 @@ Do mapy drzewa możesz dodać filtr, aby za pomocą aplikacji odpowiedzieć na i
 3. Rozwiń tabelę `ownerTypes` i wybierz pole danych `ownerTypeName`.
 4. Przeciągnij pole `onwerTypeName` z tabeli `ownerTypes` do okienka **Filtry** i upuść je w sekcji **Filtry na tej stronie** w polu z napisem **Dodaj pola danych tutaj**.  
 
-   W tabeli `OwnerTypes` znajduje się pole danych o nazwie `OwnerTypeKey`, które zawiera informacje, czy czy urządzenie należy do firmy, czy jest prywatne. Ponieważ w tym filtrze mają być wyświetlane przyjazne nazwy, poszukaj tabeli `ownerTypes` i przeciągnij **ownerTypeName** do fragmentatora. Ten przykład pokazuje, jak model danych obsługuje relacje między tabelami.
+   W tabeli `OwnerTypes` znajduje się pole danych o nazwie `OwnerTypeKey`, które zawiera informacje, czy urządzenie należy do firmy, czy jest to urządzenie osobiste. Ponieważ w tym filtrze mają być wyświetlane przyjazne nazwy, poszukaj tabeli `ownerTypes` i przeciągnij **ownerTypeName** do fragmentatora. Ten przykład pokazuje, jak model danych obsługuje relacje między tabelami.
 
 ![Mapa drzewa z filtrem — obsługuje relacje między tabelami](media/reports-create-08_ownertype.png)
 
@@ -122,4 +122,4 @@ Masz teraz interakcyjny filtr, za pomocą którego możesz się przełączać mi
 ## <a name="next-steps"></a>Następne kroki
 
 - Dowiedz się więcej o [tworzeniu i zarządzaniu relacjami](https://powerbi.microsoft.com/documentation/powerbi-desktop-create-and-manage-relationships/) w programie Power BI Desktop z dokumentacji usługi Power BI.
-- Zapoznaj się z [modelem magazynu danych usługi Intune](https://docs.microsoft.com/intune/reports-ref-data-model).
+- Zapoznaj się z [modelem magazynu danych usługi Intune](reports-ref-data-model.md).

@@ -1,11 +1,11 @@
 ---
-title: Wykonywanie pracy przy użyciu urządzeń zarządzanych | Microsoft Docs
-description: Dowiedz się, na czym polega rejestrowanie urządzeń w usłudze Intune w celu zarządzania nimi.
+title: Co to jest rejestracja urządzenia | Microsoft Docs
+description: Zapoznaj się ze sposobem rejestrowania urządzenia w aplikacji Portal firmy i Microsoft Intune.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/19/2019
+ms.date: 09/13/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,76 +18,78 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2f698f03ed3c7523ef1d768d2a1361d6d1a55008
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 98fd937ee379d71874f61152d88ddc94fa5b7a09
+ms.sourcegitcommit: 3db8af810b95c3a6ed3f8cc00f6ce79076ebb9db
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67883870"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71012437"
 ---
-# <a name="enroll-device-for-access-to-work-or-school-resources"></a>Rejestrowanie urządzenia w celu uzyskania dostępu do zasobów służbowych
-Aby zarejestrować urządzenie i uzyskać dostęp do poczty e-mail i aplikacji, musisz zainstalować aplikację Intune — Portal firmy lub Microsoft Intune aplikację. Po zarejestrowaniu podstawowe zasady zarządzania, które zostały skonfigurowane przez organizacji, takie jak hasło, numer PIN i szyfrowanie, są stosowane na urządzeniu. Gdy ustawienia urządzenia spełnią wszystkie wymagania organizacji, możesz bezpiecznie uzyskać dostęp do informacji służbowych praktycznie z dowolnego miejsca.  
+# <a name="what-is-device-enrollment"></a>Co to jest rejestrowanie urządzenia?
+Aby uzyskać dostęp do zasobów służbowych z urządzenia, musisz zarejestrować urządzenie w aplikacji Intune — Portal firmy lub Microsoft Intune. 
 
-Aplikacje Portal firmy i Microsoft Intune zachowują swoje zarejestrowane urządzenie, upewniając się, że ustawienia urządzenia są zgodne z zasadami organizacji. 
+Podczas rejestracji urządzenia:
 
-Aplikacja Portal firmy również:  
-* Utrzymuje osobne informacje osobiste i służbowe.  
-* Ułatwia znajdowanie i Instalowanie odpowiednich aplikacji służbowych.   
+* Twoje urządzenie jest zarejestrowane w Twojej organizacji. Ten krok zapewnia, że masz uprawnienia do uzyskiwania dostępu do poczty e-mail, aplikacji i sieci Wi-Fi w organizacji. 
+* Zasady zarządzania urządzeniami w organizacji są stosowane do Twojego urządzenia. Zasady mogą obejmować wymagania dotyczące takich elementów jak hasła urządzeń i szyfrowanie. Celem tych wymagań jest zapewnienie bezpieczeństwa urządzenia i danych organizacji przed nieautoryzowanym dostępem.
 
-## <a name="get-the-apps"></a>Pobierz aplikacje
-Aby uzyskać aplikację Portal firmy:
+Po zaktualizowaniu ustawień urządzenia, aby spełniały wymagania organizacji, Rejestracja została zakończona. Możesz bezpiecznie zalogować się do konta służbowego z niemal dowolnego miejsca.  
 
-- Zainstaluj aplikację Portal firmy ze sklepu z aplikacjami specyficznymi dla platformy. W niektórych przypadkach organizacja zainstaluje Portal firmy aplikację.  
-- Przejdź do [witryny sieci web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980) , aby uzyskać dostęp do aplikacji z przeglądarki.  
+W tym artykule opisano inne aspekty rejestracji, takie jak pobieranie aplikacji, obsługiwanych urządzeń oraz usuwanie lub Resetowanie urządzenia.  
 
-Jeśli jest wymagane użycie aplikacji Microsoft Intune, organizacja zainstaluje ją.  
+## <a name="company-portal-and-microsoft-intune-app"></a>Aplikacja Portal firmy i Microsoft Intune
 
+Portal firmy i aplikacje Microsoft Intune ostrzegają o zmianach zasad lub ustawień, dzięki czemu możesz podjąć działania bez utraty dostępu do zasobów służbowych. 
 
-## <a name="what-information-can-my-company-see-when-i-enroll"></a>Jakie informacje może wyświetlać moja firma po mojej rejestracji?
-Po zarejestrowaniu urządzenia pracownicy działu pomocy technicznej Twojej organizacji mogą zobaczyć tylko te informacje, które są istotne do pracy. Twoje dane osobowe nie będą widoczne. Jeśli rejestrujesz urządzenie osobiste do użytku w pracy, [Dowiedz się dokładnie, co może być widoczne](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).  
+Aplikacja Portal firmy zapewnia osobne informacje osobiste i służbowe, dzięki czemu możesz pozostawać produktywne i skoncentrowane na sobie. Udostępnia również aplikacje służbowe i szkolne, dzięki czemu można znaleźć i zainstalować te, które są istotne dla danego wiersza pracy.  
 
+### <a name="get-company-portal"></a>Uzyskiwanie aplikacji Portal firmy
+
+W niektórych przypadkach Twoja organizacja zainstaluje na Twoim urządzeniu aplikację Portal firmy. Aplikacja jest również dostępna do zainstalowania w sklepach z aplikacjami, takimi jak Microsoft Store, App Store i Google Play Store. Aby uzyskać dostęp do aplikacji z przeglądarki sieci Web, zaloguj się do [witryny internetowej Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980) przy użyciu konta służbowego.  
+
+### <a name="get-microsoft-intune-app"></a>Uzyskiwanie aplikacji Microsoft Intune
+
+Jeśli jest wymagane użycie aplikacji Microsoft Intune, organizacja zainstaluje ją na urządzeniu.  
 
 ## <a name="whats-the-difference-between-the-apps-and-the-website"></a>Jakie są różnice między aplikacjami a witryną internetową?
 Aplikacja Portal firmy jest dostępna dla urządzeń z systemami Windows 10, iOS, macOS i Android. Bezproblemowo integruje się z odpowiednią platformą urządzenia. Wersja w witrynie internetowej jest dostępna z dowolnego urządzenia i udostępnia to samo uniwersalne środowisko niezależnie od tego, którego urządzenia używasz. 
 
-Aplikacja Microsoft Intune jest dla urządzeń z systemem Android należących do firmy.  
+Aplikacja Microsoft Intune jest dla urządzeń z systemem Android należących do firmy i nie ma witryny sieci Web.  
 
 ## <a name="what-kind-of-devices-can-you-enroll-with-company-portal"></a>Jakiego rodzaju urządzenia można zarejestrować za pomocą Portal firmy?
-- Urządzenia firmy Apple z systemem iOS (np. iPhone oraz iPad) i macOS (np. MacBook oraz iMac)
-- Urządzenia z systemem Android
+Następujące urządzenia można zarejestrować w Portal firmy:  
+
 - Urządzenia z systemem Windows
   - Windows 10 Mobile
   - Windows 10 Desktop
   - Windows Phone 8,1
   - Windows 8.1
+- Urządzenia firmy Apple
+    - iOS
+    - macOS
+- Urządzenia z systemem Android
+
 
 ## <a name="what-kind-of-devices-can-you-enroll-with-the-microsoft-intune-app"></a>Jakiego rodzaju urządzenia można zarejestrować w aplikacji Microsoft Intune?  
 Można rejestrować firmowe urządzenia z systemem Android, które organizacja skonfigurował do korzystania z aplikacji. Aplikacja obsługuje system Android 6,0 i nowsze. 
 
-## <a name="can-you-remove-a-computer-or-device-from-the-company-portal"></a>Czy można usunąć komputer lub urządzenie z Portalu firmy?
-Tak, można usunąć komputer lub urządzenie z Portalu firmy lub zresetować je. Istnieje różnica między **usunięciem** a **zresetowaniem**.
+## <a name="can-you-remove-a-device-from-the-company-portal"></a>Czy możesz usunąć urządzenie z Portalu firmy?
+Możesz usunąć lub zresetować urządzenie z Portal firmy. Istnieje różnica między **usunięciem** a **zresetowaniem**.
 
-Gdy usuniesz komputer lub urządzenie z Portalu firmy, urządzenie zostanie wyrejestrowane z usługi Intune. Po wyrejestrowaniu nie będzie można uzyskać dostępu do Portalu firmy za pomocą tego urządzenia, a niektóre dane firmowe mogą zostać z niego usunięte. Aby dowiedzieć się, jak usunąć urządzenie z Portal firmy, zobacz następujące linki:  
+Podczas usuwania urządzenia Portal firmy wyrejestruje i wyrejestrowuje urządzenie. To urządzenie utraci dostęp do Portal firmy. Dane służbowe mogą również zostać usunięte. 
 
-- [Wyrejestrowywanie urządzenia z systemem Android](unenroll-your-device-from-intune-android.md)
-- [Wyrejestrowywanie urządzenia z systemem iOS](unenroll-your-device-from-intune-ios.md)
-- [Wyrejestrowywanie urządzenia z systemem macOS](unenroll-your-device-from-intune-macos.md)
-- [Wyrejestrowywanie urządzenia z systemem Windows](unenroll-your-device-from-intune-windows.md)
+Podczas resetowania komputera lub urządzenia Portal firmy podejmuje próbę przywrócenia domyślnych ustawień fabrycznych komputera lub urządzenia. Wszystkie dane służbowe i wszystkie dane osobowe są usuwane z urządzenia. Resetowanie jest przydatne, jeśli na przykład utracisz urządzenie. Możesz zresetować ją zdalnie z poziomu witryny sieci Web Portal firmy.  
 
-Po zresetowaniu komputera lub urządzenia Portal firmy podejmuje próbę przywrócenia domyślnych ustawień fabrycznych komputera lub urządzenia. Zresetowanie urządzenia spowoduje usunięcie wszystkich danych osobistych i firmowych z urządzenia. Jeśli zgubisz urządzenie, możesz zresetować je zdalnie z poziomu witryny internetowej Portal firmy.  
-
-Aby dowiedzieć się, jak zresetować urządzenie, zobacz [Resetowanie urządzenia z poziomu witryny sieci web Portal firmy](reset-erase-your-device-cpwebsite.md).  
-
-## <a name="can-you-remove-a-computer-or-device-from-the-microsoft-intune-app"></a>Czy można usunąć komputer lub urządzenie z aplikacji Microsoft Intune?
+## <a name="can-you-remove-a-device-from-the-microsoft-intune-app"></a>Czy można usunąć urządzenie z aplikacji Microsoft Intune?
 Nie, nie ma możliwości usunięcia urządzenia należącego do firmy z aplikacji Microsoft Intune.  
 
 ## <a name="what-if-i-cant-see-my-device-in-the-company-portal-or-microsoft-intune-app"></a>Co zrobić, jeśli nie mogę zobaczyć mojego urządzenia w aplikacji Portal firmy lub Microsoft Intune?
-Aby można było wyświetlić urządzenie, należy najpierw dodać je do Portalu firmy. Przejdź do któregokolwiek Portalu firmy wskazanego przez administratora, a następnie postępuj zgodnie z instrukcjami dotyczącymi urządzenia. Ponadto urządzenia będące własnością firmy i zarządzane przez firmę nie będą widoczne.
+Aby wyświetlić urządzenie w Portal firmy, najpierw należy je zarejestrować. Jeśli po rejestracji nadal nie widzisz wszystkich urządzeń, spróbuj przeprowadzić synchronizację lub sprawdzić dostęp za pomocą Portal firmy. Urządzenia będące własnością firmy i zarządzane przez firmę nie będą widoczne.
 
-Jeśli używasz aplikacji Microsoft Intune, zobaczysz tylko aktualnie używane urządzenie. Inne zarejestrowane urządzenia nie będą widoczne dla Ciebie w aplikacji.  
+W aplikacji Microsoft Intune widoczne jest tylko urządzenie, którego obecnie używasz. Inne zarejestrowane urządzenia nie będą widoczne dla Ciebie w aplikacji.  
 
 ## <a name="where-else-can-i-go-for-help"></a>Gdzie indziej szukać pomocy?  
-Aby rozwiązać typowe problemy i pytania, zapoznaj się z następującymi dokumentami dotyczącymi danej platformy:  
+Aby rozwiązać typowe problemy, zapoznaj się z tymi dokumentami dla danej platformy:  
 
 - [Rozwiązywanie typowych problemów dotyczących urządzeń z systemem Android](check-compliance-on-your-device-android.md)  
 - [Rozwiązywanie typowych problemów dotyczących urządzeń z systemem iOS](troubleshoot-your-device-ios.md)
@@ -98,12 +100,15 @@ Możesz również skontaktować się z osobą odpowiedzialną za pomoc techniczn
 
 ## <a name="next-steps"></a>Następne kroki  
 
-Uzyskaj pomoc dotyczącą rejestracji, która jest specyficzna dla platformy urządzenia:  
+Jeśli jesteś gotowy do uzyskania dostępu do konta służbowego, postępuj zgodnie z instrukcjami w organizacji, aby zarejestrować urządzenie. Wskazówki dotyczące rejestracji krok po kroku można znaleźć w następujących artykułach.
 
-- [Korzystanie z urządzenia z systemem Android](using-your-android-device-with-intune.md)
-- [Korzystanie z urządzenia z systemem iOS](using-your-ios-device-with-intune.md)
-- [Korzystanie z urządzenia z systemem macOS](using-your-macos-device-with-intune.md)
-- [Korzystanie z urządzenia z systemem Windows](using-your-windows-device-with-intune.md)
-- [Korzystanie z witryny sieci Web Portal firmy](using-the-intune-company-portal-website.md)
+* [Enroll your Windows 10 device (Rejestrowanie urządzenia z systemem Windows 10)](enroll-windows-10-device.md)
+* [Rejestracja urządzenia z systemem Android](enroll-device-android-company-portal.md)
+* [Rejestracja przy użyciu profilu służbowego systemu Android](enroll-device-android-work-profile.md)
+* [Rejestracja przy użyciu aplikacji Microsoft Intune](enroll-device-android-microsoft-intune-app.md)
+* [Rejestrowanie urządzenia z systemem iOS](enroll-your-device-in-intune-ios.md)
+* [Rejestrowanie urządzenia z systemem iOS dostarczonego przez organizację](enroll-your-device-dep-ios.md)
+* [Rejestrowanie urządzenia z systemem macOS](enroll-your-device-in-intune-macos-cp.md)
+* [Rejestrowanie urządzenia z systemem macOS dostarczonego przez organizację](enroll-company-device-macos.md)
 
 

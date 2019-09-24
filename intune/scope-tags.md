@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 90865b8a8881ab85089fb379a8398e276574b771
-ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
+ms.openlocfilehash: 2fb82b02057e1e028755da16a05755b0b8ddb93a
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69550026"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163801"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Używanie kontroli dostępu opartej na rolach i tagów zakresu w rozproszonej infrastrukturze informatycznej
 
@@ -38,7 +38,7 @@ Na przykład załóżmy, że administrator biura regionalnego w Seattle ma przyp
 ## <a name="default-scope-tag"></a>Domyślny tag zakresu
 Domyślny tag zakresu jest automatycznie dodawany do wszystkich nieoznakowanych obiektów, które obsługują Tagi zakresu.
 
-Domyślna funkcja tagów zakresu jest podobna do funkcji zakresów zabezpieczeń w System Center Configuration Manager. 
+Funkcja domyślnego tagu zakresu jest podobna do funkcji zakresów zabezpieczeń w programie System Center Configuration Manager. 
 
 ## <a name="to-create-a-scope-tag"></a>Aby utworzyć tag zakresu
 
@@ -101,7 +101,6 @@ Podczas pracy z tagami zakresu należy pamiętać o następujących szczegółac
     - Kategorie urządzeń
     - Ograniczenia rejestracji
     - Identyfikatory urządzeń firmowych
-    - Warunki i postanowienia
     - Urządzenia z autopilotażem
     - Lokalizacje zgodności urządzeń
     - Urządzenia Jamf

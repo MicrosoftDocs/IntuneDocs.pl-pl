@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/28/2018
+ms.date: 09/18/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,21 +18,20 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f2cd69725ad10c08f7c137f4444cce831160dd88
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 690fb81350c0c264677c6c75b8942e9cdcd4e8f0
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67546798"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163360"
 ---
 # <a name="how-to-reset-your-device-passcode-from-the-company-portal-website"></a>Jak zresetować kod dostępu urządzenia z poziomu witryny sieci Web Portal firmy
 
-Jeśli utracisz numer PIN lub hasło, możesz zresetować je przy użyciu [witryny internetowej Portal firmy](https://portal.manage.microsoft.com).  
+Jeśli utracisz numer PIN lub hasło, możesz zresetować je przy użyciu [witryny internetowej Portal firmy](https://portal.manage.microsoft.com). 
 
-Jeśli używasz urządzenia zarejestrowanego przez firmę, możesz nie widzieć opcji umożliwiającej zresetowanie kodu dostępu do urządzenia. Skontaktuj się z działem pomocy technicznej Twojej firmy w celu uzyskania kodu dostępu.
+Opcja resetowania kodu dostępu może nie być wyświetlana w przypadku urządzeń zarejestrowanych w firmie. W takim przypadku należy skontaktować się z działem pomocy technicznej Twojej firmy, aby go zresetować.  
 
-   > [!NOTE]
-   > Nie można zresetować kodu dostępu w przypadku urządzeń z uruchomionym systemem Android 7.0 lub nowszym. Jeśli nie pamiętasz kodu dostępu, musisz zresetować urządzenie, przywracając ich ustawienia fabryczne. 
+Resetowanie kodu dostępu nie jest dostępne dla urządzeń z systemem Android 7,0 i nowszymi wersjami. Jeśli zapomnisz o kodzie dostępu jednego z tych urządzeń, musisz zresetować go do ustawień fabrycznych.  
 
 ## <a name="reset-your-passcode"></a>Resetowanie kodu dostępu
 
@@ -40,15 +39,15 @@ Jeśli używasz urządzenia zarejestrowanego przez firmę, możesz nie widzieć 
 
 2. Wybierz urządzenie, które wymaga zresetowania kodu dostępu.  
 
-    ![Zrzut ekranu przedstawiający stronę Urządzenia z dwoma kafelkami, które przedstawiają niezidentyfikowane urządzenia z ogólną nazwą. Bezpośrednio pod urządzeniami wyświetlany jest szary baner zawierający monit dla użytkownika z prośbą o identyfikację używanego urządzenia lub dodanie nowego.](./media/rename-reset-device-step2-1808.png) 
+    ![Zrzut ekranu przedstawiający stronę Urządzenia z dwoma kafelkami, które przedstawiają niezidentyfikowane urządzenia z ogólną nazwą. Bezpośrednio pod urządzeniami jest wyświetlany szary baner zawierający monit dla użytkownika z prośbą o identyfikację używanego urządzenia lub dodanie nowego.](./media/rename-reset-device-step2-1808.png) 
 
 3. Wybierz pozycję **Zresetuj kod dostępu**. Jeśli opcja resetowania kodu dostępu nie jest widoczna w górnej części strony, wybierz opcję **Więcej (...)**  > **Zresetuj kod dostępu**.   
 
    ![Strona szczegółów urządzenia dla wybranego urządzenia w witrynie Portal firmy, z listą linków w górnej części z opcjami Zmień nazwę, Usuń, Resetuj urządzenie, Resetuj kod dostępu oraz Zdalne blokowanie. ](./media/rename-reset-device-1808.png)   
 
-    ![Powiększony widok ikony Więcej wyróżnionej czerwoną strzałką.](./media/rename-reset-device-step3-more-1808.png)  
+    ![Zrzut ekranu przedstawiający ikonę Więcej wyróżnioną przy użyciu czerwonej strzałki.](./media/rename-reset-device-step3-more-1808.png)  
 
-4. Po wyświetleniu monitu kliknij przycisk **Wyloguj się**. Po wyświetleniu monitu zaloguj się ponownie. Musisz zalogować się ponownie w witrynie internetowej Portal firmy w ciągu pięciu minut; w przeciwnym wypadku aplikacja Portal firmy nie zresetuje kodu dostępu urządzenia.  
+4. Po wyświetleniu monitu kliknij przycisk **Wyloguj się**. Po wyświetleniu monitu zaloguj się ponownie. Zaloguj się ponownie w witrynie internetowej Portal firmy w ciągu pięciu minut; w przeciwnym razie aplikacja Portal firmy nie zresetuje kodu dostępu urządzenia.  
 
    > [!NOTE]
    > Musisz zalogować się ponownie, aby potwierdzić swoją tożsamość. Ma to na celu zapobieganie złośliwym próbom zresetowania kodu dostępu urządzenia.
@@ -76,7 +75,7 @@ W tej sekcji opisano resetowanie kodu dostępu oraz zachowanie związane z hasł
 
 **Android**: usuwa istniejący kodu dostępu i tworzy tymczasowy kod dostępu składający się z liter i cyfr.
 
-**iOS**: usuwa istniejący kod dostępu i nie tworzy tymczasowego kodu dostępu. Jeśli używasz czytnika linii papilarnych Touch ID do otwierania urządzenia lub dokonywania zakupów, musisz ponownie go skonfigurować.  
+**iOS**: usuwa istniejący kod dostępu i nie tworzy tymczasowego kodu dostępu. Jeśli używasz identyfikatora Touch do otwierania urządzenia lub dokonywania zakupów, musisz go skonfigurować ponownie.  
 
 **Windows 10 Mobile**: usuwa istniejący kod dostępu i tworzy tymczasowy kod dostępu składający się z liter i cyfr. Po skonfigurowaniu rozpoznawanie twarzy Windows Hello nadal będzie działać na urządzeniu.
 

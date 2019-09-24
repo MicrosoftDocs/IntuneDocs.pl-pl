@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/29/2019
+ms.date: 09/17/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8774b5af7555462b7754e4d0f8a6f50a330854ff
-ms.sourcegitcommit: 58a22f1b4a3fffffb1f7da228f470b3b0774fc42
+ms.openlocfilehash: ea31c06019643a3eaf10d79857dfdc319a8453c3
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70021826"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167213"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu iOS
 
@@ -215,7 +215,7 @@ Jeśli aplikacja korzysta już z biblioteki ADAL lub MSAL, wymagane są następu
 
 Ponadto aplikacje mogą zastąpić te ustawienia usługi Azure AD w środowisku uruchomieniowym. W tym celu wystarczy ustawić właściwości `aadAuthorityUriOverride`, `aadClientIdOverride` oraz `aadRedirectUriOverride` dla wystąpienia `IntuneMAMPolicyManager`.
 
-4. Upewnij się, że wykonano kroki udzielania uprawnień aplikacji iOS do usługi zasady ochrony aplikacji (APP). Postępuj zgodnie z instrukcjami w [przewodniku zawierającym wprowadzenie do SDK usługi Intune](https://docs.microsoft.com/intune/app-sdk-get-started#next-steps-after-integration) w sekcji „[Udzielanie aplikacji dostępu do usługi ochrony aplikacji w usłudze Intune (opcjonalnie)](https://docs.microsoft.com/intune/app-sdk-get-started#give-your-app-access-to-the-intune-app-protection-service-optional)”.  
+4. Upewnij się, że wykonano kroki udzielania uprawnień aplikacji iOS do usługi zasady ochrony aplikacji (APP). Postępuj zgodnie z instrukcjami w [przewodniku zawierającym wprowadzenie do SDK usługi Intune](app-sdk-get-started.md#next-steps-after-integration) w sekcji „[Udzielanie aplikacji dostępu do usługi ochrony aplikacji w usłudze Intune (opcjonalnie)](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional)”.  
 
 > [!NOTE]
 > Metoda z użyciem pliku Info.plist jest zalecana dla wszystkich ustawień, które są statyczne i nie wymagają określania w środowisku uruchomieniowym. Wartości przypisane do właściwości `IntuneMAMPolicyManager` są nadrzędne wobec odpowiednich wartości określonych w pliku Info.plist i obowiązują nawet po ponownym uruchomieniu aplikacji. Zestaw SDK będzie w dalszym ciągu używać ich do zaewidencjonowania zasad, dopóki użytkownik nie zostanie wyrejestrowany lub wartości nie zostaną wyczyszczone lub zmienione.
@@ -276,6 +276,9 @@ WebViewHandledURLSchemes | Tablica ciągów | Określa schematy adresów URL obs
 ### <a name="overview"></a>Przegląd
 
 Aby otrzymać zasady ochrony aplikacji usługi Intune, aplikacje muszą zainicjować żądanie rejestracji w usłudze MAM usługi Intune. W konsoli usługi Intune można skonfigurować aplikacje do otrzymywania zasad ochrony aplikacji po rejestracji urządzeń lub bez rejestracji. Zasady ochrony aplikacji bez rejestracji, określane również jako zasady **APP-WE** lub MAM-WE, umożliwiają zarządzanie aplikacjami przez usługę Intune bez konieczności rejestracji urządzenia do celów zarządzania urządzeniami mobilnymi (MDM) usługi Intune. W obu przypadkach do otrzymania zasad konieczna jest rejestracja w usłudze MAM usługi Intune.
+
+> [!Important]
+> Zestaw SDK aplikacji usługi Intune dla systemu iOS używa 256-bitowych kluczy szyfrowania po włączeniu szyfrowania przy użyciu zasad ochrony aplikacji. Wszystkie aplikacje muszą mieć bieżącą wersję zestawu SDK, aby umożliwić udostępnianie chronionych danych.
 
 ### <a name="apps-that-already-use-adal-or-msal"></a>Aplikacje korzystające już z biblioteki ADAL lub MSAL
 
@@ -412,9 +415,6 @@ Te metody delegatów zwracają obiekt `IntuneMAMEnrollmentStatus`, który zawier
 * Kod stanu wskazujący wynik żądania
 * Ciąg błędu z opisem kodu stanu
 * Obiekt `NSError`. Ten obiekt jest zdefiniowany w elemencie `IntuneMAMEnrollmentStatus.h` wraz z konkretnymi kodami stanu, które mogą być zwracane.
-
-> [!NOTE]
-> Te informacje służą wyłącznie do celów debugowania. Żadna logika biznesowa w Twojej aplikacji nie powinna być oparta na tych powiadomieniach. Te informacje mogą być wysyłane do usługi telemetrii na potrzeby debugowania lub monitorowania.
 
 ### <a name="sample-code"></a>Przykładowy kod
 
@@ -593,7 +593,7 @@ Administratorzy usługi Intune mogą przekazywać dane konfiguracji do miejsc do
 
 Aby uzyskać więcej informacji o możliwościach interfejsu API programu Graph, zobacz [Dokumentacja interfejsu API programu Graph](https://developer.microsoft.com/graph/docs/concepts/overview).
 
-Więcej informacji na temat tworzenia zasad docelowej konfiguracji aplikacji MAM w systemie iOS można znaleźć w sekcji poświęconej docelowej konfiguracji aplikacji MAM w artykule opisującym [sposób używania zasad konfiguracji aplikacji usługi Microsoft Intune dla systemu iOS](https://docs.microsoft.com/intune/app-configuration-policies-use-ios).
+Więcej informacji na temat tworzenia zasad docelowej konfiguracji aplikacji MAM w systemie iOS można znaleźć w sekcji poświęconej docelowej konfiguracji aplikacji MAM w artykule opisującym [sposób używania zasad konfiguracji aplikacji usługi Microsoft Intune dla systemu iOS](app-configuration-policies-use-ios.md).
 
 ## <a name="telemetry"></a>Telemetria
 
