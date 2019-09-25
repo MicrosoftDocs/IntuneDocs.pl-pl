@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b58b27264e2f6955ae4f16843bb3493e5fdc993e
-ms.sourcegitcommit: fe67741c62749fc9114e9191092ed8b786dd4ffa
+ms.openlocfilehash: 69f214b4fd3f3b7767e719c0f68f19e178a8e29c
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68270294"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167236"
 ---
 # <a name="use-intune-to-remediate-vulnerabilities-identified-by-microsoft-defender-atp"></a>Używanie usługi Intune do korygowania luk w zabezpieczeniach znalezionych przez usługę Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender  
 
@@ -37,13 +37,15 @@ W konsoli usługi Microsoft Defender Security Center administratorzy zabezpiecze
 Po zaakceptowaniu zadania administrator usługi Intune koryguje lukę w zabezpieczeniach za pośrednictwem usługi Intune, korzystając z wytycznych przedstawionych w ramach zadania zabezpieczenia.  
 
 Typowe akcje w przypadku korygowania to:  
+
 - **Blokowanie** uruchamiania przez aplikację.  
 - **Wdrażanie** aktualizacji systemu operacyjnego w celu wyeliminowania luki w zabezpieczeniach.  
 - **Modyfikowanie** wartości rejestru.  
 - **Wyłączanie** lub **włączanie** konfiguracji, która wpływa na lukę w zabezpieczeniach.  
 - Opcja **Wymaga uwagi** powiadamia administratora o zagrożeniu, gdy nie ma odpowiednich rekomendacji do wyświetlenia.  
 
-Przykładowy przepływ pracy:  
+Przykładowy przepływ pracy:
+
 - Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender odnajduje lukę w zabezpieczeniach aplikacji o nazwie Contoso Media Player w wersji 4. Administrator tworzy zadanie zabezpieczeń w celu zaktualizowania tej aplikacji. Contoso Media Player to niezarządzana aplikacja, która została wdrożona przy użyciu usługi Intune.  
 
   To zadanie zabezpieczeń jest wyświetlane w konsoli usługi Intune ze stanem Oczekujące:  
@@ -61,13 +63,16 @@ Przykładowy przepływ pracy:
 ## <a name="prerequisites"></a>Wymagania wstępne  
 
 **Subskrypcje**:  
+
 - Microsoft Intune  
 - Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender ([utwórz konto bezpłatnej wersji próbnej](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-main-abovefoldlink)).  
 
 **Konfiguracje usługi Intune dla Zaawansowanej ochrony przed zagrożeniami**:  
+
 - Skonfigurowanie połączenia między usługami za pomocą Zaawansowanej ochrony przed zagrożeniami w usłudze Microsoft Defender.  
 - Wdrożenie zasad zgodności urządzeń za pomocą profilu typu **Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender (Windows 10 Desktop)** na urządzeniach, dla których ryzyko będzie oceniane przy użyciu Zaawansowanej ochrony przed zagrożeniami.
-  Aby uzyskać informacje dotyczące sposobu konfigurowania usługi Intune do pracy z Zaawansowaną ochrony przed zagrożeniami, zobacz [Wymuszanie zgodności dla Zaawansowanej ochrony przed zagrożeniami z dostępem warunkowym w usłudze Intune](https://docs.microsoft.com/intune/advanced-threat-protection#enable-microsoft-defender-atp-in-intune).  
+
+  Aby uzyskać informacje dotyczące sposobu konfigurowania usługi Intune do pracy z Zaawansowaną ochrony przed zagrożeniami, zobacz [Wymuszanie zgodności dla Zaawansowanej ochrony przed zagrożeniami z dostępem warunkowym w usłudze Intune](advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune).  
 
 ## <a name="work-with-security-tasks"></a>Praca z zadaniami zabezpieczeń  
 
@@ -89,6 +94,6 @@ Przykładowy przepływ pracy:
 Po pomyślnym zakończeniu korygowania ocena narażenia na ryzyko może zostać obniżona w Zaawansowanej ochronie przed zagrożeniami w oparciu o nowe informacje ze skorygowanych urządzeń. 
 
 ## <a name="next-steps"></a>Następne kroki
-Dowiedz się więcej o usługach Intune i [Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender](https://docs.microsoft.com/intune/advanced-threat-protection)  
-Zapoznaj się z usługą [Mobile Threat Defense](https://docs.microsoft.com/intune/mobile-threat-defense) w usłudze Intune  
+Dowiedz się więcej o usługach Intune i [Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender](advanced-threat-protection.md)  
+Zapoznaj się z usługą [Mobile Threat Defense](mobile-threat-defense.md) w usłudze Intune  
 Zapoznaj się z [pulpitem nawigacyjnym funkcji zarządzania zagrożeniami i lukami w zabezpieczeniach](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/tvm-dashboard-insights) w Zaawansowanej ochronie przed zagrożeniami w usłudze Microsoft Defender

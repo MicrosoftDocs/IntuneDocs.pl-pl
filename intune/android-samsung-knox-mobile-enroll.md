@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4236b3fd1b7dab25a3450b95b75f3623ec7ba95
-ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
+ms.openlocfilehash: 02006acc58789f2a6fb5944e677a1983f7ea9614
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71071641"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167420"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>Automatyczne rejestrowanie urządzeń z systemem Android za pomocą rozwiązania Knox Mobile Enrollment firmy Samsung
 
@@ -105,7 +105,7 @@ W przypadku urządzeń zarejestrowanych w usłudze Intune przy użyciu rozwiąza
 
 - **Bez skojarzenia nazwy użytkownika:** w portalu rozwiązania Knox w obszarze **Szczegóły urządzenia** dla dodawanych urządzeń pozostaw puste pola **Identyfikator użytkownika** i **Hasło**. Ta opcja wymaga, aby użytkownicy końcowi wprowadzali nazwę użytkownika i hasło podczas rejestrowania w usłudze Intune.
 
-- **Ze skojarzeniem nazwy użytkownika:** w portalu rozwiązania Knox w obszarze **Szczegóły urządzenia** dla dodawanych urządzeń wypełnij pole **Identyfikator użytkownika** (na przykład nazwa przypisanego użytkownika lub konto [menedżera rejestracji urządzeń](https://docs.microsoft.com/intune/device-enrollment-manager-enroll)). Ta opcja spowoduje wstępne wypełnienie nazwy użytkownika, a użytkownik końcowy będzie musiał wprowadzić hasło podczas rejestrowania w usłudze Intune.
+- **Ze skojarzeniem nazwy użytkownika:** w portalu rozwiązania Knox w obszarze **Szczegóły urządzenia** dla dodawanych urządzeń wypełnij pole **Identyfikator użytkownika** (na przykład nazwa przypisanego użytkownika lub konto [menedżera rejestracji urządzeń](device-enrollment-manager-enroll.md)). Ta opcja spowoduje wstępne wypełnienie nazwy użytkownika, a użytkownik końcowy będzie musiał wprowadzić hasło podczas rejestrowania w usłudze Intune.
 
 > [!NOTE]
 >

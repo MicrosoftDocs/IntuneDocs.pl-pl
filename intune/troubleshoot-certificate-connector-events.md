@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a282662032fe77cbf39da279c587bff31ad9e24
-ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
+ms.openlocfilehash: 682d51269798dff181a3bd8384268da862118a70
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123227"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167760"
 ---
 # <a name="intune-certificate-connector-events-and-diagnostic-codes"></a>Zdarzenia łącznika certyfikatów usługi Intune i kody diagnostyczne
 
@@ -60,7 +60,7 @@ Począwszy od wersji 6.1806.x.x, usługa łącznika Intune rejestruje zdarzenia 
 | -------------   | -------------   | -------------      |
 | 0x00000000 | Powodzenie  | Powodzenie |
 | 0x00000400 | PKCS_Issue_CA_Unavailable  | Urząd certyfikacji jest nieprawidłowy lub nieosiągalny. Sprawdź, czy urząd certyfikacji jest dostępny i Twój serwer może się z nim komunikować. |
-| 0x00000401 | Symantec_ClientAuthCertNotFound  | Nie odnaleziono certyfikatu autoryzacji klienta firmy Symantec w lokalnym magazynie certyfikatów. Aby uzyskać więcej informacji, zapoznaj się z artykułem [Instalacja certyfikatu autoryzacji firmy Symantec](https://docs.microsoft.com/intune/certificates-symantec-configure#install-the-symantec-registration-authorization-certificate).  |
+| 0x00000401 | Symantec_ClientAuthCertNotFound  | Nie odnaleziono certyfikatu autoryzacji klienta firmy Symantec w lokalnym magazynie certyfikatów. Aby uzyskać więcej informacji, zapoznaj się z artykułem [Instalacja certyfikatu autoryzacji firmy Symantec](certificates-digicert-configure.md#install-the-digicert-ra-certificate).  |
 | 0x00000402 | RevokeCert_AccessDenied  | Określone konto nie ma uprawnień do odwołania certyfikatu z urzędu certyfikacji. Zobacz pole Nazwa urzędu certyfikacji w szczegółach komunikatu o zdarzeniu, aby określić urząd certyfikacji.  |
 | 0x00000403 | CertThumbprint_NotFound  | Nie można odnaleźć certyfikatu zgodnego z danymi wejściowymi. Zarejestruj łącznik certyfikatów i spróbuj ponownie. |
 | 0x00000404 | Certificate_NotFound  | Nie można odnaleźć certyfikatu zgodnego z podanymi danymi wejściowymi. Ponownie zarejestruj łącznik certyfikatów i spróbuj ponownie. |

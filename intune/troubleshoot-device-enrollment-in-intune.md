@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9b995841152ee7290e41eed7988ff2b52b6bc66c
-ms.sourcegitcommit: c3a4fefbac8ff7badc42b1711b7ed2da81d1ad67
+ms.openlocfilehash: 23b3e8df9b3d5bafb567b6795b08d4be32aa8c88
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375235"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167805"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Rozwiązywanie problemów dotyczących rejestrowania urządzeń w usłudze Microsoft Intune
 
@@ -447,7 +447,7 @@ Lista błędów rejestracji urządzeń z systemem iOS znajduje się w naszej dok
 
 |Komunikat o błędzie|Problem|Rozwiązanie|
 |---|---|---|
-|**Administrator IT musi przypisać licencję w celu udzielenia praw dostępu**<br>Administrator IT nie nadał Ci praw dostępu do korzystania z tej aplikacji. Uzyskaj pomoc od administratora IT lub spróbuj ponownie później.|Nie można zarejestrować urządzenia, ponieważ konto użytkownika nie ma potrzebnej licencji.|Aby umożliwić użytkownikom rejestrowanie urządzeń, należy przypisać im wymaganą licencję. Ten komunikat oznacza, że użytkownicy mają niewłaściwy typ licencji dla urzędu zarządzania urządzeniami mobilnymi. Na przykład użytkownicy zobaczą ten błąd, gdy spełnione są oba z następujących warunków: <ol><li>usługa Intune została ustawiona jako urząd zarządzania urządzeniami mobilnymi</li><li>używana jest licencja programu System Center 2012 R2 Configuration Manager.</li></ol>Zobacz informacje na temat [przypisywania licencji usługi Intune do kont użytkowników](https://docs.microsoft.com/intune/licenses-assign).|
+|**Administrator IT musi przypisać licencję w celu udzielenia praw dostępu**<br>Administrator IT nie nadał Ci praw dostępu do korzystania z tej aplikacji. Uzyskaj pomoc od administratora IT lub spróbuj ponownie później.|Nie można zarejestrować urządzenia, ponieważ konto użytkownika nie ma potrzebnej licencji.|Aby umożliwić użytkownikom rejestrowanie urządzeń, należy przypisać im wymaganą licencję. Ten komunikat oznacza, że użytkownicy mają niewłaściwy typ licencji dla urzędu zarządzania urządzeniami mobilnymi. Na przykład użytkownicy zobaczą ten błąd, gdy spełnione są oba z następujących warunków: <ol><li>usługa Intune została ustawiona jako urząd zarządzania urządzeniami mobilnymi</li><li>używana jest licencja programu System Center 2012 R2 Configuration Manager.</li></ol>Zobacz informacje na temat [przypisywania licencji usługi Intune do kont użytkowników](licenses-assign.md).|
 
 
 

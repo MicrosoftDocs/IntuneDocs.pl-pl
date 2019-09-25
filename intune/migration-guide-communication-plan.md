@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5688039101e7cecf5631a0ad8dee4f343e183d96
-ms.sourcegitcommit: b30a2ba2b67aa2fc3421f0b2f6c5f361a0de612a
+ms.openlocfilehash: 325a0efeff56a2bc930fa0082023202f9c2e7696
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69022857"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71166777"
 ---
 # <a name="plan-communications"></a>Planowanie komunikacji
 
@@ -59,6 +59,6 @@ Utworzyliśmy krótkie filmy wideo z instrukcjami krok po kroku, aby pomóc uży
 
 W usłudze Intune są dostępne dodatkowe zasoby zachęcające użytkowników do rejestracji urządzeń:
 
-- [Jak przekazywać wiedzę użytkownikom końcowym na temat usługi Microsoft Intune](https://docs.microsoft.com/intune/end-user-educate) omawia kroki rejestracji związane z platformą systemu operacyjnego dla urządzeń przenośnych.
-- W temacie [Rejestracja urządzeń z usługą Intune dla administratorów IT](https://docs.microsoft.com/intune/device-enrollment) wyjaśniono, jak zarejestrować urządzenia z systemem Android, iOS i Mac w usłudze Intune.
+- [Jak przekazywać wiedzę użytkownikom końcowym na temat usługi Microsoft Intune](end-user-educate.md) omawia kroki rejestracji związane z platformą systemu operacyjnego dla urządzeń przenośnych.
+- W temacie [Rejestracja urządzeń z usługą Intune dla administratorów IT](device-enrollment.md) wyjaśniono, jak zarejestrować urządzenia z systemem Android, iOS i Mac w usłudze Intune.
 - Udostępnij [adres URL aplikacji Portal firmy](http://go.microsoft.com/fwlink/?LinkID=396941) użytkownikom systemów Android, iOS i Windows. Ten adres URL przekierowuje do odpowiedniej listy aplikacji Portal firmy na urządzeniach z systemem Android, iOS i Windows.

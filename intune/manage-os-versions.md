@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 361ef17b-1ee0-4879-b7b1-d678b0787f5a
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a6425c1346255caf70e73feef2aec1097625f921
-ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
+ms.openlocfilehash: 4465a8715b84e06e337fb7dee5af4308cdd153ae
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68427100"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167655"
 ---
 # <a name="manage-operating-system-versions-with-intune"></a>Zarządzanie wersjami systemu operacyjnego w usłudze Intune
 Na nowoczesnych platformach urządzeń przenośnych i komputerów ważne aktualizacje, poprawki i nowe wersje pojawiają się bardzo często. Aktualizacjami i poprawkami dla systemu Windows możesz zarządzać w pełni, ale w przypadku systemów iOS i Android wymagane jest uczestnictwo użytkowników końcowych w tym procesie.  Usługa Microsoft Intune ma funkcje pomagające uporządkować zarządzanie wersjami systemów operacyjnych na różnych platformach.
@@ -32,30 +32,34 @@ Usługa Intune sprawdzi się w następujących typowych scenariuszach:
   
 ## <a name="operating-system-version-control-using-intune-mobile-device-management-mdm-enrollment-restrictions"></a>Kontrolowanie wersji systemu operacyjnego za pomocą ograniczeń rejestracji w systemie zarządzania urządzeniami przenośnymi (MDM) usługi Intune
 Ograniczenia rejestracji systemu MDM usługi Intune pozwalają zdefiniować wymagania co do urządzenia klienckiego zanim zezwolisz na rejestrację urządzenia. Celem jest wymaganie, aby użytkownicy końcowi rejestrowali tylko zgodne urządzenia przed uzyskaniem dostępu do zasobów organizacji. Wymagania dotyczące urządzeń obejmują minimalną i maksymalną dozwoloną wersję systemu operacyjnego dla obsługiwanych platform.
- 
-![Blok ograniczeń konfiguracji platformy](./media/os-version-platform-configurations.png) 
- 
+
+![Blok ograniczeń konfiguracji platformy](./media/os-version-platform-configurations.png)
+
 ### <a name="in-practice"></a>W praktyce
-Organizacje używają ograniczeń typu urządzeń, aby kontrolować dostęp do zasobów organizacji, używając następujących ustawień: 
-1. Użyj minimalnej wersji systemu operacyjnego, aby użytkownicy końcowi korzystali z aktualnych platform obsługiwanych w Twojej organizacji. 
+
+Organizacje używają ograniczeń typu urządzeń, aby kontrolować dostęp do zasobów organizacji, używając następujących ustawień:
+
+1. Użyj minimalnej wersji systemu operacyjnego, aby użytkownicy końcowi korzystali z aktualnych platform obsługiwanych w Twojej organizacji.
 2. Nie określaj maksymalnej wersji systemu operacyjnego (brak ograniczenia) albo ustaw ją na ostatnią wersję zweryfikowaną przez Twoją organizację, aby był czas na wewnętrzne testy nowych wersji systemu operacyjnego.
 
-Aby uzyskać szczegółowe informacje, zobacz [Ustawianie ograniczeń typu urządzenia](https://docs.microsoft.com/intune/enrollment-restrictions-set#create-a-device-type-restriction).
- 
+Aby uzyskać szczegółowe informacje, zobacz [Ustawianie ograniczeń typu urządzenia](enrollment-restrictions-set.md#create-a-device-type-restriction).
+
 ## <a name="operating-system-version-reporting-and-compliance-with-intune-mdm-device-compliance-policies"></a>Raportowanie wersji systemu operacyjnego i zgodność z zasadami zgodności urządzeń w systemie MDM usługi Intune
-Zasady zgodności urządzeń systemu MDM usługi Intune zapewniają następujące narzędzia: 
+
+Zasady zgodności urządzeń systemu MDM usługi Intune zapewniają następujące narzędzia:
+
 - Określanie reguł zgodności
 - Wyświetlanie stanu zgodności za pośrednictwem raportowania
 - Stosowanie kwarantanny lub dostępu warunkowego dla urządzeń w przypadku braku zgodności
 
 Podobnie jak w przypadku ograniczeń rejestracji, zasady zgodności urządzeń zawierają minimalną i maksymalną wersję systemu operacyjnego. Zasady mają również oś czasu zgodności, dzięki której można dać użytkownikom czas na osiągnięcie zgodności. Zasady zgodności urządzeń sprawiają, że zarejestrowane urządzenia użytkowników końcowych pozostają zgodne z zasadami organizacji.
 
-![Zgodność urządzenia — akcje podejmowane względem niezgodnych urządzeń](./media/os-version-actions-noncompliance.png) 
+![Zgodność urządzenia — akcje podejmowane względem niezgodnych urządzeń](./media/os-version-actions-noncompliance.png)
 
 ### <a name="in-practice"></a>W praktyce
 Organizacje stosują zasady zgodności urządzeń dla tych samych scenariuszy co ograniczenia rejestracji. Te zasady powodują, że użytkownicy korzystają z aktualnych wersji systemów operacyjnych zweryfikowanych w Twojej organizacji. Gdy urządzenia użytkowników końcowych utracą zgodność, dostęp do zasobów organizacji może zostać zablokowany przez zastosowanie dostępu warunkowego, który zostanie wycofany, gdy użytkownicy znów będą mieć systemy operacyjne z zakresu obsługiwanego przez organizację. Użytkownicy końcowi są powiadamiani, że ich urządzenia są niezgodne, i przedstawiane im są kroki, które muszą wykonać, aby odzyskać dostęp do zasobów.   
 
-Aby uzyskać szczegółowe informacje, zobacz [Get started with device compliance (Wprowadzenie do zgodności urządzeń)](https://docs.microsoft.com/intune/device-compliance-get-started).
+Aby uzyskać szczegółowe informacje, zobacz [Get started with device compliance (Wprowadzenie do zgodności urządzeń)](device-compliance-get-started.md).
  
 ## <a name="operating-system-version-controls-using-intune-app-protection-policies"></a>Kontrolowanie wersji systemu operacyjnego za pomocą zasad ochrony aplikacji usługi Intune    
 Zasady ochrony aplikacji usługi Intune i ustawienia dostępu w systemie zarządzania aplikacjami mobilnymi (MAM) pozwalają określać minimalną wersję systemu operacyjnego w warstwie aplikacji. Dzięki temu można informować użytkowników o konieczności zaktualizowania ich systemów operacyjnych do określonej minimalnej wersji, zachęcać ich do tego, a nawet tego wymagać.
@@ -70,7 +74,7 @@ Dostępne są dwie opcje:
 ### <a name="in-practice"></a>W praktyce
 Obecnie organizacje używają ustawień zasad ochrony aplikacji, gdy aplikacje są otwierane lub gdy ich działanie jest wznawiane, aby informować użytkowników końcowych o konieczności dbania o ich aktualność. Przykładowa konfiguracja może być następująca: użytkownicy są ostrzegani, gdy używana przez nich wersja jest o jedną starsza od aktualnej, a blokowani, gdy jest starsza o dwie od aktualnej.
  
-Aby uzyskać szczegółowe informacje, zobacz [Tworzenie i przypisywanie zasad ochrony aplikacji](https://docs.microsoft.com/intune/app-protection-policies).
+Aby uzyskać szczegółowe informacje, zobacz [Tworzenie i przypisywanie zasad ochrony aplikacji](app-protection-policies.md).
 
 ## <a name="managing-a-new-operating-system-version-rollout"></a>Zarządzanie wdrażaniem nowej wersji systemu operacyjnego
 Z funkcji usługi Intune opisanych w tym artykule można korzystać, aby przejść w organizacji na nową wersję systemu operacyjnego w założonym czasie. Następujące kroki stanowią przykładowy model wdrażania, w ramach którego użytkownicy przejdą w ciągu 7 dni z systemu operacyjnego v1 na system operacyjny v2.
@@ -84,8 +88,9 @@ Z funkcji usługi Intune opisanych w tym artykule można korzystać, aby przejś
   - Te zasady wymagają zaktualizowania urządzeń, aby możliwy był dalszy dostęp do danych organizacji. Gdy urządzenie działa w trybie dostępu warunkowego, chronione usługi są blokowane. Aplikacje z obsługą zasad ochrony aplikacji są blokowane po otwarciu lub przy próbie uzyskania dostępu do danych organizacji.
 
 ## <a name="next-steps"></a>Następne kroki
-Użyj następujących zasobów, aby zarządzać wersjami systemów operacyjnych w swojej organizacji: 
 
-- [Ustawianie ograniczeń typu urządzeń](https://docs.microsoft.com/intune/enrollment-restrictions-set#create-a-device-type-restriction)
-- [Wprowadzenie do zasad zgodności urządzeń](https://docs.microsoft.com/intune/device-compliance-get-started)
-- [Tworzenie i przypisywanie zasad ochrony aplikacji](https://docs.microsoft.com/intune/app-protection-policies)
+Użyj następujących zasobów, aby zarządzać wersjami systemów operacyjnych w swojej organizacji:
+
+- [Ustawianie ograniczeń typu urządzeń](enrollment-restrictions-set.md#create-a-device-type-restriction)
+- [Wprowadzenie do zasad zgodności urządzeń](device-compliance-get-started.md)
+- [Tworzenie i przypisywanie zasad ochrony aplikacji](app-protection-policies.md)

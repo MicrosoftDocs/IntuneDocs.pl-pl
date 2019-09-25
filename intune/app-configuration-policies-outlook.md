@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 14eded43200aed7e9ebf4454bcde61133351e4e2
-ms.sourcegitcommit: 76d59edfd5900ce33c64470ae604eb3db016c8ca
+ms.openlocfilehash: d6fe60cf53f88186448cd9586d5c75fca4d517ad
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69979204"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167391"
 ---
 # <a name="microsoft-outlook-configuration-settings"></a>Ustawienia konfiguracji programu Microsoft Outlook 
 
@@ -30,7 +30,7 @@ Zarejestrowane urządzenia:
 - Aby utworzyć zasady konfiguracji aplikacji dla zarządzanych urządzeń z systemem iOS, zobacz [Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem iOS](app-configuration-policies-use-ios.md). 
 - Aby utworzyć zasady konfiguracji aplikacji dla zarządzanych urządzeń z systemem Android, zobacz [Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem Android](app-configuration-policies-use-android.md). 
 
-W przypadku niezarejestrowanych urządzeń zapoznaj się z artykułem [Dodawanie zasad konfiguracji aplikacji dla zarządzanych aplikacji bez rejestracji urządzeń](https://docs.microsoft.com/intune/app-configuration-policies-managed-app), aby utworzyć zasady konfiguracji aplikacji dla programu Outlook dla systemów iOS i Android.
+W przypadku niezarejestrowanych urządzeń zapoznaj się z artykułem [Dodawanie zasad konfiguracji aplikacji dla zarządzanych aplikacji bez rejestracji urządzeń](app-configuration-policies-managed-app.md), aby utworzyć zasady konfiguracji aplikacji dla programu Outlook dla systemów iOS i Android.
 
 ## <a name="configuration-settings"></a>Ustawienia konfiguracji
 

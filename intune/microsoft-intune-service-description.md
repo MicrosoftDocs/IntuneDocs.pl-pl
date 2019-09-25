@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c813e413d0d3447955f785e0aff1e0edd3501b6a
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 972f58da34c73253c85f4ca6183ad6fd4ce4c2e7
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67882878"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167853"
 ---
 # <a name="microsoft-intune-service-description"></a>Opis usługi Microsoft Intune
 
@@ -33,7 +33,7 @@ Usługa Intune to oparta na chmurze usługa zarządzania mobilnością w przedsi
 
 Usługa Intune jest ściśle zintegrowana z usługą Azure Active Directory (Azure AD), co umożliwia kontrolowanie tożsamości i dostępu, a także z usługą Azure Information Protection na potrzeby ochrony danych. Można ją także zintegrować z programem System Center Configuration Manager, aby rozszerzyć możliwości zarządzania.
 
-Aby dowiedzieć się więcej o zarządzaniu urządzeniami i aplikacjami oraz o ochronie danych firmowych za pomocą usługi Intune, zobacz [Dokumentacja usługi Intune](https://docs.microsoft.com/intune/).
+Aby dowiedzieć się więcej o zarządzaniu urządzeniami i aplikacjami oraz o ochronie danych firmowych za pomocą usługi Intune, zobacz [Dokumentacja usługi Intune](index.yml).
 
 ## <a name="30-day-free-trial"></a>30-dniowa bezpłatna wersja próbna
 Możesz rozpocząć korzystanie z usługi Intune w ramach 30-dniowej bezpłatnej wersji próbnej, która zawiera 100 licencji użytkowników. Aby rozpocząć korzystanie z bezpłatnej wersji próbnej, [odwiedź stronę rejestracji w usłudze Intune](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20). Jeśli Twoja organizacja ma umowę Enterprise Agreement lub równoważną umowę licencjonowania zbiorowego, skontaktuj się z przedstawicielem firmy Microsoft, aby skonfigurować bezpłatną wersję próbną.

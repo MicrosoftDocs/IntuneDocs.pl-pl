@@ -8,7 +8,6 @@ ms.author: erikje
 manager: dougeby
 ms.date: 02/28/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4e25ab5a546f20309853346d0d4ded42fee6e8b
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: fed90635a450ed59827482d2f2c03d17a05d9673
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "59568313"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "71239685"
 ---
 # <a name="add-users-and-grant-administrative-permission-to-intune"></a>Dodawanie użytkowników i przyznawanie uprawnień administracyjnych do usługi Intune
 
@@ -56,7 +55,7 @@ Można ręcznie dodawać użytkowników do subskrypcji usługi Intune za pośred
 6. Wybierz pozycję **Dodaj**, aby utworzyć nowego użytkownika.
 
 ### <a name="add-intune-users-in-the-azure-portal"></a>Dodawanie użytkowników usługi Intune w witrynie Azure Portal
-1. Zaloguj się w witrynie [Azure Portal](https://portal.azure.com), a następnie wybierz pozycję **Wszystkie usługi** > **Monitorowanie i zarządzanie** > **Intune**. Możesz również *wyszukać zasoby* i znaleźć usługę **Intune**.
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Wybierz pozycję **Użytkownicy** > **Wszyscy użytkownicy**.
 3. W centrum administracyjnym wybierz pozycję **Nowy użytkownik**.
    ![Zrzut ekranu przedstawiający dodawanie nowego użytkownika](media/intune-add-user.png)
@@ -65,7 +64,7 @@ Można ręcznie dodawać użytkowników do subskrypcji usługi Intune za pośred
    - **Nazwa użytkownika** — nowa nazwa w portalu usługi Azure Active Directory ![Zrzut ekranu przedstawiający dodawanie nazwy i nazwy użytkownika](media/intune-add-user-info.png). Wybierz przycisk **OK**, aby kontynuować.
 5. Opcjonalnie możesz określić następujące właściwości użytkownika:
    - **Profil** — informacje służbowe, w tym **Stanowisko** i **Dział**
-   -  **Grupy** — wybierz grupy do dodania dla użytkownika
+   - **Grupy** — wybierz grupy do dodania dla użytkownika
    - **Rola katalogu** — przyznaj użytkownikowi uprawnienia administracyjne, w tym rolę administratora usługi Intune.
 
    Wybierz pozycję **Utwórz**, aby dodać nowego użytkownika do usługi Intune.
@@ -119,4 +118,4 @@ Istnieje możliwość skonfigurowania synchronizacji katalogów w celu zaimporto
 Jedynym narzędziem potrzebnym do synchronizowania kont użytkowników z usługą Azure AD jest [Kreator Azure AD Connect](https://www.microsoft.com/download/details.aspx?id=47594). Kreator Azure AD Connect zapewnia uproszczoną obsługę i przewodnik łączenia lokalnej infrastruktury tożsamości z chmurą. Wybierz topologię i potrzeby (jeden lub wiele katalogów, synchronizację skrótów haseł, uwierzytelnianie przekazywane lub federację). Kreator wdroży i skonfiguruje wszystkie składniki wymagane do uruchomienia połączenia. Dotyczy to następujących składników: usług synchronizacji, Usług federacyjne Active Directory (AD FS) i modułu Azure AD PowerShell.
 
 > [!TIP]
-> Kreator Azure AD Connect obejmuje funkcje, które były wcześniej dostępne w narzędziach Dirsync i Azure AD Sync. Dowiedz się więcej na temat [integracji katalogów](http://technet.microsoft.com/library/jj573653.aspx). Aby dowiedzieć się więcej o synchronizowaniu kont użytkowników z katalogu lokalnego do usługi Azure AD, zobacz [Podobieństwa między usługami Active Directory i Azure AD](http://technet.microsoft.com/library/dn518177.aspx).
+> Kreator Azure AD Connect obejmuje funkcje, które były wcześniej dostępne w narzędziach Dirsync i Azure AD Sync. Dowiedz się więcej na temat [integracji katalogów](https://technet.microsoft.com/library/jj573653.aspx). Aby dowiedzieć się więcej o synchronizowaniu kont użytkowników z katalogu lokalnego do usługi Azure AD, zobacz [Podobieństwa między usługami Active Directory i Azure AD](https://technet.microsoft.com/library/dn518177.aspx).

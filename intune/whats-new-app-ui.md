@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1710fd315803c4b47ad3be343893f93f7d155135
-ms.sourcegitcommit: 27e63a96d15bc4062af68c2764905631bd928e7b
+ms.openlocfilehash: c8378986b1cf405a92e34b4c5bd805b169feaf32
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71061734"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167875"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizacje interfejsu użytkownika dla aplikacji użytkownika końcowego usługi Intune
 Dowiedz się więcej o najnowszych aktualizacjach aplikacji usługi Microsoft Intune. Regularnie dodajemy nowe funkcje do aplikacji i witryny internetowej Portal firmy w usłudze Intune oraz usprawniamy te istniejące. Jeśli jesteś administratorem usługi Intune lub osobą odpowiedzialną za pomoc techniczną, ten artykuł zawiera informacje wymagane do wykonywania następujących czynności:
@@ -120,7 +120,7 @@ Dodano nowy ekran o nazwie **Kategorie aplikacji** w celu poprawy środowiska pr
 ## <a name="week-of-november-12-2018"></a>Tydzień 12 listopada 2018 r.
 
 ### <a name="windows-company-portal-keyboard-shortcuts----2771518---"></a>Skróty klawiaturowe w aplikacji Portal firmy dla systemu Windows <!-- 2771518 -->
-Użytkownicy końcowi będą teraz mogli wyzwalać akcje aplikacji i urządzeń w aplikacji Portal firmy dla systemu Windows [za pomocą skrótów klawiaturowych (akceleratorów)](https://docs.microsoft.com/intune/company-portal-app#windows-company-portal-keyboard-shortcuts).
+Użytkownicy końcowi będą teraz mogli wyzwalać akcje aplikacji i urządzeń w aplikacji Portal firmy dla systemu Windows [za pomocą skrótów klawiaturowych (akceleratorów)](company-portal-app.md#windows-company-portal-keyboard-shortcuts).
 
 ## <a name="week-of-october-22-2018"></a>Tydzień 22 października 2018 r.
 
@@ -572,4 +572,4 @@ Są to plany dotyczące metod ulepszania środowiska użytkownika przez aktualiz
 ## <a name="see-also"></a>Zobacz także
 * [Blog usługi Microsoft Intune](http://go.microsoft.com/fwlink/?LinkID=273882)
 * [Plan platformy w chmurze](https://www.microsoft.com/cloud-platform/roadmap)
-* [Co nowego w usłudze Intune](https://docs.microsoft.com/intune/whats-new)
+* [Co nowego w usłudze Intune](whats-new.md)

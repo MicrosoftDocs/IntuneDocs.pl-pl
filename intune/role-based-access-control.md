@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e636e2df8271210d8938727eb99491e1ffdd5bdc
-ms.sourcegitcommit: d2989b9992d10d133573d9bc31479659fb7e242c
+ms.openlocfilehash: a5372d079b08a3a324d8ef1d98d26c07073ccd45
+ms.sourcegitcommit: 49f25efb9bc0f16f587f27878cf45de5e4e6a27f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 09/18/2019
-ms.locfileid: "71080031"
+ms.locfileid: "71094668"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Kontrola dostępu oparta na rolach (RBAC) w usłudze Microsoft Intune
 
@@ -43,7 +43,7 @@ Aby wyświetlić rolę, wybierz pozycję **Intune** > **Role** > **Wszystkie rol
 - **Przypisania**: lista [przypisań ról]( assign-role.md) określających, którzy użytkownicy mają dostęp do konkretnych użytkowników/urządzeń. Rola może mieć wiele przypisań, a użytkownik może występować w wielu przypisaniach.
 
 ### <a name="built-in-roles"></a>Wbudowane role
-Wbudowane role można przypisywać do grup bez konieczności dalszej konfiguracji. Nie można usuwać ani edytować nazwy, opisu, typu ani uprawnień roli wbudowanej. Aby uzyskać pełną listę uprawnień dla poszczególnych ról wbudowanych, zobacz [Tabela kontroli RBAC przy użyciu usługi Intune](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a).
+Wbudowane role można przypisywać do grup bez konieczności dalszej konfiguracji. Nie można usuwać ani edytować nazwy, opisu, typu ani uprawnień roli wbudowanej.
 
 - **Pracownik punktu pomocy**: wykonuje zadania zdalne na użytkownikach i urządzeniach i może przypisywać aplikacje lub zasady do użytkowników lub urządzeń.
 - **Menedżer zasad i profilów**: zarządza zasadami zgodności, profilami konfiguracji, rejestracją Apple, identyfikatorami urządzeń firmowych oraz punktami odniesienia zabezpieczeń.

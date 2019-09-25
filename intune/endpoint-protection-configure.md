@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/18/2019
+ms.date: 09/19/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 mr.reviewer: karthib
-ms.openlocfilehash: 13e8c7fd0c822a2bdfbf7c183ea6752f99cf7991
-ms.sourcegitcommit: d2ac912b834c4840de9cc92ba1815b6ecfbfb52b
+ms.openlocfilehash: 8248991e1facc78def580d75a5b7e7e6ba353c98
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68482768"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163682"
 ---
 # <a name="add-endpoint-protection-settings-in-intune"></a>Dodawanie ustawień programu Endpoint Protection w usłudze Intune  
 
@@ -54,7 +54,6 @@ Przed utworzeniem profilu zapoznaj się z następującymi artykułami ze szczeg�
    Profil zostanie utworzony i wyświetlony na stronie listy profilów. Aby przypisać ten profil do grup, zobacz [przypisywanie profilów urządzeń](device-profile-assign.md).  
 
 ## <a name="add-custom-firewall-rules-for-windows-10-devices"></a>Dodawanie niestandardowych reguł zapory dla urządzeń z systemem Windows 10  
-***Niestandardowe reguły zapory są dostępne w publicznej wersji zapoznawczej.***  
 
 Podczas konfigurowania zapory Windows Defender w ramach profilu zawierającego reguły ochrony punktu końcowego dla systemu Windows 10 można skonfigurować niestandardowe reguły dla zapór. Reguły niestandardowe umożliwiają rozszerzenie wstępnie zdefiniowanego zestawu reguł zapory obsługiwanego w systemie Windows 10.  
 

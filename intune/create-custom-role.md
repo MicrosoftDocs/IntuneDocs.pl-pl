@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 10366a41be05dbedee5cd84a1222a727a02a1b93
-ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
+ms.openlocfilehash: 6b7e8f5077f2052a11c980ae3f5629af810a8a0b
+ms.sourcegitcommit: 49f25efb9bc0f16f587f27878cf45de5e4e6a27f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71071479"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71094693"
 ---
 # <a name="create-a-custom-role-in-intune"></a>Tworzenie roli niestandardowej w usłudze Intune
 
@@ -41,7 +41,7 @@ Aby możliwe było tworzenie, edytowanie i przypisywanie ról, konto musi mieć 
 
 4. W bloku **Dodaj rolę niestandardową** wprowadź nazwę i opis nowej roli, a następnie kliknij pozycję **Uprawnienia**.
 
-5. W bloku **Uprawnienia** wybierz uprawnienia do użycia w ramach tej roli. Użyj [tabeli Intune RBAC](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a) aby określić uprawnienia, które chcesz zastosować.
+5. W bloku **Uprawnienia** wybierz uprawnienia do użycia w ramach tej roli.
 
 6. W bloku **Zakres (tagi)** wybierz tagi dla tej roli. Rola ta umożliwia dostęp do zasobów, które również mają te tagi.
 
