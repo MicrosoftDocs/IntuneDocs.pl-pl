@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3bbd90b5a317629bd5b4d87b619d89023053518d
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 528819452accf4a7f17e54b3c05693dee5cab74f
+ms.sourcegitcommit: 6a946a055a2014e00a4ca9d71986727a4ebbc777
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67884256"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71239454"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Dodawanie ustawień sieci Wi-Fi dla urządzeń z systemem Windows 10 lub nowszym w usłudze Intune
 
@@ -62,6 +62,9 @@ W tym artykule opisano te ustawienia.
     
       > [!NOTE]
       > Jeśli zapiszesz profil Wi-Fi, wprowadzona wartość klucza wstępnego nie zostanie wyświetlona z przyczyn bezpieczeństwa. Znak wodny klucza wstępnego nadal będzie wyświetlany jako **Nieskonfigurowany**, mimo że klucz wstępny jest zapisany w profilu. Aby zmienić klucz wstępny, wprowadź nowy klucz i zapisz profil. Jeśli zapiszesz klucz wstępny, edytujesz zasadę i zostawisz pole klucza wstępnego puste, to nadal używany będzie istniejący klucz wstępny.
+      
+      > [!IMPORTANT]
+      > PSK jest taka sama dla wszystkich urządzeń docelowych profule. Jeśli klucz zostanie złamany, może być używany przez dowolne urządzenie do nawiązywania połączenia z siecią Wi-Fi. Dbaj o bezpieczeństwo PSKs, aby uniknąć nieautoryzowanego dostępu.
 
 - **Ustawienia serwera proxy firmy**: wybierz sposób użycia ustawień serwera proxy w organizacji. Dostępne opcje:
   - **Brak**: nie są konfigurowane żadne ustawienia serwera proxy.

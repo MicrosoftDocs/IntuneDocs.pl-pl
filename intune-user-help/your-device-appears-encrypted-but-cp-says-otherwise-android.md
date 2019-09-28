@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ec52069c4c53c464cfe5a1e17718ba6725fd0b5
-ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
+ms.openlocfilehash: caae22e59e8adb6952e9a69ff03c575ae4467b2d
+ms.sourcegitcommit: 6a946a055a2014e00a4ca9d71986727a4ebbc777
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71167429"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71238978"
 ---
 # <a name="device-encrypted-but-apps-say-otherwise"></a>Urządzenie zaszyfrowane, ale aplikacje mówią inaczej
 
@@ -50,7 +50,7 @@ Ta sekcja dotyczy tylko aplikacji Portal firmy. Jeśli Twoje urządzenie umożli
 
 Niektóre urządzenia z systemem Android w wersji 7.0 lub nowszej szyfrują dane metodami, które są niezgodne z pewnymi standardami platformy systemu Android. Te metody szyfrowania powodują, że informacje o urządzeniu są zagrożone. W związku z tym urządzenia te nie są obsługiwane.
 
-Aby zapoznać się z niekompletną listą obsługiwanych urządzeń z systemem Android, zobacz artykuł [obsługiwane systemy operacyjne i przeglądarki w usłudze Intune](https://docs.microsoft.com/intune/supported-devices-browsers.md#supported-samsung-knox-standard-devices). Jeśli urządzenie nie jest wyświetlane na liście, zapoznaj się z producentem urządzenia lub skontaktuj się z pomocą techniczną.
+Aby zapoznać się z niekompletną listą obsługiwanych urządzeń z systemem Android, zobacz artykuł [obsługiwane systemy operacyjne i przeglądarki w usłudze Intune](https://docs.microsoft.com/intune/supported-devices-browsers#supported-samsung-knox-standard-devices). Jeśli urządzenie nie jest wyświetlane na liście, zapoznaj się z producentem urządzenia lub skontaktuj się z pomocą techniczną.
 
 > [!Note]
 > Firma Microsoft współpracuje z producentami w celu rozwiązania problemów znalezionych podczas testowania lub zgłoszonych nam przez użytkowników. Gdy pojawiają się nowe informacje, aktualizujemy ten artykuł.

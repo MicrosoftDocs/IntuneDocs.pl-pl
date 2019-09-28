@@ -6,9 +6,8 @@ keywords: Magazyn danych usługi Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/14/2018
+ms.date: 08/27/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -18,29 +17,29 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0728fefc40bc82db7926faf282a69d0471c3a1ea
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
-ms.translationtype: HT
+ms.openlocfilehash: 88681696716080b38d0f7d9e79264d002f335029
+ms.sourcegitcommit: 6c74ff568267d85fd1d44fda75e3e24ead87cb2b
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58798123"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "71303301"
 ---
 # <a name="use-the-microsoft-intune-data-warehouse"></a>Korzystanie z magazynu danych usługi Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Przy użyciu magazynu danych usługi Intune możesz tworzyć raporty zapewniające wgląd w środowisko mobilne przedsiębiorstwa. Na przykład niektóre raporty zawierają następujące informacje:
--   Trendy rejestracji użytkowników w usłudze Intune w celu zoptymalizowania zakupu licencji
--   Podział na wersje aplikacji i systemów operacyjnych w celu przejrzenia stanu urządzeń przenośnych
--   Trendy rejestracji i zgodności urządzeń w celu bezproblemowego wdrożenia aktualizacji zasad
+- Trendy rejestracji użytkowników w usłudze Intune w celu zoptymalizowania zakupu licencji
+- Podział na wersje aplikacji i systemów operacyjnych w celu przejrzenia stanu urządzeń przenośnych
+- Trendy rejestracji i zgodności urządzeń w celu bezproblemowego wdrożenia aktualizacji zasad
 
 ## <a name="data-warehouse-benefits"></a>Korzyści związane z magazynem danych
 
 Magazyn danych zapewnia dostęp do większej ilości informacji o środowisku mobilnym niż witryna Azure Portal. Dzięki magazynowi danych usługi Intune możesz uzyskać dostęp do następujących elementów:
 
-  -  Dane historyczne usługi Intune
-  -  Dane odświeżane codziennie
-  -  Model danych korzystający ze standardu OData
+- Dane historyczne usługi Intune
+- Dane odświeżane codziennie
+- Model danych korzystający ze standardu OData
 
 > [!Note]
 > Jeśli korzystasz ze współzarządzanego zarządzania urządzeniami przenośnymi za pomocą programu System Center Configuration Manager i usługi Microsoft Intune, musisz pobierać dane z programu Configuration Manager. Magazyn danych usługi Intune zawiera tylko dane usługi Intune. Do tworzenia niestandardowych raportów można używać pulpitu nawigacyjnego usługi Power BI w programie Configuration Manager. Aby uzyskać więcej informacji, zapoznaj się z artykułami „[Announcing the Power BI solution template for System Center Configuration Manager”]( https://powerbi.microsoft.com/blog/sccm-solution-template) („Przedstawiamy szablon rozwiązania Power BI dla programu System Center Configuration Manager”) i „[Power BI content for Dynamics 365](https://docs.microsoft.com/dynamics365/unified-operations/dev-itpro/analytics/power-bi-home-page)” („Zawartość usługi Power Bi dla usługi Dynamics 365”).

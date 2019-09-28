@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0a472e4d8c3ef7b922f02b4d2407362ba738486c
-ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
+ms.openlocfilehash: 91aefbc8c3960100ce5e9164ce48a2b9d33c3f3e
+ms.sourcegitcommit: 6a946a055a2014e00a4ca9d71986727a4ebbc777
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71167533"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71238957"
 ---
 # <a name="unenroll-your-android-device-from-management"></a>Wyrejestrowanie urządzenia z systemem Android z zarządzania  
 
@@ -64,7 +64,7 @@ Alternatywnie naciśnij kolejno pozycje **Ustawienia** > **Aplikacje** > **Porta
 
 W ostateczności możesz odinstalować tę aplikację z urządzenia, jako administrator urządzenia.  
 
-Jeśli masz urządzenie należące do firmy, Twoja organizacja może wymagać, aby aplikacja Portal firmy działała na urządzeniu przez cały czas. Jeśli odinstalujesz tę aplikację, to do czasu jej ponownej instalacji możesz utracić dostęp do chronionych zasobów firmy, takich jak wiadomości e-mail, aplikacje i ustawienia sieci Wi-Fi lub VPN. Aby uzyskać więcej informacji na temat instalowania, aktualizowania lub usuwania wymaganych aplikacji, zobacz [Dodawanie aplikacji do usługi Microsoft Intune](https://docs.microsoft.com/intune/apps-add.md#apps-that-are-added-automatically-by-intune).  
+Jeśli masz urządzenie należące do firmy, Twoja organizacja może wymagać, aby aplikacja Portal firmy działała na urządzeniu przez cały czas. Jeśli odinstalujesz tę aplikację, to do czasu jej ponownej instalacji możesz utracić dostęp do chronionych zasobów firmy, takich jak wiadomości e-mail, aplikacje i ustawienia sieci Wi-Fi lub VPN. Aby uzyskać więcej informacji na temat instalowania, aktualizowania lub usuwania wymaganych aplikacji, zobacz [Dodawanie aplikacji do usługi Microsoft Intune](https://docs.microsoft.com/intune/apps-add#apps-that-are-added-automatically-by-intune).  
 
 Poniżej opisano, jak administrator urządzenia może wyłączyć aplikację Portal firmy. Rzeczywiste nazwy poszczególnych ustawień mogą być inne na Twoim urządzeniu z systemem Android.  
 

@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 01/22/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -15,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fed8c33bbf4ff302d08576dc5e34ce1257425090
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: bea8d6d8e3503b9ec6fba7b2eda4842b68786e54
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565251"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "71302313"
 ---
 # <a name="windows-holographic-for-business-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem Windows Holographic for Business w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune
 
@@ -91,9 +90,9 @@ Na kiosku jest zazwyczaj uruchamiana konkretna aplikacja. Użytkownicy nie mogą
   - **Kiosk z pojedynczą aplikacją**: profil umożliwia uruchamianie tylko jednej aplikacji na urządzeniu. Gdy użytkownik zaloguje się, jest uruchamiana konkretna aplikacja. Ten tryb uniemożliwia także użytkownikowi otwieranie nowych aplikacji oraz zmianę uruchomionej aplikacji.
   - **Kiosk z wieloma aplikacjami**: profil umożliwia uruchamianie wielu aplikacji na urządzeniu. Tylko dodane aplikacje są dostępne dla użytkownika. Korzyści z kiosku z wieloma aplikacjami (czyli urządzenia o stałym przeznaczeniu) polegają na udostępnieniu użytkownikom łatwego do poznania środowiska, w którym są dostępne tylko potrzebne im aplikacje. Aplikacje, których użytkownicy nie potrzebują, są ukryte. 
   
-    Dodając aplikacje do środowiska kiosku z wieloma aplikacjami, dodajesz również plik układu menu Start. Temat [Start menu layout file (Plik układu menu Start)](https://docs.microsoft.com/hololens/hololens-kiosk#start-layout-file-for-intune) zawiera przykładowy kod XML, którego można użyć w usłudze Intune. 
+    Dodając aplikacje do środowiska kiosku z wieloma aplikacjami, dodajesz również plik układu menu Start. Temat [Start menu layout file (Plik układu menu Start)](/hololens/hololens-kiosk#start-layout-file-for-mdm-intune-and-others) zawiera przykładowy kod XML, którego można użyć w usłudze Intune. 
 
-#### <a name="single-app-kiosks"></a>Kioski z pojedynczą aplikacją
+### <a name="single-app-kiosks"></a>Kioski z pojedynczą aplikacją
 
 Podaj następujące ustawienia:
 

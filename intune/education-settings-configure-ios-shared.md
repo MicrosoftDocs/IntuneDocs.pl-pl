@@ -8,7 +8,6 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 12/06/2018
 ms.topic: archived
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e0b8230a842a7b4e3b1368388cb186defa8df72
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 8747a398447dc1f477e2b0149104c4c65d3ed741
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566594"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "71302189"
 ---
 # <a name="configure-intune-education-settings-for-shared-ipad-devices"></a>Konfigurowanie ustawień rozwiązań dla edukacji usługi Intune dla udostępnianych urządzeń iPad
 
@@ -68,8 +67,7 @@ Informacje do usługi SDS możesz zaimportować przy użyciu jednej z następuj�
 
 ### <a name="configure-general-settings"></a>Konfigurowanie ustawień ogólnych
 
-1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. W okienku **Intune** wybierz pozycję **Konfiguracja urządzeń**.
 2. W okienku **Konfiguracja urządzeń** w sekcji **Zarządzanie** wybierz pozycję **Profile**.
 5. W okienku profilów wybierz pozycję **Utwórz profil**.
@@ -139,8 +137,7 @@ Profil zostanie utworzony i wyświetlony w okienku z listą profilów.
 
 ## <a name="step-3---create-a-device-category"></a>Krok 3. Tworzenie kategorii urządzeń
 
-1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. W okienku **Intune** wybierz pozycję **Rejestrowanie urządzenia**.
 4. W okienku **Rejestrowanie urządzeń — Przegląd** wybierz pozycję **Kategorie urządzeń**.
 5. W okienku **Rejestrowanie urządzeń — Kategorie urządzeń** wybierz pozycję **Utwórz**.
@@ -151,8 +148,7 @@ Kategoria urządzeń zostanie utworzona w okienku **Rejestracja — Kategorie ur
 
 ## <a name="step-4--create-a-dynamic-group"></a>Krok 4. Tworzenie grupy dynamicznej
 
-1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. W okienku **Intune** wybierz pozycję **Grupy**.
 4. W okienku **Użytkownicy i grupy — Wszystkie grupy** wybierz pozycję **Nowa grupa**.
 5. W okienku **Grupa** wybierz pozycję **Typ grupy**, a następnie wypełnij pola **Nazwa** i **Opis** dla grupy.
@@ -169,8 +165,7 @@ Grupa dynamiczna zostanie utworzona w okienku **Użytkownicy i grupy — Wszystk
 
 ## <a name="step-5--assign-a-device-to-a-category-carts"></a>Krok 5. Przypisywanie urządzeń do kategorii (koszyków)
 
-1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. W okienku **Intune** wybierz pozycję **Urządzenia**.
 4. W okienku **Urządzenia** wybierz pozycję **Wszystkie urządzenia**.
 5. W okienku **Urządzenia — Wszystkie urządzenia** wybierz urządzenie.
@@ -182,14 +177,13 @@ Urządzenie jest teraz skojarzone z kategorią urządzeń. Powtórz ten proces d
 
 ## <a name="step-6--create-classroom-profiles"></a>Krok 6. Tworzenie profilów klas
 
-1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. W okienku **Intune** wybierz pozycję **Konfiguracja urządzeń**.
 4. W okienku **Konfiguracja urządzeń** wybierz kolejno pozycje **Zarządzaj** > **Profile koszyków**.
 5. W okienku profilów wybierz pozycję **Utwórz profil**.
 6. W okienku **Utwórz skojarzenie** wypełnij pola **Nazwa** i **Opis**.
 7. Wybierz kolejno pozycje **Wybierz klasy** > **Konfiguruj**, aby skojarzyć grupy z profilem koszyka.
-8. Wybierz klasy do dołączenia do profilu koszyka, a następnie wybierz pozycję **Wybierz**. 
+8. Wybierz klasy do dołączenia do profilu koszyka, a następnie wybierz pozycję **Wybierz**. 
 9. Wybierz kolejno pozycje **Wybierz koszyki** > **Konfiguruj**, aby skojarzyć grupy z profilem koszyka.
 10. Wybierz grupy do włączenia do profilu koszyka, a następnie wybierz pozycję **Wybierz**.
 11. W okienku **Utwórz skojarzenie** wybierz pozycję **Zapisz** w celu zapisania profilu koszyka.
@@ -198,13 +192,12 @@ Profil zostanie utworzony i wyświetlony w okienku z listą profilów.
 
 ## <a name="step-7---assign-the-cart-profile-to-classes"></a>Krok 7. Przypisywanie profilu koszyka do klas
 
-1. Zaloguj się do portalu [Azure Portal](https://portal.azure.com).
-2. Wybierz pozycje **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. W okienku **Intune** wybierz pozycję **Konfiguracja urządzeń**.
 4. W okienku **Konfiguracja urządzeń** wybierz kolejno pozycje **Monitoruj** > **Stan przypisania**.
 5. W okienku **Stan przypisania** wybierz utworzony **Profil koszyka**.
 6. W okienku **Profil koszyka** wybierz pozycję **Przypisania**, a następnie w obszarze **Dołączanie** wybierz pozycję **Wybierz grupy do uwzględnienia**.
-7. Wybierz klasy, które mają być celem profilu koszyka (nie należy wybierać grupy), a następnie wybierz pozycję **Wybierz**. 
+7. Wybierz klasy, które mają być celem profilu koszyka (nie należy wybierać grupy), a następnie wybierz pozycję **Wybierz**. 
 8. Gdy skończysz, wybierz pozycję **Zapisz**.
 
 Przypisanie zostanie zakończone i usługa Intune wdroży profil aplikacji Classroom na urządzeniach docelowych na podstawie przypisania klasy.
