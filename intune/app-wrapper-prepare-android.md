@@ -5,9 +5,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/11/2019
+ms.date: 07/09/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 64de72822ad8d2f8d9893e3428208ff1363d33e2
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 732e391ad3c85c1f3f5da36b3424544cf1cdf4aa
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566050"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71238797"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Przygotowywanie aplikacji systemu Android pod kątem zasad ochrony aplikacji za pomocą narzędzia opakowującego aplikacje usługi Intune
 
@@ -36,35 +35,35 @@ Przed uruchomieniem tego narzędzia należy zapoznać się z sekcją [Uwagi doty
 
 ## <a name="fulfill-the-prerequisites-for-using-the-app-wrapping-tool"></a>Spełnianie wymagań wstępnych do używania narzędzia opakowującego aplikacje
 
--   Narzędzie opakowujące aplikacje musi zostać uruchomione na komputerze z systemem Windows 7 lub nowszym.
+- Narzędzie opakowujące aplikacje musi zostać uruchomione na komputerze z systemem Windows 7 lub nowszym.
 
--   Aplikacja wejściowa musi być prawidłowym pakietem aplikacji Android z rozszerzeniem pliku apk oraz:
+- Aplikacja wejściowa musi być prawidłowym pakietem aplikacji Android z rozszerzeniem pliku apk oraz:
 
-    -   nie może być szyfrowana,
-    -   nie może być wcześniej opakowana przez narzędzie opakowujące aplikacje usługi Intune,
-    -   musi być napisana dla systemu Android 4.0 lub nowszego.
+  - nie może być szyfrowana,
+  - nie może być wcześniej opakowana przez narzędzie opakowujące aplikacje usługi Intune,
+  - musi być napisana dla systemu Android 4.0 lub nowszego.
 
--   Aplikacja musi być opracowana przez Twoją firmę lub dla niej. To narzędzie nie może być używane do przetwarzania aplikacji pobranych ze sklepu Google Play.
+- Aplikacja musi być opracowana przez Twoją firmę lub dla niej. To narzędzie nie może być używane do przetwarzania aplikacji pobranych ze sklepu Google Play.
 
--   Aby uruchomić narzędzie opakowujące aplikacje, należy zainstalować najnowszą wersję środowiska [Java Runtime Environment](https://java.com/download/) i upewnić się, że w zmiennych środowiskowych systemu Windows została ustawiona zmienna ścieżki Java C:\ProgramData\Oracle\Java\javapath. Aby uzyskać więcej informacji, zobacz [dokumentację środowiska Java](https://java.com/download/help/).
+- Aby uruchomić narzędzie opakowujące aplikacje, należy zainstalować najnowszą wersję środowiska [Java Runtime Environment](https://java.com/download/) i upewnić się, że w zmiennych środowiskowych systemu Windows została ustawiona zmienna ścieżki Java C:\ProgramData\Oracle\Java\javapath. Aby uzyskać więcej informacji, zobacz [dokumentację środowiska Java](https://java.com/download/help/).
 
     > [!NOTE]
     > W pewnych sytuacjach 32-bitowa wersja programu Java może spowodować problemy z pamięcią. Warto zainstalować wersję 64-bitową.
 
-- System Android wymaga, aby wszystkie pakiety aplikacji (apk) były podpisane. Aby uzyskać informacje dotyczące **ponownego używania** istniejących certyfikatów i ogólne wskazówki dotyczące certyfikatów podpisywania, zobacz [Ponowne używanie certyfikatów podpisywania i opakowywanie aplikacji](https://docs.microsoft.com/intune/app-wrapper-prepare-android#reusing-signing-certificates-and-wrapping-apps). Plik wykonywalny Java keytool.exe służy do generowania **nowych** poświadczeń wymaganych do podpisania opakowanej aplikacji wyjściowej. Wszelkie ustawiane hasła muszą być bezpieczne, ale zanotuj je, ponieważ będą potrzebne do uruchomienia narzędzia opakowującego aplikacje.
+- System Android wymaga, aby wszystkie pakiety aplikacji (apk) były podpisane. Aby uzyskać informacje dotyczące **ponownego używania** istniejących certyfikatów i ogólne wskazówki dotyczące certyfikatów podpisywania, zobacz [Ponowne używanie certyfikatów podpisywania i opakowywanie aplikacji](app-wrapper-prepare-android.md#reusing-signing-certificates-and-wrapping-apps). Plik wykonywalny Java keytool.exe służy do generowania **nowych** poświadczeń wymaganych do podpisania opakowanej aplikacji wyjściowej. Wszelkie ustawiane hasła muszą być bezpieczne, ale zanotuj je, ponieważ będą potrzebne do uruchomienia narzędzia opakowującego aplikacje.
 
     > [!NOTE]
     > Narzędzie opakowujące aplikacje usługi Intune nie obsługuje podpisywania aplikacji za pomocą schematów podpisów firmy Google w wersji v2 i w przyszłej wersji v3. Zaleca się, aby po opakowaniu pliku apk przy użyciu narzędzia opakowującego aplikacje usługi Intune skorzystać z [narzędzia Apksigner dostarczanego przez firmę Google]( https://developer.android.com/studio/command-line/apksigner). Pozwoli to zagwarantować, że po pobraniu aplikacji na urządzeniach użytkowników końcowych będzie można ją uruchomić poprawnie zgodnie ze standardami systemu Android. 
 
-- (Opcjonalnie) Czasami aplikacja może osiągnąć limit rozmiaru pliku wykonywalnego Dalvik (DEX) z powodu klas zestawu Intune MAM SDK, które są dodawane podczas opakowywania. Pliki DEX są częścią kompilacji aplikacji systemu Android. Intune App Wrapping Tool automatycznie obsługuje przepełnienie plik DEKS podczas otaczania dla aplikacji za pomocą min API na poziomie 21 lub nowszej (począwszy od programu [v. 1.0.2501.1](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android/releases)). W przypadku aplikacji z minimalny poziom interfejsu API 21 < najlepszym rozwiązaniem jest zwiększenie minimalny poziom interfejsu API przy użyciu otoki `-UseMinAPILevelForNativeMultiDex` flagi. Nie można zwiększyć minimalny poziom interfejsu API aplikacji klientów następujące rozwiązania przepełnienie DEX są dostępne. W niektórych organizacjach może to wymagać współpracy z osobami kompilującymi aplikację (tj. zespołem zajmującym się kompilacją aplikacji):
-* Narzędzia ProGuard można użyć w celu wyeliminowania odwołań nieużywanych klasy z podstawową plik DEKS aplikacji.
-* Dla klientów korzystających z v3.1.0 lub nowszej dla systemu Android wtyczki programu Gradle, wyłącz [D8 dexer](https://android-developers.googleblog.com/2018/04/android-studio-switching-to-d8-dexer.html).  
+- (Opcjonalnie) Czasami aplikacja może osiągnąć limit rozmiaru pliku wykonywalnego Dalvik (DEX) z powodu klas zestawu Intune MAM SDK, które są dodawane podczas opakowywania. Pliki DEX są częścią kompilacji aplikacji systemu Android. Narzędzie opakowującego aplikacje w usłudze Intune automatycznie obsługuje przepełnienie pliku DEX podczas zawijania dla aplikacji o minimalnym poziomie interfejsu API równym 21 lub wyższym (w przypadku [v. 1.0.2501.1](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android/releases)). W przypadku aplikacji o minimalnym poziomie interfejsu API wynoszącym < 21 najlepszym rozwiązaniem jest zwiększenie minimalnego poziomu interfejsu API przy użyciu flagi `-UseMinAPILevelForNativeMultiDex` otoki. Aby klienci nie mogli zwiększyć minimalnego poziomu interfejsu API aplikacji, dostępne są następujące obejścia przepełnienia DEX. W niektórych organizacjach może to wymagać współpracy z osobami kompilującymi aplikację (tj. zespołem zajmującym się kompilacją aplikacji):
+* Użyj funkcji Guard w celu wyeliminowania nieużywanych odwołań do klas z podstawowego pliku DEX aplikacji.
+* W przypadku klientów korzystających z programu v 3.1.0 lub nowszej wtyczki z systemem Android Gradle należy wyłączyć [Dexer D8](https://android-developers.googleblog.com/2018/04/android-studio-switching-to-d8-dexer.html).  
 
 ## <a name="install-the-app-wrapping-tool"></a>Instalacja narzędzia opakowującego aplikacje
 
-1.  Pobierz plik instalacyjny narzędzia opakowującego aplikacje dla systemu Android w usłudze Intune, InstallAWT.exe, z [repozytorium w witrynie GitHub](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android) na komputer z systemem Windows. Otwórz plik instalacyjny.
+1. Pobierz plik instalacyjny narzędzia opakowującego aplikacje dla systemu Android w usłudze Intune, InstallAWT.exe, z [repozytorium w witrynie GitHub](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android) na komputer z systemem Windows. Otwórz plik instalacyjny.
 
-2.  Zaakceptuj umowę licencyjną, a następnie zakończ instalację.
+2. Zaakceptuj umowę licencyjną, a następnie zakończ instalację.
 
 Zwróć uwagę na folder, w którym zostało zainstalowane narzędzie. Domyślna lokalizacja: C:\Program Files (x86)\Microsoft Intune Mobile Application Management\Android\App Wrapping Tool.
 
@@ -79,6 +78,7 @@ Zwróć uwagę na folder, w którym zostało zainstalowane narzędzie. Domyślna
    ```
 
 3. Uruchom narzędzie za pomocą polecenia **invoke-AppWrappingTool**, używając następującej składni:
+
    ```PowerShell
    Invoke-AppWrappingTool [-InputPath] <String> [-OutputPath] <String> -KeyStorePath <String> -KeyStorePassword <SecureString>
    -KeyAlias <String> -KeyPassword <SecureString> [-SigAlg <String>] [<CommonParameters>]
@@ -95,7 +95,7 @@ Zwróć uwagę na folder, w którym zostało zainstalowane narzędzie. Domyślna
 |**-KeyAlias**&lt;ciąg&gt;|Nazwa klucza, który ma być używany do podpisywania.| |
 |**-KeyPassword**&lt;ciąg_bezpieczny&gt;|Hasło używane do odszyfrowania klucza prywatnego, który zostanie użyty do podpisywania.| |
 |**-SigAlg**&lt;ciąg_bezpieczny&gt;| (Opcjonalnie) Nazwa algorytmu sygnatury używanego do podpisywania. Algorytm musi być zgodny z kluczem prywatnym.|Przykłady: SHA256withRSA, SHA1withRSA|
-|**-UseMinAPILevelForNativeMultiDex**| (Opcjonalnie) Użyj tej flagi, aby zwiększyć źródłowej aplikacji systemu Android minimalny poziom interfejsu API do 21. Ta flaga wyświetli monit o potwierdzenie, ponieważ będzie ograniczać, kto może zainstalować tę aplikację. Użytkownicy mogą pomijać okno dialogowe potwierdzenia, dodając parametr "-Potwierdź: $false" do ich polecenia programu PowerShell. Flaga powinna służyć wyłącznie przez klientów w aplikacjach z min interfejsu API < 21, które nie powiodły się, aby zawijać pomyślnie z powodu błędów przepełnienia DEX. | |
+|**-UseMinAPILevelForNativeMultiDex**| Obowiązkowe Użyj tej flagi, aby zwiększyć minimalny poziom interfejsu API źródłowej aplikacji systemu Android do 21. Ta flaga wyświetli monit o potwierdzenie, ponieważ będzie ograniczać, kto może zainstalować tę aplikację. Użytkownicy mogą pominąć okno dialogowe potwierdzenia, dołączając parametr "-confirm: $false" do polecenia programu PowerShell. Flaga powinna być używana tylko przez klientów w aplikacjach z minimalnym interfejsem API < 21, co nie powiodło się z powodu błędów przepełnienia DEX. | |
 | **&lt;typowe_parametry&gt;** | (Opcjonalnie) To polecenie obsługuje typowe parametry programu PowerShell, takie jak verbose i debug. |
 
 
@@ -110,10 +110,13 @@ Zwróć uwagę na folder, w którym zostało zainstalowane narzędzie. Domyślna
 **Przykład:**
 
 Zaimportuj moduł programu PowerShell.
+
 ```PowerShell
 Import-Module "C:\Program Files (x86)\Microsoft Intune Mobile Application Management\Android\App Wrapping Tool\IntuneAppWrappingTool.psm1"
 ```
+
 Uruchom narzędzie opakowujące aplikacje z aplikacją natywną HelloWorld.apk.
+
 ```PowerShell
 invoke-AppWrappingTool -InputPath .\app\HelloWorld.apk -OutputPath .\app_wrapped\HelloWorld_wrapped.apk -KeyStorePath "C:\Program Files (x86)\Java\jre1.8.0_91\bin\mykeystorefile" -keyAlias mykeyalias -SigAlg SHA1withRSA -Verbose
 ```
@@ -128,12 +131,12 @@ Główne scenariusze, w których trzeba będzie ponownie opakować aplikacje:
 * Narzędzie opakowujące aplikacje usługi Intune dla systemu Android wydało nową wersję, która oferuje kluczowe poprawki usterek i nowe funkcje zasad ochrony aplikacji, przeznaczone specjalnie dla usługi Intune. Taka sytuacja występuje co 6–8 tygodni za pośrednictwem repozytorium GitHub dla [narzędzia opakowującego aplikacje usługi Intune dla systemu Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android).
 
 Niektóre najlepsze rozwiązania dotyczące ponownego opakowywania: 
-* Obsługa certyfikatów podpisywania używanych podczas procesu kompilacji, zobacz [Ponowne używanie certyfikatów podpisywania i opakowywanie aplikacji](https://docs.microsoft.com/intune/app-wrapper-prepare-android#reusing-signing-certificates-and-wrapping-apps)
+* Obsługa certyfikatów podpisywania używanych podczas procesu kompilacji, zobacz [Ponowne używanie certyfikatów podpisywania i opakowywanie aplikacji](app-wrapper-prepare-android.md#reusing-signing-certificates-and-wrapping-apps)
 
 ## <a name="reusing-signing-certificates-and-wrapping-apps"></a>Ponowne używanie certyfikatów podpisywania i opakowywanie aplikacji
 System Android wymaga podpisania wszystkich aplikacji za pomocą ważnego certyfikatu przed zainstalowaniem ich na urządzeniach z systemem Android.
 
-Opakowane aplikacje mogą zostać podpisane podczas procesu opakowywania lub *po* tym procesie przy użyciu istniejących narzędzi do podpisywania. Wszystkie informacje dotyczące podpisywania znajdujące się w aplikacji przed jej opakowaniem zostaną odrzucone. Jeśli to możliwe, podczas procesu opakowywania należy użyć informacji dotyczących podpisywania, które zostały wcześniej użyte podczas procesu kompilacji. W niektórych organizacjach może to wymagać współpracy z właścicielami informacji o magazynie kluczy (tj. zespołem zajmującym się kompilacją aplikacji). 
+Opakowane aplikacje mogą zostać podpisane podczas procesu opakowywania lub *po* tym procesie przy użyciu istniejących narzędzi do podpisywania. Wszystkie informacje dotyczące podpisywania znajdujące się w aplikacji przed jej opakowaniem zostaną odrzucone. Jeśli to możliwe, podczas procesu opakowywania należy użyć informacji dotyczących podpisywania, które zostały wcześniej użyte podczas procesu kompilacji. W niektórych organizacjach może to wymagać współpracy z właścicielami informacji o magazynie kluczy (tj. zespołem zajmującym się kompilacją aplikacji). 
 
 Jeśli poprzedni certyfikat podpisywania nie może zostać użyty lub aplikacja nie została wcześniej wdrożona, możliwe jest utworzenie nowego certyfikatu podpisywania, zgodnie z instrukcjami znajdującymi się w [przewodniku dewelopera systemu Android](https://developer.android.com/studio/publish/app-signing.html#signing-manually).
 
@@ -142,17 +145,17 @@ Jeśli aplikacja została wcześniej wdrożona za pomocą innego certyfikatu pod
 ## <a name="security-considerations-for-running-the-app-wrapping-tool"></a>Uwagi dotyczące zabezpieczeń przy uruchamianiu narzędzia opakowującego aplikacje
 Aby uniknąć potencjalnego fałszowania, ujawnienia informacji i ataków opartych na podniesieniu uprawnień:
 
--   Upewnij się, że wejściowa aplikacja biznesowa, aplikacja wyjściowa i magazyn kluczy środowiska Java są na tym samym komputerze, na którym jest uruchamiane narzędzie opakowujące aplikacje.
+- Upewnij się, że wejściowa aplikacja biznesowa, aplikacja wyjściowa i magazyn kluczy środowiska Java są na tym samym komputerze, na którym jest uruchamiane narzędzie opakowujące aplikacje.
 
--   Zaimportuj aplikację wyjściową do usługi Intune na tym samym komputerze, na którym uruchomiono to narzędzie. Zobacz temat [keytool](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html), aby uzyskać więcej informacji o narzędziu Java keytool.
+- Zaimportuj aplikację wyjściową do usługi Intune na tym samym komputerze, na którym uruchomiono to narzędzie. Zobacz temat [keytool](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html), aby uzyskać więcej informacji o narzędziu Java keytool.
 
--   Jeśli aplikacja wyjściowa i narzędzie znajdują się w ścieżce Universal Naming Convention (UNC), a narzędzie i pliki wejściowe nie zostały uruchomione na tym samym komputerze, skonfiguruj zabezpieczenia środowiska, używając [zabezpieczeń protokołu internetowego (IPsec)](https://wikipedia.org/wiki/IPsec) lub [podpisywania bloku komunikatów serwera (SMB)](https://support.microsoft.com/kb/887429).
+- Jeśli aplikacja wyjściowa i narzędzie znajdują się w ścieżce Universal Naming Convention (UNC), a narzędzie i pliki wejściowe nie zostały uruchomione na tym samym komputerze, skonfiguruj zabezpieczenia środowiska, używając [zabezpieczeń protokołu internetowego (IPsec)](https://wikipedia.org/wiki/IPsec) lub [podpisywania bloku komunikatów serwera (SMB)](https://support.microsoft.com/kb/887429).
 
--   Upewnij się, że aplikacja pochodzi z zaufanego źródła.
+- Upewnij się, że aplikacja pochodzi z zaufanego źródła.
 
--   Zabezpiecz katalog wyjściowy, który zawiera opakowaną aplikację. Rozważ użycie katalogu poziomu użytkownika dla produktu wyjściowego.
+- Zabezpiecz katalog wyjściowy, który zawiera opakowaną aplikację. Rozważ użycie katalogu poziomu użytkownika dla produktu wyjściowego.
 
-### <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz także
 - [Wybieranie sposobu przygotowania aplikacji do zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune](apps-prepare-mobile-application-management.md)
 
 - [Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android](app-sdk-android.md)
