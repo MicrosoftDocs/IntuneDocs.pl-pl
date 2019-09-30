@@ -5,9 +5,8 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/21/2017
+ms.date: 09/16/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,40 +16,39 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4169f5625965ebc7d2bbbf9153cb4183fcd22b3
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 960c440372613fed2c92ce00c604d97e1f122e8f
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57388083"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71239823"
 ---
 # <a name="how-your-android-users-get-their-apps"></a>Jak użytkownicy systemu Android uzyskują aplikacje
 
 [!INCLUDE [both-portals](./includes/note-for-both-portals.md)]
 
-Dzięki tym informacjom można zrozumieć, jak i gdzie użytkownicy końcowi systemu Android uzyskują aplikacje, które rozprowadzasz przez usługę Microsoft Intune. Informacje mogą się różnić w zależności od typu urządzenia (urządzenia z natywnym systemem Android lub urządzenia z rozwiązaniem Samsung Knox Standard).
+W tym artykule wyjaśniono, jak i gdzie użytkownicy końcowi systemu Android uzyskują aplikacje, które rozprowadzasz przez usługę Microsoft Intune. Informacje mogą się różnić w zależności od typu urządzenia (urządzenia z natywnym systemem Android lub urządzenia z rozwiązaniem Samsung Knox Standard).
 
 ## <a name="native-non-samsung-knox-standard-android-devices"></a>Natywne urządzenia z systemem Android (inne niż Samsung Knox Standard)
 
 | Typ aplikacji | Aplikacje biznesowe (LOB) | Aplikacje Sklepu Play  |
 | ------------- |-------------| -----|
-| Aplikacje dostępne      | Użytkownicy naciskają opcję **instaluj** w portalu firmy. Pojawi się powiadomienie, które użytkownicy muszą nacisnąć, aby rozpocząć instalację. Po zakończeniu instalacji powiadomienie zniknie. | Użytkownicy naciskają aplikację w portalu firmy i zostają przeniesieni do strony aplikacji w Sklepie Play, skąd mogą rozpocząć instalację.|
-| Required apps      | Użytkownicy otrzymują powiadomienie, którego nie można odrzucić, wskazujące, że powinni zainstalować aplikację. Użytkownicy naciskają powiadomienie, aby rozpocząć instalację. Po zakończeniu instalacji powiadomienie zniknie.    | Użytkownicy otrzymują powiadomienie, którego nie można odrzucić, wskazujące, że powinni zainstalować aplikację. Użytkownicy naciskają powiadomienie i zostają przeniesieni do strony aplikacji w Sklepie Play, skąd mogą rozpocząć instalację. Po zakończeniu instalacji powiadomienie zniknie. |
+| Aplikacje dostępne      | Użytkownicy naciskają opcję **instaluj** w portalu firmy. Pojawi się powiadomienie, które użytkownicy muszą nacisnąć, aby rozpocząć instalację. Po zakończeniu instalacji powiadomienie zniknie. | Użytkownicy naciskają aplikację w witrynie Portal firmy i zostają przeniesieni do strony aplikacji w Sklepie Play. Tutaj rozpoczynają instalację.|
+| Required apps      | Użytkownicy otrzymują powiadomienie, którego nie można odrzucić, wskazujące, że powinni zainstalować aplikację. Użytkownicy naciskają powiadomienie, aby rozpocząć instalację. Po zakończeniu instalacji powiadomienie zniknie.    | Użytkownicy otrzymują powiadomienie, którego nie można odrzucić, wskazujące, że powinni zainstalować aplikację. Użytkownicy naciskają powiadomienie i zostają przeniesieni do strony aplikacji w Sklepie Play. Tutaj rozpoczynają instalację. Po zakończeniu instalacji powiadomienie zniknie. |
 
-Użytkownicy końcowi muszą zezwolić na instalację z nieznanych źródeł, aby instalować [aplikacje biznesowe](lob-apps-android.md). Znajdują się one zwykle znajdują się w dwóch różnych miejscach:
+Użytkownicy końcowi muszą zezwolić na instalację z nieznanych źródeł, aby instalować [aplikacje biznesowe](lob-apps-android.md). To ustawienie znajduje się zwykle w dwóch różnych miejscach:
 
 * **System Android 7.1.2 i starsze**: **Ustawienia** > **Zabezpieczenia** > **Nieznane źródła**
 * **System Android 8.0 i nowsze**: **Ustawienia** > **Aplikacje i powiadomienia** > **Specjalny dostęp do aplikacji** > **Zainstaluj nieznane aplikacje** > **Portal firmy** > **Zezwól z tego źródła**
 
 W takim przypadku aplikacja Portal firmy będzie informować i bezpośrednio prowadzić użytkownika końcowego do odpowiedniego ustawienia. 
 
-
 ## <a name="samsung-knox-standard-android-devices"></a>Urządzenia z systemem Android Samsung Knox Standard
 
 | Typ aplikacji | Aplikacje biznesowe (LOB) | Aplikacje Sklepu Play  |
 | ------------- |-------------| -----|
-| Aplikacje dostępne      | Użytkownicy naciskają opcję **instaluj** w portalu firmy. Aplikacja zostanie zainstalowana bez dalszej interwencji użytkownika. | Użytkownicy naciskają aplikację w portalu firmy i zostają przeniesieni do strony aplikacji w Sklepie Play, skąd mogą rozpocząć instalację.|
-| Required apps      | Aplikacja zostanie zainstalowana bez żadnej interwencji użytkownika.    | Użytkownicy otrzymują powiadomienie, którego nie można odrzucić, wskazujące, że powinni zainstalować aplikację. Użytkownicy naciskają powiadomienie i zostają przeniesieni do strony aplikacji w Sklepie Play, skąd mogą rozpocząć instalację. Po zakończeniu instalacji powiadomienie zniknie. |
+| Aplikacje dostępne      | Użytkownicy naciskają opcję **instaluj** w portalu firmy. Aplikacja zostanie zainstalowana bez dalszej interwencji użytkownika. | Użytkownicy naciskają aplikację w witrynie Portal firmy i zostają przeniesieni do strony aplikacji w Sklepie Play. Tutaj rozpoczynają instalację.|
+| Required apps      | Aplikacja zostanie zainstalowana bez żadnej interwencji użytkownika.    | Użytkownicy otrzymują powiadomienie, którego nie można odrzucić, wskazujące, że powinni zainstalować aplikację. Użytkownicy naciskają powiadomienie i zostają przeniesieni do strony aplikacji w Sklepie Play. Tutaj rozpoczynają instalację. Po zakończeniu instalacji powiadomienie zniknie. |
 
 Aplikacje mogą być zarządzane lub niezarządzane, zgodnie z poniższym opisem. Proces konfigurowania aplikacji jako aplikacji zarządzanych jest taki sam dla wszystkich typów urządzeń z systemem Android.
 
@@ -58,7 +56,14 @@ Aplikacje mogą być zarządzane lub niezarządzane, zgodnie z poniższym opisem
 
 **Aplikacje niezarządzane** — są to aplikacje, którymi nie można zarządzać za pomocą zasad. Nie zostały one opakowane przez usługę Intune lub nie zawierają zestawu Intune App SDK. W przypadku tych aplikacji nie można stosować zasad aplikacji.
 
-### <a name="see-also"></a>Zobacz także
+## <a name="zebra-devices-with-zebra-mobility-extensions"></a>Urządzenia Zebra z rozszerzeniami Zebra Mobility Extensions
+
+Usługa Intune używa zestawu narzędzi Zebra Mobility Extensions (MX), aby w tle zainstalować aplikacje na urządzeniach Zebra zarządzanych przez administratora urządzeń. Ta funkcja umożliwia wdrażanie i aktualizowanie aplikacji na urządzeniach Zebra bez interwencji użytkownika. Jeśli zestaw narzędzi MX na urządzeniu jest w wersji 4.2 lub starszej, aplikacje nie są instalowane w trybie dyskretnym. Aby uzyskać więcej informacji, zobacz temat [Full MX Feature Matrix](http://techdocs.zebra.com/mx/compatibility/) (Pełna matryca funkcji zestawu narzędzi MX) w witrynie sieci Web firmy Zebra.
+
+Aplikacje LOB wdrożone na urządzeniach Zebra muszą być zainstalowane z lokalizacji publicznej na urządzeniu. Pakiet aplikacji. apk może być dostępny dla innych aplikacji i usług, które mają również dostęp do magazynu publicznego na urządzeniu. Zwykle dostęp ten występuje w krótkim czasie między ukończeniem pobrania aplikacji i rozpoczęciem instalacji. Ten krótki czas może być okazją do ataku w czasie uaktualniania. Na przykład można wówczas zmienić pakiet .apk. Usługa Intune skraca do minimum czas, jaki usługa .apk spędza w magazynie publicznym, i nie pozwala na instalację niepodpisanych aplikacji. Aby zminimalizować ryzyko związane z bezpieczeństwem, upewnij się, że przekazywane pliki .apk nie zawierają informacji poufnych.
+
+## <a name="see-also"></a>Zobacz także
+
 [Dodawanie aplikacji za pomocą usługi Microsoft Intune](apps-add.md)
 
 [Jak użytkownicy systemu iOS uzyskują aplikacje](end-user-apps-ios.md)

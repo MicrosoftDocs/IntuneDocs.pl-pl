@@ -8,7 +8,6 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 03/09/2017
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,24 +16,27 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 700bded8930385c5576a198dc0364c64066121e5
-ms.sourcegitcommit: 71314481e644025c005019b478b4cbeaf2390ea9
+ms.openlocfilehash: 1ed123bcf8c5c1a5df1a356cf8d2522caad20ea2
+ms.sourcegitcommit: c9725ddae6c0f82a491de27c87f240254d32716b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59569132"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "71239369"
 ---
 # <a name="help-end-users-understand-company-portal-app-messages"></a>Pomaganie użytkownikom końcowym w zrozumieniu komunikatów aplikacji Portal firmy
 
 [!INCLUDE [both-portals](./includes/note-for-both-portals.md)]
 
 > [!NOTE]
-> Poniższe informacje dotyczą tylko urządzeń z systemem Android 6.0 lub nowszym.
+> Poniższe informacje dotyczą tylko urządzeń z systemem Android 6.0 lub nowszym oraz iOS 10 lub nowszym.
 
 Wyjaśnienie różnych komunikatów, które użytkownicy końcowi mogą zobaczyć w aplikacji Portal firmy. Te komunikaty aplikacji są często wyświetlane na różnych etapach procesu rejestracji. Dowiedz się, gdzie są wyświetlane te komunikaty, co oznaczają i co się stanie, jeśli użytkownik nie zezwoli na dostęp. Dowiedz się również, jak najlepiej wyjaśnić znaczenie tych komunikatów użytkownikom.
 
 - __Zezwolić aplikacji Portal firmy na połączenia telefoniczne i zarządzanie nimi?__
 - __Zezwolić aplikacji Portal firmy na dostęp do zdjęć, multimediów i plików na Twoim urządzeniu?__
+
+> [!NOTE]
+> Danych zebranych przez naszą usługę nie sprzedajemy z jakiegokolwiek powodu żadnym osobom trzecim.
 
 ## <a name="allow-company-portal-to-make-and-manage-phone-calls"></a>Zezwolić aplikacji Portal firmy na połączenia telefoniczne i zarządzanie nimi?
 
@@ -57,7 +59,7 @@ Jeśli użytkownik zezwoli na dostęp, lecz potem anuluje zezwolenie, komunikat 
 Jeśli później użytkownik zdecyduje się zezwolić na dostęp, może wybrać pozycję **Ustawienia** > **Aplikacje** > **Portal firmy** > **Uprawnienia** > **Telefon** i włączyć dostęp.
 
 ### <a name="how-to-explain-this-to-your-users"></a>Jak wyjaśnić to użytkownikom
-Odeślij użytkowników do sekcji [Rejestrowanie urządzenia z systemem Android w usłudze Intune](/intune-user-help/enroll-your-device-in-intune-android), aby umożliwić im uzyskanie szczegółowych informacji.
+Odeślij użytkowników do sekcji [Rejestrowanie urządzenia z systemem Android w usłudze Intune](/intune-user-help/enroll-device-android-company-portal), aby umożliwić im uzyskanie szczegółowych informacji.
 
 ## <a name="allow-company-portal-to-access-your-contacts"></a>Zezwolić aplikacji Portal firmy na dostęp do Twoich kontaktów?
 
@@ -78,7 +80,7 @@ Jeśli użytkownik zezwoli na dostęp, lecz potem anuluje zezwolenie, komunikat 
 Jeśli później użytkownik zdecyduje się zezwolić na dostęp, może wybrać pozycję **Ustawienia** > **Aplikacje** > **Portal firmy** > **Uprawnienia** > **Telefon** i włączyć dostęp.
 
 ### <a name="how-to-explain-this-to-your-users"></a>Jak wyjaśnić to użytkownikom
-Odeślij użytkowników do sekcji [Rejestrowanie urządzenia z systemem Android w usłudze Intune](/intune-user-help/enroll-your-device-in-intune-android), aby umożliwić im uzyskanie szczegółowych informacji.
+Odeślij użytkowników do sekcji [Rejestrowanie urządzenia z systemem Android w usłudze Intune](/intune-user-help/enroll-device-android-company-portal), aby umożliwić im uzyskanie szczegółowych informacji.  
 
 ## <a name="allow-company-portal-to-access-photos-media-and-files-on-your-device"></a>Zezwolić aplikacji Portal firmy na dostęp do zdjęć, multimediów i plików na Twoim urządzeniu?
 
@@ -132,7 +134,7 @@ Gdy zainstalujesz takie aplikacje przy użyciu aplikacji Portal firmy, a następ
 
 3. Wybierz pozycję **Profil zarządzania** > **Aplikacja przedsiębiorstwa**.
 4. Wybierz nazwę dewelopera.
-5. Naciśnij klawisz **Ufaj deweloperowi _nazwa dewelopera_**.
+5. Naciśnij klawisz **Ufaj deweloperowi _nazwa dewelopera_** .
 6. Potwierdź aplikację, wybierając przycisk **Ufaj** w wyskakującym okienku z komunikatem dotyczącym instalacji aplikacji.
 
    ![Interfejs użytkownika urządzenia z systemem iOS — komunikat dotyczący zaufania w aplikacji](./media/end-user-company-portal-messages/end-user-company-portal-messages-03.png)
@@ -140,5 +142,5 @@ Gdy zainstalujesz takie aplikacje przy użyciu aplikacji Portal firmy, a następ
     Teraz uruchomienie aplikacji i korzystanie z niej powinno być możliwe.
 
 
-### <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz także
 [Co powinni wiedzieć użytkownicy końcowi na temat korzystania z usługi Intune](end-user-educate.md)

@@ -5,9 +5,8 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/28/2016
+ms.date: 05/07/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 368eeec3c47b53d00e9130f41d36f05976a66b8f
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 8f069405d75b196c26c9c844e0d0a4bd57299199
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57394243"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "71239318"
 ---
 # <a name="how-your-ios-users-get-their-apps"></a>Jak użytkownicy systemu iOS uzyskują aplikacje
 
@@ -36,7 +35,7 @@ Dzięki tym informacjom można zrozumieć, jak i gdzie użytkownicy końcowi uzy
 
 **Aplikacje zarządzane** — Aplikacje, które mogą być zarządzane za pomocą zasad i które zostały „opakowane” przez usługę Intune lub utworzone przy użyciu zestawu Intune App Software Development Kit (SDK). Tymi aplikacjami można zarządzać za pomocą usługi Intune i można do nich stosować zasady ochrony aplikacji.
 
-**Aplikacje niezarządzane** — aplikacje, którymi można zarządzać za pomocą zasad, ale które nie zostały opakowane przez usługę Intune lub które nie zawierają zestawu Intune App SDK. W przypadku tych aplikacji nie można stosować zasad aplikacji.
+**Aplikacje niezarządzane** — aplikacje, które użytkownicy mogą pobrać ze sklepu App Store systemu iOS, niezintegrowane z zestawem Intune App SDK. Usługa Intune nie kontroluje dystrybucji, selektywnego czyszczenia tych aplikacji ani zarządzania nimi.  
 
 Ograniczenia firmy Apple uniemożliwiają wyświetlanie w aplikacji Portal firmy aplikacji biznesowych oraz zarządzanych ze sklepu App Store. Aby obejść ten problem, kafelki w aplikacji Portal firmy działającej w systemie iOS umożliwiają przechodzenie do różnych widoków w obrębie jednej lokalizacji — witryny sieci Web Portal firmy — dla wszystkich aplikacji.
 
@@ -53,7 +52,7 @@ Zarejestrowani użytkownicy uzyskują aplikacje, naciskając następujące kafel
 
 Aby dowiedzieć się więcej o dodawaniu aplikacji, zobacz temat [Jak dodawać aplikacje do usługi Microsoft Intune](apps-add.md).
 
-### <a name="see-also"></a>Zobacz także
+## <a name="see-also"></a>Zobacz także
 [Jak użytkownicy systemu Android uzyskują aplikacje](end-user-apps-android.md)
 
 [Jak użytkownicy systemu Windows uzyskują aplikacje](end-user-apps-windows.md)

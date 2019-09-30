@@ -17,14 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7dff37794d6c58094749821748dcc96a4f36e28a
-ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
+ms.openlocfilehash: 0035f8d5cd67a995924f7d07a662d8c0671bf063
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71071626"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163779"
 ---
-# <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices-preview"></a>Konfiguracja rejestracji w usłudze Intune dla w pełni zarządzanych urządzeń z systemem Android Enterprise (wersja zapoznawcza)
+# <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices"></a>Konfiguracja rejestracji w pełni zarządzanych urządzeń z systemem Android Enterprise w usłudze Intune 
 
 W pełni zarządzane urządzenia z systemem Android Enterprise to urządzenia należące do firmy skojarzone z jednym użytkownikiem i wykorzystywane wyłącznie do pracy, a nie do celów osobistych. Administratorzy mogą zarządzać całym urządzeniem i wymuszać kontrolki zasad niedostępne dla profilów służbowych, takie jak:
 - Zezwalanie na instalowanie aplikacji tylko z zarządzanego sklepu Google Play.
@@ -39,7 +39,7 @@ Do zarządzania w pełni zarządzanymi urządzeniami z systemem Android Enterpri
 
 Urządzenia muszą spełniać następujące wymagania, aby mogły być zarządzane jako w pełni zarządzane urządzenia z systemem Android Enterprise:
 
-- System operacyjny Android w wersji 5.1 lub nowszy.
+- System operacyjny Android w wersji 6.0 lub nowszy.
 - Na urządzeniach musi działać kompilacja systemu Android obsługująca łączność z usługami Google Mobile Services (GMS). Urządzenia muszą mieć dostępne usługi GMS i muszą być w stanie połączyć się z usługami GMS.
 
 Jeśli powyższe wymagania są spełnione, nie ma żadnych ograniczeń dotyczących producenta urządzenia/producenta OEM.
@@ -55,7 +55,7 @@ Aby skonfigurować zarządzanie w pełni zarządzanymi urządzeniami z systemem 
 
 ### <a name="enable-corporate-owned-user-devices"></a>Włączanie urządzeń użytkowników należących do firmy
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) i wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja systemu Android** > **W pełni zarządzane urządzenia użytkowników należące do firmy (wersja zapoznawcza)** .
+1. Zaloguj się w usłudze [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) i wybierz pozycje **Rejestrowanie urządzenia** > **Rejestracja systemu Android** > **W pełni zarządzane urządzenia użytkowników należące do firmy**.
 2. W obszarze **Zezwalaj użytkownikom na rejestrowanie urządzeń będących własnością firmy** wybierz pozycję **Tak**.
 
 > [!NOTE]
@@ -65,25 +65,6 @@ Jeśli to ustawienie będzie miało wartość **Tak**, udostępni Ci token rejes
 
 ## <a name="enroll-the-fully-managed-devices"></a>Rejestrowanie w pełni zarządzanych urządzeń
 Teraz możesz [zarejestrować w pełni zarządzane urządzenia](android-dedicated-devices-fully-managed-enroll.md).
-
-## <a name="considerations-for-this-preview-feature"></a>Zagadnienia dotyczące tej funkcji w wersji zapoznawczej
-Ta publiczna wersja zapoznawcza zawiera podstawowy zestaw funkcji dla w pełni zarządzanego zestawu rozwiązań systemu Android Enterprise. Chcemy poznać Twoją opinię na temat korzystania z funkcji w wersji zapoznawczej. Możesz ją przesłać przy użyciu dowolnego kanału komunikacji z zespołem (na przykład za pomocą witryny [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas?category_id=210853)).
-
-Ta wersja zapoznawcza obsługuje następujące funkcje dla w pełni zarządzanych urządzeń z systemem Android Enterprise:
-- Rejestrowanie urządzeń przy użyciu funkcji NFC, wpisu tokenu, kodu QR i funkcji Zero Touch
-- Konfiguracja urządzeń dla grup użytkowników
-- Dystrybucja i konfiguracja aplikacji dla grup użytkowników
-
-
-Korzystając z tych funkcji w wersji zapoznawczej, należy pamiętać o następujących kwestiach:
-- Funkcje w wersji zapoznawczej nie są zalecane w przypadku wdrożeń o znaczeniu krytycznym lub wdrożeń produkcyjnych. 
-- Funkcje w wersji zapoznawczej są implementowane z zachowaniem standardów produkcyjnych usługi Microsoft Intune. Jednak nie wszystkie funkcje usługi Intune są dostępne do użytku na w pełni zarządzanych urządzeniach użytkowników z systemem Android Enterprise. Funkcje w wersji zapoznawczej są wyraźnie oznaczone etykietą „(wersja zapoznawcza)” w konsoli usługi Intune. 
-- Funkcje w wersji zapoznawczej są w pełni obsługiwane za pośrednictwem zwykłych kanałów pomocy technicznej usługi Intune.
-- Rejestracja w pełni zarządzanych urządzeń z systemem Android Enterprise przy użyciu programu Samsung Knox Mobile Enrollment nie jest obsługiwana w wersji zapoznawczej. 
-- Korzystanie z aplikacji Portal firmy usługi Intune nie jest obsługiwane na w pełni zarządzanych urządzeniach z systemem Android Enterprise. 
-- Funkcje usługi Intune, takie jak dostęp warunkowy, zasady ochrony aplikacji i wdrażanie certyfikatu, nie są obsługiwane w wersji zapoznawczej. 
-- Określanie celu grupy urządzeń dla dowolnego profilu bądź aplikacji nie jest obsługiwane w wersji zapoznawczej. Obsługiwane jest tylko określanie celu grupy użytkowników. 
-- Nie ma interfejsu użytkownika pierwszej klasy dla konfigurowania poczty e-mail, sieci Wi-Fi lub sieci VPN. Aby skonfigurować obsługiwane ustawienia konfiguracji aplikacji, użyj zasad konfiguracji aplikacji.
 
 ## <a name="next-steps"></a>Następne kroki
 - [Dodawanie zasad konfiguracji w pełni zarządzanych urządzeń z systemem Android Enterprise](device-restrictions-android-for-work.md#device-owner-only)

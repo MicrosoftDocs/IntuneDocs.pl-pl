@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1dc495e6356a35215943415e03a46496a72bddf1
-ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
+ms.openlocfilehash: c8c9375449e55d2e6cac511cb0e279355ec95294
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71071048"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163280"
 ---
 # <a name="android-device-administrator-enrollment"></a>Rejestracja administratora urządzeń z systemem Android
 
@@ -50,7 +50,8 @@ Aby uzyskać więcej informacji na temat funkcji systemu Android Enterprise firm
 Domyślnie usługa Intune umożliwia rejestrowanie urządzeń z systemem Android przy użyciu funkcji administratora urządzeń.
 
 1. Aby przygotować się do zarządzania urządzeniami przenośnymi, należy ustawić urząd zarządzania urządzeniami przenośnymi (MDM) na wartość **Microsoft Intune**. Instrukcje znajdują się w artykule [Set the MDM authority](mdm-authority-set.md) (Ustawianie urzędu MDM). Element ten ustawia się tylko raz podczas pierwszej konfiguracji usługi Intune do zarządzania urządzeniami przenośnymi.
-2. [Poinformuj użytkowników, jak mogą zarejestrować swoje urządzenia](/intune-user-help/enroll-your-device-in-intune-android).  
+2. Wybierz kolejno pozycje **Intune** > **Rejestrowanie urządzeń** > **Rejestracja w systemie Android** > **Urządzenia prywatne i należące do firmy z uprawnieniami do administrowania urządzeniami** > **Zarządzaj urządzeniami za pomocą administratora urządzeń**.
+3. [Poinformuj użytkowników, jak mogą zarejestrować swoje urządzenia](/intune-user-help/enroll-your-device-in-intune-android).  
 
 Po wykonaniu rejestracji przez użytkownika można zacząć zarządzać jego urządzeniami w usłudze Intune, w tym [przypisywać zasady zgodności](compliance-policy-create-android.md), [zarządzać aplikacjami](app-management.md) i nie tylko.
 

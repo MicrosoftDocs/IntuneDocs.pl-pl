@@ -6,9 +6,8 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 01/03/2018
+ms.date: 07/29/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dc0cf701450e594fd4b72a8e0565246994bb8a9e
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 5946f8ffb8179bb5109de45df8f89012ec706023
+ms.sourcegitcommit: 3baa9965095bb874d9b8c7a3cbb4aa925ed52cae
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57460618"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "71239579"
 ---
 # <a name="supported-operating-systems-and-browsers-in-intune"></a>Systemy operacyjne i przeglądarki obsługiwane w usłudze Intune
 
@@ -115,12 +114,12 @@ Dla tych portali obsługiwane są następujące przeglądarki:
 
 ### <a name="intune-classic-portal"></a>Klasyczny portal usługi Intune
 
-Funkcje obecne jedynie w klasycznej wersji usługi Intune, takie jak oprogramowanie klienckie usługi Intune na komputery i integracja z partnerami usługi Mobile Threat Defense, są dostępne tylko w klasycznym portalu usługi Intune (https://manage.microsoft.com). Klasyczny portal usługi Intune wymaga obsługi przeglądarki programu Silverlight.
+Klasyczny portal usługi Intune służy tylko do zarządzania urządzeniami zarejestrowanymi przy użyciu oprogramowania klienckiego usługi Intune (https://manage.microsoft.com). Klasyczny portal usługi Intune wymaga obsługi przeglądarki programu Silverlight.
 
 Następujące przeglądarki programu Silverlight obsługują konsolę usługi Intune:
 - Internet Explorer 10 lub nowsza wersja
 - Google Chrome (wersje poprzedzające wersję 42)
-- Mozilla Firefox z włączonym dodatkiem Silverlight [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=836872)
+- Mozilla Firefox z włączonym dodatkiem Silverlight (wersje wcześniejsze niż wersja 56)
 
 > [!Note]
 > Przeglądarka Microsoft Edge i przeglądarki dla urządzeń przenośnych nie są obsługiwane przez portal klasyczny usługi Intune, ponieważ nie obsługują technologii [Microsoft Silverlight](https://msdn.microsoft.com/library/cc838158(v=vs.95).aspx).

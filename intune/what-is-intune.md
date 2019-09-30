@@ -5,9 +5,8 @@ keywords: co to jest usługa Intune
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 02/26/2019
+ms.date: 06/20/2019
 ms.topic: overview
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 511e672193ec609f817c10572c99ac73831c54ae
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 2cde4e37889b981decfd18138feeb4edac46c4c8
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57460584"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "71238276"
 ---
 # <a name="what-is-microsoft-intune"></a>Co to jest usługa Microsoft Intune?
 
@@ -85,7 +84,7 @@ Omawiając konfigurację aplikacji i usługę Intune, odnosimy się w szczególn
 Korzystając z usługi Intune w połączeniu z innymi usługami pakietu EMS, możesz zapewnić swojej organizacji lepsze bezpieczeństwo aplikacji mobilnych niż to dostarczane przez system operacyjny urządzeń przenośnych i same aplikacje mobilne za pośrednictwem konfiguracji aplikacji. Aplikacja zarządzana za pomocą pakietu EMS ma dostęp do szerszego zakresu funkcji zabezpieczeń aplikacji mobilnych i danych, który obejmuje następujące funkcje:
 
 * [Logowanie jednokrotne](https://docs.microsoft.com/azure/active-directory/active-directory-appssoaccess-whatis)  
-*   [Uwierzytelnianie wieloskładnikowe](https://docs.microsoft.com/azure/active-directory/authentication/multi-factor-authentication)
+* [Uwierzytelnianie wieloskładnikowe](https://docs.microsoft.com/azure/active-directory/authentication/multi-factor-authentication)
 * [Warunkowy dostęp do aplikacji — dostęp jest możliwy, jeśli aplikacja mobilna zawiera dane firmy](app-based-conditional-access-intune.md)
 * [Izolowanie danych firmowych od danych osobistych w ramach tej samej aplikacji](app-protection-policy.md)
 * [Zasady ochrony aplikacji (numer PIN, szyfrowanie, funkcja „Zapisz jako”, schowek itp.)](app-protection-policies.md)

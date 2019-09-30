@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/03/2019
+ms.date: 09/19/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0e553229530f826ead91be981ff446b7cb3ebbf2
-ms.sourcegitcommit: 7269abaefb2857bc8b343896bb2138bdb01bf8dc
+ms.openlocfilehash: a9091b4623e456f5b00134542282b2032ce70e6a
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70214288"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163752"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Tworzenie i przypisywanie profilów certyfikatów SCEP w usłudze Intune
 
@@ -38,9 +38,19 @@ Po [skonfigurowaniu infrastruktury](certificates-scep-configure.md) pod kątem o
 3. Uzupełnij pola **Nazwa** i **Opis** odnoszące się do profilu certyfikatu SCEP.
 4. Z listy rozwijanej **Platforma** wybierz [obsługiwaną platformę urządzenia](certificates-configure.md#supported-platforms-and-certificate-profiles) dla tego certyfikatu SCEP. 
 5. Z listy rozwijanej **Typ profilu** wybierz pozycję **Certyfikat SCEP**.  
+   
+   W przypadku platformy **Android Enterprise** *typ profilu* jest podzielony na dwie kategorie: *Tylko właściciel urządzenia* i *Tylko profil służbowy*. Upewnij się, że wybrano prawidłowy profil certyfikatu SCEP dla zarządzanych urządzeń.  
 
-   > [!NOTE]  
-   > W przypadku platformy **System Android dla firm** *typ profilu* jest podzielony na dwie kategorie: *Tylko właściciel urządzenia* i *Tylko profil służbowy*.  Profile certyfikatów protokołu SCEP są obsługiwane jedynie w przypadku wybrania pozycji *Tylko profil służbowy*.
+   Profile certyfikatów SCEP dla profilu *Tylko właściciel urządzenia* mają następujące ograniczenia:  
+
+   1. Nie są obsługiwane następujące zmienne:  
+
+      - CN={{OnPrem_Distinguished_Name}}  
+      - CN={{onPremisesSamAccountName}}  
+
+   2. W obszarze Monitorowanie funkcja raportowania certyfikatów nie jest dostępna w przypadku profilów certyfikatów SCEP właścicieli urządzeń.
+   
+   3. Funkcja odwoływania certyfikatów zainicjowanych przez profile certyfikatów SCEP dla właściciela urządzenia nie jest obsługiwana za pomocą usługi Intune, ale można nią zarządzać przez proces zewnętrzny lub bezpośrednio za pomocą urzędu certyfikacji.
 
 6. Wybierz pozycję **Ustawienia**, a następnie wykonaj następujące czynności konfiguracyjne:
 

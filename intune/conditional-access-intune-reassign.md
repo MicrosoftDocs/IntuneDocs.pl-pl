@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a24c4b45b962f77846b4f7f7add3872daf38635
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 36e7b8468e4ee9d1f6be71a82d18f066bd7568d4
+ms.sourcegitcommit: 9110124a481160039d476cf0374a4fa0464a8509
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67883787"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71256198"
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Ponowne przypisywanie zasad dostępu warunkowego z klasycznego portalu usługi Intune do witryny Azure Portal
 
@@ -194,15 +194,9 @@ Po ponownym przypisaniu zasad dostępu warunkowego w witrynie Azure Portal nale�
 
 ### <a name="to-disable-the-conditional-access-policies"></a>Aby wyłączyć zasady dostępu warunkowego
 
-1. Przejdź do [portalu klasycznego usługi Intune](https://manage.microsoft.com) i zaloguj się przy użyciu swoich poświadczeń.
+Ponieważ opcja zarządzania urządzeniami mobilnymi została usunięta z klasycznego portalu usługi Intune, podano następujące łącze umożliwiające wyświetlenie/wyłączenie tych klasycznych zasad:
 
-2. Z menu po lewej stronie wybierz pozycję **Zasady**.
-
-3. Wybierz pozycję **Dostęp warunkowy**, a następnie wybierz usługi w chmurze firmy Microsoft (na przykład Exchange Online lub SharePoint Online), dla których zostały utworzone zasady dostępu warunkowego.
-
-4. Usuń zaznaczenie opcji **Włącz zasady dostępu warunkowego**, a następnie kliknij pozycję **Zapisz**.
-
-    ![Obraz przedstawiający wyłączanie zasad dostępu warunkowego w portalu klasycznym usługi Intune](./media/reassign-ca-18.png)
+https://portal.azure.com/?microsoft_aad_iam_classicPolicyDontHide=true#blade/Microsoft_AAD_IAM/ConditionalAccessBlade/ClassicPolicies
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -17,32 +17,32 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a1e370b65d8bfd7e61562347323bf1455dfe55b
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: eaf381d6d7b6bf8e9508eac4ccfc5431aa008658
+ms.sourcegitcommit: 89a973bbfa1702b2d275af6814874e4305bdcb77
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354301"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71140707"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Jak zarządzać przesyłaniem danych między aplikacjami systemu iOS w usłudze Microsoft Intune
 
 Aby chronić dane firmy, ogranicz przesyłanie plików tylko do aplikacji, którymi zarządzasz. Aplikacjami systemu iOS można zarządzać następująco:
 
-- Zapobiegaj utracie firmowych danych dzięki skonfigurowaniu zasad ochrony aplikacji dla aplikacji określanych mianem **zarządzanych przez zasady**. Zobacz [wszystkie aplikacje zarządzane przez usługę Intune, którymi można zarządzać za pomocą zasad ochrony aplikacji](https://www.microsoft.com/cloud-platform/microsoft-intune-apps)
+- Chroń dane organizacji na kontach służbowych przez skonfigurowanie zasad ochrony aplikacji dla aplikacji, które nazywamy *aplikacjami zarządzanymi przez zasady*.  Zobacz [wszystkie aplikacje zarządzane przez usługę Intune, którymi można zarządzać za pomocą zasad ochrony aplikacji](https://www.microsoft.com/cloud-platform/microsoft-intune-apps)
 
-- Wdrażaj aplikacje i zarządzaj nimi za pomocą **kanału zarządzania urządzeniami przenośnymi**, co wymaga rejestracji urządzeń w rozwiązaniu do zarządzania urządzeniami przenośnymi (MDM). Możesz wdrażać aplikacje **zarządzane przez zasady** lub inne zarządzane aplikacje.
+- Wdrażaj aplikacje i nimi zarządzaj za pomocą zarządzania urządzeniami iOS, co wymaga rejestracji urządzeń w rozwiązaniu do zarządzania urządzeniami mobilnymi (MDM). Możesz wdrażać *aplikacje zarządzane przez zasady* lub inne aplikacje zarządzane przy użyciu systemu iOS.
 
-**Zarządzanie funkcją Otwórz w** dla urządzeń z systemem iOS umożliwia ograniczenie przesyłania plików między aplikacjami wdrożonymi za pośrednictwem **kanału zarządzania urządzeniami przenośnymi**. Ustaw ograniczenia *zarządzania funkcją Otwórz w* w ustawieniach konfiguracji i wdróż je za pomocą rozwiązania do zarządzania urządzeniami przenośnymi.  Ograniczenia są stosowane w przypadku zainstalowania wdrożonej aplikacji przez użytkownika.
+Funkcja **Zarządzanie funkcją Otwórz w** dla zarejestrowanych urządzeń z systemem iOS umożliwia ograniczenie przesyłania plików między aplikacjami zarządzanymi systemu iOS. Ustaw ograniczenia funkcji *Zarządzanie funkcją Otwórz w* w ustawieniach konfiguracji i wdróż je za pomocą rozwiązania do zarządzania urządzeniami przenośnymi.  Ograniczenia są stosowane w przypadku zainstalowania wdrożonej aplikacji przez użytkownika.
 
 ## <a name="use-app-protection-with-ios-apps"></a>Używanie ochrony aplikacji w przypadku aplikacji systemu iOS
-Zasady ochrony aplikacji są używane z funkcją **zarządzania funkcją Otwórz w** systemu iOS w celu ochrony danych firmy na następujące sposoby:
+Zasady ochrony aplikacji są używane z funkcją **Zarządzanie funkcją Otwórz w** systemu iOS w celu ochrony danych firmy na następujące sposoby:
 
-- **Urządzenia pracowników, które nie są zarządzane przez żadne rozwiązanie MDM:** można skonfigurować zasady ochrony aplikacji z ustawieniem **Allow app to transfer data to only Policy Managed apps** (Zezwalaj aplikacji na przesyłanie danych tylko do aplikacji zarządzanych przez zasady). Zachowanie funkcji *Otwórz w* w aplikacji zarządzanej przez zasady przedstawia tylko inne aplikacje zarządzane przez zasady jako opcje udostępniania. Jeśli użytkownik próbuje wysłać plik chroniony przez zasady w formie załącznika z usługi OneDrive przy użyciu natywnej aplikacji poczty, nie można tego pliku odczytać.
+- **Urządzenia, które nie są zarządzane przez żadne rozwiązanie MDM:** Ustawienia zasad ochrony aplikacji można ustawić w taki sposób, aby kontrolować udostępnianie danych innym aplikacjom za pośrednictwem funkcji *Otwórz w* lub *Rozszerzenia udziałów*.  W tym celu skonfiguruj ustawienie **Wyślij dane organizacji do innych aplikacji** do wartości **Aplikacje zarządzane przez zasady z filtrowaniem okien dialogowych otwierania/udostępniania**.  Zachowanie funkcji *Okna dialogowe otwierania/udostępniania* w *aplikacji zarządzanej przez zasady* przedstawia tylko inne *aplikacje zarządzane przez zasady* jako opcje udostępniania. 
 
 - **Urządzenia zarządzane przez rozwiązania MDM**: W przypadku urządzeń zarejestrowanych w usłudze Intune lub w rozwiązaniach MDM innych firm udostępnianie danych między aplikacjami z zasadami ochrony aplikacji a innymi zarządzanymi aplikacjami systemu iOS wdrożonymi za pośrednictwem rozwiązania MDM jest kontrolowane przez zasady ochrony aplikacji usługi Intune i funkcję **zarządzania funkcją Otwórz w** systemu iOS. Aby zapewnić, że aplikacje, które wdrażasz za pomocą rozwiązania do zarządzania urządzeniami przenośnymi, również będą skojarzone z zasadami ochrony aplikacji usługi Intune, skonfiguruj ustawienie nazwy UPN użytkownika według opisu w sekcji [Konfigurowanie ustawienia nazwy UPN użytkownika](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). Aby określić sposób zezwalania na transfer danych do innych aplikacji, włącz ustawienie **Wyślij dane organizacji do innych aplikacji** i wybierz preferowany poziom udostępniania. Aby określić sposób zezwalania na odbieranie przez aplikację danych z innych aplikacji, włącz ustawienie **Odbierz dane z innych aplikacji** i wybierz preferowany poziom odbierania danych. Aby uzyskać więcej informacji na temat odbierania i udostępniania danych aplikacji, zobacz [Ustawienia relokacji danych](app-protection-policy-settings-ios.md#data-protection).
 
 ## <a name="configure-user-upn-setting-for-microsoft-intune-or-third-party-emm"></a>Konfigurowanie ustawienia nazwy UPN użytkownika dla usługi Microsoft Intune lub rozwiązania zarządzania mobilnością w przedsiębiorstwie innej firmy
-Skonfigurowanie ustawienia nazwy UPN użytkownika jest **wymagane** w przypadku urządzeń zarządzanych przez usługę Intune lub rozwiązanie do zarządzania urządzeniami przenośnymi innej firmy. Konfiguracja nazwy UPN współdziała z zasadami ochrony aplikacji wdrażanymi z usługi Intune. Poniżej przedstawiono ogólną procedurę konfigurowania ustawienia nazwy UPN oraz ogólny opis wynikowego środowiska użytkownika:
+Skonfigurowanie ustawienia nazwy UPN użytkownika jest **wymagane** w przypadku urządzeń zarządzanych przez usługę Intune lub rozwiązanie do zarządzania urządzeniami przenośnymi innej firmy w celu zidentyfikowania konta zarejestrowanego użytkownika. Konfiguracja nazwy UPN współdziała z zasadami ochrony aplikacji wdrażanymi z usługi Intune. Poniżej przedstawiono ogólną procedurę konfigurowania ustawienia nazwy UPN oraz ogólny opis wynikowego środowiska użytkownika:
 
 1. W witrynie [Azure Portal](https://portal.azure.com) [utwórz i przypisz zasady ochrony aplikacji](app-protection-policies.md) dla systemu iOS. Skonfiguruj ustawienia zasad zgodnie z wymaganiami firmy i wybierz aplikacje systemu iOS, wobec których należy zastosować te zasady.
 
@@ -85,26 +85,40 @@ Skonfigurowanie ustawienia nazwy UPN użytkownika jest **wymagane** w przypadku 
 
 ### <a name="example-2-end-user-experience"></a>Przykład 2: Środowisko użytkownika końcowego
 
-1. Użytkownik instaluje aplikację Microsoft Word na urządzeniu.
+*Udostępnianie z* aplikacji zarządzanej przez zasady *do innych aplikacji z funkcją udostępniania systemu operacyjnego*
 
-2. Użytkownik uruchamia natywną zarządzaną aplikację poczty e-mail, aby uzyskać dostęp do poczty e-mail.
+1. Użytkownik otwiera aplikację Microsoft OneDrive na zarejestrowanym urządzeniu z systemem iOS i loguje się do konta służbowego.  Konto wprowadzone przez użytkownika musi być zgodne z nazwą UPN konta określoną w ustawieniach konfiguracji aplikacji dla aplikacji Microsoft OneDrive.
 
-3. Użytkownik próbuje otworzyć dokument z natywnego programu pocztowego w programie Microsoft Word.
+2. Po zalogowaniu ustawienia aplikacji skonfigurowane przez administratora mają zastosowanie do konta użytkownika w usłudze Microsoft OneDrive.  Obejmuje to skonfigurowanie ustawienia **Wyślij dane organizacji do innych aplikacji** do wartości **Aplikacje zarządzane przez zasady z udostępnianiem systemu operacyjnego**.
 
-4. Po uruchomieniu aplikacji Word użytkownik otrzymuje monit o zalogowanie się przy użyciu konta służbowego. Konto wprowadzone przez użytkownika musi być zgodne z kontem określonym w ustawieniach konfiguracji aplikacji dla aplikacji Microsoft Word.
+3. Użytkownik wyświetla podgląd pliku służbowego i próbuje udostępnić go za pomocą funkcji Otwórz w w aplikacji zarządzanej systemu iOS.  
+
+4. Transfer danych zakończy się pomyślnie i dane będą chronione za pomocą **zarządzania funkcją Otwórz w** w aplikacji zarządzanej systemu iOS.  Aplikacja usługi Intune nie ma zastosowania do aplikacji, które nie są *aplikacjami zarządzanymi przez zasady*.
+
+*Udostępnianie z* aplikacji zarządzanej systemu iOS *do*  aplikacji zarządzanej przez zasady *przy użyciu danych przychodzących organizacji*
+
+1. Użytkownik otwiera natywną pocztę na zarejestrowanym urządzeniu z systemem iOS za pomocą zarządzanego profilu poczty e-mail.  
+
+1. Użytkownik otwiera załącznik dokumentu służbowego z natywnej poczty w programie Microsoft Word.
+
+1. Gdy aplikacja Word zostanie uruchomiona, mamy do czynienia z jedną z dwóch sytuacji:
+   1. Dane są chronione przez aplikację usługi Intune, gdy:
+      - Użytkownik jest zalogowany na koncie służbowym, które musi być zgodne z nazwą UPN konta określoną w ustawieniach konfiguracji aplikacji dla aplikacji Microsoft Word. 
+      - Ustawienia aplikacji skonfigurowane przez administratora mają zastosowanie do konta użytkownika w programie Microsoft Word.  Obejmuje to skonfigurowanie ustawienia **Odbierz dane z innych aplikacji** do wartości **Wszystkie aplikacje z przychodzącymi danymi organizacji**.
+      - Transfer danych kończy się pomyślnie i dokument zostaje oznaczony tożsamością służbową w aplikacji.  Aplikacja usługi Intune chroni akcje użytkownika dla dokumentu.
+   1. Dane **nie** są chronione przez aplikację usługi Intune, gdy:
+      - Użytkownik **nie** jest zalogowany na koncie służbowym.
+      - Ustawienia skonfigurowane przez administratora **nie** mają zastosowania do programu Microsoft Word, ponieważ użytkownik nie jest zalogowany.
+      - Transfer danych kończy się pomyślnie i dokument **nie** zostaje oznaczony tożsamością służbową w aplikacji.  Aplikacja usługi Intune **nie** chroni akcji użytkownika dla dokumentu, ponieważ nie jest on aktywny.
 
     > [!NOTE]
     > Użytkownik może dodać swoje konta osobiste i używać ich z aplikacją Word. Zasady ochrony aplikacji nie mają zastosowania, gdy użytkownik korzysta z aplikacji Word poza kontekstem służbowym. 
-
-5. Po zalogowaniu się ustawienia zasad ochrony aplikacji są stosowane do aplikacji Word.
-
-6. Teraz transfer danych zakończy się pomyślnie i dokument zostanie oznaczony tożsamością firmową w aplikacji.  Uznaje się, że dane są używane w kontekście służbowym i ustawienia zasad mają zastosowanie. 
 
 ### <a name="validate-user-upn-setting-for-third-party-emm"></a>Weryfikowanie ustawienia nazwy UPN użytkownika dla rozwiązania zarządzania mobilnością w przedsiębiorstwie innych firm
 
 Po skonfigurowaniu ustawienia nazwy UPN użytkownika zweryfikuj zdolność aplikacji systemu iOS do odbierania i spełniania wymagań zasad ochrony aplikacji usługi Intune.
 
-Na przykład ustawienie zasad **Wymagaj numeru PIN aplikacji** jest łatwe do przetestowania. Jeśli ustawienie zasad ma wartość **Tak**, użytkownik powinien zobaczyć monit o ustawienie lub wprowadzenie numeru PIN, zanim będzie mógł uzyskać dostęp do danych firmy.
+Na przykład ustawienie zasad **Wymagaj numeru PIN aplikacji** jest łatwe do przetestowania. Jeśli ustawienie zasad ma wartość **Wymagaj**, użytkownik powinien zobaczyć monit o ustawienie lub wprowadzenie numeru PIN, zanim będzie mógł uzyskać dostęp do danych firmy.
 
 Najpierw [utwórz i przypisz zasady ochrony aplikacji](app-protection-policies.md) do aplikacji w systemie iOS. Zobacz [Weryfikowanie zasad ochrony aplikacji](app-protection-policies-validate.md), aby uzyskać więcej informacji na temat testowania zasad ochrony aplikacji.
 

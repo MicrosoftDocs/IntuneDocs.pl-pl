@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d87b617f49a3df71b767fe91f1f03f88f36ee8a3
-ms.sourcegitcommit: a25cd79a33feb536d9b2fc11aa7d3e3972f1ca5a
+ms.openlocfilehash: 22cf93aa7418e5e8be2338e70f762a451bb3bdcf
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70842192"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167146"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Autonomiczna usługa Intune — zarządzanie aplikacjami Win32
 
@@ -194,6 +194,8 @@ W poniższych krokach przedstawiono wskazówki ułatwiające dodanie aplikacji s
 
     > [!NOTE]
     > W okienku **Reguły wykrywania** możesz dodać wiele reguł. Wykrycie aplikacji wymaga spełnienia **wszystkich** reguł.
+    >
+    > Jeśli usługa Intune wykryje, że aplikacja nie jest obecna na urządzeniu, usługa Intune zaoferuje aplikację ponownie po 24 godzinach. Nastąpi to tylko w przypadku aplikacji przeznaczonych do wymaganego celu.
 
     - **Ręcznie skonfiguruj reguły wykrywania** — możesz wybrać jeden z następujących typów reguły:
         1. **MSI** — weryfikacja oparta na sprawdzeniu wersji pliku MSI. Tę opcję można dodać tylko raz. Po wybraniu reguły tego typu są dostępne dwa ustawienia:
@@ -278,7 +280,7 @@ W poniższych krokach przedstawiono wskazówki ułatwiające dodanie aplikacji s
 7. W okienku **Dodawanie grupy** wybierz przycisk **OK**.
 8. W okienku **Przypisania** aplikacji wybierz pozycję **Zapisz**.
 
-W tym momencie wykonywanie kroków dodawania aplikacji Win32 do usługi Intune zostało zakończone. Aby uzyskać informacje dotyczące przypisywania i monitorowania aplikacji, zobacz [Przypisywanie aplikacji do grup w usłudze Microsoft Intune](https://docs.microsoft.com/intune/apps-deploy) i [Monitorowanie informacji o aplikacji i przypisań z użyciem usługi Microsoft Intune](https://docs.microsoft.com/intune/apps-monitor).
+W tym momencie wykonywanie kroków dodawania aplikacji Win32 do usługi Intune zostało zakończone. Aby uzyskać informacje dotyczące przypisywania i monitorowania aplikacji, zobacz [Przypisywanie aplikacji do grup w usłudze Microsoft Intune](apps-deploy.md) i [Monitorowanie informacji o aplikacji i przypisań z użyciem usługi Microsoft Intune](apps-monitor.md).
 
 ## <a name="app-dependencies"></a>Zależności aplikacji
 

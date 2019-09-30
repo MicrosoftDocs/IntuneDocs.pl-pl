@@ -8,7 +8,6 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 06/01/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f8405aceaa1fd9c00b966d03a1f7b80e5946d96
-ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
+ms.openlocfilehash: 52f8af06fffb3643714ed318e474b73be21963ed
+ms.sourcegitcommit: 6a946a055a2014e00a4ca9d71986727a4ebbc777
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59569782"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71239795"
 ---
 # <a name="how-to-educate-your-end-users-about-microsoft-intune"></a>Jak edukować użytkowników końcowych na temat usługi Microsoft Intune
 
@@ -44,7 +43,7 @@ __Jaki jest poziom doświadczeń użytkowników z technologiami?__ Wiedza i doś
 
 __Co oznacza zarządzanie mobilnością dla użytkowników?__ Użytkownicy mogą w pełni nie rozumieć dostępu, jaki masz — lub nie masz — do ich urządzeń i informacji. Użytkownicy mogą obawiać się potencjalnego śledzenia ich poczynań przez dział IT i kierownictwo. Mniej doświadczeni użytkownicy urządzeń mogą sądzić, że cała aktywność na ich urządzeniach jest prywatna. 
 
-__Jak usługa Intune może przeszkadzać użytkownikom?__  Doceń i szanuj czas, jaki użytkownicy poświęcają na instalowanie aplikacji, rejestrowanie urządzeń i zachowywanie zgodności ze standardami. W przypadku wszystkich wdrożeń usługi Intune najwyższy priorytet ma ochrona danych firmowych. Jednak na podejście użytkowników do zarządzania urządzeniami możesz negatywnie wpłynąć, jeśli będziesz forsować zasady, które przykładowo:  
+__Jak usługa Intune może przeszkadzać użytkownikom?__  Doceń i szanuj czas, jaki użytkownicy poświęcają na instalowanie aplikacji, rejestrowanie urządzeń i zachowywanie zgodności ze standardami. W przypadku wszystkich wdrożeń usługi Intune najwyższy priorytet ma ochrona danych firmowych. Na podejście użytkowników do zarządzania urządzeniami możesz jednak wpłynąć negatywnie, jeśli będziesz forsować zasady, które na przykład:  
 * wymagają nieuzasadnionych kodów dostępu na urządzeniach prywatnych,
 * wysyłają wymagane aktualizacje aplikacji w środku bardzo ważnej rozmowy biznesowej.  
 
@@ -58,9 +57,9 @@ Przeczytaj poniższą listę wskazówek, które pokazują, jak uczynić wdrażan
 
 * __Bądź dostępny.__ Poinformuj użytkowników, gdzie mogą szukać pomocy dotyczącej problemów z urządzeniem. [Dostosowując Portal firmy](company-portal-customize.md), pamiętaj o uwzględnieniu informacji kontaktowych administratora IT.
 
-* __Miej indywidualne podejście.__ Udostępnij instrukcje dopasowane do wdrożenia w Twojej organizacji. To pokaże użytkownikom, że zależy Ci na ich komforcie pracy. Użyj tego [dostosowywalnego szablonu rejestracji użytkowników usługi Intune](https://gallery.technet.microsoft.com/office/Intune-End-User-Enrollment-3a0c9b0c), aby utworzyć własne instrukcje dotyczące rejestracji dla użytkowników.
+* __Miej indywidualne podejście.__ Udostępnij instrukcje dopasowane do wdrożenia w Twojej organizacji. To pokaże użytkownikom, że zależy Ci na ich komforcie pracy. Użyj tego dostosowywalnego [zestawu wdrażania usługi Intune](https://aka.ms/IntuneAdoptionKit), aby utworzyć własne instrukcje dotyczące rejestracji dla użytkowników.
 
-* __Znajdź różne sposoby komunikacji.__ Użytkownicy mają [różne style uczenia](https://www.umassd.edu/dss/resources/facultystaff/howtoteachandaccommodate/howtoaccommodatedifferentlearningstyles/) i preferowane sposoby korzystania z informacji. Dla osób preferujących materiały wizualne usługa Intune oferuje w witrynie Channel 9 [wersje wideo instrukcji rejestrowania różnych typów urządzeń](https://channel9.msdn.com/Series/IntuneEnrollment). Wideo te możesz osadzić bezpośrednio we własnej [witrynie programu SharePoint](https://support.office.com/article/Embed-a-video-from-Office-365-Video-59e19984-c34e-4be8-889b-f6fa93910581). Możesz też pobrać lokalne kopie ścieżek wideo i audio.
+* __Znajdź różne sposoby komunikacji.__ Użytkownicy mają [różne style uczenia](https://www.umassd.edu/dss/resources/faculty--staff/how-to-teach-and-accommodate/how-to-accommodate-different-learning-styles/) i preferowane sposoby korzystania z informacji. Dla osób preferujących materiały wizualne usługa Intune oferuje w witrynie Channel 9 [wersje wideo instrukcji rejestrowania różnych typów urządzeń](https://channel9.msdn.com/Series/IntuneEnrollment). Wideo te możesz osadzić bezpośrednio we własnej [witrynie programu SharePoint](https://support.office.com/article/Embed-a-video-from-Office-365-Video-59e19984-c34e-4be8-889b-f6fa93910581). Możesz też pobrać lokalne kopie ścieżek wideo i audio.
 
 * __Bądź świadomy.__ Doświadczenia użytkowników z usługą Intune wpływają też na Twoją wydajność pracy. Zrozumienie doświadczeń użytkowników ułatwia rozwiązywanie problemów z urządzeniami i użytkownikami. Na przykład możesz dowiedzieć się i zrozumieć, jak użytkownicy pozyskują swoje aplikacje. Wcześniejsze zapoznanie się z tymi informacjami pozwoli łatwiej i szybciej diagnozować oraz rozwiązywać problemy.
 
