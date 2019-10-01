@@ -5,9 +5,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/14/2018
+ms.date: 08/12/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6e51e936a70580643cbaa232441e0ba21c3db14
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 228a4af302a1344f60dc43c02c12efac23e34f74
+ms.sourcegitcommit: ec22a186a9cfa489a8490698e387624e480892d8
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566662"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "71238754"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Przygotowywanie aplikacji systemu iOS pod kątem zasad ochrony aplikacji za pomocą narzędzia opakowującego aplikacje usługi Intune
 
@@ -169,9 +168,9 @@ Do rozpowszechniania aplikacji opakowanych przez usługę Intune są potrzebne n
 
 ## <a name="download-the-app-wrapping-tool"></a>Pobieranie narzędzia opakowującego aplikacje
 
-1.  Pobierz pliki narzędzia opakowującego aplikacje z serwisu [GitHub](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) na komputer z systemem macOS.
+1. Pobierz pliki narzędzia opakowującego aplikacje z serwisu [GitHub](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) na komputer z systemem macOS.
 
-2.  Kliknij dwukrotnie plik **Microsoft Intune App Wrapping Tool for iOS.dmg**. Zostanie wyświetlone okno zawierające Umowę licencyjną użytkownika oprogramowania (EULA). Zapoznaj się dokładnie z treścią dokumentu.
+2. Kliknij dwukrotnie plik **Microsoft Intune App Wrapping Tool for iOS.dmg**. Zostanie wyświetlone okno zawierające Umowę licencyjną użytkownika oprogramowania (EULA). Zapoznaj się dokładnie z treścią dokumentu.
 
 3. Wybierz pozycję **Zgadzam się**, aby zaakceptować umowę EULA, co spowoduje zainstalowanie pakietu na komputerze.
 
@@ -203,30 +202,38 @@ Z narzędziem opakowującym aplikacje można użyć następujących parametrów 
 |**-o**|`<Path of the wrapped output application>` |
 |**-p**|`<Path of your provisioning profile for iOS apps>`|
 |**-c**|`<SHA1 hash of the signing certificate>`|
-|**-h**|Wyświetla szczegółowe informacje dotyczące użycia dostępnych właściwości wiersza polecenia dla narzędzia opakowującego aplikacje.|
-|**-v**|(Opcjonalna) Zwraca pełne komunikaty wyjściowe do konsoli. Zaleca się użyć tej flagi w celu debugowania wszelkich błędów.|
+|**-h**| Wyświetla szczegółowe informacje dotyczące użycia dostępnych właściwości wiersza polecenia dla narzędzia opakowującego aplikacje. |
+|**-aa**|(Opcjonalnie) `<Authority URI of the input app if the app uses the Azure Active Directory Authentication Library>` tj. `login.windows.net/common` |
+|**-ac**|(Opcjonalnie) `<Client ID of the input app if the app uses the Azure Active Directory Authentication Library>` to jest identyfikator GUID w polu Identyfikator klienta znajduje się na liście aplikacji w bloku rejestracji aplikacji. |
+|**-ar**|(Opcjonalnie) `<Redirect/Reply URI of the input app if the app uses the Azure Active Directory Authentication Library>` to jest identyfikator URI przekierowania skonfigurowany w ramach rejestracji aplikacji. Zwykle jest to protokół URL aplikacji, z którą aplikacja Microsoft Authenticator powraca po uwierzytelnieniu przez brokera. |
+|**-v**| (Opcjonalna) Zwraca pełne komunikaty wyjściowe do konsoli. Zaleca się użyć tej flagi w celu debugowania wszelkich błędów. |
 |**-e**| (Opcjonalna) Użyj tej właściwości, aby narzędzie opakowujące aplikacje usuwało brakujące uprawnienia podczas przetwarzania aplikacji. Zobacz [Ustawianie uprawnień dla aplikacji](#setting-app-entitlements), aby uzyskać szczegółowe informacje.|
 |**-xe**| (Opcjonalna) Wyświetla informacje na temat rozszerzeń systemu iOS w aplikacji oraz uprawnień wymaganych do ich używania. Zobacz [Ustawianie uprawnień dla aplikacji](#setting-app-entitlements), aby uzyskać szczegółowe informacje. |
 |**-x**| (Opcjonalnie) `<An array of paths to extension provisioning profiles>`. Użyj tej właściwości, jeśli aplikacja wymaga profilów aprowizacji rozszerzeń.|
-|**-f**|(Opcjonalna) `<Path to a plist file specifying arguments.>` Poprzedź tą flagą plik [plist](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html), jeśli chcesz użyć szablonu pliku plist w celu określenia pozostałych właściwości aplikacji IntuneMAMPackager: -i, -o, -p itd. Zobacz temat Wprowadzanie argumentów przy użyciu pliku plist. |
 |**-b**|(Opcjonalnie) Użyj właściwości -b bez argumentu, jeśli chcesz, aby opakowana aplikacja wyjściowa miała taką samą wersję pakietu jak aplikacja wejściowa (niezalecane). <br/><br/> Użyj właściwości `-b <custom bundle version>`, jeśli chcesz, aby opakowana aplikacja miała niestandardową wartość CFBundleVersion. Jeśli chcesz określić niestandardową wartość CFBundleVersion, zaleca się podwyższenie najmniej istotnego składnika wartości CFBundleVersion aplikacji natywnej, na przykład z 1.0.0 na 1.0.1. |
+|**-citrix**|Obowiązkowe Uwzględnij zestaw SDK aplikacji Citrix XenMobile ("tylko sieć"). Aby można było użyć tej opcji, musisz mieć zainstalowany [zestaw narzędzi Citrix MDX Toolkit](https://docs.citrix.com/en-us/mdx-toolkit/about-mdx-toolkit.html) . |
+|**-f**|(Opcjonalna) `<Path to a plist file specifying arguments.>` Poprzedź tą flagą plik [plist](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html), jeśli chcesz użyć szablonu pliku plist w celu określenia pozostałych właściwości aplikacji IntuneMAMPackager: -i, -o, -p itd. Zobacz temat Wprowadzanie argumentów przy użyciu pliku plist. |
 
 ### <a name="use-a-plist-to-input-arguments"></a>Wprowadzanie argumentów przy użyciu pliku plist
 Łatwym sposobem uruchamiania narzędzia opakowującego aplikacje jest wprowadzenie wszystkich argumentów polecenia w pliku [plist](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html). Plist to format pliku podobny do formatu XML, umożliwiający wprowadzanie argumentów wiersza polecenia za pomocą interfejsu formularza.
 
 Za pomocą edytora tekstu lub narzędzia Xcode otwórz plik `Parameters.plist`, pusty szablon pliku plist znajdujący się w folderze IntuneMAMPackager/Contents/MacOS. Wprowadź argumenty dla następujących kluczy:
 
-| Klucz pliku plist |  Wartość domyślna| Uwagi |
-|------------------|--------------|-----|
-| Input Application Package Path (Ścieżka pakietu aplikacji wejściowej)  |puste| Odpowiada właściwości -i.|
-| Output Application Package Path (Ścieżka pakietu aplikacji wyjściowej) |puste| Odpowiada właściwości -o.|
-| Provisioning Profile Path (Ścieżka profilu aprowizacji) |puste| Odpowiada właściwości -p.|
-| SHA-1 Certificate Hash (Skrót certyfikatu SHA-1) |puste| Odpowiada właściwości -c.|
-| Verbose Enabled (Pełne komunikaty włączone) |fałsz| Odpowiada właściwości -v.|
-| Remove Missing Entitlements (Usuwanie brakujących uprawnień) | fałsz| Odpowiada właściwości -c.|
-| Prevent Default Build (Zapobieganie użyciu domyślnej kompilacji) |fałsz | Odpowiada właściwości -b bez argumentów.|
-|Build String Override (Zastąpienie ciągu kompilacji) | puste| Niestandardowa wartość CFBundleVersion opakowanej aplikacji wyjściowej |
-|Extension Provisioning Profile Paths (Ścieżki profilów aprowizacji rozszerzeń) | puste| Tablica profilów aprowizacji rozszerzeń dla aplikacji.
+| Klucz pliku plist | Typ |  Wartość domyślna | Uwagi |
+|------------------|-----|--------------|-----|
+| Input Application Package Path (Ścieżka pakietu aplikacji wejściowej) |String|puste| Odpowiada właściwości -i.|
+| Output Application Package Path (Ścieżka pakietu aplikacji wyjściowej) |String|puste| Odpowiada właściwości -o.|
+| Provisioning Profile Path (Ścieżka profilu aprowizacji) |String|puste| Odpowiada właściwości -p.|
+| SHA-1 Certificate Hash (Skrót certyfikatu SHA-1) |String|puste| Odpowiada właściwości -c.|
+| Urząd ADAL |String|puste| Odpowiada właściwości -aa|
+| Identyfikator klienta ADAL |String|puste| Odpowiada właściwości -ac|
+| Identyfikator URI odpowiedzi ADAL |String|puste| Odpowiada właściwości -ar|
+| Verbose Enabled (Pełne komunikaty włączone) |Boolean|fałsz| Odpowiada właściwości -v.|
+| Remove Missing Entitlements (Usuwanie brakujących uprawnień) |Boolean|fałsz| Odpowiada właściwości -c.|
+| Prevent Default Build (Zapobieganie użyciu domyślnej kompilacji) |Boolen|fałsz| Odpowiada właściwości -b bez argumentów.|
+| Build String Override (Zastąpienie ciągu kompilacji) |String|puste| Niestandardowa wartość CFBundleVersion opakowanej aplikacji wyjściowej|
+| Uwzględnij zestaw SDK aplikacji Citrix XenMobile (wariant dotyczący tylko sieci)|Boolean|fałsz| Taka sama jak dla platformy Citrix|
+| Extension Provisioning Profile Paths (Ścieżki profilów aprowizacji rozszerzeń) |Tablica ciągów|puste| Tablica profilów aprowizacji rozszerzeń dla aplikacji.
 
 
 Uruchom aplikację IntuneMAMPackager, wprowadzając plik plist jako jedyny argument:
@@ -285,15 +292,16 @@ Jeśli przetwarzanie aplikacji przez narzędzie opakowujące aplikacje nie powie
 ### <a name="log-files-for-the-app-wrapping-tool"></a>Pliki dziennika narzędzia opakowującego aplikacje
 Przetwarzanie aplikacji za pomocą narzędzia opakowującego aplikacje wiąże się z generowaniem dzienników zapisywanych w konsoli urządzenia klienta systemu iOS. Informacje te są przydatne w przypadku wystąpienia problemów z aplikacją, gdy konieczne jest ustalenie, czy problem jest związany z narzędziem opakowującym aplikacje. Aby uzyskać dostęp do tych informacji, wykonaj następujące czynności:
 
-1.  Uruchom aplikację, aby problem wystąpił ponownie.
+1. Uruchom aplikację, aby problem wystąpił ponownie.
 
-2.  Zbierz dane wyjściowe z konsoli zgodnie z instrukcjami [debugowania wdrożonych aplikacji dla systemu iOS](https://developer.apple.com/library/ios/qa/qa1747/_index.html)firmy Apple.
+2. Zbierz dane wyjściowe z konsoli zgodnie z instrukcjami [debugowania wdrożonych aplikacji dla systemu iOS](https://developer.apple.com/library/ios/qa/qa1747/_index.html)firmy Apple.
 
-3.  Przefiltruj zapisane dzienniki, aby uzyskać wyniki związane z ograniczeniami aplikacji, wprowadzając w konsoli następujący skrypt:
+3. Przefiltruj zapisane dzienniki, aby uzyskać wyniki związane z ograniczeniami aplikacji, wprowadzając w konsoli następujący skrypt:
 
     ```bash
     grep “IntuneAppRestrictions” <text file containing console output> > <required filtered log file name>
     ```
+
     Przefiltrowane dzienniki można przesłać do firmy Microsoft.
 
     > [!NOTE]
@@ -331,7 +339,7 @@ Przed opakowaniem aplikacji można przyznać *uprawnienia* w celu zapewnienia je
 
 ### <a name="steps-to-enable-entitlements"></a>Kroki umożliwiające włączenie uprawnień
 
-1.  Włącz możliwości w swojej aplikacji:
+1. Włącz możliwości w swojej aplikacji:
 
     a.  W środowisku Xcode przejdź do elementu docelowego aplikacji i kliknij okienko **Możliwości**.
 
@@ -341,7 +349,7 @@ Przed opakowaniem aplikacji można przyznać *uprawnienia* w celu zapewnienia je
 
     d.  Skompiluj i podpisz swoją aplikację w celu jej opakowania.
 
-2.  Włącz uprawnień w Twoim profilu inicjowania obsługi administracyjnej:
+2. Włącz uprawnień w Twoim profilu inicjowania obsługi administracyjnej:
 
     a.  Zaloguj się do witryny Member Center przeznaczonej dla deweloperów firmy Apple.
 
@@ -351,7 +359,7 @@ Przed opakowaniem aplikacji można przyznać *uprawnienia* w celu zapewnienia je
 
     d.  Zakończ pracę Kreatora profilu aprowizacji i pobierz odpowiedni plik.
 
-3.  Upewnij się, że zostały spełnione wszystkie wymagania wstępne, a następnie opakuj aplikację.
+3. Upewnij się, że zostały spełnione wszystkie wymagania wstępne, a następnie opakuj aplikację.
 
 ### <a name="troubleshoot-common-errors-with-entitlements"></a>Rozwiązywanie typowych problemów z uprawnieniami
 Jeśli w narzędziu opakowującym aplikacje dla systemu iOS jest wyświetlany błąd uprawnień, spróbuj wykonać następujące kroki w celu rozwiązania problemu.
@@ -364,20 +372,20 @@ Jeśli w narzędziu opakowującym aplikacje dla systemu iOS jest wyświetlany b�
 ### <a name="find-the-existing-entitlements-of-a-signed-app"></a>Wyszukiwanie istniejących uprawnień podpisanej aplikacji
 Aby przejrzeć istniejące uprawnienia podpisanej aplikacji i profilu inicjowania obsługi administracyjnej:
 
-1.  Znajdź plik ipa i zmień jego rozszerzenie na zip.
+1. Znajdź plik ipa i zmień jego rozszerzenie na zip.
 
-2.  Rozwiń plik zip. Spowoduje to utworzenie folderu Payload zawierającego pakiet app.
+2. Rozwiń plik zip. Spowoduje to utworzenie folderu Payload zawierającego pakiet app.
 
-3.  Za pomocą narzędzia codesign sprawdź uprawnienia w pakiecie app, gdzie `YourApp.app` jest rzeczywistą nazwą pakietu app:
+3. Za pomocą narzędzia codesign sprawdź uprawnienia w pakiecie app, gdzie `YourApp.app` jest rzeczywistą nazwą pakietu app:
 
     ```bash
-    $ codesign -d --entitlements :- "Payload/YourApp.app"
+    codesign -d --entitlements :- "Payload/YourApp.app"
     ```
 
-4.  Za pomocą narzędzia security sprawdź uprawnienia osadzonego w aplikacji profilu aprowizacji, gdzie `YourApp.app` jest rzeczywistą nazwą pakietu app.
+4. Za pomocą narzędzia security sprawdź uprawnienia osadzonego w aplikacji profilu aprowizacji, gdzie `YourApp.app` jest rzeczywistą nazwą pakietu app.
 
     ```bash
-    $ security -D -i "Payload/YourApp.app/embedded.mobileprovision"
+    security cms -D -i "Payload/YourApp.app/embedded.mobileprovision"
     ```
 
 ### <a name="remove-entitlements-from-an-app-by-using-the-e-parameter"></a>Usuwanie uprawnień z aplikacji za pomocą parametru –e
@@ -390,19 +398,19 @@ To polecenie usuwa wszystkie włączone możliwości w aplikacji, które nie zna
 ## <a name="security-and-privacy-for-the-app-wrapping-tool"></a>Funkcje zabezpieczeń i ochrony prywatności narzędzia opakowującego aplikacje
 Podczas korzystania z narzędzia opakowującego aplikacje należy stosować poniższe dobre praktyki dotyczące zabezpieczeń i ochrony prywatności.
 
--   Certyfikat podpisywania, profil aprowizacji oraz aplikacja biznesowa do przetworzenia muszą znajdować się na tym samym komputerze z systemem Mac OS, na którym jest uruchamiane narzędzie opakowujące aplikacje. Jeśli pliki znajdują się na ścieżce UNC, upewnij się, że są one dostępne z tego komputera z systemem Mac OS. Ścieżka musi być zabezpieczona za pomocą protokołu IPsec lub funkcji podpisywania protokołu SMB.
+- Certyfikat podpisywania, profil aprowizacji oraz aplikacja biznesowa do przetworzenia muszą znajdować się na tym samym komputerze z systemem Mac OS, na którym jest uruchamiane narzędzie opakowujące aplikacje. Jeśli pliki znajdują się na ścieżce UNC, upewnij się, że są one dostępne z tego komputera z systemem Mac OS. Ścieżka musi być zabezpieczona za pomocą protokołu IPsec lub funkcji podpisywania protokołu SMB.
 
     Opakowana aplikacja zaimportowana do konsoli administracyjnej powinna znajdować się na tym samym komputerze, na którym jest uruchamiane narzędzie. Jeśli plik znajduje się w ścieżce UNC, upewnij się, że jest dostępny na komputerze, na którym uruchomiono konsolę administracyjną. Ścieżka musi być zabezpieczona za pomocą protokołu IPsec lub funkcji podpisywania protokołu SMB.
 
--   Środowisko, w którym narzędzie opakowujące aplikacje zostanie pobrane z repozytorium w witrynie GitHub, musi być zabezpieczone za pomocą protokołu IPsec lub funkcji podpisywania protokołu SMB.
+- Środowisko, w którym narzędzie opakowujące aplikacje zostanie pobrane z repozytorium w witrynie GitHub, musi być zabezpieczone za pomocą protokołu IPsec lub funkcji podpisywania protokołu SMB.
 
--   W celu zabezpieczenia przed atakami przetwarzane aplikacje muszą pochodzić z zaufanego źródła.
+- W celu zabezpieczenia przed atakami przetwarzane aplikacje muszą pochodzić z zaufanego źródła.
 
--   Upewnij się, że folder wyjściowy wskazany w narzędziu opakowującym aplikacje jest zabezpieczony, zwłaszcza gdy jest to folder zdalny.
+- Upewnij się, że folder wyjściowy wskazany w narzędziu opakowującym aplikacje jest zabezpieczony, zwłaszcza gdy jest to folder zdalny.
 
--   Aplikacje dla systemu iOS zawierające okno dialogowe przekazywania plików mogą umożliwiać użytkownikom obejście zastosowanych do aplikacji ograniczeń wycinania, kopiowania i wklejania. Użytkownik może na przykład użyć okna dialogowego przekazywania plików do przekazania zrzutu ekranu zawierającego dane aplikacji.
+- Aplikacje dla systemu iOS zawierające okno dialogowe przekazywania plików mogą umożliwiać użytkownikom obejście zastosowanych do aplikacji ograniczeń wycinania, kopiowania i wklejania. Użytkownik może na przykład użyć okna dialogowego przekazywania plików do przekazania zrzutu ekranu zawierającego dane aplikacji.
 
--   W przypadku monitorowania folderu dokumentów na urządzeniu przy użyciu opakowanej aplikacji może być widoczny folder o nazwie .msftintuneapplauncher. Modyfikacja lub usunięcie tego pliku może zakłócić działanie aplikacji z ograniczeniami.
+- W przypadku monitorowania folderu dokumentów na urządzeniu przy użyciu opakowanej aplikacji może być widoczny folder o nazwie .msftintuneapplauncher. Modyfikacja lub usunięcie tego pliku może zakłócić działanie aplikacji z ograniczeniami.
 
 ## <a name="intune-app-wrapping-tool-for-ios-with-citrix-mdx-mvpn"></a>Narzędzie opakowujące aplikacje dla systemu iOS w usłudze Intune z siecią mVPN w technologii Citrix MDX
 Ta funkcja jest integracją z narzędziem opakowującym aplikacje Citrix MDX dla systemu iOS. Integracja to po prostu dodatkowa, opcjonalna flaga wiersza polecenia, `-citrix`, do użycia z ogólnymi narzędziami opakowującymi aplikacje w usłudze Intune.
@@ -418,11 +426,13 @@ Aby używać flagi `-citrix`, należy również zainstalować [narzędzie opakow
 Wystarczy uruchomić ogólne polecenie opakowujące aplikację z dołączoną flagą `-citrix`. Flaga `-citrix` aktualnie nie przyjmuje żadnych argumentów.
 
 **Format użycia**:
+
 ```bash
 ./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i /<path of input app>/<app filename> -o /<path to output folder>/<app filename> -p /<path to provisioning profile> -c <SHA1 hash of the certificate> [-b [<output app build string>]] [-v] [-e] [-x /<array of extension provisioing profile paths>] [-citrix]
 ```
 
 **Przykładowe polecenie**:
+
 ```bash
 ./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i ~/Desktop/MyApp.ipa -o ~/Desktop/MyApp_Wrapped.ipa -p ~/Desktop/My_Provisioning_Profile_.mobileprovision -c 12A3BC45D67EF8901A2B3CDEF4ABC5D6E7890FAB  -v true -citrix
 ```
@@ -442,5 +452,5 @@ Wykonaj następujące kroki, aby podczas rozwiązywania problemów pobrać dzien
 ## <a name="see-also"></a>Zobacz także
 
 - [Wybieranie sposobu przygotowania aplikacji do zarządzania aplikacjami mobilnymi w usłudze Microsoft Intune](apps-prepare-mobile-application-management.md)
-- [Typowe pytania, problemy i rozwiązania przy użyciu zasad i profilów](device-profile-troubleshoot.md)
+- [Typowe pytania, problemy i rozwiązania dotyczące zasad i profili urządzeń](device-profile-troubleshoot.md)
 - [Używanie zestawu SDK w celu przygotowania aplikacji do zarządzania aplikacjami mobilnymi](app-sdk.md)

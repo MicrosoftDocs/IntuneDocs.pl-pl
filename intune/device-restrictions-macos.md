@@ -6,9 +6,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/13/2019
+ms.date: 09/10/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -16,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5feec66e791da4038bd069cdad69a7ba573f27f3
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
-ms.translationtype: HT
+ms.openlocfilehash: d32224581c16325f0b060608409aa422cbf49d90
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58798381"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71302355"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem macOS umożliwiające działanie funkcji lub ich ograniczanie przy użyciu usługi Intune
 
@@ -33,13 +32,18 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
-[Utwórz profil konfiguracji ograniczeń urządzenia](device-restrictions-configure.md#create-the-profile).
+[Utwórz profil konfiguracji ograniczeń urządzenia](device-restrictions-configure.md).
+
+> [!NOTE]
+> Te ustawienia mają zastosowanie do różnych typów rejestracji. Aby uzyskać więcej informacji na temat różnych typów rejestracji, zobacz [Rejestrowanie macOS](macos-enroll.md).
 
 ## <a name="general"></a>Ogólne
 
-- **Blokuj wyszukiwanie definicji**: pozycja **Blokuj** uniemożliwia użytkownikom wyróżnianie wyrazu, a następnie wyszukiwanie jego definicji na urządzeniu. Pozycja **Nieskonfigurowane** (wartość domyślna) zezwala na dostęp do funkcji wyszukiwania definicji.
-- **Blokuj dyktowanie**: pozycja **Blokuj** uniemożliwia użytkownikowi wprowadzanie tekstu przy użyciu głosu. Pozycja **Nieskonfigurowane** (wartość domyślna) zezwala użytkownikowi na korzystanie z wprowadzania tekstu przez dyktowanie.
-- **Blokuj buforowanie zawartości**: wybierz opcję **Nieskonfigurowane** (ustawienie domyślne), aby włączyć buforowanie zawartości. Funkcja buforowania zawartości umożliwia przechowywanie danych aplikacji, danych przeglądarki internetowej, pobranych plików i innej zawartości lokalnie na urządzeniu. Wybierz opcję **Blokuj**, aby te dane nie były przechowywane w pamięci podręcznej.
+### <a name="settings-apply-to-device-enrollment"></a>Ustawienia dotyczą: Rejestracja urządzenia
+
+- **Wyszukiwanie definicji**: opcja **Blokuj** uniemożliwia użytkownikowi zaznaczenie słowa i wyszukanie jego definicji na urządzeniu. Pozycja **Nieskonfigurowane** (wartość domyślna) zezwala na dostęp do funkcji wyszukiwania definicji.
+- **Dyktowanie**: pozycja **Blokuj** uniemożliwia użytkownikowi wprowadzanie tekstu przy użyciu głosu. Pozycja **Nieskonfigurowane** (wartość domyślna) zezwala użytkownikowi na korzystanie z wprowadzania tekstu przez dyktowanie.
+- **Buforowanie zawartości**: wybierz opcję **Nieskonfigurowane** (ustawienie domyślne), aby włączyć buforowanie zawartości. Funkcja buforowania zawartości umożliwia przechowywanie danych aplikacji, danych przeglądarki internetowej, pobranych plików i innej zawartości lokalnie na urządzeniu. Wybierz opcję **Blokuj**, aby te dane nie były przechowywane w pamięci podręcznej.
 
   Aby uzyskać więcej informacji na temat buforowania zawartości w systemie MacOS, zobacz [Manage content caching on Mac (Zarządzanie buforowaniem zawartości na komputerze Mac)](https://support.apple.com/guide/mac-help/manage-content-caching-on-mac-mchl3b6c3720/mac) (link otwiera inną witrynę internetową).
 
@@ -52,21 +56,45 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 
   - **Opóźnij widoczność aktualizacji oprogramowania**: wprowadź wartość z zakresu 0–90 dni. Po upływie czasu opóźnienia użytkownicy otrzymują powiadomienie o aktualizacji do najnowszej wersji systemu operacyjnego dostępnej w momencie wyzwolenia opóźnienia.
 
-    Na przykład jeśli aktualizacja systemu macOS została udostępniona **1 stycznia**, a ustawienie **Opóźnij widoczność** ma wartość **5 dni**, ta aktualizacja nie będzie początkowo widoczna na urządzeniach jako dostępna. Będzie ona dostępna do instalacji przez użytkowników końcowych **szóstego dnia** po publikacji.
+    Na przykład jeśli aktualizacja systemu macOS została udostępniona **1 stycznia**, a ustawienie **Opóźnij widoczność** ma wartość **5 dni**, ta aktualizacja nie będzie widoczna na urządzeniach jako dostępna. Będzie ona dostępna do instalacji przez użytkowników końcowych **szóstego dnia** po publikacji.
 
     Ta funkcja ma zastosowanie do:  
     - System macOS 10.13.4 i nowsze
 
+- **Zrzuty ekranu**: urządzenie musi być zarejestrowane w zautomatyzowanym rejestrowaniu urządzeń firmy Apple (DEP). Po ustawieniu opcji **Blokuj**użytkownicy nie mogą zapisać zrzutu ekranu ekranu. Zapobiega także obserwowanie ekranów zdalnych przez aplikację klasy. **Nie skonfigurowano** (domyślnie) umożliwia użytkownikom przechwytywanie zrzutów ekranu i umożliwia aplikacji klasy wyświetlanie ekranów zdalnych.
+
+### <a name="settings-apply-to-automated-device-enrollment"></a>Ustawienia dotyczą: automatyczna rejestracja urządzeń
+
+- **Obserwacja ekranu zdalnego za pomocą aplikacji klasy**: **Wyłącz** uniemożliwianie nauczycielom korzystanie z aplikacji klasy do wyświetlania ekranów studentów. **Nie skonfigurowano** (domyślnie) umożliwia nauczycielom wyświetlanie ekranów swoich uczniów.
+
+  Aby użyć tego ustawienia, ustaw ustawienie ustawienia **zrzutu ekranu** na wartość **Nieskonfigurowane** (zrzuty ekranu są dozwolone).
+
+- **Niewyświetlane obserwacje ekranu według aplikacji klasy**: **Zezwól** umożliwia nauczycielom wyświetlanie ekranów studentów bez konieczności wyrażania zgody studenta. **Nie skonfigurowano** (wartość domyślna) wymaga, aby student mógł wyrazić zgodę, zanim nauczyciel zobaczy ekrany.
+
+  Aby użyć tego ustawienia, ustaw ustawienie ustawienia **zrzutu ekranu** na wartość **Nieskonfigurowane** (zrzuty ekranu są dozwolone).
+
+- **Studenci muszą zażądać uprawnień do opuszczenia klasy klas**: **Wymagaj** , aby studenci zarejestrowali się w niezarządzanym kursie z zajęć, aby uzyskać zatwierdzenie w nauczycielu w celu opuszczenia kursu. **Nie skonfigurowano** (domyślnie) pozwala studentowi na pozostawienie kursu przy każdym wyborze ucznia.
+
+- **Nauczyciele mogą automatycznie blokować urządzenia lub aplikacje w aplikacji klasy**: **Zezwól** , aby nauczyciele blokowały urządzenie lub aplikację ucznia bez zgody ucznia. **Nieskonfigurowane** (domyślnie) wymaga od ucznia zgody przed zablokowaniem przez nauczyciela urządzenia lub aplikacji.
+
+- **Studenci mogą automatycznie dołączać klasę klasy**: **Zezwól** zezwala studentom na dołączanie do klasy bez monitowania nauczycieli. **Nie skonfigurowano** (domyślnie) wymaga zatwierdzenia nauczyciela do przyłączenia do klasy.
+
 ## <a name="password"></a>Hasło
 
-- **Hasło**: pozycja **Wymagaj** wymusza wprowadzanie hasła przez użytkownika końcowego w celu uzyskania dostępu do urządzenia. Pozycja **Nieskonfigurowane** (ustawienie domyślne) oznacza brak wymagania wprowadzenia hasła i brak innych ograniczeń, takich jak blokada zbyt prostych haseł czy ustawienie minimalnej długości hasła.
-  - **Wymagany typ hasła**: określa, czy hasło może być wyłącznie numeryczne (zawierać tylko cyfry), czy też musi być alfanumeryczne (zawierać litery i cyfry). To ustawienie jest obsługiwane tylko w systemie Mac OS X w wersji 10.10.3 lub nowszej.
-  - **Liczba znaków innych niż alfanumeryczne w haśle**: określa liczbę znaków złożonych, którą musi zawierać hasło (od **0** do **4**).<br>Znak złożony to symbol, na przykład „**?**”.
+### <a name="settings-apply-to-device-enrollment"></a>Ustawienia dotyczą: Rejestracja urządzenia
+
+- **Hasło**: pozycja **Wymagaj** wymusza wprowadzanie hasła przez użytkownika końcowego w celu uzyskania dostępu do urządzenia. **Nieskonfigurowane** (domyślnie) nie wymaga hasła. Nie wymusi również żadnych ograniczeń, takich jak blokowanie prostych haseł lub Ustawianie minimalnej długości.
+  - **Wymagany typ hasła**: określa, czy hasło może być wyłącznie numeryczne (zawierać tylko cyfry), czy też musi być alfanumeryczne (zawierać litery i cyfry).
+
+    Ta funkcja ma zastosowanie do:  
+    - System macOS 10.10.3 i nowsze
+
+  - **Liczba znaków innych niż alfanumeryczne w haśle**: określa liczbę znaków złożonych, którą musi zawierać hasło (od **0** do **4**).<br>Znak złożony to symbol, na przykład „ **?** ”.
   - **Minimalna długość hasła**: określa minimalną długość hasła, które musi skonfigurować użytkownik (od **4** do **16** znaków).
   - **Proste hasła**: umożliwia korzystanie z prostych haseł, takich jak **0000** lub **1234**.
   - **Maksymalna liczba minut po zablokowaniu ekranu, po których jest wymagane wprowadzenie hasła**: określa czas braku aktywności komputera, po upływie którego do jego odblokowania będzie wymagane hasło.
   - **Maksymalna liczba minut braku aktywności przed zablokowaniem ekranu**: określa, jak długo komputer musi pozostawać w stanie bezczynności, zanim ekran zostanie zablokowany.
-  - **Wygaśnięcie hasła (dni)**: określa liczbę dni, po upływie których użytkownik musi zmienić hasło (od **1** do **255** dni).
+  - **Wygaśnięcie hasła (dni)** : określa liczbę dni, po upływie których użytkownik musi zmienić hasło (od **1** do **255** dni).
   - **Zapobiegaj ponownemu użyciu starych haseł**: wprowadź liczbę poprzednio używanych haseł, których ponowne użycie nie jest możliwe, od **1** do **24**.
 
 - **Zablokuj użytkownikowi możliwość modyfikacji kodu dostępu**: wybierz pozycję **Blokuj**, aby uniemożliwić zmianę, dodanie lub usunięcie kodu dostępu. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia dodawanie, zmienianie lub usuwanie kodów dostępu.
@@ -85,40 +113,65 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 
 ## <a name="built-in-apps"></a>Aplikacje wbudowane
 
+### <a name="settings-apply-to-device-enrollment"></a>Ustawienia dotyczą: Rejestracja urządzenia
+
 - **Blokuj autowypełnianie w przeglądarce Safari**: pozycja **Blokuj** powoduje wyłączenie funkcji automatycznego wypełniania w przeglądarce Safari na urządzeniu. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia użytkownikom zmianę ustawień automatycznego uzupełniania w przeglądarce internetowej.
 - **Blokuj aplikację Aparat**: wybierz pozycję **Blokuj**, aby uniemożliwić dostęp do aparatu na urządzeniu. Pozycja **Nieskonfigurowane** (wartość domyślna) zezwala na dostęp do aparatu urządzenia.
 - **Blokuj usługę Apple Music**: pozycja **Blokuj** przywraca aplikację do obsługi muzyki do trybu klasycznego i wyłącza usługę Music. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia używanie aplikacji Apple Music.
 - **Blokuj wyniki funkcji Spotlight z Internetu**: pozycja **Blokuj** uniemożliwia funkcji wyszukiwania Spotlight zwracanie wyników z wyszukiwania w Internecie. Pozycja **Nieskonfigurowane** (wartość domyślna) pozwala, aby wyszukiwanie Spotlight łączyło się z Internetem w celu udostępniania dodatkowych wyników.
-- **Blokuj transfer plików za pomocą programu iTunes**: opcja **Blokuj** wyłącza usługi udostępniania plików w aplikacji. Dostępne w systemie macOS 10.13 i nowszych wersjach. Opcja **Nieskonfigurowane** (ustawienie domyślne) zezwala na usługi udostępniania plików w aplikacji.
+- **Blokuj transfer plików za pomocą programu iTunes**: opcja **Blokuj** wyłącza usługi udostępniania plików w aplikacji. Opcja **Nieskonfigurowane** (ustawienie domyślne) zezwala na usługi udostępniania plików w aplikacji.
+
+  Ta funkcja ma zastosowanie do:  
+  - System macOS 10.13 i nowsze
 
 ## <a name="restricted-apps"></a>Aplikacje z ograniczeniami
 
-Na liście aplikacji z ograniczeniami można skonfigurować jedną z następujących list:
+### <a name="settings-apply-to-device-enrollment"></a>Ustawienia dotyczą: Rejestracja urządzenia
 
-- Lista **Aplikacje zabronione**: lista aplikacji (niezarządzanych przez usługę Intune), których użytkownicy nie mogą instalować ani uruchamiać. Użytkownicy nadal będą mogli zainstalować zabronioną aplikację, ale jeśli to zrobią, ten fakt zostanie zgłoszony administratorowi.
-- Lista **Zatwierdzone aplikacje**: lista aplikacji, które użytkownicy mogą instalować. Użytkownicy nie mogą instalować aplikacji, których nie ma na liście. Aplikacje zarządzane przez usługę Intune są automatycznie traktowane jako dozwolone. Użytkownicy nadal będą mogli zainstalować aplikację, której nie ma na liście dozwolonych. Jeśli jednak to zrobią, ten fakt zostanie zgłoszony administratorowi.
+- **Typ listy aplikacji z ograniczeniami**: Utwórz listę aplikacji, których użytkownicy nie mogą instalować ani używać. Dostępne opcje:
 
-Aby skonfigurować listę, kliknij przycisk **Dodaj**, a następnie wprowadź wybraną nazwę oraz opcjonalnie wydawcę aplikacji i identyfikator pakietu aplikacji (np. *com.apple.calculator*).
+  - **Nie skonfigurowano** (domyślnie): nie ma żadnych ograniczeń z usługi Intune. Użytkownicy mają dostęp do przypisywanych aplikacji oraz wbudowanych aplikacji.
+  - **Aplikacje zabronione**: aplikacje niezarządzane przez usługę Intune, których nie chcesz instalować na urządzeniu. Użytkownicy nie mogą instalować zabronionej aplikacji. Jednak jeśli użytkownik zainstaluje aplikację z tej listy, zostanie ona zgłoszona w usłudze Intune.
+  - **Zatwierdzone aplikacje**: aplikacje, które użytkownicy mogą instalować. Użytkownicy nie mogą instalować aplikacji, których nie ma na liście. Aplikacje zarządzane przez usługę Intune są automatycznie traktowane jako dozwolone. Użytkownicy nadal będą mogli zainstalować aplikację, której nie ma na liście dozwolonych. Ale jeśli tak, jest on raportowany w usłudze Intune.
+- **Identyfikator pakietu aplikacji**: podaj [identyfikator pakietu](bundle-ids-built-in-ios-apps.md) odpowiedniej aplikacji. Możesz pokazać lub ukryć wbudowane aplikacje i aplikacje biznesowe. Witryna sieci Web firmy Apple zawiera listę [wbudowanych aplikacji firmy Apple](https://support.apple.com/HT208094).
+- **Nazwa aplikacji**: podaj nazwę odpowiedniej aplikacji. Możesz pokazać lub ukryć wbudowane aplikacje i aplikacje biznesowe. Witryna sieci Web firmy Apple zawiera listę [wbudowanych aplikacji firmy Apple](https://support.apple.com/HT208094).
+- **Wydawca**: podaj wydawcę odpowiedniej aplikacji.
+
+Aby dodać aplikacje do tych list, możesz:
+
+- **Dodaj**: Wybierz, aby utworzyć listę aplikacji.
+- **Zaimportować** plik CSV ze szczegółowymi informacjami o aplikacji, w tym z adresem URL. Użyj formatu `<app bundle ID>, <app name>, <app publisher>`. Możesz też **wyeksportować** , aby utworzyć listę dodanych aplikacji w tym samym formacie.
 
 ## <a name="connected-devices"></a>Połączone urządzenia
+
+### <a name="settings-apply-to-device-enrollment"></a>Ustawienia dotyczą: Rejestracja urządzenia
 
 - **Blokuj usługę AirDrop**: pozycja **Blokuj** uniemożliwia używanie funkcji AirDrop na urządzeniu. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia używanie funkcji AirDrop do wymiany zawartości z pobliskimi urządzeniami.
 - **Blokuj automatyczne odblokowywanie za pomocą urządzenia Apple Watch**: ustawienie **Blokuj** uniemożliwia użytkownikom odblokowywanie urządzenia z systemem macOS przy użyciu urządzenia Apple Watch. Opcja **Nieskonfigurowane** (ustawienie domyślne) umożliwia użytkownikom odblokowywanie urządzenia z systemem macOS przy użyciu urządzenia Apple Watch.
 
 ## <a name="cloud-and-storage"></a>Chmura i magazyn
 
+### <a name="settings-apply-to-device-enrollment"></a>Ustawienia dotyczą: Rejestracja urządzenia
+
 - **Blokuj synchronizowanie pęku kluczy z usługą iCloud**: wybierz pozycję **Blokuj**, aby wyłączyć synchronizowanie poświadczeń przechowywanych w pęku kluczy z usługą iCloud. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia użytkownikom synchronizację tych poświadczeń.
-- **Blokuj synchronizowanie dokumentów z usługą iCloud**: pozycja **Blokuj ** uniemożliwia synchronizowanie dokumentów i danych w usłudze iCloud. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia synchronizowanie dokumentów i par klucz-wartość w obszarze magazynu usługi iCloud.
+- **Blokuj synchronizowanie dokumentów z usługą iCloud**: pozycja **Blokuj**  uniemożliwia synchronizowanie dokumentów i danych w usłudze iCloud. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia synchronizowanie dokumentów i par klucz-wartość w obszarze magazynu usługi iCloud.
 - **Blokuj wykonywanie kopii zapasowych poczty w usłudze iCloud**: opcja **Blokuj** uniemożliwia synchronizowanie aplikacji Poczta systemu macOS w usłudze iCloud. Opcja **Nieskonfigurowane** (ustawienie domyślne) umożliwia synchronizowanie aplikacji Poczta w usłudze iCloud.
 - **Blokuj wykonywanie kopii zapasowych kontaktów w usłudze iCloud**: opcja **Blokuj** uniemożliwia synchronizowanie kontaktów z urządzenia w usłudze iCloud. Opcja **Nieskonfigurowane** (ustawienie domyślne) zezwala na synchronizowanie kontaktów w usłudze iCloud.
 - **Blokuj wykonywanie kopii zapasowych kalendarza w usłudze iCloud**: opcja **Blokuj** uniemożliwia synchronizowanie aplikacji Kalendarz systemu macOS w usłudze iCloud. Opcja **Nieskonfigurowane** (ustawienie domyślne) umożliwia synchronizowanie aplikacji Kalendarz w usłudze iCloud.
 - **Blokuj wykonywanie kopii zapasowych przypomnień w usłudze iCloud**: opcja **Blokuj** uniemożliwia synchronizowanie aplikacji Przypomnienia systemu macOS w usłudze iCloud. Opcja **Nieskonfigurowane** (ustawienie domyślne) umożliwia synchronizowanie aplikacji Przypomnienia w usłudze iCloud.
 - **Blokuj wykonywanie kopii zapasowych zakładek w usłudze iCloud**: opcja **Blokuj** uniemożliwia synchronizowanie zakładek z urządzenia w usłudze iCloud. Opcja **Nieskonfigurowane** (ustawienie domyślne) umożliwia synchronizowanie zakładek w usłudze iCloud.
 - **Blokuj wykonywanie kopii zapasowych notatek w usłudze iCloud**: opcja **Blokuj** uniemożliwia synchronizowanie notatek z urządzenia w usłudze iCloud. Opcja **Nieskonfigurowane** (ustawienie domyślne) umożliwia synchronizowanie notatek w usłudze iCloud.
+- **Zablokuj bibliotekę zdjęć iCloud**: **Blokuj** wyłącza bibliotekę zdjęć iCloud i uniemożliwia synchronizowanie zdjęć z urządzeń w usłudze iCloud. Zdjęcia niepobrane w pełni z biblioteki iCloud Photo Library są usuwane z magazynu lokalnego na urządzeniu. **Nie skonfigurowano** (domyślnie) umożliwia synchronizowanie zdjęć między urządzeniem a biblioteką zdjęć iCloud.
+- **Oddanie**: **nie skonfigurowano** (domyślnie) umożliwia użytkownikom uruchamianie pracy na urządzeniu macOS, a następnie kontynuuje pracę uruchomioną na innym urządzeniu z systemem iOS lub macOS. **Blokuj** uniemożliwia funkcję przestawiania na urządzeniu. 
+
+  Ta funkcja ma zastosowanie do:  
+  - System macOS 10.15 i nowsze
 
 ## <a name="domains"></a>Domains
 
-- **Adres URL domeny poczty e-mail**: dodaj do listy co najmniej jeden adres URL. Gdy użytkownicy otrzymają wiadomość e-mail z domeny innej niż skonfigurowana, wiadomość e-mail zostanie oznaczona w aplikacji Mail dla systemu MacOS jako niezaufana.
+### <a name="settings-apply-to-device-enrollment"></a>Ustawienia dotyczą: Rejestracja urządzenia
+
+- **Adres URL domeny poczty e-mail**: **dodaj** do listy co najmniej jeden adres URL. Gdy użytkownicy otrzymają wiadomość e-mail z domeny innej niż skonfigurowana, wiadomość e-mail zostanie oznaczona w aplikacji Mail dla systemu macOS jako niezaufana.
 
 ## <a name="next-steps"></a>Następne kroki
 

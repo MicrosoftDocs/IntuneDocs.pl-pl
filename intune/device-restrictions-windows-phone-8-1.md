@@ -8,7 +8,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 3/6/2018
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -16,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c75923440b8b8147f7ed75a06df2435ed6eb0981
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 3bcfad3937b4ab6f533cd7ac915a964f2551be45
+ms.sourcegitcommit: 1d4aec7b79c70d35ec3fc29df6ff9c6a1403412e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565285"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "71302288"
 ---
 # <a name="microsoft-intune-windows-phone-81-device-restriction-settings"></a>Ustawienia ograniczeń urządzeń z systemem Windows Phone 8.1 w usłudze Microsoft Intune
 
@@ -32,30 +31,30 @@ W tym artykule opisano ustawienia ograniczeń urządzeń w usłudze Microsoft In
 
 ## <a name="general"></a>Ogólne
 
--   **Aparat fotograficzny** — umożliwia lub blokuje korzystanie z aparatu fotograficznego urządzenia.
--   **Kopiowanie i wklejanie** — umożliwia lub blokuje kopiowanie i wklejanie na urządzeniach.
--   **Magazyn wymienny** — umożliwia korzystanie z magazynu wymiennego (na przykład karty SD) na urządzeniu.
--   **Geolokalizacja** — umożliwia urządzeniu korzystanie z informacji o lokalizacji.
--   **Konto Microsoft** — umożliwia użytkownikowi łączenie konta Microsoft z urządzeniem lub blokuje tę możliwość.
--   **Przechwytywanie ekranu** — umożliwia użytkownikowi przechwytywanie zawartości ekranu w formie pliku obrazu.
--   **Przesyłanie danych diagnostycznych** — umożliwia urządzeniu przesyłanie danych diagnostycznych do firmy Microsoft.
--   **Niestandardowe synchronizowanie kont e-mail** — umożliwia urządzeniu łączenie się z kontami poczty e-mail innymi niż konto Microsoft.
+- **Aparat fotograficzny** — umożliwia lub blokuje korzystanie z aparatu fotograficznego urządzenia.
+- **Kopiowanie i wklejanie** — umożliwia lub blokuje kopiowanie i wklejanie na urządzeniach.
+- **Magazyn wymienny** — umożliwia korzystanie z magazynu wymiennego (na przykład karty SD) na urządzeniu.
+- **Geolokalizacja** — umożliwia urządzeniu korzystanie z informacji o lokalizacji.
+- **Konto Microsoft** — umożliwia użytkownikowi łączenie konta Microsoft z urządzeniem lub blokuje tę możliwość.
+- **Przechwytywanie ekranu** — umożliwia użytkownikowi przechwytywanie zawartości ekranu w formie pliku obrazu.
+- **Przesyłanie danych diagnostycznych** — umożliwia urządzeniu przesyłanie danych diagnostycznych do firmy Microsoft.
+- **Niestandardowe synchronizowanie kont e-mail** — umożliwia urządzeniu łączenie się z kontami poczty e-mail innymi niż konto Microsoft.
 
 ## <a name="password"></a>Hasło
 
--   **Hasło** — wymaga od użytkownika końcowego wprowadzenia hasła w celu uzyskania dostępu do urządzenia.
-    -   **Wymagany typ hasła** — określa wymagany typ hasła, na przykład alfanumeryczne lub wyłącznie numeryczne.
-    -   **Minimalna długość hasła** — określa minimalną wymaganą liczbę znaków w haśle.
-    -   **Proste hasła** — określa, czy można używać prostych haseł, takich jak „0000” i „1234”.
-    -   **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia** — określa, ile razy może zostać podane nieprawidłowe hasło, zanim zawartość urządzenia zostanie wyczyszczona.
-    -   **Maksymalna liczba minut braku aktywności przed zablokowaniem ekranu** — określa, jak długo urządzenie musi pozostawać w stanie bezczynności, zanim ekran zostanie automatycznie zablokowany.
-    -   **Wygaśnięcie hasła (dni)** — określa liczbę dni, po której należy zmienić hasło urządzenia.
-    -   **Zapobiegaj ponownemu użyciu starych haseł** —określa liczbę poprzednio używanych haseł, które zostaną zapamiętane.
--   **Szyfrowanie** — wymaga szyfrowania danych na obsługiwanych urządzeniach przenośnych.
+- **Hasło** — wymaga od użytkownika końcowego wprowadzenia hasła w celu uzyskania dostępu do urządzenia.
+  - **Wymagany typ hasła** — określa wymagany typ hasła, na przykład alfanumeryczne lub wyłącznie numeryczne.
+  - **Minimalna długość hasła** — określa minimalną wymaganą liczbę znaków w haśle.
+  - **Proste hasła** — określa, czy można używać prostych haseł, takich jak „0000” i „1234”.
+  - **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia** — określa, ile razy może zostać podane nieprawidłowe hasło, zanim zawartość urządzenia zostanie wyczyszczona.
+  - **Maksymalna liczba minut braku aktywności przed zablokowaniem ekranu** — określa, jak długo urządzenie musi pozostawać w stanie bezczynności, zanim ekran zostanie automatycznie zablokowany.
+  - **Wygaśnięcie hasła (dni)** — określa liczbę dni, po której należy zmienić hasło urządzenia.
+  - **Zapobiegaj ponownemu użyciu starych haseł** —określa liczbę poprzednio używanych haseł, które zostaną zapamiętane.
+- **Szyfrowanie** — wymaga szyfrowania danych na obsługiwanych urządzeniach przenośnych.
 
 ## <a name="app-store"></a>App Store
 
--   **App Store** — umożliwia użytkownikom łączenie się ze sklepem z aplikacjami przy użyciu urządzenia.
+- **App Store** — umożliwia użytkownikom łączenie się ze sklepem z aplikacjami przy użyciu urządzenia.
 
 ## <a name="restricted-apps"></a>Aplikacje z ograniczeniami
 
@@ -80,18 +79,18 @@ Przykład: wyszukaj w sklepie aplikację Skype. Adres URL do użycia to `http://
 
 ### <a name="additional-options"></a>Opcje dodatkowe
 
-Możesz również kliknąć pozycję **Importuj**, aby wypełnić listę danymi z pliku CSV w formacie <*adres URL aplikacji*>, <*nazwa aplikacji*>, <app publisher>, lub kliknąć przycisk **Eksportuj**, aby utworzyć plik CSV zawierający listę aplikacji z ograniczeniami w tym samym formacie.
+Możesz również kliknąć przycisk **Importuj**, aby wypełnić listę danymi z pliku CSV w formacie <*adres URL aplikacji*>, <*nazwa aplikacji*>, <*wydawca aplikacji*>, lub kliknąć przycisk **Eksportuj**, aby utworzyć plik CSV zawierający listę aplikacji z ograniczeniami w tym samym formacie.
 
 
 ## <a name="browser"></a>Przeglądarka
 
--   **Przeglądarka sieci Web** — umożliwia lub blokuje korzystanie z wbudowanej przeglądarki sieci Web na urządzeniach.
+- **Przeglądarka sieci Web** — umożliwia lub blokuje korzystanie z wbudowanej przeglądarki sieci Web na urządzeniach.
 
 ## <a name="cellular-and-connectivity"></a>Sieć komórkowa i łączność
 
--   **Wi-Fi** — włącza lub wyłącza funkcję obsługi sieci Wi-Fi na urządzeniu.
--   **Tethering Wi-Fi** — umożliwia korzystanie z funkcji udostępniania połączenia internetowego przez Wi-Fi na urządzeniu.
--   **Automatycznie łącz się z hotspotami Wi-Fi** — umożliwia automatyczne łączenie się przy użyciu urządzenia z bezpłatnymi hotspotami Wi-Fi oraz automatyczne akceptowanie wszelkich warunków użytkowania.
--   **Raportowanie informacji o hotspotach Wi-Fi** — umożliwia wysyłanie informacji dotyczących połączeń Wi-Fi, aby ułatwić użytkownikowi odnajdywanie pobliskich połączeń.
--   **NFC** — włącza lub wyłącza operacje korzystające z komunikacji zbliżeniowej na urządzeniach, które ją obsługują.
--   **Bluetooth** — włącza lub wyłącza funkcję Bluetooth na urządzeniu.
+- **Wi-Fi** — włącza lub wyłącza funkcję obsługi sieci Wi-Fi na urządzeniu.
+- **Tethering Wi-Fi** — umożliwia korzystanie z funkcji udostępniania połączenia internetowego przez Wi-Fi na urządzeniu.
+- **Automatycznie łącz się z hotspotami Wi-Fi** — umożliwia automatyczne łączenie się przy użyciu urządzenia z bezpłatnymi hotspotami Wi-Fi oraz automatyczne akceptowanie wszelkich warunków użytkowania.
+- **Raportowanie informacji o hotspotach Wi-Fi** — umożliwia wysyłanie informacji dotyczących połączeń Wi-Fi, aby ułatwić użytkownikowi odnajdywanie pobliskich połączeń.
+- **NFC** — włącza lub wyłącza operacje korzystające z komunikacji zbliżeniowej na urządzeniach, które ją obsługują.
+- **Bluetooth** — włącza lub wyłącza funkcję Bluetooth na urządzeniu.

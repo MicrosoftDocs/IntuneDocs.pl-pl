@@ -5,9 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/23/2019
+ms.date: 09/16/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: ''
 ms.technology: ''
@@ -17,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 69814b91978aa3cd74c4dc239b099883ae402af9
-ms.sourcegitcommit: b0cf661145ccc6e3518db620af199786a623a0d9
-ms.translationtype: HT
+ms.openlocfilehash: df7f81c5cda0fab90fa424033f1c7a34728b213f
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64764767"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71304311"
 ---
 # <a name="use-and-manage-zebra-devices-with-zebra-mobility-extensions-in-microsoft-intune"></a>Używanie urządzeń Zebra i zarządzanie nimi za pomocą funkcji Zebra Mobility Extensions w usłudze Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Usługa Intune obejmuje bogaty zestaw funkcji, takich jak zarządzanie aplikacjami i konfigurowanie ustawień urządzenia. Te wbudowane funkcje i ustawienia służą do zarządzania urządzeniami z systemem Android wyprodukowanymi przez firmę Zebra Technologies (nazywanymi też urządzeniami Zebra).
+Usługa Intune obejmuje bogaty zestaw funkcji, takich jak zarządzanie aplikacjami i konfigurowanie ustawień urządzenia. Za pomocą tych wbudowanych funkcji i ustawień można zarządzać urządzeniami z systemem Android wyprodukowanymi przez firmę Zebra Technologies, zwanymi także urządzeniami Zebra.
 
 Na urządzeniach z systemem Android profile funkcji **Mobility Extensions (MX)** umożliwiają dostosowywanie lub dodawanie ustawień specyficznych dla urządzeń Zebra.
 
@@ -42,6 +41,11 @@ Twoja firma może używać urządzeń Zebra na potrzeby handlu detalicznego, na 
 
 Przy użyciu usługi Intune można zarejestrować urządzenia Zebra, aby wdrożyć aplikacje biznesowe w urządzeniach. Profile konfiguracji urządzenia umożliwiają tworzenie profilów funkcji MX do zarządzania ustawieniami specyficznymi dla urządzeń Zebra.
 
+> [!NOTE]
+> Domyślnie interfejsy API zebry MX nie są blokowane na urządzeniach. Zanim urządzenie zostanie zarejestrowane w usłudze Intune, możliwe jest złośliwe bezpieczeństwo urządzenia. Jeśli urządzenie jest w stanie czystym, sugerujemy zablokowanie interfejsów API MX przy użyciu programu Access Manager (AccessMgr). Możesz na przykład wybrać, że tylko Portal firmy aplikacji i aplikacji, którym ufasz, są dozwolone wywołania interfejsów API MX.
+>
+> Aby uzyskać więcej informacji, zobacz [blokowanie urządzenia](https://developer.zebra.com/community/home/blog/2017/04/11/locking-down-your-device) w witrynie sieci Web zebry.
+
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
 - Upewnij się, że masz najnowszą wersję aplikacji klasycznej StageNow firmy Zebra Technologies.
@@ -50,9 +54,9 @@ Przy użyciu usługi Intune można zarejestrować urządzenia Zebra, aby wdroży
 
 ## <a name="step-1-install-the-latest-company-portal-app"></a>Krok 1. Instalowanie najnowszej wersji aplikacji Portal firmy
 
-Na urządzeniu przejdź do sklepu Google Play oraz pobierz i zainstaluj aplikację Portal firmy usługi Intune firmy Microsoft. Po zainstalowaniu ze sklepu Google Play aplikacja Portal firmy automatycznie pobiera aktualizacje i poprawki.
+Na urządzeniu otwórz magazyn Google Play. Pobierz i zainstaluj aplikację Portal firmy usługi Intune z firmy Microsoft. Po zainstalowaniu ze sklepu Google Play aplikacja Portal firmy automatycznie pobiera aktualizacje i poprawki.
 
-Jeśli sklep Google Play jest niedostępny, pobierz aplikację [Portal firmy usługi Microsoft Intune dla systemu Android](https://www.microsoft.com/download/details.aspx?id=49140) (powoduje otwarcie innej witryny firmy Microsoft) i [załaduj ją bezpośrednio](#sideload-the-company-portal-app) (w tym artykule). W przypadku tej metody instalacji aplikacja nie otrzymuje automatycznie aktualizacji i poprawek. Należy regularnie aktualizować aplikację i stosować do niej poprawki ręcznie.
+Jeśli sklep Google Play jest niedostępny, pobierz aplikację [Portal firmy usługi Microsoft Intune dla systemu Android](https://www.microsoft.com/download/details.aspx?id=49140) (powoduje otwarcie innej witryny firmy Microsoft) i [załaduj ją bezpośrednio](#sideload-the-company-portal-app) (w tym artykule). W przypadku tej metody instalacji aplikacja nie otrzymuje automatycznie aktualizacji i poprawek. Należy regularnie aktualizować aplikację i ręcznie stosować do niej poprawki.
 
 ### <a name="sideload-the-company-portal-app"></a>Ładowanie bezpośrednie aplikacji Portal firmy
 
@@ -101,51 +105,58 @@ Instrukcje można znaleźć na stronie [Rejestrowanie urządzeń z systemem Andr
 
 Rozwiązanie StageNow pozwala utworzyć profil konfiguracji ustawień, którymi chcesz zarządzać w urządzeniu. Szczegółowe informacje można znaleźć w dokumentacji firmy Zebra. Pomocny może być zasób [Profile](http://techdocs.zebra.com/stagenow/3-2/stagingprofiles/) (powoduje otwarcie witryny firmy Zebra).
 
-Po utworzeniu profilu w rozwiązaniu StageNow w ostatnim kroku wybierz pozycję **Eksportuj do usługi MDM**. Spowoduje to wygenerowanie pliku XML. Zapisz ten plik. Będzie on potrzebny w dalszym kroku.
+Po utworzeniu profilu w rozwiązaniu StageNow w ostatnim kroku wybierz pozycję **Eksportuj do usługi MDM**. Ten krok powoduje wygenerowanie pliku XML. Zapisz ten plik. Będzie on potrzebny w dalszym kroku.
 
-> [!TIP]
-> Zaleca się przetestowanie profilu przed wdrożeniem go w urządzeniach w organizacji. Aby przeprowadzić test, w ostatnim kroku podczas tworzenia profili za pomocą rozwiązania StageNow na komputerze użyj opcji **Test**. Następnie użyj pliku wygenerowanego przez rozwiązanie StageNow za pomocą aplikacji StageNow w urządzeniu. 
-> 
-> Aplikacja StageNow w urządzeniu zawiera dzienniki wygenerowane podczas testu profilu. Aby uzyskać informacje na temat używania dzienników rozwiązania StageNow na potrzeby analizy błędów, zobacz [Używanie dzienników rozwiązania StageNow w urządzeniach Zebra z systemem Android w usłudze Intune](android-zebra-mx-logs-troubleshoot.md).
+- Zaleca się przetestowanie profilu przed wdrożeniem go w urządzeniach w organizacji. Aby przeprowadzić test, w ostatnim kroku podczas tworzenia profili za pomocą rozwiązania StageNow na komputerze użyj opcji **Test**. Następnie użyj pliku wygenerowanego przez rozwiązanie StageNow za pomocą aplikacji StageNow w urządzeniu.
 
-> [!NOTE]
-> Jeśli odwołujesz się do aplikacji albo aktualizujesz pakiety lub inne pliki w swoim profilu rozwiązania StageNow, urządzenie powinno uzyskiwać te aktualizacje. Aby można było pobrać aktualizacje, urządzenie musi połączyć się z serwerem wdrażania rozwiązania StageNow po zastosowaniu profilu. 
-> 
-> Alternatywnie można użyć wbudowanych funkcji usługi Intune, aby pobrać te zmiany, w tym: 
-> - Funkcje zarządzania aplikacjami na potrzeby [dodawania](apps-add.md), [wdrażania](apps-deploy.md), aktualizowania i [monitorowania](apps-monitor.md) aplikacji.
-> - Zarządzanie [aktualizacjami systemu i aplikacji](device-restrictions-android-for-work.md#device-owner-only) w urządzeniach z systemem Android Enterprise
+  Aplikacja StageNow w urządzeniu zawiera dzienniki wygenerowane podczas testu profilu. Aby uzyskać informacje na temat używania dzienników rozwiązania StageNow na potrzeby analizy błędów, zobacz [Używanie dzienników rozwiązania StageNow w urządzeniach Zebra z systemem Android w usłudze Intune](android-zebra-mx-logs-troubleshoot.md).
+
+- Jeśli odwołujesz się do aplikacji albo aktualizujesz pakiety lub inne pliki w swoim profilu rozwiązania StageNow, urządzenie powinno uzyskiwać te aktualizacje. Aby można było pobrać aktualizacje, urządzenie musi połączyć się z serwerem wdrażania rozwiązania StageNow po zastosowaniu profilu. 
+
+  Alternatywnie można użyć wbudowanych funkcji usługi Intune, aby pobrać te zmiany, w tym:
+
+  - Funkcje zarządzania aplikacjami na potrzeby [dodawania](apps-add.md), [wdrażania](apps-deploy.md), aktualizowania i [monitorowania](apps-monitor.md) aplikacji.
+  - Zarządzanie [aktualizacjami systemu i aplikacji](device-restrictions-android-for-work.md#device-owner-only) w urządzeniach z systemem Android Enterprise
 
 Po przetestowaniu pliku następnym krokiem jest wdrożenie profilu w urządzeniach przy użyciu usługi Intune.
 
-> [!NOTE]
-> Do każdego urządzenia należy wdrożyć jeden profil. Jeśli chcesz wdrożyć wiele profili rozwiązania StageNow w urządzeniach, wyeksportuj profile rozwiązania StageNow i połącz ustawienia w pojedynczym pliku XML przed dodaniem go do usługi Intune. 
-> 
-> Ten sam plik XML nie powinien zawierać dwóch ustawień, które konfigurują tę samą właściwość. Celem jest zapobieżenie konfliktom między ustawieniami w urządzeniu.
+- Do urządzenia można wdrożyć jeden lub wiele profilów MX.
+- Możesz również wyeksportować wiele profilów StageNow i połączyć ustawienia w jeden plik XML. Następnie Przekaż plik XML do usługi Intune, aby wdrożyć go na urządzeniach.
+
+  > [!WARNING]
+  > Jeśli wiele profilów MX jest przeznaczonych dla tej samej grupy i skonfigurowania tej samej właściwości, na urządzeniu będą występować konflikty.
+  >
+  > Jeśli ta sama właściwość jest konfigurowana wiele razy w jednym profilu MX, Ostatnia konfiguracja usługi WINS.
 
 ## <a name="step-5-create-a-profile-in-intune"></a>Krok 5. Tworzenie profilu w usłudze Intune
 
 W usłudze Intune utwórz profil konfiguracji urządzenia:
 
-1. W witrynie [Azure Portal](https://portal.azure.com) wybierz pozycję **Wszystkie usługi**, wpisz nazwę usługi **Intune** w filtrze, a następnie wybierz pozycję **Intune**.
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Wybierz kolejno pozycje **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
 3. Wprowadź następujące właściwości:
 
     - **Nazwa**: wprowadź opisową nazwę nowego profilu.
     - **Opis:** wprowadź opis profilu. To ustawienie jest opcjonalne, ale zalecane.
     - **Platforma**: wybierz pozycję **Android**.
-    - **Typ profilu**: wybierz pozycję **Profil MX (tylko urządzenia Zebra)**.
+    - **Typ profilu**: wybierz pozycję **Profil MX (tylko urządzenia Zebra)** .
 
 4. W obszarze **Profil MX w formacie xml** dodaj plik profilu XML [wyeksportowany z rozwiązania StageNow](#step-4-create-a-device-management-profile-in-stagenow) (w tym artykule).
 5. Wybierz kolejno pozycje **OK** > **Utwórz**, aby zapisać zmiany. Zasady zostaną utworzone i wyświetlone na liście.
+
+    > [!TIP]
+    > Ze względów bezpieczeństwa nie zobaczysz tekstu profilu XML po jego zapisaniu. Tekst jest szyfrowany i wyświetlane są tylko gwiazdki (`****`). Zaleca się zapisanie kopii profili MX przed dodaniem ich do usługi Intune.
 
 Profil został utworzony, ale nie wykonuje jeszcze żadnych czynności. W dalszej części [przypiszesz profil](device-profile-assign.md) i będziesz [monitorować jego stan](device-profile-monitor.md).
 
 Następnym razem, gdy urządzenie sprawdzi dostępność aktualizacji, w urządzeniu zostanie wdrożony profil MX. Urządzenia są synchronizowane z usługą Intune podczas rejestracji urządzeń, a następnie co ok. 8 godzin. Możesz też [wymusić synchronizację w usłudze Intune](device-sync.md). Alternatywnie w urządzeniu otwórz **aplikację Portal firmy**  >  **Ustawienia**  >  **Synchronizacja**. 
 
-> [!TIP]
-> - Ze względów bezpieczeństwa nie zobaczysz tekstu profilu XML po jego zapisaniu. Tekst jest szyfrowany i wyświetlane są tylko gwiazdki (`****`). Zaleca się zapisanie kopii profili MX przed dodaniem ich do usługi Intune.
-> 
-> - Aby zaktualizować profil przypisany do urządzeń Zebra, utwórz zaktualizowany plik XML rozwiązania StageNow, edytuj istniejący profil usługi Intune i dodaj nowy plik XML rozwiązania StageNow. Ten nowy plik zastąpi poprzednie zasady rozwiązania StageNow w profilu.
+## <a name="update-a-zebra-mx-configuration-after-its-assigned"></a>Aktualizowanie konfiguracji zebry MX po jej przypisaniu
+
+Aby zaktualizować konfigurację specyficzną dla platformy MX dla urządzenia zebry, możesz: 
+
+- Utwórz zaktualizowany plik XML StageNow, Edytuj istniejący profil usługi Intune MX i przekaż nowy plik XML StageNow. Ten nowy plik zastępuje poprzednie zasady w profilu i zastąpi poprzednią konfigurację.
+- Utwórz nowy plik XML StageNow, który konfiguruje różne ustawienia, Utwórz nowy profil usługi Intune MX, Przekaż nowy plik XML StageNow i przypisz go do tej samej grupy. Wdrożono wiele profilów. Jeśli nowy profil konfiguruje ustawienia, które już istnieją w istniejących profilach, będą występować konflikty.
 
 ## <a name="next-steps"></a>Następne kroki
 

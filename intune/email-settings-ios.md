@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/11/2018
+ms.date: 09/05/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,14 +14,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0faf9220b4859c41ef8c4393fe15f385eaac8cc3
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 8fa0a7edd1782cd3eae725e6adf0af867e0f3727
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66042113"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71301944"
 ---
-# <a name="email-profile-settings-for-ios-devices-in-intune"></a>Ustawienia profilu poczty e-mail dla urządzeń z systemem iOS w usłudze Intune
+# <a name="add-e-mail-settings-for-ios-devices-in-microsoft-intune"></a>Dodawanie ustawień poczty e-mail dla urządzeń z systemem iOS w usłudze Microsoft Intune
+
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 W usłudze Microsoft Intune możesz utworzyć i skonfigurować profil poczty e-mail w celu nawiązywania połączenia z serwerem poczty e-mail, wybrać sposób uwierzytelniania użytkowników, użyć szyfrowania S/MIME na potrzeby szyfrowania i nie tylko.
 
@@ -29,7 +31,10 @@ W tym artykule wymieniono i opisano wszystkie ustawienia poczty e-mail dostępne
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
-[Utwórz profil konfiguracji urządzenia](email-settings-configure.md#create-a-device-profile).
+[Utwórz profil konfiguracji urządzenia](email-settings-configure.md).
+
+> [!NOTE]
+> Te ustawienia są dostępne dla wszystkich typów rejestracji. Aby uzyskać więcej informacji na temat typów rejestracji, zobacz [Rejestrowanie systemu iOS](ios-enroll.md).
 
 ## <a name="email-settings"></a>Ustawienia poczty e-mail
 
@@ -98,4 +103,4 @@ W tym artykule wymieniono i opisano wszystkie ustawienia poczty e-mail dostępne
 
 Profil został utworzony, ale nie wykonuje jeszcze żadnych czynności. W dalszej części [przypiszesz profil](device-profile-assign.md) i będziesz [monitorować jego stan](device-profile-monitor.md).
 
-Konfigurowanie ustawień poczty e-mail na urządzeniach z systemami [Android](email-settings-android.md), [Windows 10](email-settings-windows-10.md) i [Windows Phone 8.1](email-settings-windows-phone-8-1.md).
+Skonfiguruj ustawienia poczty e-mail na urządzeniach z [systemem Android](email-settings-android.md), [Android Enterprise](email-settings-android-enterprise.md), [Windows 10](email-settings-windows-10.md)i [Windows Phone 8,1](email-settings-windows-phone-8-1.md) .

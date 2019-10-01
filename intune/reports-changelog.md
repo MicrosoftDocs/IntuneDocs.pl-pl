@@ -6,9 +6,8 @@ keywords: Magazyn danych usługi Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/11/2019
+ms.date: 08/23/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 30f315f58a905e690a43ab3c44aee783bd0ef8c9
-ms.sourcegitcommit: a2cd14c30949cef17bfc6576513e7660a8015669
-ms.translationtype: HT
+ms.openlocfilehash: 0aaa305ac216e0f80f82116e626b21f3ae7a8510
+ms.sourcegitcommit: c8cb314256c4896e838918f015ffaefb8f00ace5
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59571811"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "71303312"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Dziennik zmian dla interfejsu API magazynu danych usługi Intune
 
@@ -182,13 +181,13 @@ _Wydane w lutym 2019 r._
 
 ### <a name="power-bi-compliance-app"></a>Aplikacja Power BI Compliance 
 
-Można uzyskiwać dostęp do magazynu danych usługi Intune w usłudze Power BI Online przy użyciu aplikacji [Intune Compliance (Data Warehouse)](https://app.powerbi.com/groups/me/getapps/services/Intune_dw_compliance). Za pomocą tej aplikacji usługi Power BI możesz teraz uzyskiwać dostęp do wstępnie utworzonych raportów i udostępniać je bez żadnej konfiguracji i bez opuszczania przeglądarki internetowej. 
+Można uzyskiwać dostęp do magazynu danych usługi Intune w usłudze Power BI Online przy użyciu aplikacji [Intune Compliance (Data Warehouse)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp). Za pomocą tej aplikacji usługi Power BI możesz teraz uzyskiwać dostęp do wstępnie utworzonych raportów i udostępniać je bez żadnej konfiguracji i bez opuszczania przeglądarki internetowej. 
 
 > [!NOTE]
 > W aplikacji Intune Compliance można zastosować dwa dodatkowe filtry.
 
 #### <a name="add-additional-filters-to-the-intune-compliance-app"></a>Dodawanie dodatkowych filtrów do aplikacji Intune Compliance
-1. Otwórz aplikację [Intune Compliance (Data Warehouse)](https://app.powerbi.com/groups/me/getapps/services/Intune_dw_compliance) w przeglądarce internetowej.
+1. Otwórz aplikację [Intune Compliance (Data Warehouse)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp) w przeglądarce internetowej.
 2. Kliknij pozycję **Non-Compliant Devices** (Niezgodne urządzenia) i wybierz pozycję **Non-Compliant** (Niezgodne) w filtrze **complianceStatus**. 
 3. Kliknij pozycję **Unknown Devices** (Nieznane urządzenia) i wybierz pozycję **Not Yet Available** (Jeszcze niedostępne) w filtrze **complianceStatus**. 
 
@@ -239,8 +238,8 @@ Parametru <code>$select</code> można użyć jako parametru zapytania OData. Bie
 
 ### <a name="new-entities-in-the-in-data-warehouse-data-model----2077804---"></a>Nowe jednostki w modelu danych magazynu danych <!-- 2077804 -->
 
- - Dodano jednostkę [**MobileAppDeviceuserInstallStatus**](reports-ref-application.md). Jednostka **MobileAppDeviceUserInstallStatus** reprezentuje stan instalacji aplikacji mobilnej dla danego urządzenia i użytkownika.
- - Dodano jednostkę [**MobileAppInstallStatus**](reports-ref-application.md#mobileappinstallstate). Jednostka **MobileAppInstallState** reprezentuje stan instalacji aplikacji mobilnej po jej przypisaniu do grupy zawierającej urządzenia, użytkowników lub obie te kategorie. 
+- Dodano jednostkę [**MobileAppDeviceuserInstallStatus**](reports-ref-application.md). Jednostka **MobileAppDeviceUserInstallStatus** reprezentuje stan instalacji aplikacji mobilnej dla danego urządzenia i użytkownika.
+- Dodano jednostkę [**MobileAppInstallState**](reports-ref-application.md#mobileappinstallstates). Jednostka **MobileAppInstallState** reprezentuje stan instalacji aplikacji mobilnej po jej przypisaniu do grupy zawierającej urządzenia, użytkowników lub obie te kategorie. 
 
 ## <a name="1710"></a>1710
 _Wydanie: listopad 2017 r._
@@ -260,9 +259,9 @@ Można teraz tworzyć raporty i wizualizacje danych, korzystając z informacji s
 
 ### <a name="new-entities-in-the-in-data-warehouse-data-model----1479526--------"></a>Nowe jednostki w modelu danych magazynu danych <!-- 1479526 --><!-- -->
 
- - Dodano jednostkę [**UserDeviceAssociation**](reports-ref-user-device.md). Jednostka **UserDeviceAssociation** zawiera skojarzenia urządzeń użytkowników w organizacji. Można teraz tworzyć raporty i wizualizacje danych, korzystając z informacji skojarzenia urządzenia użytkownika, które odpowiadają za skojarzenie użytkownika i kolekcji jednostek urządzenia.  
- - Jednostka, [**IntuneManagementExtension**](reports-ref-intunemanagementextension.md), dodana. Jednostka **IntuneManagementExtension** zawiera jednostki dla urządzeń przenośnych, które śledzą informacje, takie jak wersja i stan instalacji.
+- Dodano jednostkę [**UserDeviceAssociation**](reports-ref-user-device.md). Jednostka **UserDeviceAssociation** zawiera skojarzenia urządzeń użytkowników w organizacji. Można teraz tworzyć raporty i wizualizacje danych, korzystając z informacji skojarzenia urządzenia użytkownika, które odpowiadają za skojarzenie użytkownika i kolekcji jednostek urządzenia.  
+- Jednostka, [**IntuneManagementExtension**](reports-ref-intunemanagementextension.md), dodana. Jednostka **IntuneManagementExtension** zawiera jednostki dla urządzeń przenośnych, które śledzą informacje, takie jak wersja i stan instalacji.
 
 ## <a name="next-steps"></a>Następne kroki
- - Dowiedz się, [co nowego w usłudze Intune w każdym tygodniu](whats-new.md). Możesz również sprawdzić informacje o nadchodzących zmianach, ważnych powiadomieniach dotyczących usługi oraz poprzednich wersjach.
- - Zapoznaj się z [blogiem usługi Microsoft Intune](https://go.microsoft.com/fwlink/?LinkID=273882).
+- Dowiedz się, [co nowego w usłudze Intune w każdym tygodniu](whats-new.md). Możesz również sprawdzić informacje o nadchodzących zmianach, ważnych powiadomieniach dotyczących usługi oraz poprzednich wersjach.
+- Zapoznaj się z [blogiem usługi Microsoft Intune](https://go.microsoft.com/fwlink/?LinkID=273882).

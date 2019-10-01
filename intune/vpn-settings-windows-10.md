@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 12/12/2018
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -16,12 +15,12 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b71bc2ea893199b83de5fd1480dae5630c3edfd
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: a35ebcf6ecbaaa746a6da98c5bd5c13ca9a7b130
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565669"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "71302736"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Ustawienia urządzeń z systemami Windows 10 i Windows Holographic umożliwiające dodanie połączeń sieci VPN przy użyciu usługi Intune
 
@@ -68,29 +67,29 @@ W zależności od wybranych ustawień niektórych wartości nie będzie można s
   - **PPTP**
 
   Po wybraniu typu połączenia sieci VPN może również być konieczne zdefiniowanie następujących ustawień:  
-    - **Zawsze włączone**: wybierz opcję **Włącz**, aby automatycznie łączyć się z połączeniem sieci VPN po wystąpieniu następujących zdarzeń: 
-      - Użytkownik zaloguje się na urządzeniu
-      - Sieć na urządzeniu zostanie zmieniona
-      - Ekran na urządzeniu zostanie włączony ponownie po wyłączeniu 
+  - **Zawsze włączone**: wybierz opcję **Włącz**, aby automatycznie łączyć się z połączeniem sieci VPN po wystąpieniu następujących zdarzeń: 
+    - Użytkownik zaloguje się na urządzeniu
+    - Sieć na urządzeniu zostanie zmieniona
+    - Ekran na urządzeniu zostanie włączony ponownie po wyłączeniu 
 
-    - **Metoda uwierzytelniania**: wybierz sposób uwierzytelniania użytkowników na serwerze sieci VPN. Użycie **certyfikatów** powoduje udostępnienie rozszerzonych funkcji, takich jak środowisko bezobsługowe, sieć VPN na żądanie i sieć VPN dla aplikacji.
-    - **Pamiętaj poświadczenia przy każdym logowaniu**: wybierz tę opcję, aby poświadczenia uwierzytelniania były buforowane.
-    - **Niestandardowy kod XML**: wprowadź niestandardowe polecenia XML do konfiguracji połączenia z siecią VPN.
-    - **Kod EAP XML**: wprowadź polecenia EAP XML do konfiguracji połączenia z siecią VPN.
+  - **Metoda uwierzytelniania**: wybierz sposób uwierzytelniania użytkowników na serwerze sieci VPN. Użycie **certyfikatów** powoduje udostępnienie rozszerzonych funkcji, takich jak środowisko bezobsługowe, sieć VPN na żądanie i sieć VPN dla aplikacji.
+  - **Pamiętaj poświadczenia przy każdym logowaniu**: wybierz tę opcję, aby poświadczenia uwierzytelniania były buforowane.
+  - **Niestandardowy kod XML**: wprowadź niestandardowe polecenia XML do konfiguracji połączenia z siecią VPN.
+  - **Kod EAP XML**: wprowadź polecenia EAP XML do konfiguracji połączenia z siecią VPN.
 
-#### <a name="pulse-secure-example"></a>Przykład rozwiązania Pulse Secure
+### <a name="pulse-secure-example"></a>Przykład rozwiązania Pulse Secure
 
 ```
 <pulse-schema><isSingleSignOnCredential>true</isSingleSignOnCredential></pulse-schema>
 ```
 
-#### <a name="f5-edge-client-example"></a>Przykład rozwiązania F5 Edge Client
+### <a name="f5-edge-client-example"></a>Przykład rozwiązania F5 Edge Client
 
 ```
 <f5-vpn-conf><single-sign-on-credential /></f5-vpn-conf>
 ```
 
-#### <a name="sonicwall-mobile-connect-example"></a>Przykład rozwiązania SonicWall Mobile Connect
+### <a name="sonicwall-mobile-connect-example"></a>Przykład rozwiązania SonicWall Mobile Connect
 **Grupa lub domena logowania**: nie można ustawić tej właściwości w profilu sieci VPN. Zamiast tego rozwiązanie Mobile Connect analizuje tę wartość, jeśli nazwa użytkownika i domeny zostały wprowadzone w formacie `username@domain` lub `DOMAIN\username`.
 
 Przykład:
@@ -99,13 +98,13 @@ Przykład:
 <MobileConnect><Compression>false</Compression><debugLogging>True</debugLogging><packetCapture>False</packetCapture></MobileConnect>
 ```
 
-#### <a name="checkpoint-mobile-vpn-example"></a>Przykład rozwiązania CheckPoint Mobile VPN
+### <a name="checkpoint-mobile-vpn-example"></a>Przykład rozwiązania CheckPoint Mobile VPN
 
 ```
 <CheckPointVPN port="443" name="CheckPointSelfhost" sso="true" debug="3" />
 ```
 
-#### <a name="writing-custom-xml"></a>Pisanie niestandardowego kodu XML
+### <a name="writing-custom-xml"></a>Pisanie niestandardowego kodu XML
 Więcej informacji na temat pisania niestandardowych poleceń XML zawiera dokumentacja sieci VPN dostarczana przez producenta.
 
 Aby uzyskać więcej informacji na temat tworzenia niestandardowych poleceń XML protokołu EAP, zobacz [EAP configuration (Konfiguracja protokołu EAP)](https://docs.microsoft.com/windows/client-management/mdm/eap-configuration).
@@ -143,7 +142,7 @@ Aby uzyskać więcej informacji na temat tworzenia niestandardowych poleceń XML
 
   ![Wybór symbolu trzech kropek oraz kliknięcie i przeciągnięcie sufiksu DNS w celu jego przeniesienia](./media/vpn-settings-windows10-move-dns-suffix.png)
 
-- **Nazwa rozwiązania zasad tabeli (NRPT) reguły**: Definiowanie zasad rozpoznawania nazw (NRPT) tabeli reguł, jak DNS rozpoznaje nazwy połączone z siecią VPN. Po ustanowieniu połączenia z siecią VPN możesz wybrać serwery DNS, których to połączenie będzie używać.
+- **Reguły tabeli zasad rozpoznawania nazw (NRPT)** : reguły dotyczące tabeli zasad rozpoznawania nazw (NRPT) definiują sposób, w jaki usługa DNS rozpoznaje nazwy po nawiązaniu połączenia z siecią VPN. Po ustanowieniu połączenia z siecią VPN możesz wybrać serwery DNS, których to połączenie będzie używać.
 
   Do tabeli możesz dodać reguły, które zawierają domenę, serwer DNS, serwer proxy i inne szczegóły umożliwiające rozpoznanie wprowadzonej domeny. Połączenie sieci VPN korzysta z tych reguł, kiedy użytkownicy łączą się z wprowadzonymi domenami.
 

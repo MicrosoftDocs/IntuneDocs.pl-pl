@@ -18,12 +18,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 77b7f3adf4fa8675e3734f7eab8fbaa9391d952a
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 2e4def9f0e4e91f7db9e0a81e2ad55852df524f7
+ms.sourcegitcommit: 0d1a02fb3d2a801a95c2244e9ef13ecf22be2eb1
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67527958"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71302463"
 ---
 # <a name="enroll-windows-10-devices-with-intune-company-portal"></a>Rejestrowanie urządzenia z systemem Windows 10 w aplikacji Intune — Portal firmy
 
@@ -45,7 +45,7 @@ Opisano tutaj kroki umożliwiające zarejestrowanie urządzenia, na którym dzia
 
     ![Wybieranie pozycji Uzyskaj dostęp do miejsca pracy lub nauki](./media/w10-enroll-rs1-connect-to-work-or-school.png)  
 
-4. Wprowadź służbowy adres e-mail, a następnie wybierz przycisk **Dalej**.  
+4. Aby przejść do strony logowania do usługi Intune w organizacji, wprowadź służbowy adres e-mail. Następnie wybierz pozycję **Dalej**.  
 
 
    ![Wprowadź dane konta służbowego](./media/w10-enroll-rs1-set-up-work-or-school-account.png)  

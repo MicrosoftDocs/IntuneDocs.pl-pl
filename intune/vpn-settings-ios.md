@@ -1,11 +1,11 @@
 ---
-title: Dodawanie ustawień sieci VPN do urządzeń z systemem iOS w usłudze Microsoft Intune — Azure | Microsoft Docs
+title: Konfigurowanie ustawień sieci VPN na urządzeniach z systemem iOS w usłudze Microsoft Intune — Azure | Microsoft Docs
 description: W usłudze Microsoft Intune na urządzeniach z systemem iOS dodaj lub utwórz profil konfiguracji sieci VPN, korzystając z ustawień konfiguracji wirtualnej sieci prywatnej (VPN, virtual private network), w tym szczegółów połączenia, metod uwierzytelniania i dzielenia tuneli w ustawieniach podstawowych; niestandardowych ustawień sieci VPN z identyfikatorem i parami klucz-wartość; ustawień sieci VPN dla poszczególnych aplikacji, obejmujących adresy URL przeglądarki Safari oraz sieci VPN na żądanie z identyfikatorami SSID lub domenami wyszukiwania DNS; a także ustawień serwera proxy, obejmujących skrypt konfiguracji, adres IP lub nazwę FQDN i port TCP.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/25/2019
+ms.date: 09/05/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,16 +14,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1eee827ace5dae92b485a250e6e4e0b9b426fbe6
-ms.sourcegitcommit: 63b55e81122e5c15893302b109ae137c30855b55
+ms.openlocfilehash: 696e335e422ed45af7b7c53db9e91dead5ea8502
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67713199"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71302777"
 ---
-# <a name="configure-vpn-settings-on-ios-devices-in-microsoft-intune"></a>Konfigurowanie ustawień sieci VPN dla urządzeń z systemem iOS w usłudze Microsoft Intune
+# <a name="add-vpn-settings-on-ios-devices-in-microsoft-intune"></a>Konfigurowanie ustawień sieci VPN na urządzeniach z systemem iOS w usłudze Microsoft Intune
+
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Usługa Microsoft Intune obejmuje wiele ustawień sieci VPN, które mogą być wdrażane na urządzeniach z systemem iOS. Te ustawienia są używane do tworzenia i konfigurowania połączeń sieci VPN z siecią Twojej organizacji. W tym artykule opisano te ustawienia. Niektóre ustawienia są dostępne tylko dla niektórych klientów sieci VPN, takich jak Citrix, Zscaler itp.
+
+## <a name="before-you-begin"></a>Przed rozpoczęciem
+
+[Utwórz profil konfiguracji urządzenia](vpn-settings-configure.md).
+
+> [!NOTE]
+> Te ustawienia są dostępne dla wszystkich typów rejestracji. Aby uzyskać więcej informacji na temat typów rejestracji, zobacz [Rejestrowanie systemu iOS](ios-enroll.md).
 
 ## <a name="connection-type"></a>Typ połączenia
 
@@ -42,6 +51,7 @@ Umożliwia wybór typu połączenia sieci VPN z poniższej listy dostawców:
 - **Sieć VPN Citrix**
 - **Citrix SSO**
 - **Zscaler**: korzystanie z dostępu warunkowego lub umożliwianie użytkownikom pomijania ekranu logowania Zscaler wymaga integracji rozwiązania Zscaler Private Access (ZPA) z kontem usługi Azure AD. Aby uzyskać szczegółowe instrukcje, zobacz [dokumentację rozwiązania Zscaler](https://help.zscaler.com/zpa/configuration-example-microsoft-azure-ad). 
+- **IKEv2**: [Ustawienia protokołu IKEv2](#ikev2-settings) (w tym artykule) opisują właściwości.
 - **Niestandardowa sieć VPN**
 
 > [!NOTE]
@@ -93,6 +103,79 @@ Ustawienia wymienione na poniższej liście są określane przez wybrany typ po�
 
   - Aby usunąć to ustawienie, ponownie utwórz profil i nie wybieraj pozycji **Zgadzam się**. Następnie ponownie przypisz profil.
 
+## <a name="ikev2-settings"></a>Ustawienia protokołu IKEv2
+
+Te ustawienia są stosowane w przypadku wybrania **typu połączenia** > **IKEv2**.
+
+- **Identyfikator zdalny**: wprowadź adres IP sieci, nazwę FQDN, USERFQDN lub ASN1DN serwera IKEv2. Na przykład wprowadź adres `10.0.0.3` lub `vpn.contoso.com`. Zazwyczaj wprowadza się taką samą wartość jak [**Nazwa połączenia**](#base-vpn-settings) (w tym artykule). Jest to jednak zależne od ustawień serwera IKEv2.
+
+- **Typ uwierzytelniania klienta**: Wybierz sposób uwierzytelniania klienta sieci VPN w sieci VPN. Dostępne opcje:
+  - **Uwierzytelnianie użytkownika** (wartość domyślna): poświadczenia użytkownika uwierzytelniają się w sieci VPN.
+  - **Uwierzytelnianie komputera**: poświadczenia urządzenia uwierzytelniają się w sieci VPN.
+
+- **Metoda uwierzytelniania**: Wybierz typ poświadczeń klienta do wysłania do serwera. Dostępne opcje:
+  - **Certyfikaty**: używa istniejącego profilu certyfikatu do uwierzytelniania w sieci VPN. Upewnij się, że ten profil certyfikatu został już przypisany do użytkownika lub urządzenia. W przeciwnym razie połączenie sieci VPN zakończy się niepowodzeniem.
+    - **Typ certyfikatu**: Wybierz typ szyfrowania używany przez certyfikat. Upewnij się, że serwer sieci VPN jest skonfigurowany do akceptowania tego typu certyfikatu. Dostępne opcje:
+      - **RSA** (wartość domyślna)
+      - **ECDSA256**
+      - **ECDSA384**
+      - **ECDSA521**
+
+  - **Nazwa użytkownika i hasło** (tylko uwierzytelnianie użytkowników): gdy użytkownicy łączą się z siecią VPN, są monitowani o podanie nazwy użytkownika i hasła.
+  - Wspólny **klucz tajny** (tylko uwierzytelnianie maszynowe): umożliwia wprowadzenie wspólnego klucza tajnego do wysłania do serwera sieci VPN.
+    - Wspólny **klucz tajny**: wprowadź wspólny klucz tajny, znany również jako klucz wstępny (PSK). Upewnij się, że wartość jest zgodna ze wspólnym kluczem tajnym skonfigurowanym na serwerze sieci VPN.
+
+- **Nazwa pospolita wystawcy certyfikatu serwera**: umożliwia serwerowi sieci VPN uwierzytelnianie do klienta sieci VPN. Wprowadź nazwę pospolitą wystawcy certyfikatu (CN) certyfikatu serwera sieci VPN, który jest wysyłany do klienta sieci VPN na urządzeniu. Upewnij się, że wartość nazwy POSPOLITej jest zgodna z konfiguracją na serwerze sieci VPN. W przeciwnym razie połączenie sieci VPN zakończy się niepowodzeniem.
+- **Nazwa pospolita certyfikatu serwera**: Wprowadź nazwę pospolitą certyfikatu. Jeśli pole pozostanie puste, zostanie użyta wartość identyfikatora zdalnego.
+
+- **Szybkość wykrywania martwych elementów równorzędnych**: Określ, jak często klient sieci VPN sprawdza, czy tunel VPN jest aktywny. Dostępne opcje:
+  - **Nieskonfigurowane**: używa domyślnego systemu iOS, który może być taki sam jak wybór **nośnika**.
+  - **Brak**: wyłącza wykrywanie utraconych elementów równorzędnych.
+  - **Niska**: wysyła komunikat o utrzymywaniu aktywności co 30 minut.
+  - **Średni** (domyślnie): wysyła komunikat o utrzymywaniu aktywności co 10 minut.
+  - **Wysoki**: wysyła komunikat o utrzymywaniu aktywności co 60 sekund.
+
+- **Minimalny zakres wersji protokołu TLS**: wprowadź minimalną wersję protokołu TLS do użycia. Wprowadź `1.0`, `1.1` lub `1.2`. Jeśli pole pozostanie puste, zostanie użyta wartość domyślna `1.0`.
+- **Maksymalny zakres wersji protokołu TLS**: wprowadź maksymalną wersję protokołu TLS do użycia. Wprowadź `1.0`, `1.1` lub `1.2`. Jeśli pole pozostanie puste, zostanie użyta wartość domyślna `1.2`.
+- **Doskonałe utajnienie przekazywania**: wybierz pozycję **Włącz** , aby włączyć doskonałe utajnienie przekazywania (PFS). Doskonałe utajnienie przekazywania to funkcja zabezpieczeń IP, która zmniejsza wpływ na złamanie klucza sesji. Wartość **Wyłącz** (domyślnie) nie używa PFS.
+- **Sprawdzanie odwołania certyfikatu**: wybierz pozycję **Włącz** , aby upewnić się, że certyfikaty nie zostały odwołane przed pomyślnym nawiązaniem połączenia z siecią VPN. To sprawdzenie jest najlepszym nakładem pracy. Jeśli serwer sieci VPN przeprowadził limit czasu przed ustaleniem, czy certyfikat został odwołany, dostęp jest udzielany. Wartość **Wyłącz** (domyślnie) nie sprawdza odwołanych certyfikatów.
+
+- **Konfigurowanie parametrów skojarzenia zabezpieczeń**: **nie skonfigurowano** (domyślnie) używa domyślnego systemu iOS. Wybierz pozycję **Włącz** , aby wprowadzić parametry używane podczas tworzenia skojarzeń zabezpieczeń z serwerem sieci VPN:
+  - **Algorytm szyfrowania**: wybierz odpowiedni algorytm:
+    - DES
+    - 3DES
+    - AES-128
+    - AES-256 (wartość domyślna)
+    - AES-128-GCM
+    - AES-256-GCM
+  - **Algorytm integralności**: wybierz odpowiedni algorytm:
+    - SHA1-96
+    - SHA1-160
+    - ALGORYTMU SHA2-256 (wartość domyślna)
+    - ALGORYTMU SHA2-384
+    - ALGORYTMU SHA2 — 512
+  - **Grupa Diffie-Hellmana**: wybierz żądaną grupę. Wartość domyślna to grupa `2`.
+  - **Okres istnienia** (minuty): Określ, jak długo skojarzenie zabezpieczeń pozostaje aktywne do momentu obrócenia kluczy. Wprowadź wartość całkowitą między `10` i `1440` (1440 minut wynosi 24 godziny). Wartość domyślna `1440`to.
+
+- **Konfigurowanie oddzielnego zestawu parametrów dla podrzędnych skojarzeń zabezpieczeń**: system iOS umożliwia skonfigurowanie oddzielnych parametrów dla połączenia IKE i wszystkich połączeń podrzędnych. 
+
+  **Nie skonfigurowano** (wartość domyślna) używa wartości wprowadzonych w poprzednich ustawieniach **parametrów Konfiguruj skojarzenia zabezpieczeń** . Wybierz pozycję **Włącz** , aby wprowadzić parametry używane podczas tworzenia *podrzędnych* skojarzeń zabezpieczeń z serwerem sieci VPN:
+  - **Algorytm szyfrowania**: wybierz odpowiedni algorytm:
+    - DES
+    - 3DES
+    - AES-128
+    - AES-256 (wartość domyślna)
+    - AES-128-GCM
+    - AES-256-GCM
+  - **Algorytm integralności**: wybierz odpowiedni algorytm:
+    - SHA1-96
+    - SHA1-160
+    - ALGORYTMU SHA2-256 (wartość domyślna)
+    - ALGORYTMU SHA2-384
+    - ALGORYTMU SHA2 — 512
+  - **Grupa Diffie-Hellmana**: wybierz żądaną grupę. Wartość domyślna to grupa `2`.
+  - **Okres istnienia** (minuty): Określ, jak długo skojarzenie zabezpieczeń pozostaje aktywne do momentu obrócenia kluczy. Wprowadź wartość całkowitą między `10` i `1440` (1440 minut wynosi 24 godziny). Wartość domyślna `1440`to.
+
 ## <a name="automatic-vpn-settings"></a>Ustawienia automatycznego połączenia VPN
 
 - **Sieć VPN dla aplikacji**: włącza sieć VPN dla aplikacji. Umożliwia automatyczne wyzwalanie połączenia sieci VPN po otworzeniu konkretnych aplikacji. Ponadto skojarz aplikacje z tym profilem sieci VPN. Aby uzyskać więcej informacji, zapoznaj się z [instrukcjami dotyczącymi konfigurowania sieci VPN dla aplikacji w systemie iOS](vpn-setting-configure-per-app.md).
@@ -121,5 +204,8 @@ Jeśli używasz serwera proxy, skonfiguruj następujące ustawienia. Ustawienia 
 - **Adres**: podaj adres IP dla w pełni kwalifikowanej nazwy hosta serwera proxy.
 - **Numer portu**: podaj numer portu skojarzony z serwerem proxy.
 
-## <a name="next-step"></a>Następny krok
-[Tworzenie profilów sieci VPN w usłudze Intune](vpn-settings-configure.md)  
+## <a name="next-steps"></a>Następne kroki
+
+Profil został utworzony, ale nie wykonuje jeszcze żadnych czynności. W dalszej części [przypiszesz profil](device-profile-assign.md) i będziesz [monitorować jego stan](device-profile-monitor.md).
+
+Konfigurowanie ustawień sieci VPN na urządzeniach z [systemem Android](vpn-settings-android.md), [Android Enterprise](vpn-settings-android-enterprise.md), [macOS](vpn-settings-macos.md)i [Windows 10](vpn-settings-windows-10.md) .

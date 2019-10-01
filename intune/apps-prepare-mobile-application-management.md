@@ -5,9 +5,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2019
+ms.date: 09/09/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f3addd79b20c685c5643a2b99fb7120e958cdecb
-ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
+ms.openlocfilehash: e7b1ea4914b2c4593c0d4abe6396e349020d1a95
+ms.sourcegitcommit: a25cd79a33feb536d9b2fc11aa7d3e3972f1ca5a
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394885"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "71239535"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Przygotowanie aplikacji biznesowych pod kątem zasad ochrony aplikacji
 
@@ -74,6 +73,9 @@ Aby dowiedzieć się więcej o zestawie SDK, zobacz [Przegląd](app-sdk.md). Aby
 |**iOS**|Tak — użyj [powiązań platformy Xamarin dla zestawu Intune App SDK](app-sdk-xamarin.md).|Nie|
 |**Android**| Tak — użyj [powiązań platformy Xamarin dla zestawu Intune App SDK](app-sdk-xamarin.md).|Nie|
 
+### <a name="not-using-an-app-development-platform-listed-above"></a>Nie korzystasz z platformy tworzenia aplikacji wymienionej powyżej? 
+Zespół programistyczny zajmujący się zestawem Intune SDK aktywnie przeprowadza testy i zapewnia obsługę aplikacji z natywnych platform Android, iOS (Obj-C, Swift), Xamarin, Xamarin.Forms i Cordova. Niektórym klientom udało się zintegrować zestaw Intune SDK z innymi platformami (takimi jak React Native i NativeScript), ale nie udostępniamy deweloperom żadnych wskazówek ani wtyczek dotyczących nieobsługiwanych przez nas platform. 
+
 ## <a name="feature-comparison"></a>Porównanie funkcji
 W tej tabeli przedstawiono ustawienia do użycia w przypadku zestawu SDK aplikacji i narzędzia opakowującego aplikacje.
 
@@ -87,12 +89,13 @@ W tej tabeli przedstawiono ustawienia do użycia w przypadku zestawu SDK aplikac
 |Zezwalaj aplikacji na transfer danych do innych aplikacji|X|X|
 |Zezwalaj aplikacji na odbieranie danych z innych aplikacji|X|X|
 |Ogranicz wycinanie, kopiowanie i wklejanie w innych aplikacjach|X|X|
-|Określ liczbę znaków, które mogą być wycięte lub skopiowane z aplikacji zarządzanej|X|X|
+|Określ liczbę znaków, które mogą być wycinane lub kopiowane z zarządzanej aplikacji|X|X|
 |Wymagaj prostego numeru PIN w celu udzielenia dostępu|X|X|
 |Określ liczbę prób przed zresetowaniem numeru PIN|X|X|
 |Zezwalaj na odcisk palca zamiast numeru PIN|X|X|
 |Zezwalaj na rozpoznawanie twarzy zamiast numeru PIN (tylko system iOS)|X|X|
 |Wymagaj poświadczeń firmowych w celu udzielenia dostępu|X|X|
+|Ustaw wygaśnięcie numeru PIN|X|X|
 |Blokuj uruchamianie aplikacji zarządzanych na urządzeniach, na których zdjęto zabezpieczenia systemu lub uzyskano dostęp do konta root|X|X|
 |Szyfruj dane aplikacji|X|X|
 |Ponownie sprawdź wymagania dostępu po upływie określonej liczby minut|X|X|
@@ -102,21 +105,23 @@ W tej tabeli przedstawiono ustawienia do użycia w przypadku zestawu SDK aplikac
 |Pełne czyszczenie danych aplikacji|X|X|
 |Selektywne czyszczenie danych służbowych w scenariuszach obejmujących wiele tożsamości <br><br>**Uwaga:** w systemie iOS usunięcie profilu zarządzania spowoduje również usunięcie aplikacji.|X||
 |Nie zezwalaj na używanie polecenia „Zapisz jako”|X||
-|Docelowa konfiguracja aplikacji|X||
+|Konfiguracja aplikacji ukierunkowanej (lub konfiguracji aplikacji za pośrednictwem "kanału MAM")|X|X|
 |Obsługa wielu tożsamości|X||
 |Możliwość dostosowywania stylów |X|||
 |Połączenia sieci VPN na żądanie aplikacji z użyciem technologii Citrix mVPN|X|X| 
 |Wyłącz synchronizację kontaktów|X|X|
 |Wyłącz drukowanie|X|X|
 |Wymagaj minimalnej wersji aplikacji|X|X|
-|Wymagaj minimalnej wersji systemu operacyjnego (systemy iOS i Android)|X|X|
+|Wymagaj minimalnej wersji systemu operacyjnego|X|X|
 |Wymagaj minimalnej wersji poprawki zabezpieczeń systemu Android (tylko system Android)|X|X|
 |Wymagaj minimalnego zestawu SDK usługi Intune dla systemu iOS (tylko system iOS)|X|X|
+|Zaświadczanie dotyczące urządzenia SafetyNet (tylko system Android)|X|X|
+|Skanowanie w poszukiwaniu zagrożeń dla aplikacji (tylko system Android)|X|X|
 
 ## <a name="next-steps"></a>Następne kroki
 
 Aby dowiedzieć się więcej na temat zasad ochrony aplikacji i usługi Intune, zobacz następujące tematy:
 
-  - [Narzędzie opakowujące aplikacje systemu Android](app-wrapper-prepare-android.md)<br>
-  - [Narzędzie opakowujące aplikacje systemu iOS](app-wrapper-prepare-ios.md)<br>
-  - [Używanie zestawu SDK w celu przygotowania aplikacji do zarządzania aplikacjami mobilnymi](app-sdk.md)
+- [Narzędzie opakowujące aplikacje systemu Android](app-wrapper-prepare-android.md)<br>
+- [Narzędzie opakowujące aplikacje systemu iOS](app-wrapper-prepare-ios.md)<br>
+- [Używanie zestawu SDK w celu przygotowania aplikacji do zarządzania aplikacjami mobilnymi](app-sdk.md)

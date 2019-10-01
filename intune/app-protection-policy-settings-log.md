@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f9ee4d978bcb44f3b13ddcf9aafa4a3210f0f7e
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: ea64a8b9c4e8fb044e0fd66be32dcc71e4a5aefc
+ms.sourcegitcommit: 6a946a055a2014e00a4ca9d71986727a4ebbc777
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67885065"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71239428"
 ---
 # <a name="review-client-app-protection-logs"></a>Przeglądanie dzienników ochrony aplikacji klienta
 
@@ -31,7 +31,7 @@ Informacje na temat ustawień, które można przeglądać w dziennikach ochrony 
 Proces włączania i zbierania dzienników zależy od platformy:
 - **Urządzenia z systemem Android** — użyj aplikacji *Portal firmy*. Zobacz [Wysyłanie dzienników do działu pomocy technicznej Twojej firmy pocztą e-mail](/intune-user-help/send-logs-to-your-it-admin-by-email-android).
 - **Urządzenia z systemem iOS** — użyj programu Managed Browser lub *Microsoft Edge* do zbierania dzienników. Aby uzyskać szczegółowe informacje, zobacz wpis w blogu zespołu pomocy technicznej usługi Intune [New Intune Diagnostic Console for Log Submission in the Intune Managed Browser](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-New-Intune-Diagnostic-Console-for-Log-Submission-in/ba-p/280021) (Nowa konsola diagnostyki usługi Intune do przesyłania dzienników w programie Intune Managed Browser). 
-- **Urządzenia z systemem Windows 10** — użyj narzędzia *MDMDiag* i dzienników zdarzeń. Zobacz temat [Diagnose MDM failures in Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) (Diagnozowanie błędów zarządzania urządzeniami przenośnymi w systemie Windows 10) w materiałach dotyczących zarządzania klientami z systemem Windows oraz wpis w blogu [Troubleshooting Windows 10 Intune Policy Failures](http://configmgrdogsarchive.com/2018/08/09/troubleshooting-windows-10-intune-policy-failures) (Rozwiązywanie problemów z błędami zasad usługi Intune w systemie Windows 10)
+- **Urządzenia z systemem Windows 10** — użyj narzędzia *MDMDiag* i dzienników zdarzeń. Zobacz temat [Diagnose MDM failures in Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) (Diagnozowanie błędów zarządzania urządzeniami przenośnymi w systemie Windows 10) w materiałach dotyczących zarządzania klientami z systemem Windows oraz wpis w blogu [Troubleshooting Windows 10 Intune Policy Failures](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (Rozwiązywanie problemów z błędami zasad usługi Intune w systemie Windows 10).
 
 
 W poniższej tabeli przedstawiono nazwy i opisy ustawień zarejestrowanych w dzienniku.
