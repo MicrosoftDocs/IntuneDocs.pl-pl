@@ -5,9 +5,8 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/04/2019
+ms.date: 09/12/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -15,18 +14,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d956526d483a74ca5929180a48ea2dcd8b3eab7
-ms.sourcegitcommit: 02803863eba37ecf3d8823a7f1cd7c4f8e3bb42c
-ms.translationtype: HT
+ms.openlocfilehash: cda6c5f5ffa2244376e318e81a38a1ed410a443f
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59423632"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71305042"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Ustawienia urządzeń z systemem Windows 10 lub nowszym umożliwiające oznaczenie ich jako zgodne lub niezgodne w usłudze Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-W tym artykule wymieniono i opisano różne ustawienia zgodności, które można skonfigurować na urządzeniach z systemem Windows 10 lub nowszym za pomocą usługi Intune. Możesz stosować te ustawienia w ramach rozwiązania do zarządzania urządzeniami mobilnymi (MDM), aby między innymi wymagać korzystania z funkcji BitLocker, określać minimalną i maksymalną wersję systemu operacyjnego oraz określać poziom ryzyka na potrzeby zaawansowanej ochrony przed zagrożeniami w usłudze Windows Defender.
+W tym artykule wymieniono i opisano różne ustawienia zgodności, które można skonfigurować na urządzeniach z systemem Windows 10 lub nowszym za pomocą usługi Intune. Możesz stosować te ustawienia w ramach rozwiązania do zarządzania urządzeniami mobilnymi (MDM), aby między innymi wymagać korzystania z funkcji BitLocker, określać minimalną i maksymalną wersję systemu operacyjnego oraz określać poziom ryzyka na potrzeby zaawansowanej ochrony przed zagrożeniami w usłudze Microsoft Defender.
 
 Ta funkcja ma zastosowanie do:
 
@@ -60,7 +59,7 @@ Jako administrator usługi Intune możesz użyć tych ustawień zgodności, aby 
 Więcej zasobów:
 
 - Artykuł [Health Attestation CSP](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp) (Zaświadczanie o kondycji CSP) zawiera szczegółowe informacje na temat sposobu działania usługi HAS.
-- [Support Tip: Using Device Health Attestation Settings as Part of Your Intune Compliance Policy (Porada pomocy technicznej: korzystanie z ustawień zaświadczania o kondycji urządzenia w ramach zasad zgodności usługi Intune)](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643)
+- [Support Tip: Using Device Health Attestation Settings as Part of Your Intune Compliance Policy](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643) (Porada pomocy technicznej: korzystanie z ustawień zaświadczania o kondycji urządzenia w ramach zasad zgodności usługi Intune)
 
 ## <a name="device-properties"></a>Właściwości urządzenia
 
@@ -100,23 +99,32 @@ Dotyczy tylko współzarządzanych urządzeń z systemem Windows 10 lub nowszym.
 
 ### <a name="password"></a>Hasło
 
-- **Wymagaj hasła do odblokowania urządzeń przenośnych**: wybierz pozycję **Wymagaj**, aby wymagać od użytkowników podania hasła przed uzyskaniem dostępu do urządzenia.
+- **Wymagaj hasła do odblokowania urządzeń przenośnych**: wybierz pozycję **Wymagaj**, aby wymagać od użytkowników podania hasła przed uzyskaniem dostępu do urządzenia. Gdy **nie zostanie skonfigurowana**, usługa Intune nie oceni urządzenia pod kątem zgodności z ustawieniami haseł.
 - **Proste hasła**: ustaw wartość **Blokuj**, aby uniemożliwić użytkownikom tworzenie prostych haseł, takich jak **1234** lub **1111**. Ustaw wartość **Nieskonfigurowane**, aby umożliwić użytkownikom tworzenie haseł, takich jak **1234** lub **1111**.
-- **Typ hasła**: określ, czy hasło ma zawierać tylko znaki **numeryczne**, czy też ma być dopuszczalna kombinacja cyfr i innych znaków (**Alfanumeryczne**).
+- **Typ hasła**: wybierz wymagany typ hasła lub numeru PIN. Dostępne opcje:
 
-  - **Liczba znaków innych niż alfanumeryczne w haśle**: jeśli pozycja **Wymagany typ hasła** została ustawiona na wartość **Alfanumeryczne**, to ustawienie określa minimalną wymaganą liczbę zestawów znaków do użycia w haśle. Są cztery zestawy znaków:
-    - Małe litery
-    - Wielkie litery
-    - Symbole
-    - Liczby
+  - **Ustawienie domyślne urządzenia**: Wymagaj hasła, NUMERYCZNego numeru PIN lub ALFANUMERYCZNEGO kodu PIN
+  - Wartość **numeryczna**: Wymagaj hasła lub numerycznego numeru PIN
+  - **Alfanumeryczne**: Wymagaj hasła lub ALFANUMERYCZNEGO kodu PIN. Należy również wybrać **złożoność hasła**: 
+    
+    - **Wymagaj cyfr i małych liter**
+    - **Wymagaj cyfr, małych liter i wielkich liter**
+    - **Wymagaj cyfr, małych i wielkich liter oraz znaków specjalnych**
 
-    Ustawienie większej liczby wymaga wprowadzenia bardziej skomplikowanego hasła przez użytkownika.
+    > [!TIP]
+    > Zasady haseł alfanumerycznych mogą być złożone. Zachęcamy administratorów do odczytywania dostawców usług, aby uzyskać więcej informacji:
+    >
+    > - [DeviceLock/AlphanumericDevicePasswordRequired CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-alphanumericdevicepasswordrequired)
+    > - [DeviceLock/MinDevicePasswordComplexCharacters CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-mindevicepasswordcomplexcharacters)
 
 - **Minimalna długość hasła**: wprowadź minimalną liczbę cyfr lub znaków, które musi zawierać hasło.
 - **Maksymalny czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**: wprowadź czas bezczynności, po którym użytkownik musi ponownie wprowadzić hasło.
-- **Wygaśnięcie hasła (dni)**: wybierz liczbę dni, po których hasło wygasa i należy utworzyć nowe.
+- **Wygaśnięcie hasła (dni)** : wybierz liczbę dni, po których hasło wygasa i należy utworzyć nowe, z zakresu 1–730.
 - **Liczba poprzednich haseł, których nie można użyć ponownie**: wprowadź liczbę poprzednio używanych haseł, których ponowne użycie nie jest możliwe.
-- **Wymagaj hasła, gdy urządzenie wraca ze stanu bezczynności (Mobile i Holographic)**: wymuszaj wprowadzanie haseł przez użytkowników za każdym razem, gdy urządzenie wraca ze stanu bezczynności.
+- **Wymagaj hasła, gdy urządzenie wraca ze stanu bezczynności (Mobile i Holographic)** : wymuszaj wprowadzanie haseł przez użytkowników za każdym razem, gdy urządzenie wraca ze stanu bezczynności.
+
+  > [!IMPORTANT]
+  > Kiedy wymóg dotyczący hasła zostanie zmieniony na komputerze z systemem Windows, użytkownicy będą musieli się do niego dostosować przy następnym logowaniu, ponieważ to właśnie wtedy urządzenie przechodzi ze stanu bezczynności w stan aktywności. Użytkownicy, których hasła spełniają wymagania, także zostaną poproszeniu o zmianę hasła.
 
 ### <a name="encryption"></a>Szyfrowanie
 
@@ -127,10 +135,30 @@ Dotyczy tylko współzarządzanych urządzeń z systemem Windows 10 lub nowszym.
 
 ### <a name="device-security"></a>Zabezpieczenia urządzeń
 
-- **Oprogramowanie antywirusowe**: w przypadku wybrania opcji **Wymagaj** możesz sprawdzić zgodność przy użyciu rozwiązań antywirusowych zarejestrowanych w [Centrum zabezpieczeń systemu Windows](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), na przykład rozwiązań firmy Symantec i usługi Windows Defender. W przypadku wybrania ustawienia **Nieskonfigurowane** usługa Intune nie będzie wykonywać sprawdzania w poszukiwaniu jakichkolwiek rozwiązań antywirusowych zainstalowanych na urządzeniu.
-- **Program antyszpiegowski**: w przypadku wybrania opcji **Wymagaj** możesz sprawdzić zgodność przy użyciu rozwiązań antyszpiegowskich zarejestrowanych w [Centrum zabezpieczeń systemu Windows](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), na przykład rozwiązań firmy Symantec i usługi Windows Defender. W przypadku wybrania ustawienia **Nieskonfigurowane** usługa Intune nie będzie wykonywać sprawdzania w poszukiwaniu jakichkolwiek rozwiązań antyszpiegowskich zainstalowanych na urządzeniu.
+- **Zapora**: Ustaw opcję **Wymagaj** , aby włączyć zaporę usługi Microsoft Defender, i uniemożliwić użytkownikom jej wyłączenie. **Nie skonfigurowano** (wartość domyślna) nie steruje zaporą programu Microsoft Defender ani nie zmienia istniejących ustawień.
 
-## <a name="windows-defender-atp"></a>Zaawansowana ochrona przed zagrożeniami w usłudze Windows Defender
+  [Dostawca CSP zapory](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp)
+
+- **Moduł TPM (TPM)** : w przypadku wybrania opcji **Wymagaj**usługa Intune sprawdza wersję pod kątem zgodności. Urządzenie jest zgodne, jeśli wersja mikroukładu modułu TPM jest większa od 0 (zero). Urządzenie nie jest zgodne, jeśli na urządzeniu nie ma wersji modułu TPM. Gdy **nie zostanie skonfigurowana**, usługa Intune nie sprawdza urządzenia pod kątem wersji mikroukładu modułu TPM.
+
+  [DeviceStatus CSP — węzeł DeviceStatus/TPM/SpecificationVersion](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+  
+- **Oprogramowanie antywirusowe**: w przypadku wybrania ustawienia **Wymagaj** możesz sprawdzić zgodność przy użyciu rozwiązań antywirusowych zarejestrowanych w [Centrum zabezpieczeń systemu Windows](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), na przykład rozwiązań firmy Symantec i usługi Microsoft Defender. W przypadku wybrania ustawienia **Nieskonfigurowane** usługa Intune nie będzie wykonywać sprawdzania w poszukiwaniu jakichkolwiek rozwiązań antywirusowych zainstalowanych na urządzeniu.
+- **Oprogramowanie antyszpiegowskie**: w przypadku wybrania ustawienia **Wymagaj** możesz sprawdzić zgodność przy użyciu rozwiązań antyszpiegowskich zarejestrowanych w [Centrum zabezpieczeń systemu Windows](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), na przykład rozwiązań firmy Symantec i usługi Microsoft Defender. W przypadku wybrania ustawienia **Nieskonfigurowane** usługa Intune nie będzie wykonywać sprawdzania w poszukiwaniu jakichkolwiek rozwiązań antyszpiegowskich zainstalowanych na urządzeniu.
+
+### <a name="defender"></a>Usługa Defender
+
+- Ochrona **przed złośliwym oprogramowaniem usługi Microsoft Defender**: Ustaw opcję **Wymagaj** , aby włączyć usługę Microsoft Defender Anti-Malware, i uniemożliwić użytkownikom jej wyłączenie. **Nie skonfigurowano** (domyślnie) nie steruje usługą ani nie zmienia istniejących ustawień.
+- **Minimalna wersja programu Microsoft Defender chroniącego przed złośliwym kodem**: wprowadź minimalną dozwoloną wersję usługi Microsoft Defender Anti-Malware. Na przykład wprowadź `4.11.0.0`. Jeśli pole pozostanie puste, można użyć dowolnej wersji usługi Microsoft Defender Anti-Malware.
+- **Aktualna usługa Microsoft Defender ochrony przed złośliwym kodem**: kontroluje aktualizacje oprogramowania antywirusowego zabezpieczeń systemu Windows i ochrony przed zagrożeniami na urządzeniach. **Wymagaj** wymuszania Aktualności analizy zabezpieczeń programu Microsoft Defender. **Nieskonfigurowane** (domyślnie) nie wymusza żadnych wymagań.
+
+  [Aktualizacje analizy zabezpieczeń dla programu Microsoft Defender Antivirus i innych programów chroniących przed złośliwym oprogramowaniem firmy Microsoft](https://www.microsoft.com/en-us/wdsi/defenderupdates) mają więcej informacji na temat analizy zabezpieczeń.
+
+- **Ochrona**w czasie rzeczywistym: **wymagane** jest włączenie ochrony w czasie rzeczywistym, która skanuje w poszukiwaniu złośliwego oprogramowania, programów szpiegujących i innego niechciane oprogramowanie. **Nie skonfigurowano** (domyślnie) nie kontroluje tej funkcji ani nie zmienia istniejących ustawień.
+
+  [Usługa Defender/AllowRealtimeMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
+
+## <a name="microsoft-defender-atp"></a>Usługa Microsoft Defender ATP
 
 - **Wymagaj, aby urządzenie było na poziomie niższym lub równym ocenie ryzyka maszyny**: użyj tego ustawienia, aby uzyskać ocenę ryzyka z usług ochrony przed zagrożeniami jako warunek zgodności. Wybierz maksymalny dozwolony poziom zagrożenia:
 
@@ -139,7 +167,7 @@ Dotyczy tylko współzarządzanych urządzeń z systemem Windows 10 lub nowszym.
   - **Średni**: urządzenie jest oceniane jako zgodne, jeśli istniejące zagrożenia są na poziomie niskim lub średnim. W przypadku wykrycia na urządzeniu zagrożeń wysokiego poziomu zostanie ono określone jako niezgodne.
   - **Wysoki**: ta opcja jest najmniej bezpieczna i zezwala na wszystkie poziomy zagrożeń. To ustawienie może być przydatne, jeśli rozwiązanie jest używane tylko na potrzeby raportowania.
   
-  Aby skonfigurować usługę Windows Defender ATP (Advanced Threat Protection) jako usługę do ochrony przed zagrożeniami, zobacz [Włączanie usługi Windows Defender ATP z dostępem warunkowym](advanced-threat-protection.md).
+  Aby skonfigurować usługę Microsoft Defender ATP (Advanced Threat Protection) jako usługę do ochrony przed zagrożeniami, zobacz [Włączanie usługi Microsoft Defender ATP z dostępem warunkowym](advanced-threat-protection.md).
 
 Wybierz kolejno pozycje **OK** > **Utwórz**, aby zapisać zmiany.
 

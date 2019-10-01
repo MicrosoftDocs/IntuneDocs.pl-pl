@@ -1,13 +1,12 @@
 ---
-title: Użyj StageNow rejestruje na urządzeniach z systemem Android zebry w Microsoft Intune — Azure | Dokumentacja firmy Microsoft
-description: Zobacz typowe problemy i rozwiązania, używając StageNow na urządzeniach z systemem Android z usługą Microsoft Intune. Poznasz również sposób pobieranie dzienników i zapoznaj się z przykładami sposobu odczytywania dzienników sukcesów lub błędów.
+title: Korzystanie z dzienników StageNow na urządzeniach z systemem Android zebry w Microsoft Intune na platformie Azure | Microsoft Docs
+description: Zobacz typowe problemy i rozwiązania dotyczące korzystania z usługi StageNow na urządzeniach z systemem Android przy użyciu Microsoft Intune. Dowiedz się również, jak uzyskać dzienniki, i zapoznać się z przykładami dotyczącymi sposobu odczytywania dzienników pod kątem sukcesu lub błędów.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/26/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: ''
 ms.technology: ''
@@ -17,63 +16,63 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36476820805c00cefafcd9f64dd2f08a014762c0
-ms.sourcegitcommit: 44095bbd1502b02201a01604531f4105401fbb92
+ms.openlocfilehash: 6110476aace30daa27450326aea3f4abd4fb3ea0
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58490545"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "71303890"
 ---
-# <a name="troubleshoot-and-see-potential-issues-on-android-zebra-devices-in-microsoft-intune"></a>Rozwiązywanie problemów i zobacz potencjalnych problemów na urządzeniach z systemem Android zebry w Microsoft Intune
+# <a name="troubleshoot-and-see-potential-issues-on-android-zebra-devices-in-microsoft-intune"></a>Rozwiązywanie problemów i wyświetlanie potencjalnych problemów na urządzeniach z systemem Android zebry w Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Microsoft Intune, można użyć [zebry mobilności rozszerzenia (MX) do zarządzania urządzeniami z systemem Android zebry](android-zebra-mx-overview.md). Podczas korzystania z urządzeń zebry, tworzyć profile w StageNow umożliwia zarządzanie ustawieniami i przekazać je do usługi Intune. Usługa Intune używa aplikacji StageNow stosowania ustawień na urządzeniach. Aplikacja StageNow również tworzy szczegółowy plik dziennika na urządzeniu, które służy do rozwiązywania.
+W Microsoft Intune można używać [rozszerzeń zebry Mobility (MX) do zarządzania urządzeniami z systemem Android zebry](android-zebra-mx-overview.md). W przypadku korzystania z urządzeń zebry profile można tworzyć w usłudze StageNow, aby zarządzać ustawieniami i przekazywać je do usługi Intune. Usługa Intune używa aplikacji StageNow do zastosowania ustawień na urządzeniach. Aplikacja StageNow tworzy również szczegółowy plik dziennika na urządzeniu używanym do rozwiązywania problemów.
 
 Ta funkcja ma zastosowanie do:
 
 - Android
 
-Na przykład możesz utworzyć profil w StageNow, aby skonfigurować urządzenie. Podczas tworzenia profilu StageNow, ostatnim krokiem generuje plik dla testów profilu. Możesz wykorzystywać ten plik za pomocą aplikacji StageNow na urządzeniu.
+Na przykład utworzysz profil w usłudze StageNow, aby skonfigurować urządzenie. Po utworzeniu profilu StageNow ostatni krok generuje plik do przetestowania profilu. Ten plik jest zużywany z aplikacją StageNow na urządzeniu.
 
-W kolejnym przykładzie możesz utworzyć profil w StageNow i przetestować go. W usłudze Intune Dodaj profil StageNow, a następnie przypisać go do urządzeń z systemem zebry. Podczas sprawdzania stanu przypisanego profilu, profil, który przedstawia stan wysokiego poziomu.
+W innym przykładzie utworzysz profil w StageNow i przetestujesz go. W usłudze Intune Dodaj profil StageNow, a następnie przypisz go do urządzeń zebry. Podczas sprawdzania stanu przypisanego profilu profil pokazuje stan wysokiego poziomu.
 
-W obu przypadkach możesz uzyskać więcej szczegółowych informacji z pliku dziennika StageNow, który jest zapisywany na urządzeniu, za każdym razem, gdy profil StageNow dotyczy.
+W obu tych przypadkach można uzyskać więcej szczegółów z pliku dziennika StageNow, który jest zapisywany na urządzeniu za każdym razem, gdy zostanie zastosowany profil StageNow.
 
-Niektóre problemy, nie są powiązane z zawartością profilu StageNow i nie są widoczne w dziennikach.
+Niektóre problemy nie są związane z zawartością profilu StageNow i nie są uwzględniane w dziennikach.
 
-W tym artykule pokazano, jak odczytywać dzienniki StageNow i zawiera listę potencjalnych problemów z urządzeniami zebry, które nie zostaną odzwierciedlone w dziennikach.
+W tym artykule opisano sposób odczytywania dzienników StageNow oraz inne potencjalne problemy związane z urządzeniami zebry, które mogą nie być odzwierciedlone w dziennikach.
 
-[Użyj urządzenia i zarządzać nimi zebry z rozszerzeniami mobilności zebry](android-zebra-mx-overview.md) zawiera więcej informacji na temat tej funkcji.
+Aby uzyskać więcej informacji na temat tej funkcji [, należy używać urządzeń zebry i zarządzać nimi za pomocą rozszerzeń zebry Mobility](android-zebra-mx-overview.md) .
 
 ## <a name="get-the-logs"></a>Pobierz dzienniki
 
-### <a name="use-the-stagenow-app-on-the-device"></a>Za pomocą aplikacji StageNow na urządzeniu
-Podczas testowania profilu bezpośrednio na komputerze, zamiast przy użyciu StageNow [usługi Intune na wdrożenie profilu](android-zebra-mx-overview.md#step-4-create-a-device-management-profile-in-stagenow), aplikacja StageNow na urządzeniu zapisuje dzienniki z testu. Aby uzyskać plik dziennika, użyj **więcej (...)**  opcja w aplikacji StageNow na urządzeniu.
+### <a name="use-the-stagenow-app-on-the-device"></a>Korzystanie z aplikacji StageNow na urządzeniu
+W przypadku przetestowania profilu bezpośrednio przy użyciu StageNow na komputerze w programie, a nie przy użyciu usługi [Intune w celu wdrożenia profilu](android-zebra-mx-overview.md#step-4-create-a-device-management-profile-in-stagenow), aplikacja StageNow na urządzeniu zapisuje dzienniki z testu. Aby uzyskać plik dziennika, użyj opcji **więcej (...)** w aplikacji StageNow na urządzeniu.
 
-### <a name="get-logs-using-android-debug-bridge"></a>Pobieranie dzienników za pomocą mostka debugowania systemu Android
-Aby pobieranie dzienników po profil, który jest już wdrożony za pomocą usługi Intune, podłącz urządzenie do komputera przy użyciu [mostka debugowania systemu Android (adb)](https://developer.android.com/studio/command-line/adb) (otwiera witrynę sieci web systemu Android).
+### <a name="get-logs-using-android-debug-bridge"></a>Pobieranie dzienników przy użyciu Android Debug Bridge
+Aby pobrać dzienniki po wdrożeniu profilu za pomocą usługi Intune, podłącz urządzenie do komputera z [Android Debug Bridge (ADB)](https://developer.android.com/studio/command-line/adb) (otwiera witrynę sieci Web systemu Android).
 
 Na urządzeniu dzienniki są zapisywane w `/sdcard/Android/data/com.microsoft.windowsintune.companyportal/files`
 
-### <a name="get-logs-from-email"></a>Pobierz dzienniki z wiadomości e-mail
-Można pobrać dzienników po profil, który jest już wdrożony za pomocą usługi Intune, użytkownicy końcowi mogą e-mail dzienników przy użyciu aplikacji poczty e-mail na urządzeniu. Na urządzeniu zebry, Otwórz aplikację Portal firmy i [wysyłania dzienników](https://docs.microsoft.com/intune-user-help/send-logs-to-your-it-admin-by-email-android). Za pomocą funkcji Wyślij dzienniki wzrasta, powstaje PowerLift zdarzenia identyfikator, który można odwoływać się jeśli kontaktując się z pomocą techniczną firmy Microsoft.
+### <a name="get-logs-from-email"></a>Pobierz dzienniki z poczty e-mail
+Aby pobrać dzienniki po wdrożeniu profilu w usłudze Intune, użytkownicy końcowi mogą wysłać dzienniki pocztą e-mail za pomocą aplikacji poczty e-mail na urządzeniu. Na urządzeniu zebry Otwórz aplikację Portal firmy i [Wyślij dzienniki](https://docs.microsoft.com/intune-user-help/send-logs-to-your-it-admin-by-email-android). Za pomocą funkcji Wyślij dzienniki tworzony jest również identyfikator zdarzenia PowerLift, do którego można się odwoływać w przypadku kontaktowania się z pomocą techniczną firmy Microsoft.
 
-## <a name="read-the-logs"></a>Odczyt dzienników
+## <a name="read-the-logs"></a>Przeczytaj dzienniki
 
-Podczas wyszukiwania w dziennikach, występuje błąd, gdy zostanie wyświetlony `<characteristic-error>` tagu. Szczegóły błędu są zapisywane w `<parm-error>` tagu > `desc` właściwości.
+Gdy przeglądasz dzienniki, wystąpi błąd za każdym razem, gdy zobaczysz tag `<characteristic-error>`. Szczegóły błędu są zapisywane w tagu `<parm-error>` > Właściwości `desc`.
 
 ## <a name="error-types"></a>Typy błędów
 
-Zebry urządzenia obejmują błąd różne poziomy raportowania:
+Urządzenia zebry obejmują różne poziomy raportowania błędów:
 
-- Dostawca usług Kryptograficznych nie jest obsługiwane na urządzeniu. Na przykład urządzenie nie komórkowej urządzenia i nie ma Menedżera sieci komórkowej.
-- MX lub OS x w wersji jest niezgodny. Każdy dostawca usług Kryptograficznych jest wersjonowany. Dla macierzy pełną pomoc techniczną, zobacz [dokumentacji firmy zebry](http://techdocs.zebra.com/mx/) (otwiera witrynę sieci web firmy zebry).
-- Urządzenie raportuje inny problem lub błąd.
+- Dostawca CSP nie jest obsługiwany na urządzeniu. Na przykład urządzenie nie jest urządzeniem komórkowym i nie ma Menedżera sieci komórkowej.
+- Wersja MX lub OSX jest niezgodna. Każdy dostawca usług kryptograficznych jest w wersji. Aby uzyskać pełną matrycę pomocy technicznej, zobacz [dokumentację programu zebry](http://techdocs.zebra.com/mx/) (otwiera witrynę sieci Web zebry).
+- Urządzenie zgłasza inny problem lub błąd.
 
 ## <a name="examples"></a>Przykłady
 
-Na przykład masz poniższy profil danych wejściowych:
+Na przykład masz następujący profil wejściowy:
 
 ```xml
 <wap-provisioningdoc>
@@ -86,7 +85,7 @@ Na przykład masz poniższy profil danych wejściowych:
 </wap-provisioningdoc>
 ```
 
-W dzienniku kod XML jest taka sama jak dane wejściowe. Zgodne dane wyjściowe oznacza, że profil pomyślnie zastosowane do urządzeń bez błędów:
+W dzienniku plik XML jest identyczny z danymi wejściowymi. To zgodne wyjście oznacza, że profil został pomyślnie zastosowany do urządzenia bez błędów:
 
 ```xml
 <wap-provisioningdoc>
@@ -99,7 +98,7 @@ W dzienniku kod XML jest taka sama jak dane wejściowe. Zgodne dane wyjściowe o
 </wap-provisioningdoc>
 ```
 
-W kolejnym przykładzie masz następujące dane wejściowe:
+W innym przykładzie masz następujące dane wejściowe:
 
 ```xml
 <wap-provisioningdoc>
@@ -113,7 +112,7 @@ W kolejnym przykładzie masz następujące dane wejściowe:
 </wap-provisioningdoc>
 ```
 
-Dziennik pokazuje błąd, ponieważ zawiera on `<characteristic-error>` tagu. W tym scenariuszu profil, który próbowano zainstalować pakiet dla systemu Android (APK), który nie istnieje w podanej ścieżce:
+Dziennik zawiera błąd, ponieważ zawiera tag `<characteristic-error>`. W tym scenariuszu w profilu podjęto próbę zainstalowania pakietu systemu Android (APK), który nie istnieje w danej ścieżce:
 
 ```xml
 <wap-provisioningdoc>
@@ -127,28 +126,28 @@ Dziennik pokazuje błąd, ponieważ zawiera on `<characteristic-error>` tagu. W 
 </wap-provisioningdoc>
 ```
 
-## <a name="other-potential-issues-with-zebra-devices"></a>Inne potencjalne problemy z urządzeniami zebry
+## <a name="other-potential-issues-with-zebra-devices"></a>Inne potencjalne problemy związane z urządzeniami zebry
 
-W tej sekcji przedstawiono inne możliwe problemy, które mogą być widoczne podczas korzystania z urządzeń zebry przy użyciu administratora urządzenia. Problemy te nie są zgłaszane w dziennikach StageNow.
+W tej sekcji wymieniono inne możliwe problemy, które mogą wystąpić podczas korzystania z urządzeń zebry z uprawnieniami administratora urządzenia. Te problemy nie są raportowane w dziennikach StageNow.
 
-### <a name="android-system-webview-is-out-of-date"></a>Aplikację android System WebView jest nieaktualna
+### <a name="android-system-webview-is-out-of-date"></a>Android System WebView jest nieaktualna
 
-W przypadku starszych urządzeń Zaloguj się przy użyciu aplikacji Portal firmy, użytkownicy mogą zobaczyć komunikat, składnika System WebView jest nieaktualna i musi uaktualnić. Jeśli urządzenie ma zainstalowany sklepu Google Play, połącz go z Internetem i sprawdzenie aktualizacji. Jeśli urządzenie nie ma zainstalowane sklepu Google Play uzyskać zaktualizowaną wersję składnika i zastosować je do urządzeń. Lub aktualizacji do najnowszej urządzenia wystawiony przez zebry systemu operacyjnego.
+Gdy starsze urządzenia logują się przy użyciu aplikacji Portal firmy, użytkownicy mogą zobaczyć komunikat informujący, że składnik System WebView jest nieaktualny i wymaga uaktualnienia. Jeśli na urządzeniu zainstalowano Google Play, połącz je z Internetem i Sprawdź aktualizacje. Jeśli na urządzeniu nie zainstalowano Google Play, uzyskaj zaktualizowaną wersję składnika i zastosuj go do urządzeń. Można też zaktualizować do najnowszej wersji systemu operacyjnego urządzenia wydanej przez zebry.
 
-### <a name="management-actions-take-a-long-time"></a>Akcje z zakresu zarządzania zająć dużo czasu
+### <a name="management-actions-take-a-long-time"></a>Akcje zarządzania zajmuje dużo czasu
 
-Jeśli usługi Google Play nie są dostępne, niektóre zadania zająć maksymalnie 8 godzin. [Aplikacja Portal firmy ograniczenia usługi Intune dla systemu Android](https://support.microsoft.com/help/3211588/limitations-of-intune-company-portal-app-for-android-in-china) (otwiera inną witrynę sieci web) mogą być dobry zasobem.
+Jeśli usługi Google Play nie są dostępne, wykonanie niektórych zadań trwa dopiero po 8 godzinach. [Ograniczenia Intune — portal firmy aplikacji dla systemu Android](https://support.microsoft.com/help/3211588/limitations-of-intune-company-portal-app-for-android-in-china) (otwiera kolejną witrynę sieci Web firmy Microsoft) mogą być dobrym zasobem.
 
-### <a name="device-spoofing-suspected-shows-in-intune"></a>"Urządzenie fałszowania podejrzanych" jest wyświetlane w usłudze Intune
+### <a name="device-spoofing-suspected-shows-in-intune"></a>"Wystąpiło" sfałszowanie urządzenia "w usłudze Intune
 
-Ten błąd oznacza, że usługa Intune podejrzenia, że inne niż - zebry dla systemu Android urządzenie raportuje jej modelu i producenta urządzenia zebry jako.
+Ten błąd oznacza, że usługa Intune podejrzewa, że urządzenie z systemem Android inne niż zebry jest raportowane przez model i producenta jako urządzenie zebry.
 
 ### <a name="company-portal-app-is-older-than-minimum-required-version"></a>Aplikacja Portal firmy jest starsza niż minimalna wymagana wersja
 
-Usługa Intune może być aktualizowana minimalną wymaganą wersję aplikacji Portal firmy. Jeśli sklepu Google Play nie jest zainstalowany na urządzeniu, aplikacja Portal firmy nie automatycznie zaktualizowani. Jeśli minimalna wymagana wersja jest nowsza niż wersja zainstalowana, aplikacja Portal firmy przestaje działać. Aktualizacja do najnowszej aplikacji Portal firmy aplikacji przy użyciu [ładowania bezpośredniego na urządzeniach zebry](android-zebra-mx-overview.md#sideload-the-company-portal-app).
+Usługa Intune może zaktualizować minimalną wymaganą wersję aplikacji Portal firmy. Jeśli na urządzeniu nie zainstalowano Google Play, aplikacja Portal firmy nie zostanie automatycznie zaktualizowana. Jeśli minimalna wymagana wersja jest nowsza niż zainstalowana wersja, aplikacja Portal firmy przestanie działać. Zaktualizuj do najnowszej aplikacji Portal firmy przy użyciu funkcji [ładowania bezpośredniego na urządzeniach zebry](android-zebra-mx-overview.md#sideload-the-company-portal-app).
 
 ## <a name="next-steps"></a>Następne kroki
 
-[Zebry dyskusyjnymi](https://developer.zebra.com/community/home/discussions) (otwiera witrynę sieci web firmy zebry)
+Tablice [dyskusyjne zebry](https://developer.zebra.com/community/home/discussions) (otwiera witrynę sieci Web zebry)
 
-[Użyj urządzenia i zarządzać nimi zebry zebry mobilności rozszerzenia w usłudze Intune](android-zebra-mx-overview.md)
+[Używanie urządzeń Zebra i zarządzanie nimi za pomocą funkcji Zebra Mobility Extensions w usłudze Intune](android-zebra-mx-overview.md)
