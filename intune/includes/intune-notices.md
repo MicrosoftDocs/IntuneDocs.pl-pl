@@ -7,18 +7,18 @@ ms.topic: include
 ms.date: 03/28/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 90c770fec5bd9456151e601188254a3a022cd13f
-ms.sourcegitcommit: 62c41976c4da43b36015b715bc255397ebb8c6ad
+ms.openlocfilehash: fa251a0edd943d566849b138af5cbab0be248a53
+ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71279908"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71726404"
 ---
 Te powiadomienia zawierają ważne informacje, które mogą ułatwić przygotowanie się na nadchodzące zmiany i nowe funkcje w usłudze Intune. 
 
 
 ### <a name="decreasing-support-for-android-device-administrator"></a>Zmniejszenie wsparcia dla administratora urządzeń z systemem Android 
-Administrator urządzeń z systemem Android (czasami określany jako „starszy sposób” zarządzania systemem Android, opublikowany z systemem Android 2.2) to metoda zarządzania urządzeniami z systemem Android. Jednak obecnie jest dostępna ulepszona funkcja zarządzania w systemie [Android Enterprise](../connect-intune-android-enterprise.md) (wydanie z systemem Android 5.0). Dążąc do przejścia do nowoczesnego, bardziej zaawansowanego i bezpieczniejszego zarządzania urządzeniami, firma Google ogranicza wsparcie administratora urządzeń w nowych wersjach systemu Android.
+Administrator urządzeń z systemem Android (czasami określany jako „starszy sposób” zarządzania systemem Android, opublikowany z systemem Android 2.2) to metoda zarządzania urządzeniami z systemem Android. Jednak obecnie jest dostępna ulepszona funkcja zarządzania w systemie [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) (wydanie z systemem Android 5.0). Dążąc do przejścia do nowoczesnego, bardziej zaawansowanego i bezpieczniejszego zarządzania urządzeniami, firma Google ogranicza wsparcie administratora urządzeń w nowych wersjach systemu Android.
 
 #### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
 Te zmiany w usłudze Google wpłyną na użytkowników usługi Intune w następujący sposób: 
@@ -67,10 +67,11 @@ Nie trzeba podejmować żadnych działań, ale w razie potrzeby można rozważy�
 https://aka.ms/intune_fullscreen
 
 ### <a name="plan-for-change-new-windows-updates-settings-in-intune----4464404---"></a>Planowanie zmian: Nowe ustawienia aktualizacji systemu Windows w usłudze Intune <!-- 4464404 -->
-Od sierpniowego wydania usługi Intune lub wersji 1908 dodamy nowy obszar „Ustawienia terminu ostatecznego”, który można będzie skonfigurować zamiast ustawień obszaru „Zezwalaj użytkownikowi na ponowne uruchamianie (ponowne uruchamianie wymagające interwencji użytkownika)”. Ustawienia ponownego uruchomienia wymagającego interwencji użytkownika w interfejsie użytkownika planujemy wyłączyć w wersji 1909 lub aktualizacji z września. Do końca października ustawienia te zostaną całkowicie usunięte z konsoli. 
+Od sierpniowego wydania usługi Intune lub wersji 1908 dodamy nowy obszar „Ustawienia terminu ostatecznego”, który można będzie skonfigurować zamiast ustawień obszaru „Zezwalaj użytkownikowi na ponowne uruchamianie (ponowne uruchamianie wymagające interwencji użytkownika)”. Ustawienia ponownego uruchomienia wymagającego interwencji użytkownika w interfejsie użytkownika planujemy wyłączyć w wersji 1909 lub aktualizacji z września. Do końca października ustawienia te zostaną całkowicie usunięte z konsoli.
 
 #### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
-Jeśli zarządzasz urządzeniami z systemem Windows 10 w swoim środowisku: 
+Jeśli zarządzasz urządzeniami z systemem Windows 10 w swoim środowisku:
+
 - W aktualizacji usługi Intune z sierpnia lub wersji 1908 zobaczysz w konsoli nowe ustawienia terminu ostatecznego jako dodatek do starych ustawień ponownego uruchomienia wymagającego interwencji użytkownika.
 - W przypadku skonfigurowania starych i nowych ustawień wartości ustawień terminu ostatecznego będą zastępować wartości ustawień ponownego uruchomienia wymagającego interwencji użytkownika.
 - Ustawienia terminu ostatecznego zastąpią opcję „Zezwalaj użytkownikowi na ponowne uruchamianie (ponowne uruchamianie wymagające interwencji użytkownika)” w konsoli w aktualizacji 1910.
@@ -78,7 +79,7 @@ Jeśli zarządzasz urządzeniami z systemem Windows 10 w swoim środowisku:
 #### <a name="what-can-i-do-to-prepare-for-this-change"></a>Co zrobić, aby przygotować się do tej zmiany?
 Zacznij korzystać z ustawień terminu ostatecznego w wersji 1908, konfigurując ich żądane wartości. Po wykonaniu tej czynności będzie można ustawić wartość ustawienia ponownego uruchomienia wymagającego interwencji użytkownika na „Nieskonfigurowane”, aby przygotować się do usunięcia tych ustawień z konsoli w październiku.
 
-W razie potrzeby zaktualizuj dokumentację i skrypty automatyzacji. 
+W razie potrzeby zaktualizuj dokumentację i skrypty automatyzacji.
 
 Będziemy Cię informować na bieżąco, a przed usunięciem ustawień ponownego uruchomienia wymagającego interwencji użytkownika opublikujemy przypomnienie w Centrum wiadomości.
 
@@ -86,12 +87,13 @@ Będziemy Cię informować na bieżąco, a przed usunięciem ustawień ponownego
 Usługa Intune zacznie od października obsługiwać system Android 5.x (Lollipop) i nowsze. Zaktualizuj wszystkie opakowane aplikacje przy użyciu najnowszego zestawu Intune App SDK i zaktualizuj swoje urządzenia.
 
 #### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
-Jeśli nie używasz lub nie planujesz używać zestawu SDK lub zasad ochrony aplikacji dla systemu Android, ta zmiana na Ciebie nie wpłynie. Jeśli używasz zestawu Intune App SDK, pamiętaj, aby zaktualizować go do najnowszej wersji, a także zaktualizować swoje urządzenia do systemu Android 5.x lub nowszego. Jeśli nie dokonasz aktualizacji, aplikacje nie będą otrzymywać aktualizacji, a ich jakość będzie się pogarszać wraz z upływem czasu. 
+Jeśli nie używasz lub nie planujesz używać zestawu SDK lub zasad ochrony aplikacji dla systemu Android, ta zmiana na Ciebie nie wpłynie. Jeśli używasz zestawu Intune App SDK, pamiętaj, aby zaktualizować go do najnowszej wersji, a także zaktualizować swoje urządzenia do systemu Android 5.x lub nowszego. Jeśli nie dokonasz aktualizacji, aplikacje nie będą otrzymywać aktualizacji, a ich jakość będzie się pogarszać wraz z upływem czasu.
 
 Poniżej znajduje się lista typowych urządzeń rejestrowanych w usłudze Intune z systemem Android w wersji 4.x. Jeśli masz jedno z tych urządzeń, wykonaj odpowiednie kroki, aby upewnić się, że to urządzenie będzie obsługiwało system Android w wersji 5.0 lub nowszej lub że zostanie ono zastąpione urządzeniem obsługującym system Android w wersji 5.0 lub nowszej. Ta lista nie jest wyczerpująca i nie zawiera wszystkich urządzeń, które mogą wymagać oceny:
+
 - Samsung SM-T561  
-- Samsung SM-T365 
-- Samsung GT-I9195 
+- Samsung SM-T365
+- Samsung GT-I9195
 - Samsung SM-G800F
 - Samsung SM-G357FZ
 - Motorola XT1080
@@ -100,7 +102,6 @@ Poniżej znajduje się lista typowych urządzeń rejestrowanych w usłudze Intun
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Co należy zrobić, aby przygotować się do tej zmiany?
 Opakuj aplikacje przy użyciu najnowszego zestawu Intune App SDK. Możesz również określić ustawienie warunkowego uruchamiania „Wymagaj minimalnej wersji systemu operacyjnego (tylko ostrzeżenie)”, aby powiadomić użytkowników końcowych urządzeń osobistych o uaktualnieniu.
-
 
 ### <a name="intune-plan-for-change-nearing-end-of-support-for-windows-7----3042987---"></a>Planowanie zmian w usłudze Intune: zbliża się koniec wsparcia dla systemu Windows 7 <!-- 3042987 -->
 Zgodnie z informacjami opublikowanymi w komunikacie MC148476 we wrześniu 2018 r. i ponownie w komunikacie MC176794 w marcu 2019 r., w dniu 14 stycznia 2020 r. zakończy się rozszerzone wsparcie techniczne systemu Windows 7. W tym czasie w usłudze Intune zostanie wycofana obsługa urządzeń z systemem Windows 7, dzięki czemu będziemy mogli skupić się na inwestowaniu w obsługę nowszych technologii i zapewnianiu wspaniałych nowych możliwości użytkownikom końcowym. Po tej dacie pomoc techniczna i aktualizacje automatyczne pomagające chronić komputer z systemem Windows 7 nie będą już dostępne za pośrednictwem usługi Intune. Firma Microsoft zdecydowanie zaleca przejście do systemu Windows 10 przed styczniem 2020 r., aby uniknąć scenariusza, w którym potrzebna usługa lub pomoc techniczna nie będzie już dostępna. Przeczytaj [tutaj](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet) więcej na temat cyklu obsługi technicznej systemu Windows.

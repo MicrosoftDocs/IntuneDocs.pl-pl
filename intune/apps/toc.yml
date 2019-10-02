@@ -1,0 +1,202 @@
+- name: Zarządzanie aplikacjami
+  href: index.yml
+- name: Przegląd
+  expanded: true
+  items:
+    - name: Omówienie zarządzania aplikacjami
+      href: app-management.md
+- name: Przewodniki Szybki start
+  items:
+    - name: Dodawanie i przypisywanie aplikacji
+      href: quickstart-add-assign-app.md
+    - name: Tworzenie i przypisywanie zasad ochrony aplikacji
+      href: quickstart-create-assign-app-policy.md
+- name: Samouczki
+  items:
+    - name: Ochrona poczty e-mail na urządzeniach niezarządzanych
+      href: ../protect/tutorial-protect-email-on-unmanaged-devices.md?toc=/intune/apps/toc.json&bc=/intune/apps/breadcrumb/toc.json
+    - name: Konfigurowanie platformy Slack do użycia usługi Intune
+      href: tutorial-configure-slack-enterprise-grid.md
+- name: Pojęcia
+  items:
+    - name: Cykl wsparcia technicznego aplikacji
+      href: app-lifecycle.md
+    - name: Zasady ochrony aplikacji i profile służbowe (Android)
+      href: android-deployment-scenarios-app-protection-work-profiles.md
+      displayName: app-we; without; without enrollment
+    - name: CZĘSTO ZADAWANE PYTANIA DOTYCZĄCE ZARZĄDZANIA APLIKACJAMI MOBILNYMI
+      href: mam-faq.md
+- name: Przewodniki
+  items:
+    - name: Dodawanie aplikacji
+      items:
+        - name: Dodawanie aplikacji — przegląd
+          href: apps-add.md
+        - name: Chronione aplikacje w usłudze Intune
+          href: apps-supported-intune-apps.md
+        - name: Aplikacje ze Sklepu
+          items:
+            - name: Aplikacje ze sklepu dla systemu Android
+              href: store-apps-android.md
+            - name: Aplikacje ze sklepu dla systemu iOS
+              href: store-apps-ios.md
+            - name: Aplikacje ze sklepu dla systemu Windows Phone 8.1
+              href: store-apps-windows-phone-8-1.md
+            - name: Aplikacje ze Sklepu Microsoft
+              items:
+                - name: Aplikacja systemu Windows
+                  href: store-apps-windows.md
+                - name: Aplikacji Portal firmy
+                  href: store-apps-company-portal-app.md
+            - name: Aplikacje zarządzane ze sklepu Google Play
+              href: apps-add-android-for-work.md
+            - name: Aplikacje pakietu Office 365 dla systemu Windows 10
+              href: apps-add-office365.md
+            - name: Aplikacje pakietu Office 365 dla systemu macOS
+              href: apps-add-office365-macos.md
+        - name: Aplikacje internetowe
+          href: web-app.md
+          displayName: web; web link; weblink; web-link
+        - name: Aplikacje wbudowane
+          href: apps-add-built-in.md
+        - name: Kompilowanie aplikacji (LOB)
+          items:
+            - name: Aplikacje LOB dla systemu Android
+              href: lob-apps-android.md
+            - name: Aplikacje LOB dla systemu iOS
+              href: lob-apps-ios.md
+            - name: Aplikacje LOB dla systemu Windows Phone
+              href: lob-apps-windows-phone.md
+            - name: Aplikacja LOB dla systemu Windows
+              href: lob-apps-windows.md
+            - name: Ładowanie bezpośrednie aplikacji LOB dla systemu Windows
+              href: app-sideload-windows.md
+            - name: aplikacje LOB dla systemu macOS
+              href: lob-apps-macos.md
+        - name: Aplikacje systemu Android Enterprise
+          href: apps-ae-system.md
+        - name: Zarządzanie aplikacjami Win32
+          href: apps-win32-app-management.md
+        - name: Skrypty środowiska PowerShell
+          href: intune-management-extension.md
+    - name: Przypisywanie aplikacji
+      items:
+        - name: Przypisywanie aplikacji do grup
+          href: apps-deploy.md
+          displayName: app assignment; assignment
+        - name: Uwzględnianie i wykluczanie aplikacji
+          href: apps-inc-exl-assignments.md
+          displayName: app assignment
+        - name: Wdrażanie aplikacji systemu Windows 10
+          href: apps-windows-10-app-deploy.md
+        - name: Wdrażanie aplikacji w środowiskach dla instytucji rządowych
+          href: apps-deploy-gcc-dod.md
+    - name: Monitorowanie aplikacji
+      href: apps-monitor.md
+    - name: Odnalezione aplikacje
+      href: app-discovered-apps.md
+    - name: Konfigurowanie aplikacji
+      items:
+        - name: Zasady konfigurowania aplikacji
+          href: app-configuration-policies-overview.md
+          displayName: App configuration policy; configuration policy
+        - name: iOS urządzenia zarządzane
+          href: app-configuration-policies-use-ios.md
+        - name: Android urządzenia zarządzane
+          href: app-configuration-policies-use-android.md
+        - name: Konfigurowanie aplikacji Zarządzany ekran główny
+          href: app-configuration-managed-home-screen-app.md
+        - name: Aplikacje zarządzane
+          href: app-configuration-policies-managed-app.md
+        - name: Korzystanie z profilów aprowizacji aplikacji systemu iOS
+          href: app-provisioning-profile-ios.md
+        - name: Aplikacje i książki kupione w ramach zakupów zbiorczych
+          items:
+            - name: Zarządzanie aplikacjami i książkami programu VPP
+              href: vpp-apps.md
+              displayName: vpp; volume purchased
+            - name: Aplikacje VPP dla systemu iOS
+              href: vpp-apps-ios.md
+            - name: Aplikacje ze Sklepu Microsoft dla Firm
+              href: windows-store-for-business.md
+            - name: Książki elektroniczne dla systemu iOS
+              href: vpp-ebooks-ios.md
+        - name: Konfigurowanie Portalu firmy
+          href: company-portal-app.md
+        - name: Konfigurowanie programu Managed Browser
+          href: app-configuration-managed-browser.md
+        - name: Konfigurowanie usługi Microsoft Edge
+          href: manage-microsoft-edge.md
+        - name: Konfigurowanie aplikacji Microsoft Launcher
+          href: configure-microsoft-launcher.md
+        - name: Konfigurowanie programu Outlook
+          href: app-configuration-policies-outlook.md
+    - name: Chronienie aplikacji
+      items:
+        - name: Czyszczenie selektywne aplikacji
+          href: apps-selective-wipe.md
+        - name: Korzystanie z zasad ochrony aplikacji
+          items:
+            - name: Zasady ochrony aplikacji — przegląd
+              href: app-protection-policy.md
+              displayName: app; protection; policy
+            - name: Tworzenie zasad ochrony aplikacji
+              items:
+                - name: Ustawienia ogólne
+                  href: app-protection-policies.md
+                  displayName: dlp; data loss prevention
+                - name: Ustawienia systemu Android
+                  href: app-protection-policy-settings-android.md
+                - name: Ustawienia systemu iOS
+                  href: app-protection-policy-settings-ios.md
+                - name: Uzyskiwanie dostępu do akcji
+                  href: app-protection-policies-access-actions.md
+                - name: Wyjątki transferu danych
+                  href: app-protection-policies-exception.md
+            - name: Weryfikowanie zasad ochrony aplikacji
+              href: app-protection-policies-validate.md
+            - name: Dostarczanie zasad ochrony aplikacji
+              href: app-protection-policy-delivery.md
+            - name: Ochrona rozszerzeń aplikacji
+              href: app-protection-policy-extensions.md
+            - name: Monitorowanie stanu użytkownika ochrony aplikacji
+              href: app-protection-policies-monitor.md
+            - name: Przygotowywanie do konfigurowania zasad ochrony aplikacji WIP
+              href: app-protection-policies-configure-windows-10.md
+            - name: Tworzenie i przypisywanie zasad ochrony aplikacji WIP
+              href: windows-information-protection-policy-create.md
+            - name: Zarządzanie przesyłaniem danych między aplikacjami systemu iOS
+              href: data-transfer-between-apps-manage-ios.md
+    - name: Rozwiązywanie problemów
+      items:
+        - name: Pomaganie użytkownikom w rozwiązywaniu problemów
+          href: ../fundamentals/help-desk-operators.md?toc=/intune/apps/toc.json&bc=/apps/breadcrumb/toc.json
+        - name: Rozwiązywanie problemów z instalacją aplikacji
+          href: troubleshoot-app-install.md
+        - name: Rozwiązywanie problemów związanych z zarządzaniem aplikacjami mobilnymi
+          href: troubleshoot-mam.md
+        - name: Przeglądanie dzienników ochrony aplikacji
+          href: app-protection-policy-settings-log.md
+- name: Tematy pomocy
+  items:
+    - name: Ochrona aplikacji z użyciem zestawu Intune App SDK
+      href: ../developer/app-sdk.md
+      items:
+        - name: Wprowadzenie do zestawu Intune App SDK
+          href: ../developer/app-sdk-get-started.md
+        - name: Przygotowanie aplikacji LOB pod kątem ochrony aplikacji
+          href: ../developer/apps-prepare-mobile-application-management.md
+        - name: Narzędzie opakowujące aplikacje dla systemu iOS
+          href: ../developer/app-wrapper-prepare-ios.md
+        - name: Zestaw SDK aplikacji usługi Intune dla systemu iOS
+          href: ../developer/app-sdk-ios.md
+        - name: Narzędzie opakowujące aplikacje dla systemu Android
+          href: ../developer/app-wrapper-prepare-android.md
+          displayName: dex
+        - name: Zestaw SDK aplikacji usługi Intune dla systemu Android
+          href: ../developer/app-sdk-android.md
+          items:
+            - name: Przewodnik dotyczący testowania zestawu SDK aplikacji usługi Intune dla systemu Android
+              href: ../developer/app-sdk-android-testing-guide.md
+        - name: Powiązania platformy Xamarin dla zestawu Intune App SDK
+          href: ../developer/app-sdk-xamarin.md
