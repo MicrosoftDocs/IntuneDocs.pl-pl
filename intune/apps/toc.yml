@@ -32,6 +32,7 @@
       items:
         - name: Dodawanie aplikacji — przegląd
           href: apps-add.md
+          displayName: apk; ipa; msi; appx; appxbundle; msix; msixbundle; app
         - name: Chronione aplikacje w usłudze Intune
           href: apps-supported-intune-apps.md
         - name: Aplikacje ze Sklepu
@@ -104,12 +105,24 @@
           href: app-configuration-policies-use-ios.md
         - name: Android urządzenia zarządzane
           href: app-configuration-policies-use-android.md
-        - name: Konfigurowanie aplikacji Zarządzany ekran główny
-          href: app-configuration-managed-home-screen-app.md
         - name: Aplikacje zarządzane
           href: app-configuration-policies-managed-app.md
         - name: Korzystanie z profilów aprowizacji aplikacji systemu iOS
           href: app-provisioning-profile-ios.md
+        - name: Konfigurowanie określonych aplikacji
+          items:
+            - name: Konfigurowanie aplikacji Zarządzany ekran główny
+              href: app-configuration-managed-home-screen-app.md
+            - name: Konfigurowanie Portalu firmy
+              href: company-portal-app.md
+            - name: Konfigurowanie programu Managed Browser
+              href: app-configuration-managed-browser.md
+            - name: Konfigurowanie aplikacji Microsoft Launcher
+              href: configure-microsoft-launcher.md
+            - name: Konfigurowanie usługi Microsoft Edge
+              href: manage-microsoft-edge.md
+            - name: Konfigurowanie programu Outlook
+              href: app-configuration-policies-outlook.md
         - name: Aplikacje i książki kupione w ramach zakupów zbiorczych
           items:
             - name: Zarządzanie aplikacjami i książkami programu VPP
@@ -121,16 +134,6 @@
               href: windows-store-for-business.md
             - name: Książki elektroniczne dla systemu iOS
               href: vpp-ebooks-ios.md
-        - name: Konfigurowanie Portalu firmy
-          href: company-portal-app.md
-        - name: Konfigurowanie programu Managed Browser
-          href: app-configuration-managed-browser.md
-        - name: Konfigurowanie usługi Microsoft Edge
-          href: manage-microsoft-edge.md
-        - name: Konfigurowanie aplikacji Microsoft Launcher
-          href: configure-microsoft-launcher.md
-        - name: Konfigurowanie programu Outlook
-          href: app-configuration-policies-outlook.md
     - name: Chronienie aplikacji
       items:
         - name: Czyszczenie selektywne aplikacji
