@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: caae22e59e8adb6952e9a69ff03c575ae4467b2d
-ms.sourcegitcommit: 6a946a055a2014e00a4ca9d71986727a4ebbc777
+ms.openlocfilehash: 13f22b66b5a0700eadda28b20e0db6edce507021
+ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71238978"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71721172"
 ---
 # <a name="device-encrypted-but-apps-say-otherwise"></a>Urządzenie zaszyfrowane, ale aplikacje mówią inaczej
 
@@ -31,7 +31,7 @@ Jeśli Portal firmy lub aplikacja Microsoft Intunea mówi, że urządzenie nie j
 
 ## <a name="add-a-startup-pin"></a>Dodaj numer PIN uruchomienia
 
-Aby zagwarantować bezpieczeństwo urządzenia, niektóre urządzenia z systemem Android wymagają utworzenia numeru PIN uruchomienia. Lokalizacja tego ustawienia będzie znajdować się w aplikacji **ustawień** urządzenia. Nazwa i lokalizacja ustawienia mogą się różnić. Na przykład w przypadku urządzeń z systemem Samsung Galaxy S7 ustawienie to jest nazywane **bezpiecznym uruchamianiem**. Aby włączyć tę funkcję i utworzyć kod dostępu, przejdź do pozycji **Ustawienia** > **ekran blokady i zabezpieczenia** > **bezpieczne uruchamianie**.  
+Aby zagwarantować bezpieczeństwo urządzenia, niektóre urządzenia z systemem Android wymagają utworzenia numeru PIN uruchomienia. Lokalizacja tego ustawienia będzie znajdować się w aplikacji **ustawień** urządzenia. Nazwa i lokalizacja ustawienia mogą się różnić. Na przykład w przypadku urządzeń z systemem Samsung Galaxy S7 ustawienie to jest nazywane **bezpiecznym uruchamianiem**. Aby włączyć tę funkcję i utworzyć kod dostępu, przejdź do pozycji **ustawienia** > **Zablokuj ekran i zabezpieczenia** > **bezpieczne uruchomienie**.  
 
 ## <a name="encrypt-the-entire-device"></a>Zaszyfruj całe urządzenie
 
@@ -50,7 +50,7 @@ Ta sekcja dotyczy tylko aplikacji Portal firmy. Jeśli Twoje urządzenie umożli
 
 Niektóre urządzenia z systemem Android w wersji 7.0 lub nowszej szyfrują dane metodami, które są niezgodne z pewnymi standardami platformy systemu Android. Te metody szyfrowania powodują, że informacje o urządzeniu są zagrożone. W związku z tym urządzenia te nie są obsługiwane.
 
-Aby zapoznać się z niekompletną listą obsługiwanych urządzeń z systemem Android, zobacz artykuł [obsługiwane systemy operacyjne i przeglądarki w usłudze Intune](https://docs.microsoft.com/intune/supported-devices-browsers#supported-samsung-knox-standard-devices). Jeśli urządzenie nie jest wyświetlane na liście, zapoznaj się z producentem urządzenia lub skontaktuj się z pomocą techniczną.
+Aby zapoznać się z niekompletną listą obsługiwanych urządzeń z systemem Android, zobacz artykuł [obsługiwane systemy operacyjne i przeglądarki w usłudze Intune](https://docs.microsoft.com/intune/fundamentals/supported-devices-browsers#supported-samsung-knox-standard-devices). Jeśli urządzenie nie jest wyświetlane na liście, zapoznaj się z producentem urządzenia lub skontaktuj się z pomocą techniczną.
 
 > [!Note]
 > Firma Microsoft współpracuje z producentami w celu rozwiązania problemów znalezionych podczas testowania lub zgłoszonych nam przez użytkowników. Gdy pojawiają się nowe informacje, aktualizujemy ten artykuł.

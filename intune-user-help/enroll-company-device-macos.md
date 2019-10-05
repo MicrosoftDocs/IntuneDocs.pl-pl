@@ -18,12 +18,12 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0de0e676e72d46bde922fd97b651cc1a9268e45e
-ms.sourcegitcommit: 6a946a055a2014e00a4ca9d71986727a4ebbc777
+ms.openlocfilehash: f2e2ecc79cd24a68c1a5642f64474f2d31217bd7
+ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71239775"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71721017"
 ---
 # <a name="enroll-your-organization-provided-macos-device-in-management"></a>Rejestrowanie udostępnionego przez organizację urządzenia z systemem macOS na potrzeby zarządzania
 
@@ -35,7 +35,7 @@ Aby rozpocząć konfigurowanie zarządzania, włącz zasilanie urządzenia i zal
 
 ## <a name="what-is-apple-dep"></a>Co to jest program Apple DEP?
 
-Twoja organizacja mogła zakupić urządzenia za pośrednictwem programu zwanego *Apple Device Enrollment Program* (DEP). Program Apple DEP umożliwia organizacjom kupowanie wielu urządzeń z systemem iOS lub macOS. Organizacje mogą następnie konfigurować te urządzenia i zarządzać nimi przy użyciu preferowanego dostawcy zarządzania urządzeniami przenośnymi, takimi jak usługa Intune. Jeśli jesteś administratorem i chcesz dowiedzieć się więcej o programie Apple DEP, zobacz [Automatyczne rejestrowanie urządzeń z systemem macOS w ramach programu Device Enrollment Program firmy Apple](https://docs.microsoft.com/intune/device-enrollment-program-enroll-macos).  
+Twoja organizacja mogła zakupić urządzenia za pośrednictwem programu zwanego *Apple Device Enrollment Program* (DEP). Program Apple DEP umożliwia organizacjom kupowanie wielu urządzeń z systemem iOS lub macOS. Organizacje mogą następnie konfigurować te urządzenia i zarządzać nimi przy użyciu preferowanego dostawcy zarządzania urządzeniami przenośnymi, takimi jak usługa Intune. Jeśli jesteś administratorem i chcesz dowiedzieć się więcej o programie Apple DEP, zobacz [Automatyczne rejestrowanie urządzeń z systemem macOS w ramach programu Device Enrollment Program firmy Apple](https://docs.microsoft.com/intune/enrollment/device-enrollment-program-enroll-macos.md).  
 
 ## <a name="get-your-device-managed"></a>Przekazywanie urządzenia do zarządzania
 
@@ -63,7 +63,7 @@ Wykonaj poniższe kroki, aby zarejestrować urządzenie z systemem macOS na potr
     * Zaakceptowanie warunków i postanowień
     * Utworzenie konta komputera
     * Przeprowadzenie instalacji ekspresowej
-    * Skonfigurowanie komputera Mac  
+    * Skonfigurowanie komputera Mac
 
 ## <a name="get-the-company-portal-app"></a>Pobranie aplikacji Portal firmy
 
