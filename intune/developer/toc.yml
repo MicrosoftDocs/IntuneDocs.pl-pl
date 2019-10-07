@@ -1,0 +1,79 @@
+- name: Wskazówki dla deweloperów
+  href: index.yml
+- name: Przewodniki
+  expanded: true
+  items:
+    - name: Ochrona aplikacji z użyciem zestawu Intune App SDK
+      href: app-sdk.md
+      items:
+        - name: Wprowadzenie do zestawu Intune App SDK
+          href: app-sdk-get-started.md
+        - name: Przygotowanie aplikacji LOB pod kątem ochrony aplikacji
+          href: apps-prepare-mobile-application-management.md
+        - name: Narzędzie opakowujące aplikacje dla systemu iOS
+          href: app-wrapper-prepare-ios.md
+        - name: Zestaw SDK aplikacji usługi Intune dla systemu iOS
+          href: app-sdk-ios.md
+        - name: Narzędzie opakowujące aplikacje dla systemu Android
+          href: app-wrapper-prepare-android.md
+          displayName: dex
+        - name: Zestaw SDK aplikacji usługi Intune dla systemu Android
+          href: app-sdk-android.md
+          items:
+            - name: Przewodnik dotyczący testowania zestawu SDK aplikacji usługi Intune dla systemu Android
+              href: app-sdk-android-testing-guide.md
+        - name: Powiązania platformy Xamarin dla zestawu Intune App SDK
+          href: app-sdk-xamarin.md
+    - name: Korzystanie z magazynu danych usługi Intune
+      href: reports-nav-create-intune-reports.md
+      items:
+        - name: Dziennik zmian dla magazynu danych
+          href: reports-changelog.md
+        - name: Nawiązywanie połączenia z magazynem danych przy użyciu usługi Power BI
+          href: reports-proc-get-a-link-powerbi.md
+        - name: Tworzenie raportu w usłudze Power BI na podstawie źródła danych OData
+          href: reports-proc-create-with-odata.md
+    - name: Tworzenie raportów z użyciem interfejsu API magazynu danych usługi Intune
+      href: reports-nav-intune-data-warehouse.md
+      items:
+        - name: Pobieranie danych z interfejsu API magazynu danych za pomocą klienta REST
+          href: reports-proc-data-rest.md
+        - name: Punkt końcowy interfejsu API magazynu danych
+          href: reports-api-url.md
+        - name: Uwierzytelnianie tylko aplikacji w magazynie danych
+          href: data-warehouse-app-only-auth.md
+        - name: Model danych magazynu danych
+          href: reports-ref-data-model.md
+          items:
+            - name: Kolekcje magazynów danych
+              href: intune-data-warehouse-collections.md
+            - name: Kolekcje magazynów danych (beta)
+              items:
+                - name: Reprezentacja okresu istnienia użytkownika w magazynie danych usługi Intune
+                  href: reports-ref-user-timeline.md
+                - name: Dokumentacja jednostek aplikacji
+                  href: reports-ref-application.md
+                - name: Odwołanie do jednostki daty
+                  href: reports-ref-date.md
+                - name: Odwołanie do jednostek urządzeń
+                  href: reports-ref-devices.md
+                - name: Dokumentacja jednostki rozszerzenia do zarządzania usługi Intune
+                  href: reports-ref-intunemanagementextension.md
+                - name: Dokumentacja jednostek zarządzania aplikacjami mobilnymi (MAM)
+                  href: reports-ref-mobile-app-management.md
+                - name: Dokumentacja jednostek zasad
+                  href: reports-ref-policy.md
+                - name: Dokumentacja jednostki skojarzenia urządzenia użytkownika
+                  href: reports-ref-user-device.md
+                - name: Dokumentacja jednostki użytkownika
+                  href: reports-ref-user.md
+        - name: Przenoszenie danych konta z magazynu danych usługi Intune
+          href: data-warehouse-account-move.md
+    - name: Uzyskiwanie dostępu do interfejsów API usługi Intune w programie Microsoft Graph
+      items:
+        - name: Korzystanie z usługi Azure AD do uzyskiwania dostępu do interfejsów API usługi Intune w programie Microsoft Graph
+          href: intune-graph-apis.md
+        - name: Dokumentacja interfejsów API usługi Intune
+          href: 'https://developer.microsoft.com/graph/docs/api-reference/beta/resources/intune_graph_overview'
+        - name: Interfejsy API programu Graph służące do konfigurowania urządzeń
+          href: graph-apis-used-by-intune-device-configuration-windows.md

@@ -1,0 +1,67 @@
+- name: Akcje zdalne
+  href: index.yml
+- name: Przegląd
+  expanded: true
+  items:
+    - name: Omówienie zarządzania urządzeniami
+      href: device-management.md
+- name: Przewodniki
+  items:
+    - name: Blokady i hasła
+      items:
+        - name: Blokowanie urządzenia
+          href: device-remote-lock.md
+        - name: Zresetuj kod dostępu
+          href: device-passcode-reset.md
+        - name: Resetowanie numeru PIN w systemie Windows 10
+          href: device-windows-pin-reset.md
+    - name: Usunięcie i ponowne uruchomienie
+      items:
+        - name: Usuwanie urządzeń
+          href: devices-wipe.md
+        - name: Zarządzanie funkcją Zacznij od nowa w systemie Windows
+          href: device-fresh-start.md
+        - name: Ponowne uruchamianie urządzenia
+          href: device-restart.md
+    - name: Akcje urządzeń firmy Apple
+      items:
+        - name: Lokalizowanie zgubionego urządzenia z systemem iOS
+          href: device-locate.md
+        - name: Włączanie trybu zgubienia w systemie iOS
+          href: device-lost-mode.md
+        - name: Włączanie trybu nadzorowanego dla systemu iOS
+          href: device-supervised-mode.md
+        - name: Wymazywanie urządzenia z systemem macOS
+          href: device-erase.md
+        - name: Zastosowanie obejścia blokady aktywacji
+          href: device-activation-lock-bypass.md
+    - name: Akcje użytkownika
+      items:
+        - name: Wylogowywanie bieżącego użytkownika
+          href: device-logout-user.md
+        - name: Usuń użytkownika
+          href: device-remove-user.md
+        - name: Wyszukiwanie użytkownika podstawowego
+          href: find-primary-user.md
+    - name: Inne akcje
+      items:
+        - name: Zmienianie nazwy urządzenia
+          href: device-rename.md
+        - name: Wysyłanie powiadomień
+          href: custom-notifications.md
+        - name: Zdalne sterowanie urządzeniami przenośnymi
+          href: teamviewer-support.md
+        - name: Synchronizowanie urządzenia
+          href: device-sync.md
+        - name: Przeglądanie spisu urządzeń
+          href: device-inventory.md
+    - name: Rozwiązywanie problemów
+      items:
+        - name: Rozwiązywanie problemów z akcjami urządzenia
+          href: troubleshoot-device-actions.md
+- name: Zasoby
+  items:
+    - name: Przewodniki po wdrażaniu scenariuszy
+      items:
+        - name: Zmniejszenie kosztów pomocy technicznej
+          href: password-reset.md

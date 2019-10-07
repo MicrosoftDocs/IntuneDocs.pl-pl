@@ -1,0 +1,111 @@
+- name: Rejestracja w usłudze Microsoft Intune
+  href: index.yml
+- name: Przegląd
+  expanded: true
+  items:
+    - name: Omówienie rejestracji urządzeń
+      href: device-enrollment.md
+      displayName: COD; BYOD; DEM; DEP; USB-SA; USB-Direct; co-management; GPO
+    - name: Możliwości zarządzania zarejestrowanymi urządzeniami
+      href: device-management-capabilities.md
+    - name: Opcje rejestracji
+      href: enrollment-options.md
+- name: Przewodniki Szybki start
+  items:
+    - name: Konfigurowanie automatycznego rejestrowania
+      href: quickstart-setup-auto-enrollment.md
+    - name: Rejestrowanie urządzenia z systemem Windows 10
+      href: quickstart-enroll-windows-device.md
+- name: Samouczki
+  items:
+    - name: Rejestrowanie urządzeń z systemem Windows przy użyciu rozwiązania Autopilot
+      href: tutorial-use-autopilot-enroll-devices.md
+    - name: Rejestrowanie urządzeń z systemem iOS za pomocą programu DEP
+      href: tutorial-use-device-enrollment-program-enroll-ios.md
+- name: Pojęcia
+  items:
+    - name: Warunki i postanowienia
+      href: terms-and-conditions-create.md
+    - name: Ograniczenia
+      href: enrollment-restrictions-set.md
+    - name: Certyfikat wypychania MDM firmy Apple
+      href: apple-mdm-push-certificate-get.md
+    - name: Identyfikatory firmy
+      href: corporate-identifiers-add.md
+      displayName: COD
+    - name: Uwierzytelnianie wieloskładnikowe
+      href: multi-factor-authentication.md
+      displayName: mfa; multifactor
+    - name: Menedżer rejestracji urządzeń
+      href: device-enrollment-manager-enroll.md
+    - name: Mapowanie urządzeń na grupy
+      href: device-group-mapping.md
+- name: Przewodniki
+  items:
+    - name: Konfigurowanie rejestracji systemu Windows
+      items:
+        - name: Metody rejestracji systemu Windows
+          href: windows-enrollment-methods.md
+        - name: Możliwości metod rejestracji
+          href: enrollment-method-capab.md
+        - name: Rejestracja urządzeń z systemem Windows
+          href: windows-enroll.md
+        - name: Rejestrowanie zbiorcze
+          href: windows-bulk-enroll.md
+        - name: Strona ze stanem rejestracji
+          href: windows-enrollment-status.md
+        - name: Program Windows AutoPilot Deployment
+          href: enrollment-autopilot.md
+        - name: Hybrydowa usługa Azure AD z rozwiązaniem Autopilot
+          href: windows-autopilot-hybrid.md
+        - name: Konfigurowanie serwera proxy dla łącznika usługi AD w usłudze Intune
+          href: autopilot-hybrid-connector-proxy.md
+    - name: Konfiguracja rejestrowania urządzeń z systemem Android
+      items:
+        - name: Konfiguracja rejestrowania urządzeń z systemem Android
+          href: android-enroll.md
+          displayName: wpj
+        - name: Łączenie usługi Intune z rozwiązaniem Android Enterprise
+          href: connect-intune-android-enterprise.md
+        - name: Rejestracja profilu służbowego rozwiązania Android Enterprise
+          href: android-work-profile-enroll.md
+        - name: Rejestracja dedykowanego urządzenia rozwiązania Android Enterprise
+          href: android-kiosk-enroll.md
+          displayName: gms
+        - name: W pełni zarządzana rejestracja rozwiązania Android Enterprise
+          href: android-fully-managed-enroll.md
+          displayName: gms
+        - name: Rejestrowanie dedykowanych lub w pełni zarządzanych urządzeń rozwiązania Android Enterprise
+          href: android-dedicated-devices-fully-managed-enroll.md
+        - name: Rejestracja administratora urządzeń z systemem Android
+          href: android-enroll-device-administrator.md
+        - name: Zarządzanie urządzeniami z profilem służbowym rozwiązania Android Enterprise
+          href: android-enterprise-overview.md
+        - name: Program Samsung Knox Mobile Enrollment
+          href: android-samsung-knox-mobile-enroll.md
+          displayName: kda; kme
+    - name: Konfigurowanie rejestrowania urządzeń z systemem iOS
+      href: ios-enroll.md
+      items:
+        - name: Program Device Enrollment Program
+          href: device-enrollment-program-enroll-ios.md
+        - name: Apple School Manager
+          href: apple-school-manager-set-up-ios.md
+        - name: Program Apple Configurator
+          href: apple-configurator-enroll-ios.md
+    - name: Konfigurowanie rejestracji urządzeń z systemem macOS
+      href: macos-enroll.md
+      items:
+        - name: Program Device Enrollment Program lub usługa Apple School Manager
+          href: device-enrollment-program-enroll-macos.md
+    - name: Niepełny raport rejestracji
+      href: enrollment-report-company-portal-abandon.md
+    - name: Rozwiązywanie problemów z rejestracją
+      items:
+        - name: Rozwiązywanie problemów z rejestrowaniem urządzeń
+          href: troubleshoot-device-enrollment-in-intune.md
+          displayName: sso
+        - name: Rozwiązywanie problemów z rejestrowaniem urządzeń z systemem iOS
+          href: troubleshoot-ios-enrollment-errors.md
+        - name: Rozwiązywanie problemów z rejestrowaniem urządzeń z systemem Windows
+          href: troubleshoot-windows-enrollment-errors.md

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8d76ff182ea4402b6a4cd3242b15288d8bea16b9
-ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
+ms.openlocfilehash: f87848b43e040681085f3e89b063d5006f904464
+ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71166469"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71720917"
 ---
 ## <a name="microsoft-open-source-code-of-conduct"></a>Kodeks postępowania społeczności Microsoft Open Source
 
@@ -23,7 +23,7 @@ Znajdujesz się w jednym z repozytoriów serwisu GitHub zawierających źródło
 * **Korzystaj z przeglądarki**: dostępne są dwie opcje: 
 
     **Opcja 1. Edytowanie bezpośrednio z witryny docs.microsoft.com**  
-    1. Przejdź do tematu, takiego jak [https://docs.microsoft.com/intune/troubleshoot-policies-in-microsoft-intune](troubleshoot-policies-in-microsoft-intune.md). 
+    1. Przejdź do tematu, takiego jak [https://docs.microsoft.com/intune/troubleshoot-policies-in-microsoft-intune](intune/protect/troubleshoot-policies-in-microsoft-intune.md). 
     2. Wybierz pozycję **Edytuj** (w prawym górnym rogu). Spowoduje to wyświetlenie pliku markdown w repozytorium usługi GitHub.
     3. Wybierz ikonę ołówka. Po umieszczeniu wskaźnika myszy na ikonie ołówka zobaczysz etykietkę narzędzia **Edytuj ten plik**. 
     4. Wprowadź zmiany, a następnie je **zatwierdź**. 
