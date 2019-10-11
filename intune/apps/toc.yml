@@ -43,18 +43,20 @@
               href: store-apps-ios.md
             - name: Aplikacje ze sklepu dla systemu Windows Phone 8.1
               href: store-apps-windows-phone-8-1.md
-            - name: Aplikacje ze Sklepu Microsoft
-              items:
-                - name: Aplikacja systemu Windows
-                  href: store-apps-windows.md
-                - name: Aplikacji Portal firmy
-                  href: store-apps-company-portal-app.md
+            - name: Aplikacja systemu Windows
+              href: store-apps-windows.md
+            - name: Aplikacje ze Sklepu Microsoft dla Firm
+              href: windows-store-for-business.md
             - name: Aplikacje zarządzane ze sklepu Google Play
               href: apps-add-android-for-work.md
+        - name: Pakiet Office 365
+          items:
             - name: Aplikacje pakietu Office 365 dla systemu Windows 10
               href: apps-add-office365.md
             - name: Aplikacje pakietu Office 365 dla systemu macOS
               href: apps-add-office365-macos.md
+        - name: Aplikacje systemu Android Enterprise
+          href: apps-ae-system.md
         - name: Aplikacje internetowe
           href: web-app.md
           displayName: web; web link; weblink; web-link
@@ -74,10 +76,12 @@
               href: app-sideload-windows.md
             - name: aplikacje LOB dla systemu macOS
               href: lob-apps-macos.md
-        - name: Aplikacje systemu Android Enterprise
-          href: apps-ae-system.md
-        - name: Zarządzanie aplikacjami Win32
-          href: apps-win32-app-management.md
+            - name: Zarządzanie aplikacjami Win32
+              href: apps-win32-app-management.md
+        - name: Dodawanie określonych aplikacji
+          items:
+            - name: Aplikacji Portal firmy
+              href: store-apps-company-portal-app.md
         - name: Skrypty środowiska PowerShell
           href: intune-management-extension.md
     - name: Przypisywanie aplikacji

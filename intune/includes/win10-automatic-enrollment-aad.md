@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 04afc9c44bc1c4898950e6f3aff5dac7cb93370f
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 3aadafbcf9c9208e7c87504c5459731de1e402b5
+ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "56323420"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "71302591"
 ---
 ## <a name="enable-windows-10-automatic-enrollment"></a>Włączanie automatycznej rejestracji urządzeń z systemem Windows 10
 
@@ -21,7 +21,7 @@ Automatyczna rejestracja umożliwia użytkownikom rejestrowanie urządzeń z sys
 
    ![Zrzut ekranu witryny Azure Portal](../media/auto-enroll-azure-main.png)
 
-2. Wybierz pozycję **Mobilność (MDM i MAM)**.
+2. Wybierz pozycję **Mobilność (MDM i MAM)** .
 
    ![Zrzut ekranu witryny Azure Portal](../media/auto-enroll-mdm.png)
 
@@ -41,7 +41,7 @@ Automatyczna rejestracja umożliwia użytkownikom rejestrowanie urządzeń z sys
       > W przypadku urządzeń firmowych zakres użytkownika oprogramowania MDM ma pierwszeństwo, jeśli włączone są oba zakresy. Urządzenia są rejestrowane przez funkcję zarządzania urządzeniami mobilnymi.
 
    > [!NOTE]
-   > Zakres użytkowników funkcji MAM należy ustawić na kolekcję lub grupę użytkowników.
+   > Zakres użytkowników MDM musi być ustawiony na grupę Azure AD, która zawiera obiekty użytkowników.
 
    ![Zrzut ekranu witryny Azure Portal](../media/auto-enroll-scope.png)
 
