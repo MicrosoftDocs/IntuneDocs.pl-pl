@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a345cdf2162db6b55fe5698488036fad0677a6e1
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: e3fb9af260b8fddc78b644b8ede056c90bac24d0
+ms.sourcegitcommit: 29b1113dc04534c4c87c33c773c5a0e24266e042
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71723271"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71999357"
 ---
 # <a name="what-is-device-enrollment"></a>Co to jest rejestrowanie urządzenia?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -76,7 +76,7 @@ Domyślnie w usłudze Intune mogą być rejestrowane urządzenia dla dowolnej pl
 |**Administrator urządzenia z systemem Android**|**(Zadeklarowany wstępnie numer IMEI lub SN) Inicjowane przez użytkownika za pośrednictwem Portalu firmy**| Nie | Tak | Nie | [Więcej informacji](./../corporate-identifiers-add.md)|
 |**Administrator urządzenia z systemem Android przy użyciu rozszerzeń mobilności Zebra**|**Inicjowane przez użytkownika lub [menedżera rejestracji urządzeń](#device-enrollment-manager) za pośrednictwem Portalu firmy**| Nie | Tak, jeśli inicjowana przez użytkownika, nie, jeśli inicjowana przez [menedżera rejestracji urządzeń](#device-enrollment-manager) | Nie | [Więcej informacji](../configuration/android-zebra-mx-overview.md)|
 |**Android Enterprise (dedykowane)**|**NFC, token, kod QR, Zero Touch**| Tak | Nie | Można konfigurować za pomocą zasad | [Więcej informacji](android-kiosk-enroll.md)|
-|**W pełni zarządzane z rozwiązaniem Android Enterprise (wersja zapoznawcza)**|**NFC, token, kod QR, Zero Touch**| Tak | Tak | Można konfigurować za pomocą zasad | [Więcej informacji](android-dedicated-devices-fully-managed-enroll.md)|
+|**W pełni zarządzane urządzenia z rozwiązaniem Android Enterprise**|**NFC, token, kod QR, Zero Touch**| Tak | Tak | Można konfigurować za pomocą zasad | [Więcej informacji](android-dedicated-devices-fully-managed-enroll.md)|
 
 
 ## <a name="bring-your-own-device"></a>Korzystanie z własnych urządzeń

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0d495265580bc9801a1fadb636a62274a4f728a
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 8b630709646b2f4489cbfea6284689c9436798ca
+ms.sourcegitcommit: 78f9750712c254d8b123ef15b74f30ca999aa128
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71725754"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71916373"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co to jest zarządzanie aplikacjami w usłudze Microsoft Intune?
 
@@ -67,7 +67,7 @@ Usługa Intune oferuje szeroką gamę możliwości, które pomogą Ci uzyskać d
 | Aplikacje ze sklepu | Tak | Tak | Nie | Tak | Tak |
 | Aktualizowanie aplikacji | Tak | Tak | Nie | Tak | Tak |
 
-<sup>1</sup> Rozważ zastosowanie funkcji [Windows Information Protection](../windows-information-protection-configure.md) do ochrony aplikacji na urządzeniach z systemem Windows 10.<br>
+<sup>1</sup> Rozważ zastosowanie funkcji [Windows Information Protection](../protect/windows-information-protection-configure.md) do ochrony aplikacji na urządzeniach z systemem Windows 10.<br>
 <sup>2</sup>Dotyczy urządzeń zarządzanych tylko przez usługę Intune.<br>
 <sup>3</sup> Usługa Intune obsługuje dostępne aplikacje z zarządzanego sklepu Google Play na urządzeniach z systemem Android Enterprise.<br>
 <sup>4</sup> Usługa Intune nie umożliwia instalacji skrótu do aplikacji jako linku sieci Web na standardowych urządzeniach z systemem Android Enterprise. Jednak obsługa linku sieci Web jest oferowana w przypadku [dedykowanych urządzeń z wieloma aplikacjami z systemem Android Enterprise](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings). 
