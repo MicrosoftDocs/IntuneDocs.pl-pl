@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/12/2019
+ms.date: 10/10/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 484035603e4fb447b004aad6c6f85726034f3c23
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 493db6299aa8242d0ca6ab669b313e85d0dc14c6
+ms.sourcegitcommit: b1e97211db7cb949eb39be6776b3a11d434fdab0
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71732831"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251590"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Ustawienia urządzeń z systemem Windows 10 lub nowszym umożliwiające oznaczenie ich jako zgodne lub niezgodne w usłudze Intune
 
@@ -138,6 +138,9 @@ Dotyczy tylko współzarządzanych urządzeń z systemem Windows 10 lub nowszym.
 - **Zapora**: Ustaw opcję **Wymagaj** , aby włączyć zaporę usługi Microsoft Defender, i uniemożliwić użytkownikom jej wyłączenie. **Nie skonfigurowano** (wartość domyślna) nie steruje zaporą programu Microsoft Defender ani nie zmienia istniejących ustawień.
 
   [Dostawca CSP zapory](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp)
+
+  > [!NOTE]
+  > Jeśli urządzenie zostanie natychmiast zsynchronizowane po ponownym uruchomieniu lub natychmiast zsynchronizuje wznawianie z uśpienia, to ustawienie może zgłosić **błąd**. Ten scenariusz może nie wpływać na ogólny stan zgodności urządzenia. Aby ponownie oszacować stan zgodności, należy ręcznie [zsynchronizować urządzenie](https://docs.microsoft.com/intune-user-help/sync-your-device-manually-windows).
 
 - **Moduł TPM (TPM)** : w przypadku wybrania opcji **Wymagaj**usługa Intune sprawdza wersję pod kątem zgodności. Urządzenie jest zgodne, jeśli wersja mikroukładu modułu TPM jest większa od 0 (zero). Urządzenie nie jest zgodne, jeśli na urządzeniu nie ma wersji modułu TPM. Gdy **nie zostanie skonfigurowana**, usługa Intune nie sprawdza urządzenia pod kątem wersji mikroukładu modułu TPM.
 

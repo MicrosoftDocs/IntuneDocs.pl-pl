@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d7bba4617aa756c5f7168a2febf1a3f1ffdd2029
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 1938f6862fa7b74dccc4ea23ac139fcd955d77d7
+ms.sourcegitcommit: a50a1ca123ecc2c5ac129f112f73838748f56476
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736003"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72237262"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Ustawienia punktów odniesienia zabezpieczeń oprogramowania MDM dla usługi Intune  
 
@@ -1622,7 +1622,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
 
 - **Typ wykonywania zawartości wiadomości e-mail**  
   Ta reguła blokuje wykonywanie lub uruchamianie następujących typów plików z wiadomości e-mail w programie Microsoft Outlook lub poczcie internetowej (np. Gmail.com lub Outlook.com): pliki wykonywalne (takie jak exe, dll lub scr), pliki skryptów (takie jak plik ps programu PowerShell, plik vbs języka Visual Basic lub plik js języka JavaScript), pliki archiwum skryptów.  
-  [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067063)  
+  [Dowiedz się więcej](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-content-from-email-client-and-webmail) 
   
   **Domyślne**: Blokuj
 
@@ -1632,7 +1632,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
 
 - **Typ ochrony sieci**  
   Ta zasada umożliwia włączenie lub wyłączenie ochrony sieci (blokowanie/inspekcja) w funkcji Windows Defender Exploit Guard. Ochrona sieci w funkcji Windows Defender Exploit Guard chroni pracowników używających dowolnej aplikacji przed wyłudzeniem informacji, witrynami hostującymi programy wykorzystujące luki w zabezpieczeniach i złośliwą zawartością w Internecie. Obejmuje to blokadę połączeń w przeglądarkach innych firm z niebezpiecznymi witrynami. Typ wartości to liczba całkowita. Jeśli to ustawienie zostanie włączone, ochrona sieci zostanie włączona i pracownicy nie będą mogli jej wyłączyć. Jej zachowaniem można sterować przy użyciu następujących opcji: blokada i inspekcja. Jeśli te zasady są włączone z opcją „Blokada”, użytkownicy/aplikacje nie mogą łączyć się z niebezpiecznymi domenami. Ta aktywność jest widoczna w usłudze Windows Defender Security Center. Jeśli te zasady są włączone z opcją „Inspekcja”, użytkownicy/aplikacje mogą łączyć się z niebezpiecznymi domenami. Ta aktywność będzie jednak nadal widoczna w usłudze Windows Defender Security Center. Jeśli te zasady są wyłączone, użytkownicy/aplikacje mogą łączyć się z niebezpiecznymi domenami. Aktywność sieci nie będzie widoczna w usłudze Windows Defender Security Center. Jeśli te zasady nie zostaną skonfigurowane, blokada sieci będzie domyślnie wyłączona.  
-  [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067102)  
+  [Dowiedz się więcej](/windows/security/threat-protection/microsoft-defender-atp/enable-network-protection)  
   
   **Domyślne**: Włącz
   
