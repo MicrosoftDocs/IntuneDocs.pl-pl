@@ -16,22 +16,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74b920deeb5255f6f938f0c8b07eaab6d765e68e
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 345d039fede2a77ba0485944cb601683bdcebfda
+ms.sourcegitcommit: 29b1113dc04534c4c87c33c773c5a0e24266e042
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71722972"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71999303"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Używanie certyfikatów do uwierzytelniania w usłudze Microsoft Intune  
 
 Przy użyciu certyfikatów w usłudze Intune można uwierzytelniać użytkowników w aplikacjach i zasobach firmowych za pośrednictwem sieci VPN, Wi-Fi lub profilów poczty e-mail. W przypadku używania certyfikatów do uwierzytelniania tych połączeń użytkownicy końcowi nie będą musieli wprowadzać nazw użytkowników i haseł, co ułatwia zapewnienie im bezproblemowego dostępu. Certyfikaty są również używane do podpisywania i szyfrowania poczty e-mail przy użyciu protokołu S/MIME.
 
-Usługa Intune obsługuje następujące typy certyfikatów:  
-
-- Prosty protokół rejestrowania certyfikatów (SCEP, Simple Certificate Enrollment Protocol)  
-- PKCS#12 (lub PFX)  
-- Zaimportowane certyfikaty PKCS
+## <a name="intune-supported-certificates-and-usage"></a>Certyfikaty obsługiwane przez usługę Intune i ich użycie
+| Typ              | Uwierzytelnianie | Podpisywanie S/MIME | Szyfrowanie S/MIME  |
+|--|--|--|--|
+| Zaimportowany certyfikat PKCS |  | ![Obsługiwane](./media/certificates-configure/green-check.png) | ![Obsługiwane](./media/certificates-configure/green-check.png)|
+| PKCS#12 (lub PFX)    | ![Obsługiwane](./media/certificates-configure/green-check.png) | ![Obsługiwane](./media/certificates-configure/green-check.png) |  |
+| Prosty protokół rejestrowania certyfikatów (SCEP, Simple Certificate Enrollment Protocol)  | ![Obsługiwane](./media/certificates-configure/green-check.png) | ![Obsługiwane](./media/certificates-configure/green-check.png) | |
 
 Aby wdrożyć te certyfikaty, należy utworzyć i przypisać profile certyfikatów do urządzeń.  
 

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 69f214b4fd3f3b7767e719c0f68f19e178a8e29c
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 06fdd8a6b64dfd58457b5d9b92144530aa2856cd
+ms.sourcegitcommit: 223d64a72ec85fe222f5bb10639da729368e6d57
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71723011"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71940496"
 ---
 # <a name="use-intune-to-remediate-vulnerabilities-identified-by-microsoft-defender-atp"></a>Używanie usługi Intune do korygowania luk w zabezpieczeniach znalezionych przez usługę Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender  
 
@@ -70,7 +70,7 @@ Przykładowy przepływ pracy:
 **Konfiguracje usługi Intune dla Zaawansowanej ochrony przed zagrożeniami**:  
 
 - Skonfigurowanie połączenia między usługami za pomocą Zaawansowanej ochrony przed zagrożeniami w usłudze Microsoft Defender.  
-- Wdrożenie zasad zgodności urządzeń za pomocą profilu typu **Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender (Windows 10 Desktop)** na urządzeniach, dla których ryzyko będzie oceniane przy użyciu Zaawansowanej ochrony przed zagrożeniami.
+- Wdrożenie zasad konfiguracji urządzeń za pomocą profilu typu **Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender (Windows 10 Desktop)** na urządzeniach, dla których ryzyko będzie oceniane przy użyciu Zaawansowanej ochrony przed zagrożeniami.
 
   Aby uzyskać informacje dotyczące sposobu konfigurowania usługi Intune do pracy z Zaawansowaną ochrony przed zagrożeniami, zobacz [Wymuszanie zgodności dla Zaawansowanej ochrony przed zagrożeniami z dostępem warunkowym w usłudze Intune](advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune).  
 

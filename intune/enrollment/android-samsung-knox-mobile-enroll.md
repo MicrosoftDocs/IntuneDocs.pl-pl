@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02006acc58789f2a6fb5944e677a1983f7ea9614
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: b16dca0b6a73e7228e65c840bfbc91f3577bb59a
+ms.sourcegitcommit: 29b1113dc04534c4c87c33c773c5a0e24266e042
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71723557"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71999287"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>Automatyczne rejestrowanie urządzeń z systemem Android za pomocą rozwiązania Knox Mobile Enrollment firmy Samsung
 
@@ -109,7 +109,8 @@ W przypadku urządzeń zarejestrowanych w usłudze Intune przy użyciu rozwiąza
 
 > [!NOTE]
 >
->Skojarzenie z użytkownikiem ma zastosowanie tylko w przypadku rejestracji urządzeń z systemem Android. Po zdefiniowaniu skojarzenia użytkownika tylko skojarzony użytkownik będzie mógł zarejestrować urządzenie przy użyciu rozwiązania KME. Ta reguła będzie obowiązywać nawet po zresetowaniu urządzenia do ustawień fabrycznych. W przypadku braku zdefiniowanych skojarzeń użytkownika w portalu rozwiązania Knox każdy użytkownik z ważną licencją usługi Intune może rejestrować urządzenia przy użyciu rozwiązania KME.
+>Skojarzenie z użytkownikiem ma zastosowanie tylko w przypadku rejestracji urządzeń z systemem Android przez administratora. Po zdefiniowaniu skojarzenia użytkownika tylko skojarzony użytkownik będzie mógł zarejestrować urządzenie przy użyciu rozwiązania KME. Ta reguła będzie obowiązywać nawet po zresetowaniu urządzenia do ustawień fabrycznych. W przypadku braku zdefiniowanych skojarzeń użytkownika w portalu rozwiązania Knox każdy użytkownik z ważną licencją usługi Intune może rejestrować urządzenia przy użyciu rozwiązania KME.
+>W przypadku w pełni zarządzanych urządzeń z systemem Android Enterprise, nawet jeśli skojarzenie z użytkownikiem jest zdefiniowane, nie zostanie ono przesłane do urządzenia ani nie spowoduje powiązania urządzenia z użytkownikiem.
 >
 
 ## <a name="distribute-devices"></a>Dystrybuowanie urządzeń
@@ -126,7 +127,7 @@ Nadal potrzebujesz pomocy? Zapoznaj się z [kompletnym podręcznikiem użytkowni
 
 - **Resetowanie do ustawień fabrycznych w celu zarejestrowania w systemie Android Enterprise:** jeśli ma miejsce zmiana zastosowania urządzeń, które zostały już skonfigurowane, podczas rejestracji w systemie Android Enterprise muszą one zostać zresetowane do ustawień fabrycznych.
 
-- **Konto Google Play:** konto Google Play nie jest niezbędne do rejestracji urządzenia w usłudze Microsoft Intune. Przyszłe aktualizacje aplikacji Portal firmy w usłudze Intune mogą jednak wymagać konta Google Play na urządzeniu. Konto Google Play nie jest wymagane podczas rejestracji jako właściciel urządzenia Google.
+- **Konto Google Play:** konto Google Play nie jest niezbędne do rejestracji urządzenia w usłudze Microsoft Intune. Jednak w przypadku rejestracji urządzeń z systemem Android przez administratora przyszłe aktualizacje aplikacji Portal firmy w usłudze Intune mogą wymagać konta Google Play na urządzeniu. Konto Google Play nie jest wymagane podczas rejestracji jako właściciel urządzenia Google.
 
 - **Pole „Hasło” jest ignorowane:** jeśli w obszarze **Szczegóły urządzenia** w portalu rozwiązania Knox zostało wypełnione pole **Hasło**, jest ono ignorowane przez aplikację Portal firmy w usłudze Intune podczas rejestracji urządzeń z systemem Android. Użytkownik końcowy musi wprowadzić hasło na urządzeniu, aby ukończyć rejestrację tego urządzenia.
 

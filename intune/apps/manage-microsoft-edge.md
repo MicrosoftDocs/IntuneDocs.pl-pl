@@ -100,7 +100,7 @@ Aby utworzyć konfigurację aplikacji na potrzeby przeglądarki Microsoft Edge:
 2. Wybierz pozycję **Aplikacje klienckie** > **Zasady konfiguracji aplikacji** > **Dodaj**.
 3. W bloku **Dodaj zasady konfiguracji** wypełnij pola **Nazwa** i **Opis** (opcjonalnie) odnoszące się do ustawień konfiguracji aplikacji.
 4. Jako typ **rejestracji urządzenia** wybierz **Aplikacje zarządzane**.
-5. Wybierz pozycję **Wybierz wymaganą aplikację**. Następnie przejdź do bloku **Docelowe aplikacje** i wybierz pozycję **Managed Browser** lub **Edge** dla systemu iOS lub Android bądź dla obu tych systemów.
+5. Wybierz pozycję **Wybierz wymaganą aplikację**. Następnie przejdź do bloku **Docelowe aplikacje** i wybierz pozycję **Managed Browser** lub **Microsoft Edge** dla systemu iOS lub Android bądź dla obu tych systemów.
 6. Wybierz przycisk **OK**, aby wrócić do bloku **Dodaj zasady konfiguracji**.
 7. Wybierz pozycję **Ustawienia konfiguracji**. W bloku **Konfiguracja** należy zdefiniować pary kluczy i wartości do dostarczania konfiguracji dla przeglądarki Microsoft Edge. Informacje na temat różnych par kluczy i wartości, które można zdefiniować, znajdują się w dalszych sekcjach tego artykułu.
 

@@ -17,62 +17,68 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ce9a92a9fffad13c6723504735b1b1cb9442f61f
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 449e799dfc0531958c1578179cf07440d348ecf8
+ms.sourcegitcommit: f04e21ec459998922ba9c7091ab5f8efafd8a01c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 10/02/2019
-ms.locfileid: "71721464"
+ms.locfileid: "71813952"
 ---
 # <a name="data-jamf-pro-sends-to-intune"></a>Dane wysyłane do usługi Intune przez narzędzie Jamf Pro
 
 Kiedy używasz narzędzia [Jamf Pro](https://www.jamf.com) do zarządzania komputerami Mac użytkowników końcowych w usłudze Intune, narzędzie Jamf Pro przechwytuje informacje dotyczące spisu zarządzanych urządzeń z systemem macOS. 
 
 ## <a name="data"></a>Dane  
-Narzędzie Jamf Pro zgłasza do usługi Intune następujące informacje:  
+Aby uzyskać listę danych, które narzędzie Jamf Pro udostępnia usłudze Intune, zobacz [Appendix: Inventory Information Shared with Microsoft Intune](https://docs.jamf.com/technical-papers/jamf-pro/microsoft-intune/10.9.0/Appendix__Inventory_Information_Shared_with_Microsoft_Intune.html) (Informacje o spisie udostępniane usłudze Microsoft Intune) w dokumentacji technicznej narzędzia Jamf Pro. 
 
-* Identyfikator urządzenia w usłudze Azure Active Directory
-* Stan spisu JAMF (stan spisu komputera zaewidencjonowanego w oprogramowaniu Jamf Pro w ciągu ostatnich 24 godzin)
-* Wersja systemu operacyjnego
-* Identyfikator użytkownika w usłudze Azure Active Directory
-* Zaszyfrowane (FileVault 2)
-* Stan programu Gatekeeper
-* Hasło: minimalna liczba zestawów znaków
-* Wygaśnięcie hasła w dniach
-* Typ hasła — prosty, alfanumeryczny lub nieznany
-* Zapobieganie automatycznemu logowaniu
-* Wymagana długość kodu dostępu
-* Hasło: liczba poprzednich haseł, których nie można użyć ponownie
-* Ochrona integralności systemu
-* Czas ostatniego zaewidencjonowania
-* Typ architektury
-* Dostępne gniazda pamięci RAM
-* Pojemność baterii
-* Pamięć rozruchowa ROM
-* Szybkość magistrali
-* Rozmiar pamięci podręcznej
-* Nazwa urządzenia
-* Przyłączanie do domeny
-* Identyfikator Jamf
-* Adres MAC
-* Marka
+<!--  
+Jamf Pro reports the following information to Intune:  
+
+* Device Azure AD ID
+* JAMF Inventory State (inventory state of a computer checked in with Jamf Pro within the last 24 hours)
+* OS Version
+* User Azure AD ID
+* Encrypted (FileVault 2)
+* Gatekeeper Status
+* Password: minimum number of character sets
+* Password expiration (days)
+* Password Type - simple, alphanumeric, or unknown
+* Prevent Auto Login
+* Required Passcode Length
+* Password: number of previous passwords to prevent reuse
+* System Integrity Protection
+* Last Check-In Time
+* Architecture Type
+* Available RAM Slots
+* Battery Capacity
+* Boot ROM
+* Bus Speed
+* Cache Size
+* Device Name
+* Domain Join
+* Jamf ID
+* MAC address
+* Make
 * Model
-* Identyfikator modelu
-* Szybkość karty sieciowej
-* Liczba rdzeni
-* Liczba procesorów
-* System operacyjny
-* Platforma
-* Szybkość procesora
-* Typ procesora
-* Dodatkowy adres MAC
-* Numer seryjny
-* Wersja SMC
-* Całkowita ilość pamięci RAM
-* Identyfikator UDID
-* Adres e-mail użytkownika
+* Model Identifier
+* NIC Speed
+* Number of Cores
+* Number of Processors
+* OS
+* Platform
+* Processor Speed
+* Processor Type
+* Secondary MAC Address
+* Serial Number
+* SMC Version
+* Total RAM
+* UDID
+* User Email
+--> 
 
-Urządzenie zarządzane za pomocą narzędzia Jamf można usunąć z konsoli usługi Intune, wybierając pozycję **Usuń** w widoku **Wszystkie urządzenia**. Zbiorcze usuwanie urządzeń można włączyć, zaznaczając wiele urządzeń i klikając pozycję **Usuń**.
+<!-- 
+You can remove a Jamf-managed device from the Intune console by selecting **Delete** in the **All devices** view. Bulk device deletion can be enabled by selecting multiple devices and clicking **Delete**.
+-->
 
 ## <a name="next-steps"></a>Następne kroki
 Zapoznaj się z informacjami na temat [usuwania urządzenia zarządzanego za pomocą narzędzia Jamf w dokumentacji programu Jamf Pro](https://www.jamf.com/jamf-nation/articles/80/unmanaging-computers-while-preserving-their-inventory-information). Możesz również wypełnić bilet pomocy technicznej dla [obsługi Jamf](https://www.jamf.com/support/) w celu uzyskania dodatkowej pomocy. 

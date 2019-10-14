@@ -5,7 +5,7 @@ keywords: ''
 author: ralms
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/16/2019
+ms.date: 10/02/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b801da3bd4245361e8c55a40c67daf2c8890fd1e
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: fead8b9d69f5356876c0b3a2a4ce02e9b754128e
+ms.sourcegitcommit: 29b1113dc04534c4c87c33c773c5a0e24266e042
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71721607"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71999344"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Konfigurowanie zaimportowanych certyfikatów PKCS i korzystanie z nich w usłudze Intune
 
@@ -168,7 +168,7 @@ Wybierz dostawcę magazynu kluczy odpowiadającego dostawcy użytemu do utworzen
 
 7. Zaimportuj obiekt **UserPFXCertificate** do usługi Intune, uruchamiając polecenie `Import-IntuneUserPfxCertificate -AuthenticationResult $authResult -CertificateList $userPFXObject`
 
-8. Aby sprawdzić poprawność zaimportowanego certyfikatu, uruchom polecenie `Get-IntuneUserPfxCertificate -AuthenticationResult $authResult -UsertList "<UserUPN>"`
+8. Aby sprawdzić poprawność zaimportowanego certyfikatu, uruchom polecenie `Get-IntuneUserPfxCertificate -AuthenticationResult $authResult -UserList "<UserUPN>"`
 
 Więcej informacji o innych dostępnych poleceniach można znaleźć w pliku readme [projektu PFXImport PowerShell w usłudze GitHub](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
 
@@ -186,7 +186,7 @@ Po zaimportowaniu certyfikatów do usługi Intune należy utworzyć profil **zai
 
 3. Przejdź do pozycji **Ustawienia**, a następnie wprowadź następujące właściwości:
 
-   - **Przeznaczenie**: Określ przeznaczenie certyfikatów importowanych na potrzeby tego profilu. Administratorzy mogą importować certyfikaty o różnym przeznaczeniu (np. uwierzytelnianie, podpisywanie za pomocą protokołu S/MIME lub szyfrowanie za pomocą protokołu S/MIME). Przeznaczenie wybrane w profilu certyfikatu służy do dopasowywania profilu certyfikatu do odpowiednich zaimportowanych certyfikatów. Przeznaczenie to znacznik, według którego są grupowane zaimportowane certyfikaty. Nie gwarantuje przydatności zaimportowanych certyfikatów do określonego celu.  
+   - **Przeznaczenie**: Określ przeznaczenie certyfikatów importowanych na potrzeby tego profilu. Administratorzy mogą importować certyfikaty o różnym przeznaczeniu (np. podpisywanie za pomocą protokołu S/MIME lub szyfrowanie za pomocą protokołu S/MIME). Przeznaczenie wybrane w profilu certyfikatu służy do dopasowywania profilu certyfikatu do odpowiednich zaimportowanych certyfikatów. Przeznaczenie to znacznik, według którego są grupowane zaimportowane certyfikaty. Nie gwarantuje przydatności zaimportowanych certyfikatów do określonego celu.  
    - **Okres ważności certyfikatu**: Jeśli nie zmieniono okresu ważności w szablonie certyfikatu, domyślnie wynosi on jeden rok.  
    - **Dostawca magazynu kluczy**: W przypadku systemu Windows wybierz miejsce przechowywania kluczy na urządzeniu.  
 

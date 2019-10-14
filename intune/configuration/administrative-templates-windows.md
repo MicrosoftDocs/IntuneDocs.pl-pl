@@ -58,7 +58,7 @@ W tym artykule przedstawiono procedurę tworzenia szablonu dla urządzeń z syst
     > [!TIP]
     > Ustawienia systemu Windows w usłudze Intune są skorelowane z lokalną ścieżką zasad grupy wyświetlaną w Edytorze lokalnych zasad grupy (`gpedit`).
 
-5. Domyślnie na liście rozwijanej jest wyświetlana pozycja **Wszystkie produkty**. Na liście można także filtrować ustawienia w celu wyświetlania tylko ustawień systemu **Windows**, tylko ustawień pakietu **Office** lub tylko ustawień przeglądarki **Edge w wersji 77 lub nowszej**:
+5. Domyślnie na liście rozwijanej jest wyświetlana pozycja **Wszystkie produkty**. Na liście można także filtrować ustawienia w celu wyświetlania tylko ustawień systemu **Windows**, tylko ustawień pakietu **Office** lub tylko ustawień przeglądarki **Microsoft Edge w wersji 77 lub nowszej**:
 
     ![Filtrowanie listy w celu wyświetlenia wszystkich ustawień systemu Windows lub pakietu Office w szablonach administracyjnych w usłudze Intune](./media/administrative-templates-windows/administrative-templates-choose-windows-office-all-products.png)
 

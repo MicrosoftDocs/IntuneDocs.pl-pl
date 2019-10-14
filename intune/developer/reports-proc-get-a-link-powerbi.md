@@ -6,7 +6,7 @@ keywords: Magazyn danych usługi Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/14/2019
+ms.date: 10/07/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5ee5cdb6bbdcce229fbc217726a1ee118f77beff
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 9e8fadb625073af2a70d605d3ceabb9ba97906ae
+ms.sourcegitcommit: 46322ca7a92971e18dc0b230f436b9ca892b90c5
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71733416"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72008321"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Nawiązywanie połączenia z magazynem danych przy użyciu usługi Power BI
 
@@ -76,9 +76,10 @@ Po uwierzytelnieniu klienta w usłudze Azure AD adres URL usługi OData nawiąż
 
 1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Kliknij pozycję **Skonfiguruj magazyn danych usługi Intune** w sekcji **inne zadania** po prawej stronie bloku przegląd. Zostanie wyświetlony blok **Magazyn danych usługi Intune** .
-3. Pobierz adres URL niestandardowego kanału informacyjnego z bloku raportowania, na przykład `https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
+3. Pobierz adres URL niestandardowego kanału informacyjnego z bloku raportowania, na przykład:<br>
+    `https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
 4. Otwórz aplikację **Power BI Desktop**.
-5. Wybierz pozycję **Narzędzia główne** > **Pobierz dane**. Zaznacz pozycję **Źródło danych OData**.
+5. Wybierz **plik** > **Pobierz dane**. Zaznacz pozycję **Źródło danych OData**.
 6. Wybierz pozycję **Podstawowe**.
 7. Wpisz lub wklej **adres URL usługi OData** w polu adresu URL.
 8. Wybierz przycisk **OK**.

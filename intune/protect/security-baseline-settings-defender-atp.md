@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eee3d4187dd513cd3945e86aff478fe96b341660
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 52420375ae5ed88ab713a1da3e927e43e433db83
+ms.sourcegitcommit: 884654da8e72a63bfaea6b5def6c7891b065f251
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71732961"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72163503"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Ustawienia punktów odniesienia zabezpieczeń usługi Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender dla usługi Intune
 
@@ -86,7 +86,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
 ## <a name="attack-surface-reduction"></a>Zmniejszenie obszaru ataków  
 
 - **Uruchamianie typu procesów podrzędnych przez aplikacje pakietu Office**  
-  [Reguły zmniejszania obszaru podatnego na ataki](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) — po ustawieniu pozycji *Blokuj* aplikacje pakietu Office nie będą mogły tworzyć procesów podrzędnych. Aplikacje pakietu Office obejmują programy Word, Excel, PowerPoint, OneNote i Access. Tworzenie procesu podrzędnego to typowe zachowanie złośliwego oprogramowania, szczególnie w przypadku ataków opartych na makrach, które polegają na próbie uruchomienia lub pobrania złośliwych plików wykonywalnych za pomocą aplikacji pakietu Office.  
+  [Reguły zmniejszania obszaru podatnego na ataki](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) — po ustawieniu pozycji *Blokuj* aplikacje pakietu Office nie będą mogły tworzyć procesów podrzędnych. Aplikacje pakietu Office obejmują programy Word, Excel, PowerPoint, OneNote i Access. Tworzenie procesu podrzędnego to typowe zachowanie złośliwego oprogramowania, szczególnie w przypadku ataków opartych na makrach, które polegają na próbie uruchomienia lub pobrania złośliwych plików wykonywalnych za pomocą aplikacji pakietu Office.  
 
   **Domyślne**: Blokuj
 
@@ -101,7 +101,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   **Domyślne**: Włącz
 
 - **Typ wykonywania zawartości wiadomości e-mail**  
-  [Reguła zmniejszania obszaru podatnego na ataki](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) — po ustawieniu pozycji *Blokuj* ta reguła blokuje możliwość uruchamiania następujących typów plików z wiadomości e-mail w programie Microsoft Outlook lub poczcie internetowej (np. Gmail.com lub Outlook.com):  
+  [Reguła zmniejszania obszaru podatnego na ataki](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) — po ustawieniu pozycji *Blokuj* ta reguła blokuje możliwość uruchamiania następujących typów plików z wiadomości e-mail w programie Microsoft Outlook lub poczcie internetowej (np. Gmail.com lub Outlook.com):  
 
   - Pliki wykonywalne (takie jak exe, dll lub scr)  
   - Pliki skryptów (takie jak plik ps programu PowerShell, plik vbs języka Visual Basic lub plik js języka JavaScript)  
@@ -110,17 +110,17 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   **Domyślne**: Blokuj
 
 - **Uruchamianie programu Adobe Reader w procesie podrzędnym**  
-  [Reguła zmniejszania obszaru podatnego na ataki](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) — *włącz* tę regułę, aby blokować tworzenie procesu podrzędnego w programie Adobe Reader. Za pośrednictwem inżynierii społecznej lub programów wykorzystujących luki w zabezpieczeniach złośliwe oprogramowanie może pobierać i uruchamiać dodatkowe ładunki, a także może wydostać się z programu Adobe Reader.  
+  [Reguła zmniejszania obszaru podatnego na ataki](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) — *włącz* tę regułę, aby blokować tworzenie procesu podrzędnego w programie Adobe Reader. Za pośrednictwem inżynierii społecznej lub programów wykorzystujących luki w zabezpieczeniach złośliwe oprogramowanie może pobierać i uruchamiać dodatkowe ładunki, a także może wydostać się z programu Adobe Reader.  
 
   **Domyślne**: Włącz
 
 - **Typ zaciemnionego kodu makra skryptu**  
-  [Reguła zmniejszania obszaru podatnego na ataki](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) — złośliwe oprogramowanie i inne zagrożenia mogą próbować zaciemniać lub ukrywać złośliwy kod w niektórych plikach skryptów. Ta reguła uniemożliwia uruchamianie skryptów, które wydają się zaciemnione.  
+  [Reguła zmniejszania obszaru podatnego na ataki](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) — złośliwe oprogramowanie i inne zagrożenia mogą próbować zaciemniać lub ukrywać złośliwy kod w niektórych plikach skryptów. Ta reguła uniemożliwia uruchamianie skryptów, które wydają się zaciemnione.  
     
   **Domyślne**: Blokuj
 
 - **Niezaufany typ procesu USB**  
-  [Reguły zmniejszania obszaru podatnego na ataki](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) — po ustawieniu pozycji *Blokuj* nie można uruchamiać niepodpisanych lub niezaufanych plików wykonywalnych z wymiennych dysków USB i kart SD.
+  [Reguły zmniejszania obszaru podatnego na ataki](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) — po ustawieniu pozycji *Blokuj* nie można uruchamiać niepodpisanych lub niezaufanych plików wykonywalnych z wymiennych dysków USB i kart SD.
 
   Pliki wykonywalne to:
   - Pliki wykonywalne (takie jak exe, dll lub scr)
@@ -129,22 +129,22 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   **Domyślne**: Blokuj
 
 - **Typ wstrzykiwania innych procesów aplikacji pakietu Office**  
-  [Reguła zmniejszania obszaru podatnego na ataki](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) — po ustawieniu pozycji *Blokuj* aplikacje pakietu Office, w tym programy Word, Excel, PowerPoint i OneNote, nie mogą wstrzykiwać kodu do innych procesów. Wstrzyknięcie kodu jest zazwyczaj używane przez złośliwe oprogramowanie, aby uruchomić złośliwy kod w celu ukrycia aktywności przed aparatami skanowania antywirusowego.  
+  [Reguła zmniejszania obszaru podatnego na ataki](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) — po ustawieniu pozycji *Blokuj* aplikacje pakietu Office, w tym programy Word, Excel, PowerPoint i OneNote, nie mogą wstrzykiwać kodu do innych procesów. Wstrzyknięcie kodu jest zazwyczaj używane przez złośliwe oprogramowanie, aby uruchomić złośliwy kod w celu ukrycia aktywności przed aparatami skanowania antywirusowego.  
 
   **Domyślne**: Blokuj
 
 - **Kod makr w pakiecie Office zezwala na typ importu elementów Win32**  
-  [Reguła zmniejszania obszaru podatnego na ataki](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) — po ustawieniu pozycji *Blokuj* ta reguła próbuje zablokować pliki pakietu Office, które zawierają kod makra umożliwiający importowanie bibliotek DLL systemu Win32. Pliki pakietu Office to pliki programów Word, Excel, PowerPoint i OneNote. Złośliwe oprogramowanie może używać kodu makra w plikach pakietu Office, aby importować i ładować biblioteki DLL Win32, za pomocą których są następnie wykonywane wywołania interfejsu API w celu dalszego zainfekowania systemu.  
+  [Reguła zmniejszania obszaru podatnego na ataki](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) — po ustawieniu pozycji *Blokuj* ta reguła próbuje zablokować pliki pakietu Office, które zawierają kod makra umożliwiający importowanie bibliotek DLL systemu Win32. Pliki pakietu Office to pliki programów Word, Excel, PowerPoint i OneNote. Złośliwe oprogramowanie może używać kodu makra w plikach pakietu Office, aby importować i ładować biblioteki DLL Win32, za pomocą których są następnie wykonywane wywołania interfejsu API w celu dalszego zainfekowania systemu.  
 
   **Domyślne**: Blokuj
 
 - **Uruchamianie aplikacji komunikacyjnych pakietu Office w procesie podrzędnym**  
-  [Reguła zmniejszania obszaru podatnego na ataki](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) — po ustawieniu pozycji *Włącz* ta reguła uniemożliwia tworzenie procesów podrzędnych w programie Outlook. Blokując tworzenie procesu podrzędnego, ta reguła zapewnia ochronę przed atakami przy użyciu inżynierii społecznej i uniemożliwia wykorzystywanie luki w zabezpieczeniach programu Outlook przy użyciu kodu programu wykorzystującego luki tego typu.  
+  [Reguła zmniejszania obszaru podatnego na ataki](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) — po ustawieniu pozycji *Włącz* ta reguła uniemożliwia tworzenie procesów podrzędnych w programie Outlook. Blokując tworzenie procesu podrzędnego, ta reguła zapewnia ochronę przed atakami przy użyciu inżynierii społecznej i uniemożliwia wykorzystywanie luki w zabezpieczeniach programu Outlook przy użyciu kodu programu wykorzystującego luki tego typu.  
 
   **Domyślne**: Włącz
 
 - **Tworzenie wykonywalnej zawartości lub typ uruchamiania aplikacji pakietu Office**  
-  [Reguła zmniejszania obszaru podatnego na ataki](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) — po ustawieniu pozycji *Blokuj* aplikacje pakietu Office nie mogą tworzyć zawartości wykonywalnej. Aplikacje pakietu Office obejmują programy Word, Excel, PowerPoint, OneNote i Access.  
+  [Reguła zmniejszania obszaru podatnego na ataki](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) — po ustawieniu pozycji *Blokuj* aplikacje pakietu Office nie mogą tworzyć zawartości wykonywalnej. Aplikacje pakietu Office obejmują programy Word, Excel, PowerPoint, OneNote i Access.  
 
   Ta reguła dotyczy typowego zachowania używanego przez podejrzane i złośliwe dodatki oraz skrypty (rozszerzenia), które powoduje tworzenie lub uruchamianie plików wykonywalnych. Jest to typowa technika złośliwego oprogramowania. Używanie rozszerzeń przez aplikacje pakietu Office jest zablokowane. Zazwyczaj te rozszerzenia używają hosta skryptów systemu Windows (pliki wsh), aby uruchamiać skrypty, które automatyzują określone zadania lub udostępniają dodatkowe funkcje utworzone przez użytkownika.
 
@@ -273,7 +273,7 @@ Więcej informacji można znaleźć na stronie [WindowsAdvancedThreatProtection 
 ## <a name="exploit-protection"></a>Exploit Protection  
 
 - **Plik XML ochrony przed programami wykorzystującymi luki w zabezpieczeniach**  
-  Aby uzyskać więcej informacji, zobacz artykuł [Import, export, and deploy exploit protection configurations ](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/import-export-exploit-protection-emet-xml) (Importowanie, eksportowanie i wdrażanie konfiguracji programów wykorzystujących luki w zabezpieczeniach) w dokumentacji systemu Windows.  
+  Aby uzyskać więcej informacji, zobacz artykuł [Import, export, and deploy exploit protection configurations](/windows/security/threat-protection/microsoft-defender-atp/import-export-exploit-protection-emet-xml) (Importowanie, eksportowanie i wdrażanie konfiguracji ochrony przed programami wykorzystującymi luki w zabezpieczeniach) w dokumentacji systemu Windows.  
 
   Umożliwia administratorowi IT wypchnięcie konfiguracji reprezentującej środki zaradcze dla żądanego systemu i żądanej aplikacji do wszystkich urządzeń w organizacji. Konfiguracja jest reprezentowana przez kod XML. 
 

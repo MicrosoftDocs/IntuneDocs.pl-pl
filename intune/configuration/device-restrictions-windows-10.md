@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/29/2019
+ms.date: 10/09/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5c9bad56a8214cd736208526865b5f9c8b23db00
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 149da4c5aafc436156b7b29566bb5d792506de7c
+ms.sourcegitcommit: b1e97211db7cb949eb39be6776b3a11d434fdab0
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71734794"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251542"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem Windows 10 (i nowszym) w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune
 
@@ -665,29 +665,55 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad środowiska](ht
 
 Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad usługi Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender), który zawiera również listę obsługiwanych wersji systemu Windows.
 
-- **Monitorowanie w czasie rzeczywistym**: ustawienie **Włącz** wyłącza skanowanie w czasie rzeczywistym w poszukiwaniu złośliwego oprogramowania, programów szpiegujących i innego niepożądanego oprogramowania. Ustawienie **Nie skonfigurowano** (domyślne) zezwala na korzystanie z tej funkcji.
+- **Monitorowanie w czasie rzeczywistym**: ustawienie **Włącz** włącza skanowanie w czasie rzeczywistym w poszukiwaniu złośliwego oprogramowania, programów szpiegujących i innego niepożądanego oprogramowania. Użytkownicy nie mogą wyłączyć tej opcji. 
+
+  Jeśli **nie skonfigurowano** (domyślnie), usługa Intune nie dotyka tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **Nieskonfigurowane**, usługa Intune pozostawi ustawienie w wcześniej skonfigurowanym stanie. Domyślnie system operacyjny włącza tę funkcję i pozwala użytkownikom na ich zmianę.
+
+  Usługa Intune nie wyłączy tej funkcji. Aby go wyłączyć, Użyj niestandardowego identyfikatora URI.
 
   [Usługa Defender/AllowRealtimeMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
-- **Monitorowanie zachowania**: ustawienie **Włącz** wyłącza w usłudze Defender sprawdzanie urządzeń pod kątem określonych wzorców podejrzanej aktywności. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia usłudze Windows Defender monitorowanie zachowania.
+- **Monitorowanie zachowania**: ustawienie **Włącz** włącza monitorowanie zachowania i sprawdzanie urządzeń pod kątem określonych wzorców podejrzanej aktywności. Użytkownicy nie mogą włączać monitorowania zachowania. 
+
+  Jeśli **nie skonfigurowano** (domyślnie), usługa Intune nie dotyka tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **Nieskonfigurowane**, usługa Intune pozostawi ustawienie w wcześniej skonfigurowanym stanie. Domyślnie system operacyjny włącza monitorowanie zachowań i umożliwia użytkownikom zmianę tego ustawienia.
+
+  Usługa Intune nie wyłączy tej funkcji. Aby go wyłączyć, Użyj niestandardowego identyfikatora URI.
 
   [Usługa Defender/AllowBehaviorMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowbehaviormonitoring)
 
 - **Network Inspection System (NIS)** : pomaga w ochronie urządzeń przed sieciowymi atakami wykorzystującymi luki w zabezpieczeniach. System NIS korzysta z sygnatur znanych luk w zabezpieczeniach z centrum programu Microsoft Endpoint Protection, co pomaga wykrywać i blokować złośliwy ruch.
 
-  **Nie skonfigurowano** (ustawienie domyślne) — wyłącza tę funkcję. Użytkownicy nie mogą łączyć się z znanymi lukami w zabezpieczeniach. Po wybraniu opcji **Włącz**ochronę sieci i blokowanie sieci są włączone, a użytkownicy nie mogą jej wyłączyć. Użytkownicy nie mogą łączyć się z znanymi lukami w zabezpieczeniach.
+  Włącza **opcję Włącz** ochronę sieci i blokowanie sieci. Użytkownicy nie mogą wyłączyć tej opcji. Gdy ta funkcja jest włączona, użytkownicy nie mogą łączyć się z znanymi lukami w zabezpieczeniach.
+
+  Jeśli **nie skonfigurowano** (domyślnie), usługa Intune nie dotyka tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **Nieskonfigurowane**, usługa Intune pozostawi ustawienie w wcześniej skonfigurowanym stanie. Domyślnie system operacyjny włącza usługę NIS i pozwala użytkownikom na ich zmianę.
+
+  Usługa Intune nie wyłączy tej funkcji. Aby go wyłączyć, Użyj niestandardowego identyfikatora URI.
 
   [Usługa Defender/EnableNetworkProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
 
-- **Skanuj wszystkie pobrane**pliki: **nie skonfigurowano** (domyślnie) usługa Defender skanuje wszystkie pliki pobrane z Internetu. Po ustawieniu na wartość **enable**ta funkcja jest wyłączona. W związku z tym usługa Defender nie skanuje wszystkich pobranych plików internetowych.
+- **Skanuj wszystkie pobrane**pliki: **Włącz** włączenie tego ustawienia, a usługa Defender skanuje wszystkie pliki pobrane z Internetu. Użytkownicy nie mogą wyłączyć tego ustawienia. 
+
+  Jeśli **nie skonfigurowano** (domyślnie), usługa Intune nie dotyka tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **Nieskonfigurowane**, usługa Intune pozostawi ustawienie w wcześniej skonfigurowanym stanie. Domyślnie system operacyjny włącza to ustawienie i umożliwia użytkownikom zmianę tego ustawienia.
+
+  Usługa Intune nie wyłączy tej funkcji. Aby go wyłączyć, Użyj niestandardowego identyfikatora URI.
 
   [Usługa Defender/AllowIOAVProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowioavprotection)
 
-- **Skanuj skrypty ładowane w przeglądarkach internetowych firmy Microsoft**: ustawienie **Nie skonfigurowano** (domyślne) umożliwia usłudze Defender skanowanie skryptów używanych przez przeglądarkę Internet Explorer. Ustawienie **Włącz** uniemożliwia przeprowadzenie tego skanowania.
+- **Skanuj skrypty ładowane w przeglądarkach internetowych firmy Microsoft**: ustawienie **Włącz** umożliwia usłudze Defender skanowanie skryptów używanych przez przeglądarkę Internet Explorer. Użytkownicy nie mogą wyłączyć tego ustawienia. 
+
+  Jeśli **nie skonfigurowano** (domyślnie), usługa Intune nie dotyka tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **Nieskonfigurowane**, usługa Intune pozostawi ustawienie w wcześniej skonfigurowanym stanie. Domyślnie system operacyjny włącza to ustawienie i umożliwia użytkownikom zmianę tego ustawienia.
+
+  Usługa Intune nie wyłączy tej funkcji. Aby go wyłączyć, Użyj niestandardowego identyfikatora URI.
 
   [Usługa Defender/AllowScriptScanning CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscriptscanning)
 
-- **Dostęp użytkownika końcowego do usługi Defender**: ustawienie **Blokuj** ukrywa interfejs użytkownika usługi Windows Defender przed użytkownikami końcowymi. Wszystkie powiadomienia usługi Windows Defender również są pomijane. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia użytkownikom uzyskiwanie dostępu do interfejsu użytkownika usługi Windows Defender. Zmiany tego ustawienia zostaną wprowadzone po następnym ponownym uruchomieniu komputera użytkownika.
+- **Dostęp użytkownika końcowego do usługi Defender**: ustawienie **Blokuj** ukrywa interfejs użytkownika usługi Microsoft Defender przed użytkownikami końcowymi. Wszystkie powiadomienia usługi Microsoft Defender również są pomijane.
+
+  Jeśli **nie skonfigurowano** (domyślnie), usługa Intune nie dotyka tego ustawienia. Jeśli zablokujesz ustawienie, a następnie zmienisz je z powrotem na **Nieskonfigurowane**, usługa Intune pozostawi ustawienie w wcześniej skonfigurowanym stanie. Domyślnie system operacyjny umożliwia użytkownikowi dostęp do interfejsu użytkownika programu Microsoft Defender i umożliwia użytkownikom zmianę go.
+
+  Usługa Intune nie wyłączy tej funkcji. Aby go wyłączyć, Użyj niestandardowego identyfikatora URI.
+
+  Zmiany tego ustawienia zostaną wprowadzone po następnym ponownym uruchomieniu komputera użytkownika.
 
   [Usługa Defender/AllowUserUIAccess CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowuseruiaccess)
 
@@ -714,31 +740,55 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad usługi Defende
   [Usługa Defender/DaysToRetainCleanedMalware CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-daystoretaincleanedmalware)
 
 - **Limit wykorzystania procesora CPU podczas skanowania**: ogranicz użycie procesora dozwolone dla procesów skanowania w skali od `0` do `100`.
-- **Skanuj pliki archiwalne**: **Włącz** wyłączenie usługi Defender do skanowania plików archiwalnych, takich jak pliki zip lub cab. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia to skanowanie.
+- **Skanuj pliki archiwalne**: **Włącz** włącza usługę Defender, aby skanować pliki archiwalne, takie jak pliki zip lub cab. Użytkownicy nie mogą wyłączyć tego ustawienia.
+
+  Jeśli **nie skonfigurowano** (domyślnie), usługa Intune nie dotyka tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **Nieskonfigurowane**, usługa Intune pozostawi ustawienie w wcześniej skonfigurowanym stanie. Domyślnie system operacyjny włącza skanowanie i pozwala użytkownikom na jego zmianę.
+
+  Usługa Intune nie wyłączy tej funkcji. Aby go wyłączyć, Użyj niestandardowego identyfikatora URI.
 
   [Usługa Defender/AllowArchiveScanning CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning)
 
-- **Skanuj przychodzące wiadomości e-mail**: ustawienie **Włącz** umożliwia usłudze Defender skanowanie wiadomości e-mail dostarczanych do urządzenia. Ustawienie **Nie skonfigurowano** (domyślne) uniemożliwia skanowanie wiadomości e-mail.
+- **Skanuj przychodzące wiadomości e-mail**: ustawienie **Włącz** umożliwia usłudze Defender skanowanie wiadomości e-mail dostarczanych do urządzenia. Po włączeniu aparat analizuje skrzynkę pocztową i pliki poczty w celu przeanalizowania treści i załączników wiadomości e-mail. Można skanować w formacie PST (Outlook),. dbx,. mbx, MIME (Outlook Express) i BinHex (Mac).
+
+  Jeśli **nie skonfigurowano** (domyślnie), usługa Intune nie dotyka tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **Nieskonfigurowane**, usługa Intune pozostawi ustawienie w wcześniej skonfigurowanym stanie. Domyślnie system operacyjny wyłącza to skanowanie i umożliwia użytkownikom zmianę go.
+
+  Usługa Intune nie wyłączy tej funkcji. Aby go wyłączyć, Użyj niestandardowego identyfikatora URI.
 
   [Usługa Defender/AllowEmailScanning CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowemailscanning)
 
-- **Skanuj dyski wymienne podczas pełnego skanowania**: ustawienie **Włącz** uniemożliwia pełne skanowanie dysków wymiennych. Ustawienie **Nie skonfigurowane** (domyślne) umożliwia usłudze Defender skanowanie dysków wymiennych, na przykład dysków USB.
+- **Skanuj dyski wymienne podczas pełnego skanowania**: **Włącz Włączanie** skanowania dysków wymiennych usługi Defender podczas pełnego skanowania. Użytkownicy nie mogą wyłączyć tego ustawienia.
+
+  Jeśli **nie skonfigurowano** (domyślnie), usługa Intune nie dotyka tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **Nieskonfigurowane**, usługa Intune pozostawi ustawienie w wcześniej skonfigurowanym stanie. Domyślnie system operacyjny umożliwia usłudze Defender skanowanie dysków wymiennych, takich jak dyski USB, i umożliwia użytkownikom zmianę tego ustawienia.
 
   Podczas szybkiego skanowania dyski wymienne mogą być nadal skanowane.
 
+  Usługa Intune nie wyłączy tej funkcji. Aby go wyłączyć, Użyj niestandardowego identyfikatora URI.
+
   [Usługa Defender/AllowFullScanRemovableDriveScanning CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanremovabledrivescanning)
 
-- **Skanuj zamapowane dyski sieciowe podczas pełnego skanowania**: ustawienie **Włącz** umożliwia usłudze Defender skanowanie plików na zamapowanych dyskach sieciowych. Ustawienie **Nie skonfigurowano** (domyślne) uniemożliwia pełne skanowanie. Jeśli pliki na dysku są plikami tylko do odczytu, usługa Defender nie będzie mogła usunąć z nich wykrytego złośliwego oprogramowania.
+- **Skanuj zamapowane dyski sieciowe podczas pełnego skanowania**: ustawienie **Włącz** powoduje w usłudze Defender skanowanie plików na zamapowanych dyskach sieciowych. Jeśli pliki na dysku są plikami tylko do odczytu, usługa Defender nie będzie mogła usunąć z nich wykrytego złośliwego oprogramowania. Użytkownicy nie mogą wyłączyć tego ustawienia.
+
+  Jeśli **nie skonfigurowano** (domyślnie), usługa Intune nie dotyka tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **Nieskonfigurowane**, usługa Intune pozostawi ustawienie w wcześniej skonfigurowanym stanie. Domyślnie system operacyjny włącza tę funkcję i pozwala użytkownikom na ich zmianę.
 
   Podczas szybkiego skanowania zamapowane dyski sieciowe nadal mogą być skanowane.
 
+  Usługa Intune nie wyłączy tej funkcji. Aby go wyłączyć, Użyj niestandardowego identyfikatora URI.
+
   [Usługa Defender/AllowFullScanOnMappedNetworkDrives CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanonmappednetworkdrives)
 
-- **Skanuj pliki otwierane z folderów sieciowych**: ustawienie **Nie skonfigurowano** (domyślne) umożliwia usłudze Defender skanowanie plików na udostępnionych dyskach sieciowych takich jak dyski dostępne za pośrednictwem ścieżki UNC. Ustawienie **Włącz** uniemożliwia przeprowadzenie tego skanowania. Jeśli pliki na dysku są plikami tylko do odczytu, usługa Defender nie będzie mogła usunąć z nich wykrytego złośliwego oprogramowania.
+- **Skanuj pliki otwierane z folderów sieciowych**: **Włącz** program Defender skanuje pliki otwierane z folderów sieciowych lub udostępnionych dysków sieciowych, takich jak pliki dostępne ze ścieżki UNC. Użytkownicy nie mogą wyłączyć tego ustawienia. Jeśli pliki na dysku są plikami tylko do odczytu, usługa Defender nie będzie mogła usunąć z nich wykrytego złośliwego oprogramowania.
+
+  Jeśli **nie skonfigurowano** (domyślnie), usługa Intune nie dotyka tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **Nieskonfigurowane**, usługa Intune pozostawi ustawienie w wcześniej skonfigurowanym stanie. Domyślnie system operacyjny skanuje pliki otwierane z folderów sieciowych i pozwala użytkownikom na ich zmianę.
+
+  Usługa Intune nie wyłączy tej funkcji. Aby go wyłączyć, Użyj niestandardowego identyfikatora URI.
 
   [Usługa Defender/AllowScanningNetworkFiles CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles)
 
-- **Ochrona w chmurze**: ustawienie **Nie skonfigurowano** (domyślne) umożliwia usłudze Microsoft Active Protection odbieranie informacji o działaniu złośliwego oprogramowania z zarządzanych urządzeń. Ustawienie **Włącz** blokuje tę funkcję.
+- **Ochrona w chmurze**: ustawienie **Włącz** włącza usługę Microsoft Active Protection w celu odbierania informacji o działaniu złośliwego oprogramowania z zarządzanych urządzeń. Użytkownicy nie mogą zmieniać tego ustawienia. 
+
+  Jeśli **nie skonfigurowano** (domyślnie), usługa Intune nie dotyka tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **Nieskonfigurowane**, usługa Intune pozostawi ustawienie w wcześniej skonfigurowanym stanie. Domyślnie system operacyjny umożliwia usługa Microsoft Active Protection otrzymywanie informacji i pozwala użytkownikom na zmianę tego ustawienia.
+
+  Usługa Intune nie wyłączy tej funkcji. Aby go wyłączyć, Użyj niestandardowego identyfikatora URI.
 
   [Usługa Defender/AllowCloudProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e9b5eb15cf446b317818a93baa075cdbd33afd2
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 19389a21aa28f5fa957f62c988753f46bf1bc731
+ms.sourcegitcommit: 46322ca7a92971e18dc0b230f436b9ca892b90c5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71723310"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72008345"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Automatyczne rejestrowanie urządzeń z systemem iOS w ramach programu Device Enrollment Program
 
@@ -31,6 +31,9 @@ Możesz skonfigurować usługę Intune do rejestracji urządzeń z systemem iOS 
 Włączenie rejestracji w programie DEP wymaga użycia zarówno portalu usługi Intune, jak i portalu DEP firmy Apple. Wymagana jest lista numerów seryjnych lub numerów zamówień zakupu, która pozwala przypisać urządzenia do funkcji zarządzania usługi Intune. Możliwe jest utworzenie profilów rejestracji w ramach programu DEP zawierających ustawienia stosowane względem urządzeń podczas rejestracji.
 
 Należy zwrócić uwagę, że rejestracja w ramach programu DEP nie działa z [menedżerem rejestracji urządzeń](device-enrollment-manager-enroll.md).
+
+> [!NOTE]
+> Program DEP ustawia konfiguracje urządzeń, które nie mogą zostać usunięte przez użytkownika końcowego. Dlatego przed [migracją do programu DEP](../fundamentals/migration-guide-considerations.md) urządzenie musi zostać wyczyszczone, aby przywrócić je do stanu przed pierwszym użyciem.
 
 ## <a name="dep-and-the-company-portal"></a>Program DEP i aplikacja Portal firmy
 

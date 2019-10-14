@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eab50a21ea01cd4075bd78add980d2839606a1a2
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 6e9df15efc7a16a0ce1ee6b0412f9160831efdec
+ms.sourcegitcommit: 884654da8e72a63bfaea6b5def6c7891b065f251
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71721880"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72163508"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Kontrola dostępu oparta na rolach (RBAC) w usłudze Microsoft Intune
 
@@ -66,6 +66,7 @@ Istnieje możliwość utworzenia własnych ról z niestandardowymi uprawnieniami
 | Czytelnik zabezpieczeń | Tylko do odczytu | Tylko do odczytu |
 | Administrator zgodności | Brak | Tylko do odczytu |
 | Administrator danych zgodności | Brak | Tylko do odczytu |
+| Czytelnik globalny | Tylko do odczytu | Tylko do odczytu |
 
 > [!TIP]
 > Usługa Intune wyświetla również trzy rozszerzenia usługi Azure AD: **Użytkownicy**, **Grupy** oraz **Dostęp warunkowy**, które są kontrolowane za pomocą usługi Azure AD RBAC. Ponadto **Administrator konta użytkownika** wykonuje tylko działania użytkownika/grupy usługi AAD i nie ma pełnych uprawnień do wykonywania wszystkich działań w usłudze Intune. Aby uzyskać więcej informacji, zobacz [Kontrola RBAC w usłudze Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles).

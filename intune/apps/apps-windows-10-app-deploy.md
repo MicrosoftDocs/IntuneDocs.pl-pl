@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/29/2019
+ms.date: 10/02/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c853608f46bb01263ddd08193f729cdfb018fed9
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 04e943f573fb2485a2ef7f1e3245f08d4222d142
+ms.sourcegitcommit: fc356fd69beaeb3d69982b47e2bdffb6f7127f8c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71724974"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71830561"
 ---
 # <a name="windows-10-app-deployment-using-microsoft-intune"></a>Wdrażanie aplikacji systemu Windows 10 w usłudze Microsoft Intune 
 
@@ -36,6 +36,8 @@ Aplikacje obsługiwane na urządzeniach z systemem Windows 10 to aplikacje bizne
 > - Dla systemu Windows 10 1709 [21 czerwca 2018 r. — KB4284822 (kompilacja systemu operacyjnego 16299.522)](https://support.microsoft.com/help/4284822).
 >
 > Tylko system Windows 10 w wersji 1803 i nowszej obsługuje instalowanie aplikacji, gdy nie ma skojarzonego użytkownika podstawowego.
+>
+> Wdrażanie aplikacji biznesowych nie jest obsługiwane na urządzeniach z systemem Windows 10 Home.
 
 ## <a name="windows-10-line-of-business-apps"></a>Aplikacje biznesowe dla systemu Windows 10
 
