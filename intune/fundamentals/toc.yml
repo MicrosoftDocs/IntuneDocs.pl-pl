@@ -6,8 +6,9 @@
     - name: Omówienie usługi Microsoft Intune
       href: what-is-intune.md
       displayName: ems; emm; azure ad; active directory; ad
-    - name: Jakie korzyści może zapewnić usługa Intune mojej firmie?
-      href: get-started-evaluation.md
+    - name: Omówienie zarządzania urządzeniami
+      href: what-is-device-management.md
+      displayName: teamviewer
     - name: Co nowego
       href: whats-new.md
       items:
@@ -32,9 +33,6 @@
       href: tutorial-walkthrough-intune-portal.md
 - name: Pojęcia
   items:
-    - name: Co to jest zarządzanie urządzeniami?
-      href: what-is-device-management.md
-      displayName: teamviewer
     - name: Co to jest usługa Intune for Education?
       href: introduction-intune-education.md
     - name: Architektura wysokiego poziomu
