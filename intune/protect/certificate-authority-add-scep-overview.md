@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8df5f46f411a6aee1c3040fa4a1a37fb49d5fb2
-ms.sourcegitcommit: fca2670142c083d7562c0a36547a6a451863e315
+ms.openlocfilehash: 4b82124fe8f6da7116c8333e293f219d7c667f9c
+ms.sourcegitcommit: a2654f3642b43b29ab0e1cbb2dfa2b56aae18d0e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72036437"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72310916"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Dodawanie urzędu certyfikacji partnera w usłudze Intune przy użyciu protokołu SCEP
 
@@ -31,7 +31,7 @@ Proces używania tej funkcji składa się z dwóch części: interfejsu API typu
 **Część 1. Używanie interfejsu API typu open-source**  
 Firma Microsoft stworzyła interfejsu API do integracji z usługą Intune. Ten interfejs API umożliwia weryfikowanie certyfikatów, wysyłanie powiadomień o powodzeniu lub niepowodzeniu i używanie protokołu SSL, w szczególności fabryki gniazda protokołu SSL, do komunikowania się z usługą Intune.
 
-Interfejs API jest dostępny do pobrania i używania w rozwiązaniach w [publicznym repozytorium GitHub interfejsów API protokołu SCEP usługi Intune](http://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation). Używaj tego interfejsu API z serwerami SCEP innych firm w celu uruchomienia walidacji niestandardowych wyzwań w usłudze Intune przed dostarczeniem certyfikatu do urządzenia przez protokół SCEP.
+Interfejs API jest dostępny do pobrania i używania w rozwiązaniach w [publicznym repozytorium GitHub interfejsów API protokołu SCEP usługi Intune](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation). Używaj tego interfejsu API z serwerami SCEP innych firm w celu uruchomienia walidacji niestandardowych wyzwań w usłudze Intune przed dostarczeniem certyfikatu do urządzenia przez protokół SCEP.
 
 [Integracja z rozwiązaniem do zarządzania protokołem SCEP usługi Intune](scep-libraries-apis.md) zawiera więcej szczegółowych informacji na temat używania interfejsu API, jego metod oraz testowania kompilowanego rozwiązania.
 
@@ -129,11 +129,11 @@ Następujące urzędy certyfikacji innych firm obsługują usługę Intune:
 
 Jeśli interesuje Cię zintegrowanie urzędu certyfikacji innej firmy z usługą Intune, zapoznaj się ze wskazówkami dotyczącymi interfejsu API:
 
-- [Intune SCEP API GitHub repository (Repozytorium GitHub interfejsu API protokołu SCEP w usłudze Intune)](http://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation)
+- [Intune SCEP API GitHub repository (Repozytorium GitHub interfejsu API protokołu SCEP w usłudze Intune)](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation)
 - [Intune SCEP API guidance for third party CAs (Wskazówki dotyczące interfejsu API protokołu SCEP w usłudze Intune dla urzędów certyfikacji innych firm)](scep-libraries-apis.md)
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Konfigurowanie profilów certyfikatów](certificates-scep-configure.md)
-- [Intune SCEP API GitHub repository (Repozytorium GitHub interfejsu API protokołu SCEP w usłudze Intune)](http://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation)
+- [Intune SCEP API GitHub repository (Repozytorium GitHub interfejsu API protokołu SCEP w usłudze Intune)](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation)
 - [Intune SCEP API guidance for third party CAs (Wskazówki dotyczące interfejsu API protokołu SCEP w usłudze Intune dla urzędów certyfikacji innych firm)](scep-libraries-apis.md)

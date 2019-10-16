@@ -1,5 +1,6 @@
 ---
 title: Wyświetlanie i poprawianie danych osobowych
+titleSuffix: Microsoft Intune
 description: Informacje na temat wyświetlania i poprawiania danych osobowych.
 keywords: ''
 author: ErikjeMS
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9261c451a7a5bdf5f718193adbfcb2389fa285a0
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 9b6ca291f55511be9e88b0ff898d9383691542bf
+ms.sourcegitcommit: a2654f3642b43b29ab0e1cbb2dfa2b56aae18d0e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71727925"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72310891"
 ---
 # <a name="view-and-correct-personal-data"></a>Wyświetlanie i poprawianie danych osobowych
 
@@ -43,7 +44,7 @@ Firma Microsoft używa restrykcyjnych mechanizmów kontroli, aby zarządzać dos
 
 Aby zabezpieczyć i kontrolować dostęp do danych osobowych użytkowników końcowych, można użyć kontroli dostępu na podstawie ról (RBAC, role-based access control). Aby uzyskać więcej informacji, zobacz [Kontrola RBAC w usłudze Microsoft Intune](../fundamentals/role-based-access-control.md).
 
-Aby dowiedzieć się więcej o praktykach firmy Microsoft dotyczących danych, przeczytaj Warunki korzystania z witryny Online Services i [Zasady zachowania poufności informacji w witrynie Microsoft Online Services](http://go.microsoft.com/fwlink/p/?linkid=131004&clcid=0x409). 
+Aby dowiedzieć się więcej o praktykach firmy Microsoft dotyczących danych, przeczytaj Warunki korzystania z witryny Online Services i [Zasady zachowania poufności informacji w witrynie Microsoft Online Services](https://go.microsoft.com/fwlink/p/?linkid=131004&clcid=0x409). 
 
 ## <a name="correct-end-user-personal-data"></a>Poprawianie danych osobowych użytkownika końcowego
 

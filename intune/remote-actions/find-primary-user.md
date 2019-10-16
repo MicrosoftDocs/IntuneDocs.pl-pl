@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 312aee3752525ab2898c6d4e4ea06da685d1cdec
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 308f152a585fe7b605d309943545f242031ea177
+ms.sourcegitcommit: 60ed93682a21860e9d99ba1592ede120477f2b4d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71728367"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72379713"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>Znajdowanie użytkownika podstawowego urządzenia usługi Intune
 
@@ -46,7 +46,7 @@ Aplikacja Portal firmy oczekuje, że konto użytkownika zalogowanego do Portalu 
 
 Jeśli urządzenie usługi Intune nie ma przypisanego użytkownika podstawowego, aplikacja Portal firmy wykrywa je jako urządzenie udostępnione. Urządzenia udostępnione można wizualnie identyfikować dzięki etykiecie „udostępnione” wyświetlanej na kafelku urządzenia. W tym trybie aplikacji Portal firmy można nadal używać do żądania i instalowania dostępnych aplikacji. Jednak akcje samoobsługi (resetowanie/zmienianie nazwy/wycofywanie) są niedostępne.  
 
-Aby dostępne aplikacje były wyświetlane w Portalu firmy na urządzeniach udostępnionych, muszą zostać przypisane do grupy użytkowników. Zostaną one zainstalowane w kontekście systemowym lub w kontekście użytkownika, w zależności od tego, jak aplikacja została skonfigurowana przez administratora IT. Aby uzyskać więcej informacji na temat kontekstu aplikacji, zobacz sekcję [Instalowanie aplikacji na urządzeniach z systemem Windows 10](../apps/apps-windows-10-app-deploy.md#installing-apps-on-windows-10-devices). Do korzystania z tej funkcji jest wymagana aplikacja Portal firmy w wersji 10.3.4651.0 lub nowszej.
+Aby dostępne aplikacje były wyświetlane w Portalu firmy na urządzeniach udostępnionych, muszą zostać przypisane do grupy użytkowników. Zostaną one zainstalowane w kontekście systemowym lub w kontekście użytkownika, w zależności od tego, jak aplikacja została skonfigurowana przez administratora IT. Aby uzyskać więcej informacji na temat kontekstu aplikacji, zobacz sekcję [Instalowanie aplikacji na urządzeniach z systemem Windows 10](../apps/apps-windows-10-app-deploy.md). Do korzystania z tej funkcji jest wymagana aplikacja Portal firmy w wersji 10.3.4651.0 lub nowszej.
 
 
 ## <a name="who-is-assigned-as-the-primary-user"></a>Kto jest przydzielany jako użytkownik podstawowy?

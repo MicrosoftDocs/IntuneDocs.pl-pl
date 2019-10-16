@@ -158,7 +158,7 @@
                   href: app-protection-policy-settings-android.md
                 - name: Ustawienia systemu iOS
                   href: app-protection-policy-settings-ios.md
-                - name: Uzyskiwanie dostępu do akcji
+                - name: Uruchamianie warunkowe
                   href: app-protection-policies-access-actions.md
                 - name: Wyjątki transferu danych
                   href: app-protection-policies-exception.md
