@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 09/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: ''
 ms.technology: ''
 ms.assetid: ''
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c46caf4d1c9f9a32a7f324fc5e1734dbe8043bd
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 2be1faa1296792d3d40de5ca0b304a287bae8e6f
+ms.sourcegitcommit: 9a2ddcec73b37a118908b63d8e5252835f257618
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71735262"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72550825"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Korzystanie z urządzeń z systemem Android Enterprise i zarządzanie nimi za pomocą OEMConfig w Microsoft Intune
 
@@ -98,7 +99,7 @@ Upewnij się, że urządzenie obsługuje OEMConfig, poprawna aplikacja OEMConfig
 5. W obszarze **Konfigurowanie ustawień za pomocą**programu wybierz opcję użycia **projektanta konfiguracji** lub **edytora JSON**:
 
     > [!TIP]
-    > Zapoznaj się z dokumentacją producenta OEM, aby upewnić się, że są poprawnie skonfigurowane właściwości. Te właściwości aplikacji są dołączone przez producenta OEM, a nie do usługi Intune. Usługa Intune zapewnia minimalną weryfikację właściwości lub wprowadzaną wartość. Jeśli na przykład wprowadzisz wartość `abcd` dla numeru portu, profil zostanie zapisany jako-is i wdrożony na urządzeniach przy użyciu skonfigurowanych wartości. Upewnij się, że wprowadzono odpowiednie informacje.
+    > Zapoznaj się z dokumentacją producenta OEM, aby upewnić się, że są poprawnie skonfigurowane właściwości. Te właściwości aplikacji są dołączone przez producenta OEM, a nie do usługi Intune. Usługa Intune zapewnia minimalną weryfikację właściwości lub wprowadzaną wartość. Jeśli na przykład wprowadzisz `abcd` numeru portu, profil zostanie zapisany jako-is i wdrożony na urządzeniach przy użyciu skonfigurowanych wartości. Upewnij się, że wprowadzono odpowiednie informacje.
 
     - **Projektant konfiguracji**: wybranie tej opcji powoduje wyświetlenie właściwości dostępnych w schemacie aplikacji.
 
@@ -120,7 +121,7 @@ Upewnij się, że urządzenie obsługuje OEMConfig, poprawna aplikacja OEMConfig
 
     Wszystkie zmiany wprowadzone w projektancie konfiguracji są również automatycznie wprowadzane w edytorze JSON. Podobnie wszelkie zmiany wprowadzone w edytorze JSON są automatycznie tworzone w programie Configuration Designer. Jeśli dane wejściowe zawierają nieprawidłowe wartości, nie można przełączać się między projektantem konfiguracji i edytorem JSON do momentu rozwiązania problemów.
 
-6. Wybierz **przycisk OK** > **Dodaj** , aby zapisać zmiany. Zasady zostaną utworzone i wyświetlone na liście.
+6. Wybierz przyciski **OK** > **Dodaj**, aby zapisać zmiany. Zasady zostaną utworzone i wyświetlone na liście.
 
 Pamiętaj, aby [przypisać profil](device-profile-assign.md) i [monitorować jego stan](device-profile-monitor.md).
 
@@ -144,10 +145,11 @@ W porównaniu do standardowych aplikacji aplikacje OEMConfig rozszerzają uprawn
 | Technologie zebry | com. zebry. oemconfig. Common | [Zebry OEMConfig — Omówienie](http://techdocs.zebra.com/oemconfig ) |
 | Logika Datalogic | com. Datalogic. oemconfig | [Dokumentacja użytkownika dotycząca usługi Datalogic OEMConfig](https://datalogic.github.io/oemconfig/) |
 | Honeywell | com. Honeywell. oemconfig |  |
+| Kyocera | JP. Kyocera. enterprisedeviceconfig |  |
 
 -----------------
 
-Jeśli aplikacja OEMConfig istnieje dla urządzenia, ale nie znajduje się w powyższej tabeli lub nie jest wyświetlana w konsoli usługi Intune, Wyślij wiadomość e-mail `IntuneOEMConfig@microsoft.com`.
+Jeśli aplikacja OEMConfig istnieje dla urządzenia, ale nie znajduje się w powyższej tabeli lub nie jest wyświetlana w konsoli usługi Intune, należy `IntuneOEMConfig@microsoft.com` e-mail.
 
 > [!NOTE]
 > Aplikacje OEMConfig muszą być dołączone do usługi Intune, zanim będą mogły zostać skonfigurowane za pomocą profilów OEMConfig. Gdy aplikacja jest obsługiwana, nie musisz kontaktować się z firmą Microsoft, aby ją skonfigurować w dzierżawie. Po prostu postępuj zgodnie z instrukcjami na tej stronie.

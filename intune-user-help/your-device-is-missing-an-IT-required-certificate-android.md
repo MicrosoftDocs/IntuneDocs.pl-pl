@@ -9,6 +9,7 @@ ms.date: 07/29/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: f0ba4cbb-ef0a-4335-86bf-f1d006867fa2
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16c6708fb730c459f41fec573a939bfb4fb5ddda
-ms.sourcegitcommit: 549352bdea93cc2809e3e0010bfcc10bd44dc728
+ms.openlocfilehash: 25ec84946aec9562aedce12b4199269f8de06f76
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68862139"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72500017"
 ---
 # <a name="install-missing-certificate-required-by-your-organization"></a>Zainstaluj brakujące certyfikaty wymagane przez Twoją organizację  
 
@@ -44,7 +45,7 @@ Wykonaj te kroki, aby włączyć dostęp do przeglądarki. Po włączeniu dostę
 1. W aplikacji Portal firmy przejdź do odpowiedniego rogu i wybierz menu.  
 2. Wybierz pozycję **Ustawienia**.  
 3. Obok pozycji **Włącz dostęp do przeglądarki wybierz**pozycję **Włącz**.  
-4. Na ekranie administrator urządzenia wybierz pozycję **Aktywuj.** 
+4. Na ekranie administrator urządzenia wybierz pozycję **Aktywuj**. 
 
 ## <a name="identify-and-download-the-missing-certificate-through-web-search"></a>Identyfikowanie i pobieranie brakującego certyfikatu za pomocą wyszukiwania w sieci Web
 Wykonaj następujące kroki, aby ręcznie zidentyfikować i zainstalować certyfikat na urządzeniu.  

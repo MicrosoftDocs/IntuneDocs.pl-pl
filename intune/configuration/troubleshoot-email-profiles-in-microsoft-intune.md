@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 06/17/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: f5c944ea-32a6-48af-bb57-16d5f1f3c588
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec3a5a5aa4d30dcac0f954057f0cc51ffde6a950
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 101f414955a3b60d22003f61678854fecc16910d
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71734300"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72506585"
 ---
 # <a name="common-issues-and-resolutions-with-email-profiles-in-microsoft-intune"></a>Typowe problemy dotyczące profilów poczty e-mail w usłudze Microsoft Intune i sposoby ich rozwiązania
 
@@ -65,7 +66,7 @@ Użytkownicy, których konta e-mail zostały skonfigurowane automatycznie, nie m
 
 1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Wybierz pozycję **Konfiguracja urządzeń** > **Profile**.
-3. Wybierz profil poczty e-mail, > **właściwości** > **ustawień**.
+3. Wybierz profil poczty e-mail, > **właściwości**  > **Ustawienia**.
 4. Ustaw ustawienie **Zezwalaj na wysyłanie wiadomości e-mail z aplikacji** innych firm, aby **włączyć**.
 
 ### <a name="configuration-manager-hybrid"></a>Środowisko hybrydowe programu Configuration Manager

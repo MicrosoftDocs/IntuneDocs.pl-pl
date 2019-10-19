@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 07/25/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
+ms.subservice: enrollment
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
@@ -16,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1a02e403fdba34b576aa90b82062b7a602cbb517
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: e7c7ec23d0408aa4d4cf81baff2d7cdf749fb65e
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71735691"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72509232"
 ---
 # <a name="troubleshoot-ios-device-enrollment-problems-in-microsoft-intune"></a>Rozwiązywanie problemów dotyczących rejestrowania urządzeń z systemem iOS w usłudze Microsoft Intune
 
@@ -51,7 +52,7 @@ Zbierz następujące informacje o problemie:
 #### <a name="resolution"></a>Rozwiązanie
 
 1. Aby zapobiec utracie danych w następujących krokach (Przywracanie systemu iOS powoduje usunięcie wszystkich danych z urządzenia), należy pamiętać o wykonaniu kopii zapasowej danych.
-2. Przełącz urządzenie w tryb odzyskiwania, a następnie Przywróć je. Upewnij się, że skonfigurowano ją jako nowe urządzenie. Aby uzyskać więcej informacji na temat przywracania urządzeń z systemem iOS, zobacz [https://support.apple.com/HT201263](https://support.apple.com/HT201263).
+2. Przełącz urządzenie w tryb odzyskiwania, a następnie Przywróć je. Upewnij się, że skonfigurowano ją jako nowe urządzenie. Więcej informacji o sposobie przywracania urządzeń z systemem iOS znajduje się w temacie [https://support.apple.com/HT201263](https://support.apple.com/HT201263).
 3. Zarejestruj ponownie urządzenie.
 
 ### <a name="profile-installation-failed-connection-to-the-server-could-not-be-established"></a>Instalacja profilu nie powiodła się. Nie można nawiązać połączenia z serwerem.
@@ -62,7 +63,7 @@ Zbierz następujące informacje o problemie:
 1. Zaloguj się do witryny Azure Portal.
 2. Wybierz pozycję **Więcej usług**, wyszukaj usługę Intune, a następnie wybierz usługę **Intune**.
 3. Wybierz pozycję **Rejestrowanie urządzenia** > **Ograniczenia rejestracji**.
-4. W obszarze **ograniczenia typu urządzenia**wybierz ograniczenie, które chcesz ustawić > **Właściwości** > **Wybierz platformy** > wybierz pozycję **Zezwól** dla **systemu iOS**, a następnie kliknij przycisk **OK**.
+4. W obszarze **ograniczenia typu urządzenia**wybierz ograniczenie, które chcesz ustawić > **Właściwości**  > **Wybierz platformy** > wybierz pozycję **Zezwól** dla **systemu iOS**, a następnie kliknij przycisk **OK**.
 5. Wybierz pozycję **Konfiguruj platformy**, wybierz pozycję **Zezwól** dla urządzeń z systemem iOS należących do użytkownika, a następnie kliknij przycisk **OK**.
 6. Zarejestruj ponownie urządzenie.
 
@@ -89,10 +90,10 @@ Zbierz następujące informacje o problemie:
 **Przyczyna:** Użytkownik próbuje zarejestrować więcej urządzeń, niż jest to limit rejestracji urządzeń.
 
 #### <a name="resolution"></a>Rozwiązanie
-1. Otwórz [Portal administracyjny usługi Intune](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) > **urządzenia** > **wszystkie urządzenia**i sprawdź liczbę urządzeń zarejestrowanych przez użytkownika.
+1. Otwórz [Portal administracyjny usługi Intune](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) ,  > **urządzenia**  > **wszystkie urządzenia**, i sprawdź liczbę urządzeń zarejestrowanych przez użytkownika.
     > [!NOTE]
     > Należy również mieć zalogowanego użytkownika w [portalu użytkowników usługi Intune](https://portal.manage.microsoft.com/) i sprawdzić zarejestrowane urządzenia. Mogą istnieć urządzenia, które są wyświetlane w [portalu użytkowników usługi Intune](https://portal.manage.microsoft.com/) , ale nie w [portalu administracyjnym usługi Intune](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview), takie urządzenia również liczą się na limit rejestracji urządzeń.
-2. Przejdź do pozycji **administrator** > **Zarządzanie urządzeniami przenośnymi** > **reguły rejestracji** > Sprawdź limit rejestracji urządzeń. Domyślnie limit wynosi 15. 
+2. Przejdź do pozycji **administracja**  > **Zarządzanie urządzeniami przenośnymi**  > **reguły rejestracji** > Sprawdź limit rejestracji urządzeń. Domyślnie limit wynosi 15. 
 3. Jeśli liczba zarejestrowanych urządzeń osiągnie limit, Usuń niepotrzebne urządzenia lub Zwiększ limit rejestracji urządzeń. Ponieważ każde zarejestrowane urządzenie korzysta z licencji usługi Intune, zalecamy najpierw usunąć niepotrzebne urządzenia.
 4. Zarejestruj ponownie urządzenie.
 
@@ -110,8 +111,8 @@ Zbierz następujące informacje o problemie:
 **Przyczyna:** Użytkownik próbujący zarejestrować urządzenie nie ma prawidłowej licencji usługi Intune.
 
 #### <a name="resolution"></a>Rozwiązanie
-1. Przejdź do [Centrum administracyjnego Microsoft 365](https://portal.office.com/adminportal/home#/homepage), a następnie wybierz pozycję **Użytkownicy** > **aktywni użytkownicy**.
-2. Wybierz konto użytkownika, którego to dotyczy, > **licencje produktu** > **edycji**.
+1. Przejdź do [Centrum administracyjnego Microsoft 365](https://portal.office.com/adminportal/home#/homepage), a następnie wybierz pozycję **Użytkownicy**  > **aktywni użytkownicy**.
+2. Wybierz konto użytkownika, którego to dotyczy, > **licencje produktu**  > **Edytuj**.
 3. Sprawdź, czy przypisano prawidłową licencję usługi Intune do tego użytkownika.
 4. Zarejestruj ponownie urządzenie.
 
@@ -119,8 +120,8 @@ Zbierz następujące informacje o problemie:
 
 **Przyczyna:** Użytkownik próbujący zarejestrować urządzenie nie ma prawidłowej licencji usługi Intune.
 
-1. Przejdź do [Centrum administracyjnego Microsoft 365](https://portal.office.com/adminportal/home#/homepage), a następnie wybierz pozycję **Użytkownicy** > **aktywni użytkownicy**.
-2. Wybierz odpowiednie konto użytkownika, a następnie wybierz pozycję **licencje produktu** > **Edytuj**.
+1. Przejdź do [Centrum administracyjnego Microsoft 365](https://portal.office.com/adminportal/home#/homepage), a następnie wybierz pozycję **Użytkownicy**  > **aktywni użytkownicy**.
+2. Wybierz konto użytkownika, którego to dotyczy, a następnie wybierz pozycję **licencje produktu**  > **Edytuj**.
 3. Sprawdź, czy przypisano prawidłową licencję usługi Intune do tego użytkownika.
 4. Zarejestruj ponownie urządzenie.
 
@@ -130,7 +131,7 @@ Zbierz następujące informacje o problemie:
 
 #### <a name="resolution"></a>Rozwiązanie
 
-1. Otwórz **Ustawienia** na urządzeniu z systemem iOS > **ogólne** **Zarządzanie urządzeniami** > .
+1. Otwórz **Ustawienia** na urządzeniu z systemem iOS, > **Ogólne**  > **Zarządzanie urządzeniami**.
 2. Naciśnij istniejący profil zarządzania i naciśnij pozycję **Usuń zarządzanie**.
 3. Zarejestruj ponownie urządzenie.
 
@@ -183,7 +184,7 @@ Po włączeniu urządzenia zarządzanego przez program DEP, któremu przypisano 
 #### <a name="resolution"></a>Rozwiązanie
 
 1. Edytuj profil rejestracji. Możesz wprowadzić zmiany w profilu. Celem jest aktualizacja czasu modyfikacji profilu.
-2. Synchronizuj urządzenia zarządzane w programie DEP: Otwórz portal usługi Intune **> administrator** > **Zarządzanie urządzeniami przenośnymi** > **iOS** > **Device Enrollment Program** > **zsynchronizuj teraz**. Żądanie synchronizacji zostanie wysłane do firmy Apple.
+2. Synchronizuj urządzenia zarządzane w programie DEP: Otwórz portal usługi Intune, > **administrator**  > **Zarządzanie urządzeniami przenośnymi**  > **iOS**  > **Device Enrollment Program**  > **zsynchronizuj teraz**. Żądanie synchronizacji zostanie wysłane do firmy Apple.
 
 ### <a name="dep-enrollment-stuck-at-user-login"></a>Rejestracja w programie DEP zablokowana przy logowaniu użytkownika
 Po włączeniu urządzenia zarządzanego przez program DEP, któremu przypisano profil rejestracji, początkowa konfiguracja jest umieszczana po wprowadzeniu poświadczeń.

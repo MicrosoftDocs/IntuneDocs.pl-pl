@@ -5,21 +5,22 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/05/2019
+ms.date: 10/18/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 274b5a8d45f9fb525010e4d225172a6a1ce22275
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: f6d7b831899a740e722560c509c4b09c31d2a42b
+ms.sourcegitcommit: 8c25aeefb7cbc6444a8596af22fccd1c5426877a
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71734157"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72593789"
 ---
 # <a name="add-vpn-settings-on-ios-devices-in-microsoft-intune"></a>Konfigurowanie ustawień sieci VPN na urządzeniach z systemem iOS w usłudze Microsoft Intune
 
@@ -72,6 +73,8 @@ Ustawienia wymienione na poniższej liście są określane przez wybrany typ po�
     > [!NOTE]
     > Jeśli w przypadku sieci VPN Cisco IPsec używana jest metoda uwierzytelniania polegająca na podaniu nazwy użytkownika i hasła, użytkownicy końcowi muszą dostarczyć wspólny klucz tajny za pomocą niestandardowego profilu programu Apple Configurator.
 
+  - **Poświadczenie pochodne**: Jeśli żaden pochodny wystawca poświadczeń nie został skonfigurowany, usługa Intune monituje o to.
+
 - **Wykluczone adresy URL** (tylko rozwiązania Zscaler): po nawiązaniu połączenia z siecią VPN rozwiązania Zscaler wymienione adresy URL są dostępne poza chmurą Zscaler. 
 
 - **Podziel tunelowanie**: ustawienie **Włącz** lub **Wyłącz**. Ta opcja pozwala urządzeniom decydować, z którego połączenia skorzystać, w zależności od ruchu. Na przykład użytkownik w hotelu używa połączenia sieci VPN, aby uzyskać dostęp do plików roboczych, ale podczas zwykłego przeglądania Internetu skorzysta ze standardowej sieci hotelowej.
@@ -105,7 +108,7 @@ Ustawienia wymienione na poniższej liście są określane przez wybrany typ po�
 
 ## <a name="ikev2-settings"></a>Ustawienia protokołu IKEv2
 
-Te ustawienia są stosowane w przypadku wybrania **typu połączenia** > **IKEv2**.
+Te ustawienia są stosowane w przypadku wybrania opcji **Typ połączenia**  > **IKEv2**.
 
 - **Identyfikator zdalny**: wprowadź adres IP sieci, nazwę FQDN, USERFQDN lub ASN1DN serwera IKEv2. Na przykład wprowadź adres `10.0.0.3` lub `vpn.contoso.com`. Zazwyczaj wprowadza się taką samą wartość jak [**Nazwa połączenia**](#base-vpn-settings) (w tym artykule). Jest to jednak zależne od ustawień serwera IKEv2.
 
