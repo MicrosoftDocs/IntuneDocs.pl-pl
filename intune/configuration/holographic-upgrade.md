@@ -9,24 +9,25 @@ manager: dougeby
 ms.date: 01/22/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8005912cdb4a5898eccf7c95500ff7bbdbe34b3c
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 6342ed23f67c37c2f5084e58594294d826a28e40
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71734573"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72506714"
 ---
 # <a name="upgrade-devices-running-windows-holographic-to-windows-holographic-for-business"></a>Uaktualnianie urządzeń z systemem Windows Holographic do systemu Windows Holographic for Business
 
 Usługa Microsoft Intune zawiera wiele ustawień pomocnych w przypadku zarządzania urządzeniami i ich ochrony. W tym artykule wymieniono i opisano ustawienia używane do uaktualniania urządzeń z systemem Windows Holographic do systemu Windows Holographic for Business. Te ustawienia są tworzone w profilu konfiguracji uaktualniania w usłudze Intune oraz są wypychane do urządzeń lub na nich wdrażane.
 
-W ramach rozwiązania do zarządzania urządzeniami przenośnymi (MDM) użyj tych ustawień, aby uaktualnić urządzenia z systemem Windows Holographic. W przypadku urządzeń Microsoft HoloLens możesz kupić wersję Commercial Suite, aby uzyskać wymaganą licencję na uaktualnienie. Aby uzyskać więcej informacji, zobacz [Unlock Windows Holographic for Business features](https://docs.microsoft.com/hololens/hololens-upgrade-enterprise) (Odblokowanie funkcji systemu Windows Holographic for Business).
+W ramach rozwiązania do zarządzania urządzeniami przenośnymi (MDM) użyj tych ustawień, aby uaktualnić urządzenia z systemem Windows Holographic. W przypadku urządzeń Microsoft HoloLens możesz kupić wersję Commercial Suite, aby uzyskać wymaganą licencję na uaktualnienie. Aby uzyskać więcej informacji, zobacz [Unlock Windows Holographic for Business features](https://docs.microsoft.com/hololens/hololens1-upgrade-enterprise) (Odblokowanie funkcji systemu Windows Holographic for Business).
 
 Aby uzyskać więcej informacji na temat tej funkcji, zobacz [Uaktualnianie wersji systemu Windows 10 lub włączanie trybu S](../edition-upgrade-configure-windows-10.md).
 

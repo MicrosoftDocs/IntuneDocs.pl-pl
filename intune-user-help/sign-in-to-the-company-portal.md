@@ -9,6 +9,7 @@ ms.date: 09/18/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: cfd214bc-f072-4808-af2e-a3cbf7af9bca
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16d7142e6dc38a177f8820f60e7335b8b23a1eeb
-ms.sourcegitcommit: 8934b1abec96e18cee15a77107d37551766f7666
+ms.openlocfilehash: 68a44027c14e0a52d72fc032a6ab42413fa8df96
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71099798"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72508304"
 ---
 # <a name="sign-in-to-company-portal"></a>Zaloguj się do Portal firmy  
 
@@ -39,7 +40,7 @@ Poniższe kroki pokazują zrzuty ekranu z Portal firmy dla systemu iOS.
 
 1. Otwórz aplikację na urządzeniu i naciśnij pozycję **Zaloguj się**.  
 
-   [![Przykładowy zrzut ekranu przedstawiający stronę logowania Portal firmy. ](/intune-user-help/media/intune-ios-cp-signin-1908.png)](/intune-user-help/media/intune-ios-cp-signin-lightbox-1908.png#lightbox)  
+   [![Example zrzut ekranu strony logowania Portal firmy. ](/intune-user-help/media/intune-ios-cp-signin-1908.png)](/intune-user-help/media/intune-ios-cp-signin-lightbox-1908.png#lightbox)  
 
 
 2. Wprowadź swoje **Konto służbowe** i naciśnij przycisk **Dalej**.

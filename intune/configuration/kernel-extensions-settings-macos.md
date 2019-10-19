@@ -9,18 +9,19 @@ manager: dougeby
 ms.date: 09/10/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1306bfea1880061980413d283943e6521c1ac213
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 8632f5b8df0f483de3bb4d06a6823639ba52c604
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71734495"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72506693"
 ---
 # <a name="macos-device-settings-to-configure-and-use-kernel-extensions-in-intune"></a>macOS ustawień urządzenia w celu konfigurowania i używania rozszerzeń jądra w usłudze Intune
 
@@ -64,7 +65,7 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
   >
   > 1. W terminalu uruchom `kextstat | grep -v com.apple` i zanotuj dane wyjściowe. Zainstaluj wymagane oprogramowanie lub KEXT. Uruchom ponownie `kextstat | grep -v com.apple` i poszukaj zmian.
   >
-  >    W terminalu `kextstat` wyświetla wszystkie rozszerzenia jądra w systemie operacyjnym. 
+  >    W terminalu `kextstat` zawiera listę wszystkich rozszerzeń jądra w systemie operacyjnym. 
   >
   > 2. Na urządzeniu Otwórz plik listy właściwości informacji (info. plist) dla KEXT. Identyfikator pakietu jest wyświetlany. Każdy KEXT ma plik info. plist przechowywany wewnątrz. 
 

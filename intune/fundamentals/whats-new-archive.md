@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 7/8/2019
 ms.topic: archived
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 9ba01d60-4a03-4e3e-9aba-8be905c0054c
@@ -18,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1af106227442e91121f6c8c653c261bd677f3a9f
-ms.sourcegitcommit: f04e21ec459998922ba9c7091ab5f8efafd8a01c
+ms.openlocfilehash: 327e0d56400a2aac545d1bae92279e242aa2006a
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71814191"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72585222"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Nowości w usłudze Microsoft Intune — poprzednie miesiące
 
@@ -68,7 +69,7 @@ Dodajemy ustawienie, które umożliwia dostosowanie wyglądu tła aplikacji Mana
 Aby zapoznać się z ustawieniami kiosku, zobacz temat [Ograniczeń urządzeń z systemem Android Enterprise](../configuration/device-restrictions-android-for-work.md).
 
 #### <a name="app-protection-policy-assignment-save-and-apply----3104570---"></a>Zapisywanie i stosowanie przypisania zasad ochrony aplikacji <!-- 3104570 -->
-Będziesz mieć lepszą kontrolę nad [przypisaniami zasad ochrony aplikacji](../apps/app-protection-policies.md#deploy-a-policy-to-users). Jeśli wybierzesz pozycję *Przypisania* w celu ustawiania lub edytowania przypisań zasad, musisz najpierw **zapisać** konfigurację, aby zmiana została zastosowana. Użyj pozycji **Odrzuć**, aby wyczyścić wszystkie wprowadzone zmiany bez ich zapisywania na listach uwzględniania lub wykluczania.  Dzięki możliwości wymagania zapisania lub odrzucenia zasady ochrony aplikacji są przypisywane tylko do wybranych przez Ciebie użytkowników.
+Będziesz mieć lepszą kontrolę nad [przypisaniami zasad ochrony aplikacji](../apps/app-protection-policies.md#assign-a-windows-10-policy-to-users). Jeśli wybierzesz pozycję *Przypisania* w celu ustawiania lub edytowania przypisań zasad, musisz najpierw **zapisać** konfigurację, aby zmiana została zastosowana. Użyj pozycji **Odrzuć**, aby wyczyścić wszystkie wprowadzone zmiany bez ich zapisywania na listach uwzględniania lub wykluczania.  Dzięki możliwości wymagania zapisania lub odrzucenia zasady ochrony aplikacji są przypisywane tylko do wybranych przez Ciebie użytkowników.
 
 #### <a name="new-microsoft-edge-browser-settings-for-windows-10-and-later----3174639---"></a>Nowe ustawienia przeglądarki Microsoft Edge dla systemu Windows 10 i nowszych <!-- 3174639 -->
 Ta aktualizacja obejmuje nowe ustawienia ułatwiające kontrolowanie przeglądarki Microsoft Edge na urządzeniach i zarządzanie nią. Aby uzyskać listę tych ustawień, zobacz [Ograniczenia urządzeń dla systemu Windows 10 (i nowszych)](../configuration/device-restrictions-windows-10.md#microsoft-edge-browser).

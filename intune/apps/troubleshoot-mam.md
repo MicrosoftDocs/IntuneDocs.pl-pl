@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 10/03/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: cd5a0a3b-0013-4be3-a233-ce6e9083149f
@@ -16,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a272da470e206279e68077ce80324183c7a8227
-ms.sourcegitcommit: 223d64a72ec85fe222f5bb10639da729368e6d57
+ms.openlocfilehash: 43fd8207a07f64fd293eb9c90bbfc2a8dadd9157
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71940452"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72489931"
 ---
 # <a name="troubleshoot-mobile-application-management"></a>Rozwiązywanie problemów związanych z zarządzaniem aplikacjami mobilnymi
 
@@ -111,7 +112,7 @@ Okno dialogowe/komunikat o błędzie | Przyczyna | Korekty |
 ## <a name="next-steps"></a>Następne kroki
 
 - [Weryfikowanie konfiguracji zarządzania aplikacjami mobilnymi](app-protection-policies-validate.md)
-- Dowiedz się, jak używać plików dzienników do rozwiązywania problemów z zasadami Intune App Protection, zobacz [https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-Intune-app-protection-policy-using/ba-p/330372](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-Intune-app-protection-policy-using/ba-p/330372)
+- Informacje na temat rozwiązywania problemów z zasadami Intune App Protection przy użyciu plików dzienników można znaleźć w temacie [https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-Intune-app-protection-policy-using/ba-p/330372](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-Intune-app-protection-policy-using/ba-p/330372)
 - Aby uzyskać dodatkowe informacje dotyczące rozwiązywania problemów z usługą Intune, zobacz [Korzystanie z portalu rozwiązywania problemów, aby pomóc użytkownikom w firmie](../fundamentals/help-desk-operators.md). 
 - Dowiedz się więcej o wszelkich znanych problemach w usłudze Microsoft Intune. Aby uzyskać więcej informacji, zobacz [Znane problemy w usłudze Microsoft Intune](../known-issues.md).
 - Potrzebujesz dodatkowej pomocy? Zobacz [Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune](../fundamentals/get-support.md).

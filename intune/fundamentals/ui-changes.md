@@ -9,20 +9,21 @@ manager: dougeby
 ms.date: 1/4/2018
 ms.topic: archived
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: medium
 ms.technology: ''
-ms.assetid: ''
+ms.assetid: 809d9d76-20f8-4329-9e18-cd7d4946a9af
 ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f74ed8586bcfca21ea7434ec1c6ad045c8bc1bbd
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 9de5d1550c860d9b160203b47b883550ea4db90e
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71735561"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72504934"
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Dokąd została przeniesiona funkcja usługi Intune na platformie Azure?
 Przenosząc usługę Intune do witryny Azure Portal, skorzystaliśmy z okazji, aby uporządkować niektóre zadania w bardziej logiczny sposób. Jednak każde ulepszenie wymaga nauczenia się nowego porządku. Ten przewodnik jest przeznaczony dla osób, które doskonale znają usługę Intune w portalu klasycznym i zastanawiają się, jak zrobić coś w usłudze Intune w witrynie Azure Portal. Jeśli w tym artykule nie została uwzględniona funkcja, której szukasz, pozostaw komentarz na końcu artykułu, abyśmy mogli go zaktualizować.

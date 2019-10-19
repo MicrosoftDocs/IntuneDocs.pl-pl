@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 10/02/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa4dbfb7c13d767df41655b391767fc7aa13d914
-ms.sourcegitcommit: f04e21ec459998922ba9c7091ab5f8efafd8a01c
+ms.openlocfilehash: b30a7e843850d6918abc2e76f84397a1f197516f
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71817589"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72508863"
 ---
 # <a name="resolve-common-errors-for-the-intune-exchange-connector"></a>Rozwiązywanie typowych błędów dla programu Intune Exchange Connector
 
@@ -76,7 +77,7 @@ Podczas próby skonfigurowania Microsoft Intune Exchange Connector zostanie wyś
    Verify that you are connected to the Internet, check the Microsoft Intune Service Status, and try to connect again.  
    Error code: 0x00000006  
 ```  
-Ten błąd może wystąpić, jeśli serwer proxy jest używany do łączenia się z Internetem i blokuje ruch do usługi Intune. Aby określić, czy serwer proxy jest używany, przejdź do pozycji **Panel sterowania** > **Opcje internetowe**, wybierz kartę **połączenie** , a następnie kliknij przycisk **Ustawienia sieci LAN**.
+Ten błąd może wystąpić, jeśli serwer proxy jest używany do łączenia się z Internetem i blokuje ruch do usługi Intune. Aby określić, czy serwer proxy jest używany, przejdź do **Panelu sterowania** ,  > **Opcje internetowe**, wybierz kartę **połączenie** , a następnie kliknij przycisk **Ustawienia sieci LAN**.
 
 **Rozwiązanie**:  
 
@@ -131,7 +132,7 @@ Aby przypisać użytkownikowi **Logowanie się jako użytkownik usługi** do kon
 
 1. Zaloguj się na komputerze jako administrator lub członek grupy Administratorzy.
 2. Uruchom **secpol. msc** , aby otworzyć zasady zabezpieczeń lokalnych.
-3. Przejdź do pozycji **Ustawienia zabezpieczeń** > **Zasady lokalne**, a następnie wybierz pozycję **Przypisywanie praw użytkownika**.
+3. Przejdź do pozycji **Ustawienia zabezpieczeń**  > **Zasady lokalne**, a następnie wybierz pozycję **Przypisywanie praw użytkownika**.
 4. W prawym okienku kliknij dwukrotnie pozycję **Zaloguj się jako usługa**.
 5. Wybierz pozycję **Dodaj użytkownika lub grupę**, Dodaj **WIEC_USER** do zasad, a następnie kliknij przycisk **OK** dwa razy.
 

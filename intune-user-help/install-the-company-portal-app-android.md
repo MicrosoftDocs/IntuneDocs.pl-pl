@@ -9,6 +9,7 @@ ms.date: 04/19/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: 68e5a234-4353-4cb9-b869-4f2af5e59f31
 searchScope:
@@ -18,16 +19,16 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe6cd46f6a85204d5859993a69ac5bf5b253e048
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 0e4ed29d6a2da79b7bfd3502ebf8ce53259f1ae6
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67546344"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72506077"
 ---
 # <a name="install-the-company-portal-app-for-android"></a>Instalowanie aplikacji Portal firmy dla systemu Android
 
-Portal firmy to aplikacja umożliwiająca uzyskiwanie dostępu do firmowych lub szkolnych aplikacji, poczty e-mail i sieci. Aplikacja ta pomaga zagwarantować bezpieczeństwo wszelkich danych organizacji poprzez zapewnienie bezpieczeństwa urządzenia — na przykład poprzez aktualizowanie aplikacji firmowych lub automatyczne blokowanie urządzenia po upływie określonego czasu. Aby dowiedzieć się więcej na temat funkcji w aplikacji Portal firmy i jej część w usłudze zarządzania urządzeniami, zobacz [Dlaczego warto zarejestrować urządzenie z systemem Android](why-enroll-android-device.md).  
+Portal firmy to aplikacja umożliwiająca uzyskiwanie dostępu do firmowych lub szkolnych aplikacji, poczty e-mail i sieci. Aplikacja ta pomaga zagwarantować bezpieczeństwo wszelkich danych organizacji poprzez zapewnienie bezpieczeństwa urządzenia — na przykład poprzez aktualizowanie aplikacji firmowych lub automatyczne blokowanie urządzenia po upływie określonego czasu. Aby dowiedzieć się więcej na temat funkcji Portal firmy i jej części w zarządzaniu urządzeniami, zobacz [dlaczego zarejestrować urządzenie z systemem Android](why-enroll-android-device.md).  
 
 1. Naciśnij kolejno pozycje **Strona główna** > **Sklep Play**.
 

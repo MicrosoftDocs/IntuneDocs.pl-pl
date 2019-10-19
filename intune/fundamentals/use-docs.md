@@ -4,18 +4,19 @@ titleSuffix: Microsoft Intune
 description: Dowiedz się, jak wyszukiwać dokumenty w usłudze Intune, udostępniać informacje o dokumentach i wchodzić w skład dokumentacji.
 ms.date: 09/15/2019
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.topic: conceptual
 ms.assetid: e6e44225-cc9e-47c2-913b-1e629ba9a71e
 author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6fa3529866b786e75892b495102ca5cab46b09a5
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 42e16be44dba539007967dd921da4c8d4f095ec4
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71735535"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72504822"
 ---
 # <a name="using-the-intune-docs"></a>Używanie dokumentów usługi Intune
 
@@ -27,15 +28,15 @@ Aby uzyskać ogólną pomoc i obsługę usługi Intune, zobacz [Uzyskaj pomoc te
 
  Poniższe porady dotyczące wyszukiwania ułatwiają znajdowanie potrzebnych informacji:  
 
-- Korzystając z preferowanego aparatu wyszukiwania do lokalizowania zawartości dla Microsoft Intune, należy uwzględnić `Intune` wraz ze słowami kluczowymi wyszukiwania.  
+- Korzystając z preferowanego aparatu wyszukiwania do lokalizowania zawartości Microsoft Intune, należy uwzględnić `Intune` razem ze słowami kluczowymi wyszukiwania.  
 
   - Wyszukaj wyniki z docs.microsoft.com. Wyniki z technet.microsoft.com lub msdn.microsoft.com są dla starszych wersji produktów.  
 
-  - Aby dodatkowo skupić wyniki wyszukiwania w bieżącej bibliotece zawartości, Uwzględnij `site:docs.microsoft.com` w celu określania zakresu aparatu wyszukiwania.  
+  - Aby dodatkowo skupić wyniki wyszukiwania w bieżącej bibliotece zawartości, Uwzględnij `site:docs.microsoft.com` do określania zakresu aparatu wyszukiwania.  
 
 - Użyj wyszukiwanych terminów, które pasują do terminologii w interfejsie użytkownika i dokumentacji online. Unikaj nieoficjalnych terminów lub skrótów, które mogą być widoczne w treści społeczności.
 
-- Aby wyszukać w aktualnie oglądanym artykule, użyj funkcji **wyszukiwania** przeglądarki. W przypadku większości nowoczesnych przeglądarek sieci Web naciśnij **klawisze Ctrl**+**F** , a następnie wprowadź wyszukiwane terminy.  
+- Aby wyszukać w aktualnie oglądanym artykule, użyj funkcji **wyszukiwania** przeglądarki. W przypadku większości nowoczesnych przeglądarek sieci Web naciśnij klawisz **Ctrl** +**F** , a następnie wprowadź wyszukiwane terminy.  
 
 - Każdy artykuł w systemie docs.microsoft.com zawiera następujące pola, które ułatwiają wyszukiwanie zawartości:  
 

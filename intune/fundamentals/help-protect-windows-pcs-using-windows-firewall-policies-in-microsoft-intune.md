@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 01/01/2018
 ms.topic: archived
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 9549c072-ac3d-4d14-a931-a2eda8846217
@@ -17,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4de635066b2f054b9061f6944bc4010a56d54526
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 2c736c905045fd3afd40a12243986fbe69452ecd
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71735821"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72502831"
 ---
 # <a name="help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune"></a>Ochrona komputerów z systemem Windows przy użyciu zasad Zapory systemu Windows w usłudze Microsoft Intune
 
-[!INCLUDE [classic-portal](../../intune-classic/includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
 
 > [!NOTE]
 > Informacje w tym temacie dotyczą tylko komputerów z systemem Windows, które są zarządzane jako komputery osobiste przy użyciu oprogramowania klienckiego usługi Intune. Jeśli chcesz zarządzać ustawieniami zapory dla komputerów z systemem Windows zarejestrowanych jako urządzenia przenośne, zobacz [Dodawanie ustawień programu Endpoint Protection w usłudze Intune](../protect/endpoint-protection-configure.md).
@@ -43,7 +44,7 @@ Zasady Zapory systemu Windows umożliwiają tworzenie i wdrażanie ustawień ste
 > [!NOTE]
 > Jeśli określone ustawienie na komputerze jest zarządzane zarówno przez zasady grupy, jak i zasady usługi Microsoft Intune, ustawienie skonfigurowane w ramach zasad grupy ma pierwszeństwo przed ustawieniem skonfigurowanym w ramach zasad usługi Microsoft Intune. Aby uzyskać informacje dotyczące zapobiegania konfliktom występującym między zasadami usługi Intune i zasadami grupy, zobacz [Rozwiązywanie konfliktów obiektów zasad grupy i zasad usługi Microsoft Intune](resolve-gpo-and-microsoft-intune-policy-conflicts.md).
 >
-> Jeśli chcesz wdrożyć ustawienia Zapory systemu Windows na komputerach z systemem Windows Vista, musisz najpierw zainstalować na nich [poprawkę KB971800](http://support2.microsoft.com/kb/971800).
+> Jeśli chcesz wdrożyć ustawienia Zapory systemu Windows na komputerach z systemem Windows Vista, musisz najpierw zainstalować na nich [poprawkę KB971800](https://support2.microsoft.com/kb/971800).
 
 > [!IMPORTANT]
 > Aby móc zarządzać Zaporą systemu Windows za pomocą usługi Intune, na zarządzanych komputerach muszą być włączone następujące dwie usługi:
@@ -84,7 +85,7 @@ Te ustawienia zasad konfigurują użycie Zapory systemu Windows w celu blokowani
 Wartością domyślną dla każdego z tych ustawień jest **Tak**. Jest to najbezpieczniejsze ustawienie.
 
 > [!IMPORTANT]
-> Jeśli środowisko obejmuje zarządzane komputery z systemem Windows Vista bez zainstalowanych dodatków Service Pack, należy zainstalować aktualizację skojarzoną z [artykułem 971800](http://go.microsoft.com/fwlink/?LinkId=188405) w bazie wiedzy Microsoft Knowledge Base albo wyłączyć ustawienia zasad **Blokuj wszystkie połączenia przychodzące** w ramach zasad wdrożonych na tych komputerach.
+> Jeśli środowisko obejmuje zarządzane komputery z systemem Windows Vista bez zainstalowanych dodatków Service Pack, należy zainstalować aktualizację skojarzoną z [artykułem 971800](https://go.microsoft.com/fwlink/?LinkId=188405) w bazie wiedzy Microsoft Knowledge Base albo wyłączyć ustawienia zasad **Blokuj wszystkie połączenia przychodzące** w ramach zasad wdrożonych na tych komputerach.
 
 ### <a name="notify-the-user-when-windows-firewall-blocks-a-new-program"></a>Powiadamiaj użytkownika, gdy Zapora systemu Windows zablokuje nowy program
 

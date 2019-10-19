@@ -5,27 +5,32 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2018
+ms.date: 10/15/2019
 ms.topic: archived
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: medium
-ms.technology: ''
 ms.assetid: 3b8d22fe-c318-4796-b760-44f1ccf34312
 ms.reviewer: owenyen
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8f481c17e6cb1285147c7f6361bfff73801b2bba
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: fb9fb439bd0bc59ae2c69ec966587d58c8c97bf4
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736133"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72510099"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Zarządzanie komputerami z systemem Windows przy użyciu oprogramowania klienckiego usługi Intune
 
-[!INCLUDE [classic-portal](../../intune-classic/includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
+
+> [!WARNING]
+> Firma Microsoft ogłosiła, że [świadczenie pomocy technicznej dla systemu Windows 7 zakończy się 14 stycznia 2020 r](https://support.microsoft.com/help/4057281/windows-7-support-will-end-on-january-14-2020). W tym dniu zostanie też wycofana obsługa urządzeń z systemem Windows 7 w usłudze Intune. Firma Microsoft zdecydowanie zaleca przejście do systemu Windows 10, aby uniknąć przerw w świadczeniu usług i pomocy technicznej.
+> 
+> Aby uzyskać więcej informacji, zobacz [plan usługi Intune dotyczący zmiany: zbliża się koniec wsparcia dla systemu Windows 7](../fundamentals/whats-new.md#intune-plan-for-change-nearing-end-of-support-for-windows-7-).
 
 > [!NOTE]
 > Możesz użyć usługi Microsoft Intune do zarządzania komputerami z systemem Windows albo [jako urządzeniami przenośnymi z wykorzystaniem zarządzania urządzeniami przenośnymi (MDM)](../enrollment/windows-enroll.md), albo jako komputerami z wykorzystaniem oprogramowania klienckiego usługi Intune zgodnie z poniższym opisem. Jednak firma Microsoft zaleca, aby klienci [używali rozwiązania MDM do zarządzania](../enrollment/windows-enroll.md) zawsze, gdy jest to możliwe. Aby uzyskać więcej informacji, zobacz temat [Porównanie zarządzania komputerami z systemem Windows jako komputerami i jako urządzeniami mobilnymi](pc-management-comparison.md) 
@@ -35,7 +40,6 @@ Usługa Intune zapewnia organizacjom kompleksowe rozwiązanie do zarządzania ur
 Oprogramowanie klienckie usługi Intune jest najbardziej odpowiednie dla komputerów z systemem Windows z zainstalowanymi starszymi wersjami systemów operacyjnych, takimi jak Windows 7, którymi nie można zarządzać jako urządzeniami przenośnymi. Oprogramowanie klienckie usługi Intune używa takich funkcji zarządzania jak zasady grupy w celu zarządzania komputerami z chmury.
 
 Usługa Intune obsługuje zarządzanie komputerami z systemem Windows jako komputerami przy użyciu oprogramowania klienckiego dla maksymalnie 7000 komputerów. W przypadku większych wdrożeń zarządzaj komputerami z systemem Windows 10 jako urządzeniami przenośnymi. Wszystkie wersje usługi Intune i aktualizacje systemu Windows 10 obejmują funkcje zarządzania oparte na architekturze zarządzania urządzeniami przenośnymi. Zdecydowanie zaleca się wdrożenie w organizacji urządzeń z systemem Windows 10 zarządzanych jako urządzenia przenośne.
-
 
 > [!NOTE]
 > Urządzeniami z systemem Windows 8.1 lub nowszym można zarządzać jako komputerami przy użyciu oprogramowania klienckiego usługi Intune lub jako urządzeniami przenośnymi. Nie można używać obu tych metod na tym samym urządzeniu. Przed podjęciem decyzji o zarządzaniu komputerami przy użyciu oprogramowania klienckiego usługi Intune należy dobrze się zastanowić. Ten temat dotyczy tylko zarządzania urządzeniami jako komputerami przez uruchamianie oprogramowania klienckiego usługi Intune.
@@ -60,9 +64,6 @@ Poniżej podano wymagania dotyczące oprogramowania w przypadku instalowania opr
 |Uprawnienia administracyjne|Konto używane do instalacji oprogramowania klienckiego musi mieć uprawnienia administratora lokalnego na danym urządzeniu.|
 |Instalator Windows w wersji 3.1|Na komputerze musi być dostępny Instalator Windows w wersji 3.1 lub nowszej.<br /><br />Aby wyświetlić wersję Instalatora Windows na komputerze:<br /><br />  Na komputerze kliknij prawym przyciskiem myszy pozycję **%windir%\System32\msiexec.exe**, a następnie kliknij polecenie **Właściwości**.<br /><br />Najnowszą wersję Instalatora Windows można pobrać ze strony [pakietów redystrybucyjnych Instalatora Windows](http://go.microsoft.com/fwlink/?LinkID=234258) w witrynie Microsoft Developer Network w sieci Web.|
 |Usunięcie niezgodnego oprogramowania klienckiego|Przed zainstalowaniem oprogramowania klienckiego usługi Intune należy odinstalować wszelkie oprogramowanie klienckie programu Configuration Manager, Operations Manager i Service Manager z tego komputera.|
-
-> [!WARNING]
-> Firma Microsoft ogłosiła, że [świadczenie pomocy technicznej dla systemu Windows 7 zakończy się 14 stycznia 2020 r](https://support.microsoft.com/help/4057281/windows-7-support-will-end-on-january-14-2020). W tym dniu zostanie też wycofana obsługa urządzeń z systemem Windows 7 w usłudze Intune. Firma Microsoft zdecydowanie zaleca przejście do systemu Windows 10, aby uniknąć przerw w świadczeniu usług i pomocy technicznej. 
 
 ## <a name="deploying-the-intune-software-client"></a>Wdrażanie oprogramowania klienckiego usługi Intune
 Jako administrator usługi Intune możesz udostępnić użytkownikom oprogramowanie klienckie usługi Intune na kilka sposobów. Aby uzyskać instrukcje, zobacz temat [Instalowanie klienta oprogramowania usługi Intune na komputerach z systemem Windows](../install-the-windows-pc-client-with-microsoft-intune.md).

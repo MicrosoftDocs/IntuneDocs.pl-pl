@@ -5,21 +5,23 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/06/2019
+ms.date: 10/08/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
+ms.reviewer: maholdaa
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 51096b4ff42902b5feb8cecdebf9d839821e1bb2
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 266786de3122f8886bb3ed310764459568e1df6a
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71733988"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72585357"
 ---
 # <a name="add-wi-fi-settings-for-devices-running-android-enterprise-and-android-kiosk-in-microsoft-intune"></a>Dodawanie ustawień sieci Wi-Fi dla urządzeń z systemem Android dla firm i kiosku systemu Android w usłudze Microsoft Intune
 
@@ -40,7 +42,6 @@ Wybierz tę opcję w przypadku używania dedykowanego urządzenia z systemem And
 - **Typ sieci Wi-Fi**: wybierz pozycję **Podstawowa**.
 - **Nazwa sieci**: wprowadź nazwę połączenia sieci Wi-Fi. Użytkownicy końcowi widzą tę nazwę, przeglądając w urządzeniu listę dostępnych połączeń sieci Wi-Fi. Na przykład wprowadź nazwę **Contoso WiFi**.
 - **SSID**: wprowadź **Identyfikator zestawu usług**, który jest rzeczywistą nazwą sieci bezprzewodowej, z którą urządzenia nawiązują połączenie. Jednak przy wyborze połączenia użytkownicy widzą tylko **nazwę sieci** utworzoną wcześniej.
-- **Połącz automatycznie**: wybierz pozycję **Włącz**, aby automatycznie łączyć się z tą siecią, gdy urządzenie jest w zasięgu. Wybierz pozycję **Wyłącz**, aby zapobiec automatycznemu łączeniu się przez urządzenia.
 - **Ukryta sieć**: wybierz pozycję **Włącz**, aby ukrywać tę sieć na liście dostępnych sieci w urządzeniu. Identyfikator SSID nie jest rozgłaszany. Wybierz pozycję **Wyłącz**, aby wyświetlać tę sieć na liście dostępnych sieci w urządzeniu.
 - **Typ sieci Wi-Fi**: wybierz protokół zabezpieczeń do uwierzytelniania sieci Wi-Fi. Dostępne opcje:
 
@@ -52,7 +53,6 @@ Wybierz tę opcję w przypadku używania dedykowanego urządzenia z systemem And
 
 - **Typ sieci Wi-Fi**: wybierz pozycję **Przedsiębiorstwo**.
 - **SSID**: wprowadź **Identyfikator zestawu usług**, który jest rzeczywistą nazwą sieci bezprzewodowej, z którą urządzenia nawiązują połączenie. Jednak przy wyborze połączenia użytkownicy widzą tylko **nazwę sieci** utworzoną wcześniej.
-- **Połącz automatycznie**: wybierz pozycję **Włącz**, aby automatycznie łączyć się z tą siecią, gdy urządzenie jest w zasięgu. Wybierz pozycję **Wyłącz**, aby zapobiec automatycznemu łączeniu się przez urządzenia.
 - **Ukryta sieć**: wybierz pozycję **Włącz**, aby ukrywać tę sieć na liście dostępnych sieci w urządzeniu. Identyfikator SSID nie jest rozgłaszany. Wybierz pozycję **Wyłącz**, aby wyświetlać tę sieć na liście dostępnych sieci w urządzeniu.
 - **Typ protokołu EAP**: wybierz typ protokołu uwierzytelniania rozszerzonego (EAP) używany do uwierzytelniania zabezpieczonych połączeń bezprzewodowych. Dostępne opcje:
 
@@ -103,14 +103,12 @@ Wybierz tę opcję w przypadku używania dedykowanego urządzenia z systemem And
 
 - **Typ sieci Wi-Fi**: wybierz pozycję **Podstawowa**.
 - **SSID**: wprowadź **Identyfikator zestawu usług**, który jest rzeczywistą nazwą sieci bezprzewodowej, z którą urządzenia nawiązują połączenie. Jednak przy wyborze połączenia użytkownicy widzą tylko **nazwę sieci** utworzoną wcześniej.
-- **Połącz automatycznie**: wybierz pozycję **Włącz**, aby automatycznie łączyć się z tą siecią, gdy urządzenie jest w zasięgu. Wybierz pozycję **Wyłącz**, aby zapobiec automatycznemu łączeniu się przez urządzenia.
 - **Ukryta sieć**: wybierz pozycję **Włącz**, aby ukrywać tę sieć na liście dostępnych sieci w urządzeniu. Identyfikator SSID nie jest rozgłaszany. Wybierz pozycję **Wyłącz**, aby wyświetlać tę sieć na liście dostępnych sieci w urządzeniu.
 
 ### <a name="enterprise"></a>Enterprise
 
 - **Typ sieci Wi-Fi**: wybierz pozycję **Przedsiębiorstwo**.
 - **SSID**: wprowadź **Identyfikator zestawu usług**, który jest rzeczywistą nazwą sieci bezprzewodowej, z którą urządzenia nawiązują połączenie. Jednak przy wyborze połączenia użytkownicy widzą tylko **nazwę sieci** utworzoną wcześniej.
-- **Połącz automatycznie**: wybierz pozycję **Włącz**, aby automatycznie łączyć się z tą siecią, gdy urządzenie jest w zasięgu. Wybierz pozycję **Wyłącz**, aby zapobiec automatycznemu łączeniu się przez urządzenia.
 - **Ukryta sieć**: wybierz pozycję **Włącz**, aby ukrywać tę sieć na liście dostępnych sieci w urządzeniu. Identyfikator SSID nie jest rozgłaszany. Wybierz pozycję **Wyłącz**, aby wyświetlać tę sieć na liście dostępnych sieci w urządzeniu.
 - **Typ protokołu EAP**: wybierz typ protokołu uwierzytelniania rozszerzonego (EAP) używany do uwierzytelniania zabezpieczonych połączeń bezprzewodowych. Dostępne opcje:
 

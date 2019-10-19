@@ -9,6 +9,7 @@ ms.date: 06/11/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: c002bcb2-ae37-478d-acf3-2bf51faae490
 searchScope:
@@ -16,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28121178e2a5a3aa7e6d16b0a5936f1cad627c09
-ms.sourcegitcommit: 1ba785f6e51517b63588a292ab5c45b9d9144b72
+ms.openlocfilehash: d2bdc4433e48fd77c12bfd5db706f8d226bf95a6
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "66840951"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72506063"
 ---
 # <a name="how-to-update-the-company-portal-app"></a>Jak zaktualizować aplikację Portal firmy
 
@@ -44,13 +45,13 @@ Po udostępnieniu nowej wersji opcja **Aktualizuj** pojawi się na liście zains
 
 ## <a name="update-the-company-portal-app-on-your-macos-device"></a>Aktualizowanie aplikacji Portal firmy na urządzeniu z systemem macOS
 
-Konfigurowanie aplikacji Portal firmy, aby automatycznie zainstalować aktualizacje, gdy tylko staną się dostępne. 
+Skonfiguruj Portal firmy, aby automatycznie instalować aktualizacje, gdy staną się dostępne. 
 
 1. Otwórz Portal firmy i przejdź do **pomocy**. 
-2. Wybierz **sprawdzać dostępność aktualizacji**. 
-3. Na ekranie Microsoft AutoUpdate wybierz **automatyczne pobranie i zainstalowanie**. 
+2. Wybierz pozycję **Sprawdź aktualizacje**. 
+3. Na ekranie Microsoft AutoUpdate wybierz pozycję **automatycznie Pobierz i zainstaluj**. 
 
-Aby wyświetlić dostępne aktualizacje, wybierz **sprawdzać dostępność aktualizacji**.  
+Aby wyświetlić dostępne aktualizacje, wybierz pozycję **Sprawdź aktualizacje**.  
 
 ## <a name="update-the-company-portal-app-on-your-windows-device"></a>Aktualizowanie aplikacji Portal firmy na urządzeniu z systemem Windows
 Aby automatycznie pobierać aktualizacje, gdy staną się dostępne, otwórz sklep Microsoft Store i przejdź do pozycji **Ustawienia**. Następnie włącz opcję **Aktualizacje aplikacji**. Aby wyświetlić ostatnie aktualizacje oraz aplikacje oczekujące w kolejce pobierania, przejdź do pozycji **Pobieranie i aktualizacje**.  

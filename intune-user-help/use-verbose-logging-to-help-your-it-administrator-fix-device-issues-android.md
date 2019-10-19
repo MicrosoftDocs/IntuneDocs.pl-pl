@@ -1,34 +1,52 @@
 ---
-title: Pomaganie działowi pomocy technicznej Twojej firmy w rozwiązywaniu problemów z urządzeniami przez używanie pełnego rejestrowania | Microsoft Docs
+title: Konfigurowanie ustawień rejestrowania w aplikacjach usługi Intune | Microsoft Docs
 description: Ułatw działowi pomocy technicznej Twojej firmy rozwiązywanie problemów z urządzeniami, używając pełnego rejestrowania
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/23/2017
+ms.date: 04/19/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: 2a9183a6-b40d-4132-a1ce-61ce0f1c23aa
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: arnab
+ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3b0eb38b92ff5c18d58cf6ebe6f31e4b8a320dd9
-ms.sourcegitcommit: fdc6261f4ed695986e06d18353c10660a4735362
+ms.openlocfilehash: 2326aed90037fbcc6fc693bcdb67c86b57ed34a0
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58069194"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72508009"
 ---
-# <a name="help-your-company-support-fix-device-issues-with-verbose-logging"></a>Ułatw działowi pomocy technicznej Twojej firmy rozwiązywanie problemów z urządzeniami, używając pełnego rejestrowania
+# <a name="configure-logging-settings"></a>Konfigurowanie ustawień rejestrowania
 
-Jeśli urządzenie z systemem Android zostało zarejestrowane w usłudze Intune, możesz użyć *pełnego rejestrowania*, aby aplikacja Portal firmy i zarządzane aplikacje usługi Intune rejestrowały szczegółowe dzienniki o tym, co dzieje się na urządzeniu. Te dzienniki pomagają działowi pomocy technicznej Twojej firmy w rozwiązywaniu wszelkich problemów, które mogą wystąpić podczas korzystania z Portalu firmy lub aplikacji zarządzanej przez usługę Intune. Pełne rejestrowanie jest domyślnie włączone na urządzeniu, a dzienniki wysyłane do działu pomocy technicznej Twojej firmy zawierają Twój adres e-mail.
+Skonfiguruj ustawienia rejestrowania, aby umożliwić aplikacji Portal firmy, aplikacji Microsoft Intune i aplikacji zarządzanych przez usługę Intune rejestrowanie akcji aplikacji. Jeśli kiedykolwiek wystąpił problem w aplikacji, a następnie zostanie on zaraportowany, zespół pomocy technicznej przegląda te dzienniki, aby uzyskać więcej szczegółów. 
 
-Aby włączyć lub wyłączyć Pełne rejestrowanie, zaloguj się do aplikacji Portal firmy przy użyciu poświadczeń konta służbowego, wybierz opcję **Ustawienia**, a następnie przycisk włączania/wyłączania obok ustawienia **Pełne rejestrowanie**.
+> [!NOTE]
+> Dzienniki wysyłane do zespołu pomocy technicznej będą zawierać adres e-mail użytkownika.  
 
-Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).
+## <a name="configure-company-portal-logging"></a>Konfigurowanie rejestrowania Portal firmy
+Pełne rejestrowanie rejestruje każde działanie wykonywane w aplikacji Portal firmy. Jest on domyślnie włączony na urządzeniu. Aby wyłączyć pełne rejestrowanie w Portal firmy:  
+
+1. Zaloguj się w aplikacji Portal firmy.
+2. Naciśnij pozycję **Ustawienia**.
+3. W polu **pełna rejestracja**Przerzuć przełącznik na **wyłączony**.
+
+## <a name="configure-microsoft-intune-app-logging"></a>Konfigurowanie rejestrowania aplikacji Microsoft Intune
+W aplikacji Microsoft Intune można skonfigurować poziom szczegółów dziennika. Wartość domyślna na poziomie jest **ważna**. Aby dostosować szczegóły rejestrowania:  
+
+1. Otwórz aplikację Microsoft Intune.  
+2. Naciśnij pozycję **Ustawienia**.  
+3. W obszarze **szczegóły poziomu dziennika**wybierz pozycję **pełne** , aby zwiększyć poziom zarejestrowanych informacji, lub wybierz opcję **Wyłącz** , aby wyłączyć rejestrowanie.  
+
+## <a name="next-steps"></a>Następne kroki  
+
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).  

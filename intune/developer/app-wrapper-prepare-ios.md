@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 08/12/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: developer
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c535dbd91605a41fdc1c526ecd8ff9d9fc9e2448
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: b42642ec593112b0b247cd85b9230f68d6a803b8
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71733676"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72490972"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Przygotowywanie aplikacji systemu iOS pod kątem zasad ochrony aplikacji za pomocą narzędzia opakowującego aplikacje usługi Intune
 
@@ -204,7 +205,7 @@ Z narzędziem opakowującym aplikacje można użyć następujących parametrów 
 |**-c**|`<SHA1 hash of the signing certificate>`|
 |**-h**| Wyświetla szczegółowe informacje dotyczące użycia dostępnych właściwości wiersza polecenia dla narzędzia opakowującego aplikacje. |
 |**-aa**|(Opcjonalnie) `<Authority URI of the input app if the app uses the Azure Active Directory Authentication Library>` tj. `login.windows.net/common` |
-|**-ac**|(Opcjonalnie) `<Client ID of the input app if the app uses the Azure Active Directory Authentication Library>` to jest identyfikator GUID w polu Identyfikator klienta znajduje się na liście aplikacji w bloku rejestracji aplikacji. |
+|**-ac**|(Opcjonalnie) `<Client ID of the input app if the app uses the Azure Active Directory Authentication Library>` to jest identyfikator GUID w polu Identyfikator klienta pochodzi z listy aplikacji w bloku rejestracji aplikacji. |
 |**-ar**|(Opcjonalnie) `<Redirect/Reply URI of the input app if the app uses the Azure Active Directory Authentication Library>` to jest identyfikator URI przekierowania skonfigurowany w ramach rejestracji aplikacji. Zwykle jest to protokół URL aplikacji, z którą aplikacja Microsoft Authenticator powraca po uwierzytelnieniu przez brokera. |
 |**-v**| (Opcjonalna) Zwraca pełne komunikaty wyjściowe do konsoli. Zaleca się użyć tej flagi w celu debugowania wszelkich błędów. |
 |**-e**| (Opcjonalna) Użyj tej właściwości, aby narzędzie opakowujące aplikacje usuwało brakujące uprawnienia podczas przetwarzania aplikacji. Zobacz [Ustawianie uprawnień dla aplikacji](#setting-app-entitlements), aby uzyskać szczegółowe informacje.|

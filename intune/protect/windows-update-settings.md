@@ -5,21 +5,22 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/15/2019
+ms.date: 10/18/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5aaa964151477896c236e504ec9b378cf580e838
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 3f3359bc5544b3a353271ea17083c8c3acb49742
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736380"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72584470"
 ---
 # <a name="windows-update-settings-for-intune"></a>Ustawienia aktualizacji systemu Windows dla usługi Intune  
 
@@ -216,45 +217,9 @@ Ustawienia środowiska użytkownika umożliwiają kontrolowanie środowiska uży
   - **Wyłącz wszystkie powiadomienia, wykluczając ostrzeżenia o ponownym uruchomieniu**
   - **Wyłącz wszystkie powiadomienia, w tym ostrzeżenia o ponownym uruchomieniu**  
 
-- **Zezwalanie użytkownikowi na ponowne uruchamianie (ponowne uruchomienie wymagające interwencji użytkownika)**  
-  **Domyślnie**: Nie skonfigurowano  
-  > [!IMPORTANT]  
-  > Ustawienia *ponownego uruchamiania* nie są już zalecane do użycia. Zamiast tego należy użyć nowych ustawień *terminu ostatecznego* , które zastępują ustawienia *ponownego uruchomienia* . Usługa Intune będzie cofać [obsługę ustawień *ponownego uruchamiania* ](../fundamentals/whats-new.md#plan-for-change-new-windows-updates-settings-in-intune-) w przyszłej aktualizacji.
-
-  Ponowne uruchomienie jest obsługiwane w systemie Windows 10 w wersji 1803 lub nowszej. 
-
-  > [!NOTE]  
-  > W systemie Windows 10 w wersji 1809 wprowadzono dodatkowe ustawienia ponownego uruchamiania wymagającego interwencji użytkownika, które umożliwiają stosowanie oddzielnych ustawień aktualizacji dotyczących funkcji i jakości. Natomiast ustawienia zarządzane przez usługę Intune nie są oddzielnie stosowane do różnych typów aktualizacji. W zamian usługa Intune stosuje te same wartości w przypadku aktualizacje dotyczące funkcji i jakości.  
-  
-  - **Nieskonfigurowany**  
-  - **Wymagane** — ustaw na *Wymagane*, aby włączyć opcje ponownego uruchomienia wymagającego interwencji użytkownika dla aktualizacji systemu Windows 10. Te opcje angażują użytkownika urządzenia, aby pomagał w zarządzaniu czasem ponownego uruchamiania urządzenia po zainstalowaniu aktualizacji, która wymaga ponownego uruchomienia.  
-
-  Aby uzyskać więcej informacji na temat tej opcji, zobacz sekcję [Engaged restart](https://docs.microsoft.com/windows/deployment/update/waas-restart#engaged-restart) (Ponowne uruchomienie wymagające interwencji użytkownika) w dokumentacji systemu Windows 10 dotyczącej wdrażania aktualizacji.  
-
-  Poniższe ustawienia są używane do kontrolowania czasu wykonywania akcji ponownego uruchomienia wymagającego interwencji użytkownika.  
-
-  - **Przenoś użytkowników do ponownego uruchomienia wymagającego interwencji użytkownika po automatycznym ponownym uruchomieniu (dni)**  
-    **Domyślnie**: nie skonfigurowano Windows Update CSP: [Update/EngagedRestartTransitionSchedule](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-engagedrestarttransitionschedule)  
-    
-    Określ wartość **2** do **30**, aby wskazać, jak długo po zainstalowaniu aktualizacji na urządzeniu ma rozpocząć się zachowanie ponownego uruchomienia wymagającego interwencji użytkownika. Po skonfigurowanej liczbie dni użytkownicy otrzymają monit o ponowne uruchomienie urządzenia.  
-
-  - **Odłóż przypomnienie o ponownym uruchomieniu wymagającym interwencji użytkownika (dni)**  
-    **Domyślnie**: Nie skonfigurowano    
-    Windows Update CSP: [Update/EngagedRestartSnoozeSchedule](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-engagedrestartsnoozeschedule)  
-    
-    Określ wartość z przewidzianą od **1** do **3** dla czasu, w którym można przełożyć monit o ponowne uruchomienie.  Po zakończeniu okresu odłożenia monit o ponowne uruchomienie pojawi się jeszcze raz. Użytkownik może nadal odkładać przypomnienie do momentu osiągnięcia terminu instalacji.  
-
-  - **Ustaw termin oczekujących ponownych uruchomień (dni)**  
-    **Domyślnie**: Nie skonfigurowano  
-    Windows Update CSP: [Update/EngagedRestartDeadline](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-engagedrestartdeadline)  
-  
-    Określ wartość **2** do **30** jako maksymalną liczbę dni oczekiwania po rozpoczęciu zachowania ponownego uruchomienia wymagającego interwencji użytkownika, aż urządzenie wymusi wymagane ponowne uruchomienie. To ponowne uruchomienie spowoduje monitowanie użytkowników o zapisanie pracy.
-
 - **Użyj ustawień terminu ostatecznego**  
   **Domyślnie**: Nie skonfigurowano  
-  > [!IMPORTANT]  
-  > Począwszy od aktualizacji z sierpnia dla usługi Intune, zalecamy użycie następujących ustawień terminu ostatecznego, które zastępują ustawienia ponownego uruchamiania. Usługa Intune spowoduje [wycofanie pomocy technicznej dla ustawień *ponownego uruchamiania* ](../fundamentals/whats-new.md#plan-for-change-new-windows-updates-settings-in-intune-) w przyszłej aktualizacji do usługi Intune.  
-
+ 
   Zezwala użytkownikowi na korzystanie z ustawień terminu ostatecznego.  
 
   - **Nieskonfigurowany**
@@ -263,21 +228,21 @@ Ustawienia środowiska użytkownika umożliwiają kontrolowanie środowiska uży
   Jeśli ustawiono wartość *Zezwalaj*, można skonfigurować następujące ustawienia dla terminów:
 
   - **Termin ostateczny aktualizacji funkcji**  
-    **Domyślnie**: 7  
+    **Domyślne**: *Nieskonfigurowane*  
     Windows Update CSP: [Update/ConfigureDeadlineForFeatureUpdates](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforfeatureupdates)  
 
     Określa liczbę dni, przez które użytkownik ma automatycznie instalować aktualizacje funkcji (2-30).
 
   - **Termin ostateczny aktualizacji dotyczących jakości**  
-    **Domyślnie**: 7  
+    **Domyślne**: *Nieskonfigurowane*  
     Windows Update CSP: [Update/ConfigureDeadlineForQualityUpdates](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforqualityupdates)
 
     Określa liczbę dni, przez które użytkownik przed aktualizacjami jakości będzie automatycznie instalowany na swoich urządzeniach (2-30).
 
   - **Okres prolongaty**  
-    **Wartość domyślna**: 2 Windows Update dostawcy usług kryptograficznych: [Update/ConfigureDeadlineGracePeriod]( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
+    **Domyślnie**: *nie skonfigurowano* Windows Update CSP: [Update/ConfigureDeadlineGracePeriod]( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
 
-    Określa minimalną liczbę dni po terminie ostatecznym do momentu automatycznego ponownego uruchomienia (0-7).
+    Określa minimalną liczbę dni po terminie ostatecznym do momentu automatycznego ponownego uruchomienia (2-7).
 
   - **Automatyczny ponowny rozruch przed terminem ostatecznym**  
     **Wartość domyślna**: tak Windows Update dostawcy usług kryptograficznych: [Update/ConfigureDeadlineNoAutoReboot](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)
@@ -285,9 +250,6 @@ Ustawienia środowiska użytkownika umożliwiają kontrolowanie środowiska uży
     Określa, czy urządzenie powinno zostać rozruchem automatycznym przed upływem terminu ostatecznego.
     - **Tak**
     - **Nie**
-
-
-
 
 ### <a name="delivery-optimization-download-mode"></a>Tryb pobierania optymalizacji dostarczania  
 

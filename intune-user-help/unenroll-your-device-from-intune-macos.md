@@ -9,6 +9,7 @@ ms.date: 03/20/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: dd79fc4d-6265-4dd0-87fb-8ab66b1cf692
 searchScope:
@@ -18,14 +19,14 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6e7290820134ffba2638c313adb4297d7da29c3b
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: d4d6ecdc84371c0f485fc1cf26065ed681f29804
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67545949"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72501925"
 ---
-# <a name="unenroll-your-macos-device-from-company-portal"></a>Wyrejestrowywanie urządzenia z systemem macOS z portalu firmy
+# <a name="unenroll-your-macos-device-from-company-portal"></a>Wyrejestruj urządzenie macOS z Portal firmy
 
 Po wyrejestrowaniu z usługi Intune urządzenie z systemem macOS nie może uzyskiwać dostępu do zasobów firmy.
 
@@ -35,7 +36,7 @@ Postępuj zgodnie z następującymi krokami, aby wyrejestrować urządzenie z sy
 2. Przejdź do pozycji **Urządzenia** wybierz urządzenie, które chcesz wyrejestrować.
 
 3. Wybierz ikonę menu wielokropka > **Usuń**.
-4. Zostanie wyświetlony komunikat z potwierdzeniem. Wybierz **Usuń** Aby wyrejestrować urządzenie. 
+4. Zostanie wyświetlony komunikat z potwierdzeniem. Wybierz pozycję **Usuń** , aby wyrejestrować urządzenie. 
 
 Po wyrejestrowaniu urządzenia z usługi Intune:
 
