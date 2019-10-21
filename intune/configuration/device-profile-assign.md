@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 344ffdfefd8b354c9d2ab31f2d08c2a25456f970
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: db1f0944a6725d1f361ea20c972d8ffa8f5d9035
+ms.sourcegitcommit: a50a1ca123ecc2c5ac129f112f73838748f56476
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71724116"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72237210"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Przypisywanie profili użytkowników i urządzeń w usłudze Microsoft Intune
 
@@ -30,6 +30,9 @@ ms.locfileid: "71724116"
 Tworzony przez Ciebie profil obejmuje wszystkie wprowadzone ustawienia. Następnym krokiem jest wdrożenie lub „przypisanie” profilu do grup użytkowników lub urządzeń usługi Azure Active Directory (Azure AD). Po przypisaniu użytkownicy i urządzenia otrzymują swój profil, a wprowadzone ustawienia są stosowane.
 
 W tym artykule pokazano, jak przypisać profil, i przedstawiono niektóre informacje na temat używania tagów zakresu w profilach.
+
+> [!NOTE]  
+> Gdy zasady zostaną usunięte lub nie będą już przypisane do urządzenia, ustawienie może zachować istniejącą wartość. Ustawienie nie zostanie przywrócone do wartości domyślnej. Aby zmienić ustawienie na inną wartość, utwórz nowe zasady i przypisz je.
 
 ## <a name="assign-a-device-profile"></a>Przypisywanie profilu urządzenia
 
@@ -69,7 +72,7 @@ Załóżmy na przykład, że przypisano profil urządzenia do grupy użytkownik�
 
 Dołączenie ma pierwszeństwo przed wykluczeniem w przypadku grup mieszanych, takich jak „grupa użytkowników do grupy urządzeń” lub „grupa urządzeń do grupy użytkowników”.
 
-Możesz na przykład chcieć przypisać profil urządzenia do wszystkich użytkowników w organizacji z wyjątkiem kiosków. Musisz dołączyć grupę **Wszyscy użytkownicy**, ale wykluczyć grupę **Wszystkie urządzenia**. Zasady zostaną wtedy zastosowane do wszystkich użytkowników i ich urządzeń, nawet jeśli dane urządzenie użytkownika należy do grupy **Wszystkie urządzenia**.
+Załóżmy na przykład, że chcesz przypisać profil urządzenia do wszystkich użytkowników w organizacji z wyjątkiem kiosków. Musisz dołączyć grupę **Wszyscy użytkownicy**, ale wykluczyć grupę **Wszystkie urządzenia**. Zasady zostaną wtedy zastosowane do wszystkich użytkowników i ich urządzeń, nawet jeśli dane urządzenie użytkownika należy do grupy **Wszystkie urządzenia**.
 
 Operacja wykluczenia uwzględnia tylko bezpośrednich członków grupy. Nie obejmuje urządzeń skojarzonych z użytkownikiem. Jednak urządzenia nieskojarzone z żadnym użytkownikiem nie otrzymają zasad. Dzieje się tak, ponieważ urządzenia bez użytkowników nie mają relacji z grupą **Wszyscy użytkownicy**.
 

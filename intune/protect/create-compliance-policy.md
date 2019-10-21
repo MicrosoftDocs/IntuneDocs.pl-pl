@@ -1,32 +1,32 @@
 ---
-title: Zasady zgodności urządzeń w usłudze Microsoft Intune na platformie Azure | Microsoft Docs
-description: 'Wprowadzenie do następujących zagadnień: korzystanie z zasad zgodności urządzeń, omówienie stanu i poziomów ważności, korzystanie ze stanu InGracePeriod, praca z dostępem warunkowym, obsługa urządzeń bez przypisanych zasad oraz różnice w zgodności między witryną Azure Portal i portalem klasycznym w usłudze Microsoft Intune'
+title: Tworzenie zasad zgodności urządzeń w usłudze Microsoft Intune — Azure | Microsoft Docs
+description: Tworzenie zasad zgodności urządzeń, omówienie stanu i poziomów ważności, korzystanie ze stanu InGracePeriod, praca z dostępem warunkowym, obsługa urządzeń bez przypisanych zasad oraz różnice w zgodności między witryną Azure Portal i portalem klasycznym w usłudze Microsoft Intune
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/22/2019
+ms.date: 10/09/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
-ms.reviewer: joglocke
+ms.reviewer: samyada
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8b3a99744f830da3c88473e79bce78c97875d73
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 0ec8003264c28ea40d53731c8fb8c3eddef7fded
+ms.sourcegitcommit: dd6755383ba89824d1cc128698a65fde6bb2de55
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71722634"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306582"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Tworzenie zasad zgodności w usłudze Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Zasady zgodności urządzeń to kluczowa funkcja w przypadku ochrony zasobów organizacji za pomocą usługi Intune. W usłudze Intune możesz utworzyć reguły, które muszą być spełniane przez urządzenia, i ustawienia, które muszą być na nich określone, aby można je było uznać za zgodne, np. minimalna wersja systemu operacyjnego. Jeśli urządzenie nie jest zgodne, możesz wtedy zablokować dostęp do danych i zasobów przy użyciu [dostępu warunkowego](conditional-access.md).
+Zasady zgodności urządzeń to kluczowa funkcja w przypadku ochrony zasobów organizacji za pomocą usługi Intune. W usłudze Intune możesz utworzyć reguły, które muszą być spełniane przez urządzenia, i ustawienia, które muszą być na nich określone, aby można je było uznać za zgodne, np. minimalna wersja systemu operacyjnego. Jeśli urządzenie nie jest zgodne, możesz zablokować dostęp do danych i zasobów przy użyciu [dostępu warunkowego](conditional-access.md).
 
 Ponadto możesz wykonywać akcje w przypadku braku zgodności, np. wysłać wiadomość e-mail z powiadomieniem do użytkownika. Omówienie działania zasad zgodności i sposobu ich używania można znaleźć w temacie [Wprowadzenie do zasad zgodności urządzeń](device-compliance-get-started.md).
 
@@ -95,15 +95,15 @@ Aby korzystać z zasad zgodności urządzeń, upewnij się, że spełniono nast�
 
 4. Po zakończeniu wybierz pozycję **OK**  >  **Utwórz**, aby zapisać zmiany. Zasady zostaną utworzone i wyświetlone na liście. Następnie przypisz zasady do grup.
 
-## <a name="assign-user-groups"></a>Przypisywanie grup użytkowników
+## <a name="assign-the-policy"></a>Przypisywanie zasad
 
 Po utworzeniu zasad następnym krokiem jest przypisanie zasad do grup:
 
 1. Wybierz utworzone zasady. Dostęp do istniejących zasad można uzyskać po wybraniu pozycji **Zgodność urządzeń** > **Zasady**.
 2. Wybierz zasady > **Przypisania**. Możesz włączyć lub wyłączyć grupy zabezpieczeń usługi Azure Active Directory (AD).
-3. Wybierz pozycję **Wybrane grupy**, aby wyświetlić grupy zabezpieczeń usługi Azure AD. Wybierz grupy użytkowników, których mają dotyczyć te zasady > **Zapisz**, aby wdrożyć zasady do użytkowników.
+3. Wybierz pozycję **Wybrane grupy**, aby wyświetlić grupy zabezpieczeń usługi Azure AD. Wybierz grupy, których mają dotyczyć te zasady i wybierz pozycję **Zapisz**, aby wdrożyć zasady.
 
-Zasady zostały zastosowane do użytkowników. Urządzenia, którymi posługują się użytkownicy objęci zasadami, będą oceniane pod kątem zgodności.
+Użytkownicy lub urządzenia, których dotyczą zasady, podlegają ocenie pod kątem zgodności po zaewidencjonowaniu w usłudze Intune.
 
 ### <a name="evaluate-how-many-users-are-targeted"></a>Ocenianie, ilu użytkowników jest uwzględnianych
 

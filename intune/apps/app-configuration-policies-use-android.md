@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 59d93bed7bae2b757a4bd1e7b1dffc814629f6a1
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: d31126a259274a2c75f933428632e274d8710aa6
+ms.sourcegitcommit: b8127c7a62d9ac4d0f768980fa1424567bb58733
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71725741"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72350028"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem Android Enterprise
 
@@ -33,7 +33,7 @@ Zasady konfiguracji aplikacji w usłudze Microsoft Intune zawierają ustawienia 
 > [!NOTE]  
 > Nie wszystkie aplikacje obsługują konfigurację aplikacji. Skontaktuj się z deweloperem aplikacji, aby dowiedzieć się, czy jego aplikacja obsługuje zasady konfiguracji aplikacji.
 
-1. W usłudze [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) wybierz pozycję **Aplikacje klienckie** > **Zasady konfiguracji aplikacji** >  **Dodaj**.
+1. W usłudze [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) wybierz pozycje **Aplikacje klienckie** > **Zasady konfiguracji aplikacji** >  **Dodaj**.
 2. Wprowadź następujące właściwości:
 
     - **Nazwa**: wprowadź opisową nazwę zasad. Nadaj nazwę zasadom, aby można było je później łatwo rozpoznać. Na przykład dobrą nazwą zasad jest **Zasady aplikacji Android Enterprise Nine Work dla całej firmy**.
@@ -55,12 +55,12 @@ W przypadku aplikacji zarządzanego sklepu Google Play zaprojektowanych pod kąt
 
 1. Wybierz pozycję **Dodaj**. Wybierz listę ustawień konfiguracji, które chcesz wprowadzić dla aplikacji.
 
-    Jeśli aplikacją poczty e-mail, z której korzystasz, jest GMail lub Nine Work, więcej informacji dotyczących tych ustawień znajduje się w temacie [Android Enterprise device settings to configure email](../email-settings-android-enterprise.md) (Ustawienia urządzeń z systemem Android Enterprise do konfiguracji poczty e-mail).
+    Jeśli aplikacja poczty e-mail, z której korzystasz, to GMail lub Nine Work, więcej informacji dotyczących tych ustawień znajduje się w temacie [Android Enterprise device settings to configure email](../email-settings-android-enterprise.md) (Ustawienia urządzeń z systemem Android Enterprise do konfiguracji poczty e-mail).
 
 2. Dla każdego klucza i wartości konfiguracji ustaw następujące elementy:
 
     - **Typ wartości**: Typ danych wartości konfiguracji. W przypadku typu wartości ciągu możesz opcjonalnie wybrać zmienną lub profil certyfikatu jako typ wartości.
-    - **Wartość konfiguracji**: Wartość konfiguracji. Jeśli wybierzesz zmienną lub certyfikat jako typ wartości, możesz wybrać pozycję z listy zmiennych lub profilów certyfikatów dostępnej na liście rozwijanej wartości konfiguracji. Jeżeli wybierzesz certyfikat, alias certyfikatu wdrożonego na urządzeniu zostanie wypełniony w czasie uruchamiania.
+    - **Wartość konfiguracji**: Wartość konfiguracji. Jeśli wybierzesz zmienną lub certyfikat w polu **Typ wartości**, wybierz z listy zmiennych lub profilów certyfikatów. Jeżeli wybierzesz certyfikat, alias certyfikatu wdrożonego na urządzeniu zostanie wypełniony w czasie uruchamiania.
 
 ### <a name="supported-variables-for-configuration-values"></a>Obsługiwane zmienne dla wartości konfiguracji
 
@@ -86,9 +86,8 @@ W przypadku urządzeń z systemem Android używaj następujących par klucz/wart
 | **Wartości** | <ul><li>Jedna nazwa UPN lub więcej nazw UPN rozdzielonych znakiem <code>;</code>.</li><li>Jedynymi dopuszczonymi kontami są zarządzane konta użytkownika zdefiniowane przez ten klucz.</li><li> W przypadku urządzeń zarejestrowanych w usłudze Intune token <code>{{userprincipalname}}</code> może służyć do reprezentowania zarejestrowanego konta użytkownika.</li></ul> |
 
    > [!NOTE]
-   > W przypadku zezwalania wyłącznie na skonfigurowane konta organizacji w aplikacjach z obsługą wielu tożsamości należy użyć programu Outlook dla systemu Android 2.2.222 lub jego nowszej wersji.<p></p>
+   > Zezwalając jedynie na skonfigurowane konta organizacji z wieloma tożsamościami, musisz używać programu Outlook dla systemu Android w wersji 2.2.222 lub nowszej, programów Word, Excel i PowerPoint dla systemu Android w wersji 16.0.9327.1000 lub nowszej bądź usługi OneDrive dla systemu Android w wersji 5.28 lub nowszej.<p></p>
    > Jako administrator usługi Microsoft Intune masz możliwość kontrolowania kont użytkownika dodawanych do aplikacji pakietu Microsoft Office na urządzeniach zarządzanych. Istnieje możliwość ograniczenia dostępu tylko do dozwolonych kont użytkowników w organizacji oraz blokowania kont osobistych na zarejestrowanych urządzeniach. Aplikacje pomocnicze przetwarzają konfigurację aplikacji i usuwają oraz blokują niezatwierdzone konta.<p></p>
-   > W przypadku programów Microsoft Word, Microsoft Excel i Microsoft PowerPoint należy korzystać z aplikacji w wersji 16.0.9327.1000 lub nowszej. 
 
 ## <a name="enter-the-json-editor"></a>Edytor JSON
 
@@ -104,14 +103,14 @@ Po uruchomieniu przypisanej aplikacji na urządzeniu uruchamiane są ustawienia 
 
 ## <a name="preconfigure-the-permissions-grant-state-for-apps"></a>Wstępna konfiguracja stanu uprawnień dla aplikacji
 
-Możesz również wstępnie skonfigurować uprawnienia aplikacji pod kątem dostępu do funkcji urządzenia z systemem Android. Domyślnie aplikacje systemu Android, które wymagają uprawnień urządzenia, takich jak dostęp do lokalizacji lub aparatu urządzenia, wyświetlają monit o zaakceptowanie lub odrzucenie uprawnień przez użytkownika.
+Możesz również wstępnie skonfigurować uprawnienia aplikacji pod kątem dostępu do funkcji urządzenia z systemem Android. Domyślnie aplikacje systemu Android, które wymagają uprawnień urządzenia, takich jak dostęp do lokalizacji lub aparatu urządzenia, wyświetlają monit o zaakceptowanie lub odmowę przyznania uprawnień przez użytkownika.
 
-Na przykład aplikacja używa mikrofonu urządzenia. Użytkownik otrzymuje monit o przyznanie uprawnienia aplikacji do korzystania z mikrofonu.
+Na przykład aplikacja używa mikrofonu urządzenia. Użytkownik otrzymuje monit o przyznanie aplikacji uprawnienia do korzystania z mikrofonu.
 
-1. W usłudze [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) wybierz pozycję **Aplikacje klienckie** > **Zasady konfiguracji aplikacji** >  **Dodaj**.
+1. W usłudze [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) wybierz pozycje **Aplikacje klienckie** > **Zasady konfiguracji aplikacji** >  **Dodaj**.
 2. Wprowadź następujące właściwości:
 
-    - **Nazwa**: wprowadź opisową nazwę zasad. Nadaj nazwę zasadom, aby można było je później łatwo rozpoznać. Na przykład dobrą nazwą zasad jest **Zasady aplikacji uprawnień monitu systemu Android Enterprise dla całej firmy**.
+    - **Nazwa**: wprowadź opisową nazwę zasad. Nadaj nazwę zasadom, aby można było je później łatwo rozpoznać. Na przykład dobrą nazwą zasad jest **Zasady aplikacji monitu o uprawnienia systemu Android Enterprise dla całej firmy**.
     - **Opis**. Wprowadź opis profilu. To ustawienie jest opcjonalne, ale zalecane.
     - **Typ rejestracji urządzenia**: Wybierz pozycję **Urządzenia zarządzane**.
     - **Platforma**: — wybierz opcję **Android**.

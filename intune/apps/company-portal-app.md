@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b32d34c1878bc0355c510ca342091010af43bca7
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 419fd15f747c8b41377f3aca94c4b96d7c4910c1
+ms.sourcegitcommit: b8127c7a62d9ac4d0f768980fa1424567bb58733
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71724922"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72350011"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Jak skonfigurować aplikację Portal firmy w usłudze Microsoft Intune
 
@@ -52,7 +52,7 @@ Nazwa firmy jest wyświetlana jako tytuł portalu firmy. Zasady zachowania poufn
 | **Adres URL zasad zachowania poufności informacji** |     79     | Istnieje możliwość wprowadzenia własnych zasad zachowania poufności informacji, które będą wyświetlane, gdy użytkownik kliknie w portalu firmy linki do informacji o prywatności. Musisz podać prawidłowy adres URL w postaci `<https://www.contoso.com>`. |
 
 > [!NOTE]
-> Zgodnie z zasadami Microsoft i Apple danych zebranych przez naszą usługę nie sprzedajemy z jakiegokolwiek powodu żadnym podmiotom trzecim.
+> Zgodnie z zasadami firm Microsoft i Apple nie sprzedajemy żadnych danych zebranych przez naszą usługę żadnym podmiotom trzecim z jakiegokolwiek powodu.
 
 ## <a name="support-information"></a>Informacje dotyczące pomocy technicznej
 Wprowadź informacje dotyczące pomocy technicznej w firmie, aby udostępnić pracownikom dane kontaktowe do użycia w przypadku pytań związanych z usługą Intune.
@@ -62,8 +62,8 @@ Wprowadź informacje dotyczące pomocy technicznej w firmie, aby udostępnić pr
 |**Nazwa kontaktu** | 40 | Ta nazwa jest wyświetlana na stronie **Pomoc i obsługa techniczna**. |
 |**Numer telefonu** | 20 | Ten numer kontaktowy jest wyświetlany na stronie **Pomoc i obsługa techniczna** i umożliwia pracownikom kontaktowanie się z pomocą techniczną. |
 |**Adres e-mail**| 40 | Ten adres kontaktowy jest wyświetlany na stronie **Pomoc i obsługa techniczna**. Należy wprowadzić prawidłowy adres e-mail w formacie `alias@domainname.com`. |
-|**Nazwa witryny internetowej**| 40 | Ta nazwa jest przyjazną nazwą wyświetlaną dla adresu URL witryny sieci Web pomocy technicznej. Jeśli zostanie określony tylko adres URL witryny sieci Web pomocy technicznej, ale nie zostanie podana przyjazna nazwa, w portalu firmy na stronie **Pomoc i obsługa techniczna** będzie wyświetlany komunikat Przejdź do witryny sieci Web działu IT. |
-|**Adres URL witryny internetowej**| 150 | Jeśli masz witrynę z pomocą techniczną, którą chcesz udostępnić użytkownikom, podaj tutaj jej adres URL. Adres URL musi mieć postać `https://www.contoso.com`. Jeśli nie określisz adresu URL, w Portalu firmy w witrynie pomocy technicznej na stronie **Pomoc i obsługa techniczna** nie będą wyświetlane żadne informacje. |
+|**Nazwa witryny internetowej**| 40 | Ta nazwa jest przyjazną nazwą wyświetlaną dla adresu URL witryny sieci Web pomocy technicznej. Jeśli określisz tylko adres URL witryny internetowej pomocy technicznej i nie podasz przyjaznej nazwy, witryna Kontakt z działem IT będzie wyświetlana na stronie **Pomoc i obsługa techniczna** w aplikacji Portal firmy. |
+|**Adres URL witryny internetowej**| 150 | Jeśli masz witrynę z pomocą techniczną, którą chcesz udostępnić użytkownikom, podaj tutaj jej adres URL. Adres URL musi mieć postać `https://www.contoso.com`. Jeśli nie określisz adresu URL, w aplikacji Portal firmy na stronie **Pomoc i obsługa techniczna** nie będą wyświetlane żadne informacje dla witryny pomocy technicznej. |
 | **Dodatkowe informacje**| 120 | Wyświetlane na stronie **Pomoc i obsługa techniczna**. |
 
 
@@ -95,7 +95,7 @@ Możesz wyświetlać obraz marki Twojej firmy. Po zapisaniu zmian można wybrać
 
 |Nazwa pola|Więcej informacji|
 |---|---|
-|**Przekaż obraz marki**| Ta opcja umożliwia wyświetlanie obrazu marki. W aplikacji Portal firmy dla systemu iOS jest on wyświetlany jako obraz tła na stronie profilu użytkownika.<p><ul><li>Zalecana szerokość obrazu: większa niż 1125 pikseli (wymagane co najmniej 650 pikseli)</li><li>Maksymalny rozmiar obrazu: 1,3 MB</li><li>Typ pliku: PNG, JPG lub JPEG</li></ul>|
+|**Przekaż obraz marki**| Ta opcja umożliwia wyświetlanie obrazu marki. W aplikacji Portal firmy dla systemu iOS jest on wyświetlany jako obraz tła na stronie profilu użytkownika.<p><ul><li>Zalecana szerokość obrazu: Większa niż 1125 pikseli (wymagane co najmniej 650 pikseli)</li><li>Maksymalny rozmiar obrazu: 1,3 MB</li><li>Typ pliku: PNG, JPG lub JPEG</li></ul>|
 
 Odpowiedni obraz marki wzmacnia pozytywne wrażenie marki, co pozwala zwiększyć zaufanie użytkownika w Portalu firmy. Poniżej przedstawiono porady, które warto wziąć pod uwagę podczas nabywania, wybierania i optymalizowania obrazu dla Portalu firmy. 
 
@@ -121,12 +121,12 @@ Na poniższej ilustracji przedstawiono przykład obrazu marki urządzenia iPhone
 
 ## <a name="privacy-statement-customization"></a>Dostosowywanie oświadczenia o ochronie prywatności
 
-Można dostosować oświadczenie o ochronie prywatności, które jest wyświetlane dla organizacji na zarządzanych urządzeniach z systemem iOS. Ten komunikat zawiera listę elementów, których organizacja nie może zobaczyć ani używać na zarządzanych urządzeniach z systemem iOS.
+Możesz dostosować oświadczenie o ochronie prywatności, które jest wyświetlane dla organizacji na zarządzanych urządzeniach z systemem iOS. Ten komunikat zawiera listę elementów, których organizacja nie może zobaczyć ani używać na zarządzanych urządzeniach z systemem iOS.
 
 W obszarze **Dostosowywanie Portalu firmy** > **Komunikat dotyczący zarządzania urządzeniami i prywatności** możesz:
 
 - wybrać pozycję **Domyślne**, aby zaakceptować listę i używać jej w takiej formie, w jakiej została pokazana, lub
-- Wybierz pozycję **Niestandardowe**, aby dostosować listę elementów, których organizacja nie może zobaczyć ani używać na zarządzanych urządzeniach z systemem iOS. Aby dodać punktory, pogrubienie, kursywę i linki, można użyć znaczników [markdown](https://daringfireball.net/projects/markdown/).
+- wybrać pozycję **Niestandardowe**, aby dostosować listę elementów, których organizacja nie może zobaczyć ani używać na zarządzanych urządzeniach z systemem iOS. Aby dodać punktory, pogrubienie, kursywę i linki, można użyć znaczników [markdown](https://daringfireball.net/projects/markdown/).
 
 ## <a name="windows-company-portal-keyboard-shortcuts"></a>Skróty klawiaturowe w aplikacji Portal firmy dla systemu Windows
 
@@ -165,7 +165,7 @@ Za pomocą aplikacji lub witryny Portal firmy użytkownicy mogą wykonywać akcj
 - **Synchronizuj** — Ta akcja inicjuje ewidencjonowanie urządzenia w usłudze Intune. Ta opcja jest widoczna jako **Sprawdź stan** w Portalu firmy.
 - **Zdalne blokowanie** — Blokuje urządzenie i wymaga podania kodu PIN w celu odblokowania.
 - **Resetowanie kodu dostępu** — Ta akcja służy do resetowania kodu dostępu urządzenia. Na urządzeniach z systemem iOS kod dostępu zostanie usunięty i użytkownik końcowy będzie musiał wprowadzić nowy kod w ustawieniach. Na obsługiwanych urządzeniach z systemem Android nowy kod dostępu jest generowany przez usługę Intune i tymczasowo wyświetlany w Portalu firmy.
-- **Odzyskiwanie kluczy** — Ta akcja służy do odzyskiwania klucza szyfrowania dla urządzeń zaszyfrowanych.
+- **Odzyskiwanie kluczy** — Ta akcja służy do odzyskania osobistego klucza odzyskiwania dla zaszyfrowanych urządzeń z systemem macOS z witryny Portal firmy. 
 
 ### <a name="self-service-actions"></a>Akcje samoobsługowe
 
@@ -180,7 +180,7 @@ Niektóre platformy i konfiguracje nie zezwalają na samoobsługowe akcje urząd
 
 
 <sup>(1)</sup> Wycofanie jest zawsze zablokowane na urządzeniach z systemem Windows dołączonych do usługi Azure AD.<br>
-<sup>(2)</sup> Odzyskiwanie klucza dla systemu MacOS jest dostępne tylko w portalu internetowym.<br>
+<sup>(2)</sup> Odzyskiwanie klucza osobistego dla systemu macOS jest dostępne tylko w witrynie Portal firmy.<br> 
 <sup>(3)</sup> Wszystkie akcje zdalne są wyłączone w przypadku korzystania z rejestracji Menedżera rejestracji urządzeń.<br>
 <sup>(4)</sup> Zmiana nazwy zmienia nazwę urządzenia tylko w aplikacji lub w witrynie Portal firmy, a nie na urządzeniu.<br>
 <sup>(5)</sup> Zdalne czyszczenie nie jest dostępne na urządzeniach z systemem MacOS.<br>

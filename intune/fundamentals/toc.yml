@@ -41,6 +41,16 @@
       href: device-lifecycle.md
     - name: Cykl wsparcia technicznego aplikacji
       href: ../apps/app-lifecycle.md
+    - name: Scenariusze z przewodnikiem
+      items:
+        - name: Scenariusze z przewodnikiem — omówienie
+          href: guided-scenarios-overview.md
+        - name: Wdrażanie przeglądarki Microsoft Edge dla urządzeń przenośnych
+          href: guided-scenarios-edge.md
+        - name: Klasyczny pulpit zarządzany przez chmurę
+          href: guided-scenarios-cloud-managed-pc.md
+        - name: Bezpieczne aplikacje mobilne Microsoft Office
+          href: guided-scenarios-office-mobile.md
     - name: Typowe scenariusze
       href: common-scenarios.md
     - name: 'Podejmowanie decyzji technologicznych dotyczących modelu „Przynieś własne urządzenie” (BYOD, Bring Your Own Device) za pomocą pakietu EMS'
@@ -175,6 +185,8 @@
       href: ../protect/index.yml
     - name: Zarządzanie aplikacjami klienckimi i chronienie ich
       href: ../apps/index.yml
+    - name: Korzystanie z zestawów zasad
+      href: ~/fundamentals/policy-sets.md
     - name: Wskazówki dla deweloperów
       href: ../developer/index.yml
     - name: Uzyskiwanie pomocy i obsługi technicznej

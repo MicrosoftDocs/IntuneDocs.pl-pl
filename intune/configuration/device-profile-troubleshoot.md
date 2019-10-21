@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/29/2019
+ms.date: 10/15/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 618f88d6dbacb886f250b74f6a462b8449b59b18
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 9944aa59f47b7263d46ac96f6aaca3f8ae5c9486
+ms.sourcegitcommit: b8127c7a62d9ac4d0f768980fa1424567bb58733
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71724090"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72349989"
 ---
 # <a name="common-questions-issues-and-resolutions-with-device-policies-and-profiles-in-microsoft-intune"></a>Typowe pytania, problemy i rozwiązania związane z zasadami i profilami urządzeń w usłudze Microsoft Intune
 
@@ -67,11 +67,11 @@ Jeśli urządzenie zostało ostatnio zarejestrowane, zaewidencjonowanie zgodnoś
 | iOS | Co 15 minut przez 1 godzinę, a następnie co około 8 godzin |  
 | macOS | Co 15 minut przez 1 godzinę, a następnie co około 8 godzin | 
 | Android | Co 3 minuty przez 15 minut, następnie co 15 minut przez 2 godziny, a następnie co około 8 godzin | 
-| Komputery z systemem Windows 10 zarejestrowane jako urządzenia | Co 3 minuty przez 30 minut, a następnie co około 8 godzin | 
+| Komputery z systemem Windows 10 zarejestrowane jako urządzenia | Co 3 minuty przez 15 minut, następnie co 15 minut przez 2 godziny, a następnie co około 8 godzin | 
 | Windows Phone | Co 5 minut przez 15 minut, następnie co 15 minut przez 2 godziny, a następnie co około 8 godzin | 
 | Windows 8.1 | Co 5 minut przez 15 minut, następnie co 15 minut przez 2 godziny, a następnie co około 8 godzin | 
 
-W dowolnym momencie użytkownicy mogą otwierać aplikację Portal firmy i synchronizować urządzenie, aby natychmiast wyszukiwać aktualizacje zasad lub profilów.
+Użytkownicy mogą w dowolnym momencie otworzyć aplikację Portal firmy i wybrać pozycję **Ustawienia** > **Synchronizacja**, aby natychmiast wyszukać aktualizacje zasad lub profilów.
 
 W przypadku urządzeń bez koligacji użytkownika częstotliwość synchronizacji natychmiast po rejestracji może być różna i wynosić od kilku godzin do jednego dnia lub więcej. Usługa Intune wysyła żądania w różnych interwałach w celu zaewidencjonowania urządzenia w usłudze Intune. Jednak wykonanie zaewidencjonowania nadal należy do urządzenia. Nie można przewidzieć, ile czasu zajmie ukończenie ewidencjonowania na urządzeniu po początkowej rejestracji. Zależy to również od typu rejestracji urządzenia, a także zasad i profilów przypisanych do urządzenia. Po zarejestrowaniu urządzenia oraz zastosowaniu wszystkich początkowych zasad i profilów urządzenie wyszukuje nowe zasady i profile co 6–8 godzin na podstawie czasu zarejestrowania urządzenia w usłudze Intune.
 
@@ -81,7 +81,7 @@ Najlepszym rozwiązaniem umożliwiającym uzyskanie najlepszych wyników jest up
 
 Istnieją różne akcje wyzwalające powiadomienie, takie jak przypisanie (lub cofnięcie przypisania), zaktualizowanie lub usunięcie zasad, profilu lub aplikacji. Czasy tych akcji różnią się w zależności od platformy.
 
-Urządzenia są zaewidencjonowywane przy użyciu usługi Intune po otrzymaniu powiadomienia z poleceniem zaewidencjonowania lub podczas zaplanowanego zaewidencjonowania. Jeśli akcja, taka jak blokowanie, resetowanie kodu dostępu, przypisywanie aplikacji, profilu lub zasad, została rozpoczęta dla określonego urządzenia lub użytkownika, usługa Intune natychmiast powiadamia urządzenie o konieczności jego zaewidencjonowania w celu odbierania aktualizacji.
+Urządzenia są zaewidencjonowywane przy użyciu usługi Intune po otrzymaniu powiadomienia z poleceniem zaewidencjonowania lub podczas zaplanowanego zaewidencjonowania. Jeśli akcja, taka jak blokowanie, resetowanie kodu dostępu, przypisywanie aplikacji, profilu lub zasad, została rozpoczęta dla określonego urządzenia lub użytkownika, usługa Intune natychmiast powiadamia urządzenie o konieczności jego zaewidencjonowania w celu odebrania tych aktualizacji.
 
 Inne zmiany, takie jak zmiana informacji kontaktowych w aplikacji Portal firmy, nie powodują natychmiastowego wysłania powiadomienia do urządzeń.
 

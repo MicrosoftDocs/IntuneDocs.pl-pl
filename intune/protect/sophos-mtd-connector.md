@@ -1,7 +1,7 @@
 ---
-title: Konfiguracja integracji z programem SEP Mobile w usłudze Intune
+title: Używanie usługi Sophos Mobile z usługą Intune
 titleSuffix: Intune on Azure
-description: Sposób konfigurowania rozwiązania Sophos Mobile w usłudze Microsoft Intune w celu kontrolowania dostępu urządzeń przenośnych do zasobów firmy.
+description: Sposób używania rozwiązania Sophos Mobile w usłudze Microsoft Intune w celu kontrolowania dostępu urządzeń przenośnych do zasobów firmy.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 550dfe58687806f7ead65dab2d7e15b310ae4b6e
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 9bacc784b9d9498196186b1fac0ef948789832b5
+ms.sourcegitcommit: dd6755383ba89824d1cc128698a65fde6bb2de55
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71721919"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306837"
 ---
 # <a name="sophos-mobile-threat-defense-connector-with-intune"></a>Łącznik Sophos Mobile Threat Defense w usłudze Intune
 Dostęp urządzeń przenośnych do zasobów firmy można kontrolować za pomocą dostępu warunkowego opartego na ocenie ryzyka przeprowadzanej przez usługę Sophos Mobile — rozwiązania usługi Mobile Threat Defense (MTD) zintegrowanego z usługą Microsoft Intune. Ryzyko jest oceniane na podstawie danych telemetrycznych zebranych z urządzeń z uruchomioną aplikacją Sophos Mobile.

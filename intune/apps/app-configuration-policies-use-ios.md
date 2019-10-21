@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 542d9c7890f9484311ca8e6400d0a75a41e13d7c
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 94480c8dcfe44dc451ea6a2409f52f06c2a87cf5
+ms.sourcegitcommit: b8127c7a62d9ac4d0f768980fa1424567bb58733
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71725702"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72350072"
 ---
 # <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem iOS
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Zasady konfiguracji aplikacji w usłudze Microsoft Intune umożliwiają określenie niestandardowych ustawień konfiguracji dla aplikacji dla systemu iOS. Dzięki tym ustawieniom konfiguracji aplikację można dostosować na podstawie wskazówek dostawcy aplikacji. Te ustawienia konfiguracji (klucze i wartości) należy uzyskać od dostawcy aplikacji. Aby skonfigurować aplikację, określ ustawienia jako klucze i wartości lub jako plik XML zawierający klucze i wartości.
+Zasady konfiguracji aplikacji w usłudze Microsoft Intune umożliwiają określenie niestandardowych ustawień konfiguracji dla aplikacji dla systemu iOS. Dzięki tym ustawieniom konfiguracji aplikację można dostosować na podstawie wskazówek jej dostawcy. Te ustawienia konfiguracji (klucze i wartości) należy uzyskać od dostawcy aplikacji. Aby skonfigurować aplikację, określ ustawienia jako klucze i wartości lub jako plik XML zawierający klucze i wartości.
 
 Jako administrator usługi Microsoft Intune masz możliwość kontrolowania kont użytkownika dodawanych do aplikacji pakietu Microsoft Office na urządzeniach zarządzanych. Istnieje możliwość ograniczenia dostępu tylko do dozwolonych kont użytkowników w organizacji oraz blokowania kont osobistych na zarejestrowanych urządzeniach. Aplikacje pomocnicze przetwarzają konfigurację aplikacji i usuwają oraz blokują niezatwierdzone konta. Ustawienia zasad konfiguracji są stosowane, gdy aplikacja je wyszukuje (zazwyczaj podczas pierwszego uruchomienia).
 
@@ -45,7 +45,7 @@ Po wybraniu dołączonych grup dla zasad konfiguracji aplikacji możesz też wyb
 > - **Zarządzana aplikacja systemu iOS ze sklepu App Store**
 > - **Pakiet aplikacji dla systemu iOS**
 >
-> Aby uzyskać więcej informacji na temat typów instalacji aplikacji, zobacz artykuł [How to add an app to Microsoft Intune](apps-add.md) (Jak dodać aplikację do usługi Microsoft Intune). Aby uzyskać więcej informacji dotyczących dołączania konfiguracji aplikacji do pakietu aplikacji .ipa dla zarządzanych urządzeń, zobacz temat Managed App Configuration (Konfiguracja zarządzanych aplikacji) w [dokumentacji dla deweloperów systemu iOS](https://developer.apple.com/library/archive/samplecode/sc2279/Introduction/Intro.html).
+> Aby uzyskać więcej informacji na temat typów instalacji aplikacji, zobacz artykuł [How to add an app to Microsoft Intune](apps-add.md) (Jak dodać aplikację do usługi Microsoft Intune). Aby uzyskać więcej informacji dotyczących dołączania konfiguracji aplikacji do pakietu aplikacji .ipa dla zarządzanych urządzeń, zobacz temat Managed App Configuration (Konfiguracja aplikacji zarządzanych) w [dokumentacji dla deweloperów systemu iOS](https://developer.apple.com/library/archive/samplecode/sc2279/Introduction/Intro.html).
 
 ## <a name="create-an-app-configuration-policy"></a>Tworzenie zasad konfiguracji aplikacji
 
@@ -108,7 +108,7 @@ W przypadku urządzeń z systemem iOS używaj następujących par klucz/wartoś�
 | **Wartości** | <ul><li>**Włączone**: jedynym dozwolonym kontem jest zarządzane konto użytkownika zdefiniowane za pomocą klucza [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).</li><li>**Wyłączone** (lub dowolna wartość, która nie stanowi dopasowania do opcji **Włączone** bez uwzględniania wielkości liter): każde konto jest dozwolone.</li></ul> |.
 
    > [!NOTE]
-   > W przypadku zezwalania wyłącznie na skonfigurowane konta organizacji w aplikacjach z obsługą wielu tożsamości należy użyć usługi OneDrive dla systemu iOS 10.34 lub jego nowszej wersji bądź programu Outlook dla systemu iOS 2.99.0 lub jego nowszej wersji, a w aplikacji należy zastosować [zasady ochrony aplikacji usługi Intune](app-protection-policy.md).
+   > W przypadku zezwalania wyłącznie na skonfigurowane konta organizacji z obsługą wielu tożsamości należy użyć usługi OneDrive dla systemu iOS 10.34 lub nowszej wersji, programu Outlook dla systemu iOS 2.99.0 lub nowszej wersji bądź programu Edge dla systemu iOS 44.8.7 lub nowszej wersji, a w aplikacji należy zastosować [zasady ochrony aplikacji usługi Intune](app-protection-policy.md).
 
 ## <a name="enter-xml-data"></a>Wprowadzanie danych XML
 
@@ -183,7 +183,7 @@ Rejestracje programu DEP (Device Enrollment Program firmy Apple) nie są zgodne 
 1. W usłudze Intune w witrynie Azure Portal:
     - Jeśli to konieczne dodaj aplikację Intune — Portal firmy, przechodząc do pozycji **Intune** > **Aplikacje klienckie** > **Aplikacje** > **Dodaj**.
     - Przejdź do pozycji **Aplikacje klienckie** > **Zasady konfiguracji aplikacji**, aby utworzyć zasady konfiguracji aplikacji dla aplikacji Portal firmy.
-2. Utwórz zasady konfiguracji aplikacji za pomocą pliku XML poniżej. Więcej informacji na temat tworzenia zasad konfiguracji aplikacji oraz wprowadzania danych XML można znaleźć w temacie [Add app configuration policies for managed iOS devices](app-configuration-policies-use-ios.md) (Dodawanie zasad konfiguracji aplikacji w przypadku zarządzanych urządzeń z systemem iOS) lub w przypadku hybrydowej usługi MDM w temacie [Apply settings to iOS apps with app configuration policies in System Center Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/configure-ios-apps-with-app-configuration-policies) (Wprowadzanie ustawień w aplikacjach iOS z zastosowaniem zasad konfiguracji aplikacji w programie System Center Configuration Manager).
+2. Utwórz zasady konfiguracji aplikacji za pomocą pliku XML poniżej. Więcej informacji na temat tworzenia zasad konfiguracji aplikacji oraz wprowadzania danych XML można znaleźć w temacie [Add app configuration policies for managed iOS devices](app-configuration-policies-use-ios.md) (Dodawanie zasad konfiguracji aplikacji dla urządzeń zarządzanych z systemem iOS) lub w przypadku hybrydowej usługi MDM w temacie [Apply settings to iOS apps with app configuration policies in System Center Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/configure-ios-apps-with-app-configuration-policies) (Wprowadzanie ustawień w aplikacjach iOS z zastosowaniem zasad konfiguracji aplikacji w programie System Center Configuration Manager).
 
     ``` xml
     <dict>

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8beb8291ede1bf2fde32014fadf9f8cd52da5b6
-ms.sourcegitcommit: fc356fd69beaeb3d69982b47e2bdffb6f7127f8c
+ms.openlocfilehash: 204a19546e9466fdf7064e15b8cba7268ec1b757
+ms.sourcegitcommit: b8127c7a62d9ac4d0f768980fa1424567bb58733
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71830578"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72349975"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>Dodawanie aplikacji internetowych do usługi Microsoft Intune
 
@@ -30,7 +30,9 @@ ms.locfileid: "71830578"
 
 Usługa Intune obsługuje różne typy aplikacji, w tym aplikacje internetowe. Aplikacja internetowa to aplikacja typu klient/serwer. Serwer udostępnia aplikację internetową, która obejmuje interfejs użytkownika, zawartość i funkcje. Ponadto nowoczesne internetowe platformy hostingowe często oferują zabezpieczenia, równoważenie obciążenia i inne korzyści. Aplikacja internetowa jest obsługiwana oddzielnie w Internecie. Usługa Microsoft Intune umożliwia wskazanie tego typu aplikacji. Można także przypisać grupy użytkowników, które będą mogły uzyskiwać dostęp do takiej aplikacji. 
 
-Aby można było zarządzać aplikacją oraz przypisywać ją do użytkowników, należy dodać ją do usługi Intune. Usługa Intune tworzy skrót do aplikacji internetowej na ekranie głównym urządzenia użytkownika.
+Aby można było zarządzać aplikacją oraz przypisywać ją do użytkowników, należy dodać ją do usługi Intune. 
+
+Usługa Intune tworzy skrót do aplikacji internetowej na urządzeniu użytkownika. W przypadku urządzeń z systemem iOS skrót do aplikacji internetowej jest dodawany do ekranu głównego. W przypadku urządzeń z systemem Android skrót do aplikacji internetowej jest dodawany do widżetu Portal firmy usługi Intune, a widżet musi zostać przypięty ręcznie przez użytkownika. W przypadku urządzeń z systemem Windows skrót do aplikacji internetowej jest umieszczany w menu Start.
 
 > [!Note]
 > Aplikacje internetowe nie są obsługiwane na urządzeniach z profilami służbowymi systemu Android. Aby można było uruchamiać aplikacje internetowe, na urządzeniu użytkownika musi być zainstalowana przeglądarka.

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aafce5cefc26f4f86540a6858249e0bdd0af2328
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: b1e72e16eba8bb29adc7360db9e923a15d144b6e
+ms.sourcegitcommit: b8127c7a62d9ac4d0f768980fa1424567bb58733
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71723167"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72350041"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Wymuszanie zgodności usługi Microsoft Defender ATP z dostępem warunkowym w usłudze Intune  
 
@@ -135,7 +135,8 @@ Zasady zgodności określają poziom ryzyka, który uznaje się za akceptowalny 
 2. Wybierz pozycję **Zgodność urządzeń** > **Zasady** > **Utwórz zasady**.
 3. Uzupełnij pola **Nazwa** i **Opis**.
 4. W polu **Platforma** wybierz pozycję **Windows 10 i nowsze**.
-5. W ustawieniach usługi **Microsoft Defender ATP** ustaw pozycję **Wymagaj, aby urządzenie było na poziomie niższym lub równym ocenie ryzyka maszyny** na preferowany poziom. 
+5. W obszarze **Ustawienia** wybierz pozycję **Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender**.
+6. Dla pozycji **Wymagaj, aby urządzenie było na poziomie niższym lub równym ocenie ryzyka maszyny** ustaw preferowany poziom. 
    
    Klasyfikacja poziomów zagrożenia jest [określana przez usługę Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/alerts-queue).
 
@@ -145,7 +146,7 @@ Zasady zgodności określają poziom ryzyka, który uznaje się za akceptowalny 
    - **Wysoki**: Ten poziom jest najmniej bezpieczny i zezwala na wszystkie poziomy zagrożeń. Urządzenia z wysokim, średnim i niskim poziomem zagrożeń są więc uznawane za zgodne.
 
 6. Wybierz opcję **OK** i **Utwórz**, aby zapisać zmiany (i utworzyć zasady).  
-7. [Przypisz zasady zgodności urządzeń](create-compliance-policy.md#assign-user-groups) do odpowiednich grup.
+7. [Przypisz zasady zgodności urządzeń](create-compliance-policy.md#assign-the-policy) do odpowiednich grup.
 
 
 
