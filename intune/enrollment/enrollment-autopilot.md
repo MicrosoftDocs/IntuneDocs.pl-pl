@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 92aa955558120f88afb31e787376fdd1281dd5f4
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: b2ebca165c067afbc3d830e5f75ac9f8e29effb2
+ms.sourcegitcommit: a50a1ca123ecc2c5ac129f112f73838748f56476
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71723180"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72237229"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Rejestrowanie urządzeń z systemem Windows w usłudze Intune za pomocą rozwiązania Windows Autopilot  
 Rozwiązanie Windows Autopilot upraszcza rejestrowanie urządzeń w usłudze Intune. Tworzenie i konserwacja niestandardowych obrazów systemów operacyjnych zajmuje dużo czasu. Trzeba również poświęcić czas na stosowanie tych niestandardowych obrazów systemów operacyjnych na nowych urządzeniach w celu przygotowania ich do użycia przed przekazaniem użytkownikom końcowym. Dzięki usłudze Microsoft Intune i rozwiązaniu Autopilot można przekazać nowe urządzenia użytkownikom końcowym bez konieczności tworzenia, konserwowania i stosowania niestandardowych obrazów systemów operacyjnych do urządzeń. Jeśli do zarządzania urządzeniami z rozwiązaniem Autopilot używasz usługi Intune, możesz zarządzać zasadami, profilami, aplikacjami i nie tylko po ich zarejestrowaniu. Aby zapoznać się z korzyściami, scenariuszami i wymaganiami wstępnymi, zobacz [Overview of Windows Autopilot (Przegląd rozwiązania Windows Autopilot)](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -108,9 +108,9 @@ Profile wdrażania rozwiązania Autopilot służą do konfigurowania urządzeń 
     >Wartość domyślna dla ustawienia Dane diagnostyczne różni się w zależności od wersji systemu Windows. W przypadku urządzeń z systemem Windows 10 w wersji 1903 jest ustawiona wartość domyślna Pełne podczas korzystania z gotowego środowiska obsługi. Aby uzyskać więcej informacji, zobacz [Dane diagnostyczne systemu Windows](https://docs.microsoft.com/windows/privacy/windows-diagnostic-data) <br>
     
     - **Ukryj zmianę opcji konta (wymaga systemu Windows 10 w wersji 1809 lub nowszej)** : wybierz pozycję **Ukryj**, aby zapobiec wyświetlaniu zmian opcji konta na stronach logowania i błędów domeny firmy. Ta opcja wymaga [skonfigurowania znakowania firmowego w usłudze Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding).
-    - **Typ konta użytkownika**: wybierz typ konta użytkownika (**Administrator** lub **Standardowe** konto użytkownika). Zezwalamy użytkownikowi na przyłączenie urządzenia do administratora lokalnego przez dodanie go do lokalnej grupy administratorów. Nie dołączamy użytkownika jako administratora domyślnego na urządzeniu.
+    - **Typ konta użytkownika**: wybierz typ konta użytkownika (**Administrator** lub **Standardowe** konto użytkownika). Użytkownik przyłączający urządzenie może być administratorem lokalnym, jeśli zostanie dodany do lokalnej grupy administratorów. Nie dołączamy użytkownika jako administratora domyślnego na urządzeniu.
     - **Zezwalaj na tryb OOBE White Glove** (wymaga systemu Windows 10 w wersji 1903 lub nowszej; [dodatkowe wymagania fizyczne](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove#prerequisites)): wybierz pozycję **Tak**, aby zezwolić na obsługę trybu White Glove.
-    - **Zastosuj szablon nazwy urządzenia** (wymaga systemu Windows 10 w wersji 1809 lub nowszej): wybierz pozycję **Tak**, aby utworzyć szablon do stosowania podczas określania nazwy urządzenia w trakcie rejestracji. Nazwy mogą mieć co najwyżej 15 znaków i zawierać litery, cyfry i łączniki. Nazwy nie mogą zawierać samych cyfr. Użyj [makro %SERIAL%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp), aby dodać numer seryjny specyficzny dla sprzętu. Ewentualnie możesz zastosować [makro %RAND:x%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp), aby dodać losowy ciąg cyfr, gdzie x odpowiada liczbie cyfr do dodania. 
+    - **Zastosuj szablon nazwy urządzenia** (wymaga systemu Windows 10 w wersji 1809 lub nowszej oraz typu dołączenia do usługi Azure AD): wybierz pozycję **Tak**, aby utworzyć szablon do stosowania podczas określania nazwy urządzenia w trakcie rejestracji. Nazwy mogą mieć co najwyżej 15 znaków i zawierać litery, cyfry i łączniki. Nazwy nie mogą zawierać samych cyfr. Użyj [makro %SERIAL%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp), aby dodać numer seryjny specyficzny dla sprzętu. Ewentualnie możesz zastosować [makro %RAND:x%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp), aby dodać losowy ciąg cyfr, gdzie x odpowiada liczbie cyfr do dodania. Wstępne rozwiązanie dla urządzeń hybrydowych można określić tylko w [profilu dołączania domeny](windows-autopilot-hybrid.md#create-and-assign-a-domain-join-profile). 
     - **Język (region)** \*: wybierz język do użycia dla urządzenia. Ta opcja jest dostępna tylko w przypadku wybrania pozycji **Wdrażanie samodzielne** dla ustawienia **Tryb wdrażania**.
     - **Automatycznie skonfiguruj klawiaturę**\*: jeśli wybrano pozycję **Język (region)** , wybierz pozycję **Tak**, aby pominąć stronę wyboru klawiatury. Ta opcja jest dostępna tylko w przypadku wybrania pozycji **Wdrażanie samodzielne** dla ustawienia **Tryb wdrażania**.
 8. Wybierz pozycję **Dalej**.

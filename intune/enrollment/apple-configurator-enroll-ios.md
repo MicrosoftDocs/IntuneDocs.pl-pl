@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d50fdbb766068e643604cdf729e62cdd07d22b62
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: a1c2acc2ebe5528e30c344a31c9551ac64bdf3ca
+ms.sourcegitcommit: dd6755383ba89824d1cc128698a65fde6bb2de55
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71723518"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306788"
 ---
 # <a name="set-up-ios-device-enrollment-with-apple-configurator"></a>Konfigurowanie rejestracji urządzeń z systemem iOS za pomocą programu Apple Configurator
 
@@ -60,6 +60,9 @@ Profil rejestracji urządzeń określa ustawienia stosowane podczas rejestracji.
     - **Zarejestruj z koligacją użytkownika** — tę opcję należy wybrać w przypadku urządzeń należących do użytkowników, które chcą korzystać z Portalu firmy na potrzeby usług takich jak instalowanie aplikacji. Należy określić przynależność urządzenia do użytkownika za pomocą Asystenta ustawień, po czym urządzenie będzie miało dostęp do firmowych danych i poczty e-mail. Obsługiwana tylko w przypadku rejestracji za pomocą asystenta ustawień. Koligacja użytkownika wymaga [nazwy użytkownika protokołu WS-Trust 1.3/mieszanego punktu końcowego](https://technet.microsoft.com/library/adfs2-help-endpoints). [Dowiedz się więcej](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 
     - **Zarejestruj bez koligacji użytkownika** — tę opcję należy wybrać dla urządzeń, dla których nie istnieje koligacja z żadnym użytkownikiem. Można jej używać dla urządzeń, które wykonują zadania bez uzyskiwania dostępu do lokalnych danych użytkowników. Aplikacje wymagające koligacji użytkownika (w tym aplikacja Portal firmy używana do instalowania aplikacji biznesowych) nie będą działać. Wymagane w przypadku rejestracji bezpośredniej.
+
+     > [!NOTE]
+     > W przypadku wybrania pozycji **Zarejestruj z koligacją użytkownika** upewnij się, że urządzenie zostało skojarzone z użytkownikiem przy użyciu Asystenta ustawień w ciągu pierwszych 24 godzin od rejestracji urządzenia. W przeciwnym razie rejestracja może zakończyć się niepowodzeniem, a w celu zarejestrowania urządzenia będzie konieczne zresetowanie do ustawień fabrycznych.
 
 4. Jeśli została wybrana opcja **Zarejestruj z użyciem koligacji użytkowników**, można zezwolić użytkownikom na uwierzytelnianie za pomocą aplikacji Portal firmy zamiast Asystenta ustawień firmy Apple.
 

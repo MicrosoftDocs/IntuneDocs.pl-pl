@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3bf8fd189e50a704e96fc24d0804c5c5d6f91bb4
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 64a560dc79d3c03f52b8e9389c3e47e3e256ee58
+ms.sourcegitcommit: dd6755383ba89824d1cc128698a65fde6bb2de55
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71728224"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306665"
 ---
 # <a name="integrate-wandera-mobile-threat-protection-with-intune"></a>Integracja rozwiązania Wandera Mobile Threat Protection z usługą Intune  
 
@@ -72,7 +72,7 @@ Konfiguracja połączenia *EMM Connect* dla rozwiązania Wandera wymaga jednoraz
 
 7. W konsoli RADAR skopiuj nazwę grupy **SyncOnly**, która jest widoczna poniżej pozycji **EMM Label** (Etykieta EMM). Użyjesz tej nazwy, aby skonfigurować grupę w usłudze Intune w celu synchronizacji z rozwiązaniem Wandera.
 
-   ![Integracje i uprawnienia](./media/wandera-mtd-connector-integration/sync-group-name.png) 
+   ![Grupa synchronizacji](./media/wandera-mtd-connector-integration/sync-group-name.png) 
 
 8. Wróć do konsoli usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) i edytuj łącznik Wandera MTD. Dla dostępnych przełączników ustaw wartość **Wł.** i kliknij przycisk **Zapisz**, aby zapisać konfigurację.  
 

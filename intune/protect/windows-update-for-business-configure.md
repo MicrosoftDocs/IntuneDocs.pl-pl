@@ -14,16 +14,14 @@ ms.reviewer: coryfe
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5a9ecc1cabb00122d2812580b663fcd0c1dfabc3
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: aa8cc396c05150006799c1e9b86ecb63351cdb36
+ms.sourcegitcommit: 45d7c76e760c5117bf134fb57f7e248e5b6c4ad5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71728094"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72314703"
 ---
 # <a name="manage-software-updates-in-intune"></a>Zarządzanie aktualizacjami oprogramowania w usłudze Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Użyj usługi Intune w celu zdefiniowania pierścieni aktualizacji, które określają, jak i kiedy system Windows jako usługa aktualizuje urządzenia z systemem Windows 10. Pierścienie aktualizacji to zasady, które można przypisać do grup urządzeń. Za pomocą pierścieni aktualizacji można utworzyć strategię aktualizacji, która uwzględnia potrzeby biznesowe. Aby uzyskać więcej informacji, zobacz artykuł [Manage updates using Windows Update for Business](https://technet.microsoft.com/itpro/windows/manage/waas-manage-updates-wufb) (Zarządzanie aktualizacjami za pomocą usługi Windows Update dla firm).
 
@@ -50,13 +48,13 @@ Aby korzystać z aktualizacji systemu Windows dla urządzeń z systemem Windows 
     - **Kanał obsługi**: Obsługiwane są opcje **Półroczny kanał** i **Półroczny kanał (kierowany)** . Aby uzyskać więcej informacji, zobacz [Zarządzanie platformą Windows Holographic](../fundamentals/windows-holographic-for-business.md).  
 
     > [!NOTE]  
-    > **Nieobsługiwane wersje i edycje**:
+    > **Nieobsługiwane wersje i wydania**:
     > - Windows 10 Mobile  
     > - Windows 10 Enterprise LTSC. Usługa Windows Update for Business (WufB) obecnie nie obsługuje wersji *Długoterminowy kanał obsługi*. Zaplanuj użycie alternatywnych metod dodawania poprawek, np. WSUS czy Configuration Manager.  
 
 - Na urządzeniach z systemem Windows opcja **Opinia i diagnostyka** > **Dane diagnostyczne i dane użycia** musi mieć wartość **Podstawowa**, **Rozszerzona** lub **Pełna**.  
 
-  W przypadku urządzeń z systemem Windows 10 możesz ręcznie skonfigurować ustawienie *Dane diagnostyczne i dane użycia* lub użyć profilu ograniczeń dotyczących urządzenia w usłudze Intune w systemie Windows 10 i nowszym. Korzystając z profilu ograniczeń dotyczących urządzenia, w [ustawieniu ograniczeń dotyczących urządzeń](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry) **Udostępnij dane użycia** wybierz co najmniej opcję **Basic**. To ustawienie jest dostępne w kategorii **Raportowanie i telemetria** podczas konfigurowania zasad ograniczeń dotyczących urządzenia w systemie Windows 10 lub nowszym.
+  W przypadku urządzeń z systemem Windows 10 możesz ręcznie skonfigurować ustawienie *Dane diagnostyczne i dane użycia* lub użyć profilu ograniczeń dotyczących urządzenia w usłudze Intune w systemie Windows 10 lub nowszym. Korzystając z profilu ograniczeń dotyczących urządzenia, w [ustawieniu ograniczeń dotyczących urządzeń](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry) **Udostępnij dane użycia** wybierz co najmniej opcję **Basic**. To ustawienie jest dostępne w kategorii **Raportowanie i telemetria** podczas konfigurowania zasad ograniczeń dotyczących urządzenia w systemie Windows 10 lub nowszym.
 
   Aby uzyskać więcej informacji o profilach urządzenia, zobacz artykuł [Konfigurowanie ustawień ograniczeń dotyczących urządzeń](../configuration/device-restrictions-configure.md).  
 
@@ -92,7 +90,7 @@ Oprócz wyświetlania stanu przypisania można wybrać następujące akcje w gó
 ### <a name="delete"></a>Usuwanie  
 Wybierz pozycję **Usuń**, aby zatrzymać wymuszanie ustawień wybranego pierścienia aktualizacji systemu Windows 10. Usunięcie pierścienia powoduje usunięcie jego konfiguracji z usługi Intune, a usługa Intune nie stosuje ani nie wymusza już tych ustawień.  
 
-Usunięcie pierścienia z usługi Intune nie modyfikuje ustawień na urządzeniach, do których przypisano pierścień aktualizacji.  Na urządzeniu zachowywane są bieżące ustawienia. Dzieje się tak, ponieważ urządzenia nie utrzymują historycznego rekordu zawierającego informacje na temat poprzednio stosowanych ustawień, a także ponieważ urządzenie mogło otrzymać ustawienia z dodatkowych pierścieni aktualizacji, które pozostają aktywne.  
+Usunięcie pierścienia z usługi Intune nie modyfikuje ustawień na urządzeniach, do których przypisano pierścień aktualizacji.  Na urządzeniu zachowywane są bieżące ustawienia. Urządzenia nie przechowują historycznego rekordu ustawień, które były wcześniej przechowywane. Urządzenia mogą również odbierać ustawienia z dodatkowych pierścieni aktualizacji, które pozostaną aktywne.  
 
 #### <a name="to-delete-a-ring"></a>Aby usunąć pierścień  
 1. Na wyświetlonej stronie omówienia pierścienia aktualizacji wybierz pozycję **Usuń**.  
@@ -130,6 +128,12 @@ Jeśli pierścień aktualizacji został wstrzymany, możesz wybrać pozycję **R
 ### <a name="uninstall"></a>Odinstalowanie  
 Administrator usługi Intune może użyć pozycji **Odinstaluj** w celu odinstalowania (wycofania) najnowszej aktualizacji dotyczącej *funkcji* lub najnowszej aktualizacji dotyczącej *jakości* dla aktywnego lub wstrzymanego pierścienia aktualizacji. Po odinstalowaniu jednego typu możesz odinstalować drugi typ. Usługa Intune nie obsługuje możliwości odinstalowywania aktualizacji przez użytkowników ani nie zarządza nią.  
 
+> [!IMPORTANT] 
+> W przypadku korzystania z opcji *Odinstaluj* usługa Intune natychmiast przekaże żądanie odinstalowania do urządzeń. 
+> - Urządzenia z systemem Windows rozpoczynają usuwanie aktualizacji zaraz po odebraniu zmiany zasad usługi Intune. Usuwanie aktualizacji nie jest ograniczone do harmonogramów konserwacji nawet wtedy, gdy zostały one skonfigurowane jako część pierścienia aktualizacji. 
+> - Jeśli usuwanie aktualizacji wymaga ponownego uruchomienia urządzenia, urządzenie zostanie ponownie uruchomione, nie oferując użytkownikom urządzenia opcji opóźnienia.
+
+
 Aby odinstalowywanie zakończyło się powodzeniem:  
 - Na urządzeniu musi działać aktualizacja systemu Windows 10 z kwietnia 2018 (wersja 1803) lub nowsza.  
 
@@ -142,7 +146,7 @@ Podczas korzystania z odinstalowywania uwzględnij następujące kwestie:
 
 - Po pomyślnym wycofaniu aktualizacji dotyczącej jakości na urządzeniu z systemem Windows 10 użytkownicy końcowi nadal będą widzieć tę aktualizację wymienioną w obszarze **Ustawienia systemu Windows** > **Aktualizacje** > **Historia aktualizacji**.  
 
-- W szczególności aktualizacje dotyczące funkcji można odinstalować w ograniczonym czasie od 2 do 60 dni, zgodnie z konfiguracją ustawienia aktualizacji pierścieni aktualizacji **Ustaw okres deinstalacji aktualizacji funkcji (od 2 do 60 dni)** . Nie można wycofać aktualizacji funkcji, która została zainstalowana na urządzeniu, jeśli aktualizacja funkcji była zainstalowana dłużej niż skonfigurowany okres odinstalowywania.  
+- W szczególności aktualizacje dotyczące funkcji można odinstalować w ograniczonym czasie od 2 do 60 dni, zgodnie z konfiguracją ustawienia aktualizacji pierścieni aktualizacji **Ustaw okres deinstalacji aktualizacji funkcji (od 2 do 60 dni)** . Nie można wycofać aktualizacji funkcji, która została zainstalowana na urządzeniu, jeśli aktualizacja była zainstalowana dłużej niż skonfigurowany okres odinstalowywania.  
 
   Na przykład rozważ użycie pierścienia aktualizacji z okresem odinstalowywania aktualizacji funkcji o długości 20 dni. Po 25 dniach decydujesz się na wycofanie najnowszej aktualizacji funkcji i użycie opcji Odinstaluj.  Urządzenia, na których aktualizacja funkcji została zainstalowana ponad 20 dni temu, nie mogą jej odinstalować, ponieważ niezbędne elementy zostały usunięte w ramach konserwacji urządzenia. Natomiast urządzenia, na których aktualizacja funkcji została zainstalowana maksymalnie 19 dni temu, mogą odinstalować aktualizację, jeśli zostaną pomyślnie zaewidencjonowane w celu odebrania polecenia odinstalowania przed przekroczeniem 20-dniowego okresu odinstalowywania.  
 
@@ -154,7 +158,7 @@ Aby uzyskać więcej informacji na temat zasad usługi Windows Update, zobacz ar
 3. Po wyzwoleniu odinstalowywania jednego typu aktualizacji możesz ponownie wybrać pozycję Odinstaluj, aby odinstalować pozostały typ aktualizacji.  
 
 ## <a name="migrate-update-settings-to-the-azure-portal"></a>Migrowanie ustawień aktualizacji do witryny Azure Portal  
-Klasyczny portal Azure zawiera również w profilu konfiguracji urządzenia ograniczoną liczbę innych ustawień aktualizacji systemu Windows 10. Jeśli dowolne z tych ustawień jest skonfigurowane podczas migracji do witryny Azure Portal, zdecydowanie zalecamy wykonanie następujących czynności:  
+Klasyczny portal Azure zawiera również w profilu konfiguracji urządzenia ograniczoną liczbę innych ustawień aktualizacji systemu Windows 10. Jeśli dowolne z tych ustawień zostanie skonfigurowane podczas migracji do witryny Azure Portal, zdecydowanie zalecamy wykonanie następujących czynności:  
 
 1. Utwórz pierścienie aktualizacji systemu Windows 10 w witrynie Azure Portal, używając niezbędnych ustawień. Ustawienie **Zezwolenia na funkcje wersji wstępnej** nie jest obsługiwane w witrynie Azure Portal, ponieważ nie jest już stosowane w najnowszych wersjach systemu Windows 10. Podczas tworzenia pierścieni aktualizacji możesz skonfigurować trzy pozostałe ustawienia, jak również inne ustawienia aktualizacji systemu Windows 10.  
 

@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7bb684e787a75900ca2157a04150a8fc6c4ba715
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 7e0a01034bc35ddf8fd8eb1ede5fcf4c942dc735
+ms.sourcegitcommit: dd6755383ba89824d1cc128698a65fde6bb2de55
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71721269"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306806"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>Samouczek: chronienie poczty e-mail usługi Exchange Online na urządzeniach niezarządzanych
 
@@ -113,7 +113,7 @@ Teraz utworzymy dwie zasady dostępu warunkowego, aby uwzględnić wszystkie pla
    3. Usuń zaznaczenia pozostałych pól wyboru.  
    4. Wybierz pozycję **Gotowe** > **Gotowe**, aby wrócić do okienka nowych zasad.  
 
-   ![Wybieranie aplikacji Office 365 Exchange Online](./media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-client-apps.png)
+   ![Wybieranie pozycji Aplikacje mobilne i klienci](./media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-client-apps.png)
 
 7. W obszarze **Kontrole dostępu** wybierz pozycję **Udziel**. 
      
@@ -123,11 +123,11 @@ Teraz utworzymy dwie zasady dostępu warunkowego, aby uwzględnić wszystkie pla
    4. W obszarze **W przypadku wielu kontrolek** wybierz pozycję **Wymagaj wszystkich wybranych kontrolek**. To ustawienie zapewnia, że obydwa wybrane wymagania są wymuszane, gdy urządzenie próbuje uzyskać dostęp do poczty e-mail.
    5. Wybierz pozycję **Wybierz**.
      
-   ![Wybieranie aplikacji Office 365 Exchange Online](./media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-mfa.png)
+   ![Wybieranie kontrolek](./media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-mfa.png)
 
 7. W obszarze **Włącz zasady** wybierz pozycję **Wł.** , a następnie wybierz pozycję **Utwórz**.  
      
-    ![Wybieranie aplikacji Office 365 Exchange Online](./media/tutorial-protect-email-on-unmanaged-devices/enable-policy.png)  
+    ![Tworzenie zasad](./media/tutorial-protect-email-on-unmanaged-devices/enable-policy.png)  
 
 Zostały utworzone zasady dostępu warunkowego dla klientów z nowoczesnym uwierzytelnianiem. Teraz możesz utworzyć zasady dla klientów programu Exchange Active Sync.
 
@@ -153,14 +153,14 @@ Zostały utworzone zasady dostępu warunkowego dla klientów z nowoczesnym uwier
    4. Usuń zaznaczenia wszystkich pozostałych pól wyboru.  
    5. Wybierz pozycję **Gotowe**, a następnie ponownie wybierz pozycję **Gotowe**.  
     
-   ![Wybieranie aplikacji Office 365 Exchange Online](./media/tutorial-protect-email-on-unmanaged-devices/eas-client-apps.png)  
+   ![Stosowanie na obsługiwanych platformach](./media/tutorial-protect-email-on-unmanaged-devices/eas-client-apps.png)  
 
 7. W obszarze **Kontrole dostępu** wybierz pozycję **Udziel**.  
    1. W okienku **Udzielanie** wybierz pozycję **Udziel dostępu**.  
    2. Wybierz pozycję **Wymagaj zatwierdzonej aplikacji klienckiej**. Usuń zaznaczenia wszystkich pozostałych pól wyboru.  
    3. Wybierz pozycję **Wybierz**.  
      
-   ![Wybieranie aplikacji Office 365 Exchange Online](./media/tutorial-protect-email-on-unmanaged-devices/eas-grant-access.png)  
+   ![Wymaganie zatwierdzonej aplikacji klienckiej](./media/tutorial-protect-email-on-unmanaged-devices/eas-grant-access.png)  
 
 8. W obszarze **Włącz zasady** wybierz pozycję **na**.  
 

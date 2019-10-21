@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1bac049aebfb0fec6c9d86e1e08e81237867175d
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: bf862e59e135a875f5f18af731c581f3e5ea89d5
+ms.sourcegitcommit: dd6755383ba89824d1cc128698a65fde6bb2de55
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71723115"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306621"
 ---
 # <a name="enrolled-device-management-capabilities-of-microsoft-intune"></a>Możliwości zarządzania zarejestrowanymi urządzeniami w usłudze Microsoft Intune
 
@@ -43,6 +43,7 @@ Użytkownicy uzyskują dostęp do portalu firmy, który umożliwia instalowanie 
 |Zasady konfiguracji<br><br>Zasady niestandardowe| Umożliwiają zarządzanie wieloma ustawieniami i funkcjami urządzeń przenośnych w organizacji. Na przykład istnieje możliwość wymagania hasła, ograniczenia liczby nieudanych prób, ograniczenia czasu przed włączeniem blokady ekranu, ustawienia wygasania haseł i uniemożliwienia podania wcześniej używanych haseł. Można także kontrolować sposób korzystania z funkcji sprzętu i oprogramowania, na przykład aparatu urządzenia lub przeglądarki sieci Web.<br><br>Użyj zasad niestandardowych, gdy zasady konfiguracji nie zawierają wymaganego ustawienia. W przypadku urządzeń z systemem iOS można importować ustawienia wyeksportowane za pomocą narzędzia Apple Configurator. W przypadku innych urządzeń można użyć ustawień OMA-URI (Open Mobile Alliance Uniform Resource Identifier) w celu skonfigurowania ustawień i funkcji na urządzeniu.|[Zarządzanie ustawieniami i funkcjami na urządzeniach przy użyciu zasad usługi Microsoft Intune](../protect/device-compliance-get-started.md)|
 |Zdalne czyszczenie, zdalne blokowanie i resetowanie kodu dostępu|Służy do usuwania poufnych danych w przypadku utracenia lub kradzieży urządzenia. Na przykład można zdalnie zablokować urządzenie, przywrócić go do ustawień fabrycznych lub wyczyścić z niego dane firmowe.<br><br>Możesz resetować kody dostępu, jeśli użytkownicy utracą dostęp do swoich urządzeń, blokować utracone lub skradzione urządzenia, a nawet czyścić znajdujące się na nich dane.|Łatwiejsza ochrona urządzeń za pomocą funkcji [zdalnego blokowania](../remote-actions/device-remote-lock.md) i [resetowania kodu dostępu](../remote-actions/device-passcode-reset.md)|
 |Tryb kiosku|Umożliwia zablokowanie niektórych funkcji urządzeń przenośnych, takich jak przechwytywanie ekranu i przycisk zasilania. Umożliwia także ograniczenie urządzeń do uruchamiania tylko jednej, określonej aplikacji. |[Ustawienia zasad konfiguracji systemu iOS w usłudze Microsoft Intune](../configuration/device-restrictions-ios.md)|
+|Resetowanie rozwiązania Autopilot|Wysyła zadanie do urządzenia w celu zdalnego uruchomienia procesu resetowania, dzięki czemu pracownicy działu IT ani inni administratorzy nie będą musieli przechodzić do poszczególnych urządzeń w celu uruchomienia procesu. Użycie na urządzeniu resetowania w programie Autopilot spowoduje usunięcie użytkownika podstawowego urządzenia. Następny użytkownik, który zarejestruje się po zresetowaniu, zostanie ustawiony jako użytkownik podstawowy.|[Zdalne resetowanie rozwiązania Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)|
 
 ## <a name="app-management"></a>Zarządzanie aplikacjami
 

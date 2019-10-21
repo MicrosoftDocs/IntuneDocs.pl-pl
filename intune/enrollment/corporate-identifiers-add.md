@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac86e9155f08683ab073ae0b46ea3f2780060c90
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: afc9d953e1d324adb3f00eb5209732a858bbbcda
+ms.sourcegitcommit: 45d7c76e760c5117bf134fb57f7e248e5b6c4ad5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71723349"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72314680"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Określanie urządzeń jako firmowe
 
@@ -35,7 +35,7 @@ Podczas rejestracji usługa Intune automatycznie przypisuje stan „należące d
 - Zarejestrowano je przy użyciu konta [menedżera rejestracji urządzeń](device-enrollment-manager-enroll.md) (wszystkie platformy)
 - Zarejestrowano je przy użyciu programu [Device Enrollment Program](device-enrollment-program-enroll-ios.md) firmy Apple lub przy użyciu narzędzi [Apple School Manager](apple-school-manager-set-up-ios.md) albo [Apple Configurator](apple-configurator-enroll-ios.md) (tylko system iOS)
 - [Zidentyfikowano je jako należące do firmy przed zarejestrowaniem](#identify-corporate-owned-devices-with-imei-or-serial-number) przy użyciu międzynarodowego identyfikatora urządzenia przenośnego (IMEI) (wszystkie platformy z numerami IMEI) lub numeru seryjnego (system iOS i Android)
-- Przyłączono je do usługi Azure Active Directory jako urządzenie z systemem Windows 10 Enterprise
+- Dołączono je do usługi Azure Active Directory przy użyciu poświadczeń służbowych. [Urządzenia zarejestrowane w usłudze Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/overview) zostaną oznaczone jako osobiste.
 - Na [liście właściwości urządzenia](#change-device-ownership) ustawiono je jako firmowe
 
 Po zarejestrowaniu można [zmieniać ustawienie własności](#change-device-ownership) z **Osobiste** na **Firmowe**.

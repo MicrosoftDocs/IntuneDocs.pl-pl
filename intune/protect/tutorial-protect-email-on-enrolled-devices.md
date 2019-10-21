@@ -1,5 +1,5 @@
 ---
-title: Samouczek — chronienie poczty e-mail usługi Exchange Online na urządzeniach zarządzanych przez usługę Intune
+title: Samouczek — chronienie poczty e-mail usługi Exchange Online na urządzeniach zarządzanych
 titleSuffix: Microsoft Intune
 description: Dowiedz się, jak zabezpieczać usługę Exchange Online przy użyciu zasad zgodności usługi Intune dla systemu iOS oraz dostępu warunkowego usługi Azure AD w celu wymagania zarządzanych urządzeń i aplikacji Outlook.
 keywords: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a2d6f14b4b3e1e981cce789664203b74523b2474
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: c20c0c1543cd8fcbf7345a02295486aaaa6ddcea
+ms.sourcegitcommit: dd6755383ba89824d1cc128698a65fde6bb2de55
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71727938"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306870"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>Samouczek: Chronienie poczty e-mail usługi Exchange Online na urządzeniach zarządzanych
 Dowiedz się więcej na temat używania zasad zgodności urządzeń z dostępem warunkowym w celu zagwarantowania, że urządzenia z systemem iOS będą mogły uzyskiwać dostęp do poczty e-mail usługi Exchange Online tylko wtedy, gdy będą zarządzane przez usługę Intune i będą korzystać z zatwierdzonej aplikacji poczty e-mail. 
@@ -95,7 +95,7 @@ Teraz utworzymy zasady dostępu warunkowego, które wymagają zarejestrowania ws
     2. Na karcie **Dołączanie** wybierz pozycję **Dowolne urządzenie**, a następnie wybierz pozycję **Gotowe**. 
     3. Ponownie wybierz pozycję **Gotowe**.
    
-    ![Wybieranie aplikacji Office 365 Exchange Online](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-cloud-device-platforms.png)
+    ![Uwzględnianie dowolnego urządzenia](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-cloud-device-platforms.png)
 
 6. W obszarze **Przypisania** wybierz pozycję **Warunki** > **Aplikacje klienckie**.
      
@@ -103,7 +103,7 @@ Teraz utworzymy zasady dostępu warunkowego, które wymagają zarejestrowania ws
     2. Na potrzeby tego samouczka wybierz pozycje **Aplikacje mobilne i klienci stacjonarni** i **Klienci nowoczesnego uwierzytelniania** (które odnoszą się do aplikacji, takich jak program Outlook dla systemu iOS i Outlook dla systemu Android). Usuń zaznaczenia wszystkich pozostałych pól wyboru.
     3. Wybierz pozycję **Gotowe**, a następnie ponownie wybierz pozycję **Gotowe**.
     
-    ![Wybieranie aplikacji Office 365 Exchange Online](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-client-apps.png)
+    ![Wybieranie aplikacji i klientów](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-client-apps.png)
 
 7. W obszarze **Kontrole dostępu** wybierz pozycję **Udziel**. 
      
@@ -113,11 +113,11 @@ Teraz utworzymy zasady dostępu warunkowego, które wymagają zarejestrowania ws
     4. W obszarze **W przypadku wielu kontrolek** wybierz pozycję **Wymagaj wszystkich wybranych kontrolek**. To ustawienie zapewnia, że obydwa wybrane wymagania są wymuszane, gdy urządzenie próbuje uzyskać dostęp do poczty e-mail.
     5. Wybierz pozycję **Wybierz**.
      
-    ![Wybieranie aplikacji Office 365 Exchange Online](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-grant-access.png)
+    ![Wybieranie kontrolek](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-grant-access.png)
 
 8. W obszarze **Włącz zasady** wybierz pozycję **na**.
      
-    ![Wybieranie aplikacji Office 365 Exchange Online](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-enable-policy.png)
+    ![Włączanie zasad](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-enable-policy.png)
 
 9. Wybierz przycisk **Utwórz**.
 

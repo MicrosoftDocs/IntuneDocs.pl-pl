@@ -1,13 +1,13 @@
 ---
-ms.openlocfilehash: f42baa1ca6e3ac6dca3c95a0eb9e422df2506031
-ms.sourcegitcommit: 3f0cc80c5dbb4d04519c5aa98eae8426dad8cb30
+ms.openlocfilehash: f7916bc38be085625f5a65d7889212827bcae5d3
+ms.sourcegitcommit: 45d7c76e760c5117bf134fb57f7e248e5b6c4ad5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "71721256"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72314611"
 ---
 ### <a name="apple"></a>Apple
-- System Apple iOS 9.0 lub nowszy
+- System Apple iOS i iPadOS 9.0 lub nowszy
 - System Mac OS X 10.9 lub nowszy
 
 ### <a name="windows"></a>Windows
@@ -18,7 +18,7 @@ ms.locfileid: "71721256"
 - System Windows Holographic &amp; Windows Holographic Enterprise
 - Systemy Windows Phone 8.1, Windows 8.1 RT i komputery z systemem Windows 8.1 (tryb utrzymania)
 
-  Klienci z pakietem Enterprise Management + Security (EMS) mogą także [użyć usługi Azure Active Directory (AAD), aby zarejestrować urządzenia z systemem Windows 10](/intune-classic/deploy-use/set-up-windows-device-management-with-microsoft-intune#azure-active-directory-enrollment).
+  Klienci z pakietem Enterprise Management + Security (EMS) mogą także [użyć usługi Azure Active Directory (AAD), aby zarejestrować urządzenia z systemem Windows 10](/intune/enrollment/windows-enroll#enable-windows-10-automatic-enrollment).
 
   [Klient oprogramowania usługi Intune](/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune) umożliwia też zarządzanie komputerami z systemem Windows 7 lub nowszym, z wyjątkiem systemu Windows 10 Home Edition.
 
@@ -26,6 +26,4 @@ ms.locfileid: "71721256"
 - System Google Android 4.0 lub nowszy (w tym system Samsung KNOX Standard w wersji 4.0 lub nowszej)*
 - Program Google Android for Work ([wymagania](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012 style="target=new_window"))
 
-*Następujące modele telefonu Samsung Galaxy Ace nie mogą być zarządzane przez usługę Intune jako urządzenia Samsung KNOX: SM-G313HU, SM-G313HY, SM-G313M, SM-G313MY i SM-G313U. Te urządzenia są zarządzane jako standardowe urządzenia z systemem Android. Aby uzyskać więcej informacji, odwiedź witrynę sieci Web [Samsung KNOX](https://www.samsungknox.com/en).
-
-Aby zapoznać się z pełną listą urządzeń oraz metod zarządzania, zobacz [Urządzenia obsługiwane przez usługę Intune](/intune/supported-devices-browsers#intune-supported-devices).
+*Następujące modele telefonu Samsung Galaxy Ace nie mogą być zarządzane przez usługę Intune jako urządzenia Samsung KNOX: SM-G313HU, SM-G313HY, SM-G313M, SM-G313MY i SM-G313U. Te urządzenia są zarządzane jako standardowe urządzenia z systemem Android. Aby uzyskać więcej informacji, odwiedź [witrynę internetową systemu Samsung KNOX](https://www.samsungknox.com/en).

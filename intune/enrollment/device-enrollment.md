@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3fb9af260b8fddc78b644b8ede056c90bac24d0
-ms.sourcegitcommit: 29b1113dc04534c4c87c33c773c5a0e24266e042
+ms.openlocfilehash: 304e869460a5396a486b6de0cd5c2f549c192b70
+ms.sourcegitcommit: 60ed93682a21860e9d99ba1592ede120477f2b4d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71999357"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72379863"
 ---
 # <a name="what-is-device-enrollment"></a>Co to jest rejestrowanie urządzenia?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -80,7 +80,7 @@ Domyślnie w usłudze Intune mogą być rejestrowane urządzenia dla dowolnej pl
 
 
 ## <a name="bring-your-own-device"></a>Korzystanie z własnych urządzeń
-Model „Przynieś własne urządzenie” (BYOD) obejmuje osobiste telefony, tablety i komputery. W celu zarejestrowania urządzeń BYOD użytkownicy instalują i uruchamiają aplikację Portal firmy. Ten program umożliwia użytkownikom dostęp do zasobów firmowych, takich jak wiadomości e-mail.
+Model „Przynieś własne urządzenie” (BYOD) obejmuje telefony, tablety i komputery stanowiące własność użytkownika. W celu zarejestrowania urządzeń BYOD użytkownicy instalują i uruchamiają aplikację Portal firmy. Ten program umożliwia użytkownikom dostęp do zasobów firmowych, takich jak wiadomości e-mail.
 
 ## <a name="corporate-owned-device"></a>Urządzenie należące do firmy
 [Urządzenia należące do firmy (COD)](corporate-identifiers-add.md) obejmują telefony, tablety oraz komputery należące do organizacji i dostarczane pracownikom. Rejestracja urządzeń COD obsługuje takie scenariusze jak automatyczne rejestrowanie, urządzenia udostępnione lub wstępnie autoryzowane wymagania dotyczące rejestracji. Często stosowaną metodą rejestracji urządzeń COD jest użycie menedżera rejestracji urządzeń (DEM) przez administratora lub kierownika. Urządzenia z systemem iOS można zarejestrować bezpośrednio za pomocą narzędzi programu Device Enrollment Program (DEP) dostarczonych przez firmę Apple. Urządzenia z numerem IMEI można również zidentyfikować i oznaczyć jako należące do firmy.
@@ -97,7 +97,7 @@ Więcej informacji o rejestracji DEP urządzeń z systemem iOS:
 - [Rejestrowanie urządzeń z systemem iOS przy użyciu programu Device Enrollment Program](device-enrollment-program-enroll-ios.md)
 
 ### <a name="usb-sa"></a>USB-SA
-Korzystając z programu Apple Configurator za pośrednictwem połączenia USB, administratorzy IT mogą ręcznie przygotować każde urządzenie firmowe do rejestracji przy użyciu Asystenta ustawień. Administrator IT tworzy profil rejestracji i eksportuje go do programu Apple Configurator. Gdy użytkownicy otrzymają swoje urządzenia, są proszeni o uruchomienie Asystenta ustawień i zarejestrowania swojego urządzenia. Ta metoda obsługuje tryb **nadzorowany systemu iOS**, który z kolei udostępnia następujące funkcje:
+Korzystając z programu Apple Configurator za pośrednictwem połączenia USB, administratorzy IT mogą ręcznie przygotować każde urządzenie firmowe do rejestracji przy użyciu Asystenta ustawień. Administrator IT tworzy profil rejestracji i eksportuje go do programu Apple Configurator. Gdy użytkownicy otrzymują swoje urządzenia, są następnie proszeni o uruchomienie Asystenta ustawień w celu zarejestrowania swojego urządzenia. Ta metoda obsługuje tryb **nadzorowany systemu iOS**, który z kolei udostępnia następujące funkcje:
 - Rejestrację zablokowaną
 - Tryb kiosku i inne zaawansowane konfiguracje oraz ograniczenia
 
