@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 10/02/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 14da6274546cbd4c1867975c08c60ece313714b1
-ms.sourcegitcommit: 78f9750712c254d8b123ef15b74f30ca999aa128
+ms.openlocfilehash: e9542212e1b75d97c96c024eed20e20e610e2b5d
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71917979"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72503650"
 ---
 # <a name="resolve-common-problems-with-the-intune-exchange-connector"></a>Rozwiązywanie typowych problemów z programem Intune Exchange Connector
  
@@ -55,7 +56,7 @@ Użytkownik może nie otrzymać wiadomości e-mail z powiadomieniem, ponieważ:
 Zapoznaj się z następującymi sekcjami, aby rozwiązać problemy z powiadomieniami e-mail.
 
 ### <a name="check-the-notification-account-that-retrieves-autodiscover-settings"></a>Sprawdź konto powiadomień, które pobiera ustawienia wykrywania automatycznego
-1. Upewnij się, że usługa wykrywania automatycznego i interfejs EWS zostały skonfigurowane w usługach dostępu klienta programu Exchange. Aby uzyskać więcej informacji, zobacz [usługi dostępu klienta](https://docs.microsoft.com/Exchange/architecture/client-access/client-access) i [Usługa wykrywania automatycznego w programie Exchange Server](https://docs.microsoft.com/Exchange/architecture/client-access/autodiscover?view=exchserver-2019).
+1. Upewnij się, że usługa wykrywania automatycznego i usługi EWS zostały skonfigurowane w usługach dostępu klienta programu Exchange. Aby uzyskać więcej informacji, zobacz [usługi dostępu klienta](https://docs.microsoft.com/Exchange/architecture/client-access/client-access) i [Usługa wykrywania automatycznego w programie Exchange Server](https://docs.microsoft.com/Exchange/architecture/client-access/autodiscover?view=exchserver-2019).
 
 
 2. Sprawdź, czy konto powiadomienia spełnia następujące wymagania:
@@ -69,10 +70,10 @@ Zapoznaj się z następującymi sekcjami, aby rozwiązać problemy z powiadomien
    1. W wierszu polecenia wpisz polecenie *nslookup*.  
 
    2. Wprowadź *Autodiscover.SMTPdomain.com*. Dane wyjściowe powinny wyglądać podobnie jak na poniższym obrazie:  
-      ![Nslookup wyniki](./media/troubleshoot-exchange-connector-common-problems/nslookup-results.png
+      ![Nslookup wyniki ](./media/troubleshoot-exchange-connector-common-problems/nslookup-results.png
 )
 
-   Usługę wykrywania automatycznego można testować również z Internetu w https://testconnectivity.microsoft.com. Lub przetestuj ją z domeny lokalnej za pomocą narzędzia Microsoft Connectivity Analyzer. Aby uzyskać więcej informacji, zobacz [Narzędzie Analizator łączności Microsoft](https://docs.microsoft.com/en-us/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80)). W razie potrzeby [Pobierz narzędzie Microsoft Connectivity Analyzer](http://go.microsoft.com/fwlink/?LinkID=313782).
+   Usługę wykrywania automatycznego można testować również z Internetu w https://testconnectivity.microsoft.com. Lub przetestuj ją z domeny lokalnej za pomocą narzędzia Microsoft Connectivity Analyzer. Aby uzyskać więcej informacji, zobacz [Narzędzie Analizator łączności Microsoft](https://docs.microsoft.com/en-us/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80)). W razie potrzeby [Pobierz narzędzie Microsoft Connectivity Analyzer](https://go.microsoft.com/fwlink/?LinkID=313782).
 
 
 ### <a name="check-autodiscovery"></a>Sprawdź Autowykrywanie  
@@ -84,7 +85,7 @@ W przypadku niepowodzenia wykrywania awaryjnego spróbuj wykonać następujące 
 
    1. Określ adres URL EWS. Domyślny adres URL EWS dla programu Exchange to `https://<mailServerFQDN>/ews/exchange.asmx`, ale adres URL może się różnić. Skontaktuj się z administratorem programu Exchange, aby zweryfikować prawidłowy adres URL dla danego środowiska.
 
-   2. Edytuj plik *OnPremisesExchangeConnectorServiceConfiguration.xml*. Domyślnie plik znajduje się w *%ProgramData%\Microsoft\Windows Intune Exchange Connector* na komputerze, na którym jest uruchomiony program Exchange Connector. Otwórz plik w edytorze tekstów, a następnie zmień następujący wiersz, aby odzwierciedlić adres URL EWS dla środowiska: `<ExchangeWebServiceURL>https://<YourExchangeHOST>/EWS/Exchange.asmx</ExchangeWebServiceURL>`
+   2. Edytuj plik *OnPremisesExchangeConnectorServiceConfiguration.xml*. Domyślnie plik znajduje się w *%ProgramData%\Microsoft\Windows Intune Exchange Connector* na komputerze, na którym jest uruchomiony program Exchange Connector. Otwórz plik w edytorze tekstów, a następnie zmień następujący wiersz, aby odzwierciedlić adres URL EWS środowiska: `<ExchangeWebServiceURL>https://<YourExchangeHOST>/EWS/Exchange.asmx</ExchangeWebServiceURL>`
     
 
 3. Zapisz plik, a następnie uruchom ponownie komputer lub usługę Microsoft Intune Exchange Connector.
