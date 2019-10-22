@@ -1,6 +1,6 @@
 ---
-title: Szyfrowanie urządzenia z systemem Android w usłudze Intune | Dokumentacja firmy Microsoft
-description: Kroki, aby włączyć szyfrowanie urządzenia z systemem Android, gdy jest to wymagane przez usługę Intune
+title: Szyfrowanie urządzenia z systemem Android w usłudze Intune | Microsoft Docs
+description: Kroki umożliwiające włączenie szyfrowania urządzeń z systemem Android w razie potrzeby usługi Intune
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -9,6 +9,7 @@ ms.date: 04/19/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: d4430e92-04cc-48e9-a77a-81b95a90b6b3
 searchScope:
@@ -18,55 +19,55 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cfc17c60412a1cfe90693216caa69ada3d2d2c9a
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: d2965d6a017d92bd4535a29a2257c0cac5e6deaf
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67545261"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72506365"
 ---
 # <a name="encrypting-your-android-device"></a>Szyfrowanie urządzenia z systemem Android
 
-Szyfrowanie urządzenia chroni pliki i foldery przed nieautoryzowanym dostępem, w przypadku utraty lub kradzieży urządzenia. Po włączeniu szyfrowania urządzenia tylko osoby, które mają poprawne hasło lub kod pin będzie można logować się do urządzenia. 
+Szyfrowanie urządzenia chroni pliki i foldery przed nieautoryzowanym dostępem w przypadku zgubienia lub kradzieży urządzenia. Po włączeniu szyfrowania urządzenia tylko osoby z poprawnym hasłem lub numerem PIN będą mogły zalogować się na urządzeniu. 
 
-Przed uzyskujesz dostęp do zasobów służbowych lub firmowe, Twoja organizacja może wymagać zaszyfrowania urządzenia z systemem Android. Niektórych nowszych urządzeniach z systemem Android są domyślne szyfrowanie przekazywanego materiału, out-of--box.  
+Aby można było uzyskać dostęp do szkoły lub zasobów służbowych, organizacja może wymagać zaszyfrowania urządzenia z systemem Android. Niektóre nowsze urządzenia z systemem Android są domyślnie szyfrowane.  
 
 ## <a name="turn-on-encryption"></a>Włącz szyfrowanie
 
-Jeśli Portal firmy lub aplikacji Microsoft Intune monituje o zaszyfrować urządzenie, wykonaj następujące czynności. 
+Jeśli Portal firmy lub aplikacja Microsoft Intune poprosi Cię o zaszyfrowanie urządzenia, wykonaj następujące czynności. 
 
 > [!Note]
-> Niektóre urządzenia z systemem Android z Huawei, Vivo i OPPO, nie mogą być szyfrowane. Dowiedz się więcej [tutaj](your-device-appears-encrypted-but-cp-says-otherwise-android.md).  
+> Nie można zaszyfrować niektórych urządzeń z systemem Android z kartami Huawei, vivo i OPPO. Dowiedz się więcej [tutaj](your-device-appears-encrypted-but-cp-says-otherwise-android.md).  
 
-1. Ustawianie blokady ekranu urządzenia.  
+1. Ustaw blokadę ekranu urządzenia.  
     a. Przejdź kolejno do pozycji **Ustawienia** > **Ekran blokady i zabezpieczenia** > **Typ blokady ekranu**.  
-    b. Wybierz opcję **numeru PIN**, **hasło**, lub **wzorzec**.  
-    c. Postępuj zgodnie z instrukcjami wyświetlanymi na ekranie, aby skonfigurować blokadę ekranu.  
+    b. Wybierz opcję **kod PIN**, **hasło**lub **wzorzec**.  
+    c. Postępuj zgodnie z instrukcjami na ekranie, aby skonfigurować blokadę ekranu.  
 
-2. Wróć do **blokada ekranu i zabezpieczenia** i wybierz **bezpieczne uruchamianie**.
-3. Wybierz **Wymagaj numeru PIN, gdy urządzenie włączy** > **OK**.
-4. Wprowadź numer PIN, aby potwierdzić i zaszyfrować urządzenie z systemem.
+2. Wróć do **ekranu blokady i zabezpieczeń** , a następnie wybierz pozycję **bezpieczne uruchamianie**.
+3. Wybierz pozycję **Wymagaj numeru PIN po włączeniu urządzenia**  > **OK**.
+4. Wprowadź numer PIN, aby potwierdzić i zaszyfrować urządzenie.
 5. Otwórz aplikację Portal firmy lub Microsoft Intune.
     * Użytkownicy aplikacji Portal firmy: wybierz urządzenie i wybierz pozycję **Sprawdź ustawienia urządzenia**. 
-    * Microsoft Intune, użytkownicy: musisz czekać do momentu aktualizacji stron, ale gdy tak się stanie, Twój status szyfrowania należy zmienić na zgodne.  
+    * Microsoft Intune użytkownicy: należy poczekać, aż strona zostanie zaktualizowana, ale gdy tak się stanie, stan szyfrowania powinien zmienić się na zgodny.  
 
-Urządzenia z systemem Android 4.4 lub wcześniej może nie mieć **bezpiecznego uruchamiania** opcji. W takiej sytuacji wykonaj poniższe kroki, aby zaszyfrować urządzenie.
+W przypadku urządzeń z systemem Android 4,4 i wcześniejszymi może nie być dostępna opcja **bezpiecznego uruchamiania** . W takim przypadku wykonaj następujące kroki, aby zaszyfrować urządzenie.
 
-1. Przejdź do **ustawienia** > **zabezpieczeń** > **szyfrowania urządzenia**. Na ekranie etykietami różnią się między urządzeniami z systemem Android. Jeśli nie widzisz **Zaszyfruj urządzenie** opcji, sprawdź plik w folderze:
-    * **Magazyn** > **szyfrowanie magazynu**
-    * **Magazyn** > **blokada ekranu i zabezpieczenia** > **inne ustawienia zabezpieczeń** 
+1. Przejdź do pozycji **ustawienia**  > **zabezpieczenia**  > **szyfrowanie urządzenia**. Etykiety na ekranie różnią się w zależności od urządzeń z systemem Android. Jeśli nie widzisz opcji **Szyfruj urządzenie** , Zaewidencjonuj:
+    * **Szyfrowanie magazynu** ** >  Storage**
+    *  > **ustawień zabezpieczeń** **magazynu** >  **i zabezpieczeń** 
 
 2. Wykonaj instrukcje wyświetlane na ekranie. Podczas szyfrowania urządzenie może być kilka razy ponownie uruchamiane.
 3. Otwórz aplikację Portal firmy lub Microsoft Intune.
     * Użytkownicy aplikacji Portal firmy: wybierz urządzenie i wybierz pozycję **Sprawdź ustawienia urządzenia**.  
-    * Microsoft Intune, użytkownicy: musisz czekać do momentu aktualizacji stron, ale gdy tak się stanie, Twój status szyfrowania należy zmienić na zgodne.
+    * Microsoft Intune użytkownicy: należy poczekać, aż strona zostanie zaktualizowana, ale gdy tak się stanie, stan szyfrowania powinien zmienić się na zgodny.
 
 ## <a name="troubleshoot"></a>Rozwiązywanie problemów  
 **Problem**: urządzenie zostało już zaszyfrowane i
 
 - Przycisk szyfrowania jest wyłączony.
 - Został wyświetlony komunikat informujący o tym, że szyfrowanie jest w dalszym ciągu wymagane.
-- Wystąpiły błędy podczas próby użycia aplikacji Portal firmy lub Microsoft Intune.
+- Wystąpią błędy podczas próby użycia aplikacji Portal firmy lub Microsoft Intune.
 
 **Co należy zrobić**
 
