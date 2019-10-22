@@ -6,21 +6,22 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/26/2019
+ms.date: 10/08/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bcd86cedc7684f31483d7cd3c8294a76a9c306b2
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: a26af380ef00c85c681beccdcdf188c343da1b94
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71734911"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72584885"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem iOS i iPadOS umożliwiające działanie funkcji lub ich ograniczanie przy użyciu usługi Intune
 
@@ -140,12 +141,12 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ustawienia dotyczą: Rejestracja urządzenia, automatyczna rejestracja urządzeń (nadzorowane)
 
 > [!IMPORTANT]
-> W przypadku urządzeń zarejestrowanych przez użytkownika w przypadku skonfigurowania dowolnego ustawienia hasła ustawienia **proste hasła** są automatycznie ustawiane na wartość **Blokuj**i wymuszane jest 6-cyfrowy numer PIN.
+> Jeśli skonfigurujesz dowolne ustawienie hasła na urządzeniach zarejestrowanych przez użytkownika, ustawienia w obszarze **Proste hasła** są automatycznie ustawiane na wartość **Blokuj** i jest wymuszany 6-cyfrowy numer PIN.
 >
-> Można na przykład skonfigurować ustawienie **wygaśnięcia hasła** i wypchnąć te zasady do urządzeń zarejestrowanych przez użytkownika. Na urządzeniach są wykonywane następujące działania:
+> Można na przykład skonfigurować ustawienie **Wygaśnięcie hasła** i wypchnąć te zasady do urządzeń zarejestrowanych przez użytkownika. Na urządzeniach występują następujące zdarzenia:
 >
-> - Ustawienie **wygaśnięcia hasła** jest ignorowane.
-> - Proste hasła, takie jak `1111` lub `1234`, są niedozwolone.
+> - Ustawienie **Wygaśnięcie hasła** jest ignorowane.
+> - Proste hasła, takie jak `1111` lub `1234`, nie są dozwolone.
 > - 6-cyfrowy numer PIN jest wymuszany.
 
 - **Proste hasła**: wybierz pozycję **Blokuj**, aby wymagać bardziej złożonych haseł. Pozycja **Nieskonfigurowane** zezwala na proste hasła, takie jak `0000` i `1234`.
@@ -159,7 +160,7 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 - **Minimalna długość hasła**: podaj minimalną długość hasła, które musi wprowadzić użytkownik — od 4 do 14 znaków. Na urządzeniach zarejestrowanych przez użytkownika wprowadź długość od 4 do 6 znaków.
   
   > [!NOTE]
-  > W przypadku urządzeń, które są zarejestrowane przez użytkownika, użytkownicy mogą ustawić numer PIN większy niż 6 cyfr. Ale na urządzeniu nie ma więcej niż 6 cyfr. Na przykład administrator ustawia minimalną długość na `8`. Na urządzeniach zarejestrowanych przez użytkownika użytkownicy są zobowiązani tylko do ustawienia 6-cyfrowy numer PIN. Usługa Intune nie wymusza numeru PIN większego niż 6 cyfr na urządzeniach zarejestrowanych przez użytkownika.
+  > W przypadku urządzeń, które są zarejestrowane przez użytkownika, użytkownicy mogą ustawić numer PIN większy niż 6 cyfr. Ale na urządzeniu nie ma więcej niż 6 cyfr. Na przykład administrator ustawia minimalną długość do `8`. Na urządzeniach zarejestrowanych przez użytkownika użytkownicy są zobowiązani tylko do ustawienia 6-cyfrowy numer PIN. Usługa Intune nie wymusza numeru PIN większego niż 6 cyfr na urządzeniach zarejestrowanych przez użytkownika.
 
 - **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia**: wprowadź liczbę dopuszczalnych nieudanych logowań przed wyczyszczeniem urządzenia (od 4 do 11).
   
@@ -266,6 +267,11 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 - **Gry dla wielu graczy**: wybierz opcję **Blokuj** , aby zapobiec grach dla wielu graczy. Pozycja **Nieskonfigurowane** (wartość domyślna) zezwala użytkownikowi na gry dla wielu graczy na urządzeniu.
 
   Począwszy od systemu iOS 13,0, to ustawienie wymaga nadzorowanych urządzeń.
+
+- **Dostęp do dysku sieciowego w aplikacji plików**: przy użyciu protokołu SMB (Server Message Block) urządzenia mogą uzyskać dostęp do plików lub innych zasobów na serwerze sieciowym. Wartość **Wyłącz** uniemożliwia dostęp do plików na sieciowym dysku SMB. Ustawienie **Nie skonfigurowano** (domyślne) zezwala na dostęp.
+
+  Ta funkcja ma zastosowanie do:  
+  - iOS i iPadOS 13,0 i nowsze
 
 ## <a name="built-in-apps"></a>Aplikacje wbudowane
 
@@ -377,7 +383,7 @@ Dotyczy urządzeń z systemem iOS w wersji 9,3 lub nowszej.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ustawienia dotyczą: automatyczne rejestrowanie urządzeń (nadzorowane)
 
-- **Typ listy aplikacji**: Utwórz listę aplikacji do pokazania lub ukrycia. Dostępne opcje:
+- **Typ listy aplikacji**: Utwórz listę aplikacji do pokazania lub ukrycia. Możesz pokazać lub ukryć wbudowane aplikacje i aplikacje biznesowe. Witryna sieci Web firmy Apple zawiera listę [wbudowanych aplikacji firmy Apple](https://support.apple.com/HT208094). Dostępne opcje:
 
   - **Ukryte aplikacje**: wprowadź listę aplikacji ukrywanych przed użytkownikami. Użytkownicy nie mogą wyświetlać ani otwierać tych aplikacji.
   - **Widoczne aplikacje**: wprowadź listę aplikacji, które użytkownicy mogą wyświetlać i uruchamiać. Użytkownicy nie będą mogli wyświetlać ani uruchamiać żadnych innych aplikacji.
@@ -432,7 +438,12 @@ Aby dodać aplikacje, możesz wykonać następujące czynności:
   - System iOS 12.2 i nowsze
 
 - **Dołączaj do sieci Wi-Fi wyłącznie za pomocą profilów konfiguracji**: pozycja **Wymagaj** wymusza użycie na urządzeniu tylko sieci Wi-Fi, które zostały skonfigurowane przy użyciu profilu konfiguracji usługi Intune. Opcja **Nieskonfigurowane** (domyślna) zezwala urządzeniu na korzystanie z innych sieci Wi-Fi.
-- **Modyfikacja stanu sieci Wi-Fi**: **nie skonfigurowano** (domyślnie) umożliwia użytkownikom włączanie lub wyłączanie sieci Wi-Fi na urządzeniu. **Blokuj** uniemożliwia włączenie lub wyłączenie sieci Wi-Fi.
+- **Sieć Wi-Fi jest zawsze włączona**: w przypadku ustawienia opcji **Wymagaj**sieć Wi-Fi pozostaje w aplikacji ustawienia. Nie można jej wyłączyć w ustawieniach ani w centrum sterowania, nawet gdy urządzenie jest w trybie samolotowym. **Nie skonfigurowano** (domyślnie) umożliwia użytkownikowi kontrolowanie włączania lub wyłączania sieci Wi-Fi.
+
+  Skonfigurowanie tego ustawienia nie uniemożliwia użytkownikom wyboru sieci Wi-Fi.
+
+  Ta funkcja ma zastosowanie do:  
+  - iOS i iPadOS 13,0 i nowsze
 
 ## <a name="connected-devices"></a>Połączone urządzenia
 
@@ -458,6 +469,11 @@ Aby dodać aplikacje, możesz wykonać następujące czynności:
 
   Ta funkcja ma zastosowanie do:  
   - System iOS 11.0 i nowsze
+
+- **Dostęp do plików na dysku USB**: urządzenia mogą łączyć i otwierać pliki na dysku USB. Wartość **Wyłącz** uniemożliwia dostęp urządzenia do dysku USB w aplikacji pliki, gdy port USB jest połączony z urządzeniem. Wyłączenie tej funkcji blokuje również użytkownikom końcowym przesyłanie plików na dysk USB podłączony do urządzenia iPad. **Nie skonfigurowano** (domyślnie) umożliwia dostęp do dysku USB w aplikacji pliki.
+
+  Ta funkcja ma zastosowanie do:  
+  - iOS i iPadOS 13,0 i nowsze
 
 ## <a name="keyboard-and-dictionary"></a>Klawiatura i słownik
 
@@ -533,7 +549,7 @@ Możesz również **zaimportować** plik CSV zawierający listę nazw aplikacji 
 
   To ustawienie ma zastosowanie do:  
   - System iOS 13.0 i nowsze
-  - iPadOS 13,0 i nowsze
+  - System iPadOS 13.0 i nowsze
   
   > [!TIP]
   > Jeśli masz aplikacje LOB dostępne dla Twojej organizacji i nie są one gotowe do **kontroli głosu** w dniu 0 w wersjach 13,0 systemu iOS, zalecamy pozostawienie tego ustawienia jako **nieskonfigurowanego**.
@@ -553,7 +569,7 @@ Możesz również **zaimportować** plik CSV zawierający listę nazw aplikacji 
 
   To ustawienie ma zastosowanie do:  
   - System iOS 13.0 i nowsze
-  - iPadOS 13,0 i nowsze
+  - System iPadOS 13.0 i nowsze
 
 - **Kontrola VoiceOver**: pozycja **Zezwalaj** umożliwia zmiany podkładu głosowego, aby zezwolić użytkownikom na aktualizowanie ustawień funkcji VoiceOver, takich jak szybkość odczytywania tekstu na głos. Pozycja **Nieskonfigurowane** uniemożliwia zmiany podkładu głosowego.
 - **Ustawianie powiększania**: pozycja **Zezwalaj** umożliwia użytkownikowi zmienianie powiększenia. Pozycja **Nieskonfigurowane** uniemożliwia zmiany powiększenia.

@@ -5,21 +5,22 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/05/2019
+ms.date: 10/18/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3bd91891fa6da770404dc0af6d59016aeefe30b3
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 4cbf9c29a1e694726b1b42f7072eea859f812751
+ms.sourcegitcommit: 8c25aeefb7cbc6444a8596af22fccd1c5426877a
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71734599"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72593808"
 ---
 # <a name="add-e-mail-settings-for-ios-devices-in-microsoft-intune"></a>Dodawanie ustawień poczty e-mail dla urządzeń z systemem iOS w usłudze Microsoft Intune
 
@@ -55,7 +56,7 @@ W tym artykule wymieniono i opisano wszystkie ustawienia poczty e-mail dostępne
       - **Nazwa domeny niestandardowej do użycia**: wprowadź wartość używaną przez usługę Intune jako nazwa domeny, taką jak `contoso.com` lub `contoso`
 
 - **Atrybut adresu e-mail z usługi AAD**: określ sposób generowania adresu e-mail użytkownika. Wybierz pozycję **Główna nazwa użytkownika** (`user1@contoso.com` lub `user1`), aby użyć pełnej nazwy użytkownika jako adresu e-mail. Wybierz pozycję **Podstawowy adres SMTP** (`user1@contoso.com`), aby użyć podstawowego adresu SMTP do logowania się do programu Exchange.
-- **Metoda uwierzytelniania** — wybierz metodę uwierzytelniania stosowaną w profilu e-mail: **Certyfikaty** lub **Nazwa użytkownika i hasło**. Uwierzytelnianie Azure Multi-Factor Authentication nie jest obsługiwane.
+- **Metoda uwierzytelniania** — wybierz metodę uwierzytelniania stosowaną w profilu e-mail: **Nazwa użytkownika i hasło**, **Certyfikaty** lub **Pochodne poświadczenia**. Uwierzytelnianie Azure Multi-Factor Authentication nie jest obsługiwane.
   - W przypadku wybrania pozycji **Certyfikat** wybierz wcześniej utworzony profil certyfikatu SCEP lub PKCS klienta, który jest używany do uwierzytelniania połączenia z programem Exchange.
 - **Protokół SSL**: wybierz pozycję **Włącz**, aby użyć protokołu SSL (Secure Sockets Layer) podczas wysyłania i odbierania wiadomości e-mail oraz komunikacji z serwerem programu Exchange.
 - **Protokół OAuth**: wybierz pozycję **Włącz**, aby użyć protokołu OAuth (Open Authorization) podczas wysyłania i odbierania wiadomości e-mail oraz komunikacji z programem Exchange. Jeśli serwer OAuth korzysta z uwierzytelniania przy użyciu certyfikatu, wybierz opcję **Certyfikat** w obszarze **Metoda uwierzytelniania** i dołącz certyfikat do profilu. Możesz też wybrać opcję **Nazwa użytkownika i hasło** w obszarze **Metoda uwierzytelniania**. Jeśli korzystasz z protokołu OAuth, sprawdź następujące elementy:

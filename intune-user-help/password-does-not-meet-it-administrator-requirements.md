@@ -9,6 +9,7 @@ ms.date: 09/05/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: efb3c261-1f6c-4d39-bfa4-18661f8c59c7
 searchScope:
@@ -16,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bce3ae1fd5386c749285313f29fc88cf7b464750
-ms.sourcegitcommit: d0d320fbac69b063b4264491d8a918cfe12bd485
+ms.openlocfilehash: 9181510dad2640fcc8ea84ce2db2856bd02cbaf5
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70751784"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72502181"
 ---
 # <a name="device-password-requirements-for-enrolled-devices"></a>Wymagania dotyczące hasła urządzenia dla zarejestrowanych urządzeń
 
@@ -44,7 +45,7 @@ Aby uzyskać dodatkową pomoc lub dowiedzieć się, jakie są określone wymagan
 | Hasło jest za krótkie.| Zaktualizuj lub ustaw hasło zawierające więcej znaków. Twoja organizacja wymaga, aby hasło miało określoną długość. Rzeczywiste wybór będą się różnić, ale minimalna długość, którą mogą wymagać, wynosi 4 znaki, a maksymalna to 16. |
 | Hasło musi zawierać tylko cyfry. | Ustaw hasło, które zawiera tylko cyfry.|
 | Hasło musi zawierać tylko znaki alfanumeryczne. | Ustaw hasło, które zawiera kombinację cyfr i cyfr.|
-| Hasło musi zawierać znaki złożone. | Dodaj znaki złożone, takie jak cyfry, wielkie litery i symbole `$`, takie jak, `#` `%`i. Twoja organizacja wymaga kombinacji liter, cyfr i znaków innych niż alfanumeryczne, aby utrudnić innym odgadnięcie hasła.|  
+| Hasło musi zawierać znaki złożone. | Dodaj znaki złożone, takie jak cyfry, wielkie litery i symbole, takie jak `$`, `%` i `#`. Twoja organizacja wymaga kombinacji liter, cyfr i znaków innych niż alfanumeryczne, aby utrudnić innym odgadnięcie hasła.|  
 | Hasło wygasło. | Ustaw nowe hasło. Twoja organizacja wymaga zmiany hasła po określonej liczbie dni. |
 | Hasło było używane niedawno. | Wybierz hasło, które nie było dotąd używane. Twoja organizacja wymaga, aby określony czas został przeszedł przed ponownym użyciem hasła. |
 
@@ -57,12 +58,12 @@ Aby uzyskać dodatkową pomoc lub dowiedzieć się, jakie są określone wymagan
 | Kod dostępu jest za krótki. | Zaktualizuj lub ustaw kod dostępu zawierający więcej znaków. Twoja organizacja wymaga, aby kod dostępu miał określoną długość. Rzeczywiste wybór będą się różnić, ale minimalna długość, którą mogą wymagać, wynosi 4 znaki, a maksymalna to 14. Po zmianie kodu dostępu może zostać wyświetlony monit od firmy Apple informujący o wprowadzeniu co najmniej 6 znaków. Ten komunikat jest rekomendacją systemu firmy Apple. Jeśli Twoja organizacja wymaga tylko kodu dostępu zawierającego 4 lub 5 znaków, nie trzeba wprowadzać 6-cyfrowy kod dostępu.|  
 | Kod dostępu musi zawierać tylko cyfry. | Ustaw kod dostępu, który zawiera tylko cyfry.|
 | Kod dostępu musi zawierać tylko znaki alfanumeryczne.| Ustaw kod dostępu, który zawiera kombinację cyfr i liter.|
-| Kod dostępu musi zawierać znaki inne niż alfanumeryczne. | `&`Dodaj znaki specjalne `%` `!` ,takie`#`jak,, ,,i.`$` Twoja organizacja wymaga kombinacji liter, cyfr i znaków innych niż alfanumeryczne, aby utrudnić innym odgadnięcie kodu dostępu.|
+| Kod dostępu musi zawierać znaki inne niż alfanumeryczne. | Dodaj znaki specjalne, takie jak `&`, `!`, `$`, `%` i `#`. Twoja organizacja wymaga kombinacji liter, cyfr i znaków innych niż alfanumeryczne, aby utrudnić innym odgadnięcie kodu dostępu.|
 | Kod dostępu wygasł. | Ustaw nowe hasło. Twoja organizacja wymaga zmiany hasła po określonej liczbie dni. |
 | Kod dostępu był niedawno używany.| Wybierz kod dostępu, który nie był wcześniej używany. Twoja organizacja wymaga, aby określony czas został przeszedł przed ponownym użyciem kodu dostępu. |
 |Wymagane jest uwierzytelnianie dotyku lub identyfikator urządzenia. | Skonfiguruj identyfikator touch lub identyfikator kroju. Twoja organizacja wymaga uwierzytelniania przy użyciu jednej z tych metod przed użyciem Autowypełniania haseł lub informacji o karcie kredytowej. | 
 
-## <a name="macos-password-requirements"></a>wymagania dotyczące hasła macOS
+## <a name="macos-password-requirements"></a>Wymagania dotyczące hasła w systemie macOS
 | Wiadomość | Jak naprawić |
 |-----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Hasło jest wymagane. | Ustaw hasło. Twoja organizacja wymaga wprowadzenia hasła w celu odblokowania urządzenia. |
@@ -70,7 +71,7 @@ Aby uzyskać dodatkową pomoc lub dowiedzieć się, jakie są określone wymagan
 | Hasło jest za krótkie. | Zaktualizuj lub ustaw hasło zawierające więcej znaków. Twoja organizacja wymaga, aby hasło miało określoną długość.|
 | Hasło musi zawierać tylko cyfry. | Ustaw hasło, które zawiera tylko cyfry.|
 | Hasło musi zawierać tylko znaki alfanumeryczne. | Ustaw hasło, które zawiera kombinację cyfr i cyfr.|
-| Hasło musi zawierać znaki inne niż alfanumeryczne. | `&`Dodaj znaki specjalne `%` `!` ,takie`#`jak,, ,,i.`$` Twoja organizacja wymaga kombinacji liter, cyfr i znaków innych niż alfanumeryczne, aby utrudnić innym odgadnięcie hasła.|
+| Hasło musi zawierać znaki inne niż alfanumeryczne. | Dodaj znaki specjalne, takie jak `&`, `!`, `$`, `%` i `#`. Twoja organizacja wymaga kombinacji liter, cyfr i znaków innych niż alfanumeryczne, aby utrudnić innym odgadnięcie hasła.|
 | Hasło wygasło. | Ustaw nowe hasło. Twoja organizacja wymaga zmiany hasła po określonej liczbie dni. |
 | Hasło było używane niedawno. | Wybierz hasło, które nie było dotąd używane. Twoja organizacja wymaga, aby określony czas został przeszedł przed ponownym użyciem hasła. |
 
@@ -83,7 +84,7 @@ Aby uzyskać dodatkową pomoc lub dowiedzieć się, jakie są określone wymagan
 | Hasło musi zawierać cyfry. | Ustawianie hasła lub numeru PIN zawierającego liczby.|
 | Hasło musi zawierać litery. | Ustaw hasło, które zawiera litery z alfabetu.|
 | Hasło musi zawierać znaki alfanumeryczne. | Ustaw hasło, które zawiera kombinację cyfr i cyfr.|
-| Hasło musi zawierać znaki alfanumeryczne i symbole. | Ustaw hasło, które zawiera kombinację liter, `&`cyfr i znaków specjalnych, takich jak `$`, `!`,, `%`i `#`. |
+| Hasło musi zawierać znaki alfanumeryczne i symbole. | Ustaw hasło, które zawiera kombinację liter, cyfr i znaków specjalnych, takich jak `&`, `!`, `$`, `%` i `#`. |
 | Hasło musi używać technologii biometrycznej.| Skonfiguruj urządzenie do korzystania z uwierzytelniania biometrycznego, takiego jak odcisk palca lub rozpoznawanie twarzy.
 | Hasło wygasło. | Ustaw nowe hasło. Twoja organizacja wymaga zmiany hasła po określonej liczbie dni. |
 | Hasło było używane niedawno. | Wybierz hasło, które nie było dotąd używane. Twoja organizacja wymaga, aby określony czas został przeszedł przed ponownym użyciem hasła. |

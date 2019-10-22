@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 10/02/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
@@ -15,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 197ad888dc8a07cc35efbaec538fde93c76c81c3
-ms.sourcegitcommit: f04e21ec459998922ba9c7091ab5f8efafd8a01c
+ms.openlocfilehash: 440eb2d457783ac71b905d064a6d83abaa966cfe
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71817628"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72503928"
 ---
 # <a name="troubleshoot-bitlocker-policies-in-microsoft-intune"></a>Rozwiązywanie problemów z zasadami funkcji BitLocker w Microsoft Intune
 
@@ -32,9 +33,9 @@ Szyfrowanie dysków funkcją BitLocker to usługa oferowana przez systemy operac
 
 Za pomocą Microsoft Intune masz następujące metody zarządzania funkcją BitLocker na urządzeniach z systemem Windows 10:
 
-- **Zasady konfiguracji urządzeń** — niektóre wbudowane opcje zasad są dostępne w konsoli administracyjnej usługi Intune w obszarze **Konfiguracja urządzenia** > **Endpoint Protection** > **zasady szyfrowania systemu Windows**. Wszystkie dostępne przełączniki i funkcje można znaleźć tutaj: [szyfrowanie systemu Windows](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption).
+- **Zasady konfiguracji urządzeń** — niektóre wbudowane opcje zasad są dostępne w konsoli administracyjnej usługi Intune w obszarze **konfiguracja urządzenia**  > **Endpoint Protection**  > **zasad szyfrowania systemu Windows**. Wszystkie dostępne przełączniki i funkcje można znaleźć tutaj: [szyfrowanie systemu Windows](https://docs.microsoft.com/intune/endpoint-protection-windows-10#windows-encryption).
 
-- Linie bazowe **zabezpieczeń** - [linie bazowe zabezpieczeń](security-baselines.md) są znanymi grupami ustawień i wartościami domyślnymi, które są zalecane przez odpowiedni zespół ds. zabezpieczeń, aby pomóc w zabezpieczaniu urządzeń z systemem Windows. Różne źródła linii bazowej, takie jak *linia bazowa zabezpieczeń MDM* lub usługa *Microsoft Defender ATP* , mogą zarządzać tymi samymi ustawieniami, a także różnymi ustawieniami. Mogą również zarządzać tymi samymi ustawieniami, którymi zarządzasz przy użyciu zasad konfiguracji urządzeń. 
+- **Linie bazowe zabezpieczeń**  - [linie bazowe zabezpieczeń](security-baselines.md) są znanymi grupami ustawień i wartości domyślnych, które są zalecane przez odpowiedni zespół ds. zabezpieczeń, aby pomóc w zabezpieczaniu urządzeń z systemem Windows. Różne źródła linii bazowej, takie jak *linia bazowa zabezpieczeń MDM* lub usługa *Microsoft Defender ATP* , mogą zarządzać tymi samymi ustawieniami, a także różnymi ustawieniami. Mogą również zarządzać tymi samymi ustawieniami, którymi zarządzasz przy użyciu zasad konfiguracji urządzeń. 
 
 Oprócz usługi Intune możliwe jest, że ustawienia funkcji BitLocker są zarządzane przy użyciu innych metod, takich jak zasady grupy, lub ręcznie ustawiane przez użytkownika urządzenia.
 
@@ -59,21 +60,21 @@ Jak upewnić się, że ustawienia zostały zastosowane do urządzenia docelowego
 
 ### <a name="device-configuration-policy-device-status"></a>Stan urządzenia zasad konfiguracji urządzenia  
 
-W przypadku konfigurowania funkcji BitLocker za pomocą zasad konfiguracji urządzeń można sprawdzić stan zasad w portalu usługi Intune. W portalu przejdź do pozycji **Konfiguracja urządzenia** > **Profile** > Wybierz profil, który zawiera ustawienia funkcji BitLocker, a następnie wybierz pozycję **stan urządzenia**. Urządzenia przypisane do tego profilu są wyświetlane, a kolumna *stan urządzenia* wskazuje, czy urządzenie pomyślnie wdrożyło profil. 
+W przypadku konfigurowania funkcji BitLocker za pomocą zasad konfiguracji urządzeń można sprawdzić stan zasad w portalu usługi Intune. W portalu przejdź do pozycji **Konfiguracja urządzenia**  > **Profile** > Wybierz profil, który zawiera ustawienia funkcji BitLocker, a następnie wybierz pozycję **stan urządzenia**. Urządzenia przypisane do tego profilu są wyświetlane, a kolumna *stan urządzenia* wskazuje, czy urządzenie pomyślnie wdrożyło profil. 
 
 Pamiętaj, że istnieje opóźnienie między urządzeniem, które otrzymuje zasady funkcji BitLocker, a dysk jest w pełni szyfrowany.  
 
  
 ### <a name="use-control-panel-on-the-client"></a>Korzystanie z panelu sterowania na kliencie  
 
-Na urządzeniu, na którym włączono funkcję BitLocker i zaszyfrowaną dysk, można wyświetlić stan funkcji BitLocker z poziomu panelu sterowania urządzenia. Na urządzeniu Otwórz **Panel sterowania** > **System i zabezpieczenia** > **szyfrowanie dysków funkcją BitLocker**. Potwierdzenie jest wyświetlane jak pokazano na poniższej ilustracji.  
+Na urządzeniu, na którym włączono funkcję BitLocker i zaszyfrowaną dysk, można wyświetlić stan funkcji BitLocker z poziomu panelu sterowania urządzenia. Na urządzeniu Otwórz **Panel sterowania**  > **System i zabezpieczenia**  > **szyfrowanie dysków funkcją BitLocker**. Potwierdzenie jest wyświetlane jak pokazano na poniższej ilustracji.  
 
 ![Funkcja BitLocker jest włączona w panelu sterowania](./media/troubleshooting-bitlocker-policies/control-panel.png)
 
 ### <a name="use-a-command-prompt"></a>Używanie wiersza polecenia  
 
-Na urządzeniu, na którym włączono funkcję BitLocker i zaszyfrowaną dysk, Uruchom wiersz polecenia z poświadczeniami administratora, a następnie uruchom `manage-bde -status`. Wyniki powinny wyglądać podobnie do poniższego przykładu:  
-![A wynik polecenia o stanie](./media/troubleshooting-bitlocker-policies/command.png)
+Na urządzeniu, na którym włączono funkcję BitLocker i zaszyfrowaną dysk, Uruchom wiersz polecenia z poświadczeniami administratora, a następnie uruchom `manage-bde -status`. Rezultaty powinny przypominać następujący przykład:  
+![A wynik polecenia stanu ](./media/troubleshooting-bitlocker-policies/command.png)
 
 W przykładzie: 
 - **Ochrona za pomocą funkcji BitLocker** jest **włączona**,  
@@ -150,7 +151,7 @@ Teraz warto zastanowić się, jak upewnić się, że zasady funkcji BitLocker zo
   Zasady znajdują się na urządzeniu jako pojedynczej jednostce, dlatego jeśli niektóre ustawienia mają zastosowanie, a inne nie, można mieć pewność, że zasady są odbierane. W tym scenariuszu istnieje możliwość, że wersja systemu Windows na urządzeniu nie obsługuje ustawień problemów. Aby uzyskać szczegółowe informacje na temat wymagań dotyczących wersji poszczególnych ustawień, zobacz [Funkcja BitLocker CSP](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) w dokumentacji systemu Windows.  
 
   1. **Funkcja BitLocker nie jest obsługiwana przez żaden sprzęt**.  
-  Nawet jeśli masz odpowiednią wersję systemu Windows, istnieje możliwość, że sprzęt urządzenia nie spełnia wymagań szyfrowania funkcji BitLocker. Można znaleźć [wymagania systemowe dla funkcji BitLocker (https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements) w dokumentacji systemu Windows, ale główne elementy do sprawdzenia, czy urządzenie ma zgodny mikroukład TPM (1,2 lub nowszy) oraz system BIOS lub oprogramowanie układowe UEFI zgodne z Trusted Computing Group (TCG).
+  Nawet jeśli masz odpowiednią wersję systemu Windows, istnieje możliwość, że sprzęt urządzenia nie spełnia wymagań szyfrowania funkcji BitLocker. Można znaleźć [wymagania systemowe dla funkcji BitLocker (https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements) w dokumentacji systemu Windows, ale główne elementy do sprawdzenia polegają na tym, że urządzenie ma zgodny mikroukład TPM (1,2 lub nowszy) oraz system BIOS lub oprogramowanie układowe UEFI zgodne z Trusted Computing Group (TCG).
 
 **Przykładowe badanie** — wdrożenie zasad funkcji BitLocker na urządzeniu z systemem Windows 10, a ustawienie **Szyfruj urządzenia** pokazuje stan **błędu** w portalu.
 
@@ -168,7 +169,7 @@ Teraz warto zastanowić się, jak upewnić się, że zasady funkcji BitLocker zo
 
 - Ponieważ funkcja BitLocker korzysta z modułu TPM, można zakończyć, że funkcja BitLocker nie powiedzie się z powodu problemu z usługą Intune lub zasad, ale zamiast tego, ponieważ samo urządzenie nie ma układu TPM lub moduł TPM jest wyłączony w systemie BIOS.
 
-  Dodatkową wskazówką można potwierdzić w Podgląd zdarzeń systemu Windows w obszarze **Dziennik aplikacji i usług** > **Windows** > **API funkcji BitLocker**. W dzienniku zdarzeń **interfejsu API funkcji BitLocker** znajdziesz zdarzenie o identyfikatorze 853, co oznacza, że moduł TPM nie jest dostępny:
+  Dodatkową wskazówką można potwierdzić w Podgląd zdarzeń systemu Windows w obszarze **Dziennik aplikacji i usług**  > **Windows**  > **BitLocker API**. W dzienniku zdarzeń **interfejsu API funkcji BitLocker** znajdziesz zdarzenie o identyfikatorze 853, co oznacza, że moduł TPM nie jest dostępny:
 
   ![Identyfikator zdarzenia 853](./media/troubleshooting-bitlocker-policies/event-error.png)
 

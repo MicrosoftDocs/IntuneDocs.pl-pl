@@ -8,17 +8,18 @@ manager: dougeby
 ms.date: 03/18/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 6ee841cc-5694-4ba1-8f66-1d58edec30a4
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d999603abc539fda4d152d15dd1ab965c465f39e
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: fd00a0ae4cb6c3b150fe40cfc6cd7b71cfa973f3
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736302"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72585238"
 ---
 # <a name="use-audit-logs-to-track-and-monitor-events-in-microsoft-intune"></a>Śledzenie i monitorowanie zdarzeń w usłudze Microsoft Intune za pomocą dzienników inspekcji
 
@@ -49,7 +50,8 @@ Dzienniki inspekcji i dzienniki operacyjne można też kierować do usługi Azur
 
 ![Eksportowanie danych dziennika do usługi Azure monitor przez wybranie pozycji Eksportuj ustawienia danych w usłudze Intune](./media/monitor-audit-logs/audit-logs-export-data-settings.png)
 
-Więcej informacji na temat tej funkcji zawiera artykuł [Send log data to storage, event hubs, or log analytics](review-logs-using-azure-monitor.md) (Wysyłanie danych dziennika do magazynu, centrów zdarzeń lub analizy dzienników).
+> [!NOTE]
+> Aby uzyskać więcej informacji na temat tej funkcji i zapoznać się z wymaganiami wstępnymi dotyczącymi korzystania z niej, zobacz [wysyłanie danych dziennika do magazynu, centrów zdarzeń lub usługi log Analytics](review-logs-using-azure-monitor.md).
 
 ## <a name="review-audit-events"></a>Przeglądanie zdarzeń inspekcji
 
@@ -67,11 +69,11 @@ Domyślny widok listy dziennika inspekcji zawiera następujące elementy:
 
 Aby wyświetlić bardziej szczegółowe informacje o zdarzeniu, wybierz element na liście:
 
-![Uzyskiwanie bardziej szczegółowych informacji na temat tego, kto co zrobił, w dziennikach inspekcji w usłudze Intune](./media/monitor-audit-logs/monitor-audit-log-detail.png "Szczegóły dzienników inspekcji")
+![Uzyskiwanie bardziej szczegółowych informacji na temat tego, kto co zrobił, w dziennikach inspekcji w usłudze Intune](./media/monitor-audit-logs/monitor-audit-log-detail.png "|::ref2::|")
 
 > [!NOTE]
 > Część **Zainicjowane przez (aktor)** obejmuje informacje na temat tego, kto i gdzie uruchomił zadanie. Na przykład, jeśli działanie zostanie uruchomione w usłudze Intune w witrynie Azure Portal, w obszarze **Aplikacja** zawsze jest podane **rozszerzenie portalu usługi Microsoft Intune**, a w obszarze **Identyfikator aplikacji** zawsze znajduje się ten sam identyfikator GUID.
-> 
+>
 > Sekcja **Elementy docelowe** zawiera wiele elementów docelowych oraz właściwości, które zostały zmienione.  
 
 ## <a name="filter-audit-events"></a>Filtrowanie zdarzeń inspekcji

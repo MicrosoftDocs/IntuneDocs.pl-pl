@@ -6,21 +6,22 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/05/2019
+ms.date: 10/18/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5adde9049f1e5f88df4a55b473f59f1d4a08e396
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: d88705cbce0d5045ba7f45baf80de7b6e5d383d3
+ms.sourcegitcommit: 8c25aeefb7cbc6444a8596af22fccd1c5426877a
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71733871"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72593761"
 ---
 # <a name="add-wi-fi-settings-for-ios-devices-in-microsoft-intune"></a>Dodawanie ustawień sieci Wi-Fi dla urządzeń z systemem iOS w usłudze Microsoft Intune
 
@@ -79,7 +80,13 @@ W tym artykule opisano te ustawienia.
     - **Zaufanie serwera** - **Nazwy serwerów certyfikatów**: **dodaj** co najmniej jedną nazwę pospolitą używaną w certyfikatach wystawionych przez zaufany urząd certyfikacji do serwerów dostępu do sieci bezprzewodowej. Na przykład dodaj element `mywirelessserver.contoso.com` lub `mywirelessserver`. W przypadku wprowadzania tych informacji można pominąć dynamiczne okno dialogowe zaufania pokazywane na urządzeniach użytkowników nawiązujących połączenie z siecią Wi-Fi.
     - **Certyfikat główny na potrzeby walidacji serwera**: wybierz istniejący profil zaufanego certyfikatu głównego. Ten certyfikat pozwala klientowi ufać certyfikatowi serwera dostępu do sieci bezprzewodowej.
 
-    - **Uwierzytelnianie klienta** - **certyfikat klienta na potrzeby uwierzytelniania klienta (certyfikat tożsamości)** : wybierz profil certyfikatu protokołu SCEP lub standardów PKCS, który również został wdrożony do urządzenia. Ten certyfikat to tożsamość przesyłana przez urządzenie do serwera w celu uwierzytelnienia połączenia.
+    - **Uwierzytelnianie klienta**: wybierz **metodę uwierzytelniania**. Dostępne opcje:
+      
+      - **Poświadczenie pochodne**: Jeśli żaden pochodny wystawca poświadczeń nie został skonfigurowany, usługa Intune monituje o to.
+      
+      - **Certyfikaty**: wybierz profil certyfikatu klienta protokołu SCEP lub standardów PKCS, który również został wdrożony w urządzeniu. Ten certyfikat to tożsamość przesyłana przez urządzenie do serwera w celu uwierzytelnienia połączenia.
+
+    - **Prywatność tożsamości (tożsamość zewnętrzna)** : wprowadź tekst, który będzie wysyłany w odpowiedzi na żądanie podania tożsamości zgłaszane przez protokół EAP. Ten tekst może mieć dowolną wartość, taką jak `anonymous`. Podczas uwierzytelniania na początku wysyłana jest ta tożsamość anonimowa, a po niej — tożsamość rzeczywista, która jest wysyłana w bezpiecznym tunelu.
 
   - **EAP-TTLS**: wprowadź też następujące ustawienia:
 
@@ -88,6 +95,8 @@ W tym artykule opisano te ustawienia.
 
     - **Uwierzytelnianie klienta**: wybierz **metodę uwierzytelniania**. Dostępne opcje:
 
+      - **Poświadczenie pochodne**: Jeśli żaden pochodny wystawca poświadczeń nie został skonfigurowany, usługa Intune monituje o to.  
+      
       - **Nazwa użytkownika i hasło**: monituj użytkownika o nazwę użytkownika i hasło w celu uwierzytelnienia połączenia. Wprowadź też następujące ustawienia:
         - **Metoda inna niż EAP (tożsamość wewnętrzna)** : wybierz sposób uwierzytelniania połączenia. Pamiętaj, aby wybrać ten sam protokół, który został skonfigurowany w sieci Wi-Fi.
 
@@ -106,6 +115,8 @@ W tym artykule opisano te ustawienia.
 
     - **Uwierzytelnianie klienta**: wybierz **metodę uwierzytelniania**. Dostępne opcje:
 
+      - **Poświadczenie pochodne**: Jeśli żaden pochodny wystawca poświadczeń nie został skonfigurowany, usługa Intune monituje o to.  
+      
       - **Nazwa użytkownika i hasło**: monituj użytkownika o nazwę użytkownika i hasło w celu uwierzytelnienia połączenia. 
 
       - **Certyfikaty**: wybierz profil certyfikatu klienta protokołu SCEP lub standardów PKCS, który również został wdrożony w urządzeniu. Ten certyfikat to tożsamość przesyłana przez urządzenie do serwera w celu uwierzytelnienia połączenia.

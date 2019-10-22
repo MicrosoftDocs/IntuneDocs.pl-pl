@@ -5,10 +5,11 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/16/2017
+ms.date: 04/19/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: df53feab-4f5e-46ae-b1e8-9adb048711e5
 searchScope:
@@ -18,17 +19,21 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e9354c6019821a3d320c9bc50589ce420e969581
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 4d6d54556f01ab047cc652f1f27238b74d003795
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55847458"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72501981"
 ---
 # <a name="turn-off-microsoft-usage-data-collection"></a>Wyłączanie zbierania danych użycia przez firmę Microsoft
 
-Firma Microsoft automatycznie zbiera określone dane dotyczące swoich produktów i usług. Robimy to w celu zwiększania niezawodności i wydajności naszych produktów, w tym aplikacji Portal firmy. Mimo że te dane są anonimizowane, niektórzy użytkownicy mogą nie czuć się komfortowo w związku z tym zbieraniem danych. Dział pomocy technicznej Twojej firmy nie kontroluje zbierania tych danych i nie może zmienić wybranej przez Ciebie wartości tego ustawienia.
+Firma Microsoft automatycznie zbiera określone dane dotyczące produktów i usług. Dane służą do poprawy niezawodności i wydajności aplikacji, takich jak Portal firmy i Microsoft Intune. Mimo że te dane są anonimizowane, niektórzy użytkownicy mogą nie czuć się komfortowo w związku z tym zbieraniem danych. Twoja organizacja nie ma kontroli nad kolekcją tych danych i nie może zmienić wybranej opcji.   
 
-Aby wyłączyć zbieranie tych danych na urządzeniu z systemem Android, otwórz ustawienie **Dane użycia** w aplikacji Portal firmy.
+Aby wyłączyć zbieranie danych na urządzeniu z systemem Android:  
+
+1. Otwórz aplikację Portal firmy lub Microsoft Intune.
+2. Wybierz pozycję **Ustawienia**.
+3. W obszarze Ustawienia dane użycia Przerzuć przełącznik na wyłączony. 
 
 Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).

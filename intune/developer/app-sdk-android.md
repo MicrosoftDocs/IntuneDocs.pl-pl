@@ -5,9 +5,10 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/26/2019
+ms.date: 10/14/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: developer
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b1d1d0c52db57ca6b41c399aeefc948735eea0af
-ms.sourcegitcommit: fc356fd69beaeb3d69982b47e2bdffb6f7127f8c
+ms.openlocfilehash: c8c5be1d7a02c2c8329afe05dcdce22f48c49d05
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71830522"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72503494"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android
 
@@ -234,7 +235,7 @@ Narzędzie oczekuje następujących parametrów.
 Wszystkie parametry są wymagane, poza `--excludeClasses`, który jest opcjonalny.
 
 > [!NOTE]
-> W systemach Unix separatorem poleceń jest znak średnika. Aby uniknąć dzielenia poleceń w powłoce, poprzedź każdy średnik znakiem '\' lub ujmij cały parametr w znaki cudzysłowu.
+> W systemach Unix separatorem poleceń jest znak średnika. Aby uniknąć dzielenia poleceń w powłoce, poprzedź każdy średnik znakiem '\' lub ujmij cały parametr w znaki cudzysłowu.
 
 #### <a name="example-command-line-tool-invocation"></a>Przykład wywołania narzędzia wiersza polecenia
 
@@ -380,7 +381,7 @@ Wraz z systemem Android P firma Google ogłosiła nowy zestaw (pod zmienioną na
 W przeciwieństwie do bibliotek obsługi android, nie zapewniamy wariantów funkcji MAM bibliotek AndroidX. Zamiast tego bibliotekę AndroidX należy traktować jak każdą inną bibliotekę zewnętrzną i należy ją skonfigurować do przepisania przez wtyczkę/narzędzie kompilacji. W przypadku kompilacji narzędzia Gradle można to zrobić poprzez uwzględnienie `androidx.*` w polu `includeExternalLibraries` konfiguracji wtyczki. Wywołania narzędzia wiersza polecenia muszą jawnie wymieniać wszystkie pliki jar na liście.
 
 ### <a name="pre-androidx-architecture-components"></a>Składniki architektury pre-AndroidX
-Wiele składników architektury systemu Android, w tym Room, ViewModel i WorkManager, zostały ponownie opakowane w celu AndroidX. Jeśli aplikacja używa wstępnie AndroidXch wariantów tych bibliotek, należy upewnić się, że są one stosowane przez uwzględnienie `android.arch.*` w polu `includeExternalLibraries` w konfiguracji wtyczki. Alternatywnie możesz zaktualizować biblioteki do swoich odpowiedników AndroidX.
+Wiele składników architektury systemu Android, w tym Room, ViewModel i WorkManager, zostały ponownie opakowane w celu AndroidX. Jeśli aplikacja używa wstępnie AndroidX wariantów tych bibliotek, upewnij się, że są one stosowane przez uwzględnienie `android.arch.*` w polu `includeExternalLibraries` konfiguracji wtyczki. Alternatywnie możesz zaktualizować biblioteki do swoich odpowiedników AndroidX.
 
 ## <a name="sdk-permissions"></a>Uprawnienia zestawu SDK
 
@@ -547,15 +548,6 @@ Jeśli aplikacja ma własne środowisko użytkownika uwzględniające użycie nu
 MAMPolicyManager.getPolicy(currentActivity).getIsPinRequired();
 ```
 
-### <a name="example-determine-if-pin-is-required-for-the-app"></a>Przykład: ustalenie, czy dla aplikacji jest wymagany numer PIN
-
-Jeśli aplikacja ma własne środowisko użytkownika uwzględniające użycie numeru PIN, można je wyłączyć, jeżeli administrator IT skonfigurował zestaw SDK w taki sposób, aby użytkownik otrzymywał monit o podanie numeru PIN aplikacji. Aby ustalić, czy administrator IT wdrożył w danej aplikacji zasadę dotyczącą numeru PIN aplikacji dla bieżącego użytkownika końcowego, należy wywołać następującą metodę:
-
-```java
-
-MAMPolicyManager.getPolicy(currentActivity).getIsPinRequired();
-```
-
 ### <a name="example-determine-the-primary-intune-user"></a>Przykład: określenie głównego użytkownika usługi Intune
 
 Oprócz interfejsów API ujawnianych w zasadzie AppPolicy, interfejs API `getPrimaryUser()` zdefiniowany w obrębie interfejsu `MAMUserInfo` ujawnia także główną nazwę użytkownika (**UPN**). Aby uzyskać nazwę UPN, niezbędne jest wywołanie:
@@ -602,7 +594,7 @@ Parametr `service` musi być jedną z następujących wartości `SaveLocation`:
 - `SaveLocation.LOCAL`
 - `SaveLocation.OTHER`
 
-Element `username` powinien być nazwą UPN, nazwą użytkownika lub adresem e-mail skojarzonym z usługą w chmurze, w której jest zapisywany dokument (*nie* musi to być nazwa użytkownika będącego właścicielem zapisywanego dokumentu). Użyj wartości null, jeśli nie istnieje mapowanie między nazwą UPN usługi AAD i nazwą użytkownika usługi w chmurze lub nazwa użytkownika jest nieznana. `SaveLocation.LOCAL` nie jest usługą w chmurze, więc powinna być zawsze używana z parametrem username `null`.
+Element `username` powinien być nazwą UPN, nazwą użytkownika lub adresem e-mail skojarzonym z usługą w chmurze, w której jest zapisywany dokument (*nie* musi to być nazwa użytkownika będącego właścicielem zapisywanego dokumentu). Użyj wartości null, jeśli nie istnieje mapowanie między nazwą UPN usługi AAD i nazwą użytkownika usługi w chmurze lub nazwa użytkownika jest nieznana. `SaveLocation.LOCAL` nie jest usługą w chmurze i dlatego powinien być zawsze używany z parametrem `null` username.
 
 Poprzednią metodą określania, czy zasada użytkownika pozwala na zapisywanie danych w różnych lokalizacjach, była metoda `getIsSaveToPersonalAllowed()` w tej samej klasie **AppPolicy**. Ta funkcja jest obecnie **przestarzała** i nie należy jej używać. Poniższe wywołanie jest równoważne wywołaniu `getIsSaveToPersonalAllowed()`:
 
@@ -624,7 +616,7 @@ NotificationRestriction notificationRestriction =
 
 Jeśli ograniczenie jest `BLOCKED`, aplikacja nie może wyświetlić żadnych powiadomień dla użytkownika skojarzonego z tymi zasadami. Jeśli `BLOCK_ORG_DATA`, aplikacja musi wyświetlić zmodyfikowane powiadomienie, które nie zawiera danych organizacji. Jeśli `UNRESTRICTED`, wszystkie powiadomienia są dozwolone.
 
-Jeśli `getNotificationRestriction` nie zostanie wywołane, zestaw SDK MAM będzie najlepszym wysiłkiem, aby automatycznie ograniczyć powiadomienia dla aplikacji z jedną tożsamością. Jeśli automatyczne blokowanie jest włączone i ustawiono wartość `BLOCK_ORG_DATA`, powiadomienie nie będzie wyświetlane wcale. Aby uzyskać bardziej szczegółowy formant, sprawdź wartość `getNotificationRestriction` i odpowiednio zmodyfikuj powiadomienia aplikacji.
+Jeśli `getNotificationRestriction` nie zostanie wywołana, zestaw SDK MAM będzie najlepszym wysiłkiem, aby automatycznie ograniczyć powiadomienia dla aplikacji z jedną tożsamością. Jeśli automatyczne blokowanie jest włączone i ustawiono `BLOCK_ORG_DATA`, powiadomienie nie będzie wyświetlane. Aby uzyskać bardziej szczegółowy formant, sprawdź wartość `getNotificationRestriction` i odpowiednio zmodyfikuj powiadomienia aplikacji.
 
 ## <a name="register-for-notifications-from-the-sdk"></a>Rejestrowanie w celu otrzymywania powiadomień z zestawu SDK
 
@@ -1119,7 +1111,7 @@ notificationRegistry.registerReceiver(receiver, MAMNotificationType.COMPLIANCE_S
 ### <a name="implementation-notes"></a>Uwagi dotyczące implementacji
 > [!NOTE]
 > **Ważna zmiana!**  <br>
-> Metoda `MAMServiceAuthenticationCallback.acquireToken()` aplikacji powinna przekazać *wartość false* dla nowej flagi `forceRefresh` do `acquireTokenSilentSync()`.
+> Metoda `MAMServiceAuthenticationCallback.acquireToken()` aplikacji powinna przekazać *wartość false* dla nowej flagi `forceRefresh`, aby `acquireTokenSilentSync()`.
 > Wcześniej zaleca się przekazanie *wartości true* w celu rozwiązania problemu z odświeżaniem tokenów z brokera, ale znaleziono problem z biblioteką ADAL, który może uniemożliwić uzyskanie tokenów w niektórych scenariuszach, jeśli ta flaga ma *wartość true*.
 ```java
 AuthenticationResult result = acquireTokenSilentSync(resourceId, clientId, userId, /* forceRefresh */ false);
@@ -1321,7 +1313,7 @@ Wszystkie metody używane do ustawiania tożsamości raportują wynikowe wartoś
 
 Przed wyświetleniem lub użyciem danych firmowych aplikacja powinna upewnić się, że przełączenie tożsamości zakończyło się pomyślnie. Obecnie przełączanie tożsamości procesu i wątku zawsze powiedzie się dla aplikacji z włączoną obsługą wielu tożsamości, jednak firma Microsoft zastrzega sobie prawo do dodania warunków błędów. Przełączenie tożsamości interfejsu użytkownika może zakończyć się niepowodzeniem w przypadku podania nieprawidłowych argumentów, jeśli będą one powodowały konflikt z tożsamością wątku, lub jeśli użytkownik anulował wymagania dotyczące uruchamiania warunkowego (np. przez naciśnięcie przycisku Wstecz na ekranie numeru PIN). Zachowanie domyślne dla nieudanej tożsamości interfejsu użytkownika w działaniu to zakończenie działania (patrz `onSwitchMAMIdentityComplete` poniżej).
 
-W przypadku ustawienia tożsamości na poziomie `Context` za pomocą polecenia `setUIPolicyIdentity` wynik jest raportowany asynchronicznie. Jeśli `Context` ma wartość `Activity`, zestaw SDK nie będzie w stanie określić, czy zmiana tożsamości powiodła się, dopóki nie zostanie wykonane warunkowe uruchomienie, co może wymagać od użytkownika wprowadzenia numeru PIN lub podania poświadczeń firmowych. Aplikacja może zaimplementować `MAMSetUIIdentityCallback`, aby otrzymać ten wynik, lub może przekazać wartość null dla obiektu wywołania zwrotnego. Należy pamiętać, że w przypadku wywołania `setUIPolicyIdentity`, gdy wynik poprzedniego wywołania `setUIPolicyIdentity` *w tym samym kontekście* nie został jeszcze dostarczony, nowe wywołanie zwrotne zastąpi stare, a oryginalne wywołanie zwrotne nigdy nie otrzyma wyniku.
+W przypadku ustawienia tożsamości na poziomie `Context` za pomocą polecenia `setUIPolicyIdentity` wynik jest raportowany asynchronicznie. Jeśli `Context` ma wartość `Activity`, zestaw SDK nie będzie w stanie określić, czy zmiana tożsamości powiodła się, dopóki nie zostanie wykonane warunkowe uruchomienie, co może wymagać od użytkownika wprowadzenia numeru PIN lub podania poświadczeń firmowych. Aplikacja może zaimplementować `MAMSetUIIdentityCallback`, aby otrzymać ten wynik, lub przekazać wartość null dla obiektu wywołania zwrotnego. Należy pamiętać, że w przypadku wywołania `setUIPolicyIdentity`, gdy wynik poprzedniego wywołania `setUIPolicyIdentity` *w tym samym kontekście* nie został jeszcze dostarczony, nowe wywołanie zwrotne zastąpi stare, a oryginalne wywołanie zwrotne nigdy nie otrzyma wyniku.
 
 ```java
     public interface MAMSetUIIdentityCallback {
@@ -1675,7 +1667,7 @@ Pary klucz-wartość specyficzne dla aplikacji można skonfigurować w konsoli u
 Te pary klucz-wartość nie są w ogóle interpretowane przez usługę Intune, ale są przekazywane do aplikacji. W tym celu aplikacje, które mają otrzymywać taką konfigurację, mogą użyć klas `MAMAppConfigManager` i `MAMAppConfig`. Jeśli wiele zasad jest przeznaczonych dla tej samej aplikacji, może istnieć wiele powodujących konflikt wartości dostępnych dla tego samego klucza.
 
 > [!NOTE] 
-> Konfiguracja konfiguracji do dostarczenia za pośrednictwem MAM — nie można delievered w `offline` (gdy Portal firmy nie jest zainstalowana).  W takim przypadku tylko ograniczenia aplikacji systemu Android Enterprise będą dostarczane za pośrednictwem metody `MAMUserNotification` w pustej tożsamości.
+> Konfiguracja konfiguracji dostarczania za pośrednictwem MAM — nie można delievered w `offline` (gdy Portal firmy nie jest zainstalowana).  W takim przypadku tylko ograniczenia aplikacji systemu Android Enterprise będą dostarczane za pośrednictwem metody `MAMUserNotification` w pustej tożsamości.
 
 ### <a name="get-the-app-config-for-a-user"></a>Pobierz konfigurację aplikacji dla użytkownika
 Konfigurację aplikacji można pobrać w następujący sposób:
@@ -1756,7 +1748,7 @@ enum StringQueryType {
 
 Aplikacja może również zażądać danych pierwotnych jako listy zestawów par klucz-wartość.
 
-```
+```java
 List<Map<String, String>> getFullData()
 ```
 

@@ -1,6 +1,6 @@
 ---
-title: Zarządzanie aplikacjami z witryny sieci Web Portal firmy usługi Intune
-description: Zarządzanie i wyświetlić dostępne i zainstalowane aplikacje
+title: Zarządzanie aplikacjami z witryny Portal firmy usługi Intune
+description: Zarządzanie i wyświetlanie dostępnych i zainstalowanych aplikacji
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -9,6 +9,7 @@ ms.date: 06/27/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,84 +19,84 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c7b91e63a559c45cbbcbd7056a7f5e259e07481
-ms.sourcegitcommit: 690e680e854b7d707421c5e06f134e493f4f4194
+ms.openlocfilehash: edc45fb3ddab43ef77a3f072c5a1a31f8f88c957
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67416851"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72506112"
 ---
 # <a name="manage-apps-from-the-company-portal-website"></a>Pobieranie aplikacji firmowych z witryny internetowej Portalu firmy 
-Odwiedź stronę [witryny internetowej Portal firmy](https://portal.manage.microsoft.com) wyświetlić aplikacje i zarządzać nimi z Twojej organizacji. 
+Odwiedź witrynę [Portal firmy](https://portal.manage.microsoft.com) , aby wyświetlić aplikacje w organizacji i zarządzać nimi. 
 
 ## <a name="view-all-apps"></a>Wyświetl wszystkie aplikacje  
-W menu, wybierz opcję **aplikacje** Aby wyświetlić wszystkie aplikacje udostępnione przez Twoją organizację. 
+Z menu wybierz pozycję **aplikacje** , aby wyświetlić wszystkie aplikacje udostępnione przez Twoją organizację. 
 
-   ![Witryny internetowej zrzut ekranu portalu firmy, przedstawiający stronę aplikacji, Aktualizuj opcje.](./media/intune-view-apps-1907.png)  
+   ![Zrzut ekranu przedstawiający Portal firmy witryny sieci Web, na stronie aplikacje, z uwzględnieniem opcji uściślania.](./media/intune-view-apps-1907.png)  
 
-Ta strona zawiera następujące szczegółowe informacje o każdej aplikacji:  
+Na tej stronie przedstawiono następujące szczegóły dotyczące poszczególnych aplikacji:  
 
-* Nazwa: Nazwa aplikacji, z linkiem do strony szczegółów aplikacji.
-* Wydawca: Nazwa dla deweloperów lub firmie, która rozproszonych aplikacji. Wydawca jest zwykle dostawcy oprogramowania lub w organizacji.  
-* Opublikowano daty: Termin aplikacja została udostępniona do pobrania. Opublikuj datę można pokazać początkowej wersji aplikacji lub aplikacji najnowszych aktualizacji.
-* Stan: Bieżący stan aplikacji na urządzeniu, w tym dostępne, zainstalowanych i instalowania. 
-* Kategoria: Aplikacji funkcji lub celów, takich jak polecane, inżynierii, instytucji edukacyjnych i produktywności.  
+* Nazwa: Nazwa aplikacji z linkiem do strony szczegółów aplikacji.
+* Wydawca: Nazwa dewelopera lub firmy, która rozproszona aplikację. Wydawca jest zazwyczaj dostawcą oprogramowania lub Twoją organizacją.  
+* Data publikacji: Data, z której aplikacja została udostępniona do pobrania. Data publikacji może zawierać wersję początkową aplikacji lub ostatnią aktualizację aplikacji.
+* Stan: bieżący stan aplikacji na urządzeniu, w tym dostępne, zainstalowane i instalowane. 
+* Kategoria: funkcja lub cel aplikacji, na przykład Polecane, inżynieria, edukacja i produktywność.  
 
-### <a name="search-and-refine"></a>Wyszukiwanie i Aktualizuj   
+### <a name="search-and-refine"></a>Wyszukaj i Uściślij   
 
 Użyj paska wyszukiwania, aby znaleźć aplikacje. Wyniki wyszukiwania są sortowane automatycznie według istotności.  
 
-   ![Witryny internetowej zrzut ekranu portalu firmy, przedstawiający stronę aplikacji, Aktualizuj opcje.](./media/intune-refine-all-apps-1907.png)  
+   ![Zrzut ekranu przedstawiający Portal firmy witryny sieci Web, na stronie aplikacje, z uwzględnieniem opcji uściślania.](./media/intune-refine-all-apps-1907.png)  
 
-Wybierz **uściślić** aby zobaczyć filtrowanie i sortowanie opcje. Filtruj listę, aby wyświetlić aplikacje przy użyciu określonych kryteriów, w tym **typu**, **dostępności**, i **wydawców**. Wybierz **sortowania** do zmiany rozmieszczenia aplikacje według:
+Wybierz pozycję **Uściślij** , aby wyświetlić opcje filtrowania i sortowania. Przefiltruj listę, aby wyświetlić aplikacje z określonymi kryteriami, w tym **typu**, **dostępności**i **wydawców**. Wybierz pozycję **Sortuj** , aby ponownie rozmieścić aplikacje według:
 
-* Nazwa aplikacji, w kolejności rosnącej lub malejącej alfabetycznie 
+* Nazwa aplikacji, rosnąco lub malejąco alfabetycznie 
 * Nazwa wydawcy, rosnąco lub malejąco alfabetycznie 
-* Data, najstarsze lub od najnowszego opublikowania  
+* Data publikacji, najstarsza lub Najnowsza  
 
-## <a name="view-installed-apps"></a>Wyświetl zainstalowane aplikacje  
-W menu, wybierz opcję **zainstalowane aplikacje** Aby wyświetlić listę wszystkich aplikacji zainstalowanych na urządzeniu.  
+## <a name="view-installed-apps"></a>Wyświetlanie zainstalowanych aplikacji  
+Z menu wybierz pozycję **zainstalowane aplikacje** , aby wyświetlić listę wszystkich aplikacji zainstalowanych na urządzeniu.  
 
-   ![Witryny internetowej zrzut ekranu portalu firmy, strona zainstalowane aplikacje.](./media/intune-installed-apps-1907.png)  
+   ![Zrzut ekranu przedstawiający stronę Zainstalowane aplikacje w witrynie Portal firmy.](./media/intune-installed-apps-1907.png)  
 
 
-Ta strona zawiera następujące szczegółowe informacje o każdej aplikacji:  
+Na tej stronie przedstawiono następujące szczegóły dotyczące poszczególnych aplikacji:  
 
-* Nazwa: Nazwa aplikacji, z linkiem do strony szczegółów aplikacji.
-* Typ przypisania: jak przypisane i stają się dostępne dla aplikacji. Zobacz dostępne i wymagane aplikacje, aby uzyskać więcej informacji. Organizacji albo udostępnić aplikację do zainstalowania, samodzielnie lub mogą wymagać i automatycznie zainstalować aplikację na urządzeniu.  
-* Wydawca: Nazwa dla deweloperów lub firmie, która rozproszonych aplikacji. Wydawca jest zwykle dostawcy oprogramowania lub w organizacji.  
-* Opublikowano daty: Termin aplikacja została udostępniona do pobrania. Opublikuj datę można pokazać początkowej wersji aplikacji lub aplikacji najnowszych aktualizacji.
-* Stan: Bieżący stan instalacji aplikacji na urządzeniu. Aplikacje można wyświetlić jako instalacji, należy zainstalować, a następnie zainstaluj nie powiodło się. Wymagane aplikacje może potrwać do 10 minut, aby wyświetlić aktualny stan.  
+* Nazwa: Nazwa aplikacji z linkiem do strony szczegółów aplikacji.
+* Typ przypisania: sposób przypisywania i udostępniania aplikacji. Aby uzyskać więcej informacji, zobacz dostępne i wymagane aplikacje. Twoja organizacja może udostępnić aplikację, aby można było ją zainstalować samodzielnie, lub będzie ona mogła automatycznie wymagać i instalować aplikację na urządzeniu.  
+* Wydawca: Nazwa dewelopera lub firmy, która rozproszona aplikację. Wydawca jest zazwyczaj dostawcą oprogramowania lub Twoją organizacją.  
+* Data publikacji: Data, z której aplikacja została udostępniona do pobrania. Data publikacji może zawierać wersję początkową aplikacji lub ostatnią aktualizację aplikacji.
+* Stan: bieżący stan instalacji aplikacji na urządzeniu. Aplikacje mogą pokazać, że instalacja, instalacja i instalacja nie powiodły się. Aby można było wyświetlić aktualny stan, wymagane aplikacje mogą potrwać do 10 minut.  
 
-### <a name="search-and-refine"></a>Wyszukiwanie i Aktualizuj  
+### <a name="search-and-refine"></a>Wyszukaj i Uściślij  
 
 Użyj paska wyszukiwania, aby znaleźć aplikacje. Wyniki wyszukiwania są sortowane automatycznie według istotności.  
 
-   ![Zrzut ekranu portalu firmy witryny sieci Web, zainstalowane aplikacje, Dostosuj opcje.](./media/intune-installed-refine-1907.png)  
+   ![Zrzut ekranu przedstawiający witrynę Portal firmy, zainstalowane aplikacje oraz opcje uściślania.](./media/intune-installed-refine-1907.png)  
 
-Wybierz **uściślić** aby zobaczyć filtrowanie i sortowanie opcje. Filtruj listę, aby wyświetlić aplikacje przy użyciu określonych kryteriów, w tym **typy**, **wydawców**, i **stany**. Wybierz **sortowania** do zmiany rozmieszczenia aplikacje według:
+Wybierz pozycję **Uściślij** , aby wyświetlić opcje filtrowania i sortowania. Przefiltruj listę, aby wyświetlić aplikacje z określonymi kryteriami, takimi jak **typy**, **wydawcy**i **Stany**. Wybierz pozycję **Sortuj** , aby ponownie rozmieścić aplikacje według:
 
-* Nazwa aplikacji, w kolejności rosnącej lub malejącej alfabetycznie  
+* Nazwa aplikacji, rosnąco lub malejąco alfabetycznie  
 * Nazwa wydawcy, rosnąco lub malejąco alfabetycznie  
-* Opublikuj datę, najstarsze i najbardziej aktualne  
+* Data publikacji, najstarsza lub Najnowsza  
 
 Potrzebujesz dodatkowej pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).  
 
-### <a name="available-and-required-apps"></a>Dostępne i wymagane aplikacje
-Aplikacje są przypisane do Ciebie przez Twoją organizację i oznaczone jako dostępnych lub wymaganych. **Zainstalowane aplikacje** stronie przedstawia aplikacje, które ma pod **typ przypisania** kolumny. 
+### <a name="available-and-required-apps"></a>Aplikacje dostępne i wymagane
+Aplikacje są przypisane do Ciebie przez organizację i oznaczone jako dostępne lub wymagane. Na stronie **zainstalowane aplikacje** są wyświetlane aplikacje, które znajdują się w kolumnie **Typ przypisania** . 
 
 
-* Dostępne aplikacje: te aplikacje są zaznaczone przez Twoją organizację, a są właściwe i przydatne do pracy lub nauki. Opcjonalne, aby zainstalować, a to jedyne aplikacje, które znajdują się w portalu firmy do zainstalowania. 
+* Dostępne aplikacje: te aplikacje są wybierane przez organizację i są odpowiednie i przydatne w przypadku pracy lub szkoły. Są one opcjonalne do zainstalowania i są jedynymi aplikacjami, które znajdują się w Portal firmy do zainstalowania. 
 
-* Aplikacje wymagane: Twoja organizacja może wdrażać niezbędne prace i szkolnych aplikacji bezpośrednio na urządzeniu. Te aplikacje są instalowane automatycznie dla Ciebie, bez konieczności interwencji. 
+* Aplikacje wymagane: Twoja organizacja może wdrażać niezbędne aplikacje służbowe bezpośrednio na urządzeniu. Te aplikacje są automatycznie instalowane bez interwencji. 
 
 Aplikacje są również udostępniane na podstawie typu używanego urządzenia. Jeśli na przykład używasz witryny internetowej Portalu firmy na urządzeniu z systemem Windows, będziesz mieć dostęp do aplikacji dla systemu Windows, ale nie dla systemu iOS.  
 
 ## <a name="view-app-details"></a>Wyświetl szczegóły aplikacji  
-Wybierz aplikację na **aplikacje** lub **zainstalowane aplikacje** strony, aby wyświetlić jego szczegóły. Nastąpi przekierowanie do **szczegóły aplikacji**, gdzie znajdziesz opis i wymagań aplikacji. Jeśli aplikacja nie jest już zainstalowana na urządzeniu, można zainstalować go na tej stronie. 
+Wybierz aplikację na stronie **aplikacje** lub **zainstalowane aplikacje** , aby wyświetlić jej szczegóły. Nastąpi przekierowanie do **szczegółów aplikacji**, w której znajdziesz opis i wymagania aplikacji. Jeśli aplikacja nie jest już zainstalowana na urządzeniu, możesz ją zainstalować z tej strony. 
 
 
-   ![Witryny internetowej zrzut ekranu portalu firmy, strony szczegółów aplikacji.](./media/intune-app-details-1907.png)  
+   ![Zrzut ekranu przedstawiający witrynę sieci Web Portal firmy, Strona szczegółów aplikacji.](./media/intune-app-details-1907.png)  
 
 ## <a name="next-steps"></a>Następne kroki
 Potrzebujesz dodatkowej pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).  

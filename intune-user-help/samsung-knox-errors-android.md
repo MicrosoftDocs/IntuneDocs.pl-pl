@@ -1,14 +1,15 @@
 ---
-title: Rozwiązywanie typowych problemów dotyczących zarządzanych urządzeń z systemem Samsung Knox | Microsoft Docs
-description: Dowiedz się, jak rozwiązać typowe problemy dotyczące urządzeń z systemem Samsung Knox.
+title: Rozwiązywanie typowych problemów z zarządzanymi urządzeniami Samsung KNOX | Microsoft Docs
+description: Rozwiązywanie problemów z urządzeniem Samsung KNOX.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/10/2018
+ms.date: 04/19/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: 78c08b30-dc5f-46d9-9ee8-6cc8dee1e404
 searchScope:
@@ -17,18 +18,18 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f78c2460130068652b91b27ddcf5726a077e59e
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 54a8eaafba0705968672275ba67449d9672f5c46
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55833467"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72502072"
 ---
 # <a name="fix-common-issues-with-your-samsung-knox-device"></a>Rozwiązywanie typowych problemów dotyczących urządzeń z systemem Samsung Knox
 
-Niektóre problemy dotyczące urządzeń z systemem Samsung Knox można usunąć, korzystając z procedur rozwiązywania problemów. Poniżej przedstawiono szereg typowych problemów, które możesz najpierw spróbować rozwiązać samodzielnie. W przypadku bardziej złożonych problemów zalecamy [skontaktowanie się z zespołem aplikacji Portal firmy dla systemu Android](https://github.com/MicrosoftDocs/IntuneDocs/blob/master/intune-user-help/send-logs-to-microsoft-android.md).
+Rozwiązywanie typowych problemów związanych z zarządzanymi urządzeniami z rozwiązaniem Samsung KNOX. Aby zgłosić problem, który nie jest wymieniony w tym miejscu, można [wysłać dzienniki diagnostyczne](send-logs-to-microsoft-android.md) za pomocą aplikacji Portal firmy lub Microsoft Intune. Deweloperzy firmy Microsoft zobaczą dzienniki specyficzne dla aplikacji, aby zdiagnozować problem i znaleźć rozwiązanie.    
 
-## <a name="network-activation-error"></a>Błąd aktywacji sieci
+## <a name="network-activation-error"></a>Błąd aktywacji sieci  
 
 Wyświetlony komunikat może wyglądać podobnie jak poniższy:
 
@@ -50,6 +51,6 @@ Wyświetlony komunikat może wyglądać podobnie jak poniższy:
 
 |Komunikat o błędzie|Co należy zrobić|
 |---|---|
-|**Błąd aktywacji systemu Samsung Knox** — nie można aktywować licencji systemu Samsung Knox. Może to być spowodowane tym, że włączony jest tryb oszczędzania energii. Wyłącz tryb oszczędzania energii w ustawieniach urządzenia i spróbuj ponownie. |Urządzenie może nie mieć ustawień zasilania odpowiednich do pracy z zasobami firmy. Dowiedz się więcej o [konfigurowaniu trybu oszczędzania energii](power-saving-mode-android.md).|
+|**Błąd aktywacji systemu Samsung Knox** — nie można aktywować licencji systemu Samsung Knox. Może to być spowodowane tym, że włączony jest tryb oszczędzania energii. Wyłącz tryb oszczędzania energii w ustawieniach urządzenia i spróbuj ponownie. |Urządzenie może nie mieć ustawień zasilania odpowiednich do pracy z zasobami firmy. Aby dowiedzieć się więcej na temat tego ustawienia, zobacz [tryb oszczędzania energii](power-saving-mode-android.md).|  
 
 Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).

@@ -5,21 +5,22 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/18/2019
+ms.date: 10/17/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a58eefffac670a12fc1d1a065534b4c1a4505426
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: d1d83a77d8823a05accaf1c88b57f6e380636469
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71734950"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72585379"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem Android Enterprise w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune
 
@@ -67,7 +68,7 @@ W tym artykule wymieniono i opisano różne ustawienia, którymi można sterowa�
 - **Aktualizacja systemu**: wybierz opcję, aby określić sposób obsługi aktualizacji bezprzewodowych przez urządzenie:
   - **Ustawienie domyślne urządzenia**: użyte zostaną ustawienia domyślne urządzenia.
   - **Automatyczne**: aktualizacje są automatycznie instalowane bez interakcji z użytkownikiem. Ustawienie tych zasad powoduje natychmiastowe instalowanie wszystkich oczekujących aktualizacji.
-  - **Odłożone**: instalowanie aktualizacji jest odkładane o 30 dni. Po upływie tych 30 dni system Android monituje użytkownika o zainstalowanie aktualizacji. Producenci urządzeń i operatorzy mogą uniemożliwiać (wykluczać) odkładanie ważnych aktualizacji zabezpieczeń. Aktualizacja podlegająca takiemu wykluczeniu powoduje wyświetlenie użytkownikowi powiadomienia systemowego na urządzeniu. 
+  - **Odłożone**: instalowanie aktualizacji jest odkładane o 30 dni. Po upływie tych 30 dni system Android monituje użytkownika o zainstalowanie aktualizacji. Producenci urządzeń i operatorzy mogą uniemożliwiać (wykluczać) odkładanie ważnych aktualizacji zabezpieczeń. Aktualizacja podlegająca takiemu wykluczeniu powoduje wyświetlenie użytkownikowi powiadomienia systemowego na urządzeniu.
   - **Okno obsługi**: aktualizacje są instalowane automatycznie w ramach codziennego okna obsługi skonfigurowanego w usłudze Intune. Próba instalacji jest podejmowana codziennie przez 30 dni i może zakończyć się niepowodzeniem ze względu na brak miejsca lub niski poziom baterii. Po upływie 30 dni system Android monituje użytkownika o instalację. To okno jest też używane do instalowania aktualizacji aplikacji ze sklepu Play. Tej opcji należy używać w przypadku urządzeń dedykowanych, takich jak kioski, ponieważ umożliwia ona aktualizowanie aplikacji na pierwszym planie dedykowanych urządzeń z pojedynczymi aplikacjami.
 
 - **Okna powiadomień**: po ustawieniu opcji **Wyłącz** powiadomienia wyświetlane w oknach, w tym wyskakujące powiadomienia, powiadomienia o połączeniach przychodzących, połączeniach wychodzących, alerty systemowe i błędy systemowe, nie są wyświetlane na urządzeniu. Po ustawieniu opcji **Nieskonfigurowane** zostanie użyte domyślne ustawienie systemu operacyjnego, co może prowadzić do wyświetlania powiadomień.
@@ -98,8 +99,8 @@ Te ustawienia umożliwiają skonfigurowanie trybu kiosku na dedykowanych urządz
   > W przypadku dedykowanych urządzeń z wieloma aplikacjami [aplikacja Zarządzany ekran główny](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) ze sklepu Google Play **musi zostać**:
   >   - [Dodana jako aplikacja kliencka](../apps/apps-add-android-for-work.md) w usłudze Intune
   >   - [Przypisana do grupy urządzeń](../apps/apps-deploy.md) utworzonej na potrzeby dedykowanych urządzeń
-  > 
-  > Aplikacja **Zarządzany ekran główny** nie musi znajdować się w profilu konfiguracji, ale trzeba ją dodać jako aplikację kliencką. Gdy aplikacja **Zarządzany ekran główny** zostanie dodana jako aplikacja kliencka, wszystkie inne aplikacje dodane w profilu konfiguracji będą wyświetlane jako ikony w aplikacji **Zarządzany ekran główny**. 
+  >
+  > Aplikacja **Zarządzany ekran główny** nie musi znajdować się w profilu konfiguracji, ale trzeba ją dodać jako aplikację kliencką. Gdy aplikacja **Zarządzany ekran główny** zostanie dodana jako aplikacja kliencka, wszystkie inne aplikacje dodane w profilu konfiguracji będą wyświetlane jako ikony w aplikacji **Zarządzany ekran główny**.
   >
   > W przypadku korzystania z trybu kiosku dla aplikacji telefoner/aplikacje telefoniczne mogą nie działać prawidłowo. 
 
@@ -157,8 +158,8 @@ Te ustawienia umożliwiają skonfigurowanie trybu kiosku na dedykowanych urządz
 
       Jeśli adres URL nie zostanie wprowadzony, zostanie użyty domyślny obraz urządzenia, jeśli istnieje obraz domyślny.
 
-    - **Liczba sekund, przez które urządzenie wyświetla wygaszacz ekranu przed wyłączeniem ekranu**: Wybierz, jak długo urządzenie ma wyświetlać wygaszacz ekranu. Wprowadź wartość z zakresu od 0-9999999 sekund. Wartość domyślna to `0` s. Jeśli pole pozostanie puste, lub ma wartość zero (`0`), wygaszacz ekranu będzie aktywny do momentu, gdy użytkownik nie współdziała z urządzeniem.
-    - **Liczba sekund, przez które urządzenie jest nieaktywne przed wyświetleniem wygaszacza ekranu**: Określ, jak długo urządzenie jest bezczynne przed wyświetleniem ekranu. Wprowadź wartość z zakresu od 1-9999999 sekund. Wartość domyślna to `30` s. Należy wprowadzić liczbę większą od zera (`0`).
+    - **Liczba sekund, przez które urządzenie wyświetla wygaszacz ekranu przed wyłączeniem ekranu**: Wybierz, jak długo urządzenie ma wyświetlać wygaszacz ekranu. Wprowadź wartość z zakresu od 0-9999999 sekund. Wartość domyślna to `0` sekund. Jeśli pole pozostanie puste, lub ma wartość zero (`0`), wygaszacz ekranu będzie aktywny do momentu, gdy użytkownik nie współdziała z urządzeniem.
+    - **Liczba sekund, przez które urządzenie jest nieaktywne przed wyświetleniem wygaszacza ekranu**: Określ, jak długo urządzenie jest bezczynne przed wyświetleniem ekranu. Wprowadź wartość z zakresu od 1-9999999 sekund. Wartość domyślna to `30` sekund. Należy wprowadzić liczbę większą od zera (`0`).
     - **Wykryj nośnik przed uruchomieniem wygaszacza ekranu**: **enable** (domyślnie) nie pokazuje wygaszacza ekranu, jeśli audio lub wideo są odtwarzane na urządzeniu. **Nieskonfigurowane** — wyświetla wygaszacz ekranu, nawet w przypadku odtwarzania dźwięku lub wideo.
 
 ### <a name="device-password-settings"></a>Ustawienia haseł urządzeń
@@ -241,7 +242,22 @@ Te ustawienia umożliwiają skonfigurowanie trybu kiosku na dedykowanych urządz
 
   Wybierz pozycję **Nieskonfigurowane**, aby zezwolić ruchowi na przepływ przez tunel VPN lub sieć komórkową.
 
-## <a name="work-profile-only"></a>Tylko profil służbowy 
+- **Zalecany globalny serwer proxy**: wybierz opcję **Włącz** , aby dodać globalny serwer proxy do urządzeń. Po włączeniu ruchu HTTP i HTTPS, w tym niektórych aplikacji na urządzeniu, użyj wprowadzonego serwera proxy. Ten serwer proxy jest tylko rekomendacją. Niektóre aplikacje nie będą korzystać z serwera proxy. **Nieskonfigurowane** (domyślnie) nie dodaje zalecanego globalnego serwera proxy.
+
+  Aby uzyskać więcej informacji na temat tej funkcji, zobacz [setRecommendedGlobalProxy](https://developer.android.com/reference/android/app/admin/DevicePolicyManager.html#setRecommendedGlobalProxy(android.content.ComponentName,%20android.net.ProxyInfo)) (otwiera witrynę systemu Android).
+
+  Po włączeniu należy również wprowadzić **Typ** serwera proxy. Dostępne opcje:
+
+  - **Bezpośredni**: Wybierz tę opcję, aby ręcznie wprowadzić szczegóły serwera proxy, w tym:
+    - **Host**: Wprowadź nazwę hosta lub adres IP serwera proxy. Na przykład wprowadź adres `proxy.contoso.com` lub `127.0.0.1`.
+    - **Numer portu**: wprowadź numer portu TCP używany przez serwer proxy. Na przykład wprowadź `8080`.
+    - **Wykluczone hosty**: wprowadź listę nazw hostów lub adresów IP, które nie korzystają z serwera proxy. Ta lista może zawierać symbol wieloznaczny gwiazdki (`*`) i wiele hostów rozdzielonych średnikami (`;`) bez spacji. Na przykład wprowadź `127.0.0.1;web.contoso.com;*.microsoft.com`.
+
+  - **Konfiguracja serwera proxy**: wprowadź **adres URL PAC** do skryptu automatycznej konfiguracji serwera proxy. Na przykład wprowadź `https://proxy.contoso.com/proxy.pac`.
+
+    Aby uzyskać więcej informacji na temat plików PAC, zobacz [plik automatycznej konfiguracji serwera proxy (PAC)](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (otwiera witrynę firmy innej niż Microsoft).
+
+## <a name="work-profile-only"></a>Tylko profil służbowy
 
 ### <a name="work-profile-settings"></a>Ustawienia profilu służbowego
 
@@ -249,9 +265,10 @@ Te ustawienia umożliwiają skonfigurowanie trybu kiosku na dedykowanych urządz
 
 - **Kopiuj i wklejaj między profilem służbowym a osobistym**: wybierz pozycję **Blokuj**, aby uniemożliwić kopiowanie i wklejanie między aplikacjami służbowymi i osobistymi. Pozycja **Nieskonfigurowane** umożliwia użytkownikom udostępnianie danych aplikacjom w profilu osobistym przy użyciu kopiowania i wklejania. 
 - **Udostępnianie danych między profilami służbowym i osobistym**: wybierz, czy aplikacje w profilu służbowym mogą udostępniać dane aplikacjom w profilu osobistym. Możesz na przykład sterować akcjami udostępniania, takimi jak opcja **Udostępnij…** , w aplikacjach. w przeglądarce Chrome. To ustawienie nie ma zastosowania do zachowania schowka w zakresie kopiowania/wklejania. Opcje udostępniania:
-  - **Domyślne ograniczenia udostępniania**: domyślne zachowanie urządzenia w zakresie udostępniania, które różni się w zależności od wersji systemu Android. Udostępnianie danych z profilu osobistego w profilu służbowym jest domyślnie dozwolone. Udostępnianie danych z profilu służbowego w profilu osobistym jest domyślnie zablokowane. To ustawienie zapobiega udostępnianiu danych z profilu służbowego w profilu osobistym. Firma Google nie blokuje udostępniania z profilu osobistego do profilu służbowego na urządzeniach z systemem w wersji 6.0 lub nowszej.
+  - **Ustawienie domyślne urządzenia**: domyślne zachowanie urządzenia w zakresie udostępniania, które różni się w zależności od wersji systemu Android. Udostępnianie danych z profilu osobistego w profilu służbowym jest domyślnie dozwolone. Udostępnianie danych z profilu służbowego w profilu osobistym jest domyślnie zablokowane. To ustawienie zapobiega udostępnianiu danych z profilu służbowego w profilu osobistym. Firma Google nie blokuje udostępniania z profilu osobistego do profilu służbowego na urządzeniach z systemem w wersji 6.0 lub nowszej.
   - **Aplikacje w profilu służbowym mogą obsługiwać żądania udostępnienia z profilu osobistego**: umożliwia włączenie wbudowanej funkcji systemu Android pozwalającej na udostępnianie danych z profilu osobistego w profilu służbowym. Gdy ta opcja jest włączona, żądanie udostępnienia z aplikacji w profilu osobistym umożliwi udostępnianie danych aplikacjom w profilu służbowym. Jest to domyślne ustawienie w przypadku urządzeń z systemem Android w wersji wcześniejszej niż 6.0.
-  - **Zezwalaj na udostępnianie przez granice**: umożliwia udostępnianie przez granicę profilu służbowego w obu kierunkach. Po wybraniu tego ustawienia aplikacje w profilu służbowym mogą udostępniać dane niewskazanym aplikacjom w profilu osobistym. To ustawienie pozwala zarządzanym aplikacjom z profilu służbowego udostępniać dane aplikacjom w niezarządzanym obszarze urządzenia. Dlatego należy go używać ostrożnie.
+  - **Nie Zezwalaj na udostępnianie między granicami**: Zapobiega udostępnianiu między profilami służbowymi i osobistymi.
+  - **Brak ograniczeń dotyczących udostępniania**: włącza udostępnianie przez granicę profilu służbowego w obu kierunkach. Po wybraniu tego ustawienia aplikacje w profilu służbowym mogą udostępniać dane niewskazanym aplikacjom w profilu osobistym. To ustawienie pozwala zarządzanym aplikacjom z profilu służbowego udostępniać dane aplikacjom w niezarządzanym obszarze urządzenia. Dlatego należy go używać ostrożnie.
 
 - **Powiadomienia profilu służbowego przy zablokowanym urządzeniu**: pozwala określić, czy aplikacje z profilu służbowego mogą pokazywać dane w powiadomieniach, gdy urządzenie jest zablokowane. Pozycja **Blokuj** powoduje, że dane nie są wyświetlane. Pozycja **Nieskonfigurowane** powoduje wyświetlanie danych.
 - **Domyślne uprawnienia aplikacji**: powoduje ustawienie domyślnych zasad uprawnień dla wszystkich aplikacji w profilu służbowym. Począwszy od systemu Android 6, użytkownik jest monitowany o udzielenie określonych uprawnień wymaganych przez aplikacje, gdy aplikacja jest uruchamiana. To ustawienie zasad pozwala określić, czy użytkownicy są monitowani o nadanie uprawnień wszystkim aplikacjom w profilu służbowym. Można na przykład przypisać aplikację do profilu służbowego, który wymaga dostępu do lokalizacji. Standardowo aplikacja monituje użytkownika o zatwierdzenie lub odrzucenie dostępu aplikacji do lokalizacji. Należy użyć tych zasad, aby automatycznie udzielić uprawnień bez wyświetlania monitu, automatycznie odmówić uprawnień bez wyświetlania monitu lub pozwolić użytkownikowi końcowemu zdecydować. Wybierz spośród opcji:
@@ -325,6 +342,13 @@ Te ustawienia hasła są stosowane w profilach osobistych na urządzeniach korzy
 
    > [!Note]
    > To ustawienie działa tylko w przypadku urządzeń z systemem Android O lub nowszym.
+
+- **Zapobiegaj instalacji aplikacji z nieznanych źródeł w profilu osobistym**: Po zaprojektowaniu urządzenia z systemem Android Enterprise profile służbowe nie mogą instalować aplikacji ze źródeł innych niż Sklep Play. Ze względu na to, że urządzenia profilu służbowego są przeznaczone do podwójnego profilu:
+
+  - Profil służbowy zarządzany przy użyciu zarządzania urządzeniami przenośnymi.
+  - Profil osobisty odizolowany od zarządzania urządzeniami przenośnymi.
+
+  To ustawienie umożliwia administratorom większą kontrolę nad instalacjami aplikacji z nieznanych źródeł. **Nie skonfigurowano** (wartość domyślna) umożliwia instalowanie aplikacji z nieznanych źródeł w profilu osobistym. **Blokuj** uniemożliwia instalacje aplikacji ze źródeł innych niż Sklep Play w profilu osobistym.
 
 ### <a name="connectivity"></a>Łączność
 

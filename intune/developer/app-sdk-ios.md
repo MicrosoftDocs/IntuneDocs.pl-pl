@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 09/17/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: developer
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 553c4ae4dab211cf33e21c328b4b35408d8bfeb0
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 93b48fd5f6482669da923e4c15dcb09c7d328197
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71733780"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72503456"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu iOS
 
@@ -34,7 +35,7 @@ Dzięki zestawowi SDK aplikacji usługi Microsoft Intune dla systemu iOS możesz
 
 * Wymagany jest komputer z systemem Mac OS X 10.8.5 lub nowszym oraz z zainstalowanym programem Xcode 9 lub nowszym.
 
-* Aplikacja musi być przeznaczona dla systemu iOS 10 lub nowszego.
+* Aplikacja musi być przeznaczona dla systemu iOS 11 lub nowszego.
 
 * Należy zapoznać się z [postanowieniami licencyjnymi zestawu SDK aplikacji usługi Intune dla systemu iOS](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20for%20iOS.pdf). Wydrukuj i zachowaj kopię postanowień licencyjnych. Pobranie i rozpoczęcie używania zestawu SDK aplikacji usługi Intune dla systemu iOS oznacza akceptację tych postanowień licencyjnych.  Jeśli nie akceptujesz tych postanowień, nie możesz używać tego oprogramowania.
 
@@ -253,8 +254,6 @@ ADALCacheKeychainGroupOverride | String  | Określa grupę łańcucha kluczy do 
 AppGroupIdentifiers | Tablica ciągów  | Tablica grup aplikacji z sekcji uprawnień aplikacji com.apple.security.application-groups. | Wymagane, jeśli aplikacja używa grup aplikacji. |
 ContainingAppBundleId | String | Określa identyfikator pakietu aplikacji zawierającej rozszerzenie. | Wymagane w przypadku rozszerzeń dla systemu iOS. |
 DebugSettingsEnabled| Boolean | W przypadku ustawienia na wartość YES (TAK) zasady testu w pakiecie ustawień mogą być stosowane. Aplikacje *nie* powinny być dostarczane z włączonym tym ustawieniem. | Opcjonalny. Wartość domyślna to no (Nie). |
-MainNibFile<br>MainNibFile~ipad  | String  | To ustawienie powinno zawierać nazwę pliku głównego nib aplikacji.  | Wymagane, jeśli w pliku Info.plist aplikacji zdefiniowano ustawienie MainNibFile. |
-MainStoryboardFile<br>MainStoryboardFile~ipad  | String  | To ustawienie powinno zawierać nazwę pliku głównego storyboard aplikacji. | Wymagane, jeśli w pliku Info.plist aplikacji zdefiniowano ustawienie UIMainStoryboardFile. |
 AutoEnrollOnLaunch| Boolean| Określa, czy aplikacja ma podejmować próbę automatycznego rejestrowania w momencie uruchomienia, jeśli wykryto istniejącą tożsamość zarządzaną i nie została ona jeszcze zarejestrowana. Wartość domyślna to NO (Nie). <br><br> Uwagi: Jeśli tożsamość zarządzana nie została znaleziona lub nie jest dostępny prawidłowy token tożsamości w pamięci podręcznej biblioteki ADAL/MSAL, próba rejestracji nie powiedzie się w trybie dyskretnym, bez monitowania o poświadczenia, chyba że aplikacja ma również ustawienie MAMPolicyRequired o wartości YES (Tak). | Opcjonalny. Wartość domyślna to no (Nie). |
 MAMPolicyRequired| Boolean| Określa, czy uruchamianie aplikacji będzie blokowane, jeśli aplikacja nie ma zasad ochrony aplikacji usługi Intune. Wartość domyślna to NO (Nie). <br><br> Uwagi: Aplikacje nie mogą być przesyłane do sklepu z aplikacjami, jeśli mają ustawienie MAMPolicyRequired o wartości YES (Tak). W przypadku podania wartości YES (Tak) dla ustawienia MAMPolicyRequired ustawienie AutoEnrollOnLaunch również musi mieć wartość YES (Tak). | Opcjonalny. Wartość domyślna to no (Nie). |
 MAMPolicyWarnAbsent | Boolean| Określa, czy użytkownik będzie ostrzegany podczas uruchamiania aplikacji, jeśli aplikacja nie ma zasad ochrony aplikacji usługi Intune. <br><br> Uwaga: użytkownicy będą mogli korzystać z aplikacji bez zasad po odrzuceniu ostrzeżenia. | Opcjonalny. Wartość domyślna to no (Nie). |
@@ -262,9 +261,10 @@ MultiIdentity | Boolean| Określa, czy aplikacja obsługuje wiele tożsamości. 
 SafariViewControllerBlockedOverride | Boolean| Wyłącza punkty zaczepienia SafariViewController usługi Intune w celu włączenia uwierzytelniania MSAL za pośrednictwem SFSafariViewController, SFAuthSession lub ASWebAuthSession. | Opcjonalny. Wartość domyślna to no (Nie). OSTRZEŻENIE: może spowodować wyciek danych, jeśli jest używany nieprawidłowo. Włącz tylko w razie absolutnej konieczności. Aby uzyskać szczegółowe informacje, zobacz sekcję [Kwestie do uwzględnienia podczas korzystania z biblioteki MSAL](#special-considerations-when-using-msal).  |
 SplashIconFile <br>SplashIconFile~ipad | String  | Określa plik ikony powitalnej (uruchamiania) usługi Intune. | Opcjonalny. |
 SplashDuration | Liczba | Minimalny czas w sekundach, przez który ekran uruchamiania usługi Intune będzie wyświetlany podczas uruchamiania aplikacji. Wartość domyślna to 1,5. | Opcjonalny. |
-BackgroundColor| String| Określa kolor tła ekranu uruchamiania i ekranu numeru PIN. Akceptuje ciąg szesnastkowy RGB w postaci „#XXXXXX”, gdzie „X” może być znakiem z zakresu 0–9 lub A–F. Znak # można pominąć.   | Opcjonalny. Domyślnie jasnoszary. |
-ForegroundColor| String| Określa kolor pierwszego planu ekranu uruchamiania i ekranu numeru PIN, taki jak kolor tekstu. Akceptuje ciąg szesnastkowy RGB w postaci „#XXXXXX”, gdzie „X” może być znakiem z zakresu 0–9 lub A–F. Znak # można pominąć.  | Opcjonalny. Domyślnie czarny. |
-AccentColor | String| Określa kolor akcentu dla ekranu numeru PIN, taki jak kolor tekstu przycisku i kolor wyróżnienia pola. Akceptuje ciąg szesnastkowy RGB w postaci „#XXXXXX”, gdzie „X” może być znakiem z zakresu 0–9 lub A–F. Znak # można pominąć.| Opcjonalny. Domyślnie systemowy niebieski. |
+BackgroundColor| String| Określa kolor tła składników interfejsu użytkownika zestawu SDK usługi Intune. Akceptuje ciąg szesnastkowy RGB w postaci „#XXXXXX”, gdzie „X” może być znakiem z zakresu 0–9 lub A–F. Znak # można pominąć.   | Opcjonalny. Domyślny kolor tła systemu, który może się różnić w różnych wersjach systemu iOS i zgodnie z ustawieniem tryb ciemny systemu iOS. |
+ForegroundColor| String| Określa kolor pierwszego planu dla składników interfejsu użytkownika zestawu SDK usługi Intune, takich jak kolor tekstu. Akceptuje ciąg szesnastkowy RGB w postaci „#XXXXXX”, gdzie „X” może być znakiem z zakresu 0–9 lub A–F. Znak # można pominąć.  | Opcjonalny. Wartością domyślną jest kolor etykiety systemu, który może się różnić w różnych wersjach systemu iOS i zgodnie z ustawieniem trybu ciemnego systemu iOS. |
+AccentColor | String| Określa kolor akcentu składników interfejsu użytkownika zestawu SDK usługi Intune, takich jak kolor tekstu przycisku i kolor wyróżnienia pola numeru PIN. Akceptuje ciąg szesnastkowy RGB w postaci „#XXXXXX”, gdzie „X” może być znakiem z zakresu 0–9 lub A–F. Znak # można pominąć.| Opcjonalny. Domyślnie systemowy niebieski. |
+SupportsDarkMode| Boolean | Określa, czy schemat kolorów interfejsu użytkownika zestawu SDK usługi Intune powinien obserwować ustawienie trybu ciemnego systemu, jeśli nie ustawiono żadnej wartości jawnej dla BackgroundColor/ForegroundColor/AccentColor | Opcjonalny. Wartość domyślna to yes (Tak). |
 MAMTelemetryDisabled| Boolean| Określa, czy zestaw SDK będzie wysyłał dane telemetryczne do swojej wewnętrznej bazy danych.| Opcjonalny. Wartość domyślna to no (Nie). |
 MAMTelemetryUsePPE | Boolean | Określa, czy zestaw SDK objęty zarządzaniem aplikacjami mobilnymi będzie wysyłał dane do wewnętrznej bazy danych telemetrii wstępnego środowiska produkcyjnego. Użyj tego ustawienia podczas testowania aplikacji za pomocą zasad usługi Intune, aby dane telemetryczne testu nie mieszały się z danymi klienta. | Opcjonalny. Wartość domyślna to no (Nie). |
 MaxFileProtectionLevel | String | Opcjonalny. Umożliwia aplikacji określenie maksymalnej liczby elementów `NSFileProtectionType`, które może obsługiwać. Ta wartość będzie zastępować zasady wysyłane przez usługę, jeśli poziom będzie wyższy niż to, co może obsługiwać aplikacja. Możliwe wartości: `NSFileProtectionComplete`, `NSFileProtectionCompleteUnlessOpen`, `NSFileProtectionCompleteUntilFirstUserAuthentication`, `NSFileProtectionNone`.|

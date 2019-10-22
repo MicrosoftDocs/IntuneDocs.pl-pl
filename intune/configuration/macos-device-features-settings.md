@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 10/02/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
 ms.reviewer: ''
@@ -15,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ae9637e827330fb33c407122450deb014b3725a
-ms.sourcegitcommit: f04e21ec459998922ba9c7091ab5f8efafd8a01c
+ms.openlocfilehash: 17d0baeeb6b193be6acf8d6087c26a66b18642c5
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816869"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72506673"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Ustawienia funkcji urządzenia z systemem macOS w usłudze Intune
 
@@ -71,7 +72,7 @@ Aby dodać serwery funkcji AirPrinter, potrzebujesz adresu IP drukarki, ścieżk
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Ustawienia dotyczą: wszystkie typy rejestracji
 
-- **Pliki, foldery i aplikacje niestandardowe**: **Dodaj** ścieżkę do pliku, folderu, aplikacji niestandardowej lub aplikacji systemowej, którą chcesz otworzyć, gdy użytkownik zaloguje się na urządzeniu. Aplikacje systemowe lub aplikacje skompilowane lub dostosowane do organizacji zwykle znajdują się w folderze `Applications` z ścieżką podobną do `/Applications/AppName.app`. 
+- **Pliki, foldery i aplikacje niestandardowe**: **Dodaj** ścieżkę do pliku, folderu, aplikacji niestandardowej lub aplikacji systemowej, którą chcesz otworzyć, gdy użytkownik zaloguje się na urządzeniu. Aplikacje systemowe lub aplikacje skompilowane lub dostosowane do organizacji zwykle znajdują się w folderze `Applications` ze ścieżką podobną do `/Applications/AppName.app`. 
 
   Można dodać wiele plików, folderów i aplikacji. Wprowadź na przykład:  
   
@@ -120,7 +121,7 @@ Za pomocą następujących ustawień można konfigurować zakres czynności dost
 - **Wyłącz polecenie Wyloguj** (system macOS 10.13 i nowsze): wybranie opcji **Wyłącz** uniemożliwia zalogowanym użytkownikom wybranie opcji **Wyloguj**. Wybranie opcji **Nie skonfigurowano** (ustawienie domyślne) pozwala użytkownikom wybierać polecenie **Wyloguj** w menu na urządzeniu.
 - **Wyłącz pozycję Zablokuj ekran** (system macOS 10.13 i nowsze): wybranie opcji **Wyłącz** uniemożliwia zalogowanym użytkownikom wybranie opcji **Zablokuj ekran**. Wybranie opcji **Nie skonfigurowano** (ustawienie domyślne) pozwala użytkownikom wybierać polecenie **Zablokuj ekran** w menu na urządzeniu.
 
-## <a name="single-sign-on-app-extension"></a>Rozszerzenie aplikacji logowania jednokrotnego
+## <a name="single-sign-on-app-extension"></a>Rozszerzenie aplikacji — rejestracja jednokrotna
 
 Ta funkcja ma zastosowanie do:
 
@@ -200,26 +201,26 @@ Ta funkcja ma zastosowanie do:
 
 - **Identyfikator aplikacji**: Wprowadź identyfikator aplikacji, która ma zostać skojarzona z witryną sieci Web. Identyfikator aplikacji zawiera identyfikator zespołu i identyfikator pakietu: `TeamID.BundleID`.
 
-  Identyfikator zespołu to 10-znakowe znaki alfanumeryczne (litery i cyfry) wygenerowane przez firmę Apple dla deweloperów aplikacji, takie jak `ABCDE12345`. [Znajdź swój identyfikator zespołu](https://help.apple.com/developer-account/#/dev55c3c710c)  (otwiera witrynę sieci Web firmy Apple), aby uzyskać więcej informacji.
+  Identyfikator zespołu to 10-znakowe znaki alfanumeryczne (litery i cyfry) wygenerowane przez firmę Apple dla deweloperów aplikacji, takie jak `ABCDE12345`. [Znajdź identyfikator zespołu](https://help.apple.com/developer-account/#/dev55c3c710c)   (otwiera witrynę sieci Web firmy Apple), aby uzyskać więcej informacji.
 
-  Identyfikator pakietu jednoznacznie identyfikuje aplikację i zazwyczaj jest formatowany w odwrotnej notacji nazwy domeny. Na przykład identyfikator pakietu wyszukiwania to `com.apple.finder`. Aby znaleźć identyfikator pakietu, użyj programu AppleScript w terminalu:
+  Identyfikator pakietu jednoznacznie identyfikuje aplikację i zazwyczaj jest formatowany w odwrotnej notacji nazwy domeny. Na przykład identyfikator pakietu wyszukiwania jest `com.apple.finder`. Aby znaleźć identyfikator pakietu, użyj programu AppleScript w terminalu:
 
   `osascript -e 'id of app "ExampleApp"'`
 
 - **Domena**: Wprowadź domenę witryny sieci Web, która ma zostać skojarzona z aplikacją. Domena zawiera typ usługi i w pełni kwalifikowana nazwa hosta, takie jak `webcredentials:www.contoso.com`.
 
-  Można dopasować wszystkie poddomeny skojarzonej domeny, wprowadzając `*.` (symbol wieloznaczny gwiazdki i kropka) przed rozpoczęciem domeny. Okres jest wymagany. Dokładne domeny mają wyższy priorytet niż w przypadku domen wieloznacznych. Dlatego wzorce z domen nadrzędnych są dopasowywane, *Jeśli* w pełni kwalifikowana poddomena nie zostanie znaleziona.
+  Można dopasować wszystkie poddomeny skojarzonej domeny, wprowadzając `*.` (symbol wieloznaczny gwiazdki i kropkę) przed rozpoczęciem domeny. Okres jest wymagany. Dokładne domeny mają wyższy priorytet niż w przypadku domen wieloznacznych. Dlatego wzorce z domen nadrzędnych są dopasowywane, *Jeśli* w pełni kwalifikowana poddomena nie zostanie znaleziona.
 
   Typem usługi może być:
 
-  - **authsrv**: rozszerzenie aplikacji logowania jednokrotnego
+  - **authsrv**: rozszerzenie aplikacji — logowanie jednokrotne
   - **applink**: połączenie uniwersalne
   - **poświadczenia webcredentials**: Autowypełnianie hasła
 
 - **Dodaj**: Wybierz, aby dodać aplikacje i skojarzone domeny.
 
 > [!TIP]
-> Aby rozwiązać problem, na urządzeniu macOS Otwórz pozycję **Preferencje systemowe** > **Profile**. Potwierdź, że utworzony profil znajduje się na liście Profile urządzeń. Jeśli jest ona wyświetlana, upewnij się, że **Konfiguracja skojarzonych domen** znajduje się w profilu i zawiera poprawne identyfikatory aplikacji i domen.
+> Aby rozwiązać problem, na urządzeniu macOS Otwórz aplet **Preferencje systemowe**  > **Profile**. Potwierdź, że utworzony profil znajduje się na liście Profile urządzeń. Jeśli jest ona wyświetlana, upewnij się, że **Konfiguracja skojarzonych domen** znajduje się w profilu i zawiera poprawne identyfikatory aplikacji i domen.
 
 ## <a name="next-steps"></a>Następne kroki
 
