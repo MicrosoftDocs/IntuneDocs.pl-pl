@@ -1,6 +1,6 @@
 ---
 title: Uaktualnianie lub używanie trybu S na urządzeniach z systemem Windows 10 — Microsoft Intune — Azure | Microsoft Docs
-description: Użyj usługi Microsoft Intune, aby uaktualnić urządzenia z systemem Windows 10 do innych wersji lub aby przełączyć tryb S. Administratorzy mogą używać profilu konfiguracji urządzenia, aby uaktualniać system Windows 10 Professional do wersji Windows 10 Enterprise oraz aby wyjść z trybu S. Dowiedz się więcej o obsługiwanych ścieżkach uaktualniania dla systemu Windows 10 Pro, N Edition, Education, Cloud, Enterprise, Core, Holographic i Mobile.
+description: Użyj usługi Microsoft Intune, aby uaktualnić urządzenia z systemem Windows 10 do innych wersji lub aby przełączyć się w tryb S. Administratorzy mogą używać profilu konfiguracji urządzenia, aby uaktualniać system Windows 10 Professional do wersji Windows 10 Enterprise oraz aby wyłączać tryb S. Dowiedz się więcej o obsługiwanych ścieżkach uaktualniania dla systemu Windows 10 Pro, N Edition, Education, Cloud, Enterprise, Core, Holographic i Mobile.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 04/22/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ae8b6528-7979-47d8-abe0-58cea1905270
@@ -16,22 +17,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad2977597ca9e5b6eef82fb3539917ea15ca2e31
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: f5519429bae69fe277c72b12a2801a1875295824
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71723999"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72493775"
 ---
 # <a name="upgrade-windows-10-editions-or-switch-out-of-s-mode-on-devices-using-microsoft-intune"></a>Uaktualnianie wersji systemu Windows 10 lub wyłączanie trybu S na urządzeniach przy użyciu usługi Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-W ramach rozwiązania do zarządzania urządzeniami przenośnymi (MDM) można uaktualnić urządzenia z systemem Windows 10. Możesz na przykład chcieć uaktualnić urządzenia z systemem Windows 10 Professional do systemu Windows 10 Enterprise. Możesz też chcieć, aby w urządzeniu wyłączono tryb S.
+W ramach rozwiązania do zarządzania urządzeniami przenośnymi (MDM) można uaktualnić urządzenia z systemem Windows 10. Możesz na przykład chcieć uaktualnić urządzenia z systemem Windows 10 Professional do systemu Windows 10 Enterprise. Możesz też chcieć wyłączyć tryb S w urządzeniu.
 
-[Tryb S w systemie Windows 10](https://support.microsoft.com/help/4456067/windows-10-switch-out-of-s-mode) (otwiera inną witrynę internetową firmy Microsoft) zwiększa bezpieczeństwo i wydajność. Możesz wyjść z trybu S, używając usługi Intune. Wyłączenie trybu S to działanie jednokierunkowe. Po wyłączeniu trybu S systemu Windows 10 nie można już do niego wrócić.
+[Tryb S w systemie Windows 10](https://support.microsoft.com/help/4456067/windows-10-switch-out-of-s-mode) (otwiera inną witrynę internetową firmy Microsoft) zwiększa bezpieczeństwo i wydajność. Możesz wyłączyć tryb S, używając usługi Intune. Wyłączenie trybu S to działanie jednokierunkowe. Po wyłączeniu trybu S systemu Windows 10 nie można już do niego wrócić.
 
-Zapoznaj się z [najczęściej zadawanymi pytaniami](https://support.microsoft.com/help/4020089/windows-10-in-s-mode-faq) na temat trybu S.
+Zapoznaj się z [często zadawanymi pytaniami](https://support.microsoft.com/help/4020089/windows-10-in-s-mode-faq) na temat trybu S.
 
 Ta funkcja ma zastosowanie do:
 
