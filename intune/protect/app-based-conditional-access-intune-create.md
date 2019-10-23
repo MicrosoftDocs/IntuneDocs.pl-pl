@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 02/22/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: d1693515-de18-4553-91ef-801976cd3ec7
@@ -17,14 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d9cbe57d0cf69f036cd36d2c1b95c48b198645e7
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 94e9fcc77f8260c4a63150b5d0aef033677c524a
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71723089"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72509675"
 ---
-# <a name="set-up-app-based-conditional-access-policies-with-intune"></a>Konfigurowanie zasad dostępu warunkowego na podstawie aplikacji
+# <a name="set-up-app-based-conditional-access-policies-with-intune"></a>Konfigurowanie zasad dostępu warunkowego na podstawie aplikacji za pomocą usługi Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
@@ -42,7 +43,7 @@ Dostęp warunkowy to pojęcie z technologii używanej w usłudze Azure Active Di
 ### <a name="to-create-an-app-based-conditional-access-policy"></a>Tworzenie zasad dostępu warunkowego opartego na aplikacji
 
 > [!IMPORTANT]
-> Zanim zaczniesz korzystać z zasad dostępu warunkowego bazującego na aplikacjach, musisz do swoich aplikacji zastosować [zasady ochrony aplikacji usługi Intune](../apps/app-protection-policies.md).
+> Zanim zaczniesz korzystać z zasad dostępu warunkowego opartego na aplikacji, musisz zastosować do swoich aplikacji [zasady ochrony aplikacji usługi Intune](../apps/app-protection-policies.md).
 
 1. Na **pulpicie nawigacyjnym usługi Intune** wybierz pozycję **Dostęp warunkowy**.
 

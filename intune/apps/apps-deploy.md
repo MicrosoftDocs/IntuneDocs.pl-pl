@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 08/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: dc349e22-9e1c-42ba-9e70-fb2ef980ef7a
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f0f00b635a04f4ffe5bc09489b9909e9243ee98
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 99e89db1bbef3d08cd6709b2600c4a684ac618f7
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71725156"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72498611"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Przypisywanie aplikacji do grup przy użyciu usługi Microsoft Intune
 
@@ -127,7 +128,7 @@ W poniższej tabeli opisano wynikowe intencje w przypadku konfliktu:
 > [!NOTE]
 > W przypadku dodania zarządzanych aplikacji ze sklepu iOS do usługi Microsoft Intune i przypisania ich jako **Wymagane** są one automatycznie tworzone z intencjami **Wymagane** i **Dostępne**.<br><br>
 > Aplikacje ze sklepu dla systemu iOS (nie aplikacje zakupione w ramach programu VPP dla systemu iOS), które mają określony cel i intencję, będą wymuszane na urządzeniach w chwili zameldowania urządzenia i będą także widoczne w aplikacji Portal firmy.<br><br>
-> Po wystąpieniu konfliktów w ustawieniu .**Odinstaluj po usunięciu urządzenia** aplikacja nie zostanie usunięta z urządzenia, gdy urządzenie nie jest już zarządzane.
+> Po wystąpieniu konfliktów w ustawieniu **Odinstaluj po usunięciu urządzenia** aplikacja nie zostanie usunięta z urządzenia, gdy urządzenie nie jest już zarządzane.
 
 ## <a name="managed-google-play-app-deployment-to-unmanaged-devices"></a>Wdrażanie aplikacji z zarządzanego sklepu Google Play na urządzeniach niezarządzanych
 W przypadku urządzeń z systemem Android w scenariuszu wdrażania zasad ochrony aplikacji bez rejestracji (APP-WE) można używać zarządzanego sklepu Google Play w celu wdrażania aplikacji ze sklepu i aplikacji biznesowych dla użytkowników. Aplikacje z zarządzanego sklepu Google Play oznaczane docelowo jako **Dostępne z rejestracją lub bez niej** będą wyświetlane w aplikacji Sklep Play na urządzeniu użytkownika końcowego, a nie w aplikacji Portal firmy. Użytkownik końcowy będzie przeglądać i instalować aplikacje wdrożone w ten sposób z poziomu aplikacji Play. Ponieważ aplikacje są instalowane z zarządzanego sklepu Google Play, użytkownik końcowy nie będzie musiał zmieniać ustawień swojego urządzenia, aby umożliwić instalację aplikacji z nieznanych źródeł, co oznacza, że urządzenia będą bezpieczniejsze. Jeśli deweloper aplikacji publikuje nową wersję aplikacji w sklepie Play zainstalowanym na urządzeniu użytkownika, aplikacja zostanie automatycznie zaktualizowana przez sklep Play. 

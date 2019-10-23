@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 08/22/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 061d793c-c724-4cd9-9240-adb0cbda5661
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 783079786d19c0a65d44af96f9a3be9e2e817fc0
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: a4c1f3d8b6b7edbf51ca2aaa681909e6c220de3c
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71724792"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72507234"
 ---
 # <a name="add-an-android-line-of-business-app-to-microsoft-intune"></a>Dodawanie aplikacji biznesowych dla systemu Android do usługi Microsoft Intune
 
@@ -30,10 +31,10 @@ ms.locfileid: "71724792"
 Aplikacja biznesowa (LOB) to aplikacja dodawana do usługi Intune za pomocą pliku instalacyjnego aplikacji. Aplikacja tego typu jest zwykle pisana w firmie. Usługa Intune instaluje aplikację LOB na urządzeniu użytkownika. 
 
 > [!Note]
-> Więcej informacji na temat aplikacji LOB i konsoli dla deweloperów Google Play znajdziesz w temacie [Publikowanie prywatnych aplikacji (LOB) zarządzanych ze sklepu Google Play przy użyciu konsoli dla deweloperów Google](apps-add-android-for-work.md?#managed-google-play-private-lob-app-publishing-using-the-google-developer-console). 
+> Więcej informacji na temat aplikacji biznesowych (LOB) i konsoli dla deweloperów Google Play znajdziesz w temacie [Managed Google Play private (LOB) app publishing using the Google Developer Console](apps-add-android-for-work.md?#managed-google-play-private-lob-app-publishing-using-the-google-developer-console) (Publikowanie prywatnych aplikacji (LOB) zarządzanych ze sklepu Google Play przy użyciu konsoli dla deweloperów Google). 
 
 > [!Note]
-> W przypadku urządzeń z systemem Android dla pracowników patrz [Dodawanie aplikacji zarządzanych ze sklepu Google Play na urządzeniach firmowych z systemem Android za pomocą usługi Intune](apps-add-android-for-work.md). 
+> W przypadku urządzeń z systemem Android dla pracowników patrz [Add Managed Google Play apps to Android Enterprise devices with Intune](apps-add-android-for-work.md) (Dodawanie aplikacji zarządzanych ze sklepu Google Play na urządzeniach firmowych z systemem Android za pomocą usługi Intune). 
 
 ## <a name="step-1-specify-the-software-setup-file"></a>Krok 1. Określanie pliku konfiguracji oprogramowania
 

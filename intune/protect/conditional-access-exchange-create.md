@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 09/19/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 45e6f473eaec082b3f566b6bf717aed7c3b49f80
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: c18da57282a190dec363e3dfbde5293f5228cb0b
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71722738"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72504622"
 ---
 # <a name="create-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated"></a>Tworzenie zasad dostępu warunkowego do lokalnego programu Exchange i starszej wersji usługi Exchange Online w wersji dedykowanej w usłudze Intune
 
@@ -34,16 +35,16 @@ Jeśli masz środowisko usługi Exchange Online w wersji dedykowanej i chcesz sp
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
-Przed skonfigurowaniem dostępu warunkowego należy upewnić się, że istnieje następująca konfiguracja:
+Przed skonfigurowaniem dostępu warunkowego należy się upewnić, że istnieje następująca konfiguracja:
 
 - Program Exchange jest w wersji **Exchange 2010 SP1 lub nowszej**. Macierz serwerów dostępu klienta (CAS) serwera programu Exchange jest obsługiwana.
 
 - Zainstalowany i używany jest [łącznik lokalny programu Exchange programu Exchange Active Sync](exchange-connector-install.md), który łączy usługę Intune z lokalnym programem Exchange.
 
     >[!IMPORTANT]  
-    >Usługa Intune obsługuje wiele lokalnych łączników programu Exchange na subskrypcję.  Jednak każdy łącznik lokalnego programu Exchange jest przeznaczony dla pojedynczej Twojej dzierżawy usługi Intune i nie może być używany z innymi dzierżawami.  Jeśli masz więcej niż jedną lokalną organizację programu Exchange, możesz skonfigurować osobny łącznik dla każdej organizacji programu Exchange.
+    >Usługa Intune obsługuje wiele lokalnych łączników programu Exchange na subskrypcję.  Jednak każdy łącznik lokalnego programu Exchange jest przeznaczony dla pojedynczej dzierżawy usługi Intune i nie może być używany z innymi dzierżawami.  Jeśli masz więcej niż jedną lokalną organizację programu Exchange, możesz skonfigurować osobny łącznik dla każdej organizacji programu Exchange.
 
-- Łącznik dla lokalnej organizacji programu Exchange można zainstalować na dowolnej maszynie, jeśli jest ona w stanie komunikować się z programem Exchange Server.
+- Łącznik dla lokalnej organizacji programu Exchange można zainstalować na dowolnej maszynie, jeśli jest ona w stanie komunikować się z serwerem programu Exchange.
 
 - Łącznik obsługuje **środowisko serwera CAS programu Exchange**. Usługa Intune obsługuje bezpośrednie instalowanie łącznika na serwerze CAS programu Exchange, ale zalecamy zainstalowanie go na osobnym komputerze z powodu dodatkowego obciążenia serwera przez łącznik. Podczas konfigurowania łącznika należy ustawić go tak, aby komunikował się z jednym z serwerów CAS programu Exchange.
 
@@ -87,7 +88,7 @@ Zanim zaczniesz korzystać z następującej procedury w celu skonfigurowania kon
 
 4. W obszarze **Przypisanie** wybierz pozycję **Wybierz grupy do uwzględnienia**, a następnie wybierz co najmniej jedną grupę w celu skonfigurowania dostępu. 
 
-   Do członków wybranych grup są stosowane zasady dostępu warunkowego dla dostępu lokalnego programu Exchange. Użytkownicy, którzy odbierają te zasady muszą zarejestrować swoje urządzenia w usłudze Intune i zachować zgodność z profilami zgodności, zanim będą mogli uzyskać dostęp do lokalnego programu Exchange.
+   Do członków wybranych grup są stosowane zasady dostępu warunkowego dla dostępu lokalnego programu Exchange. Użytkownicy, którzy odbierają te zasady, muszą zarejestrować swoje urządzenia w usłudze Intune i zachować zgodność z profilami zgodności, zanim będą mogli uzyskać dostęp do lokalnego programu Exchange.
 
 5. Aby wykluczyć grupy, wybierz pozycję **Wybierz grupy do wykluczenia**, a następnie wybierz co najmniej jedną grupę, która zostanie zwolniona z wymagań rejestracji urządzeń i zgodności z profilami zgodności przed uzyskaniem dostępu do lokalnego programu Exchange. 
 
@@ -103,7 +104,7 @@ Zanim zaczniesz korzystać z następującej procedury w celu skonfigurowania kon
 
    - W przypadku ustawienia **Dostęp do urządzeń niezarządzanych** ustaw globalną regułę domyślną dostępu z urządzeń, na które dostęp warunkowy lub inne reguły nie mają wpływu:
 
-     - **Zezwalaj na dostęp** — wszystkie urządzenia będą mogły natychmiast uzyskać dostęp do lokalnego programu Exchange. Urządzenia, które należą do użytkowników w grupach skonfigurowanych zgodnie z poprzednią procedurą, zostaną blokowane, jeśli zostaną później ocenione jako niezgodne ze zgodnymi zasadami lub niezarejestrowane w usłudze Intune.
+     - **Zezwalaj na dostęp** — wszystkie urządzenia będą mogły natychmiast uzyskać dostęp do lokalnego programu Exchange. Urządzenia, które należą do użytkowników w grupach skonfigurowanych zgodnie z poprzednią procedurą, będą blokowane, jeśli zostaną później ocenione jako niezgodne z zasadami zgodności lub niezarejestrowane w usłudze Intune.
 
      - **Blokuj dostęp** i **Kwarantanna** — początkowy dostęp wszystkich urządzeń do lokalnego programu Exchange zostanie natychmiast zablokowany. Urządzenia, które należą do użytkowników w grupach skonfigurowanych zgodnie z poprzednią procedurą, uzyskają dostęp po zarejestrowaniu urządzenia w usłudze Intune i jego ocenie jako zgodnego. 
 
@@ -111,7 +112,7 @@ Zanim zaczniesz korzystać z następującej procedury w celu skonfigurowania kon
 
    -  Dla ustawienia **Wyjątki platformy urządzeń** wybierz przycisk **Dodaj**, a następnie określ szczegóły platformy odpowiednio do potrzeb danego środowiska. 
    
-      Jeśli ustawienie **Dostęp do urządzeń niezarządzanych** zostało ustawione na wartość **Zablokowany**, urządzenia, które są zarejestrowane i zgodne, będą odblokowane, nawet jeśli występuje wyjątek dla platformy określający ich zablokowanie.  
+      Jeśli ustawienie **Dostęp urządzeń niezarządzanych** zostało ustawione na wartość **Zablokowany**, urządzenia, które są zarejestrowane i zgodne, będą odblokowane, nawet jeśli występuje wyjątek platformy określający ich zablokowanie.  
    
    Wybierz przycisk **OK**, aby zapisać zmiany.
 
@@ -121,4 +122,4 @@ Następnie utwórz zasady zgodności i przypisz je do użytkowników, aby usług
 
 ## <a name="see-also"></a>Zobacz także
 
-[Rozwiązywanie problemów z lokalnym programem Exchange Connector w usłudze Microsoft Intune](https://support.microsoft.com/help/4471887)
+[Troubleshooting Intune On-Premises Exchange Connector in Microsoft Intune](https://support.microsoft.com/help/4471887) (Rozwiązywanie problemów z lokalnym programem Exchange Connector w usłudze Microsoft Intune)

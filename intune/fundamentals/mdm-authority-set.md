@@ -9,20 +9,20 @@ manager: dougeby
 ms.date: 08/16/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology: ''
 ms.assetid: 8deff871-5dff-4767-9484-647428998d82
 ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb5abe54529a9de575cf84b8a89b0f402f8d117b
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 19d02694ab5e53dc43e0861c6a427a044bf50648
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71727054"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72502638"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Ustawianie źródła zarządzania urządzeniem przenośnym
 
@@ -41,13 +41,13 @@ Możliwe są następujące konfiguracje:
 
 - **Zarządzanie urządzeniami przenośnymi w usłudze Office 365** — integracja usługi Office 365 z rozwiązaniem usługi Intune w chmurze. Konfigurowanie usługi Intune odbywa się przy użyciu centrum administracyjnego platformy Microsoft 365. Ta konfiguracja zawiera podzbiór możliwości dostępnych w ramach autonomicznej usługi Intune. Ustaw urząd MDM przy użyciu centrum administracyjnego platformy Microsoft 365.
 
-- **Współistnienie z urzędem MDM w usłudze Office 365** Możesz równocześnie aktywować i stosować zarządzanie urządzeniami mobilnymi dla usługi Office 365 i usługę Intune w dzierżawie. Ponadto dla każdego użytkownika jako urząd zarządzania w usłudze Office 365 możesz ustawić usługę MDM lub Intune. Tym sposobem określisz, która z tych usług będzie używana do zarządzania urządzeniami przenośnymi użytkowników. Urząd zarządzający użytkownika jest definiowany na podstawie przypisanej do niego licencji. Aby uzyskać więcej informacji, zobacz [Microsoft Intune Co-existence with MDM for Office 365](https://blogs.technet.microsoft.com/configmgrdogs/2016/01/04/microsoft-intune-co-existence-with-mdm-for-office-365) (Współistnienie usługi Microsoft Intune z urzędem MDM na potrzeby usługi Office 365)
+- **Współistnienie z MDM w pakiecie Office 365** Możesz aktywować u dzierżawcy i stosować zarówno zarządzanie urządzeniami mobilnymi w pakiecie Office 365, jak i usługę Intune. Ponadto dla każdego użytkownika jako urząd zarządzający w pakiecie Office 365 możesz ustawić MDM lub Intune. W ten sposób określisz, która z tych usług będzie używana do zarządzania urządzeniami przenośnymi użytkowników. Urząd zarządzający użytkownika jest definiowany na podstawie przypisanej do niego licencji. Aby uzyskać więcej informacji, zobacz [Współistnienie Microsoft Intune z MDM w pakiecie Office 365](https://blogs.technet.microsoft.com/configmgrdogs/2016/01/04/microsoft-intune-co-existence-with-mdm-for-office-365).
 
 ## <a name="set-mdm-authority-to-intune"></a>Ustawianie urzędu MDM na usługę Intune
 
-Jeśli jeszcze nie ustawiono urzędu MDM, wykonaj poniższe kroki. Aby zastąpić program SCCM, zobacz [Migrowanie użytkowników i urządzeń hybrydowego zarządzania urządzeniami przenośnymi do autonomicznej usługi Intune](https://docs.microsoft.com/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
+Jeśli jeszcze nie ustawiono urzędu MDM, wykonaj poniższe kroki. Aby zastąpić rozwiązanie SCCM, zobacz [Migrowanie użytkowników i urządzeń hybrydowego zarządzania urządzeniami przenośnymi do autonomicznej usługi Intune](https://docs.microsoft.com/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
 
-1. Wybierz pomarańczowy baner w obszarze usługi [Intune w witrynie Azure Portal](https://aka.ms/intuneportal), aby otworzyć ustawienie **urzędu zarządzania urządzeniami mobilnymi**. Pomarańczowy baner jest wyświetlany tylko wtedy, gdy nie ustawiono jeszcze urzędu MDM.
+1. Wybierz pomarańczowy baner w obszarze usługi [Intune w portalu Azure](https://aka.ms/intuneportal), aby otworzyć ustawienia **urzędu zarządzania urządzeniami przenośnymi**. Pomarańczowy baner jest wyświetlany tylko wtedy, gdy nie ustawiono jeszcze urzędu MDM.
 2. W obszarze **Urząd zarządzania urządzeniami przenośnymi** wybierz swój urząd MDM spośród następujących opcji:
    - **Urząd MDM w usłudze Intune**
    - **Brak**
@@ -77,7 +77,7 @@ Po zmianie na nowy urząd MDM prawdopodobnie wystąpi czas przejścia (maksymaln
 
 ## <a name="change-mdm-authority-to-office-365"></a>Zmiana urzędu MDM na usługę Office 365
 
-Aby aktywować zarządzanie urządzeniami mobilnymi usługi Office 365 (lub włączyć współistnienie MDM z usługą Intune), przejdź na stronę [https://protection.office.com](https://protection.office.com) i wybierz pozycję **Ochrona przed utratą danych** > **Zasady zabezpieczeń urządzeń** > **Wyświetl listę urządzeń zarządzanych** > **Zacznijmy**.
+Aby aktywować zarządzanie urządzeniami przenośnymi usługi Office 365 (lub włączyć współistnienie MDM z usługą Intune), przejdź na stronę [https://protection.office.com](https://protection.office.com) i wybierz pozycję **Ochrona przed utratą danych** > **Zasady zabezpieczeń urządzeń** > **Wyświetl listę urządzeń zarządzanych** > **Zaczynamy**.
 
 Aby uzyskać więcej informacji, zobacz [Konfigurowanie zarządzania urządzeniami przenośnymi (MDM) w usłudze Office 365](https://support.office.com/en-us/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd).
 

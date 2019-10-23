@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 07/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.suite: ems
@@ -16,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: 58401a4125d073eb3e4f82230fcd6e53a359ed3c
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: ed3152a6717898aa1f758fb06a5f701048aebed4
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71728185"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72508769"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Integracja usługi Windows Hello dla firm z usługą Microsoft Intune  
 
@@ -59,9 +60,9 @@ Użyj tego artykułu, aby utworzyć domyślne zasady usługi Windows Hello dla f
 
 2. Przejdź do pozycji **Rejestracja urządzeń** > **Rejestracja w systemie Windows** > **Windows Hello dla firm**. Zostanie otwarte okienko Windows Hello dla firm.
 
-3. Wybierz jedną z następujących opcji dla **Skonfiguruj usługę Windows Hello dla firm**:
+3. Wybierz jedną z następujących opcji w pozycji **Skonfiguruj usługę Windows Hello dla firm**:
 
-    - **Wyłączony**. Wybierz to ustawienie, jeśli nie chcesz używać usługi Windows Hello dla firm. Jeśli usługa ta jest wyłączona, użytkownicy nie mogą zainicjować obsługi usługi Windows Hello dla firm, z wyjątkiem telefonów komórkowych dołączonych do usługi Azure Active Directory, w przypadku których aprowizacja może być wymagana.
+    - **Wyłączony**. Wybierz to ustawienie, jeśli nie chcesz używać usługi Windows Hello dla firm. Jeśli usługa ta jest wyłączona, użytkownicy nie mogą zainicjować obsługi usługi Windows Hello dla firm, z wyjątkiem telefonów komórkowych dołączonych do usługi Azure Active Directory, w przypadku których może być wymagana aprowizacja.
     - **Włączony**. Wybierz to ustawienie, jeśli chcesz skonfigurować ustawienia usługi Windows Hello dla firm.  W przypadku wybrania ustawienia *Włączony* staną się widoczne dodatkowe ustawienia dla usługi Windows Hello. 
     - **Nieskonfigurowane**. Wybierz to ustawienie, jeśli nie chcesz używać usługi Intune do kontrolowania ustawień usługi Windows Hello dla firm. Żadne z istniejących ustawień usługi Windows Hello dla firm na urządzeniach z systemem Windows 10 nie są zmieniane. Wszystkie inne ustawienia w okienku są niedostępne.
 

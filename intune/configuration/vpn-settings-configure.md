@@ -1,6 +1,6 @@
 ---
 title: Dodawanie ustawień sieci VPN do urządzeń w usłudze Microsoft Intune — Azure | Microsoft Docs
-description: W celu utworzenia połączenia z wirtualną siecią prywatną (VPN) w usłudze Microsoft Intune na urządzeniach z systemami Android, Android Enterprise, iOS, macOS lub Windows należy użyć ustawień wbudowanych.
+description: Do utworzenia połączenia z wirtualną siecią prywatną (VPN) w usłudze Microsoft Intune na urządzeniach z systemami Android, Android Enterprise, iOS, macOS lub Windows należy użyć ustawień wbudowanych.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -8,29 +8,30 @@ manager: dougeby
 ms.date: 09/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2b96de28e517a989fc1e749176039e6c02ef51e0
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 5628ba39cafe38cc66827d69584d009c15326bd4
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71723778"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72491751"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Tworzenie profilów sieci VPN w celu nawiązania połączenia z serwerami sieci VPN w usłudze Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Wirtualne sieci prywatne (VPN) zapewniają użytkownikom bezpieczny dostęp zdalny do sieci organizacji. Do nawiązania połączenia z serwerem sieci VPN urządzenia używają profilu połączenia VPN. **Profile sieci VPN** w usłudze Microsoft Intune przypisują ustawienia sieci VPN do użytkowników i urządzeń w organizacji tak, aby łączenie z siecią organizacji było łatwe i bezpieczne.
+Wirtualne sieci prywatne (VPN) zapewniają użytkownikom bezpieczny dostęp zdalny do sieci organizacji. Do nawiązania połączenia z serwerem sieci VPN urządzenia używają profilu połączenia VPN. **Profile sieci VPN** w usłudze Microsoft Intune służą do przypisania ustawień sieci VPN do użytkowników i urządzeń w organizacji, tak aby łączenie z siecią organizacji było łatwe i bezpieczne.
 
-Chcesz na przykład skonfigurować na wszystkich urządzeniach z systemem iOS wymagane ustawienia, aby łączyły się z udziałem plików w sieci organizacji. Tworzysz profil sieci VPN, który zawiera te ustawienia. Następnie przypisujesz ten profil do wszystkich użytkowników, którzy mają urządzenia z systemem iOS. Użytkownicy widzą połączenie sieci VPN na liście dostępnych sieci i mogą łatwo nawiązać połączenie.
+Przyjmijmy na przykład, że chcesz skonfigurować na wszystkich urządzeniach z systemem iOS ustawienia wymagane do łączenia się z udziałem plików w sieci organizacji. Tworzysz profil sieci VPN, który zawiera te ustawienia. Następnie przypisujesz ten profil do wszystkich użytkowników, którzy mają urządzenia z systemem iOS. Użytkownicy widzą połączenie sieci VPN na liście dostępnych sieci i mogą łatwo nawiązać połączenie.
 
 > [!NOTE]
-> [Zasady konfiguracji niestandardowych usługi Intune](custom-settings-configure.md) umożliwiają tworzenie profilów sieci VPN dla następujących platform:
+> [Zasady niestandardowych konfiguracji usługi Intune](custom-settings-configure.md) umożliwiają tworzenie profilów sieci VPN dla następujących platform:
 >
 > * System Android 4 lub nowszy
 > * Zarejestrowane urządzenia z systemem Windows 8.1 lub nowszym
@@ -49,16 +50,16 @@ Możesz utworzyć profile sieci VPN, korzystając z następujących typów poł�
 |Check Point Capsule VPN|— Android<br/>— Profile służbowe w systemie Android Enterprise<br/>— iOS<br/>— macOS<br/>— Windows 10<br/>— Windows 8.1<br/>— Windows Phone 8.1|
 |Cisco AnyConnect|— Android<br/>— Profile służbowe w systemie Android Enterprise<br/>— Właściciel urządzenia z systemem Android Enterprise (w pełni zarządzanego)<br/>— iOS<br/>— macOS|
 |Cisco (IPSec)|iOS|
-|Citrix SSO|— Android<br/>— Profile służbowe w systemie Android Enterprise: Użyj [zasad konfiguracji aplikacji](../apps/app-configuration-policies-use-android.md)<br/>— iOS<br/>— Windows 10|
+|Citrix SSO|— Android<br/>— Profile służbowe w systemie Android Enterprise: Użyj [zasad konfigurowaniai aplikacji](../apps/app-configuration-policies-use-android.md)<br/>— iOS<br/>— Windows 10|
 |Niestandardowa sieć VPN|— iOS<br/>— macOS|
 |F5 Access|— Android<br/>— Profile służbowe w systemie Android Enterprise<br/>— Właściciel urządzenia z systemem Android Enterprise (w pełni zarządzanego)<br/>— iOS<br/>— macOS<br/>— Windows 10<br/>— Windows 8.1<br/>— Windows Phone 8.1|
-|IKEv2|Windows 10|
+|IKEv2| — iOS<br/>— Windows 10|
 |L2TP|Windows 10|
-|Palo Alto Networks GlobalProtect|— Profile służbowe w systemie Android Enterprise: Użyj [zasad konfiguracji aplikacji](../apps/app-configuration-policies-use-android.md)<br/>— iOS<br/>— Windows 10|
+|Palo Alto Networks GlobalProtect|— Profile służbowe w systemie Android Enterprise: Użyj [zasad konfigurowaniai aplikacji](../apps/app-configuration-policies-use-android.md)<br/>— iOS<br/>— Windows 10|
 |PPTP|Windows 10|
 |Pulse Secure|— Android<br/>— Profile służbowe w systemie Android Enterprise<br/>— Właściciel urządzenia z systemem Android Enterprise (w pełni zarządzanego)<br/>— iOS<br/>— macOS<br/>— Windows 10<br/>— Windows 8.1<br/>— Windows Phone 8.1|
 |SonicWall Mobile Connect|— Android<br/>— Profile służbowe w systemie Android Enterprise<br/>— iOS<br/>— macOS<br/>— Windows 10<br/>— Windows 8.1<br/>— Windows Phone 8.1|
-|Zscaler|— Profile służbowe w systemie Android Enterprise: Użyj [zasad konfiguracji aplikacji](../apps/app-configuration-policies-use-android.md)<br/>— iOS|
+|Zscaler|— Profile służbowe w systemie Android Enterprise: Użyj [zasad konfigurowaniai aplikacji](../apps/app-configuration-policies-use-android.md)<br/>— iOS|
 
 > [!IMPORTANT]
 > Aby używanie profilów sieci VPN przypisanych do urządzenia było możliwe, należy zainstalować aplikację VPN odpowiednią do profilu. W artykule [Co to jest zarządzanie aplikacjami w usłudze Microsoft Intune?](../apps/app-management.md) znajdziesz informacje, które pomogą Ci przypisać aplikację przy użyciu usługi Intune.  
@@ -85,7 +86,7 @@ Zapoznaj się z artykułem [Create a profile with custom settings (Tworzenie pro
 
     - **Typ profilu**: Wybierz pozycję **Sieć VPN**.
 
-3. Ustawienia, które można skonfigurować, różnią się w zależności od wybranej platformy. Szczegółowe ustawienia poszczególnych platform można znaleźć w następujących artykułach:
+3. Ustawienia, które można skonfigurować, różnią się w zależności od wybranej platformy. Szczegółowe ustawienia dla poszczególnych platform można znaleźć w następujących artykułach:
 
     - [Ustawienia systemu Android](vpn-settings-android.md)
     - [Ustawienia systemu Android Enterprise](vpn-settings-android-enterprise.md)
@@ -101,7 +102,7 @@ Profil zostanie utworzony i wyświetlony na liście profilów. Aby przypisać te
 
 ## <a name="secure-your-vpn-profiles"></a>Zabezpieczanie profilów sieci VPN
 
-Profile sieci VPN mogą używać różnych typów połączeń i protokołów różnych producentów. Te połączenia są zwykle zabezpieczone z użyciem poniższych metod.
+Profile sieci VPN mogą używać różnych typów połączeń i protokołów różnych producentów. Te połączenia są zwykle zabezpieczone za pomocą poniższych metod.
 
 ### <a name="certificates"></a>Certyfikaty
 

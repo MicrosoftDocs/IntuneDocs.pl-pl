@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 07/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: remote-actions
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: e71c6bdb-d75c-404f-8e38-24a663be81c2
@@ -15,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e88371ac1ab51340f0f897d835f78562bed7d252
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: a72477351425e9230200995658cc6f73a8565fb7
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71727977"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72509495"
 ---
 # <a name="see-device-details-in-intune"></a>Wyświetlanie szczegółów urządzenia w usłudze Intune
 
@@ -46,7 +47,7 @@ W tym artykule przedstawiono sposób wyświetlania wszystkich urządzeń i ich w
       - Uruchamianie sesji pomocy zdalnej
    - Za pomocą opcji **Właściwości** możesz przypisać [utworzoną kategorię urządzeń](../enrollment/device-group-mapping.md) i zmienić własność urządzenia na urządzenie osobiste lub urządzenie firmowe.
    - **Sprzęt** — zawiera wiele szczegółowych informacji o urządzeniu, takich jak identyfikator urządzenia, system operacyjny i jego wersja, dostępne miejsce do magazynowania i inne szczegóły.
-   - **Odnalezione aplikacje** — wyświetla listę wszystkich aplikacji, które zostały odnalezione jako zainstalowane na urządzeniu przez usługę Intune, wraz z wersjami aplikacji. Aby uzyskać więcej informacji, zobacz temat [Intune discovered apps](../apps/app-discovered-apps.md) (Aplikacje odnalezione w usłudze Intune).
+   - **Odnalezione aplikacje** — wyświetla listę wszystkich aplikacji, które zostały odnalezione jako zainstalowane na urządzeniu przez usługę Intune, wraz z wersjami aplikacji. Aby uzyskać więcej informacji, zobacz temat [Aplikacje odnalezione w usłudze Intune](../apps/app-discovered-apps.md).
    - **Zgodność urządzenia** — wyświetla wszystkie przypisane zasady zgodności oraz informację o tym, czy urządzenie jest zgodne.
    - **Konfiguracja urządzenia** — zawiera wszystkie zasady konfiguracji urządzeń przypisane do urządzenia oraz informację o tym, czy wdrożenie zasad powiodło się.
 
@@ -64,7 +65,7 @@ W zależności od operatora danego urządzenia mogą nie zostać zebrane wszystk
 |Identyfikator urządzenia usługi Intune|Identyfikator GUID, który unikatowo identyfikuje urządzenie.|Windows, iOS|
 |Numer seryjny|Numer seryjny urządzenia od producenta.|Windows, iOS|
 |Udostępnione urządzenie|Jeśli wybrano pozycję **Tak**, urządzenie jest współużytkowane przez więcej niż jednego użytkownika.|Windows, iOS|
-|Rejestracja zatwierdzona przez użytkownika|Jeśli wybrano pozycję **Tak**, rejestracja urządzenia jest zatwierdzona przez użytkownika, co pozwala administratorom zarządzać pewnymi ustawieniami zabezpieczeń w urządzeniu.|Windows, iOS|
+|Rejestracja zatwierdzona przez użytkownika|Jeśli wybrano pozycję **Tak**, rejestracja urządzenia jest zatwierdzona przez użytkownika, co pozwala administratorom zarządzać pewnymi ustawieniami zabezpieczeń na urządzeniu.|Windows, iOS|
 |System operacyjny|System operacyjny używany w urządzeniu.|Windows, iOS|
 |Wersja systemu operacyjnego|Wersja systemu operacyjnego działającego na urządzeniu.|Windows, iOS|
 |Język systemu operacyjnego|Język ustawiony dla systemu operacyjnego w urządzeniu.|Windows, iOS|

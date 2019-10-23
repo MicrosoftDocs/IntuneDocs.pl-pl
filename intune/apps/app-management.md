@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 08/23/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b630709646b2f4489cbfea6284689c9436798ca
-ms.sourcegitcommit: 78f9750712c254d8b123ef15b74f30ca999aa128
+ms.openlocfilehash: 56814550cae814bd89d55a6f72df98dd24df4caf
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71916373"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72507467"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co to jest zarządzanie aplikacjami w usłudze Microsoft Intune?
 
@@ -70,7 +71,7 @@ Usługa Intune oferuje szeroką gamę możliwości, które pomogą Ci uzyskać d
 <sup>1</sup> Rozważ zastosowanie funkcji [Windows Information Protection](../protect/windows-information-protection-configure.md) do ochrony aplikacji na urządzeniach z systemem Windows 10.<br>
 <sup>2</sup>Dotyczy urządzeń zarządzanych tylko przez usługę Intune.<br>
 <sup>3</sup> Usługa Intune obsługuje dostępne aplikacje z zarządzanego sklepu Google Play na urządzeniach z systemem Android Enterprise.<br>
-<sup>4</sup> Usługa Intune nie umożliwia instalacji skrótu do aplikacji jako linku sieci Web na standardowych urządzeniach z systemem Android Enterprise. Jednak obsługa linku sieci Web jest oferowana w przypadku [dedykowanych urządzeń z wieloma aplikacjami z systemem Android Enterprise](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings). 
+<sup>4</sup> Usługa Intune nie umożliwia instalacji skrótu do aplikacji jako linku sieci Web na standardowych urządzeniach z systemem Android Enterprise. Oferowana jest jednak obsługa linku sieci Web dla [dedykowanych urządzeń z wieloma aplikacjami z systemem Android Enterprise](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings). 
 
 
 ## <a name="get-started"></a>Wprowadzenie

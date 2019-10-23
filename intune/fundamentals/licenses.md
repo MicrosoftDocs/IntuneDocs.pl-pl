@@ -8,20 +8,20 @@ manager: dougeby
 ms.date: 08/05/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology: ''
 ms.assetid: 4a94440c-11cb-11e8-b642-0ed5f89f718b
 ms.reviewer: chmaguir
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: def679ec8e530ce94aae6f8884f9ad94bf2cf58d
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 346960d8d1d79afc4494064570d1a03e83b8a302
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71726040"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72510148"
 ---
 # <a name="microsoft-intune-licensing"></a>Licencjonowanie usługi Microsoft Intune
 Usługa Microsoft Intune jest dostępna dla różnych potrzeb klientów i dla organizacji o różnych rozmiarach, od prostego w użyciu środowiska zarządzania dla szkół i małych firm po bardziej zaawansowane funkcje wymagane przez klientów korporacyjnych. Większość licencji obejmujących usługę Microsoft Intune uprawnia również do używania programu System Center Configuration Manager, o ile subskrypcja pozostaje aktywna. 

@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 03/08/2018
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: enrollment
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 805c3da286acddcda16d845182ba192124f88d21
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: d15fd73a608c799745c92c4b07df4b9705d00106
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71723492"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72490320"
 ---
 # <a name="get-an-apple-mdm-push-certificate"></a>Uzyskiwanie certyfikatu wypychania MDM firmy Apple
 
@@ -40,7 +41,7 @@ Po wygaśnięciu certyfikatu wypychania należy go odnowić. Podczas odnawiania 
 
 
 ## <a name="steps-to-get-your-certificate"></a>Procedura uzyskiwania certyfikatu
-Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), wybierz opcję **Rejestracja urządzenia** > **Rejestracja Apple** > **Certyfikat wypychania MDM firmy Apple**, a następnie wykonaj następujące kroki w usłudze [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), wybierz pozycję **Rejestracji urządzenia** > **Rejestracja Apple** > **Certyfikat wypychania Apple MDM**, a następnie wykonaj następujące kroki w usłudze [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 
 ### <a name="step-1-grant-microsoft-permission-to-send-user-and-device-information-to-apple"></a>Krok 1. Udzielanie firmie Microsoft uprawnień do wysłania informacji o użytkowniku i urządzeniu do firmy Apple
 Wybierz opcję **Zgadzam się**, aby udzielić firmie Microsoft uprawnień do wysyłania danych do firmy Apple.
@@ -67,7 +68,7 @@ Certyfikat wypychania MDM firmy Apple jest ważny przez rok i musi być odnawian
 
 Certyfikat jest skojarzony z identyfikatorem firmy Apple użytym do jego utworzenia. Certyfikat wypychania MDM odnów przy użyciu tego samego identyfikatora firmy Apple, którego użyto do jego utworzenia.
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple**, a następnie wybierz kafelek **Certyfikat wypychania Apple MDM** w obszarze szczegółów.
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple**, a następnie wybierz kafelek **Certyfikat wypychania Apple MDM** w obszarze szczegółów.
 2. Wybierz pozycję **Pobierz żądanie CSR**, aby pobrać plik żądania i zapisać go lokalnie. Ten plik jest używany na potrzeby żądania certyfikatu relacji zaufania w portalu Apple Push Certficates.
 3. Wybierz pozycję **Utwórz swój certyfikat push MDM**, aby przejść do portalu Apple Push Certificates. Znajdź certyfikat, który chcesz odnowić, i wybierz opcję **Odnów**.
 4. Na ekranie **Odnawianie certyfikatu wypychania** wpisz notatki, aby w przyszłości łatwiej zidentyfikować certyfikat, wybierz pozycję **Wybierz plik**, aby wskazać nowo pobrany plik żądania, a następnie wybierz opcję **Przekaż**.
@@ -75,6 +76,6 @@ Certyfikat jest skojarzony z identyfikatorem firmy Apple użytym do jego utworze
    > Certyfikat można zidentyfikować na podstawie jego identyfikatora UID. Sprawdź **Identyfikator podmiotu** w szczegółach certyfikatu, aby znaleźć fragment identyfikatora UID będący identyfikatorem GUID. Alternatywnie na zarejestrowanym urządzeniu z systemem iOS wybierz pozycję **Ustawienia** > **Ogólne** > **Urządzenie** **Zarządzanie** > **Profil zarządzania** > **Więcej szczegółów** > **Profil zarządzania**. Element w drugim wierszu, **Temat**, zawiera unikatowy identyfikator GUID, który można dopasować do certyfikatu w portalu Apple Push Certificates.
  
 6. Na ekranie **Potwierdzenie** wybierz pozycję **Pobierz** i zapisz plik pem na urządzeniu lokalnym.
-7. W menu usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) wybierz ikonę przeglądania w obszarze **Certyfikat wypychania MDM firmy Apple**, wybierz plik .pem pobrany od firmy Apple, a następnie wybierz opcję **Przekaż**.
+7. W menu usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) wybierz ikonę przeglądania w obszarze **Certyfikat wypychania Apple MDM**, zaznacz plik .pem pobrany od firmy Apple, a następnie wybierz opcję **Przekaż**.
 
 Twój certyfikat wypychania MDM firmy Apple będzie mieć stan **Aktywny** i 365 dni do wygaśnięcia.

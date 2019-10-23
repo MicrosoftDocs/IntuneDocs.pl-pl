@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 06/28/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: enrollment
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 8518d8fa-a0de-449d-89b6-8a33fad7b3eb
@@ -17,19 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8bc472a8b15746a46b5e0cda3a8fe11db7aa4974
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: d2a6b427552e545421e329b900833c889e67bf35
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71722309"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72503027"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Konfigurowanie strony ze stanem rejestracji
  
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
  
-Na stronie ze stanem rejestracji są wyświetlane informacje o instalacji urządzeń z systemem Windows 10 (wersja 1803 i nowsze) podczas początkowej rejestracji urządzenia. Przykład:
-- Podczas korzystania z rozwiązania [Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/) 
+Na stronie ze stanem rejestracji (ESP, Enrollment Status Page) są wyświetlane informacje o instalacji urządzeń z systemem Windows 10 (wersja 1803 lub nowsza) podczas początkowej rejestracji urządzenia. Przykład:
+- podczas korzystania z rozwiązania [Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/) 
 - lub gdy urządzenie zarządzane zostanie uruchomione po raz pierwszy po zastosowaniu zasad strony ze stanem rejestracji. 
 
 Strona ze stanem rejestracji pomaga użytkownikom zinterpretować stan urządzenia w trakcie konfigurowania. Możesz utworzyć wiele profilów strony ze stanem rejestracji i zastosować je do różnych grup zawierających użytkowników. Profile możesz ustawiać w następujących celach:
@@ -49,17 +50,17 @@ Ponadto możesz ustawić kolejność priorytetu dla każdego profilu w celu obs�
 <table>
 <th align="left">Ustawienie<th align="left">Tak<th align="left">Nie
 <tr><td>Pokaż postęp instalacji aplikacji i profilu<td>Strona ze stanem rejestracji jest wyświetlana.<td>Strona ze stanem rejestracji nie jest wyświetlana.
-<tr><td>Block device use until all apps and profiles are installed (Blokuj użycie urządzenia do momentu zainstalowania wszystkich aplikacji i profilów)<td>W tej tabeli dostępne są ustawienia służące do dostosowywania zachowania strony ze stanem rejestracji w celu umożliwienia użytkownikowi rozwiązywania potencjalnych problemów z instalacją.
+<tr><td>Zablokuj możliwość korzystania z urządzenia, dopóki nie zostaną zainstalowane wszystkie aplikacje i profile<td>W tej tabeli dostępne są ustawienia służące do dostosowywania zachowania strony ze stanem rejestracji w celu umożliwienia użytkownikowi rozwiązywania potencjalnych problemów z instalacją.
 <td>Strona ze stanem rejestracji jest wyświetlana bez dodatkowych opcji w celu rozwiązywania problemów z błędami instalacji.
-<tr><td>Allow users to reset device if installation error occurs (Zezwól użytkownikom na zresetowanie urządzenia w przypadku wystąpienia błędu instalacji)<td>W przypadku błędu instalacji wyświetlony zostanie przycisk <b>Zresetuj urządzenie</b>.<td>W przypadku błędu instalacji nie zostanie wyświetlony przycisk <b>Zresetuj urządzenie</b>.
-<tr><td>Allow users to use device if installation error occurs (Zezwól użytkownikom na korzystanie z urządzenia w przypadku wystąpienia błędu instalacji)<td>W przypadku błędu instalacji wyświetlony zostanie przycisk <b>Kontynuuj mimo to</b>.<td>W przypadku błędu instalacji nie zostanie wyświetlony przycisk <b>Kontynuuj mimo to</b>.
-<tr><td>Show timeout error when installation takes longer than specified number of minutes (Pokaż błąd limitu czasu, jeśli instalacja trwa dłużej niż określona liczba minut)<td colspan="2">Określ liczbę minut oczekiwania na ukończenie instalacji. Wprowadzona wartość domyślna wynosi 60 minut.
-<tr><td>Show custom message when an error occurs (Pokaż komunikat niestandardowy po wystąpieniu błędu)<td>Zostanie wyświetlone pole tekstowe, w którym można określić niestandardowy komunikat wyświetlany w przypadku wystąpienia błędu instalacji.<td>Zostanie wyświetlony domyślny komunikat: <br><b>Installation exceeded the time limit set by your organization. (Przekroczono limit czasu trwania instalacji określony przez organizację.) Spróbuj ponownie lub skontaktuj się ze specjalistą ds. pomocy technicznej IT, aby uzyskać pomoc.<b>
-<tr><td>Allow users to collect logs about installation errors (Zezwalaj użytkownikom na zbieranie dzienników dotyczących błędów instalacji)<td>W przypadku wystąpienia błędu wyświetlany jest przycisk <b>Zbieraj dzienniki</b>. <br>Jeśli użytkownik kliknie ten przycisk, zostanie poproszony o wybranie lokalizacji, w której ma zostać zapisany plik dziennika <b>MDMDiagReport.cab</b>.<td>Przycisk <b>Zbieraj dzienniki</b> nie jest wyświetlany w przypadku wystąpienia błędu instalacji.
-<tr><td>Block device use until these required apps are installed if they're assigned to the user/device (Blokuj użycie urządzenia do momentu zainstalowania wymaganych aplikacji, jeśli zostały przypisane do użytkownika/urządzenia)<td colspan="2">Wybierz pozycję <b>Wszystkie</b> lub <b>Wybrane</b>. <br><br>Wybranie pozycji <b>Wybrane</b> spowoduje wyświetlenie przycisku <b>Wybierz aplikacje</b> umożliwiający wybranie aplikacji, które muszą zostać zainstalowane przed włączeniem urządzenia.
+<tr><td>Zezwalaj użytkownikom na resetowanie urządzenia, jeśli wystąpi błąd instalacji<td>W przypadku błędu instalacji zostanie wyświetlony przycisk <b>Zresetuj urządzenie</b>.<td>W przypadku błędu instalacji nie zostanie wyświetlony przycisk <b>Zresetuj urządzenie</b>.
+<tr><td>Zezwalaj użytkownikom na używanie urządzenia, jeśli wystąpi błąd instalacji<td>W przypadku błędu instalacji zostanie wyświetlony przycisk <b>Kontynuuj mimo to</b>.<td>W przypadku błędu instalacji nie zostanie wyświetlony przycisk <b>Kontynuuj mimo to</b>.
+<tr><td>Pokaż błąd limitu czasu, jeśli instalacja trwa dłużej niż określona liczba minut<td colspan="2">Określ liczbę minut oczekiwania na ukończenie instalacji. Wprowadzona wartość domyślna wynosi 60 minut.
+<tr><td>Pokaż niestandardowy komunikat po wystąpieniu błędu<td>Zostanie wyświetlone pole tekstowe, w którym można określić niestandardowy komunikat wyświetlany w przypadku wystąpienia błędu instalacji.<td>Komunikat domyślny jest następujący: <br><b>Instalacja przekroczyła limit czasu ustawiony przez organizację. Spróbuj ponownie lub skontaktuj się z pracownikiem pomocy technicznej IT, aby uzyskać pomoc.<b>
+<tr><td>Zezwalaj użytkownikom na zbieranie dzienników o błędach instalacji<td>W przypadku wystąpienia błędu wyświetlany jest przycisk <b>Zbieraj dzienniki</b>. <br>Jeśli użytkownik kliknie ten przycisk, zostanie poproszony o wybranie lokalizacji, w której ma zostać zapisany plik dziennika <b>MDMDiagReport.cab</b><td>Przycisk <b>Zbieraj dzienniki</b> nie jest wyświetlany w przypadku wystąpienia błędu instalacji.
+<tr><td>Blokuj użycie urządzenia do momentu zainstalowania wymaganych aplikacji, jeśli zostały przypisane do użytkownika/urządzenia<td colspan="2">Wybierz pozycję <b>Wszystkie</b> lub <b>Wybrane</b>. <br><br>Po kliknięciu pozycji <b>Wybrane</b> zostanie wyświetlony przycisk <b>Wybierz aplikacje</b> umożliwiający wybranie aplikacji, które muszą zostać zainstalowane przed włączeniem urządzenia.
 </table>
 
-## <a name="turn-on-default-enrollment-status-page-for-all-users"></a>Włączanie domyślnej strony stanu rejestracji dla wszystkich użytkowników
+## <a name="turn-on-default-enrollment-status-page-for-all-users"></a>Włączanie domyślnej strony ze stanem rejestracji dla wszystkich użytkowników
 
 Aby włączyć stronę ze stanem rejestracji, wykonaj poniższe kroki.
  
@@ -70,7 +71,7 @@ Aby włączyć stronę ze stanem rejestracji, wykonaj poniższe kroki.
 
 ## <a name="create-enrollment-status-page-profile-and-assign-to-a-group"></a>Tworzenie profilu strony ze stanem rejestracji i przypisywanie do grupy
 
-1. W usłudze [Intune](https://aka.ms/intuneportal) wybierz pozycje **Rejestracja urządzenia** > **Rejestracja systemu Windows** > **Strona ze stanem rejestracji** > **Utwórz profil**.
+1. W usłudze [Intune](https://aka.ms/intuneportal) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja w systemie Windows** > **Strona ze stanem rejestracji** > **Utwórz profil**.
 2. Podaj **nazwę** i **opis**.
 3. Wybierz pozycję **Utwórz**.
 4. Wybierz nowy profil z listy **Strona ze stanem rejestracji**.
@@ -89,7 +90,7 @@ Użytkownik może należeć do wielu grup i mieć wiele profilów stron ze stane
 
 Zanim użytkownik będzie mógł uzyskiwać dostęp do pulpitu, można określić aplikacje, które należy zainstalować.
 
-1. W usłudze Intune wybierz kolejno pozycje **Rejestrowanie urządzenia** > **Rejestracja w systemie Windows** > **Strona ze stanem rejestracji**.
+1. W usłudze Intune wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja w systemie Windows** > **Strona ze stanem rejestracji**.
 2. Wybierz profil > **Ustawienia**.
 3. Wybierz pozycję **Tak** dla opcji **Pokaż postęp aplikacji i profilu**.
 4. Wybierz pozycję **Tak** dla opcji **Blokuj użycie urządzenia do momentu zainstalowania wszystkich aplikacji i profilów**.
@@ -104,7 +105,7 @@ Strona ze stanem rejestracji śledzi informacje o trzech fazach: przygotowywanie
 
 W przypadku przygotowywania urządzenia na stronie ze stanem rejestracji są śledzone następujące informacje:
 - zaświadczenia klucza modułu TPM (Trusted Platform Module) (jeśli jest to wymagane),
-- postęp w przyłączaniu do usługi Azure Active Directory,
+- postęp w dołączaniu do usługi Azure Active Directory,
 - rejestrowanie w usłudze Intune,
 - instalowanie rozszerzeń do zarządzania usługi Intune.
 
@@ -142,18 +143,18 @@ W przypadku konfiguracji konta strona ze stanem rejestracji śledzi następując
   - Profile certyfikatów, które są przypisane do wszystkich użytkowników lub grupy użytkowników, której członkiem jest użytkownik rejestrujący urządzenie.
 
 ### <a name="troubleshooting"></a>Rozwiązywanie problemów
-Najczęściej zadawane pytania dotyczące rozwiązywania problemów
+Najczęściej zadawane pytania dotyczące rozwiązywania problemów.
 
 - Dlaczego moje aplikacje nie zostały zainstalowane w fazie konfiguracji urządzenia podczas wdrażania rozwiązania Autopilot korzystającego ze strony ze stanem rejestracji?
   - Aby zapewnić pomyślną instalację aplikacji w fazie konfiguracji rozwiązania Autopilot, należy się upewnić, że: 
-        1. Wybrano blokowanie dostępu przez aplikację na liście wybranych aplikacji
+        1. Aplikacja została wybrana w celu blokowania dostępu na liście wybranych aplikacji
         2. Aplikacje są dodawane do tej samej grupy urządzeń usługi Azure AD, do której przypisano profil rozwiązania Autopilot. 
 
 - Dlaczego strona ze stanem rejestracji jest wyświetlana dla wdrożeń innych niż rozwiązania Autopilot, na przykład gdy użytkownik loguje się po raz pierwszy na urządzeniu zarejestrowanym do współzarządzania programu Configuration Manager?  
   - Na stronie ze stanem rejestracji znajduje się lista stanów instalacji dla wszystkich metod rejestracji, w tym:
       - rozwiązania Autopilot;
       - współzarządzania programu Configuration Manager;
-      - gdy nowy użytkownik loguje się do urządzenia, do którego po raz pierwszy zastosowano zasady strony ze stanem rejestracji.
+      - gdy nowy użytkownik loguje się po raz pierwszy na urządzeniu, do którego zastosowano zasady strony ze stanem rejestracji.
 
 - Jak mogę wyłączyć stronę ze stanem rejestracji, jeśli została ona skonfigurowana na urządzeniu?
   - Zasady strony ze stanem rejestracji są ustawiane na urządzeniu podczas rejestracji. Aby wyłączyć stronę ze stanem rejestracji, należy wyłączyć sekcje strony ze stanem rejestracji użytkowników i urządzeń. Te sekcje można wyłączyć, tworząc niestandardowe ustawienia OMA-URI z następującymi konfiguracjami.
@@ -187,19 +188,19 @@ Najczęściej zadawane pytania dotyczące rozwiązywania problemów
 
 ### <a name="known-issues"></a>Znane problemy
 Poniżej przedstawiono znane problemy. 
-- Wyłączenie profilu strony ze stanem rejestracji nie powoduje usunięcia zasad strony ze stanem rejestracji z urządzeń, a strona ze stanem rejestracji jest nadal wyświetlana, gdy użytkownicy logują się po raz pierwszy do urządzenia. Zasady nie są usuwane, gdy profil strony ze stanem rejestracji jest wyłączony. Należy wdrożyć ustawienia OMA-URI, aby wyłączyć zasady strony ze stanem rejestracji. Zapoznaj się z powyższymi instrukcjami dotyczącymi wyłączania strony ze stanem rejestracji przy użyciu ustawień OMA-URI. 
-- Oczekujące ponowne uruchomienie zawsze spowoduje przekroczenie limitu czasu. Przekroczenie limitu czasu występuje, ponieważ należy ponownie uruchomić urządzenie. Ponowne uruchomienie jest wymagane w celu zapewnienia czasu na ukończenie elementu śledzonego na stronie ze stanem rejestracji. Ponowne uruchomienie powoduje zamknięcie strony ze stanem rejestracji, a po ponownym uruchomieniu urządzenie nie zostaje wprowadzone podczas konfiguracji konta.  Należy rozważyć ustawienie braku wymaganego ponownego rozruchu po instalacji aplikacji. 
+- Wyłączenie profilu strony ze stanem rejestracji nie powoduje usunięcia z urządzeń zasad strony ze stanem rejestracji, a strona ze stanem rejestracji jest nadal wyświetlana, gdy użytkownicy logują się po raz pierwszy na urządzeniu. Zasady nie są usuwane, gdy profil strony ze stanem rejestracji jest wyłączany. Aby wyłączyć zasady strony ze stanem rejestracji, należy wdrożyć ustawienia OMA-URI. Zapoznaj się z powyższymi instrukcjami dotyczącymi wyłączania strony ze stanem rejestracji przy użyciu ustawień OMA-URI. 
+- Oczekujące ponowne uruchomienie zawsze spowoduje przekroczenie limitu czasu. Przekroczenie limitu czasu występuje, ponieważ należy ponownie uruchomić urządzenie. Ponowne uruchomienie jest wymagane w celu zapewnienia czasu na ukończenie elementu śledzonego na stronie ze stanem rejestracji. Ponowne uruchomienie powoduje zamknięcie strony ze stanem rejestracji, a po ponownym uruchomieniu urządzenie nie zostaje wprowadzone podczas konfiguracji konta.  Należy rozważyć ustawienie niewymagania ponownego rozruchu po instalacji aplikacji. 
 - Ponowne uruchomienie podczas konfigurowania powoduje wymuszenie wprowadzenia poświadczeń przez użytkownika przed przejściem do fazy konfiguracji konta. Poświadczenia użytkownika nie są zachowywane podczas ponownego uruchomienia. Użytkownik musi wprowadzić swoje poświadczenia, aby kontynuować wyświetlanie strony ze stanem rejestracji. 
-- Certyfikaty SCEP z zasadami usługi Windows Hello dla firm spowodują przekroczenie limitu czasu, ponieważ użytkownik nie może ukończyć konfigurowania numeru PIN usługi Hello w celu umożliwienia konkurencyjnej instalacji certyfikatu SCEP.  Brak obejścia. Szacowany czas udostępnienia poprawki to lato 2019 r. 
-- Podczas rejestracji konta służbowego w systemie Windows 10 w wersji niższej niż 1903 będzie zawsze występować przekroczenie limitu czasu. Strona ze stanem rejestracji czeka na zakończenie rejestracji w usłudze Azure AD. Ten problem został rozwiązany w systemie Windows 10 w wersji 1903 lub nowszej.  
-- Wdrożenie hybrydowej usługi Azure AD przy użyciu rozwiązania Autopilot ze stroną ze stanem rejestracji trwa dłużej niż limit czasu zdefiniowany w profilu strony ze stanem rejestracji. W przypadku wdrożeń hybrydowej usługi Azure AD przy użyciu rozwiązania Autopilot instalacja strony ze stanem rejestracji potrwa 40 minut dłużej niż wartość ustawiona w profilu strony ze stanem rejestracji. To opóźnienie umożliwia utworzenie nowego rekordu urządzenia w usłudze Azure AD przy użyciu łącznika lokalnej usługi AD. 
+- Certyfikaty SCEP z zasadami usługi Windows Hello dla firm spowodują przekroczenie limitu czasu, ponieważ użytkownik nie może ukończyć konfigurowania numeru PIN usługi Hello w celu umożliwienia konkurencyjnej instalacji certyfikatu SCEP.  Brak obejścia. Szacowany czas udostępnienia poprawki to lato 2019 r. 
+- Podczas rejestracji konta służbowego w systemie Windows 10 w wersji niższej niż 1903 zawsze będzie występować przekroczenie limitu czasu. Strona ze stanem rejestracji czeka na zakończenie rejestracji w usłudze Azure AD. Ten problem został rozwiązany w systemie Windows 10 w wersji 1903 lub nowszej.  
+- Wdrożenie hybrydowej usługi Azure AD przy użyciu rozwiązania Autopilot ze stroną ze stanem rejestracji trwa dłużej, niż limit czasu zdefiniowany w profilu strony ze stanem rejestracji. W przypadku wdrożeń hybrydowej usługi Azure AD przy użyciu rozwiązania Autopilot instalacja strony ze stanem rejestracji potrwa 40 minut dłużej, niż wartość ustawiona w profilu strony ze stanem rejestracji. To opóźnienie umożliwia utworzenie nowego rekordu urządzenia w usłudze Azure AD przy użyciu łącznika lokalnej usługi AD. 
 - Nazwa użytkownika na stronie logowania systemu Windows nie jest wstępnie wypełniona w trybie rozwiązania Autopilot sterowanym przez użytkownika. W przypadku ponownego uruchomienia w fazie konfigurowania strony ze stanem rejestracji:
     - poświadczenia użytkownika nie są zachowywane;
     - użytkownik musi ponownie wprowadzić poświadczenia przed przejściem z fazy konfiguracji urządzenia do fazy konfiguracji konta;
 - strona ze stanem rejestracji jest zablokowana przez długi czas lub faza „Identifying” (Identyfikowanie) nigdy nie zostaje ukończona. Usługa Intune oblicza zasady strony ze stanem rejestracji w fazie identyfikowania. Jeśli bieżący użytkownik nie ma przypisanej licencji usługi Intune, urządzenie może nigdy nie ukończyć przetwarzania zasad strony ze stanem rejestracji.  
 - Skonfigurowanie rozwiązania Kontrola aplikacji usługi Windows Defender powoduje wyświetlenie monitu o ponowne uruchomienie podczas korzystania z rozwiązania Autopilot. Konfigurowanie aplikacji Windows Defender (AppLocker CSP) wymaga ponownego uruchomienia. Skonfigurowanie tych zasad może spowodować ponowne uruchomienie urządzenia podczas korzystania z rozwiązania Autopilot. Obecnie nie ma możliwości pominięcia lub odroczenia ponownego uruchomienia.
 - Gdy zasady DeviceLock (https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) są włączone w ramach profilu strony ze stanem rejestracji, proces OOBE lub logowanie automatyczne użytkownika do komputera może nieoczekiwanie zakończyć się niepowodzeniem z dwóch powodów.
-  - Jeśli urządzenie nie zostało ponownie uruchomione przed zakończeniem fazy konfiguracji urządzenia strony ze stanem rejestracji, użytkownik może zostać poproszony o wprowadzenie poświadczeń usługi Azure AD. Ten monit występuje zamiast pomyślnego logowania automatycznego powodującego wyświetlenie animacji pierwszego logowania użytkownika w systemie Windows .
+  - Jeśli urządzenie nie zostało ponownie uruchomione przed zakończeniem fazy konfiguracji urządzenia strony ze stanem rejestracji, użytkownik może zostać poproszony o wprowadzenie poświadczeń usługi Azure AD. Ten monit jest wyświetlany zamiast pomyślnego logowania automatycznego powodującego wyświetlenie animacji pierwszego logowania użytkownika w systemie Windows.
   - Logowanie automatyczne nie powiedzie się, jeśli urządzenie zostało uruchomione ponownie po wprowadzeniu poświadczeń usługi Azure AD przez użytkownika, ale przed zakończeniem fazy konfiguracji urządzenia strony ze stanem rejestracji. Ten błąd występuje, ponieważ faza konfiguracji urządzenia strony ze stanem rejestracji nigdy nie została ukończona. Obejście polega na zresetowaniu urządzenia.
 
 ## <a name="next-steps"></a>Następne kroki

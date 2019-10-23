@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 06/19/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1679eb656e04296e53d8994dcd47144621c99d0c
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: dc0194bfaf1ec5e3120b6bd30eb6b2eb82c6ec2d
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71721776"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72504731"
 ---
 # <a name="set-up-intune-certificate-connector-for-digicert-pki-platform"></a>Konfigurowanie łącznika certyfikatów usługi Intune dla platformy infrastruktury kluczy publicznych firmy DigiCert  
 
@@ -109,7 +110,7 @@ Jeśli będziesz używać użyjesz łącznika z tylko urzędem certyfikacji firm
 
    d. Wybierz kolejno opcje **Komputer lokalny** > **Zakończ**. 
 
-   e. W oknie dialogowym **Dodawanie lub usuwanie przystawek** wybierz przycisk **OK**. Rozwiń węzeł **Certyfikaty (Komputer lokalny)** > **Osobiste** > **Certyfikaty**.
+   e. W oknie dialogowym **Dodawanie lub usuwanie przystawek** wybierz przycisk **OK**. Rozwiń węzeł **Certyfikaty (Komputer lokalny)**  > **Osobiste** > **Certyfikaty**.
 
    f. Kliknij prawym przyciskiem myszy węzeł **Certyfikaty**, a następnie wybierz kolejno opcje **Wszystkie zadania** > **Importuj**.  
 
@@ -121,7 +122,7 @@ Jeśli będziesz używać użyjesz łącznika z tylko urzędem certyfikacji firm
 
 6. Wyeksportuj i zaimportuj certyfikat klucza prywatnego: 
 
-   a. Rozwiń węzeł **Certyfikaty (Komputer lokalny)** > **Osobiste** > **Certyfikaty**.
+   a. Rozwiń węzeł **Certyfikaty (Komputer lokalny)**  > **Osobiste** > **Certyfikaty**.
 
    b. Wybierz certyfikat, który został zaimportowany w poprzednim kroku.
 
@@ -169,7 +170,7 @@ Pobierz najnowszy łącznik certyfikatów usługi Intune z portalu administracyj
 
 1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).  
 
-2. Wybierz kolejno pozycje **Konfiguracja urządzeń** > **Łączniki certyfikatów** > **+ Dodaj**.  
+2. Wybierz kolejno pozycje **Konfiguracja urządzeń** > **Łączniki certyfikatów** >  **+ Dodaj**.  
 
 3. Wybierz pozycję **Pobierz oprogramowanie łącznika certyfikatów**. Zapisz oprogramowanie w lokalizacji dostępnej z serwera, na którym ma ono zostać zainstalowane.  
 

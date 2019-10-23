@@ -9,17 +9,17 @@ manager: dougeby
 ms.date: 01/02/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology: ''
 ms.assetid: 361ef17b-1ee0-4879-b7b1-d678b0787f5a
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3be329e5b84f307c2683bc3799ff9cd6deafe729
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 681b4f690d03cd21c5a430e02cb0f3584d2e680e
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71726014"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72510120"
 ---
 # <a name="manage-operating-system-versions-with-intune"></a>Zarządzanie wersjami systemu operacyjnego w usłudze Intune
 Na nowoczesnych platformach urządzeń przenośnych i komputerów ważne aktualizacje, poprawki i nowe wersje pojawiają się bardzo często. Aktualizacjami i poprawkami dla systemu Windows możesz zarządzać w pełni, ale w przypadku systemów iOS i Android wymagane jest uczestnictwo użytkowników końcowych w tym procesie.  Usługa Microsoft Intune ma funkcje pomagające uporządkować zarządzanie wersjami systemów operacyjnych na różnych platformach.

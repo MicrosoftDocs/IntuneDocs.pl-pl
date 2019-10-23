@@ -9,17 +9,18 @@ manager: dougeby
 ms.date: 09/05/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology: ''
+ms.assetid: 7954a686-25dc-4fce-b395-324816f46d3b
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b55623dec2a89df700da8c0adb1c64e7e754043f
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: c79f24d44ad0aed78ed0ae6fce0873a080b2904d
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71721698"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72504850"
 ---
 # <a name="use-the-intune-tenant-status-page"></a>Korzystanie ze strony Stan dzierżawy w usłudze Intune
 Strona Stan dzierżawy usługi Microsoft Intune pełni funkcję centrum, które udostępnia aktualne, ważne informacje o dzierżawie. Szczegółowe informacje obejmują dostępność i użycie licencji, stan łącznika oraz ważne komunikaty dotyczące usługi Intune.  

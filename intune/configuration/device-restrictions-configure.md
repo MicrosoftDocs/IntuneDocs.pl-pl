@@ -1,6 +1,6 @@
 ---
 title: Ograniczanie funkcji urządzeń przy użyciu zasad w usłudze Microsoft Intune — Azure | Microsoft Docs
-description: Dodawanie profilu urządzenia w celu ograniczenia funkcji w urządzeniach z systemem Android, macOS, iOS, iPadOS, Windows Phone oraz Windows 10 w usłudze Microsoft Intune
+description: Dodawanie profilu urządzenia w celu ograniczenia funkcji na urządzeniach z systemem Android, macOS, iOS, iPadOS, Windows Phone oraz Windows 10 w usłudze Microsoft Intune
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -8,18 +8,19 @@ manager: dougeby
 ms.date: 09/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 61a8815bdbb0121d727c80dda0421922e0531cf7
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: b7b4597106d1fffb65f112feae750aa7c8feefc0
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71724051"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72493987"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Konfiguracja ustawień ograniczeń urządzeń w usłudze Microsoft Intune
 
@@ -33,7 +34,7 @@ Usługa Intune zawiera zasady ograniczania urządzeń, które ułatwiają admini
 - zezwalać na tworzenie kopii zapasowych plików w chmurze i na kontach magazynu lub blokować tę funkcję;
 - ustawiać minimalną długość hasła i blokować proste hasła.
 
-Te funkcje są dostępne w usłudze Intune i są konfigurowane przez administratora. „Profile konfiguracji” są używane w usłudze Intune do tworzenia i dostosowywania tych ustawień na potrzeby organizacji. Po dodaniu tych funkcji w profilu można następnie wypychać lub wdrażać profil na urządzeniach w organizacji.
+Te funkcje są dostępne w usłudze Intune i są konfigurowane przez administratora. „Profile konfiguracji” są używane w usłudze Intune do tworzenia i dostosowywania tych ustawień na potrzeby organizacji. Po dodaniu tych funkcji w profilu można wypychać lub wdrażać profil na urządzeniach w organizacji.
 
 W tym artykule przedstawiono sposób tworzenia profilu ograniczeń urządzenia. Zawiera on również listę wszystkich dostępnych ustawień dla różnych platform.
 
@@ -57,7 +58,7 @@ W tym artykule przedstawiono sposób tworzenia profilu ograniczeń urządzenia. 
 
     - **Typ profilu**: Wybierz pozycję **Ograniczenia dotyczące urządzeń**.
 
-        Aby utworzyć profil ograniczeń dotyczących urządzeń z systemem Windows 10 Team, np. urządzeń Surface Hub, wybierz pozycję **Ograniczenia dotyczące urządzeń (Windows 10 Team)**.
+        Aby utworzyć profil ograniczeń dotyczących urządzeń z systemem Windows 10 Team, np. urządzeń Surface Hub, wybierz pozycję **Ograniczenia dotyczące urządzeń (Windows 10 Team)** .
 
 4. Ustawienia, które można skonfigurować, różnią się w zależności od wybranej platformy. Wybierz platformę dla ustawień szczegółowych:
 

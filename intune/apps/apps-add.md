@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 08/23/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 40bb96000513bb1de09ec8f8865735d70bddcd43
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: c8e61be086323a16a6220573874ed80ce4e9bd32
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71725221"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72498985"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Dodawanie aplikacji do usługi Microsoft Intune 
 
@@ -69,7 +70,7 @@ W poniższej tabeli przedstawiono typy specyficzne dla aplikacji i sposób ich d
 | aplikacje LOB dla systemu macOS | Aplikacja LOB  | Wybierz pozycję **Aplikacja biznesowa** jako **typ aplikacji**, pozycję **Plik pakietu aplikacji**, a następnie plik instalacyjny z rozszerzeniem **.intunemac**.  |
 
 
-<sup>1</sup>Aby uzyskać więcej informacji na temat profilów służbowych w systemach Android Enterprise i Android, zobacz [Licencjonowane aplikacje](apps-add.md#understanding-licensed-apps) poniżej.
+<sup>1</sup> Aby uzyskać więcej informacji na temat profilów służbowych w systemach Android Enterprise i Android, patrz [Licencjonowane aplikacje](apps-add.md#understanding-licensed-apps) poniżej.
 
 Aby dodać aplikację w usłudze Microsoft Intune, wybierz kolejno pozycje **Aplikacje klienckie** > **Aplikacje** > **Dodaj**. Zostanie wyświetlone okienko **Dodaj aplikację**, w którym możesz wybrać **Typ aplikacji**. 
 
@@ -107,7 +108,7 @@ W [przewodniku planowania, projektowania i implementowania wdrożenia usługi In
 
 Można wybrać następujące typy aplikacji:
 - **Aplikacje ze sklepu**: aplikacje, które zostały przekazane do sklepu Microsoft Store, sklepu dla systemu iOS lub sklepu dla systemu Android. Dostawca aplikacji ze sklepu obsługuje i udostępnia jej aktualizacje. Administrator wybiera aplikację z listy w sklepie i przy użyciu usługi Intune dodaje ją jako aplikację dostępną dla użytkowników.
-- **Aplikacje napisane w firmie (biznesowe)** : aplikacje tworzone w firmie to aplikacje biznesowe (LOB). Aplikacje tego typu zostały zaprojektowane dla jednej z obsługiwanych przez usługę Intune platform, takich jak Windows, iOS macOS lub Android. Aktualizacje są tworzone i dostarczane przez organizację w postaci oddzielnych plików. Aby dostarczyć aktualizacje aplikacji do użytkowników, należy je dodać i wdrożyć za pomocą usługi Intune.
+- **Aplikacje napisane w firmie (biznesowe)** : aplikacje tworzone w firmie to aplikacje biznesowe (LOB). Funkcje aplikacji tego typu zostały zaprojektowane dla jednej z platform obsługiwanych przez usługę Intune, takich jak Windows, iOS, macOS lub Android. Aktualizacje są tworzone i dostarczane przez organizację w postaci oddzielnych plików. Aby dostarczyć aktualizacje aplikacji do użytkowników, należy je dodać i wdrożyć za pomocą usługi Intune.
 - **Aplikacje w Internecie**: aplikacje internetowe to aplikacje typu klient/serwer. Serwer udostępnia aplikację internetową, która obejmuje interfejs użytkownika, zawartość i funkcje. Ponadto nowoczesne internetowe platformy hostingowe często oferują zabezpieczenia, równoważenie obciążenia i inne korzyści. Aplikacje tego typu są oddzielnie obsługiwane w Internecie. Usługa Intune umożliwia wskazanie tego typu aplikacji. Można także przypisać grupy użytkowników, które będą mogły uzyskiwać dostęp do takiej aplikacji. Należy pamiętać, że system Android nie obsługuje aplikacji internetowych.
 
 Podczas określania, które aplikacje są wymagane w organizacji, należy uwzględnić, w jaki sposób integrują się one z usługami w chmurze, do jakich danych mają dostęp, czy są dostępne dla użytkowników korzystających z własnych urządzeń oraz czy wymagają dostępu do Internetu.
@@ -197,7 +198,7 @@ Aby dowiedzieć się, jak dodawać aplikacje dla poszczególnych platform do us�
 - [Aplikacje LOB dla systemu Android](lob-apps-android.md)
 - [Aplikacje ze sklepu dla systemu iOS](store-apps-ios.md)
 - [Aplikacje LOB dla systemu iOS](lob-apps-ios.md)
-- [Aplikacje LOB dla systemu macOS](lob-apps-macos.md)
+- [Aplikacje LOB systemu macOS](lob-apps-macos.md)
 - [Aplikacje internetowe (dla wszystkich platform)](web-app.md)
 - [Aplikacje ze sklepu dla systemu Windows Phone 8.1](store-apps-windows-phone-8-1.md)
 - [Aplikacje LOB dla systemu Windows Phone](lob-apps-windows-phone.md)

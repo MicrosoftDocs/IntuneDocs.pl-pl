@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 08/22/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: f5617074-2384-4812-b913-dc94f64c0818
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3f882272f200e8fc9aa81f36eb28e85893995f11
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 022df428658a3c8791a07cbd797145bfe9a392bb
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71724376"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72496468"
 ---
 # <a name="how-to-manage-ios-ebooks-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Jak zarządzać w usłudze Microsoft Intune książkami elektronicznymi dla systemu iOS, które zostały zakupione w ramach programu zakupów zbiorczych
 
@@ -76,7 +77,7 @@ Dane przechowywane przez firmę Apple można w dowolnym momencie zsynchronizowa�
 
 3. W okienku **Intune** wybierz pozycję **Książki elektroniczne**.
 1. W obciążeniu **Książki elektroniczne** wybierz opcję **Zarządzaj** > **Wszystkie książki elektroniczne**.
-2. W okienku z listą książek wybierz książkę, którą chcesz przypisać, a następnie wybierz kolejno opcje „**...**” > **Przypisz grupy**.
+2. W okienku z listą książek wybierz książkę, którą chcesz przypisać, a następnie wybierz kolejno opcje „ **...** ” > **Przypisz grupy**.
 3. W okienku <*nazwa książki*> — **Przypisane grupy** wybierz kolejno pozycje **Zarządzaj** > **Przypisane grupy**.
 4. Wybierz pozycję **Przypisz grupy**, a następnie w okienku **Wybierz grupy** wybierz grupy użytkowników usługi Azure AD, do których chcesz przypisać książkę. Grupy urządzeń nie są obecnie obsługiwane.
 Wybierz akcję przypisania **Dostępne** lub **Wymagane**. 

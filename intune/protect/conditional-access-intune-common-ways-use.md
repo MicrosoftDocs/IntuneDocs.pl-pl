@@ -1,7 +1,7 @@
 ---
 title: Scenariusze dostępu warunkowego
 titleSuffix: Microsoft Intune
-description: Dowiedz się, w jaki sposób dostęp warunkowy usługi Intune jest powszechnie używany dla dostępu warunkowego opartego na urządzeniach i dostępu warunkowego na podstawie aplikacji.
+description: Dowiedz się, w jaki sposób dostęp warunkowy usługi Intune jest powszechnie używany w celu uzyskiwania dostępu warunkowego opartego na urządzeniach i dostępu warunkowego na podstawie aplikacji.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 07/23/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: a0b8e55e-c3d8-4599-be25-dc10c1027b62
@@ -16,24 +17,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fa4157d82ae63336503a9348851ad75f3b8243f9
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 00743e020fc9d42970dca5efa130908a53c6c5bf
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71722699"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72504589"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Jakie są typowe sposoby korzystania z dostępu warunkowego przy użyciu usługi Intune?
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 
-Istnieją dwa typy dostępu warunkowego w usłudze Intune: dostęp warunkowy oparty na urządzeniu i dostęp warunkowy na podstawie aplikacji. Musisz skonfigurować powiązane zasady zgodności, aby sterować dostępem warunkowym w swojej organizacji. Dostęp warunkowy jest najczęściej używany do wykonywania czynności takich jak zezwalanie na dostęp lub blokowanie dostępu do programu Exchange, kontrola dostępu do sieci lub integracja z rozwiązaniem Mobile Threat Defense.
+Istnieją dwa typy dostępu warunkowego w usłudze Intune: dostęp warunkowy oparty na urządzeniu i dostęp warunkowy na podstawie aplikacji. Musisz skonfigurować powiązane zasady zgodności, aby sterować dostępem warunkowym w swojej organizacji. Dostęp warunkowy jest najczęściej używany do wykonywania takich czynności jak zezwalanie na dostęp lub blokowanie dostępu do programu Exchange, kontrola dostępu do sieci lub integracja z rozwiązaniem Mobile Threat Defense.
  
 Informacje przedstawione w tym artykule pomagają zrozumieć sposób korzystania z możliwości zapewnienia zgodności *urządzenia* przenośnego w usłudze Intune i możliwości zarządzania *aplikacjami* mobilnymi (MAM) w usłudze Intune. 
 
 > [!NOTE]
-> Dostęp warunkowy jest funkcją usługi Azure Active Directory dostępną w wersji Premium licencji tej usługi. Usługa Intune rozszerza tę funkcję, dodając do rozwiązania zgodność urządzeń przenośnych oraz zarządzanie aplikacjami mobilnymi. Węzeł Dostęp warunkowy dostępny z usługi *Intune* jest tym samym węzłem, do którego dostęp jest uzyskiwany z usługi *Azure AD*.  
+> Dostęp warunkowy jest funkcją usługi Azure Active Directory dostępną po uzyskaniu licencji na wersję Premium licencji tej usługi. Usługa Intune rozszerza tę funkcję, dodając do rozwiązania zgodność urządzeń przenośnych oraz zarządzanie aplikacjami mobilnymi. Węzeł Dostęp warunkowy dostępny z usługi *Intune* jest tym samym węzłem, do którego dostęp jest uzyskiwany z usługi *Azure AD*.  
 
 ## <a name="device-based-conditional-access"></a>Dostęp warunkowy oparty na urządzeniach
 
@@ -60,7 +61,7 @@ Zasady dostępu warunkowego opartego na urządzeniach dla usługi Exchange Onlin
 
 Usługa Intune została zintegrowana z partnerami, takimi jak Cisco ISE, Aruba Clear Pass oraz Citrix NetScaler w celu zapewnienia kontroli dostępu na podstawie rejestracji w usłudze Intune oraz stanu zgodności urządzenia.
 
-Zezwolenie użytkownikom na dostęp lub odmowa dostępu do firmowej sieci Wi-Fi lub zasobów VPN, następuje w zależności od tego, czy urządzenie jest zarządzane przy użyciu zasad zgodności urządzeń w usłudze Intune oraz z nimi zgodne.
+Zezwolenie użytkownikom na dostęp lub odmowa dostępu do firmowej sieci Wi-Fi lub zasobów VPN następuje w zależności od tego, czy urządzenie jest zarządzane przy użyciu zasad zgodności urządzeń w usłudze Intune oraz z nimi zgodne.
 
 - Dodatkowe informacje o [integracji kontroli dostępu do sieci z usługą Intune](network-access-control-integrate.md).
 
@@ -70,7 +71,7 @@ Usługa Intune współpracuje z dostawcami usługi Mobile Threat Defense, która
 
 #### <a name="how-the-intune-and-mobile-threat-defense-integration-works"></a>Jak działa usługa Intune oraz integracja z usługą Mobile Threat Defense
 
-Gdy na urządzeniu mobilnym zainstalowano agenta usługi Mobile Threat Defense, agent wysyła komunikaty o stanie zgodności do usługi Intune z powiadomieniem o wykryciu zagrożenia bezpośrednio na urządzeniu mobilnym.
+Gdy na urządzeniu mobilnym zainstalowano agenta usługi Mobile Threat Defense, wysyła on komunikaty o stanie zgodności do usługi Intune z powiadomieniem o wykryciu zagrożenia bezpośrednio na urządzeniu mobilnym.
 
 Usługa Intune oraz integracja z usługą Mobile Threat Defense stanowią czynnik decydujący w zakresie dostępu warunkowego w oparciu o ryzyko dotyczące urządzenia.
 
@@ -82,7 +83,7 @@ Dostęp warunkowy dla komputerów zapewnia możliwości podobne do tych dostępn
 
 #### <a name="corporate-owned"></a>Urządzenia należące do firmy
 
-- **Przyłączone do domeny w lokalnej usłudze AD:** Ta opcja jest często używana przez organizacje, które są zadowolone z tego, jak obecnie zarządzają komputerami przy użyciu zasad grupy usługi AD lub programu System Center Configuration Manager.
+- **Przyłączone do domeny w lokalnej usłudze AD:** Ta opcja jest często używana przez organizacje zadowolone z tego, jak obecnie zarządzają komputerami przy użyciu zasad grupy usługi AD lub programu System Center Configuration Manager.
 
 - **Przyłączone do domeny w usłudze Azure AD oraz zarządzane w usłudze Intune:** Ten scenariusz jest przeznaczony dla organizacji, które chcą korzystać przede wszystkim z chmury (czyli przede wszystkim korzystają z usług w chmurze z myślą o ograniczeniu użycia infrastruktury lokalnej) lub tylko z chmury (w przypadku braku infrastruktury lokalnej). Usługa Azure AD Join działa dobrze w środowisku hybrydowym, umożliwiając dostęp do aplikacji i zasobów w chmurze oraz lokalnych. Urządzenie zostaje przyłączone do usługi Azure AD i zarejestrowane w usłudze Intune, co może zostać wykorzystane jako kryterium dostępu warunkowego w przypadku uzyskiwania dostępu do zasobów firmy.
 
@@ -90,13 +91,13 @@ Dostęp warunkowy dla komputerów zapewnia możliwości podobne do tych dostępn
 
   - Czy komputer jest szyfrowany?
 
-  - Czy zainstalowane jest oprogramowanie chroniące przed złośliwym oprogramowaniem? Czy oprogramowanie jest aktualne?
+  - Czy zainstalowano oprogramowanie chroniące przed złośliwym oprogramowaniem? Czy oprogramowanie jest aktualne?
 
   - Czy urządzenie ma złamane zabezpieczenia lub ma odblokowany dostęp do konta administratora?
 
 #### <a name="bring-your-own-device-byod"></a>„Przynieś własne urządzenie” (BYOD)
 
-- **Dołączanie w miejscu pracy i zarządzanie za pomocą usługi Intune:** Użytkownik może dołączać własne urządzenia do dostępu do firmowych zasobów i usług. Można użyć dołączania w miejscu pracy oraz rejestrowania urządzeń w funkcji zarządzania urządzeniami przenośnymi usługi Intune w celu otrzymywania zasad na poziomie urządzenia, co stanowi również kolejną opcję oceny kryteriów dostępu warunkowego.
+- **Dołączanie w miejscu pracy i zarządzanie za pomocą usługi Intune:** Użytkownik może dołączać własne urządzenia do dostępu do firmowych zasobów i usług. Można użyć dołączania w miejscu pracy oraz rejestrowania urządzeń w funkcji zarządzania urządzeniami przenośnymi usługi Intune w celu otrzymywania zasad na poziomie urządzenia, co stanowi kolejną opcję oceny kryteriów dostępu warunkowego.
 
 Dowiedz się więcej o [zarządzania urządzeniami w usłudze Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/overview).
 
@@ -114,7 +115,7 @@ Można skonfigurować ustawienia zaawansowane dostępu warunkowego, aby uzyskać
 
 - Zezwolić na dostęp z określonych platform lub je zablokować.
 
-- Natychmiast zablokować urządzenia, które nie są zarządzane przez usługę Intune.
+- Natychmiast zablokować urządzenia niezarządzane przez usługę Intune.
 
 Każde urządzenie używane do dostępu do lokalnego programu Exchange jest sprawdzane pod kątem zgodności, gdy stosowane są zasady zgodności urządzenia i dostępu warunkowego.
 
@@ -158,7 +159,7 @@ Usługa Intune ocenia stan urządzenia oraz nim zarządza.
 Serwer programu Exchange zapewnia interfejs API oraz infrastrukturę, aby przenieść urządzenia do kwarantanny.
 
 > [!IMPORTANT]
-> Należy pamiętać, że użytkownik używający urządzenia musi mieć przypisany do niego profil i licencję usługi Intune, aby urządzenie mogło zostać ocenione pod kątem zgodności. Jeśli na urządzeniu nie wdrożono żadnych zasad zgodności dla użytkownika, będzie ono traktowane jako zgodne i nie będą stosowane żadne ograniczenia dostępu.
+> Należy pamiętać, że użytkownik używający urządzenia musi mieć przypisany do niego profil zgodności i licencję usługi Intune, aby urządzenie mogło zostać ocenione pod kątem zgodności. Jeśli na urządzeniu nie wdrożono żadnych zasad zgodności dla użytkownika, będzie ono traktowane jako zgodne i nie będą stosowane żadne ograniczenia dostępu.
 
 ## <a name="next-steps"></a>Następne kroki
 

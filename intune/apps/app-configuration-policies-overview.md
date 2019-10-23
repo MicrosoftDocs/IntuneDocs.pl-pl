@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 08/28/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 834B4557-80A9-48C0-A72C-C98F6AF79708
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 08017be16e4257ef0bd7bfb775197feaa20baf75
-ms.sourcegitcommit: 223d64a72ec85fe222f5bb10639da729368e6d57
+ms.openlocfilehash: 42d17c15a2a32f828c5715dfad51f34c5e531e76
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71940347"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72507550"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Zasady konfiguracji aplikacji usługi Microsoft Intune
 
@@ -99,7 +100,7 @@ Konfigurację systemu iOS można zweryfikować za pomocą **dziennika diagnostyc
 3. Kliknij pozycję **Rozpocznij**.
 4. Kliknij pozycję **Udostępnij dzienniki**.
 5. Użyj wybranej aplikacji poczty, aby wysłać do siebie dziennik i umożliwić przeglądanie go na komputerze. 
-6. Przejrzyj pliki **IntuneMAMDiagnostics.txt** w przeglądarce plików tekstowych.
+6. Przejrzyj plik **IntuneMAMDiagnostics.txt** w przeglądarce plików tekstowych.
 7. Wyszukaj ciąg `ApplicationConfiguration`. Wyniki będą wyglądać podobnie do następujących:
 
     ``` JSON

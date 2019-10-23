@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 09/18/2018
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: remote-actions
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 47181d19-4049-4c7a-a8de-422206c4027e
@@ -15,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 34aea5256ebb7d6577b4e77054dcca63d47bf317
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: d7ca53786d372f53d63388fef1179ca271fdb9d9
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71728588"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72508585"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>Resetowanie lub usuwanie kodu dostępu urządzenia w usłudze Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-W tym dokumencie omówiono zarówno resetowanie kodu dostępu na poziomie urządzenia, jak i resetowanie kodu dostępu profilu służbowego na urządzeniach z rozwiązaniem Android enterprise (wcześniej nazywanym Android for Work lub AfW). Należy pamiętać o tym rozróżnieniu, ponieważ wymagania dotyczące poszczególnych operacji mogą się różnić. Zresetowanie kodu dostępu na poziomie urządzenia powoduje zresetowanie kodu dostępu dla całego urządzenia. Zresetowanie kodu dostępu profilu służbowego powoduje zresetowanie kodu dostępu tylko dla profilu służbowego użytkownika na urządzeniach z rozwiązaniem Android enterprise.
+W tym dokumencie omówiono zarówno resetowanie kodu dostępu na poziomie urządzenia, jak i resetowanie kodu dostępu profilu służbowego na urządzeniach z rozwiązaniem Android Enterprise (wcześniej nazywanym Android for Work lub AfW). Należy pamiętać o tym rozróżnieniu, ponieważ wymagania dotyczące poszczególnych operacji mogą się różnić. Zresetowanie kodu dostępu na poziomie urządzenia powoduje zresetowanie kodu dostępu dla całego urządzenia. Zresetowanie kodu dostępu profilu służbowego powoduje zresetowanie kodu dostępu tylko dla profilu służbowego użytkownika na urządzeniach z rozwiązaniem Android enterprise.
 
 ## <a name="supported-platforms-for-device-level-passcode-reset"></a>Platformy, na których jest obsługiwane resetowanie kodu dostępu na poziomie urządzenia
 
@@ -41,7 +42,7 @@ W tym dokumencie omówiono zarówno resetowanie kodu dostępu na poziomie urząd
 | macOS | Nie |
 | Windows | Nie |
 
-Dla urządzeń z systemem Android oznacza to, że resetowanie kodu dostępu na poziomie urządzenia jest obsługiwane tylko na urządzeniach z systemem w wersji 6.x lub starszej oraz na urządzeniach z rozwiązaniem Android enterprise działających w trybie kiosku. Jest to spowodowane tym, że firma Google usunęła obsługę resetowania hasła/kodu dostępu urządzeń z systemem Android 7 z poziomu aplikacji, której udzielono uprawnień administratora urządzenia, i dotyczy to wszystkich dostawców zarządzania urządzeniami przenośnymi (MDM).
+Dla urządzeń z systemem Android oznacza to, że resetowanie kodu dostępu na poziomie urządzenia jest obsługiwane tylko na urządzeniach z systemem w wersji 6.x lub starszej oraz na urządzeniach z rozwiązaniem Android Enterprise działających w trybie kiosku. Jest to spowodowane tym, że firma Google usunęła obsługę resetowania hasła/kodu dostępu urządzeń z systemem Android 7 z poziomu aplikacji, której udzielono uprawnień administratora urządzenia, i dotyczy to wszystkich dostawców zarządzania urządzeniami przenośnymi (MDM).
 
 ## <a name="supported-platforms-for-android-enterprise-work-profile-passcode-reset"></a>Platformy, na których jest obsługiwane resetowanie kodu dostępu profilu służbowego rozwiązania Android enterprise
 

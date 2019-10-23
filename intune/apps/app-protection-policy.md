@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 08/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 1c086943-84a0-4d99-8295-490a2bc5be4b
@@ -17,20 +18,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee266d33b247941140569e416c4b43643bcd6a0f
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 31bb0e2ff4379c55829afc65fb99b768c9099a47
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71725377"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72498957"
 ---
 # <a name="app-protection-policies-overview"></a>Zasady ochrony aplikacji — przegląd
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Zasady ochrony aplikacji (APP) to reguły, które mogą zagwarantować, że dane organizacji pozostaną bezpieczne lub nie zostaną pobrane z zarządzanej aplikacji. Zasady mogą być regułą, która jest wymuszana w przypadku próby uzyskania dostępu do danych firmowych lub ich przeniesienia przez użytkownika albo zestawem akcji, które są zabronione lub monitorowane, gdy użytkownik korzysta z aplikacji. Zarządzana aplikacja to taka, dla której zastosowano zasady ochrony aplikacji i która może być zarządzana przez usługę Intune.
+Zasady ochrony aplikacji (APP) to reguły, które zapewniają, że dane organizacji będą bezpiecznie przechowywane w aplikacji zarządzanej. Zasady mogą być regułą, która jest wymuszana w przypadku próby uzyskania dostępu do danych firmowych lub ich przeniesienia przez użytkownika albo zestawem akcji, które są zabronione lub monitorowane, gdy użytkownik korzysta z aplikacji. Zarządzana aplikacja to taka, dla której zastosowano zasady ochrony aplikacji i która może być zarządzana przez usługę Intune.
 
-Zasady ochrony aplikacji w ramach zarządzania aplikacjami mobilnymi (MAM) umożliwiają zarządzanie danymi organizacji w aplikacji oraz ich ochronę. **MAM bez rejestracji** (MAM-WE) umożliwia zarządzanie aplikacją służbową, która zawiera dane poufne, z prawie każdego [urządzenia](app-management.md#app-management-capabilities-by-platform) — w tym z urządzenia osobistego w scenariuszach **BYOD** (przynieś własne urządzenie). Zarządzanie aplikacjami mobilnymi usługi Intune można stosować do wielu aplikacji użytkowych, takich jak aplikacje pakietu Microsoft Office. Zobacz oficjalną listę [aplikacji chronionych przez usługę Microsoft Intune](apps-supported-intune-apps.md) dostępnych do użytku publicznego.
+Zasady ochrony aplikacji w ramach zarządzania aplikacjami mobilnymi (MAM) umożliwiają zarządzanie danymi organizacji w aplikacji oraz ich ochronę. Funkcja **MAM bez rejestracji** (MAM-WE) umożliwia zarządzanie aplikacją służbową, która zawiera dane poufne, z prawie każdego [urządzenia](app-management.md#app-management-capabilities-by-platform) — w tym z urządzenia osobistego w scenariuszach **BYOD** (przynieś własne urządzenie). Zarządzanie aplikacjami mobilnymi usługi Intune można stosować do wielu aplikacji użytkowych, takich jak aplikacje pakietu Microsoft Office. Zobacz oficjalną listę [aplikacji chronionych przez usługę Microsoft Intune](apps-supported-intune-apps.md) dostępnych do użytku publicznego.
 
 ## <a name="how-you-can-protect-app-data"></a>Jak możesz chronić dane aplikacji
 Pracownicy używają urządzeń przenośnych zarówno do celów służbowych, jak i prywatnych. Zatem umożliwiając pracownikom wydajną pracę, warto zapobiegać nieumyślnej lub umyślnej utracie danych. Należy również chronić dane firmowe, do których można uzyskać dostęp z urządzeń, które nie są zarządzane przez firmę.
@@ -48,7 +49,7 @@ Zasady ochrony aplikacji można skonfigurować dla aplikacji uruchamianych na ur
   > [!NOTE]
   > Zasady zarządzania aplikacjami mobilnymi nie powinny być stosowane z rozwiązaniami bezpiecznego kontenera ani rozwiązaniami do zarządzania aplikacjami mobilnymi innych firm.
 
-- **Niezarejestrowane w żadnym rozwiązaniu do zarządzania urządzeniami mobilnymi:** te urządzenia są zazwyczaj należącymi do pracowników urządzeniami, które nie są zarządzane lub nie zostały zarejestrowane w usłudze Intune ani innych rozwiązaniach MDM.
+- **Niezarejestrowane w żadnym rozwiązaniu do zarządzania urządzeniami mobilnymi:** Te urządzenia to zazwyczaj urządzenia należące do pracowników, które nie są zarządzane lub nie zostały zarejestrowane w usłudze Intune ani innych rozwiązaniach MDM.
 
 > [!IMPORTANT]
 > Możesz tworzyć zasady zarządzania aplikacjami mobilnymi dla aplikacji mobilnych pakietu Office łączących się z usługą Office 365. Możesz także chronić dostęp do lokalnych skrzynek pocztowych programu Exchange, tworząc zasady ochrony aplikacji usługi Intune dla aplikacji Outlook dla systemów iOS i Android, obsługiwane przez hybrydowe nowoczesne uwierzytelnianie. Przed użyciem tej funkcji upewnij się, że spełnione są [Wymagania dotyczące programu Outlook dla systemów iOS i Android](https://technet.microsoft.com/library/mt846639(v=exchg.160).aspx). Zasady ochrony aplikacji nie są obsługiwane w przypadku innych aplikacji łączących się z lokalnymi usługami Exchange lub SharePoint.
@@ -61,12 +62,12 @@ Do istotnych korzyści zapewnianych przez zasady ochrony aplikacji należą:
 
 - **Zasady nie mają wpływu na produktywność użytkownika końcowego i nie są stosowane podczas korzystania z aplikacji w kontekście prywatnym.** Zasady są stosowane wyłącznie w kontekście służbowym, co daje możliwość ochrony danych firmowych bez ingerowania w dane prywatne.
 
-- **Zasady ochrony aplikacji zapewniają stosowanie zabezpieczeń warstwy aplikacji.** Możesz na przykład:
+- **Zasady ochrony aplikacji zapewniają stosowanie zabezpieczeń w warstwie aplikacji.** Możesz na przykład:
   - Wymagać numeru PIN w celu otwarcia aplikacji w kontekście służbowym 
   - Kontrolować udostępnianie danych między aplikacjami 
   - Uniemożliwić zapisywanie danych aplikacji firmowej w osobistej lokalizacji przechowywania
 
-- **Rozwiązanie MDM, stosowane oprócz rozwiązania MAM, zapewnia ochronę urządzenia.** Możesz na przykład zastosować zabezpieczenie dostępu do urządzenia numerem PIN lub wdrożyć na urządzeniu aplikacje zarządzane. Możesz również wdrażać aplikacje na urządzeniach za pośrednictwem rozwiązania MDM, aby mieć lepszą kontrolę nad zarządzaniem aplikacjami.
+- **Rozwiązanie MDM, stosowane razem z rozwiązaniem MAM, zapewnia ochronę urządzenia**. Możesz na przykład zastosować zabezpieczenie dostępu do urządzenia numerem PIN lub wdrożyć na urządzeniu aplikacje zarządzane. Możesz również wdrażać aplikacje na urządzeniach za pośrednictwem rozwiązania MDM, aby mieć lepszą kontrolę nad zarządzaniem aplikacjami.
 
 Dodatkowe korzyści można uzyskać, używając jednocześnie rozwiązań MDM i zasad ochrony aplikacji. Firmy mogą w tym samym czasie korzystać z zasad ochrony aplikacji łącznie z rozwiązaniem MDM lub bez niego. Przypuśćmy na przykład, że pracownik używa zarówno telefonu otrzymanego od firmy jak i własnego prywatnego tabletu. Telefon firmowy jest zarejestrowany w rozwiązaniu MDM i chroniony przez zasady ochrony aplikacji, natomiast urządzenie prywatne jest chronione tylko przez zasady ochrony aplikacji.
 
@@ -87,7 +88,7 @@ Obsługa platformy zasad ochrony aplikacji usługi Intune jest powiązana z obs�
 
 ### <a name="apps-without-app-protection-policies"></a>Aplikacje bez zasad ochrony aplikacji
 
-W przypadku korzystania z aplikacji bez ograniczeń dane firmowe i prywatne mogą ulec wymieszaniu. Dane firmowe mogą więc trafić na przykład do magazynu osobistego albo do aplikacji pozostających poza Twoją kontrolą, co grozi utratą danych. Strzałki na poniższym rysunku oznaczają nieograniczone przemieszczanie się danych między aplikacjami zarówno firmowymi, jak i prywatnymi oraz do lokalizacji magazynu.
+W przypadku korzystania z aplikacji bez ograniczeń dane firmowe i prywatne mogą ulec wymieszaniu. Dane firmowe mogą więc trafić na przykład do magazynu osobistego albo do aplikacji pozostających poza Twoją kontrolą, co grozi utratą danych. Strzałki na poniższym rysunku oznaczają nieograniczone przenoszenie danych między aplikacjami zarówno firmowymi, jak i prywatnymi, oraz do lokalizacji magazynu.
 
 ![Obraz koncepcyjny przedstawiający przenoszenie danych między aplikacjami, dla których nie są wymuszane żadne zasady](./media/app-protection-policy/apps-without-protection-policies.png)
 
@@ -113,9 +114,9 @@ Rozwiązanie MDM zwiększa wartość, zapewniając następujące korzyści:
 
 Zasady ochrony aplikacji zwiększają wartość, zapewniając następujące korzyści:
 
-- wspomagają ochronę danych firmy przed wyciekiem do aplikacji i usług dla konsumentów;
-- stosują ograniczenia, takie jak *zapisz jako*, *schowek*, *numer PIN*, do aplikacji klienckich;
-- w razie potrzeby wymazują dane firmowe z aplikacji, nie usuwając tych aplikacji z urządzenia.
+- Wspomagają ochronę danych firmy przed wyciekiem do aplikacji i usług dla konsumentów
+- Stosują ograniczenia, takie jak *zapisz jako*, *schowek*, *numer PIN*, do aplikacji klienckich
+- W razie potrzeby wymazują dane firmowe z aplikacji, nie usuwając tych aplikacji z urządzenia
 
 ### <a name="data-protection-with-app-for-devices-without-enrollment"></a>Ochrona danych za pomocą zasad ochrony aplikacji dla urządzeń bez rejestracji
 
@@ -136,7 +137,7 @@ Każdą aplikacją zintegrowaną z zestawem [Intune App SDK](../developer/app-sd
 
 Zespół programistyczny zajmujący się zestawem Intune SDK aktywnie przeprowadza testy i zapewnia obsługę aplikacji z natywnych platform Android, iOS (Obj-C, Swift), Xamarin, Xamarin.Forms i Cordova. Niektórym klientom udało się zintegrować zestaw Intune SDK z innymi platformami (takimi jak React Native i NativeScript), ale nie udostępniamy deweloperom żadnych wskazówek ani wtyczek dotyczących nieobsługiwanych przez nas platform.
 
-[Zestaw SDK aplikacji usługi Intune](../developer/app-sdk.md) korzysta z zaawansowanych funkcji nowoczesnego uwierzytelniania z [bibliotek uwierzytelniania usługi Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL) dla własnej wersji zestawu SDK i wersji zestawu SDK innych firm. W efekcie biblioteka [Microsoft Authentication Library](https://docs.microsoft.com/azure/active-directory/develop/reference-v2-libraries) (MSAL) nie działa dobrze w przypadku wielu naszych podstawowych scenariuszy, takich jak uwierzytelnianie w usłudze Intune App Protection i uruchamianie warunkowe. Biorąc pod uwagę, że zgodnie z ogólnymi wytycznymi nasz zespół ds. tożsamości zaleca przejście na bibliotekę MSAL dla wszystkich aplikacji pakietu Microsoft Office, [zestaw SDK aplikacji usługi Intune](../developer/app-sdk.md) będzie musiał w końcu ją obsługiwać — obecnie nie ma jednak konkretnego planu.
+[Zestaw SDK aplikacji usługi Intune](../developer/app-sdk.md) korzysta z zaawansowanych funkcji nowoczesnego uwierzytelniania z [bibliotek uwierzytelniania usługi Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL) dla własnej wersji zestawu SDK i wersji zestawu SDK innych firm. W efekcie biblioteka [Microsoft Authentication Library](https://docs.microsoft.com/azure/active-directory/develop/reference-v2-libraries) (MSAL) nie działa dobrze w przypadku wielu naszych podstawowych scenariuszy, takich jak uwierzytelnianie w usłudze Intune App Protection i uruchamianie warunkowe. Biorąc pod uwagę, że zgodnie z ogólnymi wytycznymi zespół ds. tożsamości firmy Microsoft zaleca przejście na bibliotekę MSAL dla wszystkich aplikacji pakietu Microsoft Office, [zestaw SDK aplikacji usługi Intune](../developer/app-sdk.md) będzie musiał w końcu ją obsługiwać — obecnie nie ma jednak konkretnego planu.
 
 ## <a name="end-user-requirements-to-use-app-protection-policies"></a>Wymagania dla użytkowników końcowych dotyczące korzystania z zasad ochrony aplikacji
 
@@ -176,10 +177,10 @@ Dodatkowe wymagania dotyczące korzystania z aplikacji [Word, Excel i PowerPoint
   > Aplikacje mobilne pakietu Office obsługują obecnie tylko usługę SharePoint Online, a nie lokalny program SharePoint.
 
 ### <a name="managed-location-needed-for-office"></a>Lokalizacja zarządzana wymagana dla pakietu Office
-Pakiet Office wymaga lokalizacji zarządzanej (tj. usługi OneDrive). Usługa Intune oznacza wszystkie dane w aplikacji jako „firmowe” lub „osobiste”. Dane są uznawane za „firmowe”, jeśli pochodzą z lokalizacji firmowej. W przypadku aplikacji pakietu Office usługa Intune uznaje za lokalizacje firmowe: adres e-mail (Exchange) lub magazyn w chmurze (aplikacja OneDrive z kontem usługi OneDrive dla Firm).
+Pakiet Office wymaga lokalizacji zarządzanej (np. usługi OneDrive). Usługa Intune oznacza wszystkie dane w aplikacji jako „firmowe” lub „osobiste”. Dane są uznawane za „firmowe”, jeśli pochodzą z lokalizacji firmowej. W przypadku aplikacji pakietu Office usługa Intune uznaje za lokalizacje firmowe: adres e-mail (Exchange) lub magazyn w chmurze (aplikacja OneDrive z kontem usługi OneDrive dla Firm).
 
 ### <a name="skype-for-business"></a>Skype dla firm
-Istnieją dodatkowe wymagania dotyczące korzystania z usługi Skype dla firm. Zobacz wymagania licencyjne usługi [Skype dla firm](https://products.office.com/skype-for-business/it-pros). Dla konfiguracji hybrydowych i lokalnych usługi Skype dla firm zobacz odpowiednio artykuły [Hybrid Modern Auth for SfB and Exchange goes GA](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756) (Nowoczesne uwierzytelnianie hybrydowe dla usługi Skype dla firm i programu Exchange jest ogólnie dostępne) lub [Modern Auth for SfB OnPrem with AAD](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910) (Nowoczesne uwierzytelnianie dla lokalnej usługi Skype dla firm za pomocą usługi AAD).
+Istnieją dodatkowe wymagania dotyczące korzystania z aplikacji Skype dla firm. Zobacz wymagania licencyjne usługi [Skype dla firm](https://products.office.com/skype-for-business/it-pros). Dla konfiguracji hybrydowych i lokalnych usługi Skype dla firm zobacz odpowiednio artykuły [Hybrid Modern Auth for SfB and Exchange goes GA](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Hybrid-Modern-Auth-for-SfB-and-Exchange-goes-GA/ba-p/134756) (Nowoczesne uwierzytelnianie hybrydowe dla usługi Skype dla firm i programu Exchange jest ogólnie dostępne) lub [Modern Auth for SfB OnPrem with AAD](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910) (Nowoczesne uwierzytelnianie dla lokalnej usługi Skype dla firm za pomocą usługi AAD).
 
 ## <a name="app-protection-global-policy"></a>Zasady globalne ochrony aplikacji
 
@@ -199,7 +200,7 @@ Chociaż zasady **globalne** mają zastosowanie do wszystkich użytkowników w d
 
 Obsługa wielu tożsamości umożliwia aplikacji obsługę wielu odbiorców. Ci odbiorcy mogą być użytkownikami „firmowymi” i „prywatnymi”. Konta służbowe są używane przez odbiorców „firmowych”, natomiast konta osobiste są używane przez konsumentów, takich jak użytkownicy pakietu Microsoft Office. Aplikacja obsługująca wiele tożsamości może zostać wydana publicznie, a zasady ochrony aplikacji są stosowane tylko wtedy, gdy aplikacja jest używana w kontekście służbowym („firmowym”). Obsługa wielu tożsamości korzysta z [zestawu SDK aplikacji usługi Intune](../developer/app-sdk.md) w celu przypisywania zasad ochrony aplikacji tylko do konta służbowego zarejestrowanego w aplikacji. Jeśli w aplikacji zostanie zarejestrowane konto osobiste , dane pozostaną bez zmian.
 
-Przykładem kontekstu „prywatnego” będzie sytuacja, w której użytkownik uruchamia nowy dokument programu Word. Ponieważ jest ona uznawana za kontekst prywatny, nie są stosowane zasady rozwiązania Intune App Protection. Gdy dokument zostanie zapisany na koncie „firmowym” w usłudze OneDrive, będzie uznawany za kontekst „firmowy” i będą stosowane zasady rozwiązania Intune App Protection.
+Przykładem kontekstu „prywatnego” będzie sytuacja, w której użytkownik uruchamia nowy dokument programu Word — ponieważ jest ona uznawana za kontekst prywatny, nie są stosowane zasady rozwiązania Intune App Protection. Gdy dokument zostanie zapisany na koncie „firmowym” w usłudze OneDrive, będzie to uznawane za kontekst „firmowy” i będą stosowane zasady rozwiązania Intune App Protection.
 
 Przykładem kontekstu służbowego lub „firmowego” będzie sytuacja, w której użytkownik uruchamia aplikację OneDrive za pomocą konta służbowego. W kontekście służbowym nie może przenieść plików do osobistej lokalizacji przechowywania. Później, jeśli użytkownik korzysta z usługi OneDrive przy użyciu konta osobistego, może bez ograniczeń kopiować i przenosić dane z usługi OneDrive w wersji do użytku osobistego.
 
@@ -227,10 +228,10 @@ W przypadku urządzeń z systemem iOS, nawet jeśli numer PIN jest współużytk
   > Aby częściej sprawdzać wymagania dostępu użytkownika (tj. monit o podanie numeru PIN), szczególnie w przypadku często używanej aplikacji, zaleca się zmniejszenie wartości ustawienia „Ponownie sprawdź wymagania dostępu po (w minutach)”.
 
 **Wbudowane numery PIN aplikacji Outlook i OneDrive**<br>
-Numer PIN usługi Intune działa na podstawie czasomierza bazującego na braku aktywności, znany również jako wartość **Ponownie sprawdź wymagania dostępu po (w minutach)** . W efekcie monity o numer PIN usługi Intune są wyświetlane niezależnie od monitów o numer PIN wbudowanej aplikacji dla programu Outlook i OneDrive, które często są domyślnie powiązane z uruchomieniem aplikacji. Jeśli użytkownik jednocześnie otrzymuje obydwa monity o numer PIN, oczekiwane zachowanie powinno określać, że numer PIN usługi Intune ma pierwszeństwo.
+Numer PIN usługi Intune działa na podstawie czasomierza bazującego na braku aktywności, który znany jest również jako wartość **Ponownie sprawdź wymagania dostępu po (w minutach)** . W efekcie monity o numer PIN usługi Intune są wyświetlane niezależnie od monitów o numer PIN wbudowanej aplikacji dla programu Outlook i OneDrive, które często są domyślnie powiązane z uruchomieniem aplikacji. Jeśli użytkownik jednocześnie otrzymuje obydwa monity o numer PIN, oczekiwane zachowanie powinno określać, że numer PIN usługi Intune ma pierwszeństwo.
 
-**Zabezpieczający numer PIN usługi Intune**<br>
-Dzięki numerowi PIN tylko właściwy użytkownik uzyskuje dostęp do danych organizacji w aplikacji. W związku z tym przed ustawieniem lub zresetowaniem numeru PIN aplikacji usługi Intune użytkownik końcowy musi zalogować się przy użyciu swojego konta służbowego lub szkolnego. To uwierzytelnianie jest obsługiwane przez usługę Azure Active Directory za pośrednictwem zabezpieczonej wymiany tokenów i nie jest niewidoczne dla [zestawu SDK aplikacji usługi Intune](../developer/app-sdk.md). Z punktu widzenia zabezpieczeń najlepszym sposobem na ochronę danych służbowych jest ich zaszyfrowanie. Szyfrowanie nie jest powiązane z numerem PIN aplikacji, ale stanowi jej zasady ochrony aplikacji.
+**Zabezpieczanie numerem PIN usługi Intune**<br>
+Dzięki numerowi PIN tylko właściwy użytkownik uzyskuje dostęp do danych organizacji w aplikacji. W związku z tym przed ustawieniem lub zresetowaniem numeru PIN aplikacji usługi Intune użytkownik końcowy musi zalogować się przy użyciu swojego konta służbowego lub szkolnego. To uwierzytelnianie jest obsługiwane przez usługę Azure Active Directory za pośrednictwem zabezpieczonej wymiany tokenów i nie jest transparentne dla [zestawu SDK aplikacji usługi Intune](../developer/app-sdk.md). Z punktu widzenia zabezpieczeń najlepszym sposobem na ochronę danych służbowych jest ich zaszyfrowanie. Szyfrowanie nie jest powiązane z numerem PIN aplikacji, ale stanowi jej zasady ochrony aplikacji.
 
 **Numer PIN usługi Intune — ochrona przed atakami metodą wyszukiwania klucza**<br>
 W ramach zasad numeru PIN aplikacji administrator IT może ustawić maksymalną liczbę prób uwierzytelniania numeru PIN przez użytkownika przed zablokowaniem aplikacji. Po wykonaniu pewnej liczby prób [zestaw SDK aplikacji usługi Intune](../developer/app-sdk.md) może wyczyścić dane „firmowe” z aplikacji.
@@ -264,8 +265,8 @@ W przypadku aplikacji biznesowych zarządzanych przy użyciu [Narzędzia opakowu
 
 Usługa Intune umożliwia czyszczenie danych aplikacji na trzy różne sposoby: 
 - Pełne czyszczenie urządzenia
-- Selektywne czyszczenie pod kątem zarządzania urządzeniami przenośnymi 
-- Selektywne czyszczenie danych pod kątem zarządzania aplikacjami mobilnymi
+- Selektywne czyszczenie na potrzeby zarządzania urządzeniami mobilnymi 
+- Selektywne czyszczenie danych na potrzeby zarządzania aplikacjami mobilnymi
 
 Aby uzyskać więcej informacji o zdalnym czyszczeniu w usłudze MDM, zobacz [Usuwanie urządzeń za pomocą czyszczenia lub wycofywania](../remote-actions/devices-wipe.md). Aby dowiedzieć się więcej o czyszczeniu selektywnym za pomocą usługi MAM, zobacz sekcję [Akcja Wycofaj](../remote-actions/devices-wipe.md#retire) i temat [Jak czyścić z aplikacji tylko dane firmowe](apps-selective-wipe.md).
 
@@ -274,10 +275,10 @@ Aby uzyskać więcej informacji o zdalnym czyszczeniu w usłudze MDM, zobacz [Us
   >[!NOTE]
   > Czyszczenie może odbyć się tylko na urządzeniach zarejestrowanych w usłudze zarządzania urządzeniami przenośnymi (MDM) usługi Intune.
 
-**Selektywne czyszczenie pod kątem zarządzania urządzeniami przenośnymi**<br>
+**Selektywne czyszczenie na potrzeby zarządzania urządzeniami mobilnymi**<br>
 Aby przeczytać o usuwaniu danych firmowych, zobacz temat [Usuwanie urządzeń — wycofywanie](../remote-actions/devices-wipe.md#retire).
 
-**Selektywne czyszczenie pod kątem zarządzania aplikacjami mobilnymi**<br>
+**Selektywne czyszczenie na potrzeby zarządzania aplikacjami mobilnymi**<br>
 Selektywne czyszczenie pod kątem zarządzania aplikacjami mobilnymi po prostu usuwa dane aplikacji firmowych z aplikacji. Żądanie jest inicjowane z użyciem usługi Intune w ramach witryny Azure Portal. Aby dowiedzieć się, jak zainicjować żądanie czyszczenia, zobacz temat [Jak czyścić z aplikacji usługi Intune tylko dane firmowe](apps-selective-wipe.md).
 
 Jeśli użytkownik używa aplikacji po zainicjowaniu selektywnego czyszczenia danych, [zestaw SDK aplikacji usługi Intune](../developer/app-sdk.md) sprawdza co 30 minut, czy wysłano żądanie selektywnego czyszczenia danych w ramach usługi Intune MAM. Sprawdzenie takie odbywa się również, gdy użytkownik uruchamia aplikację po raz pierwszy i loguje się przy użyciu swojego konta służbowego lub szkolnego.
@@ -285,7 +286,7 @@ Jeśli użytkownik używa aplikacji po zainicjowaniu selektywnego czyszczenia da
 **Brak obsługi usług lokalnych w aplikacjach chronionych przy użyciu usługi Intune**<br>
 Ochrona aplikacji usługi Intune zależy od zgodności tożsamości użytkownika między aplikacją i [zestawem SDK aplikacji usługi Intune](../developer/app-sdk.md). Można to zagwarantować tylko przez nowoczesne uwierzytelnianie. Istnieją scenariusze, w których aplikacje mogą działać w konfiguracji lokalnej, ale nie są one ani zgodne, ani gwarantowane.
 
-**Bezpieczny sposób otwierania linków sieci Web z zarządzanych aplikacji**<br>
+**Bezpieczny sposób otwierania linków internetowych z aplikacji zarządzanych**<br>
 Administrator IT może wdrożyć i ustawić zasady ochrony aplikacji dla [aplikacji Intune Managed Browser](app-configuration-managed-browser.md), przeglądarki sieci Web opracowanej przez Microsoft Intune, którą można łatwo zarządzać za pomocą usługi Intune. Administrator IT może wymagać, aby wszystkie linki internetowe w aplikacjach zarządzanych przez usługę Intune były otwierane przy użyciu aplikacji Managed Browser.
 
 ## <a name="examples-of-app-protection-policies"></a>Przykłady zasad ochrony aplikacji
@@ -297,10 +298,10 @@ Aby dowiedzieć się więcej na temat przykładów zasad ochrony aplikacji i zap
 ### <a name="device-fingerprint-or-face-ids"></a>Identyfikacja przy użyciu odcisku palca lub funkcji Face ID na urządzeniach 
 Zasady ochrony aplikacji w usłudze Intune umożliwiają ograniczenie dostępu do aplikacji tylko do użytkowników mających licencję usługi Intune. Jednym ze sposobów kontrolowania dostępu do aplikacji jest wymaganie korzystania z funkcji Touch ID lub Face ID firmy Apple na obsługiwanych urządzeniach. Usługa Intune implementuje zachowanie, w którym po jakiejkolwiek zmianie w bazie danych biometrycznych urządzenia usługa monituje użytkownika o podanie numeru PIN przy najbliższym osiągnięciu wartości limitu czasu bezczynności. Zmiany w danych biometrycznych obejmują dodawanie i usuwanie odcisku palca lub twarzy. Jeśli użytkownik usługi Intune nie ma ustawionego numer PIN, zostanie poprowadzony przez procedurę konfigurowania numeru PIN usługi Intune.
  
-Intencją tego procesu jest zapewnienie utrzymywania bezpieczeństwa i ochrony danych organizacji w aplikacji na poziomie aplikacji. Ta funkcja jest dostępna tylko dla systemów iOS i wymaga udziału aplikacji, w których zintegrowany jest zestaw SDK zasad ochrony aplikacji usługi Intune dla systemu iOS w wersji 9.0.1 lub nowszej. Integracja zestawu SDK jest konieczna, aby można było wymusić to zachowanie w aplikacjach docelowych. Ta integracja jest przeprowadzana w sposób ciągły i zależy od zespołów zajmujących się określonymi aplikacjami. Dotyczy to między innymi aplikacji WXP, Outlook, Managed Browser i Yammer.
+Intencją tego procesu jest zapewnienie utrzymywania bezpieczeństwa i ochrony danych organizacji na poziomie aplikacji. Ta funkcja jest dostępna tylko dla systemów iOS i wymaga udziału aplikacji, w których zintegrowany jest zestaw SDK zasad ochrony aplikacji usługi Intune dla systemu iOS w wersji 9.0.1 lub nowszej. Integracja zestawu SDK jest konieczna, aby można było wymusić to zachowanie w aplikacjach docelowych. Ta integracja jest przeprowadzana w sposób ciągły i zależy od zespołów zajmujących się określonymi aplikacjami. Dotyczy to między innymi aplikacji WXP, Outlook, Managed Browser i Yammer.
   
 ### <a name="ios-share-extension"></a>Rozszerzenie udostępniania systemu iOS
-Użytkownik końcowy może otwierać dane służbowe w aplikacjach niezarządzanych przy użyciu rozszerzenia udostępniania systemu iOS nawet wtedy, gdy zasady transferu danych mają wartość **tylko aplikacje zarządzane** lub **brak aplikacji**. Zasady ochrony aplikacji usługi Intune nie mogą kontrolować rozszerzenia udostępniania systemu iOS bez zarządzania danym urządzeniem. W związku z tym usługa Intune _**szyfruje dane „firmowe” przed ich udostępnieniem poza aplikację**_ . Aby sprawdzić poprawność szyfrowania, spróbuj otworzyć plik „firmowy” poza zarządzaną aplikacją. Plik powinien być zaszyfrowany i jego otwarcie poza zarządzaną aplikacją nie powinno być możliwe.
+Możesz otwierać dane służbowe w aplikacjach niezarządzanych przy użyciu rozszerzenia udostępniania systemu iOS nawet wtedy, gdy zasady transferu danych mają wartość **tylko aplikacje zarządzane** lub **brak aplikacji**. Zasady ochrony aplikacji usługi Intune nie mogą kontrolować rozszerzenia udostępniania systemu iOS bez zarządzania danym urządzeniem. W związku z tym usługa Intune _**szyfruje dane „firmowe” przed ich udostępnieniem poza aplikację**_ . Aby sprawdzić poprawność szyfrowania, spróbuj otworzyć plik „firmowy” poza zarządzaną aplikacją. Plik powinien być zaszyfrowany i jego otwarcie poza zarządzaną aplikacją nie powinno być możliwe.
 
 ### <a name="multiple-intune-app-protection-access-settings-for-same-set-of-apps-and-users"></a>Wiele ustawień dostępu ochrony aplikacji usługi Intune dla tego samego zestawu aplikacji i użytkowników
 Zasady ochrony aplikacji usługi Intune dla dostępu będą stosowane w określonej kolejności na urządzeniach użytkowników końcowych, kiedy będą próbowali uzyskać dostęp do aplikacji docelowej ze swojego konta firmowego. Ogólnie rzecz biorąc, pierwszeństwo miałoby czyszczenie, następnie blokada, a następnie ostrzeżenie z możliwością odrzucenia. Na przykład jeśli ma zastosowanie do określonego użytkownika/aplikacji, ustawienie minimalnej wersji systemu operacyjnego iOS, które ostrzega użytkownika o konieczności uaktualnienia wersji systemu iOS, zostanie zastosowane po ustawieniu minimalnej wersji systemu operacyjnego iOS, które blokuje dostęp użytkownika. Dlatego w scenariuszu, w którym administrator IT skonfigurował minimalną wersję systemu operacyjnego iOS na 11.0.0.0 i minimalną wersję systemu operacyjnego iOS (tylko ostrzeżenie) na 11.1.0.0, a urządzenie próbujące uzyskać dostęp do aplikacji ma system operacyjny iOS 10, użytkownik końcowy zostałby zablokowany na podstawie bardziej restrykcyjnego ustawienia minimalnej wersji systemu operacyjnego iOS, które powoduje zablokowanie dostępu.
@@ -310,7 +311,7 @@ Podczas pracy z różnymi typami ustawień pierwszeństwo ma wymaganie dotycząc
 ## <a name="app-protection-experience-for-android-devices"></a>Środowisko ochrony aplikacji dla urządzeń z systemem Android
 
 ### <a name="company-portal-app-and-intune-app-protection"></a>Aplikacja Portal firmy i ochrona aplikacji usługi Intune
-Większość funkcji ochrony aplikacji jest wbudowanych w aplikacji Portal firmy. Rejestracja urządzeń _nie jest konieczna_, mimo że aplikacja Portal firmy jest zawsze wymagana. Aby korzystać z zarządzania aplikacjami mobilnymi bez rejestracji (MAM-WE), użytkownik końcowy po prostu musi mieć zainstalowaną aplikację Portal firmy na urządzeniu.
+Większość funkcji ochrony aplikacji jest wbudowanych w aplikacji Portal firmy. Rejestracja urządzeń _nie jest konieczna_, mimo że aplikacja Portal firmy jest zawsze wymagana. Aby korzystać z zarządzania aplikacjami mobilnymi bez rejestracji (MAM-WE), użytkownik końcowy musi mieć zainstalowaną aplikację Portal firmy na urządzeniu.
 
 ### <a name="multiple-intune-app-protection-access-settings-for-same-set-of-apps-and-users"></a>Wiele ustawień dostępu ochrony aplikacji usługi Intune dla tego samego zestawu aplikacji i użytkowników
 Zasady ochrony aplikacji usługi Intune dla dostępu będą stosowane w określonej kolejności na urządzeniach użytkowników końcowych, kiedy będą próbowali uzyskać dostęp do aplikacji docelowej ze swojego konta firmowego. Ogólnie rzecz biorąc, pierwszeństwo ma blokada, następnie ostrzeżenie z możliwością odrzucenia. Na przykład jeśli ma zastosowanie do określonego użytkownika/aplikacji, ustawienie minimalnej wersji poprawki zabezpieczeń systemu Android, które ostrzega użytkownika o konieczności uaktualnienia poprawki, zostanie zastosowane po ustawieniu minimalnej wersji poprawki zabezpieczeń systemu Android, które blokuje dostęp użytkownika. Dlatego w scenariuszu, w którym administrator IT skonfigurował minimalną wersję poprawki zabezpieczeń systemu Android na 2018-03-01 i minimalną wersję poprawki zabezpieczeń systemu Android (tylko ostrzeżenie) na 2018-02-01, a urządzenie próbujące uzyskać dostęp do aplikacji ma wersję poprawki 2018-01-01, użytkownik końcowy zostałby zablokowany na podstawie bardziej restrykcyjnego ustawienia minimalnej wersji poprawki systemu Android, które powoduje zablokowanie dostępu. 
@@ -339,7 +340,7 @@ Aby poznać szczegóły techniczne, zobacz [dokumentację firmy Google dotycząc
 Sprawdzania wykonywane przez interfejs API SafetyNet usługi Google Play Protect wymagają, aby użytkownik końcowy był w trybie online co najmniej przez czas wykonywania „komunikacji dwukierunkowej” podczas określania wyników zaświadczania. Jeśli użytkownik końcowy jest w trybie offline, administrator IT może nadal oczekiwać, że wynik będzie egzekwowany dzięki ustawieniu **Urządzenia ze złamanymi ograniczeniami lub z odblokowanym dostępem**. Jak już wspomniano, jeśli użytkownik końcowy będzie zbyt długo w trybie offline, zacznie obowiązywać opcja **Okres karencji w trybie offline**. Po osiągnięciu wartości czasomierza zostanie zablokowany dostęp do wszystkich danych służbowych do czasu uzyskania dostępu do sieci. Włączenie obu tych ustawień umożliwia utrzymanie w dobrej kondycji urządzeń użytkowników w rozwiązaniu warstwowym, co jest szczególnie ważne, kiedy użytkownicy końcowi uzyskują dostęp do danych służbowych za pomocą urządzeń przenośnych.
 
 ### <a name="google-play-protect-apis-and-google-play-services"></a>Interfejsy API usługi Google Play Protect i usługi Google Play
-Ustawienia zasad ochrony aplikacji korzystających z interfejsów API usługi Google Play Protect wymagają działających usług Google Play. Zarówno ustawienie **Zaświadczanie urządzeń SafetyNet**, jak i ustawienie **Skanowanie aplikacji pod kątem zagrożeń** do poprawnego działania wymagają określonej przez firmę Google wersji usług Google Play. Ponieważ te ustawienia dotyczą zabezpieczeń, to po ich włączeniu użytkownik końcowy zostanie zablokowany, jeśli nie będzie miał odpowiedniej wersji usług Google Play lub nie będzie miał do nich dostępu.
+Ustawienia zasad ochrony aplikacji korzystających z interfejsów API usługi Google Play Protect wymagają działających usług Google Play. Zarówno ustawienie **Zaświadczanie urządzeń SafetyNet**, jak i ustawienie **Skanowanie aplikacji pod kątem zagrożeń**, do poprawnego działania wymaga określonej przez firmę Google wersji usług Google Play. Ponieważ te ustawienia dotyczą zabezpieczeń, to po ich włączeniu użytkownik końcowy zostanie zablokowany, jeśli nie będzie miał odpowiedniej wersji usług Google Play lub nie będzie miał do nich dostępu.
 
 ## <a name="next-steps"></a>Następne kroki
 
