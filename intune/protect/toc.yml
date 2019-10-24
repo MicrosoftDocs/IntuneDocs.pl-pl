@@ -96,13 +96,21 @@
         - name: Usługa Mobile Threat Defense
           href: mobile-threat-defense.md
           items:
-            - name: Konfigurowanie usługi Intune na potrzeby usługi MTD
+            - name: Usługa MTD na niezarejestrowanych urządzeniach
               items:
-                - name: Dodawanie aplikacji MTD
+                - name: Dodawanie aplikacji usługi MTD do niezarejestrowanych urządzeń
+                  href: mtd-add-apps-unenrolled-devices.md
+                - name: Tworzenie zasad ochrony aplikacji usługi MTD
+                  href: mtd-app-protection-policy.md
+                - name: Włączanie usługi MTD na niezarejestrowanych urządzeniach
+                  href: mtd-enable-unenrolled-devices.md
+            - name: Usługa MTD na zarejestrowanych urządzeniach
+              items:
+                - name: Dodawanie aplikacji usługi MTD do zarejestrowanych urządzeń
                   href: mtd-apps-ios-app-configuration-policy-add-assign.md
                 - name: Tworzenie zasad zgodności urządzenia usługi MTD
                   href: mtd-device-compliance-policy-create.md
-                - name: Włączanie usługi MTD w usłudze Intune
+                - name: Włączanie usługi MTD na zarejestrowanych urządzeniach
                   href: mtd-connector-enable.md
             - name: Aplikacje usługi MTD
               items:
