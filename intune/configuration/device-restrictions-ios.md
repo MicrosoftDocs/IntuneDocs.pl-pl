@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/08/2019
+ms.date: 10/22/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a26af380ef00c85c681beccdcdf188c343da1b94
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: 95cf688f3727f97aedd4126e00fa4dc4939ef6bc
+ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72584885"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72785523"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem iOS i iPadOS umożliwiające działanie funkcji lub ich ograniczanie przy użyciu usługi Intune
 
@@ -300,6 +300,11 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 
   Ta funkcja ma zastosowanie do:  
   - System iOS 12.2 i nowsze
+
+  > [!NOTE]
+  > Funkcja **rejestrowania po stronie serwera dla poleceń Siri** jest przestarzała przez firmę Apple. W nadchodzącym wydaniu to ustawienie zostanie usunięte z konsoli usługi Intune.
+  >
+  > Obecnie to ustawienie nie ma wpływu na urządzenia, mimo że ustawienie to jest wyświetlane w profilach Managemenet. Aby usunąć to ustawienie z dowolnych zasad, należy otworzyć zasady, wprowadzić drobne zmiany, a następnie zapisać zasady. Zasady zostały zaktualizowane, a ustawienie zostanie usunięte z urządzeń.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ustawienia dotyczą: automatyczne rejestrowanie urządzeń (nadzorowane)
 

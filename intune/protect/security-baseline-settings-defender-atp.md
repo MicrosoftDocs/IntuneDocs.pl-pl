@@ -5,24 +5,24 @@ description: Ustawienia punktów odniesienia zabezpieczeń obsługiwane przez us
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/25/2019
+ms.date: 10/25/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: karthib
+ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a2cb5d7375ae5b76a24861872d4abf786f199dfd
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: aa3cb3481de6e1fdc3790b7330ac521772e252be
+ms.sourcegitcommit: 5932da3ed8f52c7b0f0d71c1801f81c85952cf0c
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72508990"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72923400"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Ustawienia punktów odniesienia zabezpieczeń usługi Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender dla usługi Intune
 
@@ -31,12 +31,6 @@ Zapoznaj się z ustawieniami punktów odniesienia zabezpieczeń usługi Zaawanso
 Punkty odniesienia zabezpieczeń usługi Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender są dostępne, jeśli środowisko spełnia wymagania wstępne dotyczące korzystania z [Zaawansowanej ochrony przed zagrożeniami w usłudze Microsoft Defender](advanced-threat-protection.md#prerequisites). 
 
 Ta linia bazowa jest zoptymalizowana pod kątem urządzeń fizycznych i nie jest obecnie zalecana do użycia w maszynach wirtualnych lub punktach końcowych infrastruktury VDI. Niektóre ustawienia punktu odniesienia mogą mieć wpływ na zdalne sesje interaktywne w zwirtualizowanych środowiskach. Aby uzyskać więcej informacji, zobacz [Increase compliance to the Microsoft Defender ATP security baseline (Zwiększanie zgodności z punktem odniesienia zabezpieczeń usługi Microsoft Defender ATP)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) w dokumentacji systemu Windows.
-
-
-> [!NOTE]  
-> Ustawienia punktów odniesienia usługi ATP są dostępne w **wersji zapoznawczej**. W okresie obowiązywania wersji zapoznawczej lista dostępnych ustawień oraz kolejność prezentowania tych ustawień może nie być zgodna z tym, co jest dostępne w portalu.  
->
-> Po przeniesieniu ustawień punktów odniesienia poza wersję zapoznawczą ta zawartość zostanie zaktualizowana tak, aby odzwierciedlać aktualną listę ustawień punktów odniesienia zabezpieczeń obsługiwanych przez usługę Intune.
 
 ## <a name="application-guard"></a>Application Guard  
 Więcej informacji można znaleźć na stronie [WindowsDefenderApplicationGuard CSP](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp) (WindowsDefenderApplicationGuard — dostawca usługi konfiguracji).  
@@ -55,13 +49,13 @@ Podczas korzystania z przeglądarki Microsoft Edge program Microsoft Defender Ap
 
   - **Zachowanie schowka** - *Settings/ClipboardSettings*  
     Wybierz dozwolone akcje kopiowania i wklejania między komputerem lokalnym a przeglądarką wirtualną funkcji Application Guard.  Dostępne opcje:
-    - *Nieskonfigurowane*  
-    - *Blokuj obydwa* — nie można przesyłać danych między komputerem i przeglądarką wirtualną.  
-    - *Blokuj z hosta do kontenera* — nie można przesyłać danych z komputera do przeglądarki wirtualnej.
-    - *Blokuj z kontenera do hosta* — nie można przesyłać danych z przeglądarki wirtualnej do komputera hosta.
-    - *Nie blokuj żadnych* — blokady zawartości nie istnieją.  
+    - Nieskonfigurowane  
+    - Blokuj kopiowanie i wklejanie między komputerem i przeglądarką. Blokuj obydwa — nie można przesyłać danych między komputerem i przeglądarką wirtualną.  
+    - Zezwalaj na kopiowanie i wklejanie tylko z przeglądarki do komputera — dane nie mogą być transferowane z komputera do przeglądarki wirtualnej.
+    - Zezwalaj na kopiowanie i wklejanie tylko z komputera do przeglądarki — nie można przenieść danych z przeglądarki wirtualnej na komputer-host.
+    - Zezwalaj na kopiowanie i wklejanie między komputerem a przeglądarką — nie istnieje blok zawartości.  
 
-    **Domyślne**: Blokuj obydwa  
+    **Domyślnie**: Blokuj kopiowanie i wklejanie między komputerem a przeglądarką  
 
 - **Zasady izolacji sieci systemu Windows — nazwy domen sieciowych przedsiębiorstwa**  
   Więcej informacji można znaleźć na stronie [Policy CSP - NetworkIsolation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-networkisolation) (Dostawca usługi konfiguracji — NetworkIsolation) w dokumentacji systemu Windows.
@@ -171,6 +165,10 @@ Więcej informacji można znaleźć na stronie [BitLocker Group Policy settings]
   - **Metoda szyfrowania**  
     **Domyślne**: 128-bitowe szyfrowanie AES CBC
 
+- **Szyfruj kartę pamięci (tylko dla urządzeń przenośnych)** Wybranie opcji *tak* spowoduje zaszyfrowanie karty pamięci urządzenia przenośnego.  
+
+   **Domyślne**: Tak
+
 - **Zasady dysków stałych funkcji BitLocker**  
   Wartości tych zasad określają siłę szyfru, którego funkcja BitLocker używa do szyfrowania dysków stałych. Przedsiębiorstwa mogą kontrolować poziom szyfrowania w celu zwiększenia bezpieczeństwa (szyfrowanie AES-256 jest silniejsze niż szyfrowanie AES-128). Jeśli włączysz to ustawienie, możesz skonfigurować algorytm szyfrowania i siłę klucza szyfrowania osobno dla stałych dysków danych, dysków systemu operacyjnego i wymiennych dysków danych. W przypadku dysków stałych i dysków systemu operacyjnego zalecamy użycie algorytmu XTS-AES. W przypadku dysków wymiennych użyj 128-bitowego lub 256-bitowego szyfrowania AES-CBC, jeśli dysk jest używany w innych urządzeniach, które nie mają systemu Windows 10 w wersji 1511 lub nowszej. Metoda szyfrowania nie zmienia się, jeśli dysk jest już zaszyfrowany lub jeśli szyfrowanie jest w toku. W takich przypadkach to ustawienie zasad jest ignorowane.
 
@@ -224,12 +222,12 @@ Więcej informacji można znaleźć na stronie [BitLocker Group Policy settings]
   - **Usuń zgodne urządzenia sprzętowe**  
     To ustawienie jest dostępne tylko wtedy, gdy ustawienie *Instalacja urządzeń sprzętowych według identyfikatorów urządzeń* ma wartość *Blokuj instalację urządzeń sprzętowych*.  
 
-    **Domyślne:** : *brak konfiguracji domyślnej*
+    **Domyślne**: Tak
 
   - **Zablokowane identyfikatory urządzeń sprzętowych**  
     To ustawienie jest dostępne tylko wtedy, gdy ustawienie *Instalacja urządzeń sprzętowych według identyfikatorów urządzeń* ma wartość *Blokuj instalację urządzeń sprzętowych*. Aby skonfigurować to ustawienie, rozwiń opcję, wybierz pozycję **+ Dodaj**, a następnie określ identyfikator urządzenia sprzętowego, które chcesz zablokować.  
 
-    **Domyślne**: *Żadne urządzenia nie są blokowane*  
+    **Wartość domyślna**: PCI\CC_0C0A
 
 - **Blokuj bezpośredni dostęp do pamięci**  
   [DataProtection/AllowDirectMemoryAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection#dataprotection-allowdirectmemoryaccess) — to ustawienie zasad służy do blokowania bezpośredniego dostępu do pamięci dla wszystkich podrzędnych portów PCI z możliwością podłączenia podczas pracy na urządzeniu, dopóki użytkownik nie zaloguje się do systemu Windows. Po zalogowaniu się przez użytkownika system Windows wyliczy urządzenia PCI podłączone do portów PCI podłączenia hosta. Za każdym razem, gdy użytkownik zablokuje maszynę, bezpośredni dostęp do pamięci zostaje zablokowany na portach PCI z możliwością podłączenia podczas pracy bez urządzeń podrzędnych, dopóki użytkownik nie zaloguje się ponownie. Urządzenia, które były już wyliczone po odblokowaniu maszyny, będą w dalszym ciągu działać do czasu odłączenia. 
@@ -249,23 +247,23 @@ Więcej informacji można znaleźć na stronie [BitLocker Group Policy settings]
   - **Usuń zgodne urządzenia sprzętowe**  
     To ustawienie jest dostępne tylko wtedy, gdy ustawienie *Instalacja urządzeń sprzętowych według klas konfiguracji* ma wartość *Blokuj instalację urządzeń sprzętowych*.  
  
-    **Domyślne:** : *brak konfiguracji domyślnej*  
+    **Domyślne**: Tak  
 
   - **Zablokowane identyfikatory urządzeń sprzętowych**  
     To ustawienie jest dostępne tylko wtedy, gdy ustawienie Instalacja urządzeń sprzętowych według klas konfiguracji ma wartość Blokuj instalację urządzeń sprzętowych. Aby skonfigurować to ustawienie, rozwiń opcję, wybierz pozycję **+ Dodaj**, a następnie określ identyfikator urządzenia sprzętowego, które chcesz zablokować.  
  
-    **Domyślne**: *Żadne urządzenia nie są blokowane*
+    **Wartość domyślna**: {d48179be-EC20-11D1-b6b8-00c04fa372a7}
 
 ## <a name="endpoint-detection-and-response"></a>Wykrywanie punktów końcowych i reagowanie na nie  
 Więcej informacji można znaleźć na stronie [WindowsAdvancedThreatProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp) (WindowsAdvancedThreatProtection — dostawca usługi konfiguracji).  
 
-- **Usprawnij częstotliwość raportowania danych telemetrycznych** - *Configuration/TelemetryReportingFrequency*  
+- **Usprawnij częstotliwość raportowania danych telemetrycznych** - *Configuration/TelemetryReportingFrequency*
 
   Usprawnij częstotliwość raportowania danych telemetrycznych usługi Zaawansowana ochrona przed zagrożeniami programu Microsoft Defender.  
 
   **Domyślne**: Tak
 
-- **Udostępnianie próbek dla wszystkich plików** - *Configuration/SampleSharing*  
+- **Udostępnianie próbek dla wszystkich plików** - *Configuration/SampleSharing* 
 
   Zwraca lub ustawia parametr konfiguracji udostępniania próbek zaawansowanej ochrony przed zagrożeniami w usłudze Microsoft Defender.  
 
@@ -286,43 +284,7 @@ Więcej informacji można znaleźć na stronie [WindowsAdvancedThreatProtection 
   [WindowsDefenderSecurityCenter/DisallowExploitProtectionOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disallowexploitprotectionoverride) — ustaw pozycję *Tak*, aby uniemożliwić użytkownikom wprowadzanie zmian w obszarze ustawień ochrony przed programami wykorzystującymi luki w zabezpieczeniach w usłudze Windows Defender Security Center. Jeśli wyłączysz to urządzenie lub go nie skonfigurujesz, użytkownicy lokalni będą mogli wprowadzać zmiany w obszarze ustawień ochrony przed programami wykorzystującymi luki w zabezpieczeniach.  
   **Domyślne**: Tak  
 
-- **Kontrolowany dostęp do folderów**  
-  Zobacz sekcje [Defender/ControlledFolderAccessAllowedApplications](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-controlledfolderaccessallowedapplications) i [Defender/ControlledFolderAccessProtectedFolders](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-controlledfolderaccessprotectedfolders) 
-  
-   Chroń pliki i foldery przed nieautoryzowanymi zmianami przez nieprzyjazne aplikacje.
-
-  **Domyślne**: Tryb inspekcji
-
-## <a name="web--network-protection"></a>Ochrona Internetu i sieci  
-
-- **Typ ochrony sieci**  
-  [Defender/EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection) — te zasady umożliwiają włączanie lub wyłączanie ochrony sieci w funkcji Windows Defender Exploit Guard. Ochrona sieci w funkcji Windows Defender Exploit Guard chroni pracowników używających dowolnej aplikacji przed wyłudzeniem informacji, witrynami hostującymi programy wykorzystujące luki w zabezpieczeniach i złośliwą zawartością w Internecie. Obejmuje to blokadę połączeń w przeglądarkach innych firm z niebezpiecznymi witrynami.  
-
-  Po ustawieniu pozycji *Włącz* lub *Tryb inspekcji* użytkownicy nie mogą wyłączyć ochrony sieci, a do wyświetlania informacji dotyczących prób nawiązania połączenia można użyć usługi Windows Defender Security Center.  
- 
-  - Pozycja *Włącz* zablokuje użytkownikom i aplikacjom możliwość łączenia z niebezpiecznymi domenami.  
-  - Pozycja *Tryb inspekcji* nie blokuje użytkownikom i aplikacjom możliwości łączenia z niebezpiecznymi domenami.  
-
-  Po ustawieniu pozycji *Zdefiniowane przez użytkownika* możliwość łączenia użytkowników i aplikacji z niebezpiecznymi domenami nie jest blokowana, a informacje o połączeniach nie są dostępne w usłudze Windows Defender Security Center.  
-
-  **Domyślne**: Tryb inspekcji
-
-- **Wymagaj filtra SmartScreen dla programu Microsoft Edge**  
-  [Browser/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen) — przeglądarka Microsoft Edge domyślnie używa filtra SmartScreen w usłudze Windows Defender, aby chronić użytkowników przed potencjalnym wyłudzeniem informacji i złośliwym oprogramowaniem. Domyślnie te zasady są włączone (ustawione na wartość *Tak*), a po ich włączeniu użytkownicy nie mogą wyłączać filtru SmartScreen w usłudze Windows Defender.  Jeśli obowiązujące zasady mają wartość Nieskonfigurowane, użytkownicy mogą wyłączyć filtr SmartScreen w usłudze Windows Defender, pozostawiając w ten sposób urządzenia bez ochrony.  
-
-  **Domyślne**: Tak
-  
-- **Blokuj dostęp do złośliwych witryn**  
-  [Browser/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride) — domyślnie przeglądarka Microsoft Edge pozwala użytkownikom pomijać (ignorować) ostrzeżenia filtru SmartScreen w usłudze Windows Defender dotyczące potencjalnie złośliwych witryn, dzięki czemu użytkownicy mogą kontynuować korzystanie z witryny. Jeśli te zasady są włączone (ustawione na wartość *Tak*) przeglądarka Microsoft Edge uniemożliwia użytkownikom pomijanie ostrzeżeń i dalsze korzystanie z witryny.  
-
-  **Domyślne**: Tak
-
-- **Blokowanie pobierania niezweryfikowanych plików**  
-  [Browser/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles) — domyślnie przeglądarka Microsoft Edge pozwala użytkownikom pomijać (ignorować) ostrzeżenia filtru SmartScreen w usłudze Windows Defender dotyczące potencjalnie złośliwych plików, dzięki czemu mogą kontynuować pobieranie niezweryfikowanych plików. Jeśli te zasady są włączone (ustawione na wartość *Tak*), użytkownicy nie mogą pomijać ostrzeżeń ani pobierać niezweryfikowanych plików.  
-
-  **Domyślne**: Tak
-
-## <a name="windows-defender-anti-virus----settings-review-pending-for-this-section"></a>Program antywirusowy usługi Windows Defender [ustawienia z tej sekcji oczekują na przegląd]
+## <a name="microsoft-defender-antivirus"></a>Program antywirusowy Microsoft Defender  
 
 Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji zasad — Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) w dokumentacji systemu Windows.
 
@@ -594,6 +556,35 @@ Więcej informacji można znaleźć na stronie [Firewall CSP](https://docs.micro
 
 - **Weryfikacja listy odwołania certyfikatów**  
   **Domyślne**: Ustawienie domyślne urządzenia
+
+## <a name="web--network-protection"></a>Ochrona Internetu i sieci  
+
+- **Typ ochrony sieci**  
+  [Defender/EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection) — te zasady umożliwiają włączanie lub wyłączanie ochrony sieci w funkcji Windows Defender Exploit Guard. Ochrona sieci w funkcji Windows Defender Exploit Guard chroni pracowników używających dowolnej aplikacji przed wyłudzeniem informacji, witrynami hostującymi programy wykorzystujące luki w zabezpieczeniach i złośliwą zawartością w Internecie. Obejmuje to blokadę połączeń w przeglądarkach innych firm z niebezpiecznymi witrynami.  
+
+  Po ustawieniu pozycji *Włącz* lub *Tryb inspekcji* użytkownicy nie mogą wyłączyć ochrony sieci, a do wyświetlania informacji dotyczących prób nawiązania połączenia można użyć usługi Windows Defender Security Center.  
+ 
+  - Pozycja *Włącz* zablokuje użytkownikom i aplikacjom możliwość łączenia z niebezpiecznymi domenami.  
+  - Pozycja *Tryb inspekcji* nie blokuje użytkownikom i aplikacjom możliwości łączenia z niebezpiecznymi domenami.  
+
+  Po ustawieniu pozycji *Zdefiniowane przez użytkownika* możliwość łączenia użytkowników i aplikacji z niebezpiecznymi domenami nie jest blokowana, a informacje o połączeniach nie są dostępne w usłudze Windows Defender Security Center.  
+
+  **Domyślne**: Tryb inspekcji
+
+- **Wymagaj filtra SmartScreen dla programu Microsoft Edge**  
+  [Browser/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen) — przeglądarka Microsoft Edge domyślnie używa filtra SmartScreen w usłudze Windows Defender, aby chronić użytkowników przed potencjalnym wyłudzeniem informacji i złośliwym oprogramowaniem. Domyślnie te zasady są włączone (ustawione na wartość *Tak*), a po ich włączeniu użytkownicy nie mogą wyłączać filtru SmartScreen w usłudze Windows Defender.  Jeśli obowiązujące zasady mają wartość Nieskonfigurowane, użytkownicy mogą wyłączyć filtr SmartScreen w usłudze Windows Defender, pozostawiając w ten sposób urządzenia bez ochrony.  
+
+  **Domyślne**: Tak
+  
+- **Blokuj dostęp do złośliwych witryn**  
+  [Browser/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride) — domyślnie przeglądarka Microsoft Edge pozwala użytkownikom pomijać (ignorować) ostrzeżenia filtru SmartScreen w usłudze Windows Defender dotyczące potencjalnie złośliwych witryn, dzięki czemu użytkownicy mogą kontynuować korzystanie z witryny. Jeśli te zasady są włączone (ustawione na wartość *Tak*) przeglądarka Microsoft Edge uniemożliwia użytkownikom pomijanie ostrzeżeń i dalsze korzystanie z witryny.  
+
+  **Domyślne**: Tak
+
+- **Blokowanie pobierania niezweryfikowanych plików**  
+  [Browser/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles) — domyślnie przeglądarka Microsoft Edge pozwala użytkownikom pomijać (ignorować) ostrzeżenia filtru SmartScreen w usłudze Windows Defender dotyczące potencjalnie złośliwych plików, dzięki czemu mogą kontynuować pobieranie niezweryfikowanych plików. Jeśli te zasady są włączone (ustawione na wartość *Tak*), użytkownicy nie mogą pomijać ostrzeżeń ani pobierać niezweryfikowanych plików.  
+
+  **Domyślne**: Tak
 
 ## <a name="windows-hello-for-business"></a>Windows Hello for Business  
 

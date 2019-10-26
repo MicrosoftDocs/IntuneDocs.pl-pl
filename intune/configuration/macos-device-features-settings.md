@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 10/22/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17d0baeeb6b193be6acf8d6087c26a66b18642c5
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 48cca2c894067439943bdfff33b953463e513490
+ms.sourcegitcommit: e9cf372711ff186ed468b01a9204631a139bd8e5
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506673"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72776898"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Ustawienia funkcji urządzenia z systemem macOS w usłudze Intune
 
@@ -42,7 +42,7 @@ Ten artykuł zawiera listę tych ustawień i opisy zadań poszczególnych ustawi
 
 ## <a name="airprint"></a>Funkcja AirPrint
 
-### <a name="settings-apply-to-device-enrollment"></a>Ustawienia dotyczą: Rejestracja urządzenia
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Ustawienia dotyczą: rejestracja urządzeń i automatyczna rejestracja urządzeń 
 
 - **Adres IP**: podaj adres IPv4 lub IPv6 drukarki. Jeśli do identyfikowania drukarek używasz nazw hostów, możesz uzyskać adres IP, wysyłając polecenie ping do drukarki w aplikacji Terminal. Dalsze szczegółowe informacje można znaleźć w sekcji [Uzyskiwanie adresu IP i ścieżki](#get-the-ip-address-and-path) (w tym artykule).
 - **Ścieżka**: wprowadź ścieżkę drukarki. W przypadku drukarek w sieci ścieżka to zazwyczaj `ipp/print`. Dalsze szczegółowe informacje można znaleźć w sekcji [Uzyskiwanie adresu IP i ścieżki](#get-the-ip-address-and-path) (w tym artykule).
@@ -85,7 +85,7 @@ Aby dodać serwery funkcji AirPrinter, potrzebujesz adresu IP drukarki, ścieżk
 
 ## <a name="login-window"></a>Okno logowania
 
-### <a name="settings-apply-to-device-enrollment"></a>Ustawienia dotyczą: Rejestracja urządzenia
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Ustawienia dotyczą: rejestracja urządzeń i automatyczna rejestracja urządzeń 
 
 #### <a name="window-layout"></a>Układ okna
 

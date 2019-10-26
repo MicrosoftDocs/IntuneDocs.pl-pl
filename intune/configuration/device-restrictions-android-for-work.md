@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/17/2019
+ms.date: 10/24/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d1d83a77d8823a05accaf1c88b57f6e380636469
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: ec6009096ac6ed39c8a217f8832661a575d83b78
+ms.sourcegitcommit: 4f979ba7030e72d820113fe23ac8521ddb2433bd
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72585379"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72915717"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem Android Enterprise w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune
 
@@ -193,7 +193,8 @@ Te ustawienia umożliwiają skonfigurowanie trybu kiosku na dedykowanych urządz
 
 ### <a name="power-settings"></a>Ustawienia zasilania
 
-- **Czas do zablokowania ekranu**: ustaw okres bezczynności przed zablokowaniem urządzenia.
+- **Ekran czasu do zablokowania**: Wprowadź maksymalny czas, jaki użytkownik może ustawić do momentu zablokowania urządzenia. Jeśli na przykład ustawisz to ustawienie na **10 minut**, użytkownicy będą mogli ustawić czas od 15 sekund do 10 minut. Jeśli ustawiono wartość **nie skonfigurowano** (wartość domyślna), usługa Intune nie zmieni ani nie kontroluje tego ustawienia.
+
 - **Włączony ekran, gdy urządzenie jest podłączone**: wybierz źródła zasilania. Jeśli urządzenie będzie podłączone do jednego z nich, ekran urządzenia będzie włączony.
 
 ### <a name="users-and-accounts-settings"></a>Ustawienia użytkowników i kont

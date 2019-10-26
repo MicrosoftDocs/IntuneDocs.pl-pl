@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/10/2019
+ms.date: 10/22/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fb5fe19852ffff30566cb6758e156def3b7d64a5
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 8b2efdc04414d29fc1d8d200525cb3a4a880ec01
+ms.sourcegitcommit: e9cf372711ff186ed468b01a9204631a139bd8e5
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72494011"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72776882"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem macOS umożliwiające działanie funkcji lub ich ograniczanie przy użyciu usługi Intune
 
@@ -40,7 +40,7 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 
 ## <a name="general"></a>Ogólne
 
-### <a name="settings-apply-to-device-enrollment"></a>Ustawienia dotyczą: Rejestracja urządzenia
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Ustawienia dotyczą: rejestracja urządzeń i automatyczna rejestracja urządzeń
 
 - **Wyszukiwanie definicji**: opcja **Blokuj** uniemożliwia użytkownikowi zaznaczenie słowa i wyszukanie jego definicji na urządzeniu. Pozycja **Nieskonfigurowane** (wartość domyślna) zezwala na dostęp do funkcji wyszukiwania definicji.
 - **Dyktowanie**: pozycja **Blokuj** uniemożliwia użytkownikowi wprowadzanie tekstu przy użyciu głosu. Pozycja **Nieskonfigurowane** (wartość domyślna) zezwala użytkownikowi na korzystanie z wprowadzania tekstu przez dyktowanie.
@@ -82,7 +82,7 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 
 ## <a name="password"></a>Hasło
 
-### <a name="settings-apply-to-device-enrollment"></a>Ustawienia dotyczą: Rejestracja urządzenia
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Ustawienia dotyczą: rejestracja urządzeń i automatyczna rejestracja urządzeń
 
 - **Hasło**: pozycja **Wymagaj** wymusza wprowadzanie hasła przez użytkownika końcowego w celu uzyskania dostępu do urządzenia. **Nieskonfigurowane** (domyślnie) nie wymaga hasła. Nie wymusi również żadnych ograniczeń, takich jak blokowanie prostych haseł lub Ustawianie minimalnej długości.
   - **Wymagany typ hasła**: określa, czy hasło może być wyłącznie numeryczne (zawierać tylko cyfry), czy też musi być alfanumeryczne (zawierać litery i cyfry).
@@ -114,7 +114,7 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 
 ## <a name="built-in-apps"></a>Aplikacje wbudowane
 
-### <a name="settings-apply-to-device-enrollment"></a>Ustawienia dotyczą: Rejestracja urządzenia
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Ustawienia dotyczą: rejestracja urządzeń i automatyczna rejestracja urządzeń
 
 - **Blokuj autowypełnianie w przeglądarce Safari**: pozycja **Blokuj** powoduje wyłączenie funkcji automatycznego wypełniania w przeglądarce Safari na urządzeniu. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia użytkownikom zmianę ustawień automatycznego uzupełniania w przeglądarce internetowej.
 - **Blokuj aplikację Aparat**: wybierz pozycję **Blokuj**, aby uniemożliwić dostęp do aparatu na urządzeniu. Pozycja **Nieskonfigurowane** (wartość domyślna) zezwala na dostęp do aparatu urządzenia.
@@ -127,7 +127,7 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 
 ## <a name="restricted-apps"></a>Aplikacje z ograniczeniami
 
-### <a name="settings-apply-to-device-enrollment"></a>Ustawienia dotyczą: Rejestracja urządzenia
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Ustawienia dotyczą: rejestracja urządzeń i automatyczna rejestracja urządzeń
 
 - **Typ listy aplikacji z ograniczeniami**: Utwórz listę aplikacji, których użytkownicy nie mogą instalować ani używać. Dostępne opcje:
 
@@ -145,14 +145,14 @@ Aby dodać aplikacje do tych list, możesz:
 
 ## <a name="connected-devices"></a>Połączone urządzenia
 
-### <a name="settings-apply-to-device-enrollment"></a>Ustawienia dotyczą: Rejestracja urządzenia
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Ustawienia dotyczą: rejestracja urządzeń i automatyczna rejestracja urządzeń
 
 - **Blokuj usługę AirDrop**: pozycja **Blokuj** uniemożliwia używanie funkcji AirDrop na urządzeniu. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia używanie funkcji AirDrop do wymiany zawartości z pobliskimi urządzeniami.
 - **Blokuj automatyczne odblokowywanie za pomocą urządzenia Apple Watch**: ustawienie **Blokuj** uniemożliwia użytkownikom odblokowywanie urządzenia z systemem macOS przy użyciu urządzenia Apple Watch. Opcja **Nieskonfigurowane** (ustawienie domyślne) umożliwia użytkownikom odblokowywanie urządzenia z systemem macOS przy użyciu urządzenia Apple Watch.
 
 ## <a name="cloud-and-storage"></a>Chmura i magazyn
 
-### <a name="settings-apply-to-device-enrollment"></a>Ustawienia dotyczą: Rejestracja urządzenia
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Ustawienia dotyczą: rejestracja urządzeń i automatyczna rejestracja urządzeń
 
 - **Blokuj synchronizowanie pęku kluczy z usługą iCloud**: wybierz pozycję **Blokuj**, aby wyłączyć synchronizowanie poświadczeń przechowywanych w pęku kluczy z usługą iCloud. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia użytkownikom synchronizację tych poświadczeń.
 - **Blokuj synchronizowanie dokumentów z usługą iCloud**: pozycja **Blokuj**  uniemożliwia synchronizowanie dokumentów i danych w usłudze iCloud. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia synchronizowanie dokumentów i par klucz-wartość w obszarze magazynu usługi iCloud.
@@ -170,7 +170,7 @@ Aby dodać aplikacje do tych list, możesz:
 
 ## <a name="domains"></a>Domains
 
-### <a name="settings-apply-to-device-enrollment"></a>Ustawienia dotyczą: Rejestracja urządzenia
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Ustawienia dotyczą: rejestracja urządzeń i automatyczna rejestracja urządzeń
 
 - **Adres URL domeny poczty e-mail**: **dodaj** do listy co najmniej jeden adres URL. Gdy użytkownicy otrzymają wiadomość e-mail z domeny innej niż skonfigurowana, wiadomość e-mail zostanie oznaczona w aplikacji Mail dla systemu macOS jako niezaufana.
 
