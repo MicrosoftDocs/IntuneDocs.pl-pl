@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1089c382a39afb5aad0456e669cb3a2434af73c1
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 5776ebf3241968cca6da537bb58b7ab2a06f00ba
+ms.sourcegitcommit: f12bd2ce10b6241715bae2d2857f33c474287166
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72503089"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72892540"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Rozwiązywanie problemów dotyczących rejestrowania urządzeń z systemem Windows w usłudze Microsoft Intune
 
@@ -97,7 +97,7 @@ Błąd 0x801c0003: "nie można zarejestrować tego użytkownika. Możesz spróbo
 
 #### <a name="resolution"></a>Rozwiązanie
 1. Zaloguj się do [Azure Portal](https://portal.azure.com/) jako administrator.    
-2. Przejdź do **pozycji Azure Active Directory** > **urządzenia**  > **Ustawienia urządzenia**.    
+2. Przejdź do **pozycji Azure Active Directory**  > **urządzenia** > **Ustawienia urządzenia**.    
 3. Ustaw pozycję **Użytkownicy mogą dołączać urządzenia do usługi Azure AD** na wartość **Wszystko**.    
 4. Ponownie zarejestruj urządzenie.   
 
@@ -390,3 +390,4 @@ Ten problem jest zwykle spowodowany przez nieprawidłowe delegowanie uprawnień 
 - [Sprawdź Blog zespołu pomocy technicznej Microsoft Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
 - [Zapoznaj się z blogiem dotyczącym pakietu Microsoft Enterprise Mobility and Security](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)
 - [Uzyskaj pomoc techniczną dotyczącą usługi Microsoft Intune](../fundamentals/get-support.md)
+- [Znajdowanie błędów rejestracji współzarządzania](https://docs.microsoft.com/sccm/comanage/how-to-monitor#enrollment-errors)
