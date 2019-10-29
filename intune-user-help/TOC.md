@@ -6,7 +6,9 @@
 
 ## [Wymagania dotyczące hasła urządzenia](password-does-not-meet-it-administrator-requirements.md)
 
-## [Logowanie się w aplikacji Portal firmy](sign-in-to-the-company-portal.md)
+## [Logowanie się w aplikacji Portal firmy](sign-in-to-the-company-portal.md)  
+
+## [Instalowanie aplikacji usługi Mobile Threat Defense](set-up-mobile-threat-defense.md)  
 
 ## Korzystanie z urządzenia z systemem Android
 ### [Dlaczego warto zarejestrować urządzenie z systemem Android](why-enroll-android-device.md)
