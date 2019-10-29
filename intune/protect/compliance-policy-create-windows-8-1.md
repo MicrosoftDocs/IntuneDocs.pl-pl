@@ -2,10 +2,10 @@
 title: Ustawienia zgodności dla systemu Windows 8.1 w usłudze Microsoft Intune — Azure | Microsoft Docs
 description: Zapoznaj się z listą ustawień umożliwiających skonfigurowanie zgodności dla urządzeń z systemem Windows 8.1 i Windows Phone 8.1 w usłudze Microsoft Intune. Możesz między innymi sprawdzać zgodność z wymaganiami dotyczącymi minimalnej i maksymalnej wersji systemu operacyjnego, określać długość hasła i inne ograniczenia, czy włączać szyfrowanie magazynu danych.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 04/04/2019
+ms.date: 10/22/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,16 +15,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 322d6f1e23464f1f75cc79346d839a9ccdbd7bc7
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 3e074d922078a9772ca67a6ebd99948bc3e64601
+ms.sourcegitcommit: 25acfc88b366d2da71c37d354a0238e4f1168325
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72504644"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72813214"
 ---
 # <a name="windows-81-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Ustawienia urządzeń z systemem Windows 8.1 umożliwiające oznaczenie ich jako zgodne lub niezgodne w usłudze Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 W tym artykule wymieniono i opisano różne ustawienia zgodności, które można skonfigurować na urządzeniach z systemem Windows 8.1 za pomocą usługi Intune. Możesz zastosować te ustawienia w ramach rozwiązania do zarządzania urządzeniami mobilnymi (MDM), aby między innymi blokować zbyt proste hasła czy określić minimalną lub maksymalną wersję systemu operacyjnego.
 
@@ -41,8 +39,21 @@ Jako administrator usługi Intune możesz użyć tych ustawień zgodności, aby 
 
 ## <a name="device-properties"></a>Właściwości urządzenia
 
-- **Wymagana minimalna wersja systemu operacyjnego**: wprowadź minimalną wymaganą wersję. Jeśli urządzenie nie spełnia wymagań dotyczących minimalnej wersji systemu operacyjnego, będzie zgłaszane jako niezgodne. Zostanie wyświetlony link ze wskazówkami dotyczącymi uaktualniania. Użytkownik końcowy może zdecydować się na uaktualnienie swojego urządzenia, co umożliwi mu dostęp do zasobów firmy.
-- **Dozwolona maksymalna wersja systemu operacyjnego**: wprowadź maksymalną dozwoloną wersję. jeśli urządzenie korzysta z wersji systemu operacyjnego nowszej niż wprowadzona w regule, powoduje to zablokowanie dostępu do zasobów firmy. Użytkownik zostanie poproszony o kontakt z administratorem IT. Urządzenie nie może uzyskiwać dostępu do zasobów organizacji do momentu zmiany reguły na dopuszczającą daną wersję systemu operacyjnego.
+### <a name="operating-system-version"></a>Wersja systemu operacyjnego
+
+**System Windows Phone 8.1 lub nowszy**
+- **Minimalna wersja systemu operacyjnego dla urządzeń przenośnych**:  
+  Wprowadź minimalną dozwoloną wersję. Jeśli urządzenie nie spełnia wymagań dotyczących minimalnej wersji systemu operacyjnego, będzie zgłaszane jako niezgodne. Zostanie wyświetlony link ze wskazówkami dotyczącymi uaktualniania. Użytkownik urządzenia może zdecydować się na jego uaktualnienie, co umożliwi mu dostęp do zasobów firmy.
+
+- **Maksymalna wersja systemu operacyjnego dla urządzeń przenośnych**:  
+  Wprowadź maksymalną dozwoloną wersję. Jeśli urządzenie korzysta z wersji systemu operacyjnego nowszej niż określona w regule, powoduje to zablokowanie dostępu do zasobów organizacji. Użytkownik urządzenia zostanie poproszony o skontaktowanie się z administratorem IT. Urządzenie nie może uzyskiwać dostępu do zasobów organizacyjnych do momentu zmiany reguły na dopuszczającą daną wersję systemu operacyjnego.
+
+**Windows 8.1 lub nowszy**
+- **Minimalna wersja systemu operacyjnego**:  
+  Wprowadź minimalną dozwoloną wersję. Jeśli urządzenie nie spełnia wymagań dotyczących minimalnej wersji systemu operacyjnego, będzie zgłaszane jako niezgodne. Zostanie wyświetlony link ze wskazówkami dotyczącymi uaktualniania. Użytkownik urządzenia może zdecydować się na jego uaktualnienie, co umożliwi mu dostęp do zasobów firmy.
+
+- **Maksymalna wersja systemu operacyjnego**:  
+  Wprowadź maksymalną dozwoloną wersję. Jeśli urządzenie korzysta z wersji systemu operacyjnego nowszej niż określona w regule, powoduje to zablokowanie dostępu do zasobów organizacji. Użytkownik urządzenia zostanie poproszony o skontaktowanie się z administratorem IT. Urządzenie nie może uzyskiwać dostępu do zasobów organizacyjnych do momentu zmiany reguły na dopuszczającą daną wersję systemu operacyjnego.
 
 Komputery z systemem Windows 8.1 zwracają wersję **3**. Jeśli ustawiono regułę wersji systemu operacyjnego Windows na wartość Windows 8.1, urządzenie jest zgłaszane jako niezgodne nawet wtedy, gdy działa na nim system Windows 8.1.
 
@@ -50,36 +61,59 @@ Komputery z systemem Windows 8.1 zwracają wersję **3**. Jeśli ustawiono regu�
 
 ### <a name="password"></a>Hasło
 
-- **Wymagaj hasła do odblokowania urządzeń przenośnych**: wybierz pozycję **Wymagaj**, aby wymagać od użytkowników podania hasła przed uzyskaniem dostępu do urządzenia.
-- **Proste hasła**: ustaw wartość **Blokuj**, aby uniemożliwić użytkownikom tworzenie prostych haseł, takich jak **1234** lub **1111**. Ustaw wartość **Nieskonfigurowane**, aby umożliwić użytkownikom tworzenie haseł, takich jak **1234** lub **1111**.
-- **Minimalna długość hasła**: wprowadź minimalną liczbę cyfr lub znaków, które musi zawierać hasło.
+- **Wymagaj hasła do odblokowania urządzeń przenośnych**:  
+  - **Nieskonfigurowane** (*wartość domyślna*) — ustawienie nie jest oceniane na potrzeby określenia zgodności.
+  - **Wymagaj** — użytkownicy muszą wprowadzić hasło podczas uzyskiwania dostępu do swoich urządzeń.
 
-  W przypadku urządzeń z systemem Windows, które są dostępne przy użyciu konta Microsoft, sprawdzanie zasad zgodności zakończy się niepowodzeniem:
-  - Jeśli minimalna długość hasła jest większa niż osiem znaków
-  - Lub jeśli minimalna liczba zestawów znaków jest większa niż dwa
+- **Proste hasła**:  
+  - **Nie skonfigurowano** (*Domyślnie*) — użytkownicy mogą tworzyć proste hasła, takie jak **1234** lub **1111**.
+  - **Blokuj** — użytkownicy nie mogą tworzyć prostych haseł, takich jak **1234** lub **1111**.  
 
-- **Typ hasła**: określ, czy hasło ma zawierać tylko znaki **numeryczne**, czy też ma być dopuszczalna kombinacja cyfr i innych znaków (**Alfanumeryczne**).
-  
-  - **Liczba znaków innych niż alfanumeryczne w haśle**: jeśli pozycja **Wymagany typ hasła** została ustawiona na wartość **Alfanumeryczne**, to ustawienie określa minimalną wymaganą liczbę zestawów znaków do użycia w haśle. Są cztery zestawy znaków:
+- **Minimalna długość hasła**:  
+  wprowadź minimalną liczbę cyfr lub znaków, które musi zawierać hasło.
+
+  W przypadku urządzeń z systemem Windows, do których uzyskuje się dostęp przy użyciu konto Microsoft, zasady zgodności nie będą oceniane prawidłowo w przypadku spełnienia dowolnego z następujących warunków:  
+  - Minimalna długość hasła jest większa niż osiem znaków.
+  - Minimalna liczba zestawów znaków jest większa niż dwa.
+
+- **Typ hasła**:  
+  określ, czy hasło ma zawierać tylko znaki **numeryczne**, czy też ma być dopuszczalna kombinacja cyfr i innych znaków (**Alfanumeryczne**).
+
+  Po wybraniu opcji *alfanumeryczne*dostępne jest następujące ustawienie.  
+
+  - **Liczba znaków innych niż alfanumeryczne w haśle**:  
+    Jeśli *Typ hasła* jest ustawiony na wartość **alfanumeryczne**, Określ minimalną liczbę zestawów znaków, które musi zawierać hasło. Opcje obejmują **od 0** do **4** zestawów, z wartością domyślną **1**.
+    
+    Są cztery zestawy znaków:
     - Małe litery
     - Wielkie litery
     - Symbole
     - Liczby
 
-    Ustawienie większej liczby wymaga wprowadzenia bardziej skomplikowanego hasła przez użytkownika. W przypadku urządzeń, które są dostępne przy użyciu konta Microsoft, sprawdzanie zasad zgodności zakończy się niepowodzeniem:
+    Ustawienie większej liczby wymaga wprowadzenia bardziej skomplikowanego hasła przez użytkownika. W przypadku urządzeń, które są dostępne z konto Microsoft, zasady zgodności nie będą oceniane prawidłowo, jeśli spełniony jest jeden z następujących warunków:
 
-    - Jeśli minimalna długość hasła jest większa niż osiem znaków
-    - Lub jeśli minimalna liczba zestawów znaków jest większa niż dwa
+    - Minimalna długość hasła jest większa niż osiem znaków.
+    - Minimalna liczba zestawów znaków jest większa niż dwa.
 
-- **Maksymalny czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**: wprowadź czas bezczynności, po którym użytkownik musi ponownie wprowadzić hasło.
-- **Wygaśnięcie hasła (dni)** : wybierz liczbę dni, po których hasło wygasa i należy utworzyć nowe.
-- **Liczba poprzednich haseł, których nie można użyć ponownie**: wprowadź liczbę poprzednio używanych haseł, których ponowne użycie nie jest możliwe.
+- **Maksymalny czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**:  
+  wprowadź czas bezczynności, po którym użytkownik musi ponownie wprowadzić swoje hasło.
+
+- **Wygaśnięcie hasła (dni)** :  
+  wybierz liczbę dni, po których wygasa hasło i użytkownicy muszą utworzyć nowe.
+
+- **Liczba poprzednich haseł, których nie można użyć ponownie**:  
+  wprowadź liczbę wcześniej używanych haseł, których nie można użyć ponownie.
 
 ### <a name="encryption"></a>Szyfrowanie
 
-- **Wymagaj szyfrowania na urządzeniu przenośnym**: wartość **Wymagaj** oznacza, że urządzenie musi zostać zaszyfrowane w celu połączenia się z zasobami magazynu danych.
+- **Szyfrowanie magazynu danych urządzenia**:  
+  - **Nie skonfigurowano** (*wartość domyślna*)
+  - **Wymagaj** — wybierz pozycję *Wymagaj*, aby szyfrować magazyn danych na urządzeniach.
 
-Wybierz kolejno pozycje **OK** > **Utwórz**, aby zapisać zmiany.
+
+<!-- not on phone   
+- **Require encryption on mobile device**: **Require** the device to be encrypted to connect to data storage resources.
+--> 
 
 ## <a name="next-steps"></a>Następne kroki
 
