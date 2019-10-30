@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/24/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d47cee2c26960775d268b317845c118e99b85fe9
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: e97e88ad78e1b914543b7fa283f47863dce185fc
+ms.sourcegitcommit: 25acfc88b366d2da71c37d354a0238e4f1168325
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507577"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72813481"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>Konfigurowanie aplikacji Microsoft Managed Home Screen dla rozwiązania Android Enterprise
 
@@ -60,25 +60,15 @@ Poniższa tabela zawiera listę dostępnych kluczy konfiguracji aplikacji Manage
 | Klucz konfiguracji | Typ wartości | Wartość domyślna | Opis |
 |---------------------------------------------------------------------------------------------------------------------------|-------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Set Grid Size (Ustaw rozmiar siatki) | ciąg | Automatycznie | Umożliwia ustawienie rozmiaru siatki dla aplikacji, które mają zostać umieszczone na zarządzanym ekranie głównym. Możesz ustawić liczbę wierszy i kolumn aplikacji, aby zdefiniować rozmiar siatki w następującym formacie: `columns;rows`. Jeśli zdefiniujesz rozmiar siatki, maksymalną liczbą aplikacji, które będą wyświetlane w wierszu na ekranie głównym, będzie liczba ustawionych wierszy, a maksymalną liczbą aplikacji, które będą wyświetlane w kolumnie ekranu głównego, będzie ustawiona liczba kolumn. |
-| Enable Screen Header (Włącz nagłówek ekranu) | wartość logiczna | PRAWDA | Włącza górny nagłówek dla różnych widoków, które oferuje zarządzany ekran główny, takich jak źródło danych lub karty źródeł danych. Jeśli to ustawienie zostanie włączone, użytkownicy urządzeń zobaczą nagłówek. |
-| Enable device status bar (Włącz pasek stanu urządzenia) | wartość logiczna | PRAWDA | Włącza pasek stanu na ekranie głównym (górny pasek wyświetlający bieżące połączenia, takie jak sieci Wi-Fi itd.). Po włączeniu tego klucza konfiguracji użytkownik końcowy będzie mógł zobaczyć ikony wyświetlane na paskach stanu, które reprezentują połączenia i aktywne aplikacje. |
 | Enable notifications badge (Włącz wskaźnik powiadomień) | wartość logiczna | FAŁSZ | Włącza dla ikon aplikacji wskaźnik powiadomień z liczbą nowych powiadomień w aplikacji. Jeśli to ustawienie zostanie włączone, użytkownicy końcowi będą widzieli wskaźniki powiadomień dla aplikacji z nieprzeczytanymi powiadomieniami. Pozostawienie tego klucza konfiguracji wyłączonego spowoduje, że użytkownik końcowy nie zobaczy żadnych wskaźników powiadomień powiązanych z aplikacjami, w których mogą być nieprzeczytane powiadomienia. |
 | Lock Home Screen (Blokuj ekran główny) | wartość logiczna | PRAWDA | Usuwa użytkownikowi końcowemu możliwość przechodzenia między ikonami aplikacji na ekranie głównym. Po włączeniu tego klucza konfiguracji ikony aplikacji na ekranie głównym zostaną zablokowane, a użytkownik końcowy nie będzie mógł ich przeciągać i upuszczać w innych miejscach siatki ekranu głównego. Jeśli zostanie ustawiona wartość `false`, użytkownicy końcowi będą mogli przechodzić między ikonami aplikacji i linków internetowych na zarządzanym ekranie głównym.  |
 | Set device wall paper (Ustaw tapetę urządzenia) | ciąg | Domyślny | Umożliwia ustawienie tapety wybranej przez użytkownika poprzez wprowadzenie adresu URL obrazu, który chcesz ustawić jako tapetę. |
 | Set app icon size (Ustaw rozmiar ikony aplikacji) | liczba całkowita | 2 | Umożliwia ustawienie rozmiaru ikony dla aplikacji wyświetlanych na ekranie głównym. Możesz wybrać następujące wartości w tej konfiguracji dla różnych rozmiarów: 0 (najmniejsza), 1 (mała), 2 (zwykła), 3 (duża) i 4 (największa). |
 | Set app folder icon (Ustaw ikonę folderu aplikacji) | liczba całkowita | 0 | Pozwala zdefiniować wygląd folderów aplikacji na ekranie głównym. Wygląd można wybrać spośród następujących wartości: Ciemny kwadrat (0); ciemne koło (1); jasny kwadrat (2); jasne koło (3). |
-| Enable gestures (Włącz gesty) | wartość logiczna | FAŁSZ | Włącza użytkownikowi końcowemu możliwość przypisywania akcji do różnych gestów, takich jak szybkie przesunięcie w górę i w dół. Jeśli ten klucz konfiguracji zostanie wyłączony, użytkownicy końcowi będą mogli tylko szybko przesuwać w prawo, jeśli istnieje druga strona, i powracać do strony głównej. |
-| Enable vertical scrolling (Włącz przewijanie w pionie) | wartość logiczna | FAŁSZ | Włącza przewijanie w pionie na zarządzanym ekranie głównym. Jeśli włączysz ten klucz konfiguracji, użytkownik końcowy będzie mógł przechodzić do różnych stron tylko w pionie, a nie szybko przesuwając w poziomie. |
-| Set home screen theme (Ustaw motyw ekranu głównego) | ciąg | Theme.Light.Blue | Umożliwia wybranie motywu dla ekranu głównego z zestawu wstępnie zdefiniowanych motywów w różnych kolorach. Możesz wybrać następujące motywy, wprowadzając wartość ciągu w następującym formacie.   Theme.Light.Green. Gdzie Light (jasny) można zastąpić przez Dark (ciemny) dla ciemnego motywu, a Green (zielony) można zastąpić przez Blue (niebieski), Yellow (żółty), Pink (różowy), Red (czerwony), Orange (pomarańczowy) i Purple (purpurowy). |
-| Enable dock (Włącz dokowanie) | wartość logiczna | FAŁSZ | Włącza sekcję dokowania aplikacji w dolnej części ekranu głównego z wyświetlonymi trwałymi aplikacjami i punktem wejścia dla wszystkich zainstalowanych aplikacji. Jeśli włączysz ten klucz konfiguracji, użytkownik końcowy będzie mógł uzyskiwać dostęp do aplikacji w sekcji dokowania, a także przechodzić do sekcji wszystkich aplikacji z listą wszystkich aplikacji zainstalowanych na urządzeniach bez względu na to, czy są one dozwolone, czy też nie. |
 | Set screen orientation (Ustaw orientację ekranu) | liczba całkowita | 1 | Pozwala ustawić orientację ekranu głównego jako poziomą lub pionową albo zezwolić na automatyczne obracanie. Możesz ustawić orientację, wprowadzając wartość 1 (tryb pionowy), 2 (tryb poziomy) lub 3 (automatyczne obracanie). |
-| Enable home screen feed (Włącz źródło danych ekranu głównego) | wartość logiczna | FAŁSZ | Włącza źródło danych ekranu głównego, które można zobaczyć po szybkim przesunięciu w lewo ekranu głównego. To źródło danych wyświetla zróżnicowaną zawartość, taką jak wiadomości, kalendarz, często używane aplikacje użytkownika, karta asystenta głosowego Cortana itd. Jeśli zostanie to włączone, użytkownik końcowy będzie mógł przejść do kanału informacyjnego, szybko przesuwając palcem w lewo ekran główny. |
-| Enable overview mode (Włącz tryb omówienia) | wartość logiczna | FAŁSZ | Umożliwia użytkownikom końcowym dodawanie lub usuwanie różnych stron na ekranie głównym, do których dostęp jest możliwy po szybkim przesunięciu w prawo bezpośrednio z domyślnego ekranu. Jeśli to włączysz, użytkownik końcowy będzie mógł dodać strony z prawej strony domyślnej strony ekranu głównego, będzie miał możliwość zmiany domyślnej strony, jak również będzie mógł uzyskać dostęp do ustawień na zarządzanym ekranie głównym. |
 | Enable device telemetry (Włącz telemetrię urządzenia) | wartość logiczna | FAŁSZ | Włącza wszystkie dane telemetryczne przechwytywane dla zarządzanego ekranu głównego. Jeśli to włączysz, firma Microsoft będzie mogła przechwytywać dane telemetryczne użycia urządzenia, takie jak liczba uruchomień konkretnej aplikacji na tym urządzeniu. |
 | Set allow-listed applications (Ustaw dozwolone aplikacje) | bundleArray | FAŁSZ | Umożliwia wybranie zestawu aplikacji widocznych na ekranie głównym spośród aplikacji zainstalowanych na urządzeniu. Aplikacje możesz określić, wprowadzając nazwę pakietu dla aplikacji, którą chcesz wyświetlać — na przykład com.microsoft.emmx spowoduje udostępnienie ustawień na ekranie głównym. Aplikacje dozwolone w tej sekcji powinny już być zainstalowane na urządzeniu, aby były widoczne na ekranie głównym. |
 | Set pinned web links (Ustaw przypięte linki internetowe) | bundleArray | FAŁSZ | Umożliwia przypięcie witryn internetowych jako ikon szybkiego uruchamiania na ekranie głównym. W przypadku tej konfiguracji możesz określić adres URL i dodać go do ekranu głównego, aby użytkownik końcowy mógł go uruchomić w przeglądarce jednym naciśnięciem. |
-| Enable search bar (Włącz pasek wyszukiwania) | wartość logiczna | FAŁSZ | Włącza pasek wyszukiwania na ekranie głównym. Jeśli zostanie to włączone, użytkownicy urządzenia zobaczą pasek wyszukiwania na ekranie głównym, gdzie będą mieć możliwość wprowadzania tego, co chcą wyszukać w Internecie. |
-| Disable settings app (Wyłącz aplikację ustawień) | wartość logiczna | FAŁSZ | Wyłącza stronę ustawień dla aplikacji Managed Home Screen. Jeśli to wyłączysz, użytkownik końcowy urządzenia nie będzie mieć możliwości przejścia do ustawień aplikacji Managed Home Screen. |
 | Enable screen saver (Włącz wygaszacz ekranu) | wartość logiczna | FAŁSZ | Umożliwia włączenie lub wyłączenie trybu wygaszacza ekranu. Jeśli jest ustawiona wartość true, możesz skonfigurować wartości **screen_saver_image**, **screen_saver_show_time**, **inactive_time_to_show_screen_saver** i **media_detect_ screen_saver**. |
 | Screen saver image (Obraz wygaszacza ekranu) | ciąg |   | Ustaw adres URL obrazu wygaszacza ekranu. Jeśli nie zostanie ustawiony żaden adres URL, po uaktywnieniu wygaszacza ekranu urządzenia będą wyświetlać domyślny obraz wygaszacza ekranu. Domyślny obraz pokazuje ikonę aplikacji Managed Home Screen.  |
 | Screen saver show time (Czas wyświetlania wygaszacza ekranu) | liczba całkowita | 0 | Udostępnia opcję ustawiania czasu (w sekundach) wyświetlania przez urządzenie wygaszacza ekranu w trybie wygaszacza ekranu. Jeśli ustawisz wartość 0, wygaszacz ekranu będzie widoczny przez czas nieokreślony (do chwili aktywowania urządzenia).  |
@@ -116,18 +106,6 @@ Poniżej przedstawiono przykładowy skrypt JSON zawierający wszystkie dostępne
     "productId": "com.microsoft.launcher.enterprise",
     "managedProperty": [
         {
-            "key": "keep_page_header",
-            "valueBool": true
-        },
-        {
-            "key": "keep_status_bar",
-            "valueBool": true
-        },
-        {
-            "key": "show_notification_badge",
-            "valueBool": false
-        },
-        {
             "key": "lock_home_screen",
             "valueBool": true
         },
@@ -144,32 +122,8 @@ Poniżej przedstawiono przykładowy skrypt JSON zawierający wszystkie dostępne
             "valueInteger": 0
         },
         {
-            "key": "gesture_on",
-            "valueBool": false
-        },
-        {
-            "key": "vertical_scrolling",
-            "valueBool": false
-        },
-        {
-            "key": "theme",
-            "valueString": "Theme.Light.Blue"
-        },
-        {
-            "key": "dock_enable",
-            "valueBool": false
-        },
-        {
             "key": "screen_orientation",
             "valueInteger": 1
-        },
-        {
-            "key": "feed_enable",
-            "valueBool": false
-        },
-        {
-            "key": "allow_overview_mode",
-            "valueBool": false
         },
         {
             "key": "enable_telemetry",
@@ -204,14 +158,6 @@ Poniżej przedstawiono przykładowy skrypt JSON zawierający wszystkie dostępne
                     ]
                 }
             ]
-        },
-        {
-            "key": "search_bar",
-            "valueBool": false
-        },
-        {
-            "key": "hide_settings",
-            "valueBool": false
         },
         {
             "key": "show_virtual_home",

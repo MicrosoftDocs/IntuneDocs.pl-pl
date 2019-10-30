@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9d82813f1292c99cf248c56a102503413d2cb8fb
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 000b1d04dd3f520b55b1d33545a8803e23bf8965
+ms.sourcegitcommit: 0d6f323152ec62f7d383891cce12ea0a4289cd8f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507456"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72889595"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Monitorowanie zasad ochrony aplikacji
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -76,7 +76,7 @@ Możesz wyszukać pojedynczego użytkownika i sprawdzić jego stan zgodności. O
 - **Ostatnia synchronizacja**: kiedy aplikacja była ostatnio synchronizowana z usługą Intune. 
 
 >[!NOTE]
-> Kolumna **Ostatnia synchronizacja** przedstawia tę samą wartość zarówno w raporcie o stanie użytkownika w konsoli, jak i w [możliwym do wyeksportowania raporcie csv](https://docs.microsoft.com/intune/app-protection-policies-monitor#export-app-protection-activities-to-csv) zasad ochrony aplikacji. Różnica polega na małym opóźnieniu synchronizacji między tą wartością w tych dwóch raportach. 
+> Kolumna **Ostatnia synchronizacja** przedstawia tę samą wartość zarówno w raporcie o stanie użytkownika w konsoli, jak i w [możliwym do wyeksportowania raporcie csv](https://docs.microsoft.com/intune/app-protection-policies-monitor#export-app-protection-activities) zasad ochrony aplikacji. Różnica polega na małym opóźnieniu synchronizacji między tą wartością w tych dwóch raportach. 
 >
 > Czas podawany w kolumnie „Ostatnia synchronizacja” to czas, gdy usługa Intune po raz ostatni widziała wystąpienie aplikacji. Kiedy użytkownik uruchamia aplikację, może ona powiadomić usługę Intune App Protection w momencie uruchomienia, w zależności od czasu ostatniego zaewidencjonowania. Zobacz artykuł dotyczący [czasów interwałów ponowień dla ewidencjonowania zasad ochrony aplikacji](https://docs.microsoft.com/en-us/intune/app-protection-policy-delivery). Jeśli użytkownik końcowy nie używał tej konkretnej aplikacji w ostatnim interwale ewidencjonowania (który zazwyczaj wynosi 30 minut dla aktywnego użycia), a następnie uruchomił aplikację, to:
 >

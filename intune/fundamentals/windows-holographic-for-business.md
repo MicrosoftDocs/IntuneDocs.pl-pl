@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cdb3623a61c16f69773703b8acdbb8f7c02b4ac4
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: e648d2eff8fd95cd3c995e9cce1bd0c9dfff32da
+ms.sourcegitcommit: 0d6f323152ec62f7d383891cce12ea0a4289cd8f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72504748"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72889516"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Zarządzanie urządzeniami z systemem Windows Holographic i urządzeniami HoloLens oraz korzystanie z różnych funkcji zarządzania urządzeniami przy użyciu usługi Intune
 
@@ -80,7 +80,7 @@ Usługa Microsoft Intune może wdrażać aplikacje uniwersalne systemu Windows n
 - Aby dowiedzieć się więcej na temat tworzenia aplikacji dla urządzeń Microsoft HoloLens, zobacz temat [Aplikacje rzeczywistości mieszanej dla urządzeń Microsoft HoloLens](https://www.microsoft.com/hololens/apps). 
 
 > [!NOTE]
-> Urządzenia HoloLens z systemem Windows 10 Holographic dla firm 1607 nie obsługują aplikacji licencjonowanych online ze sklepu Microsoft Store dla Firm. Aby dowiedzieć się więcej, zobacz temat [Instalowanie aplikacji na urządzeniach HoloLens](https://docs.microsoft.com/hololens/hololens-install-apps).
+> Urządzenia HoloLens z systemem Windows 10 Holographic dla firm 1607 nie obsługują aplikacji licencjonowanych online ze sklepu Microsoft Store dla Firm. Aby dowiedzieć się więcej, zobacz temat [Instalowanie aplikacji na urządzeniach HoloLens](/hololens/holographic-store-apps).
 
 ## <a name="device-actions"></a>Działania na urządzeniach
 Usługa Intune oferuje pewne wbudowane działania umożliwiające administratorom IT wykonywanie różnorodnych zadań lokalnie na urządzeniu lub zdalnie za pośrednictwem usługi Intune w witrynie Azure Portal. Użytkownicy mogą też w aplikacji Portal firmy usługi Intune wydać polecenie zdalne do urządzeń będących własnością prywatną i zarejestrowanych w usłudze Intune.
