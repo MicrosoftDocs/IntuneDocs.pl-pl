@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 08/17/2018
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: enrollment
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
@@ -17,20 +18,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3f041c76b4d9b3814a020d51ad4cbb8e33df6c27
-ms.sourcegitcommit: 60ed93682a21860e9d99ba1592ede120477f2b4d
+ms.openlocfilehash: 5d70496a87f923b61cacb3da250e5f22ce5c7817
+ms.sourcegitcommit: aeb76032de216e5feb94559aeaf36c0357f1247d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72379815"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72587949"
 ---
 # <a name="set-enrollment-restrictions"></a>Ustawianie ograniczeń rejestracji
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Jako administrator usługi Intune możesz utworzyć ograniczenia rejestracji i nimi zarządzać. Ograniczenia te definiują, które urządzenia mogą zarejestrować się do zarządzania przy użyciu usługi Intune, m.in.:
-- liczba urządzeń
-- systemy operacyjne i wersje. Możesz utworzyć wiele ograniczeń i zastosować je do różnych grup użytkowników. Możesz ustawić [priorytet](#change-enrollment-restriction-priority) dla różnych ograniczeń.
+- Liczba urządzeń.
+- Systemy operacyjne i wersje.
+
+Możesz utworzyć wiele ograniczeń i zastosować je do różnych grup użytkowników. Możesz ustawić [priorytet](#change-enrollment-restriction-priority) dla różnych ograniczeń.
 
 >[!NOTE]
 >Ograniczenia rejestrowania nie są funkcjami zabezpieczeń. Urządzenia, na których złamano zabezpieczenia, mogą błędnie podawać swój charakter. Te ograniczenia stanowią optymalną barierę dla niezłośliwych użytkowników.
@@ -69,8 +72,17 @@ Ograniczenia domyślne są automatycznie zapewniane w przypadku ograniczeń reje
     - Administrator urządzenia z systemem Android i profil służbowy systemu Android Enterprise obsługują wersję major.minor.rev.build.
     - System iOS obsługuje wersję major.minor.rev. Wersje systemu operacyjnego nie mają zastosowania do urządzeń firmy Apple rejestrowanych przy użyciu programu Device Enrollment Program, usługi Apple School Manager lub aplikacji Apple Configurator.
     - System Windows obsługuje tylko wersję major.minor.build.rev dla systemu Windows 10.
-    > [!Note]
-    > System Windows 10 nie udostępnia numeru wersji podczas rejestracji, więc jeśli na przykład wprowadzisz kompilację 10.0.17134.174, a urządzenie korzysta z kompilacji 10.0.17134.100, urządzenie zostanie zablokowane podczas rejestracji.
+    
+    > [!IMPORTANT]
+    > Platformy Android Enterprise (profil służbowy) i Administrator urządzenia z systemem Android mają następujące zachowanie:
+    > - Jeśli obie platformy są dozwolone dla tej samej grupy, użytkownicy zostaną zarejestrowani przy użyciu profilu służbowego, jeśli ich urządzenia go obsługują. W przeciwnym razie zostaną oni zarejestrowani jako administratorzy urządzeń. 
+    > - Jeśli obie platformy są dozwolone dla grupy i zostały ulepszone dla określonych i nienakładających się wersji, użytkownicy otrzymają przepływ rejestracji zdefiniowany dla ich wersji systemu operacyjnego. 
+    > - Jeśli obie platformy są dozwolone, ale są blokowane dla tych samych wersji, użytkownicy na urządzeniach z zablokowanymi wersjami zostaną przekierowani do przepływu rejestracji administratora urządzeń z systemem Android, a następnie zostanie im zablokowana możliwość rejestracji i pojawi się prośba o wylogowanie się. 
+    >
+    > Należy pamiętać, że ani rejestracja przy użyciu profilu służbowego, ani jako administrator urządzenia nie będą działały, jeśli nie zostaną spełnione odpowiednie wymagania wstępne rejestracji w systemie Android. 
+    
+   > [!Note]
+   > System Windows 10 nie udostępnia numeru wersji podczas rejestracji, więc jeśli na przykład wprowadzisz kompilację 10.0.17134.174, a urządzenie korzysta z kompilacji 10.0.17134.100, urządzenie zostanie zablokowane podczas rejestracji.
 
 8. W obszarze **Własność użytkownika** wybierz opcję **Zezwalaj** dla platform, na które chcesz zezwalać jako urządzenia będące własnością użytkowników.
 9. Wybierz przycisk **Dalej**, aby przejść do strony **Przypisania**.

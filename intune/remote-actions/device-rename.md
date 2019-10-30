@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 07/05/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: remote-actions
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
@@ -15,17 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35fae5ea1b3294772db4f4db51179892e08ed5d1
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: c1c02248b3208073a3bb09cafe69cf0473eacb2b
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71728510"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72584531"
 ---
 # <a name="rename-a-device-in-intune"></a>Zmienianie nazwy urządzenia w usłudze Intune
-
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Akcja **Zmienianie nazwy urządzenia** pozwala zmienić nazwę urządzenia, które zostało zarejestrowane w usłudze Intune. Nazwa urządzenia jest zmieniana w usłudze Intune i na urządzeniu.
 
@@ -44,6 +42,15 @@ Ta funkcja nie obsługuje obecnie zmiany nazw urządzeń z systemem Windows doł
 5. Jeśli chcesz ponownie uruchomić urządzenie po zmianie jego nazwy, wybierz pozycję **Tak** obok pozycji **Uruchom ponownie po zmianie nazwy**.
 6. Wybierz pozycję **Zmień nazwę**.
 
+## <a name="windows-device-rename-rules"></a>Reguły zmiany nazw urządzeń z systemem Windows
+Podczas zmieniania nazwy urządzenia z systemem Windows nowa nazwa musi być zgodna z następującymi regułami:
+- Może mieć maksymalnie 15 znaków (nie może zajmować więcej niż 63 bajty i na końcu nie może być znaku null)
+- Nie może mieć wartości null ani być pustym ciągiem
+- Dozwolone znaki ASCII: Litery (a–z, A–Z), cyfry (0–9) i łączniki
+- Dozwolone znaki Unicode: znaki muszą mieć wartość co najmniej 0x80, muszą być prawidłowymi znakami UTF8, musi dać się je zamapować na nazwę IDN (tzn. funkcja RtlIdnToNameprepUnicode musi je pomyślnie przetworzyć; zobacz RFC 3492)
+- Nazwy nie mogą zawierać samych cyfr
+- W nazwie nie może być spacji
+- Niedozwolone znaki: { | } ~ [ \ ] ^ ' : ; < = > ? & @ ! " # $ % ` ( ) + / , . _ *)
 
 
 ## <a name="next-steps"></a>Następne kroki

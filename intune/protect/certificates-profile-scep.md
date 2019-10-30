@@ -5,10 +5,10 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/19/2019
-ms.topic: article
-ms.prod: ''
+ms.date: 10/18/2019
+ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: lacranda
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e6b9f7d6aeda219af0f0cf3d0f5c34a3f03d258
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 4e28db0d24101ae65ff8c5e49febd0ff5dddc6e2
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71722894"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72585435"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Tworzenie i przypisywanie profilów certyfikatów SCEP w usłudze Intune
 
@@ -50,7 +50,7 @@ Po [skonfigurowaniu infrastruktury](certificates-scep-configure.md) pod kątem o
 
    2. W obszarze Monitorowanie funkcja raportowania certyfikatów nie jest dostępna w przypadku profilów certyfikatów SCEP właścicieli urządzeń.
    
-   3. Funkcja odwoływania certyfikatów zainicjowanych przez profile certyfikatów SCEP dla właściciela urządzenia nie jest obsługiwana za pomocą usługi Intune, ale można nią zarządzać przez proces zewnętrzny lub bezpośrednio za pomocą urzędu certyfikacji.
+   3. Nie można używać usługi Intune do odwoływania certyfikatów, które zostały aprowizowane przez profile certyfikatów SCEP dla właścicieli urządzeń. Odwołaniami można zarządzać za pomocą zewnętrznego procesu lub bezpośrednio przy użyciu urzędu certyfikacji. 
 
 6. Wybierz pozycję **Ustawienia**, a następnie wykonaj następujące czynności konfiguracyjne:
 
@@ -113,15 +113,13 @@ Po [skonfigurowaniu infrastruktury](certificates-scep-configure.md) pod kątem o
         - **{{DeviceName}}**
         - **{{FullyQualifiedDomainName}}** *(dotyczy tylko urządzeń z systemem Windows i urządzeń przyłączonych do domeny)*
         - **{{MEID}}**
-        
+
         W polu tekstowym możesz określić te zmienne wraz z następującym po nich tekstem. Na przykład nazwa pospolita urządzenia o nazwie *Urządzenie1* może zostać dodana jako **CN={{DeviceName}}Urządzenie1**.
 
         > [!IMPORTANT]  
         > - Aby uniknąć błędu, po określeniu zmiennej należy ująć ją w nawiasy klamrowe { }, jak pokazano w przykładzie.  
         > - Właściwości urządzenia użyte w polach *temat* lub *Nazwa SAN* certyfikatu urządzenia, takie jak **IMEI**, **SerialNumber** i **FullyQualifiedDomainName**, są właściwościami, mogą zostać sfałszowane przez osobę z dostępem do urządzenia.
         > - Urządzenie musi obsługiwać wszystkie zmienne określone w profilu certyfikatu, aby dla tego profilu możliwe było instalowanie na urządzeniu.  Na przykład jeśli zmienna **{{IMEI}}** zostanie użyta w nazwie podmiotu profilu SCEP, a następnie zostanie przypisana do urządzenia, które nie ma numeru IMEI, instalacja profilu zakończy się niepowodzeniem.  
- 
-
 
    - **Alternatywna nazwa podmiotu**:  
      wybierz sposób, w jaki usługa Intune automatycznie tworzy alternatywną nazwę podmiotu (SAN) w żądaniu certyfikatu. Opcje nazwy SAN zależą od wybranego typu certyfikatu: **Użytkownik** lub **Urządzenie**.  
@@ -198,15 +196,15 @@ Po [skonfigurowaniu infrastruktury](certificates-scep-configure.md) pod kątem o
      dodaj wartości w zależności od celu certyfikatu. W większości przypadków jest wymagane *uwierzytelnienie klienta* dla certyfikatu, aby zapewnić użytkownikom lub urządzeniom możliwość uwierzytelnienia na serwerze. W razie potrzeby możesz dodać dodatkowe użycia klucza.
 
    - **Próg odnawiania (%)** :  
-     wprowadź wartość procentową pozostałego okresu ważności certyfikatu, przy której urządzenie ma żądać odnowienia certyfikatu. Jeśli na przykład wprowadzisz wartość 20, próba odnowienia certyfikatu zostanie podjęta w przypadku, gdy certyfikat wygasł w 80%, i będzie kontynuowana, aż odnawianie zakończy się pomyślnie. Podczas odnawiania generowany jest nowy certyfikat, co powoduje utworzenie nowej pary kluczy publicznych/prywatnych.
+     wprowadź wartość procentową pozostałego okresu ważności certyfikatu, przy której urządzenie ma żądać odnowienia certyfikatu. Jeśli na przykład wprowadzisz wartość 20, próba odnowienia certyfikatu zostanie podjęta w przypadku, gdy certyfikat wygasł w 80%. Próby odnowienia będą kontynuowane, aż odnawianie zakończy się pomyślnie. Podczas odnawiania generowany jest nowy certyfikat, co powoduje utworzenie nowej pary kluczy publicznych/prywatnych.
 
    - **Adresy URL serwerów SCEP**:  
-     wprowadź co najmniej jeden adres URL dla serwerów usługi NDES, które wystawiają certyfikaty za pośrednictwem protokołu SCEP. Na przykład wpisz coś takiego: *https://ndes.contoso.com/certsrv/mscep/mscep.dll* . W razie potrzeby można dodać dodatkowe adresy URL protokołu SCEP na potrzeby równoważenia obciążenia, ponieważ adresy URL są losowo wypychane do urządzenia przy użyciu profilu. Jeśli jeden z serwerów SCEP jest niedostępny, żądanie SCEP zakończy się niepowodzeniem i możliwe jest, że w przypadku kolejnych ewidencjonowań urządzeń zostanie wykonane żądanie certyfikatu względem serwera, który nie działa.
+     wprowadź co najmniej jeden adres URL dla serwerów usługi NDES, które wystawiają certyfikaty za pośrednictwem protokołu SCEP. Na przykład wpisz coś takiego: *https://ndes.contoso.com/certsrv/mscep/mscep.dll* . W razie potrzeby można dodać dodatkowe adresy URL protokołu SCEP na potrzeby równoważenia obciążenia, ponieważ adresy URL są losowo wypychane do urządzenia przy użyciu profilu. Jeśli jeden z serwerów SCEP jest niedostępny, żądanie SCEP zakończy się niepowodzeniem i możliwe jest, że w przypadku późniejszych ewidencjonowań urządzeń zostanie wykonane żądanie certyfikatu względem serwera, który nie działa.
 
 7. Wybierz pozycję **OK**, a następnie pozycję **Utwórz**. Profil zostanie utworzony i wyświetlony na liście *Konfiguracja urządzenia — profile*.
 
 ### <a name="avoid-certificate-signing-requests-with-escaped-special-characters"></a>Unikanie żądań podpisania certyfikatu ze znakami specjalnymi o zmienionym znaczeniu
-Istnieje znany problem dotyczący żądań certyfikatów protokołu SCEP, które zawierają nazwę podmiotu (CN) z co najmniej jednym z następujących znaków specjalnych jako znakiem o zmienionym znaczeniu. Nazwy podmiotów, które zawierają jeden z tych znaków specjalnych jako znak o zmienionym znaczeniu, powodują, że powstaje żądanie podpisania certyfikatu z nieprawidłową nazwą podmiotu, co z kolei powoduje niepowodzenie walidacji wyzwania protokołu SCEP w usłudze Intune i certyfikat nie zostaje wydany.  
+Istnieje znany problem dotyczący żądań certyfikatów SCEP i PKCS, które zawierają nazwę podmiotu (CN) z co najmniej jednym z następujących znaków specjalnych jako znakiem ucieczki. Nazwy podmiotów, które zawierają jeden ze znaków specjalnych jako znak ucieczki, powodują wygenerowanie pliku CSR z nieprawidłową nazwą podmiotu. Niepoprawna nazwa podmiotu powoduje niepowodzenie weryfikacji wezwania SCEP usługi Intune i niemożność wydania certyfikatu.
 
 Znaki specjalne, których dotyczy problem:
 - \+

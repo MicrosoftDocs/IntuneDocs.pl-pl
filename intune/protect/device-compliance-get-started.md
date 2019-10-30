@@ -2,29 +2,28 @@
 title: Zasady zgodności urządzeń w usłudze Microsoft Intune na platformie Azure | Microsoft Docs
 description: 'Wprowadzenie do następujących zagadnień: korzystanie z zasad zgodności urządzeń, omówienie stanu i poziomów ważności, korzystanie ze stanu InGracePeriod, praca z dostępem warunkowym, obsługa urządzeń bez przypisanych zasad oraz różnice w zgodności między witryną Azure Portal i portalem klasycznym w usłudze Microsoft Intune'
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 05/22/2019
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
-ms.reviewer: joglocke
+ms.reviewer: samyada
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a743bb3b2003b1dbdf8088aca19bce898c8e40a8
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 967bf9937c71ff3ca7277f43fd969291eb5af6de
+ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71721425"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72749168"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Ustawianie zasad na urządzeniach w celu umożliwienia dostępu do zasobów w organizacji za pomocą usługi Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Wiele rozwiązań do zarządzania urządzeniami mobilnymi (MDM) pomaga chronić dane organizacji, wymagając od użytkowników i urządzeń spełnienia pewnych wymagań. W usłudze Intune ta funkcja jest nazywana „zasadami zgodności”. Zasady zgodności definiują reguły i ustawienia, które użytkownicy i urządzenia muszą spełnić, aby były zgodne. Używając tych zasad w połączeniu z dostępem warunkowym, administratorzy mogą blokować użytkowników i urządzenia niespełniające warunków reguł.
 
@@ -89,7 +88,7 @@ Usługa Intune oferuje również zestaw wbudowanych ustawień zasad zgodności. 
 
 - **Oznacz urządzenia bez przypisanych zasad zgodności jako**: ta właściwość ma dwie wartości:
 
-  - **Zgodne** (domyślna): funkcja zabezpieczeń wyłączona
+  - **Zgodne** (*domyślna*): funkcja zabezpieczeń wyłączona
   - **Niezgodne**: funkcja zabezpieczeń włączona
 
   Jeśli do urządzenia nie są przypisane zasady zgodności, jest ono domyślnie traktowane jako zgodne. Jeśli używasz dostępu warunkowego wykorzystując zasady zgodności, zalecamy zmianę domyślnego ustawienia na **Niezgodne**. Jeśli użytkownik końcowy jest niezgodny, ponieważ zasady nie zostały przypisane, w [aplikacji Portal firmy](../apps/company-portal-app.md) zostanie wyświetlony komunikat `No compliance policies have been assigned`.
@@ -115,13 +114,13 @@ W poniższej tabeli opisano sposób postępowania z niezgodnymi ustawieniami w p
 
 |**Ustawienie zasad**| **Platforma** |
 | --- | ----|
-| **Konfiguracja kodu PIN lub hasła** | - **System Android 4.0 lub nowszy**: Poddane kwarantannie</br>- **System Samsung Knox Standard 4.0 lub nowszy**: Poddane kwarantannie</br>- **System Android Enterprise**: Poddane kwarantannie</br></br>- **System iOS 8.0 lub nowszy**: Skorygowane</br>- **System macOS 10.11 lub nowszy**: Skorygowane</br></br>- **System Windows 8.1 lub nowszy**: Skorygowane</br>- **System Windows Phone 8.1 lub nowszy**: Skorygowane|
-| **Szyfrowanie urządzenia** | - **System Android 4.0 lub nowszy**: Poddane kwarantannie</br>- **System Samsung Knox Standard 4.0 lub nowszy**: Poddane kwarantannie</br>- **System Android Enterprise**: Poddane kwarantannie</br></br>- **System iOS 8.0 lub nowszy**: Skorygowane (przez ustawienie kodu PIN)</br>- **System macOS 10.11 lub nowszy**: Skorygowane (przez ustawienie kodu PIN)</br></br>- **System Windows 8.1 lub nowszy**: Nie dotyczy</br>- **System Windows Phone 8.1 lub nowszy**: Skorygowane |
-| **Urządzenie ze złamanymi ograniczeniami lub z odblokowanym dostępem** | - **System Android 4.0 lub nowszy**: Poddane kwarantannie (to nie jest ustawienie)</br>- **System Samsung Knox Standard 4.0 lub nowszy**: Poddane kwarantannie (to nie jest ustawienie)</br>- **System Android Enterprise**: Poddane kwarantannie (to nie jest ustawienie)</br></br>- **System iOS 8.0 lub nowszy**: Poddane kwarantannie (to nie jest ustawienie)</br>- **System macOS 10.11 lub nowszy**: Nie dotyczy</br></br>- **System Windows 8.1 lub nowszy**: Nie dotyczy</br>- **System Windows Phone 8.1 lub nowszy**: Nie dotyczy |
-| **Profil e-mail** | - **System Android 4.0 lub nowszy**: Nie dotyczy</br>- **System Samsung Knox Standard 4.0 lub nowszy**: Nie dotyczy</br>- **System Android Enterprise**: Nie dotyczy</br></br>- **System iOS 8.0 lub nowszy**: Poddane kwarantannie</br>- **System macOS 10.11 lub nowszy**: Poddane kwarantannie</br></br>- **System Windows 8.1 lub nowszy**: Nie dotyczy</br>- **System Windows Phone 8.1 lub nowszy**: Nie dotyczy |
-| **Minimalna wersja systemu operacyjnego** | - **System Android 4.0 lub nowszy**: Poddane kwarantannie</br>- **System Samsung Knox Standard 4.0 lub nowszy**: Poddane kwarantannie</br>- **System Android Enterprise**: Poddane kwarantannie</br></br>- **System iOS 8.0 lub nowszy**: Poddane kwarantannie</br>- **System macOS 10.11 lub nowszy**: Poddane kwarantannie</br></br>- **System Windows 8.1 lub nowszy**: Poddane kwarantannie</br>- **System Windows Phone 8.1 lub nowszy**: Poddane kwarantannie |
-| **Maksymalna wersja systemu operacyjnego** | - **System Android 4.0 lub nowszy**: Poddane kwarantannie</br>- **System Samsung Knox Standard 4.0 lub nowszy**: Poddane kwarantannie</br>- **System Android Enterprise**: Poddane kwarantannie</br></br>- **System iOS 8.0 lub nowszy**: Poddane kwarantannie</br>- **System macOS 10.11 lub nowszy**: Poddane kwarantannie</br></br>- **System Windows 8.1 lub nowszy**: Poddane kwarantannie</br>- **System Windows Phone 8.1 lub nowszy**: Poddane kwarantannie |
-| **Zaświadczanie o kondycji systemu Windows** | - **System Android 4.0 lub nowszy**: Nie dotyczy</br>- **System Samsung Knox Standard 4.0 lub nowszy**: Nie dotyczy</br>- **System Android Enterprise**: Nie dotyczy</br></br>- **System iOS 8.0 lub nowszy**: Nie dotyczy</br>- **System macOS 10.11 lub nowszy**: Nie dotyczy</br></br>- **Systemy Windows 10 i Windows 10 Mobile**: Poddane kwarantannie</br>- **System Windows 8.1 lub nowszy**: Poddane kwarantannie</br>- **System Windows Phone 8.1 lub nowszy**: Nie dotyczy |
+| **Konfiguracja kodu PIN lub hasła** | - **System Android 4.0 lub nowszy**: Poddane kwarantannie<br>- **System Samsung Knox Standard 4.0 lub nowszy**: Poddane kwarantannie<br>- **System Android Enterprise**: Poddane kwarantannie  <br>  <br>- **System iOS 8.0 lub nowszy**: Skorygowane<br>- **System macOS 10.11 lub nowszy**: Skorygowane  <br>  <br>- **System Windows 8.1 lub nowszy**: Skorygowane<br>- **System Windows Phone 8.1 lub nowszy**: Skorygowane|
+| **Szyfrowanie urządzenia** | - **System Android 4.0 lub nowszy**: Poddane kwarantannie<br>- **System Samsung Knox Standard 4.0 lub nowszy**: Poddane kwarantannie<br>- **System Android Enterprise**: Poddane kwarantannie<br><br>- **System iOS 8.0 lub nowszy**: Skorygowane (przez ustawienie kodu PIN)<br>- **System macOS 10.11 lub nowszy**: Skorygowane (przez ustawienie kodu PIN)<br><br>- **System Windows 8.1 lub nowszy**: Nie dotyczy<br>- **System Windows Phone 8.1 lub nowszy**: Skorygowane |
+| **Urządzenie ze złamanymi ograniczeniami lub z odblokowanym dostępem** | - **System Android 4.0 lub nowszy**: Poddane kwarantannie (to nie jest ustawienie)<br>- **System Samsung Knox Standard 4.0 lub nowszy**: Poddane kwarantannie (to nie jest ustawienie)<br>- **System Android Enterprise**: Poddane kwarantannie (to nie jest ustawienie)<br><br>- **System iOS 8.0 lub nowszy**: Poddane kwarantannie (to nie jest ustawienie)<br>- **System macOS 10.11 lub nowszy**: Nie dotyczy<br><br>- **System Windows 8.1 lub nowszy**: Nie dotyczy<br>- **System Windows Phone 8.1 lub nowszy**: Nie dotyczy |
+| **Profil e-mail** | - **System Android 4.0 lub nowszy**: Nie dotyczy<br>- **System Samsung Knox Standard 4.0 lub nowszy**: Nie dotyczy<br>- **System Android Enterprise**: Nie dotyczy<br><br>- **System iOS 8.0 lub nowszy**: Poddane kwarantannie<br>- **System macOS 10.11 lub nowszy**: Poddane kwarantannie<br><br>- **System Windows 8.1 lub nowszy**: Nie dotyczy<br>- **System Windows Phone 8.1 lub nowszy**: Nie dotyczy |
+| **Minimalna wersja systemu operacyjnego** | - **System Android 4.0 lub nowszy**: Poddane kwarantannie<br>- **System Samsung Knox Standard 4.0 lub nowszy**: Poddane kwarantannie<br>- **System Android Enterprise**: Poddane kwarantannie<br><br>- **System iOS 8.0 lub nowszy**: Poddane kwarantannie<br>- **System macOS 10.11 lub nowszy**: Poddane kwarantannie<br><br>- **System Windows 8.1 lub nowszy**: Poddane kwarantannie<br>- **System Windows Phone 8.1 lub nowszy**: Poddane kwarantannie |
+| **Maksymalna wersja systemu operacyjnego** | - **System Android 4.0 lub nowszy**: Poddane kwarantannie<br>- **System Samsung Knox Standard 4.0 lub nowszy**: Poddane kwarantannie<br>- **System Android Enterprise**: Poddane kwarantannie<br><br>- **System iOS 8.0 lub nowszy**: Poddane kwarantannie<br>- **System macOS 10.11 lub nowszy**: Poddane kwarantannie<br><br>- **System Windows 8.1 lub nowszy**: Poddane kwarantannie<br>- **System Windows Phone 8.1 lub nowszy**: Poddane kwarantannie |
+| **Zaświadczanie o kondycji systemu Windows** | - **System Android 4.0 lub nowszy**: Nie dotyczy<br>- **System Samsung Knox Standard 4.0 lub nowszy**: Nie dotyczy<br>- **System Android Enterprise**: Nie dotyczy<br><br>- **System iOS 8.0 lub nowszy**: Nie dotyczy<br>- **System macOS 10.11 lub nowszy**: Nie dotyczy<br><br>- **Systemy Windows 10 i Windows 10 Mobile**: Poddane kwarantannie<br>- **System Windows 8.1 lub nowszy**: Poddane kwarantannie<br>- **System Windows Phone 8.1 lub nowszy**: Nie dotyczy |
 
 ---------------------------
 
@@ -156,8 +155,9 @@ Aby korzystać z funkcji dotyczących zgodności urządzeń w witrynie Azure Por
   - [Android Enterprise](compliance-policy-create-android-for-work.md)
   - [iOS](compliance-policy-create-ios.md)
   - [macOS](compliance-policy-create-mac-os.md)
-  - [Windows 10 lub nowszy](compliance-policy-create-windows.md)
   - [Windows Holographic for Business](compliance-policy-create-windows.md#windows-holographic-for-business)
-  - [Windows 8.1 i Windows Phone 8.1](compliance-policy-create-windows-8-1.md)
+  - [Windows Phone 8.1](compliance-policy-create-windows-8-1.md)
+  - [Windows 8.1 lub nowszy](compliance-policy-create-windows-8-1.md)
+  - [Windows 10 lub nowszy](compliance-policy-create-windows.md)
 
 - [Dokumentacja jednostek zasad](../reports-ref-policy.md) zawiera informacje na temat jednostek zasad magazynu Data Warehouse w usłudze Intune.

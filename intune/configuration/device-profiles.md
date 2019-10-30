@@ -5,23 +5,24 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/04/2019
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: ''
+ms.reviewer: karthib
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3afdb365d0ed88a58028287cc7010bb334e9001e
-ms.sourcegitcommit: fca2670142c083d7562c0a36547a6a451863e315
+ms.openlocfilehash: 7c49445800f5d34fbb6ce0a845d4f29c3e587483
+ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72036448"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72749343"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Stosowanie funkcji i ustawień w urządzeniach przy użyciu profilów urządzeń w usłudze Microsoft Intune
 
@@ -48,7 +49,7 @@ Te szablony zapewniają administratorom uproszczony widok ustawień przypominaj�
 
 Ta funkcja obsługuje systemy:
 
-- System Windows 10 lub nowszy
+- Windows 10 1809 i nowsze wersje – obsługiwane oprogramowanie układowe.
 
 ## <a name="certificates"></a>Certyfikaty
 
@@ -66,7 +67,7 @@ Ta funkcja obsługuje systemy:
 
 ## <a name="custom-profile"></a>Profil niestandardowy
 
-[Ustawienia niestandardowe](../custom-settings-configure.md) umożliwiają administratorom przypisywanie ustawień urządzenia, które nie są wbudowane w usługę Intune. Na urządzeniach z systemem Android można wprowadzić wartości identyfikatora OMA-URI. W przypadku urządzeń z systemem iOS można zaimportować plik konfiguracyjny utworzony za pomocą programu Apple Configurator.
+[Ustawienia niestandardowe](custom-settings-configure.md) umożliwiają administratorom przypisywanie ustawień urządzenia, które nie są wbudowane w usługę Intune. Na urządzeniach z systemem Android można wprowadzić wartości identyfikatora OMA-URI. W przypadku urządzeń z systemem iOS można zaimportować plik konfiguracyjny utworzony za pomocą programu Apple Configurator.
 
 Ta funkcja obsługuje systemy:
 
@@ -78,7 +79,7 @@ Ta funkcja obsługuje systemy:
 
 ## <a name="delivery-optimization"></a>Optymalizacja dostarczania
 
-[Optymalizacja dostarczania](../delivery-optimization-windows.md) zapewnia lepsze środowisko dostarczania aktualizacji oprogramowania. Te ustawienia są zastępowane ustawieniami z obszaru **Aktualizacja oprogramowania** > **Pierścień aktualizacji systemu Windows 10**.
+[Optymalizacja dostarczania](delivery-optimization-windows.md) zapewnia lepsze środowisko dostarczania aktualizacji oprogramowania. Te ustawienia są zastępowane ustawieniami z obszaru **Aktualizacja oprogramowania** > **Pierścień aktualizacji systemu Windows 10**.
 
 Ustawienia te służą do kontrolowania sposobu pobierania aktualizacji oprogramowania na urządzenia w organizacji. Na przykład można zezwolić użytkownikom na pobieranie własnych aktualizacji lub uzyskiwanie aktualizacji za pomocą usług w chmurze optymalizacji dostarczania w profilu urządzenia.
 
@@ -88,12 +89,20 @@ Ta funkcja obsługuje systemy:
 
 ## <a name="device-features"></a>Funkcje urządzenia
 
-Profil [Funkcje urządzenia](../device-features-configure.md) steruje funkcjami urządzeń z systemami iOS i macOS, takimi jak AirPrint, powiadomienia i komunikaty na ekranie blokady.
+Profil [Funkcje urządzenia](device-features-configure.md) steruje funkcjami urządzeń z systemami iOS i macOS, takimi jak AirPrint, powiadomienia i komunikaty na ekranie blokady.
 
 Ta funkcja obsługuje systemy:
 
 - iOS/iPadOS
 - macOS
+
+## <a name="device-firmware-configuration-interface"></a>Interfejs konfiguracji oprogramowania układowego urządzenia
+
+[Interfejs konfiguracji oprogramowania układowego urządzenia ](device-firmware-configuration-interface-windows.md) (DFCI) umożliwia administratorom włączanie lub wyłączanie ustawień interfejsu UEFI (BIOS) za pomocą usługi Intune. Te ustawienia umożliwiają podwyższenie poziomu zabezpieczeń na poziomie oprogramowania układowego, które jest zwykle bardziej odporne na złośliwe ataki.
+
+Ta funkcja obsługuje systemy:
+
+- System Windows 10 lub nowszy
 
 ## <a name="device-restrictions"></a>Ograniczenia dotyczące urządzeń
 
@@ -138,7 +147,7 @@ Ta funkcja obsługuje systemy:
 
 Profil [Ustawienia programu Endpoint Protection dla systemu Windows 10](../protect/endpoint-protection-windows-10.md) umożliwia konfigurowanie ustawień funkcji BitLocker i usługa Windows Defender dla urządzeń z systemem Windows 10.
 
-Aby dołączyć zaawansowaną ochronę przed zagrożeniami w usłudze Microsoft Defender do usługi Microsoft Intune, zobacz [Configure endpoints using Mobile Device Management (MDM) tools (Konfigurowanie punktów końcowych przy użyciu narzędzi do zarządzania urządzeniami przenośnymi)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm).
+Aby dołączyć usługę Microsoft Defender Advanced Threat Protection do usługi Microsoft Intune, zobacz temat [Configure endpoints using Mobile Device Management (MDM) tools](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm) (Konfigurowanie punktów końcowych przy użyciu narzędzi do zarządzania urządzeniami mobilnymi).
 
 Ta funkcja obsługuje systemy:
 
@@ -154,7 +163,7 @@ Ta funkcja obsługuje systemy:
 
 ## <a name="extensions"></a>Rozszerzenia
 
-Opcja [Rozszerzenia jądra](kernel-extensions-overview-macos.md) umożliwia administratorom dodawanie funkcji lub programów na poziomie jądra na urządzeniach z systemem macOS. Skonfiguruj te ustawienia, aby ufać wszystkim rozszerzeniom określonego dewelopera lub partnera, lub zezwalać na określone rozszerzenia jądra.
+Opcja [Rozszerzenia jądra](kernel-extensions-overview-macos.md) umożliwia administratorom dodawanie funkcji lub programów na poziomie jądra na urządzeniach z systemem macOS. Skonfiguruj te ustawienia, aby ufać wszystkim rozszerzeniom określonego dewelopera lub partnera lub zezwalać na określone rozszerzenia jądra.
 
 Ta funkcja obsługuje systemy:
 
@@ -189,7 +198,7 @@ Ta funkcja obsługuje systemy:
 
 ## <a name="powershell-scripts"></a>Skrypty środowiska PowerShell
 
-[Skrypty programu PowerShell na urządzeniach z systemem Windows 10](../apps/intune-management-extension.md) używają rozszerzenia do zarządzania usługi Intune do przekazywania skryptów programu PowerShell w usłudze Intune, a następnie uruchamiania tych skryptów na urządzeniach. Sprawdź również, co jest wymagane do korzystania z rozszerzenia, jak dodać je do usługi Intune oraz inne ważne informacje.
+[Skrypty środowiska PowerShell na urządzeniach z systemem Windows 10](../apps/intune-management-extension.md) używają rozszerzenia do zarządzania usługi Intune do przekazywania skryptów środowiska PowerShell w usłudze Intune, a następnie uruchamiania tych skryptów na urządzeniach. Sprawdź również, co jest wymagane do korzystania z rozszerzenia, jak dodać je do usługi Intune oraz inne ważne informacje.
 
 
 Ta funkcja obsługuje systemy:
@@ -210,9 +219,9 @@ Ta funkcja obsługuje systemy:
 
 ## <a name="update-policies"></a>Zasady aktualizacji
 
-W sekcji [Zasady aktualizacji systemu iOS](../software-updates-ios.md) pokazano, jak utworzyć i przypisać zasady systemu iOS w celu zainstalowania aktualizacji oprogramowania na urządzeniach z systemem iOS. Można również sprawdzić stan instalacji.
+W sekcji [Zasady aktualizacji systemu iOS](../protect/software-updates-ios.md) pokazano, jak utworzyć i przypisać zasady systemu iOS w celu zainstalowania aktualizacji oprogramowania na urządzeniach z systemem iOS. Można również sprawdzić stan instalacji.
 
-Aby uzyskać informacje o zasadach aktualizacji urządzeń z systemem Windows, zobacz [Optymalizacja dostarczania](../delivery-optimization-windows.md). 
+Aby uzyskać informacje o zasadach aktualizacji urządzeń z systemem Windows, zobacz [Optymalizacja dostarczania](delivery-optimization-windows.md). 
 
 Ta funkcja obsługuje systemy:
 
@@ -265,7 +274,7 @@ Ta funkcja obsługuje systemy:
 
 ## <a name="manage-and-troubleshoot"></a>Zarządzanie i rozwiązywanie problemów
 
-[Zarządzaj profilami](../device-profile-monitor.md), aby sprawdzić stan urządzeń i przypisane profile. Możesz też pomóc w rozwiązywaniu konfliktów, sprawdzając ustawienia powodujące konflikt i profile, które uwzględniają te ustawienia. Artykuł [Typowe problemy i rozwiązania](device-profile-troubleshoot.md) pomaga administratorom w pracy z profilami. Pokazuje on, co się dzieje podczas usuwania profilu, co powoduje wysyłanie powiadomień do urządzeń i przedstawia inne informacje.
+[Zarządzaj profilami](device-profile-monitor.md), aby sprawdzić stan urządzeń i przypisane profile. Możesz też pomóc w rozwiązywaniu konfliktów, sprawdzając ustawienia powodujące konflikt i profile, które uwzględniają te ustawienia. Artykuł [Typowe problemy i rozwiązania](device-profile-troubleshoot.md) pomaga administratorom w pracy z profilami. Pokazuje on, co się dzieje podczas usuwania profilu, co powoduje wysyłanie powiadomień do urządzeń i przedstawia inne informacje.
 
 ## <a name="next-steps"></a>Następne kroki
 

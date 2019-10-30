@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 08/12/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 9e9ef9f5-1215-4df1-b690-6b21a5a631f8
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cc4c301ebc4e8dc4a26a49957d344ad52316f66a
-ms.sourcegitcommit: fca2670142c083d7562c0a36547a6a451863e315
+ms.openlocfilehash: 4be8c383ded85dbfa9cf1c1b293bb979201ee4ab
+ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72036418"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72785662"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Ustawienia zasad ochrony aplikacji systemu Android w usłudze Microsoft Intune
 W tym artykule opisano ustawienia zasad ochrony aplikacji dla urządzeń z systemem Android. Opisane ustawienia zasad można [skonfigurować](app-protection-policies.md) dla zasad ochrony aplikacji w bloku **Ustawienia** w witrynie Azure Portal.
@@ -126,3 +127,4 @@ Domyślnie niektóre ustawienia są dostarczane ze wstępnie skonfigurowanymi wa
 | **Producenci urządzeń** | Podaj listę producentów rozdzielonych średnikami. Unikaj spacji na listach wielu wartości. Te wartości nie uwzględniają wielkości liter. Niektóre z *akcji* to: <br><ul><li>**Zezwalaj na określone (blokuj nieokreślone)** — tylko urządzenia pasujące do wybranego producenta urządzenia mogą używać aplikacji. Wszystkie inne urządzenia są blokowane. </li></ul> <ul><li>**Zezwalaj na określone (wyczyść nieokreślone)** — konto użytkownika skojarzone z aplikacją zostanie wyczyszczone z urządzenia. </li></ul> Aby uzyskać więcej informacji na temat korzystania z tego ustawienia, zobacz artykuł dotyczący [akcji uruchamiania warunkowego](app-protection-policies-access-actions.md#android-policy-settings). |
 | **Zaświadczanie urządzeń SafetyNet** | Zasady ochrony aplikacji obsługują niektóre interfejsy API usługi Google Play Protect. To ustawienie w szczególności konfiguruje zaświadczenia rozwiązania SafetyNet firmy Google na urządzeniach użytkowników końcowych. Wybierz opcję **Podstawowa integralność** lub **Podstawowa integralność i certyfikowane urządzenia**. Opcja **Podstawowa integralność** informuje o ogólnej integralności urządzenia. W przypadku urządzeń z odblokowanym dostępem do konta root, emulatorów, urządzeń wirtualnych i urządzeń z oznakami naruszenia podstawowa integralność kończy się niepowodzeniem. Opcja **Podstawowa integralność i certyfikowane urządzenia** informuje o zgodności urządzenia z usługami Google. Tylko sprawdzanie niemodyfikowanych urządzeń, które były certyfikowane przez firmę Google, może zakończyć się powodzeniem. Niektóre z *akcji* to: <br><ul><li>**Ostrzegaj** — jeśli urządzenie nie spełnia wymagań zaświadczenia rozwiązania SafetyNet firmy Google na podstawie skonfigurowanej wartości, zostanie wyświetlone powiadomienie. Powiadomienie to można odrzucić. </li></ul><ul><li>**Zablokuj dostęp** — użytkownik będzie miał zablokowany dostęp, jeśli urządzenie nie spełnia wymagań zaświadczenia rozwiązania SafetyNet firmy Google na podstawie skonfigurowanej wartości. </li></ul> <ul><li>**Wyczyść dane** — konto użytkownika skojarzone z aplikacją zostanie wyczyszczone z urządzenia. </li></ul> </li></ul> Często zadawane pytania dotyczące tego ustawienia można znaleźć na stronie [Często zadawane pytania dotyczące zarządzania aplikacjami mobilnymi (MAM) i ochrony aplikacji](mam-faq.md#app-experience-on-android). |
 | **Skanowanie aplikacji pod kątem zagrożeń** | Zasady ochrony aplikacji obsługują niektóre interfejsy API usługi Google Play Protect. To ustawienie w szczególności zapewnia, że skanowanie Weryfikuj aplikacje firmy Google jest włączone dla urządzeń użytkowników końcowych. Jeśli to ustawienie zostanie skonfigurowane, dostęp użytkownika końcowego zostanie zablokowany do czasu włączenia skanowania aplikacji firmy Google na urządzeniu z systemem Android. Niektóre z *akcji* to: <br><ul><li>**Ostrzegaj** — jeśli skanowanie Weryfikuj aplikacje firmy Google nie zostanie włączone na urządzeniu, zostanie wyświetlone powiadomienie. Powiadomienie to można odrzucić. </li></ul><ul><li>**Blokuj dostęp** — jeśli skanowanie Weryfikuj aplikacje firmy Google nie zostanie włączone na urządzeniu, dostęp użytkownika zostanie zablokowany. </li></ul></li></ul> Wyniki skanowania Weryfikuj aplikacje firmy Google są udostępniane w raporcie **Potencjalnie szkodliwe aplikacje** w konsoli. |
+| **Maksymalny dozwolony poziom zagrożenia urządzenia** | Zasady ochrony aplikacji mogą korzystać z zalet łącznika usługi Intune z usługą MTD. Określ maksymalny poziom zagrożenia akceptowalny dla działania tej aplikacji. Zagrożenia są określane przez wybraną aplikację dostawcy usługi Mobile Threat Defense (MTD) na urządzeniu użytkownika końcowego. Określ opcję *Zabezpieczone*, *Niski*, *Średni* lub *Wysoki*. Opcja *Zabezpieczone* wymaga braku zagrożeń na urządzeniu i jest najbardziej restrykcyjną konfigurowalną wartością, natomiast opcja *Wysoki* zasadniczo wymaga aktywnego połączenia usługi Intune z usługą MTD. Niektóre z *akcji* to: <br><ul><li>**Blokuj dostęp** — dostęp użytkownika zostanie zablokowany, jeśli poziom zagrożenia określony przez wybraną aplikację dostawcy usługi Mobile Threat Defense (MTD) na urządzeniu użytkownika końcowego nie spełnia tego wymagania.</li></ul> <ul><li>**Wyczyść dane** — konto użytkownika skojarzone z aplikacją zostanie wyczyszczone z urządzenia.</li></ul>Aby uzyskać więcej informacji na temat korzystania z tego ustawienia, zobacz (# #Konfigurowanie usługi Intune pod kątem usługi MTD na niezarejestrowanych urządzeniach). |

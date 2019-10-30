@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 1/15/2018
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: enrollment
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2abf391ddbdb1f7087cd06ed1865b3da8b155178
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 755aefb955c2d30652434f2bd2e91981145fc56f
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71723583"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72505594"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices"></a>Konfiguracja rejestracji w pełni zarządzanych urządzeń z systemem Android Enterprise w usłudze Intune 
 
@@ -61,7 +62,7 @@ Aby skonfigurować zarządzanie w pełni zarządzanymi urządzeniami z systemem 
 > [!NOTE]
 > Jeśli masz zdefiniowane zasady dostępu warunkowego usługi Azure AD, które korzystają z opcji kontroli *Wymagaj, aby urządzenie zostało oznaczone jako zgodne* i dotyczą **wszystkich aplikacji w chmurze**, **systemu Android** oraz **przeglądarek** — musisz wykluczyć aplikację **Microsoft Intune** w chmurze z tych zasad. Dzieje się tak, ponieważ podczas procesów instalacji systemu Android karta przeglądarki Chrome jest używana do uwierzytelniania użytkowników podczas rejestracji. Aby uzyskać więcej informacji, zapoznaj się z [dokumentacją dotyczącą dostępu warunkowego w usłudze Azure AD](https://docs.microsoft.com/azure/active-directory/conditional-access/).
 
-Jeśli to ustawienie będzie miało wartość **Tak**, udostępni Ci token rejestrowania (ciąg losowy) i kod QR dla dzierżawy usługi Intune. Ten jeden token rejestracji jest ważny dla wszystkich użytkowników i nigdy nie wygasa. W zależności od systemu operacyjnego Android i wersji urządzenia możesz użyć tokenu lub kodu QR, aby zarejestrować urządzenie kiosku.
+Jeśli to ustawienie będzie miało wartość **Tak**, udostępni Ci token rejestrowania (ciąg losowy) i kod QR dla dzierżawy usługi Intune. Ten jeden token rejestracji jest ważny dla wszystkich użytkowników i nigdy nie wygasa. W zależności od systemu operacyjnego Android i wersji urządzenia możesz użyć tokenu lub kodu QR, aby zarejestrować urządzenie.
 
 ## <a name="enroll-the-fully-managed-devices"></a>Rejestrowanie w pełni zarządzanych urządzeń
 Teraz możesz [zarejestrować w pełni zarządzane urządzenia](android-dedicated-devices-fully-managed-enroll.md).

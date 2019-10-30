@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 08/19/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 3fb2f050-ec94-42ab-be05-c3d4101148bb
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ec1af80d52a8331c2bef136cd0947b81beaa3ea
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 3ee68392feaa59ef5207edce75250e539407273b
+ms.sourcegitcommit: 8c25aeefb7cbc6444a8596af22fccd1c5426877a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71724779"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72593689"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Zarządzanie dostępem do Internetu przy użyciu przeglądarki Microsoft Edge w usłudze Microsoft Intune
 
@@ -204,7 +205,7 @@ W celu ułatwienia dostępu można skonfigurować zakładki, które mają być d
 
 Oto niektóre szczegóły:
 
-- Te zakładki są wyświetlane dla użytkowników tylko wtedy, gdy korzystają oni z trybu firmowego w przeglądarce Microsoft Edge. 
+- Te zakładki są wyświetlane dla użytkowników tylko wtedy, gdy korzystają oni z [trybu firmowego](https://docs.microsoft.com/intune/apps/app-configuration-managed-browser#how-to-configure-bookmarks-for-a-protected-browser) w przeglądarce Microsoft Edge. 
 - Użytkownicy nie mogą usuwać ani modyfikować tych zakładek.
 - Te zakładki są wyświetlane na początku listy. Wszystkie zakładki utworzone przez użytkowników pojawiają się poniżej tych zakładek.
 - Jeśli zostało włączone przekierowanie serwera proxy aplikacji, możesz dodać aplikacje internetowe serwera proxy aplikacji, używając ich wewnętrznego lub zewnętrznego adresu URL.

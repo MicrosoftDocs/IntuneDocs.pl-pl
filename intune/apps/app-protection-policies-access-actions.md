@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 08/27/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: f5ca557e-a8e1-4720-b06e-837c4f0bc3ca
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ff9306c7429adbe4a5159879ccbe7cb0f13e65ed
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 62a3f9ee2cec41f14e450158ab8ad02e1a3a2ea2
+ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71725572"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72785686"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Selektywne czyszczenie danych przy użyciu akcji uruchamiania warunkowego zasad ochrony aplikacji w usłudze Intune
 
@@ -59,6 +60,7 @@ W przypadku systemu iOS za pomocą listy rozwijanej **Ustawienie** możliwe będ
 - Minimalna wersja aplikacji
 - Minimalna wersja zestawu SDK
 - Modele urządzeń
+- Maksymalny dozwolony poziom zagrożenia urządzenia
 
 Aby użyć ustawienia **Modele urządzeń**, wprowadź rozdzielaną średnikami listę identyfikatorów modeli urządzeń z systemem iOS. Identyfikator modelu urządzenia z systemem iOS można znaleźć w kolumnie Typ urządzenia w [dokumentacji pomocy technicznej usługi HockeyApp](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types).<br>
 Przykładowe dane wejściowe: *iPhone5,2; iPhone5,3*
@@ -83,6 +85,7 @@ W przypadku systemu Android za pomocą listy rozwijanej **Ustawienie** możliwe 
 - Producenci urządzeń
 - Zaświadczanie urządzeń SafetyNet
 - Skanowanie aplikacji pod kątem zagrożeń
+- Maksymalny dozwolony poziom zagrożenia urządzenia
 
 Aby użyć ustawienia **Producenci urządzeń**, wprowadź rozdzielaną średnikami listę producentów urządzeń z systemem Android. Producenta urządzenia z systemem Android można znaleźć w ustawieniach urządzenia.<br>
 Przykładowe dane wejściowe: *Producent A;Producent B* 

@@ -6,9 +6,10 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 09/23/2019
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 571974e1736fb78ae633c02fcfd6e6233056379b
-ms.sourcegitcommit: 78f9750712c254d8b123ef15b74f30ca999aa128
+ms.openlocfilehash: f32637173ec6cf5f7c284a87193eafffb6a16e6c
+ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71920163"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72786127"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co nowego w usłudze Microsoft Intune
 
@@ -50,18 +51,180 @@ Dowiedz się co tydzień, co nowego w usłudze Microsoft Intune. Możesz tu rów
 ### Intune apps
 ### Monitor and troubleshoot
 ### Role-based access control
-
 -->  
+
+
+<!-- ########################## -->
+
+## <a name="week-of-october-21-2019"></a>Tydzień 21 października 2019 r.
+
+### <a name="new-device-firmware-configuration-interface-profile-for-windows-10-and-later-devices----2266073-idready-wnready---"></a>Nowy profil interfejsu konfiguracji oprogramowania układowego urządzenia dla urządzeń z systemem Windows 10 lub nowszym <!-- 2266073 idready wnready -->
+
+W systemie Windows 10 i nowszych można utworzyć profil konfiguracji urządzenia w celu kontrolowania ustawień i funkcji (**Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **System Windows 10 i późniejsze** dla platformy). W tej aktualizacji dostępny jest nowy typ profilu interfejsu konfiguracji oprogramowania układowego urządzenia, który umożliwia usłudze Intune zarządzanie ustawieniami interfejsu UEFI (BIOS).
+
+Aby uzyskać więcej informacji na temat tej funkcji, zobacz [Używanie profilów DFCI na urządzeniach z systemem Windows w usłudze Microsoft Intune ](../configuration/device-firmware-configuration-interface-windows.md).
+
+Dotyczy:
+
+- System Windows 10 RS5 (1809) i nowsze z obsługiwanym oprogramowaniem układowym
+
+## <a name="week-of-october-14-2019"></a>Tydzień 14 października 2019 r.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="app-management"></a>Zarządzanie aplikacjami 
+
+#### <a name="available-google-play-app-reporting-for-android-work-profiles----3041956-----"></a>Raportowanie aplikacji ze sklepu Google Play dostępne dla profilów służbowych systemu Android <!-- 3041956   -->
+W przypadku dostępnych instalacji aplikacji na urządzeniach z profilem służbowym systemu Android Enterprise, dedykowanych i w pełni zarządzanych urządzeń można wyświetlić stan instalacji aplikacji, a także zainstalowaną wersję aplikacji z zarządzanego sklepu Google Play. Aby uzyskać więcej informacji, zobacz artykuły [Jak monitorować zasady ochrony aplikacji](~/apps/app-protection-policies-monitor.md), [Zarządzanie urządzeniami z profilem służbowym systemu Android za pomocą usługi Intune](~/enrollment/android-enterprise-overview.md) i [Typ aplikacji zarządzanej ze sklepu Google Play](~/apps/apps-add-android-for-work.md#managed-google-play-app-types).
+
+#### <a name="microsoft-edge-version-77-and-later-for-windows-10-and-macos-public-preview----3872025-4678761----"></a>Microsoft Edge w wersji 77 lub nowszej dla systemu Windows 10 i macOS (publiczna wersja zapoznawcza) <!-- 3872025, 4678761  -->
+Program Microsoft Edge w wersji 77 lub nowszej jest teraz dostępny do wdrażania na komputerach z systemem Windows 10 i macOS. Publiczna wersja zapoznawcza oferuje kanały **Dev** oraz **Beta** dla systemu Windows 10 i kanał **Beta** dla systemu macOS. Wdrożenie jest tylko w języku angielskim (EN), jednak użytkownicy końcowi mogą zmienić język wyświetlania w przeglądarce w obszarze **Ustawienia** > **Języki**. Microsoft Edge jest aplikacją systemu Win32 instalowaną w kontekście systemu oraz na takich samych architekturach (aplikacja x86 w systemie operacyjnym x86, a aplikacja x64 w systemie operacyjnym x64). Ponadto automatyczne aktualizacje przeglądarki są domyślnie **Włączone** i programu Microsoft Edge nie można odinstalować. Aby uzyskać więcej informacji, zobacz [Dodawanie programu Microsoft Edge dla systemu Windows 10 do usługi Microsoft Intune](~/apps/apps-windows-edge.md) i [Dokumentacja programu Microsoft Edge](https://go.microsoft.com/fwlink/?linkid=2103823).
+
+#### <a name="update-to-app-protection-ui-and-ios-app-provisioning-ui----4102027-4102029-----"></a>Aktualizowanie do interfejsu użytkownika ochrony aplikacji i interfejsu użytkownika aprowizacji aplikacji systemu iOS <!-- 4102027, 4102029   -->
+Interfejs użytkownika służący do tworzenia i edytowania zasad ochrony aplikacji oraz profilów aprowizacji aplikacji dla systemu iOS w usłudze Intune został zaktualizowany. Zmiany interfejsu użytkownika:
+- Uproszczone środowisko dzięki użyciu formatu kreatorów skondensowanego w obrębie pojedynczego bloku. 
+- Aktualizacja przepływu tworzenia w celu uwzględnienia przypisań.
+- Strona podsumowania wszystkich elementów ustawionych podczas wyświetlania właściwości, przed utworzeniem nowych zasad lub podczas edytowania właściwości. Ponadto podczas edytowania właściwości podsumowanie będzie zawierać tylko listę elementów z kategorii właściwości, które są edytowane.
+
+Aby uzyskać więcej informacji, zobacz [Tworzenie i przypisywanie zasad ochrony aplikacji](~/apps/app-protection-policies.md) oraz [Korzystanie z profilów aprowizacji aplikacji systemu iOS](~/apps/app-provisioning-profile-ios.md).
+
+#### <a name="intune-guided-scenarios----4850318-4831296-3610611----"></a>Scenariusze z przewodnikiem dotyczące usługi Intune <!-- 4850318, 4831296, 3610611  -->
+Usługa Intune udostępnia teraz scenariusze z przewodnikiem ułatwiające ukończenie określonego zadania lub zestawu zadań w usłudze Intune. Scenariusz z przewodnikiem przedstawia serię dostosowanych kroków (przepływ pracy), które należy wykonać w jednym konkretnym przypadku użycia. Typowe scenariusze są definiowane na podstawie roli, jaką w Twojej organizacji odgrywa administrator, użytkownik lub urządzenie. Te przepływy pracy zwykle wymagają starannego zsynchronizowania profilów, ustawień, aplikacji i opcji zabezpieczeń, aby zapewnić jak najlepsze środowisko użytkownika i skuteczne zabezpieczenia. Nowe scenariusze z przewodnikiem:
+- [Wdrażanie przeglądarki Microsoft Edge dla urządzeń przenośnych](~/fundamentals/guided-scenarios-edge.md)
+- [Bezpieczne aplikacje mobilne Microsoft Office](~/fundamentals/guided-scenarios-office-mobile.md) 
+- [Komputer nowoczesny zarządzany przez chmurę](~/fundamentals/guided-scenarios-cloud-managed-pc.md)
+
+Aby uzyskać więcej informacji, zobacz [Scenariusze z przewodnikiem dotyczące usługi Intune — omówienie](guided-scenarios-overview.md).
+
+#### <a name="additional-app-configuration-variable-available----4969237-----"></a>Dostępna jest dodatkowa zmienna konfiguracyjna aplikacji <!-- 4969237   -->
+Podczas tworzenia zasad konfiguracji aplikacji można uwzględnić zmienną konfiguracyjną `AAD Device ID` w ustawieniach konfiguracji. W usłudze Intune wybierz pozycję **Aplikacje klienckie** > **Zasady konfiguracji aplikacji** > **Dodaj**. Wprowadź szczegóły zasad konfiguracji i wybierz pozycję **Ustawienia konfiguracji**, aby wyświetlić blok **Ustawienia konfiguracji**. Aby uzyskać więcej informacji, zobacz [Zasady konfigurowania aplikacji dla zarządzanych urządzeń z systemem Android Enterprise — Korzystanie z projektanta konfiguracji](~/apps/app-configuration-policies-use-android.md#use-the-configuration-designer).
+
+
+#### <a name="create-groups-of-management-objects-called-policy-sets----3762880----"></a>Tworzenie grup obiektów zarządzania nazywanych zestawami zasad <!-- 3762880  -->
+Zestawy zasad umożliwiają tworzenie pakietu odwołań do już istniejących jednostek zarządzania, które muszą być identyfikowane, kierowane i monitorowane jako pojedyncza jednostka koncepcyjna. Zestawy zasad nie zastępują istniejących koncepcji ani obiektów. Można nadal przypisywać poszczególne obiekty w usłudze Intune, a także odwoływać się do nich w ramach zestawu zasad. W konsekwencji wszystkie zmiany tych pojedynczych obiektów zostaną odzwierciedlone w zestawie zasad.  W usłudze Intune wybierz pozycję **Zestawy zasad** > **Utwórz**, aby utworzyć nowy zestaw zasad. 
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-configuration"></a>Konfiguracja urządzenia
+
+#### <a name="ui-update-for-creating-and-editing-windows-10-update-rings-----4099089-----------"></a>Aktualizacja interfejsu użytkownika do tworzenia i edytowania pierścieni aktualizacji systemu Windows 10  <!-- 4099089         -->
+Zaktualizowaliśmy środowisko interfejsu użytkownika do [tworzenia i edytowania pierścieni aktualizacji systemu Windows 10 ](../protect/windows-update-for-business-configure.md#create-and-assign-update-rings) dla usługi Intune. Zmiany w interfejsie użytkownika:  
+- Format kreatorów skondensowany w obrębie pojedynczego bloku konsoli, który pozwala pozbyć się natłoku widocznych wcześniej bloków podczas konfigurowania pierścieni aktualizacji.   
+- Poprawiony przepływ pracy obejmuje przypisania przed ukończeniem początkowej konfiguracji pierścienia.
+- Strona podsumowania, za pomocą której można przejrzeć wszystkie dokonane konfiguracje, przed zapisaniem i wdrożeniem nowego pierścienia aktualizacji. Podczas edytowania pierścienia aktualizacji podsumowanie pokazuje tylko listę elementów ustawionych w ramach kategorii właściwości, które są edytowane.
+
+#### <a name="ui-update-for-creating-and-editing-ios-software-update-policy-----4099090---------"></a>Aktualizacja interfejsu użytkownika do tworzenia i edytowania zasad aktualizacji oprogramowania systemu iOS  <!-- 4099090       --> 
+Zaktualizowaliśmy środowisko interfejsu użytkownika do [tworzenia](../protect/software-updates-ios.md#configure-the-policy) i [edytowania](../protect/software-updates-ios.md#edit-a-policy) zasad aktualizacji oprogramowania systemu iOS dla usługi Intune.  Zmiany w interfejsie użytkownika:  
+- Format kreatorów skondensowany w obrębie pojedynczego bloku konsoli, który pozwala pozbyć się natłoku widocznych wcześniej bloków podczas konfigurowania zasad aktualizacji.   
+- Poprawiony przepływ pracy obejmuje przypisania przed ukończeniem początkowej konfiguracji zasad.
+- Strona podsumowania, za pomocą której można przejrzeć wszystkie dokonane konfiguracje, przed zapisaniem i wdrożeniem nowych zasad. Podczas edytowania zasad podsumowanie pokazuje tylko listę elementów ustawionych w ramach kategorii właściwości, które są edytowane.
+
+#### <a name="engaged-restart-settings-are-removed-from-windows-update-rings------4464404---wnready-----"></a>Ustawienia ponownego uruchamiania są usuwane z pierścieni aktualizacji systemu Windows  <!--  4464404   WNReady   -->
+Zgodnie z wcześniejszą zapowiedzią, pierścienie aktualizacji systemu Windows 10 w usłudze Intune [obsługują teraz ustawienia terminów ostatecznych](../protect/windows-update-settings.md) i nie obsługują już *ponownego uruchamiania wymagającego interwencji użytkownika*. Ustawienia *ponownego uruchamiania wymagającego interwencji użytkownika* nie są już dostępne podczas konfigurowania pierścieni aktualizacji lub zarządzania nimi w usłudze Intune.  
+
+Ta zmiana jest powiązana z ostatnimi [zmianami obsługi systemu Windows](https://docs.microsoft.com//windows/whats-new/whats-new-windows-10-version-1903#servicing) i na urządzeniach z systemem Windows 10 1903 lub nowszym *terminy ostateczne* zastępują konfiguracje *ponownego uruchamiania wymagającego interwencji użytkownika*.
+
+#### <a name="prevent-installation-of-apps-from-unknown-sources-on-android-enterprise-work-profile-devices----4760025-----"></a>Uniemożliwianie instalacji aplikacji z nieznanych źródeł na urządzeniach z profilami służbowymi systemu Android Enterprise <!-- 4760025   -->
+Na urządzeniach z profilami służbowymi systemu Android Enterprise użytkownicy nie mogą instalować aplikacji z nieznanych źródeł. W tej aktualizacji jest dostępne nowe ustawienie — **Uniemożliwianie instalacji aplikacji z nieznanych źródeł w profilu osobistym**. Domyślnie to ustawienie uniemożliwia użytkownikom bezpośrednie ładowanie aplikacji z nieznanych źródeł do profilu osobistego na urządzeniu.
+
+Aby wyświetlić ustawienie, które można skonfigurować, zobacz [Ustawienia urządzeń z systemem Android Enterprise w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune](../configuration/device-restrictions-android-for-work.md).
+
+Dotyczy:
+- Android Enterprise — profil służbowy
+
+#### <a name="create-a-global-http-proxy-on-android-enterprise-device-owner-devices----4816339-----"></a>Tworzenie globalnego serwera proxy HTTP na urządzeniach właściciela urządzenia z systemem Android Enterprise <!-- 4816339   -->
+Na urządzeniach z systemem Android Enterprise można skonfigurować globalny serwer proxy HTTP, aby spełniał standardy przeglądania Internetu w organizacji (**Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **Android Enterprise** dla platformy > **Właściciel urządzenia > Ograniczenia dotyczące urządzeń** dla typu profilu > **Łączność**). Po skonfigurowaniu cały ruch HTTP będzie używać tego serwera proxy.
+
+Aby skonfigurować tę funkcję i wyświetlić wszystkie ustawienia, które można skonfigurować, zobacz [Ustawienia urządzeń z systemem Android Enterprise w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune](../configuration/device-restrictions-android-for-work.md).
+
+Dotyczy:
+- Właściciel urządzenia z systemem Android Enterprise
+
+#### <a name="connect-automatically-setting-is-removed-in-wi-fi-profiles-on-android-device-administrator-and-android-enterprise----5021055-----"></a>Ustawienie Połącz automatycznie zostanie usunięte z profilów sieci Wi-Fi dla administratora urządzenia z systemem Android i systemu Android Enterprise <!-- 5021055   -->
+W przypadku administratora urządzenia z systemem Android i urządzeń z systemem Android Enterprise można utworzyć profil sieci Wi-Fi w celu skonfigurowania różnych ustawień (**Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **Administrator urządzenia z systemem Android** lub **Android Enterprise** dla platformy > **Wi-Fi** dla typu profilu). W ramach tej aktualizacji ustawienie **Połącz automatycznie** zostaje usunięte, ponieważ [nie jest obsługiwane przez system Android](https://developer.android.com/reference/android/net/wifi/WifiManager.html#enableNetwork%28int%2c%20boolean%29). 
+
+Jeśli to ustawienie jest używane w profilu sieci Wi-Fi, można zauważyć, że ustawienie**Połącz automatycznie**  nie działa. Nie trzeba podejmować żadnych działań, ale należy pamiętać, że to ustawienie zostaje usunięte z interfejsu użytkownika usługi Intune.
+
+Aby wyświetlić bieżące ustawienia, przejdź do pozycji [Ustawienia sieci Wi-Fi systemu Android](../configuration/wi-fi-settings-android.md) lub [Ustawienia sieci Wi-Fi systemu Android Enterprise](../configuration/wi-fi-settings-android-enterprise.md).
+
+Dotyczy:
+- Administrator urządzenia z systemem Android 
+- Android Enterprise
+
+
+#### <a name="new-device-configuration-settings-for-supervised-ios-and-ipados-devices----5199328-----"></a>Nowe ustawienia konfiguracji urządzenia dla urządzeń nadzorowanych z systemem iOS i iPadOS <!-- 5199328   -->
+Na urządzeniach z systemem iOS i iPadOS można utworzyć profil, aby ograniczyć funkcje i ustawienia na urządzeniach (**Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **iOS/iPadOS** dla platformy > **Ograniczenia urządzenia** dla typu profilu). W tej aktualizacji dostępne są nowe ustawienia, którymi można sterować: 
+- Dostęp do dysku sieciowego w aplikacji Pliki  
+- Dostęp do dysku USB w aplikacji Pliki 
+- Sieć Wi-Fi jest zawsze włączona 
+
+Aby zobaczyć te ustawienia, przejdź do tematu [Ustawienia urządzeń z systemem iOS umożliwiające działanie funkcji lub ich ograniczanie przy użyciu usługi Intune](../configuration/device-restrictions-ios.md).
+
+Dotyczy:
+- System iOS 13.0 i nowsze
+- System iPadOS 13.0 i nowsze
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-enrollment"></a>Rejestrowanie urządzeń
+
+#### <a name="specify-which-android-device-operating-system-versions-enroll-with-work-profile-or-device-administrator-enrollment----4350697-----"></a>Określenie, które wersje systemu operacyjnego urządzeń z systemem Android rejestrują się przy użyciu profilu służbowego lub rejestracji administratora urządzenia <!-- 4350697   -->
+Korzystając z ograniczeń typu urządzenia usługi Intune, można użyć wersji systemu operacyjnego urządzenia, aby określić, które urządzenia użytkownika będą używać rejestracji profilu służbowego systemu Android Enterprise lub rejestracji administratora urządzeń z systemem Android.  Aby uzyskać więcej informacji, zobacz [Konfigurowanie ograniczeń rejestracji](../enrollment/enrollment-restrictions-set.md).
+
+#### <a name="windows-autopilot-deployment-reports----3856172---"></a>Raporty wdrażania przy użyciu rozwiązania Windows Autopilot <!-- 3856172 -->
+Nowy raport wyszczególnia wszystkie urządzenia wdrożone przy użyciu rozwiązania Windows Autopilot. Aby uzyskać więcej informacji, zobacz [Raport wdrażania dla rozwiązania Autopilot](../enrollment/enrollment-autopilot.md#autopilot-deployments-report). Wdrażamy tę funkcję dla wszystkich klientów. Przewidujemy, że proces ten zakończy się do końca przyszłego tygodnia.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-management"></a>Zarządzanie urządzeniami
+
+#### <a name="new-restrictions-for-renaming-windows-devices----3478938----"></a>Nowe ograniczenia dotyczące zmiany nazw urządzeń z systemem Windows <!-- 3478938  -->
+Podczas zmiany nazwy urządzenia z systemem Windows należy przestrzegać nowych reguł:
+- Może mieć maksymalnie 15 znaków (nie może zajmować więcej niż 63 bajty i na końcu nie może być znaku null)
+- Nie może mieć wartości null ani być pustym ciągiem
+- Dozwolone znaki ASCII: Litery (a–z, A–Z), cyfry (0–9) i łączniki
+- Dozwolone znaki Unicode: znaki muszą mieć wartość co najmniej 0x80, muszą być prawidłowymi znakami UTF8, musi dać się je zamapować na nazwę IDN (tzn. funkcja RtlIdnToNameprepUnicode musi je pomyślnie przetworzyć; zobacz RFC 3492)
+- Nazwy nie mogą zawierać samych cyfr
+- W nazwie nie może być spacji
+- Niedozwolone znaki: { | } ~ [ \ ] ^ ' : ; < = > ? & @ ! " # $ % ` ( ) + / , . _ *)
+
+ Aby uzyskać więcej informacji, zobacz [Zmienianie nazwy urządzenia w usłudze Intune](../remote-actions/device-rename.md).
+
+### <a name="new-android-report-on-devices-overview-page----4924364---"></a>Nowy raport systemu Android na stronie Przegląd urządzeń <!-- 4924364 -->
+Nowy raport na stronie Przegląd urządzeń zawiera informacje o liczbie urządzeń z systemem Android zarejestrowanych w poszczególnych rozwiązaniach do zarządzania urządzeniami. Ten wykres przedstawia liczbę urządzeń z profilami służbowymi, w pełni zarządzanych, dedykowanych i zarejestrowanych przez administratora urządzeń. Aby wyświetlić raport, wybierz pozycję **Intune** > **Urządzenia** > **Przegląd**.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-security"></a>Zabezpieczenia urządzeń 
+
+#### <a name="pkcs-certificates-for-macos-----1333650---------"></a>Certyfikaty PKCS dla systemu macOS  <!-- 1333650       -->
+Teraz można już [używać certyfikatów PKCS z ](../protect/certficates-pfx-configure.md#create-a-pkcs-certificate-profile) systemem macOS. Certyfikat PKCS można wybrać jako typ profilu dla systemu macOS i wdrożyć certyfikaty użytkowników oraz urządzeń, które mają [niestandardowe pola podmiotu i alternatywnej nazwy podmiotu](../protect/certficates-pfx-configure.md#subject-name-format-for-macos).  
+
+Certyfikat PKCS dla systemu macOS obsługuje również nowe ustawienie _Zezwalaj na dostęp wszystkim aplikacjom_. Przy użyciu tego ustawienia można umożliwić wszystkim skojarzonym aplikacjom dostęp do klucza prywatnego certyfikatu.  Aby uzyskać więcej informacji na temat tego ustawienia, zobacz dokumentację firmy Apple dostępną po adresem https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf.
+
+####   <a name="derived-credentials-to-provision-ios-mobile-devices-with-certificates----------1736036-1736037-1772050-2777333-----------"></a>Pochodne poświadczenia do aprowizowania urządzeń przenośnych z systemem iOS przy użyciu certyfikatów      <!--  1736036, 1736037, 1772050, 2777333         -->  
+Usługa Intune obsługuje możliwość używania [poświadczeń pochodnych](../protect/derived-credentials.md) jako metody uwierzytelniania oraz do podpisywania i szyfrowania przy użyciu protokołu S/MIME dla urządzeń z systemem iOS. Poświadczenia pochodne to implementacja normy *NIST (National Institute of Standards and Technology) 800-157*  na potrzeby wdrażania certyfikatów na urządzeniach.  
+
+Poświadczenia pochodne polegają na wykorzystaniu karty weryfikacji tożsamości osobistej (PIV) lub karty Common Access Card (CAC), takiej jak karta inteligentna. Aby uzyskać poświadczenie pochodne dla swojego urządzenia przenośnego, użytkownicy uruchamiają aplikację Portal firmy i postępują zgodnie z przepływem pracy rejestracji unikatowym dla wykorzystywanego dostawcy.  Wspólne dla wszystkich dostawców jest wymaganie dotyczące użycia karty inteligentnej na komputerze w celu uwierzytelnienia się u dostawcy poświadczeń pochodnych. Ten dostawca wystawia certyfikat dla urządzenia określonego na podstawie karty inteligentnej użytkownika.  
+
+Usługa Intune obsługuje następujących dostawców poświadczeń pochodnych:   
+- DISA Purebred
+- Entrust Datacard
+- Intercede
+
+Poświadczenia pochodne są używane jako metoda uwierzytelniania dla profilów konfiguracji urządzeń dla sieci VPN, sieci Wi-Fi i poczty e-mail. Można ich również używać do uwierzytelniania aplikacji oraz podpisywania i szyfrowania za pomocą protokołu S/MIME.  
+
+Aby uzyskać więcej informacji na temat tej normy, zobacz [Poświadczenia pochodne PIV](https://www.nccoe.nist.gov/projects/building-blocks/piv-credentials) pod adresem www.nccoe.nist.gov.
+
+#### <a name="use-graph-api-to-specify-a-on-premises-user-principal-name-as-a-variable-for-scep-certificates--------5437939----------"></a>Użyj interfejsu API programu Graph, aby określić nazwę główną użytkownika lokalnego jako zmienną dla certyfikatów SCEP    <!--  5437939        -->  
+W przypadku używania [interfejsu API programu Graph usługi Intune](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-1.0) można określić onPremisesUserPrincipalName jako zmienną dla alternatywnej nazwy podmiotu (SAN) na potrzeby certyfikatów SCEP.
+
+
 
 <!-- ########################## -->
 
 ## <a name="week-of-september-23-2019"></a>Tydzień od 23 września 2019 r.
 
 #### <a name="ios-user-enrollment-in-preview----4817900---"></a>Rejestrowanie użytkownika systemu iOS w wersji zapoznawczej <!-- 4817900 -->
-System iOS w wersji 13.1 firmy Apple obejmuje rejestrowanie użytkownika, nową formę uproszczonego zarządzania urządzeniami z systemem iOS. Można z niego korzystać zamiast z rejestrowania urządzeń lub automatycznego rejestrowania urządzeń (dawniej Device Enrollment Program) w przypadku urządzeń należących do użytkownika. Wersja zapoznawcza usługi Intune obsługuje ten zestaw funkcji, umożliwiając:
+System iOS w wersji 13.1 firmy Apple obejmuje rejestrowanie użytkownika, nową formę uproszczonego zarządzania urządzeniami z systemem iOS. Można z niego korzystać zamiast z rejestrowania urządzeń lub automatycznego rejestrowania urządzeń (dawniej Device Enrollment Program) w przypadku urządzeń należących do użytkownika. Wersja zapoznawcza usługi Intune obsługuje ten zestaw funkcji, co pozwala na:
 
-- ukierunkowanie rejestrowania użytkownika na grupy użytkowników.
-- Daj użytkownikom końcowym możliwość wyboru między uproszczonym rejestrowaniem użytkownika lub silniejszym rejestrowaniem urządzeń podczas rejestrowania urządzeń.
+- Ukierunkowanie rejestrowania użytkownika na grupy użytkowników.
+- Umożliwienie użytkownikom końcowym wyboru między uproszczonym rejestrowaniem użytkownika a silniejszym rejestrowaniem urządzeń podczas rejestrowania urządzeń.
 
 Od 24 września 2019 r. wraz z wprowadzeniem systemu iOS w wersji 13.1 wdrażamy te aktualizacje dla wszystkich klientów. Przewidujemy, że proces ten zakończy się do końca przyszłego tygodnia.
 Dotyczy:
@@ -69,7 +232,7 @@ Dotyczy:
 System iOS 13.1 lub nowszy
 
 #### <a name="intune-support-for-ipados-and-ios-131-devices---5439574--"></a>Obsługa usługi Intune dla urządzeń z systemami iPadOS i iOS 13.1 <!--5439574-->
-Usługa Intune obsługuje obecnie zarządzanie zarówno urządzeniami z systemem iPadOS jak i iOS 13.1. Aby uzyskać więcej informacji, zobacz [ten wpis w blogu](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Support-for-iOS-13-1-and-iPadOS/ba-p/873094).
+Usługa Intune obsługuje obecnie zarządzanie zarówno urządzeniami z systemem iPadOS, jak i iOS 13.1. Aby uzyskać więcej informacji, zobacz [ten wpis w blogu](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Support-for-iOS-13-1-and-iPadOS/ba-p/873094).
 
 <!-- ########################## -->
 
@@ -367,7 +530,7 @@ Dotyczy:
 #### <a name="deadlines-replace-engaged-restart-settings-for-windows-update-rings------4464404----------"></a>Terminy ostateczne zastępują ustawienia ponownego uruchamiania wymagającego interwencji użytkownika dla pierścieni witryny Windows Update   <!-- 4464404        -->
 W celu dostosowana do najnowszych [zmian obsługi systemu Windows](https://docs.microsoft.com/windows/whats-new/whats-new-windows-10-version-1903#servicing) pierścienie aktualizacji systemu Windows 10 w usłudze Intune [obsługują teraz ustawienia terminów ostatecznych](../protect/windows-update-settings.md). *Terminy ostateczne* określają, kiedy urządzenie instaluje aktualizacje dotyczące funkcji i zabezpieczeń.  Na urządzeniach z systemem Windows 10 1903 lub nowszym *terminy ostateczne* zastępują konfiguracje *ponownego uruchamiania wymagającego interwencji użytkownika*.  W przyszłości *terminy ostateczne* zastąpią również *ponowne uruchamianie wymagające interwencji użytkownika* w starszych wersjach systemu Windows 10.  
 
-Jeśli nie skonfigurujesz *terminów ostatecznych*, urządzenia będą nadal używać ustawień *ponownego uruchamiania wymagającego interwencji użytkownika*, ale [obsługa ustawień ponownego uruchamiania wymagającego interwencji użytkownika w usłudze Intune zostanie wycofana](whats-new.md#plan-for-change-new-windows-updates-settings-in-intune-) w przyszłej aktualizacji.  
+Jeśli nie skonfigurujesz *terminów ostatecznych*, urządzenia będą nadal używać ustawień *ponownego uruchamiania wymagającego interwencji użytkownika*, ale obsługa ustawień ponownego uruchamiania wymagającego interwencji użytkownika w usłudze Intune zostanie wycofana w przyszłej aktualizacji.  
 
 Zaplanuj używanie *terminów ostatecznych* dla wszystkich urządzeń z systemem Windows 10. Po wprowadzeniu ustawień *terminów ostatecznych* można zmienić konfiguracje usługi Intune pod kątem *ponownego uruchamiania wymagającego interwencji użytkownika* na Nieskonfigurowane. Po ustawieniu opcji na Nieskonfigurowane usługa Intune przestanie zarządzać tymi ustawieniami na urządzeniach, ale nie usunie ostatnich konfiguracji ustawienia z urządzenia. Z tego względu ostatnie konfiguracje, które zostały ustawione na potrzeby *ponownego uruchamiania wymagającego interwencji użytkownika*, pozostają aktywne i są używane na urządzeniach, dopóki te ustawienia nie zostaną zmodyfikowane przy użyciu metody innej niż usługa Intune. Później w przypadku zmiany wersji systemu Windows lub rozszerzenia obsługi usługi Intune na potrzeby *terminów ostatecznych* na wersję systemu Windows urządzeń urządzenie rozpocznie korzystanie z nowych ustawień, które zostały już wprowadzone.
 

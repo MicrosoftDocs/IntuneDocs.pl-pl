@@ -2,12 +2,13 @@
 title: Tworzenie zasad zgodności urządzeń w usłudze Microsoft Intune — Azure | Microsoft Docs
 description: Tworzenie zasad zgodności urządzeń, omówienie stanu i poziomów ważności, korzystanie ze stanu InGracePeriod, praca z dostępem warunkowym, obsługa urządzeń bez przypisanych zasad oraz różnice w zgodności między witryną Azure Portal i portalem klasycznym w usłudze Microsoft Intune
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 10/09/2019
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: samyada
@@ -15,16 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ec8003264c28ea40d53731c8fb8c3eddef7fded
-ms.sourcegitcommit: dd6755383ba89824d1cc128698a65fde6bb2de55
+ms.openlocfilehash: 76998c32f09b20e624359cc8a38231e14a70399b
+ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72306582"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72786074"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Tworzenie zasad zgodności w usłudze Microsoft Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Zasady zgodności urządzeń to kluczowa funkcja w przypadku ochrony zasobów organizacji za pomocą usługi Intune. W usłudze Intune możesz utworzyć reguły, które muszą być spełniane przez urządzenia, i ustawienia, które muszą być na nich określone, aby można je było uznać za zgodne, np. minimalna wersja systemu operacyjnego. Jeśli urządzenie nie jest zgodne, możesz zablokować dostęp do danych i zasobów przy użyciu [dostępu warunkowego](conditional-access.md).
 
@@ -48,10 +47,10 @@ Aby korzystać z zasad zgodności urządzeń, upewnij się, że spełniono nast�
 
 - Użyj obsługiwanej platformy:
 
-  - Android
+  - Administrator urządzenia z systemem Android
   - Android Enterprise
   - iOS
-  - macOS (wersja zapoznawcza)
+  - macOS
   - Windows 10
   - Windows 8.1
   - Windows Phone 8,1
@@ -72,26 +71,40 @@ Aby korzystać z zasad zgodności urządzeń, upewnij się, że spełniono nast�
 
 3. Wybierz pozycję **Zasady** > **Utwórz zasady**. Wprowadź następujące właściwości:
 
-    - **Nazwa**: wprowadź opisową nazwę zasad. Nadaj nazwę zasadom, aby można było je później łatwo rozpoznać. Na przykład dobrą nazwą zasad jest **Oznaczanie urządzeń ze zdjętymi zabezpieczeniami systemu iOS jako niezgodnych**.
-    - **Opis**: wprowadź opis zasad. To ustawienie jest opcjonalne, ale zalecane.
-    - **Platforma**: Wybierz platformę urządzeń. Dostępne opcje:  
+   - **Nazwa**: wprowadź opisową nazwę zasad. Nadaj nazwę zasadom, aby można było je później łatwo rozpoznać. Na przykład dobrą nazwą zasad jest **Oznaczanie urządzeń ze zdjętymi zabezpieczeniami systemu iOS jako niezgodnych**.  
 
-       - **Android**
-       - **Android enterprise**
-       - **iOS**
-       - **macOS**
-       - **Windows Phone 8.1**
-       - **Windows 8.1 lub nowszy**
-       - **Windows 10 lub nowszy**
+   - **Opis**: wprowadź opis zasad. To ustawienie jest opcjonalne, ale zalecane.  
 
-    - **Ustawienia**: listę i opis poszczególnych typów profilów można znaleźć w następujących artykułach:
+   - **Platforma**: Wybierz platformę urządzeń. Dostępne opcje:
+     - **Administrator urządzenia z systemem Android**
+     - **Android Enterprise**
+     - **iOS/iPadOS**
+     - **macOS**
+     - **Windows Phone 8.1**
+     - **Windows 8.1 lub nowszy**
+     - **Windows 10 lub nowszy**
 
-        - [Android](compliance-policy-create-android.md)
-        - [Android Enterprise](compliance-policy-create-android-for-work.md)
-        - [iOS](compliance-policy-create-ios.md)
-        - [macOS](compliance-policy-create-mac-os.md)
-        - [Windows Phone 8.1, Windows 8.1 lub nowszy](compliance-policy-create-windows-8-1.md)
-        - [Windows 10 lub nowszy](compliance-policy-create-windows.md)
+     W przypadku systemu *Android Enterprise* należy wybrać pozycję **Typ profilu**:
+     - **Właściciel urządzenia**
+     - **Profil służbowy**
+
+   - **Ustawienia**: listę i opis poszczególnych typów profilów można znaleźć w następujących artykułach:
+     - [Administrator urządzenia z systemem Android](compliance-policy-create-android.md)
+     - [Android Enterprise](compliance-policy-create-android-for-work.md)
+     - [iOS/iPadOS](compliance-policy-create-ios.md)
+     - [macOS](compliance-policy-create-mac-os.md)
+     - [Windows Phone 8.1, Windows 8.1 lub nowszy](compliance-policy-create-windows-8-1.md)
+     - [Windows 10 lub nowszy](compliance-policy-create-windows.md)  
+
+   - **Lokalizacje** *(Administrator urządzenia z systemem Android)* : Używając zasad, możesz wymuszać zgodność urządzenia na podstawie lokalizacji. Wybierz jedną z istniejących lokalizacji. Nie masz jeszcze lokalizacji? Wskazówki możesz znaleźć w artykule [Korzystanie z lokalizacji (ogrodzenia sieci) w usłudze Intune](use-network-locations.md).  
+
+   - **Akcje w przypadku niezgodności**: W przypadku urządzeń niespełniających zasad zgodności możesz dodać sekwencję akcji do automatycznego zastosowania. Ten harmonogram oznaczania urządzenia jako niezgodnego możesz zmienić (np. oznaczać je po jednym dniu). Możesz również skonfigurować drugą akcję, która wysyła wiadomość e-mail do użytkownika, gdy urządzenie nie jest zgodne.
+    
+     Sekcja dotycząca [dodawania akcji dla niezgodnych urządzeń](actions-for-noncompliance.md) zawiera więcej informacji, między innymi o tworzeniu wiadomości e-mail z powiadomieniem do użytkowników.
+
+     Na przykład używasz funkcji Lokalizacje i dodasz lokalizację w zasadach zgodności. Domyślna akcja w przypadku niezgodności jest stosowana, gdy zostanie wybrana co najmniej jedna lokalizacja. Jeśli urządzenie nie jest połączone z wybranymi lokalizacjami, jest natychmiast uznawane za niezgodne. Użytkownikom można przyznać okres prolongaty, np. jeden dzień.
+
+   - **Zakres (tagi)** : Tagi zakresu to doskonały sposób przypisywania i filtrowania zasad do określonych grup, takich jak pracownicy działu kadr lub sprzedaży albo wszyscy pracownicy w stanie Północna Karolina w USA itd. Po dodaniu ustawień możesz również dodać tag zakresu do zasad zgodności. Pomocnym zasobem jest artykuł [Używanie tagów zakresu do filtrowania zasad](../fundamentals/scope-tags.md).
 
 4. Po zakończeniu wybierz pozycję **OK**  >  **Utwórz**, aby zapisać zmiany. Zasady zostaną utworzone i wyświetlone na liście. Następnie przypisz zasady do grup.
 
@@ -114,17 +127,18 @@ Po przypisaniu zasad możesz również **ocenić**, ilu użytkowników jest uwzg
 
 Jeśli przycisk **Oceń** jest szary, upewnij się, że zasady zostały przypisane do co najmniej jednej grupy.
 
-## <a name="actions-for-noncompliance"></a>Akcje w przypadku niezgodności
+<!-- ## Actions for noncompliance
 
-W przypadku urządzeń niespełniających zasad zgodności możesz dodać sekwencję akcji do automatycznego zastosowania. Ten harmonogram oznaczania urządzenia jako niezgodnego możesz zmienić (np. oznaczać je po jednym dniu). Możesz również skonfigurować drugą akcję, która wysyła wiadomość e-mail do użytkownika, gdy urządzenie nie jest zgodne.
+For devices that don't meet your compliance policies, you can add a sequence of actions to apply automatically. You can change the schedule when the device is marked non-compliant, such as after one day. You can also configure a second action that sends an email to the user when the device isn't compliant.
 
-Sekcja dotycząca [dodawania akcji dla niezgodnych urządzeń](actions-for-noncompliance.md) zawiera więcej informacji, między innymi o tworzeniu wiadomości e-mail z powiadomieniem do użytkowników.
+[Add actions for noncompliant devices](actions-for-noncompliance.md) provides more information, including creating a notification email to your users.
 
-Na przykład używasz funkcji Lokalizacje i dodasz lokalizację w zasadach zgodności. Domyślna akcja w przypadku niezgodności jest stosowana, gdy zostanie wybrana co najmniej jedna lokalizacja. Jeśli urządzenie nie jest połączone z wybranymi lokalizacjami, jest natychmiast uznawane za niezgodne. Użytkownikom można przyznać okres prolongaty, np. jeden dzień.
+For example, you're using the Locations feature, and add a location in a compliance policy. The default action for noncompliance applies when you select at least one location. If the device isn't connected to the selected locations, it's immediately considered not compliant. You can give your users a grace period, such as one day.
 
-## <a name="scope-tags"></a>Tagi zakresu
+## Scope tags
 
-Tagi zakresu to doskonały sposób przypisywania i filtrowania zasad do określonych grup, takich jak pracownicy działu kadr lub sprzedaży albo wszyscy pracownicy w stanie Północna Karolina w USA itd. Po dodaniu ustawień możesz również dodać tag zakresu do zasad zgodności. Pomocnym zasobem jest artykuł [Używanie tagów zakresu do filtrowania zasad](../fundamentals/scope-tags.md).
+Scope tags are a great way to assign and filter policies to specific groups, such as Sales, HR, All US-NC employees, and so on. After you add the settings, you can also add a scope tag to your compliance policies. [Use scope tags to filter policies](../fundamentals/scope-tags.md) is a good resource.
+-->
 
 ## <a name="refresh-cycle-times"></a>Czasy cyklu odświeżania
 

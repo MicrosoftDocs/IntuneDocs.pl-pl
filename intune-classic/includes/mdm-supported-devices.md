@@ -1,16 +1,18 @@
 ---
-ms.openlocfilehash: f7916bc38be085625f5a65d7889212827bcae5d3
-ms.sourcegitcommit: 45d7c76e760c5117bf134fb57f7e248e5b6c4ad5
+ms.openlocfilehash: 748174ded8e8331c032ffd9f3b70b2c09b724f85
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314611"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72601052"
 ---
 ### <a name="apple"></a>Apple
-- System Apple iOS i iPadOS 9.0 lub nowszy
+
+- System Apple iOS i iPadOS 10.0 lub nowszy
 - System Mac OS X 10.9 lub nowszy
 
 ### <a name="windows"></a>Windows
+
 - Komputery z systemem Windows 10 (wersje Home, Pro, Education i Enterprise)
 - Windows 10 Mobile
 - Urządzenia z systemem Windows 10 IoT Enterprise (x86, x64)
@@ -23,6 +25,7 @@ ms.locfileid: "72314611"
   [Klient oprogramowania usługi Intune](/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune) umożliwia też zarządzanie komputerami z systemem Windows 7 lub nowszym, z wyjątkiem systemu Windows 10 Home Edition.
 
 ### <a name="google"></a>Google
+
 - System Google Android 4.0 lub nowszy (w tym system Samsung KNOX Standard w wersji 4.0 lub nowszej)*
 - Program Google Android for Work ([wymagania](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012 style="target=new_window"))
 

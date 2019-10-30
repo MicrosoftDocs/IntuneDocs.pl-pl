@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 08/01/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 7fc95d17-098e-4da5-8a09-a96476569dd9
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c4d40d3f15fe23511f3f15f7c13181a0fa72f6b
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 91627a47f9dccfb436e64aaadeeb392648dff821
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71726521"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72585298"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune  
 
@@ -82,7 +83,7 @@ Aby uzyskać dostęp do pomocy i obsługi technicznej, użyj następujących opc
   4. Użyj linku do strony Pomoc i obsługa techniczna usługi Intune.
 
 > [!NOTE]  
-> Jeśli Twoje wystąpienie usługi Intune jest hostowane w chmurze dla instytucji rządowych (GCC, ang. Government Compute Cloud), zwanej również suwerenną chmurą, taką jak Azure Government, zobacz Pomoc techniczna usługi Intune dla chmury dla instytucji rządowych w dalszej części tego artykułu. Środowisko *Pomoc i obsługa techniczna* usługi Intune będzie dostępne dla chmury GCC później w tym roku. 
+> Jeśli Twoje wystąpienie usługi Intune jest hostowane w chmurze prywatnej dla instytucji rządowych, zwanej również suwerenną chmurą, takiej jak Azure Government, zobacz [Pomoc techniczna usługi Intune dla chmury prywatnej dla instytucji rządowych](#intune-support-for-private-cloud-for-government) w dalszej części tego artykułu. Środowisko *Pomoc i obsługa techniczna* usługi Intune będzie dostępne w prywatnej chmurze dla instytucji rządowych później w tym roku. 
 
 
 Widok, który zostaje wyświetlony w portalu po otwarciu sekcji *Pomoc i obsługa techniczna*, zależy od tego, czy masz aktywne zdarzenia pomocy technicznej; jeśli korzystasz z pomocy technicznej typu Premier, zobaczysz pewne dodatkowe elementy i opcje:
@@ -162,20 +163,20 @@ Wybierz przycisk historii, aby wyświetlić utworzone przez siebie zdarzenia pom
 
 W przypadku użycia opcji **Pomoc i obsługa techniczna** w okienku nawigacji po lewej stronie lub skorzystania z ikony **?** w prawym górnym rogu witryny Azure Portal można otworzyć środowisko pomocy i obsługi technicznej platformy Azure, które różni się od środowiska pomocy i obsługi technicznej usługi Intune.  
 
-Od kwietnia 2019 roku nie możesz uzyskać dostępu do *pomocy i obsługi technicznej* platformy Azure w otrzymania pomocy dotyczącej usługi Intune, chyba że Twoja subskrypcja znajduje się w chmurze dla instytucji rządowych (GCC).  
+Od kwietnia 2019 roku nie możesz uzyskać dostępu do *pomocy i obsługi technicznej* platformy Azure w otrzymaniu pomocy dotyczącej usługi Intune, chyba że Twoja subskrypcja znajduje się w prywatnej chmurze dla instytucji rządowych.  
 
-Jeśli Twoje wystąpienie usługi Intune nie działa w GCC, próba przejścia do *pomocy i obsługi technicznej* platformy Azure spowoduje przekierowanie do środowiska *pomocy i obsługi technicznej* usługi Intune w celu umożliwienia utworzenia zdarzeń pomocy technicznej i zarządzania nimi.  
+Jeśli Twoje wystąpienie usługi Intune nie działa w prywatnej chmurze dla instytucji rządowych, próba przejścia do *pomocy i obsługi technicznej* platformy Azure spowoduje przekierowanie do środowiska *Pomoc i obsługa techniczna* usługi Intune w celu umożliwienia utworzenia zdarzeń pomocy technicznej i zarządzania nimi.  
 
 
-## <a name="intune-support-for-government-compute-cloud"></a>Obsługa Intune w chmurze dla instytucji rządowych  
+## <a name="intune-support-for-private-cloud-for-government"></a>Pomoc techniczna usługi Intune dla chmury prywatnej dla instytucji rządowych  
 
-Jeśli masz subskrypcję usługi Intune hostowaną w chmurze dla instytucji rządowych (zwanej również chmurą suwerenną), takiej jak Azure Government, nie masz jeszcze dostępu do nowszej wersji środowiska pomocy i obsługi technicznej usługi Intune.  Możesz za to uzyskać pomoc techniczną dotyczącą usługi Intune, korzystając z poniższych informacji. 
+Jeśli masz subskrypcję usługi Intune hostowaną w prywatnej chmurze dla instytucji rządowych (zwanej również chmurą suwerenną), takiej jak Azure Government, nie masz jeszcze dostępu do nowszej wersji środowiska pomocy i obsługi technicznej usługi Intune.  Możesz za to uzyskać pomoc techniczną dotyczącą usługi Intune, korzystając z poniższych informacji. 
 
 
 ### <a name="create-an-online-support-ticket"></a>Tworzenie biletu pomocy technicznej online 
 
 >[!IMPORTANT]    
-> Dla usługi *pomocy i obsługi technicznej* następuje przejście na nowy system, który nie jest jeszcze dostępny dla chmury GCC; gdy zostanie utworzone zdarzenie pomocy technicznej, portal nada zgłoszeniu do pomocy technicznej 15-cyfrowy numer identyfikacyjny. Gdy zostanie utworzony 15-cyfrowy numer identyfikacyjny, pomoc techniczna firmy Microsoft utworzy duplikat zgłoszenia do pomocy technicznej. Duplikat zostaje utworzony w nowym systemie pomocy technicznej, korzysta z 8-cyfrowego identyfikatora zgłoszenia do pomocy technicznej i jest używany przez usługi pomocy technicznej do śledzenia całej aktywności i komunikacji dotyczących danego zdarzenia pomocy technicznej. Wkrótce po utworzeniu 15-cyfrowego identyfikatora zgłoszenia do pomocy technicznej otrzymasz wiadomość e-mail z 8-cyfrowym identyfikatorem duplikatu zgłoszenia do pomocy technicznej, który jest używany przez personel pomocy technicznej.  
+> Dla środowiska *pomocy i obsługi technicznej* następuje przejście na nowy system, który nie jest jeszcze dostępny dla prywatnej chmury dla instytucji rządowych; gdy zostanie utworzone zdarzenie pomocy technicznej, portal nada zgłoszeniu do pomocy technicznej 15-cyfrowy numer identyfikacyjny. Gdy zostanie utworzony 15-cyfrowy numer identyfikacyjny, pomoc techniczna firmy Microsoft utworzy duplikat zgłoszenia do pomocy technicznej. Duplikat zostaje utworzony w nowym systemie pomocy technicznej, korzysta z 8-cyfrowego identyfikatora zgłoszenia do pomocy technicznej i jest używany przez usługi pomocy technicznej do śledzenia całej aktywności i komunikacji dotyczących danego zdarzenia pomocy technicznej. Wkrótce po utworzeniu 15-cyfrowego identyfikatora zgłoszenia do pomocy technicznej otrzymasz wiadomość e-mail z 8-cyfrowym identyfikatorem duplikatu zgłoszenia do pomocy technicznej, który jest używany przez personel pomocy technicznej.  
 > 
 > Zespół pomocy technicznej posługuje się w swoich działaniach i w przesyłanych przez siebie wiadomościach zgłoszeniem do pomocy technicznej z 8-cyfrowym identyfikatorem i używa jego numeru wyłącznie do rejestrowania wiadomości oraz postępów dotyczących zdarzenia. W związku z tym będziesz otrzymywać wiadomości e-mail dotyczące zgłoszenia do pomocy technicznej z 8-cyfrowym identyfikatorem, który będzie używany do rejestrowania działań wykonywanych w związku z danym zgłoszeniem do pomocy technicznej. Dla zdarzenia obsługi technicznej z 15-cyfrowym identyfikatorem nie są rejestrowane szczegółowe informacje. Po zakończeniu świadczenia pomocy i obsługi technicznej zgłoszenie do pomocy technicznej z 8-cyfrowym identyfikatorem zostaje zamknięte, a jego stan zostaje uwzględniony w zgłoszeniu z 15-cyfrowym identyfikatorem, które możesz wyświetlić w witrynie Azure Portal.  Nie należy spodziewać się innych zmian ani aktualizacji stanu dla zgłoszenia do pomocy technicznej z 15-cyfrowym identyfikatorem.  
 > 
@@ -223,7 +224,7 @@ Jeśli masz subskrypcję usługi Intune hostowaną w chmurze dla instytucji rzą
 2. Na stronie **Pomoc i obsługa techniczna** możesz przejrzeć listę **Najnowsze żądania pomocy technicznej**.
 
    > [!IMPORTANT]  
-   > Klienci korzystający z chmury dla instytucji rządowych mogą wyświetlić wyłącznie 15-cyfrowy identyfikator zgłoszenia do pomocy technicznej oraz status zdarzenia. Wszystkie wiadomości dotyczące zgłoszenia do pomocy technicznej oraz rejestr dotyczących go działań lub alertów są wysyłane pocztą e-mail i oznaczone 8-cyfrowym identyfikatorem zgłoszenia do pomocy technicznej utworzonego jako duplikat zgłoszenia otwartego z poziomu konsoli Intune.   
+   > Klienci korzystający z prywatnej chmury dla instytucji rządowych mogą wyświetlić wyłącznie 15-cyfrowy identyfikator zgłoszenia do pomocy technicznej oraz status zdarzenia. Wszystkie wiadomości dotyczące zgłoszenia do pomocy technicznej oraz rejestr dotyczących go działań lub alertów są wysyłane pocztą e-mail i oznaczone 8-cyfrowym identyfikatorem zgłoszenia do pomocy technicznej utworzonego jako duplikat zgłoszenia otwartego z poziomu konsoli Intune.   
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby  
 

@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 5/21/2018
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: enrollment
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
@@ -16,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ed71676b434dfe30c7591ad3a3391d2252c3275d
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 8b2ce91cea1fdef211a8e6a9dc1c19086f355385
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71722335"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72585275"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Rejestracja zbiorcza urządzeń z systemem Windows
 
@@ -89,6 +90,8 @@ Aprowizacja to funkcja przeznaczona do użycia na nowych urządzeniach z systeme
 
 - Pakiet aprowizacyjny, który próbuje przyłączyć urządzenie do domeny usługi Active Directory lub dzierżawy usługi Azure Active Directory, która nie tworzy konta lokalnego, może spowodować, że urządzenie będzie nieosiągalne w przypadku niepowodzenia procesu przyłączania do domeny w wyniku braku łączności sieciowej.
 - Skrypty są uruchamiane przez pakiet aprowizacyjny w kontekście systemu. Skrypty mogą wprowadzać dowolne zmiany w systemie plików i konfiguracji urządzenia. Złośliwy lub nieprawidłowy skrypt może spowodować, że urządzenie znajdzie się w stanie, którego naprawienie będzie wymagać odtwarzania z obrazu lub wyczyszczenia danych z urządzenia.
+
+Poprawność ustawień w pakiecie możesz sprawdzić w dzienniku administratora **Provisioning-Diagnostics-Provider** w programie Podgląd zdarzeń.
 
 ### <a name="bulk-enrollment-with-wi-fi"></a>Rejestrowanie zbiorcze za pomocą sieci Wi-Fi 
 

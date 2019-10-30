@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 02/22/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
@@ -16,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e27997b45f0a68f6eb9247c69fafc363787fb457
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: b775bb09c289733cdc2837984874b7c1c7e286bc
+ms.sourcegitcommit: 1a5b185acd27954b10b6d59409d82eb80fd71284
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71722595"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72681367"
 ---
 # <a name="create-a-device-based-conditional-access-policy"></a>Tworzenie zasad dostępu warunkowego opartego na urządzeniach
 
@@ -61,7 +62,7 @@ Zasady dostępu warunkowego określają aplikację lub usługi, które chcesz ch
 
     - **Wybierz aplikacje**: wybierz tę opcję, wybierz pozycję **Wybierz**, a następnie wyszukaj i wybierz aplikacje lub usługi do objęcia ochroną na liście aplikacji.
     
-      ![Tworzenie nowych zasad dostępu warunkowego](./media/create-conditional-access-intune/create-ca-select-apps.png)
+      ![Konfigurowanie przypisań dla zasad dostępu warunkowego](./media/create-conditional-access-intune/create-ca-select-apps.png)
 
 7. Wybierz pozycję **Gotowe**.
 8. W obszarze **Przypisania** wybierz pozycję **Warunki**.
@@ -71,7 +72,7 @@ Zasady dostępu warunkowego określają aplikację lub usługi, które chcesz ch
     - **Aplikacje klienckie**: wybierz pozycję **Tak**, aby określić, czy zasady powinny być stosowane względem aplikacji przeglądarki, aplikacji mobilnych i klientów stacjonarnych. Możesz również wybrać pozycję **Nowocześni klienci uwierzytelniania** (np. program Outlook dla systemu iOS lub program Outlook dla systemu Android) oraz pozycję **Klienci programu Exchange ActiveSync**.
     - **Stan urządzenia**: zasady dostępu warunkowego będą stosowane do wszystkich stanów urządzeń, chyba że wybierzesz pozycję Tak i wykluczysz stany Urządzenie dołączone do hybrydowej usługi Azure AD albo Urządzenie oznaczone jako zgodne (lub obydwa).
     
-      ![Tworzenie nowych zasad dostępu warunkowego](./media/create-conditional-access-intune/create-ca-device-platforms.png)
+      ![Ustawianie warunków dla zasad dostępu warunkowego](./media/create-conditional-access-intune/create-ca-device-platforms.png)
 
       > [!TIP]  
       > Jeśli chcesz chronić **nowoczesnych klientów uwierzytelniania** i **klientów programu Exchange ActiveSync**, utwórz dwie oddzielne zasady dostępu warunkowego, jedną dla każdego typu klienta. Mimo że program Exchange ActiveSync obsługuje nowoczesne uwierzytelnianie, jedynym warunkiem obsługiwanym przez program Exchange ActiveSync jest platforma. Inne warunki, w tym uwierzytelnianie wieloskładnikowe, nie są obsługiwane. Aby skutecznie chronić dostęp do usługi Exchange Online z programu Exchange ActiveSync, utwórz zasady dostępu warunkowego określające aplikację w chmurze Office 365 Exchange Online i aplikację kliencką programu Exchange ActiveSync z wybraną opcją Zastosuj zasady tylko do obsługiwanych platform.

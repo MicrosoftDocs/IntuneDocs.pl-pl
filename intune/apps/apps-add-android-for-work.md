@@ -6,9 +6,10 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/18/2019
+ms.date: 10/10/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 2f6c06bf-e29a-4715-937b-1d2c7cf663d4
@@ -17,23 +18,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dbcc777cc6d8b803c502d847114ef7cff04ceb26
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 3137db9d1ab82ebb99686f8f98aa768dae222caf
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71725338"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72584956"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Dodawanie zarządzanych aplikacji ze sklepu Google Play do urządzeń z systemem Android Enterprise z usługą Intune
 
-Zarządzany sklep Google Play to sklep firmy Google a aplikacjami klasy korporacyjnej oraz jedyne źródło aplikacji do urządzeń z systemem Android Enterprise. Za pomocą usługi Intune można organizować wdrażanie aplikacji za pomocą zarządzanego sklepu Google Play w przypadku dowolnego scenariusza z systemem Android Enterprise (w tym profilu służbowego, dedykowanych oraz w pełni zarządzanych rejestracji). Sposób dodawania aplikacji z zarządzanego sklepu Google Play do usługi Intune różni się od sposobu dodawania aplikacji do systemu Android nieprzeznaczonego dla firm. Aplikacje ze sklepu, biznesowe oraz sieciowe, są zatwierdzane w sklepie Google Play lub do niego dodawane, a następnie synchronizowane z usługą Intune, aby pojawiły się na liście aplikacji klienckich. Gdy aplikacje pojawią się na liście aplikacji klienckich, można zarządzać ich przypisaniami z zarządzanego sklepu Google Play, tak jak w przypadku każdej innej aplikacji.
+Zarządzany sklep Google Play to sklep firmy Google z aplikacjami klasy korporacyjnej oraz jedyne źródło aplikacji do urządzeń z systemem Android Enterprise. W usłudze Intune można organizować wdrażanie aplikacji za pomocą zarządzanego sklepu Google Play w przypadku dowolnego scenariusza systemu Android Enterprise (w tym profilu służbowego, dedykowanych oraz w pełni zarządzanych rejestracji). Sposób dodawania aplikacji z zarządzanego sklepu Google Play do usługi Intune różni się od sposobu dodawania aplikacji do systemu Android nieprzeznaczonego dla firm. Aplikacje ze sklepu, biznesowe oraz sieciowe, są zatwierdzane w sklepie Google Play lub do niego dodawane, a następnie synchronizowane z usługą Intune, aby pojawiły się na liście aplikacji klienckich. Gdy aplikacje pojawią się na liście aplikacji klienckich, można zarządzać ich przypisaniami z zarządzanego sklepu Google Play, tak jak w przypadku każdej innej aplikacji.
 
-Aby ułatwić konfigurowanie i używanie zarządzania systemem Android Enterprise, po połączenia dzierżawcy usługi Intune z zarządzanym sklepem Google Play usługa Intune automatycznie doda do konsoli administracyjnej cztery popularne aplikacje powiązane z systemem Android Enterprise. Są to następujące cztery aplikacje:
+Aby ułatwić Ci konfigurowanie i używanie funkcji zarządzania systemem Android Enterprise, po połączeniu dzierżawy usługi Intune z zarządzanym sklepem Google Play usługa Intune automatycznie doda do konsoli administracyjnej cztery popularne aplikacje powiązane z systemem Android Enterprise. Są to:
 
 - **[Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune)**  — używana w scenariuszach w pełni zarządzanych za pomocą Android Enterprise. Ta aplikacja jest automatycznie instalowana na w pełni zarządzanych urządzeniach podczas procesu ich rejestracji.
 - **[Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator)** — pomaga zalogować się do kont w przypadku używania weryfikacji dwuskładnikowej. Ta aplikacja jest automatycznie instalowana na w pełni zarządzanych urządzeniach podczas procesu ich rejestracji.
 - **[Intune — Portal firmy](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)**  — używana w przypadku scenariuszy obejmujących zasady ochrony aplikacji i profil służbowy Android Enterprise.
-- **[Zarządzany ekran główny](https://play.google.com/store/apps/details?id=com.microsoft.launcher.enterprise)** — używana w scenariuszach z użyciem systemu Android Enterprise dla urządzeń dedykowanych w trybie kiosku z wieloma aplikacjami. Administratorzy IT powinni utworzyć przypisanie w celu zainstalowania tej aplikacji na dedykowanych urządzeniach, które będą używane w kioskach z wieloma aplikacjami.
+- **[Zarządzany ekran główny](https://play.google.com/store/apps/details?id=com.microsoft.launcher.enterprise)** — aplikacja używana w scenariuszach z użyciem systemu Android Enterprise dla urządzeń dedykowanych w trybie kiosku z wieloma aplikacjami. Administratorzy IT powinni utworzyć przypisanie w celu zainstalowania tej aplikacji na dedykowanych urządzeniach, które będą używane w kioskach z wieloma aplikacjami.
 
 >[!NOTE]
 >Gdy użytkownik końcowy zarejestruje swoje w pełni zarządzane urządzenie z systemem Android Enterprise, nastąpi automatyczna instalacja aplikacji Intune — Portal firmy, a jej ikona pojawi się na ekranie. Jeśli użytkownik końcowy podejmie próbę uruchomienia aplikacji Intune — Portal firmy, zostanie przekierowany do aplikacji Microsoft Intune, a ikona aplikacji Portal firmy zostanie ukryta.
@@ -48,18 +49,18 @@ Aby ułatwić konfigurowanie i używanie zarządzania systemem Android Enterpris
 ## <a name="managed-google-play-app-types"></a>Typy aplikacji w zarządzanym sklepie Google Play
 W zarządzanym sklepie Google Play są dostępne trzy typy aplikacji:
 
-* **Aplikacja z zarządzanego sklepu Google Play** — aplikacje publiczne, które są ogólnie dostępne w sklepie Play. Tymi aplikacjami możesz zarządzać w usłudze Intune. Wystarczy, że wyszukasz te, którymi chcesz zarządzać, zatwierdzisz je, a następnie zsynchronizujesz z usługą Intune.
-* **Aplikacja prywatna z zarządzanego sklepu Google Play** — są to aplikacje biznesowe publikowane w zarządzanym sklepie Google Play przez administratorów usługi Intune.  Te aplikacje są prywatne i dostępne tylko dla dzierżawcy usługi Intune. W ten sposób można zarządzać aplikacjami biznesowymi oraz wdrażać je za pomocą zarządzanego sklepu Google Play i systemu Android Enterprise.
-* **Link sieci Web z zarządzanego sklepu Google Play** — są to linki sieci Web z ikonami zdefiniowanymi przez administratora IT, możliwe do wdrożenia na urządzeniach z systemem Android Enterprise. Są wyświetlane na liście aplikacji urządzenia, podobnie jak zwykłe aplikacje.
+- **Aplikacja zarządzanego sklepu Google Play** — aplikacje publiczne, które są ogólnie dostępne w sklepie Play. Tymi aplikacjami możesz zarządzać w usłudze Intune. Wystarczy, że wyszukasz te, którymi chcesz zarządzać, zatwierdzisz je, a następnie zsynchronizujesz z usługą Intune.
+- **Aplikacja prywatna z zarządzanego sklepu Google Play** — są to aplikacje biznesowe publikowane w zarządzanym sklepie Google Play przez administratorów usługi Intune.  Te aplikacje są prywatne i dostępne tylko dla dzierżawy usługi Intune. W ten sposób można zarządzać aplikacjami biznesowymi oraz wdrażać je za pomocą zarządzanego sklepu Google Play i systemu Android Enterprise.
+- **Link sieci Web zarządzanego sklepu Google Play** — są to linki sieci Web z ikonami zdefiniowanymi przez administratora IT, które można wdrożyć na urządzeniach z systemem Android Enterprise. Są one wyświetlane na liście aplikacji urządzenia, podobnie jak zwykłe aplikacje.
 
-## <a name="managed-google-play-store-apps"></a>Aplikacje z zarządzanego sklepu Google Play
-Istnieją dwa sposoby przeglądania i zatwierdzania aplikacji z zarządzanego sklepu Google Play przy użyciu usługi Intune:
+## <a name="managed-google-play-store-apps"></a>Aplikacje zarządzanego sklepu Google Play
+Istnieją dwie metody przeglądania i zatwierdzania aplikacji zarządzanego sklepu Google Play przy użyciu usługi Intune:
 
 1. Bezpośrednio w konsoli usługi Intune — przeglądaj i zatwierdzaj aplikacje ze sklepu w widoku w ramach usługi Intune. Możesz pracować bezpośrednio w konsoli usługi Intune, nie musisz ponownie uwierzytelniać swojej tożsamości za pomocą innego konta.
-1. W zarządzanej konsoli Google Play — możesz opcjonalnie otworzyć zarządzaną konsolę Google Play i tam zatwierdzić aplikacje. Aby uzyskać więcej informacji, zobacz [Synchronizowanie aplikacji z zarządzanego sklepu Google Play z usługą Intune](apps-add-android-for-work.md#sync-a-managed-google-play-app-with-intune).  Wymaga to oddzielnego logowania przy użyciu konta używanego do łączenia dzierżawcy usługi Intune z zarządzanym sklepem Google Play.
+1. W zarządzanej konsoli Google Play — możesz opcjonalnie otworzyć zarządzaną konsolę Google Play i tam zatwierdzić aplikacje. Aby uzyskać więcej informacji, zobacz [Synchronizowanie aplikacji z zarządzanego sklepu Google Play z usługą Intune](apps-add-android-for-work.md#sync-a-managed-google-play-app-with-intune).  Wymaga to oddzielnego logowania przy użyciu konta używanego do łączenia dzierżawy usługi Intune z zarządzanym sklepem Google Play.
 
 
-### <a name="add-a-managed-google-play-store-app-directly-in-the-intune-console"></a>Dodawanie aplikacji z zarządzanego sklepu Google Play bezpośrednio w konsoli usługi Intune
+### <a name="add-a-managed-google-play-store-app-directly-in-the-intune-console"></a>Dodawanie aplikacji zarządzanego sklepu Google Play bezpośrednio w konsoli usługi Intune
 
 1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. W okienku **Intune** wybierz pozycję **Aplikacje klienckie** > **Aplikacje**.
@@ -116,10 +117,10 @@ Istnieją dwa sposoby dodawania aplikacji biznesowych do zarządzanego sklepu Go
 7. Kliknij przycisk **„+”** , aby dodać nową aplikację.
 8. Prześlij nazwę aplikacji i pakiet APK.
 9. Kliknij przycisk **Utwórz**.
-9. Po zakończeniu dodawania aplikacji zamknij okienko zarządzane sklepu Google Play.
+9. Po zakończeniu dodawania aplikacji zamknij okienko Zarządzany sklep Google Play
 12. Kliknij pozycję **Synchronizuj** w okienku **dodawania aplikacji**, aby przeprowadzić synchronizację z usługą zarządzanego sklepu Google Play. Może minąć kilka minut, zanim aplikacje prywatne będą dostępne do synchronizacji. Jeśli aplikacja nie pojawi się podczas pierwszej synchronizacji, odczekaj kilka minut i zainicjuj nową synchronizację.
 
-Więcej informacji na temat aplikacji prywatnych z zarządzanego sklepu Google Play, łącznie z często zadawanymi pytaniami, znajdziesz w artykule pomocy technicznej firmy Google: https://support.google.com/googleplay/work/answer/9146439
+Więcej informacji na temat aplikacji prywatnych z zarządzanego sklepu Google Play, łącznie z często zadawanymi pytaniami, znajduje się w artykule pomocy technicznej firmy Google: https://support.google.com/googleplay/work/answer/9146439
 
 >[!NOTE]
 >Prywatne aplikacje dodane przy użyciu tej metody nigdy nie mogą być udostępniane publicznie. Tej opcji publikowania używaj tylko wtedy, gdy masz pewność, że aplikacja pozostanie prywatna i dostępna tylko dla organizacji.
@@ -158,7 +159,7 @@ Linki sieci Web będą otwierane przy użyciu przeglądarki Microsoft Edge lub d
 7. Wybierz pozycję **Aplikacje internetowe** w katalogu Google Play.
 7. Kliknij przycisk **„+”** , aby dodać nową aplikację.
 7. Wprowadź wymagane informacje, a następnie kliknij opcję **Utwórz**.
-7. Po zakończeniu dodawania aplikacji zamknij okienko zarządzane sklepu Google Play.
+7. Po zakończeniu dodawania aplikacji zamknij okienko Zarządzany sklep Google Play
 12. Kliknij pozycję **Synchronizuj** w okienku **dodawania aplikacji**, aby przeprowadzić synchronizację z usługą zarządzanego sklepu Google Play. Może minąć kilka minut, zanim aplikacje prywatne będą dostępne do synchronizacji. Jeśli aplikacja nie pojawi się podczas pierwszej synchronizacji, odczekaj kilka minut i zainicjuj nową synchronizację.
 
 ## <a name="sync-a-managed-google-play-app-with-intune"></a>Synchronizowanie aplikacji z zarządzanego sklepu Google Play z usługą Intune
@@ -209,15 +210,14 @@ Można także skonfigurować sklep Google Play w taki sposób, aby automatycznie
 
 ## <a name="additional-managed-google-play-app-reporting-for-android-enterprise-work-profile-devices"></a>Dodatkowe raportowanie aplikacji z zarządzanego sklepu Google Play dla urządzeń z profilem służbowym rozwiązania Android Enterprise
 
-W przypadku aplikacji z zarządzanego sklepu Google Play wdrożonych na urządzeniach z profilem służbowym rozwiązania Android Enterprise można wyświetlić numer wersji aplikacji zainstalowanej na urządzeniu. Dotyczy to tylko wymaganych aplikacji. 
-
+W przypadku aplikacji zarządzanych ze sklepu Google Play wdrożonych na urządzeniach z profilem służbowym systemu Android Enterprise można wyświetlić stan i numer wersji aplikacji zainstalowanej na urządzeniu za pomocą usługi Intune. 
 
 ## <a name="delete-managed-google-play-apps"></a>Usuwanie aplikacji z zarządzanego sklepu Google Play
 W razie potrzeby możesz usuwać aplikacje z zarządzanego sklepu Google Play z poziomu usługi Microsoft Intune. Aby usunąć aplikację z zarządzanego sklepu Google Play, otwórz usługę Microsoft Intune w witrynie Azure Portal i wybierz kolejno pozycje **Aplikacje klienckie** > **Aplikacje**. Na liście aplikacji wybierz wielokropek (...) po prawej stronie aplikacji z zarządzanego sklepu Google Play, a następnie wybierz pozycję **Usuń** z wyświetlonej listy. Po usunięciu aplikacji zarządzanej ze sklepu Google Play z listy aplikacji ta aplikacja zarządzana stanie się automatycznie aplikacją niezatwierdzoną.
 
 ## <a name="android-enterprise-system-apps"></a>Aplikacje systemu Android Enterprise
 
-Aplikację systemu Android Enterprise można włączyć na [dedykowanych urządzeniach z systemem Android Enterprise](../enrollment/android-kiosk-enroll.md) lub [w pełni zarządzanych urządzeniach](../enrollment/android-fully-managed-enroll.md). Aby uzyskać więcej informacji na temat dodawania aplikacji systemu Android Enterprise, zobacz [Dodawanie aplikacji systemu Android Enterprise do usługi Microsoft Intune](apps-ae-system.md).
+Aplikację systemu Android Enterprise można włączyć na [dedykowanych urządzeniach z systemem Android Enterprise](../enrollment/android-kiosk-enroll.md) lub [w pełni zarządzanych urządzeniach](../enrollment/android-fully-managed-enroll.md). Aby uzyskać więcej informacji na temat dodawania aplikacji systemu Android Enterprise, patrz [Dodawanie aplikacji systemu Android Enterprise do usługi Microsoft Intune](apps-ae-system.md).
 
 ## <a name="next-steps"></a>Następne kroki
 
