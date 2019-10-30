@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/04/2018
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9ba94a649f9d7b49437d5d97bb621b0b0a94466c
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: d843cf707cf182655d0044dde289caca730ccd6b
+ms.sourcegitcommit: 3ace4cba6e2f6fefa9120be3807387a49b200c9b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72508690"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72810300"
 ---
 # <a name="integrate-zimperium-with-intune"></a>Integracja rozwiązania Zimperium z usługą Intune
 
@@ -31,8 +31,7 @@ Aby zintegrować rozwiązanie Zimperium Mobile Threat Defense z usługą Intune,
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
-> [!NOTE]
-> Poniższe kroki należy wykonać w [konsoli Zimperium MTD](https://www.zimperium.com/platform).
+Poniższe kroki, które należy wykonać w [konsoli administracyjnej rozwiązania Zimperium MTD](https://www.zimperium.com/platform), umożliwią nawiązywanie połączenia z usługą Zimperium zarówno na urządzeniach zarejestrowanych w usłudze Intune (przy użyciu zgodności urządzeń), jak i na urządzeniach niezarejestrowanych (przy użyciu zasad ochrony aplikacji).
 
 Przed rozpoczęciem procesu integracji rozwiązania Zimperium z usługą Intune upewnij się, że przygotowano następującą subskrypcję i poświadczenia:
 
@@ -90,4 +89,5 @@ Aby uzyskać więcej informacji na temat zgody i aplikacji usługi Azure Active 
 
 ## <a name="next-steps"></a>Następne kroki
 
-- [Konfigurowanie aplikacji Zimperium](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Konfigurowanie aplikacji Zimperium dla zarejestrowanych urządzeń](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Konfigurowanie aplikacji Zimperium dla niezarejestrowanych urządzeń](~/protect/mtd-add-apps-unenrolled-devices.md)

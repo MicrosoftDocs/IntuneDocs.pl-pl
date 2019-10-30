@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/22/2019
+ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e53f50c42e768eeb652a8602bea49c04d29364c7
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 4f917167baecc643e045610e86e582957e535978
+ms.sourcegitcommit: 3ace4cba6e2f6fefa9120be3807387a49b200c9b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72504429"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72810289"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune"></a>Włączanie łącznika Mobile Threat Defense w usłudze Intune
 
@@ -44,7 +44,7 @@ Klasyczne zasady dostępu warunkowego dla aplikacji MTD mają następujące cech
 Aby wyświetlić klasyczne zasady dostępu warunkowego, w witrynie [Azure Portal](https://portal.azure.com/#home) przejdź do pozycji **Azure Active Directory** > **Dostęp warunkowy** > **Zasady klasyczne**.
 
 
-## <a name="to-enable-the-mtd-connector"></a>Aby włączyć łącznik MTD
+## <a name="to-enable-the-mobile-threat-defense-connector"></a>Włączanie łącznika Mobile Threat Defense w usłudze Intune
 
 1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 
@@ -58,20 +58,23 @@ Aby wyświetlić klasyczne zasady dostępu warunkowego, w witrynie [Azure Portal
 
 7. Włącz opcje przełącznika zgodnie z wymaganiami organizacji. Wyświetlane opcje przełącznika są zależne od partnera MTD.
 
-## <a name="mtd-toggle-options"></a>Opcje przełącznika usługi MTD
+## <a name="mobile-threat-defense-toggle-options"></a>Opcje przełączania usługi Mobile Threat Defense
 
-Zgodnie z wymaganiami danej organizacji można określić, które opcje przełącznika usługi MTD należy włączyć. Poniżej przedstawiono więcej informacji:
+Zgodnie z wymaganiami danej organizacji można określić, które opcje przełączania usługi Mobile Threat Defense należy włączyć. Poniżej przedstawiono więcej informacji:
 
-- **Połącz urządzenia z systemem Android 4.1 lub nowszym z usługą [nazwa partnera MTD] for Work MTD**: po włączeniu tej opcji urządzenia z systemem Android 4.1 lub nowszym mogą zgłaszać zagrożenie bezpieczeństwa do usługi Intune.
-  - **Oznacz jako niezgodne w przypadku nieodebrania żadnych danych**: jeśli usługa Intune nie odbiera danych dotyczących urządzenia na tej platformie od partnera MTD, należy uznać to urządzenie za niezgodne.
-<br></br>
-- **Połącz urządzenia z systemem iOS 8.0 lub nowszym z usługą [nazwa partnera MTD] for Work MTD**: po włączeniu tej opcji urządzenia z systemem iOS 8.0 lub nowszym mogą zgłaszać zagrożenie bezpieczeństwa do usługi Intune.
-  - **Oznacz jako niezgodne w przypadku nieodebrania żadnych danych**: jeśli usługa Intune nie odbiera danych dotyczących urządzenia na tej platformie od partnera MTD, należy uznać to urządzenie za niezgodne.
-<br></br>
+**Ustawienia zasad zgodności rozwiązania MDM**
+- **Podłącz urządzenia z systemem Android 4.1 lub nowszym do łącznika *\<nazwa partnera usługi MTD>***: po włączeniu tej opcji urządzenia z systemem Android 4.1 lub nowszym mogą zgłaszać zagrożenie bezpieczeństwa do usługi Intune.
+- **Podłącz urządzenia z systemem iOS 8.0 lub nowszym do łącznika *\<nazwa partnera usługi MTD>***: po włączeniu tej opcji urządzenia z systemem iOS 8.0 lub nowszym mogą zgłaszać zagrożenie bezpieczeństwa do usługi Intune.
 - **Włącz synchronizację aplikacji dla urządzeń z systemem iOS**: zezwala temu partnerowi usługi Mobile Threat Defense na żądanie metadanych aplikacji systemu iOS kierowane do usługi Intune w celu użycia ich dla celów analizy zagrożeń.
-
 - **Blokuj nieobsługiwane wersje systemu operacyjnego**: blokowanie, gdy na urządzeniu jest zainstalowany system operacyjny o niższym numerze wersji niż minimalna obsługiwana wersja.
 
+**Ustawienia zasad ochrony aplikacji**
+- **Połącz urządzenia z systemem Android w wersji 4.1 lub nowszej z łącznikiem *\<nazwa partnera usługi MTD>* na potrzeby oceny zasad ochrony aplikacji**: Po włączeniu tej opcji zasady ochrony aplikacji korzystające z reguły poziomu zagrożenia urządzenia będą oceniać urządzenia z uwzględnieniem danych z tego łącznika.
+- **Połącz urządzenia z systemem iOS w wersji 8.0 lub nowszej z łącznikiem *\<nazwa partnera usługi MTD>* na potrzeby oceny zasad ochrony aplikacji**: Po włączeniu tej opcji zasady ochrony aplikacji korzystające z reguły poziomu zagrożenia urządzenia będą oceniać urządzenia z uwzględnieniem danych z tego łącznika.
+
+Aby dowiedzieć się więcej o używaniu łączników usługi Mobile Threat Defense do oceny zasad ochrony aplikacji w usłudze Intune, zobacz [Konfigurowanie usługi Mobile Threat Defense dla niezarejestrowanych urządzeń](~/protect/mtd-enable-unenrolled-devices.md).
+
+**Typowe ustawienia współużytkowane**
 - **Liczba dni, po których partner otrzyma stan „brak odpowiedzi”** : liczba dni braku aktywności, zanim usługa Intune uzna partnera za nieodpowiadającego z powodu utraty połączenia. Usługa Intune ignoruje stan zgodności dla partnerów MTD w stanie „brak odpowiedzi”.
 
 > [!IMPORTANT] 

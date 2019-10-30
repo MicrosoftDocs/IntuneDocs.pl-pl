@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aecbcd91eef668ba2a92acfc9b42e6c68df3672a
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 34a4c8adeef7e8b28c90ad38579f0f9ac7c4784d
+ms.sourcegitcommit: 807ab3e35f4d9ffa18655410b7d61e5e772ab348
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509442"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73057525"
 ---
 # <a name="enable-lost-mode-on-ios-devices-with-intune"></a>Włączanie trybu zgubienia na urządzeniach z systemem iOS przy użyciu usługi Intune
 
@@ -43,8 +43,10 @@ Ta funkcja nie jest obsługiwana w przypadku następujących platform:
 
 1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. Wybierz pozycję **Urządzenia**, a następnie wybierz pozycję **Wszystkie urządzenia**.
-4. Z listy zarządzanych urządzeń wybierz urządzenie z systemem iOS, a następnie wybierz pozycję **...więcej**. Następnie wybierz zdalną akcję **Tryb zgubienia**.
-5. W obszarze **Tryb zgubienia** włącz tę funkcję. Następnie wprowadź komunikat, który ma być wyświetlany, oraz numer telefonu do kontaktu.
+4. Z listy zarządzanych urządzeń wybierz urządzenie z systemem iOS, a następnie wybierz pozycję **Tryb zgubienia (tylko tryb nadzorowany)** .
+5. W obszarze **Tryb zgubienia**wybierz pozycję **Włącz**.
+6. W polu **Komunikat wyświetlany na ekranie blokady** wpisz komunikat, który ma być wyświetlany na ekranie blokady urządzenia.
+7. Opcjonalnie wprowadź numer telefonu w polu **Numer telefonu do wyświetlenia**.
 6. Wybierz przycisk **OK**, aby zapisać zmiany.
 
 Po włączeniu trybu zgubienia wszystkie sposoby korzystania z urządzenia zostaną zablokowane. Użytkownik końcowy nie może uzyskać dostępu do urządzenia aż do momentu wyłączenia przez Ciebie trybu utraty. Przy włączonym trybie zgubienia można skorzystać z akcji [Zlokalizuj urządzenie](device-locate.md), aby dowiedzieć się, gdzie urządzenie się znajduje.
