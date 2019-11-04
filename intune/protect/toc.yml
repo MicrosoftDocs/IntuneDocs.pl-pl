@@ -249,6 +249,8 @@
               href: security-baseline-settings-mdm-all.md
             - name: Ustawienia punktu odniesienia usługi Microsoft Defender ATP
               href: security-baseline-settings-defender-atp.md
+            - name: Ustawienia punktu odniesienia programu Microsoft Edge
+              href: security-baseline-settings-edge.md
         - name: Ustawienia aktualizacji systemu Windows
           href: windows-update-settings.md
         - name: Ustawienia zasad zgodności — Android

@@ -64,8 +64,14 @@
 ## [Korzystanie z urządzenia z systemem iOS](using-your-iOS-device-with-intune.md)
 ### [Efekty resetowania urządzeń z systemem iOS](effects-of-device-reset-company-portal-ios.md)
 ### [Instalowanie aplikacji Portal firmy i logowanie się do niej](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
-### [Rejestrowanie urządzenia z systemem iOS](enroll-your-device-in-intune-ios.md)
-### [Rejestrowanie urządzenia z systemem iOS dostarczonego przez organizację](enroll-your-device-dep-ios.md)
+### Zarejestruj urządzenie
+#### [Rejestrowanie urządzenia z systemem iOS](enroll-your-device-in-intune-ios.md)
+#### [Rejestrowanie urządzenia z systemem iOS dostarczonego przez organizację](enroll-your-device-dep-ios.md)
+#### Rejestrowanie przy użyciu poświadczeń pochodnych
+##### [Rejestrowanie przy użyciu usługi Entrust Datacard](enroll-ios-device-entrust-datacard.md)
+##### [Rejestrowanie przy użyciu usługi Intercede](enroll-ios-device-intercede.md)
+##### [Rejestrowanie przy użyciu usługi DISA Purebred](enroll-ios-device-disa-purebred.md)
+
 
 ### [Korzystanie z aplikacji zarządzanych na urządzeniu](use-managed-apps-on-your-device-ios.md)
 ### [Ustawianie lub zmienianie kodu dostępu](set-or-change-your-passcode-ios.md)
