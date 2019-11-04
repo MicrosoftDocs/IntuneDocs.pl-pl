@@ -17,20 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1750f789cfac98af998ebbd86b10a4e93a1772a
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: ba1ec201cdb7e44570b53ce831b4e5ae26504973
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72490820"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73413813"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Przygotowanie aplikacji biznesowych pod kątem zasad ochrony aplikacji
-
-[!INCLUDE[both-portals](../../intune-classic/includes/note-for-both-portals.md)]
 
 W swoich aplikacjach możesz umożliwić korzystanie z zasad ochrony aplikacji przez użycie narzędzia opakowującego aplikacje usługi Intune lub zestawu Intune App SDK. Poniżej przedstawiono informacje dotyczące tych dwóch metod oraz sytuacji, w których należy je stosować.
 
 ## <a name="intune-app-wrapping-tool"></a>Narzędzia opakowujące aplikacje usługi Intune
+
 Narzędzia opakowujące aplikacje jest używane głównie dla **wewnętrznych** aplikacji biznesowych. Narzędzie to jest aplikacją wiersza polecenia tworzącą otokę wokół aplikacji, która następnie umożliwia zarządzanie aplikacją przez zasady ochrony aplikacji usługi Intune. Jeśli ochronę aplikacji zapewnia niezależny dostawca oprogramowania (ISV, independent software vendor), ważne jest, aby wyjaśnić, czy dostawca ISV będzie nadal obsługiwać opakowaną aplikację.
 
 Do korzystania z narzędzia nie potrzeba kodu źródłowego, ale potrzebne będą poświadczenia podpisywania. Aby uzyskać więcej informacji na temat poświadczeń podpisywania, zobacz [blog usługi Intune](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/). Aby uzyskać informacje na temat dokumentacji dotyczącej narzędzia opakowującego aplikacje, zobacz [Narzędzie opakowujące aplikacje systemu Android](app-wrapper-prepare-android.md) i [Narzędzie opakowujące aplikacje systemu iOS](app-wrapper-prepare-ios.md).
@@ -40,6 +39,7 @@ Narzędzie opakowujące aplikacje **nie** obsługuje aplikacji w sklepie Apple A
 Aby uzyskać więcej informacji o narzędziu opakowującym aplikacje na potrzeby zasad ochrony aplikacji na urządzeniach niezarejestrowanych w usłudze Intune, zobacz [Ochrona aplikacji biznesowych i danych na urządzeniach niezarejestrowanych w usłudze Microsoft Intune](../apps/apps-add.md).
 
 ### <a name="reasons-to-use-the-app-wrapping-tool"></a>Powody do korzystania z narzędzia opakowującego aplikacje
+
 * Twoja aplikacja nie ma wbudowanych funkcji ochrony danych
 * Twoja aplikacja jest prosta
 * Twoja aplikacja jest wdrażana wewnętrznie
@@ -55,11 +55,13 @@ Aby uzyskać więcej informacji o narzędziu opakowującym aplikacje na potrzeby
 |**Android**|Nie — użyj [powiązań platformy Xamarin dla zestawu Intune App SDK](app-sdk-xamarin.md).|Tak|
 
 ## <a name="intune-app-sdk"></a>Zestaw SDK aplikacji usługi Intune
+
 Zestaw SDK aplikacji jest przeznaczony głównie dla klientów, których aplikacje znajdują się w sklepie Apple App Store lub sklepie Google Play i którzy chcą zarządzać aplikacjami za pomocą usługi Intune. Korzyści wynikające z integracji zestawu SDK są jednak dostępne dla wszystkich aplikacji, nawet aplikacji biznesowych.
 
 Aby dowiedzieć się więcej o zestawie SDK, zobacz [Przegląd](app-sdk.md). Aby zacząć korzystać z zestawu SDK, zobacz [Wprowadzenie do zestawu SDK aplikacji usługi Microsoft Intune](app-sdk-get-started.md).
 
 ### <a name="reasons-to-use-the-sdk"></a>Powody korzystania z zestawu SDK
+
 * Twoja aplikacja nie ma wbudowanych funkcji ochrony danych
 * Twoja aplikacja jest złożona i zawiera wiele środowisk
 * Twoja aplikacja jest dostępna w publicznym sklepie z aplikacjami, takim jak Google Play lub App Store firmy Apple
@@ -74,10 +76,12 @@ Aby dowiedzieć się więcej o zestawie SDK, zobacz [Przegląd](app-sdk.md). Aby
 |**iOS**|Tak — użyj [powiązań platformy Xamarin dla zestawu Intune App SDK](app-sdk-xamarin.md).|Nie|
 |**Android**| Tak — użyj [powiązań platformy Xamarin dla zestawu Intune App SDK](app-sdk-xamarin.md).|Nie|
 
-### <a name="not-using-an-app-development-platform-listed-above"></a>Nie korzystasz z platformy tworzenia aplikacji wymienionej powyżej? 
+### <a name="not-using-an-app-development-platform-listed-above"></a>Nie korzystasz z platformy tworzenia aplikacji wymienionej powyżej?
+
 Zespół programistyczny zajmujący się zestawem Intune SDK aktywnie przeprowadza testy i zapewnia obsługę aplikacji z natywnych platform Android, iOS (Obj-C, Swift), Xamarin, Xamarin.Forms i Cordova. Niektórym klientom udało się zintegrować zestaw Intune SDK z innymi platformami (takimi jak React Native i NativeScript), ale nie udostępniamy deweloperom żadnych wskazówek ani wtyczek dotyczących nieobsługiwanych przez nas platform. 
 
 ## <a name="feature-comparison"></a>Porównanie funkcji
+
 W tej tabeli przedstawiono ustawienia do użycia w przypadku zestawu SDK aplikacji i narzędzia opakowującego aplikacje.
 
 > [!NOTE]

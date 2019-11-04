@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/24/2019
+ms.date: 10/30/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec6009096ac6ed39c8a217f8832661a575d83b78
-ms.sourcegitcommit: 4f979ba7030e72d820113fe23ac8521ddb2433bd
+ms.openlocfilehash: 14fa330b0c158d98c96e0d151f8a4ec7d0c95b97
+ms.sourcegitcommit: c38a856725993a4473ada75e669a57f75ab376f8
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72915717"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73143042"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem Android Enterprise w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune
 
@@ -42,7 +42,7 @@ W tym artykule wymieniono i opisano różne ustawienia, którymi można sterowa�
   - **Automatycznie udzielaj**: uprawnienia są automatycznie udzielane.
   - **Automatycznie odmawiaj**: uprawnienia są automatycznie odrzucane.
 - **Zmiany daty i godziny**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom ręczne ustawianie daty i godziny. Pozycja **Nieskonfigurowane** umożliwia użytkownikom ustawianie określonej daty i godziny na urządzeniu.
-- **Zmiany głośności**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom zmienianie głośności urządzenia. Pozycja **Nieskonfigurowane** umożliwia korzystanie z ustawień głośności na urządzeniu.
+- **Zmiany woluminów**: **blokowanie** uniemożliwia użytkownikom zmianę woluminu urządzenia, a także wyciszenie woluminu głównego. Pozycja **Nieskonfigurowane** umożliwia korzystanie z ustawień głośności na urządzeniu.
 - **Resetowanie do ustawień fabrycznych**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom używanie opcji resetowania do ustawień fabrycznych w ustawieniach urządzenia. Pozycja **Nieskonfigurowane** pozwala użytkownikom na używanie tego ustawienia na urządzeniu.
 - **Bezpieczny rozruch**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom ponowne uruchamianie urządzenia w trybie awaryjnym. Pozycja **Nieskonfigurowane** pozwala użytkownikom na ponowne uruchamianie urządzenia w trybie awaryjnym.
 - **Pasek stanu**: wybierz pozycję **Blokuj**, aby uniemożliwić dostęp do paska stanu, w tym do powiadomień i szybkich ustawień. Pozycja **Nieskonfigurowane** zezwala użytkownikom na dostęp do paska stanu.

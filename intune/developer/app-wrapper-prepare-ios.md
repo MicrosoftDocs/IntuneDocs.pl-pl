@@ -17,24 +17,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b42642ec593112b0b247cd85b9230f68d6a803b8
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 783ae8bf3216c514bac183ed1945c454cbaa1708
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72490972"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73413876"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Przygotowywanie aplikacji systemu iOS pod kątem zasad ochrony aplikacji za pomocą narzędzia opakowującego aplikacje usługi Intune
-
-[!INCLUDE [both-portals](../../intune-classic/includes/note-for-both-portals.md)]
 
 Za pomocą dostępnego w usłudze Microsoft Intune narzędzia opakowującego aplikacje dla systemu iOS można włączyć zasady ochrony aplikacji w usłudze Intune dla wewnętrznych aplikacji systemu iOS bez konieczności zmieniania kodu aplikacji.
 
 Narzędzie to jest aplikacją wiersza polecenia systemu Mac OS, tworzącą „otokę” dla aplikacji. Po przetworzeniu aplikacji można zmienić funkcje aplikacji przez wdrożenie w niej [zasad ochrony aplikacji](../apps/app-protection-policies.md).
 
 Aby pobrać narzędzie, zobacz temat [Microsoft Intune App Wrapping Tool for iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) (Narzędzie opakowujące aplikacje usługi Microsoft Intune dla systemu iOS) w serwisie GitHub.
-
-
 
 ## <a name="general-prerequisites-for-the-app-wrapping-tool"></a>Ogólne wymagania wstępne dotyczące narzędzia opakowującego aplikacje
 
@@ -74,6 +70,7 @@ Do rozpowszechniania aplikacji opakowanych przez usługę Intune są potrzebne n
 * Profil aprowizacji dystrybucji wewnętrznej.
 
 ### <a name="steps-to-create-an-apple-developer-enterprise-account"></a>Procedura tworzenia konta programu Apple Developer Enterprise
+
 1. Przejdź do [witryny programu Apple Developer Enterprise Program](https://developer.apple.com/programs/enterprise/).
 
 2. W prawym górnym rogu strony kliknij przycisk **Enroll** (Zarejestruj).
@@ -86,11 +83,11 @@ Do rozpowszechniania aplikacji opakowanych przez usługę Intune są potrzebne n
 
 6. Wypełnij formularz z informacjami o organizacji. Kliknij przycisk **Kontynuuj**. Firma Apple skontaktuje się z Tobą w celu potwierdzenia, że masz uprawnienia do rejestracji organizacji.
 
-8. Po zakończeniu weryfikacji kliknij przycisk **Agree to License** (Akceptuj postanowienia licencyjne).
+7. Po zakończeniu weryfikacji kliknij przycisk **Agree to License** (Akceptuj postanowienia licencyjne).
 
-9. Po zaakceptowaniu postanowień licencji **kup i aktywuj program**, aby zakończyć.
+8. Po zaakceptowaniu postanowień licencji **kup i aktywuj program**, aby zakończyć.
 
-10. Jeśli jesteś agentem zespołu (osobą, która dołącza do programu Apple Developer Enterprise Program w imieniu organizacji), najpierw zaproś członków zespołu i przypisz role, aby utworzyć zespół. Aby dowiedzieć się, jak zarządzać zespołem, zapoznaj się z dokumentacją firmy Apple dotyczącą [zarządzania zespołem konta dewelopera](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/ManagingYourTeam/ManagingYourTeam.html#//apple_ref/doc/uid/TP40012582-CH16-SW1).
+9. Jeśli jesteś agentem zespołu (osobą, która dołącza do programu Apple Developer Enterprise Program w imieniu organizacji), najpierw zaproś członków zespołu i przypisz role, aby utworzyć zespół. Aby dowiedzieć się, jak zarządzać zespołem, zapoznaj się z dokumentacją firmy Apple dotyczącą [zarządzania zespołem konta dewelopera](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/ManagingYourTeam/ManagingYourTeam.html#//apple_ref/doc/uid/TP40012582-CH16-SW1).
 
 ### <a name="steps-to-create-an-apple-signing-certificate"></a>Procedura tworzenia certyfikatu podpisywania firmy Apple
 
@@ -145,8 +142,6 @@ Do rozpowszechniania aplikacji opakowanych przez usługę Intune są potrzebne n
 
     ![Informacje dotyczące telefonu iPhone — ciąg SHA1 odcisków palców](./media/app-wrapper-prepare-ios/iOS-signing-cert-9.png)
 
-
-
 ### <a name="steps-to-create-an-in-house-distribution-provisioning-profile"></a>Procedura tworzenia profilu aprowizacji dystrybucji wewnętrznej
 
 1. Wróć do [portalu konta dewelopera firmy Apple](https://developer.apple.com/account/) i **zaloguj się** przy użyciu konta Apple ID organizacji.
@@ -164,8 +159,6 @@ Do rozpowszechniania aplikacji opakowanych przez usługę Intune są potrzebne n
 6. Wykonaj procedurę pobierania profilu (z rozszerzeniem mobileprovision) na komputer z systemem macOS.
 
 7. Zapisz plik w łatwej do zapamiętania lokalizacji. Ten plik zostanie użyty jako parametr -p podczas korzystania z narzędzia opakowującego aplikacje.
-
-
 
 ## <a name="download-the-app-wrapping-tool"></a>Pobieranie narzędzia opakowującego aplikacje
 
@@ -195,6 +188,7 @@ Otwórz terminal systemu macOS i uruchom następujące polecenie:
 ```
 
 ### <a name="command-line-parameters"></a>Parametry wiersza polecenia
+
 Z narzędziem opakowującym aplikacje można użyć następujących parametrów wiersza polecenia:
 
 |Właściwość|Sposób użycia|
@@ -216,6 +210,7 @@ Z narzędziem opakowującym aplikacje można użyć następujących parametrów 
 |**-f**|(Opcjonalna) `<Path to a plist file specifying arguments.>` Poprzedź tą flagą plik [plist](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html), jeśli chcesz użyć szablonu pliku plist w celu określenia pozostałych właściwości aplikacji IntuneMAMPackager: -i, -o, -p itd. Zobacz temat Wprowadzanie argumentów przy użyciu pliku plist. |
 
 ### <a name="use-a-plist-to-input-arguments"></a>Wprowadzanie argumentów przy użyciu pliku plist
+
 Łatwym sposobem uruchamiania narzędzia opakowującego aplikacje jest wprowadzenie wszystkich argumentów polecenia w pliku [plist](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html). Plist to format pliku podobny do formatu XML, umożliwiający wprowadzanie argumentów wiersza polecenia za pomocą interfejsu formularza.
 
 Za pomocą edytora tekstu lub narzędzia Xcode otwórz plik `Parameters.plist`, pusty szablon pliku plist znajdujący się w folderze IntuneMAMPackager/Contents/MacOS. Wprowadź argumenty dla następujących kluczy:
@@ -236,7 +231,6 @@ Za pomocą edytora tekstu lub narzędzia Xcode otwórz plik `Parameters.plist`, 
 | Uwzględnij zestaw SDK aplikacji Citrix XenMobile (wariant dotyczący tylko sieci)|Boolean|fałsz| Taka sama jak dla platformy Citrix|
 | Extension Provisioning Profile Paths (Ścieżki profilów aprowizacji rozszerzeń) |Tablica ciągów|puste| Tablica profilów aprowizacji rozszerzeń dla aplikacji.
 
-
 Uruchom aplikację IntuneMAMPackager, wprowadzając plik plist jako jedyny argument:
 
 ```bash
@@ -255,19 +249,24 @@ Przetworzona aplikacja zostanie zapisana we wskazanym wcześniej folderze wyjśc
 Teraz możesz wdrożyć aplikację do grup użytkowników i przypisać zasady ochrony do aplikacji. Aplikacja będzie uruchamiana na urządzeniu przy użyciu wybranych zasad ochrony aplikacji.
 
 ## <a name="how-often-should-i-rewrap-my-ios-application-with-the-intune-app-wrapping-tool"></a>Jak często należy ponownie opakowywać aplikację systemu iOS za pomocą narzędzia opakowującego aplikacje usługi Intune?
+
 Główne scenariusze, w których trzeba będzie ponownie opakować aplikacje:
+
 * Sama aplikacja wydała nową wersję. Poprzednia wersja aplikacji została opakowana i przekazana do konsoli usługi Intune.
 * Narzędzie opakowujące aplikacje usługi Intune dla systemu iOS wydało nową wersję, która oferuje kluczowe poprawki usterek i nowe funkcje zasad ochrony aplikacji, przeznaczone specjalnie dla usługi Intune. Taka sytuacja występuje co 6–8 tygodni za pośrednictwem repozytorium GitHub dla [narzędzia opakowującego aplikacje usługi Intune dla systemu iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios).
 
 W przypadku systemu iOS, chociaż możliwe jest opakowywanie przy użyciu profilu aprowizacji/certyfikatu innego niż oryginalnie zastosowany do podpisania aplikacji, jeśli uprawnienia określone w aplikacji nie zostaną uwzględnione w nowym profilu aprowizacji, opakowywanie nie powiedzie się. Użycie opcji „-e” wiersza polecenia, która usuwa wszystkie brakujące uprawnienia z aplikacji, w celu wymuszenia zakończenia opakowywania powodzeniem w tym scenariuszu może spowodować uszkodzenie funkcjonalności aplikacji.
 
 Niektóre najlepsze rozwiązania dotyczące ponownego opakowywania:
+
 * Upewnienie się, że inny profil aprowizacji ma wszystkie wymagane uprawnienia dowolnego poprzedniego profilu aprowizacji. 
 
 ## <a name="error-messages-and-log-files"></a>Komunikaty o błędach i pliki dziennika
+
 Skorzystaj z poniższych informacji przy rozwiązywaniu problemów z narzędziem opakowującym aplikacje.
 
 ### <a name="error-messages"></a>Komunikaty o błędach
+
 Jeśli przetwarzanie aplikacji przez narzędzie opakowujące aplikacje nie powiedzie się, w konsoli zostanie wyświetlony jeden z następujących komunikatów o błędach:
 
 |Komunikat o błędzie|Więcej informacji|
@@ -291,6 +290,7 @@ Jeśli przetwarzanie aplikacji przez narzędzie opakowujące aplikacje nie powie
 |OSTRZEŻENIE: nie określono skrótu SHA1 certyfikatu. Przed wdrożeniem upewnij się, że opakowana aplikacja jest podpisana.|Upewnij się, że po właściwości wiersza polecenia –c podano prawidłowy skrót SHA1. |
 
 ### <a name="log-files-for-the-app-wrapping-tool"></a>Pliki dziennika narzędzia opakowującego aplikacje
+
 Przetwarzanie aplikacji za pomocą narzędzia opakowującego aplikacje wiąże się z generowaniem dzienników zapisywanych w konsoli urządzenia klienta systemu iOS. Informacje te są przydatne w przypadku wystąpienia problemów z aplikacją, gdy konieczne jest ustalenie, czy problem jest związany z narzędziem opakowującym aplikacje. Aby uzyskać dostęp do tych informacji, wykonaj następujące czynności:
 
 1. Uruchom aplikację, aby problem wystąpił ponownie.
@@ -310,7 +310,6 @@ Przetwarzanie aplikacji za pomocą narzędzia opakowującego aplikacje wiąże s
 
     Przetworzone aplikacje oferują również użytkownikom możliwość przesyłania dzienników pocztą e-mail bezpośrednio z urządzenia po awarii aplikacji. Dzienniki otrzymane od użytkowników możesz zbadać i w razie potrzeby przesłać do firmy Microsoft.
 
-
 ### <a name="certificate-provisioning-profile-and-authentication-requirements"></a>Wymagania dotyczące certyfikatu, profilu inicjowania obsługi administracyjnej i uwierzytelniania
 
 Pełna funkcjonalność narzędzia opakowującego aplikacje dla systemu iOS wymaga spełnienia pewnych wymagań.
@@ -321,8 +320,8 @@ Pełna funkcjonalność narzędzia opakowującego aplikacje dla systemu iOS wyma
 |Certyfikat podpisywania systemu iOS|Przed wprowadzeniem certyfikatu podpisywania upewnij się, że jest on prawidłowy. Narzędzie opakowujące aplikacje podczas przetwarzania aplikacji dla systemu iOS nie sprawdza, czy certyfikat nie wygasł. W przypadku wprowadzenia skrótu wygasłego certyfikatu aplikacja zostanie przetworzona i podpisana przez narzędzie, ale nie będzie można jej instalować na urządzeniach.<br /><br />Upewnij się, że certyfikat służący do podpisywania opakowanej aplikacji jest zgodny z profilem aprowizacji. Narzędzie nie sprawdza zgodności profilu i certyfikatu wprowadzonego w celu podpisania opakowanej aplikacji.|
 |Uwierzytelnianie|Aby szyfrowanie działało, urządzenie musi mieć numer PIN. Na urządzeniach, na których wdrożono opakowaną aplikację, dotknięcie paska stanu spowoduje konieczność ponownego zalogowania użytkownika przy użyciu konta służbowego. Domyślne zasady opakowanej aplikacji to *uwierzytelnianie przy ponownym uruchamianiu*. System iOS obsługuje zewnętrzne powiadomienia (na przykład połączenie telefoniczne) podczas kończenia pracy aplikacji, a następnie jej ponownego uruchamiania.
 
-
 ## <a name="setting-app-entitlements"></a>Ustawianie uprawnień dla aplikacji
+
 Przed opakowaniem aplikacji można przyznać *uprawnienia* w celu zapewnienia jej dodatkowych uprawnień i możliwości, którymi aplikacje zwykle nie dysponują. Aby określić dla aplikacji specjalne uprawnienia, takie jak dostęp do udostępnionego łańcucha kluczy, na etapie podpisywania kodu używany jest *plik uprawnień*. Usługi specyficzne dla aplikacji (nazywane *możliwościami*) są włączane w środowisku Xcode podczas opracowywania aplikacji. Po włączeniu te możliwości są odzwierciedlane w pliku uprawnień. Aby uzyskać więcej informacji dotyczących uprawnień i możliwości, zobacz [Dodawanie możliwości](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html) w bibliotece deweloperów systemu iOS. Aby uzyskać pełną listę obsługiwanych możliwości, zobacz [Obsługiwane możliwości](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/SupportedCapabilities/SupportedCapabilities.html).
 
 ### <a name="supported-capabilities-for-the-app-wrapping-tool-for-ios"></a>Obsługiwane możliwości narzędzia opakowującego aplikacje dla systemu iOS
@@ -363,6 +362,7 @@ Przed opakowaniem aplikacji można przyznać *uprawnienia* w celu zapewnienia je
 3. Upewnij się, że zostały spełnione wszystkie wymagania wstępne, a następnie opakuj aplikację.
 
 ### <a name="troubleshoot-common-errors-with-entitlements"></a>Rozwiązywanie typowych problemów z uprawnieniami
+
 Jeśli w narzędziu opakowującym aplikacje dla systemu iOS jest wyświetlany błąd uprawnień, spróbuj wykonać następujące kroki w celu rozwiązania problemu.
 
 |Problem|Przyczyna|Rozwiązanie|
@@ -371,6 +371,7 @@ Jeśli w narzędziu opakowującym aplikacje dla systemu iOS jest wyświetlany b�
 |W profilu inicjowania obsługi administracyjnej brakuje uprawnień (brakujące uprawnienia są wymienione). Spakuj ponownie aplikację razem z profilem inicjowania obsługi administracyjnej, który zawiera te uprawnienia.|Wystąpiła niezgodność między uprawnieniami włączonymi w profilu inicjowania obsługi administracyjnej i możliwościami włączonymi w aplikacji. Ta niezgodność dotyczy także identyfikatorów skojarzonych z konkretnymi możliwościami (np. grupy aplikacji, dostęp do pęku kluczy itp.).|Ogólnie rzecz biorąc, można utworzyć nowy profil inicjowania obsługi administracyjnej z włączonymi takimi samymi możliwościami, jakie włączono w aplikacji. W przypadku wystąpienia niezgodności identyfikatorów w profilu i aplikacji narzędzie opakowujące aplikacje zastąpi te identyfikatory, jeśli będzie to możliwe. Jeśli ten błąd będzie nadal się pojawiać po utworzeniu nowego profilu aprowizacji, można spróbować usunąć uprawnienia z aplikacji przy użyciu parametru –e (zobacz poniższą sekcję „Usuwanie uprawnień z aplikacji za pomocą parametru –e”).|
 
 ### <a name="find-the-existing-entitlements-of-a-signed-app"></a>Wyszukiwanie istniejących uprawnień podpisanej aplikacji
+
 Aby przejrzeć istniejące uprawnienia podpisanej aplikacji i profilu inicjowania obsługi administracyjnej:
 
 1. Znajdź plik ipa i zmień jego rozszerzenie na zip.
@@ -390,6 +391,7 @@ Aby przejrzeć istniejące uprawnienia podpisanej aplikacji i profilu inicjowani
     ```
 
 ### <a name="remove-entitlements-from-an-app-by-using-the-e-parameter"></a>Usuwanie uprawnień z aplikacji za pomocą parametru –e
+
 To polecenie usuwa wszystkie włączone możliwości w aplikacji, które nie znajdują się w pliku uprawnień. Usunięcie możliwości używanych przez aplikację może spowodować nieprawidłowe działanie aplikacji. Na przykład można usunąć brakujące możliwości, jeśli w aplikacji opracowanej przez dostawcę są domyślnie włączone wszystkie możliwości.
 
 ```bash
@@ -397,6 +399,7 @@ To polecenie usuwa wszystkie włączone możliwości w aplikacji, które nie zna
 ```
 
 ## <a name="security-and-privacy-for-the-app-wrapping-tool"></a>Funkcje zabezpieczeń i ochrony prywatności narzędzia opakowującego aplikacje
+
 Podczas korzystania z narzędzia opakowującego aplikacje należy stosować poniższe dobre praktyki dotyczące zabezpieczeń i ochrony prywatności.
 
 - Certyfikat podpisywania, profil aprowizacji oraz aplikacja biznesowa do przetworzenia muszą znajdować się na tym samym komputerze z systemem Mac OS, na którym jest uruchamiane narzędzie opakowujące aplikacje. Jeśli pliki znajdują się na ścieżce UNC, upewnij się, że są one dostępne z tego komputera z systemem Mac OS. Ścieżka musi być zabezpieczona za pomocą protokołu IPsec lub funkcji podpisywania protokołu SMB.
@@ -414,6 +417,7 @@ Podczas korzystania z narzędzia opakowującego aplikacje należy stosować poni
 - W przypadku monitorowania folderu dokumentów na urządzeniu przy użyciu opakowanej aplikacji może być widoczny folder o nazwie .msftintuneapplauncher. Modyfikacja lub usunięcie tego pliku może zakłócić działanie aplikacji z ograniczeniami.
 
 ## <a name="intune-app-wrapping-tool-for-ios-with-citrix-mdx-mvpn"></a>Narzędzie opakowujące aplikacje dla systemu iOS w usłudze Intune z siecią mVPN w technologii Citrix MDX
+
 Ta funkcja jest integracją z narzędziem opakowującym aplikacje Citrix MDX dla systemu iOS. Integracja to po prostu dodatkowa, opcjonalna flaga wiersza polecenia, `-citrix`, do użycia z ogólnymi narzędziami opakowującymi aplikacje w usłudze Intune.
 
 ### <a name="requirements"></a>Wymagania
@@ -424,6 +428,7 @@ Aby używać flagi `-citrix`, należy również zainstalować [narzędzie opakow
 > Obsługa integracji usług Intune i Citrix jest ograniczona tylko urządzeń z systemem iOS 10+.
 
 ### <a name="use-the--citrix-flag"></a>Używanie flagi `-citrix`
+
 Wystarczy uruchomić ogólne polecenie opakowujące aplikację z dołączoną flagą `-citrix`. Flaga `-citrix` aktualnie nie przyjmuje żadnych argumentów.
 
 **Format użycia**:
@@ -439,6 +444,7 @@ Wystarczy uruchomić ogólne polecenie opakowujące aplikację z dołączoną fl
 ```
 
 ## <a name="getting-logs-for-your-wrapped-applications"></a>Pobieranie dzienników opakowanych aplikacji
+
 Wykonaj następujące kroki, aby podczas rozwiązywania problemów pobrać dzienniki opakowanych aplikacji.
 
 1. Przejdź do aplikacji Ustawienia systemu iOS na urządzeniu i wybierz aplikację LOB.

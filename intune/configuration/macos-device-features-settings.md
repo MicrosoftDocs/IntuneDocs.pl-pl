@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48cca2c894067439943bdfff33b953463e513490
-ms.sourcegitcommit: e9cf372711ff186ed468b01a9204631a139bd8e5
+ms.openlocfilehash: 3d0cff4ad624d35843f3388535b60549d1893eeb
+ms.sourcegitcommit: c38a856725993a4473ada75e669a57f75ab376f8
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72776898"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73143159"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Ustawienia funkcji urządzenia z systemem macOS w usłudze Intune
 
@@ -129,7 +129,7 @@ Ta funkcja ma zastosowanie do:
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Ustawienia dotyczą: wszystkie typy rejestracji 
 
-- **Typ rozszerzenia aplikacji SSO**: Wybierz typ rozszerzenia aplikacji SSO logowania jednokrotnego. Po zapisaniu profilu rozszerzenia aplikacji SSO nie można zmienić typu rozszerzenia aplikacji logowania jednokrotnego. Dostępne opcje:
+- **Typ rozszerzenia aplikacji SSO**: Wybierz typ rozszerzenia aplikacji SSO logowania jednokrotnego. Dostępne opcje:
 
   - **Nie skonfigurowano**: rozszerzenia aplikacji nie są używane. Aby wyłączyć rozszerzenie aplikacji logowania jednokrotnego, przełącz typ rozszerzenia aplikacji SSO z **protokołu Kerberos** lub **poświadczenia** na **Nieskonfigurowane**.
   - **Poświadczenie**: Użyj ogólnego, dostosowywalnego rozszerzenia aplikacji poświadczeń do korzystania z logowania jednokrotnego. Upewnij się, że znasz identyfikator rozszerzenia i identyfikator zespołu dla rozszerzenia aplikacji SSO w organizacji.  
@@ -143,7 +143,7 @@ Ta funkcja ma zastosowanie do:
 
   [Znajdź swój identyfikator zespołu](https://help.apple.com/developer-account/#/dev55c3c710c) (otwiera witrynę sieci Web firmy Apple), aby uzyskać więcej informacji.
 
-- **Obszar**: Wprowadź nazwę obszaru protokołu Kerberos. Nazwa obszaru powinna być Wielka litera, taka jak `CONTOSO.COM`. Zazwyczaj nazwa obszaru jest taka sama jak nazwa domeny DNS, ale w przypadku wszystkich wielkich liter.
+- **Obszar**: Wprowadź nazwę obszaru uwierzytelniania. Nazwa obszaru powinna być Wielka litera, taka jak `CONTOSO.COM`. Zazwyczaj nazwa obszaru jest taka sama jak nazwa domeny DNS, ale w przypadku wszystkich wielkich liter.
 - **Domeny**: Wprowadź nazwy domen lub hostów witryn, które mogą być uwierzytelniane za pomocą logowania jednokrotnego. Na przykład jeśli witryna sieci Web jest `mysite.contoso.com`, wówczas `mysite` jest nazwą hosta, a `contoso.com` jest nazwą domeny. Gdy użytkownicy łączą się z dowolną z tych witryn, rozszerzenie aplikacji obsługuje wyzwanie uwierzytelniania. To uwierzytelnianie umożliwia użytkownikom logowanie się przy użyciu identyfikatora, Touch ID lub Apple pincode/kodu dostępu.
 
   - Wszystkie domeny w profilach usługi Intune rozszerzenia aplikacji logowania jednokrotnego muszą być unikatowe. Nie można powtórzyć domeny w dowolnym profilu rozszerzenia aplikacji logowania, nawet jeśli używasz różnych typów rozszerzeń aplikacji logowania jednokrotnego.

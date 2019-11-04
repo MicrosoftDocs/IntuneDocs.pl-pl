@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c3f96b6a548536459162e81d0ea34d102ef8d1c
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: e88741609dc1a351d1971c907cd2e442cfd4b905
+ms.sourcegitcommit: 4bf23327af734a9811d555fbd566c31239e2acd6
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509750"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "72999520"
 ---
 # <a name="whats-new-in-the-intune-classic-portal---previous-months"></a>Nowości w portalu klasycznym usługi Intune — poprzednie miesiące
 
@@ -179,7 +179,6 @@ Obecnie nie występują żadne znane problemy. W przypadku wystąpienia jakichko
 Ponieważ Sklep Google Play jest niedostępny w Chinach, aplikacje na urządzenia z systemem Android należy uzyskiwać z chińskich platform oferujących aplikacje. Aplikacja Portal firmy będzie obsługiwać ten przepływ pracy, przekierowując użytkowników systemu Android w Chinach na strony umożliwiające pobranie aplikacji Portal firmy i Outlook z lokalnych sklepów z aplikacjami. Pozwoli to udoskonalić środowisko pracy w przypadku włączenia zasad dostępu warunkowego — zarówno dla zarządzania urządzeniami przenośnymi, jak i zarządzania aplikacjami mobilnymi. Aplikacje Portal firmy i Outlook dla systemu Android są dostępne w następujących chińskich sklepach z aplikacjami:
 
 - [Baidu](https://go.microsoft.com/fwlink/?linkid=836946)
-- [Xiaomi](http://en.miui.com/thread-469541-1-1.html)
 - [Tencent](https://go.microsoft.com/fwlink/?linkid=836949)
 - [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
 - [Wandoujia](https://go.microsoft.com/fwlink/?linkid=836950)
@@ -329,7 +328,6 @@ Obecnie publikujemy aplikację Portal firmy dla systemu Android możliwą do pob
 * [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
 * [Tencent](https://go.microsoft.com/fwlink/?linkid=836949)
 * [Wandoujia](https://go.microsoft.com/fwlink/?linkid=836950)
-* [Xiaomi](http://en.miui.com/thread-469541-1-1.html)
 
 Aplikacja Portal firmy dla systemu Android używa usług Google Play do komunikowania się z usługą Microsoft Intune. Ponieważ usługi Google Play nie są jeszcze dostępne w Chinach, wykonanie dowolnego z wymienionych poniżej zadań może potrwać do 8 godzin.
 

@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 10/31/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 95cf688f3727f97aedd4126e00fa4dc4939ef6bc
-ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
+ms.openlocfilehash: 6dbe26dba4e78e9f5f29a5adedffa3de1df662a6
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72785523"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73414689"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem iOS i iPadOS umożliwiające działanie funkcji lub ich ograniczanie przy użyciu usługi Intune
 
@@ -167,7 +167,33 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
   System iOS ma wbudowane zabezpieczenia, które mogą mieć wpływ na to ustawienie. Na przykład system iOS może opóźnić wyzwolenie zasad w zależności od liczby niepowodzeń logowania. Może również rozważyć wielokrotne wprowadzenie tego samego kodu dostępu jako jednej próby. [Przewodnik po zabezpieczeniach systemu iOS](https://www.apple.com/business/site/docs/iOS_Security_Guide.pdf) firmy Apple (otwiera witrynę sieci Web firmy Apple) jest dobrym zasobem i zawiera bardziej szczegółowe informacje dotyczące kodów dostępu.
   
 - **Maksymalna liczba minut po zablokowaniu ekranu, po których jest wymagane wprowadzenie hasła**<sup>1</sup>: podaj, jak długo urządzenie pozostanie bezczynne, zanim użytkownik będzie musiał ponownie wprowadzić hasło. Jeśli wprowadzony czas jest dłuższy niż aktualnie ustawiony na urządzeniu, urządzenie ignoruje wprowadzony przez Ciebie czas. Obsługiwane na urządzeniach z systemem iOS 8.0 i nowszym.
-- **Maksymalna liczba minut braku aktywności przed zablokowaniem ekranu**<sup>1</sup>: wprowadź maksymalną dopuszczalną liczbę minut braku aktywności przed automatycznym zablokowaniem ekranu. Jeśli wprowadzony czas jest dłuższy niż aktualnie ustawiony na urządzeniu, urządzenie ignoruje wprowadzony przez Ciebie czas. Po ustawieniu na **natychmiast**, blokada ekranu zależy od minimalnego czasu urządzenia. Na telefonie iPhone jest 30 sekund. Na urządzeniu iPad jest to dwie minuty.
+
+- **Maksymalna liczba minut braku aktywności przed zablokowaniem ekranu**<sup>1</sup>: wprowadź maksymalną dopuszczalną liczbę minut braku aktywności przed automatycznym zablokowaniem ekranu.
+
+  **Opcje systemu iOS**:  
+
+  - **Nie skonfigurowano** (domyślnie): usługa Intune nie dotyka tego ustawienia.
+  - **Natychmiast**: blokowanie ekranu po 30 sekundach braku aktywności.
+  - **1**: blokady ekranu po 1 minucie braku aktywności.
+  - **2**: blokowanie ekranu po 2 minutach braku aktywności.
+  - **3**: blokady ekranu po 3 minutach braku aktywności.
+  - **4**: blokowanie ekranu po 4 minutach braku aktywności.
+  - **5**: blokady ekranu po 5 minutach braku aktywności.
+    
+  **Opcje iPadOS**:  
+
+  - **Nie skonfigurowano** (domyślnie): usługa Intune nie dotyka tego ustawienia.
+  - **Natychmiast**: blokowanie ekranu po 2 minutach braku aktywności.
+  - **2**: blokowanie ekranu po 2 minutach braku aktywności.
+  - **5**: blokady ekranu po 5 minutach braku aktywności.
+  - **10**: blokady ekranu po 10 minutach braku aktywności.
+  - **15**: blokowanie ekranu po 15 minutach braku aktywności.
+
+  Jeśli wartość nie dotyczy systemu iOS lub iPadOS, firma Apple używa najbliższej *najniższej* wartości. Jeśli na przykład wprowadzisz `4` minut, iPadOS urządzenia używają `2` minut. Jeśli wprowadzisz `10` minut, urządzenia z systemem iOS używają `5` minut. Jest to ograniczenie firmy Apple.
+  
+  > [!NOTE]
+  > Interfejs użytkownika usługi Intune dla tego ustawienia nie oddziela obsługiwanych wartości systemu iOS i iPadOS. Interfejs użytkownika może zostać zaktualizowany w przyszłej wersji.
+
 - **Wygaśnięcie hasła (dni)** : wprowadź liczbę dni, po której należy zmienić hasło urządzenia.
 - **Zapobiegaj ponownemu użyciu starych haseł**: wprowadź liczbę nowych haseł, których należy użyć, zanim będzie możliwe ponowne użycie starego hasła.
 - **Identyfikator dotyku i identyfikator**elementu wyglądu: wybierz opcję **Blokuj** , aby uniemożliwić użycie odcisku palca lub kroju do odblokowania urządzenia. Pozycja **Nieskonfigurowane** zezwala użytkownikowi na odblokowywanie urządzenia przy użyciu tych metod.

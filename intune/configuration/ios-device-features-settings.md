@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/08/2019
+ms.date: 10/28/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3baa1972593c5d836c49905b59e9a28932329fbe
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: e3e0ea523d71ff036f1f23c9436c65e105328d8b
+ms.sourcegitcommit: 807ab3e35f4d9ffa18655410b7d61e5e772ab348
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506731"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73057643"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-ios-features-in-intune"></a>Ustawienia urządzeń z systemem iOS oraz iPadOS dotyczące korzystania z typowych funkcji systemu iOS w usłudze Intune
 
@@ -266,7 +266,7 @@ Ta funkcja ma zastosowanie do:
   - **Tylko określone witryny internetowe** (dotyczy wyłącznie przeglądarki Safari): te adresy URL są dodawane do zakładek przeglądarki Safari. Użytkownik jest uprawniony **wyłącznie** do odwiedzania tych witryn internetowych; nie będzie można otwierać żadnych innych witryn. Użyj tej opcji tylko wtedy, gdy znasz dokładną listę adresów URL, do których użytkownicy mogą uzyskiwać dostęp.
 
     - **Adres URL**: podaj adres URL dozwolonej witryny internetowej. Na przykład wprowadź `https://www.contoso.com`.
-    - **Ścieżka do zakładki**: wprowadź ścieżkę na potrzeby przechowywania zakładki. Na przykład wprowadź `/Contoso/Business Apps`. Jeśli nie dodasz ścieżki, zakładka zostanie dodana do domyślnego folderu zakładek na urządzeniu.
+    - **Ścieżka zakładki**: Firma Apple zmieniła to ustawienie. Wszystkie zakładki przechodzą do folderu **zatwierdzone witryny** . Zakładki nie przechodzą do wprowadzonej ścieżki do zakładki.
     - **Tytuł**: podaj opisowy tytuł zakładki.
 
     Jeśli nie wprowadzisz żadnych adresów URL, użytkownicy końcowi nie będą mogli uzyskiwać dostęp do żadnych witryn internetowych, z wyjątkiem `microsoft.com`, `microsoft.net`, i `apple.com`. Usługa Intune automatycznie zezwala na dostęp do tych adresów URL.
@@ -280,7 +280,7 @@ Ta funkcja ma zastosowanie do:
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Ustawienia dotyczą: wszystkie typy rejestracji
 
-- **Typ rozszerzenia aplikacji SSO**: Wybierz typ rozszerzenia aplikacji SSO logowania jednokrotnego. Po zapisaniu profilu rozszerzenia aplikacji SSO nie można zmienić typu rozszerzenia aplikacji logowania jednokrotnego. Dostępne opcje:
+- **Typ rozszerzenia aplikacji SSO**: Wybierz typ rozszerzenia aplikacji SSO logowania jednokrotnego. Dostępne opcje:
 
   - **Nie skonfigurowano**: rozszerzenia aplikacji nie są używane. Aby wyłączyć rozszerzenie aplikacji, możesz przełączyć typ rozszerzenia aplikacji logowania jednokrotnego z **protokołu Kerberos** lub **poświadczenia** na **Nieskonfigurowane**.
   - **Poświadczenie**: Aby przeprowadzić Logowanie jednokrotne, użyj ogólnego, dostosowywalnego rozszerzenia aplikacji Credential. Upewnij się, że znasz identyfikator rozszerzenia aplikacji rejestracji jednokrotnej w organizacji.
