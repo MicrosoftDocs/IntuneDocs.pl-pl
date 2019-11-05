@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 10/24/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,16 +15,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1f34e321476ea634030a5e602bc362d409eee8f5
-ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
+ms.openlocfilehash: 2bfc49f772331113314e45bc49360b8435b88037
+ms.sourcegitcommit: 0d6f323152ec62f7d383891cce12ea0a4289cd8f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72785547"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72889575"
 ---
-# <a name="use-device-firmware-configuration-interface-profiles-on-windows-devices-in-microsoft-intune"></a>Używanie profilów interfejsu DFCI (Device Firmware Configuration Interface) na urządzeniach z systemem Windows w usłudze Microsoft Intune
+# <a name="use-device-firmware-configuration-interface-profiles-on-windows-devices-in-microsoft-intune-public-preview"></a>Używanie profilów interfejsu DFCI (Device Firmware Configuration Interface) na urządzeniach z systemem Windows w usłudze Microsoft Intune (publiczna wersja zapoznawcza)
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
+> [!Note]
+> Wprowadzenie każdej [comiesięcznej aktualizacji](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) może potrwać kilka dni. Niektóre funkcje mogą być wprowadzane przez kilka tygodni i nie być od razu dostępne dla wszystkich klientów.
 
 W przypadku korzystania z usługi Intune do zarządzania zarejestrowanymi urządzeniami rozwiązania Autopilot można zarządzać ustawieniami interfejsu UEFI (BIOS) przy użyciu interfejsu DFCI (Device Firmware Configuration Interface). Aby zapoznać się z korzyściami, scenariuszami i wymaganiami wstępnymi, zobacz [Overview of DFCI (Przegląd interfejsu DFCI)](https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Dfci_Feature/).
 
@@ -167,15 +170,9 @@ Teraz można przystąpić do czyszczenia urządzenia. Po wyczyszczeniu urządzen
 
 ### <a name="recover"></a>Odzyskiwanie
 
-Jeśli wyczyścisz urządzenie i usuniesz rekord rozwiązania Autopilot przed odblokowaniem menu interfejsu UEFI (BIOS), menu pozostaną zablokowane. Usługa Intune nie może wysłać aktualizacji profilu, aby je odblokować. Aby odblokować urządzenie, możesz skorzystać z jednej z dostępnych opcji:
+Jeśli wyczyścisz urządzenie i usuniesz rekord rozwiązania Autopilot przed odblokowaniem menu interfejsu UEFI (BIOS), menu pozostaną zablokowane. Usługa Intune nie może wysłać aktualizacji profilu, aby je odblokować.
 
-- **Opcja 1**. Skontaktuj się z partnerem programu CSP lub bezpośrednim dostawcą urządzenia OEM, aby zarejestrować ponownie urządzenie przy użyciu rozwiązania Autopilot. Zarejestruj je ponownie w usłudze Intune, aby zastosować ponownie profile rozwiązania Autopilot i interfejsu DFCI.
-
-  Następnie odblokuj menu interfejsu UEFI, wykonując kroki [wycofywania urządzenia](#retire) (opisane w tym artykule).
-
-- **Opcja 2**: Otwórz menu interfejsu UEFI (BIOS) i wybierz opcję odzyskiwania. Potwierdź, że urządzenie nie jest zarejestrowane na potrzeby zarządzania za pomocą interfejsu DFCI, i odblokuj menu. Opcje odzyskiwania powodują określenie dla wszystkich ustawień interfejsu UEFI (BIOS) wartości z ostatniego profilu interfejsu DFCI w usłudze Intune.
-
-  Następnie odblokuj menu interfejsu UEFI, wykonując kroki [wycofywania urządzenia](#retire) (opisane w tym artykule).
+Aby odblokować urządzenie, otwórz menu UEFI (BIOS) i odśwież zarządzanie z sieci. Odzyskiwanie odblokowuje menu, ale pozostawia wszystkie ustawienia UEFI (BIOS) skonfigurowane za pomocą wartości z poprzedniego profilu DFCI usługi Intune.
 
 ## <a name="end-user-impact"></a>Wpływ na użytkowników końcowych
 

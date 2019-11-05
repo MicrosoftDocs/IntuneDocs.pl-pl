@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/09/2019
+ms.date: 10/24/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 492feb3f2ef5f5bbbc1537d4c60ac12d5fd6bdcd
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: 22a957e6df2c7f9126cbe9f22c4f3a96213551d3
+ms.sourcegitcommit: f12bd2ce10b6241715bae2d2857f33c474287166
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72585608"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72892572"
 ---
 # <a name="add-microsoft-edge-for-windows-10-to-microsoft-intune"></a>Dodawanie przeglądarki Microsoft Edge dla systemu Windows 10 do usługi Microsoft Intune
 
@@ -94,7 +94,7 @@ Utworzona aplikacja będzie wyświetlana na liście aplikacji, z której można 
 
 ## <a name="troubleshooting"></a>Rozwiązywanie problemów
 **Microsoft Edge w wersji 77 lub nowszej dla systemu Windows 10:**<br>
-Usługa Intune używa rozszerzenia zarządzania usługi Intune do pobrania i wdrożenia Instalatora przeglądarki Microsoft Edge do przypisanych urządzeń z systemem Windows 10, a następnie przekazuje ustawienia wdrożenia do Instalatora przeglądarki Microsoft Edge, który pobiera i instaluje przeglądarkę Microsoft Edge bezpośrednio z sieci CDN. Zapoznaj się z [wymaganiami wstępnymi dla rozszerzenia zarządzania usługi Intune](~/apps/intune-management-extension.md#prerequisites) oraz najlepszymi rozwiązaniami dotyczącymi uzyskiwania dostępu do usług aktualizacji platformy Azure oraz sieci CDN, aby upewnić się, że Twoja konfiguracja sieci zezwala urządzeniom z systemem Windows 10 na dostęp do tych lokalizacji.
+Usługa Intune używa rozszerzenia zarządzania usługi Intune do pobrania i wdrożenia Instalatora przeglądarki Microsoft Edge do przypisanych urządzeń z systemem Windows 10, a następnie przekazuje ustawienia wdrożenia do Instalatora przeglądarki Microsoft Edge, który pobiera i instaluje przeglądarkę Microsoft Edge bezpośrednio z sieci CDN. Zapoznaj się z [wymaganiami wstępnymi dla rozszerzenia zarządzania usługi Intune](~/apps/intune-management-extension.md#prerequisites) oraz najlepszymi rozwiązaniami dotyczącymi uzyskiwania dostępu do usług aktualizacji platformy Azure oraz sieci CDN, aby upewnić się, że Twoja konfiguracja sieci zezwala urządzeniom z systemem Windows 10 na dostęp do tych lokalizacji. Ponadto, aby zezwolić na dostęp do plików instalacyjnych z sieci CDN w celu zainstalowania przeglądarki, należy zezwolić na dostęp do punktów końcowych usługi Windows Update. Aby uzyskać więcej informacji, zobacz [Zarządzanie punktami końcowymi połączenia dla systemu Windows 10 w wersji 1809 — Windows Update](https://docs.microsoft.com/windows/privacy/manage-windows-1809-endpoints#windows-update) i [Punkty końcowe sieci dla usługi Microsoft Intune](~/fundamentals/intune-endpoints.md).
 
 ## <a name="next-steps"></a>Następne kroki
 - [Przypisywanie aplikacji do grup](~/apps/apps-deploy.md)

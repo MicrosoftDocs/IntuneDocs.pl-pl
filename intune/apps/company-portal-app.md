@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/10/2019
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd48eea5ee09562590844e11ac372480c892a7af
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: 4fcec6c264a97d710e3061c289d6898297ef61be
+ms.sourcegitcommit: 4bf23327af734a9811d555fbd566c31239e2acd6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72585005"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "72999536"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Jak skonfigurować aplikację Portal firmy w usłudze Microsoft Intune
 
@@ -137,6 +137,10 @@ Usługa Intune obsługuje pochodne poświadczenia na potrzeby weryfikacji tożsa
 
 Aby uzyskać więcej informacji na temat pochodnych poświadczeń dla urządzeń z systemem iOS, zobacz [Korzystanie z pochodnych poświadczeń w usłudze Microsoft Intune](~/protect/derived-credentials.md).
 
+## <a name="dark-mode-for-ios-company-portal"></a>Tryb ciemny dla aplikacji Portal firmy systemu iOS
+
+Tryb ciemny jest dostępny dla aplikacji Portal firmy systemu iOS. Użytkownicy mogą pobierać aplikacje firmowe, zarządzać swoimi urządzeniami i uzyskiwać pomoc techniczną w wybranym przez siebie schemacie kolorów na podstawie ustawień urządzenia. Aplikacja Portal firmy systemu iOS będzie automatycznie dopasowywać ustawienia urządzenia użytkownika końcowego dla trybu ciemnego lub jasnego. 
+
 ## <a name="windows-company-portal-keyboard-shortcuts"></a>Skróty klawiaturowe w aplikacji Portal firmy dla systemu Windows
 
 Użytkownicy końcowi mogą wyzwalać akcje nawigacji, aplikacji i urządzeń w aplikacji Portal firmy dla systemu Windows za pomocą skrótów klawiaturowych (akceleratorów).
@@ -180,25 +184,24 @@ Za pomocą aplikacji lub witryny Portal firmy użytkownicy mogą wykonywać akcj
 
 Niektóre platformy i konfiguracje nie zezwalają na samoobsługowe akcje urządzeń. W poniższej tabeli znajdują się dodatkowe szczegółowe informacje na temat akcji samoobsługowych:
 
-|  | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup><sup>(5)</sup> | Android<sup>(3)</sup> |
+|  | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
-| Wycofaj | Dostępne<sup>(1)</sup> | Dostępne<sup>(8)</sup> | Dostępne | Dostępne<sup>(7)</sup> |
-| Czyszczenie danych | Dostępne | Dostępne | Nie dotyczy | Dostępne<sup>(7)</sup> |
-| Zmień nazwę <sup>(4)</sup> | Dostępne | Dostępne<sup>(8)</sup> | Dostępne | Dostępne |
+| Wycofaj | Dostępne<sup>(1)</sup> | Dostępne | Dostępne | Dostępne<sup>(7)</sup> |
+| Czyszczenie danych | Dostępne | Dostępne<sup>(5)</sup> | Nie dotyczy | Dostępne<sup>(7)</sup> |
+| Zmień nazwę <sup>(4)</sup> | Dostępne | Dostępne | Dostępne | Dostępne |
 | Synchronizuj | Dostępne | Dostępne | Dostępne | Dostępne |
 | Zdalne blokowanie | Tylko system Windows Phone | Dostępne | Dostępne | Dostępne |
-| Resetowanie kodu dostępu | Tylko system Windows Phone | Dostępne | Nie dotyczy | Dostępne<sup>(6)</sup> |
+| Resetowanie kodu dostępu | Tylko system Windows Phone | Dostępne<sup>(8)</sup> | Nie dotyczy | Dostępne<sup>(6)</sup> |
 | Odzyskiwanie kluczy | Nie dotyczy | Nie dotyczy | Dostępne<sup>(2)</sup> | Nie dotyczy |
-| Tryb ciemny | Nie dotyczy | Dostępne | Nie dotyczy | Nie dotyczy |
 
 <sup>(1)</sup> **Wycofanie** jest zawsze zablokowane na urządzeniach z systemem Windows dołączonych do usługi Azure AD.<br>
 <sup>(2)</sup> **Odzyskiwanie klucza** dla systemu MacOS jest dostępne tylko w portalu internetowym.<br>
 <sup>(3)</sup> Wszystkie akcje zdalne są wyłączone w przypadku korzystania z rejestracji Menedżera rejestracji urządzeń.<br>
 <sup>(4)</sup> **Zmiana nazwy** zmienia nazwę urządzenia tylko w aplikacji lub w witrynie Portal firmy, a nie na urządzeniu.<br>
-<sup>(5)</sup> **Zdalne czyszczenie** nie jest dostępne na urządzeniach z systemem MacOS.<br>
+<sup>(5)</sup> **Czyszczenie** nie jest dostępne na urządzeniach z systemem iOS zarejestrowanych przez użytkownika.<br>
 <sup>(6)</sup> **Resetowanie kodu dostępu** nie jest obsługiwane w niektórych konfiguracjach systemów Android i Android Enterprise. Aby uzyskać więcej informacji, zobacz [Resetowanie lub usuwanie kodu dostępu urządzenia w usłudze Intune](../remote-actions/device-passcode-reset.md).<br>
 <sup>(7)</sup> **Wycofywanie** i **czyszczenie** nie są dostępne w scenariuszach właściciela urządzenia z systemem Android Enterprise (COPE, COBO, COSU).<br> 
-<sup>(8)</sup> **Wycofywanie** (usuwanie urządzenia) i **zmiana nazwy** są dostępne dla wszystkich typów wdrożeń. Inne akcje nie są obsługiwane w przypadku rejestracji użytkowników.<br> 
+<sup>(8)</sup> **Resetowania kodu dostępu** nie jest obsługiwana na urządzeniach z systemem iOS zarejestrowanych przez użytkownika.
 
 ## <a name="next-steps"></a>Następne kroki
 

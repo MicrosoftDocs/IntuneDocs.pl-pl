@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/19/2019
+ms.date: 10/24/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4c42e5ef50f8a5a8514bc43670fc743f42b1b2d6
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: 1716da820fd0d9a4b6d1bbc5024440cfb141c5a1
+ms.sourcegitcommit: 0d6f323152ec62f7d383891cce12ea0a4289cd8f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72585829"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72889548"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Korzystanie z pochodnych poświadczeń w usłudze Microsoft Intune
 
@@ -64,7 +64,7 @@ Usługa Intune obsługuje jednego wystawcę pochodnych poświadczeń na dzierża
 - **Entrust Datacard**: https://www.entrustdatacard.com/
 - **Intercede**: https://www.intercede.com/
 
-Aby uzyskać ważne informacje dotyczące korzystania z różnych wystawców, zapoznaj się ze wskazówkami dotyczącymi konkretnego wystawcy, w tym z przepływem pracy użytkownika końcowego. Aby uzyskać więcej informacji, zobacz [Planowanie na potrzeby pochodnych poświadczeń](#plan-for-derived-credentials) w tym artykule.
+Aby uzyskać ważne informacje dotyczące korzystania z różnych wystawców, zapoznaj się ze wskazówkami dotyczącymi konkretnego wystawcy<!-- , including the issuers end-user workflow-->. Aby uzyskać więcej informacji, zobacz [Planowanie na potrzeby pochodnych poświadczeń](#plan-for-derived-credentials) w tym artykule.
 
 > [!IMPORTANT]  
 > Jeśli usuniesz wystawcę pochodnego poświadczenia ze swojej dzierżawy, pochodne poświadczenia skonfigurowane przy użyciu tego wystawcy nie będą działać.  
@@ -101,11 +101,14 @@ Informacje ogólne:
 
 ### <a name="2-review-the-end-user-workflow-for-your-chosen-issuer"></a>2) Przejrzyj przepływ pracy użytkownika końcowego dla wybranego wystawcy
 
-Poniżej przedstawiono kluczowe zagadnienia dotyczące poszczególnych obsługiwanych partnerów oraz linki do przepływów pracy użytkownika końcowego tych wystawców.  Zapoznaj się z tymi informacjami, aby się upewnić, że zasady i konfiguracje usługi Intune nie blokują użytkownikom i urządzeniom pomyślnego ukończenia rejestracji pochodnych poświadczeń od konkretnego wystawcy.
+Poniżej przedstawiono kluczowe zagadnienia dotyczące poszczególnych obsługiwanych partnerów<!--  , and links to that issuers end-user workflow -->.  Zapoznaj się z tymi informacjami, aby się upewnić, że zasady i konfiguracje usługi Intune nie blokują użytkownikom i urządzeniom pomyślnego ukończenia rejestracji pochodnych poświadczeń od konkretnego wystawcy.
 
 #### <a name="disa-purebred"></a>DISA Purebred
 
-Zapoznaj się z [przepływem pracy użytkownika wystawcy DISA Purebred](https://docs.microsoft.com/intune-user-help/enroll-ios-device-disa-purebred). Poniżej przedstawiono najważniejsze wymagania dotyczące tego przepływu:  
+Informacje o przepływie pracy użytkownika końcowego i kluczowych wymaganiach:  
+<!-- TEMP EDIT - preceeding line to be replaced with the following once user content is ready. 
+Review the [user workflow for DISA Purebred](https://docs.microsoft.com/intune-user-help/enroll-ios-device-disa-purebred). Key requirements for this workflow include:  
+-->
 
 - Użytkownicy muszą mieć dostęp do komputera lub kiosku, gdzie mogą użyć swojej karty inteligentnej w celu uwierzytelniania się u wystawcy. 
 
@@ -120,8 +123,11 @@ Zapoznaj się z [przepływem pracy użytkownika wystawcy DISA Purebred](https://
 Aby uzyskać informacje na temat pobierania i konfigurowania aplikacji DISA Purebred, zobacz sekcję [Wdrażanie aplikacji DISA Purebred](#deploy-the-disa-purebred-app) w dalszej części tego artykułu.  
 
 #### <a name="entrust-datacard"></a>Entrust Datacard  
-Zapoznaj się z [przepływem pracy użytkownika wystawcy Entrust Datacard](https://docs.microsoft.com/intune-user-help/enroll-ios-device-entrust). Poniżej przedstawiono najważniejsze wymagania dotyczące tego przepływu: 
 
+Informacje o przepływie pracy użytkownika końcowego i kluczowych wymaganiach:  
+<!-- TEMP EDIT - preceeding line to be replaced with the following once user content is ready. 
+Review the [user workflow for Entrust Datacard](https://docs.microsoft.com/intune-user-help/enroll-ios-device-entrust). Key requirements for this workflow include: 
+--> 
 - Użytkownicy muszą mieć dostęp do komputera lub kiosku, gdzie mogą użyć swojej karty inteligentnej w celu uwierzytelniania się u wystawcy. 
 
 - Na urządzeniach, które będą rejestrowane na potrzeby pochodnego poświadczenia, musi być zainstalowana aplikacja Intune — Portal firmy.
@@ -129,8 +135,11 @@ Zapoznaj się z [przepływem pracy użytkownika wystawcy Entrust Datacard](https
 - Konieczne jest użycie aparatu urządzenia w celu zeskanowania kodu QR, który łączy żądanie uwierzytelnienia z żądaniem pochodnego poświadczenia z urządzenia przenośnego.
 
 #### <a name="intercede"></a>Intercede
-Zapoznaj się z [przepływem pracy użytkownika wystawcy Intercede](https://docs.microsoft.com/intune-user-help/enroll-ios-device-intercede). Poniżej przedstawiono najważniejsze wymagania dotyczące tego przepływu: 
 
+Informacje o przepływie pracy użytkownika końcowego i kluczowych wymaganiach:  
+<!-- TEMP EDIT - preceeding line to be replaced with the following once user content is ready. 
+Review the [user workflow for Intercede](https://docs.microsoft.com/intune-user-help/enroll-ios-device-intercede). Key requirements for this workflow include: 
+-->
 - Użytkownicy muszą mieć dostęp do komputera lub kiosku, gdzie mogą użyć swojej karty inteligentnej w celu uwierzytelniania się u wystawcy. 
 
 - Na urządzeniach, które będą rejestrowane na potrzeby pochodnego poświadczenia, musi być zainstalowana aplikacja Intune — Portal firmy.

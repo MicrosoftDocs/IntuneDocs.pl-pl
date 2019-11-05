@@ -5,24 +5,24 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/17/2019
+ms.date: 10/24/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: f6f5414d-0e41-42fc-b6cf-e7ad76e1e06d
-ms.reviewer: heenamac
+ms.reviewer: altsou
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26ed23e4d9d267e37ba5088fa32234c27e3935b6
-ms.sourcegitcommit: 9a2ddcec73b37a118908b63d8e5252835f257618
+ms.openlocfilehash: a19515e859f5e78f7611bbd10088aea5f7c44650
+ms.sourcegitcommit: f12bd2ce10b6241715bae2d2857f33c474287166
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72550808"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72892632"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Przypisywanie profili użytkowników i urządzeń w usłudze Microsoft Intune
 
@@ -69,19 +69,28 @@ Na urządzeniach z systemem Windows 10 możesz dodać **reguły stosowania**, ab
 
 ## <a name="exclude-groups-from-a-profile-assignment"></a>Wykluczanie grup z przypisania profilu
 
-Profile konfiguracji urządzeń w usłudze Intune umożliwiają wykluczanie grup z przypisania zasad.
+Profile konfiguracji urządzeń w usłudze Intune umożliwiają dołączanie i wykluczanie grup z przypisania zasad.
 
-Usługa Intune nie sprawdza relacji między użytkownikami i grupami urządzeń. Dołączanie grup użytkowników przy jednoczesnym wykluczaniu grup urządzeń może nie przynieść oczekiwanych rezultatów. W scenariuszach „grupa użytkowników do grupy użytkowników” i „grupa urządzeń do grupy urządzeń” wykluczenia mają pierwszeństwo przed dołączaniem.
+Najlepszym rozwiązaniem jest utworzenie i przypisanie zasad przeznaczonych specjalnie dla grup użytkowników. Ponadto należy utworzyć i przypisać różne zasady przeznaczone specjalnie dla grup urządzeń. Aby uzyskać więcej informacji na temat grup, zobacz [Dodawanie grup w celu organizowania użytkowników i urządzeń](../fundamentals/groups-add.md).
 
-Załóżmy na przykład, że przypisano profil urządzenia do grupy użytkowników **Wszyscy użytkownicy firmowi**, ale z wykluczeniem członków grupy użytkowników **Wyższa kadra kierownicza**. Ponieważ obydwie grupy są grupami użytkowników, wszyscy członkowie grupy **Wyższa kadra kierownicza** są wykluczeni z tej zasady, mimo że są członkami grupy dołączania **Wszyscy użytkownicy firmowi**.
+W przypadku przypisywania zasad skorzystaj z poniższej tabeli podczas dołączania i wykluczania grup. Znacznik wyboru oznacza, że przypisanie jest obsługiwane:
 
-Dołączenie ma pierwszeństwo przed wykluczeniem w przypadku grup mieszanych, takich jak „grupa użytkowników do grupy urządzeń” lub „grupa urządzeń do grupy użytkowników”.
+![Obsługiwane opcje dołączają grupy do przypisania profilu lub wykluczają grupy z przypisania profilu](./media/device-profile-assign/include-exclude-user-device-groups.png)
 
-Załóżmy na przykład, że chcesz przypisać profil urządzenia do wszystkich użytkowników w organizacji z wyjątkiem kiosków. Musisz dołączyć grupę **Wszyscy użytkownicy**, ale wykluczyć grupę **Wszystkie urządzenia**. Zasady zostaną wtedy zastosowane do wszystkich użytkowników i ich urządzeń, nawet jeśli dane urządzenie użytkownika należy do grupy **Wszystkie urządzenia**.
+### <a name="what-you-should-know"></a>Co należy wiedzieć
 
-Operacja wykluczenia uwzględnia tylko bezpośrednich członków grupy. Nie obejmuje urządzeń skojarzonych z użytkownikiem. Jednak urządzenia nieskojarzone z żadnym użytkownikiem nie otrzymają zasad. Dzieje się tak, ponieważ urządzenia bez użytkowników nie mają relacji z grupą **Wszyscy użytkownicy**.
+- Wykluczenie ma pierwszeństwo przed dołączeniem w następujących scenariuszach tego samego typu grupy:
 
-Jeśli dołączysz grupę **Wszystkie urządzenia**, a wykluczysz grupę **Wszyscy użytkownicy**, zasady zostaną zastosowane do wszystkich urządzeń. W tym przypadku celem jest wykluczenie z zasad urządzeń, które są skojarzone z użytkownikami. Jednak urządzenia nie zostaną wykluczone, ponieważ funkcja wykluczania porównuje tylko członków grup.
+  - Dołączanie grup użytkowników i wykluczanie grup użytkowników
+  - Dołączanie grup urządzeń i wykluczanie grup urządzeń
+
+  Załóżmy na przykład, że przypisano profil urządzenia do grupy użytkowników **Wszyscy użytkownicy firmowi**, ale z wykluczeniem członków grupy użytkowników **Wyższa kadra kierownicza**. Ponieważ obie grupy są grupami użytkowników, zasady otrzymają **wszyscy użytkownicy firmowi** z wyjątkiem **starszej kadry kierowniczej**.
+
+- Usługa Intune nie ocenia relacji między użytkownikami i grupami urządzeń. Jeśli przypiszesz zasady do grup mieszanych, wyniki mogą być niezgodne z oczekiwaniami.
+
+  Przypiszesz na przykład profil urządzenia do grupy użytkowników **Wszyscy użytkownicy**, ale wykluczysz grupę urządzeń **Wszystkie urządzenia osobiste**. W tym mieszanym przypisaniu zasad grupy zasady otrzyma grupa **Wszyscy użytkownicy**. Wykluczenie nie ma zastosowania.
+
+  W związku z tym nie zaleca się przypisywania zasad do grup mieszanych.
 
 ## <a name="next-steps"></a>Następne kroki
 

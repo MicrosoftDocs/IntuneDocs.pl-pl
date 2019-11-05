@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/27/2019
+ms.date: 10/24/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 62a3f9ee2cec41f14e450158ab8ad02e1a3a2ea2
-ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
+ms.openlocfilehash: 882c542d6a1d981b9924bb33eee40f03b41689f7
+ms.sourcegitcommit: 4bf23327af734a9811d555fbd566c31239e2acd6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72785686"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "72999489"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Selektywne czyszczenie danych przy użyciu akcji uruchamiania warunkowego zasad ochrony aplikacji w usłudze Intune
 
@@ -84,8 +84,11 @@ W przypadku systemu Android za pomocą listy rozwijanej **Ustawienie** możliwe 
 - Minimalna wersja poprawki
 - Producenci urządzeń
 - Zaświadczanie urządzeń SafetyNet
-- Skanowanie aplikacji pod kątem zagrożeń
+- Wymagaj skanowania zagrożeń w aplikacjach
+- Minimalna wersja Portalu firmy
 - Maksymalny dozwolony poziom zagrożenia urządzenia
+
+Korzystając z ustawienia **Minimalna wersja Portalu firmy**, można określić konkretną minimalną zdefiniowaną wersję aplikacji Portal firmy, która jest wymuszana na urządzeniu użytkownika końcowego. To ustawienie uruchamiania warunkowego umożliwia ustawienie wartości **Blokuj dostęp**, **Wyczyść dane** i **Ostrzegaj** jako możliwych akcji, kiedy każda wartość nie zostanie spełniona. Możliwe formaty dla tej wartości są zgodne ze wzorcem *[Wersja główna].[Wersja pomocnicza]* , *[Wersja główna].[Wersja pomocnicza].[Kompilacja]* lub *[Wersja główna].[Wersja pomocnicza].[Kompilacja].[Poprawka]* . Ponieważ niektórzy użytkownicy końcowi mogą nie chcieć natychmiastowej wymuszonej aktualizacji, opcja „Ostrzegaj” może być idealna podczas konfigurowania tego ustawienia. Sklep Google Play wysyła tylko bajty delta dla aktualizacji aplikacji, jednak nadal może to być duża ilość danych, których użytkownik może nie chcieć wykorzystywać, jeśli w czasie aktualizacji korzysta z danych komórkowych. Wymuszenie aktualizacji, a tym samym pobranie zaktualizowanej aplikacji, może spowodować naliczenie nieoczekiwanych opłat za przesył danych w czasie aktualizacji. Jeśli ustawienie **Minimalna wersja Portalu firmy** zostanie skonfigurowane, będzie miało wpływ na wszystkich użytkowników końcowych, którzy będą korzystać z wersji 5.0.4560.0 aplikacji Portal firmy i z wszystkich kolejnych wersji. To ustawienie nie będzie miało wpływu na użytkowników korzystających z wersji aplikacji Portal firmy, które są starsze niż wersja, z którą ta funkcja została wydana. Użytkownikom końcowym, którzy na swoich urządzeniach korzystają z automatycznych aktualizacji aplikacji, prawdopodobnie nie zostanie wyświetlone żadne okno dialogowe dotyczące tej funkcji, ponieważ prawdopodobnie będą oni używać najnowszej wersji aplikacji Portal firmy. To ustawienie dotyczy tylko systemu Android z ochroną aplikacji dla zarejestrowanych i niezarejestrowanych urządzeń.
 
 Aby użyć ustawienia **Producenci urządzeń**, wprowadź rozdzielaną średnikami listę producentów urządzeń z systemem Android. Producenta urządzenia z systemem Android można znaleźć w ustawieniach urządzenia.<br>
 Przykładowe dane wejściowe: *Producent A;Producent B* 
