@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: apps; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 53425b56985cbafb4033b11df54597959c0b0d59
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: ef958468feb7e36f894537989675977e1d96bf8c
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72499706"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73414734"
 ---
 # <a name="overview-of-the-app-lifecycle-in-microsoft-intune"></a>Przegląd cyklu życia aplikacji w usłudze Microsoft Intune
-
-[!INCLUDE [both-portals](../../intune-classic/includes/note-for-both-portals.md)]
 
 Cykl życia aplikacji w usłudze Microsoft Intune rozpoczyna się po dodaniu aplikacji i jest realizowany przez dodatkowe fazy aż do usunięcia aplikacji. Zrozumienie tych faz pozwala uzyskać szczegółowe informacje konieczne do rozpoczęcia zarządzania aplikacjami w usłudze Intune.
 
@@ -34,7 +32,7 @@ Cykl życia aplikacji w usłudze Microsoft Intune rozpoczyna się po dodaniu apl
 
 ## <a name="add"></a>Dodaj
 
-Pierwszym etapem wdrożenia aplikacji jest dodanie aplikacji, którą chcesz zarządzać i przypisać, do usługi Intune. Istnieje wiele różnych typów aplikacji, z którymi można pracować, ale podstawowe procedury dla wszystkich są takie same. Za pomocą usługi Intune możesz dodawać różne typy aplikacji, w tym aplikacje napisane w firmie (biznesowe), aplikacje ze sklepu, aplikacje wbudowane i aplikacje w Internecie. Aby uzyskać więcej informacji na temat tych typów aplikacji, zobacz [Jak dodawać aplikacje do usługi Microsoft Intune](apps-add.md). 
+Pierwszym etapem wdrożenia aplikacji jest dodanie aplikacji, którą chcesz zarządzać i przypisać, do usługi Intune. Istnieje wiele różnych typów aplikacji, z którymi można pracować, ale podstawowe procedury dla wszystkich są takie same. Za pomocą usługi Intune możesz dodawać różne typy aplikacji, w tym aplikacje napisane w firmie (biznesowe), aplikacje ze sklepu, aplikacje wbudowane i aplikacje w Internecie. Aby uzyskać więcej informacji na temat tych typów aplikacji, zobacz [Jak dodawać aplikacje do usługi Microsoft Intune](apps-add.md).
 
 ## <a name="deploy"></a>Wdróż program
 
@@ -43,12 +41,14 @@ Po dodaniu aplikacji do usługi Intune możesz tę aplikację [przypisać do uż
 ## <a name="configure"></a>Konfiguracja
 
 W ramach cyklu życia aplikacji regularnie wydawane są nowe wersje aplikacji. Usługa Intune udostępnia narzędzia do łatwego [aktualizowania wdrożonych aplikacji](apps-add.md) do nowszej wersji. Ponadto dla niektórych aplikacji można skonfigurować dodatkowe funkcje, na przykład:
+
 - [Zasady konfiguracji aplikacji systemu iOS](app-configuration-policies-use-ios.md) pozwalają określać ustawienia dla zgodnych aplikacji systemu iOS, które będą używane po uruchomieniu aplikacji. Na przykład aplikacja może wymagać określonych ustawień oznaczania marką lub nazwy serwera, z którym musi nawiązać połączenie.
 - [Zasady przeglądarki zarządzanej](app-configuration-managed-browser.md) pomagają w konfigurowaniu ustawień dla przeglądarki zarządzanej przez usługę Intune, która zastępuje domyślną przeglądarkę urządzenia i umożliwia ograniczenie witryn sieci Web, które użytkownicy mogą odwiedzać.
 
 ## <a name="protect"></a>Ochrona
 
 Usługa Intune zapewnia wiele sposobów ochrony danych w aplikacjach. Główne sposoby są następujące:
+
 - [Dostęp warunkowy](../protect/conditional-access.md) pozwalający na kontrolowanie dostępu do poczty e-mail i innych usług w oparciu o określone kryteria, takie jak typy urządzeń albo spełnienie wdrożonych [zasad zgodności urządzeń](../protect/device-compliance-get-started.md).
 - [Zasady ochrony aplikacji](app-protection-policy.md) współpracujące z poszczególnymi aplikacjami, aby chronić dane firmowe, z których te aplikacje korzystają. Na przykład można ograniczyć kopiowanie danych między aplikacjami niezarządzanymi i zarządzanymi albo zapobiec uruchamianiu aplikacji na urządzeniach ze zdjętymi zabezpieczeniami lub z odblokowanym kontem root.
 

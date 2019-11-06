@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 807b33867d827415165eb65d81b91683830735f5
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: a1a3dcd7068a004f94b97b5ec6c43c609662a76d
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72502853"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73414559"
 ---
 # <a name="what-to-expect-when-your-ios-app-is-managed-by-app-protection-policies"></a>Czego można oczekiwać, gdy aplikacja dla systemu iOS jest zarządzana przy użyciu zasad ochrony aplikacji
-
-[!INCLUDE [both-portals](../../intune-classic/includes/note-for-both-portals.md)]
 
  W tym temacie opisano środowisko użytkownika aplikacji objętych zasadami ochrony aplikacji. Zasady ochrony aplikacji są stosowane tylko wtedy, gdy aplikacje są używane do celów służbowych, czyli na przykład podczas korzystania z aplikacji przy użyciu konta służbowego lub uzyskiwania dostępu do plików przechowywanych w lokalizacji firmowej w usłudze OneDrive dla Firm.
 
@@ -35,7 +33,6 @@ ms.locfileid: "72502853"
 Jeśli urządzenie **nie jest zarejestrowane w usłudze Intune**, użytkownik zostanie poproszony o ponowne uruchomienie aplikacji przy jej pierwszym użyciu. Aby do aplikacji można było zastosować zasady ochrony aplikacji, należy ponownie uruchomić urządzenie.
 
 <!--- The following screenshot from the Skype app illustrates this restart request: --->
-
 
 <!---  ![Screenshot of the iOS device showing PIN prompt](./media/end-user-mam-apps-ios/iOS_AppPINPrompt.png) --->
 
@@ -56,8 +53,9 @@ Zasady ochrony aplikacji są stosowane tylko w kontekście służbowym. W związ
 Aplikacje z obsługą wielu tożsamości umożliwiają użytkownikom dodawanie wielu kont.  Aplikacja usługi Intune obsługuje tylko jedno konto zarządzane.  Aplikacja usługi Intune nie ogranicza liczby kont niezarządzanych.
 
 Jeśli w aplikacji istnieje konto zarządzane:
-* Jeśli użytkownik podejmuje próbę dodania drugiego konta zarządzanego, jest proszony o wybranie konta zarządzanego, które ma być używane.  Drugie konto zostanie usunięte.
-* Jeśli administrator IT dodaje zasady do drugiego istniejącego konta, użytkownik jest proszony o wybranie konta zarządzanego do użycia.  Drugie konto zostanie usunięte.
+
+- Jeśli użytkownik podejmuje próbę dodania drugiego konta zarządzanego, jest proszony o wybranie konta zarządzanego, które ma być używane.  Drugie konto zostanie usunięte.
+- Jeśli administrator IT dodaje zasady do drugiego istniejącego konta, użytkownik jest proszony o wybranie konta zarządzanego do użycia.  Drugie konto zostanie usunięte.
 
 Zapoznaj się z przykładowym scenariuszem poniżej, aby lepiej zrozumieć zasady obsługi wielu kont użytkowników.
 
@@ -68,4 +66,5 @@ Użytkownik A pracuje dla dwóch firm — **Firmy X** i **Firmy Y**. Użytkownik
 Jeśli korzystasz z urządzenia z systemem iOS, podczas próby dodania drugiego konta służbowego na tym urządzeniu może zostać wyświetlony komunikat o blokadzie. Konta zostaną wyświetlone, umożliwiając wybranie konta do usunięcia.
 
 ## <a name="next-steps"></a>Następne kroki
+
 [Czego można oczekiwać, gdy aplikacja systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji](end-user-mam-apps-android.md)

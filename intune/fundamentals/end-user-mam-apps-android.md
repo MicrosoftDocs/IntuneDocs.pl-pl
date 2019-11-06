@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fbe0aa4797de32936e2be7def4aeb670c78a4945
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 946ce31c613ddb3c7dd2bf4dfde7561dd56e4ca0
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72502906"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73414059"
 ---
 # <a name="what-to-expect-when-your-android-app-is-managed-by-app-protection-policies"></a>Czego można oczekiwać, gdy aplikacja dla systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji
-
-[!INCLUDE [both-portals](../../intune-classic/includes/note-for-both-portals.md)]
 
 W tym artykule opisano środowisko użytkownika aplikacji z zasadami ochrony aplikacji. Zasady ochrony aplikacji są stosowane tylko wtedy, gdy aplikacje są używane do celów służbowych, czyli na przykład podczas korzystania z aplikacji przy użyciu konta służbowego lub uzyskiwania dostępu do plików przechowywanych w lokalizacji usługi OneDrive dla Firm.
 
@@ -37,7 +35,6 @@ Aplikacja Portal firmy jest wymagana dla wszystkich aplikacji skojarzonych z zas
 Na urządzeniach, które nie zostały zarejestrowane w usłudze Intune, musi być zainstalowana aplikacja Portal firmy. Użytkownik nie musi jednak jej uruchamiać ani się w niej logować, aby korzystać z aplikacji zarządzanych przy użyciu zasad ochrony aplikacji.
 
 Aplikacja Portal firmy zapewnia usłudze Intune możliwość współużytkowania danych w bezpiecznej lokalizacji. W związku z tym aplikacja Portal firmy jest wymagana dla wszystkich aplikacji skojarzonych z zasadami ochrony aplikacji, nawet jeśli urządzenie nie jest zarejestrowane w usłudze Intune.
-
 
 ## <a name="use-apps-with-multi-identity-support"></a>Korzystanie z aplikacji z obsługą wielu tożsamości
 
@@ -50,19 +47,24 @@ Na przykład podczas uzyskiwania dostępu do danych służbowych użytkownik zob
 Aplikacje z obsługą wielu tożsamości umożliwiają użytkownikom dodawanie wielu kont.  Aplikacja usługi Intune obsługuje tylko jedno konto zarządzane.  Aplikacja usługi Intune nie ogranicza liczby kont niezarządzanych.
 
 Jeśli w aplikacji istnieje konto zarządzane:
+
 * Jeśli użytkownik podejmuje próbę dodania drugiego konta zarządzanego, jest proszony o wybranie konta zarządzanego, które ma być używane.  Drugie konto zostanie usunięte.
 * Jeśli administrator IT dodaje zasady do drugiego istniejącego konta, użytkownik jest proszony o wybranie konta zarządzanego do użycia.  Drugie konto zostanie usunięte.
 
 Zapoznaj się z przykładowym scenariuszem poniżej, aby lepiej zrozumieć zasady obsługi wielu kont użytkowników.
 
 Użytkownik A pracuje dla dwóch firm — **Firmy X** i **Firmy Y**. Użytkownik A ma konto służbowe dla każdej firmy, a obaj użytkownicy wdrażają zasady ochrony aplikacji za pomocą usługi Intune. **Firma X** wdraża zasady ochrony aplikacji **przed** **Firmą Y**. Zasady ochrony aplikacji zostaną zastosowane na koncie skojarzonym z **Firmą X**, ale nie na koncie skojarzonym z Firmą Y. Jeśli chcesz, aby konto użytkownika skojarzone z Firmą Y było zarządzane zgodnie z zasadami ochrony aplikacji, musisz usunąć konto użytkownika skojarzone z Firmą X i dodać konto skojarzone z Firmą Y.
+
 ### <a name="add-a-second-account"></a>Dodawanie drugiego konta
+
 #### <a name="android"></a>Android
+
 Jeśli korzystasz z urządzenia z systemem Android, może zostać wyświetlony komunikat o blokadzie zawierający instrukcje usunięcia istniejącego konta i dodania nowego.  Aby usunąć istniejące konto, przejdź do pozycji **Ustawienia &gt;Ogólne &gt; Menedżer aplikacji &gt;Portal firmy**. Następnie wybierz pozycję **Wyczyść dane**.
 
 ![Zrzut ekranu komunikatu o błędzie i instrukcjami dotyczącymi usunięcia konta](./media/end-user-mam-apps-android/Android_SwitchUser.png)
 
 ## <a name="view-media-files-with-the-azure-information-protection-app"></a>Wyświetlanie plików multimedialnych przy użyciu aplikacji Azure Information Protection
+
 Aby wyświetlać firmowe pliki audio i wideo, pliki PDF i pliki obrazów na urządzeniach z systemem Android, użyj [aplikacji Azure Information Protection](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer) (wcześniej znanej jako aplikacja do tworzenia i przetwarzania dokumentów chronionych usługami Rights Management).
 
 Pobierz tę aplikację ze sklepu Google Play.  
@@ -73,7 +75,6 @@ Obsługiwane są następujące typy plików:
 * **Wideo:** H.263, H.264 AVC, MPEG-4 SP, VP8
 * **Obraz:** jpg, pjpg, png, ppng, bmp, pbmp, gif, pgif, jpeg, pjpeg
 * **Dokumenty:** PDF, PPDF
-
 
 |**pfile**|
 |----|

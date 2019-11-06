@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6678b7c3519328623d9c0035c725af3877a36ba8
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 6600c75ce3e6120143b17fb863670b2eb423a09f
+ms.sourcegitcommit: ae6f2e7812e7fd36f2393b8f4b6cd8de63777b2c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507057"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73592057"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>Dodawanie aplikacji internetowych do usługi Microsoft Intune
 
@@ -36,7 +36,7 @@ Aby można było zarządzać aplikacją oraz przypisywać ją do użytkowników,
 Usługa Intune tworzy skrót do aplikacji internetowej na urządzeniu użytkownika. W przypadku urządzeń z systemem iOS skrót do aplikacji internetowej jest dodawany do ekranu głównego. W przypadku urządzeń z systemem Android skrót do aplikacji internetowej jest dodawany do widżetu Portal firmy usługi Intune, a widżet musi zostać przypięty ręcznie przez użytkownika. W przypadku urządzeń z systemem Windows skrót do aplikacji internetowej jest umieszczany w menu Start.
 
 > [!Note]
-> Aplikacje internetowe nie są obsługiwane na urządzeniach z profilami służbowymi systemu Android. Aby można było uruchamiać aplikacje internetowe, na urządzeniu użytkownika musi być zainstalowana przeglądarka.
+> Aby można było uruchamiać aplikacje internetowe, na urządzeniu użytkownika musi być zainstalowana przeglądarka.
 
 ## <a name="add-a-web-app-to-intune"></a>Dodawanie aplikacji internetowej do usługi Intune
 Aby dodać aplikację do usługi Intune jako skrót do aplikacji w Internecie, wykonaj następujące czynności:

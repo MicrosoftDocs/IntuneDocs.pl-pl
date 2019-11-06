@@ -16,24 +16,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f09f4ba58e3da5821eea06fcfec6e55c9c007d44
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: dcdc2b69de52ea3bf23f4e3c5d11399b62bc8daa
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72502708"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73414088"
 ---
 # <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>Przypisanie użytkownikom licencji umożliwiających rejestrowanie urządzeń w usłudze Intune
-
-[!INCLUDE [both-portals](../../intune-classic/includes/note-for-both-portals.md)]
 
 Bez względu na to, czy zamierzasz ręcznie dodać użytkowników, czy też przeprowadzić synchronizację lokalnej usługi Active Directory, zanim użytkownicy będą mogli rejestrować swoje urządzenia w usłudze Intune, musisz najpierw przypisać do każdego z użytkowników licencję usługi Intune. Aby uzyskać listę licencji, zobacz [Licencje, które obejmują usługę Intune](../licenses.md).
 
 ## <a name="assign-an-intune-license-in-the-microsoft-365-admin-center"></a>Przypisywanie licencji usługi Intune w centrum administracyjnym platformy Microsoft 365
 
-[Centrum administracyjne platformy Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) umożliwia ręczne dodawanie użytkowników w chmurze oraz przypisywanie licencji zarówno do kont użytkowników w chmurze, jak i kont synchronizowanych z lokalnej usługi Active Directory do usługi Azure AD.
+[Centrum administracyjne platformy Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=698854) umożliwia ręczne dodawanie użytkowników w chmurze oraz przypisywanie licencji zarówno do kont użytkowników w chmurze, jak i kont synchronizowanych z lokalnej usługi Active Directory do usługi Azure AD.
 
-1. Zaloguj się do [centrum administracyjnego platformy Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) przy użyciu poświadczeń administratora dzierżawy, a następnie wybierz pozycję **Użytkownicy** > **Aktywni użytkownicy**.
+1. Zaloguj się do [centrum administracyjnego platformy Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=698854) przy użyciu poświadczeń administratora dzierżawy, a następnie wybierz pozycję **Użytkownicy** > **Aktywni użytkownicy**.
 
 2. Wybierz konto użytkownika, do którego chcesz przypisać licencję użytkownika usługi Intune, a następnie wybierz kolejno pozycje **Licencje produktów** > **Edytuj**.
 
@@ -51,6 +49,7 @@ Bez względu na to, czy zamierzasz ręcznie dodać użytkowników, czy też prze
 Licencje usługi Intune można przypisać do użytkowników także przy użyciu usługi Azure Active Directory. Aby uzyskać więcej informacji, zobacz [artykuł dotyczący licencji dla użytkowników w usłudze Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-licensing-group-assignment-azure-portal). 
 
 ## <a name="use-school-data-sync-to-assign-licenses-to-users-in-intune-for-education"></a>Używanie narzędzia School Data Sync w celu przypisywania licencji do użytkowników w usłudze Intune for Education
+
 Jeśli reprezentujesz instytucję edukacyjną, możesz użyć narzędzia School Data Sync (SDS), aby przypisać licencje usługi Intune for Education do synchronizowanych użytkowników. Wystarczy zaznaczyć pole wyboru Intune for Education podczas konfigurowania profilu SDS.  
 
 ![Zrzut ekranu przedstawiający ustawienie profilu SDS](./media/licenses-assign/i4e-sds-profile-setup-setting.png)
@@ -62,6 +61,7 @@ Po przypisaniu licencji Intune for Education upewnij się, że przypisano równi
 Aby dowiedzieć się więcej na temat narzędzia SDS, zobacz [omówienie narzędzia School Data Sync](https://support.office.com/article/Overview-of-School-Data-Sync-and-Classroom-f3d1147b-4ade-4905-8518-508e729f2e91).
 
 ## <a name="how-user-and-device-licenses-affect-access-to-services"></a>W jaki sposób licencje użytkownika i urządzeń wpływają na dostęp do usług
+
 * Każdy **użytkownik**, który ma przypisaną licencję na oprogramowanie, może uzyskać dostęp i korzystać z usług online i powiązanego oprogramowania (łącznie z oprogramowaniem System Center) do zarządzania aplikacjami maksymalnie na 15 urządzeniach MDM. Agent Intune usługi Intune na komputery umożliwia korzystanie z 5 maszyn fizycznych i 1 maszyny wirtualnej na licencję użytkownika.
 * Możesz kupić licencje dowolnego urządzenia niezależnie od licencji użytkowników. Licencji urządzenia nie trzeba przypisywać do urządzeń. Każde urządzenie, które uzyskuje dostęp do usług online i powiązanego oprogramowania (w tym oprogramowania System Center) oraz korzysta z tych rozwiązań, musi mieć licencję urządzenia.
 * Jeśli urządzenie jest używane przez więcej niż jednego użytkownika, każde z nich wymaga licencji na oprogramowanie lub wszyscy użytkownicy wymagają licencji użytkownika na oprogramowanie.
@@ -73,9 +73,6 @@ Sposób zakupu usługi Intune określa informacje o subskrypcji:
 - Jeśli usługa Intune została zakupiona w ramach umowy Enterprise Agreement, informacje o subskrypcji można znaleźć w portalu licencji zbiorczych, w obszarze **Subskrypcje**.
 - Jeśli usługę Intune zakupiono za pośrednictwem dostawcy rozwiązań w chmurze, skontaktuj się z odsprzedawcą.
 - Jeśli usługę Intune zakupiono przy użyciu numeru karty kredytowej lub faktury, licencje będą oparte na użytkownikach.
-
-
-
 
 ## <a name="use-powershell-to-selectively-manage-ems-user-licenses"></a>Selektywne zarządzanie licencjami użytkowników pakietu EMS przy użyciu programu PowerShell
 Niektórzy użytkownicy w organizacjach korzystających z pakietu Microsoft Enterprise Mobility + Security (EMS) mogą potrzebować tylko usługi Azure Active Directory — wersja Premium lub usługi Intune w pakiecie EMS. Można przypisać jedną usługę lub podzestaw usług przy użyciu [poleceń cmdlet środowiska PowerShell usługi Azure Active Directory](https://msdn.microsoft.com/library/jj151815.aspx).
@@ -97,7 +94,6 @@ Utworzenie nowego użytkownika w wierszu polecenia i przypisanie licencji pakiet
 
     $CustomEMS = New-MsolLicenseOptions -AccountSkuId "<TenantName>:EMS" -DisabledPlans INTUNE_A
     Set-MsolUserLicense -UserPrincipalName user@<TenantName>.onmicrosoft.com -AddLicenses <TenantName>:EMS -LicenseOptions $CustomEMS
-
 
 Weryfikacja:
 

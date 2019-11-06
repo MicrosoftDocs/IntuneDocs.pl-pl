@@ -18,16 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 950f74795c8f1a1a17c70d75125d9613beb7f20e
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: ba1bb1117be387d9be78358175022ee2fc024840
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509917"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73414376"
 ---
 # <a name="intune-deployment-planning-design-and-implementation-guide"></a>Przewodnik planowania, projektowania i implementowania wdrożenia usługi Intune
-
-[!INCLUDE [note for both-portals](../../intune-classic/includes/note-for-both-portals.md)]
 
 Pomyślne wdrożenie usługi Microsoft Intune wymaga dobrego planu i projektu. Ten przewodnik ma na celu przeprowadzenie Cię przez proces tworzenia planu wdrożenia, tworzenia projektu, przechodzenia do usługi Intune i przeprowadzania wdrożenia w środowisku produkcyjnym.
 

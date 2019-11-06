@@ -18,20 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4a3ecf2872832af6199620863a05b4275731db5c
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 0507d607bfac6c084f1ce0b1f59d7474810ec8b7
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72505234"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73415109"
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Przepustowość i wymagania dotyczące konfiguracji sieci usługi Intune
-
-[!INCLUDE [both-portals](../../intune-classic/includes/note-for-both-portals.md)]
 
 Dzięki tym informacjom można zrozumieć wymagania dotyczące przepustowości odnoszące się do wdrożeń usługi Intune.
 
 ## <a name="average-network-traffic"></a>Średni ruch sieciowy
+
 W tej tabeli przedstawiono częstotliwość przesyłania przez sieć typowych danych dla poszczególnych klientów oraz przybliżone ilości tych danych.
 
 > [!NOTE]
@@ -53,9 +52,11 @@ W tej tabeli przedstawiono częstotliwość przesyłania przez sieć typowych da
 |Dystrybucja oprogramowania|Różnie<br /><br />Rozmiar pobieranych plików zależy od wdrażanego oprogramowania.|**Różnie**<br /><br />Zależy od daty wdrażania oprogramowania.|
 
 ## <a name="ways-to-reduce-network-bandwidth-use"></a>Sposoby na zmniejszanie wykorzystania przepustowości sieci
+
 Przy użyciu jednej lub kilku poniższych metod można zmniejszyć użycie przepustowości sieci dla klientów usługi Intune.
 
 ### <a name="use-a-proxy-server-to-cache-content-requests"></a>Używanie serwera proxy w celu buforowania żądań zawartości
+
 Serwer proxy umożliwia buforowanie zawartości w celu ograniczenia zduplikowanych operacji pobierania plików i zmniejszenia obciążenia przepustowości sieci związanego z zawartością z Internetu.
 
 Serwer proxy pamięci podręcznej, który odbiera żądania zawartości od klientów, może pobierać tę zawartość i buforować odpowiedzi i pliki do pobrania z Internetu. Serwer używa buforowanych danych do obsługi kolejnych żądań od klientów.
@@ -74,6 +75,7 @@ Poniżej przedstawiono typowe ustawienia serwera proxy, który buforuje zawarto�
 Informacje dotyczące korzystania z serwera proxy w celu buforowania zawartości można znaleźć w dokumentacji serwera proxy.
 
 ### <a name="use-background-intelligent-transfer-service-bits-on-computers"></a>Korzystanie z usługi inteligentnego transferu (BITS) w tle na komputerach
+
 W trakcie skonfigurowanych godzin można użyć usługi BITS na komputerze z systemem Windows w celu zmniejszenia obciążenia przepustowości sieci. Zasady usługi BITS można skonfigurować na stronie **Przepustowość sieci** w obszarze zasad agenta usługi Intune.
 
 > [!NOTE]
@@ -82,14 +84,15 @@ W trakcie skonfigurowanych godzin można użyć usługi BITS na komputerze z sys
 Więcej informacji na temat korzystania z usługi BITS na komputerach z systemem Windows można znaleźć w artykule [Usługa inteligentnego transferu w tle (BITS)](https://technet.microsoft.com/library/bb968799.aspx) dostępnym w bibliotece TechNet.
 
 ### <a name="delivery-optimization"></a>Optymalizacja dostarczania
+
 Optymalizacja dostarczania umożliwia użycie usługi Intune w celu ograniczenia zużycia przepustowości podczas pobierania aplikacji i aktualizacji przez urządzenie z systemem Windows 10. W przypadku użycia samoorganizującego rozwiązania rozproszonej pamięci podręcznej pliki do pobrania mogą być pobierane z tradycyjnych serwerów oraz źródeł alternatywnych (takich jak sieci równorzędne).
 
 Aby zapoznać się z pełną listą wersji systemu Windows 10 i typów zawartości obsługiwanych przez Optymalizację dostarczania, zobacz artykuł [Optymalizacja dostarczania aktualizacji systemu Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#requirements).
 
 [Optymalizację dostarczania można skonfigurować](../configuration/delivery-optimization-settings.md) w ramach profilów konfiguracji urządzenia.
 
-
 ### <a name="use-branchcache-on-computers"></a>Korzystanie z usługi BranchCache na komputerach
+
 Klienci usługi Intune mogą używać usługi BranchCache w celu zmniejszenia ruchu w sieci rozległej (WAN). Usługa BranchCache jest obsługiwana w następujących systemach operacyjnych:
 
 - Windows 7

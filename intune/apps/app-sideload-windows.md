@@ -16,16 +16,14 @@ ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4a89392dabe695cf49e989351cef822852676916
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 7500000f8a34120e69c27ce01a6cfdb85f447abe
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507381"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73414697"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Podpisywanie aplikacji biznesowych w celu wdrażania ich na urządzeniach z systemem Windows za pomocą usługi Intune
-
-[!INCLUDE [both-portals](../../intune-classic/includes/note-for-both-portals.md)]
 
 Jako administrator usługi Intune możesz wdrażać uniwersalne aplikacje biznesowe (LOB) na urządzeniach z systemem Windows 8.1 Desktop lub Windows 10 Desktop & Mobile, w tym aplikację Portal firmy. Aby wdrożyć aplikacje .appx na urządzeniach z systemem Windows 8.1 Desktop lub Windows 10 Desktop & Mobile, można użyć certyfikatu podpisywania kodu z publicznego urzędu certyfikacji uznanego już za zaufany przez urządzenia z systemem Windows lub własnego urzędu certyfikacji.
 
@@ -53,6 +51,7 @@ W przypadku wdrażania aplikacji zależnie od potrzeb dla użytkowników lub urz
 ### <a name="upload-the-code-signing-certificate"></a>Przekazywanie certyfikatu podpisywania kodu
 
 Jeśli urządzenie z systemem Windows 10 nie ufa jeszcze urzędowi certyfikacji, po podpisaniu pakietu appx i przekazaniu go do usługi Intune trzeba przekazać certyfikat podpisywania kodu do portalu usługi Intune:
+
 1. Kliknij pozycję Aplikacje klienckie
 2. Kliknij pozycję Certyfikaty przedsiębiorstwa systemu Windows
 3. W obszarze Certyfikat podpisywania kodu wybierz pozycję Wybierz plik
@@ -77,6 +76,7 @@ Windows 8.1 Desktop/Windows 10 Desktop & Mobile
 Jeśli upłynął okres ważności certyfikatu, pliki appx mogą przestać być uruchamiane. Należy uzyskać nowy plik .cer i postępować zgodnie z instrukcjami w celu podpisania kodem każdego wdrożonego pliku appx i ponownego przekazania wszystkich plików appx oraz zaktualizowanego pliku .cer do sekcji Certyfikaty przedsiębiorstwa systemu Windows w portalu usługi Intune.
 
 ## <a name="manually-deploy-windows-10-company-portal-app"></a>Ręczne wdrażanie aplikacji Portal firmy dla systemu Windows 10
+
 Jeśli nie chcesz zapewnić dostępu do sklepu Microsoft Store, aplikację Portal firmy dla systemu Windows 10 można wdrożyć ręcznie bezpośrednio z poziomu usługi Intune, nawet jeśli usługa Intune nie została zintegrowana ze sklepem Microsoft Store dla Firm. Alternatywnie, jeśli doszło do integracji,możesz wdrożyć aplikację Portal firmy za pomocą [aplikacji wdrażania przy użyciu MSFB](store-apps-windows.md).
 
  > [!NOTE]
@@ -100,9 +100,11 @@ Jeśli nie chcesz zapewnić dostępu do sklepu Microsoft Store, aplikację Porta
 Aby uzyskać więcej informacji na temat sposobu obsługi zależności dla aplikacji uniwersalnych w usłudze Intune, zobacz temat [Deploying an appxbundle with dependencies via Microsoft Intune MDM](https://blogs.technet.microsoft.com/configmgrdogs/2016/11/30/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm/) (Wdrażanie pliku appxbundle z zależnościami poprzez rozwiązanie MDM programu Microsoft Intune).  
 
 ### <a name="how-do-i-update-the-company-portal-on-my-users-devices-if-they-have-already-installed-the-older-apps-from-the-store"></a>Jak zaktualizować aplikację Portal firmy na urządzeniach moich użytkowników, jeśli już mają zainstalowane starsze aplikacje ze sklepu?
-Jeśli użytkownicy mają już zainstalowane aplikacje Portal firmy dla systemu Windows 8.1 lub Windows Phone 8.1 ze sklepu, powinny one zostać automatycznie zaktualizowane do nowej wersji bez konieczności wykonania jakichkolwiek czynności przez Ciebie lub użytkowników. Jeśli aktualizacja nie miała miejsca, poproś użytkowników, aby sprawdzili, czy na swoich urządzeniach mają włączoną opcję automatycznych aktualizacji.   
+
+Jeśli użytkownicy mają już zainstalowane aplikacje Portal firmy dla systemu Windows 8.1 lub Windows Phone 8.1 ze sklepu, powinny one zostać automatycznie zaktualizowane do nowej wersji bez konieczności wykonania jakichkolwiek czynności przez Ciebie lub użytkowników. Jeśli aktualizacja nie miała miejsca, poproś użytkowników, aby sprawdzili, czy na swoich urządzeniach mają włączoną opcję automatycznych aktualizacji.
 
 ### <a name="how-do-i-upgrade-my-sideloaded-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>Jak uaktualnić moją załadowaną bezpośrednio aplikację Portal firmy dla systemu Windows 8.1 do aplikacji Portal firmy dla systemu Windows 10?
+
 Zalecana przez nas ścieżka migracji polega na usunięciu wdrożenia aplikacji Portal firmy dla systemu Windows 8.1 przez ustawienie akcji wdrożenia na „Odinstaluj”. Po tej operacji aplikację Portal firmy systemu Windows 10 można wdrożyć przy użyciu dowolnej z powyższych opcji.  
 
 Jeśli aplikacja ma zostać załadowana bezpośrednio, a aplikacja Portal firmy dla systemu Windows 8.1 została wdrożona bez rejestrowania jej za pomocą certyfikatu firmy Symantec, wykonaj instrukcje zawarte w sekcji Wdróż bezpośrednio za pomocą sekcji usługi Intune powyżej, aby ukończyć uaktualnianie.
@@ -110,6 +112,7 @@ Jeśli aplikacja ma zostać załadowana bezpośrednio, a aplikacja Portal firmy 
 Jeśli aplikacja ma zostać załadowana bezpośrednio, a aplikacja Portal firmy systemu Windows 8.1 została podpisana i wdrożona za pomocą certyfikatu firmy Symantec, wykonaj instrukcje zawarte w sekcji poniżej.  
 
 ### <a name="how-do-i-upgrade-my-signed-and-sideloaded-windows-phone-81-company-portal-app-or-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>Jak uaktualnić podpisaną i ładowaną bezpośrednio aplikację Portal firmy dla systemu Windows Phone 8.1 lub aplikację Portal firmy dla systemu Windows 8.1 do aplikacji Portal firmy dla systemu Windows 10?
+
 Zalecana przez nas ścieżka migracji polega na usunięciu istniejącego wdrożenia aplikacji Portal firmy dla systemu Windows Phone 8.1 lub aplikacji Portal firmy dla systemu Windows 8.1 przez ustawienie akcji wdrożenia na „Odinstaluj”. Po tej operacji aplikację Portal firmy dla systemu Windows 10 można wdrożyć w zwykły sposób.  
 
 W przeciwnym razie aplikacja Portal firmy dla systemu Windows 10 musi zostać odpowiednio aktualizowana i podpisana w celu zapewnienia, że ścieżka uaktualnienia jest zachowana.  

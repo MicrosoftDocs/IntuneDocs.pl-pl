@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d2a6b427552e545421e329b900833c889e67bf35
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: d69bd040929da08d7d23db764c5b01f6aca6a9ea
+ms.sourcegitcommit: c38a856725993a4473ada75e669a57f75ab376f8
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72503027"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73143175"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Konfigurowanie strony ze stanem rejestracji
  
@@ -191,7 +191,6 @@ Poniżej przedstawiono znane problemy.
 - Wyłączenie profilu strony ze stanem rejestracji nie powoduje usunięcia z urządzeń zasad strony ze stanem rejestracji, a strona ze stanem rejestracji jest nadal wyświetlana, gdy użytkownicy logują się po raz pierwszy na urządzeniu. Zasady nie są usuwane, gdy profil strony ze stanem rejestracji jest wyłączany. Aby wyłączyć zasady strony ze stanem rejestracji, należy wdrożyć ustawienia OMA-URI. Zapoznaj się z powyższymi instrukcjami dotyczącymi wyłączania strony ze stanem rejestracji przy użyciu ustawień OMA-URI. 
 - Oczekujące ponowne uruchomienie zawsze spowoduje przekroczenie limitu czasu. Przekroczenie limitu czasu występuje, ponieważ należy ponownie uruchomić urządzenie. Ponowne uruchomienie jest wymagane w celu zapewnienia czasu na ukończenie elementu śledzonego na stronie ze stanem rejestracji. Ponowne uruchomienie powoduje zamknięcie strony ze stanem rejestracji, a po ponownym uruchomieniu urządzenie nie zostaje wprowadzone podczas konfiguracji konta.  Należy rozważyć ustawienie niewymagania ponownego rozruchu po instalacji aplikacji. 
 - Ponowne uruchomienie podczas konfigurowania powoduje wymuszenie wprowadzenia poświadczeń przez użytkownika przed przejściem do fazy konfiguracji konta. Poświadczenia użytkownika nie są zachowywane podczas ponownego uruchomienia. Użytkownik musi wprowadzić swoje poświadczenia, aby kontynuować wyświetlanie strony ze stanem rejestracji. 
-- Certyfikaty SCEP z zasadami usługi Windows Hello dla firm spowodują przekroczenie limitu czasu, ponieważ użytkownik nie może ukończyć konfigurowania numeru PIN usługi Hello w celu umożliwienia konkurencyjnej instalacji certyfikatu SCEP.  Brak obejścia. Szacowany czas udostępnienia poprawki to lato 2019 r. 
 - Podczas rejestracji konta służbowego w systemie Windows 10 w wersji niższej niż 1903 zawsze będzie występować przekroczenie limitu czasu. Strona ze stanem rejestracji czeka na zakończenie rejestracji w usłudze Azure AD. Ten problem został rozwiązany w systemie Windows 10 w wersji 1903 lub nowszej.  
 - Wdrożenie hybrydowej usługi Azure AD przy użyciu rozwiązania Autopilot ze stroną ze stanem rejestracji trwa dłużej, niż limit czasu zdefiniowany w profilu strony ze stanem rejestracji. W przypadku wdrożeń hybrydowej usługi Azure AD przy użyciu rozwiązania Autopilot instalacja strony ze stanem rejestracji potrwa 40 minut dłużej, niż wartość ustawiona w profilu strony ze stanem rejestracji. To opóźnienie umożliwia utworzenie nowego rekordu urządzenia w usłudze Azure AD przy użyciu łącznika lokalnej usługi AD. 
 - Nazwa użytkownika na stronie logowania systemu Windows nie jest wstępnie wypełniona w trybie rozwiązania Autopilot sterowanym przez użytkownika. W przypadku ponownego uruchomienia w fazie konfigurowania strony ze stanem rejestracji:

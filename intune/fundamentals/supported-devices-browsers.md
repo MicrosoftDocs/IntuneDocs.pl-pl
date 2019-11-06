@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2bd9fe52bcaa6295d452ade59d6c3c32e1e81a67
-ms.sourcegitcommit: 4bf23327af734a9811d555fbd566c31239e2acd6
+ms.openlocfilehash: 2b58cbd0aa07babd36c7a7e5aa3dcc5b8d32d58a
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "72999679"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73415040"
 ---
 # <a name="supported-operating-systems-and-browsers-in-intune"></a>Systemy operacyjne i przeglądarki obsługiwane w usłudze Intune
 
@@ -37,14 +37,14 @@ Aby uzyskać więcej informacji na temat obsługi dostawcy usługi konfiguracji,
 
 Zarządzać możesz urządzeniami z następującymi systemami operacyjnymi:
 
-[!INCLUDE [mdm-supported-devices](../../intune-classic/includes/mdm-supported-devices.md)]
+[!INCLUDE [mdm-supported-devices](../includes/mdm-supported-devices.md)]
 
 ### <a name="supported-samsung-knox-standard-devices"></a>Obsługiwane urządzenia z systemem Samsung Knox Standard
 
 W celu uniknięcia błędów aktywacji, które uniemożliwiają rejestrację w usłudze zarządzania urządzeniami przenośnymi, aplikacja Portal firmy podejmuje próbę aktywacji systemu Samsung Knox podczas rejestracji w usłudze MDM tylko w przypadku, gdy urządzenie znajduje się na [liście obsługiwanych urządzeń z systemem Knox](https://www.samsungknox.com/knox-supported-devices/knox-workspace). Urządzenia, które nie obsługują aktywacji systemu Samsung Knox, są rejestrowane jako standardowe urządzenia z systemem Android. Urządzenia firmy Samsung z określonymi numerami modelu mogą obsługiwać system Knox, podczas gdy inne go nie obsługują. Przed zakupem i wdrożeniem urządzeń firmy Samsung należy sprawdzić zgodność systemu Knox u odsprzedawcy urządzenia.
 
 > [!NOTE]
-> Rejestrowanie urządzeń z systemem Samsung Knox może wiązać się z koniecznością [włączenia dostępu do serwerów firmy Samsung](https://support.samsungknox.com/hc/articles/115013833108-Our-corporate-devices-are-behind-a-firewall-How-do-I-enable-Knox-Workspace-devices-to-contact-Samsung-servers). 
+> Rejestrowanie urządzeń z systemem Samsung Knox może wiązać się z koniecznością [włączenia dostępu do serwerów firmy Samsung](https://support.samsungknox.com/hc/articles/115013833108-Our-corporate-devices-are-behind-a-firewall-How-do-I-enable-Knox-Workspace-devices-to-contact-Samsung-servers).
 
 Modele urządzeń firmy Samsung z poniższej listy nie obsługują systemu Knox. Zostaną one zarejestrowane jako natywne urządzenia z systemem Android przez aplikację Portal firmy dla systemu Android:
 
@@ -85,18 +85,17 @@ Modele urządzeń firmy Samsung z poniższej listy nie obsługują systemu Knox.
 | Galaxy V Plus | SM-G318HZ |
 | Galaxy Young 2 Duos | SM-G130BU |
 
-
 ### <a name="windows-pc-software-client"></a>Oprogramowanie klienckie dla komputerów z systemem Windows
 
-[Oprogramowanie klienckie usługi Intune](../manage-windows-pcs-with-microsoft-intune.md) można wdrożyć i zainstalować na komputerach z systemem Windows jako alternatywną metodę rejestracji. Ta funkcja jest dostępna tylko za pomocą portalu klasycznego usługi Intune. Klient oprogramowania usługi Intune umożliwia zarządzanie komputerami z systemem Windows 7 lub nowszym, z wyjątkiem systemu Windows 10 Home Edition.
+[Oprogramowanie klienckie usługi Intune](manage-windows-pcs-with-microsoft-intune.md) można wdrożyć i zainstalować na komputerach z systemem Windows jako alternatywną metodę rejestracji. Ta funkcja jest dostępna tylko za pomocą portalu klasycznego usługi Intune. Klient oprogramowania usługi Intune umożliwia zarządzanie komputerami z systemem Windows 7 lub nowszym, z wyjątkiem systemu Windows 10 Home Edition.
 
 > [!Note]
 > Firma Microsoft ogłosiła, że świadczenie pomocy technicznej dla systemu Windows 7 zakończy się 14 stycznia 2020 r. W tym dniu zostanie też wycofana obsługa urządzeń z systemem Windows 7 w usłudze Intune.
-
-> Aby uzyskać więcej informacji, zobacz [Planowanie zmian w usłudze Intune: zbliża się koniec wsparcia dla systemu Windows 7](https://docs.microsoft.com/en-us/intune/fundamentals/whats-new#intune-plan-for-change-nearing-end-of-support-for-windows-7).
-
+>
+> Aby uzyskać więcej informacji, zobacz [Planowanie zmian w usłudze Intune: zbliża się koniec wsparcia dla systemu Windows 7](https://docs.microsoft.com/intune/fundamentals/whats-new#intune-plan-for-change-nearing-end-of-support-for-windows-7).
+>
 > Obsługa konsoli usługi Intune opartej na technologii Silverlight zostanie wycofana w usłudze Microsoft Intune w dniu 15 października 2020 r. To wycofanie obejmuje zakończenie pomocy technicznej dla klienta oprogramowania konfigurowanego przez konsolę Silverlight (znanego również jako agent komputera).
-
+>
 > Aby uzyskać więcej informacji, zobacz [Microsoft Intune ending support for the Silverlight-based admin console](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Take-Action-Microsoft-Intune-ending-support-for-the-Silverlight/ba-p/916249) (W usłudze Microsoft Intune kończy się obsługa konsoli administracyjnej opartej na technologii Silverlight).
 
 <!--  ### Exchange ActiveSync management
@@ -107,24 +106,23 @@ You can manage [Exchange ActiveSync devices](../enrollment/device-enrollment.md#
 
 Różne zadania administracyjne wymagają użycia jednej z następujących witryn administracyjnych sieci Web.
 
-- [Centrum administracyjne platformy Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854)
+- [Centrum administracyjne platformy Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=698854)
 - [Portal Azure](https://portal.azure.com/)
 
 Dla tych portali obsługiwane są następujące przeglądarki:
+
 - Microsoft Edge (najnowsza wersja)
 - Microsoft Internet Explorer 11
 - Safari (najnowsza wersja, tylko Mac)
 - Chrome (najnowsza wersja)
 - Firefox (najnowsza wersja)
 
-
-
-
 ### <a name="intune-classic-portal"></a>Klasyczny portal usługi Intune
 
 Klasyczny portal usługi Intune służy tylko do zarządzania urządzeniami zarejestrowanymi przy użyciu oprogramowania klienckiego usługi Intune (https://manage.microsoft.com). Klasyczny portal usługi Intune wymaga obsługi przeglądarki programu Silverlight.
 
 Następujące przeglądarki programu Silverlight obsługują konsolę usługi Intune:
+
 - Internet Explorer 10 lub nowsza wersja
 - Google Chrome (wersje poprzedzające wersję 42)
 - Mozilla Firefox z włączonym dodatkiem Silverlight (wersje wcześniejsze niż wersja 56)
