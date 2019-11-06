@@ -68,8 +68,8 @@ W tym artykule przedstawiono sposób tworzenia profilu ograniczeń urządzenia. 
     - [macOS settings](device-restrictions-macos.md) (Ustawienia systemu macOS)
     - [Ustawienia systemu Windows Phone 8.1](device-restrictions-windows-phone-8-1.md)
     - [Windows 8.1](device-restrictions-windows-8-1.md)
-    - [Windows 10 settings](device-restrictions-windows-10.md) (Ustawienia systemu Windows 10)
-    - [Windows 10 Team settings](device-restrictions-windows-10-teams.md) (Ustawienia systemu Windows 10 Team)
+    - [Ustawienia systemu Windows 10](device-restrictions-windows-10.md)
+    - [Ustawienia systemu Windows 10 Team](device-restrictions-windows-10-teams.md)
     - [Ustawienia systemu Windows Holographic for Business](device-restrictions-windows-holographic.md)
 
 5. Po zakończeniu wybierz kolejno pozycje **OK** > **Utwórz**, aby zapisać zmiany.
