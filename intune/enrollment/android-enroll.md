@@ -38,7 +38,7 @@ Jako administrator usługi Intune możesz rejestrować urządzenia z systemem An
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Aby przygotować się do zarządzania urządzeniami przenośnymi, należy ustawić urząd zarządzania urządzeniami przenośnymi (MDM) na wartość **Microsoft Intune**. Instrukcje znajdują się w artykule [Set the MDM authority](../fundamentals/mdm-authority-set.md) (Ustawianie urzędu MDM). Element ten ustawia się tylko raz podczas pierwszej konfiguracji usługi Intune do zarządzania urządzeniami przenośnymi.
+Aby przygotować się do zarządzania urządzeniami przenośnymi, należy ustawić urząd zarządzania urządzeniami przenośnymi (MDM) na wartość **Microsoft Intune**. Instrukcje znajdują się w artykule [Ustawianie urzędu MDM](../fundamentals/mdm-authority-set.md). Element ten ustawia się tylko raz podczas pierwszej konfiguracji usługi Intune do zarządzania urządzeniami przenośnymi.
 
 W przypadku urządzeń wyprodukowanych przez firmę Zebra Technologies może być konieczne przyznanie dodatkowych uprawnień aplikacji Portal firmy w zależności od możliwości określonego urządzenia. Więcej szczegółowych informacji zawiera temat [Rozszerzenia dla mobilności w urządzeniach Zebra](../configuration/android-zebra-mx-overview.md).
 
@@ -46,8 +46,8 @@ W przypadku urządzeń z systemem Samsung Knox Standard istnieje [więcej wymaga
 
 ## <a name="next-steps"></a>Następne kroki
 
-- [Set up Android Enterprise work profile enrollments](android-work-profile-enroll.md) (Konfigurowanie rejestracji profilów służbowych systemu Android Enterprise)
-- [Set up Android Enterprise dedicated device enrollments](android-kiosk-enroll.md) (Konfigurowanie rejestracji dedykowanych urządzeń systemu Android Enterprise)
-- [Set up Android Enterprise fully managed enrollments](android-fully-managed-enroll.md) (Konfigurowanie w pełni zarządzanych rejestracji systemu Android Enterprise)
+- [Konfigurowanie rejestracji profilów służbowych systemu Android Enterprise](android-work-profile-enroll.md)
+- [Konfigurowanie rejestracji dedykowanych urządzeń systemu Android Enterprise](android-kiosk-enroll.md)
+- [Konfigurowanie w pełni zarządzanych rejestracji systemu Android Enterprise](android-fully-managed-enroll.md)
 - [Konfigurowanie rejestracji administratora urządzeń z systemem Android](android-enroll-device-administrator.md)
 

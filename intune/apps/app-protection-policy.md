@@ -82,7 +82,7 @@ Usługa Intune oferuje szeroką gamę możliwości, które pomogą Ci uzyskać d
 Obsługa platformy zasad ochrony aplikacji usługi Intune jest powiązana z obsługą platformy aplikacji mobilnych pakietu Office dla urządzeń z systemem Android i iOS. Aby uzyskać szczegółowe informacje, zobacz sekcję **Aplikacje mobilne** w temacie [Wymagania systemowe pakietu Office](https://products.office.com/office-system-requirements#coreui-contentrichblock-9r05pwg).
 
 > [!IMPORTANT]
-> Urządzenie musi mieć zainstalowaną aplikację Intune — Portal firmy, aby otrzymywać zasady ochrony aplikacji w systemie Android. Aby uzyskać więcej informacji, zobacz [Intune Company Portal access apps requirements](../fundamentals/end-user-mam-apps-android.md#access-apps) (Wymagania dotyczące aplikacji z dostępem do aplikacji Intune — Portal firmy).
+> Urządzenie musi mieć zainstalowaną aplikację Intune — Portal firmy, aby otrzymywać zasady ochrony aplikacji w systemie Android. Aby uzyskać więcej informacji, zobacz [Wymagania dotyczące aplikacji z dostępem do aplikacji Intune — Portal firmy](../fundamentals/end-user-mam-apps-android.md#access-apps).
 
 ## <a name="how-app-protection-policies-protect-app-data"></a>W jaki sposób zasady ochrony aplikacji chronią dane aplikacji
 
@@ -347,4 +347,4 @@ Ustawienia zasad ochrony aplikacji korzystających z interfejsów API usługi Go
 [Sposoby tworzenia i wdrażania zasad ochrony aplikacji w usłudze Microsoft Intune](app-protection-policies.md)
 
 ## <a name="see-also"></a>Zobacz także
-Aplikacje innych firm, takie jak aplikacja mobilna Salesforce, współpracują w określony sposób z usługą Intune, aby chronić dane firmowe. Aby dowiedzieć się więcej o tym, jak aplikacja Salesforce współpracuje w szczególności z usługą Intune (z uwzględnieniem ustawień konfiguracji aplikacji MDM), zobacz temat [Salesforce App and Microsoft Intune](https://gallery.technet.microsoft.com/Salesforce-App-and-Intune-c47d44ee/file/188000/1/Salesforce%20App%20and%20Intune%20for%20external.pdf) (Aplikacja Salesforce i usługa Microsoft Intune).
+Aplikacje innych firm, takie jak aplikacja mobilna Salesforce, współpracują w określony sposób z usługą Intune, aby chronić dane firmowe. Aby dowiedzieć się więcej o tym, jak aplikacja Salesforce współpracuje w szczególności z usługą Intune (z uwzględnieniem ustawień konfiguracji aplikacji MDM), zobacz temat [(Aplikacja Salesforce i usługa Microsoft Intune](https://gallery.technet.microsoft.com/Salesforce-App-and-Intune-c47d44ee/file/188000/1/Salesforce%20App%20and%20Intune%20for%20external.pdf).

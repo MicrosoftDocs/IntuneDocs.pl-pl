@@ -128,7 +128,7 @@ Nadal potrzebujesz pomocy? Zapoznaj się z [kompletnym podręcznikiem użytkowni
 
 - **Resetowanie do ustawień fabrycznych w celu zarejestrowania w systemie Android Enterprise:** jeśli ma miejsce zmiana zastosowania urządzeń, które zostały już skonfigurowane, podczas rejestracji w systemie Android Enterprise muszą one zostać zresetowane do ustawień fabrycznych.
 
-- **Konto Google Play:** konto Google Play nie jest niezbędne do rejestracji urządzenia w usłudze Microsoft Intune. Jednak w przypadku rejestracji urządzeń z systemem Android przez administratora przyszłe aktualizacje aplikacji Portal firmy w usłudze Intune mogą wymagać konta Google Play na urządzeniu. Konto Google Play nie jest wymagane podczas rejestracji jako właściciel urządzenia Google.
+- **Aktualizacje przy użyciu konta Google Play:** konto Google Play nie jest niezbędne do rejestracji urządzenia w usłudze Microsoft Intune. Jednak w przypadku rejestracji urządzeń z systemem Android przez administratora przyszłe aktualizacje aplikacji Portal firmy w usłudze Intune mogą wymagać konta Google Play na urządzeniu. Konto Google Play nie jest wymagane podczas rejestracji jako właściciel urządzenia Google.
 
 - **Pole „Hasło” jest ignorowane:** jeśli w obszarze **Szczegóły urządzenia** w portalu rozwiązania Knox zostało wypełnione pole **Hasło**, jest ono ignorowane przez aplikację Portal firmy w usłudze Intune podczas rejestracji urządzeń z systemem Android. Użytkownik końcowy musi wprowadzić hasło na urządzeniu, aby ukończyć rejestrację tego urządzenia.
 

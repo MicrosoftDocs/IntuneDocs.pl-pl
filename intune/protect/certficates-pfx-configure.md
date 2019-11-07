@@ -200,7 +200,7 @@ Do uwierzytelnienia urządzenia za pomocą sieci VPN, sieci WiFi lub innych zaso
    
    |Ustawienie     | Platforma     | Szczegóły   |
    |------------|------------|------------|
-   |**Próg odnawiania (%)**        |Wszystkie         |Zalecana wartość to 20%  | 
+   |**Próg odnawiania (%)** :        |Wszystkie         |Zalecana wartość to 20%  | 
    |**Okres ważności certyfikatu**  |Wszystkie         |Jeśli szablon certyfikatu nie został zmieniony, wartość tej opcji może być ustawiona na jeden rok. |
    |**Dostawca magazynu kluczy**   |Windows 10  | W przypadku systemu Windows wybierz miejsce przechowywania kluczy na urządzeniu. |
    |**Urząd certyfikacji**      |Wszystkie         |Wyświetla wewnętrzną w pełni kwalifikowaną nazwę domeny (nazwę FQDN) urzędu certyfikacji przedsiębiorstwa.  |
