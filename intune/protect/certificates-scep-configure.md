@@ -62,11 +62,11 @@ Następująca infrastruktura lokalna jest opcjonalna:
 
 - **Serwer proxy aplikacji internetowej** (opcjonalnie) — jako serwera proxy aplikacji internetowej (WAP) użyj serwera z systemem Windows Server 2012 R2 lub nowszym, aby opublikować adres URL usługi NDES w Internecie.  Dzięki temu certyfikaty mogą uzyskiwać zarówno urządzenia połączone z intranetem, jak i Internetem.
 
-  Serwer proxy aplikacji sieci Web [wymaga instalacji aktualizacji](https://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) umożliwiającej obsługę długich adresów URL używanych przez usługę rejestracji urządzeń sieciowych. Ta aktualizacja jest dostępna w ramach [zbiorczego pakietu aktualizacji z grudnia 2014 r.](https://support.microsoft.com/kb/3013769)lub osobno w temacie [KB3011135](https://support.microsoft.com/kb/3011135).  
+  Serwer proxy aplikacji sieci Web [wymaga instalacji aktualizacji](https://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) umożliwiającej obsługę długich adresów URL używanych przez usługę rejestracji urządzeń sieciowych. Ta aktualizacja jest dostępna w ramach [zbiorczego pakietu aktualizacji z grudnia 2014 r.](https://support.microsoft.com/kb/3013769) lub osobno w temacie [KB3011135](https://support.microsoft.com/kb/3011135).  
 
   Serwer WAP musi mieć certyfikat SSL pasujący do nazwy opublikowanej dla klientów zewnętrznych oraz ufać certyfikatowi SSL używanemu na komputerze hostującym usługę NDES. Te certyfikaty umożliwiają serwerowi proxy aplikacji internetowej zakończenie połączenia SSL od klientów i utworzenie nowego połączenia SSL z usługą NDES.  
 
-  Aby uzyskać więcej informacji, zobacz [Plan certificates for WAP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383650(v=ws.11)#plan-certificates) (Planowanie certyfikatów protokołu WAP) i [ogólne informacje na temat serwerów WAP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn584113(v=ws.11)).
+  Aby uzyskać więcej informacji, zobacz [Planowanie certyfikatów protokołu WAP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383650(v=ws.11)#plan-certificates) i [ogólne informacje na temat serwerów WAP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn584113(v=ws.11)).
 
 ### <a name="accounts"></a>Konta   
 - **Konto usługi NDES** — przed rozpoczęciem konfigurowania usługi NDES zidentyfikuj konto użytkownika domeny, które ma być używane jako konto usługi NDES. To konto należy wskazać podczas konfiguracji szablonów w urzędzie wystawiającym certyfikaty przed konfiguracją usługi NDES.  
@@ -342,7 +342,7 @@ Aby zainstalować łącznik certyfikatów, wykonaj następujące czynności:
 
    Jeśli kreator zostanie zamknięty przed uruchomieniem interfejsu użytkownika łącznika certyfikatów, możesz uruchomić go za pomocą następującego polecenia: *<ścieżka_instalacji>\NDESConnectorUI\NDESConnectorUI.exe*
 
-7. W interfejsie użytkownika **łącznika certyfikatów** :  
+7. W interfejsie użytkownika **łącznika certyfikatów**:  
    1. Wybierz pozycję **Zaloguj** i podaj poświadczenia administratora usługi Intune lub administratora dzierżawy z uprawnieniami administratora globalnego.  
    2. Używane konto musi mieć przypisaną prawidłową licencję usługi Intune.  
    3. Po zalogowaniu łącznik certyfikatów usługi Intune pobierze certyfikat z usługi Intune. Ten certyfikat jest używany do uwierzytelniania pomiędzy łącznikiem a usługą Intune. Jeśli użyte konto nie ma licencji usługi Intune, łącznik (NDESConnectorUI.exe) nie będzie mógł pobrać certyfikatu z usługi Intune.  
