@@ -104,7 +104,7 @@ Usługa Intune oferuje również zestaw wbudowanych ustawień zasad zgodności. 
 
 Te wbudowane zasady umożliwiają monitorowanie tych ustawień. Usługa Intune również [odświeża lub sprawdza aktualizacje](create-compliance-policy.md#refresh-cycle-times) w różnych interwałach w zależności od platformy urządzenia. Pomocnym zasobem jest artykuł [Typowe pytania, problemy i rozwiązania związane z zasadami i profilami urządzeń w usłudze Microsoft Intune](../configuration/device-profile-troubleshoot.md).
 
-Raporty zgodności to doskonały sposób na sprawdzanie stanu urządzeń. Wskazówki można znaleźć w artykule [Monitor compliance policies](compliance-policy-monitor.md) (Monitorowanie zasad zgodności).
+Raporty zgodności to doskonały sposób na sprawdzanie stanu urządzeń. Wskazówki można znaleźć w artykule [Monitorowanie zasad zgodności](compliance-policy-monitor.md).
 
 ## <a name="non-compliance-and-conditional-access-on-the-different-platforms"></a>Niezgodność i dostęp warunkowy na różnych platformach
 
