@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fb9fb439bd0bc59ae2c69ec966587d58c8c97bf4
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: fb67cf2cb17b78c4034c3b73e229e160723d975e
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72510099"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73414387"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Zarządzanie komputerami z systemem Windows przy użyciu oprogramowania klienckiego usługi Intune
 
@@ -30,7 +30,7 @@ ms.locfileid: "72510099"
 > [!WARNING]
 > Firma Microsoft ogłosiła, że [świadczenie pomocy technicznej dla systemu Windows 7 zakończy się 14 stycznia 2020 r](https://support.microsoft.com/help/4057281/windows-7-support-will-end-on-january-14-2020). W tym dniu zostanie też wycofana obsługa urządzeń z systemem Windows 7 w usłudze Intune. Firma Microsoft zdecydowanie zaleca przejście do systemu Windows 10, aby uniknąć przerw w świadczeniu usług i pomocy technicznej.
 > 
-> Aby uzyskać więcej informacji, zobacz [plan usługi Intune dotyczący zmiany: zbliża się koniec wsparcia dla systemu Windows 7](../fundamentals/whats-new.md#intune-plan-for-change-nearing-end-of-support-for-windows-7-).
+> Aby uzyskać więcej informacji, zobacz [Planowanie zmian w usłudze Intune: zbliża się koniec wsparcia dla systemu Windows 7](../fundamentals/whats-new.md#intune-plan-for-change-nearing-end-of-support-for-windows-7).
 
 > [!NOTE]
 > Możesz użyć usługi Microsoft Intune do zarządzania komputerami z systemem Windows albo [jako urządzeniami przenośnymi z wykorzystaniem zarządzania urządzeniami przenośnymi (MDM)](../enrollment/windows-enroll.md), albo jako komputerami z wykorzystaniem oprogramowania klienckiego usługi Intune zgodnie z poniższym opisem. Jednak firma Microsoft zaleca, aby klienci [używali rozwiązania MDM do zarządzania](../enrollment/windows-enroll.md) zawsze, gdy jest to możliwe. Aby uzyskać więcej informacji, zobacz temat [Porównanie zarządzania komputerami z systemem Windows jako komputerami i jako urządzeniami mobilnymi](pc-management-comparison.md) 
@@ -62,7 +62,7 @@ Poniżej podano wymagania dotyczące oprogramowania w przypadku instalowania opr
 |---------------|--------------------|
 |System operacyjny | Urządzenie z systemem Windows 7 z dodatkiem SP1 oraz z systemem Windows 8.1 lub nowszym. </br></br>**Wersje Home Edition nie są obsługiwane.**|
 |Uprawnienia administracyjne|Konto używane do instalacji oprogramowania klienckiego musi mieć uprawnienia administratora lokalnego na danym urządzeniu.|
-|Instalator Windows w wersji 3.1|Na komputerze musi być dostępny Instalator Windows w wersji 3.1 lub nowszej.<br /><br />Aby wyświetlić wersję Instalatora Windows na komputerze:<br /><br />  Na komputerze kliknij prawym przyciskiem myszy pozycję **%windir%\System32\msiexec.exe**, a następnie kliknij polecenie **Właściwości**.<br /><br />Najnowszą wersję Instalatora Windows można pobrać ze strony [pakietów redystrybucyjnych Instalatora Windows](http://go.microsoft.com/fwlink/?LinkID=234258) w witrynie Microsoft Developer Network w sieci Web.|
+|Instalator Windows w wersji 3.1|Na komputerze musi być dostępny Instalator Windows w wersji 3.1 lub nowszej.<br /><br />Aby wyświetlić wersję Instalatora Windows na komputerze:<br /><br />  Na komputerze kliknij prawym przyciskiem myszy pozycję **%windir%\System32\msiexec.exe**, a następnie kliknij polecenie **Właściwości**.<br /><br />Najnowszą wersję Instalatora Windows można pobrać ze strony [pakietów redystrybucyjnych Instalatora Windows](https://go.microsoft.com/fwlink/?LinkID=234258) w witrynie Microsoft Developer Network w sieci Web.|
 |Usunięcie niezgodnego oprogramowania klienckiego|Przed zainstalowaniem oprogramowania klienckiego usługi Intune należy odinstalować wszelkie oprogramowanie klienckie programu Configuration Manager, Operations Manager i Service Manager z tego komputera.|
 
 ## <a name="deploying-the-intune-software-client"></a>Wdrażanie oprogramowania klienckiego usługi Intune
