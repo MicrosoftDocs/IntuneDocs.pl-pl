@@ -36,7 +36,7 @@ Urządzenia, które mają zostać zarejestrowane, muszą spełniać również na
 - Muszą działać w systemie Windows 10 w wersji 1809 lub nowszej.
 - Muszą mieć dostęp do Internetu [zgodnie z udokumentowanymi wymaganiami sieciowymi rozwiązania Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements#networking-requirements).
 - Muszą mieć dostęp do kontrolera domeny usługi Active Directory, więc muszą być podłączone do sieci organizacji (w której mogą rozpoznawać rekordy DNS dla domeny usługi AD i kontrolera domeny usługi AD oraz komunikować się z kontrolerem domeny w celu uwierzytelnienia użytkownika. Połączenie sieci VPN obecnie nie jest obsługiwane).
-- Muszą mieć możliwość wykonania polecenie ping względem kontrolera domeny, do której chcesz dołączyć.
+- Muszą mieć możliwość wykonania polecenia ping względem kontrolera domeny, do której chcesz dołączyć.
 - Jeśli używasz serwera proxy, należy włączyć i skonfigurować opcję ustawień serwera proxy WPAD.
 - Muszą przejść przez proces OOBE (Out-of-Box Experience).
 
@@ -46,7 +46,7 @@ Urządzenia, które mają zostać zarejestrowane, muszą spełniać również na
 
    ![Witryna Azure Portal](./media/windows-autopilot-hybrid/auto-enroll-azure-main.png)
 
-1. Wybierz pozycję **Mobilność (MDM i MAM)** .
+1. Wybierz pozycję **Mobilność (MDM i MAM)**.
 
    ![Okienko usługi Azure Active Directory](./media/windows-autopilot-hybrid/auto-enroll-mdm.png)
 
@@ -70,7 +70,7 @@ Jednostka organizacyjna, której przyznano uprawnienia do tworzenia komputerów,
 - jednostką organizacyjną wprowadzoną w profilu przyłączania do domeny
 - lub, jeśli nie wybrano profilu, nazwą domeny komputera dla Twojej domeny.
 
-1. Otwórz narzędzie **Użytkownicy i komputery usługi Active Directory (DSA.msc)** .
+1. Otwórz narzędzie **Użytkownicy i komputery usługi Active Directory (DSA.msc)**.
 
 1. Kliknij prawym przyciskiem myszy jednostkę organizacyjną, która będzie używana do tworzenia komputerów przyłączonych do hybrydowej usługi Azure AD, a następnie wybierz pozycję **Deleguj kontrolę**.
 
@@ -124,7 +124,7 @@ W systemie Windows Server konfiguracja zwiększonych zabezpieczeń programu Inte
 
 ### <a name="configure-web-proxy-settings"></a>Konfigurowanie ustawień internetowego serwera proxy
 
-Jeśli w środowisku sieciowym znajduje się internetowy serwer proxy, upewnij się, że łącznik usługi Intune dla usługi Active Directory działał prawidłowo, postępując zgodnie z instrukcjami z artykułu [Work with existing on-premises proxy servers (Praca z istniejącymi lokalnymi internetowymi serwerami proxy)](autopilot-hybrid-connector-proxy.md).
+Jeśli w środowisku sieciowym znajduje się internetowy serwer proxy, upewnij się, że łącznik usługi Intune dla usługi Active Directory działał prawidłowo, postępując zgodnie z instrukcjami z artykułu [Praca z istniejącymi lokalnymi internetowymi serwerami proxy](autopilot-hybrid-connector-proxy.md).
 
 
 ## <a name="create-a-device-group"></a>Tworzenie grupy urządzeń
@@ -177,7 +177,7 @@ Po *zarejestrowaniu* urządzenia rozwiązania Autopilot są wyświetlane w czter
 - Okienko **Wszystkie urządzenia w usłudze Azure AD** w usłudze Azure Active Directory w witrynie Azure Portal. Wybierz pozycję **Urządzenia** > **Wszystkie urządzenia**.
 - Okienko **Wszystkie urządzenia** w usłudze Intune w witrynie Azure Portal. Wybierz pozycję **Urządzenia** > **Wszystkie urządzenia**.
 
-Po zarejestrowaniu urządzeń rozwiązania Autopilot ich nazwy stają się nazwami hostów tych urządzeń. Domyślnie nazwa hosta zaczyna się od ciągu *DESKTOP-* .
+Po zarejestrowaniu urządzeń rozwiązania Autopilot ich nazwy stają się nazwami hostów tych urządzeń. Domyślnie nazwa hosta zaczyna się od ciągu *DESKTOP-*.
 
 
 ## <a name="create-and-assign-an-autopilot-deployment-profile"></a>Tworzenie i przypisywanie profilu wdrażania rozwiązania Autopilot
@@ -213,7 +213,7 @@ Zmiana stanu urządzenia z wartości *Nieprzypisane* do wartości *Przypisywanie
    - **Nazwa**: Wprowadź opisową nazwę nowego profilu.
    - **Opis**: Wprowadź opis profilu.
    - **Platforma**: Wybierz pozycję **Windows 10 i nowsze**.
-   - **Typ profilu**: Wybierz pozycję **Dołączanie do domeny (wersja zapoznawcza)** .
+   - **Typ profilu**: Wybierz pozycję **Dołączanie do domeny (wersja zapoznawcza)**.
 1. Wybierz pozycję **Ustawienia**, a następnie podaj wartości w polach **Prefiks nazwy komputera**, **Nazwa domeny** i (opcjonalnie) **Jednostka organizacyjna** w [formacie DN](https://docs.microsoft.com/windows/desktop/ad/object-names-and-identities#distinguished-name). 
    > [!NOTE]
    > Nie używaj znaków cudzysłowu wokół wartości w polu **Jednostka organizacyjna**.

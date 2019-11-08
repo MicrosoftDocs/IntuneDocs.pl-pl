@@ -129,7 +129,7 @@ Istnieją dwa portale, których można użyć:
 
 W tym przewodniku Szybki została utworzona bezpłatna subskrypcja w celu wypróbowania usługi Intune w środowisku testowym. Aby uzyskać więcej informacji na temat konfigurowania usługi Intune, zobacz [Konfigurowanie usługi Intune](setup-steps.md).
 
-Aby zapoznać się kolejnymi przewodnikami Szybki start dotyczącymi usługi Intune, przejdź do kolejnego przewodnika Szybki start.
+Aby zapoznać się z kolejnymi przewodnikami Szybki start dotyczącymi usługi Intune, przejdź do kolejnego przewodnika Szybki start.
 
 > [!div class="nextstepaction"]
 > [Szybki start: tworzenie użytkownika i przypisywanie mu licencji](quickstart-create-user.md)

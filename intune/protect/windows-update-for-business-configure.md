@@ -24,7 +24,7 @@ ms.locfileid: "72584551"
 ---
 # <a name="manage-software-updates-in-intune"></a>Zarządzanie aktualizacjami oprogramowania w usłudze Intune
 
-Użyj usługi Intune w celu zdefiniowania pierścieni aktualizacji, które określają, jak i kiedy system Windows jako usługa aktualizuje urządzenia z systemem Windows 10. Pierścienie aktualizacji to zasady, które można przypisać do grup urządzeń. Za pomocą pierścieni aktualizacji można utworzyć strategię aktualizacji, która uwzględnia potrzeby biznesowe. Aby uzyskać więcej informacji, zobacz artykuł [Manage updates using Windows Update for Business](https://technet.microsoft.com/itpro/windows/manage/waas-manage-updates-wufb) (Zarządzanie aktualizacjami za pomocą usługi Windows Update dla firm).
+Użyj usługi Intune w celu zdefiniowania pierścieni aktualizacji, które określają, jak i kiedy system Windows jako usługa aktualizuje urządzenia z systemem Windows 10. Pierścienie aktualizacji to zasady, które można przypisać do grup urządzeń. Za pomocą pierścieni aktualizacji można utworzyć strategię aktualizacji, która uwzględnia potrzeby biznesowe. Aby uzyskać więcej informacji, zobacz artykuł [Zarządzanie aktualizacjami za pomocą usługi Windows Update dla firm](https://technet.microsoft.com/itpro/windows/manage/waas-manage-updates-wufb).
 
 W systemie Windows 10 nowe aktualizacje funkcji oraz aktualizacje dotyczące jakości obejmują zawartość wszystkich poprzednich aktualizacji. Po zainstalowaniu najnowszej aktualizacji masz pewność, że urządzenia z systemem Windows 10 są aktualne. W odróżnieniu od wcześniejszych wersji systemu Windows teraz musisz zainstalować całą aktualizację, a nie tylko jej część.
 
@@ -173,7 +173,7 @@ Podczas korzystania z odinstalowywania uwzględnij następujące kwestie:
 
   Na przykład rozważ użycie pierścienia aktualizacji z okresem odinstalowywania aktualizacji funkcji o długości 20 dni. Po 25 dniach decydujesz się na wycofanie najnowszej aktualizacji funkcji i użycie opcji Odinstaluj.  Urządzenia, na których aktualizacja funkcji została zainstalowana ponad 20 dni temu, nie mogą jej odinstalować, ponieważ niezbędne elementy zostały usunięte w ramach konserwacji urządzenia. Natomiast urządzenia, na których aktualizacja funkcji została zainstalowana maksymalnie 19 dni temu, mogą odinstalować aktualizację, jeśli zostaną pomyślnie zaewidencjonowane w celu odebrania polecenia odinstalowania przed przekroczeniem 20-dniowego okresu odinstalowywania.  
 
-Aby uzyskać więcej informacji na temat zasad usługi Windows Update, zobacz artykuł [Update CSP](https://docs.microsoft.com/windows/client-management/mdm/update-csp) (Dostawca konfiguracji usługi aktualizacji) w dokumentacji dotyczącej zarządzania klientem systemu Windows.  
+Aby uzyskać więcej informacji na temat zasad usługi Windows Update, zobacz artykuł [Dostawca konfiguracji usługi aktualizacji](https://docs.microsoft.com/windows/client-management/mdm/update-csp) w dokumentacji dotyczącej zarządzania klientem systemu Windows.  
 
 #### <a name="to-uninstall-the-latest-windows-10-update"></a>Aby odinstalować najnowszą aktualizację systemu Windows 10  
 
@@ -190,7 +190,7 @@ Klasyczny portal Azure zawiera również w profilu konfiguracji urządzenia ogra
    > [!NOTE]  
    > Ustawienia aktualizacji systemu Windows 10 utworzone w portalu klasycznym nie są wyświetlane w witrynie Azure Portal po migracji. Te ustawienia są jednak stosowane. Ustawienia, które po migracji zostały poddane edycji w witrynie Azure Portal, są usuwane z zasad.  
 
-2. Ustawienia aktualizacji należy usuwać w portalu klasycznym. Po migracji do witryny Azure Portal i dodaniu tego samego ustawienia do pierścienia aktualizacji należy usunąć ustawienie z portalu klasycznego, aby uniknąć potencjalnych konfliktów zasad. Konflikt występuje na przykład wtedy, gdy to samo ustawienie zostanie skonfigurowane z różnymi wartościami. Nie ma prostego sposobu na sprawdzenie tego, ponieważ ustawienie skonfigurowane w portalu klasycznym nie jest wyświetlane w witrynie Azure Portal.  
+2. Ustawienia aktualizacji należy usuwać w portalu klasycznym. Po migracji do witryny Azure Portal i dodaniu tego samego ustawienia do pierścienia aktualizacji należy usunąć ustawienie z portalu klasycznego, aby uniknąć potencjalnych konfliktów zasad. Konflikt występuje na przykład wtedy, gdy to samo ustawienie zostanie skonfigurowane z różnymi wartościami. Nie ma prostego sposobu, aby to sprawdzić, ponieważ ustawienie skonfigurowane w portalu klasycznym nie jest wyświetlane w witrynie Azure Portal.  
 
 ## <a name="next-steps"></a>Następne kroki
 

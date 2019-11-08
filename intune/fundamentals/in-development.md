@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/07/2019
+ms.date: 10/28/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,14 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ea5fae72f6e2057ef0b03a7bd295085ed1ac3bbd
-ms.sourcegitcommit: 5807f4db4a45a093ce2fd6cb0c480bec384ec1ff
+ms.openlocfilehash: 3720b0b9a67f0c3462993feef4162ef35f7f3f92
+ms.sourcegitcommit: d1b36501186e867355843ddd67c795ade800b76a
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72601551"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73182928"
 ---
-# <a name="in-development-for-microsoft-intune---october-2019"></a>W trakcie opracowywania — Microsoft Intune — październik 2019 r.
+# <a name="in-development-for-microsoft-intune---november-2019"></a>W trakcie opracowywania — Microsoft Intune — listopad 2019 r.
 
 Aby ułatwić Ci przygotowanie i planowanie, na tej stronie udostępniamy listę aktualizacji interfejsu użytkownika i funkcji usługi Intune, które są obecnie opracowywane, a zostaną wydane w przyszłości. Oprócz informacji na tej stronie:
 
@@ -58,8 +58,14 @@ Aby ułatwić Ci przygotowanie i planowanie, na tej stronie udostępniamy listę
 <!-- ***********************************************-->
 ## <a name="app-management"></a>Zarządzanie aplikacjami
 
-### <a name="apply-dark-mode-in-ios-company-portal----4911422----"></a>Zastosuj tryb ciemny w Portal firmy systemu iOS <!-- 4911422  -->
-Zaplanowano tryb ciemny dla Portal firmy systemu iOS. Będziesz w stanie pobrać aplikacje firmowe, zarządzać urządzeniami i uzyskać pomoc techniczną w wybranym przez siebie schemacie kolorów. Aby uzyskać więcej informacji na temat konfigurowania Portalu firmy dla systemu iOS, zobacz [Jak skonfigurować aplikację Portal firmy w usłudze Microsoft Intune](../apps/company-portal-app.md).
+### <a name="smime-support-for-microsoft-outlook-mobile----2669398----"></a>Obsługa protokołu S/MIME dla programu Microsoft Outlook Mobile <!-- 2669398  -->
+Usługa Intune będzie obsługiwać dostarczanie certyfikatów podpisywania S/MIME i szyfrowania, które mogą być używane z programem Outlook Mobile w systemach iOS i Android. Aby uzyskać powiązane informacje, zobacz [Ustawienia poczty e-mail dla urządzeń z systemem iOS](~/configuration/email-settings-ios.md) i [Ustawienia poczty e-mail dla urządzeń z systemem Android](~/configuration/email-settings-android.md).
+
+### <a name="custom-settings-support-for-macos-applications----4736278----"></a>Obsługa ustawień niestandardowych dla aplikacji macOS <!-- 4736278  -->
+Usługa Intune będzie obsługiwać ustawienia niestandardowe, umożliwiając dodawanie określonych kluczy i wartości do istniejącego pliku listy właściwości preferencji (plist) w celu skonfigurowania aplikacji macOS i urządzenia. Nie wszystkie aplikacje obsługują preferencje zarządzane, a w niektórych przypadkach można zarządzać tylko określonymi ustawieniami. Ustawienia są wdrażane tylko za pośrednictwem kanału urządzenia. Należy przekazać tylko pliki listy właściwości lub pliki XML, które są przeznaczone dla ustawień kanału urządzenia.
+
+### <a name="assignment-type-value-in-windows-company-portal----5459950----"></a>Wartość typu przypisania w systemie Windows Portal firmy <!-- 5459950  -->
+Strona **zainstalowane aplikacje** w aplikacji Portal firmy systemu Windows zostanie zaktualizowana. Kolumna **Typ przypisania** na stronie **zainstalowane aplikacje** została zaktualizowana o nazwę wymaganą przez organizację. Możliwe wartości to **tak** lub **nie** , aby wyznaczyć wymagane aplikacje a. Ta zmiana jest wprowadzana w odpowiedzi na pewne pomyłki użytkowników końcowych. Aby uzyskać więcej informacji na temat konfigurowania Portalu firmy dla systemu Windows, zobacz [Jak skonfigurować aplikację Portal firmy w usłudze Microsoft Intune](~/apps/company-portal-app.md).
 
 ### <a name="run-win32-apps-on-windows-10-s-mode-devices----3747604----"></a>Uruchamianie aplikacji Win32 na urządzeniach z systemem Windows 10 w trybie S <!-- 3747604  --> 
 Będzie można instalować i uruchamiać aplikacje Win32 na urządzeniach zarządzanych w trybie systemu Windows 10 S. Utwórz co najmniej jedną uzupełniającą zasadę dla trybu S przy użyciu narzędzi programu PowerShell Windows Defender Application Control (WDAC). Użyj portalu podpisywania funkcji Device Guard, aby podpisywać dodatkowe zasady. Następnie Przekaż i Rozpowszechnij zasady za pomocą usługi Intune. 
@@ -74,7 +80,7 @@ Aby ustawić dostępność aplikacji na podstawie daty i godziny:
 1. W usłudze Intune wybierz pozycję **Aplikacje klienckie** > **Aplikacje**. 
 1. Wybierz aplikację z listy lub Dodaj nową, wybierając pozycję **Dodaj**. 
 1. W bloku aplikacja wybierz pozycję **przypisania** > **Dodaj grupę**. 
-1. Ustaw typu **Assignment** na **Required** a następnie wybierz pozycję **Included grupy**. 
+1. Ustaw **Typ przypisania** na **Wymagane** a następnie wybierz pozycję **uwzględnione grupy**. 
 1. Ustaw ustawienie Ustaw **tę aplikację jako wymaganą dla wszystkich użytkowników** na **wartość tak**. 
 1. Wybierz pozycję **Edytuj** , aby zmodyfikować opcje **środowiska użytkownika końcowego** . 
 1. W bloku **środowisko użytkownika końcowego** Ustaw **czas dostępności oprogramowania** zgodnie z wymaganiami. 
@@ -93,15 +99,6 @@ Aplikacja Portal firmy będzie wyświetlać dodatkowe komunikaty o stanie instal
 - Aplikacja została zainstalowana pomyślnie, ale wymaga ponownego uruchomienia.
 - Aplikacja jest w trakcie instalacji, ale wymaga ponownego uruchomienia, aby kontynuować.
 
-### <a name="assign-the-microsoft-edge-beta-for-macos----4678761----"></a>Przypisywanie programu Microsoft Edge beta do macOS <!-- 4678761  -->
-Można dodać i przypisać najnowszą wersję programu Microsoft Edge beta do usługi Intune dla urządzeń macOS. 
-
-Aby przypisać program Microsoft Edge beta dla urządzeń macOS:
-1. W usłudze Intune wybierz pozycję **aplikacje klienckie**  > **aplikacje**  > **Dodaj aplikację**  > **Microsoft Edge-macOS**. 
-1. Przypisz program Microsoft Edge beta do odpowiednich grup. Program Microsoft AutoUpdate (MAU) zachowuje aktualność programu Microsoft Edge. 
- 
-Aby uzyskać więcej informacji na temat przeglądarki Microsoft Edge, zobacz [Zarządzanie dostępem do sieci Web za pomocą przeglądarki Microsoft Edge z Microsoft Intune](../apps/manage-microsoft-edge.md).
-
 ### <a name="configure-app-notification-content-for-organization-accounts----2576686---"></a>Skonfiguruj zawartość powiadomienia aplikacji dla kont organizacji <!-- 2576686 -->
 Aplikacja usługi Intune na urządzeniach z systemem Android i iOS umożliwi kontrolowanie zawartości powiadomień aplikacji dla kont organizacji. Ta funkcja będzie wymagała obsługi aplikacji i może być niedostępna dla wszystkich aplikacji korzystających z aplikacji. Aby uzyskać więcej informacji na temat zasad ochrony aplikacji (APP), zobacz [Co to są zasady ochrony aplikacji?](../apps/app-protection-policy.md)
 
@@ -109,27 +106,55 @@ Aplikacja usługi Intune na urządzeniach z systemem Android i iOS umożliwi kon
 <!-- ***********************************************-->
 ## <a name="device-configuration"></a>Konfiguracja urządzenia
 
-### <a name="new-device-firmware-configuration-interface-profile-for-devices-that-run-windows-10-and-later----2266073----"></a>Nowy profil interfejsu konfiguracji oprogramowania układowego urządzenia dla urządzeń z systemem Windows 10 lub nowszym <!-- 2266073  -->
-W systemie Windows 10 i nowszych można utworzyć profil konfiguracji urządzenia w celu kontrolowania ustawień i funkcji: 
+### <a name="use-pkcs-certificates-with-wi-fi-profiles-on-windows-10-and-later-devices----3246388----"></a>Używanie certyfikatów PKCS z profilami sieci Wi-Fi na urządzeniach z systemem Windows 10 i nowszym <!-- 3246388  -->
+Obecnie można uwierzytelniać profile sieci Wi-Fi systemu Windows przy użyciu certyfikatów protokołu SCEP (**Konfiguracja urządzenia** > **Profile** > **tworzenia profilu** > **Windows 10 i nowszych** dla platformy > **Wi-Fi** dla Typ profilu > typ > **protokołu EAP** **przedsiębiorstwa** ). Będziesz mieć możliwość używania certyfikatów PKCS z profilami sieci Wi-Fi systemu Windows. Ta funkcja umożliwia użytkownikom uwierzytelnianie profilów sieci Wi-Fi przy użyciu nowych lub istniejących profilów certyfikatów PKCS w dzierżawie. 
 
-1. Wybierz pozycję **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
-1. Jako platformę wybierz pozycję **Windows 10 i nowsze**. 
- 
-Nowy typ profilu interfejsu konfiguracji oprogramowania układowego urządzenia umożliwi usłudze Intune zarządzanie ustawieniami interfejsu UEFI (BIOS).
+Aby uzyskać więcej informacji o profilach sieci Wi-Fi, zobacz [Dodawanie ustawień Wi-Fi dla urządzeń z systemem Windows 10 lub nowszym w usłudze Intune](../configuration/wi-fi-settings-windows.md).
 
-Aby uzyskać informacje na temat bieżących ustawień, które można skonfigurować, zobacz [stosowanie funkcji i ustawień na urządzeniach przy użyciu profilów urządzeń w Microsoft Intune](../configuration/device-profiles.md).
+Dotyczy:
+- System Windows 10 lub nowszy
 
-Ta funkcja ma zastosowanie do systemu Windows 10 RS5 (1809) lub nowszego na wybranych urządzeniach.
- 
+### <a name="new-exchangeactivesync-settings-when-creating-an-email-device-configuration-profile-on-ios-devices----4892824----"></a>Nowe ustawienia ExchangeActiveSync podczas tworzenia profilu konfiguracji urządzenia poczty E-mail na urządzeniach z systemem iOS <!-- 4892824  --> 
+Na urządzeniach z systemem iOS/iPadOS można skonfigurować łączność poczty e-mail w profilu konfiguracji urządzenia (**Konfiguracja urządzenia** > **Profile** > **tworzenia profilu** > **iOS/iPadOS** dla platformy > **poczty e-mail** dla typu profilu). 
+
+Dostępne będą nowe ustawienia ExchangeActiveSync, w tym:
+- Wybierz usługi, które mają zostać zsynchronizowane (lub Zablokuj synchronizację), takie jak poczta e-mail, kalendarz i kontakty.
+- Zezwalaj (lub Blokuj) użytkownikom na zmienianie ustawień synchronizacji dla tych usług na ich urządzeniach. 
+
+Aby wyświetlić bieżące ustawienia, przejdź do [ustawień profilu poczty e-mail dla urządzeń z systemem iOS w usłudze Intune](../configuration/email-settings-ios.md).
+
+Dotyczy:
+- System iOS 13.0 i nowsze
+- System iPadOS 13.0 i nowsze
+
+### <a name="prevent-users-from-adding-personal-google-accounts-to-android-enterprise-device-owner-and-dedicated-devices----5353228----"></a>Uniemożliwiaj użytkownikom dodawanie osobistych kont Google do właściciela urządzenia z systemem Android Enterprise i urządzeń dedykowanych <!-- 5353228  -->
+Będziesz mieć możliwość uniemożliwienia użytkownikom tworzenia osobistych kont Google na właścicielu urządzenia i dedykowanych urządzeniach z systemem Android (**Konfiguracja urządzeń** > **Profile** > **tworzenia profilu** > systemie **Android Enterprise** dla > **właściciel urządzenia tylko > ograniczenia dotyczące urządzeń** dla typu profilu > **Ustawienia użytkowników i kont**).
+
+Aby wyświetlić bieżące ustawienia, które można skonfigurować, zobacz [Ustawienia urządzeń z systemem Android Enterprise w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune](../configuration/device-restrictions-android-for-work.md).
+
+Dotyczy:
+- Właściciel urządzenia z systemem Android Enterprise
+- Dedykowane urządzenia z rozwiązaniem Android Enterprise
+
+### <a name="server-side-logging-for-siri-commands-setting-is-removed-in-ios-device-restrictions-profile----5468501----"></a>Funkcja rejestrowania po stronie serwera dla poleceń Siri jest usuwana w profilu ograniczeń urządzenia z systemem iOS <!-- 5468501  -->
+Na urządzeniach z systemem iOS można utworzyć profile ograniczeń dla urządzeń, które konfigurują rejestrowanie po stronie serwera dla poleceń Siri (**Konfiguracja urządzenia** > **Profile** > **tworzenia profilu** > **iOS/iPadOS** dla platformy **Ograniczenia > urządzeń** dla typu profilu > **aplikacje wbudowane**). Ustawienie **Siri polecenia rejestrowania po stronie serwera** zostanie usunięte.
+
+To ustawienie zostanie usunięte z konsoli administracyjnej usługi Intune. To ustawienie nie ma wpływu na urządzenie, mimo że istniejące zasady, które mają skonfigurowane to ustawienie, będą nadal wyświetlać ustawienie. Jeśli chcesz usunąć ustawienie z istniejących zasad, przejdź do zasad, wprowadź drobną edycję, Zapisz ją i zasady zostaną zaktualizowane.
+
+Aby wyświetlić ustawienia, które można skonfigurować, zobacz [Ustawienia urządzeń z systemem iOS i iPadOS umożliwiające działanie funkcji lub ich ograniczanie przy użyciu usługi Intune](../configuration/device-restrictions-ios.md).
+
+Dotyczy:
+- iOS
+
 
 <!-- ***********************************************-->
-## <a name="device-enrollment"></a>Rejestrowanie urządzeń
-
-### <a name="for-ios-devices-customize-the-enrollment-privacy-window-of-company-portal----4394993----"></a>W przypadku urządzeń z systemem iOS Dostosuj okno prywatności rejestracji Portal firmy <!-- 4394993  -->
-Przy użyciu języka Markdown będzie można dostosować okno z informacjami o ochronie prywatności w aplikacji Portal firmy, które użytkownicy końcowi widzą podczas rejestracji systemu iOS. W tym celu można dostosować listę elementów i działań, których Twoja organizacja nie może zobaczyć ani wykonać na urządzeniu.
+<!--## Device enrollment-->
 
 <!-- ***********************************************-->
 ## <a name="device-management"></a>Zarządzanie urządzeniami
+
+### <a name="edit-device-name-value-for-autopilot-devices---2640074----"></a>Edytuj wartość nazwy urządzenia dla urządzeń z autopilotażem<!-- 2640074  -->
+Będziesz w stanie edytować wartość nazwy urządzenia dla urządzeń z urządzeniami niewidocznymi w usłudze Azure AD. W tym celu przejdź do usługi **Intune** > **rejestracja urządzeń** > **rejestracja w systemie Windows** >  > **urządzeń** z **systemem Windows autopilotaż** > Wybierz urządzenie > zmienić wartość **nazwy urządzenia** w prawym okienku > **Zapisz**.
 
 
 ### <a name="edit-the-group-tag-value-for-autopilot-devices---4816775---"></a>Edytuj wartość tagu grupy dla urządzeń z autopilotażem<!-- 4816775 -->
@@ -143,25 +168,38 @@ Będziesz w stanie edytować wartość **tagu grupy** dla urządzeń z autopilot
 ### <a name="target-macos-user-groups-to-require-jamf-management----4061739---"></a>Docelowa Grupa użytkowników macOS do wymagania zarządzania Jamf <!-- 4061739 -->
 Będziesz mieć możliwość nawiązywania określonych grup użytkowników, aby wymagały zarządzania urządzeniami macOS przez Jamf. Ten element docelowy umożliwi zastosowanie integracji zgodności Jamf z podzbiorem urządzeń macOS, podczas gdy inne urządzenia będą nadal zarządzane przez usługę Intune. Określanie wartości docelowej umożliwia również stopniowe Migrowanie urządzeń użytkowników z jednego systemu zarządzania urządzeniami przenośnymi do drugiego.
 
-### <a name="deploy-software-updates-to-macos-devices----3194876---"></a>Wdrażanie aktualizacji oprogramowania na urządzeniach macOS <!-- 3194876 -->
-Będziesz w stanie wdrożyć aktualizacje oprogramowania w grupach urządzeń macOS. Ta funkcja obejmuje krytyczne, oprogramowanie układowe, plik konfiguracji i inne aktualizacje. Można wysyłać aktualizacje przy następnym zaewidencjonowaniu urządzenia. Możesz też wybrać Harmonogram tygodniowy, aby wdrożyć aktualizacje w określonym lub wyznaczonym okresie. 
+<!-- ***********************************************-->
+## <a name="intune-apps"></a>Aplikacje usługi Intune
 
-Ta funkcja ułatwia aktualizowanie urządzeń poza standardowymi godzinami pracy lub godzinami zewnętrznymi, gdy dział pomocy technicznej jest w pełni zatrudniony. Zostanie również wyświetlony szczegółowy raport dotyczący wszystkich urządzeń macOS, które mają wdrożone aktualizacje. Możesz przejść do szczegółów raportu według urządzenia, aby zobaczyć stan konkretnej aktualizacji.
+### <a name="improved-macos-enrollment-experience-in-company-portal----5074349----"></a>Ulepszona obsługa rejestracji macOS w Portal firmy <!-- 5074349  -->
+Portal firmy dla środowiska rejestracji macOS będzie prostszy proces rejestracji, który będzie bardziej ściśle dopasowywany do Portal firmy środowiska rejestracji systemu iOS. Użytkownicy urządzeń będą widzieli następujące:  
+
+* Elegancki interfejs użytkownika.  
+* Ulepszona Lista kontrolna rejestracji.  
+* Wyraźniejsze instrukcje dotyczące rejestrowania urządzeń.  
+* Udoskonalone opcje rozwiązywania problemów.  
+
+### <a name="improved-checklist-design-in-company-portal-app-for-android---5550857----"></a>Ulepszony projekt listy kontrolnej w aplikacji Portal firmy dla systemu Android<!-- 5550857  -->
+Lista kontrolna konfiguracji w aplikacji Portal firmy dla systemu Android zostanie zaktualizowana o lekkie projektowanie i nowe ikony. Zmiany zostaną wyrównane wraz z najnowszymi aktualizacjami wprowadzonymi do aplikacji Portal firmy dla systemu iOS.
 
 <!-- ***********************************************-->
 ## <a name="monitoring-and-troubleshooting"></a>Monitorowanie i rozwiązywanie problemów
-
-### <a name="android-report-on-the-devices-overview-page----2984353----"></a>Raport systemu Android na stronie przegląd urządzeń <!-- 2984353  -->
-Na stronie **przegląd urządzeń** zostanie dodany nowy raport. Raport zawiera informacje o liczbie urządzeń z systemem Android zarejestrowanych w poszczególnych rozwiązaniach do zarządzania urządzeniami. Na wykresie przedstawiono liczbę urządzeń dla zarejestrowanego profilu służbowego, w pełni zarządzane, dedykowane i administratora urządzenia. 
-
-Aby wyświetlić raport, wybierz pozycję **Intune** > **Devices** > **Przegląd**.
 
 ### <a name="updated-support-experience-------5012398------"></a>Zaktualizowane środowisko pomocy technicznej   <!--  5012398    -->
 W ramach dalszych ulepszeń będziemy aktualizować środowisko pomocy technicznej w konsoli usługi Intune.  Zajmiemy się wyszukiwaniem w konsoli i opiniami dotyczącymi typowych problemów. usprawniamy przepływ pracy, aby skontaktować się z pomocą techniczną.     
 
 <!-- ***********************************************-->
-<!--## Security-->
+## <a name="role-based-access-control"></a>Kontrola dostępu oparta na rolach
 
+### <a name="duplicate-custom-or-built-in-roles----1081938---"></a>Zduplikowane role niestandardowe lub wbudowane <!-- 1081938 -->
+Będziesz mieć możliwość kopiowania ról wbudowanych i niestandardowych. W tym celu przejdź do **ról** > usługi **Intune** > **wszystkie role** > wybierz rolę z listy > **Duplikuj**. Upewnij się, że wprowadzono nową nazwę, która jest unikatowa.
+
+<!-- ***********************************************-->
+
+## <a name="security"></a>Zabezpieczenia
+
+### <a name="bitlocker-key-rotation--------2564951--------"></a>Rotacja kluczy funkcji BitLocker     <!-- 2564951      -->
+Za pomocą usługi Intune można obrócić klucze odzyskiwania funkcji BitLocker dla zarządzanych urządzeń z systemem Windows w wersji 1909 lub nowszej. 
 
 <!-- ***********************************************-->
 ## <a name="notices"></a>Uwagi

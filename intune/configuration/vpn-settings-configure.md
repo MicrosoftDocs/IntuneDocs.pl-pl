@@ -108,7 +108,7 @@ Profile sieci VPN mogą używać różnych typów połączeń i protokołów ró
 
 Podczas tworzenia profilu sieci VPN wybierasz profil certyfikatu SCEP lub PKCS utworzony wcześniej w usłudze Intune. Ten profil jest znany pod nazwą certyfikatu tożsamości. Jest on używany do uwierzytelniania względem profilu zaufanego certyfikatu (lub *certyfikatu głównego*), który został utworzony, aby umożliwić urządzeniu użytkownika nawiązanie połączenia. Zaufany certyfikat jest przypisywany do komputera przeprowadzającego uwierzytelnienie połączenia z siecią VPN — zazwyczaj jest to serwer sieci VPN.
 
-Aby uzyskać więcej informacji o sposobie tworzenia i używania profilów certyfikatów w usłudze Intune, zobacz artykuł [How to configure certificates with Microsoft Intune](../protect/certificates-configure.md) (Konfigurowanie certyfikatów przy użyciu usługi Microsoft Intune).
+Aby uzyskać więcej informacji o sposobie tworzenia i używania profilów certyfikatów w usłudze Intune, zobacz artykuł [Konfigurowanie certyfikatów przy użyciu usługi Microsoft Intune](../protect/certificates-configure.md).
 
 ### <a name="user-name-and-password"></a>Nazwa użytkownika i hasło
 
