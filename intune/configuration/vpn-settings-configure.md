@@ -64,7 +64,7 @@ Możesz utworzyć profile sieci VPN, korzystając z następujących typów poł�
 > [!IMPORTANT]
 > Aby używanie profilów sieci VPN przypisanych do urządzenia było możliwe, należy zainstalować aplikację VPN odpowiednią do profilu. W artykule [Co to jest zarządzanie aplikacjami w usłudze Microsoft Intune?](../apps/app-management.md) znajdziesz informacje, które pomogą Ci przypisać aplikację przy użyciu usługi Intune.  
 
-Zapoznaj się z artykułem [Create a profile with custom settings (Tworzenie profilu za pomocą ustawień niestandardowych)](custom-settings-configure.md), aby dowiedzieć się, jak tworzyć niestandardowe profile sieci VPN za pomocą ustawień identyfikatora URI.
+Zapoznaj się z artykułem [Tworzenie profilu za pomocą ustawień niestandardowych](custom-settings-configure.md), aby dowiedzieć się, jak tworzyć niestandardowe profile sieci VPN za pomocą ustawień identyfikatora URI.
 
 ## <a name="create-a-device-profile"></a>Tworzenie profilu urządzenia
 
@@ -91,9 +91,9 @@ Zapoznaj się z artykułem [Create a profile with custom settings (Tworzenie pro
     - [Ustawienia systemu Android](vpn-settings-android.md)
     - [Ustawienia systemu Android Enterprise](vpn-settings-android-enterprise.md)
     - [Ustawienia systemu iOS/iPadOS](vpn-settings-ios.md)
-    - [macOS settings](vpn-settings-macos.md) (Ustawienia systemu macOS)
+    - [Ustawienia systemu macOS](vpn-settings-macos.md)
     - [Ustawienia systemu Windows Phone 8.1](vpn-settings-windows-phone-8-1.md)
-    - [Windows 8.1 settings](vpn-settings-windows-8-1.md) (Ustawienia systemu Windows 8.1)
+    - [Ustawienia systemu Windows 8.1](vpn-settings-windows-8-1.md)
     - [Ustawienia systemu Windows 10](vpn-settings-windows-10.md) (w tym systemu Windows Holographic for Business)
 
 4. Gdy wszystko będzie gotowe, **utwórz** profil.

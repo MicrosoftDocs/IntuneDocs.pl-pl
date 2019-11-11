@@ -98,7 +98,7 @@ Możesz wyświetlać obraz marki Twojej firmy. Po zapisaniu zmian można wybrać
 |---|---|
 |**Przekaż obraz marki**| Ta opcja umożliwia wyświetlanie obrazu marki. W aplikacji Portal firmy dla systemu iOS jest on wyświetlany jako obraz tła na stronie profilu użytkownika.<p><ul><li>Zalecana szerokość obrazu: Większa niż 1125 pikseli (wymagane co najmniej 650 pikseli)</li><li>Maksymalny rozmiar obrazu: 1,3 MB</li><li>Typ pliku: PNG, JPG lub JPEG</li></ul>|
 
-Odpowiedni obraz marki wzmacnia pozytywne wrażenie marki, co pozwala zwiększyć zaufanie użytkownika w Portalu firmy. Poniżej przedstawiono porady, które warto wziąć pod uwagę podczas nabywania, wybierania i optymalizowania obrazu dla Portalu firmy. 
+Odpowiedni obraz marki wzmacnia pozytywne wrażenie o niej, co umacnia zaufanie użytkownika do Portal firmy. Poniżej przedstawiono porady, które warto wziąć pod uwagę podczas nabywania, wybierania i optymalizowania obrazu dla Portalu firmy. 
 
 - Skontaktuj się z działem marketingu lub działem graficznym. Być może są już dostępne zatwierdzone obrazy marki. Mogą one również pomóc w optymalizacji obrazów. 
 
@@ -112,11 +112,11 @@ Po dodaniu lub zmodyfikowaniu obrazu marki w usłudze Intune użytkownik końcow
 
 ### <a name="brand-image-examples"></a>Przykłady obrazu marki
 
-Na poniższej ilustracji przedstawiono przykład obrazu marki urządzenia iPad:
+Na poniższej ilustracji przedstawiono przykład obrazu marki na urządzeniu iPad:
 
 ![Zrzut ekranu przedstawiający przykład obrazu marki urządzenia iPhone](./media/company-portal-app/company-portal-app-03.png)
 
-Na poniższej ilustracji przedstawiono przykład obrazu marki urządzenia iPhone:
+Na poniższej ilustracji przedstawiono przykład obrazu marki na urządzeniu iPhone:
 
 ![Zrzut ekranu przedstawiający przykład obrazu marki urządzenia iPad](./media/company-portal-app/company-portal-app-02.png)
 
@@ -150,7 +150,7 @@ Poniższe skróty klawiaturowe są dostępne w aplikacji Portal firmy dla system
 | Obszar | Opis | Skrót klawiaturowy |
 |:------------------:|:--------------:|:-----------------:|
 | Menu nawigacji | Nawigacja | Alt + M |
-|  | Domowy | Alt + H |
+|  | Strona główna | Alt + H |
 |  | Wszystkie aplikacje | Alt + A |
 |  | Zainstalowane aplikacje | ALT + I |
 |  | Wyślij opinię | Alt + F |
