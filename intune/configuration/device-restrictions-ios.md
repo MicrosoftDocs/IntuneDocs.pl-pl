@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 11/06/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6dbe26dba4e78e9f5f29a5adedffa3de1df662a6
-ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
+ms.openlocfilehash: 488794fdce8f6ebb074648c8e399cb2aecc73b25
+ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73414689"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73709747"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem iOS i iPadOS umożliwiające działanie funkcji lub ich ograniczanie przy użyciu usługi Intune
 
@@ -417,6 +417,9 @@ Dotyczy urządzeń z systemem iOS w wersji 9,3 lub nowszej.
 - **Typ listy aplikacji**: Utwórz listę aplikacji do pokazania lub ukrycia. Możesz pokazać lub ukryć wbudowane aplikacje i aplikacje biznesowe. Witryna sieci Web firmy Apple zawiera listę [wbudowanych aplikacji firmy Apple](https://support.apple.com/HT208094). Dostępne opcje:
 
   - **Ukryte aplikacje**: wprowadź listę aplikacji ukrywanych przed użytkownikami. Użytkownicy nie mogą wyświetlać ani otwierać tych aplikacji.
+  
+    Firma Apple uniemożliwia ukrywanie niektórych natywnych aplikacji. Na przykład nie można ukryć **ustawień** ani aplikacji **portfela** na urządzeniu. [Usuń wbudowane aplikacje firmy Apple](https://support.apple.com/HT208094) zawierające listę aplikacji, które mogą być ukryte.
+  
   - **Widoczne aplikacje**: wprowadź listę aplikacji, które użytkownicy mogą wyświetlać i uruchamiać. Użytkownicy nie będą mogli wyświetlać ani uruchamiać żadnych innych aplikacji.
 
 - **Adres URL aplikacji**: wprowadź adres URL aplikacji ze sklepu, który ma być wyświetlany lub ukryty. Przykład:

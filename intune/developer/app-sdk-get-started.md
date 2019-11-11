@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a6886060cce77004b107dac02ecea57f2090ac8f
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 428da4581e9946b62bd6ee7c5f7d17d69f93ad9b
+ms.sourcegitcommit: ae6f2e7812e7fd36f2393b8f4b6cd8de63777b2c
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72503466"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73592022"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Wprowadzenie do zestawu SDK aplikacji usługi Microsoft Intune
 
@@ -181,6 +181,9 @@ Gdy aplikacja zostanie zarejestrowana w dzierżawie platformy Azure i pojawi si�
 5. W polu wyszukiwania wprowadź frazę **Microsoft Mobile Application Management**.
 6. W obszarze **Uprawnienia delegowane** zaznacz pole wyboru **DeviceManagementManagedApps.ReadWrite: odczyt i zapis danych zarządzania aplikacjami użytkownika***.
 7. Kliknij pozycję **Dodaj uprawnienia**.
+
+> [!NOTE]
+> Jeśli aplikacja uniemożliwia logowanie się z powodu błędu podczas uzyskiwania dostępu do tego zasobu: https://intunemam.microsoftonline.com, należy wysłać uwagę do msintuneappsdk@microsoft.com przy użyciu identyfikatora klienta aplikacji. Jest to proces ręcznego zatwierdzania.
 
 ### <a name="badge-your-app-optional"></a>Znakowanie aplikacji (opcjonalne)
 

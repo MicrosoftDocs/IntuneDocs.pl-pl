@@ -5,24 +5,24 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/16/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: ''
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: ''
+ms.reviewer: jieyan
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3e5804b415d26b07944c500b0158cf84a2d4412c
-ms.sourcegitcommit: d1b36501186e867355843ddd67c795ade800b76a
-ms.translationtype: HT
+ms.openlocfilehash: 7f343ace48c917e65d9d59cd7c42c53e9b892968
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73182864"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73756729"
 ---
 # <a name="use-and-manage-zebra-devices-with-zebra-mobility-extensions-in-microsoft-intune"></a>Używanie urządzeń Zebra i zarządzanie nimi za pomocą funkcji Zebra Mobility Extensions w usłudze Microsoft Intune
 
@@ -52,7 +52,6 @@ Przy użyciu usługi Intune można zarejestrować urządzenia Zebra, aby wdroży
 - Upewnij się, że masz najnowszą wersję aplikacji klasycznej StageNow firmy Zebra Technologies.
 - Sprawdź [pełną tabelę funkcji MX firmy Zebra](http://techdocs.zebra.com/mx/compatibility) (powoduje otwarcie witryny firmy Zebra), aby upewnić się, że tworzone przez Ciebie profile są zgodne z modelem, wersją systemu operacyjnego i wersją funkcji MX urządzenia.
 - Niektóre urządzenia, takie jak TC20/25, nie obsługują wszystkich dostępnych funkcji MX w rozwiązaniu StageNow. Sprawdź [tabelę funkcji firmy Zebra](http://techdocs.zebra.com/mx/tc2x/) (powoduje otwarcie witryny firmy Zebra), aby uzyskać zaktualizowane informacje o obsłudze.
-
 
 ## <a name="step-1-install-the-latest-company-portal-app"></a>Krok 1. Instalowanie najnowszej wersji aplikacji Portal firmy
 
@@ -134,8 +133,8 @@ Po przetestowaniu pliku następnym krokiem jest wdrożenie profilu w urządzenia
 
 W usłudze Intune utwórz profil konfiguracji urządzenia:
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Wybierz kolejno pozycje **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
+1. Zaloguj się do [Centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz pozycję **urządzenia** > **profile konfiguracji** > **Utwórz profil**.
 3. Wprowadź następujące właściwości:
 
     - **Nazwa**: wprowadź opisową nazwę nowego profilu.

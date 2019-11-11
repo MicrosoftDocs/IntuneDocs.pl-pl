@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/18/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb992747765ea087d5ef536c2da7c444bfa2d987
-ms.sourcegitcommit: 4f979ba7030e72d820113fe23ac8521ddb2433bd
+ms.openlocfilehash: e8747f3dfa9169a4f1f2de9dcf45db0f5cccadd1
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72915725"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73756758"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Korzystanie z urządzeń z systemem Android Enterprise i zarządzanie nimi za pomocą OEMConfig w Microsoft Intune
 
@@ -80,8 +80,8 @@ Upewnij się, że urządzenie obsługuje OEMConfig, poprawna aplikacja OEMConfig
 
 ## <a name="create-an-oemconfig-profile"></a>Tworzenie profilu OEMConfig
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Wybierz kolejno pozycje **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
+1. Zaloguj się do [Centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz pozycję **urządzenia** > **profile konfiguracji** > **Utwórz profil**.
 3. Wprowadź następujące właściwości:
 
     - **Nazwa**: wprowadź opisową nazwę nowego profilu.
@@ -108,11 +108,11 @@ Upewnij się, że urządzenie obsługuje OEMConfig, poprawna aplikacja OEMConfig
       - Wiele ustawień ma wartości domyślne dostarczone przez producenta OEM. Aby sprawdzić, czy jest dostępna wartość domyślna, umieść kursor na ikonie informacji obok ustawienia. Etykietka narzędzia pokazuje wartości domyślne dla tego ustawienia (jeśli dotyczy) i więcej szczegółów dostarczonych przez producenta OEM.
 
       - Kliknięcie przycisku **Wyczyść** powoduje usunięcie ustawienia z profilu. Jeśli ustawienie nie znajduje się w profilu, jego wartość na urządzeniu nie ulegnie zmianie, gdy profil zostanie zastosowany.
-        
+
       - Jeśli utworzysz pusty (nieskonfigurowany) pakiet w projektancie konfiguracji, zostanie on usunięty podczas przełączania do edytora JSON.
 
     - **Edytor JSON**: po wybraniu tej opcji Edytor JSON zostanie otwarty z szablonem pełnego schematu konfiguracji osadzonego w aplikacji. W edytorze Dostosuj szablon o wartości dla różnych ustawień. Jeśli używasz **projektanta konfiguracji** do zmiany wartości, Edytor JSON zastępuje szablon wartościami z projektanta konfiguracji.
-    
+
       - W przypadku aktualizowania istniejącego profilu Edytor JSON pokazuje ustawienia, które zostały ostatnio zapisane z profilem.
 
       - Schematy OEMConfig mogą być duże i złożone. Jeśli wolisz zaktualizować te ustawienia przy użyciu innego edytora, wybierz przycisk **Pobierz szablon JSON** . Użyj wybranego edytora, aby dodać do szablonu wartości konfiguracyjne. Następnie skopiuj i wklej zaktualizowany kod JSON we właściwości **Edytor JSON** .

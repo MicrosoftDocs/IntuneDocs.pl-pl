@@ -19,12 +19,12 @@ ms.reviewer: scottduf
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 56982c6ce10f74617471307acd176a0506655398
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 6bde7fc554496b2ecc6f13c7e1b899d7ff05bfa1
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72501229"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73754994"
 ---
 # <a name="enable-code-integrity"></a>Włączanie integralności kodu
 
@@ -36,7 +36,7 @@ Jeśli określisz siebie jako zaawansowanego użytkownika urządzenia i chcesz w
 
 ## <a name="additional-resources-for-it-administrators"></a>Dodatkowe zasoby dla administratorów IT
 
-Jeśli jesteś administratorem usługi Intune i chcesz dowiedzieć się więcej o ustawieniach zgodności z kondycją urządzenia usługi Intune, zobacz [Dodawanie zasad zgodności urządzeń dla urządzeń z systemem Windows 10 w usłudze Intune](https://docs.microsoft.com/intune/protect/compliance-policy-create-windows.md). Szczegółowe zapoznaj się z akcjami zgodności, które można wykonać w usłudze Intune, zobacz [HEALTHATTESTATION CSP](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp#step-8-take-appropriate-policy-action-based-on-evaluation-results).  
+Jeśli jesteś administratorem usługi Intune i chcesz dowiedzieć się więcej o ustawieniach zgodności z kondycją urządzenia usługi Intune, zobacz [Dodawanie zasad zgodności urządzeń dla urządzeń z systemem Windows 10 w usłudze Intune](https://docs.microsoft.com/intune/protect/compliance-policy-create-windows). Szczegółowe zapoznaj się z akcjami zgodności, które można wykonać w usłudze Intune, zobacz [HEALTHATTESTATION CSP](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp#step-8-take-appropriate-policy-action-based-on-evaluation-results).  
 
 ## <a name="next-steps"></a>Następne kroki
 

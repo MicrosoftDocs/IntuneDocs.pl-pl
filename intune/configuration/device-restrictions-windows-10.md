@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 164c34f4a46ca11e2788b72dee70bdd40c25e7f3
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 288ff693e7e46b7953cffad3d0a54b8621141373
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72493896"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755267"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem Windows 10 (i nowszym) w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune
 
@@ -223,12 +223,12 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad środowiska](ht
 
 - **Powiadomienia Centrum akcji (tylko urządzenia przenośne)** : ustawienie **Blokuj** zapobiega wyświetlaniu powiadomień Centrum akcji na ekranie blokady urządzenia. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia użytkownikom wybranie, które aplikacje mogą wyświetlać powiadomienia na ekranie blokady.
 
-  [Dostawca usługi konfiguracji AboveLock/AllowActionCenterNotifications](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-abovelock#abovelock-allowactioncenternotifications)
+  [Dostawca usługi konfiguracji AboveLock/AllowActionCenterNotifications](https://msdn.microsoft.com/ie/dn904962(v=vs.94)#AboveLock_AllowActionCenterNotifications)
 
 - **Adres URL obrazu ekranu blokady (tylko komputery)** : wprowadź adres URL obrazu w formacie JPG, JPEG lub PNG używany jako tapeta ekranu blokady systemu Windows. Na przykład wprowadź `https://contoso.com/image.png`. To ustawienie powoduje zablokowanie obrazu bez możliwości późniejszej zmiany.
 - **Konfigurowany przez użytkownika limit czasu ekranu (tylko urządzenia przenośne)** : ustawienie **Zezwalaj** pozwala użytkownikowi na ustawianie czasu. Ustawienie **Nie skonfigurowano** (domyślne) nie zapewnia użytkownikom tej opcji.
 
-  [Dostawca usługi konfiguracji DeviceLock/AllowScreenTimeoutWhileLockedUserConfig](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-allowscreentimeoutwhilelockeduserconfig)
+  [Dostawca usługi konfiguracji DeviceLock/AllowScreenTimeoutWhileLockedUserConfig](https://msdn.microsoft.com/ie/dn904962(v=vs.94)#DeviceLock_AllowScreenTimeoutWhileLockedUserConfig)
 
 - **Cortana na zablokowanym ekranie** (tylko komputery): ustawienie **Blokuj** uniemożliwia użytkownikom interakcję z Cortana, gdy jest wyświetlany ekran blokady. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia interakcję z Cortaną.
 
@@ -240,7 +240,7 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad środowiska](ht
 
 - **Limit czasu ekranu (tylko urządzenia przenośne)** : ustaw czas trwania (w sekundach) od momentu zablokowania ekranu do momentu wyłączenia ekranu. Obsługiwane wartości to 11 – 1800. Na przykład wprowadź wartość `300`, aby ustawić limit czasu na 5 minut.
 
-  [Dostawca usługi konfiguracji DeviceLock/ScreenTimeoutWhileLocked](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-screentimeoutwhilelocked)
+  [Dostawca usługi konfiguracji DeviceLock/ScreenTimeoutWhileLocked](https://msdn.microsoft.com/ie/dn904962(v=vs.94)#DeviceLock_ScreenTimeoutWhileLocked)
 
 ## <a name="messaging"></a>Obsługa wiadomości
 

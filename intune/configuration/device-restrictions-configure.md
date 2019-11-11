@@ -65,7 +65,7 @@ W tym artykule przedstawiono sposób tworzenia profilu ograniczeń urządzenia. 
     - [Ustawienia systemu Android](../device-restrictions-android.md)
     - [Ustawienia systemu Android Enterprise](../device-restrictions-android-for-work.md)
     - [Ustawienia systemu iOS/iPadOS](device-restrictions-ios.md)
-    - [macOS settings](device-restrictions-macos.md) (Ustawienia systemu macOS)
+    - [Ustawienia systemu macOS](device-restrictions-macos.md)
     - [Ustawienia systemu Windows Phone 8.1](device-restrictions-windows-phone-8-1.md)
     - [Windows 8.1](device-restrictions-windows-8-1.md)
     - [Ustawienia systemu Windows 10](device-restrictions-windows-10.md)

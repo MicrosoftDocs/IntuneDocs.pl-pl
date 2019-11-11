@@ -80,7 +80,7 @@ Domyślnie w usłudze Intune mogą być rejestrowane urządzenia dla dowolnej pl
 |**W pełni zarządzane urządzenia z rozwiązaniem Android Enterprise**|**NFC, token, kod QR, Zero Touch**| Tak | Tak | Można konfigurować za pomocą zasad | [Więcej informacji](android-dedicated-devices-fully-managed-enroll.md)|
 
 
-## <a name="bring-your-own-device"></a>Korzystanie z własnych urządzeń
+## <a name="bring-your-own-device"></a>Korzystanie z własnych urządzeń (BYOD)
 Model „Przynieś własne urządzenie” (BYOD) obejmuje telefony, tablety i komputery stanowiące własność użytkownika. W celu zarejestrowania urządzeń BYOD użytkownicy instalują i uruchamiają aplikację Portal firmy. Ten program umożliwia użytkownikom dostęp do zasobów firmowych, takich jak wiadomości e-mail.
 
 ## <a name="corporate-owned-device"></a>Urządzenie należące do firmy

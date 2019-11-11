@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/17/2019
+ms.date: 11/05/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 101f414955a3b60d22003f61678854fecc16910d
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 15c78d7e7f602b60b6e9f2cee365c9a02eb904df
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506585"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755001"
 ---
 # <a name="common-issues-and-resolutions-with-email-profiles-in-microsoft-intune"></a>Typowe problemy dotyczące profilów poczty e-mail w usłudze Microsoft Intune i sposoby ich rozwiązania
 
@@ -32,7 +32,6 @@ Poznaj niektóre typowe problemy dotyczące profilów poczty e-mail oraz sposoby
 ## <a name="what-you-need-to-know"></a>Co musisz wiedzieć
 
 - Profile poczty e-mail są wdrażane dla użytkownika, który zarejestrował urządzenie. Aby skonfigurować profil poczty e-mail, usługa Intune używa właściwości Azure Active Directory (AD) w profilu poczty e-mail użytkownika podczas rejestracji. [Dodawanie ustawień poczty e-mail do urządzeń](email-settings-configure.md) może być dobrym zasobem.
-- Po przeprowadzeniu migracji z Configuration Manager hybrydowej do autonomicznej usługi Intune profil poczty e-mail Configuration Manager hybrydowego pozostaje na urządzeniu przez 7 dni. Jest to oczekiwane zachowanie. Jeśli chcesz, aby profil poczty e-mail został usunięty wcześniej, skontaktuj się z [pomocą techniczną usługi Intune](../fundamentals/get-support.md).
 - W przypadku systemu Android Enterprise Wdróż usługę Gmail lub dziewięć do pracy przy użyciu zarządzanych Sklep Google Play. [Dodaj zarządzane Google Play aplikacje](../apps/apps-add-android-for-work.md) zawierają listę kroków.
 - Program Microsoft Outlook dla systemów iOS i Android nie obsługuje profilów poczty e-mail. Zamiast tego Wdróż zasady konfiguracji aplikacji. Aby uzyskać więcej informacji, zobacz [ustawienie konfiguracji programu Outlook](../apps/app-configuration-policies-outlook.md).
 - Profile poczty e-mail skierowane do grup urządzeń (nie grup użytkowników) mogą nie zostać dostarczone do urządzenia. Gdy urządzenie ma podstawowego użytkownika, urządzenie docelowe powinno funkcjonować. Jeśli profil poczty e-mail zawiera certyfikaty użytkowników, należy pamiętać o docelowych grupach użytkowników.
@@ -62,22 +61,10 @@ Sprawdź konfigurację profilu EAS urządzenia Samsung KNOX i zasad źródłowyc
 
 Użytkownicy, których konta e-mail zostały skonfigurowane automatycznie, nie mogą wysyłać zdjęć ani obrazów ze swoich urządzeń. Taka sytuacja może wystąpić, jeśli nie jest włączona opcja **Zezwalaj na wysyłanie wiadomości e-mail z aplikacji innych firm**.
 
-### <a name="intune-solution"></a>Rozwiązanie przy użyciu usługi Intune
-
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Wybierz pozycję **Konfiguracja urządzeń** > **Profile**.
+1. Zaloguj się do [Centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz pozycję **urządzenia** > **profile konfiguracji**.
 3. Wybierz profil poczty e-mail, > **właściwości**  > **Ustawienia**.
 4. Ustaw ustawienie **Zezwalaj na wysyłanie wiadomości e-mail z aplikacji** innych firm, aby **włączyć**.
-
-### <a name="configuration-manager-hybrid"></a>Środowisko hybrydowe programu Configuration Manager
-
-1. Otwórz program Configuration Manager > **Zasoby i zgodność**.
-
-2. Rozwiń węzeł **Przegląd** > **Ustawienia zgodności** > **Dostęp do zasobów firmy** i wybierz pozycję **Profile poczty e-mail**.
-
-3. Kliknij prawym przyciskiem myszy profil poczty e-mail i otwórz pozycję **Właściwości**.
-
-4. Na karcie **Ustawienia synchronizacji** wybierz pozycję **Zezwalaj na wysyłanie wiadomości e-mail z aplikacji innych firm**.
 
 ## <a name="next-steps"></a>Następne kroki
 

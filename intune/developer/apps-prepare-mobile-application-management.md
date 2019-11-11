@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba1ec201cdb7e44570b53ce831b4e5ae26504973
-ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
+ms.openlocfilehash: dbddb0fcecfd5a0b021346a3a20b3c7e4f696a49
+ms.sourcegitcommit: 2c8a41ee95a3fde150667a377770e51b621ead65
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73413813"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73635335"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Przygotowanie aplikacji biznesowych pod kątem zasad ochrony aplikacji
 
@@ -110,7 +110,7 @@ W tej tabeli przedstawiono ustawienia do użycia w przypadku zestawu SDK aplikac
 |Pełne czyszczenie danych aplikacji|X|X|
 |Selektywne czyszczenie danych służbowych w scenariuszach obejmujących wiele tożsamości <br><br>**Uwaga:** w systemie iOS usunięcie profilu zarządzania spowoduje również usunięcie aplikacji.|X||
 |Nie zezwalaj na używanie polecenia „Zapisz jako”|X||
-|Konfiguracja aplikacji ukierunkowanej (lub konfiguracji aplikacji za pośrednictwem "kanału MAM")|X|X|
+|Konfiguracja aplikacji ukierunkowanej (lub konfiguracji aplikacji za pośrednictwem "kanału MAM")|X||
 |Obsługa wielu tożsamości|X||
 |Możliwość dostosowywania stylów |X|||
 |Połączenia sieci VPN na żądanie aplikacji z użyciem technologii Citrix mVPN|X|X| 

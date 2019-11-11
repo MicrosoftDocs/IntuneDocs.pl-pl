@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/20/2019
+ms.date: 11/05/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e2e7dc729879eb6d16a4ab3555d8fe319501a53e
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 687505a3ca2bbdffd26e8870705971aafb4783d2
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72492137"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73754959"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Rozwiązywanie problemów związanych z zasadami i profilami w usłudze Intune
 
@@ -32,11 +32,12 @@ Usługa Microsoft Intune zawiera kilka wbudowanych funkcji rozwiązywania proble
 W tym artykule wymieniono niektóre typowe techniki rozwiązywania problemów i opisano niektóre problemy, które mogą wystąpić.
 
 ## <a name="check-tenant-status"></a>Sprawdź stan dzierżawy
+
 Sprawdź [stan dzierżawy](../fundamentals/tenant-status.md) i upewnij się, że subskrypcja jest aktywna. Możesz również wyświetlić szczegóły dotyczące aktywnych zdarzeń i klasyfikatorów, które mogą mieć wpływ na wdrożenie zasad lub profilu.
 
 ## <a name="use-built-in-troubleshooting"></a>Korzystanie z wbudowanej funkcji rozwiązywania problemów
 
-1. W usłudze [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) wybierz pozycję **Rozwiązywanie problemów**:
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)wybierz pozycję **Rozwiązywanie problemów i wsparcie**:
 
     ![W usłudze Intune przejdź do obszaru Pomoc i obsługa techniczna, a następnie wybierz pozycję Rozwiązywanie problemów.](./media/troubleshoot-policies-in-microsoft-intune/help-and-support-troubleshoot.png)
 
@@ -102,7 +103,7 @@ Sprawdź [stan dzierżawy](../fundamentals/tenant-status.md) i upewnij się, że
 
 ## <a name="youre-unsure-if-a-profile-is-correctly-applied"></a>Nie masz pewności, czy poprawnie zastosowano profil
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Zaloguj się do [Centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Wybierz pozycję **Urządzenia** > **Wszystkie urządzenia** > wybierz urządzenie > **Konfiguracja urządzenia**. 
 
     Każde urządzenie ma listę swoich profilów. Każdy profil ma **Stan**. Stan ma zastosowanie, gdy wszystkie przypisane profile, w tym sprzęt oraz wymagania i ograniczenia systemu operacyjnego, są uwzględniane razem. Dostępne są następujące stany:

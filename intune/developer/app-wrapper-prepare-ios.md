@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/12/2019
+ms.date: 11/06/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 783ae8bf3216c514bac183ed1945c454cbaa1708
-ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
+ms.openlocfilehash: c0fac5e9d34890272253eaefd82ed13dc1014ba0
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73413876"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713479"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Przygotowywanie aplikacji systemu iOS pod kątem zasad ochrony aplikacji za pomocą narzędzia opakowującego aplikacje usługi Intune
 
@@ -44,7 +44,7 @@ Przed uruchomieniem narzędzia opakowującego aplikacje należy spełnić pewne 
 
   * Plik aplikacji wejściowej musi mieć rozszerzenie **ipa** lub **app**.
 
-  * Aplikacja wejściowa musi być skompilowana dla systemu iOS w wersji 10 lub nowszej.
+  * Aplikacja wejściowa musi być skompilowana dla systemu iOS w wersji 11 lub nowszej.
 
   * Aplikacja wejściowa nie może być zaszyfrowana.
 
@@ -289,26 +289,27 @@ Jeśli przetwarzanie aplikacji przez narzędzie opakowujące aplikacje nie powie
 |Wskazana aplikacja wejściowa jest już opakowana i korzysta z najnowszej wersji szablonu zasad.|Narzędzie opakowujące aplikacje nie opakuje ponownie istniejącej opakowanej aplikacji korzystającej z najnowszej wersji szablonu zasad.|
 |OSTRZEŻENIE: nie określono skrótu SHA1 certyfikatu. Przed wdrożeniem upewnij się, że opakowana aplikacja jest podpisana.|Upewnij się, że po właściwości wiersza polecenia –c podano prawidłowy skrót SHA1. |
 
-### <a name="log-files-for-the-app-wrapping-tool"></a>Pliki dziennika narzędzia opakowującego aplikacje
+### <a name="collecting-logs-for-your-wrapped-applications-from-the-device"></a>Zbieranie dzienników dla opakowanych aplikacji z urządzenia
+Wykonaj następujące kroki, aby podczas rozwiązywania problemów pobrać dzienniki opakowanych aplikacji.
 
-Przetwarzanie aplikacji za pomocą narzędzia opakowującego aplikacje wiąże się z generowaniem dzienników zapisywanych w konsoli urządzenia klienta systemu iOS. Informacje te są przydatne w przypadku wystąpienia problemów z aplikacją, gdy konieczne jest ustalenie, czy problem jest związany z narzędziem opakowującym aplikacje. Aby uzyskać dostęp do tych informacji, wykonaj następujące czynności:
+1. Przejdź do aplikacji Ustawienia systemu iOS na urządzeniu i wybierz aplikację LOB.
+2. Przełącz opcję **Diagnostics Console** (Konsola diagnostyczna) na ustawienie **On** (Włączona).
+3. Uruchom aplikację LOB.
+4. Kliknij link „Wprowadzenie”.
+5. Możesz teraz udostępniać dzienniki za pośrednictwem poczty e-mail lub przez ich skopiowanie do lokalizacji usługi OneDrive.
+
+> [!NOTE]
+> Funkcja rejestrowania jest włączona dla aplikacji, które zostały opakowane za pomocą dostępnego w usłudze Intune narzędzia opakowującego aplikacje w wersji 7.1.13 lub nowszej.
+
+### <a name="collecting-crash-logs-from-the-system"></a>Zbieranie dzienników awarii z systemu
+
+Aplikacja może rejestrować przydatne informacje w konsoli urządzenia klienta systemu iOS. Informacje te są przydatne w przypadku wystąpienia problemów z aplikacją, gdy konieczne jest ustalenie, czy problem jest związany z narzędziem opakowującym aplikacje. Aby uzyskać dostęp do tych informacji, wykonaj następujące czynności:
 
 1. Uruchom aplikację, aby problem wystąpił ponownie.
 
 2. Zbierz dane wyjściowe z konsoli zgodnie z instrukcjami [debugowania wdrożonych aplikacji dla systemu iOS](https://developer.apple.com/library/ios/qa/qa1747/_index.html)firmy Apple.
 
-3. Przefiltruj zapisane dzienniki, aby uzyskać wyniki związane z ograniczeniami aplikacji, wprowadzając w konsoli następujący skrypt:
-
-    ```bash
-    grep “IntuneAppRestrictions” <text file containing console output> > <required filtered log file name>
-    ```
-
-    Przefiltrowane dzienniki można przesłać do firmy Microsoft.
-
-    > [!NOTE]
-    > W pliku dziennika pozycja „build version” („wersja kompilacji”) oznacza wersję kompilacji narzędzia Xcode.
-
-    Przetworzone aplikacje oferują również użytkownikom możliwość przesyłania dzienników pocztą e-mail bezpośrednio z urządzenia po awarii aplikacji. Dzienniki otrzymane od użytkowników możesz zbadać i w razie potrzeby przesłać do firmy Microsoft.
+Przetworzone aplikacje oferują również użytkownikom możliwość przesyłania dzienników pocztą e-mail bezpośrednio z urządzenia po awarii aplikacji. Dzienniki otrzymane od użytkowników możesz zbadać i w razie potrzeby przesłać do firmy Microsoft.
 
 ### <a name="certificate-provisioning-profile-and-authentication-requirements"></a>Wymagania dotyczące certyfikatu, profilu inicjowania obsługi administracyjnej i uwierzytelniania
 
@@ -442,19 +443,6 @@ Wystarczy uruchomić ogólne polecenie opakowujące aplikację z dołączoną fl
 ```bash
 ./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i ~/Desktop/MyApp.ipa -o ~/Desktop/MyApp_Wrapped.ipa -p ~/Desktop/My_Provisioning_Profile_.mobileprovision -c 12A3BC45D67EF8901A2B3CDEF4ABC5D6E7890FAB  -v true -citrix
 ```
-
-## <a name="getting-logs-for-your-wrapped-applications"></a>Pobieranie dzienników opakowanych aplikacji
-
-Wykonaj następujące kroki, aby podczas rozwiązywania problemów pobrać dzienniki opakowanych aplikacji.
-
-1. Przejdź do aplikacji Ustawienia systemu iOS na urządzeniu i wybierz aplikację LOB.
-2. Przełącz opcję **Diagnostics Console** (Konsola diagnostyczna) na ustawienie **On** (Włączona).
-3. Uruchom aplikację LOB.
-4. Kliknij link „Wprowadzenie”.
-5. Możesz teraz udostępniać dzienniki za pośrednictwem poczty e-mail lub przez ich skopiowanie do lokalizacji usługi OneDrive.
-
-> [!NOTE]
-> Funkcja rejestrowania jest włączona dla aplikacji, które zostały opakowane za pomocą dostępnego w usłudze Intune narzędzia opakowującego aplikacje w wersji 7.1.13 lub nowszej.
 
 ## <a name="see-also"></a>Zobacz także
 
