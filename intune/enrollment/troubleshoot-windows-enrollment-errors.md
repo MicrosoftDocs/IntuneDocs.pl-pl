@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5776ebf3241968cca6da537bb58b7ab2a06f00ba
-ms.sourcegitcommit: f12bd2ce10b6241715bae2d2857f33c474287166
+ms.openlocfilehash: 348768be4a42667f579df0ccb500434425258db0
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72892540"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73712863"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Rozwiązywanie problemów dotyczących rejestrowania urządzeń z systemem Windows w usłudze Microsoft Intune
 
@@ -60,7 +60,7 @@ Błąd 80180003: „Wystąpił problem. Ten użytkownik nie ma autoryzacji do re
 Istnieje kilka możliwych rozwiązań tego problemu:
 
 ##### <a name="remove-devices-that-were-enrolled"></a>Usuń urządzenia, które zostały zarejestrowane
-1. Zaloguj się do [portalu Azure](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview).    
+1. Zaloguj się do [Centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).    
 2. Przejdź do pozycji **użytkownicy**  > **Wszyscy użytkownicy**.    
 3. Wybierz odpowiednie konto użytkownika, a następnie kliknij pozycję **urządzenia**.    
 4. Wybierz wszystkie nieużywane lub niechciane urządzenia, a następnie kliknij przycisk **Usuń**. 
@@ -70,12 +70,12 @@ Istnieje kilka możliwych rozwiązań tego problemu:
 > [!NOTE]
 > Ta metoda zwiększa limit rejestracji urządzeń dla wszystkich użytkowników, a nie tylko dla danego użytkownika.
 
-1. Zaloguj się do [portalu Azure](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview).
+1. Zaloguj się do [Centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Przejdź do pozycji **rejestracja urządzeń**  > **ograniczenia rejestracji**, a następnie wybierz pozycję **ograniczenia limitu urządzeń**.    
 3. Zwiększ wartość **limitu urządzeń**. 
 
 ##### <a name="check-device-type-restrictions"></a>Sprawdzanie ograniczeń typu urządzenia
-1. Zaloguj się do [portalu usługi Intune](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) przy użyciu konta administratora globalnego.
+1. Zaloguj się do [Centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) przy użyciu konta administratora globalnego.
 2. Przejdź do pozycji **rejestracja urządzeń**  > **ograniczenia rejestracji**, a następnie wybierz **domyślne** ograniczenie w obszarze **ograniczenia typu urządzenia**.    
 3. Wybierz pozycję **platformy**, a następnie wybierz pozycję **Zezwalaj** na **system Windows (MDM)** .
 
@@ -97,7 +97,7 @@ Błąd 0x801c0003: "nie można zarejestrować tego użytkownika. Możesz spróbo
 
 #### <a name="resolution"></a>Rozwiązanie
 1. Zaloguj się do [Azure Portal](https://portal.azure.com/) jako administrator.    
-2. Przejdź do **pozycji Azure Active Directory**  > **urządzenia** > **Ustawienia urządzenia**.    
+2. Przejdź do pozycji **Azure Active Directory** > **urządzenia** > **Ustawienia urządzenia**.    
 3. Ustaw pozycję **Użytkownicy mogą dołączać urządzenia do usługi Azure AD** na wartość **Wszystko**.    
 4. Ponownie zarejestruj urządzenie.   
 
