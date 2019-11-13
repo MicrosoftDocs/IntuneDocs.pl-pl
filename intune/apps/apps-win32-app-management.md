@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/04/2019
+ms.date: 10/28/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d6fb5a703aad09592bfac3b5a16390389059d33
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: cf860056c3918f7ae90e6b9b850a98a37dcfd56e
+ms.sourcegitcommit: c38a856725993a4473ada75e669a57f75ab376f8
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72498033"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73143212"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Autonomiczna usługa Intune — zarządzanie aplikacjami Win32
 
@@ -139,7 +139,7 @@ W poniższych krokach przedstawiono wskazówki ułatwiające dodanie aplikacji s
 
 ### <a name="step-4-configure-app-installation-details"></a>Krok 4. Konfigurowanie szczegółów instalacji aplikacji
 1. W okienku **Dodawanie aplikacji** wybierz pozycję **Program**, aby skonfigurować polecenia instalacji i usuwania aplikacji.
-2. Dodaj pełny wiersz polecenia instalacji, który umożliwia zainstalowanie aplikacji. 
+2. Aby skonfigurować **polecenie Instaluj**, dodaj pełny wiersz polecenia instalacji, który umożliwia zainstalowanie aplikacji. 
 
     Na przykład jeśli nazwa pliku aplikacji to **MyApp123**, dodaj następujące polecenie:<br>
     `msiexec /p “MyApp123.msp”`<p>
@@ -148,9 +148,11 @@ W poniższych krokach przedstawiono wskazówki ułatwiające dodanie aplikacji s
     W powyższym poleceniu pakiet `ApplicationName.exe` obsługuje argument polecenia `/quiet`.<p> 
     Aby uzyskać konkretne argumenty obsługiwane przez pakiet aplikacji, skontaktuj się z dostawcą aplikacji.
 
-3. Dodaj pełny wiersz polecenia dezinstalacji, który umożliwia odinstalowanie aplikacji na podstawie identyfikatora GUID aplikacji. 
+3. Aby skonfigurować **polecenie Odinstaluj**, dodaj pełny wiersz polecenia dezinstalacji, który umożliwia odinstalowanie aplikacji na podstawie identyfikatora GUID aplikacji. 
 
     Na przykład: `msiexec /x “{12345A67-89B0-1234-5678-000001000000}”`
+
+4. Dla opcji **Zachowanie podczas instalowania** ustaw wartość **System** lub **Użytkownik**.
 
     > [!NOTE]
     > Możesz skonfigurować aplikację Win32, aby została zainstalowana w kontekście **Użytkownik** lub **System**. Kontekst **Użytkownik** odwołuje się tylko do danego użytkownika. Kontekst **System** odwołuje się do wszystkich użytkowników urządzenia z systemem Windows 10.
@@ -159,7 +161,13 @@ W poniższych krokach przedstawiono wskazówki ułatwiające dodanie aplikacji s
     > 
     > Instalowanie i odinstalowywanie aplikacji Win32 będzie wykonywane w ramach uprawnień administratora (domyślnie), gdy aplikacja zostanie ustawiona na instalowanie w kontekście użytkownika, a użytkownik końcowy na urządzeniu ma uprawnienia administratora.
 
-4. Po zakończeniu wybierz przycisk **OK**.
+5. Aby skonfigurować ustawienie **Zachowanie ponownego uruchamiania urządzenia**, wybierz jedną z następujących opcji:
+    - **Określ zachowanie na podstawie kodów powrotnych**: Wybierz tę opcję, aby ponownie uruchamiać urządzenie na podstawie ustawień konfiguracji [kodów powrotnych](~/apps/apps-win32-app-management.md#step-7-configure-app-return-codes).
+    - **Brak określonej czynności**: Wybierz tę opcję, aby pominąć ponowne uruchamianie urządzenia podczas instalowania aplikacji opartych na instalatorze MSI.
+    - **Instalacja aplikacji może wymusić ponowne uruchomienie urządzenia**: Wybierz tę opcję, aby zezwolić na ukończenie instalacji aplikacji bez pomijania ponownych uruchomień.
+    - **Usługa Intune wymusi obowiązkowe ponowne uruchomienie urządzenia**: Wybierz tę opcję, aby zawsze ponownie uruchamiać urządzenie po pomyślnej instalacji aplikacji.
+
+6. Po zakończeniu wybierz przycisk **OK**.
 
 ### <a name="step-5-configure-app-requirements"></a>Krok 5. Konfigurowanie wymagań aplikacji
 
@@ -279,10 +287,11 @@ W poniższych krokach przedstawiono wskazówki ułatwiające dodanie aplikacji s
     - **Wymagane**: aplikacja jest instalowana na urządzeniach w wybranych grupach.
     - **Odinstalowywanie**: aplikacja jest odinstalowywana z urządzeń w wybranych grupach.
 4. Wybierz pozycję **Objęte grupy** i przypisz grupy, które będą używać aplikacji.
-5. W okienku **Przypisywanie** wybierz przycisk **OK**, aby ukończyć wybieranie uwzględnionych grup.
-6. Jeśli chcesz wykluczyć wszystkie grupy użytkowników z objęcia wpływem tego przypisania aplikacji, wybierz pozycję **Wykluczenie grup**.
-7. W okienku **Dodawanie grupy** wybierz przycisk **OK**.
-8. W okienku **Przypisania** aplikacji wybierz pozycję **Zapisz**.
+5. W okienku **Przypisz** wybierz opcję przypisywania na podstawie użytkowników lub urządzeń. Podczas wybierania przypisań możesz również wybrać **środowisko użytkownika końcowego**. Pozycja **Środowisko użytkownika końcowego** umożliwia ustawienie opcji **Powiadomienia użytkownika końcowego**, **Okres prolongaty ponownego uruchomienia**, **Dostępność** i **Ostateczny termin instalacji**. Aby uzyskać więcej informacji, zobacz **Ustawianie dostępności i powiadomień aplikacji Win32**.
+6. Wybierz przycisk **OK**, aby ukończyć wybieranie uwzględnionych grup.
+7. Jeśli chcesz wykluczyć wszystkie grupy użytkowników z objęcia wpływem tego przypisania aplikacji, wybierz pozycję **Wykluczenie grup**.
+8. W okienku **Dodawanie grupy** wybierz przycisk **OK**.
+9. W okienku **Przypisania** aplikacji wybierz pozycję **Zapisz**.
 
 W tym momencie wykonywanie kroków dodawania aplikacji Win32 do usługi Intune zostało zakończone. Aby uzyskać informacje dotyczące przypisywania i monitorowania aplikacji, zobacz [Przypisywanie aplikacji do grup w usłudze Microsoft Intune](apps-deploy.md) i [Monitorowanie informacji o aplikacji i przypisań z użyciem usługi Microsoft Intune](apps-monitor.md).
 
@@ -328,6 +337,36 @@ Użytkownik końcowy nie będzie widzieć wyskakujących powiadomień systemu Wi
 Poniższy obraz przedstawia powiadomienie użytkownika końcowego o wprowadzeniu zmian na urządzeniu.
 
 ![Zrzut ekranu powiadamiający użytkownika o tym, że są wprowadzane zmiany aplikacji](./media/apps-win32-app-management/apps-win32-app-09.png)    
+
+## <a name="set-win32-app-availability-and-notifications"></a>Ustawianie dostępności i powiadomień aplikacji Win32
+Dla aplikacji Win32 można skonfigurować czas rozpoczęcia i termin ostateczny. W czasie rozpoczęcia rozszerzenie do zarządzania usługi Intune rozpocznie pobieranie zawartości aplikacji i zapisze ją w pamięci podręcznej na potrzeby wymaganej intencji. Aplikacja zostanie zainstalowana w czasie określonym jako termin ostateczny. W przypadku dostępnych aplikacji czas rozpoczęcia będzie określać, kiedy aplikacja będzie widoczna w Portalu firmy, a zawartość zostanie pobrana, gdy użytkownik końcowy zażąda aplikacji z Portalu firmy. Dodatkowo można włączyć okres prolongaty ponownego uruchomienia. 
+
+Ustaw dostępność aplikacji na podstawie daty i godziny dla wymaganej aplikacji, wykonując następujące czynności:
+
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+2. W bloku **Intune** wybierz pozycję **Aplikacje klienckie** > **Aplikacje**.
+3. Wybierz istniejącą **aplikację systemu Windows (Win32)** z listy. 
+4. W bloku aplikacji wybierz pozycję **Przypisania** > **Dodaj grupę**. 
+5. Ustaw pozycję **Typ przypisania** na wartość **Wymagane**. Należy pamiętać, że dostępność aplikacji można ustawić na podstawie typu przypisania. Ustawienie **Typ przypisania** może mieć wartość **Wymagane**, **Dostępne dla zarejestrowanych urządzeń** lub **Odinstaluj**.
+6. Wybierz pozycję **Objęte grupy**, aby określić, do której grupy użytkowników zostanie przypisana aplikacja. Zostanie wyświetlony blok **Przypisz**.
+7. Dla opcji **Wymagaj tej aplikacji dla wszystkich użytkowników** ustaw wartość **Tak**.
+
+    > [!NOTE]
+    > Opcje ustawienia **Typ przypisania** są następujące:<br>
+    > - **Wymagane**: Możesz wybrać, aby **aplikacja była wymagana dla wszystkich użytkowników** i/lub **aplikacja była wymagana na wszystkich urządzeniach**.<br>
+    > - **Dostępne dla zarejestrowanych urządzeń**: Możesz wybrać, aby **aplikacja była dostępna dla wszystkich użytkowników z zarejestrowanymi urządzeniami**.<br>
+    > - **Odinstalowywanie**: Możesz wybrać opcję ***odinstalowania tej aplikacji dla wszystkich użytkowników** i/lub **odinstalowania tej aplikacji dla wszystkich urządzeń**.
+
+8. Aby edytować opcję **Środowisko użytkownika końcowego** wybierz pozycję **Edytuj**.
+9. W bloku **Edycja przypisania** dla ustawienia **Powiadomienia użytkownika końcowego** ustaw wartość **Pokaż wszystkie wyskakujące powiadomienia**. Zwróć uwagę, że dla opcji **Powiadomienia użytkownika końcowego** możesz ustawić wartość **Pokaż wszystkie wyskakujące powiadomienia**, **Pokaż wyskakujące powiadomienia dotyczące ponownego uruchomienia komputera** lub **Ukryj wszystkie wyskakujące powiadomienia**.
+10. Dla opcji **Dostępność aplikacji** ustaw wartość **Określona data i godzina**  i wybierz datę i godzinę. Ta data i godzina określają, kiedy aplikacja zostanie pobrana na urządzenie użytkownika końcowego. 
+11. Dla opcji **Ostateczny termin instalacji aplikacji** ustaw wartość **Określona data i godzina**  i wybierz datę i godzinę. Ta data i godzina określają, kiedy aplikacja zostanie zainstalowana na urządzeniu użytkownika końcowego. Jeśli dla tego samego użytkownika lub urządzenia zostanie zrobione więcej niż jedno przypisanie, jako ostateczny termin instalacji aplikacji zostanie wybrany najwcześniejszy możliwy czas.
+12. Kliknij pozycję **Włączone** obok opcji **Okres prolongaty ponownego uruchomienia**. Okres prolongaty ponownego uruchomienia rozpoczyna się zaraz po zakończeniu instalacji aplikacji na urządzeniu. Jeśli ta opcja jest wyłączona, urządzenie może zostać uruchomione ponownie bez ostrzeżenia. <br>Następujące opcje można dostosować:
+    - **Okres prolongaty ponownego uruchomienia urządzenia (minuty)** : Wartość domyślna to 1440 minut (24 godziny). Ta wartość może wynosić maksymalnie 2 tygodnie.
+    - **Wybierz, kiedy wyświetlić okno dialogowe odliczania do ponownego uruchomienia przed ponownym uruchomieniem (minuty)** : Wartość domyślna to 15 minut.
+    - **Zezwalaj użytkownikowi na odłożenie powiadomienia o ponownym uruchomieniu**: Możesz wybrać opcję **Tak** lub **Nie**.
+        - **Wybierz czas trwania odłożenia (minuty)** : Wartość domyślna to 240 minut (4 godziny). Wartość odłożenia nie może być większa niż okres prolongaty ponownego uruchomienia.
+13. Kliknij pozycję **OK** > **OK** > **OK** > **Zapisz**, aby dodać przypisanie.
 
 ## <a name="toast-notifications-for-win32-apps"></a>Wyskakujące powiadomienia dla aplikacji Win32 
 W razie potrzeby można pominąć wyświetlanie wyskakujących powiadomień dla użytkownika końcowego podczas przypisywania aplikacji. W usłudze Intune wybierz kolejno pozycje **Aplikacje klienckie** > **Aplikacje** > wybierz aplikację > **Przypisania** > **Uwzględnij grupy**. 

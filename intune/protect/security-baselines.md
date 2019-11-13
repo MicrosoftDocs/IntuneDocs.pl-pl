@@ -16,12 +16,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d447f2bf45d1bf3e6355a9d5dcc42b4bc2f3a9f3
-ms.sourcegitcommit: 4bf23327af734a9811d555fbd566c31239e2acd6
+ms.openlocfilehash: 53014376a7e220e975878031ffd759da40db7f6b
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "72999758"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73413837"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Konfigurowanie urządzeń z systemem Windows 10 w usłudze Intune przy użyciu punktów odniesienia zabezpieczeń
 
@@ -80,6 +80,9 @@ Poniższe wystąpienia punktów odniesienia zabezpieczeń są dostępne do użyc
 
   > [!NOTE]
   > Punkt odniesienia zabezpieczeń usługi Microsoft Defender ATP został zoptymalizowany pod kątem urządzeń fizycznych i nie jest obecnie zalecany do użycia na maszynach wirtualnych ani punktach końcowych infrastruktury VDI. Niektóre ustawienia punktu odniesienia mogą mieć wpływ na zdalne sesje interaktywne w zwirtualizowanych środowiskach.  Aby uzyskać więcej informacji, zobacz [Increase compliance to the Microsoft Defender ATP security baseline (Zwiększanie zgodności z punktem odniesienia zabezpieczeń usługi Microsoft Defender ATP)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) w dokumentacji systemu Windows.
+
+- **Punkt odniesienia programu Microsoft Edge** 
+  - [Wersja zapoznawcza: Punkt odniesienia programu Microsoft Edge](security-baseline-settings-edge.md)
 
 Nadal możesz używać i edytować profile, które zostały utworzone wcześniej na podstawie szablonu wersji zapoznawczej, nawet jeśli ten szablon wersji zapoznawczej nie jest już dostępny do tworzenia nowych profilów.
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43c88366ea64182ccf8d45bc3e890a2579df20f1
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: 460cabead711e6fa4559bcec39e556448cdf2237
+ms.sourcegitcommit: 2c8a41ee95a3fde150667a377770e51b621ead65
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72585647"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73635365"
 ---
 # <a name="intune-guided-scenarios-overview"></a>Scenariusze z przewodnikiem dotyczące usługi Intune — omówienie 
 
@@ -46,7 +46,7 @@ Scenariusze z przewodnikiem oferują określone funkcje. Poniżej wyjaśniono sz
 
 ### <a name="launching"></a>Uruchamianie  
 
-Wszystkie scenariusze z przewodnikiem są dostępne w **[portalu zarządzania urządzeniami](https://devicemanagement.microsoft.com)**  > **Rozwiązywanie problemów + Pomoc** > **Scenariusze z przewodnikiem**. 
+Wszystkie scenariusze z przewodnikiem są dostępne w **[portalu Zarządzanie urządzeniami](https://devicemanagement.microsoft.com)**  > **Rozwiązywanie problemów + Pomoc** > **Scenariusze z przewodnikiem**. 
 
 Scenariusz z przewodnikiem rozpoczyna się od wprowadzenia, w którym wyjaśniany jest cel scenariusza i wszelkie wymagania wstępne, które należy spełnić, aby ukończyć konfigurację. W tym momencie sprawdzane są Twoje uprawnienia administratora, aby upewnić się, że masz wszystkie uprawnienia konieczne do ukończenia tego scenariusza.  
 

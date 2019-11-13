@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/24/2019
+ms.date: 10/31/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,19 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2bfc49f772331113314e45bc49360b8435b88037
-ms.sourcegitcommit: 0d6f323152ec62f7d383891cce12ea0a4289cd8f
+ms.openlocfilehash: 899d667ca271ae5c3edced18fab8da987c49b2ca
+ms.sourcegitcommit: 85c894cb4df34a5ff558e3b45e28a8b91054d9e6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72889575"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73432530"
 ---
 # <a name="use-device-firmware-configuration-interface-profiles-on-windows-devices-in-microsoft-intune-public-preview"></a>Używanie profilów interfejsu DFCI (Device Firmware Configuration Interface) na urządzeniach z systemem Windows w usłudze Microsoft Intune (publiczna wersja zapoznawcza)
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
-> [!Note]
-> Wprowadzenie każdej [comiesięcznej aktualizacji](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) może potrwać kilka dni. Niektóre funkcje mogą być wprowadzane przez kilka tygodni i nie być od razu dostępne dla wszystkich klientów.
 
 W przypadku korzystania z usługi Intune do zarządzania zarejestrowanymi urządzeniami rozwiązania Autopilot można zarządzać ustawieniami interfejsu UEFI (BIOS) przy użyciu interfejsu DFCI (Device Firmware Configuration Interface). Aby zapoznać się z korzyściami, scenariuszami i wymaganiami wstępnymi, zobacz [Overview of DFCI (Przegląd interfejsu DFCI)](https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Dfci_Feature/).
 
@@ -45,7 +42,7 @@ Ta funkcja ma zastosowanie do:
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
-- Producent urządzenia musi dodać interfejs DFCI do swojego oprogramowania układowego interfejsu UEFI w ramach procesu produkcji lub jako aktualizację oprogramowania układowego instalowaną przez użytkownika. Skontaktuj się z dostawcami urządzeń, aby określić producentów, którzy obsługują interfejs DFCI, lub wersję oprogramowania układowego wymaganą do korzystania z interfejsu DFCI.
+- Producent urządzenia musi dodać interfejs DFCI do swojego oprogramowania układowego interfejsu UEFI w ramach procesu produkcji lub jako aktualizację oprogramowania układowego instalowaną przez użytkownika. Skontaktuj się z dostawcami urządzeń, aby określić [producentów, którzy obsługują interfejs DFCI](https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Scenarios/DfciScenarios/#oems-that-support-dfci), lub wersję oprogramowania układowego wymaganą do korzystania z interfejsu DFCI.
 
 - Urządzenie musi być zarejestrowane w rozwiązaniu Windows Autopilot przez [partnera programu Microsoft Cloud Solution Provider](https://partner.microsoft.com/cloud-solution-provider) lub bezpośrednio przez producenta OEM. 
 

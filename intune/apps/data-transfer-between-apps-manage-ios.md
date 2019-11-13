@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db583b1fc89edf72f329a605cc86363593eaaa9d
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: cdc849405b7404203faa6e86d3fed1ea8e35ec43
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72497919"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73414641"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Jak zarządzać przesyłaniem danych między aplikacjami systemu iOS w usłudze Microsoft Intune
 
@@ -81,7 +81,7 @@ Skonfigurowanie ustawienia nazwy UPN użytkownika jest **wymagane** w przypadku 
    |ManageEngine Mobile Device Manager | IntuneMAMUPN | String | %upn% |
 
 > [!NOTE]  
-> Dla aplikacji Outlook w systemie iOS w przypadku wdrożenia zasad konfiguracji aplikacji przy użyciu opcji „Korzystanie z projektanta konfiguracji” klucz konfiguracji IntuneMAMUPN dla zasad jest konfigurowany automatycznie w tle. Więcej szczegółów na ten temat zawiera sekcja często zadawanych pytań w artykule [New Outlook for iOS and Android App Configuration Policy Experience – General App Configuration](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Outlook-for-iOS-and-Android-App-Configuration-Policy/ba-p/370481) (Nowe środowisko zasad konfiguracji aplikacji programu Outlook dla systemów iOS i Android — ogólna konfiguracja aplikacji). 
+> Dla aplikacji Outlook dla systemu iOS w przypadku wdrożenia zasad konfiguracji aplikacji urządzeń zarządzanych przy użyciu opcji „Korzystanie z projektanta konfiguracji” i włączeniu opcji **Zezwalaj tylko na konta służbowe** klucz konfiguracji IntuneMAMUPN dla zasad jest konfigurowany automatycznie w tle. Więcej szczegółów zawiera sekcja często zadawanych pytań w artykule [Nowe środowisko zasad konfiguracji aplikacji programu Outlook dla systemów iOS i Android — ogólna konfiguracja aplikacji](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Outlook-for-iOS-and-Android-App-Configuration-Policy/ba-p/370481). 
 
 
 ### <a name="example-2-end-user-experience"></a>Przykład 2: Środowisko użytkownika końcowego

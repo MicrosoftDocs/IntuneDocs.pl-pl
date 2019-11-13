@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/09/2019
+ms.date: 11/07/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7517a2b60c4b5a893b90b09be72ddb363f23552a
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: d75e75dbce2563aaf31edede8eeab7249aad8e19
+ms.sourcegitcommit: b5e719fb507b1bc4774674e76c856c435e69f68c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509983"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73801774"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizacje interfejsu użytkownika dla aplikacji użytkownika końcowego usługi Intune
 
@@ -36,6 +36,23 @@ Jeśli jesteś pracownikiem lub uczniem, sprawdź zrzuty ekranu i linki do dokum
 
 <!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/whats-new-app-ui/account-move-rom-iwp-user-1712.png)--->
 
+
+## <a name="week-of-october-28-2019"></a>Tydzień 28 października 2019 r.  
+
+### <a name="improved-checklist-design-in-company-portal-app-for-android----5550857---"></a>Ulepszony projekt listy kontrolnej w aplikacji Portal firmy dla systemu Android <!-- 5550857 -->  
+Lista kontrolna konfiguracji w aplikacji Portal firmy dla systemu Android została zaktualizowana za pomocą przystępnego projektu i nowych ikon. Zmiany te idą w parze z najnowszymi aktualizacjami wprowadzonymi w aplikacji Portal firmy dla systemu iOS. Aby zapoznać się ze zaktualizowanymi krokami rejestracji, zobacz [Rejestracja przy użyciu profilu służbowego systemu Android](/intune-user-help/enroll-device-android-work-profile) i [Rejestracja urządzeń z systemem Android](/intune-user-help/enroll-device-android-company-portal).  
+
+Na następujących ekranach przedstawiono zaktualizowaną listę kontrolną dla rejestracji profilu służbowego systemu Android:
+
+|Zaktualizowana|Wstecz|  
+|---|---|  
+|![Przykładowy obraz konfiguracji profilu służbowego w aplikacji Portal firmy, pokazujący uproszczoną listę kontrolną oraz nowe ikony.](./media/whats-new-app-ui/work-profile-checklist-1911.png)|![Przykładowy obraz poprzedniej konfiguracji profilu służbowego w aplikacji Portal firmy, pokazujący bardziej złożoną listę kontrolną.](./media/whats-new-app-ui/work-profile-checklist-1904.png)|   
+
+Na następujących ekranach przedstawiono zaktualizowaną listę kontrolną dla rejestracji administratora urządzenia z systemem Android:  
+
+|Zaktualizowana|Wstecz|  
+|---|---|  
+|![Przykładowy obraz konfiguracji administratora urządzenia z systemem Android w aplikacji Portal firmy, pokazujący uproszczoną listę kontrolną oraz nowe ikony.](./media/whats-new-app-ui/android-checklist-1911.png)|![Przykładowy obraz poprzedniej konfiguracji administratora urządzenia z systemem Android w aplikacji Portal firmy, pokazujący bardziej złożoną listę kontrolną.](./media/whats-new-app-ui/android-checklist-1904.png)|  
 
 ## <a name="week-of-september-9-2019"></a>Tydzień od 9 września 2019 r.
 
@@ -572,6 +589,6 @@ Są to plany dotyczące metod ulepszania środowiska użytkownika przez aktualiz
 
 
 ## <a name="see-also"></a>Zobacz także
-* [Blog usługi Microsoft Intune](http://go.microsoft.com/fwlink/?LinkID=273882)
+* [Blog usługi Microsoft Intune](https://go.microsoft.com/fwlink/?LinkID=273882)
 * [Plan platformy w chmurze](https://www.microsoft.com/cloud-platform/roadmap)
-* [Co nowego w usłudze Intune](../whats-new.md)
+* [Co nowego w usłudze Intune](whats-new.md)

@@ -18,16 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96c802e76aab673aa6a9108dc0a14f553c26b96b
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: fcc5dea1a3f9e6a1f2bec877688962d7be70cc7c
+ms.sourcegitcommit: d2d18eef64bcf16eec1a48fcb67f1362537c0245
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72505404"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73445312"
 ---
 # <a name="intune-actions-and-options-supported-with-apple-user-enrollment"></a>Akcje i opcje usługi Intune obsługiwane przez rejestrację użytkowników firmy Apple
 
 Rejestracja użytkownika obsługuje podzestaw opcji zarządzania urządzeniami. Jeśli wstępnie istniejący profil konfiguracji zostanie zastosowany do urządzenia z rejestracją użytkowników, na tym urządzeniu będą stosowane tylko ustawienia obsługiwane przez rejestrację użytkowników.
+
+> [!NOTE]
+> Obsługa rejestracji użytkownika firmy Apple w usłudze Intune jest obecnie dostępna w wersji zapoznawczej.
 
 ## <a name="password-settings"></a>Ustawienia hasła
 
@@ -97,6 +100,19 @@ Następujące opcje nie są obsługiwane na urządzeniach zarejestrowanych przy 
 - Kontrola MDM aplikacji poza zarządzanym woluminem APFS.
 - Zasady ochrony aplikacji nadal będą stosowane do tych aplikacji. Nie będzie można jednak przejąć zarządzania ani wdrożyć zarządzanej wersji tych aplikacji, chyba że użytkownik usunie je z urządzenia.
 - Akcje, konfiguracje, ustawienia i polecenia wymagające nadzoru. 
+
+## <a name="options-not-supported-in-preview"></a>Opcje nieobsługiwane w wersji zapoznawczej
+- Ograniczenia rejestracji dotyczące typów urządzeń w celu zezwolenia na urządzenia osobiste lub ich blokowania 
+
+## <a name="known-issues-in-preview"></a>Znane problemy w wersji zapoznawczej
+- Odwołanie licencji programu VPP: Powiadomienie o odwołaniu licencji nie jest wyświetlane. Bieżące zachowanie polega na tym, że odwołanie jest pomyślne, ale użytkownik końcowy nie jest powiadamiany. 
+- Raportowanie aplikacji programu VPP: W raporcie znajdującym się w lokalizacji Aplikacje klienckie > Aplikacje > [Nazwa aplikacji] > Stan instalacji urządzenia aplikacje programu VPP wdrożone na urządzeniach zarejestrowanych przez użytkownika są zgłaszane ze stanem „niepowodzenie”, nawet jeśli aplikacja została pomyślnie wdrożona na urządzeniu. 
+- Raportowanie aplikacji: W przypadku typów aplikacji nieobsługiwanych przez funkcję rejestracji przez użytkownika raporty mogą generować nieodpowiednie komunikaty o błędach. 
+- Środowisko obsługi aplikacji Portal firmy: Użytkownicy widzą, że wszystkie aplikacje są przeznaczone dla nich, niezależnie od tego, czy te typy aplikacji są obsługiwane przez funkcję urządzeń zarejestrowanych przez użytkownika. 
+- Środowisko obsługi aplikacji Portal firmy: Użytkownicy widzą ten sam tekst wskazujący, co organizacje mogą i czego nie mogą zobaczyć w przypadku rejestracji użytkowników i urządzeń.
+- Jeśli użytkownik wybierze opcję „Moja organizacja jest właścicielem tego urządzenia” podczas rejestracji, urządzenie jest nadal identyfikowane jako osobiste w usłudze Intune, chyba że zostanie to zmodyfikowane w konsoli administracyjnej lub za pośrednictwem grafu. 
+- Kierowanie rejestracji: system iPadOS nie znajduje się na liście w selektorze platformy. System iPadOS jest obsługiwany w wersji zapoznawczej, ale nie jest jawnie określony w konsoli administracyjnej. 
+
 
 ## <a name="next-steps"></a>Następne kroki
 

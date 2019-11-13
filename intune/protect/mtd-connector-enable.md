@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f917167baecc643e045610e86e582957e535978
-ms.sourcegitcommit: 3ace4cba6e2f6fefa9120be3807387a49b200c9b
+ms.openlocfilehash: fae163cbcd97feb4f333d8ddfd44f2202dd343d6
+ms.sourcegitcommit: a4c7339ec9ff5b1b846cb3cca887cf91b5cd4baa
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72810289"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627682"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune"></a>Włączanie łącznika Mobile Threat Defense w usłudze Intune
 
@@ -63,8 +63,8 @@ Aby wyświetlić klasyczne zasady dostępu warunkowego, w witrynie [Azure Portal
 Zgodnie z wymaganiami danej organizacji można określić, które opcje przełączania usługi Mobile Threat Defense należy włączyć. Poniżej przedstawiono więcej informacji:
 
 **Ustawienia zasad zgodności rozwiązania MDM**
-- **Podłącz urządzenia z systemem Android 4.1 lub nowszym do łącznika *\<nazwa partnera usługi MTD>***: po włączeniu tej opcji urządzenia z systemem Android 4.1 lub nowszym mogą zgłaszać zagrożenie bezpieczeństwa do usługi Intune.
-- **Podłącz urządzenia z systemem iOS 8.0 lub nowszym do łącznika *\<nazwa partnera usługi MTD>***: po włączeniu tej opcji urządzenia z systemem iOS 8.0 lub nowszym mogą zgłaszać zagrożenie bezpieczeństwa do usługi Intune.
+- **Podłącz urządzenia z systemem Android 4.1 lub nowszym do łącznika _\<nazwa partnera usługi MTD>_** : po włączeniu tej opcji urządzenia z systemem Android 4.1 lub nowszym mogą zgłaszać zagrożenie bezpieczeństwa do usługi Intune.
+- **Podłącz urządzenia z systemem iOS 8.0 lub nowszym do łącznika _\<nazwa partnera usługi MTD>_** : po włączeniu tej opcji urządzenia z systemem iOS 8.0 lub nowszym mogą zgłaszać zagrożenie bezpieczeństwa do usługi Intune.
 - **Włącz synchronizację aplikacji dla urządzeń z systemem iOS**: zezwala temu partnerowi usługi Mobile Threat Defense na żądanie metadanych aplikacji systemu iOS kierowane do usługi Intune w celu użycia ich dla celów analizy zagrożeń.
 - **Blokuj nieobsługiwane wersje systemu operacyjnego**: blokowanie, gdy na urządzeniu jest zainstalowany system operacyjny o niższym numerze wersji niż minimalna obsługiwana wersja.
 

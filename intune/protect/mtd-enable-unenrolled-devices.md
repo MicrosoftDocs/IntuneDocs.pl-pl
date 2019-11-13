@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 63079757ee3610d825601921da1d33aa94f851b6
-ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
+ms.openlocfilehash: b2744a27a733824bab9d920f4de0b49e951c1c34
+ms.sourcegitcommit: a4c7339ec9ff5b1b846cb3cca887cf91b5cd4baa
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72794410"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627638"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune-for-unenrolled-devices"></a>Włączanie łącznika usługi Mobile Threat Defense dla niezarejestrowanych urządzeń w usłudze Intune
 
@@ -51,8 +51,8 @@ Podczas konfigurowania usługi Mobile Threat Defense (MTD) skonfigurowano zasady
 Zgodnie z wymaganiami danej organizacji można określić, które opcje przełącznika usługi MTD należy włączyć. Poniżej przedstawiono więcej informacji:
 
 **Ustawienia zasad ochrony aplikacji**
-- **Połącz urządzenia z systemem Android w wersji 4.1 lub nowszej z usługą *\<<nazwa partnera usługi MTD>* w celu przeprowadzenia oceny zasad ochrony aplikacji**: Po włączeniu tej opcji zasady ochrony aplikacji korzystające z reguły poziomu zagrożenia urządzenia będą oceniać urządzenia zawierające dane z tego łącznika.
-- **Połącz urządzenia z systemem iOS w wersji 8.0 lub nowszej z usługą *\<<nazwa partnera usługi MTD>* w celu przeprowadzenia oceny zasad ochrony aplikacji**: Po włączeniu tej opcji zasady ochrony aplikacji korzystające z reguły poziomu zagrożenia urządzenia będą oceniać urządzenia zawierające dane z tego łącznika.
+- **Połącz urządzenia z systemem Android w wersji 4.4 lub nowszej z łącznikiem *\<nazwa partnera usługi MTD>* na potrzeby oceny zasad ochrony aplikacji**: Po włączeniu tej opcji zasady ochrony aplikacji korzystające z reguły poziomu zagrożenia urządzenia będą oceniać urządzenia z uwzględnieniem danych z tego łącznika.
+- **Połącz urządzenia z systemem iOS w wersji 11 lub nowszej z łącznikiem *\<nazwa partnera usługi MTD>* na potrzeby oceny zasad ochrony aplikacji**: Po włączeniu tej opcji zasady ochrony aplikacji korzystające z reguły poziomu zagrożenia urządzenia będą oceniać urządzenia z uwzględnieniem danych z tego łącznika.
 
 **Wspólne ustawienia współużytkowane**
 - **Liczba dni, po których partner otrzyma stan „brak odpowiedzi”** : liczba dni braku aktywności, zanim usługa Intune uzna partnera za nieodpowiadającego z powodu utraty połączenia. Usługa Intune ignoruje stan zgodności dla partnerów MTD w stanie „brak odpowiedzi”.

@@ -1,24 +1,20 @@
 ---
-ms.openlocfilehash: 797d1c66c50bed91f58eab535696b34001fcb28d
-ms.sourcegitcommit: db68056e2db17dfdeaa216c684302567742e6416
+ms.openlocfilehash: a20d1df2bf1e5052bcb2d3d83e919e190f8d9175
+ms.sourcegitcommit: d2d18eef64bcf16eec1a48fcb67f1362537c0245
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "71239571"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73445877"
 ---
 
 
 ### <a name="apple"></a>Apple
-- System Apple iOS 10.0 lub nowszy
+- System Apple iOS i iPadOS 11.0 lub nowszy
 - System Mac OS X 10.12 lub nowszy
 
 ### <a name="google"></a>Google
-- System Android 4.4 lub nowszy (w tym system Samsung Knox Standard w wersji 4.4 lub nowszej)
-
-  Pełna lista zweryfikowanych urządzeń z systemem Samsung Knox Standard jest dostępna w [ustawieniach zasad systemów Android i Samsung Knox Standard](/intune/supported-devices-browsers#supported-samsung-knox-standard-devices).
-
-
-- [Wymagania](https://support.google.com/work/android/answer/6174145?hl=en) dotyczące rozwiązania Android enterprise.
+- System Android 5.0 lub nowszy (w tym system Samsung KNOX Standard w wersji 2.4 lub nowszej: [wymagania](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+))
+- Android Enterprise: [wymagania](https://support.google.com/work/android/topic/9428066)
 
 ### <a name="microsoft"></a>Microsoft
 
@@ -26,18 +22,18 @@ ms.locfileid: "71239571"
 - Windows 10 (wersje Home, S, Pro, Education i Enterprise)
 - Windows 10 Enterprise 2019 LTSC
 
-  Aby uzyskać więcej informacji na temat zarządzania urządzeniami z systemem Windows 10 2019 LTSC, zobacz temat [What's new in Windows 10 Enterprise 2019 LTSC](https://docs.microsoft.com/en-us/windows/whats-new/ltsc/whats-new-windows-10-2019) (Co nowego w systemie Windows 10 Enterprise 2019 LTSC)
+  Aby uzyskać więcej informacji na temat zarządzania urządzeniami z systemem Windows 10 2019 LTSC, zobacz temat [What's new in Windows 10 Enterprise 2019 LTSC](https://docs.microsoft.com/windows/whats-new/ltsc/whats-new-windows-10-2019) (Co nowego w systemie Windows 10 Enterprise 2019 LTSC)
   
 - Windows 10 Mobile
 - Windows 10 IoT Enterprise (x86, x64)
 - Windows 10 IoT Mobile Enterprise
 - Windows Holographic for Business
 
-  Aby uzyskać więcej informacji na temat zarządzania urządzeniami z systemem Windows Holographic for Business, zobacz [Window Holographic for Business support](../windows-holographic-for-business.md) (Obsługa systemu Window Holographic for Business).
+  Aby uzyskać więcej informacji na temat zarządzania urządzeniami z systemem Windows Holographic for Business, zobacz [Window Holographic for Business support](../fundamentals/windows-holographic-for-business.md) (Obsługa systemu Window Holographic for Business).
 
 - Windows 10 Teams (Surface Hub)
 
-   Aby uzyskać więcej informacji na temat zarządzania urządzeniami z systemem Windows 10 Teams, zobacz temat [Manage Surface Hub with MDM](https://docs.microsoft.com/en-us/surface-hub/manage-settings-with-mdm-for-surface-hub) (Zarządzanie rozwiązaniem Surface Hub za pomocą zarządzania urządzeniami mobilnymi)
+   Aby uzyskać więcej informacji na temat zarządzania urządzeniami z systemem Windows 10 Teams, zobacz temat [Manage Surface Hub with MDM](https://docs.microsoft.com/surface-hub/manage-settings-with-mdm-for-surface-hub) (Zarządzanie rozwiązaniem Surface Hub za pomocą zarządzania urządzeniami mobilnymi)
 - Systemy Windows Phone 8.1, Windows 8.1 RT, komputery z systemem Windows 8.1 (tryb utrzymania)
 
 > [!NOTE]

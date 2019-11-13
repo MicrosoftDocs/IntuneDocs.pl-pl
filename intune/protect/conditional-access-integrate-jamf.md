@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a75b1403e351981d1f6ab827d4c10648430b21fb
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 39d687c8c9b75182ba0e7d4020c6b840c753a231
+ms.sourcegitcommit: a4c7339ec9ff5b1b846cb3cca887cf91b5cd4baa
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72504617"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627660"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Integrowanie narzędzia Jamf Pro z usługą Intune w celu zachowania zgodności
 
@@ -94,7 +94,7 @@ Aby połączyć usługę Intune z narzędziem Jamf Pro:
 
    Wybierz opcję **Dodaj uprawnienie**, aby zapisać tę konfigurację.  
 
-8. Na stronie **Uprawnienia interfejsu API** wybierz pozycję **Wyraź zgodę administratora dla *\<Twój dzierżawca>*** i wybierz **Tak**.  Po pomyślnym zarejestrowaniu aplikacji uprawnienia interfejsu API powinny wyglądać następująco: ![Uprawnienia po pomyślnej rejestracji](./media/conditional-access-integrate-jamf/sucessfull-app-registration.png)
+8. Na stronie **Uprawnienia interfejsu API** wybierz pozycję **Wyraź zgodę administratora dla _\<Twój dzierżawca>_** i wybierz pozycję **Tak**.  Po pomyślnym zarejestrowaniu aplikacji uprawnienia interfejsu API powinny wyglądać następująco: ![Uprawnienia po pomyślnej rejestracji](./media/conditional-access-integrate-jamf/sucessfull-app-registration.png)
 
    Proces rejestracji aplikacji w usłudze Azure AD został ukończony.
 
