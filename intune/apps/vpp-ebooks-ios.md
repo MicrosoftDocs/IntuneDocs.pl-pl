@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 022df428658a3c8791a07cbd797145bfe9a392bb
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: ae29d2ee5add475db89f6895b22299793a94ac36
+ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72496468"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73984094"
 ---
 # <a name="how-to-manage-ios-ebooks-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Jak zarządzać w usłudze Microsoft Intune książkami elektronicznymi dla systemu iOS, które zostały zakupione w ramach programu zakupów zbiorczych
 
@@ -42,7 +42,6 @@ Wiele licencji dla książek z systemem iOS można zakupić za pośrednictwem pr
 ## <a name="before-you-start"></a>Przed rozpoczęciem
 Przed rozpoczęciem należy uzyskać token VPP od firmy Apple i przekazać go do konta usługi Intune. Dodatkowo:
 
-* Z Twoim kontem usługi Intune można skojarzyć maksymalnie 256 tokenów VPP.
 * Jeśli poprzednio korzystano z tokenu VPP w ramach innego produktu, należy wygenerować nowy, aby korzystać z usługi Intune.
 * Każdy token jest ważny przez jeden rok.
 * Domyślnie usługa Intune przeprowadza synchronizację z usługą Apple VPP dwa razy dziennie. W dowolnym momencie można uruchomić ręczną synchronizację.
@@ -77,7 +76,7 @@ Dane przechowywane przez firmę Apple można w dowolnym momencie zsynchronizowa�
 
 3. W okienku **Intune** wybierz pozycję **Książki elektroniczne**.
 1. W obciążeniu **Książki elektroniczne** wybierz opcję **Zarządzaj** > **Wszystkie książki elektroniczne**.
-2. W okienku z listą książek wybierz książkę, którą chcesz przypisać, a następnie wybierz kolejno opcje „ **...** ” > **Przypisz grupy**.
+2. W okienku z listą książek wybierz książkę, którą chcesz przypisać, a następnie wybierz kolejno opcje „**...**” > **Przypisz grupy**.
 3. W okienku <*nazwa książki*> — **Przypisane grupy** wybierz kolejno pozycje **Zarządzaj** > **Przypisane grupy**.
 4. Wybierz pozycję **Przypisz grupy**, a następnie w okienku **Wybierz grupy** wybierz grupy użytkowników usługi Azure AD, do których chcesz przypisać książkę. Grupy urządzeń nie są obecnie obsługiwane.
 Wybierz akcję przypisania **Dostępne** lub **Wymagane**. 
