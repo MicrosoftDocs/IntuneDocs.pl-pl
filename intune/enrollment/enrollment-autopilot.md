@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9e2f654d9e505afba00a1a9090febe4c06ca77ff
-ms.sourcegitcommit: d2d18eef64bcf16eec1a48fcb67f1362537c0245
+ms.openlocfilehash: 454d23038a593829ea8a14929dc435e9f9ddb457
+ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445345"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73709490"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Rejestrowanie urządzeń z systemem Windows w usłudze Intune za pomocą rozwiązania Windows Autopilot  
 Rozwiązanie Windows Autopilot upraszcza rejestrowanie urządzeń w usłudze Intune. Tworzenie i konserwacja niestandardowych obrazów systemów operacyjnych zajmuje dużo czasu. Trzeba również poświęcić czas na stosowanie tych niestandardowych obrazów systemów operacyjnych na nowych urządzeniach w celu przygotowania ich do użycia przed przekazaniem użytkownikom końcowym. Dzięki usłudze Microsoft Intune i rozwiązaniu Autopilot można przekazać nowe urządzenia użytkownikom końcowym bez konieczności tworzenia, konserwowania i stosowania niestandardowych obrazów systemów operacyjnych do urządzeń. Jeśli do zarządzania urządzeniami z rozwiązaniem Autopilot używasz usługi Intune, możesz zarządzać zasadami, profilami, aplikacjami i nie tylko po ich zarejestrowaniu. Aby zapoznać się z korzyściami, scenariuszami i wymaganiami wstępnymi, zobacz [Overview of Windows Autopilot (Przegląd rozwiązania Windows Autopilot)](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -49,7 +49,7 @@ Aby uzyskać więcej informacji, zobacz artykuł objaśniający polecenie cmdlet
 
 Urządzenia rozwiązania Autopilot z systemem Windows można dodawać przez zaimportowanie pliku CSV z odpowiednimi informacjami.
 
-1. W usłudze [Intune w witrynie Azure Portal](https://aka.ms/intuneportal) wybierz kolejno pozycje **Rejestrowanie urządzenia**  >  **Rejestracja w systemie Windows**  >  **Urządzenia**  >  **Import**.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz **Rejestrowanie urządzenia** > **Rejestracja w systemie Windows** > **Urządzenia** > **Importuj**.
 
     ![Zrzut ekranu przedstawiający urządzenia rozwiązania Autopilot z systemem Windows](./media/enrollment-autopilot/autopilot-import-device.png)
 
@@ -71,7 +71,7 @@ Urządzenia rozwiązania Autopilot z systemem Windows można dodawać przez zaim
 
 ## <a name="create-an-autopilot-device-group"></a>Tworzenie grupy urządzeń rozwiązania Autopilot
 
-1. W usłudze [Intune w witrynie Azure Portal](https://aka.ms/intuneportal) wybierz pozycje **Grupy** > **Nowa grupa**.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)wybierz **Grupy** > **Nowa grupa**.
 2. W bloku **Grupa**:
     1. Dla ustawienia **Typ grupy** wybierz pozycję **Zabezpieczenia**.
     2. Wpisz odpowiedni tekst w polach **Nazwa grupy** i **Opis grupy**.
@@ -88,7 +88,7 @@ Urządzenia rozwiązania Autopilot z systemem Windows można dodawać przez zaim
 
 ## <a name="create-an-autopilot-deployment-profile"></a>Tworzenie profilu wdrażania rozwiązania Autopilot
 Profile wdrażania rozwiązania Autopilot służą do konfigurowania urządzeń z rozwiązaniem Autopilot. Można utworzyć maksymalnie 350 profilów na dzierżawę.
-1. W usłudze [Intune w witrynie Azure Portal](https://aka.ms/intuneportal) wybierz kolejno pozycje **Rejestrowanie urządzenia**  >  **Rejestracja w systemie Windows**  >  **Profile wdrażania**  >  **Utwórz profil**.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz **Rejestrowanie urządzenia** > **Rejestracja w systemie Windows** > **Profile wdrażania** > **Utwórz profil**.
 2. Na stronie **Podstawowe** wypełnij pole **Nazwa** i opcjonalne pole **Opis**.
 
     ![Zrzut ekranu strony Podstawowe](./media/enrollment-autopilot/create-profile-basics.png)
@@ -134,7 +134,7 @@ Profile wdrażania rozwiązania Autopilot służą do konfigurowania urządzeń 
 ## <a name="edit-an-autopilot-deployment-profile"></a>Edytowanie profilu wdrażania rozwiązania Autopilot
 Po utworzeniu profilu wdrażania rozwiązania Autopilot możesz edytować niektóre jego części.   
 
-1. W usłudze [Intune w witrynie Azure Portal](https://aka.ms/intuneportal) wybierz pozycję **Rejestrowanie urządzenia**.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)wybierz **Rejestrowanie urządzenia**.
 2. W obszarze **Rejestracja w systemie Windows** w sekcji **Windows Autopilot** wybierz pozycję **Profile wdrażania**.
 3. Wybierz profil, który chcesz edytować.
 4. Kliknij pozycję **Właściwości** po lewej stronie, aby zmienić nazwę lub opis profilu wdrażania. Po wprowadzeniu zmian kliknij pozycję **Zapisz**.
@@ -155,7 +155,7 @@ Możesz przypisać użytkownika do określonego urządzenia rozwiązania Autopil
 
 Wymagania wstępne: Skonfigurowany Portal firmy usługi Azure Active Directory oraz system Windows 10 w wersji 1809 lub nowszej.
 
-1. W usłudze [Intune w witrynie Azure Portal](https://aka.ms/intuneportal) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja w systemie Windows** > **Urządzenia** > wybierz urządzenie > **Przypisz użytkownika**.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz **Rejestrowanie urządzenia** > **Rejestracja w systemie Windows** > **Urządzenia** > wybierz urządzenie > **Przypisz użytkownika**.
 
     ![Zrzut ekranu przypisywania użytkownika](./media/enrollment-autopilot/assign-user.png)
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 11/06/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 899d667ca271ae5c3edced18fab8da987c49b2ca
-ms.sourcegitcommit: 85c894cb4df34a5ff558e3b45e28a8b91054d9e6
+ms.openlocfilehash: e9fe2b2174252aa1081eb311d79b4b5ba37f96f2
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73432530"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755348"
 ---
 # <a name="use-device-firmware-configuration-interface-profiles-on-windows-devices-in-microsoft-intune-public-preview"></a>Używanie profilów interfejsu DFCI (Device Firmware Configuration Interface) na urządzeniach z systemem Windows w usłudze Microsoft Intune (publiczna wersja zapoznawcza)
 
@@ -77,8 +77,8 @@ Ten profil zapewnia, że urządzenia są weryfikowane i aktywowane pod kątem in
 
 Ten profil zawiera konfigurowane ustawienia interfejsu DFCI.
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Wybierz pozycję **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz **Urządzenia** > **Profile konfiguracji** > **Utwórz profil**.
 3. Wprowadź następujące właściwości:
 
     - **Nazwa**: Wprowadź opisową nazwę profilu. Nadaj nazwę zasadom, aby można było je później łatwo rozpoznać. Na przykład dobra nazwa profilu to **Windows: Konfigurowanie ustawień interfejsu DFCI na urządzeniach z systemem Windows**.
@@ -127,9 +127,11 @@ Ten profil zawiera konfigurowane ustawienia interfejsu DFCI.
 
 Po utworzeniu profilów są one [gotowe do przypisania](../configuration/device-profile-assign.md). Należy pamiętać o przypisaniu profilów do grup zabezpieczeń usługi Azure AD zawierających używane urządzenia interfejsu DFCI.
 
-Przy następnej synchronizacji lub ponownym uruchomieniu urządzenia ustawienia profilu interfejsu DFCI zostaną zastosowane. Po zastosowaniu zasad należy uruchomić ponownie urządzenie.
+Jeśli na urządzeniu jest uruchomione rozwiązanie Windows Autopilot, na stronie Stan rejestracji interfejs DFCI może wymusić ponowne uruchomienie systemu. Podczas tego pierwszego ponownego uruchomienia interfejs UEFI jest rejestrowany w usłudze Intune. 
 
-Gdy urządzenie uruchamia konfigurację urządzenia w systemie Windows, interfejs DFCI może wymusić ponowne uruchomienie na stronie stanu rejestracji. Po zakończeniu konfiguracji możesz potwierdzić, że ustawienia interfejsu DFCI są aktywne, przez ponowne uruchomienie urządzenia. Następnie użyj instrukcji dostarczonych przez producenta urządzenia, aby otworzyć menu interfejsu UEFI.
+Jeśli chcesz potwierdzić, że urządzenie jest zarejestrowane, możesz je ponownie uruchomić, ale nie jest to wymagane. Użyj instrukcji dostarczonych przez producenta urządzenia, aby otworzyć menu interfejsu UEFI i potwierdzić, że jest on zarządzany.
+
+Podczas następnego synchronizowania urządzenia z usługą Intune system Windows otrzyma ustawienia interfejsu DFCI. Uruchom ponownie urządzenie. Ten trzeci ponowny rozruch jest wymagany do odebrania ustawień interfejsu DFCI z systemu Windows.
 
 ## <a name="update-existing-dfci-settings"></a>Aktualizowanie istniejących ustawień interfejsu DFCI
 
@@ -156,7 +158,7 @@ Po wyczyszczeniu urządzenia przenieś je do grupy przypisanej do nowych profil�
 
 Gdy wszystko będzie gotowe do wycofania urządzenia i zwolnienia go z zarządzania, zaktualizuj profil interfejsu DFCI za pomocą ustawień interfejsu UEFI (BIOS), które mają być aktywne po zakończeniu procesu. Zwykle wszystkie ustawienia są włączone. Przykład:
 
-1. Otwórz profil interfejsu DFCI (**Konfiguracja urządzenia**  > **Profile**).
+1. Otwórz profil interfejsu DFCI (**Urządzenia** > **Profile konfiguracji**).
 2. Zmień ustawienie **Zezwalaj użytkownikom lokalnym na zmienianie ustawień interfejsu UEFI (BIOS)** na **Tylko nieskonfigurowane ustawienia**.
 3. Ustaw wszystkie inne ustawienia na wartość **Nie skonfigurowano**.
 4. Zapisz ustawienia.

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 11/08/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac6da1b15d482d20340163b0bb79e88d74e8e375
-ms.sourcegitcommit: 2c8a41ee95a3fde150667a377770e51b621ead65
+ms.openlocfilehash: 37ed7bfd204289c963b8134252d9d76f2379ecba
+ms.sourcegitcommit: 768d581cb8bcc5fdcb8ade95d402b11223ab226c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73635339"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882490"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co nowego w usłudze Microsoft Intune
 
@@ -53,12 +53,20 @@ Dowiedz się co tydzień, co nowego w usłudze Microsoft Intune. Możesz tu rów
 ### Role-based access control
 -->  
 
+## <a name="week-of-november-4-2019"></a>Tydzień 4 listopada 2019 r.
+
+### <a name="device-security"></a>Zabezpieczenia urządzeń
+
+#### <a name="security-baselines-are-supported-on-microsoft-azure-government---4062552---"></a>Punkty odniesienia zabezpieczeń są obsługiwane w usłudze Microsoft Azure Government<!-- 4062552 -->
+
+Wystąpienia usługi Intune hostowane w usłudze *Microsoft Azure Government* mogą teraz używać [punktów odniesienia zabezpieczeń](../protect/security-baselines.md), aby pomóc w zabezpieczeniu i ochronie użytkowników i urządzeń.
+
 ## <a name="week-of-october-28-2019"></a>Tydzień 28 października 2019 r.
 
 ### <a name="app-management"></a>Zarządzanie aplikacjami
 
 #### <a name="improved-checklist-design-in-company-portal-app-for-android---5550857---"></a>Ulepszony projekt listy kontrolnej w aplikacji Portal firmy dla systemu Android<!-- 5550857 -->  
-Lista kontrolna konfiguracji w aplikacji Portal firmy dla systemu Android została zaktualizowana za pomocą przystępnego projektu i nowych ikon. Zmiany te idą w parze z najnowszymi aktualizacjami wprowadzonymi w aplikacji Portal firmy dla systemu iOS. Wdrażamy te aktualizacje aplikacji dla wszystkich klientów. Przewidujemy, że proces ten zakończy się do końca przyszłego tygodnia. Aby zapoznać się z dokładnym porównaniem zmian, zobacz [Co nowego w interfejsie użytkownika aplikacji](whats-new-app-ui.md). Aby zapoznać się ze zaktualizowanymi krokami rejestracji, zobacz [Rejestracja przy użyciu profilu służbowego systemu Android](/intune-user-help/enroll-device-android-work-profile) i [Rejestracja urządzeń z systemem Android](/intune-user-help/enroll-device-android-company-portal).  
+Lista kontrolna konfiguracji w aplikacji Portal firmy dla systemu Android została zaktualizowana za pomocą przystępnego projektu i nowych ikon. Zmiany te idą w parze z najnowszymi aktualizacjami wprowadzonymi w aplikacji Portal firmy dla systemu iOS. Aby zapoznać się z dokładnym porównaniem zmian, zobacz [Co nowego w interfejsie użytkownika aplikacji](whats-new-app-ui.md). Aby zapoznać się ze zaktualizowanymi krokami rejestracji, zobacz [Rejestracja przy użyciu profilu służbowego systemu Android](/intune-user-help/enroll-device-android-work-profile) i [Rejestracja urządzeń z systemem Android](/intune-user-help/enroll-device-android-company-portal).  
 
 #### <a name="win32-apps-on-windows-10-s-mode-devices---3747604---"></a>Aplikacje Win32 na urządzeniach trybu S systemu Windows 10<!-- 3747604 --> 
 Aplikacje Win32 można instalować i uruchamiać na urządzeniach zarządzanych trybu S systemu Windows 10. W tym celu można utworzyć jedną lub kilka zasad uzupełniających dla trybu S przy użyciu narzędzi programu PowerShell dla Kontroli aplikacji usługi Windows Defender. Podpisz zasady uzupełniające za pomocą portalu Device Guard — podpisywanie, a następnie przekaż i rozpowszechnij zasady za pośrednictwem usługi Intune. W usłudze Intune tę funkcję można znaleźć, wybierając pozycję **Aplikacje klienckie** > **Zasady uzupełniające systemu Windows 10 S**. Aby uzyskać więcej informacji, zobacz [Włączanie obsługi aplikacji Win32 na urządzeniach trybu S](~/apps/apps-win32-s-mode.md).
@@ -441,7 +449,7 @@ Na urządzeniach z systemem Windows 10 można utworzyć zasadę zgodności, któ
 Aby uzyskać więcej informacji na temat ustawień zgodności systemu Windows 10, zobacz [Ustawienia systemu Windows 10 i nowszych umożliwiające oznaczenie urządzeń jako zgodnych lub niezgodnych](../protect/compliance-policy-create-windows.md). 
 
 Dotyczy:
-- System Windows 10 lub nowszy
+- Windows 10 lub nowszym
 
  #### <a name="updated-ui-for-configuring-microsoft-exchange-on-premises-access---4092920---"></a>Zaktualizowany interfejs użytkownika do konfigurowania dostępu do lokalnego programu Microsoft Exchange<!-- 4092920 -->  
 Zaktualizowaliśmy konsolę, w której następuje [konfiguracja dostępu do lokalnego programu Microsoft Exchange](../protect/conditional-access-exchange-create.md). Wszystkie konfiguracje dostępu do lokalnego programu Exchange są teraz dostępne w tym samym okienku konsoli, w którym można użyć opcji *Włącz kontrolę dostępu do lokalnego programu Exchange*.  
@@ -748,7 +756,7 @@ Obecnie możesz tworzyć profile konfiguracji urządzeń z systemem Windows 10 (
 
 Aby dodać regułę stosowania, zobacz [Reguły stosowania](../configuration/device-profile-create.md#applicability-rules).
 
-Dotyczy: System Windows 10 lub nowszy
+Dotyczy: Windows 10 lub nowszym
 
 #### <a name="use-tokens-to-add-device-specific-information-in-custom-profiles-for-ios-and-macos-devices---3330008----"></a>Używanie tokenów w celu dodawania informacji dotyczących konkretnych urządzeń w profilach niestandardowych dla urządzeń z systemami iOS i macOS<!-- 3330008  -->
 Przy użyciu profilów niestandardowych na urządzeniach z systemami iOS i macOS można skonfigurować ustawienia i funkcje, które nie są wbudowane w usłudze Intune (**Konfiguracja urządzeń** > **Profile** > **Utwórz profil** > **iOS** lub **macOS** jako platforma > **Niestandardowy** jako typ profilu). Dzięki tej aktualizacji możesz dodawać tokeny do plików `.mobileconfig`, aby dodać informacje dotyczące konkretnych urządzeń. Możesz na przykład dodać token `Serial Number: {{serialnumber}}` do pliku konfiguracji, aby pokazać numer seryjny urządzenia.
@@ -857,7 +865,7 @@ Ta aktualizacja zawiera więcej ustawień pakietu Office, systemu Windows i usł
 
 Aby dowiedzieć się więcej na temat tej funkcji, zobacz [Konfigurowania ustawień zasad grupy w usłudze Intune przy użyciu szablonów systemu Windows 10](../configuration/administrative-templates-windows.md).
 
-Dotyczy: System Windows 10 lub nowszy
+Dotyczy: Windows 10 lub nowszym
 
 ## <a name="week-of-july-1-2019"></a>Tydzień od 1 lipca 2019 r. 
 
@@ -901,7 +909,7 @@ Podczas tworzenia profilu ograniczeń urządzenia dla urządzeń z systemem Wind
 
 Aby zobaczyć nowe ustawienia, przejdź do tematu [Ustawienia urządzeń z systemem Windows 10 (i nowszym) umożliwiające działanie funkcji lub ich ograniczanie](../configuration/device-restrictions-windows-10.md#app-store).
 
-Dotyczy: System Windows 10 lub nowszy
+Dotyczy: Windows 10 lub nowszym
 
 #### <a name="deploy-multiple-zebra-mobility-extensions-device-profiles-to-a-device-same-user-group-or-same-devices-group---4089955---"></a>Wdrażanie wielu profilów urządzeń przy użyciu funkcji Zebra Mobility Extensions do urządzenia, tej samej grupy użytkowników lub tej samej grupy urządzeń<!-- 4089955 -->
 W usłudze Intune przy użyciu funkcji Zebra Mobility Extensions (MX) w profilu konfiguracji urządzenia można dostosować ustawienia dla urządzeń Zebra, które nie są wbudowane w usłudze Intune. Obecnie można wdrożyć jeden profil do jednego urządzenia. W tej aktualizacji można wdrożyć wiele profili dla:
@@ -1079,7 +1087,7 @@ Wiele urządzeń z systemem Windows 10 lub nowszym zawiera mikroukład modułu T
 
 To ustawienie jest opisane w artykule [Ustawienia zasad zgodności urządzeń z systemem Windows 10 lub nowszym](../protect/compliance-policy-create-windows.md#device-security).
 
-Dotyczy: System Windows 10 lub nowszy
+Dotyczy: Windows 10 lub nowszym
 
 #### <a name="prevent-end-users-from-modifying-their-personal-hotspot-and-disable-siri-server-logging-on-ios-devices---4097904-----"></a>Uniemożliwianie użytkownikom końcowym modyfikowania ich osobistego hotspotu i wyłączanie rejestrowania programu Siri na urządzeniach z systemem iOS<!-- 4097904   -->  
 Dla urządzenia z systemem iOS można utworzyć profil ograniczeń urządzenia (**Konfiguracja urządzeń** > **Profile** > **Utwórz profil** > **iOS** dla platformy > **Ograniczenia urządzenia** dla typu profilu). Ta aktualizacja obejmuje nowe ustawienia, które można skonfigurować:
