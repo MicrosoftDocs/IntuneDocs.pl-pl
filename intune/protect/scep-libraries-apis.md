@@ -3,8 +3,8 @@ title: Interfejsy API umożliwiające dodawanie urzędów certyfikacji innych fi
 titleSuffix: Microsoft Intune
 description: Możesz dodać lub zintegrować rozwiązanie SCEP usługi GitHub dla urzędów certyfikacji innych firm w celu wydawania certyfikatów SCEP dla urządzeń w usłudze Microsoft Intune. To rozwiązanie obejmuje interfejsy API w językach Java i C#, które przeprowadzają walidację, przesyłają powiadomienia o powodzeniu i niepowodzeniu do usługi Intune oraz korzystają z fabryki gniazd protokołu SSL podczas komunikowania się z usługą Intune. Zobacz również omówienie czynności, które należy wykonać, aby przetestować konfigurację urzędu certyfikacji SCEP.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: Brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 12/06/2018
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cadadcb8379d2de73b166d863c0b471747f5f6c7
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 0a888e2087b98eeec82aeeb555677dddcb3eff4e
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72504096"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74058236"
 ---
 # <a name="use-apis-to-add-third-party-cas-for-scep-to-intune"></a>Dodawanie urzędów certyfikacji innych firm dla protokołu SCEP do usługi Intune za pomocą interfejsów API
 

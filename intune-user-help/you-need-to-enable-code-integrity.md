@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/19/2019
+ms.date: 11/14/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,18 +19,18 @@ ms.reviewer: scottduf
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6bde7fc554496b2ecc6f13c7e1b899d7ff05bfa1
-ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
+ms.openlocfilehash: 2b26717e2e8beed2e92f47dca17cbea0ec47a82b
+ms.sourcegitcommit: 244a75622f9cebaaaf5b33aadd8931407a2e2e48
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73754994"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74096743"
 ---
 # <a name="enable-code-integrity"></a>Włączanie integralności kodu
 
 W organizacji może być wymagane włączenie komputera z funkcją ochrony przed zagrożeniami o nazwie *integralność kodu*. Integralność kodu sprawdza sterowniki i pliki systemowe na urządzeniu pod kątem oznak uszkodzenia lub złośliwego oprogramowania. Aby integralność kodu działała na urządzeniu, należy również włączyć inną funkcję zabezpieczeń o nazwie [*bezpieczny rozruch*](https://docs.microsoft.com/windows/security/information-protection/secure-the-windows-10-boot-process#secure-boot) .
 
-Jeśli komputer nie jest zgodny, ponieważ integralność kodu jest wyłączona, należy skontaktować się z zespołem pomocy technicznej IT w Twojej organizacji. Pomogą Ci włączyć bezpieczny rozruch, co spowoduje Wyzwól integralność kodu przy następnym uruchomieniu urządzenia.
+Jeśli komputer nie jest zgodny, ponieważ integralność kodu jest wyłączona, skontaktuj się z osobą odpowiedzialną za pomoc techniczną w Twojej organizacji. Osoba odpowiedzialna za pomoc techniczną pomoże Ci włączyć bezpieczny rozruch, co spowoduje Wyzwól integralność kodu przy następnym uruchomieniu urządzenia. 
 
 Jeśli określisz siebie jako zaawansowanego użytkownika urządzenia i chcesz wypróbować kroki samodzielnie, zobacz [Ponowne uruchamianie bezpiecznego rozruchu](https://docs.microsoft.com/windows-hardware/manufacture/desktop/disabling-secure-boot#re-enable-secure-boot).
 

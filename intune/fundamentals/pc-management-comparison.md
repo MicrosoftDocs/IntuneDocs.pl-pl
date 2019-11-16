@@ -6,7 +6,7 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/01/2018
+ms.date: 11/13/2018
 ms.topic: archived
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3ab16d79549a7fe7b0249c0c4af79ed56817ecec
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: d8fd53e9d12dd38639d204e214aea03d733e584b
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72510051"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059195"
 ---
 # <a name="compare-managing-windows-pcs-as-computers-or-mobile-devices"></a>Porównanie zarządzania komputerami z systemem Windows jako komputerami i jako urządzeniami mobilnymi
 
@@ -42,8 +42,8 @@ Organizacje mogą użyć usługi Microsoft Intune do zarządzania komputerami z 
 |**Zarządzanie aktualizacjami oprogramowania**| Aktualizacje systemu Windows i aplikacji firmy Microsoft<br>[Zapewnianie aktualności oprogramowania na komputerach z systemem Windows za pomocą aktualizacji](../keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md)|Sklep Microsoft dla firm z aktualizacjami zarówno systemu Windows 10, jak i aplikacji firmy Microsoft<br> [Konfigurowanie ustawień usługi Windows Update dla firm](../protect/windows-update-for-business-configure.md) |
 |**Zarządzanie licencjami na oprogramowanie**|Dostępne <br>[Zarządzanie umowami licencyjnymi na oprogramowanie na komputerze z systemem Windows](../manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md)|Sklep Microsoft dla firm (tylko aplikacje .appx)<br>[Zarządzanie aplikacjami zakupionymi w Sklepie Microsoft dla Firm](../apps/windows-store-for-business.md)|
 |**Inventory** (Spis)|Dostępne <br>[Wyświetlanie spisu sprzętu i oprogramowania dla komputerów z systemem Windows](view-hardware-and-software-inventory-for-windows-pcs-in-microsoft-intune.md)|Dostępne <br>[Monitorowanie informacji o aplikacji](../apps/apps-monitor.md)<br>[Co to jest zarządzanie urządzeniami](../remote-actions/device-management.md)|
-|**Zasady zapory systemu Windows**|Dostępne <br>[Ochrona komputerów z systemem Windows przy użyciu zasad Zapory systemu Windows](../help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md) |Dostępne <br>[Zapora Windows Defender](../protect/endpoint-protection-windows-10.md#windows-defender-firewall)|
-|**Ochrona przed złośliwym oprogramowaniem**|Ochrona punktu końcowego<br>[Ochrona komputerów z systemem Windows przy użyciu programu Endpoint Protection](../help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md)|Usługa Windows Defender<br>[Włączanie usługi Windows Defender](../protect/advanced-threat-protection.md)|
+|**Zasady zapory systemu Windows**|Dostępne <br>[Ochrona komputerów z systemem Windows przy użyciu zasad Zapory systemu Windows](../help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md) |Dostępne <br>[Zapora Microsoft Defender](../protect/endpoint-protection-windows-10.md#microsoft-defender-firewall)|
+|**Ochrona przed złośliwym oprogramowaniem**|Ochrona punktu końcowego<br>[Ochrona komputerów z systemem Windows przy użyciu programu Endpoint Protection](../help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md)|Usługa Microsoft Defender<br>[Włączanie programu Microsoft Defender](../protect/advanced-threat-protection.md)|
 |**Pomoc zdalna** |TeamViewer<br>[Żądanie i zapewnianie pomocy zdalnej dla komputerów z systemem Windows](request-and-provide-remote-assistance-for-windows-pcs-in-microsoft-intune.md)|TeamViewer<br> [Używanie programu TeamViewer do zdalnego administrowania urządzeniami usługi Intune](../remote-actions/teamviewer-support.md) |
 |**Wdrażanie aplikacji** | Niedostępne dla Sklepu Microsoft dla firm,<br>tylko pliki .exe, .appx i wieloplikowe instalatory .msi<br>[Dodawanie aplikacji dla komputerów z systemem Windows, na których jest uruchomione oprogramowanie klienckie usługi Intune](add-apps-for-windows-pcs-in-microsoft-intune.md)|Dostępne dla aplikacji ze Sklepu Microsoft i aplikacji biznesowych<br>[Dodawanie aplikacji ze Sklepu Windows](../apps/store-apps-windows.md)<br>[Jak dodawać aplikacje biznesowe dla systemu Windows](../apps/lob-apps-windows.md)|
 |**Ochrona aplikacji**|Niedostępne|Dostępne <br>[Co to są zasady ochrony aplikacji?](../apps/app-protection-policy.md)|

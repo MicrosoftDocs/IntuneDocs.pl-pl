@@ -3,8 +3,8 @@ title: Zmniejszenie kosztów pomocy technicznej
 titleSuffix: Microsoft Intune
 description: Zmniejszenie kosztów pomocy technicznej za pomocą samoobsługowego resetowania hasła
 keywords: Resetowanie hasła przy użyciu samoobsługowego resetowania hasła w usłudze Azure Active Directory
-author: MandiOhlinger
-ms.author: mandia
+author: ErikjeMS
+ms.author: erikje
 manager: dougeby
 ms.date: 3/6/2018
 ms.topic: archived
@@ -15,16 +15,17 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1da1758dcc1743087191f69bd4d57bc113774d81
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 08dc14a3abed634721b39fedaae840e2b18c151b
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509302"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74058113"
 ---
 # <a name="reduce-help-desk-costs-with-self-service-password-reset"></a>Zmniejszenie kosztów pomocy technicznej za pomocą samoobsługowego resetowania hasła
 
 Możesz zezwolić użytkownikom na resetowanie haseł kont służbowych bez konieczności korzystania z pomocy technicznej. Ten typ samoobsługowego resetowania hasła jest zalecany w następujących sytuacjach:
+
 * Firma lub szkoła używa usługi Azure Active Directory do obsługi kont służbowych.
 * Pracownicy i uczniowie mają dostęp do Internetu.
 * Chcesz obniżyć koszty pomocy technicznej.
@@ -39,6 +40,7 @@ Możesz zezwolić użytkownikom na resetowanie haseł kont służbowych bez koni
 ## <a name="next-steps"></a>Następne kroki
 
 Dowiedz się więcej o następujących artykułach:
+
 * [Najlepsze rozwiązania dotyczące haseł](https://docs.microsoft.com/azure/active-directory/active-directory-secure-passwords) 
 * [Licencjonowanie samoobsługowego resetowania hasła](https://docs.microsoft.com/azure/active-directory/active-directory-secure-passwords)
 

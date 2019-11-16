@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/27/2019
+ms.date: 11/11/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d8cb6976121f4c5a9ce755e8feb189ea007e7ffd
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 80fd2d54a99bc3f4ab47f48f94eb14aa1a7f630c
+ms.sourcegitcommit: 5c52879f3653e22bfeba4eef65e2c86025534dab
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506116"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74126200"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Instalowanie i udostępnianie aplikacji na urządzeniu
 
@@ -41,7 +41,7 @@ Instaluj aplikacje na swoim urządzeniu przy użyciu aplikacji Portal firmy dla 
     * **Pokaż wszystkie**: w sekcji **Strona główna** > **Aplikacje** kliknij opcję **Pokaż wszystkie**, aby wyświetlić wszystkie dostępne aplikacje.  
     * **Wszystkie aplikacje**: wybierz tę stronę w okienku nawigacji, aby wyświetlić wszystkie dostępne aplikacje, w tym zainstalowane i polecane. Wyświetlanie, sortowanie i filtrowanie aplikacji. Wyniki wyszukiwania są sortowane automatycznie według istotności.  
     * **Kategorie aplikacji**: Wybierz tę stronę w okienku nawigacji, aby wybrać aplikacje na podstawie typu lub funkcji. Aplikacje są sortowane według kategorii, takich jak **Polecane**, **Edukacja**i **produktywność**.  
-    * **Wyszukaj aplikacje**: w okienku nawigacji aplikacji znajduje się statyczny pasek wyszukiwania.  Aby znaleźć dostępne aplikacje, wyszukaj je według nazw aplikacji lub wydawców.  
+    * **Wyszukaj aplikacje**: w okienku nawigacji aplikacji znajduje się statyczny pasek wyszukiwania. Aby znaleźć dostępne aplikacje, wyszukaj je według nazw aplikacji lub wydawców.  
 
 3. Wybierz aplikację.   
 4. Na stronie szczegółów aplikacji kliknij pozycję **Zainstaluj**. Po zakończeniu instalacji zostanie wyświetlony stan **Zainstalowano**.  
@@ -69,10 +69,10 @@ Udostępniaj i polecaj aplikacje kontaktom służbowym. W poniższych krokach op
 
 Po udostępnieniu odbiorca otrzyma link i wiadomość z zachętą do wyświetlenia szczegółów aplikacji. Link umożliwia otwarcie strony **Szczegóły aplikacji** w aplikacji Portal firmy. 
 
-## <a name="available-and-required-apps"></a>Aplikacje dostępne i wymagane
-Aplikacje są przypisane do Ciebie przez organizację i są Portal firmy oznaczone jako **dostępne** lub **wymagane**. 
+## <a name="optional-and-required-apps"></a>Aplikacje opcjonalne i wymagane
+Aplikacje są przypisane do Ciebie przez Twoją organizację. Twoja organizacja będzie wymagała posiadania niektórych aplikacji i udostępnienia innych aplikacji jako opcjonalnych. Aby dowiedzieć się, które aplikacje są wymagane, a opcjonalnie, przejdź do pozycji **zainstalowane aplikacje** i sprawdź w kolumnie **wymagane przez organizację**.  
 
-* Dostępne aplikacje: te aplikacje są wybierane przez organizację i są odpowiednie i przydatne w przypadku pracy lub szkoły. Są one opcjonalne do zainstalowania i są jedynymi aplikacjami, które znajdują się w Portal firmy do zainstalowania. 
+* Aplikacje opcjonalne: te aplikacje są wybierane przez organizację i są odpowiednie i przydatne w przypadku pracy lub szkoły. Są one dostępne dla Ciebie, ale można je zainstalować. Są to jedyne aplikacje, które znajdują się w Portal firmy do zainstalowania. 
 
 * Aplikacje wymagane: te aplikacje są niezbędne do pracy i szkoły i są wdrażane bezpośrednio na urządzeniu. Te aplikacje są automatycznie instalowane bez interwencji. 
 
@@ -86,15 +86,13 @@ Jeśli potrzebujesz jakiejś aplikacji, która nie jest dostępna w aplikacji Po
 ## <a name="view-installed-apps"></a>Wyświetlanie zainstalowanych aplikacji  
 Wyświetl listę wszystkich aplikacji zainstalowanych na urządzeniu. Na stronie **zainstalowane aplikacje** są wyświetlane następujące szczegóły dotyczące poszczególnych aplikacji:
 
-* Nazwa: nazwa aplikacji. Dostępne aplikacje zawierają link do strony **szczegółów aplikacji** .
+* Nazwa: nazwa aplikacji. Opcjonalne aplikacje zawierają link do strony **szczegółów aplikacji** .
 * Typ przypisania: sposób przypisywania i udostępniania aplikacji. 
 * Wydawca: Nazwa dewelopera lub firmy, która rozproszona aplikację. Wydawca jest zazwyczaj dostawcą oprogramowania lub Twoją organizacją.  
 * Data publikacji: Data, z której aplikacja została udostępniona do pobrania. Data publikacji może zawierać wersję początkową aplikacji lub ostatnią aktualizację aplikacji.
 * Stan: bieżący stan instalacji aplikacji na urządzeniu. Aplikacje mogą pokazać, że instalacja, instalacja i instalacja nie powiodły się. Aby można było wyświetlić aktualny stan, wymagane aplikacje mogą potrwać do 10 minut. Zapoznaj się z uwagą w obszarze [Instalowanie aplikacji](#install-apps) , aby uzyskać ważne informacje dotyczące instalowania wymaganej aplikacji. 
 
-Aby uzyskać dostęp do tej strony, przejdź do menu nawigacji i wybierz pozycję **zainstalowane aplikacje**. 
-
-  ![Przykładowy zrzut ekranu przedstawiający stronę Zainstalowane aplikacje w aplikacji Portal firmy dla systemu Windows 10. ](./media/installed-apps-cp-1906.png)  
+Aby uzyskać dostęp do tej strony, przejdź do menu nawigacji i wybierz pozycję **zainstalowane aplikacje**.  
 
 
 Funkcja **Sortuj według** umożliwia zmianę układu typu przypisania aplikacji, wydawcy, alfabetycznie według nazwy lub chronologiczne według daty opublikowania. Użyj **filtru,** aby ograniczyć liczbę wyświetlanych aplikacji według stanu instalacji.  Jeśli żadne aplikacje nie są dostępne, zobaczysz komunikat informujący o tym, że żadne aplikacje firmowe nie zostały zainstalowane.  

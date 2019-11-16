@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/06/2019
+ms.date: 11/12/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 488794fdce8f6ebb074648c8e399cb2aecc73b25
-ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
+ms.openlocfilehash: 391c5ac194d5dc7ddf492fe23907279cc4380d3d
+ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73709747"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73984118"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem iOS i iPadOS umożliwiające działanie funkcji lub ich ograniczanie przy użyciu usługi Intune
 
@@ -228,7 +228,7 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
   Ta funkcja ma zastosowanie do:  
   - System iOS 11.0 i nowsze
   
-<sup>1</sup>W przypadku skonfigurowania ustawień **Maksymalna liczba minut braku aktywności przed zablokowaniem ekranu** i **Maksymalna liczba minut po zablokowaniu ekranu, po których jest wymagane wprowadzenie hasła** są one stosowane jedno po drugim. Na przykład jeśli wartość obu ustawień jest ustawiona na **5** minut, ekran wyłącza się automatycznie po pięciu minutach, a urządzenie jest blokowane po kolejnych pięciu minutach. Jednak jeśli użytkownik wyłączy ekranie ręcznie, drugie ustawienie zostanie zastosowane natychmiast. W tym samym przykładzie jeśli użytkownik wyłączy ekran, po pięciu minutach urządzenie zostanie zablokowane.
+<sup>1</sup>W przypadku skonfigurowania ustawień **Maksymalna liczba minut braku aktywności przed zablokowaniem ekranu** i **Maksymalna liczba minut po zablokowaniu ekranu, po których jest wymagane wprowadzenie hasła** są one stosowane jedno po drugim. Na przykład jeśli wartość obu ustawień jest ustawiona na **5** minut, ekran wyłącza się automatycznie po pięciu minutach, a urządzenie jest blokowane po kolejnych pięciu minutach. Jednak jeśli użytkownik wyłączy ekran ręcznie, drugie ustawienie zostanie zastosowane natychmiast. W tym samym przykładzie jeśli użytkownik wyłączy ekran, po pięciu minutach urządzenie zostanie zablokowane.
 
 ## <a name="locked-screen-experience"></a>Środowisko ekranu blokady
 
@@ -403,7 +403,7 @@ Aby dodać aplikacje do tych list, możesz:
 
   Możesz również znaleźć aplikację za pomocą programu iTunes, a następnie użyć zadania **Kopiuj link**, aby uzyskać adres URL aplikacji.
 
-- **Zaimportować** plik CSV ze szczegółowymi informacjami o aplikacji, w tym z adresem URL. Użyj formatu `<app url>, <app name>, <app publisher>`. Możesz również **wyeksportować** istniejącą listę, który zawiera listę aplikacji z ograniczeniami w tym samym formacie.
+- **Zaimportować** plik CSV ze szczegółowymi informacjami o aplikacji, w tym z adresem URL. Użyj formatu `<app url>, <app name>, <app publisher>`. Możesz również **wyeksportować** istniejącą listę, która zawiera listę aplikacji z ograniczeniami w tym samym formacie.
 
 > [!IMPORTANT]
 > Profile urządzeń, które używają ustawień aplikacji z ograniczeniami, należy przypisać do grup użytkowników.
@@ -447,11 +447,20 @@ Aby dodać aplikacje, możesz wykonać następujące czynności:
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ustawienia dotyczą: Rejestracja urządzenia, automatyczna rejestracja urządzeń (nadzorowane)
 
+Uwaga wymagana w przypadku roamingu danych (Porada lub ważna Uwaga, aby pomóc w nieporozumieniu klienta): to ustawienie nie będzie widoczne w profilu zarządzania urządzenia wskazanego. Oznacza to, że to ustawienie jest traktowane jako akcja urządzenia zdalnego, a przy każdym zmianie stanu roamingu danych na urządzeniu zostanie ono zablokowane ponownie przez usługę Intune. Mimo że nie znajduje się on w profilu zarządzania, działa, jeśli jest wyświetlany jako powodzenie z raportowania w konsoli administracyjnej. 
 - **Roaming danych**: wybierz pozycję **Blokuj**, aby uniemożliwić roaming danych w sieci komórkowej. Opcja **Nieskonfigurowane** (domyślna) zezwala na roaming danych, gdy urządzenie jest w sieci komórkowej.
+
+  > [!IMPORTANT]
+  > To ustawienie jest traktowane jako akcja urządzenia zdalnego. To ustawienie nie jest wyświetlane w profilu zarządzania na urządzeniu. Za każdym razem, gdy stan roamingu danych ulegnie zmianie na urządzeniu, **roaming danych** jest blokowany przez usługę Intune. Jeśli w usłudze Intune stan raportowania zawiera sukces, należy sprawdzić, czy działa, nawet jeśli ustawienie nie jest wyświetlane w profilu zarządzania na urządzeniu.
+
 - **Globalne pobieranie w tle podczas roamingu**: pozycja **Blokuj** uniemożliwia używanie funkcji globalnego pobierania w tle podczas roamingu w sieci komórkowej. Opcja **Nieskonfigurowane** (domyślna) zezwala urządzeniu na pobieranie danych, np. wiadomości e-mail, podczas roamingu w sieci komórkowej.
 - **Wybieranie głosowe**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom korzystanie z funkcji wybierania głosowego na urządzeniu. Opcja **Nieskonfigurowane** (domyślna) umożliwia wybieranie głosowe na urządzeniu.
 - **Roaming połączeń głosowych**: wybierz pozycję **Blokuj**, aby uniemożliwić roaming połączeń danych w sieci komórkowej. Opcja **Nieskonfigurowane** (domyślna) zezwala na roaming połączeń głosowych, gdy urządzenie jest w sieci komórkowej.
 - **Osobisty hotspot**: opcja **Blokuj** wyłącza osobisty hotspot na urządzeniu użytkownika przy każdej synchronizacji urządzenia. To ustawienie może być niezgodne w przypadku niektórych operatorów. Opcja **Nieskonfigurowane** (ustawienie domyślne) zachowuje domyślną konfigurację osobistego hotspotu ustawioną przez użytkownika.
+
+  > [!IMPORTANT]
+  > To ustawienie jest traktowane jako akcja urządzenia zdalnego. To ustawienie nie jest wyświetlane w profilu zarządzania na urządzeniu. Za każdym razem, gdy osobisty stan hotspotu zmieni się na urządzeniu, **osobisty punkt hotspotu** jest blokowany przez usługę Intune. Jeśli w usłudze Intune stan raportowania zawiera sukces, należy sprawdzić, czy działa, nawet jeśli ustawienie nie jest wyświetlane w profilu zarządzania na urządzeniu.
+
 - **Zasady użycia danych komórkowych (tylko aplikacje zarządzane)** : zdefiniuj typy danych, których aplikacje zarządzane mogą używać podczas pracy w sieciach komórkowych. Dostępne opcje:
   - **Zablokuj użycie danych komórkowych**: zablokuj użycie danych komórkowych dla **wszystkich zarządzanych aplikacji** lub **wybierz określone aplikacje**.
   - **Zablokuj użycie danych komórkowych podczas roamingu**: zablokuj użycie danych komórkowych podczas roamingu dla **wszystkich zarządzanych aplikacji** lub **wybierz określone aplikacje**.
@@ -564,7 +573,7 @@ Użyj tych ustawień w celu skonfigurowania urządzeń z systemem iOS, aby uruch
 - **Identyfikator pakietu aplikacji**: podaj [identyfikator pakietu](bundle-ids-built-in-ios-apps.md) odpowiedniej aplikacji.
 - **Dodaj**: Wybierz, aby utworzyć listę aplikacji.
 
-Możesz również **zaimportować** plik CSV zawierający listę nazw aplikacji i ich identyfikatorów pakietu. Lub **wyeksportuj**  istniejącą listę, która zawiera aplikacje.
+Możesz również **zaimportować** plik CSV zawierający listę nazw aplikacji i ich identyfikatorów pakietu. Lub **wyeksportuj** istniejącą listę, która zawiera aplikacje.
 
 ## <a name="kiosk"></a>Kiosk
 

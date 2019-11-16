@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3e0ea523d71ff036f1f23c9436c65e105328d8b
-ms.sourcegitcommit: 807ab3e35f4d9ffa18655410b7d61e5e772ab348
+ms.openlocfilehash: 381ceea979dedf9b33cb7ef9c47291e3ac6ce20c
+ms.sourcegitcommit: 737ad6c675deedfc6009f792023ff95981b06582
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73057643"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74117892"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-ios-features-in-intune"></a>Ustawienia urządzeń z systemem iOS oraz iPadOS dotyczące korzystania z typowych funkcji systemu iOS w usłudze Intune
 
@@ -296,7 +296,7 @@ Ta funkcja ma zastosowanie do:
 
 - **Obszar**: Wprowadź nazwę obszaru protokołu Kerberos. Nazwa obszaru powinna być Wielka litera, taka jak `CONTOSO.COM`. Zazwyczaj nazwa obszaru jest taka sama jak nazwa domeny DNS, ale w przypadku wszystkich wielkich liter.
 
-- **Domeny**: Wprowadź nazwy domen lub hostów witryn, które mogą być uwierzytelniane za pomocą logowania jednokrotnego. Na przykład jeśli witryna sieci Web jest `mysite.contoso.com`, wówczas `mysite` jest nazwą hosta, a `contoso.com` jest nazwą domeny. Gdy użytkownicy łączą się z dowolną z tych witryn, rozszerzenie aplikacji obsługuje wyzwanie uwierzytelniania. To uwierzytelnianie umożliwia użytkownikom logowanie się przy użyciu identyfikatora, Touch ID lub Apple pincode/kodu dostępu.
+- **Domeny**: Wprowadź nazwy domen lub hostów witryn, które mogą być uwierzytelniane za pomocą logowania jednokrotnego. Na przykład jeśli witryna sieci Web jest `mysite.contoso.com`, `mysite` to nazwa hosta, a `contoso.com` to nazwa domeny. Gdy użytkownicy łączą się z dowolną z tych witryn, rozszerzenie aplikacji obsługuje wyzwanie uwierzytelniania. To uwierzytelnianie umożliwia użytkownikom logowanie się przy użyciu identyfikatora, Touch ID lub Apple pincode/kodu dostępu.
 
   - Wszystkie domeny w profilach usługi Intune rozszerzenia aplikacji logowania jednokrotnego muszą być unikatowe. Nie można powtórzyć domeny w dowolnym profilu rozszerzenia aplikacji logowania, nawet jeśli używasz różnych typów rozszerzeń aplikacji logowania jednokrotnego.
   - W tych domenach nie jest rozróżniana wielkość liter.
@@ -322,11 +322,12 @@ Ta funkcja ma zastosowanie do:
   > - **Włącz** to ustawienie, jeśli używasz wielu obszarów. Ustawia wartość **obszaru** wprowadzoną jako domyślny obszar.
   > - Jeśli masz tylko jeden obszar, pozostaw go **nieskonfigurowanym** (domyślnie).
 
-- **Nazwa podmiotu zabezpieczeń** (tylko protokół Kerberos): Wprowadź nazwę użytkownika podmiotu zabezpieczeń protokołu Kerberos. Nie trzeba dołączać nazwy obszaru. Na przykład w `user@contoso.com`, `user` jest nazwą główną, a `contoso.com` jest nazwą obszaru.
+- **Nazwa podmiotu zabezpieczeń** (tylko protokół Kerberos): Wprowadź nazwę użytkownika podmiotu zabezpieczeń protokołu Kerberos. Nie trzeba dołączać nazwy obszaru. Na przykład w `user@contoso.com``user` jest nazwą główną, a `contoso.com` jest nazwą obszaru.
 - **Kod lokacji Active Directory** (tylko protokół Kerberos): Wprowadź nazwę witryny Active Directory, która ma być używana przez rozszerzenie protokołu Kerberos. Zmiana tej wartości może nie być konieczna, ponieważ rozszerzenie protokołu Kerberos może automatycznie znaleźć kod lokacji Active Directory.
 - **Nazwa pamięci podręcznej** (tylko protokół Kerberos): Wprowadź nazwę Generic Security Services (GSS) pamięci podręcznej protokołu Kerberos. Najprawdopodobniej nie musisz ustawiać tej wartości.
 - **Identyfikatory pakietu aplikacji** (tylko Kerberos): **Dodaj** identyfikatory zbioru aplikacji, które powinny używać logowania jednokrotnego na urządzeniach. Te aplikacje otrzymują dostęp do biletu uprawniającego do przyznania biletu protokołu Kerberos, biletu uwierzytelniania i uwierzytelniania użytkowników do usług, do których mają dostęp.
 - **Mapowanie obszaru domeny** (tylko Kerberos): **Dodaj** sufiksy DNS domeny, które powinny być mapowane na obszar. Użyj tego ustawienia, jeśli nazwy DNS hostów nie pasują do nazwy obszaru. Najprawdopodobniej nie musisz tworzyć tego niestandardowego mapowania domeny-obszaru.
+- **Certyfikat PKINIT** (tylko protokół Kerberos): **Wybierz opcję** Kryptografia klucza publicznego dla certyfikatu uwierzytelniania początkowego (PKINIT), którego można użyć do odnowienia poświadczeń protokołu Kerberos bez interakcji z użytkownikiem. Certyfikat powinien być certyfikatem PKCS lub SCEP, który został wcześniej dodany do usługi Intune.
 
 ## <a name="wallpaper"></a>Tapeta
 

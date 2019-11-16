@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/15/2019
+ms.date: 11/13/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17dce8f7c5aa55a2044e663f724a5784cee8b375
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 42ccb1d1654ba45b63672eebf00acd10fdc56a67
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506684"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059341"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Ustawienia urządzenia z systemem Windows 10 lub nowszym, które ma działać jako kiosk w usłudze Intune
 
@@ -40,6 +40,8 @@ Aby dowiedzieć się więcej na temat funkcji kiosku systemu Windows w usłudze 
 
   1. Utwórz profil kiosku, aby uruchomić urządzenie w trybie kiosku.
   2. Utwórz [profil ograniczeń urządzenia](device-restrictions-windows-10.md#microsoft-edge-browser) i skonfiguruj dozwolone funkcje i ustawienia przeglądarki Microsoft Edge.
+
+- Upewnij się, że wszystkie pliki, skrypty i skróty znajdują się w systemie lokalnym. Aby uzyskać więcej informacji, w tym inne wymagania dotyczące systemu Windows, zobacz [Dostosowywanie i eksportowanie układu startowego](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout).
 
 > [!IMPORTANT]
 > Pamiętaj, aby przypisać ten profil kiosku do tych samych urządzeń, do których przypisano [profil przeglądarki Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser).
@@ -194,3 +196,5 @@ Aplikacje w tym trybie są dostępne w menu Start. Te aplikacje to jedyne aplika
 [Przypisywanie profilu](device-profile-assign.md) i [monitorowanie jego stanu](device-profile-monitor.md).
 
 Można również utworzyć profile kiosku dla urządzeń z systemem [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings) oraz [Windows Holographic for Business](kiosk-settings-holographic.md).
+
+Zapoznaj się również z tematem [Konfigurowanie kiosku z jedną aplikacją](https://docs.microsoft.com/windows/configuration/kiosk-single-app) lub [skonfigurowanie kiosku z obsługą wieloaplikacji](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) w wytycznych dotyczących systemu Windows.
