@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/26/2019
+ms.date: 11/07/2019
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b4890410f5948cdc9bd1c6e3d85125d8e0713d9b
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 1929e58d3b22e4cb5bc5f6ad2121f2b6f903d023
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72492317"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755147"
 ---
 # <a name="quickstart-create-an-email-device-profile-for-ios"></a>Szybki start: tworzenie profilu urządzenia poczty e-mail dla systemu iOS
 
@@ -33,39 +33,40 @@ Jeśli nie masz subskrypcji usługi Intune, [utwórz konto bezpłatnej wersji pr
 
 ## <a name="sign-in-to-intune"></a>Logowanie się do usługi Intune
 
-Zaloguj się w usłudze [Intune](https://aka.ms/intuneportal) jako administrator globalny lub administrator usługi Intune. Jeśli utworzono subskrypcję wersji próbnej usługi Intune, konto, którego użyto do utworzenia subskrypcji, jest administratorem globalnym.
+Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) jako administrator globalny lub administrator usługi Intune. Jeśli utworzono subskrypcję wersji próbnej usługi Intune, konto, którego użyto do utworzenia subskrypcji, jest administratorem globalnym.
 
 ## <a name="create-an-ios-email-profile"></a>Tworzenie profilu poczty e-mail dla systemu iOS
-1. W obszarze Intune wybierz pozycję **Konfiguracja urządzeń**, a następnie **Profile**.
-2. Wybierz pozycję **Utwórz profil**.
-   
+
+1. Wybierz pozycję **Urządzenia** > **Profile konfiguracji** > **Utwórz profil**.
+
    ![Tworzenie profilu poczty e-mail dla systemu iOS](./media/quickstart-email-profile/ios-create-profile.png)
 
-3. W obszarze **Nazwa** wprowadź nazwę opisową nowego profilu. W tym przykładzie wprowadź opis **iOS require work email** (iOS — wymagaj służbowego adresu e-mail).
-4. Wprowadź następujące informacje o profilu:
-   - W polu **Opis** wprowadź **Require iOS devices to use work email** (Wymagaj od urządzeń z systemem iOS używania służbowego adresu e-mail).
-   - W polu **Platforma** wybierz opcję **iOS**.
-   - W polu **Typ profilu** wybierz opcję **E-mail**.
-    
-     ![Tworzenie profilu poczty e-mail do użytku w systemie iOS](./media/quickstart-email-profile/ios-email-profile-name.png)
+2. W obszarze **Nazwa** wprowadź nazwę opisową nowego profilu. W tym przykładzie wprowadź opis **iOS require work email** (iOS — wymagaj służbowego adresu e-mail).
+3. Wprowadź następujące informacje o profilu:
+    - W polu **Opis** wprowadź **Require iOS devices to use work email** (Wymagaj od urządzeń z systemem iOS używania służbowego adresu e-mail).
+    - W polu **Platforma** wybierz opcję **iOS**.
+    - W polu **Typ profilu** wybierz opcję **E-mail**.
 
-5. Wybierz pozycję **Ustawienia**, a następnie wprowadź następujące ustawienia (w przypadku pozostałych ustawień pozostaw wartości domyślne):
+        ![Tworzenie profilu poczty e-mail do użytku w systemie iOS](./media/quickstart-email-profile/ios-email-profile-name.png)
+
+4. Wybierz pozycję **Ustawienia**, a następnie wprowadź następujące ustawienia (w przypadku pozostałych ustawień pozostaw wartości domyślne):
    - **Serwer poczty e-mail**: na potrzeby tego przewodnika Szybki start wprowadź **outlook.office365.com**. To ustawienie określa lokalizację programu Exchange (adres URL) serwera poczty e-mail, za pomocą którego aplikacja poczty systemu iOS będzie łączyć się z kontem e-mail.
    - **Nazwa konta**: wprowadź wartość **Company Email** (Firmowa poczta e-mail).
    - **Atrybut nazwy użytkownika z usługi AAD**: ta nazwa to atrybut pobierany przez usługę Intune z usługi Azure Active Directory (Azure AD). Usługa Intune dynamicznie generuje nazwę użytkownika dla tego profilu przy użyciu tej nazwy. W tym przewodniku Szybki start przyjmiemy, że chcemy, aby jako nazwa użytkownika profilu używana była **główna nazwa użytkownika** (na przykład user1@contoso.com).
    - **Atrybut adresu e-mail z usługi AAD**: to ustawienie jest adresem e-mail z usługi Azure AD, który będzie używany do logowania się w programie Exchange. Na potrzeby tego przewodnika Szybki start wybierz opcję **Główna nazwa użytkownika**.
    - **Metoda uwierzytelniania**: na potrzeby tego przewodnika Szybki start wybierz pozycję **Nazwa użytkownika i hasło**. (Można również wybrać pozycję **Certyfikat**, jeśli skonfigurowano już certyfikat dla usługi Intune).
-    
-     ![Tworzenie profilu poczty e-mail na potrzeby systemu iOS](./media/quickstart-email-profile/ios-email-profile.png)
 
-6. Wybierz przycisk **OK**.
-7. Wybierz przycisk **Utwórz**. Nowy profil pojawi się na liście profilów z wyświetlonym pulpitem nawigacyjnym, aby można było monitorować sposób przypisania go do urządzeń z systemem iOS i użytkowników systemu iOS.
-8. Wybierz pozycję **Przypisania**.
-9. Wybierz kartę **Dołącz**, a następnie wybierz pozycję **Wszyscy użytkownicy i wszystkie urządzenia**. 
-10. Wybierz pozycję **Zapisz**.
+        ![Tworzenie profilu poczty e-mail na potrzeby systemu iOS](./media/quickstart-email-profile/ios-email-profile.png)
+
+5. Wybierz pozycje **OK** > **Utwórz**. Nowy profil pojawi się na liście profilów z wyświetlonym pulpitem nawigacyjnym, aby można było monitorować sposób przypisania go do urządzeń z systemem iOS i użytkowników systemu iOS.
+6. Wybierz pozycję **Przypisania**.
+7. Wybierz kartę **Dołącz**, a następnie wybierz pozycję **Wszyscy użytkownicy i wszystkie urządzenia**. 
+8. Wybierz pozycję **Zapisz**.
 
 ## <a name="clean-up-resources"></a>Oczyszczanie zasobów
+
 Jeśli nie zamierzasz używać utworzonego profilu w dodatkowych samouczkach ani podczas testowania, możesz go teraz usunąć.
+
 1. W obszarze Intune wybierz pozycję **Konfiguracja urządzeń**, a następnie **Profile**.
 2. Wybierz utworzony profil testowy **iOS require work email** (iOS — wymagaj służbowego adresu e-mail).
 3. Wybierz wielokropek ( **...** ) obok profilu, a następnie wybierz pozycję **Usuń**.

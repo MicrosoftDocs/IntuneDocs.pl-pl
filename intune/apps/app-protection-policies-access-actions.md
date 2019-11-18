@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 882c542d6a1d981b9924bb33eee40f03b41689f7
-ms.sourcegitcommit: 4bf23327af734a9811d555fbd566c31239e2acd6
+ms.openlocfilehash: b5983742043dca9d07242315d4aaa97de2ead8d6
+ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "72999489"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73984018"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Selektywne czyszczenie danych przy użyciu akcji uruchamiania warunkowego zasad ochrony aplikacji w usłudze Intune
 
@@ -44,9 +44,6 @@ Za pomocą tych ustawień możesz jawnie wyczyścić dane firmowe z urządzenia 
 7. Wybierz pozycję w kolumnie **Ustawienie** i w kolumnie **Wartość** wprowadź wartość, która będzie wymagana od użytkowników, aby mogli zalogować się do aplikacji firmowej. 
 8. W kolumnie **Akcja** wybierz akcję, którą chcesz wykonać, jeśli użytkownicy nie spełnili Twoich wymagań. W niektórych przypadkach dla pojedynczego ustawienia można skonfigurować wiele akcji. Aby uzyskać szczegółowe informacje, zobacz [Tworzenie i przypisywanie zasad ochrony aplikacji](app-protection-policies.md).
 
->[!NOTE]
-> Aby użyć ustawienia **Modele urządzeń lub Producenci urządzeń**, wprowadź rozdzielaną średnikami listę identyfikatorów modeli (iOS) lub producentów (Android). Unikaj spacji na listach wielu wartości. Te wartości nie uwzględniają wielkości liter. 
-
 ## <a name="policy-settings"></a>Ustawienia zasad 
 
 Tabela ustawień zasad ochrony aplikacji zawiera kolumny **Ustawienie**, **Wartość** i **Akcja**.
@@ -62,7 +59,7 @@ W przypadku systemu iOS za pomocą listy rozwijanej **Ustawienie** możliwe będ
 - Modele urządzeń
 - Maksymalny dozwolony poziom zagrożenia urządzenia
 
-Aby użyć ustawienia **Modele urządzeń**, wprowadź rozdzielaną średnikami listę identyfikatorów modeli urządzeń z systemem iOS. Identyfikator modelu urządzenia z systemem iOS można znaleźć w kolumnie Typ urządzenia w [dokumentacji pomocy technicznej usługi HockeyApp](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types).<br>
+Aby użyć ustawienia **Modele urządzeń**, wprowadź rozdzielaną średnikami listę identyfikatorów modeli urządzeń z systemem iOS. Te wartości nie uwzględniają wielkości liter. Poza obszarem raportowania usługi Intune dla danych wejściowych „Modele urządzeń” identyfikator modelu systemu iOS można znaleźć w kolumnie Typ urządzenia w [dokumentacji pomocy technicznej usługi HockeyApp](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types) lub w tym [repozytorium GitHub firmy zewnętrznej](https://gist.github.com/adamawolf/3048717).<br>
 Przykładowe dane wejściowe: *iPhone5,2; iPhone5,3*
 
 Na urządzeniach użytkowników końcowych klient usługi Intune wykonuje akcję w oparciu o proste dopasowywanie ciągów modelu urządzenia określonych w usłudze Intune dla zasad ochrony aplikacji. Dopasowywanie całkowicie zależy od danych zgłoszonych przez urządzenie. Zachęcamy, aby administrator IT upewnił się, że faktyczne zachowanie odpowiada zamierzonemu przez przetestowanie tego ustawienia z użyciem różnych producentów i modeli urządzeń w ramach małej grupy użytkowników. Wartość domyślna to **Nie skonfigurowano**.<br>
@@ -90,7 +87,7 @@ W przypadku systemu Android za pomocą listy rozwijanej **Ustawienie** możliwe 
 
 Korzystając z ustawienia **Minimalna wersja Portalu firmy**, można określić konkretną minimalną zdefiniowaną wersję aplikacji Portal firmy, która jest wymuszana na urządzeniu użytkownika końcowego. To ustawienie uruchamiania warunkowego umożliwia ustawienie wartości **Blokuj dostęp**, **Wyczyść dane** i **Ostrzegaj** jako możliwych akcji, kiedy każda wartość nie zostanie spełniona. Możliwe formaty dla tej wartości są zgodne ze wzorcem *[Wersja główna].[Wersja pomocnicza]* , *[Wersja główna].[Wersja pomocnicza].[Kompilacja]* lub *[Wersja główna].[Wersja pomocnicza].[Kompilacja].[Poprawka]* . Ponieważ niektórzy użytkownicy końcowi mogą nie chcieć natychmiastowej wymuszonej aktualizacji, opcja „Ostrzegaj” może być idealna podczas konfigurowania tego ustawienia. Sklep Google Play wysyła tylko bajty delta dla aktualizacji aplikacji, jednak nadal może to być duża ilość danych, których użytkownik może nie chcieć wykorzystywać, jeśli w czasie aktualizacji korzysta z danych komórkowych. Wymuszenie aktualizacji, a tym samym pobranie zaktualizowanej aplikacji, może spowodować naliczenie nieoczekiwanych opłat za przesył danych w czasie aktualizacji. Jeśli ustawienie **Minimalna wersja Portalu firmy** zostanie skonfigurowane, będzie miało wpływ na wszystkich użytkowników końcowych, którzy będą korzystać z wersji 5.0.4560.0 aplikacji Portal firmy i z wszystkich kolejnych wersji. To ustawienie nie będzie miało wpływu na użytkowników korzystających z wersji aplikacji Portal firmy, które są starsze niż wersja, z którą ta funkcja została wydana. Użytkownikom końcowym, którzy na swoich urządzeniach korzystają z automatycznych aktualizacji aplikacji, prawdopodobnie nie zostanie wyświetlone żadne okno dialogowe dotyczące tej funkcji, ponieważ prawdopodobnie będą oni używać najnowszej wersji aplikacji Portal firmy. To ustawienie dotyczy tylko systemu Android z ochroną aplikacji dla zarejestrowanych i niezarejestrowanych urządzeń.
 
-Aby użyć ustawienia **Producenci urządzeń**, wprowadź rozdzielaną średnikami listę producentów urządzeń z systemem Android. Producenta urządzenia z systemem Android można znaleźć w ustawieniach urządzenia.<br>
+Aby użyć ustawienia **Producenci urządzeń**, wprowadź rozdzielaną średnikami listę producentów urządzeń z systemem Android. Te wartości nie uwzględniają wielkości liter. Poza obszarem raportowania usługi Intune producenta urządzenia z systemem Android można znaleźć w ustawieniach urządzenia. <br>
 Przykładowe dane wejściowe: *Producent A;Producent B* 
 
 >[!NOTE]

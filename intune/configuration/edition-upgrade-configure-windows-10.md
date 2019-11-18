@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/22/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5519429bae69fe277c72b12a2801a1875295824
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 4cce3fafa1a8a074ea70692f855be1e032f0462f
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72493775"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755247"
 ---
 # <a name="upgrade-windows-10-editions-or-switch-out-of-s-mode-on-devices-using-microsoft-intune"></a>Uaktualnianie wersji systemu Windows 10 lub wyłączanie trybu S na urządzeniach przy użyciu usługi Microsoft Intune
 
@@ -36,7 +36,7 @@ Zapoznaj się z [często zadawanymi pytaniami](https://support.microsoft.com/hel
 
 Ta funkcja ma zastosowanie do:
 
-- System Windows 10 lub nowszy
+- Windows 10 lub nowszym
 - System Windows 10 1809 lub nowszy dla trybu S
 - Windows Holographic for Business
 
@@ -96,16 +96,13 @@ Poniższa tabela zawiera listę obsługiwanych ścieżek uaktualnienia dla profi
 
 ## <a name="create-the-profile"></a>Tworzenie profilu
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Wybierz kolejno pozycje **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz pozycję **Urządzenia** > **Profile konfiguracji** > **Utwórz profil**.
 3. Wprowadź następujące właściwości:
 
     - **Nazwa**: Wprowadź opisową nazwę nowego profilu. Na przykład wpisz coś takiego: `Windows 10 edition upgrade profile` lub `Windows 10 switch off S mode`.
     - **Opis**: Wprowadź opis profilu. To ustawienie jest opcjonalne, ale zalecane.
-    - **Platforma**: wybierz platformę:  
-
-        - **Windows 10 lub nowszy**
-
+    - **Platforma**: Wybierz pozycję **Windows 10 i nowsze**.
     - **Typ profilu**: wybierz pozycję **Uaktualnienie wersji**.
     - **Ustawienia**: wprowadź ustawienia, które chcesz skonfigurować. Listę wszystkich ustawień i ich zadań można znaleźć w temacie:
 

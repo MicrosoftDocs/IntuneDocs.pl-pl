@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/19/2019
+ms.date: 11/07/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,19 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dc0194bfaf1ec5e3120b6bd30eb6b2eb82c6ec2d
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: ca76ffe0c8fa42f1c2cf24fcdefd287140231220
+ms.sourcegitcommit: b5e719fb507b1bc4774674e76c856c435e69f68c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72504731"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73801644"
 ---
-# <a name="set-up-intune-certificate-connector-for-digicert-pki-platform"></a>Konfigurowanie łącznika certyfikatów usługi Intune dla platformy infrastruktury kluczy publicznych firmy DigiCert  
+# <a name="set-up-intune-certificate-connector-for-digicert-pki-platform"></a>Konfigurowanie łącznika certyfikatów usługi Intune dla platformy infrastruktury kluczy publicznych firmy DigiCert
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+Łącznik certyfikatów usługi Intune umożliwia wystawianie certyfikatów PKCS przy użyciu platformy PKI firmy DigiCert dla urządzeń zarządzanych przez usługę Intune. Łącznika można używać tylko z urzędem certyfikacji firmy DigiCert lub zarówno z urzędem certyfikacji firmy DigiCert, jak i urzędem certyfikacji firmy Microsoft.
 
-Łącznik certyfikatów usługi Intune umożliwia wystawianie certyfikatów PKCS przy użyciu platformy PKI firmy DigiCert dla urządzeń zarządzanych przez usługę Intune. Łącznika można używać tylko z urzędem certyfikacji firmy DigiCert lub zarówno z urzędem certyfikacji firmy DigiCert, jak i urzędem certyfikacji firmy Microsoft.  
-> [!TIP]  
+> [!TIP]
 > Firma DigiCert przejęła od firmy Symantec rozwiązania w zakresie zabezpieczania witryn internetowych oraz infrastruktury kluczy publicznych. Aby uzyskać więcej informacji na temat tej zmiany, zobacz [odpowiedni artykuł dotyczący pomocy technicznej firmy Symantec](https://support.symantec.com/en_US/article.INFO4722.html).
 
 Jeśli łącznik certyfikatów usługi Intune jest już używany do wystawiania certyfikatów z urzędu certyfikacji firmy Microsoft przy użyciu protokołu PKCS lub ochrony punktu końcowego programu System Center, można użyć tego samego łącznika do konfigurowania i wystawiania certyfikatów PKCS z urzędu certyfikacji firmy DigiCert. Po zakończeniu konfiguracji w celu obsługi urzędu certyfikacji DigiCert łącznik certyfikatów usługi Intune może wydać następujące certyfikaty:
@@ -41,15 +40,16 @@ Jeśli łącznik certyfikatów usługi Intune jest już używany do wystawiania 
 
 Jeśli nie masz zainstalowanego łącznika, ale planujesz użyć go zarówno dla urzędu certyfikacji firmy Microsoft, jak i urzędu certyfikacji firmy DigiCert, najpierw wykonaj konfigurację łącznika dla urzędu certyfikacji firmy Microsoft. Następnie wróć do tego artykułu, aby skonfigurować łącznik do obsługi firmy DigiCert. Aby uzyskać więcej informacji o profilach certyfikatów i łączniku, zobacz [Konfigurowanie profilu certyfikatu dla urządzeń w usłudze Microsoft Intune](certificates-configure.md).  
 
-Jeśli będziesz używać użyjesz łącznika z tylko urzędem certyfikacji firmy DigiCert, możesz skorzystać z instrukcji przedstawionych w tym artykule, aby zainstalować, a następnie skonfigurować łącznik. 
+Jeśli będziesz używać użyjesz łącznika z tylko urzędem certyfikacji firmy DigiCert, możesz skorzystać z instrukcji przedstawionych w tym artykule, aby zainstalować, a następnie skonfigurować łącznik.
 
-## <a name="prerequisites"></a>Wymagania wstępne  
+## <a name="prerequisites"></a>Wymagania wstępne
+
 - **Aktywna subskrypcja w urzędzie certyfikacji DigiCert**: subskrypcja jest wymagana do uzyskania certyfikatu urzędu rejestrowania z urzędu certyfikacji firmy DigiCert.
 
-## <a name="install-the-digicert-ra-certificate"></a>Instalowanie certyfikatu urzędu rejestrowania firmy DigiCert  
- 
+## <a name="install-the-digicert-ra-certificate"></a>Instalowanie certyfikatu urzędu rejestrowania firmy DigiCert
+
 1. Zapisz następujący fragment kodu w pliku o nazwie **certreq.ini** i zaktualizuj go zgodnie z potrzebami (na przykład: *Subject name in CN format* (Nazwa podmiotu w formacie CN).
- 
+
         [Version] 
         Signature="$Windows NT$" 
         
@@ -81,7 +81,6 @@ Jeśli będziesz używać użyjesz łącznika z tylko urzędem certyfikacji firm
 
 3. Otwórz plik request.csr w programie Notatnik i skopiuj zawartość żądania CSR w następującym formacie:
 
-
         -----BEGIN NEW CERTIFICATE REQUEST-----
         MIID8TCCAtkCAQAwbTEMMAoGA1UEBhMDVVNBMQswCQYDVQQIDAJXQTEQMA4GA1UE
         …
@@ -92,11 +91,11 @@ Jeśli będziesz używać użyjesz łącznika z tylko urzędem certyfikacji firm
 
 4. Zaloguj się do urzędu certyfikacji DigiCert i przejdź do zadania **Get an RA Cert** (Uzyskaj certyfikat RA).
 
-   a. Wklej zawartość żądania CSR uzyskaną w kroku 3 w polu tekstowym. 
+   a. Wklej zawartość żądania CSR uzyskaną w kroku 3 w polu tekstowym.
 
    b. Podaj przyjazną nazwę certyfikatu.
 
-   c. Wybierz pozycję **Continue** (Kontynuuj). 
+   c. Wybierz pozycję **Continue** (Kontynuuj).
 
    d. Użyj podanego linku, aby pobrać certyfikat urzędu rejestrowania na komputer lokalny.
 
@@ -104,23 +103,23 @@ Jeśli będziesz używać użyjesz łącznika z tylko urzędem certyfikacji firm
 
    a. Otwórz konsolę MMC.
 
-   b. Wybierz kolejno opcje **Plik** > **Dodawanie lub usuwanie przystawek** > **Certyfikat** > **Dodaj**. 
+   b. Wybierz kolejno opcje **Plik** > **Dodawanie lub usuwanie przystawek** > **Certyfikat** > **Dodaj**.
 
    c. Wybierz kolejno opcje **Konto komputera** > **Dalej**.
 
-   d. Wybierz kolejno opcje **Komputer lokalny** > **Zakończ**. 
+   d. Wybierz kolejno opcje **Komputer lokalny** > **Zakończ**.
 
    e. W oknie dialogowym **Dodawanie lub usuwanie przystawek** wybierz przycisk **OK**. Rozwiń węzeł **Certyfikaty (Komputer lokalny)**  > **Osobiste** > **Certyfikaty**.
 
-   f. Kliknij prawym przyciskiem myszy węzeł **Certyfikaty**, a następnie wybierz kolejno opcje **Wszystkie zadania** > **Importuj**.  
+   f. Kliknij prawym przyciskiem myszy węzeł **Certyfikaty**, a następnie wybierz kolejno opcje **Wszystkie zadania** > **Importuj**.
 
    g. Wybierz lokalizację certyfikatu urzędu rejestrowania pobranego z urzędu certyfikacji firmy DigiCert i wybierz przycisk **Dalej**.
 
-   h. Wybierz kolejno opcje **Osobisty magazyn certyfikatów** > **Dalej**. 
+   h. Wybierz kolejno opcje **Osobisty magazyn certyfikatów** > **Dalej**.
 
-   i. Wybierz pozycję **Zakończ**, aby zaimportować certyfikat urzędu rejestrowania wraz z kluczem prywatnym do magazynu **Komputer lokalny-Osobiste**.  
+   i. Wybierz pozycję **Zakończ**, aby zaimportować certyfikat urzędu rejestrowania wraz z kluczem prywatnym do magazynu **Komputer lokalny-Osobiste**.
 
-6. Wyeksportuj i zaimportuj certyfikat klucza prywatnego: 
+6. Wyeksportuj i zaimportuj certyfikat klucza prywatnego:
 
    a. Rozwiń węzeł **Certyfikaty (Komputer lokalny)**  > **Osobiste** > **Certyfikaty**.
 
@@ -134,16 +133,17 @@ Jeśli będziesz używać użyjesz łącznika z tylko urzędem certyfikacji firm
 
    f. Wykonaj tę samą procedurę od kroku 5, aby zaimportować certyfikat klucza prywatnego do magazynu **Komputer lokalny-Osobiste**.
 
-   g. Zarejestruj kopię odcisku palca certyfikatu urzędu rejestrowania bez żadnych spacji. Poniżej przedstawiono przykładowy odcisk palca: 
+   g. Zarejestruj kopię odcisku palca certyfikatu urzędu rejestrowania bez żadnych spacji. Poniżej przedstawiono przykładowy odcisk palca:
 
         RA Cert Thumbprint: “EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5”
-    
+
     > [!NOTE]
-    > Aby uzyskać pomoc dotyczącą uzyskiwania certyfikatu urzędu rejestrowania z urzędu certyfikacji DigiCert, skontaktuj się z [działem obsługi klienta firmy DigiCert](mailto:enterprise-pkisupport@digicert.com).  
+    > Aby uzyskać pomoc dotyczącą uzyskiwania certyfikatu urzędu rejestrowania z urzędu certyfikacji DigiCert, skontaktuj się z [działem obsługi klienta firmy DigiCert](mailto:enterprise-pkisupport@digicert.com).
 
 ## <a name="prepare-to-install-intune-certificate-connector"></a>Przygotowanie do instalacji łącznika certyfikatów usługi Intune
-> [!TIP]  
-> Ta sekcja ma zastosowanie w przypadku używania łącznika certyfikatów usługi Intune z tylko urzędem certyfikacji DigiCert. Jeśli używasz łącznika certyfikatów usługi Intune z urzędem certyfikacji firmy Microsoft i chcesz dodać obsługę urzędu certyfikacji DigiCert, przejdź do sekcji [Konfigurowanie łącznika do obsługi urzędu certyfikacji DigiCert](#configure-the-connector-to-support-digicert).  
+
+> [!TIP]
+> Ta sekcja ma zastosowanie w przypadku używania łącznika certyfikatów usługi Intune z tylko urzędem certyfikacji DigiCert. Jeśli używasz łącznika certyfikatów usługi Intune z urzędem certyfikacji firmy Microsoft i chcesz dodać obsługę urzędu certyfikacji DigiCert, przejdź do sekcji [Konfigurowanie łącznika do obsługi urzędu certyfikacji DigiCert](#configure-the-connector-to-support-digicert).
 
 1. Wybierz jedną z wersji systemu operacyjnego Windows z listy poniżej i zainstaluj ją na komputerze:
    * Windows Server 2012 R2 Datacenter
@@ -159,31 +159,31 @@ Jeśli będziesz używać użyjesz łącznika z tylko urzędem certyfikacji firm
 
    a. Wybierz kolejno opcje **Panel sterowania** > **Programy i funkcje** > **Włącz lub wyłącz funkcje systemu Windows**.
 
-   b. Wybierz pozycję **.NET Framework 3.5** i zainstaluj program.  
+   b. Wybierz pozycję **.NET Framework 3.5** i zainstaluj program.
 
-## <a name="install-intune-certificate-connector-for-use-with-digicert"></a>Instalowanie łącznika certyfikatów usługi Intune do obsługi urzędu certyfikacji DigiCert  
+## <a name="install-intune-certificate-connector-for-use-with-digicert"></a>Instalowanie łącznika certyfikatów usługi Intune do obsługi urzędu certyfikacji DigiCert
 
-> [!TIP]  
-> Jeśli używasz łącznika certyfikatów usługi Intune z urzędem certyfikacji firmy Microsoft i chcesz dodać obsługę urzędu certyfikacji DigiCert, przejdź do sekcji [Konfigurowanie łącznika do obsługi urzędu certyfikacji DigiCert](#configure-the-connector-to-support-digicert).  
+> [!TIP]
+> Jeśli używasz łącznika certyfikatów usługi Intune z urzędem certyfikacji firmy Microsoft i chcesz dodać obsługę urzędu certyfikacji DigiCert, przejdź do sekcji [Konfigurowanie łącznika do obsługi urzędu certyfikacji DigiCert](#configure-the-connector-to-support-digicert).
 
 Pobierz najnowszy łącznik certyfikatów usługi Intune z portalu administracyjnego usługi Intune i wykonaj poniższe instrukcje.
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).  
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Wybierz kolejno pozycje **Konfiguracja urządzeń** > **Łączniki certyfikatów** >  **+ Dodaj**.  
+2. Wybierz pozycję **Administracja dzierżawą** > **Łączniki i tokeny** > **Łączniki certyfikatu** >  **+ Dodaj**.
 
-3. Wybierz pozycję **Pobierz oprogramowanie łącznika certyfikatów**. Zapisz oprogramowanie w lokalizacji dostępnej z serwera, na którym ma ono zostać zainstalowane.  
+3. Kliknij pozycję *Pobierz oprogramowanie łącznika certyfikatów* dla łącznika standardów PKCS #12, a następnie zapisz plik łącznika w lokalizacji dostępnej z serwera, na którym ma zostać zainstalowany łącznik.
 
    ![Pobieranie oprogramowania łącznika](./media/certificates-digicert-configure/connector-download.png)
-   
-4. Na serwerze, na którym chcesz zainstalować łącznik, uruchom plik **NDESConnectorSetup.exe** z podwyższonym poziomem uprawnień. 
 
-5. Na stronie **Opcje instalacji** wybierz pozycję **Dystrybucja PFX**.  
-   
+4. Na serwerze, na którym chcesz zainstalować łącznik, uruchom plik **NDESConnectorSetup.exe** z podwyższonym poziomem uprawnień.
+
+5. Na stronie **Opcje instalacji** wybierz pozycję **Dystrybucja PFX**.
+
    ![Wybieranie pozycji Dystrybucja PFX](./media/certificates-digicert-configure/digicert-ca-connector-install.png)
 
    > [!IMPORTANT]
-   > Jeśli chcesz skonfigurować łącznik certyfikatów usługi Intune do wystawiania certyfikatów z urzędu certyfikacji firmy Microsoft oraz urzędu certyfikacji firmy DigiCert, wybierz pozycję **Dystrybucja profilów SCEP i PFX**. 
+   > Jeśli chcesz skonfigurować łącznik certyfikatów usługi Intune do wystawiania certyfikatów z urzędu certyfikacji firmy Microsoft oraz urzędu certyfikacji firmy DigiCert, wybierz pozycję **Dystrybucja profilów SCEP i PFX**.
 
 6. Użyj opcji domyślnych, aby ukończyć konfigurowanie łącznika.
 
@@ -197,7 +197,7 @@ Domyślnie łącznik certyfikatów usługi Intune jest instalowany w ścieżce *
 
         <add key="RACertThumbprint"
         value="EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"/>
-   
+
    b. Zapisz i zamknij plik.
 
 2. Otwórz plik **services.msc**:
@@ -210,20 +210,18 @@ Domyślnie łącznik certyfikatów usługi Intune jest instalowany w ścieżce *
 
 ## <a name="set-up-the-intune-administrator-account"></a>Konfigurowanie konta administratora usługi Intune  
 
-> [!TIP]  
-> Jeśli używasz łącznika certyfikatów usługi Intune z urzędem certyfikacji firmy Microsoft i chcesz dodać obsługę urzędu certyfikacji DigiCert, przejdź do sekcji [Tworzenie profilu zaufanego certyfikatu](#create-a-trusted-certificate-profile).   
+> [!TIP]
+> Jeśli używasz łącznika certyfikatów usługi Intune z urzędem certyfikacji firmy Microsoft i chcesz dodać obsługę urzędu certyfikacji DigiCert, przejdź do sekcji [Tworzenie profilu zaufanego certyfikatu](#create-a-trusted-certificate-profile).
  
-1. Otwórz interfejs użytkownika łącznika usługi NDES z pliku **%ProgramFiles%\Microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe**.  
+1. Otwórz interfejs użytkownika łącznika usługi NDES z pliku **%ProgramFiles%\Microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe**.
 
 2. Na karcie **Rejestracja** wybierz pozycję **Zaloguj się**.
 
 3. Podaj poświadczenia administratora dzierżawy usługi Intune.
 
 4. Wybierz pozycję **Zaloguj się**, a następnie wybierz pozycję **OK**, aby potwierdzić pomyślną rejestrację. Zamknij interfejs użytkownika łącznika usługi NDES.
-   
+
    ![Interfejs łącznika usługi NDES z komunikatem o pomyślnym zarejestrowaniu](./media/certificates-digicert-configure/certificates-digicert-configure-connector-configure.png)
-
-
 
 ## <a name="create-a-trusted-certificate-profile"></a>Tworzenie profilu zaufanego certyfikatu
 
@@ -231,36 +229,37 @@ Certyfikaty PKCS wdrożone dla urządzeń zarządzanych przez usługę Intune mu
 
 1. Pobierz zaufany certyfikat główny z urzędu certyfikacji firmy DigiCert:
 
-    a. Zaloguj się do portalu administracyjnego urzędu certyfikacji DigiCert.
+   a. Zaloguj się do portalu administracyjnego urzędu certyfikacji DigiCert.
 
-    b. Wybierz pozycję **Manage CAs** (Zarządzaj urzędami certyfikacji) w obszarze **Tasks** (Zadania). 
+   b. Wybierz pozycję **Manage CAs** (Zarządzaj urzędami certyfikacji) w obszarze **Tasks** (Zadania).
 
-    c. Wybierz z listy odpowiedni urząd certyfikacji.  
+   c. Wybierz z listy odpowiedni urząd certyfikacji.
 
-    d. Kliknij opcję **Download root certificate** (Pobierz certyfikat główny), aby pobrać zaufany certyfikat główny.
+   d. Kliknij opcję **Download root certificate** (Pobierz certyfikat główny), aby pobrać zaufany certyfikat główny.
 
 2. Utwórz profil zaufanego certyfikatu w portalu usługi Intune:
 
-   a. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+   a. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-   b. Wybierz pozycję **Konfiguracja urządzenia** > **Zarządzaj** > **Profile** > **Utwórz profil**.
+   b. Wybierz pozycję **Urządzenia** > **Profile konfiguracji** > **Utwórz profil**.
 
-   c. Wypełnij pola **Nazwa** i **Opis** dla profilu zaufanego certyfikatu.
+   c. Wprowadź następujące właściwości:
 
-   d. Z listy rozwijanej **Platforma** wybierz platformę urządzenia dla danego zaufanego certyfikatu.
+      - **Nazwa** profilu
+      - Opcjonalnie ustaw **opis**
+      - **Platforma**, na której ma być wdrożony profil
+      - Ustaw wartość pola **Typ profilu** na **Zaufany certyfikat**
 
-   e. Z listy rozwijanej **Typ profilu** wybierz pozycję **Certyfikat zaufany**.
+   d. Wybierz pozycję **Ustawienia**, a następnie przejdź do pliku CER certyfikatu zaufanego głównego urzędu certyfikacji, który został wyeksportowany do użycia z tym profilem certyfikatu, i wybierz przycisk **OK**.
 
-   f. Przejdź do pliku CER zaufanego głównego urzędu certyfikacji uzyskanego w urzędzie certyfikacji DigiCert w poprzednim kroku, a następnie wybierz pozycję **OK**.
+   e. Dotyczy wyłącznie urządzeń z systemem Windows 8.1 i Windows 10: wybierz dla zaufanego certyfikatu **magazyn docelowy** spośród wymienionych poniżej:
+      - **Magazyn certyfikatów komputera — główny**
+      - **Magazyn certyfikatów komputera — pośredni**
+      - **Magazyn certyfikatów użytkownika — pośredni**
 
-   g. Dotyczy wyłącznie urządzeń z systemem Windows 8.1 i Windows 10: wybierz dla zaufanego certyfikatu magazyn docelowy spośród wymienionych poniżej:    
-      - **Magazyn certyfikatów komputera — główny**  
-      - **Magazyn certyfikatów komputera — pośredni**  
-      - **Magazyn certyfikatów użytkownika — pośredni** 
+   f. Gdy skończysz, wybierz opcję **OK**, wróć do okienka **Tworzenie profilu** i wybierz pozycję **Utwórz**.  
 
-   h. Gdy skończysz, wybierz opcję **OK**, wróć do okienka **Tworzenie profilu** i wybierz pozycję **Utwórz**.  
- 
-Profil zostanie wyświetlony na liście profilów w okienku **Konfiguracja urządzenia — Profile** z typem profilu **Certyfikat zaufany**.  Przypisz ten profil do urządzeń, które będą otrzymywały certyfikaty. Aby przypisać profil do grup, zobacz [Przypisywanie profilów urządzeń](../configuration/device-profile-assign.md).
+  Profil zostanie wyświetlony na liście profilów w okienku **Konfiguracja urządzenia — Profile** z typem profilu **Certyfikat zaufany**.  Przypisz ten profil do urządzeń, które będą otrzymywały certyfikaty. Aby przypisać profil do grup, zobacz [Przypisywanie profilów urządzeń](../configuration/device-profile-assign.md).
 
 
 ## <a name="get-the-certificate-profile-oid"></a>Pobieranie identyfikatora OID profilu certyfikatu  
@@ -272,40 +271,40 @@ Identyfikator OID profilu certyfikatu jest skojarzony z szablonem profilu certyf
 3. Wybierz profil certyfikatu, którego chcesz użyć.
 4. Skopiuj identyfikator OID profilu certyfikatu. Będzie on podobny do poniższego przykładu:
 
- 
        Certificate Profile OID = 2.16.840.1.113733.1.16.1.2.3.1.1.47196109 
- 
 
 > [!NOTE]
 > Jeśli potrzebujesz pomocy w celu uzyskania identyfikatora OID profilu certyfikatu, skontaktuj się z [obsługą klienta firmy DigiCert](mailto:enterprise-pkisupport@digicert.com).
 
 ## <a name="create-a-pkcs-certificate-profile"></a>Tworzenie profilu certyfikatu PKCS
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).  
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Przejdź do pozycji **Konfiguracja urządzeń** >  **Profile** i wybierz pozycję **Utwórz profil**.
+2. Wybierz pozycję **Urządzenia** > **Profile konfiguracji** > **Utwórz profil**.
 
-3. Wypełnij pola **Nazwa** i **Opis** dla profilu certyfikatu PKCS.  
+3. Wprowadź następujące właściwości:
 
-4. Z listy rozwijanej **Platforma** wybierz obsługiwaną platformę urządzenia.
+   - **Nazwa** profilu
+   - Opcjonalnie ustaw **opis**
+   - **Platforma**, na której ma być wdrożony profil
+   - Ustaw wartość pola **Typ profilu** na **Certyfikat PKCS**
 
-5. Z listy rozwijanej **Typ profilu** wybierz pozycję **Certyfikat PKCS**.
- 
-6. W okienku **Certyfikat PKCS** skonfiguruj parametry, korzystając z wartości z poniższej tabeli. Te wartości są wymagane do wystawiania certyfikatów PKCS z urzędu certyfikacji DigiCert za pośrednictwem łącznika certyfikatów usługi Intune. 
+4. W okienku **Certyfikat PKCS** skonfiguruj parametry, korzystając z wartości z poniższej tabeli. Te wartości są wymagane do wystawiania certyfikatów PKCS z urzędu certyfikacji DigiCert za pośrednictwem łącznika certyfikatów usługi Intune.
 
    |Parametr certyfikatu PKCS | Wartość | Opis |
    | --- | --- | --- |
    | Urząd certyfikacji | pki-ws.symauth.com | Ta wartość musi być nazwą FQDN usługi podstawowej urzędu certyfikacji firmy DigiCert bez końcowych ukośników. Jeśli nie masz pewności, czy jest to prawidłowa nazwa FQDN usługi podstawowej dla Twojej subskrypcji urzędu certyfikacji firmy DigiCert, skontaktuj się z pomocą techniczną tej firmy. <br><br>*Po zmianie z Symantec na DigiCert ten adres URL pozostaje niezmieniony*. <br><br> Jeśli ta nazwa FQDN będzie niepoprawna, łącznik certyfikatów usługi Intune nie będzie wystawiać certyfikatów PKCS z urzędu certyfikacji firmy DigiCert.| 
    | Nazwa urzędu certyfikacji | Symantec | Ta wartość musi być ciągiem **Symantec**. <br><br> Jeśli ta wartość zostanie zmieniona, łącznik certyfikatów usługi Intune nie będzie wystawiać certyfikatów PKCS z urzędu certyfikacji firmy DigiCert.|
-   | Nazwa szablonu certyfikatu | Identyfikator OID profilu certyfikatu z urzędu certyfikacji firmy DigiCert. Przykład: **2.16.840.1.113733.1.16.1.2.3.1.1.61904612**| Tą wartością musi być identyfikator OID profilu certyfikatu [uzyskany w poprzedniej sekcji](#get-the-certificate-profile-oid) z szablonu profilu certyfikatu urzędu certyfikacji firmy DigiCert. <br><br> Jeśli łącznik certyfikatów usługi Intune nie będzie mógł odnaleźć szablonu certyfikatu skojarzonego z tym identyfikatorem OID profilu certyfikatu w urzędzie certyfikacji firmy DigiCert, nie będzie wystawiać certyfikatów PKCS z urzędu certyfikacji firmy DigiCert.|  
+   | Nazwa szablonu certyfikatu | Identyfikator OID profilu certyfikatu z urzędu certyfikacji firmy DigiCert. Przykład: **2.16.840.1.113733.1.16.1.2.3.1.1.61904612**| Tą wartością musi być identyfikator OID profilu certyfikatu [uzyskany w poprzedniej sekcji](#get-the-certificate-profile-oid) z szablonu profilu certyfikatu urzędu certyfikacji firmy DigiCert. <br><br> Jeśli łącznik certyfikatów usługi Intune nie będzie mógł odnaleźć szablonu certyfikatu skojarzonego z tym identyfikatorem OID profilu certyfikatu w urzędzie certyfikacji firmy DigiCert, nie będzie wystawiać certyfikatów PKCS z urzędu certyfikacji firmy DigiCert.|
 
-   ![Opcje wyboru urzędu certyfikacji i szablonu certyfikatu](./media/certificates-digicert-configure/certificates-digicert-pkcs-example.png)  
+   ![Opcje wyboru urzędu certyfikacji i szablonu certyfikatu](./media/certificates-digicert-configure/certificates-digicert-pkcs-example.png)
 
    > [!NOTE]
    > Profil certyfikatu PKCS dla platform systemu Windows nie musi być skojarzony z profilem zaufanego certyfikatu. Jest to jednak wymagane dla profilów platform innych niż system Windows, np. dla systemu Android.
-7. Skonfiguruj profil tak, aby zaspokajał Twoje potrzeby biznesowe, a następnie wybierz przycisk **OK**, aby go zapisać. 
 
-8. Wybierz pozycję **Przypisania** i skonfiguruj odpowiednią grupę, która będzie otrzymywać ten profil. Do przypisanej grupy musi należeć co najmniej jeden użytkownik lub jedno urządzenie.
+5. Skonfiguruj profil tak, aby zaspokajał Twoje potrzeby biznesowe, a następnie wybierz przycisk **Utwórz**, aby go zapisać.
+
+6. Na stronie *przeglądu* nowego profilu wybierz pozycję **Przypisania** i skonfiguruj odpowiednią grupę, która będzie otrzymywać ten profil. Do przypisanej grupy musi należeć co najmniej jeden użytkownik lub jedno urządzenie.
  
 Po wykonaniu poprzednich kroków łącznik certyfikatów usługi Intune będzie wystawiać certyfikaty PKCS z urzędu certyfikacji firmy DigiCert dla urządzeń zarządzanych przez usługę Intune w przypisanej grupie. Te certyfikaty będą dostępne w magazynie **osobistym** magazynu certyfikatów **bieżącego użytkownika** na urządzeniu zarządzanym przez usługę Intune.
 
@@ -322,7 +321,7 @@ Dzienniki usługi łącznika certyfikatów w usłudze Intune są dostępne w fol
 
 | Komunikat o problemie/błędzie | Kroki umożliwiające rozwiązanie problemów |
 | --- | --- |
-| Nie można zalogować się do konta administratora dzierżawy usługi Intune w interfejsie użytkownika łącznika usługi NDES. | Może się to zdarzyć, gdy lokalny łącznik certyfikatów nie został włączony w portalu administracyjnym usługi Intune. Aby rozwiązać ten problem, użyj jednej z następujących procedur: <br><br> W interfejsie użytkownika programu Silverlight: <br> 1. Zaloguj się do [portalu administracyjnego usługi Intune](https://admin.manage.microsoft.com). <br> 2. Wybierz pozycję **ADMINISTRATOR**. <br> 3. Wybierz kolejno pozycje **Zarządzanie urządzeniami przenośnymi** > **Łącznik certyfikatów**. <br> 4. Wybierz pozycję **Skonfiguruj lokalny łącznik certyfikatów**. <br> 5. Zaznacz pole wyboru **Włącz łącznik certyfikatów**. <br> 6. Wybierz przycisk **OK**. <br><br> W interfejsie użytkownika witryny Azure Portal: <br> 1. Zaloguj się do [portalu Azure](https://portal.azure.com). <br> 2. Przejdź do usługi Microsoft Intune. <br> 3. Wybierz kolejno pozycje **Konfiguracja urządzeń** > **Urząd certyfikacji**. <br> 4. Wybierz pozycję **Włącz**. <br><br> Po wykonaniu poprzednich kroków w interfejsie użytkownika programu Silverlight lub w witrynie Azure Portal spróbuj zalogować się do tego samego konta administratora dzierżawy usługi Intune w interfejsie użytkownika łącznika usługi NDES. |
+| Nie można zalogować się do konta administratora dzierżawy usługi Intune w interfejsie użytkownika łącznika usługi NDES. | Może się tak zdarzyć, jeśli lokalny łącznik certyfikatów nie został włączony w centrum administracyjnym programu Microsoft Endpoint Manager. Aby rozwiązać ten problem: <br><br> 1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). <br> 2. Wybierz pozycję **Administracja dzierżawą** > **Łączniki i tokeny** > **Łączniki certyfikatu**. <br> 3. Zlokalizuj łącznik certyfikatu i upewnij się, że został włączony. <br><br> Po wykonaniu poprzednich kroków spróbuj zalogować się do tego samego konta administratora dzierżawy usługi Intune w interfejsie użytkownika łącznika usługi NDES. |
 | Nie można odnaleźć certyfikatu łącznika usługi NDES. <br><br> System.ArgumentNullException: Wartość nie może być równa null. | Łącznik certyfikatów usługi Intune wyświetla ten błąd, jeśli konto administratora dzierżawy usługi Intune nigdy nie zostało użyte do logowania do interfejsu użytkownika łącznika usługi NDES. <br><br> Jeśli ten błąd będzie nadal występować, uruchom ponownie łącznik usługi Intune. <br><br> 1. Otwórz program **services.msc**. <br> 2. Wybierz opcję **Usługa łącznika usługi Intune**. <br> 3. Kliknij prawym przyciskiem myszy i wybierz polecenie **Uruchom ponownie**.|
 | Łącznik usługi NDES — IssuePfx — Wyjątek ogólny: <br> System.NullReferenceException: odwołanie obiektu nie zostało ustawione na wystąpienie obiektu. | Ten błąd jest przejściowy. Uruchom ponownie łącznik usługi Intune. <br><br> 1. Otwórz program **services.msc**. <br> 2. Wybierz opcję **Usługa łącznika usługi Intune**. <br> 3. Kliknij prawym przyciskiem myszy i wybierz polecenie **Uruchom ponownie**. |
 | Dostawca DigiCert — nie można pobrać zasad DigiCert. <br><br>„Upłynął limit czasu operacji”. | Łącznik certyfikatów usługi Intune odebrał błąd limitu czasu operacji podczas komunikacji z urzędem certyfikacji firmy DigiCert. Jeśli ten błąd będzie nadal występować, zwiększ wartość limitu czasu połączenia i spróbuj ponownie. <br><br> Aby zwiększyć limit czasu połączenia: <br> 1. Przejdź do komputera z łącznikiem usługi NDES. <br>2. Otwórz plik **%ProgramFiles%\Microsoft Intune\NDESConnectorSvc\NDESConnector.exe.config** w Notatniku. <br> 3. Zwiększ wartość limitu czasu dla następującego parametru: <br><br> `CloudCAConnTimeoutInMilliseconds` <br><br> 4. Uruchom ponownie usługę łącznika certyfikatów usługi Intune. <br><br> Jeśli problem będzie nadal występować, skontaktuj się z pomocą techniczną firmy DigiCert. |
@@ -336,4 +335,3 @@ Dzienniki usługi łącznika certyfikatów w usłudze Intune są dostępne w fol
 ## <a name="next-steps"></a>Następne kroki
 
 Informacje zawarte w tym artykule oraz w temacie [Co to są profile urządzeń w usłudze Microsoft Intune?](../configuration/device-profiles.md) są przydatne podczas zarządzania urządzeniami w organizacji oraz ich certyfikatami.
-

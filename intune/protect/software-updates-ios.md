@@ -13,12 +13,12 @@ ms.localizationpriority: high
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ada1f6e5292684803fbea40430cdd43d61796746
-ms.sourcegitcommit: 1a5b185acd27954b10b6d59409d82eb80fd71284
+ms.openlocfilehash: 0f9750603d19d9b19697c7d2660351c4586432f6
+ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72681355"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73984193"
 ---
 # <a name="add-ios-software-update-policies-in-intune"></a>Dodawanie zasad aktualizacji oprogramowania dla systemu iOS w usłudze Intune
 
@@ -28,7 +28,7 @@ Ta funkcja ma zastosowanie do:
 
 - systemu iOS w wersji 10.3 lub nowszej (w trybie nadzorowanym)
 
-Urządzenie sprawdza zasady usługi Intune miej więcej co 8 godzin. Jeśli dostępna jest aktualizacja, urządzenie pobierze ją i zainstaluje. Procedura nie zostanie przeprowadzona w ograniczonych godzinach. Aktualizacja urządzenia nie wymaga interakcji użytkownika. Zasady nie uniemożliwiają użytkownikom ręcznego aktualizowania systemu operacyjnego.
+Urządzenie sprawdza zasady usługi Intune miej więcej co 8 godzin. Jeśli dostępna jest aktualizacja, urządzenie pobierze ją i zainstaluje. Procedura nie zostanie przeprowadzona w ograniczonych godzinach. Chociaż proces aktualizacji nie obejmuje zwykle żadnej interakcji z użytkownikiem, jeśli urządzenie ma kod dostępu, użytkownik będzie musiał wprowadzić go w celu rozpoczęcia aktualizacji oprogramowania. Dotyczy to systemu iOS 10.3 i jego nowszych wersji. Zasady nie uniemożliwiają użytkownikom ręcznego aktualizowania systemu operacyjnego.
 
 ## <a name="configure-the-policy"></a>Konfigurowanie zasad
 

@@ -1,7 +1,7 @@
 ---
 title: Wyjątki od zasad transferu danych dla aplikacji
 titleSuffix: Microsoft Intune
-description: Tworzenie wyjątków od zasad transferu danych zarządzania aplikacjami mobilnymi (MAM, Mobile Application Management) w usłudze Intune.
+description: Utwórz wyjątki dla zasad transferu danych zasad ochrony aplikacji usługi Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6453f5b5886c5691383bc81fb76598146e884e0e
-ms.sourcegitcommit: 25acfc88b366d2da71c37d354a0238e4f1168325
+ms.openlocfilehash: 18b1b8feda00f5c669b39bc365c637dcd3968078
+ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72813330"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73984068"
 ---
-# <a name="how-to-create-exceptions-to-the-intune-mobile-application-management-mam-data-transfer-policy"></a>Jak utworzyć wyjątki od zasad transferu danych zarządzania aplikacjami mobilnymi (MAM) w usłudze Intune
+# <a name="how-to-create-exceptions-to-the-intune-app-protection-policy-app-data-transfer-policy"></a>Jak utworzyć wyjątki dla zasad transferu danych zasad ochrony aplikacji usługi Intune
 
-Jako administrator możesz tworzyć wyjątki od zasad transferu danych zarządzania aplikacjami mobilnymi (MAM, Mobile Application Management) w usłudze Intune. Wyjątek pozwala wybrać konkretne niezarządzane aplikacje, które mogą przesyłać dane do i z zarządzanych aplikacji. Niezarządzane aplikacje, które są dodawane do listy wyjątków, muszą być uznane za zaufane przez dział IT. 
+Jako administrator możesz tworzyć wyjątki dotyczące zasad transferu danych zasad ochrony aplikacji usługi Intune. Wyjątek pozwala wybrać konkretne niezarządzane aplikacje, które mogą przesyłać dane do i z zarządzanych aplikacji. Niezarządzane aplikacje, które są dodawane do listy wyjątków, muszą być uznane za zaufane przez dział IT. 
 
 >[!WARNING] 
 > Użytkownik jest odpowiedzialny za wprowadzanie zmian w zasadach wyjątków transferu danych. Dodatki do tych zasad umożliwiają niezarządzanym aplikacjom (aplikacjom, które nie są zarządzane przez usługę Intune) dostęp do danych chronionych przez aplikacje zarządzane. Ten dostęp do chronionych danych może spowodować przecieki zabezpieczeń danych. Wyjątki transferu danych należy dodawać tylko dla aplikacji, których organizacja musi używać, ale które nie obsługują zasad ochrony aplikacji usługi Intune. Ponadto wyjątki należy dodawać tylko dla aplikacji, w przypadku których uznano, że nie powodują ryzyka wycieku danych.
@@ -65,6 +65,8 @@ Po dodaniu pakietu **Webex** jako wyjątku do zasad transferu danych funkcji MAM
     <code>com.android.mms</code>
     
     <code>com.samsung.android.messaging</code>
+
+- Przykład **instalatora certyfikatu** w systemie Android: Aby zwolnić natywną aplikację **Instalator certyfikatu** i umożliwić instalowanie przez program Outlook dla systemu Android certyfikatu S/MIME (dostarczanego jako załącznik wiadomości e-mail) do magazynu kluczy systemu Android, należy dodać wyjątek transferu danych dla następującego ciągu: <code>com.android.certinstaller</code>. Aby uzyskać więcej informacji, zobacz temat [Sensitivity labeling and protection in Outlook for iOS and Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/sensitive-labeling-and-protection-outlook-for-ios-android) (Etykietowanie i ochrona poufności w programie Outlook dla systemów iOS i Android).
 
 ## <a name="next-steps"></a>Następne kroki
 

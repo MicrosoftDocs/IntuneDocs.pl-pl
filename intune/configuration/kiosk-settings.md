@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/22/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 271b49a4c927bccb5cd967ea99b0d7bd5c2bd515
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: b7d09700847eae6a43111b0a4e865522f01862b9
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72492356"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755166"
 ---
 # <a name="windows-10-and-windows-holographic-for-business-device-settings-to-run-as-a-dedicated-kiosk-using-intune"></a>Ustawienia urządzenia z systemem Windows 10 i Windows Holographic for Business, które ma działać jako dedykowany kiosk przy użyciu usługi Intune
 
@@ -28,19 +28,19 @@ Na urządzeniach z systemem Windows 10 możesz użyć usługi Intune, aby urucha
 
 Ta funkcja ma zastosowanie do urządzeń z systemem:
 
-- System Windows 10 lub nowszy
+- Windows 10 lub nowszym
 - Windows Holographic for Business
 
 Usługa Intune obsługuje jeden profil kiosku na urządzenie. Jeśli potrzebujesz wielu profilów kiosku w jednym urządzeniu, możesz użyć [niestandardowego identyfikatora OMA-URI](custom-settings-windows-10.md).
 
 „Profile konfiguracji” są używane w usłudze Intune do tworzenia i dostosowywania tych ustawień na potrzeby organizacji. Po dodaniu tych funkcji w profilu należy wypchnąć lub wdrożyć te ustawienia do grup w organizacji.
 
-W tym artykule przedstawiono sposób tworzenia profilu konfiguracji urządzenia. Aby uzyskać listę wszystkich ustawień i ich zadań, zobacz tematy [Windows 10 kiosk settings](kiosk-settings-windows.md) (Ustawienia kiosku systemu Windows 10) i [Windows Holographic for Business kiosk settings](kiosk-settings-holographic.md) (Ustawienia kiosku systemu Windows Holographic for Business).
+W tym artykule przedstawiono sposób tworzenia profilu konfiguracji urządzenia. Aby uzyskać listę wszystkich ustawień i ich zadań, zobacz tematy [Ustawienia kiosku systemu Windows 10](kiosk-settings-windows.md) i [Ustawienia kiosku systemu Windows Holographic for Business](kiosk-settings-holographic.md).
 
 ## <a name="create-the-profile"></a>Tworzenie profilu
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Wybierz kolejno pozycje **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz pozycję **Urządzenia** > **Profile konfiguracji** > **Utwórz profil**.
 3. Wprowadź następujące właściwości:
 
    - **Nazwa**: Wprowadź opisową nazwę nowego profilu.
@@ -57,10 +57,10 @@ W tym artykule przedstawiono sposób tworzenia profilu konfiguracji urządzenia.
         Korzyści z kiosku z wieloma aplikacjami (czyli urządzenia o stałym przeznaczeniu) polegają na udostępnieniu użytkownikom łatwego do poznania środowiska, w którym są dostępne tylko potrzebne im aplikacje. Aplikacje, których użytkownicy nie potrzebują, są usuwane z widoku.
 
     Listę wszystkich ustawień i ich zadań można znaleźć w temacie:
-      - [Windows 10 kiosk settings](kiosk-settings-windows.md) (Ustawienia kiosku systemu Windows 10)
-      - [Windows Holographic for Business kiosk settings](kiosk-settings-holographic.md) (Ustawienia kiosku systemu Windows Holographic for Business)
+      - [Ustawienia kiosku systemu Windows 10](kiosk-settings-windows.md)
+      - [Ustawienia kiosku systemu Windows Holographic for Business](kiosk-settings-holographic.md)
 
-5. Po zakończeniu wybierz kolejno pozycje **OK** > **Utwórz**, aby zapisać zmiany. 
+5. Po zakończeniu wybierz kolejno pozycje **OK** > **Utwórz**, aby zapisać zmiany.
 
 Profil zostanie utworzony i wyświetlony na liście profilów. Teraz należy [przypisać](device-profile-assign.md) profil.
 

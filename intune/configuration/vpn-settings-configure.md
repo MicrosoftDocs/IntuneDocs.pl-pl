@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/04/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5628ba39cafe38cc66827d69584d009c15326bd4
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 59a1b5679b81a8de90e39d6ec13bbe87dac90947
+ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72491751"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73984168"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Tworzenie profilów sieci VPN w celu nawiązania połączenia z serwerami sieci VPN w usłudze Intune
 
@@ -50,7 +50,7 @@ Możesz utworzyć profile sieci VPN, korzystając z następujących typów poł�
 |Check Point Capsule VPN|— Android<br/>— Profile służbowe w systemie Android Enterprise<br/>— iOS<br/>— macOS<br/>— Windows 10<br/>— Windows 8.1<br/>— Windows Phone 8.1|
 |Cisco AnyConnect|— Android<br/>— Profile służbowe w systemie Android Enterprise<br/>— Właściciel urządzenia z systemem Android Enterprise (w pełni zarządzanego)<br/>— iOS<br/>— macOS|
 |Cisco (IPSec)|iOS|
-|Citrix SSO|— Android<br/>— Profile służbowe w systemie Android Enterprise: Użyj [zasad konfigurowaniai aplikacji](../apps/app-configuration-policies-use-android.md)<br/>— iOS<br/>— Windows 10|
+|Citrix SSO|— Android<br/>— Profile służbowe w systemie Android Enterprise: Użyj [zasad konfigurowaniai aplikacji](../apps/app-configuration-policies-use-android.md)<br/>— Właściciel urządzenia z systemem Android Enterprise (w pełni zarządzanego): Użyj [zasad konfigurowaniai aplikacji](../apps/app-configuration-policies-use-android.md)<br/>— iOS<br/>— Windows 10|
 |Niestandardowa sieć VPN|— iOS<br/>— macOS|
 |F5 Access|— Android<br/>— Profile służbowe w systemie Android Enterprise<br/>— Właściciel urządzenia z systemem Android Enterprise (w pełni zarządzanego)<br/>— iOS<br/>— macOS<br/>— Windows 10<br/>— Windows 8.1<br/>— Windows Phone 8.1|
 |IKEv2| — iOS<br/>— Windows 10|
@@ -68,8 +68,9 @@ Zapoznaj się z artykułem [Tworzenie profilu za pomocą ustawień niestandardow
 
 ## <a name="create-a-device-profile"></a>Tworzenie profilu urządzenia
 
-1. W usłudze [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) wybierz kolejno pozycje **Konfiguracja urządzenia** > **Profile** > **Utwórz profil**.
-2. Wprowadź następujące właściwości:
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz pozycję **Urządzenia** > **Profile konfiguracji** > **Utwórz profil**.
+3. Wprowadź następujące właściwości:
 
     - **Nazwa**: Wprowadź opisową nazwę profilu. Nadaj nazwę profilom, aby można było je później łatwo rozpoznać. For example, a good profile name is **VPN profile for entire company**.
     - **Opis**: Wprowadź opis profilu. To ustawienie jest opcjonalne, ale zalecane.
@@ -86,7 +87,7 @@ Zapoznaj się z artykułem [Tworzenie profilu za pomocą ustawień niestandardow
 
     - **Typ profilu**: Wybierz pozycję **Sieć VPN**.
 
-3. Ustawienia, które można skonfigurować, różnią się w zależności od wybranej platformy. Szczegółowe ustawienia dla poszczególnych platform można znaleźć w następujących artykułach:
+4. Ustawienia, które można skonfigurować, różnią się w zależności od wybranej platformy. Szczegółowe ustawienia dla poszczególnych platform można znaleźć w następujących artykułach:
 
     - [Ustawienia systemu Android](vpn-settings-android.md)
     - [Ustawienia systemu Android Enterprise](vpn-settings-android-enterprise.md)
@@ -96,7 +97,7 @@ Zapoznaj się z artykułem [Tworzenie profilu za pomocą ustawień niestandardow
     - [Ustawienia systemu Windows 8.1](vpn-settings-windows-8-1.md)
     - [Ustawienia systemu Windows 10](vpn-settings-windows-10.md) (w tym systemu Windows Holographic for Business)
 
-4. Gdy wszystko będzie gotowe, **utwórz** profil.
+5. Po zakończeniu wybierz kolejno pozycje **OK** > **Utwórz**, aby zapisać zmiany.
 
 Profil zostanie utworzony i wyświetlony na liście profilów. Aby przypisać ten profil do grup, zobacz [przypisywanie profilów urządzeń](device-profile-assign.md).
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3ee68392feaa59ef5207edce75250e539407273b
-ms.sourcegitcommit: 8c25aeefb7cbc6444a8596af22fccd1c5426877a
+ms.openlocfilehash: 890709ccf176f2b0cc6c4a3af986d1bce642572d
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72593689"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73754406"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Zarządzanie dostępem do Internetu przy użyciu przeglądarki Microsoft Edge w usłudze Microsoft Intune
 
@@ -106,7 +106,7 @@ Aby utworzyć konfigurację aplikacji na potrzeby przeglądarki Microsoft Edge:
 7. Wybierz pozycję **Ustawienia konfiguracji**. W bloku **Konfiguracja** należy zdefiniować pary kluczy i wartości do dostarczania konfiguracji dla przeglądarki Microsoft Edge. Informacje na temat różnych par kluczy i wartości, które można zdefiniować, znajdują się w dalszych sekcjach tego artykułu.
 
     > [!NOTE]
-    > Aplikacja Microsoft Edge używa tych samych par klucza i wartości co aplikacja Managed Browser. 
+    > Aplikacja Microsoft Edge używa tych samych par klucza i wartości co aplikacja Managed Browser. Aby zasady konfiguracji aplikacji zaczęły obowiązywać, w systemie Android celem zasad ochrony aplikacji musi być przeglądarka Microsoft Edge.
 
 8. Gdy wszystko będzie gotowe, wybierz przycisk **OK**.
 9. W bloku **Dodaj zasady konfiguracji** wybierz pozycję **Dodaj**.<br>

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/04/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97227d5ca75b3584cb4e603a16601b2a22deb919
-ms.sourcegitcommit: 1a5b185acd27954b10b6d59409d82eb80fd71284
+ms.openlocfilehash: 51ec328a60ef2737c776bf6cf5d4b8dc1b32460c
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72681455"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755316"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Tworzenie profilu urządzenia w usłudze Microsoft Intune
 
@@ -39,16 +39,16 @@ W tym artykule:
 
 ## <a name="create-the-profile"></a>Tworzenie profilu
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Wybierz pozycję **Konfiguracja urządzenia**. Do wyboru są następujące opcje:
+2. Wybierz pozycję **Urządzenia** > **Profile konfiguracji**. Do wyboru są następujące opcje:
 
     - **Omówienie**: lista stanów profilów oraz dodatkowe szczegółowe informacje o profilach przypisanych do użytkowników i urządzeń.
     - **Zarządzanie**: tworzenie profili urządzeń, przekazywanie niestandardowych [skryptów programu PowerShell](../apps/intune-management-extension.md) do uruchamiania w profilu i dodawanie planów danych do urządzeń korzystających z karty [eSIM](esim-device-configuration.md).
     - **Monitorowanie**: sprawdzanie stanu profilu (powodzenie lub niepowodzenie) oraz wyświetlanie dzienników dotyczących profili.
     - **Instalator**: dodawanie urzędu certyfikacji SCEP lub PFX albo włączanie [zarządzania wydatkami telekomunikacyjnymi](telecom-expenses-monitor.md) w profilu.
 
-3. Wybierz pozycję **Profile**  >  **Utwórz profil**. Wprowadź następujące właściwości:
+3. Wybierz pozycję **Utwórz profil**. Wprowadź następujące właściwości:
 
    - **Nazwa**: Wprowadź opisową nazwę profilu. Nadaj nazwę profilom, aby można było je później łatwo rozpoznać. Na przykład dobra nazwa profilu to **Profil poczty e-mail WP dla całej firmy**.
    - **Opis**: Wprowadź opis profilu. To ustawienie jest opcjonalne, ale zalecane.
@@ -108,7 +108,7 @@ Więcej informacji na temat tagów zakresu i czynności możliwych do wykonania 
 
 Dotyczy:
 
-- System Windows 10 lub nowszy
+- Windows 10 lub nowszym
 
 Reguły stosowania umożliwiają administratorom kierowanie urządzeń do grup spełniających określone kryteria. Można na przykład utworzyć profil ograniczenia dotyczącego urządzeń, który ma zastosowanie do grupy **Wszystkie urządzenia systemu Windows 10**. Ponadto profil ma być przypisany tylko do urządzeń z systemem Windows 10 Enterprise.
 

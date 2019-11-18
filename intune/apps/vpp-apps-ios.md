@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/22/2019
+ms.date: 11/06/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9625243698bffc93ed969a8c2e4b06b4f3093f4d
-ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
+ms.openlocfilehash: ff9a37a1dd815b6ec9d7522604796310e7f0b5ce
+ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72785529"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73984104"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Jak w usłudze Microsoft Intune zarządzać aplikacjami dla systemów iOS i macOS, które zostały zakupione w ramach programu zakupów zbiorczych firmy Apple
 
@@ -72,7 +72,6 @@ Przed rozpoczęciem należy uzyskać token VPP od firmy Apple i przekazać go do
 * Każdy token jest ważny przez jeden rok.
 * Domyślnie usługa Intune przeprowadza synchronizację z usługą Apple VPP dwa razy dziennie. W dowolnym momencie można uruchomić ręczną synchronizację.
 * Przed rozpoczęciem korzystania z programu VPP firmy Apple przy użyciu usługi Intune należy usunąć wszystkie istniejące konta usługi VPP utworzone przy użyciu innych dostawców zarządzania urządzeniami przenośnymi. Usługa Intune nie synchronizuje tych kont użytkowników z usługą Intune ze względów bezpieczeństwa. Usługa Intune synchronizuje tylko dane z usługi VPP firmy Apple, która została utworzona przez usługę Intune.
-* Usługa Intune obsługuje dodawanie maksymalnie 256 tokenów usługi VPP.
 * Program Device Enrollment Profile (DEP) firmy Apple automatyzuje rejestrację zarządzania urządzeniami przenośnymi (MDM). Przy użyciu programu DEP możesz skonfigurować urządzenia w przedsiębiorstwie bez dotykania ich. Możesz zarejestrować się w programie DEP przy użyciu tego samego konta agenta programu co dla programu VPP firmy Apple. Identyfikator programu Apple Deployment Program jest unikatowy dla programów wymienionych w witrynie internetowej [Programy wdrożenia](https://deploy.apple.com) i nie można go używać do logowania się do usług firmy Apple, takich jak sklep iTunes.
 * Jeśli aplikacje VPP zostały przypisane do użytkowników lub urządzeń (z koligacją użytkowników) za pomocą modelu licencjonowania użytkowników, każdy użytkownik usługi Intune musi zostać skojarzony z unikatowym identyfikatorem Apple ID lub adresem e-mail, aby mógł zaakceptować warunki i postanowienia firmy Apple na swoim urządzeniu.
 * Podczas konfigurowania urządzenia dla nowego użytkownika usługi Intune skonfiguruj je przy użyciu unikatowego identyfikatora Apple ID lub adresu e-mail tego użytkownika. Identyfikator Apple ID lub adres e-mail stanowią z użytkownikiem usługi Intune unikatową parę i mogą być używane na maksymalnie pięciu urządzeniach.
@@ -89,6 +88,8 @@ Przed rozpoczęciem należy uzyskać token VPP od firmy Apple i przekazać go do
 5. W okienku **Utwórz token programu VPP** określ następujące informacje:
     - **Plik tokenu programu VPP** — jeśli nie jesteś jeszcze zarejestrowanym członkiem programu Volume Purchase Program for Business lub Volume Purchase Program for Education, zarejestruj się. Po zarejestrowaniu się pobierz token VPP firmy Apple dla swojego konta i wybierz go tutaj.
     - **Identyfikator firmy Apple** — wprowadź identyfikator firmy Apple dla konta skojarzonego z programem zakupów zbiorczych.
+    - **Przejmij kontrolę nad tokenem z innego oprogramowania MDM** — ustawienie tej opcji na wartość **Tak** umożliwia ponowne przypisanie tokenu do usługi Intune z innego oprogramowania MDM.
+    - **Nazwa tokenu** — pole administracyjne służące do ustawiania nazwy tokenu.    
     - **Kraj/region** — wybierz sklep krajowy/regionalny programu VPP.  Usługa Intune synchronizuje aplikacje VPP ze sklepu w danym kraju/regionie umożliwiającego korzystanie z programu zakupów zbiorczych zgodnie ze wszystkimi ustawieniami regionalnymi.
         > [!WARNING]  
         > Zmiana kraju/regionu spowoduje zaktualizowanie metadanych aplikacji i adresu URL sklepu przy następnej synchronizacji z usługą firmy Apple w przypadku aplikacji utworzonych za pomocą tego tokenu. Jeśli aplikacja nie istnieje w nowym sklepie krajowym/regionalnym, nie zostanie zaktualizowana.
@@ -98,6 +99,9 @@ Przed rozpoczęciem należy uzyskać token VPP od firmy Apple i przekazać go do
 
         > [!NOTE]
         > Automatyczne aktualizacje aplikacji działają zarówno w przypadku aplikacji licencjonowanych dla urządzenia, jak i użytkownika, dla systemu iOS w wersji 11.0 i nowszej lub macOS w wersji 10.12 i nowszej.
+
+    - **Zezwalam firmie Microsoft na wysyłanie informacji o użytkowniku i urządzeniu do firmy Apple.** — Aby kontynuować, musisz wybrać pozycję **Zgadzam się**. Aby sprawdzić, jakie dane firma Microsoft wysyła do firmy Apple, zobacz temat [Dane wysyłane przez usługę Intune do firmy Apple](~/protect/data-intune-sends-to-apple.md).
+
 6. Gdy wszystko będzie gotowe, wybierz pozycję **Utwórz**.
 
 Token zostanie wyświetlony na liście w okienku tokenów.

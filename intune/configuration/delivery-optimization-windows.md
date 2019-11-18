@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/12/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: kerimh
-ms.openlocfilehash: 7d94a2c7e47b3cfcc9f4592faf0a4c2a09a24ac4
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 908319c588fe2a1bf55a376d3f02a03db780a3ad
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72495241"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755402"
 ---
 # <a name="delivery-optimization-settings-in-microsoft-intune"></a>Ustawienia optymalizacji dostarczania w usłudze Microsoft Intune
 
@@ -32,27 +32,25 @@ Aby uzyskać listę ustawień optymalizacji dostarczania obsługiwanych przez us
 
 Aby uzyskać informacje dotyczące optymalizacji dostarczania w systemie Windows 10, zobacz artykuł [Aktualizacje optymalizacji dostarczania](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) w dokumentacji systemu Windows.  
 
-
 > [!NOTE]
-> **Aktualizacje oprogramowania — pierścienie aktualizacji systemu Windows 10** są zastępowane przez ustawienia **optymalizacji dostarczania**. Istniejące pierścienie aktualizacji można zmienić, tak aby używać ustawień **optymalizacji dostarczania**. [Przenoszenie istniejących pierścieni aktualizacji do optymalizacji dostarczania](#move-existing-update-rings-to-delivery-optimization) (w tym artykule) 
+> **Aktualizacje oprogramowania — pierścienie aktualizacji systemu Windows 10** są zastępowane przez ustawienia **optymalizacji dostarczania**. Istniejące pierścienie aktualizacji można zmienić, tak aby używać ustawień **optymalizacji dostarczania**. [Przenoszenie istniejących pierścieni aktualizacji do optymalizacji dostarczania](#move-existing-update-rings-to-delivery-optimization) (w tym artykule)
+
 ## <a name="create-the-profile"></a>Tworzenie profilu
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Wybierz kolejno pozycje **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
+2. Wybierz pozycję **Urządzenia** > **Profile konfiguracji** > **Utwórz profil**.
 
 3. Wprowadź następujące właściwości:
 
     - **Nazwa**: Wprowadź opisową nazwę nowego profilu.
     - **Opis**: Wprowadź opis profilu. To ustawienie jest opcjonalne, ale zalecane.
-    - **Platforma**: wybierz platformę:  
-
-        - **Windows 10 lub nowszy**
-
+    - **Platforma**: Wybierz pozycję **Windows 10 i nowsze**.
     - **Typ profilu**: wybierz pozycję **Optymalizacja dostarczania**.
-    - **Ustawienia**: Skonfiguruj ustawienia definiujące sposób pobierania aktualizacji i aplikacji. Aby uzyskać informacje na temat dostępnych ustawień, zobacz artykuł [Ustawienia optymalizacji dostarczania dla usługi Intune](../delivery-optimization-settings.md).
 
-4. Po zakończeniu wybierz pozycję **OK**  >  **Utwórz**, aby zapisać zmiany.
+4. Wybierz pozycję **Ustawienia** > **Skonfiguruj** i zdefiniuj sposób pobierania aktualizacji i aplikacji. Aby uzyskać informacje na temat dostępnych ustawień, zobacz artykuł [Ustawienia optymalizacji dostarczania dla usługi Intune](../delivery-optimization-settings.md).
+
+5. Po zakończeniu wybierz pozycję **OK**  >  **Utwórz**, aby zapisać zmiany.
 
 Profil zostanie utworzony i wyświetlony na liście. Następnie [przypiszesz profil](device-profile-assign.md) i będziesz [monitorować jego stan](device-profile-monitor.md).
 
@@ -62,7 +60,7 @@ Ustawienia **optymalizacji dostarczania** zastępują pozycję **Aktualizacje op
 
 1. Utwórz profil konfiguracji optymalizacji dostarczania:
 
-    1. W usłudze Intune wybierz kolejno pozycje **Konfiguracja urządzenia** > **Profile** > **Utwórz profil**.
+    1. W centrum administracyjnym programu Microsoft Endpoint Manager wybierz pozycję **Urządzenia** > **Profile konfiguracji** > **Utwórz profil**.
     2. Wprowadź następujące właściwości:
 
         - **Nazwa**: Wprowadź opisową nazwę nowego profilu.
@@ -78,10 +76,11 @@ Ustawienia **optymalizacji dostarczania** zastępują pozycję **Aktualizacje op
             - **Prosty tryb pobierania bez komunikacji równorzędnej**
             - **Tryb obejścia**
     3. Skonfiguruj dodatkowe ustawienia, którymi chcesz zarządzać.
-1. Przypisz ten nowy profil do tych samych urządzeń i użytkowników jako istniejący pierścień aktualizacji oprogramowania. Listę kroków można znaleźć w temacie [Przypisywanie profilu](device-profile-assign.md).
+
+2. Przypisz ten nowy profil do tych samych urządzeń i użytkowników jako istniejący pierścień aktualizacji oprogramowania. Listę kroków można znaleźć w temacie [Przypisywanie profilu](device-profile-assign.md).
 
 3. Usuń konfigurację istniejącego pierścienia oprogramowania:
-    1. W usłudze Intune przejdź do pozycji **Aktualizacje oprogramowania** > Pierścienie aktualizacji systemu Windows 10.
+    1. W centrum administracyjnym programu Microsoft Endpoint Manager przejdź do pozycji **Aktualizacje oprogramowania** > Pierścienie aktualizacji systemu Windows 10.
     2. Z listy wybierz pierścień aktualizacji.
     3. W obszarze ustawień ustaw **Tryb pobierania optymalizacji dostarczania** na wartość **Nieskonfigurowane**.
     4. **OK** > **Zapisz** zmiany.

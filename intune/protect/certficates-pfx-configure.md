@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/18/2019
+ms.date: 11/07/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b0f31add65063665da5a7961e2caf9eb30a847e2
-ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
+ms.openlocfilehash: 3db085e6e88f8f57eb0276afa77290df8574568f
+ms.sourcegitcommit: b5e719fb507b1bc4774674e76c856c435e69f68c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72787878"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73801690"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurowanie certyfikatów PKCS i korzystanie z nich za pomocą usługi Intune
 
@@ -142,13 +142,14 @@ Do uwierzytelnienia urządzenia za pomocą sieci VPN, sieci WiFi lub innych zaso
 > [!IMPORTANT]  
 > Łącznika certyfikatów usługi Microsoft Intune nie można zainstalować na hoście wystawiającego urzędu certyfikacji, a zamiast tego należy zainstalować go na osobnym serwerze z systemem Windows.  
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Wybierz pozycję **Konfiguracja urządzenia** > **Łączniki certyfikatu** > **Dodaj**.
-3. Pobierz i zapisz plik łącznika w lokalizacji dostępnej z serwera, na którym ma zostać zainstalowany łącznik.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-    ![Pobieranie łącznika certyfikatów usługi Microsoft Intune](./media/certficates-pfx-configure/download-ndes-connector.png)
+2. Wybierz pozycję **Administracja dzierżawą** > **Łączniki i tokeny** > **Łączniki certyfikatu** >  **+ Dodaj**.
+
+3. Kliknij pozycję *Pobierz oprogramowanie łącznika certyfikatów* dla łącznika standardów PKCS #12, a następnie zapisz plik łącznika w lokalizacji dostępnej z serwera, na którym ma zostać zainstalowany łącznik.
+
+   ![Pobieranie łącznika certyfikatów usługi Microsoft Intune](./media/certficates-pfx-configure/download-ndes-connector.png)
  
-
 4. Po zakończeniu pobierania zaloguj się na serwerze. Następnie:
 
     1. Upewnij się, że jest zainstalowany program .NET 4.5 Framework lub nowszy, ponieważ jest on wymagany przez łącznik certyfikatów usługi NDES. Program .NET 4.5 Framework jest automatycznie dołączany do systemu Windows Server 2012 R2 i nowszych wersji.
@@ -166,41 +167,48 @@ Do uwierzytelnienia urządzenia za pomocą sieci VPN, sieci WiFi lub innych zaso
 
 ## <a name="create-a-trusted-certificate-profile"></a>Tworzenie profilu zaufanego certyfikatu
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) i przejdź do pozycji **Konfiguracja urządzenia** > **Profile** > **Utwórz profil**.
-    ![Przejdź do usługi Intune i utwórz nowy profil zaufanego certyfikatu](./media/certficates-pfx-configure/certificates-pfx-configure-profile-new.png)
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Wprowadź następujące właściwości:
+2. Wybierz pozycję **Urządzenia** > **Profile konfiguracji** > **Utwórz profil**.
+
+   ![Przejdź do usługi Intune i utwórz nowy profil zaufanego certyfikatu](./media/certficates-pfx-configure/certificates-pfx-configure-profile-new.png)
+
+3. Wprowadź następujące właściwości:
 
     - **Nazwa** profilu
     - Opcjonalne określenie opisu
     - **Platforma**, na której ma być wdrożony profil
     - Ustaw wartość pola **Typ profilu** na **Zaufany certyfikat**
 
-3. Przejdź do pozycji **Ustawienia**, a następnie wprowadź plik cer wcześniej wyeksportowanego certyfikatu głównego urzędu certyfikacji.
+4. Wybierz pozycję **Ustawienia**, a następnie określ plik cer wcześniej wyeksportowanego certyfikatu głównego urzędu certyfikacji.
 
    > [!NOTE]
    > W zależności od platformy wybranej w ramach **Kroku 2** możesz mieć możliwość wyboru **Magazynu docelowego** certyfikatu lub jej nie mieć.
 
-   ![Tworzenie profilu i przekazanie zaufanego certyfikatu](./media/certficates-pfx-configure/certificates-pfx-configure-profile-fill.png) 
+   ![Tworzenie profilu i przekazanie zaufanego certyfikatu](./media/certficates-pfx-configure/certificates-pfx-configure-profile-fill.png)
 
-4. Wybierz kolejno pozycje **OK** > **Utwórz**, aby zapisać profil.
-5. Aby przypisać nowy profil do jednego lub wielu urządzeń, zobacz opis [przypisywania profilów urządzeń usługi Microsoft Intune](../configuration/device-profile-assign.md).
+5. Wybierz kolejno pozycje **OK** > **Utwórz**, aby zapisać profil.
+
+6. Aby przypisać nowy profil do jednego lub wielu urządzeń, zobacz opis [przypisywania profilów urządzeń usługi Microsoft Intune](../configuration/device-profile-assign.md).
 
 ## <a name="create-a-pkcs-certificate-profile"></a>Tworzenie profilu certyfikatu PKCS
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) i przejdź do pozycji **Konfiguracja urządzenia** > **Profile** > **Utwórz profil**.
-2. Wprowadź następujące właściwości:
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Wybierz następujące pozycje i przejdź do nich: **Urządzenia** > **Profile konfiguracji** > **Utwórz profil**.
+
+3. Wprowadź następujące właściwości:
 
     - **Nazwa** profilu
     - Opcjonalne określenie opisu
     - **Platforma**, na której ma być wdrożony profil
     - Ustaw wartość pola **Typ profilu** na **Certyfikat PKCS**
 
-3. Przejdź do pozycji **Ustawienia** i skonfiguruj właściwości, które mają zastosowanie do wybranej platformy:  
+4. Wybierz pozycję **Ustawienia** i skonfiguruj właściwości, które mają zastosowanie do wybranej platformy:
    
    |Ustawienie     | Platforma     | Szczegóły   |
    |------------|------------|------------|
-   |**Próg odnawiania (%)** :        |Wszystkie         |Zalecana wartość to 20%  | 
+   |**Próg odnawiania (%)**        |Wszystkie         |Zalecana wartość to 20%  | 
    |**Okres ważności certyfikatu**  |Wszystkie         |Jeśli szablon certyfikatu nie został zmieniony, wartość tej opcji może być ustawiona na jeden rok. |
    |**Dostawca magazynu kluczy**   |Windows 10  | W przypadku systemu Windows wybierz miejsce przechowywania kluczy na urządzeniu. |
    |**Urząd certyfikacji**      |Wszystkie         |Wyświetla wewnętrzną w pełni kwalifikowaną nazwę domeny (nazwę FQDN) urzędu certyfikacji przedsiębiorstwa.  |
@@ -212,8 +220,9 @@ Do uwierzytelnienia urządzenia za pomocą sieci VPN, sieci WiFi lub innych zaso
    |**Zezwalaj wszystkim aplikacjom na dostęp do klucza prywatnego** |macOS  |Ustaw wartość **Włącz**, aby zezwolić aplikacjom skonfigurowanym dla skojarzonego urządzenia Mac na dostęp do klucza prywatnego certyfikatów PKCS. <br><br> Aby uzyskać więcej informacji na temat tego ustawienia, zobacz *AllowAllAppsAccess* w sekcji Certificate Payload (Ładunek certyfikatu) dokumentu [Configuration Profile Reference](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf) (Dokumentacja profilu konfiguracji) w dokumentacji dla deweloperów firmy Apple. |
    |**Certyfikat główny**             |**-** Administrator urządzenia z systemem Android <br> **-** Android Enterprise (*właściciel urządzenia*, *profil służbowy*) |Wybierz profil certyfikatu głównego urzędu certyfikacji, który został wcześniej przypisany. |
 
-4. Wybierz kolejno pozycje **OK** > **Utwórz**, aby zapisać profil.
-5. Aby przypisać nowy profil do jednego lub wielu urządzeń, zobacz opis [przypisywania profilów urządzeń usługi Microsoft Intune](../configuration/device-profile-assign.md).
+5. Wybierz kolejno pozycje **OK** > **Utwórz**, aby zapisać profil.
+
+6. Aby przypisać nowy profil do jednego lub wielu urządzeń, zobacz opis [przypisywania profilów urządzeń usługi Microsoft Intune](../configuration/device-profile-assign.md).
 
    > [!NOTE]
    > Na urządzeniach z profilem systemu Android Enterprise certyfikaty zainstalowane przy użyciu profilu certyfikatu PKCS nie są widoczne. Aby potwierdzić pomyślne wdrożenie certyfikatu, sprawdź stan profilu w konsoli usługi Intune.
@@ -262,7 +271,7 @@ Podczas tworzenia profilu certyfikatu PKCS dla systemu macOS opcje dla formatu n
   - **{{DeviceName}}**
   - **{{FullyQualifiedDomainName}}** *(dotyczy tylko urządzeń z systemem Windows i urządzeń przyłączonych do domeny)*
   - **{{MEID}}**
-   
+
   W polu tekstowym możesz określić te zmienne wraz z następującym po nich tekstem. Na przykład nazwa pospolita urządzenia o nazwie *Urządzenie1* może zostać dodana jako **CN={{DeviceName}}Urządzenie1**.
 
   > [!IMPORTANT]  
@@ -273,21 +282,25 @@ Podczas tworzenia profilu certyfikatu PKCS dla systemu macOS opcje dla formatu n
 
 
 ## <a name="whats-new-for-connectors"></a>Nowości dotyczące łączników
-Okresowo są publikowane aktualizacje dla dwóch łączników certyfikatów. Po zaktualizowaniu łącznika możesz przeczytać w tym miejscu o wprowadzonych zmianach. 
+
+Okresowo są publikowane aktualizacje dla dwóch łączników certyfikatów. Po zaktualizowaniu łącznika możesz przeczytać w tym miejscu o wprowadzonych zmianach.
 
 *Łącznik certyfikatów PFX dla usługi Microsoft Intune* [obsługuje aktualizacje automatyczne](#requirements), zaś *Łącznik certyfikatów usługi Intune* należy aktualizować ręcznie.
 
-### <a name="may-17-2019"></a>17 maja 2019 r.  
+### <a name="may-17-2019"></a>17 maja 2019 r.
+
 - **Łącznik certyfikatów PFX dla usługi Microsoft Intune — wersja 6.1905.0.404**  
   Zmiany w tej wersji:  
   - Rozwiązano problem polegający na tym, że istniejące certyfikaty PFX były nadal ponownie przetwarzane, co powodowało zatrzymywanie przetwarzania nowych żądań przez łącznik. 
 
-### <a name="may-6-2019"></a>6 maja 2019 r.  
+### <a name="may-6-2019"></a>6 maja 2019 r.
+
 - **Łącznik certyfikatów PFX dla usługi Microsoft Intune — wersja 6.1905.0.402**  
   Zmiany w tej wersji:  
   - Odstęp czasu sondowania dla łącznika został skrócony z 5 minut do 30 sekund.
  
-### <a name="april-2-2019"></a>2 kwietnia 2019 r.  
+### <a name="april-2-2019"></a>2 kwietnia 2019 r.
+
 - **Łącznik certyfikatów usługi Intune — wersja 6.1904.1.0**  
   Zmiany w tej wersji:  
   - Rozwiązano problem powodujący niepowodzenie rejestracji łącznika w usłudze Intune po zalogowaniu się do łącznika przy użyciu konta administratora globalnego.  

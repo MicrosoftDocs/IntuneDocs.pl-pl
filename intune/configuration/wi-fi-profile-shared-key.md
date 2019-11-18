@@ -1,11 +1,11 @@
 ---
-title: Tworzenie profilu sieci WiFi z użyciem klucza wstępnego — Microsoft Intune — Azure | Micrososft Docs
+title: Tworzenie profilu sieci Wi-Fi z użyciem klucza wstępnego w usłudze Microsoft Intune — Azure | Microsoft Docs
 description: Użyj profilu niestandardowego, aby utworzyć profil sieci Wi-Fi z użyciem klucza wstępnego i pobrać przykładowy kod XML dla systemu Android lub Windows albo profile sieci Wi-Fi z użyciem protokołu EAP w usłudze Microsoft Intune
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/25/2019
+ms.date: 11/07/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,21 +17,28 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 623c6652964ae5a4f16a9c689dda3aee99c50d31
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: f7f888a5a384503393c086a27d1c2ce6410357fd
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506493"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755024"
 ---
-# <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key---intune"></a>Użycie niestandardowego profilu urządzenia do tworzenia profilu sieci Wi-Fi z użyciem klucza wstępnego — usługa Intune
+# <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key-in-intune"></a>Użycie niestandardowego profilu urządzenia do tworzenia profilu sieci Wi-Fi z użyciem klucza wstępnego w usłudze Intune
+
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Klucze wstępne (PSK) są zazwyczaj używane do uwierzytelniania użytkowników w sieciach Wi-Fi lub bezprzewodowych sieciach LAN. Za pomocą usługi Intune można utworzyć profil sieci Wi-Fi z użyciem klucza wstępnego. Aby utworzyć profil, skorzystaj z funkcji **Niestandardowe profile urządzenia** w usłudze Intune. Ten artykuł zawiera także przykłady sposobu tworzenia profilu sieci Wi-Fi z użyciem protokołu EAP.
+Klucze wstępne są zazwyczaj używane do uwierzytelniania użytkowników w sieciach Wi-Fi lub bezprzewodowych sieciach LAN. Za pomocą usługi Intune można utworzyć profil sieci Wi-Fi z użyciem klucza wstępnego. Aby utworzyć profil, skorzystaj z funkcji **Niestandardowe profile urządzenia** w usłudze Intune. Ten artykuł zawiera także przykłady sposobu tworzenia profilu sieci Wi-Fi z użyciem protokołu EAP.
+
+Ta funkcja obsługuje systemy:
+
+- Android
+- Windows
+- Profil sieci Wi-Fi oparty na protokole EAP
 
 > [!IMPORTANT]
->- Użycie klucza wstępnego w systemie Windows 10 powoduje wystąpienie błędu korygowania w usłudze Intune. W takim przypadku profil sieci Wi-Fi zostanie prawidłowo przypisany do urządzenia i będzie działać zgodnie z oczekiwaniami.
->- Jeśli eksportujesz profil sieci Wi-Fi, który zawiera klucz wstępny, upewnij się, że plik jest chroniony. Klucz ma postać zwykłego tekstu, więc odpowiedzialność za jego ochronę spoczywa na Tobie.
+> - Użycie klucza wstępnego w systemie Windows 10 powoduje wyświetlenie błędu korygowania w usłudze Intune. W takim przypadku profil sieci Wi-Fi zostanie prawidłowo przypisany do urządzenia i będzie działać zgodnie z oczekiwaniami.
+> - Jeśli eksportujesz profil sieci Wi-Fi, który zawiera klucz wstępny, upewnij się, że plik jest chroniony. Klucz ma postać zwykłego tekstu, więc odpowiedzialność za jego ochronę spoczywa na Tobie.
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
@@ -41,32 +48,37 @@ Klucze wstępne (PSK) są zazwyczaj używane do uwierzytelniania użytkowników 
 - Klucz wstępny wymaga ciągu 64 cyfr szesnastkowych lub hasła o długości 8–63 drukowalnych znaków ASCII. Niektóre znaki, takie jak znak gwiazdki (*), nie są obsługiwane.
 
 ## <a name="create-a-custom-profile"></a>Tworzenie profilu niestandardowego
-Możesz utworzyć profil niestandardowy z użyciem klucza wstępnego dla systemu Android lub Windows albo profilu Wi-Fi z użyciem protokołu EAP. Aby utworzyć profil za pomocą witryny Azure Portal, zobacz [Tworzenie niestandardowych ustawień urządzenia](custom-settings-configure.md). Podczas tworzenia profilu urządzenia wybierz opcję **Niestandardowe** dla platformy urządzenia. Nie wybieraj profilu sieci Wi-Fi. Po wybraniu profilu niestandardowego należy: 
 
-1. Wprowadzić nazwę i opis profilu.
-2. Dodać nowe ustawienie OMA-URI z następującymi właściwościami: 
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz pozycję **Urządzenia** > **Profile konfiguracji** > **Utwórz profil**.
+3. Wprowadź następujące właściwości:
 
-   a. Wprowadź nazwę dla tego ustawienia sieci Wi-Fi.
+    - **Nazwa**: wprowadź opisową nazwę zasad. Nadaj nazwę zasadom, aby można było je później łatwo rozpoznać. Na przykład dobra nazwa zasad to **Niestandardowe ustawienia profilu sieci Wi-Fi OMA-URI dla urządzeń z systemem Android**.
+    - **Opis**: Wprowadź opis profilu. To ustawienie jest opcjonalne, ale zalecane.
+    - **Platforma**: wybierz platformę.
+    - **Typ profilu**: wybierz pozycję **Niestandardowy**.
 
-   b. (Opcjonalnie) Wprowadź opis ustawienia OMA-URI lub pozostaw puste pole.
+4. W obszarze **Ustawienia** wybierz pozycję **Dodaj**. Wprowadź nowe ustawienie OMA-URI z następującymi właściwościami:
 
-   c. Ustaw w polu **Typ danych** wartość **Ciąg**.
+    1. **Nazwa**: wprowadź nazwę ustawienia OMA-URI.
+    2. **Opis**: wprowadź opis ustawienia OMA-URI. To ustawienie jest opcjonalne, ale zalecane.
+    3. **OMA-URI**: wprowadź jedną z następujących opcji:
 
-   d. **OMA-URI**:
+        - **System Android**: `./Vendor/MSFT/WiFi/Profile/SSID/Settings`
+        - **System Windows**: `./Vendor/MSFT/WiFi/Profile/SSID/WlanXml`
 
-   - **System Android**: ./Vendor/MSFT/WiFi/Profile/SSID/Settings
-   - **System Windows**: ./Vendor/MSFT/WiFi/Profile/SSID/WlanXml
+        > [!NOTE]
+        > Należy pamiętać o kropce na początku.
 
-     > [!NOTE]
-     > Należy pamiętać o kropce na początku.
+        Identyfikator SSID jest identyfikatorem SSID, dla którego tworzysz zasady. Na przykład jeśli sieć Wi-Fi ma nazwę `Hotspot-1`, wprowadź `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`.
 
-     Identyfikator SSID jest identyfikatorem SSID, dla którego tworzysz zasady. Na przykład jeśli sieć Wi-Fi ma nazwę `Hotspot-1`, wprowadź `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`.
+    4. **Typ danych**: wybierz pozycję **Ciąg**.
 
-   e. **Pole wartości**: w tym miejscu należy wkleić kod XML. Zobacz przykłady w tym artykule. Zaktualizuj każdą wartość w celu dopasowania do ustawień sieci. Wskazówki można znaleźć w sekcji komentarzy w kodzie.
-3. Wybierz przycisk **OK**, zapisz, a następnie przypisz zasady.
+    5. **Wartość**: wklej kod XML. Zobacz [przykłady](#android-or-windows-wi-fi-profile-example) w tym artykule. Zaktualizuj każdą wartość w celu dopasowania do ustawień sieci. Wskazówki można znaleźć w sekcji komentarzy w kodzie.
 
-    > [!NOTE]
-    > Te zasady można przypisać tylko do grup użytkowników.
+5. Po zakończeniu wybierz kolejno pozycje **OK** > **Utwórz**, aby zapisać zmiany.
+
+Twój profil zostanie wyświetlony na liście profilów. Następnie [przypisz ten profil](../device-profile-assign.md) do grup użytkowników. Te zasady można przypisać tylko do grup użytkowników.
 
 Po następnym zameldowaniu się urządzenia zasady zostaną zastosowane, a profil sieci Wi-Fi zostanie utworzony na urządzeniu. Urządzenie może następnie łączyć się z siecią automatycznie.
 
@@ -74,7 +86,7 @@ Po następnym zameldowaniu się urządzenia zasady zostaną zastosowane, a profi
 
 Poniższy przykład zawiera kod XML dla profilu sieci Wi-Fi systemu Android lub Windows. W przykładzie przedstawiono odpowiedni format i więcej szczegółowych informacji. Jest to tylko przykład, który nie stanowi zalecanej konfiguracji w Twoim środowisku.
 
-### <a name="important-considerations"></a>Ważne zagadnienia
+### <a name="what-you-need-to-know"></a>Co musisz wiedzieć
 
 - `<protected>false</protected>` należy ustawić na wartość **false**. Ustawienie wartości **true** może spowodować, że urządzenie będzie oczekiwać zaszyfrowanego hasła i spróbuje je odszyfrować, co z kolei może skutkować tym, że połączenie nie zostanie nawiązane.
 
@@ -127,7 +139,7 @@ xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
 </WLANProfile>
 ```
 
-## <a name="eap-based-wi-fi-profile-example"></a>Przykład profilu sieci Wi-Fi z użyciem protokołu EAP
+### <a name="eap-based-wi-fi-profile-example"></a>Przykład profilu sieci Wi-Fi z użyciem protokołu EAP
 Poniższy przykład zawiera kod XML dla profilu sieci Wi-Fi z użyciem protokołu EAP: W przykładzie przedstawiono odpowiedni format i więcej szczegółowych informacji. Jest to tylko przykład, który nie stanowi zalecanej konfiguracji w Twoim środowisku.
 
 
@@ -216,15 +228,15 @@ Poniższy przykład zawiera kod XML dla profilu sieci Wi-Fi z użyciem protokoł
 Można również utworzyć plik XML z istniejącego połączenia sieci Wi-Fi. Na komputerze z systemem Windows wykonaj następujące czynności:
 
 1. Utwórz folder lokalny dla wyeksportowanych profilów sieci Wi-Fi, np. c:\WiFi.
-2. Otwórz wiersz polecenia jako administrator (kliknij prawym przyciskiem myszy polecenie `cmd` > **Uruchom jako administrator**)
+2. Otwórz wiersz polecenia jako administrator (kliknij prawym przyciskiem myszy polecenie `cmd` > **Uruchom jako administrator**).
 3. Uruchom polecenie `netsh wlan show profiles`. Zostanie wyświetlona lista wszystkich profilów.
 4. Uruchom polecenie `netsh wlan export profile name="YourProfileName" folder=c:\Wifi`. To polecenie tworzy plik o nazwie `Wi-Fi-YourProfileName.xml` w folderze c:\WiFi.
 
     - Jeśli eksportujesz profil sieci Wi-Fi, który zawiera klucz wstępny, dodaj parametr `key=clear` do polecenia:
   
-      `netsh wlan export profile name="YourProfileName" key=clear folder=c:\Wifi`
+        `netsh wlan export profile name="YourProfileName" key=clear folder=c:\Wifi`
 
-      `key=clear` eksportuje klucz w postaci zwykłego tekstu, który jest wymagany do pomyślnego użycia profilu.
+        `key=clear` eksportuje klucz w postaci zwykłego tekstu, który jest wymagany do pomyślnego użycia profilu.
 
 Po utworzeniu pliku XML skopiuj i wklej składnię XML w ustawieniach OMA-URI > **Typ danych**. Lista czynności znajduje się w sekcji [Tworzenie profilu niestandardowego](#create-a-custom-profile).
 
@@ -238,3 +250,7 @@ Po utworzeniu pliku XML skopiuj i wklej składnię XML w ustawieniach OMA-URI > 
 - W przypadku rotacji kluczy (haseł lub kodów dostępu) należy spodziewać się przestoju i odpowiednio zaplanować wdrożenia. Rozważ wypchnięcie nowych profilów sieci Wi-Fi w czasie poza godzinami pracy. Ponadto należy ostrzec użytkowników, że może to mieć wpływ na łączność.
 
 - W celu zapewnienia bezproblemowego przejścia upewnij się, że urządzenie użytkownika końcowego ma alternatywne połączenie z Internetem. Na przykład użytkownik końcowy musi mieć możliwość skorzystania z sieci Wi-Fi gościa (lub innej sieci Wi-Fi) albo mieć łączność komórkową na potrzeby komunikowania się z usługą Intune. Dzięki dodatkowemu połączeniu użytkownik będzie otrzymywać aktualizacje zasad podczas aktualizowania profilu firmowej sieci WiFi na urządzeniu.
+
+## <a name="next-steps"></a>Następne kroki
+
+Pamiętaj, aby [przypisać profil](device-profile-assign.md) i [monitorować](device-profile-monitor.md) jego stan.
