@@ -568,7 +568,7 @@ Dotyczy:
 ### <a name="app-management"></a>Zarządzanie aplikacjami
 
 #### <a name="control-ios-app-uninstall-behavior-at-device-unenrollment---3504144-----"></a>Kontrolowanie zachowania odinstalowywania aplikacji systemu iOS przy wyrejestrowywaniu urządzenia<!-- 3504144   -->
-Administratorzy mogą zarządzać tym, czy aplikacja jest usuwana lub zachowywana na urządzeniu, gdy urządzenie jest wyrejestrowywana na poziomie grupy użytkowników lub grupy urządzeń. 
+Administratorzy mogą zarządzać tym, czy aplikacja jest usuwana lub zachowywana na urządzeniu, gdy urządzenie jest wyrejestrowywane na poziomie grupy użytkowników lub grupy urządzeń. 
 
 #### <a name="categorize-microsoft-store-for-business-apps---3926922---"></a>Kategoryzowanie aplikacji ze sklepu Microsoft Store dla Firm<!-- 3926922 -->
 Możesz kategoryzować aplikacje ze sklepu Microsoft Store dla Firm. W tym celu wybierz kolejno pozycje **Intune** > **Aplikacje klienckie** > **Aplikacje** > wybierz aplikację ze sklepu Microsoft Store dla Firm > **Informacje o aplikacji** > **Kategoria**. W menu rozwijanym przypisz kategorię.
@@ -689,7 +689,7 @@ Aby uzyskać więcej informacji na temat ustawień programu antywirusowego, zoba
 ### <a name="device-enrollment"></a>Rejestrowanie urządzeń
 
 #### <a name="default-scope-tags---3702875----"></a>Domyślne tagi zakresu<!-- 3702875  -->
-Nowy, wbudowany domyślny tag zakresu jest teraz dostępny. Wszystkie nieotagowane obiekty usługi Intune, które obsługują tagi zakresu, są automatycznie przypisywane do domyślnego tagu zakresu. **Domyślny** tag zakresu jest dodawany do wszystkich istniejących przypisań ról w celu zapewnienia, że można już korzystać z funkcji administratora. Jeśli nie chcesz, aby administrator widział obiekty usługi Intune z domyślnym tagiem zakresu, usuń domyślny tag zakresu z przypisania roli. Ta funkcja jest podobna do funkcji zakresów zabezpieczeń w programie System Center Configuration Manager. Aby uzyskać więcej informacji, zobacz [Use RBAC and scope tags to for distributed IT](scope-tags.md) (Używanie kontroli RBAC i tagów zakresu w rozproszonej infrastrukturze informatycznej).
+Nowy, wbudowany domyślny tag zakresu jest teraz dostępny. Wszystkie nieotagowane obiekty usługi Intune, które obsługują tagi zakresu, są automatycznie przypisywane do domyślnego tagu zakresu. **Domyślny** tag zakresu jest dodawany do wszystkich istniejących przypisań ról w celu zapewnienia, że można już korzystać z funkcji administratora. Jeśli nie chcesz, aby administrator widział obiekty usługi Intune z domyślnym tagiem zakresu, usuń domyślny tag zakresu z przypisania roli. Ta funkcja jest podobna do funkcji zakresów zabezpieczeń w programie System Center Configuration Manager. Aby uzyskać więcej informacji, zobacz [Używanie kontroli RBAC i tagów zakresu w rozproszonej infrastrukturze informatycznej](scope-tags.md).
 
 #### <a name="android-enrollment-device-administrator-support---4869749-----"></a>Obsługa rejestracji administratora urządzeń z systemem Android<!-- 4869749   -->
 Opcja rejestracji administratora urządzenia z systemem Android została dodana do strony rejestracji systemu Android (**Intune** > **Rejestracja urządzenia** > **Rejestracja systemu Android**). Administrator urządzenia z systemem Android będzie nadal domyślnie włączony dla wszystkich dzierżaw.  Aby uzyskać więcej informacji, zobacz [Rejestracja administratora urządzeń z systemem Android](../enrollment/android-enroll-device-administrator.md).
@@ -728,7 +728,7 @@ Nowy wpis na stronie Sprzęt dla każdego urządzenia z systemem Android zawiera
 
 W usłudze Intune możesz utworzyć profile konfiguracji urządzenia i zastosować ustawienia do urządzeń z rozwiązaniem Android Enterprise przy użyciu aplikacji OEMConfig (**Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **Android Enterprise** jako platforma > **OEMConfig** jako typ profilu).
 
-W tej aktualizacji firma Zebra Technologies jest producentem oryginalnego sprzętu (OEM) dla aplikacji OEMConfig. Aby uzyskać więcej informacji o aplikacji OEMConfig, przejdź do tematu [Use and manage Android Enterprise devices with OEMConfig](../configuration/android-oem-configuration-overview.md) (Korzystanie z urządzeń z rozwiązaniem Android Enterprise i zarządzanie nimi za pomocą aplikacji OEMConfig).
+W tej aktualizacji firma Zebra Technologies jest producentem oryginalnego sprzętu (OEM) dla aplikacji OEMConfig. Aby uzyskać więcej informacji o aplikacji OEMConfig, przejdź do tematu [Korzystanie z urządzeń z rozwiązaniem Android Enterprise i zarządzanie nimi za pomocą aplikacji OEMConfig](../configuration/android-oem-configuration-overview.md).
 
 Dotyczy:  
 - Android Enterprise
@@ -746,7 +746,7 @@ Wysyłaj niestandardowe powiadomienia push z aplikacji Portal firmy do użytkown
 Aplikacja Managed Home Screen umożliwia teraz dostęp do aplikacji Android Device Policy firmy Google. Aplikacja Managed Home Screen jest niestandardowym modułem uruchamiania używanym w przypadku urządzeń zarejestrowanych w usłudze Intune jako urządzenia dedykowane z systemem Android Enterprise (AE) w trybie kiosku z wieloma aplikacjami. Aplikacja Android Device Policy może być przydatna zarówno dla Ciebie, jak i Twoich użytkowników w celu uzyskania pomocy technicznej lub przeprowadzenia debugowania. Ta funkcja uruchamiania jest dostępna, gdy urządzenie zostanie zarejestrowane i zablokowane w aplikacji Managed Home Screen. Do korzystania z tej funkcji nie są konieczne żadne dodatkowe instalacje.
 
 #### <a name="outlook-protection-settings-for-ios-and-android-devices---3212619---"></a>Ustawienia ochrony programu Outlook dla urządzeń z systemami iOS i Android<!-- 3212619 -->
-Teraz ogólne ustawienia konfiguracji aplikacji oraz ustawienia konfiguracji ochrony danych dla programu Outlook dla systemów iOS i Android można skonfigurować przy użyciu prostych kontrolek administratora usługi Intune bez rejestracji urządzeń. Ogólne ustawienia konfiguracji aplikacji zapewniają równoważność z ustawieniami, które mogą włączyć administratorzy w przypadku zarządzania programem Outlook dla systemów iOS i Android na urządzeniach zarejestrowanych. Aby uzyskać więcej informacji o ustawieniach programu Outlook, zobacz [Deploying Outlook for iOS and Android app configuration settings](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune) (Wdrażanie ustawień konfiguracji aplikacji Outlook dla systemu iOS i Android).
+Teraz ogólne ustawienia konfiguracji aplikacji oraz ustawienia konfiguracji ochrony danych dla programu Outlook dla systemów iOS i Android można skonfigurować przy użyciu prostych kontrolek administratora usługi Intune bez rejestracji urządzeń. Ogólne ustawienia konfiguracji aplikacji zapewniają równoważność z ustawieniami, które mogą włączyć administratorzy w przypadku zarządzania programem Outlook dla systemów iOS i Android na urządzeniach zarejestrowanych. Aby uzyskać więcej informacji o ustawieniach programu Outlook, zobacz [Wdrażanie ustawień konfiguracji aplikacji Outlook dla systemu iOS i Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
 
 ### <a name="device-configuration"></a>Konfiguracja urządzenia
 
@@ -772,7 +772,7 @@ W usłudze Intune można utworzyć profil konfiguracji urządzenia, który używ
 
 Ta aktualizacja zawiera projektanta konfiguracji z ulepszonym środowiskiem obsługi użytkownika, które pokazuje szczegóły osadzone w aplikacji, w tym tytuły, opisy i inne. Edytor JSON jest nadal dostępny i pokazuje wszelkie zmiany wprowadzone w projektancie konfiguracji.
 
-Aby wyświetlić bieżące ustawienia, przejdź do tematu [Use and manage Android Enterprise devices with OEMConfig](../configuration/android-oem-configuration-overview.md) (Korzystanie z urządzeń z rozwiązaniem Android Enterprise i zarządzanie nimi za pomocą aplikacji OEMConfig).
+Aby wyświetlić bieżące ustawienia, przejdź do tematu [Korzystanie z urządzeń z rozwiązaniem Android Enterprise i zarządzanie nimi za pomocą aplikacji OEMConfig](../configuration/android-oem-configuration-overview.md).
 
 Dotyczy: Android Enterprise
 
@@ -957,7 +957,7 @@ Teraz można zobaczyć poziom poprawki zabezpieczeń dla urządzeń z systemem A
 Poziom poprawki jest wymieniony w sekcji **System operacyjny**.
 
 #### <a name="assign-scope-tags-to-all-managed-devices-in-a-security-group---3173810---"></a>Przypisywanie tagów zakresu do wszystkich urządzeń zarządzanych w grupie zabezpieczeń<!-- 3173810 -->
-Teraz można przypisać tagi zakresu do grupy zabezpieczeń i wszystkie urządzenia w grupie zabezpieczeń również zostaną skojarzone z tymi tagami zakresu. Tag zakresu zostanie również przypisany do wszystkich urządzeń w tych grupach. Tagi zakresu ustawione przy użyciu tej funkcji zastąpią tagi zakresu ustawione przy użyciu bieżącego przepływu tagów zakresu urządzenia. Aby uzyskać więcej informacji, zobacz [Use RBAC and scope tags for distributed IT](scope-tags.md) (Używanie kontroli RBAC i tagów zakresu w rozproszonej infrastrukturze informatycznej).
+Teraz można przypisać tagi zakresu do grupy zabezpieczeń i wszystkie urządzenia w grupie zabezpieczeń również zostaną skojarzone z tymi tagami zakresu. Tag zakresu zostanie również przypisany do wszystkich urządzeń w tych grupach. Tagi zakresu ustawione przy użyciu tej funkcji zastąpią tagi zakresu ustawione przy użyciu bieżącego przepływu tagów zakresu urządzenia. Aby uzyskać więcej informacji, zobacz [Używanie kontroli RBAC i tagów zakresu w rozproszonej infrastrukturze informatycznej](scope-tags.md).
 
 ### <a name="device-security"></a>Zabezpieczenia urządzeń
 
@@ -991,7 +991,7 @@ Wbudowana rola administratora szkoły usługi Intune ma teraz uprawnienia tworze
 Aplikacje mogą wywoływać operacje odczytu interfejsu API programu Graph w usłudze Intune przy użyciu tożsamości aplikacji bez poświadczeń użytkownika. Aby uzyskać więcej informacji na temat uzyskiwania dostępu do interfejsu API programu Microsoft Graph dla usługi Intune, zobacz [Praca z usługą Intune w programie Microsoft Graph](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-1.0).
 
 #### <a name="apply-scope-tags-to-microsoft-store-for-business-apps---4392555---"></a>Stosowanie tagów zakresu do aplikacji ze sklepu Microsoft Store dla Firm<!-- 4392555 -->
-Teraz można stosować tagi zakresu do aplikacji ze sklepu Microsoft Store dla Firm. Więcej informacji na temat tagów zakresu można znaleźć w temacie [Use role-based access control (RBAC) and scope tags for distributed IT](scope-tags.md) (Używanie kontroli dostępu opartej na rolach (RBAC) i tagów zakresu w rozproszonej infrastrukturze informatycznej).
+Teraz można stosować tagi zakresu do aplikacji ze sklepu Microsoft Store dla Firm. Więcej informacji na temat tagów zakresu można znaleźć w temacie [Używanie kontroli dostępu opartej na rolach (RBAC) i tagów zakresu w rozproszonej infrastrukturze informatycznej](scope-tags.md).
 
 ## <a name="week-of-june-17-2019"></a>Tydzień od 17 czerwca 2019 r.
 
@@ -1126,7 +1126,7 @@ Okres obowiązywania wersji zapoznawczej strony ze stanem rejestracji zakończy�
 Interfejs użytkownika służący do tworzenia profilu rejestracji rozwiązania Autopilot został zaktualizowany w celu dostosowania do stylów interfejsu użytkownika platformy Azure. Aby uzyskać więcej informacji, zobacz [Create an Autopilot enrollment profile](../enrollment/enrollment-autopilot.md#create-an-autopilot-deployment-profile) (Tworzenie profilu rejestracji rozwiązania Autopilot). W przyszłości dodatkowe scenariusze usługi Intune zostaną zaktualizowane do tego nowego stylu interfejsu użytkownika.
 
 #### <a name="enable-autopilot-reset-for-all-windows-devices---4225665---"></a>Włączanie resetowania rozwiązania Autopilot dla wszystkich urządzeń z systemem Windows<!-- 4225665 -->
-Resetowanie rozwiązania Autopilot działa teraz dla wszystkich urządzeń Windows, nawet tych, które nie zostały skonfigurowane do używania strony ze stanem rejestracji. Jeśli strona ze stanem rejestracji nie została skonfigurowana na tym urządzeniu podczas początkowej rejestracji urządzenia, po zalogowaniu do urządzenia nastąpi bezpośrednie przejście do pulpitu. Synchronizacja urządzenia i wyświetlenie go jako zgodnego w usłudze Intune może potrwać do ośmiu godzin. Aby uzyskać więcej informacji, zobacz [Reset devices with remote Windows Autopilot Reset](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-reset-remote) (Resetowanie urządzeń przy użyciu zdalnego resetowania rozwiązania Autopilot w systemie Windows).
+Resetowanie rozwiązania Autopilot działa teraz dla wszystkich urządzeń Windows, nawet tych, które nie zostały skonfigurowane do używania strony ze stanem rejestracji. Jeśli strona ze stanem rejestracji nie została skonfigurowana na tym urządzeniu podczas początkowej rejestracji urządzenia, po zalogowaniu do urządzenia nastąpi bezpośrednie przejście do pulpitu. Synchronizacja urządzenia i wyświetlenie go jako zgodnego w usłudze Intune może potrwać do ośmiu godzin. Aby uzyskać więcej informacji, zobacz [Resetowanie urządzeń przy użyciu zdalnego resetowania rozwiązania Autopilot w systemie Windows](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-reset-remote).
 
 #### <a name="exact-imei-format-not-required-when-searching-all-devices--30407680---"></a>Dokładny format numerów IMEI niewymagany w przypadku wyszukiwania wszystkich urządzeń<!--30407680 -->
 W przypadku wyszukiwania **wszystkich urządzeń** nie trzeba uwzględniać spacji w numerach IMEI.
@@ -1161,7 +1161,7 @@ Teraz można określić, czy podpis domyślny jest włączony w programie Outloo
 Firma F5 opublikowała aktualizację systemu BIG-IP 13 udostępniającą funkcje kontroli dostępu do sieci dla aplikacji F5 Access w systemie iOS w usłudze Intune. Aby użyć tej funkcji:
 
 - Zaktualizuj system BIG-IP do odświeżonej wersji 13.1.1.5. System BIG-IP 14 nie jest obsługiwany.
-- Zintegruj system BIG-IP z usługą Intune, aby móc korzystać z kontroli dostępu do sieci. Kroki opisano na stronie [Overview: Configuring APM for device posture checks with endpoint management systems](https://techdocs.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html) (Omówienie: Konfigurowania programu APM pod kątem kontroli stanu urządzenia za pomocą systemów zarządzania punktem końcowym).
+- Zintegruj system BIG-IP z usługą Intune, aby móc korzystać z kontroli dostępu do sieci. Kroki opisano na stronie [Omówienie: Konfigurowanie programu APM pod kątem kontroli stanu urządzenia za pomocą systemów zarządzania punktem końcowym](https://techdocs.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html).
 - Sprawdź ustawienie **Włącz kontrolę dostępu do sieci (NAC)** w profilu sieci VPN w usłudze Intune.
 
 Aby wyświetlić dostępne ustawienia, przejdź na stronę [Konfigurowanie ustawień sieci VPN w urządzeniach z systemem iOS](../configuration/vpn-settings-ios.md).

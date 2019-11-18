@@ -26,7 +26,7 @@ ms.lasthandoff: 11/06/2019
 ms.locfileid: "73709490"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Rejestrowanie urządzeń z systemem Windows w usłudze Intune za pomocą rozwiązania Windows Autopilot  
-Rozwiązanie Windows Autopilot upraszcza rejestrowanie urządzeń w usłudze Intune. Tworzenie i konserwacja niestandardowych obrazów systemów operacyjnych zajmuje dużo czasu. Trzeba również poświęcić czas na stosowanie tych niestandardowych obrazów systemów operacyjnych na nowych urządzeniach w celu przygotowania ich do użycia przed przekazaniem użytkownikom końcowym. Dzięki usłudze Microsoft Intune i rozwiązaniu Autopilot można przekazać nowe urządzenia użytkownikom końcowym bez konieczności tworzenia, konserwowania i stosowania niestandardowych obrazów systemów operacyjnych do urządzeń. Jeśli do zarządzania urządzeniami z rozwiązaniem Autopilot używasz usługi Intune, możesz zarządzać zasadami, profilami, aplikacjami i nie tylko po ich zarejestrowaniu. Aby zapoznać się z korzyściami, scenariuszami i wymaganiami wstępnymi, zobacz [Overview of Windows Autopilot (Przegląd rozwiązania Windows Autopilot)](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
+Rozwiązanie Windows Autopilot upraszcza rejestrowanie urządzeń w usłudze Intune. Tworzenie i konserwacja niestandardowych obrazów systemów operacyjnych zajmuje dużo czasu. Trzeba również poświęcić czas na stosowanie tych niestandardowych obrazów systemów operacyjnych na nowych urządzeniach w celu przygotowania ich do użycia przed przekazaniem użytkownikom końcowym. Dzięki usłudze Microsoft Intune i rozwiązaniu Autopilot można przekazać nowe urządzenia użytkownikom końcowym bez konieczności tworzenia, konserwowania i stosowania niestandardowych obrazów systemów operacyjnych do urządzeń. Jeśli do zarządzania urządzeniami z rozwiązaniem Autopilot używasz usługi Intune, możesz zarządzać zasadami, profilami, aplikacjami i innymi funkcjami po zarejestrowaniu tych urządzeń. Aby zapoznać się z korzyściami, scenariuszami i wymaganiami wstępnymi, zobacz [Przegląd rozwiązania Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
 
 Istnieją cztery typy wdrażania w rozwiązaniu Autopilot:
 - [Tryb samodzielnego wdrażania](https://docs.microsoft.com/windows/deployment/windows-autopilot/self-deploying) w przypadku kiosków, znakowania cyfrowego lub udostępnionego urządzenia
@@ -53,7 +53,7 @@ Urządzenia rozwiązania Autopilot z systemem Windows można dodawać przez zaim
 
     ![Zrzut ekranu przedstawiający urządzenia rozwiązania Autopilot z systemem Windows](./media/enrollment-autopilot/autopilot-import-device.png)
 
-2. W obszarze **Dodawanie urządzeń rozwiązania AutoPilot z systemem Windows** przejdź do pliku CSV z informacjami o urządzeniach, które chcesz dodać. Plik CSV powinien zawierać listę numerów seryjnych, opcjonalnych identyfikatorów produktów systemu Windows, skrótów sprzętu, opcjonalnie tagów grup urządzeń i opcjonalnie przypisanego użytkownika. Lista możesz mieć maksymalnie 500 wierszy. Użyj poniższego formatu nagłówka i wiersza:
+2. W obszarze **Dodawanie urządzeń rozwiązania AutoPilot z systemem Windows** przejdź do pliku CSV z informacjami o urządzeniach, które chcesz dodać. Plik CSV powinien zawierać listę numerów seryjnych, opcjonalnych identyfikatorów produktów systemu Windows, skrótów sprzętu, opcjonalnie tagów grup urządzeń i opcjonalnie przypisanego użytkownika. Lista może mieć maksymalnie 500 wierszy. Użyj poniższego formatu nagłówka i wiersza:
 
     `Device Serial Number,Windows Product ID,Hardware Hash,Group Tag,Assigned User`</br>
     `<serialNumber>,<ProductID>,<hardwareHash>,<optionalGroupTag>,<optionalAssignedUser>`
@@ -115,7 +115,7 @@ Profile wdrażania rozwiązania Autopilot służą do konfigurowania urządzeń 
     - **Język (region)** \*: wybierz język do użycia dla urządzenia. Ta opcja jest dostępna tylko w przypadku wybrania pozycji **Wdrażanie samodzielne** dla ustawienia **Tryb wdrażania**.
     - **Automatycznie skonfiguruj klawiaturę**\*: jeśli wybrano pozycję **Język (region)** , wybierz pozycję **Tak**, aby pominąć stronę wyboru klawiatury. Ta opcja jest dostępna tylko w przypadku wybrania pozycji **Wdrażanie samodzielne** dla ustawienia **Tryb wdrażania**.
 8. Wybierz pozycję **Dalej**.
-9. Na stronie **Tagi zakresu** opcjonalnie dodaj tagi zakresu, które chcesz zastosować do tego profilu. Więcej informacji na temat tagów zakresu można znaleźć w artykule [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md) (Używanie kontroli dostępu opartej na rolach (RBAC) i tagów zakresu w rozproszonej infrastrukturze informatycznej).
+9. Na stronie **Tagi zakresu** opcjonalnie dodaj tagi zakresu, które chcesz zastosować do tego profilu. Więcej informacji na temat tagów zakresu można znaleźć w artykule [Używanie kontroli dostępu opartej na rolach (RBAC) i tagów zakresu w rozproszonej infrastrukturze informatycznej](../fundamentals/scope-tags.md).
 10. Wybierz pozycję **Dalej**.
 11. Na stronie **Przypisania** wybierz opcję **Wybrane grupy** dla ustawienia **Przypisz do**.
 
@@ -141,7 +141,7 @@ Po utworzeniu profilu wdrażania rozwiązania Autopilot możesz edytować niekt�
 5. Kliknij pozycję **Ustawienia**, aby wprowadzić zmiany do ustawień trybu OOBE. Po wprowadzeniu zmian kliknij pozycję **Zapisz**.
 
 > [!NOTE]
-> Zmiany w profilu są stosowane do urządzeń przypisanych do tego profilu. Zaktualizowany profil nie zostanie jednak zastosowany do urządzenia już zarejestrowanego w usłudze Intune, dopóki nie zostanie zresetowane i ponownie zarejestrowane.
+> Zmiany w profilu są stosowane do urządzeń przypisanych do tego profilu. Zaktualizowany profil nie zostanie jednak zastosowany do urządzenia już zarejestrowanego w usłudze Intune, dopóki nie zostanie ono zresetowane i ponownie zarejestrowane.
 
 ## <a name="alerts-for-windows-autopilot-unassigned-devices-----163236---"></a>Alerty dla urządzeń nieprzypisanych w rozwiązaniu Windows Autopilot  <!-- 163236 -->  
 
@@ -196,7 +196,7 @@ Jeśli nie interesuje Cię zarządzanie urządzeniami przenośnymi, rozwiązania
 - Synchronizować profilów utworzonych w innym portalu.
 - Wyświetlać zmian w przypisaniach profilów wykonanych w innym portalu.
 - Synchronizować przypisań profilów wykonanych w innym portalu.
-- Wyświetlać zmian wprowadzonych na liście urządzeń w innym portalu
+- Wyświetlać zmian wprowadzonych na liście urządzeń w innym portalu.
 
 ## <a name="windows-autopilot-for-existing-devices"></a>Rozwiązanie Windows Autopilot dla istniejących urządzeń
 
