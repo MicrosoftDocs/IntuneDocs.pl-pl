@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 22a957e6df2c7f9126cbe9f22c4f3a96213551d3
-ms.sourcegitcommit: f12bd2ce10b6241715bae2d2857f33c474287166
+ms.openlocfilehash: af24b5fe33bc1e794529ef5a5ab6975eed4fb9cc
+ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72892572"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73709914"
 ---
 # <a name="add-microsoft-edge-for-windows-10-to-microsoft-intune"></a>Dodawanie przeglądarki Microsoft Edge dla systemu Windows 10 do usługi Microsoft Intune
 
 Aby móc wdrażać, konfigurować, monitorować lub zabezpieczać aplikacje, trzeba je najpierw dodać do usługi Intune. Jednym z dostępnych [typów aplikacji](~/apps/apps-add.md#app-types-in-microsoft-intune) jest przeglądarka Microsoft Edge *w wersji 77 lub nowszej*. Po wybraniu tego typu aplikacji w usłudze Intune możesz przypisać i zainstalować przeglądarkę Microsoft Edge *w wersji 77 lub nowszej* na zarządzanych urządzeniach z systemem Windows 10.
 
 > [!IMPORTANT]
-> Ten typ aplikacji znajduje się w **publicznej wersji zapoznawczej** i oferuje kanały deweloperskie i wersji beta dla systemu Windows 10. Wdrożenie jest tylko w języku angielskim (EN), jednak użytkownicy końcowi mogą zmienić język wyświetlania w przeglądarce w obszarze **Ustawienia** > **Języki**. Microsoft Edge jest aplikacją systemu Win32 instalowaną w kontekście systemu oraz na takich samych architekturach (aplikacja x86 w systemie operacyjnym x86, a aplikacja x64 w systemie operacyjnym x64). Ponadto automatyczne aktualizacje przeglądarki Microsoft Edge są domyślnie **Włączone** i przeglądarki Microsoft Edge nie można odinstalować.
+> Ten typ aplikacji znajduje się w **publicznej wersji zapoznawczej** i oferuje kanały deweloperskie i wersji beta dla systemu Windows 10. Wdrożenie jest tylko w języku angielskim (EN), jednak użytkownicy końcowi mogą zmienić język wyświetlania w przeglądarce w obszarze **Ustawienia** > **Języki**. Microsoft Edge jest aplikacją systemu Win32 instalowaną w kontekście systemu oraz na takich samych architekturach (aplikacja x86 w systemie operacyjnym x86, a aplikacja x64 w systemie operacyjnym x64). Usługa Intune wykryje wszystkie istniejące wcześniej instalacje aplikacji Microsoft Edge. Jeśli została ona zainstalowana w kontekście użytkownika, instalacja systemu spowoduje jej nadpisanie. Jeśli została ona zainstalowana w kontekście systemu, będzie zgłaszany sukces instalacji. Ponadto automatyczne aktualizacje przeglądarki Microsoft Edge są domyślnie **włączone**, a przeglądarki Microsoft Edge nie można odinstalować.
 
 > [!NOTE]
 > Przeglądarka Microsoft Edge *w wersji 77 lub nowszej* jest również dostępna dla systemu macOS.

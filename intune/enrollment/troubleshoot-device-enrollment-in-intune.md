@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f770db6927ed87786f7806e011cdc6cb9bae6b3f
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 190322392909a14681a4b68a79d9a3537360206b
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509276"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713502"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Rozwiązywanie problemów dotyczących rejestrowania urządzeń w usłudze Microsoft Intune
 
@@ -64,9 +64,9 @@ Te problemy mogą wystąpić na wszystkich platformach urządzeń.
 
 Sprawdź, czy użytkownik nie jest przypisany do większej niż maksymalna liczby urządzeń, wykonując poniższe kroki:
 
-1. W usłudze Intune wybierz pozycję **Rejestrowanie urządzeń** > **Ograniczenia rejestracji** > **Ograniczenia limitu urządzeń**. Zanotuj wartość w kolumnie **Limit urządzeń**.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Rejestrowanie urządzenia** > **Ograniczenia rejestracji** > **Ograniczenia limitu urządzeń**. Zanotuj wartość w kolumnie **Limit urządzeń**.
 
-2. W usłudze Intune wybierz pozycję **Użytkownicy** > **Wszyscy użytkownicy**, wybierz użytkownika i wybierz pozycję **Urządzenia**. Zanotuj liczbę urządzeń.
+2. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **Wszyscy użytkownicy** > wybierz użytkownika > **Urządzenia**. Zanotuj liczbę urządzeń.
 
 3. Jeśli liczba zarejestrowanych urządzeń użytkownika jest już równa limitowi urządzeń, nie będzie można zarejestrować kolejnych urządzeń, dopóki nie zostanie wykonana jedna z następujących czynności:
     - [Usunięcie istniejących urządzeń](../remote-actions/devices-wipe.md)

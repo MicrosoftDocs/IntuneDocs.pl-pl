@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/10/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f78c628498624b62daf6c3ac597547851697c500
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 3942dbde1314ad5a749be33baa422a782af7e0a3
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72493341"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755218"
 ---
 # <a name="use-the-take-a-test-app-on-windows-10-devices-in-microsoft-intune"></a>Używanie aplikacji Take a Test na urządzeniach z systemem Windows 10 w usłudze Microsoft Intune
 
@@ -30,7 +30,7 @@ ms.locfileid: "72493341"
 
 Profile edukacyjne w usłudze Intune są przeznaczone dla uczniów, którzy biorą udział w teście lub egzaminie na urządzeniach. Ta funkcja obejmuje aplikację **Take a Test** i ustawienia, które służą do dodawania adresu URL testu, wybierania sposobu logowania użytkowników końcowych do testu i wykonywania innych czynności. Ta funkcja obsługuje następującą platformę:
 
-- System Windows 10 lub nowszy
+- Windows 10 lub nowszym
 
 Gdy użytkownik się zaloguje, w aplikacji Take a Test zostanie automatycznie otwarty test, w którym bierze on udział. W trakcie trwania testu na urządzeniu nie można uruchamiać żadnych innych aplikacji. Dalsze szczegółowe informacje na temat aplikacji Take a Test można znaleźć w temacie [Take tests in Windows 10](https://docs.microsoft.com/education/windows/take-tests-in-windows-10) (Branie udziału w testach w systemie Windows 10).
 
@@ -38,8 +38,8 @@ Ten artykuł zawiera listę kroków tworzenia profilu konfiguracji urządzenia w
 
 ## <a name="create-a-device-profile"></a>Tworzenie profilu urządzenia
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Wybierz pozycję **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz pozycję **Urządzenia** > **Profile konfiguracji** > **Utwórz profil**.
 3. Wprowadź następujące właściwości:
 
     - **Nazwa**: Wprowadź opisową nazwę nowego profilu.

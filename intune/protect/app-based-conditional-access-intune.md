@@ -6,28 +6,26 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/11/2019
+ms.date: 11/06/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: b399fba0-5dd4-4777-bc9b-856af038ec41
-ms.reviewer: chrisgre
+ms.reviewer: elocholi
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d3cae06c3ce763fe8ca94bbed9bf35e8abef52c
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: f0b5e67c433f2d3633219650f48307dccae196e9
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72502604"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713282"
 ---
 # <a name="app-based-conditional-access-with-intune"></a>Dostęp warunkowy oparty na aplikacji z użyciem usługi Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 [Zasady ochrony aplikacji w usłudze Intune](../apps/app-protection-policy.md) pomagają chronić dane firmy na urządzeniach zarejestrowanych w usłudze Intune. Możesz również korzystać z zasad ochrony aplikacji na urządzeniach należących do pracowników, które nie zostały zarejestrowane na potrzeby zarządzania przez usługę Intune. W takim przypadku, nawet jeśli nie zarządzasz danym urządzeniem, musisz upewnić się, że dane i zasoby firmy zostały odpowiednio zabezpieczone.
 
@@ -39,6 +37,7 @@ Dostęp warunkowy oparty na aplikacjach oraz zarządzanie aplikacjami klienckimi
 Aplikacje poczty wbudowane w systemach iOS i Android można zablokować, zezwalając na dostęp do usługi Exchange Online wyłącznie aplikacji Microsoft Outlook. Ponadto aplikacjom, które nie mają zastosowanych zasad ochrony aplikacji usługi Intune, można zablokować dostęp do usługi SharePoint Online.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
+
 Przed utworzeniem zasad dostępu warunkowego opartego na aplikacji muszą zostać spełnione następujące warunki:
 
 - **Enterprise Mobility + Security (EMS)** lub **subskrypcja usługi Azure Active Directory (AD) w wersji Premium**
@@ -57,7 +56,7 @@ Dostęp warunkowy oparty na aplikacji [obsługuje również aplikacje biznesowe]
 W tym przykładzie administrator zastosował zasady ochrony aplikacji w odniesieniu do aplikacji Outlook, a następnie zastosował regułę dostępu warunkowego, która powoduje dodanie aplikacji Outlook do listy zatwierdzonych aplikacji, które mogą być używane podczas uzyskiwania dostępu do firmowej poczty e-mail.
 
 > [!NOTE]
-> Struktura poniższego schematu blokowego ma zastosowanie także do innych aplikacji zarządzanych.
+> Następujący schemat blokowy może być również stosowany do innych aplikacji zarządzanych.
 
 ![Proces dostępu warunkowego na podstawie aplikacji zilustrowany na schemacie blokowym](./media/app-based-conditional-access-intune/ca-intune-common-ways-3.png)
 

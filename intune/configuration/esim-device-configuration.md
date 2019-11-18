@@ -5,22 +5,23 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 7/31/2018
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
+ms.reviewer: ericor
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 84103c6264431773ab5928f1da22c37a80cc9036
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 15af657ec63c664d91c370fa0f18ff8c4f140b47
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72492714"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755232"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Konfigurowanie profilów sieci komórkowej karty eSIM w usłudze Intune — publiczna wersja zapoznawcza
 
@@ -69,11 +70,10 @@ Następujące urządzenia obsługujące kartę eSIM są dostępne na rynku lub z
 
 Kody aktywacji sieci komórkowej są dostarczane przez operatora sieci komórkowej w pliku rozdzielonym przecinkami (csv). Po otrzymaniu pliku dodaj go do usługi Intune, wykonując następujące czynności:
 
-1. Zaloguj się do [portalu Azure](https://portal.azure.com/).
-2. Wybierz opcję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
-3. Wybierz kolejno pozycje **Konfiguracja urządzeń** > **Profile komórkowe eSIM** > **Dodaj**.
-4. Wybierz plik CSV zawierający Twoje kody aktywacji.
-5. Wybierz przycisk **OK**, aby zapisać zmiany.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz pozycję **Urządzenia** > **Profile komórkowe eSIM** > **Dodaj**.
+3. Wybierz plik CSV zawierający Twoje kody aktywacji.
+4. Wybierz przycisk **OK**, aby zapisać zmiany.
 
 ### <a name="csv-file-requirements"></a>Wymagania dotyczące pliku CSV
 
@@ -111,8 +111,8 @@ Utwórz grupę urządzeń, która zawiera urządzenia obsługujące kartę eSIM.
 
 Przypisz profil do grupy usługi Azure AD, która zawiera urządzenia obsługujące kartę eSIM.
 
-1. W witrynie [Azure Portal](https://portal.azure.com/) wybierz pozycję **Wszystkie usługi**, wpisz nazwę usługi **Intune** w filtrze, a następnie wybierz pozycję **Microsoft Intune**.
-2. Wybierz pozycję **Konfiguracja urządzeń** > **Sieć komórkowa eSIM** > **Profile**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz pozycję **Urządzenia** > **Profile komórkowe eSIM**.
 3. Na liście profilów wybierz pulę subskrypcji sieci komórkowej eSIM, którą chcesz przypisać, a następnie wybierz pozycję **Przypisania**.
 4. Wybierz **dołączenie** lub **wykluczenie** grup, a następnie wybierz grupy.
 
@@ -129,15 +129,15 @@ Kodów aktywacji karty eSIM można użyć tylko raz. Po zainstalowaniu kodu na u
 
 Po przypisaniu profilu możesz monitorować stan wdrożenia puli subskrypcji.
 
-1. Zaloguj się do [portalu Azure](https://portal.azure.com/).
-2. Wybierz opcję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
-3. Wybierz kolejno pozycje **Konfiguracja urządzeń** > **Profile sieci komórkowej eSIM**. Zostanie wyświetlona lista zawierająca wszystkie istniejące pule subskrypcji sieci komórkowej eSIM.
-4. Wybierz subskrypcję i zapoznaj się z jej **stanem wdrożenia**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz pozycję **Urządzenia** > **Profile komórkowe eSIM**. Zostanie wyświetlona lista zawierająca wszystkie istniejące pule subskrypcji sieci komórkowej eSIM.
+3. Wybierz subskrypcję i zapoznaj się z jej **stanem wdrożenia**.
 
 ### <a name="check-the-profile-status"></a>Sprawdzanie stanu profilu
+
 Po utworzeniu profilu urządzenia usługa Intune udostępnia wykresy graficzne. Te wykresy zawierają stan profilu, taki jak pomyślne przypisanie do urządzeń lub wyświetlanie konfliktu w tym profilu.
 
-1. Wybierz kolejno pozycje **Konfiguracja urządzeń** > **Profile sieci komórkowej eSIM**, a następnie wybierz istniejącą subskrypcję.
+1. Wybierz kolejno pozycje **Urządzenia** > **Profile sieci komórkowej eSIM** > wybierz istniejącą subskrypcję.
 2. Na karcie **Przegląd** górny wykres graficzny przedstawia liczbę urządzeń przypisanych do określonego wdrożenia puli subskrypcji sieci komórkowej eSIM.
 
     Zawiera on również liczbę urządzeń dla innych platform, które zostały przypisane do tego samego profilu urządzenia.
@@ -153,7 +153,7 @@ Po utworzeniu profilu urządzenia usługa Intune udostępnia wykresy graficzne. 
 
 Szczegółową listę urządzeń możesz wyświetlać i monitorować w obszarze Stan urządzenia.**
 
-1. Wybierz kolejno pozycje **Konfiguracja urządzeń** > **Profile sieci komórkowej eSIM**, a następnie wybierz istniejącą subskrypcję.
+1. Wybierz kolejno pozycje **Urządzenia** > **Profile sieci komórkowej eSIM** > wybierz istniejącą subskrypcję.
 2. Wybierz pozycję **Stan urządzenia**. W usłudze Intune wyświetlane są dodatkowe informacje dotyczące urządzenia:
 
     - **Nazwa urządzenia**: nazwa urządzenia docelowego

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99f27992009332a2a5fae0768225d8c69d3ac5ad
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 1e995dbc89321bf844151accd654a2d17d35afd9
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509397"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713434"
 ---
 # <a name="turn-on-ios-supervised-mode"></a>Włączanie trybu nadzorowanego dla systemu iOS
 
@@ -37,7 +37,7 @@ Aby uzyskać listę kontrolek firmy Apple, które wymagają nadzoru, zobacz [dok
 
 ## <a name="turn-on-supervised-mode-during-enrollment"></a>Włączanie trybu nadzorowanego podczas rejestracji
 
-W usłudze Intune możesz włączyć tryb nadzorowany dla urządzeń podczas [tworzenia profilu rejestracji firmy Apple w programie DEP](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile). W obszarze **Ustawienia zarządzania urządzeniami**, zaznacz pole **Nadzorowane**.
+W [centrum administracyjnym programy Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) możesz włączyć tryb nadzorowany dla urządzeń podczas [tworzenia profilu rejestracji firmy Apple w programie DEP](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile). W obszarze **Ustawienia zarządzania urządzeniami**, zaznacz pole **Nadzorowane**.
 
 ## <a name="turn-on-supervised-mode-after-enrollment"></a>Włączanie trybu nadzorowanego po rejestracji
 

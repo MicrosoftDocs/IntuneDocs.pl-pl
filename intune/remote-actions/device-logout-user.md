@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8336f5b29cd21bb6875285177071542080eb95f3
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: fdb23916319b06fb4d85b913209d1ac9e007d551
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509457"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713178"
 ---
 # <a name="logout-the-current-user-on-intune-managed-ios-devices"></a>Wylogowywanie bieżących użytkowników z urządzeń z systemem iOS zarządzanych przez usługę Intune
 
@@ -41,9 +41,7 @@ Akcja **Wyloguj bieżącego użytkownika** powoduje wylogowanie bieżącego uży
 
 ## <a name="how-to-log-out-the-current-user"></a>Jak wylogować bieżącego użytkownika
 
-1. Zaloguj się do portalu Azure Portal.
-2. Wybierz kolejno opcje **Więcej usług** > **Monitorowanie i zarządzanie** > **Intune**.
-3. W bloku **Intune** wybierz opcję **Urządzenia**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) i wybierz pozycję **Urządzenia**.
 4. W bloku **Urządzenia i grupy** wybierz pozycję **Wszystkie urządzenia**.
 5. Z listy zarządzanych urządzeń wybierz urządzenie z systemem iOS, a następnie wybierz akcję zdalną **Wyloguj bieżącego użytkownika**.
 

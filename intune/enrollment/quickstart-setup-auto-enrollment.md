@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6e64c7d977fef66af0fedf556eea34bef9b9079d
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 78620818bfd13f0292e159c6a3670b5e3af53dab
+ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72503134"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73709499"
 ---
 # <a name="quickstart-set-up-automatic-enrollment-for-windows-10-devices"></a>Szybki start: Konfigurowanie automatycznego rejestrowania urządzeń z systemem Windows 10
 
@@ -35,7 +35,7 @@ Jeśli nie masz subskrypcji usługi Intune, [utwórz konto bezpłatnej wersji pr
 
 ## <a name="sign-in-to-intune"></a>Logowanie się do usługi Intune
 
-Zaloguj się w usłudze [Intune](https://aka.ms/intuneportal) jako administrator globalny lub administrator usługi Intune. Jeśli utworzono subskrypcję wersji próbnej usługi Intune, konto, którego użyto do utworzenia subskrypcji, jest administratorem globalnym.
+Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) jako administrator globalny lub administrator usługi Intune. Jeśli utworzono subskrypcję wersji próbnej usługi Intune, konto, którego użyto do utworzenia subskrypcji, jest administratorem globalnym.
 
 ## <a name="set-up-windows-10-automatic-enrollment"></a>Konfigurowanie automatycznego rejestrowania urządzeń z systemem Windows 10
 
@@ -75,7 +75,7 @@ Aby ponownie skonfigurować automatyczne rejestrowanie w usłudze Intune, zobacz
 
 W tym przewodniku Szybki start przedstawiono sposób konfigurowania automatycznego rejestrowania urządzeń z systemem Windows 10. Aby uzyskać informacje na temat rejestrowania urządzenia, zobacz [Co to jest rejestrowanie urządzenia?](device-enrollment.md)
 
-Aby zapoznać się kolejnymi przewodnikami Szybki start dotyczącymi usługi Intune, przejdź do kolejnego przewodnika Szybki start.
+Aby zapoznać się z kolejnymi przewodnikami Szybki start dotyczącymi usługi Intune, przejdź do kolejnego przewodnika Szybki start.
 
 > [!div class="nextstepaction"]
 > [Szybki start: Rejestrowanie urządzenia z systemem Windows 10](../quickstart-enroll-windows-device.md)

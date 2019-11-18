@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dbcc50d275a3d3e6a613640e96b363ce7608da81
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: ded91d72321257adc30d0321b5d01e74fa1d51a6
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72508569"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73712203"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Usuwanie urządzeń przy użyciu czyszczenia, wycofywania lub ręcznego wyrejestrowywania urządzenia
 
@@ -53,7 +53,7 @@ Czyszczenie jest przydatne w przypadku resetowania urządzenia przed przekazanie
 
 ### <a name="wiping-a-device"></a>Czyszczenie urządzenia
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Wybierz pozycję **Urządzenia** > **Wszystkie urządzenia**.
 4. Wybierz nazwę urządzenia, które chcesz wyczyścić.
 5. W okienku wyświetlającym nazwę urządzenia wybierz pozycję **Wyczyść**.
@@ -146,7 +146,7 @@ Urządzenia kiosku możesz tylko wyczyścić. Nie możesz wycofywać urządzeń 
 
 ### <a name="retire"></a>Wycofaj
 
-1. Zaloguj się do usługi [Intune w witrynie Azure Portal](https://aka.ms/intuneportal).
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. W okienku **Urządzenia** wybierz pozycję **Wszystkie urządzenia**.
 3. Wybierz nazwę urządzenia, które chcesz wycofać.
 4. W okienku wyświetlającym nazwę urządzenia wybierz pozycję **Wycofaj**. Wybierz pozycję **Tak**, aby potwierdzić.
@@ -157,12 +157,12 @@ Jeśli urządzenie jest włączone i połączone, propagowanie akcji **Wycofaj**
 
 Jeśli chcesz usunąć urządzenia z portalu usługi Intune, możesz usunąć je z okienka określonego urządzenia. Przy następnym zaewidencjonowaniu urządzenia zostaną z niego usunięte wszystkie dane firmy.
 
-1. Zaloguj się do [usługi Intune w witrynie Azure Portal](https://aka.ms/intuneportal).
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Wybierz kolejno pozycje **Urządzenia** > **Wszystkie urządzenia** > wybierz urządzenia do usunięcia > **Usuń**.
 
 ### <a name="automatically-delete-devices-with-cleanup-rules"></a>Automatyczne usuwanie urządzeń przy użyciu reguł oczyszczania
 Usługę Intune można skonfigurować tak, aby automatycznie usuwała urządzenia, które wyglądają na nieaktywne lub nieaktualne albo które nie odpowiadają. Te reguły oczyszczania stale monitorują spis urządzeń, aby zapewnić aktualność rekordów urządzeń. Urządzenia usunięte w ten sposób są usuwane z obszaru zarządzania usługi Intune.
-1. Zaloguj się do usługi [Intune w witrynie Azure Portal](https://aka.ms/intuneportal).
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Wybierz kolejno pozycje **Urządzenia** > **Reguły czyszczenia urządzeń** > **Tak**.
 3. W polu **Usuń urządzenia, które nie zostały zaewidencjonowane przez następującą liczbę dni** wprowadź liczbę z zakresu od 30 do 270.
 4. Wybierz polecenie **Zapisz**.
@@ -185,7 +185,7 @@ Usunięcie urządzeń z usługi Azure AD może być konieczne z powodu problemó
 
 Jeśli chcesz całkowicie usunąć urządzenie Apple DEP z zarządzania przez usługę Intune, wykonaj następujące kroki:
 
-1. Zaloguj się do usługi [Intune w witrynie Azure Portal](https://aka.ms/intuneportal).
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Wybierz pozycję **Urządzenia** > **Wszystkie urządzenia**, a następnie wybierz urządzenie i opcję **Wycofaj**.
 ![Zrzut ekranu przedstawiający opcję Wycofaj](./media/devices-wipe/retire.png)
 3. Odwiedź witrynę [deploy.apple.com](http://deploy.apple.com) i wyszukaj urządzenie według jego numeru seryjnego.

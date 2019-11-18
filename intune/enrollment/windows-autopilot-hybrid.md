@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ab90dc9a95e461ad8c5913131a23a0355e9d072c
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 3724072144a78e1f4f5a17914eff941469e27242
+ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509223"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73709605"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Wdrażanie urządzeń przyłączonych do hybrydowej usługi Azure AD przy użyciu usługi Intune i rozwiązania Windows Autopilot
 Za pomocą usługi Intune i rozwiązania Windows Autopilot można skonfigurować urządzenia przyłączone do hybrydowej usługi Azure Active Directory (Azure AD). Aby to zrobić, wykonaj kroki opisane w tym artykule.
@@ -42,11 +42,11 @@ Urządzenia, które mają zostać zarejestrowane, muszą spełniać również na
 
 ## <a name="set-up-windows-10-automatic-enrollment"></a>Konfigurowanie automatycznego rejestrowania urządzeń z systemem Windows 10
 
-1. Zaloguj się w witrynie [Azure Portal](https://portal.azure.com) i w lewym okienku wybierz pozycję **Azure Active Directory**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) i w okienku po lewej stronie wybierz pozycję **Azure Active Directory**.
 
    ![Witryna Azure Portal](./media/windows-autopilot-hybrid/auto-enroll-azure-main.png)
 
-1. Wybierz pozycję **Mobilność (MDM i MAM)**.
+1. Wybierz pozycję **Mobilność (MDM i MAM)** .
 
    ![Okienko usługi Azure Active Directory](./media/windows-autopilot-hybrid/auto-enroll-mdm.png)
 
@@ -70,7 +70,7 @@ Jednostka organizacyjna, której przyznano uprawnienia do tworzenia komputerów,
 - jednostką organizacyjną wprowadzoną w profilu przyłączania do domeny
 - lub, jeśli nie wybrano profilu, nazwą domeny komputera dla Twojej domeny.
 
-1. Otwórz narzędzie **Użytkownicy i komputery usługi Active Directory (DSA.msc)**.
+1. Otwórz narzędzie **Użytkownicy i komputery usługi Active Directory (DSA.msc)** .
 
 1. Kliknij prawym przyciskiem myszy jednostkę organizacyjną, która będzie używana do tworzenia komputerów przyłączonych do hybrydowej usługi Azure AD, a następnie wybierz pozycję **Deleguj kontrolę**.
 
@@ -107,7 +107,7 @@ Jednostka organizacyjna, której przyznano uprawnienia do tworzenia komputerów,
 
 Łącznik usługi Intune dla usługi Active Directory musi być zainstalowany na komputerze z systemem Windows Server 2016 lub nowszym. Ten komputer musi również mieć dostęp do Internetu i usługi Active Directory. W celu zwiększenia skalowalności i dostępności lub obsługi wielu domen usługi Active Directory można zainstalować wiele łączników w danym środowisku. Zaleca się instalowanie łącznika na serwerze, na którym nie są uruchomione inne łączniki usługi Intune.
 
-1. W usłudze [Intune](https://aka.ms/intuneportal) wybierz kolejno pozycje **Rejestracja urządzenia** > **Rejestracja w systemie Windows** > **Łącznik usługi Intune dla usługi Active Directory** > **Dodaj**. 
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz kolejno pozycje **Rejestrowanie urządzenia** > **Rejestracja w systemie Windows** > **Łącznik usługi Intune dla usługi Active Directory** > **Dodaj**. 
 2. Postępuj zgodnie z instrukcjami, aby pobrać łącznik.
 3. Otwórz pobrany plik konfiguracji łącznika, *ODJConnectorBootstrapper.exe*, aby zainstalować łącznik.
 4. Na koniec instalacji wybierz pozycję **Konfiguruj**.
@@ -117,7 +117,7 @@ Jednostka organizacyjna, której przyznano uprawnienia do tworzenia komputerów,
 7. Przejdź do pozycji **Rejestracja urządzenia** > **Rejestracja w systemie Windows** > **Łącznik usługi Intune dla usługi Active Directory** i upewnij się, że połączenie ma stan **Aktywne**.
 
 > [!NOTE]
-> Od zalogowania się w łączniku do jego pojawienia się w usłudze [Intune](https://aka.ms/intuneportal) może upłynąć kilka minut. Łącznik pojawi się tylko wtedy, jeśli pomyślnie skomunikuje się z usługą Intune.
+> Od zalogowania się w łączniku do jego pojawienia się w [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) może upłynąć kilka minut. Łącznik pojawi się tylko wtedy, jeśli pomyślnie skomunikuje się z usługą Intune.
 
 ### <a name="turn-off-ie-enhanced-security-configuration"></a>Wyłączanie konfiguracji zwiększonych zabezpieczeń programu Internet Explorer
 W systemie Windows Server konfiguracja zwiększonych zabezpieczeń programu Internet Explorer jest domyślnie włączona. Jeśli nie możesz zalogować się do łącznika usługi Intune dla usługi Active Directory, wyłącz konfigurację zwiększonych zabezpieczeń programu Internet Explorer dla administratora. [Jak wyłączyć konfigurację zwiększonych zabezpieczeń programu Internet Explorer](https://blogs.technet.microsoft.com/chenley/2011/03/10/how-to-turn-off-internet-explorer-enhanced-security-configuration)
@@ -128,7 +128,7 @@ Jeśli w środowisku sieciowym znajduje się internetowy serwer proxy, upewnij s
 
 
 ## <a name="create-a-device-group"></a>Tworzenie grupy urządzeń
-1. W usłudze [Intune](https://aka.ms/intuneportal) wybierz kolejno pozycje **Grupy** > **Nowa grupa**.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Grupy** > **Nowa grupa**.
 
 1. W okienku **Grupa** wykonaj następujące czynności:
 
@@ -177,13 +177,13 @@ Po *zarejestrowaniu* urządzenia rozwiązania Autopilot są wyświetlane w czter
 - Okienko **Wszystkie urządzenia w usłudze Azure AD** w usłudze Azure Active Directory w witrynie Azure Portal. Wybierz pozycję **Urządzenia** > **Wszystkie urządzenia**.
 - Okienko **Wszystkie urządzenia** w usłudze Intune w witrynie Azure Portal. Wybierz pozycję **Urządzenia** > **Wszystkie urządzenia**.
 
-Po zarejestrowaniu urządzeń rozwiązania Autopilot ich nazwy stają się nazwami hostów tych urządzeń. Domyślnie nazwa hosta zaczyna się od ciągu *DESKTOP-*.
+Po zarejestrowaniu urządzeń rozwiązania Autopilot ich nazwy stają się nazwami hostów tych urządzeń. Domyślnie nazwa hosta zaczyna się od ciągu *DESKTOP-* .
 
 
 ## <a name="create-and-assign-an-autopilot-deployment-profile"></a>Tworzenie i przypisywanie profilu wdrażania rozwiązania Autopilot
 Profile wdrażania rozwiązania Autopilot służą do konfigurowania urządzeń z rozwiązaniem Autopilot.
 
-1. W usłudze [Intune](https://aka.ms/intuneportal) wybierz kolejno pozycje **Rejestracja urządzenia** > **Rejestracja w systemie Windows** > **Profile wdrażania** > **Utwórz profil**.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja w systemie Windows** > **Profile wdrażania** > **Utwórz profil**.
 2. Na stronie **Podstawowe** wypełnij pole **Nazwa** i opcjonalne pole **Opis**.
 3. Jeśli chcesz, aby wszystkie urządzenia w przypisanych grupach dokonywały automatycznej konwersji do rozwiązania Autopilot, ustaw opcję **Konwertuj wszystkie wybrane urządzenia na potrzeby rozwiązania Autopilot** na wartość **Tak**. Wszystkie urządzenia należące do firmy bez rozwiązania Autopilot w przypisanych grupach będą rejestrować się za pomocą usługi wdrażania rozwiązania Autopilot. Urządzenia należące do użytkownika nie zostaną przekonwertowane na rozwiązanie Autopilot. Przetwarzanie rejestracji może potrwać do 48 godzin. Jeśli urządzenie nie zostało zarejestrowane i je zresetowano, rozwiązanie Autopilot przeprowadzi jego rejestrację. Po zarejestrowaniu urządzenia w ten sposób wyłączenie tej opcji lub usunięcie przypisania profilu nie spowoduje usunięcia urządzenia z usługi wdrażania rozwiązania Autopilot. Zamiast tego należy [bezpośrednio usunąć urządzenie](enrollment-autopilot.md#delete-autopilot-devices).
 4. Wybierz pozycję **Dalej**.
@@ -200,7 +200,7 @@ Zmiana stanu urządzenia z wartości *Nieprzypisane* do wartości *Przypisywanie
 
 ## <a name="optional-turn-on-the-enrollment-status-page"></a>(Opcjonalnie) Włączanie strony stanu rejestracji
 
-1. W usłudze [Intune](https://aka.ms/intuneportal) wybierz kolejno pozycje **Rejestracja urządzenia** > **Rejestracja w systemie Windows** > **Strona ze stanem rejestracji**.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja w systemie Windows** > **Strona stanu rejestracji**.
 1. W okienku **Strona ze stanem rejestracji** wybierz pozycje **Domyślne** > **Ustawienia**.
 1. W polu **Pokaż postęp instalacji aplikacji i profilu** wybierz pozycję **Tak**.
 1. Zgodnie z potrzebami skonfiguruj inne opcje.
@@ -208,12 +208,12 @@ Zmiana stanu urządzenia z wartości *Nieprzypisane* do wartości *Przypisywanie
 
 ## <a name="create-and-assign-a-domain-join-profile"></a>Tworzenie i przypisywanie profilu przyłączania do domeny
 
-1. W usłudze [Intune](https://aka.ms/intuneportal) wybierz kolejno pozycje **Konfiguracja urządzenia** > **Profile** > **Utwórz profil**.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **Profile konfiguracji** > **Utwórz profil**.
 1. Wprowadź następujące właściwości:
    - **Nazwa**: Wprowadź opisową nazwę nowego profilu.
    - **Opis**: Wprowadź opis profilu.
    - **Platforma**: Wybierz pozycję **Windows 10 i nowsze**.
-   - **Typ profilu**: Wybierz pozycję **Dołączanie do domeny (wersja zapoznawcza)**.
+   - **Typ profilu**: Wybierz pozycję **Dołączanie do domeny (wersja zapoznawcza)** .
 1. Wybierz pozycję **Ustawienia**, a następnie podaj wartości w polach **Prefiks nazwy komputera**, **Nazwa domeny** i (opcjonalnie) **Jednostka organizacyjna** w [formacie DN](https://docs.microsoft.com/windows/desktop/ad/object-names-and-identities#distinguished-name). 
    > [!NOTE]
    > Nie używaj znaków cudzysłowu wokół wartości w polu **Jednostka organizacyjna**.

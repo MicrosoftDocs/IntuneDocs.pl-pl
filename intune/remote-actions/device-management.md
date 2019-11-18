@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a3ee6240d9efb0d09c41a6a9b1260cd4189927a8
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 8c31bbd8eb9efb2b748163223ce1b8fa555f0dc6
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509417"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713529"
 ---
 # <a name="what-is-microsoft-intune-device-management"></a>Co to jest zarządzanie urządzeniami w usłudze Microsoft Intune?
 
@@ -33,7 +33,7 @@ Obciążenie **Urządzenia** zapewnia wgląd w urządzenia zarządzane i umożli
 
 ## <a name="get-to-your-devices"></a>Przechodzenie do urządzeń
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Wybierz pozycję **Urządzenia**. Ten widok zapewnia szczegółowe informacje o poszczególnych urządzeniach oraz czynnościach, które można wobec nich wykonać, w tym:
 
    - **Omówienie** — wyświetla wizualną migawkę zarejestrowanych urządzeń oraz pokazuje, ile urządzeń korzysta z różnych platform, w tym systemu Android, iOS i innych.

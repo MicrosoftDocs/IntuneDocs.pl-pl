@@ -2,7 +2,7 @@
 title: Szybki start — rejestrowanie urządzenia z systemem Windows 10 Desktop w usłudze Microsoft Intune
 description: Szybki start — rejestrowanie urządzenia z systemem Windows 10 Desktop w usłudze Microsoft Intune za pomocą Portalu firmy.
 services: microsoft-intune
-author: ErikRe
+author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 07/30/2019
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0aeeb55804a2bdd3ef1143bbb88dee968892c5c7
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 91f20411f668428c8bf3af8b0bd4ae6f4b0b545f
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509291"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713515"
 ---
 # <a name="quickstart-enroll-your-windows-10-device"></a>Szybki start: Rejestrowanie urządzenia z systemem Windows 10
 
@@ -91,7 +91,7 @@ Zanim zarejestrujesz system Windows 10 Desktop, musisz sprawdzić, którą wersj
 
 ## <a name="confirm-your-device-enrollment-in-intune"></a>Potwierdzanie rejestracji urządzenia w usłudze Intune
 
-1. Zaloguj się w usłudze [Intune](https://aka.ms/intuneportal) jako administrator globalny lub administrator usługi Intune.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) jako administrator globalny lub administrator usługi Intune.
 2. Wybierz pozycje **Urządzenia** > **Wszystkie urządzenia**, aby wyświetlić urządzenia zarejestrowane w usłudze Intune.
 3. Sprawdź, czy masz w usłudze Intune zarejestrowane dodatkowe urządzenie.
 
@@ -105,7 +105,7 @@ Aby wyrejestrować urządzenie z systemem Windows, zobacz [Usuwanie urządzenia 
 
 W tym przewodniku Szybki start przedstawiono sposób rejestrowania urządzenia z systemem Windows 10 w usłudze Intune. Możesz też zapoznać się z innymi sposobami rejestrowania urządzeń na wszystkich platformach. Aby uzyskać więcej informacji o używaniu urządzeń z usługą Intune, zobacz [Wykonywanie pracy przy użyciu urządzeń zarządzanych](/intune-user-help/use-managed-devices-to-get-work-done).
 
-Aby zapoznać się kolejnymi przewodnikami Szybki start dotyczącymi usługi Intune, przejdź do kolejnego przewodnika Szybki start.
+Aby zapoznać się z kolejnymi przewodnikami Szybki start dotyczącymi usługi Intune, przejdź do kolejnego przewodnika Szybki start.
 
 > [!div class="nextstepaction"]
 > [Szybki start: ustawianie wymaganej długości hasła dla urządzeń z systemem Android](../quickstart-set-password-length-android.md)

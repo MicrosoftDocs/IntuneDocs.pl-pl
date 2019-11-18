@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/04/2019
+ms.date: 11/07/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8961614a85992b927e31d590c7abadca75a85a6
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 75644ac4d8ccfb8a63e077f2b6625ac96364f5d7
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72492868"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755196"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>Dodawanie ustawień poczty e-mail do urządzeń przy użyciu usługi Intune
 
@@ -39,8 +39,8 @@ W tym artykule przedstawiono sposób tworzenia profilu poczty e-mail w usłudze 
 
 ## <a name="create-a-device-profile"></a>Tworzenie profilu urządzenia
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Wybierz pozycję **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz pozycję **Urządzenia** > **Profile konfiguracji** > **Utwórz profil**.
 3. Wprowadź następujące właściwości:
 
     - **Nazwa**: wprowadź opisową nazwę zasad. Nadaj nazwę zasadom, aby można było je później łatwo rozpoznać. Na przykład dobrą nazwą zasad jest **Ustawienia poczty e-mail dla wszystkich urządzeń z systemem Windows**.
@@ -61,7 +61,7 @@ W tym artykule przedstawiono sposób tworzenia profilu poczty e-mail w usłudze 
     - [Ustawienia systemu Android Enterprise](../email-settings-android-enterprise.md)
     - [Ustawienia systemu iOS/iPadOS](email-settings-ios.md)
     - [Ustawienia systemu Windows Phone 8.1](email-settings-windows-phone-8-1.md)
-    - [Windows 10 settings](email-settings-windows-10.md) (Ustawienia systemu Windows 10)
+    - [Ustawienia systemu Windows 10](email-settings-windows-10.md)
 
 5. Po zakończeniu wybierz kolejno pozycje **OK** > **Utwórz**, aby zapisać zmiany.
 
@@ -71,7 +71,7 @@ Gdy wprowadzisz ustawienia i utworzysz profil, profil będzie wyświetlany na li
 
 Profile poczty e-mail są przypisywane do grup urządzeń, a nie grup użytkowników. Istnieją różne sposoby usuwania profilu poczty e-mail z urządzenia, nawet wtedy, gdy w urządzeniu istnieje tylko jeden profil poczty e-mail:
 
-- **Opcja 1**. Otwórz profil poczty e-mail (**Konfiguracja urządzenia** > **Profile**) i wybierz pozycję **Przypisania**. Karta **Dołączanie** zawiera grupy, które zostały przypisane do profilu. Kliknij prawym przyciskiem myszy grupę > **Usuń**. Pamiętaj o **zapisaniu** zmian.
+- **Opcja 1**. Otwórz profil poczty e-mail (**Urządzenia** > **Profile konfiguracji** > wybierz swój profil) i wybierz pozycję **Przypisania**. Karta **Dołączanie** zawiera grupy, które zostały przypisane do profilu. Kliknij prawym przyciskiem myszy grupę > **Usuń**. Pamiętaj o **zapisaniu** zmian.
 
 - **Opcja 2**: [Wyczyść lub wycofaj urządzenie](../remote-actions/devices-wipe.md). Tych akcji można używać do selektywnego lub pełnego usuwania danych i ustawień.
 
@@ -103,4 +103,4 @@ W przypadku wprowadzenia zmian w zakresie przypisanego wcześniej profilu poczty
 
 ## <a name="next-steps"></a>Następne kroki
 
-Utworzony profil nie wykonuje jeszcze żadnych czynności. Następnie [przypisz profil do urządzeń](../device-profile-assign.md).
+Utworzony profil nie wykonuje jeszcze żadnych czynności. Teraz należy [przypisać profil](../device-profile-assign.md).

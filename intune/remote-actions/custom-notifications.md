@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 002989bd61167d6f0d20e2c5cb3fa80a4051a99c
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: a8393bbc012861199bd99d97a62ab3e659c15d15
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72508674"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713233"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Wysyłanie powiadomień niestandardowych w usłudze Intune  
 
@@ -69,7 +69,7 @@ Niestandardowe komunikaty powiadomień zawierają krótki tytuł i treść komun
 
 ## <a name="send-a-custom-notification-to-groups"></a>Wysyłanie powiadomień niestandardowych do grup  
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) przy użyciu konta z uprawnieniami do tworzenia i wysyłania powiadomień, a następnie przejdź do pozycji **Urządzenia** > **Wysyłaj niestandardowe powiadomienia**.  
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) przy użyciu konta z uprawnieniami do tworzenia i wysyłania powiadomień, a następnie przejdź do pozycji **Urządzenia** > **Wysyłaj niestandardowe powiadomienia**.  
 
 2. Na karcie Podstawy określ poniższe opcje, a następnie wybierz przycisk **Dalej**, aby kontynuować.  
    - **Tytuł** — określ tytuł powiadomienia. Tytuły mogą zawierać maksymalnie 50 znaków.  
@@ -89,7 +89,7 @@ Usługa Intune nie śledzi wysyłanych powiadomień niestandardowych, a urządze
 
 ## <a name="send-a-custom-notification-to-a-single-device"></a>Wysyłanie powiadomień niestandardowych do pojedynczego urządzenia  
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) przy użyciu konta z uprawnieniami do tworzenia i wysyłania powiadomień, a następnie przejdź do pozycji **Urządzenia** > **Wszystkie urządzenia**.  
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) przy użyciu konta z uprawnieniami do tworzenia i wysyłania powiadomień, a następnie przejdź do pozycji **Urządzenia** > **Wszystkie urządzenia**.  
 
 2. Wybierz urządzenie, do którego chcesz wysłać powiadomienie.  
 

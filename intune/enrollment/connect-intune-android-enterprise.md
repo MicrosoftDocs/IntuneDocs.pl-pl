@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0fad076b33bed5375dd8e53dd401a2c9c4c39237
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: a89b94f098292bf44122d6d2d144c7f35967cd32
+ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72505557"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73709456"
 ---
 # <a name="connect-your-intune-account-to-your-managed-google-play-account"></a>Łączenie konta usługi Intune z kontem zarządzanego sklepu Google Play
 
@@ -42,7 +42,7 @@ Aby ułatwić Ci konfigurowanie i używanie funkcji zarządzania systemu Android
 > Ze względu na interakcję między domenami firm Google i Microsoft ten krok może wymagać dostosowania ustawień przeglądarki.  Upewnij się, że adresy „portal.azure.com” i „play.google.com” znajdują się w tej samej strefie zabezpieczeń w przeglądarce.
 
 1. Jeśli nie zostało to jeszcze zrobione, przygotuj się do zarządzania urządzeniami mobilnymi przez [skonfigurowanie jako urzędu zarządzania urządzeniami mobilnymi](../fundamentals/mdm-authority-set.md) usługi **Microsoft Intune**.
-2. Zaloguj się do [usługi Intune w witrynie Azure Portal](https://aka.ms/intuneportal), a następnie wybierz pozycję **Rejestrowanie urządzenia** > **Rejestrowanie systemu Android** > **Zarządzany sklep Google Play**.  Jeśli używasz niestandardowej roli administratora usługi Intune, dostęp wymaga uprawnień odczytu i aktualizacji w organizacji.
+2. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), a następnie wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja systemu Android** > **Zarządzany sklep Google Play**.  Jeśli używasz niestandardowej roli administratora usługi Intune, dostęp wymaga uprawnień odczytu i aktualizacji w organizacji.
    
    ![Ekran rejestracji w rozwiązaniu Android enterprise](./media/connect-intune-android-enterprise/android-work-bind.png)
 
@@ -63,7 +63,7 @@ Aby ułatwić Ci konfigurowanie i używanie funkcji zarządzania systemu Android
 
 Rejestrację systemu Android Enterprise i zarządzanie w tym systemu możesz wyłączyć. W tym celu należy najpierw wycofać wszystkie zarejestrowane urządzenia z systemem Android Enterprise, w tym urządzenia z profilem służbowym, urządzenia dedykowane i urządzenia w pełni zarządzane. Następnie wybierz pozycję **Rozłącz** w konsoli administracyjnej usługi Intune, aby usunąć wszystkie zarejestrowane urządzenia z profilem służbowym systemu Android Enterprise, urządzenia dedykowane i urządzenia w pełni zarządzane. Zostanie również usunięta relacja między kontem zarządzanego sklepu Google Play i usługą Intune.
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) jako administrator.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) jako administrator usługi Intune.
 2. Wybierz pozycję **Rejestracja urządzeń** > **Rejestracja systemu Android** > **Zarządzany sklep Google Play** > **Rozłącz**.
 3. Wybierz pozycję **Tak**, aby rozłączyć i wyrejestrować wszystkie urządzenia z rozwiązaniem Android enterprise z usługi Intune.
 

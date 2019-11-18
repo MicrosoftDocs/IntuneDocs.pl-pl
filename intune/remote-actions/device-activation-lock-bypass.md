@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7a813d3bb574ae940b0003ac451b6e76638a0dd0
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 02d0fb91df07d8bba233a6f814ffcf36d408e95d
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72508651"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73712364"
 ---
 # <a name="bypass-activation-lock-on-supervised-ios-devices-with-intune"></a>Obejście blokady aktywacji na nadzorowanych urządzeniach z systemem iOS przy użyciu usługi Intune
 
@@ -74,7 +74,7 @@ Aby obejść blokadę aktywacji na urządzeniach, trzeba ją najpierw włączyć
 
 Akcja zdalna **Zastosuj obejście blokady aktywacji** dotycząca urządzenia w usłudze Intune powoduje usunięcie blokady aktywacji z urządzenia z systemem iOS bez konieczności podania identyfikatora Apple ID i hasła użytkownika. Po zastosowaniu obejścia blokady aktywacji urządzenie ponownie przejdzie w stan blokady aktywacji, gdy zostanie uruchomiona aplikacja Znajdź mój iPhone. Stosuj obejście blokady aktywacji tylko w sytuacji, gdy masz fizyczny dostęp do urządzenia.
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. W bloku **Intune** wybierz pozycję **Urządzenia**.
 4. W bloku **Urządzenia** wybierz pozycję **Wszystkie urządzenia**.
 5. Na liście zarządzanych urządzeń wybierz zdalną akcję urządzenia**Zastosuj obejście blokady aktywacji**.

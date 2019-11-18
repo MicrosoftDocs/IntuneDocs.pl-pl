@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 39ea8b3859d3d2525433c4cafdf566e7a2c8d2ab
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: f8e319c68abd8965b84323bc3b7a5451dee42bc2
+ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509203"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73709191"
 ---
 # <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>Samouczek: Rejestrowanie urządzeń z systemem Windows w usłudze Intune przy użyciu rozwiązania Autopilot
 
@@ -60,7 +60,7 @@ Pierwszym krokiem procesu konfigurowania rozwiązania Windows Autopilot jest dod
 
 2. Zapisz plik CSV.
 
-3. W usłudze [Intune w witrynie Azure Portal](https://aka.ms/intuneportal) wybierz kolejno pozycje **Rejestrowanie urządzenia**  >  **Rejestracja w systemie Windows**  >  **Urządzenia**  >  **Import**.
+3. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja w systemie Windows** > **Urządzenia** > **Importuj**.
 
     ![Zrzut ekranu przedstawiający urządzenia rozwiązania Autopilot z systemem Windows](./media/tutorial-use-autopilot-enroll-devices/autopilot-import-device.png)
 
@@ -78,7 +78,7 @@ Pierwszym krokiem procesu konfigurowania rozwiązania Windows Autopilot jest dod
 
 Następnie utworzysz grupę urządzeń i umieścisz w niej właśnie załadowane urządzenia rozwiązania Autopilot.
 
-1. W usłudze [Intune w witrynie Azure Portal](https://aka.ms/intuneportal) wybierz pozycje **Grupy** > **Nowa grupa**.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Grupy** > **Nowa grupa**.
 2. W bloku **Grupa**:
     1. Dla ustawienia **Typ grupy** wybierz pozycję **Zabezpieczenia**.
     2. W obszarze **Nazwa grupy** wprowadź frazę *Grupa rozwiązania Autopilot*. W obszarze **Opis grupy** wprowadź frazę *Grupa testowa dla urządzeń rozwiązania Autopilot*.
@@ -90,7 +90,7 @@ Następnie utworzysz grupę urządzeń i umieścisz w niej właśnie załadowane
 
 Po utworzeniu grupy urządzeń musisz utworzyć profil wdrażania, aby umożliwić konfigurowanie urządzeń rozwiązania Autopilot.
 
-1. W usłudze [Intune w witrynie Azure Portal](https://aka.ms/intuneportal) wybierz kolejno pozycje **Rejestrowanie urządzenia**  >  **Rejestracja w systemie Windows**  >  **Profile wdrażania**  >  **Utwórz profil**.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja w systemie Windows** > **Profile wdrażania** > **Utwórz profil**.
 2. Na stronie **Podstawy** w polu **Nazwa** wprowadź *Profil rozwiązania Autopilot*. W obszarze **Opis** wprowadź frazę *Profil testowy dla urządzeń rozwiązania Autopilot*.
 3. Ustaw pozycję **Konwertuj wszystkie urządzenia docelowe na rozwiązanie Autopilot** na **Tak**. To ustawienie gwarantuje, że wszystkie urządzenia na liście zostaną zarejestrowane przy użyciu usługi wdrażania rozwiązania Autopilot. Przetwarzanie rejestracji może potrwać do 48 godzin.
 4. Wybierz pozycję **Dalej**.
@@ -116,7 +116,7 @@ Jeśli nie chcesz już używać urządzeń rozwiązania Autopilot, możesz je us
 
 1. Jeśli urządzenia są zarejestrowane w usłudze Intune, musisz najpierw [usunąć je z portalu usługi Azure Active Directory](../remote-actions/devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).
 
-2. W usłudze [Intune w witrynie Azure Portal](https://aka.ms/intuneportal) wybierz kolejno pozycje **Rejestrowanie urządzenia** > **Rejestracja w systemie Windows** > **Urządzenia**.
+2. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja w systemie Windows** > **Urządzenia**.
 
 3. W obszarze **urządzeń rozwiązania Autopilot z systemem Windows** wybierz urządzenia do usunięcia, a następnie wybierz pozycję **Usuń**.
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ff1dc2565ef52f81619abe8f14e78c58da0fce7d
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 294f06b078b06cfba9376ba6db0eb42cb884e141
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72508620"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73712321"
 ---
 # <a name="use-fresh-start-to-reset-windows-10-devices-with-intune"></a>Użycie funkcji Rozpoczęcie od nowa do resetowania urządzeń z systemem Windows 10 przy użyciu usługi Intune
 
@@ -30,7 +30,7 @@ ms.locfileid: "72508620"
 
 Akcja **Rozpoczęcie od nowa** urządzenia usuwa wszystkie aplikacje zainstalowane na komputerze z systemem Windows 10 w wersji 1703 lub nowszej. Akcja Rozpoczęcie od nowa ułatwia usunięcie wstępnie zainstalowanych aplikacji (OEM), które zwykle są zainstalowane na nowym komputerze. 
 
-1. Zaloguj się w witrynie [Azure Portal](https://portal.azure.com) i przejdź do obszaru > **Microsoft Intune** > **Urządzenia** > **Wszystkie urządzenia**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) i wybierz pozycję **Urządzenia** > **Wszystkie urządzenia**.
 2. Z listy urządzeń zarządzanych wybierz urządzenie z systemem Windows 10 Desktop.
 3. Kliknij pozycję **Rozpoczęcie od nowa**. 
 4. Wybierz opcję **Zachowaj dane użytkownika na tym urządzeniu**, aby:

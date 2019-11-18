@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1c02248b3208073a3bb09cafe69cf0473eacb2b
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: 0f5ee9a0fe27c3cf9de758fd7155dbd127fb1e5e
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72584531"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73712217"
 ---
 # <a name="rename-a-device-in-intune"></a>Zmienianie nazwy urządzenia w usłudze Intune
 
@@ -36,7 +36,7 @@ Ta funkcja nie obsługuje obecnie zmiany nazw urządzeń z systemem Windows doł
 
 ## <a name="rename-a-device"></a>Zmienianie nazwy urządzenia
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Wybierz kolejno pozycje **Urządzenia** > **Wszystkie urządzenia** > wybierz urządzenie > **Więcej** > **Zmień nazwę urządzenia**.
 4. W bloku **Zmienianie nazwy urządzenia** wpisz nową nazwę w polu tekstowym. Możesz użyć liter, cyfr i łączników. Nazwa musi zawierać co najmniej jedną literę lub łącznik.
 5. Jeśli chcesz ponownie uruchomić urządzenie po zmianie jego nazwy, wybierz pozycję **Tak** obok pozycji **Uruchom ponownie po zmianie nazwy**.

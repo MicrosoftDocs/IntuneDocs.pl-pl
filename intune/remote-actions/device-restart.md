@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 42908f09dd47a22f1c545b60a97ca5e6b7fa068f
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 18cf8e3aec0c7ed7d8869c0f5b13b6e39df23d77
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72508642"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713416"
 ---
 # <a name="remotely-restart-devices-with-intune"></a>Zdalne ponowne uruchamianie urządzeń przy użyciu usługi Intune
 
@@ -44,7 +44,7 @@ Akcja urządzenia **Uruchom ponownie** powoduje ponowne uruchomienie wybranego u
 
 ## <a name="restart-a-device"></a>Ponowne uruchamianie urządzenia
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Wybierz pozycję **Urządzenia** > **Wszystkie urządzenia**.
 4. Z listy zarządzanych urządzeń wybierz urządzenie, wybierz pozycję **Więcej**, a następnie wybierz akcję zdalną urządzenia **Uruchom ponownie**.
 

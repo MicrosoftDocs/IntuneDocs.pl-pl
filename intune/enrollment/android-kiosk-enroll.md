@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: edc884850b70ff7621224c5b01a68d016f27504e
-ms.sourcegitcommit: 5932da3ed8f52c7b0f0d71c1801f81c85952cf0c
+ms.openlocfilehash: c06fe931bf17b812def3f22b3d9a5d92d9933e2b
+ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72923388"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73709469"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-dedicated-devices"></a>Konfigurowanie rejestracji w usłudze Intune dla dedykowanych urządzeń z systemem Android Enterprise
 
@@ -59,7 +59,7 @@ Aby skonfigurować zarządzanie dedykowanymi urządzeniami z systemem Android En
 
 Aby zarejestrować urządzenia dedykowane, należy utworzyć profil rejestracji. Po utworzeniu profilu udostępnia on token rejestracji (losowy ciąg) i kod QR. W zależności od systemu operacyjnego Android i wersji urządzenia możesz użyć tokenu lub kodu QR, aby [zarejestrować urządzenie dedykowane](#enroll-the-dedicated-devices).
 
-1. Zaloguj się w usłudze [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) i wybierz pozycje **Rejestrowanie urządzeń** > **Rejestracja systemu Android** > **Dedykowane urządzenia należące do firmy**.
+1. Zaloguj się w [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) i wybierz pozycje **Rejestrowanie urządzenia** > **Rejestracja systemu Android** > **Dedykowane urządzenia należące do firmy**.
 2. Wybierz pozycję **Utwórz** i wypełnij wymagane pola.
     - **Nazwa**: wpisz nazwę, która będzie używana podczas przypisywania profilu do dynamicznej grupy urządzeń.
     - **Data wygaśnięcia tokenu**: Data, kiedy wygasa token. Firma Google wymusza maksymalnie 90 dni.
@@ -69,7 +69,7 @@ Aby zarejestrować urządzenia dedykowane, należy utworzyć profil rejestracji.
 
 Aplikacje i zasady można zastosować do przypisanych albo dynamicznych grup urządzeń. Można skonfigurować dynamiczne grupy urządzeń usługi AAD, aby automatycznie wypełnić listę urządzeń zarejestrowanych przy użyciu określonego profilu rejestracji. W tym celu wykonaj następujące czynności:
 
-1. Zaloguj się w usłudze [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) i wybierz pozycje **Grupy** > **Wszystkie grupy** > **Nowa grupa**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) i wybierz pozycję **Grupy** > **Wszystkie grupy** > **Nowa grupa**.
 2. W bloku **Grupa** wypełnij wymagane pola w następujący sposób:
     - **Typ grupy**: Zabezpieczenia
     - **Nazwa grupy**: wpisz intuicyjną nazwę (na przykład Urządzenia z fabryki 1)
@@ -92,7 +92,7 @@ Aplikacje i zasady można zastosować do przypisanych albo dynamicznych grup urz
 
 Zamiana lub odwołanie tokenu/kodu QR nie będzie miała żadnego wpływu na urządzenia, które są już zarejestrowane.
 
-1. Zaloguj się w usłudze [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) i wybierz pozycje **Rejestrowanie urządzeń** > **Rejestracja systemu Android** > **Dedykowane urządzenia należące do firmy**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) i wybierz pozycje **Rejestrowanie urządzenia** > **Rejestracja systemu Android** > **Dedykowane urządzenia należące do firmy**.
 2. Wybierz profil, z którym chcesz pracować.
 3. Wybierz **Token**.
 4. Aby zamienić token, wybierz opcję **Zamień token**.

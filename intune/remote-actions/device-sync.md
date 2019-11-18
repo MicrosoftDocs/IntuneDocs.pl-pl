@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 86dc2e26e3c4091785cb6462a84e75b770634881
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 1001a7a3fde9c203fdad3d146ace57736ae7128d
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72508556"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713439"
 ---
 # <a name="sync-devices-to-get-the-latest-policies-and-actions-with-intune"></a>Synchronizacja urządzeń w celu pobierania najnowszych zasad i akcji przy użyciu usługi Intune
 
@@ -38,8 +38,8 @@ Akcja urządzenia **Synchronizacja** wymusza natychmiastowe zaewidencjonowanie w
 
 ## <a name="sync-a-device"></a>Synchronizowanie urządzenia
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973). 
-3. W usłudze **Intune** wybierz pozycję **Urządzenia** > **Wszystkie urządzenia**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). 
+3. Wybierz pozycję **Urządzenia** > **Wszystkie urządzenia**.
 4. Z listy zarządzanych urządzeń wybierz urządzenie, aby otworzyć jego okienko *Omówienie*, a następnie wybierz pozycję **Synchronizuj**.
 5. Wybierz pozycję **Tak**, aby potwierdzić.
 

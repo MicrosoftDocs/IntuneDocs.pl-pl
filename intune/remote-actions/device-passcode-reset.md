@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d7ca53786d372f53d63388fef1179ca271fdb9d9
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: be6a254360d8e8e9ef1396515d261b6ff9077b87
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72508585"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713123"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>Resetowanie lub usuwanie kodu dostępu urządzenia w usłudze Intune
 
@@ -57,10 +57,9 @@ Aby utworzyć nowy kod dostępu profilu służbowego, użyj akcji resetowania ko
 ## <a name="reset-a-passcode"></a>Resetowanie kodu dostępu
 
 
-1. Zaloguj się do witryny [Azure Portal](https://portal.azure.com) za pomocą dowolnej z następujących ról: administrator globalny usługi Azure Active Directory, administrator usługi Intune w usłudze Azure Active Directory, operator pomocy technicznej lub administrator roli.
-2. Wybierz pozycję **Wszystkie usługi**, odfiltruj usługę **Intune**, a następnie wybierz pozycję **Microsoft Intune**.
-3. Wybierz pozycję **Urządzenia**, a następnie wybierz pozycję **Wszystkie urządzenia**.
-4. Z listy zarządzanych urządzeń wybierz urządzenie, a następnie wybierz pozycję **...więcej**. Następnie wybierz zdalną akcję urządzenia **Usuń kod dostępu**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) przy użyciu dowolnej spośród następujących ról: administrator globalny usługi Azure Active Directory, administrator usługi Intune w usłudze Azure Active Directory, operator pomocy technicznej lub administrator roli.
+2. Wybierz pozycję **Urządzenia**, a następnie wybierz pozycję **Wszystkie urządzenia**.
+3. Z listy zarządzanych urządzeń wybierz urządzenie, a następnie wybierz pozycję **...więcej**. Następnie wybierz zdalną akcję urządzenia **Usuń kod dostępu**.
 
 ## <a name="reset-android-work-profile-passcodes"></a>Resetowanie kodów dostępu profilu służbowego systemu Android
 

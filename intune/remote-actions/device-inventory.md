@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a72477351425e9230200995658cc6f73a8565fb7
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 918468bf8948ce54082f3fccc0325db07e116966
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509495"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713201"
 ---
 # <a name="see-device-details-in-intune"></a>Wyświetlanie szczegółów urządzenia w usłudze Intune
 
@@ -33,7 +33,7 @@ W tym artykule przedstawiono sposób wyświetlania wszystkich urządzeń i ich w
 
 ## <a name="view-the-device-details"></a>Wyświetlanie szczegółów urządzenia
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Wybierz pozycję **Urządzenia** > **Wszystkie urządzenia**, a następnie wybierz jedno z wymienionych na liście urządzeń, aby otworzyć jego szczegóły:
 
    - Strona **Omówienie** zawiera nazwę urządzenia oraz listę niektórych kluczowych właściwości urządzenia, w tym informację o tym, czy jest to urządzenie BYOD, kiedy zostało zaewidencjonowane i nie tylko. Na urządzeniu można wykonywać następujące akcje:
