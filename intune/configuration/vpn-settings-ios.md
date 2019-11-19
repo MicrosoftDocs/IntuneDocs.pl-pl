@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/18/2019
+ms.date: 11/13/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,16 +15,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f6d7b831899a740e722560c509c4b09c31d2a42b
-ms.sourcegitcommit: 8c25aeefb7cbc6444a8596af22fccd1c5426877a
+ms.openlocfilehash: 52fb1ea5077b424a1d3cf10812d8d9b5f79e4752
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72593789"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059812"
 ---
 # <a name="add-vpn-settings-on-ios-devices-in-microsoft-intune"></a>Konfigurowanie ustawień sieci VPN na urządzeniach z systemem iOS w usłudze Microsoft Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Usługa Microsoft Intune obejmuje wiele ustawień sieci VPN, które mogą być wdrażane na urządzeniach z systemem iOS. Te ustawienia są używane do tworzenia i konfigurowania połączeń sieci VPN z siecią Twojej organizacji. W tym artykule opisano te ustawienia. Niektóre ustawienia są dostępne tylko dla niektórych klientów sieci VPN, takich jak Citrix, Zscaler itp.
 
@@ -73,7 +71,7 @@ Ustawienia wymienione na poniższej liście są określane przez wybrany typ po�
     > [!NOTE]
     > Jeśli w przypadku sieci VPN Cisco IPsec używana jest metoda uwierzytelniania polegająca na podaniu nazwy użytkownika i hasła, użytkownicy końcowi muszą dostarczyć wspólny klucz tajny za pomocą niestandardowego profilu programu Apple Configurator.
 
-  - **Poświadczenie pochodne**: Jeśli żaden pochodny wystawca poświadczeń nie został skonfigurowany, usługa Intune monituje o to.
+  - **Poświadczenie pochodne**: Użyj certyfikatu pochodzącego z karty inteligentnej użytkownika. Jeśli nie skonfigurowano pochodnego wystawcy poświadczeń, usługa Intune będzie monitował o dodanie jednego z nich. Aby uzyskać więcej informacji, zobacz [Korzystanie z poświadczeń pochodnych w Microsoft Intune](../protect/derived-credentials.md).
 
 - **Wykluczone adresy URL** (tylko rozwiązania Zscaler): po nawiązaniu połączenia z siecią VPN rozwiązania Zscaler wymienione adresy URL są dostępne poza chmurą Zscaler. 
 
@@ -102,7 +100,7 @@ Ustawienia wymienione na poniższej liście są określane przez wybrany typ po�
   - Po włączeniu kontroli dostępu do sieci połączenie z siecią VPN jest rozłączane co 24 godziny. Połączenie z siecią VPN można od razu nawiązać ponownie.
   - Identyfikator urządzenia jest częścią profilu, ale nie jest widoczny w usłudze Intune. Ten identyfikator nie jest nigdzie zapisywany przez firmę Microsoft ani nie jest przez nią udostępniany.
 
-  Identyfikator urządzenia, który jest obsługiwany przez partnera udostępniającego sieć VPN, jest dostępny dla klienta sieci VPN, takiego jak Citrix SSO. Klient sieci VPN może następnie wysłać zapytanie do usługi Intune w celu potwierdzenia rejestracji urządzenia oraz ustalenia, czy profil sieci VPN jest zgodny.
+  W przypadku partnerów sieci VPN, które obsługują identyfikator urządzenia, klient sieci VPN, taki jak Citrix SSO, może uzyskać identyfikator. Klient sieci VPN może następnie wysłać zapytanie do usługi Intune w celu potwierdzenia rejestracji urządzenia oraz ustalenia, czy profil sieci VPN jest zgodny.
 
   - Aby usunąć to ustawienie, ponownie utwórz profil i nie wybieraj pozycji **Zgadzam się**. Następnie ponownie przypisz profil.
 
@@ -189,7 +187,10 @@ Te ustawienia są stosowane w przypadku wybrania opcji **Typ połączenia**  > *
 - **Sieć VPN na żądanie**: skonfiguruj reguły warunkowe, które kontrolują moment rozpoczęcia połączenia sieci VPN. Na przykład utwórz warunek określający, że połączenie sieci VPN jest używane tylko w sytuacji, gdy urządzenie nie jest połączone z siecią Wi-Fi firmy. Można też utworzyć warunek — połączenie sieci VPN nie jest inicjowane, jeśli urządzenie nie może uzyskać dostępu do wprowadzonej domeny wyszukiwania DNS.
 
   - **Identyfikatory SSID lub domeny wyszukiwania DNS**: wybierz, czy ten warunek będzie używać **identyfikatorów SSID** sieci bezprzewodowej, czy **domen wyszukiwania DNS**. Kliknij przycisk **Dodaj**, aby skonfigurować co najmniej jeden identyfikator SSID lub domenę wyszukiwania.
-  - **Sonda ciągu adresu URL**: opcjonalne. Podaj adres URL, którego reguła używa jako adresu testowego. Jeśli urządzenie z tym profilem uzyska dostęp do tego adresu URL bez przekierowania, połączenie sieci VPN zostanie zainicjowane. Następnie urządzenie połączy się z docelowym adresem URL. Użytkownik nie widzi witryny sondy ciągu adresu URL. Przykładem sondy ciągu adresu URL jest adres inspekcji serwera internetowego, który umożliwia sprawdzenie zgodności urządzeń przed nawiązaniem połączenia z siecią VPN. Inną możliwością jest testowanie przez adres URL możliwości łączenia się sieci VPN z witryną, zanim urządzenie połączy się z docelowym adresem URL za pośrednictwem sieci VPN.
+  - **Sonda ciągu adresu URL**: opcjonalne. Podaj adres URL, którego reguła używa jako adresu testowego. Jeśli urządzenie uzyska dostęp do tego adresu URL bez przekierowania, połączenie sieci VPN zostanie zainicjowane. Następnie urządzenie połączy się z docelowym adresem URL. Użytkownik nie widzi witryny sondy ciągu adresu URL.
+
+    Na przykład sonda ciągu adresu URL to adres inspekcji serwera internetowego, który umożliwia sprawdzenie zgodności urządzeń przed nawiązaniem połączenia z siecią VPN. Lub adres URL testuje możliwość łączenia się z lokacją przez sieć VPN przed połączeniem urządzenia z docelowym adresem URL za pośrednictwem sieci VPN.
+.
   - **Akcja domeny**: wybierz jedną z następujących pozycji:
     - Połącz w razie potrzeby
     - Nigdy nie łącz

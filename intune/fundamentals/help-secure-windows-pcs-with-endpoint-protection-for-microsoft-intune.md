@@ -6,7 +6,7 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/01/2018
+ms.date: 11/12/2019
 ms.topic: archived
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 535ae4dd986940da17d247136b37185cfaa58b57
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: f00a680d8d7799e0307021926677d1e0ed1e9a12
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72510226"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059680"
 ---
 # <a name="help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune"></a>Zabezpieczanie komputerów z systemem Windows przy użyciu programu Endpoint Protection dla usługi Microsoft Intune
 
@@ -189,7 +189,7 @@ Usługa Intune może wyświetlać ścieżki do maksymalnie 10 ostatnio wykrytych
 4. Kliknij prawym przyciskiem myszy nagłówek kolumny. Zostanie wyświetlona lista dostępnych kolumn. Zaznacz na liście pole wyboru **Ostatnie ścieżki wykrywania**. Pojawi się kolumna **Ostatnie ścieżki wykrywania**, w której jest wyświetlanych maksymalnie 10 ostatnio monitorowanych wystąpień złośliwego oprogramowania na urządzeniu.
 
 ## <a name="run-a-malware-scan-or-update-malware-definitions-on-a-computer"></a>Uruchamianie skanowania w poszukiwaniu złośliwego oprogramowania lub aktualizowanie definicji złośliwego oprogramowania na komputerze
-Usługa Intune może uruchomić pełne albo szybkie skanowanie w poszukiwaniu złośliwego oprogramowania za pomocą programu Endpoint Protection lub Windows Defender na zdalnie zarządzanym komputerze z zainstalowanym klientem usługi Intune.
+Usługa Intune może uruchomić pełne albo szybkie skanowanie w poszukiwaniu złośliwego oprogramowania za pomocą programu Endpoint Protection lub Microsoft Defender na zdalnie zarządzanym komputerze z zainstalowanym klientem usługi Intune.
 
 1. W [konsoli administracyjnej usługi Microsoft Intune](https://manage.microsoft.com/) wybierz pozycję **Grupy** > **Przegląd** > **Wszystkie urządzenia** > **Wszystkie komputery** i wybierz komputer docelowy.
 

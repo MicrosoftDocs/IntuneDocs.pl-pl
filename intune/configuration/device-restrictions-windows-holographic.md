@@ -1,11 +1,11 @@
 ---
 title: Ustawienia urządzeń z systemem Windows Holographic for Business — Microsoft Intune — Azure | Microsoft Docs
-description: Przeczytaj informacje i skonfiguruj ustawienia ograniczeń urządzeń w usłudze Microsoft Intune dla systemu Windows Holographic for Business, w tym wyrejestrowanie, geolokalizację, hasła, instalowanie aplikacji ze sklepu z aplikacjami, pliki cookie i menu podręczne w programie Microsoft Edge, usługę Windows Defender, wyszukiwanie, chmurę i magazyn, łączność Bluetooth, czas systemowy oraz dane użycia na platformie Azure.
+description: Przeczytaj informacje i skonfiguruj ustawienia ograniczeń urządzeń w usłudze Microsoft Intune dla systemu Windows Holographic for Business, w tym wyrejestrowanie, geolokalizację, hasła, instalowanie aplikacji ze sklepu z aplikacjami, pliki cookie i menu podręczne w programie Microsoft Edge, usługę Microsoft Defender, wyszukiwanie, chmurę i magazyn, łączność Bluetooth, czas systemowy oraz dane użycia na platformie Azure.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/22/2019
+ms.date: 11/13/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e28a697b841d8b264a19d97059d272b7119bc7f4
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 1f90a5a13859ff19765e22444a84b9c11405af73
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72493922"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059502"
 ---
 # <a name="windows-holographic-for-business-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem Windows Holographic for Business w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune
 
@@ -57,7 +57,7 @@ W tym artykule wymieniono i opisano różne ustawienia, które można kontrolowa
 - **Menedżer haseł**: włącza lub wyłącza funkcję menedżera haseł w przeglądarce Microsoft Edge.
 - **Wysyłaj nagłówki Nie śledź**: umożliwia skonfigurowanie przeglądarki Microsoft Edge do wysyłania nagłówków „Nie śledź” do witryn internetowych odwiedzanych przez użytkowników.
 
-## <a name="windows-defender-smart-screen"></a>Windows Defender SmartScreen
+## <a name="microsoft-defender-smart-screen"></a>Ekran inteligentny programu Microsoft Defender
 
 - **Filtr SmartScreen dla przeglądarki Microsoft Edge**: włącz filtr SmartScreen dla przeglądarki Microsoft Edge używany podczas uzyskiwania dostępu do witryn i pobierania plików.
 

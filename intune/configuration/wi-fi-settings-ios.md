@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/18/2019
+ms.date: 11/13/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,18 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d88705cbce0d5045ba7f45baf80de7b6e5d383d3
-ms.sourcegitcommit: 8c25aeefb7cbc6444a8596af22fccd1c5426877a
+ms.openlocfilehash: dd37813e5ea0b6a64d7fae22cada06cccb01a942
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72593761"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059215"
 ---
 # <a name="add-wi-fi-settings-for-ios-devices-in-microsoft-intune"></a>Dodawanie ustawień sieci Wi-Fi dla urządzeń z systemem iOS w usłudze Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
-Można utworzyć profil z określonymi ustawieniami sieci Wi-Fi, a następnie wdrożyć ten profil na urządzeniach z systemem iOS. Usługa Microsoft Intune oferuje wiele funkcji, w tym uwierzytelnianie do sieci, dodawanie klucza wstępnego lub protokołu SCEP i inne.
+Można utworzyć profil z określonymi ustawieniami sieci Wi-Fi, a następnie wdrożyć ten profil na urządzeniach z systemem iOS. Usługa Microsoft Intune oferuje wiele funkcji, w tym uwierzytelnianie do sieci, dodawanie certyfikatu PKCS lub SCEP i inne.
 
 Te ustawienia sieci Wi-Fi są podzielone na dwie kategorie: ustawienia podstawowe i ustawienia na poziomie przedsiębiorstwa.
 
@@ -81,9 +79,9 @@ W tym artykule opisano te ustawienia.
     - **Certyfikat główny na potrzeby walidacji serwera**: wybierz istniejący profil zaufanego certyfikatu głównego. Ten certyfikat pozwala klientowi ufać certyfikatowi serwera dostępu do sieci bezprzewodowej.
 
     - **Uwierzytelnianie klienta**: wybierz **metodę uwierzytelniania**. Dostępne opcje:
-      
-      - **Poświadczenie pochodne**: Jeśli żaden pochodny wystawca poświadczeń nie został skonfigurowany, usługa Intune monituje o to.
-      
+
+      - **Poświadczenie pochodne**: Użyj certyfikatu pochodzącego z karty inteligentnej użytkownika. Jeśli nie skonfigurowano pochodnego wystawcy poświadczeń, usługa Intune będzie monitował o dodanie jednego z nich. Aby uzyskać więcej informacji, zobacz [Korzystanie z poświadczeń pochodnych w Microsoft Intune](../protect/derived-credentials.md).
+
       - **Certyfikaty**: wybierz profil certyfikatu klienta protokołu SCEP lub standardów PKCS, który również został wdrożony w urządzeniu. Ten certyfikat to tożsamość przesyłana przez urządzenie do serwera w celu uwierzytelnienia połączenia.
 
     - **Prywatność tożsamości (tożsamość zewnętrzna)** : wprowadź tekst, który będzie wysyłany w odpowiedzi na żądanie podania tożsamości zgłaszane przez protokół EAP. Ten tekst może mieć dowolną wartość, taką jak `anonymous`. Podczas uwierzytelniania na początku wysyłana jest ta tożsamość anonimowa, a po niej — tożsamość rzeczywista, która jest wysyłana w bezpiecznym tunelu.
@@ -95,8 +93,8 @@ W tym artykule opisano te ustawienia.
 
     - **Uwierzytelnianie klienta**: wybierz **metodę uwierzytelniania**. Dostępne opcje:
 
-      - **Poświadczenie pochodne**: Jeśli żaden pochodny wystawca poświadczeń nie został skonfigurowany, usługa Intune monituje o to.  
-      
+      - **Poświadczenie pochodne**: Użyj certyfikatu pochodzącego z karty inteligentnej użytkownika. Jeśli nie skonfigurowano pochodnego wystawcy poświadczeń, usługa Intune będzie monitował o dodanie jednego z nich. Aby uzyskać więcej informacji, zobacz [Korzystanie z poświadczeń pochodnych w Microsoft Intune](../protect/derived-credentials.md).
+
       - **Nazwa użytkownika i hasło**: monituj użytkownika o nazwę użytkownika i hasło w celu uwierzytelnienia połączenia. Wprowadź też następujące ustawienia:
         - **Metoda inna niż EAP (tożsamość wewnętrzna)** : wybierz sposób uwierzytelniania połączenia. Pamiętaj, aby wybrać ten sam protokół, który został skonfigurowany w sieci Wi-Fi.
 
@@ -115,8 +113,8 @@ W tym artykule opisano te ustawienia.
 
     - **Uwierzytelnianie klienta**: wybierz **metodę uwierzytelniania**. Dostępne opcje:
 
-      - **Poświadczenie pochodne**: Jeśli żaden pochodny wystawca poświadczeń nie został skonfigurowany, usługa Intune monituje o to.  
-      
+      - **Poświadczenie pochodne**: Użyj certyfikatu pochodzącego z karty inteligentnej użytkownika. Jeśli nie skonfigurowano pochodnego wystawcy poświadczeń, usługa Intune będzie monitował o dodanie jednego z nich. Aby uzyskać więcej informacji, zobacz [Korzystanie z poświadczeń pochodnych w Microsoft Intune](../protect/derived-credentials.md).
+
       - **Nazwa użytkownika i hasło**: monituj użytkownika o nazwę użytkownika i hasło w celu uwierzytelnienia połączenia. 
 
       - **Certyfikaty**: wybierz profil certyfikatu klienta protokołu SCEP lub standardów PKCS, który również został wdrożony w urządzeniu. Ten certyfikat to tożsamość przesyłana przez urządzenie do serwera w celu uwierzytelnienia połączenia.

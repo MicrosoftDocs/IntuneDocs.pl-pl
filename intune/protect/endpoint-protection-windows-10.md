@@ -1,11 +1,11 @@
 ---
 title: Ustawienia ochrony dla urządzeń z systemem Windows 10 w usłudze Microsoft Intune — Azure | Microsoft Docs
-description: Na urządzeniach z systemem Windows 10 możesz użyć ustawień programu Endpoint Protection lub skonfigurować je, aby włączyć w usłudze Microsoft Intune usługę Windows Defender, w tym program Application Guard, zaporę, filtr SmartScreen, szyfrowanie i funkcję BitLocker, program Exploit Guard, kontrolę aplikacji, Centrum zabezpieczeń i zabezpieczenia na urządzeniach lokalnych.
+description: Na urządzeniach z systemem Windows 10 możesz użyć ustawień programu Endpoint Protection lub skonfigurować je, aby włączyć w usłudze Microsoft Intune usługę Microsoft Defender, w tym program Application Guard, zaporę, filtr SmartScreen, szyfrowanie i funkcję BitLocker, program Exploit Guard, kontrolę aplikacji, Centrum zabezpieczeń i zabezpieczenia na urządzeniach lokalnych.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/08/2019
+ms.date: 11/13/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,20 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 40865dcca0b0109ae36f65b6691672c0035732b5
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: e2909e7ad1ced9483a6cec58f1f3009f56946f5f
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72502288"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74058424"
 ---
-# <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Ustawienia systemu Windows 10 (oraz nowszych wersji) służące do ochrony urządzeń przy użyciu usługi Intune  
+# <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Ustawienia systemu Windows 10 (oraz nowszych wersji) służące do ochrony urządzeń przy użyciu usługi Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]  
+Usługa Microsoft Intune zawiera wiele ustawień pomocnych w ochronie urządzeń. W tym artykule opisano wszystkie ustawienia, które można włączyć i skonfigurować na urządzeniach z systemem Windows 10 lub nowszym. Te ustawienia są tworzone w profilu konfiguracji ochrony punktu końcowego w usłudze Intune w celu sterowania zabezpieczeniami i obejmują m.in. funkcję BitLocker i usługę Microsoft Defender.  
 
-Usługa Microsoft Intune zawiera wiele ustawień pomocnych w ochronie urządzeń. W tym artykule opisano wszystkie ustawienia, które można włączyć i skonfigurować na urządzeniach z systemem Windows 10 lub nowszym. Te ustawienia są tworzone w profilu konfiguracji ochrony punktu końcowego w usłudze Intune w celu sterowania zabezpieczeniami i obejmują m.in. funkcję BitLocker i usługę Windows Defender.  
-
-Aby skonfigurować program antywirusowy Windows Defender, zobacz [Ograniczenia dotyczące urządzeń z systemem Windows 10](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus).  
+Aby skonfigurować program antywirusowy Microsoft Defender, zobacz [Ograniczenia dotyczące urządzeń z systemem Windows 10](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus).  
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem  
 
@@ -38,9 +36,9 @@ Aby skonfigurować program antywirusowy Windows Defender, zobacz [Ograniczenia d
 
 Aby uzyskać więcej informacji o dostawcach usług konfiguracji (CSP), zobacz [Dokumentacja dostawcy usług konfiguracji](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).  
 
-## <a name="windows-defender-application-guard"></a>Windows Defender Application Guard  
+## <a name="microsoft-defender-application-guard"></a>Ochrona aplikacji w programie Microsoft Defender  
 
-Podczas korzystania z przeglądarki Microsoft Edge program Windows Defender Application Guard chroni Twoje środowisko przed witrynami, które nie zostały uznane za zaufane przez Twoją organizację. Gdy użytkownicy odwiedzają witryny, które nie zostały wymienione w granicach sieci izolowanej, witryny te są otwierane w ramach sesji przeglądania wirtualnego funkcji Hyper-V. Witryny są definiowane przez granicę sieci, która jest konfigurowana w konfiguracji urządzenia.  
+Podczas korzystania z przeglądarki Microsoft Edge program Microsoft Defender Application Guard chroni Twoje środowisko przed witrynami, które nie zostały uznane za zaufane przez Twoją organizację. Gdy użytkownicy odwiedzają witryny, które nie zostały wymienione w granicach sieci izolowanej, witryny te są otwierane w ramach sesji przeglądania wirtualnego funkcji Hyper-V. Witryny są definiowane przez granicę sieci, która jest konfigurowana w konfiguracji urządzenia.  
 
 Funkcja Application Guard jest dostępna tylko dla urządzeń z systemem Windows 10 (wersja 64-bitowa). Użycie tego profilu powoduje zainstalowanie składnika Win32 w celu aktywowania funkcji Application Guard.  
 
@@ -122,7 +120,7 @@ Funkcja Application Guard jest dostępna tylko dla urządzeń z systemem Windows
   - **Włącz** — użytkownicy mogą pobierać pliki ze zwirtualizowanej przeglądarki do systemu operacyjnego hosta.  
   - **Nie skonfigurowano** — przechowywanie plików lokalnie na urządzeniu, pliki nie są pobierane do systemu plików hosta.  
 
-## <a name="windows-defender-firewall"></a>Zapora Windows Defender  
+## <a name="microsoft-defender-firewall"></a>Zapora Microsoft Defender  
  
 ### <a name="global-settings"></a>Ustawienia globalne  
 
@@ -196,7 +194,7 @@ Poniższe ustawienia są wymienione w tym artykule pojedynczo, ale wszystkie dot
 
 #### <a name="general-settings"></a>Ustawienia ogólne  
 
-- **Zapora Windows Defender**  
+- **Zapora Microsoft Defender**  
   **Domyślnie**: Nie skonfigurowano  
   Dostawca CSP zapory: [EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)  
   
@@ -224,7 +222,7 @@ Poniższe ustawienia są wymienione w tym artykule pojedynczo, ale wszystkie dot
   **Domyślnie**: Nie skonfigurowano  
   Dostawca CSP zapory: z [osłoną](https://go.microsoft.com/fwlink/?linkid=872561)  
     - **Nieskonfigurowany**  
-    - **Blokuj** — gdy Zapora Windows Defender jest włączona i to ustawienie ma wartość *Blokuj*, cały ruch przychodzący jest blokowany niezależnie od innych ustawień zasad. 
+    - **Blokuj** — gdy Zapora Microsoft Defender jest włączona i to ustawienie ma wartość *Blokuj*, cały ruch przychodzący jest blokowany niezależnie od innych ustawień zasad. 
     - **Zezwalaj** — gdy jest ustawiony na *Zezwalaj*, to ustawienie jest wyłączone, a ruch przychodzący jest dozwolony na podstawie innych ustawień zasad.
 
 - **Odpowiedzi emisji pojedynczej na multiemisję/emisje**  
@@ -264,7 +262,7 @@ Poniższe ustawienia są wymienione w tym artykule pojedynczo, ale wszystkie dot
 
 #### <a name="rule-merging"></a>Scalanie reguł  
 
-- **Reguły zapory Windows Defender autoryzowanych aplikacji z magazynu lokalnego**  
+- **Reguły zapory Microsoft Defender autoryzowanych aplikacji z magazynu lokalnego**  
   **Domyślnie**: Nie skonfigurowano  
   Dostawca CSP zapory: [AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)  
 
@@ -273,7 +271,7 @@ Poniższe ustawienia są wymienione w tym artykule pojedynczo, ale wszystkie dot
   - **Zezwalaj** — -
    wybierz pozycję **Włącz**, aby zastosować reguły zapory w magazynie lokalnym w celu ich rozpoznawania i wymuszania.  
 
-- **Globalne reguły zapory Windows Defender portów z magazynu lokalnego**  
+- **Globalne reguły zapory Microsoft Defender portów z magazynu lokalnego**  
   **Domyślnie**: Nie skonfigurowano  
   Dostawca CSP zapory: [GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)  
 
@@ -281,7 +279,7 @@ Poniższe ustawienia są wymienione w tym artykule pojedynczo, ale wszystkie dot
   - **Block** — reguły zapory portu globalnego w magazynie lokalnym są ignorowane i nie są wymuszane.  
   - **Zezwalaj** — stosowanie globalnych reguł zapory portów w magazynie lokalnym w celu rozpoznawania i wymuszania.  
 
-- **Reguły zapory Windows Defender z magazynu lokalnego**  
+- **Reguły zapory Microsoft Defender z magazynu lokalnego**  
   **Domyślnie**: Nie skonfigurowano  
   Dostawca CSP zapory: [AllowLocalPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872567)  
 
@@ -336,7 +334,7 @@ Niestandardowe reguły zapory obsługują następujące opcje:
 #### <a name="application-settings"></a>Ustawienia aplikacji  
 
 - **Aplikacje**  
-  **Wartość domyślna**: wszystkie  
+  **Wartość domyślna**: Wszystkie  
 
   Kontrolowanie połączeń dla aplikacji lub programu. Wybierz jedną z następujących opcji, a następnie wykonaj dodatkową konfigurację:  
   - **Nazwa rodziny pakietów** — Podaj nazwę rodziny pakietów. Aby znaleźć nazwę rodziny pakietów, użyj polecenia programu PowerShell **Get-AppxPackage**.   
@@ -422,7 +420,7 @@ Określ porty lokalne i zdalne, do których zostanie zastosowana ta reguła.
   Określ listę autoryzowanych użytkowników lokalnych dla tej reguły. Nie można określić listy autoryzowanych użytkowników, jeśli ta reguła ma zastosowanie do usługi systemu Windows.  
 
 
-## <a name="windows-defender-smartscreen-settings"></a>Ustawienia filtru Windows Defender SmartScreen  
+## <a name="microsoft-defender-smartscreen-settings"></a>Ustawienia filtru Microsoft Defender SmartScreen  
  
 Na urządzeniu musi być zainstalowana przeglądarka Microsoft Edge.  
 
@@ -443,8 +441,6 @@ Na urządzeniu musi być zainstalowana przeglądarka Microsoft Edge.
 ## <a name="windows-encryption"></a>Szyfrowanie systemu Windows  
  
 ### <a name="windows-settings"></a>Ustawienia systemu Windows  
-
-Te ustawienia szyfrowania dotyczą wszystkich wersji systemu Windows 10.  
 
 - **Szyfruj urządzenia**  
   **Domyślnie**: Nie skonfigurowano  
@@ -479,7 +475,7 @@ Podstawowe ustawienia to uniwersalne ustawienia funkcji BitLocker dla wszystkich
   Po wybraniu opcji *Blokuj*można skonfigurować następujące ustawienie:  
 
   - **Zezwalaj użytkownikom standardowym na włączanie szyfrowania podczas dołączania do usługi Azure AD**  
-    *To ustawienie dotyczy tylko Azure Active Directory urządzeń przyłączonych (Azure PRZYMIOTNIK) i jest zależne od poprzedniego ustawienia `Warning for other disk encryption`.*  
+    *To ustawienie dotyczy tylko Azure Active Directory urządzeń przyłączonych (Azure PRZYMIOTNIK) i zależy od poprzedniego ustawienia, `Warning for other disk encryption`.*  
     **Domyślnie**: Nie skonfigurowano  
     Dostawca CSP funkcji BitLocker: [AllowStandardUserEncryption](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp#allowstandarduserencryption)
 
@@ -775,7 +771,7 @@ Te ustawienia są stosowane w odniesieniu do wymiennych dysków danych.
     - **Blokuj** — blokowanie dostępu do zapisu dla urządzeń skonfigurowanych w innej organizacji.  
     - **Nie skonfigurowano** — Odmów dostępu do zapisu.  
  
-## <a name="windows-defender-exploit-guard"></a>Windows Defender Exploit Guard  
+## <a name="microsoft-defender-exploit-guard"></a>Microsoft Defender Exploit Guard  
 
 Używaj [ochrony przed](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/exploit-protection) atakami, aby zarządzać i zmniejszać podatność na ataki aplikacji używanych przez pracowników.  
 
@@ -809,7 +805,7 @@ Zablokuj aplikacjom pakietu Office możliwość wykonywania następujących akcj
 
 - **Wstrzykiwanie do innych procesów przez aplikacje pakietu Office (bez wyjątków)**  
   **Domyślnie**: Nie skonfigurowano  
-  Reguła: [Zablokuj aplikacjom pakietu Office wprowadzanie kodu do innych procesów](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-injecting-code-into-other-processes)  
+  Reguła: [Uniemożliwiaj aplikacjom pakietu Office wstrzykiwanie kodu do innych procesów](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-injecting-code-into-other-processes)  
 
   - **Nieskonfigurowany**  
   - Blokuj **blokowanie aplikacji** pakietu Office przed wprowadzaniem do innych procesów.  
@@ -817,7 +813,7 @@ Zablokuj aplikacjom pakietu Office możliwość wykonywania następujących akcj
 
 - **Tworzenie zawartości wykonywalnej przez makra i aplikacje pakietu Office**  
   **Domyślnie**: Nie skonfigurowano  
-  Reguła: [Blokuj Tworzenie zawartości wykonywalnej przez aplikacje pakietu Office](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-creating-executable-content)  
+  Reguła: [Uniemożliwiaj aplikacjom pakietu Office tworzenie zawartości wykonywalnej](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-creating-executable-content)  
 
   - **Nieskonfigurowany**  
   - Blokowanie **blokowania** przez aplikacje pakietu Office i makra do tworzenia zawartości wykonywalnej.  
@@ -825,7 +821,7 @@ Zablokuj aplikacjom pakietu Office możliwość wykonywania następujących akcj
 
 - **Uruchamianie procesów podrzędnych przez aplikacje pakietu Office**  
   **Domyślnie**: Nie skonfigurowano  
-  Reguła: [Blokuj tworzenie procesów podrzędnych przez wszystkie aplikacje pakietu Office](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-all-office-applications-from-creating-child-processes)  
+  Reguła: [Uniemożliwiaj aplikacjom pakietu Office tworzenie procesów podrzędnych](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-all-office-applications-from-creating-child-processes)  
 
   - **Nieskonfigurowany**  
   - Blokuj **blokowanie procesów** podrzędnych przez aplikacje pakietu Office.  
@@ -833,7 +829,7 @@ Zablokuj aplikacjom pakietu Office możliwość wykonywania następujących akcj
   
 - **Importowanie elementów Win32 z kodu makr w pakiecie Office**  
   **Domyślnie**: Nie skonfigurowano  
-  Reguła: [Blokuj wywołania Win32 API z makr pakietu Office](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-win32-api-calls-from-office-macros)  
+  Reguła: [Blokuj wywołania interfejsu API systemu Win32 z makr pakietu Office](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-win32-api-calls-from-office-macros)  
 
   - **Nieskonfigurowany**  
   - Blokuj **blokowanie** importów Win32 z kodu makr w pakiecie Office.  
@@ -853,7 +849,7 @@ Blokowanie następujących elementów pomaga zapobiegać zagrożeniom ze strony 
 
 - **Zaciemniony kod w plikach js/vbs/ps i makrach**  
   **Domyślnie**: Nie skonfigurowano  
-  Reguła: [Blokuj wykonywanie potencjalnie zasłoniętych skryptów](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-execution-of-potentially-obfuscated-scripts)    
+  Reguła: [Blokuj wykonywanie potencjalnie zaciemnionych skryptów](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-execution-of-potentially-obfuscated-scripts)    
 
   - **Nieskonfigurowany**  
   - Blokuj **blokowanie wszelkich** zasłoniętych kodu js/vbs/PS/makra.  
@@ -861,7 +857,7 @@ Blokowanie następujących elementów pomaga zapobiegać zagrożeniom ze strony 
 
 - **Wykonywanie ładunku pobranego z Internetu przez pliki js/vbs (bez wyjątków)**  
   **Domyślnie**: Nie skonfigurowano  
-  Reguła: [Blokuj uruchamianie pobranej zawartości wykonywalnej w języku JavaScript lub VBScript](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-javascript-or-vbscript-from-launching-downloaded-executable-content)  
+  Reguła: [Uniemożliwiaj skryptom JavaScript i VBScript uruchamianie pobranej zawartości wykonywalnej](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-javascript-or-vbscript-from-launching-downloaded-executable-content)  
 
   - **Nieskonfigurowany**  
   - **Zablokuj** blokowi js/vbs wykonywanie ładunku pobranego z Internetu.  
@@ -898,7 +894,7 @@ Zablokowanie następujących elementów ułatwia zapobieganie zagrożeniom zwią
 
 - **Wykonywanie zawartości wykonywalnej (exe, dll, ps, js, vbs itd.) pochodzącej z wiadomości e-mail (poczty internetowej lub klienta poczty) (bez wyjątków)**  
   **Domyślnie**: Nie skonfigurowano  
-  Reguła: [Blokuj zawartość wykonywalną z klienta poczty e-mail i poczty](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-content-from-email-client-and-webmail) internetowej  
+  Reguła: [Blokuj zawartość wykonywalną z klienta poczty e-mail i poczty internetowej](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-content-from-email-client-and-webmail)  
 
   - **Nieskonfigurowany**  
   - **Blokuj** — blokowanie wykonywania zawartości wykonywalnej (exe, dll, ps, js, vbs itd.) pochodzącej z wiadomości e-mail (poczty internetowej lub klienta poczty).  
@@ -971,21 +967,20 @@ Zablokuj połączenia wychodzące z dowolnej aplikacji do adresów IP lub domen 
 
   Zamiarem tego ustawienia jest ochrona użytkowników końcowych z aplikacji z dostępem do wyłudzania informacji, witryn hostingowych wykorzystujących luki w zabezpieczeniach i złośliwej zawartości w Internecie. Uniemożliwia ona również nawiązywanie połączeń z niebezpiecznymi lokacjami przez przeglądarki innych firm.  
 
-  - **Nie skonfigurowano** — ta funkcja jest wyłączana. Użytkownicy i aplikacje nie mają zablokowanych połączeń z niebezpiecznymi domenami. Administratorzy nie zobaczą tego działania w usłudze Windows Defender Security Center.  
-  - **Włącz** ochronę sieci i Zablokuj użytkownikom i aplikacjom możliwość łączenia się z niebezpiecznymi domenami. Administratorzy mogą widzieć to działanie w usłudze Windows Defender Security Center.  
-  - **Tylko Inspekcja**: — Użytkownicy i aplikacje nie mogą łączyć się z niebezpiecznymi domenami. Administratorzy mogą widzieć to działanie w usłudze Windows Defender Security Center.  
+  - **Nie skonfigurowano** — ta funkcja jest wyłączana. Użytkownicy i aplikacje nie mają zablokowanych połączeń z niebezpiecznymi domenami. Administratorzy nie zobaczą tego działania w usłudze Microsoft Defender Security Center.  
+  - **Włącz** ochronę sieci i Zablokuj użytkownikom i aplikacjom możliwość łączenia się z niebezpiecznymi domenami. Administratorzy zobaczą to działanie w usłudze Microsoft Defender Security Center.  
+  - **Tylko Inspekcja**: — Użytkownicy i aplikacje nie mogą łączyć się z niebezpiecznymi domenami. Administratorzy zobaczą to działanie w usłudze Microsoft Defender Security Center.  
 
 ### <a name="exploit-protection"></a>Exploit Protection  
- 
 
 - **Przekaż plik XML**  
   **Domyślne**: *Nieskonfigurowane*  
 
-  Aby [chronić urządzenia przed programami wykorzystującymi](https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)luki w zabezpieczeniach, należy utworzyć plik XML zawierający ustawienia ograniczenia systemu i aplikacji. Istnieją dwie metody tworzenia pliku XML:  
+  Aby [chronić urządzenia przed programami wykorzystującymi](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)luki w zabezpieczeniach, należy utworzyć plik XML zawierający ustawienia ograniczenia systemu i aplikacji. Istnieją dwie metody tworzenia pliku XML:  
 
   - *PowerShell* — użyj jednego lub kilku z poleceń cmdlet programu PowerShell: *Get-ProcessMitigation*, *Set-ProcessMitigation* i *ConvertTo-ProcessMitigationPolicy*. Polecenia cmdlet służą do konfigurowania ustawień ograniczania ryzyka i eksportowania ich reprezentacji w formacie XML.  
 
-  - *Interfejs użytkownika usługi Windows Defender Security Center* — w usłudze Windows Defender Security Center kliknij pozycję Sterowanie aplikacjami i przeglądarką, a następnie przewiń w dół wyświetlonego ekranu i znajdź funkcję Exploit Protection. Najpierw skonfiguruj ustawienia ograniczania ryzyka na kartach Ustawienia systemowe i Ustawienia programu. Następnie użyj linku Eksportuj ustawienia w dolnej części ekranu, aby wyeksportować ich reprezentację w formacie XML.  
+  - *Interfejs użytkownika usługi Microsoft Defender Security Center* — w usłudze Microsoft Defender Security Center kliknij pozycję Sterowanie aplikacjami i przeglądarką, a następnie przewiń w dół wyświetlonego ekranu i znajdź funkcję Exploit Protection. Najpierw skonfiguruj ustawienia ograniczania ryzyka na kartach Ustawienia systemowe i Ustawienia programu. Następnie użyj linku Eksportuj ustawienia w dolnej części ekranu, aby wyeksportować ich reprezentację w formacie XML.  
 
 - **Edytowanie interfejsu ochrony przed programami wykorzystującymi luki w zabezpieczeniach**  
   **Domyślnie**: Nie skonfigurowano  
@@ -995,9 +990,9 @@ Zablokuj połączenia wychodzące z dowolnej aplikacji do adresów IP lub domen 
   - **Block** -Przekaż plik XML, który umożliwia skonfigurowanie ograniczeń pamięci, przepływu sterowania i zasad. Ustawienia w pliku XML mogą być używane do blokowania aplikacji przed programami wykorzystującymi luki w zabezpieczeniach.  
   - **Nieskonfigurowane** — nie jest używana żadna Konfiguracja niestandardowa.  
 
-## <a name="windows-defender-application-control"></a>Kontrola aplikacji usługi Windows Defender  
+## <a name="microsoft-defender-application-control"></a>Kontrola aplikacji usługi Microsoft Defender  
 
-Wybierz dodatkowe aplikacje, które muszą być poddane inspekcji przez usługę, lub mogą być zaufane do uruchomienia przez program Windows Defender Application Control. Składniki systemu Windows i wszystkie aplikacje ze Sklepu Windows są automatycznie zaufane do uruchomienia.  
+Wybierz dodatkowe aplikacje, które muszą być objęte inspekcją przez program, lub mogą być zaufane do uruchomienia przez program Microsoft Defender Application Control. Składniki systemu Windows i wszystkie aplikacje ze Sklepu Windows są automatycznie zaufane do uruchomienia.  
 
 
 - **Zasady integralności kodu kontroli aplikacji**  
@@ -1012,9 +1007,9 @@ Wybierz dodatkowe aplikacje, które muszą być poddane inspekcji przez usługę
  
   - **Tylko Inspekcja** — aplikacje nie są blokowane. Wszystkie zdarzenia są rejestrowane w dziennikach klienta lokalnego.  
 
-## <a name="windows-defender-credential-guard"></a>Windows Defender Credential Guard  
+## <a name="microsoft-defender-credential-guard"></a>Ochrona poświadczeń programu Microsoft Defender  
 
-Funkcja Windows Defender Credential Guard chroni przed atakami polegającymi na kradzieży poświadczeń. Izoluje ona wpisy tajne, tak aby tylko uprzywilejowane oprogramowanie systemu mogło uzyskiwać do nich dostęp.  
+Funkcja Microsoft Defender Credential Guard chroni przed atakami polegającymi na kradzieży poświadczeń. Izoluje ona wpisy tajne, tak aby tylko uprzywilejowane oprogramowanie systemu mogło uzyskiwać do nich dostęp.  
 
 - **Credential Guard**  
   **Domyślne**: Wyłącz  
@@ -1036,19 +1031,19 @@ Funkcja Windows Defender Credential Guard chroni przed atakami polegającymi na 
   - **Bezpieczny rozruch z bezpośrednim dostępem do pamięci**  
     Włącza zabezpieczenia VBS z funkcją bezpiecznego rozruchu i bezpośrednim dostępem do pamięci (DMA). Ochrona DMA wymaga obsługi sprzętowej i można ją włączyć tylko na prawidłowo skonfigurowanych urządzeniach.  
 
-## <a name="windows-defender-security-center"></a>Windows Defender Security Center  
+## <a name="microsoft-defender-security-center"></a>Centrum zabezpieczeń usługi Microsoft Defender  
 
-Usługa Windows Defender Security Center działa jako osobna aplikacja lub proces z każdej z poszczególnych funkcji. Wyświetla ona powiadomienia za pośrednictwem centrum akcji. Pełni rolę modułu zbierającego lub jednego miejsca służącego do wyświetlania stanu oraz uruchamiania niektórych czynności konfiguracyjnych dla każdej funkcji. Dowiedz się więcej z dokumentacji [usługi Windows Defender](https://docs.microsoft.com/windows/threat-protection/windows-defender-security-center/windows-defender-security-center).  
+Centrum zabezpieczeń usługi Microsoft Defender działa jako osobna aplikacja lub proces z każdej z poszczególnych funkcji. Wyświetla ona powiadomienia za pośrednictwem centrum akcji. Pełni rolę modułu zbierającego lub jednego miejsca służącego do wyświetlania stanu oraz uruchamiania niektórych czynności konfiguracyjnych dla każdej funkcji. Dowiedz się więcej z [witryny Microsoft Defender](https://docs.microsoft.com/windows/threat-protection/windows-defender-security-center/windows-defender-security-center) docs.  
 
-### <a name="windows-defender-security-center-app-and-notifications"></a>Aplikacja i powiadomienia usługi Windows Defender Security Center  
+### <a name="microsoft-defender-security-center-app-and-notifications"></a>Aplikacja i powiadomienia usługi Centrum zabezpieczeń usługi Microsoft Defender  
 
-Zablokuj dostęp użytkowników końcowych do różnych obszarów aplikacji Windows Defender Security Center. Ukrywanie sekcji spowoduje również blokowanie pokrewnych powiadomień.  
+Zablokuj dostęp użytkowników końcowych do różnych obszarów aplikacji Centrum zabezpieczeń usługi Microsoft Defender. Ukrywanie sekcji spowoduje również blokowanie pokrewnych powiadomień.  
 
 - **Ochrona przed wirusami i zagrożeniami**  
   **Domyślnie**: Nie skonfigurowano  
   WindowsDefenderSecurityCenter CSP: [DisableVirusUI](https://go.microsoft.com/fwlink/?linkid=873662)  
 
-  Skonfiguruj, czy użytkownicy końcowi mogą wyświetlać obszar ochrony przed wirusami i zagrożeniami w usłudze Windows Defender Security Center. Ukrycie tej sekcji spowoduje również zablokowanie wszystkich powiadomień dotyczących ochrony przed wirusami i zagrożeniami.  
+  Skonfiguruj, czy użytkownicy końcowi mogą wyświetlać obszar ochrony przed wirusami i zagrożeniami w usłudze Microsoft Defender Security Center. Ukrycie tej sekcji spowoduje również zablokowanie wszystkich powiadomień dotyczących ochrony przed wirusami i zagrożeniami.  
 
   - **Nieskonfigurowany**  
   - **Ukryj**  
@@ -1057,7 +1052,7 @@ Zablokuj dostęp użytkowników końcowych do różnych obszarów aplikacji Wind
   **Domyślnie**: Nie skonfigurowano  
   WindowsDefenderSecurityCenter CSP: [HideRansomwareDataRecovery](https://go.microsoft.com/fwlink/?linkid=873664)  
 
-  Skonfiguruj, czy użytkownicy końcowi mogą wyświetlać obszar ochrony programu wymuszającego okup w Security Center Windows Defender. Ukrycie tej sekcji spowoduje również zablokowanie wszystkich powiadomień związanych z ochroną oprogramowania wymuszającego okup.  
+  Skonfiguruj, czy użytkownicy końcowi mogą wyświetlać obszar ochrony przy użyciu oprogramowania wymuszającego okup w usłudze Microsoft Defender Security Center. Ukrycie tej sekcji spowoduje również zablokowanie wszystkich powiadomień związanych z ochroną oprogramowania wymuszającego okup.  
 
   - **Nieskonfigurowany**  
   - **Ukryj**  
@@ -1066,7 +1061,7 @@ Zablokuj dostęp użytkowników końcowych do różnych obszarów aplikacji Wind
   **Domyślnie**: Nie skonfigurowano  
   WindowsDefenderSecurityCenter CSP: [DisableAccountProtectionUI](https://go.microsoft.com/fwlink/?linkid=873666)  
 
-  Skonfiguruj, czy użytkownicy końcowi mogą wyświetlać obszar Ochrona konta w Security Center Windows Defender. Ukrycie tej sekcji spowoduje również zablokowanie wszystkich powiadomień związanych z ochroną konta.  
+  Skonfiguruj, czy użytkownicy końcowi mogą wyświetlać obszar Ochrona konta w usłudze Microsoft Defender Security Center. Ukrycie tej sekcji spowoduje również zablokowanie wszystkich powiadomień związanych z ochroną konta.  
 
   - **Nieskonfigurowany**  
   - **Ukryj**  
@@ -1075,7 +1070,7 @@ Zablokuj dostęp użytkowników końcowych do różnych obszarów aplikacji Wind
   **Domyślnie**: Nie skonfigurowano  
   WindowsDefenderSecurityCenter CSP: [DisableNetworkUI](https://go.microsoft.com/fwlink/?linkid=873668)  
 
-  Skonfiguruj, czy użytkownicy końcowi mogą wyświetlać obszar Zapora i ochrona sieci w usłudze Windows Defender Security Center. Ukrycie tej sekcji spowoduje również zablokowanie wszystkich powiadomień dotyczących zapory i ochrony sieci.  
+  Skonfiguruj, czy użytkownicy końcowi mogą wyświetlać obszar Zapora i ochrona sieci w usłudze Microsoft Defender Security Center. Ukrycie tej sekcji spowoduje również zablokowanie wszystkich powiadomień dotyczących zapory i ochrony sieci.  
 
   - **Nieskonfigurowany**  
   - **Ukryj**  
@@ -1084,7 +1079,7 @@ Zablokuj dostęp użytkowników końcowych do różnych obszarów aplikacji Wind
   **Domyślnie**: Nie skonfigurowano  
   WindowsDefenderSecurityCenter CSP: [DisableAppBrowserUI](https://go.microsoft.com/fwlink/?linkid=873669)  
 
-  Skonfiguruj, czy użytkownicy końcowi mogą wyświetlać obszar sterowania aplikacji i przeglądarki w usłudze Windows Defender Security Center. Ukrycie tej sekcji spowoduje również zablokowanie wszystkich powiadomień związanych z aplikacją i formantem przeglądarki.  
+  Skonfiguruj, czy użytkownicy końcowi mogą wyświetlać obszar sterowania aplikacji i przeglądarki w usłudze Microsoft Defender Security Center. Ukrycie tej sekcji spowoduje również zablokowanie wszystkich powiadomień związanych z aplikacją i formantem przeglądarki.  
 
   - **Nieskonfigurowany**  
   - **Ukryj**  
@@ -1093,7 +1088,7 @@ Zablokuj dostęp użytkowników końcowych do różnych obszarów aplikacji Wind
   **Domyślnie**: Nie skonfigurowano  
   WindowsDefenderSecurityCenter CSP: [DisableDeviceSecurityUI](https://go.microsoft.com/fwlink/?linkid=873670)  
 
-  Skonfiguruj, czy użytkownicy końcowi mogą wyświetlać obszar Ochrona sprzętu w programie Windows Defender Security Center. Ukrycie tej sekcji spowoduje również zablokowanie wszystkich powiadomień dotyczących ochrony sprzętu.  
+  Skonfiguruj, czy użytkownicy końcowi mogą wyświetlać obszar Ochrona sprzętu w programie Microsoft Defender Security Center. Ukrycie tej sekcji spowoduje również zablokowanie wszystkich powiadomień dotyczących ochrony sprzętu.  
 
   - **Nieskonfigurowany**  
   - **Ukryj**  
@@ -1102,7 +1097,7 @@ Zablokuj dostęp użytkowników końcowych do różnych obszarów aplikacji Wind
   **Domyślnie**: Nie skonfigurowano  
   WindowsDefenderSecurityCenter CSP: [DisableHealthUI](https://go.microsoft.com/fwlink/?linkid=873671)  
 
-  Skonfiguruj, czy użytkownicy końcowi mogą wyświetlać obszar wydajność i kondycja urządzenia w usłudze Windows Defender Security Center. Ukrycie tej sekcji spowoduje również zablokowanie wszystkich powiadomień dotyczących wydajności i kondycji urządzenia.  
+  Skonfiguruj, czy użytkownicy końcowi mogą wyświetlać obszar wydajność i kondycja urządzenia w usłudze Microsoft Defender Security Center. Ukrycie tej sekcji spowoduje również zablokowanie wszystkich powiadomień dotyczących wydajności i kondycji urządzenia.  
   
   - **Nieskonfigurowany**  
   - **Ukryj**  
@@ -1111,7 +1106,7 @@ Zablokuj dostęp użytkowników końcowych do różnych obszarów aplikacji Wind
   **Domyślnie**: Nie skonfigurowano  
   WindowsDefenderSecurityCenter CSP: [DisableFamilyUI](https://go.microsoft.com/fwlink/?linkid=873673)  
 
-  Skonfiguruj, czy użytkownicy końcowi mogą wyświetlać obszar opcji rodziny w usłudze Windows Defender Security Center. Ukrycie tej sekcji spowoduje również zablokowanie wszystkich powiadomień — związanych z opcjami rodziny.  
+  Skonfiguruj, czy użytkownicy końcowi mogą wyświetlać obszar opcji rodziny w usłudze Microsoft Defender Security Center. Ukrycie tej sekcji spowoduje również zablokowanie wszystkich powiadomień — związanych z opcjami rodziny.  
   
   - **Nieskonfigurowany**  
   - **Ukryj**  
@@ -1120,7 +1115,7 @@ Zablokuj dostęp użytkowników końcowych do różnych obszarów aplikacji Wind
   **Domyślnie**: Nie skonfigurowano  
   WindowsDefenderSecurityCenter CSP: [DisableNotifications](https://go.microsoft.com/fwlink/?linkid=873675)  
 
-  Wybierz, które powiadomienia mają być wyświetlane użytkownikom końcowym. Powiadomienia niekrytyczne obejmują podsumowania działania programu antywirusowego Windows Defender, w tym powiadomienia po zakończeniu skanowania. Wszystkie pozostałe powiadomienia są traktowane jako krytyczne.  
+  Wybierz, które powiadomienia mają być wyświetlane użytkownikom końcowym. Powiadomienia niekrytyczne obejmują podsumowania działania programu antywirusowego Microsoft Defender, w tym powiadomienia po zakończeniu skanowania. Wszystkie pozostałe powiadomienia są traktowane jako krytyczne.  
 
   - **Nieskonfigurowany**  
   - **Blokuj powiadomienia niekrytyczne**  
@@ -1160,7 +1155,7 @@ Zablokuj dostęp użytkowników końcowych do różnych obszarów aplikacji Wind
 
 ### <a name="it-contact-information"></a>Informacje kontaktowe działu IT  
 
-Podaj informacje kontaktowe działu IT do wyświetlania w aplikacji Windows Defender Security Center i powiadomieniach aplikacji.  
+Podaj informacje kontaktowe działu IT do wyświetlania w aplikacji Centrum zabezpieczeń usługi Microsoft Defender i powiadomieniach aplikacji.  
 
 Można wybrać opcję **Wyświetlaj w aplikacji i powiadomieniach**, **Wyświetlaj tylko w aplikacji**, **Wyświetlaj tylko w powiadomieniach** lub **Nie wyświetlaj**. Należy wprowadzić **nazwę organizacji IT** i co najmniej jedną z następujących opcji kontaktu:  
 
@@ -1268,7 +1263,7 @@ Te opcje umożliwiają konfigurowanie ustawień zabezpieczeń lokalnych na urzą
 
 - **Ogranicz dostęp do nośnika CD-ROM dla lokalnego aktywnego użytkownika**  
   **Domyślnie**: Nie skonfigurowano  
-  Dostawca CSP: [Devices_RestrictCDROMAccessToLocallyLoggedOnUserOnly](https://go.microsoft.com/fwlink/?linkid=867922)  
+  Dostawca usług kryptograficznych: [Devices_RestrictCDROMAccessToLocallyLoggedOnUserOnly](https://go.microsoft.com/fwlink/?linkid=867922)  
 
 
   - **Włączone** — tylko interaktywnie zalogowany użytkownik może korzystać z nośników CD-ROM. Jeśli te zasady są włączone, a żaden użytkownik nie jest zalogowany interaktywnie, napęd CD-ROM jest dostępny za pośrednictwem sieci.  
@@ -1276,7 +1271,7 @@ Te opcje umożliwiają konfigurowanie ustawień zabezpieczeń lokalnych na urzą
 
 - **Sformatuj i wysuń wymienny nośnik**  
   **Domyślne**: Administratorzy  
-  Dostawca CSP: [Devices_AllowedToFormatAndEjectRemovableMedia](https://go.microsoft.com/fwlink/?linkid=867920)  
+  Dostawca usług kryptograficznych: [Devices_AllowedToFormatAndEjectRemovableMedia](https://go.microsoft.com/fwlink/?linkid=867920)  
  
 
   Zdefiniuj, kto może formatować i wysuwać nośnik wymienny systemu plików NTFS:  
@@ -1582,14 +1577,14 @@ Te opcje umożliwiają konfigurowanie ustawień zabezpieczeń lokalnych na urzą
   
 - **Podpisuj cyfrowo komunikację (za zgodą klienta)**  
   **Domyślnie**: Nie skonfigurowano  
-  Dostawca CSP: [MicrosoftNetworkServer_DigitallySignCommunicationsIfClientAgrees](https://go.microsoft.com/fwlink/?linkid=868429)  
+  Dostawca usług kryptograficznych: [MicrosoftNetworkServer_DigitallySignCommunicationsIfClientAgrees](https://go.microsoft.com/fwlink/?linkid=868429)  
 
   - **Włącz** — serwer sieci Microsoft negocjuje podpisywanie pakietów SMB zgodnie z żądaniem klienta. Oznacza to, że jeśli podpisywanie pakietów zostało włączone na kliencie, jest negocjowane podpisywanie pakietów.  
   - **Nieskonfigurowane** — klient SMB nigdy nie negocjuje podpisywania pakietów SMB.  
 
 - **Podpisuj cyfrowo komunikację (zawsze)**  
   **Domyślnie**: Nie skonfigurowano  
-  Dostawca CSP: [MicrosoftNetworkServer_DigitallySignCommunicationsAlways](https://go.microsoft.com/fwlink/?linkid=868428)  
+  Dostawca usług kryptograficznych: [MicrosoftNetworkServer_DigitallySignCommunicationsAlways](https://go.microsoft.com/fwlink/?linkid=868428)  
 
   - **Włącz** — serwer sieci Microsoft nie komunikuje się z klientem sieci Microsoft, chyba że klient zgadza się na podpisywanie pakietów SMB.  
   - **Nie skonfigurowano** — podpisywanie pakietów SMB jest negocjowane między klientem i serwerem.  
@@ -1639,6 +1634,240 @@ Te opcje umożliwiają konfigurowanie ustawień zabezpieczeń lokalnych na urzą
   - **Ręczne**
   - **Automatyczne**
   - **Wyłączone**
+
+## <a name="user-rights"></a>Prawa użytkownika
+
+- **Dostęp do Menedżera poświadczeń jako zaufany obiekt wywołujący**  
+  **Domyślnie**: Nie skonfigurowano  
+  Dostawca CSP: [UserRights/AccessCredentialManagerAsTrustedCaller](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-accesscredentialmanagerastrustedcaller)
+
+  To prawo użytkownika jest używane przez Menedżera poświadczeń podczas operacji wykonywania kopii zapasowych i przywracania. Zapisane poświadczenia użytkowników mogą zostać naruszone, jeśli to uprawnienie zostanie przyznane innym podmiotom.
+  - **Nieskonfigurowany**
+  - **Zezwalaj**
+
+- **Zezwalaj na logowanie lokalne**  
+  **Domyślnie**: Nie skonfigurowano  
+  Dostawca CSP: [UserRights/AllowLocalLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-allowlocallogon)
+
+  To prawo użytkownika określa, którzy użytkownicy mogą logować się na komputerze.
+  - **Nieskonfigurowany**
+  - **Zezwalaj**
+
+- **Zezwalaj na dostęp z sieci**  
+  **Domyślnie**: Nie skonfigurowano  
+  Dostawca CSP: [UserRights/AccessFromNetwork](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-accessfromnetwork)
+
+  To prawo użytkownika określa, którzy użytkownicy i grupy mogą łączyć się z komputerem za pośrednictwem sieci.
+  - **Nieskonfigurowany**
+  - **Zezwalaj**
+
+- **Działanie jako część systemu operacyjnego**  
+  **Domyślnie**: Nie skonfigurowano  
+  Dostawca CSP: [UserRights/ActAsPartOfTheOperatingSystem](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-actaspartoftheoperatingsystem)
+
+  Działanie jako część systemu operacyjnego
+  - **Nieskonfigurowany**
+  - **Zezwalaj**  
+
+- **Tworzenie kopii zapasowej plików i katalogów**  
+  **Domyślnie**: Nie skonfigurowano  
+  Dostawca CSP: [UserRights/BackupFilesAndDirectories](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-backupfilesanddirectories)
+
+  To prawo użytkownika określa, którzy użytkownicy mogą pomijać uprawnienia do plików, katalogów, rejestru i innych obiektów trwałych podczas tworzenia kopii zapasowych plików i katalogów.
+  - **Nieskonfigurowany**
+  - **Zezwalaj**
+
+- **Zmiana czasu systemowego**  
+  **Domyślnie**: Nie skonfigurowano  
+  Dostawca CSP: [UserRights/ChangeSystemTime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-changesystemtime)
+
+  To prawo użytkownika określa, którzy użytkownicy i grupy mogą zmieniać godzinę i datę w zegarze wewnętrznym komputera.
+  - **Nieskonfigurowany**
+  - **Zezwalaj**
+
+- **Tworzenie obiektów globalnych**  
+  **Domyślnie**: Nie skonfigurowano  
+  Dostawca CSP: [UserRights/CreateGlobalObjects](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createglobalobjects)
+
+  To ustawienie zabezpieczeń określa, czy użytkownicy mogą tworzyć obiekty globalne, które są dostępne dla wszystkich sesji. Użytkownicy, którzy mogą tworzyć obiekty globalne, mogą mieć wpływ na procesy działające w ramach sesji innych użytkowników, co może prowadzić do awarii aplikacji lub uszkodzenia danych.
+  - **Nieskonfigurowany**
+  - **Zezwalaj**
+
+- **Utwórz plik stronicowania**  
+  **Domyślnie**: Nie skonfigurowano  
+  Dostawca CSP: [UserRights/plik stronicowania](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createpagefile)
+
+  To prawo użytkownika określa, którzy użytkownicy i grupy mogą wywoływać wewnętrzny interfejs API w celu utworzenia i zmiany rozmiaru pliku stronicowania.
+  - **Nieskonfigurowany**
+  - **Zezwalaj**
+
+- **Utwórz trwałe obiekty udostępnione**  
+  **Domyślnie**: Nie skonfigurowano  
+  Dostawca CSP: [UserRights/CreatePermanentSharedObjects](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createpermanentsharedobjects)
+
+  To prawo użytkownika określa, które konta mogą być używane przez procesy do tworzenia obiektu katalogu przy użyciu Menedżera obiektów.
+  - **Nieskonfigurowany**
+  - **Zezwalaj**
+
+- **Tworzenie łączy symbolicznych**  
+  **Domyślnie**: Nie skonfigurowano  
+  Dostawca CSP: [UserRights/CreateSymbolicLinks](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createsymboliclinks)
+
+  To prawo użytkownika określa, czy użytkownik może utworzyć link symboliczny z komputera, na którym są zalogowani.
+  - **Nieskonfigurowany**
+  - **Zezwalaj**
+
+- **Utwórz tokeny**  
+  **Domyślnie**: Nie skonfigurowano  
+  Dostawca CSP: [UserRights/Untoken](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createtoken)
+
+  To prawo użytkownika określa, którzy użytkownicy/grupy mogą być używani przez procesy do tworzenia tokenów, które mogą być następnie używane w celu uzyskania dostępu do dowolnych zasobów lokalnych, gdy proces używa wewnętrznego interfejsu API do tworzenia tokenu dostępu.
+  - **Nieskonfigurowany**
+  - **Zezwalaj**
+
+- **Debugowanie programów**  
+  **Domyślnie**: Nie skonfigurowano  
+    Dostawca CSP: [UserRights/DebugPrograms](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-debugprograms)
+
+  To prawo użytkownika określa, którzy użytkownicy mogą dołączać debuger do dowolnego procesu lub do jądra.
+  - **Nieskonfigurowany**
+  - **Zezwalaj**
+
+- **Odmów dostępu z sieci**  
+  **Domyślnie**: Nie skonfigurowano  
+  Dostawca CSP: [UserRights/DenyAccessFromNetwork](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-denyaccessfromnetwork)
+
+  To prawo użytkownika określa, którzy użytkownicy nie mogą uzyskać dostępu do komputera za pośrednictwem sieci.
+  - **Nieskonfigurowany**
+  - **Zezwalaj**
+
+- **Odmowa logowania w trybie usługi**  
+  **Domyślnie**: Nie skonfigurowano  
+  Dostawca CSP: [UserRights/DenyLocalLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-denylocallogon)
+
+  To ustawienie zabezpieczeń określa, które konta usług nie mogą zarejestrować procesu jako usługi.
+  - **Nieskonfigurowany**
+  - **Zezwalaj**
+
+- **Odmowa logowania za pomocą usług pulpitu zdalnego**  
+  **Domyślnie**: Nie skonfigurowano  
+  Dostawca CSP: [UserRights/DenyRemoteDesktopServicesLogOn](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-denyremotedesktopserviceslogon)
+
+  To prawo użytkownika określa, którzy użytkownicy i grupy nie mogą logować się jako klient Usługi pulpitu zdalnego.
+  - **Nieskonfigurowany**
+  - **Zezwalaj**
+
+- **Włącz delegowanie**  
+  **Domyślnie**: Nie skonfigurowano  
+  Dostawca CSP: [UserRights/EnableDelegation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-enabledelegation)
+
+ To prawo użytkownika określa, którzy użytkownicy mogą ustawić ustawienie zaufany dla delegowania dla obiektu użytkownika lub komputera.
+  - **Nieskonfigurowany**
+  - **Zezwalaj**
+
+- **Generowanie inspekcji zabezpieczeń**  
+  **Domyślnie**: Nie skonfigurowano  
+  Dostawca CSP: [UserRights/GenerateSecurityAudits](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-generatesecurityaudits)
+
+  To prawo użytkownika określa, które konta mogą być używane przez proces do dodawania wpisów do dziennika zabezpieczeń. Dziennik zabezpieczeń służy do śledzenia nieautoryzowanego dostępu do systemu.
+  - **Nieskonfigurowany**
+  - **Zezwalaj**
+
+- **Personifikuj klienta**  
+  **Domyślnie**: Nie skonfigurowano  
+  Dostawca CSP: [UserRights/ImpersonateClient](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-impersonateclient)
+
+  Przypisanie tego użytkownika do użytkownika pozwala programom działającym w imieniu tego użytkownika na personifikację klienta. Wymaganie tego użytkownika dla tego rodzaju personifikacji uniemożliwia nieautoryzowanemu użytkownikowi nakłanianie klienta do nawiązania połączenia z usługą utworzoną przez siebie, a następnie personifikuje tego klienta, co może podwyższyć poziom uprawnień nieautoryzowanego użytkownika do poziomy administracyjne lub systemowe.
+  - **Nieskonfigurowany**
+  - **Zezwalaj**
+
+- **Zwiększ priorytet planowania**  
+  **Domyślnie**: Nie skonfigurowano  
+  Dostawca CSP: [UserRights/IncreaseSchedulingPriority](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-increaseschedulingpriority)
+
+  To prawo użytkownika określa, które konta mogą używać procesu z dostępem do właściwości zapisu do innego procesu, aby zwiększyć priorytet wykonywania przypisany do innego procesu.
+  - **Nieskonfigurowany**
+  - **Zezwalaj**
+
+- **Ładowanie i zwalnianie sterowników urządzeń**  
+  **Domyślnie**: Nie skonfigurowano  
+  Dostawca CSP: [UserRights/LoadUnloadDeviceDrivers](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-loadunloaddevicedrivers)
+
+  To prawo użytkownika określa, którzy użytkownicy mogą dynamicznie ładować i zwalniać sterowniki urządzeń lub inny kod w trybie jądra.
+  - **Nieskonfigurowany**
+  - **Zezwalaj**
+
+- **Blokowanie stron w pamięci**  
+  **Domyślnie**: Nie skonfigurowano  
+  Dostawca CSP: [UserRights/LockMemory](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-lockmemory)
+
+  To prawo użytkownika określa, które konta mogą używać procesu do przechowywania danych w pamięci fizycznej, co uniemożliwia systemowi stronicowanie danych na dysku wirtualnym.
+  - **Nieskonfigurowany**
+  - **Zezwalaj**
+
+- **Zarządzanie dziennikiem inspekcji i zabezpieczeń**  
+  **Domyślnie**: Nie skonfigurowano  
+  Dostawca CSP: [UserRights/ManageAuditingAndSecurityLog](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-manageauditingandsecuritylog)
+
+  To prawo użytkownika określa, którzy użytkownicy mogą określić opcje inspekcji dostępu do obiektów dla poszczególnych zasobów, takich jak pliki, Active Directory obiekty i klucze rejestru.
+  - **Nieskonfigurowany**
+  - **Zezwalaj**
+
+- **Wykonywanie zadań konserwacji woluminów**  
+  **Domyślnie**: Nie skonfigurowano  
+  Dostawca CSP: [UserRights/ManageVolume](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-managevolume)
+
+  To prawo użytkownika określa, którzy użytkownicy i grupy mogą uruchamiać zadania konserwacji na woluminie, na przykład na zdalnej defragmentacji.
+  - **Nieskonfigurowany**
+  - **Zezwalaj**
+
+- **Modyfikowanie wartości środowiska oprogramowania układowego**  
+  **Domyślnie**: Nie skonfigurowano  
+  Dostawca CSP: [UserRights/ModifyFirmwareEnvironment](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-modifyfirmwareenvironment)
+
+  To prawo użytkownika określa, kto może modyfikować wartości środowiska oprogramowania układowego.
+  - **Nieskonfigurowany**
+  - **Zezwalaj**
+
+- **Modyfikuj etykietę obiektu**  
+  **Domyślnie**: Nie skonfigurowano  
+  Dostawca CSP: [UserRights/ModifyObjectLabel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-modifyobjectlabel)
+
+  To prawo użytkownika określa, które konta użytkowników mogą modyfikować etykietę integralności obiektów, takich jak pliki, klucze rejestru lub procesy należące do innych użytkowników.
+  - **Nieskonfigurowany**
+  - **Zezwalaj**
+
+- **Profilowanie pojedynczego procesu**  
+  **Domyślnie**: Nie skonfigurowano  
+  Dostawca CSP: [UserRights/ProfileSingleProcess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-profilesingleprocess)
+
+  To prawo użytkownika określa, którzy użytkownicy mogą używać narzędzi do monitorowania wydajności do monitorowania wydajności procesów systemu.
+  - **Nieskonfigurowany**
+  - **Zezwalaj**
+
+- **Zdalne zamykanie**  
+  **Domyślnie**: Nie skonfigurowano  
+  Dostawca CSP: [UserRights/RemoteShutdown](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-remoteshutdown)
+
+  To prawo użytkownika określa, którzy użytkownicy mogą zamknąć komputer z lokalizacji zdalnej w sieci. Nieprawidłowe użycie tego prawa użytkownika może spowodować odmowę usługi.
+  - **Nieskonfigurowany**
+  - **Zezwalaj**
+  
+- **Przywracanie plików i katalogów**  
+  **Domyślnie**: Nie skonfigurowano  
+  Dostawca CSP: [UserRights/RestoreFilesAndDirectories](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-restorefilesanddirectories)
+  
+  To prawo użytkownika określa, którzy użytkownicy mogą pomijać uprawnienia do plików, katalogów, rejestru i innych obiektów trwałych podczas przywracania kopii zapasowej plików i katalogów oraz określać, którzy użytkownicy mogą ustawiać prawidłowy podmiot zabezpieczeń jako właściciela obiektu.
+  - **Nieskonfigurowany**
+  - **Zezwalaj**
+  
+- **Przejęcie na własność plików lub obiektów**  
+  **Domyślnie**: Nie skonfigurowano  
+  Dostawca CSP: [UserRights/TakeOwnership](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-takeownership)
+
+  To prawo użytkownika określa, którzy użytkownicy mogą przejąć własność dowolnego zabezpieczanego obiektu w systemie, w tym Active Directory obiektów, plików i folderów, drukarek, kluczy rejestru, procesów i wątków.
+  - **Nieskonfigurowany**
+  - **Zezwalaj**
 
 ## <a name="next-steps"></a>Następne kroki
 

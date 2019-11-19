@@ -1,11 +1,11 @@
 ---
 title: Ustawienia ograniczeń urządzeń dla systemu Windows 10 w usłudze Microsoft Intune na platformie Azure | Microsoft Docs
-description: Zapoznaj się z listą wszystkich ustawień dotyczących tworzenia ograniczeń dotyczących urządzeń z systemie Windows 10 lub nowszym oraz z ich opisami. Te ustawienia w profilu konfiguracji służą do kontrolowania zrzutów ekranu, wymagań dotyczących haseł, ustawień kiosku, aplikacji w sklepie, przeglądarki Microsoft Edge, usługi Windows Defender, dostępu do chmury, menu Start i innych elementów w usłudze Microsoft Intune.
+description: Zapoznaj się z listą wszystkich ustawień dotyczących tworzenia ograniczeń dotyczących urządzeń z systemie Windows 10 lub nowszym oraz z ich opisami. Te ustawienia w profilu konfiguracji służą do kontrolowania zrzutów ekranu, wymagań dotyczących haseł, ustawień kiosku, aplikacji w sklepie, przeglądarki Microsoft Edge, usługi Microsoft Defender, dostępu do chmury, menu Start i innych elementów w usłudze Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/09/2019
+ms.date: 11/13/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 288ff693e7e46b7953cffad3d0a54b8621141373
-ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
+ms.openlocfilehash: f0cf7d6f18b0d345a8c491984987b9ffa234d66e
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73755267"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059476"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem Windows 10 (i nowszym) w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune
 
@@ -523,7 +523,7 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad WirelessDisplay
 
 - **Udostępnij dane użycia**: wybierz poziom przesyłanych danych diagnostycznych. Dostępne opcje:
   - **Nie skonfigurowano**: dane nie zostaną udostępnione.
-  - **Bezpieczeństwo**: informacje wymagane do zwiększenia bezpieczeństwa systemu Windows, łącznie z danymi dotyczącymi ustawień składnika środowiska i telemetrii połączonego użytkownika, narzędzia do usuwania złośliwego oprogramowania i usługi Windows Defender.
+  - **Bezpieczeństwo**: informacje wymagane do zwiększenia bezpieczeństwa systemu Windows, łącznie z danymi dotyczącymi ustawień składnika środowiska i telemetrii połączonego użytkownika, narzędzia do usuwania złośliwego oprogramowania i usługi Microsoft Defender.
   - **Podstawowy**: podstawowe informacje o urządzeniu, w tym dane dotyczące jakości, zgodność aplikacji, dane dotyczące użycia aplikacji i dane z poziomu Bezpieczeństwo.
   - **Ulepszony**: dodatkowe informacje szczegółowe, w tym: sposób używania systemów Windows i Windows Server, programu System Center i aplikacji oraz ich wydajność, zaawansowane dane dotyczące niezawodności oraz dane z poziomów Podstawowy i Bezpieczeństwo.
   - **Pełny**: wszystkie dane potrzebne do identyfikowania i rozwiązywania problemów oraz dane z poziomów Bezpieczeństwo, Podstawowy i Ulepszony.
@@ -632,19 +632,19 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad uruchamiania](h
   - **Ukryj**: skrót jest ukryty, a ustawienie w aplikacji Ustawienia jest wyłączone.
   - **Pokaż**: skrót jest wyświetlany, a ustawienie w aplikacji Ustawienia jest wyłączone.
 
-## <a name="windows-defender-smart-screen"></a>Windows Defender SmartScreen
+## <a name="microsoft-defender-smart-screen"></a>Ekran inteligentny programu Microsoft Defender
 
-- **Filtr SmartScreen dla przeglądarki Microsoft Edge**: ustawienie **Wymagaj** powoduje wyłączenie filtra SmartScreen w usłudze Windows Defender i uniemożliwia użytkownikom włączenie go. Ustawienie **Nie skonfigurowano** (domyślne) powoduje włączenie filtru SmartScreen. Pomaga chronić użytkowników przed potencjalnymi zagrożeniami i uniemożliwia użytkownikom wyłączenie go.
+- **Filtr SmartScreen dla przeglądarki Microsoft Edge**: ustawienie **Wymagaj** powoduje wyłączenie filtra SmartScreen w usłudze Microsoft Defender i uniemożliwia użytkownikom włączenie go. Ustawienie **Nie skonfigurowano** (domyślne) powoduje włączenie filtru SmartScreen. Pomaga chronić użytkowników przed potencjalnymi zagrożeniami i uniemożliwia użytkownikom wyłączenie go.
 
-  Przeglądarka Microsoft Edge używa filtra SmartScreen w usłudze Windows Defender, aby chronić użytkowników przed potencjalnym wyłudzeniem informacji i złośliwym oprogramowaniem.
+  Program Microsoft Edge używa filtra SmartScreen w usłudze Microsoft Defender, aby chronić użytkowników przed potencjalnym wyłudzeniem informacji i złośliwym oprogramowaniem.
 
   [Dostawca usługi konfiguracji Browser/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)
 
-- **Dostęp do złośliwych witryn**: ustawienie **Blokuj** uniemożliwia użytkownikom ignorowanie ostrzeżeń filtru SmartScreen w usłudze Windows Defender oraz przechodzenia do witryny. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia użytkownikom zignorowanie ostrzeżeń i przejście do witryny.
+- **Dostęp do złośliwych witryn**: ustawienie **Blokuj** uniemożliwia użytkownikom ignorowanie ostrzeżeń filtru SmartScreen w usłudze Microsoft Defender oraz przechodzenia do witryny. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia użytkownikom zignorowanie ostrzeżeń i przejście do witryny.
 
   [Dostawca usługi konfiguracji Browser/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
 
-- **Pobieranie niezweryfikowanych plików**: ustawienie **Blokuj** uniemożliwia użytkownikom ignorowanie ostrzeżeń filtru SmartScreen w usłudze Windows Defender oraz pobieranie niezweryfikowanych plików. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia użytkownikom zignorowanie ostrzeżeń i pobranie niezweryfikowanych plików.
+- **Pobieranie niezweryfikowanych plików**: ustawienie **Blokuj** uniemożliwia użytkownikom ignorowanie ostrzeżeń filtru SmartScreen w usłudze Microsoft Defender oraz pobieranie niezweryfikowanych plików. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia użytkownikom zignorowanie ostrzeżeń i pobranie niezweryfikowanych plików.
 
   [Dostawca usługi konfiguracji Browser/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)
 
@@ -833,9 +833,9 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad usługi Defende
   [Defender/ScheduleScanTime CSP (Dostawca usługi konfiguracji Defender/ScheduleScanTime)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescantime)
 
 - **Wykrywaj potencjalnie niepożądane aplikacje**: pozwala wybrać poziom ochrony w przypadku wykrycia potencjalnie niechcianych aplikacji przez system Windows. Dostępne opcje:
-  - **Nie skonfigurowano** (ustawienie domyślne): ochrona usługi Windows Defender przed potencjalnie niepożądanymi aplikacjami jest wyłączona.
-  - **Blokuj**: usługa Windows Defender wykrywa potencjalnie niepożądane aplikacje, a wykryte elementy są blokowane. Te elementy są wyświetlane w historii wraz z innymi zagrożeniami.
-  - **Inspekcja**: usługa Windows Defender wykrywa potencjalnie niepożądane aplikacje, ale nie podejmuje żadnych działań. Możesz przejrzeć informacje o aplikacjach, wobec których usługa Windows Defender podjęłaby działanie. Możesz na przykład wyszukać zdarzenia utworzone przez usługę Windows Defender w Podglądzie zdarzeń.
+  - **Nie skonfigurowano** (ustawienie domyślne): ochrona usługi Microsoft Defender przed potencjalnie niepożądanymi aplikacjami jest wyłączona.
+  - **Blokuj**: usługa Microsoft Defender wykrywa potencjalnie niepożądane aplikacje, a wykryte elementy są blokowane. Te elementy są wyświetlane w historii wraz z innymi zagrożeniami.
+  - **Inspekcja**: usługa Microsoft Defender wykrywa potencjalnie niepożądane aplikacje, ale nie podejmuje żadnych działań. Możesz przejrzeć informacje o aplikacjach, wobec których usługa Microsoft Defender podjęłaby działanie. Możesz na przykład wyszukać zdarzenia utworzone przez usługę Microsoft Defender w Podglądzie zdarzeń.
 
   Aby uzyskać więcej informacji dotyczących potencjalnie niepożądanych aplikacji, zobacz temat [Wykrywanie i blokowanie potencjalnie niepożądanych aplikacji](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus).
 
@@ -850,11 +850,11 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad usługi Defende
   - **Zdefiniowane przez użytkownika**
   - **Zablokuj**
 
-  Jeśli akcja nie jest możliwa, usługa Windows Defender wybierze najlepszą opcję, aby upewnić się, że zagrożenie jest korygowane. 
+  Jeśli działanie nie jest możliwe, usługa Microsoft Defender wybierze najlepszą opcję, aby upewnić się, że zagrożenie jest korygowane. 
 
   [Usługa Defender/ThreatSeverityDefaultAction CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-threatseveritydefaultaction)
 
-### <a name="windows-defender-antivirus-exclusions"></a>Wyjątki programu antywirusowego Windows Defender
+### <a name="microsoft-defender-antivirus-exclusions"></a>Wyjątki programu antywirusowego Microsoft Defender
 
 - **Pliki i foldery do wyłączenia ze skanów i ochrony w czasie rzeczywistym**: umożliwia dodanie do listy wykluczeń pojedynczych plików lub folderów lub większej ich liczby, na przykład **C:\ścieżka** lub **%ProgramFiles%\ścieżka\nazwa_pliku.exe**. Te pliki i foldery nie są uwzględniane podczas skanowania w czasie rzeczywistym ani zaplanowanego skanowania.
 - **Rozszerzenia plików do wyłączenia ze skanów i ochrony w czasie rzeczywistym**: umożliwia dodanie do listy wykluczeń pojedynczych rozszerzeń plików lub większej ich liczby, np. **JPG** lub **TXT**. Żadne pliki z tymi rozszerzeniami nie będą uwzględniane podczas skanowania w czasie rzeczywistym lub skanowania planowanego.

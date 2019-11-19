@@ -1,11 +1,11 @@
 ---
-title: Rejestrowanie urządzenia z systemem macOS w usłudze Intune za pomocą aplikacji Portal firmy | Microsoft Docs
-description: Opis sposobu rejestrowania urządzenia z systemem macOS w usłudze Intune za pomocą aplikacji Portal firmy
+title: Rejestrowanie komputera Mac przy użyciu Intune — Portal firmy | Microsoft Docs
+description: Dowiedz się, jak zarejestrować komputer Mac w usłudze Intune za pomocą aplikacji Portal firmy.
 keywords: Mac OS X, macOS, OS X
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/03/2018
+ms.date: 11/14/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,93 +15,94 @@ ms.assetid: 3bb659cc-9b57-4d19-8631-2c26749fa71c
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: elocholi
+ms.reviewer: kakyker
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee725d118353e18924858569ac861992d19f839a
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: ba285fc9de58b3fb739a16722e0e05e36e840e87
+ms.sourcegitcommit: 76ae5aea5deee7a590e24c3b2bb52f88125943e5
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506184"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74098149"
 ---
-# <a name="enroll-your-macos-device-in-intune-with-the-company-portal-app"></a>Rejestrowanie urządzenia z systemem macOS w usłudze Intune przy użyciu aplikacji Portal firmy
+# <a name="enroll-your-macos-device-using-the-company-portal-app"></a>Rejestrowanie urządzenia z macOS za pomocą aplikacji Portal firmy  
 
-Zarejestruj urządzenie z systemem macOS przy użyciu aplikacji Portal firmy w usłudze Intune, aby uzyskać bezpieczny dostęp do poczty e-mail, plików i aplikacji w organizacji.
+Zarejestruj urządzenie z systemem macOS przy użyciu aplikacji Portal firmy w usłudze Intune, aby uzyskać bezpieczny dostęp do służbowej poczty e-mail, plików i aplikacji.
 
-Organizacje często wymagają przekazania urządzenia do zarządzania przed uzyskaniem dostępu do danych własnościowych. Po przekazaniu urządzenia do zarządzania organizacje mogą wypychać zasady i aplikacje do urządzenia za pośrednictwem dostawcy zarządzania urządzeniami przenośnymi. Aby uzyskać ciągły dostęp do danych służbowych z urządzenia, musisz skonfigurować urządzenie, aby dopasować je do ustawień zasad.  
+Organizacje zwykle wymagają zarejestrowania urządzenia, aby można było uzyskać dostęp do danych własnościowych. Zarejestrowane urządzenie staje się urządzeniem *zarządzanym*. Organizacja może przypisywać zasady i aplikacje do urządzenia za pośrednictwem dostawcy zarządzania urządzeniami przenośnymi (MDM), takiego jak usługa Intune. Aby uzyskać ciągły dostęp do danych służbowych na urządzeniu, musisz skonfigurować urządzenie, aby dopasować je do ustawień zasad w organizacji.  
 
-W tym artykule opisano, jak aplikacja Portal firmy w usłudze Intune dla systemu macOS pomaga w rejestrowaniu, konfigurowaniu i utrzymywaniu urządzenia zgodnie z wymaganiami organizacji.  
-</br>
-> [!VIDEO https://www.youtube.com/embed/Pa2pfhwq_yk?rel=0]
+W tym artykule opisano, jak aplikacja Portal firmy dla systemu macOS umożliwia rejestrowanie, konfigurowanie i utrzymywanie urządzenia zgodnie z wymaganiami organizacji.  
+
 
 ## <a name="what-to-expect-from-the-company-portal-app"></a>Czego można oczekiwać od aplikacji Portal firmy
 
-Podczas początkowej konfiguracji aplikacja wymaga uwierzytelnienia użytkownika w organizacji. Następnie informuje użytkownika o wszelkich wymaganych ustawieniach urządzenia. Na przykład organizacje często ustawiają wymagania dotyczące minimalnej i maksymalnej długości haseł, które trzeba spełnić.    
+Podczas konfiguracji początkowej aplikacja Portal firmy wymaga zalogowania się i uwierzytelnienia w organizacji. Następnie Portal firmy informuje o ustawieniach urządzenia, które należy skonfigurować, aby spełniały wymagania organizacji. Na przykład organizacje często ustawiają wymagania dotyczące minimalnej i maksymalnej długości haseł, które trzeba spełnić.    
 
-Po zarejestrowaniu urządzenia aplikacja Portal firmy będzie nadal upewniać się, że urządzenie jest chronione. Jeśli przykładowo zainstalujesz aplikację z niezaufanego źródła, aplikacja będzie wysyłać alerty i czasami odwoływać dostęp do danych firmowych. Zasady ochrony aplikacji, takie jak powyższa, są typowe w organizacjach i często wymagają odinstalowania niezaufanych aplikacji przed odzyskaniem dostępu.
+Po zarejestrowaniu urządzenia Portal firmy zawsze upewnij się, że urządzenie jest chronione zgodnie z wymaganiami organizacji. Na przykład jeśli zainstalujesz aplikację z niezaufanego źródła, Portal firmy będzie alertować i może ograniczyć dostęp do zasobów organizacji. Zasady ochrony aplikacji, takie jak ta, są wspólne. W celu odzyskania dostępu prawdopodobnie trzeba będzie odinstalować niezaufaną aplikację. 
 
-Jeśli po zarejestrowaniu organizacja wymusi nowe wymagania dotyczące zabezpieczeń, np. uwierzytelnianie wieloskładnikowe, aplikacja Portal firmy powiadomi użytkownika. Będziesz mieć szansę na dostosowanie ustawień, aby nadal kontynuować pracę z urządzenia.  
+Jeśli po zarejestrowaniu organizacja wymusi nowe wymagania dotyczące zabezpieczeń, np. uwierzytelnianie wieloskładnikowe, Portal firmy powiadomi użytkownika. Będziesz mieć szansę na dostosowanie ustawień, aby nadal kontynuować pracę z urządzenia.  
 
 Aby uzyskać więcej informacji o rejestracji, zobacz [Co się stanie, jeśli zainstaluję aplikację Portal firmy i zarejestruję swoje urządzenie?](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-macos.md).  
 
-## <a name="get-your-device-managed"></a>Przekazywanie urządzenia do zarządzania  
-Wykonaj następujące kroki, aby zarejestrować urządzenia macOS z systemem macOS 10,12 lub nowszym.   
+## <a name="get-your-macos-device-managed"></a>Zapoznaj się z urządzeniem macOS zarządzanym  
+Wykonaj poniższe kroki, aby zarejestrować urządzenie z programem macOS w organizacji. Na urządzeniu musi być uruchomiony program macOS 10,12 lub nowszy.   
+
+> [!NOTE]
+> W trakcie tego procesu może zostać wyświetlony monit o zezwolenie Portal firmy na używanie poufnych informacji przechowywanych w łańcuchu kluczy. Te monity są częścią zabezpieczeń firmy Apple. Po wyświetleniu monitu wpisz hasło do łańcucha kluczy logowania i wybierz pozycję **zawsze Zezwalaj**. Po naciśnięciu klawisza **Enter** lub **Return** na klawiaturze zamiast tego zostanie wyświetlony monit " **Zezwalaj**", co może spowodować wyświetlenie dodatkowych monitów.  
+
+### <a name="install-company-portal-app"></a>Instalowanie aplikacji Portal firmy  
+1. Przejdź do [strony rejestracja mojego komputera Mac](https://go.microsoft.com/fwlink/?linkid=853070).  
+2. Plik Instalatora Portal firmy. pkg zostanie pobrany. Otwórz instalatora i wykonaj kroki opisane w sekcji. 
+3. Wyrażanie zgody na umowę licencyjną na oprogramowanie. 
+4. Wprowadź hasło urządzenia lub zarejestrowany odcisk palca, aby zainstalować oprogramowanie.  
+5. Otwórz Portal firmy. 
+
+> [!IMPORTANT]
+> Program Microsoft AutoUpdate może zostać otwarty w celu zaktualizowania oprogramowania firmy Microsoft. Po zainstalowaniu wszystkich aktualizacji Otwórz aplikację Portal firmy. Aby uzyskać najlepsze czynności konfiguracyjne, należy zainstalować najnowsze wersje programu Microsoft AutoUpdate i Portal firmy.  
 
 
-1. Aby uzyskać dostęp do witryny internetowej Portal firmy, otwórz nowe okno w przeglądarce __Safari__ i przejdź do sekcji https://portal.manage.microsoft.com.  
-
-2. Zaloguj się do witryny aplikacji Portal firmy przy użyciu konta służbowego.
-
-   [!INCLUDE [wit_nextref](includes/end-user-password-guidance.md)]
+### <a name="enroll-your-mac"></a>Rejestrowanie komputera Mac  
 
 
-3. Przejdź do lewego górnego rogu strony i kliknij opcję **Menu** > **Urządzenia**.  
+1. Zaloguj się do Portalu firmy przy użyciu konta służbowego.  
+2. Gdy aplikacja zostanie otwarta, wybierz pozycję **Rozpocznij**.  
+3. Zapoznaj się z informacjami o tym [, co Twoja organizacja może zobaczyć](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) na Twoim zarejestrowanym urządzeniu. Następnie wybierz pozycję **Kontynuuj**.  
+4. Na ekranie **Instalowanie profilu zarządzania** wybierz pozycję **Pobierz profil**.   
 
-4. Na stronie __Urządzenia__ zostanie wyświetlona lista zarządzanych urządzeń lub transparent. Wyświetlone elementy zależą od tego, czy masz już zarządzane urządzenie. 
-    * Aby dodać urządzenie, którego nie ma na liście, wybierz transparent z tekstem **Naciśnij tutaj, aby poinformować nas o używanym urządzeniu lub dodać nowe urządzenie**.
-    * Jeśli nie masz żadnych urządzeń, transparent wyświetla tekst: **Nie masz żadnych zarządzanych urządzeń. Dodaj urządzenie, naciskając tutaj.** Kliknij transparent, aby dodać urządzenie.  
+    ![Przykładowy zrzut ekranu Portal firmy, zainstaluj profil zarządzania ekranu, wyróżnij przycisk "Pobierz profil".](./media/install-mgmt-profile-mac-1911.PNG)   
+5. Zostaną otwarte Preferencje systemu Twojego urządzenia. Wybierz pozycję **Zainstaluj** , a następnie ponownie wybierz pozycję **Zainstaluj** . Jeśli zostanie wyświetlony monit, wprowadź hasło urządzenia.  
 
-     ![Zrzut ekranu przedstawiający stronę Urządzenia z czerwonym kwadratem wokół opcji transparentu wyróżniającym miejsce, w którym należy kliknąć.](./media/CP-enroll-MACOS-1808.png)  
-5. Wykonaj poniższy krok dopasowany do obecnie wyświetlanej wiadomości w aplikacji Portal firmy.  
-    * Jeśli dodajesz urządzenie po raz pierwszy, zostanie wyświetlony monit o pobranie aplikacji Portal firmy na urządzenie. Kliknij przycisk **Pobierz**, aby kontynuować.  
+    ![Przykład zrzutu ekranu preferencji systemu macOS, monitu instalacji i wyróżnienia przycisku "Zainstaluj".](./media/system-preference-install-1911.PNG)  
+6. Po zainstalowaniu profilu zostanie on wyświetlony na liście Profile w obszarze **profil zarządzania.**  
 
-         ![Zrzut ekranu przedstawiający monit o pobranie aplikacji Portal firmy dla systemu macOS. Użytkownik ma możliwość kliknięcia niebieskiego przycisku Pobierz w lewym dolnym rogu monitu lub szarego przycisku Anuluj w prawym dolnym rogu.](./media/CP-enroll-download-macOS-1808.png)  
+   ![Przykładowy zrzut ekranu przedstawiający Preferencje systemu macOS, ekran profile, wyróżnienie zainstalowanego profilu zarządzania.](./media/system-preference-verify-1911.PNG)   
+7. Wróć do Portal firmy.   
+8. Organizacja może wymagać aktualizacji ustawień urządzenia. Po zakończeniu aktualizowania ustawień wybierz pozycję **Sprawdź ustawienia**.  
 
-    * Jeśli masz już urządzenie zarządzane z systemem macOS, otrzymasz monit z listą obecnie zarządzanych urządzeń z systemem macOS. Wybierz opcję **Mojego urządzenia nie ma na liście** > **Pobierz**, aby pobrać aplikację Portal firmy na dodawane urządzenie.  
+    ![Przykładowy zrzut ekranu przedstawiający Portal firmy, aktualizowanie ekranu ustawień urządzenia, wyróżnienie przycisku "Sprawdź ustawienia".](./media/update-settings-mac-1911.PNG)  
+9. Po zakończeniu instalacji wybierz pozycję **gotowe**.  
 
-         ![Zrzut ekranu przedstawiający monit o pobranie aplikacji Portal firmy dla systemu macOS. Użytkownik może wybrać opcję „Mojego urządzenia nie ma na liście” lub konkretne urządzenie w środkowej części strony. Niebieski przycisk Pobierz zostanie wyświetlony w lewym dolnym rogu monitu, a szary przycisk Anuluj w prawym dolnym rogu](./media/cp-mac-os-device-isnt-here-1808.png)  
 
-6. Urządzenie sprawdzi, czy pobrany plik instalacyjny **CompanyPortal.pkg** można bezpiecznie otworzyć. Po zakończeniu otwórz instalatora i ukończ instalację.  
+ ## <a name="troubleshooting-and-feedback"></a>Rozwiązywanie problemów i opinie   
 
-7. Jeśli instalator zakończył pracę, przejdź do aplikacji **Launchpad** i otwórz aplikację **Portal firmy**.  
+Jeśli wystąpią problemy podczas rejestracji, przejdź do **pomocy** > **wysłać raport diagnostyczny** , aby zgłosić problem do deweloperów aplikacji firmy Microsoft. Te informacje służą do ulepszania aplikacji. Te informacje będą również pomocne w rozwiązaniu problemu, jeśli osoba odpowiedzialna za pomoc techniczną nie dotrze do nich w celu uzyskania pomocy.  
 
-8. Urządzenie z systemem macOS wyświetli monit o potwierdzenie otworzenia aplikacji Portal firmy. Kliknij pozycję **Otwórz**.  
+Po zgłoszeniu problemu do firmy Microsoft można wysłać szczegóły dotyczące środowiska użytkownika do działu pomocy technicznej IT. Wybierz pozycję **szczegóły wiadomości e-mail**. Wpisz tekst w treści wiadomości e-mail. Aby znaleźć adres e-mail osoby pomocy technicznej, przejdź do pozycji Portal firmy App > **Contact**. Lub sprawdź [witrynę sieci web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).  
+ 
 
-   > [!TIP]
-   > Usługa Intune musi mieć dostęp do komputera, aby sprawdzić, czy urządzenie jest wystarczająco bezpieczne, aby mogło uzyskiwać dostęp do zasobów organizacji. Jeśli Twój komputer odmawia otwarcia aplikacji Portal firmy, [wyłącz funkcję Gatekeeper](https://support.apple.com/HT202491). Następnie otwórz aplikację.
+Ponadto Microsoft Intune zespół Portal firmy może poznać Twoją opinię. Przejdź do **pomocy** , > **Prześlij opinię** , aby podzielić się swoimi pomysłami i pomysłami.  
 
-9. Pierwszy wyświetlony ekran w aplikacji Portal firmy zawiera monit o **zalogowanie**. Użyj tego samego konta służbowego, którego użyto do zalogowania się w witrynie internetowej Portal firmy.
+## <a name="unverified-profiles"></a>Profile niezweryfikowane  
+W przypadku wyświetlania zainstalowanych profilów zarządzania urządzeniami przenośnymi (MDM) dla urządzenia w obszarze **Preferencje systemowe** > **Profile** niektóre profile mogą mieć stan niezweryfikowany. Tak długo, jak w obszarze profilu zarządzania jest pokazywany stan zweryfikowany, nie musisz się martwić.  
 
-10. Portal firmy potwierdzi informacje o Twoim koncie, a następnie pokaże stan **rejestracji urządzenia** i **zgodności urządzenia**. Żółtymi trójkątami oznaczono akcje, które należy wykonać, aby zabezpieczyć urządzenie z systemem macOS na potrzeby zadań związanych ze szkołą lub pracą. Kliknij przycisk **Rozpocznij**, aby rozpocząć rejestrację. 
-
-11. Po wyświetleniu monitu wpisz informacje logowania dla komputera.  
-
-Rejestracja urządzenia w zarządzaniu może potrwać kilka minut. W tym czasie można robić inne rzeczy na urządzeniu. Gdy konfigurowanie dostępu do zasobów firmy zostanie zakończone, pojawi się odpowiedni komunikat.  
-
-## <a name="unverified-profiles"></a>Profile niezweryfikowane
-W przypadku wyświetlania zainstalowanych profilów zarządzania urządzeniami przenośnymi (MDM) dla urządzenia z systemem macOS niektóre profile mogą mieć stan **Niezweryfikowany**. Tak długo, jak w obszarze **Profil zarządzania** jest pokazywany stan **Zweryfikowany**, nie musisz się martwić.  
-
-Profil zarządzania definiuje połączenia kanału zarządzania urządzeniami przenośnymi. Tak długo, jak profil zarządzania jest zweryfikowany, inne profile dostarczane do maszyny za pośrednictwem tego kanału dziedziczą cechy zabezpieczeń profilu zarządzania.
-
-Ponadto, ponieważ inne profile nie wymagają indywidualnych weryfikacji, są szybciej generowane i dostarczane do urządzeń. 
+Profil zarządzania definiuje połączenia kanału zarządzania urządzeniami przenośnymi. Tak długo, jak profil zarządzania jest zweryfikowany, inne profile dostarczane do maszyny za pośrednictwem tego kanału dziedziczą cechy zabezpieczeń profilu zarządzania.  
 
 ## <a name="updating-the-company-portal-app"></a>Aktualizowanie aplikacji Portal firmy
 
-Aktualizowanie aplikacji Portal firmy odbywa się tak samo, jak w przypadku każdej innej aplikacji pakietu Office, za pomocą programu Microsoft AutoUpdate dla komputerów Mac. Dowiedz się więcej o [aktualizowaniu aplikacji firmy Microsoft dla systemu macOS](https://support.office.com/article/Check-for-Office-for-Mac-updates-automatically-bfd1e497-c24d-4754-92ab-910a4074d7c1).  
+Aktualizowanie aplikacji Portal firmy odbywa się tak samo, jak w przypadku każdej innej aplikacji pakietu Office, za pomocą programu Microsoft AutoUpdate dla systemu macOS. Dowiedz się więcej o [aktualizowaniu aplikacji firmy Microsoft dla systemu macOS](https://support.office.com/article/Check-for-Office-for-Mac-updates-automatically-bfd1e497-c24d-4754-92ab-910a4074d7c1).  
 
 ## <a name="next-steps"></a>Następne kroki  
-Potrzebujesz dodatkowej pomocy? Skontaktuj się z działem pomocy technicznej Twojej firmy. Odpowiednie informacje kontaktowe możesz znaleźć w [witrynie aplikacji Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).  
 
 

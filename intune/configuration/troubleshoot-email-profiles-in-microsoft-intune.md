@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 15c78d7e7f602b60b6e9f2cee365c9a02eb904df
-ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
+ms.openlocfilehash: 38e8998d1720434b0fe866fc5cd41a0b733fc49b
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73755001"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059839"
 ---
 # <a name="common-issues-and-resolutions-with-email-profiles-in-microsoft-intune"></a>Typowe problemy dotyczące profilów poczty e-mail w usłudze Microsoft Intune i sposoby ich rozwiązania
 
@@ -61,7 +61,7 @@ Sprawdź konfigurację profilu EAS urządzenia Samsung KNOX i zasad źródłowyc
 
 Użytkownicy, których konta e-mail zostały skonfigurowane automatycznie, nie mogą wysyłać zdjęć ani obrazów ze swoich urządzeń. Taka sytuacja może wystąpić, jeśli nie jest włączona opcja **Zezwalaj na wysyłanie wiadomości e-mail z aplikacji innych firm**.
 
-1. Zaloguj się do [Centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Wybierz pozycję **urządzenia** > **profile konfiguracji**.
 3. Wybierz profil poczty e-mail, > **właściwości**  > **Ustawienia**.
 4. Ustaw ustawienie **Zezwalaj na wysyłanie wiadomości e-mail z aplikacji** innych firm, aby **włączyć**.

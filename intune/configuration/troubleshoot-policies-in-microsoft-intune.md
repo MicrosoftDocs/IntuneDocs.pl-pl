@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 687505a3ca2bbdffd26e8870705971aafb4783d2
-ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
+ms.openlocfilehash: a8768022872d32116add0ed4ea4caf1f8fcb800f
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73754959"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059267"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Rozwiązywanie problemów związanych z zasadami i profilami w usłudze Intune
 
@@ -103,7 +103,7 @@ Sprawdź [stan dzierżawy](../fundamentals/tenant-status.md) i upewnij się, że
 
 ## <a name="youre-unsure-if-a-profile-is-correctly-applied"></a>Nie masz pewności, czy poprawnie zastosowano profil
 
-1. Zaloguj się do [Centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Wybierz pozycję **Urządzenia** > **Wszystkie urządzenia** > wybierz urządzenie > **Konfiguracja urządzenia**. 
 
     Każde urządzenie ma listę swoich profilów. Każdy profil ma **Stan**. Stan ma zastosowanie, gdy wszystkie przypisane profile, w tym sprzęt oraz wymagania i ograniczenia systemu operacyjnego, są uwzględniane razem. Dostępne są następujące stany:

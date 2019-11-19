@@ -5,7 +5,7 @@ description: Ustawienia punktów odniesienia zabezpieczeń obsługiwane przez us
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/25/2019
+ms.date: 11/13/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa3cb3481de6e1fdc3790b7330ac521772e252be
-ms.sourcegitcommit: 5932da3ed8f52c7b0f0d71c1801f81c85952cf0c
+ms.openlocfilehash: b7363682960cff6688e9727d2b6869b6bf357084
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72923400"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74060054"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Ustawienia punktów odniesienia zabezpieczeń usługi Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender dla usługi Intune
 
@@ -50,7 +50,7 @@ Podczas korzystania z przeglądarki Microsoft Edge program Microsoft Defender Ap
   - **Zachowanie schowka** - *Settings/ClipboardSettings*  
     Wybierz dozwolone akcje kopiowania i wklejania między komputerem lokalnym a przeglądarką wirtualną funkcji Application Guard.  Dostępne opcje:
     - Nieskonfigurowane  
-    - Blokuj kopiowanie i wklejanie między komputerem i przeglądarką. Blokuj obydwa — nie można przesyłać danych między komputerem i przeglądarką wirtualną.  
+    - Blokuj kopiowanie i wklejanie między komputerem i przeglądarką. Nie można przesyłać danych między komputerem i przeglądarką wirtualną.  
     - Zezwalaj na kopiowanie i wklejanie tylko z przeglądarki do komputera — dane nie mogą być transferowane z komputera do przeglądarki wirtualnej.
     - Zezwalaj na kopiowanie i wklejanie tylko z komputera do przeglądarki — nie można przenieść danych z przeglądarki wirtualnej na komputer-host.
     - Zezwalaj na kopiowanie i wklejanie między komputerem a przeglądarką — nie istnieje blok zawartości.  
@@ -91,11 +91,11 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   **Domyślne**: Blokuj 
 
 - **Typ zapobiegania kradzieży poświadczeń**  
-  Ustaw pozycję *Włącz*, aby [chronić pochodne poświadczenia domeny przy użyciu funkcji Credential Guard](https://docs.microsoft.com/windows/security/identity-protection/credential-guard/credential-guard). Funkcja Windows Defender Credential Guard używa zabezpieczeń opartych na wirtualizacji do izolowania kluczy tajnych, aby tylko uprzywilejowane oprogramowanie systemowe mogło uzyskiwać do nich dostęp. Nieautoryzowany dostęp do tych kluczy tajnych może prowadzić do ataków przy użyciu skradzionych poświadczeń, takich jak „pass the hash” lub „pass the ticket”. Funkcja Windows Defender Credential Guard zapobiega atakom przez ochronę skrótów haseł NTLM, biletów uprawniających do przyznawania biletów protokołu Kerberos i poświadczeń przechowywanych przez aplikacje, takich jak poświadczenia domeny.  
+  Ustaw pozycję *Włącz*, aby [chronić pochodne poświadczenia domeny przy użyciu funkcji Credential Guard](https://docs.microsoft.com/windows/security/identity-protection/credential-guard/credential-guard). Funkcja Microsoft Defender Credential Guard używa zabezpieczeń opartych na wirtualizacji do izolowania kluczy tajnych, aby tylko uprzywilejowane oprogramowanie systemowe mogło uzyskiwać do nich dostęp. Nieautoryzowany dostęp do tych kluczy tajnych może prowadzić do ataków przy użyciu skradzionych poświadczeń, takich jak „pass the hash” lub „pass the ticket”. Funkcja Microsoft Defender Credential Guard zapobiega tym atakom przez ochronę skrótów haseł NTLM, biletów uprawniających do przyznawania biletów protokołu Kerberos i poświadczeń przechowywanych przez aplikacje, takich jak poświadczenia domeny.  
 
   **Domyślne**: Włącz
 
-- **Typ wykonywania zawartości wiadomości e-mail**  
+- **Wykonywanie zawartości wiadomości e-mail**  
   [Reguła zmniejszania obszaru podatnego na ataki](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) — po ustawieniu pozycji *Blokuj* ta reguła blokuje możliwość uruchamiania następujących typów plików z wiadomości e-mail w programie Microsoft Outlook lub poczcie internetowej (np. Gmail.com lub Outlook.com):  
 
   - Pliki wykonywalne (takie jak exe, dll lub scr)  
@@ -109,12 +109,12 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
 
   **Domyślne**: Włącz
 
-- **Typ zaciemnionego kodu makra skryptu**  
+- **Zaciemniony kod makra skryptu**  
   [Reguła zmniejszania obszaru podatnego na ataki](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) — złośliwe oprogramowanie i inne zagrożenia mogą próbować zaciemniać lub ukrywać złośliwy kod w niektórych plikach skryptów. Ta reguła uniemożliwia uruchamianie skryptów, które wydają się zaciemnione.  
     
   **Domyślne**: Blokuj
 
-- **Niezaufany typ procesu USB**  
+- **Niezaufany proces USB**  
   [Reguły zmniejszania obszaru podatnego na ataki](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) — po ustawieniu pozycji *Blokuj* nie można uruchamiać niepodpisanych lub niezaufanych plików wykonywalnych z wymiennych dysków USB i kart SD.
 
   Pliki wykonywalne to:
@@ -123,12 +123,12 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
 
   **Domyślne**: Blokuj
 
-- **Typ wstrzykiwania innych procesów aplikacji pakietu Office**  
+- **Wstrzykiwanie innych procesów aplikacji pakietu Office**  
   [Reguła zmniejszania obszaru podatnego na ataki](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) — po ustawieniu pozycji *Blokuj* aplikacje pakietu Office, w tym programy Word, Excel, PowerPoint i OneNote, nie mogą wstrzykiwać kodu do innych procesów. Wstrzyknięcie kodu jest zazwyczaj używane przez złośliwe oprogramowanie, aby uruchomić złośliwy kod w celu ukrycia aktywności przed aparatami skanowania antywirusowego.  
 
   **Domyślne**: Blokuj
 
-- **Kod makr w pakiecie Office zezwala na typ importu elementów Win32**  
+- **Kod makr w pakiecie Office zezwala na importy Win32**  
   [Reguła zmniejszania obszaru podatnego na ataki](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) — po ustawieniu pozycji *Blokuj* ta reguła próbuje zablokować pliki pakietu Office, które zawierają kod makra umożliwiający importowanie bibliotek DLL systemu Win32. Pliki pakietu Office to pliki programów Word, Excel, PowerPoint i OneNote. Złośliwe oprogramowanie może używać kodu makra w plikach pakietu Office, aby importować i ładować biblioteki DLL Win32, za pomocą których są następnie wykonywane wywołania interfejsu API w celu dalszego zainfekowania systemu.  
 
   **Domyślne**: Blokuj
@@ -138,7 +138,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
 
   **Domyślne**: Włącz
 
-- **Tworzenie wykonywalnej zawartości lub typ uruchamiania aplikacji pakietu Office**  
+- **Tworzenie lub uruchamianie zawartości wykonywalnej przez aplikacje pakietu Office**  
   [Reguła zmniejszania obszaru podatnego na ataki](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) — po ustawieniu pozycji *Blokuj* aplikacje pakietu Office nie mogą tworzyć zawartości wykonywalnej. Aplikacje pakietu Office obejmują programy Word, Excel, PowerPoint, OneNote i Access.  
 
   Ta reguła dotyczy typowego zachowania używanego przez podejrzane i złośliwe dodatki oraz skrypty (rozszerzenia), które powoduje tworzenie lub uruchamianie plików wykonywalnych. Jest to typowa technika złośliwego oprogramowania. Używanie rozszerzeń przez aplikacje pakietu Office jest zablokowane. Zazwyczaj te rozszerzenia używają hosta skryptów systemu Windows (pliki wsh), aby uruchamiać skrypty, które automatyzują określone zadania lub udostępniają dodatkowe funkcje utworzone przez użytkownika.
@@ -227,7 +227,7 @@ Więcej informacji można znaleźć na stronie [BitLocker Group Policy settings]
   - **Zablokowane identyfikatory urządzeń sprzętowych**  
     To ustawienie jest dostępne tylko wtedy, gdy ustawienie *Instalacja urządzeń sprzętowych według identyfikatorów urządzeń* ma wartość *Blokuj instalację urządzeń sprzętowych*. Aby skonfigurować to ustawienie, rozwiń opcję, wybierz pozycję **+ Dodaj**, a następnie określ identyfikator urządzenia sprzętowego, które chcesz zablokować.  
 
-    **Wartość domyślna**: PCI\CC_0C0A
+    **Wartość domyślna**: PCI \ CC_0C0A
 
 - **Blokuj bezpośredni dostęp do pamięci**  
   [DataProtection/AllowDirectMemoryAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection#dataprotection-allowdirectmemoryaccess) — to ustawienie zasad służy do blokowania bezpośredniego dostępu do pamięci dla wszystkich podrzędnych portów PCI z możliwością podłączenia podczas pracy na urządzeniu, dopóki użytkownik nie zaloguje się do systemu Windows. Po zalogowaniu się przez użytkownika system Windows wyliczy urządzenia PCI podłączone do portów PCI podłączenia hosta. Za każdym razem, gdy użytkownik zablokuje maszynę, bezpośredni dostęp do pamięci zostaje zablokowany na portach PCI z możliwością podłączenia podczas pracy bez urządzeń podrzędnych, dopóki użytkownik nie zaloguje się ponownie. Urządzenia, które były już wyliczone po odblokowaniu maszyny, będą w dalszym ciągu działać do czasu odłączenia. 
@@ -281,7 +281,7 @@ Więcej informacji można znaleźć na stronie [WindowsAdvancedThreatProtection 
   Możesz też przekonwertować i zaimportować istniejący plik XML konfiguracji EMET do pliku XML konfiguracji ochrony.
 
 - **Blokuj zastępowanie w obszarze ochrony przed programami wykorzystującymi luki w zabezpieczeniach**  
-  [WindowsDefenderSecurityCenter/DisallowExploitProtectionOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disallowexploitprotectionoverride) — ustaw pozycję *Tak*, aby uniemożliwić użytkownikom wprowadzanie zmian w obszarze ustawień ochrony przed programami wykorzystującymi luki w zabezpieczeniach w usłudze Windows Defender Security Center. Jeśli wyłączysz to urządzenie lub go nie skonfigurujesz, użytkownicy lokalni będą mogli wprowadzać zmiany w obszarze ustawień ochrony przed programami wykorzystującymi luki w zabezpieczeniach.  
+  [WindowsDefenderSecurityCenter/DisallowExploitProtectionOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disallowexploitprotectionoverride) — ustaw pozycję *Tak*, aby uniemożliwić użytkownikom wprowadzanie zmian w obszarze ustawień ochrony przed programami wykorzystującymi luki w zabezpieczeniach w Centrum zabezpieczeń usługi Microsoft Defender. Jeśli wyłączysz to urządzenie lub go nie skonfigurujesz, użytkownicy lokalni będą mogli wprowadzać zmiany w obszarze ustawień ochrony przed programami wykorzystującymi luki w zabezpieczeniach.  
   **Domyślne**: Tak  
 
 ## <a name="microsoft-defender-antivirus"></a>Program antywirusowy Microsoft Defender  
@@ -289,17 +289,17 @@ Więcej informacji można znaleźć na stronie [WindowsAdvancedThreatProtection 
 Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji zasad — Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) w dokumentacji systemu Windows.
 
 - **Skanuj skrypty ładowane w przeglądarkach internetowych firmy Microsoft**  
-  [Defender/AllowScriptScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscriptscanning) — ustaw pozycję *Tak*, aby zezwolić na użycie funkcjonalności skanowania skryptów usługi Windows Defender.  
+  [Defender/AllowScriptScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscriptscanning) — ustaw pozycję *Tak*, aby zezwolić na użycie funkcjonalności skanowania skryptów usługi Microsoft Defender.  
 
   **Domyślne**: Tak
 
 - **Skanuj przychodzące wiadomości e-mail**  
-  [Defender/AllowEmailScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowemailscanning) — ustaw pozycję *Tak*, aby zezwolić na użycie funkcjonalności skanowania wiadomości e-mail usługi Windows Defender.  
+  [Defender/AllowEmailScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowemailscanning) — ustaw pozycję *Tak*, aby zezwolić na użycie funkcjonalności skanowania wiadomości e-mail usługi Microsoft Defender.  
 
   **Domyślne**: Tak
 
-- **Typ zgody na przesyłanie przykładów usługi Defender**  
-  [Defender/SubmitSamplesConsent](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent) — sprawdza poziom zgody użytkownika na wysyłanie danych w usłudze Windows Defender. Jeśli udzielono już wymaganej zgody, usługa Windows Defender prześle dane. W przeciwnym razie (jeśli użytkownik wybrał, aby nigdy nie wyświetlać pytania) przed wysłaniem danych zostanie uruchomiony interfejs użytkownika z pytaniem o zgodę użytkownika (jeśli *Ochrona świadczona w chmurze* została ustawiona na *Tak*).  
+- **Zgoda na przesyłanie próbek do usługi Defender**  
+  [Defender/SubmitSamplesConsent](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent) — sprawdza poziom zgody użytkownika na wysyłanie danych w usłudze Microsoft Defender. Jeśli udzielono już wymaganej zgody, usługa Microsoft Defender prześle dane. W przeciwnym razie (jeśli użytkownik wybrał, aby nigdy nie wyświetlać pytania) przed wysłaniem danych zostanie uruchomiony interfejs użytkownika z pytaniem o zgodę użytkownika (jeśli *Ochrona świadczona w chmurze* została ustawiona na *Tak*).  
 
   **Domyślne**: automatycznie wyślij bezpieczne próbki
 
@@ -319,7 +319,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
     **Domyślne**: Tak
 
 - **Defender — blokuj ochronę przy dostępie**  
-  [Defender/AllowOnAccessProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowonaccessprotection) — po ustawieniu pozycji *Tak* opcja Windows Defender — ochrona przy dostępie będzie włączona.  
+  [Defender/AllowOnAccessProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowonaccessprotection) — po ustawieniu pozycji *Tak* opcja Microsoft Defender — ochrona przy dostępie będzie włączona.  
 
   **Domyślne**: Tak
 
@@ -346,30 +346,30 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   **Domyślne**: 2:00
 
 - **Ochrona w chmurze**  
-  [Defender/AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection) — po ustawieniu pozycji *Tak* usługa Windows Defender wysyła do firmy Microsoft informacje dotyczące wszystkich znalezionych problemów. Firma Microsoft przeanalizuje te informacje, dowie się więcej na temat problemów wpływających na Ciebie i innych klientów oraz zaoferuje ulepszone rozwiązania.
+  [Defender/AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection) — po ustawieniu pozycji *Tak* usługa Microsoft Defender wysyła do firmy Microsoft informacje dotyczące wszystkich znalezionych problemów. Firma Microsoft przeanalizuje te informacje, dowie się więcej na temat problemów wpływających na Ciebie i innych klientów oraz zaoferuje ulepszone rozwiązania.
 
   Jeśli te zasady zostaną ustawione na *Tak*, będzie można używać *typu zgody na przesyłanie przykładów w usłudze Defender*, aby przyznawać użytkownikom kontrolę nad wysyłaniem informacji z urządzenia.  
 
   **Domyślne**: Tak
 
 - **Działanie dotyczące potencjalnie niechcianej aplikacji w usłudze Defender**  
-  [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection) — program antywirusowy Windows Defender może identyfikować i blokować pobieranie i instalowanie *potencjalnie niechcianych aplikacji* w punktach końcowych w sieci. 
+  [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection) — program antywirusowy Microsoft Defender może identyfikować i blokować pobieranie i instalowanie *potencjalnie niechcianych aplikacji* w punktach końcowych w sieci. 
  
-  - Po ustawieniu pozycji *Blokuj* usługa Windows Defender blokuje potencjalnie niechciane aplikacje i wyświetla je w historii razem z innymi zagrożeniami.
-  - Po ustawieniu pozycji *Inspekcja* usługa Windows Defender wykrywa potencjalnie niechciane aplikacje, ale ich nie blokuje. Informacje o aplikacjach, w stosunku do których usługa Windows Defender podjęłaby akcję, można znaleźć, przeszukując zdarzenia utworzone przez usługę Windows Defender w składniku Podgląd zdarzeń.  
+  - Po ustawieniu pozycji *Blokuj* usługa Microsoft Defender blokuje potencjalnie niechciane aplikacje i wyświetla je w historii razem z innymi zagrożeniami.
+  - Po ustawieniu pozycji *Inspekcja* usługa Microsoft Defender wykrywa potencjalnie niechciane aplikacje, ale ich nie blokuje. Informacje o aplikacjach, w stosunku do których usługa Microsoft Defender podjęłaby akcję, można znaleźć, przeszukując zdarzenia utworzone przez usługę Microsoft Defender w składniku Podgląd zdarzeń.  
   - Po ustawieniu pozycji *Ustawienie domyślne urządzenia* ochrona potencjalnie niechcianych aplikacji jest wyłączona.  
  
   **Domyślne**: Blokuj
 
 - **Defender — rozszerzony limit czasu dla chmury**  
-  [Defender/CloudExtendedTimeout](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout) — określ maksymalny dodatkowy czas, przez który Program antywirusowy Windows Defender powinien blokować plik podczas oczekiwania na wynik z chmury. Podstawowy czas oczekiwania przez usługę Windows Defender to 10 sekund. Dodatkowy czas określony w tym miejscu (maksymalnie 50 sekund) jest dodawany do tych 10 sekund. W większości przypadków skanowanie trwa krócej niż wartość maksymalna. Wydłużenie czasu pozwala chmurze na staranne zbadanie podejrzanych plików.  
+  [Defender/CloudExtendedTimeout](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout) — określ maksymalny dodatkowy czas, przez który Program antywirusowy Microsoft Defender powinien blokować plik podczas oczekiwania na wynik z chmury. Podstawowy czas oczekiwania przez usługę Microsoft Defender to 10 sekund. Dodatkowy czas określony w tym miejscu (maksymalnie 50 sekund) jest dodawany do tych 10 sekund. W większości przypadków skanowanie trwa krócej niż wartość maksymalna. Wydłużenie czasu pozwala chmurze na staranne zbadanie podejrzanych plików.  
 
   Domyślnie wartość rozszerzonego czasu ma wartość 0 (ustawienie wyłączone). Usługa Intune zaleca włączenie tego ustawienia i określenie co najmniej 20 dodatkowych sekund.  
  
   **Domyślnie**: 0
 
 - **Skanuj pliki archiwum**  
-  [Defender/AllowArchiveScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning) — ustaw pozycję *Tak*, aby usługa Windows Defender skanowała pliki archiwum.  
+  [Defender/AllowArchiveScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning) — ustaw pozycję *Tak*, aby usługa Microsoft Defender skanowała pliki archiwum.  
 
   **Domyślne**: Tak
 
@@ -381,17 +381,17 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   **Domyślne**: Zdefiniowane przez użytkownika
 
 - **Monitorowanie zachowania**  
-  [Defender/AllowBehaviorMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowbehaviormonitoring) — ustaw pozycję *Tak*, aby włączyć funkcję monitorowania zachowania usługi Windows Defender. Osadzone w systemie Windows 10 czujniki funkcji monitorowania zachowania usługi Windows Defender zbierają i przetwarzają sygnały dotyczące zachowania z systemu operacyjnego i wysyłają te dane czujników do prywatnego izolowanego wystąpienia usługi Microsoft Defender ATP w chmurze.  
+  [Defender/AllowBehaviorMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowbehaviormonitoring) — ustaw pozycję *Tak*, aby włączyć funkcję monitorowania zachowania usługi Microsoft Defender. Osadzone w systemie Windows 10 czujniki funkcji monitorowania zachowania usługi Microsoft Defender zbierają i przetwarzają sygnały dotyczące zachowania z systemu operacyjnego i wysyłają te dane czujników do prywatnego izolowanego wystąpienia usługi Microsoft Defender ATP w chmurze.  
 
   **Domyślne**: Tak
 
 - **Skanuj pliki otwierane z folderów sieciowych**  
-  [Defender/AllowScanningNetworkFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles) — ustaw pozycję *Tak*, aby usługa Windows Defender skanowała pliki w sieci. Użytkownik nie będzie mógł usunąć wykrytego złośliwego oprogramowania z plików tylko do odczytu.  
+  [Defender/AllowScanningNetworkFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles) — ustaw pozycję *Tak*, aby usługa Microsoft Defender skanowała pliki w sieci. Użytkownik nie będzie mógł usunąć wykrytego złośliwego oprogramowania z plików tylko do odczytu.  
 
   **Domyślne**: Tak
 
 - **Poziom blokady chmury w usłudze Defender**  
-  [Defender/CloudBlockLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel) — użyj tych zasad, aby określić, jaki poziom agresywności reprezentuje Program antywirusowy Windows Defender podczas blokowania i skanowania podejrzanych plików. Dostępne opcje:
+  [Defender/CloudBlockLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel) — użyj tych zasad, aby określić, jaki poziom agresywności reprezentuje Program antywirusowy Microsoft Defender podczas blokowania i skanowania podejrzanych plików. Dostępne opcje:
 
   - Wysoki — agresywne blokowanie nieznanych plików przy jednoczesnej optymalizacji wydajności klienta (większe prawdopodobieństwo wyników fałszywie dodatnich)
   - Wysoki plus — agresywne blokowanie nieznanych plików i stosowanie dodatkowych środków ochrony (może wpływać na wydajność klienta)
@@ -400,24 +400,24 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   **Domyślne**: nieskonfigurowane
 
 - **Monitorowanie w czasie rzeczywistym**  
-  [Defender/AllowRealtimeMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring) — ustaw pozycję *Tak*, aby umożliwić monitorowanie usługi Windows Defender w czasie rzeczywistym.  
+  [Defender/AllowRealtimeMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring) — ustaw pozycję *Tak*, aby umożliwić monitorowanie usługi Microsoft Defender w czasie rzeczywistym.  
 
   **Domyślne**: Tak
 
 - **Limit wykorzystania procesora CPU podczas skanowania**  
-  [Defender/AvgCPULoadFactor](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-avgcpuloadfactor) — określ użycie maksymalne średnie użycie procesora (%), z którego usługa Windows Defender może skorzystać podczas skanowania.  
+  [Defender/AvgCPULoadFactor](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-avgcpuloadfactor) — określ użycie maksymalne średnie użycie procesora (%), z którego usługa Microsoft Defender może skorzystać podczas skanowania.  
 
   **Domyślne**: 50
 
 - **Skanuj zamapowane dyski sieciowe podczas pełnego skanowania**  
-  [Defender/AllowFullScanOnMappedNetworkDrives](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanonmappednetworkdrives) — ustaw pozycję *Tak*, aby usługa Windows Defender skanowała pliki w sieci. Użytkownik nie może usuwać wykrytego złośliwego oprogramowania z plików tylko do odczytu.
+  [Defender/AllowFullScanOnMappedNetworkDrives](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanonmappednetworkdrives) — ustaw pozycję *Tak*, aby usługa Microsoft Defender skanowała pliki w sieci. Użytkownik nie może usuwać wykrytego złośliwego oprogramowania z plików tylko do odczytu.
 
   Powiązane ustawienie na tej liście: *Defender/AllowScanningNetworkFiles*
 
   **Domyślne**: Tak
 
 - **Blokuj użytkownikom końcowym dostęp do oprogramowania Defender**  
-  [Defender/AllowUserUIAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowuseruiaccess) — ustaw pozycję *Tak*, aby blokować użytkownikom końcowym dostęp do interfejsu użytkownika usługi Windows Defender w ich urządzeniu.  
+  [Defender/AllowUserUIAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowuseruiaccess) — ustaw pozycję *Tak*, aby blokować użytkownikom końcowym dostęp do interfejsu użytkownika usługi Microsoft Defender w ich urządzeniu.  
 
   **Domyślne**: Tak
 
@@ -426,7 +426,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
 
   **Domyślne**: 2:00
 
-## <a name="windows-defender-firewall"></a>Zapora Windows Defender
+## <a name="microsoft-defender-firewall"></a>Zapora Microsoft Defender
 Więcej informacji można znaleźć na stronie [Firewall CSP](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) (Zapora — dostawca usługi konfiguracji) w dokumentacji systemu Windows.
 
 - **Czas bezczynności skojarzeń zabezpieczeń przed usunięciem** - *MdmStore/Global/SaIdleTime*   
@@ -560,29 +560,29 @@ Więcej informacji można znaleźć na stronie [Firewall CSP](https://docs.micro
 ## <a name="web--network-protection"></a>Ochrona Internetu i sieci  
 
 - **Typ ochrony sieci**  
-  [Defender/EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection) — te zasady umożliwiają włączanie lub wyłączanie ochrony sieci w funkcji Windows Defender Exploit Guard. Ochrona sieci w funkcji Windows Defender Exploit Guard chroni pracowników używających dowolnej aplikacji przed wyłudzeniem informacji, witrynami hostującymi programy wykorzystujące luki w zabezpieczeniach i złośliwą zawartością w Internecie. Obejmuje to blokadę połączeń w przeglądarkach innych firm z niebezpiecznymi witrynami.  
+  [Defender/EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection) — te zasady umożliwiają włączanie lub wyłączanie ochrony sieci w funkcji Microsoft Defender Exploit Guard. Ochrona sieci w funkcji Microsoft Defender Exploit Guard chroni pracowników używających dowolnej aplikacji przed wyłudzeniem informacji, witrynami hostującymi programy wykorzystujące luki w zabezpieczeniach i złośliwą zawartością w Internecie. Obejmuje to blokadę połączeń w przeglądarkach innych firm z niebezpiecznymi witrynami.  
 
-  Po ustawieniu pozycji *Włącz* lub *Tryb inspekcji* użytkownicy nie mogą wyłączyć ochrony sieci, a do wyświetlania informacji dotyczących prób nawiązania połączenia można użyć usługi Windows Defender Security Center.  
+  Po ustawieniu pozycji *Włącz* lub *Tryb inspekcji* użytkownicy nie mogą wyłączyć ochrony sieci, a do wyświetlania informacji dotyczących prób nawiązania połączenia można użyć Centrum zabezpieczeń usługi Microsoft Defender.  
  
   - Pozycja *Włącz* zablokuje użytkownikom i aplikacjom możliwość łączenia z niebezpiecznymi domenami.  
   - Pozycja *Tryb inspekcji* nie blokuje użytkownikom i aplikacjom możliwości łączenia z niebezpiecznymi domenami.  
 
-  Po ustawieniu pozycji *Zdefiniowane przez użytkownika* możliwość łączenia użytkowników i aplikacji z niebezpiecznymi domenami nie jest blokowana, a informacje o połączeniach nie są dostępne w usłudze Windows Defender Security Center.  
+  Po ustawieniu pozycji *Zdefiniowane przez użytkownika* możliwość łączenia użytkowników i aplikacji z niebezpiecznymi domenami nie jest blokowana, a informacje o połączeniach nie są dostępne w usłudze Centrum zabezpieczeń usługi Microsoft Defender.  
 
   **Domyślne**: Tryb inspekcji
 
 - **Wymagaj filtra SmartScreen dla programu Microsoft Edge**  
-  [Browser/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen) — przeglądarka Microsoft Edge domyślnie używa filtra SmartScreen w usłudze Windows Defender, aby chronić użytkowników przed potencjalnym wyłudzeniem informacji i złośliwym oprogramowaniem. Domyślnie te zasady są włączone (ustawione na wartość *Tak*), a po ich włączeniu użytkownicy nie mogą wyłączać filtru SmartScreen w usłudze Windows Defender.  Jeśli obowiązujące zasady mają wartość Nieskonfigurowane, użytkownicy mogą wyłączyć filtr SmartScreen w usłudze Windows Defender, pozostawiając w ten sposób urządzenia bez ochrony.  
+  [Browser/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen) — przeglądarka Microsoft Edge domyślnie używa filtra SmartScreen w usłudze Microsoft Defender, aby chronić użytkowników przed potencjalnym wyłudzeniem informacji i złośliwym oprogramowaniem. Domyślnie te zasady są włączone (ustawione na wartość *Tak*), a po ich włączeniu użytkownicy nie mogą wyłączać filtru SmartScreen w usłudze Microsoft Defender.  Jeśli obowiązujące zasady mają wartość Nieskonfigurowane, użytkownicy mogą wyłączyć filtr SmartScreen w usłudze Microsoft Defender, pozostawiając w ten sposób urządzenia bez ochrony.  
 
   **Domyślne**: Tak
   
 - **Blokuj dostęp do złośliwych witryn**  
-  [Browser/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride) — domyślnie przeglądarka Microsoft Edge pozwala użytkownikom pomijać (ignorować) ostrzeżenia filtru SmartScreen w usłudze Windows Defender dotyczące potencjalnie złośliwych witryn, dzięki czemu użytkownicy mogą kontynuować korzystanie z witryny. Jeśli te zasady są włączone (ustawione na wartość *Tak*) przeglądarka Microsoft Edge uniemożliwia użytkownikom pomijanie ostrzeżeń i dalsze korzystanie z witryny.  
+  [Browser/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride) — domyślnie przeglądarka Microsoft Edge pozwala użytkownikom pomijać (ignorować) ostrzeżenia filtru SmartScreen w usłudze Microsoft Defender dotyczące potencjalnie złośliwych witryn, dzięki czemu użytkownicy mogą kontynuować korzystanie z witryny. Jeśli te zasady są włączone (ustawione na wartość *Tak*) przeglądarka Microsoft Edge uniemożliwia użytkownikom pomijanie ostrzeżeń i dalsze korzystanie z witryny.  
 
   **Domyślne**: Tak
 
 - **Blokowanie pobierania niezweryfikowanych plików**  
-  [Browser/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles) — domyślnie przeglądarka Microsoft Edge pozwala użytkownikom pomijać (ignorować) ostrzeżenia filtru SmartScreen w usłudze Windows Defender dotyczące potencjalnie złośliwych plików, dzięki czemu mogą kontynuować pobieranie niezweryfikowanych plików. Jeśli te zasady są włączone (ustawione na wartość *Tak*), użytkownicy nie mogą pomijać ostrzeżeń ani pobierać niezweryfikowanych plików.  
+  [Browser/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles) — domyślnie przeglądarka Microsoft Edge pozwala użytkownikom pomijać (ignorować) ostrzeżenia filtru SmartScreen w usłudze Microsoft Defender dotyczące potencjalnie złośliwych plików, dzięki czemu mogą kontynuować pobieranie niezweryfikowanych plików. Jeśli te zasady są włączone (ustawione na wartość *Tak*), użytkownicy nie mogą pomijać ostrzeżeń ani pobierać niezweryfikowanych plików.  
 
   **Domyślne**: Tak
 
