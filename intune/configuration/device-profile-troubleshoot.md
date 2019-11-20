@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7779e265680ded1b5d5d5b670bcf694376ee8016
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 4a1177a37ddbfa7f760339c4ad0cd7773d670540
+ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72494417"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74199187"
 ---
 # <a name="common-questions-issues-and-resolutions-with-device-policies-and-profiles-in-microsoft-intune"></a>Typowe pytania, problemy i rozwiązania związane z zasadami i profilami urządzeń w usłudze Microsoft Intune
 
@@ -73,10 +73,6 @@ Jeśli urządzenie zostało ostatnio zarejestrowane, zaewidencjonowanie zgodnoś
 | Windows 8.1 | Co 5 minut przez 15 minut, następnie co 15 minut przez 2 godziny, a następnie co około 8 godzin | 
 
 Użytkownicy mogą w dowolnym momencie otworzyć aplikację Portal firmy i wybrać pozycję **Ustawienia** > **Synchronizacja**, aby natychmiast wyszukać aktualizacje zasad lub profilów.
-
-W przypadku urządzeń bez koligacji użytkownika częstotliwość synchronizacji natychmiast po rejestracji może być różna i wynosić od kilku godzin do jednego dnia lub więcej. Usługa Intune wysyła żądania w różnych interwałach w celu zaewidencjonowania urządzenia w usłudze Intune. Jednak wykonanie zaewidencjonowania nadal należy do urządzenia. Nie można przewidzieć, ile czasu zajmie ukończenie ewidencjonowania na urządzeniu po początkowej rejestracji. Zależy to również od typu rejestracji urządzenia, a także zasad i profilów przypisanych do urządzenia. Po zarejestrowaniu urządzenia oraz zastosowaniu wszystkich początkowych zasad i profilów urządzenie wyszukuje nowe zasady i profile co 6–8 godzin na podstawie czasu zarejestrowania urządzenia w usłudze Intune.
-
-Najlepszym rozwiązaniem umożliwiającym uzyskanie najlepszych wyników jest upewnienie się, że urządzenia są w trybie online przez co najmniej osiem kolejnych godzin.
 
 ## <a name="what-actions-cause-intune-to-immediately-send-a-notification-to-a-device"></a>Jakie akcje mogą spowodować natychmiastowe wysłanie powiadomienia do urządzenia z usługi Intune?
 

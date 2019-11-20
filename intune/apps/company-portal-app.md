@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4fcec6c264a97d710e3061c289d6898297ef61be
-ms.sourcegitcommit: 4bf23327af734a9811d555fbd566c31239e2acd6
+ms.openlocfilehash: b750c09207b1950aa27a5f2cae1267503537b6e7
+ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "72999536"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74199213"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Jak skonfigurować aplikację Portal firmy w usłudze Microsoft Intune
 
@@ -32,7 +32,7 @@ ms.locfileid: "72999536"
 Portal firmy usługi Microsoft Intune jest miejscem, w którym użytkownicy uzyskują dostęp do danych firmy i mogą wykonywać typowe zadania, takie jak rejestrowanie urządzeń, instalowanie aplikacji i znajdowanie informacji pomocy od działu IT. Ponadto aplikacja Portal firmy umożliwia użytkownikom bezpieczne uzyskiwanie dostępu do zasobów firmy. Aplikacja Portal firmy zawiera kilka różnych stron, takich jak Strona główna, Aplikacje, Szczegóły aplikacji, Urządzenia i Szczegóły urządzeń. Aby szybko znaleźć aplikacje w aplikacji Portal firmy, można filtrować aplikacje na stronie Aplikacje.
 
 > [!IMPORTANT]
-> W celu zapewnienia obsługi usługi Firebase Cloud Messaging (FCM) firmy Google należy zaktualizować aplikację Portal firmy dla systemu Android do najnowszej wersji. Aby uzyskać więcej informacji, zobacz temat Co nowego — [Aktualizacja aplikacji Portal firmy dla systemu Android do najnowszej wersji](../fundamentals/whats-new.md#update-your-android-company-portal-app-to-the-latest-version-).
+> W celu zapewnienia obsługi usługi Firebase Cloud Messaging (FCM) firmy Google należy zaktualizować aplikację Portal firmy dla systemu Android do najnowszej wersji.  
 
 > [!Tip]
 > Podczas dostosowywania Portalu firmy konfiguracje mają zastosowanie do witryny sieci Web Portal firmy i aplikacji Portal firmy. Należy pamiętać, że użytkownicy muszą mieć przypisaną licencję usługi Intune, aby uzyskiwać dostęp do witryny internetowej Portal firmy.
@@ -98,7 +98,7 @@ Możesz wyświetlać obraz marki Twojej firmy. Po zapisaniu zmian można wybrać
 |---|---|
 |**Przekaż obraz marki**| Ta opcja umożliwia wyświetlanie obrazu marki. W aplikacji Portal firmy dla systemu iOS jest on wyświetlany jako obraz tła na stronie profilu użytkownika.<p><ul><li>Zalecana szerokość obrazu: Większa niż 1125 pikseli (wymagane co najmniej 650 pikseli)</li><li>Maksymalny rozmiar obrazu: 1,3 MB</li><li>Typ pliku: PNG, JPG lub JPEG</li></ul>|
 
-Odpowiedni obraz marki wzmacnia pozytywne wrażenie o niej, co umacnia zaufanie użytkownika do Portal firmy. Poniżej przedstawiono porady, które warto wziąć pod uwagę podczas nabywania, wybierania i optymalizowania obrazu dla Portalu firmy. 
+Odpowiedni obraz marki wzmacnia pozytywne wrażenie marki, co pozwala zwiększyć zaufanie użytkownika w Portalu firmy. Poniżej przedstawiono porady, które warto wziąć pod uwagę podczas nabywania, wybierania i optymalizowania obrazu dla Portalu firmy. 
 
 - Skontaktuj się z działem marketingu lub działem graficznym. Być może są już dostępne zatwierdzone obrazy marki. Mogą one również pomóc w optymalizacji obrazów. 
 
@@ -112,11 +112,11 @@ Po dodaniu lub zmodyfikowaniu obrazu marki w usłudze Intune użytkownik końcow
 
 ### <a name="brand-image-examples"></a>Przykłady obrazu marki
 
-Na poniższej ilustracji przedstawiono przykład obrazu marki na urządzeniu iPad:
+Na poniższej ilustracji przedstawiono przykład obrazu marki urządzenia iPad:
 
 ![Zrzut ekranu przedstawiający przykład obrazu marki urządzenia iPhone](./media/company-portal-app/company-portal-app-03.png)
 
-Na poniższej ilustracji przedstawiono przykład obrazu marki na urządzeniu iPhone:
+Na poniższej ilustracji przedstawiono przykład obrazu marki urządzenia iPhone:
 
 ![Zrzut ekranu przedstawiający przykład obrazu marki urządzenia iPad](./media/company-portal-app/company-portal-app-02.png)
 
@@ -150,7 +150,7 @@ Poniższe skróty klawiaturowe są dostępne w aplikacji Portal firmy dla system
 | Obszar | Opis | Skrót klawiaturowy |
 |:------------------:|:--------------:|:-----------------:|
 | Menu nawigacji | Nawigacja | Alt + M |
-|  | Strona główna | Alt + H |
+|  | Domowy | Alt + H |
 |  | Wszystkie aplikacje | Alt + A |
 |  | Zainstalowane aplikacje | ALT + I |
 |  | Wyślij opinię | Alt + F |

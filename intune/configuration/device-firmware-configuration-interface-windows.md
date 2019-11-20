@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e9fe2b2174252aa1081eb311d79b4b5ba37f96f2
-ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
+ms.openlocfilehash: 38f02d694f1935e4732805f3ae7c66fd9718057a
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73755348"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059606"
 ---
 # <a name="use-device-firmware-configuration-interface-profiles-on-windows-devices-in-microsoft-intune-public-preview"></a>Używanie profilów interfejsu DFCI (Device Firmware Configuration Interface) na urządzeniach z systemem Windows w usłudze Microsoft Intune (publiczna wersja zapoznawcza)
 
@@ -78,7 +78,7 @@ Ten profil zapewnia, że urządzenia są weryfikowane i aktywowane pod kątem in
 Ten profil zawiera konfigurowane ustawienia interfejsu DFCI.
 
 1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Wybierz **Urządzenia** > **Profile konfiguracji** > **Utwórz profil**.
+2. Wybierz pozycję **Urządzenia** > **Profile konfiguracji** > **Utwórz profil**.
 3. Wprowadź następujące właściwości:
 
     - **Nazwa**: Wprowadź opisową nazwę profilu. Nadaj nazwę zasadom, aby można było je później łatwo rozpoznać. Na przykład dobra nazwa profilu to **Windows: Konfigurowanie ustawień interfejsu DFCI na urządzeniach z systemem Windows**.
