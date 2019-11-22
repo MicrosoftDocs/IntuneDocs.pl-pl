@@ -145,6 +145,8 @@
           items:
             - name: Konfiguracja sieci
               href: network-bandwidth-use.md
+            - name: Korzystanie z maszyn wirtualnych z systemem Windows 10 w usłudze Intune
+              href: windows-10-virtual-machines.md
             - name: Punkty końcowe usługi Intune
               href: intune-endpoints.md
             - name: Punkty końcowe usługi Intune dla instytucji rządowych USA
