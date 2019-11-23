@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 391c5ac194d5dc7ddf492fe23907279cc4380d3d
-ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
+ms.openlocfilehash: 751ddfae96ebcd190d4d9ce2ca93bfccba972df5
+ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73984118"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74390854"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem iOS i iPadOS umożliwiające działanie funkcji lub ich ograniczanie przy użyciu usługi Intune
 
@@ -130,9 +130,6 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
     - System iOS 11.3 i nowsze
 
 ## <a name="password"></a>Hasło
-
-> [!NOTE]
-> W przyszłych wersjach te ustawienia haseł w interfejsie użytkownika usługi Intune są aktualizowane w celu dopasowania do typu rejestracji.
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Ustawienia dotyczą: wszystkie typy rejestracji
 
@@ -266,7 +263,7 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 - **Wymagaj hasła sklepu iTunes dla wszystkich zakupów**: **Wymagaj** od użytkownika wprowadzenia hasła identyfikatora Apple ID dla każdego zakupu w aplikacji lub iTunes. **Nie skonfigurowano** (domyślnie) umożliwia zakupy bez monitowania o podanie hasła za każdym razem.
 - **Zakupy w aplikacji**: wybierz pozycję **Blokuj**, aby uniemożliwić dokonywanie zakupów w aplikacji ze sklepu. Pozycja **Nieskonfigurowane** (wartość domyślna) zezwala na zakupy w sklepie w uruchomionej aplikacji.
 - **Pobieranie ze sklepu iBook zawartości oznaczonej jako „Erotyka”** : wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom pobieranie ze sklepu iBook multimediów oznaczonych jako erotyka. Pozycja **Nieskonfigurowane** (wartość domyślna) zezwala użytkownikom na pobieranie książek z kategorii „Erotyka”.
-- **Zezwalaj zarządzanym aplikacjom na zapisywanie kontaktów na kontach niezarządzanych kontaktów**: w przypadku wybrania opcji **Zezwalaj**, zarządzane aplikacje, takie jak aplikacja mobilna Outlook, mogą zapisywać lub synchronizować informacje kontaktowe, w tym kontakty biznesowe i firmowe, do wbudowanych kontaktów systemu iOS aplikacje. Jeśli **nie skonfigurowano** (domyślnie), aplikacje zarządzane nie mogą zapisywać ani synchronizować informacji kontaktowych z wbudowaną aplikacją kontaktów systemu iOS na urządzeniu.
+- **Zezwalaj zarządzanym aplikacjom na zapisywanie kontaktów na kontach niezarządzanych kontaktów**: w przypadku wybrania opcji **Zezwalaj**, zarządzane aplikacje, takie jak aplikacja mobilna Outlook, mogą zapisywać lub synchronizować informacje kontaktowe, w tym kontakty biznesowe i firmowe, z wbudowaną aplikacją kontaktów systemu iOS. Jeśli **nie skonfigurowano** (domyślnie), aplikacje zarządzane nie mogą zapisywać ani synchronizować informacji kontaktowych z wbudowaną aplikacją kontaktów systemu iOS na urządzeniu.
   
   Aby użyć tego ustawienia, skonfiguruj ustawienie **Wyświetlanie dokumentów firmowych w aplikacjach niezarządzanych** na wartość **Blokuj**.
 
@@ -321,16 +318,6 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 - **Obsługa języka JavaScript w przeglądarce Safari**: pozycja **Blokuj** uniemożliwia uruchamianie skryptów języka Java w przeglądarce na urządzeniu. **Nieskonfigurowane** (domyślnie) umożliwia korzystanie ze skryptów języka Java.
 
 - **Okna wyskakujące w przeglądarce Safari**: pozycja **Blokuj** wyłącza blokowanie wyskakujących okienek w przeglądarce internetowej. **Nieskonfigurowane** (domyślnie) umożliwia blokowanie wyskakujących okienek.
-
-- **Rejestrowanie po stronie serwera dla poleceń Siri**: po ustawieniu opcji **Wyłącz**rejestrowanie Siri po stronie serwera jest wyłączone. Może również zapobiegać rejestrowaniu żądań użytkowników na serwerach Siri. **Nie skonfigurowano** (domyślnie) polecenia Siri dzienników po stronie serwera. To ustawienie nie jest zależne od ustawienia Siri, które jest blokowane lub nie jest skonfigurowane.
-
-  Ta funkcja ma zastosowanie do:  
-  - System iOS 12.2 i nowsze
-
-  > [!NOTE]
-  > Funkcja **rejestrowania po stronie serwera dla poleceń Siri** jest przestarzała przez firmę Apple. W nadchodzącym wydaniu to ustawienie zostanie usunięte z konsoli usługi Intune.
-  >
-  > Obecnie to ustawienie nie ma wpływu na urządzenia, mimo że ustawienie to jest wyświetlane w profilach Managemenet. Aby usunąć to ustawienie z dowolnych zasad, należy otworzyć zasady, wprowadzić drobne zmiany, a następnie zapisać zasady. Zasady zostały zaktualizowane, a ustawienie zostanie usunięte z urządzeń.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ustawienia dotyczą: automatyczne rejestrowanie urządzeń (nadzorowane)
 

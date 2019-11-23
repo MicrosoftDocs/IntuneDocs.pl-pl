@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bacb7e26df8a5b0d6c7500b24a5e749a85ca62f2
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: 075e7a99f72de30e83447a2869154859e33356b9
+ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059629"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74390837"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Korzystanie z urządzeń z systemem Android Enterprise i zarządzanie nimi za pomocą OEMConfig w Microsoft Intune
 
@@ -81,7 +81,7 @@ Upewnij się, że urządzenie obsługuje OEMConfig, poprawna aplikacja OEMConfig
 ## <a name="create-an-oemconfig-profile"></a>Tworzenie profilu OEMConfig
 
 1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Wybierz **Urządzenia** > **Profile konfiguracji** > **Utwórz profil**.
+2. Wybierz pozycję **Urządzenia** > **Profile konfiguracji** > **Utwórz profil**.
 3. Wprowadź następujące właściwości:
 
     - **Nazwa**: wprowadź opisową nazwę nowego profilu.
@@ -146,10 +146,15 @@ W porównaniu do standardowych aplikacji aplikacje OEMConfig rozszerzają uprawn
 | Logika Datalogic | com. Datalogic. oemconfig | [Dokumentacja użytkownika dotycząca usługi Datalogic OEMConfig](https://datalogic.github.io/oemconfig/) |
 | Honeywell | com. Honeywell. oemconfig |  |
 | Kyocera | JP. Kyocera. enterprisedeviceconfig |  |
+| Spectralink — kody kreskowe | com. Spectralink. Barcode. Service |  |
+| Spectralink — przyciski | com. Spectralink. przyciski |  |
+| Spectralink — urządzenie | com. Spectralink. slnkdevicesettings  |  |
+| Spectralink — rejestrowanie | com. Spectralink. slnklogger |  |
+| Spectralink - VQO | com. Spectralink. slnkvqo |  |
 
 -----------------
 
-Jeśli aplikacja OEMConfig istnieje dla urządzenia, ale nie znajduje się w powyższej tabeli lub nie jest wyświetlana w konsoli usługi Intune, należy `IntuneOEMConfig@microsoft.com` e-mail.
+Jeśli aplikacja OEMConfig istnieje dla urządzenia, ale nie znajduje się w powyższej tabeli lub nie jest wyświetlana w konsoli usługi Intune, należy `IntuneOEMConfig@microsoft.com`e-mail.
 
 > [!NOTE]
 > Aplikacje OEMConfig muszą być dołączone do usługi Intune, zanim będą mogły zostać skonfigurowane za pomocą profilów OEMConfig. Gdy aplikacja jest obsługiwana, nie musisz kontaktować się z firmą Microsoft, aby ją skonfigurować w dzierżawie. Po prostu postępuj zgodnie z instrukcjami na tej stronie.
