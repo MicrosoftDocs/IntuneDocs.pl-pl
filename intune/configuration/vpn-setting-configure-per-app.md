@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee924a8c32c3c0591f968db0655044500c8c759d
-ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
+ms.openlocfilehash: 36039334f7e93b66735e10d0ac2c5d80602e2b83
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73754973"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059854"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-for-ios-devices-in-intune"></a>Konfigurowanie wirtualnej sieci prywatnej dla aplikacji na urządzeniach z systemem iOS w usłudze Intune
 
@@ -95,7 +95,7 @@ Pamiętaj o skonfigurowaniu certyfikatu dla uwierzytelniania klienta. Możesz us
 
 Profil sieci VPN obejmuje certyfikat SCEP lub PKCS zawierający poświadczenia klienta, informacje o połączeniu z siecią VPN i flagę sieci VPN dla aplikacji, aby umożliwić używanie funkcji sieci VPN dla aplikacji przez aplikację systemu iOS.
 
-1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)wybierz pozycję **Urządzenia** > **Profile konfiguracji** > **Utwórz profil**.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **Profile konfiguracji** > **Utwórz profil**.
 2. Wprowadź następujące właściwości:
     - **Nazwa**: Wprowadź opisową nazwę profilu niestandardowego. Nadaj nazwę profilom, aby można było je później łatwo rozpoznać. Na przykład dobra nazwa profilu to **Profil sieci VPN dla aplikacji systemu iOS w całej firmie**.
     - **Opis**: Wprowadź opis profilu. To ustawienie jest opcjonalne, ale zalecane.
@@ -122,7 +122,7 @@ Profil sieci VPN obejmuje certyfikat SCEP lub PKCS zawierający poświadczenia k
 
 Po dodaniu profilu sieci VPN skojarz aplikację i grupę usługi Azure AD z profilem.
 
-1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Aplikacja** > **Wszystkie aplikacje**.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Aplikacje** > **Wszystkie aplikacje**.
 2. Wybierz aplikację z listy > **Przypisania** > **Dodaj grupę**.
 3. W pozycji **Typ przypisania** wybierz opcję **Wymagane** lub **Dostępne dla zarejestrowanych urządzeń**.
 4. Wybierz pozycję **Uwzględnione grupy** > **Wybierz grupy do uwzględnienia** > Wybierz grupę [utworzoną](#create-a-group-for-your-vpn-users) w tym artykule > **Wybierz**.

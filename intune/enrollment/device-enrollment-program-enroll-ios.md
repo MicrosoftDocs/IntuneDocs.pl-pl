@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b553c89704ca68ab6be261e74f1cc62ad58476ed
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: 99d946366724b03ecdf5c47d8ba7b1d820ed3055
+ms.sourcegitcommit: 15e099a9a1e18296580bb345610aee7cc4acd126
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73713004"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74164734"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Automatyczne rejestrowanie urządzeń z systemem iOS w ramach programu Device Enrollment Program
 
@@ -155,7 +155,7 @@ Teraz, po zainstalowaniu tokenu, możesz utworzyć profil rejestracji dla urząd
     >
     > Nie są one obsługiwane w przypadku uwierzytelniania przy użyciu asystenta ustawień firmy Apple.
 
-6. W przypadku wybrania aplikacji **Portal firmy** dla ustawienia **Wybierz miejsce, w którym użytkownicy muszą się uwierzytelniać** możesz używać tokenu programu VPP w celu automatycznego instalowania aplikacji Portal firmy na urządzeniu. W takim przypadku użytkownik nie musi podawać identyfikatora Apple ID. Aby zainstalować aplikację Portal firmy przy użyciu tokenu programu VPP, wybierz token w obszarze **Instalowanie aplikacji Portal firmy przy użyciu programu VPP**. Wymaga, aby Portal firmy został dodany do tokenu programu VPP. Nie należy konfigurować zasad wymagających aplikacji dla użytkowników. Usługa Intune automatycznie zainstaluje aplikację Portal firmy na urządzeniach z zastosowanym tym profilem rejestracji. Upewnij się, że token nie wygasł, i że masz wystarczającą liczbę licencji urządzeń dla aplikacji Portal firmy. Jeśli token wygaśnie lub zabraknie dla niego licencji, usługa Intune zainstaluje aplikację Portal firmy ze sklepu App Store (powoduje to wyświetlenie monitu o podanie identyfikatora Apple ID). 
+6. W przypadku wybrania aplikacji **Portal firmy** dla ustawienia **Wybierz miejsce, w którym użytkownicy muszą się uwierzytelniać** możesz używać tokenu programu VPP w celu automatycznego instalowania aplikacji Portal firmy na urządzeniu. W takim przypadku użytkownik nie musi podawać identyfikatora Apple ID. Aby zainstalować aplikację Portal firmy przy użyciu tokenu programu VPP, wybierz token w obszarze **Instalowanie aplikacji Portal firmy przy użyciu programu VPP**. Wymaga, aby Portal firmy został dodany do tokenu programu VPP. Aby upewnić się, że aplikacja Portal firmy nadal będzie aktualizowana po rejestracji, sprawdź, czy skonfigurowano wdrożenie aplikacji w usłudze Intune (Intune > Aplikacje klienckie). Aby interakcja użytkownika nie była wymagana, najprawdopodobniej będziesz używać Portalu firmy jako aplikacji VPP dla systemu iOS, oznaczysz ją jako aplikację wymaganą i użyjesz funkcji licencjonowania urządzenia na potrzeby przypisania. Upewnij się, że token nie wygasł, i że masz wystarczającą liczbę licencji urządzeń dla aplikacji Portal firmy. Jeśli token wygaśnie lub zabraknie dla niego licencji, usługa Intune zainstaluje aplikację Portal firmy ze sklepu App Store (powoduje to wyświetlenie monitu o podanie identyfikatora Apple ID). 
 
     > [!NOTE]
     > Po ustawieniu opcji **Wybierz miejsce, w którym użytkownicy muszą się uwierzytelniać** na **Portal firmy** upewnij się, że proces rejestracji urządzenia zostanie wykonany w ciągu pierwszych 24 godzin od pobrania portalu firmy na urządzenie programu DEP. W przeciwnym razie rejestracja może zakończyć się niepowodzeniem, a w celu zarejestrowania urządzenia będzie konieczne zresetowanie do ustawień fabrycznych.

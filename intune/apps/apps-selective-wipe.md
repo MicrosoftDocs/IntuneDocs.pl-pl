@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/03/2019
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a5bcdf9c3218df91bea85858ea21e88718e81633
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 0fafe7c17c698a5eb4e5ad6825bee0ae3fe874c2
+ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72498315"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74199232"
 ---
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Jak czyścić z aplikacji usługi Intune tylko dane firmowe
 
@@ -44,23 +44,12 @@ Zasady funkcji Windows Information Protection (WIP) można wdrożyć bez koniecz
 
 ## <a name="create-a-wipe-request"></a>Tworzenie żądania czyszczenia
 
-1. Zaloguj się do [portalu Azure](https://portal.azure.com).
-
-2. Wybierz pozycję **Wszystkie usługi**, wpisz **Intune** w polu tekstowym filtru i wybierz pozycję **Usługa Intune**. Zostanie otwarte okienko usługi Intune. Wybierz okienko **Aplikacje klienckie**.
-
-    ![Zrzut ekranu przedstawiający okienko usługi Microsoft Intune](./media/apps-selective-wipe/apps-selective-wipe01.png)
-
-3. W okienku **Aplikacje klienckie** wybierz pozycję **Selektywne czyszczenie aplikacji**.
-
-4. Wybierz pozycję **Nowe żądanie czyszczenia**. Zostanie otwarte okienko **Nowe żądanie czyszczenia**.
-
-    ![Zrzut ekranu przedstawiający okienko Nowe żądanie czyszczenia](./media/apps-selective-wipe/AzurePortal_MAM_NewWipeRequest.png)
-
-5. Wybierz użytkownika, a następnie pozycję **Wybierz**, aby wybrać użytkownika, którego dane aplikacji chcesz wyczyścić.
-
-6. Następnie wybierz pozycję **Urządzenie** z okienka **Nowe żądanie czyszczenia**. Spowoduje to otwarcie okienka **Wybieranie urządzenia**, które zawiera listę wszystkich urządzeń skojarzonych z wybranym użytkownikiem, a także dwie kolumny: nazwę urządzenia, którą jest przyjazna nazwa zdefiniowana przez użytkownika, oraz typ urządzenia, czyli jego platformę. Wybierz urządzenie, którego dane chcesz wyczyścić.
-
-7. Zostanie ponownie wyświetlone okienko **Nowe żądanie czyszczenia**. Wybierz pozycję **OK**, aby wykonać żądanie czyszczenia.
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+2. W okienku usługi Intune wybierz pozycję **Aplikacje klienckie** > **Selektywne czyszczenie aplikacji** > **Utwórz żądanie czyszczenia**.<br>
+   Zostanie wyświetlone okienko **Tworzenie żądania czyszczenia**.
+3. Kliknij pozycję **Wybierz użytkownika**, wybierz użytkownika, którego dane aplikacji chcesz wyczyścić, a następnie kliknij pozycję **Wybierz** w dolnej części okienka **Użytkownik**.
+4. Kliknij pozycję **Wybierz urządzenie**, wybierz urządzenie, a następnie kliknij pozycję **Wybierz** w dolnej części okienka **wybierania urządzenia**.
+5. Kliknij pozycję **Utwórz**, aby wykonać żądanie czyszczenia.
 
 Usługa tworzy i śledzi oddzielne żądanie czyszczenia dla każdej chronionej aplikacji na urządzeniu oraz użytkownika skojarzonego z żądaniem czyszczenia.
 

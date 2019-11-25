@@ -6,28 +6,26 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/19/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
-ms.reviewer: stama
+ms.reviewer: demerson
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c18da57282a190dec363e3dfbde5293f5228cb0b
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 644297777e8a103d6ffdc5f025ebf8f29591fda8
+ms.sourcegitcommit: 13fa1a4a478cb0e03c7f751958bc17d9dc70010d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72504622"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74188468"
 ---
 # <a name="create-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated"></a>Tworzenie zasad dostępu warunkowego do lokalnego programu Exchange i starszej wersji usługi Exchange Online w wersji dedykowanej w usłudze Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 W tym artykule pokazano, jak skonfigurować dostęp warunkowy dla lokalnej instalacji programu Exchange w oparciu o zgodność urządzenia.
 
@@ -46,7 +44,7 @@ Przed skonfigurowaniem dostępu warunkowego należy się upewnić, że istnieje 
 
 - Łącznik dla lokalnej organizacji programu Exchange można zainstalować na dowolnej maszynie, jeśli jest ona w stanie komunikować się z serwerem programu Exchange.
 
-- Łącznik obsługuje **środowisko serwera CAS programu Exchange**. Usługa Intune obsługuje bezpośrednie instalowanie łącznika na serwerze CAS programu Exchange, ale zalecamy zainstalowanie go na osobnym komputerze z powodu dodatkowego obciążenia serwera przez łącznik. Podczas konfigurowania łącznika należy ustawić go tak, aby komunikował się z jednym z serwerów CAS programu Exchange.
+- Łącznik obsługuje **środowisko serwera CAS programu Exchange**. Usługa Intune obsługuje bezpośrednie instalowanie łącznika na serwerze CAS programu Exchange. Zalecamy zainstalowanie go na osobnym komputerze z powodu dodatkowego obciążenia umieszczanego na serwerze przez ten łącznik. Podczas konfigurowania łącznika należy ustawić go tak, aby komunikował się z jednym z serwerów CAS programu Exchange.
 
 - Program **Exchange ActiveSync** należy skonfigurować przy użyciu uwierzytelniania opartego na certyfikatach lub wpisu poświadczeń użytkownika.
 
@@ -60,7 +58,7 @@ Przed skonfigurowaniem dostępu warunkowego należy się upewnić, że istnieje 
 
 - Jeśli warunki dostępu warunkowego nie zostaną spełnione, podczas logowania zostanie wyświetlony jeden z następujących komunikatów:
   - Jeśli urządzenie nie zostało zarejestrowane w usłudze Intune lub Azure Active Directory, zostanie wyświetlony komunikat z instrukcjami dotyczącymi sposobu instalowania aplikacji Portal firmy, rejestrowania urządzenia i aktywowania poczty e-mail. Ten proces powoduje również skojarzenie identyfikatora programu Exchange ActiveSync urządzenia z rekordem urządzenia w usłudze Azure Active Directory.
-  - Jeśli urządzenie nie jest zgodne, zostanie wyświetlony komunikat kierujący użytkownika do witryny sieci Web Portal firmy usługi Intune lub aplikacji Portal firmy, gdzie można znaleźć informacje o problemie i sposobie jego rozwiązania.
+  - Jeśli urządzenie nie jest zgodne, zostanie wyświetlony komunikat kierujący użytkownika do witryny internetowej Portal firmy usługi Intune lub aplikacji Portal firmy. W Portalu firmy można znaleźć informacje o problemie i sposobie jego rozwiązania.
 
 ### <a name="support-for-mobile-devices"></a>Obsługa urządzeń przenośnych
 
@@ -70,7 +68,7 @@ Przed skonfigurowaniem dostępu warunkowego należy się upewnić, że istnieje 
 - Klienci poczty korzystający z protokołu EAS na **urządzeniach z profilami służbowymi systemu Android:** na urządzeniach z profilami służbowymi systemu Android są obsługiwane tylko aplikacje **Gmail** i **Nine Work for Android Enterprise** w **profilu służbowym**. Aby dostęp warunkowy współdziałał z profilami służbowymi systemu Android, należy wdrożyć profil poczty e-mail dla aplikacji Gmail lub Nine Work for Android Enterprise, a także wdrożyć te aplikacje jako instalację wymaganą.
 
 > [!NOTE]
-> Program Microsoft Outlook dla systemów Android i iOS nie jest obsługiwany za pośrednictwem łącznika lokalnego programu Exchange. Jeśli chcesz korzystać z zasad dostępu warunkowego usługi Azure Active Directory i zasad rozwiązania Intune App Protection przy użyciu programu Outlook dla systemów iOS i Android dla skrzynek pocztowych w środowisku lokalnym, zobacz temat [Using hybrid Modern Authentication with Outlook for iOS and Android](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth) (Używanie hybrydowego nowoczesnego uwierzytelniania w programie Outlook dla systemów iOS i Android). 
+> Program Microsoft Outlook dla systemów Android i iOS nie jest obsługiwany za pośrednictwem łącznika lokalnego programu Exchange. Jeśli chcesz korzystać z zasad dostępu warunkowego usługi Azure Active Directory i zasad rozwiązania Intune App Protection przy użyciu programu Outlook dla systemów iOS i Android dla skrzynek pocztowych w środowisku lokalnym, zobacz temat [Using hybrid Modern Authentication with Outlook for iOS and Android](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth) (Używanie hybrydowego nowoczesnego uwierzytelniania w programie Outlook dla systemów iOS i Android).
 
 ### <a name="support-for-pcs"></a>Obsługa komputerów
 
@@ -80,19 +78,19 @@ Natywna aplikacja **do obsługi poczty** w systemie Windows 8.1 lub nowszym (w p
 
 Zanim zaczniesz korzystać z następującej procedury w celu skonfigurowania kontroli dostępu do lokalnego programu Exchange, musisz zainstalować i skonfigurować co najmniej jeden [łącznik lokalnego programu Exchange usługi Intune](exchange-connector-install.md) dla lokalnego programu Exchange.
 
-1. Logowanie się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Przejdź do pozycji **Dostęp do programu Exchange**, a następnie wybierz pozycję **Dostęp do lokalnego wystąpienia programu Exchange**. 
+2. Przejdź do pozycji **Administracja dzierżawą** > **Dostęp do programu Exchange**, a następnie wybierz pozycję **Dostęp do lokalnego wystąpienia programu Exchange**.
 
 3. W okienku **Dostęp do lokalnego wystąpienia programu Exchange** wybierz pozycję **Tak**, aby *włączyć kontrolę dostępu do lokalnego programu Exchange*.
 
-4. W obszarze **Przypisanie** wybierz pozycję **Wybierz grupy do uwzględnienia**, a następnie wybierz co najmniej jedną grupę w celu skonfigurowania dostępu. 
+4. W obszarze **Przypisanie** wybierz pozycję **Wybierz grupy do uwzględnienia**, a następnie wybierz co najmniej jedną grupę w celu skonfigurowania dostępu.
 
    Do członków wybranych grup są stosowane zasady dostępu warunkowego dla dostępu lokalnego programu Exchange. Użytkownicy, którzy odbierają te zasady, muszą zarejestrować swoje urządzenia w usłudze Intune i zachować zgodność z profilami zgodności, zanim będą mogli uzyskać dostęp do lokalnego programu Exchange.
 
 5. Aby wykluczyć grupy, wybierz pozycję **Wybierz grupy do wykluczenia**, a następnie wybierz co najmniej jedną grupę, która zostanie zwolniona z wymagań rejestracji urządzeń i zgodności z profilami zgodności przed uzyskaniem dostępu do lokalnego programu Exchange. 
 
-6. Następnie skonfiguruj ustawienia lokalnego programu Exchange Connector w usłudze Intune.  W obszarze **Konfiguracja** w **okienku Dostęp do programu Exchange** wybierz pozycję **Lokalny łącznik Exchange ActiveSync**, a następnie wybierz łącznik organizacji programu Exchange, którą chcesz skonfigurować.
+6. Następnie skonfiguruj ustawienia lokalnego programu Exchange Connector w usłudze Intune.  W obszarze **Konfiguracja** w oknie *Dostęp do lokalnego wystąpienia programu Exchange* wybierz pozycję **Lokalny łącznik Exchange ActiveSync**, a następnie wybierz łącznik organizacji programu Exchange, którą chcesz skonfigurować.
 
 7. W obszarze **Ustawienia** wybierz pozycję **Powiadomienia użytkownika**, aby zmodyfikować domyślną wiadomość e-mail, która jest wysyłana do użytkowników, jeśli ich urządzenia nie są zgodne, a chcą oni uzyskać dostęp do lokalnego programu Exchange. W szablonie wiadomości jest używany język znaczników.  Podczas pisania widać również podgląd wiadomości.
    > [!TIP]
@@ -120,6 +118,6 @@ Zanim zaczniesz korzystać z następującej procedury w celu skonfigurowania kon
 
 Następnie utwórz zasady zgodności i przypisz je do użytkowników, aby usługa Intune oceniła ich urządzenia przenośne. Zobacz temat [Set rules on devices to allow access to resources in your organization using Intune](device-compliance-get-started.md) (Ustawianie reguł na urządzeniach, aby zezwolić na dostęp do zasobów w organizacji przy użyciu usługi Intune).
 
-## <a name="see-also"></a>Zobacz także
+## <a name="next-steps"></a>Następne kroki
 
 [Troubleshooting Intune On-Premises Exchange Connector in Microsoft Intune](https://support.microsoft.com/help/4471887) (Rozwiązywanie problemów z lokalnym programem Exchange Connector w usłudze Microsoft Intune)

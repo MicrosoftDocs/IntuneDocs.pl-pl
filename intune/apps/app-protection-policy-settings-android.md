@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d223fb0cac7ad7435366db70bbb5bf4117216aa0
-ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
+ms.openlocfilehash: b346f41f5198a4aabcb05dcdd4b35a8c56977f53
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 11/13/2019
-ms.locfileid: "73983967"
+ms.locfileid: "74059773"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Ustawienia zasad ochrony aplikacji systemu Android w usłudze Microsoft Intune
 W tym artykule opisano ustawienia zasad ochrony aplikacji dla urządzeń z systemem Android. Opisane ustawienia zasad można [skonfigurować](app-protection-policies.md) dla zasad ochrony aplikacji w bloku **Ustawienia** w witrynie Azure Portal.
@@ -45,7 +45,7 @@ Istnieją trzy kategorie ustawień zasad: ustawienia ochrony danych, wymagania d
 | **Ogranicz wycinanie, kopiowanie i wklejanie między innymi aplikacjami** | Określ, kiedy można używać akcji wycinania, kopiowania i wklejania w tej aplikacji. Wybierz spośród opcji: <ul><li>**Zablokowane**:  nie zezwalaj na akcje wycinania, kopiowania i wklejania między tą aplikacją i dowolną inną aplikacją.</li><li>**Aplikacje zarządzane przez zasady**: zezwalaj na akcje wycinania, kopiowania i wklejania między tą aplikacją i innymi aplikacjami zarządzanymi przez zasady.</li><li>**Aplikacje zarządzane przez zasady z funkcją wklejania**: zezwalaj na wycinanie i kopiowanie między tą aplikacją i innymi aplikacjami zarządzanymi przez zasady. Zezwalaj na wklejanie w tej aplikacji danych z dowolnych aplikacji.</li><li>**Dowolna aplikacja**: brak ograniczeń wycinania, kopiowania i wklejania do i z tej aplikacji. | **Dowolna aplikacja** |
 | <ul><ui>**Limit znaków wycinania i kopiowania dla dowolnej aplikacji** | Określ liczbę znaków, które mogą być wycinane lub kopiowane z danych i kont organizacji.  Umożliwia to udostępnienie określonej liczby znaków w dowolnej aplikacji niezależnie od ustawienia „Ogranicz wycinanie, kopiowanie i wklejanie w innych aplikacjach”.<p>Wartość domyślna: 0<p>**Uwaga**: Wymaga aplikacji Intune — Portal firmy w wersji 5.0.4364.0 lub nowszej.  | **0** |
 | **Przechwytywanie ekranu i Asystent Google** | Wybierz opcję **Wyłączenie**, aby zablokować funkcję przechwytywania ekranu i możliwości **Asystenta Google** na urządzeniu podczas korzystania z tej aplikacji. Wybranie opcji **Wyłączenie** spowoduje również rozmycie obrazu podglądu przełącznika aplikacji podczas korzystania z tej aplikacji przy użyciu konta służbowego.| **Włączenie** |
-
+| **Powiadomienia dotyczące danych organizacji** | Określ, ile danych organizacji jest udostępnianych za pośrednictwem powiadomień systemu operacyjnego dla kont organizacji. To ustawienie zasad będzie wpływać na urządzenie lokalne oraz wszystkie połączone urządzenia, takie jak urządzenia do noszenia na sobie i inteligentne głośniki. Aplikacje mogą udostępniać dodatkowe opcje kontroli, które pozwalają na dostosowywanie zachowania powiadomień. Można również zrezygnować z uznawania wszystkich wartości. Wybierz jedną z następujących możliwości: <ul><li>**Blokuj**:  powiadomienia nie są udostępniane.</li><ul><li>Jeśli ta opcja nie jest obsługiwana przez aplikację, powiadomienia będą dozwolone.</li></ul><li>**Blokuj dane organizacji**: dane organizacji nie są udostępniane w powiadomieniach. Na przykład: „Masz nową wiadomość”; „Masz spotkanie”</li><UL><li>Jeśli ta opcja nie jest obsługiwana przez aplikację, powiadomienia zostaną zablokowane.</li></ul><li>**Zezwalaj**: dane organizacji są udostępniane w powiadomieniach</li><li>**Dowolna aplikacja**: brak ograniczeń wycinania, kopiowania i wklejania do i z tej aplikacji.</ul> <p>**Uwaga**: *to ustawienie wymaga obsługi aplikacji. Obecnie program Outlook dla systemu Android w wersji 4.75.0 lub nowszej będzie obsługiwać to ustawienie — oczekujemy, że ta opcja będzie dostępna w wersji wydanej w tygodniu rozpoczynającym się 16 grudnia 2019 r.* | **Zezwalaj**   |
   
 ### <a name="encryption"></a>Szyfrowanie
 | Ustawienie | Sposób użycia | Wartość domyślna |
