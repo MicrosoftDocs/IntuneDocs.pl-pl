@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/16/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b3372fc83e467b08b479490b3707f2be03409156
-ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
+ms.openlocfilehash: f78f3696827ebd50084f0e4b012c5f94427eeb35
+ms.sourcegitcommit: 15e099a9a1e18296580bb345610aee7cc4acd126
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72749328"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74164559"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>Scenariusz z przewodnikiem – Komputer nowoczesny zarządzany przez chmurę
 
-Komputer nowoczesny to najnowocześniejsza platforma produkcyjna dla pracownika przetwarzającego informacje. Pakiet Office 365 ProPlus i system Windows 10 to podstawowe składniki komputera nowoczesnego wraz z najnowszymi punktami odniesienia zabezpieczeń dla systemu Windows 10 i zaawansowanej ochrony przed zagrożeniami w usłudze Windows Defender. 
+Komputer nowoczesny to najnowocześniejsza platforma produkcyjna dla pracownika przetwarzającego informacje. Pakiet Office 365 ProPlus i system Windows 10 to podstawowe składniki komputera nowoczesnego wraz z najnowszymi punktami odniesienia zabezpieczeń dla systemu Windows 10 i zaawansowanej ochrony przed zagrożeniami w usłudze Microsoft Defender. 
 
 Zarządzanie komputerem nowoczesnym z chmury zapewnia dodatkową korzyść w zakresie akcji realizowanych zdalnie przez Internet. Zarządzanie z poziomu chmury korzysta z wbudowanych zasad zarządzania urządzeniami przenośnymi systemu Windows i usuwa zależności lokalnych zasad grupy usługi Active Directory. 
 
@@ -33,7 +33,7 @@ Jeśli chcesz ocenić wprowadzenie komputera nowoczesnego zarządzanego przez ch
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 - [Ustawianie usługi Intune jako urzędu MDM](~/fundamentals/mdm-authority-set.md#set-mdm-authority-to-intune) — ustawienie urzędu zarządzania urządzeniami przenośnymi (MDM) określa metodę zarządzania urządzeniami. Jako administrator systemów informatycznych, musisz ustawić urząd MDM, aby użytkownicy mogli zarejestrować urządzenia do zarządzania.
-- Minimalnie M356 E3 (lub M365 E5 w celu uzyskania najlepszych zabezpieczeń)
+- Minimalnie M365 E3 (lub M365 E5 w celu uzyskania najlepszych zabezpieczeń)
 - Urządzenie z systemem Windows 10 1903 (zarejestrowane za pomocą rozwiązania Windows Autopilot w celu uzyskania najlepszego środowiska użytkownika końcowego)
 - Aby ukończyć ten scenariusz z przewodnikiem, wymagane są uprawnienia administratora usługi Intune:
   - konfiguracja urządzenia – odczytywanie, tworzenie, usuwanie, przypisywanie i aktualizowanie;
@@ -118,5 +118,5 @@ Po dołączeniu urządzenia do usługi Azure Active Directory przez użytkownika
 
 ## <a name="next-steps"></a>Następne kroki
 
-- W przypadku korzystania z funkcji zaawansowanego wykrywania zagrożeń w usłudze Windows Defender należy utworzyć [Zasady zgodności z usługą Intune](~/protect/advanced-threat-protection.md#create-and-assign-the-compliance-policy), aby wymagać analizy zagrożeń usługi Defender w celu zapewnienia zgodności.
+- W przypadku korzystania z funkcji zaawansowanego wykrywania zagrożeń w usłudze Microsoft Defender należy utworzyć [Zasady zgodności z usługą Intune](~/protect/advanced-threat-protection.md#create-and-assign-the-compliance-policy), aby wymagać analizy zagrożeń usługi Defender w celu zapewnienia zgodności.
 - Utwórz [Zasady dostępu warunkowego opartego na urządzeniach](~/protect/advanced-threat-protection.md#create-a-conditional-access-policy), aby zablokować dostęp, jeśli urządzenie nie będzie zgodne z zasadami usługi Intune.

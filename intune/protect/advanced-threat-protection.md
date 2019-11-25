@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/06/2019
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f6026cf3ef8d044c92680cf4c4c88ba55c9777e0
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: 889b0a7562f1a663556e955271681e0747aeb3c4
+ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73713257"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74199165"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Wymuszanie zgodności usługi Microsoft Defender ATP z dostępem warunkowym w usłudze Intune
 
@@ -31,7 +31,7 @@ Aby pomyślnie korzystać z usługi, należy równocześnie zastosować następu
 
 - **Ustanowienie połączenia typu usługa do usługi między usługą Intune i usługą Microsoft Defender ATP**. To połączenie umożliwia usłudze Microsoft Defender ATP zbieranie danych dotyczących ryzyka maszyny ze strony urządzeń z systemem Windows 10 zarządzanych za pomocą usługi Intune.
 - **Użycie profilu konfiguracji urządzenia w celu dołączania urządzeń do usługi Microsoft Defender ATP**. Urządzenia należy dołączyć, aby je skonfigurować do komunikowania się z usługą Microsoft Defender ATP i dostarczyć dane, które pomogą ocenić ich poziom ryzyka.
-- **Użycie zasad zgodności urządzeń w celu ustawienia dozwolonego poziomu ryzyka**. Poziomy ryzyka są zgłaszane przez usługę Microsoft Defender ATP.  Urządzenia, które przekraczają dozwolony poziom ryzyka, są identyfikowane jako niezgodne.
+- **Użycie zasad zgodności urządzeń w celu ustawienia dozwolonego poziomu ryzyka**. Poziomy ryzyka są zgłaszane przez usługę Microsoft Defender ATP. Urządzenia, które przekraczają dozwolony poziom ryzyka, są identyfikowane jako niezgodne.
 - **Użycie zasad dostępu warunkowego**, aby uniemożliwić użytkownikom dostęp do zasobów firmy z niezgodnych urządzeń.
 
 Po zintegrowaniu usługi Intune z usługą Microsoft Defender ATP można korzystać z zalet funkcji zarządzania zagrożeniami i lukami w zabezpieczeniach usługi ATP i [używać usługi Intune do korygowania słabości punktów końcowych wykrytych przez funkcję zarządzania zagrożeniami i lukami w zabezpieczeniach](atp-manage-vulnerabilities.md).
@@ -62,7 +62,7 @@ Aby używać usługi Microsoft Defender ATP z usługą Intune, należy się upew
 - Usługa [Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) oraz dostęp do usługi Microsoft Defender Security Center (portal ATP)
 
 > [!NOTE]
-> Usługa Microsoft Defender ATP nie jest obsługiwana w przypadku stosowania zasad ochrony aplikacji usługi Intune.
+> Usługa Microsoft Defender ATP nie jest obsługiwana w przypadku stosowania zasad ochrony aplikacji usługi Intune w systemach iOS i Android.
 
 ## <a name="enable-microsoft-defender-atp-in-intune"></a>Włączanie usługi Microsoft Defender ATP w usłudze Intune
 
@@ -70,7 +70,7 @@ Najpierw trzeba skonfigurować połączenie typu usługa do usługi między usł
 
 ### <a name="to-enable-defender-atp"></a>Aby włączyć usługę Defender ATP
 
-Usługę Defender ATP musisz włączyć tylko raz w każdej dzierżawie. 
+Usługę Defender ATP musisz włączyć tylko raz w każdej dzierżawie.
 
 1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -92,6 +92,8 @@ Usługę Defender ATP musisz włączyć tylko raz w każdej dzierżawie.
 
 > [!TIP]
 > Po zintegrowaniu nowej aplikacji z usługą Intune Mobile Threat Defense (MTD) i włączeniu połączenia z usługą Intune usługa ta tworzy klasyczne zasady dostępu warunkowego w usłudze Azure Active Directory. Każda zintegrowana aplikacja MTD, w tym [Defender ATP](advanced-threat-protection.md) lub dowolny z naszych dodatkowych [partnerów MTD](mobile-threat-defense.md#mobile-threat-defense-partners), tworzy nowe klasyczne zasady dostępu warunkowego. Te zasady można ignorować, ale nie należy ich edytować, usuwać ani wyłączać.
+>
+> Jeśli zasady klasyczne zostaną usunięte, należy usunąć połączenie z usługą Intune, które było odpowiedzialne za ich tworzenie, a następnie skonfigurować je ponownie. Spowoduje to ponowne utworzenie zasad klasycznych. Migrowanie zasad klasycznych dla aplikacji MTD do nowego typu zasad w celu uzyskania dostępu warunkowego nie jest obsługiwane.
 >
 > Klasyczne zasady dostępu warunkowego dla aplikacji MTD mają następujące cechy:
 >
@@ -130,7 +132,7 @@ Po dołączeniu urządzenia przy użyciu pakietu konfiguracyjnego nie trzeba teg
      Dodatkowe informacje na temat ustawień usługi Microsoft Defender ATP można znaleźć w artykule [Dołączanie maszyn z systemem Windows 10 za pomocą programu System Center Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm).
 
 7. Wybierz opcję **OK** i **Utwórz**, aby zapisać zmiany i utworzyć profil.
-8. [Przypisz profil konfiguracji urządzenia](../configuration/device-profile-assign.md) do urządzeń, które chcesz ocenić za pomocą usługi Microsoft Defender ATP.  
+8. [Przypisz profil konfiguracji urządzenia](../configuration/device-profile-assign.md) do urządzeń, które chcesz ocenić za pomocą usługi Microsoft Defender ATP.
 
 ## <a name="create-and-assign-the-compliance-policy"></a>Tworzenie i przypisywanie zasad zgodności
 

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/28/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 30b5debc6e1ab113a08d8930f96f6cbc9bf12b48
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 62db99fc2e47bdfa1a767db3bb2916649dedc074
+ms.sourcegitcommit: 15e099a9a1e18296580bb345610aee7cc4acd126
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509522"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74164686"
 ---
 # <a name="set-up-the-on-premises-intune-exchange-connector"></a>Konfigurowanie lokalnego programu Intune Exchange Connector
 Aby ułatwić ochronę dostępu do programu Exchange, usługa Intune opiera się na składniku lokalnym znanym jako program Microsoft Intune Exchange. W niektórych lokalizacjach konsoli usługi Intune ten łącznik nosi również nazwę *Lokalny łącznik programu Exchange ActiveSync*. 
@@ -80,14 +80,15 @@ Utwórz konto użytkownika usługi Active Directory do użycia przez program Int
 
 ## <a name="download-the-installation-package"></a>Pobieranie pakietu instalacyjnego
 
-1. Na serwerze z systemem Windows, który może obsługiwać program Intune Exchange Connector, zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973). Użyj konta, które jest kontem administratora na lokalnym serwerze programu Exchange i ma licencję na korzystanie z programu Exchange Server.
+Na serwerze z systemem Windows, który może obsługiwać program Intune Exchange Connector:
 
-2. Wybierz pozycję **Intune** > **Dostęp do programu Exchange**.  
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).  Użyj konta, które jest kontem administratora na lokalnym serwerze programu Exchange i ma licencję na korzystanie z programu Exchange Server.
+
+2. Wybierz pozycję **Administracja dzierżawą** > **Dostęp do programu Exchange**.  
 
 3. W obszarze **Instalacja** wybierz pozycję **Lokalny łącznik Exchange ActiveSync**, a następnie wybierz pozycję **Dodaj**.
 
 4. Na stronie **Dodawanie łącznika** wybierz pozycję **Pobierz łącznik lokalny**. Program Intune Exchange Connector znajduje się w skompresowanym folderze (pliku zip), który można otworzyć lub zapisać. W oknie dialogowym **Pobieranie pliku** wybierz pozycję **Zapisz**, aby zapisać skompresowany folder w bezpiecznej lokalizacji.
-
 
 ## <a name="install-and-configure-the-intune-exchange-connector"></a>Instalowanie i konfigurowanie programu Intune Exchange Connector
 
@@ -149,8 +150,6 @@ Po skonfigurowaniu połączenia w programie Exchange Connector urządzenia przen
 > [!NOTE]
 > W przypadku zainstalowania programu Intune Exchange Connector i późniejszego usunięcia połączenia z programem Exchange należy odinstalować łącznik z komputera, na którym został zainstalowany.
 
-
-
 ## <a name="install-connectors-for-multiple-exchange-organizations"></a>Instalowanie łączników dla wielu organizacji programu Exchange
 
 Usługa Intune obsługuje wiele lokalnych programów Intune Exchange Connector na subskrypcję. W przypadku dzierżawy z wieloma organizacjami programu Exchange można skonfigurować tylko jeden łącznik dla każdej organizacji programu Exchange. 
@@ -161,52 +160,60 @@ Każda organizacja programu Exchange, która nawiązuje połączenie z usługą 
 
 ## <a name="on-premises-intune-exchange-connector-high-availability-support"></a>Obsługa wysokiej dostępności lokalnego programu Intune Exchange Connector  
 
-W przypadku łącznika lokalnego wysoka dostępność oznacza, że jeśli serwer dostępu klienta Exchange używany przez łącznik stanie się niedostępny, łącznik może zostać przełączony do innego serwera dostępu klienta dla danej organizacji programu Exchange. Sam program Exchange Connector nie obsługuje wysokiej dostępności. W przypadku niepowodzenia łącznika nie następuje automatyczne przełączenie w tryb failover. Musisz [zainstalować nowy łącznik](#reinstall-the-intune-exchange-connector), aby zastąpić łącznik, którego działanie zakończyło się niepowodzeniem. 
+W przypadku łącznika lokalnego wysoka dostępność oznacza, że jeśli serwer dostępu klienta Exchange używany przez łącznik stanie się niedostępny, łącznik może zostać przełączony do innego serwera dostępu klienta dla danej organizacji programu Exchange. Sam program Exchange Connector nie obsługuje wysokiej dostępności. W przypadku niepowodzenia łącznika nie następuje automatyczne przełączenie w tryb failover. Musisz [zainstalować nowy łącznik](#reinstall-the-intune-exchange-connector), aby zastąpić łącznik, którego działanie zakończyło się niepowodzeniem.
 
-Aby przełączyć się w tryb failover, łącznik używa określonego serwera dostępu klienta do utworzenia udanego połączenia z programem Exchange. Następnie odnajduje on dodatkowe serwery dostępu klienta dla tej organizacji programu Exchange. Takie odnajdowanie umożliwia łącznikowi przełączenie się w tryb failover na innym serwerze dostępu klienta (jeśli jest dostępny) do momentu przywrócenia dostępności podstawowego serwera dostępu klienta. 
+Aby przełączyć się w tryb failover, łącznik używa określonego serwera dostępu klienta do utworzenia udanego połączenia z programem Exchange. Następnie odnajduje on dodatkowe serwery dostępu klienta dla tej organizacji programu Exchange. Takie odnajdowanie umożliwia łącznikowi przełączenie się w tryb failover na innym serwerze dostępu klienta (jeśli jest dostępny) do momentu przywrócenia dostępności podstawowego serwera dostępu klienta.
 
-Domyślnie odnajdywanie dodatkowych serwerów dostępu klienta jest włączone. Jeśli musisz wyłączyć tryb failover:  
-1. Na serwerze, na którym został zainstalowany program Exchange Connector, przejdź do folderu **%*ProgramData*%\Microsoft\Windows Intune Exchange Connector**. 
+Domyślnie odnajdywanie dodatkowych serwerów dostępu klienta jest włączone. Jeśli musisz wyłączyć tryb failover:
+
+1. Na serwerze, na którym został zainstalowany program Exchange Connector, przejdź do folderu **%*ProgramData*%\Microsoft\Windows Intune Exchange Connector**.
+
 2. Za pomocą edytora tekstów otwórz plik **OnPremisesExchangeConnectorServiceConfiguration.xml**.
-3. Zmień wartość **\<IsCasFailoverEnabled>*true*\</IsCasFailoverEnabled>** na **\<IsCasFailoverEnabled>*false*\</IsCasFailoverEnabled>** .  
- 
+
+3. Zmień wartość **\<IsCasFailoverEnabled>*true*\</IsCasFailoverEnabled>** na **\<IsCasFailoverEnabled>*false*\</IsCasFailoverEnabled>** .
+
 ## <a name="performance-tune-the-exchange-connector-optional"></a>Dostrajanie wydajności programu Exchange Connector (opcjonalnie)
 
-Jeśli program Exchange ActiveSync obsługuje co najmniej 5000 urządzeń, możesz skonfigurować opcjonalne ustawienie poprawiające wydajność łącznika. Aby zwiększyć wydajność, możesz włączyć w programie Exchange możliwość korzystania z wielu wystąpień obszarów uruchamiania poleceń programu PowerShell. 
+Jeśli program Exchange ActiveSync obsługuje co najmniej 5000 urządzeń, możesz skonfigurować opcjonalne ustawienie poprawiające wydajność łącznika. Aby zwiększyć wydajność, możesz włączyć w programie Exchange możliwość korzystania z wielu wystąpień obszarów uruchamiania poleceń programu PowerShell.
 
-Przed wprowadzeniem tej zmiany upewnij się, że konto używane do uruchamiania łącznika programu Exchange nie jest używane do innych zadań zarządzania programem Exchange. Konto programu Exchange ma ograniczoną liczbę obszarów uruchamiania, a łącznik używa większości z nich. 
+Przed wprowadzeniem tej zmiany upewnij się, że konto używane do uruchamiania łącznika programu Exchange nie jest używane do innych zadań zarządzania programem Exchange. Konto programu Exchange ma ograniczoną liczbę obszarów uruchamiania, a łącznik używa większości z nich.
 
-Dostrajanie wydajności nie jest odpowiednie w przypadku łączników, które działają na starszym lub wolniejszym sprzęcie.  
+Dostrajanie wydajności nie jest odpowiednie w przypadku łączników, które działają na starszym lub wolniejszym sprzęcie.
 
-Aby zwiększyć wydajność programu Exchange Connector: 
+Aby zwiększyć wydajność programu Exchange Connector:
 
-1. Na serwerze, na którym zainstalowano łącznik, otwórz katalog instalacyjny łączników.  Jego domyślna lokalizacja to *C:\ProgramData\Microsoft\Windows Intune Exchange Connector*. 
+1. Na serwerze, na którym zainstalowano łącznik, otwórz katalog instalacyjny łączników.  Jego domyślna lokalizacja to *C:\ProgramData\Microsoft\Windows Intune Exchange Connector*.
+
 2. Otwórz plik *OnPremisesExchangeConnectorServiceConfiguration.xml* do edycji.
-3. Znajdź właściwość **EnableParallelCommandSupport** i ustaw dla niej wartość **true**:  
-     
+
+3. Znajdź właściwość **EnableParallelCommandSupport** i ustaw dla niej wartość **true**:
+
    \<EnableParallelCommandSupport>true\</EnableParallelCommandSupport>
+
 4. Zapisz plik, a następnie uruchom ponownie usługę Microsoft Intune Exchange Connector.
 
 ## <a name="reinstall-the-intune-exchange-connector"></a>Ponowne instalowanie programu Intune Exchange Connector
 
 Może być konieczne ponowne zainstalowanie programu Intune Exchange Connector. Ponieważ tylko jeden łącznik może połączyć się z każdą organizacją programu Exchange, jeśli zainstalujesz drugi łącznik dla organizacji, nowy łącznik zastąpi pierwotny łącznik.
 
-1. Aby zainstalować nowy łącznik, wykonaj czynności opisane w sekcji [Instalowanie i konfigurowanie programu Exchange Connector](#install-and-configure-the-intune-exchange-connector). 
-2. Po wyświetleniu monitu wybierz pozycję **Zastąp**, aby zainstalować nowy łącznik.  
+1. Aby zainstalować nowy łącznik, wykonaj czynności opisane w sekcji [Instalowanie i konfigurowanie programu Exchange Connector](#install-and-configure-the-intune-exchange-connector).
+
+2. Po wyświetleniu monitu wybierz pozycję **Zastąp**, aby zainstalować nowy łącznik.
    ![Ostrzeżenie konfiguracyjne dotyczące zastąpienia łącznika](./media/exchange-connector-install/prompt-to-replace.png)
 
 3. Wykonaj kroki opisane w sekcji [Instalowanie i konfigurowanie programu Intune Exchange Connector](#install-and-configure-the-intune-exchange-connector) i ponownie zaloguj się do usługi Intune.
-4. W końcowym oknie wybierz pozycję **Zamknij**, aby zakończyć instalację.  
+
+4. W końcowym oknie wybierz pozycję **Zamknij**, aby zakończyć instalację.
    ![Kończenie instalacji](./media/exchange-connector-install/successful-reinstall.png)
- 
 
 ## <a name="monitor-an-exchange-connector"></a>Monitorowanie programu Exchange Connector
 
-Po pomyślnym skonfigurowaniu programu Exchange Connector można wyświetlić stan połączeń oraz ostatniej pomyślnej próby synchronizacji. 
+Po pomyślnym skonfigurowaniu programu Exchange Connector można wyświetlić stan połączeń oraz ostatniej pomyślnej próby synchronizacji.
 
 Aby zweryfikować połączenie programu Exchange Connector:
 
 1. Na pulpicie nawigacyjnym usługi Intune wybierz pozycję **Dostęp do programu Exchange**.
+
 2. Wybierz pozycję **Dostęp do lokalnego programu Exchange**, aby sprawdzić stan połączenia dla każdego łącznika programu Exchange.
 
 Możesz również sprawdzić godzinę i datę ostatniej pomyślnej próby synchronizacji.
@@ -219,13 +226,14 @@ Program Intune Exchange Connector regularnie i automatycznie synchronizuje rekor
 
 - **Szybka synchronizacja** jest przeprowadzana regularnie kilka razy dziennie. Podczas szybkiej synchronizacji są pobierane informacje o urządzeniach związane z użytkownikami z licencją usługi Intune i lokalnym programu Exchange korzystającymi z dostępu warunkowego, które uległy zmianie od ostatniej synchronizacji.
 
-- **Pełna synchronizacja** jest domyślnie przeprowadzana raz dziennie. Podczas pełnej synchronizacji są pobierane informacje o urządzeniach związane ze wszystkimi użytkownikami z licencją usługi Intune i lokalnym programem Exchange korzystającymi z dostępu warunkowego. Pełna synchronizacja polega również na pobieraniu informacji o serwerze programu Exchange i zapewnianiu, że konfiguracja, którą usługa Intune określiła w witrynie Azure Portal, została zaktualizowana na serwerze programu Exchange. 
-
+- **Pełna synchronizacja** jest domyślnie przeprowadzana raz dziennie. Podczas pełnej synchronizacji są pobierane informacje o urządzeniach związane ze wszystkimi użytkownikami z licencją usługi Intune i lokalnym programem Exchange korzystającymi z dostępu warunkowego. Pełna synchronizacja polega również na pobieraniu informacji o serwerze programu Exchange i zapewnianiu, że konfiguracja, którą usługa Intune określiła w witrynie Azure Portal, została zaktualizowana na serwerze programu Exchange.
 
 Aby wymusić uruchomienie synchronizacji przez łącznik, można użyć opcji **Szybka synchronizacja** lub **Pełna synchronizacja** na pulpicie nawigacyjnym usługi Intune:
 
    1. Na pulpicie nawigacyjnym usługi Intune wybierz pozycję **Dostęp do programu Exchange**.
+
    2. Wybierz pozycję **Dostęp do lokalnego programu Exchange**.
+
    3. Wybierz łącznik do zsynchronizowania, a następnie wybierz pozycję **Szybka synchronizacja** lub **Pełna synchronizacja**.
 
 ## <a name="next-steps"></a>Następne kroki

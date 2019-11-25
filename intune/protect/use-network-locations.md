@@ -2,10 +2,10 @@
 title: Tworzenie powiązań urządzeń z systemem Android według lokalizacji sieciowej w usłudze Microsoft Intune — Azure | Microsoft Docs
 description: Tworzenie lub konfigurowanie lokalizacji sieciowych w usłudze Microsoft Intune dla urządzeń z systemem Android. Urządzenia można oznaczać jako niezgodne w oparciu o lokalizację sieciową urządzenia. Jeśli urządzenie jest przenoszone poza lokalizację sieciową, można zablokować dostęp do zasobów firmy.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: Brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 05/21/2018
+ms.date: 11/13/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 648ccd889714c2ee4f7ee1fa04301490ad9fd001
-ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
+ms.openlocfilehash: 847ab759b697d402acb07d9c8d83d3a3ef9aaef2
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72749454"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74058148"
 ---
 # <a name="use-locations-network-fence-in-intune"></a>Korzystanie z lokalizacji (ogrodzenia sieci) w usłudze Intune
 
@@ -50,7 +50,7 @@ Aby utworzyć zasady zgodności na podstawie lokalizacji:
 
 ## <a name="create-a-location"></a>Tworzenie lokalizacji
 
-1. W usłudze Intune wybierz kolejno pozycje **Zgodność urządzenia** > **Lokalizacje** > **Utwórz**.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **Zasady zgodności** > **Lokalizacje** > **Utwórz**.
 
 2. Wprowadź następujące właściwości:  
 
@@ -69,8 +69,7 @@ Aby utworzyć zasady zgodności na podstawie lokalizacji:
 
 ## <a name="create-the-location-compliance-policy"></a>Tworzenie zasad zgodności lokalizacji
 
-Podczas [tworzenia zasad zgodności](create-compliance-policy.md) wybierz pozycję **Android** w polu **Platforma**. W obszarze **Lokalizacje** możesz wybrać co najmniej jedną z dodanych lokalizacji sieciowych. Lokalizacje te są częścią ogrodzenia sieci, które tworzysz dla urządzeń. 
-
+Podczas [tworzenia zasad zgodności](create-compliance-policy.md) wybierz pozycję **Android** w polu **Platforma**. W obszarze **Lokalizacje** możesz wybrać co najmniej jedną z dodanych lokalizacji sieciowych. Lokalizacje te są częścią ogrodzenia sieci, które tworzysz dla urządzeń.
 
 ## <a name="configure-the-actions-for-noncompliance"></a>Konfigurowanie akcji w przypadku niezgodności
 
@@ -83,5 +82,6 @@ Wskazówki można znaleźć w temacie [Dodawanie akcji w przypadku niezgodności
 Urządzenie połączone z lokalizacją jest wyświetlane jako zgodne w aplikacji Portal firmy. Urządzenie niepołączone z jedną z lokalizacji jest wyświetlane jako niezgodne.
 
 ## <a name="next-steps"></a>Następne kroki
+
 [Monitorowanie zasad zgodności urządzeń](compliance-policy-monitor.md)  
 [Wprowadzenie do zasad zgodności](device-compliance-get-started.md)

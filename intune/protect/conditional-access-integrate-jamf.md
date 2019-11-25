@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/20/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 39d687c8c9b75182ba0e7d4020c6b840c753a231
-ms.sourcegitcommit: a4c7339ec9ff5b1b846cb3cca887cf91b5cd4baa
+ms.openlocfilehash: 6615933f604f2ff4156885bc6559af7e46d4ccb2
+ms.sourcegitcommit: 13fa1a4a478cb0e03c7f751958bc17d9dc70010d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627660"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74188513"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Integrowanie narzędzia Jamf Pro z usługą Intune w celu zachowania zgodności
 
@@ -70,7 +70,7 @@ Aby połączyć usługę Intune z narzędziem Jamf Pro:
 2. Włącz możliwość integracji usługi Intune z narzędziem Jamf Pro.
 3. Skonfiguruj dostęp warunkowy w narzędziu Jamf Pro.
 
-## <a name="create-an-application-in-azure-active-directory"></a>Utworzenie aplikacji w usłudze Azure Active Directory
+### <a name="create-an-application-in-azure-active-directory"></a>Utworzenie aplikacji w usłudze Azure Active Directory
 
 1. W witrynie [Azure Portal](https://portal.azure.com) przejdź kolejno do pozycji **Azure Active Directory** > **Rejestracje aplikacji**, a następnie wybierz pozycję **Nowa rejestracja**. 
 
@@ -102,15 +102,17 @@ Aby połączyć usługę Intune z narzędziem Jamf Pro:
     > [!NOTE]
     > Jeśli klucz tajny klienta wygaśnie, należy utworzyć nowy klucz tajny klienta na platformie Azure, a następnie zaktualizować dane dostępu warunkowego w narzędziu Jamf Pro. Aby uniknąć zakłóceń w świadczeniu usług, platforma Azure umożliwia stosowanie zarówno starego klucza tajnego, jak i nowego klucza.
 
-## <a name="enable-intune-to-integrate-with-jamf-pro"></a>Włączanie możliwości integracji usługi Intune z narzędziem Jamf Pro
+### <a name="enable-intune-to-integrate-with-jamf-pro"></a>Włączanie możliwości integracji usługi Intune z narzędziem Jamf Pro
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) i przejdź do pozycji **Microsoft Intune** > **Zgodność urządzenia** > **Zarządzanie urządzeniem partnera**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Włącz Łącznik zgodności dla narzędzia Jamf poprzez wklejenie identyfikatora aplikacji zapisanego we wcześniejszej części procedury w polu **Identyfikator aplikacji usługi Azure Active Directory w oprogramowaniu Jamf**.
+2. Wybierz kolejno pozycje **Administracja dzierżawą** > **Łączniki i tokeny** > **Zarządzanie urządzeniem partnera**.
 
-3. Wybierz pozycję **Zapisz**.
+3. Włącz *Łącznik zgodności dla narzędzia Jamf* przez wklejenie identyfikatora aplikacji zapisanego we wcześniejszej części procedury w polu **Określ identyfikator aplikacji usługi Azure Active Directory dla oprogramowania Jamf**.
 
-## <a name="configure-microsoft-intune-integration-in-jamf-pro"></a>Konfigurowanie integracji z usługą Microsoft Intune w narzędziu Jamf Pro
+4. Wybierz pozycję **Zapisz**.
+
+### <a name="configure-microsoft-intune-integration-in-jamf-pro"></a>Konfigurowanie integracji z usługą Microsoft Intune w narzędziu Jamf Pro
 
 1. W narzędziu Jamf Pro przejdź do opcji **Globalne zarządzanie** > **Dostęp warunkowy**. Kliknij przycisk **Edytuj** na karcie **Integracja systemu macOS z usługą Intune**.
 
@@ -125,17 +127,22 @@ Aby połączyć usługę Intune z narzędziem Jamf Pro:
 Po skonfigurowaniu integracji między usługą Intune i narzędziem Jamf musisz [zastosować zasady zgodności do urządzeń zarządzanych za pomocą narzędzia Jamf](conditional-access-assign-jamf.md).
 
 
-## <a name="disconnect-jamf-pro-and-intune"></a>Rozłączanie narzędzia Jamf Pro i usługi Intune 
+## <a name="disconnect-jamf-pro-and-intune"></a>Rozłączanie narzędzia Jamf Pro i usługi Intune
 
-Jeśli nie korzystasz już z narzędzia Jamf Pro do zarządzania komputerami Mac w organizacji i chcesz zarządzać użytkownikami w usłudze Intune, musisz usunąć połączenie między narzędziem Jamf Pro a usługą Intune. Połączenie można usunąć, używając konsoli narzędzia Jamf Pro. 
+Jeśli nie korzystasz już z narzędzia Jamf Pro do zarządzania komputerami Mac w organizacji i chcesz zarządzać użytkownikami w usłudze Intune, musisz usunąć połączenie między narzędziem Jamf Pro a usługą Intune. Połączenie można usunąć, używając konsoli narzędzia Jamf Pro.
 
 1. W narzędziu Jamf Pro wybierz kolejno opcje **Globalne zarządzanie** > **Dostęp warunkowy**. Na karcie **Integracja systemu macOS z usługą Intune** kliknij przycisk **Edytuj**.
+
 2. Wyczyść pole wyboru przy opcji **Włącz integrację z usługą Intune dla systemu macOS**.
+
 3. Wybierz pozycję **Zapisz**. Narzędzie Jamf Pro wyśle konfigurację do usługi Intune i integracja zostanie wyłączona.
-4. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973). Kliknij kolejno pozycje **Microsoft Intune** > **Zgodność urządzeń** > **Zarządzanie urządzeniem partnera**, aby upewnić się, że bieżący stan to **Zakończono**. 
+
+4. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+5. Wybierz kolejno pozycje **Administracja dzierżawą** > **Łączniki i tokeny** > **Zarządzanie urządzeniem partnera**, aby sprawdzić, czy aktualny stan to **Zakończono**.
 
    > [!NOTE]
-   > Urządzenia Mac w Twojej organizacji zostaną usunięte w dniu wskazanym w konsoli (po trzech miesiącach). 
+   > Urządzenia Mac w Twojej organizacji zostaną usunięte w dniu wskazanym w konsoli (po trzech miesiącach).
 
 ## <a name="next-steps"></a>Następne kroki
 

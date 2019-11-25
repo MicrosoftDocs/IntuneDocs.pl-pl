@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/08/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 37ed7bfd204289c963b8134252d9d76f2379ecba
-ms.sourcegitcommit: 768d581cb8bcc5fdcb8ade95d402b11223ab226c
+ms.openlocfilehash: 71045489ac703860073a3023e6d6170778117d33
+ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/09/2019
-ms.locfileid: "73882490"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74199292"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co nowego w usłudze Microsoft Intune
 
@@ -52,6 +52,46 @@ Dowiedz się co tydzień, co nowego w usłudze Microsoft Intune. Możesz tu rów
 ### Monitor and troubleshoot
 ### Role-based access control
 -->  
+
+## <a name="week-of-november-18-2019"></a>Tydzień 18 listopada 2019 r.
+
+### <a name="device-configuration"></a>Konfiguracja urządzenia
+
+#### <a name="windows-10-feature-updates-public-preview---2384877---"></a>Aktualizacje funkcji systemu Windows 10 (publiczna wersja zapoznawcza)<!-- 2384877 -->
+
+Można teraz wdrażać [aktualizacje funkcji systemu Windows 10](../protect/windows-update-for-business-configure.md#windows-10-feature-updates) na urządzeniach z systemem Windows 10. Aktualizacje funkcji systemu Windows 10 to nowe zasady aktualizacji oprogramowania ustawiające wersję systemu Windows 10, która ma być instalowana przez urządzenia i która ma na nich pozostać. Tego nowego typu zasad można używać wraz z istniejącymi pierścieniami aktualizacji systemu Windows 10.
+
+Urządzenia, na których są odbierane zasady aktualizacji funkcji systemu Windows 10, zainstalują określoną wersję systemu Windows, a następnie pozostaną w tej wersji do momentu edytowania lub usunięcia zasad. Urządzenia z nowszą wersją systemu Windows pozostają w bieżącej wersji. Urządzenia, na których jest zachowana określona wersja systemu Windows, mogą nadal instalować aktualizacje jakości i zabezpieczeń dla tej wersji z poziomu pierścieni aktualizacji systemu Windows 10.
+
+Ten nowy typ zasad będzie dostępny dla dzierżaw w tym tygodniu. Jeśli te zasady nie są jeszcze dostępne dla Twojej dzierżawy, udostępnimy je wkrótce.
+
+### <a name="monitor-and-troubleshoot"></a>Monitorowanie i rozwiązywanie problemów
+
+#### <a name="updated-support-experience---5012398---"></a>Zaktualizowane środowisko pomocy technicznej<!-- 5012398 -->
+
+Od dzisiaj zaktualizowane i usprawnione środowisko w konsoli służące do [uzyskiwania pomocy i obsługi technicznej usługi Intune](get-support.md) jest dostępne dla dzierżaw. Jeśli jeszcze nie masz dostępu do nowego środowiska, udostępnimy je wkrótce.
+
+Usprawniliśmy wyszukiwanie i obsługę opinii w konsoli dotyczące typowych problemów oraz przepływ pracy używany do kontaktowania się z pomocą techniczną. Podczas otwierania problemu pomocy technicznej będą wyświetlane oszacowania w czasie rzeczywistym dotyczące terminu spodziewanego kontaktu telefonicznego lub odpowiedzi za pośrednictwem wiadomości e-mail, a klienci usług Premier i Unified Support mogą łatwo określić ważność problemu, aby szybciej uzyskać pomoc techniczną.
+
+## <a name="week-of-november-11-2019"></a>Tydzień 11 listopada 2019 r.  
+
+### <a name="app-management"></a>Zarządzanie aplikacjami  
+
+#### <a name="improved-macos-enrollment-experience-in-company-portal----5074349-wnready---"></a>Udoskonalone środowisko rejestracji systemu macOS w aplikacji Portal firmy <!-- 5074349 WNready -->  
+Środowisko rejestracji systemu macOS w aplikacji Portal firmy oferuje prostszy proces rejestracji, który jest lepiej dopasowany do środowiska rejestracji systemu iOS w aplikacji Portal firmy. Użytkownicy urządzeń widzą teraz:  
+
+* Bardziej elegancki interfejs użytkownika.  
+* Udoskonaloną listę kontrolną rejestracji.  
+* Łatwiejsze do zrozumienia instrukcje dotyczące sposobu rejestrowania urządzeń.  
+* Udoskonalone opcje rozwiązywania problemów.  
+
+#### <a name="web-apps-launched-from-the-windows-company-portal-app---5030972---"></a>Aplikacje internetowe uruchamiane z poziomu aplikacji Portal firmy systemu Windows<!-- 5030972 -->
+Użytkownicy końcowi mogą teraz uruchamiać aplikacje internetowe bezpośrednio z poziomu aplikacji Portal firmy systemu Windows. Użytkownicy końcowi mogą wybrać aplikację internetową, a następnie wybrać opcję **Otwórz w przeglądarce**. Opublikowany internetowy adres URL zostanie otwarty bezpośrednio w przeglądarce. Ta funkcja zostanie udostępniona w następnym tygodniu. Aby uzyskać więcej informacji na temat aplikacji internetowych, zobacz [Dodawanie aplikacji internetowych do usługi Microsoft Intune](~/apps/web-app.md).  
+
+
+#### <a name="new-assignment-type-column-in-company-portal-for-windows-10----5459950-wnready---"></a>Nowa kolumna typu przypisania w aplikacji Portal firmy dla systemu Windows 10 <!-- 5459950 WNready -->
+Nazwa kolumny w obszarze Portal firmy > **Zainstalowane aplikacje** > **Typ przypisania** została zmieniona na **Wymagane przez organizację**.  W tej kolumnie użytkownicy zobaczą wartość **Tak** lub **Nie**, która wskaże, czy aplikacja jest wymagana przez organizację, czy też została oznaczona jako opcjonalna. Te zmiany zostały wprowadzone, ponieważ koncepcja dostępnych aplikacji nie była jasna dla użytkowników urządzeń. Użytkownicy mogą znaleźć więcej informacji na temat instalowania aplikacji z Portalu firmy w temacie [Instalowanie i udostępnianie aplikacji na urządzeniu](/intune-user-help/install-apps-cpapp-windows). Aby uzyskać więcej informacji na temat konfigurowania aplikacji Portal firmy dla użytkowników, zobacz artykuł [Jak skonfigurować aplikację Portal firmy w usłudze Microsoft Intune](~/apps/company-portal-app.md).  
+
 
 ## <a name="week-of-november-4-2019"></a>Tydzień 4 listopada 2019 r.
 
@@ -139,7 +179,7 @@ Można utworzyć zasady ochrony aplikacji usługi Intune, które mogą blokować
 
 ### <a name="device-configuration"></a>Konfiguracja urządzenia
 
-#### <a name="new-device-firmware-configuration-interface-profile-for-windows-10-and-later-devices---2266073----"></a>Nowy profil interfejsu konfiguracji oprogramowania układowego urządzenia dla urządzeń z systemem Windows 10 lub nowszym<!-- 2266073  -->
+#### <a name="new-device-firmware-configuration-interface-profile-for-windows-10-and-later-devices-public-preview---2266073----"></a>Nowy profil interfejsu konfiguracji oprogramowania układowego urządzenia dla urządzeń z systemem Windows 10 lub nowszym (publiczna wersja zapoznawcza)<!-- 2266073  -->
 
 W systemie Windows 10 i nowszych można utworzyć profil konfiguracji urządzenia w celu kontrolowania ustawień i funkcji (**Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **System Windows 10 i późniejsze** dla platformy). W tej aktualizacji dostępny jest nowy typ profilu interfejsu konfiguracji oprogramowania układowego urządzenia, który umożliwia usłudze Intune zarządzanie ustawieniami interfejsu UEFI (BIOS).
 
@@ -516,7 +556,7 @@ Użyj ustawień usługi Intune Endpoint Protection w celu skonfigurowania [stero
 To ustawienie powoduje zainicjowanie sterowanego przez klienta odświeżania hasła odzyskiwania po odzyskaniu dysku systemu operacyjnego (przy użyciu usługi bootmgr lub WinRE) i odblokowaniu hasła odzyskiwania na stałym dysku danych. To ustawienie powoduje odświeżenie określonego hasła odzyskiwania, które zostało użyte; inne nieużywane hasła z woluminu pozostają niezmienione. Aby uzyskać więcej informacji, zobacz dokumentację dostawcy usług kryptograficznych dotyczącą funkcji BitLocker odnoszącą się do funkcji [ConfigureRecoveryPasswordRotation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp).
 
 #### <a name="tamper-protection-for-windows-defender-antivirus---4705448----------"></a>Ochrona przed naruszeniami dla programu antywirusowego Windows Defender<!-- 4705448        -->
-Usługi Intune można użyć do zarządzania funkcją *Ochrony przed naruszeniami* programu antywirusowego Windows Defender. [Ustawienie funkcji ochrony przed naruszeniami](../protect/endpoint-protection-windows-10.md#windows-defender-security-center) znajduje się w grupie Centrum zabezpieczeń usługi Microsoft Defender i jest dostępne podczas korzystania z profilów konfiguracji urządzenia; umożliwia ono zapewnianie ochrony punktów końcowych w systemie Windows 10. Dla funkcji ochrony przed naruszeniami można wybrać wartość *Włączona*, aby włączyć ograniczenia ochrony przed naruszeniami, *Wyłączona*, aby wyłączyć funkcję, lub *Nie skonfigurowano*, aby zachować bieżącą konfigurację urządzenia.  
+Usługi Intune można użyć do zarządzania funkcją *Ochrony przed naruszeniami* programu antywirusowego Windows Defender. [Ustawienie funkcji ochrony przed naruszeniami](../protect/endpoint-protection-windows-10.md#microsoft-defender-security-center) znajduje się w grupie Centrum zabezpieczeń usługi Microsoft Defender i jest dostępne podczas korzystania z profilów konfiguracji urządzenia; umożliwia ono zapewnianie ochrony punktów końcowych w systemie Windows 10. Dla funkcji ochrony przed naruszeniami można wybrać wartość *Włączona*, aby włączyć ograniczenia ochrony przed naruszeniami, *Wyłączona*, aby wyłączyć funkcję, lub *Nie skonfigurowano*, aby zachować bieżącą konfigurację urządzenia.  
 
 Aby uzyskać więcej informacji na temat ochrony przed naruszeniami, zobacz [Zapobieganie zmianom ustawień zabezpieczeń przy użyciu funkcji ochrony przed naruszeniami](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/prevent-changes-to-security-settings-with-tamper-protection) w dokumentacji systemu Windows.
 

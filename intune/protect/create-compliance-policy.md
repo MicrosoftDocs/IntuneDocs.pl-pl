@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/21/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 76998c32f09b20e624359cc8a38231e14a70399b
-ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
+ms.openlocfilehash: c8452f9b56032864380ec703bfd444dc85ef129b
+ms.sourcegitcommit: 13fa1a4a478cb0e03c7f751958bc17d9dc70010d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72786074"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74188263"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Tworzenie zasad zgodności w usłudze Microsoft Intune
 
@@ -61,19 +61,15 @@ Aby korzystać z zasad zgodności urządzeń, upewnij się, że spełniono nast�
 
 ## <a name="create-the-policy"></a>Tworzenie zasad
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Wybierz pozycję **Zgodność urządzenia**. Do wyboru są następujące opcje:
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-    - **Omówienie**: powoduje wyświetlenie podsumowania i liczby urządzeń, które są zgodne, nie zostały oceniane itd. Jest również wyświetlana lista zasad i poszczególnych ustawień zasad. Pomocne informacje można znaleźć w temacie [Monitorowanie zasad zgodności urządzeń Intune](compliance-policy-monitor.md).
-    - **Zarządzanie**: twórz zasady urządzenia, wysyłaj [powiadomienia](quickstart-send-notification.md) do niezgodnych urządzeń i włączaj [odgradzanie sieci](use-network-locations.md).
-    - **Monitorowanie**: sprawdzaj stan zgodności urządzeń na poziomie ustawienia i zasad. Pomocnym zasobem jest artykuł [Monitorowanie zasad zgodności urządzeń Intune](compliance-policy-monitor.md). Możesz również wyświetlać dzienniki i sprawdzać stan agenta zagrożeń urządzenia.
-    - **Instalator**: używaj [wbudowanych zasad zgodności](device-compliance-get-started.md#ways-to-deploy-device-compliance-policies), włączaj [Zaawansowaną ochronę przed zagrożeniami (ATP) w usłudze Microsoft Defender](advanced-threat-protection.md), dodawaj [łącznik Mobile Threat Defense](mobile-threat-defense.md) i używaj oprogramowania [Jamf](conditional-access-integrate-jamf.md).
+2. Wybierz pozycję **Urządzenia** > **Zasady zgodności** > **Utwórz zasady**.
 
-3. Wybierz pozycję **Zasady** > **Utwórz zasady**. Wprowadź następujące właściwości:
+3. Określ następujące właściwości:
 
-   - **Nazwa**: wprowadź opisową nazwę zasad. Nadaj nazwę zasadom, aby można było je później łatwo rozpoznać. Na przykład dobrą nazwą zasad jest **Oznaczanie urządzeń ze zdjętymi zabezpieczeniami systemu iOS jako niezgodnych**.  
+   - **Nazwa**: wprowadź opisową nazwę zasad. Nadaj nazwę zasadom, aby można było je później łatwo rozpoznać. Na przykład dobrą nazwą zasad jest **Oznaczanie urządzeń ze zdjętymi zabezpieczeniami systemu iOS jako niezgodnych**.
 
-   - **Opis**: wprowadź opis zasad. To ustawienie jest opcjonalne, ale zalecane.  
+   - **Opis**: wprowadź opis zasad. To ustawienie jest opcjonalne, ale zalecane.
 
    - **Platforma**: Wybierz platformę urządzeń. Dostępne opcje:
      - **Administrator urządzenia z systemem Android**
@@ -99,7 +95,7 @@ Aby korzystać z zasad zgodności urządzeń, upewnij się, że spełniono nast�
    - **Lokalizacje** *(Administrator urządzenia z systemem Android)* : Używając zasad, możesz wymuszać zgodność urządzenia na podstawie lokalizacji. Wybierz jedną z istniejących lokalizacji. Nie masz jeszcze lokalizacji? Wskazówki możesz znaleźć w artykule [Korzystanie z lokalizacji (ogrodzenia sieci) w usłudze Intune](use-network-locations.md).  
 
    - **Akcje w przypadku niezgodności**: W przypadku urządzeń niespełniających zasad zgodności możesz dodać sekwencję akcji do automatycznego zastosowania. Ten harmonogram oznaczania urządzenia jako niezgodnego możesz zmienić (np. oznaczać je po jednym dniu). Możesz również skonfigurować drugą akcję, która wysyła wiadomość e-mail do użytkownika, gdy urządzenie nie jest zgodne.
-    
+
      Sekcja dotycząca [dodawania akcji dla niezgodnych urządzeń](actions-for-noncompliance.md) zawiera więcej informacji, między innymi o tworzeniu wiadomości e-mail z powiadomieniem do użytkowników.
 
      Na przykład używasz funkcji Lokalizacje i dodasz lokalizację w zasadach zgodności. Domyślna akcja w przypadku niezgodności jest stosowana, gdy zostanie wybrana co najmniej jedna lokalizacja. Jeśli urządzenie nie jest połączone z wybranymi lokalizacjami, jest natychmiast uznawane za niezgodne. Użytkownikom można przyznać okres prolongaty, np. jeden dzień.
@@ -112,8 +108,10 @@ Aby korzystać z zasad zgodności urządzeń, upewnij się, że spełniono nast�
 
 Po utworzeniu zasad następnym krokiem jest przypisanie zasad do grup:
 
-1. Wybierz utworzone zasady. Dostęp do istniejących zasad można uzyskać po wybraniu pozycji **Zgodność urządzeń** > **Zasady**.
-2. Wybierz zasady > **Przypisania**. Możesz włączyć lub wyłączyć grupy zabezpieczeń usługi Azure Active Directory (AD).
+1. Wybierz utworzone zasady. Dostęp do istniejących zasad można uzyskać po wybraniu pozycji **Urządzenia** > **Zasady zgodności** > **Zasady**.
+
+2. Wybierz *zasady* > **Przypisania**. Możesz włączyć lub wyłączyć grupy zabezpieczeń usługi Azure Active Directory (AD).
+
 3. Wybierz pozycję **Wybrane grupy**, aby wyświetlić grupy zabezpieczeń usługi Azure AD. Wybierz grupy, których mają dotyczyć te zasady i wybierz pozycję **Zapisz**, aby wdrożyć zasady.
 
 Użytkownicy lub urządzenia, których dotyczą zasady, podlegają ocenie pod kątem zgodności po zaewidencjonowaniu w usłudze Intune.
@@ -122,8 +120,9 @@ Użytkownicy lub urządzenia, których dotyczą zasady, podlegają ocenie pod k�
 
 Po przypisaniu zasad możesz również **ocenić**, ilu użytkowników jest uwzględnianych. Ta funkcja oblicza liczbę użytkowników; nie oblicza liczby urządzeń.
 
-1. W usłudze Intune wybierz pozycję **Zgodność urządzenia** > **Zasady**.
-2. Wybierz zasady > **Przypisania** > **Oceń**. Zostanie wyświetlony komunikat z informacją o liczbie użytkowników uwzględnionych w tych zasadach.
+1. W usłudze Intune wybierz pozycję **Urządzenia** > **Zasady zgodności** > **Zasady**.
+
+2. Wybierz *zasady* > **Przypisania** > **Oceń**. Zostanie wyświetlony komunikat z informacją o liczbie użytkowników uwzględnionych w tych zasadach.
 
 Jeśli przycisk **Oceń** jest szary, upewnij się, że zasady zostały przypisane do co najmniej jednej grupy.
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/30/2019
+ms.date: 11/13/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a3a9eb45898102e9d5fcde88f69026467255c513
-ms.sourcegitcommit: d2d18eef64bcf16eec1a48fcb67f1362537c0245
+ms.openlocfilehash: d2ab21321b171c8fe8f5f9dab3032507c0e740cf
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445269"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059754"
 ---
 # <a name="enable-win32-apps-on-s-mode-devices"></a>Włączanie obsługi aplikacji Win32 na urządzeniach w trybie S
 
-[Tryb S systemu Windows 10](https://docs.microsoft.com/windows/deployment/s-mode) to zablokowany system operacyjny, który uruchamia tylko aplikacje ze Sklepu. Domyślnie urządzenia w trybie S systemu Windows nie zezwalają na instalowanie i wykonywanie aplikacji Win32. Te urządzenia zawierają jedną *zasadę podstawową systemu Win 10S*, która blokuje na urządzeniu w trybie S uruchamianie jakichkolwiek aplikacji Win32. Jednak dzięki utworzeniu i zastosowaniu **zasad uzupełniających trybu S** w usłudze Intune można instalować i uruchamiać aplikacje Win32 na urządzeniach zarządzanych w trybie S systemu Windows 10. Używając narzędzi programu PowerShell dla [Kontroli aplikacji usługi Windows Defender (WDAC)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control), można utworzyć jedną lub kilka zasad uzupełniających dla trybu S systemu Windows. Należy podpisać zasady uzupełniające za pomocą [usługi Device Guard — podpisywanie (DGSS)](https://go.microsoft.com/fwlink/?linkid=2095629) lub narzędzia [SignTool.exe](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/signing-policies-with-signtool), a następnie przekazać i rozpowszechnić zasady za pośrednictwem usługi Intune. Alternatywnie zasady uzupełniające można podpisać przy użyciu certyfikatu podpisywania kodu swojej organizacji, jednak preferowaną metodą jest użycie usługi DGSS. W przypadku korzystania z certyfikatu podpisywania kodu swojej organizacji certyfikat główny, do którego jest dowiązany certyfikat podpisywania kodu, musi znajdować się na urządzeniu.
+[Tryb S systemu Windows 10](https://docs.microsoft.com/windows/deployment/s-mode) to zablokowany system operacyjny, który uruchamia tylko aplikacje ze Sklepu. Domyślnie urządzenia w trybie S systemu Windows nie zezwalają na instalowanie i wykonywanie aplikacji Win32. Te urządzenia zawierają jedną *zasadę podstawową systemu Win 10S*, która blokuje na urządzeniu w trybie S uruchamianie jakichkolwiek aplikacji Win32. Jednak dzięki utworzeniu i zastosowaniu **zasad uzupełniających trybu S** w usłudze Intune można instalować i uruchamiać aplikacje Win32 na urządzeniach zarządzanych w trybie S systemu Windows 10. Używając narzędzi programu PowerShell dla [Kontroli aplikacji usługi Microsoft Defender (WDAC)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control), można utworzyć jedną lub kilka zasad uzupełniających dla trybu S systemu Windows. Należy podpisać zasady uzupełniające za pomocą [usługi Device Guard — podpisywanie (DGSS)](https://go.microsoft.com/fwlink/?linkid=2095629) lub narzędzia [SignTool.exe](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/signing-policies-with-signtool), a następnie przekazać i rozpowszechnić zasady za pośrednictwem usługi Intune. Alternatywnie zasady uzupełniające można podpisać przy użyciu certyfikatu podpisywania kodu swojej organizacji, jednak preferowaną metodą jest użycie usługi DGSS. W przypadku korzystania z certyfikatu podpisywania kodu swojej organizacji certyfikat główny, do którego jest dowiązany certyfikat podpisywania kodu, musi znajdować się na urządzeniu.
 
 Przypisując zasady uzupełniające trybu S w usłudze Intune, umożliwiasz urządzeniu zastosowanie wyjątku dla istniejących zasad trybu S urządzenia, co pozwala na przekazanie odpowiedniego podpisanego wykazu aplikacji. Zasady te określają listę dozwolonych aplikacji (wykaz aplikacji), które mogą być używane na urządzeniu w trybie S.
 
@@ -40,7 +40,7 @@ Kroki umożliwiające uruchamianie aplikacji Win32 na urządzeniu z systemem Win
 
 1. Włącz urządzenia w trybie S za pośrednictwem usługi Intune w ramach procesu rejestracji systemu Windows 10 S.
 2. Utwórz zasady uzupełniające, aby zezwolić na aplikacje Win32:
-   - Aby utworzyć zasady uzupełniające, możesz użyć narzędzi [Kontroli aplikacji usługi Windows Defender (WDAC)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control). Identyfikator zasad podstawowych w obrębie tych zasad musi być zgodny z identyfikatorem zasad podstawowych trybu S (który jest na stałe zakodowany na kliencie). Upewnij się również, że wersja zasad jest wyższa niż poprzednia wersja.
+   - Aby utworzyć zasady uzupełniające, możesz użyć narzędzi [Kontroli aplikacji usługi Microsoft Defender (WDAC)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control). Identyfikator zasad podstawowych w obrębie tych zasad musi być zgodny z identyfikatorem zasad podstawowych trybu S (który jest na stałe zakodowany na kliencie). Upewnij się również, że wersja zasad jest wyższa niż poprzednia wersja.
    - Użyj usługi DGSS, aby podpisać zasady uzupełniające. Aby uzyskać więcej informacji, zobacz [Podpisywanie zasad integralności kodu przy użyciu usługi Device Guard — podpisywanie](https://docs.microsoft.com/microsoft-store/sign-code-integrity-policy-with-device-guard-signing).
    - Aby przekazać podpisane zasady uzupełniające do usługi Intune, należy utworzyć zasady uzupełniające trybu S systemu Windows 10 (zobacz poniżej).
 3. Aby zezwolić na wykazy aplikacji Win32, należy użyć usługi Intune:
@@ -72,7 +72,7 @@ Aby utworzyć zasady uzupełniające trybu S systemu Windows 10, wykonaj następ
     | Opis | [Opcjonalnie] Opis tych zasad. |
 
 5. Kliknij przycisk **Dalej: Tagi zakresu**.<br>
-   Na stronie **Tagi zakresu** można opcjonalnie skonfigurować tagi zakresu, aby określić, kto może zobaczyć zasady aplikacji w usłudze Intune. Więcej informacji na temat tagów zakresu można znaleźć w artykule [Use role-based access control and scope tags for distributed IT](~/fundamentals/scope-tags.md) (Używanie kontroli dostępu opartej na rolach (RBAC) i tagów zakresu w rozproszonej infrastrukturze informatycznej).
+   Na stronie **Tagi zakresu** można opcjonalnie skonfigurować tagi zakresu, aby określić, kto może zobaczyć zasady aplikacji w usłudze Intune. Więcej informacji na temat tagów zakresu można znaleźć w artykule [Używanie kontroli dostępu opartej na rolach (RBAC) i tagów zakresu w rozproszonej infrastrukturze informatycznej](~/fundamentals/scope-tags.md).
 
 6. Kliknij przycisk **Dalej: Przypisania**.<br>
    Strona **Przypisania** umożliwia przypisanie zasad do użytkowników i urządzeń. Ważne jest, aby pamiętać, że zasady można przypisać do urządzenia bez względu na to, czy jest ono zarządzane przez usługę Intune.

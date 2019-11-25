@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/28/2019
+ms.date: 11/13/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e453002493e95bd5147cca115075a17a6e7a298
-ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
+ms.openlocfilehash: 6f9c09105ab7286eb315c6bf0f04f1801706bfa8
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73709320"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059703"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Konfigurowanie strony ze stanem rejestracji
  
@@ -197,7 +197,7 @@ Poniżej przedstawiono znane problemy.
     - poświadczenia użytkownika nie są zachowywane;
     - użytkownik musi ponownie wprowadzić poświadczenia przed przejściem z fazy konfiguracji urządzenia do fazy konfiguracji konta;
 - strona ze stanem rejestracji jest zablokowana przez długi czas lub faza „Identifying” (Identyfikowanie) nigdy nie zostaje ukończona. Usługa Intune oblicza zasady strony ze stanem rejestracji w fazie identyfikowania. Jeśli bieżący użytkownik nie ma przypisanej licencji usługi Intune, urządzenie może nigdy nie ukończyć przetwarzania zasad strony ze stanem rejestracji.  
-- Skonfigurowanie rozwiązania Kontrola aplikacji usługi Windows Defender powoduje wyświetlenie monitu o ponowne uruchomienie podczas korzystania z rozwiązania Autopilot. Konfigurowanie aplikacji Windows Defender (AppLocker CSP) wymaga ponownego uruchomienia. Skonfigurowanie tych zasad może spowodować ponowne uruchomienie urządzenia podczas korzystania z rozwiązania Autopilot. Obecnie nie ma możliwości pominięcia lub odroczenia ponownego uruchomienia.
+- Skonfigurowanie rozwiązania Kontrola aplikacji usługi Microsoft Defender powoduje wyświetlenie monitu o ponowne uruchomienie podczas korzystania z rozwiązania Autopilot. Konfigurowanie aplikacji Microsoft Defender (AppLocker CSP) wymaga ponownego uruchomienia. Skonfigurowanie tych zasad może spowodować ponowne uruchomienie urządzenia podczas korzystania z rozwiązania Autopilot. Obecnie nie ma możliwości pominięcia lub odroczenia ponownego uruchomienia.
 - Gdy zasady DeviceLock (https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) są włączone w ramach profilu strony ze stanem rejestracji, proces OOBE lub logowanie automatyczne użytkownika do komputera może nieoczekiwanie zakończyć się niepowodzeniem z dwóch powodów.
   - Jeśli urządzenie nie zostało ponownie uruchomione przed zakończeniem fazy konfiguracji urządzenia strony ze stanem rejestracji, użytkownik może zostać poproszony o wprowadzenie poświadczeń usługi Azure AD. Ten monit jest wyświetlany zamiast pomyślnego logowania automatycznego powodującego wyświetlenie animacji pierwszego logowania użytkownika w systemie Windows.
   - Logowanie automatyczne nie powiedzie się, jeśli urządzenie zostało uruchomione ponownie po wprowadzeniu poświadczeń usługi Azure AD przez użytkownika, ale przed zakończeniem fazy konfiguracji urządzenia strony ze stanem rejestracji. Ten błąd występuje, ponieważ faza konfiguracji urządzenia strony ze stanem rejestracji nigdy nie została ukończona. Obejście polega na zresetowaniu urządzenia.

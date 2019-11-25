@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/13/2018
+ms.date: 11/14/2018
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cbdef7cffa76beeb158c47ab3651d438de2d6ccc
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 684e9602e66842e26a7f8e233a8cee6db73f132d
+ms.sourcegitcommit: 76ae5aea5deee7a590e24c3b2bb52f88125943e5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72503159"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74098204"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Konfigurowanie rejestracji dla urządzeń z systemem macOS w usłudze Intune
 
@@ -42,15 +42,16 @@ Przed rozpoczęciem konfigurowania rejestracji urządzeń z systemem macOS nale�
 - [Ustawienie urzędu zarządzania urządzeniami przenośnymi](../fundamentals/mdm-authority-set.md)
 - [Tworzenie grup](../fundamentals/groups-add.md)
 - [Skonfigurowanie aplikacji Portal firmy](../apps/company-portal-app.md)
-- Przypisanie licencji użytkowników w [Centrum administracyjnym platformy Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854)
+- Przypisanie licencji użytkowników w [Centrum administracyjnym platformy Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=698854)
 - [Uzyskiwanie certyfikatu wypychania MDM firmy Apple](../enrollment/apple-mdm-push-certificate-get.md)
 
 ## <a name="user-owned-macos-devices-byod"></a>Urządzenia z systemem macOS należące do użytkownika (BYOD)
 
-Możesz umożliwić użytkownikom rejestrowanie swoich urządzeń osobistych na potrzeby zarządzania w usłudze Intune — rozwiązanie to nazywa się „bring your own device”, czyli BYOD. Gdy wymagania wstępne zostaną spełnione, a licencje użytkowników przypisane, użytkownicy mogą zarejestrować swoje urządzenia przez:
+Możesz zezwolić użytkownikom na rejestrowanie własnych urządzeń osobistych w funkcji zarządzania usługi Intune. Ta strategia jest znana jako „bring your own device” (przynieś własne urządzenie) lub BYOD. Gdy wymagania wstępne zostaną spełnione, a licencje użytkowników przypisane, użytkownicy mogą zarejestrować swoje urządzenia przez:
 - przejście do [witryny Portal firmy](https://portal.manage.microsoft.com) lub
-- pobranie aplikacji Portal firmy.
-Możesz także wysłać im link do opisu kroków rejestracji online: [Rejestrowanie urządzenia z systemem macOS w usłudze Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos).
+- pobranie aplikacji Portal firmy dla komputerów Mac na stronie [aka.ms/EnrollMyMac](https://aka.ms/EnrollMyMac).
+
+Możesz także wysłać im użytkownikom link do opisu kroków rejestracji online: [Rejestrowanie urządzenia z systemem macOS w usłudze Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos).
 
 Aby uzyskać informacje o innych zadaniach użytkownika końcowego, zobacz następujące artykuły:
 
@@ -77,12 +78,17 @@ W przypadku oprogramowania Parallels Desktop należy ustawić typ sprzętu i num
 W przypadku oprogramowania VMware Fusion należy [edytować plik vmx](https://kb.vmware.com/s/article/1014782), aby ustawić model sprzętu i numer seryjny maszyny wirtualnej. Zaleca się dopasowanie typu sprzętu urządzenia, na którym są uruchomione maszyny wirtualne, do typu sprzętu tworzonych maszyn wirtualnych. Ten typ sprzętu można znaleźć, wybierając kolejno **menu Apple** > **Informacje o tym Macu** > **Raport systemowy** > **Identyfikator modelu**. 
 
 ## <a name="user-approved-enrollment"></a>Rejestracja zatwierdzona przez użytkownika
-
 Rejestracja MDM zatwierdzona przez użytkownika to typ rejestracji w systemie macOS, którego można używać do zarządzania niektórymi ustawieniami istotnymi dla bezpieczeństwa. Aby uzyskać więcej informacji, zobacz [dokumentację pomocy technicznej firmy Apple](https://support.apple.com/HT208019).
 
-W celu uzyskania zatwierdzenia użytkownika użytkownik końcowy musi — po zarejestrowaniu przy użyciu Portalu firmy dla systemu macOS — ręcznie przeprowadzić zatwierdzanie przy użyciu preferencji systemowych. Instrukcje dotyczące wykonywania tej czynności są dostępne w aplikacji Portal firmy dla systemu macOS dla użytkowników systemu macOS w wersji 10.13.2 i nowszych.
+Od listopada 2019 r. wszystkie nowe rejestracje urządzeń z systemem macOS należących do użytkownika będą zatwierdzane przez użytkowników, ponieważ użytkownik musi ręcznie zainstalować profil zarządzania w celu pomyślnego zarejestrowania. Podczas [procesu rejestracji](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos-cp) użytkownik zainstaluje profil zarządzania firmy Apple w obszarze **Preferencje systemowe** > **Profile**.  Instrukcje dotyczące instalacji profilu zarządzania są dostępne w aplikacji Portal firmy dla systemu macOS.
 
-Aby sprawdzić, czy urządzenie zostało zatwierdzone przez użytkownika, przejdź do portalu usługi Intune, a następnie wybierz kolejno pozycje **Urządzenia** > **Wszystkie urządzenia**> wybierz urządzenie > **Sprzęt**. Zaznacz pole **Zatwierdzone przez użytkownika**.
+Urządzenia zarejestrowane przed listopadem 2019 r. mogą nie być zatwierdzane przez użytkownika, jeśli użytkownik nie zatwierdził ręcznie profilu zarządzania. Użytkownicy mogą jednak wrócić i zatwierdzić profil zarządzania, przechodząc do pozycji **Preferencje systemowe** > **Profile** i wybierając **profil zarządzania** > **Zatwierdź**.
+
+### <a name="find-out-if-a-device-is-user-approved"></a>Sprawdzanie, czy urządzenie zostało zatwierdzone przez użytkownika
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz pozycję **Urządzenia** > **Wszystkie urządzenia** > wybierz urządzenie > **Sprzęt**.
+3. Sprawdź pole **Rejestrowanie zatwierdzone przez użytkownika**.
+
 
 ## <a name="next-steps"></a>Następne kroki
 

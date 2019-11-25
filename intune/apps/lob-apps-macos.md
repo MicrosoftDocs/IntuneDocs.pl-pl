@@ -18,18 +18,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9802b85a9674535cea62ae28f135153352ef76c
-ms.sourcegitcommit: 25acfc88b366d2da71c37d354a0238e4f1168325
+ms.openlocfilehash: aeae231e07ceeee6a54f8f60ec5d53cc96d55be0
+ms.sourcegitcommit: 737ad6c675deedfc6009f792023ff95981b06582
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72813270"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74117885"
 ---
 # <a name="how-to-add-macos-line-of-business-lob-apps-to-microsoft-intune"></a>Jak dodawać aplikacje biznesowe (LOB) systemu macOS do usługi Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Informacje przedstawione w tym artykule ułatwiają dodawanie aplikacji biznesowych systemu macOS do usługi Microsoft Intune. Musisz pobrać narzędzie zewnętrzne, aby wstępnie przetworzyć pliki *PKG* przed przekazaniem pliku biznesowego do usługi Microsoft Intune. Przetwarzanie wstępne plików *PKG* należy przeprowadzić na urządzeniu z systemem macOS.
+
+> [!NOTE]
+> Począwszy od wersji macOS Catalina 10.15, przed dodaniem aplikacji do usługi Intune, upewnij się, że Twoje aplikacje biznesowe dla systemu macOS zostały notarializowane. Jeśli deweloperzy aplikacji biznesowych nie notarializują swoich aplikacji, aplikacje nie będą działać na urządzeniach użytkowników z systemem macOS. Aby uzyskać więcej informacji na temat sprawdzania, czy aplikacja została notarializowana, odwiedź stronę [Notarize your macOS apps to prepare for macOS Catalina (Notarializowanie aplikacji dla systemu macOS w celu przygotowania się do korzystania z systemu macOS Catalina)](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Notarizing-your-macOS-apps-to-prepare-for-macOS/ba-p/808579).
 
 > [!NOTE]
 > Użytkownicy urządzeń z systemem macOS mogą usuwać niektóre wbudowane aplikacje dla systemu macOS, takie jak Stocks i Maps, ale nie można użyć usługi Intune do ponownego wdrożenia tych aplikacji. Jeśli użytkownicy końcowi usuwają te aplikacje, muszą przejść do sklepu z aplikacjami i ręcznie zainstalować je ponownie.

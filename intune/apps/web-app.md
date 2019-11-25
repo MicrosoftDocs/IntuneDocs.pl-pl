@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 11/13/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6600c75ce3e6120143b17fb863670b2eb423a09f
-ms.sourcegitcommit: ae6f2e7812e7fd36f2393b8f4b6cd8de63777b2c
+ms.openlocfilehash: 997cf043f8ea61133d6e61f4584ad9349aedbf73
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592057"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74060037"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>Dodawanie aplikacji internetowych do usługi Microsoft Intune
 
@@ -36,7 +36,7 @@ Aby można było zarządzać aplikacją oraz przypisywać ją do użytkowników,
 Usługa Intune tworzy skrót do aplikacji internetowej na urządzeniu użytkownika. W przypadku urządzeń z systemem iOS skrót do aplikacji internetowej jest dodawany do ekranu głównego. W przypadku urządzeń z systemem Android skrót do aplikacji internetowej jest dodawany do widżetu Portal firmy usługi Intune, a widżet musi zostać przypięty ręcznie przez użytkownika. W przypadku urządzeń z systemem Windows skrót do aplikacji internetowej jest umieszczany w menu Start.
 
 > [!Note]
-> Aby można było uruchamiać aplikacje internetowe, na urządzeniu użytkownika musi być zainstalowana przeglądarka.
+> Aby można było uruchamiać aplikacje internetowe, na urządzeniu użytkownika musi być zainstalowana przeglądarka. 
 
 ## <a name="add-a-web-app-to-intune"></a>Dodawanie aplikacji internetowej do usługi Intune
 Aby dodać aplikację do usługi Intune jako skrót do aplikacji w Internecie, wykonaj następujące czynności:
@@ -67,6 +67,8 @@ Aby dodać aplikację do usługi Intune jako skrót do aplikacji w Internecie, w
 > Użytkownicy muszą dodać widżet usługi Intune do ekranu głównego, aby móc wyświetlać aplikacje internetowe przypisane do urządzeń z systemem Android.
 >
 > Obecnie wdrożenie aplikacji internetowych usługi Intune na urządzeniach z systemem iOS jest skojarzone z profilem zarządzania i nie można usunąć go ręcznie. Typ wdrożenia można zmienić na **Odinstaluj** w portalu usługi Intune. Po wykonaniu tej czynności będzie można automatycznie usuwać aplikację internetową. Jednak w przypadku usunięcia wdrożenia przed zmianą intencji przypisywania aplikacji na **Odinstaluj** aplikacja internetowa zostanie trwale umieszczona na urządzeniu do momentu wyrejestrowania go z usługi Intune.
+
+Użytkownicy końcowi mogą uruchamiać aplikacje internetowe bezpośrednio z poziomu aplikacji Portal firmy systemu Windows, wybierając aplikację internetową, a następnie wybierając opcję **Otwórz w przeglądarce**. Opublikowany internetowy adres URL zostanie otwarty bezpośrednio w przeglądarce. 
 
 ## <a name="next-steps"></a>Następne kroki
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,16 +15,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 333b94bf3226c99ed50c4b433f4b477814b8e4bb
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 4fce03913042675588ea12e5399e6f5a1be04946
+ms.sourcegitcommit: 13fa1a4a478cb0e03c7f751958bc17d9dc70010d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509534"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74188254"
 ---
 # <a name="use-windows-hello-for-business-on-windows-10-devices-with-microsoft-intune"></a>Korzystanie z funkcji Windows Hello dla firm na urządzeniach z systemem Windows 10 z usługą Microsoft Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Funkcja Windows Hello dla firm to metoda logowania do urządzeń z systemem Windows przez zastępowanie haseł, kart inteligentnych i wirtualnych kart inteligentnych. Usługa Intune oferuje wbudowane ustawienia, dzięki którym administratorzy mogą konfigurować funkcję Windows Hello dla firm i jej używać. Tych ustawień można na przykład używać w celu:
 
@@ -34,7 +32,7 @@ Funkcja Windows Hello dla firm to metoda logowania do urządzeń z systemem Wind
 
 Ta funkcja ma zastosowanie do urządzenia z systemem:
 
-- System Windows 10 lub nowszy
+- Windows 10 lub nowszym
 - Windows 10 Mobile
 - Windows Holographic for Business
 
@@ -44,23 +42,33 @@ W tym artykule przedstawiono sposób tworzenia profilu konfiguracji urządzenia.
 
 ## <a name="create-the-device-profile"></a>Tworzenie profilu urządzenia
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Wybierz pozycję **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Wybierz pozycję **Urządzenia** > **Profile konfiguracji** > **Utwórz profil**.
+
 3. Wprowadź następujące właściwości:
 
-    - **Nazwa**: Wprowadź opisową nazwę nowego profilu.
-    - **Opis**: Wprowadź opis profilu. To ustawienie jest opcjonalne, ale zalecane.
-    - **Platforma**: Wybierz pozycję **Windows 10 i nowsze**. Usługa Windows Hello dla firm jest obsługiwana tylko na urządzeniach z systemem Windows 10 lub nowszym.
-    - **Typ profilu**: wybierz pozycję **Identity protection**.
-    - **Skonfiguruj usługę Windows Hello dla firm**: wybierz sposób konfigurowania usługi Windows Hello dla firm. Dostępne opcje:
+   - **Nazwa**: Wprowadź opisową nazwę nowego profilu.
+   - **Opis**: Wprowadź opis profilu. To ustawienie jest opcjonalne, ale zalecane.
+   - **Platforma**: Wybierz pozycję **Windows 10 i nowsze**. Usługa Windows Hello dla firm jest obsługiwana tylko na urządzeniach z systemem Windows 10 lub nowszym.
+   - **Typ profilu**: wybierz pozycję **Identity protection**.
 
-        - **Nieskonfigurowane**: [aprowizuje usługę Windows Hello for Business](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning) na urządzeniu. Podczas przypisywania profilów ochrony tożsamości tylko do użytkowników wartością domyślną kontekstu urządzenia jest **Nieskonfigurowane**.
-        - **Wyłączone**: wybierz tę opcję, jeśli nie chcesz używać usługi Windows Hello dla firm. Ta opcja powoduje wyłączenie usługi Windows Hello dla firm dla wszystkich użytkowników.
-        - **Włączone**: wybierz tę opcję, aby przeprowadzać [aprowizowanie](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning), i skonfiguruj ustawienia usługi Windows Hello dla firm w usłudze Intune. wprowadź ustawienia, które chcesz skonfigurować. Listę wszystkich ustawień i ich zadań można znaleźć w temacie:
+4. W okienku *Windows Hello dla firm* skonfiguruj następujące opcje:
 
-            - [Windows 10 device settings to enable Windows Hello for Business](identity-protection-windows-settings.md) (Ustawienia urządzeń z systemem Windows 10 służące do włączania funkcji Windows Hello dla firm)
+   - **Skonfiguruj usługę Windows Hello dla firm**: wybierz sposób konfigurowania usługi Windows Hello dla firm:
 
-4. Po zakończeniu wybierz kolejno pozycje **OK** > **Utwórz**, aby zapisać zmiany.
+     - **Nieskonfigurowane** (wartość domyślna): [aprowizuje usługę Windows Hello for Business](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning) na urządzeniu. Podczas przypisywania profilów ochrony tożsamości tylko do użytkowników wartością domyślną kontekstu urządzenia jest **Nieskonfigurowane**.
+
+     - **Wyłączone**: wybierz tę opcję, jeśli nie chcesz używać usługi Windows Hello dla firm. Ta opcja powoduje wyłączenie usługi Windows Hello dla firm dla wszystkich użytkowników.
+
+     - **Włączone**: wybierz tę opcję, aby przeprowadzać [aprowizowanie](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning), i skonfiguruj ustawienia usługi Windows Hello dla firm w usłudze Intune. wprowadź ustawienia, które chcesz skonfigurować. Listę wszystkich ustawień i ich zadań można znaleźć w temacie [Windows 10 device settings to enable Windows Hello for Business](identity-protection-windows-settings.md) (Ustawienia urządzeń z systemem Windows 10 służące do włączania funkcji Windows Hello dla firm).
+
+   - **Użyj kluczy zabezpieczeń do logowania się**: włącz klucz zabezpieczeń funkcji Windows Hello jako poświadczenie logowania dla wszystkich komputerów w dzierżawie.
+
+     - **Włączenie**
+     - **Nie skonfigurowano** (wartość domyślna)
+
+5. Po zakończeniu wybierz kolejno pozycje **OK** > **Utwórz**, aby zapisać zmiany.
 
 Profil został utworzony i wyświetlony na liście profilów. Następnie [przypisz](../configuration/device-profile-assign.md) ten profil do grup użytkowników i urządzeń stosownie do potrzeb.
 

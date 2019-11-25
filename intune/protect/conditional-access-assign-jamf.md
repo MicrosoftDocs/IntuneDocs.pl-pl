@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d3552eca925865eb3278b50490a6b70ee5807e2b
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: b09b30fd32caace9ed3259350c01548d5e5fae15
+ms.sourcegitcommit: 93265c2491058afde7168134075bed77031b9311
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72502454"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74161592"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Wymuszanie zgodności na urządzeniach Mac zarządzanych za pomocą narzędzia Jamf Pro
 
@@ -37,12 +37,11 @@ Procedury opisane w tym artykule wymagają dostępu zarówno do konsoli usługi 
 
 ## <a name="set-up-device-compliance-policies-in-intune"></a>Konfigurowanie zasad zgodności urządzeń w usłudze Intune
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) i przejdź do pozycji **Zgodność urządzenia** > **Zasady**. 
-2. Jeśli używasz wcześniej utworzonych zasad, wybierz te zasady w konsoli, a następnie przejdź do następnego kroku tej procedury.  
-   
-   Wybierz pozycję **Utwórz zasady**, a następnie określ szczegóły zasad, ustawiając *Platformę* jako **macOS**. Skonfiguruj *Ustawienia* i *Akcje w przypadku niezgodności*, aby spełnić wymagania organizacyjne, a następnie wybierz pozycję **Utwórz**, aby zapisać zasady.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-3. W okienku *Przegląd* zasad wybierz pozycję **Przypisania**. Użyj dostępnych opcji, aby skonfigurować, którzy użytkownicy i które grupy zabezpieczeń usługi Azure Active Directory (Azure AD) mają otrzymywać te zasady. Integracja narzędzia Jamf z usługą Intune nie obsługuje zasad zgodności, które są przeznaczone dla grup urządzeń. 
+2. Wybierz pozycję **Urządzenia** > **Zasady zgodności**. Jeśli używasz wcześniej utworzonych zasad, wybierz te zasady w konsoli, a następnie przejdź do następnego kroku tej procedury. Aby utworzyć nowe zasady, wybierz pozycję **Utwórz zasady**, a następnie określ szczegóły zasad, ustawiając pole *Platforma* na wartość **macOS**. Skonfiguruj *Ustawienia* i *Akcje w przypadku niezgodności*, aby spełnić wymagania organizacyjne, a następnie wybierz pozycję **Utwórz**, aby zapisać zasady.
+
+3. W okienku *Przegląd* zasad wybierz pozycję **Przypisania**. Użyj dostępnych opcji, aby skonfigurować, którzy użytkownicy i które grupy zabezpieczeń usługi Azure Active Directory (Azure AD) mają otrzymywać te zasady. Integracja narzędzia Jamf z usługą Intune nie obsługuje zasad zgodności, które są przeznaczone dla grup urządzeń.
 
 4. Po wybraniu opcji **Zapisz** zasady są wdrażane dla użytkowników.  
 
@@ -103,7 +102,7 @@ Rejestracja urządzenia wymaga od użytkownika urządzenia ręcznego wybrania ap
 
 Użyj konsoli Jamf Pro, aby potwierdzić, że komunikacja między narzędziem Jamf Pro i usługą Microsoft Intune przebiega pomyślnie. 
 
-- W Jamf Pro przejdź do pozycji **Ustawienia** > **Zarządzanie globalne** > **Integracja z usługą Microsoft Intune**, a następnie wybierz pozycję **Test**. 
+- W Jamf Pro przejdź do pozycji **Ustawienia** > **Zarządzanie globalne** > **Integracja z usługą Microsoft Intune**, a następnie wybierz pozycję **Test**.
 
     W konsoli programu zostanie wyświetlony komunikat o powodzeniu lub niepowodzeniu próby połączenia.  
 
@@ -112,7 +111,7 @@ Jeśli test połączenia z konsoli Jamf Pro zakończy się niepowodzeniem, spraw
 
 ## <a name="removing-a-jamf-managed-device-from-intune"></a>Usuwanie urządzenia zarządzanego za pomocą narzędzia Jamf z usługi Intune
 
-Urządzenie zarządzane za pomocą narzędzia Jamf można usunąć z konsoli usługi Intune, wybierając pozycję **Usuń** w widoku **Wszystkie urządzenia**. Zbiorcze usuwanie urządzeń można włączyć, zaznaczając wiele urządzeń i klikając pozycję **Usuń**.
+Aby usunąć urządzenie zarządzane przez narzędzie Jamf, otwórz centrum administracyjne programu Microsoft Endpoint Manager i wybierz pozycję **Urządzenia** > **Wszystkie urządzenia**, wybierz urządzenie, a następnie wybierz pozycję **Usuń**.  Zbiorcze usuwanie urządzeń można włączyć, zaznaczając wiele urządzeń i klikając pozycję **Usuń**.
 
 Zapoznaj się z informacjami na temat [usuwania urządzenia zarządzanego za pomocą narzędzia Jamf w dokumentacji programu Jamf Pro](https://www.jamf.com/jamf-nation/articles/80/unmanaging-computers-while-preserving-their-inventory-information). Możesz również wypełnić bilet pomocy technicznej dla [obsługi Jamf](https://www.jamf.com/support/) w celu uzyskania dodatkowej pomocy. 
 

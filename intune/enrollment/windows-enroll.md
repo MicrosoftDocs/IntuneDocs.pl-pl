@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5eb5a8f462846afd97ae4ea84b7431ae147d918c
-ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
+ms.openlocfilehash: 30a1c9b1fddaa59d633c8dc969063b26b25097de
+ms.sourcegitcommit: 76ae5aea5deee7a590e24c3b2bb52f88125943e5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73709181"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74098183"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Konfigurowanie rejestracji dla urządzeń z systemem Windows
 
@@ -117,6 +117,15 @@ Instrukcje dotyczące rejestrowania przez użytkownika końcowego można znaleź
 > Jeśli nie włączono automatycznej rejestracji w rozwiązaniu MDM, ale masz urządzenia z systemem Windows 10, które zostały dołączone do usługi Azure AD, po rejestracji w konsoli usługi Intune będą widoczne dwa rekordy. Możesz rozwiązać ten problem, upewniając się, że użytkownicy z urządzeniami dołączonymi do usługi Azure AD przechodzą do pozycji **Konta** > **Uzyskaj dostęp do miejsca pracy lub nauki** i **Połącz** przy użyciu tego samego konta. 
 
 Aby uzyskać więcej informacji o zadaniach użytkowników końcowych, zobacz [Zasoby dotyczące środowiska użytkownika końcowego w usłudze Microsoft Intune](../fundamentals/end-user-educate.md).
+
+## <a name="registration-and-enrollment-cnames"></a>Rekordy CNAME rejestracji
+Usługa Azure Active Directory ma różne rekordy CNAME, których używa do rejestracji urządzeń z systemem iOS, Android i Windows. Dostęp warunkowy usługi Intune wymaga zarejestrowania urządzeń. Ta operacja nosi również nazwę „dołączania w miejscu pracy”. Jeśli planujesz korzystanie z dostępu warunkowego, musisz również skonfigurować rekord CNAME EnterpriseRegistration dla każdej posiadanej nazwy firmy.
+
+| Typ | Nazwa hosta | Przekierowanie na | TTL |
+| --- | --- | --- | --- |
+| NAZWA | EnterpriseRegistration. domena_firmy.com | EnterpriseRegistration.windows.net | 1 godzina|
+
+Aby uzyskać więcej informacji na temat rejestracji urządzeń, zobacz [Manage device identities using the Azure portal](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal) (Zarządzanie tożsamościami urządzeń w witrynie Azure Portal)
 
 ## <a name="next-steps"></a>Następne kroki
 

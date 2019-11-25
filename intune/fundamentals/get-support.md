@@ -6,160 +6,129 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/30/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 7fc95d17-098e-4da5-8a09-a96476569dd9
-ms.reviewer: cacamp
+ms.reviewer: srik
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1049bfeaf3840e1e6a711fd4df10b0a29a88b6b8
-ms.sourcegitcommit: 85c894cb4df34a5ff558e3b45e28a8b91054d9e6
+ms.openlocfilehash: 14ff8ad2d41a6f2235c18f155e3a5b865e3a32e4
+ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73432552"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74199307"
 ---
-# <a name="how-to-get-support-for-microsoft-intune"></a>Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune  
-  
+# <a name="how-to-get-support-for-microsoft-intune"></a>Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune
+
 Firma Microsoft zapewnia globalne wsparcie dotyczące kwestii technicznych, przedsprzedaży, rozliczeń i subskrypcji dla usługi Microsoft Intune. Pomoc techniczna jest dostępna online i telefonicznie w przypadku subskrypcji wersji próbnych i płatnych. Pomoc techniczna online jest dostępna w języku angielskim i japońskim. Telefoniczna pomoc techniczna i pomoc online związana z rozliczeniami są dostępne w dodatkowych językach.
 
-Jako administrator usługi Intune możesz za pomocą opcji **Pomoc i obsługa techniczna** zgłosić bilet pomocy technicznej online dla usługi Intune w witrynie Azure Portal. Aby utworzyć zdarzenie pomocy technicznej i zarządzać nim, konto musi mieć przypisaną rolę usługi Azure Active Directory (Azure AD), która zawiera *akcję* **microsoft.office365.supportTickets**. Aby uzyskać informacje na temat ról i uprawnień usługi Azure AD, które są wymagane do utworzenia biletu pomocy technicznej, zapoznaj się z [rolami administratora w usłudze Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal).  
+Jako administrator usługi Intune możesz za pomocą opcji **Pomoc i obsługa techniczna** zgłosić bilet pomocy technicznej online dla usługi Intune w witrynie Azure Portal. Aby utworzyć zdarzenie pomocy technicznej i zarządzać nim, konto musi mieć przypisaną rolę usługi Azure Active Directory (Azure AD), która zawiera *akcję* **microsoft.office365.supportTickets**. Aby uzyskać informacje na temat ról i uprawnień usługi Azure AD, które są wymagane do utworzenia biletu pomocy technicznej, zapoznaj się z [rolami administratora w usłudze Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal).
 
->[!IMPORTANT]  
+>[!IMPORTANT]
 > Aby uzyskać pomoc techniczną dotyczącą produktów innych firm, które działają z usługą Intune (na przykład Saaswedo, Cisco lub Lookout), najpierw skontaktuj się z dostawcą danego produktu. Zanim utworzysz żądanie obsługi usługi Intune, upewnij się, że produkt został poprawnie skonfigurowany.
 >
 > Aby uzyskać informacje na temat rozwiązywania problemów z usługą Microsoft Intune, zobacz sekcję [Rozwiązywanie problemów](help-desk-operators.md) w dokumentacji usługi Intune.
 
-## <a name="known-issues-for-creating-support-incidents"></a>Znane problemy dotyczące tworzenia zdarzeń pomocy technicznej
 
-Jeśli konto ma wymagane uprawnienia, ale nie można pomyślnie uzyskać dostępu do pomocy i obsługi technicznej ani utworzyć zdarzenia pomocy technicznej albo nim zarządzać, zapoznaj się z następującymi znanymi problemami i rozwiązaniami:
+## <a name="help-and-support-experience"></a>Środowisko pomocy i obsługi technicznej
 
-- Nieaktualny token użytkownika dla konta. Aby rozwiązać ten problem, wyloguj się ze wszystkich aktywnych sesji konsoli, zaloguj się ponownie, a następnie ponów próbę utworzenia zdarzenia pomocy technicznej lub zarządzania nim.
-- Wiele aktywnych sesji. Jeśli zalogujesz się za pomocą więcej niż jednego użytkownika lub sesji, wyloguj się ze wszystkich konsoli oprócz jednej. Następnie w ramach jednej aktywnej sesji spróbuj utworzyć zdarzenie pomocy technicznej lub zarządzać nim.
+Środowisko pomocy i obsługi technicznej dla usługi Intune jest dostępne w [portalu zarządzania urządzeniami na platformie Microsoft 365](https://devicemanagement.microsoft.com) oraz z poziomu wszystkich bloków (lub stron) w usłudze Intune w witrynie Azure Portal.
 
-Dodatkowe akcje, które mogą być niezbędne do rozwiązania problemów z dostępem:
+Środowisko *Pomoc i obsługa techniczna* jest podobne do środowiska w [centrum administracyjnym platformy Microsoft 365](https://admin.microsoft.com/) i zastępuje poprzednie środowisko *Pomoc i obsługa techniczna*, które w dalszym ciągu jest dostępne dla innych usług na platformie Azure.
 
-- Wyczyść wszystkie pliki cookie aktywnej sesji przeglądarki, a następnie spróbuj ponownie utworzyć zdarzenie pomocy technicznej lub nim zarządzać.
-- Użyj sesji przeglądania InPrivate, aby zalogować się w usłudze Intune, i spróbuj ponownie utworzyć zdarzenie pomocy technicznej lub nim zarządzać.
+> [!TIP]
+> Od 18 listopada 2019 r. zaktualizowane i usprawnione środowisko w konsoli służące do uzyskiwania pomocy i obsługi technicznej jest dostępne dla dzierżaw. Jeśli jeszcze nie masz dostępu do nowego środowiska, udostępnimy je wkrótce.
 
-Jeśli poprzednie obejścia nie pomogą, przejdź do [centrum administracyjnego platformy Microsoft 365](https://admin.microsoft.com) i utwórz w nim bilet pomocy technicznej. Obecnie pracujemy nad poprawką, która zostanie udostępniona pod koniec lata.
+### <a name="options-to-access-help-and-support"></a>Opcje dostępu do pomocy i obsługi technicznej
 
-## <a name="help-and-support-experience"></a>Środowisko pomocy i obsługi technicznej  
+- **W witrynie Azure Portal:**
 
-Środowisko pomocy i obsługi technicznej dla usługi Intune jest dostępne w [portalu zarządzania urządzeniami na platformie Microsoft 365](https://devicemanagement.microsoft.com) oraz z poziomu wszystkich bloków (lub stron) w usłudze Intune w witrynie Azure Portal. 
+  - Wybierz pozycję **Pomoc i obsługa techniczna** w dowolnym bloku lub na dowolnej stronie usługi Intune.
 
-![Bloki w usłudze Intune](./media/get-support/intune-blades.png)
+  > [!NOTE]  
+  > Jeśli Twoje wystąpienie usługi Intune jest hostowane w chmurze prywatnej dla instytucji rządowych, zwanej również suwerenną chmurą, takiej jak Azure Government, zobacz [Pomoc techniczna usługi Intune dla chmury prywatnej dla instytucji rządowych](#intune-support-for-private-cloud-for-government) w dalszej części tego artykułu. Środowisko *Pomoc i obsługa techniczna* usługi Intune nie będzie dostępne w prywatnej chmurze dla instytucji rządowych aż do następnego roku.
 
-
-Środowisko *Pomoc i obsługa techniczna* jest podobne do środowiska w [centrum administracyjnym platformy Microsoft 365](https://admin.microsoft.com/) i zastępuje poprzednie środowisko *Pomoc i obsługa techniczna*, które w dalszym ciągu jest dostępne dla innych usług na platformie Azure. 
-
-Aby uzyskać dostęp do pomocy i obsługi technicznej, użyj następujących opcji:  
-- **Pulpit nawigacyjny zarządzania urządzeniami:**
+- **Na pulpicie nawigacyjnym zarządzania urządzeniami:**
   - Po wybraniu obszaru funkcji dla usługi Intune wybierz opcję **Pomoc i obsługa techniczna.**
   - Z poziomu dowolnego węzła w portalu zarządzania urządzeniami wybierz ikonę **?** w prawym górnym rogu portalu, a następnie użyj listy rozwijanej, aby wybrać usługę, w związku z którą chcesz uzyskać pomoc. Ikona **?** w portalu zarządzania urządzeniami obsługuje wiele usług. Wybierz konkretną usługę, dla której chcesz uzyskać pomoc.  
 
     ![Wybór usługi](./media/get-support/select-a-service.png)
 
-    Po wybraniu usługi zobaczysz stronę *pomocy i obsługi technicznej* dla tej usługi; możesz na niej [określić szczegóły](#specify-details-about-an-issue) dotyczące konkretnego problemu, w związku z którym chcesz uzyskać pomoc.  
+    Po wybraniu usługi zobaczysz stronę *Pomoc i obsługa techniczna* dla tej usługi. Możesz na niej określić szczegóły dotyczące konkretnego problemu, aby [znaleźć rozwiązania](#find-solutions).
 
-    Jeśli wyniki wyszukiwania nie spełnią Twoich oczekiwań dla danej usługi, sprawdź, czy wybrano właściwą usługę. Ekran wyboru usługi jest wyświetlany po ekranie *Pomoc i obsługa techniczna*.  Jeśli nie wybrano odpowiedniej usługi, kliknij pozycję *Wybierz usługę*, aby powrócić do listy rozwijanej umożliwiającej wybór usługi.   
+    Jeśli wyniki wyszukiwania nie spełnią Twoich oczekiwań dla danej usługi, sprawdź, czy wybrano właściwą usługę. Ekran wyboru usługi jest wyświetlany po ekranie *Pomoc i obsługa techniczna*.  Jeśli nie wybrano odpowiedniej usługi, kliknij pozycję *Wybierz usługę*, aby powrócić do listy rozwijanej umożliwiającej wybór usługi.
 
-    ![Potwierdzenie usługi](./media/get-support/confirm-your-service-selection.png) 
+    ![Potwierdzenie usługi](./media/get-support/confirm-your-service-selection.png)
 
+###  <a name="the-support-experience"></a>Środowisko pomocy technicznej
 
-- **W witrynie Azure Portal:**
-  - Wybierz pozycję **Pomoc i obsługa techniczna** w dowolnym bloku lub na dowolnej stronie usługi Intune
+  Po otwarciu pomocy i obsługi technicznej w portalu zostanie wyświetlone okno **Potrzebujesz pomocy?** :
 
-  W przypadku wybrania w witrynie Azure Portal ikony **?** w prawym górnym rogu lub pozycji **Pomoc i obsługa techniczna** w okienku nawigacji po lewej stronie zostaje wyświetlone okno *Pomoc i obsługa techniczna* dla platformy Azure. Korzystając z *Pomocy i obsługi technicznej* dla platformy Azure, nie można bezpośrednio otworzyć zdarzenia pomocy technicznej usługi Intune, można jednak przejść do strony *pomocy i obsługi technicznej*. W tym celu należy wykonać następujące czynności: 
-  1. Wybierz pozycję Nowy wniosek o pomoc techniczną.
-  2. W obszarze Typ problemu wybierz opcję Techniczny.
-  3. W obszarze usługi wybierz Microsoft Intune.
-  4. Użyj linku do strony Pomoc i obsługa techniczna usługi Intune.
+  ![Wyświetlanie okna Potrzebujesz pomocy?](./media/get-support/need-help.png)
 
-> [!NOTE]  
-> Jeśli Twoje wystąpienie usługi Intune jest hostowane w chmurze prywatnej dla instytucji rządowych, zwanej również suwerenną chmurą, takiej jak Azure Government, zobacz [Pomoc techniczna usługi Intune dla chmury prywatnej dla instytucji rządowych](#intune-support-for-private-cloud-for-government) w dalszej części tego artykułu. Środowisko *Pomoc i obsługa techniczna* usługi Intune nie będzie dostępne w prywatnej chmurze dla instytucji rządowych aż do następnego roku. 
+  W lewym górnym rogu znajdują się trzy ikony, które możesz wybrać, aby otworzyć różne okienka dla okna *Potrzebujesz pomocy?* . Wyświetlane okienko jest identyfikowane przez podkreślenie.
 
+  Klienci korzystający z umów pomocy technicznej **Premier** lub **Unified** mają dostępne [dodatkowe opcje](#premier-and-unified-support-customers) i w oknie *Potrzebujesz pomocy?* widzą baner podobny do przedstawionego na poniższym obrazie: ![Banner pomocy technicznej Premier](./media/get-support/premier-banner.png)
 
-Widok, który zostaje wyświetlony w portalu po otwarciu sekcji *Pomoc i obsługa techniczna*, zależy od tego, czy masz aktywne zdarzenia pomocy technicznej; jeśli korzystasz z pomocy technicznej typu Premier, zobaczysz pewne dodatkowe elementy i opcje:
-- **Brak aktywnych zdarzeń pomocy technicznej**: Zobaczysz stronę **Potrzebujesz pomocy?** z pulpitu nawigacyjnego zarządzania urządzeniami przypominającą tę na poniższej ilustracji.  
-- **Aktywne zdarzenia pomocy technicznej**: Zostanie wyświetlona strona [Bilety pomocy technicznej](#view-support-cases) z listą aktywnych zdarzeń.  
-- **Umowa pomocy technicznej typu Premier**: Środowisko nie różni się niczym od dostępnego w przypadku pierwszych dwóch opcji, na stronie Potrzebujesz pomocy? są jednak widoczne dodatkowe elementy: 
-  - Po tytule **Potrzebujesz pomocy?** zobaczysz baner pomocy technicznej typu Premier:  
-    ![Baner pomocy technicznej typu Premier](./media/get-support/premier-banner.png)
-  - W sekcji **Uzyskaj pomoc techniczną** strony można ustawić początkowy poziom **ważności** dotyczący tworzenia żądania obsługi przez telefon.
+  W oknie *Potrzebujesz pomocy?* jest otwierane okienko *Znajdź rozwiązania*. Jeśli jednak masz aktywną sprawę pomocy technicznej, w oknie zostanie otwarte okienko *Żądania obsługi*, w którym można wyświetlić szczegółowe informacje o aktywnych i zamkniętych sprawach pomocy technicznej.
 
+#### <a name="find-solutions"></a>Znajdowanie rozwiązań
 
-![Pulpit nawigacyjny zarządzania urządzeniami i strona Potrzebujesz pomocy?](./media/get-support/help-support-dashboard.png)
+![Wybieranie okienka Znajdź rozwiązania](./media/get-support/find-solutions.png)
 
-W tym widoku możesz wykonać następujące czynności:
+W okienku *Znajdź rozwiązania* określ kilka szczegółów dotyczących problemu w podanym polu tekstowym. W oparciu o tekst dotyczący problemu, który wpiszesz, okienko zostanie wypełnione szczegółowymi informacjami, które są potencjalnymi dopasowaniami. Uzyskasz także linki do zalecanych artykułów, które mogą pomóc w rozwiązaniu problemu.
 
-1. [Określenie szczegółów](#specify-details-about-an-issue) dotyczących danego problemu, w związku z którym potrzebujesz pomocy  
-2. [Wyświetlanie pomocy kontekstowej](#view-context-sensitive-help) i powiązanych rozwiązań opartych na wskazanych szczegółach  
-3. [Uzyskiwanie pomocy technicznej](#get-support) przy użyciu poczty e-mail lub numeru telefonu  
-4. [Wyświetlanie spraw pomocy technicznej](#view-support-cases), które zostały otwarte wcześniej przy użyciu tego nowego przepływu pracy  
+W przypadku znalezieniu silnego dopasowania dla opisanych szczegółów wskazówki dotyczące rozwiązywania problemów mogą zostać wyświetlone bezpośrednio w oknie *Potrzebujesz pomocy?* .
 
-### <a name="specify-details-about-an-issue"></a>Określanie szczegółów problemu 
+Możesz na przykład wpisać **Błędy synchronizacji haseł**. Wyniki obejmują wskazówki dotyczące rozwiązywania problemów bezpośrednio w okienku oraz linki do zalecanych artykułów z naszej biblioteki dokumentacji.
 
-Po otwarciu pomocy i obsługi technicznej z lokalizacji, która jest obsługiwana przez nowe środowisko, zostanie otwarta strona **Potrzebujesz pomocy?** . Na tej stronie możesz określić szczegóły problemu. Podczas wprowadzania informacji w konsoli będą wyświetlane typowe zapytania na podstawie używanych słów kluczowych. Wybierz oferowaną podpowiedź lub dokończ własny opis problemu. Jeśli wprowadzisz własny opis, wybierz pozycję **Uzyskaj pomoc**, aby go przesłać. Gdy prześlesz zapytanie, konsola zwróci informacje kontekstowe, które ułatwią rozwiązanie problemu.
+![Wyświetlanie szczegółowych informacji dotyczących rozwiązywania problemów](./media/get-support/troubleshooting-insights.png)
 
-Oto przykłady zapytań, które możesz przesłać:
-  
-- *Nie można przywrócić urządzenia z systemem iOS*  
-- *Nie można utworzyć zasad dostępu warunkowego*  
+#### <a name="contact-support"></a>Skontaktuj się z pomocą techniczną
 
-![Określanie problemu na stronie Potrzebujesz pomocy?](./media/get-support/describe-the-issue.png)
+![Wybieranie okienka Skontaktuj się z pomocą techniczną](./media/get-support/contact-support.png)
 
-### <a name="view-context-sensitive-help"></a>Wyświetlanie pomocy kontekstowej 
+W okienku *Skontaktuj się z pomocą techniczną* można przesłać prośbę o pomoc. To okienko jest dostępne po podaniu kilku podstawowych słów kluczowych w okienku *Znajdź rozwiązania*.
 
-Po wybraniu oferowanej podpowiedzi lub wysłaniu własnego zapytania w obszarze **Wyświetl rozwiązania** zostaną wyświetlone kontekstowe wyniki. Te wyniki zawierają zarówno wskazówki dotyczące samodzielnej pomocy specyficzne dla usługi Intune, jak i dodatkowe wyniki zwrócone z wyszukiwania w Internecie opartego na kryteriach zapytania.  
-![Wyświetl wyniki](./media/get-support/view-results.png)
+W przypadku żądania pomocy należy podać jak najbardziej szczegółowy opis problemu.  Po potwierdzeniu kontaktowego numeru telefonu i adresu e-mail wybierz preferowaną metodę kontaktu. W oknie zostanie wyświetlony czas odpowiedzi dla każdej metody kontaktu, dzięki czemu wiesz, kiedy możesz oczekiwać kontaktu. Przed przesłaniem żądania dołącz pliki, takie jak dzienniki lub zrzuty ekranu, które mogą pomóc w uzupełnieniu szczegółowych informacji o problemie.
 
-### <a name="get-support"></a>Uzyskiwanie pomocy technicznej 
+![Formularz kontaktu z pomocą techniczną](./media/get-support/contact-support-form.png)
 
-Jeśli wskazówki samodzielnej pomocy i oparte na wyszukiwaniu w Internecie nie pomogą Ci rozwiązać problemu, możesz przy użyciu konsoli otworzyć problem telefonicznej pomocy technicznej lub pomocy technicznej za pośrednictwem poczty e-mail.  
-Na stronie **Potrzebujesz pomocy?** wybierz opcję, której chcesz użyć.  
+Po wprowadzeniu wymaganych informacji wybierz pozycję **Skontaktuj się ze mną**, aby przesłać żądanie.
 
-  > [!NOTE] 
-  > Żądania e-mail dotyczące pomocy technicznej nie są dostępne dla wszystkich dzierżawców.  
+#### <a name="service-requests"></a>Żądania obsługi
 
-- W przypadku żądania poczty e-mail podaj swój adres e-mail. Możesz też dodać załączniki. Wybierz pozycję **Wyślij**, aby otworzyć żądanie. 
+![Wybieranie okienka żądań obsługi](./media/get-support/service-requests.png)
 
-  ![Żądanie poczty e-mail](./media/get-support/email-support.png)
-  
-- W przypadku żądania telefonicznego podaj swój numer telefonu. Opcjonalnie możesz też podać swój adres e-mail i dodać załączniki. Wybierz pozycję Zadzwoń do mnie, aby przesłać żądanie.  
+W okienku *Żądania obsługi* jest wyświetlana historia Twoich spraw. Aktywne sprawy znajdują się u góry listy. Zamknięte sprawy także są dostępne do przeglądu.
 
+![Wyświetlanie listy żądań obsługi](./media/get-support/service-requests-pane.png)
 
+Jeśli masz numer aktywnej sprawy pomocy technicznej, możesz go tu wprowadzić, aby przejść do tego problemu. Możesz też wybrać dowolne zdarzenie z listy aktywnych i zamkniętych zdarzeń, aby wyświetlić więcej informacji na jego temat.
 
-   ![Żądanie telefoniczne](./media/get-support/phone-support.png)
+Po zakończeniu przeglądania szczegółów zdarzenia wybierz strzałkę w lewo, która zostanie wyświetlona u góry okna żądań obsługi tuż nad ikonami dla trzech okienek okna *Potrzebujesz pomocy?* . Strzałka wstecz powoduje przejście z powrotem do listy zdarzeń pomocy technicznej.
 
-**Pomoc techniczna Premier**:  
-Jeśli masz umowę pomocy technicznej typu Premier, możesz korzystać z takich samych opcji tworzenia zdarzeń pomocy technicznej zgłaszanych przez telefon. Możesz również określić **ważność** telefonicznej pomocy technicznej z oddzwanianiem i utworzyć bilet pomocy technicznej dotyczący kluczowej umowy.  
+#### <a name="premier-and-unified-support-customers"></a>Klienci pomocy technicznej Premier i Unified
 
-![Opcje pomocy technicznej typu Premier](./media/get-support/premier-phone-support-options.png)
+Jako klient z umową pomocy technicznej **Premier** lub **Unified** możesz określić ważność swojego problemu i zaplanować kontakt pomocy technicznej na określony czas i dzień. Te opcje są dostępne podczas otwierania lub przesyłania nowego problemu oraz podczas edytowania aktywnej sprawy pomocy technicznej.
 
+**Ważność** — Opcje określania ważności problemu zależą od posiadanej umowy dotyczącej pomocy technicznej:
 
-### <a name="view-support-cases"></a>Wyświetlanie spraw pomocy technicznej  
+- *Premier*: Ważność A, B lub C
+- *Unified*: Krytyczna lub niekrytyczna
 
-Wybierz przycisk historii, aby wyświetlić utworzone przez siebie zdarzenia pomocy technicznej.  
+Wybranie ważności **A** lub **Krytyczna** powoduje ograniczenie pomocy technicznej do kontaktu telefonicznego, ponieważ jest to najszybsza opcja uzyskania pomocy.
 
-![Wyświetlanie spraw pomocy technicznej](./media/get-support/view-support-tickets.png)
+**Harmonogram oddzwaniania** — Możesz zażądać oddzwonienia w określonym dniu i o określonej godzinie.
 
-- W tym przepływie pracy widoczne są tylko sprawy pomocy technicznej otwarte przy użyciu nowego przepływu. Aby je wyświetlić, użyj widoku Pomoc i obsługa techniczna z poziomu konsoli zarządzania urządzeniami lub z poziomu bloku usługi Intune w witrynie Azure Portal. Te sprawy mają 8-cyfrowe numery. Możesz także wyświetlić te sprawy z poziomu centrum administracyjnego rozwiązania Microsoft 365.  
-
-- Sprawy, które zostały otworzone, gdy nie było używane środowisko pomocy i obsługi technicznej usługi Intune, pozostaną niezmienione. Aby je wyświetlić, należy użyć widoku pomocy i obsługi technicznej, który nie jest częścią środowiska usługi Intune ani pulpitu nawigacyjnego zarządzania urządzeniami. Te sprawy mają 15-cyfrowe numery zaczynające się od **117** lub **118**. Aby je wyświetlić:
-
-    1. Zaloguj się na platformie Azure (<https://portal.azure.com>) przy użyciu poświadczeń administracyjnych usługi Intune, wybierz ikonę *?* w prawym górnym rogu portalu, a następnie wybierz pozycję *Pomoc i obsługa techniczna*, aby przejść do strony [Pomoc i obsługa techniczna Azure](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
-
-    2. Na stronie **Pomoc i obsługa techniczna** możesz przejrzeć listę **Najnowsze żądania pomocy technicznej** i wybierać pozycje na tej liście w celu wyświetlenia dodatkowych szczegółów.
- 
-
-## <a name="azure-help--support-experience"></a>Środowisko pomocy i obsługi technicznej platformy Azure 
+## <a name="azure-help--support-experience"></a>Środowisko pomocy i obsługi technicznej platformy Azure
 
 Nie możesz już używać środowiska *Pomoc i obsługa techniczna* platformy Azure, aby uzyskać pomoc dotyczącą usługi Intune, chyba że Twoja subskrypcja znajduje się w prywatnej chmurze dla instytucji rządowych.
 Jeśli Twoje wystąpienie usługi Intune nie działa w prywatnej chmurze dla instytucji rządowych, próba przejścia do *pomocy i obsługi technicznej* platformy Azure spowoduje przekierowanie do środowiska *Pomoc i obsługa techniczna* usługi Intune w celu umożliwienia utworzenia zdarzeń pomocy technicznej i zarządzania nimi:
@@ -181,20 +150,18 @@ Na tej stronie:
   ![Nowy wniosek o pomoc techniczną](./media/get-support/new-request.png)
 
 
-## <a name="intune-support-for-private-cloud-for-government"></a>Pomoc techniczna usługi Intune dla chmury prywatnej dla instytucji rządowych  
+## <a name="intune-support-for-private-cloud-for-government"></a>Pomoc techniczna usługi Intune dla chmury prywatnej dla instytucji rządowych
 
 Jeśli masz subskrypcję usługi Intune hostowaną w prywatnej chmurze dla instytucji rządowych (zwanej również chmurą suwerenną), takiej jak Azure Government, nie masz jeszcze dostępu do nowszej wersji środowiska pomocy i obsługi technicznej usługi Intune.  Możesz za to uzyskać pomoc techniczną dotyczącą usługi Intune, korzystając z poniższych informacji.
 
+### <a name="create-an-online-support-ticket"></a>Tworzenie biletu pomocy technicznej online
 
-### <a name="create-an-online-support-ticket"></a>Tworzenie biletu pomocy technicznej online 
-
->[!IMPORTANT]    
-> Dla środowiska *pomocy i obsługi technicznej* następuje przejście na nowy system, który nie jest jeszcze dostępny dla prywatnej chmury dla instytucji rządowych; gdy zostanie utworzone zdarzenie pomocy technicznej, portal nada zgłoszeniu do pomocy technicznej 15-cyfrowy numer identyfikacyjny. Gdy zostanie utworzony 15-cyfrowy numer identyfikacyjny, pomoc techniczna firmy Microsoft utworzy duplikat zgłoszenia do pomocy technicznej. Duplikat zostaje utworzony w nowym systemie pomocy technicznej, korzysta z 8-cyfrowego identyfikatora zgłoszenia do pomocy technicznej i jest używany przez usługi pomocy technicznej do śledzenia całej aktywności i komunikacji dotyczących danego zdarzenia pomocy technicznej. Wkrótce po utworzeniu 15-cyfrowego identyfikatora zgłoszenia do pomocy technicznej otrzymasz wiadomość e-mail z 8-cyfrowym identyfikatorem duplikatu zgłoszenia do pomocy technicznej, który jest używany przez personel pomocy technicznej.  
-> 
-> Zespół pomocy technicznej posługuje się w swoich działaniach i w przesyłanych przez siebie wiadomościach zgłoszeniem do pomocy technicznej z 8-cyfrowym identyfikatorem i używa jego numeru wyłącznie do rejestrowania wiadomości oraz postępów dotyczących zdarzenia. W związku z tym będziesz otrzymywać wiadomości e-mail dotyczące zgłoszenia do pomocy technicznej z 8-cyfrowym identyfikatorem, który będzie używany do rejestrowania działań wykonywanych w związku z danym zgłoszeniem do pomocy technicznej. Dla zdarzenia obsługi technicznej z 15-cyfrowym identyfikatorem nie są rejestrowane szczegółowe informacje. Po zakończeniu świadczenia pomocy i obsługi technicznej zgłoszenie do pomocy technicznej z 8-cyfrowym identyfikatorem zostaje zamknięte, a jego stan zostaje uwzględniony w zgłoszeniu z 15-cyfrowym identyfikatorem, które możesz wyświetlić w witrynie Azure Portal.  Nie należy spodziewać się innych zmian ani aktualizacji stanu dla zgłoszenia do pomocy technicznej z 15-cyfrowym identyfikatorem.  
-> 
-> Po zakończeniu fazy przejścia na nowe narzędzia pomocy technicznej później w tym roku środowisko pomocy technicznej usługi Intune hostowane w chmurze dla instytucji rządowych będzie przypominać domyślne środowisko *pomocy i obsługi technicznej* dostępne obecnie dla użytkowników usługi Intune hostowanej w chmurze publicznej.  
-
+>[!IMPORTANT]
+> Dla środowiska *pomocy i obsługi technicznej* następuje przejście na nowy system, który nie jest jeszcze dostępny dla prywatnej chmury dla instytucji rządowych; gdy zostanie utworzone zdarzenie pomocy technicznej, portal nada zgłoszeniu do pomocy technicznej 15-cyfrowy numer identyfikacyjny. Gdy zostanie utworzony 15-cyfrowy numer identyfikacyjny, pomoc techniczna firmy Microsoft utworzy duplikat zgłoszenia do pomocy technicznej. Duplikat zostaje utworzony w nowym systemie pomocy technicznej, korzysta z 8-cyfrowego identyfikatora zgłoszenia do pomocy technicznej i jest używany przez usługi pomocy technicznej do śledzenia całej aktywności i komunikacji dotyczących danego zdarzenia pomocy technicznej. Wkrótce po utworzeniu 15-cyfrowego identyfikatora zgłoszenia do pomocy technicznej otrzymasz wiadomość e-mail z 8-cyfrowym identyfikatorem duplikatu zgłoszenia do pomocy technicznej, który jest używany przez personel pomocy technicznej.
+>
+> Zespół pomocy technicznej posługuje się w swoich działaniach i w przesyłanych przez siebie wiadomościach zgłoszeniem do pomocy technicznej z 8-cyfrowym identyfikatorem i używa jego numeru wyłącznie do rejestrowania wiadomości oraz postępów dotyczących zdarzenia. W związku z tym będziesz otrzymywać wiadomości e-mail dotyczące zgłoszenia do pomocy technicznej z 8-cyfrowym identyfikatorem, który będzie używany do rejestrowania działań wykonywanych w związku z danym zgłoszeniem do pomocy technicznej. Dla zdarzenia obsługi technicznej z 15-cyfrowym identyfikatorem nie są rejestrowane szczegółowe informacje. Po zakończeniu świadczenia pomocy i obsługi technicznej zgłoszenie do pomocy technicznej z 8-cyfrowym identyfikatorem zostaje zamknięte, a jego stan zostaje uwzględniony w zgłoszeniu z 15-cyfrowym identyfikatorem, które możesz wyświetlić w witrynie Azure Portal.  Nie należy spodziewać się innych zmian ani aktualizacji stanu dla zgłoszenia do pomocy technicznej z 15-cyfrowym identyfikatorem.
+>
+> Po zakończeniu fazy przejścia na nowe narzędzia pomocy technicznej później w tym roku środowisko pomocy technicznej usługi Intune hostowane w chmurze dla instytucji rządowych będzie przypominać domyślne środowisko *pomocy i obsługi technicznej* dostępne obecnie dla użytkowników usługi Intune hostowanej w chmurze publicznej.
 
 1. Zaloguj się w witrynie Azure Portal (<https://portal.azure.us>) przy użyciu poświadczeń administracyjnych usługi Intune, wybierz ikonę **?** w prawym górnym rogu portalu, a następnie wybierz pozycję **Pomoc i obsługa techniczna**, aby przejść do strony [Pomoc i obsługa techniczna Azure](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
 
@@ -230,14 +197,14 @@ Jeśli masz subskrypcję usługi Intune hostowaną w prywatnej chmurze dla insty
 
 ### <a name="view-support-requests"></a>Wyświetlanie wszystkich żądań pomocy technicznej  
 
-Żądanie pomocy technicznej można wyświetlić w witrynie Azure Portal. W tej lokalizacji dostępna jest jednak ograniczona ilość informacji.  Aby wyświetlić swoje zdarzenia: 
+Żądanie pomocy technicznej można wyświetlić w witrynie Azure Portal. W tej lokalizacji dostępna jest jednak ograniczona ilość informacji.  Aby wyświetlić swoje zdarzenia:
 
 1. Zaloguj się na platformie Azure (<https://portal.azure.com>) przy użyciu poświadczeń administracyjnych usługi Intune, wybierz ikonę **?** w prawym górnym rogu portalu, a następnie wybierz pozycję **Pomoc i obsługa techniczna**, aby przejść do strony [Pomoc i obsługa techniczna Azure](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
 
 2. Na stronie **Pomoc i obsługa techniczna** możesz przejrzeć listę **Najnowsze żądania pomocy technicznej**.
 
    > [!IMPORTANT]  
-   > Klienci korzystający z chmury dla instytucji rządowych mogą wyświetlić wyłącznie 15-cyfrowy identyfikator zgłoszenia do pomocy technicznej oraz status zdarzenia. Wszystkie wiadomości dotyczące zgłoszenia do pomocy technicznej oraz rejestr dotyczących go działań lub alertów są wysyłane pocztą e-mail i oznaczone 8-cyfrowym identyfikatorem zgłoszenia do pomocy technicznej utworzonego jako duplikat zgłoszenia otwartego z poziomu konsoli Intune.   
+   > Klienci korzystający z prywatnej chmury dla instytucji rządowych mogą wyświetlić wyłącznie 15-cyfrowy identyfikator zgłoszenia do pomocy technicznej oraz status zdarzenia. Wszystkie wiadomości dotyczące zgłoszenia do pomocy technicznej oraz rejestr dotyczących go działań lub alertów są wysyłane pocztą e-mail i oznaczone 8-cyfrowym identyfikatorem zgłoszenia do pomocy technicznej utworzonego jako duplikat zgłoszenia otwartego z poziomu konsoli Intune.
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby  
 

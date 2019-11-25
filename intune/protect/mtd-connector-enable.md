@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/17/2019
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fae163cbcd97feb4f333d8ddfd44f2202dd343d6
-ms.sourcegitcommit: a4c7339ec9ff5b1b846cb3cca887cf91b5cd4baa
+ms.openlocfilehash: 38ddec9d76a51ca0afe7561c3616e3a97050ba02
+ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627682"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74199223"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune"></a>Włączanie łącznika Mobile Threat Defense w usłudze Intune
 
@@ -33,6 +33,8 @@ ms.locfileid: "73627682"
 Podczas konfiguracji usługi Mobile Threat Defense (MTD) skonfigurowano zasady służące do klasyfikowania zagrożeń w konsoli partnera usługi MTD i utworzono zasady zgodności urządzeń w usłudze Intune. Jeśli łącznik usługi Intune został już skonfigurowany w konsoli partnera usługi MTD, możesz teraz włączyć połączenie z usługą MTD dla aplikacji partnera usługi MTD.
 
 Po zintegrowaniu nowej aplikacji z usługą Intune Mobile Threat Defense (MTD) i włączeniu połączenia z usługą Intune usługa ta tworzy klasyczne zasady dostępu warunkowego w usłudze Azure Active Directory. Każda zintegrowana aplikacja MTD, w tym [Defender ATP](advanced-threat-protection.md) lub dowolny z naszych dodatkowych [partnerów MTD](mobile-threat-defense.md#mobile-threat-defense-partners), tworzy nowe klasyczne zasady dostępu warunkowego. Te zasady można ignorować, ale nie należy ich edytować, usuwać ani wyłączać.
+
+Jeśli zasady klasyczne zostaną usunięte, należy usunąć połączenie z usługą Intune, które było odpowiedzialne za ich tworzenie, a następnie skonfigurować je ponownie. Ten proces spowoduje ponowne utworzenie zasad klasycznych. Migrowanie zasad klasycznych dla aplikacji MTD do nowego typu zasad w celu uzyskania dostępu warunkowego nie jest obsługiwane.
 
 Klasyczne zasady dostępu warunkowego dla aplikacji MTD mają następujące cechy: 
 

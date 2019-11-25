@@ -17,27 +17,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fb9dd31c87d27ec7885d25269988cfd968e81e08
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 179d135ee8e216495cd7435bf38d8087e5c990e8
+ms.sourcegitcommit: 13fa1a4a478cb0e03c7f751958bc17d9dc70010d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72504566"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74188275"
 ---
 # <a name="learn-about-conditional-access-and-intune"></a>Więcej informacji na temat dostępu warunkowego i usługi Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+Dzięki dostępowi warunkowemu możesz kontrolować urządzenia i aplikacje, które mogą nawiązywać połączenie z pocztą e-mail i zasobami firmy. 
 
-Dostęp warunkowy dotyczy sposobów kontrolowania urządzeń i aplikacji, które mogą nawiązywać połączenie z pocztą e-mail i zasobami firmy. W tym temacie uzyskasz informacje dotyczące dostępu warunkowego opartego na urządzeniach i aplikacjach, a także poznasz typowe scenariusze dotyczące używania dostępu warunkowego za pomocą usługi Intune.
-
-Dostęp warunkowy w pakiecie Enterprise Mobility + Security (EMS) nie jest produktem autonomicznym. Jest rozwiązaniem, które obejmuje wszystkie usługi i produkty będące częścią pakietu EMS. Zapewnia pełną kontrolę dostępu, co pozwala zabezpieczyć dane firmowe, udostępniając użytkownikom środowisko, które umożliwia wykonywanie pracy w najbardziej wydajny sposób na dowolnym urządzeniu i w dowolnym miejscu.
+Pakiet Enterprise Mobility + Security (EMS) nie jest produktem autonomicznym. Jest to rozwiązanie, które jest stosowane do wszystkich usług i produktów wchodzących w skład pakietu EMS. Dostęp warunkowy zapewnia pełną kontrolę dostępu, co pozwala zabezpieczyć dane firmowe, udostępniając użytkownikom środowisko, które umożliwia wykonywanie pracy w najbardziej wydajny sposób na dowolnym urządzeniu i w dowolnym miejscu.
 
 Można określić warunki, które blokują dostęp do danych firmowych na podstawie lokalizacji, urządzeń, stanu użytkownika i ważności aplikacji.
 
-> [!NOTE] 
+> [!NOTE]
 > Z możliwości dostępu warunkowego można również korzystać w [usługach Office 365](https://docs.microsoft.com/office365/enterprise/office-365-client-support-conditional-access).
 
-![Diagram architektury dostępu warunkowego](./media/conditional-access/ca-diagram-1.png)
+![Diagram dostępu warunkowego](./media/conditional-access/ca-diagram-1.png)
 
 ## <a name="use-conditional-access-with-intune"></a>Korzystanie z dostępu warunkowego przy użyciu usługi Intune
 

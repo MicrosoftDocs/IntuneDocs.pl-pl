@@ -1,11 +1,11 @@
 ---
 title: Ustawienia i funkcje urządzeń w usłudze Microsoft Intune — Azure | Microsoft Docs
-description: Omówienie różnych profilów urządzeń usługi Microsoft Intune. Uzyskaj informacje na temat funkcji, ograniczeń, poczty e-mail, sieci Wi-Fi, sieć VPN, wiedzy, certyfikatów, uaktualniania systemu Windows 10, funkcji BitLocker i usługi Windows Defender, usługi Windows Information Protection, szablonów administracyjnych i niestandardowych ustawień konfiguracji w witrynie Azure Portal. Te profile służą do zarządzania danymi i urządzeniami oraz ich ochrony w Twojej firmie.
+description: Omówienie różnych profilów urządzeń usługi Microsoft Intune. Uzyskaj informacje na temat funkcji, ograniczeń, poczty e-mail, sieci Wi-Fi, sieć VPN, wiedzy, certyfikatów, uaktualniania systemu Windows 10, funkcji BitLocker i usługi Microsoft Defender, usługi Windows Information Protection, szablonów administracyjnych i niestandardowych ustawień konfiguracji w witrynie Azure Portal. Te profile służą do zarządzania danymi i urządzeniami oraz ich ochrony w Twojej firmie.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/21/2019
+ms.date: 11/13/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c49445800f5d34fbb6ce0a845d4f29c3e587483
-ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
+ms.openlocfilehash: f0dd9eddd986e6717e6bf706b02a7b06f712a032
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72749343"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059893"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Stosowanie funkcji i ustawień w urządzeniach przy użyciu profilów urządzeń w usłudze Microsoft Intune
 
@@ -63,7 +63,7 @@ Ta funkcja obsługuje systemy:
 - macOS
 - Windows Phone 8,1
 - Windows 8.1
-- System Windows 10 lub nowszy
+- Windows 10 lub nowszym
 
 ## <a name="custom-profile"></a>Profil niestandardowy
 
@@ -85,7 +85,7 @@ Ustawienia te służą do kontrolowania sposobu pobierania aktualizacji oprogram
 
 Ta funkcja obsługuje systemy:
 
-- System Windows 10 lub nowszy
+- Windows 10 lub nowszym
 
 ## <a name="device-features"></a>Funkcje urządzenia
 
@@ -102,7 +102,7 @@ Ta funkcja obsługuje systemy:
 
 Ta funkcja obsługuje systemy:
 
-- System Windows 10 lub nowszy
+- Windows 10 lub nowszym
 
 ## <a name="device-restrictions"></a>Ograniczenia dotyczące urządzeń
 
@@ -114,7 +114,7 @@ Ta funkcja obsługuje systemy:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- System Windows 10 lub nowszy
+- Windows 10 lub nowszym
 - Zespół ds. systemu Windows 10
 
 ## <a name="edition-upgrade"></a>Zasady uaktualniania wersji
@@ -123,7 +123,7 @@ Profil [Uaktualnienia wersji systemu Windows 10](edition-upgrade-configure-windo
 
 Ta funkcja obsługuje systemy:
 
-- System Windows 10 lub nowszy
+- Windows 10 lub nowszym
 
 ## <a name="education"></a>Edukacja
 
@@ -141,17 +141,17 @@ Ta funkcja obsługuje systemy:
 - Android Enterprise
 - iOS/iPadOS
 - Windows Phone 8,1
-- System Windows 10 lub nowszy
+- Windows 10 lub nowszym
 
 ## <a name="endpoint-protection"></a>Program Endpoint Protection
 
-Profil [Ustawienia programu Endpoint Protection dla systemu Windows 10](../protect/endpoint-protection-windows-10.md) umożliwia konfigurowanie ustawień funkcji BitLocker i usługa Windows Defender dla urządzeń z systemem Windows 10.
+Profil [Ustawienia programu Endpoint Protection dla systemu Windows 10](../protect/endpoint-protection-windows-10.md) umożliwia konfigurowanie ustawień funkcji BitLocker i usługa Microsoft Defender dla urządzeń z systemem Windows 10.
 
 Aby dołączyć usługę Microsoft Defender Advanced Threat Protection do usługi Microsoft Intune, zobacz temat [Configure endpoints using Mobile Device Management (MDM) tools](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm) (Konfigurowanie punktów końcowych przy użyciu narzędzi do zarządzania urządzeniami mobilnymi).
 
 Ta funkcja obsługuje systemy:
 
-- System Windows 10 lub nowszy
+- Windows 10 lub nowszym
 
 ## <a name="esim-cellular---public-preview"></a>Sieć komórkowa eSIM — publiczna wersja zapoznawcza
 
@@ -175,7 +175,7 @@ Usługa [Identity Protection](../protect/identity-protection-configure.md) steru
 
 Ta funkcja obsługuje systemy:  
 
-- System Windows 10 lub nowszy
+- Windows 10 lub nowszym
 - Windows Holographic for Business  
 
 ## <a name="kiosk"></a>Kiosk
@@ -184,7 +184,7 @@ Profil [Ustawienia kiosku](kiosk-settings.md) służy do konfigurowania urządze
 
 Ta funkcja obsługuje systemy:
 
-- System Windows 10 lub nowszy
+- Windows 10 lub nowszym
 
 Ustawienia kiosku są również dostępne jako ograniczenia urządzenia z systemem [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings) i [ios](device-restrictions-ios.md#kiosk).
 
@@ -203,7 +203,7 @@ Ta funkcja obsługuje systemy:
 
 Ta funkcja obsługuje systemy:
 
-- System Windows 10 lub nowszy
+- Windows 10 lub nowszym
 - Windows Holographic for Business
 
 ## <a name="shared-multi-user-device"></a>Urządzenie udostępnione używane przez wielu użytkowników
@@ -214,7 +214,7 @@ Te ustawienia urządzeń udostępnionych z wieloma użytkownikami pozwalają adm
 
 Ta funkcja obsługuje systemy:
 
-- System Windows 10 lub nowszy
+- Windows 10 lub nowszym
 - Windows Holographic for Business
 
 ## <a name="update-policies"></a>Zasady aktualizacji
@@ -241,7 +241,7 @@ Ta funkcja obsługuje systemy:
 - macOS
 - Windows Phone 8,1
 - Windows 8.1
-- System Windows 10 lub nowszy
+- Windows 10 lub nowszym
 
 ## <a name="wi-fi"></a>Wi-Fi
 
@@ -254,7 +254,7 @@ Ta funkcja obsługuje systemy:
 - iOS/iPadOS
 - macOS
 - Windows 8.1 (tylko import)
-- System Windows 10 lub nowszy
+- Windows 10 lub nowszym
 
 ## <a name="windows-information-protection-profile"></a>Profil usługi Windows Information Protection
 
@@ -262,7 +262,7 @@ Profil [Windows Information Protection](../protect/windows-information-protectio
 
 Ta funkcja obsługuje systemy:
 
-- System Windows 10 lub nowszy
+- Windows 10 lub nowszym
 
 ## <a name="zebra-mobility-extensions-mx"></a>Zebra Mobility Extensions (MX)
 
