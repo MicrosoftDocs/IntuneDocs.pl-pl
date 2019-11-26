@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/01/2019
+ms.date: 11/21/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d85793dcf0ee6fa0186147606c9fd695a268e529
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: bd2ab7ad8eb155719695bede1f539d5c264d455b
+ms.sourcegitcommit: eb2e420b304c7da9d3be5ef49a676cba66766d2b
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506981"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74319828"
 ---
 # <a name="use-custom-settings-for-android-enterprise-devices-in-microsoft-intune"></a>Używanie ustawień niestandardowych dla urządzeń z systemem Android Enterprise w usłudze Microsoft Intune
 
@@ -30,11 +30,11 @@ Za pomocą usługi Microsoft Intune można dodawać lub tworzyć ustawienia nies
 
 Profile niestandardowe systemu Android Enterprise używają ustawień jednolitego identyfikatora zasobów Open Mobile Alliance (OMA-URI, Open Mobile Alliance Uniform Resource Identifier) w celu kontrolowania funkcji na urządzeniach z systemem Android Enterprise. Te ustawienia są zwykle używane przez producentów urządzeń przenośnych w celu kontrolowania tych funkcji.
 
-Usługa Intune obsługuje ograniczoną liczbę profilów niestandardowych przedsiębiorstwa systemu Android, w tym:
+Usługa Intune obsługuje następującą ograniczoną liczbę profilów niestandardowych przedsiębiorstwa z systemem Android:
 
 - ./Vendor/MSFT/WiFi/Profile/SSID/Settings: [Tworzenie profilu sieci Wi-Fi z użyciem klucza wstępnego](wi-fi-profile-shared-key.md) ma kilka przykładów.
 - ./Vendor/MSFT/VPN/Profile/Name/PackageList: [Tworzenie profilu sieci VPN dla aplikacji](android-pulse-secure-per-app-vpn.md) zawiera kilka przykładów.
-- ./Vendor/MSFT/WorkProfile/DisallowCrossProfileCopyPaste: zobacz [przykład](#example) (w tym artykule).
+- ./Vendor/MSFT/WorkProfile/DisallowCrossProfileCopyPaste: zobacz [przykład](#example) w tym artykule. To ustawienie jest również dostępne w interfejsie użytkownika. Więcej informacji — zobacz [Ustawienia urządzeń z systemem Android Enterprise w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune](device-restrictions-android-for-work.md).
 
 Jeśli potrzebujesz dodatkowych ustawień, zobacz [OEMConfig for Android Enterprise](android-oem-configuration-overview.md).
 

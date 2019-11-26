@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 266786de3122f8886bb3ed310764459568e1df6a
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: 04d35f49f9e07cb72a1fea92210b05e0a95ec256
+ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72585357"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74390805"
 ---
-# <a name="add-wi-fi-settings-for-devices-running-android-enterprise-and-android-kiosk-in-microsoft-intune"></a>Dodawanie ustawień sieci Wi-Fi dla urządzeń z systemem Android dla firm i kiosku systemu Android w usłudze Microsoft Intune
+# <a name="add-wi-fi-settings-for-android-enterprise-dedicated-and-fully-managed-devices-in-microsoft-intune"></a>Dodawanie ustawień sieci Wi-Fi dla urządzeń z systemem Android w wersji Enterprise dedykowanych i w pełni zarządzanych w Microsoft Intune
 
-Można utworzyć profil z określonymi ustawieniami sieci Wi-Fi, a następnie wdrożyć ten profil na urządzeniach z systemem Android Enterprise i urządzeniach dedykowanych. Usługa Microsoft Intune oferuje wiele funkcji, w uwierzytelnianie do sieci, korzystanie z klucza wstępnego i inne.
+Możesz utworzyć profil z określonymi ustawieniami Wi-Fi, po czym wdrożyć go w urządzeniach z systemem Android w wersji Enterprise dedykowanych i w pełni zarządzanych. Usługa Microsoft Intune oferuje wiele funkcji, w uwierzytelnianie do sieci, korzystanie z klucza wstępnego i inne.
 
 W tym artykule opisano te ustawienia. Więcej informacji na temat funkcji sieci Wi-Fi w usłudze Microsoft Intune można znaleźć w artykule [Używanie sieci Wi-Fi na urządzeniach](wi-fi-settings-configure.md).
 
@@ -35,7 +35,7 @@ W tym artykule opisano te ustawienia. Więcej informacji na temat funkcji sieci 
 
 ## <a name="device-owner-only"></a>Tylko właściciel urządzenia
 
-Wybierz tę opcję w przypadku używania dedykowanego urządzenia z systemem Android Enterprise jako kiosku.
+Wybierz tę opcję, Jeśli wdrażasz system na urządzeniu z systemem Android w wersji dedykowanej lub w pełni zarządzanej.  Urządzenia z systemem Android w wersji Enterprise dedykowane i w pełni zarządzane obecnie obsługują Wdrażanie certyfikatów protokołu SCEP, ale nie PKCS.
 
 ### <a name="basic"></a>Podstawowe
 
@@ -60,7 +60,7 @@ Wybierz tę opcję w przypadku używania dedykowanego urządzenia z systemem And
 
     - **Zaufanie serwera** - **certyfikat główny na potrzeby walidacji serwera**: wybierz istniejący profil zaufanego certyfikatu głównego. Gdy klient łączy się z siecią, ten certyfikat jest przedstawiany na serwerze i uwierzytelnia połączenie.
 
-    - **Uwierzytelnianie klienta** - **certyfikat klienta na potrzeby uwierzytelniania klienta (certyfikat tożsamości)** : wybierz profil certyfikatu protokołu SCEP lub standardów PKCS, który również został wdrożony do urządzenia. Ten certyfikat to tożsamość przesyłana przez urządzenie do serwera w celu uwierzytelnienia połączenia.
+    - **Uwierzytelnianie klienta** - **Certyfikat klienta na potrzeby jego uwierzytelniania (certyfikat tożsamości)** : wybierz profil certyfikatu klienta protokołu SCEP, który również został wdrożony w urządzeniu. Ten certyfikat to tożsamość przesyłana przez urządzenie do serwera w celu uwierzytelnienia połączenia.
 
     - **Prywatność tożsamości (tożsamość zewnętrzna)** : wprowadź tekst, który będzie wysyłany w odpowiedzi na żądanie podania tożsamości zgłaszane przez protokół EAP. Ten tekst może mieć dowolną wartość, taką jak `anonymous`. Podczas uwierzytelniania na początku wysyłana jest ta tożsamość anonimowa, a po niej — tożsamość rzeczywista, która jest wysyłana w bezpiecznym tunelu.
 
@@ -77,7 +77,7 @@ Wybierz tę opcję w przypadku używania dedykowanego urządzenia z systemem And
           - **Microsoft CHAP (MS-CHAP)**
           - **Microsoft CHAP wersja 2 (MS-CHAP v2)**
 
-      - **Certyfikaty**: wybierz profil certyfikatu klienta protokołu SCEP lub standardów PKCS, który również został wdrożony w urządzeniu. Ten certyfikat to tożsamość przesyłana przez urządzenie do serwera w celu uwierzytelnienia połączenia.
+      - **Certyfikaty**: wybierz profil certyfikatu klienta protokołu SCEP, który również został wdrożony w urządzeniu. Ten certyfikat to tożsamość przesyłana przez urządzenie do serwera w celu uwierzytelnienia połączenia.
 
       - **Prywatność tożsamości (tożsamość zewnętrzna)** : wprowadź tekst, który będzie wysyłany w odpowiedzi na żądanie podania tożsamości zgłaszane przez protokół EAP. Ten tekst może mieć dowolną wartość, taką jak `anonymous`. Podczas uwierzytelniania na początku wysyłana jest ta tożsamość anonimowa, a po niej — tożsamość rzeczywista, która jest wysyłana w bezpiecznym tunelu.
 
@@ -93,7 +93,7 @@ Wybierz tę opcję w przypadku używania dedykowanego urządzenia z systemem And
           - **Brak**
           - **Microsoft CHAP wersja 2 (MS-CHAP v2)**
 
-      - **Certyfikaty**: wybierz profil certyfikatu klienta protokołu SCEP lub standardów PKCS, który również został wdrożony w urządzeniu. Ten certyfikat to tożsamość przesyłana przez urządzenie do serwera w celu uwierzytelnienia połączenia.
+      - **Certyfikaty**: wybierz profil certyfikatu klienta protokołu SCEP, który również został wdrożony w urządzeniu. Ten certyfikat to tożsamość przesyłana przez urządzenie do serwera w celu uwierzytelnienia połączenia.
 
       - **Prywatność tożsamości (tożsamość zewnętrzna)** : wprowadź tekst, który będzie wysyłany w odpowiedzi na żądanie podania tożsamości zgłaszane przez protokół EAP. Ten tekst może mieć dowolną wartość, taką jak `anonymous`. Podczas uwierzytelniania na początku wysyłana jest ta tożsamość anonimowa, a po niej — tożsamość rzeczywista, która jest wysyłana w bezpiecznym tunelu.
 

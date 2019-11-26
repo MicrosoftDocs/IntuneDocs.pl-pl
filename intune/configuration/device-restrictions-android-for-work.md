@@ -1,11 +1,11 @@
 ---
 title: Ustawienia urządzeń z systemem Android Enterprise w usłudze Microsoft Intune — Azure | Microsoft Docs
-description: W urządzeniach z systemem Android Enterprise lub Android for Work możesz ograniczyć ustawienia, w tym kopiowanie i wklejanie, pokazywanie powiadomień, uprawnienia aplikacji, udostępnianie danych, długość hasła, błędy logowania, używanie odcisku palca do odblokowywania, ponowne używanie haseł oraz włączanie udostępniania kontaktów służbowych za pomocą technologii Bluetooth. Skonfiguruj urządzenie jako kiosk urządzenia dedykowanego w celu uruchamiania jednej aplikacji lub wielu aplikacji.
+description: Na urządzeniach z systemem Android Enterprise lub Android for Work ogranicz ustawienia na urządzeniu, w tym kopiowanie i wklejanie, wyświetlanie powiadomień, uprawnienia aplikacji, udostępnianie danych, długość hasła, liczba nieudanych prób jego wprowadzenia, odblokowywanie za pomocą odcisku palca, ponowne użycie hasła oraz włączenie udostępniania kontaktów służbowych przez Bluetooth. Skonfiguruj urządzenie jako kiosk urządzenia dedykowanego w celu uruchamiania jednej aplikacji lub wielu aplikacji.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/30/2019
+ms.date: 11/19/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 14fa330b0c158d98c96e0d151f8a4ec7d0c95b97
-ms.sourcegitcommit: c38a856725993a4473ada75e669a57f75ab376f8
+ms.openlocfilehash: b38ab611ecf6a33c8cc48fa120751af8548a7f95
+ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73143042"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74390923"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem Android Enterprise w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune
 
@@ -71,8 +71,8 @@ W tym artykule wymieniono i opisano różne ustawienia, którymi można sterowa�
   - **Odłożone**: instalowanie aktualizacji jest odkładane o 30 dni. Po upływie tych 30 dni system Android monituje użytkownika o zainstalowanie aktualizacji. Producenci urządzeń i operatorzy mogą uniemożliwiać (wykluczać) odkładanie ważnych aktualizacji zabezpieczeń. Aktualizacja podlegająca takiemu wykluczeniu powoduje wyświetlenie użytkownikowi powiadomienia systemowego na urządzeniu.
   - **Okno obsługi**: aktualizacje są instalowane automatycznie w ramach codziennego okna obsługi skonfigurowanego w usłudze Intune. Próba instalacji jest podejmowana codziennie przez 30 dni i może zakończyć się niepowodzeniem ze względu na brak miejsca lub niski poziom baterii. Po upływie 30 dni system Android monituje użytkownika o instalację. To okno jest też używane do instalowania aktualizacji aplikacji ze sklepu Play. Tej opcji należy używać w przypadku urządzeń dedykowanych, takich jak kioski, ponieważ umożliwia ona aktualizowanie aplikacji na pierwszym planie dedykowanych urządzeń z pojedynczymi aplikacjami.
 
-- **Okna powiadomień**: po ustawieniu opcji **Wyłącz** powiadomienia wyświetlane w oknach, w tym wyskakujące powiadomienia, powiadomienia o połączeniach przychodzących, połączeniach wychodzących, alerty systemowe i błędy systemowe, nie są wyświetlane na urządzeniu. Po ustawieniu opcji **Nieskonfigurowane** zostanie użyte domyślne ustawienie systemu operacyjnego, co może prowadzić do wyświetlania powiadomień.
-- **Pomiń wskazówki podczas pierwszego użycia**: wybierz opcję **Włącz**, aby ukrywać lub pomijać sugestie aplikacji dotyczące skorzystania z samouczków lub przeczytania wskazówek wprowadzających podczas uruchamiania aplikacji. Po ustawieniu opcji **Nieskonfigurowane** zostanie użyte domyślne ustawienie systemu operacyjnego, co może prowadzić do wyświetlania tych sugestii podczas uruchamiania aplikacji.
+- **Okna powiadomień**: po ustawieniu opcji **Wyłącz** powiadomienia wyświetlane w oknach, w tym powiadomienia wyskakujące, powiadomienia o połączeniach przychodzących, połączeniach wychodzących, alerty systemowe i błędy systemowe, nie są wyświetlane na urządzeniu. Po ustawieniu opcji **Nieskonfigurowane** zostanie użyte domyślne ustawienie systemu operacyjnego, co może prowadzić do wyświetlania powiadomień.
+- **Pomiń wskazówki dotyczące pierwszego użycia**: **Włącz** ukrywanie lub pomijanie sugestii z aplikacji, które przechodzenia przez samouczki lub wskazówki podczas uruchamiania aplikacji. Po ustawieniu opcji **Nieskonfigurowane** zostanie użyte domyślne ustawienie systemu operacyjnego, co może prowadzić do wyświetlania tych sugestii podczas uruchamiania aplikacji.
 
 ### <a name="system-security-settings"></a>Ustawienia zabezpieczeń systemu
 
@@ -150,13 +150,16 @@ Te ustawienia umożliwiają skonfigurowanie trybu kiosku na dedykowanych urządz
 
     Gdy ta funkcja jest włączona, należy również skonfigurować:
 
-    - **Ustaw obraz niestandardowego wygaszacza ekranu**: wprowadź adres URL obrazu niestandardowego. Wprowadź na przykład:
+    - **Ustaw niestandardowy obraz wygaszacza ekranu**: wprowadź adres URL do niestandardowego formatu PNG, jpg, JPEG, GIF, BMP, WEBP lub ICOimage. Wprowadź na przykład:
 
       - `http://www.contoso.com/image.jpg`
       - `www.contoso.com/image.bmp`
-      - `https://www.contoso.com/image.html`
+      - `https://www.contoso.com/image.webp`
 
       Jeśli adres URL nie zostanie wprowadzony, zostanie użyty domyślny obraz urządzenia, jeśli istnieje obraz domyślny.
+      
+      > [!TIP]
+      > Obsługiwane są wszystkie adresy URL zasobów plików, które mogą być przekształcone w mapę bitową.
 
     - **Liczba sekund, przez które urządzenie wyświetla wygaszacz ekranu przed wyłączeniem ekranu**: Wybierz, jak długo urządzenie ma wyświetlać wygaszacz ekranu. Wprowadź wartość z zakresu od 0-9999999 sekund. Wartość domyślna to `0` sekund. Jeśli pole pozostanie puste, lub ma wartość zero (`0`), wygaszacz ekranu będzie aktywny do momentu, gdy użytkownik nie współdziała z urządzeniem.
     - **Liczba sekund, przez które urządzenie jest nieaktywne przed wyświetleniem wygaszacza ekranu**: Określ, jak długo urządzenie jest bezczynne przed wyświetleniem ekranu. Wprowadź wartość z zakresu od 1-9999999 sekund. Wartość domyślna to `30` sekund. Należy wprowadzić liczbę większą od zera (`0`).
@@ -199,12 +202,14 @@ Te ustawienia umożliwiają skonfigurowanie trybu kiosku na dedykowanych urządz
 
 ### <a name="users-and-accounts-settings"></a>Ustawienia użytkowników i kont
 
-- **Dodawanie nowych użytkowników**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom dodawanie nowych użytkowników. Każdy użytkownik ma na urządzeniu obszar osobisty, który zawiera niestandardowe ekrany główne, konta, aplikacje i ustawienia. Pozycja **Nieskonfigurowane** umożliwia użytkownikom dodawanie innych użytkowników do urządzenia.
-- **Usuwanie użytkowników**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom usuwanie użytkowników. Pozycja **Nieskonfigurowane** umożliwia użytkownikom usuwanie innych użytkowników z urządzenia.
-- **Zmiany dotyczące konta**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom modyfikowanie kont. Pozycja **Nieskonfigurowane** umożliwia użytkownikom aktualizowanie kont użytkowników na urządzeniu.
+- **Dodawanie nowych użytkowników**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom dodawanie nowych użytkowników. Każdy użytkownik ma na urządzeniu obszar osobisty, który zawiera niestandardowe ekrany główne, konta, aplikacje i ustawienia. Pozycja **Nieskonfigurowane** (ustawienie domyślne) umożliwia użytkownikom dodawanie innych użytkowników na urządzeniu.
+- **Usuwanie użytkowników**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom usuwanie użytkowników. Pozycja **Nieskonfigurowane** (ustawienie domyślne) umożliwia użytkownikom usuwanie innych użytkowników z urządzenia.
+- **Zmiany konta** (tylko urządzenia dedykowane): wybierz opcję **Blokuj** , aby uniemożliwić użytkownikom modyfikowanie kont. Pozycja **Nieskonfigurowane** (domyślna) umożliwia użytkownikom aktualizowanie kont użytkowników na urządzeniu.
 
   > [!NOTE]
   > To ustawienie nie jest uznawane za urządzenia właściciel urządzenia (w pełni zarządzane). Jeśli skonfigurujesz to ustawienie, to ustawienie zostanie zignorowane i nie będzie miało wpływu.
+
+- **Osobiste konta Google**: **blokowanie** uniemożliwia użytkownikom dodawanie do urządzenia osobistego konta Google. **Nie skonfigurowano** (domyślnie) umożliwia użytkownikom dodawanie osobistych kont Google.
 
 ### <a name="applications"></a>Aplikacje
 
@@ -314,7 +319,7 @@ Te ustawienia umożliwiają skonfigurowanie trybu kiosku na dedykowanych urządz
   - **Co najmniej alfanumeryczne z symbolami**
 - **Zapobiegaj ponownemu użyciu starych haseł**: wprowadź liczbę nowych haseł, których należy użyć, zanim będzie możliwe ponowne użycie starego hasła (**1**-**24**).
 - **Odblokowywanie za pomocą odcisku palca**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom końcowym użycie skanera linii papilarnych w celu odblokowania urządzenia. Pozycja **Nieskonfigurowane** zezwala użytkownikom na odblokowywanie urządzeń przy użyciu odcisku palca w profilu służbowym.
-- **Blokada Smart Lock i inni agenci zaufania**: wybierz pozycję **Blokuj**, aby uniemożliwić funkcji Smart Lock lub innym agentom zaufania dostosowywanie ustawień blokady ekranu na zgodnych urządzeniach. Ta funkcja, zwana również czasami agentem zaufania, umożliwia wyłączenie lub obejście hasła ekranu blokady urządzenia, jeśli urządzenie znajduje się w zaufanej lokalizacji. Na przykład można obejść hasło profilu służbowego, gdy urządzenie jest połączone z konkretnym urządzeniem Bluetooth lub znajduje się w pobliżu tagu NFC. Za pomocą tego ustawienia można uniemożliwić użytkownikom konfigurowanie funkcji Smart Lock.
+- **Blokada Smart Lock i inni agenci zaufania**: wybierz pozycję **Blokuj**, aby uniemożliwić funkcji Smart Lock lub innym agentom zaufania dostosowywanie ustawień blokady ekranu na zgodnych urządzeniach. Ta funkcja, znana także jako agent zaufania, umożliwia wyłączenie lub obejście hasła ekranu blokady urządzenia, jeśli urządzenie znajduje się w zaufanej lokalizacji. Na przykład można obejść hasło profilu służbowego, gdy urządzenie jest połączone z konkretnym urządzeniem Bluetooth lub znajduje się w pobliżu tagu NFC. Za pomocą tego ustawienia można uniemożliwić użytkownikom konfigurowanie funkcji Smart Lock.
 
 ### <a name="device-password"></a>Hasło urządzenia
 
@@ -335,14 +340,14 @@ Te ustawienia hasła są stosowane w profilach osobistych na urządzeniach korzy
   - **Co najmniej alfanumeryczne z symbolami**
 - **Zapobiegaj ponownemu użyciu starych haseł**: wprowadź liczbę nowych haseł, których należy użyć, zanim będzie możliwe ponowne użycie starego hasła (**1**-**24**).
 - **Odblokowywanie za pomocą odcisku palca**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikowi końcowemu użycie skanera linii papilarnych w celu odblokowania urządzenia. Pozycja **Nieskonfigurowane** zezwala użytkownikowi na odblokowywanie urządzenia przy użyciu odcisku palca.
-- **Blokada Smart Lock i inni agenci zaufania**: wybierz pozycję **Blokuj**, aby uniemożliwić funkcji Smart Lock lub innym agentom zaufania dostosowywanie ustawień blokady ekranu na zgodnych urządzeniach. Ta funkcja, zwana również czasami agentem zaufania, umożliwia wyłączenie lub obejście hasła ekranu blokady urządzenia, jeśli urządzenie znajduje się w zaufanej lokalizacji. Na przykład można obejść hasło profilu służbowego, gdy urządzenie jest połączone z konkretnym urządzeniem Bluetooth lub znajduje się w pobliżu tagu NFC. Za pomocą tego ustawienia można uniemożliwić użytkownikom konfigurowanie funkcji Smart Lock.
+- **Blokada Smart Lock i inni agenci zaufania**: wybierz pozycję **Blokuj**, aby uniemożliwić funkcji Smart Lock lub innym agentom zaufania dostosowywanie ustawień blokady ekranu na zgodnych urządzeniach. Ta funkcja, znana także jako agent zaufania, umożliwia wyłączenie lub obejście hasła ekranu blokady urządzenia, jeśli urządzenie znajduje się w zaufanej lokalizacji. Na przykład można obejść hasło profilu służbowego, gdy urządzenie jest połączone z konkretnym urządzeniem Bluetooth lub znajduje się w pobliżu tagu NFC. Za pomocą tego ustawienia można uniemożliwić użytkownikom konfigurowanie funkcji Smart Lock.
 
 ### <a name="system-security"></a>Zabezpieczenia systemu
 
 - **Skanowanie aplikacji pod kątem zagrożeń**: pozycja **Wymagaj** wymusza włączenie ustawienia **Weryfikuj aplikacje** w profilach służbowych i osobistych.
 
    > [!Note]
-   > To ustawienie działa tylko w przypadku urządzeń z systemem Android O lub nowszym.
+   > To ustawienie działa tylko w przypadku urządzeń z systemem Android 8 (Oreo) lub nowszym.
 
 - **Zapobiegaj instalacji aplikacji z nieznanych źródeł w profilu osobistym**: Po zaprojektowaniu urządzenia z systemem Android Enterprise profile służbowe nie mogą instalować aplikacji ze źródeł innych niż Sklep Play. Ze względu na to, że urządzenia profilu służbowego są przeznaczone do podwójnego profilu:
 

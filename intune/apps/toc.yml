@@ -133,6 +133,8 @@
               href: manage-microsoft-edge.md
             - name: Konfigurowanie programu Outlook
               href: app-configuration-policies-outlook.md
+            - name: Konfigurowanie protokołu S/MIME dla programu Outlook
+              href: app-configuration-policies-outlook-smime.md
             - name: Konfigurowanie programu Google Chrome dla systemu Android
               href: apps-configure-chrome-android.md
         - name: Aplikacje i książki kupione w ramach zakupów zbiorczych
