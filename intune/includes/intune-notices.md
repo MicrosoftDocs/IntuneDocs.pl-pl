@@ -7,14 +7,23 @@ ms.topic: include
 ms.date: 11/19/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: b59419be9f381a1c646a7778b73ed172526f6ef6
-ms.sourcegitcommit: 13fa1a4a478cb0e03c7f751958bc17d9dc70010d
+ms.openlocfilehash: fa2b1c5c9d267b9f860da2268d03c928ebf7693b
+ms.sourcegitcommit: 1cf063c98e1caae00a6e6fab821cc3254562bca9
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74188436"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74309821"
 ---
 Te powiadomienia zawierają ważne informacje, które mogą ułatwić przygotowanie się na nadchodzące zmiany i nowe funkcje w usłudze Intune.
+
+### <a name="end-support-for-windows-phone-81--3544909--"></a>Zakończenie wsparcia systemu Windows Phone 8.1<!--3544909-->
+Wsparcie podstawowe firmy Microsoft dla systemu Windows Phone 8.1 zakończyło się w lipcu 2017 r., a wsparcie dodatkowe zakończyło się w czerwcu 2019 r. Aplikacja Portal firmy dla systemu Windows Phone 8.1 działała w trybie podtrzymywania od października 2017 r. Usługa Microsoft Intune zakończy wsparcie dla systemu Windows Phone 8.1 w dniu 20 lutego 2020 r.
+
+#### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
+Po 20 lutego 2020 r. te urządzenia nie będą otrzymywać aktualizacji zabezpieczeń i nie będzie można rejestrować nowych urządzeń. Istniejące urządzenia z systemem Windows Phone 8.1 pozostaną zarejestrowane (zasady, aplikacje, raportowanie), ale warto zapamiętać, że po tej dacie rozwiązywanie problemów dotyczących istniejącej rejestracji nie będzie obsługiwane, ponieważ wsparcie wielu składników, takich jak certyfikaty innych firm, zostało już zakończone na tej platformie. Usługa Intune przestanie testować zgodność między usługą Intune i systemem Windows Phone 8.1.
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Co należy zrobić, aby przygotować się do tej zmiany?
+Możesz sprawdzić raporty usługi Intune, aby zobaczyć, na które urządzenia lub użytkowników może to mieć wpływ. Przejdź do pozycji Urządzenia > Wszystkie urządzenia i filtruj zawartość według systemu operacyjnego. Możesz dodać dodatkowe kolumny, które ułatwią określenie, kto w organizacji ma urządzenia z systemem Windows Phone 8.1. Poproś użytkowników końcowych, aby uaktualnili urządzenia do obsługiwanej wersji systemu operacyjnego.
 
 ### <a name="update-your-intune-outlook-app-protection-policies-app--2576686--"></a>Aktualizowanie zasad ochrony aplikacji programu Outlook w usłudze Intune<!--2576686-->
 Jeśli w Centrum wiadomości otrzymasz informację MC195618, może być konieczne wykonanie akcji. Jak opisano w planie platformy Microsoft 365, w obszarach oznaczonych identyfikatorami funkcji: 56325 i 56326, usługi Intune i Outlook dla systemów iOS i Android wdrażają obsługę ograniczania poufnych danych w powiadomieniach e-mail i przypomnień w kalendarzu. W wyniku tych ulepszeń program Outlook dla systemów iOS i Android będzie usuwał obsługę kilku kluczy konfiguracji aplikacji ochrony danych, które są obecnie używane do zarządzania powiadomieniami.
