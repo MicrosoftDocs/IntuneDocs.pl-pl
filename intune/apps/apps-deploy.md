@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99e89db1bbef3d08cd6709b2600c4a684ac618f7
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: c1e8e37a784ea39fbf1154321933673ed02eee33
+ms.sourcegitcommit: 16a9109b4028589c17695d41271ca4fee8b1d697
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72498611"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74540745"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Przypisywanie aplikacji do grup przy użyciu usługi Microsoft Intune
 
@@ -94,35 +94,23 @@ W poniższej tabeli opisano wynikowe intencje w przypadku konfliktu:
 | Intencja grupy 1 | Intencja grupy 2 | Intencja wynikowa |
 |-----------------------------------|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |Użytkownik, wymagane|Użytkownik, dostępne|Wymagane i dostępne|
-|Użytkownik, wymagane|Użytkownik, niedostępne|Wymagane|
 |Użytkownik, wymagane|Użytkownik, odinstalowywanie|Wymagane|
-|Użytkownik, dostępne|Użytkownik, niedostępne|Niedostępny|
 |Użytkownik, dostępne|Użytkownik, odinstalowywanie|Odinstalowanie|
-|Użytkownik, niedostępne|Użytkownik, odinstalowywanie|Odinstalowanie
 |Użytkownik, wymagane|Urządzenie, wymagane|Oba elementy istnieją, usługa Intune traktuje jako wymagane
 |Użytkownik, wymagane|Urządzenie, odinstalowywanie|Oba elementy istnieją, usługa Intune rozstrzyga jako wymagane
 |Użytkownik, dostępne|Urządzenie, wymagane|Oba elementy istnieją, usługa Intune rozstrzyga jako wymagane (wymagane i dostępne)
 |Użytkownik, dostępne|Urządzenie, odinstalowywanie|Oba elementy istnieją, usługa Intune rozstrzyga jako dostępne<br><br>Aplikacja jest wyświetlana w Portalu firmy.<br><br>Jeśli aplikacja została już zainstalowana (jako aplikacja wymagana z wcześniejszą intencją), ta aplikacja zostaje odinstalowana.<br><br>Jeśli użytkownik wybierze pozycję **Zainstaluj z Portalu firmy**, aplikacja zostanie zainstalowana, a intencja odinstalowania nie zostanie uznana.|
-|Użytkownik, niedostępne|Urządzenie, wymagane|Wymagane|
-|Użytkownik, niedostępne|Urządzenie, odinstalowywanie|Odinstalowanie|
 |Użytkownik, odinstalowywanie|Urządzenie, wymagane|Oba elementy istnieją, usługa Intune rozstrzyga jako wymagane|
 |Użytkownik, odinstalowywanie|Urządzenie, odinstalowywanie|Oba elementy istnieją, usługa Intune rozstrzyga jako odinstalowywanie|
 |Urządzenie, wymagane|Urządzenie, odinstalowywanie|Wymagane|
 |Użytkownik, wymagane i dostępne|Użytkownik, dostępne|Wymagane i dostępne|
 |Użytkownik, wymagane i dostępne|Użytkownik, odinstalowywanie|Wymagane i dostępne|
-|Użytkownik, wymagane i dostępne|Użytkownik, niedostępne|Wymagane i dostępne|
 |Użytkownik, wymagane i dostępne|Urządzenie, wymagane|Oba elementy istnieją, wymagane i dostępne
-|Użytkownik, wymagane i dostępne|Urządzenie, niedostępne|Wymagane i dostępne|
 |Użytkownik, wymagane i dostępne|Urządzenie, odinstalowywanie|Oba elementy istnieją, usługa Intune rozstrzyga jako wymagane (wymagane i dostępne)
-|Użytkownik, niedostępne|Urządzenie, niedostępne|Niedostępny|
-|Użytkownik, dostępne|Urządzenie, niedostępne|Dostępne|
-|Użytkownik, wymagane|Urządzenie, niedostępne|Wymagane|
 |Użytkownik, dostępne bez rejestracji|Użytkownik, wymagane i dostępne|Wymagane i dostępne
 |Użytkownik, dostępne bez rejestracji|Użytkownik, wymagane|Wymagane
-|Użytkownik, dostępne bez rejestracji|Użytkownik, niedostępne|Niedostępny
 |Użytkownik, dostępne bez rejestracji|Użytkownik, dostępne|Dostępne|
 |Użytkownik, dostępne bez rejestracji|Urządzenie, wymagane|Wymagane i dostępne bez rejestracji|
-|Użytkownik, dostępne bez rejestracji|Urządzenie, niedostępne|Dostępne bez rejestracji|
 |Użytkownik, dostępne bez rejestracji|Urządzenie, odinstalowywanie|Odinstalowywanie i dostępne bez rejestracji.<br><br>Jeśli użytkownik nie zainstalował aplikacji z Portalu firmy, odinstalowywanie zostanie uznane.<br><br>Jeśli użytkownik instaluje aplikację z Portalu firmy, instalowanie ma priorytet nad odinstalowywaniem.|
 
 > [!NOTE]

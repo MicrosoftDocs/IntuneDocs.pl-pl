@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e0cef06f2f939c996fe59d5b6acb10560125718
-ms.sourcegitcommit: e7798c9faa7b7471d0994de2dcd94c259ee8874c
+ms.openlocfilehash: 752b4ae8440df0ebefbabbf7e5ccb48fed684827
+ms.sourcegitcommit: 16a9109b4028589c17695d41271ca4fee8b1d697
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73931023"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74540815"
 ---
 # <a name="microsoft-intune-protected-apps"></a>Chronione aplikacje w usłudze Microsoft Intune  
 
@@ -72,7 +72,6 @@ Poniższe tabele zawierają szczegóły obsługiwanych partnerów oraz aplikacji
 | **Microsoft Visio Viewer**<p><img alt="Microsoft app - Microsoft Visio Viewer icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-visio-viewer.png" width="100"> | Możesz za darmo przeglądać diagramy programu Visio i wchodzić z nimi w interakcje, pracując mobilnie na telefonie iPhone. Zaloguj się przy użyciu konta Microsoft lub otwórz załącznik programu Visio z wiadomości e-mail i ciesz się wspaniałym widokiem diagramów programu Visio na dowolnym urządzeniu iPhone z systemem iOS 9.0 lub nowszym. Możesz również udostępniać diagramy innym osobom, które mogą następnie przeglądać diagramy programu Visio na telefon iPhone lub w przeglądarce internetowej, nawet gdy nie mają programu Visio zainstalowanego na swoim komputerze stacjonarnym z systemem Windows.| [link do sklepu dla systemu iOS](https://itunes.apple.com/us/app/microsoft-visio-viewer-flowcharts-and-diagrams/id1139787983?mt=8) |  
 | **Microsoft Word**<p><img alt="Microsoft app - Microsoft Word icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-word.png" width="100"> | Spraw, aby dokumenty programu Word wyglądały lepiej, niż kiedykolwiek wcześniej, na tablecie i telefonie. Zyskaj pewność, że edytowane lub tworzone dokumenty będą wyglądać dokładnie tak, jak chcesz, na komputerach, komputerach Mac, tabletach i telefonach. Od razu rozpocznij pracę z pakietem Office o znajomym wyglądzie i działaniu w intuicyjnym środowisku dotykowym.<p><p>Ta aplikacja może obsługiwać wiele tożsamości w systemach Android i iOS. | [link do sklepu dla systemu Android](https://play.google.com/store/apps/details?id=com.microsoft.office.word),<br>[link do sklepu dla systemu iOS](https://itunes.apple.com/us/app/microsoft-word/id586447913?mt=8) |  
 | **Foldery robocze firmy Microsoft**<p><img alt="Microsoft app - Microsoft Work Folders icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-work-folders.png" width="100"> | Zezwalaj poszczególnym pracownikom na bezpieczny dostęp do plików ze środowiska firmy i spoza niego za pomocą funkcji systemu Windows Server o nazwie Foldery robocze. | [link do sklepu dla systemu iOS](https://itunes.apple.com/us/app/work-folders/id950878067?mt=8) | 
-| **Microsoft Whiteboard**<p><img alt="Microsoft app - Microsoft Whiteboard icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-whiteboard.png" width="100"> | Aplikacja Microsoft Whiteboard udostępnia inteligentną kanwę do swobodnego rysowania, na której zespoły mogą opracowywać idee, tworzyć i współpracować wizualnie za pośrednictwem chmury.  Usprawnia to pracę zespołową, umożliwiając wszystkim członkom zespołu edytowanie i komentowanie bezpośrednio na kanwie w czasie rzeczywistym niezależnie od tego, gdzie się znajdują. A cała Twoja praca pozostaje bezpieczna w chmurze, gotowa do kontynuowania z dowolnego urządzenia. | [link do sklepu dla systemu iOS](https://apps.apple.com/us/app/microsoft-whiteboard/id1352499399) |  
 | **Yammer**<p><img alt="Microsoft app - Yammer icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-yammer.png" width="100"> | Dziel silosy organizacyjne i ułatwiaj współpracę zespołową dzięki aplikacji Yammer. Nawiązuj połączenie z właściwymi osobami w organizacji, udostępniaj i wyszukuj informacje w obrębie zespołów oraz organizuj projekty i pomysły, aby wykonywać więcej zadań. | [link do sklepu dla systemu Android](https://play.google.com/store/apps/details?id=com.yammer.v1),<br>[link do sklepu dla systemu iOS](https://itunes.apple.com/us/app/yammer/id289559439?mt=8) |  
 
 ## <a name="partner-apps"></a>Aplikacje partnerskie 
