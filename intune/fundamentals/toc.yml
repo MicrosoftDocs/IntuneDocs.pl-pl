@@ -16,6 +16,8 @@
           href: whats-new-app-ui.md
         - name: Funkcje w trakcie opracowywania
           href: in-development.md
+        - name: Ważne uwagi
+          href: 'whats-new.md#notices'
 - name: Przewodniki Szybki start
   items:
     - name: Bezpłatna wersja próbna usługi Intune

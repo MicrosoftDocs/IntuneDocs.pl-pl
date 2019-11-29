@@ -14,7 +14,11 @@
     - name: Tworzenie profilu
       href: device-profile-create.md
     - name: Szablony administracyjne w systemie Windows
-      href: administrative-templates-windows.md
+      items:
+        - name: Szablony administracyjne w systemie Windows
+          href: administrative-templates-windows.md
+        - name: Aktualizowanie pakietu Office przy użyciu szablonów administracyjnych
+          href: administrative-templates-update-office.md
     - name: Funkcje urządzeń w systemach iOS i macOS
       href: device-features-configure.md
     - name: Ograniczanie ustawień i funkcji urządzenia
@@ -47,6 +51,8 @@
       items:
         - name: Sieć Wi-Fi z kluczem wstępnym
           href: wi-fi-profile-shared-key.md
+        - name: Rozwiązywanie problemów z siecią Wi-Fi
+          href: troubleshoot-wi-fi-profiles.md
     - name: Rozszerzenia w systemie macOS
       href: kernel-extensions-overview-macos.md
     - name: Aplikacja edukacyjna Wypełnij test
