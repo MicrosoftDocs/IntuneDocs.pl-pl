@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 796439581ca0ae91e788a91ab0bc2ef8f6019626
-ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
+ms.openlocfilehash: 04b284a62076122cec70b6b455151a0377470521
+ms.sourcegitcommit: 16a9109b4028589c17695d41271ca4fee8b1d697
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74199338"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74540738"
 ---
 # <a name="in-development-for-microsoft-intune---december-2019"></a>W trakcie opracowywania dla usługi Microsoft Intune — grudzień 2019 r.
 
@@ -181,34 +181,12 @@ Dotyczy:
 <!--## Device enrollment-->
 
 <!-- ***********************************************-->
-## <a name="device-management"></a>Zarządzanie urządzeniami
+<!--## Device management-->
 
-
-
-### <a name="edit-device-name-value-for-autopilot-devices---2640074----"></a>Edytuj wartość nazwy urządzenia dla urządzeń z autopilotażem<!-- 2640074  -->
-Będziesz w stanie edytować wartość nazwy urządzenia dla urządzeń z urządzeniami niewidocznymi w usłudze Azure AD. W tym celu przejdź do usługi **Intune** > **rejestracja urządzeń** > **rejestracja w systemie Windows** >  > **urządzeń** z **systemem Windows autopilotaż** > Wybierz urządzenie > zmienić wartość **nazwy urządzenia** w prawym okienku > **Zapisz**.
-
-### <a name="edit-the-group-tag-value-for-autopilot-devices---4816775---"></a>Edytuj wartość tagu grupy dla urządzeń z autopilotażem<!-- 4816775 -->
-Będziesz w stanie edytować wartość **tagu grupy** dla urządzeń z autopilotażem:
-
-1. Wybierz pozycję Usługa **Intune** > **rejestracja urządzeń** > **rejestracja w systemie Windows** >  > **urządzeń**z **systemem Windows** .
-1. Wybierz urządzenie.
-1. W okienku po prawej stronie Zmień wartość **tagu grupy** .
-1. Wybierz pozycję **Zapisz**.
-
-### <a name="target-macos-user-groups-to-require-jamf-management---4061739---"></a>Docelowa Grupa użytkowników macOS do wymagania zarządzania Jamf<!-- 4061739 -->
-Będziesz mieć możliwość nawiązywania określonych grup użytkowników, aby wymagały zarządzania urządzeniami macOS przez Jamf. Ten element docelowy umożliwi zastosowanie integracji zgodności Jamf z podzbiorem urządzeń macOS, podczas gdy inne urządzenia będą nadal zarządzane przez usługę Intune. Określanie wartości docelowej umożliwia również stopniowe Migrowanie urządzeń użytkowników z jednego systemu zarządzania urządzeniami przenośnymi do drugiego.
 
 <!-- ***********************************************-->
-## <a name="intune-apps"></a>Aplikacje usługi Intune
-
-### <a name="improved-macos-enrollment-experience-in-company-portal---5074349----"></a>Ulepszona obsługa rejestracji macOS w Portal firmy<!-- 5074349  -->
-Portal firmy dla środowiska rejestracji macOS będzie prostszy proces rejestracji, który będzie bardziej ściśle dopasowywany do Portal firmy środowiska rejestracji systemu iOS. Użytkownicy urządzeń będą widzieli następujące:  
-
-* Elegancki interfejs użytkownika.  
-* Ulepszona Lista kontrolna rejestracji.  
-* Wyraźniejsze instrukcje dotyczące rejestrowania urządzeń.  
-* Udoskonalone opcje rozwiązywania problemów.  
+<!--## Intune apps-->
+ 
 
 <!-- ***********************************************-->
 ## <a name="monitoring-and-troubleshooting"></a>Monitorowanie i rozwiązywanie problemów
@@ -217,10 +195,8 @@ Portal firmy dla środowiska rejestracji macOS będzie prostszy proces rejestrac
 Nowe scentralizowane środowisko dziennika inspekcji zbiera dzienniki inspekcji dla wszystkich kategorii na jednej stronie. You'l być w stanie filtrować dzienniki, aby uzyskać dane, których szukasz. Aby wyświetlić dzienniki inspekcji, przejdź do obszaru **Administracja dzierżawy** > **dzienniki inspekcji**. Aby uzyskać więcej informacji, zobacz [nadchodzące zmiany w dziennikach inspekcji w usłudze Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Upcoming-change-to-Audit-logs-in-Intune/ba-p/1015858).
 
 <!-- ***********************************************-->
-## <a name="role-based-access-control"></a>Kontrola dostępu oparta na rolach
+<!--## Role-based access control-->
 
-### <a name="duplicate-custom-or-built-in-roles---1081938---"></a>Zduplikowane role niestandardowe lub wbudowane<!-- 1081938 -->
-Będziesz mieć możliwość kopiowania ról wbudowanych i niestandardowych. W tym celu przejdź do **ról** > usługi **Intune** > **wszystkie role** > wybierz rolę z listy > **Duplikuj**. Upewnij się, że wprowadzono nową nazwę, która jest unikatowa.
 
 <!-- ***********************************************-->
 

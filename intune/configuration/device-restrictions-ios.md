@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/12/2019
+ms.date: 11/25/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 751ddfae96ebcd190d4d9ce2ca93bfccba972df5
-ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
+ms.openlocfilehash: 6fde277e16043662420864adcc0458e3dccad308
+ms.sourcegitcommit: ce518a5dfe62c546a77f32ef372f36efbaad473f
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74390854"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74465657"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem iOS i iPadOS umożliwiające działanie funkcji lub ich ograniczanie przy użyciu usługi Intune
 
@@ -244,6 +244,10 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 ### <a name="settings-apply-to-all-enrollment-types"></a>Ustawienia dotyczą: wszystkie typy rejestracji
 
 - **Wyświetlanie dokumentów firmowych w aplikacjach niezarządzanych**: pozycja **Blokuj** uniemożliwia wyświetlanie dokumentów firmowych w aplikacjach niezarządzanych. Pozycja **Nieskonfigurowane** (wartość domyślna) zezwala na wyświetlanie dokumentów firmowych w dowolnej aplikacji. Na przykład chcesz uniemożliwić użytkownikom zapisywanie plików z aplikacji OneDrive w aplikacji Dropbox. Skonfiguruj to ustawienie jako **Blokuj**. Jeśli urządzenie otrzymało zasady (na przykład po ponownym uruchomieniu), nie ma już możliwości zapisywania.
+
+
+  > [!NOTE]
+  > Po zablokowaniu tego ustawienia są również blokowane klawiatury innych firm zainstalowane ze sklepu App Store.
 
   - **Zezwalaj niezarządzanym aplikacjom na odczytywanie z kont kontaktów zarządzanych**: w przypadku wybrania opcji **Zezwalaj**, niezarządzane aplikacje, takie jak wbudowana aplikacja do kontaktów systemu iOS, mogą odczytywać i uzyskiwać dostęp do informacji kontaktowych z zarządzanych aplikacji, w tym aplikacji mobilnej Outlook. Ustawienie opcji **Nieskonfigurowane** (wartość domyślna) zapobiega odczytywaniu informacji z wbudowanej aplikacji Kontakty na urządzeniu oraz uniemożliwia usuwanie duplikatów.  
   
