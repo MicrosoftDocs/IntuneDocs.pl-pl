@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 918468bf8948ce54082f3fccc0325db07e116966
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: 5a3081ece10bb25c6381f4a8f891152433bc9661
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73713201"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564376"
 ---
 # <a name="see-device-details-in-intune"></a>Wyświetlanie szczegółów urządzenia w usłudze Intune
 
@@ -84,7 +84,7 @@ W zależności od operatora danego urządzenia mogą nie zostać zebrane wszystk
 |Identyfikator ICCID|Identyfikator ICCID (Integrated Circuit Card Identifier), który jest unikatowym numerem identyfikacyjnym karty SIM.|Windows, iOS, Android|
 |Data rejestracji|Data i godzina rejestracji urządzenia w usłudze Intune.|Windows, iOS, Android|
 |Ostatni kontakt|Data i godzina ostatniego połączenia urządzenia z usługą Intune.|Windows, iOS, Android|
-|Kod obejścia blokady aktywacji|Kod umożliwiający obejście blokady aktywacji.|Windows, iOS, Android|
+|Kod obejścia blokady aktywacji|Kod umożliwiający obejście blokady aktywacji.|iOS|
 |Zarejestrowane w usłudze Azure AD|Jeśli wybrano pozycję **Tak**, urządzenie jest zarejestrowane w usłudze Azure Active Directory.|Windows, iOS, Android|
 |Zarejestrowane w usłudze Intune|Jeśli wybrano pozycję **Tak**, urządzenie jest zarejestrowane w usłudze Intune|Windows, iOS, Android|
 |Zgodność|Stan zgodności urządzenia.|Windows, iOS, Android|
