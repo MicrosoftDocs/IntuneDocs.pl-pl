@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2b3c82faab08248640e19573582ccbd232e0587d
-ms.sourcegitcommit: 5932da3ed8f52c7b0f0d71c1801f81c85952cf0c
+ms.openlocfilehash: 0012a80f0e9ea60b41c94a582e42d5f647c6bbc2
+ms.sourcegitcommit: cdb2a484b059bd8d8c3985cde1e883c24a4c1cad
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72923353"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74239222"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Rejestrowanie urządzeń w usłudze Intune przy użyciu konta menedżera rejestracji urządzeń
 
@@ -37,6 +37,7 @@ Konta użytkowników DEM i urządzenia zarejestrowane przy użyciu konta użytko
 - Nie można wykonać czyszczenia z poziomu Portalu firmy. Urządzenie zarejestrowane przy użyciu konta użytkownika DEM można wyczyścić z poziomu usługi Intune w witrynie Azure Portal.
 - W aplikacji lub witrynie internetowej Portal firmy widoczne jest tylko urządzenie lokalne.
 - Konta użytkowników DEM nie mogą używać aplikacji z programu Apple Volume Purchase Program (VPP) z licencjami użytkowników programu VPP ze względu na wymagania dotyczące identyfikatora Apple ID dla poszczególnych użytkowników na potrzeby zarządzania aplikacjami.
+- Kont DEM nie można używać podczas rejestrowania urządzeń za pośrednictwem programu Device Enrollment Program firmy Apple (DEP).
 - Urządzenia mogą instalować aplikacje VPP, jeśli mają licencje urządzeń programu VPP.
 - Dostęp warunkowy w urządzeniach został zablokowany, z wyjątkiem systemu Windows 10 1803+.
 - Wszystkie urządzenia zarejestrowane przy użyciu konta DEM muszą mieć odpowiednie licencje, aby można było nimi zarządzać za pomocą usługi Intune. Licencja może być licencją użytkownika usługi Intune lub licencją urządzenia usługi Intune.

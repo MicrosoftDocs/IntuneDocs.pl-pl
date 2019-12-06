@@ -7,14 +7,29 @@ ms.topic: include
 ms.date: 11/19/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: fa2b1c5c9d267b9f860da2268d03c928ebf7693b
-ms.sourcegitcommit: 1cf063c98e1caae00a6e6fab821cc3254562bca9
+ms.openlocfilehash: 8db05399c4a880d72d24cde885976309bf9a4fa7
+ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74309821"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74549473"
 ---
 Te powiadomienia zawierają ważne informacje, które mogą ułatwić przygotowanie się na nadchodzące zmiany i nowe funkcje w usłudze Intune.
+
+### <a name="updated-support-statement-for-adobe-acrobat-reader-for-intune-mobile-app--5746776--"></a>Zaktualizowano oświadczenie dotyczące obsługi aplikacji mobilnej „Adobe Acrobat Reader dla usługi Intune"<!--5746776-->
+Pod koniec sierpnia poinformowaliśmy w dokumencie MC188653, że okres eksploatacji aplikacji mobilnej Adobe Acrobat dla usługi Intune zakończy się 1 grudnia 2019 r. oraz że firma Adobe planuje obsługę zasad ochrony aplikacji usługi Intune w swojej głównej aplikacji Acrobat Reader. Od tego momentu otrzymaliśmy opinie klientów, którzy twierdzili, że potrzebują więcej czasu, aby administratorzy IT mogli nadal traktować aplikację Adobe Acrobat Reader dla usługi Intune jako docelową, a użytkownicy końcowi mogli zacząć z niej korzystać. Mając na uwadze duże użycie aplikacji Adobe Acrobat Reader dla usługi Intune na urządzeniach użytkowników końcowych oraz jej znaczenie w scenariuszach korporacyjnych, chcemy upewnić się, że wszystkie środowiska spełniają wymagania związane z ochroną aplikacji w organizacji. 
+
+Mimo że w zasadach nadal zalecamy używanie ogólnej aplikacji mobilnej Acrobat Reader, ponieważ aplikacja mobilna Acrobat Reader obsługuje zasady ochrony aplikacji i ma zintegrowany zestaw SDK usługi Intune, aplikacja Adobe Acrobat Reader dla usługi Intune będzie obsługiwana do 31 marca 2020 r. 
+
+#### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
+Otrzymujesz tę wiadomość, ponieważ z naszych raportów wynika, że co najmniej jedne zasady w Twojej organizacji dotyczą aplikacji Adobe Acrobat Reader dla usługi Intune i/lub otrzymano poprzednią komunikację dotyczącą zakończenia okresu eksploatacji. 
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Co należy zrobić, aby przygotować się do tej zmiany?
+Poinformuj użytkowników końcowych i pomoc techniczną o tej zmianie. W celu ustanowienia kanału obsługi pytań związanych z usługą Intune możesz użyć [funkcji informacji pomocy technicznej aplikacji Portal firmy](../apps/company-portal-app.md#support-information).
+
+#### <a name="additional-information"></a>Dodatkowe informacje
+https://helpx.adobe.com/acrobat/kb/intune-app-end-of-life.html
+
 
 ### <a name="end-support-for-windows-phone-81--3544909--"></a>Zakończenie wsparcia systemu Windows Phone 8.1<!--3544909-->
 Wsparcie podstawowe firmy Microsoft dla systemu Windows Phone 8.1 zakończyło się w lipcu 2017 r., a wsparcie dodatkowe zakończyło się w czerwcu 2019 r. Aplikacja Portal firmy dla systemu Windows Phone 8.1 działała w trybie podtrzymywania od października 2017 r. Usługa Microsoft Intune zakończy wsparcie dla systemu Windows Phone 8.1 w dniu 20 lutego 2020 r.

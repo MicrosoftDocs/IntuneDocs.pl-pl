@@ -5,23 +5,23 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/28/2019
+ms.date: 11/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: joglocke
+ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 53014376a7e220e975878031ffd759da40db7f6b
-ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
+ms.openlocfilehash: 1d3a2ce9e5a31e989452141a094b70b5e75cf464
+ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73413837"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74409999"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Konfigurowanie urządzeń z systemem Windows 10 w usłudze Intune przy użyciu punktów odniesienia zabezpieczeń
 
@@ -81,7 +81,7 @@ Poniższe wystąpienia punktów odniesienia zabezpieczeń są dostępne do użyc
   > [!NOTE]
   > Punkt odniesienia zabezpieczeń usługi Microsoft Defender ATP został zoptymalizowany pod kątem urządzeń fizycznych i nie jest obecnie zalecany do użycia na maszynach wirtualnych ani punktach końcowych infrastruktury VDI. Niektóre ustawienia punktu odniesienia mogą mieć wpływ na zdalne sesje interaktywne w zwirtualizowanych środowiskach.  Aby uzyskać więcej informacji, zobacz [Increase compliance to the Microsoft Defender ATP security baseline (Zwiększanie zgodności z punktem odniesienia zabezpieczeń usługi Microsoft Defender ATP)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) w dokumentacji systemu Windows.
 
-- **Punkt odniesienia programu Microsoft Edge** 
+- **Punkt odniesienia programu Microsoft Edge**
   - [Wersja zapoznawcza: Punkt odniesienia programu Microsoft Edge](security-baseline-settings-edge.md)
 
 Nadal możesz używać i edytować profile, które zostały utworzone wcześniej na podstawie szablonu wersji zapoznawczej, nawet jeśli ten szablon wersji zapoznawczej nie jest już dostępny do tworzenia nowych profilów.
@@ -103,13 +103,15 @@ Typowe zadania podczas pracy z punktami odniesienia zabezpieczeń obejmują:
 
 ### <a name="create-the-profile"></a>Tworzenie profilu
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), a następnie wybierz pozycję **Bezpieczeństwo urządzeń** > **Punkty odniesienia zabezpieczeń**, aby wyświetlić listę dostępnych punktów odniesienia.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Wybierz pozycję **Zabezpieczenia punktu końcowego** > **Punkty odniesienia zabezpieczeń**, aby wyświetlić listę dostępnych punktów odniesienia.
 
    ![Wybór puntu odniesienia zabezpieczeń do skonfigurowania](./media/security-baselines/available-baselines.png)
 
-2. Wybierz punkt odniesienia, którego chcesz użyć, a następnie wybierz opcję **Utwórz profil**.
+3. Wybierz punkt odniesienia, którego chcesz użyć, a następnie wybierz opcję **Utwórz profil**.
 
-3. Na karcie **Podstawowe** określ następujące właściwości:
+4. Na karcie **Podstawowe** określ następujące właściwości:
 
    - **Nazwa**: wprowadź nazwę profilu punktu odniesienia zabezpieczeń. Na przykład wpisz *Profil standardowy dla usługi Defender ATP*.
 
@@ -117,7 +119,7 @@ Typowe zadania podczas pracy z punktami odniesienia zabezpieczeń obejmują:
 
    Wybierz **Dalej**, aby przejść do następnej karty. Po przejściu do nowej karty możesz wybrać nazwę karty, aby wrócić do poprzedniej karty.
 
-4. Na karcie Ustawienia konfiguracji przejrzyj grupy **ustawień** dostępnych w wybranym punkcie odniesienia. Możesz rozwinąć grupę, aby wyświetlić ustawienia w tej grupie i wartości domyślne dla ustawień w danym punkcie odniesienia. Aby znaleźć określone ustawienia:
+5. Na karcie Ustawienia konfiguracji przejrzyj grupy **ustawień** dostępnych w wybranym punkcie odniesienia. Możesz rozwinąć grupę, aby wyświetlić ustawienia w tej grupie i wartości domyślne dla ustawień w danym punkcie odniesienia. Aby znaleźć określone ustawienia:
    - Wybierz grupę, aby rozwinąć i przejrzeć dostępne ustawienia.
    - Użyj paska *Wyszukaj*, a następnie określ słowa kluczowe filtrujące widok, aby wyświetlić tylko te grupy, które zawierają podane kryteria wyszukiwania.
 
@@ -125,13 +127,13 @@ Typowe zadania podczas pracy z punktami odniesienia zabezpieczeń obejmują:
 
    ![Rozwijanie grupy w celu wyświetlenia ustawień dla tej grupy](./media/security-baselines/sample-list-of-settings.png)
 
-5. Na karcie **Tagi zakresu** wybierz pozycję **Wybierz tagi zakresu**, aby otworzyć okienko *Wybieranie tagów* w celu przypisania tagów zakresu do profilu.
+6. Na karcie **Tagi zakresu** wybierz pozycję **Wybierz tagi zakresu**, aby otworzyć okienko *Wybieranie tagów* w celu przypisania tagów zakresu do profilu.
 
-6. Na karcie **Przypisania** wybierz pozycję **Wybierz grupy do uwzględnienia**, a następnie przypisz punkt odniesienia do co najmniej jednej grupy. Użyj opcji **Wybierz grupy do wykluczenia**, aby dopracować przypisanie.
+7. Na karcie **Przypisania** wybierz pozycję **Wybierz grupy do uwzględnienia**, a następnie przypisz punkt odniesienia do co najmniej jednej grupy. Użyj opcji **Wybierz grupy do wykluczenia**, aby dopracować przypisanie.
 
    ![Przypisywanie profilu](./media/security-baselines/assignments.png)
 
-7. Gdy wszystko będzie gotowe do wdrożenia punktu odniesienia, przejdź na kartę **Przeglądanie + tworzenie**, aby przejrzeć szczegóły punktu odniesienia. Wybierz pozycję **Utwórz**, aby zapisać i wdrożyć profil.
+8. Gdy wszystko będzie gotowe do wdrożenia punktu odniesienia, przejdź na kartę **Przeglądanie + tworzenie**, aby przejrzeć szczegóły punktu odniesienia. Wybierz pozycję **Utwórz**, aby zapisać i wdrożyć profil.
 
    Jak tylko profil zostanie utworzony, jest on wypychany do przypisanej grupy i można go natychmiast zastosować.
 
@@ -140,7 +142,7 @@ Typowe zadania podczas pracy z punktami odniesienia zabezpieczeń obejmują:
 
    ![Przegląd punktu odniesienia](./media/security-baselines/review.png)
 
-8. Po utworzeniu profilu można go edytować. W tym celu wybierz pozycję **Bezpieczeństwo urządzeń** > **Punkty odniesienia zabezpieczeń**, wybierz skonfigurowany typ punktu odniesienia, a następnie wybierz pozycję **Profile**. Wybierz profil z listy dostępnych profilów, a następnie wybierz pozycję **Właściwości**. Możesz edytować ustawienia na wszystkich dostępnych kartach konfiguracji. Następnie wybierz pozycję **Przejrzyj i zapisz**, aby zatwierdzić zmiany.
+9. Po utworzeniu profilu można go edytować. W tym celu wybierz pozycję **Bezpieczeństwo urządzeń** > **Punkty odniesienia zabezpieczeń**, wybierz skonfigurowany typ punktu odniesienia, a następnie wybierz pozycję **Profile**. Wybierz profil z listy dostępnych profilów, a następnie wybierz pozycję **Właściwości**. Możesz edytować ustawienia na wszystkich dostępnych kartach konfiguracji. Następnie wybierz pozycję **Przejrzyj i zapisz**, aby zatwierdzić zmiany.
 
 ### <a name="change-the-baseline-version-for-a-profile"></a>Zmienianie wersji punktu odniesienia dla profilu
 
@@ -160,25 +162,27 @@ Podczas zapisywania, po zakończeniu konwersji, punkt odniesienia jest od razu w
 
 #### <a name="to-change-the-baseline-version-for-a-profile"></a>Aby zmienić wersję punktu odniesienia dla profilu
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), wybierz pozycję **Bezpieczeństwo urządzeń** > **Punkty odniesienia zabezpieczeń**, a następnie wybierz kafelek dla typu punktu odniesienia zawierającego profil, który chcesz zmienić.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). 
 
-2. Następnie wybierz pozycję **Profile**, zaznacz pole wyboru dla profilu, który chcesz edytować, a następnie wybierz pozycję **Zmień wersję**.
+2. Wybierz pozycję **Zabezpieczenia punktu końcowego** > **Punkty odniesienia zabezpieczeń**, a następnie wybierz kafelek dla typu punktu odniesienia zawierającego profil, który chcesz zmienić.
+
+3. Następnie wybierz pozycję **Profile**, zaznacz pole wyboru dla profilu, który chcesz edytować, a następnie wybierz pozycję **Zmień wersję**.
 
    ![wybierz punkt odniesienia](./media/security-baselines/select-baseline.png)
 
-3. W okienku **Zmień wersję** użyj listy rozwijanej **Select a security baseline to update to** (Wybierz punkt odniesienia zabezpieczeń, do którego chcesz aktualizować) i wybierz wystąpienie wersji, którego chcesz użyć.
+4. W okienku **Zmień wersję** użyj listy rozwijanej **Select a security baseline to update to** (Wybierz punkt odniesienia zabezpieczeń, do którego chcesz aktualizować) i wybierz wystąpienie wersji, którego chcesz użyć.
 
    ![wybierz wersję](./media/security-baselines/select-instance.png)
 
-4. Wybierz pozycję **Review update** (Przejrzyj aktualizację), aby pobrać plik CSV, który pokazuje różnice między bieżącą wersją wystąpienia profilu i nową, wybraną przez Ciebie wersją. Przejrzyj ten plik, aby dowiedzieć się, które ustawienia są nowe, które zostały usunięte, oraz jakie są wartości domyślne dla tych ustawień w zaktualizowanym profilu.
+5. Wybierz pozycję **Review update** (Przejrzyj aktualizację), aby pobrać plik CSV, który pokazuje różnice między bieżącą wersją wystąpienia profilu i nową, wybraną przez Ciebie wersją. Przejrzyj ten plik, aby dowiedzieć się, które ustawienia są nowe, które zostały usunięte, oraz jakie są wartości domyślne dla tych ustawień w zaktualizowanym profilu.
 
    Gdy wszystko będzie gotowe, przejdź do następnego kroku.
 
-5. Wybierz jedną z dwóch opcji dla pozycji **Select a method to update the profile** (Wybierz metodę aktualizowania profilu):
+6. Wybierz jedną z dwóch opcji dla pozycji **Select a method to update the profile** (Wybierz metodę aktualizowania profilu):
    - **Accept baseline changes but keep my existing setting customizations** (Akceptuj zmiany punktu odniesienia, ale zachowaj istniejące dostosowania ustawień) — Ta opcja zachowuje dostosowania wprowadzone do profilu punktu odniesienia i stosuje je w nowej wersji wybranej przez Ciebie do użycia.
    - **Accept baseline changes and discard existing setting customizations** (Akceptuj zmiany punktu odniesienia i odrzuć istniejące dostosowania ustawień) — Ta opcja całkowicie zastępuje Twój oryginalny profil. Zaktualizowany profil użyje wartości domyślnych dla wszystkich ustawień.
 
-6. Wybierz pozycję **Prześlij**. Profil zostanie zaktualizowany do wybranej wersji punktu odniesienia i po zakończeniu konwersji punkt odniesienia zostanie natychmiastowo wdrożony ponownie w przypisanych grupach.
+7. Wybierz pozycję **Prześlij**. Profil zostanie zaktualizowany do wybranej wersji punktu odniesienia i po zakończeniu konwersji punkt odniesienia zostanie natychmiastowo wdrożony ponownie w przypisanych grupach.
 
 ### <a name="remove-a-security-baseline-assignment"></a>Usuwanie przypisania punktu odniesienia zabezpieczeń
 

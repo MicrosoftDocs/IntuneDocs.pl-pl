@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a20d1df2bf1e5052bcb2d3d83e919e190f8d9175
-ms.sourcegitcommit: d2d18eef64bcf16eec1a48fcb67f1362537c0245
+ms.openlocfilehash: f31e500b7a3383c5c0c53f1df72cb4a42660328f
+ms.sourcegitcommit: 1a22b8b31424847d3c86590f00f56c5bc3de2eb5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445877"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74284140"
 ---
 
 
@@ -41,4 +41,5 @@ ms.locfileid: "73445877"
 
 Klienci z pakietem Enterprise Management + Security (EMS) mogą także użyć [usługi Azure Active Directory (Azure AD), aby zarejestrować urządzenia z systemem Windows 10](/intune/windows-enroll).
 
+Aby uzyskać wskazówki dotyczące używania maszyn wirtualnych z systemem Windows 10 w usłudze Intune, zobacz [Using Windows 10 virtual machines](../fundamentals/windows-10-virtual-machines.md) (Korzystanie z maszyn wirtualnych z systemem Windows 10).
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b346f41f5198a4aabcb05dcdd4b35a8c56977f53
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: c420446d9293ae2a2d1905dcff218056e8e6c875
+ms.sourcegitcommit: 16a9109b4028589c17695d41271ca4fee8b1d697
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059773"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74540715"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Ustawienia zasad ochrony aplikacji systemu Android w usłudze Microsoft Intune
 W tym artykule opisano ustawienia zasad ochrony aplikacji dla urządzeń z systemem Android. Opisane ustawienia zasad można [skonfigurować](app-protection-policies.md) dla zasad ochrony aplikacji w bloku **Ustawienia** w witrynie Azure Portal.
@@ -66,7 +66,7 @@ Istnieją trzy kategorie ustawień zasad: ustawienia ochrony danych, wymagania d
 
 ## <a name="data-transfer-exemptions"></a>Wyjątki w transferze danych
 
-  Istnieją pewne aplikacje i usługi platform, w przypadku których zasady ochrony aplikacji usługi Intune mogą zezwolić na przesyłanie danych z tych aplikacji i usług oraz do nich. Na przykład wszystkie aplikacje zarządzane przez usługę Intune w systemie Android muszą mieć możliwość przesyłania danych z i do funkcji Zamiana tekstu na mowę Google, aby tekst z ekranu urządzenia przenośnego mógł być odczytywany na głos. Ta lista może ulec zmianom i odzwierciedla usługi oraz aplikacje uważane za przydatne w kwestii bezpieczeństwa wydajności.
+  Istnieją pewne aplikacje i usługi platform, w przypadku których zasady ochrony aplikacji usługi Intune zezwalają na transfer danych z tych aplikacji i usług oraz do nich. Na przykład wszystkie aplikacje zarządzane przez usługę Intune w systemie Android muszą mieć możliwość przesyłania danych z i do funkcji Zamiana tekstu na mowę Google, aby tekst z ekranu urządzenia przenośnego mógł być odczytywany na głos. Ta lista może ulec zmianom i odzwierciedla usługi oraz aplikacje uważane za przydatne w kwestii bezpieczeństwa wydajności.
 
 ### <a name="full-exemptions"></a>Pełna lista wyjątków
 

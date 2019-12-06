@@ -6,30 +6,31 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 11/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: d035ebf5-85f4-4001-a249-75d24325061a
-ms.reviewer: chrisbal
+ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3683d2aeada791c6ec827e915e02365a336e6045
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: 62f418e396c5030a47ea0bcb31914cd4e1069c40
+ms.sourcegitcommit: eb2e420b304c7da9d3be5ef49a676cba66766d2b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059676"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74319836"
 ---
 # <a name="use-a-microsoft-intune-custom-profile-to-create-a-per-app-vpn-profile-for-android-devices"></a>Korzystanie z niestandardowego profilu usługi Microsoft Intune w celu tworzenia profilu sieci VPN dla aplikacji dla urządzeń z systemem Android
 
-[!INCLUDE[azure_portal](../includes/azure_portal.md)]
-
 W przypadku urządzeń z systemem Android 5.0 i nowszymi zarządzanych przez usługę Intune można utworzyć profil sieci VPN dla aplikacji. Najpierw utwórz profil sieci VPN, który używa typu połączenia Pulse Secure lub Citrix. Następnie utwórz niestandardowe zasady konfiguracji, które kojarzą profil sieci VPN z określonymi aplikacjami.
+
+> [!NOTE]
+> Aby korzystać z sieci VPN dla aplikacji na urządzeniach z systemem Android Enterprise, można również wykonać poniższe kroki. Zaleca się jednak korzystanie z [zasad konfiguracji aplikacji](../apps/app-configuration-policies-use-android.md) dla aplikacji klienckiej sieci VPN.
 
 Po przypisaniu zasad w grupach użytkowników lub na urządzeniu z systemem Android użytkownicy powinni uruchomić klienta sieci VPN Pulse Secure lub Citrix. Klient sieci VPN będzie wówczas zezwalać na używanie otwartego połączenia sieci VPN tylko dla ruchu z określonych aplikacji.
 
@@ -48,7 +49,7 @@ Po przypisaniu zasad w grupach użytkowników lub na urządzeniu z systemem Andr
     - **Platforma**: — wybierz opcję **Android**.
     - **Typ profilu**: Wybierz pozycję **Sieć VPN**.
 
-4. Wybierz kolejno pozycje **Ustawienia** > **Konfiguruj**, a następnie skonfiguruj profil sieci VPN zgodnie z ustawieniami przedstawionymi w artykułach [Konfigurowanie ustawień sieci VPN](vpn-settings-configure.md) i [Intune VPN settings for Android devices](vpn-settings-android.md) (Ustawienia sieci VPN usługi Intune dla urządzeń z systemem Android).
+4. Wybierz kolejno pozycje **Ustawienia** > **Konfiguruj**. Następnie skonfiguruj profil sieci VPN. Aby uzyskać więcej informacji, zobacz artykuły [Tworzenie profilów sieci VPN w celu nawiązania połączenia z serwerami sieci VPN w usłudze Intune](vpn-settings-configure.md) i [Ustawienia urządzenia z systemem Android w celu skonfigurowania sieci VPN w usłudze Intune](vpn-settings-android.md).
 
 Zapisz **nazwę połączenia** — wartość określaną podczas tworzenia profilu sieci VPN. Będzie ona potrzebna w następnym kroku. Przykład: **mój_profil_VPN_aplikacji**.
 
@@ -75,7 +76,7 @@ Zapisz **nazwę połączenia** — wartość określaną podczas tworzenia profi
 
 ### <a name="set-your-app-list-to-blacklist-or-whitelist-optional"></a>Ustawianie listy aplikacji jako listy zabronionych lub listy dozwolonych (opcjonalne)
 
-Korzystając z wartości **BLACKLIST**, możesz wprowadzić listę aplikacji, które *nie* będą mogły korzystać z połączenia sieci VPN. Wszystkie pozostałe aplikacje nawiązują połączenia za pośrednictwem sieci VPN. Możesz również użyć wartości **WHITELIST**, aby wprowadzić listę aplikacji, które *mogą* korzystać z połączenia sieci VPN. Aplikacje, które nie znajdują się na liście, nie nawiązują połączeń za pośrednictwem sieci VPN.
+Korzystając z wartości *BLACKLIST*, możesz wprowadzić listę aplikacji, które **nie będą mogły** korzystać z połączenia sieci VPN. Wszystkie pozostałe aplikacje nawiązują połączenia za pośrednictwem sieci VPN. Możesz również użyć wartości **WHITELIST**, aby wprowadzić listę aplikacji, które *mogą* korzystać z połączenia sieci VPN. Aplikacje, które nie znajdują się na liście, nie nawiązują połączeń za pośrednictwem sieci VPN.
 
 1. W okienku **Niestandardowe ustawienia OMA-URI** wybierz pozycję **Dodaj**.
 2. Podaj nazwę ustawienia.

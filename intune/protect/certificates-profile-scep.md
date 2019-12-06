@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9f9d6626d26e919efbd3a3d8b5dd735ecb7fb62
-ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
+ms.openlocfilehash: 321595a2ce8849b3d150b68f9dcc38dfda6ad940
+ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74199136"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74390299"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Tworzenie i przypisywanie profilów certyfikatów SCEP w usłudze Intune
 
@@ -53,6 +53,9 @@ Po [skonfigurowaniu infrastruktury](certificates-scep-configure.md) pod kątem o
 
    2. Nie można używać usługi Intune do odwoływania certyfikatów, które zostały aprowizowane przez profile certyfikatów SCEP dla właścicieli urządzeń. Odwołaniami można zarządzać za pomocą zewnętrznego procesu lub bezpośrednio przy użyciu urzędu certyfikacji. 
 
+   4. W przypadku dedykowanych urządzeń z systemem Android Enterprise profile certyfikatów protokołu SCEP są obsługiwane tylko na potrzeby konfiguracji sieci Wi-Fi i uwierzytelniania.  Profile certyfikatów protokołu SCEP na dedykowanych urządzeniach z systemem Android Enterprise nie są obsługiwane w przypadku uwierzytelniania za pośrednictwem sieci VPN lub aplikacji.   
+
+   
 7. Wybierz pozycję **Ustawienia**, a następnie wykonaj następujące czynności konfiguracyjne:
 
    - **Typ certyfikatu**:

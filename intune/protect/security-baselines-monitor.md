@@ -5,25 +5,25 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/20/2019
+ms.date: 11/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: joglocke
+ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c4d47a11f07a2099d79f5ce4ce90795a087718b
-ms.sourcegitcommit: 1a5b185acd27954b10b6d59409d82eb80fd71284
+ms.openlocfilehash: 7b7f14e939e7241cd34c01d73e9af822dea7acdc
+ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72681474"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74410125"
 ---
-# <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>Monitorowanie profilów i punktu odniesienia zabezpieczeń w usłudze Microsoft Intune  
+# <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>Monitorowanie profilów i punktu odniesienia zabezpieczeń w usłudze Microsoft Intune
 
 Usługa Intune oferuje kilka opcji monitorowania punktów odniesienia zabezpieczeń. Można monitorować profil punktu odniesienia zabezpieczeń, który ma zastosowanie do użytkowników i urządzeń. Można również monitorować rzeczywisty punkt odniesienia i wszystkie urządzenia, które są zgodne (lub nie) z zalecanymi wartościami.
 
@@ -31,33 +31,36 @@ W tym artykule przedstawiono szczegóły obydwu opcji monitorowania.
 
 Więcej szczegółów funkcji punktów odniesienia zabezpieczeń w usłudze Microsoft Intune można znaleźć w temacie [Security baselines in Intune](../security-baselines.md) (Punkty odniesienia zabezpieczeń w usłudze Intune).
 
-## <a name="monitor-the-baseline-and-your-devices"></a>Monitorowanie punktów odniesienia i urządzeń  
+## <a name="monitor-the-baseline-and-your-devices"></a>Monitorowanie punktów odniesienia i urządzeń
 
-W przypadku monitorowania punktu odniesienia uzyskujesz szczegółowe informacje na temat stanu zabezpieczeń urządzeń na podstawie rekomendacji firmy Microsoft. Możesz wyświetlić te szczegółowe informacje w okienku Przegląd punktu odniesienia zabezpieczeń w konsoli usługi Intune.  Wyświetlenie danych po pierwszym przypisaniu punktu odniesienia może potrwać do 24 godzin. Późniejsze zmiany pojawiają się w ciągu sześciu godzin.  
+W przypadku monitorowania punktu odniesienia uzyskujesz szczegółowe informacje na temat stanu zabezpieczeń urządzeń na podstawie rekomendacji firmy Microsoft. Możesz wyświetlić te szczegółowe informacje w okienku Przegląd punktu odniesienia zabezpieczeń w konsoli usługi Intune.  Wyświetlenie danych po pierwszym przypisaniu punktu odniesienia może potrwać do 24 godzin. Późniejsze zmiany pojawiają się w ciągu sześciu godzin.
 
-Aby wyświetlić dane monitorowania dotyczące punktu odniesienia i urządzeń, zaloguj się do [portalu usługi Intune](https://go.microsoft.com/fwlink/?linkid=2090973). Następnie wybierz pozycję **Zabezpieczenia urządzeń** > **Punkty odniesienia zabezpieczeń**, wybierz punkt odniesienia i wyświetl okienko **Przegląd**.
+Aby wyświetlić dane monitorowania dotyczące punktu odniesienia i urządzeń, zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). Następnie wybierz pozycję **Zabezpieczenia punktu końcowego** > **Punkty odniesienia zabezpieczeń**, wybierz punkt odniesienia i wyświetl okienko **Przegląd**.
 
 Okienko **Przegląd** udostępnia dwie metody monitorowania stanu:
-- **Widok urządzenia** — podsumowanie liczby urządzeń znajdujących się w każdej kategorii stanu dla punktu odniesienia.  
-- **Według kategorii** — widok poszczególnych kategorii w punkcie odniesienia. Zawiera wartość procentową liczby urządzeń dla każdej grupy stanu dla poszczególnych kategorii punktu odniesienia. 
 
-Każde urządzenie jest reprezentowane przez jeden z następujących stanów. Są one używane zarówno w widoku *urządzenia*, jak i w widoku *według kategorii*:  
+- **Widok urządzenia** — podsumowanie liczby urządzeń znajdujących się w każdej kategorii stanu dla punktu odniesienia.
+- **Według kategorii** — widok poszczególnych kategorii w punkcie odniesienia. Zawiera wartość procentową liczby urządzeń dla każdej grupy stanu dla poszczególnych kategorii punktu odniesienia.
+
+Każde urządzenie jest reprezentowane przez jeden z następujących stanów. Są one używane zarówno w widoku *urządzenia*, jak i w widoku *według kategorii*:
+
 - **Zgodne z punktem odniesienia** — wszystkie ustawienia w punkcie odniesienia są zgodne z zalecanymi ustawieniami.
 - **Niezgodne z punktem odniesienia** — co najmniej jedno ustawienie w punkcie odniesienia jest niezgodne z zalecanymi ustawieniami.
 - **Błędna konfiguracja** — co najmniej jedno ustawienie nie zostało prawidłowo skonfigurowane. Ten stan oznacza, że ustawienie znajduje się w stanie konfliktu, błędu lub oczekiwania.
 - **Nie dotyczy** — co najmniej jedno ustawienie nie ma zastosowania i nie jest stosowane.
 
-
 ### <a name="device-view"></a>Widok urządzenia
-W okienku Przegląd jest wyświetlane podsumowanie w postaci wykresu. Widać na nim, ile urządzeń ma konkretny stan względem punktu odniesienia — **Stan punktu odniesienia zabezpieczeń dla przypisanych urządzeń z systemem Windows 10**.  
+
+W okienku Przegląd jest wyświetlane podsumowanie w postaci wykresu. Widać na nim, ile urządzeń ma konkretny stan względem punktu odniesienia — **Stan punktu odniesienia zabezpieczeń dla przypisanych urządzeń z systemem Windows 10**.
 
 ![Sprawdzanie stanu urządzeń](./media/security-baselines-monitor/overview.png)
 
-Jeśli urządzenie ma inny stan niż w pozostałych kategoriach punktu odniesienia, to urządzenie jest reprezentowane przez pojedynczy stan. Stan, który reprezentuje urządzenie, jest pobierany w następującej kolejności: **Błędna konfiguracja**, **Niezgodne z punktem odniesienia**, **Nie dotyczy**, **Zgodne z punktem odniesienia**.  
+Jeśli urządzenie ma inny stan niż w pozostałych kategoriach punktu odniesienia, to urządzenie jest reprezentowane przez pojedynczy stan. Stan, który reprezentuje urządzenie, jest pobierany w następującej kolejności: **Błędna konfiguracja**, **Niezgodne z punktem odniesienia**, **Nie dotyczy**, **Zgodne z punktem odniesienia**.
 
-Jeśli na przykład urządzenie ma ustawienie sklasyfikowane jako *Błędna konfiguracja* i co najmniej jedno ustawienie sklasyfikowane jako *Niezgodne z punktem odniesienia*, urządzenie zostanie sklasyfikowane jako *Błędna konfiguracja*.  
+Jeśli na przykład urządzenie ma ustawienie sklasyfikowane jako *Błędna konfiguracja* i co najmniej jedno ustawienie sklasyfikowane jako *Niezgodne z punktem odniesienia*, urządzenie zostanie sklasyfikowane jako *Błędna konfiguracja*.
 
 Jeśli klikniesz wykres, możesz przeglądać szczegóły i wyświetlać listę urządzeń mających różne stany. Kliknięcie konkretnego urządzenia na tej liście powoduje wyświetlenie szczegółowych informacji o tym urządzeniu. Przykład:
+
 - Wybierz pozycję **Konfiguracja urządzenia**, a następnie wybierz profil ze stanem błędu:
 
   ![Wyświetlanie stanu profilu](./media/security-baselines-monitor/device-configuration-profile-list.png)
@@ -72,14 +75,14 @@ Ta funkcja raportowania umożliwia wyświetlanie wszystkich ustawień w profilu,
 > Jeśli właściwość zostanie ustawiona na **Nieskonfigurowane** w punkcie odniesienia, ustawienie zostanie ignorowane, a żadne ograniczenia nie będą wymuszane. Właściwość nie jest wyświetlana w raportach.
 
 ### <a name="per-category-view"></a>Widok według kategorii
-W okienku Przegląd jest wyświetlany wykres według kategorii względem punktu odniesienia — **Stan punktu odniesienia zabezpieczeń według kategorii**.  W tym widoku są wyświetlane poszczególne kategorie punktów odniesienia oraz przedstawiony jest odsetek urządzeń mających odpowiedni stan klasyfikacji w każdej z tych kategorii. 
- 
+
+W okienku Przegląd jest wyświetlany wykres według kategorii względem punktu odniesienia — **Stan punktu odniesienia zabezpieczeń według kategorii**.  W tym widoku są wyświetlane poszczególne kategorie punktów odniesienia oraz przedstawiony jest odsetek urządzeń mających odpowiedni stan klasyfikacji w każdej z tych kategorii.
+
 ![Widok stanu według kategorii](./media/security-baselines-monitor/monitor-baseline-per-category.png)
 
-Stan **Zgodne z punktem odniesienia** nie jest wyświetlany do momentu, aż 100% urządzeń zgłosi ten stan w kategorii.   
+Stan **Zgodne z punktem odniesienia** nie jest wyświetlany do momentu, aż 100% urządzeń zgłosi ten stan w kategorii.
 
-Widok według kategorii można sortować względem każdej kolumny, wybierając ikonę strzałki w górę i w dół w górnej części kolumny.  
-
+Widok według kategorii można sortować względem każdej kolumny, wybierając ikonę strzałki w górę i w dół w górnej części kolumny.
 
 ## <a name="monitor-the-profile"></a>Monitorowanie profilu
 
@@ -89,33 +92,38 @@ Monitorowanie profilu umożliwia uzyskiwanie szczegółowych informacji na temat
 
 2. Wybierz profil. Obraz w obszarze **omówienia** pokazuje, do ilu urządzeń i użytkowników przypisano ten profil:
 
-    ![Wyświetlanie liczby urządzeń i użytkowników z przypisanym profilem punktów odniesienia zabezpieczeń](./media/security-baselines-monitor/existing-profile-overview.png)
+   ![Wyświetlanie liczby urządzeń i użytkowników z przypisanym profilem punktów odniesienia zabezpieczeń](./media/security-baselines-monitor/existing-profile-overview.png)
 
 3. W obszarze **Zarządzaj** > **Właściwości** jest wyświetlana lista wszystkich ustawień w danym punkcie odniesienia. Możesz również zmienić dowolne z poniższych ustawień:
 
-    ![Wyświetlanie i aktualizowanie ustawień w profilu punktów odniesienia zabezpieczeń](./media/security-baselines-monitor/manage-settings.png)
+   ![Wyświetlanie i aktualizowanie ustawień w profilu punktów odniesienia zabezpieczeń](./media/security-baselines-monitor/manage-settings.png)
 
 4. W obszarze **Monitor** możesz wyświetlić stan wdrożenia profilu na poszczególnych urządzeniach, stan dla każdego użytkownika i stan dla każdego ustawienia w punkcie odniesienia:
 
-    ![Wyświetlanie różnych opcji monitorowania dla profilu punktów odniesienia zabezpieczeń](./media/security-baselines-monitor/monitor-status-options.png)
+   ![Wyświetlanie różnych opcji monitorowania dla profilu punktów odniesienia zabezpieczeń](./media/security-baselines-monitor/monitor-status-options.png)
 
 ## <a name="troubleshoot-using-per-setting-status"></a>Rozwiązywanie problemów przy użyciu stanu poszczególnych ustawień
 
 Wdrożono punkt odniesienia zabezpieczeń, ale stan wdrożenia wskazuje błąd. Poniższe kroki oferują wskazówki na temat rozwiązywania problemu powodującego błąd.
 
 1. W usłudze Intune wybierz pozycję **Punkty odniesienia zabezpieczeń** > wybierz punkt odniesienia > **Utworzone profile**.
+
 2. Wybierz profil > w obszarze **Monitor** > **Stan na ustawienie**.
+
 3. W tabeli przedstawiono wszystkie ustawienia i stan każdego z nich. Wybierz kolumnę **Błąd** lub kolumnę **Konflikt**, aby wyświetlić ustawienie powoduje błąd.
 
 ### <a name="mdm-diagnostic-information"></a>Informacje diagnostyczne oprogramowania MDM
 
-Teraz już wiesz, które ustawienie powoduje problem. W następnym kroku dowiesz się, dlaczego to ustawienie powoduje błąd lub konflikt. 
+Teraz już wiesz, które ustawienie powoduje problem. W następnym kroku dowiesz się, dlaczego to ustawienie powoduje błąd lub konflikt.
 
 Na urządzeniach z systemem Windows 10 istnieje wbudowany raport zawierający informacje diagnostyczne oprogramowania MDM. Raport ten zawiera wartości domyślne, wartości bieżące, listę zasad, informacje na temat wdrożenia do urządzenia i użytkownika oraz inne dane. Użyj tego raportu, aby łatwiej określić, dlaczego ustawienie powoduje konflikt lub błąd.
 
 1. Na urządzeniu przejdź kolejno do pozycji **Ustawienia** > **Konta** > **Uzyskaj dostęp do miejsca pracy lub nauki**.
+
 2. Wybierz konto > **Informacje** > **Zaawansowany raport diagnostyczny** > **Utwórz raport**.
+
 3. Wybierz pozycję **Eksportuj**, a następnie otwórz wygenerowany plik.
+
 4. W różnych sekcjach raportu wyszukaj ustawienie powodujące błąd lub konflikt.
 
   Na przykład wyszukaj je w sekcji **Zarejestrowane źródła konfiguracji i zasoby docelowe** lub **Zasady niezarządzane**. W ten sposób możesz odkryć, dlaczego ustawienie powoduje błąd lub konflikt.

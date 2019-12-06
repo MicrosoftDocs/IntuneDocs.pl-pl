@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/23/2019
+ms.date: 11/25/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b47ecc2363244634cb355fdeaeb51074417322e4
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: f073c8ad7a8e087a791ee756683011fac6947162
+ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507298"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74547964"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>Dołączanie i wykluczanie przypisań aplikacji w usłudze Microsoft Intune
 
@@ -31,9 +31,20 @@ W usłudze Intune można określić, kto ma dostęp do aplikacji, przypisując g
 
 Aby ustawić dostępność aplikacji, przypisania aplikacji można dołączać do grupy użytkowników lub urządzeń i wykluczać je z nich za pomocą kombinacji przypisań dołączania i wykluczania grupy. Ta możliwość może być przydatna, gdy udostępniasz aplikację przez dołączenie dużej grupy, a następnie zawężasz wybranych użytkowników, wyłączając również mniejszą grupę. Mniejsza grupa może być grupą testową lub grupą wykonawczą. 
 
-Gdy wykluczasz grupy z przypisania aplikacji, musisz wykluczyć tylko grupy użytkowników lub tylko grupy urządzeń. Nie można wykluczyć kombinacji grup użytkowników i grup urządzeń. 
+Najlepszym rozwiązaniem jest utworzenie i przypisanie aplikacji przeznaczonych dla grup użytkowników i oddzielnie dla grup urządzeń. Aby uzyskać więcej informacji na temat grup, zobacz [Dodawanie grup w celu organizowania użytkowników i urządzeń](~/fundamentals/groups-add.md).  
 
-Podczas wykluczania grup usługa Intune nie uwzględnia żadnych skojarzeń użytkowników z urządzeniami. Dołączanie grup użytkowników przy jednoczesnym wykluczaniu grup urządzeń raczej nie przyniesie oczekiwanych rezultatów. Dołączanie ma pierwszeństwo przed wykluczeniem. Jeśli na przykład aplikacja systemu iOS jest przeznaczona dla **Wszystkich użytkowników** i wyklucza **Wszystkie urządzenia iPad**, wynik netto jest taki, że dowolny użytkownik korzystający z urządzenia iPad nadal uzyskuje aplikację. Jeśli jednak aplikacja systemu iOS jest przeznaczona dla **Wszystkich urządzeń** i wyklucza **Wszystkie urządzenia iPad**, wdrożenie będzie udane.  
+Istnieją ważne scenariusze dotyczące dołączania lub wykluczania przypisań aplikacji:
+
+- Wykluczenie ma pierwszeństwo przed dołączeniem w następujących scenariuszach tego samego typu grupy:
+    - Dołączanie grup użytkowników i wykluczanie grup użytkowników podczas przypisywania aplikacji
+    - Dołączanie grup urządzeń i wykluczanie grup urządzeń podczas przypisywania aplikacji
+
+    Jeśli na przykład grupa urządzeń zostanie przypisana do grupy użytkowników **Wszyscy użytkownicy w firmie**, ale członkowie grupy użytkowników **Kadra kierownicza wyższego szczebla** zostaną wykluczeni, grupa **Wszyscy użytkownicy w firmie** z wyjątkiem grupy **Kadra kierownicza wyższego szczebla** uzyska przypisanie, ponieważ obie grupy są grupami użytkowników.
+- Usługa Intune nie ocenia relacji między użytkownikami i grupami urządzeń. Jeśli przypiszesz aplikacje do grup mieszanych, wyniki mogą być niezgodne z oczekiwaniami.
+
+    Przypiszesz na przykład grupę urządzeń do grupy użytkowników **Wszyscy użytkownicy**, ale wykluczysz grupę urządzeń **Wszystkie urządzenia osobiste**. W tym mieszanym przypisaniu aplikacji grupy aplikację otrzyma grupa **Wszyscy użytkownicy**. Wykluczenie nie ma zastosowania.
+
+W związku z tym nie zaleca się przypisywania aplikacji do grup mieszanych.
 
 > [!NOTE]
 > Jeśli ustawiasz przypisanie grupy do aplikacji, typ **Nie dotyczy** jest przestarzały i został zastąpiony przez funkcjonalność wykluczania grupy. 
@@ -41,7 +52,6 @@ Podczas wykluczania grup usługa Intune nie uwzględnia żadnych skojarzeń uży
 > Usługa Intune udostępnia w konsoli wstępnie utworzone grupy **Wszyscy użytkownicy** i **Wszystkie urządzenia**. Grupy oferują wbudowane optymalizacje dla wygody użytkownika. Zdecydowanie zaleca się używanie tych grup dla wszystkich użytkowników i wszystkich urządzeń zamiast wszelkich grup „wszyscy użytkownicy” lub „wszystkie urządzenia”, które mogły zostać utworzone samodzielnie.  
 >
 > Rozwiązanie Android enterprise obsługuje dołączanie i wykluczanie grup. Można użyć wbudowanych grup **Wszyscy użytkownicy** i **Wszystkie urządzenia** na potrzeby przypisywania aplikacji Android enterprise. 
-
 
 ## <a name="include-and-exclude-groups-when-assigning-apps"></a>Dołączanie i wykluczanie grup podczas przypisywania aplikacji 
 Aby przypisać aplikację do grup za pomocą dołączania i wykluczania przypisania:

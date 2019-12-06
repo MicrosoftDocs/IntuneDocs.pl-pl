@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c06fe931bf17b812def3f22b3d9a5d92d9933e2b
-ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
+ms.openlocfilehash: d4ff9126fec182d1e0d2f3eb75297ede8a632e2e
+ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73709469"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74390724"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-dedicated-devices"></a>Konfigurowanie rejestracji w usłudze Intune dla dedykowanych urządzeń z systemem Android Enterprise
 
@@ -101,6 +101,9 @@ Zamiana lub odwołanie tokenu/kodu QR nie będzie miała żadnego wpływu na urz
 ## <a name="enroll-the-dedicated-devices"></a>Rejestrowanie urządzeń dedykowanych
 
 Teraz możesz [zarejestrować swoje urządzenia dedykowane](android-dedicated-devices-fully-managed-enroll.md).
+
+> [!NOTE]
+> Aplikacja **Microsoft Intune** zostanie zainstalowana automatycznie podczas rejestrowania dedykowanego urządzenia.  Ta aplikacja jest wymagana w celu rejestracji i nie można jej odinstalować. 
 
 ## <a name="managing-apps-on-android-enterprise-dedicated-devices"></a>Zarządzanie aplikacjami na dedykowanych urządzeniach z systemem Android Enterprise
 

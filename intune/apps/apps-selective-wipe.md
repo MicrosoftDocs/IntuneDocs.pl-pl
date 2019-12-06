@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0fafe7c17c698a5eb4e5ad6825bee0ae3fe874c2
-ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
+ms.openlocfilehash: 4e827075b56d1751e837c25d85c304201bcafa01
+ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74199232"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74390426"
 ---
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Jak czyścić z aplikacji usługi Intune tylko dane firmowe
 
@@ -47,17 +47,25 @@ Zasady funkcji Windows Information Protection (WIP) można wdrożyć bez koniecz
 1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. W okienku usługi Intune wybierz pozycję **Aplikacje klienckie** > **Selektywne czyszczenie aplikacji** > **Utwórz żądanie czyszczenia**.<br>
    Zostanie wyświetlone okienko **Tworzenie żądania czyszczenia**.
-3. Kliknij pozycję **Wybierz użytkownika**, wybierz użytkownika, którego dane aplikacji chcesz wyczyścić, a następnie kliknij pozycję **Wybierz** w dolnej części okienka **Użytkownik**.
+3. Kliknij pozycję **Wybierz użytkownika**, wybierz użytkownika, którego dane aplikacji chcesz wyczyścić, a następnie kliknij pozycję **Wybierz** w dolnej części okienka **Wybieranie użytkownika**.
+
+    ![Zrzut ekranu okienka „Wybieranie użytkownika”](./media/apps-selective-wipe/apps-selective-wipe-01.png)
+
 4. Kliknij pozycję **Wybierz urządzenie**, wybierz urządzenie, a następnie kliknij pozycję **Wybierz** w dolnej części okienka **wybierania urządzenia**.
+
+    ![Zrzut ekranu okienka „Tworzenie żądania czyszczenia” z wybranym urządzeniem](./media/apps-selective-wipe/apps-selective-wipe-02.png)
+
 5. Kliknij pozycję **Utwórz**, aby wykonać żądanie czyszczenia.
 
 Usługa tworzy i śledzi oddzielne żądanie czyszczenia dla każdej chronionej aplikacji na urządzeniu oraz użytkownika skojarzonego z żądaniem czyszczenia.
+
+   ![Zrzut ekranu okienka „Aplikacje klienckie — Selektywne czyszczenie aplikacji”](./media/apps-selective-wipe/apps-selective-wipe-03.png)
 
 ## <a name="monitor-your-wipe-requests"></a>Monitorowanie żądań czyszczenia
 
 Można wygenerować sumaryczny raport informujący o ogólnym stanie żądania czyszczenia oraz o liczbie oczekujących żądań oraz niepowodzeń. Aby uzyskać więcej szczegółów, wykonaj następujące kroki:
 
-1. W okienku **Aplikacje klienckie — Selektywne czyszczenie aplikacji** jest wyświetlana lista żądań pogrupowanych według użytkowników. System tworzy żądanie czyszczenia dla każdej chronionej aplikacji uruchomionej na urządzeniu, dlatego dla danego użytkownika może być wyświetlanych wiele żądań. Stan wskazuje, czy żądanie czyszczenia jest **oczekujące**, **zakończone niepowodzeniem** czy **zakończone pomyślnie**.
+1. W okienku **Aplikacje klienckie** > **Selektywne czyszczenie aplikacji** jest wyświetlana lista żądań pogrupowanych według użytkowników. System tworzy żądanie czyszczenia dla każdej chronionej aplikacji uruchomionej na urządzeniu, dlatego dla danego użytkownika może być wyświetlanych wiele żądań. Stan wskazuje, czy żądanie czyszczenia jest **oczekujące**, **zakończone niepowodzeniem** czy **zakończone pomyślnie**.
 
     ![Zrzut ekranu przedstawiający stan żądania czyszczenia w okienku Selektywne czyszczenie aplikacji](./media/apps-selective-wipe/wipe-request-status-1.png)
 

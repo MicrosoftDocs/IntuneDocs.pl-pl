@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 11/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,14 +17,14 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ce5db670f0084626f1c053b64679623ccf28eb21
-ms.sourcegitcommit: 15e099a9a1e18296580bb345610aee7cc4acd126
+ms.openlocfilehash: 13d6a2b9cdc8596c7f5cf81218377754e9412be1
+ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74164649"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74390341"
 ---
-# <a name="use-device-encryption-with-intune"></a>Szyfrowanie urządzeń w usłudze Intune  
+# <a name="use-device-encryption-with-intune"></a>Szyfrowanie urządzeń w usłudze Intune
 
 Zarządzaj szyfrowaniem wbudowanych dysków lub napędów urządzeń za pomocą usługi Intune w celu ochrony danych na tych urządzeniach.
 
@@ -68,7 +68,7 @@ Aby uzyskać szczegółowe informacje na temat ustawień programu FileVault, kt�
 
    Rozważ dodanie komunikatu, aby ułatwić użytkownikom końcowym pobieranie klucza odzyskiwania dla swojego urządzenia. Te informacje mogą być przydatne dla użytkowników końcowych, jeśli korzystasz z ustawienia „Wymiana osobistego klucza odzyskiwania” umożliwiającego automatyczne okresowe generowanie nowego klucza odzyskiwania dla urządzenia.
 
-   Przykład: Aby pobrać zgubiony lub ostatnio obrócony klucz odzyskiwania, zaloguj się do witryny internetowej Intune — Portal firmy z dowolnego urządzenia. W portalu przejdź do pozycji *Urządzenia* i wybierz urządzenie z włączonym programem FileVault, a następnie wybierz pozycję *Pobierz klucz odzyskiwania*. Zostanie wyświetlony bieżący klucz odzyskiwania.  
+   Przykład: Aby pobrać zgubiony lub ostatnio obrócony klucz odzyskiwania, zaloguj się do witryny internetowej Intune — Portal firmy z dowolnego urządzenia. W portalu przejdź do pozycji *Urządzenia* i wybierz urządzenie z włączonym programem FileVault, a następnie wybierz pozycję *Pobierz klucz odzyskiwania*. Zostanie wyświetlony bieżący klucz odzyskiwania.
 
 7. Skonfiguruj pozostałe [ustawienia programu FileVault](endpoint-protection-macos.md#filevault), aby spełniały Twoje potrzeby biznesowe, a następnie wybierz przycisk **OK**.
 
@@ -114,13 +114,37 @@ Funkcję BitLocker należy skonfigurować podczas tworzenia [profilu konfiguracj
 
 6. Ukończ konfigurację dodatkowych ustawień, a następnie zapisz profil.
 
-### <a name="manage-bitlocker"></a>Zarządzanie funkcją BitLocker  
+### <a name="manage-bitlocker"></a>Zarządzanie funkcją BitLocker
 
 Po zaszyfrowaniu przez usługę Intune urządzenia z systemem Windows 10 za pomocą funkcji BitLocker można wyświetlać klucze odzyskiwania funkcji BitLocker i zarządzać nimi z poziomu [raportu szyfrowania](encryption-monitor.md) usługi Intune.
 
+### <a name="rotate-bitlocker-recovery-keys"></a>Rotacja kluczy odzyskiwania funkcji BitLocker
+
+Za pomocą akcji urządzenia usługi Intune można zdalnie dokonać rotacji klucza odzyskiwania funkcji BitLocker urządzenia z systemem Windows 10 w wersji 1909 lub nowszej.
+
+#### <a name="prerequisites"></a>Wymagania wstępne
+
+Aby obsłużyć rotację klucza odzyskiwania funkcji BitLocker, urządzenia muszą spełniać następujące wymagania wstępne:
+
+- Na urządzeniach musi działać system Windows 10 w wersji 1909 lub nowszej.
+
+- Urządzenia przyłączone do usługi Azure AD i dołączone hybrydowo muszą mieć włączoną obsługę rotacji kluczy:
+
+  - **Inicjowana przez klienta rotacja hasła odzyskiwania**
+
+  To ustawienie znajduje się w obszarze *Szyfrowanie systemu Windows* w ramach zasad konfiguracji urządzenia dla ochrony punktu końcowego w systemie Windows 10.
+  
+#### <a name="to-rotate-the-bitlocker-recovery-key"></a>Aby dokonać rotacji klucza odzyskiwania funkcji BitLocker
+
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Wybierz pozycję **Urządzenia** > **Wszystkie urządzenia**.
+
+3. Z listy zarządzanych urządzeń wybierz urządzenie, wybierz pozycję **Więcej**, a następnie wybierz akcję zdalną urządzenia **Rotacja klucza odzyskiwania funkcji BitLocker**.
+
 ## <a name="next-steps"></a>Następne kroki
 
-Tworzenie zasad [zgodności urządzenia](compliance-policy-create-windows.md)
+Utwórz zasady [zgodności urządzenia](compliance-policy-create-windows.md).
 
 Raport szyfrowanie umożliwia zarządzanie następującymi elementami:
 

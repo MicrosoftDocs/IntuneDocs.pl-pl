@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/27/2019
+ms.date: 11/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: lacranda
-ms.openlocfilehash: e00600abb8327623eff4efe8509670779710ab7d
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: dbf6d95c8902a95993b972ff7639d4afb4324ac8
+ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509033"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74410170"
 ---
 # <a name="remove-scep-and-pkcs-certificates-in-microsoft-intune"></a>Usuwanie certyfikatów SCEP i PKCS w usłudze Microsoft Intune
 
@@ -55,14 +55,17 @@ Certyfikat SCEP jest odwoływany *oraz* usuwany, gdy:
 - Profil certyfikatu jest usuwany z przypisania grupy.
 
 Certyfikat SCEP jest odwoływany. gdy:
+
 - Administrator zmienia lub uaktualnia profil certyfikatu SCEP.
 
 Certyfikat główny jest usuwany, gdy:
+
 - Użytkownik wyrejestrowuje się.
 - Administrator uruchamia akcję [czyszczenia](../remote-actions/devices-wipe.md#wipe).
 - Administrator uruchamia akcję [wycofywania](../remote-actions/devices-wipe.md#retire).
 
 Certyfikaty SCEP *pozostają* w urządzeniu (certyfikaty nie są odwoływane ani usuwane), gdy:
+
 - Użytkownik traci licencję usługi Intune.
 - Administrator wycofuje licencję usługi Intune.
 - Administrator usuwa użytkownika lub grupę z usługi Azure AD.
@@ -76,11 +79,13 @@ Certyfikat PKCS jest odwoływany *oraz* usuwany, gdy:
 - Administrator uruchamia akcję [wycofywania](../remote-actions/devices-wipe.md#retire).
 
 Certyfikat główny jest usuwany, gdy:
+
 - Użytkownik wyrejestrowuje się.
 - Administrator uruchamia akcję [czyszczenia](../remote-actions/devices-wipe.md#wipe).
 - Administrator uruchamia akcję [wycofywania](../remote-actions/devices-wipe.md#retire).
 
 Certyfikaty PKCS *pozostają* w urządzeniu (certyfikaty nie są odwoływane ani usuwane), gdy:
+
 - Użytkownik traci licencję usługi Intune.
 - Administrator wycofuje licencję usługi Intune.
 - Administrator usuwa użytkownika lub grupę z usługi Azure AD.
@@ -101,14 +106,17 @@ Certyfikat SCEP jest odwoływany *oraz* usuwany, gdy:
 - Profil certyfikatu jest usuwany z przypisania grupy.
 
 Certyfikat SCEP jest odwoływany. gdy:
+
 - Administrator zmienia lub uaktualnia profil certyfikatu SCEP.
 
 Certyfikat główny jest usuwany, gdy:
+
 - Użytkownik wyrejestrowuje się.
 - Administrator uruchamia akcję [czyszczenia](../remote-actions/devices-wipe.md#wipe).
 - Administrator uruchamia akcję [wycofywania](../remote-actions/devices-wipe.md#retire).
 
 Certyfikaty SCEP *pozostają* w urządzeniu (certyfikaty nie są odwoływane ani usuwane), gdy:
+
 - Użytkownik traci licencję usługi Intune.
 - Administrator wycofuje licencję usługi Intune.
 - Administrator usuwa użytkownika lub grupę z usługi Azure AD.
@@ -122,14 +130,17 @@ Certyfikat PKCS jest odwoływany *oraz* usuwany, gdy:
 - Administrator uruchamia akcję [wycofywania](../remote-actions/devices-wipe.md#retire).
 
 Certyfikat PKCS jest usuwany, gdy:
+
 - Profil certyfikatu jest usuwany z przypisania grupy.
 
 Certyfikat główny jest usuwany, gdy:
+
 - Użytkownik wyrejestrowuje się.
 - Administrator uruchamia akcję [czyszczenia](../remote-actions/devices-wipe.md#wipe).
 - Administrator uruchamia akcję [wycofywania](../remote-actions/devices-wipe.md#retire).
 
 Certyfikaty PKCS *pozostają* w urządzeniu (certyfikaty nie są odwoływane ani usuwane), gdy:
+
 - Użytkownik traci licencję usługi Intune.
 - Administrator wycofuje licencję usługi Intune.
 - Administrator usuwa użytkownika lub grupę z usługi Azure AD.
@@ -140,10 +151,12 @@ Certyfikaty PKCS *pozostają* w urządzeniu (certyfikaty nie są odwoływane ani
 ### <a name="scep-certificates"></a>Certyfikaty SCEP
 
 Certyfikat SCEP jest odwoływany *oraz* usuwany, gdy:
+
 - Użytkownik wyrejestrowuje się.
 - Administrator uruchamia akcję [czyszczenia](../remote-actions/devices-wipe.md#wipe).
 
 Certyfikat SCEP jest odwoływany. gdy:
+
 - Administrator uruchamia akcję [wycofywania](../remote-actions/devices-wipe.md#retire).
 - Urządzenie jest usuwane z grupy usługi Azure AD.
 - Profil certyfikatu jest usuwany z przypisania grupy.
@@ -151,11 +164,13 @@ Certyfikat SCEP jest odwoływany. gdy:
 - Administrator zmienia lub uaktualnia profil certyfikatu SCEP.
 
 Certyfikat główny jest usuwany, gdy:
+
 - Użytkownik wyrejestrowuje się.
 - Administrator uruchamia akcję [czyszczenia](../remote-actions/devices-wipe.md#wipe).
 - Administrator uruchamia akcję [wycofywania](../remote-actions/devices-wipe.md#retire).
 
 Certyfikaty SCEP *pozostają* w urządzeniu (certyfikaty nie są odwoływane ani usuwane), gdy:
+
 - Użytkownik traci licencję usługi Intune.
 - Administrator wycofuje licencję usługi Intune.
 - Administrator usuwa użytkownika lub grupę z usługi Azure AD.
@@ -169,12 +184,14 @@ Certyfikat PKCS jest odwoływany *oraz* usuwany, gdy:
 - Administrator uruchamia akcję [wycofywania](../remote-actions/devices-wipe.md#retire).
 
 Certyfikat główny jest usuwany, gdy:
+
 - Użytkownik wyrejestrowuje się.
 - Administrator uruchamia akcję [czyszczenia](../remote-actions/devices-wipe.md#wipe).
 - Administrator uruchamia akcję [wycofywania](../remote-actions/devices-wipe.md#retire).
 
 Certyfikaty PKCS *pozostają* w urządzeniu (certyfikaty nie są odwoływane ani usuwane), gdy:
 - Użytkownik traci licencję usługi Intune.
+
 - Administrator wycofuje licencję usługi Intune.
 - Administrator usuwa użytkownika lub grupę z usługi Azure AD.
 - Administrator zmienia lub aktualizuje profil certyfikatu SCEP.
@@ -190,15 +207,18 @@ Certyfikaty PKCS *pozostają* w urządzeniu (certyfikaty nie są odwoływane ani
 ### <a name="scep-certificates"></a>Certyfikaty SCEP
 
 Certyfikat SCEP jest odwoływany *oraz* usuwany, gdy:
+
 - Użytkownik wyrejestrowuje się.
 - Administrator uruchamia akcję [wycofywania](../remote-actions/devices-wipe.md#retire).
 - Urządzenie jest usuwane z grupy usługi Azure AD.
 - Profil certyfikatu jest usuwany z przypisania grupy.
 
 Certyfikat SCEP jest odwoływany. gdy:
+
 - Administrator zmienia lub uaktualnia profil certyfikatu SCEP.
 
 Certyfikaty SCEP *pozostają* w urządzeniu (certyfikaty nie są odwoływane ani usuwane), gdy:
+
 - Użytkownik traci licencję usługi Intune.
 - Administrator wycofuje licencję usługi Intune.
 - Administrator usuwa użytkownika lub grupę z usługi Azure AD.
@@ -210,3 +230,6 @@ Certyfikaty SCEP *pozostają* w urządzeniu (certyfikaty nie są odwoływane ani
 
 Certyfikaty PKCS nie są obsługiwane w systemie macOS.
 
+## <a name="next-steps"></a>Następne kroki
+
+[Używanie certyfikatów do uwierzytelniania](certificates-configure.md)

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 454d23038a593829ea8a14929dc435e9f9ddb457
-ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
+ms.openlocfilehash: 8d24a858ec66433e72d63bea922eac0c4072a27c
+ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73709490"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74547743"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Rejestrowanie urządzeń z systemem Windows w usłudze Intune za pomocą rozwiązania Windows Autopilot  
 Rozwiązanie Windows Autopilot upraszcza rejestrowanie urządzeń w usłudze Intune. Tworzenie i konserwacja niestandardowych obrazów systemów operacyjnych zajmuje dużo czasu. Trzeba również poświęcić czas na stosowanie tych niestandardowych obrazów systemów operacyjnych na nowych urządzeniach w celu przygotowania ich do użycia przed przekazaniem użytkownikom końcowym. Dzięki usłudze Microsoft Intune i rozwiązaniu Autopilot można przekazać nowe urządzenia użytkownikom końcowym bez konieczności tworzenia, konserwowania i stosowania niestandardowych obrazów systemów operacyjnych do urządzeń. Jeśli do zarządzania urządzeniami z rozwiązaniem Autopilot używasz usługi Intune, możesz zarządzać zasadami, profilami, aplikacjami i innymi funkcjami po zarejestrowaniu tych urządzeń. Aby zapoznać się z korzyściami, scenariuszami i wymaganiami wstępnymi, zobacz [Przegląd rozwiązania Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -49,7 +49,7 @@ Aby uzyskać więcej informacji, zobacz artykuł objaśniający polecenie cmdlet
 
 Urządzenia rozwiązania Autopilot z systemem Windows można dodawać przez zaimportowanie pliku CSV z odpowiednimi informacjami.
 
-1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz **Rejestrowanie urządzenia** > **Rejestracja w systemie Windows** > **Urządzenia** > **Importuj**.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **Windows** > **Urządzenia** (w obszarze **Program wdrażania rozwiązania Windows Autopilot** > **Importuj**).
 
     ![Zrzut ekranu przedstawiający urządzenia rozwiązania Autopilot z systemem Windows](./media/enrollment-autopilot/autopilot-import-device.png)
 
@@ -65,7 +65,7 @@ Urządzenia rozwiązania Autopilot z systemem Windows można dodawać przez zaim
 
 3. Wybierz pozycję **Importuj**, aby rozpocząć importowanie informacji o urządzeniu. Importowanie może potrwać kilka minut.
 
-4. Po ukończeniu importowania wybierz kolejno pozycje **Rejestrowanie urządzenia** > **Rejestracja w systemie Windows** > **Windows Autopilot** > **Urządzenia** > **Synchronizacja**. Zostanie wyświetlony komunikat o synchronizacji w toku. Proces może potrwać kilka minut, w zależności od tego, ile urządzeń jest synchronizowanych.
+4. Po zakończeniu importowania wybierz pozycję **Urządzenia** > **Windows** > **Rejestracja w systemie Windows** > **Urządzenia** (w obszarze **Program wdrażania rozwiązania Windows Autopilot** > **Synchronizacja**. Zostanie wyświetlony komunikat o synchronizacji w toku. Proces może potrwać kilka minut, w zależności od tego, ile urządzeń jest synchronizowanych.
 
 5. Odśwież widok, aby zobaczyć nowe urządzenia.
 
@@ -88,7 +88,7 @@ Urządzenia rozwiązania Autopilot z systemem Windows można dodawać przez zaim
 
 ## <a name="create-an-autopilot-deployment-profile"></a>Tworzenie profilu wdrażania rozwiązania Autopilot
 Profile wdrażania rozwiązania Autopilot służą do konfigurowania urządzeń z rozwiązaniem Autopilot. Można utworzyć maksymalnie 350 profilów na dzierżawę.
-1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz **Rejestrowanie urządzenia** > **Rejestracja w systemie Windows** > **Profile wdrażania** > **Utwórz profil**.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **Windows** > **Rejestracja w systemie Windows** > **Profile wdrażania** > **Utwórz profil**.
 2. Na stronie **Podstawowe** wypełnij pole **Nazwa** i opcjonalne pole **Opis**.
 
     ![Zrzut ekranu strony Podstawowe](./media/enrollment-autopilot/create-profile-basics.png)
@@ -129,25 +129,35 @@ Profile wdrażania rozwiązania Autopilot służą do konfigurowania urządzeń 
     ![Zrzut ekranu strony przeglądania](./media/enrollment-autopilot/create-profile-review.png)
 
 > [!NOTE]
-> Usługa Intune będzie okresowo sprawdzać, czy w przypisanych grupach znajdują się nowe urządzenia, a następnie rozpoczynać proces przypisywania profili do tych urządzeń. Ten proces może potrwać kilka minut. Przed wdrożeniem urządzenia upewnij się, że ten proces został zakończony.  Stan profilu powinien się zmienić z „Nieprzypisane” na „Przypisywanie”, a następnie na „Przypisano” w obszarze **Rejestrowanie urządzeń** > **Rejestracja urządzeń z systemem Windows** > **Urządzenia**.
+> Usługa Intune będzie okresowo sprawdzać, czy w przypisanych grupach znajdują się nowe urządzenia, a następnie rozpoczynać proces przypisywania profili do tych urządzeń. Ten proces może potrwać kilka minut. Przed wdrożeniem urządzenia upewnij się, że ten proces został zakończony.  Stan profilu powinien się zmienić z „Nieprzypisane” na „Przypisywanie”, a następnie na „Przypisano” w obszarze **Urządzenia** > **Windows** > **Rejestracja w systemie Windows** > **Urządzenia** (w obszarze **Program wdrażania rozwiązania Windows Autopilot**).
 
 ## <a name="edit-an-autopilot-deployment-profile"></a>Edytowanie profilu wdrażania rozwiązania Autopilot
 Po utworzeniu profilu wdrażania rozwiązania Autopilot możesz edytować niektóre jego części.   
 
-1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)wybierz **Rejestrowanie urządzenia**.
-2. W obszarze **Rejestracja w systemie Windows** w sekcji **Windows Autopilot** wybierz pozycję **Profile wdrażania**.
-3. Wybierz profil, który chcesz edytować.
-4. Kliknij pozycję **Właściwości** po lewej stronie, aby zmienić nazwę lub opis profilu wdrażania. Po wprowadzeniu zmian kliknij pozycję **Zapisz**.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **Windows** > **Rejestracja w systemie Windows** > **Profile wdrażania**.
+2. Wybierz profil, który chcesz edytować.
+3. Wybierz pozycję **Właściwości** po lewej stronie, aby zmienić nazwę lub opis profilu wdrażania. Po wprowadzeniu zmian kliknij pozycję **Zapisz**.
 5. Kliknij pozycję **Ustawienia**, aby wprowadzić zmiany do ustawień trybu OOBE. Po wprowadzeniu zmian kliknij pozycję **Zapisz**.
 
 > [!NOTE]
 > Zmiany w profilu są stosowane do urządzeń przypisanych do tego profilu. Zaktualizowany profil nie zostanie jednak zastosowany do urządzenia już zarejestrowanego w usłudze Intune, dopóki nie zostanie ono zresetowane i ponownie zarejestrowane.
 
+## <a name="edit-autopilot-device-attributes"></a>Edytowanie atrybutów urządzenia z rozwiązaniem Autopilot
+Po przekazaniu urządzenia z rozwiązaniem Autopilot można edytować pewne atrybuty urządzenia.
+
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **Windows** > **Rejestracja w systemie Windows** > **Urządzenia** (w obszarze **Program wdrażania rozwiązania Windows Autopilot**).
+2. Wybierz urządzenie, które chcesz edytować.
+3. W okienku po prawej stronie ekranu możesz edytować nazwę urządzenia, tag grupy lub przyjazną nazwę użytkownika (jeśli przypisano użytkownika).
+4. Wybierz pozycję **Zapisz**.
+
+> [!NOTE]
+> Można skonfigurować nazwy wszystkich urządzeń, ale są one ignorowane w przypadku wdrożeń hybrydowych dołączonych do usługi Azure AD. Nazwa urządzenia nadal pochodzi z profilu przyłączania do domeny dla hybrydowych urządzeń usługi Azure AD.
+
 ## <a name="alerts-for-windows-autopilot-unassigned-devices-----163236---"></a>Alerty dla urządzeń nieprzypisanych w rozwiązaniu Windows Autopilot  <!-- 163236 -->  
 
 Alerty pokażą, ile urządzeń rozwiązania Autopilot nie ma profilów wdrażania rozwiązania Autopilot. Skorzystaj z informacji w alercie, aby utworzyć profile i przypisać je do nieprzypisanych urządzeń. Po kliknięciu alertu zostanie wyświetlona pełna lista urządzeń rozwiązania Windows Autopilot.
 
-Aby wyświetlić alerty dotyczące nieprzypisanych urządzeń, w [usłudze Intune w witrynie Azure Portal](https://aka.ms/intuneportal) wybierz kolejno pozycje **Rejestrowanie urządzenia**  >  **Przegląd**  >  **Nieprzypisane urządzenia**.  
+Aby wyświetlić alerty dotyczące nieprzypisanych urządzeń, w [usłudze Intune w witrynie Azure Portal](https://aka.ms/intuneportal) wybierz kolejno pozycje **Urządzenia** > **Przegląd** > **Alerty dotyczące rejestracji** > **	Nieprzypisane urządzenia**.  
 
 ## <a name="assign-a-user-to-a-specific-autopilot-device"></a>Przypisywanie użytkownika do określonego urządzenia rozwiązania Autopilot
 
@@ -155,7 +165,7 @@ Możesz przypisać użytkownika do określonego urządzenia rozwiązania Autopil
 
 Wymagania wstępne: Skonfigurowany Portal firmy usługi Azure Active Directory oraz system Windows 10 w wersji 1809 lub nowszej.
 
-1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz **Rejestrowanie urządzenia** > **Rejestracja w systemie Windows** > **Urządzenia** > wybierz urządzenie > **Przypisz użytkownika**.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **Windows** > **Rejestracja w systemie Windows** > **Urządzenia** (w obszarze **Program wdrażania rozwiązania Windows Autopilot** > wybierz urządzenie > **Przypisz użytkownika**.
 
     ![Zrzut ekranu przypisywania użytkownika](./media/enrollment-autopilot/assign-user.png)
 
@@ -171,7 +181,7 @@ Wymagania wstępne: Skonfigurowany Portal firmy usługi Azure Active Directory o
 
 ## <a name="autopilot-deployments-report"></a>Raport wdrożeń rozwiązania Autopilot
 Istnieje możliwość wyświetlenia szczegółowych informacji dla każdego urządzenia wdrożonego przy użyciu rozwiązania Windows Autopilot.
-Aby wyświetlić raport, przejdź do pozycji **Intune** i w obszarze **Monitor** wybierz pozycję **Wdrożenia rozwiązania Autopilot**.
+Aby wyświetlić raport, przejdź do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **Monitorowanie** > **Wdrożenia rozwiązania Autopilot**.
 Dane są dostępne przez 30 dni po wdrożeniu.
 
 
@@ -179,7 +189,7 @@ Dane są dostępne przez 30 dni po wdrożeniu.
 
 Możesz usuwać urządzenia rozwiązania Windows Autopilot, które nie zostały zarejestrowane w usłudze Intune:
 
-- Usuń urządzenia z rozwiązania Windows Autopilot, wybierając pozycje **Rejestracja urządzenia** > **Rejestracja w systemie Windows** > **Urządzenia**. Wybierz urządzenia, które chcesz usunąć, a następnie wybierz pozycję **Usuń**. Usuwanie urządzenia z rozwiązania Windows Autopilot może potrwać kilka minut.
+- Usuń urządzenia z rozwiązania Windows Autopilot w obszarze **Urządzenia** > **Windows** > **Rejestracja w systemie Windows** > **Urządzenia** (w obszarze **Program wdrażania rozwiązania Windows Autopilot**). Wybierz urządzenia, które chcesz usunąć, a następnie wybierz pozycję **Usuń**. Usuwanie urządzenia z rozwiązania Windows Autopilot może potrwać kilka minut.
 
 Całkowite usunięcie urządzenia z dzierżawy wymaga usunięcia rekordów urządzenia z usług Intune i Azure Active Directory oraz rozwiązania Windows Autopilot. Wszystko to można zrobić z usługi Intune:
 
@@ -187,7 +197,7 @@ Całkowite usunięcie urządzenia z dzierżawy wymaga usunięcia rekordów urzą
 
 2. Usuń urządzenia z urządzeń usługi Azure Active Directory, wybierając pozycje **Urządzenia** > **Urządzenia usługi Azure AD**.
 
-3. Usuń urządzenia z rozwiązania Windows Autopilot, wybierając pozycje **Rejestracja urządzenia** > **Rejestracja w systemie Windows** > **Urządzenia**. Wybierz urządzenia, które chcesz usunąć, a następnie wybierz pozycję **Usuń**. Usuwanie urządzenia z rozwiązania Windows Autopilot może potrwać kilka minut.
+3. Usuń urządzenia z rozwiązania Windows Autopilot w obszarze **Urządzenia** > **Windows** > **Rejestracja w systemie Windows** > **Urządzenia** (w obszarze **Program wdrażania rozwiązania Windows Autopilot** >. Wybierz urządzenia, które chcesz usunąć, a następnie wybierz pozycję **Usuń**. Usuwanie urządzenia z rozwiązania Windows Autopilot może potrwać kilka minut.
 
 ## <a name="using-autopilot-in-other-portals"></a>Używanie rozwiązania Autopilot w innych portalach
 Jeśli nie interesuje Cię zarządzanie urządzeniami przenośnymi, rozwiązania Autopilot możesz używać w innych portalach. Używanie innych portali jest opcjonalne. My zalecamy, aby do zarządzania wdrożeniami rozwiązania Autopilot używać samej usługi Intune. Gdy używasz usługi Intune i innego portalu, usługa Intune nie może:  

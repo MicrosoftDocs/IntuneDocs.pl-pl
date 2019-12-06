@@ -5,22 +5,23 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/20/2019
+ms.date: 1/14/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
+ms.reviewer: samyada
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 84ef86a0b3c0ffbfffde572c9759c62645d57dc5
-ms.sourcegitcommit: 8c651a3ed1f358f19b65206a52f7808282de97c3
+ms.openlocfilehash: 844e93f3a063ae43342d2967cbd544f3ec425c21
+ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73844778"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74410165"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Monitorowanie zasad zgodności urządzeń Intune
 
@@ -56,7 +57,7 @@ Po otwarciu pulpitu nawigacyjnego możesz uzyskać omówienie zawierające wszys
 
 Podczas przechodzenia do szczegółów raportów możesz też zobaczyć konkretne zasady zgodności i ustawienia mające zastosowanie do określonego urządzenia, w tym stan zgodności dla każdego ustawienia.
 
-### <a name="device-compliance-status-report"></a>Raport stanu zgodności urządzenia
+### <a name="device-compliance-status"></a>Stan zgodności urządzenia
 
 Wykres **Stan zgodności urządzenia** przedstawia stany zgodności dla wszystkich urządzeń zarejestrowanych w usłudze Intune. Stany zgodności urządzeń są przechowywane w dwóch różnych bazach danych: Intune i Azure Active Directory.
 
@@ -119,7 +120,8 @@ Na wykresie **Szczegóły urządzenia** wybierz konkretne urządzenie, a następ
 
 Usługa Intune wyświetla więcej szczegółów dotyczących ustawień zasad zgodności urządzenia zastosowanych na danym urządzeniu. Po wybraniu określonych zasad zostaną wyświetlone wszystkie ustawienia w zasadach.
 
-### <a name="devices-without-compliance-policy"></a>Urządzenia bez zasad zgodności
+### <a name="devices-without-compliance"></a>Urządzenia bez zgodności
+
 Na stronie *Stan zgodności* obok wykresu *Zgodność z zasadami* możesz wybrać kafelek **Urządzenia bez zasad zgodności**, aby wyświetlić informacje o urządzeniach, które nie mają przypisanych zasad zgodności:
 
 ![Wyświetlanie urządzeń bez żadnych zasad zgodności](./media/compliance-policy-monitor/devices-without-policies.png)
@@ -136,13 +138,13 @@ Po wybraniu kafelka zostaną wyświetlone wszystkie urządzenia bez zasad zgodno
 
 - Użytkownicy z przypisanymi zasadami zgodności dowolnego typu nie są wyświetlani w raporcie, niezależnie od platformy urządzeń. Jeśli na przykład przypiszesz zasady zgodności systemu Windows do użytkownika z systemem Android, urządzenie nie zostanie ujęte w raporcie. Jednak usługa Intune uzna urządzenie z systemem Android za niezgodne. Aby uniknąć problemów, firma Microsoft zaleca utworzenie zasad dla każdej platformy urządzeń i wdrożenie ich do wszystkich użytkowników.
 
-### <a name="per-policy-device-compliance-report"></a>Raport zgodności urządzeń wg zasady
+### <a name="per-policy-device-compliance"></a>Zgodność urządzeń wg zasady
 
 Raport **Zgodność z zasadami** przedstawia zasady oraz liczbę urządzeń zgodnych i niezgodnych. 
 
 ![Wyświetlanie listy zasad oraz liczby urządzeń zgodnych i niezgodnych z tymi zasadami](./media/compliance-policy-monitor/idc-8.png)
 
-## <a name="setting-compliance-report"></a>Raport o zgodności ustawień
+### <a name="setting-compliance"></a>Zgodność ustawienia
 
 Wykres **Zgodność ustawień** przedstawia wszystkie ustawienia zasad zgodności urządzeń ze wszystkich zasad zgodności, platformy, dla których zastosowano ustawienia zasad, a także liczbę niezgodnych urządzeń.
 
@@ -152,6 +154,24 @@ Wykres **Zgodność ustawień** przedstawia wszystkie ustawienia zasad zgodnośc
 > Zasady można przypisać do urządzenia i użytkownika na tym samym urządzeniu. W niektórych scenariuszach urządzenie może zostać zsynchronizowane przed zalogowaniem użytkownika, na przykład po ponownym uruchomieniu urządzenia. Może nastąpić ocena zgodności tego użytkownika i wyświetlenie urządzenia jako niezgodnego. Takie zachowanie może również wyświetlać konto systemowe jako niezgodnego użytkownika.
 >
 > Jest to znany problem dotyczący urządzeń z systemem Windows 10 z obsługą wielu użytkowników. Wszelkie zmiany i aktualizacje dotyczące tego zachowania są ogłaszane w sekcjach dotyczących [rozwiązań w trakcie opracowywania](../fundamentals/in-development.md) i/lub [nowości](../fundamentals/whats-new.md).
+
+## <a name="view-compliance-reports"></a>Wyświetlanie raportów zgodności
+
+Oprócz używania wykresów na stronie *Stan zgodności* można wyświetlać raporty dotyczące zgodności na stronie *Monitorowanie* centrum administracyjnego.
+
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Wybierz pozycję **Urządzenia** > **Monitoruj**, a następnie poniżej pozycji **Zgodność** wybierz raport, który chcesz wyświetlić. Niektóre z dostępnych raportów zgodności są następujace:
+
+   - Zgodność urządzeń
+   - Niezgodne urządzenia
+   - Urządzenia bez zasad zgodności
+   - Zgodność ustawienia
+   - Zgodność z zasadami
+   - Raport dotyczący zaświadczania o kondycji systemu Windows
+   - Stan agenta zagrożeń
+
+Aby uzyskać więcej informacji o raportach, zobacz [Raporty usługi Intune](../fundamentals/reports.md)
 
 ## <a name="view-status-of-device-policies"></a>Wyświetlanie stanu zasad dotyczących urządzenia
 

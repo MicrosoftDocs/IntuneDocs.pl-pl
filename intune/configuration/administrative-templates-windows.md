@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9cec7395fc766f6a937e6c43ef3a32fb21610be
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: ca087ec67542102a0cd3111d27a860500b23d3c4
+ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059984"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74547989"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Korzystanie z szablonów systemu Windows 10 umożliwiających konfigurowanie ustawień zasad grupy w usłudze Microsoft Intune
 
@@ -101,3 +101,5 @@ W tych szablonach istnieją setki dostępnych ustawień. Aby ułatwić znajdowan
 ## <a name="next-steps"></a>Następne kroki
 
 Szablon został utworzony, ale nie wykonuje jeszcze żadnych czynności. W dalszej części [przypiszesz szablon (nazywany też profilem)](device-profile-assign.md) i [będziesz monitorować jego stan](device-profile-monitor.md).
+
+[Zaktualizuj usługę Office 365 przy użyciu szablonów administracyjnych](administrative-templates-update-office.md).

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/17/2019
+ms.date: 11/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c6e519f4f5f31a11bd2e762b9e33357825d783d
-ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
+ms.openlocfilehash: e7242b661668f994208aa36a8f9fc5d350623ccd
+ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73984151"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74390373"
 ---
 # <a name="ios-app-protection-policy-settings"></a>Ustawienia zasad ochrony aplikacji dla systemu iOS
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -46,6 +46,7 @@ Istnieją trzy kategorie ustawień zasad: *Relokacja danych*, *Wymagania dotycz�
 | **Ogranicz wycinanie, kopiowanie i wklejanie między innymi aplikacjami** | Określ, kiedy można używać akcji wycinania, kopiowania i wklejania w tej aplikacji. Wybierz jedną z następujących możliwości: <ul><li>**Zablokowane**:  nie zezwalaj na akcje wycinania, kopiowania i wklejania między tą aplikacją i dowolną inną aplikacją.</li><li>**Aplikacje zarządzane przez zasady**: zezwalaj na akcje wycinania, kopiowania i wklejania między tą aplikacją i innymi aplikacjami zarządzanymi przez zasady.</li><li>**Aplikacje zarządzane przez zasady z funkcją wklejania**: zezwalaj na wycinanie i kopiowanie między tą aplikacją i innymi aplikacjami zarządzanymi przez zasady. Zezwalaj na wklejanie w tej aplikacji danych z dowolnych aplikacji.</li><li>**Dowolna aplikacja**: brak ograniczeń wycinania, kopiowania i wklejania do i z tej aplikacji.</ul> | **Dowolna aplikacja**   |
 | <ul><ui>**Limit znaków wycinania i kopiowania dla dowolnej aplikacji** | Określ liczbę znaków, które mogą być wycinane lub kopiowane z danych i kont organizacji.  Umożliwia to udostępnienie określonej liczby znaków w dowolnej aplikacji niezależnie od ustawienia **Ogranicz wycinanie, kopiowanie i wklejanie w innych aplikacjach**.<p>Wartość domyślna: 0<p>**Uwaga**: *Wymaga, aby aplikacja zawierała zestaw Intune SDK w wersji 9.0.14 lub nowszej.*  | **0**   |
 | **Powiadomienia dotyczące danych organizacji** | Określ, ile danych organizacji jest udostępnianych za pośrednictwem powiadomień systemu operacyjnego dla kont organizacji. To ustawienie zasad będzie wpływać na urządzenie lokalne oraz wszystkie połączone urządzenia, takie jak urządzenia do noszenia na sobie i inteligentne głośniki. Aplikacje mogą udostępniać dodatkowe opcje kontroli, które pozwalają na dostosowywanie zachowania powiadomień. Można również zrezygnować z uznawania wszystkich wartości. Wybierz jedną z następujących możliwości: <ul><li>**Blokuj**:  powiadomienia nie są udostępniane.</li><ul><li>Jeśli ta opcja nie jest obsługiwana przez aplikację, powiadomienia będą dozwolone.</li></ul><li>**Blokuj dane organizacji**: dane organizacji nie są na przykład udostępniane w powiadomieniach.</li><UL><li>„Masz nową wiadomość”; „Masz spotkanie”</li><li>Jeśli ta opcja nie jest obsługiwana przez aplikację, powiadomienia zostaną zablokowane.</li></ul><li>**Zezwalaj**: dane organizacji są udostępniane w powiadomieniach</li><li>**Dowolna aplikacja**: brak ograniczeń wycinania, kopiowania i wklejania do i z tej aplikacji.</ul> <p>**Uwaga**: *to ustawienie wymaga obsługi aplikacji. Obecnie program Outlook dla systemu iOS w wersji 4.16.0 lub nowszej będzie obsługiwać to ustawienie — oczekujemy, że ta opcja będzie dostępna w wersji wydanej w tygodniu rozpoczynającym się 16 grudnia 2019 r.* | **Zezwalaj**   |
+| **Klawiatury innych firm** | Wybierz ustawienie **Blokuj**, aby uniemożliwić korzystanie z klawiatur innych firm w aplikacjach zarządzanych.<p>Jeśli to ustawienie jest włączone, użytkownik otrzymuje jednorazowy komunikat z informacją, że korzystanie z klawiatur innych firm jest zablokowane. Ten komunikat pojawia się, gdy użytkownik pierwszy raz korzysta z danych organizacji, co wymaga użycia klawiatury. Tylko klawiatura standardowa systemu iOS jest dostępna podczas korzystania z zarządzanych aplikacji, zaś wszystkie inne opcje klawiatury są wyłączone. To ustawienie będzie miało wpływ na konta organizacji i osobiste aplikacji z obsługą wielu tożsamości. To ustawienie nie wpływa na użycie klawiatur innych firm w aplikacjach niezarządzanych.<p>**Uwaga:** Ta funkcja wymaga, aby aplikacja korzystała z zestawu SDK usługi Intune w wersji 12.0.16 lub nowszej. W aplikacjach z obsługą wielu tożsamości korzystających z zestawu SDK w wersji od 8.0.14 do 12.0.15 włącznie funkcja ta nie zostanie poprawnie zastosowana. Aby uzyskać więcej szczegółów, zobacz [Znany problem: Klawiatury innych firm nie są blokowane w systemie iOS dla kont osobistych](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Updated-Known-issue-Third-party-keyboards-are-not-blocked-in-iOS/ba-p/339486). | **Zezwalaj**  |
 
 ### <a name="encryption"></a>Szyfrowanie
 | Ustawienie | Sposób użycia | Wartość domyślna |

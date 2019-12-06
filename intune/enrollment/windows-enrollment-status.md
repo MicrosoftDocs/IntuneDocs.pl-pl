@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f9c09105ab7286eb315c6bf0f04f1801706bfa8
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: e81b8dc4938ea080018efae97093bb5e70dbcde8
+ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059703"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74548014"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Konfigurowanie strony ze stanem rejestracji
  
@@ -64,14 +64,14 @@ Ponadto możesz ustawić kolejność priorytetu dla każdego profilu w celu obs�
 
 Aby włączyć stronę ze stanem rejestracji, wykonaj poniższe kroki.
  
-1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja w systemie Windows** > **Strona stanu rejestracji**.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **Windows** > **Rejestracja w systemie Windows** > **Strona ze stanem rejestracji**.
 2. W bloku **Strona ze stanem rejestracji** wybierz pozycje **Domyślne** > **Ustawienia**.
 3. Aby **wyświetlić postęp instalacji aplikacji i profilu**, wybierz pozycję **Tak**.
 4. Wybierz inne ustawienia, które chcesz włączyć, a następnie wybierz pozycję **Zapisz**.
 
 ## <a name="create-enrollment-status-page-profile-and-assign-to-a-group"></a>Tworzenie profilu strony ze stanem rejestracji i przypisywanie do grupy
 
-1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja w systemie Windows** > **Strona stanu rejestracji** > **Utwórz profil**.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **Windows** > **Rejestracja w systemie Windows** > **Strona ze stanem rejestracji** > **Utwórz profil**.
 2. Podaj **nazwę** i **opis**.
 3. Wybierz pozycję **Utwórz**.
 4. Wybierz nowy profil z listy **Strona ze stanem rejestracji**.
@@ -82,7 +82,7 @@ Aby włączyć stronę ze stanem rejestracji, wykonaj poniższe kroki.
 
 Użytkownik może należeć do wielu grup i mieć wiele profilów stron ze stanem rejestracji. Aby obsłużyć takie konflikty, możesz ustawić priorytety dla każdego profilu. Jeśli dana osoba ma więcej niż jeden profil strony ze stanem rejestracji, podczas rejestracji do rejestrowanego urządzenia zostanie zastosowany tylko profil o najwyższym priorytecie.
 
-1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja w systemie Windows** > **Strona stanu rejestracji**.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **Windows** > **Rejestracja w systemie Windows** > **Strona ze stanem rejestracji**.
 2. Zatrzymaj wskaźnik myszy nad profilem na liście.
 3. Używając trzech pionowych punktów, przeciągnij profil do żądanej pozycji na liście.
 
@@ -90,7 +90,7 @@ Użytkownik może należeć do wielu grup i mieć wiele profilów stron ze stane
 
 Zanim użytkownik będzie mógł uzyskiwać dostęp do pulpitu, można określić aplikacje, które należy zainstalować.
 
-1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja w systemie Windows** > **Strona stanu rejestracji**.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **Windows** > **Rejestracja w systemie Windows** > **Strona ze stanem rejestracji**.
 2. Wybierz profil > **Ustawienia**.
 3. Wybierz pozycję **Tak** dla opcji **Pokaż postęp aplikacji i profilu**.
 4. Wybierz pozycję **Tak** dla opcji **Blokuj użycie urządzenia do momentu zainstalowania wszystkich aplikacji i profilów**.

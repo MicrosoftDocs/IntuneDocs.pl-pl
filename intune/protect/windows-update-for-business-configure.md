@@ -5,22 +5,22 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/19/2019
+ms.date: 11/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
-ms.reviewer: aiwang
+ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 53ac86ce88481176ab6f2472b1c0fbae8d3453c1
-ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
+ms.openlocfilehash: 01866bba0ef47ac807b24a66f773e212c76ff7df
+ms.sourcegitcommit: 1cf063c98e1caae00a6e6fab821cc3254562bca9
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74199330"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74291103"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Zarządzanie aktualizacjami oprogramowania systemu Windows 10 w usłudze Intune
 
@@ -208,13 +208,18 @@ Gdy urządzenie otrzyma zasady aktualizacji funkcji systemu Windows 10:
 
 - W przeciwieństwie do użycia w stosunku do pierścienia aktualizacji akcji *Wstrzymaj*, która wygaśnie po 35 dniach, zasady aktualizacji funkcji systemu Windows 10 nadal obowiązują. Urządzenia nie będą instalować nowej wersji systemu Windows, dopóki zasady aktualizacji funkcji systemu Windows 10 nie zostaną zmodyfikowane lub usunięte. Jeśli edytujesz zasady w celu określenia nowszej wersji, urządzenia będą mogły zainstalować funkcje z tej wersji systemu Windows.
 
-> [!IMPORTANT]
-> Po wdrożeniu zarówno *aktualizacji funkcji systemu Windows 10*, jak i zasad *pierścienia aktualizacji systemu Windows 10* na tym samym urządzeniu zapoznaj się z pierścieniem aktualizacji dla następujących konfiguracji:
->
-> - **Okres odroczenia aktualizacji dotyczących funkcji (dni)** należy ustawić na **0**.
-> - Aktualizacje funkcji dla pierścienia aktualizacji muszą być *uruchomione*. Nie mogą być wstrzymane.
+### <a name="limitations-for-windows-10-feature-updates"></a>Ograniczenia dotyczące aktualizacji funkcji systemu Windows 10
 
-Aktualizacje funkcji systemu Windows 10 nie są obsługiwane w przypadku używania rozwiązania Windows Autopilot.
+- Po wdrożeniu zasad *aktualizacji funkcji systemu Windows 10* na urządzeniu, które otrzymuje również *pierścień aktualizacji systemu Windows 10*, przejrzyj pierścień aktualizacji pod kątem następujących konfiguracji:
+  - Opcja **Okres odroczenia aktualizacji funkcji (dni)** musi być ustawiona na **0**.
+  - Aktualizacje funkcji dla pierścienia aktualizacji muszą być *uruchomione*. Nie mogą być wstrzymane.
+
+- Zasady *aktualizacji funkcji systemu Windows 10* nie są obsługiwane w przypadku używania rozwiązania Windows Autopilot. Usługa Intune nie wdroży zasad na:
+  - Urządzeniach aprowizowanych przez rozwiązanie Windows Autopilot;
+  - Urządzeniach, które uprzednio aprowizowano przez rozwiązanie Windows Autopilot.
+
+  To ograniczenie jest badane w celu sprawdzenia, czy może być obsługiwane w przyszłości.
+
 
 ### <a name="create-and-assign-windows-10-feature-updates"></a>Tworzenie i przypisywanie aktualizacji funkcji systemu Windows 10
 

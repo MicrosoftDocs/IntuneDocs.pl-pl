@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b60e4d801d09a834e11119260d3054cf43251bbd
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 3ca83287c58f8d2fb7c8eec5f8cc793e2c67b77a
+ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72502956"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74390700"
 ---
 # <a name="create-a-custom-role-in-intune"></a>Tworzenie roli niestandardowej w usłudze Intune
 
@@ -49,6 +49,21 @@ Aby możliwe było tworzenie, edytowanie i przypisywanie ról, konto musi mieć 
 7. Gdy wszystko będzie gotowe, wybierz przycisk **OK**.
 
 8. W bloku **Dodaj rolę niestandardową** kliknij pozycję **Utwórz**. Nowa rola zostanie wyświetlona na liście w bloku **Role usługi Intune — Wszystkie role**.
+
+
+## <a name="copy-a-role"></a>Kopiowanie roli
+
+Możesz też skopiować istniejącą rolę.
+
+1. Zaloguj się do [witryny Azure Portal](https://portal.azure.com) przy użyciu poświadczeń usługi Intune i wybierz opcję **Intune**.
+
+2. Wybierz kolejno opcje **Role** > **Wszystkie role** > wybierz rolę z listy > **Duplikuj**.
+
+3. W obszarze **Zduplikowana rola** wprowadź nazwę. Nazwa powinna być unikatowa.
+
+4. Wszystkie uprawnienia i tagi zakresu z oryginalnej roli będą już zaznaczone. Następnie możesz zmienić zawartość pól **Nazwa**, **Opis**, **Uprawnienia** i **Zakres (tagi)** zduplikowanej roli.
+
+5. Wybierz przycisk **Utwórz**. 
 
 ## <a name="next-steps"></a>Następne kroki
 - [Przypisywanie roli do użytkownika](assign-role.md)
