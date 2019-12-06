@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 11/22/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 14ff8ad2d41a6f2235c18f155e3a5b865e3a32e4
-ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
+ms.openlocfilehash: 5aca7dbae7a74af399bcbf21aec1dd9dd2d1e851
+ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74199307"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74390747"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Jak uzyskać pomoc techniczną dotyczącą usługi Microsoft Intune
 
@@ -39,7 +39,7 @@ Jako administrator usługi Intune możesz za pomocą opcji **Pomoc i obsługa te
 
 ## <a name="help-and-support-experience"></a>Środowisko pomocy i obsługi technicznej
 
-Środowisko pomocy i obsługi technicznej dla usługi Intune jest dostępne w [portalu zarządzania urządzeniami na platformie Microsoft 365](https://devicemanagement.microsoft.com) oraz z poziomu wszystkich bloków (lub stron) w usłudze Intune w witrynie Azure Portal.
+Środowisko pomocy i obsługi technicznej usługi Intune jest dostępne w [Centrum administracyjnym zarządzania punktami końcowymi Microsoft](https://go.microsoft.com/fwlink/?linkid=2109431) oraz z poziomu wszystkich bloków (lub stron) w usłudze Intune w witrynie Azure Portal.
 
 Środowisko *Pomoc i obsługa techniczna* jest podobne do środowiska w [centrum administracyjnym platformy Microsoft 365](https://admin.microsoft.com/) i zastępuje poprzednie środowisko *Pomoc i obsługa techniczna*, które w dalszym ciągu jest dostępne dla innych usług na platformie Azure.
 
@@ -48,16 +48,27 @@ Jako administrator usługi Intune możesz za pomocą opcji **Pomoc i obsługa te
 
 ### <a name="options-to-access-help-and-support"></a>Opcje dostępu do pomocy i obsługi technicznej
 
-- **W witrynie Azure Portal:**
+Podczas korzystania z nowo utworzonej dzierżawy usługi Intune *Centrum pomocy i obsługi technicznej* może nie zostać otwarte. Wyświetlany jest wówczas następujący komunikat:
+
+- *Wystąpił nieznany problem. Odśwież stronę, ale jeśli problem będzie nadal występował, utwórz sprawę za pomocą [Centrum administracyjnego M365](https://admin.microsoft.com), zawierającą podany identyfikator sesji.*
+
+Szczegóły błędu obejmują *identyfikator sesji*, szczegóły *rozszerzenia* itd. 
+ 
+Ten problem występuje, gdy nowe konto dzierżawy nie zostało jeszcze uwierzytelnione za pomocą **Centrum administracyjnego M365** pod adresem https://admin.microsoft.com lub **portalu usługi Office 365** pod adresem https://portal.office.com. Aby rozwiązać ten problem, wybierz link do *Centrum administracyjnego M365* w wiadomości lub odwiedź stronę https://portal.office.com i zaloguj się. Po uwierzytelnieniu w którejś z powyższych witryn środowisko *Pomoc i obsługa techniczna* usługi Intune stanie się dostępne.
+
+
+**Uzyskiwanie dostępu do pomocy i obsługi technicznej**:
+
+- **W witrynie Azure Portal**
 
   - Wybierz pozycję **Pomoc i obsługa techniczna** w dowolnym bloku lub na dowolnej stronie usługi Intune.
 
   > [!NOTE]  
   > Jeśli Twoje wystąpienie usługi Intune jest hostowane w chmurze prywatnej dla instytucji rządowych, zwanej również suwerenną chmurą, takiej jak Azure Government, zobacz [Pomoc techniczna usługi Intune dla chmury prywatnej dla instytucji rządowych](#intune-support-for-private-cloud-for-government) w dalszej części tego artykułu. Środowisko *Pomoc i obsługa techniczna* usługi Intune nie będzie dostępne w prywatnej chmurze dla instytucji rządowych aż do następnego roku.
 
-- **Na pulpicie nawigacyjnym zarządzania urządzeniami:**
+- **W Centrum administracyjnym programu Microsoft Endpoint Manager**
   - Po wybraniu obszaru funkcji dla usługi Intune wybierz opcję **Pomoc i obsługa techniczna.**
-  - Z poziomu dowolnego węzła w portalu zarządzania urządzeniami wybierz ikonę **?** w prawym górnym rogu portalu, a następnie użyj listy rozwijanej, aby wybrać usługę, w związku z którą chcesz uzyskać pomoc. Ikona **?** w portalu zarządzania urządzeniami obsługuje wiele usług. Wybierz konkretną usługę, dla której chcesz uzyskać pomoc.  
+  - W dowolnym węźle Centrum administracyjnego programu Microsoft Endpoint Manager wybierz ikonę **?** w prawym górnym rogu portalu, a następnie użyj listy rozwijanej, aby wybrać usługę, w związku z którą chcesz uzyskać pomoc. Ikona **?** w Centrum administracyjnym programu Microsoft Endpoint Manager obsługuje wiele usług. Wybierz konkretną usługę, dla której chcesz uzyskać pomoc.  
 
     ![Wybór usługi](./media/get-support/select-a-service.png)
 

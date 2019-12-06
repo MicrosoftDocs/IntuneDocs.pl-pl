@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 11/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02603651587837211d9a67d7e4bbeb90cb358dc5
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: 0c4c995322234a4a2486d8e6c5e9efd88f78dd63
+ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059576"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74390872"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Tworzenie profilu urządzenia w usłudze Microsoft Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Profile urządzeń umożliwiają dodawanie i konfigurowanie ustawień, a następnie wypychanie tych ustawień do urządzeń w organizacji. Dalsze szczegóły, w tym opis możliwych do wykonania czynności, można znaleźć w temacie [Apply features and settings on your devices using device profiles](device-profiles.md) (Stosowanie funkcji i ustawień na urządzeniach przy użyciu profilów urządzeń).
 
@@ -78,6 +76,7 @@ W tym artykule:
        - [Kiosk](kiosk-settings.md)
        - [Certyfikat PKCS](../protect/certficates-pfx-configure.md)
        - [Zaimportowany certyfikat PKCS](../protect/certificates-imported-pfx-configure.md)
+       - [Plik preferencji](preference-file-settings-macos.md)
        - [Certyfikat SCEP](../protect/certificates-scep-configure.md)
        - [Zaufany certyfikat](../protect/certificates-configure.md)
        - [Zasady aktualizacji](../software-updates-ios.md)
@@ -160,6 +159,32 @@ Po przypisaniu profilu do grup reguły stosowania działają jako filtr i są pr
 Usługa Intune używa różnych cykli odświeżania w celu sprawdzania dostępności aktualizacji profilów konfiguracji. Jeśli urządzenie zostało zarejestrowane ostatnio, sprawdzanie odbywa się częściej. Szacowane czasy odświeżania znajdują się w sekcji dotyczącej [cyklów odświeżania zasad i profilów](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
 W dowolnym momencie użytkownicy mogą otwierać aplikację Portal firmy i synchronizować urządzenie, aby natychmiast wyszukiwać aktualizacje profilów.
+
+## <a name="recommendations"></a>Zalecenia
+
+Podczas tworzenia profilów należy wziąć pod uwagę następujące zalecenia:
+
+- Nazwij swoje zasady, aby znać ich znaczenie i działanie. Wszystkie [zasady zgodności](../protect/create-compliance-policy.md) i [profile konfiguracji](../configuration/device-profile-create.md) mają opcjonalną właściwość **Opis**. W polu **Opis** należy zamieścić szczegółowe informacje, aby również inni znali działanie zasady.
+
+  Niektóre przykłady profilów konfiguracji obejmują:
+
+  **Nazwa profilu**: Szablon administratora — profil konfiguracji usługi OneDrive dla wszystkich użytkowników systemu Windows 10  
+  **Opis profilu**: Profil szablonu administratora usługi OneDrive obejmujący minimalne i podstawowe ustawienia dla wszystkich użytkowników systemu Windows 10. Utworzony przez użytkownika user@contoso.com, aby uniemożliwić użytkownikom udostępnianie danych organizacji na kontach osobistych w usłudze OneDrive.
+
+  **Nazwa profilu**: Profil sieci VPN dla wszystkich użytkowników systemu iOS  
+  **Opis profilu**: Profil sieci VPN, który obejmuje minimalne i podstawowe ustawienia łączenia się z siecią VPN firmy Contoso dla wszystkich użytkowników systemu iOS. Utworzony przez użytkownika user@contoso.com, aby użytkownicy automatycznie uwierzytelniali się w sieci VPN, a nie otrzymywali monity o podanie nazwy użytkownika i hasła.
+
+- Utwórz profil związany z konkretnym zadaniem, takim jak konfiguracja ustawień przeglądarki Microsoft Edge, włączanie ustawienia antywirusowego programu Microsoft Defender, blokowanie urządzeń z systemem iOS ze zdjętymi zabezpieczeniami itd.
+
+- Utwórz profile, które mają zastosowanie do określonych grup, takich jak marketing, sprzedaż, administratorzy IT, lub do określonej lokalizacji bądź szkoły.
+
+- Oddziel zasady użytkownika od zasad urządzeń.
+
+  Na przykład [szablony administracyjne w usłudze Intune](administrative-templates-windows.md) mają setki ustawień ADMX. Ten szablon pokazuje, czy ustawienia dotyczą użytkowników, czy urządzeń. Podczas tworzenia szablonów administracyjnych przypisuj ustawienia użytkownika do grupy użytkowników, a ustawienia urządzenia do grupy urządzeń.
+
+  Na poniższej ilustracji przedstawiono przykład ustawienia, które można zastosować do użytkowników lub do urządzeń:
+
+  ![Szablon administracyjny w usłudze Intune, który można zastosować do użytkowników i do urządzeń](./media/device-profile-create/setting-applies-to-user-and-device.png)
 
 ## <a name="next-steps"></a>Następne kroki
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 889b0a7562f1a663556e955271681e0747aeb3c4
-ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
+ms.openlocfilehash: c8c756ad2df00a97df7289491daf830e584c0045
+ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74199165"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74410212"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Wymuszanie zgodności usługi Microsoft Defender ATP z dostępem warunkowym w usłudze Intune
 
@@ -193,6 +193,12 @@ Następnie monitoruj stan urządzeń objętych zasadami zgodności usługi Micro
 2. Wybierz kolejno pozycje **Urządzenia** > **Monitorowanie** > **Zgodność z zasadami**.
 
 3. Znajdź na liście zasady usługi Microsoft Defender ATP i zobacz, które urządzenia są zgodne, a które niezgodne.
+
+W tej samej lokalizacji można także użyć raportu *operacyjnego* dla niezgodnych urządzeń:
+
+1. Wybierz pozycję **Urządzenia** > **Monitoruj** > **Niezgodne urządzenia**.
+
+Aby uzyskać więcej informacji o raportach, zobacz [Raporty usługi Intune](../fundamentals/reports.md).
 
 ## <a name="view-onboarding-status"></a>Wyświetlanie stanu dołączania
 
