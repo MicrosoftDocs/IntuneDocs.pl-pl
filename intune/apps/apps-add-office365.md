@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2cb247ec25b134fa9810a426be88b7fc90999394
-ms.sourcegitcommit: 2c8a41ee95a3fde150667a377770e51b621ead65
+ms.openlocfilehash: 73848ee8301362f14fe2866a57329425d5e5cfbe
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73635389"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563678"
 ---
 # <a name="add-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Dodawanie aplikacji usługi Office 365 do urządzeń z systemem Windows 10 za pomocą usługi Microsoft Intune
 
@@ -49,11 +49,9 @@ Aby móc przypisywać, monitorować, konfigurować lub zabezpieczać aplikacje, 
 
 ## <a name="get-started"></a>Wprowadzenie
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. W okienku **Intune** wybierz pozycję **Aplikacje klienckie**.
-4. W okienku obciążenia **Aplikacje klienckie** w obszarze **Zarządzanie** wybierz pozycję **Aplikacje**.
-5. Wybierz pozycję **Dodaj**.
-6. W okienku **Dodawanie aplikacji** na liście **Typ aplikacji** w obszarze **Pakiet Office 365** wybierz pozycję **Windows 10**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz kolejno pozycje **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**.
+3. W okienku **Dodawanie aplikacji** na liście **Typ aplikacji** w obszarze **Pakiet Office 365** wybierz pozycję **Windows 10**.
 
 ## <a name="select-settings-format"></a>Wybieranie formatu ustawień
 
@@ -61,13 +59,13 @@ Wybierając pozycję **Format ustawień**, możesz wybrać metodę konfigurowani
 - Projektant konfiguracji
 - Wprowadzanie danych XML
 
-Po wybraniu opcji **Projektant konfiguracji** blok **Dodawanie aplikacji** zmieni się i będzie można na nim wybrać dwie dodatkowe opcje ustawień:
+Po wybraniu opcji **Projektant konfiguracji** okienko **Dodawanie aplikacji** zmieni się i będzie można na nim wybrać dwie dodatkowe opcje ustawień:
 - Skonfiguruj pakiet aplikacji
 - Ustawienia pakietu aplikacji
 
 <img alt="Add Office 365 - Configuration designer" src="./media/apps-add-office365/apps-add-office365-02.png" width="700">
 
-Po wybraniu pozycji **Wprowadzanie danych XML** w bloku **Dodawanie aplikacji** zostanie wyświetlona opcja **Wprowadź dane XML**. Wybierz tę opcję, aby wyświetlić blok **Plik konfiguracji**. 
+Po wybraniu pozycji **Wprowadzanie danych XML** w okienku **Dodawanie aplikacji** zostanie wyświetlona opcja **Wprowadź dane XML**. Wybierz tę opcję, aby wyświetlić okienko **Plik konfiguracji**. 
 
 ![Dodawanie projektanta konfiguracji usługi Office 365](./media/apps-add-office365/apps-add-office365-01.png)
     
@@ -94,7 +92,7 @@ W tym kroku podajesz informacje o pakiecie aplikacji. Te informacje pomagają zi
 
 ## <a name="configure-app-suite"></a>Konfigurowanie pakietu aplikacji
 
-Po wybraniu opcji **Projektant konfiguracji** z listy rozwijanej **Format ustawień** zostanie wyświetlona opcja **Skonfiguruj pakiet aplikacji** w bloku **Dodawanie aplikacji**. Wybierz aplikacje pakietu Office, które chcesz przypisać do urządzeń.
+Po wybraniu opcji **Projektant konfiguracji** z listy rozwijanej **Format ustawień** zostanie wyświetlona opcja **Skonfiguruj pakiet aplikacji** w okienku **Dodawanie aplikacji**. Wybierz aplikacje pakietu Office, które chcesz przypisać do urządzeń.
 
 1. W okienku **Dodawanie aplikacji** wybierz pozycję **Konfiguruj pakiet aplikacji**.
 2. W okienku **Konfigurowanie pakietu aplikacji** wybierz standardowe aplikacje pakietu Office, które chcesz przypisać do urządzeń.  
@@ -103,7 +101,7 @@ Po wybraniu opcji **Projektant konfiguracji** z listy rozwijanej **Format ustawi
 
 ## <a name="configure-app-suite-settings"></a>Konfigurowanie ustawień pakietu aplikacji
 
-Po wybraniu opcji **Projektant konfiguracji** z listy rozwijanej **Format ustawień** zostanie wyświetlona opcja **Ustawienia pakietu aplikacji** w bloku **Dodawanie aplikacji**. W tym kroku skonfigurujesz opcje instalacji pakietu aplikacji. Ustawienia są stosowane do wszystkich aplikacji dodawanych do pakietu.
+Po wybraniu opcji **Projektant konfiguracji** z listy rozwijanej **Format ustawień** zostanie wyświetlona opcja **Ustawienia pakietu aplikacji** w okienku **Dodawanie aplikacji**. W tym kroku skonfigurujesz opcje instalacji pakietu aplikacji. Ustawienia są stosowane do wszystkich aplikacji dodawanych do pakietu.
 
 1. W okienku **Dodawanie aplikacji** wybierz pozycję **Ustawienia pakietu aplikacji**.
 2. W okienku **Ustawienia pakietu aplikacji** wykonaj następujące czynności:
@@ -126,7 +124,7 @@ Po wybraniu opcji **Projektant konfiguracji** z listy rozwijanej **Format ustawi
     - **Automatycznie akceptuj licencję użytkownika aplikacji**: wybierz tę opcję, jeśli użytkownicy końcowi nie muszą akceptować umowy licencyjnej. Usługa Intune zaakceptuje umowę automatycznie.
     - **Użyj aktywacji na komputerze udostępnionym**: wybierz tę opcję, jeśli wielu użytkowników współużytkuje komputer. Aby uzyskać więcej informacji, zobacz [omówienie aktywacji na komputerze udostępnionym dla usługi Office 365](https://docs.microsoft.com/DeployOffice/overview-of-shared-computer-activation-for-office-365-proplus).
     - **Języki**: pakiet Office jest automatycznie instalowany we wszystkich obsługiwanych językach, które zostały zainstalowane w systemie Windows na urządzeniu użytkownika końcowego. Wybierz tę opcję, jeśli chcesz zainstalować dodatkowe języki z pakietem aplikacji. <p></p>
-    Dla aplikacji pakietu Office 365 Pro Plus zarządzanych przez usługę Intune możesz wdrożyć dodatkowe języki. Lista dostępnych języków uwzględnia **Typ** pakietu językowego (podstawowy, częściowy i weryfikujący). W witrynie Azure Portal wybierz pozycję **Microsoft Intune** > **Aplikacje klienckie** > **Aplikacje** > **Dodaj**. Na liście **Typ aplikacji** w bloku **Dodaj aplikację** wybierz pozycję **Windows 10** w obszarze **Pakiet Office 365**. Wybierz pozycję **Języki** w bloku **Ustawienia pakietu aplikacji**. Aby uzyskać więcej informacji, zobacz artykuł [Overview of deploying languages in Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-of-deploying-languages-in-office-365-proplus) (Omówienie wdrażania języków w usłudze Office 365 ProPlus).
+    Dla aplikacji pakietu Office 365 Pro Plus zarządzanych przez usługę Intune możesz wdrożyć dodatkowe języki. Lista dostępnych języków uwzględnia **Typ** pakietu językowego (podstawowy, częściowy i weryfikujący). W witrynie Azure Portal wybierz kolejno pozycje **Microsoft Intune** > **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**. Na liście **Typ aplikacji** w okienku **Dodaj aplikację** wybierz pozycję **Windows 10** w obszarze **Pakiet Office 365**. Wybierz pozycję **Języki** w okienku **Ustawienia pakietu aplikacji**. Aby uzyskać więcej informacji, zobacz artykuł [Overview of deploying languages in Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-of-deploying-languages-in-office-365-proplus) (Omówienie wdrażania języków w usłudze Office 365 ProPlus).
 
 ## <a name="select-scope-tags-optional"></a>Wybieranie tagów zakresu (opcjonalnie)
 Za pomocą tagów zakresu można określić, kto będzie mógł wyświetlać informacje o aplikacji klienckiej w usłudze Intune. Więcej informacji o tagach zakresu zawiera artykuł [Używanie kontroli dostępu opartej na rolach i tagów zakresu w rozproszonej infrastrukturze informatycznej](../fundamentals/scope-tags.md).
@@ -138,7 +136,7 @@ Za pomocą tagów zakresu można określić, kto będzie mógł wyświetlać inf
 
 ## <a name="enter-xml-format"></a>Wprowadzanie formatu XML
 
-Po wybraniu opcji **Wprowadź dane XML** z listy rozwijanej **Format ustawień** zostanie wyświetlona opcja **Wprowadź format XML** w bloku **Dodawanie aplikacji**. Aby uzyskać więcej informacji, zobacz [Configuration options for the Office Deployment Tool (Opcje konfiguracji narzędzia wdrażania pakietu Office)](https://docs.microsoft.com/DeployOffice/configuration-options-for-the-office-2016-deployment-tool).
+Po wybraniu opcji **Wprowadź dane XML** z listy rozwijanej **Format ustawień** zostanie wyświetlona opcja **Wprowadź format XML** w okienku **Dodaj aplikację**. Aby uzyskać więcej informacji, zobacz [Configuration options for the Office Deployment Tool (Opcje konfiguracji narzędzia wdrażania pakietu Office)](https://docs.microsoft.com/DeployOffice/configuration-options-for-the-office-2016-deployment-tool).
 
 ## <a name="finish-up"></a>Zakończenie
 

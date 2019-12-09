@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/09/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c6726f731fba5bc41893f999ac627bff9a8aca1e
-ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
+ms.openlocfilehash: c31dd652022ae0d394ab2229a0c25b362ad8574d
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73754840"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563586"
 ---
 # <a name="add-microsoft-edge-to-macos-devices-using-microsoft-intune"></a>Dodawanie przeglądarki Microsoft Edge na urządzeniach z systemem macOS przy użyciu usługi Microsoft Intune
 
@@ -40,15 +40,15 @@ Aby móc wdrażać, konfigurować, monitorować lub zabezpieczać aplikacje, trz
 ## <a name="add-microsoft-edge-to-intune"></a>Dodawanie przeglądarki Microsoft Edge do usługi Intune
 Do usługi Intune można dodać przeglądarkę Microsoft Edge w wersji 77 lub nowszej, wykonując następujące czynności:
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. W okienku **Intune** wybierz pozycję **Aplikacje klienckie** > **Aplikacje** > **Dodaj**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz kolejno pozycje **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**.
 3. Na liście **Typ aplikacji** w pozycji **Microsoft Edge w wersji 77 lub nowszej** wybierz opcję **macOS**.
 
 ## <a name="configure-app-information"></a>Konfigurowanie informacji o aplikacji
 W tym kroku podajesz informacje o tym wdrożeniu aplikacji. Te informacje pomagają zidentyfikować aplikację w usłudze Intune i ułatwiają użytkownikom odnalezienie aplikacji w portalu firmy.
 
-1. Kliknij opcję **Informacje o aplikacji**, aby wyświetlić blok **Informacje o aplikacji**.
-2. W bloku **Informacje o aplikacji** podajesz informacje o tym wdrożeniu aplikacji. Te informacje pomagają zidentyfikować aplikację w usłudze Intune i ułatwiają użytkownikom odnalezienie aplikacji w portalu firmy.
+1. Kliknij opcję **Informacje o aplikacji**, aby wyświetlić okienko **Informacje o aplikacji**.
+2. W okienku **Informacje o aplikacji** należy podać informacje o tym wdrożeniu aplikacji. Te informacje pomagają zidentyfikować aplikację w usłudze Intune i ułatwiają użytkownikom odnalezienie aplikacji w portalu firmy.
     - **Nazwa**: Wprowadź nazwę aplikacji wyświetlaną w Portalu firmy. Upewnij się, że wszystkie nazwy są unikatowe. Jeśli dana nazwa aplikacji występuje dwa razy, użytkownicy Portalu firmy będą widzieć tylko jedną z aplikacji o tej nazwie.
     - **Opis**: Wprowadź opis aplikacji. Przykładowo w opisie możesz wymienić docelowych użytkowników.
     - **Wydawca**: w roli wydawcy występuje firma Microsoft.
@@ -64,8 +64,8 @@ W tym kroku podajesz informacje o tym wdrożeniu aplikacji. Te informacje pomaga
 ## <a name="configure-microsoft-edge-settings"></a>Konfigurowanie ustawień programu Microsoft Edge
 W tym kroku skonfigurujesz opcje instalacji aplikacji.
 
-1. W bloku **Dodaj aplikację** wybierz pozycję **Ustawienia aplikacji**.
-2. W bloku **Ustawienia aplikacji** jest automatycznie wybierany kanał **Beta** i tego ustawienia nie można zmienić.
+1. W okienku **Dodawanie aplikacji** wybierz pozycję **Ustawienia aplikacji**.
+2. W okienku **Ustawienia aplikacji** jest automatycznie wybierany kanał **Beta** i tego ustawienia nie można zmienić.
     - Kanał **Beta** to najbardziej stabilne środowisko przeglądarki Microsoft Edge w wersji zapoznawczej oraz najlepszy wybór w przypadku pełnego pilotażu w organizacji. Ważne aktualizacje są publikowane co sześć tygodni.
 
     > [!NOTE]
@@ -80,7 +80,7 @@ Za pomocą tagów zakresu można określić, kto będzie mógł wyświetlać inf
 4.  Kliknij kolejno pozycje **Wybierz** > **OK**.
 
 ## <a name="add-the-app"></a>Dodawanie aplikacji
-Po zakończeniu konfigurowania wybierz opcję **Dodaj** w bloku **Aplikacja**. 
+Po zakończeniu konfigurowania wybierz opcję **Dodaj** w okienku **Aplikacja**. 
 
 Utworzona aplikacja będzie wyświetlana na liście aplikacji, z której można ją przypisać do wybranych grup. 
 

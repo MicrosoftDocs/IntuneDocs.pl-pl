@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/14/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c0b5f087494e8033cb9645d0a08edd4e1c481a2c
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: 31bad59c33a34d0b92d93979b20b58f70fd042ef
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72584925"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564097"
 ---
 # <a name="use-ios-app-provisioning-profiles-to-prevent-your-apps-from-expiring"></a>Użycie profilów aprowizowania aplikacji systemu iOS w celu zapobiegania wygaśnięciu aplikacji
 
@@ -44,8 +44,8 @@ Jako administrator możesz dołączać lub wykluczać grupy zabezpieczeń, aby p
 
 ## <a name="how-to-create-an-ios-mobile-app-provisioning-profile"></a>Jak utworzyć profil aprowizowania aplikacji mobilnych systemu iOS
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. W okienku **Intune** wybierz pozycję **Aplikacje klienckie** > **Profile aprowizacji aplikacji systemu iOS** > **Utwórz profil**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz kolejno pozycje **Aplikacje** > **Profile aprowizacji aplikacji systemu iOS** > **Utwórz profil**.
 3. Na stronie **Podstawowe** dodaj następujące wartości:
     - **Nazwa** — podaj nazwę dla tego profilu aprowizowania aplikacji mobilnych.
     - **Opis** — opcjonalnie wprowadź opis zasad.
@@ -56,7 +56,7 @@ Jako administrator możesz dołączać lub wykluczać grupy zabezpieczeń, aby p
    <img alt="Create profile - Basics" src="~/apps/media/app-provisioning-profile-ios/app-provisioning-profile-ios-01.png">
 
 4. Kliknij przycisk **Dalej: Tagi zakresu**.<br>
-   Na stronie **Tagi zakresu** można opcjonalnie skonfigurować tagi zakresu, aby określić, kto może zobaczyć profil aprowizacji aplikacji systemu iOS w usłudze Intune. Więcej informacji na temat tagów zakresu można znaleźć w artykule [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md) (Używanie kontroli dostępu opartej na rolach (RBAC) i tagów zakresu w rozproszonej infrastrukturze informatycznej).
+   Na stronie **Tagi zakresu** można opcjonalnie skonfigurować tagi zakresu, aby określić, kto może zobaczyć profil aprowizacji aplikacji systemu iOS w usłudze Intune. Więcej informacji na temat tagów zakresu można znaleźć w artykule [Używanie kontroli dostępu opartej na rolach (RBAC) i tagów zakresu w rozproszonej infrastrukturze informatycznej](../fundamentals/scope-tags.md).
 5. Kliknij przycisk **Dalej: Przypisania**.<br>
    Strona **Przypisania** umożliwia przypisanie profilu do użytkowników i urządzeń. Ważne jest, aby pamiętać, że profil można przypisać do urządzenia bez względu na to, czy jest ono zarządzane przez usługę Intune.
 6. Kliknij przycisk **Dalej: Przeglądanie + tworzenie**, aby przejrzeć wartości wprowadzone dla profilu.

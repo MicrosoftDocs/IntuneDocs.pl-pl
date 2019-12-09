@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fcc5dea1a3f9e6a1f2bec877688962d7be70cc7c
-ms.sourcegitcommit: d2d18eef64bcf16eec1a48fcb67f1362537c0245
+ms.openlocfilehash: ffabcace189efd60e9d532172ecd1f2a048eec2c
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445312"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74562406"
 ---
 # <a name="intune-actions-and-options-supported-with-apple-user-enrollment"></a>Akcje i opcje usługi Intune obsługiwane przez rejestrację użytkowników firmy Apple
 
@@ -57,13 +57,18 @@ Na urządzeniach z rejestracją użytkowników użytkownicy końcowi mogą wykon
 - Zdalne blokowanie
 - Sprawdzanie stanu
 
+## <a name="app-deployment-options"></a>Opcje wdrożenia aplikacji
+Typy aplikacji, które można wdrożyć na urządzeniach z rejestracją użytkowników:
+- Aplikacje VPP (Volume Purchasing Plan) licencjonowane przez użytkownika, w tym aplikacje niestandardowe
+- Aplikacje biznesowe (LOB)
+- Aplikacje internetowe
+
 ## <a name="other-supported-options"></a>Inne obsługiwane opcje
 
 Następujące opcje są obsługiwane w usłudze Intune dla urządzeń zarejestrowanych przy użyciu funkcji rejestracji użytkowników firmy Apple:
 - Sieć VPN dla aplikacji. Z tej opcji obsługi są wykluczone domeny przeglądarki Safari, ponieważ rejestracja użytkowników nie obsługuje konfigurowania ustawień tej przeglądarki.
 - Sieć Wi-Fi 
 - Usuwanie aplikacji firmowych po wyrejestrowaniu
-- Wdrażanie aplikacji za pomocą planu zakupów zbiorczych (VPP) dla użytkowników z licencjami
 - Wykrywanie zdjęcia zabezpieczeń systemu
 
 Obsługiwane są następujące ograniczenia:
@@ -97,6 +102,7 @@ Następujące opcje nie są obsługiwane na urządzeniach zarejestrowanych przy 
 - Profile użytkowników protokołu SCEP z nazwą podmiotu w formacie numeru seryjnego.
 - Sieć VPN na poziomie urządzenia.
 - Wdrożenie aplikacji programu VPP licencjonowanej w urządzeniu.
+- Instalowanie aplikacji ze sklepu App Store jako aplikacji zarządzanych.
 - Kontrola MDM aplikacji poza zarządzanym woluminem APFS.
 - Zasady ochrony aplikacji nadal będą stosowane do tych aplikacji. Nie będzie można jednak przejąć zarządzania ani wdrożyć zarządzanej wersji tych aplikacji, chyba że użytkownik usunie je z urządzenia.
 - Akcje, konfiguracje, ustawienia i polecenia wymagające nadzoru. 

@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 Customer intent: As an Intune admin, I want to set up the Apple's corporate device enrollment features so that corporate devices can automatically enroll in Intune.
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cc950f9e60f5549a7a74c2963f33c36369d3ebd3
-ms.sourcegitcommit: 5c52879f3653e22bfeba4eef65e2c86025534dab
+ms.openlocfilehash: 56b8ab9507acda8fc1145bd65c4438da838dd806
+ms.sourcegitcommit: fc4b38660129d615068f34ad4b96b900d73f7b53
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74126168"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74558169"
 ---
 # <a name="tutorial-use-apples-corporate-device-enrollment-features-in-apple-business-manager-abm-to-enroll-ios-devices-in-intune"></a>Samouczek: Użyj funkcji rejestracji urządzeń firmowych firmy Apple w usłudze Apple Business Manager (ABM) do rejestrowania urządzeń z systemem iOS w usłudze Intune
 Funkcje rejestracji urządzeń w usłudze Apple Business Manager ułatwiają rejestrowanie urządzeń. Usługa Intune obsługuje również starszy portal programu Device Enrollment Program (DEP) firmy Apple, ale zachęcamy, aby zacząć od zera za pomocą usługi Apple Business Manager. Za pomocą usługi Microsoft Intune i rejestracji urządzeń firmowych firmy Apple urządzenia są automatycznie bezpiecznie rejestrowane za pierwszym razem, gdy użytkownik włączy urządzenie. Umożliwia to dostarczanie urządzeń wielu użytkownikom bez konieczności indywidualnego konfigurowania każdego urządzenia. 
@@ -44,7 +44,7 @@ Przed zarejestrowaniem urządzeń z systemem iOS za pomocą funkcji rejestracji 
 
 Użyj usługi ABM lub portalu DEP, aby utworzyć token rejestracji urządzenia. W tych portalach można również przypisać urządzenia do funkcji zarządzania usługi Intune.
 
-1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Tokeny programu rejestracji** > **Dodaj**.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz kolejno pozycje **Urządzenia** > **iOS** > **Rejestracja urządzeń z systemem iOS** > **Tokeny programu rejestracji** > **Dodaj**.
 
 2. Udziel firmie Microsoft uprawnień do wysyłania informacji o użytkowniku i urządzeniu do firmy Apple, wybierając pozycję **Zgadzam się**.
 
@@ -80,7 +80,7 @@ Użyj usługi ABM lub portalu DEP, aby utworzyć token rejestracji urządzenia. 
 ## <a name="create-an-apple-enrollment-profile"></a>Tworzenie profilu rejestracji firmy Apple
 Teraz, po zainstalowaniu tokenu, możesz utworzyć profil rejestracji dla należących do firmy urządzeń z systemem iOS. Profil rejestracji urządzeń określa ustawienia stosowane do grupy urządzeń podczas rejestracji.
 
-1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Tokeny programu rejestracji**.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz kolejno pozycje **Urządzenia** > **iOS** > **Rejestracja urządzeń z systemem iOS** > **Tokeny programu rejestracji**.
 
 2. Wybierz właśnie zainstalowany token i wybierz pozycję **Profile** > **Utwórz profil**.
 
@@ -118,13 +118,13 @@ Teraz, po zainstalowaniu tokenu, możesz utworzyć profil rejestracji dla należ
 
 Po skonfigurowaniu tokenu programu rejestracji za pomocą usługi ABM, funkcji ASM lub portalu DEP i przypisaniu tam urządzeń do serwera MDM możesz poczekać na zsynchronizowanie tych urządzeń z usługą Intune lub ręcznie wypchnąć synchronizację. Bez ręcznej synchronizacji pokazanie urządzenia w witrynie Azure Portal może zająć nawet do 24 godzin.
 
-1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Tokeny programu rejestracji** > wybierz token na liście > **Urządzenia** > **Synchronizuj**.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)) wybierz kolejno pozycje **Urządzenia** > **iOS** > **Rejestracja urządzeń z systemem iOS** > **Tokeny programu rejestracji** > wybierz token na liście > **Urządzenia** > **Synchronizuj**.
 
 ## <a name="assign-an-enrollment-profile-to-ios-devices"></a>Przypisywanie profilu rejestracji do urządzeń z systemem iOS
 
 Zanim możliwe będzie rejestrowanie urządzeń, należy przypisać profil programu rejestracji. Urządzenia te są synchronizowane z usługą Intune z firmy Apple i muszą zostać przypisane do odpowiednich tokenów serwera MDM w usłudze ABM, funkcji ASM lub portalu DEP.
 
-1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Tokeny programu rejestracji** > wybierz token na liście.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz kolejno pozycje **Urządzenia** > **iOS** > **Rejestracja urządzeń z systemem iOS** > **Tokeny programu rejestracji** > wybierz token na liście.
 2. Wybierz **Urządzenia** > wybierz urządzenia na liście > **Przypisz profil**.
 3. W obszarze **Przypisz profil** wybierz profil dla urządzeń > **Przypisz**.
 

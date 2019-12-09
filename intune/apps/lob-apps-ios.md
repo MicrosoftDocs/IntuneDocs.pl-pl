@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 34f73434483c3b6b74f4d816dbc6f06b5dab2464
-ms.sourcegitcommit: 25acfc88b366d2da71c37d354a0238e4f1168325
+ms.openlocfilehash: 7e1d3c6a427dcbd4a7946c5f3e180de56e8cb955
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72813521"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563523"
 ---
 # <a name="add-an-ios-line-of-business-app-to-microsoft-intune"></a>Dodawanie do usługi Microsoft Intune aplikacji biznesowych dla systemu iOS
 
@@ -38,11 +38,9 @@ Informacje przedstawione w tym artykule ułatwiają dodawanie aplikacji biznesow
 
 ## <a name="step-1-specify-the-software-setup-file"></a>Krok 1. Określanie pliku konfiguracji oprogramowania
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. W okienku **Intune** wybierz pozycję **Aplikacje klienckie**.
-4. W obciążeniu **Aplikacje klienckie** wybierz kolejno pozycje **Zarządzanie** > **Aplikacje**.
-5. Wybierz pozycję **Dodaj** powyżej listy aplikacji.
-6. W okienku **Dodaj aplikację** wybierz opcję **Aplikacja biznesowa**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz kolejno pozycje **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**.
+3. W okienku **Dodaj aplikację** wybierz opcję **Aplikacja biznesowa** jako **Typ aplikacji**.
 
 ## <a name="step-2-configure-the-app-package-file"></a>Krok 2: Konfigurowanie pliku pakietu aplikacji
 

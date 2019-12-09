@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/20/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,17 +18,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e7242b661668f994208aa36a8f9fc5d350623ccd
-ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
+ms.openlocfilehash: ba3b145c3a48992b1e8a01ad2cee4be60646df6f
+ms.sourcegitcommit: b752acefec077c719e169e665c955adb944e85c6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74390373"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74781247"
 ---
 # <a name="ios-app-protection-policy-settings"></a>Ustawienia zasad ochrony aplikacji dla systemu iOS
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-W tym artykule opisano ustawienia zasad ochrony aplikacji dla urządzeń z systemem iOS. Opisane ustawienia zasad można [skonfigurować](app-protection-policies.md) dla zasad ochrony aplikacji w bloku **Ustawienia** w witrynie Azure Portal podczas tworzenia nowych zasad.
+W tym artykule opisano ustawienia zasad ochrony aplikacji dla urządzeń z systemem iOS. Opisane ustawienia zasad można [skonfigurować](app-protection-policies.md) dla zasad ochrony aplikacji w okienku **Ustawienia** w witrynie Azure Portal podczas tworzenia nowych zasad.
 
 Istnieją trzy kategorie ustawień zasad: *Relokacja danych*, *Wymagania dotyczące dostępu* i *Uruchamianie warunkowe*. W tym artykule termin ***aplikacje zarządzane przez zasady*** dotyczy aplikacji konfigurowanych przy użyciu zasad ochrony aplikacji.
 
@@ -88,7 +88,7 @@ Istnieją pewne aplikacje i usługi platform, w przypadku których w pewnych sce
 | <ul><ui> **Wybierz minimalną długość kodu PIN** | określ minimalną liczbę cyfr w sekwencji numeru PIN.  | **4**  |
 | <ul><ui> **Funkcja Touch ID zamiast kodu PIN na potrzeby dostępu (iOS 8 lub nowszy)** | Wybierz pozycję **Zezwalaj**, aby zezwolić użytkownikowi na dostęp do aplikacji za pomocą funkcji [Touch ID](https://support.apple.com/HT201371) zamiast numeru PIN.    | **Zezwalaj**  |
 |<ul><ui><ul><ui>**Zastąp funkcję Touch ID kodem PIN po upłynięciu limitu czasu**|  Aby użyć tego ustawienia, wybierz pozycję **Wymagane**, a następnie skonfiguruj limit czasu braku aktywności.  |**Wymagane**  |
-| <ul><ui><ul><ui><ul><ui> **Limit czasu (w minutach nieaktywności)** |  określ czas w minutach, po którym kod dostępu albo liczbowy (zgodnie z konfiguracją) kod PIN zastąpi użycie odcisku palca. Ta wartość limitu czasu powinna być większa niż wartość określona dla opcji „Ponownie sprawdź wymagania dostępu po (w minutach)”.  |**30**  |
+| <ul><ui><ul><ui><ul><ui> **Limit czasu (w minutach nieaktywności)** |  Określ w minutach czas, po którym kod dostępu albo liczbowy (zgodnie z konfiguracją) kod PIN zastąpi użycie twarzy lub odcisku palca jako metody dostępu. Ta wartość limitu czasu powinna być większa niż wartość określona dla opcji „Ponownie sprawdź wymagania dostępu po (w minutach)”.  |**30**  |
 | <ul><ui><ul><ui>**Funkcja Face ID zamiast kodu PIN na potrzeby dostępu (iOS 11 lub nowszy)** | Wybierz opcję **Zezwalaj**, aby umożliwić użytkownikowi użycie technologii rozpoznawania twarzy do uwierzytelniania użytkowników urządzeń z systemem iOS. Jeśli dla tej opcji zostanie ustawiona wartość Zezwalaj, funkcja Face ID będzie musiała zostać użyta na urządzeniu, które ją obsługuje.    | **Zezwalaj**  |
 | <ul><ui>**Zresetowanie numeru PIN po upływie pewnej liczby dni** | Wybierz opcję **Tak**, aby wymagać od użytkowników zmiany kodu PIN aplikacji po ustawionym na określoną liczbę dni czasie.  <br><br>Po ustawieniu tej opcji na wartość *Tak* można skonfigurować liczbę dni, po których wymagane będzie zresetowanie kodu PIN. |**Nie**  |  
 | <ul><ui><ul><ui> **Liczba dni** | Skonfiguruj liczbę dni, po których wymagane będzie zresetowanie kodu PIN.  |**90**  |

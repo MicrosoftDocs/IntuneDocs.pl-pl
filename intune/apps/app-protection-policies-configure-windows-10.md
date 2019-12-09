@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/22/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e0e1ff8fd39d301bd685e9806c319f49e9189d7f
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 41c08d1912bf9c79507c2a6627205979504f340d
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507417"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564236"
 ---
 # <a name="get-ready-to-configure-app-protection-policies-for-windows-10"></a>Przygotowywanie do konfigurowania zasad ochrony aplikacji dla systemu Windows 10 
 
@@ -33,13 +33,12 @@ Włącz zarządzanie aplikacjami mobilnymi (MAM) dla systemu Windows 10, ustawia
 
 ## <a name="to-configure-the-mam-provider"></a>Aby skonfigurować dostawcę MAM
 
-1. Zaloguj się w witrynie Azure Portal i wybierz pozycję **Azure Active Directory**.
-
-2. Wybierz pozycję **Mobilność (zarządzanie urządzeniami przenośnymi i aplikacjami mobilnymi)** w grupie **Zarządzanie**.
-
-3. Kliknij pozycję **Microsoft Intune**.
-
-4. Skonfiguruj ustawienia w grupie **Przywróć domyślne adresy URL funkcji zarządzania aplikacjami przenośnymi** w bloku **Konfigurowanie**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz pozycję **Wszystkie usługi**, a następnie **M365 Azure Active Directory**, aby przełączyć pulpity nawigacyjne.
+3. Wybierz pozycję **Azure Active Directory**.
+4. Wybierz pozycję **Mobilność (zarządzanie urządzeniami przenośnymi i aplikacjami mobilnymi)** w grupie **Zarządzanie**.
+5. Kliknij pozycję **Microsoft Intune**.
+6. Skonfiguruj ustawienia w grupie **Przywróć domyślne adresy URL funkcji zarządzania aplikacjami przenośnymi** w okienku **Konfigurowanie**.
 
    **Zakres użytkownika funkcji zarządzania aplikacjami mobilnymi**  
    Automatyczna rejestracja w usłudze MAM umożliwia zarządzanie danymi przedsiębiorstwa na należących do pracowników urządzeniach z systemem Windows. Automatyczna rejestracja w usłudze MAM zostanie skonfigurowana na potrzeby scenariuszy obejmujących przynoszenie własnego urządzenia.<ul><li>**Brak**<br>Wybierz tę opcję, jeśli żaden użytkownik nie może zostać zarejestrowany w usłudze MAM.</li><li>**Niektóre**<br>Wybierz grupy usługi Azure AD zawierające użytkowników, którzy zostaną zarejestrowani w usłudze MAM.</li><li>**Wszystkie**<br>Wybierz tę opcję, jeśli wszyscy użytkownicy mogą rejestrować się w usłudze MAM.</li></ul>
@@ -53,7 +52,7 @@ Włącz zarządzanie aplikacjami mobilnymi (MAM) dla systemu Windows 10, ustawia
    **Adres URL informacji o zgodności usługi zarządzania aplikacjami mobilnymi**  
    Adres URL informacji o zgodności usługi zarządzania aplikacjami mobilnymi nie jest obsługiwany w przypadku usługi Microsoft Intune. Aby zasady ochrony zostały zastosowane, to pole wejściowe musi pozostać puste. 
 
-5. Kliknij polecenie **Zapisz**.
+7. Kliknij polecenie **Zapisz**.
 
 ## <a name="next-steps"></a>Następne kroki
 

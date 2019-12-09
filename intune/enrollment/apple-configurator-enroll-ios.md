@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c6a9c6b824f8d6369f7bf2d06b44fa8a20417d1c
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: f80312c2bd82063ed0b61c36bef9b8bf4ae3e1aa
+ms.sourcegitcommit: f26039d674eb4d61ab68264dd1a10b2e5e1d842c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73713140"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74691799"
 ---
 # <a name="set-up-ios-device-enrollment-with-apple-configurator"></a>Konfigurowanie rejestracji urządzeń z systemem iOS za pomocą programu Apple Configurator
 
@@ -48,7 +48,7 @@ Metody rejestracji z narzędziem Apple Configurator nie można używać z rejest
 
 Profil rejestracji urządzeń określa ustawienia stosowane podczas rejestracji. Te ustawienia są stosowane tylko raz. Wykonaj następujące kroki, aby utworzyć profil rejestracji i zarejestrować urządzenia z systemem iOS z wykorzystaniem narzędzia Apple Configurator.
 
-1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Apple Configurator** > **Profile** > **Utwórz**.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz kolejno pozycje **Urządzenia** > **iOS** > **Rejestracja urządzeń z systemem iOS** > **Apple Configurator** > **Profile** > **Utwórz**.
 
     ![Tworzenie profilu programu Apple Configurator](./media/apple-configurator-enroll-ios/apple-config-create-profile.png)
 
@@ -88,7 +88,7 @@ Profil rejestracji urządzeń określa ustawienia stosowane podczas rejestracji.
     DLXQPCWVGHMJ,szczegóły urządzenia
 
    [Dowiedz się, jak znaleźć numer seryjny urządzenia z systemem iOS](https://support.apple.com/HT204073).
-2. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Apple Configurator** > **Urządzenia** > **Dodaj**.
+2. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz kolejno pozycje **Urządzenia** > **iOS** > **Rejestracja urządzeń z systemem iOS** > **Apple Configurator** > **Urządzenia** > **Dodaj**.
 
 5. Wybierz **profil rejestracji** do zastosowania do importowanych numerów seryjnych. Jeśli chcesz, aby szczegóły nowego numeru seryjnego zastąpiły istniejące szczegóły, wybierz opcję **Zastąp szczegóły istniejącymi identyfikatorami**.
 6. W obszarze **Importuj urządzenia** przejdź do pliku CSV z numerami seryjnymi i wybierz przycisk **Dodaj**.
@@ -100,18 +100,18 @@ Profil rejestracji można przypisać po zaimportowaniu numerów seryjnych urząd
 - **Profile programu AC**
 
 #### <a name="assign-from-apple-configurator-devices"></a>Przypisywanie z poziomu urządzeń programu Apple Configurator
-1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Apple Configurator** > **Urządzenia** > wybierz numery seryjne > **Przypisz profil**.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz kolejno pozycje **Urządzenia** > **iOS** > **Rejestracja urządzeń z systemem iOS** > **Apple Configurator** > **Urządzenia** > wybierz numery seryjne > **Przypisz profil**.
 2. W obszarze **Przypisz profil** wybierz **Nowy profil**, który chcesz przypisać, a następnie wybierz przycisk **Przypisz**.
 
 #### <a name="assign-from-profiles"></a>Przypisywanie z profilów
-1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Apple Configurator** > **Profile**  > wybierz profil.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz kolejno pozycje **Urządzenia** > **iOS** > **Rejestracja urządzeń z systemem iOS** > **Apple Configurator** > **Profile** > Wybierz profil.
 2. W profilu wybierz pozycję **Przypisane urządzenia**, a następnie wybierz pozycję **Przypisz**.
 3. Filtruj, aby znaleźć numery seryjne urządzeń, które chcesz przypisać do profilu, wybierz urządzenia, a następnie wybierz opcję **Przypisz**.
 
 ### <a name="export-the-profile"></a>Eksportowanie profilu
 Po utworzeniu profilu i przypisaniu numerów seryjnych musisz wyeksportować profil z usługi Intune jako adres URL. Następnie zaimportuj go do narzędzia Apple Configurator na komputerze Mac w celu wdrożenia na urządzeniach.
 
-1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Apple Configurator** > **Profile**  > wybierz profil do wyeksportowania.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz kolejno pozycje **Urządzenia** > **iOS** > **Rejestracja urządzeń z systemem iOS** > **Apple Configurator** > **Profile** > Wybierz profil przeznaczony do wyeksportowania.
 2. W profilu wybierz pozycję **Eksportuj profil**.
 3. Skopiuj **adres URL profilu**. Następnie możesz dodać go przy użyciu narzędzia Apple Configurator, aby określić profil usługi Intune używany przez urządzenia z systemem iOS.
 
@@ -147,7 +147,7 @@ Aplikacje wymagające koligacji użytkownika (w tym aplikacja Portal firmy używ
 
 ### <a name="export-the-profile-as-mobileconfig-to-ios-devices"></a>Eksportowanie profilu jako pliku .mobileconfig do urządzeń z systemem iOS
 
-1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Apple Configurator** > **Profile**  > wybierz profil do wyeksportowania > **Eksportuj profil**.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz kolejno pozycje **Urządzenia** > **iOS** > **Rejestracja urządzeń z systemem iOS** > **Apple Configurator** > **Profile** > wybierz profil do wyeksportowania > **Eksportuj profil**.
 2. W obszarze **Rejestracja bezpośrednia** wybierz opcję **Pobierz profil**i zapisz plik. Plik profilu rejestracji jest ważny tylko przez dwa tygodnie. Po tym czasie musisz utworzyć go ponownie.
 3. Przetransferuj plik na komputer Mac z programem [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12), aby wypchnąć go bezpośrednio jako profil zarządzania do urządzeń z systemem iOS.
 4. Przygotuj urządzenie z zainstalowanym programem Apple Configurator, wykonując kroki opisane poniżej:

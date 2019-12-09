@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/08/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9561c50e21a9667ccec3f9de3627e7a933cf0736
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: 80d6068a17e1d278f9226e26c9efab24d597e52e
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72584992"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564264"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem Android Enterprise
 
@@ -34,7 +34,7 @@ Zasady konfiguracji aplikacji w usłudze Microsoft Intune zawierają ustawienia 
 > [!NOTE]  
 > Nie wszystkie aplikacje obsługują konfigurację aplikacji. Skontaktuj się z deweloperem aplikacji, aby dowiedzieć się, czy jego aplikacja obsługuje zasady konfiguracji aplikacji.
 
-1. W usłudze [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) wybierz pozycje **Aplikacje klienckie** > **Zasady konfiguracji aplikacji** >  **Dodaj**.
+1. W usłudze [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) wybierz pozycje **Aplikacje** > **Zasady konfiguracji aplikacji** >  **Dodaj**.
 2. Wprowadź następujące właściwości:
 
     - **Nazwa**: wprowadź opisową nazwę zasad. Nadaj nazwę zasadom, aby można było je później łatwo rozpoznać. Na przykład dobrą nazwą zasad jest **Zasady aplikacji Android Enterprise Nine Work dla całej firmy**.
@@ -110,7 +110,7 @@ Możesz również wstępnie skonfigurować uprawnienia aplikacji pod kątem dost
 
 Na przykład aplikacja używa mikrofonu urządzenia. Użytkownik otrzymuje monit o przyznanie aplikacji uprawnienia do korzystania z mikrofonu.
 
-1. W usłudze [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) wybierz pozycje **Aplikacje klienckie** > **Zasady konfiguracji aplikacji** >  **Dodaj**.
+1. W usłudze [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) wybierz pozycje **Aplikacje** > **Zasady konfiguracji aplikacji** >  **Dodaj**.
 2. Wprowadź następujące właściwości:
 
     - **Nazwa**: wprowadź opisową nazwę zasad. Nadaj nazwę zasadom, aby można było je później łatwo rozpoznać. Na przykład dobrą nazwą zasad jest **Zasady aplikacji monitu o uprawnienia systemu Android Enterprise dla całej firmy**.

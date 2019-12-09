@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 11/26/2019
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3afd51fe27feb0c058ba703ed11e4a15a5ea2f0d
-ms.sourcegitcommit: 25acfc88b366d2da71c37d354a0238e4f1168325
+ms.openlocfilehash: d09857c4e5b63947a6e3b3140f673f0887f7f920
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72813424"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563413"
 ---
 # <a name="quickstart-add-and-assign-a-client-app"></a>Szybki start: Dodawanie i przypisywanie aplikacji klienckiej
 
@@ -44,7 +44,7 @@ Zaloguj się w usłudze [Intune](https://aka.ms/intuneportal) jako [administrato
 Po dodaniu aplikacji usługa Intune może zarządzać jej aspektami. 
 
 Aby dodać aplikację do usługi Intune, wykonaj następujące czynności:
-1. W usłudze [Intune](https://aka.ms/intuneportal) wybierz pozycję **Aplikacje klienckie** > **Aplikacje** > **Dodaj**. 
+1. W usłudze [Intune](https://aka.ms/intuneportal) wybierz kolejno pozycje **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**. 
 2. Wybierz pozycję **Windows 10** w sekcji **Pakiet Office 365** na liście rozwijanej **Typ aplikacji**.
 3. Wybierz pozycję **Skonfiguruj pakiet aplikacji** w celu wybrania aplikacji pakietu Office, który zostaną przypisane do użytkownika usługi Intune.
 4. Kliknij przycisk **OK**, aby zaakceptować domyślnie wybrane aplikacje.
@@ -68,9 +68,9 @@ Po dodaniu aplikacji do usługi Microsoft Intune należy ją przypisać do grup 
 > Ten przewodnik Szybki start bazuje na poprzednich przewodnikach Szybki start z tej serii. Aby uzyskać szczegółowe informacje, zobacz [wymagania wstępne](quickstart-add-assign-app.md#prerequisites) w tym przewodniku Szybki Start.
 
 Aby przypisać aplikację do grupy, wykonaj następujące czynności:
-1. W usłudze [Intune](https://aka.ms/intuneportal) wybierz pozycję **Aplikacje klienckie** > **Aplikacje**. 
+1. W usłudze [Intune](https://aka.ms/intuneportal) wybierz kolejno pozycje **Aplikacje** > **Wszystkie aplikacje**. 
 2. Wybierz aplikację, którą chcesz przypisać do grupy.
-3. Kliknij pozycję **Przypisania** > **Dodaj grupę** w celu wyświetlenia bloku **Dodawanie grupy**.
+3. Kliknij pozycję **Przypisania** > **Dodaj grupę** w celu wyświetlenia w okienku **Dodaj grupę**.
 4. Wybierz pozycję **Dostępne dla zarejestrowanych urządzeń** z listy rozwijanej **Typ przypisania**. 
 5. Wybierz pozycję **Objęte grupy** > **Wybierz grupy do uwzględnienia** > **Contoso Testers** (Testerzy Contoso).
 6. Kliknij pozycję **Wybierz** > **OK** > **OK** > **Zapisz** w celu przypisania grupy.
@@ -101,7 +101,7 @@ Jeśli jednak w Twojej organizacji wymagane jest przypisanie aplikacji Portal fi
 
 W tym przewodniku Szybki start dodano aplikacje do usługi Intune, przypisano je do grupy oraz zainstalowano je na zarejestrowanym urządzeniu z systemem Windows 10 Desktop. Aby uzyskać więcej informacji o zarządzaniu aplikacjami w usłudze Intune, zobacz: [Co to jest zarządzanie aplikacjami w usłudze Microsoft Intune?](app-management.md)
 
-Aby zapoznać się kolejnymi przewodnikami Szybki start dotyczącymi usługi Intune, przejdź do kolejnego przewodnika Szybki start.
+Aby zapoznać się z kolejnymi przewodnikami Szybki start dotyczącymi usługi Intune, przejdź do kolejnego przewodnika Szybki start.
 
 > [!div class="nextstepaction"]
 > [Szybki start: Tworzenie i przypisywanie zasad ochrony aplikacji](quickstart-create-assign-app-policy.md)

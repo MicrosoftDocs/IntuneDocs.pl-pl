@@ -31,6 +31,8 @@
       href: quickstart-create-custom-role.md
 - name: Samouczki
   items:
+    - name: Prezentacja usługi Intune w usłudze Microsoft Endpoint Manager
+      href: tutorial-walkthrough-endpoint-manager.md
     - name: Prezentacja usługi Intune w witrynie Azure Portal
       href: tutorial-walkthrough-intune-portal.md
 - name: Pojęcia

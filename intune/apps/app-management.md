@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/23/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 56814550cae814bd89d55a6f72df98dd24df4caf
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 09b4cfad0490f35a85e4c72b937b2ba5c0472030
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507467"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564361"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co to jest zarządzanie aplikacjami w usłudze Microsoft Intune?
 
@@ -76,14 +76,14 @@ Usługa Intune oferuje szeroką gamę możliwości, które pomogą Ci uzyskać d
 
 ## <a name="get-started"></a>Wprowadzenie
 
-Większość informacji powiązanych z aplikacjami można znaleźć w obciążeniu **Aplikacje klienckie**, do którego dostęp można uzyskać w następujący sposób:
+Większość informacji powiązanych z aplikacjami można znaleźć w obciążeniu **Aplikacje**, do którego dostęp można uzyskać w następujący sposób:
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. W okienku **Microsoft Intune** wybierz pozycję **Aplikacje klienckie**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+3. Wybierz pozycję **Aplikacje**.
 
-    ![Okienko obciążenia Aplikacje klienckie](./media/app-management/apps-workload.png)
+    ![Okienko obciążenia Aplikacje](./media/app-management/apps-workload.png)
 
-W następnych czterech sekcjach opisano opcje dostępne w okienku **Aplikacje klienckie**.
+W następnych czterech sekcjach opisano opcje dostępne w okienku **Aplikacje**.
 
 ### <a name="manage"></a>Zarządzanie programem Endpoint Protection usługi
 - **Aplikacje**: wybierz tę opcję, aby dodawać, wyświetlać, przypisywać i monitorować aplikacje używane przez pracowników. Aby uzyskać więcej informacji, zobacz:

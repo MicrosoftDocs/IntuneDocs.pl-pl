@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/16/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1d73d28f34258bce99199731579969604c0a3d97
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: cef30238a4470395ccf58cf4d0619db78dd85b5a
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059719"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563462"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Używanie skryptów programu PowerShell na urządzeniach z systemem Windows 10 w usłudze Intune
 
@@ -62,7 +62,7 @@ Rozszerzenie do zarządzania usługi Intune ma poniższe wymagania wstępne. Gdy
     
     - Użytkownik loguje się do urządzenia przy użyciu swojego konta usługi Azure AD, a następnie rejestruje się w usłudze Intune.
 
-  - Urządzenia współzarządzane używające programu Configuration Manager i usługi Intune. Upewnij się, że obciążenie **Aplikacje klienckie** zostało ustawione na **pilotażową usługę Intune** lub **usługę Intune**. Zapoznaj się z poniższymi artykułami w celu uzyskania wskazówek: 
+  - Urządzenia współzarządzane używające programu Configuration Manager i usługi Intune. Upewnij się, że obciążenie **Aplikacje** zostało ustawione na **pilotażową usługę Intune** lub **usługę Intune**. Zapoznaj się z poniższymi artykułami w celu uzyskania wskazówek: 
   
     - [Co to jest współzarządzanie](https://docs.microsoft.com/sccm/comanage/overview) 
     - [Obciążenie Aplikacje klienckie](https://docs.microsoft.com/sccm/comanage/workloads#client-apps)
@@ -73,8 +73,8 @@ Rozszerzenie do zarządzania usługi Intune ma poniższe wymagania wstępne. Gdy
 
 ## <a name="create-a-script-policy-and-assign-it"></a>Tworzenie zasad skryptu i ich przypisywanie
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Wybierz pozycję **Konfiguracja urządzenia** > **Skrypty programu PowerShell** > **Dodaj**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz kolejno pozycje **Urządzenia** > **Skrypty środowiska PowerShell** > **Dodaj**.
 
     ![Dodawanie i używanie skryptów programu PowerShell w usłudze Microsoft Intune](./media/intune-management-extension/mgmt-extension-add-script.png)
 

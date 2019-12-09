@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/19/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 890709ccf176f2b0cc6c4a3af986d1bce642572d
-ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
+ms.openlocfilehash: e4761e2565402b4c3cdc993ff89cbedea8273609
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73754406"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563894"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Zarządzanie dostępem do Internetu przy użyciu przeglądarki Microsoft Edge w usłudze Microsoft Intune
 
@@ -58,15 +58,15 @@ Jeśli przeglądarka Microsoft Edge nie jest docelowym programem zasad usługi I
 Możesz używać dostępu warunkowego usługi Azure AD, aby przekierowywać użytkowników tak, aby uzyskiwali dostęp do zawartości firmowej tylko za pośrednictwem przeglądarki Microsoft Edge. Ogranicza to dostęp przeglądarki mobilnej do połączonej z usługą Azure AD aplikacji internetowej do przeglądarki Microsoft Edge chronionej przez zasady. W wyniku dostęp z innych niezabezpieczonych przeglądarek, takich jak Safari czy Chrome, zostaje zablokowany. Możesz zastosować dostęp warunkowy do zasobów platformy Azure, takich jak usługi Exchange Online i SharePoint Online, centrum administracyjne platformy Microsoft 365, a nawet witryny lokalne, które są dostępne dla użytkowników zewnętrznych za pośrednictwem [serwera proxy aplikacji usługi Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started).
 
 Aby ograniczyć aplikacje internetowe połączone z usługą Azure AD w celu używania przeglądarki Microsoft Edge w systemach iOS i Android:
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. W węźle usługi Intune wybierz kolejno pozycje **Dostęp warunkowy** > **Nowe zasady**.
-3. Wybierz pozycję **Udziel** w sekcji **Kontrole dostępu** bloku.
+3. Wybierz pozycję **Udziel** w sekcji **Kontrole dostępu** okienka.
 4. Wybierz pozycję **Wymagaj zatwierdzonej aplikacji klienckiej**.
-5. Wybierz pozycję **Wybierz** w bloku **Udziel**. Te zasady należy przypisać do aplikacji w chmurze, które mają być dostępne tylko dla aplikacji Intune Managed Browser.
+5. Wybierz pozycję **Wybierz** w okienku **Udziel**. Te zasady należy przypisać do aplikacji w chmurze, które mają być dostępne tylko dla aplikacji Intune Managed Browser.
 
     ![Zrzut ekranu przedstawiający obszar Zasady dostępu warunkowego — udzielanie](./media/manage-microsoft-edge/manage-microsoft-edge-01.png)
 
-6. W sekcji Przypisania wybierz pozycję **Warunki** > **Aplikacje klienckie**. Pojawi się blok **Aplikacje klienckie**.
+6. W sekcji Przypisania wybierz pozycje **Warunki** > **Aplikacje**. Zostanie wyświetlone okienko **Aplikacje**.
 7. W obszarze **Konfiguruj** wybierz pozycję **Tak**, aby zastosować zasady do określonych aplikacji klienckich.
 8. Sprawdź, czy jako aplikację kliencką wybrano pozycję **Przeglądarka**.
 
@@ -97,29 +97,29 @@ Logowanie jednokrotne wymaga, aby urządzenie było zarejestrowane przez aplikac
 
 Aby utworzyć konfigurację aplikacji na potrzeby przeglądarki Microsoft Edge:
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Wybierz pozycję **Aplikacje klienckie** > **Zasady konfiguracji aplikacji** > **Dodaj**.
-3. W bloku **Dodaj zasady konfiguracji** wypełnij pola **Nazwa** i **Opis** (opcjonalnie) odnoszące się do ustawień konfiguracji aplikacji.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz kolejno pozycje **Aplikacje** > **Zasady konfiguracji aplikacji** > **Dodaj**.
+3. W okienku **Dodaj zasady konfiguracji** wypełnij pola **Nazwa** i **Opis** (opcjonalnie) odnoszące się do ustawień konfiguracji aplikacji.
 4. Jako typ **rejestracji urządzenia** wybierz **Aplikacje zarządzane**.
-5. Wybierz pozycję **Wybierz wymaganą aplikację**. Następnie przejdź do bloku **Docelowe aplikacje** i wybierz pozycję **Managed Browser** lub **Microsoft Edge** dla systemu iOS lub Android bądź dla obu tych systemów.
-6. Wybierz przycisk **OK**, aby wrócić do bloku **Dodaj zasady konfiguracji**.
-7. Wybierz pozycję **Ustawienia konfiguracji**. W bloku **Konfiguracja** należy zdefiniować pary kluczy i wartości do dostarczania konfiguracji dla przeglądarki Microsoft Edge. Informacje na temat różnych par kluczy i wartości, które można zdefiniować, znajdują się w dalszych sekcjach tego artykułu.
+5. Wybierz pozycję **Wybierz wymaganą aplikację**. Następnie przejdź do okienka **Docelowe aplikacje** i wybierz pozycję **Managed Browser** lub **Microsoft Edge** dla systemu iOS lub Android bądź dla obu tych systemów.
+6. Kliknij przycisk **OK**, aby wrócić do okienka **Dodaj zasady konfiguracji**.
+7. Wybierz pozycję **Ustawienia konfiguracji**. W okienku **Konfiguracja** należy zdefiniować pary kluczy i wartości do dostarczania konfiguracji dla przeglądarki Microsoft Edge. Informacje na temat różnych par kluczy i wartości, które można zdefiniować, znajdują się w dalszych sekcjach tego artykułu.
 
     > [!NOTE]
     > Aplikacja Microsoft Edge używa tych samych par klucza i wartości co aplikacja Managed Browser. Aby zasady konfiguracji aplikacji zaczęły obowiązywać, w systemie Android celem zasad ochrony aplikacji musi być przeglądarka Microsoft Edge.
 
 8. Gdy wszystko będzie gotowe, wybierz przycisk **OK**.
-9. W bloku **Dodaj zasady konfiguracji** wybierz pozycję **Dodaj**.<br>
-    Nowa konfiguracja zostanie utworzona i wyświetlona w bloku **Konfiguracja aplikacji**.
+9. W okienku **Dodaj zasady konfiguracji** wybierz pozycję **Dodaj**.<br>
+    Nowa konfiguracja zostanie utworzona i wyświetlona w okienku **Konfiguracja aplikacji**.
 
 ## <a name="assign-the-configuration-settings-you-created"></a>Przypisywanie utworzonych ustawień konfiguracji 
 
 Ustawienia są przypisywane do grup użytkowników w usłudze Azure AD. Jeśli dany użytkownik ma zainstalowaną docelową aplikację przeglądarki chronionej, aplikacja jest zarządzana z uwzględnieniem określonych ustawień.
 
-1. W bloku **Aplikacje klienckie** pulpitu nawigacyjnego zarządzania aplikacjami mobilnymi usługi Intune wybierz pozycję **Zasady konfiguracji aplikacji**.
+1. W okienku **Aplikacje** pulpitu nawigacyjnego zarządzania aplikacjami mobilnymi usługi Intune wybierz pozycję **Zasady konfiguracji aplikacji**.
 2. Z listy konfiguracji aplikacji wybierz tę, która ma zostać przypisana.
-3. W następnym bloku wybierz pozycję **Przypisania**.
-4. W bloku **Przypisania** wybierz grupę usługi Azure AD, do której chcesz przypisać konfigurację aplikacji, a następnie wybierz przycisk **OK**.
+3. W następnym okienku wybierz pozycję **Przypisania**.
+4. W okienku **Przypisania** wybierz grupę usługi Azure AD, do której chcesz przypisać konfigurację aplikacji, a następnie kliknij przycisk **OK**.
 
 ## <a name="direct-users-to-microsoft-edge-instead-of-the-intune-managed-browser"></a>Kierowanie użytkowników do przeglądarki Microsoft Edge zamiast do programu Intune Managed Browser 
 

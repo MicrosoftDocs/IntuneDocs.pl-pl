@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/21/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b750c09207b1950aa27a5f2cae1267503537b6e7
-ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
+ms.openlocfilehash: 7a4d6db4f61dea1b073ccce7c4c3f727a91402c1
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74199213"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563634"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Jak skonfigurować aplikację Portal firmy w usłudze Microsoft Intune
 
@@ -37,7 +37,7 @@ Portal firmy usługi Microsoft Intune jest miejscem, w którym użytkownicy uzys
 > [!Tip]
 > Podczas dostosowywania Portalu firmy konfiguracje mają zastosowanie do witryny sieci Web Portal firmy i aplikacji Portal firmy. Należy pamiętać, że użytkownicy muszą mieć przypisaną licencję usługi Intune, aby uzyskiwać dostęp do witryny internetowej Portal firmy.
 
-Dostosowanie Portalu firmy ułatwi zapewnienie znanego i przydatnego środowiska dla użytkowników końcowych. W tym celu w portalu usługi Intune wybierz pozycję **Aplikacje klienckie** > **Znakowanie i dostosowywanie**, a następnie skonfiguruj wymagane ustawienia.
+Dostosowanie Portalu firmy ułatwi zapewnienie znanego i przydatnego środowiska dla użytkowników końcowych. W tym celu w portalu usługi Intune wybierz pozycję **Aplikacje** > **Znakowanie i dostosowywanie**, a następnie skonfiguruj wymagane ustawienia.
 
 Gdy użytkownik będzie instalował aplikację systemu iOS z witryny Portal firmy, zostanie wyświetlony monit. Dzieje się tak, gdy aplikacja systemu iOS jest połączona ze sklepem z aplikacjami, z programem zakupów zbiorczych (VPP) lub z aplikacją biznesową (LOB). Monit umożliwia użytkownikom zaakceptowanie akcji lub zezwolenie na zarządzanie aplikacją. Monit będzie zawierał nazwę firmy, a jeśli nazwa firmy jest niedostępna, będzie wyświetlana pozycja **Portal firmy**. 
 
@@ -92,7 +92,7 @@ Wybierz logo, które będzie wyglądać najlepiej na białym lub jasnym tle.
 
 ### <a name="brand-image-for-company-portal"></a>Obraz marki dla Portalu firmy
 
-Możesz wyświetlać obraz marki Twojej firmy. Po zapisaniu zmian można wybrać pozycję **Podgląd ustawień** w portalu internetowym usługi Intune w górnej części bloku, aby zobaczyć, jak będą wyglądać konfiguracje. Podgląd obrazu marki jest dostępny tylko w urządzeniu z systemem iOS, a nie w portalu internetowym usługi Intune. 
+Możesz wyświetlać obraz marki Twojej firmy. Po zapisaniu zmian można wybrać pozycję **Podgląd ustawień** w portalu internetowym usługi Intune w górnej części okienka, aby zobaczyć, jak będą wyglądać konfiguracje. Podgląd obrazu marki jest dostępny tylko w urządzeniu z systemem iOS, a nie w portalu internetowym usługi Intune. 
 
 |Nazwa pola|Więcej informacji|
 |---|---|

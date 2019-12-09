@@ -6,7 +6,7 @@ keywords: Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/27/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c53166b6e6dc6ab3f780ccdfd4f11eb4c6a9d730
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: c5616b27b97d5623958ec872390e2a6de79db3c5
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72497551"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563448"
 ---
 # <a name="add-ios-store-apps-to-microsoft-intune"></a>Dodawanie aplikacji ze sklepu z aplikacjami dla systemu iOS do usługi Microsoft Intune
 
@@ -41,18 +41,16 @@ Przy użyciu tej metody można przypisywać tylko aplikacje dostępne bezpłatni
 >[!NOTE]
 >Jeśli pracujesz, korzystając z usługi Microsoft Intune, firma Microsoft zaleca używanie przeglądarki Microsoft Edge lub Google Chrome.
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. W okienku **Intune** wybierz pozycję **Aplikacje klienckie**.
-4. W okienku obciążenia **Aplikacje klienckie** w obszarze **Zarządzanie** wybierz pozycję **Aplikacje**.
-5. W okienku **Aplikacje** wybierz pozycję **Dodaj**.
-6. Na liście **Typ aplikacji** w obszarze typów **aplikacji ze sklepu** wybierz opcję **iOS**.
-7. Wybierz opcję **Wyszukaj w sklepie App Store**.
-8. W okienku **Wyszukaj w sklepie App Store** wybierz ustawienia regionalne dla kraju/regionu sklepu App Store.
-9. W polu **Wyszukaj** wpisz nazwę aplikacji (lub jej część).  
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz kolejno pozycje **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**.
+3. Na liście **Typ aplikacji** w obszarze typów **aplikacji ze sklepu** wybierz opcję **iOS**.
+4. Wybierz opcję **Wyszukaj w sklepie App Store**.
+5. W okienku **Wyszukaj w sklepie App Store** wybierz ustawienia regionalne dla kraju/regionu sklepu App Store.
+6. W polu **Wyszukaj** wpisz nazwę aplikacji (lub jej część).  
     Usługa Intune wyszuka nazwę w sklepie i zwróci listę wyników spełniających kryterium.
-10. Na liście wyników zaznacz odpowiednią aplikację, a następnie użyj opcji **Wybierz**.
-11. Aby skonfigurować aplikację, w okienku **Dodaj aplikację** wybierz pozycję **Informacje o aplikacji**.
-12. W okienku **Informacje o aplikacji** dodaj informacje dotyczące aplikacji. W zależności od wybranej aplikacji niektóre wartości w tym okienku mogą zostać wypełnione automatycznie:
+7. Na liście wyników zaznacz odpowiednią aplikację, a następnie użyj opcji **Wybierz**.
+8. Aby skonfigurować aplikację, w okienku **Dodaj aplikację** wybierz pozycję **Informacje o aplikacji**.
+9. W okienku **Informacje o aplikacji** dodaj informacje dotyczące aplikacji. W zależności od wybranej aplikacji niektóre wartości w tym okienku mogą zostać wypełnione automatycznie:
     - **Nazwa**: wprowadź nazwę aplikacji, która ma być wyświetlana w Portalu firmy. Upewnij się, że każda używana nazwa aplikacji jest unikatowa. Jeśli nazwa aplikacji będzie zduplikowana, użytkownicy zobaczą tylko jedną nazwę w Portalu firmy.
     - **Opis**: Wprowadź opis aplikacji. Ten opis jest wyświetlany użytkownikom Portalu firmy.
     - **Wydawca**: Wprowadź nazwę wydawcy aplikacji.
@@ -67,8 +65,8 @@ Przy użyciu tej metody można przypisywać tylko aplikacje dostępne bezpłatni
     - **Właściciel**: Opcjonalnie wprowadź nazwę właściciela aplikacji, na przykład *Dział kadr*. To pole jest widoczne tylko dla administratorów i nie jest widoczne dla użytkowników.
     - **Uwagi**: Opcjonalnie wprowadź wszelkie uwagi, które chcesz skojarzyć z tą aplikacją. To pole jest widoczne tylko dla administratora i nie będzie wyświetlane użytkownikom końcowym.
     - **Logo**: opcjonalnie przekaż ikonę, która zostanie skojarzona z aplikacją. Będzie ona wyświetlana jako ikona aplikacji podczas przeglądania Portalu firmy.
-13. Wybierz przycisk **OK**.
-14. Wybierz pozycję **Dodaj**.
+10. Wybierz przycisk **OK**.
+11. Wybierz pozycję **Dodaj**.
 
 Utworzona aplikacja będzie wyświetlana na liście aplikacji, z której można ją przypisać do wybranych grup.
 

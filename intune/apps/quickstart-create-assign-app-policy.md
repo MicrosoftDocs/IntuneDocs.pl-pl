@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/24/2019
+ms.date: 11/26/2019
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bcda312274e78d327a3a515eb6c95454e38c96f1
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 1800fa91ed5650fd57a31d24fdb3767a60dc5816
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507129"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563792"
 ---
 # <a name="quickstart-create-and-assign-an-app-protection-policy"></a>Szybki start: Tworzenie i przypisywanie zasad ochrony aplikacji
 
@@ -43,7 +43,7 @@ Zaloguj się w usłudze [Intune](https://aka.ms/intuneportal) jako [administrato
 
 Użyj następujących kroków, aby utworzyć zasady ochrony aplikacji:
 
-1. W usłudze [Intune](https://aka.ms/intuneportal) wybierz pozycję **Aplikacje klienckie** > **Zasady ochrony aplikacji** > **Utwórz zasady**. 
+1. W usłudze [Intune](https://aka.ms/intuneportal) wybierz pozycję **Aplikacje** > **Zasady ochrony aplikacji** > **Utwórz zasady**. 
 2. Wprowadź następujące informacje: 
 
     - **Nazwa**: *Ochrona zawartości w systemie Windows 10*
@@ -67,7 +67,7 @@ Po utworzeniu zasad ochrony aplikacji w usłudze Intune można je przypisać do 
 
 Aby przypisać zasady ochrony aplikacji, wykonaj następujące kroki:
 
-1. W usłudze [Intune](https://aka.ms/intuneportal) wybierz pozycje **Intune** > **Aplikacje klienckie** > **Zasady ochrony aplikacji**. 
+1. W usłudze [Intune](https://aka.ms/intuneportal) wybierz kolejno pozycje **Intune** > **Aplikacje** > **Zasady ochrony aplikacji**. 
 2. Wybierz zasady ochrony aplikacji utworzone wcześniej. W tym przewodniku Szybki start są to zasady **Ochrona zawartości w systemie Windows 10**.
 3. Wybierz pozycję **Przypisania**.
 4. Na karcie **Dołączanie** wybierz pozycję **Wybierz grupy do uwzględnienia**.
@@ -83,7 +83,7 @@ Zasady ochrony aplikacji zostały przypisane.
 
 W tym przewodniku Szybki start zostały utworzone i przypisane zasady ochrony aplikacji. Użytkownicy aplikacji, którzy mają przypisane te zasady, nie będą w stanie wycinać, kopiować ani wklejać żadnej zawartości między przypisaną aplikacją i innymi, niezarządzanymi aplikacjami na urządzeniu. Ten typ ochrony pomoże chronić dane Twojej organizacji. Aby uzyskać więcej informacji na temat zasad ochrony aplikacji w usłudze Intune, zobacz [Co to są zasady ochrony aplikacji?](app-protection-policy.md)
 
-Aby zapoznać się kolejnymi przewodnikami Szybki start dotyczącymi usługi Intune, przejdź do kolejnego przewodnika Szybki start.
+Aby zapoznać się z kolejnymi przewodnikami Szybki start dotyczącymi usługi Intune, przejdź do kolejnego przewodnika Szybki start.
 
 > [!div class="nextstepaction"]
 > [Szybki start: Tworzenie i przypisywanie roli niestandardowej](../fundamentals/create-custom-role.md)

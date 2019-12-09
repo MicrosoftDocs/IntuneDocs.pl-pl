@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/25/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f073c8ad7a8e087a791ee756683011fac6947162
-ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
+ms.openlocfilehash: 40cbb62a620d6e174ab8acb76798ba53080b78cf
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74547964"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563980"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>Dołączanie i wykluczanie przypisań aplikacji w usłudze Microsoft Intune
 
@@ -55,34 +55,34 @@ W związku z tym nie zaleca się przypisywania aplikacji do grup mieszanych.
 
 ## <a name="include-and-exclude-groups-when-assigning-apps"></a>Dołączanie i wykluczanie grup podczas przypisywania aplikacji 
 Aby przypisać aplikację do grup za pomocą dołączania i wykluczania przypisania:
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. W okienku **Intune** wybierz pozycję **Aplikacje klienckie**.
-4. W okienku **Aplikacje klienckie** wybierz pozycję **Aplikacje**. Zostanie wyświetlona lista dodanych aplikacji.
-5. Wybierz aplikację, którą chcesz przypisać. Na pulpicie nawigacyjnym zostaną wyświetlone informacje o aplikacji. 
-6. W sekcji **Zarządzaj** menu wybierz pozycję **Przypisania**. 
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz pozycję **Aplikacje** > **Wszystkie aplikacje**. Zostanie wyświetlona lista dodanych aplikacji.
+3. Wybierz aplikację, którą chcesz przypisać. Na pulpicie nawigacyjnym zostaną wyświetlone informacje o aplikacji. 
+4. W sekcji **Zarządzaj** menu wybierz pozycję **Przypisania**. 
 
     ![Uwzględnianie przypisań aplikacji podczas przypisywania aplikacji](./media/apps-inc-exl-assignments/apps-inc-exl-01.png)
-7. Wybierz pozycję **Dodaj grupę**, aby dodać grupy użytkowników, którzy są przypisani do aplikacji. 
-8. W okienku **Dodawanie grupy** wybierz **typ przypisania** spośród dostępnych typów przypisania.
-9. Jako typ przypisania wybierz pozycję **Dostępne z rejestracją lub bez niej**.
+
+5. Wybierz pozycję **Dodaj grupę**, aby dodać grupy użytkowników, którzy są przypisani do aplikacji. 
+6. W okienku **Dodawanie grupy** wybierz **typ przypisania** spośród dostępnych typów przypisania.
+7. Jako typ przypisania wybierz pozycję **Dostępne z rejestracją lub bez niej**.
 
     ![Przypisania aplikacji usługi Intune — Dodaj grupę](./media/apps-inc-exl-assignments/apps-inc-exl-02.png)
-10. Wybierz pozycję **Uwzględnione grupy**, aby wybrać grupę użytkowników, którym chcesz udostępnić tę aplikację.
+8. Wybierz pozycję **Uwzględnione grupy**, aby wybrać grupę użytkowników, którym chcesz udostępnić tę aplikację.
 
     > [!NOTE]
     > Jeśli w przypadku dodawania grupy jakakolwiek inna grupa została już dołączona do danego typu przypisania, jest ona wstępnie wybierana i nie można jej zmienić dla innych typów dołączania przypisania. Użytej grupy nie można zastosować jako grupy dołączonej.
 
-11. Wybierz pozycję **Tak**, aby udostępnić tę aplikację wszystkim użytkownikom.
+9. Wybierz pozycję **Tak**, aby udostępnić tę aplikację wszystkim użytkownikom.
 
     ![Przypisania aplikacji usługi Intune — Dołącz grupę](./media/apps-inc-exl-assignments/apps-inc-exl-03.png)
-12. Wybierz przycisk **OK**, aby ustawić grupę do dołączenia.
-13. Wybierz pozycję **Wykluczone grupy**, aby wybrać grupy użytkowników, które mają nie mieć dostępu do tej aplikacji. 
-14. Wybierz grupy do wykluczenia. Spowoduje to, że ta aplikacja będzie już niedostępna dla tych grup.
+10. Wybierz przycisk **OK**, aby ustawić grupę do dołączenia.
+11. Wybierz pozycję **Wykluczone grupy**, aby wybrać grupy użytkowników, które mają nie mieć dostępu do tej aplikacji. 
+12. Wybierz grupy do wykluczenia. Spowoduje to, że ta aplikacja będzie już niedostępna dla tych grup.
 
     ![Przypisania aplikacji usługi Intune — Wykluczenie grup](./media/apps-inc-exl-assignments/apps-inc-exl-04.png)
-15. Wybierz pozycję **Wybierz**, aby ukończyć wybór grup.
-16. W okienku **Dodawanie grupy** wybierz przycisk **OK**. Zostanie wyświetlona lista **Przypisania** aplikacji.
-17. Kliknij przycisk **Zapisz**, aby uaktywnić przypisania grup dla aplikacji.
+13. Wybierz pozycję **Wybierz**, aby ukończyć wybór grup.
+14. W okienku **Dodawanie grupy** wybierz przycisk **OK**. Zostanie wyświetlona lista **Przypisania** aplikacji.
+15. Kliknij przycisk **Zapisz**, aby uaktywnić przypisania grup dla aplikacji.
 
 W przypadku tworzenia przypisań grup już przypisane grupy nie są dostępne do modyfikowania. Jeśli chcesz wybrać grupę, która jest obecnie niedostępna, najpierw usuń aplikację z listy przypisanych aplikacji. 
 

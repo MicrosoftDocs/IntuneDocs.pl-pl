@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3724072144a78e1f4f5a17914eff941469e27242
-ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
+ms.openlocfilehash: dc618f2502647ba33a16cff4305b9f4671e05996
+ms.sourcegitcommit: fc4b38660129d615068f34ad4b96b900d73f7b53
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73709605"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74558184"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Wdrażanie urządzeń przyłączonych do hybrydowej usługi Azure AD przy użyciu usługi Intune i rozwiązania Windows Autopilot
 Za pomocą usługi Intune i rozwiązania Windows Autopilot można skonfigurować urządzenia przyłączone do hybrydowej usługi Azure Active Directory (Azure AD). Aby to zrobić, wykonaj kroki opisane w tym artykule.
@@ -42,7 +42,7 @@ Urządzenia, które mają zostać zarejestrowane, muszą spełniać również na
 
 ## <a name="set-up-windows-10-automatic-enrollment"></a>Konfigurowanie automatycznego rejestrowania urządzeń z systemem Windows 10
 
-1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) i w okienku po lewej stronie wybierz pozycję **Azure Active Directory**.
+1. Zaloguj się w Azure i w lewym okienku wybierz pozycję **Azure Active Directory**.
 
    ![Witryna Azure Portal](./media/windows-autopilot-hybrid/auto-enroll-azure-main.png)
 
@@ -107,14 +107,14 @@ Jednostka organizacyjna, której przyznano uprawnienia do tworzenia komputerów,
 
 Łącznik usługi Intune dla usługi Active Directory musi być zainstalowany na komputerze z systemem Windows Server 2016 lub nowszym. Ten komputer musi również mieć dostęp do Internetu i usługi Active Directory. W celu zwiększenia skalowalności i dostępności lub obsługi wielu domen usługi Active Directory można zainstalować wiele łączników w danym środowisku. Zaleca się instalowanie łącznika na serwerze, na którym nie są uruchomione inne łączniki usługi Intune.
 
-1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz kolejno pozycje **Rejestrowanie urządzenia** > **Rejestracja w systemie Windows** > **Łącznik usługi Intune dla usługi Active Directory** > **Dodaj**. 
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz kolejno pozycje **Urządzenia** > **Windows** > **Rejestracja w systemie Windows** > **Łącznik usługi Intune dla usługi Active Directory** > **Dodaj**. 
 2. Postępuj zgodnie z instrukcjami, aby pobrać łącznik.
 3. Otwórz pobrany plik konfiguracji łącznika, *ODJConnectorBootstrapper.exe*, aby zainstalować łącznik.
 4. Na koniec instalacji wybierz pozycję **Konfiguruj**.
 5. Wybierz polecenie **Zaloguj się**.
 6. Wprowadź poświadczenia roli Administrator globalny lub Administrator usługi Intune użytkownika.  
    Konto użytkownika musi mieć przypisaną licencję usługi Intune.
-7. Przejdź do pozycji **Rejestracja urządzenia** > **Rejestracja w systemie Windows** > **Łącznik usługi Intune dla usługi Active Directory** i upewnij się, że połączenie ma stan **Aktywne**.
+7. Przejdź kolejno do pozycji **Urządzenia** > **Windows** > **Rejestracja w systemie Windows** > **Łącznik usługi Intune dla usługi Active Directory**, a następnie upewnij się, że połączenie jest **Aktywne**.
 
 > [!NOTE]
 > Od zalogowania się w łączniku do jego pojawienia się w [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) może upłynąć kilka minut. Łącznik pojawi się tylko wtedy, jeśli pomyślnie skomunikuje się z usługą Intune.
@@ -183,7 +183,7 @@ Po zarejestrowaniu urządzeń rozwiązania Autopilot ich nazwy stają się nazwa
 ## <a name="create-and-assign-an-autopilot-deployment-profile"></a>Tworzenie i przypisywanie profilu wdrażania rozwiązania Autopilot
 Profile wdrażania rozwiązania Autopilot służą do konfigurowania urządzeń z rozwiązaniem Autopilot.
 
-1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja w systemie Windows** > **Profile wdrażania** > **Utwórz profil**.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **Windows** > **Rejestracja w systemie Windows** > **Profile wdrażania** > **Utwórz profil**.
 2. Na stronie **Podstawowe** wypełnij pole **Nazwa** i opcjonalne pole **Opis**.
 3. Jeśli chcesz, aby wszystkie urządzenia w przypisanych grupach dokonywały automatycznej konwersji do rozwiązania Autopilot, ustaw opcję **Konwertuj wszystkie wybrane urządzenia na potrzeby rozwiązania Autopilot** na wartość **Tak**. Wszystkie urządzenia należące do firmy bez rozwiązania Autopilot w przypisanych grupach będą rejestrować się za pomocą usługi wdrażania rozwiązania Autopilot. Urządzenia należące do użytkownika nie zostaną przekonwertowane na rozwiązanie Autopilot. Przetwarzanie rejestracji może potrwać do 48 godzin. Jeśli urządzenie nie zostało zarejestrowane i je zresetowano, rozwiązanie Autopilot przeprowadzi jego rejestrację. Po zarejestrowaniu urządzenia w ten sposób wyłączenie tej opcji lub usunięcie przypisania profilu nie spowoduje usunięcia urządzenia z usługi wdrażania rozwiązania Autopilot. Zamiast tego należy [bezpośrednio usunąć urządzenie](enrollment-autopilot.md#delete-autopilot-devices).
 4. Wybierz pozycję **Dalej**.
@@ -200,7 +200,7 @@ Zmiana stanu urządzenia z wartości *Nieprzypisane* do wartości *Przypisywanie
 
 ## <a name="optional-turn-on-the-enrollment-status-page"></a>(Opcjonalnie) Włączanie strony stanu rejestracji
 
-1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja w systemie Windows** > **Strona stanu rejestracji**.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **Windows** > **Rejestracja w systemie Windows** > **Strona ze stanem rejestracji**.
 1. W okienku **Strona ze stanem rejestracji** wybierz pozycje **Domyślne** > **Ustawienia**.
 1. W polu **Pokaż postęp instalacji aplikacji i profilu** wybierz pozycję **Tak**.
 1. Zgodnie z potrzebami skonfiguruj inne opcje.

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/06/2019
+ms.date: 11/26/2019
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b9dda9a1aa1e81b46533c1c15d996807984193d
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: e9c3e775773ab08721cb3a65858f3d8c8402104f
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73712935"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563739"
 ---
 # <a name="how-to-validate-your-app-protection-policy-setup-in-microsoft-intune"></a>Sposób sprawdzania poprawności ustawień zasad ochrony aplikacji w usłudze Microsoft Intune
 
@@ -43,8 +43,8 @@ Jeśli wyniki testów pokazują, że zachowanie zasad ochrony aplikacji nie funk
 - Czy stan każdej aplikacji użytkowników objętej ochroną aplikacji jest zgodny z oczekiwaniami? Możliwe stany aplikacji to **Zaewidencjonowano** i **Nie zaewidencjonowano**.
 
 ### <a name="user-app-protection-status"></a>Stan ochrony aplikacji użytkownika
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Wybierz kolejno pozycje **Aplikacje klienckie** >  **Stan ochrony aplikacji**, a następnie wybierz kafelek **Przypisani użytkownicy**. 
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+3. Wybierz kolejno pozycje **Aplikacje** >  **Stan ochrony aplikacji**, a następnie wybierz kafelek **Przypisani użytkownicy**. 
 4. Na stronie **Zgłaszanie aplikacji** wybierz pozycję **Wybierz użytkownika**, aby wyświetlić listę użytkowników i grup. 
 5. Na liście wyszukaj i wybierz użytkownika, a następnie wybierz pozycję **Wybierz użytkownika**. W górnej części strony **Zgłaszanie aplikacji** widoczna jest informacja, czy użytkownik ma licencję na ochronę aplikacji. Możesz również zobaczyć, czy użytkownik ma licencję usługi O365, i sprawdzić stan aplikacji dla wszystkich urządzeń użytkownika.
 

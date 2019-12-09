@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4ff9126fec182d1e0d2f3eb75297ede8a632e2e
-ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
+ms.openlocfilehash: 83f0d980bc4fa1bfd0b48f87839fd6efa130aa70
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74390724"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563877"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-dedicated-devices"></a>Konfigurowanie rejestracji w usłudze Intune dla dedykowanych urządzeń z systemem Android Enterprise
 
@@ -59,7 +59,7 @@ Aby skonfigurować zarządzanie dedykowanymi urządzeniami z systemem Android En
 
 Aby zarejestrować urządzenia dedykowane, należy utworzyć profil rejestracji. Po utworzeniu profilu udostępnia on token rejestracji (losowy ciąg) i kod QR. W zależności od systemu operacyjnego Android i wersji urządzenia możesz użyć tokenu lub kodu QR, aby [zarejestrować urządzenie dedykowane](#enroll-the-dedicated-devices).
 
-1. Zaloguj się w [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) i wybierz pozycje **Rejestrowanie urządzenia** > **Rejestracja systemu Android** > **Dedykowane urządzenia należące do firmy**.
+1. Zaloguj się w [Centrum administracyjnym usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) i wybierz pozycję **Urządzenia** > **Android** > **Rejestracja dla systemu Android** > **Dedykowane urządzenia należące do firmy**.
 2. Wybierz pozycję **Utwórz** i wypełnij wymagane pola.
     - **Nazwa**: wpisz nazwę, która będzie używana podczas przypisywania profilu do dynamicznej grupy urządzeń.
     - **Data wygaśnięcia tokenu**: Data, kiedy wygasa token. Firma Google wymusza maksymalnie 90 dni.
@@ -92,7 +92,7 @@ Aplikacje i zasady można zastosować do przypisanych albo dynamicznych grup urz
 
 Zamiana lub odwołanie tokenu/kodu QR nie będzie miała żadnego wpływu na urządzenia, które są już zarejestrowane.
 
-1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) i wybierz pozycje **Rejestrowanie urządzenia** > **Rejestracja systemu Android** > **Dedykowane urządzenia należące do firmy**.
+1. Zaloguj się w [Centrum administracyjnym usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) i wybierz pozycję **Urządzenia** > **Android** > **Rejestracja dla systemu Android** > **Dedykowane urządzenia należące do firmy**.
 2. Wybierz profil, z którym chcesz pracować.
 3. Wybierz **Token**.
 4. Aby zamienić token, wybierz opcję **Zamień token**.

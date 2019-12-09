@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 01866bba0ef47ac807b24a66f773e212c76ff7df
-ms.sourcegitcommit: 1cf063c98e1caae00a6e6fab821cc3254562bca9
+ms.openlocfilehash: a7c3398f28d7c396c873dd29f3e3fdd719c1a7c6
+ms.sourcegitcommit: f26039d674eb4d61ab68264dd1a10b2e5e1d842c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74291103"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74691769"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Zarządzanie aktualizacjami oprogramowania systemu Windows 10 w usłudze Intune
 
@@ -214,9 +214,7 @@ Gdy urządzenie otrzyma zasady aktualizacji funkcji systemu Windows 10:
   - Opcja **Okres odroczenia aktualizacji funkcji (dni)** musi być ustawiona na **0**.
   - Aktualizacje funkcji dla pierścienia aktualizacji muszą być *uruchomione*. Nie mogą być wstrzymane.
 
-- Zasady *aktualizacji funkcji systemu Windows 10* nie są obsługiwane w przypadku używania rozwiązania Windows Autopilot. Usługa Intune nie wdroży zasad na:
-  - Urządzeniach aprowizowanych przez rozwiązanie Windows Autopilot;
-  - Urządzeniach, które uprzednio aprowizowano przez rozwiązanie Windows Autopilot.
+- Zasady aktualizacji funkcji systemu Windows 10 nie mogą być stosowane w trybie OOBE (out-of-box experience). Zostaną one zastosowane podczas pierwszego skanowania funkcji Windows Update po ukończeniu aprowizacji urządzenia (zazwyczaj trwa to jeden dzień). Ponadto urządzenia aprowizowane przy użyciu rozwiązania AutoPilot nie otrzymają zasad.
 
   To ograniczenie jest badane w celu sprawdzenia, czy może być obsługiwane w przyszłości.
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ee3ecd64254c0e212ffc86155d677bf18ba647a
-ms.sourcegitcommit: f6b82c62af81a2643a1aaec774afa42d02eef352
+ms.openlocfilehash: a104b4d41a364c552a8ebac73ff3341af71d6d21
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73566178"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564161"
 ---
 # <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem iOS
 
@@ -51,8 +51,7 @@ Po wybraniu dołączonych grup dla zasad konfiguracji aplikacji możesz też wyb
 ## <a name="create-an-app-configuration-policy"></a>Tworzenie zasad konfiguracji aplikacji
 
 1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Wybierz obciążenie **Aplikacje klienckie**.
-4. Wybierz pozycję **Zasady konfiguracji aplikacji** w grupie **Zarządzaj**, a następnie wybierz przycisk **Dodaj**.
+3. Wybierz kolejno pozycje **Aplikacje** > **Zasady konfiguracji aplikacji** > **Dodaj**.
 5. Ustaw następujące szczegóły:
     - **Nazwa** — nazwa profilu, która będzie wyświetlana w witrynie Azure Portal.
     - **Opis** — opis profilu, który będzie wyświetlany w witrynie Azure Portal.
@@ -74,7 +73,7 @@ Po wybraniu dołączonych grup dla zasad konfiguracji aplikacji możesz też wyb
 13. Wybierz kartę **Wyklucz**. 
 14. Kliknij pozycję **Wybierz grupy do wykluczenia**, aby wyświetlić powiązane okienko.
 
-    ![Zrzut ekranu bloku Przypisanie zasad — Wybierz grupy do wykluczenia](./media/app-configuration-policies-use-ios/app-config-policy03.png)
+    ![Zrzut ekranu bloku Przypisanie zasad — Wybierz okienko Grupy do wykluczenia](./media/app-configuration-policies-use-ios/app-config-policy03.png)
 15. Wybierz grupy, które chcesz wykluczyć, a następnie kliknij pozycję **Wybierz**.
 
     >[!NOTE]
@@ -181,10 +180,9 @@ Ponadto usługa Intune obsługuje następujące typy tokenów na liście właśc
 
 Rejestracje programu DEP (Device Enrollment Program firmy Apple) nie są zgodne z wersją aplikacji Portal firmy ze sklepu z aplikacjami. Można jednak skonfigurować aplikację Portal firmy do obsługi urządzeń DEP z systemem iOS, wykonując następujące czynności.
 
-1. W usłudze Intune w witrynie Azure Portal:
-    - Jeśli to konieczne dodaj aplikację Intune — Portal firmy, przechodząc do pozycji **Intune** > **Aplikacje klienckie** > **Aplikacje** > **Dodaj**.
-    - Przejdź do pozycji **Aplikacje klienckie** > **Zasady konfiguracji aplikacji**, aby utworzyć zasady konfiguracji aplikacji dla aplikacji Portal firmy.
-2. Utwórz zasady konfiguracji aplikacji za pomocą pliku XML poniżej. Więcej informacji na temat tworzenia zasad konfiguracji aplikacji oraz wprowadzania danych XML można znaleźć w temacie [Add app configuration policies for managed iOS devices](app-configuration-policies-use-ios.md) (Dodawanie zasad konfiguracji aplikacji dla urządzeń zarządzanych z systemem iOS) lub w przypadku hybrydowej usługi MDM w temacie [Apply settings to iOS apps with app configuration policies in System Center Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/configure-ios-apps-with-app-configuration-policies) (Wprowadzanie ustawień w aplikacjach iOS z zastosowaniem zasad konfiguracji aplikacji w programie System Center Configuration Manager).
+1. W usłudze Intune, jeśli to konieczne, dodaj aplikację Intune — Portal firmy, przechodząc do pozycji **Intune** > **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**.
+2. Przejdź do pozycji **Aplikacje** > **Zasady konfiguracji aplikacji**, aby utworzyć zasady konfiguracji aplikacji dla aplikacji Portal firmy.
+3. Utwórz zasady konfiguracji aplikacji za pomocą pliku XML poniżej. Więcej informacji na temat tworzenia zasad konfiguracji aplikacji oraz wprowadzania danych XML można znaleźć w temacie [Add app configuration policies for managed iOS devices](app-configuration-policies-use-ios.md) (Dodawanie zasad konfiguracji aplikacji dla urządzeń zarządzanych z systemem iOS) lub w przypadku hybrydowej usługi MDM w temacie [Apply settings to iOS apps with app configuration policies in System Center Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/configure-ios-apps-with-app-configuration-policies) (Wprowadzanie ustawień w aplikacjach iOS z zastosowaniem zasad konfiguracji aplikacji w programie System Center Configuration Manager).
 
     ``` xml
     <dict>
@@ -202,7 +200,7 @@ Rejestracje programu DEP (Device Enrollment Program firmy Apple) nie są zgodne 
 4. Poinformuj użytkowników końcowych, że powinni zalogować się w aplikacji Portal firmy po jej automatycznym zainstalowaniu.
 
 ## <a name="monitor-ios--app-configuration-status-per-device"></a>Monitorowanie stanu konfiguracji aplikacji systemu iOS na poszczególnych urządzeniach 
-Po przypisaniu zasad konfiguracji można monitorować stan konfiguracji aplikacji systemu iOS dla każdego zarządzanego urządzenia. W usłudze **Microsoft Intune** w witrynie Azure Portal wybierz pozycję **Urządzenia** > **Wszystkie urządzenia**. Z listy zarządzanych urządzeń wybierz konkretne urządzenie, aby wyświetlić blok dla tego urządzenia. W bloku urządzenia wybierz pozycję **Konfiguracja aplikacji**.  
+Po przypisaniu zasad konfiguracji można monitorować stan konfiguracji aplikacji systemu iOS dla każdego zarządzanego urządzenia. W usłudze **Microsoft Intune** w witrynie Azure Portal wybierz pozycję **Urządzenia** > **Wszystkie urządzenia**. Z listy zarządzanych urządzeń wybierz konkretne urządzenie, aby wyświetlić okienko dla tego urządzenia. W okienku urządzenia wybierz pozycję **Konfiguracja aplikacji**.  
 
 ## <a name="additional-information"></a>Dodatkowe informacje
 

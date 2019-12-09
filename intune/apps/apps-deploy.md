@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/21/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1e8e37a784ea39fbf1154321933673ed02eee33
-ms.sourcegitcommit: 16a9109b4028589c17695d41271ca4fee8b1d697
+ms.openlocfilehash: e990cd94c0f8622d07e59b4130566a1dc2953a1c
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74540745"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563992"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Przypisywanie aplikacji do grup przy użyciu usługi Microsoft Intune
 
@@ -55,13 +55,12 @@ Poniższa tabela zawiera listę różnych opcji przypisywania aplikacji do użyt
 
 ## <a name="assign-an-app"></a>Przypisywanie aplikacji
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. W okienku **Intune** wybierz pozycję **Aplikacje klienckie**.
-4. W sekcji **Zarządzaj** menu wybierz pozycję **Aplikacje**.
-5. W okienku **Aplikacje** wybierz aplikację, którą chcesz przypisać.
-6. W sekcji **Zarządzaj** menu wybierz pozycję **Przypisania**.
-7. Wybierz pozycję **Dodaj grupę**, aby otworzyć okienko **Dodawanie grupy** powiązane z aplikacją.
-8. Dla określonej aplikacji wybierz **typ przypisania**:
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz kolejno pozycje **Aplikacje** > **Wszystkie aplikacje**.
+3. W okienku **Aplikacje** wybierz aplikację, którą chcesz przypisać.
+4. W sekcji **Zarządzaj** menu wybierz pozycję **Przypisania**.
+5. Wybierz pozycję **Dodaj grupę**, aby otworzyć okienko **Dodawanie grupy** powiązane z aplikacją.
+6. Dla określonej aplikacji wybierz **typ przypisania**:
    - **Dostępne dla zarejestrowanych urządzeń**: przypisz aplikację do grupy użytkowników, którzy mogą zainstalować aplikację z witryny internetowej lub aplikacji Portal firmy.
    - **Dostępne z rejestracją lub bez**: przypisz tę aplikację do grup użytkowników, których urządzenia nie są zarejestrowane w usłudze Intune. Użytkownicy muszą mieć przypisaną licencję usługi Intune, zobacz [Licencje usługi Intune](../fundamentals/licenses.md).
    - **Wymagane**: aplikacja jest instalowana na urządzeniach w wybranych grupach. Niektóre platformy mogą wyświetlać dodatkowe monity wymagające potwierdzenia przez użytkownika końcowego przed rozpoczęciem instalacji aplikacji.
@@ -76,19 +75,19 @@ Poniższa tabela zawiera listę różnych opcji przypisywania aplikacji do użyt
      >
      > **Dostępne dla zarejestrowanych urządzeń**: Aplikacja jest wyświetlana jako dostępna tylko wtedy, gdy użytkownik zalogowany w Portalu firmy jest podstawowym użytkownikiem, który zarejestrował urządzenie, a aplikacja ma zastosowanie do urządzenia.
 
-9. Aby wybrać grupy użytkowników, na które ma wpływ to przypisanie aplikacji, wybierz pozycję **Uwzględnione grupy**.
-10. Po wybraniu co najmniej jednej grupy do dołączenia wybierz pozycję **Wybierz**.
-11. W okienku **Przypisywanie** wybierz przycisk **OK**, aby ukończyć wybieranie uwzględnionych grup.
-12. Jeśli chcesz wykluczyć wszystkie grupy użytkowników z objęcia wpływem tego przypisania aplikacji, wybierz pozycję **Wykluczenie grup**.
-13. Jeśli chcesz wykluczyć wszystkie grupy, w obszarze **Wybieranie grup** wybierz pozycję **Wybierz**.
-14. W okienku **Dodawanie grupy** wybierz przycisk **OK**.
-15. W okienku **Przypisania** aplikacji wybierz pozycję **Zapisz**.
+7. Aby wybrać grupy użytkowników, na które ma wpływ to przypisanie aplikacji, wybierz pozycję **Uwzględnione grupy**.
+8. Po wybraniu co najmniej jednej grupy do dołączenia wybierz pozycję **Wybierz**.
+9. W okienku **Przypisywanie** wybierz przycisk **OK**, aby ukończyć wybieranie uwzględnionych grup.
+10. Jeśli chcesz wykluczyć wszystkie grupy użytkowników z objęcia wpływem tego przypisania aplikacji, wybierz pozycję **Wykluczenie grup**.
+11. Jeśli chcesz wykluczyć wszystkie grupy, w obszarze **Wybieranie grup** wybierz pozycję **Wybierz**.
+12. W okienku **Dodawanie grupy** wybierz przycisk **OK**.
+13. W okienku **Przypisania** aplikacji wybierz pozycję **Zapisz**.
 
 Aplikacja jest teraz przypisana do wybranych grup. Aby uzyskać więcej informacji o dołączaniu i wykluczaniu przypisań aplikacji, zobacz [Dołączanie i wykluczanie przypisań aplikacji](apps-inc-exl-assignments.md).
 
 ## <a name="how-conflicts-between-app-intents-are-resolved"></a>Jak są rozwiązywane konflikty intencji aplikacji
 
-Pojedyncza grupa nie może być miejscem docelowym wielu intencji przypisań aplikacji, jednak jeśli użytkownik urządzenia jest członkiem wielu grup, którym przypisano różne intencje, spowoduje to konflikt. Tworzenie konfliktów przypisań dla aplikacji nie jest zalecane.
+Pojedyncza grupa nie może być miejscem docelowym wielu intencji przypisań aplikacji. Jeśli użytkownik urządzenia jest członkiem wielu grup, którym przypisano różne intencje, spowoduje to konflikt. Tworzenie konfliktów przypisań dla aplikacji nie jest zalecane.
 W poniższej tabeli opisano wynikowe intencje w przypadku konfliktu:
 
 | Intencja grupy 1 | Intencja grupy 2 | Intencja wynikowa |

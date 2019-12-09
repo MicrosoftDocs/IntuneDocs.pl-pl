@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/06/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04bc1fac8d3362a173c4777cdf5228fed6b6349d
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: 3c1627ba89ad50b2053187a20fee6cbc7a9064e8
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73712535"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74562499"
 ---
 # <a name="how-to-manage-volume-purchased-apps-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Jak zarządzać aplikacjami zakupionymi zbiorczo w sklepie Microsoft Store dla Firm za pomocą usługi Microsoft Intune
 
@@ -51,7 +51,7 @@ Przed rozpoczęciem synchronizowania i przypisywania aplikacji ze Sklepu Microso
 - Aby móc używać tej funkcji, urządzenia muszą być przyłączone do usługi Active Directory Domain Services lub dołączone w miejscu pracy.
 - Zarejestrowane urządzenia muszą używać systemu Windows 10 w wersji 1511 lub nowszej.
 
-Ponadto powiązane zestawy i aplikacje licencjonowane w trybie offline synchronizowane ze sklepem Microsoft Store dla Firm będą teraz konsolidowane w jeden wpis aplikacji w interfejsie użytkownika. Wszelkie szczegóły wdrożenia z indywidualnych pakietów zostaną poddane migracji do pojedynczego wpisu. Aby wyświetlić powiązane zestawy w witrynie Azure Portal, wybierz pozycję **Licencje aplikacji** w bloku **Aplikacje klienckie**.
+Ponadto powiązane zestawy i aplikacje licencjonowane w trybie offline synchronizowane ze sklepem Microsoft Store dla Firm będą teraz konsolidowane w jeden wpis aplikacji w interfejsie użytkownika. Wszelkie szczegóły wdrożenia z indywidualnych pakietów zostaną poddane migracji do pojedynczego wpisu. Aby wyświetlić powiązane zestawy w witrynie Azure Portal, wybierz pozycję **Licencje aplikacji** w okienku **Aplikacje**.
 
 ## <a name="associate-your-microsoft-store-for-business-account-with-intune"></a>Kojarzenie konta w Sklepie Microsoft dla Firm z usługą Intune
 Przed włączeniem synchronizacji w konsoli usługi Intune należy skonfigurować konto w sklepie, aby używało usługi Intune jako narzędzia do zarządzania:
@@ -66,17 +66,16 @@ Teraz możesz przejść do konfigurowania synchronizacji w konsoli Intune.
 
 ## <a name="configure-synchronization"></a>Konfigurowanie synchronizacji
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. W okienku **Intune** wybierz pozycję **Aplikacje klienckie**.
-1. W okienku **Aplikacje klienckie** wybierz kolejno pozycje **Konfiguracja** > **Microsoft Store dla Firm**.
-2. Kliknij przycisk **Włącz**.
-3. Jeśli jeszcze tego nie zrobiono, kliknij link, aby zarejestrować się w Sklepie Microsoft dla Firm i skojarzyć swoje konto zgodnie z wcześniejszym opisem.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz pozycję **Administracja dzierżawą** > **Łączniki i tokeny** > **Sklep Microsoft dla Firm**.
+3. Kliknij przycisk **Włącz**.
+4. Jeśli jeszcze tego nie zrobiono, kliknij link, aby zarejestrować się w Sklepie Microsoft dla Firm i skojarzyć swoje konto zgodnie z wcześniejszym opisem.
 5. Z listy rozwijanej **Język** wybierz język, w którym aplikacje ze sklepu Microsoft Store dla Firm są wyświetlane w witrynie Azure Portal. Niezależnie od języka, w którym są wyświetlane, aplikacje są instalowane w języku użytkownika końcowego, o ile będzie dostępny.
 6. Kliknij przycisk **Synchronizuj**, aby pobrać aplikacje zakupione w Sklepie Microsoft do usługi Intune.
 
 ## <a name="synchronize-apps"></a>Synchronizacja aplikacji
 
-1. W obciążeniu **Aplikacje klienckie** wybierz kolejno pozycje **Konfiguracja** > **Sklep Microsoft dla Firm**.
+1. Wybierz pozycję **Administracja dzierżawą** > **Łączniki i tokeny** > **Sklep Microsoft dla Firm**.
 2. Kliknij przycisk **Synchronizuj**, aby pobrać aplikacje zakupione w Sklepie Microsoft do usługi Intune.
 
 > [!NOTE]

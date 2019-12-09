@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/06/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ff9a37a1dd815b6ec9d7522604796310e7f0b5ce
-ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
+ms.openlocfilehash: eed0b8a74e69bc1552ae3e2badf485364ba37e94
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73984104"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563821"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Jak w usłudze Microsoft Intune zarządzać aplikacjami dla systemów iOS i macOS, które zostały zakupione w ramach programu zakupów zbiorczych firmy Apple
 
@@ -82,8 +82,8 @@ Przed rozpoczęciem należy uzyskać token VPP od firmy Apple i przekazać go do
 
 ## <a name="to-get-and-upload-an-apple-vpp-token"></a>Aby uzyskać i przekazać token usługi VPP firmy Apple
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. W okienku **Intune** wybierz pozycję **Aplikacje klienckie** > **Tokeny programu VPP** w obszarze **Konfiguracja**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+3. Wybierz kolejno pozycje **Administracja dzierżawą** > **Łączniki i tokeny** > **Tokeny VPP firmy Apple**.
 4. W okienku z listą tokenów programu VPP wybierz pozycję **Utwórz**.
 5. W okienku **Utwórz token programu VPP** określ następujące informacje:
     - **Plik tokenu programu VPP** — jeśli nie jesteś jeszcze zarejestrowanym członkiem programu Volume Purchase Program for Business lub Volume Purchase Program for Education, zarejestruj się. Po zarejestrowaniu się pobierz token VPP firmy Apple dla swojego konta i wybierz go tutaj.
@@ -110,7 +110,7 @@ Dane przechowywane przez firmę Apple można w dowolnym momencie zsynchronizowa�
 
 ## <a name="to-assign-a-volume-purchased-app"></a>Wdrażanie aplikacji nabytej w ramach programu zakupów zbiorczych
 
-1. W okienku **Intune** wybierz pozycję **Aplikacje klienckie** > **Aplikacje** w obszarze **Zarządzanie**.
+1. Wybierz kolejno pozycje **Aplikacje** > **Wszystkie aplikacje**.
 2. W okienku z listą aplikacji wybierz aplikację, którą chcesz przypisać, a następnie wybierz pozycję **Przypisania**.
 3. W okienku ***Nazwa aplikacji*** - **Przypisania** wybierz pozycję **Dodaj grupy**, a następnie w okienku **Dodawanie grup** wybierz pozycję **Typ przypisania** i wybierz grupy użytkowników lub urządzeń usługi Azure AD, do których chcesz przypisać aplikację.
 5. Dla każdej wybranej grupy wybierz następujące ustawienia:
@@ -176,8 +176,8 @@ Obecnie nie można usunąć aplikacji programu VPP systemu iOS z usługi Microso
 
 Dostęp do tokenów i aplikacji VPP firmy Apple można kontrolować niezależnie przy użyciu uprawnień przypisanych do niestandardowych ról administratorów w usłudze Intune.
 
-* Aby umożliwić roli niestandardowej usługi Intune zarządzanie tokenami programu VPP firmy Apple, w obszarze **Aplikacje klienckie** > **Tokeny VPP firmy Apple** przypisz uprawnienia dla elementu **Aplikacje zarządzane**.
-* Aby umożliwić roli niestandardowej usługi Intune zarządzanie aplikacjami kupionymi przy użyciu tokenów VPP systemu iOS, w obszarze **Aplikacje klienckie** > **Aplikacje** przypisz uprawnienia dla elementu **Aplikacje mobilne**. 
+* Aby umożliwić roli niestandardowej usługi Intune zarządzanie tokenami programu VPP firmy Apple, w obszarze **Aplikacje** > **Tokeny VPP firmy Apple** przypisz uprawnienia dla elementu **Aplikacje zarządzane**.
+* Aby umożliwić roli niestandardowej usługi Intune zarządzanie aplikacjami kupionymi przy użyciu tokenów VPP systemu iOS, w obszarze **Aplikacje** > **Wszystkie aplikacje** przypisz uprawnienia dla elementu **Aplikacje mobilne**. 
 
 ## <a name="additional-information"></a>Dodatkowe informacje
 
@@ -196,7 +196,7 @@ Licencja powinna zostać zaktualizowana w ciągu kilku godzin po zainstalowaniu 
 Tak. Administrator usługi Intune może nadsubskrybować aplikację. Może to mieć na przykład miejsce, jeśli administrator zakupi 100 licencji dla aplikacji XYZ, a następnie przeznaczy aplikację dla grupy zawierającej 500 elementów członkowskich. Licencja zostanie przypisana do pierwszych 100 elementów członkowskich (użytkowników lub urządzeń), a dla pozostałych przypisanie licencji zakończy się niepowodzeniem.
 
 ### <a name="how-frequently-does-intune-sync-vpp-tokens-with-apple"></a>Jak często usługa Intune synchronizuje tokeny VPP z firmą Apple?
-Usługa Intune synchronizuje tokeny VPP z firmą Apple dwa razy dziennie. Administrator usługi Intune może zainicjować synchronizację ręczną w obszarze **Aplikacje klienckie** > **Tokeny VPP firmy Aple**.
+Usługa Intune synchronizuje tokeny VPP z firmą Apple dwa razy dziennie. Administrator usługi Intune może zainicjować synchronizację ręczną w obszarze **Aplikacje** > **Tokeny VPP firmy Apple**.
 
 ## <a name="next-steps"></a>Następne kroki
 

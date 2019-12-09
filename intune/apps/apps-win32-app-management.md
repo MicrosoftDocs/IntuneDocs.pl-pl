@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/28/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf860056c3918f7ae90e6b9b850a98a37dcfd56e
-ms.sourcegitcommit: c38a856725993a4473ada75e669a57f75ab376f8
+ms.openlocfilehash: e8b3ee799374f4b3777f771d4bd6e186ddaeb55c
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73143212"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564023"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Autonomiczna usługa Intune — zarządzanie aplikacjami Win32
 
@@ -101,17 +101,17 @@ W poniższych krokach przedstawiono wskazówki ułatwiające dodanie aplikacji s
 
 ### <a name="step-1-specify-the-software-setup-file"></a>Krok 1. Określanie pliku konfiguracji oprogramowania
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. W okienku **Intune** wybierz pozycję **Aplikacje klienckie** > **Aplikacje** > **Dodaj**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+3. Wybierz kolejno pozycje **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**.
 4. W okienku aplikacji **Dodawanie** wybierz z listy rozwijanej pozycję **Aplikacja systemu Windows (Win32)** .
 
-    ![Zrzut ekranu przedstawiający blok dodawania aplikacji — pole listy rozwijanej dodawania typu](./media/apps-win32-app-management/apps-win32-app-01.png)
+    ![Zrzut ekranu przedstawiający okienko dodawania aplikacji — pole listy rozwijanej dodawania typu](./media/apps-win32-app-management/apps-win32-app-01.png)
 
 ### <a name="step-2-upload-the-app-package-file"></a>Krok 2: Przekazywanie pliku pakietu aplikacji
 
 1. W okienku **Dodawanie aplikacji** wybierz pozycję **Dodaj plik pakietu**, aby wybrać plik. Zostanie wyświetlone okienko Plik pakietu aplikacji.
 
-    ![Zrzut ekranu przedstawiający blok pliku pakietu aplikacji](./media/apps-win32-app-management/apps-win32-app-02.png)
+    ![Zrzut ekranu przedstawiający okienko pliku pakietu aplikacji](./media/apps-win32-app-management/apps-win32-app-02.png)
 
 2. W okienku **Plik pakietu aplikacji** wybierz przycisk przeglądania. Następnie wybierz plik instalacyjny systemu Windows z rozszerzeniem *intunewin*.
 
@@ -180,7 +180,7 @@ W poniższych krokach przedstawiono wskazówki ułatwiające dodanie aplikacji s
     - **Wymagana minimalna liczba procesorów logicznych**: opcjonalnie określ minimalną liczbę procesorów logicznych wymaganą do zainstalowania aplikacji.
     - **Wymagana minimalna szybkość procesora (MHz)** : opcjonalnie określ minimalną szybkość procesora wymaganą do zainstalowania aplikacji.
 
-3. Kliknij pozycję **Dodaj**, aby wyświetlić blok **Dodawanie reguły wymagania** i skonfigurować dodatkowe reguły wymagań. Wybierz pozycję **Typ wymagania**, aby wybrać typ reguły, który będzie używany do określenia sposobu weryfikacji wymagania. Reguły wymagań mogą opierać się na informacji o systemie plików, wartościach rejestru lub skryptach programu PowerShell. 
+3. Kliknij pozycję **Dodaj**, aby wyświetlić okienko **Dodawanie reguły wymagania** i skonfigurować dodatkowe reguły wymagań. Wybierz pozycję **Typ wymagania**, aby wybrać typ reguły, który będzie używany do określenia sposobu weryfikacji wymagania. Reguły wymagań mogą opierać się na informacji o systemie plików, wartościach rejestru lub skryptach programu PowerShell. 
     - **Plik**: Po wybraniu **pliku** jako **typu wymagania** reguła wymagania musi wykryć plik lub folder, datę, wersję lub rozmiar. 
         - **Ścieżka** — pełna ścieżka folderu zawierającego plik lub folder do wykrycia.
         - **Plik lub folder** — plik lub folder do wykrycia.
@@ -297,7 +297,7 @@ W tym momencie wykonywanie kroków dodawania aplikacji Win32 do usługi Intune z
 
 ## <a name="app-dependencies"></a>Zależności aplikacji
 
-Zależności aplikacji to aplikacje, które należy zainstalować przed zainstalowaniem aplikacji Win32. Możesz wymagać, aby inne aplikacje były instalowane jako zależności. W szczególności na urządzeniu muszą zostać zainstalowane aplikacje zależne przed zainstalowaniem aplikacji Win32. Maksymalnie można użyć 100 zależności, co obejmuje zależności wszystkich dołączonych zależności, a także samą aplikację. Zależności aplikacji Win32 możesz dodać tylko po dodaniu i przekazaniu aplikacji Win32 do usługi Intune. Po dodaniu aplikacji Win32 zostanie wyświetlona opcja **Zależności** w bloku aplikacji Win32. 
+Zależności aplikacji to aplikacje, które należy zainstalować przed zainstalowaniem aplikacji Win32. Możesz wymagać, aby inne aplikacje były instalowane jako zależności. W szczególności na urządzeniu muszą zostać zainstalowane aplikacje zależne przed zainstalowaniem aplikacji Win32. Maksymalnie można użyć 100 zależności, co obejmuje zależności wszystkich dołączonych zależności, a także samą aplikację. Zależności aplikacji Win32 możesz dodać tylko po dodaniu i przekazaniu aplikacji Win32 do usługi Intune. Po dodaniu aplikacji Win32 zostanie wyświetlona opcja **Zależności** w okienku aplikacji Win32. 
 
 Każda zależność aplikacji Win32 musi być również aplikacją systemu Win32. Zależność od innych typów aplikacji, takich jak pojedyncze aplikacje LOB MSI lub aplikacje ze sklepu, nie jest obsługiwana.
 
@@ -307,7 +307,7 @@ Możesz wybrać, czy poszczególne aplikacje zależne mają być instalowane aut
 
 Aby dodać zależność aplikacji do aplikacji Win32, wykonaj następujące kroki:
 
-1. W usłudze Intune wybierz pozycję **Aplikacje klienckie** > **Aplikacje**, aby wyświetlić listę dodanych aplikacji klienckich. 
+1. W usłudze Intune wybierz pozycje **Aplikacje** > **Wszystkie aplikacje**, aby wyświetlić listę dodanych aplikacji klienckich. 
 2. Wybierz dodaną aplikację **Aplikacja systemu Windows (Win32)** . 
 3. Wybierz pozycję **Zależności**, aby dodać aplikacje zależne, które należy zainstalować przed zainstalowaniem aplikacji Win32. 
 4. Kliknij pozycję **Dodaj**, aby dodać zależność aplikacji.
@@ -343,12 +343,12 @@ Dla aplikacji Win32 można skonfigurować czas rozpoczęcia i termin ostateczny.
 
 Ustaw dostępność aplikacji na podstawie daty i godziny dla wymaganej aplikacji, wykonując następujące czynności:
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. W bloku **Intune** wybierz pozycję **Aplikacje klienckie** > **Aplikacje**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz kolejno pozycje **Aplikacje** > **Wszystkie aplikacje**.
 3. Wybierz istniejącą **aplikację systemu Windows (Win32)** z listy. 
-4. W bloku aplikacji wybierz pozycję **Przypisania** > **Dodaj grupę**. 
+4. W okienku aplikacji wybierz pozycję **Przypisania** > **Dodaj grupę**. 
 5. Ustaw pozycję **Typ przypisania** na wartość **Wymagane**. Należy pamiętać, że dostępność aplikacji można ustawić na podstawie typu przypisania. Ustawienie **Typ przypisania** może mieć wartość **Wymagane**, **Dostępne dla zarejestrowanych urządzeń** lub **Odinstaluj**.
-6. Wybierz pozycję **Objęte grupy**, aby określić, do której grupy użytkowników zostanie przypisana aplikacja. Zostanie wyświetlony blok **Przypisz**.
+6. Wybierz pozycję **Objęte grupy**, aby określić, do której grupy użytkowników zostanie przypisana aplikacja. Zostanie wyświetlone okienko **Przypisz**.
 7. Dla opcji **Wymagaj tej aplikacji dla wszystkich użytkowników** ustaw wartość **Tak**.
 
     > [!NOTE]
@@ -358,18 +358,18 @@ Ustaw dostępność aplikacji na podstawie daty i godziny dla wymaganej aplikacj
     > - **Odinstalowywanie**: Możesz wybrać opcję ***odinstalowania tej aplikacji dla wszystkich użytkowników** i/lub **odinstalowania tej aplikacji dla wszystkich urządzeń**.
 
 8. Aby edytować opcję **Środowisko użytkownika końcowego** wybierz pozycję **Edytuj**.
-9. W bloku **Edycja przypisania** dla ustawienia **Powiadomienia użytkownika końcowego** ustaw wartość **Pokaż wszystkie wyskakujące powiadomienia**. Zwróć uwagę, że dla opcji **Powiadomienia użytkownika końcowego** możesz ustawić wartość **Pokaż wszystkie wyskakujące powiadomienia**, **Pokaż wyskakujące powiadomienia dotyczące ponownego uruchomienia komputera** lub **Ukryj wszystkie wyskakujące powiadomienia**.
+9. W okienku **Edycja przypisania** dla ustawienia **Powiadomienia użytkownika końcowego** ustaw wartość **Pokaż wszystkie wyskakujące powiadomienia**. Zwróć uwagę, że dla opcji **Powiadomienia użytkownika końcowego** możesz ustawić wartość **Pokaż wszystkie wyskakujące powiadomienia**, **Pokaż wyskakujące powiadomienia dotyczące ponownego uruchomienia komputera** lub **Ukryj wszystkie wyskakujące powiadomienia**.
 10. Dla opcji **Dostępność aplikacji** ustaw wartość **Określona data i godzina**  i wybierz datę i godzinę. Ta data i godzina określają, kiedy aplikacja zostanie pobrana na urządzenie użytkownika końcowego. 
 11. Dla opcji **Ostateczny termin instalacji aplikacji** ustaw wartość **Określona data i godzina**  i wybierz datę i godzinę. Ta data i godzina określają, kiedy aplikacja zostanie zainstalowana na urządzeniu użytkownika końcowego. Jeśli dla tego samego użytkownika lub urządzenia zostanie zrobione więcej niż jedno przypisanie, jako ostateczny termin instalacji aplikacji zostanie wybrany najwcześniejszy możliwy czas.
 12. Kliknij pozycję **Włączone** obok opcji **Okres prolongaty ponownego uruchomienia**. Okres prolongaty ponownego uruchomienia rozpoczyna się zaraz po zakończeniu instalacji aplikacji na urządzeniu. Jeśli ta opcja jest wyłączona, urządzenie może zostać uruchomione ponownie bez ostrzeżenia. <br>Następujące opcje można dostosować:
-    - **Okres prolongaty ponownego uruchomienia urządzenia (minuty)** : Wartość domyślna to 1440 minut (24 godziny). Ta wartość może wynosić maksymalnie 2 tygodnie.
+    - **Okres prolongaty ponownego uruchomienia urządzenia (minuty)** : Wartość domyślna to 1440 minut (24 godziny). Ta wartość może wynosić maksymalnie 2 tygodnie.
     - **Wybierz, kiedy wyświetlić okno dialogowe odliczania do ponownego uruchomienia przed ponownym uruchomieniem (minuty)** : Wartość domyślna to 15 minut.
     - **Zezwalaj użytkownikowi na odłożenie powiadomienia o ponownym uruchomieniu**: Możesz wybrać opcję **Tak** lub **Nie**.
         - **Wybierz czas trwania odłożenia (minuty)** : Wartość domyślna to 240 minut (4 godziny). Wartość odłożenia nie może być większa niż okres prolongaty ponownego uruchomienia.
 13. Kliknij pozycję **OK** > **OK** > **OK** > **Zapisz**, aby dodać przypisanie.
 
 ## <a name="toast-notifications-for-win32-apps"></a>Wyskakujące powiadomienia dla aplikacji Win32 
-W razie potrzeby można pominąć wyświetlanie wyskakujących powiadomień dla użytkownika końcowego podczas przypisywania aplikacji. W usłudze Intune wybierz kolejno pozycje **Aplikacje klienckie** > **Aplikacje** > wybierz aplikację > **Przypisania** > **Uwzględnij grupy**. 
+W razie potrzeby można pominąć wyświetlanie wyskakujących powiadomień dla użytkownika końcowego podczas przypisywania aplikacji. W usłudze Intune wybierz kolejno pozycje **Aplikacje** > **Wszystkie aplikacje** > wybierz aplikację > **Przypisania** > **Uwzględnij grupy**. 
 
 > [!NOTE]
 > Aplikacje Win32 zainstalowane za pomocą rozszerzenia do zarządzania usługi Intune nie zostaną odinstalowane na wyrejestrowanych urządzeniach. Administratorzy mogą korzystać z wykluczania przypisania, aby nie oferować aplikacji Win32 na urządzeniach BYOD.

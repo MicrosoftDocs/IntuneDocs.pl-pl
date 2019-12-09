@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b2f483415d050486ae9979899d9308154a9b131
-ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
+ms.openlocfilehash: 348d1fe2fd236a2af11f7e58dc11530a5ce397bc
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74411362"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564203"
 ---
 # <a name="configure-smime-with-outlook-for-ios"></a>Konfigurowanie protokołu S/MIME z programem Outlook dla systemu iOS
 
@@ -62,14 +62,14 @@ Program Outlook dla systemu iOS obsługuje dwa sposoby dostarczania certyfikató
 Aby skonfigurować protokół S/MIME programu Outlook dla systemu iOS w programie Endpoint Manager, w tym automatyczne dostarczanie certyfikatów S/MIME, których może używać program Outlook dla systemu iOS, wykonaj następujące czynności:
 
 ### <a name="add-the-microsoft-outlook-app"></a>Dodawanie aplikacji Microsoft Outlook
-1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Dodaj aplikację Microsoft Outlook dla systemu iOS ze sklepu App Store do programu Endpoint Manager lub zsynchronizuj aplikację Outlook dla systemu iOS z programu Apple Volume Purchase Program. Aby uzyskać więcej informacji, zobacz [Dodawanie aplikacji ze sklepu dla systemu iOS do usługi Microsoft Intune](~/apps/store-apps-ios.md) lub [Jak w usłudze Microsoft Intune zarządzać aplikacjami dla systemów iOS i macOS, które zostały zakupione w ramach programu zakupów zbiorczych firmy Apple](~/apps/vpp-apps-ios.md).
 
 ### <a name="create-the-outlook-for-ios-smime-configuration-policy"></a>Tworzenie zasad konfiguracji protokołu S/MIME programu Outlook dla systemu iOS
 
 Poniższe kroki umożliwiają utworzenie i skonfigurowanie zasad protokołu S/MIME programu Outlook dla systemu iOS w programie Endpoint Manager. Te ustawienia zapewniają zautomatyzowane dostarczanie certyfikatów podpisywania i szyfrowania.
 
-1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Aplikacje** > **Zasady konfiguracji aplikacji** > **Dodaj**.<br>
+1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) i wybierz pozycję **Aplikacje** > **Zasady konfiguracji aplikacji** > **Dodaj**.<br>
 Zostanie wyświetlone okienko **Dodawanie zasad konfiguracji**.
 2. Wprowadź odpowiednie dane w polach **Nazwa** i **Opis** dla zasad konfiguracji.
 3. Wybierz pozycję **Urządzenia zarządzane** w polu **Typ rejestracji urządzenia**.

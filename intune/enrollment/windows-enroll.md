@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 30a1c9b1fddaa59d633c8dc969063b26b25097de
-ms.sourcegitcommit: 76ae5aea5deee7a590e24c3b2bb52f88125943e5
+ms.openlocfilehash: 5f12feca6d43a4194e7c60639a93747c7f389f93
+ms.sourcegitcommit: fc4b38660129d615068f34ad4b96b900d73f7b53
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74098183"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74558208"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Konfigurowanie rejestracji dla urządzeń z systemem Windows
 
@@ -102,7 +102,7 @@ EnterpriseEnrollment-s.manage.microsoft.com to preferowana nazwa FQDN na potrzeb
 Konfiguracja rekordu CNAME jest jedyną obsługiwaną metodą. Na przykład użycie serwera proxy w celu przekierowania punktu końcowego enterpriseenrollment.contoso.com/EnrollmentServer/Discovery.svc do enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc lub manage.microsoft.com/EnrollmentServer/Discovery.svc nie jest obsługiwane.
 
 **Krok 2: Weryfikacja rekordu CNAME** (opcjonalnie)<br>
-1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz **Rejestrowanie urządzenia** > **Rejestracja w systemie Windows** > **Weryfikacja rekordu CNAME**.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz kolejno pozycje **Urządzenia** > **Windows** > **Rejestracja w systemie Windows** > **Weryfikacja rekordu CNAME**.
 2. W polu **Domena** wprowadź witrynę internetową firmy, a następnie wybierz pozycję **Testuj**.
 
 ## <a name="tell-users-how-to-enroll-windows-devices"></a>Informowanie użytkowników o sposobie rejestrowania urządzeń z systemem Windows

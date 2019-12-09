@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/09/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 000b1d04dd3f520b55b1d33545a8803e23bf8965
-ms.sourcegitcommit: 0d6f323152ec62f7d383891cce12ea0a4289cd8f
+ms.openlocfilehash: 26972bb034ea4cb65f1bf64c61c20395cf94dc36
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72889595"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564182"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Monitorowanie zasad ochrony aplikacji
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -42,9 +42,8 @@ Okres przechowywania danych ochrony aplikacji to 90 dni. Wszystkie wystąpienia
 
 ## <a name="summary-view"></a>Widok podsumowania
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. W okienku **Intune** wybierz pozycję **Aplikacje klienckie**.
-4. Aby wyświetlić widok podsumowania, w obciążeniu **Aplikacje klienckie** w obszarze **Monitor** wybierz pozycję **Stan ochrony aplikacji**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+3. Wybierz kolejno pozycje **Aplikacje** > **Monitorowanie** > **Stan ochrony aplikacji**.
 
    ![Zrzut ekranu przedstawiający kafelek podsumowania w okienku zarządzania aplikacjami mobilnymi usługi Intune](./media/app-protection-policies-monitor/app-protection-user-status-summary.png)
 
@@ -78,7 +77,7 @@ Możesz wyszukać pojedynczego użytkownika i sprawdzić jego stan zgodności. O
 >[!NOTE]
 > Kolumna **Ostatnia synchronizacja** przedstawia tę samą wartość zarówno w raporcie o stanie użytkownika w konsoli, jak i w [możliwym do wyeksportowania raporcie csv](https://docs.microsoft.com/intune/app-protection-policies-monitor#export-app-protection-activities) zasad ochrony aplikacji. Różnica polega na małym opóźnieniu synchronizacji między tą wartością w tych dwóch raportach. 
 >
-> Czas podawany w kolumnie „Ostatnia synchronizacja” to czas, gdy usługa Intune po raz ostatni widziała wystąpienie aplikacji. Kiedy użytkownik uruchamia aplikację, może ona powiadomić usługę Intune App Protection w momencie uruchomienia, w zależności od czasu ostatniego zaewidencjonowania. Zobacz artykuł dotyczący [czasów interwałów ponowień dla ewidencjonowania zasad ochrony aplikacji](https://docs.microsoft.com/en-us/intune/app-protection-policy-delivery). Jeśli użytkownik końcowy nie używał tej konkretnej aplikacji w ostatnim interwale ewidencjonowania (który zazwyczaj wynosi 30 minut dla aktywnego użycia), a następnie uruchomił aplikację, to:
+> Czas podawany w kolumnie „Ostatnia synchronizacja” to czas, gdy usługa Intune po raz ostatni widziała wystąpienie aplikacji. Kiedy użytkownik uruchamia aplikację, może ona powiadomić usługę Intune App Protection w momencie uruchomienia, w zależności od czasu ostatniego zaewidencjonowania. Zobacz artykuł dotyczący [czasów interwałów ponowień dla ewidencjonowania zasad ochrony aplikacji](~/apps/app-protection-policy-delivery.md). Jeśli użytkownik końcowy nie używał tej konkretnej aplikacji w ostatnim interwale ewidencjonowania (który zazwyczaj wynosi 30 minut dla aktywnego użycia), a następnie uruchomił aplikację, to:
 >
 > - Możliwy do wyeksportowania raport csv zasad ochrony aplikacji będzie zawierać najnowszy czas w zakresie od 1 minuty (wartość minimalna) do 30 minut (wartość maksymalna).
 > - Raport stanu użytkownika będzie od razu zawierał najnowszy czas.
@@ -104,7 +103,7 @@ Aby wyświetlić raportowanie dla użytkownika, wykonaj następujące kroki:
 > Jeśli poszukiwany użytkownik nie ma wdrożonych zasad zarządzania aplikacjami mobilnymi, pojawi się komunikat z informacją, że użytkownik nie jest objęty przez żadne zasady dotyczące zarządzania aplikacjami mobilnymi.
 
 ### <a name="flagged-users"></a>Oflagowani użytkownicy
-W widoku szczegółowym wyświetlane są: komunikat o błędzie, aplikacja używana w momencie wystąpienia błędu, platforma systemu operacyjnego urządzenia, której dotyczy błąd, oraz sygnatura czasowa. Ten błąd zazwyczaj występuje w przypadku urządzeń ze zdjętymi zabezpieczeniami systemu (iOS) lub z odblokowanym dostępem (Android). W tym miejscu są także zgłaszani użytkownicy urządzeń oflagowanych podczas sprawdzania uruchomienia warunkowego „zaświadczania urządzenia rozwiązania SafetyNet” z przyczyną zgłoszoną przez firmę Google. Aby użytkownik został usunięty z raportu, musi zmienić się stan samego urządzenia. Ma to miejsce po następnym sprawdzeniu odblokowania dostępu (lub sprawdzeniu zdjęcia zabezpieczeń systemu/SafetyNet) ze zgłoszonym pozytywnym wynikiem. Jeśli urządzenie zostanie naprawdę skorygowane, odświeżenie raportu Oflagowani użytkownicy nastąpi po ponownym załadowaniu bloku.
+W widoku szczegółowym wyświetlane są: komunikat o błędzie, aplikacja używana w momencie wystąpienia błędu, platforma systemu operacyjnego urządzenia, której dotyczy błąd, oraz sygnatura czasowa. Ten błąd zazwyczaj występuje w przypadku urządzeń ze zdjętymi zabezpieczeniami systemu (iOS) lub z odblokowanym dostępem (Android). W tym miejscu są także zgłaszani użytkownicy urządzeń oflagowanych podczas sprawdzania uruchomienia warunkowego „zaświadczania urządzenia rozwiązania SafetyNet” z przyczyną zgłoszoną przez firmę Google. Aby użytkownik został usunięty z raportu, musi zmienić się stan samego urządzenia. Ma to miejsce po następnym sprawdzeniu odblokowania dostępu (lub sprawdzeniu zdjęcia zabezpieczeń systemu/SafetyNet) ze zgłoszonym pozytywnym wynikiem. Jeśli stan urządzenia zostanie rzeczywiście skorygowany, odświeżenie raportu Oflagowani użytkownicy nastąpi po ponownym załadowaniu okienka.
 
 ### <a name="users-with-potentially-harmful-apps"></a>Użytkownicy z potencjalnie szkodliwymi aplikacjami
 Widok szczegółowy pokazuje następujące dane:
@@ -121,14 +120,14 @@ W tym miejscu są zgłaszani użytkownicy urządzeń oflagowanych podczas sprawd
 
 ## <a name="reporting-view"></a>Widok raportowania
 
-Te same raporty możesz znaleźć w górnej części bloku **Stan ochrony aplikacji**.
+Te same raporty możesz znaleźć w górnej części okienka **Stan ochrony aplikacji**.
 
 > [!NOTE]
-> Usługa Intune udostępnia dodatkowe pola raportów dotyczących urządzeń, takie jak na przykład identyfikator rejestracji aplikacji, producent systemu Android, model i wersja poprawki zabezpieczeń, a także model urządzenia z systemem iOS. W usłudze Intune te pola są dostępne po wybraniu pozycji **Aplikacje klienckie** > **Stan ochrony aplikacji** > **Raport ochrony aplikacji: iOS, Android**. Ponadto te parametry są pomocne w konfigurowaniu listy **dozwolonych** dla producenta urządzenia (Android), listy **dozwolonych** dla modelu urządzenia (Android i iOS) oraz ustawienia minimalnej wersji poprawki zabezpieczeń systemu Android. 
+> Usługa Intune udostępnia dodatkowe pola raportów dotyczących urządzeń, takie jak na przykład identyfikator rejestracji aplikacji, producent systemu Android, model i wersja poprawki zabezpieczeń, a także model urządzenia z systemem iOS. W usłudze Intune te pola są dostępne po wybraniu pozycji **Aplikacje** > **Stan ochrony aplikacji** > **Raport ochrony aplikacji: iOS, Android**. Ponadto te parametry są pomocne w konfigurowaniu listy **dozwolonych** dla producenta urządzenia (Android), listy **dozwolonych** dla modelu urządzenia (Android i iOS) oraz ustawienia minimalnej wersji poprawki zabezpieczeń systemu Android. 
 
-Są dostępne dodatkowe raporty, które ułatwiają sprawdzanie stanu zgodności zasad zarządzania aplikacjami mobilnymi. Aby wyświetlić te raporty, wybierz pozycję **Aplikacje klienckie** > **Stan ochrony aplikacji** > **Raporty**. 
+Są dostępne dodatkowe raporty, które ułatwiają sprawdzanie stanu zgodności zasad zarządzania aplikacjami mobilnymi. Aby wyświetlić te raporty, wybierz pozycję **Aplikacje** > **Stan ochrony aplikacji** > **Raporty**. 
 
-Blok **Raporty** zawiera kilka raportów utworzonych na podstawie użytkownika i aplikacji, w tym między innymi:
+Okienko **Raporty** zawiera kilka raportów utworzonych na podstawie użytkownika i aplikacji, w tym między innymi:
 
 - **Raport użytkownika**: ten raport zawiera te same informacje, które znajdują się w raporcie **Stan użytkownika** w sekcji [Widok szczegółowy](app-protection-policies-monitor.md#detailed-view) opisanej powyżej.
 
@@ -139,7 +138,7 @@ Blok **Raporty** zawiera kilka raportów utworzonych na podstawie użytkownika i
     - Aplikacje te są używane przez użytkownika lub przez aplikację, w odniesieniu do których nie mają obecnie zastosowania żadne zasady zarządzania aplikacjami mobilnymi.
     - Wszystkie aplikacje są zaewidencjonowane, nie są jednak objęte żadnymi zasadami zarządzania aplikacjami mobilnymi.
 
-    ![Zrzut ekranu przedstawiający blok raportowania aplikacji użytkownika ze szczegółami dla trzech aplikacji](./media/app-protection-policies-monitor/MAM-reporting-4.png)
+    ![Zrzut ekranu przedstawiający okienko raportowania aplikacji użytkownika ze szczegółami dla trzech aplikacji](./media/app-protection-policies-monitor/MAM-reporting-4.png)
 
 - **Raport dotyczący konfiguracji użytkownika**: w oparciu o wybranego użytkownika ten raport zawiera szczegółowe informacje o konfiguracjach aplikacji odebranych przez użytkownika.
 - **Raport dotyczący konfiguracji aplikacji**: o oparciu o wybraną platformę i aplikację ten raport zawiera szczegółowe informacje o użytkownikach, którzy otrzymali konfiguracje wybranej aplikacji.

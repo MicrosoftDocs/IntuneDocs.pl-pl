@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 12/03/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ecde59d81ebeba7de64f2693eecb576faac6e722
-ms.sourcegitcommit: 15e099a9a1e18296580bb345610aee7cc4acd126
+ms.openlocfilehash: ef9548a77a3a745eda24b927118d1447d5afd1f0
+ms.sourcegitcommit: 78faf608510fbaca09bc410d63df1aa5254dee45
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74164717"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74784242"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Dodawanie aplikacji do usługi Microsoft Intune 
 
@@ -58,6 +58,8 @@ W poniższej tabeli przedstawiono typy specyficzne dla aplikacji i sposób ich d
 | Aplikacje zarządzane ze sklepu Google Play | Aplikacja ze sklepu  | Wybierz **Zarządzany sklep Google Play** jako **typ aplikacji**, wyszukaj aplikację i wybierz aplikację w usłudze Intune. |
 | Aplikacje pakietu Office 365 dla systemu Windows 10  | Aplikacja ze sklepu (Office 365) | W obszarze **Pakiet Office 365** wybierz **Windows 10** jako **typ aplikacji**, a następnie wybierz aplikację usługi Office 365, którą chcesz zainstalować.  |
 | Aplikacje pakietu Office 365 dla systemu macOS | Aplikacja ze sklepu (Office 365) | W obszarze **Pakiet Office 365** wybierz **macOS** jako **typ aplikacji**, a następnie wybierz pakiet aplikacji usługi Office 365. |
+| Microsoft Edge w wersji 77 lub nowszej dla systemu Windows 10 | Aplikacja ze sklepu | W obszarze **Microsoft Edge, wersja 77 lub nowsza** wybierz **Windows 10** jako **typ aplikacji**. |
+| Microsoft Edge w wersji 77 lub nowszej dla systemu macOS | Aplikacja ze sklepu | W obszarze **Microsoft Edge, wersja 77 lub nowsza** wybierz **macOS** jako **typ aplikacji**. |
 | Aplikacje biznesowe (LOB) dla systemu Android | Aplikacja LOB | Wybierz aplikację **Biznesowa** jako **typ aplikacji**, wybierz pozycję **Plik pakietu aplikacji**, a następnie wprowadź plik instalacyjny systemu Android z rozszerzeniem **.apk**.  |
 | Aplikacje LOB dla systemu iOS | Aplikacja LOB | Wybierz aplikację **Biznesowa** jako **typ aplikacji**, wybierz pozycję **Plik pakietu aplikacji**, a następnie wprowadź plik instalacyjny systemu iOS z rozszerzeniem **.ipa**.  |
 | Aplikacje LOB dla systemu Windows Phone | Aplikacja LOB | Wybierz opcję **Biznesowa** jako **typ aplikacji**, wybierz pozycję **Plik pakietu aplikacji**, a następnie wprowadź plik instalacyjny systemu Windows Phone z rozszerzeniem **xap**.  |
@@ -72,7 +74,7 @@ W poniższej tabeli przedstawiono typy specyficzne dla aplikacji i sposób ich d
 
 <sup>1</sup> Aby uzyskać więcej informacji na temat profilów służbowych w systemach Android Enterprise i Android, patrz [Licencjonowane aplikacje](apps-add.md#understanding-licensed-apps) poniżej.
 
-Aby dodać aplikację w usłudze Microsoft Intune, wybierz kolejno pozycje **Aplikacje klienckie** > **Aplikacje** > **Dodaj**. Zostanie wyświetlone okienko **Dodaj aplikację**, w którym możesz wybrać **Typ aplikacji**. 
+Aby dodać aplikację w usłudze Microsoft Intune, wybierz kolejno pozycje **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**. Zostanie wyświetlone okienko **Dodaj aplikację**, w którym możesz wybrać **Typ aplikacji**. 
 
 >[!TIP]
 > Aplikacja biznesowa (LOB) to aplikacja dodawana za pomocą pliku instalacyjnego aplikacji. Aby na przykład zainstalować aplikację LOB systemu iOS, należy dodać tę aplikację, wybierając pozycję **Aplikacja biznesowa** jako **Typ aplikacji** w okienku **Dodaj aplikację**. Następnie należy wybrać plik pakietu aplikacji (z rozszerzeniem ipa). Aplikacje tego typu są zwykle pisane w firmie.
@@ -159,9 +161,8 @@ Kategorie aplikacji mogą ułatwić ich sortowanie, aby użytkownicy mogli je ł
 
 Po dodaniu aplikacji do usługi Intune istnieje możliwość wybrania dowolnej kategorii. Tematy dotyczące określonych platform zawierają informacje o dodawaniu aplikacji i przypisywaniu kategorii. Do tworzenia i edytowania własnych kategorii użyj następującej procedury:
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. W okienku **Intune** wybierz pozycję **Aplikacje klienckie**.
-4. W okienku obciążeń **Aplikacje klienckie** w obszarze **Instalacja** wybierz pozycję **Kategorie aplikacji**.  
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+3. Wybierz pozycję **Aplikacje** > **Kategorie aplikacji**.  
     W okienku **Kategorie aplikacji** zostanie wyświetlona lista bieżących kategorii. 
 5. Wykonaj jedną z następujących czynności:
     - Aby dodać kategorię, w okienku **Utwórz kategorię** wybierz pozycję **Dodaj**, a następnie wprowadź nazwę kategorii.  
@@ -206,6 +207,8 @@ Aby dowiedzieć się, jak dodawać aplikacje dla poszczególnych platform do us�
 - [Aplikacja LOB dla systemu Windows](lob-apps-windows.md)
 - [Aplikacje pakietu Office 365 dla systemu Windows 10](apps-add-office365.md)
 - [Aplikacje pakietu Office 365 dla systemu macOS](apps-add-office365-macos.md)
+- [Microsoft Edge dla systemu Windows 10](apps-windows-edge.md)
+- [Microsoft Edge dla systemu macOS](apps-edge-macos.md)
 - [Aplikacje wbudowane](apps-add-built-in.md)
 - [Aplikacje systemu Android Enterprise](apps-ae-system.md)
 - [Aplikacje Win32](app-management.md)

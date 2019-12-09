@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/16/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 98976403d58c33f22f7ceeabec1d38f076f9bbe7
-ms.sourcegitcommit: ae6f2e7812e7fd36f2393b8f4b6cd8de63777b2c
+ms.openlocfilehash: 8657b6fa8110b4ea4bbf8ec0841d69197624dd9f
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592070"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563723"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Tworzenie i przypisywanie zasad ochrony aplikacji
 
@@ -44,9 +44,9 @@ Aby uzyskać informacje o dodawaniu aplikacji biznesowych (LOB) Twojej organizac
 Aby utworzyć zasady ochrony aplikacji w systemach iOS/iPadOS i Android, należy postępować zgodnie ze nowoczesnym przepływem procesu usługi Intune, który powoduje utworzenie nowych zasad ochrony aplikacji.
 
 ### <a name="create-an-iosipados-or-android-app-protection-policy"></a>Tworzenie zasad ochrony aplikacji w systemie iOS/iPadOS lub Android
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. W portalu usługi Intune wybierz pozycję **Aplikacje klienckie** > **Zasady ochrony aplikacji**. Ten wybór spowoduje otwarcie szczegółów obszaru **Zasady ochrony aplikacji**, w którym można tworzyć nowe zasady i edytować istniejące.
-3. Wybierz pozycję **Utwórz zasady**, a następnie wybierz system **iOS/iPadOS** lub **Android**. Zostanie wyświetlony blok **Tworzenie zasad**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. W portalu usługi Intune wybierz pozycję **Aplikacje** > **Zasady ochrony aplikacji**. Ten wybór spowoduje otwarcie szczegółów obszaru **Zasady ochrony aplikacji**, w którym można tworzyć nowe zasady i edytować istniejące.
+3. Wybierz pozycję **Utwórz zasady**, a następnie wybierz system **iOS/iPadOS** lub **Android**. Zostanie wyświetlone okienko **Tworzenie zasad**.
 4. Na stronie **Podstawowe** dodaj następujące wartości:
 
     | Wartość | Opis |
@@ -57,7 +57,7 @@ Aby utworzyć zasady ochrony aplikacji w systemach iOS/iPadOS i Android, należy
 
     Wartość **Platforma** jest ustawiana na podstawie wybranych wyżej opcji.
 
-    ![Zrzut ekranu przedstawiający stronę Podstawowe w bloku Tworzenie zasad](~/apps/media/app-protection-policies/app-protection-add-policies-01.png)
+    ![Zrzut ekranu przedstawiający stronę Podstawowe w okienku Tworzenie zasad](~/apps/media/app-protection-policies/app-protection-add-policies-01.png)
 
 5. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Aplikacje**.<br>
     Strona **Aplikacje** umożliwia wybranie sposobu zastosowania zasad do aplikacji na różnych urządzeniach. Należy dodać co najmniej jedną aplikację.<p>
@@ -171,7 +171,7 @@ W wielu organizacjach powszechne jest zezwalanie na korzystanie przez użytkowni
 
 Ponieważ zasady ochrony aplikacji usługi Intune dotyczą tożsamości użytkownika, ustawienia ochrony dla użytkownika można stosować zarówno do urządzeń zarejestrowanych (zarządzanych przez rozwiązanie MDM), jak i niezarejestrowanych (niezarządzanych przez rozwiązanie MDM). W związku z tym można określić zasady ochrony aplikacji usługi Intune dla zarejestrowanych lub niezarejestrowanych w usłudze Intune urządzeń z systemem iOS lub Android. Jedne zasady ochrony mogą być przeznaczone dla urządzeń niezarządzanych, w przypadku których są wdrożone ścisłe środki ochrony przed utratą danych, a inne zasady mogą być przeznaczone dla urządzeń zarządzanych przez rozwiązanie MDM, w przypadku których środki ochrony przed utratą danych mogą być mniej restrykcyjne. Aby uzyskać więcej informacji o działaniu zasad w przypadku urządzeń osobistych z systemem Android Enterprise, zobacz temat [Zasady ochrony aplikacji i profile służbowe](android-deployment-scenarios-app-protection-work-profiles.md).
 
-Aby utworzyć te zasady, przejdź do opcji **Aplikacje klienckie** > **Zasady ochrony aplikacji** w konsoli usługi Intune, a następnie kliknij pozycję **Utwórz zasady**. Istniejące zasady ochrony aplikacji są także dostępne do edycji. Aby zastosować zasady ochrony aplikacji zarówno do urządzeń zarządzanych, jak i niezarządzanych, przejdź na stronę **Aplikacje** i upewnij się, że opcja **Jako docelowe ustaw aplikacje na wszystkich typach urządzeń** ma domyślną wartość **Tak**. Jeśli chcesz przypisać z większą dokładnością na podstawie stanu zarządzania, ustaw opcję **Jako docelowe ustaw aplikacje na wszystkich typach urządzeń** na wartość **Nie**. 
+Aby utworzyć te zasady, przejdź do opcji **Aplikacje** > **Zasady ochrony aplikacji** w konsoli usługi Intune, a następnie wybierz pozycję **Utwórz zasady**. Istniejące zasady ochrony aplikacji są także dostępne do edycji. Aby zastosować zasady ochrony aplikacji zarówno do urządzeń zarządzanych, jak i niezarządzanych, przejdź na stronę **Aplikacje** i upewnij się, że opcja **Jako docelowe ustaw aplikacje na wszystkich typach urządzeń** ma domyślną wartość **Tak**. Jeśli chcesz przypisać z większą dokładnością na podstawie stanu zarządzania, ustaw opcję **Jako docelowe ustaw aplikacje na wszystkich typach urządzeń** na wartość **Nie**. 
 
 ### <a name="device-types"></a>Typy urządzeń
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 08193aa329a1bee4e66638de5c0d7518d15db2a4
-ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
+ms.openlocfilehash: 678eb92bb6f5f23756092cd5d9cc1a645e1e8db3
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74547906"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74562368"
 ---
 # <a name="android-device-administrator-enrollment"></a>Rejestracja administratora urządzeń z systemem Android
 
@@ -49,7 +49,7 @@ Aby uzyskać więcej informacji na temat funkcji systemu Android Enterprise firm
 ## <a name="set-up-device-administrator-enrollment"></a>Konfiguracja rejestracji administratora urządzeń
 
 1. Aby przygotować się do zarządzania urządzeniami przenośnymi, należy ustawić urząd zarządzania urządzeniami przenośnymi (MDM) na wartość **Microsoft Intune**. Instrukcje znajdują się w artykule [Ustawianie urzędu MDM](../fundamentals/mdm-authority-set.md). Element ten ustawia się tylko raz podczas pierwszej konfiguracji usługi Intune do zarządzania urządzeniami przenośnymi.
-2. Wybierz kolejno pozycje **Intune** > **Rejestrowanie urządzeń** > **Rejestracja w systemie Android** > **Urządzenia prywatne i należące do firmy z uprawnieniami do administrowania urządzeniami** > **Zarządzaj urządzeniami za pomocą administratora urządzeń**.
+2. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) i wybierz kolejno pozycje **Urządzenia** > **Android** > **Rejestracja systemu Android** > **Urządzenia prywatne i należące do firmy z uprawnieniami do administrowania urządzeniami** > **Zarządzaj urządzeniami za pomocą administratora urządzeń**.
 3. [Poinformuj użytkowników, jak mogą zarejestrować swoje urządzenia](/intune-user-help/enroll-your-device-in-intune-android).  
 
 Po wykonaniu rejestracji przez użytkownika można zacząć zarządzać jego urządzeniami w usłudze Intune, w tym [przypisywać zasady zgodności](../protect/compliance-policy-create-android.md), [zarządzać aplikacjami](../apps/app-management.md) i nie tylko.

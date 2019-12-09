@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/27/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a3fab0b14f8ed68d13021a0e141d5997532df2ec
-ms.sourcegitcommit: ae6f2e7812e7fd36f2393b8f4b6cd8de63777b2c
+ms.openlocfilehash: 52f907b8762322684ec9e21910745a197c3dbe4e
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592089"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564314"
 ---
 # <a name="manage-web-access-using-a-microsoft-intune-policy-protected-browser"></a>Zarządzanie dostępem do Internetu za pomocą przeglądarki zabezpieczonej przy użyciu zasad w usłudze Microsoft Intune
 
@@ -91,29 +91,28 @@ Aby ograniczyć aplikacje internetowe usługi Azure AD do używania aplikacji In
 > [!TIP]  
 > Dostęp warunkowy to pojęcie z technologii używanej w usłudze Azure Active Directory (Azure AD). Węzeł Dostęp warunkowy dostępny z usługi *Intune* jest tym samym węzłem, do którego dostęp jest uzyskiwany z usługi *Azure AD*.  
 
-
-1. W portalu usługi Intune wybierz kolejno pozycje **Dostęp warunkowy** > **Nowe zasady**. 
-2. Następnie wybierz pozycję **Udziel** w sekcji **Kontrole dostępów** bloku. 
-3. Kliknij pozycję **Wymagaj zatwierdzonej aplikacji klienckiej**. 
-4. Kliknij pozycję **Wybierz** w bloku **Udziel**. Te zasady należy przypisać do aplikacji w chmurze, które mają być dostępne tylko dla aplikacji Intune Managed Browser.
-
-    ![Azure AD — zasady dostępu warunkowego aplikacji Managed Browser](./media/app-configuration-managed-browser/managed-browser-conditional-access-01.png)
-
-5. W sekcji **Przypisania** wybierz pozycję **Warunki** > **Aplikacje klienckie**. Zostanie wyświetlony blok **Aplikacje klienckie**.
-6. Kliknij pozycję **Tak** w obszarze **Konfiguruj**, aby zastosować zasady do określonych aplikacji klienckich.
-7. Sprawdź, czy jako aplikację kliencką wybrano pozycję **Przeglądarka**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz kolejno pozycje **Urządzenia** > **Dostęp warunkowy** > **Nowe zasady**.
+3. Dodaj **nazwę** zasad. 
+4. W sekcji **Przypisania** wybierz pozycję **Warunki** > **Aplikacje klienckie**. Zostanie wyświetlone okienko **Aplikacje klienckie**.
+5. Kliknij pozycję **Tak** w obszarze **Konfiguruj**, aby zastosować zasady do określonych aplikacji klienckich.
+6. Sprawdź, czy jako aplikację kliencką wybrano pozycję **Przeglądarka**.
 
     ![Azure AD — Managed Browser — wybieranie aplikacji klienckich](./media/app-configuration-managed-browser/managed-browser-conditional-access-02.png)
 
     > [!NOTE]
     > Jeśli chcesz ograniczyć, które aplikacje natywne (aplikacje nie korzystające z przeglądarki) mają mieć dostęp do tych aplikacji w chmurze, możesz także zaznaczyć pozycję **Aplikacje mobilne i klienci stacjonarni**.
 
-8. W sekcji **Przypisania** wybierz pozycję **Użytkownicy i grupy**, a następnie wybierz użytkowników lub grupy, do których chcesz przypisać te zasady. 
+7. Kliknij przycisk **Gotowe** > **Gotowe**.
+8. W sekcji **Przypisania** wybierz pozycję **Użytkownicy i grupy**, a następnie wybierz użytkowników lub grupy, do których chcesz przypisać te zasady. Kliknij pozycję **Gotowe**, aby zamknąć okienko.
+9. W sekcji **Przypisania** wybierz pozycję **Aplikacje lub akcje w chmurze**, aby wybrać, które aplikacje mają być chronione przez te zasady. Kliknij pozycję **Gotowe**, aby zamknąć okienko.
+10. Wybierz pozycję **Udziel** w sekcji **Kontrole dostępu** okienka. 
+11. Kliknij **Udziel dostępu**, a następnie **Wymagaj zatwierdzonej aplikacji klienckiej**. 
+12. Kliknij pozycję **Wybierz** w okienku **Udziel**. Te zasady należy przypisać do aplikacji w chmurze, które mają być dostępne tylko dla aplikacji Intune Managed Browser.
 
-    > [!NOTE]
-    > Użytkownicy muszą również zostać objęci zasadami Intune App Protection w celu odbierania zasad konfiguracji aplikacji. Aby uzyskać więcej informacji na temat tworzenia zasad ochrony aplikacji usługi Intune, zobacz [Co to są zasady ochrony aplikacji?](app-protection-policy.md)
+    ![Azure AD — zasady dostępu warunkowego aplikacji Managed Browser](./media/app-configuration-managed-browser/managed-browser-conditional-access-01.png)
 
-9. W sekcji **Przypisania** wybierz pozycję **Aplikacje w chmurze**, aby wybrać, które aplikacje mają być chronione przez te zasady.
+
 
 Po skonfigurowaniu powyższych zasad użytkownicy będą musieli uzyskiwać dostęp do połączonych z usługą Azure AD aplikacji internetowych chronionych przez te zasady za pomocą aplikacji Intune Managed Browser. Jeśli użytkownicy spróbują użyć niezarządzanej przeglądarki w tym scenariuszu, zostanie wyświetlone powiadomienie o konieczności użycia aplikacji Intune Managed Browser.
 
@@ -133,27 +132,28 @@ Logowanie jednokrotne wymaga, aby urządzenie było zarejestrowane przez aplikac
 >[!IMPORTANT]
 >Aby można było zastosować konfiguracje aplikacji, chroniona przeglądarka użytkownika lub inna aplikacja na urządzeniu musi być już zarządzana przez [zasady ochrony aplikacji usługi Intune]( ../app-protection-policy.md).
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. W bloku **Aplikacje klienckie** listy Zarządzaj wybierz pozycję **Zasady konfiguracji aplikacji**.
-4. W bloku **Zasady konfiguracji aplikacji** wybierz pozycję **Dodaj**.
-5. W bloku **Dodaj zasady konfiguracji** wypełnij pola **Nazwa** i **Opis** (opcjonalnie) odnoszące się do ustawień konfiguracji aplikacji.
-6. Jako typ **rejestracji urządzenia** wybierz **Aplikacje zarządzane**.
-7. Wybierz pozycję **Wybierz wymagane aplikacje**, a następnie przejdź do bloku **Docelowe aplikacje** i wybierz pozycję **Managed Browser** i/lub **Microsoft Edge** dla systemu iOS, Android lub dla obu tych systemów.
-8. Wybierz pozycję **OK**, aby powrócić do bloku **Dodaj zasady konfiguracji**.
-9. Wybierz pozycję **Ustawienia konfiguracji**. W bloku **Konfiguracja** należy zdefiniować pary kluczy i wartości do dostarczania konfiguracji dla programu Managed Browser. Informacje na temat różnych par kluczy i wartości, które można zdefiniować, znajdują się w dalszych sekcjach tego artykułu.
-10. Gdy wszystko będzie gotowe, wybierz pozycję **OK**.
-11. W bloku **Dodaj zasady konfiguracji** wybierz pozycję **Dodaj**.
-12. Nowa konfiguracja zostanie utworzona i wyświetlona w bloku **Konfiguracja aplikacji**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz kolejno pozycje **Aplikacje** > **Zasady konfiguracji aplikacji** > **Dodaj** > **Aplikacje zarządzane**.
+3. Na stronie **Podstawowe** w okienku **Tworzenie zasad konfiguracji aplikacji** wypełnij pola **Nazwa** i **Opis** (opcjonalnie) odnoszące się do ustawień konfiguracji aplikacji.
+4. Wybierz kolejno pozycje **Select the public app** (Wybierz aplikację publiczną) i **Managed Browser** i/lub **Edge** dla systemu iOS, Android lub dla obu tych systemów.
+5. Kliknij pozycję **Wybierz**, aby wrócić do okienka **Tworzenie zasad konfiguracji aplikacji**.
+6. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Ustawienia**.
+7. Na stronie **Ustawienia** należy zdefiniować pary kluczy i wartości do dostarczania konfiguracji dla aplikacji. Informacje na temat różnych par kluczy i wartości, które można zdefiniować, znajdują się w dalszych sekcjach tego artykułu.
+8. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Przypisanie**, a następnie kliknij pozycję **Wybierz grupy do uwzględnienia** i/lub **Wybierz grupy do wykluczenia**.
+9. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Recenzja i tworzenie**.
+10. Kliknij przycisk **Utwórz** po przejrzeniu zasad konfiguracji aplikacji.
+
+Nowa konfiguracja zostanie utworzona i wyświetlona w okienku **Zasady konfiguracji aplikacji**.
 
 
 ## <a name="assign-the-configuration-settings-you-created"></a>Przypisywanie utworzonych ustawień konfiguracji
 
 Ustawienia są przypisywane do grup użytkowników usługi Azure AD. Jeśli dany użytkownik ma zainstalowaną docelową aplikację przeglądarki chronionej, aplikacja jest zarządzana z uwzględnieniem określonych ustawień.
 
-1. Przejdź do bloku **Aplikacje klienckie** pulpitu nawigacyjnego zarządzania aplikacjami mobilnymi usługi Intune i wybierz pozycję **Zasady konfiguracji aplikacji**.
+1. W okienku **Aplikacje** pulpitu nawigacyjnego zarządzania aplikacjami mobilnymi usługi Intune wybierz pozycję **Zasady konfiguracji aplikacji**.
 2. Z listy konfiguracji aplikacji wybierz tę, która ma zostać przypisana.
-3. W następnym bloku wybierz pozycję **Przypisania**.
-4. W bloku **Przypisania** wybierz grupę usługi Azure AD, do której chcesz przypisać konfigurację aplikacji, a następnie wybierz przycisk **OK**.
+3. W następnym okienku wybierz pozycję **Przypisania**.
+4. W okienku **Przypisania** wybierz grupę usługi Azure AD, do której chcesz przypisać konfigurację aplikacji, a następnie kliknij przycisk **OK**.
 
 ## <a name="how-to-set-microsoft-edge-as-the-protected-browser-for-your-organization"></a>Ustawianie Microsoft Edge jako przeglądarki chronionej dla swojej organizacji
 
@@ -170,7 +170,7 @@ Jeśli to ustawienie będzie miało wartość „False” (Fałsz):
 - Jeśli użytkownik ma pobraną przeglądarkę Managed Browser **lub** Microsoft Edge, zostanie uruchomiona pobrana przeglądarka. 
 - Jeśli użytkownik nie pobrał przeglądarki, na ekranie jego urządzenia pojawi się komunikat z prośbą o pobranie przeglądarki Managed Browser.
 
-Powyższą procedurę można wykorzystać do utworzenia konfiguracji przeglądarki Microsoft Edge. Podczas wybierania **ustawień konfiguracji** w bloku **Konfiguracja** podaj następującą parę klucz-wartość (krok 9):
+Powyższą procedurę można wykorzystać do utworzenia konfiguracji przeglądarki Microsoft Edge. Podczas wybierania **ustawień konfiguracji** w okienku **Konfiguracja** podaj następującą parę klucz-wartość (krok 9):
 
 | Klucz                              |  Wartość   |
 |----------------------------------|----------|

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36039334f7e93b66735e10d0ac2c5d80602e2b83
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: f0cd3dd71a5999b69e3f5c34ef4cc73fb3d6a938
+ms.sourcegitcommit: b752acefec077c719e169e665c955adb944e85c6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059854"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74781162"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-for-ios-devices-in-intune"></a>Konfigurowanie wirtualnej sieci prywatnej dla aplikacji na urządzeniach z systemem iOS w usłudze Intune
 
@@ -37,6 +37,9 @@ Przejrzyj dokumentację dostawcy sieci VPN, aby sprawdzić, czy używana sieć V
 W tym artykule przedstawiono sposób tworzenia profilu sieci VPN dla aplikacji, a następnie przypisywania tego profilu do aplikacji. Te kroki umożliwiają utworzenie bezproblemowego środowiska sieci VPN dla aplikacji na potrzeby użytkowników końcowych. W przypadku większości sieci VPN obsługujących sieć VPN dla aplikacji użytkownik otwiera aplikację i automatycznie nawiązuje połączenie z siecią VPN.
 
 Niektóre sieci VPN umożliwiają uwierzytelnianie za pomocą nazwy użytkownika i hasła w przypadku sieci VPN dla aplikacji. To znaczy użytkownicy muszą podać nazwę użytkownika i hasło, aby nawiązać połączenie z siecią VPN.
+
+> [!IMPORTANT]
+> Sieć VPN dla aplikacji nie jest obsługiwana w przypadku profilów sieci VPN protokołu IKEv2 dla systemu iOS.
 
 ## <a name="per-app-vpn-with-zscaler"></a>Sieć VPN dla aplikacji z rozwiązaniem Zscaler
 

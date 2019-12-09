@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/23/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81a2575c0d4e6cdcfdffe09e37880f56647bc835
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 8d1a8ee3f6d5eb190fb2ee252dfb5f6c23a1cf16
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72496436"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74563770"
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Tworzenie i wdrażanie zasad ochrony aplikacji w funkcji Windows Information Protection (WIP) za pomocą usługi Intune
 
@@ -71,53 +71,51 @@ Po skonfigurowaniu usługi Intune w organizacji można utworzyć zasady dotyczą
 > Aby uzyskać powiązane informacje dotyczące tworzenia zasad funkcji WIP usługi Intune, w tym dostępnych ustawień i sposobu ich konfigurowania, zobacz [Create a Windows Information Protection (WIP) policy with MAM using the Azure portal for Microsoft Intune ](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure) (Tworzenie zasad rozwiązania Windows Information Protection (WIP) przy użyciu funkcji MAM w witrynie Azure Portal dla usługi Microsoft Intune) w bibliotece dokumentacji dotyczącej zabezpieczeń systemu Windows. 
 
 
-1. Zaloguj się do [portalu Azure](https://portal.azure.com).
-2. Wybierz pozycję **Wszystkie usługi** > **Intune**.
-3. W bloku **Microsoft Intune** wybierz pozycję **Aplikacje klienckie**.
-4. W bloku **Aplikacje klienckie** wybierz pozycję **Zasady ochrony aplikacji**.
-5. Wybierz pozycję **Dodaj zasady**, aby wyświetlić blok **Dodawanie zasad**.
-6. Dodaj następujące wartości:
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz kolejno pozycje **Aplikacje** > **Zasady ochrony aplikacji** > **Utwórz zasady**.
+3. Dodaj następujące wartości:
     - **Nazwa:** wpisz nazwę (wymaganą) dla nowych zasad.
     - **Opis:** (opcjonalnie) wpisz opis.
     - **Platforma:** wybierz **Windows 10** jako obsługiwaną platformę dla zasad ochrony aplikacji.
     - **Stan rejestracji:** wybierz **Bez rejestracji** jako stan rejestracji dla zasad.
-7. Wybierz pozycję **Utwórz**. Zasady zostaną utworzone i pojawią się w tabeli w bloku **Zasady ochrony aplikacji**.
+4. Wybierz pozycję **Utwórz**. Zasady zostaną utworzone i pojawią się w tabeli w okienku **Zasady ochrony aplikacji**.
 
 ## <a name="to-add-recommended-apps-to-your-protected-apps-list"></a>Aby dodać aplikacje zalecane do listy Chronione aplikacje
 
-1. W bloku **Microsoft Intune** wybierz pozycję **Aplikacje klienckie**.
-2. W bloku **Aplikacje klienckie** wybierz pozycję **Zasady ochrony aplikacji**.
-3. W bloku **Zasady ochrony aplikacji** wybierz zasady, które chcesz zmodyfikować. Zostanie wyświetlony blok **Ochrona aplikacji w usłudze Intune**.
-4. Z bloku **Ochrona aplikacji w usłudze Intune** wybierz pozycję **Chronione aplikacje**. Zostanie otwarty blok **Chronione aplikacje** zawierający wszystkie aplikacje, które zostały już dołączone do listy dla tych zasad ochrony aplikacji.
-5. Wybierz pozycję **Dodaj aplikacje**. W obszarze **Dodawanie aplikacji** jest wyświetlana filtrowana lista aplikacji. Lista w górnej części bloku pozwala na zmianę filtru listy.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz kolejno pozycje **Aplikacje** > **Zasady ochrony aplikacji**.
+3. W okienku **Zasady ochrony aplikacji** wybierz zasady, które chcesz zmienić. Zostanie wyświetlone okienko **Intune App Protection**.
+4. W okienku **Intune App Protection** wybierz pozycję **Chronione aplikacje**. Zostanie otwarte okienko **Chronione aplikacje** zawierające wszystkie aplikacje, które zostały już dołączone do listy dla tych zasad ochrony aplikacji.
+5. Wybierz pozycję **Dodaj aplikacje**. W obszarze **Dodawanie aplikacji** jest wyświetlana filtrowana lista aplikacji. Lista w górnej części okienka pozwala na zmianę filtru listy.
 6. Wybierz każdą aplikację, która ma mieć dostęp do danych firmowych.
-7. Kliknij przycisk **OK**. Blok **Chronione aplikacje** zostanie zaktualizowany w celu wyświetlenia wszystkich wybranych aplikacji.
+7. Kliknij przycisk **OK**. Okienko **Chronione aplikacje** zostanie zaktualizowane w celu wyświetlenia wszystkich wybranych aplikacji.
 8. Kliknij polecenie **Zapisz**.
 
 ## <a name="add-a-store-app-to-your-protected-apps-list"></a>Dodawanie aplikacji ze Sklepu do listy Chronione aplikacje
 
 **Aby dodać aplikację ze Sklepu**
-1. W bloku **Microsoft Intune** wybierz pozycję **Aplikacje klienckie**.
-2. W bloku **Aplikacje klienckie** wybierz pozycję **Zasady ochrony aplikacji**.
-3. W bloku **Zasady ochrony aplikacji** wybierz zasady, które chcesz zmodyfikować. Zostanie wyświetlony blok **Ochrona aplikacji w usłudze Intune**.
-4. Z bloku **Ochrona aplikacji w usłudze Intune** wybierz pozycję **Chronione aplikacje**. Zostanie otwarty blok **Chronione aplikacje** zawierający wszystkie aplikacje, które zostały już dołączone do listy dla tych zasad ochrony aplikacji.
-5. Wybierz pozycję **Dodaj aplikacje**. W obszarze **Dodawanie aplikacji** jest wyświetlana filtrowana lista aplikacji. Lista w górnej części bloku pozwala na zmianę filtru listy.
+
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz kolejno pozycje **Aplikacje** > **Zasady ochrony aplikacji**.
+3. W okienku **Zasady ochrony aplikacji** wybierz zasady, które chcesz zmienić. Zostanie wyświetlone okienko **Intune App Protection**.
+4. W okienku **Intune App Protection** wybierz pozycję **Chronione aplikacje**. Zostanie otwarte okienko **Chronione aplikacje** zawierające wszystkie aplikacje, które zostały już dołączone do listy dla tych zasad ochrony aplikacji.
+5. Wybierz pozycję **Dodaj aplikacje**. W obszarze **Dodawanie aplikacji** jest wyświetlana filtrowana lista aplikacji. Lista w górnej części okienka pozwala na zmianę filtru listy.
 6. Wybierz z listy pozycję **Aplikacje ze sklepu**.
 7. Wprowadź wartości w polach **Nazwa**, **Wydawca**, **Nazwa produktu** i **Akcja**. Ustaw w polu **Akcja** wartość **Zezwalaj**, aby aplikacja miała dostęp do danych firmowych.
-9. Kliknij przycisk **OK**. Blok **Chronione aplikacje** zostanie zaktualizowany w celu wyświetlenia wszystkich wybranych aplikacji.
+9. Kliknij przycisk **OK**. Okienko **Chronione aplikacje** zostanie zaktualizowane w celu wyświetlenia wszystkich wybranych aplikacji.
 10. Kliknij polecenie **Zapisz**.
 
 ## <a name="add-a-desktop-app-to-your-protected-apps-list"></a>Dodawanie aplikacji klasycznej do listy Chronione aplikacje
 
 **Aby dodać aplikację klasyczną**
-1. W bloku **Microsoft Intune** wybierz pozycję **Aplikacje klienckie**.
-2. W bloku **Aplikacje klienckie** wybierz pozycję **Zasady ochrony aplikacji**.
-3. W bloku **Zasady ochrony aplikacji** wybierz zasady, które chcesz zmodyfikować. Zostanie wyświetlony blok **Ochrona aplikacji w usłudze Intune**.
-4. Z bloku **Ochrona aplikacji w usłudze Intune** wybierz pozycję **Chronione aplikacje**. Zostanie otwarty blok **Chronione aplikacje** zawierający wszystkie aplikacje, które zostały już dołączone do listy dla tych zasad ochrony aplikacji.
-5. Wybierz pozycję **Dodaj aplikacje**. W obszarze **Dodawanie aplikacji** jest wyświetlana filtrowana lista aplikacji. Lista w górnej części bloku pozwala na zmianę filtru listy.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz kolejno pozycje **Aplikacje** > **Zasady ochrony aplikacji**.
+3. W okienku **Zasady ochrony aplikacji** wybierz zasady, które chcesz zmienić. Zostanie wyświetlone okienko **Intune App Protection**.
+4. W okienku **Intune App Protection** wybierz pozycję **Chronione aplikacje**. Zostanie otwarte okienko **Chronione aplikacje** zawierające wszystkie aplikacje, które zostały już dołączone do listy dla tych zasad ochrony aplikacji.
+5. Wybierz pozycję **Dodaj aplikacje**. W obszarze **Dodawanie aplikacji** jest wyświetlana filtrowana lista aplikacji. Lista w górnej części okienka pozwala na zmianę filtru listy.
 6. Wybierz z listy pozycję **Aplikacje klasyczne**.
 7. Wprowadź wartości w polach **Nazwa**, **Wydawca**, **Nazwa produktu**, **Plik**, **Minimalna wersja**, **Maksymalna wersja** i **Akcja**. Ustaw w polu **Akcja** wartość **Zezwalaj**, aby aplikacja miała dostęp do danych firmowych.
-9. Kliknij przycisk **OK**. Blok **Chronione aplikacje** zostanie zaktualizowany w celu wyświetlenia wszystkich wybranych aplikacji.
+9. Kliknij przycisk **OK**. Okienko **Chronione aplikacje** zostanie zaktualizowane w celu wyświetlenia wszystkich wybranych aplikacji.
 10. Kliknij polecenie **Zapisz**.
 
 ## <a name="wip-learning"></a>Uczenie funkcji WIP
@@ -150,7 +148,7 @@ Po wyłączeniu funkcji WIP zostanie podjęta próba odszyfrowania wszystkich pl
 
 ### <a name="add-a-protection-mode"></a>Dodawanie trybu ochrony
 
-1. W bloku **Zasady aplikacji** wybierz nazwę swoich zasad, a następnie wybierz pozycję **Wymagane ustawienia**.
+1. W okienku **Zasady aplikacji** wybierz nazwę swoich zasad, a następnie wybierz pozycję **Wymagane ustawienia**.
 
     ![Zrzut ekranu przedstawiający okienko trybu uczenia](./media/windows-information-protection-policy-create/learning-mode-sc1.png)
 
@@ -160,7 +158,7 @@ Po wyłączeniu funkcji WIP zostanie podjęta próba odszyfrowania wszystkich pl
 
 1. Otwórz [witrynę Azure Portal](https://portal.azure.com). Wybierz pozycję **Wszystkie usługi**. Wpisz **Intune** w polu tekstowym filtru.
 
-3. Wybierz pozycję **Intune** > **Aplikacje klienckie**.
+3. Wybierz kolejno pozycje **Intune** > **Aplikacje**.
 
 4. Wybierz pozycje **Stan ochrony aplikacji** > **Raporty** > **Windows Information Protection — nauka**.  
 
@@ -188,9 +186,9 @@ Oprócz ustawienia opcji **Zezwalaj indeksatorowi programu Windows Search na wys
 
 Po utworzeniu zasad ochrony aplikacji w funkcji WIP trzeba je wdrożyć do organizacji przy użyciu funkcji MAM.
 
-1. W bloku **Zasady aplikacji** wybierz swoje nowo utworzone zasady ochrony aplikacji i wybierz pozycje **Grupy użytkowników** > **Dodaj grupę użytkowników**.
+1. W okienku **Zasady aplikacji** wybierz swoje nowo utworzone zasady ochrony aplikacji i wybierz pozycje **Grupy użytkowników** > **Dodaj grupę użytkowników**.
 
-    Lista grup użytkowników zawierająca wszystkie grupy zabezpieczeń w usłudze Azure Active Directory zostanie otwarta w bloku **Dodaj grupę użytkowników**.
+    Lista grup użytkowników zawierająca wszystkie grupy zabezpieczeń w usłudze Azure Active Directory zostanie otwarta w okienku **Dodaj grupę użytkowników**.
 
 2. Wybierz grupę, do której mają się odnosić zasady, a następnie wybierz pozycję **Wybierz**, aby wdrożyć zasady.
 

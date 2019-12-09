@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8519ad00024be43371cd118e3f37ae2fbc57898b
-ms.sourcegitcommit: 25acfc88b366d2da71c37d354a0238e4f1168325
+ms.openlocfilehash: eff4ccdc8b40da4d72394001b88446653ff71bd0
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72813364"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564243"
 ---
 # <a name="intune-discovered-apps"></a>Aplikacje odnalezione przez usługę Intune
 
@@ -33,18 +33,18 @@ ms.locfileid: "72813364"
 
 Usługa Intune udostępnia zagregowaną listę aplikacji wykrytych na urządzeniach zarejestrowanych w usłudze Intune w Twojej dzierżawie.
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. W okienku **Intune** wybierz pozycję **Aplikacje klienckie** > **Odnalezione aplikacje**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz kolejno pozycje **Aplikacje** > **Monitorowanie** > **Odnalezione aplikacje**.
 
 >[!NOTE]
->Listę odnalezionych aplikacji można wyeksportować do pliku CSV, wybierając pozycję **Eksportuj** w bloku **Odnalezione aplikacje**.
+>Listę odnalezionych aplikacji można wyeksportować do pliku CSV, wybierając pozycję **Eksportuj** w okienku **Odnalezione aplikacje**.
 >
 >W przypadku odnalezionych aplikacji Win32 obecnie nie jest dostępna liczba zagregowana. Ten typ danych można wyświetlać tylko dla poszczególnych urządzeń.
 
 Usługa Intune udostępnia również listę odnalezionych aplikacji dla poszczególnych urządzeń w dzierżawie.
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. W okienku usługi Intune wybierz pozycje **Urządzenia** > **Wszystkie urządzenia**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz pozycję **Urządzenia** > **Wszystkie urządzenia**.
 3. Wybierz urządzenie.
 4. Aby wyświetlić wykryte aplikacje dla tego urządzenia, wybierz pozycję **Odnalezione aplikacje** w sekcji **Monitoruj**.
 
@@ -69,7 +69,7 @@ Poniższa lista zawiera następujące informacje: typ platformy aplikacji, aplik
 
 Liczba wykrytych aplikacji może być niezgodna z liczbą stanu instalacji aplikacji. Możliwe przyczyny niespójności to:
 
-- Ukierunkowana zmiana zainstalowanej aplikacji zarządzanej może spowodować spadek liczby instalacji w bloku stanu, ale będzie nadal zgłaszana w wykrytych aplikacjach.
+- Ukierunkowana zmiana zainstalowanej aplikacji zarządzanej może spowodować spadek liczby instalacji w okienku stanu, ale będzie nadal zgłaszana w wykrytych aplikacjach.
 - Przeznaczenie tej samej aplikacji dla wielu wystąpień w dzierżawie spowoduje wygenerowanie różnych liczników z powodu potencjalnego nakładania się użytkowników lub urządzeń. W każdym wystąpieniu aplikacji będą liczeni nakładający się użytkownicy, ale odnalezione aplikacje będą mieć powielone liczby.
 - Odnalezione aplikacje i stan aplikacji są zbierane w różnych przedziałach czasowych, które mogą spowodować rozbieżności liczby aplikacji.
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/23/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e97e88ad78e1b914543b7fa283f47863dce185fc
-ms.sourcegitcommit: 25acfc88b366d2da71c37d354a0238e4f1168325
+ms.openlocfilehash: e86aeb3191c1cfdf2fc9dfab3a4474327b3fbb06
+ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72813481"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564211"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>Konfigurowanie aplikacji Microsoft Managed Home Screen dla rozwiązania Android Enterprise
 
@@ -31,12 +31,12 @@ Managed Home Screen to aplikacja używana dla należących do firmy dedykowanych
 
 ## <a name="when-to-configure-the-microsoft-managed-home-screen-app"></a>Kiedy należy skonfigurować aplikację Microsoft Managed Home Screen
 
-Zazwyczaj, jeśli ustawienia są dostępne za pośrednictwem konfiguracji urządzenia, należy je konfigurować tam. W ten sposób oszczędza się czas, minimalizuje liczbę błędów i uzyskuje lepsze wsparcie ze strony usługi Intune. Jednak niektóre ustawienia aplikacji Managed Home Screen są obecnie dostępne wyłącznie za pośrednictwem bloku **Zasady konfiguracji aplikacji** w konsoli usługi Intune. Z tego dokumentu dowiesz się, jak skonfigurować różne ustawienia przy użyciu projektanta konfiguracji albo skryptu JSON. 
+Zazwyczaj, jeśli ustawienia są dostępne za pośrednictwem konfiguracji urządzenia, należy je konfigurować tam. W ten sposób oszczędza się czas, minimalizuje liczbę błędów i uzyskuje lepsze wsparcie ze strony usługi Intune. Jednak niektóre ustawienia aplikacji Managed Home Screen są obecnie dostępne wyłącznie za pośrednictwem okienka **Zasady konfiguracji aplikacji** w konsoli usługi Intune. Z tego dokumentu dowiesz się, jak skonfigurować różne ustawienia przy użyciu projektanta konfiguracji albo skryptu JSON. 
 
 > [!NOTE]
-> Obecnie jest możliwe (i zalecane) ustawianie dozwolonych aplikacji i przypiętych linków internetowych za pośrednictwem pozycji **Aplikacje klienckie** i **Konfiguracja urządzenia**. Aby uzyskać pełną listę ustawień dostępnych w pozycji **Konfiguracja urządzenia** i mających wpływ na aplikację Managed Home Screen, zobacz [Ustawienia dedykowanego urządzenia](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings).  
+> Obecnie jest możliwe (i zalecane) ustawianie dozwolonych aplikacji i przypiętych linków internetowych za pośrednictwem pozycji **Aplikacje** i **Konfiguracja urządzenia**. Aby uzyskać pełną listę ustawień dostępnych w pozycji **Konfiguracja urządzenia** i mających wpływ na aplikację Managed Home Screen, zobacz [Ustawienia dedykowanego urządzenia](../configuration/device-restrictions-android-for-work.md#dedicated-device-settings).  
 
-Po pierwsze przejdź do konsoli usługi Intune w witrynie Azure Portal, a następnie przejdź do pozycji **Aplikacje klienckie** > **Zasady konfiguracji aplikacji**. Dodaj zasady konfiguracji dla **urządzeń zarządzanych** z systemem **Android**, a następnie wybierz pozycję **Managed Home Screen** jako skojarzoną aplikację. Kliknij pozycję **Ustawienia konfiguracji**, aby skonfigurować różne dostępne ustawienia aplikacji Managed Home Screen. 
+Najpierw przejdź do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) i wybierz kolejno pozycje **Aplikacje** > **Zasady konfiguracji aplikacji**. Dodaj zasady konfiguracji dla **urządzeń zarządzanych** z systemem **Android**, a następnie wybierz pozycję **Managed Home Screen** jako skojarzoną aplikację. Kliknij pozycję **Ustawienia konfiguracji**, aby skonfigurować różne dostępne ustawienia aplikacji Managed Home Screen. 
 
 ## <a name="choosing-a-configuration-settings-format"></a>Wybieranie formatu ustawień konfiguracji
 
