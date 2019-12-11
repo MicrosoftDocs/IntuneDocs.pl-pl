@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 2c61449e17b96151d2717365e5193fd6c4bdaae3
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72509896"
 ---
 # <a name="quickstart-create-and-assign-a-custom-role"></a>Szybki start: Utworzenie i przypisanie roli niestandardowej
@@ -74,7 +74,7 @@ Jeśli nie chcesz już używać nowej roli niestandardowej, możesz ją usunąć
 
 W tym przewodniku Szybki start utworzono rolę niestandardową do operacji zabezpieczeń i przypisano ją grupie. Aby uzyskać więcej informacji na temat ról w usłudze Intune, zobacz [Kontrola administracji opartej na rolach (RBAC) przy użyciu usługi Microsoft Intune](role-based-access-control.md)
 
-Aby zapoznać się kolejnymi przewodnikami Szybki start dotyczącymi usługi Intune, przejdź do kolejnego przewodnika Szybki start.
+Aby zapoznać się z kolejnymi przewodnikami Szybki start dotyczącymi usługi Intune, przejdź do kolejnego przewodnika Szybki start.
 
 > [!div class="nextstepaction"]
 > [Szybki start: Tworzenie profilu poczty e-mail urządzenia dla systemu iOS](../configuration/quickstart-email-profile.md)

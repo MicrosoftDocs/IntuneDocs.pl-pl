@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d73cc367e6c3308b34c2d2dd14c9fed94d80ba74
-ms.sourcegitcommit: 25acfc88b366d2da71c37d354a0238e4f1168325
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72813405"
 ---
 # <a name="quickstart-create-a-group-to-manage-users"></a>Szybki start: tworzenie grupy do zarządzania użytkownikami
@@ -63,7 +63,7 @@ Po pomyślnym utworzeniu grupy zostanie ona wyświetlona na liście **Wszystkie 
 
 W tym przewodniku Szybki start utworzono za pomocą usługi Intune grupę na podstawie istniejącego użytkownika. Aby uzyskać więcej informacji na temat dodawania grup do usługi Intune, zobacz [Dodawanie grup w celu zorganizowania użytkowników i urządzeń](../groups-add.md).
 
-Aby zapoznać się kolejnymi przewodnikami Szybki start dotyczącymi usługi Intune, przejdź do kolejnego przewodnika Szybki start.
+Aby zapoznać się z kolejnymi przewodnikami Szybki start dotyczącymi usługi Intune, przejdź do kolejnego przewodnika Szybki start.
 
 > [!div class="nextstepaction"]
 > [Szybki start: konfigurowanie automatycznego rejestrowania urządzeń z systemem Windows 10](../enrollment/quickstart-setup-auto-enrollment.md)

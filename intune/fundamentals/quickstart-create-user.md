@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 75a875fc3ff11eb1e3befad425c16a710544f781
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72509878"
 ---
 # <a name="quickstart-create-a-user-in-intune-and-assign-them-a-license"></a>Szybki start: Tworzenie użytkownika w usłudze Intune i przypisywanie do niego licencji
@@ -74,7 +74,7 @@ Jeśli już nie potrzebujesz tego użytkownika, możesz go usunąć, przechodzą
 
 W tym przewodniku Szybki start utworzono użytkownika i przypisano do niego licencję usługi Intune. Aby uzyskać więcej informacji na temat dodawania użytkowników do usługi Intune, zobacz [Dodawanie użytkowników i przyznawanie uprawnień administracyjnych do usługi Intune](users-add.md).
 
-Aby zapoznać się kolejnymi przewodnikami Szybki start dotyczącymi usługi Intune, przejdź do kolejnego przewodnika Szybki start.
+Aby zapoznać się z kolejnymi przewodnikami Szybki start dotyczącymi usługi Intune, przejdź do kolejnego przewodnika Szybki start.
 
 > [!div class="nextstepaction"]
 > [Szybki start: Tworzenie grupy do zarządzania użytkownikami](../quickstart-create-group.md)

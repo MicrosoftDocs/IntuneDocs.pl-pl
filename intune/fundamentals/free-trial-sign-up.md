@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b1264f5113ded280ed9d5cb9b9d4ece8e0187fe7
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72502871"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Szybki start: bezpłatna wersja próbna usługi Microsoft Intune
@@ -117,7 +117,7 @@ Jak wspomniano powyżej, jeśli organizacja ma własną domenę niestandardową,
    ![Zrzut ekranu przedstawiający centrum administracyjne platformy Microsoft 365 — weryfikowanie domeny](./media/free-trial-sign-up/domain-custom-verify.png)
 
    > [!NOTE]
-   > Aby uzyskać szczegółowe informacje dotyczące weryfikowania za pomocą rekordu TXT, zobacz [Create DNS records at any DNS hosting provider for Office 365](https://support.office.com/article/Create-DNS-records-at-any-DNS-hosting-provider-for-Office-365-7B7B075D-79F9-4E37-8A9E-FB60C1D95166) (Tworzenie rekordów DNS u dowolnego dostawcy hostingu DNS dla usługi Office 365).
+   > Aby uzyskać szczegółowe informacje dotyczące weryfikowania za pomocą rekordu TXT, zobacz [Tworzenie rekordów DNS u dowolnego dostawcy hostingu DNS dla usługi Office 365](https://support.office.com/article/Create-DNS-records-at-any-DNS-hosting-provider-for-Office-365-7B7B075D-79F9-4E37-8A9E-FB60C1D95166).
 
 ## <a name="admin-experiences"></a>Środowiska pracy administratora
 

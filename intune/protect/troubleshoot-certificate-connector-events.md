@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 2d9556cc0357e76ee617ac0770a3efc2e3a1957f
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72508870"
 ---
 # <a name="intune-certificate-connector-events-and-diagnostic-codes"></a>Zdarzenia łącznika certyfikatów usługi Intune i kody diagnostyczne
@@ -53,7 +53,7 @@ Począwszy od wersji 6.1806.x.x, usługa łącznika Intune rejestruje zdarzenia 
 | 20501 | CRPVerifyMetric_Warning  | Punkt rejestracji certyfikatu został ukończony, ale żądanie zostało odrzucone. Aby uzyskać więcej informacji, wyświetl kod diagnostyczny i komunikat. | 0x00000000, 0x00000411, 0x0FFFFFFF |
 | 20502 | CRPVerifyMetric_Failure  | Zweryfikowanie wezwania klienta przez punkt rejestracji certyfikatu nie powiodło się. Aby uzyskać więcej informacji, wyświetl kod diagnostyczny i komunikat. Wyświetl szczegóły komunikatu zdarzeń dla identyfikatora urządzenia odpowiadającego wezwaniu. | 0x00000000, 0x00000408, 0x00000409, 0x00000410, 0x0FFFFFFF |
 | 20600 | CRPNotifyMetric_Success  | Punkt rejestracji certyfikatu pomyślnie ukończył proces powiadamiania i wysłał certyfikat na urządzenie klienckie. | 0x00000000, 0x0FFFFFFF |
-| 20602 | CRPNotifyMetric_Failure  | Ukończenie procesu powiadamiania przez punkt rejestracji certyfikatu nie powiodło się. Aby uzyskać informacji dotyczące żądania, zobacz szczegóły komunikatu o zdarzeniu. Sprawdź połączenie między serwerem usługi NDES i urzędem certyfikacji. | 0x00000000, 0x0FFFFFFF |
+| 20602 | CRPNotifyMetric_Failure  | Ukończenie procesu powiadamiania przez punkt rejestracji certyfikatu nie powiodło się. Aby uzyskać informacje dotyczące żądania, zobacz szczegóły komunikatu o zdarzeniu. Sprawdź połączenie między serwerem usługi NDES i urzędem certyfikacji. | 0x00000000, 0x0FFFFFFF |
 
 ## <a name="diagnostic-codes"></a>Kody diagnostyczne
 
