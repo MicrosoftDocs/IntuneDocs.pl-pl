@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: af1c7d1f9d8236fd95413317acefbe8887d90f47
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72507668"
 ---
 # <a name="device-encrypted-but-apps-say-otherwise"></a>Urządzenie zaszyfrowane, ale aplikacje mówią inaczej
@@ -32,7 +32,7 @@ Jeśli Portal firmy lub aplikacja Microsoft Intunea mówi, że urządzenie nie j
 
 ## <a name="add-a-startup-pin"></a>Dodaj numer PIN uruchomienia
 
-Aby zagwarantować bezpieczeństwo urządzenia, niektóre urządzenia z systemem Android wymagają utworzenia numeru PIN uruchomienia. Lokalizacja tego ustawienia będzie znajdować się w aplikacji **ustawień** urządzenia. Nazwa i lokalizacja ustawienia mogą się różnić. Na przykład w przypadku urządzeń z systemem Samsung Galaxy S7 ustawienie to jest nazywane **bezpiecznym uruchamianiem**. Aby włączyć tę funkcję i utworzyć kod dostępu, przejdź do pozycji **Ustawienia** ,  > **Zablokuj ekran i zabezpieczenia**  > **bezpiecznego uruchamiania**.  
+Aby zagwarantować bezpieczeństwo urządzenia, niektóre urządzenia z systemem Android wymagają utworzenia numeru PIN uruchomienia. Lokalizacja tego ustawienia będzie znajdować się w aplikacji **ustawień** urządzenia. Nazwa i lokalizacja ustawienia mogą się różnić. Na przykład w przypadku urządzeń z systemem Samsung Galaxy S7 ustawienie to jest nazywane **bezpiecznym uruchamianiem**. Aby włączyć tę funkcję i utworzyć kod dostępu, przejdź do pozycji **Ustawienia** , > **Zablokuj ekran i zabezpieczenia** > **bezpiecznego uruchamiania**.  
 
 ## <a name="encrypt-the-entire-device"></a>Zaszyfruj całe urządzenie
 

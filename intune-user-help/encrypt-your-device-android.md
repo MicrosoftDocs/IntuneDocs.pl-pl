@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d2965d6a017d92bd4535a29a2257c0cac5e6deaf
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72506365"
 ---
 # <a name="encrypting-your-android-device"></a>Szyfrowanie urządzenia z systemem Android
@@ -45,7 +45,7 @@ Jeśli Portal firmy lub aplikacja Microsoft Intune poprosi Cię o zaszyfrowanie 
     c. Postępuj zgodnie z instrukcjami na ekranie, aby skonfigurować blokadę ekranu.  
 
 2. Wróć do **ekranu blokady i zabezpieczeń** , a następnie wybierz pozycję **bezpieczne uruchamianie**.
-3. Wybierz pozycję **Wymagaj numeru PIN po włączeniu urządzenia**  > **OK**.
+3. Wybierz pozycję **Wymagaj numeru PIN po włączeniu urządzenia** > **OK**.
 4. Wprowadź numer PIN, aby potwierdzić i zaszyfrować urządzenie.
 5. Otwórz aplikację Portal firmy lub Microsoft Intune.
     * Użytkownicy aplikacji Portal firmy: wybierz urządzenie i wybierz pozycję **Sprawdź ustawienia urządzenia**. 
@@ -53,9 +53,9 @@ Jeśli Portal firmy lub aplikacja Microsoft Intune poprosi Cię o zaszyfrowanie 
 
 W przypadku urządzeń z systemem Android 4,4 i wcześniejszymi może nie być dostępna opcja **bezpiecznego uruchamiania** . W takim przypadku wykonaj następujące kroki, aby zaszyfrować urządzenie.
 
-1. Przejdź do pozycji **ustawienia**  > **zabezpieczenia**  > **szyfrowanie urządzenia**. Etykiety na ekranie różnią się w zależności od urządzeń z systemem Android. Jeśli nie widzisz opcji **Szyfruj urządzenie** , Zaewidencjonuj:
-    * **Szyfrowanie magazynu** ** >  Storage**
-    *  > **ustawień zabezpieczeń** **magazynu** >  **i zabezpieczeń** 
+1. Przejdź do pozycji **ustawienia** > **zabezpieczenia** > **szyfrowanie urządzenia**. Etykiety na ekranie różnią się w zależności od urządzeń z systemem Android. Jeśli nie widzisz opcji **Szyfruj urządzenie** , Zaewidencjonuj:
+    * **Szyfrowanie magazynu** ** > Storage**
+    *  > **ustawień zabezpieczeń** > **magazynu** **i zabezpieczeń** 
 
 2. Wykonaj instrukcje wyświetlane na ekranie. Podczas szyfrowania urządzenie może być kilka razy ponownie uruchamiane.
 3. Otwórz aplikację Portal firmy lub Microsoft Intune.

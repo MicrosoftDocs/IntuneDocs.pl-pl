@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 52fb1ea5077b424a1d3cf10812d8d9b5f79e4752
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: e45d51feb91e0e188971133185ac0f0f13e5b1f4
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059812"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74781145"
 ---
 # <a name="add-vpn-settings-on-ios-devices-in-microsoft-intune"></a>Konfigurowanie ustawień sieci VPN na urządzeniach z systemem iOS w usłudze Microsoft Intune
 
@@ -106,7 +106,7 @@ Ustawienia wymienione na poniższej liście są określane przez wybrany typ po�
 
 ## <a name="ikev2-settings"></a>Ustawienia protokołu IKEv2
 
-Te ustawienia są stosowane w przypadku wybrania opcji **Typ połączenia**  > **IKEv2**.
+Te ustawienia są stosowane w przypadku wybrania opcji **Typ połączenia** > **IKEv2**.
 
 - **Identyfikator zdalny**: wprowadź adres IP sieci, nazwę FQDN, USERFQDN lub ASN1DN serwera IKEv2. Na przykład wprowadź adres `10.0.0.3` lub `vpn.contoso.com`. Zazwyczaj wprowadza się taką samą wartość jak [**Nazwa połączenia**](#base-vpn-settings) (w tym artykule). Jest to jednak zależne od ustawień serwera IKEv2.
 
@@ -136,8 +136,8 @@ Te ustawienia są stosowane w przypadku wybrania opcji **Typ połączenia**  > *
   - **Średni** (domyślnie): wysyła komunikat o utrzymywaniu aktywności co 10 minut.
   - **Wysoki**: wysyła komunikat o utrzymywaniu aktywności co 60 sekund.
 
-- **Minimalny zakres wersji protokołu TLS**: wprowadź minimalną wersję protokołu TLS do użycia. Wprowadź `1.0`, `1.1` lub `1.2`. Jeśli pole pozostanie puste, zostanie użyta wartość domyślna `1.0`.
-- **Maksymalny zakres wersji protokołu TLS**: wprowadź maksymalną wersję protokołu TLS do użycia. Wprowadź `1.0`, `1.1` lub `1.2`. Jeśli pole pozostanie puste, zostanie użyta wartość domyślna `1.2`.
+- **Minimalny zakres wersji protokołu TLS**: wprowadź minimalną wersję protokołu TLS do użycia. Wprowadź `1.0`, `1.1`lub `1.2`. Jeśli pole pozostanie puste, zostanie użyta wartość domyślna `1.0`.
+- **Maksymalny zakres wersji protokołu TLS**: wprowadź maksymalną wersję protokołu TLS do użycia. Wprowadź `1.0`, `1.1`lub `1.2`. Jeśli pole pozostanie puste, zostanie użyta wartość domyślna `1.2`.
 - **Doskonałe utajnienie przekazywania**: wybierz pozycję **Włącz** , aby włączyć doskonałe utajnienie przekazywania (PFS). Doskonałe utajnienie przekazywania to funkcja zabezpieczeń IP, która zmniejsza wpływ na złamanie klucza sesji. Wartość **Wyłącz** (domyślnie) nie używa PFS.
 - **Sprawdzanie odwołania certyfikatu**: wybierz pozycję **Włącz** , aby upewnić się, że certyfikaty nie zostały odwołane przed pomyślnym nawiązaniem połączenia z siecią VPN. To sprawdzenie jest najlepszym nakładem pracy. Jeśli serwer sieci VPN przeprowadził limit czasu przed ustaleniem, czy certyfikat został odwołany, dostęp jest udzielany. Wartość **Wyłącz** (domyślnie) nie sprawdza odwołanych certyfikatów.
 
@@ -179,7 +179,7 @@ Te ustawienia są stosowane w przypadku wybrania opcji **Typ połączenia**  > *
 
 ## <a name="automatic-vpn-settings"></a>Ustawienia automatycznego połączenia VPN
 
-- **Sieć VPN dla aplikacji**: włącza sieć VPN dla aplikacji. Umożliwia automatyczne wyzwalanie połączenia sieci VPN po otworzeniu konkretnych aplikacji. Ponadto skojarz aplikacje z tym profilem sieci VPN. Aby uzyskać więcej informacji, zapoznaj się z [instrukcjami dotyczącymi konfigurowania sieci VPN dla aplikacji w systemie iOS](vpn-setting-configure-per-app.md).
+- **Sieć VPN dla aplikacji**: włącza sieć VPN dla aplikacji. Umożliwia automatyczne wyzwalanie połączenia sieci VPN po otworzeniu konkretnych aplikacji. Ponadto skojarz aplikacje z tym profilem sieci VPN. Sieć VPN dla aplikacji nie jest obsługiwana w przypadku protokołu IKEv2. Aby uzyskać więcej informacji, zapoznaj się z [instrukcjami dotyczącymi konfigurowania sieci VPN dla aplikacji w systemie iOS](vpn-setting-configure-per-app.md). 
   - **Typ dostawcy**: dostępne tylko dla połączenia Pulse Secure i niestandardowej sieci VPN.
   - Podczas korzystania z profilów **Sieć VPN dla aplikacji** w systemie iOS przy użyciu typu połączenia Pulse Secure lub niestandardowej sieci VPN wybierz tunelowanie w warstwie aplikacji (app-proxy) lub tunelowanie w warstwie pakietów (packet-tunnel). Ustaw opcję **Typ dostawcy** na wartość **app-proxy** w celu tunelowania w warstwie aplikacji lub **packet-tunnel** w celu tunelowania w warstwie pakietów. Jeśli nie masz pewności, której wartości użyć, zapoznaj się z dokumentacją dostawcy sieci VPN.
   - **Adresy URL przeglądarki Safari wyzwalające tę sieć VPN**: dodaj jeden lub wiele adresów URL witryn internetowych. Gdy te adresy URL zostaną otwarte za pomocą przeglądarki Safari na urządzeniu, połączenie sieci VPN zostanie nawiązane automatycznie.

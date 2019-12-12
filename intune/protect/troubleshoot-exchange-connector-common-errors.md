@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b30a7e843850d6918abc2e76f84397a1f197516f
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72508863"
 ---
 # <a name="resolve-common-errors-for-the-intune-exchange-connector"></a>Rozwiązywanie typowych błędów dla programu Intune Exchange Connector
@@ -77,7 +77,7 @@ Podczas próby skonfigurowania Microsoft Intune Exchange Connector zostanie wyś
    Verify that you are connected to the Internet, check the Microsoft Intune Service Status, and try to connect again.  
    Error code: 0x00000006  
 ```  
-Ten błąd może wystąpić, jeśli serwer proxy jest używany do łączenia się z Internetem i blokuje ruch do usługi Intune. Aby określić, czy serwer proxy jest używany, przejdź do **Panelu sterowania** ,  > **Opcje internetowe**, wybierz kartę **połączenie** , a następnie kliknij przycisk **Ustawienia sieci LAN**.
+Ten błąd może wystąpić, jeśli serwer proxy jest używany do łączenia się z Internetem i blokuje ruch do usługi Intune. Aby określić, czy serwer proxy jest używany, przejdź do **Panelu sterowania** , > **Opcje internetowe**, wybierz kartę **połączenie** , a następnie kliknij przycisk **Ustawienia sieci LAN**.
 
 **Rozwiązanie**:  
 
@@ -126,17 +126,17 @@ Nie można zarejestrować urządzenia z systemem iOS w usłudze Intune i wygener
 Ten problem może wystąpić, jeśli konto **WIEC_User** nie ma prawa użytkownika **Logowanie jako usługa** do zasad lokalnych.
 
 **Rozwiązanie**:  
-Na komputerze z uruchomionym programem Intune Exchange Connector Przypisz uprawnienie **Logowanie jako użytkownik usługi** do konta usługi **WIEC_User** . Jeśli komputer jest węzłem w klastrze, upewnij się, że do konta usługi klastra na wszystkich węzłach w klastrze jest przypisane uprawnienie *Logowanie jako użytkownik usługi* .  
+Na komputerze z uruchomionym programem Intune Exchange Connector Przypisz uprawnienie **Zaloguj się jako użytkownik usługi** do konta usługi **WIEC_User** . Jeśli komputer jest węzłem w klastrze, upewnij się, że do konta usługi klastra na wszystkich węzłach w klastrze jest przypisane uprawnienie *Logowanie jako użytkownik usługi* .  
 
 Aby przypisać użytkownikowi **Logowanie się jako użytkownik usługi** do konta usługi **WIEC_User** na komputerze, wykonaj następujące kroki:
 
 1. Zaloguj się na komputerze jako administrator lub członek grupy Administratorzy.
 2. Uruchom **secpol. msc** , aby otworzyć zasady zabezpieczeń lokalnych.
-3. Przejdź do pozycji **Ustawienia zabezpieczeń**  > **Zasady lokalne**, a następnie wybierz pozycję **Przypisywanie praw użytkownika**.
+3. Przejdź do pozycji **Ustawienia zabezpieczeń** > **Zasady lokalne**, a następnie wybierz pozycję **Przypisywanie praw użytkownika**.
 4. W prawym okienku kliknij dwukrotnie pozycję **Zaloguj się jako usługa**.
 5. Wybierz pozycję **Dodaj użytkownika lub grupę**, Dodaj **WIEC_USER** do zasad, a następnie kliknij przycisk **OK** dwa razy.
 
-Jeśli uprawnienie **Zaloguj się jako użytkownik usługi** zostało przypisane do **WIEC_User** , ale zostało później usunięte, skontaktuj się z administratorem domeny, aby określić, czy ustawienie zasady grupy zastąpiło jego zastąpienie.  
+Jeśli uprawnienie **Zaloguj się jako użytkownik usługi** zostało przypisane do **WIEC_User** ale zostało później usunięte, skontaktuj się z administratorem domeny, aby określić, czy ustawienie zasady grupy zastąpiło jego zastąpienie.  
 
 ## <a name="next-steps"></a>Następne kroki  
 

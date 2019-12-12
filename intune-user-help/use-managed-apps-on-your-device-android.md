@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/19/2019
+ms.date: 12/03/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,12 +19,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 24d4193b3e43b7c406a1fb6c9c8d987caa6cbeea
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 28ba1d2d50f366e5e34fae06ae188293dd0fb8b5
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72501884"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74781213"
 ---
 # <a name="use-managed-apps-on-your-android-device"></a>Korzystanie z aplikacji zarządzanych na urządzeniu z systemem Android
 Aplikacje zarządzane są konfigurowane tak, aby spełniały wymagania organizacji dotyczące bezpieczeństwa oraz chroniły dane służbowe. Te aplikacje są udostępniane w urządzeniu z możliwością automatycznego instalowania lub używania. 
@@ -39,9 +39,7 @@ Aby zmaksymalizować ochronę danych, organizacja może skonfigurować kilka apl
 Organizacje mogą wymagać używania aplikacji zarządzanej do wykonania określonego zadania, takiego jak otwieranie pliku służbowego lub uzyskiwanie dostępu do linku internetowego. Jeśli nie masz aplikacji, kontynuowanie zadania może okazać się niemożliwe. Niektóre aplikacje zarządzane są udostępniane do zainstalowania, ale nie są wymagane.
 
 ## <a name="how-do-i-know-im-using-a-managed-app"></a>Jak mogę sprawdzić, czy używam aplikacji zarządzanej?
-Gdy po raz pierwszy uzyskujesz dostęp do danych służbowych w aplikacji zarządzanej, jest wyświetlany komunikat podobny do poniższego przykładowego zrzutu ekranu. Komunikat zawiera monit o ponowne uruchomienie aplikacji przed kontynuowaniem.
-
-![Zrzut ekranu przedstawiający komunikat wyświetlany, gdy użytkownik otwiera aplikację zarządzaną w urządzeniu. Komunikat to: „Twoja organizacja nie chroni teraz danych w tej aplikacji. Aby kontynuować, musisz ponownie uruchomić aplikację”. Pod komunikatem znajduje się przycisk OK.](./media/managed-apps-message.png)
+Gdy użytkownik próbuje uzyskać dostęp do danych służbowych w aplikacji zarządzanej, zostanie wyświetlony komunikat na ekranie, że aplikacja jest chroniona przez organizację. 
 
 ## <a name="commonly-managed-apps"></a>Popularne aplikacje zarządzane  
 Oto przykładowe często wymagane lub dostępne aplikacje zarządzane w miejscach pracy i nauki:

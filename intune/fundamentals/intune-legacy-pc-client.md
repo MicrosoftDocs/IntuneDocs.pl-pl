@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 5ab1be3d34d52e824d1ff06124e28206fb7b07a1
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72510191"
 ---
 # <a name="intune-on-azure-console-and-legacy-intune-pc-client"></a>Usługa Intune w konsoli platformy Azure i starszej wersji klienta usługi Intune
@@ -63,7 +63,7 @@ Aby uzyskać szczegółowe porównanie możliwości klienta i funkcji zarządzan
 Aby przełączyć się z zarządzania urządzeniami z systemem Windows 10 za pomocą klienta usługi Intune na zarządzanie za pomocą funkcji MDM, wykonaj następujące kroki:
 
 1. W konsoli programu Silverlight wykonaj **Selektywne czyszczenie**, aby wyrejestrować urządzenia z klienta.
-  ![Warning menu podręczne z wybranym przyciskiem opcji "selektywne czyszczenie urządzenia" ](./media/intune-legacy-pc-client/image02.png)
+  ![okno podręczne ostrzeżenia z wybranym przyciskiem opcji "selektywne czyszczenie urządzenia"](./media/intune-legacy-pc-client/image02.png)
 2. Zarejestruj ponownie urządzenie przy użyciu [funkcji zarządzania urządzeniami mobilnymi (i/lub dołączenia do usługi Azure AD)](../enrollment/windows-enroll.md).
 
 ## <a name="next-steps"></a>Następne kroki

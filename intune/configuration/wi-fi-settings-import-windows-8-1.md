@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 40569af35a812074cc62546e3f85929416202b3b
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72506432"
 ---
 # <a name="import-wi-fi-settings-for-windows-devices-in-intune"></a>Importowanie ustawień sieci Wi-Fi dla urządzeń z systemem Windows w usłudze Intune
@@ -28,7 +28,7 @@ W przypadku urządzeń z systemem Windows można zaimportować profil konfigurac
 
 Dotyczy:  
 - Windows 8.1 i nowsze
-- System Windows 10 lub nowszy
+- Windows 10 lub nowszym
 - Windows 10 Desktop lub Mobile
 - Windows Holographic for Business
 

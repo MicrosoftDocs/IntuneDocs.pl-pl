@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 12/02/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9acad2e8539da7210c349ffb254af62f370af5f6
-ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
+ms.openlocfilehash: 6ed04c1bf135793da9cece9debc2c7cdd481601a
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74391501"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74691691"
 ---
 # <a name="add-a-property-list-file-to-macos-devices-using-microsoft-intune"></a>Dodaj plik listy właściwości do urządzeń macOS za pomocą Microsoft Intune
 
@@ -29,7 +29,7 @@ Za pomocą Microsoft Intune można dodać plik listy właściwości (. plist) dl
 
 Ta funkcja ma zastosowanie do:
 
-- macOS urządzenia z systemem 10,7 i nowszym
+- Urządzenia z systemem macOS 10.7 i nowszym
 
 Pliki listy właściwości zazwyczaj zawierają informacje o aplikacjach macOS. Aby uzyskać więcej informacji, zobacz [Informacje o plikach listy właściwości](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html) (witrynie firmy Apple) i [ustawieniach niestandardowych ładunku](https://support.apple.com/guide/mdm/custom-mdm9abbdbe7/1/web/1).
 
@@ -59,3 +59,5 @@ Wybierz kolejno pozycje **OK** > **Utwórz**, aby zapisać zmiany. Profil zostan
 ## <a name="next-steps"></a>Następne kroki
 
 Profil został utworzony, ale nie wykonuje jeszcze żadnych czynności. W dalszej części [przypiszesz profil](device-profile-assign.md) i będziesz [monitorować jego stan](device-profile-monitor.md).
+
+Aby uzyskać więcej informacji na temat plików preferencji dla przeglądarki Microsoft Edge, zobacz [Konfigurowanie ustawień zasad programu Microsoft Edge w witrynie macOS](https://docs.microsoft.com/deployedge/configure-microsoft-edge-on-mac).

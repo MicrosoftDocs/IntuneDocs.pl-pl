@@ -20,10 +20,10 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8eef3af9a82e7a61bc5200bf45143657072d6db7
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72508369"
 ---
 # <a name="upload-and-email-logs"></a>Przekazywanie dzienników i wysyłanie ich pocztą e-mail  
@@ -38,7 +38,7 @@ Szczegóły dotyczące rzeczywistego błędu są przechowywane na urządzeniu w 
 ## <a name="upload-and-email-logs-from-company-portal"></a>Przekazywanie i wysyłanie dzienników pocztą e-mail z Portal firmy  
 
 1. W aplikacji Portal firmy istnieją dwa sposoby na zainicjowanie obsługi poczty e-mail.
-    * Na ekranie głównym: Naciśnij **Menu**  > **Pomoc**  > **obsługa poczty e-mail**.  
+    * Na ekranie głównym: Naciśnij **Menu** > **Pomoc** > **obsługa poczty e-mail**.  
     * W komunikacie o błędzie: naciśnij pozycję **Pomoc** lub **Wyślij informacje**, jeśli są dostępne.  
 
     > [!NOTE]
@@ -52,7 +52,7 @@ Szczegóły dotyczące rzeczywistego błędu są przechowywane na urządzeniu w 
 ## <a name="upload-and-email-logs-from-microsoft-intune-app"></a>Przekazywanie i wysyłanie dzienników poczty e-mail z aplikacji Microsoft Intune   
 
 1. W aplikacji Microsoft Intune istnieją dwa sposoby na zainicjowanie obsługi poczty e-mail.  
-    * Na ekranie głównym: Naciśnij **Menu**  > **Pomoc**  > **Uzyskaj pomoc techniczną**.  
+    * Na ekranie głównym: Naciśnij **Menu** > **Pomoc** > **Uzyskaj pomoc techniczną**.  
     * W komunikacie o błędzie: naciśnij pozycję **Pomoc** lub **Wyślij informacje**, jeśli są dostępne.  
 
     > [!NOTE]

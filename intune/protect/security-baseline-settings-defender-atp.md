@@ -5,7 +5,7 @@ description: Ustawienia punktów odniesienia zabezpieczeń obsługiwane przez us
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 12/05/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b7363682960cff6688e9727d2b6869b6bf357084
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: 85d0b28de6c133ece5116dd78b1646f497ff2f6b
+ms.sourcegitcommit: 0a85af9d584709ecc29062f91645a4c47a61ebb9
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74060054"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74882322"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Ustawienia punktów odniesienia zabezpieczeń usługi Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender dla usługi Intune
 
@@ -593,8 +593,18 @@ Więcej informacji można znaleźć na stronie [PassportForWork CSP](https://doc
 - **Skonfiguruj funkcję Windows Hello dla firm** - *TenantId/Policies/UsePassportForWork*    
   Funkcja Windows Hello dla firm to alternatywna metoda logowania do systemu Windows przez zastępowanie haseł, kart inteligentnych i wirtualnych kart inteligentnych.  
 
-  - W przypadku ustawienia *opcji tak*Włącz tę zasadę, a urządzenie zainicjuje funkcję Windows Hello dla firm.  
-  - Jeśli ustawiono wartość *nie skonfigurowano*, linia bazowa nie ma wpływu na ustawienie zasad urządzenia. Oznacza to, że jeśli funkcja Windows Hello dla firm została wyłączona na urządzeniu, zostanie wyłączona. Jeśli jest włączona, pozostanie włączona. 
+
+  > [!IMPORTANT]
+  > Opcje tego ustawienia są wycofywane z ich IMPLIKOWANYCH znaczenia. W przeciwieństwie do wartości *tak* nie jest włączona funkcja Windows Hello, a zamiast tego jest traktowana jako *nieskonfigurowana*. Jeśli to ustawienie ma wartość *Nieskonfigurowane*, funkcja Windows Hello zostanie włączona na urządzeniach, które otrzymują tę linię bazową.
+  >
+  > Poniższe opisy zostały poprawione w celu odzwierciedlenia tego zachowania. Odwrócenie ustawień zostanie naprawione w przyszłej aktualizacji tej linii bazowej zabezpieczeń.
+
+  - Po ustawieniu opcji na wartość *nie skonfigurowano*funkcja Windows Hello jest włączona, a urządzenie inicjuje funkcję Windows Hello dla firm.
+  - Po ustawieniu na *wartość tak*, linia bazowa nie ma wpływu na ustawienie zasad urządzenia. Oznacza to, że jeśli funkcja Windows Hello dla firm została wyłączona na urządzeniu, zostanie wyłączona. Jeśli jest włączona, pozostanie włączona.
+  <!-- expected behavior 
+  - When set to *Yes*, you  enable this policy and the device provisions Windows Hello for Business.  
+  - When set to *Not configured*, the baseline does not affect the policy setting of the device. This means that if Windows Hello for Business is disabled on a device, it remains disabled. If its enabled, it remains enabled. 
+  -->
 
   Nie można wyłączyć usługi Windows Hello dla firm za jej podstawą. Można wyłączyć funkcję Windows Hello dla firm podczas konfigurowania [rejestracji systemu Windows](windows-hello.md)lub jako część profilu konfiguracji urządzenia na potrzeby [ochrony tożsamości](identity-protection-configure.md).  
 

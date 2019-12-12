@@ -20,10 +20,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 6a6b5585501851bb52db70ca222f8cfff7ad0597
-ms.sourcegitcommit: 2c8a41ee95a3fde150667a377770e51b621ead65
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73635468"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Nowości w usłudze Microsoft Intune — poprzednie miesiące
@@ -102,7 +102,7 @@ W ramach tej aktualizacji usługa Intune obsługuje konfigurowanie urządzeń z 
 
 Obsługa producentów OEM jest obecnie dostępna dla poszczególnych producentów OEM. Jeśli aplikacja OEMConfig nie jest dostępna na liście aplikacji OEMConfig, skontaktuj się z `IntuneOEMConfig@microsoft.com`.
 
-Aby dowiedzieć się więcej na temat tej funkcji, zobacz artykuł [Use and manage Android Enterprise devices with OEMConfig in Microsoft Intune](../configuration/android-oem-configuration-overview.md) (Korzystanie z urządzeń z rozwiązaniem Android Enterprise i zarządzanie nimi za pomocą aplikacji OEMConfig w usłudze Microsoft Intune).
+Aby dowiedzieć się więcej na temat tej funkcji, zobacz artykuł [Korzystanie z urządzeń z rozwiązaniem Android Enterprise i zarządzanie nimi za pomocą aplikacji OEMConfig w usłudze Microsoft Intune](../configuration/android-oem-configuration-overview.md).
 
 Dotyczy: Android Enterprise
 
@@ -146,7 +146,7 @@ Aby dowiedzieć się więcej na temat tej wersji zapoznawczej, zapoznaj się z n
 
 #### <a name="use-compliance-manager-to-create-assessments-for-microsoft-intune---4404750---"></a>Używanie Menedżera zgodności do tworzenia ocen usługi Microsoft Intune<!-- 4404750 -->
 
-[Menedżer zgodności](https://servicetrust.microsoft.com/ComplianceManager) (powoduje otwarcie innej witryny firmy Microsoft) to oparte na przepływie pracy narzędzie do oceny ryzyka w portalu Service Trust Portal firmy Microsoft. Umożliwia ono śledzenie, przypisywanie i weryfikowanie działań Twojej organizacji związanych z zapewnianiem zgodności z przepisami dotyczących usług firmy Microsoft. Możesz utworzyć własną ocenę zgodności przy użyciu usługi Office 365, platformy Azure, systemu Dynamics, usług Professional Services i usługi Intune. W przypadku usługi Intune dostępne są dwie oceny — FFIEC i RODO.
+[Menedżer zgodności](https://servicetrust.microsoft.com/ComplianceManager) (powoduje otwarcie innej witryny firmy Microsoft) to oparte na przepływie pracy narzędzie do oceny ryzyka w portalu Service Trust Portal firmy Microsoft. Umożliwia ono śledzenie, przypisywanie i weryfikowanie działań Twojej organizacji dotyczących usług firmy Microsoft związanych z zapewnianiem zgodności z przepisami. Możesz utworzyć własną ocenę zgodności przy użyciu usługi Office 365, platformy Azure, systemu Dynamics, usług Professional Services i usługi Intune. W przypadku usługi Intune dostępne są dwie oceny — FFIEC i RODO.
 
 Menedżer zgodności ułatwia odpowiednie ukierunkowanie podejmowanych wysiłków, dzieląc kontrole na zarządzane przez firmę Microsoft i zarządzane przez Twoją organizację. Możesz ukończyć oceny, a następnie wyeksportować je i wydrukować.
 
@@ -170,7 +170,7 @@ W poniższym przykładzie zostanie wyświetlony podział kontroli RODO. Firma Mi
 Podczas tworzenia profilu rejestracji systemu macOS możesz skonfigurować go tak, aby pominąć dowolny z następujących ekranów, gdy użytkownik będzie korzystać z asystenta ustawień:
 - Wygląd
 - Wyświetlanie sygnału
-- iCloudStorage Jeśli tworzysz nowy profil lub edytujesz profil, wybrane pomijane ekrany muszą być synchronizowane z serwerem MDM firmy Apple.  Użytkownicy mogą wydać ręczną synchronizację urządzeń, aby nie było ma żadnego opóźnienia podczas pobierania zmian profilu.
+- iCloudStorage Jeśli tworzysz nowy profil lub edytujesz profil, wybrane pomijane ekrany muszą być synchronizowane z serwerem MDM firmy Apple.  Użytkownicy mogą wydać ręczną synchronizację urządzeń, aby nie było żadnego opóźnienia podczas pobierania zmian profilu.
 Aby uzyskać więcej informacji, zobacz [Automatically enroll macOS devices with the Device Enrollment Program or Apple School Manager](../enrollment/device-enrollment-program-enroll-macos.md) (Automatyczne rejestrowanie urządzeń z systemem macOS w ramach programu Device Enrollment Program lub usługi Apple School Manager).
 
 #### <a name="bulk-device-naming-when-enrolling-corporate-ios-devices--3566569----"></a>Zbiorcze nadawanie nazw urządzeniom podczas rejestrowania urządzeń firmowych z systemem iOS<!--3566569  -->
@@ -198,7 +198,7 @@ Dodaliśmy [widok według kategorii](../protect/security-baselines-monitor.md#pe
 ### <a name="role-based-access-control"></a>Kontrola dostępu oparta na rolach
 
 #### <a name="scope-tags-for-apple-vpp-tokens--2371886----"></a>Tagi zakresu dla tokenów VPP firmy Apple<!--2371886  -->
-Teraz możesz dodać tagi zakresu do tokenów VPP firmy Apple. Tylko użytkownicy z przypisanym tym samym tagiem zakresu będą mieli dostęp do tokenu VPP firmy Apple z tym tagiem. Aplikacje programu VPP i książki elektroniczne zakupione przy użyciu tego tokenu dziedziczą jego tagi zakresu. Aby uzyskać więcej informacji na temat tagów zakresu, zobacz [Use RBAC and scope tags](scope-tags.md) (Używanie kontroli RBAC i tagów zakresu).
+Teraz możesz dodać tagi zakresu do tokenów VPP firmy Apple. Tylko użytkownicy z przypisanym tym samym tagiem zakresu będą mieli dostęp do tokenu VPP firmy Apple z tym tagiem. Aplikacje programu VPP i książki elektroniczne zakupione przy użyciu tego tokenu dziedziczą jego tagi zakresu. Aby uzyskać więcej informacji na temat tagów zakresu, zobacz [Używanie kontroli RBAC i tagów zakresu](scope-tags.md).
 
 <!-- ########################## -->
 ## <a name="march-2019"></a>Marzec 2019 r.
@@ -224,7 +224,7 @@ W aplikacji Portal firmy dla systemu Windows ikony aplikacji będą teraz wyświ
 Urządzenia z systemem Windows zarejestrowane w usłudze Intune przy użyciu [rejestracji zbiorczej systemu Windows](../enrollment/windows-bulk-enroll.md) (pakietów aprowizacji) będą mogły instalować dostępne aplikacje przy użyciu aplikacji Portal firmy. Aby uzyskać więcej informacji na temat aplikacji Portal firmy, zobacz [Ręczne dodawanie aplikacji Portal firmy dla systemu Windows 10](../apps/store-apps-company-portal-app.md) i [Jak skonfigurować aplikację Portal firmy w usłudze Microsoft Intune](../apps/company-portal-app.md).
 
 #### <a name="the-microsoft-teams-app-can-be-selected-as-part-of-the-office-app-suite---3828932----"></a>Aplikację Microsoft Teams można wybrać jako część pakietu aplikacji pakietu Office<!-- 3828932  -->
-Aplikację Microsoft Teams można dołączyć lub wykluczyć w ramach instalacji pakietu aplikacji pakietu Office Pro Plus. Ta funkcja działa w przypadku pakietu Office Pro Plus o numerze kompilacji 16.0.11328.20116. W celu ukończenia instalacji użytkownik musi się wylogować, a następnie ponownie zalogować na urządzeniu. W usłudze Intune wystarczy wybrać pozycję **Aplikacje klienckie** > **Aplikacje** > **Dodaj**. Wybierz jeden z typów aplikacji **pakietu Office 365**, a następnie wybierz pozycję **Konfiguruj pakiet aplikacji**.
+Aplikację Microsoft Teams można dołączyć lub wykluczyć w ramach instalacji pakietu aplikacji pakietu Office Pro Plus. Ta funkcja działa w przypadku pakietu Office Pro Plus o numerze kompilacji 16.0.11328.20116+. W celu ukończenia instalacji użytkownik musi się wylogować, a następnie ponownie zalogować na urządzeniu. W usłudze Intune wystarczy wybrać pozycję **Aplikacje klienckie** > **Aplikacje** > **Dodaj**. Wybierz jeden z typów aplikacji **pakietu Office 365**, a następnie wybierz pozycję **Konfiguruj pakiet aplikacji**.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-configuration"></a>Konfiguracja urządzenia
@@ -240,7 +240,7 @@ Dotyczy: system Windows 10 lub nowszy
 #### <a name="operational-logs-also-show-details-on-non-compliant-devices---4063755----"></a>Dzienniki operacyjne pokazują również informacje dotyczące niezgodnych urządzeń<!-- 4063755  -->
 Podczas przekierowywania dzienników do funkcji usługi Azure Monitor można kierować również dzienniki operacyjne. W ramach tej aktualizacji dzienniki operacyjne zawierają również informacje dotyczące niezgodnych urządzeń.
 
-Więcej informacji na temat tej funkcji zawiera artykuł [Send log data to storage, event hubs, or log analytics in Intune](../review-logs-using-azure-monitor.md) (Wysyłanie danych dziennika do magazynu, centrów zdarzeń lub analizy dzienników w usłudze Intune).
+Więcej informacji na temat tej funkcji zawiera artykuł [Wysyłanie danych dziennika do magazynu, centrów zdarzeń lub analizy dzienników w usłudze Intune](../review-logs-using-azure-monitor.md).
 
 #### <a name="route-logs-to-azure-monitor-in-more-intune-workloads---3804627---"></a>Przekierowywanie dzienników do usługi Azure Monitor dla dodatkowych obciążeń w usłudze Intune<!-- 3804627 -->
 W usłudze Intune można przekierowywać dzienniki inspekcji i operacyjne do centrów zdarzeń, magazynu i analizy dzienników w usłudze Azure Monitor (**Intune** > **Monitorowanie** > **Ustawienia diagnostyki**). Dzięki tej aktualizacji można przekierowywać te dzienniki w dodatkowych obciążeniach usługi Intune, w tym obciążeniach zgodności, konfiguracji, aplikacji klienckich i innych.
@@ -266,7 +266,7 @@ Teraz możesz używać usługi Intune do [wyświetlania szczegółów](../protec
 Przeglądarka Microsoft Edge będzie obsługiwać wszystkie te same scenariusze zarządzania, co program Intune Managed Browser, dodając ulepszenia środowiska użytkownika końcowego. Funkcje dla przedsiębiorstw przeglądarki Microsoft Edge włączane przez zasady usługi Intune obejmują podwójną tożsamość, integrację zasad ochrony aplikacji, integrację serwera proxy aplikacji platformy Azure oraz zarządzane elementy ulubione i skróty do strony głównej. Aby uzyskać więcej informacji, zobacz [Obsługa przeglądarki Microsoft Edge](../apps/app-configuration-managed-browser.md#microsoft-edge-support).
 
 #### <a name="exchange-onlineintune-connector-deprecate-support-for-eas-only-devices--3105122----"></a>Usługa Exchange Online/łącznik usługi Intune wycofują obsługę urządzeń tylko z programem EAS<!--3105122  -->
-Konsola usługi Intune nie obsługuje już wyświetlania urządzeń typu „tylko EAS” podłączonych do usługi Exchange Online za pomocą łącznika usługi Intune ani zarządzania tymi urządzeniami. Zamiast tego do masz następujące opcje:
+Konsola usługi Intune nie obsługuje już wyświetlania urządzeń typu „tylko EAS” podłączonych do usługi Exchange Online za pomocą łącznika usługi Intune ani zarządzania tymi urządzeniami. Zamiast tego masz następujące opcje:
 - Zarejestrowanie urządzeń w rozwiązaniu do zarządzania urządzeniami przenośnymi (MDM)
 - Używanie zasad rozwiązania Intune App Protection do zarządzania urządzeniami
 - Używanie kontrolek programu Exchange zgodnie z opisem w artykule [Clients and mobile in Exchange Online](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/clients-and-mobile-in-exchange-online) (Klienci i urządzenia przenośne w usłudze Exchange Online)
@@ -304,10 +304,10 @@ Dostęp tylko do odczytu do wszystkich danych usługi Intune:
 Aby uzyskać więcej informacji, zobacz [Kontrola dostępu na podstawie ról](role-based-access-control.md).
 
 #### <a name="scope-tags-for-ios-app-provisioning-profiles--2934430-----"></a>Tagi zakresu dla profilów aprowizacji aplikacji systemu iOS<!--2934430   -->
-Możesz dodać tag zakresu do profilu aprowizacji aplikacji systemu iOS, tak aby tylko osoby z rolami przypisanymi do tego tagu zakresu miały dostęp do profilu aprowizacji aplikacji systemu iOS. Aby uzyskać więcej informacji, zobacz [Use RBAC and scope tags](scope-tags.md) (Używanie kontroli RBAC i tagów zakresu).
+Możesz dodać tag zakresu do profilu aprowizacji aplikacji systemu iOS, tak aby tylko osoby z rolami przypisanymi do tego tagu zakresu miały dostęp do profilu aprowizacji aplikacji systemu iOS. Aby uzyskać więcej informacji, zobacz [Używanie kontroli RBAC i tagów zakresu](scope-tags.md).
 
 #### <a name="scope-tags-for-app-configuration-policies--2371891-----"></a>Tagi zakresu dla zasad konfiguracji aplikacji<!--2371891   -->
-Możesz dodać tag zakresu do zasad konfiguracji aplikacji, tak aby tylko osoby z rolami przypisanymi do tego tagu zakresu miały dostęp do zasad konfiguracji aplikacji. Zasady konfiguracji aplikacji mogą być przeznaczone tylko dla lub skojarzone tylko z aplikacjami przypisanymi do tego samego tagu zakresu. Aby uzyskać więcej informacji, zobacz [Use RBAC and scope tags](scope-tags.md) (Używanie kontroli RBAC i tagów zakresu).
+Możesz dodać tag zakresu do zasad konfiguracji aplikacji, tak aby tylko osoby z rolami przypisanymi do tego tagu zakresu miały dostęp do zasad konfiguracji aplikacji. Zasady konfiguracji aplikacji mogą być przeznaczone tylko dla lub skojarzone tylko z aplikacjami przypisanymi do tego samego tagu zakresu. Aby uzyskać więcej informacji, zobacz [Używanie kontroli RBAC i tagów zakresu](scope-tags.md).
 
 #### <a name="microsoft-edge-support-for-intune-scenarios-on-ios-and-android-devices---3411007---"></a>Obsługa przeglądarki Microsoft Edge dla scenariuszy usługi Intune na urządzeniach z systemem Android i iOS<!-- 3411007 -->
 Przeglądarka Microsoft Edge będzie obsługiwać wszystkie te same scenariusze zarządzania, co program Intune Managed Browser, dodając ulepszenia środowiska użytkownika końcowego. Funkcje dla przedsiębiorstw przeglądarki Microsoft Edge włączane przez zasady usługi Intune obejmują podwójną tożsamość, integrację zasad ochrony aplikacji, integrację serwera proxy aplikacji platformy Azure oraz zarządzane elementy ulubione i skróty do strony głównej. Aby uzyskać więcej informacji, zobacz [Obsługa przeglądarki Microsoft Edge](../apps/app-configuration-managed-browser.md#microsoft-edge-support).
@@ -373,13 +373,13 @@ Dotyczy:
 #### <a name="intune-conditional-access-ui-update---2432313-----"></a>Aktualizacja interfejsu użytkownika dostępu warunkowego usługi Intune<!-- 2432313   -->
 Wprowadziliśmy ulepszenia interfejsu użytkownika dla dostępu warunkowego w konsoli usługi Intune. Należą do nich następujące elementy:
 - Zastąpienie bloku *Dostęp warunkowy* usługi Intune blokiem z usługi Azure Active Directory. Dzięki temu będziesz mieć dostęp do pełnego zakresu ustawień i konfiguracji dotyczących [dostępu warunkowego](../protect/conditional-access.md) (który pozostaje technologią usługi Azure AD) z poziomu konsoli usługi Intune. 
-- Nazwa bloku *Dostęp lokalny* została zmieniona na *Dostęp do programu Exchange* i przenieśliśmy konfigurację *łącznika usługi Exchange* do tego bloku.  Ta zmiana umieszcza w jednym miejscu [konfigurowanie i monitorowanie szczegółów dotyczących usługi Exchange online i lokalnej](../protect/exchange-connector-install.md).  
+- Zmieniliśmy nazwę bloku *Dostęp lokalny* na *Dostęp do programu Exchange* i przenieśliśmy konfigurację *łącznika usługi Exchange* do tego bloku.  Ta zmiana umieszcza w jednym miejscu [konfigurowanie i monitorowanie szczegółów dotyczących usługi Exchange online i lokalnej](../protect/exchange-connector-install.md).  
 
 #### <a name="kiosk-browser-and-microsoft-edge-browser-apps-can-run-on-windows-10-devices-in-kiosk-mode---2935135-----"></a>Aplikacje Kiosk Browser i Microsoft Edge mogą pracować na urządzeniach z systemem Windows 10 w trybie kiosku<!-- 2935135   -->
 Urządzenia z systemem Windows 10 pracujące w trybie kiosku umożliwiają uruchamianie jednej lub wielu aplikacji. Ta aktualizacja obejmuje kilka zmian dotyczących korzystania z aplikacji w trybie kiosku, w tym:
 
 - Możliwość uruchamiania przeglądarek Microsoft Edge i Kiosk Browser jako aplikacji na urządzeniu kiosku (**Konfiguracja urządzenia** > **Profile** > **Nowy profil** >  **System Windows 10 i nowsze** dla platformy > **Kiosk** dla typu profilu).
-- Dostępne są nowe funkcje i ustawienia służące do zezwalania na nie lub ich ograniczania (**Konfiguracja urządzenia** > **Profile** > **Nowy profil** > **System Windows 10 i nowsze**dla platformy > **Ograniczenia dotyczące urządzeń** dla typu profilu), w tym:
+- Dostępne są nowe funkcje i ustawienia służące do zezwalania na nie lub ich ograniczania (**Konfiguracja urządzenia** > **Profile** > **Nowy profil** > **System Windows 10 i nowsze** dla platformy > **Ograniczenia dotyczące urządzeń** dla typu profilu), w tym:
 
 - Przeglądarka Microsoft Edge:
   - Użyj trybu kiosku przeglądarki Microsoft Edge
@@ -420,7 +420,7 @@ Android Enterprise
 #### <a name="safari-and-delaying-user-software-update-visibility-ios-settings-are-moving-in-the-intune-ui---3640850-3803313-----"></a>Ustawienia systemu iOS dotyczące przeglądarki Safari i opóźniania widoczności aktualizacji oprogramowania użytkownika są przenoszone w interfejsie użytkownika usługi Intune<!-- 3640850, 3803313   -->
 W przypadku urządzeń z systemem iOS można skonfigurować ustawienia przeglądarki Safari i aktualizacje oprogramowania. W ramach tej aktualizacji wymienione ustawienia są przenoszone do różnych części interfejsu użytkownika usługi Intune:
 
-- Ustawienia przeglądarki Safari zostały przeniesione z pozycji **Safari**(**Konfiguracja urządzenia** > **Profile** > **Nowy profil** > **iOS** dla platformy > **Ograniczenia urządzenia** dla typu profilu) do pozycji **[Aplikacje wbudowane](../configuration/device-restrictions-ios.md#built-in-apps)** .
+- Ustawienia przeglądarki Safari zostały przeniesione z pozycji **Safari** (**Konfiguracja urządzenia** > **Profile** > **Nowy profil** > **iOS** dla platformy > **Ograniczenia urządzenia** dla typu profilu) do pozycji **[Aplikacje wbudowane](../configuration/device-restrictions-ios.md#built-in-apps)** .
 - Ustawienie **Opóźnianie widoczności aktualizacji oprogramowania użytkownika dla urządzeń z systemem iOS w trybie nadzorowanym** (**Aktualizacje oprogramowania** > **Aktualizuj zasady dla systemu iOS**) jest przenoszone do obszaru **Ograniczenia urządzeń** >  **[Ogólne](../configuration/device-restrictions-ios.md#general)** .  Aby uzyskać szczegółowe informacje o wpływie na istniejące zasady, zobacz [aktualizacje oprogramowania systemu iOS](../protect/software-updates-ios.md#configure-the-policy).
 
 Aby uzyskać listę ustawień, zobacz:
@@ -531,7 +531,7 @@ Użytkownicy końcowi, którzy ustawili numer PIN dla zasad ochrony aplikacji us
 
 #### <a name="administrative-templates-are-in-public-preview-and-moved-to-their-own-configuration-profile----3322847---"></a>Szablony administracyjne są dostępne w publicznej wersji zapoznawczej i zostały przeniesione do własnego profilu konfiguracji <!-- 3322847 -->
 
-Szablony administracyjne w usłudze Intune (**Konfiguracja urządzenia** > **Szablony administracyjne**) są obecnie dostępne w publicznej wersji zapoznawczej. Dzięki tej aktualizacji
+Szablony administracyjne w usłudze Intune (**Konfiguracja urządzenia** > **Szablony administracyjne**) są obecnie dostępne w publicznej wersji zapoznawczej. Dzięki tej aktualizacji:
 
 - Szablony administracyjne obejmują około 300 ustawień, którymi można zarządzać w usłudze Intune. Wcześniej ustawienia te istniały tylko w edytorze zasad grupy.
 - Szablony administracyjne są dostępne w publicznej wersji zapoznawczej.
@@ -548,7 +548,7 @@ Ta aktualizacja obejmuje szyfrowanie poczty e-mail za pomocą protokołu S/MIME 
 - Natywna aplikacja poczty na urządzeniach z systemem Windows Phone 10 automatycznie używa certyfikatu szyfrowania S/MIME.
 - Certyfikaty prywatne mogą być dostarczane na wielu platformach. Jednak nie wszystkie aplikacje poczty e-mail obsługują szyfrowanie S/MIME.
 - Na innych platformach może być konieczne ręczne skonfigurowanie aplikacji poczty, aby włączyć szyfrowanie S/MIME.  
-- Aplikacje poczty e-mail, które obsługuje szyfrowanie S/MIME może obsługiwać pobieranie certyfikatów dla protokołu S/MIME szyfrowania wiadomości e-mail w sposób, który nie obsługuje zarządzania urządzeniami Przenośnymi, takie jak odczytywanie ich z magazynu certyfikatów ich wydawcy.
+- Aplikacje poczty e-mail, które obsługuje szyfrowanie S/MIME może obsługiwać pobieranie certyfikatów dla protokołu S/MIME szyfrowania wiadomości e-mail w sposób, który nie obsługuje zarządzania urządzeniami przenośnymi, takie jak odczytywanie ich z magazynu certyfikatów ich wydawcy.
 Aby uzyskać więcej informacji na temat tej funkcji, zapoznaj się z [omówieniem protokołu S/MIME do podpisywania i szyfrowania wiadomości e-mail](../protect/certificates-s-mime-encryption-sign.md).
 Obsługiwane w systemach: Windows, Windows Phone 10, macOS, iOS, Android
 
@@ -560,7 +560,7 @@ W temacie [Ustawienia sieci VPN systemu Windows 10](../configuration/vpn-setting
 
 #### <a name="use-trusted-network-detection-for-vpn-profiles-on-windows-10-devices---1500165---"></a>Korzystanie z wykrywania zaufanych sieci na użytek profilów sieci VPN na urządzeniach z systemem Windows 10<!-- 1500165 -->
 W przypadku korzystania z wykrywania zaufanych sieci możesz wyłączyć automatyczne tworzenie połączenia sieci VPN w profilach sieci VPN, gdy użytkownik będzie już w zaufanej sieci. Dzięki tej aktualizacji masz możliwość dodawania sufiksów DNS w celu włączenia wykrywania zaufanych sieci na urządzeniach z systemem Windows 10 i nowszych (**Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **Windows 10 i nowsze** jako platforma > **VPN** jako typ profilu).
-Aktualną listę ustawień sieci VPN można znaleźć w temacie [Windows 10 VPN settings](../configuration/vpn-settings-windows-10.md) (Ustawienia sieci VPN w systemie Windows 10).
+Aktualną listę ustawień sieci VPN można znaleźć w temacie [Ustawienia sieci VPN w systemie Windows 10](../configuration/vpn-settings-windows-10.md).
 
 #### <a name="manage-windows-holographic-for-business-devices-used-by-multiple-users---1907917-1063203---"></a>Zarządzanie urządzeniami z systemem Windows Holographic for Business używanymi przez wielu użytkowników<!-- 1907917, 1063203 -->
 Obecnie można konfigurować ustawienia komputera udostępnionego na urządzeniach z systemem Windows 10 i Windows Holographic for Business przy użyciu niestandardowego ustawienia OMA-URI. W ramach tej aktualizacji dodawany jest nowy profil służący do konfigurowania ustawień komputera udostępnionego (**Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **Windows 10 i nowsze** > **Urządzenie udostępnione wielu użytkownikom**).
@@ -583,7 +583,7 @@ Aby wyświetlić te ustawienia ochrony, zobacz [Ustawienia programu Endpoint Pro
 #### <a name="shared-device-configuration-is-renamed-to-lock-screen-message-for-ios-devices-in-the-azure-portal---2809362---"></a>Nazwa konfiguracji urządzenia udostępnionego została zmieniona na Komunikat ekranu blokady dla urządzeń z systemem iOS w witrynie Azure Portal<!-- 2809362 -->
 W przypadku tworzenia profilu konfiguracji dla urządzeń z systemem iOS możesz dodać ustawienia obszaru **Konfiguracja urządzenia udostępnianego** w celu wyświetlania określonego tekstu na ekranie blokady. Ta aktualizacja obejmuje następujące zmiany: 
 - Ustawienia **Konfiguracja urządzenia udostępnianego** w witrynie Azure Portal są zmieniane na „Komunikat ekranu blokady (tylko tryb nadzorowany)” (**Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > wybierz platformę **iOS** > wybierz typ profilu **Funkcje urządzenia** > **Komunikat ekranu blokady**).
-- Podczas dodawania wiadomości ekranu blokady można wstawić numer seryjny, nazwę urządzenia lub inną wartość specyficzną dla urządzenia w obszarze **Informacje dotyczące tagu zasobu** i **Przypis dolny ekranu blokady**. Na przykład można wprowadzić wartości `Device name: {{devicename}}` lub `Serial number is {{serialnumber}}`, używając nawiasów klamrowych. Listę dostępnych tokenów do użycia można znaleźć w sekcje [iOS tokens](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) (Tokeny systemu iOS).
+- Podczas dodawania wiadomości ekranu blokady można wstawić numer seryjny, nazwę urządzenia lub inną wartość specyficzną dla urządzenia w obszarze **Informacje dotyczące tagu zasobu** i **Przypis dolny ekranu blokady**. Na przykład można wprowadzić wartości `Device name: {{devicename}}` lub `Serial number is {{serialnumber}}`, używając nawiasów klamrowych. Listę dostępnych tokenów do użycia można znaleźć w sekcji [Tokeny systemu iOS](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list).
 Listę ustawień można znaleźć w temacie dotyczącym [ustawień wyświetlania komunikatów na ekranie blokady](../configuration/ios-device-features-settings.md#lock-screen-message).
 
 #### <a name="new-app-store-doc-viewing-gaming-device-restriction-settings-added-to-ios-devices---2827760--"></a>Do urządzeń z systemem iOS dodano nowe ustawienia ograniczeń urządzenia obejmujące sklep App Store, wyświetlanie dokumentów i gry<!-- 2827760-->
@@ -615,7 +615,7 @@ Usługa Intune umożliwia integrację z innymi usługami koncentrującymi się n
 
 Ta funkcja jest dostępna w publicznej wersji zapoznawczej, więc wszystkie profile utworzone teraz nie zostaną przeniesione do ogólnie dostępnych szablonów punktów odniesienia zabezpieczeń. Nie należy planować używania szablonów dostępnych w wersji zapoznawczej w środowisku produkcyjnym.
 
-Aby dowiedzieć się więcej na temat punktów odniesienia zabezpieczeń, zobacz temat [Create a Windows 10 security baseline in Intune](../protect/security-baselines-monitor.md) (Tworzenie punktu odniesienia zabezpieczeń systemu Windows 10 w usłudze Intune).
+Aby dowiedzieć się więcej na temat punktów odniesienia zabezpieczeń, zobacz temat [Tworzenie punktu odniesienia zabezpieczeń systemu Windows 10 w usłudze Intune](../protect/security-baselines-monitor.md).
 
 Ta funkcja dotyczy: systemu Windows 10 i nowszych
 
@@ -638,7 +638,7 @@ Dotyczy: system Windows 10 lub nowszy
 #### <a name="customize-wallpaper-on-supervised-ios-devices-using-a-device-configuration-profile---2809324-----"></a>Dostosowywanie tapety na urządzeniach nadzorowanych z systemem iOS przy użyciu profilu konfiguracji urządzenia<!-- 2809324   -->
 Podczas tworzenia profilu konfiguracji urządzenia dla urządzeń z systemem iOS można dostosowywać niektóre funkcje (**Konfiguracja urządzeń** > **Profile** > **Utwórz profil** > **iOS** dla platformy > **Funkcje urządzenia** dla typu profilu). Ta aktualizacja obejmuje nowe ustawienia obszaru **Tapeta**, które umożliwiają administratorowi użycie obrazu PNG, JPG lub JPEG na ekranie głównym lub ekranie blokady. Te ustawienia dotyczące tapety mają zastosowanie tylko na urządzeniach nadzorowanych. 
 
-Listę tych ustawień można znaleźć w temacie [iOS device feature settings](../configuration/ios-device-features-settings.md) (Ustawienia funkcji urządzeń z systemem iOS).
+Listę tych ustawień można znaleźć w temacie [Ustawienia funkcji urządzeń z systemem iOS](../configuration/ios-device-features-settings.md).
 
 #### <a name="windows-10-kiosk-is-generally-available---3594661----"></a>Kiosk systemu Windows 10 jest ogólnie dostępny<!-- 3594661  -->
 W tej aktualizacji funkcja kiosku jest udostępniana ogólnie na urządzeniach z systemem Windows 10 i nowszych. Aby zapoznać się ze wszystkimi ustawieniami, które można dodać i skonfigurować, zobacz temat [Ustawienia kiosku dla systemu Windows 10 (i nowszego)](../configuration/kiosk-settings.md).
@@ -692,12 +692,12 @@ Usługa Intune ma wbudowaną funkcję rejestrowania inspekcji, która śledzi zd
 - Dzienniki operacyjne (wersja zapoznawcza), które pokazują szczegóły użytkowników i zarejestrowanych urządzeń, łącznie z próbami udanymi i nieudanymi.
 - Dzienniki inspekcji i dzienniki operacyjne można wysyłać do usługi Azure Monitor, łącznie z informacjami na temat kont magazynu, centrów zdarzeń i analizy dzienników. Usługi te pozwalają na przechowywanie danych rejestrowania, korzystanie z analiz, takich jak Splunk i QRadar, oraz uzyskiwanie wizualizacji danych rejestrowania.
 
-Więcej informacji na temat tej funkcji zawiera artykuł [Send log data to storage, event hubs, or log analytics in Intune](../review-logs-using-azure-monitor.md) (Wysyłanie danych dziennika do magazynu, centrów zdarzeń lub analizy dzienników w usłudze Intune).
+Więcej informacji na temat tej funkcji zawiera artykuł [Wysyłanie danych dziennika do magazynu, centrów zdarzeń lub analizy dzienników w usłudze Intune](../review-logs-using-azure-monitor.md).
 
 #### <a name="skip-more-setup-assistant-screens-on-an-ios-dep-device---2687509----"></a>Pomijanie większej liczby ekranów Asystenta ustawień na urządzeniu DEP z systemem iOS<!-- 2687509  -->
 Oprócz ekranów, które obecnie możesz pominąć, możesz ustawić urządzenia programu DEP z systemem iOS tak, aby pomijały następujące ekrany Asystenta ustawień podczas rejestrowania urządzenia z systemem iOS przez użytkownika: Ton wyświetlacza, Prywatność, Migracja systemu Android, Przycisk Strona główna, iMessage i FaceTime, Dołączanie, Migracja urządzenia Watch, Wygląd, Czas korzystania z urządzenia, Aktualizacja oprogramowania, Instalator SIM.
 Aby wybrać ekrany do pominięcia, przejdź kolejno do pozycji **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Tokeny programu rejestracji** > wybierz token > **Profile** > wybierz profil > **Właściwości** > **Dostosowywanie Asystenta ustawień** > wybierz pozycję **Ukryj** dla ekranów do pominięcia > **OK**.
-Jeśli tworzysz nowy profil lub edytujesz profil, wybrane pomijane ekrany muszą być synchronizowane z serwerem MDM firmy Apple. Użytkownicy mogą wydać ręczną synchronizację urządzeń, aby nie było ma żadnego opóźnienia podczas pobierania zmian profilu.
+Jeśli tworzysz nowy profil lub edytujesz profil, wybrane pomijane ekrany muszą być synchronizowane z serwerem MDM firmy Apple. Użytkownicy mogą wydać ręczną synchronizację urządzeń, aby nie było żadnego opóźnienia podczas pobierania zmian profilu.
 
 #### <a name="android-enterprise-app-we-app-deployment---1171203---"></a>Wdrażanie aplikacji APP-WE dla systemu Android Enterprise<!-- 1171203 -->
 Dla urządzeń z systemem Android w scenariuszu wdrażania zasad ochrony aplikacji bez rejestracji (APP-WE) możesz teraz używać zarządzanego sklepu Google Play w celu wdrażania aplikacji ze sklepu i aplikacji biznesowych dla użytkowników. Mówiąc ściślej, możesz udostępnić użytkownikom końcowym środowisko katalogu i instalacji aplikacji, które nie wymaga już od użytkowników końcowych obniżenia poziomu zabezpieczeń urządzeń przez umożliwienie instalacji z nieznanych źródeł. Ponadto ten scenariusz wdrażania zapewni ulepszone środowisko pracy użytkownika końcowego.

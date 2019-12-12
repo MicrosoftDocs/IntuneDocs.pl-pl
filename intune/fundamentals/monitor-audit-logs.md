@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 6ee841cc-5694-4ba1-8f66-1d58edec30a4
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd00a0ae4cb6c3b150fe40cfc6cd7b71cfa973f3
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: d6af0718f2b926383bb943b6321b4d5839346ce7
+ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72585238"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991979"
 ---
 # <a name="use-audit-logs-to-track-and-monitor-events-in-microsoft-intune"></a>Śledzenie i monitorowanie zdarzeń w usłudze Microsoft Intune za pomocą dzienników inspekcji
 
@@ -40,9 +40,14 @@ Dzienniki inspekcji mogą przeglądać użytkownicy z następującymi uprawnieni
 
 Dzienniki inspekcji można przeglądać w grupie monitorowania dla poszczególnych obciążeń usługi Intune:
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Wybierz obciążenie, dla którego chcesz przejrzeć dzienniki inspekcji. Na przykład wybierz pozycję **Urządzenia**.
-3. W obszarze **Monitorowanie** wybierz pozycję **Dzienniki inspekcji**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz pozycję **Administracja dzierżawy** > **dzienniki inspekcji**.
+3. Aby odfiltrować wyniki, wybierz opcję **Filtruj** i Uściślij wyniki przy użyciu poniższych opcji.
+    - **Kategoria**: takie jak **zgodność**, **urządzenie**i **rola**.
+    - **Działanie**: opcje wymienione w tym miejscu są ograniczone przez opcję wybraną w **kategorii**.
+    - **Zakres dat**: możesz wybrać dzienniki dla poprzedniego miesiąca, tygodnia lub dnia.
+4. Wybierz pozycję **Zastosuj**.
+4. Wybierz element na liście, aby wyświetlić szczegóły działania.
 
 ## <a name="route-logs-to-azure-monitor"></a>Kierowanie dzienników do usługi Azure Monitor
 
@@ -53,32 +58,10 @@ Dzienniki inspekcji i dzienniki operacyjne można też kierować do usługi Azur
 > [!NOTE]
 > Aby uzyskać więcej informacji na temat tej funkcji i zapoznać się z wymaganiami wstępnymi dotyczącymi korzystania z niej, zobacz [wysyłanie danych dziennika do magazynu, centrów zdarzeń lub usługi log Analytics](review-logs-using-azure-monitor.md).
 
-## <a name="review-audit-events"></a>Przeglądanie zdarzeń inspekcji
-
-![Wybieranie dzienników inspekcji w usłudze Intune, aby zobaczyć akcje i daty wystąpienia zdarzeń](./media/monitor-audit-logs/monitor-audit-logs.png "Dzienniki inspekcji")
-
-Domyślny widok listy dziennika inspekcji zawiera następujące elementy:
-
-- Data i godzina wystąpienia
-- Zainicjowane przez (aktor)
-- Nazwa aplikacji
-- Aktywność
-- Elementy docelowe
-- Kategoria
-- Stan
-
-Aby wyświetlić bardziej szczegółowe informacje o zdarzeniu, wybierz element na liście:
-
-![Uzyskiwanie bardziej szczegółowych informacji na temat tego, kto co zrobił, w dziennikach inspekcji w usłudze Intune](./media/monitor-audit-logs/monitor-audit-log-detail.png "|::ref2::|")
-
 > [!NOTE]
 > Część **Zainicjowane przez (aktor)** obejmuje informacje na temat tego, kto i gdzie uruchomił zadanie. Na przykład, jeśli działanie zostanie uruchomione w usłudze Intune w witrynie Azure Portal, w obszarze **Aplikacja** zawsze jest podane **rozszerzenie portalu usługi Microsoft Intune**, a w obszarze **Identyfikator aplikacji** zawsze znajduje się ten sam identyfikator GUID.
 >
 > Sekcja **Elementy docelowe** zawiera wiele elementów docelowych oraz właściwości, które zostały zmienione.  
-
-## <a name="filter-audit-events"></a>Filtrowanie zdarzeń inspekcji
-
-Każde obciążenie zawiera element menu, który wstępnie filtruje kategorię zdarzeń inspekcji skojarzoną z danym okienkiem. Oddzielna opcja filtrowania umożliwia zmianę kategorii na inną oraz filtrowanie szczegółów akcji zdarzeń w ramach danej kategorii. Można wyszukiwać dane według nazwy UPN, na przykład użytkownika, który wykonał akcję. Filtr zakresu dat umożliwia ustawienie opcji 24 godzin, 7 dni lub 30 dni. Domyślnie są pokazywane zdarzenia inspekcji z ostatnich 30 dni.
 
 ## <a name="use-graph-api-to-retrieve-audit-events"></a>Korzystanie z interfejsów API programu Graph w celu pobrania zdarzeń inspekcji
 

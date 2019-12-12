@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8632f5b8df0f483de3bb4d06a6823639ba52c604
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72506693"
 ---
 # <a name="macos-device-settings-to-configure-and-use-kernel-extensions-in-intune"></a>macOS ustawień urządzenia w celu konfigurowania i używania rozszerzeń jądra w usłudze Intune
@@ -63,7 +63,7 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
   > [!TIP]
   > Aby uzyskać identyfikator pakietu rozszerzenia jądra (KEXT) na urządzeniu macOS, możesz:
   >
-  > 1. W terminalu uruchom `kextstat | grep -v com.apple` i zanotuj dane wyjściowe. Zainstaluj wymagane oprogramowanie lub KEXT. Uruchom ponownie `kextstat | grep -v com.apple` i poszukaj zmian.
+  > 1. W terminalu uruchom `kextstat | grep -v com.apple`i zanotuj dane wyjściowe. Zainstaluj wymagane oprogramowanie lub KEXT. Uruchom ponownie `kextstat | grep -v com.apple` i poszukaj zmian.
   >
   >    W terminalu `kextstat` zawiera listę wszystkich rozszerzeń jądra w systemie operacyjnym. 
   >

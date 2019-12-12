@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/25/2019
+ms.date: 12/12/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6fde277e16043662420864adcc0458e3dccad308
-ms.sourcegitcommit: ce518a5dfe62c546a77f32ef372f36efbaad473f
+ms.openlocfilehash: 5f9a01adaa6f5ab59819c2924172c30a437ebd8c
+ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74465657"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992919"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem iOS i iPadOS umożliwiające działanie funkcji lub ich ograniczanie przy użyciu usługi Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 W tym artykule wymieniono i opisano różne ustawienia, którymi można sterować na urządzeniach z systemem iOS lub iPadOS. Użyj tych ustawień w ramach swojego rozwiązania do zarządzania urządzeniami mobilnymi (MDM), aby zezwalać na działanie funkcji lub je wyłączać, ustawiać reguły haseł, zezwalać na działanie konkretnych aplikacji lub je ograniczać i nie tylko.
 
@@ -52,7 +50,7 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ustawienia dotyczą: Rejestracja urządzenia, automatyczna rejestracja urządzeń (nadzorowane)
 
 - **Niezaufane certyfikaty protokołu TLS**: wybierz pozycję **Blokuj**, aby uniemożliwić używanie niezaufanych certyfikatów protokołu Transport Layer Security (TLS) na urządzeniu. Pozycja **Nieskonfigurowane** (ustawienie domyślne) pozwala na korzystanie z certyfikatów protokołu TLS.
-- **Zezwalaj na bezprzewodowe aktualizacje infrastruktury PKI**: pozycja **Zezwalaj** pozwala użytkownikom na otrzymywanie aktualizacji oprogramowania bez podłączania urządzeń do komputera.
+- **Blokuj aktualizacje infrastruktury PKI dla środowiska AIR**: **blokowanie** uniemożliwia użytkownikom otrzymywanie aktualizacji oprogramowania bez łączenia ich urządzeń z komputerem. **Nieskonfigurowane** (domyślnie) nie aktualizuje tego ustawienia na urządzeniu.
 - **Ograniczanie śledzenia reklam**: wybierz pozycję **Ogranicz**, aby wyłączyć identyfikator treści reklamowych urządzenia. Pozycja **Nieskonfigurowane** (ustawienie domyślne) powoduje, że identyfikator pozostaje włączony.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ustawienia dotyczą: automatyczne rejestrowanie urządzeń (nadzorowane)
@@ -95,7 +93,7 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 - **Zmiany profilu konfiguracji**: pozycja **Blokuj** uniemożliwia zmiany profilów konfiguracji na urządzeniu. Opcja **Nieskonfigurowane** (domyślna) zezwala użytkownikowi na instalowanie profilów konfiguracji.
 - **Blokada aktywacji**: wybierz pozycję **Zezwalaj**, aby umożliwić stosowanie blokady aktywacji na nadzorowanych urządzeniach z systemem iOS. Blokada aktywacji utrudnia ponowne aktywowanie utraconego lub skradzionego urządzenia.
 - **Blokuj usuwanie aplikacji**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom usuwanie aplikacji. Opcja **Nieskonfigurowane** (domyślna) pozwala użytkownikom na usuwanie aplikacji z urządzenia.
-- **Blokuje tryb ograniczony USB**: wybierz pozycję **Blokuj**, aby wyłączyć tryb ograniczony USB na urządzeniach w trybie nadzorowanym. Tryb ograniczony USB uniemożliwia akcesoriom USB wymienianie danych z urządzeniem zablokowanym przez ponad godzinę. Pozycja **Nieskonfigurowane** (ustawienie domyślne) zezwala na stosowanie trybu ograniczonego USB.
+- **Zezwalaj na akcesoria USB, gdy urządzenie jest zablokowane**: **Zezwalaj na** akcesoria USB Wymieniaj dane z urządzeniem, które zostało zablokowane przez ponad godzinę. **Nieskonfigurowane** (domyślnie) nie aktualizuje trybu ograniczonego USB na urządzeniu.
 - **Wymuszaj automatyczne ustawianie daty i godziny**: pozycja **Wymagaj** wymusza automatyczne ustawianie daty i godziny na urządzeniach nadzorowanych. Strefa czasowa urządzenia jest aktualizowana, gdy urządzenie ma połączenie komórkowe lub sieć Wi-Fi z włączonymi usługami lokalizacji.
 - **Wymagaj, aby uczeń prosił o pozwolenie na opuszczenie przedmiotu w aplikacji Classroom**: pozycja **Wymagaj** wymusza, aby uczniowie zarejestrowani na niezarządzanych zajęciach prosili nauczyciela o pozwolenie na opuszczenie kursu przy użyciu aplikacji Classroom. Opcja **Nieskonfigurowane** (domyślna) oznacza, że uczeń nie musi prosić o pozwolenie.
 

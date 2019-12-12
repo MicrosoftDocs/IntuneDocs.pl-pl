@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d9f52d3a7c40f27555a07682adf86b0339cef616
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 647e8869caf24638f6809479274dbf7a7b967b9e
+ms.sourcegitcommit: f5108039f0ade52e95ea3ac1da1aa16d02224af3
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72491932"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74946635"
 ---
 # <a name="android-enterprise-device-settings-to-configure-vpn-in-intune"></a>Ustawienia urządzenia z systemem Android w celu skonfigurowania sieci VPN w usłudze Intune
 
@@ -31,6 +31,9 @@ W tym artykule wyszczególniono i opisano różne ustawienia połączenia VPN, k
 Jako administrator usługi Intune możesz tworzyć ustawienia sieci VPN i przypisywać je do urządzeń z rozwiązaniem Android Enterprise. 
 
 Aby dowiedzieć się więcej o profilach sieci VPN w usłudze Intune, zobacz [Profile sieci VPN](vpn-settings-configure.md).
+
+> [!NOTE]
+> Aby skonfigurować zawsze włączone sieci VPN, należy utworzyć profil sieci VPN, a także utworzyć profil [ograniczeń urządzenia](device-restrictions-android-for-work.md#connectivity) z skonfigurowanym ustawieniem zawsze włączone sieci VPN.
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 

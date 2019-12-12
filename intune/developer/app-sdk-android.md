@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c8c5be1d7a02c2c8329afe05dcdce22f48c49d05
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72503494"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android
@@ -235,7 +235,7 @@ Narzędzie oczekuje następujących parametrów.
 Wszystkie parametry są wymagane, poza `--excludeClasses`, który jest opcjonalny.
 
 > [!NOTE]
-> W systemach Unix separatorem poleceń jest znak średnika. Aby uniknąć dzielenia poleceń w powłoce, poprzedź każdy średnik znakiem '\' lub ujmij cały parametr w znaki cudzysłowu.
+> W systemach Unix separatorem poleceń jest znak średnika. Aby uniknąć dzielenia poleceń w powłoce, poprzedź każdy średnik znakiem '\' lub ujmij cały parametr w znaki cudzysłowu.
 
 #### <a name="example-command-line-tool-invocation"></a>Przykład wywołania narzędzia wiersza polecenia
 

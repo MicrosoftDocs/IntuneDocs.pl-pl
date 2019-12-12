@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 12/09/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f3c6c029a5c5864eda46a68832b2f9f655553846
-ms.sourcegitcommit: 0d6f323152ec62f7d383891cce12ea0a4289cd8f
+ms.openlocfilehash: 60a87340c1a275b8fb878ef2f3891cca23fc9c85
+ms.sourcegitcommit: f5108039f0ade52e95ea3ac1da1aa16d02224af3
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72889536"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74946667"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Ustawienia urządzeń z systemem Windows 10 lub nowszym umożliwiające oznaczenie ich jako zgodne lub niezgodne w usłudze Intune
 
@@ -29,7 +29,7 @@ W tym artykule wymieniono i opisano różne ustawienia zgodności, które można
 
 Ta funkcja ma zastosowanie do:
 
-- System Windows 10 lub nowszy
+- Windows 10 lub nowszym
 - Windows Holographic for Business
 - Surface Hub
 
@@ -161,6 +161,7 @@ Dotyczy tylko współzarządzanych urządzeń z systemem Windows 10 lub nowszym.
 ### <a name="encryption"></a>Szyfrowanie
 
 - **Szyfrowanie magazynu danych urządzenia**:  
+  To ustawienie ma zastosowanie do wszystkich dysków na urządzeniu.
   - **Nie skonfigurowano** (*wartość domyślna*)
   - **Wymagaj** — wybierz pozycję *Wymagaj*, aby szyfrować magazyn danych na urządzeniach.
 
@@ -198,7 +199,7 @@ Dotyczy tylko współzarządzanych urządzeń z systemem Windows 10 lub nowszym.
 
 - **Oprogramowanie chroniące przed złośliwym oprogramowaniem programu Microsoft Defender**:  
   - **Nie skonfigurowano** (*Domyślnie*) — usługa Intune nie kontroluje usługi ani nie zmienia istniejących ustawień.
-  - **Wymagaj** , aby włączyć usługę Microsoft Defender Anti-Malware, i uniemożliwić użytkownikom jej wyłączenie. 
+  - **Wymagaj** , aby włączyć usługę Microsoft Defender Anti-Malware, i uniemożliwić użytkownikom jej wyłączenie.
 
 - **Minimalna wersja programu Microsoft Defender chroniącego przed złośliwym kodem**:  
   Wprowadź minimalną dozwoloną wersję usługi Microsoft Defender chroniącej przed złośliwym oprogramowaniem. Na przykład wprowadź `4.11.0.0`. Jeśli pole pozostanie puste, można użyć dowolnej wersji usługi Microsoft Defender Anti-Malware.  
@@ -206,10 +207,12 @@ Dotyczy tylko współzarządzanych urządzeń z systemem Windows 10 lub nowszym.
   *Domyślnie żadna wersja nie jest skonfigurowana*.
 
 - **Aktualna analiza zabezpieczeń w usłudze Microsoft Defender chroniąca przed złośliwym kodem**:  
-  Kontroluje aktualizacje oprogramowania antywirusowego zabezpieczeń systemu Windows i ochrony przed zagrożeniami na urządzeniach.  
+  Kontroluje aktualizacje oprogramowania antywirusowego zabezpieczeń systemu Windows i ochrony przed zagrożeniami na urządzeniach.
   - **Nie skonfigurowano** (*Domyślnie*) — usługa Intune nie wymusza żadnych wymagań.
-  - **Wymagaj** — Wymuś aktualność analizy zabezpieczeń programu Microsoft Defender. 
+  - **Wymagaj** — Wymuś aktualność analizy zabezpieczeń programu Microsoft Defender.
 
+  [Usługa Defender/Health/SignatureOutOfDate CSP](https://docs.microsoft.com/windows/client-management/mdm/defender-csp)
+  
   Aby uzyskać więcej informacji, zobacz [aktualizacje analizy zabezpieczeń dla programu antywirusowego Microsoft Defender i inne oprogramowanie chroniące przed złośliwym oprogramowaniem firmy Microsoft](https://www.microsoft.com/en-us/wdsi/defenderupdates).
 
 - **Ochrona w czasie rzeczywistym**:  

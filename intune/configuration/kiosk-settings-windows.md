@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 12/02/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 42ccb1d1654ba45b63672eebf00acd10fdc56a67
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: 80da0e6952c5aaab6fa8146b2d91d32259966d5d
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059341"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74691723"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Ustawienia urządzenia z systemem Windows 10 lub nowszym, które ma działać jako kiosk w usłudze Intune
 
@@ -83,16 +83,17 @@ Uruchamia tylko jedną aplikację na urządzeniu.
 
     - **Odśwież przeglądarkę po upływie czasu bezczynności**: wprowadź czas bezczynności (1–1440 minut), po którym przeglądarka kiosku jest uruchamiana od nowa. Czas bezczynności to liczba minut od ostatniej interakcji użytkownika. Domyślnie ta wartość pozostaje pusta, co oznacza, że nie ma limitu czasu bezczynności.
 
-    - **Dozwolone witryny internetowe**: to ustawienie umożliwia zezwolenie na otwieranie określonych witryn internetowych. Mówiąc inaczej, ta funkcja umożliwia ograniczenie lub uniemożliwienie użycia witryn internetowych w urządzeniu. Można na przykład zezwolić na otwieranie wszystkich witryn internetowych w lokalizacji `http://contoso.com*`. Domyślnie wszystkie witryny internetowe są dozwolone.
+    - **Dozwolone witryny internetowe**: to ustawienie umożliwia zezwolenie na otwieranie określonych witryn internetowych. Mówiąc inaczej, ta funkcja umożliwia ograniczenie lub uniemożliwienie użycia witryn internetowych w urządzeniu. Można na przykład zezwolić na otwieranie wszystkich witryn internetowych w lokalizacji `http://contoso.com`. Domyślnie wszystkie witryny internetowe są dozwolone.
 
-      Aby zezwolić na określone witryny internetowe, przekaż plik zawierający listę dozwolonych witryn internetowych w oddzielnych wierszach. Jeśli nie dodasz pliku, wszystkie witryny internetowe będą dozwolone. Usługa Intune obsługuje znak `*` (gwiazdka) jako symbol wieloznaczny.
+      Aby zezwolić na określone witryny internetowe, przekaż plik zawierający listę dozwolonych witryn internetowych w oddzielnych wierszach. Jeśli nie dodasz pliku, wszystkie witryny internetowe będą dozwolone. Domyślnie usługa Intune obsługuje symbol wieloznaczny. W związku z tym po wprowadzeniu domeny, takiej jak `sharepoint.com`, Zezwalaj na poddomeny, takie jak `contoso.sharepoint.com`, `my.sharepoint.com`i tak dalej.
 
       Przykładowy plik powinien być podobny do poniższej listy:
 
       `http://bing.com`  
       `https://bing.com`  
-      `http://contoso.com/*`  
-      `https://contoso.com/*`
+      `http://contoso.com`  
+      `https://contoso.com`  
+      `office.com`
 
     > [!NOTE]
     > Kioski systemu Windows 10 z włączoną funkcją automatycznego logowania przy użyciu przeglądarki Microsoft Kiosk Browser muszą używać licencji offline ze sklepu Microsoft Store dla Firm. Ten wymóg wynika z tego, że do logowania automatycznego jest używane konto użytkownika lokalnego bez poświadczeń usługi Azure Active Directory (AD). Nie można więc ocenić licencji w trybie online. Aby uzyskać więcej informacji, zobacz [Rozpowszechnianie aplikacji w trybie offline](https://docs.microsoft.com/microsoft-store/distribute-offline-apps).

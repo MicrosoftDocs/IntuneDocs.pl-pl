@@ -12,10 +12,10 @@ ms.author: dougeby
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 42e16be44dba539007967dd921da4c8d4f095ec4
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72504822"
 ---
 # <a name="using-the-intune-docs"></a>Używanie dokumentów usługi Intune
@@ -36,7 +36,7 @@ Aby uzyskać ogólną pomoc i obsługę usługi Intune, zobacz [Uzyskaj pomoc te
 
 - Użyj wyszukiwanych terminów, które pasują do terminologii w interfejsie użytkownika i dokumentacji online. Unikaj nieoficjalnych terminów lub skrótów, które mogą być widoczne w treści społeczności.
 
-- Aby wyszukać w aktualnie oglądanym artykule, użyj funkcji **wyszukiwania** przeglądarki. W przypadku większości nowoczesnych przeglądarek sieci Web naciśnij klawisz **Ctrl** +**F** , a następnie wprowadź wyszukiwane terminy.  
+- Aby wyszukać w aktualnie oglądanym artykule, użyj funkcji **wyszukiwania** przeglądarki. W przypadku większości nowoczesnych przeglądarek sieci Web naciśnij klawisz **Ctrl**+**F** , a następnie wprowadź wyszukiwane terminy.  
 
 - Każdy artykuł w systemie docs.microsoft.com zawiera następujące pola, które ułatwiają wyszukiwanie zawartości:  
 

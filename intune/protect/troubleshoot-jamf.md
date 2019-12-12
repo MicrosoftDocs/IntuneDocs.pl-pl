@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 44733eb369e520d2d5f0ff548d4f1921abcb8758
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72503568"
 ---
 # <a name="troubleshoot-integration-of-jamf-pro-with-microsoft-intune"></a>Rozwiązywanie problemów z integracją Jamf Pro z usługą Microsoft Intune
@@ -45,7 +45,7 @@ Podczas badania integracji Jamf Pro z usługą Intune należy wziąć pod uwagę
 - Jaki jest dokładny komunikat o błędzie?
 - Gdzie jest komunikat o błędzie?
 - Kiedy problem zaczął występować?  Czy usługa Jamf Pro współpracuje z usługą Intune?
-- Ilu użytkowników dotyczy ten wpływ? Czy wszyscy użytkownicy mają te same lub tylko niektóre?
+- Ilu użytkowników dotyczy błąd? Czy wszyscy użytkownicy mają te same lub tylko niektóre?
 - Ile urządzeń ma wpływ? Czy dotyczy to wszystkich urządzeń?
  
 
@@ -61,7 +61,7 @@ Poniższe informacje ułatwiają identyfikowanie i rozwiązywanie typowych probl
 |  **Urządzenie Mac ukazuje zgodność w usłudze Intune, ale niezgodne na platformie Azure** | [Problemy z rejestracją urządzenia](#mac-device-shows-compliant-in-intune-but-noncompliant-in-azure) |
 | **Zduplikowane wpisy są wyświetlane w konsoli usługi Intune dla urządzeń Mac zarejestrowanych przy użyciu Jamf** | [Wiele rejestracji z tego samego urządzenia](#duplicate-entries-appear-in-the-intune-console-for-mac-devices-enrolled-by-using-jamf) |
 | **Szacowanie urządzenia przez zasady zgodności nie powiodło się** | [Zasady są obiektami docelowymi grup urządzeń](#compliance-policy-fails-to-evaluate-the-device) |
-| **Nie można pobrać tokenu dostępu dla interfejsu API Microsoft Graph** | Mogą być stosowane następujące przyczyny: <br> [uprawnienia - dla aplikacji Jamf Pro na platformie Azure](#theres-a-permission-issue-with-the-jamf-pro-application-in-azure) <br> - [wygasłą licencję dla usługi Jamf lub usługi Intune](#a-license-required-for-jamf-intune-integration-has-expired) <br> porty **-** [nie są otwarte](#the-required-ports-arent-open-on-your-network)|
+| **Nie można pobrać tokenu dostępu dla interfejsu API Microsoft Graph** | Mogą być stosowane następujące przyczyny: <br> [uprawnienia -dla aplikacji Jamf Pro na platformie Azure](#theres-a-permission-issue-with-the-jamf-pro-application-in-azure) <br> - [wygasłą licencję dla usługi Jamf lub usługi Intune](#a-license-required-for-jamf-intune-integration-has-expired) <br> porty **-** [nie są otwarte](#the-required-ports-arent-open-on-your-network)|
  
 
 ### <a name="devices-are-marked-as-unresponsive-in-jamf-pro"></a>Urządzenia są oznaczone jako nieodpowiadające w Jamf Pro  
@@ -111,7 +111,7 @@ Istnieje kilka typowych przyczyn niepowodzenia rejestracji urządzeń Mac.
 
 **Aplikacja Jamf Pro Enterprise na platformie Azure ma nieprawidłowe uprawnienia lub ma więcej niż jedno uprawnienie**  
 
-  Podczas tworzenia aplikacji na platformie Azure należy usunąć wszystkie domyślne uprawnienia interfejsu API, a następnie przypisać do niej pojedyncze uprawnienie *update_device_attributes*. 
+  Podczas tworzenia aplikacji na platformie Azure należy usunąć wszystkie domyślne uprawnienia interfejsu API, a następnie przypisać do niej pojedyncze uprawnienia *update_device_attributes*. 
 
   **Rozwiązanie**  
   Przejrzyj i w razie potrzeby popraw uprawnienia dla aplikacji Jamf utworzonej w usłudze Azure AD. Zobacz procedurę [tworzenia aplikacji dla Jamf w usłudze Azure AD](conditional-access-integrate-jamf.md#create-an-application-in-azure-active-directory). 
@@ -294,7 +294,7 @@ Jest wyświetlany następujący komunikat o błędzie:
 
 Podczas rejestrowania aplikacji Jamf Pro na platformie Azure wystąpił jeden z następujących warunków:  
 - Aplikacja otrzymała więcej niż jedno uprawnienie.
-- Nie wybrano opcji **Udziel zgody administratora na *\<your > firmy***  .  
+- Nie wybrano opcji " **Udziel zgody administratora na *\<twojej firmie >***  ".  
 
 **Rozwiązanie**  
 Zobacz rozwiązanie dla przyczyny 1, aby [nie można było zarejestrować urządzeń](#devices-fail-to-register)we wcześniejszej części tego artykułu.
