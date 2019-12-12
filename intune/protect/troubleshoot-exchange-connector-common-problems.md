@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: de365312a7d293527c3c83fbbd84ab55de41d530
-ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74547670"
 ---
 # <a name="resolve-common-problems-with-the-intune-exchange-connector"></a>Rozwiązywanie typowych problemów z programem Intune Exchange Connector
@@ -84,7 +84,7 @@ W przypadku niepowodzenia wykrywania awaryjnego spróbuj wykonać następujące 
 
    1. Określ adres URL EWS. Domyślny adres URL EWS dla programu Exchange to `https://<mailServerFQDN>/ews/exchange.asmx`, ale adres URL może się różnić. Skontaktuj się z administratorem programu Exchange, aby zweryfikować prawidłowy adres URL dla danego środowiska.
 
-   2. Edytuj plik *OnPremisesExchangeConnectorServiceConfiguration.xml*. Domyślnie plik znajduje się w *%ProgramData%\Microsoft\Windows Intune Exchange Connector* na komputerze, na którym jest uruchomiony program Exchange Connector. Otwórz plik w edytorze tekstów, a następnie zmień następujący wiersz, aby odzwierciedlić adres URL EWS środowiska: `<ExchangeWebServiceURL>https://<YourExchangeHOST>/EWS/Exchange.asmx</ExchangeWebServiceURL>`
+   2. Edytuj plik *OnPremisesExchangeConnectorServiceConfiguration.xml*. Domyślnie plik znajduje się w *%ProgramData%\Microsoft\Windows Intune Exchange Connector* na komputerze, na którym jest uruchomiony program Exchange Connector. Otwórz plik w edytorze tekstów, a następnie zmień następujący wiersz, aby odzwierciedlić adres URL EWS środowiska: `<ExchangeWebServiceURL> https://<YourExchangeHOST>/EWS/Exchange.asmx</ExchangeWebServiceURL>`
 
 3. Zapisz plik, a następnie uruchom ponownie komputer lub usługę Microsoft Intune Exchange Connector.
 

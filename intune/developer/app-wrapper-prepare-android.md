@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8fa63540afa18450f731180da3c2cee729010a65
-ms.sourcegitcommit: ce518a5dfe62c546a77f32ef372f36efbaad473f
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74465707"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Przygotowywanie aplikacji systemu Android pod kątem zasad ochrony aplikacji za pomocą narzędzia opakowującego aplikacje usługi Intune
@@ -54,7 +54,7 @@ Przed uruchomieniem tego narzędzia należy zapoznać się z sekcją [Uwagi doty
     > [!NOTE]
     > Narzędzie opakowujące aplikacje usługi Intune nie obsługuje podpisywania aplikacji za pomocą schematów podpisów firmy Google w wersji v2 i w przyszłej wersji v3. Zaleca się, aby po opakowaniu pliku apk przy użyciu narzędzia opakowującego aplikacje usługi Intune skorzystać z [narzędzia Apksigner dostarczanego przez firmę Google]( https://developer.android.com/studio/command-line/apksigner). Pozwoli to zagwarantować, że po pobraniu aplikacji na urządzeniach użytkowników końcowych będzie można ją uruchomić poprawnie zgodnie ze standardami systemu Android. 
 
-- (Opcjonalnie) Czasami aplikacja może osiągnąć limit rozmiaru pliku wykonywalnego Dalvik (DEX) z powodu klas zestawu Intune MAM SDK, które są dodawane podczas opakowywania. Pliki DEX są częścią kompilacji aplikacji systemu Android. Narzędzie opakowującego aplikacje w usłudze Intune automatycznie obsługuje przepełnienie pliku DEX podczas zawijania dla aplikacji o minimalnym poziomie interfejsu API równym 21 lub wyższym (w przypadku [v. 1.0.2501.1](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android/releases)). W przypadku aplikacji o minimalnym poziomie interfejsu API wynoszącym < 21 najlepszym rozwiązaniem jest zwiększenie minimalnego poziomu interfejsu API przy użyciu flagi `-UseMinAPILevelForNativeMultiDex` otoki. Aby klienci nie mogli zwiększyć minimalnego poziomu interfejsu API aplikacji, dostępne są następujące obejścia przepełnienia DEX. W niektórych organizacjach może to wymagać współpracy z osobami kompilującymi aplikację (tj. zespołem zajmującym się kompilacją aplikacji):
+- (Opcjonalnie) Czasami aplikacja może osiągnąć limit rozmiaru pliku wykonywalnego Dalvik (DEX) z powodu klas zestawu Intune MAM SDK, które są dodawane podczas opakowywania. Pliki DEX są częścią kompilacji aplikacji systemu Android. Narzędzie opakowującego aplikacje w usłudze Intune automatycznie obsługuje przepełnienie pliku DEX podczas zawijania dla aplikacji z minimalnym poziomem interfejsu API równym 21 lub nowszym (w [v. 1.0.2501.1](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android/releases)). W przypadku aplikacji o minimalnym poziomie interfejsu API wynoszącym < 21 najlepszym rozwiązaniem jest zwiększenie minimalnego poziomu interfejsu API przy użyciu flagi `-UseMinAPILevelForNativeMultiDex` otoki. Aby klienci nie mogli zwiększyć minimalnego poziomu interfejsu API aplikacji, dostępne są następujące obejścia przepełnienia DEX. W niektórych organizacjach może to wymagać współpracy z osobami kompilującymi aplikację (tj. zespołem zajmującym się kompilacją aplikacji):
 
   - Użyj funkcji Guard w celu wyeliminowania nieużywanych odwołań do klas z podstawowego pliku DEX aplikacji.
   - W przypadku klientów korzystających z programu v 3.1.0 lub nowszej wtyczki z systemem Android Gradle należy wyłączyć [Dexer D8](https://android-developers.googleblog.com/2018/04/android-studio-switching-to-d8-dexer.html).  
