@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e2909e7ad1ced9483a6cec58f1f3009f56946f5f
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74058424"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Ustawienia systemu Windows 10 (oraz nowszych wersji) służące do ochrony urządzeń przy użyciu usługi Intune
@@ -36,7 +36,7 @@ Aby skonfigurować program antywirusowy Microsoft Defender, zobacz [Ograniczenia
 
 Aby uzyskać więcej informacji o dostawcach usług konfiguracji (CSP), zobacz [Dokumentacja dostawcy usług konfiguracji](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).  
 
-## <a name="microsoft-defender-application-guard"></a>Ochrona aplikacji w programie Microsoft Defender  
+## <a name="microsoft-defender-application-guard"></a>Microsoft Defender Application Guard  
 
 Podczas korzystania z przeglądarki Microsoft Edge program Microsoft Defender Application Guard chroni Twoje środowisko przed witrynami, które nie zostały uznane za zaufane przez Twoją organizację. Gdy użytkownicy odwiedzają witryny, które nie zostały wymienione w granicach sieci izolowanej, witryny te są otwierane w ramach sesji przeglądania wirtualnego funkcji Hyper-V. Witryny są definiowane przez granicę sieci, która jest konfigurowana w konfiguracji urządzenia.  
 
@@ -44,7 +44,7 @@ Funkcja Application Guard jest dostępna tylko dla urządzeń z systemem Windows
 
 - **Application Guard**  
   **Domyślnie**: Nie skonfigurowano  
-   Dostawca usług kryptograficznych funkcji Application Guard: [Settings/AllowWindowsDefenderApplicationGuard](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowwindowsdefenderapplicationguard)  
+   Dostawca CSP funkcji Application Guard: [Settings/AllowWindowsDefenderApplicationGuard](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowwindowsdefenderapplicationguard)  
 
   - **Włączone dla usługi Edge** — włącza tę funkcję, która otwiera niezaufane witryny w zwirtualizowanym kontenerze przeglądania funkcji Hyper-V.  
   - **Nieskonfigurowane** — na urządzeniu mogą zostać otwarte wszystkie lokacje (zaufane i niezaufane).  
@@ -636,7 +636,7 @@ Te ustawienia dotyczą w szczególności dysków danych systemu operacyjnego.
     - **Wykonaj kopie zapasowe haseł odzyskiwania i pakietów kluczy**  
     - **Wykonaj kopie zapasowe tylko haseł odzyskiwania**  
 
-  - **Obrót hasła odzyskiwania opartego na kliencie**  
+  - **Inicjowana przez klienta rotacja hasła odzyskiwania**  
     **Wartość domyślna**: rotacja kluczy włączona dla urządzeń przyłączonych do usługi Azure AD  
     Dostawca CSP funkcji BitLocker: [ConfigureRecoveryPasswordRotation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)  
     
@@ -733,7 +733,7 @@ Te ustawienia dotyczą wyłącznie stałych dysków danych.
     - **Wykonaj kopie zapasowe haseł odzyskiwania i pakietów kluczy**  
     - **Wykonaj kopie zapasowe tylko haseł odzyskiwania**  
 
-  - **Obrót hasła odzyskiwania opartego na kliencie**  
+  - **Inicjowana przez klienta rotacja hasła odzyskiwania**  
     **Wartość domyślna**: rotacja kluczy włączona dla urządzeń przyłączonych do usługi Azure AD  
     Dostawca CSP funkcji BitLocker: [ConfigureRecoveryPasswordRotation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)  
     
@@ -1717,7 +1717,7 @@ Te opcje umożliwiają konfigurowanie ustawień zabezpieczeń lokalnych na urzą
   - **Nieskonfigurowany**
   - **Zezwalaj**
 
-- **Utwórz tokeny**  
+- **Tworzenie tokenów**  
   **Domyślnie**: Nie skonfigurowano  
   Dostawca CSP: [UserRights/Untoken](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-userrights#userrights-createtoken)
 

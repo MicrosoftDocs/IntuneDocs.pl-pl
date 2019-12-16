@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/19/2019
+ms.date: 12/09/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b38ab611ecf6a33c8cc48fa120751af8548a7f95
-ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
+ms.openlocfilehash: 904c3d2267decdfa3929bf29376c05a995c77eb8
+ms.sourcegitcommit: f5108039f0ade52e95ea3ac1da1aa16d02224af3
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74390923"
+ms.lasthandoff: 12/09/2019
+ms.locfileid: "74946661"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem Android Enterprise w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune
 
@@ -31,6 +31,8 @@ W tym artykule wymieniono i opisano różne ustawienia, którymi można sterowa�
 [Utwórz profil konfiguracji urządzenia](device-restrictions-configure.md).
 
 ## <a name="device-owner-only"></a>Tylko właściciel urządzenia
+
+Te ustawienia dotyczą typów rejestracji w systemie Android Enterprise, w których usługa Intune kontroluje całe urządzenie, takie jak w pełni zarządzane lub dedykowane urządzenia z systemem Android Enterprise.
 
 ### <a name="general-settings"></a>Ustawienia ogólne
 
@@ -242,6 +244,7 @@ Te ustawienia umożliwiają skonfigurowanie trybu kiosku na dedykowanych urządz
   > [!IMPORTANT]
   > - Wybrany klient sieci VPN musi być zainstalowany na urządzeniu i musi obsługiwać sieć VPN dla aplikacji w profilach służbowych. W przeciwnym razie wystąpi błąd. 
   > - Należy zatwierdzić aplikację klienta sieci VPN w **zarządzanymi sklepie Google Play**, zsynchronizować aplikację z usługą Intune i wdrożyć aplikację na urządzeniu. Po wykonaniu tej czynności aplikacja jest zainstalowana w profilu służbowym użytkownika.
+  > - Nadal musisz skonfigurować klienta sieci VPN z [profilem sieci VPN](vpn-settings-android-enterprise.md)lub za pośrednictwem [profilu konfiguracji aplikacji](../apps/app-configuration-policies-use-android.md).
   > - Mogą wystąpić znane problemy podczas korzystania z sieci VPN dla aplikacji z programem F5 Access dla systemu Android 3.0.4. Aby uzyskać więcej informacji, zobacz [opublikowane przez firmę F5 informacje o wersji programu F5 Access dla systemu Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android).
 
 - **Tryb blokady**: wybierz pozycję **Włącz**, aby wymusić korzystanie z tunelu sieci VPN przez cały ruch sieciowy. Jeśli nie nawiązano połączenia z siecią VPN, urządzenie nie będzie mieć dostępu do sieci.
@@ -265,12 +268,14 @@ Te ustawienia umożliwiają skonfigurowanie trybu kiosku na dedykowanych urządz
 
 ## <a name="work-profile-only"></a>Tylko profil służbowy
 
+Te ustawienia mają zastosowanie do typów rejestracji w systemie Android Enterprise, w których usługa Intune kontroluje tylko profil służbowy, taki jak rejestracja profilu służbowego systemu Android na urządzeniu osobistym lub przynoszącym własne urządzenie (BYOD).
+
 ### <a name="work-profile-settings"></a>Ustawienia profilu służbowego
 
 #### <a name="general"></a>Ogólne
 
 - **Kopiuj i wklejaj między profilem służbowym a osobistym**: wybierz pozycję **Blokuj**, aby uniemożliwić kopiowanie i wklejanie między aplikacjami służbowymi i osobistymi. Pozycja **Nieskonfigurowane** umożliwia użytkownikom udostępnianie danych aplikacjom w profilu osobistym przy użyciu kopiowania i wklejania. 
-- **Udostępnianie danych między profilami służbowym i osobistym**: wybierz, czy aplikacje w profilu służbowym mogą udostępniać dane aplikacjom w profilu osobistym. Możesz na przykład sterować akcjami udostępniania, takimi jak opcja **Udostępnij…** , w aplikacjach. w przeglądarce Chrome. To ustawienie nie ma zastosowania do zachowania schowka w zakresie kopiowania/wklejania. Opcje udostępniania:
+- **Udostępnianie danych między profilami służbowym i osobistym**: wybierz, czy aplikacje w profilu służbowym mogą udostępniać dane aplikacjom w profilu osobistym. Możesz na przykład sterować akcjami udostępniania, takimi jak opcja **Udostępnij…**, w aplikacjach. w przeglądarce Chrome. To ustawienie nie ma zastosowania do zachowania schowka w zakresie kopiowania/wklejania. Opcje udostępniania:
   - **Ustawienie domyślne urządzenia**: domyślne zachowanie urządzenia w zakresie udostępniania, które różni się w zależności od wersji systemu Android. Udostępnianie danych z profilu osobistego w profilu służbowym jest domyślnie dozwolone. Udostępnianie danych z profilu służbowego w profilu osobistym jest domyślnie zablokowane. To ustawienie zapobiega udostępnianiu danych z profilu służbowego w profilu osobistym. Firma Google nie blokuje udostępniania z profilu osobistego do profilu służbowego na urządzeniach z systemem w wersji 6.0 lub nowszej.
   - **Aplikacje w profilu służbowym mogą obsługiwać żądania udostępnienia z profilu osobistego**: umożliwia włączenie wbudowanej funkcji systemu Android pozwalającej na udostępnianie danych z profilu osobistego w profilu służbowym. Gdy ta opcja jest włączona, żądanie udostępnienia z aplikacji w profilu osobistym umożliwi udostępnianie danych aplikacjom w profilu służbowym. Jest to domyślne ustawienie w przypadku urządzeń z systemem Android w wersji wcześniejszej niż 6.0.
   - **Nie Zezwalaj na udostępnianie między granicami**: Zapobiega udostępnianiu między profilami służbowymi i osobistymi.
@@ -307,7 +312,7 @@ Te ustawienia umożliwiają skonfigurowanie trybu kiosku na dedykowanych urządz
 - **Minimalna długość hasła**: określ minimalną liczbę znaków, które musi zawierać hasło użytkownika (**4**-**16**).
 - **Maksymalna liczba minut braku aktywności przed zablokowaniem profilu służbowego**: określ, po jakim czasie następuje zablokowanie profilu służbowego. Użytkownik musi następnie wprowadzić swoje poświadczenia, aby odzyskać dostęp.
 - **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia**: określ, ile razy może zostać podane nieprawidłowe hasło, zanim profil służbowy zostanie wyczyszczony z urządzenia.
-- **Wygaśnięcie hasła (dni)** : określ liczbę dni, po których użytkownik końcowy musi zmienić hasło (**1**-**255**).
+- **Wygaśnięcie hasła (dni)**: określ liczbę dni, po których użytkownik końcowy musi zmienić hasło (**1**-**255**).
 - **Wymagany typ hasła**: wybierz typ hasła, które musi zostać ustawione na urządzeniu. Wybierz spośród opcji:
   - **Ustawienie domyślne urządzenia**
   - **Zabezpieczenia biometryczne na niskim poziomie**
@@ -328,7 +333,7 @@ Te ustawienia hasła są stosowane w profilach osobistych na urządzeniach korzy
 - **Minimalna długość hasła**: określ minimalną liczbę znaków, które musi zawierać hasło użytkownika (**4**-**14**).
 - **Maksymalna liczba minut braku aktywności przed zablokowaniem ekranu**: określ, po jakim czasie braku aktywności następuje automatyczne zablokowanie urządzenia
 - **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia**: określ, ile razy może zostać podane nieprawidłowe hasło, zanim zostaną wyczyszczone wszystkie dane z urządzenia
-- **Wygaśnięcie hasła (dni)** : określ liczbę dni, po których użytkownik końcowy musi zmienić hasło (**1**-**255**)
+- **Wygaśnięcie hasła (dni)**: określ liczbę dni, po których użytkownik końcowy musi zmienić hasło (**1**-**255**)
 - **Wymagany typ hasła**: wybierz typ hasła, które musi zostać ustawione na urządzeniu. Wybierz spośród opcji:
   - **Ustawienie domyślne urządzenia**
   - **Zabezpieczenia biometryczne na niskim poziomie**

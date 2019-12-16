@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c0fac5e9d34890272253eaefd82ed13dc1014ba0
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73713479"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Przygotowywanie aplikacji systemu iOS pod kątem zasad ochrony aplikacji za pomocą narzędzia opakowującego aplikacje usługi Intune
@@ -44,7 +44,7 @@ Przed uruchomieniem narzędzia opakowującego aplikacje należy spełnić pewne 
 
   * Plik aplikacji wejściowej musi mieć rozszerzenie **ipa** lub **app**.
 
-  * Aplikacja wejściowa musi być skompilowana dla systemu iOS w wersji 11 lub nowszej.
+  * Aplikację wejściową należy skompilować dla systemu iOS w wersji 11 lub nowszej.
 
   * Aplikacja wejściowa nie może być zaszyfrowana.
 
@@ -303,7 +303,7 @@ Wykonaj następujące kroki, aby podczas rozwiązywania problemów pobrać dzien
 
 ### <a name="collecting-crash-logs-from-the-system"></a>Zbieranie dzienników awarii z systemu
 
-Aplikacja może rejestrować przydatne informacje w konsoli urządzenia klienta systemu iOS. Informacje te są przydatne w przypadku wystąpienia problemów z aplikacją, gdy konieczne jest ustalenie, czy problem jest związany z narzędziem opakowującym aplikacje. Aby uzyskać dostęp do tych informacji, wykonaj następujące czynności:
+Aplikacja może rejestrować przydatne informacje w konsoli urządzenia klienta systemu iOS. Informacje te są przydatne w przypadku wystąpienia problemów z aplikacją, gdy konieczne jest ustalenie, czy problem jest związany z narzędziem opakowującym aplikacje, czy też z samą aplikacją. Aby uzyskać dostęp do tych informacji, wykonaj następujące czynności:
 
 1. Uruchom aplikację, aby problem wystąpił ponownie.
 

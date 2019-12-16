@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 348768be4a42667f579df0ccb500434425258db0
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: 46012b11cdb458243658e858b53c2dfb1a69dc88
+ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73712863"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991801"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Rozwiązywanie problemów dotyczących rejestrowania urządzeń z systemem Windows w usłudze Microsoft Intune
 
@@ -38,7 +38,7 @@ Zbierz następujące informacje o problemie:
 - Gdzie zobaczysz komunikat o błędzie?
 - Kiedy problem zaczął występować? Czy rejestracja została kiedykolwiek zadziałała? 
 - Na jakiej platformie (Android, iOS, Windows) występuje problem?
-- Ilu użytkowników dotyczy ten wpływ? Czy wszyscy użytkownicy mają te same lub tylko niektóre?
+- Ilu użytkowników dotyczy błąd? Czy wszyscy użytkownicy mają te same lub tylko niektóre?
 - Ile urządzeń ma wpływ? Czy dotyczy to wszystkich urządzeń?
 - Co to jest urząd MDM? Jeśli jest System Center Configuration Manager, jakiej wersji Configuration Manager są używane?
 - Jak odbywa się rejestracja? Czy jest to "Dobierz własne urządzenie" (BYOD), czy Apple Device Enrollment Program (DEP) z profilami rejestracji?
@@ -60,8 +60,8 @@ Błąd 80180003: „Wystąpił problem. Ten użytkownik nie ma autoryzacji do re
 Istnieje kilka możliwych rozwiązań tego problemu:
 
 ##### <a name="remove-devices-that-were-enrolled"></a>Usuń urządzenia, które zostały zarejestrowane
-1. Zaloguj się do [Centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).    
-2. Przejdź do pozycji **użytkownicy**  > **Wszyscy użytkownicy**.    
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).    
+2. Przejdź do pozycji **użytkownicy** > **Wszyscy użytkownicy**.    
 3. Wybierz odpowiednie konto użytkownika, a następnie kliknij pozycję **urządzenia**.    
 4. Wybierz wszystkie nieużywane lub niechciane urządzenia, a następnie kliknij przycisk **Usuń**. 
 
@@ -70,13 +70,13 @@ Istnieje kilka możliwych rozwiązań tego problemu:
 > [!NOTE]
 > Ta metoda zwiększa limit rejestracji urządzeń dla wszystkich użytkowników, a nie tylko dla danego użytkownika.
 
-1. Zaloguj się do [Centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Przejdź do pozycji **rejestracja urządzeń**  > **ograniczenia rejestracji**, a następnie wybierz pozycję **ograniczenia limitu urządzeń**.    
-3. Zwiększ wartość **limitu urządzeń**. 
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Przejdź do pozycji **urządzenia** > **ograniczenia rejestracji** > **domyślne** (w obszarze **ograniczenia limitu urządzeń**) > **właściwości** > **Edytuj** (obok pozycji **Limit urządzeń**) > Zwiększ **Limit urządzeń** (maksymalnie 15) > **Przejrzyj i Zapisz**.    
+ 
 
 ##### <a name="check-device-type-restrictions"></a>Sprawdzanie ograniczeń typu urządzenia
 1. Zaloguj się do [Centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) przy użyciu konta administratora globalnego.
-2. Przejdź do pozycji **rejestracja urządzeń**  > **ograniczenia rejestracji**, a następnie wybierz **domyślne** ograniczenie w obszarze **ograniczenia typu urządzenia**.    
+2. Przejdź do pozycji **urządzenia** > **ograniczenia rejestracji**, a następnie wybierz **domyślne** ograniczenie w obszarze **ograniczenia typu urządzenia**.    
 3. Wybierz pozycję **platformy**, a następnie wybierz pozycję **Zezwalaj** na **system Windows (MDM)** .
 
     > [!IMPORTANT]
@@ -106,7 +106,7 @@ Błąd 0x801c0003: "nie można zarejestrować tego użytkownika. Możesz spróbo
 Błąd 8018000a: "Wystąpił problem. Urządzanie zostało już zarejestrowane.  Możesz skontaktować się z administratorem systemu, podając kod błędu 8018000a ".
 
 **Przyczyna:** Jeden z następujących warunków jest spełniony:
-- Inny użytkownik zarejestrował już urządzenie w usłudze Intune lub przyłączył urządzenie do usługi Azure AD. Aby określić, czy jest to przypadek, przejdź do pozycji **ustawienia**  > **konta**  > **dostęp do**zasobów. Poszukaj komunikatu podobnego do następującego: "inny użytkownik w systemie jest już połączony z siecią służbową lub szkołą. Usuń to połączenie służbowe i spróbuj ponownie. "    
+- Inny użytkownik zarejestrował już urządzenie w usłudze Intune lub przyłączył urządzenie do usługi Azure AD. Aby określić, czy jest to przypadek, przejdź do pozycji **ustawienia** > **konta** > **dostęp do**zasobów. Poszukaj komunikatu podobnego do następującego: "inny użytkownik w systemie jest już połączony z siecią służbową lub szkołą. Usuń to połączenie służbowe i spróbuj ponownie. "    
 - Agent klienta Configuration Manager jest zainstalowany na komputerze.    
 
 #### <a name="resolution"></a>Rozwiązanie
@@ -115,7 +115,7 @@ Aby rozwiązać ten problem, należy użyć jednej z następujących metod:
 
 ##### <a name="remove-the-other-work-or-school-account"></a>Usuń inne konto służbowe
 1. Wyloguj się z systemu Windows, a następnie zaloguj się przy użyciu innego konta, które zostało zarejestrowane lub dołączone do urządzenia.    
-2. Przejdź do pozycji **ustawienia**  > **konta**  > **dostęp do zasobów służbowych**, a następnie usuń konto służbowe.
+2. Przejdź do pozycji **ustawienia** > **konta** > **dostęp do zasobów służbowych**, a następnie usuń konto służbowe.
 3. Wyloguj się z systemu Windows, a następnie zaloguj się przy użyciu swojego konta.    
 4. Zarejestrowanie urządzenia w usłudze Intune lub dołączenie urządzenia do usługi Azure AD. 
 
@@ -167,7 +167,7 @@ Aby rozwiązać ten problem, należy użyć jednej z następujących metod:
 
 ##### <a name="disable-mdm-automatic-enrollment-in-azure"></a>Wyłącz automatyczną rejestrację w usłudze MDM na platformie Azure.
 1. Zaloguj się do [portalu Azure](https://portal.azure.com/).    
-2. Przejdź do **Azure Active Directory**  > **Mobility (MDM i MAM)**  > **Microsoft Intune**.    
+2. Przejdź do **Azure Active Directory** > **Mobility (MDM i MAM)**  > **Microsoft Intune**.    
 3. Ustaw **zakres użytkownika MDM** na **Brak**, a następnie kliknij przycisk **Zapisz**.    
      
 ##### <a name="uninstall"></a>Odinstalowanie
@@ -181,7 +181,7 @@ Błąd: "nie można zainstalować oprogramowania, 0x80cf4017."
 
 #### <a name="resolution"></a>Rozwiązanie
 1. Zaloguj się do witryny [https://admin.manage.microsoft.com](https://admin.manage.microsoft.com).    
-2. Przejdź do pozycji **administracja**  > **Pobierz oprogramowanie klienckie**, a następnie kliknij pozycję **Pobierz oprogramowanie klienckie**.    
+2. Przejdź do pozycji **administracja** > **Pobierz oprogramowanie klienckie**, a następnie kliknij pozycję **Pobierz oprogramowanie klienckie**.    
 3. Zapisz pakiet instalacyjny, a następnie zainstaluj oprogramowanie klienta programu. 
 
 
@@ -193,7 +193,7 @@ Błąd: „Ten certyfikat konta jest nieprawidłowy i może być wygasły, 0x80c
 
 #### <a name="resolution"></a>Rozwiązanie
 1. Zaloguj się do witryny [https://admin.manage.microsoft.com](https://admin.manage.microsoft.com).    
-2. Przejdź do pozycji **administracja**  > **Pobierz oprogramowanie klienckie**, a następnie kliknij pozycję **Pobierz oprogramowanie klienckie**.    
+2. Przejdź do pozycji **administracja** > **Pobierz oprogramowanie klienckie**, a następnie kliknij pozycję **Pobierz oprogramowanie klienckie**.    
 3. Zapisz pakiet instalacyjny, a następnie zainstaluj oprogramowanie klienta programu.    
 
 ### <a name="your-organization-does-not-support-this-version-of-windows"></a>Twoja organizacja nie obsługuje tej wersji systemu Windows. 
@@ -205,16 +205,15 @@ Błąd: "Wystąpił problem. Twoja organizacja nie obsługuje tej wersji systemu
 #### <a name="resolution"></a>Rozwiązanie
 Aby rozwiązać ten problem w środowisku autonomicznym usługi Intune, wykonaj następujące kroki: 
  
-1. Zaloguj się do [Azure Portal](https://portal.azure.com/) jako administrator.    
-2. Wybierz pozycję **Intune** po lewej stronie, a następnie przejdź do pozycji **Rejestracja urządzenia**  > **ograniczenia rejestracji**.    
-3. W obszarze **ograniczenia typu urządzenia**kliknij pozycję **platformy**, a następnie wybierz pozycję **Zezwalaj** na **system Windows (MDM)** .    
-4. Kliknij polecenie **Zapisz**.    
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)wybierz pozycję **urządzenia** > **ograniczenia rejestracji** > Wybierz ograniczenie typu urządzenia.    
+2. Wybierz **właściwości** > **Edytuj** (obok **ustawień platformy**) > **Zezwalaj** na **system Windows (MDM)** .    
+3. Kliknij przycisk **Przegląd + Zapisz**.    
  
 Aby rozwiązać ten problem w przypadku hybrydowego zarządzania urządzeniami przenośnymi za pomocą usługi Intune i Configuration Manager, wykonaj następujące kroki: 
 1. Otwórz konsolę programu Configuration Manager.    
 2. Wybierz pozycję **Administracja**, a następnie wybierz pozycję **Cloud Services**.    
 3. Kliknij prawym przyciskiem myszy **Microsoft Intune subskrypcję**, a następnie wybierz pozycję **Konfiguruj platformy > Windows**.    
-4. Zaznacz **opcję Włącz rejestrację systemu Windows**  > **Zastosuj**  > **OK**.  
+4. Zaznacz **opcję Włącz rejestrację systemu Windows** > **Zastosuj** > **OK**.  
 
 
 ### <a name="a-setup-failure-has-occurred-during-bulk-enrollment"></a>Wystąpił błąd instalacji podczas rejestracji zbiorczej.
@@ -236,7 +235,7 @@ Aby uzyskać więcej informacji na temat aplikacji do konfigurowania komputerów
 ### <a name="auto-mdm-enroll-failed"></a>Rejestrowanie automdm: nie powiodło się 
 
 Podczas próby zarejestrowania urządzenia z systemem Windows 10 automatycznie przy użyciu zasady grupy można napotkać następujące problemy: 
-- W Harmonogram zadań, w obszarze **Microsoft**  > **Windows**  > **EnterpriseMgmt**, ostatni wynik uruchomienia **harmonogramu utworzonego przez klienta rejestracji na potrzeby automatycznego rejestrowania w usłudze MDM w** ramach zadania usługi AAD jest następujący: **zdarzenie 76 Rejestrowanie automdm: niepowodzenie (nieznany kod błędu Win32:0x8018002b)**       
+- W Harmonogram zadań, w obszarze **Microsoft** > **Windows** > **EnterpriseMgmt**, ostatni wynik uruchomienia **harmonogramu utworzonego przez klienta rejestracji do automatycznego rejestrowania w usłudze zarządzania urządzeniami przenośnymi w usłudze AAD** jest następujący: **zdarzenie 76 automatyczne rejestrowanie MDM: niepowodzenie (nieznany kod błędu Win32:0x8018002b)**       
 - W Podgląd zdarzeń następujące zdarzenie jest rejestrowane w obszarze **Dzienniki aplikacji i usług/Microsoft/Windows/DeviceManagement-Enterprise-Diagnostics-Provider/admin**:   
     ```asciidoc
     Log Name: Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider/Admin
@@ -336,7 +335,7 @@ Ten problem zwykle występuje przed ponownym uruchomieniem urządzenia w scenari
 
 #### <a name="resolution"></a>Rozwiązanie
 
-1. Przejdź do usługi **Intune**  >  **rejestracji urządzeń**  > **rejestracji systemu Windows**  > **urządzeń**.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)wybierz pozycję **> urządzenia** > **Windows** > **urządzeń z systemem**Windows.
 2. Wybierz urządzenie, na którym występuje problem > kliknij przycisk wielokropka (...) po prawej stronie.
 3. Wybierz opcję **Cofnij przypisanie użytkownika** i poczekaj na zakończenie procesu.
 4. Przed podjęciem ponownej próby OOBE Sprawdź, czy jest przypisany profil autopilotażu usługi Azure AD.
@@ -371,23 +370,23 @@ Description:
 
 Ten problem jest zwykle spowodowany przez nieprawidłowe delegowanie uprawnień do jednostki organizacyjnej, w której są tworzone urządzenia z systemem Windows. Aby uzyskać więcej informacji, zobacz [zwiększenie limitu kont komputerów w jednostce organizacyjnej](windows-autopilot-hybrid.md#increase-the-computer-account-limit-in-the-organizational-unit).
 
-1. Otwórz narzędzie **Użytkownicy i komputery usługi Active Directory (DSA.msc)** .
+1. Otwórz narzędzie **Użytkownicy i komputery usługi Active Directory (DSA.msc)**.
 2. Kliknij prawym przyciskiem myszy jednostkę organizacyjną, która będzie używana do tworzenia komputerów dołączonych do hybrydowej usługi Active Directory, a następnie wybierz pozycję **Deleguj kontrolę**.
 3. W kreatorze **Delegowanie kontroli** wybierz pozycję **Dalej** > **Dodaj** > **Typy obiektów**.
 4. W okienku **Typy obiektów** zaznacz pole wyboru **Komputery**, a następnie wybierz przycisk **OK**.
 5. W okienku **Wybieranie: użytkownicy**, **komputery** lub **grupy** w polu **Wprowadź nazwy obiektów do wybrania** wprowadź nazwę komputera, na którym zainstalowano łącznik.
-6. Wybierz pozycję **Sprawdź nazwy** , aby sprawdzić poprawność wpisu > **OK**  > **dalej**.
+6. Wybierz pozycję **Sprawdź nazwy** , aby sprawdzić poprawność wpisu > **OK** > **dalej**.
 7. Wybierz pozycję **Utwórz zadanie niestandardowe do delegowania** > **Dalej**.
 8. Zaznacz pole wyboru **Tylko następujące obiekty w tym folderze**, a następnie zaznacz pola wyboru **Obiekty komputerów**, **Utwórz wybrane obiekty w tym folderze** i **Usuń wybrane obiekty w tym folderze**.
 9. Wybierz pozycję **Dalej**.
 10. W obszarze **Uprawnienia** zaznacz pole wyboru **Pełna kontrola**. Ta akcja powoduje zaznaczenie wszystkich innych opcji.
-11. Wybierz pozycję **dalej**  > **Zakończ**.
+11. Wybierz pozycję **dalej** > **Zakończ**.
 
 ## <a name="next-steps"></a>Następne kroki
 
 - [Rozwiązywanie problemów dotyczących rejestrowania urządzeń w usłudze Intune](../troubleshoot-device-enrollment-in-intune.md)
 - [Zadaj pytanie na forum usługi Intune](https://social.technet.microsoft.com/Forums/%7Blang-locale%7D/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc)
-- [Sprawdź Blog zespołu pomocy technicznej Microsoft Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
-- [Zapoznaj się z blogiem dotyczącym pakietu Microsoft Enterprise Mobility and Security](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)
+- [Sprawdź blog zespołu pomocy technicznej usługi Microsoft Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
+- [Sprawdź blog dotyczący pakietu Microsoft Enterprise Mobility and Security](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)
 - [Uzyskaj pomoc techniczną dotyczącą usługi Microsoft Intune](../fundamentals/get-support.md)
 - [Znajdowanie błędów rejestracji współzarządzania](https://docs.microsoft.com/sccm/comanage/how-to-monitor#enrollment-errors)

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 428da4581e9946b62bd6ee7c5f7d17d69f93ad9b
-ms.sourcegitcommit: ae6f2e7812e7fd36f2393b8f4b6cd8de63777b2c
+ms.openlocfilehash: 9742305905c5ba49930e13646bf13d8c248426b6
+ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592022"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74899398"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Wprowadzenie do zestawu SDK aplikacji usługi Microsoft Intune
 
@@ -63,7 +63,7 @@ Użyjemy adresów e-mail podanych w odpowiedziach kwestionariusza w celu uzyskan
 Jeśli link bezpośredni do aplikacji zmieni się w przyszłości, będzie konieczne ponowne zarejestrowanie aplikacji.
 
 > [!NOTE]
-> Prosimy o poinformowanie nas w przypadku zaktualizowania aplikacji za pomocą nowej wersji zestawu SDK aplikacji usługi Intune.
+> Musisz poinformować nas w przypadku zaktualizowania aplikacji za pomocą nowej wersji zestawu SDK aplikacji usługi Intune.
 
 ## <a name="download-the-sdk-files"></a>Pobieranie plików zestawu SDK
 
@@ -82,11 +82,11 @@ Warto utworzyć konto usługi GitHub, które pozwoli rozwidlać nasze repozytori
 
 Aby ułatwić zintegrowanie zestawu SDK aplikacji usługi Intune z aplikacją, będzie potrzebny jeden z następujących przewodników dla deweloperów:
 
-* **[Przewodnik dla deweloperów korzystających z zestawu SDK aplikacji usługi Intune dla systemu iOS](app-sdk-ios.md)** : ten dokument zawiera szczegółowe instrukcje dotyczące włączania aplikacji natywnej systemu iOS przy użyciu zestawu SDK aplikacji usługi Intune.
+* **[Przewodnik dla deweloperów korzystających z zestawu SDK aplikacji usługi Intune dla systemu iOS](app-sdk-ios.md)**: ten dokument zawiera szczegółowe instrukcje dotyczące włączania aplikacji natywnej systemu iOS przy użyciu zestawu SDK aplikacji usługi Intune.
 
-* **[Przewodnik dla deweloperów korzystających z zestawu SDK aplikacji usługi Intune dla systemu Android](app-sdk-android.md)** : ten dokument zawiera szczegółowe instrukcje dotyczące włączania aplikacji natywnej systemu Android przy użyciu zestawu SDK aplikacji usługi Intune.
+* **[Przewodnik dla deweloperów korzystających z zestawu SDK aplikacji usługi Intune dla systemu Android](app-sdk-android.md)**: ten dokument zawiera szczegółowe instrukcje dotyczące włączania aplikacji natywnej systemu Android przy użyciu zestawu SDK aplikacji usługi Intune.
 
-* **[Przewodnik powiązań platformy Xamarin dla zestawu Intune App SDK](app-sdk-xamarin.md)** : ten dokument pomoże Ci tworzyć aplikacje dla systemów Android i iOS przy użyciu oprogramowania Xamarin i zasad ochrony aplikacji usługi Intune.
+* **[Przewodnik powiązań platformy Xamarin dla zestawu Intune App SDK](app-sdk-xamarin.md)**: ten dokument pomoże Ci tworzyć aplikacje dla systemów Android i iOS przy użyciu oprogramowania Xamarin i zasad ochrony aplikacji usługi Intune.
 
 
 
@@ -164,7 +164,7 @@ Po wykonaniu czynności niezbędnych do zintegrowania Twojej aplikacji systemu i
 
   * Jeśli testujesz aplikację na urządzeniu przenośnym przy użyciu konta użytkownika końcowego, upewnij się, że do konta przypisano licencję usługi Intune w witrynie internetowej centrum administracyjnego Microsoft 365 po zalogowaniu się przy użyciu konta administratora. Zobacz [Assign Microsoft Intune license (Przypisywanie licencji usługi Microsoft Intune)](../fundamentals/licenses-assign.md).
 
-* **Zasady ochrony aplikacji usługi Intune**: aby przetestować wszystkie zasady ochrony aplikacji usługi Intune w swojej aplikacji, musisz znać oczekiwane zachowanie każdego ustawienia zasad. Zobacz opisy [zasad ochrony aplikacji systemu iOS](../apps/app-protection-policy-settings-ios.md) i [zasad ochrony aplikacji systemu Android](../apps/app-protection-policy-settings-android.md). Jeśli aplikacja została zintegrowana z zestawem SDK usługi Intune, ale nie ma jej jeszcze na liście aplikacji docelowych w witrynie Azure Portal, możesz wybrać ją jako docelową za pomocą zasad, wybierając opcję „+ Więcej aplikacji” i podając identyfikator pakietu (iOS) lub nazwę pakietu (Android) w polu tekstowym.
+* **Zasady ochrony aplikacji usługi Intune**: aby przetestować wszystkie zasady ochrony aplikacji usługi Intune w swojej aplikacji, musisz znać oczekiwane zachowanie każdego ustawienia zasad. Zobacz opisy [zasad ochrony aplikacji systemu iOS](../apps/app-protection-policy-settings-ios.md) i [zasad ochrony aplikacji systemu Android](../apps/app-protection-policy-settings-android.md). Jeśli aplikacja została zintegrowana z zestawem SDK usługi Intune, ale nie jest wymieniona na liście aplikacji docelowych, w polu tekstowym można określić identyfikator pakietu aplikacji (iOS) lub nazwę pakietu (Android). 
 
 * **Rozwiązywanie problemów**: w razie problemów podczas ręcznego testowania środowiska użytkownika instalacji aplikacji zobacz [Rozwiązywanie problemów z instalacją aplikacji](../apps/troubleshoot-app-install.md). 
 

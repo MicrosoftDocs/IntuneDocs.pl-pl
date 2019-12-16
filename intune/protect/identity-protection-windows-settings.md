@@ -17,10 +17,10 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
 ms.openlocfilehash: f49ea9e1e59fadcb90a773e362ec3ef41e25ab63
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72502229"
 ---
 # <a name="windows-10-device-settings-to-enable-windows-hello-for-business-in-intune"></a>Ustawienia urządzeń z systemem Windows 10 służące do włączania funkcji Windows Hello dla firm w usłudze Intune
@@ -99,7 +99,7 @@ Aby dowiedzieć się więcej na temat profilów funkcji Windows Hello dla firm w
 
     **Domyślnie**: Nie skonfigurowano
 
-  - **Używaj modułu TPM (Trusted Platform Module)**    
+  - **Używaj modułu TPM (Trusted Platform Module)**   
     Moduł TPM zapewnia dodatkową warstwę zabezpieczeń danych.  
 
     - **Włączone** — tylko urządzenia z dostępnym modułem TPM mogą aprowizować usługę Windows Hello dla firm.
@@ -129,7 +129,7 @@ Aby dowiedzieć się więcej na temat profilów funkcji Windows Hello dla firm w
 
   **Domyślnie**: Nie skonfigurowano
 
-- **Używanie kluczy zabezpieczeń do logowania**  
+- **Użyj kluczy zabezpieczeń do logowania się**  
   To ustawienie jest dostępne dla urządzeń z systemem Windows 10 w wersji 1903 lub nowszej. Służy do zarządzania obsługą usługi Windows Hello Security Keys do logowania.  
 
   - **Włączone** — użytkownicy mogą używać klucza zabezpieczeń usługi Windows Hello jako poświadczenia logowania dla komputerów objętych tymi zasadami. 

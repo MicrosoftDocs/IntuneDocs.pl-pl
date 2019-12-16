@@ -17,10 +17,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 04b284a62076122cec70b6b455151a0377470521
-ms.sourcegitcommit: 16a9109b4028589c17695d41271ca4fee8b1d697
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74540738"
 ---
 # <a name="in-development-for-microsoft-intune---december-2019"></a>W trakcie opracowywania dla usługi Microsoft Intune — grudzień 2019 r.
@@ -138,19 +138,19 @@ Dotyczy:
 Będzie można określić listę zatwierdzonych klawiatur do użycia w zarządzanych aplikacjach systemu Android. W aplikacji zarządzanej użytkownik zostanie poproszony o przełączenie na jedną z zatwierdzonych klawiatur już zainstalowanych na urządzeniu lub, w razie potrzeby, będzie kierowany do Sklep Google Play, aby pobrać i skonfigurować jedną z zatwierdzonych klawiatur. Użytkownik będzie mógł edytować pola tekstowe w aplikacji zarządzanej, jeśli klawiatura aktywna jest jedną z zatwierdzonych klawiatur.
 
 ### <a name="use-pkcs-certificates-with-wi-fi-profiles-on-windows-10-and-later-devices---3246388----"></a>Używanie certyfikatów PKCS z profilami sieci Wi-Fi na urządzeniach z systemem Windows 10 i nowszym<!-- 3246388  -->
-Obecnie można uwierzytelniać profile sieci Wi-Fi systemu Windows przy użyciu certyfikatów protokołu SCEP (**Konfiguracja urządzenia** > **Profile** > **tworzenia profilu** > **Windows 10 i nowszych** dla platformy > **Wi-Fi** dla Typ profilu > typ > **protokołu EAP** **przedsiębiorstwa** ). Będziesz mieć możliwość używania certyfikatów PKCS z profilami sieci Wi-Fi systemu Windows. Ta funkcja umożliwia użytkownikom uwierzytelnianie profilów sieci Wi-Fi przy użyciu nowych lub istniejących profilów certyfikatów PKCS w dzierżawie. 
+Obecnie można uwierzytelniać profile sieci Wi-Fi systemu Windows przy użyciu certyfikatów protokołu SCEP (**Konfiguracja urządzenia** > **Profile** > **tworzenia profilu** > **Windows 10 i nowszych** dla platformy > **Wi-Fi** dla typu profilu > **Enterprise** > **EAP Type**). Będziesz mieć możliwość używania certyfikatów PKCS z profilami sieci Wi-Fi systemu Windows. Ta funkcja umożliwia użytkownikom uwierzytelnianie profilów sieci Wi-Fi przy użyciu nowych lub istniejących profilów certyfikatów PKCS w dzierżawie. 
 
 Aby uzyskać więcej informacji o profilach sieci Wi-Fi, zobacz [Dodawanie ustawień Wi-Fi dla urządzeń z systemem Windows 10 lub nowszym w usłudze Intune](../configuration/wi-fi-settings-windows.md).
 
 Dotyczy:
 - Windows 10 lub nowszym
 
-### <a name="new-exchangeactivesync-settings-when-creating-an-email-device-configuration-profile-on-ios-devices---4892824----"></a>Nowe ustawienia ExchangeActiveSync podczas tworzenia profilu konfiguracji urządzenia poczty E-mail na urządzeniach z systemem iOS<!-- 4892824  --> 
-Na urządzeniach z systemem iOS/iPadOS można skonfigurować łączność poczty e-mail w profilu konfiguracji urządzenia (**Konfiguracja urządzenia** > **Profile** > **tworzenia profilu** > **iOS/iPadOS** dla platformy > **poczty e-mail** dla typu profilu). 
+### <a name="new-exchangeactivesync-settings-when-creating-an-email-device-configuration-profile-on-ios-devices---4892824----"></a>Nowe ustawienia protokołu ExchangeActiveSync podczas tworzenia profilu konfiguracji urządzenia poczty e-mail na urządzeniach z systemem iOS<!-- 4892824  --> 
+Na urządzeniach z systemem iOS/iPadOS można skonfigurować łączność z pocztą e-mail w profilu konfiguracji urządzenia (**Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **iOS/iPadOS** jako platforma > **Poczta e-mail** jako typ profilu). 
 
 Dostępne będą nowe ustawienia ExchangeActiveSync, w tym:
 - Wybierz usługi, które mają zostać zsynchronizowane (lub Zablokuj synchronizację), takie jak poczta e-mail, kalendarz i kontakty.
-- Zezwalaj (lub Blokuj) użytkownikom na zmienianie ustawień synchronizacji dla tych usług na ich urządzeniach. 
+- zezwalaj użytkownikom na zmienianie ustawień synchronizacji dla tych usług na ich urządzeniach (lub blokuj tę możliwość). 
 
 Aby wyświetlić bieżące ustawienia, przejdź do [ustawień profilu poczty e-mail dla urządzeń z systemem iOS w usłudze Intune](../configuration/email-settings-ios.md).
 
@@ -158,8 +158,8 @@ Dotyczy:
 - System iOS 13.0 i nowsze
 - System iPadOS 13.0 i nowsze
 
-### <a name="prevent-users-from-adding-personal-google-accounts-to-android-enterprise-device-owner-and-dedicated-devices---5353228----"></a>Uniemożliwiaj użytkownikom dodawanie osobistych kont Google do właściciela urządzenia z systemem Android Enterprise i urządzeń dedykowanych<!-- 5353228  -->
-Będziesz mieć możliwość uniemożliwienia użytkownikom tworzenia osobistych kont Google na właścicielu urządzenia i dedykowanych urządzeniach z systemem Android (**Konfiguracja urządzeń** > **Profile** > **tworzenia profilu** > systemie **Android Enterprise** dla > **właściciel urządzenia tylko > ograniczenia dotyczące urządzeń** dla typu profilu > **Ustawienia użytkowników i kont**).
+### <a name="prevent-users-from-adding-personal-google-accounts-to-android-enterprise-device-owner-and-dedicated-devices---5353228----"></a>Uniemożliwianie użytkownikom dodawania osobistych kont Google do właścicieli urządzeń i dedykowanych urządzeń z systemem Android Enterprise<!-- 5353228  -->
+Będziesz mieć opcję uniemożliwiania użytkownikom tworzenie osobistych kont Google (**Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **Android Enterprise** jako platforma > **Tylko właściciel urządzenia > Ograniczenia urządzenia** jako typ profilu > **Ustawienia użytkowników i kont**).
 
 Aby wyświetlić bieżące ustawienia, które można skonfigurować, zobacz [Ustawienia urządzeń z systemem Android Enterprise w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune](../configuration/device-restrictions-android-for-work.md).
 
@@ -167,8 +167,8 @@ Dotyczy:
 - Właściciel urządzenia z systemem Android Enterprise
 - Dedykowane urządzenia z rozwiązaniem Android Enterprise
 
-### <a name="server-side-logging-for-siri-commands-setting-is-removed-in-ios-device-restrictions-profile---5468501----"></a>Funkcja rejestrowania po stronie serwera dla poleceń Siri jest usuwana w profilu ograniczeń urządzenia z systemem iOS<!-- 5468501  -->
-Na urządzeniach z systemem iOS można utworzyć profile ograniczeń dla urządzeń, które konfigurują rejestrowanie po stronie serwera dla poleceń Siri (**Konfiguracja urządzenia** > **Profile** > **tworzenia profilu** > **iOS/iPadOS** dla platformy **Ograniczenia > urządzeń** dla typu profilu > **aplikacje wbudowane**). Ustawienie **Siri polecenia rejestrowania po stronie serwera** zostanie usunięte.
+### <a name="server-side-logging-for-siri-commands-setting-is-removed-in-ios-device-restrictions-profile---5468501----"></a>Ustawienie rejestrowania poleceń Siri po stronie serwera zostało usunięte z profilu ograniczeń urządzenia z systemem iOS<!-- 5468501  -->
+Na urządzeniach z systemem iOS można utworzyć profile ograniczeń dla urządzeń, które konfigurują rejestrowanie po stronie serwera dla poleceń Siri (**Konfiguracja urządzeń** > **Profile** > **tworzenia profilu** > **iOS/iPadOS** w przypadku ograniczeń platformy > **urządzeń** dla typu profilu > **wbudowane aplikacje**). Ustawienie **Siri polecenia rejestrowania po stronie serwera** zostanie usunięte.
 
 To ustawienie zostanie usunięte z konsoli administracyjnej usługi Intune. To ustawienie nie ma wpływu na urządzenie, mimo że istniejące zasady, które mają skonfigurowane to ustawienie, będą nadal wyświetlać ustawienie. Jeśli chcesz usunąć ustawienie z istniejących zasad, przejdź do zasad, wprowadź drobną edycję, Zapisz ją i zasady zostaną zaktualizowane.
 

@@ -1,6 +1,6 @@
 ---
 title: Instalowanie aplikacji Mobile Threat Defense na urządzeniu przenośnym
-description: Dowiedz się, jak zainstalować ochronę przed zagrożeniami mobilnymi na urządzeniu przenośnym.
+description: Dowiedz się, jak zainstalować aplikację Mobile Threat Defense na urządzeniu przenośnym.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -18,10 +18,10 @@ ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7f395a9cedc72a8184cfe3e29d6fcd3117a1473d
-ms.sourcegitcommit: 259462591835f3607392aa6b179882dbac830a89
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "72980361"
 ---
 # <a name="install-mobile-threat-defense"></a>Instalowanie aplikacji Mobile Threat Defense   
@@ -43,7 +43,7 @@ Twoja organizacja nie może zobaczyć żadnych danych, takich jak teksty, wiadom
 * Zbiór aplikacji i rozmiar dynamiczny: ilość miejsca na urządzeniu używanego przez aplikację. 
 
 
-## <a name="install-app"></a>Zainstaluj aplikację    
+## <a name="install-app"></a>Instalowanie aplikacji    
 Po zalogowaniu się do chronionej aplikacji zostanie automatycznie wyświetlony monit o zainstalowanie aplikacji MTD. Postępuj zgodnie z instrukcjami na ekranie, aby zakończyć instalację. Aby uzyskać dodatkową pomoc, wykonaj kroki opisane w tej sekcji.  
  
 Może również zostać wyświetlony monit o zarejestrowanie urządzenia. Rejestracja jest konieczna do potwierdzenia tożsamości i połączenia Twojego konta służbowego z Twoim urządzeniem. Jeśli nie jesteś zarejestrowanym, przed zainstalowaniem aplikacji MTD automatycznie przejdziesz do tej konfiguracji. Po wyświetleniu ekranu **uzyskaj dostęp** można rozpocząć kroki instalacji.  
