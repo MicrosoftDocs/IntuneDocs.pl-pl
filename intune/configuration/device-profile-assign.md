@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/20/2019
+ms.date: 12/05/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 275b3961e87f0d0eda8299337fe3fb7ac89ef03b
-ms.sourcegitcommit: 1a22b8b31424847d3c86590f00f56c5bc3de2eb5
+ms.openlocfilehash: 651b02dc276ca2aa2003955e6aa7b0dfa6724a40
+ms.sourcegitcommit: 66e284fe092e19c1da72b4b770e45bf25ac7910c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74261686"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74860319"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Przypisywanie profili użytkowników i urządzeń w usłudze Microsoft Intune
 
@@ -61,7 +61,7 @@ Jeśli przycisk **Oceń** jest szary, upewnij się, że profil został przypisan
 
 Podczas tworzenia lub aktualizacji profilu możesz dodać do niego tagi zakresu i reguły stosowania.
 
-**Tagi zakresu** to doskonały sposób przypisywania i filtrowania profilów do określonych grup, takich jak pracownicy działu kadr lub wszyscy pracownicy w stanie Północna Karolina w USA. Więcej informacji można znaleźć w artykule [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md) (Używanie kontroli RBAC i tagów zakresu w rozproszonej infrastrukturze informatycznej).
+**Tagi zakresu** to doskonały sposób filtrowania profilów w celu zdefiniowania grup takich jak `US-NC IT Team` lub `JohnGlenn_ITDepartment`. Więcej informacji można znaleźć w artykule [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md) (Używanie kontroli RBAC i tagów zakresu w rozproszonej infrastrukturze informatycznej).
 
 Na urządzeniach z systemem Windows 10 możesz dodać **reguły stosowania**, aby profil był stosowany tylko do określonej wersji systemu operacyjnego lub określonego wydania systemu Windows. [Reguły stosowania](device-profile-create.md#applicability-rules) zawierają więcej informacji.
 

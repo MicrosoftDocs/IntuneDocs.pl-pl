@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ab720ffee3f468d3700558dfbde460ee8f712ea
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 8ee8bc3cdee9f61a901854e08000e9e2cbbb2864
+ms.sourcegitcommit: e75718ee6cf93c0e6c915f2776b785fe8db9f7e0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72505501"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74955375"
 ---
 # <a name="categorize-devices-into-groups"></a>Kategoryzowanie urządzeń na grupy
 
@@ -45,11 +45,10 @@ Możesz utworzyć dowolne kategorie urządzeń. Przykład:
 ## <a name="how-to-configure-device-categories"></a>Sposoby konfigurowania kategorii urządzeń
 
 ### <a name="step-1-create-device-categories-on-the-intune-blade-of-the-azure-portal"></a>Krok 1. Utworzenie kategorii urządzeń w bloku Intune witryny Azure Portal
-1. W usłudze [Intune w witrynie Azure Portal](https://aka.ms/intuneportal) wybierz pozycję **Rejestrowanie urządzenia**.
-2. W bloku **Rejestrowanie urządzenia** wybierz pozycję **Kategorie urządzeń**.
-3. Na stronie **Kategorie urządzeń** wybierz pozycję **Utwórz**, aby dodać nową kategorię.
-4. W bloku **Tworzenie kategorii urządzeń** uzupełnij pola **Nazwa** i (opcjonalnie) **Opis** odnoszące się do nowej kategorii.
-5. Gdy wszystko będzie gotowe, wybierz pozycję **Utwórz**. Nowa kategoria będzie widoczna na liście kategorii.
+1. Zaloguj się do [centrum administracyjnego usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), wybierz pozycję **Urządzenia** > **Kategorie urządzeń**.
+2. Na stronie **Kategorie urządzeń** wybierz pozycję **Utwórz**, aby dodać nową kategorię.
+3. W bloku **Tworzenie kategorii urządzeń** uzupełnij pola **Nazwa** i (opcjonalnie) **Opis** odnoszące się do nowej kategorii.
+4. Gdy wszystko będzie gotowe, wybierz pozycję **Utwórz**. Nowa kategoria będzie widoczna na liście kategorii.
 
 Nazwa kategorii urządzeń będzie używana podczas tworzenia grup zabezpieczeń usługi Azure Active Directory (Azure AD) w kroku 2.
 
@@ -64,20 +63,16 @@ Gdy skonfigurujesz grupy urządzeń, a użytkownicy zarejestrują urządzenia, z
 
 ### <a name="view-the-categories-of-devices-that-you-manage"></a>Wyświetlanie kategorii zarządzanych urządzeń
 
-1. W usłudze [Intune w witrynie Azure Portal](https://aka.ms/intuneportal) wybierz pozycję **Urządzenia**.
+1. Zaloguj się do [centrum administracyjnego usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) i wybierz pozycję **Urządzenia** > **Wszystkie urządzenia**.
 
-2. W obszarze **Zarządzanie** wybierz opcję **Wszystkie urządzenia**.
+2. Na liście urządzeń sprawdź kolumnę **Kategoria urządzenia**.
 
-3. Na liście urządzeń sprawdź kolumnę **Kategoria urządzenia**.
-
-Jeśli kolumna **Kategoria urządzenia** nie jest wyświetlana, wybierz opcję **Kolumny**. Wybierz opcję **Kategoria urządzenia** z listy, a następnie opcję **Zastosuj**.
+Jeśli kolumna **Kategoria urządzenia** nie jest wyświetlana, wybierz pozycję **Kolumny** > **Kategoria** > **Zastosuj**.
 
 ### <a name="change-the-category-of-a-device"></a>Zmiana kategorii urządzenia
 
-1. W usłudze [Intune w witrynie Azure Portal](https://aka.ms/intuneportal) wybierz pozycję **Urządzenia**.
-2. W bloku **Urządzenia** w sekcji **Zarządzanie** wybierz pozycję **Wszystkie urządzenia**.
-3. Na liście urządzeń wybierz żądane urządzenie. Następnie w bloku właściwości urządzenia w sekcji **Zarządzanie** wybierz pozycję **Właściwości**.
-4. W następnym bloku można zmienić **kategorię urządzenia** na inną skonfigurowaną wcześniej kategorię o dowolnej nazwie.
+1. Zaloguj się do [centrum administracyjnego usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), wybierz pozycję **Urządzenia** > **Wszystkie urządzenia** > wybierz urządzenie > **Właściwości**.
+2. W następnym bloku można zmienić **kategorię urządzenia** na inną skonfigurowaną wcześniej kategorię o dowolnej nazwie.
 
 ## <a name="after-you-configure-device-groups"></a>Po skonfigurowaniu grup urządzeń
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2f41caddc7ab9cc09c8d5403f67b6112d58c3ffd
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: 697e950c881a0c4233358d8363aa6cc7ec0006b2
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73713543"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74832670"
 ---
 # <a name="automatically-enroll-macos-devices-with-the-device-enrollment-program-or-apple-school-manager"></a>Automatyczne rejestrowanie urządzeń z systemem macOS w ramach programu Device Enrollment Program lub usługi Apple School Manager
 
@@ -61,7 +61,7 @@ Do tworzenia tokenu służy witryna Azure Portal. W portalu firmy Apple można r
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>Krok 1. Pobierz certyfikat klucza publicznego usługi Intune wymagany do utworzenia tokenu
 
-1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Tokeny programu rejestracji** > **Dodaj**.
+1. W [centrum administracyjnym usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **macOS** > **Rejestracja urządzeń z systemem macOS** > **Tokeny programu rejestracji** > **Dodaj**.
 
     ![Pobierz token programu rejestracji.](./media/device-enrollment-program-enroll-macos/image01.png)
 
@@ -103,7 +103,7 @@ W polu **Token Apple** przejdź do pliku certyfikatu (.pem), wybierz pozycję **
 
 Teraz, po zainstalowaniu tokenu, możesz utworzyć profil rejestracji dla urządzeń. Profil rejestracji urządzeń określa ustawienia stosowane do grupy urządzeń podczas rejestracji.
 
-1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Tokeny programu rejestracji**.
+1. W [centrum administracyjnym usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **macOS** > **Rejestracja urządzeń z systemem macOS** > **Tokeny programu rejestracji**.
 2. Wybierz token, wybierz pozycję **Profile**, a następnie wybierz pozycję **Utwórz profil**.
 
     ![Utwórz zrzut ekranu profilu.](./media/device-enrollment-program-enroll-macos/image04.png)
@@ -165,7 +165,7 @@ Teraz, po zainstalowaniu tokenu, możesz utworzyć profil rejestracji dla urząd
 
 Gdy usługa Intune ma uprawnienia do zarządzania urządzeniami, można ją zsynchronizować z danymi firmy Apple, aby wyświetlić zarządzane urządzenia w usłudze Intune w witrynie Azure Portal.
 
-1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Tokeny programu rejestracji** > wybierz token na liście > **Urządzenia** > **Synchronizuj**. ![Zrzut ekranu przedstawiający wybrany węzeł Urządzenia programu Enrollment Program i wybierany link Synchronizuj.](./media/device-enrollment-program-enroll-macos/image06.png)
+1. W [Centrum administracyjnym usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **macOS** > **Rejestracja dla systemu macOS** > **Tokeny programu rejestracji** > wybierz token na liście > **Urządzenia** > **Synchronizuj**. ![Zrzut ekranu przedstawiający wybrany węzeł Urządzenia programu Enrollment Program i wybierany link Synchronizuj.](./media/device-enrollment-program-enroll-macos/image06.png)
 
    Aby spełnić warunki firmy Apple dotyczące ruchu w programie rejestracji, usługa Intune nakłada następujące ograniczenia:
    - Pełną synchronizację można uruchamiać nie częściej niż co siedem dni. Podczas pełnej synchronizacji usługa Intune pobiera pełną zaktualizowaną listę numerów seryjnych przypisanych do serwera MDM firmy Apple połączonego z usługą Intune. Gdy urządzenie uczestniczące w programie rejestracji zostanie usunięte z portalu usługi Intune bez usuwania przypisania z serwera MDM firmy Apple w portalu programu DEP, zostanie ponownie zaimportowane do usługi Intune dopiero po uruchomieniu pełnej synchronizacji.   
@@ -175,7 +175,7 @@ Gdy usługa Intune ma uprawnienia do zarządzania urządzeniami, można ją zsyn
 
 Zanim możliwe będzie rejestrowanie urządzeń, należy przypisać profil programu rejestracji.
 
-1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Tokeny programu rejestracji** > wybierz token na liście.
+1. W [centrum administracyjnym usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **macOS** > **Rejestracja urządzeń z systemem macOS** > **Tokeny programu rejestracji** > wybierz token na liście.
 2. Wybierz **Urządzenia** > wybierz urządzenia na liście > **Przypisz profil**.
 3. W obszarze **Przypisz profil** wybierz profil dla urządzeń > **Przypisz**.
 
@@ -183,7 +183,7 @@ Zanim możliwe będzie rejestrowanie urządzeń, należy przypisać profil progr
 
 Można wybrać profil domyślny w systemie macOS lub iOS, który zostanie zastosowany do wszystkich urządzeń rejestrowanych przy użyciu określonego tokenu. 
 
-1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Tokeny programu rejestracji** > wybierz token na liście.
+1. W [centrum administracyjnym usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **macOS** > **Rejestracja urządzeń z systemem macOS** > **Tokeny programu rejestracji** > wybierz token na liście.
 2. Kliknij pozycję **Ustaw profil domyślny**, wybierz profil z listy rozwijanej, a następnie kliknij pozycję **Zapisz**. Ten profil zostanie zastosowany do wszystkich urządzeń rejestrowanych przy użyciu tokenu.
 
 ## <a name="distribute-devices"></a>Dystrybuowanie urządzeń

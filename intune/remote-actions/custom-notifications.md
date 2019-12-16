@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8393bbc012861199bd99d97a62ab3e659c15d15
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: 443e1e2fff2a0c4641d3446bf72e455cc92ce784
+ms.sourcegitcommit: ec69e7ccc6e6183862a48c1b03ca6a3bf573f354
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73713233"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74907291"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Wysyłanie powiadomień niestandardowych w usłudze Intune  
 
@@ -69,7 +69,7 @@ Niestandardowe komunikaty powiadomień zawierają krótki tytuł i treść komun
 
 ## <a name="send-a-custom-notification-to-groups"></a>Wysyłanie powiadomień niestandardowych do grup  
 
-1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) przy użyciu konta z uprawnieniami do tworzenia i wysyłania powiadomień, a następnie przejdź do pozycji **Urządzenia** > **Wysyłaj niestandardowe powiadomienia**.  
+1. Zaloguj się do [centrum administracyjnego usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) przy użyciu konta z uprawnieniami do tworzenia i wysyłania powiadomień, a następnie przejdź do pozycji **Administracja dzierżawą** > **Powiadomienia niestandardowe**.  
 
 2. Na karcie Podstawy określ poniższe opcje, a następnie wybierz przycisk **Dalej**, aby kontynuować.  
    - **Tytuł** — określ tytuł powiadomienia. Tytuły mogą zawierać maksymalnie 50 znaków.  
@@ -93,7 +93,7 @@ Usługa Intune nie śledzi wysyłanych powiadomień niestandardowych, a urządze
 
 2. Wybierz urządzenie, do którego chcesz wysłać powiadomienie.  
 
-3. Na stronie **Omówienie** urządzenia wybierz opcję **…Więcej** w lewym górnym rogu strony.  
+3. Na stronie **Omówienie** dla urządzeń wybierz opcję **…** (wielokropek) w prawym górnym rogu strony.  
 
 4. Wybierz akcję urządzenia **Wyślij powiadomienie niestandardowe**, aby otworzyć okienko *Wyślij powiadomienie niestandardowe*, w którym można określić następujące szczegóły komunikatu:  
 

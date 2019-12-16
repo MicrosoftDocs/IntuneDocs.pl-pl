@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b2390462376c88129435de30eb98020563f3878
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: b643ed41d01b70376dac32c26a66dcf9f9735ceb
+ms.sourcegitcommit: ec69e7ccc6e6183862a48c1b03ca6a3bf573f354
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73713091"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74907223"
 ---
 # <a name="reset-the-passcode-on-windows-devices-using-intune"></a>Resetowanie kodu dostępu na urządzeniach z systemem Windows przy użyciu usługi Intune
 
@@ -66,7 +66,7 @@ Ustaw wartość dla tego dostawcy usług kryptograficznych na **Prawda**.
 
 1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). 
 2. Wybierz pozycję **Urządzenia**, a następnie wybierz pozycję **Wszystkie urządzenia**.
-3. Wybierz urządzenie, dla którego chcesz zresetować kod dostępu. We właściwościach urządzenia wybierz opcję **Nowy kod dostępu**.
+3. Wybierz urządzenie, dla którego chcesz zresetować kod dostępu. We właściwościach urządzenia wybierz pozycję **Resetuj kod dostępu**.
 4. Kliknij przycisk **Tak**, aby potwierdzić. Wygenerowany kod dostępu będzie wyświetlany w portalu przez następne 7 dni.
 
 ## <a name="next-step"></a>Następny krok

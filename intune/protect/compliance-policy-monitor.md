@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 1/14/2019
+ms.date: 12/12/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 844e93f3a063ae43342d2967cbd544f3ec425c21
-ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
+ms.openlocfilehash: 947472c5e589cb443c9a15d20a732c299cc48b44
+ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74410165"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992986"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Monitorowanie zasad zgodności urządzeń Intune
 
@@ -98,8 +98,7 @@ Na wykresie **Stan zgodności urządzenia** wybierz stan. Na przykład wybierz s
 
 ![Wybieranie stanu braku zgodności](./media/compliance-policy-monitor/select-not-compliant-status.png)
 
-Ta akcja powoduje otwarcie okna **Zgodność urządzenia** i wyświetlenie urządzeń na wykresie **Stan urządzenia**. Wykres przedstawia bardziej szczegółowe informacje dotyczące urządzeń w danym stanie, w tym platformy systemu operacyjnego, daty ostatniego zaewidencjonowania i innych danych. 
-
+Ta akcja powoduje otwarcie okna **Zgodność urządzenia** i wyświetlenie urządzeń na wykresie **Stan urządzenia**. Wykres przedstawia bardziej szczegółowe informacje dotyczące urządzeń w danym stanie, w tym platformy systemu operacyjnego, daty ostatniego zaewidencjonowania i innych danych.
 ![Obraz pulpitu nawigacyjnego przedstawiający bardziej szczegółowe informacje dotyczące urządzenia w określonym stanie](./media/compliance-policy-monitor/drill-down-details.png)
 
 Jeśli chcesz zobaczyć wszystkie urządzenia stanowiące własność konkretnego użytkownika, możesz też filtrować raport z wykresem poprzez wpisanie adresu e-mail użytkownika.
@@ -132,7 +131,7 @@ Po wybraniu kafelka zostaną wyświetlone wszystkie urządzenia bez zasad zgodno
 
 - W przypadku ustawienia zabezpieczeń **Oznaczaj urządzenia bez przypisanych zasad zgodności jako** należy zidentyfikować urządzenia bez zasad zgodności. Następnie możesz im przypisać co najmniej jedne zasady zgodności.
 
-  Ustawienie zabezpieczeń można skonfigurować w portalu usługi Intune. Przejdź do pozycji **Urządzenia** > **Zasady zgodności** > **Ustawienia zasad zgodności**. Następnie ustaw opcję **Oznaczaj urządzenia bez przypisanych zasad zgodności jako** na wartość **Zgodne** lub **Niezgodne**. 
+  Ustawienie zabezpieczeń można skonfigurować w portalu usługi Intune. Przejdź do pozycji **Urządzenia** > **Zasady zgodności** > **Ustawienia zasad zgodności**. Następnie ustaw opcję **Oznaczaj urządzenia bez przypisanych zasad zgodności jako** na wartość **Zgodne** lub **Niezgodne**.
 
   Dowiedz się więcej o tym [ulepszeniu zabezpieczeń w usłudze Intune](https://blogs.technet.microsoft.com/intunesupport/2018/02/09/updated-upcoming-security-enhancements-in-the-intune-service/).
 
@@ -140,7 +139,7 @@ Po wybraniu kafelka zostaną wyświetlone wszystkie urządzenia bez zasad zgodno
 
 ### <a name="per-policy-device-compliance"></a>Zgodność urządzeń wg zasady
 
-Raport **Zgodność z zasadami** przedstawia zasady oraz liczbę urządzeń zgodnych i niezgodnych. 
+Raport **Zgodność z zasadami** przedstawia zasady oraz liczbę urządzeń zgodnych i niezgodnych.
 
 ![Wyświetlanie listy zasad oraz liczby urządzeń zgodnych i niezgodnych z tymi zasadami](./media/compliance-policy-monitor/idc-8.png)
 
@@ -149,11 +148,6 @@ Raport **Zgodność z zasadami** przedstawia zasady oraz liczbę urządzeń zgod
 Wykres **Zgodność ustawień** przedstawia wszystkie ustawienia zasad zgodności urządzeń ze wszystkich zasad zgodności, platformy, dla których zastosowano ustawienia zasad, a także liczbę niezgodnych urządzeń.
 
 ![Wyświetlanie listy wszystkich urządzeń w różnych zasadach](./media/compliance-policy-monitor/idc-10.png)
-
-> [!NOTE]
-> Zasady można przypisać do urządzenia i użytkownika na tym samym urządzeniu. W niektórych scenariuszach urządzenie może zostać zsynchronizowane przed zalogowaniem użytkownika, na przykład po ponownym uruchomieniu urządzenia. Może nastąpić ocena zgodności tego użytkownika i wyświetlenie urządzenia jako niezgodnego. Takie zachowanie może również wyświetlać konto systemowe jako niezgodnego użytkownika.
->
-> Jest to znany problem dotyczący urządzeń z systemem Windows 10 z obsługą wielu użytkowników. Wszelkie zmiany i aktualizacje dotyczące tego zachowania są ogłaszane w sekcjach dotyczących [rozwiązań w trakcie opracowywania](../fundamentals/in-development.md) i/lub [nowości](../fundamentals/whats-new.md).
 
 ## <a name="view-compliance-reports"></a>Wyświetlanie raportów zgodności
 
@@ -183,14 +177,15 @@ Ta funkcja jest uwzględniana w obszarze raportowania stanu urządzenia:
 2. Wybierz zasadę > **Omówienie**. W tym widoku przypisanie zasad uwzględnia następujące stany:
 
     - **Powodzenie**: zasady zostały zastosowane.
-    - **Błąd**: nie można zastosować zasad. Ten komunikat jest przeważnie wyświetlany z kodem błędu stanowiącym link do wyjaśnienia. 
+    - **Błąd**: nie można zastosować zasad. Ten komunikat jest przeważnie wyświetlany z kodem błędu stanowiącym link do wyjaśnienia.
     - **Konflikt**: na tym samym urządzeniu zostały zastosowane dwa ustawienia, a usługa Intune nie może rozwiązać konfliktu. Administrator powinien zapoznać się z tą sytuacją.
-    - **Oczekujące**: urządzenie nie zostało jeszcze zaewidencjonowane w usłudze Intune w celu odebrania zasad. 
-    - **Nie dotyczy**: urządzenie nie może odebrać zasad. Na przykład zasady aktualizują ustawienie specyficzne dla systemu iOS 11.1, ale urządzenie używa systemu iOS 10. 
+    - **Oczekujące**: urządzenie nie zostało jeszcze zaewidencjonowane w usłudze Intune w celu odebrania zasad.
+    - **Nie dotyczy**: urządzenie nie może odebrać zasad. Na przykład zasady aktualizują ustawienie specyficzne dla systemu iOS 11.1, ale urządzenie używa systemu iOS 10.
 
 3. Aby wyświetlić szczegóły urządzeń używających danych zasad, wybierz jeden z stanów. Na przykład wybierz pozycję **Powodzenie**. W następnym oknie jest wyświetlana lista szczegółów określonego urządzenia, w tym nazwa i stan jego wdrażania.
 
 ## <a name="how-intune-resolves-policy-conflicts"></a>Jak są rozwiązywane konflikty zasad usługi Intune
+
 Konflikty zasad mogą wystąpić, gdy na urządzeniu stosuje się wiele zasad usługi Intune. Jeśli ustawienia zasad nakładają się na siebie, usługa Intune rozwiązuje konflikty, używając następujących reguł:
 
 - Jeżeli sprzeczne ustawienia pochodzą z zasad konfiguracji usługi Intune i zasad zgodności, ustawienia w zasadach zgodności mają pierwszeństwo względem ustawień w zasadach konfiguracji. Dzieje się tak nawet wtedy, gdy ustawienia w zasadach konfiguracji są bardziej bezpieczne.

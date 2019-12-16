@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 190322392909a14681a4b68a79d9a3537360206b
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: 79e1ba2441baa6773632c27f204bef01b015b990
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73713502"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74832723"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Rozwiązywanie problemów dotyczących rejestrowania urządzeń w usłudze Microsoft Intune
 
@@ -64,7 +64,7 @@ Te problemy mogą wystąpić na wszystkich platformach urządzeń.
 
 Sprawdź, czy użytkownik nie jest przypisany do większej niż maksymalna liczby urządzeń, wykonując poniższe kroki:
 
-1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Rejestrowanie urządzenia** > **Ograniczenia rejestracji** > **Ograniczenia limitu urządzeń**. Zanotuj wartość w kolumnie **Limit urządzeń**.
+1. W [centrum administracyjnym usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **Ograniczenia rejestracji** > **Ograniczenia limitu urządzeń**. Zanotuj wartość w kolumnie **Limit urządzeń**.
 
 2. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **Wszyscy użytkownicy** > wybierz użytkownika > **Urządzenia**. Zanotuj liczbę urządzeń.
 
@@ -374,7 +374,7 @@ Ten problem może wystąpić w następujących sytuacjach:
 4. Poprosić użytkowników o ponowne uruchomienie procesu rejestracji.
 
 #### <a name="determine-if-theres-something-wrong-with-the-vpp-token"></a>Określanie, czy wystąpił problem z tokenem VPP
-1. Przejdź do pozycji **Intune** > **Rejestrowanie urządzeń** > **Rejestracja Apple** > **Tokeny programu rejestracji** > nazwa tokenu > **Profile** > nazwa profilu > **Zarządzaj** > **Właściwości**.
+1. W [centrum administracyjnym usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **System iOS** > **Rejestracja systemu iOS** > **Tokeny programu rejestracji** > nazwa tokenu > **Profile** > nazwa profilu > **Zarządzaj** > **Właściwości**.
 2. Przejrzyj właściwości, aby zobaczyć, czy są wyświetlane jakiekolwiek błędy podobne do następujących:
     - Ten token wygasł.
     - Ten token nie ma licencji aplikacji Portal firmy.
@@ -384,13 +384,13 @@ Ten problem może wystąpić w następujących sytuacjach:
 3. Rozwiąż problemy dotyczące tokenu.
 
 #### <a name="identify-which-devices-are-blocked-by-the-vpp-token"></a>Identyfikowanie urządzeń, które są blokowane przez token programu VPP
-1. Przejdź do pozycji **Intune** > **Rejestrowanie urządzeń** > **Rejestracja Apple** > **Tokeny programu rejestracji** > nazwa tokenu > **Urządzenia**.
+1. W [centrum administracyjnym usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **System iOS** > **Rejestracja systemu iOS** > **Tokeny programu rejestracji** > nazwa tokenu > **Urządzenia**.
 2. Filtruj kolumnę **Stan profilu** według wartości **Zablokowane**.
 3. Zanotuj numery seryjne wszystkich urządzeń, które są **Zablokowane**.
 
 #### <a name="remotely-wipe-the-blocked-devices"></a>Zdalne czyszczenie zablokowanych urządzeń
 Po rozwiązaniu problemów z tokenem VPP należy wyczyścić urządzenia, które są blokowane.
-1. Wybierz kolejno pozycje **Intune** > **Urządzenia** > **Wszystkie urządzenia** > **Kolumny**  >  **Numer seryjny** > **Zastosuj**. 
+1. W [centrum administracyjnym usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **Wszystkie urządzenia** > **Kolumny** > **Numer seryjny** > **Zastosuj**. 
 2. W przypadku każdego zablokowanego urządzenia wybierz je na liście **Wszystkie urządzenia**, a następnie wybierz pozycje **Czyszczenie danych** > **Tak**.
 
 #### <a name="tell-the-users-to-restart-the-enrollment-process"></a>Informowanie użytkowników, aby ponownie uruchomili proces rejestracji
@@ -414,8 +414,8 @@ Po wyczyszczeniu zablokowanych urządzeń możesz poprosić użytkowników o pon
 - Jeśli w organizacji masz włączone ograniczenia rejestracji, które blokują urządzenia osobiste z systemem macOS, musisz ręcznie [dodać numer seryjny urządzenia osobistego](corporate-identifiers-add.md#manually-enter-corporate-identifiers) do usługi Intune.  
 - Jeśli urządzenie jest nadal przypisane do innego użytkownika w usłudze Intune, jego poprzedni właściciel nie użył aplikacji Portal firmy do usunięcia lub zresetowania go. Aby wyczyścić nieaktualny rekord urządzenia z usługi Intune:  
 
-    1. Przejdź do [usługi Intune w witrynie Azure Portal](https://portal.manage.microsoft.com) i zaloguj się przy użyciu poświadczeń administracyjnych.
-    2. Przejdź do pozycji Intune > **Urządzenia** > **Wszystkie urządzenia**.  
+    1. W [centrum administracyjnym usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) zaloguj się przy użyciu poświadczeń administracyjnych.
+    2. Wybierz pozycję **Urządzenia** > **Wszystkie urządzenia**.  
     3. Znajdź urządzenie, dla którego występuje problem z rejestracją. Ogranicz liczbę wyników, wyszukując według nazwy urządzenia lub adresu MAC/sprzętu.
     4. Wybierz urządzenie, a następnie pozycję **Usuń**. Usuń wszystkie inne wpisy skojarzone z urządzeniem.  
 

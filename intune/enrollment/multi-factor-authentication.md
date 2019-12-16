@@ -17,12 +17,12 @@ ROBOTS: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 50dbbb19cca9b5c46f0ba8b9d4e16c499534b536
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: db04b93deffd2476a97b952fd1c6942fa79e1f05
+ms.sourcegitcommit: e75718ee6cf93c0e6c915f2776b785fe8db9f7e0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72503112"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74955392"
 ---
 # <a name="require-multi-factor-authentication-for-intune-device-enrollments"></a>Wymaganie uwierzytelniania wieloskładnikowego na potrzeby rejestracji urządzeń w usłudze Intune
 
@@ -50,18 +50,17 @@ Aby ustawić wymóg uwierzytelniania wieloskładnikowego na etapie rejestracji u
 >[!Important]
 >Nie konfiguruj opcji **Reguły dostępu na podstawie urządzeń** pod kątem rejestracji w usłudze Microsoft Intune.
 
-1. Zaloguj się do [witryny Microsoft Azure Portal](https://portal.azure.com) przy użyciu swoich poświadczeń.
-2. W portalu przejdź do usługi **Intune** i wybierz pozycję **Dostęp warunkowy**. Węzeł Dostęp warunkowy dostępny z usługi *Intune* jest tym samym węzłem, do którego dostęp jest uzyskiwany z usługi *Azure AD*.
-4. Wybierz pozycję **Nowe zasady**.
-5. W obszarze **Nowe zasady** wpisz nazwę opisową zasad.
-6. W sekcji **Przypisania** wybierz pozycję **Użytkownicy i grupy**. 
-7. W obszarze **Użytkownicy i grupy** wybierz polecenie **Wybierz użytkowników lub grupy** i zaznacz opcję **Użytkownicy i grupy**. Następnie wybierz użytkowników lub grupy, które mają otrzymać te zasady, a następnie wybierz pozycję **Gotowe**.
-8. W sekcji **Przypisania** wybierz pozycję **Aplikacje w chmurze**.
-9. Na karcie **Uwzględnianie** w obszarze **Aplikacje w chmurze** wybierz pozycję **Wybierz aplikacje,** , a następnie wybierz kolejno pozycje **Wybierz** > **Rejestracja w usłudze Microsoft Intune**, a następnie wybierz pozycję **Gotowe**. Jeśli wybierzesz pozycję **Rejestracja w usłudze Microsoft Intune**, usługa MFA z dostępem warunkowym jest stosowana tylko do rejestracji urządzenia (jednorazowy monit usługi MFA).
-10. W sekcji **Przypisania** w obszarze**Warunki** nie musisz konfigurować ustawień usługi MFA.
-11. W sekcji **Kontrole dostępu** wybierz pozycję **Udziel**.
-12. W obszarze **Udzielanie** wybierz pozycję **Udziel dostępu**, a następnie wybierz pozycję **Wymagaj uwierzytelniania wieloskładnikowego**. Nie zaznaczaj pola **Wymagaj, aby urządzenie było oznaczone jako zgodne**, ponieważ nie można sprawdzić zgodności urządzenia, dopóki nie zostanie zarejestrowane. Następnie wybierz opcję **Wybierz**.
-13. W obszarze **Nowe zasady** wybierz pozycję **Włącz zasady** > **Włączono**, a następnie wybierz pozycję **Utwórz**.
+1. Zaloguj się do [centrum administracyjnego usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), wybierz pozycję **Urządzenia** > **Dostęp warunkowy**. Węzeł Dostęp warunkowy dostępny z usługi *Intune* jest tym samym węzłem, do którego dostęp jest uzyskiwany z usługi *Azure AD*.
+2. Wybierz pozycję **Nowe zasady**.
+3. W obszarze **Nowe zasady** wpisz nazwę opisową zasad.
+4. W sekcji **Przypisania** wybierz pozycję **Użytkownicy i grupy**. 
+5. W obszarze **Użytkownicy i grupy** wybierz polecenie **Wybierz użytkowników lub grupy** i zaznacz opcję **Użytkownicy i grupy**. Następnie wybierz użytkowników lub grupy, które mają otrzymać te zasady, a następnie wybierz pozycję **Gotowe**.
+6. W sekcji **Przypisania** wybierz pozycję **Aplikacje w chmurze**.
+7. Na karcie **Uwzględnianie** w obszarze **Aplikacje w chmurze** wybierz pozycję **Wybierz aplikacje,** , a następnie wybierz kolejno pozycje **Wybierz** > **Rejestracja w usłudze Microsoft Intune**, a następnie wybierz pozycję **Gotowe**. Jeśli wybierzesz pozycję **Rejestracja w usłudze Microsoft Intune**, usługa MFA z dostępem warunkowym jest stosowana tylko do rejestracji urządzenia (jednorazowy monit usługi MFA).
+8. W sekcji **Przypisania** w obszarze**Warunki** nie musisz konfigurować ustawień usługi MFA.
+9. W sekcji **Kontrole dostępu** wybierz pozycję **Udziel**.
+10. W obszarze **Udzielanie** wybierz pozycję **Udziel dostępu**, a następnie wybierz pozycję **Wymagaj uwierzytelniania wieloskładnikowego**. Nie zaznaczaj pola **Wymagaj, aby urządzenie było oznaczone jako zgodne**, ponieważ nie można sprawdzić zgodności urządzenia, dopóki nie zostanie zarejestrowane. Następnie wybierz opcję **Wybierz**.
+11. W obszarze **Nowe zasady** wybierz pozycję **Włącz zasady** > **Włączono**, a następnie wybierz pozycję **Utwórz**.
 
 
 

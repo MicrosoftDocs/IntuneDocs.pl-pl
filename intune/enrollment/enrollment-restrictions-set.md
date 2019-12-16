@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d70496a87f923b61cacb3da250e5f22ce5c7817
-ms.sourcegitcommit: aeb76032de216e5feb94559aeaf36c0357f1247d
+ms.openlocfilehash: 78f79a734d0a7b4901b2248b20abd9d304926dd2
+ms.sourcegitcommit: e75718ee6cf93c0e6c915f2776b785fe8db9f7e0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72587949"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74955511"
 ---
 # <a name="set-enrollment-restrictions"></a>Ustawianie ograniczeń rejestracji
 
@@ -59,15 +59,12 @@ Ograniczenia domyślne są automatycznie zapewniane w przypadku ograniczeń reje
 
 ## <a name="create-a-device-type-restriction"></a>Tworzenie ograniczenia typu urządzenia
 
-1. Zaloguj się do witryny Azure Portal.
-2. Wybierz opcję **Więcej usług**, wyszukaj usługę **Intune**, a następnie wybierz usługę **Intune**.
-3. Wybierz opcje **Rejestracja urządzenia** > **Ograniczenia rejestracji** > **Utwórz ograniczenie** > **Ograniczenie typu urządzenia**.
-    ![Zrzut ekranu tworzenia ograniczenia typu urządzenia](./media/enrollment-restrictions-set/create-device-type-restriction.png)
-4. Na stronie **Podstawowe** wypełnij pole **Nazwa** i opcjonalne pole **Opis**.
-5. Wybierz przycisk **Dalej**, aby przejść do strony **Ustawienia platformy**.
-6. W obszarze **Platforma** wybierz opcję **Zezwalaj** dla platform, dla których chcesz zezwolić na to ograniczenie.
+1. Zaloguj się do [centrum administracyjnego usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Urządzenia** > **Ograniczenia rejestracji** > **Utwórz ograniczenie** > **Ograniczenie typu urządzeń**.
+2. Na stronie **Podstawowe** wypełnij pole **Nazwa** i opcjonalne pole **Opis**.
+3. Wybierz przycisk **Dalej**, aby przejść do strony **Ustawienia platformy**.
+4. W obszarze **Platforma** wybierz opcję **Zezwalaj** dla platform, dla których chcesz zezwolić na to ograniczenie.
     ![Zrzut ekranu wybierania ustawień platformy](./media/enrollment-restrictions-set/choose-platform-settings.png)
-7. W obszarze **Wersje** wybierz minimalne i maksymalne wersje, które mają być obsługiwane przez dozwolone platformy. Ograniczenia wersji mają zastosowanie tylko do urządzeń zarejestrowanych w aplikacji Portal firmy.
+5. W obszarze **Wersje** wybierz minimalne i maksymalne wersje, które mają być obsługiwane przez dozwolone platformy. Ograniczenia wersji mają zastosowanie tylko do urządzeń zarejestrowanych w aplikacji Portal firmy.
      Obsługiwane formaty wersji obejmują:
     - Administrator urządzenia z systemem Android i profil służbowy systemu Android Enterprise obsługują wersję major.minor.rev.build.
     - System iOS obsługuje wersję major.minor.rev. Wersje systemu operacyjnego nie mają zastosowania do urządzeń firmy Apple rejestrowanych przy użyciu programu Device Enrollment Program, usługi Apple School Manager lub aplikacji Apple Configurator.
@@ -84,31 +81,28 @@ Ograniczenia domyślne są automatycznie zapewniane w przypadku ograniczeń reje
    > [!Note]
    > System Windows 10 nie udostępnia numeru wersji podczas rejestracji, więc jeśli na przykład wprowadzisz kompilację 10.0.17134.174, a urządzenie korzysta z kompilacji 10.0.17134.100, urządzenie zostanie zablokowane podczas rejestracji.
 
-8. W obszarze **Własność użytkownika** wybierz opcję **Zezwalaj** dla platform, na które chcesz zezwalać jako urządzenia będące własnością użytkowników.
-9. Wybierz przycisk **Dalej**, aby przejść do strony **Przypisania**.
-10. Wybierz opcję **Wybierz grupy do uwzględnienia**, a następnie użyj pola wyszukiwania, aby znaleźć grupy, które chcesz uwzględnić w tym ograniczeniu. Ograniczenie ma zastosowanie wyłącznie do grup, do których zostało przypisane. Jeśli nie przypiszesz ograniczenia do co najmniej jednej grupy, nie będzie mieć żadnego efektu. Następnie wybierz opcję **Wybierz**. 
+6. W obszarze **Własność użytkownika** wybierz opcję **Zezwalaj** dla platform, na które chcesz zezwalać jako urządzenia będące własnością użytkowników.
+7. Wybierz przycisk **Dalej**, aby przejść do strony **Przypisania**.
+8. Wybierz opcję **Wybierz grupy do uwzględnienia**, a następnie użyj pola wyszukiwania, aby znaleźć grupy, które chcesz uwzględnić w tym ograniczeniu. Ograniczenie ma zastosowanie wyłącznie do grup, do których zostało przypisane. Jeśli nie przypiszesz ograniczenia do co najmniej jednej grupy, nie będzie mieć żadnego efektu. Następnie wybierz opcję **Wybierz**. 
     ![Zrzut ekranu wybierania ustawień platformy](./media/enrollment-restrictions-set/select-groups.png)
-11. Wybierz pozycję **Dalej**, aby przejść do strony **Recenzja i tworzenie**.
-12. Wybierz pozycję **Utwórz**, aby utworzyć ograniczenie.
-13. Nowe ograniczenie jest tworzone z priorytetem tuż nad ograniczeniami domyślnymi. Możesz [zmienić priorytet](#change-enrollment-restriction-priority).
+9. Wybierz pozycję **Dalej**, aby przejść do strony **Recenzja i tworzenie**.
+10. Wybierz pozycję **Utwórz**, aby utworzyć ograniczenie.
+11. Nowe ograniczenie jest tworzone z priorytetem tuż nad ograniczeniami domyślnymi. Możesz [zmienić priorytet](#change-enrollment-restriction-priority).
 
 
 ## <a name="create-a-device-limit-restriction"></a>Tworzenie ograniczenia limitu urządzeń
 
-1. Zaloguj się do witryny Azure Portal.
-2. Wybierz opcję **Więcej usług**, wyszukaj usługę **Intune**, a następnie wybierz usługę **Intune**.
-3. Wybierz opcje **Rejestracja urządzenia** > **Ograniczenia rejestracji** > **Utwórz ograniczenie** > **Ograniczenie limitu urządzeń**.
-    ![Zrzut ekranu tworzenia ograniczenia limitu urządzeń](./media/enrollment-restrictions-set/create-device-limit-restriction.png)
-4. Na stronie **Podstawowe** wypełnij pole **Nazwa** i opcjonalne pole **Opis**.
-5. Wybierz opcję **Dalej**, aby przejść do strony **Limit urządzeń**.
-6. Dla opcji **Limit urządzeń** wybierz maksymalną liczbę urządzeń, którą może zarejestrować użytkownik.
+1. Zaloguj się do [centrum administracyjnego usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Urządzenia** > **Ograniczenia rejestracji** > **Utwórz ograniczenie** > **Ograniczenie limitu urządzeń**.
+2. Na stronie **Podstawowe** wypełnij pole **Nazwa** i opcjonalne pole **Opis**.
+3. Wybierz opcję **Dalej**, aby przejść do strony **Limit urządzeń**.
+4. Dla opcji **Limit urządzeń** wybierz maksymalną liczbę urządzeń, którą może zarejestrować użytkownik.
     ![Zrzut ekranu wybierania limitu urządzeń](./media/enrollment-restrictions-set/choose-device-limit.png)
-7. Wybierz przycisk **Dalej**, aby przejść do strony **Przypisania**.
-8. Wybierz opcję **Wybierz grupy do uwzględnienia**, a następnie użyj pola wyszukiwania, aby znaleźć grupy, które chcesz uwzględnić w tym ograniczeniu. Ograniczenie ma zastosowanie wyłącznie do grup, do których zostało przypisane. Jeśli nie przypiszesz ograniczenia do co najmniej jednej grupy, nie będzie mieć żadnego efektu. Następnie wybierz opcję **Wybierz**. 
+5. Wybierz przycisk **Dalej**, aby przejść do strony **Przypisania**.
+6. Wybierz opcję **Wybierz grupy do uwzględnienia**, a następnie użyj pola wyszukiwania, aby znaleźć grupy, które chcesz uwzględnić w tym ograniczeniu. Ograniczenie ma zastosowanie wyłącznie do grup, do których zostało przypisane. Jeśli nie przypiszesz ograniczenia do co najmniej jednej grupy, nie będzie mieć żadnego efektu. Następnie wybierz opcję **Wybierz**. 
     ![Zrzut ekranu wybierania grup](./media/enrollment-restrictions-set/select-groups-device-limit.png)
-11. Wybierz pozycję **Dalej**, aby przejść do strony **Recenzja i tworzenie**.
-12. Wybierz pozycję **Utwórz**, aby utworzyć ograniczenie.
-13. Nowe ograniczenie jest tworzone z priorytetem tuż nad ograniczeniami domyślnymi. Możesz [zmienić priorytet](#change-enrollment-restriction-priority).
+7. Wybierz pozycję **Dalej**, aby przejść do strony **Recenzja i tworzenie**.
+8. Wybierz pozycję **Utwórz**, aby utworzyć ograniczenie.
+9. Nowe ograniczenie jest tworzone z priorytetem tuż nad ograniczeniami domyślnymi. Możesz [zmienić priorytet](#change-enrollment-restriction-priority).
 
 Podczas rejestracji urządzeń BYOD zostanie wyświetlone powiadomienie dla użytkowników, gdy osiągną limit liczby zarejestrowanych urządzeń. Przykładowo w systemie iOS:
 
@@ -131,11 +125,9 @@ Podczas rejestracji urządzeń BYOD zostanie wyświetlone powiadomienie dla uży
 
 Możesz zmienić ustawienia ograniczeń dotyczących rejestracji, wykonując poniższe czynności. Te ograniczenia nie wpływają na urządzenia, które zostały już zarejestrowane. Za pomocą tej funkcji nie można zablokować urządzeń zarejestrowanych przy użyciu [agenta usługi Intune na komputerze](../fundamentals/manage-windows-pcs-with-microsoft-intune.md).
 
-1. Zaloguj się do witryny Azure Portal.
-2. Wybierz opcję **Więcej usług**, wyszukaj usługę **Intune**, a następnie wybierz usługę **Intune**.
-3. Wybierz opcje **Rejestracja urządzeń** > **Ograniczenia rejestracji** > wybierz ograniczenie, które chcesz zmienić > **Właściwości**.
-4. Wybierz opcję **Edytuj** obok ustawień, które chcesz zmienić.
-5. Na stronie **Edycja** wprowadź odpowiednie zmiany i przejdź do strony **Przejrzyj i zapisz**, a następnie wybierz opcję **Zapisz**.
+1. Zaloguj się do [centrum administracyjnego usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Urządzenia** > **Ograniczenia rejestracji** > wybierz ograniczenie, które chcesz zmienić > **Właściwości**.
+2. Wybierz opcję **Edytuj** obok ustawień, które chcesz zmienić.
+3. Na stronie **Edycja** wprowadź odpowiednie zmiany i przejdź do strony **Przejrzyj i zapisz**, a następnie wybierz opcję **Zapisz**.
 
 
 ## <a name="blocking-personal-android-devices"></a>Blokowanie urządzeń osobistych z systemem Android

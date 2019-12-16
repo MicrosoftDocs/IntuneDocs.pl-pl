@@ -1,11 +1,11 @@
 ---
 title: Zasady zgodności urządzeń w usłudze Microsoft Intune na platformie Azure | Microsoft Docs
-description: 'Wprowadzenie do następujących zagadnień: korzystanie z zasad zgodności urządzeń, omówienie stanu i poziomów ważności, korzystanie ze stanu InGracePeriod, praca z dostępem warunkowym, obsługa urządzeń bez przypisanych zasad oraz różnice w zgodności między witryną Azure Portal i portalem klasycznym w usłudze Microsoft Intune'
+description: 'Wprowadzenie do następujących zagadnień: korzystanie z zasad zgodności urządzeń, omówienie stanu i poziomów ważności, korzystanie ze stanu InGracePeriod, praca z dostępem warunkowym i obsługa urządzeń bez przypisanych zasad.'
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/21/2019
+ms.date: 12/05/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 967bf9937c71ff3ca7277f43fd969291eb5af6de
-ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
+ms.openlocfilehash: 83b8c48d2bb594ca8b9c527d78922332e582363f
+ms.sourcegitcommit: 66e284fe092e19c1da72b4b770e45bf25ac7910c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72749168"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74860299"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Ustawianie zasad na urządzeniach w celu umożliwienia dostępu do zasobów w organizacji za pomocą usługi Intune
 
@@ -130,21 +130,6 @@ W poniższej tabeli opisano sposób postępowania z niezgodnymi ustawieniami w p
 
 - Jeśli użytkownik podlega zasadom dostępu warunkowego, urządzenie zostanie zablokowane.
 - Aplikacja Portal firmy powiadomi użytkownika o wszelkich problemach ze zgodnością.
-
-## <a name="azure-classic-portal-vs-azure-portal"></a>Klasyczny portal Azure a Witryna Azure Portal
-
-Główna różnica w przypadku korzystania z zasad zgodności urządzeń w witrynie Azure Portal:
-
-- W witrynie Azure Portal zasady zgodności są tworzone oddzielnie dla każdej z obsługiwanych platform.
-- W klasycznym portalu Azure zasady zgodności urządzeń są wspólne dla wszystkich obsługiwanych platform.
-
-<!--- - In the Azure portal, you have the ability to specify actions and notifications that are initiated when a device is determined to be noncompliant. This ability does not exist in the Intune admin console.
-
-- In the Azure portal, you can set a grace period to allow time for the end-user to get their device back to compliance status before they completely lose the ability to get company data on their device. This is not available in the Intune admin console.--->
-
-Zasady zgodności urządzeń tworzone w [klasycznym portalu Azure](https://manage.microsoft.com) nie są dostępne w [witrynie Azure Portal](https://portal.azure.com). Nadal jednak będą one stosowane dla użytkowników i będzie możliwe zarządzanie nimi za pośrednictwem klasycznego portalu Azure.
-
-Aby korzystać z funkcji dotyczących zgodności urządzeń w witrynie Azure Portal, musisz utworzyć tam nowe zasady zgodności urządzeń. Jeśli w witrynie Azure Portal przypiszesz zasady zgodności urządzeń do użytkownika, do którego zostały również przypisane zasady zgodności urządzeń z portalu klasycznego, to zasady zgodności urządzeń z witryny Azure Portal będą mieć pierwszeństwo przed zasadami utworzonymi w portalu klasycznym.
 
 ## <a name="next-steps"></a>Następne kroki
 

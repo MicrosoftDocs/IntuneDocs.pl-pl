@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5a3081ece10bb25c6381f4a8f891152433bc9661
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 94c38aaf28440511720280a3c5a1ebda5b9f2ab1
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564376"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74819777"
 ---
 # <a name="see-device-details-in-intune"></a>Wyświetlanie szczegółów urządzenia w usłudze Intune
 
@@ -77,7 +77,7 @@ W zależności od operatora danego urządzenia mogą nie zostać zebrane wszystk
 |MEID|Identyfikator sprzętu przenośnego urządzenia.|Windows, iOS, Android|
 |Producent|Producent urządzenia.|Windows, iOS, Android|
 |Model|Model urządzenia.|Windows, iOS, Android|
-|Numer telefonu|Numer telefonu przypisany do urządzenia.|Windows, iOS, Android|
+|Numer telefonu|Numer telefonu przypisany do urządzenia.|Windows, iOS, Android*|
 |Operator subskrybenta|Operator sieci bezprzewodowej urządzenia.|Windows, iOS, Android|
 |Technologia sieci komórkowej|System radiowy używany przez urządzenie.|Windows, iOS, Android|
 |Wi-Fi MAC|Adres MAC (Media Access Control) urządzenia.|Windows, iOS, Android|
@@ -93,7 +93,7 @@ W zależności od operatora danego urządzenia mogą nie zostać zebrane wszystk
 |Nadzorowane|Jeśli wybrano pozycję **Tak**, administratorzy mają rozszerzoną kontrolę nad urządzeniem.|Windows, iOS, Android|
 |Zaszyfrowane|Jeśli wybrano pozycję **Tak**, dane przechowywane w urządzeniu są zaszyfrowane.|Windows, iOS, Android|
 
-
+\* Niedostępne w systemie Android za pomocą Menedżera zasad Google takiego jak W pełni zarządzane i Dedykowane urządzenia
 
 ## <a name="next-steps"></a>Następne kroki
 Zobacz, co jeszcze możesz zrobić, aby [zarządzać urządzeniami](device-management.md) przy użyciu usługi Intune.

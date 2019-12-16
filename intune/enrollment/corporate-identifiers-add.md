@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3d98a0e3c5bd2a5c11c9aa72d791306dfbe6578
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 4e1ee8ae54d81a050f3c8983269f40e8f61b5e75
+ms.sourcegitcommit: e75718ee6cf93c0e6c915f2776b785fe8db9f7e0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72503303"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74955477"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Określanie urządzeń jako firmowe
 
@@ -85,9 +85,7 @@ Ten plik CSV wyświetlony w edytorze tekstu wygląda następująco:
 
 ### <a name="upload-a-csv-list-of-corporate-identifiers"></a>Przekazywanie listy CSV identyfikatorów firmy
 
-1. Zaloguj się w usłudze [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), wybierz kolejno pozycje **Rejestrowanie urządzenia** > **Identyfikatory urządzeń firmowych** > **Dodaj** > **Przekaż plik CSV**.
-
-   ![Obszar roboczy identyfikatorów urządzeń firmowych z wyróżnionym przyciskiem Dodaj](./media/corporate-identifiers-add/add-corp-id.png)
+1. Zaloguj się do [centrum administracyjnego usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), wybierz pozycję **Urządzenia** > **Zarejestruj urządzenia** > **Identyfikatory urządzeń firmowych** > **Dodaj** > **Przekaż plik CSV**.
 
 2. W bloku **Dodawanie identyfikatorów** określ typ identyfikatora: **IMEI** lub **Numer seryjny**.
 
@@ -97,7 +95,7 @@ Ten plik CSV wyświetlony w edytorze tekstu wygląda następująco:
 
 ## <a name="manually-enter-corporate-identifiers"></a>Ręczne wprowadzanie identyfikatorów firmy
 
-1. Zaloguj się w usłudze [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) i wybierz kolejno pozycje **Rejestrowanie urządzenia** > **Identyfikatory urządzeń firmowych** > **Dodaj** > **Wprowadź ręcznie**.
+1. Zaloguj się do [centrum administracyjnego usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), wybierz pozycję **Urządzenia** > **Zarejestruj urządzenia** > **Identyfikatory urządzeń firmowych** > **Dodaj** > **Wprowadź ręcznie**.
 
 2. W bloku **Dodawanie identyfikatorów** określ typ identyfikatora: **IMEI** lub **Numer seryjny**.
 
@@ -111,7 +109,7 @@ Importowane urządzenia nie są zawsze zarejestrowane. Urządzenia mogą mieć s
 
 ## <a name="delete-corporate-identifiers"></a>Usuwanie identyfikatorów firmy
 
-1. Zaloguj się w usłudze [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) i wybierz kolejno pozycje **Rejestrowanie urządzenia** > **Identyfikatory urządzeń firmowych**.
+1. Zaloguj się do [centrum administracyjnego usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), wybierz pozycję **Urządzenia** > **Zarejestruj urządzenia** > **Identyfikatory urządzeń firmowych**.
 2. Wybierz identyfikatory urządzeń do usunięcia, a następnie wybierz pozycję **Usuń**.
 3. Potwierdzenie usunięcia.
 
@@ -125,7 +123,7 @@ Szczegółowe specyfikacje dotyczące identyfikatorów IMEI (International Mobil
 We właściwościach urządzeń jest wyświetlana **Własność** dla rekordów każdego urządzenia w usłudze Intune. Jako administrator możesz określić urządzenia jako **Osobiste** lub **Firmowe**. W przypadku zmiany typu własności urządzenia z Osobiste na Firmowe usługa Intune usuwa wszystkie informacje o aplikacji zebrane wcześniej z tego urządzenia w ciągu 7 dni. Jeśli ma to zastosowanie, usługa Intune usunie również zapisany numer telefonu. 
 
 **Aby zmienić własność urządzeń:**
-1. Zaloguj się w usłudze [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), przejdź do pozycji **Urządzenia** i wybierz urządzenie.
+1. W [centrum administracyjnym usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **Wszystkie urządzenia** > wybierz urządzenie.
 2. Wybierz pozycję **Właściwości**.
 3. Określ **Własność urządzeń** jako **Osobiste** lub **Firmowe**.
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0718fae09228b9359b073901f3a344a09a6176e7
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 3fb5818609763753878fec7a84fd8c19eb154f88
+ms.sourcegitcommit: e75718ee6cf93c0e6c915f2776b785fe8db9f7e0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509250"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74955443"
 ---
 # <a name="terms-and-conditions-for-user-access"></a>Warunki i postanowienia dotyczące dostępu użytkowników
 
@@ -46,31 +46,30 @@ Aby dowiedzieć się, która metoda jest najbardziej odpowiednia dla Ciebie, zob
 ## <a name="create-terms-and-conditions"></a>Tworzenie warunków i postanowień
 Wykonaj następujące kroki, aby utworzyć warunki i postanowienia. Wyświetlana nazwa i opis są przeznaczone do użytku administracyjnego, natomiast właściwości dotyczące warunków są widoczne dla użytkowników w aplikacji Portal firmy.
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. W okienku **Intune** wybierz pozycję **Rejestrowanie urządzeń** > **Warunki i postanowienia**.
-3. Wybierz pozycję **Utwórz**.
-4. Na stronie **Podstawowe** określ następujące informacje:
+1. Zaloguj się do [centrum administracyjnego usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), wybierz pozycję **Administracja dzierżawy** > **Warunki i postanowienia**.
+2. Wybierz pozycję **Utwórz**.
+3. Na stronie **Podstawowe** określ następujące informacje:
 
    - **Nazwa**: nazwa warunków w witrynie Azure Portal. Użytkownicy nie widzą tej nazwy.
    - **Opis**: opcjonalne szczegółowe informacje ułatwiające identyfikację danego zbioru warunków w witrynie Azure Portal.
 
     ![Zrzut ekranu witryny Azure Portal przedstawiający stronę Podstawowe służącą do tworzenia warunków i postanowień](./media/terms-and-conditions-create/terms-basics-page.png)
 
-5. Wybierz pozycję **Dalej**, aby przejść do strony **Warunki** i podać następujące informacje:
+4. Wybierz pozycję **Dalej**, aby przejść do strony **Warunki** i podać następujące informacje:
 
    - **Tytuł**: nazwa warunków, którą użytkownicy widzą w Portalu firmy powyżej pozycji **Podsumowanie**.
    - **Warunki i postanowienia**: warunki i postanowienia, które użytkownicy muszą zaakceptować lub odrzucić.
    - **Podsumowanie warunków**: wyjaśnienie, co oznacza zaakceptowanie warunków przez użytkownika. Na przykład: „Rejestrując swoje urządzenie, akceptujesz warunki użytkowania określone przez firmę Contoso. Zanim przejdziesz dalej, przeczytaj uważnie niniejsze warunki”.
 
-6. Wybierz pozycję **Dalej**, aby przejść na stronę **Tagi zakresu**.
+5. Wybierz pozycję **Dalej**, aby przejść na stronę **Tagi zakresu**.
 
-7. Wybierz pozycję **Wybierz tagi zakresu**, wybierz tagi zakresu, które chcesz przypisać do tych warunków i postanowień, a następnie wybierz pozycję **Wybierz**. 
+6. Wybierz pozycję **Wybierz tagi zakresu**, wybierz tagi zakresu, które chcesz przypisać do tych warunków i postanowień, a następnie wybierz pozycję **Wybierz**. 
 
-8. Wybierz pozycję **Dalej**, aby przejść do strony **Przypisania**, a następnie wybierz jedną z następujących opcji dla ustawienia **Przypisz do**:
+7. Wybierz pozycję **Dalej**, aby przejść do strony **Przypisania**, a następnie wybierz jedną z następujących opcji dla ustawienia **Przypisz do**:
     - **Wszyscy użytkownicy**: Wybierz tę opcję, aby przypisać te warunki i postanowienia do wszystkich użytkowników.
     - **Wybierz grupy**: Wybierz tę opcję, aby przypisać te warunki i postanowienia do wszystkich w grupach, które określisz, wybierając pozycję **Wybierz grupy do uwzględnienia**.
 
-9. Wybierz pozycję **Dalej** > **Utwórz**.
+8. Wybierz pozycję **Dalej** > **Utwórz**.
 
 ## <a name="see-how-terms-are-displayed-to-your-users"></a>Zobacz, w jaki sposób warunki są wyświetlane użytkownikom
 W poniższym przykładzie przedstawiono **Tytuł** i **Podsumowanie warunków** w konsoli administracyjnej i Portalu firmy.
@@ -84,8 +83,7 @@ W poniższym przykładzie przedstawiono warunki i postanowienia w konsoli admini
 
 ## <a name="monitor-terms-and-conditions"></a>Monitorowanie warunków i postanowień
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973). 
-1. W okienku Intune wybierz pozycję **Rejestrowanie urządzeń** > **Warunki i postanowienia**.
+1. Zaloguj się do [centrum administracyjnego usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), wybierz pozycję **Administracja dzierżawy** > **Warunki i postanowienia**.
 2. Na liście warunków i postanowień wybierz warunki, dla których ma zostać wyświetlona akceptacja, a następnie wybierz pozycję **Raportowanie akceptacji**.
 
 ## <a name="work-with-multiple-versions-of-terms-and-conditions"></a>Praca z wieloma wersjami warunków i postanowień
@@ -95,12 +93,10 @@ Możesz edytować warunki i postanowienia oraz zarządzać ich wersjami. Każdor
 
 Jeśli zmiany obejmują na przykład poprawki błędów pisowni lub zmiany formatowania, zachowaj bieżący numer wersji.
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Zaloguj się do [centrum administracyjnego usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), wybierz pozycję **Administracja dzierżawy** > **Warunki i postanowienia** > wybierz warunki i postanowienia, które chcesz zmodyfikować > **Właściwości**.
 
-2. W okienku Intune wybierz pozycję **Rejestrowanie urządzeń** > **Warunki i postanowienia**, wybierz warunki i postanowienia, które chcesz zmodyfikować, a następnie wybierz pozycję **Właściwości**.
+2. W okienku **Właściwości** wybierz pozycję **Warunki i postanowienia**, a następnie zmodyfikuj wartość pól **Tytuł**, **Podsumowanie warunków** oraz **Warunki i postanowienia** zgodnie z potrzebami. Jeśli dokonane zmiany wymagają ponownej akceptacji nowych warunków przez użytkowników, wybierz pozycję **Wymagaj od użytkowników ponownego zaakceptowania i zwiększ numer wersji do**
 
-4. W okienku **Właściwości** wybierz pozycję **Warunki i postanowienia**, a następnie zmodyfikuj wartość pól **Tytuł**, **Podsumowanie warunków** oraz **Warunki i postanowienia** zgodnie z potrzebami. Jeśli dokonane zmiany wymagają ponownej akceptacji nowych warunków przez użytkowników, wybierz pozycję **Wymagaj od użytkowników ponownego zaakceptowania i zwiększ numer wersji do**
-
-4. Wybierz pozycję **OK** > **Zapisz**.
+3. Wybierz pozycję **OK** > **Zapisz**.
 
 Użytkownicy muszą tylko raz zaakceptować zaktualizowane warunki i postanowienia. Użytkownicy z wieloma urządzeniami nie muszą akceptować warunków i postanowień na każdym urządzeniu.

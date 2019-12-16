@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a5e52d1967ff6f5cf97334c099bc2b5b854ae87c
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: d876c0268f38a09ea3729a7e19ee00b321ae897a
+ms.sourcegitcommit: edd06a494a241d198ca9b0d3030c92195976e0d3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72502685"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75000401"
 ---
 # <a name="us-government-endpoints-for-microsoft-intune"></a>Punkty końcowe dla instytucji rządowych USA w usłudze Microsoft Intune
 
@@ -57,3 +57,25 @@ Poniższe tabele zawierają listę portów i usług, do których uzyskuje dostę
 - AAD Graph: https:\//directory.microsoftazure.us oraz https:\//graph.microsoftazure.us
 - MS Graph: https:\//graph.microsoft.us
 - ADRS: https:\//enterpriseregistration.microsoftonline.us
+
+## <a name="windows-push-notification-services"></a>Usługi powiadomień WNS
+W przypadku urządzeń zarządzanych przez usługę Intune przy użyciu rozwiązania do zarządzania urządzeniami przenośnymi (MDM) usługi WNS są wymagane do wykonywania akcji dla urządzeń i innych natychmiastowych działań. Aby uzyskać więcej informacji, zobacz [Enterprise Firewall and Proxy Configurations to Support WNS Traffic (Konfiguracje zapory przedsiębiorstwa i serwera proxy pod kątem obsługi ruchu usług WNS)](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config)
+
+## <a name="apple-device-network-information"></a>Informacje o sieci urządzeń firmy Apple
+
+|**Sposób użycia**|**Nazwa hosta (adres IP/podsieć)**|**Protokół**|**Port**|
+|------------|-----------|------------|-----------|
+|Pobieranie i wyświetlanie zawartości z serwerów firmy Apple|itunes.apple.com<br>\*.itunes.apple.com<br>\*.mzstatic.com<br>\*.phobos.apple.com<br>\*.phobos.itunes-apple.com.akadns.net|HTTP|80|
+|Komunikacja z serwerami usługi APNS|#-courier.push.apple.com<br>„#” jest liczbą losową z zakresu od 0 do 50.|TCP|5223 i 443|
+|Różne funkcje, w tym dostęp do Internetu, sklepu iTunes, sklepu z aplikacjami systemu macOS, usługi iCloud, obsługi komunikatów itp.|phobos.apple.com<br>ocsp.apple.com<br>ax.itunes.apple.com<br>ax.itunes.apple.com.edgesuite.net|HTTP/HTTPS|80 lub 443|
+
+Aby uzyskać więcej informacji, zobacz:
+
+- [Porty TCP i UDP używane przez produkty Apple](https://support.apple.com/HT202944)
+- [Informacje o połączeniach z serwerami systemów macOS i iOS oraz aplikacji iTunes oraz o procesach aplikacji iTunes działających w tle](https://support.apple.com/HT201999)
+- [Jeśli urządzenia klienckie z systemem macOS lub iOS nie otrzymują powiadomień w trybie push Apple](https://support.apple.com/HT203609)
+
+## <a name="next-steps"></a>Następne kroki
+[Punkty końcowe sieci dla usługi Microsoft Intune](intune-endpoints.md)
+
+[Automatyczne rejestrowanie i rejestracja urządzeń z systemem Windows 10](../enrollment/windows-enroll.md#registration-and-enrollment-cnames)

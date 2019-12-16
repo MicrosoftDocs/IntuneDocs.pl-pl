@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 11/19/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 8db05399c4a880d72d24cde885976309bf9a4fa7
-ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
+ms.openlocfilehash: 7373ca24c1ae1f439096d9bedcb8e81979c95586
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74549473"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74828961"
 ---
 Te powiadomienia zawierają ważne informacje, które mogą ułatwić przygotowanie się na nadchodzące zmiany i nowe funkcje w usłudze Intune.
 
@@ -119,8 +119,8 @@ Administrator urządzeń z systemem Android (czasami określany mianem „starsz
 
 #### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
 Te zmiany w usłudze Google wpłyną na użytkowników usługi Intune w następujący sposób:  
-- Usługa Intune będzie w stanie obsługiwać urządzenia z systemem Android 10 i nowszym (znanym także jako Android Q) zarządzane przez administratora urządzeń tylko do lata 2020 r. Wtedy można spodziewać się wydania kolejnej głównej wersji systemu Android.   
-- Urządzenia zarządzane przez administratora urządzeń z systemem Android 10 lub nowszym po upływie lata 2020 r. nie będą mogły być już w pełni zarządzane.       
+- Usługa Intune będzie w stanie w pełni obsługiwać urządzenia z systemem Android 10 i nowszymi zarządzanym przez administratora urządzeń tylko do 2. kwartału 2020 r. Urządzenia zarządzane przez administratora urządzeń z systemem Android 10 lub nowszym po tym terminie nie będą mogły być już w pełni zarządzane. W szczególności objęte urządzenia nie będą otrzymywać nowych wymagań dotyczących haseł.
+    - W tym terminie zmiana nie będzie mieć wpływu na urządzenia z rozwiązaniem Samsung KNOX, ponieważ integracja usługi Intune z platformą Knox zapewnia rozszerzone wsparcie. Daje to więcej czasu na zaplanowanie przejścia z zarządzania przez administratora urządzeń.    
 - Nie ma to wpływu na urządzenia z systemem Android zarządzane przez administratora urządzeń, które mają nadal zainstalowany system Android w wersji starszej niż Android 10. Mogą one być nadal w pełni zarządzane przez administratora urządzeń.    
 - W przypadku wszystkich urządzeń z systemem Android 10 lub nowszym firma Google ograniczyła możliwość uzyskania dostępu do informacji o identyfikatorze urządzenia przez agentów zarządzania przez administratora urządzeń, takich jak Portal firmy. To ograniczenie ma wpływ na następujące funkcje usługi Intune po aktualizacji urządzenia do systemu Android 10 lub nowszego:  
     - Przestanie działać kontrola dostępu do sieci dla sieci VPN.   
@@ -130,7 +130,7 @@ Te zmiany w usłudze Google wpłyną na użytkowników usługi Intune w następu
         > Dotyczy to tylko urządzeń z systemem Android 10 i nowszym zarządzanych przez administratora urządzeń, a nie dotyczy urządzeń zarządzanych za pomocą systemu Android Enterprise. 
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Co należy zrobić, aby przygotować się do tej zmiany?
-Aby uniknąć ograniczenia funkcjonalności, które pojawią się w lecie 2020 r., zalecamy co następuje:
+Aby uniknąć ograniczenia funkcjonalności, które pojawi się w 3. kwartale 2020 r., zalecamy:
 - Nie dołączaj nowych urządzeń do zarządzania przez administratora urządzeń.
 - Jeśli przewidujesz, że urządzenie otrzyma aktualizację do systemu Android 10, przeprowadź jego migrację z zarządzania przez administratora urządzeń do zarządzania przez system Android Enterprise lub zasad ochrony aplikacji.
 

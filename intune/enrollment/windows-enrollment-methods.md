@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: ''
-ms.openlocfilehash: 59ba9ab5fb0ddeb527ed852de042568920cf38e1
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: b6144767ee69de8c1ff14e5c189c078994a9dcf4
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509184"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74819713"
 ---
 # <a name="intune-enrollment-methods-for-windows-devices"></a>Metody rejestracji w usłudze Intune dla urządzeń z systemem Windows
 
@@ -42,7 +42,7 @@ Użytkownicy mogą samodzielnie rejestrować swoje urządzenia z systemem Window
 Jeśli administrator skonfigurował automatyczne rejestrowanie (dostępne w przypadku subskrypcji Premium usługi Azure AD), użytkownik musi tylko raz wprowadzić swoje poświadczenia. W przeciwnym razie konieczne będzie wykonanie osobnej rejestracji tylko dla funkcji MDM i ponowne wprowadzenie poświadczeń.  
 - **Rejestracja tylko dla funkcji MDM** umożliwia użytkownikom rejestrowanie w usłudze Intune istniejącej grupy roboczej, usługi Active Directory lub komputera przyłączonego do usługi Azure Active Directory. Użytkownicy rejestrują się z poziomu ustawień na istniejącym komputerze z systemem Windows. Ta metoda nie jest zalecana, ponieważ nie powoduje zarejestrowania urządzenia w usłudze Azure Active Directory. Uniemożliwia ona również korzystanie z takich funkcji jak dostęp warunkowy.
 - [Przyłączanie do usługi Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) — przyłącza urządzenie do usługi Azure Active Directory i umożliwia użytkownikom logowanie się do systemu Windows przy użyciu poświadczeń usługi Azure AD. Jeśli włączono rejestrację automatyczną, urządzenie jest automatycznie rejestrowane w usłudze Intune. Zaletą rejestracji automatycznej jest proces wymagający wykonania tylko jednego kroku przez użytkownika. W przeciwnym razie konieczne będzie wykonanie osobnej rejestracji tylko dla funkcji MDM i ponowne wprowadzenie poświadczeń. Użytkownicy rejestrują się w ten sposób z poziomu ustawień lub podczas początkowego procesu OOBE w systemie Windows. Urządzenie jest oznaczone jako firmowe w usłudze Intune.
-- [Rozwiązanie Autopilot](enrollment-autopilot.md) — automatyzuje dołączanie do usługi Azure AD i rejestruje nowe urządzenia firmowe w usłudze Intune. Ta metoda upraszcza proces OOBE (Out-of-Box Experience) i eliminuje konieczność stosowania niestandardowych obrazów systemów operacyjnych na urządzeniach. Jeśli do zarządzania urządzeniami z rozwiązaniem Autopilot administratorzy używają usługi Intune, mogą zarządzać zasadami, profilami, aplikacjami i nie tylko po ich zarejestrowaniu.  Istnieją cztery typy wdrażania w rozwiązaniu Autopilot: [Tryb samodzielnego wdrażania](https://docs.microsoft.com/windows/deployment/windows-autopilot/self-deploying) (w przypadku kiosków, znakowania cyfrowego lub udostępnionego urządzenia) i [tryb sterowany przez użytkownika](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) (dla tradycyjnych użytkowników), [White Glove] (https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove) umożliwia partnerom lub personelowi działu IT wstępną aprowizację komputera z systemem Windows 10, aby był w pełni skonfigurowany i gotowy do użytku w firmie oraz [rozwiązanie Autopilot dla istniejących urządzeń] (https://docs.microsoft.com/windows/deployment/windows-autopilot/existing-devices) umożliwia łatwe wdrażanie najnowszej wersji systemu Windows 10 na istniejących urządzeniach.
+- [Rozwiązanie Autopilot](enrollment-autopilot.md) — automatyzuje dołączanie do usługi Azure AD i rejestruje nowe urządzenia firmowe w usłudze Intune. Ta metoda upraszcza proces OOBE (Out-of-Box Experience) i eliminuje konieczność stosowania niestandardowych obrazów systemów operacyjnych na urządzeniach. Jeśli do zarządzania urządzeniami z rozwiązaniem Autopilot administratorzy używają usługi Intune, mogą zarządzać zasadami, profilami, aplikacjami i nie tylko po ich zarejestrowaniu.  Istnieją cztery typy wdrażania w rozwiązaniu Autopilot: [Tryb samodzielnego wdrażania](https://docs.microsoft.com/windows/deployment/windows-autopilot/self-deploying) (w przypadku kiosków, oznakowania cyfrowego lub udostępnionego urządzenia), [Tryb sterowany przez użytkownika](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) (dla tradycyjnych użytkowników), tryb [White Glove](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove) (umożliwia partnerom lub personelowi działu IT wstępną aprowizację komputera z systemem Windows 10, tak aby był w pełni skonfigurowany i gotowy do użytku w firmie) oraz tryb [Autopilot dla istniejących urządzeń](https://docs.microsoft.com/windows/deployment/windows-autopilot/existing-devices) (umożliwia łatwe wdrażanie najnowszej wersji systemu Windows 10 na istniejących urządzeniach).
 
 ## <a name="administrator-based-enrollment-in-intune"></a>Rejestracja w usłudze Intune wykonywana przez administratorów
 

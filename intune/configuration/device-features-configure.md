@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 12/12/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f02188e6dd6cea6048731d119f8f307224810dd9
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: d887c7bc3c7e9ea8b6719993b5ba4909e9c18ea8
+ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059945"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992925"
 ---
 # <a name="add-ios-or-macos-device-feature-settings-in-intune"></a>Dodawanie ustawień funkcji urządzenia z systemem iOS lub macOS w usłudze Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Usługa Intune oferuje wiele funkcji i ustawień, które pomagają administratorom kontrolować urządzenia z systemami iOS i macOS. Administratorzy mogą na przykład:
 
@@ -113,7 +111,7 @@ Dotyczy:
 
 ## <a name="login-items"></a>Elementy logowania
 
-Ta funkcja umożliwia wybranie aplikacji, niestandardowych aplikacji, plików i folderów, które zostaną otwarte, gdy użytkownicy zalogują się na swoich urządzeniach. 
+Ta funkcja umożliwia wybranie aplikacji, niestandardowych aplikacji, plików i folderów, które zostaną otwarte, gdy użytkownicy zalogują się na swoich urządzeniach.
 
 Aby poznać listę ustawień, jakie można skonfigurować w usłudze Intune, zobacz [Elementy logowania w systemie macOS](macos-device-features-settings.md#login-items).
 
@@ -153,22 +151,29 @@ Dotyczy:
 
 Te ustawienia służą do konfigurowania rozszerzenia aplikacji umożliwiającego rejestrację jednokrotną (SSO) na urządzeniach z systemem iOS, iPadOS i macOS. Większość aplikacji biznesowych (LOB) i witryn organizacji wymaga pewnego poziomu bezpiecznego uwierzytelniania użytkowników. W wielu przypadkach podczas uwierzytelnianie użytkownicy muszą wielokrotnie wprowadzać te same poświadczenia. Logowanie jednokrotne daje użytkownikom dostęp do aplikacji i witryn internetowych po jednorazowym wprowadzeniu poświadczeń. Po zalogowaniu użytkownicy mają automatyczny dostęp do aplikacji i witryn internetowych, ale mogą również używać do tego celu funkcji Face ID lub Touch ID albo kodu dostępu Apple.
 
-Użyj tych ustawień w usłudze Intune, aby skonfigurować wbudowane rozszerzenie protokołu Kerberos firmy Apple lub skonfigurować rozszerzenie aplikacji do jednokrotnego logowania utworzone w Twojej organizację. Rozszerzenie aplikacji do jednokrotnego logowania obsługuje uwierzytelnianie użytkowników. Te ustawienia służą do konfigurowania rozszerzeń aplikacji do jednokrotnego logowania z poświadczeniami, opracowanych pod kątem przepływów uwierzytelniania typu wyzwanie-odpowiedź. Istnieje możliwość wyboru między dostarczonym przez firmę Apple rozszerzeniem poświadczeń dostosowanym do protokołu Kerberos a ogólnym rozszerzeniem poświadczeń.
+Użyj tych ustawień w usłudze Intune, aby skonfigurować rozszerzenie aplikacji do logowania jednokrotnego utworzone przez Twoją organizację, dostawcę tożsamości lub firmę Apple. Rozszerzenie aplikacji do jednokrotnego logowania obsługuje uwierzytelnianie użytkowników. Te ustawienia służą do konfigurowania rozszerzeń aplikacji do logowania jednokrotnego przeznaczonych do przekierowywania i obsługi poświadczeń.
+
+- Rozszerzenia przeznaczone do przekierowywania są zaprojektowane pod kątem nowoczesnych protokołów uwierzytelniania, takich jak OAuth i SAML2.
+- Rozszerzenia przeznaczone do obsługi poświadczeń są zaprojektowane na potrzeby przepływów uwierzytelniania typu wyzwanie-odpowiedź. Istnieje możliwość wyboru między dostarczonym przez firmę Apple rozszerzeniem poświadczeń dostosowanym do protokołu Kerberos a ogólnym rozszerzeniem poświadczeń.
 
 Aby poznać listę ustawień, jakie można skonfigurować w usłudze Intune, zobacz [SSO app extension](ios-device-features-settings.md#single-sign-on-app-extension) (Rozszerzenie aplikacji do jednokrotnego logowania w systemie iOS) oraz [macOS SSO app extension](macos-device-features-settings.md#single-sign-on-app-extension) (Rozszerzenie aplikacji do jednokrotnego logowania w systemie macOS).
 
-Aby uzyskać więcej informacji na temat tworzenia rozszerzenia aplikacji do jednokrotnego logowania, obejrzyj materiał [Extensible Enterprise SSO](https://developer.apple.com/videos/play/tech-talks/301) w witrynie internetowej Apple.
+Aby uzyskać więcej informacji na temat tworzenia rozszerzenia aplikacji do jednokrotnego logowania, obejrzyj materiał [Extensible Enterprise SSO](https://developer.apple.com/videos/play/tech-talks/301) w witrynie internetowej Apple. Aby zapoznać się z opisem funkcji dostarczanym przez firmę Apple, odwiedź stronę [Ustawienia pakietu danych Single Sign-On Extensions (rozszerzenia pojedynczego logowania)](https://support.apple.com/guide/mdm/single-sign-on-extensions-mdmfd9cdf845/web). 
 
 > [!NOTE]
 > Funkcja **rozszerzenia aplikacji do jednokrotnego logowania** różni się od funkcji **jednokrotnego logowania**:
 >
-> - Ustawienia **rozszerzenia aplikacji do jednokrotnego logowania** mają zastosowanie w systemie iPadOS 13.0 (i nowszych) oraz systemie iOS 13.0 (i nowszych). Ustawienia funkcji **jednokrotnego logowania** mają zastosowanie w systemie iPadOS 13.0 (i nowszych) oraz systemie iOS 7.0 (i nowszych).
-> - **Rozszerzenie aplikacji do jednokrotnego logowania** obsługuje uwierzytelnianie w systemie operacyjnym. W przypadku funkcji **jednokrotnego logowania** uwierzytelnianie obsługuje konkretna aplikacja.
-> - Korzystając z **rozszerzenia aplikacji do jednokrotnego logowania**, użytkownicy logują się do aplikacji i witryn internetowych automatycznie. Alternatywnie mogą użyć funkcji Face ID lub Touch ID albo kodu PIN lub hasła firmy Apple. Korzystając z funkcji **jednokrotnego logowania**, użytkownicy logują się do aplikacji i witryn internetowych przy użyciu innej aplikacji.
+> - Ustawienia **rozszerzenia aplikacji do logowania jednokrotnego** mają zastosowanie w systemie iPadOS 13.0 (i nowszych), iOS 13.0 (i nowszych) oraz macOS 10.15 (i nowszych). Ustawienia funkcji **jednokrotnego logowania** mają zastosowanie w systemie iPadOS 13.0 (i nowszych) oraz systemie iOS 7.0 (i nowszych).
 >
->    **Rozszerzenie aplikacji do jednokrotnego logowania** korzysta podczas uwierzytelniania z systemu operacyjnego Apple. Może więc zapewnić lepsze środowisko użytkownika końcowego.
+> - Ustawienia **rozszerzenia aplikacji do logowania jednokrotnego** definiują rozszerzenia do użycia przez dostawców tożsamości lub organizacje na potrzeby dostarczania bezproblemowego firmowego środowiska logowania. Ustawienia **logowania jednokrotnego** definiują informacje o koncie Kerberos używane podczas uzyskiwania dostępu przez użytkowników do serwerów lub aplikacji.
 >
-> - Z perspektywy programowania **rozszerzenie aplikacji do jednokrotnego logowania** może używać dowolnego typu uwierzytelniania poświadczeń do jednokrotnego logowania. W przypadku **jednokrotnego logowania** można korzystać wyłącznie z uwierzytelniania jednokrotnego logowania za pomocą protokołu Kerberos.  
+> - **Rozszerzenie aplikacji do jednokrotnego logowania** korzysta podczas uwierzytelniania z systemu operacyjnego Apple. Dlatego może zapewnić środowisko użytkownika końcowego, które jest lepsze niż **logowanie jednokrotne**.
+>
+> - Z perspektywy programowania za pomocą **rozszerzenia aplikacji do logowania jednokrotnego** można używać uwierzytelniania logowania jednokrotnego dowolnego typu — z przekierowaniem lub stosującego poświadczenia. W przypadku **jednokrotnego logowania** można korzystać wyłącznie z uwierzytelniania jednokrotnego logowania za pomocą protokołu Kerberos.
+>
+> - **Rozszerzenie aplikacji do logowania jednokrotnego** dla protokołu Kerberos zostało opracowane przez firmę Apple i wbudowane w platformy iOS 13.0+ i macOS 10.15+. Wbudowane rozszerzenie protokołu Kerberos może służyć do logowania użytkowników w aplikacjach natywnych i witrynach internetowych, które obsługują uwierzytelnianie Kerberos. **Logowanie jednokrotne** nie jest implementacją protokołu Kerberos autorstwa firmy Apple.
+>
+> - Wbudowane **rozszerzenie aplikacji do logowania jednokrotnego** protokołu Kerberos obsługuje wyzwania protokołu Kerberos dla stron i aplikacji internetowych podobnie jak **logowanie jednokrotne**. Jednak wbudowane rozszerzenie protokołu Kerberos obsługuje zmiany haseł i zachowuje się lepiej w sieciach przedsiębiorstwa. W przypadku wybierania między **rozszerzeniem aplikacji do logowania jednokrotnego** i **logowaniem jednokrotnym** protokołu Kerberos zalecamy użycie rozszerzenia z powodu jego wyższej wydajności i większych możliwości.
 
 Dotyczy:
 

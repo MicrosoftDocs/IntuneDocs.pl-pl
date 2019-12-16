@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 460cabead711e6fa4559bcec39e556448cdf2237
-ms.sourcegitcommit: 2c8a41ee95a3fde150667a377770e51b621ead65
+ms.openlocfilehash: ebb17324355fff9631ef74a76388ef0ab797d437
+ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73635365"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74899143"
 ---
 # <a name="intune-guided-scenarios-overview"></a>Scenariusze z przewodnikiem dotyczące usługi Intune — omówienie 
 
@@ -33,7 +33,7 @@ Scenariusze z przewodnikiem nie są odrębnym obszarem zarządzania, różniący
 
 ## <a name="types-of-guided-scenarios"></a>Typy scenariuszy z przewodnikiem 
 
-Dla ułatwienia wszystkie scenariusze z przewodnikiem pomijają skomplikowane funkcje ustawiania zakresu, takie jak tagi zakresu <link>, grupy wykluczenia i przypisania grup wirtualnych <link>. Wszystkie zasoby utworzone w ramach scenariusza z przewodnikiem dziedziczą każdy tag zakresu administratora, który wykonuje scenariusz. Niektóre scenariusze oferują pewien poziom dostosowania w zakresie popularnych ustawień, aby obejmować kilka powiązanych sytuacji. Te scenariusze obsługują przypisanie grup wyłącznie do grup dołączania. W przypadku innych scenariuszy z przewodnikiem cały scenariusz gwarantuje jedno spójne środowisko, wynikające z braku dostosowywania, oraz automatycznie generuje nową grupę, która otrzyma wszystkie przypisania. Po zakończeniu scenariusza z przewodnikiem możesz bezpośrednio zastosować bardziej zaawansowane przypisania, używając istniejących obciążeń zasad, aplikacji i profilów.  
+Dla ułatwienia wszystkie scenariusze z przewodnikiem pomijają skomplikowane funkcje ustawiania zakresu, takie jak tagi zakresu, grupy wykluczenia i przypisania grup wirtualnych. Wszystkie zasoby utworzone w ramach scenariusza z przewodnikiem dziedziczą każdy tag zakresu administratora, który wykonuje scenariusz. Niektóre scenariusze oferują pewien poziom dostosowania w zakresie popularnych ustawień, aby obejmować kilka powiązanych sytuacji. Te scenariusze obsługują przypisanie grup wyłącznie do grup dołączania. W przypadku innych scenariuszy z przewodnikiem cały scenariusz gwarantuje jedno spójne środowisko, wynikające z braku dostosowywania, oraz automatycznie generuje nową grupę, która otrzyma wszystkie przypisania. Po zakończeniu scenariusza z przewodnikiem możesz bezpośrednio zastosować bardziej zaawansowane przypisania, używając istniejących obciążeń zasad, aplikacji i profilów.  
 
 Następujące scenariusze są dostępne z przewodnikiem: 
 - Wdrażanie przeglądarki Microsoft Edge dla urządzeń przenośnych 

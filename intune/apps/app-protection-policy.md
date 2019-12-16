@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31bb0e2ff4379c55829afc65fb99b768c9099a47
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 1b712922824fa9d54f33fb43114e852fbeb52a81
+ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72498957"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74899430"
 ---
 # <a name="app-protection-policies-overview"></a>Zasady ochrony aplikacji — przegląd
 
@@ -215,12 +215,12 @@ Osobisty numer identyfikacyjny (PIN) jest kodem dostępu służącym do weryfika
 **Monit o wprowadzenie numeru PIN**<br>
 Monit o podanie numeru PIN aplikacji użytkownika jest wyświetlany w usłudze Intune tylko wtedy, gdy użytkownik chce uzyskać dostęp do danych „firmowych”. W aplikacjach z obsługą wielu tożsamości, np. Word, Excel lub PowerPoint, monit o wprowadzenie numeru PIN jest wyświetlany, gdy użytkownik próbuje otworzyć dokument lub plik „firmowy”. W aplikacjach z obsługą jednej tożsamości, np. aplikacjach biznesowych zarządzanych przy użyciu [Narzędzia opakowującego aplikacje dostępnego w usłudze Intune](../developer/apps-prepare-mobile-application-management.md), monit o podanie numeru PIN wyświetla się podczas uruchamiania, ponieważ [zestaw SDK aplikacji usługi Intune](../developer/app-sdk.md) wie, że środowisko użytkownika w aplikacji jest zawsze „firmowe”.
 
-**Częstotliwość monitów o podanie numeru PIN**<br>
-Administrator IT może zdefiniować ustawienie zasad ochrony aplikacji usługi Intune **Ponownie sprawdź wymagania dostępu po (w minutach)** w konsoli administracyjnej usługi Intune. To ustawienie określa czas, po którym na urządzeniu są sprawdzane wymagania dotyczące dostępu i ponownie jest wyświetlany ekran numeru PIN aplikacji. Jednak wpływ na częstotliwość monitowania użytkownika mają następujące ważne informacje o numerze PIN:
+**Częstotliwość monitowania o numer PIN lub poświadczenia firmowe**<br>
+Administrator IT może zdefiniować ustawienie zasad ochrony aplikacji usługi Intune **Ponownie sprawdź wymagania dostępu po (w minutach)** w konsoli administracyjnej usługi Intune. To ustawienie określa czas, po którym na urządzeniu są sprawdzane wymagania dotyczące dostępu i ponownie jest wyświetlany ekran numeru PIN lub monit poświadczeń firmowych aplikacji. Jednak wpływ na częstotliwość monitowania użytkownika mają następujące ważne informacje o numerze PIN:
 
-- **Numer PIN jest udostępniany w aplikacjach tego samego wydawcy w celu zwiększenia użyteczności:**<br> w systemie iOS numer PIN danej aplikacji jest udostępniany we wszystkich aplikacjach **tego samego wydawcy aplikacji**. W systemie Android numer PIN danej aplikacji jest współużytkowany przez wszystkie aplikacje.
-  - **Zachowanie *Ponownie sprawdź wymagania dostępu po (w minutach)* po ponownym uruchomieniu urządzenia:**<br> funkcja „Czasomierz numeru PIN” śledzi liczbę minut braku aktywności, które określają, kiedy należy ponownie wyświetlić numer PIN aplikacji usługi Intune. W systemie iOS na czasomierz numeru PIN nie ma wpływu ponowne uruchomienie urządzenia. W związku z tym ponowne uruchomienie urządzenia nie ma wpływu na liczbę minut, przez które użytkownik jest nieaktywny w aplikacji systemu iOS objętej zasadami numeru PIN usługi Intune. W systemie Android czasomierz numeru PIN jest resetowany przy ponownym uruchomieniu urządzenia. W efekcie aplikacje systemu Android z zasadami numeru PIN usługi Intune prawdopodobnie wyświetlą zapytanie o numer PIN aplikacji niezależnie od wartości ustawienia „Ponownie sprawdź wymagania dostępu po (w minutach)” **po ponownym uruchomieniu urządzenia**.  
-  - **Ciągłe działanie czasomierza skojarzonego z numerem PIN:**<br> gdy numer PIN zostanie wprowadzony w celu uzyskania dostępu do aplikacji (aplikacji A) i aplikacja zostanie wyłączona z pierwszego planu (głównego fokusu wprowadzania) na urządzeniu, czasomierz numeru PIN zostanie zresetowany dla tego numeru PIN. Monit dla użytkownika o podanie numeru PIN nie będzie wyświetlany w żadnej aplikacji (aplikacji B), która współużytkuje ten numer PIN, ponieważ czasomierz został zresetowany. Monit pojawi się znowu po ponownym osiągnięciu odpowiedniej wartości ustawienia „Ponownie sprawdź wymagania dostępu po (w minutach)”.
+- **Numer PIN jest udostępniany w aplikacjach tego samego wydawcy w celu zwiększenia użyteczności:**<br> w systemie iOS numer PIN danej aplikacji jest udostępniany we wszystkich aplikacjach **tego samego wydawcy aplikacji**. Na przykład wszystkie aplikacje firmy Microsoft mają ten sam numer PIN. W systemie Android numer PIN danej aplikacji jest współużytkowany przez wszystkie aplikacje.
+- **Zachowanie *Ponownie sprawdź wymagania dostępu po (w minutach)* po ponownym uruchomieniu urządzenia:**<br> Czasomierz śledzi liczbę minut nieaktywności, określając, kiedy należy ponownie wyświetlić monit numeru PIN lub poświadczeń firmowych aplikacji usługi Intune. W systemie iOS na czasomierz nie ma wpływu ponowne uruchomienie urządzenia. W związku z tym ponowne uruchomienie urządzenia nie ma wpływu na liczbę minut, przez które użytkownik jest nieaktywny w aplikacji systemu iOS objętej zasadami numeru PIN (lub poświadczeń firmowych) usługi Intune. W systemie Android czasomierz jest resetowany przy ponownym uruchomieniu urządzenia. Dlatego aplikacje systemu Android z zasadami numeru PIN (lub poświadczeń firmowych) usługi Intune prawdopodobnie wyświetlą monit o numer PIN lub poświadczenia firmowe aplikacji **po ponownym uruchomieniu urządzenia** niezależnie od wartości ustawienia „Ponownie sprawdź wymagania dostępu po (w minutach)”.  
+- **Ciągłe działanie czasomierza skojarzonego z numerem PIN:**<br> gdy numer PIN zostanie podany w celu uzyskania dostępu do aplikacji (aplikacji A) i aplikacja opuści pierwszy plan (utraci główny fokus wprowadzania) na urządzeniu, czasomierz zostanie zresetowany dla tego numeru PIN. Monit dla użytkownika o podanie numeru PIN nie będzie wyświetlany w żadnej aplikacji (aplikacji B), która współużytkuje ten numer PIN, ponieważ czasomierz został zresetowany. Monit pojawi się znowu po ponownym osiągnięciu odpowiedniej wartości ustawienia „Ponownie sprawdź wymagania dostępu po (w minutach)”.
 
 W przypadku urządzeń z systemem iOS, nawet jeśli numer PIN jest współużytkowany pomiędzy aplikacjami od różnych dostawców, zostanie ponownie wyświetlony monit, jeśli ponownie osiągnięto wartość **Sprawdź ponownie wymagania dostępu po (minuty)** dla aplikacji, która nie jest głównym elementem fokusu wprowadzania danych. Przykładowo użytkownik ma aplikację _A_ od wydawcy _X_ oraz aplikację _B_ od wydawcy _Y_; obie aplikacje współdzielą ten sam numer PIN. Użytkownik skupia się na aplikacji _A_ (na pierwszym planie), a aplikacja _B_ jest zminimalizowana. Po osiągnięciu wartości **Sprawdź ponownie wymagania dostępu po (minuty)** i przełączeniu się przez użytkownika na aplikację _B_ będzie wymagany numer PIN.
 
@@ -262,7 +262,6 @@ Szyfrowane są tylko dane oznaczone jako „firmowe” zgodnie z zasadami ochron
 W przypadku aplikacji biznesowych zarządzanych przy użyciu [Narzędzia opakowującego aplikacje dostępnego w usłudze Intune](../developer/apps-prepare-mobile-application-management.md) wszystkie dane aplikacji uznaje się za „firmowe”.
 
 **Zdalne czyszczenie danych**<br>
-
 Usługa Intune umożliwia czyszczenie danych aplikacji na trzy różne sposoby: 
 - Pełne czyszczenie urządzenia
 - Selektywne czyszczenie na potrzeby zarządzania urządzeniami mobilnymi 

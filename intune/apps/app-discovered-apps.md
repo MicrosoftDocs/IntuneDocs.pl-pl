@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eff4ccdc8b40da4d72394001b88446653ff71bd0
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 2e7c9824711ecbfb43a7c7dde71cc01b306b7fab
+ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564243"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74899414"
 ---
 # <a name="intune-discovered-apps"></a>Aplikacje odnalezione przez usługę Intune
 
@@ -60,12 +60,13 @@ Poniższa lista zawiera następujące informacje: typ platformy aplikacji, aplik
 | Windows Phone 8 | Tylko aplikacje zarządzane | Tylko aplikacje zarządzane | Co 7 dni od rejestracji urządzenia |
 | Windows RT | Tylko aplikacje zarządzane | Tylko aplikacje zarządzane | Co 7 dni od rejestracji urządzenia |
 | iOS | Tylko aplikacje zarządzane | Wszystkie aplikacje zainstalowane na urządzeniu | Co 7 dni od rejestracji urządzenia |
-| macOS | Wszystkie aplikacje zainstalowane na urządzeniu | Wszystkie aplikacje zainstalowane na urządzeniu | Co 7 dni od rejestracji urządzenia |
+| macOS | Tylko aplikacje zarządzane | Wszystkie aplikacje zainstalowane na urządzeniu | Co 7 dni od rejestracji urządzenia |
 | Android | Tylko aplikacje zarządzane | Wszystkie aplikacje zainstalowane na urządzeniu | Co 7 dni od rejestracji urządzenia |
 | Android Enterprise | Tylko aplikacje zarządzane | Tylko aplikacje zainstalowane w profilu służbowym | Co 7 dni od rejestracji urządzenia |
 
 > [!NOTE]
-> Dołączone do usługi Azure AD hybrydowe urządzenia z systemem Windows 10, jak pokazano w obciążeniu zarządzania aplikacjami w programie Configuration Manager, aktualnie nie zbierają spisu aplikacji za pomocą rozszerzenia do zarządzania usługi Intune (IME) zgodnie z powyższym harmonogramem. Aby uniknąć tego problemu, obciążenie zarządzania aplikacjami w programie Configuration Manager należy przełączyć na usługę Intune w celu zainstalowania na urządzeniu rozszerzenia IME (rozszerzenie IME jest wymagane w przypadku spisu Win32 i wdrożenia środowiska PowerShell). Wszelkie zmiany i aktualizacje dotyczące tego zachowania są ogłaszane w sekcjach dotyczących [rozwiązań w trakcie opracowywania](../fundamentals/in-development.md) i/lub [nowości](../fundamentals/whats-new.md).
+> - Dołączone do usługi Azure AD hybrydowe urządzenia z systemem Windows 10, jak pokazano w obciążeniu zarządzania aplikacjami w programie Configuration Manager, aktualnie nie zbierają spisu aplikacji za pomocą rozszerzenia do zarządzania usługi Intune (IME) zgodnie z powyższym harmonogramem. Aby uniknąć tego problemu, obciążenie zarządzania aplikacjami w programie Configuration Manager należy przełączyć na usługę Intune w celu zainstalowania na urządzeniu rozszerzenia IME (rozszerzenie IME jest wymagane w przypadku spisu Win32 i wdrożenia środowiska PowerShell). Wszelkie zmiany i aktualizacje dotyczące tego zachowania są ogłaszane w sekcjach dotyczących [rozwiązań w trakcie opracowywania](../fundamentals/in-development.md) i/lub [nowości](../fundamentals/whats-new.md).
+> - Osobiste urządzenia z systemem macOS zarejestrowane przed listopadem 2019 r. mogą nadal wyświetlać wszystkie aplikacje zainstalowane na urządzeniu do momentu ponownego zarejestrowania urządzeń.
 
 Liczba wykrytych aplikacji może być niezgodna z liczbą stanu instalacji aplikacji. Możliwe przyczyny niespójności to:
 

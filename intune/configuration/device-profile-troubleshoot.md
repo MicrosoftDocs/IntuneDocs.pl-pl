@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/15/2019
+ms.date: 12/04/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4a1177a37ddbfa7f760339c4ad0cd7773d670540
-ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
+ms.openlocfilehash: d445b86359b2c5cde7b56a52a0cc6ee72a34c0ea
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74199187"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74832616"
 ---
 # <a name="common-questions-issues-and-resolutions-with-device-policies-and-profiles-in-microsoft-intune"></a>Typowe pytania, problemy i rozwiązania związane z zasadami i profilami urządzeń w usłudze Microsoft Intune
 
@@ -50,7 +50,9 @@ Niektóre zalecenia dodatkowe:
 
 Usługa Intune powiadamiania urządzenie o zaewidencjonowaniu w usłudze Intune. Czasy powiadomień są różne, w tym od powiadomienia natychmiast do powiadomienia za kilka godzin. Te czasy powiadomień różnią się również między platformami.
 
-Jeśli urządzenie nie zostanie zaewidencjonowane w celu pobrania zasad lub profilu po pierwszym powiadomieniu, usługa Intune przeprowadzi trzy kolejne próby. Urządzenie w trybie offline (np. wyłączone lub niepodłączone do sieci) może nie odbierać powiadomień. W takim przypadku urządzenie pobiera zasady lub profil podczas następnego zaplanowanego zaewidencjonowania przy użyciu usługi Intune, które jest **szacowane** w następujący sposób:
+Jeśli urządzenie nie zostanie zaewidencjonowane w celu pobrania zasad lub profilu po pierwszym powiadomieniu, usługa Intune przeprowadzi trzy kolejne próby. Urządzenie w trybie offline (np. wyłączone lub niepodłączone do sieci) może nie odbierać powiadomień. W takim przypadku urządzenie pobiera zasady lub profil podczas następnego zaplanowanego ewidencjonowania przy użyciu usługi Intune. Ta sama zasada dotyczy sprawdzeń pod kątem braku zgodności, w tym urządzeń, które przechodzą ze stanu zgodności do stanu niezgodności.
+
+**Szacowane** częstotliwości:
 
 | Platforma | Cykl odświeżania|
 | --- | --- |
@@ -61,7 +63,7 @@ Jeśli urządzenie nie zostanie zaewidencjonowane w celu pobrania zasad lub prof
 | Windows Phone | Co około 8 godzin |
 | Windows 8.1 | Co około 8 godzin |
 
-Jeśli urządzenie zostało ostatnio zarejestrowane, zaewidencjonowanie zgodności i konfiguracji jest uruchamiane częściej, co jest szacowane w **następujący** sposób:
+Jeśli urządzenie zostało ostatnio zarejestrowane, ewidencjonowanie zgodności, niezgodności i konfiguracji jest uruchamiane częściej, co jest szacowane w **następujący** sposób:
 
 | Platforma | Częstotliwość |
 | --- | --- |

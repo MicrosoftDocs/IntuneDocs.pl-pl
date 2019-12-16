@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d03859d5775193e6bbc482c06b28942a1a5bce2f
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: 0372c9629e111c460b095d8c0236305866da42e3
+ms.sourcegitcommit: ec69e7ccc6e6183862a48c1b03ca6a3bf573f354
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73712155"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74907206"
 ---
 # <a name="use-teamviewer-to-remotely-administer-intune-devices"></a>Używanie programu TeamViewer do zdalnego administrowania urządzeniami usługi Intune
 
@@ -48,7 +48,7 @@ Użycie programu TeamViewer umożliwi łącznikowi programu TeamViewer dla usłu
 Aby świadczyć pomoc zdalną dla urządzeń, skonfiguruj łącznik programu TeamViewer w usłudze Intune, wykonując następujące kroki:
 
 1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Wybierz pozycję **Urządzenia** > **Łącznik programu TeamViewer**.
+2. Wybierz pozycję **Administracja dzierżawą** > **Łączniki i tokeny** > **Łącznik programu TeamViewer**.
 3. Wybierz pozycję **Połącz**, a następnie zaakceptuj umowę licencyjną.
 4. Wybierz pozycję **Zaloguj się do programu TeamViewer, aby autoryzować**.
 5. Zostanie otwarta strona sieci Web w witrynie programu TeamViewer. Wprowadź swoje poświadczenia licencji programu TeamViewer, a następnie kliknij pozycję **Zaloguj się**.
@@ -59,7 +59,7 @@ Po skonfigurowaniu łącznika można rozpocząć zdalne administrowanie urządze
 
 1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Wybierz pozycję **Urządzenia**, a następnie wybierz pozycję **Wszystkie urządzenia**.
-3. Z listy wybierz urządzenie, którym chcesz zdalnie administrować. We właściwościach urządzenia wybierz pozycję **Nowa sesja pomocy zdalnej**.
+3. Z listy wybierz urządzenie, którym chcesz zdalnie administrować > **...**  > **Nowa sesja Pomocy zdalnej**.
 4. Po połączeniu usługi Intune z usługą programu TeamViewer zostaną wyświetlone pewne informacje o urządzeniu. Wybierz pozycję **Połącz**, aby rozpocząć sesję zdalną.
 
 ![Używanie programu TeamViewer do zdalnego administrowania urządzeniem z systemem Android — przykład](./media/teamviewer-support/android-teamviewer.png)

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ded91d72321257adc30d0321b5d01e74fa1d51a6
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: 2d9fbbbb80cf25861b2e0afbf3d01cfca3ece5fd
+ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73712203"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991763"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Usuwanie urządzeń przy użyciu czyszczenia, wycofywania lub ręcznego wyrejestrowywania urządzenia
 
@@ -47,6 +47,8 @@ Akcja **Wyczyść** przywraca domyślne ustawienia fabryczne na urządzeniu. Je�
 
 Opcja **Zachowaj stan rejestracji i konto użytkownika** jest dostępna tylko w wersji 1709 systemu Windows 10 lub nowszej.
 
+Opcja **Wykonaj chronione czyszczenie** zapewnia, że nie można obejść akcji czyszczenia przez wyłączenie urządzenia. Funkcja chronionego czyszczenia będzie ponawiać próby zresetowania urządzenia do momentu pomyślnego przeprowadzenia czyszczenia. W przypadku niektórych konfiguracji ta akcja może pozostawić urządzenie w stanie, który uniemożliwia jego ponowne uruchomienie.
+
 Zasady zarządzania urządzeniami przenośnymi zostaną zastosowane przy następnym połączeniu urządzenia z usługą Intune.
 
 Czyszczenie jest przydatne w przypadku resetowania urządzenia przed przekazaniem go nowemu użytkownikowi albo w przypadku utraty lub kradzieży urządzenia. Należy rozważnie korzystać z funkcji **Wyczyść**. Nie będzie można odzyskać danych na urządzeniu.
@@ -57,7 +59,7 @@ Czyszczenie jest przydatne w przypadku resetowania urządzenia przed przekazanie
 3. Wybierz pozycję **Urządzenia** > **Wszystkie urządzenia**.
 4. Wybierz nazwę urządzenia, które chcesz wyczyścić.
 5. W okienku wyświetlającym nazwę urządzenia wybierz pozycję **Wyczyść**.
-6. W systemie Windows 10 w wersji 1709 lub nowszej możesz też użyć opcji **Zachowaj stan rejestracji i konto użytkownika**. 
+6. W systemie Windows 10 w wersji 1709 lub nowszej możesz też użyć opcji **Wyczyść urządzenie, lecz zachowaj stan rejestracji i skojarzone konto użytkownika**. 
     
     |Zachowywane podczas czyszczenia |Niezachowane|
     | -------------|------------|

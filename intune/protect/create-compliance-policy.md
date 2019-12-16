@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8452f9b56032864380ec703bfd444dc85ef129b
-ms.sourcegitcommit: 13fa1a4a478cb0e03c7f751958bc17d9dc70010d
+ms.openlocfilehash: ba6b8fb66d25af3833e55eebc12e8b6df2fb5ba5
+ms.sourcegitcommit: 66e284fe092e19c1da72b4b770e45bf25ac7910c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74188263"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74860234"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Tworzenie zasad zgodności w usłudze Microsoft Intune
 
@@ -100,7 +100,7 @@ Aby korzystać z zasad zgodności urządzeń, upewnij się, że spełniono nast�
 
      Na przykład używasz funkcji Lokalizacje i dodasz lokalizację w zasadach zgodności. Domyślna akcja w przypadku niezgodności jest stosowana, gdy zostanie wybrana co najmniej jedna lokalizacja. Jeśli urządzenie nie jest połączone z wybranymi lokalizacjami, jest natychmiast uznawane za niezgodne. Użytkownikom można przyznać okres prolongaty, np. jeden dzień.
 
-   - **Zakres (tagi)** : Tagi zakresu to doskonały sposób przypisywania i filtrowania zasad do określonych grup, takich jak pracownicy działu kadr lub sprzedaży albo wszyscy pracownicy w stanie Północna Karolina w USA itd. Po dodaniu ustawień możesz również dodać tag zakresu do zasad zgodności. Pomocnym zasobem jest artykuł [Używanie tagów zakresu do filtrowania zasad](../fundamentals/scope-tags.md).
+   - **Zakres (tagi)** : Tagi zakresu to doskonały sposób filtrowania profilów w celu zdefiniowania grup takich `US-NC IT Team` lub `JohnGlenn_ITDepartment`. Po dodaniu ustawień możesz również dodać tag zakresu do zasad zgodności. Pomocnym zasobem jest artykuł [Używanie tagów zakresu do filtrowania zasad](../fundamentals/scope-tags.md).
 
 4. Po zakończeniu wybierz pozycję **OK**  >  **Utwórz**, aby zapisać zmiany. Zasady zostaną utworzone i wyświetlone na liście. Następnie przypisz zasady do grup.
 

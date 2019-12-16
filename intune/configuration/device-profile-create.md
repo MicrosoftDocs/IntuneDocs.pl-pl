@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 12/05/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c4c995322234a4a2486d8e6c5e9efd88f78dd63
-ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
+ms.openlocfilehash: 71f2bc855673b6b189ed7581b979527485e86083
+ms.sourcegitcommit: 66e284fe092e19c1da72b4b770e45bf25ac7910c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74390872"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74860387"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Tworzenie profilu urządzenia w usłudze Microsoft Intune
 
@@ -93,7 +93,7 @@ W tym artykule:
 
 ## <a name="scope-tags"></a>Tagi zakresu
 
-Po dodaniu ustawień możesz również dodać tag zakresu do profilu. Tagi zakresu umożliwiają przypisywanie i filtrowanie zasad do określonych grup, takich jak pracownicy działu kadr lub wszyscy pracownicy w stanie Północna Karolina w USA.
+Po dodaniu ustawień możesz również dodać tag zakresu do profilu. Tagi zakresu umożliwiają filtrowanie profilów w celu zdefiniowania grup IT, takich jak `US-NC IT Team` lub `JohnGlenn_ITDepartment`.
 
 Więcej informacji na temat tagów zakresu i czynności możliwych do wykonania można znaleźć w artykule [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md) (Używanie kontroli RBAC i tagów zakresu w rozproszonej infrastrukturze informatycznej).
 
@@ -180,11 +180,13 @@ Podczas tworzenia profilów należy wziąć pod uwagę następujące zalecenia:
 
 - Oddziel zasady użytkownika od zasad urządzeń.
 
-  Na przykład [szablony administracyjne w usłudze Intune](administrative-templates-windows.md) mają setki ustawień ADMX. Ten szablon pokazuje, czy ustawienia dotyczą użytkowników, czy urządzeń. Podczas tworzenia szablonów administracyjnych przypisuj ustawienia użytkownika do grupy użytkowników, a ustawienia urządzenia do grupy urządzeń.
+  Na przykład [szablony administracyjne w usłudze Intune](administrative-templates-windows.md) mają setki ustawień ADMX. Te szablony pokazują, czy ustawienia dotyczą użytkowników, czy urządzeń. Podczas tworzenia szablonów administracyjnych przypisuj ustawienia użytkownika do grupy użytkowników, a ustawienia urządzenia do grupy urządzeń.
 
   Na poniższej ilustracji przedstawiono przykład ustawienia, które można zastosować do użytkowników lub do urządzeń:
 
   ![Szablon administracyjny w usłudze Intune, który można zastosować do użytkowników i do urządzeń](./media/device-profile-create/setting-applies-to-user-and-device.png)
+
+- Za każdym razem, gdy tworzysz restrykcyjne zasady, poinformuj o tym użytkowników. Jeśli na przykład zmieniasz wymagania dotyczące kodu dostępu z 4 znaków na 6 znaków, powiadom użytkowników przed przypisaniem zasad.
 
 ## <a name="next-steps"></a>Następne kroki
 

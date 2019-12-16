@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c6b12bb0066c37eb470065a169a3ad7866c69a17
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 11b93d41ac09f637d6c75a3f2f4b7f4213cecec7
+ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72503266"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74819764"
 ---
 # <a name="intune-enrollment-method-capabilities-for-windows-devices"></a>Możliwości metod rejestracji usługi Intune dla urządzeń z systemem Windows
 [!INCLUDE[azure_portal](../includes/azure_portal.md)]
@@ -41,7 +41,7 @@ Istnieje kilka metod rejestrowania urządzeń pracowników w usłudze Intune. Ka
 
 | **Możliwości** | **[Dołączone do usługi Azure AD](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[Dołączone do usługi Azure AD za pomocą rozwiązania Autopilot (tryb sterowany przez użytkownika)](enrollment-autopilot.md)** |**[Dołączone do usługi Azure AD za pomocą rozwiązania Autopilot (tryb samowdrażania)](enrollment-autopilot.md)** |**[Zbiorcze](windows-bulk-enroll.md)**|**[Menedżer rejestracji urządzeń](device-enrollment-manager-enroll.md)** | **[„Przynieś własne urządzenie” (BYOD, Bring Your Own Device)](device-enrollment.md#bring-your-own-device)** | **[GPO](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)** | **[Współzarządzanie](https://docs.microsoft.com/sccm/core/clients/manage/co-management-overview)** |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Dostęp warunkowy                                      |![Znacznik wyboru](./media/enrollment-method-capab/checkmark.png)|![Znacznik wyboru](./media/enrollment-method-capab/checkmark.png)|![Znacznik wyboru](./media/enrollment-method-capab/checkmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![Znacznik wyboru](./media/enrollment-method-capab/checkmark.png)|![Znacznik wyboru](./media/enrollment-method-capab/checkmark.png)|![Znacznik wyboru](./media/enrollment-method-capab/checkmark.png)|
+|Dostęp warunkowy                                      |![Znacznik wyboru](./media/enrollment-method-capab/checkmark.png)|![Znacznik wyboru](./media/enrollment-method-capab/checkmark.png)|![Znacznik wyboru](./media/enrollment-method-capab/checkmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![Znacznik wyboru](./media/enrollment-method-capab/checkmark.png)\*\*|![Znacznik wyboru](./media/enrollment-method-capab/checkmark.png)|![Znacznik wyboru](./media/enrollment-method-capab/checkmark.png)|![Znacznik wyboru](./media/enrollment-method-capab/checkmark.png)|
 |Użytkownicy zostają skojarzeni z urządzeniem                    |![Znacznik wyboru](./media/enrollment-method-capab/checkmark.png)|![Znacznik wyboru](./media/enrollment-method-capab/checkmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![Znacznik wyboru](./media/enrollment-method-capab/checkmark.png)|![Znacznik wyboru](./media/enrollment-method-capab/checkmark.png)|![Znacznik wyboru](./media/enrollment-method-capab/checkmark.png)|
 |Wymaga usługi Azure AD — wersja Premium                               |![X](./media/enrollment-method-capab/xmark.png)|![Znacznik wyboru](./media/enrollment-method-capab/checkmark.png)|![Znacznik wyboru](./media/enrollment-method-capab/checkmark.png)|![Znacznik wyboru](./media/enrollment-method-capab/checkmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![Znacznik wyboru](./media/enrollment-method-capab/checkmark.png)|![Znacznik wyboru](./media/enrollment-method-capab/checkmark.png)|
 |Urządzenia mogą oceniać zasoby chronione przez urząd certyfikacji             |![Znacznik wyboru](./media/enrollment-method-capab/checkmark.png)|![Znacznik wyboru](./media/enrollment-method-capab/checkmark.png)|![Znacznik wyboru](./media/enrollment-method-capab/checkmark.png)|![Znacznik wyboru](./media/enrollment-method-capab/checkmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![Znacznik wyboru](./media/enrollment-method-capab/checkmark.png)|![Znacznik wyboru](./media/enrollment-method-capab/checkmark.png)|![Znacznik wyboru](./media/enrollment-method-capab/checkmark.png)|
@@ -54,6 +54,8 @@ Istnieje kilka metod rejestrowania urządzeń pracowników w usłudze Intune. Ka
 |Obsługuje automatyczne rejestrowanie po dołączeniu do usługi Azure AD       |![Znacznik wyboru](./media/enrollment-method-capab/checkmark.png)|![Znacznik wyboru](./media/enrollment-method-capab/checkmark.png)|![Znacznik wyboru](./media/enrollment-method-capab/checkmark.png)|![Znacznik wyboru](./media/enrollment-method-capab/checkmark.png)|![Znacznik wyboru](./media/enrollment-method-capab/checkmark.png)|![Znacznik wyboru](./media/enrollment-method-capab/checkmark.png)|![X](./media/enrollment-method-capab/xmark.png)|![X](./media/enrollment-method-capab/xmark.png)|
 
 \* Pakiety robocze aplikacji klienckich w aplikacji Configuration Manager muszą zostać przeniesione do usługi Intune Pilot lub Intune.
+
+\** [Dostęp warunkowy dla urządzeń został zablokowany z wyjątkiem systemu Windows 10 1803+.](device-enrollment-manager-enroll.md)
 
 ## <a name="next-steps"></a>Następne kroki
 

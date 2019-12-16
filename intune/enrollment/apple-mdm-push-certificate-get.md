@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d15fd73a608c799745c92c4b07df4b9705d00106
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 178e1a3d0f58eb925c4d48be10bfa46e68c6b2c6
+ms.sourcegitcommit: e75718ee6cf93c0e6c915f2776b785fe8db9f7e0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72490320"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74955460"
 ---
 # <a name="get-an-apple-mdm-push-certificate"></a>Uzyskiwanie certyfikatu wypychania MDM firmy Apple
 
@@ -41,7 +41,7 @@ Po wygaśnięciu certyfikatu wypychania należy go odnowić. Podczas odnawiania 
 
 
 ## <a name="steps-to-get-your-certificate"></a>Procedura uzyskiwania certyfikatu
-Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), wybierz pozycję **Rejestracji urządzenia** > **Rejestracja Apple** > **Certyfikat wypychania Apple MDM**, a następnie wykonaj następujące kroki w usłudze [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+Zaloguj się do [centrum administracyjnego usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), wybierz pozycję **Urządzenia** > **Zarejestruj urządzenia** > **Rejestracja Apple** > **Certyfikat wypychania Apple MDM**, a następnie wykonaj poniższe kroki.
 
 ### <a name="step-1-grant-microsoft-permission-to-send-user-and-device-information-to-apple"></a>Krok 1. Udzielanie firmie Microsoft uprawnień do wysłania informacji o użytkowniku i urządzeniu do firmy Apple
 Wybierz opcję **Zgadzam się**, aby udzielić firmie Microsoft uprawnień do wysyłania danych do firmy Apple.
@@ -68,7 +68,7 @@ Certyfikat wypychania MDM firmy Apple jest ważny przez rok i musi być odnawian
 
 Certyfikat jest skojarzony z identyfikatorem firmy Apple użytym do jego utworzenia. Certyfikat wypychania MDM odnów przy użyciu tego samego identyfikatora firmy Apple, którego użyto do jego utworzenia.
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), wybierz pozycję **Rejestrowanie urządzenia** > **Rejestracja Apple**, a następnie wybierz kafelek **Certyfikat wypychania Apple MDM** w obszarze szczegółów.
+1. Zaloguj się do [centrum administracyjnego usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), wybierz pozycję **Urządzenia** > **Zarejestruj urządzenia** > **Rejestracja Apple** > **Certyfikat wypychania Apple MDM**.
 2. Wybierz pozycję **Pobierz żądanie CSR**, aby pobrać plik żądania i zapisać go lokalnie. Ten plik jest używany na potrzeby żądania certyfikatu relacji zaufania w portalu Apple Push Certficates.
 3. Wybierz pozycję **Utwórz swój certyfikat push MDM**, aby przejść do portalu Apple Push Certificates. Znajdź certyfikat, który chcesz odnowić, i wybierz opcję **Odnów**.
 4. Na ekranie **Odnawianie certyfikatu wypychania** wpisz notatki, aby w przyszłości łatwiej zidentyfikować certyfikat, wybierz pozycję **Wybierz plik**, aby wskazać nowo pobrany plik żądania, a następnie wybierz opcję **Przekaż**.
