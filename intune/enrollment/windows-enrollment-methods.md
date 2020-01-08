@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: ''
-ms.openlocfilehash: b6144767ee69de8c1ff14e5c189c078994a9dcf4
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 060c3c00a228794d3f237a6362b048bf23e1a933
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74819713"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547713"
 ---
 # <a name="intune-enrollment-methods-for-windows-devices"></a>Metody rejestracji w usłudze Intune dla urządzeń z systemem Windows
 
@@ -49,7 +49,7 @@ Jeśli administrator skonfigurował automatyczne rejestrowanie (dostępne w przy
 Administratorzy mogą skonfigurować następujące metody rejestracji, które nie wymagają interakcji z użytkownikiem:
 
 - [Dołączenie do hybrydowej usługi Azure AD](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy) umożliwia administratorom konfigurowanie zasad grupy usługi Active Directory w celu automatycznego rejestrowania urządzeń dołączonych do hybrydowej usługi Azure AD. 
-- [Współzarządzanie w programie Configuration Manager](https://docs.microsoft.com/sccm/comanage/overview) umożliwia administratorom rejestrowanie istniejących urządzeń zarządzanych przez program Configuration Manager w usłudze Intune w celu uzyskanie korzyści zarówno z usługi Intune, jak i programu Configuration Manager. 
+- [Współzarządzanie w programie Configuration Manager](https://docs.microsoft.com/configmgr/comanage/overview) umożliwia administratorom rejestrowanie istniejących urządzeń zarządzanych przez program Configuration Manager w usłudze Intune w celu uzyskanie korzyści zarówno z usługi Intune, jak i programu Configuration Manager. 
 - [Menedżer rejestracji urządzeń](device-enrollment-manager-enroll.md) (DEM, Device Enrollment Manager) to specjalne konto usługi. Konta DEM mają uprawnienia, które umożliwiają autoryzowanym użytkownikom rejestrowanie wielu urządzeń firmowych i zarządzanie nimi. Tego rodzaju urządzenia nadają się do wykorzystania w punktach sprzedaży lub na potrzeby użycia aplikacji narzędziowych, ale są złym rozwiązaniem dla użytkowników, którzy potrzebują dostępu do poczty e-mail lub zasobów firmowych. Ta metoda nie zezwala na używanie funkcji, takich jak dostęp warunkowy. 
 - [Rejestrowanie zbiorcze](../windows-bulk-enroll.md) umożliwia autoryzowanemu użytkownikowi dołączenie dużej liczby nowych urządzeń firmowych do usług Azure Active Directory i Intune. Pakiet aprowizacyjny jest tworzony przy użyciu aplikacji Windows Configuration Designer (WCD). Następnie przy użyciu nośnika USB podczas początkowego procesu OOBE w systemie Windows lub z poziomu istniejącego komputera z systemu Windows instalowany jest pakiet aprowizacyjny służący do automatycznego rejestrowania urządzeń w usłudze Intune. Ta metoda nie zezwala na używanie dostępu warunkowego. 
 - [Rejestrowanie urządzeń z systemem Windows IoT Core](https://docs.microsoft.com/windows/iot-core/manage-your-device/intunedeviceenrollment) odbywa się przez przygotowanie urządzenia za pomocą pulpitu nawigacyjnego systemu Windows IoT Core, a następnie utworzenie pakietu aprowizacyjnego przy użyciu rozwiązania Windows Configuration Designer. Następnie — za pomocą plików multimedialnych na karcie SD podczas początkowego rozruchu — pakiet aprowizacyjny jest instalowany w celu automatycznego rejestrowania urządzeń w usłudze Intune.

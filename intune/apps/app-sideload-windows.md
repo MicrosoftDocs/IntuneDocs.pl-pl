@@ -3,10 +3,10 @@ title: Ładowanie bezpośrednie aplikacji systemów Windows i Windows Phone
 titleSuffix: Microsoft Intune
 description: Dowiedz się, jak podpisywać aplikacje biznesowe, aby umożliwić ich wdrażanie za pomocą usługi Intune.
 keywords: ''
-author: erikre
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/24/2019
+ms.date: 01/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -16,12 +16,12 @@ ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7500000f8a34120e69c27ce01a6cfdb85f447abe
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: a4a4c6d40dc729fb72210c455c7819baaf89de3b
+ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73414697"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75691826"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Podpisywanie aplikacji biznesowych w celu wdrażania ich na urządzeniach z systemem Windows za pomocą usługi Intune
 
@@ -67,7 +67,7 @@ Certyfikat używany do wdrażania aplikacji mobilnych systemu Windows Phone 8.1 
 
 ## <a name="how-to-install-the-updated-certificate-for-line-of-business-lob-apps"></a>Jak zainstalować zaktualizowany certyfikat dla aplikacji biznesowych
 
-Windows Phone 8,1
+Windows Phone 8,1
 
 Usługa Intune nie może już wdrażać aplikacji biznesowych dla tej platformy po wygaśnięciu istniejącego certyfikatu podpisywania kodu usługi Symantec Mobile Enterprise. Nadal będzie można bezpośrednio ładować niepodpisane pliki XAP/APPX przy użyciu karty SD lub przez pobranie pliku na urządzenie. Aby uzyskać więcej informacji, zobacz temat [How to install XAP files on Windows Phone](https://answers.microsoft.com/en-us/mobiledevices/forum/mdlumia-mdapps/how-to-install-xap-file-in-windows-phone-8/da09ee72-51ae-407c-9b85-bc148df89280) (Jak zainstalować pliki XAP na urządzeniu z systemem Windows Phone).
 

@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/22/2019
+ms.date: 01/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: apps; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ef958468feb7e36f894537989675977e1d96bf8c
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 97e70191ed133d9427a3c8565d1dbf03573b628b
+ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73414734"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75692231"
 ---
 # <a name="overview-of-the-app-lifecycle-in-microsoft-intune"></a>Przegląd cyklu życia aplikacji w usłudze Microsoft Intune
 
@@ -34,7 +34,7 @@ Cykl życia aplikacji w usłudze Microsoft Intune rozpoczyna się po dodaniu apl
 
 Pierwszym etapem wdrożenia aplikacji jest dodanie aplikacji, którą chcesz zarządzać i przypisać, do usługi Intune. Istnieje wiele różnych typów aplikacji, z którymi można pracować, ale podstawowe procedury dla wszystkich są takie same. Za pomocą usługi Intune możesz dodawać różne typy aplikacji, w tym aplikacje napisane w firmie (biznesowe), aplikacje ze sklepu, aplikacje wbudowane i aplikacje w Internecie. Aby uzyskać więcej informacji na temat tych typów aplikacji, zobacz [Jak dodawać aplikacje do usługi Microsoft Intune](apps-add.md).
 
-## <a name="deploy"></a>Wdróż program
+## <a name="deploy"></a>Wdróż
 
 Po dodaniu aplikacji do usługi Intune możesz tę aplikację [przypisać do użytkowników oraz do urządzeń, którymi zarządzasz](apps-deploy.md). Usługa Intune ułatwia ten proces, a po wdrożeniu aplikacji możesz [monitorować sukces](apps-monitor.md) wdrożenia z poziomu usługi Intune w witrynie Azure Portal. Ponadto niektóre sklepy z aplikacjami, takie jak [Apple](vpp-apps-ios.md) i [Windows](windows-store-for-business.md), pozwalają na zakup zbiorczych licencji na aplikacje dla firm. Usługa Intune może synchronizować dane z tymi sklepami, aby umożliwić wdrażanie licencji i śledzenie ich użycia dla tych typów aplikacji bezpośrednio z Konsoli administracyjnej usługi Intune.
 

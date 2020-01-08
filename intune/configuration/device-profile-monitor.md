@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 85ba34cfec8ebe78d2574034967bd7ed76f3304e
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 25983117864f44b8131fdc49e60b7d24048da9fe
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059546"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206656"
 ---
 # <a name="monitor-device-profiles-in-microsoft-intune"></a>Monitorowanie profilów urządzeń w usłudze Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 Usługa Intune oferuje funkcje, które ułatwiają monitorowanie profilów konfiguracji urządzenia i zarządzanie nimi. Można na przykład sprawdzić stan profilu, sprawdzić, które urządzenia zostały przypisane, a następnie zaktualizować właściwości profilu.
 
@@ -73,9 +73,9 @@ Po utworzeniu profilu urządzenia usługa Intune udostępnia wykresy graficzne. 
 
 ## <a name="view-conflicts"></a>Wyświetl konflikty
 
-W lokalizacji **Urządzenia**  >  **Wszystkie urządzenia** są wyświetlane wszelkie ustawienia powodujące konflikt. Gdy występuje konflikt, są także wyświetlane wszystkie profile konfiguracji, które zawierają to ustawienie. Administratorzy mogą używać tej funkcji, aby rozwiązywać problemy i naprawiać rozbieżności z profilami.
+W lokalizacji **Urządzenia** > **Wszystkie urządzenia** są wyświetlane wszelkie ustawienia powodujące konflikt. Gdy występuje konflikt, są także wyświetlane wszystkie profile konfiguracji, które zawierają to ustawienie. Administratorzy mogą używać tej funkcji, aby rozwiązywać problemy i naprawiać rozbieżności z profilami.
 
-1. W usłudze Intune wybierz pozycję **Urządzenia**  >  **Wszystkie urządzenia**, a następnie wybierz istniejące urządzenie z listy. Użytkownik końcowy może pobrać nazwę urządzenia z aplikacji Portal firmy.
+1. W usłudze Intune wybierz pozycję **Urządzenia** > **Wszystkie urządzenia**, a następnie wybierz istniejące urządzenie z listy. Użytkownik końcowy może pobrać nazwę urządzenia z aplikacji Portal firmy.
 2. Wybierz pozycję **Konfiguracja urządzenia**. Zostaną wyświetlone wszystkie zasady konfiguracji dotyczące urządzenia.
 3. Wybierz zasady. Są tutaj wyświetlane wszystkie ustawienia w zasadach dotyczące urządzenia. Jeśli urządzenie ma stan **Konflikt**, zaznacz ten wiersz. W nowym oknie zostaną wyświetlone wszystkie profile i nazwy profili, które mają ustawienie powodujące konflikt.
 

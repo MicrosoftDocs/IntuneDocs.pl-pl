@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 12/16/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e7c9824711ecbfb43a7c7dde71cc01b306b7fab
-ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
+ms.openlocfilehash: 1e96f46dc0e79de3fc78739c246abdc0b9e52702
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74899414"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75205534"
 ---
 # <a name="intune-discovered-apps"></a>Aplikacje odnalezione przez usługę Intune
 
@@ -54,11 +54,11 @@ Poniższa lista zawiera następujące informacje: typ platformy aplikacji, aplik
 
 | Platforma | Urządzenia osobiste | Urządzenia należące do firmy | Cykl odświeżania |
 |------------------------------------------------------------------------|----------------------------------|--------------------------------------------------|---------------------------------------|
-| Windows 10 (aplikacje Win32) UWAGA: [Wymaga rozszerzenia do zarządzania usługi Intune](intune-management-extension.md) na urządzeniu | Nie dotyczy | Wszystkie aplikacje Win32 znajdujące się na liście Dodaj/Usuń programy | Co 24 godziny od rejestracji urządzenia |
+| Windows 10 (aplikacje Win32) UWAGA: [Wymaga rozszerzenia do zarządzania usługi Intune](intune-management-extension.md) na urządzeniu | Nie dotyczy | Tylko aplikacje zarządzane | Co 24 godziny od rejestracji urządzenia |
 | Windows 10 (nowoczesne aplikacje) | Tylko zarządzane nowoczesne aplikacje | Wszystkie nowoczesne aplikacje zainstalowane na urządzeniu | Co 7 dni od rejestracji urządzenia |
 | Windows 8.1 | Tylko aplikacje zarządzane | Tylko aplikacje zarządzane | Co 7 dni od rejestracji urządzenia |
 | Windows Phone 8 | Tylko aplikacje zarządzane | Tylko aplikacje zarządzane | Co 7 dni od rejestracji urządzenia |
-| Windows RT | Tylko aplikacje zarządzane | Tylko aplikacje zarządzane | Co 7 dni od rejestracji urządzenia |
+| Windows RT | Tylko aplikacje zarządzane | Tylko aplikacje zarządzane | Co 7 dni od rejestracji urządzenia |
 | iOS | Tylko aplikacje zarządzane | Wszystkie aplikacje zainstalowane na urządzeniu | Co 7 dni od rejestracji urządzenia |
 | macOS | Tylko aplikacje zarządzane | Wszystkie aplikacje zainstalowane na urządzeniu | Co 7 dni od rejestracji urządzenia |
 | Android | Tylko aplikacje zarządzane | Wszystkie aplikacje zainstalowane na urządzeniu | Co 7 dni od rejestracji urządzenia |

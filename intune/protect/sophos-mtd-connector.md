@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8823aa8467ef380223a486874c68d52926db733
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: f41d5d1ec3e302a277fe5e6ff6af9d33a7e89517
+ms.sourcegitcommit: d21539e52631c589bfeaa182418390f66672736c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72503744"
+ms.lasthandoff: 01/01/2020
+ms.locfileid: "75564921"
 ---
 # <a name="sophos-mobile-threat-defense-connector-with-intune"></a>Łącznik Sophos Mobile Threat Defense w usłudze Intune
 Dostęp urządzeń przenośnych do zasobów firmy można kontrolować za pomocą dostępu warunkowego opartego na ocenie ryzyka przeprowadzanej przez usługę Sophos Mobile — rozwiązania usługi Mobile Threat Defense (MTD) zintegrowanego z usługą Microsoft Intune. Ryzyko jest oceniane na podstawie danych telemetrycznych zebranych z urządzeń z uruchomioną aplikacją Sophos Mobile.
@@ -72,7 +72,7 @@ Wykrywanie zagrożeń dla sieci, takich jak ataki typu Man-in-the-middle i bloko
 - Subskrypcja usługi Microsoft Intune 
 - Subskrypcja usługi Sophos Mobile Threat Defense
 
-Aby uzyskać więcej informacji, zobacz [witrynę internetową Sophos](https://www.sophos.com/products/mobile-control).  
+Aby uzyskać więcej informacji, zobacz [witrynę internetową Sophos](https://www.sophos.com/en-us/products/mobile-control.aspx).
 
 ## <a name="next-steps"></a>Następne kroki  
 - [Integracja rozwiązania Sophos z usługą Intune](sophos-mtd-connector-integration.md)

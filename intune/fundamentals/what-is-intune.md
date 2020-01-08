@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3c03c67a99b78804c999250f8d1148a4b3d1d97
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 6d24d1c7dbae12fb33ec277419b1bbfd47b46b07
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72504767"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548055"
 ---
 # <a name="microsoft-intune-is-an-mdm-and-mam-provider-for-your-devices"></a>Usługa Microsoft Intune jest dostawcą rozwiązań zarządzania urządzeniami mobilnymi (MDM) i zarządzania aplikacjami mobilnymi (MAM) dla urządzeń
 
@@ -34,13 +34,13 @@ Wyświetl [powiększony](./media/what-is-intune/intunearchitecture.svg) diagram 
 
 Usługa Intune umożliwia:
 
-- Wybranie opcji działania w 100% w chmurze przy użyciu usługi Intune lub opcji [współzarządzania](https://docs.microsoft.com/sccm/comanage/overview) za pomocą rozwiązania Configuration Manager i usługi Intune.
+- Wybranie opcji działania w 100% w chmurze przy użyciu usługi Intune lub opcji [współzarządzania](https://docs.microsoft.com/configmgr/comanage/overview) za pomocą rozwiązania Configuration Manager i usługi Intune.
 - Ustawienie reguł i skonfigurowanie ustawień na urządzeniach osobistych i należących do organizacji w celu uzyskiwania dostępu do danych i sieci.
 - Wdrażanie i uwierzytelnianie aplikacji na urządzeniach — lokalnie i na urządzeniach przenośnych.
 - Ochronę informacji firmowych za pomocą kontrolowania sposobu, w jaki użytkownicy uzyskują dostęp do informacji i je udostępniają.
 - Zapewnienie zgodności urządzeń i aplikacji z wymaganiami bezpieczeństwa.
 
-## <a name="manage-devices"></a>Zarządzaj urządzeniami
+## <a name="manage-devices"></a>Zarządzanie urządzeniami
 
 W usłudze Intune możesz zarządzać urządzeniami, korzystając z podejścia, które jest dla Ciebie odpowiednie. W przypadku urządzeń należących do organizacji możesz mieć pełną kontrolę nad urządzeniami — nad ustawieniami, funkcjami i zabezpieczeniami. W przypadku tego podejścia urządzenia i użytkownicy tych urządzeń rejestrują się w usłudze Intune. Po zarejestrowaniu otrzymują Twoje reguły i ustawienia za pośrednictwem zasad skonfigurowanych w usłudze Intune. Możesz na przykład ustawić wymaganie hasła i numeru PIN, utworzyć połączenie sieci VPN, skonfigurować ochronę przed zagrożeniami i nie tylko.
 

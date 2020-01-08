@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ffabcace189efd60e9d532172ecd1f2a048eec2c
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: e23e582a853f0b424296d8fb42f6c7d8fdd2984c
+ms.sourcegitcommit: 0d9e1452fcf5f15a80230838f80a427b9951cdb1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74562406"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75324869"
 ---
 # <a name="intune-actions-and-options-supported-with-apple-user-enrollment"></a>Akcje i opcje usługi Intune obsługiwane przez rejestrację użytkowników firmy Apple
 
@@ -38,7 +38,7 @@ W przypadku skonfigurowania dowolnego ustawienia hasła na urządzeniach z rejes
 
 Można na przykład skonfigurować ustawienie **Wygaśnięcie hasła** i wypchnąć te zasady do urządzeń zarejestrowanych przez użytkownika. Na urządzeniach występują następujące zdarzenia:
 - Ustawienie **Wygaśnięcie hasła** jest ignorowane.
-- Proste hasła, takie jak `1111` lub `1234`, nie są dozwolone.
+- Proste hasła, takie jak `111111` lub `123456`, nie są dozwolone.
 - 6-cyfrowy numer PIN jest wymuszany.
 
 ## <a name="administrator-remote-device-actions-and-options"></a>Zdalne akcje i opcje administratora dotyczące urządzenia
