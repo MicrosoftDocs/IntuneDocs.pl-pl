@@ -1,6 +1,6 @@
 - name: Konfiguruj ustawienia urządzenia
   href: index.yml
-- name: Przegląd
+- name: Omówienie
   expanded: true
   items:
     - name: Przegląd konfiguracji urządzenia
@@ -9,7 +9,11 @@
   items:
     - name: Tworzenie profilu urządzenia poczty e-mail
       href: quickstart-email-profile.md
-- name: Przewodniki
+- name: Samouczki
+  items:
+    - name: Tworzenie szablonu administracyjnego
+      href: tutorial-walkthrough-administrative-templates.md
+- name: Przewodniki z instrukcjami
   items:
     - name: Tworzenie profilu
       href: device-profile-create.md
@@ -27,7 +31,7 @@
     - name: Ustawienia systemu BIOS w systemie Windows
       href: device-firmware-configuration-interface-windows.md
       displayName: 'DFCI, firmware'
-    - name: Updates
+    - name: Aktualizacje
       href: delivery-optimization-windows.md
       displayName: delivery optimization; updates
     - name: Uaktualnianie wersji i tryb S mode
@@ -145,8 +149,6 @@
               href: vpn-settings-macos.md
             - name: Wi-Fi
               href: wi-fi-settings-macos.md
-            - name: Sieć przewodowa
-              href: wired-network-settings-macos.md
             - name: Niestandardowy
               href: custom-settings-macos.md
         - name: Windows 10 lub nowszym
@@ -197,7 +199,7 @@
               href: vpn-settings-windows-8-1.md
             - name: Importowanie konfiguracji sieci Wi-Fi
               href: wi-fi-settings-import-windows-8-1.md
-        - name: "Windows\_Phone\_8,1"
+        - name: 'Windows Phone 8,1'
           items:
             - name: Ograniczenia dotyczące urządzeń
               href: device-restrictions-windows-phone-8-1.md
