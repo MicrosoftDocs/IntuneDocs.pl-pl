@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc29a7a5026691371370b167a4445bfd70cc76bd
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 37fa650fb8c742b1f1b0cfbf154fe8cf63d35c89
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72489806"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206469"
 ---
 # <a name="microsoft-intune-windows-phone-81-device-restriction-settings"></a>Ustawienia ograniczeń urządzeń z systemem Windows Phone 8.1 w usłudze Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 W tym artykule opisano ustawienia ograniczeń urządzeń w usłudze Microsoft Intune, które można skonfigurować dla urządzeń z systemem Windows Phone 8.1.
 
@@ -74,7 +74,7 @@ Na stronie [Sklep Windows Phone](https://www.microsoft.com/store/apps/windows-ph
 
 Otwórz stronę instalacji aplikacji i skopiuj adres URL do schowka. Możesz teraz użyć tego adresu URL na liście dozwolonych lub zablokowanych aplikacji.
 
-Przykład: wyszukaj w sklepie aplikację Skype. Adres URL do użycia to `http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51`.
+Przykład: Wyszukaj aplikację Skype w sklepie. Adres URL do użycia to `http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51`.
 
 
 

@@ -17,17 +17,17 @@ ROBOTS: ''
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: aaad8bd0a8c3f9e2f5dccd303d327ca7ad1b9656
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: bb1ac92ce28a5aa9bfcb056c157cecb5232535f8
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72506413"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75856954"
 ---
 # <a name="performing-actions-on-a-macos-device-managed-by-jamf"></a>Wykonywanie akcji na urządzeniu z systemem macOS zarządzanym przez oprogramowanie Jamf
 
-Firma korzysta z różnych narzędzi, aby zapewnić bezpieczny dostęp do zasobów firmy za pomocą urządzenia z systemem macOS. Aby umożliwić dostęp do tych zasobów z Twojego urządzenia, przejdź do lokalizacji **Aplikacje**  >  **Samoobsługa** i upewnij się, że urządzenie jest zgodne z zasadami firmy lub umożliwia wykonywanie innych akcji na urządzeniu.
+Firma korzysta z różnych narzędzi, aby zapewnić bezpieczny dostęp do zasobów firmy za pomocą urządzenia z systemem macOS. Aby umożliwić dostęp do tych zasobów z Twojego urządzenia, przejdź do lokalizacji **Aplikacje** > **Samoobsługa** i upewnij się, że urządzenie jest zgodne z zasadami firmy lub umożliwia wykonywanie innych akcji na urządzeniu.
 
 Jeśli problemy ze zgodnością występują na urządzeniu z systemem macOS zarządzanym przez oprogramowanie Jamf, kliknij przycisk **Rozwiąż**, aby uruchomić proces **samoobsługi**.
 

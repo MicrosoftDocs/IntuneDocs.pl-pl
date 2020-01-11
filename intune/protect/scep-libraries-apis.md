@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0a888e2087b98eeec82aeeb555677dddcb3eff4e
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: e9b44e50300c3bd034ca2bb3b0454a5ce953dc18
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74058236"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206979"
 ---
 # <a name="use-apis-to-add-third-party-cas-for-scep-to-intune"></a>Dodawanie urzędów certyfikacji innych firm dla protokołu SCEP do usługi Intune za pomocą interfejsów API
 
@@ -202,7 +202,7 @@ Parametry:
 
     - transactionId           Identyfikator transakcji SCEP
     - certificateRequest    Żądanie certyfikatu PKCS #10 szyfrowane kodem DER kodowane metodą Base64 jako ciąg
-    - certThumprint           Odcisk palca aprowizowanego certyfikatu
+    - certThumprint SHA1 skrótu odcisku palca certyfikatu aprowizacji
     - certSerialNumber        Numer seryjny aprowizowanego certyfikatu
     - .certExpirationDate      Data wygaśnięcia aprowizowanego certyfikatu Ciąg daty i czasu powinien być w formacie internetowego czasu UTC (RRRR-MM-DDThh:mm:ss.sssTZD) zgodnie z normą ISO 8601.
     - certIssuingAuthority    Nazwa urzędu, który wystawił certyfikat

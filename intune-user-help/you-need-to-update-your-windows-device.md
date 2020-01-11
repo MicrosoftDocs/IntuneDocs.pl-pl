@@ -19,19 +19,19 @@ ROBOTS: ''
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser; seodec18
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 955b750ae931d3066e1a98a9baa7c989f2142e1b
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: f39ccf48f7aadc374c95c98648b652b7786ee26a
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72500224"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75858512"
 ---
 # <a name="you-need-to-update-your-windows-device"></a>Należy zaktualizować urządzenie z systemem Windows
 
 [!INCLUDE [wit_nextref](includes/end-user-os-update-guidance.md)]
 
-Urządzenie przenośne z systemem Windows: aby zaktualizować urządzenie, przejdź do lokalizacji **Ustawienia**  >  **Aktualizacje telefonu**  >  **Sprawdź aktualizacje**.
+Urządzenie przenośne z systemem Windows: aby zaktualizować urządzenie, przejdź do lokalizacji **Ustawienia** > **Aktualizacje telefonu** > **Sprawdź aktualizacje**.
 
 Komputer z systemem Windows: wyszukaj frazę **system operacyjny** i postępuj zgodnie z monitami, aby określić używaną wersję systemu Windows.
 

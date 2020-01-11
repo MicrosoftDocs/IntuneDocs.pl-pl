@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: scottduf
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ee2a83945e4b9e6c5509abff7c32605f64ca545
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: 485267b543b1be2df1e6c782d7d3aa0418739260
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72508344"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75858047"
 ---
 # <a name="email-your-company-support-about-problem-from-company-portal-for-windows"></a>Wysyłanie wiadomości e-mail dotyczącej problemu z Portalu firmy w systemie Windows do działu pomocy technicznej firmy
 
@@ -46,7 +46,7 @@ Zdarzenia i błędy występujące w aplikacji Portal firmy są zapisywane na urz
 ## <a name="steps-to-get-help"></a>Instrukcje dotyczące uzyskiwania pomocy  
 
 1. Otworzyć aplikację **Portal firmy**.
-2. Wybierz pozycję **Pomoc i obsługa techniczna**  >  **Uzyskaj pomoc**.  
+2. Wybierz pozycję **Pomoc i obsługa techniczna** > **Uzyskaj pomoc**.  
 
    ![Zrzut ekranu strony pomocy i obsługi technicznej z wyróżnionymi lewym paskiem nawigacji i sekcją Uzyskaj pomoc.](./media/1812_UCP_Help_Support_Get_Help_Logs.png)    
 

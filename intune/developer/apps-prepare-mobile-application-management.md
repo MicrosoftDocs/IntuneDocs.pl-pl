@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/09/2019
+ms.date: 01/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 901eaafb24cda185540ffc4b1a56484042af74c1
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: a8b5b323c4bb80cd15bf9c6c8f0f7a8be577d6bf
+ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74547699"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75653941"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Przygotowanie aplikacji biznesowych pod kątem zasad ochrony aplikacji
 
@@ -105,7 +105,7 @@ W tej tabeli przedstawiono ustawienia do użycia w przypadku zestawu SDK aplikac
 |Zablokuj przechwytywanie ekranu (tylko system Android)|X|X|
 |Obsługa zarządzania aplikacjami mobilnymi bez rejestracji urządzenia|X|X|
 |Pełne czyszczenie danych aplikacji|X|X|
-|Selektywne czyszczenie danych służbowych w scenariuszach obejmujących wiele tożsamości <br><br>**Uwaga:** w systemie iOS usunięcie profilu zarządzania spowoduje również usunięcie aplikacji.|X||
+|Selektywne czyszczenie danych służbowych w scenariuszach obejmujących wiele tożsamości <br><br>**Uwaga:** W systemie iOS usunięcie profilu zarządzania spowoduje również usunięcie aplikacji.|X||
 |Nie zezwalaj na używanie polecenia „Zapisz jako”|X||
 |Konfiguracja aplikacji ukierunkowanej (lub konfiguracji aplikacji za pośrednictwem "kanału MAM")|X||
 |Obsługa wielu tożsamości|X||

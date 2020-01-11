@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81f90c8022fb471ffa8783d636c88ce67a296595
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: e37a82fe3cca461e8384843dc0710cb00c36b79c
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72502060"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75858083"
 ---
 # <a name="send-errors-to-your-company-support-for-issues-with-your-ios-device"></a>Wysyłanie błędów do działu pomocy technicznej Twojej firmy w przypadku problemów z urządzeniem z systemem iOS
 Czasami może wystąpić błąd podczas używania aplikacji Portal firmy na urządzeniu z systemem iOS. W takim przypadku możesz wysłać szczegóły dotyczące błędu w wiadomości e-mail do osoby w firmie odpowiedzialnej za pomoc techniczną. Te informacje zawierają kontekst, który umożliwia rozwiązanie problemu.
@@ -37,6 +37,6 @@ Jeśli na urządzeniu z systemem iOS występują błędy podczas korzystania z a
 
 - Na karcie **Więcej** w aplikacji Portal firmy naciśnij pozycję **Uzyskaj pomoc**.
 
-- Podczas korzystania z aplikacji Portal firmy potrząśnij urządzeniem, a następnie po wyświetleniu alertu diagnostyki dotknij pozycję **Wyślij raport diagnostyczny**. Jeśli potrząsanie urządzeniem nie powoduje wyświetlenia alertu, otwórz pozycje **Ustawienia**  >  **Portal firmy** i upewnij się, że opcja **Gest potrząsania** została włączona.
+- Podczas korzystania z aplikacji Portal firmy potrząśnij urządzeniem, a następnie po wyświetleniu alertu diagnostyki dotknij pozycję **Wyślij raport diagnostyczny**. Jeśli potrząsanie urządzeniem nie powoduje wyświetlenia alertu, otwórz pozycje **Ustawienia** > **Portal firmy** i upewnij się, że opcja **Gest potrząsania** została włączona.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).

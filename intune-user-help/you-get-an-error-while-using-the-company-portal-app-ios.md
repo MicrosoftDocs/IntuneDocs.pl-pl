@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: d194e08a300aca55373ceba41431c56848a0fb60
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: bce72134e0d04a597fa7824ee90e95d027686f8d
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72507894"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75858660"
 ---
 # <a name="you-get-an-error-while-using-the-company-portal-app"></a>Podczas korzystania z aplikacji Portal firmy występuje błąd
 
@@ -34,6 +34,6 @@ Jeśli podczas korzystania z aplikacji Portal firmy na urządzeniu z systemem iO
 
 - Na ekranie **Informacje** w aplikacji Portal firmy naciśnij pozycję **Wyślij raport diagnostyczny**.
 
-- Podczas korzystania z aplikacji Portal firmy potrząśnij urządzeniem, a następnie naciśnij pozycję **E-mail** po wyświetleniu alertu diagnostyki. Jeśli potrząsanie urządzeniem nie powoduje wyświetlenia alertu, otwórz pozycje **Ustawienia**  >  **Portal firmy** i upewnij się, że opcja **Gest potrząsania** została włączona.
+- Podczas korzystania z aplikacji Portal firmy potrząśnij urządzeniem, a następnie naciśnij pozycję **E-mail** po wyświetleniu alertu diagnostyki. Jeśli potrząsanie urządzeniem nie powoduje wyświetlenia alertu, otwórz pozycje **Ustawienia** > **Portal firmy** i upewnij się, że opcja **Gest potrząsania** została włączona.
 
 Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).
