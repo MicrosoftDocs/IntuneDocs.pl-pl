@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/19/2019
+ms.date: 12/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -13,12 +13,12 @@ ms.localizationpriority: high
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0f9750603d19d9b19697c7d2660351c4586432f6
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: bb146fdee7a1d7d770575334eeed84f73cda8894
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73984193"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207489"
 ---
 # <a name="add-ios-software-update-policies-in-intune"></a>Dodawanie zasad aktualizacji oprogramowania dla systemu iOS w usłudze Intune
 
@@ -32,8 +32,8 @@ Urządzenie sprawdza zasady usługi Intune miej więcej co 8 godzin. Jeśli dost
 
 ## <a name="configure-the-policy"></a>Konfigurowanie zasad
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Wybierz pozycję **Aktualizacje oprogramowania** > **Zasady aktualizacji dla systemu iOS** > **Utwórz**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz pozycję **Urządzenia** > **Zasady aktualizacji dla systemu iOS** > **Utwórz**.
 3. Na karcie **Podstawowe** podaj nazwę tych zasad, podaj opis (opcjonalnie), a następnie wybierz przycisk **Dalej**.
 
    ![Karta Podstawowe](./media/software-updates-ios/basics-tab.png) 
@@ -77,10 +77,10 @@ Aby uzyskać wskazówki od członków zespołu pomocy technicznej usługi Intune
 ## <a name="edit-a-policy"></a>Edytowanie zasad
 Istnieje możliwość edytowania istniejących zasad, w tym zmiany godzin ograniczonych:
 
-1. W pozycji **Aktualizacje oprogramowania** wybierz opcję **Zasady aktualizacji systemu iOS**, a następnie wybierz zasady, które chcesz edytować.
+1. Wybierz pozycję **Urządzenia** > **Zasady aktualizacji dla systemu iOS**. Wybierz zasady, które chcesz edytować.
 
 2. Podczas wyświetlania karty **Właściwości** zasad wybierz opcję **Edytuj** dla strony zasad, którą chcesz zmodyfikować.  
-   ![Edytuj zasady](./media/software-updates-ios/edit-policy.png)   
+   ![Edytowanie zasad](./media/software-updates-ios/edit-policy.png)   
 
 3. Po wprowadzeniu zmiany wybierz opcję **Przejrzyj i zapisz** > **Zapisz**, aby zapisać zmiany, a następnie wróć do karty *Właściwości* zasad.  
  

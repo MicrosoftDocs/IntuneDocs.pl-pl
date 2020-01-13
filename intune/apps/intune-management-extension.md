@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cef30238a4470395ccf58cf4d0619db78dd85b5a
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 3da8e89679f974c7d91cf19ae37365f75217d153
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563462"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548030"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Używanie skryptów programu PowerShell na urządzeniach z systemem Windows 10 w usłudze Intune
 
@@ -64,9 +64,9 @@ Rozszerzenie do zarządzania usługi Intune ma poniższe wymagania wstępne. Gdy
 
   - Urządzenia współzarządzane używające programu Configuration Manager i usługi Intune. Upewnij się, że obciążenie **Aplikacje** zostało ustawione na **pilotażową usługę Intune** lub **usługę Intune**. Zapoznaj się z poniższymi artykułami w celu uzyskania wskazówek: 
   
-    - [Co to jest współzarządzanie](https://docs.microsoft.com/sccm/comanage/overview) 
-    - [Obciążenie Aplikacje klienckie](https://docs.microsoft.com/sccm/comanage/workloads#client-apps)
-    - [Przełączanie obciążeń programu Configuration Manager do usługi Intune](https://docs.microsoft.com/sccm/comanage/how-to-switch-workloads)
+    - [Co to jest współzarządzanie](https://docs.microsoft.com/configmgr/comanage/overview) 
+    - [Obciążenie Aplikacje klienckie](https://docs.microsoft.com/configmgr/comanage/workloads#client-apps)
+    - [Jak przełączać obciążenia programu Configuration Manager do usługi Intune](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads)
   
 > [!TIP]
 > Upewnij się, że urządzenia zostały [przyłączone](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) do usługi Azure AD. Urządzenia, które zostały tylko [zarejestrowane](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) w usłudze Azure AD, nie będą otrzymywać skryptów.
@@ -134,7 +134,7 @@ W obszarze **Skrypty programu PowerShell** wybierz skrypt do monitorowania, wybi
 
 ## <a name="intune-management-extension-logs"></a>Dzienniki rozszerzenia do zarządzania usługi Intune
 
-Typowa lokalizacja dzienników agenta na maszynie klienta to folder `\ProgramData\Microsoft\IntuneManagementExtension\Logs`. Do wyświetlenia plików dzienników możesz użyć narzędzia [CMTrace.exe](https://docs.microsoft.com/sccm/core/support/tools). 
+Typowa lokalizacja dzienników agenta na maszynie klienta to folder `\ProgramData\Microsoft\IntuneManagementExtension\Logs`. Do wyświetlenia plików dzienników możesz użyć narzędzia [CMTrace.exe](https://docs.microsoft.com/configmgr/core/support/cmtrace).
 
 ![Zrzut ekranu lub przykładowe dzienniki agenta cmtrace w usłudze Microsoft Intune](./media/apps-win32-app-management/apps-win32-app-10.png)  
 

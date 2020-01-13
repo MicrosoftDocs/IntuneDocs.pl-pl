@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f31e500b7a3383c5c0c53f1df72cb4a42660328f
-ms.sourcegitcommit: 1a22b8b31424847d3c86590f00f56c5bc3de2eb5
+ms.openlocfilehash: 4669d02f149e7f815ff94b4daa85c4c539c26c96
+ms.sourcegitcommit: 90369aef160945171435b03d82bae395609c7a62
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74284140"
+ms.lasthandoff: 12/26/2019
+ms.locfileid: "75500157"
 ---
 
 
@@ -34,7 +34,7 @@ ms.locfileid: "74284140"
 - Windows 10 Teams (Surface Hub)
 
    Aby uzyskać więcej informacji na temat zarządzania urządzeniami z systemem Windows 10 Teams, zobacz temat [Manage Surface Hub with MDM](https://docs.microsoft.com/surface-hub/manage-settings-with-mdm-for-surface-hub) (Zarządzanie rozwiązaniem Surface Hub za pomocą zarządzania urządzeniami mobilnymi)
-- Systemy Windows Phone 8.1, Windows 8.1 RT, komputery z systemem Windows 8.1 (tryb utrzymania)
+- Systemy Windows 10 1709 (RS3) i nowsze, Windows Phone 8.1, Windows 8.1 RT, komputery z systemem Windows 8.1 (tryb utrzymania)
 
 > [!NOTE]
 > Nie wszystkie wersje systemu Windows obsługują wszystkie dostępne funkcje systemu operacyjnego, które są konfigurowane za pomocą zarządzania urządzeniami mobilnymi. Zapoznaj się z [dokumentacją dostawcy usług konfiguracji systemu Windows](https://docs.microsoft.com/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers). Każdy dostawca usług kryptograficznych wyróżnia wersje systemu Windows, które są obsługiwane.

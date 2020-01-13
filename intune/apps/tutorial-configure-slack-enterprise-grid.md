@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a3b01c1444b44e3f5c66fc129f78f321c9c9f5aa
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: dce6d71a4bc056146b581458d5c39325adad1584
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563398"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206911"
 ---
 # <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>Samouczek: konfigurowanie usługi Slack do używania usługi Intune na potrzeby konfiguracji rozwiązania EMM i aplikacji
 
@@ -48,32 +48,31 @@ Będziesz również potrzebować planu [Slack Enterprise Grid](https://get.slack
 Włącz rozwiązanie EMM w planie Slack Enterprise Grid, postępując zgodnie z [instrukcjami dotyczącymi aplikacji Slack](https://get.slack.help/hc/articles/115002579426-Enable-Enterprise-Mobility-Management-for-your-org#step-2:-turn-on-emm), i [połącz usługę Azure Active Directory](https://docs.microsoft.com/azure/active-directory/saas-apps/slack-tutorial) jako dostawcę tożsamości planu Grid.
 
 ## <a name="sign-in-to-intune"></a>Logowanie się do usługi Intune
-Zaloguj się w usłudze [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) jako administrator globalny lub administrator usługi Intune. Jeśli utworzono subskrypcję wersji próbnej usługi Intune, konto, którego użyto do utworzenia subskrypcji, jest administratorem globalnym.
+Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) jako administrator globalny lub administrator usługi Intune. Jeśli utworzono subskrypcję wersji próbnej usługi Intune, konto, którego użyto do utworzenia subskrypcji, jest administratorem globalnym.
 
 ## <a name="set-up-slack-for-emm-on-ios-devices"></a>Konfigurowanie aplikacji Slack for EMM na urządzeniach z systemem iOS
 Dodaj aplikację Slack for EMM dla systemu iOS do dzierżawy usługi Intune, a następnie utwórz zasady konfiguracji aplikacji, aby umożliwić użytkownikom systemu iOS w organizacjach uzyskiwanie dostępu do aplikacji Slack przy użyciu usługi Intune jako dostawcy usługi EMM.
 
 ### <a name="add-slack-for-emm-to-intune"></a>Dodawanie aplikacji Slack for EMM do usługi Intune
 Dodaj aplikację Slack for EMM jako zarządzaną aplikację systemu iOS w usłudze Intune i przypisz do niej użytkowników usługi Slack. Aplikacje są specyficzne dla platformy, dlatego musisz dodać osobną aplikację usługi Intune dla użytkowników usługi Slack na urządzeniach z systemem Android.
-1. W usłudze Intune wybierz kolejno pozycje **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**.
-2. W obszarze Typ aplikacji wybierz pozycję **Aplikacja ze sklepu — iOS**.
-3. Wybierz opcję **Wyszukaj w sklepie App Store**. Wprowadź termin wyszukiwany „Slack for EMM”, a następnie wybierz aplikację.
-4. Wybierz pozycję **Informacje o aplikacji** i skonfiguruj odpowiednio wymagane zmiany.
-5. Wybierz pozycję **Dodaj**.
-6. Na pasku wyszukiwania wprowadź frazę „Slack for EMM”, a następnie wybierz właśnie dodaną aplikację.
-7. Z obszaru zarządzania wybierz pozycję **Przypisania**.
-8. Wybierz pozycję **Dodaj grupę**. W zależności od tego, na kogo ma wpływać włączenie rozwiązania EMM dla usługi Slack, w obszarze **Typ przypisania** możesz wybrać pozycję:
+1. W centrum administracyjnym wybierz pozycję **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**.
+2. W obszarze **Typ aplikacji** wybierz aplikację ze sklepu dla systemu **iOS**.
+3. Wybierz opcję **Wyszukaj w sklepie App Store**. Wprowadź termin wyszukiwany „Slack for EMM”, a następnie wybierz aplikację. Kliknij pozycję **Wybierz** w okienku **Wyszukaj w sklepie App Store**.
+4. Wybierz pozycję **Informacje o aplikacji** i skonfiguruj odpowiednio wymagane zmiany. Wybierz przycisk **OK**, aby ustawić informacje o aplikacji.
+5. Kliknij pozycję **Dodaj**.
+6. Wybierz pozycję **Przypisania**.
+7. Kliknij pozycję **Dodawanie grupy**. W zależności od tego, na kogo ma wpływać włączenie rozwiązania EMM dla usługi Slack, w obszarze **Typ przypisania** możesz wybrać pozycję:
     - **Dostępne dla zarejestrowanych urządzeń** w przypadku wybrania opcji „Wszyscy członkowie (w tym goście)” LUB
     - **Dostępne z rejestracją lub bez nie** w przypadku wybrania opcji „Wszyscy członkowie (z wyjątkiem gości)" lub „Opcjonalnie”.
-9. Wybierz pozycję **Objęte grupy** i w obszarze Udostępnij tę aplikację wszystkim użytkownikom wybierz pozycję **Tak**.
-10. Kliknij przycisk **OK**, a następnie kliknij ponownie przycisk **OK**.
-11. Kliknij polecenie **Zapisz**.
+8. Wybierz pozycję **Objęte grupy** i w obszarze **Udostępnij tę aplikację wszystkim użytkownikom** wybierz pozycję **Tak**.
+9. Kliknij przycisk **OK**, a następnie kliknij ponownie przycisk **OK**, aby dodać grupę.
+10. Kliknij przycisk **Zapisz**.
 
 ### <a name="add-an-app-configuration-policy-for-slack-for-emm"></a>Dodawanie zasad konfiguracji aplikacji Slack for EMM
 Dodaj zasady konfiguracji aplikacji Slack for EMM dla systemu iOS. Zasady konfiguracji aplikacji dla urządzeń zarządzanych są specyficzne dla platformy, dlatego trzeba dodać osobne zasady dla użytkowników usługi Slack na urządzeniach z systemem Android.
-1. W usłudze Intune wybierz kolejno pozycje **Aplikacje** > **Zasady konfiguracji aplikacji** > **Dodaj**.
-2. W polu Nazwa wprowadź frazę Test zasad konfiguracji aplikacji Slack.
-3. W obszarze Typ rejestracji urządzenia wybierz pozycję **Urządzenia zarządzane**.
+1. W centrum administracyjnym wybierz pozycję **Aplikacje** > **Zasady konfiguracji aplikacji** > **Dodaj** > **Urządzenia zarządzane**.
+2. W polu Nazwa wprowadź frazę „Test zasad konfiguracji aplikacji Slack”.
+3. W obszarze Typ rejestracji urządzenia sprawdź, czy ustawiono pozycję **Urządzenia zarządzane**.
 4. W polu Platforma wybierz pozycję **iOS**.
 5. Wybierz pozycję **Skojarzona aplikacja**.
 6. Na pasku wyszukiwania wprowadź frazę „Slack for EMM” i wybierz aplikację.
@@ -82,11 +81,11 @@ Dodaj zasady konfiguracji aplikacji Slack for EMM dla systemu iOS. Zasady konfig
 9. Na pasku wyszukiwania wprowadź frazę „Test zasad konfiguracji aplikacji Slack”, a następnie wybierz właśnie dodane zasady.
 10. Z obszaru zarządzania wybierz pozycję **Przypisania**.
 11. W obszarze Przypisz do wybierz pozycję **Wszyscy użytkownicy i wszystkie urządzenia**.
-12. Kliknij polecenie **Zapisz**.
+12. Kliknij przycisk **Zapisz**.
 
 ### <a name="optional-create-an-ios-device-compliance-policy"></a>(Opcjonalnie) Tworzenie zasad zgodności urządzeń z systemem iOS
 Skonfiguruj zasady zgodności urządzeń z systemem iOS w usłudze Intune w celu ustawienia warunków, które urządzenie musi spełniać, aby zostało uznane za zgodne. W tym samouczku utworzymy zasady zgodności urządzeń z systemem iOS. Zasady zgodności są specyficzne dla platformy, dlatego trzeba dodać osobne zasady dla użytkowników usługi Slack na urządzeniach z systemem Android.
-1. W usłudze Intune wybierz pozycję **Zgodność urządzeń** > **Zasady** > **Utwórz zasady**.
+1. W centrum administracyjnym wybierz pozycję **Zgodność urządzeń** > **Zasady** > **Utwórz zasady**.
 2. W obszarze Nazwa wprowadź frazę „Test zasad zgodności dla systemu iOS”.
 3. W obszarze Opis wprowadź frazę „Test zasad zgodności dla systemu iOS”.
 4. W polu Platforma wybierz pozycję **iOS**.
@@ -118,7 +117,7 @@ Dodaj aplikację Slack jako aplikację z zarządzanego sklepu Google Play w usł
     - **Dostępne z rejestracją lub bez nie** w przypadku wybrania opcji „Wszyscy członkowie (z wyjątkiem gości)" lub „Opcjonalnie”.
 8. Wybierz pozycję Objęte grupy i w obszarze Udostępnij tę aplikację wszystkim użytkownikom wybierz pozycję **Tak**.
 9. Kliknij przycisk **OK**, a następnie kliknij ponownie przycisk **OK**.
-10. Kliknij polecenie **Zapisz**.
+10. Kliknij przycisk **Zapisz**.
 
 ### <a name="add-an-app-configuration-policy-for-slack"></a>Dodawanie zasad konfigurowania aplikacji dla aplikacji Slack
 Dodaj zasady konfiguracji aplikacji dla aplikacji Slack. Zasady konfiguracji aplikacji dla urządzeń zarządzanych są specyficzne dla platformy, dlatego trzeba dodać osobne zasady dla użytkowników usługi Slack na urządzeniach z systemem iOS.
@@ -134,7 +133,7 @@ Dodaj zasady konfiguracji aplikacji dla aplikacji Slack. Zasady konfiguracji apl
 9. Na pasku wyszukiwania wprowadź frazę „Test zasad konfiguracji aplikacji Slack”, a następnie wybierz właśnie dodane zasady.
 10. Z obszaru zarządzania wybierz pozycję **Przypisania**.
 11. W obszarze Przypisz do wybierz pozycję **Wszyscy użytkownicy i wszystkie urządzenia**.
-12. Kliknij polecenie **Zapisz**.
+12. Kliknij przycisk **Zapisz**.
 
 ### <a name="optional-create-an-android-device-compliance-policy"></a>(Opcjonalnie) Tworzenie zasad zgodności urządzeń z systemem Android
 Skonfiguruj zasady zgodności urządzeń z systemem iOS w usłudze Intune w celu ustawienia warunków, które urządzenie musi spełniać, aby zostało uznane za zgodne. W tym samouczku utworzymy zasady zgodności urządzeń z systemem Android. Zasady zgodności są specyficzne dla platformy, dlatego trzeba dodać osobne zasady dla użytkowników usługi Slack na urządzeniach z systemem iOS.

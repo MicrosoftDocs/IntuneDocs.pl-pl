@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/15/2019
+ms.date: 12/19/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e539f44fc9c9b4e7382368c0f3ad9f79bb1c98b1
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: d302db46510b664aec5b0a71fd8b19985e29be37
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72585660"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206129"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>Zestawy zasad umożliwiają grupowanie kolekcji obiektów zarządzania
 
@@ -44,7 +44,7 @@ W zestawie zasad można uwzględnić następujące obiekty zarządzania:
 - Zasady konfigurowania aplikacji
 - Zasady ochrony aplikacji
 - Profile konfiguracji urządzeń
-- Zasady zgodności urządzenia
+- Zasady zgodności urządzeń
 - Ograniczenia dotyczące typów urządzeń
 - Profile wdrażania rozwiązania Windows Autopilot
 - Strona ze stanem rejestracji
@@ -56,8 +56,8 @@ Kiedy tworzysz zestaw zasad, tworzysz pojedynczą jednostkę przypisania i zarz�
 
 ## <a name="how-to-create-a-policy-set"></a>Jak utworzyć zestaw zasad
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. W bloku **Intune** wybierz pozycję **Zestawy zasad** > **Zestawy zasad** > **Utwórz**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz kolejno pozycje **Urządzenia** > **Zestawy zasad** > **Zestawy zasad** > **Utwórz**.
 3. Na stronie **Podstawowe** dodaj następujące wartości:
     - **Nazwa zestawu zasad**  — podaj nazwę tego zestawu zasad.
     - **Opis** — opcjonalnie wprowadź opis zestawu zasad.

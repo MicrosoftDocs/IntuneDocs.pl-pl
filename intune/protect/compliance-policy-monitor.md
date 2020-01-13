@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/12/2019
+ms.date: 12/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 947472c5e589cb443c9a15d20a732c299cc48b44
-ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
+ms.openlocfilehash: 89b4516017d7ac8bf1e27134db6a67a0a86b17cb
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992986"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206078"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Monitorowanie zasad zgodności urządzeń Intune
 
@@ -36,9 +36,9 @@ Raporty zgodności pomagają w weryfikowaniu zgodności urządzeń oraz rozwiąz
 
 Otwórz **pulpit nawigacyjny zgodności urządzeń w usłudze Intune**:
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Wybierz pozycję **Zgodność urządzenia** > **Przegląd**. Zostanie otwarty **pulpit nawigacyjny zgodności urządzeń**.
+2. Wybierz kartę **Urządzenia** > **Omówienie** > **Stan zgodności**.
 
 > [!IMPORTANT]
 > Aby otrzymać zasady zgodności urządzeń, urządzenia muszą być zarejestrowane w usłudze Intune.
@@ -151,7 +151,7 @@ Wykres **Zgodność ustawień** przedstawia wszystkie ustawienia zasad zgodnośc
 
 ## <a name="view-compliance-reports"></a>Wyświetlanie raportów zgodności
 
-Oprócz używania wykresów na stronie *Stan zgodności* można wyświetlać raporty dotyczące zgodności na stronie *Monitorowanie* centrum administracyjnego.
+Oprócz używania wykresów w obszarze *Stan zgodności* możesz przejść do pozycji **Raporty** > **Zgodność urządzenia**.
 
 1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -191,3 +191,7 @@ Konflikty zasad mogą wystąpić, gdy na urządzeniu stosuje się wiele zasad us
 - Jeżeli sprzeczne ustawienia pochodzą z zasad konfiguracji usługi Intune i zasad zgodności, ustawienia w zasadach zgodności mają pierwszeństwo względem ustawień w zasadach konfiguracji. Dzieje się tak nawet wtedy, gdy ustawienia w zasadach konfiguracji są bardziej bezpieczne.
 
 - Jeśli wdrożono wiele zasad zgodności, usługa Intune używa najbezpieczniejszych z nich.
+
+## <a name="next-steps"></a>Następne kroki
+
+[Omówienie zasad zgodności](device-compliance-get-started.md)

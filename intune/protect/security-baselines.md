@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1d3a2ce9e5a31e989452141a094b70b5e75cf464
-ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
+ms.openlocfilehash: 04436c38fc6c4100a8232ea1ad23585f350d6aae
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74409999"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548145"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Konfigurowanie urządzeń z systemem Windows 10 w usłudze Intune przy użyciu punktów odniesienia zabezpieczeń
 
@@ -192,9 +192,9 @@ Inne procesy, które mogą później zmienić ustawienia na urządzeniu, obejmuj
 
 ## <a name="co-managed-devices"></a>Urządzenia współzarządzane
 
-Punkty odniesienia zabezpieczeń na urządzeniach zarządzanych przez usługę Intune są podobne do urządzeń współzarządzanych w programie Configuration Manager. Urządzenia współzarządzane używają programu System Center Configuration Manager i usługi Microsoft Intune do równoczesnego zarządzania urządzeniami z systemem Windows 10. Pozwala to na łączenie istniejących inwestycji związanych z programem Configuration Manager z korzyściami dotyczącymi usługi Intune w chmurze. Artykuł [Co-management overview](https://docs.microsoft.com/sccm/comanage/overview) (Omówienie współzarządzania) to doskonały zasób, jeśli używasz programu Configuration Manager i chcesz korzystać z zalet chmury.
+Punkty odniesienia zabezpieczeń na urządzeniach zarządzanych przez usługę Intune są podobne do urządzeń współzarządzanych w programie Configuration Manager. Urządzenia współzarządzane używają programu Configuration Manager i usługi Microsoft Intune do równoczesnego zarządzania urządzeniami z systemem Windows 10. Pozwala to na łączenie istniejących inwestycji związanych z programem Configuration Manager z korzyściami dotyczącymi usługi Intune w chmurze. Artykuł [Co-management overview](https://docs.microsoft.com/configmgr/comanage/overview) (Omówienie współzarządzania) to doskonały zasób, jeśli używasz programu Configuration Manager i chcesz korzystać z zalet chmury.
 
-W przypadku używania urządzeń współzarządzanych musisz przełączyć obciążenie **Konfiguracja urządzenia** (jego ustawienia) do usługi Intune. Dalsze informacje można znaleźć w części [Device configuration workloads](https://docs.microsoft.com/sccm/comanage/workloads#device-configuration) (Obciążenia konfiguracji urządzenia).
+W przypadku używania urządzeń współzarządzanych musisz przełączyć obciążenie **Konfiguracja urządzenia** (jego ustawienia) do usługi Intune. Dalsze informacje można znaleźć w części [Device configuration workloads](https://docs.microsoft.com/configmgr/comanage/workloads#device-configuration) (Obciążenia konfiguracji urządzenia).
 
 ## <a name="q--a"></a>Pytania i odpowiedzi
 

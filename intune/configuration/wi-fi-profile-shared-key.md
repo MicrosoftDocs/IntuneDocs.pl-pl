@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02d1311be0943d93f80f2f5a1c3f421d476af1e5
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 5a65000d46941876b95e0b110d21f2dfb900ca33
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059820"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206231"
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key-in-intune"></a>Użycie niestandardowego profilu urządzenia do tworzenia profilu sieci Wi-Fi z użyciem klucza wstępnego w usłudze Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 Klucze wstępne są zazwyczaj używane do uwierzytelniania użytkowników w sieciach Wi-Fi lub bezprzewodowych sieciach LAN. Za pomocą usługi Intune można utworzyć profil sieci Wi-Fi z użyciem klucza wstępnego. Aby utworzyć profil, skorzystaj z funkcji **Niestandardowe profile urządzenia** w usłudze Intune. Ten artykuł zawiera także przykłady sposobu tworzenia profilu sieci Wi-Fi z użyciem protokołu EAP.
 

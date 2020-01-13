@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 01/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ca087ec67542102a0cd3111d27a860500b23d3c4
-ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
+ms.openlocfilehash: 442432e7638c69083dcad5abc571c00e4051553d
+ms.sourcegitcommit: e4602481a25a5e12379f673dfe801c611f51c35b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74547989"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75731528"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Korzystanie z szablonów systemu Windows 10 umożliwiających konfigurowanie ustawień zasad grupy w usłudze Microsoft Intune
 
@@ -52,16 +52,10 @@ W tym artykule przedstawiono procedurę tworzenia szablonu dla urządzeń z syst
     - **Platforma**: Wybierz pozycję **Windows 10 i nowsze**.
     - **Typ profilu**: Wybierz pozycję **Szablony administracyjne**.
 
-4. Wybierz przycisk **Utwórz**. W nowym oknie wybierz pozycję **Ustawienia**. Zostanie wyświetlone każde ustawienie. Można użyć strzałek Wstecz i Dalej, aby zobaczyć więcej ustawień:
+4. Wybierz przycisk **Utwórz**. W nowym oknie wybierz listę rozwijaną, a następnie wybierz pozycję **Wszystkie produkty**. Na liście można także filtrować ustawienia w celu wyświetlania tylko ustawień systemu **Windows**, tylko ustawień pakietu **Office** lub tylko ustawień przeglądarki **Microsoft Edge w wersji 77 lub nowszej**:
 
-    ![Wyświetlanie przykładowej listy ustawień i używanie przycisków Wstecz i Dalej](./media/administrative-templates-windows/administrative-templates-sample-settings-list.png)
-
-    > [!TIP]
-    > Ustawienia systemu Windows w usłudze Intune są skorelowane z lokalną ścieżką zasad grupy wyświetlaną w Edytorze lokalnych zasad grupy (`gpedit`).
-
-5. Z listy rozwijanej wybierz pozycję **Wszystkie produkty**. Na liście można także filtrować ustawienia w celu wyświetlania tylko ustawień systemu **Windows**, tylko ustawień pakietu **Office** lub tylko ustawień przeglądarki **Microsoft Edge w wersji 77 lub nowszej**:
-
-    ![Filtrowanie listy w celu wyświetlenia wszystkich ustawień systemu Windows lub pakietu Office w szablonach administracyjnych w usłudze Intune](./media/administrative-templates-windows/administrative-templates-choose-windows-office-all-products.png)
+    > [!div class="mx-imgBorder"]
+    > ![Filtrowanie listy w celu wyświetlenia wszystkich ustawień systemu Windows lub pakietu Office w szablonach administracyjnych w usłudze Intune](./media/administrative-templates-windows/administrative-templates-choose-windows-office-all-products.png)
 
     > [!NOTE]
     > Ustawienia przeglądarki Microsoft Edge dotyczą następujących systemów:
@@ -70,6 +64,14 @@ W tym artykule przedstawiono procedurę tworzenia szablonu dla urządzeń z syst
     > - Windows 10 RS4 i nowsze z zainstalowaną aktualizacją [KB 4512509](https://support.microsoft.com/kb/4512509)
     > - Windows 10 RS5 i nowsze z zainstalowaną aktualizacją [KB 4512534](https://support.microsoft.com/kb/4512534)
     > - Windows 10 19H1 i nowsze z zainstalowaną aktualizacją [KB 4512941](https://support.microsoft.com/kb/4512941)
+
+5. Zostanie wyświetlone każde ustawienie. Można użyć strzałek Wstecz i Dalej, aby zobaczyć więcej ustawień:
+
+    > [!div class="mx-imgBorder"]
+    > ![Wyświetlanie przykładowej listy ustawień i używanie przycisków Wstecz i Dalej](./media/administrative-templates-windows/administrative-templates-sample-settings-list.png)
+
+    > [!TIP]
+    > Ustawienia systemu Windows w usłudze Intune są skorelowane z lokalną ścieżką zasad grupy wyświetlaną w Edytorze lokalnych zasad grupy (`gpedit`).
 
 6. Wybierz dowolne ustawienie. Na przykład odfiltruj listę przy użyciu pozycji **Office**, a następnie wybierz pozycję **Aktywuj przeglądanie z ograniczeniami**. Zostanie wyświetlony szczegółowy opis ustawienia. Wybierz pozycję **Włączone** lub **Wyłączone** albo pozostaw ustawienie **Nieskonfigurowane** (wartość domyślna). Ponadto w szczegółowym opisie wyjaśniono, co się dzieje w przypadku wybrania pozycji **Włączone**, **Wyłączone** lub **Nieskonfigurowane**.
 7. Wybierz przycisk **OK**, aby zapisać zmiany.
@@ -88,13 +90,15 @@ Kontynuuj przeglądanie listy ustawień, a następnie skonfiguruj ustawienia, kt
 
 W tych szablonach istnieją setki dostępnych ustawień. Aby ułatwić znajdowanie konkretnych ustawień, użyj wbudowanych funkcji:
 
-- W szablonie wybierz kolumnę **Ustawienia**, **Stan**, **Typ ustawienia** lub **Ścieżka**, aby posortować listę. Na przykład wybierz kolumnę **Ścieżka**, aby wyświetlić wszystkie ustawienia w ścieżce `Microsoft Excel`:
+- W szablonie wybierz kolumnę **Ustawienia**, **Stan**, **Typ ustawienia** lub **Ścieżka**, aby posortować listę. Na przykład wybierz kolumnę **Ścieżka**, a następnie użyj następnej strzałki, aby wyświetlić ustawienia w ścieżce `Microsoft Excel`:
 
-  ![Klikanie ścieżki w celu wyświetlenia wszystkich ustawień pogrupowanych według zasad grupy lub ścieżki ADMX w szablonach administracyjnych w usłudze Intune](./media/administrative-templates-windows/path-filter-shows-excel-options.png)
+  > [!div class="mx-imgBorder"]
+  > ![Klikanie ścieżki w celu wyświetlenia wszystkich ustawień pogrupowanych według zasad grupy lub ścieżki ADMX w szablonach administracyjnych w usłudze Intune](./media/administrative-templates-windows/path-filter-shows-excel-options.png)
 
-- W szablonie użyj pola **Wyszukaj**, aby znaleźć konkretne ustawienia. Możesz wyszukiwać według ścieżki lub tytułu ustawienia. Wyszukaj na przykład tekst `copy`. Zostaną wyświetlone wszystkie ustawienia z tekstem `copy`:
+- W szablonie użyj pola **Wyszukaj**, aby znaleźć konkretne ustawienia. Możesz wyszukiwać według ustawienia lub ścieżki. Wyszukaj na przykład tekst `copy`. Zostaną wyświetlone wszystkie ustawienia z tekstem `copy`:
 
-  ![Wyszukiwanie tekstu „copy” w celu wyświetlenia wszystkich ustawień systemu Windows lub pakietu Office w szablonach administracyjnych w usłudze Intune](./media/administrative-templates-windows/search-copy-settings.png) 
+  > [!div class="mx-imgBorder"]
+  > ![Wyszukiwanie tekstu „copy” w celu wyświetlenia wszystkich ustawień systemu Windows lub pakietu Office w szablonach administracyjnych w usłudze Intune](./media/administrative-templates-windows/search-copy-settings.png) 
 
   W następnym przykładzie wyszukaj `microsoft word`. Zostaną wyświetlone wszystkie ustawienia, które można ustawić dla programu Microsoft Word. Wyszukaj `explorer`, aby wyświetlić wszystkie ustawienia programu Internet Explorer, które można dodać do szablonu.
 
@@ -103,3 +107,5 @@ W tych szablonach istnieją setki dostępnych ustawień. Aby ułatwić znajdowan
 Szablon został utworzony, ale nie wykonuje jeszcze żadnych czynności. W dalszej części [przypiszesz szablon (nazywany też profilem)](device-profile-assign.md) i [będziesz monitorować jego stan](device-profile-monitor.md).
 
 [Zaktualizuj usługę Office 365 przy użyciu szablonów administracyjnych](administrative-templates-update-office.md).
+
+[Samouczek: Use the cloud to configure group policy on Windows 10 devices with ADMX templates and Microsoft Intune](tutorial-walkthrough-administrative-templates.md) (Używanie chmury do konfigurowania zasad grupy na urządzeniach z systemem Windows 10 za pomocą szablonów ADMX i usługi Microsoft Intune)

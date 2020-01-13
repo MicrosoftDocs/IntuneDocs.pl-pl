@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/02/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8b3ee799374f4b3777f771d4bd6e186ddaeb55c
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 371800b39e04695eadc906465fdb013488836df9
+ms.sourcegitcommit: 3189c3a82cfd1ff3a58153dfec2e12fae7b9bdc7
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564023"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75622516"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Autonomiczna usługa Intune — zarządzanie aplikacjami Win32
 
@@ -313,7 +313,7 @@ Aby dodać zależność aplikacji do aplikacji Win32, wykonaj następujące krok
 4. Kliknij pozycję **Dodaj**, aby dodać zależność aplikacji.
 5. Po dodaniu aplikacji zależnych kliknij pozycję **Wybierz**.
 6. Zdecyduj, czy aplikacje zależne mają być automatycznie instalowane, wybierając pozycję **Tak** lub **Nie** w polu **Instaluj automatycznie**.
-7. Kliknij polecenie **Zapisz**.
+7. Kliknij przycisk **Zapisz**.
 
 Użytkownikowi końcowemu zostaną wyświetlone wyskakujące powiadomienia systemu Windows wskazujące, że aplikacje zależne są pobierane i instalowane jako część procesu instalacji aplikacji Win32. Ponadto gdy aplikacja zależna nie jest zainstalowana, użytkownikowi końcowemu będzie często wyświetlane jedno z następujących powiadomień:
 - Instalacja co najmniej jednej aplikacji zależnej nie powiodła się
@@ -327,6 +327,9 @@ Poszczególne zależności będą stosować się do logiki ponawiania aplikacji 
 ## <a name="delivery-optimization"></a>Optymalizacja dostarczania
 
 Klienci z systemem Windows 10 w wersji 1709 i nowszej będą pobierać zawartość aplikacji Win32 w usłudze Intune przy użyciu składnika Optymalizacja dostarczania na kliencie z systemem Windows 10. Optymalizacja dostarczania udostępnia funkcję Sieć równorzędna, która jest włączana domyślnie. Optymalizację dostarczania można skonfigurować przy użyciu zasad grupy oraz za pośrednictwem konfiguracji urządzeń w usłudze Intune. Aby uzyskać więcej informacji, zobacz [Delivery Optimization for Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) (Optymalizacja dostarczania w systemie Windows 10). 
+
+> [!NOTE]
+> Możesz również zainstalować serwer Microsoft Connected Cache w punktach dystrybucji programu Configuration Manager, aby buforować zawartość aplikacji Win32 w usłudze Intune. Aby uzyskać więcej informacji, zobacz [Serwer Microsoft Connected Cache w programie Configuration Manager — obsługa aplikacji Win32 w usłudze Intune](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/microsoft-connected-cache#bkmk_intune).
 
 ## <a name="install-required-and-available-apps-on-devices"></a>Instalowanie wymaganych i dostępnych aplikacji na urządzeniach
 
@@ -375,7 +378,7 @@ W razie potrzeby można pominąć wyświetlanie wyskakujących powiadomień dla 
 > Aplikacje Win32 zainstalowane za pomocą rozszerzenia do zarządzania usługi Intune nie zostaną odinstalowane na wyrejestrowanych urządzeniach. Administratorzy mogą korzystać z wykluczania przypisania, aby nie oferować aplikacji Win32 na urządzeniach BYOD.
 
 ## <a name="troubleshoot-win32-app-issues"></a>Rozwiązywanie problemów z aplikacjami Win32
-Typowa lokalizacja dzienników agenta na maszynie klienta to `C:\ProgramData\Microsoft\IntuneManagementExtension\Logs`. Do wyświetlenia plików dziennika możesz użyć programu `CMTrace.exe`. Plik *CMTrace.exe* można pobrać ze strony [narzędzi klienta programu Configuration Manager](https://docs.microsoft.com/sccm/core/support/tools). 
+Typowa lokalizacja dzienników agenta na maszynie klienta to `C:\ProgramData\Microsoft\IntuneManagementExtension\Logs`. Do wyświetlenia plików dziennika możesz użyć programu `CMTrace.exe`. Aby uzyskać więcej informacji, zobacz [CMTrace](https://docs.microsoft.com/configmgr/core/support/cmtrace).
 
 ![Zrzut ekranu przedstawiający dzienniki klienta na maszynie klienta](./media/apps-win32-app-management/apps-win32-app-10.png)    
 

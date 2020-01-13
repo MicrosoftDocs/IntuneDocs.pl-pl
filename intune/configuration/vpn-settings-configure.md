@@ -15,16 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9fab50e0aefd926b4dc7a2b3559576642d5d6b79
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: b11cbd3427b3b8e0a43a6e6e2af5fa80da45e16a
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059307"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206282"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Tworzenie profilów sieci VPN w celu nawiązania połączenia z serwerami sieci VPN w usłudze Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 Wirtualne sieci prywatne (VPN) zapewniają użytkownikom bezpieczny dostęp zdalny do sieci organizacji. Do nawiązania połączenia z serwerem sieci VPN urządzenia używają profilu połączenia VPN. **Profile sieci VPN** w usłudze Microsoft Intune służą do przypisania ustawień sieci VPN do użytkowników i urządzeń w organizacji, tak aby łączenie z siecią organizacji było łatwe i bezpieczne.
 

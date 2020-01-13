@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/14/2018
+ms.date: 12/16/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 684e9602e66842e26a7f8e233a8cee6db73f132d
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 9cddb9b74d9132ace07c17a3156e61148b720d66
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74098204"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207183"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Konfigurowanie rejestracji dla urządzeń z systemem macOS w usłudze Intune
 
@@ -78,11 +78,9 @@ W przypadku oprogramowania Parallels Desktop należy ustawić typ sprzętu i num
 W przypadku oprogramowania VMware Fusion należy [edytować plik vmx](https://kb.vmware.com/s/article/1014782), aby ustawić model sprzętu i numer seryjny maszyny wirtualnej. Zaleca się dopasowanie typu sprzętu urządzenia, na którym są uruchomione maszyny wirtualne, do typu sprzętu tworzonych maszyn wirtualnych. Ten typ sprzętu można znaleźć, wybierając kolejno **menu Apple** > **Informacje o tym Macu** > **Raport systemowy** > **Identyfikator modelu**. 
 
 ## <a name="user-approved-enrollment"></a>Rejestracja zatwierdzona przez użytkownika
-Rejestracja MDM zatwierdzona przez użytkownika to typ rejestracji w systemie macOS, którego można używać do zarządzania niektórymi ustawieniami istotnymi dla bezpieczeństwa. Aby uzyskać więcej informacji, zobacz [dokumentację pomocy technicznej firmy Apple](https://support.apple.com/HT208019).
-
-Od listopada 2019 r. wszystkie nowe rejestracje urządzeń z systemem macOS należących do użytkownika będą zatwierdzane przez użytkowników, ponieważ użytkownik musi ręcznie zainstalować profil zarządzania w celu pomyślnego zarejestrowania. Podczas [procesu rejestracji](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos-cp) użytkownik zainstaluje profil zarządzania firmy Apple w obszarze **Preferencje systemowe** > **Profile**.  Instrukcje dotyczące instalacji profilu zarządzania są dostępne w aplikacji Portal firmy dla systemu macOS.
-
-Urządzenia zarejestrowane przed listopadem 2019 r. mogą nie być zatwierdzane przez użytkownika, jeśli użytkownik nie zatwierdził ręcznie profilu zarządzania. Użytkownicy mogą jednak wrócić i zatwierdzić profil zarządzania, przechodząc do pozycji **Preferencje systemowe** > **Profile** i wybierając **profil zarządzania** > **Zatwierdź**.
+Rejestracja MDM zatwierdzona przez użytkownika to typ rejestracji w systemie macOS, którego można używać do zarządzania niektórymi ustawieniami istotnymi dla bezpieczeństwa. Aby uzyskać więcej informacji, zobacz [dokumentację pomocy technicznej firmy Apple](https://support.apple.com/HT208019).  
+ 
+Podczas procesu rejestracji BYOD użytkownik zostanie poproszony o ręczne zatwierdzenie profilu zarządzania firmy Apple. Instrukcje są dostępne w aplikacji Portal firmy dla systemu macOS. Chociaż zatwierdzenie profilu zarządzania nie jest wymagane do ukończenia rejestracji, usługa Intune zaleca rejestracje zatwierdzone przez użytkownika. Jeśli użytkownik nie zatwierdzi profilu podczas rejestracji, może on przejść do obszaru **Preferencje systemowe** > **Profile**, wybrać profil zarządzania i wybrać pozycję **Zatwierdź**.    
 
 ### <a name="find-out-if-a-device-is-user-approved"></a>Sprawdzanie, czy urządzenie zostało zatwierdzone przez użytkownika
 1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).

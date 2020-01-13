@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/20/2019
+ms.date: 12/12/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a7c3398f28d7c396c873dd29f3e3fdd719c1a7c6
-ms.sourcegitcommit: f26039d674eb4d61ab68264dd1a10b2e5e1d842c
+ms.openlocfilehash: ad630eb34b296d7ab77081a1e3063db8dffc64f9
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74691769"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207455"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Zarządzanie aktualizacjami oprogramowania systemu Windows 10 w usłudze Intune
 
@@ -65,12 +65,9 @@ Aby korzystać z aktualizacji systemu Windows dla urządzeń z systemem Windows 
 
 - Na urządzeniach z systemem Windows opcja **Opinia i diagnostyka** > **Dane diagnostyczne i dane użycia** musi mieć wartość **Podstawowa**, **Rozszerzona** lub **Pełna**.  
 
-  W przypadku urządzeń z systemem Windows 10 możesz ręcznie skonfigurować ustawienie *Dane diagnostyczne i dane użycia* lub użyć profilu ograniczeń dotyczących urządzenia w usłudze Intune w systemie Windows 10 lub nowszym. Korzystając z profilu ograniczeń dotyczących urządzenia, w [ustawieniu ograniczeń dotyczących urządzeń](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry) **Udostępnij dane użycia** wybierz co najmniej opcję **Basic**. To ustawienie jest dostępne w kategorii **Raportowanie i telemetria** podczas konfigurowania zasad ograniczeń dotyczących urządzenia w systemie Windows 10 lub nowszym.
+  W przypadku urządzeń z systemem Windows 10 możesz ręcznie skonfigurować ustawienie *Dane diagnostyczne i dane użycia* lub użyć profilu ograniczeń dotyczących urządzenia w usłudze Intune w systemie Windows 10 lub nowszym. Korzystając z profilu ograniczeń dotyczących urządzenia, w [ustawieniu ograniczeń dotyczących urządzeń](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry)**Udostępnij dane użycia** wybierz co najmniej opcję **Basic**. To ustawienie jest dostępne w kategorii **Raportowanie i telemetria** podczas konfigurowania zasad ograniczeń dotyczących urządzenia w systemie Windows 10 lub nowszym.
 
   Aby uzyskać więcej informacji o profilach urządzenia, zobacz artykuł [Konfigurowanie ustawień ograniczeń dotyczących urządzeń](../configuration/device-restrictions-configure.md).
-
-- Jeśli używasz klasycznej witryny Azure Portal, [przeprowadź migrację ustawień do witryny Azure Portal](#migrate-update-settings-to-the-azure-portal).
-
 
 ## <a name="windows-10-update-rings"></a>Pierścienie aktualizacji systemu Windows 10
 
@@ -122,7 +119,7 @@ Usunięcie pierścienia z usługi Intune nie modyfikuje ustawień na urządzenia
 1. Na wyświetlonej stronie omówienia pierścienia aktualizacji wybierz pozycję **Usuń**.
 2. Wybierz przycisk **OK**.
 
-#### <a name="pause"></a>Wstrzymaj
+#### <a name="pause"></a>Wstrzymanie
 
 Wybierz pozycję **Wstrzymaj**, aby uniemożliwić otrzymywanie przez przypisane urządzenia aktualizacji dotyczących funkcji lub jakości przez okres do 35 dni od chwili wstrzymania pierścienia. Po upływie maksymalnej liczby dni automatycznie wygasa działanie funkcji wstrzymania i urządzenie rozpoczyna skanowanie usługi Windows Update w poszukiwaniu odpowiednich aktualizacji. Po tym skanowaniu można ponownie wstrzymać aktualizacje.
 Jeśli wznowisz wstrzymany pierścień aktualizacji, a następnie ponownie wstrzymasz ten pierścień, okres wstrzymania zostanie zresetowany do 35 dni.
@@ -138,7 +135,7 @@ Jeśli typ aktualizacji został wstrzymany, okienko omówienia tego pierścienia
 > [!IMPORTANT]
 > Gdy wydasz polecenie wstrzymania, urządzenia otrzymają je przy następnym zarejestrowaniu się w usłudze. Istnieje możliwość, że urządzenia mogą zainstalować zaplanowaną aktualizację przed zarejestrowaniem. Ponadto jeśli urządzenie docelowe jest wyłączone w momencie wydania polecenia wstrzymania, może ono po włączeniu pobrać i zainstalować zaplanowane aktualizacje przed zarejestrowaniem się w usłudze Intune.
 
-#### <a name="resume"></a>Wznowienie
+#### <a name="resume"></a>Wznawianie
 
 Jeśli pierścień aktualizacji został wstrzymany, możesz wybrać pozycję **Wznów**, aby przywrócić aktywne działanie aktualizacji dotyczących funkcji i jakości. Po wznowieniu pierścienia aktualizacji możesz ponownie wstrzymać ten pierścień.
 
@@ -148,7 +145,7 @@ Jeśli pierścień aktualizacji został wstrzymany, możesz wybrać pozycję **W
 2. Z listy dostępnych opcji wybierz odpowiednią pozycję, aby wznowić aktualizacje dotyczące **funkcji** lub **jakości**, a następnie wybierz przycisk **OK**.
 3. Po wznowieniu jednego typu aktualizacji możesz ponownie wybrać pozycję Wznów, aby wznowić drugi typ aktualizacji.
 
-#### <a name="extend"></a>Rozszerzanie  
+#### <a name="extend"></a>Rozwijanie  
 
 Jeśli pierścień aktualizacji został wstrzymany, możesz wybrać pozycję **Rozszerz**, aby zresetować okres wstrzymania aktualizacji dotyczących funkcji i jakości tego pierścienia aktualizacji do 35 dni.
 
@@ -227,7 +224,7 @@ Gdy urządzenie otrzyma zasady aktualizacji funkcji systemu Windows 10:
 
 3. W obszarze **Podstawowe** określ nazwę i opis (opcjonalnie), a w polu **Aktualizacja funkcji do wdrożenia** wybierz wersję systemu Windows z żądanym zestawem funkcji i wybierz pozycję **Dalej**.
 
-4. W obszarze **Przypisania** wybierz pozycję **+ Wybierz grupy do uwzględnienia**, a następnie przypisz pierścień aktualizacji do co najmniej jednej grupy. Wybierz przycisk **Dalej**, aby kontynuować.
+4. W obszarze **Przypisania** wybierz pozycję **+ Wybierz grupy do uwzględnienia**, a następnie przypisz wdrożenie aktualizacji funkcji do co najmniej jednej grupy. Wybierz przycisk **Dalej**, aby kontynuować.
 
 5. W obszarze **Przeglądanie + tworzenie** przejrzyj ustawienia i wybierz pozycję **Utwórz**, gdy wszystko będzie gotowe do zapisania zasad aktualizacji funkcji systemu Windows 10.  
 
@@ -240,17 +237,6 @@ W tym okienku można:
 - Wybrać pozycję **Usuń**, aby usunąć zasady z usługi Intune oraz z urządzeń.
 - Wybrać pozycję **Właściwości**, aby zmodyfikować wdrożenie.  W okienku *Właściwości* wybierz pozycję **Edytuj**, aby otworzyć obszar *ustawień wdrożenia lub przydziałów*, w którym można następnie zmodyfikować wdrożenie.
 - Wybrać pozycję **Stan aktualizacji użytkownika końcowego**, aby wyświetlić informacje dotyczące zasad.
-
-## <a name="migrate-update-settings-to-the-azure-portal"></a>Migrowanie ustawień aktualizacji do witryny Azure Portal
-
-Klasyczny portal Azure zawiera również w profilu konfiguracji urządzenia ograniczoną liczbę innych ustawień aktualizacji systemu Windows 10. Jeśli dowolne z tych ustawień zostanie skonfigurowane podczas migracji do witryny Azure Portal, zdecydowanie zalecamy wykonanie następujących czynności:
-
-1. Utwórz pierścienie aktualizacji systemu Windows 10 w witrynie Azure Portal, używając niezbędnych ustawień. Ustawienie **Zezwolenia na funkcje wersji wstępnej** nie jest obsługiwane w witrynie Azure Portal, ponieważ nie jest już stosowane w najnowszych wersjach systemu Windows 10. Podczas tworzenia pierścieni aktualizacji możesz skonfigurować trzy pozostałe ustawienia, a także inne ustawienia aktualizacji systemu Windows 10.
-
-   > [!NOTE]
-   > Ustawienia aktualizacji systemu Windows 10 utworzone w portalu klasycznym nie są wyświetlane w witrynie Azure Portal po migracji. Te ustawienia są jednak stosowane. Ustawienia, które po migracji zostały poddane edycji w witrynie Azure Portal, są usuwane z zasad.
-
-2. Ustawienia aktualizacji należy usuwać w portalu klasycznym. Po migracji do witryny Azure Portal i dodaniu tego samego ustawienia do pierścienia aktualizacji należy usunąć ustawienie z portalu klasycznego, aby uniknąć potencjalnych konfliktów zasad. Konflikt występuje na przykład wtedy, gdy to samo ustawienie zostanie skonfigurowane z różnymi wartościami. Nie ma prostego sposobu, aby to sprawdzić, ponieważ ustawienie skonfigurowane w portalu klasycznym nie jest wyświetlane w witrynie Azure Portal.
 
 ## <a name="next-steps"></a>Następne kroki
 

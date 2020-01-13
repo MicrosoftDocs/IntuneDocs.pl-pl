@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9795ca8a585fd926cc269d493760b37aa7666eb
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: d30749a7eaa3d516bef2f2acff3e010d69db1c0e
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74051957"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547054"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Jakie są typowe sposoby korzystania z dostępu warunkowego przy użyciu usługi Intune?
 
@@ -83,11 +83,11 @@ Dostęp warunkowy dla komputerów zapewnia możliwości podobne do tych dostępn
 
 #### <a name="corporate-owned"></a>Urządzenia należące do firmy
 
-- **Przyłączone do domeny w lokalnej usłudze AD:** Ta opcja jest często używana przez organizacje zadowolone z tego, jak obecnie zarządzają komputerami przy użyciu zasad grupy usługi AD lub programu System Center Configuration Manager.
+- **Przyłączone do domeny w lokalnej usłudze AD:** Ta opcja jest często używana przez organizacje zadowolone z tego, jak obecnie zarządzają komputerami przy użyciu zasad grupy usługi AD lub programu Configuration Manager.
 
 - **Przyłączone do domeny w usłudze Azure AD oraz zarządzane w usłudze Intune:** Ten scenariusz jest przeznaczony dla organizacji, które chcą korzystać przede wszystkim z chmury (czyli przede wszystkim korzystają z usług w chmurze z myślą o ograniczeniu użycia infrastruktury lokalnej) lub tylko z chmury (w przypadku braku infrastruktury lokalnej). Usługa Azure AD Join działa dobrze w środowisku hybrydowym, umożliwiając dostęp do aplikacji i zasobów w chmurze oraz lokalnych. Urządzenie zostaje przyłączone do usługi Azure AD i zarejestrowane w usłudze Intune, co może zostać wykorzystane jako kryterium dostępu warunkowego w przypadku uzyskiwania dostępu do zasobów firmy.
 
-- **Przyłączone do domeny w usłudze AD oraz System Center Configuration Manager:** Począwszy od bieżącej gałęzi, program System Center Configuration Manager zapewnia możliwości dostępu warunkowego, dzięki którym można ocenić kwestię przyłączenia komputera do domeny, a także określone kryteria zgodności:
+- **Przyłączone do domeny w usłudze AD oraz Configuration Manager:** Począwszy od bieżącej gałęzi, program Configuration Manager zapewnia możliwości dostępu warunkowego, dzięki którym można ocenić kwestię przyłączenia komputera do domeny, a także określone kryteria zgodności:
 
   - Czy komputer jest szyfrowany?
 

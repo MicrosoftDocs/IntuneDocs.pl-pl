@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6e3219e32ef9bea838f0c19258d0b22a99083a12
-ms.sourcegitcommit: 1a22b8b31424847d3c86590f00f56c5bc3de2eb5
+ms.openlocfilehash: fe37ac412d01d3032685a0e66827d20e13b0db64
+ms.sourcegitcommit: 42183c87b137710b8529049f8710d47127e99900
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74261575"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75303072"
 ---
 # <a name="add-groups-to-organize-users-and-devices"></a>Dodawanie grup w celu zorganizowania użytkowników i urządzeń
 
@@ -47,7 +47,7 @@ Aby utworzyć nową grupę, wykonaj następujące czynności.
 
 3. Jako **Typ grupy** wybierz jedną z następujących opcji:
 
-    - **Zabezpieczenia**: Grupy zabezpieczeń określają, kto może uzyskać dostęp do zasobów. Są zalecane do użytku z grupami w usłudze Intune. Na przykład można utworzyć grupy użytkowników, takie jak **Wszyscy pracownicy z Charlotte** lub **Wszystkie kobiety w firmie Contoso**. Można też utworzyć grupy urządzeń, takie jak **Wszystkie urządzenia z systemem iOS** lub **Wszystkie urządzenia uczniów z systemem Windows 10**.
+    - **Zabezpieczenia**: Grupy zabezpieczeń określają, kto może uzyskać dostęp do zasobów. Są zalecane do użytku z grupami w usłudze Intune. Na przykład można utworzyć grupy użytkowników, takie jak **Wszyscy pracownicy z Charlotte** lub **Pracownicy zdalni**. Można też utworzyć grupy urządzeń, takie jak **Wszystkie urządzenia z systemem iOS** lub **Wszystkie urządzenia uczniów z systemem Windows 10**.
 
         > [!TIP]
         > Utworzonych użytkowników i grupy można też zobaczyć w [centrum administracyjnym platformy Microsoft 365](https://admin.microsoft.com), centrum administracyjnym usługi Azure Active Directory i [usłudze Microsoft Intune w witrynie Azure Portal](https://go.microsoft.com/fwlink/?linkid=2090973). W dzierżawie swojej organizacji możesz tworzyć grupy we wszystkich tych obszarach i nimi zarządzać.

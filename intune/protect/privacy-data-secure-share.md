@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b17b87462b2c73e265f062c33a06a810e7c58bf8
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: cfa2c5366d1b38cf819cfc68840a29fad9002979
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72504333"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548102"
 ---
 # <a name="data-security-and-sharing-in-intune"></a>Zabezpieczanie i udostępnianie danych w usłudze Intune
 
@@ -68,11 +68,11 @@ Aby zapoznać się z informacjami na temat danych udostępnianych określonym in
 - [Dane wysyłane do usługi Intune przez firmę Google](data-google-sends-to-intune.md)
 - [Dane wysyłane do usługi Intune przez narzędzie Jamf Pro](data-jamf-sends-to-intune.md)
 
-### <a name="system-center-configuration-manager-data-sharing"></a>Udostępnianie danych programowi System Center Configuration Manager
+### <a name="microsoft-endpoint-configuration-manager-data-sharing"></a>Udostępnianie danych w programie Microsoft Endpoint Configuration Manager
 
-Usługa Microsoft Intune nie udostępnia żadnych danych programowi System Center Configuration Manager. System Center Configuration Manager jest produktem lokalnym, który jest wdrażany, zarządzany i obsługiwany bezpośrednio przez klienta. Dane diagnostyczne i dane użycia zbierane przez program Configuration Manager są wykorzystywane wyłącznie w celu ulepszenia procesu instalacji, jakości i bezpieczeństwa przyszłych wersji.
+Usługa Microsoft Intune nie udostępnia żadnych danych programowi Configuration Manager. Program Configuration Manager jest produktem lokalnym, który jest wdrażany, zarządzany i obsługiwany bezpośrednio przez klienta. Dane diagnostyczne i dane użycia zbierane przez program Configuration Manager są wykorzystywane wyłącznie w celu ulepszenia procesu instalacji, jakości i bezpieczeństwa przyszłych wersji.
 
-Aby dowiedzieć się więcej, zobacz [Dane diagnostyczne i użycia dla programu SCCM](https://docs.microsoft.com/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data). 
+Aby dowiedzieć się więcej, zobacz [Dane diagnostyczne i dane użycia dla programu Configuration Manager](https://docs.microsoft.com/configmgr/core/plan-design/diagnostics/diagnostics-and-usage-data). 
 
 
 ## <a name="next-steps"></a>Następne kroki

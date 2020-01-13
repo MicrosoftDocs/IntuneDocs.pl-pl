@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 77f5787509438ec3280f29be8449d78979806042
-ms.sourcegitcommit: 16a9109b4028589c17695d41271ca4fee8b1d697
+ms.openlocfilehash: 70f471e7f4db7ddce89d8956474822375c684944
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74542666"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547974"
 ---
 # <a name="troubleshoot-wi-fi-device-configuration-profiles-in-microsoft-intune"></a>Rozwiązywanie problemów z profilami konfiguracji urządzeń w usłudze Microsoft Intune
 
@@ -236,7 +236,7 @@ WiFiConfigurationServiceProvider: Node set value, type: (0x4), Result: (The oper
   - Upewnij się, że wszystkie wymagane certyfikaty w kompletnym łańcuchu certyfikatów znajdują się na urządzeniu z systemem Android. W przeciwnym razie nie można zainstalować profilu sieci Wi-Fi na urządzeniu. Aby uzyskać więcej informacji, zobacz artykuł [Missing intermediate certificate authority](https://developer.android.com/training/articles/security-ssl#MissingCa) (Brakujący pośredni urząd certyfikacji) (otwiera witrynę internetową systemu Android).
   - Odfiltruj plik Omadmlog przy użyciu słów kluczowych, aby wyszukać informacje, takie jak certyfikat używany w profilu sieci Wi-Fi oraz potwierdzenie pomyślnego zastosowania certyfikatu.
 
-    Na przykład użyj narzędzia [CMTrace](https://docs.microsoft.com/sccm/core/support/cmtrace) do odczytania dzienników. Użyj ciągu wyszukiwania w celu odfiltrowania ciągu „wifimgr”:
+    Na przykład użyj narzędzia [CMTrace](https://docs.microsoft.com/configmgr/core/support/cmtrace) do odczytania dzienników. Użyj ciągu wyszukiwania w celu odfiltrowania ciągu „wifimgr”:
 
     > [!div class="mx-imgBorder"]
     > ![Filtrowanie przy użyciu narzędzia CMTrace w celu wyszukiwania profilów konfiguracji WiFiMgr na urządzeniach z systemem Android](./media/troubleshoot-wi-fi-profiles/cmtrace-filter-wifimgr.png)

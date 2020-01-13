@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 12/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c4d0772f9a0afce0607d0193bfb82ea6bd22709d
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: f9e8bc347dc6336f665fcabfb4e716fef4818515
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73445324"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207211"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Korzystanie z pochodnych poświadczeń w usłudze Microsoft Intune
 
@@ -160,28 +160,30 @@ Unikaj wymagania użycia pochodnego poświadczenia w celu uzyskania dostępu do 
 
 Przed utworzeniem zasad, które wymagają użycia pochodnego poświadczenia, należy skonfigurować wystawcę poświadczeń w konsoli usługi Intune. Ustawienie wystawcy pochodnego poświadczenia obowiązuje w całej dzierżawie. Dzierżawy obsługują jednocześnie tylko jednego wystawcę.
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) i przejdź do pozycji **Konfiguracja urządzenia** > **Pochodne poświadczenia**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz kolejno pozycje **Administracja dzierżawą** > **Łączniki i tokeny** > **Pochodne poświadczenia**.
 
-   ![Konfigurowanie pochodnych poświadczeń w konsoli](./media/derived-credentials/configure-provider.png)
+    > [!div class="mx-imgBorder"]
+    > ![Konfigurowanie pochodnych poświadczeń w konsoli](./media/derived-credentials/configure-provider.png)
 
-2. W polu **Nazwa wyświetlana** podaj przyjazną nazwę dla zasad wystawcy pochodnych poświadczeń.  Ta nazwa nie jest widoczna dla użytkowników urządzenia.
+3. W polu **Nazwa wyświetlana** podaj przyjazną nazwę dla zasad wystawcy pochodnych poświadczeń.  Ta nazwa nie jest widoczna dla użytkowników urządzenia.
 
-3. W polu **Wystawca pochodnych poświadczeń** wybierz wystawcę pochodnych poświadczeń wybranego dla dzierżawy:
+4. W polu **Wystawca pochodnych poświadczeń** wybierz wystawcę pochodnych poświadczeń wybranego dla dzierżawy:
    - DISA Purebred
    - Entrust Datacard
    - Intercede  
 
-4. Podaj **Adres URL pomocy dotyczącej pochodnych poświadczeń**, aby udostępnić link do lokalizacji zawierającej niestandardowe instrukcje ułatwiające użytkownikom uzyskanie pochodnych poświadczeń dla organizacji. Instrukcje powinny być specyficzne dla organizacji i przepływu pracy, który jest niezbędny do uzyskania poświadczenia od wybranego wystawcy. Ten link będzie widoczny w aplikacji Portal firmy i powinien być dostępny z urządzenia.
+5. Podaj **Adres URL pomocy dotyczącej pochodnych poświadczeń**, aby udostępnić link do lokalizacji zawierającej niestandardowe instrukcje ułatwiające użytkownikom uzyskanie pochodnych poświadczeń dla organizacji. Instrukcje powinny być specyficzne dla organizacji i przepływu pracy, który jest niezbędny do uzyskania poświadczenia od wybranego wystawcy. Ten link będzie widoczny w aplikacji Portal firmy i powinien być dostępny z urządzenia.
 
    Jeśli nie określisz własnego adresu URL, usługa Intune udostępni link do ogólnych informacji, które nie będą obejmowały wszystkich scenariuszy. Te ogólne wskazówki mogą nie być odpowiednie dla Twojego środowiska.
 
-5. W polu **Typ powiadomienia** wybierz co najmniej jedną opcję. Typy powiadomień to metody informowania użytkowników o następujących scenariuszach:
+6. W polu **Typ powiadomienia** wybierz co najmniej jedną opcję. Typy powiadomień to metody informowania użytkowników o następujących scenariuszach:
 
    - Zarejestrowanie urządzenia u wystawcy w celu uzyskania nowego pochodnego poświadczenia.
    - Pobranie nowego pochodnego poświadczenia, gdy bieżące poświadczenie jest bliskie wygaśnięcia.
    - Skorzystanie z pochodnego poświadczenia na potrzeby zasad uwierzytelniania sieci Wi-Fi, VPN, poczty e-mail lub aplikacji oraz na potrzeby podpisywania i szyfrowania przy użyciu protokołu S/MIME.
 
-6. Gdy wszystko będzie gotowe, wybierz przycisk **Zapisz**, aby ukończyć konfigurację wystawcy pochodnego poświadczenia.
+7. Gdy wszystko będzie gotowe, wybierz przycisk **Zapisz**, aby ukończyć konfigurację wystawcy pochodnego poświadczenia.
 
 Po zapisaniu konfiguracji można wprowadzać zmiany we wszystkich polach z wyjątkiem pola *Wystawca pochodnych poświadczeń*.  Jeśli chcesz zmienić wystawcę, zobacz [Zmiana wystawcy pochodnego poświadczenia](#change-the-derived-credential-issuer).
 
@@ -216,19 +218,20 @@ Oprócz wdrożenia aplikacji za pomocą usługi Intune należy skonfigurować w 
 
 ### <a name="use-derived-credentials-for-app-authentication"></a>Korzystanie z pochodnych poświadczeń na potrzeby uwierzytelniania aplikacji
 
-Pochodnych poświadczeń można używać do uwierzytelniania opartego na certyfikatach w witrynach i aplikacjach internetowych. Aby dostarczyć pochodne poświadczenie na potrzeby uwierzytelniania aplikacji, wykonaj następujące czynności w konsoli usługi Intune:  
+Pochodnych poświadczeń można używać do uwierzytelniania opartego na certyfikatach w witrynach i aplikacjach internetowych. Aby dostarczyć pochodne poświadczenia do uwierzytelniania aplikacji:
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) i przejdź do pozycji **Konfiguracja urządzenia** > **Profile**, a następnie wybierz pozycję **Utwórz profil**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz pozycję **Urządzenia** > **Profile konfiguracji** > **Utwórz profil**.
+3. Podaj następujące ustawienia:
 
-2. W polu **Nazwa** wprowadź przyjazną nazwę profilu.
+    - **Nazwa**: Wprowadź opisową nazwę profilu. Nadaj nazwę profilom, aby można było je później łatwo rozpoznać. Na przykład dobrą nazwą profilu jest **Pochodne poświadczenie dla profilu urządzeń z systemem iOS**.
+    - **Opis**: Wprowadź opis ułatwiający identyfikację ustawienia oraz zawierający inne ważne szczegóły.
+    - **Platforma**: wybierz pozycję **iOS/iPadOS**.
+    - **Typ profilu**: wybierz pozycję **Pochodne poświadczenia**.
 
-3. W polu **Platforma** wybierz opcję **iOS**.
-
-4. W polu **Typ profilu** wybierz pozycję **Pochodne poświadczenie**.
-
-5. Wybierz przycisk **OK**  a następnie kliknij pozycję **Utwórz**.
-
-6. Wybierz pozycję **Przypisania**, aby wybrać grupy, które mają otrzymywać zasady.
+4. Wybierz przycisk **OK**, aby zapisać zmiany.
+5. Po zakończeniu wybierz pozycję **OK** > **Utwórz**, aby utworzyć profil usługi Intune. Po utworzeniu profil będzie widoczny na liście **Urządzenia — profile konfiguracji**.
+6. Wybierz nowy profil > **Przypisania**. Wybierz grupy, które powinny otrzymać zasady.
  
 Użytkownicy otrzymują powiadomienia w aplikacji lub w wiadomościach e-mail w zależności od ustawień określonych podczas konfigurowania wystawcy pochodnych poświadczeń. Powiadomienie informuje użytkownika o konieczności uruchomienia aplikacji Portal firmy w celu umożliwienia przetworzenia zasad pochodnych poświadczeń.
 
@@ -252,11 +255,10 @@ Po zmianie wystawcy użytkownicy zostaną poproszeni o uzyskanie nowego pochodne
 > [!IMPORTANT]  
 > Aby móc korzystać z pochodnych poświadczeń od wystawcy, który został usunięty, a następnie od razu ponownie skonfigurowany, należy mimo wszystko zaktualizować profile i urządzenia. Pochodne poświadczenia, które zostały uzyskane przed usunięciem wystawcy, tracą swoją ważność.
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) i przejdź do pozycji **Konfiguracja urządzenia** > **Pochodne poświadczenia**.
-
-2. Wybierz pozycję **Usuń**, aby usunąć bieżącego wystawcę poświadczeń.
-
-3. Skonfiguruj nowego wystawcę.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz kolejno pozycje **Administracja dzierżawą** > **Łączniki i tokeny** > **Pochodne poświadczenia**.
+3. Wybierz pozycję **Usuń**, aby usunąć bieżącego wystawcę poświadczeń.
+4. Skonfiguruj nowego wystawcę.
 
 ### <a name="update-profiles-that-use-derived-credentials"></a>Aktualizowanie profilów korzystających z pochodnych poświadczeń
 
@@ -268,4 +270,4 @@ Po usunięciu wystawcy i dodaniu nowego użytkownicy urządzeń muszą zażąda�
 
 ## <a name="next-steps"></a>Następne kroki
 
-[Tworzenie profilów konfiguracji urządzeń](../configuration/device-profile-create.md)
+[Utwórz profile konfiguracji urządzeń](../configuration/device-profile-create.md).

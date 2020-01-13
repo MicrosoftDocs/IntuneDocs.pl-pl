@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 79e1ba2441baa6773632c27f204bef01b015b990
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 48ad9ffe32dc7493195ec161e070734776381427
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74832723"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547804"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Rozwiązywanie problemów dotyczących rejestrowania urządzeń w usłudze Microsoft Intune
 
@@ -113,7 +113,7 @@ Aby uniknąć osiągania górnych limitów urządzeń, pamiętaj o usuwaniu niea
 
     4. Włącz ponownie narzędzie DirSync i sprawdź, czy użytkownik jest teraz prawidłowo synchronizowany.
 
-3. W przypadku, gdy używasz usługi Intune z programem System Center Configuration Manager, sprawdź, czy użytkownik ma prawidłowy identyfikator użytkownika chmury:
+3. W przypadku, gdy używasz usługi Intune z programem Configuration Manager, sprawdź, czy użytkownik ma prawidłowy identyfikator użytkownika chmury:
 
     1. Otwórz program SQL Management Studio.
 
@@ -332,7 +332,7 @@ Aby uzyskać więcej informacji, zobacz artykuł [Najlepsze rozwiązania dotycz�
 
 5. Upewnij się, że domyślną przeglądarką jest program Safari dla systemu iOS oraz że pliki cookie są włączone.
 
-### <a name="enrolled-ios-device-doesnt-appear-in-console-when-using-system-center-configuration-manager-with-intune"></a>Zarejestrowane urządzenie z systemem iOS nie jest wyświetlane w konsoli podczas korzystania z programu System Center Configuration Manager z usługą Intune
+### <a name="enrolled-ios-device-doesnt-appear-in-console-when-using-configuration-manager-with-intune"></a>Zarejestrowane urządzenie z systemem iOS nie jest wyświetlane w konsoli podczas korzystania z programu Configuration Manager z usługą Intune
 **Problem:** Użytkownik rejestruje urządzenie z systemem iOS, ale nie jest ono wyświetlane w konsoli administracyjnej programu Configuration Manager. Urządzenie nie wskazuje, że zostało zarejestrowane. Możliwe przyczyny:
 
 - Łącznik usługi Microsoft Intune w lokacji programu Configuration Manager nie łączy się z usługą Intune.
@@ -419,7 +419,7 @@ Po wyczyszczeniu zablokowanych urządzeń możesz poprosić użytkowników o pon
     3. Znajdź urządzenie, dla którego występuje problem z rejestracją. Ogranicz liczbę wyników, wyszukując według nazwy urządzenia lub adresu MAC/sprzętu.
     4. Wybierz urządzenie, a następnie pozycję **Usuń**. Usuń wszystkie inne wpisy skojarzone z urządzeniem.  
 
-## <a name="issues-when-using-system-center-configuration-manager-with-intune"></a>Problemy dotyczące korzystania z programu System Center Configuration Manager z usługą Intune
+## <a name="issues-when-using-configuration-manager-with-intune"></a>Problemy dotyczące korzystania z programu Configuration Manager z usługą Intune
 
 ### <a name="mobile-devices-disappear"></a>Urządzenia przenośne znikają
 
@@ -433,7 +433,7 @@ Aby to zweryfikować i sprawdzić, który proces lub które konto użytkownika u
 
 #### <a name="check-how-device-was-removed"></a>Sprawdzanie sposobu usunięcia urządzenia
 
-1. W konsoli administracyjnej programu Configuration Manager wybierz pozycje **Monitorowanie** &gt; **Stan systemu** &gt; **Kwerendy komunikatów o stanie**.
+1. W konsoli administracyjnej programu Configuration Manager wybierz pozycję **Monitorowanie** &gt; **Stan systemu** &gt; **Kwerendy komunikatów o stanie**.
 
 2. Kliknij prawym przyciskiem myszy pozycję **Ręcznie usunięte zasoby członka kolekcji** i wybierz polecenie **Pokaż komunikaty**.
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e17972a3a87bd9c42db54753d4da3bb81703377
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 4b2a6019a0af33cd227d88444bb5ddda5bc22715
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563624"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75204905"
 ---
 # <a name="enable-win32-apps-on-s-mode-devices"></a>Włączanie obsługi aplikacji Win32 na urządzeniach w trybie S
 
@@ -57,7 +57,7 @@ Kroki umożliwiające uruchamianie aplikacji Win32 na urządzeniu z systemem Win
 
 Aby utworzyć zasady uzupełniające trybu S systemu Windows 10, wykonaj następujące czynności:
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Wybierz kolejno pozycje **Aplikacje** > **Zasady uzupełniające trybu S** > **Utwórz zasady**.
 3. Przed dodaniem **pliku zasad** należy go utworzyć i podpisać. Aby uzyskać więcej informacji, zobacz:
     - [Tworzenie zasad WDAC przy użyciu narzędzi programu PowerShell i konwertowanie ich na format binarny](https://go.microsoft.com/fwlink/?linkid=2095387)

@@ -6,7 +6,7 @@ keywords: ''
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 12/19/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -15,12 +15,12 @@ ms.assetid: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 05258c5363b43398dee1815bb91c50878803e426
-ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
+ms.openlocfilehash: 3ae06ae3f9f76d86a792721d45f8319bfe6491fd
+ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74391945"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75654230"
 ---
 # <a name="intune-reports"></a>Raporty usługi Intune
 Raporty usługi Microsoft Intune umożliwiają wydajniejsze i proaktywne monitorowanie kondycji i działania punktów końcowych w całej organizacji, a także udostępniają inne dane raportowania w usłudze Intune. Możliwe będzie wyświetlanie na przykład raportów dotyczących zgodności urządzeń, kondycji urządzeń i trendów urządzeń. Ponadto można tworzyć raporty niestandardowe, aby uzyskać bardziej szczegółowe dane. 
@@ -53,16 +53,19 @@ Raport dotyczący niezgodnych urządzeń zawiera dane, które są na ogół uży
 
 Aby wyświetlić raport **Niezgodne urządzenia**, wykonaj następujące czynności:
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Wybierz pozycję **Zgodność urządzeń** > **Niezgodne urządzenia**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz pozycję **Urządzenia** > **Monitoruj** > **Niezgodne urządzenia**.
 
     ![Raport dotyczący niezgodnych urządzeń](./media/intune-reports/intune-reports-02.png)
+
+    > [!TIP]
+    > Jeśli wcześniej usługa Intune była używana w witrynie Azure Portal, powyższe informacje można znaleźć w witrynie Azure Portal, logując się do [usługi Intune](https://go.microsoft.com/fwlink/?linkid=2090973) i wybierając pozycję **Zgodność urządzenia** > **Niezgodne urządzenia**.
 
 ## <a name="device-compliance-report-organizational"></a>Raport dotyczący zgodności urządzeń (organizacyjny)
 Raporty dotyczące zgodności urządzeń z założenia mają być rozległe i zapewniać bardziej tradycyjny widok raportowania danych służący do identyfikowania zagregowanych metryk. Ten raport jest przeznaczony do pracy z dużymi zestawami danych w celu uzyskania pełnego obrazu zgodności urządzeń. Na przykład raport dotyczący zgodności urządzeń dla zgodnych urządzeń pokazuje wszystkie stany zgodności dla urządzeń, aby zapewnić szerszy widok danych niezależnie od wielkości zestawu danych. Ten raport przedstawia pełny podział rekordów, a także wygodną wizualizację zagregowanych metryk. Ten raport można wygenerować, stosując filtry i wybierając przycisk „Generuj raport”. Spowoduje to odświeżenie danych w celu wyświetlenia najnowszego stanu z możliwością wyświetlania pojedynczych rekordów, które składają się na zagregowane dane. Podobnie jak większość raportów na nowej platformie, te rekordy można sortować i przeszukiwać, aby skoncentrować się na potrzebnych informacjach. 
 
 Aby wyświetlić wygenerowany raport stanu urządzenia, wykonaj następujące czynności:
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Wybierz pozycję **Raporty**, aby wyświetlić podsumowanie raportów.
 3. Wybierz pozycję **Zgodność urządzenia**.
 4. Wybierz filtry **Stan zgodności**, **System operacyjny** i **Własność**, aby uściślić raport.
@@ -79,7 +82,7 @@ Aby uzyskać powiązane informacje, zobacz [Wymuszanie zgodności usługi Micros
 
 Raport dotyczący zgodności urządzeń jest dostępny jako raport podsumowania w obciążeniu **Raporty**. Aby wyświetlić raport dotyczący zgodności urządzeń, wykonaj następujące kroki:
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Wybierz pozycję **Raporty**, aby wyświetlić podsumowanie raportów.
 
     ![Podsumowanie raportów w usłudze Intune](./media/intune-reports/intune-reports-01.png)
@@ -91,7 +94,7 @@ Raport dotyczący trendu zgodności urządzeń dla trendów zgodności urządze�
 
 Aby wyświetlić raport **Trendy**, wykonaj następujące czynności:
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Wybierz pozycję **Raporty** > **Trendy**, aby wyświetlić trend zgodności urządzenia dla 60 dni.
 
     ![Raport trendów w usłudze Intune](./media/intune-reports/intune-reports-03.png)
@@ -106,7 +109,7 @@ Przykładem specjalistycznego raportu może być skorelowanie danych dotyczącyc
 
 Aby tworzyć i wyświetlać raporty niestandardowe, wykonaj następujące czynności:
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Wybierz pozycję **Raporty** > **Ustawienia diagnostyczne** i dodaj [ustawienie diagnostyczne](reports.md#diagnostic-settings).
 
     ![Podsumowanie raportów w usłudze Intune](./media/intune-reports/intune-reports-04.png)
@@ -117,7 +120,7 @@ Aby tworzyć i wyświetlać raporty niestandardowe, wykonaj następujące czynno
 
     ![Podsumowanie raportów w usłudze Intune](./media/intune-reports/intune-reports-04a.png)
 
-6. Kliknij polecenie **Zapisz**.
+6. Kliknij przycisk **Zapisz**.
 7. Następnie wybierz pozycję **Analiza dzienników**, aby utworzyć i uruchomić nowe zapytanie dziennika przy użyciu usługi [Log Analytics](reports.md#log-analytics).
 
    ![Log Analytics — zapytanie dziennika](./media/intune-reports/intune-reports-05.png)
@@ -143,7 +146,7 @@ Usługa Log Analytics to podstawowe narzędzie w witrynie Azure Portal do pisani
 ### <a name="workbooks"></a>Skoroszyty
 Skoroszyty łączą tekst, zapytania usługi Analytics, metryki platformy Azure i parametry w rozbudowanych raportach interaktywnych. Skoroszyty mogą być edytowane przez innych członków zespołu, którzy mają dostęp do tych samych zasobów platformy Azure. Aby uzyskać więcej informacji na temat skoroszytów, zobacz [Skoroszyty usługi Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/app/usage-workbooks). Ponadto możesz pracować z szablonami skoroszytów i je współtworzyć. Aby uzyskać więcej informacji, zobacz [Szablony skoroszytów usługi Azure Monitor](https://go.microsoft.com/fwlink/?linkid=867045).
 
-## <a name="next-steps"></a>Następne kroki
+## <a name="next-steps"></a>Następne kroki 
 
 Dowiedz się więcej o następujących technologiach:
 - [Blog — platforma raportowania usługi Microsoft Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Reporting-Framework-Coming-to-Intune/ba-p/1009553)

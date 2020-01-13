@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48dc7de86965741d8ed42bd5a5f29f72ae66d4f3
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 7cc873079d9a139edfa2217d97806afe0c5bbf28
+ms.sourcegitcommit: 06dce5c8111592ad774247e86e539dd3128117e5
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74188495"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75545960"
 ---
 # <a name="create-mobile-threat-defense-app-protection-policy-with-intune"></a>Tworzenie zasad ochrony aplikacji usługi Mobile Threat Defense za pomocą usługi Intune
 
@@ -34,7 +34,7 @@ Usługa Intune w połączeniu z usługą Mobile Threat Defense (MTD) pomaga wykr
 > Ten artykuł dotyczy wszystkich partnerów usługi Mobile Threat Defense, którzy obsługują zasady ochrony aplikacji:
 >
 > - Better Mobile (Android)
-> - Zimperium (iOS)
+> - Zimperium (Android, iOS)
 > - Lookout for Work (Android, iOS)
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem

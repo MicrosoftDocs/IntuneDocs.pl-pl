@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf872387d6e6f4f91af9f074f54695b081b79119
-ms.sourcegitcommit: 23e9c48348a6eba494d072a2665b7481e5b5c84e
+ms.openlocfilehash: 63ebbc22c5452c99439d34813509b5652daef1f0
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74549112"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548086"
 ---
 # <a name="use-update-channel-and-target-version-settings-to-update-office-365-with-microsoft-intune-administrative-templates"></a>Używanie ustawień kanału aktualizacji i wersji docelowej do aktualizowania usługi Office 365 za pomocą szablonów administracyjnych usługi Microsoft Intune
 
@@ -75,7 +75,7 @@ Po przypisaniu zasad i zsynchronizowaniu urządzenia można potwierdzić, że za
     ![Przykład klucza rejestru L_Updatebranch w szablonie administracyjnym](./media/administrative-templates-update-office/admx-update-branch-registry-key.png)
 
     > [!TIP]
-    > Temat [Zarządzanie usługą Office 365 ProPlus w programie Configuration Manager](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates#change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager) zawiera listę wartości i opis ich znaczenia. Wartości rejestru są zależne od wybranego kanału dystrybucji:
+    > Temat [Zarządzanie usługą Office 365 ProPlus w programie Configuration Manager](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) zawiera listę wartości i opis ich znaczenia. Wartości rejestru są zależne od wybranego kanału dystrybucji:
     >
     >- Miesięczny kanał                — value="Current"
     >- Miesięczny kanał (kierowany)                — value="Current"
@@ -95,7 +95,7 @@ Na tym etapie zasady usługi Intune zostały pomyślnie zastosowane do urządzen
     - `UpdateChannel`: klucz dynamiczny, który zmienia się w zależności od skonfigurowanych ustawień.
     - `CDNBaseUrl`: ustawiany podczas instalacji usługi Office 365 na urządzeniu.
 
-3. Przyjrzyj się wartości `UpdateChannel`. Wartość informuje o tym, jak często pakiet Office jest aktualizowany. Temat [Zarządzanie usługą Office 365 ProPlus w programie Configuration Manager](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates#change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager) zawiera listę wartości i opis ich ustawień.
+3. Przyjrzyj się wartości `UpdateChannel`. Wartość informuje o tym, jak często pakiet Office jest aktualizowany. Temat [Zarządzanie usługą Office 365 ProPlus w programie Configuration Manager](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel) zawiera listę wartości i opis ich ustawień.
 
     Korzystając z następującego przykładu, zobaczysz, że element `UpdateChannel` został ustawiony na `http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60`, czyli kanał **miesięczny**:
 
@@ -173,7 +173,7 @@ Rozważ wykonanie tych kroków w celu przetestowania zasad przed wdrożeniem zas
 
 ## <a name="next-steps"></a>Następne kroki
 
-[Aktualizowanie wartości kanału dla klientów układu Office 365](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates#change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager)
+[Aktualizowanie wartości kanału dla klientów układu Office 365](https://docs.microsoft.com/configmgr/sum/deploy-use/manage-office-365-proplus-updates#bkmk_channel)
 
 [Overview of the Office cloud policy service for Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-office-cloud-policy-service) (Omówienie usługi zasad w chmurze pakietu Office dla usługi Office 365 ProPlus)
 

@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0de98a0820e15a09c2b3724b216359580327259e
-ms.sourcegitcommit: ce518a5dfe62c546a77f32ef372f36efbaad473f
+ms.openlocfilehash: f1e493e0d2d562c0f69454d1999e82b528c724a2
+ms.sourcegitcommit: e4602481a25a5e12379f673dfe801c611f51c35b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74465727"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75731283"
 ---
 # <a name="intune-compliance-reports-for-updates"></a>Raporty zgodności usługi Intune dla aktualizacji
 
@@ -51,7 +51,7 @@ Wdrożenia aktualizacji systemu Windows 10 można monitorować za pomocą rozwi�
 
 Dzięki temu rozwiązaniu można nadać komercyjny identyfikator dowolnemu urządzeniu z systemem Windows 10 zarządzanemu przez usługę Intune, dla którego chcesz otrzymywać raport zgodności aktualizacji.  
 
-W usłudze Intune możesz użyć ustawień ścieżki OMA-URI dla niestandardowych zasad do skonfigurowania identyfikatora komercyjnego. Zobacz [Ustawienia zasad usługi Intune dla urządzeń z systemem Windows 10 w usłudze Microsoft Intune](https://docs.microsoft.com/intune-classic/deploy-use/windows-10-policy-settings-in-microsoft-intune).  
+W usłudze Intune możesz użyć ustawień ścieżki OMA-URI dla niestandardowych zasad do skonfigurowania identyfikatora komercyjnego. Zobacz temat [Używanie ustawień niestandardowych dla urządzeń z systemem Windows 10 w usłudze Intune](../configuration/custom-settings-windows-10.md).
 
 Ścieżka OMA-URI (z rozróżnianiem wielkości liter) służąca do konfigurowania komercyjnego identyfikatora to *./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID*  
 

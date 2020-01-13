@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 24f15cb179dfc2b12b642f5f196d04dce58d4377
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 5c18f3e8fb14d8592789b39856ec420790fad286
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72505199"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547551"
 ---
 # <a name="create-a-design"></a>Tworzenie projektu
 
@@ -84,7 +84,7 @@ Twoje bieżące środowisko może mieć wpływ na decyzje projektowe i powinno b
 
   - W jaki sposób zarządzasz środowiskiem komputera PC i serwera?
 
-  - Czy używasz programu System Center Configuration Manager? Czy używasz platformy zarządzania systemami innej firmy?
+  - Korzystasz z programu Microsoft Endpoint Configuration Manager? Czy używasz platformy zarządzania systemami innej firmy?
 
 - **Rozwiązanie sieci VPN**
 
@@ -101,7 +101,7 @@ Upewnij się, że uwzględniono wszystkie istniejące projekty i inne plany, kt�
 | **SharePoint** | Lokalna instalacja programu SharePoint | Nie jest planowane przejście do usługi SharePoint Online |  
 | **Bieżące rozwiązanie do zarządzania urządzeniami przenośnymi** | Exchange ActiveSync |  |
 | **Rozwiązanie związane z certyfikatem** | Microsoft Server 2012 R2, usługi certyfikatów AD | Infrastruktury PKI należy używać tylko na potrzeby serwerów witryn sieci Web |
-| **Zarządzanie systemem** | System Center Configuration Manager CB 1606 | Konieczne jest zbadanie rozwiązań hybrydowych usługi Intune |
+| **Zarządzanie systemem** | Configuration Manager CB 1606 | Konieczne jest zbadanie rozwiązań hybrydowych usługi Intune |
 | **Rozwiązanie sieci VPN** | Cisco AnyConnect |  |
 
 
@@ -109,7 +109,7 @@ W celu opracowania własnego planu projektu usługi Intune możesz [pobrać szab
 
 ## <a name="choose-an-intune-deployment-option"></a>Wybieranie opcji wdrożenia usługi Intune
 
-Usługa Intune oferuje dwie opcje wdrożenia: autonomiczną i hybrydową. Opcja autonomiczna dotyczy usługi Intune uruchamianej w chmurze, a opcja hybrydowa dotyczy integracji usługi Intune z programem System Center Configuration Manager. Ten przewodnik jest przeznaczony głównie do użycia opcji autonomicznej. [Określ, która opcja spełnia Twoje wymagania biznesowe](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).
+Usługa Intune oferuje dwie opcje wdrożenia: autonomiczną i hybrydową. Opcja autonomiczna dotyczy usługi Intune uruchamianej w chmurze, a opcja hybrydowa dotyczy integracji usługi Intune z programem Configuration Manager. Ten przewodnik jest przeznaczony głównie do użycia opcji autonomicznej. [Określ, która opcja spełnia Twoje wymagania biznesowe](https://docs.microsoft.com/configmgr/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).
 
 > [!Important]
 >Funkcja dołączania nowych klientów hybrydowego rozwiązania MDM jest przestarzała. Aby uzyskać więcej informacji, zobacz wpis w blogu [Move from Hybrid Mobile Device Management to Intune on Azure](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150) (Przechodzenie z hybrydowego zarządzania urządzeniami przenośnymi do usługi Intune na platformie Azure).
@@ -353,7 +353,7 @@ Usługi Intune możesz użyć do dostarczania aplikacji użytkownikom lub do urz
 
 - [iOS Volume Purchase Program for Business (VPP)](../apps/vpp-apps-ios.md)
 
-- [Aplikacje ze Sklepu Microsoft dla Firm](../apps/windows-store-for-business.md)
+- [Aplikacje ze sklepu Microsoft Store dla Firm](../apps/windows-store-for-business.md)
 
 #### <a name="app-type-requirements"></a>Wymagania dotyczące typu aplikacji
 

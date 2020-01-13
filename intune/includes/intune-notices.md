@@ -7,14 +7,30 @@ ms.topic: include
 ms.date: 11/19/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 7373ca24c1ae1f439096d9bedcb8e81979c95586
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 0c64f9a6afc054a3d22518c4305bda62a36d67c7
+ms.sourcegitcommit: 8ab98c2773f112f5cf2d817c170633b15de3dec2
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74828961"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75323097"
 ---
 Te powiadomienia zawierają ważne informacje, które mogą ułatwić przygotowanie się na nadchodzące zmiany i nowe funkcje w usłudze Intune.
+
+### <a name="updated-feature-new-rbac-role-coming-to-intune--4253397--"></a>Zaktualizowana funkcja: Nowa rola kontroli RBAC wkrótce dostępna w usłudze Intune<!--4253397-->
+W ramach styczniowej aktualizacji usługi Intune planujemy wydanie nowej roli zabezpieczeń w usłudze Intune. Ta rola będzie widoczna jako „Menedżer zabezpieczeń punktu końcowego” w usłudze Intune. Jest ona rozszerzeniem roli „Administrator zabezpieczeń” z usługi Azure AD.
+ 
+#### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
+Obecnie istnieją trzy role dostępne w usłudze Azure AD dla specjalistów ds. zabezpieczeń:
+- Rola Czytelnik zabezpieczeń w usłudze Azure AD, która zapewnia dostęp tylko do odczytu do usługi Intune.
+- Rola Operator zabezpieczeń w usłudze Azure AD, która zapewnia dostęp tylko do odczytu do usługi Intune.
+- Administrator zabezpieczeń w usłudze Azure AD. Po opublikowaniu styczniowej aktualizacji usługi Intune oprócz uprawnień tylko do odczytu do usługi Intune nowe uprawnienia udostępniane przez rolę Menedżer zabezpieczeń punktu końcowego będą następujące:
+    - Odczytywanie, tworzenie, aktualizowanie, usuwanie i przypisywanie zasad zgodności urządzeń
+    - Odczytywanie, usuwanie i aktualizowanie urządzeń zarządzanych
+    - Odczytywanie, tworzenie, aktualizowanie, usuwanie i przypisywanie punktów odniesienia zabezpieczeń
+    - Odczytywanie i aktualizowanie zadań zabezpieczeń
+ 
+### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Co należy zrobić, aby przygotować się do tej zmiany?
+Już dzisiaj zapoznaj się z rolami kontroli RBAC w usłudze Intune. Jeśli obecnie używasz tylko ról administratorów globalnych, nie musisz wprowadzać żadnych zmian. Jeśli używasz ról i chcesz korzystać ze stopnia szczegółowości, który zapewnia rola Menedżer zabezpieczeń punktu końcowego, przypisz tę rolę, gdy zostanie udostępniona. Sprawdź stronę [Co nowego](../fundamentals/whats-new.md) dla usługi Intune, aby uzyskać informacje na temat aktualnej wersji tej usługi. 
 
 ### <a name="updated-support-statement-for-adobe-acrobat-reader-for-intune-mobile-app--5746776--"></a>Zaktualizowano oświadczenie dotyczące obsługi aplikacji mobilnej „Adobe Acrobat Reader dla usługi Intune"<!--5746776-->
 Pod koniec sierpnia poinformowaliśmy w dokumencie MC188653, że okres eksploatacji aplikacji mobilnej Adobe Acrobat dla usługi Intune zakończy się 1 grudnia 2019 r. oraz że firma Adobe planuje obsługę zasad ochrony aplikacji usługi Intune w swojej głównej aplikacji Acrobat Reader. Od tego momentu otrzymaliśmy opinie klientów, którzy twierdzili, że potrzebują więcej czasu, aby administratorzy IT mogli nadal traktować aplikację Adobe Acrobat Reader dla usługi Intune jako docelową, a użytkownicy końcowi mogli zacząć z niej korzystać. Mając na uwadze duże użycie aplikacji Adobe Acrobat Reader dla usługi Intune na urządzeniach użytkowników końcowych oraz jej znaczenie w scenariuszach korporacyjnych, chcemy upewnić się, że wszystkie środowiska spełniają wymagania związane z ochroną aplikacji w organizacji. 
@@ -39,25 +55,6 @@ Po 20 lutego 2020 r. te urządzenia nie będą otrzymywać aktualizacji zabezpie
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Co należy zrobić, aby przygotować się do tej zmiany?
 Możesz sprawdzić raporty usługi Intune, aby zobaczyć, na które urządzenia lub użytkowników może to mieć wpływ. Przejdź do pozycji Urządzenia > Wszystkie urządzenia i filtruj zawartość według systemu operacyjnego. Możesz dodać dodatkowe kolumny, które ułatwią określenie, kto w organizacji ma urządzenia z systemem Windows Phone 8.1. Poproś użytkowników końcowych, aby uaktualnili urządzenia do obsługiwanej wersji systemu operacyjnego.
-
-### <a name="update-your-intune-outlook-app-protection-policies-app--2576686--"></a>Aktualizowanie zasad ochrony aplikacji programu Outlook w usłudze Intune<!--2576686-->
-Jeśli w Centrum wiadomości otrzymasz informację MC195618, może być konieczne wykonanie akcji. Jak opisano w planie platformy Microsoft 365, w obszarach oznaczonych identyfikatorami funkcji: 56325 i 56326, usługi Intune i Outlook dla systemów iOS i Android wdrażają obsługę ograniczania poufnych danych w powiadomieniach e-mail i przypomnień w kalendarzu. W wyniku tych ulepszeń program Outlook dla systemów iOS i Android będzie usuwał obsługę kilku kluczy konfiguracji aplikacji ochrony danych, które są obecnie używane do zarządzania powiadomieniami.
-
-#### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
-Chociaż nowe funkcje nie zostały jeszcze opublikowane, gdy to się stanie, następujące klucze konfiguracji aplikacji nie będą już działać w programie Outlook dla systemów iOS i Android:
-- com.microsoft.outlook.Mail.NotificationsEnabled
-- com.microsoft.outlook.Mail.NotificationsEnabled.UserChangeAllowed
-- com.microsoft.outlook.Calendar.NotificationsEnabled
-- com.microsoft.outlook.Calendar.NotificationsEnabled.UserChangeAllowed
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Co należy zrobić, aby przygotować się do tej zmiany?
-Jako przygotowanie do pracy z nową funkcją zalecamy skonfigurowanie ustawienia ochrony danych zasad ochrony aplikacji w usłudze Intune o nazwie „Powiadomienia dotyczące danych organizacji” na wartość „Blokuj dane organizacji”. Od 16 grudnia 2019 r. program Outlook dla systemów iOS i Android będzie używać ustawienia ochrony danych „Powiadomienia dotyczące danych organizacji” i nie będzie już obsługiwać wymienionych kluczy. Skonfigurowanie tego nowego ustawienia zagwarantuje, że poufne dane nie zostaną ujawnione, gdy powyższe klucze konfiguracji nie będą już obsługiwane. Ponadto w programie Outlook będzie zapewniany dodatkowy poziom szczegółowości, gdy ustawienie ochrony danych „Powiadomienia dotyczące danych organizacji” zostanie ustawione na wartość „Blokuj dane organizacji” przy użyciu dodatkowego ustawienia konfiguracji aplikacji „Powiadomienia kalendarza”. Kombinacja ustawień zasad ochrony aplikacji i tego ustawienia konfiguracji aplikacji ogranicza informacje poufne w powiadomieniach pocztowych, jednocześnie dostarczając poufne informacje w powiadomieniach kalendarza, dzięki czemu użytkownicy mogą szybko przejść do swoich spotkań w powiadomieniu lub w centrum powiadomień.
-
-#### <a name="additional-information"></a>Dodatkowe informacje
-Aby uzyskać więcej informacji na temat ustawień zasad ochrony aplikacji i ustawień programu Outlook, zobacz:
-- [Ustawienia zasad ochrony aplikacji, Android](../apps/app-protection-policy-settings-android.md)
-- [Ustawienia zasad ochrony aplikacji, iOS](../apps/app-protection-policy-settings-ios.md)
-- [Deploying Outlook for iOS and Android app configuration settings](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune) (Wdrażanie ustawień konfiguracji aplikacji Outlook dla systemu iOS i Android)
 
 
 ### <a name="intune-plan-for-change-windows-10-version-1703-company-portal-moving-out-of-support--5026679--"></a>Plan zmian w usłudze Intune: Windows 10, wersja 1703 — zakończenie wsparcia programu Portal firmy<!--5026679-->

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 678eb92bb6f5f23756092cd5d9cc1a645e1e8db3
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 309860fb5ddf6fa9488ecaf395534bf869234176
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74562368"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547856"
 ---
 # <a name="android-device-administrator-enrollment"></a>Rejestracja administratora urządzeń z systemem Android
 
@@ -39,7 +39,7 @@ Jeśli mimo to decydujesz, aby użytkownicy rejestrowali swoje urządzenia z sys
 
 
 > [!Note]  
-> System Android 10 i jego nowsze wersje nie będą obsługiwane w ramach hybrydowego zarządzania urządzeniami przenośnymi (hybrydowe rozwiązanie MDM; usługa Intune zarządzana za pomocą konsoli System Center Configuration Manager), ponieważ hybrydowe rozwiązanie MDM zostanie wycofane 1 września 2019 r. Jeśli nadal używasz hybrydowego rozwiązania MDM, musisz jak najszybciej przeprowadzić migrację do autonomicznej usługi Intune. Skontaktuj się z pomocą techniczną, jeśli potrzebujesz pomocy w zakresie migracji. Aby uzyskać więcej informacji, zobacz [Move from Hybrid Mobile Device Management to Intune on Azure](https://aka.ms/hybrid_notification) (Przechodzenie z hybrydowego zarządzania urządzeniami przenośnymi do usługi Intune na platformie Azure).
+> System Android 10 i jego nowsze wersje nie będą obsługiwane w ramach hybrydowego zarządzania urządzeniami przenośnymi (hybrydowe rozwiązanie MDM; usługa Intune zarządzana za pomocą konsoli Configuration Manager), ponieważ hybrydowe rozwiązanie MDM zostanie wycofane 1 września 2019 r. Jeśli nadal używasz hybrydowego rozwiązania MDM, musisz jak najszybciej przeprowadzić migrację do autonomicznej usługi Intune. Skontaktuj się z pomocą techniczną, jeśli potrzebujesz pomocy w zakresie migracji. Aby uzyskać więcej informacji, zobacz [Move from Hybrid Mobile Device Management to Intune on Azure](https://aka.ms/hybrid_notification) (Przechodzenie z hybrydowego zarządzania urządzeniami przenośnymi do usługi Intune na platformie Azure).
 
 Aby uzyskać więcej informacji na temat funkcji systemu Android Enterprise firmy Google, zobacz następujące materiały:
 - [Wskazówki firmy Google dotyczące migracji z zarzadzania przez administratora urządzeń do systemu Android Enterprise](http://static.googleusercontent.com/media/android.com/en/enterprise/static/2016/pdfs/enterprise/Android-Enterprise-Migration-Bluebook_2019.pdf)

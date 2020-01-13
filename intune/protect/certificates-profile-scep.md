@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 321595a2ce8849b3d150b68f9dcc38dfda6ad940
-ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
+ms.openlocfilehash: 88b7411095aee1b1d3a892ce4845812ceb1a9ac9
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74390299"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547074"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Tworzenie i przypisywanie profilów certyfikatów SCEP w usłudze Intune
 
@@ -45,7 +45,7 @@ Po [skonfigurowaniu infrastruktury](certificates-scep-configure.md) pod kątem o
 
 6. Z listy rozwijanej **Typ profilu** wybierz pozycję **Certyfikat SCEP**.  
 
-   W przypadku platformy **Android Enterprise** *typ profilu* jest podzielony na dwie kategorie: *Tylko właściciel urządzenia* i *Tylko profil służbowy*. Upewnij się, że wybrano prawidłowy profil certyfikatu SCEP dla zarządzanych urządzeń.  
+   W przypadku platformy **Android Enterprise***typ profilu* jest podzielony na dwie kategorie: *Tylko właściciel urządzenia* i *Tylko profil służbowy*. Upewnij się, że wybrano prawidłowy profil certyfikatu SCEP dla zarządzanych urządzeń.  
 
    Profile certyfikatów SCEP dla profilu *Tylko właściciel urządzenia* mają następujące ograniczenia:
 
@@ -275,7 +275,7 @@ Przypisz profile certyfikatów SCEP w taki sam sposób, w jaki [wdrażasz profil
 
 - Aby opublikować certyfikat dla urządzenia jak najszybciej po jego rejestracji, należy przypisać profil certyfikatu do grupy użytkowników, a nie do grupy urządzeń. W przypadku przypisania do grupy urządzeń wymagana jest pełna rejestracja urządzenia przed otrzymaniem przez nie zasad.
 
-- Jeśli używasz funkcji współzarządzania dla usługi Intune i programu Configuration Manager, w programie Configuration Manager [ustaw suwak obciążenia](https://docs.microsoft.com/sccm/comanage/how-to-switch-workloads) dla zasad dostępu do zasobów na usługę **Intune** lub **pilotażową usługę Intune**. To ustawienie umożliwia klientom systemu Windows 10 uruchamianie procesu żądania certyfikatu.
+- Jeśli używasz funkcji współzarządzania dla usługi Intune i programu Configuration Manager, w programie Configuration Manager [ustaw suwak obciążenia](https://docs.microsoft.com/configmgr/comanage/how-to-switch-workloads) dla zasad dostępu do zasobów na usługę **Intune** lub **pilotażową usługę Intune**. To ustawienie umożliwia klientom systemu Windows 10 uruchamianie procesu żądania certyfikatu.
 
 - Chociaż profil zaufanego certyfikatu i profil certyfikatu SCEP są tworzone osobno, oba muszą zostać przypisane. Gdy oba te profile nie zostaną zainstalowane na urządzeniu, zasady certyfikatu SCEP nie będą działać. Upewnij się, że wszystkie profile zaufanych certyfikatów głównych zostały również wdrożone w tych samych grupach, co profil SCEP.
 

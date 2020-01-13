@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73848ee8301362f14fe2866a57329425d5e5cfbe
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: b566dd58b01a411126ffabb46d526e4480c2ba0a
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563678"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75205976"
 ---
 # <a name="add-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Dodawanie aplikacji usługi Office 365 do urządzeń z systemem Windows 10 za pomocą usługi Microsoft Intune
 
@@ -50,7 +50,7 @@ Aby móc przypisywać, monitorować, konfigurować lub zabezpieczać aplikacje, 
 ## <a name="get-started"></a>Wprowadzenie
 
 1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Wybierz kolejno pozycje **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**.
+2. Wybierz pozycję **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**.
 3. W okienku **Dodawanie aplikacji** na liście **Typ aplikacji** w obszarze **Pakiet Office 365** wybierz pozycję **Windows 10**.
 
 ## <a name="select-settings-format"></a>Wybieranie formatu ustawień
@@ -197,7 +197,7 @@ Jeśli okaże się, że usługa Intune i infrastruktura sieciowa działają zgod
 
 ## <a name="errors-during-installation-of-the-app-suite"></a>Błędy podczas instalacji pakietu aplikacji
 
-Informacje na temat wyświetlania pełnych dzienników instalacji zawiera artykuł [How to enable Office 365 ProPlus ULS logging](https://blogs.technet.microsoft.com/odsupport/2018/06/18/how-to-enable-office-365-proplus-uls-logging) (Jak włączyć rejestrowanie zdarzeń usługi Office 365 ProPlus w usłudze ULS).
+Informacje na temat wyświetlania pełnych dzienników instalacji zawiera artykuł [How to enable Office 365 ProPlus ULS logging](/office/troubleshoot/diagnostic-logs/how-to-enable-office-365-proplus-uls-logging) (Jak włączyć rejestrowanie zdarzeń usługi Office 365 ProPlus w usłudze ULS).
 
 W poniższej tabeli przedstawiono listę kodów typowych błędów, które mogą wystąpić, oraz ich znaczenie.
 

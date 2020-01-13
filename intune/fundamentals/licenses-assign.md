@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/31/2017
+ms.date: 12/12/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,30 +16,31 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dcdc2b69de52ea3bf23f4e3c5d11399b62bc8daa
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 9a62cc6ef2f1b3bd6f305fe6fa23a24f95d3dd37
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73414088"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207364"
 ---
 # <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>Przypisanie użytkownikom licencji umożliwiających rejestrowanie urządzeń w usłudze Intune
 
 Bez względu na to, czy zamierzasz ręcznie dodać użytkowników, czy też przeprowadzić synchronizację lokalnej usługi Active Directory, zanim użytkownicy będą mogli rejestrować swoje urządzenia w usłudze Intune, musisz najpierw przypisać do każdego z użytkowników licencję usługi Intune. Aby uzyskać listę licencji, zobacz [Licencje, które obejmują usługę Intune](../licenses.md).
 
-## <a name="assign-an-intune-license-in-the-microsoft-365-admin-center"></a>Przypisywanie licencji usługi Intune w centrum administracyjnym platformy Microsoft 365
+> [!NOTE]
+> Użytkownicy, do których przypisano zasady ochrony aplikacji usługi Intune i którzy nie rejestrują urządzeń w usłudze Microsoft Intune, będą również musieli uzyskać licencję usługi Intune, aby otrzymać zasady. 
 
-[Centrum administracyjne platformy Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=698854) umożliwia ręczne dodawanie użytkowników w chmurze oraz przypisywanie licencji zarówno do kont użytkowników w chmurze, jak i kont synchronizowanych z lokalnej usługi Active Directory do usługi Azure AD.
+## <a name="assign-an-intune-license-microsoft-endpoint-manager-admin-center"></a>Przypisywanie licencji usługi Intune w centrum administracyjnym usługi Microsoft Endpoint Manager
 
-1. Zaloguj się do [centrum administracyjnego platformy Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=698854) przy użyciu poświadczeń administratora dzierżawy, a następnie wybierz pozycję **Użytkownicy** > **Aktywni użytkownicy**.
+[Centrum administracyjne programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) umożliwia ręczne dodawanie użytkowników w chmurze oraz przypisywanie licencji zarówno do kont użytkowników w chmurze, jak i kont synchronizowanych z lokalnej usługi Active Directory do usługi Azure AD.
 
-2. Wybierz konto użytkownika, do którego chcesz przypisać licencję użytkownika usługi Intune, a następnie wybierz kolejno pozycje **Licencje produktów** > **Edytuj**.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **Wszyscy użytkownicy** > wybierz użytkownika > **Licencje** > **Przypisania**.
 
-3. Przełącz wartość opcji **Intune** lub **Enterprise Mobility + Security** na **Wł.** i wybierz opcję **Zapisz**.
+2. Zaznacz pole **Intune** > **Zapisz**.
 
-   ![Zrzut ekranu sekcji licencji produktów w centrum administracyjnym platformy Microsoft 365.](./media/licenses-assign/office-assign-license.png)
+   ![Zrzut ekranu sekcji licencji produktów w centrum administracyjnym platformy Microsoft 365.](./media/licenses-assign/mem-assign-license.png)
 
-4. Konto użytkownika ma teraz uprawnienia wymagane do korzystania z usługi i rejestrowania urządzeń w systemie zarządzania.
+3. Konto użytkownika ma teraz uprawnienia wymagane do korzystania z usługi i rejestrowania urządzeń w systemie zarządzania.
 
 > [!NOTE]
 > Użytkownicy będą wyświetlani w klasycznym portalu usługi Intune dopiero po zarejestrowaniu urządzenia przy użyciu klienta usługi Intune na komputery. Ponadto możesz wybrać grupę użytkowników do jednoczesnej edycji, a następnie wybrać opcję dodania lub zastąpienia licencji dla wszystkich wybranych użytkowników.

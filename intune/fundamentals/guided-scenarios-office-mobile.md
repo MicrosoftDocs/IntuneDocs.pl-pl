@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/16/2019
+ms.date: 01/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bd02e2b7f9582308109d1e6986d7e6a8014e5af7
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 3399cf006543c0a3554c4c6ec812554462d74231
+ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72585712"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75691823"
 ---
 # <a name="guided-scenario---secure-microsoft-office-mobile-apps"></a>Scenariusz z przewodnikiem — bezpieczne aplikacje mobilne Microsoft Office 
 
@@ -37,7 +37,7 @@ Gdy włączysz ochronę aplikacji, wymuszone zostaną następujące akcje:
 - Blokowanie dostępu do plików służbowych, jeśli urządzenie od 720 minut znajduje się w trybie offline.
 - Usuwanie plików służbowych, jeśli urządzenie od 90 dni jest w trybie offline. 
 
-## <a name="background"></a>Tło
+## <a name="background"></a>Informacje dodatkowe
 
 Aplikacje mobilne pakietu Office, jak również przeglądarka Microsoft Edge dla urządzeń przenośnych, obsługują podwójną tożsamość. Podwójna tożsamość umożliwia aplikacjom osobne zarządzanie plikami służbowymi i osobistymi. 
 
@@ -46,7 +46,7 @@ Aplikacje mobilne pakietu Office, jak również przeglądarka Microsoft Edge dla
 [Zasady ochrony aplikacji w usłudze Intune](~/apps/app-protection-policy.md) pomagają chronić pliki służbowe na urządzeniach zarejestrowanych w usłudze Intune. Możesz również korzystać z zasad ochrony aplikacji na urządzeniach należących do pracowników, które nie zostały zarejestrowane na potrzeby zarządzania przez usługę Intune. W takim przypadku, nawet jeśli firma nie zarządza danym urządzeniem, musisz upewnić się, że służbowe pliki i zasoby zostały odpowiednio zabezpieczone.
 
 Zasady ochrony aplikacji pozwalają zapobiegać zapisywaniu plików służbowych w niechronionych lokalizacjach przez użytkowników. Można również ograniczyć przenoszenie danych do innych aplikacji, które nie są chronione przez zasady ochrony aplikacji. Ustawienia zasad ochrony aplikacji obejmują:
-- Zasady relokacji danych, takie jak „Nie zezwalaj na używanie polecenia Zapisz jako” i „Ogranicz wycinanie, kopiowanie i wklejanie”.
+- Zasady relokacji danych, takie jak **Zapisz kopie danych organizacji** i **Ogranicz wycinanie, kopiowanie i wklejanie**.
 - Ustawienia zasad dostępu, takie jak „Wymagaj prostego numeru PIN w celu udzielenia dostępu” i „Blokuj uruchamianie aplikacji zarządzanych na urządzeniach ze zdjętymi zabezpieczeniami systemu lub odblokowanym dostępem do konta administratora”.
 
 Dostęp warunkowy oparty na aplikacjach oraz zarządzanie aplikacjami klienckimi tworzą dodatkową warstwę zabezpieczeń i gwarantują, że tylko aplikacje klienckie, które obsługują zasady ochrony aplikacji usługi Intune, mogą uzyskać dostęp do usługi Exchange Online i innych usług pakietu Office 365.

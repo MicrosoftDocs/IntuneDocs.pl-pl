@@ -1,6 +1,6 @@
 ---
 title: Ustawienia i funkcje urządzeń w usłudze Microsoft Intune — Azure | Microsoft Docs
-description: Omówienie różnych profilów urządzeń usługi Microsoft Intune. Uzyskaj informacje na temat funkcji, ograniczeń, poczty e-mail, sieci Wi-Fi, sieć VPN, wiedzy, certyfikatów, uaktualniania systemu Windows 10, funkcji BitLocker i usługi Microsoft Defender, usługi Windows Information Protection, szablonów administracyjnych i niestandardowych ustawień konfiguracji w witrynie Azure Portal. Te profile służą do zarządzania danymi i urządzeniami oraz ich ochrony w Twojej firmie.
+description: Omówienie różnych profilów urządzeń usługi Microsoft Intune. Uzyskaj informacje na temat funkcji, ograniczeń, poczty e-mail, sieci Wi-Fi, sieć VPN, wiedzy, certyfikatów, uaktualniania systemu Windows 10, funkcji BitLocker i usługi Microsoft Defender, usługi Windows Information Protection, szablonów administracyjnych i niestandardowych ustawień konfiguracji urządzeń w centrum administracyjnym programu Microsoft Endpoint Manager. Te profile służą do zarządzania danymi i urządzeniami oraz ich ochrony w Twojej firmie.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b74cdf29999bccdefaa94c84673b9ea89c335537
-ms.sourcegitcommit: 7001dc5a9cffeb2e161748f9e6dba126bf1cb06f
+ms.openlocfilehash: 800bbd5199bd4389ee1ae8aa98a68e21456e7000
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74694951"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206622"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Stosowanie funkcji i ustawień w urządzeniach przy użyciu profilów urządzeń w usłudze Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 Usługa Microsoft Intune obejmuje ustawienia i funkcje, które można włączać lub wyłączać na różnych urządzeniach w organizacji. Te ustawienia i funkcje są dodawane do „profili konfiguracji”. Możesz utworzyć profile dla różnych urządzeń i różnych platform, w tym systemów iOS, Android i Windows. Następnie użyj usługi Intune, aby zastosować lub „przypisać” profil na urządzeniach.
 
@@ -61,7 +61,7 @@ Ta funkcja obsługuje systemy:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows Phone 8,1
+- Windows Phone 8,1
 - Windows 8.1
 - Windows 10 lub nowszym
 
@@ -75,7 +75,7 @@ Ta funkcja obsługuje systemy:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows Phone 8,1
+- Windows Phone 8,1
 
 ## <a name="delivery-optimization"></a>Optymalizacja dostarczania
 
@@ -140,7 +140,7 @@ Ta funkcja obsługuje systemy:
 - Android
 - Android Enterprise
 - iOS/iPadOS
-- Windows Phone 8,1
+- Windows Phone 8,1
 - Windows 10 lub nowszym
 
 ## <a name="endpoint-protection"></a>Program Endpoint Protection
@@ -239,7 +239,7 @@ Ta funkcja obsługuje systemy:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows Phone 8,1
+- Windows Phone 8,1
 - Windows 8.1
 - Windows 10 lub nowszym
 

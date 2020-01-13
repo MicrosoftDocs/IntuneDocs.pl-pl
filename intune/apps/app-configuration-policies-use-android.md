@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 80d6068a17e1d278f9226e26c9efab24d597e52e
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: ec80922cf2539fdbacb572fd96c5a5e45549b5c3
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564264"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75205041"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem Android Enterprise
 
@@ -34,15 +34,15 @@ Zasady konfiguracji aplikacji w usłudze Microsoft Intune zawierają ustawienia 
 > [!NOTE]  
 > Nie wszystkie aplikacje obsługują konfigurację aplikacji. Skontaktuj się z deweloperem aplikacji, aby dowiedzieć się, czy jego aplikacja obsługuje zasady konfiguracji aplikacji.
 
-1. W usłudze [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) wybierz pozycje **Aplikacje** > **Zasady konfiguracji aplikacji** >  **Dodaj**.
-2. Wprowadź następujące właściwości:
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Aplikacje** > **Zasady konfiguracji aplikacji** >  **Dodaj** > **Urządzenia zarządzane**.
+2. Dodaj następujące właściwości:
 
     - **Nazwa**: wprowadź opisową nazwę zasad. Nadaj nazwę zasadom, aby można było je później łatwo rozpoznać. Na przykład dobrą nazwą zasad jest **Zasady aplikacji Android Enterprise Nine Work dla całej firmy**.
     - **Opis**: Wprowadź opis profilu. To ustawienie jest opcjonalne, ale zalecane.
-    - **Typ rejestracji urządzenia**: Wybierz pozycję **Urządzenia zarządzane**.
+    - **Typ rejestracji urządzenia**: to ustawienie ma wartość **Urządzenia zarządzane**.
     - **Platforma**: — wybierz opcję **Android**.
 
-3. Wybierz pozycję **Skojarzona aplikacja**. Wybierz aplikację, dla której chcesz zdefiniować zasady konfiguracji aplikacji. Wybierz z listy aplikacji zarządzanego sklepu Google Play aplikacje zatwierdzone i zsynchronizowane z usługą Intune.
+3. Wybierz pozycję **Skojarzona aplikacja**. Wybierz aplikację systemu Android, z którą zostaną skojarzone te zasady konfiguracji aplikacji. Wybierz z listy [aplikacji zarządzanego sklepu Google Play aplikacje zatwierdzone i zsynchronizowane z usługą Intune](~/apps/apps-add-android-for-work.md).
 4. Wybierz pozycję **Uprawnienia**. Konfigurację możesz ustawić przy użyciu następujących narzędzi:
 
     - [projektant konfiguracji](#use-the-configuration-designer)
@@ -110,12 +110,12 @@ Możesz również wstępnie skonfigurować uprawnienia aplikacji pod kątem dost
 
 Na przykład aplikacja używa mikrofonu urządzenia. Użytkownik otrzymuje monit o przyznanie aplikacji uprawnienia do korzystania z mikrofonu.
 
-1. W usłudze [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) wybierz pozycje **Aplikacje** > **Zasady konfiguracji aplikacji** >  **Dodaj**.
-2. Wprowadź następujące właściwości:
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Aplikacje** > **Zasady konfiguracji aplikacji** >  **Dodaj** > **Urządzenia zarządzane**.
+2. Dodaj następujące właściwości:
 
     - **Nazwa**: wprowadź opisową nazwę zasad. Nadaj nazwę zasadom, aby można było je później łatwo rozpoznać. Na przykład dobrą nazwą zasad jest **Zasady aplikacji monitu o uprawnienia systemu Android Enterprise dla całej firmy**.
     - **Opis**. Wprowadź opis profilu. To ustawienie jest opcjonalne, ale zalecane.
-    - **Typ rejestracji urządzenia**: Wybierz pozycję **Urządzenia zarządzane**.
+    - **Typ rejestracji urządzenia**: to ustawienie ma wartość **Urządzenia zarządzane**.
     - **Platforma**: — wybierz opcję **Android**.
 
 3. Wybierz pozycję **Skojarzona aplikacja**. Wybierz aplikację, dla której chcesz zdefiniować zasady konfiguracji. Wybierz z listy aplikacji profilu służbowego systemu Android aplikacje zatwierdzone i zsynchronizowane z usługą Intune.

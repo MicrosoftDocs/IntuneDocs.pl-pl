@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4fce03913042675588ea12e5399e6f5a1be04946
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: a4f5d3a232cab25c60189132732a0ea3f347c74a
+ms.sourcegitcommit: 107fef144013b01ed768ca8973373f9cb3f0f7dc
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74188254"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683803"
 ---
 # <a name="use-windows-hello-for-business-on-windows-10-devices-with-microsoft-intune"></a>Korzystanie z funkcji Windows Hello dla firm na urządzeniach z systemem Windows 10 z usługą Microsoft Intune
 
@@ -71,6 +71,9 @@ W tym artykule przedstawiono sposób tworzenia profilu konfiguracji urządzenia.
 5. Po zakończeniu wybierz kolejno pozycje **OK** > **Utwórz**, aby zapisać zmiany.
 
 Profil został utworzony i wyświetlony na liście profilów. Następnie [przypisz](../configuration/device-profile-assign.md) ten profil do grup użytkowników i urządzeń stosownie do potrzeb.
+
+> [!IMPORTANT]
+> Aby umożliwić aprowizowanie wielu użytkowników na urządzeniu, należy określić, że zasady usługi Windows Hello dla firm mają być stosowane do urządzeń. Jeśli zasady są stosowane tylko do użytkowników, na urządzeniu można aprowizować tylko jednego użytkownika.
 
 <!--  Removing image as part of design review; retaining source until we known the disposition.
 

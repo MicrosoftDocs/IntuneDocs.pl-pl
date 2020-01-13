@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a104b4d41a364c552a8ebac73ff3341af71d6d21
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 2c447c67e631365e831f033c2811c36d936f2e85
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564161"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547994"
 ---
 # <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem iOS
 
@@ -50,35 +50,35 @@ Po wybraniu dołączonych grup dla zasad konfiguracji aplikacji możesz też wyb
 
 ## <a name="create-an-app-configuration-policy"></a>Tworzenie zasad konfiguracji aplikacji
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Wybierz kolejno pozycje **Aplikacje** > **Zasady konfiguracji aplikacji** > **Dodaj**.
-5. Ustaw następujące szczegóły:
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz kolejno pozycje **Aplikacje** > **Zasady konfiguracji aplikacji** > **Dodaj** > **Urządzenia zarządzane**.
+3. Ustaw następujące szczegóły:
     - **Nazwa** — nazwa profilu, która będzie wyświetlana w witrynie Azure Portal.
     - **Opis** — opis profilu, który będzie wyświetlany w witrynie Azure Portal.
-    - **Typ rejestracji urządzeń** — wybierz pozycję **Zarządzane urządzenia** dla urządzeń, które zostały zarejestrowane w usłudze Intune.
-6. Dla elementu **Platforma** wybierz pozycję **iOS**.
-7. Wybierz pozycję **Skojarzona aplikacja**. Następnie w okienku **Skojarzona aplikacja** wybierz aplikację zarządzaną, do której chcesz zastosować konfigurację, a następnie wybierz opcję **OK**.
-8. W okienku **Dodaj zasady konfiguracji** wybierz pozycję **Ustawienia konfiguracji**.
-9. Wybierz pozycję **Format ustawień konfiguracji**. Wybierz jedną z następujących metod, aby dodać informacje o konfiguracji:
+    - **Typ rejestracji urządzenia** — to ustawienie ma wartość **Urządzenia zarządzane**.
+4. Dla elementu **Platforma** wybierz pozycję **iOS**.
+5. Wybierz pozycję **Skojarzona aplikacja**. Następnie w okienku **Skojarzona aplikacja** wybierz aplikację zarządzaną, do której chcesz zastosować konfigurację, a następnie wybierz opcję **OK**.
+6. Wybierz pozycję **Ustawienia konfiguracji**, aby wyświetlić okienko **Ustawienia konfiguracji**.
+7. Wybierz pozycję **Format ustawień konfiguracji**. Wybierz jedną z następujących metod, aby dodać informacje o konfiguracji:
     - **Korzystanie z projektanta konfiguracji**
     - **Wprowadzanie danych XML**<br><br>
     Aby uzyskać szczegółowe informacje o używaniu projektanta konfiguracji, zobacz [Korzystanie z projektanta konfiguracji](#use-configuration-designer). Aby uzyskać szczegółowe informacji o wprowadzaniu danych XML, zobacz [Wprowadzanie danych XML](#enter-xml-data). 
-10. Po dodaniu informacji dotyczących konfiguracji wybierz przycisk **OK**, a następnie wybierz pozycję **Dodaj**, aby dodać zasady konfiguracji. Zostanie wyświetlone okienko omówienia zasad konfiguracji.
-11. Wybierz pozycję **Przypisania**, aby wyświetlić opcje dołączania i wykluczania. 
+8. Po dodaniu informacji dotyczących konfiguracji wybierz przycisk **OK**, a następnie wybierz pozycję **Dodaj**, aby dodać zasady konfiguracji. Zostanie wyświetlone okienko omówienia zasad konfiguracji.
+9. Wybierz pozycję **Przypisania**, aby wyświetlić opcje dołączania i wykluczania. 
 
     ![Zrzut ekranu karty Dołącz okna przypisywania zasad](./media/app-configuration-policies-use-ios/app-config-policy01.png)
-12. Wybierz pozycję **Wszyscy użytkownicy** na karcie **Dołącz**.
+10. Wybierz pozycję **Wszyscy użytkownicy** na karcie **Dołącz**.
 
     ![Zrzut ekranu przypisywania zasad — opcja listy rozwijanej Wszyscy użytkownicy](./media/app-configuration-policies-use-ios/app-config-policy02.png)
-13. Wybierz kartę **Wyklucz**. 
-14. Kliknij pozycję **Wybierz grupy do wykluczenia**, aby wyświetlić powiązane okienko.
+11. Wybierz kartę **Wyklucz**. 
+12. Kliknij pozycję **Wybierz grupy do wykluczenia**, aby wyświetlić powiązane okienko.
 
     ![Zrzut ekranu bloku Przypisanie zasad — Wybierz okienko Grupy do wykluczenia](./media/app-configuration-policies-use-ios/app-config-policy03.png)
-15. Wybierz grupy, które chcesz wykluczyć, a następnie kliknij pozycję **Wybierz**.
+13. Wybierz grupy, które chcesz wykluczyć, a następnie kliknij pozycję **Wybierz**.
 
     >[!NOTE]
     >Jeśli podczas dodawania grupy jakakolwiek inna grupa została już dołączona do danego typu przypisania, zostanie ona wstępnie wybrana i nie będzie zmieniana dla innych typów dołączania przypisania. W związku z tym ta grupa, który została użyta, nie może zostać użyta jako wykluczona grupa.
-16. Kliknij polecenie **Zapisz**.
+14. Kliknij przycisk **Zapisz**.
 
 ## <a name="use-configuration-designer"></a>Korzystanie z projektanta konfiguracji
 
@@ -182,7 +182,7 @@ Rejestracje programu DEP (Device Enrollment Program firmy Apple) nie są zgodne 
 
 1. W usłudze Intune, jeśli to konieczne, dodaj aplikację Intune — Portal firmy, przechodząc do pozycji **Intune** > **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**.
 2. Przejdź do pozycji **Aplikacje** > **Zasady konfiguracji aplikacji**, aby utworzyć zasady konfiguracji aplikacji dla aplikacji Portal firmy.
-3. Utwórz zasady konfiguracji aplikacji za pomocą pliku XML poniżej. Więcej informacji na temat tworzenia zasad konfiguracji aplikacji oraz wprowadzania danych XML można znaleźć w temacie [Add app configuration policies for managed iOS devices](app-configuration-policies-use-ios.md) (Dodawanie zasad konfiguracji aplikacji dla urządzeń zarządzanych z systemem iOS) lub w przypadku hybrydowej usługi MDM w temacie [Apply settings to iOS apps with app configuration policies in System Center Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/configure-ios-apps-with-app-configuration-policies) (Wprowadzanie ustawień w aplikacjach iOS z zastosowaniem zasad konfiguracji aplikacji w programie System Center Configuration Manager).
+3. Utwórz zasady konfiguracji aplikacji za pomocą pliku XML poniżej. Więcej informacji na temat tworzenia zasad konfiguracji aplikacji oraz wprowadzania danych XML można znaleźć w temacie [Add app configuration policies for managed iOS devices](app-configuration-policies-use-ios.md) (Dodawanie zasad konfiguracji aplikacji dla urządzeń zarządzanych z systemem iOS) lub w przypadku hybrydowej usługi MDM w temacie [Apply settings to iOS apps with app configuration policies in Configuration Manager](https://docs.microsoft.com/configmgr/mdm/deploy-use/configure-ios-apps-with-app-configuration-policies) (Wprowadzanie ustawień w aplikacjach iOS z zastosowaniem zasad konfiguracji aplikacji w programie Configuration Manager).
 
     ``` xml
     <dict>

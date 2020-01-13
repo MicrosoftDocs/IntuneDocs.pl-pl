@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/26/2019
+ms.date: 01/06/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b712922824fa9d54f33fb43114e852fbeb52a81
-ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
+ms.openlocfilehash: f11ccb51e08e96595dfcb9118c1f479f1b0fc3de
+ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74899430"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75692126"
 ---
 # <a name="app-protection-policies-overview"></a>Zasady ochrony aplikacji — przegląd
 
@@ -95,7 +95,7 @@ W przypadku korzystania z aplikacji bez ograniczeń dane firmowe i prywatne mog�
 ### <a name="data-protection-with-app-protection-policies-app"></a>Ochrona danych za pomocą zasad ochrony aplikacji (APP)
 
 Zasady ochrony aplikacji pozwalają zapobiec zapisywaniu danych firmowych w magazynie lokalnym urządzenia (patrz poniższy obraz). Można również ograniczyć przenoszenie danych do innych aplikacji, które nie są chronione przez zasady ochrony aplikacji. Ustawienia zasad ochrony aplikacji obejmują:
-- Zasady relokacji danych, takie jak **Nie zezwalaj na używanie polecenia Zapisz jako** i **Ogranicz wycinanie, kopiowanie i wklejanie**.
+- Zasady relokacji danych, takie jak **Zapisz kopie danych organizacji** i **Ogranicz wycinanie, kopiowanie i wklejanie**.
 - Ustawienia zasad dostępu, takie jak **Wymagaj prostego numeru PIN w celu udzielenia dostępu** i **Blokuj uruchamianie aplikacji zarządzanych na urządzeniach ze zdjętymi zabezpieczeniami systemu lub odblokowanym dostępem do konta administratora**.
 
 ![Obraz koncepcyjny przedstawiający dane firmy chronione za pomocą zasad](./media/app-protection-policy/apps-with-protection-policies.png)
@@ -169,7 +169,7 @@ Dodatkowe wymagania dotyczące korzystania z aplikacji [Word, Excel i PowerPoint
 
 - Użytkownik końcowy musi mieć licencję usługi [Office 365 Business lub Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) przypisaną do swojego konta usługi Azure Active Directory. Subskrypcja musi obejmować aplikacje pakietu Office na urządzeniach przenośnych i może uwzględniać konto magazynu w chmurze w ramach usługi [OneDrive dla Firm](https://onedrive.live.com/about/business/). Licencje usługi Office 365 można przypisać w [centrum administracyjnym platformy Microsoft 365](https://admin.microsoft.com), wykonując te [instrukcje](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
 
-- Użytkownik końcowy musi mieć zarządzaną lokalizację skonfigurowaną przy użyciu funkcji szczegółowego zapisywania jako — w ramach ustawienia „Nie zezwalaj na używanie polecenia Zapisz jako” w zasadach ochrony aplikacji. Przykładowo — jeśli zarządzana lokalizacja to OneDrive, aplikację [OneDrive](https://onedrive.live.com/about/) należy skonfigurować w aplikacji Word, Excel lub PowerPoint użytkownika końcowego.
+- Użytkownik końcowy musi mieć zarządzaną lokalizację skonfigurowaną przy użyciu funkcji szczegółowego zapisywania jako — w ramach ustawienia „Zapisz kopie danych organizacji” w zasadach ochrony aplikacji. Przykładowo — jeśli zarządzana lokalizacja to OneDrive, aplikację [OneDrive](https://onedrive.live.com/about/) należy skonfigurować w aplikacji Word, Excel lub PowerPoint użytkownika końcowego.
 
 - Jeśli zarządzana lokalizacja to OneDrive, aplikacja musi być objęta zasadami ochrony aplikacji wdrożonymi dla użytkownika końcowego.
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19d02694ab5e53dc43e0861c6a427a044bf50648
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: a01b6643de2dd75c41aec0806b97df6154d99a7a
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72502638"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547776"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Ustawianie źródła zarządzania urządzeniem przenośnym
 
@@ -34,7 +34,7 @@ Możliwe są następujące konfiguracje:
 
 - **Autonomiczna usługa Intune** — zarządzanie tylko w chmurze konfigurowane przy użyciu witryny Azure Portal. Ta konfiguracja zawiera pełny zestaw funkcji oferowanych przez usługę Intune. [Ustaw urząd MDM w konsoli usługi Intune](#set-mdm-authority-to-intune).
 
-- **Współzarządzanie usługą Intune** — integracja rozwiązania usługi Intune w chmurze z programem System Center Configuration Manager dla urządzeń z systemem Windows 10. Konfigurowanie usługi Intune odbywa się przy użyciu konsoli programu Configuration Manager. [Konfigurowanie automatycznej rejestracji urządzeń w usłudze Intune](https://docs.microsoft.com/sccm/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune). 
+- **Współzarządzanie usługą Intune** — integracja rozwiązania usługi Intune w chmurze z programem Configuration Manager dla urządzeń z systemem Windows 10. Konfigurowanie usługi Intune odbywa się przy użyciu konsoli programu Configuration Manager. [Konfigurowanie automatycznej rejestracji urządzeń do usługi Intune](https://docs.microsoft.com/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune). 
 
     > [!Important]
     >Funkcja dołączania nowych klientów hybrydowego rozwiązania MDM jest przestarzała. Aby uzyskać więcej informacji, zobacz wpis w blogu [Move from Hybrid Mobile Device Management to Intune on Azure](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150) (Przechodzenie z hybrydowego zarządzania urządzeniami przenośnymi do usługi Intune na platformie Azure).
@@ -45,9 +45,9 @@ Możliwe są następujące konfiguracje:
 
 ## <a name="set-mdm-authority-to-intune"></a>Ustawianie urzędu MDM na usługę Intune
 
-Jeśli jeszcze nie ustawiono urzędu MDM, wykonaj poniższe kroki. Aby zastąpić rozwiązanie SCCM, zobacz [Migrowanie użytkowników i urządzeń hybrydowego zarządzania urządzeniami przenośnymi do autonomicznej usługi Intune](https://docs.microsoft.com/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
+Jeśli jeszcze nie ustawiono urzędu MDM, wykonaj poniższe kroki. Aby zastąpić rozwiązanie SCCM, zobacz [Migrowanie użytkowników i urządzeń hybrydowego zarządzania urządzeniami przenośnymi do autonomicznej usługi Intune](https://docs.microsoft.com/configmgr/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
 
-1. Wybierz pomarańczowy baner w obszarze usługi [Intune w portalu Azure](https://aka.ms/intuneportal), aby otworzyć ustawienia **urzędu zarządzania urządzeniami przenośnymi**. Pomarańczowy baner jest wyświetlany tylko wtedy, gdy nie ustawiono jeszcze urzędu MDM.
+1. W [centrum administracyjnym usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pomarańczowy baner, aby otworzyć ustawienie **Urząd zarządzania urządzeniami przenośnymi**. Pomarańczowy baner jest wyświetlany tylko wtedy, gdy nie ustawiono jeszcze urzędu MDM.
 2. W obszarze **Urząd zarządzania urządzeniami przenośnymi** wybierz swój urząd MDM spośród następujących opcji:
    - **Urząd MDM w usłudze Intune**
    - **Brak**

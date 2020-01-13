@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4761e2565402b4c3cdc993ff89cbedea8273609
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 304a6a60ea8dbfa98e62eb8e52a69e14af795746
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563894"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547998"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Zarządzanie dostępem do Internetu przy użyciu przeglądarki Microsoft Edge w usłudze Microsoft Intune
 
@@ -199,6 +199,14 @@ Następnie użyj następujących par klucz-wartość, aby ściągnąć znakowani
 |    com.microsoft.intune.mam.managedbrowser.NewTabPage.BrandLogo    |    Prawda    |
 |    com.microsoft.intune.mam.managedbrowser.NewTabPage.BrandColor    |    Prawda    |
 
+## <a name="display-relevant-industry-news-on-new-tab-pages"></a>Wyświetlanie odpowiednich wiadomości branżowych na stronach nowych kart
+
+Środowisko strony nowej karty można skonfigurować w przeglądarce Microsoft Edge na urządzeniach przenośnych w celu wyświetlania wiadomości branżowych, które są istotne dla organizacji. Po włączeniu tej funkcji przeglądarka Microosft Edge na urządzeniach przenośnych używa nazwy domeny Twojej organizacji do agregowania z Internetu wiadomości dotyczących organizacji, branży organizacji i firm konkurencyjnych, dzięki czemu użytkownicy mogą znaleźć odpowiednie wiadomości zewnętrzne — a wszystko to na stronach nowych kart scentralizowanych w przeglądarce Microsoft Edge. Wiadomości branżowe są domyślnie wyłączone i można wybrać opcję włączenia tej funkcji w organizacji. 
+
+|    Klucz    |    Wartość    |
+|------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
+|    „com.microsoft.intune.SohwIndustryNews”    |    Wartość **true** spowoduje wyświetlanie wiadomości branżowych na stronie nowej karty w przeglądarce Microsoft Edge na urządzeniu przenośnym.<p>Wartość **false** (domyślna) spowoduje ukrywanie wiadomości branżowych na stronie nowej karty.    |
+
 ## <a name="configure-managed-bookmarks-for-microsoft-edge"></a>Konfigurowanie zakładek zarządzanych dla przeglądarki Microsoft Edge
 
 W celu ułatwienia dostępu można skonfigurować zakładki, które mają być dostępne dla Twoich użytkowników, gdy będą korzystać z przeglądarki Microsoft Edge. 
@@ -237,7 +245,7 @@ Użyj następujących par klucz/wartość, aby skonfigurować listę dozwolonych
 Możesz użyć różnych formatów adresów URL do tworzenia listy witryn dozwolonych/zablokowanych. Te dozwolone wzorce zostały szczegółowo opisane w poniższej tabeli. Przed rozpoczęciem pracy zapoznaj się z poniższymi uwagami: 
 - Upewnij się, że wszystkie adresy URL dodawane do listy będą mieć prefiks **http** lub **https**.
 - Symbol wieloznaczny (\*) może być używany zgodnie z regułami z poniższej listy dozwolonych wzorców.
-- Symbol wieloznaczny może odpowiadać wyłącznie całemu składnikowi nazwy hosta (oddzielane kropkami) lub całym częściom ścieżki (oddzielane ukośnikami). Na przykład adres `http://*contoso.com` **nie** jest obsługiwany.
+- Symbol wieloznaczny może odpowiadać wyłącznie całemu składnikowi nazwy hosta (oddzielane kropkami) lub całym częściom ścieżki (oddzielane ukośnikami). Na przykład adres `http://*contoso.com`**nie** jest obsługiwany.
 - W adresie można określić numery portów. Jeśli nie określisz numeru portu, będą używane następujące wartości:
   - Port 80 dla protokołu http
   - Port 443 dla protokołu https
@@ -268,7 +276,7 @@ Możesz użyć różnych formatów adresów URL do tworzenia listy witryn dozwol
   - `http://www.contoso.com:*`
   - `http://www.contoso.com: /*`
 
-## <a name="define-behavior-when-users-try-to-access-a-blocked-site"></a>Definiowanie zachowania w sytuacji, gdy użytkownicy próbują uzyskać dostęp do zablokowanej witryny
+## <a name="transition-users-to-their-personal-context-when-trying-to-access-a-blocked-site"></a>Przechodzenie użytkowników do kontekstu osobistego podczas próby uzyskania dostępu do zablokowanej witryny
 
 Dzięki modelowi podwójnej tożsamości wbudowanemu w przeglądarce Microsoft Edge można zwiększyć elastyczność środowiska dla użytkowników końcowych jeszcze bardziej niż było to możliwe w przypadku aplikacji Intune Managed Browser. Gdy użytkownicy przejdą do zablokowanej witryny w przeglądarce Microsoft Edge, możesz włączyć wyświetlanie monitu o otwarcie linku w kontekście osobistym, a nie kontekście służbowym. Dzięki temu użytkownicy będą chronieni, a zasoby firmowe pozostaną bezpieczne. Jeśli na przykład użytkownik wyśle link do artykułu z wiadomościami za pośrednictwem programu Outlook, będzie mógł otworzyć ten link w swoim kontekście osobistym lub na karcie InPrivate. Kontekst służbowy nie zezwala na korzystanie z witryn internetowych z wiadomościami. Domyślnie takie przejścia są dozwolone.
 
@@ -276,7 +284,16 @@ Użyj następującej pary klucz/wartość, aby wskazać, czy takie programowe pr
 
 |    Klucz    |    Wartość    |
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    „com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlock”    |    Wartość **true** spowoduje, że linki z ograniczeniami będą otwierane bezpośrednio w trybie przeglądania InPrivate.<p>Wartość **false** (domyślna) umożliwi użytkownikom wybranie opcji otwarcia linku z ograniczeniami w trybie przeglądania InPrivate lub przy użyciu konta osobistego (MSA).    |
+
+## <a name="open-restricted-links-directly-in-inprivate-tab-pages"></a>Otwieranie linków z ograniczeniami bezpośrednio na stronach kart InPrivate
+
+W konfiguracji można wskazać, czy linki z ograniczeniami powinny być otwierane bezpośrednio w trybie przeglądania InPrivate, co zagwarantuje użytkownikom dostęp do bardziej bezproblemowego środowiska przeglądania. Dzięki temu użytkownicy nie będą musieli przechodzić do kontekstu osobistego, aby wyświetlić witrynę. Przeglądanie InPrivate jest uznawane za niezarządzane, dlatego użytkownicy nie będą mogli uzyskiwać dostępu podczas korzystania z trybu przeglądania InPrivate. 
+
+|    Klucz    |    Wartość    |
+|----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock`    |    Wartość **Prawda** pozwala przeglądarce Microsoft Edge na przenoszenie użytkowników do ich kontekstu osobistego w celu otwarcia zablokowanych witryn.<p>Wartość **Blokuj** uniemożliwia przeglądarce Microsoft Edge przenoszenie użytkowników. Użytkownicy widzą po prostu komunikat o zablokowaniu witryny, do której próbują uzyskać dostęp.    |
+
 
 ## <a name="use-microsoft-edge-on-ios-to-access-managed-app-logs"></a>Używanie przeglądarki Microsoft Edge w systemie iOS do uzyskiwania dostępu do dzienników aplikacji zarządzanych 
 

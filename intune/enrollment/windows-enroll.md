@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b84cd52dfe2eb6332ddbc89bc00a17ec3361b79
-ms.sourcegitcommit: edd06a494a241d198ca9b0d3030c92195976e0d3
+ms.openlocfilehash: add92c038e33ba1b5873eb0e9588242f8f3d0f57
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75000435"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207438"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Konfigurowanie rejestracji dla urządzeń z systemem Windows
 
@@ -128,6 +128,9 @@ Usługa Azure Active Directory ma różne rekordy CNAME, których używa do reje
 Aby uzyskać więcej informacji na temat rejestracji urządzeń, zobacz [Manage device identities using the Azure portal](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal) (Zarządzanie tożsamościami urządzeń w witrynie Azure Portal)
 
 ## <a name="windows-10-auto-enrollment-and-device-registration"></a>Automatyczne rejestrowanie i rejestracja urządzeń z systemem Windows 10
+
+Ta sekcja dotyczy klientów w chmurze dla instytucji rządowych USA.
+
 Chociaż tworzenie wpisów DNS rekordów CNAME jest opcjonalne, rekordy CNAME ułatwiają użytkownikom rejestrację. Jeśli rekord CNAME nie zostanie znaleziony, użytkownicy są monitowani o ręczne wprowadzenie nazwy serwera MDM: enrollment.manage.microsoft.us.
 
 | Typ | Nazwa hosta | Przekierowanie na | TTL |

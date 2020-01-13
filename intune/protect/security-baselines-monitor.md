@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b7f14e939e7241cd34c01d73e9af822dea7acdc
-ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
+ms.openlocfilehash: cbf82c0bef88e4a6d0e790f4b0ecdf73d2731d5d
+ms.sourcegitcommit: 9bb1bcd9f1bdd53b470073da956bbd8b0935dfbc
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74410125"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556406"
 ---
 # <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>Monitorowanie profilów i punktu odniesienia zabezpieczeń w usłudze Microsoft Intune
 
@@ -42,11 +42,15 @@ Okienko **Przegląd** udostępnia dwie metody monitorowania stanu:
 - **Widok urządzenia** — podsumowanie liczby urządzeń znajdujących się w każdej kategorii stanu dla punktu odniesienia.
 - **Według kategorii** — widok poszczególnych kategorii w punkcie odniesienia. Zawiera wartość procentową liczby urządzeń dla każdej grupy stanu dla poszczególnych kategorii punktu odniesienia.
 
-Każde urządzenie jest reprezentowane przez jeden z następujących stanów. Są one używane zarówno w widoku *urządzenia*, jak i w widoku *według kategorii*:
+Każde urządzenie jest reprezentowane przez jeden z następujących stanów (używanych w widoku *urządzenia* i w widokach *według kategorii*):
 
 - **Zgodne z punktem odniesienia** — wszystkie ustawienia w punkcie odniesienia są zgodne z zalecanymi ustawieniami.
-- **Niezgodne z punktem odniesienia** — co najmniej jedno ustawienie w punkcie odniesienia jest niezgodne z zalecanymi ustawieniami.
-- **Błędna konfiguracja** — co najmniej jedno ustawienie nie zostało prawidłowo skonfigurowane. Ten stan oznacza, że ustawienie znajduje się w stanie konfliktu, błędu lub oczekiwania.
+- **Niezgodne z punktem odniesienia** — co najmniej jedno ustawienie w punkcie odniesienia jest niezgodne z zalecanym ustawieniem.
+
+  > [!NOTE]
+  > Podczas tworzenia lub edytowania profilu punktu odniesienia wszystkie wprowadzone zmiany wartości domyślnej lub ustawienia konfiguracji powodują, że występuje stan „Niezgodne z punktem odniesienia”. Aby uzyskać pomoc dotyczącą identyfikowania ustawień, które zostały zmienione, skontaktuj się z działem pomocy technicznej firmy Microsoft. 
+
+- **Błędna konfiguracja** — co najmniej jedno ustawienie nie zostało poprawnie skonfigurowane. Ten stan oznacza, że ustawienie znajduje się w stanie konfliktu, błędu lub oczekiwania.
 - **Nie dotyczy** — co najmniej jedno ustawienie nie ma zastosowania i nie jest stosowane.
 
 ### <a name="device-view"></a>Widok urządzenia

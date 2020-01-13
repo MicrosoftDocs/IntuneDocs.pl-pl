@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 12/17/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eed0b8a74e69bc1552ae3e2badf485364ba37e94
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 01c95e1961871f33a3d8ed8c0b6c22502faca3a9
+ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563821"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75654026"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Jak w usłudze Microsoft Intune zarządzać aplikacjami dla systemów iOS i macOS, które zostały zakupione w ramach programu zakupów zbiorczych firmy Apple
 
@@ -95,7 +95,7 @@ Przed rozpoczęciem należy uzyskać token VPP od firmy Apple i przekazać go do
         > Zmiana kraju/regionu spowoduje zaktualizowanie metadanych aplikacji i adresu URL sklepu przy następnej synchronizacji z usługą firmy Apple w przypadku aplikacji utworzonych za pomocą tego tokenu. Jeśli aplikacja nie istnieje w nowym sklepie krajowym/regionalnym, nie zostanie zaktualizowana.
 
     - **Typ konta programu VPP** — wybierz opcję **Biznes** lub **Edukacja**.
-    - **Aktualizacje automatyczne aplikacji** — wybierz pozycję **Wł.** lub **Wył.** , aby włączyć aktualizacje automatyczne. Po włączeniu usługa Intune wykrywa aktualizacje aplikacji VPP w sklepie z aplikacjami i automatycznie wypycha je do urządzenia po jego zaewidencjonowaniu. Automatyczne aktualizacje aplikacji dla aplikacji VPP firmy Apple będą automatycznie aktualizować tylko aplikacje wdrażane za pomocą intencji instalacji **Wymagana**. W przypadku aplikacji wdrożonych za pomocą intencji instalacji **Dostępna** automatyczna aktualizacja generuje dla administratora IT komunikat o stanie informujący o dostępności nowej wersji aplikacji. Ten komunikat o stanie można wyświetlić, wybierając aplikację, a następnie pozycję Stan instalacji urządzenia i sprawdzając pozycję Szczegóły stanu. Ponadto użytkownik zobaczy aplikację jako nie zainstalowaną w witrynie Portal firmy, nawet jeśli jest zainstalowana wcześniejsza wersja aplikacji. W takim przypadku, aby zainstalować nowszą wersję aplikacji, użytkownik może ponownie zainstalować aplikację, klikając pozycję **Zainstaluj** na ekranie szczegółów aplikacji w aplikacji Portal firmy.
+    - **Aktualizacje automatyczne aplikacji** — wybierz pozycję **Wł.** lub **Wył.** , aby włączyć aktualizacje automatyczne. Po włączeniu usługa Intune wykrywa aktualizacje aplikacji VPP w sklepie z aplikacjami i automatycznie wypycha je do urządzenia po jego zaewidencjonowaniu. Automatyczne aktualizacje aplikacji dla aplikacji VPP firmy Apple będą automatycznie aktualizować tylko aplikacje wdrażane za pomocą intencji instalacji **Wymagana**. W przypadku aplikacji z intencją instalacji **Dostępna** użytkownik zobaczy aplikację jako niezainstalowaną w aplikacji Portal firmy, nawet jeśli została zainstalowana wcześniejsza wersja aplikacji. W takim przypadku, aby zainstalować nowszą wersję aplikacji, użytkownik może ponownie zainstalować aplikację, klikając pozycję **Zainstaluj** na ekranie szczegółów aplikacji w aplikacji Portal firmy. Pamiętaj, że w przypadku urządzeń z systemem iOS rejestrowanych przez użytkownika użytkownicy końcowi będą nadal widzieć wszystkie aplikacje programu VPP licencjonowane przez użytkownika w aplikacji Portal firmy. 
 
         > [!NOTE]
         > Automatyczne aktualizacje aplikacji działają zarówno w przypadku aplikacji licencjonowanych dla urządzenia, jak i użytkownika, dla systemu iOS w wersji 11.0 i nowszej lub macOS w wersji 10.12 i nowszej.
@@ -110,7 +110,7 @@ Dane przechowywane przez firmę Apple można w dowolnym momencie zsynchronizowa�
 
 ## <a name="to-assign-a-volume-purchased-app"></a>Wdrażanie aplikacji nabytej w ramach programu zakupów zbiorczych
 
-1. Wybierz kolejno pozycje **Aplikacje** > **Wszystkie aplikacje**.
+1. Wybierz pozycję **Aplikacje** > **Wszystkie aplikacje**.
 2. W okienku z listą aplikacji wybierz aplikację, którą chcesz przypisać, a następnie wybierz pozycję **Przypisania**.
 3. W okienku ***Nazwa aplikacji*** - **Przypisania** wybierz pozycję **Dodaj grupy**, a następnie w okienku **Dodawanie grup** wybierz pozycję **Typ przypisania** i wybierz grupy użytkowników lub urządzeń usługi Azure AD, do których chcesz przypisać aplikację.
 5. Dla każdej wybranej grupy wybierz następujące ustawienia:

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b5d65882c3811b05f7f8f137f76dc919e18f0da5
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 881a97e1cf4e4690a72916a1a2325fba5f9b63dd
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72505326"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547528"
 ---
 # <a name="microsoft-intune-service-description"></a>Opis usługi Microsoft Intune
 
@@ -31,7 +31,7 @@ Usługa Intune to oparta na chmurze usługa zarządzania mobilnością w przedsi
 * chronienie danych firmowych poprzez kontrolowanie sposobu, w jaki pracownicy uzyskują do nich dostęp i udostępniają je,
 * zapewnienie zgodności urządzeń i aplikacji z wymaganiami firmy dotyczącymi bezpieczeństwa.
 
-Usługa Intune jest ściśle zintegrowana z usługą Azure Active Directory (Azure AD), co umożliwia kontrolowanie tożsamości i dostępu, a także z usługą Azure Information Protection na potrzeby ochrony danych. Można ją także zintegrować z programem System Center Configuration Manager, aby rozszerzyć możliwości zarządzania.
+Usługa Intune jest ściśle zintegrowana z usługą Azure Active Directory (Azure AD), co umożliwia kontrolowanie tożsamości i dostępu, a także z usługą Azure Information Protection na potrzeby ochrony danych. Można ją także zintegrować z programem Configuration Manager, aby rozszerzyć możliwości zarządzania.
 
 Aby dowiedzieć się więcej o zarządzaniu urządzeniami i aplikacjami oraz o ochronie danych firmowych za pomocą usługi Intune, zobacz [Dokumentacja usługi Intune](../index.yml).
 
@@ -45,9 +45,9 @@ Możesz rozpocząć korzystanie z usługi Intune w ramach 30-dniowej bezpłatnej
 
 - [Enrolled device management capabilities of Microsoft Intune](introduction-intune.md)
 
-- [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](/sccm/mdm/understand/hybrid-mobile-device-management)
+- [Hybrid mobile device management (MDM) with Configuration Manager and Microsoft Intune](/sccm/mdm/understand/hybrid-mobile-device-management)
 
-For more about System Center Configuration Manager, see [Documentation  for System Center Configuration Manager](/sccm/index).--->
+For more about Configuration Manager, see [Documentation for Microsoft Endpoint Configuration Manager](/sccm/index).--->
 ## <a name="intune-onboarding-benefit"></a>Asysta przy przejściu do usługi Intune
 Firma Microsoft oferuje dla usługi Intune asystę przy dołączaniu w przypadku zakupu kwalifikujących się usług z odpowiednimi planami. Asysta umożliwia zdalną współpracę ze specjalistami firmy Microsoft w celu przygotowania środowiska usługi Intune. Aby uzyskać więcej informacji na temat asysty przy dołączaniu, zobacz [Opis asysty przy dołączaniu do usługi Microsoft Intune](http://go.microsoft.com/fwlink/?LinkId=619281).
 
@@ -99,7 +99,7 @@ You can set up Intune in several ways to manage and help protect your company's 
 
 - **Intune stand-alone configuration.** Use the web-based admin console in Intune to manage devices in your organization. Intune can be used without any on-premises IT infrastructure. If you use Intune with Active Directory Domain Services, you can use domain user accounts that you manage with Domain Services with Intune.
 
-- **Intune with System Center Configuration Manager.** Use the Configuration Manager management console to manage computers and mobile devices in your enterprise. This configuration can help you to manage all your organization’s devices through a single console, the Configuration Manager Admin Console. Configuration Manager supports large numbers of mobile devices, servers, and computers. For more about Configuration Manager, see [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](/sccm/mdm/understand/hybrid-mobile-device-management). For more help deciding which approach is right for you, see [Choose between Microsoft Intune standalone and hybrid mobile device management with Configuration Manager](/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).--->
+- **Intune with Microsoft Endpoint Configuration Manager.** Use the Configuration Manager management console to manage computers and mobile devices in your enterprise. This configuration can help you to manage all your organization’s devices through a single console, the Configuration Manager Admin Console. Configuration Manager supports large numbers of mobile devices, servers, and computers. For more about Configuration Manager, see [Hybrid mobile device management (MDM) with Configuration Manager and Microsoft Intune](/sccm/mdm/understand/hybrid-mobile-device-management). For more help deciding which approach is right for you, see [Choose between Microsoft Intune standalone and hybrid mobile device management with Configuration Manager](/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).--->
 
 ## <a name="language-support"></a>Obsługa języków
 Usługa Intune działa w witrynie Azure Portal, która obsługuje następujące języki: chiński (uproszczony), chiński (tradycyjny), czeski, holenderski, angielski, niemiecki, węgierski, włoski, japoński, portugalski (Brazylia), portugalski (Portugalia), rosyjski, hiszpański, francuski, koreański, polski, szwedzki i turecki.

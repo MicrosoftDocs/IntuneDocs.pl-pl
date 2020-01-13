@@ -17,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: 7ce6def40c6c0fff3a28f884c458220283979234
-ms.sourcegitcommit: ce518a5dfe62c546a77f32ef372f36efbaad473f
+ms.openlocfilehash: 001e68fdbab7074abb4e1bbefc697d3e34c47762
+ms.sourcegitcommit: 107fef144013b01ed768ca8973373f9cb3f0f7dc
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/25/2019
-ms.locfileid: "74465772"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75683786"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Integracja usługi Windows Hello dla firm z usługą Microsoft Intune  
 
@@ -53,9 +53,9 @@ Użyj tego artykułu, aby utworzyć domyślne zasady usługi Windows Hello dla f
 
 ## <a name="create-a-windows-hello-for-business-policy"></a>Tworzenie zasad usługi Windows Hello dla firm
 
-1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Przejdź do pozycji **Urządzenia** > rejestracja** > **Zarejestruj urządzenia** > **Rejestracja w systemie Windows** > **Windows Hello dla firm**. Zostanie otwarte okienko Windows Hello dla firm.
+2. Przejdź do pozycji **Urządzenia** >  **Rejestracja** > **Zarejestruj urządzenia** > **Rejestracja w systemie Windows** > **Windows Hello dla firm**. Zostanie otwarte okienko Windows Hello dla firm.
 
 3. Wybierz jedną z następujących opcji w pozycji **Skonfiguruj usługę Windows Hello dla firm**:
 

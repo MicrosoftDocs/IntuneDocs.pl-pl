@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8c756ad2df00a97df7289491daf830e584c0045
-ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
+ms.openlocfilehash: 2fa80697f24167e2a9634bd506e9548ca654129f
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74410212"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547092"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Wymuszanie zgodności usługi Microsoft Defender ATP z dostępem warunkowym w usłudze Intune
 
@@ -108,9 +108,7 @@ Usługę Defender ATP musisz włączyć tylko raz w każdej dzierżawie.
 
 Po nawiązaniu połączenia typu usługa do usługi między usługami Intune i Microsoft Defender ATP, możesz dołączyć urządzenia zarządzane w usłudze Intune do usługi ATP, aby można było zbierać dane dotyczące ich poziomu ryzyka, a następnie z nich korzystać. Aby dołączyć urządzenia, należy użyć profilu konfiguracji urządzenia dla usługi Microsoft Defender ATP.
 
-Po nawiązaniu połączenia z usługą Microsoft Defender ATP usługa Intune otrzymuje pakiet konfiguracyjny dołączania do usługi Microsoft Defender ATP z usługi Microsoft Defender ATP. Ten pakiet jest wdrażany na urządzeniach z profilem konfiguracji urządzenia. Pakiet konfiguracyjny konfiguruje urządzenia do komunikowania się z [usługami Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) w celu skanowania plików, wykrywania zagrożeń oraz zgłaszania ryzyka do usługi Microsoft Defender ATP.
-
-Po dołączeniu urządzenia przy użyciu pakietu konfiguracyjnego nie trzeba tego robić ponownie. Można również dodać urządzenia przy użyciu [zasad grupy lub programu System Center Configuration Manager (SCCM)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints).
+Po nawiązaniu połączenia z usługą Microsoft Defender ATP usługa Intune otrzymuje pakiet konfiguracyjny dołączania do usługi Microsoft Defender ATP z usługi Microsoft Defender ATP. Ten pakiet jest wdrażany na urządzeniach z profilem konfiguracji urządzenia. Pakiet konfiguracyjny konfiguruje urządzenia do komunikowania się z [usługami Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) w celu skanowania plików, wykrywania zagrożeń oraz zgłaszania ryzyka do usługi Microsoft Defender ATP. Po dołączeniu urządzenia przy użyciu pakietu konfiguracyjnego nie trzeba tego robić ponownie. Można również dodać urządzenia przy użyciu [zasad grupy lub programu Microsoft Endpoint Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints).
 
 ### <a name="create-the-device-configuration-profile"></a>Tworzenie profilu konfiguracji urządzenia
 
@@ -129,7 +127,7 @@ Po dołączeniu urządzenia przy użyciu pakietu konfiguracyjnego nie trzeba teg
    - **Udostępnianie próbek dla wszystkich plików**: pozycja **Włącz** umożliwia zbieranie przykładów oraz ich udostępnianie w usłudze Microsoft Defender ATP. Na przykład, jeśli widzisz podejrzany plik, możesz go przesłać do usługi Microsoft Defender ATP w celu wykonania szczegółowej analizy. Pozycja **Nieskonfigurowane** nie udostępnia żadnych przykładów w usłudze Microsoft Defender ATP.
    - **Usprawnij częstotliwość raportowania danych telemetrycznych**: pozycja **Włącz** to ustawienie dla urządzeń narażonych na duże ryzyko, które pozwala na częstsze przekazywanie danych telemetrycznych do usługi Microsoft Defender ATP.
 
-     Dodatkowe informacje na temat ustawień usługi Microsoft Defender ATP można znaleźć w artykule [Dołączanie maszyn z systemem Windows 10 za pomocą programu System Center Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm).
+     Dodatkowe informacje na temat ustawień usługi Microsoft Defender ATP można znaleźć w artykule [Dołączanie maszyn z systemem Windows 10 za pomocą programu Microsoft Endpoint Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm).
 
 7. Wybierz opcję **OK** i **Utwórz**, aby zapisać zmiany i utworzyć profil.
 8. [Przypisz profil konfiguracji urządzenia](../configuration/device-profile-assign.md) do urządzeń, które chcesz ocenić za pomocą usługi Microsoft Defender ATP.
