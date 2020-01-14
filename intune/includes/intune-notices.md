@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 11/19/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 0c64f9a6afc054a3d22518c4305bda62a36d67c7
-ms.sourcegitcommit: 8ab98c2773f112f5cf2d817c170633b15de3dec2
+ms.openlocfilehash: e745290991da4d80c7e3839250edbfdd64ef1b7a
+ms.sourcegitcommit: 01c57ac880dcb5f474908977c89810f5bedaf326
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75323097"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75760974"
 ---
 Te powiadomienia zawierają ważne informacje, które mogą ułatwić przygotowanie się na nadchodzące zmiany i nowe funkcje w usłudze Intune.
 
@@ -55,19 +55,6 @@ Po 20 lutego 2020 r. te urządzenia nie będą otrzymywać aktualizacji zabezpie
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Co należy zrobić, aby przygotować się do tej zmiany?
 Możesz sprawdzić raporty usługi Intune, aby zobaczyć, na które urządzenia lub użytkowników może to mieć wpływ. Przejdź do pozycji Urządzenia > Wszystkie urządzenia i filtruj zawartość według systemu operacyjnego. Możesz dodać dodatkowe kolumny, które ułatwią określenie, kto w organizacji ma urządzenia z systemem Windows Phone 8.1. Poproś użytkowników końcowych, aby uaktualnili urządzenia do obsługiwanej wersji systemu operacyjnego.
-
-
-### <a name="intune-plan-for-change-windows-10-version-1703-company-portal-moving-out-of-support--5026679--"></a>Plan zmian w usłudze Intune: Windows 10, wersja 1703 — zakończenie wsparcia programu Portal firmy<!--5026679-->
-System Windows 10 w wersji 1703 (znanej również jako Windows 10, RS2) zakończył cykl życia wersji dla przedsiębiorstw i wersji EDU 8 października 2019 r. Usługa Intune zakończy obsługę odpowiedniej aplikacji Portal firmy dla wersji RS2/RS1 w dniu 26 grudnia 2019 r.
-
-#### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
-Nie będą widoczne nowe funkcje w określonej wersji aplikacji Portal firmy, choć ta wersja będzie obsługiwana do 26 grudnia 2019 r. (między innymi w razie potrzeby będą udostępniane aktualizacje zabezpieczeń do niej). Ponieważ jednak po zakończeniu cyklu życia system Windows 10 w wersji 1703 nie będzie otrzymywał aktualizacji zabezpieczeń, zdecydowanie zalecamy zaktualizowanie systemu Windows na urządzeniach do nowszej wersji i zapewnienie najnowszej wersji aplikacji Portal firmy w celu otrzymywania nowych i dodatkowych funkcji.
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Co należy zrobić, aby przygotować się do tej zmiany?
-Czynności, jakie należy wykonać, zależą od konfiguracji środowiska. Zazwyczaj należy po prostu sprawdzić, na których urządzeniach zainstalowano starszą wersję systemu operacyjnego lub aplikacji Portal firmy, i uaktualnić je. Aby skonfigurować pierścienie aktualizacji systemu Windows 10, zaloguj się do usługi Intune -> wybierz kolejno opcje Aktualizacje oprogramowania — Pierścienie aktualizacji systemu Windows 10. Najnowsza wersja aplikacji Portal firmy to 10.3.5601.0. Należy poinformować użytkowników o konieczności uzyskania jej ze sklepu Microsoft Store w celu zachowania zgodności z przyszłymi wersjami. Najnowsze wersje można także instalować na urządzeniach z systemem Windows za pomocą usługi Intune i sklepu [Microsoft Store dla Firm](https://docs.microsoft.com/intune/windows-store-for-business).
-
-#### <a name="additional-information"></a>Dodatkowe informacje
-[Ręczne dodawanie aplikacji Portal firmy dla systemu Windows 10 przy użyciu usługi Microsoft Intune](https://docs.microsoft.com/intune/store-apps-company-portal-app)
 
 
 ### <a name="take-action-use-microsoft-edge-for-your-protected-intune-browser-experience--5728447--"></a>Wymagane działanie: W celu zapewnienia chronionego środowiska przeglądarki w usłudze Intune należy używać przeglądarki Microsoft Edge.<!--5728447-->
