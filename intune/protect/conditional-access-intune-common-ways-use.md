@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d30749a7eaa3d516bef2f2acff3e010d69db1c0e
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: 92e6aa1a66429c6407556444e903c158aff9dfa0
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75547054"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885997"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Jakie są typowe sposoby korzystania z dostępu warunkowego przy użyciu usługi Intune?
 
@@ -86,14 +86,6 @@ Dostęp warunkowy dla komputerów zapewnia możliwości podobne do tych dostępn
 - **Przyłączone do domeny w lokalnej usłudze AD:** Ta opcja jest często używana przez organizacje zadowolone z tego, jak obecnie zarządzają komputerami przy użyciu zasad grupy usługi AD lub programu Configuration Manager.
 
 - **Przyłączone do domeny w usłudze Azure AD oraz zarządzane w usłudze Intune:** Ten scenariusz jest przeznaczony dla organizacji, które chcą korzystać przede wszystkim z chmury (czyli przede wszystkim korzystają z usług w chmurze z myślą o ograniczeniu użycia infrastruktury lokalnej) lub tylko z chmury (w przypadku braku infrastruktury lokalnej). Usługa Azure AD Join działa dobrze w środowisku hybrydowym, umożliwiając dostęp do aplikacji i zasobów w chmurze oraz lokalnych. Urządzenie zostaje przyłączone do usługi Azure AD i zarejestrowane w usłudze Intune, co może zostać wykorzystane jako kryterium dostępu warunkowego w przypadku uzyskiwania dostępu do zasobów firmy.
-
-- **Przyłączone do domeny w usłudze AD oraz Configuration Manager:** Począwszy od bieżącej gałęzi, program Configuration Manager zapewnia możliwości dostępu warunkowego, dzięki którym można ocenić kwestię przyłączenia komputera do domeny, a także określone kryteria zgodności:
-
-  - Czy komputer jest szyfrowany?
-
-  - Czy zainstalowano oprogramowanie chroniące przed złośliwym oprogramowaniem? Czy oprogramowanie jest aktualne?
-
-  - Czy urządzenie ma złamane zabezpieczenia lub ma odblokowany dostęp do konta administratora?
 
 #### <a name="bring-your-own-device-byod"></a>„Przynieś własne urządzenie” (BYOD)
 

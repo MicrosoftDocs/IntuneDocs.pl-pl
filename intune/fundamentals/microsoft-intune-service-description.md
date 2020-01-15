@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 881a97e1cf4e4690a72916a1a2325fba5f9b63dd
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: 7744fe217f39436e91f90fdf567f469c01986da4
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75547528"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885663"
 ---
 # <a name="microsoft-intune-service-description"></a>Opis usługi Microsoft Intune
 
@@ -45,11 +45,9 @@ Możesz rozpocząć korzystanie z usługi Intune w ramach 30-dniowej bezpłatnej
 
 - [Enrolled device management capabilities of Microsoft Intune](introduction-intune.md)
 
-- [Hybrid mobile device management (MDM) with Configuration Manager and Microsoft Intune](/sccm/mdm/understand/hybrid-mobile-device-management)
-
-For more about Configuration Manager, see [Documentation for Microsoft Endpoint Configuration Manager](/sccm/index).--->
+--->
 ## <a name="intune-onboarding-benefit"></a>Asysta przy przejściu do usługi Intune
-Firma Microsoft oferuje dla usługi Intune asystę przy dołączaniu w przypadku zakupu kwalifikujących się usług z odpowiednimi planami. Asysta umożliwia zdalną współpracę ze specjalistami firmy Microsoft w celu przygotowania środowiska usługi Intune. Aby uzyskać więcej informacji na temat asysty przy dołączaniu, zobacz [Opis asysty przy dołączaniu do usługi Microsoft Intune](http://go.microsoft.com/fwlink/?LinkId=619281).
+Firma Microsoft oferuje dla usługi Intune asystę przy dołączaniu w przypadku zakupu kwalifikujących się usług z odpowiednimi planami. Asysta umożliwia zdalną współpracę ze specjalistami firmy Microsoft w celu przygotowania środowiska usługi Intune. Aby uzyskać więcej informacji na temat asysty przy dołączaniu, zobacz [Opis asysty przy dołączaniu do usługi Microsoft Intune](https://go.microsoft.com/fwlink/?LinkId=619281).
 
 
 ## <a name="learn-how-intune-service-updates-affect-you"></a>Omówienie skutków aktualizacji usługi Intune
@@ -99,7 +97,7 @@ You can set up Intune in several ways to manage and help protect your company's 
 
 - **Intune stand-alone configuration.** Use the web-based admin console in Intune to manage devices in your organization. Intune can be used without any on-premises IT infrastructure. If you use Intune with Active Directory Domain Services, you can use domain user accounts that you manage with Domain Services with Intune.
 
-- **Intune with Microsoft Endpoint Configuration Manager.** Use the Configuration Manager management console to manage computers and mobile devices in your enterprise. This configuration can help you to manage all your organization’s devices through a single console, the Configuration Manager Admin Console. Configuration Manager supports large numbers of mobile devices, servers, and computers. For more about Configuration Manager, see [Hybrid mobile device management (MDM) with Configuration Manager and Microsoft Intune](/sccm/mdm/understand/hybrid-mobile-device-management). For more help deciding which approach is right for you, see [Choose between Microsoft Intune standalone and hybrid mobile device management with Configuration Manager](/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).--->
+--->
 
 ## <a name="language-support"></a>Obsługa języków
 Usługa Intune działa w witrynie Azure Portal, która obsługuje następujące języki: chiński (uproszczony), chiński (tradycyjny), czeski, holenderski, angielski, niemiecki, węgierski, włoski, japoński, portugalski (Brazylia), portugalski (Portugalia), rosyjski, hiszpański, francuski, koreański, polski, szwedzki i turecki.

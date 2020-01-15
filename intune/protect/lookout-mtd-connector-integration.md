@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b4661b151493eb68cc6f71a5a77bd023ac27b826
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 331d4d312541f587077c70e19634e331f9ddc21e
+ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72810224"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75956350"
 ---
 # <a name="set-up-lookout-mobile-endpoint-security-integration-with-intune"></a>Konfigurowanie integracji usługi Lookout Mobile Endpoint Security z usługą Intune
 Jeśli środowisko spełnia [wymagania wstępne](lookout-mobile-threat-defense-connector.md#prerequisites), można zintegrować usługę Lookout Mobile Endpoint Security z usługą Intune. Informacje przedstawione w tym artykule ułatwią skonfigurowanie integracji oraz ważnych ustawień w usłudze Lookout do użycia z usługą Intune.  
@@ -113,7 +113,7 @@ W poniższej procedurze przyjęto, że wcześniej utworzono w usłudze Azure AD 
 6. Wybierz pozycję **Create connector** (Utwórz łącznik), aby ukończyć konfigurowanie łącznika. Jeśli wyniki są satysfakcjonujące, można później rozszerzyć rejestrację na dodatkowe grupy użytkowników.
 
 ## <a name="configure-intune-to-use-lookout-as-a-mobile-threat-defense-provider"></a>Konfigurowanie usługi Intune do używania aplikacji Lookout jako dostawcy usługi Mobile Threat Defense
-Po skonfigurowaniu usługi Lookout MES należy skonfigurować połączenie z [usługą Lookout w usłudze Intune](https://docs.microsoft.com/en-us/intune/protect/mtd-connector-enable).  
+Po skonfigurowaniu usługi Lookout MES należy skonfigurować połączenie z [usługą Lookout w usłudze Intune](~/protect/mtd-connector-enable.md).  
 
 ## <a name="additional-settings-in-the-lookout-mes-console"></a>Dodatkowe ustawienia w konsoli usługi Lookout MES
 Poniżej przedstawiono dodatkowe ustawienia, które można skonfigurować w konsoli usługi Lookout MES.  
