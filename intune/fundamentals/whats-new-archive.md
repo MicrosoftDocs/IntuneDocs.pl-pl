@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6a6b5585501851bb52db70ca222f8cfff7ad0597
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 4a9454d11fd1209e715cbcb1e9d2ce7aae4a003c
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73635468"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75886052"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Nowości w usłudze Microsoft Intune — poprzednie miesiące
 
@@ -84,18 +84,18 @@ Na urządzeniach z systemem iOS można utworzyć profil konfiguracji urządzenia
 Aby zapoznać się z tymi ustawieniami, zobacz artykuł [Ustawienia funkcji urządzeń z systemem macOS](../configuration/macos-device-features-settings.md).
 
 #### <a name="configure-wifi-on-android-enterprise-device-owner-dedicated-devices-running-in-multi-app-kiosk-mode--3041940----"></a>Konfigurowanie sieci Wi-Fi na dedykowanych urządzeniach z rozwiązaniem Android Enterprise w trybie Właściciel urządzenia uruchamianych w trybie kiosku z wieloma aplikacjami<!--3041940  -->
-Możesz włączyć ustawienia na urządzeniu z rozwiązaniem Android Enterprise w trybie Właściciel urządzenia, kiedy jest ono uruchamiane jako dedykowane urządzenie w trybie kiosku z wieloma aplikacjami. W ramach tej aktualizacji możesz umożliwić użytkownikom konfigurowanie i nawiązywanie połączenia z sieciami Wi-Fi (**Intune** > **Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **Android Enterprise** jako platforma > **Tylko właściciel urządzenia, Ograniczenia dotyczące urządzeń** dla typu profilu > **Urządzenia dedykowane** > **Tryb kiosku**: **Wiele aplikacji** > **Konfiguracja sieci Wi-Fi**).
+Możesz włączyć ustawienia na urządzeniu z rozwiązaniem Android Enterprise w trybie Właściciel urządzenia, kiedy jest ono uruchamiane jako dedykowane urządzenie w trybie kiosku z wieloma aplikacjami. W ramach tej aktualizacji możesz umożliwić użytkownikom konfigurowanie i nawiązywanie połączenia z sieciami Wi-Fi (**Intune** > **Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **Android Enterprise** jako platforma > **Tylko właściciel urządzenia, Ograniczenia dotyczące urządzeń** dla typu profilu > **Urządzenia dedykowane** > **Tryb kiosku**: **Kiosk z wieloma aplikacjami** > **Konfiguracja sieci Wi-Fi**).
 
 Aby wyświetlić wszystkie ustawienia, które można skonfigurować, zobacz [Ustawienia urządzeń z systemem Android Enterprise w celu zezwolenia na funkcje lub ich ograniczenia](../configuration/device-restrictions-android-for-work.md).
 
-Dotyczy: dedykowanych urządzeń z rozwiązaniem Android Enterprise działających w trybie kiosku z wieloma aplikacjami
+Dotyczy: Dedykowane urządzenia z rozwiązaniem Android Enterprise działające w trybie kiosku z wieloma aplikacjami
 
 #### <a name="configure-bluetooth-and-pairing-on-android-enterprise-device-owner-dedicated-devices-running-in-multi-app-kiosk-mode---3041941----"></a>Konfigurowanie połączenia Bluetooth i parowanie na dedykowanych urządzeniach z rozwiązaniem Android Enterprise w trybie Właściciel urządzenia działających w trybie kiosku z wieloma aplikacjami<!-- 3041941  -->
-Możesz włączyć ustawienia na urządzeniu z rozwiązaniem Android Enterprise w trybie Właściciel urządzenia, kiedy jest ono uruchamiane jako dedykowane urządzenie w trybie kiosku z wieloma aplikacjami. W ramach tej aktualizacji można zezwolić użytkownikom końcowym na włączenie funkcji Bluetooth i parowanie urządzeń za pośrednictwem połączenia Bluetooth (**Intune** > **Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **Android Enterprise** jako platforma > **Tylko właściciel urządzenia, Ograniczenia dotyczące urządzeń** dla typu profilu > **Urządzenia dedykowane** > **Tryb kiosku**: **Wiele aplikacji** > **Konfiguracja połączenia Bluetooth**).
+Możesz włączyć ustawienia na urządzeniu z rozwiązaniem Android Enterprise w trybie Właściciel urządzenia, kiedy jest ono uruchamiane jako dedykowane urządzenie w trybie kiosku z wieloma aplikacjami. W ramach tej aktualizacji można zezwolić użytkownikom końcowym na włączenie funkcji Bluetooth i parowanie urządzeń za pośrednictwem połączenia Bluetooth (**Intune** > **Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **Android Enterprise** jako platforma > **Tylko właściciel urządzenia, Ograniczenia dotyczące urządzeń** dla typu profilu > **Urządzenia dedykowane** > **Tryb kiosku**: **Kiosk z wieloma aplikacjami** > **Konfiguracja połączenia Bluetooth**).
 
 Aby wyświetlić wszystkie ustawienia, które można skonfigurować, zobacz [Ustawienia urządzeń z systemem Android Enterprise w celu zezwolenia na funkcje lub ich ograniczenia](../configuration/device-restrictions-android-for-work.md).
 
-Dotyczy: dedykowanych urządzeń z rozwiązaniem Android Enterprise działających w trybie kiosku z wieloma aplikacjami
+Dotyczy: Dedykowane urządzenia z rozwiązaniem Android Enterprise działające w trybie kiosku z wieloma aplikacjami
 
 #### <a name="create-and-use-oemconfig-device-configuration-profiles-in-intune---3305883----"></a>Tworzenie i używanie profilów konfiguracji urządzeń za pomocą aplikacji OEMConfig w usłudze Intune<!-- 3305883  -->
 W ramach tej aktualizacji usługa Intune obsługuje konfigurowanie urządzeń z rozwiązaniem Android Enterprise za pomocą aplikacji OEMConfig. Możesz utworzyć profil konfiguracji urządzenia i zastosować ustawienia do urządzeń z rozwiązaniem Android Enterprise przy użyciu aplikacji OEMConfig (**Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **Android Enterprise** dla platformy).
@@ -116,7 +116,7 @@ Na urządzeniach z rozwiązaniem Android Enterprise można utworzyć profil ogra
 
 Ta aktualizacja obejmuje nowe ustawienia hasła, umożliwia pełny dostęp do aplikacji w sklepie Google Play dla w pełni zarządzanych urządzeń i nie tylko. Aby wyświetlić aktualną listę ustawień, zobacz [Ustawienia urządzeń z systemem Android Enterprise w celu zezwolenia na funkcje lub ich ograniczenia](../configuration/device-restrictions-android-for-work.md). 
 
-Dotyczy: w pełni zarządzanych urządzeń z rozwiązaniem Android Enterprise
+Dotyczy: W pełni zarządzane urządzenia z rozwiązaniem Android Enterprise
 
 #### <a name="check-for-a-tpm-chipset-in-a-windows-10-device-compliance-policy---3617671---"></a>Sprawdzanie mikroukładu modułu TPM w zasadach zgodności urządzeń z systemem Windows 10<!-- 3617671 -->
 
@@ -127,7 +127,7 @@ Podczas tworzenia profilu konfiguracji urządzenia można umożliwić lub ograni
 
 Aby wyświetlić te funkcje, przejdź do [ustawień ograniczeń dotyczących urządzeń w przeglądarce Microsoft Edge](../configuration/device-restrictions-windows-10.md#microsoft-edge-browser).
 
-Dotyczy: system Windows 10 lub nowszy
+Dotyczy: Windows 10 lub nowszym
 
 #### <a name="expanded-support-for-android-enterprise-fully-managed-devices--preview-----3903241-3903244-3903246-----"></a>Rozszerzona obsługa w pełni zarządzanych urządzeń z rozwiązaniem Android Enterprise (wersja zapoznawcza)<!--   3903241, 3903244, 3903246   -->
 Nadal w publicznej wersji zapoznawczej rozszerzyliśmy naszą obsługę w pełni zarządzanych urządzeń z rozwiązaniem Android Enterprise (po raz pierwszy przedstawioną w styczniu 2019 w celu uwzględnienia następujących elementów:
@@ -235,7 +235,7 @@ Na urządzeniach z systemem Windows 10 lub nowszym możesz uruchomić urządzeni
 
 Aby wyświetlić listę i opis wszystkich ustawień kiosku, zobacz [Ustawienia urządzenia z systemem Windows 10 lub nowszym, które ma działać jako kiosk w usłudze Intune](../configuration/kiosk-settings-windows.md).
 
-Dotyczy: system Windows 10 lub nowszy
+Dotyczy: Windows 10 lub nowszym
 
 #### <a name="operational-logs-also-show-details-on-non-compliant-devices---4063755----"></a>Dzienniki operacyjne pokazują również informacje dotyczące niezgodnych urządzeń<!-- 4063755  -->
 Podczas przekierowywania dzienników do funkcji usługi Azure Monitor można kierować również dzienniki operacyjne. W ramach tej aktualizacji dzienniki operacyjne zawierają również informacje dotyczące niezgodnych urządzeń.
@@ -252,7 +252,7 @@ W ramach tej aktualizacji usługa Intune obsługuje konfigurowanie urządzeń Ze
 
 Aby uzyskać więcej informacji na temat tej funkcji, zobacz [Korzystanie z urządzeń Zebra i zarządzanie nimi za pomocą rozszerzeń dla mobilności w usłudze Intune](../configuration/android-zebra-mx-overview.md).
 
-Dotyczy: system Android
+Dotyczy: Android
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-management"></a>Zarządzanie urządzeniami
@@ -354,7 +354,7 @@ Po dodaniu skryptu programu PowerShell do profilu konfiguracji urządzenia skryp
 
 Aby uzyskać więcej informacji na temat korzystania z programu PowerShell, zobacz [Skrypty programu PowerShell w usłudze Intune](../apps/intune-management-extension.md).
 
-Dotyczy: system Windows 10 lub nowszy
+Dotyczy: Windows 10 lub nowszym
 
 #### <a name="macos-users-are-prompted-to-update-their-password---1873216---"></a>Użytkownicy systemu macOS otrzymują monit o zaktualizowanie swojego hasła<!-- 1873216 -->
 Usługa Intune wymusza ustawienie **ChangeAtNextAuth** na urządzeniach z systemem macOS. To ustawienie ma wpływ na użytkowników końcowych i urządzenia, które mają zasady zgodności haseł lub profile haseł w ograniczeniach dotyczących urządzenia. Użytkownicy końcowi są monitowani raz o zaktualizowanie swojego hasła. Ten monit jest wyświetlany zawsze, gdy użytkownik po raz pierwszy uruchamia zadanie, które wymaga uwierzytelniania, na przykład logowanie się na urządzeniu. Użytkownicy mogą również otrzymywać monit o zaktualizowanie swojego hasła podczas wykonywania czegokolwiek, co wymaga uprawnień administracyjnych, na przykład podczas żądania dostępu do pęku kluczy.
@@ -378,7 +378,7 @@ Wprowadziliśmy ulepszenia interfejsu użytkownika dla dostępu warunkowego w ko
 #### <a name="kiosk-browser-and-microsoft-edge-browser-apps-can-run-on-windows-10-devices-in-kiosk-mode---2935135-----"></a>Aplikacje Kiosk Browser i Microsoft Edge mogą pracować na urządzeniach z systemem Windows 10 w trybie kiosku<!-- 2935135   -->
 Urządzenia z systemem Windows 10 pracujące w trybie kiosku umożliwiają uruchamianie jednej lub wielu aplikacji. Ta aktualizacja obejmuje kilka zmian dotyczących korzystania z aplikacji w trybie kiosku, w tym:
 
-- Możliwość uruchamiania przeglądarek Microsoft Edge i Kiosk Browser jako aplikacji na urządzeniu kiosku (**Konfiguracja urządzenia** > **Profile** > **Nowy profil** >  **System Windows 10 i nowsze** dla platformy > **Kiosk** dla typu profilu).
+- Możliwość uruchamiania przeglądarek Microsoft Edge i Kiosk Browser jako aplikacji na urządzeniu kiosku (**Konfiguracja urządzenia** > **Profile** > **Nowy profil** > **System Windows 10 i nowsze** dla platformy > **Kiosk** dla typu profilu).
 - Dostępne są nowe funkcje i ustawienia służące do zezwalania na nie lub ich ograniczania (**Konfiguracja urządzenia** > **Profile** > **Nowy profil** > **System Windows 10 i nowsze** dla platformy > **Ograniczenia dotyczące urządzeń** dla typu profilu), w tym:
 
 - Przeglądarka Microsoft Edge:
@@ -394,10 +394,10 @@ Aby uzyskać listę tych ustawień zobacz:
 - [Ograniczenia urządzeń z przeglądarką Microsoft Edge](../configuration/device-restrictions-windows-10.md#microsoft-edge-browser)
 - [Ograniczenia urządzeń dotyczące ulubionych i wyszukiwania](../configuration/device-restrictions-windows-10.md##favorites-and-search)
 
-Dotyczy: system Windows 10 lub nowszy
+Dotyczy: Windows 10 lub nowszym
 
 #### <a name="new-device-restriction-settings-for-ios-and-macos-devices---3448774-----"></a>Nowe ustawienia ograniczeń urządzeń z systemami iOS i macOS<!-- 3448774   -->
-Istnieje możliwość ograniczenia niektórych ustawień i funkcji na urządzeniach z systemami iOS i macOS (**Konfiguracja urządzenia** > **Profile** > **Nowy profil** >  **iOS** lub **macOS** dla platformy > **Ograniczenia urządzenia** dla typu profilu). Ta aktualizacja dodaje kolejne funkcje i ustawienia, które można kontrolować, w tym ustawianie czasu korzystania z urządzenia, zmienianie ustawień karty eSIM, planów komórkowych i nie tylko na urządzeniach z systemem iOS. Ponadto umożliwia opóźnianie widoczności aktualizacji oprogramowania dla użytkownika i blokowanie buforowania zawartości na urządzeniach z systemem macOS.
+Istnieje możliwość ograniczenia niektórych ustawień i funkcji na urządzeniach z systemami iOS i macOS (**Konfiguracja urządzenia** > **Profile** > **Nowy profil** > **iOS** lub **macOS** dla platformy > **Ograniczenia urządzenia** dla typu profilu). Ta aktualizacja dodaje kolejne funkcje i ustawienia, które można kontrolować, w tym ustawianie czasu korzystania z urządzenia, zmienianie ustawień karty eSIM, planów komórkowych i nie tylko na urządzeniach z systemem iOS. Ponadto umożliwia opóźnianie widoczności aktualizacji oprogramowania dla użytkownika i blokowanie buforowania zawartości na urządzeniach z systemem macOS.
 
 Aby wyświetlić funkcje i ustawienia, które można ograniczyć, zobacz:
 
@@ -540,7 +540,7 @@ Szablony administracyjne w usłudze Intune (**Konfiguracja urządzenia** > **Sza
 
 Aby dowiedzieć się więcej na temat tej funkcji, zobacz [szablony systemu Windows 10 służące do konfigurowania ustawień zasad grupy](../configuration/administrative-templates-windows.md).
 
-Dotyczy: system Windows 10 lub nowszy
+Dotyczy: Windows 10 lub nowszym
 
 #### <a name="use-smime-to-encrypt-and-sign-multiple-devices-for-a-user---1333642---"></a>Używanie protokołu S/MIME do szyfrowania i rejestrowania wielu urządzeń użytkownika<!-- 1333642 -->
 Ta aktualizacja obejmuje szyfrowanie poczty e-mail za pomocą protokołu S/MIME z użyciem profilu nowo zaimportowanego certyfikatu (**Konfiguracja urządzenia** > **Profil** > **Utwórz profil** > wybierz platformę > typ profilu **Zaimportowany certyfikat PKCS**). W usłudze Intune można importować certyfikaty w formacie PFX. Usługa Intune może następnie dostarczać te same certyfikaty do wielu urządzeń zarejestrowanych przez jednego użytkownika. Obejmuje to również:
@@ -587,7 +587,7 @@ W przypadku tworzenia profilu konfiguracji dla urządzeń z systemem iOS możesz
 Listę ustawień można znaleźć w temacie dotyczącym [ustawień wyświetlania komunikatów na ekranie blokady](../configuration/ios-device-features-settings.md#lock-screen-message).
 
 #### <a name="new-app-store-doc-viewing-gaming-device-restriction-settings-added-to-ios-devices---2827760--"></a>Do urządzeń z systemem iOS dodano nowe ustawienia ograniczeń urządzenia obejmujące sklep App Store, wyświetlanie dokumentów i gry<!-- 2827760-->
-W **obszarze Konfiguracja urządzeń** > **Profile** > **Utwórz profil** > **iOS** dla platformy > **ograniczenia dotyczące urządzeń** dla typu profilu > sklepu z **aplikacjami, wyświetlania dokumentów, gier**, dodano następujące ustawienia: zezwól aplikacjom zarządzanym na zapisywanie kontaktów na kontach niezarządzanych kontaktów Zezwalanie niezarządzanym aplikacjom na odczytywanie z zarządzanych kont kontaktów aby wyświetlić te ustawienia, przejdź do obszaru [ograniczenia urządzeń z systemem iOS](../configuration/device-restrictions-ios.md#app-store-doc-viewing-gaming).
+W obszarze **Konfiguracja urządzenia** > **profile** > **Utwórz profil** > **iOS** dla platformy > **ograniczenia dotyczące urządzeń** dla typu profilu > **sklepu z aplikacjami, wyświetlania dokumentów,** gier, zostaną dodane następujące ustawienia: Zezwól zarządzanym aplikacjom na zapisywanie kontaktów na kontach niezarządzanych kontaktów Zezwalaj niezarządzanym aplikacjom na odczytywanie z zarządzanych kont kontaktów, aby wyświetlić te ustawienia Przejdź do pozycji [ograniczenia urządzeń z systemem iOS](../configuration/device-restrictions-ios.md#app-store-doc-viewing-gaming).
 
 #### <a name="new-notification-hints-and-keyguard-settings-to-android-enterprise-device-owner-devices---3201839-3201843---"></a>Nowe ustawienia powiadomień, wskazówek i funkcji blokowania klawiatury na urządzeniach właściciela urządzenia z systemem Android Enterprise<!-- 3201839 3201843 -->
 Ta aktualizacja obejmuje kilka nowych funkcji dotyczących urządzeń z systemem Android Enterprise uruchamianych jako właściciel urządzenia. Aby korzystać z tych funkcji, przejdź do pozycji **Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > w polu **Platforma** wybierz wartość **Android Enterprise** > w polu **Typ profilu** wybierz wartość **Tylko właściciel urządzenia** > **Ograniczenia urządzenia**.
@@ -607,7 +607,7 @@ Zawsze włączoną sieć VPN możesz włączyć za pomocą ustawień **Konfigura
 #### <a name="new-setting-to-end-processes-in-task-manager-on-windows-10-devices---3285177---"></a>Nowe ustawienie służące do kończenia procesów w Menedżerze zadań na urządzeniach z systemem Windows 10<!-- 3285177 --> 
 Ta aktualizacja obejmuje nowe ustawienie służące do kończenia procesów w Menedżerze zadań na urządzeniach z systemem Windows 10. Używając profilu konfiguracji urządzenia (ustawienia w obszarze **Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > w polu **Platforma** wybierz wartość **Windows 10** > w polu **Typ profilu** wybierz wartość **Ograniczenia dotyczące urządzeń** > **Ogólne**), możesz zezwolić na to ustawienie lub je zablokować.
 Aby zapoznać się z bieżącymi ustawieniami, zobacz [ustawienia ograniczeń urządzeń z systemem Windows 10](../configuration/device-restrictions-windows-10.md).
-Dotyczy: system Windows 10 lub nowszy
+Dotyczy: Windows 10 lub nowszym
 
 #### <a name="use-microsoft-recommended-settings-with-security-baselines-public-preview---2055484-----"></a>Używanie ustawień zalecanych przez firmę Microsoft z punktami odniesienia zabezpieczeń (publiczna wersja zapoznawcza)<!-- 2055484   -->
 
@@ -617,7 +617,7 @@ Ta funkcja jest dostępna w publicznej wersji zapoznawczej, więc wszystkie prof
 
 Aby dowiedzieć się więcej na temat punktów odniesienia zabezpieczeń, zobacz temat [Tworzenie punktu odniesienia zabezpieczeń systemu Windows 10 w usłudze Intune](../protect/security-baselines-monitor.md).
 
-Ta funkcja dotyczy: systemu Windows 10 i nowszych
+Ta funkcja ma zastosowanie do: Windows 10 lub nowszym
 
 #### <a name="non-administrators-can-enable-bitlocker-on-windows-10-devices-joined-to-azure-ad---2147379-----"></a>Użytkownicy inni niż administratorzy mogą włączyć funkcję BitLocker na urządzeniach z systemem Windows 10 dołączonych do usługi Azure AD<!-- 2147379   -->
 Włączenie ustawień funkcji BitLocker na urządzeniach z systemem Windows 10 (**Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **Windows 10 i nowsze** jako platforma > **Endpoint Protection** jako typ profilu > **Szyfrowanie systemu Windows**) oznacza dodanie ustawień funkcji BitLocker.
@@ -627,13 +627,13 @@ Ta aktualizacja obejmuje nowe ustawienie funkcji BitLocker, które zezwala użyt
 Aby wyświetlić te ustawienia, zobacz [Ustawienia programu Endpoint Protection dla systemu Windows 10](../protect/endpoint-protection-windows-10.md#windows-encryption).
 
 #### <a name="check-for-configuration-manager-compliance---2192052--eepublished----"></a>Sprawdzanie zgodności w programie Configuration Manager<!-- 2192052  eepublished  -->
-Ta aktualizacja zawiera nowe ustawienie zgodności programu System Center Configuration Manager (**Zgodność urządzenia** > **Zasady** > **Utwórz zasady** > **System Windows 10 i nowsze** > **Zgodność z programem Configuration Manager**). Program Configuration Manager wysyła sygnały zgodności do usługi Intune. Przy użyciu tego ustawienia można wymagać, aby wszystkie sygnały programu Configuration Manager zwracały stan „zgodne”.
+Ta aktualizacja zawiera nowe ustawienie zgodności programu Configuration Manager (**Zgodność urządzenia** > **Zasady** > **Utwórz zasady** > **System Windows 10 i nowsze** > **Zgodność z programem Configuration Manager**). Program Configuration Manager wysyła sygnały zgodności do usługi Intune. Przy użyciu tego ustawienia można wymagać, aby wszystkie sygnały programu Configuration Manager zwracały stan „zgodne”.
 
 Na przykład można wymagać, aby na urządzeniach były zainstalowane wszystkie aktualizacje oprogramowania. W programie Configuration Manager to wymaganie ma stan „Zainstalowano”. Jeśli jakiekolwiek programy na urządzeniu mają nieznany stan, to urządzenie jest niezgodne w usłudze Intune.
 
 To ustawienie opisano w sekcji [Zgodność z programem Configuration Manager](../protect/compliance-policy-create-windows.md#configuration-manager-compliance).
 
-Dotyczy: system Windows 10 lub nowszy
+Dotyczy: Windows 10 lub nowszym
 
 #### <a name="customize-wallpaper-on-supervised-ios-devices-using-a-device-configuration-profile---2809324-----"></a>Dostosowywanie tapety na urządzeniach nadzorowanych z systemem iOS przy użyciu profilu konfiguracji urządzenia<!-- 2809324   -->
 Podczas tworzenia profilu konfiguracji urządzenia dla urządzeń z systemem iOS można dostosowywać niektóre funkcje (**Konfiguracja urządzeń** > **Profile** > **Utwórz profil** > **iOS** dla platformy > **Funkcje urządzenia** dla typu profilu). Ta aktualizacja obejmuje nowe ustawienia obszaru **Tapeta**, które umożliwiają administratorowi użycie obrazu PNG, JPG lub JPEG na ekranie głównym lub ekranie blokady. Te ustawienia dotyczące tapety mają zastosowanie tylko na urządzeniach nadzorowanych. 
@@ -650,7 +650,7 @@ Ustawienie **Udostępnianie kontaktów za pośrednictwem połączenia Bluetooth*
 
 Aby wyświetlić aktualną listę ustawień, zobacz [Ustawienia urządzeń z systemem Android Enterprise w celu zezwolenia na funkcje lub ich ograniczenia](../configuration/device-restrictions-android-for-work.md).
 
-Dotyczy: właściciel urządzenia w systemie Android Enterprise
+Właściciel urządzenia z systemem Android Enterprise
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -695,7 +695,7 @@ Usługa Intune ma wbudowaną funkcję rejestrowania inspekcji, która śledzi zd
 Więcej informacji na temat tej funkcji zawiera artykuł [Wysyłanie danych dziennika do magazynu, centrów zdarzeń lub analizy dzienników w usłudze Intune](../review-logs-using-azure-monitor.md).
 
 #### <a name="skip-more-setup-assistant-screens-on-an-ios-dep-device---2687509----"></a>Pomijanie większej liczby ekranów Asystenta ustawień na urządzeniu DEP z systemem iOS<!-- 2687509  -->
-Oprócz ekranów, które obecnie możesz pominąć, możesz ustawić urządzenia programu DEP z systemem iOS tak, aby pomijały następujące ekrany Asystenta ustawień podczas rejestrowania urządzenia z systemem iOS przez użytkownika: Ton wyświetlacza, Prywatność, Migracja systemu Android, Przycisk Strona główna, iMessage i FaceTime, Dołączanie, Migracja urządzenia Watch, Wygląd, Czas korzystania z urządzenia, Aktualizacja oprogramowania, Instalator SIM.
+Oprócz ekranów, które obecnie możesz pominąć, możesz skonfigurować urządzenia z systemem iOS objęte programem DEP tak, aby następujące ekrany Asystenta ustawień były pomijane podczas rejestracji urządzenia przez użytkownika: Ton wyświetlacza, Prywatność, Migracja systemu Android, Przycisk Strona główna, iMessage i FaceTime, Przechodzenie do usługi, Migracja urządzenia Watch, Wygląd, Czas korzystania z urządzenia, Aktualizacja oprogramowania, Instalator SIM.
 Aby wybrać ekrany do pominięcia, przejdź kolejno do pozycji **Rejestrowanie urządzenia** > **Rejestracja Apple** > **Tokeny programu rejestracji** > wybierz token > **Profile** > wybierz profil > **Właściwości** > **Dostosowywanie Asystenta ustawień** > wybierz pozycję **Ukryj** dla ekranów do pominięcia > **OK**.
 Jeśli tworzysz nowy profil lub edytujesz profil, wybrane pomijane ekrany muszą być synchronizowane z serwerem MDM firmy Apple. Użytkownicy mogą wydać ręczną synchronizację urządzeń, aby nie było żadnego opóźnienia podczas pobierania zmian profilu.
 
@@ -792,15 +792,15 @@ Ta aktualizacja obejmuje nowe ustawienia dla urządzeń z systemem iOS i macOS, 
 **Ustawienia systemu iOS**: 
 - Ogólne: Blokuj usuwanie aplikacji (tylko tryb nadzorowany)
 - Ogólne: Blokuj tryb ograniczony USB (tylko tryb nadzorowany)
-- Ogólne: Wymuszaj automatyczną datę i godzinę (tylko tryb nadzorowany)
-- Hasło: Blokuj autowypełnianie hasła (tylko tryb nadzorowany)
+- Ogólne: Wymuszaj automatyczne ustawianie daty i godziny (tylko tryb nadzorowany)
+- Hasło: Blokuj automatyczne wypełnianie haseł (tylko tryb nadzorowany)
 - Hasło: Blokuj zbliżeniowe żądania haseł (tylko tryb nadzorowany)
-- Hasło: Blokuj udostępnianie hasła (tylko tryb nadzorowany)
+- Hasło: Blokuj udostępnianie haseł (tylko tryb nadzorowany)
 
 **Ustawienia systemu macOS**: 
-- Hasło: Blokuj Autowypełnianie hasła
+- Blokuj automatyczne wypełnianie haseł
 - Hasło: Blokuj zbliżeniowe żądania haseł
-- Hasło: Blokuj udostępnianie haseł
+- Blokuj udostępnianie haseł
 
 Aby dowiedzieć się więcej o tych ustawieniach, zobacz ustawienia ograniczeń urządzeń z systemem [iOS](../configuration/device-restrictions-ios.md) i [macOS](../configuration/device-restrictions-macos.md).
 
@@ -896,7 +896,7 @@ Rozwiązywanie problemów z instalacją aplikacji klienckich można rozpocząć 
 #### <a name="create-dns-suffixes-in-vpn-configuration-profiles-on-devices-running-windows-10---1333668---"></a>Tworzenie sufiksów DNS w profilach konfiguracji sieci VPN na urządzeniach z systemem Windows 10<!-- 1333668 -->
 Podczas tworzenia profilu konfiguracji urządzenia sieci VPN (**Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **Windows 10 i nowsze** (platforma) > **VPN** (typ profilu)) wprowadzasz pewne ustawienia systemu DNS. Dzięki tej aktualizacji można również podać wiele **sufiksów DNS** w usłudze Intune. Korzystając z sufiksów DNS, możesz wyszukać zasób sieciowy za pomocą jego krótkiej nazwy, zamiast w pełni kwalifikowanej nazwy domeny (FQDN). Ta aktualizacja umożliwia również zmianę kolejności sufiksów DNS w usłudze Intune.
 Pole [Ustawienia sieci VPN systemu Windows 10](../configuration/vpn-settings-windows-10.md#dns-settings) zawiera aktualnie ustawienia systemu DNS.
-Dotyczy urządzeń z systemem Windows 10
+Dotyczy: Urządzenia z systemem Windows 10
 
 #### <a name="support-for-always-on-vpn-for-android-enterprise-work-profiles---1333705---"></a>Obsługa zawsze włączonej sieci VPN dla profilów roboczych systemu Android dla firm<!-- 1333705 -->
 Dzięki tej aktualizacji będziesz mieć możliwość używania zawsze włączonych połączeń sieci VPN na urządzeniach z systemem Android dla firm dzięki zarządzanym profilom służbowym. Zawsze włączone połączenia sieci VPN pozostają aktywne lub są natychmiast przywracane, gdy użytkownik odblokuje urządzenie, gdy urządzenie uruchomi się ponownie lub gdy zmieni się sieć bezprzewodowa. Połączenie można również przenieść do trybu „blokady”, który powoduje zablokowanie całego ruchu sieciowego do momentu uaktywnienia połączenia sieci VPN.
@@ -941,7 +941,7 @@ Dotyczy: system Windows 10 i nowsze oraz system iOS, obsługiwane w sieci Wi-Fi
 
 #### <a name="remotely-lock-uncompliant-devices---2064495---"></a>Zdalne blokowanie niezgodnych urządzeń<!-- 2064495 -->
 Gdy urządzenie jest niezgodne, możesz utworzyć akcję dotyczącą zasad zgodności, która zdalnie zablokuje urządzenie. W obszarze Intune > **Zgodność urządzenia** utwórz nowe zasady lub wybierz istniejące zasady, a następnie wybierz pozycję **Właściwości**. Wybierz kolejno pozycje **Akcje dotyczące niezgodności** > **Dodaj** i wybierz opcję zdalnego blokowania urządzenia.
-Obsługiwane na: 
+Obsługiwane w systemach: 
 - Android
 - iOS
 - macOS
@@ -953,7 +953,7 @@ Ta aktualizacja obejmuje następujące ulepszenia profilu konfiguracji urządzen
 - Obecnie w jednym urządzeniu można utworzyć wiele profilów kiosku. Dzięki tej aktualizacji usługa Intune będzie obsługiwać tylko jeden profil kiosku na urządzenie. Jeśli nadal potrzebujesz wielu profilów kiosku w jednym urządzeniu, możesz użyć niestandardowego identyfikatora URI.
 - W profilu **Kiosk z wieloma aplikacjami** można wybrać rozmiar kafelka aplikacji oraz porządek **układu menu Start** w siatce aplikacji. Jeśli wolisz szersze możliwości dostosowywania, możesz kontynuować przekazywanie pliku XML.
 - Ustawienia przeglądarki kiosku są przenoszone do ustawień **kiosku**. Obecnie ustawienia **przeglądarki internetowej kiosku** mają własną kategorię w witrynie Azure Portal.
-Dotyczy: system Windows 10 lub nowszy
+Dotyczy: Windows 10 lub nowszym
 
 #### <a name="pin-prompt-when-you-change-fingerprints-or-face-id-on-an-ios-device----2637704----"></a>Monit o podanie numeru PIN podczas zmieniania odcisków palców lub twarzy w funkcji Face ID na urządzeniu z systemem iOS <!-- 2637704  -->
 Użytkownicy są teraz monitowani o podanie numeru PIN po wprowadzeniu zmian biometrycznych na urządzeniu z systemem iOS. Obejmuje to zmiany zarejestrowanych odcisków palców lub twarzy w funkcji Face ID. Chronometraż monitu zależy od konfiguracji limitu czasu *Ponownie sprawdź wymagania dostępu po (minuty)* .  Jeśli numer PIN nie jest ustawiony, użytkownik jest monitowany o ustawienie go. 
@@ -980,7 +980,7 @@ Skrypty programu PowerShell w usłudze Intune mogą być przeznaczone dla grup z
 #### <a name="new-required-password-type-default-setting-for-android-android-enterprise---2649963---"></a>Nowe ustawienie domyślne „Wymagany typ hasła” dla systemów Android, Android Enterprise<!-- 2649963 -->
 Podczas tworzenia nowych zasad zgodności (**Intune** > **Zgodność urządzenia** > **Zasady** > **Utwórz zasady** > **Android** lub **Android enterprise** dla platformy > Zabezpieczenia systemu) wartość domyślna dla ustawienia **Wymagany typ hasła** ulega zmianie:
 
-Z: Ustawienie domyślne urządzenia Na: Co najmniej numeryczne
+Od: Ustawienie domyślne urządzenia Do: Co najmniej numeryczne
 
 Dotyczy: Android, Android Enterprise
 
@@ -1293,10 +1293,10 @@ Za pomocą programu Microsoft AutoUpdate możesz zarejestrować się w celu wcze
 ### <a name="device-configuration"></a>Konfiguracja urządzenia
 
 #### <a name="create-device-compliance-policy-using-firewall-settings-on-macos-devices---1497640---"></a>Tworzenie zasad zgodności urządzeń za pomocą ustawień zapory na urządzeniach z systemem macOS<!-- 1497640 -->
-Podczas tworzenia nowych zasad systemu macOS (**Zgodność urządzeń** > **Zasady** > **Tworzenie zasad**  >  **Platforma: macOS** > **Zabezpieczenia systemu**) dostępne są nowe ustawienia **Zapory**: 
+Podczas tworzenia nowych zasad systemu macOS (**Zgodność urządzeń** > **Zasady** > **Tworzenie zasad** > **Platforma: macOS** > **Zabezpieczenia systemu**) dostępne są nowe ustawienia **Zapory**: 
 
 - **Zapora**: skonfiguruj obsługę połączeń przychodzących w danym środowisku.
-- **Połączenia przychodzące**: **blokuj** wszystkie połączenia przychodzące poza wymaganymi dla podstawowych usług internetowych, np. DHCP, Bonjour i IPSec. To ustawienie blokuje również wszystkie usługi udostępniania.
+- **Połączenia przychodzące**: wybierz pozycję **Blokuj**, aby blokować wszystkie połączenia przychodzące poza wymaganymi dla podstawowych usług internetowych, np. DHCP, Bonjour i IPSec. To ustawienie blokuje również wszystkie usługi udostępniania.
 - **Tryb niewidzialności**: **włącz** tryb niewidzialności, aby zapobiegać odpowiadaniu przez komputer na żądania sondowania. Urządzenie nadal odpowiada na przychodzące żądania w przypadku autoryzowanych aplikacji.
 
 Dotyczy: macOS 10.12 i nowsze
@@ -1354,11 +1354,11 @@ W obszarze **Zgodność urządzenia** > **Zasady** > wybierz zasady > **Przeglą
 - Nie dotyczy. Wyświetlany jest również obraz, który informuje o liczbie urządzeń innych platform. Na przykład jeśli przeglądasz profil systemu iOS, nowy kafelek pokazuje liczbę urządzeń z systemem innym niż iOS, które także są przypisane do tego profilu. Zobacz [Zasady zgodności urządzeń](../protect/compliance-policy-monitor.md#view-status-of-device-policies).
 
 #### <a name="device-compliance-supports-3rd-party-anti-virus-solutions---2325484---"></a>Zasady zgodności urządzeń obsługują rozwiązania antywirusowe innych firm<!-- 2325484 -->
-Podczas tworzenia nowych zasad zgodności urządzeń (**Zgodność urządzeń** > **Zasady** > **Tworzenie zasad** > **Platforma: Windows 10 lub nowszy** > **Ustawienia** > **Zabezpieczenia systemu**) są dostępne nowe opcje **[zabezpieczeń urządzeń](../protect/compliance-policy-create-windows.md)** : 
+W przypadku tworzenia zasad zgodności urządzenia (**Zgodność urządzenia** > **Zasady** > **Utwórz zasady** > **Platforma: Windows 10 i nowsze** > **Ustawienia** > **Zabezpieczenia systemu**) istnieją nowe opcje w obszarze **[Zasady zabezpieczeń urządzeń](../protect/compliance-policy-create-windows.md)** : 
 - **Oprogramowanie antywirusowe**: w przypadku wybrania ustawienia **Wymagaj** możesz sprawdzić zgodność przy użyciu rozwiązań antywirusowych zarejestrowanych w Centrum zabezpieczeń systemu Windows, na przykład rozwiązań firmy Symantec i usługi Windows Defender. 
 - **Program antyszpiegowski**: w przypadku wybrania ustawienia **Wymagaj** możesz sprawdzić zgodność przy użyciu rozwiązań antyszpiegowskich zarejestrowanych w Centrum zabezpieczeń systemu Windows, na przykład rozwiązań firmy Symantec i usługi Windows Defender. 
 
-Dotyczy: system Windows 10 lub nowszy 
+Dotyczy: Windows 10 lub nowszym 
 
 ### <a name="device-enrollment"></a>Rejestrowanie urządzeń
 
@@ -1463,7 +1463,7 @@ Profile wdrażania rozwiązania AutoPilot można przypisywać do grup usługi Az
 #### <a name="set-compliance-by-device-location---851881----"></a>Ustawianie zgodności według lokalizacji urządzenia<!-- 851881 ! -->
 W niektórych sytuacjach możesz ograniczyć dostęp do zasobów firmy do określonej lokalizacji zdefiniowanej przez połączenie sieciowe. Możesz teraz tworzyć zasady zgodności (**Zgodność urządzenia** > **Lokalizacje**) na podstawie adresu IP urządzenia. Jeśli urządzenie zostanie przeniesione poza zakres adresów IP, nie będzie miało dostępu do zasobów firmy.
 
-Dotyczy: urządzeń z systemem Android 6.0 lub nowszym ze zaktualizowaną aplikacją Portal firmy
+Dotyczy: Urządzenia z systemem Android 6.0 lub nowszym ze zaktualizowaną aplikacją Portal firmy
 
 #### <a name="prevent-consumer-apps-and-experiences-on-windows-10-enterprise-rs4-autopilot-devices---1621980---"></a>Blokowanie aplikacji i środowisk konsumenckich na urządzeniach z rozwiązaniem AutoPilot w systemie Windows 10 Enterprise RS4<!-- 1621980 -->
 Będzie można zablokować instalację aplikacji i środowisk konsumenckich na urządzeniach z systemem Windows 10 Enterprise RS4 i rozwiązaniem AutoPilot. Aby wyświetlić tę funkcję, przejdź do pozycji **Intune** > **Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **Platforma** = **System Windows 10 lub nowszy** > **Typ profilu** = **Ograniczenia dotyczące urządzeń** > **Konfigurowanie** > **W centrum uwagi Windows** > **Funkcje dla konsumentów**. 
@@ -1477,7 +1477,7 @@ Możesz teraz wyszukiwać numery IMEI i numery seryjne w bloku Wszystkie urządz
 #### <a name="management-name-field-will-be-editable---1875989---"></a>Będzie można edytować pole Nazwa zarządzania<!-- 1875989 -->
 Możesz teraz edytować pole Nazwa zarządzania w bloku **Właściwości** urządzenia. Aby edytować to pole, wybierz pozycję **Urządzenia** > **Wszystkie urządzenia** > wybierz urządzenie > **Właściwości**. Pola nazwy zarządzania można używać do unikatowego identyfikowania urządzenia.
 
-#### <a name="new-all-devices-filter-device-category---1878520---"></a>Nowy filtr listy Wszystkie urządzenia: Kategoria urządzeń<!-- 1878520 -->
+#### <a name="new-all-devices-filter-device-category---1878520---"></a>Nowy filtr Wszystkie urządzenia: Kategoria urządzenia<!-- 1878520 -->
 Obecnie można filtrować listę **Wszystkie urządzenia** według kategorii urządzeń. Aby to zrobić, wybierz pozycję **Urządzenia** > **Wszystkie urządzenia** > **Filtr** > **Kategoria urządzeń**.
 
 #### <a name="use-teamviewer-to-screen-share-ios-and-macos-devices---1985547---"></a>Używanie programu TeamViewer do udostępniania ekranów urządzeń z systemami iOS i MacOS<!-- 1985547 -->
@@ -1603,22 +1603,22 @@ Dzięki tej aktualizacji funkcja [Windows Defender Credential Guard](https://doc
 
 Następujące technologie zależne są włączane automatycznie podczas konfigurowania funkcji Credential Guard: 
 
-- **Włącz zabezpieczenia oparte na wirtualizacji (VBS)** : włącza zabezpieczenia oparte na wirtualizacji (VBS) podczas następnego ponownego uruchomienia. Zabezpieczenia oparte na wirtualizacji używają funkcji hypervisor systemu Windows, aby zapewniać obsługę usług zabezpieczeń, i wymagają bezpiecznego rozruchu.
-- **Bezpieczny rozruch z bezpośrednim dostępem do pamięci (DMA)** : włącza zabezpieczenia VBS z funkcją bezpiecznego rozruchu i bezpośrednim dostępem do pamięci. Ochrona DMA wymaga obsługi sprzętowej i można ją włączyć tylko na prawidłowo skonfigurowanych urządzeniach. 
+- **Zabezpieczenia oparte na wirtualizacji (VBS)** : włącza funkcję VBS podczas następnego rozruchu. Zabezpieczenia oparte na wirtualizacji używają funkcji hypervisor systemu Windows, aby zapewniać obsługę usług zabezpieczeń, i wymagają bezpiecznego rozruchu.
+- **Bezpieczny rozruch przy użyciu bezpośredniego dostępu do pamięci (DMA)** : włącza funkcję VBS z opcją bezpiecznego rozruchu i bezpośrednim dostępem do pamięci. Ochrona DMA wymaga obsługi sprzętowej i można ją włączyć tylko na prawidłowo skonfigurowanych urządzeniach. 
 
 #### <a name="use-a-custom-subject-name-on-scep-certificate---2064190---"></a>Użycie niestandardowej nazwy podmiotu w certyfikacie SCEP<!-- 2064190 -->
 Istnieje możliwość użycia nazwy pospolitej **OnPremisesSamAccountName** w niestandardowej nazwie podmiotu dla profilu certyfikatu SCEP. Na przykład możesz użyć nazwy `CN={OnPremisesSamAccountName})`.
 
 #### <a name="block-camera-and-screen-captures-on-android-enterprise-work-profiles---1098977---"></a>Blokowanie aparatu i przechwytywania ekranu w profilach służbowych Android Enterprise<!-- 1098977 -->
 Podczas konfigurowania ograniczeń urządzenia z systemem Android można zablokować dwie nowe właściwości: 
-- Aparat: blokuje dostęp do wszystkich aparatów w urządzeniu
+- Aparat fotograficzny: blokuje dostęp do wszystkich aparatów w urządzeniu
 - Przechwytywanie ekranu: blokuje przechwytywanie ekranu i wyświetlanie zawartości na urządzeniach wyświetlających, które nie mają zabezpieczonego wyjścia wideo
 
 Dotyczy profilów służbowych Android Enterprise.
 
 #### <a name="use-cisco-anyconnect-client-for-ios---1333708---"></a>Korzystanie z klienta Cisco AnyConnect dla systemu iOS<!-- 1333708 -->
 
-W przypadku tworzenia nowego profilu sieci VPN dla systemu iOS są teraz dostępne dwie opcje: **Cisco AnyConnect** i **Cisco Legacy AnyConnect**. Profile Cisco AnyConnect obsługują wersję 4.0.7x i nowsze. Istniejące profile sieci VPN oprogramowania Cisco AnyConnect dla systemu iOS zostaną oznaczone etykietą **Cisco Legacy AnyConnect** i będą nadal działały z oprogramowaniem AnyConnect 4.0.5x oraz jego starszymi wersjami, jak ma to miejsce obecnie.
+W przypadku tworzenia nowego profilu sieci VPN dla systemu iOS masz teraz dwie opcje: **Cisco AnyConnect** i **Cisco Legacy AnyConnect**. Profile Cisco AnyConnect obsługują wersję 4.0.7x i nowsze. Istniejące profile sieci VPN oprogramowania Cisco AnyConnect dla systemu iOS zostaną oznaczone etykietą **Cisco Legacy AnyConnect** i będą nadal działały z oprogramowaniem AnyConnect 4.0.5x oraz jego starszymi wersjami, jak ma to miejsce obecnie.
 
 > [!NOTE]
 > Ta zmiana dotyczy tylko systemu iOS. W przypadku platform systemów Android i macOS oraz profilu służbowego Android Enterprise nadal będzie dostępna tylko jedna opcja oprogramowania Cisco AnyConnect.
@@ -1799,7 +1799,7 @@ Administrator usługi Intune może skonfigurować te ustawienia, aby włączyć 
 
 #### <a name="configure-gatekeeper-to-control-macos-app-download-source---1690459---"></a>Konfigurowanie programu Gatekeeper w celu kontrolowania źródła pobierania aplikacji systemu macOS<!-- 1690459 -->
 
-Możliwe jest skonfigurowanie programu Gatekeeper do ochrony urządzeń przed aplikacjami przez kontrolowanie lokalizacji, z których można pobierać aplikacje. Można skonfigurować następujące źródła pobierania: **Sklep Mac App Store**, **Sklep Mac App Store i zidentyfikowani deweloperzy** lub **Dowolne**. Ponadto możliwe jest skonfigurowanie, czy użytkownicy mogą instalować aplikacje, przytrzymując klawisz Control i klikając przyciskiem myszy, aby przesłonić kontrolki programu Gatekeeper.
+Możliwe jest skonfigurowanie programu Gatekeeper do ochrony urządzeń przed aplikacjami przez kontrolowanie lokalizacji, z których można pobierać aplikacje. Można skonfigurować następujące źródła pobierania: **Mac App Store**, **Mac App Store i zidentyfikowani deweloperzy** lub **Dowolne miejsce**. Ponadto możliwe jest skonfigurowanie, czy użytkownicy mogą instalować aplikacje, przytrzymując klawisz Control i klikając przyciskiem myszy, aby przesłonić kontrolki programu Gatekeeper.
 
 Te ustawienia można znaleźć w obszarze **Konfiguracja urządzenia** -> **Utwórz profil** -> **macOS** -> **Endpoint Protection**.
 
@@ -1852,7 +1852,7 @@ Aby uzyskać więcej informacji na temat tworzenia kanałów wdrażania w usłud
 
 ### <a name="new-windows-defender-exploit-guard-settings---1631893---"></a>Nowe ustawienia funkcji Windows Defender Exploit Guard<!-- 1631893 -->
 
-Udostępniono sześć nowych ustawień funkcji <strong>Zmniejszenie obszaru ataków</strong> oraz rozszerzono możliwości funkcji <strong>Kontrolowany dostęp do folderów: Ochrona folderów</strong>. Te ustawienia można znaleźć w obszarze: Konfiguracja urządzenia\Profile\
+Udostępniono sześć nowych ustawień funkcji <strong>Zmniejszenie obszaru ataków</strong> oraz rozszerzono możliwości funkcji <strong>Kontrolowany dostęp do folderów: Ochrona folderów</strong>. Te ustawienia można znaleźć w następującej lokalizacji: Konfiguracja urządzeń\Profile\
 Utwórz profil\Endpoint Protection\Windows Defender Exploit Guard.
 
 #### <a name="attack-surface-reduction"></a>Zmniejszenie obszaru ataków
@@ -1896,7 +1896,7 @@ Możliwe jest tworzenie niestandardowych kategorii książek elektronicznych, a 
 Od dnia 30 kwietnia 2018 r. opcja **Prześlij opinię** w aplikacji Portal firmy dla systemu Windows działa tylko na urządzeniach z wersją Rocznicowa aktualizacja systemu Windows 10 (1607) lub nowszą. Opcja wysyłania opinii nie jest już obsługiwana podczas korzystania z aplikacji Portal firmy dla systemu Windows w przypadku systemu:  
 - Windows 10, wersja 1507  
 - Windows 10, wersja 1511  
-- Windows Phone 8,1 
+- Windows Phone 8,1 
 
 Jeśli na Twoim urządzeniu jest uruchomiony system Windows 10 RS1 lub nowszy, pobierz najnowszą wersję aplikacji Portal firmy systemu Windows dostępną w sklepie Store. Jeśli używasz nieobsługiwanej wersji, przekaż opinię za pośrednictwem następujących kanałów: 
 - Aplikacja Centrum opinii w systemie Windows 10
@@ -1906,7 +1906,7 @@ Jeśli na Twoim urządzeniu jest uruchomiony system Windows 10 RS1 lub nowszy, p
 
 - **Włącz przyspieszanie grafiki**: administratorzy mogą włączyć wirtualny procesor graficzny dla funkcji Windows Defender Application Guard. To ustawienie umożliwia procesorowi CPU przekazanie renderowania grafiki do procesora vGPU. Może to poprawić wydajność podczas pracy z witrynami internetowymi bogatymi w grafikę lub podczas oglądania filmu wideo znajdującego się w kontenerze.
 
-- **Zapisywanie plików na hoście**: Administratorzy mogą włączyć przekazywanie plików z przeglądarki Microsoft Edge działającej w kontenerze do systemu plików hosta. Włączenie tej opcji pozwala użytkownikom na pobieranie plików z przeglądarki Microsoft Edge w kontenerze do systemu plików hosta.
+- **Zapisywanie plików na hoście**: administratorzy mogą włączyć przekazywanie plików z przeglądarki Microsoft Edge działającej w kontenerze do systemu plików hosta. Włączenie tej opcji pozwala użytkownikom na pobieranie plików z przeglądarki Microsoft Edge w kontenerze do systemu plików hosta.
 
 #### <a name="mam-protection-policies-targeted-based-on-management-state---1665993---"></a>Zasady ochrony funkcji zarządzania aplikacjami mobilnymi określane na podstawie stanu zarządzania<!-- 1665993 -->
 Możliwe jest określanie zasad zarządzania aplikacjami mobilnymi na podstawie stanu zarządzania urządzenia:
@@ -1925,7 +1925,7 @@ Poprawiliśmy język w aplikacji Portal firmy dla systemu Windows 10, aby była 
 W ramach dążenia do zapewnienia użytkownikom końcowym większej kontroli nad ich danymi i ochroną prywatności zostały opublikowane aktualizacje dotyczące naszej dokumentacji, w których opisano sposób wyświetlania i usuwania danych przechowywanych lokalnie przy użyciu aplikacji Portal firmy. Te aktualizacje można znaleźć w następujących artykułach:
 
 - **Android**: [Jak usunąć urządzenie z systemem Android z usługi Intune](/intune-user-help/unenroll-your-device-from-intune-android)
-- **Android (jeśli użytkownik odrzucił warunki użytkowania**: [Usuwanie urządzenia z zarządzania w przypadku odrzucenia warunków użytkowania](/intune-user-help/unenroll-your-device-from-intune-if-you-declined-terms-of-use-android)
+- **Android, jeśli użytkownik odrzucił warunki użytkowania**: [Usuwanie urządzenia z zarządzania w przypadku odrzucenia warunków użytkowania](/intune-user-help/unenroll-your-device-from-intune-if-you-declined-terms-of-use-android)
 - **iOS**: [Usuwanie urządzenia z systemem iOS z usługi Intune](/intune-user-help/unenroll-your-device-from-intune-ios)
 - **Windows**: [Usuwanie urządzenia z systemem Windows z usługi Intune](/intune-user-help/unenroll-your-device-from-intune-windows)
 
@@ -2333,8 +2333,6 @@ Dostępne są teraz nowe procesy i narzędzia służące do przenoszenia użytko
 - Kopiowanie zasad i profilów z konsoli programu Configuration Manager do usługi Intune w witrynie Azure Portal
 - Przenoszenie podzbioru użytkowników do usługi Intune w witrynie Azure Portal przy zachowaniu pozostałych w ramach hybrydowego zarządzania urządzeniami przenośnymi
 - Migrowanie urządzeń do usługi Intune w witrynie Azure Portal bez konieczności ich ponownego rejestrowania
-
-Aby uzyskać więcej informacji, zobacz [Migrowanie użytkowników i urządzeń hybrydowego zarządzania urządzeniami przenośnymi do autonomicznej usługi Intune](https://docs.microsoft.com/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
 
 ### <a name="on-premises-exchange-connector-high-availability-support----676614---"></a>Obsługa wysokiej dostępności łącznika lokalnego programu Exchange <!-- 676614 -->
 Gdy łącznik programu Exchange utworzy połączenie z programem Exchange za pomocą określonego serwera CAS, będzie mieć możliwość odnajdywania innych serwerów CAS. Jeśli podstawowe zabezpieczenia dostępu kodu będą niedostępne, łącznik przejdzie w tryb failover, korzystając z innych zabezpieczeń dostępu kodu (jeśli będą dostępne) do momentu przywrócenia dostępności podstawowych zabezpieczeń dostępu kodu. Szczegółowe informacje znajdują się w temacie [Obsługa wysokiej dostępności łącznika lokalnego programu Exchange](../protect/exchange-connector-install.md#on-premises-intune-exchange-connector-high-availability-support).
@@ -2853,7 +2851,7 @@ Usługa Intune obsługuje teraz ograniczanie rejestracji urządzeń z systemem A
 ### <a name="restrict-android-ios-and-macos-device-personally-owned-device-enrollment-----1333272--1333275-1245709----"></a>Ograniczanie rejestracji urządzeń osobistych z systemem Android, iOS lub macOS <!--- 1333272,  1333275, 1245709 --->
 Usługa Intune może ograniczać rejestrację urządzenia osobistego, stosując białą listę numerów IMEI urządzeń firmowych. Ta funkcjonalność usługi Intune została teraz rozszerzona na systemy iOS, Android i macOS przy użyciu numerów seryjnych urządzeń. Przekazanie numerów seryjnych do usługi Intune pozwala wstępnie zadeklarować urządzenia jako firmowe. Ograniczenia rejestracji umożliwiają blokowanie urządzeń osobistych („Przynieś własne urządzenie” — BYOD), aby umożliwić rejestrację tylko dla urządzeń należących do firmy. Dowiedz się więcej o [ograniczeniach rejestracji urządzenia](../enrollment/enrollment-restrictions-set.md).
 
-Aby zaimportować numery seryjne, przejdź do pozycji **Rejestrowanie urządzenia** > **Identyfikatory urządzeń firmowych** i kliknij pozycję **Dodaj**, a następnie przekaż plik CSV (bez nagłówka, dwie kolumny numeru seryjnego i szczegóły, takie jak numery IMEI). Aby ograniczyć urządzenia osobiste, przejdź do lokalizacji **Rejestracja urządzeń**  >  **Ograniczenia rejestracji**. W obszarze **Ograniczenia typu urządzeń** wybierz pozycję **Domyślne**, a następnie wybierz pozycję **Konfiguracje platform**. Możesz wybrać pozycję **Zezwalaj** lub **Blokuj** dla urządzeń osobistych z systemem iOS, Android lub macOS.
+Aby zaimportować numery seryjne, przejdź do pozycji **Rejestrowanie urządzenia** > **Identyfikatory urządzeń firmowych** i kliknij pozycję **Dodaj**, a następnie przekaż plik CSV (bez nagłówka, dwie kolumny numeru seryjnego i szczegóły, takie jak numery IMEI). Aby ograniczyć urządzenia osobiste, przejdź do lokalizacji **Rejestracja urządzeń** > **Ograniczenia rejestracji**. W obszarze **Ograniczenia typu urządzeń** wybierz pozycję **Domyślne**, a następnie wybierz pozycję **Konfiguracje platform**. Możesz wybrać pozycję **Zezwalaj** lub **Blokuj** dla urządzeń osobistych z systemem iOS, Android lub macOS.
 
 
 ### <a name="new-device-action-to-force-devices-to-sync-with-intune---711369---"></a>Nowa akcja urządzenia wymuszająca synchronizację urządzeń z usługą Intune<!-- 711369 -->
@@ -2876,13 +2874,13 @@ W tej wersji administratorzy mogą teraz przypisać Sklep Microsoft dla Firm jak
 ### <a name="ui-updates-to-the-company-portal-website--1313244-part-1--"></a>Aktualizacje interfejsu użytkownika witryny internetowej Portal firmy<!--1313244 part 1-->
 Wprowadziliśmy kilka aktualizacji interfejsu użytkownika [witryny internetowej Portal firmy](https://portal.manage.microsoft.com) w celu ulepszenia środowiska użytkownika końcowego.
 
-- __Ulepszenia kafelków aplikacji__ — ikony aplikacji będą teraz wyświetlane z automatycznie wygenerowanym tłem określanym na podstawie dominującego koloru ikony (jeśli można będzie go wykryć). O ile będzie to miało zastosowanie, to tło zastąpi szare obramowanie, które było wcześniej widoczne na kafelkach aplikacji.
+- __Ulepszenia kafelków aplikacji__:  ikony aplikacji będą teraz wyświetlane z automatycznie wygenerowanym tłem określanym na podstawie dominującego koloru ikony (jeśli można będzie go wykryć). O ile będzie to miało zastosowanie, to tło zastąpi szare obramowanie, które było wcześniej widoczne na kafelkach aplikacji.
 
     Witryna internetowa Portal firmy wyświetla w nadchodzącej wersji duże ikony, jeśli tylko to możliwe. Zalecamy, aby administratorzy IT podczas publikowania aplikacji korzystali z ikon o wysokiej rozdzielczości o rozmiarze co najmniej 120 x 120 pikseli. 
 
-- __Zmiany nawigacji__ — elementy paska nawigacji zostały przeniesione do menu typu „hamburger” znajdującego się w lewym górnym rogu. Strona Kategorie została usunięta. Użytkownicy mogą teraz filtrować zawartość według kategorii podczas przeglądania.
+- __Zmiany nawigacji__: elementy paska nawigacji zostały przeniesione do menu typu „hamburger” znajdującego się w lewym górnym rogu. Strona Kategorie została usunięta. Użytkownicy mogą teraz filtrować zawartość według kategorii podczas przeglądania.
 
-- __Aktualizacje sekcji Polecane aplikacje__ — do witryny dodaliśmy dedykowaną stronę, na której użytkownicy mogą przeglądać aplikacje wybrane przez Ciebie do polecania. Dostosowaliśmy również interfejs użytkownika w sekcji Polecane na stronie głównej.
+- __Aktualizacje sekcji Polecane aplikacje__: Do witryny dodaliśmy dedykowaną stronę, na której użytkownicy mogą przeglądać aplikacje wybrane przez Ciebie do polecania. Dostosowaliśmy również interfejs użytkownika w sekcji Polecane na stronie głównej.
 
 ### <a name="ibooks-support-for-the-company-portal-website--1231841--"></a>Obsługa aplikacji iBooks w witrynie internetowej Portal firmy<!--1231841-->
 Dodaliśmy dedykowaną stronę do witryny internetowej Portal firmy, która umożliwia użytkownikom przeglądanie i pobieranie plików iBooks. 
@@ -2960,7 +2958,7 @@ Aby uzyskać więcej informacji, zobacz [Ustawienia programu Endpoint Protection
 ### <a name="new-settings-for-windows-10-device-restriction-profile----978527--978550-978569-1050031-1058611-----"></a>Nowe ustawienia dla profilu ograniczeń urządzenia z systemem Windows 10<!--- 978527,  978550, 978569, 1050031, 1058611,  --->
 W tej wersji dodano nowe ustawienia profilu ograniczeń urządzenia z systemem Windows 10 w następujących kategoriach:
 
-- Usługa Windows Defender
+- Windows Defender
 - Sieć komórkowa i łączność
 - Środowisko ekranu blokady
 - Ochrona prywatności
@@ -3003,7 +3001,7 @@ Dla użytkowników urządzeń z systemem iOS nasz nowy selektor konta może być
 ## <a name="may-2017"></a>Maj 2017 r.
 
 ### <a name="change-your-mdm-authority-without-unenrolling-managed-devices--1103950--"></a>Zmiana urzędu MDM bez wyrejestrowania zarządzanych urządzeń<!--1103950-->
-Teraz będzie można zmienić urząd MDM bez konieczności kontaktowania się z działem pomocy technicznej firmy Microsoft oraz wyrejestrowywania i ponownego rejestrowania istniejących urządzeń zarządzanych. W konsoli programu Configuration Manager można [zmienić urząd MDM](/sccm/mdm/deploy-use/change-mdm-authority), wybierając opcję Ustaw Menedżera konfiguracji (hybrydowe) zamiast opcji Microsoft Intune (autonomiczne) lub odwrotnie.
+Teraz będzie można zmienić urząd MDM bez konieczności kontaktowania się z działem pomocy technicznej firmy Microsoft oraz wyrejestrowywania i ponownego rejestrowania istniejących urządzeń zarządzanych. W konsoli programu Configuration Manager możesz zmienić urząd MDM, wybierając opcję Ustaw Menedżera konfiguracji (hybrydowe) zamiast opcji Microsoft Intune (autonomiczne) lub odwrotnie.
 
 
 ### <a name="improved-notification-for-samsung-knox-startup-pins--1087143--"></a>Ulepszone powiadomienia dotyczące numerów PIN wymaganych do uruchomiania urządzeń z systemem Samsung Knox<!--1087143-->

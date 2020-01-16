@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 962e66a9fdf6d8abcf6855f645775026ee4db850
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: d3d9473b68f0420670130203409abf477355d93f
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72508842"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885532"
 ---
 # <a name="troubleshoot-the-intune-exchange-connector"></a>Rozwiązywanie problemów z programem Intune Exchange Connector
 
@@ -40,7 +40,7 @@ Przed rozpoczęciem rozwiązywania problemów z programem Exchange Connector w u
   - Czy po raz pierwszy konfigurujesz łącznik? 
   - Czy łącznik działał prawidłowo, a następnie niepowodzenie?
   - Jeśli działały, jakie zmiany wystąpiły w środowisku usługi Intune, środowisku programu Exchange lub na komputerze, na którym jest uruchamiane oprogramowanie łącznika?
-- Co to jest urząd MDM? Jeśli jest System Center Configuration Manager, której wersji Configuration Manager użyć?
+- Zmiana urzędu MDM
 - Jakiej wersji programu Exchange używasz?
 
 ### <a name="use-powershell-to-get-more-data-on-exchange-connector-issues"></a>Uzyskiwanie dodatkowych danych dotyczących problemów z programem Exchange Connector za pomocą programu PowerShell
@@ -51,7 +51,7 @@ Przed rozpoczęciem rozwiązywania problemów z programem Exchange Connector w u
 
 ## <a name="review-the-connector-configuration"></a>Przegląd konfiguracji łącznika
 
-Zapoznaj się z [wymaganiami dotyczącymi lokalnego programu Exchange Connector](exchange-connector-install.md#intune-exchange-connector-requirements) , aby upewnić się, że środowisko i łącznik są prawidłowo skonfigurowane. 
+Przejrzyj wymagania [lokalnego programu Exchange Connector](exchange-connector-install.md#intune-exchange-connector-requirements), aby upewnić się, że środowisko i łącznik są prawidłowo skonfigurowane. 
 
 ### <a name="general-considerations-for-the-connector"></a>Ogólne zagadnienia dotyczące łącznika
 
@@ -59,24 +59,24 @@ Zapoznaj się z [wymaganiami dotyczącymi lokalnego programu Exchange Connector]
 
 - Komputer obsługujący łącznik usługi Intune Exchange oraz serwer dostępu klienta programu Exchange (CAS) powinien być przyłączony do domeny i znajdować się w tej samej sieci LAN. Upewnij się, że do konta używanego przez łącznik usługi Intune Exchange są dodawane wymagane uprawnienia.
 
-- Konto powiadomień służy do pobierania ustawień *wykrywania automatycznego* . Aby uzyskać więcej informacji na temat Autodisover w programie Exchange, zobacz [Usługa wykrywania automatycznego w programie Exchange Server](https://docs.microsoft.com/exchange/architecture/client-access/autodiscover?view=exchserver-2016).
+- Konto powiadomień służy do pobierania ustawień *wykrywania automatycznego*. Aby uzyskać więcej informacji na temat Autodisover w programie Exchange, zobacz [usług wykrywania automatycznego w programie Exchange Server](https://docs.microsoft.com/exchange/architecture/client-access/autodiscover?view=exchserver-2016).
 
-- Program Intune Exchange Connector wysyła żądanie do adresu URL EWS przy użyciu poświadczeń konta powiadomień do wysyłania wiadomości e-mail z powiadomieniami razem *z linkiem wprowadzenie (* do rejestracji w usłudze Intune). Użycie *linku wprowadzenie do* rejestracji jest wymaganiem dla urządzeń z systemem Android. W przeciwnym razie te urządzenia będą blokowane przez dostęp warunkowy.
+- Program Intune Exchange Connector wysyła żądanie do adresu URL EWS przy użyciu poświadczeń konta powiadomień do wysyłania wiadomości e-mail z powiadomieniami razem z *wprowadzenie* linku (do rejestracji w usłudze Intune). Korzystanie z *wprowadzenie* link do rejestracji jest wymaganiem dla urządzeń z systemem Android, które nie są oparte na systemie. W przeciwnym razie te urządzenia będą blokowane przez dostęp warunkowy.
 
 ### <a name="common-issues-for-connector-configurations"></a>Typowe problemy dotyczące konfiguracji łącznika
 
-- **Uprawnienia konta**: w oknie dialogowym Microsoft Intune Exchange Connector upewnij się, że określono konto użytkownika, które ma odpowiednie uprawnienia do wykonywania [wymaganych poleceń cmdlet programu Exchange w środowisku Windows PowerShell](exchange-connector-install.md#exchange-cmdlet-requirements).
+- **Uprawnienia konta**: W oknie dialogowym Microsoft Intune Exchange Connector upewnij się, że określono konto użytkownika, które ma odpowiednie uprawnienia do wykonywania [wymaganych poleceń cmdlet programu Exchange w środowisku Windows PowerShell](exchange-connector-install.md#exchange-cmdlet-requirements).
 - **Wiadomości e-mail z powiadomieniami**: Włącz powiadomienia i określ konto powiadomień.
-- **Synchronizacja serwera dostępu klienta**: podczas konfigurowania programu Exchange Connector należy określić urzędy certyfikacji o najniższym opóźnieniu sieci na serwerze hostującym łącznik programu Exchange. Opóźnienie komunikacji między serwerem CAS i programem Exchange Connector może spowodować opóźnienia odnajdywania urządzeń, zwłaszcza w przypadku korzystania z usługi Exchange Online w warstwie Dedykowana.
-- **Harmonogram synchronizacji**: uzyskanie dostępu przez użytkownika z nowo zarejestrowanym urządzeniem może zostać opóźnione do momentu, aż program Exchange Connector zsynchronizuje się z serwerem CAS programu Exchange. Pełna synchronizacja jest wykonywana raz dziennie, a synchronizacja różnicowa (szybka) jest wykonywana kilka razy dziennie. Aby zminimalizować opóźnienie, możesz [ręcznie wymusić szybką synchronizację lub pełną synchronizację](exchange-connector-install.md#manually-force-a-quick-sync-or-full-sync).
+- **synchronizacji serwera dostępu klienta**: podczas konfigurowania łącznika programu Exchange należy określić urzędy certyfikacji o najniższym opóźnieniu sieci na serwerze hostującym łącznik programu Exchange. Opóźnienie komunikacji między serwerem CAS i programem Exchange Connector może spowodować opóźnienia odnajdywania urządzeń, zwłaszcza w przypadku korzystania z usługi Exchange Online w warstwie Dedykowana.
+- **Harmonogram synchronizacji**: Uzyskanie dostępu przez użytkownika z nowo zarejestrowanym urządzeniem może zostać opóźnione do momentu, aż program Exchange Connector zsynchronizuje się z serwerem CAS programu Exchange. Pełna synchronizacja jest wykonywana raz dziennie, a synchronizacja różnicowa (szybka) jest wykonywana kilka razy dziennie. Aby zminimalizować opóźnienie, możesz [ręcznie wymusić szybką synchronizację lub pełną synchronizację](exchange-connector-install.md#manually-force-a-quick-sync-or-full-sync).
 
 ## <a name="next-steps"></a>Następne kroki
 Poniższe artykuły mogą pomóc w rozwiązywaniu typowych problemów i określonych błędów:
 
-- [Rozwiązywanie typowych problemów z programem Intune Exchange Connector](troubleshoot-exchange-connector-common-problems.md).
-- [Rozwiązywanie typowych błędów dla programu Intune Exchange Connector](troubleshoot-exchange-connector-common-errors.md).
+- [Rozwiązywanie typowych problemów dotyczących programu Intune Exchange Connector](troubleshoot-exchange-connector-common-problems.md).
+- [Rozwiązywanie typowych błędów](troubleshoot-exchange-connector-common-errors.md)łącznika usługi Intune Exchange.
 
 Wyszukaj pomoc techniczną lub społeczność usługi Intune:
 
-- Zobacz [Uzyskaj pomoc techniczną](../fundamentals/get-support.md) , aby korzystać z konsoli usługi Intune, aby pomóc w rozwiązywaniu problemu lub otworzyć przypadek pomocy technicznej w firmie Microsoft. 
-- Opublikuj swój problem na [forach Microsoft Intune](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod).  
+- Zobacz [Uzyskaj pomoc techniczną](../fundamentals/get-support.md), aby użyć konsoli usługi Intune, aby pomóc w rozwiązaniu problemu, lub otworzyć przypadek pomocy technicznej w firmie Microsoft. 
+- Opublikuj swój problem w [forów Microsoft Intune](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod).  

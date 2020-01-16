@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 60a87340c1a275b8fb878ef2f3891cca23fc9c85
-ms.sourcegitcommit: f5108039f0ade52e95ea3ac1da1aa16d02224af3
+ms.openlocfilehash: 0ca5d475f92cbe3298689273dcdf0da1644078b2
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74946667"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547031"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Ustawienia urządzeń z systemem Windows 10 lub nowszym umożliwiające oznaczenie ich jako zgodne lub niezgodne w usłudze Intune
 
@@ -41,10 +41,10 @@ Jako administrator usługi Intune możesz użyć tych ustawień zgodności, aby 
 
 ## <a name="device-health"></a>Kondycja urządzenia
 
-### <a name="windows-health-attestation-service-evaluation-rules"></a>Reguły oceny usługi zaświadczania o kondycji systemu Windows
+### <a name="windows-health-attestation-service-evaluation-rules"></a>Reguły oceny usługi zaświadczeń o kondycji systemu Windows
 
 - **Wymagaj funkcji BitLocker**:  
-   Szyfrowanie dysków funkcją BitLocker szyfruje wszystkie dane przechowywane na woluminie systemu operacyjnego Windows. Funkcja BitLocker używa moduł TPM (TPM), aby pomóc w ochronie systemu operacyjnego Windows i danych użytkownika. Pomaga także zagwarantować, że zabezpieczenia nie zostaną naruszone nawet wtedy, gdy komputer zostanie zgubiony, skradziony lub pozostawiony bez nadzoru. Jeśli komputer jest wyposażony w zgodny moduł TPM, funkcja BitLocker używa go do zablokowania kluczy szyfrowania służących do ochrony danych. W związku z tym klucze będą niedostępne, dopóki moduł TPM nie zweryfikuje stanu komputera.  
+   Szyfrowanie dysków funkcją BitLocker szyfruje wszystkie dane przechowywane na woluminie systemu operacyjnego Windows. Funkcja BitLocker używa modułu TPM do ochrony systemu operacyjnego i danych użytkownika. Pomaga także zagwarantować, że zabezpieczenia nie zostaną naruszone nawet wtedy, gdy komputer zostanie zgubiony, skradziony lub pozostawiony bez nadzoru. Jeśli komputer jest wyposażony w zgodny moduł TPM, funkcja BitLocker używa go do zablokowania kluczy szyfrowania służących do ochrony danych. W związku z tym klucze będą niedostępne, dopóki moduł TPM nie zweryfikuje stanu komputera.  
 
    - **Nieskonfigurowane** (*wartość domyślna*) — ustawienie nie jest oceniane na potrzeby określenia zgodności.
    - **Wymagaj** — urządzenie może chronić dane przechowywane na dysku przed nieautoryzowanym dostępem, gdy system jest wyłączony lub przechodzi w stan hibernacji.  
@@ -52,7 +52,7 @@ Jako administrator usługi Intune możesz użyć tych ustawień zgodności, aby 
 
 - **Wymagaj włączenia bezpiecznego rozruchu na urządzeniu**:  
     - **Nieskonfigurowane** (*wartość domyślna*) — ustawienie nie jest oceniane na potrzeby określenia zgodności.
-    - **Wymagaj** — system ma wymuszony rozruch do zaufanego stanu fabryki. Podstawowe składniki używane do uruchamiania urządzenia muszą mieć prawidłowe podpisy kryptograficzne, uznawane za zaufane przez organizację, która wyprodukowała urządzenie. Oprogramowanie układowe UEFI sprawdza podpis, zanim pozwoli na uruchomienie komputera. Jeśli jakiekolwiek pliki zostaną naruszone, co spowoduje uszkodzenie ich podpisu, system nie zostanie uruchomiony.
+    - **Wymagaj** — system jest wymuszany do rozruchu w stanie zaufanym fabryki. Podstawowe składniki używane do uruchamiania urządzenia muszą mieć prawidłowe podpisy kryptograficzne, uznawane za zaufane przez organizację, która wyprodukowała urządzenie. Oprogramowanie układowe UEFI sprawdza podpis, zanim pozwoli na uruchomienie komputera. Jeśli jakiekolwiek pliki zostaną naruszone, co spowoduje uszkodzenie ich podpisu, system nie zostanie uruchomiony.
 
   > [!NOTE]
   > Ustawienie **Wymagaj włączenia bezpiecznego rozruchu na urządzeniu** jest obsługiwane na niektórych urządzeniach z modułami TPM 1.2 i 2.0. W przypadku urządzeń, które nie obsługują modułu TPM 2.0 ani nowszego, stan zasad w usłudze Intune ma wartość **Niezgodne**. Aby uzyskać więcej informacji na temat obsługiwanych wersji, zobacz [Device Health Attestation (Zaświadczanie o kondycji urządzenia)](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation).
@@ -64,7 +64,7 @@ Jako administrator usługi Intune możesz użyć tych ustawień zgodności, aby 
 
 Więcej zasobów:
 
-- Aby uzyskać szczegółowe informacje o działaniu usługi zaświadczania o kondycji, zobacz [zaświadczanie o kondycji CSP](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp).
+- Aby uzyskać szczegółowe informacje o działaniu usługi zaświadczania o kondycji, zobacz [CSP zaświadczania o kondycji](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp).
 - [Support Tip: Using Device Health Attestation Settings as Part of Your Intune Compliance Policy](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643) (Porada pomocy technicznej: korzystanie z ustawień zaświadczania o kondycji urządzenia w ramach zasad zgodności usługi Intune).
 
 ## <a name="device-properties"></a>Właściwości urządzenia
@@ -102,9 +102,9 @@ Więcej zasobów:
 
 Dotyczy tylko współzarządzanych urządzeń z systemem Windows 10 lub nowszym. Urządzenia przeznaczone tylko dla usługi Intune zwracają stan Niedostępne.
 
-- **Wymagaj zgodności urządzenia z poziomu programu System Center Configuration Manager**:  
+- **Wymagaj zgodności urządzenia z poziomu programu Configuration Manager**  
   - **Nieskonfigurowane** (*wartość domyślna*) — usługa Intune nie sprawdza zgodności żadnego z ustawień programu Configuration Manager.
-  - **Wymagaj** — wymagana jest zgodność wszystkich ustawień (elementów konfiguracji) w programie System Center Configuration Manager.  
+  - **Wymagaj** — wymagana jest zgodność wszystkich ustawień (elementów konfiguracji) w programie Configuration Manager.  
 
     Na przykład można wymagać, aby na urządzeniach były zainstalowane wszystkie aktualizacje oprogramowania. W programie Configuration Manager to wymaganie ma stan „Zainstalowano”. Jeśli jakiekolwiek programy na urządzeniu mają nieznany stan, to urządzenie jest niezgodne w usłudze Intune.
 
@@ -117,20 +117,20 @@ Dotyczy tylko współzarządzanych urządzeń z systemem Windows 10 lub nowszym.
   - **Wymagaj** — użytkownicy muszą wprowadzić hasło podczas uzyskiwania dostępu do swoich urządzeń. 
 
 - **Proste hasła**:  
-  - **Nie skonfigurowano** (*Domyślnie*) — użytkownicy mogą tworzyć proste hasła, na przykład **1234** lub **1111**.
+  - **Nie skonfigurowano** (*domyślne*) — użytkownicy mogą tworzyć proste hasła, takie jak **1234** lub **1111**.
   - **Blokuj** — użytkownicy nie mogą tworzyć prostych haseł, takich jak **1234** lub **1111**.
 
 - **Typ hasła**:  
   wybierz wymagany typ hasła lub numeru PIN. Dostępne opcje:
-  - **Domyślne urządzenie** (*Domyślnie*) — Wymagaj hasła, numerycznego numeru PIN lub alfanumerycznego kodu PIN
-  - **Numeric** — Wymagaj hasła lub numerycznego numeru PIN
-  - **Alfanumeryczne** — Wymagaj hasła lub ALFANUMERYCZNEGO kodu PIN.  
+  - **Domyślne** urządzenia (*domyślne*) — Wymagaj hasła, numerycznego numeru PIN lub alfanumerycznego kodu
+  - **Numeryczne** — Wymagaj hasła lub numerycznego numeru PIN
+  - **alfanumeryczne** — Wymagaj hasła lub alfanumerycznego kodu PIN.  
   
-  Po wybraniu opcji *alfanumeryczne*dostępne są następujące ustawienia:  
+  Po ustawieniu na *alfanumeryczne* dostępne są następujące ustawienia:  
   - **Złożoność hasła**:  
     Dostępne opcje: 
-    - **Wymagaj cyfr i małych liter** (*wartość domyślna*)
-    - **Wymagaj cyfr, małych liter i wielkich liter**
+    - **Wymagaj cyfr i małych liter** (*domyślne*)
+    - **Wymagaj cyfr oraz małych i wielkich liter**
     - **Wymagaj cyfr, małych i wielkich liter oraz znaków specjalnych**
 
     > [!TIP]
@@ -171,17 +171,17 @@ Dotyczy tylko współzarządzanych urządzeń z systemem Windows 10 lub nowszym.
 ### <a name="device-security"></a>Zabezpieczenia urządzeń  
 
 - **Zapora**:  
-  - **Nie skonfigurowano** (*Domyślnie*) — usługa Intune nie kontroluje zapory Microsoft Defender ani nie zmienia istniejących ustawień.
-  - **Wymagaj** — Włącz zaporę usługi Microsoft Defender i uniemożliwiaj jej wyłączenie.  
+  - **Nie skonfigurowano** (*domyślne*) — usługa Intune nie kontroluje zapory Microsoft Defender ani nie zmienia istniejących ustawień.
+  - **Wymagaj** Włącz zaporę usługi Microsoft Defender i uniemożliwiaj jej wyłączenie.  
 
   [Dostawca CSP zapory](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp)
 
   > [!NOTE]
-  > Jeśli urządzenie zostanie natychmiast zsynchronizowane po ponownym uruchomieniu lub natychmiast zsynchronizuje wznawianie z uśpienia, to ustawienie może zgłosić **błąd**. Ten scenariusz może nie wpływać na ogólny stan zgodności urządzenia. Aby ponownie oszacować stan zgodności, należy ręcznie [zsynchronizować urządzenie](https://docs.microsoft.com/intune-user-help/sync-your-device-manually-windows).
+  > Jeśli urządzenie zostanie natychmiast zsynchronizowane po ponownym uruchomieniu lub natychmiast zsynchronizuje wznawianie z trybu uśpienia, to ustawienie może być zgłaszane jako **błąd**. Ten scenariusz może nie wpływać na ogólny stan zgodności urządzenia. Aby ponownie oszacować stan zgodności, ręcznie [zsynchronizować](https://docs.microsoft.com/intune-user-help/sync-your-device-manually-windows)urządzeń.
 
 - **Moduł TPM (Trusted Platform Module)** :  
-  - **Nieskonfigurowane** (*Domyślnie*) — usługa Intune nie sprawdza urządzenia pod kątem wersji mikroukładu modułu TPM.
-  - **Wymagaj** — usługa Intune sprawdza, czy wersja mikroukładu modułu TPM jest zgodna. Urządzenie jest zgodne, jeśli wersja mikroukładu modułu TPM jest większa od **0** (zero). Urządzenie nie jest zgodne, jeśli na urządzeniu nie ma wersji modułu TPM.  
+  - **Nie skonfigurowano** (*domyślne*) — usługa Intune nie sprawdza urządzenia pod kątem wersji mikroukładu modułu TPM.
+  - **Wymagaj** — usługa Intune sprawdza, czy wersja mikroukładu modułu TPM jest zgodna ze zgodnością. Urządzenie jest zgodne, jeśli wersja mikroukładu modułu TPM jest większa niż **0** (zero). Urządzenie nie jest zgodne, jeśli na urządzeniu nie ma wersji modułu TPM.  
 
   [DeviceStatus CSP — węzeł DeviceStatus/TPM/SpecificationVersion](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
   
@@ -197,27 +197,27 @@ Dotyczy tylko współzarządzanych urządzeń z systemem Windows 10 lub nowszym.
 
 *Następujące ustawienia zgodności są obsługiwane w systemie Windows 10 Desktop.*
 
-- **Oprogramowanie chroniące przed złośliwym oprogramowaniem programu Microsoft Defender**:  
-  - **Nie skonfigurowano** (*Domyślnie*) — usługa Intune nie kontroluje usługi ani nie zmienia istniejących ustawień.
-  - **Wymagaj** , aby włączyć usługę Microsoft Defender Anti-Malware, i uniemożliwić użytkownikom jej wyłączenie.
+- **Microsoft Defender Antimalware**  
+  - **Nie skonfigurowano** (*domyślne*) — usługa Intune nie kontroluje usługi ani nie zmienia istniejących ustawień.
+  - **Wymagaj** Włącz usługę Microsoft Defender Anti-złośliwe oprogramowanie i uniemożliwiaj użytkownikom jej wyłączenie.
 
-- **Minimalna wersja programu Microsoft Defender chroniącego przed złośliwym kodem**:  
+- **Minimalna wersja usługi Microsoft Defender Antimalware**  
   Wprowadź minimalną dozwoloną wersję usługi Microsoft Defender chroniącej przed złośliwym oprogramowaniem. Na przykład wprowadź `4.11.0.0`. Jeśli pole pozostanie puste, można użyć dowolnej wersji usługi Microsoft Defender Anti-Malware.  
 
   *Domyślnie żadna wersja nie jest skonfigurowana*.
 
-- **Aktualna analiza zabezpieczeń w usłudze Microsoft Defender chroniąca przed złośliwym kodem**:  
+- **Aktualna analiza zabezpieczeń usługi Microsoft Defender Antimalware**  
   Kontroluje aktualizacje oprogramowania antywirusowego zabezpieczeń systemu Windows i ochrony przed zagrożeniami na urządzeniach.
-  - **Nie skonfigurowano** (*Domyślnie*) — usługa Intune nie wymusza żadnych wymagań.
-  - **Wymagaj** — Wymuś aktualność analizy zabezpieczeń programu Microsoft Defender.
+  - **Nie skonfigurowano** (*domyślne*) — usługa Intune nie wymusza żadnych wymagań.
+  - **Wymagaj**, aby analiza zabezpieczeń usługi Microsoft Defender była aktualna.
 
   [Usługa Defender/Health/SignatureOutOfDate CSP](https://docs.microsoft.com/windows/client-management/mdm/defender-csp)
   
-  Aby uzyskać więcej informacji, zobacz [aktualizacje analizy zabezpieczeń dla programu antywirusowego Microsoft Defender i inne oprogramowanie chroniące przed złośliwym oprogramowaniem firmy Microsoft](https://www.microsoft.com/en-us/wdsi/defenderupdates).
+  Aby uzyskać więcej informacji, zobacz [aktualizacji analizy zabezpieczeń dla programu Microsoft Defender Antivirus i innych](https://www.microsoft.com/en-us/wdsi/defenderupdates)ochrony przed złośliwym oprogramowaniem firmy Microsoft.
 
 - **Ochrona w czasie rzeczywistym**:  
-  - **Nie skonfigurowano** (*Domyślnie*) — usługa Intune nie kontroluje tej funkcji ani nie zmienia istniejących ustawień.
-  - **Wymagaj** , aby włączyć ochronę w czasie rzeczywistym, która skanuje w poszukiwaniu złośliwego oprogramowania, programów szpiegujących i innych niechcianych programów.  
+  - **Nie skonfigurowano** (*domyślne*) — usługa Intune nie kontroluje tej funkcji ani nie zmienia istniejących ustawień.
+  - **Wymagaj** Włącz ochronę w czasie rzeczywistym, która skanuje w poszukiwaniu złośliwego oprogramowania, programów szpiegujących i innego niechciane oprogramowanie.  
 
   [Usługa Defender/AllowRealtimeMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 

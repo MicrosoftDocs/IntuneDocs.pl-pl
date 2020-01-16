@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 01/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8fa63540afa18450f731180da3c2cee729010a65
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 256fe3e193e5ab3959c6f9712df8b62246377c6d
+ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74465707"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75653958"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Przygotowywanie aplikacji systemu Android pod kątem zasad ochrony aplikacji za pomocą narzędzia opakowującego aplikacje usługi Intune
 
@@ -57,7 +57,7 @@ Przed uruchomieniem tego narzędzia należy zapoznać się z sekcją [Uwagi doty
 - (Opcjonalnie) Czasami aplikacja może osiągnąć limit rozmiaru pliku wykonywalnego Dalvik (DEX) z powodu klas zestawu Intune MAM SDK, które są dodawane podczas opakowywania. Pliki DEX są częścią kompilacji aplikacji systemu Android. Narzędzie opakowującego aplikacje w usłudze Intune automatycznie obsługuje przepełnienie pliku DEX podczas zawijania dla aplikacji z minimalnym poziomem interfejsu API równym 21 lub nowszym (w [v. 1.0.2501.1](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android/releases)). W przypadku aplikacji o minimalnym poziomie interfejsu API wynoszącym < 21 najlepszym rozwiązaniem jest zwiększenie minimalnego poziomu interfejsu API przy użyciu flagi `-UseMinAPILevelForNativeMultiDex` otoki. Aby klienci nie mogli zwiększyć minimalnego poziomu interfejsu API aplikacji, dostępne są następujące obejścia przepełnienia DEX. W niektórych organizacjach może to wymagać współpracy z osobami kompilującymi aplikację (tj. zespołem zajmującym się kompilacją aplikacji):
 
   - Użyj funkcji Guard w celu wyeliminowania nieużywanych odwołań do klas z podstawowego pliku DEX aplikacji.
-  - W przypadku klientów korzystających z programu v 3.1.0 lub nowszej wtyczki z systemem Android Gradle należy wyłączyć [Dexer D8](https://android-developers.googleblog.com/2018/04/android-studio-switching-to-d8-dexer.html).  
+  - W przypadku klientów korzystających z programu v 3.1.0 lub nowszej wtyczki z systemem Android Gradle należy wyłączyć [D8 dexer](https://android-developers.googleblog.com/2018/04/android-studio-switching-to-d8-dexer.html).  
 
 ## <a name="install-the-app-wrapping-tool"></a>Instalacja narzędzia opakowującego aplikacje
 
@@ -65,7 +65,7 @@ Przed uruchomieniem tego narzędzia należy zapoznać się z sekcją [Uwagi doty
 
 2. Zaakceptuj umowę licencyjną, a następnie zakończ instalację.
 
-Zwróć uwagę na folder, w którym zostało zainstalowane narzędzie. Domyślna lokalizacja: C:\Program Files (x86)\Microsoft Intune Mobile Application Management\Android\App Wrapping Tool.
+Zwróć uwagę na folder, w którym zostało zainstalowane narzędzie. Domyślna lokalizacja to: C:\Program Files (x86)\Microsoft Intune Mobile Application Management\Android\App Wrapping Tool.
 
 ## <a name="run-the-app-wrapping-tool"></a>Uruchamianie narzędzia opakowującego aplikacje
 

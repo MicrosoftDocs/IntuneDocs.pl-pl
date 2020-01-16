@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e7ed93c86d3fbe7ed7a6ac5d4b1a3494fb55f2bc
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 2319fb0d1198289398912793e52482bf66d87173
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72506990"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206843"
 ---
 # <a name="troubleshoot-and-see-potential-issues-on-android-zebra-devices-in-microsoft-intune"></a>Rozwiązywanie problemów i wyświetlanie potencjalnych problemów na urządzeniach z systemem Android zebry w Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-W Microsoft Intune można używać [rozszerzeń zebry Mobility (MX) do zarządzania urządzeniami z systemem Android zebry](android-zebra-mx-overview.md). W przypadku korzystania z urządzeń zebry profile można tworzyć w usłudze StageNow, aby zarządzać ustawieniami i przekazywać je do usługi Intune. Usługa Intune używa aplikacji StageNow do zastosowania ustawień na urządzeniach. Aplikacja StageNow tworzy również szczegółowy plik dziennika na urządzeniu używanym do rozwiązywania problemów.
+
+W Microsoft Intune można [używać rozszerzeń zebry Mobility (MX) do zarządzania urządzeniami z systemem Android zebry](android-zebra-mx-overview.md). W przypadku korzystania z urządzeń zebry profile można tworzyć w usłudze StageNow, aby zarządzać ustawieniami i przekazywać je do usługi Intune. Usługa Intune używa aplikacji StageNow do zastosowania ustawień na urządzeniach. Aplikacja StageNow tworzy również szczegółowy plik dziennika na urządzeniu używanym do rozwiązywania problemów.
 
 Ta funkcja ma zastosowanie do:
 
@@ -44,12 +44,12 @@ Niektóre problemy nie są związane z zawartością profilu StageNow i nie są 
 
 W tym artykule opisano sposób odczytywania dzienników StageNow oraz inne potencjalne problemy związane z urządzeniami zebry, które mogą nie być odzwierciedlone w dziennikach.
 
-Aby uzyskać więcej informacji na temat tej funkcji [, należy używać urządzeń zebry i zarządzać nimi za pomocą rozszerzeń zebry Mobility](android-zebra-mx-overview.md) .
+Aby uzyskać więcej informacji na temat tej funkcji, zobacz [Korzystanie z urządzeń Zebra i zarządzanie nimi za pomocą rozszerzeń dla mobilności w usłudze Intune](android-zebra-mx-overview.md).
 
 ## <a name="get-the-logs"></a>Pobierz dzienniki
 
 ### <a name="use-the-stagenow-app-on-the-device"></a>Korzystanie z aplikacji StageNow na urządzeniu
-W przypadku przetestowania profilu bezpośrednio przy użyciu StageNow na komputerze w programie, a nie przy użyciu usługi [Intune w celu wdrożenia profilu](android-zebra-mx-overview.md#step-4-create-a-device-management-profile-in-stagenow), aplikacja StageNow na urządzeniu zapisuje dzienniki z testu. Aby uzyskać plik dziennika, użyj opcji **więcej (...)** w aplikacji StageNow na urządzeniu.
+W przypadku przetestowania profilu bezpośrednio przy użyciu StageNow na komputerze w programie, a nie za pomocą usługi [Intune w celu wdrożenia profilu](android-zebra-mx-overview.md#step-4-create-a-device-management-profile-in-stagenow), aplikacja StageNow na urządzeniu zapisuje dzienniki z testu. Aby uzyskać plik dziennika, użyj opcji **więcej (...)** w aplikacji StageNow na urządzeniu.
 
 ### <a name="get-logs-using-android-debug-bridge"></a>Pobieranie dzienników przy użyciu Android Debug Bridge
 Aby pobrać dzienniki po wdrożeniu profilu za pomocą usługi Intune, podłącz urządzenie do komputera z [Android Debug Bridge (ADB)](https://developer.android.com/studio/command-line/adb) (otwiera witrynę sieci Web systemu Android).
@@ -68,7 +68,7 @@ Gdy przeglądasz dzienniki, wystąpi błąd za każdym razem, gdy zobaczysz tag 
 Urządzenia zebry obejmują różne poziomy raportowania błędów:
 
 - Dostawca CSP nie jest obsługiwany na urządzeniu. Na przykład urządzenie nie jest urządzeniem komórkowym i nie ma Menedżera sieci komórkowej.
-- Wersja MX lub OSX jest niezgodna. Każdy dostawca usług kryptograficznych jest w wersji. Aby uzyskać pełną matrycę pomocy technicznej, zobacz [dokumentację programu zebry](http://techdocs.zebra.com/mx/) (otwiera witrynę sieci Web zebry).
+- Wersja MX lub OSX jest niezgodna. Każdy dostawca usług kryptograficznych jest w wersji. Aby uzyskać pełną matrycę pomocy technicznej, zobacz dokumentację programu [zebry](http://techdocs.zebra.com/mx/) (otwiera witrynę sieci Web zebry).
 - Urządzenie zgłasza inny problem lub błąd.
 
 ## <a name="examples"></a>Przykłady
@@ -137,7 +137,7 @@ Gdy starsze urządzenia logują się przy użyciu aplikacji Portal firmy, użytk
 
 ### <a name="management-actions-take-a-long-time"></a>Akcje zarządzania zajmuje dużo czasu
 
-Jeśli usługi Google Play nie są dostępne, wykonanie niektórych zadań trwa dopiero po 8 godzinach. [Ograniczenia Intune — portal firmy aplikacji dla systemu Android](https://support.microsoft.com/help/3211588/limitations-of-intune-company-portal-app-for-android-in-china) (otwiera kolejną witrynę sieci Web firmy Microsoft) mogą być dobrym zasobem.
+Jeśli usługi Google Play nie są dostępne, wykonanie niektórych zadań trwa dopiero po 8 godzinach. [Ograniczenia Intune — Portal firmy aplikacji dla systemu Android](https://support.microsoft.com/help/3211588/limitations-of-intune-company-portal-app-for-android-in-china) (otwiera kolejną witrynę sieci Web firmy Microsoft) mogą być dobrym zasobem.
 
 ### <a name="device-spoofing-suspected-shows-in-intune"></a>"Wystąpiło" sfałszowanie urządzenia "w usłudze Intune
 
@@ -145,10 +145,10 @@ Ten błąd oznacza, że usługa Intune podejrzewa, że urządzenie z systemem An
 
 ### <a name="company-portal-app-is-older-than-minimum-required-version"></a>Aplikacja Portal firmy jest starsza niż minimalna wymagana wersja
 
-Usługa Intune może zaktualizować minimalną wymaganą wersję aplikacji Portal firmy. Jeśli na urządzeniu nie zainstalowano Google Play, aplikacja Portal firmy nie zostanie automatycznie zaktualizowana. Jeśli minimalna wymagana wersja jest nowsza niż zainstalowana wersja, aplikacja Portal firmy przestanie działać. Zaktualizuj do najnowszej aplikacji Portal firmy przy użyciu funkcji [ładowania bezpośredniego na urządzeniach zebry](android-zebra-mx-overview.md#sideload-the-company-portal-app).
+Usługa Intune może zaktualizować minimalną wymaganą wersję aplikacji Portal firmy. Jeśli na urządzeniu nie zainstalowano Google Play, aplikacja Portal firmy nie zostanie automatycznie zaktualizowana. Jeśli minimalna wymagana wersja jest nowsza niż zainstalowana wersja, aplikacja Portal firmy przestanie działać. Zaktualizuj do najnowszej aplikacji Portal firmy przy użyciu funkcji ładowania bezpośredniego [na urządzeniach zebry](android-zebra-mx-overview.md#sideload-the-company-portal-app).
 
 ## <a name="next-steps"></a>Następne kroki
 
-Tablice [dyskusyjne zebry](https://developer.zebra.com/community/home/discussions) (otwiera witrynę sieci Web zebry)
+[tablic dyskusyjnych zebry](https://developer.zebra.com/community/home/discussions) (otwiera witrynę sieci Web zebry)
 
 [Używanie urządzeń Zebra i zarządzanie nimi za pomocą funkcji Zebra Mobility Extensions w usłudze Intune](android-zebra-mx-overview.md)

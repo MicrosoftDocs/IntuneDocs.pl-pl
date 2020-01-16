@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2326aed90037fbcc6fc693bcdb67c86b57ed34a0
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: b8da85deae3113995e2836d6af924c5e8938e6ec
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72508009"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75858951"
 ---
 # <a name="configure-logging-settings"></a>Konfigurowanie ustawień rejestrowania
 
@@ -33,19 +33,19 @@ Skonfiguruj ustawienia rejestrowania, aby umożliwić aplikacji Portal firmy, ap
 > [!NOTE]
 > Dzienniki wysyłane do zespołu pomocy technicznej będą zawierać adres e-mail użytkownika.  
 
-## <a name="configure-company-portal-logging"></a>Konfigurowanie rejestrowania Portal firmy
+## <a name="configure-company-portal-logging"></a>Krok 4. Konfigurowanie aplikacji Portal firmy
 Pełne rejestrowanie rejestruje każde działanie wykonywane w aplikacji Portal firmy. Jest on domyślnie włączony na urządzeniu. Aby wyłączyć pełne rejestrowanie w Portal firmy:  
 
 1. Zaloguj się w aplikacji Portal firmy.
 2. Naciśnij pozycję **Ustawienia**.
-3. W polu **pełna rejestracja**Przerzuć przełącznik na **wyłączony**.
+3. Obok pozycji **pełne rejestrowanie**, przerzuć przełącznik, aby **wyłączony**.
 
 ## <a name="configure-microsoft-intune-app-logging"></a>Konfigurowanie rejestrowania aplikacji Microsoft Intune
-W aplikacji Microsoft Intune można skonfigurować poziom szczegółów dziennika. Wartość domyślna na poziomie jest **ważna**. Aby dostosować szczegóły rejestrowania:  
+W aplikacji Microsoft Intune można skonfigurować poziom szczegółów dziennika. Wartość domyślna na poziomie **ważne**. Aby dostosować szczegóły rejestrowania:  
 
-1. Otwórz aplikację Microsoft Intune.  
+1. Aktywuj aplikację usługi Microsoft Intune  
 2. Naciśnij pozycję **Ustawienia**.  
-3. W obszarze **szczegóły poziomu dziennika**wybierz pozycję **pełne** , aby zwiększyć poziom zarejestrowanych informacji, lub wybierz opcję **Wyłącz** , aby wyłączyć rejestrowanie.  
+3. W obszarze **szczegóły poziomu dziennika**wybierz pozycję **pełne**, aby zwiększyć poziom zarejestrowanych informacji, lub wybierz pozycję **Wyłącz**, aby wyłączyć rejestrowanie.  
 
 ## <a name="next-steps"></a>Następne kroki  
 

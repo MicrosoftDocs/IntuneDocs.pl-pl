@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: d2965d6a017d92bd4535a29a2257c0cac5e6deaf
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: 2774a4f4c571b8a965c9ec47376a671df2dbf006
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72506365"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75856686"
 ---
 # <a name="encrypting-your-android-device"></a>Szyfrowanie urządzenia z systemem Android
 
@@ -41,25 +41,25 @@ Jeśli Portal firmy lub aplikacja Microsoft Intune poprosi Cię o zaszyfrowanie 
 
 1. Ustaw blokadę ekranu urządzenia.  
     a. Przejdź kolejno do pozycji **Ustawienia** > **Ekran blokady i zabezpieczenia** > **Typ blokady ekranu**.  
-    b. Wybierz opcję **kod PIN**, **hasło**lub **wzorzec**.  
+    b. Wybierz opcję **numeru PIN**,**hasła** lub **wzorca**.  
     c. Postępuj zgodnie z instrukcjami na ekranie, aby skonfigurować blokadę ekranu.  
 
-2. Wróć do **ekranu blokady i zabezpieczeń** , a następnie wybierz pozycję **bezpieczne uruchamianie**.
-3. Wybierz pozycję **Wymagaj numeru PIN po włączeniu urządzenia** > **OK**.
+2. Wróć do **ekranu blokady i zabezpieczeń** i wybierz pozycję **Bezpieczny start**.
+3. Wybierz **Wymagaj numeru PIN po włączeniu urządzenia** > **OK**.
 4. Wprowadź numer PIN, aby potwierdzić i zaszyfrować urządzenie.
-5. Otwórz aplikację Portal firmy lub Microsoft Intune.
-    * Użytkownicy aplikacji Portal firmy: wybierz urządzenie i wybierz pozycję **Sprawdź ustawienia urządzenia**. 
+5. Otwórz aplikację Portal firmy usługi Microsoft Intune.
+    * Użytkownicy aplikacji Portal firmy: Wybierz urządzenie i naciśnij pozycję **Sprawdź ustawienia urządzenia**. 
     * Microsoft Intune użytkownicy: należy poczekać, aż strona zostanie zaktualizowana, ale gdy tak się stanie, stan szyfrowania powinien zmienić się na zgodny.  
 
-W przypadku urządzeń z systemem Android 4,4 i wcześniejszymi może nie być dostępna opcja **bezpiecznego uruchamiania** . W takim przypadku wykonaj następujące kroki, aby zaszyfrować urządzenie.
+Urządzenia z systemem Android 4,4 i wcześniejszymi wersjami mogą nie mieć opcji **bezpiecznego uruchamiania**. W takim przypadku wykonaj następujące kroki, aby zaszyfrować urządzenie.
 
-1. Przejdź do pozycji **ustawienia** > **zabezpieczenia** > **szyfrowanie urządzenia**. Etykiety na ekranie różnią się w zależności od urządzeń z systemem Android. Jeśli nie widzisz opcji **Szyfruj urządzenie** , Zaewidencjonuj:
-    * **Szyfrowanie magazynu** ** > Storage**
-    *  > **ustawień zabezpieczeń** > **magazynu** **i zabezpieczeń** 
+1. Przejdź do pozycji **Settings** > **Security** > **szyfrowanie urządzenia**. Etykiety na ekranie różnią się w zależności od urządzeń z systemem Android. Jeśli nie widzisz opcji **Szyfruj urządzenia**, Zaewidencjonuj:
+    * **magazynu** > **szyfrowanie magazynu**
+    * **magazynu** > **Zablokuj i zabezpieczenia** > **inne ustawienia zabezpieczeń** 
 
 2. Wykonaj instrukcje wyświetlane na ekranie. Podczas szyfrowania urządzenie może być kilka razy ponownie uruchamiane.
-3. Otwórz aplikację Portal firmy lub Microsoft Intune.
-    * Użytkownicy aplikacji Portal firmy: wybierz urządzenie i wybierz pozycję **Sprawdź ustawienia urządzenia**.  
+3. Otwórz aplikację Portal firmy usługi Microsoft Intune.
+    * Użytkownicy aplikacji Portal firmy: Wybierz urządzenie i naciśnij pozycję **Sprawdź ustawienia urządzenia**.  
     * Microsoft Intune użytkownicy: należy poczekać, aż strona zostanie zaktualizowana, ale gdy tak się stanie, stan szyfrowania powinien zmienić się na zgodny.
 
 ## <a name="troubleshoot"></a>Rozwiązywanie problemów  

@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/5/2018
+ms.date: 12/18/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: afaee427b593cfaed957279b520765242a1aacd3
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 4b83a0339d87375502159467af323fceae5eb6e2
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72506650"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75207081"
 ---
 # <a name="use-custom-policies-in-microsoft-intune-to-allow-and-block-apps-for-samsung-knox-standard-devices"></a>Używanie zasad niestandardowych w usłudze Microsoft Intune w celu zezwalania na aplikacje i blokowanie ich dla urządzeń z systemem Samsung Knox Standard 
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Użyj procedur opisanych w tym artykule, aby utworzyć niestandardowe zasady usługi Microsoft Intune, co powoduje utworzenie następujących elementów:
 
@@ -36,37 +34,41 @@ Tych ustawień można używać tylko na urządzeniach z systemem Samsung Knox St
 
 ## <a name="create-an-allowed-or-blocked-app-list"></a>Tworzenie listy dozwolonych lub zablokowanych aplikacji
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. W okienku **Intune** wybierz pozycję **Konfiguracja urządzeń**.
-2. W okienku **Konfiguracja urządzeń** wybierz pozycję **Zarządzaj** > **Profile**.
-2. W okienku z listą profilów wybierz pozycję **Utwórz profil**.
-3. W okienku **Tworzenie profilu** wprowadź wartość w polach **Nazwa** i **Opis** (opcjonalnie) dotyczących profilu urządzenia.
-2. Wybierz dla pozycji **Platforma** wartość **Android**, a dla pozycji **Typ profilu** wartość **Niestandardowy**.
-3. Kliknij pozycję **Ustawienia**.
-3. W okienku **Niestandardowe ustawienia OMA-URI** wybierz pozycję **Dodaj**.
-4. W oknie dialogowym **Dodawanie lub edytowanie ustawienia OMA-URI** określ następujące ustawienia:
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz pozycję **Urządzenia** > **Profile konfiguracji** > **Utwórz profil**.
+3. Podaj następujące ustawienia:
 
-   W przypadku listy aplikacji, których uruchamianie na urządzeniu jest zablokowane:
+    - **Nazwa**: Wprowadź opisową nazwę profilu. Nadaj nazwę profilom, aby można było je później łatwo rozpoznać. Na przykład dobrą nazwą profilu jest **profilu niestandardowego systemu Windows Phone**.
+    - **Opis**: Wprowadź opis ułatwiający identyfikację ustawienia oraz zawierający inne ważne szczegóły.
+    - **Platforma**: — wybierz opcję **Android**.
+    - **Typ profilu**: Wybierz **niestandardowe**.
 
-   - **Nazwa** — wprowadź **PreventStartPackages**.
-   - **Opis** — podaj opcjonalny opis, taki jak „Lista aplikacji, których uruchamianie jest zablokowane”.
-   - **Typ danych** — wybierz z listy rozwijanej opcję **Ciąg**.
-   - **OMA-URI** — wpisz ciąg **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/PreventStartPackages**
-   - **Wartość** — wprowadź listę nazw pakietów aplikacji, na których uruchamianie chcesz zezwolić. Jako ogranicznika możesz użyć znaku **; : ,** lub **|** . (Przykład: pakiet1;pakiet2;)
+4. W obszarze **Niestandardowe ustawienia OMA-URI** wybierz pozycję **Dodaj**. Podaj następujące ustawienia:
+
+    W przypadku listy aplikacji, których uruchamianie na urządzeniu jest zablokowane:
+
+    - **Nazwa**: Podaj ciąg **PreventStartPackages**.
+    - **Opis**: Wprowadź opis, który zawiera omówienie ustawienia oraz inne istotne informacje ułatwiające wyszukanie profilu. Na przykład wprowadź **listę aplikacji, dla których zablokowano uruchamianie**.
+    - **OMA-URI** (rozróżniana jest wielkość liter): Wpisz ciąg **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/PreventStartPackages**.
+    - **typu danych**: Wybierz **ciąg**.
+    - **Wartość**: Podaj listę nazw pakietów aplikacji, na których uruchamianie chcesz zezwolić. Jako ogranicznika możesz użyć znaku `;`, `:` lub `|`. Na przykład wprowadź `package1;package2;`.
 
    Lista aplikacji, które użytkownicy mogą instalować ze sklepu Google Play, przy czym wszystkie inne aplikacje są wykluczone:
-   - **Nazwa** — podaj ciąg **AllowInstallPackages**.
-   - **Opis**— wpisz opcjonalny opis, taki jak „Lista aplikacji, które użytkownicy mogą instalować ze sklepu Google Play”.
-   - **Typ danych** — wybierz z listy rozwijanej opcję **Ciąg**.
-   - **OMA-URI** — wpisz ciąg **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/AllowInstallPackages**
-   - **Wartość** — wprowadź listę nazw pakietów aplikacji, na których uruchamianie chcesz zezwolić. Jako ogranicznika możesz użyć znaku **; : ,** lub **|** . (Przykład: pakiet1;pakiet2;)
 
-4. Kliknij przycisk **OK**, a następnie w okienku **Tworzenie profilu** wybierz pozycję **Utwórz**.
+    - **Nazwa**: Podaj ciąg **AllowInstallPackages**.
+    - **Opis**: Wprowadź opis, który zawiera omówienie ustawienia oraz inne istotne informacje ułatwiające wyszukanie profilu. Na przykład wprowadź **listę aplikacji, które użytkownicy mogą instalować z Google Play**.
+    - **OMA-URI** (rozróżniana jest wielkość liter): Wpisz ciąg **./Vendor/MSFT/PolicyManager/My/ApplicationManagement/AllowInstallPackages**.
+    - **typu danych**: Wybierz **ciąg**.
+    - **Wartość**: Podaj listę nazw pakietów aplikacji, na których uruchamianie chcesz zezwolić. Jako ogranicznika możesz użyć znaku `;`, `:` lub `|`. Na przykład wprowadź `package1;package2;`.
+
+5. Wybierz przycisk **OK**, aby zapisać zmiany.
+6. Po zakończeniu wybierz pozycję **OK** > **Utwórz**, aby utworzyć profil usługi Intune. Po utworzeniu profil będzie widoczny na liście **Urządzenia — profile konfiguracji**.
 
 >[!TIP]
 > Identyfikator pakietu aplikacji możesz znaleźć, przechodząc do aplikacji w sklepie Google Play. Identyfikator pakietu znajduje się w adresie URL strony aplikacji. Na przykład identyfikator pakietu aplikacji Microsoft Word to **com.microsoft.office.word**.
 
 Gdy docelowe urządzenie nawiąże połączenie następny raz, zostaną zastosowane ustawienia aplikacji.
 
+## <a name="next-steps"></a>Następne kroki
 
-<!---## Assign the custom profile--->
+Profil został utworzony, ale nie wykonuje jeszcze żadnych czynności. W dalszej części [przypiszesz profil](../device-profile-assign.md) i będziesz [monitorować jego stan](device-profile-monitor.md).

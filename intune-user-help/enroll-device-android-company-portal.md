@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5baf0e9079cc148101a68e5cd2d3a4ed500f567f
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: e0a2297509d6077d6508adaab96ae6eb3cf9b28f
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73414855"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75856738"
 ---
 # <a name="enroll-your-device-with-company-portal"></a>Rejestrowanie urządzenia w aplikacji Portal firmy  
 Zarejestruj swoje prywatne lub służbowe urządzenie z systemem Android, aby mieć bezpieczny dostęp do firmowej poczty e-mail, aplikacji i danych. Portal firmy obsługuje urządzenia z systemem Android, w tym Samsung Knox z systemem Android 4.4 lub nowszym.  
@@ -50,18 +50,18 @@ Podczas rejestrowania może pojawić się monit o wybranie kategorii, która naj
 
 
     ![Przykładowy obraz Portal firmy, opieka nad ochroną ekranu, wyróżnianie przycisku Kontynuuj.](./media/android-privacy-screen-1911.png)  
-4. Zapoznaj się z oczekiwaniami w nadchodzących krokach. Następnie naciśnij przycisk **dalej**.  
+4. Zapoznaj się z oczekiwaniami w nadchodzących krokach. Następnie naciśnij **dalej**.  
 
     ![Przykładowy obraz Portal firmy, co jest następnym ekranem, co umożliwia wyróżnienie przycisku Dalej.](./media/android-whats-next-1911.png)  
 
 
 5. W zależności od używanej wersji systemu Android może zostać wyświetlony monit o zezwolenie na dostęp do niektórych części urządzenia. Te monity są wymagane przez firmę Google i nie są kontrolowane przez Microsoft.  
 
-    Naciśnij pozycję **Zezwalaj** na następujące uprawnienia:  
-    * **Zezwalaj Portal firmy na wykonywanie połączeń telefonicznych i zarządzanie nimi**: to uprawnienie umożliwia urządzeniu udostępnianie międzynarodowego numeru telefonu stacji komórkowych (IMEI) w usłudze Intune, dostawcy zarządzania urządzeniami w organizacji. Można bezpiecznie zezwolić na to uprawnienie. Firma Microsoft nigdy nie będzie tworzyć rozmów telefonicznych ani nimi zarządzać.  
+    Naciśnij pozycję **Zezwalaj na** dla następujących uprawnień:  
+    * **Zezwalaj Portal firmy na wykonywanie połączeń telefonicznych i zarządzanie nimi**: to uprawnienie umożliwia urządzeniu udostępnianie międzynarodowego numeru identyfikacyjnego urządzenia stacji komórkowych (IMEI) w usłudze Intune, dostawcy zarządzania urządzeniami w organizacji. Można bezpiecznie zezwolić na to uprawnienie. Firma Microsoft nigdy nie będzie tworzyć rozmów telefonicznych ani nimi zarządzać.  
     * **Zezwól Portal firmy na dostęp do Twoich kontaktów**: to uprawnienie umożliwia aplikacji Portal firmy tworzenie i używanie konta służbowego oraz zarządzanie nim.  Można bezpiecznie zezwolić na to uprawnienie. Firma Microsoft nigdy nie uzyskuje dostępu do Twoich kontaktów. 
 
-    Jeśli odmówisz uprawnień, zostanie wyświetlony monit z prośbą o ponowne zalogowanie się do Portal firmy. Aby wyłączyć te komunikaty, wybierz pozycję **Nigdy nie pytaj ponownie**. Aby zarządzać uprawnieniami aplikacji, przejdź do pozycji Ustawienia Aplikacja > **aplikacje** > **Portal firmy** > **uprawnień** > **telefonu**.  
+    Jeśli odmówisz uprawnień, zostanie wyświetlony monit z prośbą o ponowne zalogowanie się do Portal firmy. Aby wyłączyć te komunikaty, wybierz pozycję **Nigdy nie pytaj ponownie**. Aby zarządzać uprawnieniami aplikacji, przejdź do pozycji Ustawienia Aplikacja > **Apps** > **Portal firmy** > **uprawnienia** > **telefon**.  
 
 6. Aktywuj aplikację administratora urządzenia. 
 
@@ -81,7 +81,7 @@ Podczas rejestrowania może pojawić się monit o wybranie kategorii, która naj
 
     ![Przykład obrazu Portal firmy, ekranu Konfiguracja dostępu do zasobów firmy.](./media/update-settings-1911.png)  
 
-9. Organizacja może wymagać aktualizacji ustawień urządzenia. Naciśnij pozycję **Rozwiąż** , aby dostosować ustawienie. Po zakończeniu aktualizowania ustawień naciśnij pozycję **Kontynuuj**.  
+9. Organizacja może wymagać aktualizacji ustawień urządzenia. Naciśnij pozycję **rozwiązać**, aby dostosować ustawienie. Po zakończeniu aktualizowania ustawień naciśnij pozycję **Kontynuuj**.  
 
    ![Przykładowy obraz Portal firmy, zaktualizowanie ustawień urządzenia, wyróżnianie przycisków Rozwiąż i Kontynuuj.](./media/resolve-settings-1911.png)  
 
@@ -91,7 +91,7 @@ Podczas rejestrowania może pojawić się monit o wybranie kategorii, która naj
 
 ## <a name="next-steps"></a>Następne kroki  
 
-Przed podjęciem próby zainstalowania szkoły lub aplikacji służbowej przejdź do pozycji **ustawienia** > **zabezpieczenia**i Włącz opcję **Nieznane źródła**. Jeśli nie włączysz tej opcji, podczas próby zainstalowania aplikacji zostanie wyświetlony następujący komunikat: „Zablokowano instalację. Ze względów bezpieczeństwa Twoje urządzenie zostało ustawione w celu blokowania instalacji aplikacji uzyskanych z nieznanych źródeł”. Możesz nacisnąć pozycję **Ustawienia** w wiadomości, aby przejść bezpośrednio do **nieznanych źródeł**.  
+Zanim spróbujesz zainstalować aplikacje firmowe, przejdź kolejno do pozycji **Ustawienia** > **Zabezpieczenia** i włącz opcję **Nieznane źródła**. Jeśli nie włączysz tej opcji, podczas próby zainstalowania aplikacji zostanie wyświetlony następujący komunikat: „Zablokowano instalację. Ze względów bezpieczeństwa Twoje urządzenie zostało ustawione w celu blokowania instalacji aplikacji uzyskanych z nieznanych źródeł”. Możesz nacisnąć **ustawienia** wiadomości, aby przejść bezpośrednio do **nieznanych źródeł**.  
 
 > [!Note]
 > Jeśli Twoja organizacja korzysta z oprogramowania do zarządzania wydatkami telekomunikacyjnymi, musisz wykonać kilka dodatkowych czynności, zanim urządzenie zostanie w pełni zarejestrowane. Dowiedz się więcej [tutaj](enroll-your-device-with-telecom-expense-management-android.md).
