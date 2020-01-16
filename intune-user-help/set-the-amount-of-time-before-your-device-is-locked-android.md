@@ -18,19 +18,19 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: ce0736845b1aca2f70b5c8802e726995ca18159b
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: 749bc2e7015bd43a811fae8de55169a3cfcc2999
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72508267"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75857934"
 ---
 # <a name="how-to-set-the-amount-of-time-before-your-device-is-locked"></a>Jak ustawić czas, po upływie którego urządzenie ma zostać zablokowane
 
 W celu zwiększenia bezpieczeństwa danych na urządzeniu z systemem Android dział pomocy technicznej Twojej firmy może skonfigurować zasady, które będą wymagać ustawienia czasu, przez jaki urządzenie może być bezczynne, zanim zostanie automatycznie zablokowane. Wykonaj następujące kroki, aby ustawić czas, po jakim urządzenie zostanie zablokowane.
 
-1. W obszarze **Ustawienia** na urządzeniu kliknij pozycję **Zabezpieczenia** &gt;**Automatically Lock** (Zablokuj automatycznie). Na niektórych urządzeniach ta opcja ma nazwę **Lock phone after** (Zablokuj telefon po).
+1. W obszarze **Ustawienia** na urządzeniu kliknij pozycję **Zabezpieczenia** &gt; **Automatically Lock** (Zablokuj automatycznie). Na niektórych urządzeniach ta opcja ma nazwę **Lock phone after** (Zablokuj telefon po).
 
 2. Określ wartość limitu czasu hasła.
 

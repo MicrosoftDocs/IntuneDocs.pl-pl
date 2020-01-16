@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/18/2019
+ms.date: 12/31/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,15 +18,15 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 68a44027c14e0a52d72fc032a6ab42413fa8df96
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: f82549cfbdd3c987b2f51f4d90b9c18cce8c25be
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72508304"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75857807"
 ---
-# <a name="sign-in-to-company-portal"></a>Zaloguj się do Portal firmy  
+# <a name="sign-in-to-company-portal"></a>Logowanie się w aplikacji Portal firmy  
 
 Istnieją trzy sposoby logowania się do aplikacji Portal firmy:
 
@@ -40,7 +40,7 @@ Poniższe kroki pokazują zrzuty ekranu z Portal firmy dla systemu iOS.
 
 1. Otwórz aplikację na urządzeniu i naciśnij pozycję **Zaloguj się**.  
 
-   [![przykładowego zrzutu ekranu Portal firmy stronie logowania.](/intune-user-help/media/intune-ios-cp-signin-1908.png)](/intune-user-help/media/intune-ios-cp-signin-lightbox-1908.png#lightbox)  
+   [ ![Przykładowy zrzut ekranu przedstawiający stronę logowania Portal firmy.](/intune-user-help/media/intune-ios-cp-signin-1908.png) ](/intune-user-help/media/intune-ios-cp-signin-lightbox-1908.png#lightbox)  
 
 
 2. Wprowadź swoje **Konto służbowe** i naciśnij przycisk **Dalej**.
@@ -56,6 +56,7 @@ Poniższe kroki pokazują zrzuty ekranu z Portal firmy dla systemu iOS.
    ![Po przeprowadzeniu procesu uwierzytelniania w aplikacji Portal firmy następuje logowanie, którego postęp jest widoczny na pasku ładowania.](/intune-user-help/media/cp_ios_aad_signin_after_1804_004.png)
 
 ## <a name="sign-in-with-certificate-based-authentication"></a>Logowanie przy użyciu uwierzytelniania opartego na certyfikatach
+Ta opcja logowania zostanie wyświetlona tylko wtedy, gdy organizacja zezwala na uwierzytelnianie oparte na certyfikatach i masz certyfikat dostępny do użycia.  
 
 1. Otwórz aplikację Portal firmy na urządzeniu.  
 
@@ -67,7 +68,7 @@ Poniższe kroki pokazują zrzuty ekranu z Portal firmy dla systemu iOS.
 
 ## <a name="sign-in-from-another-device"></a>Logowanie z innego urządzenia
 
-Jeśli firma używa kart inteligentnych do uzyskiwania dostępu do komputerów, prawdopodobnie trzeba będzie uwierzytelnić się, logując się z innego urządzenia.  
+Jeśli w Twojej firmie do uzyskiwania dostępu do komputerów używane są karty inteligentne, prawdopodobnie musisz zalogować się za pomocą innego urządzenia.  
 
 1. Otwórz aplikację Portal firmy na urządzeniu. Upewnij się, że jest to urządzenie, za pomocą którego będziesz uzyskiwać dostęp do zasobów służbowych.       
 
@@ -83,7 +84,7 @@ Jeśli firma używa kart inteligentnych do uzyskiwania dostępu do komputerów, 
 
    ![Zrzut ekranu przedstawiający przeglądarkę użytkownika na komputerze służbowym zamiast aplikacji Portal firmy. Na stronie „Logowanie do urządzenia” zostanie wyświetlony monit o podanie kodu odebranego w aplikacji Portal firmy.](/intune/media/cp_ios_aad_signin_from_another_device_after_1704_004.png)
 
-4. Wybierz pozycję __Kontynuuj__ , aby zezwolić Portal firmy na logowanie się na urządzeniu służbowym.   
+4. Wybierz pozycję __Kontynuuj__, aby umożliwić Portal firmy zalogowanie się na urządzeniu służbowym.   
 
    ![Użytkownik wprowadził w odpowiednim polu swój unikatowy kod, a w witrynie „Logowanie do urządzenia” został wyświetlony monit o potwierdzenie, że aplikacja Portal firmy usługi Intune jest właściwą aplikacją, która ma otrzymać autoryzację do logowania.](/intune/media/cp_ios_aad_signin_from_another_device_after_1704_005.png)
 

@@ -6,7 +6,7 @@ keywords: Magazyn danych usługi Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 01/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4a8fa34673340e4adca7b64707d8c79d4808460
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 2c87d9b423eeb96acbc984040ef49e44c1853a18
+ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74290952"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75654247"
 ---
 # <a name="reference-for-application-entities"></a>Dokumentacja jednostek aplikacji
 
@@ -51,7 +51,7 @@ Jednostka **appRevision** przedstawia listę wszystkich wersji aplikacji.
 | vppProgramTypeKey |Odwołanie do jednostki VppProgramType opisanej poniżej. | |
 | creationTime |Godzina utworzenia tej poprawki. |2016-11-23 12:00:00 |
 | modifiedTime |Godzina ostatniej zmiany dotyczącej tej poprawki. |2016-11-23 12:00:00 |
-| rozmiar |Rozmiar pliku binarnego. | |
+| size |Rozmiar pliku binarnego. | |
 | startDateInclusiveUTC |Data i godzina w formacie UTC utworzenia tej poprawki aplikacji w magazynie danych. |2016-11-23 12:00:00 |
 | endDateExclusiveUTC |Data i godzina w formacie UTC utraty ważności przez tę poprawkę aplikacji. |2016-11-23 12:00:00 |
 | isCurrent |Wskazuje, czy ta wersja aplikacji jest aktualna w magazynie danych, czy nie. |Prawda/Fałsz |

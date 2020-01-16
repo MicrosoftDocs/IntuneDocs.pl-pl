@@ -1,5 +1,5 @@
 ---
-title: Używanie kontroli dostępu opartej na rolach (RBAC) i tagów zakresu dystrybuowanych w usłudze Intune | Microsoft Docs
+title: W artykule Używanie kontroli dostępu opartej na rolach i tagów zakresu w rozproszonej infrastrukturze informatycznej znajduje się więcej informacji.
 description: Tagi zakresu umożliwiają filtrowanie profilów konfiguracji dla określonych ról.
 keywords: ''
 author: ErikjeMS
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6b92dca399afeb035bf58d998efdd469318de389
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: e1f81d26227bb206aa55ca495f4a4ee5e8ae9907
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72504946"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75548124"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Używanie kontroli dostępu opartej na rolach i tagów zakresu w rozproszonej infrastrukturze informatycznej
 
@@ -39,27 +39,25 @@ Na przykład załóżmy, że administrator biura regionalnego w Seattle ma przyp
 ## <a name="default-scope-tag"></a>Domyślny tag zakresu
 Domyślny tag zakresu jest automatycznie dodawany do wszystkich nieoznakowanych obiektów, które obsługują Tagi zakresu.
 
-Funkcja domyślnego tagu zakresu jest podobna do funkcji zakresów zabezpieczeń w programie System Center Configuration Manager. 
+Funkcja domyślnego tagu zakresu jest podobna do funkcji zakresów zabezpieczeń w programie Microsoft Endpoint Configuration Manager. 
 
 ## <a name="to-create-a-scope-tag"></a>Aby utworzyć tag zakresu
 
-1. W usłudze Intune wybierz pozycję **Role** > **Zakres (tagi)**  > **Utwórz**.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)wybierz pozycję **Administracja dzierżawy** > **role** > **zakres (Tagi)**  > **utworzyć**.
 
     ![Zrzut ekranu przedstawiający tworzenie tagu zakresu.](./media/scope-tags/create-scope-tag.png)
 
-3. Jeśli chcesz, aby wszystkie urządzenia były określone w określonych grupach, wybierz pozycję **Przypisz tag zakresu do wszystkich urządzeń w wybranych grupach**.
-    1. Na stronie **Wybierz grupy do dołączenia** wybierz grupy zawierające urządzenia, do których chcesz przypisać ten tag zakresu.
+2. Podaj **nazwę** i opcjonalny **opis**.
+3. Jeśli chcesz, aby wszystkie urządzenia były określone w określonych grupach, wybierz **przypisać tag zakresu do wszystkich urządzeń w wybranych grupach**.
+    1. Na stronie **wybierz grupy do dołączenia** wybierz grupy zawierające urządzenia, do których chcesz przypisać ten tag zakresu.
     2. Wybierz pozycję **Wybierz**.
 4. Wybierz pozycję **Utwórz**.
 
 ## <a name="to-assign-a-scope-tag-to-a-role"></a>Aby przypisać tag zakresu do roli
 
-1. W usłudze Intune wybierz pozycję **Role** > **Wszystkie role** > wybierz rolę > **Przypisania** > **Przypisz**.
-
-    ![Zrzut ekranu przedstawiający przypisywanie zakresu do roli.](./media/scope-tags/assign-scope-to-role.png)
-
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)wybierz pozycję **Administracja dzierżawy** > **role** > **wszystkie role** > Wybierz rolę > **przypisania** > **przypisywania**.
 2. Wypełnij pola **Nazwa przypisania** i **Opis**.
-3. Wybierz pozycję **Członkowie (grupy)**  > **Dodaj** > wybierz grupy, które mają być objęte tym przypisaniem > **Wybierz** > **OK**. Użytkownicy w tej grupie będą mieć uprawnienia do zarządzania użytkownikami/urządzeniami w zakresie (grupy).
+3. Wybierz pozycję **Członkowie (grupy)**  > **Dodaj** > wybierz grupy, które mają być objęte tym przypisaniem > **Wybierz** > **OK**. Użytkownicy w tej grupie mają uprawnienia do zarządzania zasadami i profilami użytkowników/urządzeń w grupie Zakres (grupy).
 
     ![Zrzut ekranu przedstawiający wybieranie grup członków.](./media/scope-tags/select-member-groups.png)
 
@@ -71,7 +69,7 @@ Funkcja domyślnego tagu zakresu jest podobna do funkcji zakresów zabezpieczeń
 
     ![Zrzut ekranu przedstawiający inne opcje wybierania grup zakresu.](./media/scope-tags/scope-group-other-options.png)
     
-5. Wybierz pozycję **Zakres (tagi)**  > **Dodaj** > wybierz tagi, które chcesz dodać do tej roli > **Wybierz** > **OK**. Użytkownicy w elementach członkowskich (grupy) będą mieli dostęp do obiektów usługi Intune, które również mają ten sam tag zakresu.
+5. Wybierz pozycję **Zakres (tagi)**  > **Dodaj** > wybierz tagi, które chcesz dodać do tej roli > **Wybierz** > **OK**. Użytkownicy w grupie Członkowie (grupy) będą mieli dostęp do zasad i profilów, które mają też ten sam tagu zakresu.
 
     ![Zrzut ekranu przedstawiający wybieranie tagów zakresu.](./media/scope-tags/select-scope-tags.png)
 
@@ -79,11 +77,9 @@ Funkcja domyślnego tagu zakresu jest podobna do funkcji zakresów zabezpieczeń
 
 ## <a name="assign-scope-tags-to-other-objects"></a>Przypisywanie tagów zakresu do innych obiektów
 
-W przypadku obiektów, które obsługują Tagi zakresu, Tagi zakresu są zwykle wyświetlane w obszarze **Właściwości**. Na przykład aby przypisać tag zakresu do profilu konfiguracji, wykonaj następujące kroki:
+W przypadku obiektów, które obsługują Tagi zakresu, Tagi zakresu są zwykle wyświetlane w obszarze **właściwości**. Na przykład aby przypisać tag zakresu do profilu konfiguracji, wykonaj następujące kroki:
 
-1. W usłudze Intune wybierz pozycję **Konfiguracja urządzeń** > **Profile** > utwórz profil.
-
-    ![Zrzut ekranu przedstawiający wybieranie profilu.](./media/scope-tags/choose-profile.png)
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **Profile konfiguracji**Utwórz profil.
 
 2. Wybierz pozycję **Właściwości** > **Zakres (tagi)**  > **Dodaj**.
 
@@ -101,8 +97,8 @@ Podczas pracy z tagami zakresu należy pamiętać o następujących szczegółac
     - Profile systemu Windows ESP
     - Kategorie urządzeń
     - Ograniczenia rejestracji
-    - Identyfikatory urządzeń firmowych
-    - Urządzenia z autopilotażem
+    - Dodano identyfikatory urządzeń: {0}.
+    - Urządzenia rozwiązania Autopilot
     - Lokalizacje zgodności urządzeń
     - Urządzenia Jamf
 - Aplikacje i książki elektroniczne programu VPP skojarzone z tokenem VPP dziedziczą znaczniki zakresu przypisane do skojarzonego tokenu VPP.
@@ -116,5 +112,5 @@ Podczas pracy z tagami zakresu należy pamiętać o następujących szczegółac
 
 ## <a name="next-steps"></a>Następne kroki
 
-Dowiedz się, jak Tagi zakresu działają, gdy istnieje [wiele przypisań ról](role-based-access-control.md#multiple-role-assignments).
+Dowiedz się, jak Tagi zakresu działają w przypadku [wielu przypisań ról](role-based-access-control.md#multiple-role-assignments).
 Zarządzanie własnymi [rolami](role-based-access-control.md) i [profilami](../configuration/device-profile-assign.md).

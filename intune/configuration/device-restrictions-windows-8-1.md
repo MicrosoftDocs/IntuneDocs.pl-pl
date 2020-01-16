@@ -1,12 +1,12 @@
 ---
-title: Ustawienia ograniczeń urządzeń z systemem Windows 8.1 w usłudze Microsoft Intune
+title: Ustawienia ograniczeń urządzeń z systemem Windows 8.1 w usłudze Microsoft Intune — Azure | Microsoft Docs
 titleSuffix: ''
 description: Dowiedz się więcej na temat ustawień usługi Intune służących do kontrolowania ustawień i funkcji na urządzeniach z systemem Windows 8.1.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/6/2018
+ms.date: 12/19/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,19 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0df55e79dbc54926c0507889620f2667d7b8bd7b
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 82eaf1bc2c0737e1cc54751ff6fb5751227d180c
+ms.sourcegitcommit: 42183c87b137710b8529049f8710d47127e99900
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72489829"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302967"
 ---
-# <a name="microsoft-intune-windows-81-and-later-device-restriction-settings"></a>Ustawienia ograniczeń urządzeń z systemem Windows 8.1 lub nowszym w usłudze Microsoft Intune
+# <a name="microsoft-intune-windows-81-device-restriction-settings"></a>Ustawienia ograniczeń urządzeń z systemem Windows 8.1 w usłudze Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
-W tym artykule opisano wszystkie ustawienia ograniczeń urządzeń, które można skonfigurować w usłudze Microsoft Intune dla urządzeń z systemem Windows 8.1 lub nowszym.
-
+W tym artykule opisano ustawienia ograniczeń urządzeń w usłudze Microsoft Intune, które można skonfigurować dla urządzeń z systemem Windows 8.1.
 
 ## <a name="general"></a>Ogólne
 
@@ -48,8 +45,6 @@ W tym artykule opisano wszystkie ustawienia ograniczeń urządzeń, które możn
 W przypadku włączenia tego ustawienia dla urządzeń z systemem Windows 8.1 wszyscy użytkownicy urządzeń muszą mieć konto Microsoft.
 Aby szyfrowanie działało, urządzenie musi spełniać wymagania certyfikacji sprzętu [Microsoft InstantGo](https://blogs.windows.com/windowsexperience/2014/06/19/instantgo-a-better-way-to-sleep/#IBHULcTfI4PokO8X.97).
 W przypadku wymuszania szyfrowania na urządzeniu klucz odzyskiwania jest dostępny tylko za pośrednictwem konta Microsoft użytkownika, do którego można uzyskać dostęp z konta usługi OneDrive. Nie można odzyskać tego klucza w imieniu użytkownika. 
-
-
 
 ## <a name="browser"></a>Przeglądarka
 - **Autowypełnianie** — umożliwia użytkownikom zmianę ustawień autouzupełniania w przeglądarce.
@@ -75,3 +70,7 @@ Jeśli to ustawienie jest wybrane, możesz również określić opcję **Lokaliz
 ## <a name="cloud-and-storage"></a>Chmura i magazyn
 - **Adres URL folderów roboczych** — określa adres URL folderu roboczego, aby umożliwić synchronizację dokumentów między urządzeniami.
 - **Dostęp do aplikacji Poczta systemu Windows bez konta Microsoft** — umożliwia dostęp do aplikacji Poczta systemu Windows bez konta Microsoft.
+
+## <a name="next-steps"></a>Następne kroki
+
+Utwórz profil ograniczeń dotyczących urządzeń w systemie [Windows 10 i nowszych](device-restrictions-windows-10.md).

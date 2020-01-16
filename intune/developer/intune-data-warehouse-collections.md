@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 42d07f02e76669c735d09b5d7843a4102dd0f835
-ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
+ms.openlocfilehash: 7ceaf5c62f34cc248813a064de9e8e3710797779
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74899241"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547913"
 ---
 # <a name="intune-data-warehouse-collections"></a>Kolekcje magazynu danych usługi Intune
 
@@ -44,7 +44,7 @@ Jednostka **appRevision** przedstawia listę wszystkich wersji aplikacji.
 | VppProgramTypeKey          | Odwołanie do jednostki VppProgramType opisanej poniżej.                                        | 30876                                |
 | CreationTime               | Godzina utworzenia tej poprawki.                                            | 23.11.2016 0:00                      |
 | ModifiedTime               | Godzina ostatniej zmiany dotyczącej tej poprawki.                            | 23.11.2016 0:00                      |
-| Size                       | Rozmiar pliku binarnego w bajtach.                                                          | 120 392 000                          |
+| Rozmiar                       | Rozmiar pliku binarnego w bajtach.                                                          | 120 392 000                          |
 | StartDateInclusiveUTC      | Data i godzina utworzenia tej poprawki aplikacji (czas UTC) w magazynie danych.      | 23.11.2016 0:00                      |
 | EndDateExclusiveUTC        | Data i godzina utraty ważności przez tę poprawkę aplikacji w formacie UTC.                        | 23.11.2016 0:00                      |
 | IsCurrent                  | Wskazuje, czy ta wersja aplikacji jest aktualna w magazynie danych, czy nie.         | Prawda/Fałsz                           |
@@ -359,7 +359,7 @@ Jednostka **EnrollmentFailureCategory** wskazuje, dlaczego rejestracja urządzen
 | Nie dotyczy                  | Kategoria niepowodzenia rejestracji nie ma zastosowania.                                                            |
 | Niedostępny                   | Kategoria niepowodzenia rejestracji nie jest dostępna.                                                             |
 | Nieznane                         | Nieznany błąd.                                                                                                |
-| Uwierzytelnianie                  | Uwierzytelnianie nie powiodło się.                                                                                        |
+| Uwierzytelnianie                  | Nie można przeprowadzić uwierzytelniania.                                                                                        |
 | Autoryzacja                   | Wywołanie zostało uwierzytelnione, ale nie zostało autoryzowane do rejestracji.                                                         |
 | AccountValidation               | Nie można zweryfikować konta na potrzeby rejestracji. (Konto zablokowane, rejestracja nie jest włączona)                      |
 | UserValidation                  | Nie można zweryfikować użytkownika. (Użytkownik nie istnieje, brak licencji)                                           |
@@ -525,7 +525,7 @@ Jednostka **managementAgentTypes** reprezentuje agentów używanych do zarządza
 | 3                     | EasMdm                            | Urządzenie jest zarządzane zarówno przez program Exchange Active Sync, jak i agenta MDM        |
 | 4                     | IntuneClient                      | Urządzenie jest zarządzane przez agenta PC usługi Intune                               |
 | 5                     | EasIntuneClient                   | Urządzenie jest zarządzane zarówno przez program Exchange Active Sync, jak i agenta PC usługi Intune |
-| 8                     | ConfigManagerClient               | Urządzenie jest zarządzane przez agenta programu System Center Configuration Manager     |
+| 8                     | ConfigManagerClient               | Urządzenie jest zarządzane przez agenta programu Configuration Manager     |
 | 10                    | ConfigurationManagerClientMdm     | Urządzenie jest zarządzane przez program Configuration Manager i oprogramowanie MDM.                    |
 | 11                    | ConfigurationManagerCLientMdmEas  | Urządzenie jest zarządzane przez program Configuration Manager, oprogramowanie MDM i rozwiązanie Exchange Active Sync.               |
 | 16                    | Nieznane                           | Nieznany typ agenta zarządzania                                              |
@@ -586,7 +586,7 @@ Jednostka **ownerType** wskazuje, czy urządzenie jest firmowe, osobiste czy nie
 |:-------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------:|
 | ownerTypeID   | Unikatowy identyfikator typu właściciela.                                                                                                                                               |                            |
 | ownerTypeKey  | Unikatowy identyfikator typu właściciela w magazynie danych — klucz zastępczy.                                                                                                       |                            |
-| ownerTypeName | Reprezentuje typ właściciela urządzenia: Corporate — urządzenie jest własnością przedsiębiorstwa.  Personal — urządzenie jest własnością osobistą (BYOD).   Unknown — brak informacji o tym urządzeniu. | Corporate Personal Unknown |
+| ownerTypeName | Reprezentuje typ właściciela urządzeń:  Corporate — urządzenie jest własnością przedsiębiorstwa.  Personal — urządzenie jest własnością osobistą (BYOD).   Unknown — brak informacji o tym urządzeniu. | Corporate Personal Unknown |
 
 > [!Note]  
 > Na potrzeby filtru `ownerTypeName` w usłudze Azure AD należy podczas tworzenia grup dynamicznych dla urządzeń ustawić wartość parametru `deviceOwnership` na `Company`. Aby uzyskać więcej informacji, zobacz [Reguły urządzeń](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
@@ -686,7 +686,7 @@ Jednostka **UserDeviceAssociation** zawiera skojarzenia urządzeń użytkownikó
 | IsDeleted          | Wskazuje, że użytkownik wyrejestrował urządzenie i skojarzenie nie jest już aktualne. | Prawda/Fałsz      |
 | EndedDateTimeUTC   | Data i godzina w formacie UTC zmiany właściwości IsDeleted na wartość True.                                               | 23.06.2017 0:00  |
 
-## <a name="users"></a>użytkownicy
+## <a name="users"></a>users
 Jednostka **user** zawiera listę wszystkich użytkowników usługi Azure Active Directory (Azure AD) w przedsiębiorstwie wraz z przypisanymi licencjami.
 
 Kolekcja jednostek **user** zawiera dane użytkowników. Te rekordy obejmują stany użytkowników w okresie zbierania danych, nawet jeśli użytkownik został usunięty. Na przykład w ciągu ostatniego miesiąca użytkownik mógł zostać dodany do usługi Intune, a następnie z niej usunięty. Chociaż ten użytkownik nie występuje w chwili tworzenia raportu, on i jego stan znajdują się jednak w danych z poprzedniego miesiąca. Możesz utworzyć raport, który pokazuje okres historycznej obecności użytkownika w Twoich danych.

@@ -15,25 +15,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 647e8869caf24638f6809479274dbf7a7b967b9e
-ms.sourcegitcommit: f5108039f0ade52e95ea3ac1da1aa16d02224af3
+ms.openlocfilehash: a0c11be374e36ec32feb9540f6cfd4f1bc794e9c
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74946635"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206316"
 ---
 # <a name="android-enterprise-device-settings-to-configure-vpn-in-intune"></a>Ustawienia urządzenia z systemem Android w celu skonfigurowania sieci VPN w usłudze Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 W tym artykule wyszczególniono i opisano różne ustawienia połączenia VPN, którymi można zarządzać na urządzeniach z systemem Android Enterprise. W ramach rozwiązania do zarządzania urządzeniami przenośnymi (MDM) Użyj tych ustawień, aby utworzyć połączenie sieci VPN, wybierz sposób uwierzytelniania sieci VPN, wybierz typ serwera sieci VPN i inne.
 
 Jako administrator usługi Intune możesz tworzyć ustawienia sieci VPN i przypisywać je do urządzeń z rozwiązaniem Android Enterprise. 
 
-Aby dowiedzieć się więcej o profilach sieci VPN w usłudze Intune, zobacz [Profile sieci VPN](vpn-settings-configure.md).
+Aby dowiedzieć się więcej o profilach sieci VPN w usłudze Intune, zobacz [profile sieci VPN](vpn-settings-configure.md).
 
 > [!NOTE]
-> Aby skonfigurować zawsze włączone sieci VPN, należy utworzyć profil sieci VPN, a także utworzyć profil [ograniczeń urządzenia](device-restrictions-android-for-work.md#connectivity) z skonfigurowanym ustawieniem zawsze włączone sieci VPN.
+> Aby skonfigurować zawsze włączony sieci VPN, należy utworzyć profil sieci VPN, a także utworzyć [ograniczenia dotyczące urządzeń](device-restrictions-android-for-work.md#connectivity) profilu z skonfigurowanym ustawieniem zawsze włączone sieci VPN.
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
@@ -41,15 +41,15 @@ Aby dowiedzieć się więcej o profilach sieci VPN w usłudze Intune, zobacz [Pr
 
 ## <a name="device-owner-only"></a>Tylko właściciel urządzenia
 
-- **Nazwa połączenia**: umożliwia wprowadzenie nazwy połączenia. Użytkownicy końcowi widzą tę nazwę, przeglądając w urządzeniu listę dostępnych połączeń sieci VPN. Na przykład wprowadź `Contoso VPN`.
-- **Adres IP lub nazwa FQDN** — podaj adres IP lub w pełni kwalifikowaną nazwę domeny (FQDN) serwera sieci VPN, z którym urządzenia nawiązują połączenie. Na przykład podaj adres **192.168.1.1** lub **vpn.contoso.com**.
+- **Nazwa połączenia**: Wprowadź nazwę dla połączenia. Użytkownicy końcowi widzą tę nazwę, przeglądając w urządzeniu listę dostępnych połączeń sieci VPN. Na przykład wprowadź `Contoso VPN`.
+- **Adres IP lub nazwa FQDN**: wprowadź adres IP lub w pełni kwalifikowaną nazwę domeny (FQDN) serwera sieci VPN, z którym urządzenia nawiązują połączenie. Na przykład podaj adres **192.168.1.1** lub **vpn.contoso.com**.
 
-  - **Metoda uwierzytelniania**: umożliwia wybór sposobu uwierzytelniania urządzeń na serwerze sieci VPN. Dostępne opcje:
+  - **Metoda uwierzytelniania**: wybierz sposób uwierzytelniania urządzeń na serwerze sieci VPN. Dostępne opcje:
   
     - **Certyfikaty**: wybierz istniejący profil certyfikatu SCEP lub PKCS na potrzeby uwierzytelniania połączenia. [Konfigurowanie certyfikatów](../protect/certificates-configure.md): zawiera procedurę tworzenia profilu certyfikatu.
-    - **Nazwa użytkownika i hasło**: podczas logowania na serwerze VPN użytkownicy końcowi są proszeni o podanie nazwy użytkownika i hasła.
+    - **Nazwa użytkownika i hasło**: podczas logowania się do serwera sieci VPN użytkownicy są proszeni o wprowadzenie nazwy użytkownika i hasła.
 
-- **Typ połączenia**: pozwala wybrać typ połączenia VPN. Dostępne opcje:
+- **Typ połączenia**: wybierz typ połączenia sieci VPN. Dostępne opcje:
 
   - **Cisco AnyConnect**
   - **F5 Access**
@@ -57,15 +57,15 @@ Aby dowiedzieć się więcej o profilach sieci VPN w usłudze Intune, zobacz [Pr
 
 ## <a name="work-profile-only"></a>Tylko profil służbowy
 
-- **Nazwa połączenia**: umożliwia wprowadzenie nazwy połączenia. Użytkownicy końcowi widzą tę nazwę, przeglądając w urządzeniu listę dostępnych połączeń sieci VPN. Na przykład wprowadź `Contoso VPN`.
-- **Adres IP lub nazwa FQDN** — podaj adres IP lub w pełni kwalifikowaną nazwę domeny (FQDN) serwera sieci VPN, z którym urządzenia nawiązują połączenie. Na przykład podaj adres **192.168.1.1** lub **vpn.contoso.com**.
+- **Nazwa połączenia**: Wprowadź nazwę dla połączenia. Użytkownicy końcowi widzą tę nazwę, przeglądając w urządzeniu listę dostępnych połączeń sieci VPN. Na przykład wprowadź `Contoso VPN`.
+- **Adres IP lub nazwa FQDN**: wprowadź adres IP lub w pełni kwalifikowaną nazwę domeny (FQDN) serwera sieci VPN, z którym urządzenia nawiązują połączenie. Na przykład podaj adres **192.168.1.1** lub **vpn.contoso.com**.
 
-  - **Metoda uwierzytelniania**: umożliwia wybór sposobu uwierzytelniania urządzeń na serwerze sieci VPN. Dostępne opcje:
+  - **Metoda uwierzytelniania**: wybierz sposób uwierzytelniania urządzeń na serwerze sieci VPN. Dostępne opcje:
   
     - **Certyfikaty**: wybierz istniejący profil certyfikatu SCEP lub PKCS na potrzeby uwierzytelniania połączenia. [Konfigurowanie certyfikatów](../protect/certificates-configure.md): zawiera procedurę tworzenia profilu certyfikatu.
-    - **Nazwa użytkownika i hasło**: podczas logowania na serwerze VPN użytkownicy końcowi są proszeni o podanie nazwy użytkownika i hasła.
+    - **Nazwa użytkownika i hasło**: podczas logowania się do serwera sieci VPN użytkownicy są proszeni o wprowadzenie nazwy użytkownika i hasła.
 
-- **Typ połączenia**: pozwala wybrać typ połączenia VPN. Dostępne opcje:
+- **Typ połączenia**: wybierz typ połączenia sieci VPN. Dostępne opcje:
 
   - **Cisco AnyConnect**
   - **F5 Access**
@@ -77,4 +77,4 @@ Aby dowiedzieć się więcej o profilach sieci VPN w usłudze Intune, zobacz [Pr
 
 [Przypisywanie profilu](device-profile-assign.md) i [monitorowanie jego stanu](device-profile-monitor.md).
 
-Można również tworzyć profile sieci VPN dla urządzeń z [systemami](vpn-settings-ios.md) [Android](vpn-settings-android.md), iOS, [macOS](vpn-settings-macos.md), [Windows 10 i nowszych](vpn-settings-windows-10.md), [Windows 8.1](vpn-settings-windows-8-1.md)i [Windows Phone 8,1](vpn-settings-windows-phone-8-1.md) .
+Możesz również utworzyć profile sieci VPN dla [Android](vpn-settings-android.md), [iOS](vpn-settings-ios.md), [macOS](vpn-settings-macos.md), [Windows 10 i nowszych](vpn-settings-windows-10.md), [Windows 8.1](vpn-settings-windows-8-1.md)i [Windows Phone 8,1](vpn-settings-windows-phone-8-1.md) urządzeń.

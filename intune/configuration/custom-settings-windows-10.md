@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/24/2018
+ms.date: 12/18/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8f896f514223cdb5e5faae5f781421d37fffd01
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 9e3d2784e0242498fbae43ab61034a5be31b0952
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72495363"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206775"
 ---
 # <a name="use-custom-settings-for-windows-10-devices-in-intune"></a>Używanie ustawień niestandardowych dla urządzeń z systemem Windows 10 w usłudze Intune
 
@@ -40,21 +40,21 @@ Ten artykuł zawiera następujące informacje:
 
 ## <a name="create-the-profile"></a>Tworzenie profilu
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Wybierz pozycję **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz pozycję **Urządzenia** > **Profile konfiguracji** > **Utwórz profil**.
 3. Podaj następujące ustawienia:
 
-    - **Nazwa**: wprowadź nazwę profilu, na przykład `windows 10 custom profile`.
-    - **Opis:** wprowadź opis profilu.
-    - **Platforma**: wybierz **system Windows 10 lub nowszy**.
-    - **Typ profilu**: wybierz pozycję **Niestandardowy**.
+    - **Nazwa**: Wprowadź opisową nazwę profilu. Nadaj nazwę profilom, aby można było je później łatwo rozpoznać. Na przykład dobra nazwa **profilu to Windows**:
+    - **Opis**: Wprowadź opis profilu. To ustawienie jest opcjonalne, ale zalecane.
+    - **Platforma**: Wybierz pozycję **Windows 10 i nowsze**.
+    - **Typ profilu**: Wybierz **niestandardowe**.
 
 4. W obszarze **Niestandardowe ustawienia OMA-URI** wybierz pozycję **Dodaj**. Podaj następujące ustawienia:
 
-    - **Nazwa**: wprowadź unikatową nazwę ustawienia OMA-URI, aby ułatwić jego identyfikację na liście ustawień.
-    - **Opis elementu**: wprowadź opis ułatwiający identyfikację ustawienia oraz zawierający inne ważne szczegóły.
-    - **OMA-URI** (z uwzględnieniem wielkości liter): wprowadź identyfikator OMA-URI, którego chcesz użyć jako ustawienia.
-    - **Typ danych**: wprowadź typ danych używany w przypadku tego ustawienia identyfikatora OMA-URI. Dostępne opcje:
+    - **Nazwa**: Wprowadź unikatową nazwę dla ustawienia OMA-URI, aby ułatwić jego identyfikację na liście ustawień.
+    - **Opis**: Wprowadź opis ułatwiający identyfikację ustawienia oraz zawierający inne ważne szczegóły.
+    - **OMA-URI** (rozróżniana jest wielkość liter): Wprowadź identyfikator OMA-URI, którego chcesz używać jako ustawienia.
+    - **Typ danych**: Wybierz typ danych używany w przypadku tego ustawienia identyfikatora OMA-URI. Dostępne opcje:
 
         - String
         - Ciąg (plik XML)
@@ -64,12 +64,12 @@ Ten artykuł zawiera następujące informacje:
         - Boolean
         - Base64 (plik)
 
-    - **Wartość**: wprowadź wartość danych, którą chcesz skojarzyć z wprowadzonym identyfikatorem OMA-URI. Wartość zależy od wybranego typu danych. Jeśli na przykład wybrano opcję **Data i godzina**, wybierz wartość za pomocą selektora daty.
+    - **Wartość**: Wprowadź wartość danych, którą chcesz skojarzyć z wprowadzonym identyfikatorem OMA-URI. Wartość zależy od wybranego typu danych. Jeśli na przykład wybrano opcję **Data i godzina**, wybierz wartość za pomocą selektora daty.
 
     Po dodaniu ustawień możesz wybrać pozycję **Eksportuj**. Wybranie pozycji **Eksportuj** spowoduje utworzenie listy wszystkich dodanych wartości w pliku wartości rozdzielanych przecinkami (CSV).
 
 5. Wybierz przycisk **OK**, aby zapisać zmiany. W razie potrzeby kontynuuj dodawanie ustawień.
-6. Po zakończeniu wybierz pozycję **OK** > **Utwórz**, aby utworzyć profil usługi Intune. Po utworzeniu profil będzie widoczny na liście **Konfiguracja urządzenia — profile**.
+6. Po zakończeniu wybierz pozycję **OK** > **Utwórz**, aby utworzyć profil usługi Intune. Po utworzeniu profil będzie widoczny na liście **Urządzenia — profile konfiguracji**.
 
 ## <a name="example"></a>Przykład
 
@@ -87,4 +87,4 @@ Ponadto usługa Intune nie obsługuje wszystkich ustawień wymienionych w artyku
 
 ## <a name="next-steps"></a>Następne kroki
 
-Profil został utworzony, ale nie wykonuje jeszcze żadnych czynności. Teraz należy [przypisać profil](device-profile-assign.md).
+Profil został utworzony, ale nie wykonuje jeszcze żadnych czynności. W dalszej części [przypiszesz profil](../device-profile-assign.md) i będziesz [monitorować jego stan](device-profile-monitor.md).

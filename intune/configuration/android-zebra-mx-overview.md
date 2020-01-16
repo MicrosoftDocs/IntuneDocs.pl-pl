@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 829d8f6b2691f91c14029e4f29e2ef11b070e596
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 83048061cc7b3e1aaeb09ff54dec819720f2571f
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059618"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206826"
 ---
 # <a name="use-and-manage-zebra-devices-with-zebra-mobility-extensions-in-microsoft-intune"></a>Używanie urządzeń Zebra i zarządzanie nimi za pomocą funkcji Zebra Mobility Extensions w usłudze Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
 
 Usługa Intune obejmuje bogaty zestaw funkcji, takich jak zarządzanie aplikacjami i konfigurowanie ustawień urządzenia. Za pomocą tych wbudowanych funkcji i ustawień można zarządzać urządzeniami z systemem Android wyprodukowanymi przez firmę Zebra Technologies, zwanymi także urządzeniami Zebra.
 
@@ -45,7 +45,7 @@ Przy użyciu usługi Intune można zarejestrować urządzenia Zebra, aby wdroży
 > [!NOTE]
 > Domyślnie interfejsy API zebry MX nie są blokowane na urządzeniach. Zanim urządzenie zostanie zarejestrowane w usłudze Intune, możliwe jest złośliwe bezpieczeństwo urządzenia. Jeśli urządzenie jest w stanie czystym, sugerujemy zablokowanie interfejsów API MX przy użyciu programu Access Manager (AccessMgr). Możesz na przykład wybrać, że tylko Portal firmy aplikacji i aplikacji, którym ufasz, są dozwolone wywołania interfejsów API MX.
 >
-> Aby uzyskać więcej informacji, zobacz [blokowanie urządzenia](https://developer.zebra.com/community/home/blog/2017/04/11/locking-down-your-device) w witrynie sieci Web zebry.
+> Aby uzyskać więcej informacji, zobacz [zablokowanie urządzenia](https://developer.zebra.com/community/home/blog/2017/04/11/locking-down-your-device) w witrynie sieci Web zebry.
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
@@ -79,7 +79,7 @@ Kontynuuj, aby opublikować profil, i użyj go z aplikacją StageNow w urządzen
 > [!TIP]
 > Aby uzyskać więcej informacji na temat rozwiązania StageNow i jego przeznaczenia, zobacz [Przemieszczanie urządzeń z systemem Android dla rozwiązania StageNow](https://www.zebra.com/us/en/products/software/mobile-computers/mobile-app-utilities/stagenow.html) (powoduje otwarcie witryny firmy Zebra).
 
-## <a name="step-2-confirm-the-company-portal-app-has-device-administrator-role"></a>Krok 2. Potwierdzanie, że aplikacja Portal firmy ma rolę administratora urządzenia
+## <a name="step-2-confirm-the-company-portal-app-has-device-administrator-role"></a>Krok 2: Potwierdzanie, że aplikacja Portal firmy ma rolę administratora urządzenia
 
 Aplikacja Portal firmy wymaga uprawnień administratora urządzenia do zarządzania urządzeniami z systemem Android. Aby można było uaktywnić rolę administratora urządzenia, niektóre urządzenia Zebra zawierają interfejs użytkownika. Jeśli urządzenie zawiera interfejs użytkownika, w aplikacji Portal firmy jest wyświetlany monit dla użytkownika końcowego o udzielenie uprawnień administratora urządzenia podczas [rejestracji](#step-3-enroll-the-device-in-to-intune) (w tym artykule).
 
@@ -96,7 +96,7 @@ Pomocny może być zasób [Ustawianie tryby wymiany baterii jako administrator u
 
 Kontynuuj, aby opublikować profil, i użyj go z aplikacją StageNow w urządzeniu. Aplikacji Portal firmy udzielono uprawnienia roli administratora urządzenia.
 
-## <a name="step-3-enroll-the-device-in-to-intune"></a>Krok 3. Rejestrowanie urządzenia w usłudze Intune
+## <a name="step-3-enroll-the-device-in-to-intune"></a>Krok 3: Rejestrowanie urządzenia w usłudze Intune
 
 Po wykonaniu dwóch pierwszych kroków aplikacja Portal firmy jest zainstalowana w urządzeniu. Urządzenie jest gotowe do rejestracji w usłudze Intune.
 
@@ -106,7 +106,7 @@ Instrukcje można znaleźć na stronie [Rejestrowanie urządzeń z systemem Andr
 
 Rozwiązanie StageNow pozwala utworzyć profil konfiguracji ustawień, którymi chcesz zarządzać w urządzeniu. Szczegółowe informacje można znaleźć w dokumentacji firmy Zebra. Pomocny może być zasób [Profile](http://techdocs.zebra.com/stagenow/3-2/stagingprofiles/) (powoduje otwarcie witryny firmy Zebra).
 
-Po utworzeniu profilu w rozwiązaniu StageNow w ostatnim kroku wybierz pozycję **Eksportuj do usługi MDM**. Ten krok powoduje wygenerowanie pliku XML. Zapisz ten plik. Będzie on potrzebny w dalszym kroku.
+Po utworzeniu profilu w rozwiązaniu StageNow w ostatnim kroku wybierz pozycję **Eksportuj do usługi MDM**. Spowoduje to wygenerowanie pliku XML. Zapisz ten plik. Będzie on potrzebny w dalszym kroku.
 
 - Zaleca się przetestowanie profilu przed wdrożeniem go w urządzeniach w organizacji. Aby przeprowadzić test, w ostatnim kroku podczas tworzenia profili za pomocą rozwiązania StageNow na komputerze użyj opcji **Test**. Następnie użyj pliku wygenerowanego przez rozwiązanie StageNow za pomocą aplikacji StageNow w urządzeniu.
 
@@ -137,10 +137,10 @@ W usłudze Intune utwórz profil konfiguracji urządzenia:
 2. Wybierz pozycję **Urządzenia** > **Profile konfiguracji** > **Utwórz profil**.
 3. Wprowadź następujące właściwości:
 
-    - **Nazwa**: wprowadź opisową nazwę nowego profilu.
-    - **Opis:** wprowadź opis profilu. To ustawienie jest opcjonalne, ale zalecane.
-    - **Platforma**: wybierz pozycję **Android**.
-    - **Typ profilu**: wybierz pozycję **Profil MX (tylko urządzenia Zebra)** .
+    - **Nazwa**: Wprowadź opisową nazwę nowego profilu.
+    - **Opis**: Wprowadź opis profilu. To ustawienie jest opcjonalne, ale zalecane.
+    - **Platforma**: — wybierz opcję **Android**.
+    - **Typ profilu**: Wybierz pozycję **Profil MX (tylko urządzenia Zebra)** .
 
 4. W obszarze **Profil MX w formacie xml** dodaj plik profilu XML [wyeksportowany z rozwiązania StageNow](#step-4-create-a-device-management-profile-in-stagenow) (w tym artykule).
 5. Wybierz kolejno pozycje **OK** > **Utwórz**, aby zapisać zmiany. Zasady zostaną utworzone i wyświetlone na liście.
@@ -150,7 +150,7 @@ W usłudze Intune utwórz profil konfiguracji urządzenia:
 
 Profil został utworzony, ale nie wykonuje jeszcze żadnych czynności. W dalszej części [przypiszesz profil](device-profile-assign.md) i będziesz [monitorować jego stan](device-profile-monitor.md).
 
-Następnym razem, gdy urządzenie sprawdzi dostępność aktualizacji, w urządzeniu zostanie wdrożony profil MX. Urządzenia są synchronizowane z usługą Intune podczas rejestracji urządzeń, a następnie co ok. 8 godzin. Możesz też [wymusić synchronizację w usłudze Intune](../remote-actions/device-sync.md). Alternatywnie w urządzeniu otwórz **aplikację Portal firmy**  >  **Ustawienia**  >  **Synchronizacja**. 
+Następnym razem, gdy urządzenie sprawdzi dostępność aktualizacji, w urządzeniu zostanie wdrożony profil MX. Urządzenia są synchronizowane z usługą Intune podczas rejestracji urządzeń, a następnie co ok. 8 godzin. Możesz też [wymusić synchronizację w usłudze Intune](../remote-actions/device-sync.md). Alternatywnie w urządzeniu otwórz **aplikację Portal firmy** > **Ustawienia** > **Synchronizacja**. 
 
 ## <a name="update-a-zebra-mx-configuration-after-its-assigned"></a>Aktualizowanie konfiguracji zebry MX po jej przypisaniu
 

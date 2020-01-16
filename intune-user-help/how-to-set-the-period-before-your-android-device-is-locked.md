@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5665ae7d8093decc8ef2ea4ab1911b27e20e25dd
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: edea807b8c71f519c28f19b0343fa8ea0977712a
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72505778"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75855150"
 ---
 # <a name="how-to-set-the-amount-of-time-before-your-android-device-locks-its-screen"></a>Jak ustawić czas, po jakim urządzenie z systemem Android zablokuje ekran
 
@@ -34,7 +34,7 @@ Aby ponownie połączyć się ze swoimi zasobami z pracy, musisz ustawić limit 
 
 1. W obszarze **Settings** (Ustawienia) na urządzeniu naciśnij pozycję **Security** (Zabezpieczenia) &gt; **Automatically Lock** (Zablokuj automatycznie). Na niektórych urządzeniach ta opcja ma nazwę **Lock phone after** (Zablokuj telefon po).
 
-    Jeśli pozycja **Automatically Lock** („Zablokuj automatycznie”; na niektórych urządzeniach: **Lock phone after** — „Zablokuj telefon po”) nie jest wyświetlana, upewnij się, że zostało ustawione prawidłowe hasło w obszarze **Ustawienia** &gt;**Blokada ekranu** &gt;**Hasło**.
+    Jeśli pozycja **Automatically Lock** (Zablokuj automatycznie) — na niektórych urządzeniach: **Lock phone after** (Zablokuj telefon po) — nie jest wyświetlana, upewnij się, że zostało ustawione prawidłowe hasło w obszarze **Ustawienia** &gt; **Blokada ekranu** &gt; **Hasło**.
 
 2. Wybierz wartość limitu czasu hasła.
 
@@ -42,7 +42,7 @@ Aby ponownie połączyć się ze swoimi zasobami z pracy, musisz ustawić limit 
 
 1. W sekcji **Settings** (Ustawienia) na urządzeniu naciśnij opcję **Lock screen and security** (Ekran blokady i zabezpieczenia) &gt; **Lock automatically** (Zablokuj automatycznie).
 
-    Jeśli pozycja **Automatically Lock** (Zablokuj automatycznie) — na niektórych urządzeniach **Lock phone after** (Zablokuj telefon po) — nie jest wyświetlana, upewnij się, że zostało ustawione prawidłowe hasło w obszarze **Settings** (Ustawienia) &gt; **Screen Lock** (Blokada ekranu) &gt; **Password** (Hasło).
+    Jeśli pozycja **Lock automatically** (Zablokuj automatycznie) — na niektórych urządzeniach: **Lock phone after** (Zablokuj telefon po) — nie jest wyświetlana, upewnij się, że zostało ustawione prawidłowe hasło w obszarze **Ustawienia** &gt; **Blokada ekranu** &gt; **Hasło**.
 
 2. Wybierz wartość limitu czasu hasła.
 

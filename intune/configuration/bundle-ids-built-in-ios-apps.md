@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/25/2019
+ms.date: 01/06/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b7e2bd869f898bbe7f894cfd9e9c767c8b42e9c4
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: e151481b090e1e666bfdb2759015adde6f1d66a9
+ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74465636"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75691844"
 ---
 # <a name="bundle-ids-for-built-in-ios-apps-you-can-use-in-intune"></a>Identyfikatory pakietów dla wbudowanych aplikacji dla systemu iOS, których można używać w usłudze Intune
 
@@ -31,7 +31,7 @@ Podczas konfigurowania funkcji na urządzeniach z systemem iOS można również 
 
 | Identyfikator pakietu                   | Nazwa aplikacji     | Wydawca |
 |-----------------------------|--------------|-----------|
-| com. Apple. Store             | App Store    | Apple     |
+| com.apple.AppStore          | App Store    | Apple     |
 | com.apple.calculator        | Kalkulator   | Apple     |
 | com.apple.mobilecal         | Kalendarz     | Apple     |
 | com.apple.camera            | Aparat fotograficzny       | Apple     |

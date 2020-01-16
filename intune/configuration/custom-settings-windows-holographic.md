@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 12/18/2019
 ms.article: article
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 54c38bac5ddf9eee1dd5f1dc6d544de3fa2395ab
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: d986097f4f3dda0278d767c911b8c1e957e9c010
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72506904"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206741"
 ---
 # <a name="use-custom-settings-for-windows-holographic-for-business-devices-in-intune"></a>Używanie ustawień niestandardowych dla urządzeń z systemem Windows Holographic for Business w usłudze Intune
 
@@ -37,21 +37,21 @@ W tym artykule pokazano, jak utworzyć profil niestandardowy dla urządzeń z sy
 
 ## <a name="create-the-profile"></a>Tworzenie profilu
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Wybierz pozycję **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz pozycję **Urządzenia** > **Profile konfiguracji** > **Utwórz profil**.
 3. Podaj następujące ustawienia:
 
-    - **Nazwa**: wprowadź nazwę profilu, na przykład `hololens custom profile`.
-    - **Opis:** wprowadź opis profilu.
-    - **Platforma**: wybierz **system Windows 10 lub nowszy**.
-    - **Typ profilu**: wybierz pozycję **Niestandardowy**.
+    - **Nazwa**: Wprowadź opisową nazwę profilu. Nadaj nazwę profilom, aby można było je później łatwo rozpoznać. Na przykład dobrą nazwą profilu jest **profilu niestandardowego usługi HoloLens**.
+    - **Opis**: Wprowadź opis ułatwiający identyfikację ustawienia oraz zawierający inne ważne szczegóły.
+    - **Platforma**: Wybierz pozycję **Windows 10 i nowsze**.
+    - **Typ profilu**: Wybierz **niestandardowe**.
 
 4. W obszarze **Niestandardowe ustawienia OMA-URI** wybierz pozycję **Dodaj**. Podaj następujące ustawienia:
 
-    - **Nazwa**: wprowadź unikatową nazwę ustawienia OMA-URI, aby ułatwić jego identyfikację na liście ustawień.
-    - **Opis elementu**: wprowadź opis ułatwiający identyfikację ustawienia oraz zawierający inne ważne szczegóły.
-    - **OMA-URI** (z uwzględnieniem wielkości liter): wprowadź identyfikator OMA-URI, którego chcesz użyć jako ustawienia.
-    - **Typ danych**: wprowadź typ danych używany w przypadku tego ustawienia identyfikatora OMA-URI. Dostępne opcje:
+    - **Nazwa**: Wprowadź unikatową nazwę dla ustawienia OMA-URI, aby ułatwić jego identyfikację na liście ustawień.
+    - **Opis**: Wprowadź opis ułatwiający identyfikację ustawienia oraz zawierający inne ważne szczegóły.
+    - **OMA-URI** (rozróżniana jest wielkość liter): Wprowadź identyfikator OMA-URI, którego chcesz używać jako ustawienia.
+    - **Typ danych**: Wybierz typ danych używany w przypadku tego ustawienia identyfikatora OMA-URI. Dostępne opcje:
 
         - String
         - Ciąg (plik XML)
@@ -61,12 +61,12 @@ W tym artykule pokazano, jak utworzyć profil niestandardowy dla urządzeń z sy
         - Boolean
         - Base64 (plik)
 
-    - **Wartość**: wprowadź wartość danych, którą chcesz skojarzyć z wprowadzonym identyfikatorem OMA-URI. Wartość zależy od wybranego typu danych. Jeśli na przykład wybrano opcję **Data i godzina**, wybierz wartość za pomocą selektora daty.
+    - **Wartość**: Wprowadź wartość danych, którą chcesz skojarzyć z wprowadzonym identyfikatorem OMA-URI. Wartość zależy od wybranego typu danych. Jeśli na przykład wybrano opcję **Data i godzina**, wybierz wartość za pomocą selektora daty.
 
     Po dodaniu ustawień możesz wybrać pozycję **Eksportuj**. Wybranie pozycji **Eksportuj** spowoduje utworzenie listy wszystkich dodanych wartości w pliku wartości rozdzielanych przecinkami (CSV).
 
 5. Wybierz przycisk **OK**, aby zapisać zmiany. W razie potrzeby kontynuuj dodawanie ustawień.
-6. Po zakończeniu wybierz pozycję **OK** > **Utwórz**, aby utworzyć profil usługi Intune. Po utworzeniu profil będzie widoczny na liście **Konfiguracja urządzenia — profile**.
+6. Po zakończeniu wybierz pozycję **OK** > **Utwórz**, aby utworzyć profil usługi Intune. Po utworzeniu profil będzie widoczny na liście **Urządzenia — profile konfiguracji**.
 
 ## <a name="recommended-custom-settings"></a>Zalecane ustawienia niestandardowe
 
@@ -172,6 +172,6 @@ Ponadto usługa Intune nie obsługuje wszystkich ustawień wymienionych w tabeli
 
 ## <a name="next-steps"></a>Następne kroki
 
-Profil został utworzony, ale nie wykonuje jeszcze żadnych czynności. Teraz należy [przypisać profil](device-profile-assign.md).
+Profil został utworzony, ale nie wykonuje jeszcze żadnych czynności. W dalszej części [przypiszesz profil](../device-profile-assign.md) i będziesz [monitorować jego stan](device-profile-monitor.md).
 
-Zobacz, jak utworzyć profil niestandardowy na [urządzeniach z systemem Windows 10](../custom-settings-windows-10.md).
+Utwórz [profil niestandardowy na urządzeniach z systemem Windows 10](../custom-settings-windows-10.md).

@@ -16,13 +16,13 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: f8aa54c5ed2a5121246f917a5b5306fab5d89edc
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: eeb47c072a4f34098bdebfd8766ab51b941d0bd3
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72508415"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75858102"
 ---
 # <a name="resolve-access-point-restrictions"></a>Rozwiązywanie ograniczeń punktu dostępu
 
@@ -38,19 +38,19 @@ Podczas próby nawiązania połączenia z nierozpoznaną lub niezatwierdzoną si
  W poniższych tabelach przedstawiono poszczególne komunikaty, wyjaśnienia ich znaczenia i opis sposobu ponownego uzyskania dostępu do zasobów roboczych.
 
 ## <a name="access-point-restrictions-not-set-up"></a>Nie skonfigurowano ograniczeń punktu dostępu  
-| Komunikat Portalu firmy | Co oznacza ten komunikat | Co należy zrobić:                                                               
+| Komunikat Portalu firmy | Co oznacza ten komunikat | Co należy zrobić                                                               
 |------------------------|--------------------------|--------------------------|
 | **Nie skonfigurowano ograniczeń punktu dostępu — ograniczenia punktu dostępu są aktywne i muszą zostać skonfigurowane.** | Firma zastosowała ograniczenia punktu dostępu na urządzeniu. To ustawienie wymaga zweryfikowania przez aplikację Portal firmy kilku ustawień sieci na urządzeniu. | Wybierz pozycję **Rozwiąż**. Aplikacja Portal firmy sprawdzi, czy masz połączenie z zatwierdzoną siecią firmową. |
 
 ## <a name="not-connected-to-an-approved-network"></a>Nie połączono z zatwierdzoną siecią  
 
-| Komunikat Portalu firmy | Co oznacza ten komunikat | Co należy zrobić:                                                                   
+| Komunikat Portalu firmy | Co oznacza ten komunikat | Co należy zrobić                                                                   
 |------------------------|-----------------------------------|--------------------------|
 | **Urządzenie nie zostało połączone z zatwierdzoną siecią — nawiąż połączenie z zatwierdzoną siecią bezprzewodową.** | Nawiązano połączenie z siecią, która nie została zatwierdzona na potrzeby dostępu z miejsca pracy. Tak długo, jak połączenie z tą siecią będzie nawiązane, nie będzie dostępu do służbowej poczty e-mail, aplikacji ani innych chronionych zasobów firmowych. | Połącz się z zatwierdzoną siecią firmową. Wybierz pozycję **Rozwiąż**, aby ponowić próbę. |
 
 ## <a name="restrictions-couldnt-be-enforced"></a>Nie można wymusić ograniczeń  
 
-| Komunikat Portalu firmy | Co oznacza ten komunikat | Co należy zrobić:                                                                      
+| Komunikat Portalu firmy | Co oznacza ten komunikat | Co należy zrobić                                                                      
 |------------------------|-----------------------------------|--------------------------|
 | **Nie można wymusić ograniczeń punktu dostępu — Portal firmy napotkał błąd.** | Usługa Intune nie może określić, czy nawiązano połączenie z zatwierdzoną siecią. Ten błąd może być wynikiem niskiej jakości łączności sieciowej, niskiego poziomu naładowania baterii, trybu oszczędzania baterii lub błędu Portalu firmy. | Sprawdź, czy masz wystarczająco silny sygnał sieci. Wyłącz tryb oszczędzania baterii i upewnij się, że pozostało co najmniej 30% czasu pracy baterii. Wybierz pozycję **Rozwiąż**, aby ponowić próbę. 
 

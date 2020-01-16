@@ -16,13 +16,13 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0cc2f84ad73c86a823984e6caa11dad5d4aec8a8
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: f056b44301c1d0f94dde2dbb6202ed7c78e90fbf
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72507829"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75857363"
 ---
 # <a name="resolve-a-threat-found-by-lookout-for-work"></a>Usuwanie zagrożenia wykrytego przez aplikację Lookout for Work  
 
@@ -52,7 +52,7 @@ Odzyskaj dostęp do zasobów firmowych, gdy aplikacja Lookout for Work wykryje z
 
 Jeśli zainstalujesz aplikację, którą aplikacja Lookout for Work zidentyfikuje jako zagrożenie, otrzymasz komunikat podobny do przedstawionego na poniższym zrzucie ekranu.  
 
-![Zrzut ekranu przedstawiający komunikat z alertem o wykryciu wirusa w interfejsie aplikacji Lookout for Work. Pokazuje trzy przyciski: „Zamknij”, „Więcej informacji” oraz „Odinstaluj”.](./media/lookout-virus-alert-android.png)  
+![Zrzut ekranu przedstawiający komunikat z alertem o wykryciu wirusa w interfejsie aplikacji Lookout for Work. Pokazuje trzy przyciski: „Zamknij”, „Więcej informacji” i „Odinstaluj”.](./media/lookout-virus-alert-android.png)  
 
 Aby odzyskać utracony dostęp do poczty e-mail i danych firmowych, odinstaluj wątpliwą aplikację. Tak długo, jak aplikacja będzie na urządzeniu, nie będzie można uzyskiwać dostępu do zasobów firmy.    
 

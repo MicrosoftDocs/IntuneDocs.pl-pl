@@ -17,13 +17,13 @@ searchScope:
 ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: fc50f48afbd527f3c6d82cc0c71a166b0356ab9e
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: 24601ef5c7a6451e2abfa64da37b21912d3cbace
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73801480"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75858798"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>Jakie informacje może zobaczyć moja organizacja, gdy zarejestruję swoje urządzenie?
 
@@ -52,8 +52,8 @@ Gdy zarejestrujesz urządzenie w usłudze Microsoft Intune, Twoja organizacja ni
 
 **Co organizacja może widzieć:**
 
-- Numer telefonu: w przypadku urządzeń należących do firmy może być widoczny Twój pełny numer telefonu. W przypadku urządzeń prywatnych dla organizacji widoczne są wyłącznie cztery ostatnie cyfry Twojego numeru telefonu. Typ własności poszczególnych urządzeń można zobaczyć na stronie **szczegółów urządzenia** .
+- Numer telefonu: w przypadku urządzeń należących do firmy może być widoczny Twój pełny numer telefonu. W przypadku urządzeń prywatnych dla organizacji widoczne są wyłącznie cztery ostatnie cyfry Twojego numeru telefonu. **Typ własności** poszczególnych urządzeń można sprawdzić, otwierając stronę Szczegóły urządzenia odnoszącą się do tego urządzenia.
 - Ilość wolnego miejsca na urządzeniu: jeśli nie możesz zainstalować wymaganej aplikacji, organizacja może zobaczyć ilość wolnego miejsca na urządzeniu, aby sprawdzić, czy miejsca nie jest za mało.  
 - Lokalizacja: Twoja organizacja może nigdy nie widzieć lokalizacji urządzenia, chyba że musisz odzyskać utracone urządzenie nadzorowane z systemem iOS. Zapoznaj się z [dokumentacją dotyczącą systemu iOS firmy Apple](https://go.microsoft.com/fwlink/?linkid=853816), aby dowiedzieć się więcej o urządzeniach nadzorowanych.  
-- Szczegóły spisu aplikacji: organizacja korzystająca z usługi Mobile Threat Defense może przeglądać szczegółowe informacje o aplikacjach na urządzeniu z systemem iOS. Dowiedz się więcej na temat usługi [Mobile Threat Defense](you-are-prompted-to-install-mtd-ios.md). Jeśli masz urządzenie osobiste, Twoja organizacja może wyświetlać tylko spis aplikacji zarządzanych. Jeśli masz urządzenie należące do firmy, organizacja może wyświetlać spis wszystkich aplikacji.
+- Szczegóły spisu aplikacji: organizacja korzystająca z usługi Mobile Threat Defense będzie mogła przeglądać szczegółowe informacje o aplikacjach na urządzeniu z systemem iOS. Dowiedz się więcej na temat usługi [Mobile Threat Defense](you-are-prompted-to-install-mtd-ios.md). Jeśli masz urządzenie osobiste, Twoja organizacja może wyświetlać tylko spis aplikacji zarządzanych. Jeśli masz urządzenie należące do firmy, organizacja może wyświetlać spis wszystkich aplikacji.
 - Informacje o sieci: niektóre informacje na temat połączeń sieciowych dla urządzeń z systemem Android mogą być dostępne dla działu pomocy technicznej Twojej organizacji. Na przykład jeśli organizacja wymaga, aby urządzenia znajdowały się w konkretnym budynku, urządzenie będzie identyfikować sieć, do której jest podłączone. 

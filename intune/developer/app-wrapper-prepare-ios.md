@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/06/2019
+ms.date: 01/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c0fac5e9d34890272253eaefd82ed13dc1014ba0
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 62ee300b7357132e6f9e18ef4528110dfc988dc3
+ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73713479"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75653669"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Przygotowywanie aplikacji systemu iOS pod kątem zasad ochrony aplikacji za pomocą narzędzia opakowującego aplikacje usługi Intune
 
@@ -181,7 +181,7 @@ Otwórz terminal systemu macOS i uruchom następujące polecenie:
 > [!NOTE]
 > Niektóre parametry są opcjonalne, jak pokazano w poniższej tabeli.
 
-**Przykład:** następujące przykładowe polecenie uruchamia narzędzie opakowujące aplikacje w celu przetworzenia aplikacji o nazwie MyApp.ipa. Profil aprowizowania oraz skrót SHA-1 certyfikatu podpisywania zostaną określone i będą używane do podpisywania opakowanej aplikacji. Aplikacja wyjściowa (MyApp_Wrapped.ipa) zostanie utworzona i zapisana w folderze Desktop (Pulpit).
+**Przykład:** Następujące przykładowe polecenie uruchamia narzędzie opakowujące aplikacje w celu przetworzenia aplikacji o nazwie MyApp.ipa. Profil aprowizowania oraz skrót SHA-1 certyfikatu podpisywania zostaną określone i będą używane do podpisywania opakowanej aplikacji. Aplikacja wyjściowa (MyApp_Wrapped.ipa) zostanie utworzona i zapisana w folderze Desktop (Pulpit).
 
 ```bash
 ./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i ~/Desktop/MyApp.ipa -o ~/Desktop/MyApp_Wrapped.ipa -p ~/Desktop/My_Provisioning_Profile_.mobileprovision -c "12 A3 BC 45 D6 7E F8 90 1A 2B 3C DE F4 AB C5 D6 E7 89 0F AB"  -v true
@@ -206,7 +206,7 @@ Z narzędziem opakowującym aplikacje można użyć następujących parametrów 
 |**-xe**| (Opcjonalna) Wyświetla informacje na temat rozszerzeń systemu iOS w aplikacji oraz uprawnień wymaganych do ich używania. Zobacz [Ustawianie uprawnień dla aplikacji](#setting-app-entitlements), aby uzyskać szczegółowe informacje. |
 |**-x**| (Opcjonalnie) `<An array of paths to extension provisioning profiles>`. Użyj tej właściwości, jeśli aplikacja wymaga profilów aprowizacji rozszerzeń.|
 |**-b**|(Opcjonalnie) Użyj właściwości -b bez argumentu, jeśli chcesz, aby opakowana aplikacja wyjściowa miała taką samą wersję pakietu jak aplikacja wejściowa (niezalecane). <br/><br/> Użyj właściwości `-b <custom bundle version>`, jeśli chcesz, aby opakowana aplikacja miała niestandardową wartość CFBundleVersion. Jeśli chcesz określić niestandardową wartość CFBundleVersion, zaleca się podwyższenie najmniej istotnego składnika wartości CFBundleVersion aplikacji natywnej, na przykład z 1.0.0 na 1.0.1. |
-|**-citrix**|Obowiązkowe Uwzględnij zestaw SDK aplikacji Citrix XenMobile ("tylko sieć"). Aby można było użyć tej opcji, musisz mieć zainstalowany [zestaw narzędzi Citrix MDX Toolkit](https://docs.citrix.com/en-us/mdx-toolkit/about-mdx-toolkit.html) . |
+|**-citrix**|Obowiązkowe Uwzględnij zestaw SDK aplikacji Citrix XenMobile ("tylko sieć"). Aby można było użyć tej opcji, musisz mieć zainstalowany [Citrix MDX Toolkit](https://docs.citrix.com/en-us/mdx-toolkit/about-mdx-toolkit.html). |
 |**-f**|(Opcjonalna) `<Path to a plist file specifying arguments.>` Poprzedź tą flagą plik [plist](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html), jeśli chcesz użyć szablonu pliku plist w celu określenia pozostałych właściwości aplikacji IntuneMAMPackager: -i, -o, -p itd. Zobacz temat Wprowadzanie argumentów przy użyciu pliku plist. |
 
 ### <a name="use-a-plist-to-input-arguments"></a>Wprowadzanie argumentów przy użyciu pliku plist
@@ -287,7 +287,7 @@ Jeśli przetwarzanie aplikacji przez narzędzie opakowujące aplikacje nie powie
 |Wskazana aplikacja wejściowa nie jest podpisana. Określ prawidłową podpisaną aplikację.|Narzędzie opakowujące aplikacje wymaga, aby aplikacje były podpisane. Sposób podpisywania opakowanych aplikacji opisuje dokumentacja dla deweloperów.|
 |Wskazana aplikacja wejściowa musi mieć format .ipa lub .app.|Narzędzie opakowujące aplikacje obsługuje wyłącznie pliki z rozszerzeniami .app oraz .ipa. Upewnij się, że plik wejściowy ma prawidłowe rozszerzenie i został skompilowany w formacie .app lub .ipa.|
 |Wskazana aplikacja wejściowa jest już opakowana i korzysta z najnowszej wersji szablonu zasad.|Narzędzie opakowujące aplikacje nie opakuje ponownie istniejącej opakowanej aplikacji korzystającej z najnowszej wersji szablonu zasad.|
-|OSTRZEŻENIE: nie określono skrótu SHA1 certyfikatu. Przed wdrożeniem upewnij się, że opakowana aplikacja jest podpisana.|Upewnij się, że po właściwości wiersza polecenia –c podano prawidłowy skrót SHA1. |
+|OSTRZEŻENIE: Nie określono skrótu SHA1 certyfikatu. Przed wdrożeniem upewnij się, że opakowana aplikacja jest podpisana.|Upewnij się, że po właściwości wiersza polecenia –c podano prawidłowy skrót SHA1. |
 
 ### <a name="collecting-logs-for-your-wrapped-applications-from-the-device"></a>Zbieranie dzienników dla opakowanych aplikacji z urządzenia
 Wykonaj następujące kroki, aby podczas rozwiązywania problemów pobrać dzienniki opakowanych aplikacji.

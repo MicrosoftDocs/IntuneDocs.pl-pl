@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/12/2019
+ms.date: 12/19/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e73612080e52c8eb49a0c090b68e917e24fef3ab
-ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
+ms.openlocfilehash: 85fc8bf002a4d5d00d2163c0b75c49d11dcd9b61
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74992961"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206367"
 ---
 # <a name="ios-and-ipados-device-settings-to-use-common-ios-features-in-intune"></a>Ustawienia urządzeń z systemem iOS oraz iPadOS dotyczące korzystania z typowych funkcji systemu iOS w usłudze Intune
 
@@ -29,14 +29,14 @@ Usługa Intune ma niektóre wbudowane ustawienia umożliwiające użytkownikom s
 
 Za pomocą tych funkcji możesz sterować urządzeniami z systemem iOS w ramach swojego rozwiązania do zarządzania urządzeniami mobilnymi (MDM).
 
-Ten artykuł zawiera listę tych ustawień i opisy zadań poszczególnych ustawień. Aby uzyskać więcej informacji na temat tych funkcji, przejdź do pozycji [Dodaj ustawienia funkcji urządzenia z systemem iOS lub macOS](../device-features-configure.md).
+Ten artykuł zawiera listę tych ustawień i opisy zadań poszczególnych ustawień. Aby uzyskać więcej informacji na temat tych funkcji, przejdź do [Dodaj ustawienia funkcji urządzenia z systemem iOS lub macOS](../device-features-configure.md).
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
 [Utwórz profil konfiguracji urządzenia z systemem iOS](../device-features-configure.md).
 
 > [!NOTE]
-> Te ustawienia mają zastosowanie do różnych typów rejestracji, z uwzględnieniem niektórych ustawień, które są stosowane do wszystkich opcji rejestracji. Aby uzyskać więcej informacji na temat różnych typów rejestracji, zobacz [Rejestrowanie systemu iOS](../ios-enroll.md).
+> Te ustawienia mają zastosowanie do różnych typów rejestracji, z uwzględnieniem niektórych ustawień, które są stosowane do wszystkich opcji rejestracji. Aby uzyskać więcej informacji na temat różnych typów rejestracji, zobacz [rejestracji w systemie iOS](../ios-enroll.md).
 
 ## <a name="airprint"></a>Funkcja AirPrint
 
@@ -45,15 +45,15 @@ Ten artykuł zawiera listę tych ustawień i opisy zadań poszczególnych ustawi
 > [!NOTE]
 > Pamiętaj, aby dodać wszystkie drukarki do tego samego profilu. Firma Apple zapobiega kierowaniu wielu profilów AirPrint do tego samego urządzenia.
 
-- **Adres IP**: podaj adres IPv4 lub IPv6 drukarki. Jeśli do identyfikowania drukarek używasz nazw hostów, możesz uzyskać adres IP, wysyłając polecenie ping do terminala. Dalsze szczegółowe informacje można znaleźć w sekcji Uzyskiwanie adresu IP i ścieżki (w tym artykule).
-- **Ścieżka**: w przypadku drukarek w sieci ścieżka to zazwyczaj `ipp/print`. Dalsze szczegółowe informacje można znaleźć w sekcji Uzyskiwanie adresu IP i ścieżki (w tym artykule).
-- **Port**: podaj port nasłuchiwania miejsca docelowego funkcji AirPrint. Jeśli ta właściwość pozostanie pusta, funkcja AirPrint będzie używać portu domyślnego. Ustawienie dostępne w systemie iOS 11.0 i jego nowszych wersjach.
+- **Adres IP**: wprowadź adres IPv4 lub IPv6 drukarki. Jeśli do identyfikowania drukarek używasz nazw hostów, możesz uzyskać adres IP, wysyłając polecenie ping do terminala. Dalsze szczegółowe informacje można znaleźć w sekcji Uzyskiwanie adresu IP i ścieżki (w tym artykule).
+- **Ścieżka**: W przypadku drukarek w sieci ścieżka to zazwyczaj `ipp/print`. Dalsze szczegółowe informacje można znaleźć w sekcji Uzyskiwanie adresu IP i ścieżki (w tym artykule).
+- **Port**: wprowadź port nasłuchiwania miejsca docelowego funkcji AirPrint. Jeśli ta właściwość pozostanie pusta, funkcja AirPrint będzie używać portu domyślnego. Ustawienie dostępne w systemie iOS 11.0 i jego nowszych wersjach.
 - **TLS**: wybierz pozycję **Włącz**, aby zabezpieczyć połączenia funkcji AirPrint przy użyciu protokołu Transport Layer Security (TLS). Ustawienie dostępne w systemie iOS 11.0 i jego nowszych wersjach.
 
 Aby dodać serwery AirPrint, możesz:
 
 - Opcja **Dodaj** powoduje dodanie serwera funkcji AirPrint do listy. Wiele serwerów AirPrint można dodać.
-- **Zaimportuj** plik z wartościami rozdzielanymi przecinkami (.csv) z tymi informacjami. Możesz też **wyeksportować** , aby utworzyć listę dodanych serwerów AirPrint.
+- **Zaimportuj** plik z wartościami rozdzielanymi przecinkami (.csv) z tymi informacjami. Lub **Eksportuj**, aby utworzyć listę dodanych serwerów AirPrint.
 
 ### <a name="get-server-ip-address-resource-path-and-port"></a>Uzyskanie adresu IP serwera, ścieżki zasobu i portu
 
@@ -84,24 +84,24 @@ Ustawienia okienka **Dock** umożliwiają dodanie do sześciu elementów lub fol
 
 Możesz dodać maksymalnie **sześć** elementów (łącznie aplikacji i folderów) w obszarze Dock urządzenia.
 
-- **Dodaj**: umożliwia dodanie aplikacji lub folderów do obszaru Dock urządzenia.
-- **Typ**: umożliwia dodanie **aplikacji** lub **folderu**:
+- **Dodaj**: Umożliwia dodanie aplikacji lub folderów do obszaru Dock urządzenia.
+- **Typ**: Umożliwia dodanie **aplikacji** lub **folderu**:
 
   - **Aplikacja**: wybierz tę opcję, aby dodać aplikacje do obszaru Dock na ekranie. Wprowadź:
 
-    - **Nazwa aplikacji**: wprowadź nazwę aplikacji. Ta nazwa jest używana w celach referencyjnych w witrynie Azure Portal. *Nie jest* ona wyświetlana na urządzeniu z systemem iOS.
-    - **Identyfikator pakietu aplikacji**: podaj identyfikator pakietu aplikacji. Przykłady można znaleźć w artykule [Identyfikatory pakietów dla wbudowanych aplikacji systemu iOS](bundle-ids-built-in-ios-apps.md).
+    - **Nazwa aplikacji**: wprowadź nazwę aplikacji. Ta nazwa jest używana jako odwołanie w centrum administracyjnym programu Microsoft Endpoint Manager. *Nie jest* ona wyświetlana na urządzeniu z systemem iOS.
+    - **Identyfikator pakietu aplikacji**: wprowadź identyfikator pakietu aplikacji. Przykłady można znaleźć w artykule [Identyfikatory pakietów dla wbudowanych aplikacji systemu iOS](bundle-ids-built-in-ios-apps.md).
 
   - **Folder**: wybierz tę opcję, aby dodać folder do obszaru Dock na ekranie.
 
     Aplikacje dodawane do strony w folderze są rozmieszczane od lewej do prawej i w takiej samej kolejności jak na liście. Jeśli dodanych zostanie więcej aplikacji, niż mieści się na stronie, aplikacje zostaną przeniesione na inną stronę.
 
-    - **Nazwa folderu**: wprowadź nazwę folderu. Ta nazwa jest widoczna na urządzeniach użytkowników.
-    - **Lista stron**: **dodaj** stronę, a następnie wprowadź następujące właściwości:
+    - **Nazwa folderu**: Wprowadź nazwę folderu. Ta nazwa jest widoczna na urządzeniach użytkowników.
+    - **Lista stron**: **Dodaj** stronę, a następnie wprowadź następujące właściwości:
 
-      - **Nazwa strony**: wprowadź nazwę strony. Ta nazwa jest używana w celach referencyjnych w witrynie Azure Portal. *Nie jest* ona wyświetlana na urządzeniu z systemem iOS.
-      - **Nazwa aplikacji**: wprowadź nazwę aplikacji. Ta nazwa jest używana w celach referencyjnych w witrynie Azure Portal. *Nie jest* ona wyświetlana na urządzeniu z systemem iOS.
-      - **Identyfikator pakietu aplikacji**: podaj identyfikator pakietu aplikacji. Przykłady można znaleźć w artykule [Identyfikatory pakietów dla wbudowanych aplikacji systemu iOS](bundle-ids-built-in-ios-apps.md).
+      - **Nazwa strony**: wprowadź nazwę strony. Ta nazwa jest używana jako odwołanie w centrum administracyjnym programu Microsoft Endpoint Manager. *Nie jest* ona wyświetlana na urządzeniu z systemem iOS.
+      - **Nazwa aplikacji**: wprowadź nazwę aplikacji. Ta nazwa jest używana jako odwołanie w centrum administracyjnym programu Microsoft Endpoint Manager. *Nie jest* ona wyświetlana na urządzeniu z systemem iOS.
+      - **Identyfikator pakietu aplikacji**: wprowadź identyfikator pakietu aplikacji. Przykłady można znaleźć w artykule [Identyfikatory pakietów dla wbudowanych aplikacji systemu iOS](bundle-ids-built-in-ios-apps.md).
 
       Można dodać maksymalnie **20** stron do obszaru Dock urządzenia.
 
@@ -127,31 +127,31 @@ Dodaj strony, które mają być wyświetlane na ekranie głównym, oraz aplikacj
 
 Możesz dodać maksymalnie **40** stron na urządzeniu.
 
-- **Lista stron**: **dodaj** stronę, a następnie wprowadź następujące właściwości:
+- **Lista stron**: **Dodaj** stronę, a następnie wprowadź następujące właściwości:
 
-  - **Nazwa strony**: wprowadź nazwę strony. Jest to nazwa, do której można się odwołać w witrynie Azure Portal, i która *nie jest* wyświetlana na urządzeniu z systemem iOS.
+  - **Nazwa strony**: wprowadź nazwę strony. Ta nazwa jest używana jako odwołanie w centrum administracyjnym programu Microsoft Endpoint Manager, a *nie* wyświetlana na urządzeniu z systemem iOS.
 
   Możesz dodać maksymalnie **60** elementów (łącznie aplikacji i folderów) na urządzeniu.
 
-  - **Dodaj**: umożliwia dodanie aplikacji lub folderów do strony na urządzeniu.
+  - **Dodaj**: Umożliwia dodanie aplikacji lub folderów do strony na urządzeniu.
 
-    - **Typ**: umożliwia dodanie **aplikacji** lub **folderu**:
+    - **Typ**: Umożliwia dodanie **aplikacji** lub **folderu**:
 
       - **Aplikacja**: wybierz tę opcję, aby dodać aplikacje do strony na ekranie. Wprowadź też następujące ustawienia:
 
-        - **Nazwa aplikacji**: wprowadź nazwę aplikacji. Ta nazwa jest używana w celach referencyjnych w witrynie Azure Portal. *Nie jest* ona wyświetlana na urządzeniu z systemem iOS.
-        - **Identyfikator pakietu aplikacji**: podaj identyfikator pakietu aplikacji. Przykłady można znaleźć w artykule [Identyfikatory pakietów dla wbudowanych aplikacji systemu iOS](bundle-ids-built-in-ios-apps.md).
+        - **Nazwa aplikacji**: wprowadź nazwę aplikacji. Ta nazwa jest używana jako odwołanie w centrum administracyjnym programu Microsoft Endpoint Manager. *Nie jest* ona wyświetlana na urządzeniu z systemem iOS.
+        - **Identyfikator pakietu aplikacji**: wprowadź identyfikator pakietu aplikacji. Przykłady można znaleźć w artykule [Identyfikatory pakietów dla wbudowanych aplikacji systemu iOS](bundle-ids-built-in-ios-apps.md).
 
       - **Folder**: wybierz tę opcję, aby dodać folder do obszaru Dock na ekranie.
 
         Aplikacje dodawane do strony w folderze są rozmieszczane od lewej do prawej i w takiej samej kolejności jak na liście. Jeśli dodanych zostanie więcej aplikacji, niż mieści się na stronie, aplikacje zostaną przeniesione na inną stronę.
 
-        - **Nazwa folderu**: wprowadź nazwę folderu. Ta nazwa jest widoczna na urządzeniach użytkowników.
-        - **Dodaj**: umożliwia dodanie stron do folderu. Wprowadź także następujące właściwości:
+        - **Nazwa folderu**: Wprowadź nazwę folderu. Ta nazwa jest widoczna na urządzeniach użytkowników.
+        - **Dodaj**: Umożliwia dodanie stron do folderu. Wprowadź także następujące właściwości:
 
-          - **Nazwa strony**: wprowadź nazwę strony. Ta nazwa jest używana w celach referencyjnych w witrynie Azure Portal. *Nie jest* ona wyświetlana na urządzeniu z systemem iOS.
-          - **Nazwa aplikacji**: wprowadź nazwę aplikacji. Ta nazwa jest używana w celach referencyjnych w witrynie Azure Portal. *Nie jest* ona wyświetlana na urządzeniu z systemem iOS.
-          - **Identyfikator pakietu aplikacji**: podaj identyfikator pakietu aplikacji. Przykłady można znaleźć w artykule [Identyfikatory pakietów dla wbudowanych aplikacji systemu iOS](bundle-ids-built-in-ios-apps.md).
+          - **Nazwa strony**: wprowadź nazwę strony. Ta nazwa jest używana jako odwołanie w centrum administracyjnym programu Microsoft Endpoint Manager. *Nie jest* ona wyświetlana na urządzeniu z systemem iOS.
+          - **Nazwa aplikacji**: wprowadź nazwę aplikacji. Ta nazwa jest używana jako odwołanie w centrum administracyjnym programu Microsoft Endpoint Manager. *Nie jest* ona wyświetlana na urządzeniu z systemem iOS.
+          - **Identyfikator pakietu aplikacji**: wprowadź identyfikator pakietu aplikacji. Przykłady można znaleźć w artykule [Identyfikatory pakietów dla wbudowanych aplikacji systemu iOS](bundle-ids-built-in-ios-apps.md).
 
 #### <a name="example"></a>Przykład
 
@@ -167,22 +167,22 @@ Po przypisaniu zasad do telefonu iPhone wygląd strony tego urządzenia jest zbl
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ustawienia dotyczą: automatyczne rejestrowanie urządzeń (nadzorowane)
 
-- **Dodaj**: umożliwia dodanie powiadomień dla aplikacji:
+- **Dodaj**: Umożliwia dodanie powiadomień dla aplikacji:
 
     ![Dodawanie powiadomienia w aplikacji w profilu systemu iOS w usłudze Intune](./media/ios-device-features-settings/ios-macos-app-notifications.png)
 
-  - **Identyfikator pakietu aplikacji**: podaj **identyfikator pakietu aplikacji**, którą chcesz dodać. Przykłady można znaleźć w artykule [Identyfikatory pakietów dla wbudowanych aplikacji systemu iOS](bundle-ids-built-in-ios-apps.md).
-  - **Nazwa aplikacji**: podaj nazwę aplikacji, którą chcesz dodać. Ta nazwa jest używana w celach referencyjnych w witrynie Azure Portal. *Nie jest* ona wyświetlana na urządzeniu.
-  - **Wydawca**: podaj wydawcę dodawanej aplikacji. Ta nazwa jest używana w celach referencyjnych w witrynie Azure Portal. *Nie jest* ona wyświetlana na urządzeniu.
-  - **Powiadomienia**: opcja **Włącz** lub **Wyłącz** określa, czy aplikacja wysyła powiadomienia do urządzenia.
-    - **Pokaż w centrum powiadomień**: opcja **Włącz** zezwala aplikacji na wyświetlanie powiadomień w centrum powiadomień na urządzeniu. **Wyłączenie** tego ustawienia uniemożliwia aplikacji wyświetlanie powiadomień w centrum powiadomień.
-    - **Pokaż na ekranie blokady**: opcja **Włącz** powoduje, że powiadomienia z aplikacji będą wyświetlane na ekranie blokady urządzenia. **Wyłączenie** uniemożliwia aplikacji wyświetlanie powiadomień na ekranie blokady.
+  - **Identyfikator pakietu aplikacji**: wprowadź **Identyfikator pakietu aplikacji** dla aplikacji, którą chcesz dodać. Przykłady można znaleźć w artykule [Identyfikatory pakietów dla wbudowanych aplikacji systemu iOS](bundle-ids-built-in-ios-apps.md).
+  - **Nazwa aplikacji**: wprowadź nazwę aplikacji, którą chcesz dodać. Ta nazwa jest używana jako odwołanie w centrum administracyjnym programu Microsoft Endpoint Manager. *Nie jest* ona wyświetlana na urządzeniu.
+  - **Wydawca**: wprowadź wydawcę dodawanej aplikacji. Ta nazwa jest używana jako odwołanie w centrum administracyjnym programu Microsoft Endpoint Manager. *Nie jest* ona wyświetlana na urządzeniu.
+  - **Powiadomienia**: **włącz** lub **wyłącz** powiadomienia wysyłane z aplikacji do urządzenia.
+    - **Pokaż w centrum powiadomień**: **włączenie** tego ustawienia powoduje zezwolenie aplikacji na wyświetlanie powiadomień w centrum powiadomień na urządzeniu. **Wyłączenie** tego ustawienia uniemożliwia aplikacji wyświetlanie powiadomień w centrum powiadomień.
+    - **Pokaż na ekranie blokady**: **włączenie** tego ustawienia powoduje, że powiadomienia z aplikacji będą wyświetlane na ekranie blokady urządzenia. **Wyłączenie** uniemożliwia aplikacji wyświetlanie powiadomień na ekranie blokady.
     - **Typ alertu**: po odblokowaniu urządzenia wybierz sposób wyświetlania powiadomienia. Dostępne opcje:
       - **Brak**: powiadomienia nie są wyświetlane.
       - **Transparent**: wraz z powiadomieniem jest krótko wyświetlany transparent.
       - **Modalne**: zostanie wyświetlone powiadomienie, które użytkownik będzie musiał ręcznie zamknąć przed kontynuowaniem korzystania z urządzenia.
     - **Znaczek na ikonie aplikacji**: wybierz pozycję **Włącz**, aby dodać znaczek do ikony aplikacji. Znaczek oznacza, że aplikacja wysłała powiadomienie.
-    - **Dźwięki**: wybierz opcję **Włącz**, aby odtwarzać dźwięk po dostarczeniu powiadomienia.
+    - **Dźwięki**: wybierz pozycję **Włącz**, aby odtwarzać dźwięk po dostarczeniu powiadomienia.
 
 ## <a name="lock-screen-message"></a>Komunikat na ekranie blokady
 
@@ -192,18 +192,18 @@ Ta funkcja ma zastosowanie do:
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ustawienia dotyczą: automatyczne rejestrowanie urządzeń (nadzorowane)
 
-- **Informacje dotyczące tagu zasobu**: podaj informacje o tagu zasobu urządzenia. Na przykład wprowadź adres `Owned by Contoso Corp` lub `Serial Number: {{serialnumber}}`.
+- **Informacje dotyczące tagu zasobu**: wprowadź informacje o tagu zasobu urządzenia. Na przykład wprowadź adres `Owned by Contoso Corp` lub `Serial Number: {{serialnumber}}`.
 
   Wprowadzony tekst zostanie wyświetlony w oknie logowania i na ekranie blokady w urządzeniu.
 
-- **Przypis dolny ekranu blokady**: podaj informacje, które mogą ułatwić zwrot urządzenia w przypadku jego utraty lub kradzieży. Możesz podać dowolny tekst. Na przykład wpisz coś takiego: `If found, call Contoso at ...`.
+- **Przypis dolny ekranu blokady**: wprowadź informację, która może ułatwić zwrot urządzenia w przypadku jego utraty lub kradzieży. Możesz podać dowolny tekst. Na przykład wpisz coś takiego: `If found, call Contoso at ...`.
 
   Możesz też dodać w tych polach informacje dotyczące konkretnych urządzeń za pomocą tokenów urządzeń. Aby na przykład wyświetlić numer seryjny, wprowadź `Serial Number: {{serialnumber}}`. Na ekranie blokady zostanie wyświetlony tekst podobny do tego: `Serial Number 123456789ABC`. Podczas wprowadzania zmiennych użyj nawiasów klamrowych `{{ }}`. [Tokeny konfiguracji aplikacji](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) zawierają listę zmiennych, których można użyć. Możesz też użyć wartości `deviceName` lub innej wartości specyficznej dla urządzenia.
 
   > [!NOTE]
   > Zmienne nie są weryfikowane w interfejsie użytkownika i uwzględniają wielkość liter. Dlatego mogą pojawić się profile zapisane z niepoprawnymi danymi wejściowymi. Na przykład jeśli podano wartość `{{DeviceID}}` zamiast `{{deviceid}}`, zostanie wyświetlony literał ciągu zamiast unikatowego identyfikatora urządzenia. Upewnij się, że wprowadzono prawidłowe informacje.
 
-## <a name="single-sign-on"></a>Logowanie jednokrotne
+## <a name="single-sign-on"></a>Rejestracja jednokrotna
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ustawienia dotyczą: Rejestracja urządzenia, automatyczna rejestracja urządzeń (nadzorowane)
 
@@ -226,7 +226,7 @@ Ta funkcja ma zastosowanie do:
 
   - **Identyfikator urządzenia usługi Azure AD**
 
-- **Obszar**: podaj część adresu URL oznaczającą domenę. Na przykład wprowadź `contoso.com`.
+- **Obszar**: wprowadź część adresu URL oznaczającą domenę. Na przykład wprowadź `contoso.com`.
 - **Przedrostki adresów URL, które będą korzystały z logowania jednokrotnego**: **dodaj** wszystkie adresy URL w organizacji, które wymagają uwierzytelniania za pomocą logowania jednokrotnego użytkownika.
 
   Kiedy na przykład użytkownik nawiązuje połączenie z dowolną z tych witryn, urządzenie z systemem iOS używa poświadczeń logowania jednokrotnego. Użytkownik nie musi wprowadzać żadnych dodatkowych poświadczeń. Jeśli włączone jest uwierzytelnianie wieloskładnikowe, użytkownicy muszą wykonać drugie uwierzytelnianie.
@@ -244,28 +244,28 @@ Ta funkcja ma zastosowanie do:
 
   Użyj pola **Nazwa aplikacji**, aby wprowadzić przyjazną nazwę, która ułatwia rozpoznanie identyfikatora pakietu.
 
-- **Certyfikat odnowy poświadczeń**: w przypadku używania certyfikatów w celu uwierzytelniania (nie haseł) wybierz istniejący certyfikat SCEP lub PFX jako certyfikat uwierzytelniania. Zazwyczaj jest to ten sam certyfikat, który został wdrożony dla użytkownika na potrzeby innych profilów, takich jak profil sieci VPN lub Wi-Fi bądź profil poczty e-mail.
+- **Certyfikat odnowienia poświadczeń**: w przypadku używania certyfikatów w celu uwierzytelniania (nie haseł) wybierz istniejący certyfikat SCEP lub PFX jako certyfikat uwierzytelniania. Zazwyczaj jest to ten sam certyfikat, który został wdrożony dla użytkownika na potrzeby innych profilów, takich jak profil sieci VPN lub Wi-Fi bądź profil poczty e-mail.
 
 ## <a name="web-content-filter"></a>Filtr zawartości sieci Web
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ustawienia dotyczą: automatyczne rejestrowanie urządzeń (nadzorowane)
 
-- **Typ filtru**: wybierz, aby zezwolić na określone witryny internetowe. Dostępne opcje:
+- **Typ filtru**: Wybierz, aby zezwolić na określone witryny internetowe. Dostępne opcje:
 
-  - **Konfiguruj adresy URL**: użyj wbudowanego filtru internetowego firmy Apple, który wyszukuje słownictwo przeznaczone dla osób dorosłych, w tym przekleństwa i słowa o charakterze seksualnym. Ta funkcja ocenia każdą stronę internetową podczas ładowania oraz identyfikuje i blokuje nieodpowiednią zawartość. Możesz również dodać adresy URL, które nie mają być sprawdzane przez filtr. Ponadto możesz zablokować określone adresy URL, niezależnie od ustawień filtru firmy Apple.
+  - **Konfiguruj adresy URL**: użyj wbudowanego filtru internetowego firmy Apple, który wyszukuje język dla dorosłych, w tym przekleństwa i słowa o charakterze seksualnym. Ta funkcja ocenia każdą stronę internetową podczas ładowania oraz identyfikuje i blokuje nieodpowiednią zawartość. Możesz również dodać adresy URL, które nie mają być sprawdzane przez filtr. Ponadto możesz zablokować określone adresy URL, niezależnie od ustawień filtru firmy Apple.
 
     - **Dozwolone adresy URL**: **dodaj** adresy URL, na które chcesz zezwolić. Te adresy URL są pomijane przez filtr internetowy firmy Apple.
 
         > [!NOTE]
         > Wprowadzone adresy to adresy URL, które nie mają być oceniane przez filtr internetowy firmy Apple. Te adresy URL nie stanowią listy dozwolonych witryn internetowych. Aby utworzyć listę dozwolonych witryn internetowych, należy ustawić **typ filtru** na pozycję **Tylko określone witryny internetowe**.
 
-    - **Zablokowane adresy URL**: użyj opcji **Dodaj**, aby dodać adresy URL, których otwieranie ma zostać zatrzymane niezależnie od ustawień filtru internetowego firmy Apple.
+    - **Zablokowane adresy URL**: **dodaj** adresy URL, których otwieranie ma zostać zatrzymane, niezależnie od ustawień filtru internetowego firmy Apple.
 
-  - **Tylko określone witryny internetowe** (dotyczy wyłącznie przeglądarki Safari): te adresy URL są dodawane do zakładek przeglądarki Safari. Użytkownik jest uprawniony **wyłącznie** do odwiedzania tych witryn internetowych; nie będzie można otwierać żadnych innych witryn. Użyj tej opcji tylko wtedy, gdy znasz dokładną listę adresów URL, do których użytkownicy mogą uzyskiwać dostęp.
+  - **Tylko określone witryny internetowe** (tylko przeglądarka internetowa Safari): Te adresy URL są dodawane do zakładek przeglądarki Safari. Użytkownik jest uprawniony **wyłącznie** do odwiedzania tych witryn internetowych; nie będzie można otwierać żadnych innych witryn. Użyj tej opcji tylko wtedy, gdy znasz dokładną listę adresów URL, do których użytkownicy mogą uzyskiwać dostęp.
 
-    - **Adres URL**: podaj adres URL dozwolonej witryny internetowej. Na przykład wprowadź `https://www.contoso.com`.
-    - **Ścieżka zakładki**: Firma Apple zmieniła to ustawienie. Wszystkie zakładki przechodzą do folderu **zatwierdzone witryny** . Zakładki nie przechodzą do wprowadzonej ścieżki do zakładki.
-    - **Tytuł**: podaj opisowy tytuł zakładki.
+    - **Adres URL**: wprowadź adres URL dozwolonej witryny internetowej. Na przykład wprowadź `https://www.contoso.com`.
+    - **Ścieżka zakładki**: Apple zmieniono to ustawienie. Wszystkie zakładki przechodzą do folderu **zatwierdzone witryny**. Zakładki nie przechodzą do wprowadzonej ścieżki do zakładki.
+    - **Tytuł**: wprowadź opisowy tytuł zakładki.
 
     Jeśli nie wprowadzisz żadnych adresów URL, użytkownicy końcowi nie będą mogli uzyskiwać dostęp do żadnych witryn internetowych, z wyjątkiem `microsoft.com`, `microsoft.net`, i `apple.com`. Usługa Intune automatycznie zezwala na dostęp do tych adresów URL.
 
@@ -274,70 +274,70 @@ Ta funkcja ma zastosowanie do:
 Ta funkcja ma zastosowanie do:
 
 - System iOS 13.0 lub nowszy
-- iPadOS 13,0 i nowsze
+- System iPadOS 13.0 lub nowszy
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Ustawienia dotyczą: wszystkie typy rejestracji
 
-- **Typ rozszerzenia aplikacji SSO**: Wybierz typ rozszerzenia aplikacji logowania jednokrotnego. Dostępne opcje:
+- **Typ rozszerzenia aplikacji SSO**: Wybierz typ rozszerzenia aplikacji SSO. Dostępne opcje:
 
-  - **Nie skonfigurowano**: rozszerzenia aplikacji nie są używane. Aby wyłączyć rozszerzenie aplikacji, możesz przełączyć typ rozszerzenia aplikacji logowania jednokrotnego na **Nieskonfigurowane**.
+  - **Nie skonfigurowano**: rozszerzenia aplikacji nie są używane. Aby wyłączyć rozszerzenie aplikacji, możesz zmienić typ rozszerzenia aplikacji logowania jednokrotnego na **nie skonfigurowany**.
   - **Przekierowanie**: Użyj ogólnego, dostosowywalnego rozszerzenia aplikacji przekierowania, aby przeprowadzić Logowanie jednokrotne przy użyciu nowoczesnych przepływów uwierzytelniania. Upewnij się, że znasz identyfikator rozszerzenia dla rozszerzenia aplikacji w organizacji.
-  - **Poświadczenie**: Aby przeprowadzić Logowanie jednokrotne za pomocą przepływów uwierzytelniania typu wyzwanie-odpowiedź, użyj ogólnego, dostosowywalnego rozszerzenia aplikacji Credential. Upewnij się, że znasz identyfikator rozszerzenia dla rozszerzenia aplikacji w organizacji.
-  - **Kerberos**: Użyj wbudowanego rozszerzenia protokołu Kerberos firmy Apple, które jest dostępne w systemach iOS 13,0 (i nowszych) i iPadOS 13,0 (i nowszych). Ta opcja jest specyficzną dla protokołu Kerberos wersją rozszerzenia aplikacji **Credential** .
+  - **poświadczeń**: Użyj ogólnego, dostosowywalnego rozszerzenia aplikacji Credential, aby przeprowadzić Logowanie jednokrotne za pomocą przepływów uwierzytelniania typu wyzwanie-odpowiedź. Upewnij się, że znasz identyfikator rozszerzenia dla rozszerzenia aplikacji w organizacji.
+  - **Kerberos**: Użyj wbudowanego rozszerzenia protokołu Kerberos firmy Apple, które jest dostępne w systemach iOS 13,0 (i nowszych) i iPadOS 13,0 (i nowszych). Ta opcja jest zależna od protokołu Kerberos wersja **poświadczenia** aplikacji.
 
   > [!TIP]
-  > Za pomocą typów **przekierowania** i **poświadczeń** Dodaj własne wartości konfiguracji, aby przejść przez rozszerzenie. Jeśli używasz **poświadczeń**, rozważ użycie wbudowanych ustawień konfiguracji dostarczonych przez firmę Apple w typie **Kerberos** .
+  > Za pomocą **przekierowania** i **typy** poświadczeń należy dodać własne wartości konfiguracyjne, aby przejść przez rozszerzenie. Jeśli używasz usługi **Credential**, rozważ użycie wbudowanych ustawień konfiguracji dostarczonych przez firmę Apple w **typu** Kerberos.
 
 - **Identyfikator rozszerzenia** (przekierowanie i poświadczenie): Wprowadź identyfikator pakietu identyfikujący rozszerzenie aplikacji logowania jednokrotnego, takie jak `com.apple.extensiblesso`.
 
 - **Identyfikator zespołu** (przekierowanie i poświadczenie): Wprowadź identyfikator zespołu rozszerzenia aplikacji logowania jednokrotnego. Identyfikator zespołu to 10-znakowy ciąg alfanumeryczny (cyfry i litery) generowany przez firmę Apple, taki jak `ABCDE12345`. Identyfikator zespołu nie jest wymagany.
 
-  [Znajdź swój identyfikator zespołu](https://help.apple.com/developer-account/#/dev55c3c710c) (otwiera witrynę sieci Web firmy Apple), aby uzyskać więcej informacji.
+  [Znajdź identyfikator zespołu](https://help.apple.com/developer-account/#/dev55c3c710c) (otwiera witrynę firmy Apple), aby uzyskać więcej informacji.
 
-- **Obszar** (poświadczenia i protokół Kerberos): Wprowadź nazwę obszaru uwierzytelniania. Nazwa obszaru powinna być Wielka litera, taka jak `CONTOSO.COM`. Zazwyczaj nazwa obszaru jest taka sama jak nazwa domeny DNS, ale w przypadku wszystkich wielkich liter.
+- **obszaru** (poświadczenia i protokół Kerberos): Wprowadź nazwę obszaru uwierzytelniania. Nazwa obszaru powinna być Wielka litera, taka jak `CONTOSO.COM`. Zazwyczaj nazwa obszaru jest taka sama jak nazwa domeny DNS, ale w przypadku wszystkich wielkich liter.
 
-- **Domeny** (poświadczenia i Kerberos): Wprowadź nazwy domen lub hostów witryn, które mogą być uwierzytelniane za pomocą logowania jednokrotnego. Na przykład jeśli witryna sieci Web jest `mysite.contoso.com`, `mysite` to nazwa hosta, a `contoso.com` to nazwa domeny. Gdy użytkownicy łączą się z dowolną z tych witryn, rozszerzenie aplikacji obsługuje wyzwanie uwierzytelniania. To uwierzytelnianie umożliwia użytkownikom logowanie się przy użyciu identyfikatora, Touch ID lub Apple pincode/kodu dostępu.
+- **Domeny** (Credential i Kerberos): Wprowadź nazwy domeny lub hosta witryn, które mogą być uwierzytelniane za pomocą logowania jednokrotnego. Na przykład jeśli witryna sieci Web jest `mysite.contoso.com`, `mysite` to nazwa hosta, a `contoso.com` to nazwa domeny. Gdy użytkownicy łączą się z dowolną z tych witryn, rozszerzenie aplikacji obsługuje wyzwanie uwierzytelniania. To uwierzytelnianie umożliwia użytkownikom logowanie się przy użyciu identyfikatora, Touch ID lub Apple pincode/kodu dostępu.
 
   - Wszystkie domeny w profilach usługi Intune rozszerzenia aplikacji logowania jednokrotnego muszą być unikatowe. Nie można powtórzyć domeny w dowolnym profilu rozszerzenia aplikacji logowania, nawet jeśli używasz różnych typów rozszerzeń aplikacji logowania jednokrotnego.
   - W tych domenach nie jest rozróżniana wielkość liter.
 
-- **Adresy URL** (tylko przekierowanie): wprowadź PREFIKSY adresów URL dostawców tożsamości, w których imieniu rozszerzenie aplikacji przekierowania wykonuje Logowanie jednokrotne. Gdy użytkownik zostanie przekierowany do tych adresów URL, rozszerzenie aplikacji SSO będzie interweniować i monitować o Logowanie jednokrotne.
+- **Adresy URL** (tylko przekierowanie): wprowadź prefiksy adresów URL dostawców tożsamości, w których imieniu rozszerzenie aplikacji przekierowanie wykonuje Logowanie jednokrotne. Gdy użytkownik zostanie przekierowany do tych adresów URL, rozszerzenie aplikacji SSO będzie interweniować i monitować o Logowanie jednokrotne.
 
   - Wszystkie adresy URL w profilach rozszerzenia aplikacji logowania jednokrotnego usługi Intune muszą być unikatowe. Nie można powtórzyć domeny w żadnym profilu rozszerzenia aplikacji logowania jednokrotnego, nawet jeśli używasz różnych typów rozszerzeń aplikacji logowania jednokrotnego.
   - Adresy URL muszą zaczynać się od http://lub https://.
 
-- **Dodatkowa konfiguracja** (przekierowanie i poświadczenie): wprowadź dodatkowe dane specyficzne dla rozszerzenia, które mają zostać przekazane do rozszerzenia aplikacji SSO:
-  - **Klucz**: Wprowadź nazwę elementu, który chcesz dodać, na przykład `user name`.
+- **Dodatkowe** konfiguracji (przekierowanie i poświadczenie): wprowadź dodatkowe dane specyficzne dla rozszerzenia, które mają zostać przekazane do rozszerzenia aplikacji SSO:
+  - **Klucz**: Wprowadź nazwę elementu, który chcesz dodać, np. `user name`.
   - **Typ**: wprowadź typ danych. Dostępne opcje:
 
     - String
-    - Wartość logiczna: w **wartości konfiguracji**wprowadź `True` lub `False`.
-    - Liczba całkowita: w polu **wartość konfiguracji**wprowadź liczbę.
+    - Wartość logiczna: w **wartości konfiguracji**, wprowadź `True` lub `False`.
+    - Liczba całkowita: w **wartość konfiguracji**wprowadź liczbę.
     
   - **Wartość**: Wprowadź dane.
 
   - **Dodaj**: Wybierz, aby dodać klucze konfiguracji.
 
-- **Użycie łańcucha kluczy** (tylko Kerberos): wybierz opcję **Blokuj** , aby uniemożliwić zapisywanie i przechowywanie haseł w łańcuchu kluczy. **Nie skonfigurowano** (domyślnie) umożliwia zapisywanie i przechowywanie haseł w pęku kluczy.
-- **Identyfikator ekranu, Touch ID lub kod dostępu** (tylko protokół Kerberos): **Wymagaj od** użytkowników, aby wprowadzali identyfikator swojej firmy, identyfikator dotykowy lub kod dostępu firmy Apple w celu zalogowania się do dodanych domen. **Nie skonfigurowano** (domyślnie) nie wymaga, aby użytkownicy korzystali z biometrii lub kodu dostępu do logowania.
-- **Obszar domyślny** (tylko Kerberos): wybierz opcję **Włącz** , aby ustawić wartość **obszaru** wprowadzoną jako domyślny obszar. **Nieskonfigurowane** (domyślnie) nie ustawia obszaru domyślnego.
+- **użycia łańcucha kluczy** (tylko protokół Kerberos): wybierz pozycję **Blokuj**, aby uniemożliwić zapisywanie i przechowywanie haseł w łańcuchu kluczy. **Nieskonfigurowane** (domyślnie) umożliwia zapisywanie i przechowywanie haseł w pęku kluczy.
+- **Identyfikator urządzenia, Touch ID lub** kodu dostępu (tylko protokół Kerberos): **Wymagaj** wymusza, aby użytkownicy musieli wprowadzić swój identyfikator, Touch ID lub kod dostępu Apple, aby zalogować się do dodanych domen. **Nie skonfigurowano** (domyślnie) nie wymaga, aby użytkownicy używali biometrii ani kodu dostępu do logowania.
+- **Domyślny** obszaru (tylko protokół Kerberos): wybierz pozycję **Włącz**, aby ustawić wartość **obszaru** wprowadzoną jako domyślny obszar. **Nie skonfigurowano** (domyślnie) nie ustawia obszaru domyślnego.
 
   > [!TIP]
-  > - **Włącz** to ustawienie, jeśli konfigurujesz wiele rozszerzeń aplikacji SSO protokołu Kerberos w organizacji.
-  > - **Włącz** to ustawienie, jeśli używasz wielu obszarów. Ustawia wartość **obszaru** wprowadzoną jako domyślny obszar.
-  > - Jeśli masz tylko jeden obszar, pozostaw go **nieskonfigurowanym** (domyślnie).
+  > - **Włącz** tego ustawienia, jeśli konfigurujesz wiele rozszerzeń aplikacji SSO protokołu Kerberos w organizacji.
+  > - **Włącz** tego ustawienia, jeśli używasz wielu obszarów. Ustawia **obszar**, wartość wprowadzona jako domyślny obszar.
+  > - Jeśli masz tylko jeden obszar, pozostaw **nie skonfigurowany** (domyślnie).
 
-- **Nazwa podmiotu zabezpieczeń** (tylko protokół Kerberos): Wprowadź nazwę użytkownika podmiotu zabezpieczeń protokołu Kerberos. Nie trzeba dołączać nazwy obszaru. Na przykład w `user@contoso.com``user` jest nazwą główną, a `contoso.com` jest nazwą obszaru.
+- **Nazwa główna** (tylko protokół Kerberos): Wprowadź nazwę użytkownika podmiotu zabezpieczeń protokołu Kerberos. Nie trzeba dołączać nazwy obszaru. Na przykład w `user@contoso.com``user` jest nazwą główną, a `contoso.com` jest nazwą obszaru.
 
   > [!TIP]
   > - Można również użyć zmiennych w nazwie głównej, wprowadzając nawiasy klamrowe `{{ }}`. Na przykład, aby wyświetlić nazwę użytkownika, wprowadź `Username: {{username}}`. 
   > - Jednak należy zachować ostrożność przy użyciu podstawienia zmiennej, ponieważ zmienne nie są sprawdzane w interfejsie użytkownika i uwzględniają wielkość liter. Upewnij się, że wprowadzono prawidłowe informacje.
 
-- **Kod lokacji Active Directory** (tylko protokół Kerberos): Wprowadź nazwę witryny Active Directory, która ma być używana przez rozszerzenie protokołu Kerberos. Zmiana tej wartości może nie być konieczna, ponieważ rozszerzenie protokołu Kerberos może automatycznie znaleźć kod lokacji Active Directory.
+- **Active Directory** kodu lokacji (tylko protokół Kerberos): Wprowadź nazwę witryny Active Directory, której ma używać rozszerzenie protokołu Kerberos. Zmiana tej wartości może nie być konieczna, ponieważ rozszerzenie protokołu Kerberos może automatycznie znaleźć kod lokacji Active Directory.
 - **Nazwa pamięci podręcznej** (tylko protokół Kerberos): Wprowadź nazwę Generic Security Services (GSS) pamięci podręcznej protokołu Kerberos. Najprawdopodobniej nie musisz ustawiać tej wartości.
-- **Identyfikatory pakietu aplikacji** (tylko Kerberos): **Dodaj** identyfikatory zbioru aplikacji, które powinny używać logowania jednokrotnego na urządzeniach. Te aplikacje otrzymują dostęp do biletu uprawniającego do przyznania biletu protokołu Kerberos, biletu uwierzytelniania i uwierzytelniania użytkowników do usług, do których mają dostęp.
-- **Mapowanie obszaru domeny** (tylko Kerberos): **Dodaj** sufiksy DNS domeny, które powinny być mapowane na obszar. Użyj tego ustawienia, jeśli nazwy DNS hostów nie pasują do nazwy obszaru. Najprawdopodobniej nie musisz tworzyć tego niestandardowego mapowania domeny-obszaru.
-- **Certyfikat PKINIT** (tylko protokół Kerberos): **Wybierz opcję** Kryptografia klucza publicznego dla certyfikatu uwierzytelniania początkowego (PKINIT), którego można użyć do uwierzytelniania Kerberos. Możesz wybrać spośród certyfikatów [PKCS](../protect/certficates-pfx-configure.md) lub [SCEP](../protect/certificates-scep-configure.md) , które zostały dodane do usługi Intune. Aby uzyskać więcej informacji o certyfikatach, zobacz [Używanie certyfikatów do uwierzytelniania w Microsoft Intune](../protect/certificates-configure.md).
+- **Identyfikatory pakietu aplikacji** (tylko protokół Kerberos): **Dodaj** identyfikatorów zbioru aplikacji, które powinny używać logowania jednokrotnego na urządzeniach. Te aplikacje otrzymują dostęp do biletu uprawniającego do przyznania biletu protokołu Kerberos, biletu uwierzytelniania i uwierzytelniania użytkowników do usług, do których mają dostęp.
+- **Mapowanie obszaru domeny** (tylko protokół Kerberos): **Dodaj** sufiksy DNS domeny, które powinny być mapowane na obszar. Użyj tego ustawienia, jeśli nazwy DNS hostów nie pasują do nazwy obszaru. Najprawdopodobniej nie musisz tworzyć tego niestandardowego mapowania domeny-obszaru.
+- **certyfikatów PKINIT** (tylko protokół Kerberos): **wybierz** kryptografii klucza publicznego dla certyfikatu uwierzytelniania początkowego (PKINIT), którego można użyć do uwierzytelniania Kerberos. Możesz wybrać jedną z [PKCS](../protect/certficates-pfx-configure.md) lub [SCEP](../protect/certificates-scep-configure.md) certyfikaty, które zostały dodane w usłudze Intune. Aby uzyskać więcej informacji o certyfikatach, zobacz [używać certyfikatów do uwierzytelniania w Microsoft Intune](../protect/certificates-configure.md).
 
 ## <a name="wallpaper"></a>Tapeta
 

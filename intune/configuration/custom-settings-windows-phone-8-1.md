@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/25/2019
+ms.date: 12/18/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a1362f6c6453569d1c306cd16397cc9a7f83736e
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 6ed1f43e7c7e6f0580cb22513a489fb32c30e5f6
+ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72495351"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75206758"
 ---
 # <a name="use-custom-settings-for-windows-phone-81-devices-in-intune"></a>Używanie ustawień niestandardowych dla urządzeń z systemem Windows Phone 8.1 w usłudze Intune
 
@@ -33,21 +33,21 @@ W tym artykule pokazano, jak utworzyć profil niestandardowy dla urządzeń z sy
 
 ## <a name="create-the-profile"></a>Tworzenie profilu
 
-1. Zaloguj się do usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Wybierz pozycję **Konfiguracja urządzeń** > **Profile** > **Utwórz profil**.
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz pozycję **Urządzenia** > **Profile konfiguracji** > **Utwórz profil**.
 3. Podaj następujące ustawienia:
 
-    - **Nazwa**: wprowadź nazwę profilu, na przykład `windows phone custom profile`.
-    - **Opis:** wprowadź opis profilu.
-    - **Platforma**: wybierz system **Windows Phone 8.1**.
-    - **Typ profilu**: wybierz pozycję **Niestandardowy**.
+    - **Nazwa**: Wprowadź opisową nazwę profilu. Nadaj nazwę profilom, aby można było je później łatwo rozpoznać. Na przykład dobrą nazwą profilu jest **profilu niestandardowego systemu Windows Phone**.
+    - **Opis**: Wprowadź opis ułatwiający identyfikację ustawienia oraz zawierający inne ważne szczegóły.
+    - **platformy**: Wybierz **Windows Phone 8,1**.
+    - **Typ profilu**: Wybierz **niestandardowe**.
 
 4. W obszarze **Niestandardowe ustawienia OMA-URI** wybierz pozycję **Dodaj**. Podaj następujące ustawienia:
 
-    - **Nazwa**: wprowadź unikatową nazwę ustawienia OMA-URI, aby ułatwić jego identyfikację na liście ustawień.
-    - **Opis**: wprowadź opis, który zawiera omówienie ustawienia oraz inne istotne informacje ułatwiające wyszukanie profilu.
-    - **OMA-URI** (z uwzględnieniem wielkości liter): wprowadź identyfikator OMA-URI, którego chcesz użyć jako ustawienia.
-    - **Typ danych**: wprowadź typ danych używany w przypadku tego ustawienia identyfikatora OMA-URI. Dostępne opcje:
+    - **Nazwa**: Wprowadź unikatową nazwę dla ustawienia OMA-URI, aby ułatwić jego identyfikację na liście ustawień.
+    - **Opis**: Wprowadź opis, który zawiera omówienie ustawienia oraz inne istotne informacje ułatwiające wyszukanie profilu.
+    - **OMA-URI** (rozróżniana jest wielkość liter): Wprowadź identyfikator OMA-URI, którego chcesz używać jako ustawienia.
+    - **Typ danych**: Wybierz typ danych używany w przypadku tego ustawienia identyfikatora OMA-URI. Dostępne opcje:
 
         - String
         - Ciąg (plik XML)
@@ -57,12 +57,12 @@ W tym artykule pokazano, jak utworzyć profil niestandardowy dla urządzeń z sy
         - Boolean
         - Base64 (plik)
 
-    - **Wartość**: wprowadź wartość danych, którą chcesz skojarzyć z wprowadzonym identyfikatorem OMA-URI. Wartość zależy od wybranego typu danych. Jeśli na przykład wybrano opcję **Data i godzina**, wybierz wartość za pomocą selektora daty.
+    - **Wartość**: Wprowadź wartość danych, którą chcesz skojarzyć z wprowadzonym identyfikatorem OMA-URI. Wartość zależy od wybranego typu danych. Jeśli na przykład wybrano opcję **Data i godzina**, wybierz wartość za pomocą selektora daty.
 
     Po dodaniu ustawień możesz wybrać pozycję **Eksportuj**. Wybranie pozycji **Eksportuj** spowoduje utworzenie listy wszystkich dodanych wartości w pliku wartości rozdzielanych przecinkami (CSV).
 
 5. Wybierz przycisk **OK**, aby zapisać zmiany. W razie potrzeby kontynuuj dodawanie ustawień.
-6. Po zakończeniu wybierz pozycję **OK** > **Utwórz**, aby utworzyć profil usługi Intune. Po utworzeniu profil będzie widoczny na liście **Konfiguracja urządzenia — profile**.
+6. Po zakończeniu wybierz pozycję **OK** > **Utwórz**, aby utworzyć profil usługi Intune. Po utworzeniu profil będzie widoczny na liście **Urządzenia — profile konfiguracji**.
 
 ## <a name="example"></a>Przykład
 
@@ -70,12 +70,12 @@ W poniższym przykładzie Windows 8.1 urządzenia telefonii nie mogą zmieniać 
 
 - **Nazwa**: Zezwalaj na roaming danych komórkowych
 - **Opis**: Zezwalaj lub nie Zezwalaj na roaming danych komórkowych
-- **OMA-URI** (z uwzględnieniem wielkości liter):./Vendor/MSFT/PolicyManager/my/Connectivity/AllowCellularDataRoaming
-- **Typ danych**: liczba całkowita
+- **OMA-URI** (z uwzględnieniem wielkości liter):./Vendor/MSFT/PolicyManager/My/Connectivity/AllowCellularDataRoaming
+- **Typ danych**: Integer
 - **Wartość**: 0
 
 ## <a name="next-steps"></a>Następne kroki
 
-Profil został utworzony, ale nie wykonuje jeszcze żadnych czynności. Teraz należy [przypisać profil](device-profile-assign.md).
+Profil został utworzony, ale nie wykonuje jeszcze żadnych czynności. W dalszej części [przypiszesz profil](../device-profile-assign.md) i będziesz [monitorować jego stan](device-profile-monitor.md).
 
-Zobacz, jak utworzyć profil niestandardowy na [urządzeniach z systemem Windows 10](../custom-settings-windows-10.md).
+Utwórz [profil niestandardowy na urządzeniach z systemem Windows 10](../custom-settings-windows-10.md).

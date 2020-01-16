@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2056d37b00f5e2ae7b36c6e1c02f20dc244eb290
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: 0cf9b886733c117df0fca38bc94a601d1e9dd8fb
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72502130"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75858137"
 ---
 # <a name="how-to-reset-your-device-passcode-from-the-company-portal-website"></a>Jak zresetować kod dostępu urządzenia z poziomu witryny sieci Web Portal firmy
 
@@ -42,7 +42,7 @@ Resetowanie kodu dostępu nie jest dostępne dla urządzeń z systemem Android 7
 
     ![Zrzut ekranu przedstawiający stronę Urządzenia z dwoma kafelkami, które przedstawiają niezidentyfikowane urządzenia z ogólną nazwą. Bezpośrednio pod urządzeniami jest wyświetlany szary baner zawierający monit dla użytkownika z prośbą o identyfikację używanego urządzenia lub dodanie nowego.](./media/rename-reset-device-step2-1808.png) 
 
-3. Wybierz pozycję **Zresetuj kod dostępu**. Jeśli opcja resetowania kodu dostępu nie jest widoczna w górnej części strony, wybierz opcję **Więcej (...)**  > **Zresetuj kod dostępu**.   
+3. Wybierz pozycję **Zresetuj kod dostępu**. Jeśli opcja resetowania kodu dostępu nie jest widoczna w górnej części strony, wybierz opcję **Więcej (...)** > **Zresetuj kod dostępu**.   
 
    ![Strona szczegółów urządzenia dla wybranego urządzenia w witrynie Portal firmy, z listą linków w górnej części z opcjami Zmień nazwę, Usuń, Resetuj urządzenie, Resetuj kod dostępu oraz Zdalne blokowanie. ](./media/rename-reset-device-1808.png)   
 
@@ -74,12 +74,12 @@ Resetowanie kodu dostępu nie jest dostępne dla urządzeń z systemem Android 7
 
 W tej sekcji opisano resetowanie kodu dostępu oraz zachowanie związane z hasłem tymczasowym dla każdej platformy urządzeń.  
 
-**Android**: usuwa istniejący kodu dostępu i tworzy tymczasowy kod dostępu składający się z liter i cyfr.
+**Android**: Usuwa istniejący kod dostępu i tworzy tymczasowy kod dostępu składający się z liter i cyfr.
 
-**iOS**: usuwa istniejący kod dostępu i nie tworzy tymczasowego kodu dostępu. Jeśli używasz identyfikatora Touch do otwierania urządzenia lub dokonywania zakupów, musisz go skonfigurować ponownie.  
+**iOS**: Usuwa istniejący kod dostępu i nie tworzy tymczasowego kodu dostępu. Jeśli używasz czytnika linii papilarnych Touch ID do otwierania urządzenia lub dokonywania zakupów, musisz ponownie go skonfigurować.  
 
-**Windows 10 Mobile**: usuwa istniejący kod dostępu i tworzy tymczasowy kod dostępu składający się z liter i cyfr. Po skonfigurowaniu rozpoznawanie twarzy Windows Hello nadal będzie działać na urządzeniu.
+**Windows 10 Mobile**: Usuwa istniejący kod dostępu i tworzy tymczasowy kod dostępu składający się z liter i cyfr. Po skonfigurowaniu rozpoznawanie twarzy Windows Hello nadal będzie działać na urządzeniu.
 
-**Windows Phone 8.1**: usuwa istniejący kod dostępu i powoduje utworzenie tymczasowego kodu dostępu składającego się z cyfr.  
+**Windows Phone 8.1**: Usuwa istniejący kod dostępu i powoduje utworzenie tymczasowego kodu dostępu składającego się z cyfr.  
 
 Nadal potrzebujesz pomocy? Skontaktuj się z pomocą techniczną Twojej firmy. Informacje kontaktowe są dostępne w [witrynie sieci Web Portal firmy](https://go.microsoft.com/fwlink/?linkid=2010980).  

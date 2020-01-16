@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/09/2019
+ms.date: 01/02/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9742305905c5ba49930e13646bf13d8c248426b6
-ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
+ms.openlocfilehash: 3529a21483d0207dbfe55af914badf3ed895af1a
+ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74899398"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75691869"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Wprowadzenie do zestawu SDK aplikacji usługi Microsoft Intune
 
@@ -60,7 +60,7 @@ Użyjemy adresów e-mail podanych w odpowiedziach kwestionariusza w celu uzyskan
 
 4. Link bezpośredni do aplikacji zostanie dodany do następnej comiesięcznej aktualizacji usługi Intune. Jeśli na przykład informacje niezbędne do rejestracji zostaną podane w lipcu, link bezpośredni do aplikacji będzie obsługiwany od połowy sierpnia.
 
-Jeśli link bezpośredni do aplikacji zmieni się w przyszłości, będzie konieczne ponowne zarejestrowanie aplikacji.
+Link bezpośredni to link do listy aplikacji w publicznym sklepie z aplikacjami. Jeśli link bezpośredni do aplikacji zmieni się w przyszłości, będzie konieczne ponowne zarejestrowanie aplikacji.
 
 > [!NOTE]
 > Musisz poinformować nas w przypadku zaktualizowania aplikacji za pomocą nowej wersji zestawu SDK aplikacji usługi Intune.
@@ -86,7 +86,7 @@ Aby ułatwić zintegrowanie zestawu SDK aplikacji usługi Intune z aplikacją, b
 
 * **[Przewodnik dla deweloperów korzystających z zestawu SDK aplikacji usługi Intune dla systemu Android](app-sdk-android.md)**: ten dokument zawiera szczegółowe instrukcje dotyczące włączania aplikacji natywnej systemu Android przy użyciu zestawu SDK aplikacji usługi Intune.
 
-* **[Przewodnik powiązań platformy Xamarin dla zestawu Intune App SDK](app-sdk-xamarin.md)**: ten dokument pomoże Ci tworzyć aplikacje dla systemów Android i iOS przy użyciu oprogramowania Xamarin i zasad ochrony aplikacji usługi Intune.
+* **[Przewodnik powiązań platformy Xamarin dla zestawu Intune App SDK](app-sdk-xamarin.md)**: ten dokument pomoże Ci tworzyć aplikacje dla systemów iOS i Android przy użyciu oprogramowania Xamarin i zasad ochrony aplikacji usługi Intune.
 
 
 
@@ -102,11 +102,11 @@ Oprócz włączenia zasad ochrony aplikacji do prawidłowego współdziałania a
 
 Usługa Microsoft Intune zbiera dane dotyczące statystyk użycia aplikacji.
 
-* **Zestaw SDK aplikacji usługi Intune dla systemu iOS**: zestaw SDK domyślnie rejestruje dane telemetryczne zestawu SDK dotyczące zdarzeń użycia. Te dane są wysyłane do usługi Microsoft Intune.
+* **Zestaw SDK aplikacji usługi Intune dla systemu iOS**: Zestaw SDK domyślnie rejestruje dane telemetryczne zestawu SDK dotyczące zdarzeń użycia. Te dane są wysyłane do usługi Microsoft Intune.
 
   * Jeśli zrezygnujesz z wysyłania danych telemetrycznych zestawu SDK do usługi Microsoft Intune z aplikacji, musisz wyłączyć funkcję przesyłania danych telemetrycznych przez ustawienie dla właściwości `MAMTelemetryDisabled` wartości „YES” w słowniku IntuneMAMSettings.
 
-* **Zestaw SDK aplikacji usługi Intune dla systemu Android**: zestaw SDK aplikacji usługi Intune dla systemu Android nie kontroluje zbierania danych z aplikacji. Aplikacja Portal firmy domyślnie rejestruje dane telemetryczne. Te dane są wysyłane do usługi Microsoft Intune. Zgodnie z zasadami firmy Microsoft nie zbieramy żadnych danych osobowych. 
+* **Zestaw SDK aplikacji usługi Intune dla systemu Android**: Zestaw SDK aplikacji usługi Intune dla systemu Android nie kontroluje zbierania danych z aplikacji. Aplikacja Portal firmy domyślnie rejestruje dane telemetryczne. Te dane są wysyłane do usługi Microsoft Intune. Zgodnie z zasadami firmy Microsoft nie zbieramy żadnych danych osobowych. 
 
   * Jeśli użytkownicy końcowi chcą zrezygnować z wysyłania tych danych, muszą wyłączyć telemetrię w ustawieniach aplikacji portalu firmy. Aby dowiedzieć się więcej, zobacz artykuł [Wyłączanie zbierania danych użycia przez firmę Microsoft](https://docs.microsoft.com/intune-user-help/turn-off-microsoft-usage-data-collection-android). 
 
@@ -183,7 +183,7 @@ Gdy aplikacja zostanie zarejestrowana w dzierżawie platformy Azure i pojawi si�
 7. Kliknij pozycję **Dodaj uprawnienia**.
 
 > [!NOTE]
-> Jeśli aplikacja uniemożliwia logowanie się z powodu błędu podczas uzyskiwania dostępu do tego zasobu: https://intunemam.microsoftonline.com, należy wysłać uwagę do msintuneappsdk@microsoft.com przy użyciu identyfikatora klienta aplikacji. Jest to proces ręcznego zatwierdzania.
+> Jeśli aplikacja uniemożliwia logowanie się z powodu błędu dostępu do tego zasobu: https\://intunemam.microsoftonline.com, należy wysłać notatkę do msintuneappsdk@microsoft.com przy użyciu identyfikatora klienta aplikacji. Jest to proces ręcznego zatwierdzania.
 
 ### <a name="badge-your-app-optional"></a>Znakowanie aplikacji (opcjonalne)
 

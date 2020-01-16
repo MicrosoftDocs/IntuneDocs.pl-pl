@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81c842eb27b1b9131c164ced5aeed86a78a37353
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: 02aab98bf74664cbdb8c7d7dccbfadba701b59f6
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72506296"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75856789"
 ---
 # <a name="enroll-your-corporate-device-with-the-microsoft-intune-app"></a>Rejestrowanie urządzenia firmowego w aplikacji Microsoft Intune
 
@@ -45,16 +45,16 @@ Wykonaj następujące kroki, aby skonfigurować i zarejestrować urządzenie.
 
 1. Włącz nowe urządzenie lub urządzenia zresetowane do ustawień fabrycznych.  
 2. Na ekranie **powitalnym** wybierz swój język.   Jeśli poproszono Cię o zarejestrowanie się za pomocą kodu QR lub komunikacji NFC, wykonaj opisane poniżej kroki odpowiadające wybranej metodzie.  
-     * NFC: zbliż urządzenie obsługujące komunikację NFC do programatora, aby nawiązać połączenie z siecią organizacji. Postępuj zgodnie z monitami wyświetlanymi na ekranie. Po wyświetleniu ekranu z warunkami korzystania z przeglądarki Chrome przejdź do kroku 5.  
+     * NFC: Zbliż urządzenie obsługujące komunikację NFC do programatora, aby nawiązać połączenie z siecią organizacji. Postępuj zgodnie z monitami wyświetlanymi na ekranie. Po wyświetleniu ekranu z warunkami korzystania z przeglądarki Chrome przejdź do kroku 5.  
 
-     * Kod QR: wykonaj kroki opisane w sekcji [Rejestracja za pomocą kodu QR](#qr-code-enrollment).  
+     * Kod QR: Wykonaj kroki opisane w sekcji [Rejestracja za pomocą kodu QR](#qr-code-enrollment).  
 
      Jeśli poproszono Cię o skorzystanie z innej metody, przejdź do kroku 3.    
 
 3. Nawiąż połączenie z siecią Wi-Fi i naciśnij pozycję **DALEJ**. Wykonaj kroki odpowiadające wybranej metodzie rejestracji. 
 
-    * Token: po wyświetleniu ekranu logowania Google wykonaj kroki opisane w sekcji [Rejestracja za pomocą tokenu](#token-enrollment).  
-    * Google Zero Touch: po nawiązaniu połączenia z siecią Wi-Fi Twoje urządzenie zostanie rozpoznane przez Twoją organizację. Przejdź do kroku 4 i postępuj zgodnie z instrukcjami wyświetlanymi na ekranie aż do zakończenia instalacji.    
+    * Token: Po wyświetleniu ekranu logowania Google wykonaj kroki opisane w sekcji [Rejestracja za pomocą tokenu](#token-enrollment).  
+    * Google Zero Touch: Po nawiązaniu połączenia z siecią Wi-Fi Twoje urządzenie zostanie rozpoznane przez Twoją organizację. Przejdź do kroku 4 i postępuj zgodnie z instrukcjami wyświetlanymi na ekranie aż do zakończenia instalacji.    
  
        ![Przykładowy obraz przedstawiający ekran postanowień firmy Google, który zostanie wyświetlony w przypadku korzystania z funkcji Google Zero Touch. Wyróżniono przycisk Akceptuj i kontynuuj.](./media/google-zero-touch-intune-app-01.png)   
    
@@ -79,11 +79,11 @@ Wykonaj następujące kroki, aby skonfigurować i zarejestrować urządzenie.
 
    ![Przykładowy obraz przedstawiający ekran konfigurowania telefonu służbowego z wyróżnionym przyciskiem Zainstaluj.](./media/fully-managed-intune-app-11.png)   
 
-10. Naciśnij przycisk **Start** , aby otworzyć aplikację Microsoft Intune i zarejestrować urządzenie. 
+10. Naciśnij pozycję **Rozpocznij**, aby otworzyć aplikację Microsoft Intune i zarejestrować urządzenie. 
 
     ![Przykładowy obraz przedstawiający ekran konfigurowania telefonu służbowego z wyróżnionym przyciskiem Start.](./media/fully-managed-intune-app-17.png)   
 
-11. Naciśnij pozycję **Zaloguj** , a następnie naciśnij pozycję **dalej** , aby rozpocząć rejestrację. Gdy zobaczysz komunikat, że rejestracja została zakończona, naciśnij pozycję **gotowe**.  
+11. Naciśnij pozycję **Zaloguj się** a następnie naciśnij pozycję **dalej**, aby rozpocząć rejestrację. Po wyświetleniu komunikatu o zakończeniu rejestracji naciśnij pozycję **gotowe**.  
 
     ![Przykładowy obraz konfigurowania dostępu, rejestrowania ekranu urządzenia, wyróżniania przycisku Gotowe.](./media/fully-managed-intune-app-19.png)   
 

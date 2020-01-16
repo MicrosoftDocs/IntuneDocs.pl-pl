@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/19/2019
+ms.date: 01/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,26 +16,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04b284a62076122cec70b6b455151a0377470521
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 01ea2f75d166e5cc6aef4b890dba5722a74c1f61
+ms.sourcegitcommit: 8f56220e7cafc5bc43135940575a9acb5afde730
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74540738"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75827823"
 ---
-# <a name="in-development-for-microsoft-intune---december-2019"></a>W trakcie opracowywania dla usługi Microsoft Intune — grudzień 2019 r.
+# <a name="in-development-for-microsoft-intune---january-2020"></a>Funkcje usługi Microsoft Intune w trakcie opracowywania — styczeń 2020 r.
 
-Aby ułatwić Ci przygotowanie i planowanie, na tej stronie udostępniamy listę aktualizacji interfejsu użytkownika i funkcji usługi Intune, które są obecnie opracowywane, a zostaną wydane w przyszłości. Oprócz informacji na tej stronie:
+Aby ułatwić Ci przygotowanie i planowanie, na tej stronie udostępniamy listę aktualizacji interfejsu użytkownika i funkcji usługi Intune, które są obecnie opracowywane, a zostaną wydane w przyszłości. Oprócz informacji na tej stronie: 
 
 - Jeśli przewidujemy, że przed wprowadzeniem zmiany będzie konieczne wykonanie określonych działań, publikujemy również dodatkowy wpis w centrum wiadomości usługi Office.
-- Gdy funkcja przechodzi do środowiska produkcyjnego, niezależnie od tego, czy jest to wersja zapoznawcza, czy ogólnie dostępna, opis funkcji zostanie przeniesiony z tej strony do [nowości](whats-new.md).
+- Gdy funkcja przechodzi do środowiska produkcyjnego, niezależnie od tego, czy jest to wersja zapoznawcza, czy ogólnie dostępna, opis funkcji zostanie przeniesiony z tej strony, aby [co nowego](whats-new.md).
 - Ta strona oraz strona [Co nowego](whats-new.md) są okresowo aktualizowane. Odwiedź ją ponownie, aby sprawdzić dodatkowe aktualizacje.
 - Zobacz [harmonogram działania dla platformy Microsoft 365](https://www.microsoft.com/microsoft-365/roadmap?rtc=2&filters=EMS), aby poznać strategiczne cele i terminy.
 
 > [!NOTE]
 > Ta strona przedstawia nasze bieżące oczekiwania dotyczące możliwości usługi Intune w przyszłej wersji. Zarówno daty, jak i poszczególne funkcje mogą ulec zmianie. Ta strona nie zawiera opisu wszystkich funkcji programistycznych.
 
-**Kanał informacyjny RSS**: dowiaduj się o aktualizacjach tej strony dzięki skopiowaniu i wklejeniu następującego adresu URL w czytniku kanałów informacyjnych: `https://docs.microsoft.com/api/search/rss?search=%22in+development+-+microsoft+intune%22&locale=en-us`
+**Kanał informacyjny RSS**: Dowiaduj się o aktualizacjach tej strony dzięki skopiowaniu i wklejeniu następującego adresu URL w czytniku kanałów informacyjnych: `https://docs.microsoft.com/api/search/rss?search=%22in+development+-+microsoft+intune%22&locale=en-us`
 
 <!--
 ## What's coming to Intune in the Azure portal 
@@ -58,152 +58,112 @@ Aby ułatwić Ci przygotowanie i planowanie, na tej stronie udostępniamy listę
 <!-- ***********************************************-->
 ## <a name="app-management"></a>Zarządzanie aplikacjami
 
-### <a name="ios-user-licensed-vpp-apps---5619268-idready---"></a>Aplikacje programu VPP licencjonowane przez użytkownika systemu iOS<!-- 5619268 idready -->
-W przypadku rejestracji użytkowników urządzenia z systemem iOS użytkownicy końcowi nie będą już prezentowane za pomocą aplikacji VPP licencjonowanych przez urządzenia, które zostały wdrożone jako dostępne. Użytkownicy końcowi będą jednak nadal widzieć wszystkie aplikacje programu VPP licencjonowane przez użytkownika w ramach Portal firmy. Aby uzyskać więcej informacji o aplikacjach programu VPP, zobacz [Jak w usłudze Microsoft Intune zarządzać aplikacjami dla systemów iOS i macOS, które zostały zakupione w ramach programu zakupów zbiorczych firmy Apple](~/apps/vpp-apps-ios.md).
-
-### <a name="retrieve-personal-recovery-key-from-mem-encrypted-macos-devices---4851745-idready---"></a>Pobieranie osobistego klucza odzyskiwania z usługi MEM zaszyfrowane urządzenia macOS<!-- 4851745 idready -->
-Użytkownicy końcowi będą mogli pobrać własny klucz odzyskiwania (klucz FileVault) przy użyciu aplikacji Portal firmy systemu iOS. Urządzenie, które ma osobisty klucz odzyskiwania, musi być zarejestrowane w usłudze Intune i zaszyfrowane za pomocą usługi FileVault za pomocą usługi Intune. Korzystając z aplikacji Portal firmy systemu iOS, użytkownik końcowy może otworzyć widok sieci Web Safari i pobrać własny klucz odzyskiwania. W usłudze Intune wybierz pozycję **urządzenia** > *zaszyfrowanym i zarejestrowanym urządzeniem macOS* > **Pobierz klucz odzyskiwania**. Aby uzyskać więcej informacji na temat FileVault, zobacz [FileVault Encryption for macOS](~/protect/encrypt-devices.md#filevault-encryption-for-macos).
-
-### <a name="microsoft-app-icons-update--4677605--"></a>Aktualizacja ikon aplikacji firmy Microsoft<!--4677605-->
-Ikony używane dla aplikacji firmy Microsoft w okienku określania wartości docelowej aplikacji dla zasad ochrony aplikacji i zasad konfiguracji aplikacji zostaną zaktualizowane.
-
-### <a name="smime-support-for-microsoft-outlook-mobile---2669398----"></a>Obsługa protokołu S/MIME dla programu Microsoft Outlook Mobile<!-- 2669398  -->
-Usługa Intune będzie obsługiwać dostarczanie certyfikatów podpisywania S/MIME i szyfrowania, które mogą być używane z programem Outlook Mobile w systemach iOS i Android. Aby uzyskać powiązane informacje, zobacz [Ustawienia poczty e-mail dla urządzeń z systemem iOS](~/configuration/email-settings-ios.md) i [Ustawienia poczty e-mail dla urządzeń z systemem Android](~/configuration/email-settings-android.md).
-
-### <a name="custom-settings-support-for-macos-applications---4736278----"></a>Obsługa ustawień niestandardowych dla aplikacji macOS<!-- 4736278  -->
-Usługa Intune będzie obsługiwać ustawienia niestandardowe, umożliwiając dodawanie określonych kluczy i wartości do istniejącego pliku listy właściwości preferencji (plist) w celu skonfigurowania aplikacji macOS i urządzenia. Nie wszystkie aplikacje obsługują preferencje zarządzane, a w niektórych przypadkach można zarządzać tylko określonymi ustawieniami. Ustawienia są wdrażane tylko za pośrednictwem kanału urządzenia. Należy przekazać tylko pliki listy właściwości lub pliki XML, które są przeznaczone dla ustawień kanału urządzenia.
-
 ### <a name="display-notifications-for-the-company-portal-app-on-windows---1808082----"></a>Wyświetl powiadomienia dla aplikacji Portal firmy w systemie Windows<!-- 1808082  -->
-Zaktualizujemy aplikację Portal firmy na urządzeniach z systemem Windows, aby wyświetlać wyskakujące powiadomienia użytkownikom nawet po zamknięciu aplikacji. Aktualizacja będzie zawierać powiadomienia dotyczące dostępnych aplikacji tylko wtedy, gdy stan instalacji zostanie ukończony lub zakończył się niepowodzeniem. Aplikacja Portal firmy nie będzie zawierać powiadomień dotyczących wymaganych aplikacji.
+Zaktualizujemy aplikację Portal firmy na urządzeniach z systemem Windows, aby wyświetlać wyskakujące powiadomienia użytkownikom nawet po zamknięciu aplikacji. Aktualizacja będzie zawierać powiadomienia dotyczące dostępnych aplikacji tylko wtedy, gdy stan instalacji zostanie ukończony lub zakończył się niepowodzeniem. Aplikacja Portal firmy nie będzie zawierać powiadomień dotyczących wymaganych aplikacji. 
 
 ### <a name="display-installation-status-messages-for-the-company-portal-app---2514416----"></a>Wyświetlanie komunikatów o stanie instalacji dla aplikacji Portal firmy<!-- 2514416  -->
 Aplikacja Portal firmy będzie wyświetlać dodatkowe komunikaty o stanie instalacji aplikacji dla użytkowników końcowych. Poniższe warunki dotyczą nowych funkcji zależności Win32:
 - Instalowanie aplikacji nie powiodło się. Zależności zdefiniowane przez administratora nie zostały spełnione.
 
-### <a name="configure-app-notification-content-for-organization-accounts---2576686---"></a>Skonfiguruj zawartość powiadomienia aplikacji dla kont organizacji<!-- 2576686 -->
-Aplikacja usługi Intune na urządzeniach z systemem Android i iOS umożliwi kontrolowanie zawartości powiadomień aplikacji dla kont organizacji. Ta funkcja będzie wymagała obsługi aplikacji i może być niedostępna dla wszystkich aplikacji korzystających z aplikacji. Aby uzyskać więcej informacji na temat zasad ochrony aplikacji (APP), zobacz [Co to są zasady ochrony aplikacji?](../apps/app-protection-policy.md)
+### <a name="retarget-web-clips-to-microsoft-edge-on-ios-devices---5455276-idready---"></a>Przekieruj klipy internetowe do przeglądarki Microsoft Edge na urządzeniach z systemem iOS<!-- 5455276 idready -->
+Klipy internetowe, które działają jako przypięte aplikacje sieci Web na urządzeniach z systemem iOS, będą musiały zostać zaktualizowane. Nowo wdrożone klipy internetowe będą otwierane w przeglądarce Microsoft Edge, a nie Intune Managed Browser, jeśli będzie to wymagane do otwarcia w chronionej sieci. Musisz przekierować wcześniej istniejące klipy internetowe, aby upewnić się, że są otwierane w przeglądarce Microsoft Edge, a nie Managed Browser. 
+
+### <a name="user-experience-change-when-adding-apps-to-intune---4705829-idready---"></a>Zmiana czynności użytkownika podczas dodawania aplikacji do usługi Intune<!-- 4705829 idready -->
+Po dodaniu aplikacji za pośrednictwem usługi Intune zobaczysz nowe środowisko użytkownika. To środowisko zapewnia te same ustawienia i szczegóły, które zostały wcześniej użyte, ale nowe środowisko jest zgodne z procesem podobnym do kreatora przed dodaniem aplikacji do usługi Intune. To nowe środowisko udostępnia również stronę przeglądu przed dodaniem aplikacji. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**. Aby uzyskać więcej informacji, zobacz [Dodawanie aplikacji do usługi Microsoft Intune](~/apps/apps-add.md).
+
+#### <a name="require-win32-apps-to-restart----3136567--"></a>Wymagaj ponownego uruchomienia aplikacji Win32 <!-- 3136567-->
+Po pomyślnej instalacji programu można wymagać ponownego uruchomienia aplikacji Win32. Ponadto można wybrać ilość czasu (okres prolongaty) przed ponownym uruchomieniem.
 
 <!-- ***********************************************-->
 ## <a name="device-configuration"></a>Konfiguracja urządzenia
-
-### <a name="block-users-from-configuring-certificate-credentials-in-the-managed-keystore-on-android-enterprise-device-owner-devices---3311998-idready---"></a>Zablokuj użytkownikom możliwość konfigurowania poświadczeń certyfikatów w zarządzanym magazynie kluczy na urządzeniach właścicieli urządzeń z systemem Android Enterprise<!-- 3311998 idready -->
-Na urządzeniach będących właścicielami urządzeń z systemem Android Enterprise istnieje nowe ustawienie służące do blokowania użytkownikom konfigurowania poświadczeń certyfikatów w zarządzanym magazynie kluczy (**Konfiguracja urządzenia** > **Profile** > **tworzenia profilu** > **Android Enterprise** for platform > **tylko właściciel urządzenia > ograniczenia dotyczące urządzeń** dla typu profilu > **Użytkownicy i konta**).
-
-Aby zapoznać się z bieżącymi ustawieniami, zobacz artykuł [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md) (Ustawienia urządzeń z systemem Android Enterprise używane w celu zezwolenia na funkcje lub ich ograniczenia za pomocą usługi Intune).
-
-Dotyczy:
-- Właściciel urządzenia z systemem Android Enterprise, w tym urządzenia dedykowane i w pełni zarządzane
-
-### <a name="wired-network-device-configuration-profiles-for-macos-devices---3508686-idready---"></a>Profile konfiguracji urządzeń sieci przewodowej dla urządzeń macOS<!-- 3508686 idready -->
-W przypadku urządzeń z systemem macOS przyszła aktualizacja będzie zawierać nowy profil konfiguracji urządzenia, który konfiguruje sieci przewodowe (**Konfiguracja urządzeń** > **Profile** > **tworzenia profilu** > **macOS** dla platformy > **sieci przewodowej** dla typu profilu). Użyj tej funkcji, aby utworzyć profile 802.1 x w celu zarządzania sieciami przewodowymi i wdrożyć te sieci przewodowe na urządzeniach macOS.
-
-Dotyczy:
-- macOS
 
 ### <a name="add-automatic-proxy-settings-to-wi-fi-profiles-for-android-enterprise-work-profiles---4490822-idready---"></a>Dodawanie automatycznych ustawień serwera proxy do profilów sieci Wi-Fi dla profilów służbowych systemu Android Enterprise<!-- 4490822 idready -->
 Na urządzeniach profilu służbowego systemu Android Enterprise można tworzyć profile sieci Wi-Fi. Po wybraniu typu przedsiębiorstwa Wi-Fi można także wprowadzić typ protokołu uwierzytelniania rozszerzonego (EAP) używanego w sieci Wi-Fi.
 
 W przyszłej aktualizacji, po wybraniu typu przedsiębiorstwa, będziesz mieć możliwość wprowadzenia automatycznych ustawień serwera proxy, w tym adresu URL serwera proxy, takiego jak `proxy.contoso.com`.
 
-Aby wyświetlić bieżące ustawienia sieci Wi-Fi, które można skonfigurować, przejdź do pozycji [Dodaj ustawienia sieci Wi-Fi dla urządzeń z systemem Android Enterprise i kiosku dla systemu Android w Microsoft Intune](../configuration/wi-fi-settings-android-enterprise.md).
+Aby wyświetlić bieżące ustawienia sieci Wi-Fi, które można skonfigurować, przejdź do [dodawania ustawień sieci Wi-Fi dla urządzeń z systemem Android Enterprise i kiosku systemu Android w](../configuration/wi-fi-settings-android-enterprise.md)Microsoft Intune.
 
 Dotyczy:
 - Android Enterprise — profil służbowy
 
-### <a name="enable-network-access-control-nac-with-cisco-anyconnect-vpn-on-ios-devices---4860111-idready---"></a>Włączanie kontroli dostępu do sieci (NAC) przy użyciu sieci VPN Cisco AnyConnect na urządzeniach z systemem iOS<!-- 4860111 idready -->
-Na urządzeniach z systemem iOS można utworzyć profil sieci VPN i używać różnych typów połączeń, w tym Cisco AnyConnect (**Konfiguracja urządzeń** > **Profile** > **tworzenia profilu** > **iOS** dla platformy > **sieci VPN** dla typu profilu > **Cisco AnyConnect** dla typu połączenia). 
-
-W przyszłej aktualizacji można włączyć funkcję kontroli dostępu do sieci (NAC) za pomocą programu Cisco AnyConnect. Aby użyć tej funkcji:
-
-1. W [podręczniku administratora aparatu usług Cisco Identity Services](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html)wykonaj kroki opisane w temacie **Konfigurowanie Microsoft INTUNE jako serwera MDM** , aby skonfigurować aparat usługi Cisco Identity Services (ISE) na platformie Azure.
-2. W profilu konfiguracji urządzenia w usłudze Intune wybierz ustawienie **włącz Access Control sieci (NAC)** .
-
-Aby wyświetlić wszystkie dostępne ustawienia sieci VPN, przejdź do pozycji [Konfigurowanie ustawień sieci VPN na urządzeniach z systemem iOS](../configuration/vpn-settings-ios.md).
+### <a name="wired-network-device-configuration-profiles-for-macos-devices---3508686----"></a>Profile konfiguracji urządzeń sieci przewodowej dla urządzeń z systemem macOS<!-- 3508686  -->
+Zostanie udostępniony nowy profil konfiguracji urządzenia z systemem macOS, który konfiguruje sieci przewodowe (**konfigurację urządzenia** > **profile** > **Utwórz profil** > **macOS** dla platformy > **sieci przewodowej dla typu profilu). Użyj tej funkcji, aby utworzyć profile 802.1 x w celu zarządzania sieciami przewodowymi i wdrożyć te sieci przewodowe na urządzeniach macOS.
 
 Dotyczy:
-- iOS
-
-### <a name="updated-single-sign-on-experience-for-apps-and-websites-on-your-ios-ipados-and-macos-devices---4999578-idready---"></a>Zaktualizowano środowisko logowania jednokrotnego dla aplikacji i witryn sieci Web na urządzeniach z systemami iOS, iPadOS i macOS<!-- 4999578 idready -->
-Usługa Intune dodaje więcej ustawień logowania jednokrotnego dla urządzeń z systemem iOS, iPadOS i macOS. Obecnie można skonfigurować rozszerzenia aplikacji logowania jednokrotnego dla poświadczeń oraz wbudowane rozszerzenia protokołu Kerberos firmy Apple w usłudze Intune. W przyszłej aktualizacji będziesz mieć możliwość skonfigurowania przekierowywania rozszerzeń aplikacji logowania jednokrotnego przez Twoją organizację lub dostawcę tożsamości. 
-
-Użyj tych ustawień, aby skonfigurować bezproblemowe środowisko logowania jednokrotnego dla aplikacji i witryn sieci Web korzystających z nowoczesnych metod uwierzytelniania, takich jak OAuth i SAML2. 
-
-Aby wyświetlić ustawienia rozszerzenia aplikacji Logowanie jednokrotne, które można skonfigurować, przejdź do [logowania jednokrotnego w systemie iOS](../configuration/ios-device-features-settings.md#single-sign-on-app-extension) i logowanie [jednokrotne w systemie macOS](../configuration/macos-device-features-settings.md#single-sign-on-app-extension).
-
-Dotyczy:
-- iOS/iPadOS
 - macOS
 
-### <a name="require-use-of-approved-keyboards-on-android--4761794-idready---"></a>Wymagaj użycia zatwierdzonych klawiatur w systemie Android<!--4761794 IDready -->
-Będzie można określić listę zatwierdzonych klawiatur do użycia w zarządzanych aplikacjach systemu Android. W aplikacji zarządzanej użytkownik zostanie poproszony o przełączenie na jedną z zatwierdzonych klawiatur już zainstalowanych na urządzeniu lub, w razie potrzeby, będzie kierowany do Sklep Google Play, aby pobrać i skonfigurować jedną z zatwierdzonych klawiatur. Użytkownik będzie mógł edytować pola tekstowe w aplikacji zarządzanej, jeśli klawiatura aktywna jest jedną z zatwierdzonych klawiatur.
+### <a name="vpn-profiles-with-ikev2-vpn-connections-can-use-always-on-with-ios-devices----1947932-idready---"></a>Profile sieci VPN z połączeniami sieci VPN z protokołem IKEv2 mogą używać zawsze na urządzeniach z systemem iOS <!-- 1947932 idready -->
+Na urządzeniach z systemem iOS można utworzyć profil sieci VPN, który używa połączenia IKEv2 (**Konfiguracja urządzenia** > **profile** > **tworzenia profilu** > **iOS/iPadOS** > **sieci VPN dla typu profilu). W przyszłej aktualizacji można skonfigurować protokół zawsze włączony przy użyciu protokołu IKEv2. Po skonfigurowaniu, profile sieci VPN IKEv2 łączą się automatycznie i pozostają połączone (lub szybko ponownie nawiązuje połączenie) z siecią VPN. Pozostaje połączony nawet podczas przechodzenia między sieciami lub ponownego uruchamiania urządzeń.
 
-### <a name="use-pkcs-certificates-with-wi-fi-profiles-on-windows-10-and-later-devices---3246388----"></a>Używanie certyfikatów PKCS z profilami sieci Wi-Fi na urządzeniach z systemem Windows 10 i nowszym<!-- 3246388  -->
-Obecnie można uwierzytelniać profile sieci Wi-Fi systemu Windows przy użyciu certyfikatów protokołu SCEP (**Konfiguracja urządzenia** > **Profile** > **tworzenia profilu** > **Windows 10 i nowszych** dla platformy > **Wi-Fi** dla typu profilu > **Enterprise** > **EAP Type**). Będziesz mieć możliwość używania certyfikatów PKCS z profilami sieci Wi-Fi systemu Windows. Ta funkcja umożliwia użytkownikom uwierzytelnianie profilów sieci Wi-Fi przy użyciu nowych lub istniejących profilów certyfikatów PKCS w dzierżawie. 
+W systemie iOS zawsze włączona jest sieć VPN ograniczona do profilów IKEv2.
 
-Aby uzyskać więcej informacji o profilach sieci Wi-Fi, zobacz [Dodawanie ustawień Wi-Fi dla urządzeń z systemem Windows 10 lub nowszym w usłudze Intune](../configuration/wi-fi-settings-windows.md).
-
-Dotyczy:
-- Windows 10 lub nowszym
-
-### <a name="new-exchangeactivesync-settings-when-creating-an-email-device-configuration-profile-on-ios-devices---4892824----"></a>Nowe ustawienia protokołu ExchangeActiveSync podczas tworzenia profilu konfiguracji urządzenia poczty e-mail na urządzeniach z systemem iOS<!-- 4892824  --> 
-Na urządzeniach z systemem iOS/iPadOS można skonfigurować łączność z pocztą e-mail w profilu konfiguracji urządzenia (**Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **iOS/iPadOS** jako platforma > **Poczta e-mail** jako typ profilu). 
-
-Dostępne będą nowe ustawienia ExchangeActiveSync, w tym:
-- Wybierz usługi, które mają zostać zsynchronizowane (lub Zablokuj synchronizację), takie jak poczta e-mail, kalendarz i kontakty.
-- zezwalaj użytkownikom na zmienianie ustawień synchronizacji dla tych usług na ich urządzeniach (lub blokuj tę możliwość). 
-
-Aby wyświetlić bieżące ustawienia, przejdź do [ustawień profilu poczty e-mail dla urządzeń z systemem iOS w usłudze Intune](../configuration/email-settings-ios.md).
-
-Dotyczy:
-- System iOS 13.0 i nowsze
-- System iPadOS 13.0 i nowsze
-
-### <a name="prevent-users-from-adding-personal-google-accounts-to-android-enterprise-device-owner-and-dedicated-devices---5353228----"></a>Uniemożliwianie użytkownikom dodawania osobistych kont Google do właścicieli urządzeń i dedykowanych urządzeń z systemem Android Enterprise<!-- 5353228  -->
-Będziesz mieć opcję uniemożliwiania użytkownikom tworzenie osobistych kont Google (**Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **Android Enterprise** jako platforma > **Tylko właściciel urządzenia > Ograniczenia urządzenia** jako typ profilu > **Ustawienia użytkowników i kont**).
-
-Aby wyświetlić bieżące ustawienia, które można skonfigurować, zobacz [Ustawienia urządzeń z systemem Android Enterprise w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune](../configuration/device-restrictions-android-for-work.md).
-
-Dotyczy:
-- Właściciel urządzenia z systemem Android Enterprise
-- Dedykowane urządzenia z rozwiązaniem Android Enterprise
-
-### <a name="server-side-logging-for-siri-commands-setting-is-removed-in-ios-device-restrictions-profile---5468501----"></a>Ustawienie rejestrowania poleceń Siri po stronie serwera zostało usunięte z profilu ograniczeń urządzenia z systemem iOS<!-- 5468501  -->
-Na urządzeniach z systemem iOS można utworzyć profile ograniczeń dla urządzeń, które konfigurują rejestrowanie po stronie serwera dla poleceń Siri (**Konfiguracja urządzeń** > **Profile** > **tworzenia profilu** > **iOS/iPadOS** w przypadku ograniczeń platformy > **urządzeń** dla typu profilu > **wbudowane aplikacje**). Ustawienie **Siri polecenia rejestrowania po stronie serwera** zostanie usunięte.
-
-To ustawienie zostanie usunięte z konsoli administracyjnej usługi Intune. To ustawienie nie ma wpływu na urządzenie, mimo że istniejące zasady, które mają skonfigurowane to ustawienie, będą nadal wyświetlać ustawienie. Jeśli chcesz usunąć ustawienie z istniejących zasad, przejdź do zasad, wprowadź drobną edycję, Zapisz ją i zasady zostaną zaktualizowane.
-
-Aby wyświetlić ustawienia, które można skonfigurować, zobacz [Ustawienia urządzeń z systemem iOS i iPadOS umożliwiające działanie funkcji lub ich ograniczanie przy użyciu usługi Intune](../configuration/device-restrictions-ios.md).
+Aby wyświetlić bieżące ustawienia profilów IKEv2, które możesz skonfigurować, przejdź do tematu [Dodawanie ustawień sieci VPN na urządzeniach z systemem iOS w usłudze Microsoft Intune](../configuration/vpn-settings-ios.md#ikev2-settings).
 
 Dotyczy:
 - iOS
 
-<!-- ***********************************************-->
-<!--## Device enrollment-->
+### <a name="improved-user-interface-experience-when-creating-configuration-profiles-on-ios-and-macos-devices---5569008-5569039-5569057-5569110-5569116-5569131-5569139-5569153-5859984-idready---"></a>Ulepszone środowisko interfejsu użytkownika podczas tworzenia profilów konfiguracji na urządzeniach z systemem iOS i macOS<!-- 5569008-5569039-5569057-5569110-5569116-5569131-5569139-5569153-5859984 idready -->
+Po utworzeniu profilu dla urządzeń z systemem iOS lub macOS środowisko w centrum administracyjnym zarządzania punktem końcowym zostanie zaktualizowane. Ta zmiana ma wpływ na następujące profile konfiguracji urządzeń (**urządzenia** > **profile konfiguracji** > **Tworzenie profilu** > **iOS** lub **macOS** dla platformy):
+
+- Niestandardowe: iOS, macOS
+- Funkcje urządzeń (systemy iOS i MacOS)
+- Ograniczenia dotyczące urządzeń: iOS, macOS
+- Ochrona punktu końcowego: macOS
+- Rozszerzenia: macOS
+- Plik preferencji
+
+### <a name="improved-user-interface-experience-when-creating-oemconfig-configuration-profiles-on-android-enterprise-devices---5568645-idready----"></a>Ulepszone środowisko interfejsu użytkownika podczas tworzenia profilów konfiguracji OEMConfig na urządzeniach z systemem Android Enterprise<!-- 5568645 idready  -->
+Podczas tworzenia lub edytowania profilu OEMConfig dla urządzeń z systemem Android Enterprise zostaje zaktualizowane środowisko centrum administracyjnego zarządzania punktami końcowymi. Zaktualizowane środowisko zawiera podsumowanie ustawień, które zostały skonfigurowane w skrócie. Ta zmiana ma wpływ na profil konfiguracji urządzenia OEMConfig (**urządzenia** > **profile konfiguracji** > **tworzenia profilu** > **Android Enterprise** dla platformy > **OEMConfig** dla typu profilu).
+
+Ta funkcja ma zastosowanie do:
+- Android Enterprise 
 
 <!-- ***********************************************-->
-<!--## Device management-->
+## <a name="device-enrollment"></a>Rejestrowanie urządzeń
 
+### <a name="block-android-enrollments-by-device-manufacturer--5197392-idready--"></a>Blokuj rejestracje systemu Android według producenta urządzenia<!--5197392 idready-->
+Można zablokować możliwość rejestrowania urządzeń na podstawie producenta urządzenia. Dotyczy to urządzeń z systemem Android i profilem roboczym systemu Android Enterprise. Aby wyświetlić ograniczenia rejestracji, przejdź do [centrum administracyjne programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)> **urządzeń** > **ograniczenia rejestracji**.
+
+
+
+<!-- ***********************************************-->
+## <a name="device-management"></a>Zarządzanie urządzeniami
+
+
+### <a name="new-information-in-device-details---4471759-5604099----"></a>Nowe informacje w obszarze Szczegóły urządzenia<!-- 4471759 5604099  -->
+Następujące informacje zostaną dodane do **przegląd** stronie dla urządzeń:
+- Pojemność pamięci (ilość pamięci fizycznej w urządzeniu)
+- Pojemność magazynu (ilość pamięci fizycznej na urządzeniu) 
+- Typ i szybkość procesora CPU
+- Pamięć RAM i dane procesora
 
 <!-- ***********************************************-->
 <!--## Intune apps-->
  
 
 <!-- ***********************************************-->
-## <a name="monitoring-and-troubleshooting"></a>Monitorowanie i rozwiązywanie problemów
 
-### <a name="centralized-audit-logs--5603185-5697164--"></a>Scentralizowane dzienniki inspekcji<!--5603185, 5697164-->
-Nowe scentralizowane środowisko dziennika inspekcji zbiera dzienniki inspekcji dla wszystkich kategorii na jednej stronie. You'l być w stanie filtrować dzienniki, aby uzyskać dane, których szukasz. Aby wyświetlić dzienniki inspekcji, przejdź do obszaru **Administracja dzierżawy** > **dzienniki inspekcji**. Aby uzyskać więcej informacji, zobacz [nadchodzące zmiany w dziennikach inspekcji w usłudze Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Upcoming-change-to-Audit-logs-in-Intune/ba-p/1015858).
-
-<!-- ***********************************************-->
-<!--## Role-based access control-->
+<!--
+## Monitoring and troubleshooting
+-->
 
 
 <!-- ***********************************************-->
+## <a name="role-based-access-control"></a>Kontrola dostępu oparta na rolach
 
+### <a name="new-intune-built-in-role-endpoint-security-manager--4253397-idready--"></a>Nowa wbudowana rola usługi Intune — Menedżer zabezpieczeń punktu końcowego<!--4253397 idready-->
+Zostanie udostępniona nowa wbudowana rola usługi Intune: Menedżer zabezpieczeń punktu końcowego. Ta nowa rola zapewnia administratorom pełen dostęp do węzła Menedżera punktów końcowych w usłudze Intune i tylko dostęp do innych obszarów. Rola to rozszerzenie roli "administrator zabezpieczeń" z usługi Azure AD. Jeśli obecnie używasz tylko ról administratorów globalnych, nie musisz wprowadzać żadnych zmian. Jeśli używasz ról i chcesz korzystać ze stopnia szczegółowości, który zapewnia rola Menedżer zabezpieczeń punktu końcowego, przypisz tę rolę, gdy zostanie udostępniona. Aby uzyskać więcej informacji na temat ról wbudowanych, zobacz [kontroli dostępu opartej na rolach](role-based-access-control.md).
+
+### <a name="intune-roles-user-interface-changes-coming--5801612-idready--"></a>Zmiany interfejsu użytkownika ról usługi Intune<!--5801612 idready-->
+Interfejs użytkownika dla [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) > **Administracja dzierżaw** > **ról** zostanie zmieniony na bardziej przyjazny dla użytkownika i intuicyjny projekt. To środowisko zawiera te same ustawienia i szczegółowe informacje, które są obecnie używane, ale nowe środowisko wykorzystuje proces przypominający kreatora.
+
+
+<!-- ***********************************************-->
 ## <a name="security"></a>Zabezpieczenia
 
-### <a name="use-pkcs-certificate-profiles-to-provision-devices-with-certificates---2317124-2317130-2317139-2340517-2340528-2340529-idready---"></a>Używanie profilów certyfikatów PKCS do udostępniania urządzeń za pomocą certyfikatów<!-- 2317124, 2317130, 2317139, 2340517, 2340528, 2340529 IDready -->
-Aby wystawiać certyfikaty dla urządzeń, będziesz mieć możliwość użycia profilu certyfikatu PKCS, rozszerzając na bieżącą obsługę certyfikatów opartych na użytkownikach. Certyfikaty oparte na urządzeniach będą obsługiwane na platformach z systemami Android, iOS i Windows oraz mogą być używane w profilach sieci Wi-Fi i VPN.
+### <a name="derived-credentials-support-on-android-cobo-devices--4839592--"></a>Obsługa poświadczeń pochodnych na urządzeniach z systemem Android COBO<!--4839592-->
+W pełni zarządzane urządzenia z systemem Android Enterprise będą mogły korzystać z poświadczeń pochodnych. Pomoc techniczna zostanie uwzględniona podczas pobierania poświadczenie pochodne dla Entrust Datacard, intercede i DISA purebred. Będziesz mieć możliwość użycia poświadczenie pochodne do uwierzytelniania aplikacji, sieci Wi-Fi, VPN lub podpisywania S/MIME i/lub szyfrowania przy użyciu aplikacji, które je obsługują. 
 
 <!-- ***********************************************-->
 ## <a name="notices"></a>Uwagi

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f382ce35d1d13a59f1aa5ca6a904c0c9babff8c1
-ms.sourcegitcommit: 7cc45ef52dda08479bc6bdff7d11d2f6c0e7b93b
+ms.openlocfilehash: 58c4db1f4c778050bc91bde79494742e018f5329
+ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74899339"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75547911"
 ---
 # <a name="use-the-microsoft-intune-data-warehouse"></a>Korzystanie z magazynu danych usługi Microsoft Intune
 
@@ -43,7 +43,7 @@ Magazyn danych zapewnia dostęp do większej ilości informacji o środowisku mo
 - Model danych korzystający ze standardu OData
 
 > [!Note]
-> Jeśli korzystasz ze współzarządzanego zarządzania urządzeniami przenośnymi za pomocą programu System Center Configuration Manager i usługi Microsoft Intune, musisz pobierać dane z programu Configuration Manager. Magazyn danych usługi Intune zawiera tylko dane usługi Intune. Do tworzenia niestandardowych raportów można używać pulpitu nawigacyjnego usługi Power BI w programie Configuration Manager. Aby uzyskać więcej informacji, zapoznaj się z artykułami „[Announcing the Power BI solution template for System Center Configuration Manager”]( https://powerbi.microsoft.com/blog/sccm-solution-template) („Przedstawiamy szablon rozwiązania Power BI dla programu System Center Configuration Manager”) i „[Power BI content for Dynamics 365](https://docs.microsoft.com/dynamics365/unified-operations/dev-itpro/analytics/power-bi-home-page)” („Zawartość usługi Power Bi dla usługi Dynamics 365”).
+> Jeśli korzystasz ze współzarządzanego zarządzania urządzeniami przenośnymi za pomocą programu Microsoft Endpoint Configuration Manager i usługi Microsoft Intune, musisz pobierać dane z programu Configuration Manager. Magazyn danych usługi Intune zawiera tylko dane usługi Intune. Do tworzenia niestandardowych raportów można używać pulpitu nawigacyjnego usługi Power BI w programie Configuration Manager. Aby uzyskać więcej informacji, zapoznaj się z artykułami „[Announcing the Power BI solution template for Configuration Manager](https://powerbi.microsoft.com/blog/sccm-solution-template)” (Przedstawiamy szablon rozwiązania Power BI dla programu Configuration Manager) i „[Power BI content for Dynamics 365](https://docs.microsoft.com/dynamics365/unified-operations/dev-itpro/analytics/power-bi-home-page)” (Zawartość usługi Power Bi dla usługi Dynamics 365).
 
 > [!Important]  
 > Teraz można używać wersji 1.0 magazynu danych usługi Intune, ustawiając parametr zapytania  `api-version=v1.0`. Aktualizacje kolekcji w magazynie danych są z natury addytywne i nie przerywają działania istniejących scenariuszy.<br><br>

@@ -18,13 +18,13 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: e64911ea9b1b1d3c619a82eac9dc78e4e78a53e9
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: 4540c4d58bebcbec06e73eaf51d91d6685d0243b
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72508132"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75859002"
 ---
 # <a name="remove-your-windows-device-from-management"></a>Usuwanie urządzenia z systemem Windows z zarządzania
 
@@ -93,8 +93,8 @@ Aby usunąć telefon z systemem Windows 8.1 z usługi Intune, wykonaj poniższe 
 
 Istnieją dwa rodzaje danych, które aplikacja Portal firmy przechowuje na urządzeniu z systemem Windows:
 
-- **Dzienniki diagnostyczne**: dane o aktywności standardowej aplikacji gromadzone przez firmę Microsoft. Są one automatycznie usuwane po odinstalowaniu aplikacji Portal firmy. Do danych o aktywności aplikacji należą na przykład dane informujące o tym, jak długo aplikacja była otwarta lub czy miała miejsce awaria aplikacji.
-- **Pamięć podręczna aplikacji**: wybrane pliki pomocnicze wymagane do działania aplikacji, np. ikony i ustawienia.
+- **Dzienniki diagnostyczne**: Dane o aktywności standardowej aplikacji gromadzone przez firmę Microsoft. Są one automatycznie usuwane po odinstalowaniu aplikacji Portal firmy. Do danych o aktywności aplikacji należą na przykład dane informujące o tym, jak długo aplikacja była otwarta lub czy miała miejsce awaria aplikacji.
+- **Pamięć podręczna aplikacji**: Wybrane pliki pomocnicze wymagane do działania aplikacji, np. ikony i ustawienia.
 
 Aby usunąć przechowywane dzienniki i pamięć podręczna, wykonaj jeden z następujących kroków:
 

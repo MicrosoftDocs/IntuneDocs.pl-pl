@@ -17,13 +17,13 @@ ROBOTS: ''
 ms.reviewer: tisilver
 ms.suite: ems
 ms.custom: intune-enduser
-ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02293b29f8634161582af2348b1cb30039ca3c52
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.collection: ''
+ms.openlocfilehash: 2a2c3264b2894ad81a64e7aaa7d3697f069dbfbb
+ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73415714"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75856291"
 ---
 # <a name="set-up-ios-or-ipados-device-with-company-portal-and-intercede"></a>Konfigurowanie urządzenia z systemem iOS lub iPadOS przy użyciu Portal firmy i intercede
 
@@ -36,10 +36,10 @@ Istnieje konieczność skonfigurowania poświadczenie pochodne w przypadku używ
 * Zaloguj się do aplikacji szkolnych lub służbowych, Wi-Fi i wirtualnych sieci prywatnych (VPN)
 * Podpisywanie i szyfrowanie służbowych wiadomości e-mail przy użyciu certyfikatów S/MIME  
 
-W tym artykule opisano:  
+W tym artykule opisano następujące czynności:  
 
 * Zarejestrowanie urządzenia przenośnego z systemem iOS lub iPadOS za pomocą Intune — Portal firmy.  
-* Uzyskaj poświadczenie pochodne od dostawcy poświadczeń pochodnych organizacji, [intercede](https://www.intercede.com/).   
+* Uzyskaj poświadczenie pochodne od dostawcy poświadczeń pochodnych w organizacji, [intercede](https://www.intercede.com/).   
 
 
 ## <a name="what-are-derived-credentials"></a>Co to są poświadczenia pochodne?  
@@ -77,20 +77,20 @@ Pochodne poświadczenia są implementacją wytycznych National Institute of Stan
 
     ![Przykładowy zrzut ekranu przedstawiający Powiadomienie wypychane Portal firmy na ekranie głównym urządzenia.](./media/action-required-in-app-intercede.png)  
 
-5. Na ekranie **Konfiguracja mobilnego dostępu do kart inteligentnych** :  
+5. Na ekranie **Setup Mobile dostęp do kart inteligentnych** ekran:  
     a. Naciśnij link do instrukcji konfiguracji organizacji. Jeśli Twoja organizacja nie poda dodatkowych instrukcji, zostanie on wysłany do tego artykułu.  
     b. Naciśnij pozycję **Rozpocznij**.  
 
     ![Przykładowy zrzut ekranu przedstawiający ekran Portal firmy konfigurowania mobilnego dostępu do kart inteligentnych.](./media/smart-card-info-intercede.png)  
 
-6. Przejdź do urządzenia z obsługą kart inteligentnych lub kiosku samoobsługowego, a następnie otwórz aplikację MyID. Zaloguj się przy użyciu swoich poświadczeń służbowych.  
+6. Przejdź do urządzenia z obsługą kart inteligentnych lub kiosku samoobsługowego, a następnie otwórz aplikację MyID. Logowanie się przy użyciu poświadczeń  
 7. Wybierz opcję żądania identyfikatora. 
 8. Gdy zostanie wyświetlony monit o profil, którego chcesz użyć, wybierz opcję aktywacji przy użyciu poświadczeń mobilnych. Zostanie wyświetlony kod QR.  
-9. Wróć do urządzenia przenośnego. Na ekranie Portal firmy > **Pobierz kod QR** naciśnij pozycję **Kontynuuj**.  
+9. Wróć do urządzenia przenośnego. Na ekranie Portal firmy > **uzyskać** kod QR naciśnij pozycję **Kontynuuj**.  
 
     ![Przykładowy zrzut ekranu przedstawiający ekran Portal firmy Pobierz kod QR.](./media/get-qr-code-intercede.png) 
  
-10. Naciśnij pozycję **Użyj aparatu** > **OK**.  
+10. Naciśnij pozycję **używać aparatu** > **OK**.  
 
     ![Przykładowy zrzut ekranu przedstawiający monit Portal firmy, z prośbą o zezwolenie na dostęp do aparatu.](./media/allow-cp-camera-access-intercede.png)  
 
