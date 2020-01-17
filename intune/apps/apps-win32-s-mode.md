@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/08/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4b2a6019a0af33cd227d88444bb5ddda5bc22715
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: a3074b30921a4daba7469e670a17ad29ee1edc00
+ms.sourcegitcommit: 8f56220e7cafc5bc43135940575a9acb5afde730
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75204905"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75827806"
 ---
 # <a name="enable-win32-apps-on-s-mode-devices"></a>Włączanie obsługi aplikacji Win32 na urządzeniach w trybie S
 
@@ -45,7 +45,7 @@ Kroki umożliwiające uruchamianie aplikacji Win32 na urządzeniu z systemem Win
    - Aby przekazać podpisane zasady uzupełniające do usługi Intune, należy utworzyć zasady uzupełniające trybu S systemu Windows 10 (zobacz poniżej).
 3. Aby zezwolić na wykazy aplikacji Win32, należy użyć usługi Intune:
    - Tworzysz pliki wykazu (1 dla każdej aplikacji) i podpisujesz je za pomocą usługi DGSS lub innej infrastruktury certyfikatów.
-   - Pakujesz podpisany wykaz do pliku *.intunewin* przy użyciu narzędzia [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730). Aby uzyskać więcej informacji, zobacz [Zarządzanie aplikacjami Win32 — Przygotowanie zawartości aplikacji Win32 do przekazania](~/apps/apps-win32-app-management.md#prepare-the-win32-app-content-for-upload).
+   - Pakujesz podpisany wykaz do pliku *.intunewin* przy użyciu narzędzia [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730). Podczas tworzenia pliku wykazu przy użyciu [narzędzia przygotowywania zawartości systemu Microsoft Win32](https://go.microsoft.com/fwlink/?linkid=2065730) nie ma ograniczeń dotyczących nazewnictwa. Podczas generowania pliku *intunewin* z poziomu określonego folderu źródłowego i pliku instalacyjnego można udostępnić osobny folder zawierający tylko pliki wykazu, używając opcji -a cmdline. Aby uzyskać więcej informacji, zobacz [Zarządzanie aplikacjami Win32 — Przygotowanie zawartości aplikacji Win32 do przekazania](~/apps/apps-win32-app-management.md#prepare-the-win32-app-content-for-upload).
    - Usługa Intune stosuje podpisany wykaz aplikacji w celu zainstalowania aplikacji Win32 na urządzeniu w trybie S przy użyciu [rozszerzenia do zarządzania usługi Intune](~/apps/intune-management-extension.md).
 
 > [!NOTE]

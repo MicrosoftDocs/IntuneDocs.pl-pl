@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/06/2019
+ms.date: 01/08/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,18 +15,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9e3867bfc2de29c059766e134bd0d2c8801e1c70
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 50478ecb615cf39bba0a205cb06f83e47728e366
+ms.sourcegitcommit: 8f56220e7cafc5bc43135940575a9acb5afde730
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73712888"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75827840"
 ---
 # <a name="automate-email-and-add-actions-for-noncompliant-devices-in-intune"></a>Automatyzowanie poczty e-mail i dodawanie akcji dla niezgodnych urządzeń w usłudze Intune
 
 W przypadku urządzeń, które nie są zgodne z zasadami lub regułami zgodności, możesz dodać **Akcje w przypadku niezgodności**. Ta funkcja umożliwia skonfigurowanie uporządkowanej w czasie sekwencji akcji, takich jak wysyłanie wiadomości e-mail do użytkownika końcowego i nie tylko.
 
-## <a name="overview"></a>Przegląd
+## <a name="overview"></a>Omówienie
 
 Domyślnie po wykryciu przez usługę Intune urządzenia, które nie jest zgodne, usługa Intune natychmiast oznacza to urządzenie jako niezgodne. [Dostęp warunkowy](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) usługi Azure Active Directory (AD) blokuje wtedy dane urządzenie. **Akcja w przypadku niezgodności** zapewnia także elastyczność w przypadku podejmowania decyzji o postępowaniu z urządzeniami niezgodnymi. Możesz na przykład zdecydować, aby nie blokować urządzenia natychmiast i przyznać użytkownikowi okres prolongaty, aby mógł zapewnić zgodność.
 
@@ -91,7 +91,7 @@ Aby wysyłać wiadomości e-mail do użytkowników, należy utworzyć szablon wi
 
 Podczas tworzenia zasad zgodności urządzeń usługa Intune automatycznie tworzy akcję w przypadku niezgodności. Jeśli dane urządzenie nie jest zgodne z zasadami zgodności, ta akcja oznacza je jako niezgodne. Możesz dostosować, jak długo urządzenie będzie oznaczone jako niezgodne. Tej akcji nie można usunąć.
 
-Podczas tworzenia zasady zgodności lub aktualizowania istniejącej zasady można także dodać kolejną akcję.
+Oprócz domyślnej akcji oznaczania urządzeń jako niezgodnych można dodać opcjonalne akcje podczas tworzenia zasad zgodności lub aktualizowania istniejących zasad.
 
 1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 

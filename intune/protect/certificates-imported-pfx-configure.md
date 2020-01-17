@@ -2,27 +2,27 @@
 title: Korzystanie z zaimportowanych certyfikatów PFX w usłudze Microsoft Intune — Azure | Microsoft Docs
 description: Zaimportowane certyfikaty standardów kryptografii klucza publicznego (PKCS) są używane w usłudze Microsoft Intune w celu importowania certyfikatów, konfigurowania szablonu certyfikatu, instalacji łącznika zaimportowanego certyfikatu PFX usługi Intune i utworzenia zaimportowanego pliku PKCS profilu certyfikatu.
 keywords: ''
-author: ralms
+author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/07/2019
+ms.date: 01/10/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: lacranda
+ms.reviewer: lacranda; rimarram
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d54c58523fdb44080b6c4210d639f9ad0ce476e2
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 2c33f4429c86160bbf180c8102e2dc7532bbd80e
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73801548"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75886018"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Konfigurowanie zaimportowanych certyfikatów PKCS i korzystanie z nich w usłudze Intune
 
@@ -46,14 +46,17 @@ Aby korzystać z zaimportowanych certyfikatów PKCS w usłudze Intune, musisz mi
 
   Więcej informacji o wszystkich punktach końcowych sieci, do których uzyskuje dostęp łącznik — zobacz [Przepustowość i wymagania dotyczące konfiguracji sieci usługi Intune](../fundamentals/network-bandwidth-use.md).
 
-- **Windows Server**:  
+- **Windows Server**:
+
   używasz systemu Windows Server do hostowania programu Łącznik certyfikatów PFX dla usługi Microsoft Intune.  Łącznik służy do przetwarzania żądań dotyczących certyfikatów zaimportowanych do usługi Intune.
 
   W usłudze Intune możesz zainstalować oba łączniki (*Łącznik certyfikatów usługi Microsoft Intune* i *Łącznik certyfikatów PFX dla usługi Microsoft Intune*) na tym samym serwerze.
 
   Aby można było obsługiwać łącznik, na serwerze musi być zainstalowany program .NET Framework w wersji 4.6 lub nowszej. Jeśli program .NET Framework 4.6 nie jest zainstalowany, instalator łącznika zainstaluje go automatycznie.
 
-- **Visual Studio 2015 lub nowszy** (opcjonalnie): Program Visual Studio służy do kompilowania modułu pomocnika programu PowerShell za pomocą poleceń cmdlet do importowania certyfikatów PFX do usługi Microsoft Intune. Aby uzyskać polecenia cmdlet pomocnika programu PowerShell, zobacz [Projekt PFXImport PowerShell w usłudze GitHub](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
+- **Visual Studio 2015 lub nowszy** (opcjonalnie):
+
+  Program Visual Studio służy do kompilowania modułu pomocnika programu PowerShell za pomocą poleceń cmdlet do importowania certyfikatów PFX do usługi Microsoft Intune. Aby uzyskać polecenia cmdlet pomocnika programu PowerShell, zobacz [Projekt PFXImport PowerShell w usłudze GitHub](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
 
 ## <a name="how-it-works"></a>Jak to działa
 
@@ -143,15 +146,14 @@ W celu utworzenia i przechowywania pary kluczy publiczny-prywatny można użyć 
 
 Poniższy przykładowy proces importowania certyfikatów PFX korzysta z poleceń cmdlet programu PowerShell. Możesz wybrać różne opcje stosownie do swoich wymagań.
 
-Dostępne opcje:  
-- Przeznaczenie (grupuje certyfikaty na podstawie znacznika):  
+Dostępne opcje:
+
+- Przeznaczenie (grupuje certyfikaty na podstawie znacznika):
   - nieprzypisane
   - smimeEncryption
   - smimeSigning
 
-- Schemat uzupełniania:  
-  - pkcs1
-  - oaepSha1
+- Schemat uzupełniania:
   - oaepSha256
   - oaepSha384
   - oaepSha512

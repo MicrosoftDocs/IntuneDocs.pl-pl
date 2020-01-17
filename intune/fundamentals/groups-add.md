@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe37ac412d01d3032685a0e66827d20e13b0db64
-ms.sourcegitcommit: 42183c87b137710b8529049f8710d47127e99900
+ms.openlocfilehash: 237eca2f8e00f00fda5fa3cf401be87de9602743
+ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75303072"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75956259"
 ---
 # <a name="add-groups-to-organize-users-and-devices"></a>Dodawanie grup w celu zorganizowania użytkowników i urządzeń
 
@@ -54,7 +54,7 @@ Aby utworzyć nową grupę, wykonaj następujące czynności.
         >
         > Jeśli Twoją główną rolą jest zarządzanie urządzeniami, zalecamy korzystanie z [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-    - **Office 365**: te grupy służą do kontrolowania dostępu i udostępniania zasobów usługi Office 365. Na przykład można utworzyć grupę usługi Office 365 w celu udostępniania skrzynki pocztowej lub kalendarza programu Outlook. Aby dowiedzieć się więcej, zobacz [Informacje o grupach usługi Office 365](https://support.office.com/article/learn-about-office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2).
+    - **Office 365**: Zapewnia możliwości współpracy przez umożliwienie członkom dostępu do udostępnionej skrzynki pocztowej, kalendarza, plików, witryny programu SharePoint i innych elementów. Ta opcja umożliwia również przyznanie osobom spoza organizacji dostępu do grupy. Aby dowiedzieć się więcej, zobacz [Informacje o grupach usługi Office 365](https://support.office.com/article/learn-about-office-365-groups-b565caa1-5c40-40ef-9915-60fdb2d97fa2).
 
 4. Wypełnij pola **Nazwa grupy** i **Opis grupy** dotyczące nowej grupy. Zamieść w nich szczegółowe informacje, aby również inni znali przeznaczenie grupy.
 

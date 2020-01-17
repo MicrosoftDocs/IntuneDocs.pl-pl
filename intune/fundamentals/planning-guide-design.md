@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5c18f3e8fb14d8592789b39856ec420790fad286
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: 8452f840fb269505656bf6594d3e5c196b4d7a06
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75547551"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885781"
 ---
 # <a name="create-a-design"></a>Tworzenie projektu
 
@@ -101,19 +101,11 @@ Upewnij się, że uwzględniono wszystkie istniejące projekty i inne plany, kt�
 | **SharePoint** | Lokalna instalacja programu SharePoint | Nie jest planowane przejście do usługi SharePoint Online |  
 | **Bieżące rozwiązanie do zarządzania urządzeniami przenośnymi** | Exchange ActiveSync |  |
 | **Rozwiązanie związane z certyfikatem** | Microsoft Server 2012 R2, usługi certyfikatów AD | Infrastruktury PKI należy używać tylko na potrzeby serwerów witryn sieci Web |
-| **Zarządzanie systemem** | Configuration Manager CB 1606 | Konieczne jest zbadanie rozwiązań hybrydowych usługi Intune |
+| **Zarządzanie systemem** | Configuration Manager (Current Branch) | Konieczne jest zbadanie rozwiązania do współzarządzania |
 | **Rozwiązanie sieci VPN** | Cisco AnyConnect |  |
 
 
 W celu opracowania własnego planu projektu usługi Intune możesz [pobrać szablon powyższej tabeli](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0).
-
-## <a name="choose-an-intune-deployment-option"></a>Wybieranie opcji wdrożenia usługi Intune
-
-Usługa Intune oferuje dwie opcje wdrożenia: autonomiczną i hybrydową. Opcja autonomiczna dotyczy usługi Intune uruchamianej w chmurze, a opcja hybrydowa dotyczy integracji usługi Intune z programem Configuration Manager. Ten przewodnik jest przeznaczony głównie do użycia opcji autonomicznej. [Określ, która opcja spełnia Twoje wymagania biznesowe](https://docs.microsoft.com/configmgr/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).
-
-> [!Important]
->Funkcja dołączania nowych klientów hybrydowego rozwiązania MDM jest przestarzała. Aby uzyskać więcej informacji, zobacz wpis w blogu [Move from Hybrid Mobile Device Management to Intune on Azure](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150) (Przechodzenie z hybrydowego zarządzania urządzeniami przenośnymi do usługi Intune na platformie Azure).
-
 
 ## <a name="intune-tenant-location"></a>Lokalizacja dzierżawy usługi Intune
 

@@ -17,12 +17,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c4637a4f9f137e9db665d72118fd7a97d7a9f75a
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: f617e85e78ac5436567790d416c988742a2abe4c
+ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72510137"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75956225"
 ---
 # <a name="plan-communications"></a>Planowanie komunikacji
 
@@ -62,4 +62,4 @@ W usłudze Intune są dostępne dodatkowe zasoby zachęcające użytkowników do
 
 - [Jak przekazywać wiedzę użytkownikom końcowym na temat usługi Microsoft Intune](end-user-educate.md) omawia kroki rejestracji związane z platformą systemu operacyjnego dla urządzeń przenośnych.
 - W temacie [Rejestracja urządzeń z usługą Intune dla administratorów IT](../enrollment/device-enrollment.md) wyjaśniono, jak zarejestrować urządzenia z systemem Android, iOS i Mac w usłudze Intune.
-- Udostępnij [adres URL aplikacji Portal firmy](http://go.microsoft.com/fwlink/?LinkID=396941) użytkownikom systemów Android, iOS i Windows. Ten adres URL przekierowuje do odpowiedniej listy aplikacji Portal firmy na urządzeniach z systemem Android, iOS i Windows.
+- Udostępnij aplikację Portal firmy użytkownikom systemów Android, iOS i Windows.

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c447c67e631365e831f033c2811c36d936f2e85
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: d5a3204721a0d40cfb5bf729ca17ef8e4ded1f0f
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75547994"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885768"
 ---
 # <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem iOS
 
@@ -182,7 +182,7 @@ Rejestracje programu DEP (Device Enrollment Program firmy Apple) nie są zgodne 
 
 1. W usłudze Intune, jeśli to konieczne, dodaj aplikację Intune — Portal firmy, przechodząc do pozycji **Intune** > **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**.
 2. Przejdź do pozycji **Aplikacje** > **Zasady konfiguracji aplikacji**, aby utworzyć zasady konfiguracji aplikacji dla aplikacji Portal firmy.
-3. Utwórz zasady konfiguracji aplikacji za pomocą pliku XML poniżej. Więcej informacji na temat tworzenia zasad konfiguracji aplikacji oraz wprowadzania danych XML można znaleźć w temacie [Add app configuration policies for managed iOS devices](app-configuration-policies-use-ios.md) (Dodawanie zasad konfiguracji aplikacji dla urządzeń zarządzanych z systemem iOS) lub w przypadku hybrydowej usługi MDM w temacie [Apply settings to iOS apps with app configuration policies in Configuration Manager](https://docs.microsoft.com/configmgr/mdm/deploy-use/configure-ios-apps-with-app-configuration-policies) (Wprowadzanie ustawień w aplikacjach iOS z zastosowaniem zasad konfiguracji aplikacji w programie Configuration Manager).
+3. Utwórz zasady konfiguracji aplikacji za pomocą pliku XML poniżej. Więcej informacji na temat tworzenia zasad konfiguracji aplikacji i wprowadzania danych XML można znaleźć w artykule [Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem iOS](app-configuration-policies-use-ios.md).
 
     ``` xml
     <dict>

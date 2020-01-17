@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8657b6fa8110b4ea4bbf8ec0841d69197624dd9f
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 9b5f973e5ce169edcf6149b0588c905d8497cca2
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563723"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885758"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Tworzenie i przypisywanie zasad ochrony aplikacji
 
@@ -93,9 +93,6 @@ Aby utworzyć zasady ochrony aplikacji w systemach iOS/iPadOS i Android, należy
 
 9. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Przypisania**.<br>
    Na stronie **Przypisania** możesz przypisywać zasady ochrony aplikacji do grup użytkowników.
-   
-    >[!IMPORTANT]
-    > Jeśli używasz usługi Intune z programem Configuration Manager do zarządzania urządzeniami, zasady są stosowane tylko do użytkowników należących bezpośrednio do wybranej grupy. Nie mają one wpływu na członków grup podrzędnych zagnieżdżonych w wybranej grupie.
 
 10. Kliknij przycisk **Dalej: Przeglądanie + tworzenie**, aby przejrzeć wartości i ustawienia wprowadzone dla tych zasad ochrony aplikacji.
 

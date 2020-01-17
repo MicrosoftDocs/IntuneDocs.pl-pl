@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48ad9ffe32dc7493195ec161e070734776381427
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: 328a578f4d2ada41bed17839f1f85b3b9add80fa
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75547804"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885960"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Rozwiązywanie problemów dotyczących rejestrowania urządzeń w usłudze Microsoft Intune
 
@@ -56,7 +56,7 @@ Użytkownicy urządzenia zarządzanego mogą zbierać dzienniki rejestracji i dz
 Te problemy mogą wystąpić na wszystkich platformach urządzeń.
 
 ### <a name="device-cap-reached"></a>Osiągnięto limit urządzeń
-**Problem:** Podczas rejestracji urządzenia przez użytkownika występuje błąd (na przykład **Portal firmy jest tymczasowo niedostępny**), a dziennik DMPdownloader.log programu Configuration Manager zawiera błąd **DeviceCapReached**.
+**Problem:** Podczas rejestrowania przez użytkownika występuje błąd (taki jak **Portal firmy jest tymczasowo niedostępny**).
 
 **Rozwiązanie:**
 
@@ -113,23 +113,6 @@ Aby uniknąć osiągania górnych limitów urządzeń, pamiętaj o usuwaniu niea
 
     4. Włącz ponownie narzędzie DirSync i sprawdź, czy użytkownik jest teraz prawidłowo synchronizowany.
 
-3. W przypadku, gdy używasz usługi Intune z programem Configuration Manager, sprawdź, czy użytkownik ma prawidłowy identyfikator użytkownika chmury:
-
-    1. Otwórz program SQL Management Studio.
-
-    2. Nawiąż połączenie z odpowiednią bazą danych.
-
-    3. Otwórz folder baz danych i znajdź, a następnie otwórz folder **CM_DBName**, gdzie DBName to nazwa bazy danych klienta.
-
-    4. U góry wybierz pozycję **Nowa kwerenda** i wykonaj następujące zapytania:
-
-        - Aby wyświetlić wszystkich użytkowników:   `select * from [CM_ DBName].[dbo].[User_DISC]`
-
-        - Aby wyświetlić konkretnych użytkowników, użyj następującego zapytania, gdzie %testuser1% jest symbolem zastępczym wartości username@domain.com dla użytkownika, którego chcesz wyszukać:   `select * from [CM_ DBName].[dbo].[User_DISC] where User_Principal_Name0 like '%testuser1%'`
-
-        Po zapisaniu zapytania wybierz pozycję **!Wykonaj**.
-        Po zwróceniu wyników poszukaj identyfikatora użytkownika chmury.  Jeśli identyfikator nie zostanie znaleziony, oznacza to, że użytkownik nie ma licencji na korzystanie z usługi Intune.
-
 ### <a name="unable-to-create-policy-or-enroll-devices-if-the-company-name-contains-special-characters"></a>Nie można utworzyć zasad lub zarejestrować urządzeń, jeśli nazwa firmy zawiera znaki specjalne.
 **Problem:** Nie można utworzyć zasad lub zarejestrować urządzeń.
 
@@ -144,7 +127,7 @@ Aby uniknąć osiągania górnych limitów urządzeń, pamiętaj o usuwaniu niea
 - mają wiele domen najwyższego poziomu dla sufiksów nazw głównych użytkowników w organizacji (na przykład @contoso.com lub @fabrikam.com).
 
 
-[Zbiorczy pakiet aktualizacji dla usług AD FS 2.0](http://support.microsoft.com/kb/2607496) działa w połączeniu z przełącznikiem <strong>SupportMultipleDomain</strong> w celu włączenia obsługi tego scenariusza przez serwer usług AD FS bez konieczności stosowania dodatkowych serwerów usługi AD FS 2.0. Aby uzyskać więcej informacji, zobacz [ten blog](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
+[Zbiorczy pakiet aktualizacji dla usług AD FS 2.0](https://support.microsoft.com/kb/2607496) działa w połączeniu z przełącznikiem <strong>SupportMultipleDomain</strong> w celu włączenia obsługi tego scenariusza przez serwer usług AD FS bez konieczności stosowania dodatkowych serwerów usługi AD FS 2.0. Aby uzyskać więcej informacji, zobacz [ten blog](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
 
 
 ## <a name="android-issues"></a>Problemy z systemem android
@@ -332,23 +315,6 @@ Aby uzyskać więcej informacji, zobacz artykuł [Najlepsze rozwiązania dotycz�
 
 5. Upewnij się, że domyślną przeglądarką jest program Safari dla systemu iOS oraz że pliki cookie są włączone.
 
-### <a name="enrolled-ios-device-doesnt-appear-in-console-when-using-configuration-manager-with-intune"></a>Zarejestrowane urządzenie z systemem iOS nie jest wyświetlane w konsoli podczas korzystania z programu Configuration Manager z usługą Intune
-**Problem:** Użytkownik rejestruje urządzenie z systemem iOS, ale nie jest ono wyświetlane w konsoli administracyjnej programu Configuration Manager. Urządzenie nie wskazuje, że zostało zarejestrowane. Możliwe przyczyny:
-
-- Łącznik usługi Microsoft Intune w lokacji programu Configuration Manager nie łączy się z usługą Intune.
-- Składnik Menedżera danych odnajdywania (ddm) lub składnik Menedżera stanu (statmgr) nie przetwarza komunikatów z usługi Intune.
-- Możliwe, że pobrano certyfikat zarządzania urządzeniami przenośnymi z jednego konta i użyto go na innym koncie.
-
-
-**Rozwiązanie:** Przejrzyj następujące pliki dziennika pod kątem możliwych błędów:
-
-- dmpdownloader.log
-- ddm.log
-- statmgr.log
-
-Przykłady zawartości, pod kątem obecności której należy sprawdzić pliki dziennika, zostaną dodane wkrótce.
-
-
 ### <a name="users-ios-device-is-stuck-on-an-enrollment-screen-for-more-than-10-minutes"></a>Urządzenie użytkownika z systemem iOS jest zablokowane na ekranie rejestracji przez więcej niż 10 minut
 
 **Problem**: Rejestrowane urządzenie może zostać zablokowane na jednym z dwóch ekranów:
@@ -418,36 +384,6 @@ Po wyczyszczeniu zablokowanych urządzeń możesz poprosić użytkowników o pon
     2. Wybierz pozycję **Urządzenia** > **Wszystkie urządzenia**.  
     3. Znajdź urządzenie, dla którego występuje problem z rejestracją. Ogranicz liczbę wyników, wyszukując według nazwy urządzenia lub adresu MAC/sprzętu.
     4. Wybierz urządzenie, a następnie pozycję **Usuń**. Usuń wszystkie inne wpisy skojarzone z urządzeniem.  
-
-## <a name="issues-when-using-configuration-manager-with-intune"></a>Problemy dotyczące korzystania z programu Configuration Manager z usługą Intune
-
-### <a name="mobile-devices-disappear"></a>Urządzenia przenośne znikają
-
-**Problem:** Po pomyślnym zarejestrowaniu urządzenia przenośnego w programie Configuration Manager znika ono z kolekcji urządzeń przenośnych, ale nadal posiada profil zarządzania i znajduje się na liście w obszarze Brama CSS.
-
-**Rozwiązanie:** Możliwe przyczyny wystąpienia tego problemu:
-
-- istnieje niestandardowy proces usuwania urządzeń, które nie są przyłączone do domeny, lub
-- użytkownik wycofał urządzenie z subskrypcji.
-Aby to zweryfikować i sprawdzić, który proces lub które konto użytkownika usunęło urządzenie z konsoli programu Configuration Manager, wykonaj następujące kroki.
-
-#### <a name="check-how-device-was-removed"></a>Sprawdzanie sposobu usunięcia urządzenia
-
-1. W konsoli administracyjnej programu Configuration Manager wybierz pozycję **Monitorowanie** &gt; **Stan systemu** &gt; **Kwerendy komunikatów o stanie**.
-
-2. Kliknij prawym przyciskiem myszy pozycję **Ręcznie usunięte zasoby członka kolekcji** i wybierz polecenie **Pokaż komunikaty**.
-
-3. Wybierz odpowiednią datę i godzinę lub ostatnie 12 godzin.
-
-4. Znajdź dane urządzenie i sprawdź, jak zostało ono usunięte. W poniższym przykładzie pokazano sytuację, w której konto SCCMInstall usunęło urządzenie za pomocą nieznanej aplikacji.
-
-    ![Zrzut ekranu przedstawiający diagnostykę usuwania urządzeń](./media/troubleshoot-device-enrollment-in-intune/CM_With_Intune_Unknown_App_Deleted_Device.jpg)
-
-5. Upewnij się, że program Configuration Manager nie ma zaplanowanego zadania, skryptu ani innego procesu, który mógłby automatycznie usuwać urządzenia nienależące do domeny, urządzenia przenośne lub pokrewne.
-
-### <a name="other-ios-enrollment-errors"></a>Inne błędy rejestracji urządzeń z systemem iOS
-
-Lista błędów rejestracji urządzeń z systemem iOS znajduje się w naszej dokumentacji w artykule [Rozwiązywanie problemów z rejestracją urządzeń z systemem iOS w usłudze Microsoft Intune](https://support.microsoft.com/help/4039809/troubleshooting-ios-device-enrollment-in-intune).
 
 ## <a name="pc-issues"></a>Problemy z komputerem PC
 

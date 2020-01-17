@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/12/2019
+ms.date: 01/14/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad630eb34b296d7ab77081a1e3063db8dffc64f9
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: dc9dd03714e24dae4b0c7afe9206c6a8d7d36c13
+ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75207455"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75956286"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Zarządzanie aktualizacjami oprogramowania systemu Windows 10 w usłudze Intune
 
@@ -63,7 +63,7 @@ Aby korzystać z aktualizacji systemu Windows dla urządzeń z systemem Windows 
   > - Windows 10 Mobile  
   > - Windows 10 Enterprise LTSC. Usługa Windows Update for Business (WufB) obecnie nie obsługuje wersji *Długoterminowy kanał obsługi*. Zaplanuj użycie alternatywnych metod dodawania poprawek, np. WSUS czy Configuration Manager.
 
-- Na urządzeniach z systemem Windows opcja **Opinia i diagnostyka** > **Dane diagnostyczne i dane użycia** musi mieć wartość **Podstawowa**, **Rozszerzona** lub **Pełna**.  
+- Na urządzeniach z systemem Windows opcja **Opinia i diagnostyka** > **Dane diagnostyczne i dane użycia** musi mieć wartość **Podstawowa**, **Rozszerzona** lub **Pełna**.
 
   W przypadku urządzeń z systemem Windows 10 możesz ręcznie skonfigurować ustawienie *Dane diagnostyczne i dane użycia* lub użyć profilu ograniczeń dotyczących urządzenia w usłudze Intune w systemie Windows 10 lub nowszym. Korzystając z profilu ograniczeń dotyczących urządzenia, w [ustawieniu ograniczeń dotyczących urządzeń](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry)**Udostępnij dane użycia** wybierz co najmniej opcję **Basic**. To ustawienie jest dostępne w kategorii **Raportowanie i telemetria** podczas konfigurowania zasad ograniczeń dotyczących urządzenia w systemie Windows 10 lub nowszym.
 
@@ -215,6 +215,10 @@ Gdy urządzenie otrzyma zasady aktualizacji funkcji systemu Windows 10:
 
   To ograniczenie jest badane w celu sprawdzenia, czy może być obsługiwane w przyszłości.
 
+> [!IMPORTANT]
+> Aby można było używać zasad aktualizacji funkcji w usłudze Intune, na urządzeniach należy włączyć funkcję telemetrii z minimalnym ustawieniem [*Podstawowa*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry). Telemetria jest konfigurowana w obszarze *Raportowanie i telemetria* w ramach [zasad ograniczeń urządzeń](../configuration/device-restrictions-configure.md).
+>
+> Urządzenia, które otrzymują zasady aktualizacji funkcji i które mają telemetrię ustawioną na *Nie skonfigurowano* (wyłączoną), mogą mieć zainstalować nowszą wersję systemu Windows niż zdefiniowana w zasadach aktualizacji funkcji. Wymaganie wstępne, które wskazuje, że telemetria ma być wymagana, jest obecnie analizowane, ponieważ ta funkcja zmierza w kierunku ogólnej dostępności.
 
 ### <a name="create-and-assign-windows-10-feature-updates"></a>Tworzenie i przypisywanie aktualizacji funkcji systemu Windows 10
 
@@ -245,4 +249,3 @@ W tym okienku można:
 [Raporty zgodności usługi Intune dla aktualizacji](../windows-update-compliance-reports.md)
 
 [Rozwiązywanie problemów z pierścieniami aktualizacji systemu Windows 10](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-Windows-10-Update-Ring-Policies/ba-p/714046)
-

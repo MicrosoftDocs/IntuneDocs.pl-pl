@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a01b6643de2dd75c41aec0806b97df6154d99a7a
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: 43c5d0731736df193bf615391ad486a60dff6cdd
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75547776"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885901"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Ustawianie źródła zarządzania urządzeniem przenośnym
 
@@ -36,16 +36,13 @@ Możliwe są następujące konfiguracje:
 
 - **Współzarządzanie usługą Intune** — integracja rozwiązania usługi Intune w chmurze z programem Configuration Manager dla urządzeń z systemem Windows 10. Konfigurowanie usługi Intune odbywa się przy użyciu konsoli programu Configuration Manager. [Konfigurowanie automatycznej rejestracji urządzeń do usługi Intune](https://docs.microsoft.com/configmgr/comanage/tutorial-co-manage-clients#configure-auto-enrollment-of-devices-to-intune). 
 
-    > [!Important]
-    >Funkcja dołączania nowych klientów hybrydowego rozwiązania MDM jest przestarzała. Aby uzyskać więcej informacji, zobacz wpis w blogu [Move from Hybrid Mobile Device Management to Intune on Azure](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150) (Przechodzenie z hybrydowego zarządzania urządzeniami przenośnymi do usługi Intune na platformie Azure).
-
 - **Zarządzanie urządzeniami przenośnymi w usłudze Office 365** — integracja usługi Office 365 z rozwiązaniem usługi Intune w chmurze. Konfigurowanie usługi Intune odbywa się przy użyciu centrum administracyjnego platformy Microsoft 365. Ta konfiguracja zawiera podzbiór możliwości dostępnych w ramach autonomicznej usługi Intune. Ustaw urząd MDM przy użyciu centrum administracyjnego platformy Microsoft 365.
 
 - **Współistnienie z MDM w pakiecie Office 365** Możesz aktywować u dzierżawcy i stosować zarówno zarządzanie urządzeniami mobilnymi w pakiecie Office 365, jak i usługę Intune. Ponadto dla każdego użytkownika jako urząd zarządzający w pakiecie Office 365 możesz ustawić MDM lub Intune. W ten sposób określisz, która z tych usług będzie używana do zarządzania urządzeniami przenośnymi użytkowników. Urząd zarządzający użytkownika jest definiowany na podstawie przypisanej do niego licencji. Aby uzyskać więcej informacji, zobacz [Współistnienie Microsoft Intune z MDM w pakiecie Office 365](https://blogs.technet.microsoft.com/configmgrdogs/2016/01/04/microsoft-intune-co-existence-with-mdm-for-office-365).
 
 ## <a name="set-mdm-authority-to-intune"></a>Ustawianie urzędu MDM na usługę Intune
 
-Jeśli jeszcze nie ustawiono urzędu MDM, wykonaj poniższe kroki. Aby zastąpić rozwiązanie SCCM, zobacz [Migrowanie użytkowników i urządzeń hybrydowego zarządzania urządzeniami przenośnymi do autonomicznej usługi Intune](https://docs.microsoft.com/configmgr/mdm/deploy-use/migrate-hybridmdm-to-intunesa).
+Jeśli jeszcze nie ustawiono urzędu MDM, wykonaj poniższe kroki.
 
 1. W [centrum administracyjnym usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pomarańczowy baner, aby otworzyć ustawienie **Urząd zarządzania urządzeniami przenośnymi**. Pomarańczowy baner jest wyświetlany tylko wtedy, gdy nie ustawiono jeszcze urzędu MDM.
 2. W obszarze **Urząd zarządzania urządzeniami przenośnymi** wybierz swój urząd MDM spośród następujących opcji:
@@ -69,10 +66,9 @@ W każdym przypadku zgoda jest ściśle powiązana z uruchamianiem usługi zarz�
 - [Dane wysyłane przez usługę Intune do firmy Apple](https://aka.ms/data-intune-sends-to-apple)
 
 ## <a name="key-considerations"></a>Zagadnienia dotyczące kluczy
-Po zmianie na nowy urząd MDM prawdopodobnie wystąpi czas przejścia (maksymalnie osiem godzin), zanim urządzenie zostanie zaewidencjonowane i zsynchronizowane z usługą. Wymagane jest skonfigurowanie ustawień w nowym urzędzie MDM (rozwiązanie hybrydowe), aby upewnić się, że zarejestrowane urządzenia będą nadal zarządzane i chronione po zmianie. 
+Po zmianie na nowy urząd MDM prawdopodobnie wystąpi czas przejścia (maksymalnie osiem godzin), zanim urządzenie zostanie zaewidencjonowane i zsynchronizowane z usługą. Wymagane jest skonfigurowanie ustawień w nowym urzędzie MDM, aby upewnić się, że zarejestrowane urządzenia będą nadal zarządzane i chronione po zmianie. 
 - Urządzenia muszą połączyć się z usługą po zmianie, aby ustawienia z nowego urzędu MDM (autonomicznej usługi Intune) zastąpiły istniejące ustawienia na urządzeniu.
-- Po zmianie urzędu MDM niektóre podstawowe ustawienia (takie jak profile) z poprzedniego urzędu MDM (autonomicznej usługi Intune) pozostaną na urządzeniu przez maksymalnie siedem dni lub dopóki urządzenie nie połączy się z usługą po raz pierwszy. Zaleca się jak najszybsze skonfigurowanie aplikacji i ustawień (zasad, profilów, aplikacji itd.) w nowym urzędzie MDM (rozwiązanie hybrydowe) i wdrożenie ustawienia w grupach użytkowników, które zawierają użytkowników posiadających istniejące zarejestrowane urządzenia. Kiedy tylko urządzenie połączy się z usługą po zmianie urzędu MDM, odbierze nowe ustawienia z nowego urzędu MDM, co zapobiegnie przerwom w zarządzaniu i ochronie.
-- Jeśli te same kategorie urządzeń istnieją zarówno w usłudze Intune, jak i w programie Configuration Manager, żadne przypisania kategorii urządzeń dla urządzeń nie są przenoszone po przejściu do nowego urzędu MDM. Aby nadal używać kategorii urządzeń, należy zmigrowane urządzenia ręcznie dodać do odpowiedniej kolekcji po zmianie urzędu MDM i wyświetleniu urządzeń w konsoli programu Configuration Manager.
+- Po zmianie urzędu MDM niektóre podstawowe ustawienia (takie jak profile) z poprzedniego urzędu MDM pozostaną na urządzeniu przez maksymalnie siedem dni lub dopóki urządzenie nie połączy się z usługą po raz pierwszy. Zaleca się jak najszybsze skonfigurowanie aplikacji i ustawień (zasad, profilów, aplikacji itd.) w nowym urzędzie MDM i wdrożenie ustawienia w grupach użytkowników, które zawierają użytkowników posiadających istniejące zarejestrowane urządzenia. Kiedy tylko urządzenie połączy się z usługą po zmianie urzędu MDM, odbierze nowe ustawienia z nowego urzędu MDM, co zapobiegnie przerwom w zarządzaniu i ochronie.
 - Urządzenia, które nie mają skojarzonych użytkowników (zazwyczaj jeśli masz urządzenia z systemem iOS w programie Device Enrollment Program lub scenariusze rejestracji zbiorczej) nie są migrowane do nowego urzędu MDM. W przypadku tych urządzeń musisz skontaktować się z działem pomocy technicznej, aby przenieść je do nowego urzędu MDM.
 
 ## <a name="change-mdm-authority-to-office-365"></a>Zmiana urzędu MDM na usługę Office 365
@@ -93,14 +89,14 @@ Urzędu MDM nie można zmienić z powrotem na Nieznany. Usługa korzysta z urzę
 
 ## <a name="what-to-expect-after-changing-the-mdm-authority"></a>Czego można się spodziewać po zmianie urzędu MDM
 
-- Kiedy usługa Intune wykryje zmianę urzędu MDM dzierżawy, wysyła komunikat z powiadomieniem do wszystkich zarejestrowanych urządzeń w celu ich zameldowania i przeprowadzenia synchronizacji z usługą (to powiadomienie jest wykonywane poza zaplanowanym regularnym zaewidencjonowaniem). W związku z tym po zmianie urzędu MDM dla dzierżawy z autonomicznej usługi Intune na rozwiązanie hybrydowe wszystkie urządzenia, które są włączone i online, połączą się z usługą, otrzymają nowy urząd MDM i będą zarządzane przez rozwiązanie hybrydowe. Nie ma żadnych zakłóceń w zarządzaniu tymi urządzeniami i ich ochronie.
+- Kiedy usługa Intune wykryje zmianę urzędu MDM dzierżawy, wysyła komunikat z powiadomieniem do wszystkich zarejestrowanych urządzeń w celu ich zameldowania i przeprowadzenia synchronizacji z usługą (to powiadomienie jest wykonywane poza zaplanowanym regularnym zaewidencjonowaniem). W związku z tym po zmianie urzędu MDM dla dzierżawy z autonomicznej usługi Intune wszystkie urządzenia, które są włączone i online, połączą się z usługą, otrzymają nowy urząd MDM i będą zarządzane przez nowy urząd MDM. Nie ma żadnych zakłóceń w zarządzaniu tymi urządzeniami i ich ochronie.
 - Nawet w przypadku urządzeń, które są włączone i w trybie online podczas zmiany urzędu MDM (lub wkrótce po niej), nastąpi opóźnienie do ośmiu godzin (w zależności od czasu następnego zaplanowanego regularnego ewidencjonowania), zanim urządzenia zostaną zarejestrowane w usłudze z nowym urzędem MDM.    
 
   > [!IMPORTANT]    
   > W czasie między zmianą urzędu MDM a przekazaniem odnowionego certyfikatu usługi APNs do nowego urzędu rejestracje nowych urządzeń i meldowanie urządzeń z systemem iOS zakończy się niepowodzeniem. Dlatego ważne jest przejrzenie i przekazanie certyfikatu usługi APNs do nowego urzędu jak najszybciej po zmianie urzędu MDM.
 
 - Użytkownicy mogą szybko zmienić nowy urząd MDM, ręcznie uruchamiając ewidencjonowanie z poziomu urządzenia do usługi. Mogą oni łatwo wprowadzić tę zmianę, używając aplikacji Portal firmy i inicjując sprawdzenie zgodności urządzenia.
-- Aby sprawdzić, czy wszystko działa prawidłowo po zaewidencjonowaniu urządzeń i zsynchronizowaniu ich z usługą po zmianie urzędu MDM, wyszukaj urządzenia w konsoli programu Configuration Manager. Urządzenia, które wcześniej były zarządzane przez usługę Intune, są teraz wyświetlane jako urządzenia zarządzane w konsoli programu Configuration Manager.    
+- Aby sprawdzić, czy wszystko działa prawidłowo po zaewidencjonowaniu urządzeń i zsynchronizowaniu ich z usługą po zmianie urzędu MDM, wyszukaj urządzenia w nowym urzędzie MDM.
 - Istnieje okres przejściowy, gdy urządzenie jest w trybie offline podczas zmiany urzędu MDM, do czasu zaewidencjonowania tego urządzenia w usłudze. Aby zagwarantować, że urządzenie pozostanie chronione i w pełni funkcjonalne w tym okresie przejściowym, poniższe profile pozostaną na urządzeniu przez siedem dni (lub dopóki urządzenie nie połączy się z nowym urzędem MDM i nie odbierze nowych ustawień, które zastąpią istniejące):
   - Profil poczty e-mail
   - Profil sieci VPN
@@ -115,7 +111,7 @@ Urzędu MDM nie można zmienić z powrotem na Nieznany. Usługa korzysta z urzę
 
 - Po zmianie urzędu MDM wykonaj następujące kroki, aby sprawdzić, czy nowe urządzenia zostały pomyślnie zarejestrowane w nowym urzędzie:   
   - Rejestrowanie nowego urządzenia
-  - Upewnij się, że nowo zarejestrowane urządzenie jest wyświetlane w konsoli programu Configuration Manager.
+  - Upewnij się, że nowo zarejestrowane urządzenie jest wyświetlane w nowym urzędzie MDM.
   - Za pomocą konsoli administracyjnej wykonaj akcję, na przykład zdalne blokowanie, na urządzeniu. Jeśli wykonanie akcji zakończy się powodzeniem, urządzenie jest zarządzane przez nowy urząd MDM.
 - Jeśli masz problemy z określonymi urządzeniami, musisz jak najszybciej wyrejestrować i zarejestrować ponownie urządzenia, aby połączyć je z nowym urzędem certyfikacji i zarządzać nimi.
 

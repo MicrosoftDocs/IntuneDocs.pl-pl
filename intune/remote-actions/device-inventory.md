@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 94c38aaf28440511720280a3c5a1ebda5b9f2ab1
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: ce3f73834ffdc2648dae345f8fa2a8233d2bb8c9
+ms.sourcegitcommit: e7052114324b80d0503b107c934bb90b8eb29704
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74819777"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75756019"
 ---
 # <a name="see-device-details-in-intune"></a>Wyświetlanie szczegółów urządzenia w usłudze Intune
 
@@ -67,7 +67,7 @@ W zależności od operatora danego urządzenia mogą nie zostać zebrane wszystk
 |Udostępnione urządzenie|Jeśli wybrano pozycję **Tak**, urządzenie jest współużytkowane przez więcej niż jednego użytkownika.|Windows, iOS|
 |Rejestracja zatwierdzona przez użytkownika|Jeśli wybrano pozycję **Tak**, rejestracja urządzenia jest zatwierdzona przez użytkownika, co pozwala administratorom zarządzać pewnymi ustawieniami zabezpieczeń na urządzeniu.|Windows, iOS|
 |System operacyjny|System operacyjny używany w urządzeniu.|Windows, iOS|
-|Wersja systemu operacyjnego|Wersja systemu operacyjnego działającego na urządzeniu.|Windows, iOS|
+|Wersja systemu operacyjnego|Wersja systemu operacyjnego w urządzeniu.|Windows, iOS|
 |Język systemu operacyjnego|Język ustawiony dla systemu operacyjnego w urządzeniu.|Windows, iOS|
 |Numer kompilacji|Numer kompilacji systemu operacyjnego.|Android|
 |Poziom poprawki zabezpieczeń|Poziom poprawki zabezpieczeń dla urządzenia.|Android|
@@ -94,6 +94,9 @@ W zależności od operatora danego urządzenia mogą nie zostać zebrane wszystk
 |Zaszyfrowane|Jeśli wybrano pozycję **Tak**, dane przechowywane w urządzeniu są zaszyfrowane.|Windows, iOS, Android|
 
 \* Niedostępne w systemie Android za pomocą Menedżera zasad Google takiego jak W pełni zarządzane i Dedykowane urządzenia
+
+> [!Note]  
+> Numer telefonu nie jest uwzględniony w spisie dedykowanych lub w pełni zarządzanych urządzeniach z systemem Android Enterprise.
 
 ## <a name="next-steps"></a>Następne kroki
 Zobacz, co jeszcze możesz zrobić, aby [zarządzać urządzeniami](device-management.md) przy użyciu usługi Intune.

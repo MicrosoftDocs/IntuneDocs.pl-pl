@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5cd8c1a1d17ca38c42b6ed6821d20367b147ad6
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: d8397dea1dca97122aac6716ee3d51295b913538
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74562377"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885940"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices"></a>Konfiguracja rejestracji w pełni zarządzanych urządzeń z systemem Android Enterprise w usłudze Intune 
 
@@ -36,7 +36,7 @@ Usługa Intune ułatwia wdrażanie aplikacji i ustawień na urządzeniach z rozw
 
 ## <a name="technical-requirements"></a>Wymagania techniczne
 
-Do zarządzania w pełni zarządzanymi urządzeniami z systemem Android Enterprise niezbędna jest autonomiczna dzierżawa usługi Intune. Zarządzanie w pełni zarządzanymi urządzeniami nie jest dostępne w trybie hybrydowym (połączenie programu Configuration Manager) ani w starszej konsoli zarządzania programu Silverlight.
+Do zarządzania w pełni zarządzanymi urządzeniami z systemem Android Enterprise niezbędna jest autonomiczna dzierżawa usługi Intune. Zarządzanie w pełni zarządzanymi urządzeniami nie jest dostępne w starszej konsoli zarządzania programu Silverlight.
 
 Urządzenia muszą spełniać następujące wymagania, aby mogły być zarządzane jako w pełni zarządzane urządzenia z systemem Android Enterprise:
 

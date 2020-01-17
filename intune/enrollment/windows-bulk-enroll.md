@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b2ce91cea1fdef211a8e6a9dc1c19086f355385
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 9cbdd99dfb7b42677048b4f214e7de537db0edda
+ms.sourcegitcommit: 5db0769274d788a1218dca3ad90d8649927becb4
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72585275"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75925826"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Rejestracja zbiorcza urządzeń z systemem Windows
 
@@ -95,7 +95,7 @@ Poprawność ustawień w pakiecie możesz sprawdzić w dzienniku administratora 
 
 ### <a name="bulk-enrollment-with-wi-fi"></a>Rejestrowanie zbiorcze za pomocą sieci Wi-Fi 
 
-W przypadku urządzeń zarejestrowanych zbiorczo nie można używać certyfikatów ukierunkowanych na użytkowników i wdrożenia sieci Wi-Fi. Aby zarządzać tymi połączeniami, trzeba użyć [certyfikatów na poziomie urządzeń](../protect/certificates-configure.md). 
+Gdy nie korzystasz z otwartej sieci, musisz użyć [certyfikatów na poziomie urządzenia](../protect/certificates-configure.md) do inicjowania połączeń. W przypadku urządzeń zarejestrowanych zbiorczo nie można używać certyfikatów ukierunkowanych na użytkowników do uzyskiwania dostępu do sieci. 
 
 ### <a name="conditional-access"></a>Dostęp warunkowy
 Dostęp warunkowy nie jest dostępny dla urządzeń z systemem Windows zarejestrowanych zbiorczo.

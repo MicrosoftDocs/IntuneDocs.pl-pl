@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e1ee8ae54d81a050f3c8983269f40e8f61b5e75
-ms.sourcegitcommit: e75718ee6cf93c0e6c915f2776b785fe8db9f7e0
+ms.openlocfilehash: 7cc67ce304dba500095c130e035a0b29322c84ef
+ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74955477"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75956294"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Określanie urządzeń jako firmowe
 
@@ -111,7 +111,7 @@ Importowane urządzenia nie są zawsze zarejestrowane. Urządzenia mogą mieć s
 
 1. Zaloguj się do [centrum administracyjnego usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), wybierz pozycję **Urządzenia** > **Zarejestruj urządzenia** > **Identyfikatory urządzeń firmowych**.
 2. Wybierz identyfikatory urządzeń do usunięcia, a następnie wybierz pozycję **Usuń**.
-3. Potwierdzenie usunięcia.
+3. Potwierdź usunięcie.
 
 Usunięcie identyfikatora firmy zarejestrowanego urządzenia nie zmienia własności tego urządzenia. Aby zmienić własność urządzenia, przejdź do pozycji **Urządzenia**, wybierz urządzenie, wybierz pozycję **Właściwości** i zmień ustawienie **Własność urządzenia**.
 
@@ -120,7 +120,7 @@ Szczegółowe specyfikacje dotyczące identyfikatorów IMEI (International Mobil
 
 ## <a name="change-device-ownership"></a>Zmienianie własności urządzeń
 
-We właściwościach urządzeń jest wyświetlana **Własność** dla rekordów każdego urządzenia w usłudze Intune. Jako administrator możesz określić urządzenia jako **Osobiste** lub **Firmowe**. W przypadku zmiany typu własności urządzenia z Osobiste na Firmowe usługa Intune usuwa wszystkie informacje o aplikacji zebrane wcześniej z tego urządzenia w ciągu 7 dni. Jeśli ma to zastosowanie, usługa Intune usunie również zapisany numer telefonu. 
+We właściwościach urządzeń jest wyświetlana **Własność** dla rekordów każdego urządzenia w usłudze Intune. Jako administrator możesz określić urządzenia jako **Osobiste** lub **Firmowe**. W przypadku zmiany typu własności urządzenia z Firmowe na Osobiste usługa Intune usuwa wszystkie informacje o aplikacji zebrane wcześniej z tego urządzenia w ciągu 7 dni. Jeśli ma to zastosowanie, usługa Intune usunie również zapisany numer telefonu. 
 
 **Aby zmienić własność urządzeń:**
 1. W [centrum administracyjnym usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **Wszystkie urządzenia** > wybierz urządzenie.

@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 26013ab06cabdfd64ec3cd34254e3cfa2bb2428d
-ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
+ms.openlocfilehash: 5209ce7fba30a156de055503751104f9090d49d7
+ms.sourcegitcommit: e7052114324b80d0503b107c934bb90b8eb29704
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75654264"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75756000"
 ---
 # <a name="use-device-encryption-with-intune"></a>Szyfrowanie urządzeń w usłudze Intune
 
@@ -38,6 +38,8 @@ Usługa Intune udostępnia również wbudowany [raport szyfrowania](encryption-m
 ## <a name="filevault-encryption-for-macos"></a>Szyfrowanie za pomocą programu FileVault w systemie macOS
 
 Za pomocą usługi Intune można skonfigurować szyfrowanie dysków za pomocą programu FileVault na urządzeniach z systemem macOS. Następnie, korzystając z raportu szyfrowania usługi Intune, można wyświetlić szczegóły szyfrowania dla tych urządzeń i zarządzać kluczami odzyskiwania dla urządzeń zaszyfrowanych za pomocą programu FileVault.
+
+Pamiętaj, że rejestracja urządzeń zatwierdzonych przez użytkownika jest wymagana, aby program FileVault działał w urządzeniu. Użytkownik musi ręcznie zatwierdzić profil zarządzania z preferencji systemu, aby rejestracja została uznana za zatwierdzoną przez użytkownika. 
 
 FileVault to program do szyfrowania całych dysków, który jest dołączony do systemu macOS. Za pomocą usługi Intune można skonfigurować program FileVault na urządzeniach z systemem **macOS 10.13 lub nowszym**.
 
@@ -72,14 +74,7 @@ Aby uzyskać szczegółowe informacje na temat ustawień programu FileVault, kt�
 
 7. Skonfiguruj pozostałe [ustawienia programu FileVault](endpoint-protection-macos.md#filevault), aby spełniały Twoje potrzeby biznesowe, a następnie wybierz przycisk **OK**.
 
-   > [!IMPORTANT]
-   > Istnieje znany problem, gdy dla ustawienia **Wyłącz monit przy wylogowywaniu** zostanie ustawiona wartość *Włączone*. Gdy zostanie ustawiona wartość *Włączone*, dla ustawienia **Liczba dozwolonych pominięć** należy ustawić wartość i nie może ona wynosić *Nieskonfigurowane*. Jeśli zostanie ustawiona wartość *Nieskonfigurowane*, profil nie będzie działać na urządzeniu. W tym scenariuszu urządzenie raportuje **Podsumowanie stanu profilu** jako **Błąd** bez dalszych szczegółów.
-   >
-   > Gdy ustawienie **Wyłącz monit przy wylogowywaniu** ma wartość *Nieskonfigurowane*, dla ustawienia **Liczba dozwolonych pominięć** można ustawić opcję *Nieskonfigurowane* lub może ono mieć wartość.
-   >
-   > Ten problem zostanie rozwiązany w przyszłej aktualizacji.
-
-8. Ukończ konfigurację dodatkowych ustawień, a następnie zapisz profil.  
+  8. Ukończ konfigurację dodatkowych ustawień, a następnie zapisz profil.  
 
 ### <a name="manage-filevault"></a>Zarządzanie programem FileVault
 

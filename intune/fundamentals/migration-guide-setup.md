@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ca0983b7b637b7e85bef97cd77e6c870c4e43eb
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: c705e8863ef4e01906a773d528f9ae2f40461c71
+ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72510014"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75885855"
 ---
 # <a name="basic-setup"></a>Konfiguracja podstawowa
 
@@ -56,7 +56,7 @@ Jeśli w usłudze Intune planowane jest użycie uwierzytelniania opartego na cer
 
 ## <a name="task-list-for-an-intune-setup"></a>Lista zadań konfiguracji usługi Intune
 
-### <a name="task-1-intune-subscription"></a>Zadanie 1. Subskrypcję usługi Intune
+### <a name="task-1-intune-subscription"></a>Zadanie 1. Subskrypcja usługi Intune
 
 Aby można było przeprowadzić migrację do usługi Intune, należy dysponować subskrypcją usługi Intune.
 
@@ -74,9 +74,9 @@ Aby można było przeprowadzić migrację do usługi Intune, należy dysponować
 
 ### <a name="task-3-set-your-mdm-authority-to-intune"></a>Zadanie 3. Ustawianie usługi Intune jako urzędu rozwiązania MDM
 
-Usługą Intune można zarządzać za pomocą witryny Azure Portal lub konsoli programu Configuration Manager w wersji Current Branch. Jeśli nie jest konieczna integracja usługi Intune z wdrożeniem programu Configuration Manager w wersji Current Branch, zalecamy zarządzanie tą usługą przy użyciu witryny [Azure Portal](https://portal.azure.com).
+Zalecamy zarządzanie usługą Intune przy użyciu [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-Aby umożliwić korzystanie z usługi Intune za pomocą witryny Azure Portal, ustaw urząd MDM na usługę **Intune**. Użycie innego urzędu MDM pozwala usłudze Intune przenieść funkcje zarządzania MDM do alternatywnych konsoli zarządzania firmy Microsoft. Takie przypadki występują rzadko.
+Ustaw urząd MDM na **Intune**. Użycie innego urzędu MDM pozwala usłudze Intune przenieść funkcje zarządzania MDM do alternatywnych konsoli zarządzania firmy Microsoft. Takie przypadki występują rzadko.
 
 > [!IMPORTANT]
 > Jeśli pierwszy raz przenosisz funkcje zarządzania urządzeniami przenośnymi do usługi Intune, należy ustawić urząd MDM na usługę Intune.

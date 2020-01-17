@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/03/2019
+ms.date: 01/10/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ef9548a77a3a745eda24b927118d1447d5afd1f0
-ms.sourcegitcommit: 78faf608510fbaca09bc410d63df1aa5254dee45
+ms.openlocfilehash: 7170f723707ef709ef464b35bc3f6d3297341cf1
+ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74784242"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75956207"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Dodawanie aplikacji do usługi Microsoft Intune 
 
@@ -37,7 +37,7 @@ Użytkownicy aplikacji i urządzeń w firmie (pracownicy firmy) mogą mieć kilk
 
 Usługa Intune obsługuje szeroką gamę różnych typów aplikacji. Dostępne opcje różnią się dla poszczególnych typów aplikacji. Usługa Intune pozwala dodawać i przypisywać następujące typy aplikacji:
 
-| Typy aplikacji | Instalacja | Updates |
+| Typy aplikacji | Instalacja | Aktualizacje |
 |---|---|---|
 | Aplikacje ze sklepu | Usługa Intune instaluje aplikację na urządzeniu.  | Aktualizacje aplikacji są automatyczne. |
 | Aplikacje napisane w firmie (biznesowe) | Usługa Intune instaluje aplikację na urządzeniu (dostarczasz plik instalacyjny). | Należy zaktualizować aplikację. |
@@ -189,7 +189,7 @@ Usługa Intune automatycznie zainstaluje ponownie, zaktualizuje lub usunie wymag
 
 ## <a name="app-installation-errors"></a>Błędy instalacji aplikacji
 
-Aby uzyskać szczegółowe informacje o błędach instalacji aplikacji usługi Intune, zobacz [Błędy instalacji aplikacji](troubleshoot-app-install.md#app-installation-errors).
+Aby uzyskać szczegółowe informacje o błędach instalacji aplikacji usługi Intune, zobacz [Błędy instalacji aplikacji](troubleshoot-app-install.md).
 
 ## <a name="next-steps"></a>Następne kroki
 
@@ -211,4 +211,4 @@ Aby dowiedzieć się, jak dodawać aplikacje dla poszczególnych platform do us�
 - [Microsoft Edge dla systemu macOS](apps-edge-macos.md)
 - [Aplikacje wbudowane](apps-add-built-in.md)
 - [Aplikacje systemu Android Enterprise](apps-ae-system.md)
-- [Aplikacje Win32](app-management.md)
+- [Aplikacje Win32](~/apps/apps-win32-app-management.md)
