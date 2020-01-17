@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/16/2019
+ms.date: 01/07/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: be1fbb72821b61566da84d6f98094c9a2f6ffef2
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 60244bb268f7becadc427c397d7c2d1562bcf6b5
+ms.sourcegitcommit: ea81ad5f33f18d9fe43254e27e02de5eaef74a05
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72810264"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75722610"
 ---
 # <a name="android-enterprise-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Ustawienia urządzeń z rozwiązaniem Android Enterprise umożliwiające oznaczenie ich jako zgodne lub niezgodne w usłudze Intune
 
@@ -35,7 +35,7 @@ Ta funkcja ma zastosowanie do:
 Jako administrator usługi Intune możesz użyć tych ustawień zgodności, aby chronić zasoby organizacji. Aby dowiedzieć się więcej na temat zasad zgodności i ich działania, zobacz [Wprowadzenie do zasad zgodności urządzeń](device-compliance-get-started.md).
 
 > [!IMPORTANT]
-> Zasady zgodności stosują także dedykowane urządzenia z systemem Android Enterprise. Jeśli zasady zgodności są przypisane do dedykowanego urządzenia, urządzenie może być wyświetlane jako **niezgodne**. Dostęp warunkowy i Wymuszanie zgodności nie jest dostępny na dedykowanych urządzeniach. Pamiętaj, aby wykonać zadania lub akcje służące zapewnieniu zgodności dedykowanych urządzeń z przypisanymi zasadami.
+> Zasady zgodności stosują także dedykowane urządzenia z systemem Android Enterprise. Jeśli zasady zgodności są przypisane do dedykowanego urządzenia, urządzenie może być widoczne jako **niezgodne**. Dostęp warunkowy i Wymuszanie zgodności nie jest dostępny na dedykowanych urządzeniach. Pamiętaj, aby wykonać zadania lub akcje służące zapewnieniu zgodności dedykowanych urządzeń z przypisanymi zasadami.
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
@@ -45,7 +45,7 @@ Jako administrator usługi Intune możesz użyć tych ustawień zgodności, aby 
 
 ### <a name="device-health"></a>Kondycja urządzenia
 
-- **Wymagaj, aby urządzenie było na poziomie zagrożenia urządzenia**: Wybierz maksymalny dozwolony poziom zagrożenia urządzenia oceniany przez [usługę ochrony przed zagrożeniami mobilnymi](mobile-threat-defense.md). Urządzenia powyżej tego poziomu zagrożenia są oznaczane jako niezgodne. Aby użyć tego ustawienia, wybierz dozwolony poziom zagrożenia:
+- **Wymagaj, aby urządzenie było na poziomie zagrożenia urządzenia lub nie**: Wybierz maksymalny dozwolony poziom zagrożenia urządzenia oszacowany przez usługi [Mobile Threat](mobile-threat-defense.md). Urządzenia powyżej tego poziomu zagrożenia są oznaczane jako niezgodne. Aby użyć tego ustawienia, wybierz dozwolony poziom zagrożenia:
 
   - **Nieskonfigurowane** (*wartość domyślna*) — ustawienie nie jest oceniane na potrzeby określenia zgodności.
   - **Zabezpieczone** — ta opcja jest najbezpieczniejsza i oznacza, że urządzenie nie może mieć żadnych zagrożeń. W przypadku wykrycia na urządzeniu zagrożeń dowolnego poziomu, zostanie ono ocenione jako niezgodne.
@@ -54,17 +54,11 @@ Jako administrator usługi Intune możesz użyć tych ustawień zgodności, aby 
   - **Wysoki** — ta opcja jest najmniej bezpieczna, ponieważ zezwala na wszystkie poziomy zagrożeń. To ustawienie może być przydatne, jeśli rozwiązanie jest używane tylko na potrzeby raportowania.
   
 > [!NOTE] 
-> Następujący dostawcy rozwiązań Mobile Threat obronni (MTD) obsługują wdrożenia właścicieli urządzeń z systemem Android w przedsiębiorstwie przy użyciu konfiguracji aplikacji:
-> - Better Mobile 
-> - Pradeo
-> - Sophos Mobile
-> - Zimperium 
->  
->  Skontaktuj się z dostawcą usługi MTD, aby uzyskać dokładną konfigurację potrzebną do obsługi platform właścicieli urządzeń z systemem Android w usłudze Intune. Ta lista jest aktualizowana, ponieważ MTD partie obsługują scenariusze właścicieli urządzeń z systemem Android Enterprise. 
+> Wszyscy dostawcy obrony przed zagrożeniami (Mobile Threat obron, MTD) są obsługiwani we wdrożeniach właściciela urządzenia z systemem Android Enterprise przy użyciu funkcji Konfiguracja aplikacji. Skontaktuj się z dostawcą usługi MTD, aby uzyskać dokładną konfigurację potrzebną do obsługi platform właścicieli urządzeń z systemem Android w usłudze Intune.
 
 #### <a name="google-play-protect"></a>Funkcja Google Play Protect
 
-- **Zaświadczenie urządzeń SafetyNet**: wprowadź poziom [zaświadczenia rozwiązania SafetyNet](https://developer.android.com/training/safetynet/attestation.html), którego warunki muszą zostać spełnione. Dostępne opcje:
+- **Zaświadczanie urządzeń SafetyNet**: wprowadź poziom [zaświadczenia rozwiązania SafetyNet](https://developer.android.com/training/safetynet/attestation.html), którego warunki muszą zostać spełnione. Dostępne opcje:
   - **Nieskonfigurowane** (*wartość domyślna*) — ustawienie nie jest oceniane na potrzeby określenia zgodności.
   - **Sprawdź podstawową integralność**
   - **Sprawdź podstawową integralność i certyfikowane urządzenia**
@@ -73,17 +67,17 @@ Jako administrator usługi Intune możesz użyć tych ustawień zgodności, aby 
 
 #### <a name="operating-system-version"></a>Wersja systemu operacyjnego
 
-- **Minimalna wersja systemu operacyjnego**: jeśli urządzenie nie spełnia wymagań dotyczących minimalnej wersji systemu operacyjnego, będzie zgłaszane jako niezgodne. Zostanie wyświetlony link ze wskazówkami dotyczącymi uaktualniania. Użytkownik końcowy może uaktualnić swoje urządzenie, a następnie uzyskać dostęp do zasobów organizacji.
+- **Minimalna wersja systemu operacyjnego**: Jeśli urządzenie nie spełnia wymagań dotyczących minimalnej wersji systemu operacyjnego, będzie zgłaszane jako niezgodne. Zostanie wyświetlony link ze wskazówkami dotyczącymi uaktualniania. Użytkownik końcowy może uaktualnić swoje urządzenie, a następnie uzyskać dostęp do zasobów organizacji.
 
   *Domyślnie żadna wersja nie jest skonfigurowana*.
 
-- **Maksymalna wersja systemu operacyjnego**: jeśli urządzenie korzysta z wersji systemu operacyjnego nowszej niż określona w regule, powoduje to zablokowanie dostępu do zasobów firmy. Użytkownik końcowy zostanie poproszony o kontakt z administratorem IT. Urządzenie nie będzie mogło uzyskiwać dostępu do zasobów organizacji, dopóki reguła nie zostanie zmieniona tak, aby dopuszczać daną wersję systemu operacyjnego.
+- **Maksymalna wersja systemu operacyjnego**: Jeśli urządzenie korzysta z wersji systemu operacyjnego nowszej niż określona w regule, powoduje to zablokowanie dostępu do zasobów organizacji. Użytkownik końcowy zostanie poproszony o kontakt z administratorem IT. Urządzenie nie będzie mogło uzyskiwać dostępu do zasobów organizacji, dopóki reguła nie zostanie zmieniona tak, aby dopuszczać daną wersję systemu operacyjnego.
 
   *Domyślnie żadna wersja nie jest skonfigurowana*.
 
-- **Minimalny poziom poprawki bezpieczeństwa** — wybierz poziom najstarszej poprawki bezpieczeństwa, która może znajdować się w urządzeniu. Urządzenia, które nie mają co najmniej tego poziomu poprawek, są niezgodne. Data musi być wprowadzona w formacie RRRR-MM-DD.
+- **Minimalny poziom poprawki bezpieczeństwa**:  wybierz poziom najstarszej poprawki bezpieczeństwa, która może znajdować się w urządzeniu. Urządzenia, które nie mają co najmniej tego poziomu poprawek, są niezgodne. Data musi być wprowadzona w formacie RRRR-MM-DD.
 
-  *Domyślnie żadna Data nie jest skonfigurowana*.
+  *Domyślnie żadna wartość nie jest skonfigurowana*.
 
 
 ### <a name="system-security"></a>Zabezpieczenia systemu
@@ -95,37 +89,37 @@ Jako administrator usługi Intune możesz użyć tych ustawień zgodności, aby 
   To ustawienie jest stosowane na poziomie urządzenia. Jeśli hasło ma być wymagane tylko na poziomie profilu służbowego, należy użyć zasad konfiguracji. Zobacz [Ustawienia konfiguracji urządzenia z systemem Android Enterprise](../configuration/device-restrictions-android-for-work.md).
 
   - **Wymagany typ hasła**: określ, czy w skład hasła powinny wchodzić tylko cyfry, czy też ma być wymagana kombinacja cyfr i innych znaków. Dostępne opcje:
-    - **Domyślne urządzenie** — aby oszacować zgodność haseł, należy wybrać siłę hasła inną niż **Domyślna**.  
+    - **Domyślne** urządzenia — aby oszacować zgodność haseł, należy wybrać siłę hasła inną niż domyślna **urządzenia**.  
     - **Hasło jest wymagane, brak ograniczeń**
     - **Słabe elementy biometryczne** - [silne i słabe elementy biometryczne](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (zostanie otwarta witryna internetowa systemu Android).
-    - **Numeryczne** (*wartość domyślna*): hasło może się składać tylko z cyfr, takich jak `123456789`. Podaj **minimalną długość hasła**, które musi wprowadzić użytkownik (od 4 do 16 znaków).
+    - **Numeryczne** (*wartość domyślna*): Hasło może się składać tylko z cyfr, na przykład `123456789`. Podaj **minimalną długość hasła**, które musi wprowadzić użytkownik (od 4 do 16 znaków).
     - **Złożona wartość liczbowa** — powtarzające się lub kolejne cyfry, np. „1111” lub „1234”, są niedozwolone. Podaj **minimalną długość hasła**, które musi wprowadzić użytkownik (od 4 do 16 znaków).
     - **Alfabetyczne** — wymagane są litery alfabetu. Cyfry ani symbole nie są wymagane. Podaj **minimalną długość hasła**, które musi wprowadzić użytkownik (od 4 do 16 znaków).
     - **Alfanumeryczne** — obejmuje wielkie litery, małe litery i cyfry. Podaj **minimalną długość hasła**, które musi wprowadzić użytkownik (od 4 do 16 znaków).
     - **Alfanumeryczne z symbolami** — obejmuje wielkie litery, małe litery, cyfry, znaki interpunkcyjne i symbole. Wprowadź też następujące ustawienia:
     
-    W zależności od wybranego *typu hasła* dostępne są następujące ustawienia:  
-    - **Minimalna długość hasła**: podaj minimalną długość hasła (od 4 do 16 znaków).  
+    W zależności od wybranego *typ hasła* dostępne są następujące ustawienia:  
+    - **Minimalna długość hasła**: Podaj minimalną długość hasła (od 4 do 16 znaków).  
 
-    - **Wymagana liczba znaków**: podaj wymaganą liczbę znaków w haśle (od 0 do 16 znaków).
+    - **Wymagana liczba znaków**: Podaj wymaganą liczbę znaków w haśle (od 0 do 16 znaków).
 
-    - **Wymagana liczba małych liter**: podaj wymaganą liczbę małych liter w haśle (od 0 do 16 znaków).
+    - **Wymagana liczba małych liter**: Podaj wymaganą liczbę małych liter w haśle (od 0 do 16 znaków).
 
-    - **Wymagana liczba wielkich liter**: podaj wymaganą liczbę wielkich liter w haśle (od 0 do 16 znaków).
+    - **Wymagana liczba wielkich liter**: Podaj wymaganą liczbę wielkich liter w haśle (od 0 do 16 znaków).
 
-    - **Wymagana liczba znaków innych niż litery**: podaj wymaganą liczbę znaków innych niż litery w alfabecie, które muszą być zawarte w haśle (od 0 do 16 znaków).
+    - **Wymagana liczba znaków innych niż litery**: Podaj wymaganą liczbę znaków innych niż litery w alfabecie, które muszą być zawarte w haśle (od 0 do 16 znaków).
 
-    - **Wymagana liczba znaków numerycznych**: podaj wymaganą liczbę cyfr (`1`, `2`, `3` itd.) w haśle (od 0 do 16 znaków).
+    - **Wymagana liczba znaków numerycznych**: Podaj wymaganą liczbę cyfr (`1`, `2`, `3` itd.) w haśle (od 0 do 16 znaków).
     
-    - **Wymagana liczba symboli**: podaj wymaganą liczbę symboli (`&`, `#`, `%` itd.) w haśle (od 0 do 16 znaków).
+    - **Wymagana liczba symboli**: Podaj wymaganą liczbę symboli (`&`, `#`, `%` itd.) w haśle (od 0 do 16 znaków).
  
-- **Maksymalny czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**: wprowadź czas bezczynności, po którym użytkownik musi ponownie wprowadzić hasło. Opcje obejmują domyślnie *Nieskonfigurowane*i od *1 minuty* do *8 godzin*.
+- **Maksymalny czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**: wprowadź czas bezczynności, po którym użytkownik musi ponownie wprowadzić swoje hasło. Opcje obejmują domyślnie *nie skonfigurowane*i od *1 minuty* do *8 godzin*.
 
-- **Liczba dni, po których hasło wygasa**: podaj liczbę dni, po której należy zmienić hasło urządzenia (od 1 do 365). Na przykład aby wymusić zmianę hasła po upływie 60 dni, wprowadź `60`. Gdy hasło wygaśnie, użytkownicy będą monitowani o utworzenie nowego hasła.
+- **Liczba dni, po których hasło wygasa**: Podaj liczbę dni, po której należy zmienić hasło urządzenia (od 1 do 365). Na przykład aby wymusić zmianę hasła po upływie 60 dni, wprowadź `60`. Gdy hasło wygaśnie, użytkownicy będą monitowani o utworzenie nowego hasła.
 
    *Domyślnie żadna wartość nie jest skonfigurowana*.
 
-- **Wymagana liczba haseł przed ponownym użyciem starego hasła przez użytkownika**: podaj liczbę kolejnych haseł, których nie można użyć ponownie (od 1 do 24). To ustawienie można wykorzystać w celu ograniczenia użytkownikowi możliwości tworzenia wcześniej używanych haseł.  
+- **Wymagana liczba haseł przed ponownym użyciem starego hasła przez użytkownika**: Podaj liczbę kolejnych haseł, których nie można użyć ponownie (od 1 do 24). To ustawienie można wykorzystać w celu ograniczenia użytkownikowi możliwości tworzenia wcześniej używanych haseł.  
 
     *Domyślnie żadna wersja nie jest skonfigurowana*.
 
@@ -133,7 +127,7 @@ Jako administrator usługi Intune możesz użyć tych ustawień zgodności, aby 
 
 - **Szyfrowanie magazynu danych urządzenia**: 
   - **Nieskonfigurowane** (*wartość domyślna*) — ustawienie nie jest oceniane na potrzeby określenia zgodności.
-  - **Wymagaj** — Zaszyfruj magazyn danych na urządzeniach.  
+  - wybierz pozycję **Wymagaj**, aby szyfrować magazyn danych na urządzeniach.  
 
   Nie musisz konfigurować tego ustawienia, ponieważ urządzenia z rozwiązaniem Android Enterprise wymuszają szyfrowanie.
 
@@ -145,7 +139,7 @@ Jako administrator usługi Intune możesz użyć tych ustawień zgodności, aby 
   - **Nieskonfigurowane** (*wartość domyślna*) — ustawienie nie jest oceniane na potrzeby określenia zgodności.
   - **Blokuj** — urządzenia z odblokowanym dostępem do konta root (ze zdjętymi zabezpieczeniami systemu) są oznaczane jako niezgodne.  
 
-- **Wymagaj, aby urządzenie było na poziomie zagrożenia urządzenia**: Wybierz maksymalny dozwolony poziom zagrożenia urządzenia oceniany przez [usługę ochrony przed zagrożeniami mobilnymi](mobile-threat-defense.md). Urządzenia powyżej tego poziomu zagrożenia są oznaczane jako niezgodne. Aby użyć tego ustawienia, wybierz dozwolony poziom zagrożenia:
+- **Wymagaj, aby urządzenie było na poziomie zagrożenia urządzenia lub nie**: Wybierz maksymalny dozwolony poziom zagrożenia urządzenia oszacowany przez usługi [Mobile Threat](mobile-threat-defense.md). Urządzenia powyżej tego poziomu zagrożenia są oznaczane jako niezgodne. Aby użyć tego ustawienia, wybierz dozwolony poziom zagrożenia:
 
   - **Nieskonfigurowane** (*wartość domyślna*) — ustawienie nie jest oceniane na potrzeby określenia zgodności.
   - **Zabezpieczone** — ta opcja jest najbezpieczniejsza i oznacza, że urządzenie nie może mieć żadnych zagrożeń. W przypadku wykrycia na urządzeniu zagrożeń dowolnego poziomu, zostanie ono ocenione jako niezgodne.
@@ -163,7 +157,7 @@ Jako administrator usługi Intune możesz użyć tych ustawień zgodności, aby 
   - **Nieskonfigurowane** (*wartość domyślna*) — ustawienie nie jest oceniane na potrzeby określenia zgodności.
   - **Wymagaj** — wymagane jest, aby aktualny dostawca zabezpieczeń mógł chronić urządzenie przed znanymi lukami w zabezpieczeniach. 
   
-- **Zaświadczenie urządzeń SafetyNet**: wprowadź poziom [zaświadczenia rozwiązania SafetyNet](https://developer.android.com/training/safetynet/attestation.html), którego warunki muszą zostać spełnione. Dostępne opcje:
+- **Zaświadczanie urządzeń SafetyNet**: wprowadź poziom [zaświadczenia rozwiązania SafetyNet](https://developer.android.com/training/safetynet/attestation.html), którego warunki muszą zostać spełnione. Dostępne opcje:
   - **Nieskonfigurowane** (*wartość domyślna*) — ustawienie nie jest oceniane na potrzeby określenia zgodności.
   - **Sprawdź podstawową integralność**
   - **Sprawdź podstawową integralność i certyfikowane urządzenia**
@@ -175,11 +169,11 @@ Jako administrator usługi Intune możesz użyć tych ustawień zgodności, aby 
 
 #### <a name="operating-system-version"></a>Wersja systemu operacyjnego
 
-- **Minimalna wersja systemu operacyjnego**: jeśli urządzenie nie spełnia wymagań dotyczących minimalnej wersji systemu operacyjnego, będzie zgłaszane jako niezgodne. Zostanie wyświetlony link ze wskazówkami dotyczącymi uaktualniania. Użytkownik końcowy może uaktualnić swoje urządzenie, a następnie uzyskać dostęp do zasobów organizacji.
+- **Minimalna wersja systemu operacyjnego**: Jeśli urządzenie nie spełnia wymagań dotyczących minimalnej wersji systemu operacyjnego, będzie zgłaszane jako niezgodne. Zostanie wyświetlony link ze wskazówkami dotyczącymi uaktualniania. Użytkownik końcowy może uaktualnić swoje urządzenie, a następnie uzyskać dostęp do zasobów organizacji.
 
   *Domyślnie żadna wersja nie jest skonfigurowana*.
 
-- **Maksymalna wersja systemu operacyjnego**: jeśli urządzenie korzysta z wersji systemu operacyjnego nowszej niż określona w regule, powoduje to zablokowanie dostępu do zasobów firmy. Użytkownik końcowy zostanie poproszony o kontakt z administratorem IT. Urządzenie nie będzie mogło uzyskiwać dostępu do zasobów organizacji, dopóki reguła nie zostanie zmieniona tak, aby dopuszczać daną wersję systemu operacyjnego.
+- **Maksymalna wersja systemu operacyjnego**: Jeśli urządzenie korzysta z wersji systemu operacyjnego nowszej niż określona w regule, powoduje to zablokowanie dostępu do zasobów organizacji. Użytkownik końcowy zostanie poproszony o kontakt z administratorem IT. Urządzenie nie będzie mogło uzyskiwać dostępu do zasobów organizacji, dopóki reguła nie zostanie zmieniona tak, aby dopuszczać daną wersję systemu operacyjnego.
 
   *Domyślnie żadna wersja nie jest skonfigurowana*.
 
@@ -194,26 +188,26 @@ Jako administrator usługi Intune możesz użyć tych ustawień zgodności, aby 
 - **Wymagany typ hasła**: określ, czy w skład hasła powinny wchodzić tylko cyfry, czy też ma być wymagana kombinacja cyfr i innych znaków. Dostępne opcje:
   - **Ustawienie domyślne urządzenia**
   - **Zabezpieczenia biometryczne na niskim poziomie**
-  - **Co najmniej numeryczne** (*wartość domyślna*): podaj **minimalną długość hasła** wprowadzanego przez użytkownika (od 4 do 16 znaków).
-  - **Numeryczne złożone**: podaj **minimalną długość hasła** wprowadzanego przez użytkownika (od 4 do 16 znaków).
-  - **Co najmniej alfabetyczne**: podaj **minimalną długość hasła** wprowadzanego przez użytkownika (od 4 do 16 znaków).
-  - **Co najmniej alfanumeryczne**: podaj **minimalną długość hasła** wprowadzanego przez użytkownika (od 4 do 16 znaków).
-  - **Co najmniej alfanumeryczne z symbolami**: podaj **minimalną długość hasła** wprowadzanego przez użytkownika (od 4 do 16 znaków).
+  - **Co najmniej numeryczne** (*wartość domyślna*): Podaj **minimalną długość hasła**, które musi wprowadzić użytkownik (od 4 do 16 znaków).
+  - **Złożona wartość liczbowa**: Podaj **minimalną długość hasła**, które musi wprowadzić użytkownik (od 4 do 16 znaków).
+  - **Co najmniej alfabetyczne**: Podaj **minimalną długość hasła**, które musi wprowadzić użytkownik (od 4 do 16 znaków).
+  - **Co najmniej alfanumeryczne**: Podaj **minimalną długość hasła**, które musi wprowadzić użytkownik (od 4 do 16 znaków).
+  - **Co najmniej alfanumeryczne z symbolami**: Podaj **minimalną długość hasła**, które musi wprowadzić użytkownik (od 4 do 16 znaków).
 
-  W zależności od wybranego *typu hasła* dostępne są następujące ustawienia:  
-  - **Maksymalny czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**: wprowadź czas bezczynności, po którym użytkownik musi ponownie wprowadzić hasło. Opcje obejmują domyślnie *Nieskonfigurowane*i od *1 minuty* do *8 godzin*.
+  W zależności od wybranego *typ hasła* dostępne są następujące ustawienia:  
+  - **Maksymalny czas braku aktywności (w minutach), zanim będzie wymagane podanie hasła**: wprowadź czas bezczynności, po którym użytkownik musi ponownie wprowadzić swoje hasło. Opcje obejmują domyślnie *nie skonfigurowane*i od *1 minuty* do *8 godzin*.
 
-  - **Liczba dni, po których hasło wygasa**: podaj liczbę dni, po której należy zmienić hasło urządzenia (od 1 do 365). Na przykład aby wymusić zmianę hasła po upływie 60 dni, wprowadź `60`. Gdy hasło wygaśnie, użytkownicy będą monitowani o utworzenie nowego hasła.
+  - **Liczba dni, po których hasło wygasa**: Podaj liczbę dni, po której należy zmienić hasło urządzenia (od 1 do 365). Na przykład aby wymusić zmianę hasła po upływie 60 dni, wprowadź `60`. Gdy hasło wygaśnie, użytkownicy będą monitowani o utworzenie nowego hasła.
 
-  - **Minimalna długość hasła**: podaj minimalną długość hasła (od 4 do 16 znaków). 
+  - **Minimalna długość hasła**: Podaj minimalną długość hasła (od 4 do 16 znaków). 
   
-  - **Liczba poprzednich haseł, których nie można użyć ponownie**: wprowadź liczbę ostatnich haseł, których ponowne użycie nie jest możliwe. To ustawienie można wykorzystać w celu ograniczenia użytkownikowi możliwości tworzenia wcześniej używanych haseł.
+  - **Liczba poprzednich haseł, których nie można użyć ponownie**: wprowadź liczbę ostatnich haseł, których nie można użyć ponownie. To ustawienie można wykorzystać w celu ograniczenia użytkownikowi możliwości tworzenia wcześniej używanych haseł.
 
 #### <a name="encryption"></a>Szyfrowanie
 
 - **Szyfrowanie magazynu danych urządzenia**: 
   - **Nieskonfigurowane** (*wartość domyślna*) — ustawienie nie jest oceniane na potrzeby określenia zgodności.
-  - **Wymagaj** — Zaszyfruj magazyn danych na urządzeniach.  
+  - wybierz pozycję **Wymagaj**, aby szyfrować magazyn danych na urządzeniach.  
 
   Nie musisz konfigurować tego ustawienia, ponieważ urządzenia z rozwiązaniem Android Enterprise wymuszają szyfrowanie.
 
@@ -221,7 +215,7 @@ Jako administrator usługi Intune możesz użyć tych ustawień zgodności, aby 
 
 - **Blokuj aplikacje z nieznanych źródeł**: 
   - **Nieskonfigurowane** (*wartość domyślna*) — ustawienie nie jest oceniane na potrzeby określenia zgodności.
-  - Blokuj **blokowanie** urządzeń z **zabezpieczeniami** > źródła z włączonymi **źródłami** (*obsługiwane w systemie Android 4,0 za pomocą systemu Android 7. x). Nieobsługiwane przez Android 8.0 i nowsze*).  
+  - **Blokuj** blokowanie urządzeń z **zabezpieczeniami** > **nieznanych źródeł** włączonych źródeł (*obsługiwane w systemie Android 4,0 za pomocą systemu Android 7. x). Nieobsługiwane w systemie Android 8,0 i nowszych*).  
 
   Aby ładować aplikacje bezpośrednio, nieznane źródła muszą być dozwolone. W przypadku braku bezpośredniego ładowania aplikacji Android ustaw dla tej funkcji wartość **Blokuj**, aby włączyć te zasady zgodności.
 
@@ -244,9 +238,9 @@ Jako administrator usługi Intune możesz użyć tych ustawień zgodności, aby 
 
   Nie musisz konfigurować tego ustawienia, ponieważ debugowanie USB jest domyślnie wyłączone na urządzeniach z rozwiązaniem Android Enterprise.
 
-- **Minimalny poziom poprawki bezpieczeństwa** — wybierz poziom najstarszej poprawki bezpieczeństwa, która może znajdować się w urządzeniu. Urządzenia, które nie mają co najmniej tego poziomu poprawek, są niezgodne. Data musi być wprowadzona w formacie RRRR-MM-DD.
+- **Minimalny poziom poprawki bezpieczeństwa**:  wybierz poziom najstarszej poprawki bezpieczeństwa, która może znajdować się w urządzeniu. Urządzenia, które nie mają co najmniej tego poziomu poprawek, są niezgodne. Data musi być wprowadzona w formacie RRRR-MM-DD.
 
-  *Domyślnie żadna Data nie jest skonfigurowana*.
+  *Domyślnie żadna wartość nie jest skonfigurowana*.
 
 ## <a name="next-steps"></a>Następne kroki
 
