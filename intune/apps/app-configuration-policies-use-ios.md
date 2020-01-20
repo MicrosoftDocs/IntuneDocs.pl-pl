@@ -108,7 +108,7 @@ W przypadku urządzeń z systemem iOS używaj następujących par klucz/wartoś�
 | **Wartości** | <ul><li>**Włączone**: jedynym dozwolonym kontem jest zarządzane konto użytkownika zdefiniowane za pomocą klucza [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).</li><li>**Wyłączone** (lub dowolna wartość, która nie stanowi dopasowania do opcji **Włączone** bez uwzględniania wielkości liter): każde konto jest dozwolone.</li></ul> |.
 
    > [!NOTE]
-   > W przypadku zezwalania wyłącznie na skonfigurowane konta organizacji z obsługą wielu tożsamości należy użyć usługi OneDrive dla systemu iOS 10.34 lub nowszej wersji, programu Outlook dla systemu iOS 2.99.0 lub nowszej wersji bądź programu Edge dla systemu iOS 44.8.7 lub nowszej wersji, a w aplikacji należy zastosować [zasady ochrony aplikacji usługi Intune](app-protection-policy.md).
+   > W przypadku zezwalania wyłącznie na skonfigurowane konta organizacji z obsługą wielu tożsamości należy użyć usługi OneDrive dla systemu iOS 10.34 lub nowszej wersji, programu Outlook dla systemu iOS 2.99.0 lub nowszej wersji bądź programu Microsoft Edge dla systemu iOS 44.8.7 lub nowszej wersji, a w aplikacji należy zastosować [zasady ochrony aplikacji usługi Intune](app-protection-policy.md).
 
 ## <a name="enter-xml-data"></a>Wprowadzanie danych XML
 

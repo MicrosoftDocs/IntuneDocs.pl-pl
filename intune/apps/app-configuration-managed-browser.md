@@ -135,7 +135,7 @@ Logowanie jednokrotne wymaga, aby urządzenie było zarejestrowane przez aplikac
 1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Wybierz kolejno pozycje **Aplikacje** > **Zasady konfiguracji aplikacji** > **Dodaj** > **Aplikacje zarządzane**.
 3. Na stronie **Podstawowe** w okienku **Tworzenie zasad konfiguracji aplikacji** wypełnij pola **Nazwa** i **Opis** (opcjonalnie) odnoszące się do ustawień konfiguracji aplikacji.
-4. Wybierz kolejno pozycje **Select the public app** (Wybierz aplikację publiczną) i **Managed Browser** i/lub **Edge** dla systemu iOS, Android lub dla obu tych systemów.
+4. Wybierz kolejno pozycje **Select the public app** (Wybierz aplikację publiczną) i **Managed Browser** i/lub **Micrisift Edge** dla systemu iOS, Android lub dla obu tych systemów.
 5. Kliknij pozycję **Wybierz**, aby wrócić do okienka **Tworzenie zasad konfiguracji aplikacji**.
 6. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Ustawienia**.
 7. Na stronie **Ustawienia** należy zdefiniować pary kluczy i wartości do dostarczania konfiguracji dla aplikacji. Informacje na temat różnych par kluczy i wartości, które można zdefiniować, znajdują się w dalszych sekcjach tego artykułu.
