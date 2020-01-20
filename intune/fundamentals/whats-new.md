@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 01/09/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b2bb9d921f30e343b309be60438f5318d7c66518
-ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
+ms.openlocfilehash: 311941c3981e5883d392359dc0919bb85156c4be
+ms.sourcegitcommit: fb72b19986f34907d228c856d2e6949751ec02a1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75692258"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75920090"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co nowego w usłudze Microsoft Intune
 
@@ -62,6 +62,15 @@ Dowiedz się co tydzień, co nowego w usłudze Microsoft Intune. Możesz tu rów
 #### <a name="smime-support-for-microsoft-outlook-for-ios---2669398---"></a>Obsługa protokołu S/MIME dla programu Microsoft Outlook w systemie iOS<!-- 2669398 -->
 Usługa Intune obsługuje dostarczanie certyfikatów podpisywania S/MIME i certyfikatów szyfrowania, które mogą być używane z programem Outlook dla systemu iOS na urządzeniach z systemem iOS. Aby uzyskać więcej informacji, zobacz temat [Sensitivity labeling and protection in Outlook for iOS and Android](https://aka.ms/omsmime) (Etykietowanie i ochrona poufności w programie Outlook dla systemów iOS i Android).
 
+#### <a name="cache-win32-app-content-using-microsoft-connected-cache-server---6030314---"></a>Buforowanie zawartości aplikacji Win32 przy użyciu serwera Microsoft Connected Cache<!-- 6030314 -->
+Możesz zainstalować serwer Microsoft Connected Cache w punktach dystrybucji programu Configuration Manager, aby buforować zawartość aplikacji Win32 w usłudze Intune. Aby uzyskać więcej informacji, zobacz [Serwer Microsoft Connected Cache w programie Configuration Manager — obsługa aplikacji Win32 w usłudze Intune](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/microsoft-connected-cache#bkmk_intune).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="role-based-access-control"></a>Kontrola dostępu oparta na rolach
+
+#### <a name="windows-10-administrative-templates-admx-profiles-now-support-scope-tags---5137390-wnready--"></a>Profile szablonów administracyjnych systemu Windows 10 (ADMX) obsługują teraz tagi zakresu <!--5137390 wnready-->
+Możesz teraz przypisywać tagi zakresu do profilów szablonów administracyjnych (ADMX). W tym celu przejdź do pozycji **Intune** > **Urządzenia** > **Profile konfiguracji** > wybierz profil szablonów administracyjnych na liście > **Właściwości** > **Tagi zakresu**. Aby uzyskać więcej informacji na temat tagów zakresu, zobacz sekcję [Przypisywanie tagów zakresu do innych obiektów](../fundamentals/scope-tags.md#assign-scope-tags-to-other-objects).
+
 <!-- ########################## -->
 ## <a name="week-of-december-30-2019"></a>Tydzień 30 grudnia 2019 r.
 
@@ -71,8 +80,8 @@ Usługa Intune obsługuje dostarczanie certyfikatów podpisywania S/MIME i certy
 #### <a name="retrieve-personal-recovery-key-from-mem-encrypted-macos-devices---4851745---"></a>Pobieranie osobistego klucza odzyskiwania z urządzeń z systemem macOS zaszyfrowanych przy użyciu programu MEM<!-- 4851745 -->
 Użytkownicy końcowi mogą pobrać osobisty klucz odzyskiwania (klucz FileVault) przy użyciu aplikacji Portal firmy dla systemu iOS. Urządzenie, które ma osobisty klucz odzyskiwania, musi zostać zarejestrowane w usłudze Intune i zaszyfrowane za pomocą usługi FileVault w usłudze Intune. Korzystając z aplikacji Portal firmy systemu iOS, użytkownik końcowy może pobrać osobisty klucz odzyskiwania na zaszyfrowanym urządzeniu z systemem macOS, klikając pozycję **Pobierz klucz odzyskiwania**. Możesz również pobrać klucz odzyskiwania z usługi Intune, wybierając pozycję **Urządzenia** > *zaszyfrowane i zarejestrowane urządzenie z systemem macOS* > **Pobierz klucz odzyskiwania**. Aby uzyskać więcej informacji na temat programu FileVault, zobacz [Szyfrowanie za pomocą programu FileVault w systemie macOS](~/protect/encrypt-devices.md#filevault-encryption-for-macos).
 
-#### <a name="ios-user-licensed-vpp-apps---5619268---"></a>Aplikacje programu VPP licencjonowane przez użytkownika systemu iOS<!-- 5619268 -->
-W przypadku urządzeń z systemem iOS zarejestrowanych przez użytkownika użytkownicy końcowi nie będą już widzieć aplikacji programu VPP licencjonowanych na urządzeniu, które zostały wdrożone jako dostępne. Będą oni jednak nadal widzieć wszystkie aplikacje programu VPP licencjonowane przez użytkownika w aplikacji Portal firmy. Aby uzyskać więcej informacji o aplikacjach programu VPP, zobacz [Jak w usłudze Microsoft Intune zarządzać aplikacjami dla systemów iOS i macOS, które zostały zakupione w ramach programu zakupów zbiorczych firmy Apple](~/apps/vpp-apps-ios.md).
+#### <a name="ios-and-ipados-user-licensed-vpp-apps---5619268---"></a>Aplikacje programu VPP dla systemu iOS i iPadOS licencjonowane przez użytkownika<!-- 5619268 -->
+W przypadku urządzeń z systemem iOS i iPadOS zarejestrowanych przez użytkownika użytkownicy końcowi nie będą już widzieć nowo utworzonych aplikacji programu VPP licencjonowanych na urządzeniu, które zostały wdrożone jako dostępne. Będą oni jednak nadal widzieć wszystkie aplikacje programu VPP licencjonowane przez użytkownika w aplikacji Portal firmy. Aby uzyskać więcej informacji o aplikacjach programu VPP, zobacz [Jak w usłudze Microsoft Intune zarządzać aplikacjami dla systemów iOS i macOS, które zostały zakupione w ramach programu zakupów zbiorczych firmy Apple](~/apps/vpp-apps-ios.md).
 
 <!-- ########################## -->
 ## <a name="week-of-december-23-2019"></a>Tydzień 23 grudnia 2019 r.
@@ -181,6 +190,9 @@ Ulepszyliśmy środowisko na urządzeniu udostępnionym z wieloma użytkownikami
 
 #### <a name="use-pkcs-certificate-profiles-to-provision-devices-with-certificates---2317124-2317130-2317139-2340517-2340528-2340529----"></a>Używanie profilów certyfikatów PKCS do aprowizowania urządzeń z certyfikatami<!-- 2317124, 2317130, 2317139, 2340517, 2340528, 2340529  -->
 Profile certyfikatów PKCS umożliwiają teraz wystawianie certyfikatów *urządzeń* z systemem Android for Work, iOS i Windows, jeśli zostały one skojarzone z profilami, takimi jak profile dotyczące sieci Wi-Fi i VPN. Wcześniej te trzy platformy obsługiwały tylko certyfikaty oparte na użytkownikach, a obsługa oparta na urządzeniach była ograniczona do systemu macOS.
+
+> [!NOTE]
+> Profile certyfikatów PKCS nie są obsługiwane przy użyciu profilów sieci Wi-Fi. W zamian użyj profilów certyfikatów SCEP w przypadku korzystania z [typu EAP](../configuration/wi-fi-settings-windows.md#enterprise-profile).
 
 Aby używać certyfikatu opartego na urządzeniu, podczas [tworzenia profilu certyfikatu PKCS](../protect/certficates-pfx-configure.md#create-a-pkcs-certificate-profile) dla obsługiwanych platform wybierz pozycję **Ustawienia**. Będziesz teraz widzieć ustawienie **Typ certyfikatu**, który obsługuje opcje dla urządzenia lub użytkownika.
 
