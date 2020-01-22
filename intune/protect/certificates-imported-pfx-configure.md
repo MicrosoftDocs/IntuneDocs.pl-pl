@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c33f4429c86160bbf180c8102e2dc7532bbd80e
-ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
+ms.openlocfilehash: 1bad86e561c8695d58296c8f473815a203ef210a
+ms.sourcegitcommit: 665be113b593c3bc7d46b99599e720f781037dcf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75886018"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76258493"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Konfigurowanie zaimportowanych certyfikatów PKCS i korzystanie z nich w usłudze Intune
 
@@ -134,7 +134,7 @@ Moduł PowerShell zapewnia metody tworzenia kluczy za pomocą kryptografii syste
    > [!TIP]
    > Użytego dostawcę należy wybrać ponownie po zaimportowaniu certyfikatów PFX. Możesz użyć **dostawcy magazynu kluczy funkcji oprogramowania Microsoft**, choć obsługiwani są również inni dostawcy. Podano również przykładową nazwę klucza; możesz użyć innej.
 
-   Jeśli chcesz zaimportować certyfikat ze stacji roboczej, możesz wyeksportować klucz do pliku za pomocą następującego polecenia: `Export-IntunePublicKey -ProviderName "<ProviderName>" -KeyName "<KeyName>" -FilePath "<File path to write to>"`
+   Jeśli chcesz zaimportować certyfikat ze stacji roboczej, możesz wyeksportować klucz do pliku za pomocą następującego polecenia: `Export-IntunePublicKey -ProviderName "<ProviderName>" -KeyName "<KeyName>" -FilePath "<File path\Filename.PFX>"`
 
    Klucz prywatny należy zaimportować na serwer, na którym zainstalowano Łącznik certyfikatów PFX dla usługi Microsoft Intune, aby można było pomyślnie przetworzyć zaimportowane certyfikaty PFX.
 

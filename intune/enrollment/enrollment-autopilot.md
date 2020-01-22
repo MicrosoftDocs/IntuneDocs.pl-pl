@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e5a16a8be6fcce8c6c34d3ddf8979b17eccddd1
-ms.sourcegitcommit: fb72b19986f34907d228c856d2e6949751ec02a1
+ms.openlocfilehash: cb98ee2974cefeebb90689207388d5fe9229dad2
+ms.sourcegitcommit: 52475fcd8d05d2f6b858d780ebb3d88eaadb0849
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75920121"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76036661"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Rejestrowanie urządzeń z systemem Windows w usłudze Intune za pomocą rozwiązania Windows Autopilot  
 Rozwiązanie Windows Autopilot upraszcza rejestrowanie urządzeń w usłudze Intune. Tworzenie i konserwacja niestandardowych obrazów systemów operacyjnych zajmuje dużo czasu. Trzeba również poświęcić czas na stosowanie tych niestandardowych obrazów systemów operacyjnych na nowych urządzeniach w celu przygotowania ich do użycia przed przekazaniem użytkownikom końcowym. Dzięki usłudze Microsoft Intune i rozwiązaniu Autopilot można przekazać nowe urządzenia użytkownikom końcowym bez konieczności tworzenia, konserwowania i stosowania niestandardowych obrazów systemów operacyjnych do urządzeń. Jeśli do zarządzania urządzeniami z rozwiązaniem Autopilot używasz usługi Intune, możesz zarządzać zasadami, profilami, aplikacjami i innymi funkcjami po zarejestrowaniu tych urządzeń. Aby zapoznać się z korzyściami, scenariuszami i wymaganiami wstępnymi, zobacz [Przegląd rozwiązania Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -37,7 +37,7 @@ Istnieją cztery typy wdrażania w rozwiązaniu Autopilot:
 ## <a name="prerequisites"></a>Wymagania wstępne
 - [Subskrypcja usługi Intune](../fundamentals/licenses.md)
 - [Włączona funkcja automatycznej rejestracji w systemie Windows](windows-enroll.md#enable-windows-10-automatic-enrollment)
-- [Subskrypcja usługi Azure Active Directory — wersja Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](http://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
+- [Subskrypcja usługi Azure Active Directory — wersja Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
 
 ## <a name="how-to-get-the-csv-for-import-in-intune"></a>Jak uzyskać plik CSV do zaimportowania w usłudze Intune
 

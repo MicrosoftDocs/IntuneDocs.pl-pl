@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 75a875fc3ff11eb1e3befad425c16a710544f781
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: fdd97e69c97df5a266e147381d94b3d4419bab34
+ms.sourcegitcommit: 52475fcd8d05d2f6b858d780ebb3d88eaadb0849
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72509878"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76036570"
 ---
 # <a name="quickstart-create-a-user-in-intune-and-assign-them-a-license"></a>Szybki start: Tworzenie użytkownika w usłudze Intune i przypisywanie do niego licencji
 
@@ -50,11 +50,11 @@ Użytkownicy, którzy chcą zarejestrować się w zarządzaniu urządzeniami w u
 
 ## <a name="assign-a-license-to-the-user"></a>Przypisywanie użytkownikowi licencji
 
-Po utworzeniu użytkownika należy użyć [centrum administracyjnego platformy Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854), aby przypisać do niego licencję usługi Intune. Jeśli nie przypiszesz licencji do użytkownika, nie będzie on mógł zarejestrować urządzenia w usłudze Intune. 
+Po utworzeniu użytkownika należy użyć [centrum administracyjnego platformy Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=698854), aby przypisać do niego licencję usługi Intune. Jeśli nie przypiszesz licencji do użytkownika, nie będzie on mógł zarejestrować urządzenia w usłudze Intune. 
 
 Aby przypisać licencję usługi Intune do użytkownika:
 
-1. Zaloguj się do [centrum administracyjnego platformy Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) przy użyciu tych samych poświadczeń co użyte do zalogowania się do usługi Intune.
+1. Zaloguj się do [centrum administracyjnego platformy Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=698854) przy użyciu tych samych poświadczeń co użyte do zalogowania się do usługi Intune.
 2. Wybierz pozycję **Użytkownicy** > **Aktywni użytkownicy** > i wybierz utworzonego przed chwilą użytkownika.
 3. Obok pozycji **Licencje produktów** wybierz pozycję **Edytuj**.
 4. W obszarze **Lokalizacja** wybierz lokalizację dla użytkownika.
@@ -68,7 +68,7 @@ W przypadku nowego aktywnego użytkownika usługi Intune będzie wyświetlana in
 
 ## <a name="clean-up-resources"></a>Oczyszczanie zasobów
 
-Jeśli już nie potrzebujesz tego użytkownika, możesz go usunąć, przechodząc do [centrum administracyjnego platformy Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) i wybierając pozycję **Użytkownicy** > **Aktywni użytkownicy** > *wybierz użytkownika z listy* > **Usuń użytkownika** > **Usuń użytkownika** > **Potwierdź zmiany** > **Zamknij**.
+Jeśli już nie potrzebujesz tego użytkownika, możesz go usunąć, przechodząc do [centrum administracyjnego platformy Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=698854) i wybierając pozycję **Użytkownicy** > **Aktywni użytkownicy** > *wybierz użytkownika z listy* > **Usuń użytkownika** > **Usuń użytkownika** > **Potwierdź zmiany** > **Zamknij**.
 
 ## <a name="next-steps"></a>Następne kroki
 
