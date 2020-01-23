@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/19/2019
+ms.date: 01/15/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 443e1e2fff2a0c4641d3446bf72e455cc92ce784
-ms.sourcegitcommit: ec69e7ccc6e6183862a48c1b03ca6a3bf573f354
+ms.openlocfilehash: d42651b11891f3d830c0d90e70a9ecd98ea5bfb7
+ms.sourcegitcommit: 52475fcd8d05d2f6b858d780ebb3d88eaadb0849
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74907291"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76036615"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Wysyłanie powiadomień niestandardowych w usłudze Intune  
 
@@ -89,13 +89,13 @@ Usługa Intune nie śledzi wysyłanych powiadomień niestandardowych, a urządze
 
 ## <a name="send-a-custom-notification-to-a-single-device"></a>Wysyłanie powiadomień niestandardowych do pojedynczego urządzenia  
 
-1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) przy użyciu konta z uprawnieniami do tworzenia i wysyłania powiadomień, a następnie przejdź do pozycji **Urządzenia** > **Wszystkie urządzenia**.  
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) przy użyciu konta z uprawnieniami do tworzenia i wysyłania powiadomień, a następnie przejdź do pozycji **Urządzenia** > **Wszystkie urządzenia**.
 
-2. Wybierz urządzenie, do którego chcesz wysłać powiadomienie.  
+2. Kliknij dwukrotnie nazwę urządzenia zarządzanego, do którego chcesz wysłać powiadomienie, aby otworzyć stronę *Przegląd*.
 
-3. Na stronie **Omówienie** dla urządzeń wybierz opcję **…** (wielokropek) w prawym górnym rogu strony.  
+3. Na stronie **Przegląd** wybierz akcję **Wyślij powiadomienie niestandardowe**, aby otworzyć okienko *Wyślij powiadomienie niestandardowe*. Jeśli ta opcja jest niedostępna, kliknij przycisk **...** (wielokropek) w prawym górnym rogu strony, a następnie wybierz pozycję **Wyślij powiadomienie niestandardowe**.
 
-4. Wybierz akcję urządzenia **Wyślij powiadomienie niestandardowe**, aby otworzyć okienko *Wyślij powiadomienie niestandardowe*, w którym można określić następujące szczegóły komunikatu:  
+4. W okienku **Wyślij powiadomienie niestandardowe** określ następujące szczegóły komunikatu:  
 
    - **Tytuł** — określ tytuł powiadomienia. Tytuły mogą zawierać maksymalnie 50 znaków.  
    - **Treść** — wpisz komunikat. Komunikaty mogą zawierać maksymalnie 500 znaków.  

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dc618f2502647ba33a16cff4305b9f4671e05996
-ms.sourcegitcommit: fc4b38660129d615068f34ad4b96b900d73f7b53
+ms.openlocfilehash: d87a4b5d46a5f0d40cebe3dbcaff211ff508d667
+ms.sourcegitcommit: 822a70c61f5d644216ccc401b8e8949bc39e8d4a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74558184"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76125314"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Wdrażanie urządzeń przyłączonych do hybrydowej usługi Azure AD przy użyciu usługi Intune i rozwiązania Windows Autopilot
 Za pomocą usługi Intune i rozwiązania Windows Autopilot można skonfigurować urządzenia przyłączone do hybrydowej usługi Azure Active Directory (Azure AD). Aby to zrobić, wykonaj kroki opisane w tym artykule.
@@ -209,17 +209,30 @@ Zmiana stanu urządzenia z wartości *Nieprzypisane* do wartości *Przypisywanie
 ## <a name="create-and-assign-a-domain-join-profile"></a>Tworzenie i przypisywanie profilu przyłączania do domeny
 
 1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **Profile konfiguracji** > **Utwórz profil**.
-1. Wprowadź następujące właściwości:
+2. Wprowadź następujące właściwości:
    - **Nazwa**: Wprowadź opisową nazwę nowego profilu.
    - **Opis**: Wprowadź opis profilu.
    - **Platforma**: Wybierz pozycję **Windows 10 i nowsze**.
    - **Typ profilu**: Wybierz pozycję **Dołączanie do domeny (wersja zapoznawcza)** .
-1. Wybierz pozycję **Ustawienia**, a następnie podaj wartości w polach **Prefiks nazwy komputera**, **Nazwa domeny** i (opcjonalnie) **Jednostka organizacyjna** w [formacie DN](https://docs.microsoft.com/windows/desktop/ad/object-names-and-identities#distinguished-name). 
+3. Kliknij **Ustawienia**, a następnie wypełnij pola **Prefiks nazwy komputera** i **Nazwa domeny**.
+4. (Opcjonalnie) Wypełnij pole **Jednostka organizacyjna** w [formacie DN](https://docs.microsoft.com/windows/desktop/ad/object-names-and-identities#distinguished-name). Dostępne opcje:
+   - Podaj jednostkę organizacyjną z kontrolą delegowaną do komputera z systemem Windows Server 2016, na którym działa łącznik usługi Intune.
+   - Podaj jednostkę organizacyjną z kontrolą delegowaną do komputerów głównych w lokalnym wdrożeniu usługi Active Directory.
+   - Jeśli pole pozostanie puste, obiekt komputera zostanie utworzony w domyślnym kontenerze usługi Active Directory — CN (komputery), jeśli nigdy nie [był on zmieniany](https://support.microsoft.com/en-us/help/324949/redirecting-the-users-and-computers-containers-in-active-directory-dom).
+   
+   Oto kilka prawidłowych przykładów:
+   - OU=Level 1,OU=Level2,DC=contoso,DC=com
+   - OU=Mine,DC=contoso,DC=com
+   
+   Te przykłady są z kolei nieprawidłowe:
+   - CN=Computers,DC=contoso,DC=com (nie można określić kontenera — zamiast tego należy pozostawić pustą wartość, aby użyć wartości domyślnej dla domeny)
+   - OU=Mine (domenę należy określić domenę przy użyciu atrybutów DC=)
+     
    > [!NOTE]
    > Nie używaj znaków cudzysłowu wokół wartości w polu **Jednostka organizacyjna**.
-1. Wybierz pozycje **OK** > **Utwórz**.  
+5. Wybierz pozycje **OK** > **Utwórz**.  
     Profil zostanie utworzony i wyświetlony na liście.
-1. Aby przypisać ten profil, wykonaj kroki przedstawione w części [Przypisywanie profilu urządzenia](../configuration/device-profile-assign.md#assign-a-device-profile) i przypisz profil do tej samej grupy co użyta w kroku [Tworzenie grupy urządzeń](windows-autopilot-hybrid.md#create-a-device-group)
+6. Aby przypisać ten profil, wykonaj kroki przedstawione w części [Przypisywanie profilu urządzenia](../configuration/device-profile-assign.md#assign-a-device-profile) i przypisz profil do tej samej grupy co użyta w kroku [Tworzenie grupy urządzeń](windows-autopilot-hybrid.md#create-a-device-group)
    - Wdrażanie wielu profilów przyłączania do domeny
    
      a. Utwórz grupę dynamiczną, która zawiera wszystkie Twoje urządzenia rozwiązania Autopilot z określonym profilem wdrażania rozwiązania Autopilot, wprowadzając polecenie (device.enrollmentProfileName -eq "Nazwa profilu rozwiązania Autopilot"). 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ab5e5d3e645410b876a5d3d0be0eafed9c790780
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 831a22dfb6eebfe74b9886a1c83560f68a11c04e
+ms.sourcegitcommit: 52475fcd8d05d2f6b858d780ebb3d88eaadb0849
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72502651"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76036589"
 ---
 # <a name="manage-license-agreements-for-windows-pc-software-in-microsoft-intune"></a>Zarządzanie umowami licencyjnymi na oprogramowanie na komputerze z systemem Windows w usłudze Microsoft Intune
 
@@ -51,7 +51,7 @@ Ponadto możesz generować raporty, które zawierają liczby instalacji i licenc
 > Obszar roboczy **Licencje** zostanie wyświetlony w konsoli administratora dopiero po rozpoczęciu zarządzania co najmniej jednym komputerem z systemem Windows przy użyciu klienta komputerowego usługi Intune dla systemu Windows.
 
 ## <a name="add-microsoft-volume-licensing-agreements"></a>Dodawanie umów w ramach licencjonowania zbiorowego firmy Microsoft
-Umowy licencjonowania zbiorowego usługi Intune zawierają informacje o licencji na oprogramowanie, które zostało zakupione w ramach umów licencjonowania zbiorowego firmy Microsoft. Możesz dodać umowy licencjonowania zbiorowego firmy Microsoft do usługi Intune, podając dopasowane pary numerów umów. Numery umowy lub autoryzacji muszą być zgodne z poprawnymi numerami licencji lub rejestracji. Pary numerów umów są uzyskiwane podczas zakupu umów licencyjnych w [Centrum usługi licencjonowania zbiorowego firmy Microsoft (VLSC)](http://go.microsoft.com/fwlink/?LinkID=223842).
+Umowy licencjonowania zbiorowego usługi Intune zawierają informacje o licencji na oprogramowanie, które zostało zakupione w ramach umów licencjonowania zbiorowego firmy Microsoft. Możesz dodać umowy licencjonowania zbiorowego firmy Microsoft do usługi Intune, podając dopasowane pary numerów umów. Numery umowy lub autoryzacji muszą być zgodne z poprawnymi numerami licencji lub rejestracji. Pary numerów umów są uzyskiwane podczas zakupu umów licencyjnych w [Centrum usługi licencjonowania zbiorowego firmy Microsoft (VLSC)](https://go.microsoft.com/fwlink/?LinkID=223842).
 
 1. W [konsoli administratora usługi Microsoft Intune](https://admin.manage.microsoft.com/) wybierz pozycję **Licencje**.
 
@@ -77,11 +77,11 @@ Umowy licencjonowania zbiorowego usługi Intune zawierają informacje o licencji
 
         Ten plik możesz utworzyć przez dodanie par umów do pliku tekstowego w jednym z następujących formatów w zależności od typu organizacji zarejestrowanego w centrum VLSC. W jednym wierszu może znajdować się jedna para numerów umowy.
 
-        - **Klienci programu Open Value:** *numer umowy*, *powtórzony numer umowy*, *nazwa umowy*
+        - **Klienci programu Open Value:** *Numer umowy*, *powtórzony numer umowy*, *nazwa umowy*
 
-        - **Klienci programu Open:** *numer autoryzacji*, *powiązany numer licencji*, *nazwa umowy*
+        - **Klienci programu Open:** *Numer autoryzacji*, *powiązany numer licencji*, *nazwa umowy*
 
-        - **Klienci z umowami Select i Enterprise:** *numer umowy*, *powiązany numer rejestracji*, *nazwa umowy*
+        - **Klienci umów Select i Enterprise:** *Numer umowy*, *powiązany numer rejestracji*, *nazwa umowy*
 
         Formularz **Dodawanie umów** wyświetla monit o podanie tego pliku przy dodawaniu nowej umowy.
 
@@ -116,7 +116,7 @@ Umowy licencjonowania zbiorowego usługi Intune zawierają informacje o licencji
 
 Zostanie wyświetlony widok **Wszystkie umowy**, a usługa Intune połączy się z Centrum usługi licencjonowania zbiorowego firmy Microsoft (VLSC) w celu zweryfikowania podanych par numerów umów.
 
-Aby zaktualizować informacje o licencji zbiorczej po dodaniu umów licencyjnych w usłudze Intune, na stronie **Omówienie licencji** wybierz polecenie **Odśwież teraz**. To działanie powoduje pobranie bieżących informacji o licencjach z [Centrum usługi licencjonowania zbiorowego firmy Microsoft (VLSC)](http://go.microsoft.com/fwlink/?LinkId=223842).
+Aby zaktualizować informacje o licencji zbiorczej po dodaniu umów licencyjnych w usłudze Intune, na stronie **Omówienie licencji** wybierz polecenie **Odśwież teraz**. To działanie powoduje pobranie bieżących informacji o licencjach z [Centrum usługi licencjonowania zbiorowego firmy Microsoft (VLSC)](https://go.microsoft.com/fwlink/?LinkId=223842).
 
 > [!IMPORTANT]
 > Do czasu odświeżenia informacji o licencjach zbiorczych informacje na liście umów i informacje o uprawnieniach na stronie **Omówienie umów** mogą się różnić.
@@ -185,5 +185,5 @@ Umowy licencjonowania dotyczące oprogramowania można dodać do grup licencji. 
 |   Tworzenie grupy licencji   |                                                            Na stronie <strong>Przegląd</strong> w obszarze roboczym <strong>Licencje</strong> wybierz polecenie <strong>Utwórz grupę licencji</strong> z menu <strong>Zadania</strong>. <strong>Uwaga:</strong> możesz utworzyć maksymalnie 500 grup licencji.                                                             |
 |   Zmienianie nazwy grupy licencji   |                                                                                                      W obszarze roboczym <strong>Licencje</strong> wybierz grupę licencji, a następnie wybierz polecenie <strong>Edytuj grupę licencji</strong> w menu <strong>Zadania</strong> .                                                                                                       |
 |   Usuwanie grupy licencji   |                                 W obszarze roboczym <strong>Licencje</strong> wybierz grupę licencji, a następnie wybierz polecenie <strong>Usuń grupę licencji</strong> w menu <strong>Zadania</strong> . <strong>Porada:</strong> wszystkie licencje należące do usuniętej grupy zostaną przeniesione do grupy licencji <strong>Nieprzypisane umowy</strong>.                                 |
-| Usuwanie umowy licencyjnej | W obszarze roboczym <strong>Licencje</strong> wybierz umowę, a następnie wybierz polecenie <strong>Usuń</strong>. <strong>Wskazówka:</strong> aby zaktualizować informacje o licencjach po usunięciu umów licencjonowania zbiorowego, wybierz polecenie <strong>Odśwież teraz</strong> na stronie <strong>Omówienie licencji</strong> lub na karcie <strong>Ogólne</strong> dla konkretnej grupy licencji. |
+| Usuwanie umowy licencyjnej | W obszarze roboczym <strong>Licencje</strong> wybierz umowę, a następnie wybierz polecenie <strong>Usuń</strong>. <strong>Porada:</strong> aby zaktualizować informacje o licencjach po usunięciu umów licencjonowania zbiorowego, wybierz polecenie <strong>Odśwież teraz</strong> na stronie <strong>Omówienie licencji</strong> lub na karcie <strong>Ogólne</strong> dla konkretnej grupy licencji. |
 

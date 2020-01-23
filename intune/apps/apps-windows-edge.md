@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/17/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b4839340ba1f3bad6f28a1120d882d0f600b1d44
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 42f1c8fae156eaf08203f4a88cad8433749940ac
+ms.sourcegitcommit: b6fe084b0419b3c9d456a8b0439b00f8c784db23
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563563"
+ms.lasthandoff: 01/21/2020
+ms.locfileid: "76294799"
 ---
 # <a name="add-microsoft-edge-for-windows-10-to-microsoft-intune"></a>Dodawanie przeglądarki Microsoft Edge dla systemu Windows 10 do usługi Microsoft Intune
 
 Aby móc wdrażać, konfigurować, monitorować lub zabezpieczać aplikacje, trzeba je najpierw dodać do usługi Intune. Jednym z dostępnych [typów aplikacji](~/apps/apps-add.md#app-types-in-microsoft-intune) jest przeglądarka Microsoft Edge *w wersji 77 lub nowszej*. Po wybraniu tego typu aplikacji w usłudze Intune możesz przypisać i zainstalować przeglądarkę Microsoft Edge *w wersji 77 lub nowszej* na zarządzanych urządzeniach z systemem Windows 10.
 
 > [!IMPORTANT]
-> Ten typ aplikacji znajduje się w **publicznej wersji zapoznawczej** i oferuje kanały deweloperskie i wersji beta dla systemu Windows 10. Wdrożenie jest tylko w języku angielskim (EN), jednak użytkownicy końcowi mogą zmienić język wyświetlania w przeglądarce w obszarze **Ustawienia** > **Języki**. Microsoft Edge jest aplikacją systemu Win32 instalowaną w kontekście systemu oraz na takich samych architekturach (aplikacja x86 w systemie operacyjnym x86, a aplikacja x64 w systemie operacyjnym x64). Usługa Intune wykryje wszystkie istniejące wcześniej instalacje aplikacji Microsoft Edge. Jeśli została ona zainstalowana w kontekście użytkownika, instalacja systemu spowoduje jej nadpisanie. Jeśli została ona zainstalowana w kontekście systemu, będzie zgłaszany sukces instalacji. Ponadto automatyczne aktualizacje przeglądarki Microsoft Edge są domyślnie **włączone**, a przeglądarki Microsoft Edge nie można odinstalować.
+> Tego typu aplikacje są dostępne jako **publiczne wersje zapoznawcze** w kanale stabilnym, beta i deweloperskim dla systemu Windows 10. Wdrożenie jest tylko w języku angielskim (EN), jednak użytkownicy końcowi mogą zmienić język wyświetlania w przeglądarce w obszarze **Ustawienia** > **Języki**. Microsoft Edge jest aplikacją systemu Win32 instalowaną w kontekście systemu oraz na takich samych architekturach (aplikacja x86 w systemie operacyjnym x86, a aplikacja x64 w systemie operacyjnym x64). Usługa Intune wykryje wszystkie istniejące wcześniej instalacje aplikacji Microsoft Edge. Jeśli została ona zainstalowana w kontekście użytkownika, instalacja systemu spowoduje jej nadpisanie. Jeśli została ona zainstalowana w kontekście systemu, będzie zgłaszany sukces instalacji. Ponadto automatyczne aktualizacje przeglądarki Microsoft Edge są domyślnie **włączone**, a przeglądarki Microsoft Edge nie można odinstalować.
 
 > [!NOTE]
 > Przeglądarka Microsoft Edge *w wersji 77 lub nowszej* jest również dostępna dla systemu macOS.
@@ -38,13 +38,13 @@ Aby móc wdrażać, konfigurować, monitorować lub zabezpieczać aplikacje, trz
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 - Wymagany jest system Windows 10 RS2 lub nowszy.
-- Wszystkie wstępnie zainstalowane wersje przeglądarki Microsoft Edge *w wersji 77 lub nowszej* dla kanałów **dewelopera** i **wersji beta** w kontekście użytkownika zostaną zastąpione przeglądarką Microsoft Edge instalowaną w kontekście systemu.
+- Wszystkie wstępnie zainstalowane wersje przeglądarki Microsoft Edge *w wersji 77 lub nowszej* dla wszystkich kanałów w kontekście użytkownika zostaną zastąpione przeglądarką Microsoft Edge instalowaną w kontekście systemu.
 
 ## <a name="configure-the-app-in-intune"></a>Konfigurowanie aplikacji w usłudze Intune
 Do usługi Intune można dodać przeglądarkę Microsoft Edge w wersji 77 lub nowszej, wykonując następujące czynności:
 
 1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Wybierz kolejno pozycje **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**.
+2. Wybierz pozycję **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**.
 3. Na liście **Typ aplikacji** w pozycji **Microsoft Edge, wersja 77 lub nowsza** wybierz opcję **Windows 10**.
 
 ## <a name="configure-app-information"></a>Konfigurowanie informacji o aplikacji
@@ -68,9 +68,10 @@ W tym kroku podajesz informacje o tym wdrożeniu aplikacji. Te informacje pomaga
 W tym kroku skonfigurujesz opcje instalacji aplikacji.
 
 1. W okienku **Dodaj aplikację** wybierz pozycję **Ustawienia aplikacji**.
-2. W okienku **Ustawienia aplikacji** wybierz opcję **Beta** lub **Deweloper** z listy **Kanał**, aby określić, z którego kanału przeglądarki Microsoft Edge będziesz wdrażać aplikację.
-    - Kanał **Beta** to najbardziej stabilne środowisko przeglądarki Microsoft Edge w wersji zapoznawczej oraz najlepszy wybór w przypadku pełnego pilotażu w organizacji. W przypadku najważniejszych aktualizacji przeprowadzanych co sześć tygodni poszczególne wersje uwzględniają informacje i ulepszenia z kanału deweloperów.
-    - Kanał **Deweloper** jest przygotowany do przesyłania informacji zwrotnych z przedsiębiorstwa w zakresie systemu Windows, Windows Server oraz macOS. Jest aktualizowany co tydzień i zawiera najnowsze ulepszenia i poprawki.
+2. W okienku **Ustawienia aplikacji** wybierz opcję **Stabilne**, **Beta** lub **Deweloper** z listy **Kanał**, aby określić, z którego kanału przeglądarki Microsoft Edge będziesz wdrażać aplikację.
+    - **Kanał stabilny** to zalecany kanał do szerokiego wdrożenia w środowisku przedsiębiorstwa. Jest aktualizowany co sześć tygodni, a każda wersja zawiera ulepszenia z kanału beta.
+    - **Kanał beta** to najbardziej stabilne środowisko przeglądarki Microsoft Edge w wersji zapoznawczej i najlepszy wybór do realizacji pełnego pilotażu w organizacji. Większe aktualizacje ukazują się co sześć tygodni, a każda wersja zawiera funkcje i ulepszenia z kanału dla deweloperów.
+    - **Kanał deweloperski** jest przeznaczony do zbierania opinii użytkowników firmowych systemów Windows, Windows Server i macOS. Jest aktualizowany co tydzień i zawiera najnowsze ulepszenia i poprawki.
 
     > [!NOTE]
     > Logo przeglądarki Microsoft Edge będzie wyświetlane razem z nazwą aplikacji podczas przeglądania portalu firmy.

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d697b2b0bc3fa5ffea4f8e8ff15cd7c62af3ad30
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
-ms.translationtype: MTE75
+ms.openlocfilehash: ae7dd4a1873cd7117870c4c1408e512831ecaa4f
+ms.sourcegitcommit: 665be113b593c3bc7d46b99599e720f781037dcf
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75547957"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76258473"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem Windows 10 (i nowszym) w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune
 
@@ -58,15 +58,15 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad ApplicationMana
 - **Instaluj dane aplikacji na woluminie systemowym**: Ustawienie **Blokuj** uniemożliwia aplikacjom przechowywanie danych na woluminie systemowym urządzenia. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia aplikacjom przechowywanie danych na woluminie dysku systemowego.
 - **Instaluj aplikacje na dysku systemowym**: Ustawienie **Blokuj** uniemożliwia instalowanie aplikacji na dysku systemowym urządzenia. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia instalowanie aplikacji na dysku systemowym.
 - **DVR z gry** (tylko dla komputerów stacjonarnych): Ustawienie **Blokuj** wyłącza nagrywanie i transmitowanie gier w systemie Windows. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia nagrywanie i transmitowanie gier.
-- **Tylko aplikacje ze sklepu**: to ustawienie określa środowisko użytkownika, gdy użytkownicy instalują aplikacje z miejsc innych niż Microsoft Store. Dostępne opcje:
+- **Aplikacje tylko ze Sklepu**: to ustawienie określa środowisko użytkownika podczas instalacji aplikacji z miejsc innych niż sklep Microsoft Store. Dostępne opcje:
 
-  - **Nie skonfigurowano** (domyślnie): użytkownicy końcowi mogą instalować aplikacje z miejsc innych niż Microsoft Store, w tym aplikacji zdefiniowanych w innych ustawieniach zasad.  
-  - **Z dowolnego miejsca**: wyłącza zalecenia dotyczące aplikacji, a użytkownicy mogą instalować aplikacje z dowolnej lokalizacji.  
-  - **Tylko magazyn**: wymusza, aby użytkownicy końcowi mogli instalować tylko aplikacje z Microsoft Store.
-  - **Zalecenia**: podczas instalowania aplikacji z sieci Web, która jest dostępna w Microsoft Store, użytkownicy zobaczą komunikat zalecający pobranie go ze sklepu.  
-  - **Preferuj**sklepu: ostrzega użytkowników, gdy instalują aplikacje z miejsc innych niż Microsoft Store.
+  - **Nie skonfigurowano** (wartość domyślna): umożliwia użytkownikom końcowym instalowanie aplikacji z miejsc innych niż sklep Microsoft Store, w tym aplikacji zdefiniowanych w innych ustawieniach zasad.  
+  - **Dowolne miejsce**: wyłącza zalecenia dotyczące aplikacji i umożliwia użytkownikom instalowanie aplikacji z dowolnej lokalizacji.  
+  - **Tylko sklep**: wymusza, aby użytkownicy końcowi mogli instalować tylko aplikacje ze sklepu Microsoft Store.
+  - **Zalecenia**: podczas instalowania aplikacji z Internetu, która jest dostępna w sklepie Microsoft Store, użytkownicy zobaczą komunikat zalecający pobranie jej ze sklepu.  
+  - **Preferuj sklep**: ostrzega użytkowników, gdy instalują aplikacje z miejsc innych niż sklep Microsoft Store.
 
-  [Filtr SmartScreen/EnableAppInstallControl CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enableappinstallcontrol)
+  [SmartScreen/EnableAppInstallControl CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enableappinstallcontrol)
 
 - **Kontrola użytkownika nad instalacjami**: Po wybraniu ustawienia **Nieskonfigurowane** (domyślnie) Instalator Windows uniemożliwia użytkownikom zmianę opcji instalacji, które są zwykle zastrzeżone dla administratorów systemu. Dotyczy to np. wejścia do katalogu w celu zainstalowania plików. **Zablokuj**: pozwala użytkownikom na zmianę tych opcji instalacji. Niektóre funkcje zabezpieczeń Instalatora Windows są pomijane.
 
@@ -139,24 +139,24 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad EnterpriseCloud
 ## <a name="control-panel-and-settings"></a>Panel sterowania i Ustawienia
 
 - **Aplikacja Ustawienia**: Ustawienie **Blokuj** uniemożliwia użytkownikom końcowym uzyskiwanie dostępu do aplikacji ustawień systemu Windows. Ustawienie **Nie skonfigurowano** (domyślne) zezwala użytkownikom na otwieranie aplikacji Ustawienia na urządzeniu.
-  - **System**: Ustawienie **Blokuj** uniemożliwia dostęp do obszaru System w aplikacji Ustawienia. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
+  - **System**: Ustawienie **Blokuj** uniemożliwia dostęp do obszaru System w aplikacji Ustawienia. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
     - **Modyfikowanie ustawień zasilania i uśpienia** (tylko dla komputerów stacjonarnych): Ustawienie **Blokuj** uniemożliwia użytkownikom końcowym zmienianie ustawień zasilania i uśpienia na urządzeniu. Ustawienie **Nie skonfigurowano** (domyślne) zezwala użytkownikom na zmianę tych ustawień.
-  - **Urządzenia**: Ustawienie **Blokuj** uniemożliwia dostęp do obszaru Urządzenia w aplikacji Ustawienia na urządzeniu. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
-  - **Sieć i Internet**: Ustawienie **Blokuj** uniemożliwia dostęp do obszaru Sieć i Internet w aplikacji Ustawienia na urządzeniu. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
-  - **Personalizacja**: Ustawienie **Blokuj** uniemożliwia dostęp do obszaru Personalizacja w aplikacji Ustawienia na urządzeniu. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
-  - **Aplikacje**: Ustawienie **Blokuj** uniemożliwia dostęp do obszaru Aplikacje w aplikacji Ustawienia na urządzeniu. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
-  - **Konta:** Ustawienie **Blokuj** uniemożliwia dostęp do obszaru Konta w aplikacji Ustawienia na urządzeniu. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
-  - **Czas i język**: Ustawienie **Blokuj** uniemożliwia dostęp do obszaru Czas i język w aplikacji Ustawienia na urządzeniu. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
-    - **Modyfikowanie czasu systemowego**: Ustawienie **Blokuj** uniemożliwia użytkownikom końcowym zmienianie ustawień daty i godziny na urządzeniu. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia. Użytkownicy mogą zmieniać te ustawienia.
-    - **Modyfikowanie ustawień regionu** (tylko komputery): Ustawienie **Blokuj** uniemożliwia użytkownikom końcowym zmianę ustawień regionu na urządzeniu. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia. Użytkownicy mogą zmieniać te ustawienia.
-    - **Modyfikowanie ustawień języka (tylko dla komputerów stacjonarnych):** Ustawienie **Blokuj** uniemożliwia użytkownikom końcowym zmianę ustawień języka na urządzeniu. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia. Użytkownicy mogą zmieniać te ustawienia.
+  - **Urządzenia**: Ustawienie **Blokuj** uniemożliwia dostęp do obszaru Urządzenia w aplikacji Ustawienia na urządzeniu. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+  - **Sieć i Internet**: Ustawienie **Blokuj** uniemożliwia dostęp do obszaru Sieć i Internet w aplikacji Ustawienia na urządzeniu. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+  - **Personalizacja**: Ustawienie **Blokuj** uniemożliwia dostęp do obszaru Personalizacja w aplikacji Ustawienia na urządzeniu. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+  - **Aplikacje**: Ustawienie **Blokuj** uniemożliwia dostęp do obszaru Aplikacje w aplikacji Ustawienia na urządzeniu. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+  - **Konta:** Ustawienie **Blokuj** uniemożliwia dostęp do obszaru Konta w aplikacji Ustawienia na urządzeniu. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+  - **Czas i język**: Ustawienie **Blokuj** uniemożliwia dostęp do obszaru Czas i język w aplikacji Ustawienia na urządzeniu. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+    - **Modyfikowanie czasu systemowego**: Ustawienie **Blokuj** uniemożliwia użytkownikom końcowym zmienianie ustawień daty i godziny na urządzeniu. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Użytkownicy mogą zmieniać te ustawienia.
+    - **Modyfikowanie ustawień regionu** (tylko komputery): Ustawienie **Blokuj** uniemożliwia użytkownikom końcowym zmianę ustawień regionu na urządzeniu. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Użytkownicy mogą zmieniać te ustawienia.
+    - **Modyfikowanie ustawień języka (tylko dla komputerów stacjonarnych):** Ustawienie **Blokuj** uniemożliwia użytkownikom końcowym zmianę ustawień języka na urządzeniu. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Użytkownicy mogą zmieniać te ustawienia.
 
       [Dostawca usługi konfiguracji zasad ustawień](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settings)
 
-  - **Gry**: Ustawienie **Blokuj** uniemożliwia dostęp do obszaru Gry w aplikacji Ustawienia na urządzeniu. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
-  - **Ułatwienia dostępu**: Ustawienie **Blokuj** uniemożliwia dostęp do obszaru Ułatwienia dostępu w aplikacji Ustawienia na urządzeniu. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
-  - **Prywatność**: Ustawienie **Blokuj** uniemożliwia dostęp do obszaru Prywatność w aplikacji Ustawienia na urządzeniu. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
-  - **Aktualizacja i zabezpieczenia**: Ustawienie **Blokuj** uniemożliwia dostęp do obszaru Aktualizacja i zabezpieczenia w aplikacji Ustawienia na urządzeniu. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
+  - **Gry**: Ustawienie **Blokuj** uniemożliwia dostęp do obszaru Gry w aplikacji Ustawienia na urządzeniu. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+  - **Ułatwienia dostępu**: Ustawienie **Blokuj** uniemożliwia dostęp do obszaru Ułatwienia dostępu w aplikacji Ustawienia na urządzeniu. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+  - **Prywatność**: Ustawienie **Blokuj** uniemożliwia dostęp do obszaru Prywatność w aplikacji Ustawienia na urządzeniu. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+  - **Aktualizacja i zabezpieczenia**: Ustawienie **Blokuj** uniemożliwia dostęp do obszaru Aktualizacja i zabezpieczenia w aplikacji Ustawienia na urządzeniu. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
 
 ## <a name="display"></a>Wyświetlanie
 
@@ -178,31 +178,31 @@ Możesz również **zaimportować** plik CSV zawierający listę aplikacji.
 
 Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad środowiska](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience), który zawiera również listę obsługiwanych wersji systemu Windows. 
 
-- **Przechwytywanie ekranu** (tylko urządzenia przenośne): Ustawienie **Blokuj** uniemożliwia użytkownikom końcowym wykonywanie zrzutów ekranu na urządzeniu. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
-- **Kopiuj i wklej (tylko urządzenia przenośne)** : Ustawienie **Blokuj** uniemożliwia użytkownikom końcowym kopiowanie i wklejanie danych między aplikacjami na urządzeniu. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
-- **Ręczne wyrejestrowanie**: Ustawienie **Blokuj** uniemożliwia użytkownikom końcowym usunięcie konta firmowego za pomocą panelu sterowania na urządzeniu. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
+- **Przechwytywanie ekranu** (tylko urządzenia przenośne): Ustawienie **Blokuj** uniemożliwia użytkownikom końcowym wykonywanie zrzutów ekranu na urządzeniu. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+- **Kopiuj i wklej (tylko urządzenia przenośne)** : Ustawienie **Blokuj** uniemożliwia użytkownikom końcowym kopiowanie i wklejanie danych między aplikacjami na urządzeniu. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+- **Ręczne wyrejestrowanie**: Ustawienie **Blokuj** uniemożliwia użytkownikom końcowym usunięcie konta firmowego za pomocą panelu sterowania na urządzeniu. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
 
   To ustawienie zasad nie jest stosowane, jeśli komputer jest przyłączony do usługi Azure AD i włączono automatyczne rejestrowanie.
 
-- **Ręczne instalowanie certyfikatu głównego** (tylko urządzenia przenośne): Ustawienie **Blokuj** uniemożliwia użytkownikom końcowym ręczne instalowanie certyfikatów głównych i certyfikatów pośrednich urzędów certyfikacji. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
-- **Aparat fotograficzny**: Ustawienie **Blokuj** uniemożliwia użytkownikom końcowym korzystanie z kamery urządzenia. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
+- **Ręczne instalowanie certyfikatu głównego** (tylko urządzenia przenośne): Ustawienie **Blokuj** uniemożliwia użytkownikom końcowym ręczne instalowanie certyfikatów głównych i certyfikatów pośrednich urzędów certyfikacji. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+- **Aparat fotograficzny**: Ustawienie **Blokuj** uniemożliwia użytkownikom końcowym korzystanie z kamery urządzenia. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
 
-  [Dostawca CSP dla aparatu](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-camera)
+  [Dostawca CSP aparatu](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-camera)
 
-- **Synchronizacja plików w usłudze OneDrive**: Ustawienie **Blokuj** uniemożliwia użytkownikom końcowym synchronizowanie plików z urządzenia z usługą OneDrive. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
-- **Magazyn wymienny**: Ustawienie **Blokuj** uniemożliwia użytkownikom końcowym używanie urządzeń magazynu wymiennego, takich jak karty SD, z urządzeniem. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
-- **Geolokalizacja**: Ustawienie **Blokuj** uniemożliwia użytkownikom końcowym włączanie usług lokalizacyjnych na urządzeniu. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
-- **Udostępnianie Internetu**: Ustawienie **Blokuj** uniemożliwia udostępnianie połączenia internetowego na urządzeniu. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
-- **Resetowanie telefonu**: Ustawienie **Blokuj** uniemożliwia użytkownikom końcowym wyczyszczenie lub zresetowanie urządzenia do ustawień fabrycznych. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
-- **Połączenie USB**: Ustawienie **Blokuj** uniemożliwia dostęp do zewnętrznych urządzeń pamięci masowej przez połączenie USB na urządzeniu. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia. To ustawienie nie ma wpływu na ładowanie przy użyciu portu USB.
-- **Tryb przeciwkradzieżowy** (tylko urządzenia przenośne): Ustawienie **Blokuj** uniemożliwia użytkownikom końcowym wybranie preferencji trybu przeciwkradzieżowego na urządzeniu. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
+- **Synchronizacja plików w usłudze OneDrive**: Ustawienie **Blokuj** uniemożliwia użytkownikom końcowym synchronizowanie plików z urządzenia z usługą OneDrive. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+- **Magazyn wymienny**: Ustawienie **Blokuj** uniemożliwia użytkownikom końcowym używanie urządzeń magazynu wymiennego, takich jak karty SD, z urządzeniem. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+- **Geolokalizacja**: Ustawienie **Blokuj** uniemożliwia użytkownikom końcowym włączanie usług lokalizacyjnych na urządzeniu. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+- **Udostępnianie Internetu**: Ustawienie **Blokuj** uniemożliwia udostępnianie połączenia internetowego na urządzeniu. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+- **Resetowanie telefonu**: Ustawienie **Blokuj** uniemożliwia użytkownikom końcowym wyczyszczenie lub zresetowanie urządzenia do ustawień fabrycznych. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+- **Połączenie USB**: Ustawienie **Blokuj** uniemożliwia dostęp do zewnętrznych urządzeń pamięci masowej przez połączenie USB na urządzeniu. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. To ustawienie nie ma wpływu na ładowanie przy użyciu portu USB.
+- **Tryb przeciwkradzieżowy** (tylko urządzenia przenośne): Ustawienie **Blokuj** uniemożliwia użytkownikom końcowym wybranie preferencji trybu przeciwkradzieżowego na urządzeniu. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
 - **Cortana**: Ustawienie **Blokuj** powoduje wyłączenie asystenta głosowego Cortana na urządzeniu. Gdy Cortana jest wyłączona, użytkownicy mogą nadal wyszukiwać elementy na urządzeniu. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia korzystanie z Cortany.
 - **Nagrywanie głosu** (tylko urządzenia przenośne): Ustawienie **Blokuj** uniemożliwia użytkownikom końcowym korzystanie z rejestratora głosu na urządzeniu. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia rejestrowanie głosu przez aplikacje.
-- **Modyfikacja nazwy urządzenia** (tylko urządzenie przenośne): Ustawienie **Blokuj** uniemożliwia użytkownikom końcowym zmianę nazwy urządzenia. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
-- **Dodaj pakiety aprowizacji**: Ustawienie **Blokuj** uniemożliwia uruchamianie agenta konfiguracji środowiska uruchomieniowego, który instaluje pakiety aprowizacji na urządzeniu. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
-- **Usuń pakiety aprowizacji**: Ustawienie **Blokuj** uniemożliwia uruchamianie agenta konfiguracji środowiska uruchomieniowego, który usuwa pakiety aprowizacji z urządzenia. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
-- **Odnajdywanie urządzeń**: Ustawienie **Blokuj** uniemożliwia wykrywanie urządzenia przez inne urządzenia. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
-- **Przełącznik zadań** (tylko urządzenia przenośne): Ustawienie **Blokuj** uniemożliwia przełączanie zadań na urządzeniu. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
+- **Modyfikacja nazwy urządzenia** (tylko urządzenie przenośne): Ustawienie **Blokuj** uniemożliwia użytkownikom końcowym zmianę nazwy urządzenia. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+- **Dodaj pakiety aprowizacji**: Ustawienie **Blokuj** uniemożliwia uruchamianie agenta konfiguracji środowiska uruchomieniowego, który instaluje pakiety aprowizacji na urządzeniu. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+- **Usuń pakiety aprowizacji**: Ustawienie **Blokuj** uniemożliwia uruchamianie agenta konfiguracji środowiska uruchomieniowego, który usuwa pakiety aprowizacji z urządzenia. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+- **Odnajdywanie urządzeń**: Ustawienie **Blokuj** uniemożliwia wykrywanie urządzenia przez inne urządzenia. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+- **Przełącznik zadań** (tylko urządzenia przenośne): Ustawienie **Blokuj** uniemożliwia przełączanie zadań na urządzeniu. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
 - **Okno dialogowe błędu karty SIM** (tylko urządzenia przenośne): Ustawienie **Blokuj** powoduje, że na urządzeniu nie będą wyświetlane komunikaty o błędach, gdy karta SIM nie zostanie wykryta. Wybranie ustawienia **Nie skonfigurowano** (domyślne) spowoduje wyświetlanie komunikatów o błędach.
 - **Obszar roboczy pisma odręcznego**: Wybierz, czy i jak użytkownicy uzyskują dostęp do obszaru roboczego pisma odręcznego. Dostępne opcje:
   - **Nieskonfigurowane** (wartość domyślna): Włącza obszar roboczy pisma odręcznego, a użytkownik może używać go na ekranie blokady urządzenia.
@@ -231,6 +231,9 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad środowiska](ht
   [Dostawca usługi konfiguracji AboveLock/AllowActionCenterNotifications](https://msdn.microsoft.com/ie/dn904962(v=vs.94)#AboveLock_AllowActionCenterNotifications)
 
 - **Adres URL obrazu ekranu blokady (tylko komputery)** : Wprowadź adres URL obrazu w formacie JPG, JPEG lub PNG używany jako tapeta ekranu blokady systemu Windows. Na przykład wprowadź `https://contoso.com/image.png`. To ustawienie powoduje zablokowanie obrazu bez możliwości późniejszej zmiany.
+
+  [Personalization/LockScreenImageUrl CSP](https://docs.microsoft.com/en-us/windows/client-management/mdm/personalization-csp)
+
 - **Konfigurowany przez użytkownika limit czasu ekranu (tylko urządzenia przenośne)** : Ustawienie **Zezwalaj** pozwala użytkownikowi na ustawianie czasu. Ustawienie **Nie skonfigurowano** (domyślne) nie zapewnia użytkownikom tej opcji.
 
   [Dostawca usługi konfiguracji DeviceLock/AllowScreenTimeoutWhileLockedUserConfig](https://msdn.microsoft.com/ie/dn904962(v=vs.94)#DeviceLock_AllowScreenTimeoutWhileLockedUserConfig)
@@ -379,7 +382,7 @@ Po wybraniu opcji „Zablokuj i włącz przesłanianie przez użytkownika” uż
 - **Zezwalaj na język JavaScript**: Ustawienie **Tak** (domyślne) umożliwia uruchamianie skryptów (takich jak JavaScript) w przeglądarce Microsoft Edge. Ustawienie **Nie** uniemożliwia uruchamianie skryptów języka Java w przeglądarce.
 - **Użytkownik może instalować rozszerzenia**: Ustawienie **Tak** (domyślne) umożliwia użytkownikom końcowym instalowanie rozszerzeń przeglądarki Microsoft Edge na urządzeniu. Ustawienie **Nie** uniemożliwia instalację.
 - **Zezwalaj na ładowanie bezpośrednie rozszerzeń dla deweloperów**: Ustawienie **Tak** (domyślne) używa domyślnego zachowania systemu operacyjnego, które może pozwolić na ładowanie bezpośrednie. Pobieranie lokalne umożliwia instalowanie i uruchamianie niezweryfikowanych rozszerzeń. Ustawienie **Nie** uniemożliwia przeglądarce Microsoft Edge pobieranie lokalne przy użyciu funkcji **Ładuj rozszerzenia**. Nie uniemożliwia jednak pobierania lokalnego rozszerzeń przy użyciu innych sposobów, np. za pomocą programu PowerShell.
-- **Wymagane rozszerzenia**: Wybierz rozszerzenia, których użytkownicy końcowi nie mogą wyłączać w przeglądarce Microsoft Edge. Wprowadź nazwy rodzin pakietów, a następnie wybierz pozycję **Dodaj**. Wskazówki można znaleźć w temacie [Znajdowanie nazwy rodziny pakietów (PFN)](https://docs.microsoft.com/configmgr/protect/deploy-use/find-a-pfn-for-per-app-vpn).
+- **Wymagane rozszerzenia**: Wybierz rozszerzenia, których użytkownicy końcowi nie mogą wyłączać w przeglądarce Microsoft Edge. Wprowadź nazwy rodzin pakietów, a następnie wybierz pozycję **Dodaj**. Wskazówki można znaleźć w temacie [Znajdowanie nazwy rodziny pakietów (PFN) dla sieci VPN dla aplikacji](https://docs.microsoft.com/configmgr/protect/deploy-use/find-a-pfn-for-per-app-vpn).
 
   Możesz również **zaimportować** plik CSV, który zawiera nazwy rodzin pakietów. Lub możesz **wyeksportować** wprowadzone nazwy rodzin pakietów.
 
@@ -400,7 +403,7 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad NetworkProxy](h
 
 Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad DeviceLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock), który zawiera również listę obsługiwanych wersji systemu Windows.
 
-- **Hasło**: Pozycja **Wymagaj** wymusza wprowadzanie hasła przez użytkownika końcowego w celu uzyskania dostępu do urządzenia. Ustawienie **Nie skonfigurowano** (domyślne) zezwala na dostęp do urządzenia bez hasła. Dotyczy tylko kont lokalnych. Hasła kont domeny pozostają skonfigurowane przez Active Directory (AD) i usługę Azure AD.
+- **Hasło**: Pozycja **Wymagaj** wymusza wprowadzanie hasła przez użytkownika końcowego w celu uzyskania dostępu do urządzenia. Ustawienie **Nie skonfigurowano** (domyślne) zezwala na dostęp do urządzenia bez hasła. Dotyczy tylko kont lokalnych. Hasła kont domeny pozostają skonfigurowane przez usługi Active Directory (AD) i Azure AD.
 
   - **Wymagany typ hasła**: Wybierz typ hasła. Dostępne opcje:
     - **Nieskonfigurowane**: Hasło może zawierać cyfry i litery.
@@ -411,7 +414,7 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad DeviceLock](htt
     > [!IMPORTANT]
     > Kiedy wymóg dotyczący hasła zostanie zmieniony na komputerze z systemem Windows, użytkownicy będą musieli się do niego dostosować przy następnym logowaniu, ponieważ to właśnie wtedy urządzenie przechodzi ze stanu bezczynności w stan aktywności. Użytkownicy, których hasła spełniają wymagania, także zostaną poproszeniu o zmianę hasła.
     
-  - **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia**: Wprowadź liczbę nieudanych prób uwierzytelniania dopuszczalnych, zanim zawartość urządzenia może zostać wyczyszczona (maksymalnie 11). Poprawna wprowadzona liczba zależy od wersji. [DeviceLock/MaxDevicePasswordFailedAttempts CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts) wyświetla listę obsługiwanych wartości. `0` (zero) może spowodować wyłączenie funkcji czyszczenia urządzenia.
+  - **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia**: Wprowadź liczbę nieudanych prób uwierzytelniania dopuszczalnych, zanim zawartość urządzenia może zostać wyczyszczona (maksymalnie 11). Prawidłowa wprowadzona liczba zależy od wersji. Obsługiwane wartości można znaleźć w sekcji [DeviceLock/MaxDevicePasswordFailedAttempts CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts). `0` (zero) może spowodować wyłączenie funkcji czyszczenia urządzenia.
 
     Wpływ tego ustawienia zależy również od wersji. Aby uzyskać szczegółowe informacje, zobacz artykuł [Dostawca usługi konfiguracji DeviceLock/MaxDevicePasswordFailedAttempts](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts).
 
@@ -420,15 +423,15 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad DeviceLock](htt
   - **Zapobiegaj ponownemu używaniu poprzednich haseł**: Wprowadź liczbę wcześniej używanych haseł, których nie można użyć ponownie (z zakresu 1–24). Na przykład wprowadź liczbę `5`, aby użytkownicy nie mogli ustawić nowego hasła, które jest takie samo jak bieżące hasło i 4 poprzednie hasła.
   - **Wymagaj hasła przy powrocie urządzenia ze stanu bezczynności** (systemy Mobile i Holographic): Wybierz ustawienie **Wymagaj**, aby użytkownicy musieli wprowadzić hasło w celu odblokowania urządzenia po stanie bezczynności. Ustawienie **Nie skonfigurowano** (domyślne) nie wymaga kodu PIN ani hasła, gdy urządzenie wznawia pracę po stanie bezczynności.
   - **Proste hasła**: Ustaw wartość **Blokuj**, aby uniemożliwić użytkownikom tworzenie prostych haseł, takich jak `1234` lub `1111`. Wybierz ustawienie **Nie skonfigurowano** (domyślne), aby umożliwić użytkownikom tworzenie haseł takich jak `1234` lub `1111`. To ustawienie zezwala również na używanie haseł obrazkowych systemu Windows lub blokuje tę możliwość.
-- **Automatyczne szyfrowanie podczas AADJ**: Opcja **Blokuj** uniemożliwia automatyczne szyfrowanie urządzenia za pomocą funkcji BitLocker podczas przygotowywania do pierwszego użycia, jeśli to urządzenie jest dołączone do usługi Azure AD. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia. Więcej informacji na temat [szyfrowania urządzenia za pomocą funkcji BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10#bitlocker-device-encryption).
+- **Automatyczne szyfrowanie podczas AADJ**: Opcja **Blokuj** uniemożliwia automatyczne szyfrowanie urządzenia za pomocą funkcji BitLocker podczas przygotowywania do pierwszego użycia, jeśli to urządzenie jest dołączone do usługi Azure AD. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Więcej informacji na temat [szyfrowania urządzenia za pomocą funkcji BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10#bitlocker-device-encryption).
 
   [Security/PreventAutomaticDeviceEncryptionForAzureADJoinedDevices CSP (Dostawca usługi konfiguracji Security/PreventAutomaticDeviceEncryptionForAzureADJoinedDevices)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-security#security-preventautomaticdeviceencryptionforazureadjoineddevices)
 
-- **Zasady FIPS (Federal Information Processing Standard)** : Po wybraniu opcji **Zezwalaj** są używane zasady FIPS, czyli opracowane przez rząd Stanów Zjednoczonych normy szyfrowania, wyznaczania wartości skrótu i podpisywania. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia. Domyślny system operacyjny nie może używać trybu FIPS.
+- **Zasady FIPS (Federal Information Processing Standard)** : Po wybraniu opcji **Zezwalaj** są używane zasady FIPS, czyli opracowane przez rząd Stanów Zjednoczonych normy szyfrowania, wyznaczania wartości skrótu i podpisywania. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Domyślna wartość systemu operacyjnego nie może używać standardu FIPS.
 
   [Cryptography/AllowFipsAlgorithmPolicy CSP (Dostawca usługi konfiguracji Cryptography/AllowFipsAlgorithmPolicy)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-cryptography#cryptography-allowfipsalgorithmpolicy)
 
-- **Uwierzytelnianie urządzeń przy użyciu funkcji Windows Hello**: Opcja **Zezwalaj** umożliwia użytkownikom logowanie się na komputerze z systemem Windows 10 za pomocą urządzenia towarzyszącego funkcji Windows Hello, na przykład telefonu, opaski treningowej lub urządzenia Internetu rzeczy (IoT). Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia. W przypadku wybrania opcji Nieskonfigurowane (ustawienie domyślnie) jest używane domyślne ustawienie systemu operacyjnego, które nie musi umożliwiać uwierzytelniania w systemie Windows za pomocą urządzeń towarzyszących funkcji Windows Hello.
+- **Uwierzytelnianie urządzeń przy użyciu funkcji Windows Hello**: Opcja **Zezwalaj** umożliwia użytkownikom logowanie się na komputerze z systemem Windows 10 za pomocą urządzenia towarzyszącego funkcji Windows Hello, na przykład telefonu, opaski treningowej lub urządzenia Internetu rzeczy (IoT). W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Domyślne ustawienie systemu operacyjnego nie musi umożliwiać uwierzytelniania w systemie Windows za pomocą urządzeń towarzyszących funkcji Windows Hello.
 
   [Authentication/AllowSecondaryAuthenticationDevice CSP (Dostawca usługi konfiguracji Authentication/AllowSecondaryAuthenticationDevice)](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-allowsecondaryauthenticationdevice)
 
@@ -491,7 +494,7 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad prywatności](h
 - **Personalizacja danych wejściowych**: Ustawienie **Blokuj** uniemożliwia używanie poleceń głosowych w celu dyktowania i komunikowania się z Cortaną i innymi aplikacjami korzystającymi z rozpoznawania mowy opartego na chmurze firmy Microsoft. Ta funkcja jest wyłączona, a użytkownicy nie mogą włączyć rozpoznawania mowy online przy użyciu ustawień. Ustawienie **Nie skonfigurowano** (domyślne) daje użytkownikom wybór. Jeśli zezwolisz na te usługi, firma Microsoft może zbierać dane głosowe w celu usprawnienia świadczonej usługi.
 - **Automatyczne akceptowanie w przypadku monitów o wyrażenie zgody przez użytkownika dotyczących parowania i prywatności**: Wybierz ustawienie **Zezwalaj**, aby system Windows mógł automatycznie akceptować komunikaty dotyczące parowania i prywatności wyświetlane w uruchamianych aplikacjach. Ustawienie **Nie skonfigurowano** (domyślne) zapobiega automatycznemu akceptowaniu okna dotyczącego parowania i prywatności wyświetlanego w otwieranych aplikacjach.
 - **Publikuj działania użytkownika**: Ustawienie **Blokuj** uniemożliwia udostępnianie środowisk i odnajdywanie ostatnio używanych zasobów w kanale aktywności. Ustawienie **Nie skonfigurowano** (domyślne) włącza tę funkcję, aby aplikacje mogły publikować działania użytkownika końcowego.
-- **Tylko działania lokalne**: Pozycja **Blokuj** uniemożliwia udostępnianie środowisk i odnajdywanie ostatnio używanych zasobów w przełączniku zadań jedynie na podstawie działań lokalnych. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
+- **Tylko działania lokalne**: Pozycja **Blokuj** uniemożliwia udostępnianie środowisk i odnajdywanie ostatnio używanych zasobów w przełączniku zadań jedynie na podstawie działań lokalnych. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
 
 Można skonfigurować informacje, do których mogą uzyskiwać dostęp wszystkie aplikacje na urządzeniu. Ponadto należy zdefiniować wyjątki dla poszczególnych aplikacji, korzystając z opcji **Wyjątki prywatności dla aplikacji**.
 
@@ -536,7 +539,7 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad WirelessDisplay
   [Dostawca usługi konfiguracji System/AllowTelemetry](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-allowtelemetry)
 
 - **Wysyłaj dane przeglądania programu Microsoft Edge do usługi Microsoft 365 Analytics**: Użyj tej funkcji, aby nadać ustawieniom **Udostępnij dane użycia** wartość **Rozszerzone** lub **Pełne**. Ta funkcja kontroluje dane, które przeglądarka Microsoft Edge wysyła do usługi Microsoft 365 Analytics dla urządzeń firmowych przy użyciu skonfigurowanego identyfikatora komercyjnego. Dostępne opcje:
-  - **Nie skonfigurowano**: usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Domyślny system operacyjny nie może wysyłać żadnych danych historii przeglądania.
+  - **Nie skonfigurowano**: usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Domyślna wartość systemu operacyjnego może powodować, że żadne dane historii przeglądania nie będą wysyłane.
   - **Wysyłaj tylko dane intranetowe**: Umożliwia administratorowi wysyłanie historii danych intranetowych
   - **Wysyłaj tylko dane internetowe**: Umożliwia administratorowi wysyłanie historii danych internetowych
   - **Wysyłaj dane intranetowe i internetowe**: Umożliwia administratorowi wysyłanie historii danych intranetowych i internetowych
@@ -591,11 +594,11 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad uruchamiania](h
 - **Kafelek użytkownika**: Ustawienie **Blokuj** powoduje ukrycie kafelka użytkownika w menu Start. Ustawienie **Nie skonfigurowano** (domyślne) powoduje wyświetlenie kafelka użytkownika, a także ustawia następujące ustawienia:
   - **Blokada**: Ustawienie **Blokuj** powoduje ukrycie opcji **Blokada** na kafelku użytkownika w menu Start. Ustawienie **Nie skonfigurowano** (domyślne) powoduje wyświetlanie opcji **Blokada**.
   - **Wyloguj się**: Ustawienie **Blokuj** powoduje ukrycie opcji **Wylogowanie** na kafelku użytkownika w menu Start. Ustawienie **Nie skonfigurowano** (domyślne) powoduje wyświetlanie opcji **Wylogowanie**.
-- **Zamknij**: Ustawienie **Blokuj** powoduje ukrycie opcji **Zaktualizuj i zamknij** oraz **Zamknij** na przycisku zasilania w menu Start. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
-- **Uśpienie**: Ustawienie **Blokuj** powoduje ukrycie opcji **Uśpienie** na przycisku zasilania w menu Start. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
-- **Hibernacja**: Ustawienie **Blokuj** powoduje ukrycie opcji **Hibernacja** na przycisku zasilania w menu Start. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
-- **Przełącz konto**: Ustawienie **Blokuj** powoduje ukrycie opcji **Przełącz konto** na kafelku użytkownika w menu Start. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
-- **Opcje ponownego uruchamiania**:  Ustawienie **Blokuj** powoduje ukrycie opcji **Zaktualizuj i uruchom ponownie** oraz **Uruchom ponownie** na przycisku zasilania w menu Start. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
+- **Zamknij**: Ustawienie **Blokuj** powoduje ukrycie opcji **Zaktualizuj i zamknij** oraz **Zamknij** na przycisku zasilania w menu Start. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+- **Uśpienie**: Ustawienie **Blokuj** powoduje ukrycie opcji **Uśpienie** na przycisku zasilania w menu Start. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+- **Hibernacja**: Ustawienie **Blokuj** powoduje ukrycie opcji **Hibernacja** na przycisku zasilania w menu Start. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+- **Przełącz konto**: Ustawienie **Blokuj** powoduje ukrycie opcji **Przełącz konto** na kafelku użytkownika w menu Start. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+- **Opcje ponownego uruchamiania**:  Ustawienie **Blokuj** powoduje ukrycie opcji **Zaktualizuj i uruchom ponownie** oraz **Uruchom ponownie** na przycisku zasilania w menu Start. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
 - **Folder Dokumenty w menu Start**: Pozwala ukryć lub pokazać folder Dokumenty w menu Start systemu Windows. Dostępne opcje:
   - **Nieskonfigurowane** (wartość domyślna): Żadne ustawienie nie jest wymuszane. Użytkownicy mogą wybrać, czy skrót ma być wyświetlany, czy ukrywany.
   - **Ukryj**: Skrót jest ukryty, a ustawienie w aplikacji Ustawienia jest wyłączone.
@@ -659,9 +662,9 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad środowiska](ht
 
 - **W centrum uwagi Windows**: Ustawienie **Blokuj** powoduje wyłączenie wszystkich funkcji W centrum uwagi Windows na ekranie blokady, wskazówek dotyczących systemu Windows, funkcji firmy Microsoft dla konsumentów i innych powiązanych funkcji. Jeśli Twoim celem jest zminimalizowanie ruchu sieciowego z urządzeń, wybierz ustawienie **Blokuj**. Ustawienie **Nie skonfigurowano** (domyślne) zezwala na funkcje W centrum uwagi Windows i kontrolowanie przez użytkowników końcowych. Po włączeniu możesz również zablokować lub zezwolić na następujące ustawienia:
 
-  - **Funkcja W centrum uwagi Windows na ekranie blokady**: Ustawienie **Blokuj** wyłącza wyświetlanie informacji funkcji W centrum uwagi Windows na ekranie blokady urządzenia. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
+  - **Funkcja W centrum uwagi Windows na ekranie blokady**: Ustawienie **Blokuj** wyłącza wyświetlanie informacji funkcji W centrum uwagi Windows na ekranie blokady urządzenia. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
   - **Sugestie innych firm w funkcji W centrum uwagi Windows**: Ustawienie **Blokuj** wyłącza sugerowanie zawartości niepochodzącej od firmy Microsoft przez funkcję W centrum uwagi Windows. Ustawienie **Nie skonfigurowano** (domyślne) zezwala na sugestie dotyczące aplikacji i zawartości pochodzące od innych wydawców oprogramowania w funkcjach W centrum uwagi Windows, takich jak W centrum uwagi na ekranie blokady, sugerowane aplikacje w menu Start i porady dotyczące systemu Windows.
-  - **Funkcje dla konsumentów**: Ustawienie **Blokuj** wyłącza funkcje przeznaczone zwykle tylko dla konsumentów, takie jak sugestie w menu Start, powiadomienia dotyczące członkostwa, instalacja aplikacji po uruchomieniu środowiska OOBE i kafelki przekierowania. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
+  - **Funkcje dla konsumentów**: Ustawienie **Blokuj** wyłącza funkcje przeznaczone zwykle tylko dla konsumentów, takie jak sugestie w menu Start, powiadomienia dotyczące członkostwa, instalacja aplikacji po uruchomieniu środowiska OOBE i kafelki przekierowania. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
   - **Porady dotyczące systemu Windows**: Ustawienie **Blokuj** wyłącza wyskakujące porady dotyczące systemu Windows. Ustawienie **Nie skonfigurowano** (domyślne) zezwala na wyświetlanie wskazówek.
   - **Funkcja W centrum uwagi Windows w Centrum akcji**: Ustawienie **Blokuj** zapobiega wyświetlaniu powiadomień funkcji W centrum uwagi Windows w Centrum akcji. Po wybraniu ustawienia **Nie skonfigurowano** (domyślnego) mogą być wyświetlane powiadomienia w Centrum akcji, które sugerują aplikacje lub funkcje pozwalające zwiększyć produktywność użytkowników w systemie Windows.
   - **Personalizacja funkcji W centrum uwagi Windows**: Ustawienie **Blokuj** uniemożliwia systemowi Windows używanie danych diagnostycznych w celu zapewniania dostosowanych środowisk dla użytkownika. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia firmie Microsoft używanie danych diagnostycznych w celu zapewnienia spersonalizowanych zaleceń, wskazówek i ofert dostosowanych do potrzeb użytkownika systemu Windows.
@@ -673,140 +676,140 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad usługi Defende
 
 - **Monitorowanie w czasie rzeczywistym**: Ustawienie **Włącz** włącza skanowanie w czasie rzeczywistym w poszukiwaniu złośliwego oprogramowania, programów szpiegujących i innego niepożądanego oprogramowania. Użytkownicy nie mogą wyłączyć tej opcji. 
 
-  Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **nie skonfigurowane**, usługa Intune pozostawi to ustawienie w wcześniej skonfigurowanym stanie. Domyślnie system operacyjny włącza tę funkcję i pozwala użytkownikom na ich zmianę.
+  W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **Nie skonfigurowano**, usługa Intune pozostawi to ustawienie we wcześniej skonfigurowanym stanie. Domyślnie system operacyjny włącza tę funkcję i pozwala użytkownikom na jej zmianę.
 
-  Usługa Intune nie wyłączy tej funkcji. Aby go wyłączyć, Użyj niestandardowego identyfikatora URI.
+  Usługa Intune nie wyłącza tej funkcji. Aby ją wyłączyć, użyj niestandardowego identyfikatora URI.
 
-  [Usługa Defender/AllowRealtimeMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
+  [Defender/AllowRealtimeMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
-- **Monitorowanie zachowania**: Ustawienie **Włącz** włącza monitorowanie zachowania i sprawdzanie urządzeń pod kątem określonych wzorców podejrzanej aktywności. Użytkownicy nie mogą włączać monitorowania zachowania. 
+- **Monitorowanie zachowania**: Ustawienie **Włącz** włącza monitorowanie zachowania i sprawdzanie urządzeń pod kątem określonych wzorców podejrzanej aktywności. Użytkownicy nie mogą wyłączyć monitorowania zachowania. 
 
-  Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **nie skonfigurowane**, usługa Intune pozostawi to ustawienie w wcześniej skonfigurowanym stanie. Domyślnie system operacyjny włącza monitorowanie zachowań i umożliwia użytkownikom zmianę tego ustawienia.
+  W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **Nie skonfigurowano**, usługa Intune pozostawi to ustawienie we wcześniej skonfigurowanym stanie. Domyślnie system operacyjny włącza monitorowanie zachowania i pozwala użytkownikom na ich zmianę.
 
-  Usługa Intune nie wyłączy tej funkcji. Aby go wyłączyć, Użyj niestandardowego identyfikatora URI.
+  Usługa Intune nie wyłącza tej funkcji. Aby ją wyłączyć, użyj niestandardowego identyfikatora URI.
 
-  [Usługa Defender/AllowBehaviorMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowbehaviormonitoring)
+  [Defender/AllowBehaviorMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowbehaviormonitoring)
 
 - **Network Inspection System (NIS)** : Pomaga w ochronie urządzeń przed sieciowymi atakami wykorzystującymi luki w zabezpieczeniach. System NIS korzysta z sygnatur znanych luk w zabezpieczeniach z centrum programu Microsoft Endpoint Protection, co pomaga wykrywać i blokować złośliwy ruch.
 
-  **Włączenie** włącza ochronę sieci i blokowanie sieci. Użytkownicy nie mogą wyłączyć tej opcji. Gdy ta funkcja jest włączona, użytkownicy nie mogą łączyć się z znanymi lukami w zabezpieczeniach.
+  Opcja **Włącz** powoduje włączenie ochrony sieci i blokowania sieci. Użytkownicy nie mogą wyłączyć tej opcji. Gdy ta funkcja jest włączona, użytkownicy nie mogą łączyć się z znanymi lukami w zabezpieczeniach.
 
-  Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **nie skonfigurowane**, usługa Intune pozostawi to ustawienie w wcześniej skonfigurowanym stanie. Domyślnie system operacyjny włącza usługę NIS i pozwala użytkownikom na ich zmianę.
+  W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **Nie skonfigurowano**, usługa Intune pozostawi to ustawienie we wcześniej skonfigurowanym stanie. Domyślnie system operacyjny włącza system NIS i pozwala użytkownikom na ich zmianę.
 
-  Usługa Intune nie wyłączy tej funkcji. Aby go wyłączyć, Użyj niestandardowego identyfikatora URI.
+  Usługa Intune nie wyłącza tej funkcji. Aby ją wyłączyć, użyj niestandardowego identyfikatora URI.
 
-  [Usługa Defender/EnableNetworkProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
+  [Defender/EnableNetworkProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
 
-- **Skanuj wszystkie pobrane pliki**: **Włącz** włącza to ustawienie, a usługa Defender skanuje wszystkie pliki pobrane z Internetu. Użytkownicy nie mogą wyłączyć tego ustawienia. 
+- **Skanuj wszystkie pobrane pliki**: opcja **Włącz** powoduje włączenie tego ustawienia, a usługa Defender skanuje wszystkie pliki pobierane z Internetu. Użytkownicy nie mogą wyłączyć tego ustawienia. 
 
-  Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **nie skonfigurowane**, usługa Intune pozostawi to ustawienie w wcześniej skonfigurowanym stanie. Domyślnie system operacyjny włącza to ustawienie i umożliwia użytkownikom zmianę tego ustawienia.
+  W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **Nie skonfigurowano**, usługa Intune pozostawi to ustawienie we wcześniej skonfigurowanym stanie. Domyślnie system operacyjny włącza to ustawienie i pozwala użytkownikom na jego zmianę.
 
-  Usługa Intune nie wyłączy tej funkcji. Aby go wyłączyć, Użyj niestandardowego identyfikatora URI.
+  Usługa Intune nie wyłącza tej funkcji. Aby ją wyłączyć, użyj niestandardowego identyfikatora URI.
 
-  [Usługa Defender/AllowIOAVProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowioavprotection)
+  [Defender/AllowIOAVProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowioavprotection)
 
 - **Skanuj skrypty ładowane w przeglądarkach internetowych firmy Microsoft**: Ustawienie **Włącz** umożliwia usłudze Defender skanowanie skryptów używanych przez przeglądarkę Internet Explorer. Użytkownicy nie mogą wyłączyć tego ustawienia. 
 
-  Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **nie skonfigurowane**, usługa Intune pozostawi to ustawienie w wcześniej skonfigurowanym stanie. Domyślnie system operacyjny włącza to ustawienie i umożliwia użytkownikom zmianę tego ustawienia.
+  W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **Nie skonfigurowano**, usługa Intune pozostawi to ustawienie we wcześniej skonfigurowanym stanie. Domyślnie system operacyjny włącza to ustawienie i pozwala użytkownikom na jego zmianę.
 
-  Usługa Intune nie wyłączy tej funkcji. Aby go wyłączyć, Użyj niestandardowego identyfikatora URI.
+  Usługa Intune nie wyłącza tej funkcji. Aby ją wyłączyć, użyj niestandardowego identyfikatora URI.
 
-  [Usługa Defender/AllowScriptScanning CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscriptscanning)
+  [Defender/AllowScriptScanning CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscriptscanning)
 
 - **Dostęp użytkownika końcowego do narzędzia Defender**: Ustawienie **Blokuj** ukrywa interfejs użytkownika usługi Microsoft Defender przed użytkownikami końcowymi. Wszystkie powiadomienia usługi Microsoft Defender również są pomijane.
 
-  Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia. Jeśli zablokujesz to ustawienie, a następnie zmienisz je z powrotem na **nie skonfigurowane**, usługa Intune pozostawi ustawienie w wcześniej skonfigurowanym stanie. Domyślnie system operacyjny umożliwia użytkownikowi dostęp do interfejsu użytkownika programu Microsoft Defender i umożliwia użytkownikom zmianę go.
+  W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Jeśli zablokujesz to ustawienie, a następnie zmienisz je z powrotem na **Nie skonfigurowano**, usługa Intune pozostawi to ustawienie we wcześniej skonfigurowanym stanie. Domyślnie system operacyjny umożliwia użytkownikowi dostęp do interfejsu użytkownika programu Microsoft Defender i umożliwia użytkownikom jego zmianę.
 
-  Usługa Intune nie wyłączy tej funkcji. Aby go wyłączyć, Użyj niestandardowego identyfikatora URI.
+  Usługa Intune nie wyłącza tej funkcji. Aby ją wyłączyć, użyj niestandardowego identyfikatora URI.
 
   Zmiany tego ustawienia zostaną wprowadzone po następnym ponownym uruchomieniu komputera użytkownika.
 
-  [Usługa Defender/AllowUserUIAccess CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowuseruiaccess)
+  [Defender/AllowUserUIAccess CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowuseruiaccess)
 
-- **Interwał aktualizacji analizy zabezpieczeń (w godzinach)** : wprowadź interwał sprawdzania nowej analizy zabezpieczeń w usłudze Defender — od 0-24. Dostępne opcje:
+- **Interwał aktualizacji analizy zabezpieczeń (w godzinach)** : wprowadź interwał sprawdzania dostępności nowej analizy zabezpieczeń przez usługę Defender z zakresu 0–24. Dostępne opcje:
 
   - **Nie skonfigurowano** (wartość domyślna): usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Domyślny system operacyjny może sprawdzać dostępność aktualizacji co 8 godzin.
-  - **Nie sprawdzaj**: usługa Defender nie sprawdza, czy są nowe aktualizacje analizy zabezpieczeń.
+  - **Nie sprawdzaj**: usługa Defender nie sprawdza dostępności nowych aktualizacji analizy zabezpieczeń.
   - **1–24**: `1` — sprawdza co godzinę `2` — sprawdza co dwie godziny `24` — sprawdza, czy każdy dzień i tak dalej.
   
-  [Usługa Defender/SignatureUpdateInterval CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdateinterval)
+  [Defender/SignatureUpdateInterval CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdateinterval)
   
 - **Monitoruj działania plików i programów**: Zezwala usłudze Defender na monitorowanie działania plików i programów na urządzeniach. Dostępne opcje:
 
-  - **Nie skonfigurowano** (wartość domyślna): usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Domyślne ustawienia systemu operacyjnego mogą monitorować wszystkie pliki.
+  - **Nie skonfigurowano** (wartość domyślna): usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Domyślna wartość systemu operacyjnego umożliwia monitorowanie wszystkich plików.
   - **Monitorowanie wyłączone**
   - **Monitoruj wszystkie pliki**
   - **Monitoruj tylko pliki przychodzące**
   - **Monitoruj tylko pliki wychodzące**
 
-  [Usługa Defender/RealTimeScanDirection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-realtimescandirection)
+  [Defender/RealTimeScanDirection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-realtimescandirection)
 
 - **Dni przed usunięciem złośliwego oprogramowania poddanego kwarantannie**: Umożliwia kontynuowanie śledzenia wykrytego złośliwego oprogramowania przez wprowadzoną liczbę dni, co pozwala ręcznie sprawdzać urządzenia, które wcześniej zostały zainfekowane. Jeśli liczba dni zostanie ustawiona na `0`, złośliwe oprogramowanie pozostanie w folderze kwarantanny i nie będzie automatycznie usuwane. Po ustawieniu wartości `90` elementy poddane kwarantannie są przechowywane w systemie przez 90 dni, po czym są usuwane.
 
-  [Usługa Defender/DaysToRetainCleanedMalware CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-daystoretaincleanedmalware)
+  [Defender/DaysToRetainCleanedMalware CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-daystoretaincleanedmalware)
 
 - **Limit wykorzystania procesora CPU podczas skanowania**: Ogranicza moc procesora CPU, jakiej mogą używać procesy skanowania (od `0` do `100`).
-- **Skanuj pliki archiwalne**: **włączyć** włącza usługę Defender, aby skanować pliki archiwalne, takie jak pliki zip lub cab. Użytkownicy nie mogą wyłączyć tego ustawienia.
+- **Skanuj pliki archiwum**: ustawienie **Włącz** włącza usługę Defender, która skanuje pliki archiwum, na przykład pliki zip i cab. Użytkownicy nie mogą wyłączyć tego ustawienia.
 
-  Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **nie skonfigurowane**, usługa Intune pozostawi to ustawienie w wcześniej skonfigurowanym stanie. Domyślnie system operacyjny włącza skanowanie i pozwala użytkownikom na jego zmianę.
+  W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **Nie skonfigurowano**, usługa Intune pozostawi to ustawienie we wcześniej skonfigurowanym stanie. Domyślnie system operacyjny włącza to skanowanie i pozwala użytkownikom na jego zmianę.
 
-  Usługa Intune nie wyłączy tej funkcji. Aby go wyłączyć, Użyj niestandardowego identyfikatora URI.
+  Usługa Intune nie wyłącza tej funkcji. Aby ją wyłączyć, użyj niestandardowego identyfikatora URI.
 
-  [Usługa Defender/AllowArchiveScanning CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning)
+  [Defender/AllowArchiveScanning CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning)
 
-- **Skanuj przychodzące wiadomości e-mail**: Ustawienie **Włącz** umożliwia usłudze Defender skanowanie wiadomości e-mail dostarczanych do urządzenia. Po włączeniu aparat analizuje skrzynkę pocztową i pliki poczty w celu przeanalizowania treści i załączników wiadomości e-mail. Można skanować w formacie PST (Outlook),. dbx,. mbx, MIME (Outlook Express) i BinHex (Mac).
+- **Skanuj przychodzące wiadomości e-mail**: Ustawienie **Włącz** umożliwia usłudze Defender skanowanie wiadomości e-mail dostarczanych do urządzenia. Po włączeniu aparat analizuje skrzynkę pocztową i pliki poczty w celu przeanalizowania treści i załączników wiadomości. Można skanować formaty pst (Outlook), dbx, mbx, MIME (Outlook Express) i BinHex (Mac).
 
-  Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **nie skonfigurowane**, usługa Intune pozostawi to ustawienie w wcześniej skonfigurowanym stanie. Domyślnie system operacyjny wyłącza to skanowanie i umożliwia użytkownikom zmianę go.
+  W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **Nie skonfigurowano**, usługa Intune pozostawi to ustawienie we wcześniej skonfigurowanym stanie. Domyślnie system operacyjny wyłącza to skanowanie i pozwala użytkownikom na jego zmianę.
 
-  Usługa Intune nie wyłączy tej funkcji. Aby go wyłączyć, Użyj niestandardowego identyfikatora URI.
+  Usługa Intune nie wyłącza tej funkcji. Aby ją wyłączyć, użyj niestandardowego identyfikatora URI.
 
-  [Usługa Defender/AllowEmailScanning CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowemailscanning)
+  [Defender/AllowEmailScanning CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowemailscanning)
 
-- **Skanuj dyski wymienne podczas pełnego skanowania**: **Włącz,** włączają skanowanie dysków wymiennych usługi Defender podczas pełnego skanowania. Użytkownicy nie mogą wyłączyć tego ustawienia.
+- **Skanuj dyski wymienne podczas pełnego skanowania**: opcja **Włącz** powoduje włączenie skanowania dysków wymiennych przez usługę Defender podczas pełnego skanowania. Użytkownicy nie mogą wyłączyć tego ustawienia.
 
-  Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **nie skonfigurowane**, usługa Intune pozostawi to ustawienie w wcześniej skonfigurowanym stanie. Domyślnie system operacyjny umożliwia usłudze Defender skanowanie dysków wymiennych, takich jak dyski USB, i umożliwia użytkownikom zmianę tego ustawienia.
+  W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **Nie skonfigurowano**, usługa Intune pozostawi to ustawienie we wcześniej skonfigurowanym stanie. Domyślnie system operacyjny umożliwia usłudze Defender skanowanie dysków wymiennych, takich jak dyski USB, i umożliwia użytkownikom zmianę tego ustawienia.
 
   Podczas szybkiego skanowania dyski wymienne mogą być nadal skanowane.
 
-  Usługa Intune nie wyłączy tej funkcji. Aby go wyłączyć, Użyj niestandardowego identyfikatora URI.
+  Usługa Intune nie wyłącza tej funkcji. Aby ją wyłączyć, użyj niestandardowego identyfikatora URI.
 
-  [AllowFullScanRemovableDriveScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanremovabledrivescanning)
+  [Defender/AllowFullScanRemovableDriveScanning CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanremovabledrivescanning)
 
 - **Skanuj zamapowane dyski sieciowe podczas pełnego skanowania**: Ustawienie **Włącz** powoduje w usłudze Defender skanowanie plików na zamapowanych dyskach sieciowych. Jeśli pliki na dysku są plikami tylko do odczytu, usługa Defender nie będzie mogła usunąć z nich wykrytego złośliwego oprogramowania. Użytkownicy nie mogą wyłączyć tego ustawienia.
 
-  Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **nie skonfigurowane**, usługa Intune pozostawi to ustawienie w wcześniej skonfigurowanym stanie. Domyślnie system operacyjny włącza tę funkcję i pozwala użytkownikom na ich zmianę.
+  W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **Nie skonfigurowano**, usługa Intune pozostawi to ustawienie we wcześniej skonfigurowanym stanie. Domyślnie system operacyjny włącza tę funkcję i pozwala użytkownikom na jej zmianę.
 
-  Podczas szybkiego skanowania zamapowane dyski sieciowe nadal mogą być skanowane.
+  Podczas szybkiego skanowania zamapowane dyski sieciowe mogą być nadal skanowane.
 
-  Usługa Intune nie wyłączy tej funkcji. Aby go wyłączyć, Użyj niestandardowego identyfikatora URI.
+  Usługa Intune nie wyłącza tej funkcji. Aby ją wyłączyć, użyj niestandardowego identyfikatora URI.
 
-  [AllowFullScanOnMappedNetworkDrives](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanonmappednetworkdrives)
+  [Defender/AllowFullScanOnMappedNetworkDrives CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanonmappednetworkdrives)
 
-- **Skanuj pliki otwierane z folderów sieciowych**: **Włącz** usługa Defender skanuje pliki otwarte z folderów sieciowych lub udostępnionych dysków sieciowych, takich jak pliki dostępne ze ścieżki UNC. Użytkownicy nie mogą wyłączyć tego ustawienia. Jeśli pliki na dysku są plikami tylko do odczytu, usługa Defender nie będzie mogła usunąć z nich wykrytego złośliwego oprogramowania.
+- **Skanuj pliki otwierane z folderów sieciowych**: ustawienie **Włącz** umożliwia usłudze Defender skanowanie plików otwieranych z folderów sieciowych lub udostępnionych dysków sieciowych, takich jak dyski dostępne za pośrednictwem ścieżki UNC. Użytkownicy nie mogą wyłączyć tego ustawienia. Jeśli pliki na dysku są plikami tylko do odczytu, usługa Defender nie będzie mogła usunąć z nich wykrytego złośliwego oprogramowania.
 
-  Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **nie skonfigurowane**, usługa Intune pozostawi to ustawienie w wcześniej skonfigurowanym stanie. Domyślnie system operacyjny skanuje pliki otwierane z folderów sieciowych i pozwala użytkownikom na ich zmianę.
+  W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **Nie skonfigurowano**, usługa Intune pozostawi to ustawienie we wcześniej skonfigurowanym stanie. Domyślnie system operacyjny skanuje pliki otwierane z folderów sieciowych i pozwala użytkownikom na ich zmianę.
 
-  Usługa Intune nie wyłączy tej funkcji. Aby go wyłączyć, Użyj niestandardowego identyfikatora URI.
+  Usługa Intune nie wyłącza tej funkcji. Aby ją wyłączyć, użyj niestandardowego identyfikatora URI.
 
-  [Usługa Defender/AllowScanningNetworkFiles CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles)
+  [Defender/AllowScanningNetworkFiles CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles)
 
 - **Ochrona w chmurze**: Ustawienie **Włącz** włącza usługę Microsoft Active Protection w celu odbierania informacji o działaniu złośliwego oprogramowania z zarządzanych urządzeń. Użytkownicy nie mogą zmieniać tego ustawienia. 
 
-  Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **nie skonfigurowane**, usługa Intune pozostawi to ustawienie w wcześniej skonfigurowanym stanie. Domyślnie system operacyjny umożliwia usługa Microsoft Active Protection otrzymywanie informacji i pozwala użytkownikom na zmianę tego ustawienia.
+  W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **Nie skonfigurowano**, usługa Intune pozostawi to ustawienie we wcześniej skonfigurowanym stanie. Domyślnie system operacyjny umożliwia usłudze Microsoft Active Protection odbieranie informacji i pozwala użytkownikom na zmianę tego ustawienia.
 
-  Usługa Intune nie wyłączy tej funkcji. Aby go wyłączyć, Użyj niestandardowego identyfikatora URI.
+  Usługa Intune nie wyłącza tej funkcji. Aby ją wyłączyć, użyj niestandardowego identyfikatora URI.
 
-  [Usługa Defender/AllowCloudProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
+  [Defender/AllowCloudProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 
 - **Monituj użytkowników przed przesłaniem próbki**: Określa, czy do firmy Microsoft są automatycznie wysyłane potencjalnie złośliwe pliki, które mogą wymagać dalszej analizy. Dostępne opcje:
 
-  - **Nie skonfigurowano** (wartość domyślna): usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Domyślny system operacyjny może automatycznie wysyłać bezpieczne próbki.
+  - **Nie skonfigurowano** (wartość domyślna): usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Domyślny system operacyjny umożliwia automatyczne wysyłanie bezpiecznych próbek.
   - **Zawsze pytaj**
   - **Pytaj przed wysłaniem danych osobistych**
   - **Nigdy nie wysyłaj danych**
   - **Wysyłaj wszystkie dane bez monitowania**: Dane są wysyłane automatycznie.
 
-  [Usługa Defender/SubmitSamplesConsent CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent)
+  [Defender/SubmitSamplesConsent CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent)
 
 - **Godzina przeprowadzania codziennego szybkiego skanowania**: Umożliwia wybranie godziny, o której będzie codziennie uruchamiane szybkie skanowanie. W przypadku wybrania opcji **Nieskonfigurowane** codzienne skanowanie nie będzie uruchamiane. Jeśli chcesz bardziej szczegółowo dostosować ustawienia, skonfiguruj ustawienie **Typ skanowania systemu do wykonania**.
 
@@ -825,11 +828,11 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad usługi Defende
   > [!TIP]
   > To ustawienie może spowodować konflikt z ustawieniem **Godzina przeprowadzania codziennego szybkiego skanowania**. Niektóre rekomendacje:  
   >
-  > - Jeśli chcesz zaplanować codzienne szybkie skanowanie i cotygodniowe pełne skanowanie, wykonaj następujące polecenia:
-  >   1. Skonfiguruj czas **, aby wykonać codzienne szybkie skanowanie** ustawienie.
-  >   2. Skonfiguruj typ **skanowania systemu, aby wykonać** w celu pełnego skanowania.
+  > - Jeśli chcesz zaplanować codzienne szybkie skanowanie i cotygodniowe pełne skanowanie, wykonaj następujące czynności:
+  >   1. Skonfiguruj ustawienie **Godzina przeprowadzania codziennego szybkiego skanowania**.
+  >   2. Skonfiguruj ustawienie **Typ skanowania systemu do wykonania** w celu przeprowadzenia pełnego skanowania.
   > 
-  > - Jeśli potrzebujesz tylko jednego szybkiego skanowania (bez pełnego skanowania), użyj jednego z tych ustawień: **czas na codzienne szybkie skanowanie** lub **typ skanowania systemu do wykonania**. Aby na przykład uruchamiać szybkie skanowanie co wtorek o 6 rano, skonfiguruj tylko ustawienie **Typ skanowania systemu do wykonania**.
+  > - Jeśli chcesz przeprowadzić tylko jedno szybkie skanowanie dziennie (bez pełnego skanowania), użyj jednego z tych ustawień: **Godzina przeprowadzania codziennego szybkiego skanowania** lub **Typ skanowania systemu do wykonania**. Aby na przykład uruchamiać szybkie skanowanie co wtorek o 6 rano, skonfiguruj tylko ustawienie **Typ skanowania systemu do wykonania**.
   > 
   > - Nie należy konfigurować ustawienia **Godzina przeprowadzania codziennego szybkiego skanowania** jednocześnie z opcją **Szybkie skanowanie** w ustawieniu **Typ skanowania systemu do wykonania**. Może to powodować konflikt ustawień i nieuruchomienie skanowania.
 
@@ -844,11 +847,11 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad usługi Defende
 
   Aby uzyskać więcej informacji dotyczących potencjalnie niepożądanych aplikacji, zobacz temat [Wykrywanie i blokowanie potencjalnie niepożądanych aplikacji](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus).
 
-  [Usługa Defender/PUAProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+  [Defender/PUAProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
 
-- **Prześlij przykłady**zgody: obecnie to ustawienie nie ma żadnego wpływu. Nie używaj tego ustawienia. Może zostać usunięta w przyszłej wersji.
+- **Zgoda na przesyłanie próbek**: obecnie to ustawienie nie ma żadnego wpływu. Nie używaj tego ustawienia. Może ono zostać usunięte w przyszłej wersji.
 
-- **Akcje na wykrytych zagrożeniach złośliwego oprogramowania**: Wybierz, w jaki sposób chcesz obsługiwać wątki złośliwego oprogramowania. **Nie skonfigurowano** (wartość domyślna) umożliwia usłudze Microsoft Defender wybór najlepszej opcji. W przypadku wybrania pozycji **Włącz** wskaż akcje, które ma podejmować usługa Defender po wykryciu zagrożenia określonego poziomu: niski, umiarkowany, wysoki i poważny. Dostępne opcje:
+- **Akcje do podjęcia wobec wykrytych zagrożeń związanych ze złośliwym oprogramowaniem**: wybierz, w jaki sposób chcesz obsługiwać wątki złośliwego oprogramowania. Ustawienie **Nie skonfigurowano** (wartość domyślna) umożliwia usłudze Microsoft Defender wybór najlepszej opcji. W przypadku wybrania pozycji **Włącz** wskaż akcje, które ma podejmować usługa Defender po wykryciu zagrożenia określonego poziomu: niski, umiarkowany, wysoki i poważny. Dostępne opcje:
   
   - **Wyczyść**
   - **Kwarantanna**
@@ -857,9 +860,9 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad usługi Defende
   - **Zdefiniowane przez użytkownika**
   - **Zablokuj**
 
-  Jeśli działanie nie jest możliwe, usługa Microsoft Defender wybierze najlepszą opcję, aby upewnić się, że zagrożenie jest korygowane. 
+  Jeśli Twoje działanie nie jest możliwe, usługa Microsoft Defender wybierze najlepszą opcję pozwalającą na wyeliminowanie zagrożenia. 
 
-  [Usługa Defender/ThreatSeverityDefaultAction CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-threatseveritydefaultaction)
+  [Defender/ThreatSeverityDefaultAction CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-threatseveritydefaultaction)
 
 ### <a name="microsoft-defender-antivirus-exclusions"></a>Wyjątki programu antywirusowego Microsoft Defender
 
@@ -871,83 +874,83 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad usługi Defende
 
 ### <a name="battery"></a>Bateria
 
-- **Poziom baterii, aby włączyć Oszczędzanie energii na**: gdy urządzenie korzysta z zasilania baterii, wprowadź poziom naładowania baterii, aby włączyć funkcję oszczędzania energii z 0-100. Wprowadź wartość procentową wskazującą poziom naładowania baterii. Wartość domyślna to 70%. Po ustawieniu na 70% Oszczędzanie energii jest włączane, gdy bateria ma 70% opłatę lub mniej dostępnej.
+- **Poziom naładowania baterii, przy którym włączana jest funkcja oszczędzania energii**: gdy urządzenie jest zasilane z baterii, wprowadź poziom naładowania baterii, przy którym ma być włączana funkcja oszczędzania energii, od 0 do 100. Wprowadź wartość procentową wskazującą poziom naładowania baterii. Wartość domyślna to 70%. W przypadku ustawienia 70% funkcja oszczędzania energii jest włączana, gdy bateria jest naładowana w 70% lub mniej.
 
-  [Włącz/EnergySaverBatteryThresholdOnBattery dostawcę CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-energysaverbatterythresholdonbattery)
+  [Power/EnergySaverBatteryThresholdOnBattery CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-energysaverbatterythresholdonbattery)
 
-- **Zamknięcie pokrywy (tylko dla urządzeń przenośnych)** : gdy urządzenie korzysta z zasilania bateryjnego, wybierz, co się stanie po zamknięciu pokrywy. Dostępne opcje:
-
-  - **Nie skonfigurowano** (wartość domyślna): usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
-  - **Brak akcji**: urządzenie pozostaje włączone i nadal używa zasilania baterii.
-  - **uśpienia**: urządzenie przechodzi w tryb uśpienia i zużywa niewielką ilość baterii. Komputer jest nadal włączony, a otwarte aplikacje i pliki są przechowywane w pamięci RAM.
-  - **hibernacji**: urządzenie przechodzi w tryb hibernacji. Otwarte aplikacje i pliki są przechowywane na dysku twardym, a urządzenie jest wyłączone.
-  - **zamykania**: urządzenie jest zamykane. Otwarte aplikacje i pliki są zamykane bez zapisywania.
-
-  [Włącz/SelectLidCloseActionOnBattery dostawcę CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectlidcloseactiononbattery)
-
-- **przycisku zasilania**: gdy urządzenie korzysta z zasilania baterii, wybierz, co się stanie, gdy zostanie wybrany przycisk zasilania. Dostępne opcje:
+- **Zamknięcie pokrywy (tylko dla urządzeń przenośnych)** : gdy urządzenie jest zasilane z baterii, wybierz, co się stanie po zamknięciu pokrywy. Dostępne opcje:
 
   - **Nie skonfigurowano** (wartość domyślna): usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
-  - **Brak akcji**: urządzenie pozostaje włączone i nadal używa zasilania baterii.
-  - **uśpienia**: urządzenie przechodzi w tryb uśpienia i zużywa niewielką ilość baterii. Komputer jest nadal włączony, a otwarte aplikacje i pliki są przechowywane w pamięci RAM.
-  - **hibernacji**: urządzenie przechodzi w tryb hibernacji. Otwarte aplikacje i pliki są przechowywane na dysku twardym, a urządzenie jest wyłączone.
-  - **zamykania**: urządzenie jest zamykane. Otwarte aplikacje i pliki są zamykane bez zapisywania.
+  - **Brak akcji**: urządzenie pozostaje włączone i nadal jest zasilane z baterii.
+  - **Uśpienie**: urządzenie przechodzi w tryb uśpienia i zużywa niewielką ilość baterii. Komputer jest nadal włączony, a otwarte aplikacje i pliki są przechowywane w pamięci RAM.
+  - **Hibernacja**: urządzenie przechodzi w tryb hibernacji. Otwarte aplikacje i pliki są przechowywane na dysku twardym, a urządzenie się wyłącza.
+  - **Zamykanie**: urządzenie jest zamykane. Otwarte aplikacje i pliki są zamykane bez zapisywania.
 
-  [Włącz/SelectPowerButtonActionOnBattery dostawcę CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectpowerbuttonactiononbattery)
+  [Power/SelectLidCloseActionOnBattery CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectlidcloseactiononbattery)
 
-- **Przycisk uśpienia**: gdy urządzenie korzysta z zasilania baterii, wybierz, co się stanie po wybraniu przycisku uśpienia. Dostępne opcje:
+- **Przycisk zasilania**: gdy urządzenie jest zasilane z baterii, wybierz, co się stanie po wybraniu przycisku zasilania. Dostępne opcje:
 
   - **Nie skonfigurowano** (wartość domyślna): usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
-  - **Brak akcji**: urządzenie pozostaje włączone i nadal używa zasilania baterii.
-  - **uśpienia**: urządzenie przechodzi w tryb uśpienia i zużywa niewielką ilość baterii. Komputer jest nadal włączony, a otwarte aplikacje i pliki są przechowywane w pamięci RAM.
-  - **hibernacji**: urządzenie przechodzi w tryb hibernacji. Otwarte aplikacje i pliki są przechowywane na dysku twardym, a urządzenie jest wyłączone.
-  - **zamykania**: urządzenie jest zamykane. Otwarte aplikacje i pliki są zamykane bez zapisywania.
+  - **Brak akcji**: urządzenie pozostaje włączone i nadal jest zasilane z baterii.
+  - **Uśpienie**: urządzenie przechodzi w tryb uśpienia i zużywa niewielką ilość baterii. Komputer jest nadal włączony, a otwarte aplikacje i pliki są przechowywane w pamięci RAM.
+  - **Hibernacja**: urządzenie przechodzi w tryb hibernacji. Otwarte aplikacje i pliki są przechowywane na dysku twardym, a urządzenie się wyłącza.
+  - **Zamykanie**: urządzenie jest zamykane. Otwarte aplikacje i pliki są zamykane bez zapisywania.
 
-  [Włącz/SelectSleepButtonActionOnBattery dostawcę CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectsleepbuttonactiononbattery)
+  [Power/SelectPowerButtonActionOnBattery CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectpowerbuttonactiononbattery)
 
-- **Hybrydowe**uśpienia: gdy urządzenie korzysta z zasilania baterii, **wyłączyć** uniemożliwia przejście urządzenia do trybu uśpienia hybrydowego. W trybie uśpienia hybrydowego otwarte aplikacje i pliki są przechowywane w pamięci RAM i na dysku twardym. Zużywa niewielką ilość baterii. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
+- **Przycisk Uśpij**: gdy urządzenie jest zasilane z baterii, wybierz, co się stanie po wybraniu przycisku Uśpij. Dostępne opcje:
 
-  [Włącz/TurnOffHybridSleepOnBattery dostawcę CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-turnoffhybridsleeponbattery)
+  - **Nie skonfigurowano** (wartość domyślna): usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+  - **Brak akcji**: urządzenie pozostaje włączone i nadal jest zasilane z baterii.
+  - **Uśpienie**: urządzenie przechodzi w tryb uśpienia i zużywa niewielką ilość baterii. Komputer jest nadal włączony, a otwarte aplikacje i pliki są przechowywane w pamięci RAM.
+  - **Hibernacja**: urządzenie przechodzi w tryb hibernacji. Otwarte aplikacje i pliki są przechowywane na dysku twardym, a urządzenie się wyłącza.
+  - **Zamykanie**: urządzenie jest zamykane. Otwarte aplikacje i pliki są zamykane bez zapisywania.
+
+  [Power/SelectSleepButtonActionOnBattery CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectsleepbuttonactiononbattery)
+
+- **Uśpienie hybrydowe**: gdy urządzenie jest zasilane z baterii, opcja **Wyłącz** uniemożliwia przejście urządzenia w tryb uśpienia hybrydowego. W trybie uśpienia hybrydowego otwarte aplikacje i pliki są przechowywane w pamięci RAM i na dysku twardym. Zużywa niewielką ilość baterii. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+
+  [Power/TurnOffHybridSleepOnBattery CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-turnoffhybridsleeponbattery)
 
 ### <a name="pluggedin"></a>Podłączony​
 
-- **Poziom baterii, aby włączyć Oszczędzanie energii na**: gdy urządzenie jest podłączone, wprowadź poziom naładowania baterii, aby włączyć funkcję oszczędzania energii z 0-100. Wprowadź wartość procentową wskazującą poziom naładowania baterii. Wartość domyślna to 70%. Po ustawieniu na 70% Oszczędzanie energii jest włączane, gdy bateria ma 70% opłatę lub mniej dostępnej.
+- **Poziom naładowania baterii, przy którym włączana jest funkcja oszczędzania energii**: gdy urządzenie jest zasilane z sieci, wprowadź poziom naładowania baterii, przy którym ma być włączana funkcja oszczędzania energii, od 0 do 100. Wprowadź wartość procentową wskazującą poziom naładowania baterii. Wartość domyślna to 70%. W przypadku ustawienia 70% funkcja oszczędzania energii jest włączana, gdy bateria jest naładowana w 70% lub mniej.
 
-  [Włącz/EnergySaverBatteryThresholdPluggedIn dostawcę CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-energysaverbatterythresholdpluggedin)
+  [Power/EnergySaverBatteryThresholdPluggedIn CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-energysaverbatterythresholdpluggedin)
 
 - **Zamknięcie pokrywy (tylko dla urządzeń przenośnych)** : gdy urządzenie jest zasilane z sieci, wybierz, co się stanie po zamknięciu pokrywy. Dostępne opcje:
 
   - **Nie skonfigurowano** (wartość domyślna): usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
   - **Brak akcji**: urządzenie pozostaje włączone.
-  - **uśpienia**: urządzenie przechodzi w tryb uśpienia. Komputer jest nadal włączony, a otwarte aplikacje i pliki są przechowywane w pamięci RAM.
-  - **hibernacji**: urządzenie przechodzi w tryb hibernacji. Otwarte aplikacje i pliki są przechowywane na dysku twardym, a urządzenie jest wyłączone.
-  - **zamykania**: urządzenie jest zamykane. Otwarte aplikacje i pliki są zamykane bez zapisywania.
+  - **Uśpienie**: urządzenie przechodzi w tryb uśpienia. Komputer jest nadal włączony, a otwarte aplikacje i pliki są przechowywane w pamięci RAM.
+  - **Hibernacja**: urządzenie przechodzi w tryb hibernacji. Otwarte aplikacje i pliki są przechowywane na dysku twardym, a urządzenie się wyłącza.
+  - **Zamykanie**: urządzenie jest zamykane. Otwarte aplikacje i pliki są zamykane bez zapisywania.
   
-    [Włącz/SelectLidCloseActionPluggedIn dostawcę CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectlidcloseactionpluggedin)
+    [Power/SelectLidCloseActionPluggedIn CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectlidcloseactionpluggedin)
   
-- **przycisku zasilania**: gdy urządzenie jest podłączone, wybierz, co się stanie po wybraniu przycisku zasilania. Dostępne opcje:
+- **Przycisk zasilania**: gdy urządzenie jest zasilane z sieci, wybierz, co się stanie po wybraniu przycisku zasilania. Dostępne opcje:
 
   - **Nie skonfigurowano** (wartość domyślna): usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
   - **Brak akcji**: urządzenie pozostaje włączone.
-  - **uśpienia**: urządzenie przechodzi w tryb uśpienia. Komputer jest nadal włączony, a otwarte aplikacje i pliki są przechowywane w pamięci RAM.
-  - **hibernacji**: urządzenie przechodzi w tryb hibernacji. Otwarte aplikacje i pliki są przechowywane na dysku twardym, a urządzenie jest wyłączone.
-  - **zamykania**: urządzenie jest zamykane. Otwarte aplikacje i pliki są zamykane bez zapisywania.
+  - **Uśpienie**: urządzenie przechodzi w tryb uśpienia. Komputer jest nadal włączony, a otwarte aplikacje i pliki są przechowywane w pamięci RAM.
+  - **Hibernacja**: urządzenie przechodzi w tryb hibernacji. Otwarte aplikacje i pliki są przechowywane na dysku twardym, a urządzenie się wyłącza.
+  - **Zamykanie**: urządzenie jest zamykane. Otwarte aplikacje i pliki są zamykane bez zapisywania.
 
-  [Włącz/SelectPowerButtonActionPluggedIn dostawcę CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectpowerbuttonactionpluggedin)
+  [Power/SelectPowerButtonActionPluggedIn CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectpowerbuttonactionpluggedin)
 
-- **Przycisk uśpienia**: gdy urządzenie jest podłączone, wybierz co się stanie, gdy zostanie wybrany przycisk uśpienia. Dostępne opcje:
+- **Przycisk Uśpij**: gdy urządzenie jest zasilane z sieci, wybierz, co się stanie po wybraniu przycisku Uśpij. Dostępne opcje:
 
   - **Nie skonfigurowano** (wartość domyślna): usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
   - **Brak akcji**: urządzenie pozostaje włączone.
-  - **uśpienia**: urządzenie przechodzi w tryb uśpienia. Komputer jest nadal włączony, a otwarte aplikacje i pliki są przechowywane w pamięci RAM.
-  - **hibernacji**: urządzenie przechodzi w tryb hibernacji. Otwarte aplikacje i pliki są przechowywane na dysku twardym, a urządzenie jest wyłączone.
-  - **zamykania**: urządzenie jest zamykane. Otwarte aplikacje i pliki są zamykane bez zapisywania.
+  - **Uśpienie**: urządzenie przechodzi w tryb uśpienia. Komputer jest nadal włączony, a otwarte aplikacje i pliki są przechowywane w pamięci RAM.
+  - **Hibernacja**: urządzenie przechodzi w tryb hibernacji. Otwarte aplikacje i pliki są przechowywane na dysku twardym, a urządzenie się wyłącza.
+  - **Zamykanie**: urządzenie jest zamykane. Otwarte aplikacje i pliki są zamykane bez zapisywania.
 
-  [Włącz/SelectSleepButtonActionPluggedIn dostawcę CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectsleepbuttonactionpluggedin)
+  [Power/SelectSleepButtonActionPluggedIn CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectsleepbuttonactionpluggedin)
 
-- **Hybrydowe**uśpienia: gdy urządzenie jest podłączone, **wyłączyć** uniemożliwia przejście urządzenia do trybu uśpienia hybrydowego. W trybie uśpienia hybrydowego otwarte aplikacje i pliki są przechowywane w pamięci RAM i na dysku twardym. Jeśli ustawienie **nie zostało skonfigurowane** (domyślnie), usługa Intune nie zmieni ani nie zaktualizuje tego ustawienia.
+- **Uśpienie hybrydowe**: gdy urządzenie jest zasilane z sieci, opcja **Wyłącz** uniemożliwia przejście urządzenia w tryb uśpienia hybrydowego. W trybie uśpienia hybrydowego otwarte aplikacje i pliki są przechowywane w pamięci RAM i na dysku twardym. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
 
-  [Włącz/TurnOffHybridSleepPluggedIn dostawcę CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-turnoffhybridsleeppluggedin)
+  [Power/TurnOffHybridSleepPluggedIn CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-turnoffhybridsleeppluggedin)
 
 ## <a name="next-steps"></a>Następne kroki
 

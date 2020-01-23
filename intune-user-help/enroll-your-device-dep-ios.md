@@ -19,12 +19,12 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: 039ec17b1a56a7339f2159d7af6ad1bd9280bf63
-ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
+ms.openlocfilehash: 6c1b6417489d1443596113a18476b9cbc8f3832e
+ms.sourcegitcommit: 8cc3eca2bce847b0c2b40d8531698e21df848878
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75855514"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75951453"
 ---
 # <a name="enroll-your-organization-provided-ios-device-in-management"></a>Rejestrowanie udostępnionego przez organizację urządzenia z systemem iOS na potrzeby zarządzania
 
@@ -44,11 +44,7 @@ Jeśli używasz własnego urządzenia z systemem iOS, a nie urządzenia dostarcz
 
 1. Włącz urządzenie z systemem iOS.
 2. Po wybraniu **języka** podłącz urządzenie do sieci Wi-Fi.
-3. Na ekranie **Konfiguruj urządzenie z systemem iOS** wybierz opcję, z której chcesz skorzystać:
-   - **Konfiguruj jako nowe urządzenie**
-   - **Przywróć z kopii zapasowej w usłudze iCloud**
-   - **Przywróć z kopii zapasowej w usłudze iTunes**
-
+3. Na ekranie **Konfiguruj urządzenie z systemem iOS** wybierz pozycję **Konfiguruj jako nowe urządzenie**.  
 4. Po podłączeniu do sieci Wi-Fi zostanie wyświetlony ekran **Konfiguracja**. Na ekranie zostanie wyświetlona informacja **[Twoja firma] automatycznie skonfiguruje Twoje urządzenie.**
 
    **Konfiguracja umożliwia [Twojej firmie] zarządzanie tym urządzeniem bez udziału użytkownika. Administrator może pomóc Ci w konfigurowaniu kont poczty e-mail i kont sieciowych, instalowaniu i konfigurowaniu aplikacji oraz zdalnym zarządzaniu ustawieniami. Administrator może wyłączać funkcje, instalować i usuwać aplikacje, monitorować i ograniczać ruch internetowy oraz zdalnie wymazać to urządzenie.**

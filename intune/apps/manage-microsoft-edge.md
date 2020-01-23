@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 304a6a60ea8dbfa98e62eb8e52a69e14af795746
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: e64741a92804ec4149b654480166720ff3092e35
+ms.sourcegitcommit: 665be113b593c3bc7d46b99599e720f781037dcf
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75547998"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76258499"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Zarządzanie dostępem do Internetu przy użyciu przeglądarki Microsoft Edge w usłudze Microsoft Intune
 
@@ -205,7 +205,7 @@ Następnie użyj następujących par klucz-wartość, aby ściągnąć znakowani
 
 |    Klucz    |    Wartość    |
 |------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-|    „com.microsoft.intune.SohwIndustryNews”    |    Wartość **true** spowoduje wyświetlanie wiadomości branżowych na stronie nowej karty w przeglądarce Microsoft Edge na urządzeniu przenośnym.<p>Wartość **false** (domyślna) spowoduje ukrywanie wiadomości branżowych na stronie nowej karty.    |
+|    com.microsoft.intune.ShowIndustryNews    |    Wartość **true** spowoduje wyświetlanie wiadomości branżowych na stronie nowej karty w przeglądarce mobilnej Microsoft Edge.<p>Wartość **false** (domyślna) spowoduje ukrywanie wiadomości branżowych na stronie nowej karty.    |
 
 ## <a name="configure-managed-bookmarks-for-microsoft-edge"></a>Konfigurowanie zakładek zarządzanych dla przeglądarki Microsoft Edge
 
@@ -217,6 +217,7 @@ Oto niektóre szczegóły:
 - Użytkownicy nie mogą usuwać ani modyfikować tych zakładek.
 - Te zakładki są wyświetlane na początku listy. Wszystkie zakładki utworzone przez użytkowników pojawiają się poniżej tych zakładek.
 - Jeśli zostało włączone przekierowanie serwera proxy aplikacji, możesz dodać aplikacje internetowe serwera proxy aplikacji, używając ich wewnętrznego lub zewnętrznego adresu URL.
+- Upewnij się, że wszystkie adresy URL dodawane do listy mają prefiks **http://** lub **https://** .
 
 Użyj następujących par klucz/wartość w celu skonfigurowania zakładek zarządzanych:
 
@@ -243,7 +244,7 @@ Użyj następujących par klucz/wartość, aby skonfigurować listę dozwolonych
 
 ### <a name="url-formats-for-allowed-and-blocked-site-list"></a>Formaty adresów URL dla listy witryn dozwolonych i zablokowanych 
 Możesz użyć różnych formatów adresów URL do tworzenia listy witryn dozwolonych/zablokowanych. Te dozwolone wzorce zostały szczegółowo opisane w poniższej tabeli. Przed rozpoczęciem pracy zapoznaj się z poniższymi uwagami: 
-- Upewnij się, że wszystkie adresy URL dodawane do listy będą mieć prefiks **http** lub **https**.
+- Upewnij się, że wszystkie adresy URL dodawane do listy mają prefiks **http://** lub **https://** .
 - Symbol wieloznaczny (\*) może być używany zgodnie z regułami z poniższej listy dozwolonych wzorców.
 - Symbol wieloznaczny może odpowiadać wyłącznie całemu składnikowi nazwy hosta (oddzielane kropkami) lub całym częściom ścieżki (oddzielane ukośnikami). Na przykład adres `http://*contoso.com`**nie** jest obsługiwany.
 - W adresie można określić numery portów. Jeśli nie określisz numeru portu, będą używane następujące wartości:
