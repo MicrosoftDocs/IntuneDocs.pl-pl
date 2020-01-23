@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 38f9c9721942b4c9754d4e99e4e91d751ceedcf3
-ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
+ms.openlocfilehash: f6edf3fd8d6c6aeefeb1e34c5b390360e7215f21
+ms.sourcegitcommit: 822a70c61f5d644216ccc401b8e8949bc39e8d4a
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75653788"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76125297"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu iOS
 
@@ -261,10 +261,10 @@ MultiIdentity | Boolean| Określa, czy aplikacja obsługuje wiele tożsamości. 
 SafariViewControllerBlockedOverride | Boolean| Wyłącza punkty zaczepienia SafariViewController usługi Intune w celu włączenia uwierzytelniania MSAL za pośrednictwem SFSafariViewController, SFAuthSession lub ASWebAuthSession. | Opcjonalny. Wartość domyślna to no (Nie). OSTRZEŻENIE: może spowodować wyciek danych, jeśli jest używany nieprawidłowo. Włącz tylko w razie absolutnej konieczności. Aby uzyskać szczegółowe informacje, zobacz sekcję [Kwestie do uwzględnienia podczas korzystania z biblioteki MSAL](#special-considerations-when-using-msal).  |
 SplashIconFile <br>SplashIconFile~ipad | String  | Określa plik ikony powitalnej (uruchamiania) usługi Intune. | Opcjonalny. |
 SplashDuration | Liczba | Minimalny czas w sekundach, przez który ekran uruchamiania usługi Intune będzie wyświetlany podczas uruchamiania aplikacji. Wartość domyślna to 1,5. | Opcjonalny. |
-BackgroundColor| String| Określa kolor tła składników interfejsu użytkownika zestawu SDK usługi Intune. Akceptuje ciąg szesnastkowy RGB w postaci „#XXXXXX”, gdzie „X” może być znakiem z zakresu 0–9 lub A–F. Znak # można pominąć.   | Opcjonalny. Domyślny kolor tła systemu, który może się różnić w różnych wersjach systemu iOS i zgodnie z ustawieniem tryb ciemny systemu iOS. |
-ForegroundColor| String| Określa kolor pierwszego planu dla składników interfejsu użytkownika zestawu SDK usługi Intune, takich jak kolor tekstu. Akceptuje ciąg szesnastkowy RGB w postaci „#XXXXXX”, gdzie „X” może być znakiem z zakresu 0–9 lub A–F. Znak # można pominąć.  | Opcjonalny. Wartością domyślną jest kolor etykiety systemu, który może się różnić w różnych wersjach systemu iOS i zgodnie z ustawieniem trybu ciemnego systemu iOS. |
-AccentColor | String| Określa kolor akcentu składników interfejsu użytkownika zestawu SDK usługi Intune, takich jak kolor tekstu przycisku i kolor wyróżnienia pola numeru PIN. Akceptuje ciąg szesnastkowy RGB w postaci „#XXXXXX”, gdzie „X” może być znakiem z zakresu 0–9 lub A–F. Znak # można pominąć.| Opcjonalny. Domyślnie systemowy niebieski. |
-SupportsDarkMode| Boolean | Określa, czy schemat kolorów interfejsu użytkownika zestawu SDK usługi Intune powinien obserwować ustawienie trybu ciemnego systemu, jeśli nie ustawiono żadnej wartości jawnej dla BackgroundColor/ForegroundColor/AccentColor | Opcjonalny. Wartość domyślna to yes (Tak). |
+BackgroundColor| String| Określa kolor tła składników interfejsu użytkownika zestawu SDK usługi Intune. Akceptuje ciąg szesnastkowy RGB w postaci „#XXXXXX”, gdzie „X” może być znakiem z zakresu 0–9 lub A–F. Znak # można pominąć.   | Opcjonalny. Ustawia domyślny kolor tła systemu, który może różnić się w zależności od wersji systemu iOS i ustawienia trybu ciemnego w systemie iOS. |
+ForegroundColor| String| Określa kolor pierwszego planu składników interfejsu użytkownika zestawu SDK usługi Intune, na przykład kolor tekstu. Akceptuje ciąg szesnastkowy RGB w postaci „#XXXXXX”, gdzie „X” może być znakiem z zakresu 0–9 lub A–F. Znak # można pominąć.  | Opcjonalny. Ustawia domyślny kolor etykiety systemu, który może różnić się w zależności od wersji systemu iOS i ustawienia trybu ciemnego w systemie iOS. |
+AccentColor | String| Określa kolor akcentu składników interfejsu użytkownika zestawu SDK usługi Intune, na przykład kolor tekstu przycisku i kolor wyróżnienia pola numeru PIN. Akceptuje ciąg szesnastkowy RGB w postaci „#XXXXXX”, gdzie „X” może być znakiem z zakresu 0–9 lub A–F. Znak # można pominąć.| Opcjonalny. Domyślnie systemowy niebieski. |
+SupportsDarkMode| Boolean | Określa, czy schemat kolorów interfejsu użytkownika zestawu SDK usługi Intune powinien być zgodny z ustawieniem trybu ciemnego w systemie, jeśli nie ustawiono wyraźnie żadnej wartości dla ciągu BackgroundColor/ForegroundColor/AccentColor | Opcjonalny. Wartość domyślna to yes (Tak). |
 MAMTelemetryDisabled| Boolean| Określa, czy zestaw SDK będzie wysyłał dane telemetryczne do swojej wewnętrznej bazy danych.| Opcjonalny. Wartość domyślna to no (Nie). |
 MAMTelemetryUsePPE | Boolean | Określa, czy zestaw SDK objęty zarządzaniem aplikacjami mobilnymi będzie wysyłał dane do wewnętrznej bazy danych telemetrii wstępnego środowiska produkcyjnego. Użyj tego ustawienia podczas testowania aplikacji za pomocą zasad usługi Intune, aby dane telemetryczne testu nie mieszały się z danymi klienta. | Opcjonalny. Wartość domyślna to no (Nie). |
 MaxFileProtectionLevel | String | Opcjonalny. Umożliwia aplikacji określenie maksymalnej liczby elementów `NSFileProtectionType`, które może obsługiwać. Ta wartość będzie zastępować zasady wysyłane przez usługę, jeśli poziom będzie wyższy niż to, co może obsługiwać aplikacja. Możliwe wartości: `NSFileProtectionComplete`, `NSFileProtectionCompleteUnlessOpen`, `NSFileProtectionCompleteUntilFirstUserAuthentication`, `NSFileProtectionNone`.|
@@ -465,13 +465,14 @@ IntuneMAMPolicy.h | Klasa IntuneMAMPolicy udostępnia niektóre ustawienia zasad
 IntuneMAMFileProtectionManager.h | Klasa IntuneMAMFileProtectionManager udostępnia interfejsy API, przy użyciu których aplikacja może jawnie zabezpieczać pliki i katalogi na podstawie podanej tożsamości. Tożsamość może być zarządzana przez usługę Intune lub niezarządzana, a zestaw SDK zastosuje odpowiednie zasady zarządzania aplikacjami mobilnymi. Użycie tej klasy jest opcjonalne. |
 IntuneMAMDataProtectionManager.h | Klasa IntuneMAMDataProtectionManager udostępnia interfejsy API, przy użyciu których aplikacja może zabezpieczać bufory danych na podstawie podanej tożsamości. Tożsamość może być zarządzana przez usługę Intune lub niezarządzana, a zestaw SDK odpowiednio zastosuje szyfrowanie. |
 
-## <a name="implement-save-as-controls"></a>Implementowanie kontrolek Zapisz jako
+## <a name="implement-save-as-and-open-from-controls"></a>Implementacja kontrolek save-as i open-from
 
-Usługa Intune umożliwia administratorom IT wybieranie lokalizacji przechowywania, w których zarządzana aplikacja może zapisywać dane. Aplikacje mogą wysyłać zapytania o dozwolone lokalizacje przechowywania do zestawu SDK aplikacji usługi Intune przy użyciu interfejsu API `isSaveToAllowedForLocation` zdefiniowanego w klasie `IntuneMAMPolicy.h`.
+Usługa Intune umożliwia administratorom IT wybieranie lokalizacji przechowywania, w których zarządzana aplikacja może zapisywać lub otwierać dane. Aplikacje mogą wysyłać zapytania o dozwolone lokalizacje przechowywania kontrolki save-as do zestawu SDK MAM usługi Intune przy użyciu interfejsu API `isSaveToAllowedForLocation` zdefiniowanego w klasie `IntuneMAMPolicy.h`. Aplikacje mogą także wysyłać zapytania o dozwolone lokalizacje przechowywania kontrolki open-from do zestawu SDK MAM usługi Intune przy użyciu interfejsu API `isOpenFromAllowedForLocation` zdefiniowanego w klasie `IntuneMAMPolicy.h`.
 
 Przed zapisaniem danych zarządzanych w magazynie w chmurze lub lokalnie aplikacje muszą sprawdzić za pomocą interfejsu API `isSaveToAllowedForLocation`, czy administrator IT zezwolił na zapisywanie danych w tym miejscu.
+Przed otwarciem danych w aplikacji z magazynu w chmurze lub w środowisku lokalnym aplikacja musi sprawdzić za pomocą interfejsu API `isOpenFromAllowedForLocation`, czy administrator IT zezwolił na otwieranie danych w tym miejscu.
 
-W przypadku korzystania z interfejsu API `isSaveToAllowedForLocation` aplikacje muszą przekazać nazwę UPN używaną dla lokalizacji przechowywania, jeśli jest ona dostępna.
+W przypadku korzystania z interfejsów API `isSaveToAllowedForLocation` i `isOpenFromAllowedForLocation` aplikacje muszą przekazać nazwę UPN używaną dla lokalizacji przechowywania, jeśli jest ona dostępna.
 
 ### <a name="supported-save-locations"></a>Obsługiwane lokalizacje zapisywania
 
@@ -481,12 +482,46 @@ Interfejs API `isSaveToAllowedForLocation` zawiera stałe umożliwiające sprawd
 * IntuneMAMSaveLocationOneDriveForBusiness
 * IntuneMAMSaveLocationSharePoint
 * IntuneMAMSaveLocationLocalDrive
+* IntuneMAMSaveLocationAccountDocument
 
 Aplikacje powinny używać stałych w elemencie `isSaveToAllowedForLocation`, aby sprawdzać, czy można zapisywać dane w lokalizacjach uznawanych za „zarządzane”, np. w usłudze OneDrive dla Firm, lub „osobiste”. Ponadto należy używać interfejsu API w sytuacjach, w których aplikacja nie może określić, czy lokalizacja jest „zarządzana”, czy „osobista”.
 
-Lokalizacje znane jako „osobiste” są reprezentowane przez stałą `IntuneMAMSaveLocationOther`.
-
 Stałej `IntuneMAMSaveLocationLocalDrive` należy używać, gdy aplikacja zapisuje dane w dowolnej lokalizacji na urządzeniu lokalnym.
+
+Jeśli konto lokalizacji docelowej jest nieznane, należy przekazać wartość `nil`. Lokalizacja `IntuneMAMSaveLocationLocalDrive` zawsze powinna być sparowana z kontem `nil`.
+
+### <a name="supported-open-locations"></a>Obsługiwane otwarte lokalizacje
+
+Interfejs API `isOpenFromAllowedForLocation` zawiera stałe umożliwiające sprawdzenie, czy administrator IT zezwolił na otwieranie danych z poniższych lokalizacji zdefiniowanych w klasie `IntuneMAMPolicy.h`.
+
+* IntuneMAMOpenLocationOther
+* IntuneMAMOpenLocationOneDriveForBusiness
+* IntuneMAMOpenLocationSharePoint
+* IntuneMAMOpenLocationCamera
+* IntuneMAMOpenLocationLocalStorage
+* IntuneMAMOpenLocationAccountDocument
+
+Aplikacje powinny używać stałych w elemencie `isOpenFromAllowedForLocation`, aby sprawdzać, czy można otwierać dane z lokalizacji uznawanych za „zarządzane”, np. w usłudze OneDrive dla Firm, lub „osobiste”. Ponadto należy używać interfejsu API w sytuacjach, w których aplikacja nie może określić, czy lokalizacja jest „zarządzana”, czy „osobista”.
+
+Stałej `IntuneMAMOpenLocationCamera` należy używać, gdy aplikacja otwiera dane z aparatu lub albumu fotograficznego.
+
+Stałej `IntuneMAMOpenLocationLocalStorage` należy używać, gdy aplikacja otwiera dane z dowolnej lokalizacji na urządzeniu lokalnym.
+
+Stałej `IntuneMAMOpenLocationAccountDocument` należy używać, gdy aplikacja otwiera dokument zawierający tożsamość konta zarządzanego (zobacz sekcję „Dane udostępnione” poniżej)
+
+Jeśli konto lokalizacji źródłowej jest nieznane, należy przekazać wartość `nil`. Lokalizacje `IntuneMAMOpenLocationLocalStorage` i `IntuneMAMOpenLocationCamera` zawsze powinny być sparowane z kontem `nil`.
+
+### <a name="unknown-or-unlisted-locations"></a>Lokalizacje nieznane lub nieznajdujące się na liście
+
+Gdy żądana lokalizacja nie znajduje się na liście `IntuneMAMSaveLocation` lub `IntuneMAMOpenLocation` bądź jest nieznana, należy użyć jednej z dwóch lokalizacji.
+* Jeśli dostęp do lokalizacji zapisywania jest uzyskiwany przy użyciu konta zarządzanego, należy użyć lokalizacji `IntuneMAMSaveLocationAccountDocument` (w przypadku otwierania — `IntuneMAMOpenLocationAccountDocument`).
+* W przeciwnym razie należy użyć lokalizacji `IntuneMAMSaveLocationOther` (w przypadku otwierania — `IntuneMAMOpenLocationOther`).
+
+Ważne jest, aby wyraźnie odróżnić konto zarządzane od konta, które współużytkuje nazwę UPN konta zarządzanego. Na przykład konto zarządzane z nazwą UPN „user@contoso.com” zalogowane do usługi OneDrive nie jest tym samym co konto z nazwą UPN „user@contoso.com” zalogowane do usługi Dropbox. W przypadku uzyskiwania dostępu do nieznanej lub nieznajdującej się na liście usługi przez zalogowanie się do konta zarządzanego (np. „user@contoso.com” zalogowanego do usługi OneDrive) powinno to być reprezentowane przez lokalizację `AccountDocument`. Jeśli nieznana lub nieznajdująca się na liście usługa loguje się za pomocą innego konta (np. „user@contoso.com” zalogowanego do usługi Dropbox), nie uzyskuje dostępu do lokalizacji za pomocą konta zarządzanego i powinna być reprezentowana przez lokalizację `Other`.
+
+### <a name="sharing-blocked-alert"></a>Udostępnianie zablokowanego alertu
+
+Funkcja pomocnika interfejsu użytkownika może być używana w przypadku wywołania interfejsu API `isSaveToAllowedForLocation` lub `isOpenFromAllowedForLocation` i zablokowania akcji zapisywania/otwierania. Jeśli aplikacja chce powiadomić użytkownika, że akcja została zablokowana, może wywołać interfejs API `showSharingBlockedMessage` zdefiniowany w pomocniku `IntuneMAMUIHelper.h`, aby wyświetlić widok alertów z komunikatem ogólnym.
 
 ## <a name="share-data-via-uiactivityviewcontroller"></a>Udostępnianie danych przy użyciu kontrolera UIActivityViewController
 
