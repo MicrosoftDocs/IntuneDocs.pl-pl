@@ -1,6 +1,6 @@
 - name: Zarządzanie aplikacjami
   href: index.yml
-- name: Przegląd
+- name: Omówienie
   expanded: true
   items:
     - name: Omówienie zarządzania aplikacjami
@@ -26,7 +26,7 @@
       displayName: app-we; without; without enrollment
     - name: CZĘSTO ZADAWANE PYTANIA DOTYCZĄCE ZARZĄDZANIA APLIKACJAMI MOBILNYMI
       href: mam-faq.md
-- name: Przewodniki
+- name: Przewodniki z instrukcjami
   items:
     - name: Dodawanie aplikacji
       items:
@@ -45,7 +45,7 @@
               href: store-apps-windows-phone-8-1.md
             - name: Aplikacja systemu Windows
               href: store-apps-windows.md
-            - name: Aplikacje ze Sklepu Microsoft dla Firm
+            - name: Aplikacje ze sklepu Microsoft Store dla Firm
               href: windows-store-for-business.md
             - name: Aplikacje zarządzane ze sklepu Google Play
               href: apps-add-android-for-work.md
@@ -133,8 +133,6 @@
               href: manage-microsoft-edge.md
             - name: Konfigurowanie programu Outlook
               href: app-configuration-policies-outlook.md
-            - name: Konfigurowanie protokołu S/MIME dla programu Outlook
-              href: app-configuration-policies-outlook-smime.md
             - name: Konfigurowanie programu Google Chrome dla systemu Android
               href: apps-configure-chrome-android.md
         - name: Aplikacje i książki kupione w ramach zakupów zbiorczych
@@ -190,6 +188,8 @@
           href: ../fundamentals/help-desk-operators.md?toc=/intune/apps/toc.json&bc=/intune/apps/breadcrumb/toc.json
         - name: Rozwiązywanie problemów z instalacją aplikacji
           href: troubleshoot-app-install.md
+        - name: Dokumentacja błędów instalacji aplikacji
+          href: app-install-error-codes.md
         - name: Rozwiązywanie problemów związanych z zarządzaniem aplikacjami mobilnymi
           href: troubleshoot-mam.md
         - name: Przeglądanie dzienników ochrony aplikacji
