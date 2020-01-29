@@ -1,11 +1,11 @@
 - name: Akcje zdalne
   href: index.yml
-- name: Przegląd
+- name: Omówienie
   expanded: true
   items:
     - name: Omówienie zarządzania urządzeniami
       href: device-management.md
-- name: Przewodniki
+- name: Przewodniki z instrukcjami
   items:
     - name: Blokady i hasła
       items:
@@ -33,13 +33,13 @@
           href: device-supervised-mode.md
         - name: Wymazywanie urządzenia z systemem macOS
           href: device-erase.md
-        - name: Zastosowanie obejścia blokady aktywacji
-          href: device-activation-lock-bypass.md
+        - name: Wyłączanie blokady aktywacji
+          href: device-activation-lock-disable.md
     - name: Akcje użytkownika
       items:
         - name: Wylogowywanie bieżącego użytkownika
           href: device-logout-user.md
-        - name: Usuń użytkownika
+        - name: Usuwanie użytkownika
           href: device-remove-user.md
         - name: Wyszukiwanie użytkownika podstawowego
           href: find-primary-user.md
