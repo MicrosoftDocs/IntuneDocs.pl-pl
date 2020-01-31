@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae7dd4a1873cd7117870c4c1408e512831ecaa4f
-ms.sourcegitcommit: 665be113b593c3bc7d46b99599e720f781037dcf
+ms.openlocfilehash: 81da5ca8e7eaa76f9a6705cc9e3c816234c461db
+ms.sourcegitcommit: af384c46ec8d8def6aa32c3b89947748dc6fd28f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76258473"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76517562"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem Windows 10 (i nowszym) w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune
 
@@ -42,11 +42,11 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad ApplicationMana
 - **Sklep z aplikacjami** (tylko urządzenia przenośne): Ustawienie **Nie skonfigurowano** (domyślne) umożliwia użytkownikom końcowym uzyskiwanie dostępu do sklepu z aplikacjami na urządzeniach przenośnych. Ustawienie **Blokuj** uniemożliwia korzystanie ze sklepu z aplikacjami.
 - **Automatycznie aktualizuj aplikacje ze sklepu**: Ustawienie **Nie skonfigurowano** (domyślne) umożliwia automatyczne aktualizowanie zainstalowanych aplikacji pochodzących ze Sklepu Microsoft Store. Ustawienie **Blokuj** uniemożliwia automatyczne instalowanie aktualizacji.
 - **Instalacja aplikacji zaufanej**: Wybierz, jeśli chcesz zezwolić na instalowanie aplikacji spoza Sklepu Microsoft Store, zwane także pobieraniem lokalnym. Pobieranie lokalne to instalowanie, a następnie uruchamianie lub testowanie aplikacji, która nie jest certyfikowana przez sklep Microsoft Store. Na przykład aplikacja, która jest aplikacją wewnętrzną wyłącznie w Twojej firmie. Dostępne opcje:
-  - **Nie skonfigurowano** (wartość domyślna): usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+  - **Nieskonfigurowane** (wartość domyślna): Usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
   - **Blokuj**: Uniemożliwia ładowanie bezpośrednie. Nie można zainstalować aplikacji spoza sklepu Microsoft Store.
   - **Zezwalaj**: Umożliwia ładowanie bezpośrednie. Można instalować aplikacje spoza sklepu Microsoft Store.
 - **Odblokowanie trybu deweloperskiego**: Umożliwia korzystanie z ustawień trybu deweloperskiego systemu Windows, na przykład zezwolenie użytkownikom końcowym na modyfikację aplikacji ładowanych bezpośrednio. Dostępne opcje:
-  - **Nie skonfigurowano** (wartość domyślna): usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+  - **Nieskonfigurowane** (wartość domyślna): Usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
   - **Blokuj**: Uniemożliwia korzystanie z trybu dewelopera i ładowania bezpośredniego aplikacji.
   - **Zezwalaj**: Umożliwia korzystanie z trybu dewelopera i ładowania bezpośredniego aplikacji.
 
@@ -58,13 +58,13 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad ApplicationMana
 - **Instaluj dane aplikacji na woluminie systemowym**: Ustawienie **Blokuj** uniemożliwia aplikacjom przechowywanie danych na woluminie systemowym urządzenia. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia aplikacjom przechowywanie danych na woluminie dysku systemowego.
 - **Instaluj aplikacje na dysku systemowym**: Ustawienie **Blokuj** uniemożliwia instalowanie aplikacji na dysku systemowym urządzenia. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia instalowanie aplikacji na dysku systemowym.
 - **DVR z gry** (tylko dla komputerów stacjonarnych): Ustawienie **Blokuj** wyłącza nagrywanie i transmitowanie gier w systemie Windows. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia nagrywanie i transmitowanie gier.
-- **Aplikacje tylko ze Sklepu**: to ustawienie określa środowisko użytkownika podczas instalacji aplikacji z miejsc innych niż sklep Microsoft Store. Dostępne opcje:
+- **Aplikacje tylko ze sklepu**: To ustawienie określa środowisko użytkownika podczas instalacji aplikacji z miejsc innych niż sklep Microsoft Store. Dostępne opcje:
 
-  - **Nie skonfigurowano** (wartość domyślna): umożliwia użytkownikom końcowym instalowanie aplikacji z miejsc innych niż sklep Microsoft Store, w tym aplikacji zdefiniowanych w innych ustawieniach zasad.  
-  - **Dowolne miejsce**: wyłącza zalecenia dotyczące aplikacji i umożliwia użytkownikom instalowanie aplikacji z dowolnej lokalizacji.  
-  - **Tylko sklep**: wymusza, aby użytkownicy końcowi mogli instalować tylko aplikacje ze sklepu Microsoft Store.
-  - **Zalecenia**: podczas instalowania aplikacji z Internetu, która jest dostępna w sklepie Microsoft Store, użytkownicy zobaczą komunikat zalecający pobranie jej ze sklepu.  
-  - **Preferuj sklep**: ostrzega użytkowników, gdy instalują aplikacje z miejsc innych niż sklep Microsoft Store.
+  - **Nieskonfigurowane** (wartość domyślna): Umożliwia użytkownikom końcowym instalowanie aplikacji z miejsc innych niż sklep Microsoft Store, w tym aplikacji zdefiniowanych w innych ustawieniach zasad.  
+  - **Dowolne miejsce**: Wyłącza zalecenia dotyczące aplikacji i umożliwia użytkownikom instalowanie aplikacji z dowolnej lokalizacji.  
+  - **Tylko sklep**: Wymusza, aby użytkownicy końcowi mogli instalować tylko aplikacje ze sklepu Microsoft Store.
+  - **Zalecenia**: Podczas instalowania aplikacji z Internetu, która jest dostępna w sklepie Microsoft Store, użytkownicy zobaczą komunikat zalecający pobranie jej ze sklepu.  
+  - **Preferuj sklep**: Ostrzega użytkowników, gdy instalują aplikacje z miejsc innych niż sklep Microsoft Store.
 
   [SmartScreen/EnableAppInstallControl CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enableappinstallcontrol)
 
@@ -87,7 +87,7 @@ Te ustawienia korzystają z dostawców usługi konfiguracji [zasad łączności]
 - [Dostawcy usługi konfiguracji zasad sieci Wi-Fi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-wifi)
 
 - **Kanał danych komórkowych**: Wybierz, jeśli chcesz, aby użytkownicy końcowi mogli korzystać z sieci komórkowej w celu np. przeglądania Internetu. Dostępne opcje:
-  - **Nie skonfigurowano** (wartość domyślna): usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Użytkownicy końcowi mogą wyłączyć tę opcję.
+  - **Nieskonfigurowane** (wartość domyślna): Usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Użytkownicy końcowi mogą wyłączyć tę opcję.
   - **Blokuj**: Nie zezwala na używanie kanału danych komórkowych. Użytkownicy końcowi nie mogą włączyć tej opcji.
   - **Zezwalaj (nieedytowalne)** : Umożliwia korzystanie z kanału danych komórkowych. Użytkownicy końcowi nie mogą wyłączyć tej opcji.
 
@@ -437,7 +437,7 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad DeviceLock](htt
 
 - **Logowanie internetowe**: Włącza obsługę logowania w systemie Windows dla dostawców innych niż dostawcy sfederowani usług ADFS (Active Directory Federation Services), na przykład SAML. Funkcja SAML obsługuje logowanie jednokrotne w przeglądarkach internetowych za pomocą bezpiecznych tokenów. Dostępne opcje:
 
-  - **Nie skonfigurowano** (wartość domyślna): usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+  - **Nieskonfigurowane** (wartość domyślna): Usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
   - **Włączone**: Włącza logowanie za pomocą internetowego dostawcy poświadczeń.
   - **Wyłączone**: Wyłącza logowanie za pomocą internetowego dostawcy poświadczeń.
 
@@ -539,7 +539,7 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad WirelessDisplay
   [Dostawca usługi konfiguracji System/AllowTelemetry](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-allowtelemetry)
 
 - **Wysyłaj dane przeglądania programu Microsoft Edge do usługi Microsoft 365 Analytics**: Użyj tej funkcji, aby nadać ustawieniom **Udostępnij dane użycia** wartość **Rozszerzone** lub **Pełne**. Ta funkcja kontroluje dane, które przeglądarka Microsoft Edge wysyła do usługi Microsoft 365 Analytics dla urządzeń firmowych przy użyciu skonfigurowanego identyfikatora komercyjnego. Dostępne opcje:
-  - **Nie skonfigurowano**: usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Domyślna wartość systemu operacyjnego może powodować, że żadne dane historii przeglądania nie będą wysyłane.
+  - **Nieskonfigurowane**: Usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Domyślna wartość systemu operacyjnego może powodować, że żadne dane historii przeglądania nie będą wysyłane.
   - **Wysyłaj tylko dane intranetowe**: Umożliwia administratorowi wysyłanie historii danych intranetowych
   - **Wysyłaj tylko dane internetowe**: Umożliwia administratorowi wysyłanie historii danych internetowych
   - **Wysyłaj dane intranetowe i internetowe**: Umożliwia administratorowi wysyłanie historii danych intranetowych i internetowych
@@ -700,7 +700,7 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad usługi Defende
 
   [Defender/EnableNetworkProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
 
-- **Skanuj wszystkie pobrane pliki**: opcja **Włącz** powoduje włączenie tego ustawienia, a usługa Defender skanuje wszystkie pliki pobierane z Internetu. Użytkownicy nie mogą wyłączyć tego ustawienia. 
+- **Skanuj wszystkie pobierania**: Opcja **Włącz** powoduje włączenie tego ustawienia, a usługa Defender skanuje wszystkie pliki pobierane z Internetu. Użytkownicy nie mogą wyłączyć tego ustawienia. 
 
   W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **Nie skonfigurowano**, usługa Intune pozostawi to ustawienie we wcześniej skonfigurowanym stanie. Domyślnie system operacyjny włącza to ustawienie i pozwala użytkownikom na jego zmianę.
 
@@ -726,17 +726,17 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad usługi Defende
 
   [Defender/AllowUserUIAccess CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowuseruiaccess)
 
-- **Interwał aktualizacji analizy zabezpieczeń (w godzinach)** : wprowadź interwał sprawdzania dostępności nowej analizy zabezpieczeń przez usługę Defender z zakresu 0–24. Dostępne opcje:
+- **Interwał aktualizacji analizy zabezpieczeń (w godzinach)** : Wprowadź interwał sprawdzania dostępności nowej analizy zabezpieczeń przez usługę Defender (z zakresu 0–24). Dostępne opcje:
 
-  - **Nie skonfigurowano** (wartość domyślna): usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Domyślny system operacyjny może sprawdzać dostępność aktualizacji co 8 godzin.
-  - **Nie sprawdzaj**: usługa Defender nie sprawdza dostępności nowych aktualizacji analizy zabezpieczeń.
+  - **Nieskonfigurowane** (wartość domyślna): Usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Domyślny system operacyjny może sprawdzać dostępność aktualizacji co 8 godzin.
+  - **Nie sprawdzaj**: Usługa Defender nie sprawdza dostępności nowych aktualizacji analizy zabezpieczeń.
   - **1–24**: `1` — sprawdza co godzinę `2` — sprawdza co dwie godziny `24` — sprawdza, czy każdy dzień i tak dalej.
   
   [Defender/SignatureUpdateInterval CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdateinterval)
   
 - **Monitoruj działania plików i programów**: Zezwala usłudze Defender na monitorowanie działania plików i programów na urządzeniach. Dostępne opcje:
 
-  - **Nie skonfigurowano** (wartość domyślna): usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Domyślna wartość systemu operacyjnego umożliwia monitorowanie wszystkich plików.
+  - **Nieskonfigurowane** (wartość domyślna): Usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Domyślna wartość systemu operacyjnego umożliwia monitorowanie wszystkich plików.
   - **Monitorowanie wyłączone**
   - **Monitoruj wszystkie pliki**
   - **Monitoruj tylko pliki przychodzące**
@@ -749,7 +749,7 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad usługi Defende
   [Defender/DaysToRetainCleanedMalware CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-daystoretaincleanedmalware)
 
 - **Limit wykorzystania procesora CPU podczas skanowania**: Ogranicza moc procesora CPU, jakiej mogą używać procesy skanowania (od `0` do `100`).
-- **Skanuj pliki archiwum**: ustawienie **Włącz** włącza usługę Defender, która skanuje pliki archiwum, na przykład pliki zip i cab. Użytkownicy nie mogą wyłączyć tego ustawienia.
+- **Skanuj pliki archiwum**: Ustawienie **Włącz** włącza usługę Defender, która skanuje pliki archiwum, na przykład pliki zip i cab. Użytkownicy nie mogą wyłączyć tego ustawienia.
 
   W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **Nie skonfigurowano**, usługa Intune pozostawi to ustawienie we wcześniej skonfigurowanym stanie. Domyślnie system operacyjny włącza to skanowanie i pozwala użytkownikom na jego zmianę.
 
@@ -765,7 +765,7 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad usługi Defende
 
   [Defender/AllowEmailScanning CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowemailscanning)
 
-- **Skanuj dyski wymienne podczas pełnego skanowania**: opcja **Włącz** powoduje włączenie skanowania dysków wymiennych przez usługę Defender podczas pełnego skanowania. Użytkownicy nie mogą wyłączyć tego ustawienia.
+- **Skanuj dyski wymienne podczas pełnego skanowania**: Opcja **Włącz** powoduje włączenie skanowania dysków wymiennych przez usługę Defender podczas pełnego skanowania. Użytkownicy nie mogą wyłączyć tego ustawienia.
 
   W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **Nie skonfigurowano**, usługa Intune pozostawi to ustawienie we wcześniej skonfigurowanym stanie. Domyślnie system operacyjny umożliwia usłudze Defender skanowanie dysków wymiennych, takich jak dyski USB, i umożliwia użytkownikom zmianę tego ustawienia.
 
@@ -785,7 +785,7 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad usługi Defende
 
   [Defender/AllowFullScanOnMappedNetworkDrives CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanonmappednetworkdrives)
 
-- **Skanuj pliki otwierane z folderów sieciowych**: ustawienie **Włącz** umożliwia usłudze Defender skanowanie plików otwieranych z folderów sieciowych lub udostępnionych dysków sieciowych, takich jak dyski dostępne za pośrednictwem ścieżki UNC. Użytkownicy nie mogą wyłączyć tego ustawienia. Jeśli pliki na dysku są plikami tylko do odczytu, usługa Defender nie będzie mogła usunąć z nich wykrytego złośliwego oprogramowania.
+- **Skanuj pliki otwierane z folderów sieciowych**: Ustawienie **Włącz** umożliwia usłudze Defender skanowanie plików otwieranych z folderów sieciowych lub udostępnionych dysków sieciowych, takich jak dyski dostępne za pośrednictwem ścieżki UNC. Użytkownicy nie mogą wyłączyć tego ustawienia. Jeśli pliki na dysku są plikami tylko do odczytu, usługa Defender nie będzie mogła usunąć z nich wykrytego złośliwego oprogramowania.
 
   W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Jeśli włączysz to ustawienie, a następnie zmienisz je z powrotem na **Nie skonfigurowano**, usługa Intune pozostawi to ustawienie we wcześniej skonfigurowanym stanie. Domyślnie system operacyjny skanuje pliki otwierane z folderów sieciowych i pozwala użytkownikom na ich zmianę.
 
@@ -803,7 +803,7 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad usługi Defende
 
 - **Monituj użytkowników przed przesłaniem próbki**: Określa, czy do firmy Microsoft są automatycznie wysyłane potencjalnie złośliwe pliki, które mogą wymagać dalszej analizy. Dostępne opcje:
 
-  - **Nie skonfigurowano** (wartość domyślna): usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Domyślny system operacyjny umożliwia automatyczne wysyłanie bezpiecznych próbek.
+  - **Nieskonfigurowane** (wartość domyślna): Usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Domyślny system operacyjny umożliwia automatyczne wysyłanie bezpiecznych próbek.
   - **Zawsze pytaj**
   - **Pytaj przed wysłaniem danych osobistych**
   - **Nigdy nie wysyłaj danych**
@@ -849,9 +849,17 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad usługi Defende
 
   [Defender/PUAProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
 
-- **Zgoda na przesyłanie próbek**: obecnie to ustawienie nie ma żadnego wpływu. Nie używaj tego ustawienia. Może ono zostać usunięte w przyszłej wersji.
+- **Zgoda na przesyłanie próbek**: Obecnie to ustawienie nie ma żadnego wpływu. Nie używaj tego ustawienia. Może ono zostać usunięte w przyszłej wersji.
 
-- **Akcje do podjęcia wobec wykrytych zagrożeń związanych ze złośliwym oprogramowaniem**: wybierz, w jaki sposób chcesz obsługiwać wątki złośliwego oprogramowania. Ustawienie **Nie skonfigurowano** (wartość domyślna) umożliwia usłudze Microsoft Defender wybór najlepszej opcji. W przypadku wybrania pozycji **Włącz** wskaż akcje, które ma podejmować usługa Defender po wykryciu zagrożenia określonego poziomu: niski, umiarkowany, wysoki i poważny. Dostępne opcje:
+- **Ochrona przy dostępie**: Ustawienie **Blokuj** uniemożliwia skanowanie plików, do których uzyskano dostęp lub które pobrano. Użytkownicy nie mogą włączyć tej opcji.
+
+  W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Jeśli zablokujesz to ustawienie, a następnie zmienisz je z powrotem na **Nie skonfigurowano**, usługa Intune pozostawi to ustawienie w stanie skonfigurowanym wcześniej przez system operacyjny. Domyślnie system operacyjny włącza tę funkcję i pozwala użytkownikom na jej zmianę.
+
+  Usługa Intune nie włącza tej funkcji. Aby ją włączyć, użyj niestandardowego identyfikatora URI.
+
+  [Defender/AllowOnAccessProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowonaccessprotection)
+
+- **Akcje do podjęcia wobec wykrytych zagrożeń związanych ze złośliwym oprogramowaniem**: Wybierz, w jaki sposób chcesz obsługiwać wątki złośliwego oprogramowania. Ustawienie **Nie skonfigurowano** (wartość domyślna) umożliwia usłudze Microsoft Defender wybór najlepszej opcji. W przypadku wybrania pozycji **Włącz** wskaż akcje, które ma podejmować usługa Defender po wykryciu zagrożenia określonego poziomu: niski, umiarkowany, wysoki i poważny. Dostępne opcje:
   
   - **Wyczyść**
   - **Kwarantanna**
@@ -874,81 +882,81 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad usługi Defende
 
 ### <a name="battery"></a>Bateria
 
-- **Poziom naładowania baterii, przy którym włączana jest funkcja oszczędzania energii**: gdy urządzenie jest zasilane z baterii, wprowadź poziom naładowania baterii, przy którym ma być włączana funkcja oszczędzania energii, od 0 do 100. Wprowadź wartość procentową wskazującą poziom naładowania baterii. Wartość domyślna to 70%. W przypadku ustawienia 70% funkcja oszczędzania energii jest włączana, gdy bateria jest naładowana w 70% lub mniej.
+- **Poziom naładowania baterii, przy którym włączana jest funkcja oszczędzania energii**: Gdy urządzenie jest zasilane z baterii, wprowadź poziom naładowania baterii, przy którym ma być włączana funkcja oszczędzania energii (od 0 do 100). Wprowadź wartość procentową wskazującą poziom naładowania baterii. Wartość domyślna to 70%. W przypadku ustawienia 70% funkcja oszczędzania energii jest włączana, gdy bateria jest naładowana w 70% lub mniej.
 
   [Power/EnergySaverBatteryThresholdOnBattery CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-energysaverbatterythresholdonbattery)
 
-- **Zamknięcie pokrywy (tylko dla urządzeń przenośnych)** : gdy urządzenie jest zasilane z baterii, wybierz, co się stanie po zamknięciu pokrywy. Dostępne opcje:
+- **Zamknięcie pokrywy (tylko dla urządzeń przenośnych)** : Gdy urządzenie jest zasilane z baterii, wybierz, co się stanie po zamknięciu pokrywy. Dostępne opcje:
 
-  - **Nie skonfigurowano** (wartość domyślna): usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
-  - **Brak akcji**: urządzenie pozostaje włączone i nadal jest zasilane z baterii.
-  - **Uśpienie**: urządzenie przechodzi w tryb uśpienia i zużywa niewielką ilość baterii. Komputer jest nadal włączony, a otwarte aplikacje i pliki są przechowywane w pamięci RAM.
-  - **Hibernacja**: urządzenie przechodzi w tryb hibernacji. Otwarte aplikacje i pliki są przechowywane na dysku twardym, a urządzenie się wyłącza.
-  - **Zamykanie**: urządzenie jest zamykane. Otwarte aplikacje i pliki są zamykane bez zapisywania.
+  - **Nieskonfigurowane** (wartość domyślna): Usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+  - **Brak akcji**: Urządzenie pozostaje włączone i nadal jest zasilane z baterii.
+  - **Uśpienie**: Urządzenie przechodzi w tryb uśpienia i zużywa niewielką ilość energii baterii. Komputer jest nadal włączony, a otwarte aplikacje i pliki są przechowywane w pamięci RAM.
+  - **Hibernacja**: Urządzenie przechodzi w tryb hibernacji. Otwarte aplikacje i pliki są przechowywane na dysku twardym, a urządzenie się wyłącza.
+  - **Zamykanie**: Urządzenie jest zamykane. Otwarte aplikacje i pliki są zamykane bez zapisywania.
 
   [Power/SelectLidCloseActionOnBattery CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectlidcloseactiononbattery)
 
-- **Przycisk zasilania**: gdy urządzenie jest zasilane z baterii, wybierz, co się stanie po wybraniu przycisku zasilania. Dostępne opcje:
+- **Przycisk zasilania**: Gdy urządzenie jest zasilane z baterii, wybierz, co się stanie po wybraniu przycisku zasilania. Dostępne opcje:
 
-  - **Nie skonfigurowano** (wartość domyślna): usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
-  - **Brak akcji**: urządzenie pozostaje włączone i nadal jest zasilane z baterii.
-  - **Uśpienie**: urządzenie przechodzi w tryb uśpienia i zużywa niewielką ilość baterii. Komputer jest nadal włączony, a otwarte aplikacje i pliki są przechowywane w pamięci RAM.
-  - **Hibernacja**: urządzenie przechodzi w tryb hibernacji. Otwarte aplikacje i pliki są przechowywane na dysku twardym, a urządzenie się wyłącza.
-  - **Zamykanie**: urządzenie jest zamykane. Otwarte aplikacje i pliki są zamykane bez zapisywania.
+  - **Nieskonfigurowane** (wartość domyślna): Usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+  - **Brak akcji**: Urządzenie pozostaje włączone i nadal jest zasilane z baterii.
+  - **Uśpienie**: Urządzenie przechodzi w tryb uśpienia i zużywa niewielką ilość energii baterii. Komputer jest nadal włączony, a otwarte aplikacje i pliki są przechowywane w pamięci RAM.
+  - **Hibernacja**: Urządzenie przechodzi w tryb hibernacji. Otwarte aplikacje i pliki są przechowywane na dysku twardym, a urządzenie się wyłącza.
+  - **Zamykanie**: Urządzenie jest zamykane. Otwarte aplikacje i pliki są zamykane bez zapisywania.
 
   [Power/SelectPowerButtonActionOnBattery CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectpowerbuttonactiononbattery)
 
-- **Przycisk Uśpij**: gdy urządzenie jest zasilane z baterii, wybierz, co się stanie po wybraniu przycisku Uśpij. Dostępne opcje:
+- **Przycisk Uśpij**: Gdy urządzenie jest zasilane z baterii, wybierz, co się stanie po wybraniu przycisku usypiania. Dostępne opcje:
 
-  - **Nie skonfigurowano** (wartość domyślna): usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
-  - **Brak akcji**: urządzenie pozostaje włączone i nadal jest zasilane z baterii.
-  - **Uśpienie**: urządzenie przechodzi w tryb uśpienia i zużywa niewielką ilość baterii. Komputer jest nadal włączony, a otwarte aplikacje i pliki są przechowywane w pamięci RAM.
-  - **Hibernacja**: urządzenie przechodzi w tryb hibernacji. Otwarte aplikacje i pliki są przechowywane na dysku twardym, a urządzenie się wyłącza.
-  - **Zamykanie**: urządzenie jest zamykane. Otwarte aplikacje i pliki są zamykane bez zapisywania.
+  - **Nieskonfigurowane** (wartość domyślna): Usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+  - **Brak akcji**: Urządzenie pozostaje włączone i nadal jest zasilane z baterii.
+  - **Uśpienie**: Urządzenie przechodzi w tryb uśpienia i zużywa niewielką ilość energii baterii. Komputer jest nadal włączony, a otwarte aplikacje i pliki są przechowywane w pamięci RAM.
+  - **Hibernacja**: Urządzenie przechodzi w tryb hibernacji. Otwarte aplikacje i pliki są przechowywane na dysku twardym, a urządzenie się wyłącza.
+  - **Zamykanie**: Urządzenie jest zamykane. Otwarte aplikacje i pliki są zamykane bez zapisywania.
 
   [Power/SelectSleepButtonActionOnBattery CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectsleepbuttonactiononbattery)
 
-- **Uśpienie hybrydowe**: gdy urządzenie jest zasilane z baterii, opcja **Wyłącz** uniemożliwia przejście urządzenia w tryb uśpienia hybrydowego. W trybie uśpienia hybrydowego otwarte aplikacje i pliki są przechowywane w pamięci RAM i na dysku twardym. Zużywa niewielką ilość baterii. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+- **Uśpienie hybrydowe**: Gdy urządzenie jest zasilane z baterii, opcja **Wyłącz** uniemożliwia przejście urządzenia w tryb uśpienia hybrydowego. W trybie uśpienia hybrydowego otwarte aplikacje i pliki są przechowywane w pamięci RAM i na dysku twardym. Zużywa niewielką ilość baterii. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
 
   [Power/TurnOffHybridSleepOnBattery CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-turnoffhybridsleeponbattery)
 
 ### <a name="pluggedin"></a>Podłączony​
 
-- **Poziom naładowania baterii, przy którym włączana jest funkcja oszczędzania energii**: gdy urządzenie jest zasilane z sieci, wprowadź poziom naładowania baterii, przy którym ma być włączana funkcja oszczędzania energii, od 0 do 100. Wprowadź wartość procentową wskazującą poziom naładowania baterii. Wartość domyślna to 70%. W przypadku ustawienia 70% funkcja oszczędzania energii jest włączana, gdy bateria jest naładowana w 70% lub mniej.
+- **Poziom naładowania baterii, przy którym włączana jest funkcja oszczędzania energii**: Gdy urządzenie jest zasilane z sieci, wprowadź poziom naładowania baterii, przy którym ma być włączana funkcja oszczędzania energii (od 0 do 100). Wprowadź wartość procentową wskazującą poziom naładowania baterii. Wartość domyślna to 70%. W przypadku ustawienia 70% funkcja oszczędzania energii jest włączana, gdy bateria jest naładowana w 70% lub mniej.
 
   [Power/EnergySaverBatteryThresholdPluggedIn CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-energysaverbatterythresholdpluggedin)
 
-- **Zamknięcie pokrywy (tylko dla urządzeń przenośnych)** : gdy urządzenie jest zasilane z sieci, wybierz, co się stanie po zamknięciu pokrywy. Dostępne opcje:
+- **Zamknięcie pokrywy (tylko dla urządzeń przenośnych)** : Gdy urządzenie jest zasilane z sieci, wybierz, co się stanie po zamknięciu pokrywy. Dostępne opcje:
 
-  - **Nie skonfigurowano** (wartość domyślna): usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
-  - **Brak akcji**: urządzenie pozostaje włączone.
-  - **Uśpienie**: urządzenie przechodzi w tryb uśpienia. Komputer jest nadal włączony, a otwarte aplikacje i pliki są przechowywane w pamięci RAM.
-  - **Hibernacja**: urządzenie przechodzi w tryb hibernacji. Otwarte aplikacje i pliki są przechowywane na dysku twardym, a urządzenie się wyłącza.
-  - **Zamykanie**: urządzenie jest zamykane. Otwarte aplikacje i pliki są zamykane bez zapisywania.
+  - **Nieskonfigurowane** (wartość domyślna): Usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+  - **Brak akcji**: Urządzenie pozostaje włączone.
+  - **Uśpienie**: Urządzenie przechodzi w tryb uśpienia. Komputer jest nadal włączony, a otwarte aplikacje i pliki są przechowywane w pamięci RAM.
+  - **Hibernacja**: Urządzenie przechodzi w tryb hibernacji. Otwarte aplikacje i pliki są przechowywane na dysku twardym, a urządzenie się wyłącza.
+  - **Zamykanie**: Urządzenie jest zamykane. Otwarte aplikacje i pliki są zamykane bez zapisywania.
   
     [Power/SelectLidCloseActionPluggedIn CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectlidcloseactionpluggedin)
   
-- **Przycisk zasilania**: gdy urządzenie jest zasilane z sieci, wybierz, co się stanie po wybraniu przycisku zasilania. Dostępne opcje:
+- **Przycisk zasilania**: Gdy urządzenie jest zasilane z sieci, wybierz, co się stanie po wybraniu przycisku zasilania. Dostępne opcje:
 
-  - **Nie skonfigurowano** (wartość domyślna): usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
-  - **Brak akcji**: urządzenie pozostaje włączone.
-  - **Uśpienie**: urządzenie przechodzi w tryb uśpienia. Komputer jest nadal włączony, a otwarte aplikacje i pliki są przechowywane w pamięci RAM.
-  - **Hibernacja**: urządzenie przechodzi w tryb hibernacji. Otwarte aplikacje i pliki są przechowywane na dysku twardym, a urządzenie się wyłącza.
-  - **Zamykanie**: urządzenie jest zamykane. Otwarte aplikacje i pliki są zamykane bez zapisywania.
+  - **Nieskonfigurowane** (wartość domyślna): Usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+  - **Brak akcji**: Urządzenie pozostaje włączone.
+  - **Uśpienie**: Urządzenie przechodzi w tryb uśpienia. Komputer jest nadal włączony, a otwarte aplikacje i pliki są przechowywane w pamięci RAM.
+  - **Hibernacja**: Urządzenie przechodzi w tryb hibernacji. Otwarte aplikacje i pliki są przechowywane na dysku twardym, a urządzenie się wyłącza.
+  - **Zamykanie**: Urządzenie jest zamykane. Otwarte aplikacje i pliki są zamykane bez zapisywania.
 
   [Power/SelectPowerButtonActionPluggedIn CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectpowerbuttonactionpluggedin)
 
-- **Przycisk Uśpij**: gdy urządzenie jest zasilane z sieci, wybierz, co się stanie po wybraniu przycisku Uśpij. Dostępne opcje:
+- **Przycisk Uśpij**: Gdy urządzenie jest zasilane z sieci, wybierz, co się stanie po wybraniu przycisku usypiania. Dostępne opcje:
 
-  - **Nie skonfigurowano** (wartość domyślna): usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
-  - **Brak akcji**: urządzenie pozostaje włączone.
-  - **Uśpienie**: urządzenie przechodzi w tryb uśpienia. Komputer jest nadal włączony, a otwarte aplikacje i pliki są przechowywane w pamięci RAM.
-  - **Hibernacja**: urządzenie przechodzi w tryb hibernacji. Otwarte aplikacje i pliki są przechowywane na dysku twardym, a urządzenie się wyłącza.
-  - **Zamykanie**: urządzenie jest zamykane. Otwarte aplikacje i pliki są zamykane bez zapisywania.
+  - **Nieskonfigurowane** (wartość domyślna): Usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+  - **Brak akcji**: Urządzenie pozostaje włączone.
+  - **Uśpienie**: Urządzenie przechodzi w tryb uśpienia. Komputer jest nadal włączony, a otwarte aplikacje i pliki są przechowywane w pamięci RAM.
+  - **Hibernacja**: Urządzenie przechodzi w tryb hibernacji. Otwarte aplikacje i pliki są przechowywane na dysku twardym, a urządzenie się wyłącza.
+  - **Zamykanie**: Urządzenie jest zamykane. Otwarte aplikacje i pliki są zamykane bez zapisywania.
 
   [Power/SelectSleepButtonActionPluggedIn CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-selectsleepbuttonactionpluggedin)
 
-- **Uśpienie hybrydowe**: gdy urządzenie jest zasilane z sieci, opcja **Wyłącz** uniemożliwia przejście urządzenia w tryb uśpienia hybrydowego. W trybie uśpienia hybrydowego otwarte aplikacje i pliki są przechowywane w pamięci RAM i na dysku twardym. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
+- **Uśpienie hybrydowe**: Gdy urządzenie jest zasilane z sieci, opcja **Wyłącz** uniemożliwia przejście urządzenia w tryb uśpienia hybrydowego. W trybie uśpienia hybrydowego otwarte aplikacje i pliki są przechowywane w pamięci RAM i na dysku twardym. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
 
   [Power/TurnOffHybridSleepPluggedIn CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power#power-turnoffhybridsleeppluggedin)
 
