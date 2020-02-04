@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 11/19/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: e745290991da4d80c7e3839250edbfdd64ef1b7a
-ms.sourcegitcommit: 01c57ac880dcb5f474908977c89810f5bedaf326
+ms.openlocfilehash: 9aa82268fb02f5124e48eb303f19cf32be02c284
+ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75760974"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912640"
 ---
 Te powiadomienia zawierają ważne informacje, które mogą ułatwić przygotowanie się na nadchodzące zmiany i nowe funkcje w usłudze Intune.
 
@@ -75,22 +75,8 @@ Aby zapewnić płynne przejście z przeglądarki Intune Managed Browser na Micro
 Wkrótce rozpoczniemy obsługę klipów internetowych w systemach iOS i Android. Po jej rozpoczęciu istniejące klipy internetowe trzeba będzie skierować tak, aby były otwierane w przeglądarce Microsoft Edge, a nie Managed Browser. 
 
 #### <a name="additional-information"></a>Dodatkowe informacje
-Aby uzyskać więcej informacji, zapoznaj się z dokumentami dotyczącymi [korzystania z przeglądarki Microsoft Edge z zasadami ochrony aplikacji](../apps/manage-microsoft-edge.md) lub [artykułem na blogu wsparcia technicznego](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Use-Microsoft-Edge-for-your-Protected-Intune-Browser-Experience/ba-p/1004269).
+Aby uzyskać więcej informacji, zapoznaj się z dokumentami dotyczącymi [korzystania z przeglądarki Microsoft Edge z zasadami ochrony aplikacji](../apps/manage-microsoft-edge.md) lub [wpisem w blogu pomocy technicznej](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Use-Microsoft-Edge-for-your-Protected-Intune-Browser-Experience/ba-p/1004269).
 
-### <a name="plan-for-change-updated-experience-when-enrolling-android-enterprise-dedicated-devices-in-intune--5198878--"></a>Planowanie zmian: Zaktualizowane środowisko rejestrowania dedykowanych urządzeń z systemem Android Enterprise w usłudze Intune<!--5198878-->
-Wraz z wydaniem listopadowym (czyli 1911) do usługi Intune dodajemy obsługę wdrażania certyfikatów urządzeń SCEP dla dedykowanych urządzeń z systemem Android Enterprise, aby umożliwić dostęp oparty na certyfikatach do profilów sieci Wi-Fi. Ta zmiana obejmuje również pewne drobne zmiany w przepływie podczas rejestrowania dedykowanych urządzeń z systemem Android Enterprise.
-
-#### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
-Jeśli zarządzasz urządzeniami z systemem Android Enterprise, zobaczysz, że w listopadzie rozpocznie się wprowadzanie pewnych zmian.
-
-- W przypadku nowych rejestracji dedykowanych urządzeń z systemem Android Enterprise: Podczas rejestracji użytkownicy końcowi będą widzieli inny zestaw kroków na urządzeniach. Rejestracja nadal będzie zaczynać się tak, jak obecnie (od metody QR, NFC, bezobsługowej lub identyfikatora urządzenia), ale po listopadowym wydaniu usługi pojawi się obowiązkowy krok instalacji aplikacji.
-- W przypadku istniejących urządzeń z systemem Android zarejestrowanych jako urządzenia dedykowane: Usługa Intune zacznie automatycznie instalować aplikację Microsoft Intune na urządzeniach, począwszy od pierwszych tygodni listopada. Nie trzeba podejmować żadnych działań. Aplikacja zostanie automatycznie pobrana i zainstalowana na urządzeniach. 
-
-#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Co zrobić, aby przygotować się do tej zmiany?
-Należy zaplanować aktualizację przewodnika dla użytkowników końcowych i poinformować swoją pomoc techniczną o tej zmianie. Kliknij pozycję Dodatkowe informacje, aby uzyskać więcej szczegółów i zrzuty ekranu. Zaktualizujemy naszą stronę Co nowego, gdy rozpocznie się wdrażanie tej zmiany.
-
-#### <a name="additional-information"></a>Dodatkowe informacje
-[https://aka.ms/Dedicated_devices_enrollment](https://aka.ms/Dedicated_devices_enrollment)
 
 ### <a name="end-of-support-for-legacy-pc-management"></a>Koniec wsparcia dla zarządzania starszymi komputerami
 
@@ -158,6 +144,6 @@ Zachęcamy organizację do natychmiastowego rozważenia tego planu działania:
 - Zapoznanie się z ofertą usługi [Desktop App Assure](https://www.microsoft.com/fasttrack/microsoft-365/desktop-app-assure?rtc=1) w ramach usługi Fast Track, aby uzyskać pomoc w zapewnieniu zgodności aplikacji firmy Microsoft.
 - Przeniesienie istniejących urządzeń zarządzanych przez oprogramowanie klienckie usługi Intune do rozwiązania zalecanego przez firmę Microsoft w celu zarządzania systemem Windows 10 przy użyciu funkcji MDM. Rejestrowanie wszystkich nowych komputerów z systemem Windows 10 przy użyciu funkcji MDM dla usługi Intune w witrynie Azure Portal.
 
-Zapoznanie się z tym [wpisem w blogu](https://aka.ms/Windows7_Intune), aby uzyskać więcej informacji.
+Aby uzyskać więcej informacji, zapoznaj się z tym [wpisem w blogu](https://aka.ms/Windows7_Intune).
 
 

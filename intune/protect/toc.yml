@@ -1,6 +1,6 @@
 - name: Ochrona danych i urządzeń za pomocą usługi Intune
   href: index.yml
-- name: Przegląd
+- name: Omówienie
   expanded: true
   items:
     - name: Omówienie ochrony urządzenia
@@ -46,7 +46,7 @@
           href: privacy-data-audit-export-delete.md
         - name: Rozwiązanie Windows Information Protection
           href: windows-information-protection-configure.md
-- name: Przewodniki
+- name: Przewodniki z instrukcjami
   items:
     - name: Ustawianie reguł dotyczących urządzeń w celu zezwalania na dostęp do zasobów
       items:
@@ -56,7 +56,7 @@
           href: create-compliance-policy.md
         - name: Zgodność oparta na lokalizacji
           href: use-network-locations.md
-        - name: Akcje w przypadku niezgodności
+        - name: Akcje w przypadku braku zgodności
           href: actions-for-noncompliance.md
         - name: Monitorowanie zgodności urządzenia
           href: compliance-policy-monitor.md
@@ -225,6 +225,20 @@
           href: troubleshoot-conditional-access.md
         - name: Rozwiązywanie problemów z łącznikiem certyfikatów
           href: troubleshoot-certificate-connector-events.md
+        - name: Rozwiązywanie problemów z profilami certyfikatów protokołu SCEP
+          items:
+            - name: Rozwiązywanie problemów z profilami certyfikatów protokołu SCEP
+              href: troubleshoot-scep-certificate-profiles.md
+            - name: Wdrażanie profilu na urządzeniach
+              href: troubleshoot-scep-certificate-profile-deployment.md
+            - name: Komunikacja urządzenia z usługą NDES
+              href: troubleshoot-scep-certificate-device-to-ndes.md
+            - name: Operacje usługi NDES
+              href: troubleshoot-scep-certificate-ndes-policy-module.md
+            - name: Dostarczanie certyfikatu do urządzeń
+              href: troubleshoot-scep-certificate-delivery.md
+            - name: Raportowanie dotyczące wdrażania certyfikatów
+              href: troubleshoot-scep-certificate-reporting.md
         - name: Rozwiązywanie problemów z programem Exchange Connector
           items:
             - name: Rozwiązywanie problemów z programem Exchange Connector
@@ -267,7 +281,7 @@
           href: compliance-policy-create-windows-8-1.md
         - name: Ustawienia zasad zgodności — Windows Phone 8.1
           href: compliance-policy-create-windows-8-1.md
-    - name: Kody błędów wraz z opisami
+    - name: Kody błędów i opisy
       items:
         - name: Błędy aktualizacji oprogramowania
           href: software-update-agent-error-codes.md
