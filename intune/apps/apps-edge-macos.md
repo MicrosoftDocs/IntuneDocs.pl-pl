@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c31dd652022ae0d394ab2229a0c25b362ad8574d
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 6ebcb81cd0f186a3fd23e0701d12ea871eab129a
+ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563586"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912576"
 ---
 # <a name="add-microsoft-edge-to-macos-devices-using-microsoft-intune"></a>Dodawanie przeglądarki Microsoft Edge na urządzeniach z systemem macOS przy użyciu usługi Microsoft Intune
 
@@ -41,13 +41,13 @@ Aby móc wdrażać, konfigurować, monitorować lub zabezpieczać aplikacje, trz
 Do usługi Intune można dodać przeglądarkę Microsoft Edge w wersji 77 lub nowszej, wykonując następujące czynności:
 
 1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Wybierz kolejno pozycje **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**.
+2. Wybierz pozycję **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**.
 3. Na liście **Typ aplikacji** w pozycji **Microsoft Edge w wersji 77 lub nowszej** wybierz opcję **macOS**.
 
 ## <a name="configure-app-information"></a>Konfigurowanie informacji o aplikacji
 W tym kroku podajesz informacje o tym wdrożeniu aplikacji. Te informacje pomagają zidentyfikować aplikację w usłudze Intune i ułatwiają użytkownikom odnalezienie aplikacji w portalu firmy.
 
-1. Kliknij opcję **Informacje o aplikacji**, aby wyświetlić okienko **Informacje o aplikacji**.
+1. Kliknij **Informacje o aplikacji**, aby wyświetlić okienko **Informacje o aplikacji**.
 2. W okienku **Informacje o aplikacji** należy podać informacje o tym wdrożeniu aplikacji. Te informacje pomagają zidentyfikować aplikację w usłudze Intune i ułatwiają użytkownikom odnalezienie aplikacji w portalu firmy.
     - **Nazwa**: Wprowadź nazwę aplikacji wyświetlaną w Portalu firmy. Upewnij się, że wszystkie nazwy są unikatowe. Jeśli dana nazwa aplikacji występuje dwa razy, użytkownicy Portalu firmy będą widzieć tylko jedną z aplikacji o tej nazwie.
     - **Opis**: Wprowadź opis aplikacji. Przykładowo w opisie możesz wymienić docelowych użytkowników.
@@ -64,17 +64,21 @@ W tym kroku podajesz informacje o tym wdrożeniu aplikacji. Te informacje pomaga
 ## <a name="configure-microsoft-edge-settings"></a>Konfigurowanie ustawień programu Microsoft Edge
 W tym kroku skonfigurujesz opcje instalacji aplikacji.
 
-1. W okienku **Dodawanie aplikacji** wybierz pozycję **Ustawienia aplikacji**.
-2. W okienku **Ustawienia aplikacji** jest automatycznie wybierany kanał **Beta** i tego ustawienia nie można zmienić.
-    - Kanał **Beta** to najbardziej stabilne środowisko przeglądarki Microsoft Edge w wersji zapoznawczej oraz najlepszy wybór w przypadku pełnego pilotażu w organizacji. Ważne aktualizacje są publikowane co sześć tygodni.
+1. W okienku **Dodaj aplikację** wybierz pozycję **Ustawienia aplikacji**.
+2. W okienku **Ustawienia aplikacji** wybierz opcję **Stabilne**, **Beta** lub **Deweloper** z listy **Kanał**, aby określić, z którego kanału przeglądarki Microsoft Edge będziesz wdrażać aplikację.
+
+    - **Kanał stabilny** to zalecany kanał do szerokiego wdrożenia w środowisku przedsiębiorstwa. Jest aktualizowany co sześć tygodni, a każda wersja zawiera ulepszenia z kanału beta.
+    - **Kanał beta** to najbardziej stabilne środowisko przeglądarki Microsoft Edge w wersji zapoznawczej i najlepszy wybór do realizacji pełnego pilotażu w organizacji. Większe aktualizacje ukazują się co sześć tygodni, a każda wersja zawiera funkcje i ulepszenia z kanału dla deweloperów.
+    - **Kanał deweloperski** jest przeznaczony do zbierania opinii użytkowników firmowych systemów Windows, Windows Server i macOS. Jest aktualizowany co tydzień i zawiera najnowsze ulepszenia i poprawki.
 
     > [!NOTE]
     > Logo przeglądarki Microsoft Edge będzie wyświetlane razem z nazwą aplikacji podczas przeglądania portalu firmy.
+
 3.  Wybierz przycisk **OK**.
 
 ## <a name="select-scope-tags-optional"></a>Wybieranie tagów zakresu (opcjonalnie)
 Za pomocą tagów zakresu można określić, kto będzie mógł wyświetlać informacje o aplikacji klienckiej w usłudze Intune. Więcej informacji o tagach zakresu zawiera artykuł Używanie kontroli dostępu opartej na rolach i tagów zakresu w rozproszonej infrastrukturze informatycznej.
-1.  Wybierz pozycję **Zakres (tagi)**  > **Dodaj**.
+1.  Wybierz pozycję **Zakres (tagi)** > **Dodaj**.
 2.  Użyj pola **Wybierz**, aby wyszukać tagi zakresu.
 3.  Zaznacz pole wyboru obok tagów zakresu, które chcesz przypisać do aplikacji.
 4.  Kliknij kolejno pozycje **Wybierz** > **OK**.

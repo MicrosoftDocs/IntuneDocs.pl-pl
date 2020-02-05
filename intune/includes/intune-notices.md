@@ -7,30 +7,14 @@ ms.topic: include
 ms.date: 11/19/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 9aa82268fb02f5124e48eb303f19cf32be02c284
-ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
+ms.openlocfilehash: 6064fb657454106a8a7213e0bbbcecdcef765857
+ms.sourcegitcommit: c7c6be3833d9a63d43f31d598b555b49b33cf5cb
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76912640"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76966366"
 ---
 Te powiadomienia zawierają ważne informacje, które mogą ułatwić przygotowanie się na nadchodzące zmiany i nowe funkcje w usłudze Intune.
-
-### <a name="updated-feature-new-rbac-role-coming-to-intune--4253397--"></a>Zaktualizowana funkcja: Nowa rola kontroli RBAC wkrótce dostępna w usłudze Intune<!--4253397-->
-W ramach styczniowej aktualizacji usługi Intune planujemy wydanie nowej roli zabezpieczeń w usłudze Intune. Ta rola będzie widoczna jako „Menedżer zabezpieczeń punktu końcowego” w usłudze Intune. Jest ona rozszerzeniem roli „Administrator zabezpieczeń” z usługi Azure AD.
- 
-#### <a name="how-does-this-affect-me"></a>Jak to wpłynie na mnie?
-Obecnie istnieją trzy role dostępne w usłudze Azure AD dla specjalistów ds. zabezpieczeń:
-- Rola Czytelnik zabezpieczeń w usłudze Azure AD, która zapewnia dostęp tylko do odczytu do usługi Intune.
-- Rola Operator zabezpieczeń w usłudze Azure AD, która zapewnia dostęp tylko do odczytu do usługi Intune.
-- Administrator zabezpieczeń w usłudze Azure AD. Po opublikowaniu styczniowej aktualizacji usługi Intune oprócz uprawnień tylko do odczytu do usługi Intune nowe uprawnienia udostępniane przez rolę Menedżer zabezpieczeń punktu końcowego będą następujące:
-    - Odczytywanie, tworzenie, aktualizowanie, usuwanie i przypisywanie zasad zgodności urządzeń
-    - Odczytywanie, usuwanie i aktualizowanie urządzeń zarządzanych
-    - Odczytywanie, tworzenie, aktualizowanie, usuwanie i przypisywanie punktów odniesienia zabezpieczeń
-    - Odczytywanie i aktualizowanie zadań zabezpieczeń
- 
-### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Co należy zrobić, aby przygotować się do tej zmiany?
-Już dzisiaj zapoznaj się z rolami kontroli RBAC w usłudze Intune. Jeśli obecnie używasz tylko ról administratorów globalnych, nie musisz wprowadzać żadnych zmian. Jeśli używasz ról i chcesz korzystać ze stopnia szczegółowości, który zapewnia rola Menedżer zabezpieczeń punktu końcowego, przypisz tę rolę, gdy zostanie udostępniona. Sprawdź stronę [Co nowego](../fundamentals/whats-new.md) dla usługi Intune, aby uzyskać informacje na temat aktualnej wersji tej usługi. 
 
 ### <a name="updated-support-statement-for-adobe-acrobat-reader-for-intune-mobile-app--5746776--"></a>Zaktualizowano oświadczenie dotyczące obsługi aplikacji mobilnej „Adobe Acrobat Reader dla usługi Intune"<!--5746776-->
 Pod koniec sierpnia poinformowaliśmy w dokumencie MC188653, że okres eksploatacji aplikacji mobilnej Adobe Acrobat dla usługi Intune zakończy się 1 grudnia 2019 r. oraz że firma Adobe planuje obsługę zasad ochrony aplikacji usługi Intune w swojej głównej aplikacji Acrobat Reader. Od tego momentu otrzymaliśmy opinie klientów, którzy twierdzili, że potrzebują więcej czasu, aby administratorzy IT mogli nadal traktować aplikację Adobe Acrobat Reader dla usługi Intune jako docelową, a użytkownicy końcowi mogli zacząć z niej korzystać. Mając na uwadze duże użycie aplikacji Adobe Acrobat Reader dla usługi Intune na urządzeniach użytkowników końcowych oraz jej znaczenie w scenariuszach korporacyjnych, chcemy upewnić się, że wszystkie środowiska spełniają wymagania związane z ochroną aplikacji w organizacji. 

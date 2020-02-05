@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8452f840fb269505656bf6594d3e5c196b4d7a06
-ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
+ms.openlocfilehash: 9fa02a61148a03a64b88b38dcdc1799b30bc45db
+ms.sourcegitcommit: 5ad0ce27a30ee3ef3beefc46d2ee49db6ec0cbe3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75885781"
+ms.lasthandoff: 01/30/2020
+ms.locfileid: "76886726"
 ---
 # <a name="create-a-design"></a>Tworzenie projektu
 
@@ -308,7 +308,10 @@ Profile sieci Wi-Fi są używane do automatycznego łączenia urządzenia przeno
 
 Poniżej przedstawiono przykładowy projekt dla profilu sieci Wi-Fi:
 
-| **Wpisz** | **Nazwa profilu** | **Platforma urządzenia** | **Przypadki użycia** | | Sieć Wi-Fi | Profil sieci Wi-Fi (Azja) | Android | Firmowe, BYOD (region Azja)| | Sieć Wi-Fi | Profil sieci Wi-Fi (Ameryka Północna) | Android, iOS, Windows 10 Mobile | Firmowe, BYOD (region Ameryka Północna) |
+| **Typ** | **Nazwa profilu** | **Platforma urządzeń** | **Przypadki użycia** |
+|:---:|:---:|:---:|:---:|
+| Wi-Fi | Profil sieci Wi-Fi (Azja) | Android | Firmowe, BYOD (region Azja)|
+| Wi-Fi | Profil sieci Wi-Fi (Ameryka Północna) | Android, iOS i Windows 10 Mobile | Firmowe, BYOD (region Ameryka Północna) |
 
 Aby zidentyfikować potrzeby swojego profilu sieci Wi-Fi, możesz [pobrać szablon powyższej tabeli](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0).
 
