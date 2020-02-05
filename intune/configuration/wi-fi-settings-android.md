@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/08/2019
+ms.date: 01/24/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4a9bd1691b7943f02c9577e962fb1bcd5d9cf40a
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 2ea0a60537bb488d3280990747d3e337e73fddc0
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72585329"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76754562"
 ---
 # <a name="add-wi-fi-settings-for-devices-running-android-in-microsoft-intune"></a>Dodawanie ustawień sieci Wi-Fi dla urządzeń z systemem Android w usłudze Microsoft Intune
 
@@ -36,50 +36,76 @@ W tym artykule opisano te ustawienia.
 
 [Utwórz profil urządzenia](device-profile-create.md).
 
-## <a name="basic"></a>Podstawowe
+## <a name="basic"></a>Podstawowy
 
-- **Typ sieci Wi-Fi**: wybierz pozycję **Podstawowa**.
-- **SSID**: wprowadź **Identyfikator zestawu usług**, który jest rzeczywistą nazwą sieci bezprzewodowej, z którą urządzenia nawiązują połączenie. Jednak przy wyborze połączenia użytkownicy widzą tylko **nazwę sieci** utworzoną wcześniej.
-- **Ukryta sieć**: wybierz pozycję **Włącz**, aby ukrywać tę sieć na liście dostępnych sieci w urządzeniu. Identyfikator SSID nie jest rozgłaszany. Wybierz pozycję **Wyłącz**, aby wyświetlać tę sieć na liście dostępnych sieci w urządzeniu.
+- **Typ sieci Wi-Fi**: Wybierz pozycję **Podstawowe**.
+- **SSID**: wprowadź **identyfikator zestawu usług** będący prawdziwą nazwą sieci bezprzewodowej, z którą łączą się urządzenia. Jednak przy wyborze połączenia użytkownicy widzą tylko **nazwę sieci** utworzoną wcześniej.
+- **Sieć ukryta**: wybierz pozycję **Włącz**, aby ukrywać tę sieć na liście dostępnych sieci w urządzeniu. Identyfikator SSID nie jest rozgłaszany. Wybierz pozycję **Wyłącz**, aby wyświetlać tę sieć na liście dostępnych sieci w urządzeniu.
 
 ## <a name="enterprise"></a>Enterprise
 
 - **Typ sieci Wi-Fi**: wybierz pozycję **Przedsiębiorstwo**.
-- **SSID**: wprowadź **Identyfikator zestawu usług**, który jest rzeczywistą nazwą sieci bezprzewodowej, z którą urządzenia nawiązują połączenie. Jednak przy wyborze połączenia użytkownicy widzą tylko **nazwę sieci** utworzoną wcześniej.
-- **Ukryta sieć**: wybierz pozycję **Włącz**, aby ukrywać tę sieć na liście dostępnych sieci w urządzeniu. Identyfikator SSID nie jest rozgłaszany. Wybierz pozycję **Wyłącz**, aby wyświetlać tę sieć na liście dostępnych sieci w urządzeniu.
-- **Typ protokołu EAP**: wybierz typ protokołu uwierzytelniania rozszerzonego (EAP) używany do uwierzytelniania zabezpieczonych połączeń bezprzewodowych. Dostępne opcje: 
+- **SSID**: wprowadź **identyfikator zestawu usług** będący prawdziwą nazwą sieci bezprzewodowej, z którą łączą się urządzenia. Jednak przy wyborze połączenia użytkownicy widzą tylko **nazwę sieci** utworzoną wcześniej.
+- **Sieć ukryta**: wybierz pozycję **Włącz**, aby ukrywać tę sieć na liście dostępnych sieci w urządzeniu. Identyfikator SSID nie jest rozgłaszany. Wybierz pozycję **Wyłącz**, aby wyświetlać tę sieć na liście dostępnych sieci w urządzeniu.
+- **Typ protokołu EAP**: wybierz typ protokołu uwierzytelniania rozszerzonego (EAP) używany do uwierzytelniania zabezpieczonych połączeń bezprzewodowych. Dostępne opcje:
 
-  - **EAP-TLS**: wprowadź też następujące ustawienia:
+  - **EAP-TLS**: Wprowadź też następujące ustawienia:
 
-    - **Zaufanie serwera** - **certyfikat główny na potrzeby walidacji serwera**: wybierz istniejący profil zaufanego certyfikatu głównego. Ten certyfikat jest prezentowany serwerowi, gdy klient łączy się z siecią. Uwierzytelnia połączenie.
+    - **Zaufanie serwera** - **Certyfikat główny weryfikacji serwera**: wybierz istniejący profil zaufanego certyfikatu głównego. Ten certyfikat jest przedstawiany na serwerze, gdy klient łączy się z siecią. Uwierzytelnia on połączenie.
 
-    - **Uwierzytelnianie klienta** - **certyfikat klienta na potrzeby uwierzytelniania klienta (certyfikat tożsamości)** : wybierz profil certyfikatu protokołu SCEP lub standardów PKCS, który również został wdrożony do urządzenia. Ten certyfikat to tożsamość przesyłana przez urządzenie do serwera w celu uwierzytelnienia połączenia.
+    - **Uwierzytelnienie klienta** - **Certyfikat klienta na potrzeby uwierzytelniania klienta (certyfikat tożsamości)** : wybierz profil certyfikatu klienta protokołu SCEP lub PKCS, który również został wdrożony w urządzeniu. Ten certyfikat to tożsamość przesyłana przez urządzenie do serwera w celu uwierzytelnienia połączenia.
 
     - **Prywatność tożsamości (tożsamość zewnętrzna)** : wprowadź tekst, który będzie wysyłany w odpowiedzi na żądanie podania tożsamości zgłaszane przez protokół EAP. Ten tekst może mieć dowolną wartość, taką jak `anonymous`. Podczas uwierzytelniania na początku wysyłana jest ta tożsamość anonimowa, a po niej — tożsamość rzeczywista, która jest wysyłana w bezpiecznym tunelu.
 
-  - **EAP-TTLS**: wprowadź też następujące ustawienia:
+    - **Ustawienia serwera proxy**: określ konfigurację serwera proxy używaną w Twojej organizacji. Dostępne opcje:
 
-    - **Zaufanie serwera** - **certyfikat główny na potrzeby walidacji serwera**: wybierz istniejący profil zaufanego certyfikatu głównego. Ten certyfikat jest prezentowany serwerowi, gdy klient łączy się z siecią. Uwierzytelnia połączenie.
+      - **Brak** — nie używasz serwera proxy.
+      - **Automatyczne** — wybierz tę opcję, aby udostępnić ustawienie *Adres URL serwera proxy*, które służy do określania serwera proxy lub pliku automatycznej konfiguracji serwera proxy (PAC) zawierającego listę serwerów proxy.
 
-    - **Uwierzytelnianie klienta**: wybierz **metodę uwierzytelniania**. Dostępne opcje:
+    - **Adres URL serwera proxy**: to ustawienie jest dostępne po wybraniu dla ustawienia *Ustawienia serwera proxy* pozycji *Automatyczne*. Określ jedną z następujących opcji, aby kierować urządzenia do serwera proxy:
+
+      - Adres IP. Na przykład `10.0.0.11`
+      - Adres URL. Na przykład `http://proxyserver.contoso.com`.
+      - Adres URL pliku automatycznej konfiguracji serwera proxy (PAC). Przykład: `http://proxy.contoso.com/proxy.pac`.
+
+      Aby uzyskać więcej informacji na temat plików PAC, zobacz [Proxy Auto-Configuration (PAC) file](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (Plik automatycznej konfiguracji serwera proxy (PAC)). Zostanie otwarta witryna nienależąca do firmy Microsoft.
+
+  - **EAP-TTLS**: Wprowadź też następujące ustawienia:
+
+    - **Zaufanie serwera** - **Certyfikat główny weryfikacji serwera**: wybierz istniejący profil zaufanego certyfikatu głównego. Ten certyfikat jest przedstawiany na serwerze, gdy klient łączy się z siecią. Uwierzytelnia on połączenie.
+
+    - **Uwierzytelnianie klienta**: Wybierz **metodę uwierzytelniania**. Dostępne opcje:
 
       - **Nazwa użytkownika i hasło**: monituj użytkownika o nazwę użytkownika i hasło w celu uwierzytelnienia połączenia. Wprowadź też następujące ustawienia:
-        - **Metoda inna niż EAP (tożsamość wewnętrzna)** : wybierz sposób uwierzytelniania połączenia. Pamiętaj, aby wybrać ten sam protokół, który został skonfigurowany w sieci Wi-Fi. Dostępne opcje:
+        - **Metoda bez protokołu EAP (tożsamość wewnętrzna)** : wybierz sposób uwierzytelniania połączenia. Pamiętaj, aby wybrać ten sam protokół, który został skonfigurowany w sieci Wi-Fi. Dostępne opcje:
 
           - **Hasło nieszyfrowane (PAP)**
           - **Protokół uwierzytelniania typu Challenge Handshake (CHAP)**
           - **Microsoft CHAP (MS-CHAP)**
           - **Microsoft CHAP wersja 2 (MS-CHAP v2)**
 
-      - **Certyfikaty**: wybierz profil certyfikatu klienta protokołu SCEP lub standardów PKCS, który również został wdrożony w urządzeniu. Ten certyfikat to tożsamość przesyłana przez urządzenie do serwera w celu uwierzytelnienia połączenia.
+      - **Certyfikaty**: wybierz profil certyfikatu klienta protokołu SCEP lub PKCS, który również został wdrożony w urządzeniu. Ten certyfikat to tożsamość przesyłana przez urządzenie do serwera w celu uwierzytelnienia połączenia.
 
       - **Prywatność tożsamości (tożsamość zewnętrzna)** : wprowadź tekst, który będzie wysyłany w odpowiedzi na żądanie podania tożsamości zgłaszane przez protokół EAP. Ten tekst może mieć dowolną wartość, taką jak `anonymous`. Podczas uwierzytelniania na początku wysyłana jest ta tożsamość anonimowa, a po niej — tożsamość rzeczywista, która jest wysyłana w bezpiecznym tunelu.
 
-  - **PEAP**: wprowadź też następujące ustawienia:
+    - **Ustawienia serwera proxy**: określ konfigurację serwera proxy używaną w Twojej organizacji. Dostępne opcje:
 
-    - **Zaufanie serwera** - **certyfikat główny na potrzeby walidacji serwera**: wybierz istniejący profil zaufanego certyfikatu głównego. Ten certyfikat jest prezentowany serwerowi, gdy klient łączy się z siecią. Uwierzytelnia połączenie.
+      - **Brak** — nie używasz serwera proxy.
+      - **Automatyczne** — wybierz tę opcję, aby udostępnić ustawienie *Adres URL serwera proxy*, które służy do określania serwera proxy lub pliku automatycznej konfiguracji serwera proxy (PAC) zawierającego listę serwerów proxy.
 
-    - **Uwierzytelnianie klienta**: wybierz **metodę uwierzytelniania**. Dostępne opcje:
+    - **Adres URL serwera proxy**: to ustawienie jest dostępne po wybraniu dla ustawienia *Ustawienia serwera proxy* pozycji *Automatyczne*. Określ jedną z następujących opcji, aby kierować urządzenia do serwera proxy:
+
+      - Adres IP. Na przykład `10.0.0.11`
+      - Adres URL. Na przykład `http://proxyserver.contoso.com`.
+      - Adres URL pliku automatycznej konfiguracji serwera proxy (PAC). Przykład: `http://proxy.contoso.com/proxy.pac`.
+
+      Aby uzyskać więcej informacji na temat plików PAC, zobacz [Proxy Auto-Configuration (PAC) file](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (Plik automatycznej konfiguracji serwera proxy (PAC)). Zostanie otwarta witryna nienależąca do firmy Microsoft.
+
+  - **PEAP**: Wprowadź też następujące ustawienia:
+
+    - **Zaufanie serwera** - **Certyfikat główny weryfikacji serwera**: wybierz istniejący profil zaufanego certyfikatu głównego. Ten certyfikat jest przedstawiany na serwerze, gdy klient łączy się z siecią. Uwierzytelnia on połączenie.
+
+    - **Uwierzytelnianie klienta**: Wybierz **metodę uwierzytelniania**. Dostępne opcje:
 
       - **Nazwa użytkownika i hasło**: monituj użytkownika o nazwę użytkownika i hasło w celu uwierzytelnienia połączenia. Wprowadź też następujące ustawienia:
         - **Metoda uwierzytelniania inna niż EAP (tożsamość wewnętrzna)** : wybierz sposób uwierzytelniania połączenia. Pamiętaj, aby wybrać ten sam protokół, który został skonfigurowany w sieci Wi-Fi. Dostępne opcje:
@@ -87,9 +113,22 @@ W tym artykule opisano te ustawienia.
           - **Brak**
           - **Microsoft CHAP wersja 2 (MS-CHAP v2)**
 
-      - **Certyfikaty**: wybierz profil certyfikatu klienta protokołu SCEP lub standardów PKCS, który również został wdrożony w urządzeniu. Ten certyfikat to tożsamość przesyłana przez urządzenie do serwera w celu uwierzytelnienia połączenia.
+      - **Certyfikaty**: wybierz profil certyfikatu klienta protokołu SCEP lub PKCS, który również został wdrożony w urządzeniu. Ten certyfikat to tożsamość przesyłana przez urządzenie do serwera w celu uwierzytelnienia połączenia.
 
       - **Prywatność tożsamości (tożsamość zewnętrzna)** : wprowadź tekst, który będzie wysyłany w odpowiedzi na żądanie podania tożsamości zgłaszane przez protokół EAP. Ten tekst może mieć dowolną wartość, taką jak `anonymous`. Podczas uwierzytelniania na początku wysyłana jest ta tożsamość anonimowa, a po niej — tożsamość rzeczywista, która jest wysyłana w bezpiecznym tunelu.
+
+      - **Ustawienia serwera proxy**: określ konfigurację serwera proxy używaną w Twojej organizacji. Dostępne opcje:
+
+        - **Brak** — nie używasz serwera proxy.
+        - **Automatyczne** — wybierz tę opcję, aby udostępnić ustawienie *Adres URL serwera proxy*, które służy do określania serwera proxy lub pliku automatycznej konfiguracji serwera proxy (PAC) zawierającego listę serwerów proxy.
+
+      - **Adres URL serwera proxy**: to ustawienie jest dostępne po wybraniu dla ustawienia *Ustawienia serwera proxy* pozycji *Automatyczne*. Określ jedną z następujących opcji, aby kierować urządzenia do serwera proxy:
+
+        - Adres IP. Na przykład `10.0.0.11`
+        - Adres URL. Na przykład `http://proxyserver.contoso.com`.
+        - Adres URL pliku automatycznej konfiguracji serwera proxy (PAC). Przykład: `http://proxy.contoso.com/proxy.pac`.
+
+        Aby uzyskać więcej informacji na temat plików PAC, zobacz [Proxy Auto-Configuration (PAC) file](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (Plik automatycznej konfiguracji serwera proxy (PAC)). Zostanie otwarta witryna nienależąca do firmy Microsoft.
 
 ## <a name="next-steps"></a>Następne kroki
 

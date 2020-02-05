@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1a5381d139247424d976b6b510d62681f623203a
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: ac63ef1f35e7b4730e275c6c9e566c53463c72ce
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72490502"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76754800"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Jak używać usługi Azure AD do uzyskiwania dostępu do interfejsów API usługi Intune w programie Microsoft Graph
 
@@ -90,7 +90,7 @@ Aby zarejestrować aplikację do korzystania z interfejsu API programu Microsoft
 
     1. Zanotuj wartość z pola **Identyfikator aplikacji**.
 
-    2. Wybierz kolejno opcje **Ustawienia** &gt; **Dostęp do interfejsu API** &gt; **Wymagane uprawnienia**.
+    2. Wybierz pozycję **Ustawienia** &gt; **Dostęp do interfejsu API** &gt; **Wymagane uprawnienia**.
 
     <img src="../media/azure-ad-req-perm.png" width="483" height="186" alt="The Required permissions setting" />
 
@@ -162,7 +162,7 @@ Aktualnie wszystkie zakresy uprawnień usługi Intune wymagają dostępu adminis
 
 ### <a name="app-ro"></a>DeviceManagementApps.Read.All
 
-- Ustawienie **Włącz dostęp**: __odczyt aplikacji usługi Microsoft Intune__
+- Ustawienie **Włącz dostęp**: __Odczyt aplikacji usługi Microsoft Intune__
 
 - Zezwala na dostęp do właściwości i stanu następujących elementów w trybie do odczytu:
   - Aplikacje klienckie
@@ -172,7 +172,7 @@ Aktualnie wszystkie zakresy uprawnień usługi Intune wymagają dostępu adminis
 
 ### <a name="app-rw"></a>DeviceManagementApps.ReadWrite.All
 
-- Ustawienie **Włącz dostęp**: __odczyt i zapis aplikacji usługi Microsoft Intune__
+- Ustawienie **Włącz dostęp**: __Odczyt i zapis aplikacji usługi Microsoft Intune__
 
 - Umożliwia wykonywanie tych samych operacji co __DeviceManagementApps.Read.All__
 
@@ -185,7 +185,7 @@ Aktualnie wszystkie zakresy uprawnień usługi Intune wymagają dostępu adminis
 
 ### <a name="cfg-ro"></a>DeviceManagementConfiguration.Read.All
 
-- Ustawienie **Włącz dostęp**: __odczyt konfiguracji i zasad urządzeń Microsoft Intune__
+- Ustawienie **Włącz dostęp**: __Odczyt konfiguracji i zasad urządzeń Microsoft Intune__
 
 - Zezwala na dostęp do właściwości i stanu następujących elementów w trybie do odczytu:
   - Konfiguracja urządzenia
@@ -194,7 +194,7 @@ Aktualnie wszystkie zakresy uprawnień usługi Intune wymagają dostępu adminis
 
 ### <a name="cfg-ra"></a>DeviceManagementConfiguration.ReadWrite.All
 
-- Ustawienie **Włącz dostęp**: __odczyt i zapis konfiguracji i zasad urządzeń Microsoft Intune__
+- Ustawienie **Włącz dostęp**: __Odczyt i zapis konfiguracji i zasad urządzeń Microsoft Intune__
 
 - Umożliwia wykonywanie tych samych operacji co __DeviceManagementConfiguration.Read.All__
 
@@ -205,7 +205,7 @@ Aktualnie wszystkie zakresy uprawnień usługi Intune wymagają dostępu adminis
 
 ### <a name="mgd-po"></a>DeviceManagementManagedDevices.PrivilegedOperations.All
 
-- Ustawienie **Włącz dostęp**: __wykonywanie akcji zdalnych wpływających na użytkownika na urządzeniach Microsoft Intune__
+- Ustawienie **Włącz dostęp**: __Wykonywanie akcji zdalnych mających wpływ na użytkownika na urządzeniach Microsoft Intune__
 
 - Zezwala na wykonywanie następujących zdalnych akcji na zarządzanym urządzeniu:
   - Wycofaj
@@ -219,7 +219,7 @@ Aktualnie wszystkie zakresy uprawnień usługi Intune wymagają dostępu adminis
 
 ### <a name="mgd-ro"></a>DeviceManagementManagedDevices.Read.All
 
-- Ustawienie **Włącz dostęp**: __odczyt z urządzeń Microsoft Intune__
+- Ustawienie **Włącz dostęp**: __Odczyt z urządzeń Microsoft Intune__
 
 - Zezwala na dostęp do właściwości i stanu następujących elementów w trybie do odczytu:
   - Zarządzane urządzenie
@@ -230,7 +230,7 @@ Aktualnie wszystkie zakresy uprawnień usługi Intune wymagają dostępu adminis
 
 ### <a name="mgd-rw"></a>DeviceManagementManagedDevices.ReadWrite.All
 
-- Ustawienie **Włącz dostęp**: __odczyt i zapis na urządzeniach Microsoft Intune__
+- Ustawienie **Włącz dostęp**: __Odczyt i zapis na urządzeniach Microsoft Intune__
 
 - Umożliwia wykonywanie tych samych operacji co __DeviceManagementManagedDevices.Read.All__
 
@@ -240,12 +240,12 @@ Aktualnie wszystkie zakresy uprawnień usługi Intune wymagają dostępu adminis
 
 - Dozwolone jest również wykonywanie następujących akcji zdalnych:
   - Lokalizowanie urządzeń
-  - Zastosowanie obejścia blokady aktywacji
+  - Wyłączanie blokady aktywacji
   - Wysyłanie żądań pomocy zdalnej
 
 ### <a name="rac-ro"></a>DeviceManagementRBAC.Read.All
 
-- Ustawienie **Włącz dostęp**: __odczyt ustawień kontroli RBAC usługi Microsoft Intune__
+- Ustawienie **Włącz dostęp**: __Odczyt ustawień kontroli RBAC usługi Microsoft Intune__
 
 - Zezwala na dostęp do właściwości i stanu następujących elementów w trybie do odczytu:
   - Przypisania ról
@@ -254,7 +254,7 @@ Aktualnie wszystkie zakresy uprawnień usługi Intune wymagają dostępu adminis
 
 ### <a name="rac-rw"></a>DeviceManagementRBAC.ReadWrite.All
 
-- Ustawienie **Włącz dostęp**: __odczyt i zapis ustawień kontroli RBAC usługi Microsoft Intune__
+- Ustawienie **Włącz dostęp**: __Odczyt i zapis ustawień kontroli RBAC usługi Microsoft Intune__
 
 - Umożliwia wykonywanie tych samych operacji co __DeviceManagementRBAC.Read.All__
 
@@ -264,7 +264,7 @@ Aktualnie wszystkie zakresy uprawnień usługi Intune wymagają dostępu adminis
 
 ### <a name="svc-ro"></a>DeviceManagementServiceConfig.Read.All
 
-- Ustawienie **Włącz dostęp**: __odczyt konfiguracji usługi Microsoft Intune__
+- Ustawienie **Włącz dostęp**: __Odczyt konfiguracji usługi Microsoft Intune__
 
 - Zezwala na dostęp do właściwości i stanu następujących elementów w trybie do odczytu:
   - Rejestrowanie urządzenia
@@ -280,7 +280,7 @@ Aktualnie wszystkie zakresy uprawnień usługi Intune wymagają dostępu adminis
 
 ### <a name="svc-rw"></a>DeviceManagementServiceConfig.ReadWrite.All
 
-- Ustawienie **Włącz dostęp**: __odczyt i zapis konfiguracji usługi Microsoft Intune__
+- Ustawienie **Włącz dostęp**: __Odczyt i zapis konfiguracji usługi Microsoft Intune__
 
 - Umożliwia wykonywanie tych samych operacji co DeviceManagementServiceConfig.Read.All_
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
+ms.date: 01/27/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8ade7676cb8f6265dd63eb1ba7847c50f526a9a
-ms.sourcegitcommit: 70b40aa4743c8396f8d6a0163893c4a337d67c48
-ms.translationtype: HT
+ms.openlocfilehash: 3502b1c1a73a9e98ed2901fc24dc69ab09136427
+ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "76541864"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812443"
 ---
 # <a name="intune-app-installation-error-reference"></a>Dokumentacja błędów instalacji aplikacji przy użyciu usługi Intune
 
@@ -90,9 +90,7 @@ Następujące komunikaty o błędach oraz opisy zapewniają szczegółowe inform
 | 0x87D13B72 | -2016330894 | Utracono połączenie z Internetem.  | Niepowodzenie walidacji manifestu aplikacji ze względu na łączność sieciową (utracono połączenie) |
 | 0x87D13B73 | -2016330893 | Utracono połączenie z Internetem.  | Niepowodzenie walidacji manifestu aplikacji ze względu na łączność sieciową (brak połączenia z Internetem) |
 | 0x87D13B77 | -2016330889 | Nawiązanie bezpiecznego połączenia nie powiodło się.  | Niepowodzenie walidacji manifestu aplikacji ze względu na łączność sieciową (niepowodzenie bezpiecznego połączenia) |
-| 0x87D13B6F | -2016330897 |  |   |
 | 0x87D13B80 | -2016330880 | CannotConnectToITunesStoreError | Instalacja aplikacji nie powiodła się z powodu niepowodzenia nawiązywania połączenia ze sklepem ITunes |
-| 0x87D13B6E | -2016330898 |   | Niepowodzenie walidacji manifestu aplikacji ze względu na łączność sieciową (nieznane) |
 | 0x87D13B9F  | -2016330849 | Aplikacja VPP ma dostępną aktualizację | Ten kod jest zwracany, gdy aplikacja VPP jest zainstalowana, ale jest dostępna nowsza wersja. |
 
 ## <a name="other-installation-errors"></a>Inne błędy instalacji

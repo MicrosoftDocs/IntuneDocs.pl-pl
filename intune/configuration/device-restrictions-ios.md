@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 39978043428f6ad912832007f60628815d6549a6
-ms.sourcegitcommit: fb72b19986f34907d228c856d2e6949751ec02a1
+ms.openlocfilehash: f99479200e66b080e107475f0a031c5756da6051
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75920074"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76754579"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem iOS i iPadOS umożliwiające działanie funkcji lub ich ograniczanie przy użyciu usługi Intune
 
@@ -41,19 +41,19 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 
 ## <a name="general"></a>Ogólne
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Ustawienia dotyczą: Wszystkie typy rejestracji
+### <a name="settings-apply-to-all-enrollment-types"></a>Ustawienia mają zastosowanie do: Wszystkie typy rejestracji
 
 - **Udostępnij dane użycia**: wybierz pozycję **Blokuj**, aby uniemożliwić urządzeniu wysyłanie danych diagnostycznych i danych użycia do firmy Apple. Pozycja **Nieskonfigurowane** (domyślna) umożliwia wysyłanie tych danych.
 
 - **Przechwytywanie ekranu**: wybierz pozycję **Blokuj**, aby uniemożliwić tworzenie zrzutów ekranu i przechwytywanie ekranów w urządzeniu. W systemie iOS 9.0 i nowszych blokowane jest również nagrywanie ekranu. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia użytkownikowi przechwytywanie zawartości ekranu w formie obrazu lub pliku wideo.
 
-### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ustawienia dotyczą: Rejestrowanie urządzeń, Automatyczne rejestrowanie urządzeń (nadzorowane)
+### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ustawienia mają zastosowanie do: Rejestrowanie urządzeń, Automatyczne rejestrowanie urządzeń (nadzorowane)
 
 - **Niezaufane certyfikaty protokołu TLS**: wybierz pozycję **Blokuj**, aby uniemożliwić używanie niezaufanych certyfikatów protokołu Transport Layer Security (TLS) na urządzeniu. Pozycja **Nieskonfigurowane** (ustawienie domyślne) pozwala na korzystanie z certyfikatów protokołu TLS.
 - **Blokuj bezprzewodowe aktualizacje infrastruktury PKI**: pozycja **Blokuj** uniemożliwia użytkownikom otrzymywanie aktualizacji oprogramowania, chyba że urządzenie zostało podłączone do komputera. Pozycja **Nie skonfigurowano** (wartość domyślna) umożliwia urządzeniu otrzymywanie aktualizacji oprogramowania bez połączenia z komputerem.
 - **Ograniczanie śledzenia reklam**: wybierz pozycję **Ogranicz**, aby wyłączyć identyfikator treści reklamowych urządzenia. Pozycja **Nieskonfigurowane** (ustawienie domyślne) powoduje, że identyfikator pozostaje włączony.
 
-### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ustawienia dotyczą: Automatyczne rejestrowanie urządzeń (nadzorowane)
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ustawienia mają zastosowanie do: Automatyczne rejestrowanie urządzeń (nadzorowane)
 
 - **Modyfikowanie ustawień przesyłania diagnostyki**: Pozycja **Blokuj** uniemożliwia użytkownikowi zmianę ustawień analizy aplikacji i przesyłania danych diagnostycznych w obszarze **Diagnostyka i użycie** (ustawienia urządzenia). Pozycja **Nieskonfigurowane** (domyślna) umożliwia użytkownikowi zmianę tych ustawień urządzenia.
 
@@ -129,11 +129,11 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 
 ## <a name="password"></a>Hasło
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Ustawienia dotyczą: Wszystkie typy rejestracji
+### <a name="settings-apply-to-all-enrollment-types"></a>Ustawienia mają zastosowanie do: Wszystkie typy rejestracji
 
 - **Hasło**: Pozycja **Wymagaj** wymusza wprowadzanie hasła przez użytkownika końcowego w celu uzyskania dostępu do urządzenia. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia użytkownikom uzyskiwanie dostępu do urządzenia bez wprowadzania hasła.
 
-### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ustawienia dotyczą: Rejestrowanie urządzeń, Automatyczne rejestrowanie urządzeń (nadzorowane)
+### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ustawienia mają zastosowanie do: Rejestrowanie urządzeń, Automatyczne rejestrowanie urządzeń (nadzorowane)
 
 > [!IMPORTANT]
 > Jeśli skonfigurujesz dowolne ustawienie hasła na urządzeniach zarejestrowanych przez użytkownika, ustawienia w obszarze **Proste hasła** są automatycznie ustawiane na wartość **Blokuj** i jest wymuszany 6-cyfrowy numer PIN.
@@ -167,7 +167,7 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 
   **Opcje systemu iOS**:  
 
-  - **Nieskonfigurowane** (wartość domyślna): usługa Intune nie dotyka tego ustawienia.
+  - **Nie skonfigurowano** (wartość domyślna): usługa Intune nie zmienia tego ustawienia.
   - **Natychmiast**: ekran blokuje się po upływie 30 s braku aktywności.
   - **1**: ekran blokuje się po upływie 1 min braku aktywności.
   - **2**: ekran blokuje się po upływie 2 min braku aktywności.
@@ -177,7 +177,7 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
     
   **Opcje systemu iPadOS**:  
 
-  - **Nieskonfigurowane** (wartość domyślna): usługa Intune nie dotyka tego ustawienia.
+  - **Nie skonfigurowano** (wartość domyślna): usługa Intune nie zmienia tego ustawienia.
   - **Natychmiast**: ekran blokuje się po upływie 2 min braku aktywności.
   - **2**: ekran blokuje się po upływie 2 min braku aktywności.
   - **5**: ekran blokuje się po upływie 5 min braku aktywności.
@@ -191,14 +191,14 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 
 - **Wygaśnięcie hasła (dni)** : wprowadź liczbę dni, po której należy zmienić hasło urządzenia.
 - **Zapobiegaj ponownemu używaniu poprzednich haseł**: wprowadź liczbę nowych haseł, których należy użyć, zanim będzie możliwe ponowne użycie starego hasła.
-- **Odblokowywanie za pomocą funkcji Touch ID i Face ID**: wybierz pozycję **Blokuj**, aby uniemożliwić użycie twarzy lub odcisku palca do odblokowywania urządzenia. Pozycja **Nieskonfigurowane** zezwala użytkownikowi na odblokowywanie urządzenia przy użyciu tych metod.
+- **Odblokowywanie za pomocą funkcji Touch ID i Face ID**: wybierz pozycję **Blokuj**, aby uniemożliwić użycie odcisku palca lub widoku twarzy do odblokowywania urządzenia. Pozycja **Nieskonfigurowane** zezwala użytkownikowi na odblokowywanie urządzenia przy użyciu tych metod.
 
   Zablokowanie tego ustawienia uniemożliwia także odblokowywanie urządzenia przy użyciu uwierzytelniania FaceID.
 
   Funkcja Face ID dotyczy:  
   - System iOS 11.0 i nowsze
 
-### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ustawienia dotyczą: Automatyczne rejestrowanie urządzeń (nadzorowane)
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ustawienia mają zastosowanie do: Automatyczne rejestrowanie urządzeń (nadzorowane)
 
 - **Modyfikowanie kodu dostępu**: wybierz pozycję **Blokuj**, aby uniemożliwić zmianę, dodanie lub usunięcie kodu dostępu. Po zablokowaniu tej funkcji zmiany ograniczeń kodu dostępu są ignorowane na urządzeniach nadzorowanych. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia dodawanie, zmienianie lub usuwanie kodów dostępu.
 
@@ -223,23 +223,23 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
   Ta funkcja ma zastosowanie do:  
   - System iOS 11.0 i nowsze
   
-<sup>1</sup>W przypadku skonfigurowania ustawień **Maksymalna liczba minut braku aktywności przed zablokowaniem ekranu** i **Maksymalna liczba minut po zablokowaniu ekranu, po których jest wymagane wprowadzenie hasła** są one stosowane jedno po drugim. Na przykład jeśli wartość obu ustawień jest ustawiona na **5** minut, ekran wyłącza się automatycznie po pięciu minutach, a urządzenie jest blokowane po kolejnych pięciu minutach. Jednak jeśli użytkownik wyłączy ekran ręcznie, drugie ustawienie zostanie zastosowane natychmiast. W tym samym przykładzie jeśli użytkownik wyłączy ekran, po pięciu minutach urządzenie zostanie zablokowane.
+<sup>1</sup> W przypadku skonfigurowania ustawień **Maksymalna liczba minut braku aktywności przed zablokowaniem ekranu** i **Maksymalna liczba minut po zablokowaniu ekranu, po których jest wymagane wprowadzenie hasła** są one stosowane jedno po drugim. Na przykład jeśli wartość obu ustawień jest ustawiona na **5** minut, ekran wyłącza się automatycznie po pięciu minutach, a urządzenie jest blokowane po kolejnych pięciu minutach. Jednak jeśli użytkownik wyłączy ekran ręcznie, drugie ustawienie zostanie zastosowane natychmiast. W tym samym przykładzie jeśli użytkownik wyłączy ekran, po pięciu minutach urządzenie zostanie zablokowane.
 
 ## <a name="locked-screen-experience"></a>Środowisko ekranu blokady
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Ustawienia dotyczą: Wszystkie typy rejestracji
+### <a name="settings-apply-to-all-enrollment-types"></a>Ustawienia mają zastosowanie do: Wszystkie typy rejestracji
 
 - **Dostęp do centrum sterowania, gdy urządzenie jest zablokowane**: wybierz pozycję **Blokuj**, aby uniemożliwić dostęp do aplikacji centrum sterowania, gdy urządzenie jest zablokowane. Pozycja **Nieskonfigurowane** (wartość domyślna) zezwala użytkownikom na dostęp do aplikacji Centrum sterowania, gdy urządzenie jest zablokowane.
 - **Powiadomienia, gdy urządzenie jest zablokowane**: pozycja **Blokuj** uniemożliwia dostęp do powiadomień, gdy urządzenie jest zablokowane. Pozycja **Nieskonfigurowane** (wartość domyślna) zezwala użytkownikowi na dostęp do powiadomień bez odblokowywania urządzenia.
 - **Widok Dzisiaj, gdy urządzenie jest zablokowane**: pozycja **Blokuj** uniemożliwia użytkownikowi dostęp do widoku Dzisiaj, gdy urządzenie jest zablokowane. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia użytkownikowi wyświetlanie widoku Dzisiaj, gdy urządzenie jest zablokowane.
 
-### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ustawienia dotyczą: Rejestrowanie urządzeń, Automatyczne rejestrowanie urządzeń (nadzorowane)
+### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ustawienia mają zastosowanie do: Rejestrowanie urządzeń, Automatyczne rejestrowanie urządzeń (nadzorowane)
 
 - **Powiadomienia aplikacji Portfel, gdy urządzenie jest zablokowane**: pozycja **Blokuj** uniemożliwia dostęp do aplikacji Portfel, gdy urządzenie jest zablokowane. Pozycja **Nieskonfigurowane** (wartość domyślna) zezwala użytkownikowi na dostęp do aplikacji Portfel, gdy urządzenie jest zablokowane.
 
 ## <a name="app-store-doc-viewing-gaming"></a>Sklep App Store, wyświetlanie dokumentów, granie
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Ustawienia dotyczą: Wszystkie typy rejestracji
+### <a name="settings-apply-to-all-enrollment-types"></a>Ustawienia mają zastosowanie do: Wszystkie typy rejestracji
 
 - **Wyświetlanie dokumentów firmowych w aplikacjach niezarządzanych**: Pozycja **Blokuj** uniemożliwia wyświetlanie dokumentów firmowych w aplikacjach niezarządzanych. Pozycja **Nieskonfigurowane** (wartość domyślna) zezwala na wyświetlanie dokumentów firmowych w dowolnej aplikacji. Na przykład chcesz uniemożliwić użytkownikom zapisywanie plików z aplikacji OneDrive w aplikacji Dropbox. Skonfiguruj to ustawienie jako **Blokuj**. Jeśli urządzenie otrzymało zasady (na przykład po ponownym uruchomieniu), nie ma już możliwości zapisywania.
 
@@ -247,7 +247,7 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
   > [!NOTE]
   > Po zablokowaniu tego ustawienia blokowane są również klawiatury innych firm zainstalowane ze sklepu App Store.
 
-  - **Zezwalanie aplikacjom niezarządzanym na odczytywanie z kont kontaktów zarządzanych**: po wybraniu pozycji **Zezwalaj** aplikacje niezarządzane, takie jak wbudowana w systemie iOS aplikacja Kontakty, mogą odczytywać informacje kontaktowe i uzyskiwać do nich dostęp z aplikacji zarządzanych, w tym aplikacji mobilnej Outlook. Ustawienie opcji **Nieskonfigurowane** (wartość domyślna) zapobiega odczytywaniu informacji z wbudowanej aplikacji Kontakty na urządzeniu oraz uniemożliwia usuwanie duplikatów.  
+  - **Zezwalaj niezarządzanym aplikacjom na odczytywanie z kont kontaktów zarządzanych**: po wybraniu pozycji **Zezwalaj** aplikacje niezarządzane, takie jak wbudowana w systemie iOS aplikacja Kontakty, mogą odczytywać informacje kontaktowe i uzyskiwać do nich dostęp z aplikacji zarządzanych, w tym aplikacji mobilnej Outlook. Ustawienie opcji **Nieskonfigurowane** (wartość domyślna) zapobiega odczytywaniu informacji z wbudowanej aplikacji Kontakty na urządzeniu oraz uniemożliwia usuwanie duplikatów.  
   
     To ustawienie umożliwia lub uniemożliwia odczytywanie informacji kontaktowych. Nie kontroluje ono synchronizowania kontaktów między aplikacjami.
   
@@ -258,20 +258,20 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 - **Traktuj usługę AirDrop jako niezarządzane miejsce docelowe**: pozycja **Wymagaj** wymusza traktowanie usługi AirDrop jako niezarządzanego miejsca docelowego upuszczania. Uniemożliwia to aplikacjom zarządzanym wysyłanie danych przy użyciu usługi AirDrop. 
 - **Wyświetlanie dokumentów innych niż firmowe w aplikacjach firmowych**: pozycja **Blokuj** uniemożliwia wyświetlanie dokumentów innych niż firmowe w aplikacjach firmowych. Pozycja **Nieskonfigurowane** (wartość domyślna) zezwala na wyświetlanie dowolnych dokumentów w zarządzanych aplikacjach firmowych.
 
-  Wybranie pozycji **Blokuj** uniemożliwia również synchronizację eksportu kontaktów w programie Outlook dla systemu iOS. Aby uzyskać więcej informacji, zobacz [Support Tip: Enabling Outlook iOS Contact Sync with iOS12 MDM Controls](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Enabling-Outlook-iOS-Contact-Sync-with-iOS12-MDM/ba-p/298453) (Porada pomocy technicznej: włączanie synchronizacji kontaktów programu Outlook w systemie iOS za pomocą kontrolek zarządzania urządzeniami mobilnymi systemu iOS12).
+  Wybranie pozycji **Blokuj** uniemożliwia również synchronizację eksportu kontaktów w programie Outlook dla systemu iOS. Aby uzyskać więcej informacji, zobacz [Support tip: Enabling Outlook iOS Contact Sync with iOS12 MDM Controls](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Enabling-Outlook-iOS-Contact-Sync-with-iOS12-MDM/ba-p/298453) (Porada pomocy technicznej: włączanie synchronizacji kontaktów programu Outlook w systemie iOS za pomocą kontrolek zarządzania urządzeniami mobilnymi systemu iOS12).
 
-### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ustawienia dotyczą: Rejestrowanie urządzeń, Automatyczne rejestrowanie urządzeń (nadzorowane)
+### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ustawienia mają zastosowanie do: Rejestrowanie urządzeń, Automatyczne rejestrowanie urządzeń (nadzorowane)
 
 - **Wymagaj hasła sklepu iTunes Store dla wszystkich zakupów**: pozycja **Wymagaj** wymusza na użytkowniku wprowadzanie hasła Apple ID w przypadku każdego zakupu w aplikacji lub w programie iTunes. Pozycja **Nieskonfigurowane** (wartość domyślna) pozwala na zakupy bez monitowania za każdym razem o podanie hasła.
 - **Zakupy w aplikacji**: wybierz pozycję **Blokuj**, aby uniemożliwić dokonywanie zakupów w aplikacji ze sklepu. Pozycja **Nieskonfigurowane** (wartość domyślna) zezwala na zakupy w sklepie w uruchomionej aplikacji.
 - **Pobieranie ze sklepu iBook zawartości oznaczonej jako „Erotyka”** : wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom pobieranie ze sklepu iBook multimediów oznaczonych jako erotyka. Pozycja **Nieskonfigurowane** (wartość domyślna) zezwala użytkownikom na pobieranie książek z kategorii „Erotyka”.
-- **Zezwalaj zarządzanym aplikacjom na zapisywanie kontaktów na niezarządzanych kontach kontaktów**: po wybraniu pozycji **Zezwalaj** aplikacje zarządzane, takie jak aplikacja mobilna Outlook, mogą zapisywać i synchronizować informacje kontaktowe, w tym kontakty biznesowe i firmowe, przy użyciu aplikacji Kontakty wbudowanej w systemie iOS. Po wybraniu pozycji **Nieskonfigurowane** (wartość domyślna) aplikacje zarządzane nie mogą zapisywać ani synchronizować informacji kontaktowych z aplikacją Kontakty wbudowaną w systemie iOS na urządzeniu.
+- **Zezwalaj aplikacjom zarządzanym na zapisywanie kontaktów na kontach niezarządzanych kontaktów**: po wybraniu pozycji **Zezwalaj** aplikacje zarządzane, takie jak aplikacja mobilna Outlook, mogą zapisywać i synchronizować informacje kontaktowe, w tym kontakty biznesowe i firmowe, przy użyciu aplikacji Kontakty wbudowanej w systemie iOS. Po wybraniu pozycji **Nieskonfigurowane** (wartość domyślna) aplikacje zarządzane nie mogą zapisywać ani synchronizować informacji kontaktowych z aplikacją Kontakty wbudowaną w systemie iOS na urządzeniu.
   
   Aby użyć tego ustawienia, skonfiguruj ustawienie **Wyświetlanie dokumentów firmowych w aplikacjach niezarządzanych** na wartość **Blokuj**.
 
 - **Region klasyfikacji**: wybierz region klasyfikacji, którego chcesz użyć w przypadku dozwolonych plików do pobrania. Następnie wybierz dozwoloną klasyfikację dla kategorii **Filmy**, **Programy TV** i **Aplikacje**.
 
-### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ustawienia dotyczą: Automatyczne rejestrowanie urządzeń (nadzorowane)
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ustawienia mają zastosowanie do: Automatyczne rejestrowanie urządzeń (nadzorowane)
 
 - **Sklep z aplikacjami**: pozycja **Blokuj** uniemożliwia dostęp do sklepu z aplikacjami na urządzeniach nadzorowanych. Ustawienie **Nie skonfigurowano** (domyślne) zezwala na dostęp.
 
@@ -300,14 +300,14 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 
 ## <a name="built-in-apps"></a>Aplikacje wbudowane
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Ustawienia dotyczą: Wszystkie typy rejestracji
+### <a name="settings-apply-to-all-enrollment-types"></a>Ustawienia mają zastosowanie do: Wszystkie typy rejestracji
 
 - **Siri**: pozycja **Blokuj** uniemożliwia dostęp do programu Siri. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia korzystanie z asystenta głosowego Siri na urządzeniu.
   - **Program Siri, gdy urządzenie jest zablokowane**: wybierz pozycję **Blokuj** aby uniemożliwić dostęp do programu Siri, gdy urządzenie jest zablokowane. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia korzystanie z asystenta głosowego Siri na zablokowanym urządzeniu.
 
 - **Ostrzeżenia o oszustwach w przeglądarce Safari**: pozycja **Wymagaj** wymusza pokazywanie ostrzeżeń o oszustwie w przeglądarce internetowej na urządzeniu. **Nie skonfigurowano** (ustawienie domyślne) — wyłącza tę funkcję.
 
-### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ustawienia dotyczą: Rejestrowanie urządzeń, Automatyczne rejestrowanie urządzeń (nadzorowane)
+### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ustawienia mają zastosowanie do: Rejestrowanie urządzeń, Automatyczne rejestrowanie urządzeń (nadzorowane)
 
 - **Wyniki z sieci Internet w wyszukiwaniach funkcji Spotlight**: pozycja **Blokuj** uniemożliwia funkcji wyszukiwania Spotlight zwracanie wyników z wyszukiwania w Internecie. Pozycja **Nieskonfigurowane** (wartość domyślna) pozwala, aby wyszukiwanie Spotlight łączyło się z Internetem w celu udostępniania dodatkowych wyników.
 
@@ -321,7 +321,7 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 
 - **Okna wyskakujące w przeglądarce Safari**: pozycja **Blokuj** umożliwia blokowanie wyskakujących okienek w przeglądarce internetowej. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia blokowanie wyskakujących okienek.
 
-### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ustawienia dotyczą: Automatyczne rejestrowanie urządzeń (nadzorowane)
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ustawienia mają zastosowanie do: Automatyczne rejestrowanie urządzeń (nadzorowane)
 
 - **Aparat fotograficzny**: wybierz pozycję **Blokuj**, aby uniemożliwić dostęp do aparatu na urządzeniu. Pozycja **Nieskonfigurowane** (wartość domyślna) zezwala na dostęp do aparatu urządzenia.
 
@@ -376,7 +376,7 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 
 ## <a name="restricted-apps"></a>Aplikacje z ograniczeniami
 
-### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ustawienia dotyczą: Rejestrowanie urządzeń, Automatyczne rejestrowanie urządzeń (nadzorowane)
+### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ustawienia mają zastosowanie do: Rejestrowanie urządzeń, Automatyczne rejestrowanie urządzeń (nadzorowane)
 
 - **Typ listy ograniczonych aplikacji**: utwórz listę aplikacji, których użytkownicy nie mogą instalować ani używać. Dostępne opcje:
 
@@ -401,7 +401,7 @@ Aby dodać aplikacje do tych list, możesz:
 
 Dotyczy urządzeń z systemem iOS w wersji 9.3 i nowszych.
 
-### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ustawienia dotyczą: Automatyczne rejestrowanie urządzeń (nadzorowane)
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ustawienia mają zastosowanie do: Automatyczne rejestrowanie urządzeń (nadzorowane)
 
 - **Typ listy aplikacji**: utwórz listę aplikacji do wyświetlania lub ukrywania. Możesz wyświetlać lub ukrywać aplikacje wbudowane i aplikacje biznesowe. W witrynie internetowej firmy Apple znajduje się lista [wbudowanych aplikacji firmy Apple](https://support.apple.com/HT208094). Dostępne opcje:
 
@@ -434,9 +434,9 @@ Aby dodać aplikacje, możesz wykonać następujące czynności:
 
 ## <a name="wireless"></a>Sieć bezprzewodowa
 
-### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ustawienia dotyczą: Rejestrowanie urządzeń, Automatyczne rejestrowanie urządzeń (nadzorowane)
+### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ustawienia mają zastosowanie do: Rejestrowanie urządzeń, Automatyczne rejestrowanie urządzeń (nadzorowane)
 
-Uwaga wymagana w przypadku roamingu danych (porada lub ważna uwaga ułatwiająca uniknięcie dezorientacji klientów): to ustawienie nie będzie widoczne w profilu zarządzania wskazanego urządzenia. Dzieje się tak dlatego, że to ustawienie jest traktowane jako akcja urządzenia zdalnego, która przy każdej zmianie stanu roamingu danych na urządzeniu będzie ponownie blokowana przez usługę Intune. Mimo że ustawienie nie znajduje się w profilu zarządzania, działa, jeśli w raporcie konsoli administracyjnej akcja jest wyświetlana jako zakończona powodzeniem. 
+Informacja niezbędna w przypadku roamingu danych (porada lub ważna uwaga pozwalająca uniknąć dezorientacji klientów): To ustawienie nie będzie widoczne w profilu zarządzania urządzenia docelowego. Dzieje się tak dlatego, że to ustawienie jest traktowane jako akcja urządzenia zdalnego, która przy każdej zmianie stanu roamingu danych na urządzeniu będzie ponownie blokowana przez usługę Intune. Mimo że ustawienie nie znajduje się w profilu zarządzania, działa, jeśli w raporcie konsoli administracyjnej akcja jest wyświetlana jako zakończona powodzeniem. 
 - **Roaming danych**: wybierz pozycję **Blokuj**, aby uniemożliwić roaming danych w sieci komórkowej. Opcja **Nieskonfigurowane** (domyślna) zezwala na roaming danych, gdy urządzenie jest w sieci komórkowej.
 
   > [!IMPORTANT]
@@ -454,7 +454,7 @@ Uwaga wymagana w przypadku roamingu danych (porada lub ważna uwaga ułatwiając
   - **Zablokuj użycie danych komórkowych**: zablokuj użycie danych komórkowych dla **wszystkich zarządzanych aplikacji** lub **wybierz określone aplikacje**.
   - **Zablokuj użycie danych komórkowych podczas roamingu**: zablokuj użycie danych komórkowych podczas roamingu dla **wszystkich zarządzanych aplikacji** lub **wybierz określone aplikacje**.
 
-### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ustawienia dotyczą: Automatyczne rejestrowanie urządzeń (nadzorowane)
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ustawienia mają zastosowanie do: Automatyczne rejestrowanie urządzeń (nadzorowane)
 
 - **Zmiany w ustawieniach wykorzystania danych komórkowych przez aplikację**: wybierz pozycję **Blokuj**, aby uniemożliwić zmiany ustawień użycia danych komórkowych aplikacji. Opcja **Nieskonfigurowane** (domyślna) umożliwia użytkownikowi kontrolowanie, które aplikacje mogą korzystać z danych komórkowych.
 - **Zmiany w ustawieniach planu komórkowego**: Pozycja **Blokuj** uniemożliwia użytkownikom zmianę jakichkolwiek ustawień planu komórkowego. Opcja **Nieskonfigurowane** (ustawienie domyślne) umożliwia użytkownikom wprowadzanie zmian.
@@ -484,15 +484,15 @@ Uwaga wymagana w przypadku roamingu danych (porada lub ważna uwaga ułatwiając
 
 ## <a name="connected-devices"></a>Połączone urządzenia
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Ustawienia dotyczą: Wszystkie typy rejestracji
+### <a name="settings-apply-to-all-enrollment-types"></a>Ustawienia mają zastosowanie do: Wszystkie typy rejestracji
 
 - **Wykrywanie nadgarstka przez sparowane urządzenie Apple Watch**: pozycja **Wymagaj** wymusza używanie funkcji wykrywania nadgarstka na sparowanym zegarku Apple Watch. Jeśli ta opcja jest wymagana, zegarek Apple Watch nie będzie wyświetlać powiadomień, kiedy nie będzie znajdować się na nadgarstku użytkownika. 
 
-### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ustawienia dotyczą: Rejestrowanie urządzeń, Automatyczne rejestrowanie urządzeń (nadzorowane)
+### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ustawienia mają zastosowanie do: Rejestrowanie urządzeń, Automatyczne rejestrowanie urządzeń (nadzorowane)
 
 - **Wymagaj hasła parowania dla wychodzących żądań AirPlay**: pozycja **Wymagaj** umożliwia wymaganie hasła parowania, gdy użytkownik używa funkcji AirPlay do strumieniowego przesyłania zawartości do innych urządzeń firmy Apple. Opcja **Nieskonfigurowane** (domyślna) umożliwia użytkownikowi przesyłanie strumieniowe zawartości przy użyciu funkcji AirPlay bez wprowadzania hasła.
 
-### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ustawienia dotyczą: Automatyczne rejestrowanie urządzeń (nadzorowane)
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ustawienia mają zastosowanie do: Automatyczne rejestrowanie urządzeń (nadzorowane)
 
 - **AirDrop**: pozycja **Blokuj** uniemożliwia używanie funkcji AirDrop na urządzeniu. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia używanie funkcji AirDrop do wymiany zawartości z pobliskimi urządzeniami.
 - **Parowanie urządzenia Apple Watch**: pozycja **Blokuj** uniemożliwia parowanie urządzenia z urządzeniem Apple Watch. Opcja **Nieskonfigurowane** (domyślna) zezwala na parowanie urządzenia z zegarkiem Apple Watch.
@@ -514,12 +514,12 @@ Uwaga wymagana w przypadku roamingu danych (porada lub ważna uwaga ułatwiając
 
 ## <a name="keyboard-and-dictionary"></a>Klawiatura i słownik
 
-### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ustawienia dotyczą: Automatyczne rejestrowanie urządzeń (nadzorowane)
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ustawienia mają zastosowanie do: Automatyczne rejestrowanie urządzeń (nadzorowane)
 
 - **Wyszukiwanie definicji słów**: pozycja **Blokuj** uniemożliwia użytkownikom wyróżnianie wyrazu, a następnie wyszukiwanie jego definicji na urządzeniu. Pozycja **Nieskonfigurowane** (wartość domyślna) zezwala na dostęp do funkcji wyszukiwania definicji.
 - **Klawiatury predykcyjne**: Pozycja **Nieskonfigurowane** (ustawienie domyślne) umożliwia korzystanie z klawiatur predykcyjnych sugerujących wyrazy, które użytkownik może chcieć wpisać. Pozycja **Blokuj** uniemożliwia użycie tej funkcji.
 - **Autokorekta**: Pozycja **Nieskonfigurowane** (ustawienie domyślne) pozwala na automatyczne poprawianie błędnie napisanych wyrazów przez urządzenie. Pozycja **Blokuj** uniemożliwia korzystanie z autokorekty.
-- **Funkcja sprawdzania pisowni klawiatury**: pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia używanie sprawdzania pisowni na urządzeniu. Pozycja **Blokuj** pozwala na sprawdzanie pisowni.
+- **Sprawdzanie pisowni dla klawiatury**: pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia używanie sprawdzania pisowni na urządzeniu. Pozycja **Blokuj** pozwala na sprawdzanie pisowni.
 - **Skróty klawiaturowe**: pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia używanie skrótów klawiaturowych na urządzeniu. Pozycja **Blokuj** uniemożliwia użytkownikowi korzystanie ze skrótów klawiaturowych.
 - **Dyktowanie**: pozycja **Blokuj** uniemożliwia użytkownikowi wprowadzanie tekstu przy użyciu głosu. Pozycja **Nieskonfigurowane** (wartość domyślna) zezwala użytkownikowi na korzystanie z wprowadzania tekstu przez dyktowanie.
 - **QuickPath**: pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia użytkownikom korzystanie z funkcji QuickPath, która pozwala na ciągłe wprowadzanie danych na klawiaturze urządzenia. Użytkownicy mogą wpisywać słowa, przesuwając szybko po klawiszach. Pozycja **Blokuj** uniemożliwia użytkownikom korzystanie z funkcji QuickPath. 
@@ -529,21 +529,21 @@ Uwaga wymagana w przypadku roamingu danych (porada lub ważna uwaga ułatwiając
 
 ## <a name="cloud-and-storage"></a>Chmura i magazyn
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Ustawienia dotyczą: Wszystkie typy rejestracji
+### <a name="settings-apply-to-all-enrollment-types"></a>Ustawienia mają zastosowanie do: Wszystkie typy rejestracji
 
 - **Szyfrowana kopia zapasowa**: pozycja **Wymagaj** umożliwia wymaganie szyfrowania wszystkich kopii zapasowych urządzenia.
 - **Zarządzane aplikacje są synchronizowane z chmurą**: Pozycja **Nieskonfigurowane** (ustawienie domyślne) zezwala aplikacjom zarządzanym usługi Intune na synchronizowanie danych z kontem użytkownika w usłudze iCloud. Pozycja **Blokuj** uniemożliwia taką synchronizację danych z usługą iCloud.
 - **Blokuj tworzenie kopii zapasowych książek przedsiębiorstwa**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom tworzenie kopii zapasowej książek przedsiębiorstwa. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia użytkownikom tworzenie kopii zapasowych tych książek.
 - **Blokuj synchronizację metadanych książek przedsiębiorstwa (notatki i wyróżnienia)** : pozycja **Blokuj** uniemożliwia synchronizowanie notatek i wyróżnień w książkach przedsiębiorstwa. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia synchronizowanie.
 
-### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ustawienia dotyczą: Rejestrowanie urządzeń, Automatyczne rejestrowanie urządzeń (nadzorowane)
+### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ustawienia mają zastosowanie do: Rejestrowanie urządzeń, Automatyczne rejestrowanie urządzeń (nadzorowane)
 
 - **Synchronizowanie strumienia zdjęć z usługą iCloud**: Pozycja **Nieskonfigurowane** (ustawienie domyślne) umożliwia użytkownikom włączanie funkcji **Mój strumień zdjęć** na urządzeniu, co pozwala na synchronizowanie z usługą iCloud i udostępnianie zdjęć na wszystkich urządzeniach użytkownika. Pozycja **Blokuj** zezwala na synchronizację funkcji Strumień zdjęć w usłudze iCloud. Zablokowanie tej funkcji może spowodować utratę danych. 
 - **Biblioteka zdjęć usługi iCloud**: ustaw tę opcję na pozycję **Blokuj**, aby wyłączyć możliwość używania biblioteki zdjęć usługi iCloud do przechowywania zdjęć i klipów wideo w chmurze. Wszystkie zdjęcia, które nie zostały w pełni pobrane z biblioteki zdjęć iCloud na urządzenie, są usuwane z urządzenia. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia używanie biblioteki zdjęć iCloud.
 - **Udostępniony strumień zdjęć**: wybierz pozycję **Blokuj**, aby wyłączyć funkcję **Udostępnianie zdjęć w usłudze iCloud** na urządzeniu. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia przesyłanie strumieniowe udostępnionych zdjęć.
 - **Handoff**: pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia użytkownikom kontynuowanie pracy rozpoczętej na urządzeniu z systemem iOS na innym urządzeniu z systemem iOS lub macOS. Pozycja **Blokuj** uniemożliwia użycie programu Handoff.
 
-### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ustawienia dotyczą: Automatyczne rejestrowanie urządzeń (nadzorowane)
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ustawienia mają zastosowanie do: Automatyczne rejestrowanie urządzeń (nadzorowane)
 
 - **Tworzenie kopii zapasowych w usłudze iCloud**: Pozycja **Nieskonfigurowane** (ustawienie domyślne) umożliwia użytkownikowi tworzenie kopii zapasowych urządzenia w usłudze iCloud. Pozycja **Blokuj** uniemożliwia użytkownikowi tworzenie kopii zapasowych urządzenia w usłudze iCloud.
 
@@ -561,7 +561,7 @@ Uwaga wymagana w przypadku roamingu danych (porada lub ważna uwaga ułatwiając
 
 Użyj tych ustawień w celu skonfigurowania urządzeń z systemem iOS, aby uruchamiać określone aplikacje w autonomicznym trybie pojedynczej aplikacji. Jeśli skonfigurowano ten tryb, a aplikacja zostanie uruchomiona, urządzenie zostanie zablokowane. Może ono uruchamiać wyłącznie tę aplikację. Na przykład dodaj aplikację, która umożliwia użytkownikom wykonywanie testów na urządzeniu. Po zakończeniu działań aplikacji lub usunięciu tych zasad urządzenie powraca do normalnego stanu.
 
-### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ustawienia dotyczą: Automatyczne rejestrowanie urządzeń (nadzorowane)
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ustawienia mają zastosowanie do: Automatyczne rejestrowanie urządzeń (nadzorowane)
 
 - **Nazwa aplikacji**: Wprowadź nazwę żądanej aplikacji.
 - **Identyfikator pakietu aplikacji**: Wprowadź [identyfikator pakietu](bundle-ids-built-in-ios-apps.md) żądanej aplikacji.
@@ -571,7 +571,7 @@ Możesz również **zaimportować** plik CSV zawierający listę nazw aplikacji 
 
 ## <a name="kiosk"></a>Kiosk
 
-### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ustawienia dotyczą: Automatyczne rejestrowanie urządzeń (nadzorowane)
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ustawienia mają zastosowanie do: Automatyczne rejestrowanie urządzeń (nadzorowane)
 
 - **Aplikacja do uruchamiania w trybie kiosku**: wybierz typ aplikacji, które chcesz uruchomić w trybie kiosku. Dostępne opcje:
   - **Nieskonfigurowane** (wartość domyślna): Ustawienia kiosku nie są stosowane. Urządzenie nie zostanie uruchomione w trybie kiosku.
@@ -582,7 +582,7 @@ Możesz również **zaimportować** plik CSV zawierający listę nazw aplikacji 
 - **Obsługa dotykowa z ułatwieniami**: pozycja **Wymagaj** wymusza ustawienie ułatwień dostępu Obsługa dotykowa z ułatwieniami na urządzeniu. Ta funkcja pomaga użytkownikom wykonywać na ekranie gesty, które mogą okazać się trudne. Pozycja **Nieskonfigurowane** nie uruchamia ani nie włącza tej funkcji w trybie kiosku.
 - **Odwróć kolory**: pozycja **Wymagaj** wymusza użycie ułatwień dostępu Odwróć kolory, co umożliwia użytkownikom niedowidzącym zmienianie ustawień ekranu. Pozycja **Nieskonfigurowane** nie uruchamia ani nie włącza tej funkcji w trybie kiosku.
 - **Dźwięk mono**: pozycja **Wymagaj** wymaga ustawienia ułatwienia dostępu Dźwięk mono na urządzeniu. Pozycja **Nieskonfigurowane** nie uruchamia ani nie włącza tej funkcji w trybie kiosku.
-- **Sterowanie głosem**: pozycja **Wymagaj** umożliwia użytkownikom sterowanie urządzeniem za pomocą głosu oraz zapewnia pełną kontrolę nad systemem operacyjnym przy użyciu poleceń Siri. Pozycja **Nieskonfigurowane** powoduje wyłączenie sterowania głosem na urządzeniu.
+- **Sterowanie głosowe**: pozycja **Wymagaj** umożliwia użytkownikom sterowanie urządzeniem za pomocą głosu oraz zapewnia pełną kontrolę nad systemem operacyjnym przy użyciu poleceń Siri. Pozycja **Nieskonfigurowane** powoduje wyłączenie sterowania głosem na urządzeniu.
 
   To ustawienie ma zastosowanie do:  
   - System iOS 13.0 i nowsze
@@ -617,13 +617,13 @@ Możesz również **zaimportować** plik CSV zawierający listę nazw aplikacji 
 
 ## <a name="domains"></a>Domains
 
-### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ustawienia dotyczą: Rejestrowanie urządzeń, Automatyczne rejestrowanie urządzeń (nadzorowane)
+### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ustawienia mają zastosowanie do: Rejestrowanie urządzeń, Automatyczne rejestrowanie urządzeń (nadzorowane)
 
 - **Nieoznaczone domeny poczty e-mail** > **Adres URL domeny poczty e-mail**: Dodaj do listy co najmniej jeden adres URL. Gdy użytkownicy końcowi otrzymają wiadomość e-mail z domeny innej niż wprowadzona, wiadomość e-mail zostanie oznaczona w aplikacji Mail dla systemu iOS jako niezaufana.
 
 - **Zarządzane domeny sieci Web** > **Adres URL domeny sieci Web**: dodaj do listy co najmniej jeden adres URL. Dokumenty pobierane z wprowadzonych domen są uznawane za zarządzane. To ustawienie ma zastosowanie wyłącznie do dokumentów pobieranych przy użyciu przeglądarki Safari.
 
-### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ustawienia dotyczą: Automatyczne rejestrowanie urządzeń (nadzorowane)
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ustawienia mają zastosowanie do: Automatyczne rejestrowanie urządzeń (nadzorowane)
 
 - **Domeny automatycznego wypełniania haseł w programie Safari** > **Adres URL domeny**: Dodaj do listy co najmniej jeden adres URL. Użytkownicy mogą zapisywać wyłącznie hasła witryn sieci Web dla adresów URL znajdujących się na tej liście. To ustawienie dotyczy wyłącznie przeglądarki Safari oraz urządzeń działających w trybie nadzorowanym. Jeśli nie podasz żadnych adresów URL, użytkownicy będą mogli zapisywać hasła ze wszystkich witryn internetowych.
 
@@ -636,7 +636,7 @@ Tryb nadzorowany systemu iOS można włączyć tylko podczas początkowego konfi
 
 - Blokada aplikacji (tryb jednej aplikacji) 
 - Globalny serwer proxy HTTP 
-- Obejście blokady aktywacji 
+- Wyłączanie blokady aktywacji 
 - Autonomiczny tryb jednej aplikacji 
 - Filtr zawartości internetowej 
 - Ustawianie tła i ekranu blokady 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 01/28/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81da5ca8e7eaa76f9a6705cc9e3c816234c461db
-ms.sourcegitcommit: af384c46ec8d8def6aa32c3b89947748dc6fd28f
-ms.translationtype: HT
+ms.openlocfilehash: 0dd1ecb5666b8bbb8b26a001be56372d86839f31
+ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76517562"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812327"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem Windows 10 (i nowszym) w celu zezwolenia na funkcje lub ich ograniczenia przy użyciu usługi Intune
 
@@ -39,8 +39,11 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 
 Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad ApplicationManagement](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement), który zawiera również listę obsługiwanych wersji systemu Windows.
 
-- **Sklep z aplikacjami** (tylko urządzenia przenośne): Ustawienie **Nie skonfigurowano** (domyślne) umożliwia użytkownikom końcowym uzyskiwanie dostępu do sklepu z aplikacjami na urządzeniach przenośnych. Ustawienie **Blokuj** uniemożliwia korzystanie ze sklepu z aplikacjami.
-- **Automatycznie aktualizuj aplikacje ze sklepu**: Ustawienie **Nie skonfigurowano** (domyślne) umożliwia automatyczne aktualizowanie zainstalowanych aplikacji pochodzących ze Sklepu Microsoft Store. Ustawienie **Blokuj** uniemożliwia automatyczne instalowanie aktualizacji.
+- **Sklep z aplikacjami** (tylko urządzenia przenośne): pozycja **Blokuj** uniemożliwia użytkownikom końcowym uzyskiwanie dostępu do sklepu z aplikacjami na urządzeniach przenośnych. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Domyślnie system operacyjny może zezwalać użytkownikom końcowym na dostęp do sklepu z aplikacjami.
+- **Automatycznie aktualizuj aplikacje ze sklepu**: pozycja **Blokuj** uniemożliwia automatyczne instalowanie aktualizacji ze sklepu Microsoft Store. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Domyślnie system operacyjny może zezwalać na automatyczne aktualizowanie zainstalowanych aplikacji pochodzących ze sklepu Microsoft Store.
+
+  [ApplicationManagement/AllowAppStoreAutoUpdate CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowappstoreautoupdate)
+
 - **Instalacja aplikacji zaufanej**: Wybierz, jeśli chcesz zezwolić na instalowanie aplikacji spoza Sklepu Microsoft Store, zwane także pobieraniem lokalnym. Pobieranie lokalne to instalowanie, a następnie uruchamianie lub testowanie aplikacji, która nie jest certyfikowana przez sklep Microsoft Store. Na przykład aplikacja, która jest aplikacją wewnętrzną wyłącznie w Twojej firmie. Dostępne opcje:
   - **Nieskonfigurowane** (wartość domyślna): Usługa Intune nie zmienia ani nie aktualizuje tego ustawienia.
   - **Blokuj**: Uniemożliwia ładowanie bezpośrednie. Nie można zainstalować aplikacji spoza sklepu Microsoft Store.
@@ -51,16 +54,36 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad ApplicationMana
   - **Zezwalaj**: Umożliwia korzystanie z trybu dewelopera i ładowania bezpośredniego aplikacji.
 
   Więcej informacji na temat tej funkcji znajdziesz w artykule [Konfigurowanie urządzenia pod kątem programowania](https://docs.microsoft.com/windows/uwp/get-started/enable-your-device-for-development).
+  
+  [ApplicationManagement/AllowAllTrustedApps CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowalltrustedapps)
 
-- **Współużytkowane dane aplikacji użytkownika**: Wybierz ustawienie **Zezwalaj**, aby udostępniać dane aplikacji różnym użytkownikom na tym samym urządzeniu oraz innym wystąpieniom tej aplikacji. Ustawienie **Nie skonfigurowano** (domyślne) uniemożliwia udostępnianie danych innym użytkownikom oraz innym wystąpieniom tej samej aplikacji.
-- **Używaj tylko sklepu prywatnego**: Ustawienie **Zezwalaj** zezwala tylko na pobieranie aplikacji ze sklepu prywatnego i nie zezwala na pobieranie aplikacji ze sklepu publicznego, w tym z katalogu sieci sprzedaży. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia pobieranie aplikacji ze sklepu prywatnego i sklepu publicznego.
-- **Uruchamianie aplikacji pochodzącej ze sklepu**: Ustawienie **Blokuj** pozwala wyłączyć wszystkie aplikacje, które zostały wcześniej zainstalowane na urządzeniu lub pobrane ze sklepu Microsoft Store. Ustawienie **Nie skonfigurowano** (domyślne) zezwala na otwieranie tych aplikacji.
-- **Instaluj dane aplikacji na woluminie systemowym**: Ustawienie **Blokuj** uniemożliwia aplikacjom przechowywanie danych na woluminie systemowym urządzenia. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia aplikacjom przechowywanie danych na woluminie dysku systemowego.
-- **Instaluj aplikacje na dysku systemowym**: Ustawienie **Blokuj** uniemożliwia instalowanie aplikacji na dysku systemowym urządzenia. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia instalowanie aplikacji na dysku systemowym.
-- **DVR z gry** (tylko dla komputerów stacjonarnych): Ustawienie **Blokuj** wyłącza nagrywanie i transmitowanie gier w systemie Windows. Ustawienie **Nie skonfigurowano** (domyślne) umożliwia nagrywanie i transmitowanie gier.
+- **Współużytkowane dane aplikacji użytkownika**: Wybierz ustawienie **Zezwalaj**, aby udostępniać dane aplikacji różnym użytkownikom na tym samym urządzeniu oraz innym wystąpieniom tej aplikacji. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Domyślnie system operacyjny może uniemożliwiać udostępnianie danych innym użytkownikom oraz innym wystąpieniom tej samej aplikacji.
+
+  [ApplicationManagement/AllowSharedUserAppData CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowshareduserappdata)
+
+- **Używaj tylko sklepu prywatnego**: Ustawienie **Zezwalaj** zezwala tylko na pobieranie aplikacji ze sklepu prywatnego i nie zezwala na pobieranie aplikacji ze sklepu publicznego, w tym z katalogu sieci sprzedaży. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Domyślnie system operacyjny może zezwalać na pobieranie aplikacji ze sklepu prywatnego i sklepu publicznego.
+
+  [ApplicationManagement/RequirePrivateStoreOnly CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-requireprivatestoreonly)
+
+- **Uruchamianie aplikacji pochodzącej ze sklepu**: Ustawienie **Blokuj** pozwala wyłączyć wszystkie aplikacje, które zostały wcześniej zainstalowane na urządzeniu lub pobrane ze sklepu Microsoft Store. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Domyślnie system operacyjny może zezwalać na otwieranie tych aplikacji.
+
+  [ApplicationManagement/DisableStoreOriginatedApps CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-disablestoreoriginatedapps)
+
+- **Instaluj dane aplikacji na woluminie systemowym**: Ustawienie **Blokuj** uniemożliwia aplikacjom przechowywanie danych na woluminie systemowym urządzenia. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Domyślnie system operacyjny może zezwalać aplikacjom na przechowywanie danych na woluminie dysku systemowego.
+
+  [ApplicationManagement/RestrictAppDataToSystemVolume CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-restrictappdatatosystemvolume)
+
+- **Instaluj aplikacje na dysku systemowym**: Ustawienie **Blokuj** uniemożliwia instalowanie aplikacji na dysku systemowym urządzenia. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Domyślnie system operacyjny może zezwalać na instalowanie aplikacji na dysku systemowym.
+
+  [ApplicationManagement/RestrictAppToSystemVolume CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-restrictapptosystemvolume)
+
+- **DVR z gry** (tylko dla komputerów stacjonarnych): Ustawienie **Blokuj** wyłącza nagrywanie i transmitowanie gier w systemie Windows. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Domyślnie system operacyjny może zezwalać na nagrywanie i transmitowanie gier.
+
+  [ApplicationManagement/AllowGameDVR CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowgamedvr)
+
 - **Aplikacje tylko ze sklepu**: To ustawienie określa środowisko użytkownika podczas instalacji aplikacji z miejsc innych niż sklep Microsoft Store. Dostępne opcje:
 
-  - **Nieskonfigurowane** (wartość domyślna): Umożliwia użytkownikom końcowym instalowanie aplikacji z miejsc innych niż sklep Microsoft Store, w tym aplikacji zdefiniowanych w innych ustawieniach zasad.  
+  - **Nieskonfigurowane** (wartość domyślna): Usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Domyślnie system operacyjny może zezwalać użytkownikom końcowym na instalowanie aplikacji z miejsc innych niż sklep Microsoft Store, w tym aplikacji zdefiniowanych w innych ustawieniach zasad.  
   - **Dowolne miejsce**: Wyłącza zalecenia dotyczące aplikacji i umożliwia użytkownikom instalowanie aplikacji z dowolnej lokalizacji.  
   - **Tylko sklep**: Wymusza, aby użytkownicy końcowi mogli instalować tylko aplikacje ze sklepu Microsoft Store.
   - **Zalecenia**: Podczas instalowania aplikacji z Internetu, która jest dostępna w sklepie Microsoft Store, użytkownicy zobaczą komunikat zalecający pobranie jej ze sklepu.  
@@ -68,11 +91,11 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad ApplicationMana
 
   [SmartScreen/EnableAppInstallControl CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enableappinstallcontrol)
 
-- **Kontrola użytkownika nad instalacjami**: Po wybraniu ustawienia **Nieskonfigurowane** (domyślnie) Instalator Windows uniemożliwia użytkownikom zmianę opcji instalacji, które są zwykle zastrzeżone dla administratorów systemu. Dotyczy to np. wejścia do katalogu w celu zainstalowania plików. **Zablokuj**: pozwala użytkownikom na zmianę tych opcji instalacji. Niektóre funkcje zabezpieczeń Instalatora Windows są pomijane.
+- **Kontrola użytkownika nad instalacjami**: pozycja **Blokuj** uniemożliwia użytkownikom zmianę opcji instalacji, które są zwykle zastrzeżone dla administratorów systemu. Dotyczy to np. wejścia do katalogu w celu zainstalowania plików. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Domyślnie Instalator Windows może uniemożliwiać użytkownikom zmianę tych opcji instalacji. Niektóre funkcje zabezpieczeń Instalatora Windows są pomijane.
 
   [Dostawca usługi konfiguracji ApplicationManagement/MSIAllowUserControlOverInstall](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-msiallowusercontroloverinstall)
 
-- **Instalowanie aplikacji z podniesionymi uprawnieniami**: Po wybraniu ustawienia **Nieskonfigurowane** (domyślnie) podczas instalowania programów, których nie wdraża ani nie udostępnia administrator systemu, system stosuje uprawnienia bieżącego użytkownika. **Zablokuj**: zezwala Instalatorowi Windows na użycie podniesionych uprawnień podczas instalowania dowolnego programu w systemie. Uprawnienia te są rozszerzone na wszystkie programy.
+- **Instalowanie aplikacji z podniesionymi uprawnieniami**: pozycja **Blokuj** zezwala Instalatorowi Windows na użycie podniesionych uprawnień podczas instalowania dowolnego programu w systemie. Uprawnienia te są rozszerzone na wszystkie programy. W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Domyślnie podczas instalowania programów, których nie wdraża ani nie udostępnia administrator systemu, system może stosować uprawnienia bieżącego użytkownika. 
 
   [Dostawca usługi konfiguracji ApplicationManagement/MSIAlwaysInstallWithElevatedPrivileges](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-msialwaysinstallwithelevatedprivileges)
 
@@ -232,7 +255,7 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad środowiska](ht
 
 - **Adres URL obrazu ekranu blokady (tylko komputery)** : Wprowadź adres URL obrazu w formacie JPG, JPEG lub PNG używany jako tapeta ekranu blokady systemu Windows. Na przykład wprowadź `https://contoso.com/image.png`. To ustawienie powoduje zablokowanie obrazu bez możliwości późniejszej zmiany.
 
-  [Personalization/LockScreenImageUrl CSP](https://docs.microsoft.com/en-us/windows/client-management/mdm/personalization-csp)
+  [Personalization/LockScreenImageUrl CSP](https://docs.microsoft.com/windows/client-management/mdm/personalization-csp)
 
 - **Konfigurowany przez użytkownika limit czasu ekranu (tylko urządzenia przenośne)** : Ustawienie **Zezwalaj** pozwala użytkownikowi na ustawianie czasu. Ustawienie **Nie skonfigurowano** (domyślne) nie zapewnia użytkownikom tej opcji.
 
@@ -851,7 +874,7 @@ Te ustawienia korzystają z [dostawcy usługi konfiguracji zasad usługi Defende
 
 - **Zgoda na przesyłanie próbek**: Obecnie to ustawienie nie ma żadnego wpływu. Nie używaj tego ustawienia. Może ono zostać usunięte w przyszłej wersji.
 
-- **Ochrona przy dostępie**: Ustawienie **Blokuj** uniemożliwia skanowanie plików, do których uzyskano dostęp lub które pobrano. Użytkownicy nie mogą włączyć tej opcji.
+- **Ochrona przy dostępie**: pozycja **Blokuj** uniemożliwia skanowanie plików, do których uzyskano dostęp lub które pobrano. Użytkownicy nie mogą włączyć tej opcji.
 
   W przypadku ustawienia **Nie skonfigurowano** (wartość domyślna) usługa Intune nie zmienia ani nie aktualizuje tego ustawienia. Jeśli zablokujesz to ustawienie, a następnie zmienisz je z powrotem na **Nie skonfigurowano**, usługa Intune pozostawi to ustawienie w stanie skonfigurowanym wcześniej przez system operacyjny. Domyślnie system operacyjny włącza tę funkcję i pozwala użytkownikom na jej zmianę.
 
