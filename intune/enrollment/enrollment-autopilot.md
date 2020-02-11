@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb98ee2974cefeebb90689207388d5fe9229dad2
-ms.sourcegitcommit: 52475fcd8d05d2f6b858d780ebb3d88eaadb0849
+ms.openlocfilehash: e9da7acfc34dbd25902fc6fb9617ba395216a9b3
+ms.sourcegitcommit: 24487f078349795922dc497c952e8358cf767a1a
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76036661"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76977805"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Rejestrowanie urządzeń z systemem Windows w usłudze Intune za pomocą rozwiązania Windows Autopilot  
 Rozwiązanie Windows Autopilot upraszcza rejestrowanie urządzeń w usłudze Intune. Tworzenie i konserwacja niestandardowych obrazów systemów operacyjnych zajmuje dużo czasu. Trzeba również poświęcić czas na stosowanie tych niestandardowych obrazów systemów operacyjnych na nowych urządzeniach w celu przygotowania ich do użycia przed przekazaniem użytkownikom końcowym. Dzięki usłudze Microsoft Intune i rozwiązaniu Autopilot można przekazać nowe urządzenia użytkownikom końcowym bez konieczności tworzenia, konserwowania i stosowania niestandardowych obrazów systemów operacyjnych do urządzeń. Jeśli do zarządzania urządzeniami z rozwiązaniem Autopilot używasz usługi Intune, możesz zarządzać zasadami, profilami, aplikacjami i innymi funkcjami po zarejestrowaniu tych urządzeń. Aby zapoznać się z korzyściami, scenariuszami i wymaganiami wstępnymi, zobacz [Przegląd rozwiązania Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -158,6 +158,13 @@ Po przekazaniu urządzenia z rozwiązaniem Autopilot można edytować pewne atry
 Alerty pokażą, ile urządzeń rozwiązania Autopilot nie ma profilów wdrażania rozwiązania Autopilot. Skorzystaj z informacji w alercie, aby utworzyć profile i przypisać je do nieprzypisanych urządzeń. Po kliknięciu alertu zostanie wyświetlona pełna lista urządzeń rozwiązania Windows Autopilot.
 
 Aby wyświetlić alerty dotyczące nieprzypisanych urządzeń, w [Centrum administracyjnym usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **Przegląd** > **Alerty dotyczące rejestracji** > **Nieprzypisane urządzenia**.  
+
+## <a name="autopilot-deployments-report"></a>Raport wdrożeń rozwiązania Autopilot
+Istnieje możliwość wyświetlenia szczegółowych informacji dla każdego urządzenia wdrożonego przy użyciu rozwiązania Windows Autopilot.
+Aby wyświetlić raport, przejdź do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **Monitorowanie** > **Wdrożenia rozwiązania Autopilot**.
+Dane są dostępne przez 30 dni po wdrożeniu.
+
+Ten raport jest w wersji zapoznawczej. Rekordy wdrażania urządzeń są obecnie wyzwalane tylko przez nowe zdarzenia rejestracji w usłudze Intune. Oznacza to, że wszystkie wdrożenia, które nie wyzwalają nowej rejestracji w usłudze Intune, nie zostaną pobrane przez ten raport. Obejmuje to wszelkie rodzaje resetowania, które utrzymują rejestrację, oraz część użytkownika dokładnego wdrażania rozwiązania Autopilot.
 
 ## <a name="assign-a-user-to-a-specific-autopilot-device"></a>Przypisywanie użytkownika do określonego urządzenia rozwiązania Autopilot
 

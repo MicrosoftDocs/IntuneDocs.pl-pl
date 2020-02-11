@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 Customer intent: As an Intune admin, I want to set up the Apple's corporate device enrollment features so that corporate devices can automatically enroll in Intune.
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 56b8ab9507acda8fc1145bd65c4438da838dd806
-ms.sourcegitcommit: fc4b38660129d615068f34ad4b96b900d73f7b53
+ms.openlocfilehash: f5599e7ea8c9a26c4624f98133db566fb07c89af
+ms.sourcegitcommit: 5178aec0244e023e73546f3d10f1a76eaf1f4a3e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74558169"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971782"
 ---
 # <a name="tutorial-use-apples-corporate-device-enrollment-features-in-apple-business-manager-abm-to-enroll-ios-devices-in-intune"></a>Samouczek: Użyj funkcji rejestracji urządzeń firmowych firmy Apple w usłudze Apple Business Manager (ABM) do rejestrowania urządzeń z systemem iOS w usłudze Intune
 Funkcje rejestracji urządzeń w usłudze Apple Business Manager ułatwiają rejestrowanie urządzeń. Usługa Intune obsługuje również starszy portal programu Device Enrollment Program (DEP) firmy Apple, ale zachęcamy, aby zacząć od zera za pomocą usługi Apple Business Manager. Za pomocą usługi Microsoft Intune i rejestracji urządzeń firmowych firmy Apple urządzenia są automatycznie bezpiecznie rejestrowane za pierwszym razem, gdy użytkownik włączy urządzenie. Umożliwia to dostarczanie urządzeń wielu użytkownikom bez konieczności indywidualnego konfigurowania każdego urządzenia. 
@@ -67,7 +67,7 @@ Użyj usługi ABM lub portalu DEP, aby utworzyć token rejestracji urządzenia. 
 
 8. W kroku **Choose Action** (Wybierz akcję) wybierz pozycję **Assign to Server** (Przypisz do serwera), wybierz &lt;nazwę serwera&gt; określoną dla usługi Microsoft Intune, a następnie kliknij przycisk **OK**. Portal firmy Apple przypisze wskazane urządzenia do funkcji zarządzania na serwerze Intune, a następnie wyświetli komunikat **Assignment Complete** (Przypisanie zostało ukończone).
 
-   W portalu firmy Apple wybierz pozycję **Deployment Programs** (Programy wdrażania) &gt; **Device Enrollment Program** &gt; **View Assignment History** (Wyświetl historię przypisania), aby wyświetlić listę urządzeń i ich przypisania do serwera MDM.
+   W portalu firmy Apple wybierz pozycję **Programy wdrażania** &gt; **Program wdrażania urządzenia** &gt; **Wyświetl historię przypisania**, aby wyświetlić listę urządzeń i ich przypisania do serwera MDM.
 
 9. W usłudze Intune w witrynie Azure Portal podaj identyfikator Apple ID do użytku w przyszłości.
 
@@ -90,7 +90,7 @@ Teraz, po zainstalowaniu tokenu, możesz utworzyć profil rejestracji dla należ
 
 5. Określ, czy chcesz, aby Twoje urządzenia rejestrowały się z **koligacją użytkownika**, czy bez niej. Koligacja użytkownika jest przeznaczona dla urządzeń, które będą używane przez określonych użytkowników. Jeśli użytkownicy będą chcieli używać Portalu firmy na przykład do instalowania aplikacji, wybierz polecenie **Zarejestruj z użyciem koligacji użytkowników**. Jeśli użytkownicy nie potrzebują Portalu firmy lub jeśli chcesz aprowizować urządzenie dla wielu użytkowników, wybierz polecenie **Zarejestruj bez koligacji użytkowników**.
 
-6. Jeśli wybierzesz opcję rejestracji z użyciem koligacji użytkowników, określ, czy chcesz przeprowadzać uwierzytelnianie za pomocą Portalu firmy, czy też asystenta ustawień firmy Apple. Jeśli chcesz używać uwierzytelniania Multi-Factor Authentication, zezwól użytkownikom na zmianę hasła podczas pierwszego logowania lub monituj użytkowników o zresetowanie ich wygasłych haseł podczas rejestracji oraz wybierz pozycję **Tak** w obszarze **Uwierzytelnianie za pomocą portalu firmy zamiast asystenta ustawień firmy Apple**. Jeśli odpowiada Ci korzystanie z dostarczanego przez firmę Apple podstawowego uwierzytelniania za pomocą protokołu HTTP i asystenta ustawień firmy Apple, wybierz pozycję **Nie**. Jeśli wybierzesz opcję **Tak** i chcesz, aby aplikacja Portal firmy była automatycznie aktualizowana na urządzeniach użytkowników końcowych, oddzielnie wdróż Portal firmy jako wymaganą aplikację dla użytkowników za pośrednictwem Volume Purchasing Program (VPP) firmy Apple.
+6. Jeśli wybierzesz opcję rejestracji z użyciem koligacji użytkowników, określ, czy chcesz przeprowadzać uwierzytelnianie za pomocą Portalu firmy, czy też asystenta ustawień firmy Apple. Jeśli chcesz używać uwierzytelniania Multi-Factor Authentication, zezwól użytkownikom na zmianę hasła podczas pierwszego logowania lub monituj użytkowników o zresetowanie ich wygasłych haseł podczas rejestracji oraz wybierz pozycję **Tak** w obszarze **Uwierzytelnianie za pomocą portalu firmy zamiast asystenta ustawień firmy Apple**. Jeśli odpowiada Ci korzystanie z dostarczanego przez firmę Apple podstawowego uwierzytelniania za pomocą protokołu HTTP i asystenta ustawień firmy Apple, wybierz pozycję **Nie**. Jeśli wybierzesz opcję **Tak** i chcesz, aby aplikacja Portal firmy była automatycznie aktualizowana na urządzeniach użytkowników końcowych, wdróż Portal firmy oddzielnie jako wymaganą aplikację dla użytkowników za pośrednictwem programu Volume Purchasing Program (VPP) firmy Apple.
 
 7. Jeśli wybierzesz rejestrację przy użyciu koligacji użytkownika i uwierzytelnianie za pomocą Portalu firmy, określ, czy chcesz zainstalować Portal firmy przy użyciu programu Volume Purchase Program (VPP) firmy Apple. Jeśli zainstalujesz Portal firmy przy użyciu tokenu programu VPP, użytkownik nie będzie musiał wprowadzać identyfikatora Apple ID i hasła, aby pobrać Portal firmy ze sklepu App Store podczas rejestracji. Wybierz pozycję **Użyj tokenu:** w obszarze **Instalowanie portalu firmy przy użyciu programu VPP**, aby wybrać token programu VPP, który ma dostępne bezpłatne licencje portalu firmy. Jeśli nie chcesz używać programu VPP do wdrażania Portalu firmy, wybierz pozycję **Nie używaj programu VPP** w obszarze **Instalowanie portalu firmy przy użyciu programu VPP**. 
 

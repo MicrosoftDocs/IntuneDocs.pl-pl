@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4246dab0cf22053d76fdd50f99de53e827332a23
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: 0dac0607fcaa92ebe65a7ddacc3cd91c63bf246e
+ms.sourcegitcommit: 5178aec0244e023e73546f3d10f1a76eaf1f4a3e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75547817"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971871"
 ---
 # <a name="set-enrollment-restrictions"></a>Ustawianie ograniczeń rejestracji
 
@@ -82,12 +82,13 @@ Ograniczenia domyślne są automatycznie zapewniane w przypadku ograniczeń reje
    > System Windows 10 nie udostępnia numeru wersji podczas rejestracji, więc jeśli na przykład wprowadzisz kompilację 10.0.17134.174, a urządzenie korzysta z kompilacji 10.0.17134.100, urządzenie zostanie zablokowane podczas rejestracji.
 
 6. W obszarze **Własność użytkownika** wybierz opcję **Zezwalaj** dla platform, na które chcesz zezwalać jako urządzenia będące własnością użytkowników.
-7. Wybierz przycisk **Dalej**, aby przejść do strony **Przypisania**.
-8. Wybierz opcję **Wybierz grupy do uwzględnienia**, a następnie użyj pola wyszukiwania, aby znaleźć grupy, które chcesz uwzględnić w tym ograniczeniu. Ograniczenie ma zastosowanie wyłącznie do grup, do których zostało przypisane. Jeśli nie przypiszesz ograniczenia do co najmniej jednej grupy, nie będzie mieć żadnego efektu. Następnie wybierz opcję **Wybierz**. 
+7. W obszarze **Producent urządzenia** wprowadź rozdzielaną przecinkami listę producentów, których chcesz zablokować.
+8. Wybierz przycisk **Dalej**, aby przejść do strony **Przypisania**.
+9. Wybierz opcję **Wybierz grupy do uwzględnienia**, a następnie użyj pola wyszukiwania, aby znaleźć grupy, które chcesz uwzględnić w tym ograniczeniu. Ograniczenie ma zastosowanie wyłącznie do grup, do których zostało przypisane. Jeśli nie przypiszesz ograniczenia do co najmniej jednej grupy, nie będzie mieć żadnego efektu. Następnie wybierz opcję **Wybierz**. 
     ![Zrzut ekranu wybierania ustawień platformy](./media/enrollment-restrictions-set/select-groups.png)
-9. Wybierz pozycję **Dalej**, aby przejść do strony **Recenzja i tworzenie**.
-10. Wybierz pozycję **Utwórz**, aby utworzyć ograniczenie.
-11. Nowe ograniczenie jest tworzone z priorytetem tuż nad ograniczeniami domyślnymi. Możesz [zmienić priorytet](#change-enrollment-restriction-priority).
+10. Wybierz pozycję **Dalej**, aby przejść do strony **Recenzja i tworzenie**.
+11. Wybierz pozycję **Utwórz**, aby utworzyć ograniczenie.
+12. Nowe ograniczenie jest tworzone z priorytetem tuż nad ograniczeniami domyślnymi. Możesz [zmienić priorytet](#change-enrollment-restriction-priority).
 
 
 ## <a name="create-a-device-limit-restriction"></a>Tworzenie ograniczenia limitu urządzeń

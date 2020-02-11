@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 501bfcbef0dd46f6021fc5db16cf3b9e2f2cd0c0
-ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
+ms.openlocfilehash: 24d0a8160d852a5a44f5df688b7e0bc230d56704
+ms.sourcegitcommit: c7c6be3833d9a63d43f31d598b555b49b33cf5cb
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75886011"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76966389"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Konfigurowanie infrastruktury do obsługi protokołu SCEP w usłudze Intune
 
@@ -378,6 +378,32 @@ Poniższe procedury mogą ułatwić konfigurowanie usługi rejestracji urządze�
 5. Gdy zostanie wyświetlony monit o certyfikat klienta dla łącznika certyfikatów, wybierz pozycję **Wybierz**, a następnie wybierz certyfikat **uwierzytelniania klienta** zainstalowany na serwerze usługi NDES w ramach kroku nr 3 procedury [Instalowanie i powiązanie certyfikatów na serwerze hostującym usługę NDES](#install-and-bind-certificates-on-the-server-that-hosts-ndes) we wcześniejszej części tego artykułu.
 
    Po wybraniu certyfikatu uwierzytelniania klienta nastąpi powrót do widoku **Certyfikat klienta dla łącznika certyfikatów w usłudze Microsoft Intune**. Mimo że wybrany certyfikat nie jest wyświetlany, wybierz pozycję **Dalej**, aby wyświetlić właściwości certyfikatu. Wybierz pozycję **Dalej**, a następnie pozycję **Zainstaluj**.
+
+> [!NOTE]
+> Następujące zmiany należy wprowadzić dla dzierżaw GCC High przed uruchomieniem łącznika certyfikatów usługi Intune.
+> 
+> Wprowadź zmiany w dwóch wymienionych poniżej plikach konfiguracyjnych, które zaktualizują punkty końcowe usługi dla środowiska GCC High. Zwróć uwagę, że te aktualizacje zmieniają sufiksy identyfikatorów URI z **.com** na **.us**. W sumie istnieją trzy aktualizacje identyfikatorów URI: dwie aktualizacje w pliku konfiguracji NDESConnectorUI.exe.config oraz jedna aktualizacja w pliku NDESConnector.exe.config.
+> 
+> - Nazwa pliku: <ścieżka_instalacji>\Microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe.config
+> 
+>   Przykład: (%programfiles%\Microsoft Intune\NDESConnectorUI\NDESConnectorUI.exe.config)
+>   ```
+>    <appSettings>
+>        <add key="SignInURL" value="https://portal.manage.microsoft.us/Home/ClientLogon"/>
+>        <add key="LocationServiceEndpoint" value="RestUserAuthLocationService/RestUserAuthLocationService/ServiceAddresses"/>
+>        <add key="AccountPortalURL" value="https://manage.microsoft.us"/>
+>    </appSettings>
+>   ```
+> 
+> - Nazwa pliku: <ścieżka_instalacji>\Microsoft Intune\NDESConnectorSvc\NDESConnector.exe.config
+>
+>   Przykład: (%programfiles%\Microsoft Intune\NDESConnectorSvc\NDESConnector.exe.config)
+>    ```
+>    <appSettings>
+>        <add key="BaseServiceAddress" value="https://manage.microsoft.us/" />
+>    ```
+>
+> Jeśli te zmiany nie zostaną wykonane, w dzierżawach GCC High wystąpi błąd: „Odmowa dostępu”. „Nie masz uprawnień do wyświetlenia tej strony”.
 
 6. Po zakończeniu działania kreatora, ale przed jego zamknięciem, kliknij pozycję **Uruchom interfejs użytkownika łącznika certyfikatów**.
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02c1508dd3eb9c8a8932c1504c6f4d0a53c5a0d5
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: dfa93bb758447c872d172ded7706fd7507a42f11
+ms.sourcegitcommit: c7c6be3833d9a63d43f31d598b555b49b33cf5cb
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75207387"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76966287"
 ---
 # <a name="us-government-endpoints-for-microsoft-intune"></a>Punkty końcowe dla instytucji rządowych USA w usłudze Microsoft Intune
 
@@ -61,7 +61,7 @@ Poniższe tabele zawierają listę portów i usług, do których uzyskuje dostę
 - ADRS: https:\//enterpriseregistration.microsoftonline.us
 
 ## <a name="windows-push-notification-services"></a>Usługi powiadomień WNS
-W przypadku urządzeń zarządzanych przez usługę Intune przy użyciu rozwiązania do zarządzania urządzeniami przenośnymi (MDM) usługi WNS są wymagane do wykonywania akcji dla urządzeń i innych natychmiastowych działań. Aby uzyskać więcej informacji, zobacz [Enterprise Firewall and Proxy Configurations to Support WNS Traffic (Konfiguracje zapory przedsiębiorstwa i serwera proxy pod kątem obsługi ruchu usług WNS)](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config)
+W przypadku urządzeń zarządzanych przez usługę Intune przy użyciu rozwiązania do zarządzania urządzeniami mobilnymi (MDM) usługi WNS są wymagane do wykonywania akcji dla urządzeń i innych natychmiastowych działań. Aby uzyskać więcej informacji, zobacz [Enterprise Firewall and Proxy Configurations to Support WNS Traffic (Konfiguracje zapory przedsiębiorstwa i serwera proxy pod kątem obsługi ruchu usług WNS)](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config)
 
 ## <a name="apple-device-network-information"></a>Informacje o sieci urządzeń firmy Apple
 
