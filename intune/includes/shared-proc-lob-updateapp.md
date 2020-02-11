@@ -1,17 +1,17 @@
 ---
-ms.openlocfilehash: 66abce3b3dd2adc645695c9aab5fe6729713bbdc
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 40462763aa010ccd788223690ec285eb02d1d11c
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71301802"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755134"
 ---
 
-1. Zaloguj się do [portalu Azure](https://portal.azure.com).  
-2. Wybierz pozycję **Wszystkie usługi** > **Intune**. Usługa Intune znajduje się w sekcji **Monitorowanie i zarządzanie**.  
-3. Wybierz pozycję **Aplikacje klienckie** > **Aplikacje**.
-4. Znajdź i wybierz swoją aplikację z listy aplikacji.  
-5. W bloku **Przegląd** wybierz pozycję **Właściwości**.  
-6. Wybierz pozycję **Plik pakietu aplikacji**.  
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz pozycję **Aplikacje** > **Wszystkie aplikacje**.
+3. Znajdź i wybierz swoją aplikację z listy aplikacji.  
+4. Wybierz pozycję **Właściwości** w obszarze **Zarządzanie** w okienku aplikacji.
+5. Wybierz pozycję **Edytuj** obok pozycji **Informacje o aplikacji**.  
+6. Kliknij wymieniony plik obok pozycji **Wybierz plik do zaktualizowania**. Zostanie wyświetlone okienko **Plik pakietu aplikacji**.
 7. Wybierz ikonę folderu i przejdź do lokalizacji zaktualizowanego pliku aplikacji. Wybierz pozycję **Open** (Otwórz). Informacje o aplikacji zostaną zaktualizowane o informacje o pakiecie.  
-8. Sprawdź, czy **wersja aplikacji** odzwierciedla zaktualizowany pakiet aplikacji.  
+8. Sprawdź, czy **wersja aplikacji** odzwierciedla zaktualizowany pakiet aplikacji.

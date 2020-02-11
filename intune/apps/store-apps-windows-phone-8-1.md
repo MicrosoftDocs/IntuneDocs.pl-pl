@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3168d517ebbb59dc9d6fe5a9c262ad8e1c909619
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: d43e0f913020e3e2e8b0ac463d5983447d7c1fa2
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563802"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76754953"
 ---
 # <a name="add-windows-phone-81-store-apps-to-microsoft-intune"></a>Dodawanie aplikacji ze sklepu z aplikacjami dla systemu Windows Phone 8.1 do usługi Microsoft Intune
 
@@ -35,23 +35,33 @@ Przed przypisaniem aplikacji do urządzenia lub grupy użytkowników należy naj
 Możesz dodawać aplikacje ze sklepu z aplikacjami dla systemu Windows Phone 8.1 do usługi Intune w witrynie Azure Portal, wykonując następujące czynności:
 
 1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Wybierz kolejno pozycje **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**.
-3. W okienku **Dodaj aplikację** w obszarze **Typ aplikacji** wybierz pozycję **Windows Phone 8.1** i wybierz pozycję **Informacje o aplikacji**.
-4. W okienku **Informacje o aplikacji** dodaj informacje dotyczące aplikacji. W zależności od wybranej aplikacji niektóre wartości w tym okienku mogą zostać wypełnione automatycznie:
+2. Wybierz pozycję **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**.
+3. W okienku **Wybierz typ aplikacji** w obszarze dostępnych typów **Aplikacja ze sklepu** wybierz pozycję **Aplikacja ze sklepu dla systemu Windows Phone 8.1**.
+4. Kliknij pozycję **Wybierz**.<br>
+   Zostaną wyświetlone kroki **dodawania aplikacji**.
+5. Aby skonfigurować **informacje o aplikacji** dotyczące aplikacji ze sklepu dla systemu Windows Phone 8.1, przejdź do [sklepu Google Play](https://www.microsoft.com/store/apps/windows-phone) i wyszukaj aplikację, którą chcesz wdrożyć. Wyświetl stronę aplikacji i zanotuj jej szczegóły. 
+6. Na stronie **Informacje o aplikacji** dodaj szczegóły aplikacji:
     - **Nazwa**: wprowadź nazwę aplikacji, która ma być wyświetlana w Portalu firmy. Upewnij się, że każda używana nazwa aplikacji jest unikatowa. Jeśli nazwa aplikacji będzie zduplikowana, użytkownicy zobaczą tylko jedną nazwę w Portalu firmy.
     - **Opis**: Wprowadź opis aplikacji. Ten opis jest wyświetlany użytkownikom Portalu firmy.
     - **Wydawca**: Wprowadź nazwę wydawcy aplikacji.
     - **Adres URL sklepu App Store**: wpisz adres URL sklepu App Store dla aplikacji, którą chcesz utworzyć.
     - **Kategoria**: opcjonalnie wybierz co najmniej jedną wbudowaną lub utworzoną przez siebie kategorię aplikacji. Ułatwi to użytkownikom znajdowanie aplikacji podczas przeglądania Portalu firmy.
-    - **Wyświetl jako polecaną aplikację w Portalu firmy**: wybierz tę opcję, aby wyświetlić pakiet aplikacji w dobrze widocznym miejscu na stronie głównej portalu firmy podczas przeglądania aplikacji przez użytkowników.
+    - **Pokaż jako polecaną aplikację w Portalu firmy**: wybierz tę opcję, aby wyświetlić pakiet aplikacji w dobrze widocznym miejscu na stronie głównej portalu firmy podczas przeglądania aplikacji przez użytkowników.
     - **Adres URL informacji**: Opcjonalnie wprowadź adres URL witryny sieci Web zawierającej informacje o tej aplikacji. Adres będzie widoczny dla użytkowników Portalu firmy.
     - **Adres URL zasad ochrony prywatności**: Opcjonalnie wprowadź adres URL witryny sieci Web zawierającej informacje dotyczące zasad ochrony prywatności w tej aplikacji. Adres będzie widoczny dla użytkowników Portalu firmy.
     - **Deweloper**: opcjonalnie wprowadź nazwę dewelopera aplikacji.
     - **Właściciel**: opcjonalnie wprowadź nazwę właściciela aplikacji, na przykład *Dział kadr*.
     - **Uwagi**: opcjonalnie wprowadź wszelkie uwagi, które chcesz skojarzyć z tą aplikacją.
     - **Logo**: opcjonalnie przekaż ikonę, która zostanie skojarzona z aplikacją. Będzie ona wyświetlana jako ikona aplikacji podczas przeglądania Portalu firmy.
-5. Wybierz przycisk **OK**.
-6. Wybierz pozycję **Dodaj**.
+7. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Tagi zakresu**.
+8. Kliknij pozycję **Wybierz tagi zakresu**, aby opcjonalnie dodać tagi zakresu dla aplikacji. Aby uzyskać więcej informacji, zobacz temat [Używanie kontroli dostępu opartej na rolach i tagów zakresu w rozproszonej infrastrukturze informatycznej](~/fundamentals/scope-tags.md).
+9. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Przypisania**.
+10. Wybierz przypisania grupy dla aplikacji. Aby uzyskać więcej informacji, zobacz temat [Dodawanie grup w celu organizowania użytkowników i urządzeń](~/fundamentals/groups-add.md). 
+11. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Recenzja i tworzenie**. Przejrzyj wartości i ustawienia wprowadzone dla aplikacji.
+12. Gdy skończysz, kliknij pozycję **Utwórz**, aby dodać aplikację do usługi Intune.
+
+Zostanie wyświetlony blok **Omówienie** dotyczący utworzonej aplikacji.
+
 
 Utworzona aplikacja będzie wyświetlana na liście aplikacji, z której można ją przypisać do wybranych grup.
 

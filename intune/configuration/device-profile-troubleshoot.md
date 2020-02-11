@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 01/28/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 95186e4d1e54737ffeaa5e4c9728d188c2f867d6
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 881d0f095d2144ae42db4825336275980a19f419
+ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206639"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812362"
 ---
 # <a name="common-questions-issues-and-resolutions-with-device-policies-and-profiles-in-microsoft-intune"></a>Typowe pytania, problemy i rozwiązania związane z zasadami i profilami urządzeń w usłudze Microsoft Intune
-
-
 
 Uzyskaj odpowiedzi na pytania często zadawane podczas pracy z zasadami i profilami urządzeń w usłudze Intune. Ten artykuł zawiera także listę interwałów czasu zaewidencjonowania, dalsze szczegóły dotyczące konfliktów i inne informacje.
 
@@ -83,6 +81,8 @@ Istnieją różne akcje wyzwalające powiadomienie, takie jak przypisanie (lub c
 Urządzenia są zaewidencjonowywane przy użyciu usługi Intune po otrzymaniu powiadomienia z poleceniem zaewidencjonowania lub podczas zaplanowanego zaewidencjonowania. Jeśli akcja, taka jak blokowanie, resetowanie kodu dostępu, przypisywanie aplikacji, profilu lub zasad, została rozpoczęta dla określonego urządzenia lub użytkownika, usługa Intune natychmiast powiadamia urządzenie o konieczności jego zaewidencjonowania w celu odebrania tych aktualizacji.
 
 Inne zmiany, takie jak zmiana informacji kontaktowych w aplikacji Portal firmy, nie powodują natychmiastowego wysłania powiadomienia do urządzeń.
+
+Ustawienia zasad lub profilu są stosowane podczas każdego zaewidencjonowania. Pomocnym zasobem może być [wpis w blogu dotyczący odświeżania zasad oprogramowania MDM w systemie Windows 10](https://www.petervanderwoude.nl/post/windows-10-mdm-policy-refresh/).
 
 ## <a name="if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-gets-applied"></a>Jeśli do tego samego użytkownika lub urządzenia przypisano wiele zasad, jak mogę zidentyfikować ustawienia do zastosowania?
 

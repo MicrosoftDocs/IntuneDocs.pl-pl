@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 800193921e608a0d0c29dad5cf85b8781e715441
-ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
+ms.openlocfilehash: 8c9dc1d95806bcddf423bb4d92dbdf4961c15809
+ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75885807"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812474"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Zasady konfiguracji aplikacji usługi Microsoft Intune
 
@@ -95,8 +95,8 @@ Zasady konfiguracji aplikacji można zweryfikować przy użyciu następujących 
 
 Konfigurację systemu iOS można zweryfikować za pomocą **dziennika diagnostycznego usługi Intune** na urządzeniach niezarządzanych w celu skonfigurowania aplikacji zarządzanych. Oprócz poniższych kroków można uzyskać dostęp do dzienników zarządzanych aplikacji przy użyciu przeglądarki Microsoft Edge. Aby uzyskać więcej informacji, zobacz [Używanie przeglądarki Microsoft Edge w systemie iOS do uzyskiwania dostępu do dzienników aplikacji zarządzanych](~/apps/manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs).
 
-1. Jeśli program **Intune Managed Browser** nie został jeszcze zainstalowany na urządzeniu, pobierz go ze sklepu App Store i zainstaluj. Aby uzyskać więcej informacji, zobacz [Chronione aplikacje w usłudze Microsoft Intune](apps-supported-intune-apps.md).
-2. Uruchom program **Intune Managed Browser** i wybierz pozycję **about** > **intunehelp** na pasku nawigacyjnym.
+1. Jeśli przeglądarka **Microsoft Edge** nie została jeszcze zainstalowana na urządzeniu, pobierz ją ze sklepu App Store i zainstaluj. Aby uzyskać więcej informacji, zobacz [Chronione aplikacje w usłudze Microsoft Intune](apps-supported-intune-apps.md).
+2. Uruchom przeglądarkę **Microsoft Edge** i wybierz pozycję **about** > **intunehelp** na pasku nawigacyjnym.
 3. Kliknij pozycję **Rozpocznij**.
 4. Kliknij pozycję **Udostępnij dzienniki**.
 5. Użyj wybranej aplikacji poczty, aby wysłać do siebie dziennik i umożliwić przeglądanie go na komputerze. 
@@ -139,8 +139,8 @@ Szczegóły konfiguracji aplikacji powinny być zgodne z zasadami konfiguracji a
 
 Konfigurację systemu iOS można zweryfikować za pomocą **dziennika diagnostycznego usługi Intune** na urządzeniach zarządzanych w celu skonfigurowania aplikacji zarządzanych.
 
-1. Jeśli program **Intune Managed Browser** nie został jeszcze zainstalowany na urządzeniu, pobierz go ze sklepu App Store i zainstaluj. Aby uzyskać więcej informacji, zobacz [Chronione aplikacje w usłudze Microsoft Intune](apps-supported-intune-apps.md).
-2. Uruchom program **Intune Managed Browser** i wybierz pozycję **about** > **intunehelp** na pasku nawigacyjnym.
+1. Jeśli przeglądarka **Microsoft Edge** nie została jeszcze zainstalowana na urządzeniu, pobierz ją ze sklepu App Store i zainstaluj. Aby uzyskać więcej informacji, zobacz [Chronione aplikacje w usłudze Microsoft Intune](apps-supported-intune-apps.md).
+2. Uruchom przeglądarkę **Microsoft Edge** i wybierz pozycję **about** > **intunehelp** na pasku nawigacyjnym.
 3. Kliknij pozycję **Rozpocznij**.
 4. Kliknij pozycję **Udostępnij dzienniki**.
 5. Użyj wybranej aplikacji poczty, aby wysłać do siebie dziennik i umożliwić przeglądanie go na komputerze. 

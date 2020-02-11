@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 68e2e768067a88b8ae58adeb38c17d90ac995a30
-ms.sourcegitcommit: b752acefec077c719e169e665c955adb944e85c6
+ms.openlocfilehash: 90cdff66d32ac5edb3b1867a545f2c9627ccfe39
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74781230"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76754783"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>Dodawanie aplikacji internetowych do usługi Microsoft Intune
 
@@ -45,10 +45,10 @@ Usługa Intune tworzy skrót do aplikacji internetowej na urządzeniu użytkowni
 Aby dodać aplikację do usługi Intune jako skrót do aplikacji w Internecie, wykonaj następujące czynności:
 
 1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Wybierz kolejno pozycje **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**.
-3. W okienku **Dodaj aplikację** wybierz typ **Link internetowy** z listy rozwijanej **Typ aplikacji**.
-4. Wybierz pozycję **Konfiguruj**.
-5. W okienku **Informacje o aplikacji** dodaj następujące informacje:
+2. Wybierz pozycję **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**.
+3. W okienku **Wybierz typ aplikacji** w obszarze dostępnych typów **Inne** wybierz pozycję **Link internetowy**.
+4. Kliknij pozycję **Wybierz**. Zostaną wyświetlone kroki **dodawania aplikacji**.
+5. Na stronie **Informacje o aplikacji** dodaj następujące informacje:
     - **Nazwa**:  wprowadź nazwę aplikacji, która ma być wyświetlana w Portalu firmy. 
 
         > [!NOTE]
@@ -58,11 +58,17 @@ Aby dodać aplikację do usługi Intune jako skrót do aplikacji w Internecie, w
     - **Wydawca**: wprowadź nazwę wydawcy tej aplikacji.
     - **Adres URL aplikacji**: wprowadź adres URL witryny hostującej aplikację, którą chcesz przypisać.
     - **Kategoria**: opcjonalnie wybierz co najmniej jedną wbudowaną lub utworzoną przez siebie kategorię aplikacji. Ułatwi to użytkownikom znajdowanie aplikacji podczas przeglądania Portalu firmy.
-    - **Wyświetl jako polecaną aplikację w Portalu firmy**: wybierz tę opcję, aby wyświetlić pakiet aplikacji w dobrze widocznym miejscu na stronie głównej portalu firmy podczas przeglądania aplikacji przez użytkowników.
+    - **Pokaż jako polecaną aplikację w Portalu firmy**: wybierz tę opcję, aby wyświetlić pakiet aplikacji w dobrze widocznym miejscu na stronie głównej portalu firmy podczas przeglądania aplikacji przez użytkowników.
     - **Wymagaj zarządzanej przeglądarki do otworzenia tego linku**: wybierz tę opcję, aby przypisać do użytkowników link do witryny lub aplikacji internetowej, który będą mogli otworzyć w przeglądarce Intune Managed Browser. Ten program musi być zainstalowany na urządzeniu.
     - **Logo**: Przekaż ikonę, która zostanie skojarzona z aplikacją. Będzie ona wyświetlana jako ikona aplikacji podczas przeglądania Portalu firmy.
-6. Wybierz przycisk **OK**.
-7. W okienku **Dodaj aplikację** wybierz pozycję **Dodaj**.
+6. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Tagi zakresu**.
+7. Kliknij pozycję **Wybierz tagi zakresu**, aby opcjonalnie dodać tagi zakresu dla aplikacji. Aby uzyskać więcej informacji, zobacz temat [Używanie kontroli dostępu opartej na rolach i tagów zakresu w rozproszonej infrastrukturze informatycznej](~/fundamentals/scope-tags.md).
+8. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Przypisania**.
+9. Wybierz przypisania grupy dla aplikacji. Aby uzyskać więcej informacji, zobacz temat [Dodawanie grup w celu organizowania użytkowników i urządzeń](~/fundamentals/groups-add.md). 
+10. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Recenzja i tworzenie**. Przejrzyj wartości i ustawienia wprowadzone dla aplikacji.
+11. Gdy skończysz, kliknij pozycję **Utwórz**, aby dodać aplikację do usługi Intune.
+
+    Zostanie wyświetlony blok **Omówienie** dotyczący utworzonej aplikacji.
 
 > [!Note]
 > Obecnie wdrożenie aplikacji internetowych usługi Intune na urządzeniach z systemem iOS jest skojarzone z profilem zarządzania i nie można usunąć go ręcznie. Typ wdrożenia można zmienić na **Odinstaluj** w portalu usługi Intune. Po wykonaniu tej czynności będzie można automatycznie usuwać aplikację internetową. Jednak w przypadku usunięcia wdrożenia przed zmianą intencji przypisywania aplikacji na **Odinstaluj** aplikacja internetowa zostanie trwale umieszczona na urządzeniu do momentu wyrejestrowania go z usługi Intune.

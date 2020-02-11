@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 01ca17c9f8e3fd86e12f225621e6dc0e07bb4acb
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 3cf4c2abb5506f297af8a4e77145abea5360381b
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564079"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755361"
 ---
 # <a name="assign-office-365-to-macos-devices-with-microsoft-intune"></a>Przypisywanie usługi Office 365 do urządzeń z systemem macOS za pomocą usługi Microsoft Intune
 
@@ -38,47 +38,52 @@ Przed rozpoczęciem dodawania usługi Office 365 na urządzeniach z systemem mac
 - Usługa Intune obsługuje dodawanie tylko aplikacji pakietu Office zawartych w pakiecie Office 2016 dla komputerów Mac.
 - Jeśli jakiekolwiek aplikacje pakietu Office są otwarte, gdy usługa Intune instaluje pakiet aplikacji, użytkownicy mogą utracić dane z niezapisanych plików.
 
-## <a name="create-and-configure-the-app-suite"></a>Tworzenie i konfigurowanie pakietu aplikacji
+## <a name="select-the-office-365-suite-app-type"></a>Wybieranie typu aplikacji pakietu Office 365
 
-Dodaj usługę Office 365 z okienka **Aplikacje**.
 1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Wybierz kolejno pozycje **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**.
-3. Na liście **Typ aplikacji** w grupie **Pakiet Office 365**wybierz pozycję **macOS**.
-4. Aby uzyskać informacje na temat pakietu aplikacji, wybierz pozycję **Informacje o pakiecie aplikacji**.  
-    Te informacje pomagają zidentyfikować pakiet aplikacji w usłudze Intune i ułatwiają użytkownikom wyszukiwanie tego pakietu w portalu firmy.
-5. Wprowadź następujące informacje:
+2. Wybierz pozycję **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**.
+3. Wybierz pozycję **macOS** w sekcji **Pakiet Office 365** okienka **Wybierz typ aplikacji**.
+4. Kliknij pozycję **Wybierz**. Zostaną wyświetlone kroki **dodawania pakietu Office 365**.
+
+## <a name="step-1---app-suite-information"></a>Krok 1. Informacje o pakiecie aplikacji
+
+W tym kroku podajesz informacje o pakiecie aplikacji. Te informacje pomagają zidentyfikować pakiet aplikacji w usłudze Intune i ułatwiają użytkownikom wyszukiwanie tego pakietu w portalu firmy.
+
+1. Na stronie **informacji o pakiecie aplikacji** możesz potwierdzić lub zmodyfikować wartości domyślne:
     - **Nazwa pakietu**: wprowadź nazwę pakietu aplikacji wyświetlaną w portalu firmy. Upewnij się, że wszystkie używane nazwy pakietów są unikatowe. Jeśli dana nazwa pakietu aplikacji występuje dwa razy, użytkownicy portalu firmy będą widzieć tylko jedną z aplikacji o tej nazwie.
-    - **Opis pakietu**: wprowadź opis pakietu aplikacji.
+    - **Opis pakietu**: wprowadź opis pakietu aplikacji. Możesz na przykład podać listę aplikacji wybranych do uwzględnienia.
     - **Wydawca**: w roli wydawcy występuje firma Microsoft.
-    - **Kategoria**: Wybierz co najmniej jedną wbudowaną lub utworzoną przez siebie kategorię aplikacji. To ustawienie ułatwi użytkownikom znajdowanie pakietu aplikacji podczas przeglądania portalu firmy.
-    - **Wyświetl jako polecaną aplikację w Portalu firmy**: wybierz tę opcję, aby wyświetlić pakiet aplikacji w dobrze widocznym miejscu na stronie głównej portalu firmy podczas przeglądania aplikacji przez użytkowników.
+    - **Kategoria**: opcjonalnie wybierz co najmniej jedną wbudowaną lub utworzoną przez siebie kategorię aplikacji. To ustawienie ułatwi użytkownikom znajdowanie pakietu aplikacji podczas przeglądania portalu firmy.
+    - **Pokaż jako polecaną aplikację w Portalu firmy**: wybierz tę opcję, aby wyświetlić pakiet aplikacji w dobrze widocznym miejscu na stronie głównej portalu firmy podczas przeglądania aplikacji przez użytkowników.
     - **Adres URL informacji**: Opcjonalnie wprowadź adres URL witryny sieci Web zawierającej informacje o tej aplikacji. Adres będzie widoczny dla użytkowników Portalu firmy.
     - **Adres URL zasad ochrony prywatności**: Opcjonalnie wprowadź adres URL witryny sieci Web zawierającej informacje dotyczące zasad ochrony prywatności w tej aplikacji. Adres będzie widoczny dla użytkowników Portalu firmy.
     - **Deweloper**: w roli dewelopera występuje firma Microsoft.
     - **Właściciel**: w roli właściciela występuje firma Microsoft.
-    - **Uwagi**: opcjonalnie wprowadź wszelkie uwagi, które chcesz skojarzyć z tą aplikacją.
+    - **Uwagi**: wprowadź wszelkie uwagi, które chcesz skojarzyć z tą aplikacją.
     - **Logo**: logo usługi Office 365 jest wyświetlane razem z nazwą aplikacji podczas przeglądania portalu firmy.
-6. Wybierz przycisk **OK**.
-7. W okienku **Dodaj aplikację** wybierz pozycję **Dodaj**.  
-    Pakiet zostanie wyświetlony na liście aplikacji jako pojedynczy wpis.
+2. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Tagi zakresu**.
 
-## <a name="configure-app-assignments"></a>Konfigurowanie przypisań aplikacji
+## <a name="step-2---select-scope-tags-optional"></a>Krok 2. Wybieranie tagów zakresu (opcjonalnie)
+Za pomocą tagów zakresu można określić, kto będzie mógł wyświetlać informacje o aplikacji klienckiej w usłudze Intune. Więcej informacji o tagach zakresu zawiera artykuł [Używanie kontroli dostępu opartej na rolach i tagów zakresu w rozproszonej infrastrukturze informatycznej](../fundamentals/scope-tags.md).
 
-W tym kroku skonfigurujesz przypisania pakietu aplikacji. 
+1. Kliknij pozycję **Wybierz tagi zakresu**, aby opcjonalnie dodać tagi zakresu dla pakietu aplikacji. 
+2. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Przypisania**.
 
-1. Na liście aplikacji wybierz pakiet aplikacji**Office 365**, aby wyświetlić okienko omówienia usługi **Office 365**.
-2. W okienku **Office 365** wybierz pozycję **Przypisania**.
-3. Aby dodać grupę, która będzie używać pakietu aplikacji, wybierz pozycję **Dodaj grupę**.  
-    Zostanie wyświetlone okienko **Dodawanie grupy**.
-4. Ustaw dla pozycji **Typ przypisania** wartość **Wymagane** lub **Dostępne**.
-5. Przypisz pakiet do wybranych grup. Aby uzyskać więcej informacji, zobacz [Przypisywanie aplikacji do grup w usłudze Microsoft Intune](apps-deploy.md).
+## <a name="step-3---assignments"></a>Krok 3. Przypisania
+
+1. Wybierz przypisania grupy **Wymagane** lub **Dostępne dla zarejestrowanych urządzeń** dla pakietu aplikacji. Aby uzyskać więcej informacji, zobacz temat [Dodawanie grup w celu organizowania użytkowników i urządzeń](~/fundamentals/groups-add.md) i [Przypisywanie aplikacji do grup przy użyciu usługi Microsoft Intune](apps-deploy.md).
 
     >[!Note]
-    > Nie można odinstalować pakietu aplikacji usługi Office 365 za pomocą usługi Intune.
+    > Nie można odinstalować pakietu aplikacji usługi Office 365 dla systemu macOS za pomocą usługi Intune.
 
-5. W okienku **Przypisywanie** wybierz przycisk **OK**.
-6. W okienku **Dodawanie grupy** wybierz przycisk **OK**.
-7. Aby zatwierdzić swoje przypisania, wybierz przycisk **Zapisz**.
+2. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Recenzja i tworzenie**. 
+
+## <a name="step-4---review--create"></a>Krok 4. Przegląd + tworzenie
+
+1. Przejrzyj wartości i ustawienia wprowadzone dla pakietu aplikacji.
+2. Gdy skończysz, kliknij pozycję **Utwórz**, aby dodać aplikację do usługi Intune.
+
+    Zostanie wyświetlony blok **Omówienie** dotyczący utworzonego pakietu aplikacji systemu Windows 10 dla usługi Office 365. Pakiet zostanie wyświetlony na liście aplikacji jako pojedynczy wpis.
 
 ## <a name="next-steps"></a>Następne kroki
 

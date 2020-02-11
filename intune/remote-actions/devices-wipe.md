@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d9fbbbb80cf25861b2e0afbf3d01cfca3ece5fd
-ms.sourcegitcommit: df8e2c052fafb2d5d4e9b4fcd831ae0ecf7f8d16
+ms.openlocfilehash: 7cda7404d24ccb9bb1c42d6bb66d77f29ac925ac
+ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991763"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812457"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Usuwanie urządzeń przy użyciu czyszczenia, wycofywania lub ręcznego wyrejestrowywania urządzenia
 
@@ -88,7 +88,7 @@ W poniższych tabelach opisano usuwane dane oraz wpływ akcji **Wycofaj** na dan
 
 |Typ danych|iOS|
 |-------------|-------|
-|Aplikacje firmowe i skojarzone dane zainstalowane za pomocą usługi Intune|**Aplikacje zainstalowane za pomocą aplikacji Portal firmy:** W przypadku aplikacji przypiętych do profilu zarządzania usuwane są wszystkie aplikacje i dane aplikacji. Te aplikacje to aplikacje zainstalowane pierwotnie ze sklepu App Store i zarządzane później jako aplikacje firmowe. <br /><br /> **Aplikacje firmy Microsoft używające funkcji zarządzania aplikacjami mobilnymi i zainstalowane ze sklepu App Store:** W przypadku aplikacji, które nie są zarządzane za pomocą aplikacji Portal firmy, usuwane są dane aplikacji firmowych, które są chronione za pomocą szyfrowania zarządzania aplikacjami mobilnymi (MAM) w lokalnym magazynie aplikacji. Dane chronione przez szyfrowanie MAM poza aplikacją pozostają zaszyfrowane i nie można ich używać, ale nie są usuwane. Dane aplikacji osobistych i aplikacje nie są usuwane.|
+|Aplikacje firmowe i skojarzone dane zainstalowane za pomocą usługi Intune|**Aplikacje zainstalowane za pomocą aplikacji Portal firmy:** W przypadku aplikacji przypiętych do profilu zarządzania usuwane są wszystkie aplikacje i dane aplikacji. Te aplikacje obejmują aplikacje oryginalnie zainstalowane ze sklepu App Store i później zarządzane jako aplikacje firmowe, chyba że aplikacja nie została skonfigurowana do odinstalowania po usunięciu urządzenia. <br /><br /> **Aplikacje firmy Microsoft używające funkcji zarządzania aplikacjami mobilnymi i zainstalowane ze sklepu App Store:** W przypadku aplikacji, które nie są zarządzane za pomocą aplikacji Portal firmy, usuwane są dane aplikacji firmowych, które są chronione za pomocą szyfrowania zarządzania aplikacjami mobilnymi (MAM) w lokalnym magazynie aplikacji. Dane chronione przez szyfrowanie MAM poza aplikacją pozostają zaszyfrowane i nie można ich używać, ale nie są usuwane. Dane aplikacji osobistych i aplikacje nie są usuwane.|
 |Ustawienia|Konfiguracje, które były ustawione przez zasady usługi Intune, nie są już wymuszane. Użytkownicy mogą zmieniać ustawienia.|
 |Ustawienia profili sieci Wi-Fi i sieci VPN|Usuwane.|
 |Ustawienia profili certyfikatów|Certyfikaty zostaną usunięte i odwołane.|
@@ -134,7 +134,7 @@ Urządzenia kiosku możesz tylko wyczyścić. Nie możesz wycofywać urządzeń 
 
 ### <a name="windows"></a>Windows
 
-|Typ danych|Windows 8.1 (MDM) i Windows RT 8.1|Windows RT|Windows Phone 8.1 i Windows Phone 8|Windows 10|
+|Typ danych|Windows 8.1 (MDM) i Windows RT 8.1|Windows RT|Windows Phone 8.1 i Windows Phone 8|Windows 10|
 |-------------|----------------------------------------------------------------|--------------|-----------------------------------------|--------|
 |Aplikacje firmowe i skojarzone dane zainstalowane za pomocą usługi Intune|Klucze dla plików chronionych przez system szyfrowania plików są odwoływane. Użytkownik nie może otworzyć plików.|Aplikacje firmowe nie są usuwane.|Aplikacje zainstalowane pierwotnie za pośrednictwem portalu firmy są odinstalowywane. Dane aplikacji firmowych zostaną usunięte.|Aplikacje zostaną odinstalowane. Klucze ładowania bezpośredniego są usuwane.<br>W przypadku systemu Windows 10 w wersji 1703 (aktualizacja dla twórców) lub nowszej aplikacje usługi Office 365 ProPlus nie są usuwane. Aplikacje Win32 zainstalowane za pomocą rozszerzenia do zarządzania usługi Intune nie zostaną odinstalowane na wyrejestrowanych urządzeniach. Administratorzy mogą korzystać z wykluczania przypisania, aby nie oferować aplikacji Win32 na urządzeniach BYOD.|
 |Ustawienia|Konfiguracje, które były ustawione przez zasady usługi Intune, nie są już wymuszane. Użytkownicy mogą zmieniać ustawienia.|Konfiguracje, które były ustawione przez zasady usługi Intune, nie są już wymuszane. Użytkownicy mogą zmieniać ustawienia.|Konfiguracje, które były ustawione przez zasady usługi Intune, nie są już wymuszane. Użytkownicy mogą zmieniać ustawienia.|Konfiguracje, które były ustawione przez zasady usługi Intune, nie są już wymuszane. Użytkownicy mogą zmieniać ustawienia.|

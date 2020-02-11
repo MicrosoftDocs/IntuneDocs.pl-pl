@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b566dd58b01a411126ffabb46d526e4480c2ba0a
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 86d02ae1277ff2fd6dfce9bf206628f5dc1c2a84
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75205976"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755334"
 ---
 # <a name="add-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Dodawanie aplikacji usługi Office 365 do urządzeń z systemem Windows 10 za pomocą usługi Microsoft Intune
 
@@ -47,100 +47,99 @@ Aby móc przypisywać, monitorować, konfigurować lub zabezpieczać aplikacje, 
 - **Wersja pakietu Office**: wybierz, czy chcesz przypisać 32-bitową, czy 64-bitową wersję pakietu Office. Wersję 32-bitową można zainstalować na urządzeniach 32-bitowych i 64-bitowych, ale wersję 64-bitową można zainstalować tylko na urządzeniach 64-bitowych.
 - **Usuń plik MSI z urządzeń użytkownika końcowego** — wybierz, czy chcesz usunąć wcześniej istniejące aplikacje MSI pakietu Office z urządzeń użytkownika końcowego. Instalacja nie powiedzie się, jeśli na urządzeniach użytkownika końcowego są wcześniej istniejące aplikacje MSI. Aplikacje do odinstalowania nie są ograniczone tylko do aplikacji wybranych do instalacji w okienku **Konfigurowanie pakietu aplikacji**, ponieważ zostaną usunięte wszystkie aplikacje pakietu Office (MSI) na urządzeniu użytkownika końcowego. Aby uzyskać więcej informacji, zobacz [Remove existing MSI versions of Office when upgrading to Office 365 ProPlus (Usuwanie istniejących wersji MSI pakietu Office podczas uaktualniania do usługi Office 365 ProPlus)](https://docs.microsoft.com/deployoffice/upgrade-from-msi-version). Podczas ponownego instalowania pakietu Office na maszynach użytkowników końcowych przez usługę Intune użytkownicy końcowi automatycznie uzyskają te same pakiety językowe, które mieli z poprzednimi instalacjami MSI pakietu Office.
 
-## <a name="get-started"></a>Wprowadzenie
+## <a name="select-the-office-365-suite-app-type"></a>Wybieranie typu aplikacji pakietu Office 365
 
 1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Wybierz pozycję **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**.
-3. W okienku **Dodawanie aplikacji** na liście **Typ aplikacji** w obszarze **Pakiet Office 365** wybierz pozycję **Windows 10**.
+3. Wybierz pozycję **Windows 10** w sekcji **Pakiet Office 365** okienka **Wybierz typ aplikacji**.
+4. Kliknij pozycję **Wybierz**. Zostaną wyświetlone kroki **dodawania pakietu Office 365**.
 
-## <a name="select-settings-format"></a>Wybieranie formatu ustawień
 
-Wybierając pozycję **Format ustawień**, możesz wybrać metodę konfigurowania ustawień aplikacji. Do wyboru są następujące opcje formatu ustawień:
-- Projektant konfiguracji
-- Wprowadzanie danych XML
-
-Po wybraniu opcji **Projektant konfiguracji** okienko **Dodawanie aplikacji** zmieni się i będzie można na nim wybrać dwie dodatkowe opcje ustawień:
-- Skonfiguruj pakiet aplikacji
-- Ustawienia pakietu aplikacji
-
-<img alt="Add Office 365 - Configuration designer" src="./media/apps-add-office365/apps-add-office365-02.png" width="700">
-
-Po wybraniu pozycji **Wprowadzanie danych XML** w okienku **Dodawanie aplikacji** zostanie wyświetlona opcja **Wprowadź dane XML**. Wybierz tę opcję, aby wyświetlić okienko **Plik konfiguracji**. 
-
-![Dodawanie projektanta konfiguracji usługi Office 365](./media/apps-add-office365/apps-add-office365-01.png)
-    
-Aby uzyskać więcej informacji na temat opcji **Wprowadzanie danych XML**, zobacz [Wprowadzanie danych XML](apps-add-office365.md#enter-xml-format) poniżej.
-
-## <a name="configure-app-suite-information"></a>Konfigurowanie informacji o pakiecie aplikacji
+## <a name="step-1---app-suite-information"></a>Krok 1. Informacje o pakiecie aplikacji
 
 W tym kroku podajesz informacje o pakiecie aplikacji. Te informacje pomagają zidentyfikować pakiet aplikacji w usłudze Intune i ułatwiają użytkownikom wyszukiwanie tego pakietu w portalu firmy.
 
-1. W okienku **Dodawanie aplikacji** wybierz pozycję **Informacje o pakiecie aplikacji**.
-2. W okienku **Informacje o pakiecie aplikacji** wykonaj następujące czynności:
+1. Na stronie **informacji o pakiecie aplikacji** możesz potwierdzić lub zmodyfikować wartości domyślne:
     - **Nazwa pakietu**: wprowadź nazwę pakietu aplikacji wyświetlaną w portalu firmy. Upewnij się, że wszystkie używane nazwy pakietów są unikatowe. Jeśli dana nazwa pakietu aplikacji występuje dwa razy, użytkownicy portalu firmy będą widzieć tylko jedną z aplikacji o tej nazwie.
     - **Opis pakietu**: wprowadź opis pakietu aplikacji. Możesz na przykład podać listę aplikacji wybranych do uwzględnienia.
     - **Wydawca**: w roli wydawcy występuje firma Microsoft.
     - **Kategoria**: opcjonalnie wybierz co najmniej jedną wbudowaną lub utworzoną przez siebie kategorię aplikacji. To ustawienie ułatwi użytkownikom znajdowanie pakietu aplikacji podczas przeglądania portalu firmy.
-    - **Wyświetl jako polecaną aplikację w Portalu firmy**: wybierz tę opcję, aby wyświetlić pakiet aplikacji w dobrze widocznym miejscu na stronie głównej portalu firmy podczas przeglądania aplikacji przez użytkowników.
+    - **Pokaż jako polecaną aplikację w Portalu firmy**: wybierz tę opcję, aby wyświetlić pakiet aplikacji w dobrze widocznym miejscu na stronie głównej portalu firmy podczas przeglądania aplikacji przez użytkowników.
     - **Adres URL informacji**: Opcjonalnie wprowadź adres URL witryny sieci Web zawierającej informacje o tej aplikacji. Adres będzie widoczny dla użytkowników Portalu firmy.
     - **Adres URL zasad ochrony prywatności**: Opcjonalnie wprowadź adres URL witryny sieci Web zawierającej informacje dotyczące zasad ochrony prywatności w tej aplikacji. Adres będzie widoczny dla użytkowników Portalu firmy.
     - **Deweloper**: w roli dewelopera występuje firma Microsoft.
     - **Właściciel**: w roli właściciela występuje firma Microsoft.
     - **Uwagi**: wprowadź wszelkie uwagi, które chcesz skojarzyć z tą aplikacją.
     - **Logo**: logo usługi Office 365 jest wyświetlane razem z nazwą aplikacji podczas przeglądania portalu firmy.
-3. Wybierz przycisk **OK**.
+2. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Konfigurowanie pakietu aplikacji**.
 
-## <a name="configure-app-suite"></a>Konfigurowanie pakietu aplikacji
+## <a name="step-2---option-1-configure-app-suite-using-the-configuration-designer"></a>Krok 2. (**Opcja 1**) Konfigurowanie pakietu aplikacji za pomocą projektanta konfiguracji 
 
-Po wybraniu opcji **Projektant konfiguracji** z listy rozwijanej **Format ustawień** zostanie wyświetlona opcja **Skonfiguruj pakiet aplikacji** w okienku **Dodawanie aplikacji**. Wybierz aplikacje pakietu Office, które chcesz przypisać do urządzeń.
+Wybierając pozycję **Format ustawień konfiguracji**, możesz wybrać metodę konfigurowania ustawień aplikacji. Do wyboru są następujące opcje formatu ustawień:
+- Projektant konfiguracji
+- Wprowadzanie danych XML
 
-1. W okienku **Dodawanie aplikacji** wybierz pozycję **Konfiguruj pakiet aplikacji**.
-2. W okienku **Konfigurowanie pakietu aplikacji** wybierz standardowe aplikacje pakietu Office, które chcesz przypisać do urządzeń.  
-    Ponadto możesz zainstalować aplikacje dla klienta klasycznego usługi Microsoft Project Online i programu Microsoft Visio Online Plan 2, jeśli masz ich licencje.
-3. Wybierz przycisk **OK**.
+Po wybraniu opcji **Projektant konfiguracji** okienko **Dodawanie aplikacji** zmieni się i będzie można w nim wybrać trzy dodatkowe opcje ustawień:
+- Konfigurowanie pakietu aplikacji
+- Informacje o pakiecie aplikacji
+- Właściwości
 
-## <a name="configure-app-suite-settings"></a>Konfigurowanie ustawień pakietu aplikacji
+<img alt="Add Office 365 - Configuration designer" src="./media/apps-add-office365/apps-add-office365-02.png" width="700">
 
-Po wybraniu opcji **Projektant konfiguracji** z listy rozwijanej **Format ustawień** zostanie wyświetlona opcja **Ustawienia pakietu aplikacji** w okienku **Dodawanie aplikacji**. W tym kroku skonfigurujesz opcje instalacji pakietu aplikacji. Ustawienia są stosowane do wszystkich aplikacji dodawanych do pakietu.
-
-1. W okienku **Dodawanie aplikacji** wybierz pozycję **Ustawienia pakietu aplikacji**.
-2. W okienku **Ustawienia pakietu aplikacji** wykonaj następujące czynności:
-    - **Wersja pakietu Office**: wybierz, czy chcesz przypisać 32-bitową, czy 64-bitową wersję pakietu Office. Wersję 32-bitową można zainstalować na urządzeniach 32-bitowych i 64-bitowych, ale wersję 64-bitową można zainstalować tylko na urządzeniach 64-bitowych.
+1. Na stronie **Pakiet aplikacji konfiguracji** wybierz pozycję **Projektant konfiguracji**.
+   - **Wybierz aplikacje pakietu Office**: z listy rozwijanej wybierz standardowe aplikacje pakietu Office, które chcesz przypisać do urządzeń.
+   - **Wybierz inne aplikacje pakietu Office (wymagana licencja)** : z listy rozwijanej wybierz dodatkowe aplikacje pakietu Office, które chcesz przypisać do urządzeń i dla których masz licencje. Obejmują one aplikacje licencjonowane, takie jak Microsoft Project Online Desktop Client i Microsoft Visio Online Plan 2.
+   - **Architektura**: wybierz, czy chcesz przypisać **32-bitową**, czy **64-bitową** wersję pakietu Office. Wersję 32-bitową można zainstalować na urządzeniach 32-bitowych i 64-bitowych, ale wersję 64-bitową można zainstalować tylko na urządzeniach 64-bitowych.
     - **Kanał aktualizacji**: wybierz sposób aktualizacji pakietu Office na urządzeniach. Aby uzyskać informacje dotyczące różnych kanałów aktualizacji, zobacz [Omówienie kanałów aktualizacji usługi Office 365 ProPlus](https://docs.microsoft.com/DeployOffice/overview-of-update-channels-for-office-365-proplus). Wybierz spośród opcji:
         - **Raz na miesiąc**
         - **Raz na miesiąc (docelowy)**
         - **Półroczny**
         - **Półroczny (docelowy)**
 
-        Po wybraniu kanału możesz opcjonalnie wybrać pozycję **Określona**, aby zainstalować określoną wersję pakietu Office dla wybranego kanału na urządzeniach użytkownika końcowego. Następnie wybierz **określoną wersję** pakietu Office do użycia.
-        
-        Dostępne wersje będą się zmieniać z upływem czasu. Dlatego podczas tworzenia nowego wdrożenia mogą być dostępne nowsze wersje, a pewne starsze wersje mogą być niedostępne. Bieżące wdrożenia będą nadal wdrażane przy użyciu starszej wersji, lecz lista dla kanału będzie stale aktualizowana.
-        
-        Dla urządzeń, które zaktualizowały swoje przypięte wersje (lub zaktualizowały jakiekolwiek inne właściwości) i są wdrożone jako dostępne, stan raportowania będzie widoczny jako zainstalowany, jeśli poprzednia wersja była zainstalowana, zanim nastąpiło zaewidencjonowanie urządzenia. Gdy nastąpi ewidencjonowanie urządzenia, stan zostanie tymczasowo zmieniony na Nieznany, jednak nie zostanie on wyświetlony dla użytkownika. Gdy użytkownik zainicjuje instalację nowszej dostępnej wersji, zobaczy zmianę stanu na Zainstalowane.
-        
-        Aby uzyskać więcej informacji, zobacz [Overview of update channels for Office 365 ProPlus (Omówienie kanałów aktualizacji usługi Office 365 ProPlus)](https://docs.microsoft.com/DeployOffice/overview-of-update-channels-for-office-365-proplus).
-
-    - **Usuń plik MSI z urządzeń użytkownika końcowego** — wybierz, czy chcesz usunąć wcześniej istniejące aplikacje MSI pakietu Office z urządzeń użytkownika końcowego. Instalacja nie powiedzie się, jeśli na urządzeniach użytkownika końcowego są wcześniej istniejące aplikacje MSI. Aplikacje do odinstalowania nie są ograniczone tylko do aplikacji wybranych do instalacji w okienku **Konfigurowanie pakietu aplikacji**, ponieważ zostaną usunięte wszystkie aplikacje pakietu Office (MSI) na urządzeniu użytkownika końcowego. Aby uzyskać więcej informacji, zobacz [Remove existing MSI versions of Office when upgrading to Office 365 ProPlus (Usuwanie istniejących wersji MSI pakietu Office podczas uaktualniania do usługi Office 365 ProPlus)](https://docs.microsoft.com/deployoffice/upgrade-from-msi-version). Podczas ponownego instalowania pakietu Office na maszynach użytkowników końcowych przez usługę Intune użytkownicy końcowi automatycznie uzyskają te same pakiety językowe, które mieli z poprzednimi instalacjami MSI pakietu Office. 
-    - **Automatycznie akceptuj licencję użytkownika aplikacji**: wybierz tę opcję, jeśli użytkownicy końcowi nie muszą akceptować umowy licencyjnej. Usługa Intune zaakceptuje umowę automatycznie.
+        Po wybraniu kanału możesz wybrać następujące opcje:
+        - **Usuń inne wersje**: Wybierz pozycję **Tak**, aby usunąć inne wersje pakietu Office (MSI) z urządzeń użytkownika. Wybierz tę opcję, jeśli chcesz usunąć wcześniej istniejące aplikacje MSI pakietu Office z urządzeń użytkownika końcowego. Instalacja nie powiedzie się, jeśli na urządzeniach użytkownika końcowego są wcześniej istniejące aplikacje MSI. Aplikacje do odinstalowania nie są ograniczone tylko do aplikacji wybranych do instalacji w okienku **Konfigurowanie pakietu aplikacji**, ponieważ zostaną usunięte wszystkie aplikacje pakietu Office (MSI) na urządzeniu użytkownika końcowego. Aby uzyskać więcej informacji, zobacz [Remove existing MSI versions of Office when upgrading to Office 365 ProPlus (Usuwanie istniejących wersji MSI pakietu Office podczas uaktualniania do usługi Office 365 ProPlus)](https://docs.microsoft.com/deployoffice/upgrade-from-msi-version). Podczas ponownego instalowania pakietu Office na maszynach użytkowników końcowych przez usługę Intune użytkownicy końcowi automatycznie uzyskają te same pakiety językowe, które mieli z poprzednimi instalacjami MSI pakietu Office. 
+        - **Wybierz wersję do zainstalowania**: wybierz wersję pakietu Office, która powinna zostać zainstalowana.
+        - **Określona wersja**: Jeśli wybrano pozycję **Określona** jako **wersję do zainstalowania** w powyższym ustawieniu, można wybrać opcję instalacji określonej wersji pakietu Office dla wybranego kanału na urządzeniach użytkowników końcowych. 
+            
+            Dostępne wersje będą się zmieniać z upływem czasu. Dlatego podczas tworzenia nowego wdrożenia mogą być dostępne nowsze wersje, a pewne starsze wersje mogą być niedostępne. Bieżące wdrożenia będą nadal wdrażane przy użyciu starszej wersji, lecz lista dla kanału będzie stale aktualizowana.
+            
+            Dla urządzeń, które zaktualizowały swoje przypięte wersje (lub zaktualizowały jakiekolwiek inne właściwości) i są wdrożone jako dostępne, stan raportowania będzie widoczny jako zainstalowany, jeśli poprzednia wersja była zainstalowana, zanim nastąpiło zaewidencjonowanie urządzenia. Gdy nastąpi ewidencjonowanie urządzenia, stan zostanie tymczasowo zmieniony na Nieznany, jednak nie zostanie on wyświetlony dla użytkownika. Gdy użytkownik zainicjuje instalację nowszej dostępnej wersji, zobaczy zmianę stanu na Zainstalowane.
+            
+            Aby uzyskać więcej informacji, zobacz [Overview of update channels for Office 365 ProPlus (Omówienie kanałów aktualizacji usługi Office 365 ProPlus)](https://docs.microsoft.com/DeployOffice/overview-of-update-channels-for-office-365-proplus).
     - **Użyj aktywacji na komputerze udostępnionym**: wybierz tę opcję, jeśli wielu użytkowników współużytkuje komputer. Aby uzyskać więcej informacji, zobacz [omówienie aktywacji na komputerze udostępnionym dla usługi Office 365](https://docs.microsoft.com/DeployOffice/overview-of-shared-computer-activation-for-office-365-proplus).
+    - **Automatycznie akceptuj licencję użytkownika aplikacji**: wybierz tę opcję, jeśli użytkownicy końcowi nie muszą akceptować umowy licencyjnej. Usługa Intune zaakceptuje umowę automatycznie.
     - **Języki**: pakiet Office jest automatycznie instalowany we wszystkich obsługiwanych językach, które zostały zainstalowane w systemie Windows na urządzeniu użytkownika końcowego. Wybierz tę opcję, jeśli chcesz zainstalować dodatkowe języki z pakietem aplikacji. <p></p>
-    Dla aplikacji pakietu Office 365 Pro Plus zarządzanych przez usługę Intune możesz wdrożyć dodatkowe języki. Lista dostępnych języków uwzględnia **Typ** pakietu językowego (podstawowy, częściowy i weryfikujący). W witrynie Azure Portal wybierz kolejno pozycje **Microsoft Intune** > **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**. Na liście **Typ aplikacji** w okienku **Dodaj aplikację** wybierz pozycję **Windows 10** w obszarze **Pakiet Office 365**. Wybierz pozycję **Języki** w okienku **Ustawienia pakietu aplikacji**. Aby uzyskać więcej informacji, zobacz artykuł [Overview of deploying languages in Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-of-deploying-languages-in-office-365-proplus) (Omówienie wdrażania języków w usłudze Office 365 ProPlus).
+        Dla aplikacji pakietu Office 365 Pro Plus zarządzanych przez usługę Intune możesz wdrożyć dodatkowe języki. Lista dostępnych języków uwzględnia **Typ** pakietu językowego (podstawowy, częściowy i weryfikujący). W witrynie Azure Portal wybierz kolejno pozycje **Microsoft Intune** > **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**. Na liście **Typ aplikacji** w okienku **Dodaj aplikację** wybierz pozycję **Windows 10** w obszarze **Pakiet Office 365**. Wybierz pozycję **Języki** w okienku **Ustawienia pakietu aplikacji**. Aby uzyskać więcej informacji, zobacz artykuł [Overview of deploying languages in Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-of-deploying-languages-in-office-365-proplus) (Omówienie wdrażania języków w usłudze Office 365 ProPlus).
+2. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Tagi zakresu**.
 
-## <a name="select-scope-tags-optional"></a>Wybieranie tagów zakresu (opcjonalnie)
+## <a name="step-2---option-2-configure-app-suite-using-xml-data"></a>Krok 2. (**Opcja 2**) Konfigurowanie pakietu aplikacji przy użyciu danych XML 
+
+W przypadku wybrania opcji **Wprowadź dane XML** w polu listy rozwijanej **format ustawienia** na stronie **Konfigurowanie pakietu aplikacji** możesz skonfigurować pakiet aplikacji Office przy użyciu niestandardowego pliku konfiguracji.
+
+![Dodawanie projektanta konfiguracji usługi Office 365](./media/apps-add-office365/apps-add-office365-01.png)
+
+1. Dodano plik XML konfiguracji.
+2. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Tagi zakresu**.
+
+Aby uzyskać więcej informacji na temat wprowadzania danych XML, zobacz artykuł [Configuration options for the Office Deployment Tool](https://docs.microsoft.com/DeployOffice/configuration-options-for-the-office-2016-deployment-tool) (Opcje konfiguracji narzędzia wdrażania pakietu Office).
+
+## <a name="step-3---select-scope-tags-optional"></a>Krok 3. Wybieranie tagów zakresu (opcjonalnie)
 Za pomocą tagów zakresu można określić, kto będzie mógł wyświetlać informacje o aplikacji klienckiej w usłudze Intune. Więcej informacji o tagach zakresu zawiera artykuł [Używanie kontroli dostępu opartej na rolach i tagów zakresu w rozproszonej infrastrukturze informatycznej](../fundamentals/scope-tags.md).
 
-1. Wybierz pozycję **Zakres (tagi)**  > **Dodaj**.
-2. Użyj pola **Wybierz**, aby wyszukać tagi zakresu.
-3. Zaznacz pole wyboru obok tagów zakresu, które chcesz przypisać do aplikacji.
-4. Wybierz pozycję **Wybierz** > **OK**.
+1. Kliknij pozycję **Wybierz tagi zakresu**, aby opcjonalnie dodać tagi zakresu dla pakietu aplikacji. 
+2. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Przypisania**.
 
-## <a name="enter-xml-format"></a>Wprowadzanie formatu XML
+## <a name="step-4---assignments"></a>Krok 4. Przypisania
 
-Po wybraniu opcji **Wprowadź dane XML** z listy rozwijanej **Format ustawień** zostanie wyświetlona opcja **Wprowadź format XML** w okienku **Dodaj aplikację**. Aby uzyskać więcej informacji, zobacz [Configuration options for the Office Deployment Tool (Opcje konfiguracji narzędzia wdrażania pakietu Office)](https://docs.microsoft.com/DeployOffice/configuration-options-for-the-office-2016-deployment-tool).
+1. Wybierz przypisania grupy **Wymagane**, **Dostępne dla zarejestrowanych urządzeń** lub **Odinstaluj** dla pakietu aplikacji. Aby uzyskać więcej informacji, zobacz temat [Dodawanie grup w celu organizowania użytkowników i urządzeń](~/fundamentals/groups-add.md) i [Przypisywanie aplikacji do grup przy użyciu usługi Microsoft Intune](apps-deploy.md).
+2. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Recenzja i tworzenie**. 
 
-## <a name="finish-up"></a>Zakończenie
+## <a name="step-5---review--create"></a>Krok 5. Przegląd + tworzenie
 
-Po zakończeniu w okienku **Dodawanie aplikacji** wybierz pozycję **Dodaj**. Utworzona aplikacja jest wyświetlana na liście aplikacji. Następnym krokiem jest przypisanie aplikacji do wybranych grup. Aby uzyskać więcej informacji, zobacz temat [Przypisywanie aplikacji do grup](~/apps/apps-deploy.md).
+1. Przejrzyj wartości i ustawienia wprowadzone dla pakietu aplikacji.
+2. Gdy skończysz, kliknij pozycję **Utwórz**, aby dodać aplikację do usługi Intune.
+
+    Zostanie wyświetlony blok **Omówienie** dotyczący utworzonego pakietu aplikacji systemu Windows 10 dla usługi Office 365.
 
 ## <a name="deployment-details"></a>Szczegóły wdrożenia
 
@@ -231,4 +230,4 @@ W poniższej tabeli przedstawiono listę kodów typowych błędów, które mogą
 
 ## <a name="next-steps"></a>Następne kroki
 
-- Aby przypisać aplikacje do wybranych grup, [Przypisywanie aplikacji do grup](/intune-azure/manage-apps/deploy-apps).
+- Aby przypisać pakiet aplikacji do dodatkowych grup, zobacz temat [Przypisywanie aplikacji do grup](/intune-azure/manage-apps/deploy-apps).

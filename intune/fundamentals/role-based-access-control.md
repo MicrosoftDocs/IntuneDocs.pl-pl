@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4a03366037f9b0eced70f0375b3f4b39401e3141
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 8441a93a34af68a680aec2f48b3a5375fa74558c
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72509811"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76754307"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Kontrola dostępu oparta na rolach (RBAC) w usłudze Microsoft Intune
 
@@ -52,6 +52,7 @@ Wbudowane role można przypisywać do grup bez konieczności dalszej konfiguracj
 - **Menedżer aplikacji**: zarządza aplikacjami mobilnymi i zarządzanymi, może odczytywać informacje o urządzeniu i może wyświetlać profile konfiguracji urządzeń.
 - **Administrator ról usługi Intune**: zarządza niestandardowymi rolami usługi Intune i dodaje przypisania dla wbudowanych ról usługi Intune. Jest to jedyna rola usługi Intune, która może przypisywać uprawnienia administratorom.
 - **Administrator szkoły**: zarządza urządzeniami z systemem Windows 10 w usłudze [Intune for Education](../introduction-intune-education.md).
+- **Menedżer zabezpieczeń punktu końcowego**: zarządza funkcjami zabezpieczeń i zgodności, takimi jak punkty odniesienia zabezpieczeń, zgodność urządzeń, dostęp warunkowy i usługa Microsoft Defender ATP.
 
 ### <a name="custom-roles"></a>Role niestandardowe
 Istnieje możliwość utworzenia własnych ról z niestandardowymi uprawnieniami. Więcej informacji o niestandardowych rolach znajduje się w sekcji [Tworzenie roli niestandardowej](create-custom-role.md).
@@ -62,7 +63,7 @@ Istnieje możliwość utworzenia własnych ról z niestandardowymi uprawnieniami
 | Administrator globalny | Odczyt/zapis | Odczyt/zapis |
 | Administrator usługi Intune | Odczyt/zapis | Odczyt/zapis |
 | Administrator dostępu warunkowego | Brak | Brak |
-| Administrator zabezpieczeń | Tylko do odczytu | Tylko do odczytu |
+| Administrator zabezpieczeń | Tylko do odczytu (pełne uprawnienia administracyjne dla węzła programu Endpoint Security) | Tylko do odczytu |
 | Operator zabezpieczeń | Tylko do odczytu | Tylko do odczytu |
 | Czytelnik zabezpieczeń | Tylko do odczytu | Tylko do odczytu |
 | Administrator zgodności | Brak | Tylko do odczytu |

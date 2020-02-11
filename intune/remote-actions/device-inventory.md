@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ce3f73834ffdc2648dae345f8fa2a8233d2bb8c9
-ms.sourcegitcommit: e7052114324b80d0503b107c934bb90b8eb29704
+ms.openlocfilehash: 11e3465c583197582a545cdd6f4b71bc8d24e115
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75756019"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76754205"
 ---
 # <a name="see-device-details-in-intune"></a>Wyświetlanie szczegółów urządzenia w usłudze Intune
 
@@ -84,7 +84,7 @@ W zależności od operatora danego urządzenia mogą nie zostać zebrane wszystk
 |Identyfikator ICCID|Identyfikator ICCID (Integrated Circuit Card Identifier), który jest unikatowym numerem identyfikacyjnym karty SIM.|Windows, iOS, Android|
 |Data rejestracji|Data i godzina rejestracji urządzenia w usłudze Intune.|Windows, iOS, Android|
 |Ostatni kontakt|Data i godzina ostatniego połączenia urządzenia z usługą Intune.|Windows, iOS, Android|
-|Kod obejścia blokady aktywacji|Kod umożliwiający obejście blokady aktywacji.|iOS|
+|Kod obejścia blokady aktywacji|Kod umożliwiający wyłączanie blokady aktywacji.|iOS|
 |Zarejestrowane w usłudze Azure AD|Jeśli wybrano pozycję **Tak**, urządzenie jest zarejestrowane w usłudze Azure Active Directory.|Windows, iOS, Android|
 |Zarejestrowane w usłudze Intune|Jeśli wybrano pozycję **Tak**, urządzenie jest zarejestrowane w usłudze Intune|Windows, iOS, Android|
 |Zgodność|Stan zgodności urządzenia.|Windows, iOS, Android|
@@ -92,8 +92,6 @@ W zależności od operatora danego urządzenia mogą nie zostać zebrane wszystk
 |Identyfikator aktywacji programu EAS|Identyfikator programu Exchange ActiveSync urządzenia.|Windows, iOS, Android|
 |Nadzorowane|Jeśli wybrano pozycję **Tak**, administratorzy mają rozszerzoną kontrolę nad urządzeniem.|Windows, iOS, Android|
 |Zaszyfrowane|Jeśli wybrano pozycję **Tak**, dane przechowywane w urządzeniu są zaszyfrowane.|Windows, iOS, Android|
-
-\* Niedostępne w systemie Android za pomocą Menedżera zasad Google takiego jak W pełni zarządzane i Dedykowane urządzenia
 
 > [!Note]  
 > Numer telefonu nie jest uwzględniony w spisie dedykowanych lub w pełni zarządzanych urządzeniach z systemem Android Enterprise.

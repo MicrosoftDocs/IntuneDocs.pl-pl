@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81a084528fdc500bf9b6de0ca5fa847c2e0b3797
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: c7aa6af751e5ab3e1e3cdff6b1d2e3d6693f65df
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563927"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755174"
 ---
 # <a name="how-to-add-macos-line-of-business-lob-apps-to-microsoft-intune"></a>Jak dodawać aplikacje biznesowe (LOB) systemu macOS do usługi Microsoft Intune
 
@@ -59,7 +59,9 @@ Przed przekazaniem pliku biznesowego do usługi Microsoft Intune musisz pobrać 
 3. Użyj polecenia `IntuneAppUtil` w obrębie **narzędzia opakowującego aplikacje w usłudze Intune dla komputerów Mac** w celu opakowania pliku aplikacji LOB *PKG* z poziomu pliku *INTUNEMAC*.<br>
 
     Przykładowe polecenia do użycia z narzędziem opakowującym aplikacje w usłudze Intune dla systemu macOS:
-    
+    > [!IMPORTANT]
+    > Upewnij się, że argument `<source_file>` nie zawiera spacji, przed uruchomieniem poleceń `IntuneAppUtil`.
+
     - `IntuneAppUtil -h`<br>
     To polecenie wyświetla informacje o użyciu narzędzia.
     
@@ -69,48 +71,63 @@ Przed przekazaniem pliku biznesowego do usługi Microsoft Intune musisz pobrać 
     - `IntuneAppUtil -r <filename.intunemac> [-v]`<br>
     To polecenie wyodrębnia wykryte parametry i wersję utworzonego pliku *INTUNEMAC*.
 
-## <a name="step-1---specify-the-software-setup-file"></a>Krok 1. Określanie lokalizacji pliku konfiguracji oprogramowania
+## <a name="select-the-app-type"></a>Wybieranie typu aplikacji
 
 1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Wybierz kolejno pozycje **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**.
-3. W okienku **Dodaj aplikację** wybierz opcję **Aplikacja biznesowa** jako **Typ aplikacji**.
+2. Wybierz pozycję **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**.
+3. W okienku **Wybierz typ aplikacji** w obszarze typów aplikacji **Inne** wybierz pozycję **Aplikacja biznesowa**.
+4. Kliknij pozycję **Wybierz**. Zostaną wyświetlone kroki **dodawania aplikacji**.
 
-## <a name="step-2---configure-the-app-package-file"></a>Krok 2. Konfigurowanie pliku pakietu aplikacji
+## <a name="step-1---app-information"></a>Krok 1. Informacje o aplikacji
 
-1. W okienku **Dodaj aplikację** wybierz plik **Pakiet aplikacji**.
-2. W okienku **Plik pakietu aplikacji** wybierz przycisk przeglądania, a następnie wybierz plik instalacji systemu macOS z rozszerzeniem *INTUNEMAC*.
-3. Gdy skończysz, wybierz przycisk **OK**.
+### <a name="select-the-app-package-file"></a>Wybieranie pliku pakietu aplikacji
 
+1. W okienku **Dodawanie aplikacji** kliknij pozycję **Wybierz plik pakietu aplikacji**. 
+2. W okienku **Plik pakietu aplikacji** wybierz przycisk przeglądania. Następnie wybierz plik instalacyjny systemu macOS z rozszerzeniem *intunemac*.
+   Zostaną wyświetlone szczegóły aplikacji.
+3. Po zakończeniu wybierz przycisk **OK** w okienku **Plik pakietu aplikacji**, aby dodać aplikację.
 
-## <a name="step-3---configure-app-information"></a>Krok 3. Konfigurowanie informacji o aplikacji
+### <a name="set-app-information"></a>Ustawianie informacje o aplikacji
 
-1. W okienku **Dodaj aplikację** wybierz pozycję **Informacje o aplikacji**.
-2. W okienku **Informacje o aplikacji** dodaj szczegóły swojej aplikacji. W zależności od wybranej aplikacji niektóre wartości w tym okienku mogą zostać wypełnione automatycznie:
-    - **Nazwa** — wprowadź nazwę aplikacji do wyświetlenia w Portalu firmy. Upewnij się, że wszystkie używane nazwy aplikacji są unikatowe. Jeśli dana nazwa aplikacji występuje dwa razy, użytkownicy Portalu firmy będą widzieć tylko jedną z aplikacji o tej nazwie.
-    - **Opis** — wprowadź opis aplikacji, który ma być wyświetlany użytkownikom w Portalu firmy.
-    - **Wydawca** — wprowadź nazwę wydawcy aplikacji.
-    - **Minimalna wersja systemu operacyjnego** — wybierz z listy minimalną wersję systemu operacyjnego, na którym można zainstalować aplikację. W przypadku przypisania aplikacji do urządzenia z wcześniejszą wersją systemu operacyjnego instalacja nie będzie możliwa.
-    - **Kategoria** — wybierz co najmniej jedną wbudowaną lub utworzoną przez siebie kategorię aplikacji. Ułatwi to użytkownikom znajdowanie aplikacji podczas przeglądania Portalu firmy.
-    - **Wyświetl jako polecaną aplikację w portalu firmy** — wyróżnij aplikację na stronie głównej portalu firmy dla użytkowników przeglądających aplikacje.
-    - **Adres URL informacji** — opcjonalnie wprowadź adres URL witryny sieci Web zawierającej informacje o aplikacji. Adres będzie widoczny dla użytkowników Portalu firmy.
-    - **Adres URL zasad ochrony prywatności** — opcjonalnie wprowadź adres URL witryny sieci Web zawierającej informacje o zasadach ochrony prywatności mających zastosowanie do aplikacji. Adres będzie widoczny dla użytkowników Portalu firmy.
-    - **Deweloper** — opcjonalnie wprowadź nazwę dewelopera aplikacji.
-    - **Właściciel** — opcjonalnie wprowadź nazwę właściciela aplikacji, na przykład **Dział kadr**.
-    - **Uwagi** — wprowadź wszelkie uwagi, które chcesz skojarzyć z aplikacją.
-    - **Logo** — przekaż ikonę, która zostanie skojarzona z aplikacją. Jest ona wyświetlana jako ikona aplikacji podczas przeglądania Portalu firmy.
-3. Gdy skończysz, wybierz przycisk **OK**.
+1. Na stronie **Informacje o aplikacji** dodaj szczegóły aplikacji. W zależności od wybranej aplikacji niektóre wartości w tym okienku mogą zostać wypełnione automatycznie.
+    - **Nazwa**: wprowadź nazwę aplikacji wyświetlaną w portalu firmy. Upewnij się, że wszystkie używane nazwy aplikacji są unikatowe. Jeśli dana nazwa aplikacji występuje dwa razy, w portalu firmy będzie widoczna tylko jedna aplikacja o tej nazwie.
+    - **Opis**: wprowadź opis aplikacji. Opis będzie widoczny w portalu firmy.
+    - **Wydawca**: Wprowadź nazwę wydawcy aplikacji.
+    - **Minimalna wersja systemu operacyjnego**: wybierz z listy minimalną wersję systemu operacyjnego, w którym można zainstalować aplikację. W przypadku przypisania aplikacji do urządzenia z wcześniejszą wersją systemu operacyjnego instalacja nie będzie możliwa.
+    - **Kategoria**: wybierz co najmniej jedną kategorię aplikacji — wbudowaną lub utworzoną samodzielnie. Kategorie ułatwiają użytkownikom znajdowanie aplikacji podczas przeglądania portalu firmy.
+    - **Pokaż jako polecaną aplikację w Portalu firmy**: Wyróżnij aplikację na stronie głównej Portalu firmy dla użytkowników przeglądających aplikacje.
+    - **Adres URL informacji**: Opcjonalnie wprowadź adres URL witryny sieci Web zawierającej informacje o tej aplikacji. Adres URL będzie widoczny w portalu firmy.
+    - **Adres URL zasad ochrony prywatności**: Opcjonalnie wprowadź adres URL witryny sieci Web zawierającej informacje dotyczące zasad ochrony prywatności w tej aplikacji. Adres URL będzie widoczny w portalu firmy.
+    - **Deweloper**: opcjonalnie wprowadź nazwę dewelopera aplikacji.
+    - **Właściciel**: opcjonalnie wprowadź nazwę właściciela aplikacji. Przykładem może być **Dział kadr**.
+    - **Uwagi**: wprowadź wszelkie uwagi, które chcesz skojarzyć z tą aplikacją.
+    - **Logo**: przekaż ikonę skojarzoną z aplikacją. Będzie ona wyświetlana jako ikona aplikacji podczas przeglądania Portalu firmy.
+2. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Tagi zakresu**.
 
-## <a name="step-4---finish-up"></a>Krok 4. Zakończenie
+## <a name="step-2---select-scope-tags-optional"></a>Krok 2. Wybieranie tagów zakresu (opcjonalnie)
+Za pomocą tagów zakresu można określić, kto będzie mógł wyświetlać informacje o aplikacji klienckiej w usłudze Intune. Więcej informacji o tagach zakresu zawiera artykuł [Używanie kontroli dostępu opartej na rolach i tagów zakresu w rozproszonej infrastrukturze informatycznej](../fundamentals/scope-tags.md).
 
-1. W okienku **Dodaj aplikację** sprawdź poprawność szczegółów aplikacji.
-2. Wybierz pozycję **Dodaj**, aby przekazać aplikację do usługi Intune.
+1. Kliknij pozycję **Wybierz tagi zakresu**, aby opcjonalnie dodać tagi zakresu dla aplikacji. 
+2. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Przypisania**.
+
+## <a name="step-3---assignments"></a>Krok 3. Przypisania
+
+1. Wybierz przypisania grupy **Wymagane**, **Dostępne dla zarejestrowanych urządzeń** lub **Odinstaluj** dla aplikacji. Aby uzyskać więcej informacji, zobacz temat [Dodawanie grup w celu organizowania użytkowników i urządzeń](~/fundamentals/groups-add.md) i [Przypisywanie aplikacji do grup przy użyciu usługi Microsoft Intune](apps-deploy.md).
+2. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Recenzja i tworzenie**. 
+
+## <a name="step-4---review--create"></a>Krok 4. Przegląd + tworzenie
+
+1. Przejrzyj wartości i ustawienia wprowadzone dla aplikacji.
+2. Gdy skończysz, kliknij pozycję **Utwórz**, aby dodać aplikację do usługi Intune.
+
+    Zostanie wyświetlony blok **Omówienie** dotyczący aplikacji biznesowej.
 
 Utworzona aplikacja pojawi się na liście aplikacji, skąd można ją przypisać do wybranych grup. Aby uzyskać pomoc, zobacz artykuł [How to assign apps to groups](apps-deploy.md) (Jak przypisać aplikacje do grupy).
 
 > [!NOTE]
 > Jeśli plik *PKG* zawiera wiele aplikacji lub instalatorów aplikacji, usługa Microsoft Intune będzie zgłaszać tylko, że *aplikacja* została pomyślnie zainstalowana po wykryciu wszystkich aplikacji zainstalowanych na urządzeniu.
 
-## <a name="step-5---update-a-line-of-business-app"></a>Krok 5. Aktualizacja aplikacji biznesowej
+## <a name="update-a-line-of-business-app"></a>Aktualizowanie aplikacji biznesowej
 
 [!INCLUDE [shared-proc-lob-updateapp](../includes/shared-proc-lob-updateapp.md)]
 

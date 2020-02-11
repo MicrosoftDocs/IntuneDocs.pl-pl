@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 01/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: apps; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97e70191ed133d9427a3c8565d1dbf03573b628b
-ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
+ms.openlocfilehash: 6ce23d77d9b9d89ce51738a9c4e244dfca9a1c59
+ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75692231"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812406"
 ---
 # <a name="overview-of-the-app-lifecycle-in-microsoft-intune"></a>Przegląd cyklu życia aplikacji w usłudze Microsoft Intune
 
@@ -43,7 +43,7 @@ Po dodaniu aplikacji do usługi Intune możesz tę aplikację [przypisać do uż
 W ramach cyklu życia aplikacji regularnie wydawane są nowe wersje aplikacji. Usługa Intune udostępnia narzędzia do łatwego [aktualizowania wdrożonych aplikacji](apps-add.md) do nowszej wersji. Ponadto dla niektórych aplikacji można skonfigurować dodatkowe funkcje, na przykład:
 
 - [Zasady konfiguracji aplikacji systemu iOS](app-configuration-policies-use-ios.md) pozwalają określać ustawienia dla zgodnych aplikacji systemu iOS, które będą używane po uruchomieniu aplikacji. Na przykład aplikacja może wymagać określonych ustawień oznaczania marką lub nazwy serwera, z którym musi nawiązać połączenie.
-- [Zasady przeglądarki zarządzanej](app-configuration-managed-browser.md) pomagają w konfigurowaniu ustawień dla przeglądarki zarządzanej przez usługę Intune, która zastępuje domyślną przeglądarkę urządzenia i umożliwia ograniczenie witryn sieci Web, które użytkownicy mogą odwiedzać.
+- [Zasady przeglądarki zarządzanej](app-configuration-managed-browser.md) pomagają w konfigurowaniu ustawień dla przeglądarki [Microsoft Edge](~/apps/apps-supported-intune-apps.md#microsoft-apps), która zastępuje domyślną przeglądarkę urządzenia i umożliwia ograniczenie witryn internetowych, które użytkownicy mogą odwiedzać.
 
 ## <a name="protect"></a>Ochrona
 

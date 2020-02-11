@@ -18,18 +18,37 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d42651b11891f3d830c0d90e70a9ecd98ea5bfb7
-ms.sourcegitcommit: 52475fcd8d05d2f6b858d780ebb3d88eaadb0849
+ms.openlocfilehash: 73b7617ad6a2d9aa756ddf9a8a4833289e5710ff
+ms.sourcegitcommit: af384c46ec8d8def6aa32c3b89947748dc6fd28f
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76036615"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76517510"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Wysyłanie powiadomień niestandardowych w usłudze Intune  
 
 Za pomocą usługi Microsoft Intune można wysyłać niestandardowe powiadomienia do użytkowników urządzeń zarządzanych z systemami iOS i Android. Te komunikaty są wyświetlane w postaci standardowych powiadomień push z aplikacji Portal firmy i aplikacji Microsoft Intune na urządzeniu użytkownika, podobnie jak powiadomienia z innych aplikacji wyświetlane na urządzeniu. Powiadomienia niestandardowe usługi Intune nie są obsługiwane na urządzeniach z systemem macOS ani Windows.   
 
 Niestandardowe komunikaty powiadomień zawierają krótki tytuł i treść komunikatu składającą się maksymalnie z 500 znaków. Te komunikaty można dostosować do wszelkich celów komunikacji ogólnej.
+
+### <a name="what-the-notification-looks-like-on-an-ios-device"></a>Jak wygląda powiadomienie na urządzeniu z systemem iOS
+
+Jeśli aplikacja Portal firmy zostanie otwarta na urządzeniu z systemem iOS, powiadomienie będzie podobne do poniższego zrzutu ekranu:
+
+> [!div class="mx-imgBorder"]
+> ![Powiadomienie testowe Portalu firmy w systemie iOS](./media/custom-notifications/105046-1.png)
+
+Jeśli urządzenie zostało zablokowane, powiadomienie jest podobne do poniższego zrzutu ekranu:
+
+> [!div class="mx-imgBorder"]
+> ![Powiadomienie testowe na zablokowanym urządzeniu z systemem iOS](./media/custom-notifications/105046-2.png)
+
+### <a name="what-the-notification-looks-like-on-an-android-device"></a>Jak wygląda powiadomienie na urządzeniu z systemem Android
+
+Jeśli aplikacja Portal firmy zostanie otwarta na urządzeniu z systemem Android, powiadomienie będzie podobne do poniższego zrzutu ekranu:
+
+> [!div class="mx-imgBorder"]
+> ![Powiadomienie testowe w systemie Android](./media/custom-notifications/105046-3.png)
 
 ## <a name="common-scenarios-for-sending-custom-notifications"></a>Typowe scenariusze wysyłania powiadomień niestandardowych  
 

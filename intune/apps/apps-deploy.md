@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e990cd94c0f8622d07e59b4130566a1dc2953a1c
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 15d6a67cb41455a1e3c0830e9ed242bfa52b0269
+ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563992"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912662"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Przypisywanie aplikacji do grup przy użyciu usługi Microsoft Intune
 
@@ -56,7 +56,7 @@ Poniższa tabela zawiera listę różnych opcji przypisywania aplikacji do użyt
 ## <a name="assign-an-app"></a>Przypisywanie aplikacji
 
 1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Wybierz kolejno pozycje **Aplikacje** > **Wszystkie aplikacje**.
+2. Wybierz pozycję **Aplikacje** > **Wszystkie aplikacje**.
 3. W okienku **Aplikacje** wybierz aplikację, którą chcesz przypisać.
 4. W sekcji **Zarządzaj** menu wybierz pozycję **Przypisania**.
 5. Wybierz pozycję **Dodaj grupę**, aby otworzyć okienko **Dodawanie grupy** powiązane z aplikacją.
@@ -132,7 +132,7 @@ Czynności wymagane do przypisania aplikacji z zarządzanego sklepu Google Play 
 Jeśli selektywne czyszczenie zasad ochrony aplikacji zostanie włączone w konsoli usługi Intune, konto służbowe zostanie automatycznie usunięte z aplikacji Sklep Play, a użytkownik końcowy nie będzie od tego momentu widzieć aplikacji służbowych w wykazie aplikacji Sklep Play. Gdy konto służbowe zostanie usunięte z urządzenia, aplikacje zainstalowane ze Sklepu Play pozostaną zainstalowane na urządzeniu i nie będą odinstalowywane. 
 
 ## <a name="app-uninstall-setting-for-ios-managed-apps"></a>Ustawienia odinstalowywania aplikacji zarządzanych przez system iOS
-W przypadku urządzeń z systemem iOS możesz wybrać, co się dzieje z aplikacjami zarządzanymi po wyrejestrowaniu urządzenia z usługi Intune lub usunięciu profilu zarządzania, za pomocą ustawienia **Odinstaluj po usunięciu urządzenia**. To ustawienie dotyczy tylko aplikacji instalowanych jako zarządzane po zarejestrowaniu urządzenia. Nie można skonfigurować ustawienia dla aplikacji sieci Web ani linków sieci Web. 
+W przypadku urządzeń z systemem iOS możesz wybrać, co się dzieje z aplikacjami zarządzanymi po wyrejestrowaniu urządzenia z usługi Intune lub usunięciu profilu zarządzania, za pomocą ustawienia **Odinstaluj po usunięciu urządzenia**. To ustawienie dotyczy tylko aplikacji instalowanych jako zarządzane po zarejestrowaniu urządzenia. Nie można skonfigurować ustawienia dla aplikacji sieci Web ani linków sieci Web. Tylko dane chronione przez oprogramowanie do zarządzanie aplikacjami mobilnymi są usuwane po wycofaniu przez selektywne czyszczenie aplikacji.
 
 Wartości domyślne dla ustawienia są wstępnie wypełniane dla nowych przypisań w następujący sposób:
 

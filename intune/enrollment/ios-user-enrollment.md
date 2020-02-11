@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d77a275e3a48845f56b22ecc21b75f664ea619c5
-ms.sourcegitcommit: f26039d674eb4d61ab68264dd1a10b2e5e1d842c
+ms.openlocfilehash: 0872eef38e3ea5a70ebb64d3ae3c62069045fa97
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74691752"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76754636"
 ---
 # <a name="set-up-ios-and-ipados-user-enrollment-preview"></a>Konfigurowanie rejestracji użytkownika w systemach iOS oraz iPadOS (wersja zapoznawcza)
 
@@ -54,23 +54,14 @@ Profil rejestracji określa ustawienia stosowane do grupy urządzeń podczas rej
 
 3. Wybierz pozycję **Dalej**.
 
-4. Na stronie **Ustawienia** można wybrać opcję nadania użytkownikom prawa wyboru typu rejestracji, którego będą używać. Alternatywnie można ustawić wartość domyślną.
+4. Na stronie **Ustawienia** wybierz jedną z następujących opcji **typu rejestracji**:
 
     ![Strona Ustawienia](./media/ios-user-enrollment/settings-page.png)
 
-    - Jeśli chcesz, aby wszyscy użytkownicy w tym profilu używali rejestracji użytkownika, wykonaj następujące kroki:
-        1. Dla opcji **Wymagaj, aby użytkownik wybrał typ urządzenia** wybierz ustawienie **Nie skonfigurowano**.
-        2. Dla opcji **Domyślny typ rejestracji** wybierz ustawienie **Rejestracja użytkownika**.
-    - Jeśli chcesz, aby wszyscy użytkownicy w tym profilu używali rejestracji urządzenia, wykonaj następujące kroki:
-        1. Dla opcji **Wymagaj, aby użytkownik wybrał typ urządzenia** wybierz ustawienie **Nie skonfigurowano**.
-        2. Dla opcji **Domyślny typ rejestracji** wybierz ustawienie **Rejestracja urządzenia**.
-    - Jeśli chcesz nadać wszystkim użytkownikom w tej grupie prawo wyboru typu rejestracji, wybierz ustawienie **Wymagane** dla opcji **Wymagaj, aby użytkownik wybrał typ urządzenia**. Gdy użytkownicy rejestrują swoje urządzenia, otrzymają możliwość wyboru między opcjami **To urządzenie należy do mnie** i **Firma [nazwa firmy] jest właścicielem tego urządzenia**. Jeśli wybiorą pierwszą z nich, urządzenie zostanie zarejestrowane przy użyciu funkcji rejestracji użytkownika. Jeśli wybiorą drugą opcję, urządzenie zostanie zarejestrowane przy użyciu funkcji rejestracji urządzenia. Jeśli użytkownik wybierze opcję **To urządzenie należy do mnie**, będzie mógł wybrać opcję zabezpieczenia całego urządzenia lub zabezpieczenia tylko aplikacji i danych związanych z pracą. Od wyboru właściciela urządzenia przez użytkownika końcowego zależy tylko typ rejestracji zaimplementowany na urządzeniu tego użytkownika. Ten wybór użytkownika nie zostanie odzwierciedlony w atrybucie własności urządzenia w usłudze Intune. Aby dowiedzieć się więcej na temat środowiska użytkownika, zobacz [Set up iOS device access to your company resources](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-ios) (Konfigurowanie dostępu urządzenia z systemem iOS do zasobów firmowych).
+    - **Rejestrowanie urządzenia**: wszyscy użytkownicy w tym profilu będą korzystać z opcji rejestrowania urządzenia.
+    - **Rejestrowanie użytkownika**: wszyscy użytkownicy w tym profilu będą korzystać z opcji rejestrowania użytkownika.
+    - **Określ na podstawie wyboru użytkownika**: wszyscy użytkownicy w tej grupie będą mieć wybór typu rejestracji do użycia. Podczas rejestrowania urządzeń użytkownicy będą widzieć następujące opcje do wyboru: **To urządzenie należy do mnie** i **Firma (nazwa firmy) jest właścicielem tego urządzenia**. Jeśli wybiorą drugą opcję, urządzenie zostanie zarejestrowane przy użyciu funkcji rejestracji urządzenia. Jeśli użytkownik wybierze opcję **To urządzenie należy do mnie**, będzie mógł wybrać opcję zabezpieczenia całego urządzenia lub zabezpieczenia tylko aplikacji i danych związanych z pracą. Od wyboru właściciela urządzenia przez użytkownika końcowego zależy typ rejestracji zaimplementowany na urządzeniu tego użytkownika. Ten wybór użytkownika jest również odzwierciedlony w atrybucie własności urządzenia w usłudze Intune. Aby dowiedzieć się więcej na temat środowiska użytkownika, zobacz [Set up iOS device access to your company resources](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-ios) (Konfigurowanie dostępu urządzenia z systemem iOS do zasobów firmowych).
     
-    > [!NOTE]
-    > Następujące powiadomienie jest niedokładne i zostanie usunięte z interfejsu użytkownika.
-    > „Aby dostęp warunkowy działał na urządzeniach docelowych z rejestracją użytkownika, musisz wypchnąć aplikację Azure Authenticator jako wymaganą dla tej grupy użytkowników w celu włączenia logowania jednokrotnego i dołączania w miejscu pracy”.
-    > Jako administrator nie musisz podejmować żadnych działań w celu wypchnięcia aplikacji Authenticator do użytkowników. Użytkownicy zostaną poinstruowani w Portalu firmy, aby zainstalować aplikację Authenticator w celu ukończenia procesu rejestracji użytkownika i zapewnienia poprawnego działania tych scenariuszy.
-
 5. Wybierz pozycję **Dalej**.
 
 6. Na stronie **Przypisania** wybierz grupy użytkowników zawierające użytkowników, którym chcesz przypisać ten profil. Możesz przypisać profil do wszystkich użytkowników lub do określonych grup. Wszyscy użytkownicy w wybranych grupach będą korzystać z wybranego powyżej typu rejestracji. Grupy urządzeń nie są obsługiwane w scenariuszach rejestracji użytkownika, ponieważ ta funkcja jest oparta na tożsamościach użytkowników, a nie urządzeń. Możesz przypisać profil do wszystkich użytkowników lub do określonych grup.

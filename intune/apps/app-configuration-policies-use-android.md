@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/23/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec80922cf2539fdbacb572fd96c5a5e45549b5c3
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: b30da567d1a25028c51cf8268eab9613a7c3b8af
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75205041"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755508"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem Android Enterprise
 
@@ -34,21 +34,43 @@ Zasady konfiguracji aplikacji w usłudze Microsoft Intune zawierają ustawienia 
 > [!NOTE]  
 > Nie wszystkie aplikacje obsługują konfigurację aplikacji. Skontaktuj się z deweloperem aplikacji, aby dowiedzieć się, czy jego aplikacja obsługuje zasady konfiguracji aplikacji.
 
-1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Aplikacje** > **Zasady konfiguracji aplikacji** >  **Dodaj** > **Urządzenia zarządzane**.
-2. Dodaj następujące właściwości:
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz kolejno pozycje **Aplikacje** > **Zasady konfiguracji aplikacji** > **Dodaj** > **Urządzenia zarządzane**. Pamiętaj, że możesz wybrać między pozycjami **Urządzenia zarządzane** i **Aplikacje zarządzane**. Aby uzyskać więcej informacji, zobacz temat [Aplikacje obsługujące konfigurację aplikacji](~/apps/app-configuration-policies-overview.md#apps-that-support-app-configuration).
+3. Na stronie **Podstawowe** ustaw następujące szczegóły:
+    - **Nazwa** — nazwa profilu, która będzie wyświetlana w witrynie Azure Portal.
+    - **Opis** — opis profilu, który będzie wyświetlany w witrynie Azure Portal.
+    - **Typ rejestracji urządzenia** — to ustawienie ma wartość **Urządzenia zarządzane**.
+4. Wybierz pozycję **Android Enterprise** w obszarze **Platforma**.
+5. Kliknij pozycję **Wybierz aplikację** obok pozycji **Aplikacja docelowa**. Zostanie wyświetlone okienko **Skojarzona aplikacja**. 
+6. W okienku **Skojarzona aplikacja** wybierz aplikację zarządzaną, która ma zostać skojarzona z zasadami konfiguracji, a następnie kliknij przycisk **OK**.
+7. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Ustawienia**.
+8. Kliknij przycisk **Dodaj**, aby wyświetlić okienko **Dodaj uprawnienia**.
+9. Wybierz uprawnienia, które chcesz zastąpić. Przyznane uprawnienia zastąpią zasady „Domyślne uprawnienia aplikacji” dla wybranych aplikacji.
+10. Ustaw **Stan uprawnienia** dla każdego uprawnienia. Możesz wybrać jedną z następujących wartości: **Monituj**, **Przyznaj automatycznie** lub **Odrzuć automatycznie**. Aby uzyskać więcej informacji o uprawnieniach, zobacz artykuł [Ustawienia urządzeń z rozwiązaniem Android Enterprise umożliwiające oznaczenie ich jako zgodne lub niezgodne w usłudze Intune](~/protect/compliance-policy-create-android-for-work.md).
+11. W polu listy rozwijanej wybierz pozycję **Format ustawień konfiguracji**. Wybierz jedną z następujących metod, aby dodać informacje o konfiguracji:
+    - **Korzystanie z projektanta konfiguracji**
+    - **Wprowadzanie danych JSON**<br><br>
+    Aby uzyskać szczegółowe informacje o używaniu projektanta konfiguracji, zobacz [Korzystanie z projektanta konfiguracji](#use-the-configuration-designer). Aby uzyskać szczegółowe informacji o wprowadzaniu danych XML, zobacz [Wprowadzanie danych JSON](#enter-json-data). 
+12. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Przypisania**.
+13. W polu listy rozwijanej obok pozycji **Przypisz do** wybierz pozycję **Wybrane grupy**, **Wszyscy użytkownicy**, **Wszystkie urządzenia** lub **Wszyscy użytkownicy i wszystkie urządzenia**, aby odpowiednio przypisać zasady konfiguracji aplikacji.
 
-    - **Nazwa**: wprowadź opisową nazwę zasad. Nadaj nazwę zasadom, aby można było je później łatwo rozpoznać. Na przykład dobrą nazwą zasad jest **Zasady aplikacji Android Enterprise Nine Work dla całej firmy**.
-    - **Opis**: Wprowadź opis profilu. To ustawienie jest opcjonalne, ale zalecane.
-    - **Typ rejestracji urządzenia**: to ustawienie ma wartość **Urządzenia zarządzane**.
-    - **Platforma**: — wybierz opcję **Android**.
+    ![Zrzut ekranu karty Dołącz okna przypisywania zasad](./media/app-configuration-policies-use-ios/app-config-policy01.png)
 
-3. Wybierz pozycję **Skojarzona aplikacja**. Wybierz aplikację systemu Android, z którą zostaną skojarzone te zasady konfiguracji aplikacji. Wybierz z listy [aplikacji zarządzanego sklepu Google Play aplikacje zatwierdzone i zsynchronizowane z usługą Intune](~/apps/apps-add-android-for-work.md).
-4. Wybierz pozycję **Uprawnienia**. Konfigurację możesz ustawić przy użyciu następujących narzędzi:
+14. W polu listy rozwijanej wybierz pozycję **Wszyscy użytkownicy**.
 
-    - [projektant konfiguracji](#use-the-configuration-designer)
-    - [edytor JSON](#enter-the-json-editor)
+    ![Zrzut ekranu przypisywania zasad — opcja listy rozwijanej Wszyscy użytkownicy](./media/app-configuration-policies-use-ios/app-config-policy02.png)
 
-5. Wybierz przyciski **OK** > **Dodaj**.
+15. Kliknij pozycję **Wybierz grupy do wykluczenia**, aby wyświetlić powiązane okienko.
+
+    ![Zrzut ekranu bloku Przypisanie zasad — Wybierz okienko Grupy do wykluczenia](./media/app-configuration-policies-use-ios/app-config-policy03.png)
+
+16. Wybierz grupy, które chcesz wykluczyć, a następnie kliknij pozycję **Wybierz**.
+
+    >[!NOTE]
+    >Jeśli podczas dodawania grupy jakakolwiek inna grupa została już dołączona do danego typu przypisania, zostanie ona wstępnie wybrana i nie będzie zmieniana dla innych typów dołączania przypisania. W związku z tym ta grupa, który została użyta, nie może zostać użyta jako wykluczona grupa.
+
+17. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Recenzja i tworzenie**.
+18. Kliknij pozycję **Utwórz**, aby dodać zasady konfiguracji do usługi Intune.
 
 ## <a name="use-the-configuration-designer"></a>Korzystanie z projektanta konfiguracji
 
@@ -92,7 +114,7 @@ W przypadku urządzeń z systemem Android używaj następujących par klucz/wart
    > Zezwalając jedynie na skonfigurowane konta organizacji z wieloma tożsamościami, musisz używać programu Outlook dla systemu Android w wersji 2.2.222 lub nowszej, programów Word, Excel i PowerPoint dla systemu Android w wersji 16.0.9327.1000 lub nowszej bądź usługi OneDrive dla systemu Android w wersji 5.28 lub nowszej.<p></p>
    > Jako administrator usługi Microsoft Intune masz możliwość kontrolowania kont użytkownika dodawanych do aplikacji pakietu Microsoft Office na urządzeniach zarządzanych. Istnieje możliwość ograniczenia dostępu tylko do dozwolonych kont użytkowników w organizacji oraz blokowania kont osobistych na zarejestrowanych urządzeniach. Aplikacje pomocnicze przetwarzają konfigurację aplikacji i usuwają oraz blokują niezatwierdzone konta.<p></p>
 
-## <a name="enter-the-json-editor"></a>Edytor JSON
+## <a name="enter-json-data"></a>Wprowadzanie danych JSON
 
 Nie jest możliwa konfiguracja niektórych ustawień konfiguracji aplikacji (np. typów pakietu) przy użyciu projektanta konfiguracji. W przypadku tych wartości użyj edytora JSON. Ustawienia są dostarczane do aplikacji automatycznie po zainstalowaniu aplikacji.
 

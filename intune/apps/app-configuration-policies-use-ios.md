@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d5a3204721a0d40cfb5bf729ca17ef8e4ded1f0f
-ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
+ms.openlocfilehash: 0d4bbd0a5b57391edad726c7e936d0072a791673
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75885768"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755769"
 ---
 # <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem iOS
 
@@ -51,34 +51,39 @@ Po wybraniu dołączonych grup dla zasad konfiguracji aplikacji możesz też wyb
 ## <a name="create-an-app-configuration-policy"></a>Tworzenie zasad konfiguracji aplikacji
 
 1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Wybierz kolejno pozycje **Aplikacje** > **Zasady konfiguracji aplikacji** > **Dodaj** > **Urządzenia zarządzane**.
-3. Ustaw następujące szczegóły:
+2. Wybierz kolejno pozycje **Aplikacje** > **Zasady konfiguracji aplikacji** > **Dodaj** > **Urządzenia zarządzane**. Pamiętaj, że możesz wybrać między pozycjami **Urządzenia zarządzane** i **Aplikacje zarządzane**. Aby uzyskać więcej informacji, zobacz temat [Aplikacje obsługujące konfigurację aplikacji](~/apps/app-configuration-policies-overview.md#apps-that-support-app-configuration).
+3. Na stronie **podstawowych informacji** ustaw następujące szczegóły:
     - **Nazwa** — nazwa profilu, która będzie wyświetlana w witrynie Azure Portal.
     - **Opis** — opis profilu, który będzie wyświetlany w witrynie Azure Portal.
     - **Typ rejestracji urządzenia** — to ustawienie ma wartość **Urządzenia zarządzane**.
-4. Dla elementu **Platforma** wybierz pozycję **iOS**.
-5. Wybierz pozycję **Skojarzona aplikacja**. Następnie w okienku **Skojarzona aplikacja** wybierz aplikację zarządzaną, do której chcesz zastosować konfigurację, a następnie wybierz opcję **OK**.
-6. Wybierz pozycję **Ustawienia konfiguracji**, aby wyświetlić okienko **Ustawienia konfiguracji**.
-7. Wybierz pozycję **Format ustawień konfiguracji**. Wybierz jedną z następujących metod, aby dodać informacje o konfiguracji:
+4. Wybierz pozycję **iOS/iPadOS** w polu **Platforma**.
+5. Kliknij pozycję **Wybierz aplikację** obok pozycji **Aplikacja docelowa**. Zostanie wyświetlone okienko **Skojarzona aplikacja**. 
+6. W okienku **Aplikacja docelowa** wybierz aplikację zarządzaną, która ma zostać skojarzona z zasadami konfiguracji, a następnie kliknij przycisk **OK**.
+7. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Ustawienia**.
+8. W polu listy rozwijanej wybierz pozycję **Format ustawień konfiguracji**. Wybierz jedną z następujących metod, aby dodać informacje o konfiguracji:
     - **Korzystanie z projektanta konfiguracji**
     - **Wprowadzanie danych XML**<br><br>
     Aby uzyskać szczegółowe informacje o używaniu projektanta konfiguracji, zobacz [Korzystanie z projektanta konfiguracji](#use-configuration-designer). Aby uzyskać szczegółowe informacji o wprowadzaniu danych XML, zobacz [Wprowadzanie danych XML](#enter-xml-data). 
-8. Po dodaniu informacji dotyczących konfiguracji wybierz przycisk **OK**, a następnie wybierz pozycję **Dodaj**, aby dodać zasady konfiguracji. Zostanie wyświetlone okienko omówienia zasad konfiguracji.
-9. Wybierz pozycję **Przypisania**, aby wyświetlić opcje dołączania i wykluczania. 
+9. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Przypisania**.
+10. W polu listy rozwijanej obok pozycji **Przypisz do** wybierz pozycję **Wybrane grupy**, **Wszyscy użytkownicy**, **Wszystkie urządzenia** lub **Wszyscy użytkownicy i wszystkie urządzenia**, aby odpowiednio przypisać zasady konfiguracji aplikacji.
 
     ![Zrzut ekranu karty Dołącz okna przypisywania zasad](./media/app-configuration-policies-use-ios/app-config-policy01.png)
-10. Wybierz pozycję **Wszyscy użytkownicy** na karcie **Dołącz**.
+
+11. W polu listy rozwijanej wybierz pozycję **Wszyscy użytkownicy**.
 
     ![Zrzut ekranu przypisywania zasad — opcja listy rozwijanej Wszyscy użytkownicy](./media/app-configuration-policies-use-ios/app-config-policy02.png)
-11. Wybierz kartę **Wyklucz**. 
+
 12. Kliknij pozycję **Wybierz grupy do wykluczenia**, aby wyświetlić powiązane okienko.
 
     ![Zrzut ekranu bloku Przypisanie zasad — Wybierz okienko Grupy do wykluczenia](./media/app-configuration-policies-use-ios/app-config-policy03.png)
+
 13. Wybierz grupy, które chcesz wykluczyć, a następnie kliknij pozycję **Wybierz**.
 
     >[!NOTE]
     >Jeśli podczas dodawania grupy jakakolwiek inna grupa została już dołączona do danego typu przypisania, zostanie ona wstępnie wybrana i nie będzie zmieniana dla innych typów dołączania przypisania. W związku z tym ta grupa, który została użyta, nie może zostać użyta jako wykluczona grupa.
-14. Kliknij przycisk **Zapisz**.
+
+14. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Recenzja i tworzenie**.
+15. Kliknij pozycję **Utwórz**, aby dodać zasady konfiguracji do usługi Intune.
 
 ## <a name="use-configuration-designer"></a>Korzystanie z projektanta konfiguracji
 

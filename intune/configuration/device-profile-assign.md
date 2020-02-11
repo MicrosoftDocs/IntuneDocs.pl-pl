@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2019
+ms.date: 01/28/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 252af3c7447b59ee6aaeb4cb05bed0579ae8af4c
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 5b61c333f41054194b44c7517e508fe1ef6d28d4
+ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206707"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812371"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Przypisywanie profili użytkowników i urządzeń w usłudze Microsoft Intune
 
@@ -31,7 +31,11 @@ Tworzony przez Ciebie profil obejmuje wszystkie wprowadzone ustawienia. Następn
 W tym artykule pokazano, jak przypisać profil, i przedstawiono niektóre informacje na temat używania tagów zakresu w profilach.
 
 > [!NOTE]  
-> Po usunięciu profilu lub gdy nie jest on już przypisany do urządzenia, ustawienie może zachować istniejącą wartość. Ustawienie nie zostanie przywrócone do wartości domyślnej. Aby zmienić ustawienie na inną wartość, utwórz nowy profil i przypisz go.
+> Gdy profil zostanie usunięty lub nie jest już przypisany do urządzenia, w zależności od ustawień w profilu mogą wystąpić różne sytuacje. Ustawienia są oparte na dostawcach CSP, a każdy dostawca CSP może inaczej obsługiwać usuwanie profilu. Na przykład ustawienie może powodować zachowanie istniejącej wartość i nieprzywracanie wartości domyślnej. Zachowanie jest kontrolowane przez każdego dostawcę CSP w systemie operacyjnym. Listę dostawców CSP dla systemu Windows można znaleźć w [dokumentacji dotyczącej dostawcy usług konfiguracji (CSP)](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
+>
+> Aby zmienić ustawienie na inną wartość, należy utworzyć nowy profil, skonfigurować ustawienie jako **Nieskonfigurowane** i przypisać profil. Po zastosowaniu ustawienia na urządzeniu użytkownicy powinni mieć kontrolę umożliwiającą zmianę ustawienia na ich preferowaną wartość.
+>
+> W przypadku konfigurowania tych ustawień sugerujemy wdrażanie do grupy pilotażowej. Aby uzyskać więcej porad dotyczących wprowadzania usługi Intune, zobacz temat dotyczący [tworzenia planu wdrożenia](../fundamentals/planning-guide-rollout-plan.md).
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7170f723707ef709ef464b35bc3f6d3297341cf1
-ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
+ms.openlocfilehash: 099d68568cd920c9ae3f328b4e9fba95424e46fd
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75956207"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755276"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Dodawanie aplikacji do usługi Microsoft Intune 
 
@@ -74,10 +74,10 @@ W poniższej tabeli przedstawiono typy specyficzne dla aplikacji i sposób ich d
 
 <sup>1</sup> Aby uzyskać więcej informacji na temat profilów służbowych w systemach Android Enterprise i Android, patrz [Licencjonowane aplikacje](apps-add.md#understanding-licensed-apps) poniżej.
 
-Aby dodać aplikację w usłudze Microsoft Intune, wybierz kolejno pozycje **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**. Zostanie wyświetlone okienko **Dodaj aplikację**, w którym możesz wybrać **Typ aplikacji**. 
+Aby dodać aplikację w usłudze Microsoft Intune, wybierz kolejno pozycje **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**. Zostanie wyświetlone okienko **Wybierz typ aplikacji**, w którym możesz wybrać **Typ aplikacji**. 
 
 >[!TIP]
-> Aplikacja biznesowa (LOB) to aplikacja dodawana za pomocą pliku instalacyjnego aplikacji. Aby na przykład zainstalować aplikację LOB systemu iOS, należy dodać tę aplikację, wybierając pozycję **Aplikacja biznesowa** jako **Typ aplikacji** w okienku **Dodaj aplikację**. Następnie należy wybrać plik pakietu aplikacji (z rozszerzeniem ipa). Aplikacje tego typu są zwykle pisane w firmie.
+> Aplikacja biznesowa (LOB) to aplikacja dodawana za pomocą pliku instalacyjnego aplikacji. Aby na przykład zainstalować aplikację LOB systemu iOS, należy dodać tę aplikację, wybierając pozycję **Aplikacja biznesowa** jako **Typ aplikacji** w okienku **Wybierz typ aplikacji**. Następnie należy wybrać plik pakietu aplikacji (z rozszerzeniem ipa). Aplikacje tego typu są zwykle pisane w firmie.
 
 ## <a name="assess-app-requirements"></a>Ocena wymagań dotyczących aplikacji
 Jako administrator IT określasz nie tylko aplikacje, które mają być używane przez Twoją grupę, ale także możliwości wymagane przez każdą grupę i podgrupę. Dla każdej aplikacji określasz wymagane platformy, grupy użytkowników, które potrzebują aplikacji, zasady konfiguracji, które mają zostać zastosowane dla tych grup, oraz zasady ochrony do zastosowania.  

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 01/23/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -16,16 +16,16 @@ ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4a4c6d40dc729fb72210c455c7819baaf89de3b
-ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
+ms.openlocfilehash: 03b8f050dc6232b87d1149aff0a93cd7b06839cd
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75691826"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755412"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Podpisywanie aplikacji biznesowych w celu wdrażania ich na urządzeniach z systemem Windows za pomocą usługi Intune
 
-Jako administrator usługi Intune możesz wdrażać uniwersalne aplikacje biznesowe (LOB) na urządzeniach z systemem Windows 8.1 Desktop lub Windows 10 Desktop & Mobile, w tym aplikację Portal firmy. Aby wdrożyć aplikacje .appx na urządzeniach z systemem Windows 8.1 Desktop lub Windows 10 Desktop & Mobile, można użyć certyfikatu podpisywania kodu z publicznego urzędu certyfikacji uznanego już za zaufany przez urządzenia z systemem Windows lub własnego urzędu certyfikacji.
+Jako administrator usługi Intune możesz wdrażać uniwersalne aplikacje biznesowe (LOB) na urządzeniach z systemem Windows 8.1 Desktop lub Windows 10 Desktop & Mobile, w tym aplikację Portal firmy. Aby wdrożyć aplikacje *APPX* na urządzeniach z systemem Windows 8.1 Desktop lub Windows 10 Desktop i Mobile, można użyć certyfikatu podpisywania kodu z publicznego urzędu certyfikacji uznanego już za zaufany przez urządzenia z systemem Windows lub własnego urzędu certyfikacji.
 
  > [!NOTE]
  > Windows 8.1 Desktop wymaga, by zasady przedsiębiorstwa włączały ładowanie bezpośrednie lub użycie kluczy ładowania bezpośredniego (włączane automatycznie dla urządzeń przyłączonych do domeny). Więcej informacji znajduje się w artykule dotyczącym [ładowania bezpośredniego w systemie Windows 8](https://blogs.technet.microsoft.com/scd-odtsp/2012/09/27/windows-8-sideloading-requirements-from-technet/).
@@ -52,10 +52,11 @@ W przypadku wdrażania aplikacji zależnie od potrzeb dla użytkowników lub urz
 
 Jeśli urządzenie z systemem Windows 10 nie ufa jeszcze urzędowi certyfikacji, po podpisaniu pakietu appx i przekazaniu go do usługi Intune trzeba przekazać certyfikat podpisywania kodu do portalu usługi Intune:
 
-1. Kliknij pozycję Aplikacje klienckie
-2. Kliknij pozycję Certyfikaty przedsiębiorstwa systemu Windows
-3. W obszarze Certyfikat podpisywania kodu wybierz pozycję Wybierz plik
-4. Wybierz plik .cer i kliknij przycisk Przekaż
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Kliknij pozycję **Administracja dzierżawą** > **Łączniki i tokeny** > **Certyfikaty przedsiębiorstw systemu Windows**.
+3. Wybierz plik w obszarze **Certyfikat podpisywania kodu**.
+4. Wybierz plik *CER* i kliknij pozycję **Otwórz**.
+5. Kliknij pozycję **Przekaż**, aby dodać plik certyfikatu do usługi Intune.
 
 Teraz każde urządzenie z systemem Windows 10 Desktop & Mobile z wdrożeniem appx przez usługę Intune automatycznie pobierze odpowiedni certyfikat przedsiębiorstwa i aplikacja będzie mogła zostać uruchomiona po zakończeniu instalacji.
 
@@ -94,7 +95,7 @@ Jeśli nie chcesz zapewnić dostępu do sklepu Microsoft Store, aplikację Porta
       ![Obraz folderu Zależności zapisany w pliku APPXBUN](./media/app-sideload-windows/Win10CP-Dependencies-save.png)
    2. Umieść dziewięć pakietów zależności w folderze Zależności.  
       Jeśli zależności nie będą wprowadzone w tym formacie, usługa Intune nie będzie mogła ich rozpoznać i przekazać podczas przekazywania pakietu, co spowoduje niepowodzenie przekazania z powodu następującego błędu.  
-      ![Komunikat o błędzie — należy określić zależności aplikacji systemu Windows.](./media/app-sideload-windows/Win10CP-error-message.png)
+      <img alt="Error message - The Windows app dependency must be provided." src="./media/app-sideload-windows/Win10CP-error-message.png" width="200">
 6. Wróć do usługi Intune, a następnie przekaż aplikację Portal firmy jako nową aplikację. Wdróż ją jako wymaganą aplikację dla żądanej grupy użytkowników docelowych.  
 
 Aby uzyskać więcej informacji na temat sposobu obsługi zależności dla aplikacji uniwersalnych w usłudze Intune, zobacz temat [Deploying an appxbundle with dependencies via Microsoft Intune MDM](https://blogs.technet.microsoft.com/configmgrdogs/2016/11/30/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm/) (Wdrażanie pliku appxbundle z zależnościami poprzez rozwiązanie MDM programu Microsoft Intune).  

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d09857c4e5b63947a6e3b3140f673f0887f7f920
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 40337b3c45885dacf486173814044a27b7f3f6cc
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563413"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755072"
 ---
 # <a name="quickstart-add-and-assign-a-client-app"></a>Szybki start: Dodawanie i przypisywanie aplikacji klienckiej
 
@@ -45,20 +45,18 @@ Po dodaniu aplikacji usługa Intune może zarządzać jej aspektami.
 
 Aby dodać aplikację do usługi Intune, wykonaj następujące czynności:
 1. W usłudze [Intune](https://aka.ms/intuneportal) wybierz kolejno pozycje **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**. 
-2. Wybierz pozycję **Windows 10** w sekcji **Pakiet Office 365** na liście rozwijanej **Typ aplikacji**.
-3. Wybierz pozycję **Skonfiguruj pakiet aplikacji** w celu wybrania aplikacji pakietu Office, który zostaną przypisane do użytkownika usługi Intune.
-4. Kliknij przycisk **OK**, aby zaakceptować domyślnie wybrane aplikacje.
-5. Wybierz pozycję **Informacje o pakiecie aplikacji**.
-6. Wprowadź tekst **Pakiet aplikacji usługi Microsoft Office 365** w polu **Nazwa pakietu**.
-7. Wprowadź **Pakiet aplikacji usługi Microsoft Office 365** jako **Opis pakietu**.
-8. Kliknij przycisk **Tak** obok pozycji **Wyświetl jako polecaną aplikację w Portalu firmy**.
-9. Kliknij przycisk **OK**.
-
-    ![Zrzut ekranu przedstawiający dodawanie informacji o aplikacji](./media/quickstart-add-assign-app/quickstart-add-assign-app-01.png)
-
-10. Wybierz pozycję **Ustawienia pakietu aplikacji**.
-11. Z listy rozwijanej **Kanał aktualizacji** wybierz pozycję **Co miesiąc**.
-12. Kliknij przycisk **OK** > **Dodaj**.
+2. Wybierz pozycję **Windows 10** w sekcji **Pakiet Office 365** okienka **Wybierz typ aplikacji**.
+3. Kliknij pozycję **Wybierz**. Zostaną wyświetlone kroki **dodawania aplikacji**.
+4. Potwierdź szczegóły domyślne na stronie **informacji o pakiecie aplikacji**.
+5. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Konfigurowanie pakietu aplikacji**.
+6. Obok pozycji **Kanał aktualizacji** wybierz pozycję **Co miesiąc** z pola listy rozwijanej.
+7. Potwierdź pozostałe szczegóły domyślne na stronie ***Konfigurowanie pakietu aplikacji**.
+8. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Tagi zakresu**.
+9. Kliknij pozycję **Wybierz tagi zakresu**, aby opcjonalnie dodać tagi zakresu dla aplikacji. Aby uzyskać więcej informacji, zobacz temat [Używanie kontroli dostępu opartej na rolach i tagów zakresu w rozproszonej infrastrukturze informatycznej](~/fundamentals/scope-tags.md).
+10. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Przypisania**.
+11. Wybierz przypisania grupy dla aplikacji. Aby uzyskać więcej informacji, zobacz temat [Dodawanie grup w celu organizowania użytkowników i urządzeń](~/fundamentals/groups-add.md). 
+12. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Recenzja i tworzenie**. Przejrzyj wartości i ustawienia wprowadzone dla aplikacji.
+13. Gdy skończysz, kliknij pozycję **Utwórz**, aby dodać aplikację do usługi Intune.
 
 ## <a name="assign-the-app-to-a-group"></a>Przypisywanie aplikacji do grupy
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/30/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c9d792bd07ae8d7d712748874d64314dd258c5e8
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: fa4510b95e1e84d9f94158833dac555daa33c690
+ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563943"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912561"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Wdrażanie aplikacji systemu Windows 10 przy użyciu usługi Microsoft Intune 
 
@@ -40,11 +40,31 @@ Aplikacje obsługiwane na urządzeniach z systemem Windows 10 to aplikacje bizne
 >
 > Wdrażanie aplikacji biznesowych nie jest obsługiwane na urządzeniach z systemem Windows 10 Home.
 
+## <a name="supported-windows-10-app-types"></a>Obsługiwane typy aplikacji systemu Windows 10
+
+Określone typy aplikacji są obsługiwane w oparciu o wersję systemu Windows 10 uruchamianą przez użytkowników. Poniższa tabela zawiera informacje o typie aplikacji i możliwości jego obsługi w systemie Windows 10.
+
+| Typ aplikacji | Domowy | Pro | Firmowe | Enterprise | Edukacja | S-Mode | HoloLens | SurfaceHub | WCOS | Telefon komórkowy |
+|----------------|------|-----|----------|------------|-----------|--------|-----------|------------|------|--------|
+|  .MSI | Nie | Tak | Tak | Tak | Tak | Nie | Nie | Nie | Nie | Nie |
+| .IntuneWin | Nie | Tak | Tak | Tak | Tak | 19H2+ | Nie | Nie | Nie | Nie |
+| Office C2R | Nie | Tak | Tak | Tak | Tak | Nie | Nie | Nie | Nie | Nie |
+| LOB: APPX/MSIX | Tak | Tak | Tak | Tak | Tak | Tak | Tak | Tak | Tak | Tak |
+| MSFB w trybie offline | Tak | Tak | Tak | Tak | Tak | Tak | Tak | Tak | Tak | Tak |
+| MSFB w trybie online | Tak | Tak | Tak | Tak | Tak | Tak | RS4+ | Tak | Tak | Tak |
+| Aplikacje internetowe | Tak | Tak | Tak | Tak | Tak | Tak | Tak<sup>1 | Tak<sup>1 | Tak | Tak |
+| Link do sklepu | Tak | Tak | Tak | Tak | Tak | Tak | Tak | Tak | Tak | Tak |
+
+<sup>1</sup> Uruchamianie tylko z poziomu portalu firmy.
+
+> [!NOTE]
+> Wszystkie typy aplikacji systemu Windows wymagają rejestracji.
+
 ## <a name="windows-10-lob-apps"></a>Aplikacje biznesowe systemu Windows 10
 
 Aplikacje biznesowe systemu Windows 10 można podpisywać i przekazywać do konsoli administracyjnej usługi Intune. Mogą one obejmować aplikacje nowoczesne, takie jak aplikacje platformy uniwersalnej systemu Windows oraz pakiety aplikacji systemu Windows (AppX), oraz aplikacje Win 32, takie jak proste pliki pakietu instalatora Microsoft (MSI). Administrator musi ręcznie przekazywać i wdrażać aktualizacje aplikacji biznesowych. Te aktualizacje są instalowane automatycznie na urządzeniach użytkowników, na których zainstalowano aplikację. Interwencja użytkownika nie jest wymagana, a użytkownik nie ma kontroli nad aktualizacjami. 
 
-## <a name="microsoft-store-for-business-apps"></a>Aplikacje ze Sklepu Microsoft dla Firm
+## <a name="microsoft-store-for-business-apps"></a>Aplikacje ze sklepu Microsoft Store dla Firm
 
 Aplikacje ze sklepu Microsoft Store dla Firm to nowoczesne aplikacje zakupione w portalu administratora w sklepie Microsoft Store dla Firm. Następnie są one synchronizowane z usługą Microsoft Intune w celu zarządzania nimi. Aplikacje mogą być licencjonowane w trybie online lub licencjonowane w trybie offline. Sklep Microsoft Store bezpośrednio zarządza aktualizacjami bez konieczności wykonywania dodatkowych czynności przez administratora. Administrator może również uniemożliwić aktualizacje określonych aplikacji przy użyciu niestandardowego identyfikatora URI. Aby uzyskać więcej informacji, zobacz [Enterprise app management — Prevent app from automatic updates (Zarządzanie aplikacjami dla przedsiębiorstw — zapobieganie automatycznym aktualizacjom aplikacji)](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates). Użytkownik końcowy może również wyłączyć aktualizowanie wszystkich aplikacji ze sklepu Microsoft dla Firm na urządzeniu. 
 
@@ -52,7 +72,7 @@ Aplikacje ze sklepu Microsoft Store dla Firm to nowoczesne aplikacje zakupione w
 Aby ustalić kategorie aplikacji ze sklepu Microsoft Store dla Firm, wykonaj następujące czynności: 
 
 1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Wybierz kolejno pozycje **Aplikacje** > **Wszystkie aplikacje**. 
+2. Wybierz pozycję **Aplikacje** > **Wszystkie aplikacje**. 
 3. Wybierz aplikację ze sklepu Microsoft Store dla Firm. Następnie wybierz pozycje **Właściwości** > **Informacje o aplikacji** > **Kategoria**. 
 4. Wybierz kategorię.
 
@@ -60,22 +80,28 @@ Aby ustalić kategorie aplikacji ze sklepu Microsoft Store dla Firm, wykonaj nas
 W zależności od typu aplikacji można zainstalować ją na urządzeniu z systemem Windows 10, korzystając z jednego z dwóch sposobów:
 
 - **Kontekst użytkownika**: Po wdrożeniu aplikacji w kontekście użytkownika zarządzana aplikacja zostanie zainstalowana na urządzeniu tego użytkownika, gdy zaloguje się on na urządzeniu. Należy pamiętać, że instalacja aplikacji nie powiedzie się, jeśli użytkownik nie zaloguje się na urządzeniu. 
-  - Nowoczesne aplikacje biznesowe i aplikacje ze sklepu Microsoft Store dla Firm (zarówno w trybie online, jak i offline) mogą być wdrażane w kontekście użytkownika. Aplikacje te obsługują zarówno intencję wymaganą, jak i dostępną.
+  - Nowoczesne aplikacje LOB i aplikacje ze sklepu Microsoft Store dla Firm (zarówno w trybie online, jak i offline) mogą być wdrażane w kontekście użytkownika. Aplikacje te obsługują zarówno intencję wymaganą, jak i dostępną.
   - Aplikacje Win32 tworzone jako aplikacje typu Tryb użytkownika lub Tryb podwójny mogą być wdrażane w kontekście użytkownika i obsługują zarówno wymaganą, jak i dostępną intencję. 
 - **Kontekst urządzenia**: Po wdrożeniu aplikacji w kontekście urządzenia zarządzana aplikacja jest instalowana bezpośrednio na urządzeniu przez usługę Intune.
-  - Tylko nowoczesne aplikacje biznesowe oraz aplikacje ze sklepu Microsoft Store dla Firm licencjonowane offline mogą być wdrażane w kontekście urządzenia. Te aplikacje obsługują tylko intencję wymaganą.
+  - Tylko nowoczesne aplikacje LOB oraz aplikacje ze sklepu Microsoft Store dla Firm licencjonowane offline mogą być wdrażane w kontekście urządzenia. Te aplikacje obsługują tylko intencję wymaganą.
   - Aplikacje Win32 tworzone jako aplikacje typu Tryb komputera lub Tryb podwójny mogą być wdrażane w kontekście użytkownika i obsługują tylko wymaganą intencję.
 
 > [!NOTE]
 > Dla aplikacji Win32 tworzonych jako aplikacje typu Tryb podwójny administrator musi dla wszystkich przypisań skojarzonych z tym wystąpieniem określić, czy aplikacja będzie działać jako aplikacja trybu użytkownika, czy aplikacja trybu komputera. Nie można zmienić kontekstu wdrożenia dla poszczególnych przypisań.  
 
-Po wdrożeniu aplikacji w kontekście urządzenia instalacja zakończy się powodzeniem pod warunkiem, że wskazane urządzenie obsługuje kontekst urządzenia. Ponadto wdrażanie w kontekście urządzenia podlega następującym warunkom:
-- Jeśli aplikacja jest wdrażana w kontekście urządzenia i przeznaczona dla użytkownika, instalacja nie powiedzie się. W konsoli administracyjnej jest wyświetlany następujący stan i błąd:
+Aplikacje można instalować tylko w kontekście urządzenia, jeśli są obsługiwane przez urządzenie i typ aplikacji usługi Intune. W kontekście urządzenia można instalować następujące typy aplikacji i przypisywać je do grupy urządzeń:
+
+- Aplikacje Win32
+- Aplikacje ze sklepu Microsoft Store dla Firm licencjonowane w trybie online
+- Aplikacje LOB (MSI, APPX i MSIX)
+- Office 365 ProPlus
+
+Aplikacje LOB systemu Windows (w tym APPX i MSIX) oraz aplikacje ze sklepu Microsoft Store dla Firm (aplikacje w trybie offline), które zostały wybrane do zainstalowania w kontekście urządzenia, muszą zostać przypisane do grupy urządzeń. Instalacja nie powiedzie się, jeśli jedna z tych aplikacji zostanie wdrożona w kontekście użytkownika. W konsoli administracyjnej jest wyświetlany następujący stan i błąd:
   - Stan: Niepowodzenie.
   - Błąd: Dla użytkownika nie można przeprowadzić instalacji z kontekstu urządzenia.
-- Jeśli aplikacja jest wdrażana w kontekście urządzenia, ale jest przeznaczona dla urządzenia, które nie obsługuje kontekstu urządzenia, instalacja zakończy się niepowodzeniem. W konsoli administracyjnej jest wyświetlany następujący stan i błąd:
-  - Stan: Niepowodzenie.
-  - Błąd: Ta platforma nie obsługuje instalacji w kontekście urządzenia. 
+
+> [!IMPORTANT]
+> Jeśli aplikacje LOB i aplikacje ze sklepu Microsoft Store dla Firm wdrożone w kontekście urządzenia są używane w połączeniu ze scenariuszem dokładnego aprowizowania rozwiązania Autopilot, nie ma potrzeby wybierania docelowej grupy urządzeń. Aby uzyskać więcej informacji, zobacz temat [Windows Autopilot white glove deployment](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove) (Dokładne wdrażanie rozwiązania Windows Autopilot).
 
 > [!Note]
 > Po zapisaniu przypisania aplikacji w konkretnym wdrożeniu nie można zmienić kontekstu tego przypisania. Wyjątkiem są nowoczesne aplikacje. W przypadku nowoczesnych aplikacji można zmienić kontekst z kontekstu użytkownika na kontekst urządzenia. 

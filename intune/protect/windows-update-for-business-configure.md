@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/14/2020
+ms.date: 01/29/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dc9dd03714e24dae4b0c7afe9206c6a8d7d36c13
-ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
+ms.openlocfilehash: e478402f826809bda4f81315d5a1a4ff6e1a8b88
+ms.sourcegitcommit: 5ad0ce27a30ee3ef3beefc46d2ee49db6ec0cbe3
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75956286"
+ms.lasthandoff: 01/30/2020
+ms.locfileid: "76886801"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Zarządzanie aktualizacjami oprogramowania systemu Windows 10 w usłudze Intune
 
@@ -205,20 +205,22 @@ Gdy urządzenie otrzyma zasady aktualizacji funkcji systemu Windows 10:
 
 - W przeciwieństwie do użycia w stosunku do pierścienia aktualizacji akcji *Wstrzymaj*, która wygaśnie po 35 dniach, zasady aktualizacji funkcji systemu Windows 10 nadal obowiązują. Urządzenia nie będą instalować nowej wersji systemu Windows, dopóki zasady aktualizacji funkcji systemu Windows 10 nie zostaną zmodyfikowane lub usunięte. Jeśli edytujesz zasady w celu określenia nowszej wersji, urządzenia będą mogły zainstalować funkcje z tej wersji systemu Windows.
 
+### <a name="prerequisites-for-windows-10-feature-updates"></a>Warunki wstępne dotyczące aktualizacji funkcji systemu Windows 10
+
+Aby korzystać z aktualizacji funkcji systemu Windows 10 w usłudze Intune, należy spełnić poniższe wymagania wstępne.
+
+- Urządzenia muszą zostać zarejestrowane w oprogramowania do zarządzania urządzeniami mobilnymi usługi Intune i dołączone do usługi Azure AD lub zarejestrowane w usłudze Azure AD.
+- Aby można było używać zasad aktualizacji funkcji w usłudze Intune, na urządzeniach należy włączyć funkcję telemetrii z minimalnym ustawieniem [*Podstawowa*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry). Telemetria jest konfigurowana w obszarze *Raportowanie i telemetria* w ramach [zasad ograniczeń urządzeń](../configuration/device-restrictions-configure.md).
+  
+  Urządzenia, które otrzymują zasady aktualizacji funkcji i które mają telemetrię ustawioną na *Nie skonfigurowano* (wyłączoną), mogą mieć zainstalować nowszą wersję systemu Windows niż zdefiniowana w zasadach aktualizacji funkcji. Wymaganie wstępne, które wskazuje, że telemetria ma być wymagana, jest obecnie analizowane, ponieważ ta funkcja zmierza w kierunku ogólnej dostępności.
+
 ### <a name="limitations-for-windows-10-feature-updates"></a>Ograniczenia dotyczące aktualizacji funkcji systemu Windows 10
 
 - Po wdrożeniu zasad *aktualizacji funkcji systemu Windows 10* na urządzeniu, które otrzymuje również *pierścień aktualizacji systemu Windows 10*, przejrzyj pierścień aktualizacji pod kątem następujących konfiguracji:
   - Opcja **Okres odroczenia aktualizacji funkcji (dni)** musi być ustawiona na **0**.
   - Aktualizacje funkcji dla pierścienia aktualizacji muszą być *uruchomione*. Nie mogą być wstrzymane.
 
-- Zasady aktualizacji funkcji systemu Windows 10 nie mogą być stosowane w trybie OOBE (out-of-box experience). Zostaną one zastosowane podczas pierwszego skanowania funkcji Windows Update po ukończeniu aprowizacji urządzenia (zazwyczaj trwa to jeden dzień). Ponadto urządzenia aprowizowane przy użyciu rozwiązania AutoPilot nie otrzymają zasad.
-
-  To ograniczenie jest badane w celu sprawdzenia, czy może być obsługiwane w przyszłości.
-
-> [!IMPORTANT]
-> Aby można było używać zasad aktualizacji funkcji w usłudze Intune, na urządzeniach należy włączyć funkcję telemetrii z minimalnym ustawieniem [*Podstawowa*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry). Telemetria jest konfigurowana w obszarze *Raportowanie i telemetria* w ramach [zasad ograniczeń urządzeń](../configuration/device-restrictions-configure.md).
->
-> Urządzenia, które otrzymują zasady aktualizacji funkcji i które mają telemetrię ustawioną na *Nie skonfigurowano* (wyłączoną), mogą mieć zainstalować nowszą wersję systemu Windows niż zdefiniowana w zasadach aktualizacji funkcji. Wymaganie wstępne, które wskazuje, że telemetria ma być wymagana, jest obecnie analizowane, ponieważ ta funkcja zmierza w kierunku ogólnej dostępności.
+- Zasady aktualizacji funkcji systemu Windows 10 nie mogą być stosowane w trybie OOBE (out-of-box experience) rozwiązania Autopilot. Zostaną one zastosowane tylko podczas pierwszego skanowania funkcji Windows Update po ukończeniu aprowizacji urządzenia (zazwyczaj trwa to jeden dzień).
 
 ### <a name="create-and-assign-windows-10-feature-updates"></a>Tworzenie i przypisywanie aktualizacji funkcji systemu Windows 10
 
@@ -242,10 +244,12 @@ W tym okienku można:
 - Wybrać pozycję **Właściwości**, aby zmodyfikować wdrożenie.  W okienku *Właściwości* wybierz pozycję **Edytuj**, aby otworzyć obszar *ustawień wdrożenia lub przydziałów*, w którym można następnie zmodyfikować wdrożenie.
 - Wybrać pozycję **Stan aktualizacji użytkownika końcowego**, aby wyświetlić informacje dotyczące zasad.
 
+## <a name="validation-and-reporting-for-windows-10-updates"></a>Walidacja i raportowanie na potrzeby aktualizacji systemu Windows 10
+
+W przypadku pierścieni aktualizacji systemu Windows 10 i aktualizacji funkcji systemu Windows 10 użyj [raportów zgodności usługi Intune na potrzeby aktualizacji](../windows-update-compliance-reports.md) do monitorowania stanu aktualizacji urządzeń. To rozwiązanie używa funkcji [Update Compliance](https://docs.microsoft.com/windows/deployment/update/update-compliance-monitor) z subskrypcją platformy Azure.
+
 ## <a name="next-steps"></a>Następne kroki
 
 [Ustawienia aktualizacji systemu Windows obsługiwane przez usługę Intune](../windows-update-settings.md)
-
-[Raporty zgodności usługi Intune dla aktualizacji](../windows-update-compliance-reports.md)
 
 [Rozwiązywanie problemów z pierścieniami aktualizacji systemu Windows 10](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-Windows-10-Update-Ring-Policies/ba-p/714046)

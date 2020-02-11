@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/22/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a92699ccce4f0b2590e526b3442cd45bfda6407c
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: e299601f69a7052ea52f9da2537306cb8556982b
+ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563599"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755378"
 ---
 # <a name="add-built-in-apps-to-microsoft-intune"></a>Dodawanie wbudowanych aplikacji do usługi Microsoft Intune
 
@@ -38,33 +38,44 @@ We wcześniejszych wersjach konsoli usługi Intune usługa Intune udostępniała
 
 Aby dodać aplikację wbudowaną do dostępnych dla Ciebie aplikacji w usłudze Microsoft Intune, wykonaj następujące czynności:
 1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Wybierz kolejno pozycje **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**.
-3. W okienku aplikacji **Dodaj** z listy **Typ aplikacji** wybierz pozycję **Aplikacja wbudowana**.
-4. Wybierz pozycję **Wybierz aplikację**.
-5. W okienku **Aplikacja wbudowana** wybierz aplikacje, które chcesz dołączyć.
-6. W okienku **Dodaj aplikację** wybierz pozycję **Dodaj**.
+2. Wybierz pozycję **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**.
+3. W okienku **Wybierz typ aplikacji** w obszarze dostępnych typów **Aplikacja ze sklepu** wybierz pozycję **Aplikacja wbudowana**.
+4. Kliknij pozycję **Wybierz**. Zostaną wyświetlone kroki **dodawania aplikacji**.
+5. Na stronie **Wybierz aplikacje wbudowane** kliknij pozycję **Wybierz aplikację**, aby wybrać aplikacje, które chcesz uwzględnić.
+6. Wybierz aplikacje wbudowane do uwzględnienia. 
+7. Po wybraniu aplikacji kliknij pozycję **Wybierz** w okienku **Wybierz wbudowane aplikacje**.
+8. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Tagi zakresu**.
+9. Kliknij pozycję **Wybierz tagi zakresu**, aby opcjonalnie dodać tagi zakresu dla aplikacji. Aby uzyskać więcej informacji, zobacz temat [Używanie kontroli dostępu opartej na rolach i tagów zakresu w rozproszonej infrastrukturze informatycznej](~/fundamentals/scope-tags.md).
+10. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Przypisania**.
+11. Wybierz przypisania grupy dla aplikacji. Aby uzyskać więcej informacji, zobacz temat [Dodawanie grup w celu organizowania użytkowników i urządzeń](~/fundamentals/groups-add.md). 
+12. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Recenzja i tworzenie**. Przejrzyj wartości i ustawienia wprowadzone dla aplikacji.
+13. Gdy skończysz, kliknij pozycję **Utwórz**, aby dodać aplikację do usługi Intune.
 
+    Zostanie wyświetlony blok **Omówienie** dotyczący utworzonej aplikacji.
 
 ## <a name="configure-app-information"></a>Konfigurowanie informacji o aplikacji
 
 Możesz zmodyfikować informacje o wbudowanej aplikacji. Te informacje pomagają zidentyfikować aplikację w usłudze Intune i ułatwiają użytkownikom odnalezienie aplikacji w portalu firmy.
 1. Wybierz kolejno pozycje **Aplikacje** > **Wszystkie aplikacje** i wybierz wbudowaną aplikację, którą chcesz zmodyfikować.  
    Zostanie wyświetlone okienko dla wbudowanej aplikacji.
-2. Wybierz pozycje **Właściwości** > **Konfiguruj**.
+2. Wybierz pozycję **Właściwości**.
+3. Wybierz pozycję **Edytuj** obok pozycji **Informacje o aplikacji**.
 4. W okienku **Informacje o aplikacji** możesz zmodyfikować następujące informacje:
     - **Nazwa**: wprowadź nazwę wbudowanej aplikacji taką, jaka jest wyświetlana w Portalu firmy. Upewnij się, że wszystkie używane nazwy są unikatowe. Jeśli dana nazwa aplikacji występuje dwa razy, użytkownicy Portalu firmy będą widzieć tylko jedną z aplikacji o tej nazwie.
     - **Opis**: Wprowadź opis aplikacji. 
     - **Wydawca**: Wprowadź nazwę wydawcy aplikacji.
     - **Kategoria**: opcjonalnie wybierz przynajmniej jedną z kategorii wbudowanych aplikacji. Ustawienie tej opcji ułatwi użytkownikom znajdowanie aplikacji podczas przeglądania Portalu firmy.
-    - **Wyświetl jako polecaną aplikację w portalu firmy**: Wyróżnij aplikację na stronie głównej Portalu firmy dla użytkowników przeglądających aplikacje.
+    - **Pokaż jako polecaną aplikację w Portalu firmy**: Wyróżnij aplikację na stronie głównej Portalu firmy dla użytkowników przeglądających aplikacje.
     - **Adres URL informacji**: Opcjonalnie wprowadź adres URL witryny sieci Web zawierającej informacje o tej aplikacji. Adres będzie widoczny dla użytkowników Portalu firmy.
     - **Adres URL zasad ochrony prywatności**: Opcjonalnie wprowadź adres URL witryny sieci Web zawierającej informacje dotyczące zasad ochrony prywatności w tej aplikacji. Adres będzie widoczny dla użytkowników Portalu firmy.
     - **Deweloper**: opcjonalnie wprowadź nazwę dewelopera aplikacji.
     - **Właściciel**: opcjonalnie wprowadź nazwę właściciela aplikacji (na przykład *Dział kadr*).
     - **Uwagi**: wprowadź wszelkie uwagi, które chcesz skojarzyć z tą aplikacją.
     - **Przekaż ikonę**: przekaż ikonę, która jest wyświetlana jako ikona aplikacji podczas przeglądania portalu firmy.
-4. Wybierz przycisk **OK**.
-5. W okienku **Właściwości** wybierz pozycję **Zapisz**.
+5. Kliknij pozycję **Przejrzyj i zapisz**, aby wyświetlić stronę **Przeglądanie + tworzenie**. Przejrzyj wartości i ustawienia wprowadzone dla aplikacji.
+13. Gdy skończysz, kliknij pozycję **Zapisz**, aby zaktualizować aplikację w usłudze Intune.
+
+    Zostanie wyświetlony blok **Omówienie** dotyczący utworzonej aplikacji.
 
 ## <a name="next-steps"></a>Następne kroki
 

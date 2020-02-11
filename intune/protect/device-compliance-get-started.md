@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 83b8c48d2bb594ca8b9c527d78922332e582363f
-ms.sourcegitcommit: 66e284fe092e19c1da72b4b770e45bf25ac7910c
+ms.openlocfilehash: a56d8f7aface3628ba5bc8985128ebb49c9cf404
+ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74860299"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812169"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Ustawianie zasad na urządzeniach w celu umożliwienia dostępu do zasobów w organizacji za pomocą usługi Intune
 
@@ -92,6 +92,10 @@ Usługa Intune oferuje również zestaw wbudowanych ustawień zasad zgodności. 
   - **Niezgodne**: funkcja zabezpieczeń włączona
 
   Jeśli do urządzenia nie są przypisane zasady zgodności, jest ono domyślnie traktowane jako zgodne. Jeśli używasz dostępu warunkowego wykorzystując zasady zgodności, zalecamy zmianę domyślnego ustawienia na **Niezgodne**. Jeśli użytkownik końcowy jest niezgodny, ponieważ zasady nie zostały przypisane, w [aplikacji Portal firmy](../apps/company-portal-app.md) zostanie wyświetlony komunikat `No compliance policies have been assigned`.
+
+
+> [!NOTE]
+> Rozszerzone wykrywanie jailbreaku dla urządzeń z systemem iOS zostało tymczasowo wyłączone w usłudze Intune.
 
 - **Rozszerzone wykrywanie jailbreaku**: włączenie tego ustawienia powoduje, że urządzenia z systemem iOS są częściej ewidencjonowane w usłudze Intune. Włączenie tej właściwości powoduje użycie usług lokalizacyjnych urządzenia i wpływa na użycie baterii. Dane lokalizacji użytkownika nie są przechowywane przez usługę Intune.
 
