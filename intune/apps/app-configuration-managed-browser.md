@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 01/27/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 52f907b8762322684ec9e21910745a197c3dbe4e
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: babe556d6810ad027a1b0b3cae6364c99bc9a07c
+ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564314"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812513"
 ---
 # <a name="manage-web-access-using-a-microsoft-intune-policy-protected-browser"></a>Zarządzanie dostępem do Internetu za pomocą przeglądarki zabezpieczonej przy użyciu zasad w usłudze Microsoft Intune
 
@@ -33,9 +33,12 @@ Korzystając z przeglądarki zabezpieczonej przy użyciu zasad usługi Intune (M
 
 - Zasady ochrony aplikacji
 - Dostęp warunkowy
-- Logowanie jednokrotne
+- Rejestracja jednokrotna
 - Ustawienia konfiguracji aplikacji
 - Integracja serwera proxy aplikacji platformy Azure
+
+> [!IMPORTANT]
+> Program Intune Managed Browser zostanie wycofany. W celu zapewnienia chronionego środowiska przeglądarki w usłudze Intune należy używać przeglądarki Microsoft Edge. 
 
 ## <a name="microsoft-edge-support"></a>Obsługa przeglądarki Microsoft Edge
 

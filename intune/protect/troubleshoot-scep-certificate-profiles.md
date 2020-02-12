@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae7ffe5a8c20aa7edd67853ff86ef9e28cf2d175
-ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
+ms.openlocfilehash: 38bc86b1b9ba85eb7885a0e00673e551821063c1
+ms.sourcegitcommit: 459b0ee01eb6e69cc0ce66d4c4b81d73f510f96d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76915827"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77034247"
 ---
 # <a name="overview-for-troubleshooting-scep-certificate-profiles-with-microsoft-intune"></a>Omówienie rozwiązywania problemów z profilami certyfikatów SCEP w usłudze Microsoft Intune
 
@@ -115,11 +115,11 @@ Poniższa lista zawiera dzienniki lub konsole, do których odwołują się kolej
 
 ### <a name="logs-for-android-devices"></a>Dzienniki dotyczące urządzeń z systemem Android
 
-W przypadku urządzeń z systemem Android użyj pliku dziennika aplikacji **Portal firmy dla systemu Android** o nazwie **OMADM.log**. Przed zebraniem i przejrzeniem dzienników upewnij się, że włączono [pełne rejestrowanie](/intune-user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md), a następnie odtwórz problem.
+W przypadku urządzeń z systemem Android użyj pliku dziennika aplikacji **Portal firmy dla systemu Android** o nazwie **OMADM.log**. Przed zebraniem i przejrzeniem dzienników upewnij się, że włączono [pełne rejestrowanie](/intune-user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android), a następnie odtwórz problem.
 
-Aby zebrać plik OMADM.logs z urządzenia, zobacz temat [Przekazywanie i przesyłanie dzienników pocztą e-mail przy użyciu kabla USB](/intune-user-help/send-logs-to-your-it-admin-using-cable-android.md).
+Aby zebrać plik OMADM.logs z urządzenia, zobacz temat [Przekazywanie i przesyłanie dzienników pocztą e-mail przy użyciu kabla USB](/intune-user-help/send-logs-to-your-it-admin-using-cable-android).
 
-Możesz również [przekazywać dzienniki i wysyłać je pocztą e-mail](/intune-user-help/send-logs-to-your-it-admin-by-email-android.md#upload-and-email-logs-from-microsoft-intune-app) w celu obsługi.
+Możesz również [przekazywać dzienniki i wysyłać je pocztą e-mail](/intune-user-help/send-logs-to-your-it-admin-by-email-android#upload-and-email-logs-from-microsoft-intune-app) w celu obsługi.
 
 ### <a name="logs-for-ios-and-ipados-devices"></a>Dzienniki dotyczące urządzeń z systemem iOS i iPadOS
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b2c6463ddce7d04168e1929414faf441ae415837
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 581d88e49391bc874625e9c84318c039706b0c1b
+ms.sourcegitcommit: e1ff157f692983b49bdd6e20cc9d0f93c3b3733c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563841"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124830"
 ---
 # <a name="connect-your-intune-account-to-your-managed-google-play-account"></a>Łączenie konta usługi Intune z kontem zarządzanego sklepu Google Play
 
@@ -33,9 +33,9 @@ Aby obsługiwać [urządzenia z profilami służbowymi systemu Android Enterpris
 
 Aby ułatwić Ci konfigurowanie i używanie funkcji zarządzania systemu Android Enterprise, podczas łączenia ze sklepem Google Play usługa Intune automatycznie doda do konsoli administracyjnej cztery popularne aplikacje powiązane z systemem Android Enterprise. Są to następujące cztery aplikacje w usłudze Android Enterprise:
 
-- **[Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune)**  — używana w scenariuszach w pełni zarządzanych za pomocą Android Enterprise.
+- **[Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune)** — używana w scenariuszach w pełni zarządzanych za pomocą Android Enterprise.
 - **[Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator)** — pomaga zalogować się do kont w przypadku używania weryfikacji dwuskładnikowej.
-- **[Intune — Portal firmy](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)**  — używana w przypadku scenariuszy obejmujących zasady ochrony aplikacji i profil służbowy Android Enterprise.
+- **[Intune — Portal firmy](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)** — używana w przypadku scenariuszy obejmujących zasady ochrony aplikacji i profil służbowy Android Enterprise.
 - [Zarządzany ekran główny](https://play.google.com/store/apps/details?id=com.microsoft.launcher.enterprise) — używana w scenariuszach z użyciem Android Enterprise dla urządzeń dedykowanych/działających w trybie kiosku.
 
 > [!NOTE]
@@ -69,4 +69,4 @@ Rejestrację systemu Android Enterprise i zarządzanie w tym systemu możesz wy�
 
 ## <a name="next-steps"></a>Następne kroki
 
-Po nawiązaniu połączenia z kontem zarządzanego sklepu Google Play możesz [skonfigurować urządzenia z profilem służbowym systemu Android Enterprise](android-work-profile-enroll.md), [skonfigurować dedykowane urządzenia z systemem Android Enterprise](android-kiosk-enroll.md) oraz [skonfigurować w pełni zarządzane urządzenia z systemem Android Enterprise](android-kiosk-enroll.md)
+Po nawiązaniu połączenia z kontem zarządzanego sklepu Google Play możesz [skonfigurować urządzenia z profilem służbowym systemu Android Enterprise](android-work-profile-enroll.md), [skonfigurować dedykowane urządzenia z systemem Android Enterprise](android-kiosk-enroll.md) oraz [skonfigurować w pełni zarządzane urządzenia z systemem Android Enterprise](android-fully-managed-enroll.md)
