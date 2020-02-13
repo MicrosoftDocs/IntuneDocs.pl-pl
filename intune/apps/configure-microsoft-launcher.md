@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1dc2e2ce7e19933accdb1063ccacf99fa3f54b09
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: b0145a17434d8b309806f468bf066d54ae117144
+ms.sourcegitcommit: 1aaff35fddb3d06458d739968d28971fed0bb2ba
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563965"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77155364"
 ---
 # <a name="configure-microsoft-launcher"></a>Konfigurowanie aplikacji Microsoft Launcher
 
@@ -31,13 +31,13 @@ Microsoft Launcher to aplikacja dla systemu Android, która umożliwia użytkown
 
 Na w pełni zarządzanych urządzeniach z systemem Android Enterprise aplikacja Launcher umożliwia administratorom z działu informatycznego przedsiębiorstwa dostosowanie ekranów głównych urządzeń zarządzanych przez wybranie położeń tapety, aplikacji i ikony. Powoduje to standaryzację wyglądu i działania wszystkich zarządzanych urządzeń z systemem Android na różnych urządzeniach OEM i w różnych wersjach systemu. 
 
-## <a name="how-to-configure-the-microsoft-managed-home-screen-app"></a>Jak skonfigurować aplikację Microsoft Managed Home Screen 
+## <a name="how-to-configure-the-microsoft-launcher-app"></a>Jak skonfigurować aplikację Microsoft Launcher 
 
-Przejdź do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) i wybierz kolejno pozycje **Aplikacje** > **Zasady konfiguracji aplikacji**. Dodaj zasady konfiguracji dla **urządzeń zarządzanych** z systemem **Android**, a następnie wybierz pozycję **Microsoft Launcher** jako skojarzoną aplikację. Kliknij pozycję **Ustawienia konfiguracji**, aby skonfigurować różne dostępne ustawienia aplikacji Managed Home Screen. 
+Przejdź do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) i wybierz kolejno pozycje **Aplikacje** > **Zasady konfiguracji aplikacji**. Dodaj zasady konfiguracji dla **urządzeń zarządzanych** z systemem **Android**, a następnie wybierz pozycję **Microsoft Launcher** jako skojarzoną aplikację. Kliknij pozycję **Ustawienia konfiguracji**, aby skonfigurować różne dostępne ustawienia aplikacji Microsoft Launcher. 
 
 ## <a name="choosing-a-configuration-settings-format"></a>Wybieranie formatu ustawień konfiguracji 
 
-Istnieją dwie metody, których można użyć do definiowania ustawień konfiguracji dla aplikacji Managed Home Screen: 
+Istnieją dwie metody, których można użyć do definiowania ustawień konfiguracji dla aplikacji Microsoft Launcher: 
 
 - **Projektant konfiguracji** pozwala na konfigurowanie ustawień za pomocą łatwego w użyciu interfejsu użytkownika umożliwiającego włączanie lub wyłączanie funkcji i ustawianie wartości. W przypadku tej metody istnieje kilka wyłączonych kluczy konfiguracji z typem wartości BundleArray. Te klucze konfiguracji można skonfigurować tylko przez wprowadzanie danych JSON. 
 
@@ -59,7 +59,7 @@ Poniższa tabela zawiera listę dostępnych kluczy konfiguracji aplikacji Micros
 |---------------------------------------------------|------------------|---------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    Typ rejestracji    |    String     |    Domyślny    |    Pozwala ustawić typ rejestracji, do którego te zasady mają być stosowane. Obecnie wartość **Domyślny** odnosi się do typu **CorporateOwnedBusinessOnly**. Obecnie nie istnieją żadne inne obsługiwane typy rejestracji.        Nazwa klucza JSON: management_mode_key        |
 |    Dopuszczalna zmiana przez użytkownika kolejności aplikacji na ekranie głównym    |    Boolean    |    Prawda    |    Umożliwia określenie, czy ustawienie **Kolejność aplikacji na ekranie głównym** może zostać zmienione przez użytkownika końcowego.<ul><li>W przypadku ustawienia wartości **Prawda** kolejność aplikacji zdefiniowana w zasadach będzie wymuszana tylko dla początkowego wdrożenia. Następnie zasady nie zostaną wymuszone w celu uwzględnienia zmian wprowadzonych przez użytkownika.</li><li>W przypadku ustawienia wartości **Fałsz** kolejność aplikacji będzie wymuszana przy każdej synchronizacji.</li></ul><br>**Uwaga:** Kolejność aplikacji na ekranie głównym można skonfigurować tylko za pomocą edytora JSON.<br><br>Nazwa klucza JSON:<br>`com.microsoft.launcher.HomeScreen.AppOrder.UserChangeAllowed`    |
-|    Set Grid Size (Ustaw rozmiar siatki)    |    String    |    Automatycznie    |    Umożliwia ustawienie rozmiaru siatki dla aplikacji, które mają zostać umieszczone na ekranie głównym. Możesz ustawić liczbę wierszy i kolumn aplikacji, aby zdefiniować rozmiar siatki w następującym formacie: `columns;rows`. Jeśli zdefiniujesz rozmiar siatki, maksymalną liczbą aplikacji, które będą wyświetlane w wierszu na ekranie głównym, będzie liczba ustawionych wierszy, a maksymalną liczbą aplikacji, które będą wyświetlane w kolumnie ekranu głównego, będzie ustawiona liczba kolumn.<br><br>        Nazwa klucza JSON:<br>`com.microsoft.launcher.HomeScreen.GridSize`    |
+|    Set Grid Size (Ustaw rozmiar siatki)    |    String    |    Auto    |    Umożliwia ustawienie rozmiaru siatki dla aplikacji, które mają zostać umieszczone na ekranie głównym. Możesz ustawić liczbę wierszy i kolumn aplikacji, aby zdefiniować rozmiar siatki w następującym formacie: `columns;rows`. Jeśli zdefiniujesz rozmiar siatki, maksymalną liczbą aplikacji, które będą wyświetlane w wierszu na ekranie głównym, będzie liczba ustawionych wierszy, a maksymalną liczbą aplikacji, które będą wyświetlane w kolumnie ekranu głównego, będzie ustawiona liczba kolumn.<br><br>        Nazwa klucza JSON:<br>`com.microsoft.launcher.HomeScreen.GridSize`    |
 |    Ustaw tapetę urządzenia    |    String    |    Zero    |    Umożliwia ustawienie tapety wybranej przez użytkownika poprzez wprowadzenie adresu URL obrazu, który chcesz ustawić jako tapetę.<br><br>Nazwa klucza JSON:<br>`com.microsoft.launcher.Wallpaper.URL`    |
 |    Dozwolona zmiana ustawienia Ustaw tapetę urządzenia przez użytkownika    |    Wartość logiczna    |    Prawda    |    Umożliwia określenie, czy ustawienie Ustaw tapetę urządzenia może zostać zmienione przez użytkownika końcowego.<ul><li>W przypadku ustawienia wartości **Prawda** tapeta w zasadach będzie wymuszana tylko w przypadku początkowego wdrożenia. Następnie zasady nie zostaną wymuszone w celu uwzględnienia zmian wprowadzonych przez użytkownika.</li><li>W przypadku ustawienia wartości **Fałsz** tapeta będzie wymuszana przy każdej synchronizacji.</li></ul><br>Nazwa klucza JSON:<br>`com.microsoft.launcher.Wallpaper.URL.UserChangeAllowed`        |
 |    Włącz kanał informacyjny    |    Boolean    |    Prawda    |    Umożliwia włączenie kanału informacyjnego uruchamiania na urządzeniu, gdy użytkownik szybko przesunie w prawo na ekranie głównym.<ul><li>W przypadku ustawienia wartości **Prawda** kanał informacyjny zostanie włączony.</li><li>W przypadku ustawienia wartości **Fałsz** kanał informacyjny zostanie wyłączony.</li></ul><br>Nazwa klucza JSON:<br>`com.microsoft.launcher.Feed.Enabled`    |

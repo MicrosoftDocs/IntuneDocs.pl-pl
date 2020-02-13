@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/03/2020
+ms.date: 02/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2f46b8c7f0f57ab7831d6487495946aa9326b2d5
-ms.sourcegitcommit: 24487f078349795922dc497c952e8358cf767a1a
+ms.openlocfilehash: dc2e77db1aa322eb70c64d82ddca238f49b39fb2
+ms.sourcegitcommit: e1ff157f692983b49bdd6e20cc9d0f93c3b3733c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76977788"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77125034"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co nowego w usłudze Microsoft Intune
 
@@ -60,32 +60,20 @@ Dowiedz się co tydzień, co nowego w usłudze Microsoft Intune. Możesz tu rów
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="app-management"></a>Zarządzanie aplikacjami
 
+#### <a name="microsoft-edge-version-77-and-later-on-windows-10-devices---5843584---"></a>Microsoft Edge w wersji 77 lub nowszej na urządzeniach z systemem Windows 10<!-- 5843584 -->
+Usługa Intune obsługuje teraz odinstalowywanie przeglądarki Microsoft Edge w wersji 77 lub nowszej na urządzeniach z systemem Windows 10. Aby uzyskać więcej informacji, zobacz [Dodawanie przeglądarki Microsoft Edge dla systemu Windows 10 do usługi Microsoft Intune](~/apps/apps-windows-edge.md).
+
 #### <a name="company-portal-app-improved-performance---6178652---"></a>Ulepszona wydajność aplikacji Portal firmy<!-- 6178652 -->
 Aplikacja Portal firmy została zaktualizowana w celu obsługi ulepszonej wydajności urządzeń z procesorami ARM64, takich jak Surface Pro X. Wcześniej aplikacja Portal firmy działała w trybie emulacji procesora ARM32. Teraz aplikacja Portal firmy jest natywnie skompilowana dla procesora ARM64. Aby uzyskać więcej informacji na temat aplikacji Portal firmy, zobacz [Jak skonfigurować aplikację Portal firmy w usłudze Microsoft Intune](~/apps/company-portal-app.md).
+
+#### <a name="screen-removed-from-company-portal-android-work-profile-enrollment--6103987---"></a>Ekran usunięty z aplikacji Portal firmy, rejestracja profilu służbowego systemu Android<!--6103987 -->
+Ekran **Co dalej?** został usunięty z przepływu rejestracji profilu służbowego systemu Android w aplikacji Portal firmy, aby usprawnić środowisko użytkownika. Przejdź do tematu [Rejestracja przy użyciu profilu służbowego systemu Android](/intune-user-help/enroll-device-android-work-profile), aby zobaczyć zaktualizowany przepływ rejestracji profilu służbowego systemu Android.  
 
 <!-- ########################## -->
 ## <a name="week-of-january-27-2020"></a>Tydzień od 27 stycznia 2020 r.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="app-management"></a>Zarządzanie aplikacjami
-
-#### <a name="new-setting-to-remove-specific-windows-built-in-apps---6184390---"></a>Nowe ustawienie do usuwania określonych wbudowanych aplikacji systemu Windows<!-- 6184390 -->
-Używając nowego ustawienia zasad konfiguracji urządzenia z systemem Windows 10, można usunąć następujące wbudowane aplikacje systemu Windows:
-
-- Przeglądarka rzeczywistości mieszanej
-- MSN Pogoda
-- Instalator aplikacji
-- Wskazówki Microsoft
-- Mój Office
-- Microsoft Solitaire Collection 
-- Plany komórkowe
-- Centrum opinii 
-- Xbox 
-- Muzyka Groove
-- Mail
-- Kalendarz
-
-W centrum administracyjnym programu Microsoft Endpoint Manager wybierz pozycję **Urządzenia** > **Profile konfiguracji** > **Utwórz profil**. Następnie wybierz pozycję **Windows 10 i nowsze** w polu **Platforma**. Wybierz pozycję **Ograniczenia dotyczące urządzeń** w polu **Typ profilu**. Wybierz pozycję **App Store** w okienku **Ograniczenia dotyczące urządzeń**. W dolnej części okienka obok pozycji **Usuń aplikacje wbudowane** wybierz pozycję **Usuń**. Aby uzyskać więcej informacji na temat aplikacji wbudowanych, zobacz [Dodawanie aplikacji wbudowanych do usługi Microsoft Intune](~/apps/apps-add-built-in.md).
 
 #### <a name="intune-support-for-additional-microsoft-edge-version-77-deployment-channel-for-macos---5983950----"></a>Obsługa usługi Intune dla dodatkowego kanału wdrażania programu Microsoft Edge w wersji 77 dla systemu macOS<!-- 5983950  -->
 Usługa Microsoft Intune obsługuje teraz dodatkowy kanał wdrażania **Stabilne** dla aplikacji Microsoft Edge dla systemu macOS. Kanał **Stabilne** to zalecany kanał do szerokiego wdrażania programu Microsoft Edge w środowisku przedsiębiorstwa. Jest aktualizowany co sześć tygodni, a każda wersja zawiera ulepszenia z kanału **Beta**. Oprócz kanałów **Stabilne** i **Beta**, usługa Intune obsługuje kanał **Deweloperzy**. Publiczna wersja zapoznawcza oferuje kanał stabilny i kanał dla deweloperów dla aplikacji Microsoft Edge w wersji 77 lub nowszej dla systemu macOS. Automatyczne aktualizacje przeglądarki są domyślnie włączone. Aby uzyskać więcej informacji, zobacz [Dodawanie przeglądarki Microsoft Edge na urządzeniach z systemem macOS przy użyciu usługi Microsoft Intune](~/apps/apps-edge-macos.md).

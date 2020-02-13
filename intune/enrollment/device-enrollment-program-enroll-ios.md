@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/07/2019
+ms.date: 02/04/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,31 +18,33 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 39775f3acf1a1c3da7c836afe1699958560d509a
-ms.sourcegitcommit: f26039d674eb4d61ab68264dd1a10b2e5e1d842c
+ms.openlocfilehash: b3fe6d1e2a0dcdeafad56d3facccb96f5d0721e4
+ms.sourcegitcommit: 2b905913840d4133a7964fe4f54a58ea6e421e12
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74691850"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074669"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Automatyczne rejestrowanie urządzeń z systemem iOS w ramach programu Device Enrollment Program
 
-Możesz skonfigurować usługę Intune do rejestracji urządzeń z systemem iOS zakupionych w ramach programu [Device Enrollment Program (DEP)](https://deploy.apple.com) firmy Apple. Program DEP umożliwia rejestrację dużej liczby urządzeń nawet bez ich dotykania. Urządzenia, na przykład iPhone i iPad, można dostarczyć bezpośrednio do użytkowników. Gdy użytkownik włączy urządzenie, Asystent ustawień zostanie uruchomiony ze wstępnie skonfigurowanymi ustawieniami, a urządzenie zostanie zarejestrowane w funkcji zarządzania.
+Możesz skonfigurować usługę Intune do rejestracji urządzeń z systemem iOS zakupionych w ramach programu [Device Enrollment Program (DEP)](https://deploy.apple.com) firmy Apple. Program DEP umożliwia rejestrację dużej liczby urządzeń nawet bez ich dotykania. Urządzenia takie jak iPhone, iPad i MacBook można dostarczyć bezpośrednio do użytkowników. Gdy użytkownik włączy urządzenie, Asystent ustawień, który obejmuje środowisko out-of-box experience typowe dla produktów firmy Apple, zostanie uruchomiony ze wstępnie skonfigurowanymi ustawieniami, a urządzenie zostanie zarejestrowane w funkcji zarządzania.
 
-Włączenie rejestracji w programie DEP wymaga użycia zarówno portalu usługi Intune, jak i portalu DEP firmy Apple. Wymagana jest lista numerów seryjnych lub numerów zamówień zakupu, która pozwala przypisać urządzenia do funkcji zarządzania usługi Intune. Możliwe jest utworzenie profilów rejestracji w ramach programu DEP zawierających ustawienia stosowane względem urządzeń podczas rejestracji. Rejestracji DEP nie można używać razem z kontem [menedżera rejestracji urządzeń](device-enrollment-manager-enroll.md).
+Aby włączyć rejestrację w programie DEP, należy użyć portalu usługi Intune i portalu programu Apple Business Manager (ABM) lub portalu programu Apple School Manager (ASM). Wymagana jest lista numerów seryjnych lub numerów zamówień zakupu, aby można było przypisać urządzenia do usługi Intune na potrzeby zarządzania w programie ABM/ASM. W usłudze Intune należy utworzyć profile rejestracji programu DEP zawierające ustawienia stosowane względem urządzeń podczas rejestracji. Rejestracji DEP nie można używać razem z kontem [menedżera rejestracji urządzeń](device-enrollment-manager-enroll.md).
 
 > [!NOTE]
-> Program DEP ustawia konfiguracje urządzeń, które nie mogą zostać usunięte przez użytkownika końcowego. Dlatego przed [migracją do programu DEP](../fundamentals/migration-guide-considerations.md) urządzenie musi zostać wyczyszczone, aby przywrócić je do stanu przed pierwszym użyciem.
+> Program DEP ustawia konfiguracje urządzeń, które nie zawsze mogą zostać usunięte przez użytkownika końcowego. Dlatego przed [migracją do programu DEP](../fundamentals/migration-guide-considerations.md) urządzenie musi zostać wyczyszczone, aby przywrócić je do stanu przed pierwszym użyciem.
 
 ## <a name="dep-and-the-company-portal"></a>Program DEP i aplikacja Portal firmy
 
-Rejestracje programu DEP nie są zgodne z wersją aplikacji Portal firmy ze sklepu z aplikacjami. Możesz przyznać użytkownikom prawa dostępu do aplikacji Portal firmy na urządzeniu DEP. Aby przydzielić prawa dostępu, należy wypchnąć aplikację na urządzenie, korzystając z opcji **Zainstaluj Portal firmy za pomocą programu VPP** (programu zakupów zbiorczych) w profilu programu DEP. Aby uzyskać więcej informacji, zobacz [Automatyczne rejestrowanie urządzeń z systemem iOS w ramach programu Device Enrollment Program firmy Apple](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
+Rejestracje programu DEP nie są zgodne z wersją aplikacji Portal firmy ze sklepu z aplikacjami. Możesz przyznać użytkownikom prawa dostępu do aplikacji Portal firmy na urządzeniu DEP. Ten dostęp można zapewnić, aby umożliwić użytkownikom wybranie aplikacji firmowych, których chcą używać na urządzeniu, lub aby przeprowadzić proces rejestracji przy użyciu nowoczesnego uwierzytelniania. 
 
- Aplikację Portal firmy można zainstalować na urządzeniach już zarejestrowanych przy użyciu programu DEP. W tym celu wdróż aplikację Portal firmy za pomocą usługi Intune z zastosowanymi [zasadami konfiguracji aplikacji](../apps/app-configuration-policies-use-ios.md).
+Aby włączyć nowoczesne uwierzytelnianie podczas rejestracji, wypchnij aplikację na urządzenie, korzystając z opcji **Zainstaluj Portal firmy za pomocą programu VPP** (Volume Purchase Program) w profilu programu DEP. Aby uzyskać więcej informacji, zobacz [Automatyczne rejestrowanie urządzeń z systemem iOS w ramach programu Device Enrollment Program firmy Apple](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
+
+Aby umożliwić automatyczną aktualizację aplikacji Portal firmy i udostępnić ją na urządzeniach już zarejestrowanych w programie DEP, wdróż aplikację Portal firmy za pomocą usługi Intune jako wymaganą aplikację programu Volume Purchase Program (VPP) z zastosowanymi [zasadami konfiguracji aplikacji](../apps/app-configuration-policies-use-ios.md).
 
 ## <a name="what-is-supervised-mode"></a>Co to jest tryb nadzorowany?
 
-Firma Apple wprowadziła tryb nadzorowany w systemie iOS 5. Urządzeniem z systemem iOS w trybie nadzorowanym można zarządzać za pomocą większej liczby kontrolek. W efekcie jest szczególnie przydatne w przypadku urządzeń należących do firmy. Usługa Intune obsługuje konfigurowanie urządzeń dla trybu nadzorowanego w ramach programu Device Enrollment Program (DEP) firmy Apple.
+Firma Apple wprowadziła tryb nadzorowany w systemie iOS 5. Urządzeniem z systemem iOS w trybie nadzorowanym można zarządzać za pomocą większej liczby kontrolek, takich jak blokowanie przechwytywania ekranu i blokowanie instalowania aplikacji ze sklepu App Store. W efekcie jest szczególnie przydatne w przypadku urządzeń należących do firmy. Usługa Intune obsługuje konfigurowanie urządzeń dla trybu nadzorowanego w ramach programu Device Enrollment Program (DEP) firmy Apple.
 
 Obsługa nienadzorowanych urządzeń objętych programem DEP została uznana za przestarzałą w systemie iOS 11. W systemie iOS 11 i nowszych urządzenia skonfigurowane w ramach programu DEP zawsze powinny być nadzorowane. W przyszłych wersjach systemu iOS flaga is_supervised programu DEP zostanie zignorowana.
 
@@ -63,7 +65,7 @@ Obsługa nienadzorowanych urządzeń objętych programem DEP została uznana za 
 
 Aby zarejestrować urządzenia z systemem iOS w ramach programu DEP, należy uzyskać token programu DEP (plik p7m) od firmy Apple. Ten token umożliwia usłudze Intune synchronizację informacji dotyczących urządzeń korzystających z programu DEP należących do firmy. Umożliwia on również usłudze Intune przekazywanie profilów rejestracji do firmy Apple i przypisywanie urządzeń do tych profilów.
 
-W portalu Apple DEP Portal można utworzyć token programu DEP. W tym portalu można również przypisać urządzenia do funkcji zarządzania usługi Intune.
+Token można utworzyć za pomocą portalu programu Apple Business Manager lub Apple School Manager. W portalu programu ABM/ASM można również przypisać urządzenia do usługi Intune w celu zarządzania.
 
 > [!NOTE]
 > Jeśli usuniesz token z portalu klasycznego usługi Intune przed migracją do usługi Azure, usługa Intune może przywrócić usunięty token DEP firmy Apple. Możesz ponownie usunąć token programu DEP z poziomu witryny Azure Portal.
@@ -91,7 +93,7 @@ W portalu Apple DEP Portal można utworzyć token programu DEP. W tym portalu mo
 
 5. Zostanie otwarte okno dialogowe **Add &lt;nazwa_serwera&gt;** (Dodawanie serwera <nazwa_serwera>) z widocznym komunikatem **Upload Your Public Key** (Przekaż klucz publiczny). Wybierz pozycję **Choose File…** (Wybierz plik...) w celu przekazania pliku PEM, a następnie kliknij przycisk **Next** (Dalej).
 
-6. Wybierz kolejno pozycje **Deployment Programs** (Programy wdrażania)&gt; **Device Enrollment Program** (Program rejestracji urządzeń) &gt; **Manage Devices** (Zarządzaj urządzeniami).
+6. Wybierz pozycję **Deployment Program (Program wdrażania)** &gt; **Device Enrollment Program** &gt; **Manage Devices (Zarządzaj urządzeniami)** .
 7. W obszarze **Choose Devices By** (Sposób wybierania urządzeń) określ sposób identyfikowania urządzeń:
     - **Serial Number** (Numer seryjny)
     - **Order Number** (Numer zamówienia)
@@ -101,7 +103,7 @@ W portalu Apple DEP Portal można utworzyć token programu DEP. W tym portalu mo
 
 8. W kroku **Choose Action** (Wybierz akcję) wybierz pozycję **Assign to Server** (Przypisz do serwera), wybierz &lt;nazwę serwera&gt; określoną dla usługi Microsoft Intune, a następnie kliknij przycisk **OK**. Portal firmy Apple przypisze wskazane urządzenia do funkcji zarządzania na serwerze Intune, a następnie wyświetli komunikat **Assignment Complete** (Przypisanie zostało ukończone).
 
-   W portalu firmy Apple wybierz pozycję **Deployment Programs** (Programy wdrażania) &gt; **Device Enrollment Program** &gt; **View Assignment History** (Wyświetl historię przypisania), aby wyświetlić listę urządzeń i ich przypisania do serwera MDM.
+   W portalu firmy Apple wybierz pozycję **Programy wdrażania** &gt; **Program wdrażania urządzenia** &gt; **Wyświetl historię przypisania**, aby wyświetlić listę urządzeń i ich przypisania do serwera MDM.
 
 ### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>Krok 3. Zapisz identyfikator Apple ID użyty do utworzenia tokenu.
 
@@ -137,7 +139,7 @@ Teraz, po zainstalowaniu tokenu, możesz utworzyć profil rejestracji dla urząd
 4. Wybierz pozycję **Dalej: Ustawienia zarządzania urządzeniami**.
 
 5. Dla pozycji **Koligacja użytkownika** wybierz, czy urządzenia z tym profilem muszą być rejestrowane z przypisanym użytkownikiem, czy bez niego.
-    - **Zarejestruj z koligacją użytkownika** — tę opcję należy wybrać w przypadku urządzeń należących do użytkowników, którzy chcą korzystać z aplikacji Portal firmy w celu używania usług takich, jak instalowanie aplikacji. Gdy w przypadku korzystania z usług ADFS profil rejestracji ma w pozycji **Uwierzytelnij za pomocą aplikacji Portal firmy zamiast Asystenta konfiguracji** wartość **Nie**, wymagana jest opcja [Nazwa użytkownika protokołu WS-Trust 1.3/mieszanego punktu końcowego](https://technet.microsoft.com/library/adfs2-help-endpoints) [ Dowiedz się więcej](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
+    - **Zarejestruj z koligacją użytkownika** — tę opcję należy wybrać w przypadku urządzeń należących do użytkowników, którzy chcą korzystać z aplikacji Portal firmy w celu używania usług takich, jak instalowanie aplikacji. Gdy w przypadku korzystania z usług ADFS profil rejestracji ma w pozycji **Uwierzytelnij za pomocą aplikacji Portal firmy zamiast Asystenta konfiguracji** wartość **Nie**, wymagana jest opcja [Nazwa użytkownika protokołu WS-Trust 1.3/mieszanego punktu końcowego](https://technet.microsoft.com/library/adfs2-help-endpoints) [Dowiedz się więcej](https://technet.microsoft.com/itpro/powershell/windows/adfs/get-adfsendpoint).
 
     - **Zarejestruj bez koligacji użytkownika** — tę opcję należy wybrać w przypadku urządzeń, dla których nie istnieje koligacja z żadnym użytkownikiem. Użyj tej opcji w przypadku urządzeń, które nie mają dostępu do danych użytkownika lokalnego. Aplikacje, takie jak Portal firmy, nie działają.
 
@@ -241,7 +243,7 @@ Teraz, po zainstalowaniu tokenu, możesz utworzyć profil rejestracji dla urząd
 ## <a name="sync-managed-devices"></a>Synchronizowanie urządzeń zarządzanych
 Gdy usługa Intune ma uprawnienia do zarządzania urządzeniami, można ją zsynchronizować z danymi firmy Apple, aby wyświetlić zarządzane urządzenia w usłudze Intune w witrynie Azure Portal.
 
-1. W [Centrum administracyjnym usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **iOS** > **Rejestracja dla systemu iOS** > **Tokeny programu rejestracji** > wybierz token na liście > **Urządzenia** > **Synchronizuj**. ![Zrzut ekranu przedstawiający węzeł Urządzenia programu Enrollment Program i link Synchronizuj.](./media/device-enrollment-program-enroll-ios/image06.png)
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **iOS** > **Rejestracja urządzeń z systemem iOS** > **Tokeny programu rejestracji**, wybierz token na liście, a następnie wybierz pozycję **Urządzenia** > **Synchronizuj**. ![Zrzut ekranu przedstawiający węzeł Urządzenia programu Enrollment Program i link Synchronizuj.](./media/device-enrollment-program-enroll-ios/image06.png)
 
    Aby spełnić warunki firmy Apple dotyczące ruchu w programie rejestracji, usługa Intune nakłada następujące ograniczenia:
    - Pełną synchronizację można uruchamiać nie częściej niż co siedem dni. Podczas pełnej synchronizacji usługa Intune pobiera pełną zaktualizowaną listę numerów seryjnych przypisanych do serwera MDM firmy Apple połączonego z usługą Intune. Jeśli urządzenie programu DEP zostanie usunięte z portalu usługi Intune, powinno zostać cofnięte jego przypisanie do serwera MDM firmy Apple w portalu programu DEP. W przeciwnym razie nie zostanie ono ponownie zaimportowane do usługi Intune do momentu uruchomienia pełnej synchronizacji.   

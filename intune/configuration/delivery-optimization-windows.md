@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 02/10/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,25 +15,22 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: kerimh
-ms.openlocfilehash: 44078f61e4f1939b1f0b15b3dde5ac54938ffbc3
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 9fb4aab6b02c6ad6a5d2f18ca9d15beafc12d58a
+ms.sourcegitcommit: e1ff157f692983b49bdd6e20cc9d0f93c3b3733c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059973"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124813"
 ---
 # <a name="delivery-optimization-settings-in-microsoft-intune"></a>Ustawienia optymalizacji dostarczania w usłudze Microsoft Intune
 
-Za pomocą usługi Intune możesz użyć ustawień optymalizacji dostarczania dla urządzeń z systemem Windows 10, aby ograniczyć zużycie przepustowości podczas pobierania przez nie aplikacji i aktualizacji. Optymalizacja dostarczania jest skonfigurowana jako część profilów konfiguracji urządzenia.  
+Za pomocą usługi Intune możesz użyć ustawień optymalizacji dostarczania dla urządzeń z systemem Windows 10, aby ograniczyć zużycie przepustowości podczas pobierania przez nie aplikacji i aktualizacji. Skonfiguruj optymalizację dostarczania w ramach profilów konfiguracji urządzenia.  
 
 W tym artykule opisano sposób konfigurowania ustawień optymalizacji dostarczania jako części profilu konfiguracji urządzenia. Po utworzeniu profilu możesz go przypisać do urządzeń z systemem Windows 10 lub wdrożyć na nich. 
 
-Aby uzyskać listę ustawień optymalizacji dostarczania obsługiwanych przez usługę Intune, zobacz artykuł [Ustawienia optymalizacji dostarczania dla usługi Intune](../delivery-optimization-settings.md).  
+Aby wyświetlić listę ustawień optymalizacji dostarczania obsługiwanych przez usługę Intune, zobacz [Ustawienia optymalizacji dostarczania dla usługi Intune](../delivery-optimization-settings.md).  
 
 Aby uzyskać informacje dotyczące optymalizacji dostarczania w systemie Windows 10, zobacz artykuł [Aktualizacje optymalizacji dostarczania](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) w dokumentacji systemu Windows.  
-
-> [!NOTE]
-> **Aktualizacje oprogramowania — pierścienie aktualizacji systemu Windows 10** są zastępowane przez ustawienia **optymalizacji dostarczania**. Istniejące pierścienie aktualizacji można zmienić, tak aby używać ustawień **optymalizacji dostarczania**. [Przenoszenie istniejących pierścieni aktualizacji do optymalizacji dostarczania](#move-existing-update-rings-to-delivery-optimization) (w tym artykule)
 
 ## <a name="create-the-profile"></a>Tworzenie profilu
 
@@ -50,15 +47,20 @@ Aby uzyskać informacje dotyczące optymalizacji dostarczania w systemie Windows
 
 4. Wybierz pozycję **Ustawienia** > **Skonfiguruj** i zdefiniuj sposób pobierania aktualizacji i aplikacji. Aby uzyskać informacje na temat dostępnych ustawień, zobacz artykuł [Ustawienia optymalizacji dostarczania dla usługi Intune](../delivery-optimization-settings.md).
 
-5. Po zakończeniu wybierz pozycję **OK**  >  **Utwórz**, aby zapisać zmiany.
+5. Po zakończeniu wybierz pozycję **OK** > **Utwórz**, aby zapisać zmiany.
 
 Profil zostanie utworzony i wyświetlony na liście. Następnie [przypiszesz profil](device-profile-assign.md) i będziesz [monitorować jego stan](device-profile-monitor.md).
 
-## <a name="move-existing-update-rings-to-delivery-optimization"></a>Przenoszenie istniejących pierścieni aktualizacji do optymalizacji dostarczania
+<!-- ## Move existing update rings to delivery optimization
 
-Ustawienia **optymalizacji dostarczania** zastępują pozycję **Aktualizacje oprogramowania — pierścienie aktualizacji systemu Windows 10**. Istniejące pierścienie aktualizacji można łatwo zmienić, tak aby używać ustawień **optymalizacji dostarczania**. Aby zachować te same ustawienia po utworzeniu profilu optymalizacji dostarczania, użyj tego samego *trybu pobierania optymalizacji dostarczania* i podaj te same ustawienia co już używane. Jednak możesz też ponownie skonfigurować ustawienia optymalizacji dostarczania, aby wykorzystać pełny zakres dodatkowych ustawień, którymi można zarządzać za pomocą profilu optymalizacji dostarczania.
+**Delivery optimization** settings replace **Software updates – Windows 10 Update Rings**. Your existing update rings can be easily changed to use the **Delivery optimization** settings. To maintain the same settings when you create a delivery optimization profile, use the same *Delivery optimization download mode* and then set the same settings as you already use. However, you can choose to reconfigure delivery optimization settings to take advantage of the full range of addition settings that the Delivery Optimization profile can manage. 
+-->
 
-1. Utwórz profil konfiguracji optymalizacji dostarczania:
+## <a name="remove-delivery-optimization-from-windows-10-update-rings"></a>Usuwanie optymalizacji dostarczania z pierścieni aktualizacji systemu Windows 10
+
+Optymalizacja dostarczania była wcześniej konfigurowana jako część pierścieni aktualizacji oprogramowania. Począwszy od lutego 2019, ustawienia optymalizacji dostarczania są konfigurowane jako część profilu konfiguracji urządzenia dotyczącego optymalizacji dostarczania, który obejmuje dodatkowe ustawienia mające wpływ nie tylko na dostarczanie aktualizacji oprogramowania do urządzeń. Jeśli nie zostało to jeszcze zrobione, usuń ustawienie optymalizacji dostarczania z pierścieni aktualizacji, określając wartość *Nie skonfigurowano*, a następnie użyj profilu optymalizacji dostarczania w celu zarządzania większym zakresem dostępnych opcji.
+
+1. Utwórz profil konfiguracji urządzenia dotyczący optymalizacji dostarczania:
 
     1. W centrum administracyjnym programu Microsoft Endpoint Manager wybierz pozycję **Urządzenia** > **Profile konfiguracji** > **Utwórz profil**.
     2. Wprowadź następujące właściwości:

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/21/2020
+ms.date: 02/03/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fa0156d059513a2586eb7d8866d23508be0af10c
-ms.sourcegitcommit: 5ad0ce27a30ee3ef3beefc46d2ee49db6ec0cbe3
+ms.openlocfilehash: 8d5082376c42ff3b92e3979a53b6deac3e59c88e
+ms.sourcegitcommit: 32391f74241ee3289a76ccd5319fe700b800d427
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2020
-ms.locfileid: "76886687"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77075811"
 ---
 # <a name="add-microsoft-edge-for-windows-10-to-microsoft-intune"></a>Dodawanie przeglądarki Microsoft Edge dla systemu Windows 10 do usługi Microsoft Intune
 
 Aby móc wdrażać, konfigurować, monitorować lub zabezpieczać aplikacje, trzeba je najpierw dodać do usługi Intune. Jednym z dostępnych [typów aplikacji](~/apps/apps-add.md#app-types-in-microsoft-intune) jest przeglądarka Microsoft Edge *w wersji 77 lub nowszej*. Po wybraniu tego typu aplikacji w usłudze Intune możesz przypisać i zainstalować przeglądarkę Microsoft Edge *w wersji 77 lub nowszej* na zarządzanych urządzeniach z systemem Windows 10.
 
 > [!IMPORTANT]
-> Tego typu aplikacje są dostępne jako **publiczne wersje zapoznawcze** w kanale stabilnym, beta i deweloperskim dla systemu Windows 10. Wdrożenie jest tylko w języku angielskim (EN), jednak użytkownicy końcowi mogą zmienić język wyświetlania w przeglądarce w obszarze **Ustawienia** > **Języki**. Microsoft Edge jest aplikacją systemu Win32 instalowaną w kontekście systemu oraz na takich samych architekturach (aplikacja x86 w systemie operacyjnym x86, a aplikacja x64 w systemie operacyjnym x64). Usługa Intune wykryje wszystkie istniejące wcześniej instalacje aplikacji Microsoft Edge. Jeśli została ona zainstalowana w kontekście użytkownika, instalacja systemu spowoduje jej nadpisanie. Jeśli została ona zainstalowana w kontekście systemu, będzie zgłaszany sukces instalacji. Ponadto automatyczne aktualizacje przeglądarki Microsoft Edge są domyślnie **włączone**, a przeglądarki Microsoft Edge nie można odinstalować.
+> Tego typu aplikacje są dostępne jako **publiczne wersje zapoznawcze** w kanale stabilnym, beta i deweloperskim dla systemu Windows 10. Wdrożenie jest tylko w języku angielskim (EN), jednak użytkownicy końcowi mogą zmienić język wyświetlania w przeglądarce w obszarze **Ustawienia** > **Języki**. Microsoft Edge jest aplikacją systemu Win32 instalowaną w kontekście systemu oraz na takich samych architekturach (aplikacja x86 w systemie operacyjnym x86, a aplikacja x64 w systemie operacyjnym x64). Usługa Intune wykryje wszystkie istniejące wcześniej instalacje aplikacji Microsoft Edge. Jeśli została ona zainstalowana w kontekście użytkownika, instalacja systemu spowoduje jej nadpisanie. Jeśli została ona zainstalowana w kontekście systemu, będzie zgłaszany sukces instalacji. Ponadto automatyczne aktualizacje przeglądarki Microsoft Edge są domyślnie **Włączone**.
 
 > [!NOTE]
 > Przeglądarka Microsoft Edge *w wersji 77 lub nowszej* jest również dostępna dla systemu macOS.
@@ -80,7 +80,7 @@ W tym kroku skonfigurujesz opcje instalacji aplikacji.
 
 ## <a name="select-scope-tags-optional"></a>Wybieranie tagów zakresu (opcjonalnie)
 Za pomocą tagów zakresu można określić, kto będzie mógł wyświetlać informacje o aplikacji klienckiej w usłudze Intune. Więcej informacji o tagach zakresu zawiera artykuł Używanie kontroli dostępu opartej na rolach i tagów zakresu w rozproszonej infrastrukturze informatycznej.
-1.  Wybierz pozycję **Zakres (tagi)** > **Dodaj**.
+1.  Wybierz pozycję **Zakres (tagi)**  > **Dodaj**.
 2.  Użyj pola **Wybierz**, aby wyszukać tagi zakresu.
 3.  Zaznacz pole wyboru obok tagów zakresu, które chcesz przypisać do aplikacji.
 4.  Kliknij kolejno pozycje **Wybierz** > **OK**.
@@ -92,6 +92,28 @@ Utworzona aplikacja będzie wyświetlana na liście aplikacji, z której można 
 
 > [!NOTE]
 > Obecnie po cofnięciu przypisania wdrożenia przeglądarki Microsoft Edge pozostanie ono na urządzeniu.
+
+## <a name="uninstall-the-app"></a>Odinstalowywanie aplikacji
+
+Jeśli musisz odinstalować przeglądarkę Microsoft Edge z urządzeń użytkowników, wykonaj następujące czynności.
+
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Wybierz pozycję **Aplikacje** > **Wszystkie aplikacje** > *Microsoft Edge*, a następnie pozycję **Przypisania** > **Dodaj grupę**.
+3. W okienku **Dodawanie grupy** wybierz opcję **Odinstaluj**.
+
+    > [!NOTE]
+    > Aplikacja zostanie odinstalowana z urządzeń w wybranych grupach, jeśli usługa Intune wcześniej zainstalowała aplikację na urządzeniu za pośrednictwem przypisania **Dostępne dla zarejestrowanych urządzeń** lub **Wymagane** przy użyciu tego samego wdrożenia.
+4. Wybierz pozycję **Uwzględnione grupy**, aby wybrać grupy użytkowników, na które ma wpływ to przypisanie aplikacji.
+5. Wybierz grupy, do których chcesz zastosować przypisanie odinstalowania.
+6. Kliknij pozycję **Wybierz** w okienku **Wybieranie grup**.
+7. Kliknij przycisk **OK** w okienku **Przypisywanie**, aby ustawić przypisanie.
+8. Jeśli chcesz wykluczyć wszystkie grupy użytkowników z objęcia wpływem tego przypisania aplikacji, wybierz pozycję **Wykluczenie grup**.
+9. Jeśli chcesz wykluczyć wszystkie grupy, w obszarze **Wybieranie grup** wybierz pozycję **Wybierz**.
+10. Wybierz przycisk **OK** w okienku **Dodawanie grupy**.
+11. Wybierz pozycję **Zapisz** w okienku **Przypisania** aplikacji.
+
+> [!IMPORTANT]
+> Aby pomyślnie odinstalować aplikację, pamiętaj o usunięciu przypisania członków lub grup do zainstalowania przed przypisaniem ich do odinstalowania. Jeśli grupę przypisano do zainstalowania aplikacji oraz odinstalowania aplikacji, aplikacja pozostanie i nie zostanie usunięta.
 
 ## <a name="troubleshooting"></a>Rozwiązywanie problemów
 **Microsoft Edge w wersji 77 lub nowszej dla systemu Windows 10:**<br>

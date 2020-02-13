@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/14/2019
+ms.date: 02/07/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a3b391bb4ab064c080083e2c31dc28483f6d419a
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 7e38e4f8552b6ef217d264cfa74597bda5c665ab
+ms.sourcegitcommit: e1ff157f692983b49bdd6e20cc9d0f93c3b3733c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74098225"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77125051"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizacje interfejsu użytkownika dla aplikacji użytkownika końcowego usługi Intune
 
@@ -36,9 +36,14 @@ Jeśli jesteś pracownikiem lub uczniem, sprawdź zrzuty ekranu i linki do dokum
 
 <!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/whats-new-app-ui/account-move-rom-iwp-user-1712.png)--->
 
+## <a name="week-of-february-3-2020"></a>Tydzień od 3 lutego 2020 r.
+
+### <a name="screen-removed-from-company-portal-android-work-profile-enrollment---6103987---"></a>Ekran usunięty z aplikacji Portal firmy, rejestracja profilu służbowego systemu Android <!--6103987 -->
+Ekran **Co dalej?** został usunięty z przepływu rejestracji profilu służbowego systemu Android w aplikacji Portal firmy, aby usprawnić środowisko użytkownika. Przejdź do tematu [Rejestracja przy użyciu profilu służbowego systemu Android](/intune-user-help/enroll-device-android-work-profile), aby zobaczyć zaktualizowany przepływ rejestracji profilu służbowego systemu Android.  
+
 ## <a name="week-of-november-11-2019"></a>Tydzień 11 listopada 2019 r.  
 
-#### <a name="web-apps-launched-from-the-windows-company-portal-app---5030972---"></a>Aplikacje internetowe uruchamiane z poziomu aplikacji Portal firmy systemu Windows<!-- 5030972 -->
+### <a name="web-apps-launched-from-the-windows-company-portal-app----5030972---"></a>Aplikacje internetowe uruchamiane z poziomu aplikacji Portal firmy systemu Windows <!-- 5030972 -->
 Użytkownicy końcowi mogą teraz uruchamiać aplikacje internetowe bezpośrednio z poziomu aplikacji Portal firmy systemu Windows. Użytkownicy końcowi mogą wybrać aplikację internetową, a następnie wybrać opcję **Otwórz w przeglądarce**. Opublikowany internetowy adres URL zostanie otwarty bezpośrednio w przeglądarce. Ta funkcja zostanie udostępniona w następnym tygodniu. Aby uzyskać więcej informacji na temat aplikacji internetowych, zobacz [Dodawanie aplikacji internetowych do usługi Microsoft Intune](~/apps/web-app.md).
 
 ![Przykładowy obraz aplikacji internetowej uruchamianej z poziomu aplikacji Portal firmy systemu Windows](./media/whats-new-app-ui/webapp-open-in-browser.png)  
@@ -58,13 +63,13 @@ Lista kontrolna konfiguracji w aplikacji Portal firmy dla systemu Android zosta�
 
 Na następujących ekranach przedstawiono zaktualizowaną listę kontrolną dla rejestracji profilu służbowego systemu Android:
 
-|Zaktualizowana|Wstecz|  
+|Po aktualizacji|Poprzednio|  
 |---|---|  
 |![Przykładowy obraz konfiguracji profilu służbowego w aplikacji Portal firmy, pokazujący uproszczoną listę kontrolną oraz nowe ikony.](./media/whats-new-app-ui/work-profile-checklist-1911.png)|![Przykładowy obraz poprzedniej konfiguracji profilu służbowego w aplikacji Portal firmy, pokazujący bardziej złożoną listę kontrolną.](./media/whats-new-app-ui/work-profile-checklist-1904.png)|   
 
 Na następujących ekranach przedstawiono zaktualizowaną listę kontrolną dla rejestracji administratora urządzenia z systemem Android:  
 
-|Zaktualizowana|Wstecz|  
+|Po aktualizacji|Poprzednio|  
 |---|---|  
 |![Przykładowy obraz konfiguracji administratora urządzenia z systemem Android w aplikacji Portal firmy, pokazujący uproszczoną listę kontrolną oraz nowe ikony.](./media/whats-new-app-ui/android-checklist-1911.png)|![Przykładowy obraz poprzedniej konfiguracji administratora urządzenia z systemem Android w aplikacji Portal firmy, pokazujący bardziej złożoną listę kontrolną.](./media/whats-new-app-ui/android-checklist-1904.png)|  
 
@@ -175,7 +180,7 @@ Wyświetlane aktualizacje obejmują:
 - Zwiększona wydajność dużych wykazów aplikacji
 - Zwiększona dostępność dla wszystkich użytkowników  
 
-|Zaktualizowana|Wstecz|
+|Po aktualizacji|Poprzednio|
 |---|---|
 |![Na zaktualizowanej stronie urządzenia urządzenie jest wyrównane nad informacjami o urządzeniu i już nie wystaje poza pełną listę.](./media/whats-new-app-ui/iwp-device-after-1803.png)|![Poprzedniej wersji strony urządzenia.](./media/whats-new-app-ui/iwp-device-before-1803.png)|
 |![Na zaktualizowanej stronie instalowania aplikacji aplikacja znajduje się nad opisem oraz informacjami dotyczącymi instalacji, w tym datą publikacji, wersją i typem aplikacji.](./media/whats-new-app-ui/iwp-app-install-after-1803.png)|![Poprzednia wersja strony instalowania aplikacji.](./media/whats-new-app-ui/iwp-app-install-before-1803.png)|  

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c120fab1da43230888866cba9d818d7b433b711e
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: dbefd797fead7113045ee7e7655b715a0b4961fd
+ms.sourcegitcommit: 32391f74241ee3289a76ccd5319fe700b800d427
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755293"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77075828"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Autonomiczna usługa Intune — zarządzanie aplikacjami Win32
 
@@ -204,7 +204,7 @@ W poniższych krokach przedstawiono wskazówki ułatwiające dodanie aplikacji s
         2. Po ustawieniu reguł wymagań wybierz przycisk **OK**.
 2. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Reguły wykrywania**.   
 
-### <a name="step-4-detection-rules"></a>Krok 4. Reguły wykrywania
+## <a name="step-4-detection-rules"></a>Krok 4. Reguły wykrywania
 
 1. W okienku **Reguły wykrywania** skonfiguruj reguły wykrywania obecności aplikacji:
     
@@ -268,7 +268,7 @@ W poniższych krokach przedstawiono wskazówki ułatwiające dodanie aplikacji s
 
 2. Po dodaniu reguł wybierz przycisk **Dalej**, aby wyświetlić stronę **Zależności**.
 
-### <a name="step-5-dependencies"></a>Krok 5. Zależności
+## <a name="step-5-dependencies"></a>Krok 5. Zależności
 
 Zależności aplikacji to aplikacje, które należy zainstalować przed zainstalowaniem aplikacji Win32. Możesz wymagać, aby inne aplikacje były instalowane jako zależności. W szczególności na urządzeniu muszą zostać zainstalowane aplikacje zależne przed zainstalowaniem aplikacji Win32. Maksymalnie można użyć 100 zależności, co obejmuje zależności wszystkich dołączonych zależności, a także samą aplikację. Zależności aplikacji Win32 możesz dodać tylko po dodaniu i przekazaniu aplikacji Win32 do usługi Intune. Po dodaniu aplikacji Win32 zostanie wyświetlona opcja **Zależności** w okienku aplikacji Win32. 
 

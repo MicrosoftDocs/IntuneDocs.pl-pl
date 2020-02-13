@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e9da7acfc34dbd25902fc6fb9617ba395216a9b3
-ms.sourcegitcommit: 24487f078349795922dc497c952e8358cf767a1a
+ms.openlocfilehash: 4f97c4c56073044e79b5251dc83c54decb5c9c55
+ms.sourcegitcommit: e1ff157f692983b49bdd6e20cc9d0f93c3b3733c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76977805"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124847"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Rejestrowanie urządzeń z systemem Windows w usłudze Intune za pomocą rozwiązania Windows Autopilot  
 Rozwiązanie Windows Autopilot upraszcza rejestrowanie urządzeń w usłudze Intune. Tworzenie i konserwacja niestandardowych obrazów systemów operacyjnych zajmuje dużo czasu. Trzeba również poświęcić czas na stosowanie tych niestandardowych obrazów systemów operacyjnych na nowych urządzeniach w celu przygotowania ich do użycia przed przekazaniem użytkownikom końcowym. Dzięki usłudze Microsoft Intune i rozwiązaniu Autopilot można przekazać nowe urządzenia użytkownikom końcowym bez konieczności tworzenia, konserwowania i stosowania niestandardowych obrazów systemów operacyjnych do urządzeń. Jeśli do zarządzania urządzeniami z rozwiązaniem Autopilot używasz usługi Intune, możesz zarządzać zasadami, profilami, aplikacjami i innymi funkcjami po zarejestrowaniu tych urządzeń. Aby zapoznać się z korzyściami, scenariuszami i wymaganiami wstępnymi, zobacz [Przegląd rozwiązania Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -100,6 +100,9 @@ Profile wdrażania rozwiązania Autopilot służą do konfigurowania urządzeń 
     - **Wdrażanie samodzielne (wersja zapoznawcza)** : (wymaga systemu Windows 10 w wersji 1809 lub nowszej) urządzenia z tym profilem nie są skojarzone z użytkownikiem rejestrującym urządzenie. Poświadczenia użytkownika nie są wymagane do zarejestrowania urządzenia. Jeśli urządzenie nie ma skojarzonego z nim użytkownika, zasady zgodności oparte na użytkownikach nie mają do niego zastosowania. W przypadku korzystania z trybu samoobsługowego zostaną zastosowane tylko zasady zgodności ukierunkowane na urządzenie.
 
     ![Zrzut ekranu strony OOBE](./media/enrollment-autopilot/create-profile-outofbox.png)
+
+   > [!NOTE]
+   > Opcje, które są wygaszone lub zacienione, nie są obecnie obsługiwane w wybranym trybie wdrażania.
 
 6. W polu **Dołącz do usługi Azure AD jako** wybierz pozycję **Dołączono do usługi Azure AD**.
 7. Skonfiguruj następujące opcje:

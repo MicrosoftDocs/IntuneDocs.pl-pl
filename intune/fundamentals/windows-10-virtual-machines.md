@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9afaf2c8a63bfaed1fdb593baf42c8fa258d7893
-ms.sourcegitcommit: 1a22b8b31424847d3c86590f00f56c5bc3de2eb5
+ms.openlocfilehash: 486ca7eae1b1e8b016f44c735ec04a23145421a8
+ms.sourcegitcommit: e1ff157f692983b49bdd6e20cc9d0f93c3b3733c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74263120"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124983"
 ---
 # <a name="using-windows-10-virtual-machines-with-intune"></a>Korzystanie z maszyn wirtualnych systemu Windows 10 z usługą Intune
 
@@ -33,7 +33,7 @@ Zarządzając maszynami wirtualnymi systemu Windows 10 za pomocą usługi Intune
 
 ## <a name="enrollment"></a>Rejestrowanie
 - Nie zalecamy zarządzania maszynami wirtualnymi hosta sesji na żądanie za pomocą usługi Intune. Po utworzeniu każdą maszynę wirtualną należy zarejestrować. Należy również [czyścić](../remote-actions/devices-wipe.md#automatically-delete-devices-with-cleanup-rules) osierocone rekordy urządzeń w usłudze Intune pozostałe po regularnym usuwaniu maszyn wirtualnych. 
-- Tryb samodzielnej rejestracji w ramach rozwiązania Windows Autopilot nie jest obsługiwany, ponieważ wymaga modułu Trusted Platform Module (TPM). 
+- Typy wdrożenia White glove i Samodzielne wdrażanie rozwiązania Windows Autopilot nie są obsługiwane, ponieważ wymagają fizycznego modułu TPM (Trusted Platform Module). 
 - Rejestrowanie Out of Box Experience (OOBE) nie jest obsługiwane na maszynach wirtualnych, do których można uzyskać dostęp tylko za pośrednictwem protokołu RDP (takich jak maszyny wirtualne hostowane na platformie Azure). Konsekwencje tego ograniczenia są następujące:
     - Rozwiązanie Windows Autopilot ani komercyjne rozwiązania OOBE nie są obsługiwane.
     - Opcje strony stanu rejestracji dotyczące zasad w kontekście urządzenia nie są obsługiwane.

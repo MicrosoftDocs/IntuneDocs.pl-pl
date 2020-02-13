@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0bc511669ec8a88523581b3afbcca161d5208934
-ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
+ms.openlocfilehash: d965ac35719d809ab922d28f76dec1754e9a4c6b
+ms.sourcegitcommit: 9b29478f815e10c46c8030abe0146d601ce0e28c
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75956197"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77051630"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Jak w usłudze Microsoft Intune zarządzać aplikacjami dla systemów iOS i macOS, które zostały zakupione w ramach programu zakupów zbiorczych firmy Apple
 
@@ -130,6 +130,11 @@ Możesz synchronizować nazwy aplikacji, metadane i informacje o licencji dla za
 
 >[!NOTE]
 >Dostępna intencja wdrożenia nie jest obsługiwane w przypadku grup urządzeń, obsługiwane są tylko grupy użytkowników. Wyświetlona lista aplikacji jest skojarzona z tokenem. Jeśli dana aplikacja jest skojarzona z wieloma tokenami VPP, zostanie ona wyświetlona wiele razy (po jednym razie dla każdego tokenu).
+
+> [!NOTE]  
+> Usługa Intune (ani żadne inne rozwiązanie do zarządzania urządzeniami przenośnymi) w rzeczywistości nie instaluje aplikacji programu VPP. Zamiast tego usługa Intune nawiązuje połączenie z kontem programu VPP i informuje firmę Apple, które licencje aplikacji mają zostać przypisane do których urządzeń. Następnie rzeczywista instalacja jest obsługiwana przez firmę Apple i urządzenie.
+> 
+> [Apple MDM Protocol Reference (Dokumentacja protokołu MDM firmy Apple), strona 135](https://developer.apple.com/business/documentation/MDM-Protocol-Reference.pdf)
 
 ## <a name="end-user-prompts-for-vpp"></a>Monity dotyczące programu VPP dla użytkowników końcowych
 
