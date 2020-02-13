@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 02/07/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3b83b764af415349b287df2a09f9b4c355734c28
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: e9bcfed67eda96bb4d79317bcc69d21a5f8197bc
+ms.sourcegitcommit: 2b905913840d4133a7964fe4f54a58ea6e421e12
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72810240"
+ms.lasthandoff: 02/07/2020
+ms.locfileid: "77074635"
 ---
 # <a name="ios-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Ustawienia urządzeń z systemem iOS umożliwiające oznaczenie ich jako zgodne lub niezgodne w usłudze Intune
 
@@ -69,16 +69,16 @@ Aby uzyskać szczegółowe informacje na temat profilów poczty e-mail, zobacz [
 
 ### <a name="operating-system-version"></a>Wersja systemu operacyjnego  
 
-- **Wymagana minimalna wersja systemu operacyjnego** *(iOS 8,0 i nowsze)* :  
+- **Minimalna wersja systemu operacyjnego** *(iOS 8.0 i nowsze)* :  
   Jeśli urządzenie nie spełnia wymagań dotyczących minimalnej wersji systemu operacyjnego, będzie zgłaszane jako niezgodne. Zostanie wyświetlony link ze wskazówkami dotyczącymi uaktualniania. Użytkownik końcowy może wybrać opcję uaktualnienia urządzenia. Następnie może uzyskać dostęp do zasobów organizacji.
 
-- **Dozwolona maksymalna wersja systemu operacyjnego** *(iOS 8,0 i nowsze)* :  
+- **Maksymalna wersja systemu operacyjnego** *(iOS 8.0 i nowsze)* :  
   Jeśli urządzenie korzysta z wersji systemu operacyjnego nowszej niż określona w regule, powoduje to zablokowanie dostępu do zasobów organizacji. Użytkownik końcowy zostanie poproszony o kontakt z administratorem IT. Urządzenie nie może uzyskiwać dostępu do zasobów organizacji do momentu zmiany reguły na dopuszczającą daną wersję systemu operacyjnego.
 
-- **Minimalna wersja kompilacji systemu operacyjnego** *(iOS 8,0 i nowsze)* :  
+- **Minimalna wersja kompilacji systemu operacyjnego** *(iOS 8.0 i nowsze)* :  
   gdy firma Apple publikuje aktualizacje zabezpieczeń, zwykle jest aktualizowany numer kompilacji, a nie wersja systemu operacyjnego. Użyj tej funkcji, aby wprowadzić minimalny numer kompilacji dozwolony na urządzeniu.
 
-- **Maksymalna wersja kompilacji systemu operacyjnego** *(iOS 8,0 i nowsze)* :  
+- **Maksymalna wersja kompilacji systemu operacyjnego** *(iOS 8.0 i nowsze)* :  
   gdy firma Apple publikuje aktualizacje zabezpieczeń, zwykle jest aktualizowany numer kompilacji, a nie wersja systemu operacyjnego. Użyj tej funkcji, aby wprowadzić maksymalny numer kompilacji dozwolony na urządzeniu.
 
 ## <a name="system-security"></a>Zabezpieczenia systemu
@@ -86,14 +86,14 @@ Aby uzyskać szczegółowe informacje na temat profilów poczty e-mail, zobacz [
 ### <a name="password"></a>Hasło
 
 > [!NOTE]
-> Po zastosowaniu zasad zgodności lub konfiguracji do urządzenia z systemem iOS użytkownicy będą otrzymywać monit o ustawienie kodu dostępu co 15 minut. Monity będą wyświetlane, dopóki kod dostępu nie zostanie ustawiony. Po ustawieniu kodu dostępu dla urządzenia z systemem iOS proces szyfrowania zostaje automatycznie uruchomiony. Urządzenie pozostanie zaszyfrowane do momentu wyłączenia kodu dostępu.
+> Po zastosowaniu zasad zgodności lub konfiguracji do urządzenia z systemem iOS użytkownicy będą otrzymywać monit o ustawienie kodu dostępu co 15 minut. Monity będą wyświetlane, dopóki kod dostępu nie zostanie ustawiony. Po ustawieniu kodu dostępu dla urządzenia z systemem iOS proces szyfrowania zostanie uruchomiony automatycznie. Urządzenie pozostanie zaszyfrowane do czasu wyłączenia kodu dostępu.
 
 - **Wymagaj hasła do odblokowania urządzeń przenośnych**:  
   - **Nieskonfigurowane** (*wartość domyślna*) — ustawienie nie jest oceniane na potrzeby określenia zgodności.  
   - **Wymagaj** — użytkownicy muszą wprowadzić hasło podczas uzyskiwania dostępu do swoich urządzeń. Urządzenia z systemem iOS używające haseł są szyfrowane.
 
 - **Proste hasła**:  
-  - **Nie skonfigurowano** (*Domyślnie*) — użytkownicy mogą tworzyć proste hasła, takie jak **1234** lub **1111**.
+  - **Nieskonfigurowane** (*domyślne*) — użytkownicy mogą tworzyć proste hasła, takie jak **1234** lub **1111**.
   - **Blokuj** — użytkownicy nie mogą tworzyć prostych haseł, takich jak **1234** lub **1111**. 
 
 - **Minimalna długość hasła**:  
@@ -108,10 +108,10 @@ Aby uzyskać szczegółowe informacje na temat profilów poczty e-mail, zobacz [
   Ustawienie większej liczby wymaga wprowadzenia bardziej skomplikowanego hasła przez użytkownika.
 
 - **Maksymalna liczba minut po zablokowaniu ekranu, po których jest wymagane wprowadzenie hasła** *(system iOS 8.0 i nowsze)* :  
-  Określ, jak wkrótce po zablokowaniu ekranu użytkownik musi wprowadzić hasło w celu uzyskania dostępu do urządzenia. Opcje obejmują domyślnie *Nieskonfigurowane*, *natychmiastowe*i od *1 minuty* do *4 godzin*.
+  Określ, po jakim czasie od zablokowania ekranu użytkownik musi wprowadzić hasło w celu uzyskania dostępu do urządzenia. Dostępne opcje obejmują ustawienie domyślne *Nieskonfigurowane* oraz ustawienia *Natychmiast* i od *1 minuta* do *4 godziny*.
 
 - **Maksymalna liczba minut braku aktywności przed zablokowaniem ekranu**:  
-  Wprowadź czas bezczynności, po którym urządzenie zostanie zablokowane. Opcje obejmują domyślnie wartość *Nieskonfigurowane*, *natychmiast*i od *1 minuty* do *15 minut*.
+  Wprowadź czas bezczynności, po którym urządzenie będzie blokować ekran. Dostępne opcje obejmują ustawienie domyślne *Nieskonfigurowane* oraz ustawienia *Natychmiast* i od *1 minuta* do *15 minut*.
 
 - **Wygaśnięcie hasła (dni)** :  
   wybierz liczbę dni, po których wygasa hasło i należy utworzyć nowe. 

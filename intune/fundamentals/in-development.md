@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 01/07/2020
+ms.date: 02/03/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,14 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d71ae3c15dddedd5d9ebfaf06fcae25af89f6b82
-ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
-ms.translationtype: HT
+ms.openlocfilehash: cafe9d3036a727d79de88eda050399138da55675
+ms.sourcegitcommit: 24487f078349795922dc497c952e8358cf767a1a
+ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76912639"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76977754"
 ---
-# <a name="in-development-for-microsoft-intune---january-2020"></a>Funkcje usługi Microsoft Intune w trakcie opracowywania — styczeń 2020 r.
+# <a name="in-development-for-microsoft-intune---february-2020"></a>Funkcje usługi Microsoft Intune w trakcie opracowywania — luty 2020 r.
 
 Aby ułatwić Ci przygotowanie i planowanie, na tej stronie udostępniamy listę aktualizacji interfejsu użytkownika i funkcji usługi Intune, które są obecnie opracowywane, a zostaną wydane w przyszłości. Oprócz informacji na tej stronie: 
 
@@ -66,8 +66,22 @@ Aplikacja Portal firmy będzie wyświetlać dodatkowe komunikaty o stanie instal
 - Instalowanie aplikacji nie powiodło się. Zależności zdefiniowane przez administratora nie zostały spełnione.
 
 ### <a name="retarget-web-clips-to-microsoft-edge-on-ios-devices---5455276---"></a>Przekierowywanie klipów internetowych do przeglądarki Microsoft Edge na urządzeniach z systemem iOS<!-- 5455276 -->
-Klipy internetowe, które działają jako przypięte aplikacje internetowe na urządzeniach z systemem iOS, będą musiały zostać zaktualizowane. Nowo wdrożone klipy internetowe będą otwierane w przeglądarce Microsoft Edge, a nie w programie Intune Managed Browser, jeśli będzie to wymagane do otwarcia w chronionej przeglądarce. Istniejące klipy internetowe trzeba będzie skierować tak, aby były otwierane w przeglądarce Microsoft Edge, a nie Managed Browser. 
+Klipy internetowe, które działają jako przypięte aplikacje internetowe na urządzeniach z systemem iOS, będą musiały zostać zaktualizowane. Nowo wdrożone klipy internetowe będą otwierane w przeglądarce Microsoft Edge, a nie w programie Intune Managed Browser, jeśli będzie to wymagane do otwarcia w chronionej przeglądarce. Istniejące klipy internetowe trzeba będzie skierować tak, aby były otwierane w przeglądarce Microsoft Edge, a nie Managed Browser.
 
+### <a name="macos-company-portal-user-experience-improvements---5568987---"></a>Ulepszenia środowiska użytkownika w aplikacji Portal firmy dla systemu macOS<!-- 5568987 -->
+Ulepszamy obsługę rejestracji urządzeń z systemem macOS i aplikację Portal firmy dla komputerów Mac. Można oczekiwać następujących zmian:
+- Lepsza obsługa **aktualizacji automatycznych** firmy Microsoft podczas rejestracji, co zapewni, że użytkownicy będą mieć najnowszą wersję aplikacji Portal firmy.
+- Ulepszony krok sprawdzania zgodności podczas rejestracji.
+- Obsługa kopiowanych identyfikatorów zdarzeń, aby użytkownicy mogli szybciej wysyłać błędy z urządzeń do zespołu pomocy technicznej w firmie.
+
+Aby uzyskać więcej informacji o rejestracji i aplikacji Portal firmy dla komputerów Mac, zobacz Rejestrowanie urządzenia z systemem macOS za pomocą aplikacji Portal firmy (https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos-cp). 
+
+
+### <a name="screen-removed-from-company-portal-android-work-profile-enrollment--6103987---"></a>Ekran usunięty z aplikacji Portal firmy, rejestracja profilu służbowego systemu Android<!--6103987 -->
+Ekran **Co dalej?** zostanie usunięty z przepływu rejestracji profilu służbowego systemu Android w aplikacji Portal firmy, aby usprawnić obsługę użytkowników. Przejdź do tematu [Rejestracja przy użyciu profilu służbowego systemu Android]( https://docs.microsoft.com/intune-user-help/enroll-device-android-work-profile), aby zobaczyć bieżący przepływ rejestracji profilu służbowego systemu Android.
+
+### <a name="microsoft-defender-advanced-threat-protection-atp-app-for-macos---5424518-idready---"></a>Aplikacja Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender dla systemu macOS<!-- 5424518 idready -->
+Usługa Intune zapewnia łatwe wdrażanie aplikacji Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender dla systemu macOS na zarządzanych urządzeniach Mac. Aby uzyskać więcej informacji, zobacz [Zaawansowana ochrona przed zagrożeniami w usłudze Microsoft Defender dla komputerów Mac](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac). 
 
 <!-- ***********************************************-->
 ## <a name="device-configuration"></a>Konfiguracja urządzenia
@@ -104,14 +118,32 @@ Zaktualizowano środowisko tworzenia i edytowania profilu OEMConfig dla urządze
 Ta funkcja ma zastosowanie do:
 - Android Enterprise 
 
+
 <!-- ***********************************************-->
 <!--## Device enrollment-->
 
 
-
 <!-- ***********************************************-->
-<!--## Device management-->
+## <a name="device-management"></a>Zarządzanie urządzeniami
 
+### <a name="change-primary-user-for-windows-devices----3794742---"></a>Zmienianie użytkownika podstawowego dla urządzeń z systemem Windows <!-- 3794742 -->
+Będzie można zmieniać użytkownika podstawowego dla urządzeń hybrydowych z systemem Windows i urządzeń przyłączonych do usługi Azure AD. Aby to zrobić, przejdź do pozycji **Intune** > **Urządzenia** > **Wszystkie urządzenia** > wybierz urządzenie > **Właściwości** > **Użytkownik podstawowy**. 
+
+### <a name="serial-number-on-the-apple-mdm-push-certificate-page--5947765---"></a>Numer seryjny na stronie certyfikatu wypychania Apple MDM<!--5947765 -->
+Na stronie certyfikatu wypychania Apple MDM będzie wyświetlany numer seryjny. Numer seryjny jest wymagany do odzyskania dostępu do certyfikatu wypychania Apple MDM, jeśli zostanie utracony dostęp do identyfikatora Apple, za pomocą którego utworzono certyfikat. Aby wyświetlić numer seryjny, przejdź do pozycji **Urządzenia** > **iOS** > **Rejestracja w systemie iOS** > **Certyfikat wypychania Apple MDM**.
+
+### <a name="choose-which-iosipados-updates-to-push-to-enrolled-devices--5879689---"></a>Wybieranie aktualizacji systemu iOS/iPadOS w celu wypychania do zarejestrowanych urządzeń<!--5879689 -->
+Będzie można wybrać konkretną aktualizację systemu iOS/iPadOS w celu wypychania do urządzeń, które zarejestrowano przy użyciu programu Apple Business Manager lub Apple School Manager. Takie urządzenia muszą mieć ustawione zasady konfiguracji urządzeń w celu opóźniania widoczności aktualizacji oprogramowania przez pewną liczbę dni. Aby wyświetlić tę funkcję, przejdź do pozycji MEM > **Urządzenia** > **iOS** > **Zasady aktualizacji dla systemu iOS/iPadOS** > **Utwórz profil**.
+
+### <a name="new-update-schedule-options-for-pushing-os-updates-to-enrolled-iosipados-devices--5879689--"></a>Nowe opcje harmonogramu aktualizacji dla wypychania aktualizacji systemu operacyjnego do zarejestrowanych urządzeń z systemem iOS/iPadOS<!--5879689-->
+Podczas planowania aktualizacji systemu operacyjnego dla urządzeń z systemem iOS/iPadOS będą dostępne następujące opcje. Dotyczy to urządzeń, w przypadku których użyto typów rejestracji programu Apple Business Manager lub Apple School Manager.
+- Aktualizuj przy następnym meldowaniu
+- Aktualizuj w zaplanowanym czasie
+- Aktualizuj poza zaplanowanym czasem
+
+W przypadku dwóch ostatnich opcji można utworzyć wiele okien czasu.
+
+Aby wyświetlić nowe opcje, przejdź do pozycji MEM > **Urządzenia** > **iOS** > **Zasady aktualizacji dla systemu iOS/iPadOS** > **Utwórz profil**.
 
 
 <!-- ***********************************************-->
@@ -119,10 +151,19 @@ Ta funkcja ma zastosowanie do:
  
 
 <!-- ***********************************************-->
+## <a name="monitoring-and-troubleshooting"></a>Monitorowanie i rozwiązywanie problemów
 
-<!--
-## Monitoring and troubleshooting
--->
+### <a name="improved-intune-reporting-experience---3791418-idready---"></a>Udoskonalone środowisko raportowania usługi Intune<!-- 3791418 idready -->
+Usługa Intune oferuje teraz udoskonalone środowisko raportowania, w tym nowe typy raportów, lepszą organizację raportów, bardziej ukierunkowane widoki, ulepszone funkcje raportów, a także spójniejsze i aktualniejsze dane. Środowisko raportowania zostanie przekształcone z publicznej wersji zapoznawczej w wersję ogólnie dostępną. Ponadto wersja ogólnie dostępna zapewni obsługę lokalizacji, poprawki błędów, udoskonalenia projektu i zagregowane dane zgodności urządzeń na kafelkach w [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+Nowe typy raportów koncentrują się na następujących kwestiach:
+- **Operacyjne** — oferują nowe rekordy skoncentrowane na złej kondycji. 
+- **Organizacyjne** — zawierają szersze podsumowanie ogólnego stanu.
+- **Historyczne** — przedstawiają wzorce i trendy w wybranym okresie.
+- **Specjalistyczne** — umożliwiają tworzenie własnych niestandardowych raportów przy użyciu danych pierwotnych.
+
+Pierwszy zestaw nowych raportów koncentruje się na zgodności urządzeń. Aby uzyskać więcej informacji, zobacz tematy [Blog - Microsoft Intune reporting framework](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Reporting-Framework-Coming-to-Intune/ba-p/1009553) (Blog — platforma raportowania w usłudze Microsoft Intune) i [Intune reports](~/fundamentals/reports.md) (Raporty usługi Intune).
+
 
 
 <!-- ***********************************************-->
@@ -136,7 +177,13 @@ Interfejs użytkownika dla [centrum administracyjnego usługi Microsoft Endpoint
 ## <a name="security"></a>Zabezpieczenia
 
 ### <a name="derived-credentials-support-on-android-cobo-devices--4839592--"></a>Obsługa poświadczeń pochodnych na urządzeniach z systemem Android COBO<!--4839592-->
-W pełni zarządzane urządzenia z systemem Android Enterprise będą mogły korzystać z poświadczeń pochodnych. Obsługa zostanie uwzględniona w przypadku pobierania poświadczeń pochodnych dla firm Entrust Datacard, Intercede i DISA Purebred. Będzie można użyć poświadczeń pochodnych na potrzeby uwierzytelniania aplikacji, sieci Wi-Fi, sieci VPN lub podpisywania S/MIME i/lub szyfrowania przy użyciu aplikacji, które je obsługują. 
+W pełni zarządzane urządzenia z systemem Android Enterprise będą mogły korzystać z poświadczeń pochodnych. Obsługa zostanie uwzględniona w przypadku pobierania poświadczeń pochodnych dla firm Entrust Datacard, Intercede i DISA Purebred. Będzie można użyć poświadczeń pochodnych na potrzeby uwierzytelniania aplikacji, sieci Wi-Fi, sieci VPN lub podpisywania S/MIME i/lub szyfrowania przy użyciu aplikacji, które je obsługują.
+
+### <a name="use-antivirus-policy-to-manage-settings-for-microsoft-defender-antivirus-and-the-windows-security-experience--6131401---"></a>Używanie zasad ochrony antywirusowej do zarządzania ustawieniami programu Microsoft Defender Antivirus i środowiskiem zabezpieczeń systemu Windows<!--6131401 -->
+W węźle *Zabezpieczenia punktu końcowego* będzie można skonfigurować ustawienia **Ochrona antywirusowa**. Konfigurując zasady ochrony antywirusowej, można zdefiniować ustawienia dla urządzeń z systemem Windows 10 przy użyciu dwóch typów profilów:
+
+- Program antywirusowy Microsoft Defender: zarządzanie ustawieniami ochrony chmury, wykluczeniami ochrony antywirusowej, korygowania, opcji skanowania i innymi.
+- Środowisko zabezpieczeń systemu Windows: zarządzanie sposobem korzystania przez użytkowników z ustawień zabezpieczeń systemu Windows na urządzeniach. Będzie można skonfigurować elementy, które użytkownicy końcowi mogą wyświetlać w Centrum zabezpieczeń usługi Microsoft Defender, i otrzymywane przez nich powiadomienia. 
 
 <!-- ***********************************************-->
 ## <a name="notices"></a>Uwagi

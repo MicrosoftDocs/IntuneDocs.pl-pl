@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/13/2020
+ms.date: 02/04/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f99479200e66b080e107475f0a031c5756da6051
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: dc252068d963d75bf6ade79852d6ba01bda8800b
+ms.sourcegitcommit: 9b29478f815e10c46c8030abe0146d601ce0e28c
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76754579"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77051613"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem iOS i iPadOS umożliwiające działanie funkcji lub ich ograniczanie przy użyciu usługi Intune
 
@@ -420,8 +420,6 @@ Dotyczy urządzeń z systemem iOS w wersji 9.3 i nowszych.
   Aby znaleźć adres URL aplikacji, otwórz sklep iTunes App Store i wyszukaj aplikację. Wyszukaj na przykład `Microsoft Remote Desktop` lub `Microsoft Word`. Wybierz aplikację i skopiuj adres URL.
 
   Możesz również znaleźć aplikację za pomocą programu iTunes, a następnie użyć zadania **Kopiuj link**, aby uzyskać adres URL aplikacji.
-  
-  Aby uzyskać więcej informacji na temat znajdowania identyfikatora pakietu, zobacz [How to find the bundle ID for an iOS app](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app) (Jak znaleźć identyfikator pakietu dla aplikacji systemu iOS).
 
 - **Identyfikator pakietu aplikacji**: Wprowadź [identyfikator pakietu](bundle-ids-built-in-ios-apps.md) żądanej aplikacji. Możesz wyświetlać lub ukrywać aplikacje wbudowane i aplikacje biznesowe. W witrynie internetowej firmy Apple znajduje się lista [wbudowanych aplikacji firmy Apple](https://support.apple.com/HT208094).
 - **Nazwa aplikacji**: Wprowadź nazwę żądanej aplikacji. Możesz wyświetlać lub ukrywać aplikacje wbudowane i aplikacje biznesowe. W witrynie internetowej firmy Apple znajduje się lista [wbudowanych aplikacji firmy Apple](https://support.apple.com/HT208094).
@@ -559,7 +557,9 @@ Informacja niezbędna w przypadku roamingu danych (porada lub ważna uwaga pozwa
 
 ## <a name="autonomous-single-app-mode"></a>Autonomiczny tryb pojedynczej aplikacji
 
-Użyj tych ustawień w celu skonfigurowania urządzeń z systemem iOS, aby uruchamiać określone aplikacje w autonomicznym trybie pojedynczej aplikacji. Jeśli skonfigurowano ten tryb, a aplikacja zostanie uruchomiona, urządzenie zostanie zablokowane. Może ono uruchamiać wyłącznie tę aplikację. Na przykład dodaj aplikację, która umożliwia użytkownikom wykonywanie testów na urządzeniu. Po zakończeniu działań aplikacji lub usunięciu tych zasad urządzenie powraca do normalnego stanu.
+Użyj tych ustawień w celu skonfigurowania urządzeń z systemem iOS/iPadOS, aby uruchamiać określone aplikacje w autonomicznym trybie pojedynczej aplikacji. Gdy ten tryb jest skonfigurowany, a użytkownik uruchomi jedną ze skonfigurowanych aplikacji, urządzenie zostanie ograniczone do tej aplikacji. Przełączanie aplikacji/zadań będzie wyłączone do czasu opuszczenia dozwolonej aplikacji przez użytkownika.
+
+Na przykład w środowisku szkolnym lub uniwersyteckim można dodać aplikację, która umożliwia użytkownikom korzystanie z testów na urządzeniu. Można też ograniczyć urządzenie do aplikacji Portal firmy, dopóki użytkownik końcowy nie uwierzytelni się. Po zakończeniu działań aplikacji przez użytkownika lub usunięciu tych zasad urządzenie powraca do normalnego stanu.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ustawienia mają zastosowanie do: Automatyczne rejestrowanie urządzeń (nadzorowane)
 

@@ -14,12 +14,12 @@ ms.service: ''
 ms.technology: ''
 ms.assetid:
 - GET ONE FROM guidgenerator.com
-ms.openlocfilehash: 0a5e90c6bc6b352f4d7a0fc0ae22c65110563461
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: ed2d00541c2d89efd0f8cd6aa60f29c527656fc0
+ms.sourcegitcommit: 5178aec0244e023e73546f3d10f1a76eaf1f4a3e
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68354406"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76971825"
 ---
 # <a name="metadata-and-markdown-template"></a>Szablon metadanych i języka Markdown
 
@@ -35,10 +35,10 @@ Pełen blok metadanych znajduje się powyżej i jest podzielony na pola wymagane
 - Pomiędzy dwukropkiem (:) i wartością elementu metadanych **musi** znajdować się spacja.
 - Jeśli opcjonalny element metadanych nie ma wartości, należy ująć go w komentarzu, poprzedzając symbolem # (nie należy pozostawiać pustego elementu ani używać wartości „n/d”). Dodając wartość do elementu, który został ujęty w komentarzu, należy usunąć symbol #.
 - Dwukropki w wartości (np. tytule) przerywają działanie analizatora składni metadanych. Zamiast nich należy użyć kodu HTML &#58 (np. „title: Azure Rights Management&#58; podstawy | Azure RMS”).
-- **title**: ten tytuł pojawi się w wynikach wyszukiwarki. Tytuł powinien kończyć się symbolem kreski pionowej (|), po którym następuje nazwa usługi (zobacz przykład powyżej). Tytuł nie musi (i prawdopodobnie nie powinien) być taki sam jak tytuł w nagłówku H1. Powinien zawierać około 65 znaków (łącznie z ciągiem | NAZWA USŁUGI)
-- **author**, **manager**, **reviewer**: pole „author” powinno zawierać **nazwę użytkownika usługi Github** autora, a nie jego alias.  Z kolei pola „manager” i „reviewer” powinny zawierać aliasy. Wartość ms.reviewer określa imię i nazwisko kierownika projektu powiązanego z artykułem lub usługą.
-- **ms.assetid**: identyfikator GUID artykułu z witryny CAPS. Tworząc nowy plik markdown, należy uzyskać identyfikator GUID w witrynie [https://www.guidgenerator.com](https://www.guidgenerator.com). 
-- **ms.prod**, **ms.service**, **ms.technology**, **ms.devlang**, **ms.topic**, **ms.tgt_pltfrm**: możliwe wartości tych elementów można znaleźć [tutaj](https://microsoft.sharepoint.com/teams/STBCSI/Insights/_layouts/15/WopiFrame.aspx?sourcedoc=%7b7A321BF1-0611-4184-84DA-A0E964C435FA%7d&file=WEDCS_MasterList_CSIValues.xlsx&action=default).
+- **title**: Ten tytuł pojawi się w wynikach wyszukiwarki. Tytuł powinien kończyć się symbolem kreski pionowej (|), po którym następuje nazwa usługi (zobacz przykład powyżej). Tytuł nie musi (i prawdopodobnie nie powinien) być taki sam jak tytuł w nagłówku H1. Powinien zawierać około 65 znaków (łącznie z ciągiem | NAZWA USŁUGI)
+- **author**, **manager**, **reviewer**: Pole „author” powinno zawierać **nazwę użytkownika usługi Github** autora, a nie jego alias.  Z kolei pola „manager” i „reviewer” powinny zawierać aliasy. Wartość ms.reviewer określa imię i nazwisko kierownika projektu powiązanego z artykułem lub usługą.
+- **ms.assetid**: Identyfikator GUID artykułu z witryny CAPS. Tworząc nowy plik markdown, należy uzyskać identyfikator GUID w witrynie [https://www.guidgenerator.com](https://www.guidgenerator.com). 
+- **ms.prod**, **ms.service**, **ms.technology**, **ms.devlang**, **ms.topic**, **ms.tgt_pltfrm**: Możliwe wartości tych elementów można znaleźć [tutaj](https://microsoft.sharepoint.com/teams/STBCSI/Insights/_layouts/15/WopiFrame.aspx?sourcedoc=%7b7A321BF1-0611-4184-84DA-A0E964C435FA%7d&file=WEDCS_MasterList_CSIValues.xlsx&action=default).
 
 ## <a name="basic-markdown-and-gfm"></a>Podstawy składni języka Markdown i GFM
 
@@ -86,7 +86,7 @@ Aby utworzyć link do nagłówka w pliku markdown w tym samym repozytorium, uży
 
 Aby utworzyć link do pliku zewnętrznego, użyj pełnego adresu URL jako linku.
 
-- Przykład: [Github](http://www.github.com)
+- Przykład: [GitHub](http://www.github.com)
 
 Jeśli w pliku markdown występuje adres URL, zostanie on przekształcony w link możliwy do kliknięcia.
 
@@ -216,7 +216,7 @@ To jest przykład kodu wbudowanego `in-line code`.
 
 <iframe width="420" height="315" src="https://www.youtube.com/embed/R6_eWWfNB54" frameborder="0" allowfullscreen></iframe>
 
-## <a name="docsms-extentions"></a>rozszerzenia docs.ms
+## <a name="docsms-extensions"></a>Rozszerzenia docs.ms
 
 ### <a name="button"></a>Przycisk
 
