@@ -1,7 +1,7 @@
 ---
 title: Używanie dokumentów usługi Intune
 titleSuffix: Microsoft Intune
-description: Dowiedz się, jak wyszukiwać dokumenty w usłudze Intune, udostępniać informacje o dokumentach i wchodzić w skład dokumentacji.
+description: Dowiedz się, jak wyszukiwać dokumenty usługi Intune, przesyłać opinie o dokumentach i współtworzyć dokumenty.
 ms.date: 09/15/2019
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -11,106 +11,106 @@ author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 42e16be44dba539007967dd921da4c8d4f095ec4
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 607e1136fd3ab5661a2b054410d6fc7fce94994d
+ms.sourcegitcommit: 1aaff35fddb3d06458d739968d28971fed0bb2ba
 ms.translationtype: MTE75
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72504822"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77155347"
 ---
 # <a name="using-the-intune-docs"></a>Używanie dokumentów usługi Intune
 
-Ten artykuł zawiera informacje ułatwiające przeszukiwanie Microsoft Intune dokumentów w celu uzyskania informacji, przesyłanie opinii na temat dokumentacji usługi Intune i pokazanie, jak można szybko i łatwo współtworzyć dokumenty.
+W tym artykule opisano, jak wyszukiwać informacje w dokumentach usługi Microsoft Intune, przesyłać opinie na temat dokumentów usługi Intune oraz jak można szybko i łatwo współtworzyć dokumenty.
 
-Aby uzyskać ogólną pomoc i obsługę usługi Intune, zobacz [Uzyskaj pomoc techniczną dotyczącą usługi Intune](../get-support.md).
+Aby uzyskać ogólną pomoc dotyczącą usługi Intune, zobacz [Uzyskiwanie pomocy technicznej dotyczącej usługi Intune](../get-support.md).
 
-## <a name="search-the-docs"></a>Przeszukaj dokumenty
+## <a name="search-the-docs"></a>Wyszukiwanie w dokumentach
 
  Poniższe porady dotyczące wyszukiwania ułatwiają znajdowanie potrzebnych informacji:  
 
-- Korzystając z preferowanego aparatu wyszukiwania do lokalizowania zawartości Microsoft Intune, należy uwzględnić `Intune` razem ze słowami kluczowymi wyszukiwania.  
+- Wyszukując zawartość usługi Microsoft Intune przy użyciu ulubionego aparatu wyszukiwania, uwzględnij wyraz `Intune` wraz z kluczowymi słowami wyszukiwania.  
 
-  - Wyszukaj wyniki z docs.microsoft.com. Wyniki z technet.microsoft.com lub msdn.microsoft.com są dla starszych wersji produktów.  
+  - Szukaj wyników w witrynie docs.microsoft.com. Wyniki z witryn technet.microsoft.com i msdn.microsoft.com dotyczą starszych wersji produktów.  
 
-  - Aby dodatkowo skupić wyniki wyszukiwania w bieżącej bibliotece zawartości, Uwzględnij `site:docs.microsoft.com` do określania zakresu aparatu wyszukiwania.  
+  - Aby jeszcze bardziej skupić wyniki wyszukiwania na bieżącej bibliotece zawartości, dołącz ciąg `site:docs.microsoft.com`, aby określić zakres aparatu wyszukiwania.  
 
-- Użyj wyszukiwanych terminów, które pasują do terminologii w interfejsie użytkownika i dokumentacji online. Unikaj nieoficjalnych terminów lub skrótów, które mogą być widoczne w treści społeczności.
+- Używaj terminów wyszukiwania, które są zgodne z terminologią stosowaną w interfejsie użytkownika i dokumentacji online. Unikaj nieoficjalnych terminów lub skrótów, które mogą być widoczne w treściach społeczności.
 
-- Aby wyszukać w aktualnie oglądanym artykule, użyj funkcji **wyszukiwania** przeglądarki. W przypadku większości nowoczesnych przeglądarek sieci Web naciśnij klawisz **Ctrl**+**F** , a następnie wprowadź wyszukiwane terminy.  
+- Aby wyszukać w aktualnie wyświetlanym artykule, użyj funkcji **Znajdź** przeglądarki. W większości nowoczesnych przeglądarek internetowych możesz nacisnąć klawisze **Ctrl**+**F**, a następnie wprowadzić wyszukiwane terminy.  
 
-- Każdy artykuł w systemie docs.microsoft.com zawiera następujące pola, które ułatwiają wyszukiwanie zawartości:  
+- Każdy artykuł w witrynie docs.microsoft.com zawiera następujące pola, które ułatwiają wyszukiwanie zawartości:  
 
-  - **Wyszukaj** w prawym górnym rogu. Aby wyszukać wszystkie artykuły, wprowadź w tym polu terminy. Wyszukiwanie automatycznie uwzględnia zakres wyszukiwania w usłudze Intune.
+  - Pole **Wyszukaj** w prawym górnym rogu. Aby wyszukać we wszystkich artykułach, wprowadź terminy w tym polu. Wyszukiwanie automatycznie uwzględnia zakres wyszukiwania w usłudze Intune.
 
-  - **Filtruj według tytułu** powyżej lewej tabeli zawartości. Aby wyszukać bieżącą Spis treści, wprowadź w tym polu warunki. To pole dopasowuje tylko terminy, które pojawiają się na tytułach artykułów dla bieżącego węzła. Ostatni element w wynikach wyszukiwania umożliwia wyszukanie warunków we wszystkich dokumentach usługi Intune.
+  - Pole **Filtruj według tytułu** powyżej spisu treści po lewej stronie. Aby wyszukać w bieżącym spisie treści, wprowadź terminy w tym polu. To pole dopasowuje tylko te terminy, które pojawiają się w tytułach artykułów dla bieżącego węzła. Ostatni element w wynikach wyszukiwania udostępnia opcję wyszukania terminów we wszystkich dokumentach usługi Intune.
 
-- Masz problemy z znalezieniem czegoś? [Plik — Opinie!](#provide-doc-feedback) Podczas zgłaszania problemu Podaj używany przez Ciebie aparat wyszukiwania, słowa kluczowe i artykuł docelowy. Ta opinia pomoże firmie Microsoft zoptymalizować zawartość w celu lepszego wyszukiwania.  
+- Masz problemy ze znalezieniem czegoś? [Prześlij opinię!](#provide-doc-feedback) Podczas zgłaszania problemu podaj informacje o używanym aparacie wyszukiwania, słowach kluczowych i artykule docelowym. Ta opinia pomoże firmie Microsoft zoptymalizować zawartość w celu lepszego wyszukiwania.  
 
-## <a name="provide-doc-feedback"></a>Podaj opinię o dokumencie
+## <a name="provide-doc-feedback"></a>Przesyłanie opinii o dokumencie
 
-Sekcja opinii znajduje się u dołu każdego artykułu. Kliknij link **opinii** w prawym górnym rogu dowolnego artykułu, aby przejść do tej sekcji. Opinie są zintegrowane z problemami z usługi GitHub. Aby uzyskać więcej informacji na temat integracji z problemami z usługą GitHub, zobacz wpis na blogu dotyczący [platformy docs](https://docs.microsoft.com/teamblog/a-new-feedback-system-is-coming-to-docs).
+Sekcja opinii znajduje się u dołu każdego artykułu. Kliknij link **Opinie** w prawym górnym rogu dowolnego artykułu, aby przejść do tej sekcji. Opinie są zintegrowane z problemami usługi GitHub. Aby uzyskać więcej informacji na temat integracji z problemami usługi GitHub, zobacz ten [wpis w blogu dotyczący platformy dokumentacji](https://docs.microsoft.com/teamblog/a-new-feedback-system-is-coming-to-docs).
 
-Aby udostępnić opinię na temat usługi Intune (nie dokumentacji), kliknij pozycję **opinia o produkcie**.
+Aby udostępnić opinię na temat usługi Intune (a nie na temat dokumentacji), kliknij pozycję **Opinia o produkcie**.
 
-[Konto usługi GitHub](https://github.com/join) jest wymaganiem wstępnym do przekazywania opinii dotyczących dokumentacji. Po zalogowaniu istnieje jednorazowa autoryzacja dla MicrosoftDocs. Po kliknięciu przycisku **opinii o zawartości**wprowadź tytuł i komentarz, a następnie **Prześlij opinię**. Ta akcja spowoduje wydanie nowego problemu dotyczącego artykułu docelowego w [repozytorium GitHub usługi Intune](https://github.com/MicrosoftDocs/intunedocs/issues).
+Aby przekazać opinię dotyczącą dokumentacji, trzeba mieć [konto usługi GitHub](https://github.com/join). Po zalogowaniu wymagana jest jednorazowa autoryzacja dla witryny MicrosoftDocs. Następnie po kliknięciu przycisku **Opinia o zawartości** wprowadź tytuł i komentarz, a następnie kliknij pozycję **Prześlij opinię**. To działanie spowoduje przesłanie nowego problemu dotyczącego artykułu docelowego w [repozytorium GitHub usługi Intune](https://github.com/MicrosoftDocs/intunedocs/issues).
 
-Zobaczysz również istniejące otwarte lub zamknięte problemy związane z artykułem docelowym. Jeśli istnieje, przejrzyj je przed przesłaniem nowego problemu. W przypadku znalezienia problemu związanego z programem kliknij ikonę kroju, aby dodać do niej lub dodać komentarz.
+Zostaną również wyświetlone istniejące otwarte lub zamknięte problemy dla artykułu docelowego. Jeśli takie istnieją, przejrzyj je przed przesłaniem nowego problemu. Jeśli znajdziesz pokrewny problem, kliknij ikonę twarzy, aby dodać reakcję, lub rozwiń go, aby dodać komentarz.
 
 ### <a name="types-of-feedback"></a>Typy opinii
 
-Użyj problemów usługi GitHub do przesyłania następujących typów informacji zwrotnych:
+Używając opcji problemów usługi GitHub, możesz przesłać następujące typy opinii:
 
-- Usterka dokumentu: zawartość jest nieaktualna, niejasne, mylące lub naruszone.
-- Ulepszenie dokumentów: sugestia ulepszenia artykułu.
-- Pytanie dotyczące doc: potrzebna jest pomoc w znalezieniu istniejącej dokumentacji.
-- Pomysł dotyczący dokumentu: sugestia dotycząca nowego artykułu. Użyj tej metody zamiast usługi UserVoice, aby uzyskać opinię dotyczącą dokumentacji.
-- Pochwałę: pozytywna Opinia dotycząca przydatnego lub informacyjnego artykułu.
-- Lokalizacja: opinie dotyczące tłumaczenia zawartości.
-- Optymalizacja aparatu wyszukiwania (wyszukiwarka): Opinia dotycząca problemów z wyszukiwaniem zawartości. Dołącz aparat wyszukiwania, słowa kluczowe i artykuł docelowy w komentarzach.
+- Usterka dokumentu: Zawartość jest nieaktualna, niejasna, myląca lub uszkodzona.
+- Ulepszenie dokumentu: Sugestia dotycząca ulepszenia artykułu.
+- Pytanie dotyczące dokumentu: Potrzebujesz pomocy w znalezieniu istniejącej dokumentacji.
+- Pomysł dotyczący dokumentu: Sugestia dotycząca nowego artykułu. Użyj tej metody zamiast witryny UserVoice na potrzeby opinii dotyczącej dokumentacji.
+- Pochwała: Pozytywna opinia dotycząca przydatnego lub pouczającego artykułu.
+- Lokalizacja: Opinie dotyczące tłumaczenia zawartości.
+- Optymalizacja aparatu wyszukiwania (SEO): Opinia dotycząca problemów z wyszukiwaniem zawartości. W komentarzach dołącz informacje o aparacie wyszukiwania, słowach kluczowych i artykule docelowym.
 
-Jeśli zgłoszono problemy dotyczące tematów niezwiązanych z dokumentami, takich jak [opinie o produkcie](https://microsoftintune.uservoice.com/forums/291681-ideas), [pytania dotyczące produktów](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod)lub [żądania pomocy technicznej](../get-support.md), te problemy zostaną zamknięte, a użytkownik przekierowany do odpowiedniego kanału opinii.
+W przypadku zgłoszenia problemów, które nie dotyczą dokumentów, takich jak [opinia o produkcie](https://microsoftintune.uservoice.com/forums/291681-ideas), [pytania dotyczące produktów](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod) lub [żądanie pomocy technicznej](../get-support.md), te problemy zostaną zamknięte, a użytkownik zostanie przekierowany do odpowiedniego kanału opinii.
 
-Aby podzielić się opinią na platformie docs.microsoft.com, zobacz informacje o witrynie [docs](https://aka.ms/sitefeedback). Platforma obejmuje wszystkie składniki otoki, takie jak nagłówek, spis treści i menu po prawej stronie. Również sposób renderowania artykułów w przeglądarce, takich jak czcionka, okna alertów i kotwice strony.
+Aby podzielić się opinią o platformie docs.microsoft.com, zobacz [Opinie dotyczące dokumentacji](https://aka.ms/sitefeedback). Platforma obejmuje wszystkie składniki otoki, takie jak nagłówek, spis treści i menu po prawej stronie. Uwzględnia również elementy renderowania artykułów w przeglądarce, takie jak czcionka, pola alertów i kotwice strony.
 
 ## <a name="contribute-to-docs"></a>Współtworzenie dokumentacji
 
-Dokumenty usługi Intune, takie jak większość zawartości w witrynie docs.microsoft.com, są otwarte w serwisie GitHub. Ta biblioteka akceptuje i zachęca wkłady społecznościowe. Aby uzyskać więcej informacji na temat rozpoczynania pracy, zobacz [Przewodnik współautora](https://docs.microsoft.com/contribute). Tworzenie konta w usłudze [GitHub](https://github.com/join) jest jedynym wymaganiem wstępnym.
+Dokumenty usługi Intune, tak jak większość zawartości w witrynie docs.microsoft.com, to dokumenty typu open-source w usłudze GitHub. Ta biblioteka akceptuje wkład społeczności i zachęca do niego. Aby uzyskać więcej informacji o tym,jak rozpocząć pracę, zobacz [Przewodnik współautora](https://docs.microsoft.com/contribute). Jedynym wymaganiem wstępnym jest utworzenie konta w usłudze [GitHub](https://github.com/join).
 
 ### <a name="basic-steps-to-contribute-to-docs"></a>Podstawowe kroki umożliwiające współtworzenie dokumentów
 
-1. W artykule docelowym kliknij przycisk **Edytuj**. Ta akcja powoduje otwarcie pliku źródłowego w usłudze GitHub.  
+1. W artykule docelowym kliknij pozycję **Edytuj**. Ta akcja powoduje otwarcie pliku źródłowego w usłudze GitHub.  
 
 2. Aby edytować plik źródłowy, kliknij ikonę ołówka.  
 
-3. Wprowadź zmiany w źródle promocji. Aby uzyskać więcej informacji, zobacz [jak używać promocji do pisania dokumentów](https://docs.microsoft.com/contribute/how-to-write-use-markdown).  
+3. Wprowadź zmiany w źródłowym pliku Markdown. Aby uzyskać więcej informacji, zobacz [Jak używać języka Markdown do pisania dokumentów](https://docs.microsoft.com/contribute/contribute-how-to-write-use-markdown).  
 
-4. W sekcji Zaproponuj zmianę pliku wprowadź komentarz publiczny zatwierdzający *Opis zmian* . Następnie kliknij pozycję **Zaproponuj zmianę pliku**.  
+4. W sekcji Propose file change (Zaproponuj zmianę pliku) wprowadź komentarz zatwierdzenia publicznego z opisem *zmiany*. Następnie kliknij pozycję **Propose file change** (Zaproponuj zmianę pliku).  
 
-5. Przewiń w dół i sprawdź wprowadzone zmiany. Kliknij przycisk **Utwórz żądanie ściągnięcia** , aby otworzyć formularz. Opisz, *dlaczego* została wprowadzona zmiana. Kliknij przycisk **Utwórz żądanie ściągnięcia**.
+5. Przewiń w dół i sprawdź wprowadzone zmiany. Kliknij pozycję **Utwórz żądanie ściągnięcia**, aby otworzyć formularz. Opisz, *dlaczego* zmiana została wprowadzona. Kliknij pozycję **Utwórz żądanie ściągnięcia**.
 
-Zespół piszący otrzyma żądanie ściągnięcia, przypisze element do odpowiedniego składnika zapisywania, zapoznaje się z tekstem i przeprowadzi szybką edycję, a następnie zatwierdza i scala zmiany lub skontaktuje się z Tobą, aby uzyskać więcej informacji o aktualizacji.  
+Zespół zajmujący się pisaniem artykułów otrzyma Twoje żądanie ściągnięcia, przypisze element do odpowiedniej osoby piszącej, zapozna się z tekstem i przeprowadzi szybką ocenę edycji, a następnie zatwierdzi i scali zmiany lub skontaktuje się z Tobą, aby uzyskać więcej informacji o aktualizacji.  
 
-### <a name="what-to-contribute"></a>Co należy współtworzyć
+### <a name="what-to-contribute"></a>Co można współtworzyć
 
-Jeśli interesuje Cię udział, ale nie wiesz, gdzie zacząć, zobacz następujące sugestie:  
+Jeśli chcesz współtworzyć, ale nie wiesz, od czego zacząć, zapoznaj się z poniższymi sugestiami:  
 
-- Zapoznaj się z artykułem pod kątem dokładności. Następnie zaktualizuj metadane **MS. Date** przy użyciu formatu `mm/dd/yyyy`. Ten wkład ułatwia zachowanie aktualności zawartości.  
+- Przejrzyj artykuł pod kątem dokładności. Następnie zaktualizuj metadane **ms.date**, używając formatu `mm/dd/yyyy`. Taki wkład pomaga zachować aktualność zawartości.  
 
-- Dodawaj wyjaśnienia, przykłady lub wskazówki w oparciu o Twoje doświadczenie. Ten udział używa możliwości społeczności do udostępnienia wiedzy.
+- Dodaj wyjaśnienia, przykłady lub wskazówki w oparciu o swoje doświadczenie. Taki wkład umożliwia społeczności dzielenie się wiedzą.
 
-- Popraw tłumaczenia w języku innym niż angielski. Ten udział zwiększa użyteczność zlokalizowanej zawartości.  
+- Popraw tłumaczenie w języku innym niż angielski. Taki wkład zwiększa użyteczność zlokalizowanej zawartości.  
 
 > [!Note]  
-> Większe materiały wymagają podpisania umowy licencyjnej na udział (CLA), jeśli nie jesteś pracownikiem firmy Microsoft. Serwis GitHub automatycznie wymaga podpisania tej umowy, gdy udział spełnia wartość progową. Wystarczy podpisać tę umowę tylko raz.
+> Współtworzenie w większym zakresie wymaga podpisania Umowy licencyjnej udziału (CLA, Contribution License Agreement), jeśli nie jesteś pracownikiem firmy Microsoft. Usługa GitHub automatycznie wymaga podpisania tej umowy, gdy wkład przekroczy wartość progową. Tę umowę wystarczy podpisać raz.
 
 ### <a name="tips"></a>Porady
 
-Postępuj zgodnie z poniższymi ogólnymi wskazówkami dotyczącymi tworzenia dokumentów w usłudze Intune:
+Postępuj zgodnie z poniższymi ogólnymi wskazówkami dotyczącymi współtworzenia dokumentów w usłudze Intune:
 
-- Nie ryzykuj nas z dużymi żądaniami ściągnięcia. Zamiast tego należy [rozwiązać problem](#provide-doc-feedback) i rozpocząć dyskusję. Następnie możemy wyrazić zgodę na kierunek przed inwestycją w znaczną ilość czasu.  
+- Nie zaskakuj nas dużymi żądaniami ściągnięcia. Zamiast tego [zgłoś problem](#provide-doc-feedback) i rozpocznij dyskusję. Dzięki temu będziemy mogli uzgodnić kierunek, zanim poświęcisz dużo czasu na pracę.  
 
-- Przeczytaj [Przewodnik po stylu Microsoft](https://aka.ms/MicrosoftStyle). Poznaj [10 najważniejszych wskazówek dotyczących stylu i głosu firmy Microsoft](https://docs.microsoft.com/style-guide/top-10-tips-style-voice).  
+- Przeczytaj [Przewodnik po stylu firmy Microsoft](https://aka.ms/MicrosoftStyle). Poznaj [10 najważniejszych wskazówek dotyczących stylu i tonu firmy Microsoft](https://docs.microsoft.com/style-guide/top-10-tips-style-voice).  
 
-- Postępuj zgodnie z [przepływem pracy przepływu usługi GitHub](https://guides.github.com/introduction/flow/).  
+- Postępuj zgodnie z [przepływem pracy GitHub Flow](https://guides.github.com/introduction/flow/).  
 
-- Blog i Tweety (lub inne) dotyczące Twoich wkładów — często!  
+- Często dodawaj wpisy w blogu i tweety (lub cokolwiek innego) dotyczące Twojego udziału.  

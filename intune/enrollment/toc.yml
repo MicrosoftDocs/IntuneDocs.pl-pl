@@ -1,6 +1,6 @@
 - name: Rejestracja w usłudze Microsoft Intune
   href: index.yml
-- name: Przegląd
+- name: Omówienie
   expanded: true
   items:
     - name: Omówienie rejestracji urządzeń
@@ -20,7 +20,7 @@
   items:
     - name: Rejestrowanie urządzeń z systemem Windows przy użyciu rozwiązania Autopilot
       href: tutorial-use-autopilot-enroll-devices.md
-    - name: Rejestrowanie urządzeń z systemem iOS za pomocą programu DEP
+    - name: Rejestrowanie urządzeń z systemem iOS/iPadOS za pomocą programu DEP
       href: tutorial-use-device-enrollment-program-enroll-ios.md
 - name: Pojęcia
   items:
@@ -40,7 +40,7 @@
       href: device-enrollment-manager-enroll.md
     - name: Mapowanie urządzeń na grupy
       href: device-group-mapping.md
-- name: Przewodniki
+- name: Przewodniki z instrukcjami
   items:
     - name: Konfigurowanie rejestracji systemu Windows
       items:
@@ -84,12 +84,12 @@
         - name: Program Samsung Knox Mobile Enrollment
           href: android-samsung-knox-mobile-enroll.md
           displayName: kda; kme
-    - name: Konfigurowanie rejestrowania urządzeń z systemem iOS
+    - name: Konfigurowanie rejestracji urządzeń z systemem iOS/iPadOS
       href: ios-enroll.md
       items:
         - name: Program Device Enrollment Program
           href: device-enrollment-program-enroll-ios.md
-        - name: Konfigurowanie rejestracji użytkowników w systemach iOS oraz iPadOS
+        - name: Konfigurowanie rejestracji użytkowników w systemach iOS/iPadOS oraz iPadOS
           href: ios-user-enrollment.md
         - name: Obsługiwane akcje i opcje rejestracji użytkowników
           href: ios-user-enrollment-supported-actions.md
@@ -109,7 +109,7 @@
         - name: Rozwiązywanie problemów z rejestrowaniem urządzeń
           href: troubleshoot-device-enrollment-in-intune.md
           displayName: sso
-        - name: Rozwiązywanie problemów z rejestrowaniem urządzeń z systemem iOS
+        - name: Rozwiązywanie problemów z rejestrowaniem urządzeń z systemem iOS/iPadOS
           href: troubleshoot-ios-enrollment-errors.md
         - name: Rozwiązywanie problemów z rejestrowaniem urządzeń z systemem Windows
           href: troubleshoot-windows-enrollment-errors.md
