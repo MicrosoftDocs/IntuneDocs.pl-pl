@@ -25,11 +25,11 @@
           href: device-restart.md
     - name: Akcje urządzeń firmy Apple
       items:
-        - name: Lokalizowanie zgubionego urządzenia z systemem iOS
+        - name: Lokalizowanie zgubionego urządzenia z systemem iOS/iPadOS
           href: device-locate.md
-        - name: Włączanie trybu zgubienia w systemie iOS
+        - name: Włączanie trybu zgubienia dla systemu iOS/iPadOS
           href: device-lost-mode.md
-        - name: Włączanie trybu nadzorowanego dla systemu iOS
+        - name: Włączanie trybu nadzorowanego dla systemu iOS/iPadOS
           href: device-supervised-mode.md
         - name: Wymazywanie urządzenia z systemem macOS
           href: device-erase.md
