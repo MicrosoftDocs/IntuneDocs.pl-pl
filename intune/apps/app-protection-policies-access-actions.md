@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0440e2d6f5890b20ccf020c40bb1037bcfcae38
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 64faf797c69302e2a5cdbdde090330ab99fcc2e4
+ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564136"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77437889"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Selektywne czyszczenie danych przy użyciu akcji uruchamiania warunkowego zasad ochrony aplikacji w usłudze Intune
 
@@ -49,7 +49,7 @@ Za pomocą tych ustawień możesz jawnie wyczyścić dane firmowe z urządzenia 
 Tabela ustawień zasad ochrony aplikacji zawiera kolumny **Ustawienie**, **Wartość** i **Akcja**.
 
 ### <a name="ios-policy-settings"></a>Ustawienia zasad systemu iOS
-W przypadku systemu iOS za pomocą listy rozwijanej **Ustawienie** możliwe będzie skonfigurowanie akcji dla następujących ustawień:
+W przypadku systemu iOS/iPadOS za pomocą listy rozwijanej **Ustawienie** możliwe będzie skonfigurowanie akcji dla następujących ustawień:
 - Maksymalna liczba prób wpisania numeru PIN
 - Okres karencji w trybie offline
 - Urządzenia, w przypadku których wykonano jailbreak lub zapewniono dostęp do konta root
@@ -59,7 +59,7 @@ W przypadku systemu iOS za pomocą listy rozwijanej **Ustawienie** możliwe będ
 - Modele urządzeń
 - Maksymalny dozwolony poziom zagrożenia urządzenia
 
-Aby użyć ustawienia **Modele urządzeń**, wprowadź rozdzielaną średnikami listę identyfikatorów modeli urządzeń z systemem iOS. Te wartości nie uwzględniają wielkości liter. Poza obszarem raportowania usługi Intune dla danych wejściowych „Modele urządzeń” identyfikator modelu systemu iOS można znaleźć w kolumnie Typ urządzenia w [dokumentacji pomocy technicznej usługi HockeyApp](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types) lub w tym [repozytorium GitHub firmy zewnętrznej](https://gist.github.com/adamawolf/3048717).<br>
+Aby użyć ustawienia **Modele urządzeń**, wprowadź rozdzielaną średnikami listę identyfikatorów modeli urządzeń z systemem iOS/iPadOS. Te wartości nie uwzględniają wielkości liter. Poza obszarem raportowania usługi Intune dla danych wejściowych „Modele urządzeń” identyfikator modelu systemu iOS/iPadOS można znaleźć w kolumnie Typ urządzenia w [dokumentacji pomocy technicznej usługi HockeyApp](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types) lub w tym [repozytorium GitHub firmy zewnętrznej](https://gist.github.com/adamawolf/3048717).<br>
 Przykładowe dane wejściowe: *iPhone5,2; iPhone5,3*
 
 Na urządzeniach użytkowników końcowych klient usługi Intune wykonuje akcję w oparciu o proste dopasowywanie ciągów modelu urządzenia określonych w usłudze Intune dla zasad ochrony aplikacji. Dopasowywanie całkowicie zależy od danych zgłoszonych przez urządzenie. Zachęcamy, aby administrator IT upewnił się, że faktyczne zachowanie odpowiada zamierzonemu przez przetestowanie tego ustawienia z użyciem różnych producentów i modeli urządzeń w ramach małej grupy użytkowników. Wartość domyślna to **Nie skonfigurowano**.<br>
@@ -67,8 +67,8 @@ Ustaw jedną z następujących akcji:
 - Zezwalaj na określone (blokuj nieokreślone)
 - Zezwalaj na określone (wyczyść nieokreślone)
 
-**Co się stanie, jeśli administrator IT wprowadzi różne listy identyfikatorów modeli urządzeń z systemem iOS w zasadach przeznaczonych dla tych samych aplikacji i dla tego samego użytkownika usługi Intune?**<br>
-W przypadku wystąpienia konfliktu wartości skonfigurowanych dla dwóch zasad ochrony aplikacji usługa Intune zwykle przyjmuje najbardziej restrykcyjne podejście. W związku z tym wynikowe zasady wysłane do aplikacji docelowej otwieranej przez docelowego użytkownika usługi Intune byłyby częścią wspólną identyfikatorów modeli urządzeń z systemem iOS wymienionych w *zasadach A* i *zasadach B* przeznaczonych dla tej samej kombinacji aplikacja/użytkownik. Jeśli na przykład *zasady A* określają listę „iPhone5,2; iPhone5,3”, natomiast *zasady B* określają wartość „iPhone5,3”, wynikowe zasady dotyczące użytkownika usługi Intune, dla którego mają zastosowanie zarówno *zasady A*, jak i *zasady B*, będą zawierały wartość „iPhone5,3”. 
+**Co się stanie, jeśli administrator IT wprowadzi różne listy identyfikatorów modeli urządzeń z systemem iOS/iPadOS w zasadach przeznaczonych dla tych samych aplikacji i dla tego samego użytkownika usługi Intune?**<br>
+W przypadku wystąpienia konfliktu wartości skonfigurowanych dla dwóch zasad ochrony aplikacji usługa Intune zwykle przyjmuje najbardziej restrykcyjne podejście. W związku z tym wynikowe zasady wysłane do aplikacji docelowej otwieranej przez docelowego użytkownika usługi Intune byłyby częścią wspólną identyfikatorów modeli urządzeń z systemem iOS/iPadOS wymienionych w *zasadach A* i *zasadach B* przeznaczonych dla tej samej kombinacji aplikacja/użytkownik. Jeśli na przykład *zasady A* określają listę „iPhone5,2; iPhone5,3”, natomiast *zasady B* określają wartość „iPhone5,3”, wynikowe zasady dotyczące użytkownika usługi Intune, dla którego mają zastosowanie zarówno *zasady A*, jak i *zasady B*, będą zawierały wartość „iPhone5,3”. 
 
 ### <a name="android-policy-settings"></a>Ustawienia zasad systemu Android
 

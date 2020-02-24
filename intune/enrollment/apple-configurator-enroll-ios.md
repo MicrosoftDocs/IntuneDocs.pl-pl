@@ -1,7 +1,7 @@
 ---
-title: Rejestracja urządzeń z systemem iOS — Asystent ustawień programu Apple Configurator
+title: Rejestracja urządzeń z systemem iOS/iPadOS — Asystent ustawień programu Apple Configurator
 titleSuffix: Microsoft Intune
-description: Informacje dotyczące rejestrowania firmowych urządzeń z systemem iOS przy użyciu programu Apple Configurator i Asystenta ustawień.
+description: Informacje dotyczące rejestrowania firmowych urządzeń z systemem iOS/iPadOS przy użyciu programu Apple Configurator i Asystenta ustawień.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -18,26 +18,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f80312c2bd82063ed0b61c36bef9b8bf4ae3e1aa
-ms.sourcegitcommit: f26039d674eb4d61ab68264dd1a10b2e5e1d842c
+ms.openlocfilehash: 8ccd41b6ebc9bdf62c1603e508cb881a1be62ee7
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74691799"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415404"
 ---
-# <a name="set-up-ios-device-enrollment-with-apple-configurator"></a>Konfigurowanie rejestracji urządzeń z systemem iOS za pomocą programu Apple Configurator
+# <a name="set-up-iosipados-device-enrollment-with-apple-configurator"></a>Konfigurowanie rejestracji urządzeń z systemem iOS/iPadOS za pomocą programu Apple Configurator
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Usługa Intune obsługuje rejestrowanie urządzeń z systemem iOS przy użyciu narzędzia [Apple Configurator](https://itunes.apple.com/app/apple-configurator-2/id1037126344) działającego na komputerze Mac. Rejestrowanie przy użyciu narzędzia Apple Configurator wymaga, aby poszczególne urządzenia z systemem iOS zostały podłączone do komputera Mac za pośrednictwem portu USB w celu skonfigurowania rejestracji firmowej. Urządzenia można zarejestrować w usłudze Intune przy użyciu narzędzia Apple Configurator na dwa sposoby:
+Usługa Intune obsługuje rejestrowanie urządzeń z systemem iOS/iPadOS przy użyciu narzędzia [Apple Configurator](https://itunes.apple.com/app/apple-configurator-2/id1037126344) działającego na komputerze Mac. Rejestrowanie przy użyciu narzędzia Apple Configurator wymaga, aby poszczególne urządzenia z systemem iOS/iPadOS zostały podłączone do komputera Mac za pośrednictwem portu USB w celu skonfigurowania rejestracji firmowej. Urządzenia można zarejestrować w usłudze Intune przy użyciu narzędzia Apple Configurator na dwa sposoby:
 - **Rejestracja przy użyciu Asystenta ustawień** — czyści dane z urządzenia i przygotowuje je do rejestracji z wykorzystaniem Asystenta ustawień.
-- **Rejestracja bezpośrednia** — nie powoduje wyczyszczenia urządzenia i rejestruje je za pośrednictwem ustawień systemu iOS. Ta metoda obsługuje jedynie rejestrowanie urządzeń **bez koligacji użytkownika**.
+- **Rejestracja bezpośrednia** — nie powoduje wyczyszczenia urządzenia i rejestruje je za pośrednictwem ustawień systemu iOS/iPadOS. Ta metoda obsługuje jedynie rejestrowanie urządzeń **bez koligacji użytkownika**.
 
 Metody rejestracji z narzędziem Apple Configurator nie można używać z rejestracją korzystającą z [menedżera rejestracji urządzeń](device-enrollment-manager-enroll.md).
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-- Fizyczny dostęp do urządzeń z systemem iOS
+- Fizyczny dostęp do urządzeń z systemem iOS/iPadOS
 - [Ustaw urząd MDM](../fundamentals/mdm-authority-set.md)
 - [Certyfikat wypychania MDM firmy Apple](apple-mdm-push-certificate-get.md)
 - Numery seryjne urządzeń (tylko rejestracja z wykorzystaniem Asystenta ustawień)
@@ -46,7 +46,7 @@ Metody rejestracji z narzędziem Apple Configurator nie można używać z rejest
 
 ## <a name="create-an-apple-configurator-profile-for-devices"></a>Tworzenie profilu programu Apple Configurator dla urządzeń
 
-Profil rejestracji urządzeń określa ustawienia stosowane podczas rejestracji. Te ustawienia są stosowane tylko raz. Wykonaj następujące kroki, aby utworzyć profil rejestracji i zarejestrować urządzenia z systemem iOS z wykorzystaniem narzędzia Apple Configurator.
+Profil rejestracji urządzeń określa ustawienia stosowane podczas rejestracji. Te ustawienia są stosowane tylko raz. Wykonaj następujące kroki, aby utworzyć profil rejestracji i zarejestrować urządzenia z systemem iOS/iPadOS z wykorzystaniem narzędzia Apple Configurator.
 
 1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz kolejno pozycje **Urządzenia** > **iOS** > **Rejestracja urządzeń z systemem iOS** > **Apple Configurator** > **Profile** > **Utwórz**.
 
@@ -87,7 +87,7 @@ Profil rejestracji urządzeń określa ustawienia stosowane podczas rejestracji.
     F7TLWCLBX196, szczegóły urządzenia</br>
     DLXQPCWVGHMJ,szczegóły urządzenia
 
-   [Dowiedz się, jak znaleźć numer seryjny urządzenia z systemem iOS](https://support.apple.com/HT204073).
+   [Dowiedz się, jak znaleźć numer seryjny urządzenia z systemem iOS/iPadOS](https://support.apple.com/HT204073).
 2. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz kolejno pozycje **Urządzenia** > **iOS** > **Rejestracja urządzeń z systemem iOS** > **Apple Configurator** > **Urządzenia** > **Dodaj**.
 
 5. Wybierz **profil rejestracji** do zastosowania do importowanych numerów seryjnych. Jeśli chcesz, aby szczegóły nowego numeru seryjnego zastąpiły istniejące szczegóły, wybierz opcję **Zastąp szczegóły istniejącymi identyfikatorami**.
@@ -95,7 +95,7 @@ Profil rejestracji urządzeń określa ustawienia stosowane podczas rejestracji.
 
 ### <a name="reassign-a-profile-to-device-serial-numbers"></a>Ponowne przypisanie profilu do numerów seryjnych urządzeń
 
-Profil rejestracji można przypisać po zaimportowaniu numerów seryjnych urządzeń z systemem iOS w ramach rejestracji z wykorzystaniem narzędzia Apple Configurator. Można również przypisać profile z dwóch miejsc w witrynie Azure Portal:
+Profil rejestracji można przypisać po zaimportowaniu numerów seryjnych urządzeń z systemem iOS/iPadOS w ramach rejestracji z wykorzystaniem narzędzia Apple Configurator. Można również przypisać profile z dwóch miejsc w witrynie Azure Portal:
 - **Urządzenia programu Apple Configurator**
 - **Profile programu AC**
 
@@ -113,9 +113,9 @@ Po utworzeniu profilu i przypisaniu numerów seryjnych musisz wyeksportować pro
 
 1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz kolejno pozycje **Urządzenia** > **iOS** > **Rejestracja urządzeń z systemem iOS** > **Apple Configurator** > **Profile** > Wybierz profil przeznaczony do wyeksportowania.
 2. W profilu wybierz pozycję **Eksportuj profil**.
-3. Skopiuj **adres URL profilu**. Następnie możesz dodać go przy użyciu narzędzia Apple Configurator, aby określić profil usługi Intune używany przez urządzenia z systemem iOS.
+3. Skopiuj **adres URL profilu**. Następnie możesz dodać go przy użyciu narzędzia Apple Configurator, aby określić profil usługi Intune używany przez urządzenia z systemem iOS/iPadOS.
 
-   Następnie importuje się ten profil do narzędzia Apple Configurator, aby zdefiniować profil usługi Intune używany przez urządzenia z systemem iOS, używając poniższej procedury.
+   W kolejnym kroku ten profil jest importowany do narzędzia Apple Configurator, aby zdefiniować profil usługi Intune używany przez urządzenia z systemem iOS/iPadOS, używając poniższej procedury.
 
 ### <a name="enroll-devices-with-setup-assistant"></a>Rejestrowanie urządzeń przy użyciu Asystenta ustawień
 
@@ -125,15 +125,15 @@ Po utworzeniu profilu i przypisaniu numerów seryjnych musisz wyeksportować pro
     > Jeśli urządzenie zostało już zarejestrowane na koncie przy użyciu identyfikatora Apple ID, należy je usunąć z usługi Apple iCloud przed rozpoczęciem procesu rejestracji. Zostanie wyświetlony monit o błędzie „Nie można aktywować [Nazwa urządzenia]”.
 
 2. W okienku **preferencji** wybierz pozycję **Servers** (Serwery), a następnie wybierz symbol plusa (+), aby uruchomić kreatora serwera MDM. Wybierz pozycję **Next** (Dalej).
-3. Wprowadź **nazwę lub adres URL hosta** i **adres URL rejestracji** dla serwera MDM w obszarze rejestracji asystenta ustawień dla urządzeń z systemem iOS w usłudze Microsoft Intune. W polu adresu URL rejestracji wprowadź adres URL profilu rejestracji wyeksportowany z usługi Intune. Wybierz pozycję **Next** (Dalej).  
+3. Wprowadź **nazwę lub adres URL hosta** i **adres URL rejestracji** dla serwera MDM w obszarze rejestracji asystenta ustawień dla urządzeń z systemem iOS/iPadOS w usłudze Microsoft Intune. W polu adresu URL rejestracji wprowadź adres URL profilu rejestracji wyeksportowany z usługi Intune. Wybierz pozycję **Next** (Dalej).  
     Możesz bezpiecznie zignorować ostrzeżenie informujące, że adres URL serwera nie został zweryfikowany. Aby kontynuować, wybieraj pozycję **Next** (Dalej), aż do ukończenia pracy kreatora.
-4. Podłącz urządzenia przenośne z systemem iOS do komputera Mac przy użyciu adaptera USB.
-5. Wybierz urządzenia z systemem iOS, którymi chcesz zarządzać, a następnie wybierz pozycję **Przygotuj**. W okienku **Prepare iOS Device** (Przygotowywanie urządzenia z systemem iOS) wybierz pozycję **Manual** (Ręcznie), a następnie wybierz pozycję **Next** (Dalej).
+4. Podłącz urządzenia przenośne z systemem iOS/iPadOS do komputera Mac przy użyciu adaptera USB.
+5. Wybierz urządzenia z systemem iOS/iPadOS, którymi chcesz zarządzać, a następnie wybierz pozycję **Prepare** (Przygotuj). W okienku **Prepare iOS/iPadOS Device** (Przygotowywanie urządzenia z systemem iOS/iPadOS) wybierz pozycję **Manual** (Ręcznie), a następnie wybierz pozycję **Next** (Dalej).
 6. W okienku **Enroll in MDM Server** (Rejestrowanie na serwerze MDM) wybierz utworzoną nazwę serwera, a następnie wybierz pozycję **Next** (Dalej).
 7. W okienku **Supervise Devices** (Nadzorowanie urządzeń) wybierz poziom nadzoru, a następnie wybierz pozycję **Next** (Dalej).
 8. W okienku **Create an Organization** (Tworzenie organizacji) wybierz pozycję **Organization** (Organizacja) lub utwórz nową organizację, a następnie wybierz pozycję **Next** (Dalej).
-9. W okienku **Configure iOS Setup Assistant** (Konfigurowanie Asystenta ustawień systemu iOS) wybierz czynności, które mają zostać wyświetlone użytkownikowi, a następnie wybierz pozycję **Prepare** (Przygotuj). Jeśli zostanie wyświetlony monit, uwierzytelnij się w celu zaktualizowania ustawień zaufania.  
-10. Po zakończeniu przygotowywania urządzenia z systemem iOS odłącz kabel USB.  
+9. W okienku **Configure iOS/iPadOS Setup Assistant** (Konfigurowanie Asystenta ustawień systemu iOS/iPadOS) wybierz czynności, które mają zostać wyświetlone użytkownikowi, a następnie wybierz pozycję **Prepare** (Przygotuj). Jeśli zostanie wyświetlony monit, uwierzytelnij się w celu zaktualizowania ustawień zaufania.  
+10. Po zakończeniu przygotowywania urządzenia z systemem iOS/iPadOS odłącz kabel USB.  
 
 ### <a name="distribute-devices"></a>Dystrybuowanie urządzeń
 Urządzenia są teraz gotowe do rejestracji w firmie. Wyłącz urządzenia i przekaż je użytkownikom. Po włączeniu urządzeń przez użytkowników zostanie uruchomiony Asystent ustawień.
@@ -141,34 +141,34 @@ Urządzenia są teraz gotowe do rejestracji w firmie. Wyłącz urządzenia i prz
 Użytkownicy po otrzymaniu urządzeń muszą zakończyć działania w Asystencie ustawień. Urządzenia skonfigurowane z koligacją użytkownika mogą instalować i uruchamiać aplikację Portal firmy w celu pobierania aplikacji i zarządzania urządzeniami.
 
 ## <a name="direct-enrollment"></a>Rejestracja bezpośrednia
-W przypadku bezpośredniego rejestrowania urządzeń z systemem iOS przy użyciu programu Apple Configurator możesz zarejestrować urządzenie bez uzyskiwania jego numeru seryjnego. Możesz też nazwać urządzenie w celach identyfikacyjnych, zanim usługa Intune przechwyci nazwę urządzenia podczas rejestracji. Aplikacja Portal firmy nie jest obsługiwana w przypadku urządzeń, które zostały zarejestrowane bezpośrednio. Ta metoda nie powoduje wyczyszczenia urządzenia.
+W przypadku bezpośredniego rejestrowania urządzeń z systemem iOS/iPadOS przy użyciu programu Apple Configurator możesz zarejestrować urządzenie bez uzyskiwania jego numeru seryjnego. Możesz też nazwać urządzenie w celach identyfikacyjnych, zanim usługa Intune przechwyci nazwę urządzenia podczas rejestracji. Aplikacja Portal firmy nie jest obsługiwana w przypadku urządzeń, które zostały zarejestrowane bezpośrednio. Ta metoda nie powoduje wyczyszczenia urządzenia.
 
 Aplikacje wymagające koligacji użytkownika (w tym aplikacja Portal firmy używana do instalowania aplikacji biznesowych) nie mogą zostać zainstalowane.
 
-### <a name="export-the-profile-as-mobileconfig-to-ios-devices"></a>Eksportowanie profilu jako pliku .mobileconfig do urządzeń z systemem iOS
+### <a name="export-the-profile-as-mobileconfig-to-iosipados-devices"></a>Eksportowanie profilu jako pliku mobileconfig do urządzeń z systemem iOS/iPadOS
 
 1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz kolejno pozycje **Urządzenia** > **iOS** > **Rejestracja urządzeń z systemem iOS** > **Apple Configurator** > **Profile** > wybierz profil do wyeksportowania > **Eksportuj profil**.
 2. W obszarze **Rejestracja bezpośrednia** wybierz opcję **Pobierz profil**i zapisz plik. Plik profilu rejestracji jest ważny tylko przez dwa tygodnie. Po tym czasie musisz utworzyć go ponownie.
-3. Przetransferuj plik na komputer Mac z programem [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12), aby wypchnąć go bezpośrednio jako profil zarządzania do urządzeń z systemem iOS.
+3. Przetransferuj plik na komputer Mac z programem [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12), aby wypchnąć go bezpośrednio jako profil zarządzania do urządzeń z systemem iOS/iPadOS.
 4. Przygotuj urządzenie z zainstalowanym programem Apple Configurator, wykonując kroki opisane poniżej:
     1. Na komputerze Mac otwórz program Apple Configurator 2.0.
-    2. Podłącz urządzenia z systemem iOS do komputera Mac przy użyciu kabla USB. Zamknij aplikacje Photos (Zdjęcia), iTunes i inne aplikacje otwarte na urządzeniu po jego wykryciu.
-    3. W programie Apple Configurator wybierz podłączone urządzenie z systemem iOS, a następnie wybierz przycisk **Add** (Dodaj). Opcje, które można dodać do urządzenia, są wyświetlane na liście rozwijanej. Wybierz pozycję **Profiles** (Profile).
+    2. Podłącz urządzenia z systemem iOS/iPadOS do komputera Mac przy użyciu kabla USB. Zamknij aplikacje Photos (Zdjęcia), iTunes i inne aplikacje otwarte na urządzeniu po jego wykryciu.
+    3. W programie Apple Configurator wybierz podłączone urządzenie z systemem iOS/iPadOS, a następnie wybierz przycisk **Add** (Dodaj). Opcje, które można dodać do urządzenia, są wyświetlane na liście rozwijanej. Wybierz pozycję **Profiles** (Profile).
 
         ![Zrzut ekranu przedstawiający eksportowanie profilu dla rejestracji z wykorzystaniem Asystenta ustawień z wyróżnioną pozycją Adres URL profilu](./media/apple-configurator-enroll-ios/ios-apple-configurator-add-profile.png)
 
     4. Użyj selektora plików w celu wybrania pliku mobileconfig wyeksportowanego za pomocą usługi Intune, a następnie wybierz pozycję **Add** (Dodaj). Profil zostanie dodany do urządzenia. Jeśli urządzenie jest nienadzorowane, instalacja wymaga akceptacji na urządzeniu.
-5. Wykonaj poniższe kroki w celu zainstalowania profilu na urządzeniu z systemem iOS. Na urządzeniu musi zostać zakończona praca Asystenta ustawień i musi być one gotowe do użycia. Jeśli rejestracja wiąże się z wdrożeniami aplikacji, urządzenie powinno mieć ustawiony identyfikator firmy Apple, ponieważ wdrożenia aplikacji wymagają posiadania identyfikatora Apple ID powiązanego ze sklepem App Store.
-    1. Odblokuj urządzenie z systemem iOS.
+5. Wykonaj poniższe kroki w celu zainstalowania profilu na urządzeniu z systemem iOS/iPadOS. Na urządzeniu musi zostać zakończona praca Asystenta ustawień i musi być one gotowe do użycia. Jeśli rejestracja wiąże się z wdrożeniami aplikacji, urządzenie powinno mieć ustawiony identyfikator firmy Apple, ponieważ wdrożenia aplikacji wymagają posiadania identyfikatora Apple ID powiązanego ze sklepem App Store.
+    1. Odblokuj urządzenie z systemem iOS/iPadOS.
     2. W oknie dialogowym **Zainstaluj profil** wybierz dla pozycji **Profil zarządzania** opcję **Zainstaluj**.
     3. W razie potrzeby podaj kod dostępu urządzenia lub identyfikator Apple ID.
     4. Zaakceptuj **ostrzeżenie** i wybierz pozycję **Zainstaluj**.
     5. Zaakceptuj **ostrzeżenie zdalne** i wybierz pozycję **Ufaj**.
     6. Wyświetlenie okna dialogowego **Profil został zainstalowany** oznacza, że profil został zainstalowany. Wybierz pozycję **Gotowe**.
 
-6. Na urządzeniu z systemem iOS otwórz pozycję **Ustawienia** i przejdź do pozycji **Ogólne** > **Zarządzanie urządzeniem** > **Profil zarządzania**. Upewnij się, że instalacja profilu jest wymieniona na liście, a następnie sprawdź ograniczenia zasad systemu iOS i zainstalowane aplikacje. Wyświetlenie ograniczeń zasad i aplikacji na urządzeniu może potrwać do 10 minut.
+6. Na urządzeniu z systemem iOS/iPad otwórz obszar **Ustawienia** i wybierz pozycję **Ogólne** > **Zarządzanie urządzeniem** > **Profil zarządzania**. Upewnij się, że instalacja profilu jest wymieniona na liście, a następnie sprawdź ograniczenia zasad systemu iOS/iPadOS i zainstalowane aplikacje. Wyświetlenie ograniczeń zasad i aplikacji na urządzeniu może potrwać do 10 minut.
 
-7. Rozdystrybuuj urządzenia. Urządzenie z systemem iOS jest teraz zarejestrowane w usłudze Intune i zarządzane przez tę usługę.
+7. Rozdystrybuuj urządzenia. Urządzenie z systemem iOS/iPadOS jest teraz zarejestrowane w usłudze Intune i zarządzane przez tę usługę.
 
 
 

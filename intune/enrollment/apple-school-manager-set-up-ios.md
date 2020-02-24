@@ -1,7 +1,7 @@
 ---
-title: Rejestrowanie urządzeń z systemem iOS w programie Apple School Manager
+title: Rejestrowanie urządzeń z systemem iOS/iPadOS w programie Apple School Manager
 titleSuffix: Microsoft Intune
-description: Dowiedz się, jak skonfigurować rejestrację firmowych urządzeń z systemem iOS w programie Apple School Manager przy użyciu usługi Intune.
+description: Dowiedz się, jak skonfigurować rejestrację firmowych urządzeń z systemem iOS/iPadOS w programie Apple School Manager przy użyciu usługi Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c574714b4bd4f748c2dbe898555de35b0e03190
-ms.sourcegitcommit: f26039d674eb4d61ab68264dd1a10b2e5e1d842c
+ms.openlocfilehash: 3336ed09c414538e2879a7c50d1e3a0111f58b11
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74691822"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415374"
 ---
-# <a name="set-up-ios-device-enrollment-with-apple-school-manager"></a>Konfigurowanie rejestracji urządzeń z systemem iOS za pomocą usługi Apple School Manager
+# <a name="set-up-iosipados-device-enrollment-with-apple-school-manager"></a>Konfigurowanie rejestracji urządzeń z systemem iOS/iPadOS za pomocą usługi Apple School Manager
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Możesz skonfigurować usługę Intune do rejestracji urządzeń z systemem iOS zakupionych w ramach programu [Apple School Manager](https://school.apple.com/). Korzystając z usługi Intune z programem Apple School Manager, możesz zarejestrować wiele urządzeń z systemem iOS bez ich dotykania. Gdy uczeń lub nauczyciel włączy urządzenie, Asystent ustawień zostanie uruchomiony ze wstępnie skonfigurowanymi ustawieniami, a urządzenie zostanie zarejestrowane w funkcji zarządzania.
+Możesz skonfigurować usługę Intune do rejestracji urządzeń z systemem iOS/iPadOS zakupionych w ramach programu [Apple School Manager](https://school.apple.com/). Korzystając z usługi Intune z programem Apple School Manager, możesz zarejestrować wiele urządzeń z systemem iOS/iPadOS bez ich dotykania. Gdy uczeń lub nauczyciel włączy urządzenie, Asystent ustawień zostanie uruchomiony ze wstępnie skonfigurowanymi ustawieniami, a urządzenie zostanie zarejestrowane w funkcji zarządzania.
 
 Aby włączyć rejestrację w programie Apple School Manager, należy użyć portalu usługi Intune i portalu programu Apple School Manager. Wymagana jest lista numerów seryjnych lub numerów zamówień zakupu, która pozwala przypisać urządzenia do funkcji zarządzania usługi Intune. Możliwe jest utworzenie profilów rejestracji w ramach programu DEP zawierających ustawienia stosowane względem urządzeń podczas rejestracji.
 
@@ -44,7 +44,7 @@ Rejestracji w programie Apple School Manager nie można używać wraz z [program
 
 ## <a name="get-an-apple-token-and-assign-devices"></a>Uzyskiwanie tokenu od firmy Apple i przypisywanie urządzeń
 
-Przed zarejestrowaniem firmowych urządzeń z systemem iOS w programie Apple School Manager należy uzyskać od firmy Apple plik tokenu (p7m). Token ten umożliwia usłudze Intune synchronizację informacji dotyczących urządzeń korzystających z programu Apple School Manager. Umożliwia on również usłudze Intune przekazywanie profilów rejestracji do firmy Apple i przypisywanie urządzeń do tych profilów. W portalu firmy Apple można także przypisywać numery seryjne urządzeń do zarządzania.
+Przed zarejestrowaniem firmowych urządzeń z systemem iOS/iPadOS w programie Apple School Manager należy uzyskać od firmy Apple plik tokenu (p7m). Token ten umożliwia usłudze Intune synchronizację informacji dotyczących urządzeń korzystających z programu Apple School Manager. Umożliwia on również usłudze Intune przekazywanie profilów rejestracji do firmy Apple i przypisywanie urządzeń do tych profilów. W portalu firmy Apple można także przypisywać numery seryjne urządzeń do zarządzania.
 
 ### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-an-apple-token"></a>Krok 1. Pobierz certyfikat klucza publicznego usługi Intune wymagany do utworzenia tokenu firmy Apple
 
@@ -76,7 +76,7 @@ W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.micr
 ![Zrzut ekranu przedstawiający wprowadzanie identyfikatora Apple ID używanego do utworzenia tokenu programu rejestracji i przechodzenie do tokenu programu rejestracji.](./media/apple-school-manager-set-up-ios/image03.png)
 
 ### <a name="step-4-upload-your-token"></a>Krok 4. Przekazywanie tokenu
-W polu **Token Apple** przejdź do pliku certyfikatu (.pem), wybierz pozycję **Otwórz**, a następnie kliknij **Utwórz**. Dzięki certyfikatowi wypychania usługa Intune może rejestrować urządzenia z systemem iOS i zarządzać nimi, wypychając zasady do zarejestrowanych urządzeń przenośnych. Usługa Intune przeprowadzi automatyczną synchronizację urządzeń firmy Apple korzystających z programu Apple School Manager.
+W polu **Token Apple** przejdź do pliku certyfikatu (.pem), wybierz pozycję **Otwórz**, a następnie kliknij **Utwórz**. Dzięki certyfikatowi wypychania usługa Intune może rejestrować urządzenia z systemem iOS/iPadOS i zarządzać nimi, wypychając zasady do zarejestrowanych urządzeń przenośnych. Usługa Intune przeprowadzi automatyczną synchronizację urządzeń firmy Apple korzystających z programu Apple School Manager.
 
 ## <a name="create-an-apple-enrollment-profile"></a>Tworzenie profilu rejestracji firmy Apple
 Gdy token jest zainstalowany, możesz utworzyć profil rejestracji dla urządzeń korzystających z programu Apple School. Profil rejestracji urządzeń określa ustawienia stosowane do grupy urządzeń podczas rejestracji.
@@ -106,7 +106,7 @@ Gdy token jest zainstalowany, możesz utworzyć profil rejestracji dla urządze�
     > Nie są one obsługiwane w przypadku uwierzytelniania przy użyciu asystenta ustawień firmy Apple.
 
 6. Wybierz pozycję **Ustawienia zarządzania urządzeniami** i określ, czy chcesz, żeby urządzenia korzystające z tego profilu były nadzorowane.
-    W przypadku urządzeń **nadzorowanych** dostępnych jest więcej opcji zarządzania, a blokada aktywacji jest domyślnie wyłączona. Firma Microsoft zaleca używanie programu DEP jako mechanizmu włączania trybu nadzorowanego, szczególnie w przypadku organizacji, które wdrażają dużą liczbę urządzeń z systemem iOS.
+    W przypadku urządzeń **nadzorowanych** dostępnych jest więcej opcji zarządzania, a blokada aktywacji jest domyślnie wyłączona. Firma Microsoft zaleca używanie programu DEP jako mechanizmu włączania trybu nadzorowanego, szczególnie w przypadku organizacji, które wdrażają dużą liczbę urządzeń z systemem iOS/iPadOS.
 
     Użytkownicy są powiadamiani o tym, że ich urządzenia są nadzorowane, na dwa sposoby:
 
@@ -114,9 +114,9 @@ Gdy token jest zainstalowany, możesz utworzyć profil rejestracji dla urządze�
    - Na ekranie **Ustawienia** > **Ogólne** > **Informacje** wyświetlany jest komunikat: „To urządzenie iPhone jest nadzorowane. Firma Contoso może monitorować Twój ruch w Internecie i lokalizować to urządzenie”
 
      > [!NOTE]
-     > Urządzenie zarejestrowane bez nadzoru można zresetować do nadzorowanego tylko przy użyciu programu Apple Configurator. Zresetowanie urządzenia w ten sposób wymaga podłączenia urządzenia z systemem iOS do komputera Mac za pomocą kabla USB. Dowiedz się więcej na ten temat w [dokumentacji programu Apple Configurator](http://help.apple.com/configurator/mac/2.3).
+     > Urządzenie zarejestrowane bez nadzoru można zresetować do nadzorowanego tylko przy użyciu programu Apple Configurator. Zresetowanie urządzenia w ten sposób wymaga podłączenia urządzenia z systemem iOS/iPadOS do komputera Mac za pomocą kabla USB. Dowiedz się więcej na ten temat w [dokumentacji programu Apple Configurator](http://help.apple.com/configurator/mac/2.3).
 
-7. Wybierz, czy chcesz ustawić rejestrację zablokowaną dla urządzeń używających tego profilu. **Rejestracja zablokowana** wyłącza ustawienia systemu iOS, które umożliwiają usunięcie profilu zarządzania w menu **Ustawienia**. Po rejestracji urządzenia nie można zmienić tego ustawienia bez wyczyszczenia danych z urządzenia. Takie urządzenia muszą mieć ustawiony tryb zarządzania **Nadzorowane** na *Tak*. 
+7. Wybierz, czy chcesz ustawić rejestrację zablokowaną dla urządzeń używających tego profilu. **Rejestracja zablokowana** wyłącza ustawienia systemu iOS/iPadOS, które umożliwiają usunięcie profilu zarządzania w menu **Ustawienia**. Po rejestracji urządzenia nie można zmienić tego ustawienia bez wyczyszczenia danych z urządzenia. Takie urządzenia muszą mieć ustawiony tryb zarządzania **Nadzorowane** na *Tak*. 
 
 8. Możesz zezwolić wielu użytkownikom na logowanie się na zarejestrowanych urządzeniach iPad przy użyciu zarządzanego identyfikatora Apple ID. W tym celu wybierz pozycję **Tak** w obszarze **Udostępnione urządzenie iPad** (ta opcja wymaga ustawienia wartości **Tak** dla opcji **Zarejestruj bez koligacji użytkownika** i dla trybu **nadzorowanego**). Zarządzane identyfikatory Apple ID tworzy się w portalu Apple School Manager. Dowiedz się więcej na temat [udostępnionego urządzenia iPad](../fundamentals/education-settings-configure-ios-shared.md) i [wymagań dotyczących udostępnionego urządzenia iPad firmy Apple](https://help.apple.com/classroom/ipad/2.0/#/cad7e2e0cf56).
 
@@ -135,7 +135,7 @@ Gdy token jest zainstalowany, możesz utworzyć profil rejestracji dla urządze�
     |------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
     |     <strong>Nazwa działu</strong>     |                                                             Wyświetlane, gdy użytkownicy klikną pozycję <strong>Informacje o konfiguracji</strong> podczas aktywacji.                                                              |
     |    <strong>Telefon działu</strong>     |                                                          Jest wyświetlany, gdy użytkownik kliknie podczas aktywacji przycisk <strong>Potrzebna pomoc</strong>.                                                          |
-    | <strong>Opcje Asystenta ustawień</strong> |                                                     Następujące opcjonalne ustawienia mogą być później konfigurowane w menu <strong>Ustawienia</strong> systemu iOS.                                                      |
+    | <strong>Opcje Asystenta ustawień</strong> |                                                     Następujące opcjonalne ustawienia mogą być później konfigurowane w menu <strong>Ustawienia</strong> systemu iOS/iPadOS.                                                      |
     |        <strong>Kod dostępu</strong>         | Wyświetla monit o podanie kodu dostępu podczas aktywacji. Zawsze należy wymagać kodu dostępu dla urządzeń niezabezpieczonych, chyba że dostęp do niego będzie kontrolowany w inny sposób (np. zostanie zastosowany tryb kiosku, który ogranicza możliwość użycia urządzenia do jednej aplikacji). |
     |    <strong>Usługi lokalizacyjne</strong>    |                                                                 Jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit dotyczący tej usługi podczas aktywacji.                                                                  |
     |         <strong>Przywróć</strong>         |                                                                Jeśli to ustawienie zostało włączone, Asystent ustawień wyświetla monit o kopię zapasową w programie iCloud podczas aktywacji.                                                                 |
@@ -184,4 +184,4 @@ Przed zarejestrowaniem urządzeń korzystających z programu Apple School Manage
 
 ## <a name="distribute-devices-to-users"></a>Przekazywanie urządzeń użytkownikom
 
-Włączono zarządzanie i synchronizację między danymi firmy Apple i usługą Intune oraz przypisano profil umożliwiający rejestrowanie urządzeń korzystających z programu Apple School. Możesz teraz przekazać urządzenia użytkownikom. Po włączeniu urządzenia z systemem iOS korzystającego z programu Apple School Manager zostanie ono zarejestrowane na potrzeby zarządzania przez usługę Intune. Nie można zastosować profilów do aktywowanych urządzeń, które są obecnie używane, dopóki urządzenie nie zostanie wyczyszczone.
+Włączono zarządzanie i synchronizację między danymi firmy Apple i usługą Intune oraz przypisano profil umożliwiający rejestrowanie urządzeń korzystających z programu Apple School. Możesz teraz przekazać urządzenia użytkownikom. Po włączeniu urządzenia z systemem iOS/iPadOS korzystającego z programu Apple School Manager zostanie ono zarejestrowane na potrzeby zarządzania przez usługę Intune. Nie można zastosować profilów do aktywowanych urządzeń, które są obecnie używane, dopóki urządzenie nie zostanie wyczyszczone.

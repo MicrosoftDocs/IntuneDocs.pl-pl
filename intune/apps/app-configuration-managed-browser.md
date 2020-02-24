@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: babe556d6810ad027a1b0b3cae6364c99bc9a07c
-ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
+ms.openlocfilehash: c7c47a829f8f609528f45b30d0dd9bf56d9d8eb9
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76812513"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414903"
 ---
 # <a name="manage-web-access-using-a-microsoft-intune-policy-protected-browser"></a>Zarządzanie dostępem do Internetu za pomocą przeglądarki zabezpieczonej przy użyciu zasad w usłudze Microsoft Intune
 
@@ -42,7 +42,7 @@ Korzystając z przeglądarki zabezpieczonej przy użyciu zasad usługi Intune (M
 
 ## <a name="microsoft-edge-support"></a>Obsługa przeglądarki Microsoft Edge
 
-Przeglądarki Microsoft Edge można używać do obsługi scenariuszy przedsiębiorstwa na urządzeniach z systemem iOS i Android. Przeglądarka Microsoft Edge obsługuje wszystkie te same scenariusze zarządzania, co program Intune Managed Browser, dodając ulepszenia środowiska użytkownika końcowego. Dostępne są następujące funkcje przeglądarki Microsoft Edge dla przedsiębiorstw włączane przy użyciu zasad usługi Intune:
+Przeglądarki Microsoft Edge można używać do obsługi scenariuszy przedsiębiorstwa na urządzeniach z systemami iOS, iPadOS i Android. Przeglądarka Microsoft Edge obsługuje wszystkie te same scenariusze zarządzania, co program Intune Managed Browser, dodając ulepszenia środowiska użytkownika końcowego. Dostępne są następujące funkcje przeglądarki Microsoft Edge dla przedsiębiorstw włączane przy użyciu zasad usługi Intune:
 
 - **Podwójna tożsamość** — użytkownicy mogą dodawać konta służbowe i osobiste na potrzeby przeglądania. Te dwie tożsamości są całkowicie oddzielone, co przypomina architekturę i środowisko usługi Office 365 oraz programu Outlook. Administratorzy usługi Intune będą mogli ustawić żądane zasady dla chronionego środowiska przeglądania w ramach konta służbowego. 
 - **Integracja zasad ochrony aplikacji usługi Intune** — administratorzy mogą teraz używać zasad ochrony w przeglądarce Microsoft Edge, w tym kontrolować funkcje wycinania, kopiowania i wklejania, zapobiegać tworzeniu zrzutów ekranu oraz zapewniać, że linki wybrane przez użytkownika będzie można otwierać tylko w innych aplikacjach zarządzanych.
@@ -57,9 +57,9 @@ Microsoft Edge i Intune Managed Browser to aplikacje przeglądarki sieci Web prz
 
 Wymagania zasad przeglądarki dotyczące systemu operacyjnego:
 - system Android (4 lub nowszy) lub
-- system iOS (8.0 lub nowszy).
+- System iOS/iPadOS 8.0 lub nowszy.
 
-Wcześniejsze wersje systemu Android i iOS nadal mogą używać aplikacji Managed Browser, ale nie będą mogły instalować nowych wersji aplikacji i mogą nie być w stanie uzyskać dostępu do wszystkich możliwości aplikacji. Zachęcamy do zaktualizowania urządzeń do obsługiwanej wersji systemu operacyjnego.
+Wcześniejsze wersje systemów Android, iOS i iPadOS nadal mogą używać aplikacji Managed Browser, ale nie będą mogły instalować nowych wersji aplikacji i mogą nie być w stanie uzyskać dostępu do wszystkich możliwości aplikacji. Zachęcamy do zaktualizowania urządzeń do obsługiwanej wersji systemu operacyjnego.
 
 >[!NOTE]
 >Aplikacja Managed Browser nie obsługuje protokołu szyfrowania Secure Sockets Layer, wersja 3 (SSLv3).
@@ -123,9 +123,9 @@ Program Managed Browser nie obsługuje klasycznych zasad dostępu warunkowego. A
 
 ## <a name="single-sign-on-to-azure-ad-connected-web-apps-in-policy-protected-browsers"></a>Logowanie jednokrotne do aplikacji internetowych połączonych z usługą Azure AD w przeglądarkach zabezpieczonych przy użyciu zasad
 
-Przeglądarka Microsoft Edge i Intune Managed Browser w systemach iOS i Android może teraz korzystać z logowania jednokrotnego do wszystkich aplikacji internetowych (SaaS i lokalnych), które są połączone z usługą Azure AD. Gdy w systemie iOS jest obecna aplikacja Microsoft Authenticator lub gdy w systemie Android jest obecna aplikacja Portal firmy usługi Intune, użytkownicy przeglądarki zabezpieczonej przy użyciu zasad mogą uzyskiwać dostęp do aplikacji internetowych połączonych z usługą Azure AD bez konieczności ponownego wprowadzania poświadczeń.
+Przeglądarka Microsoft Edge i Intune Managed Browser w systemach iOS, iPadOS i Android może teraz korzystać z logowania jednokrotnego do wszystkich aplikacji internetowych (SaaS i lokalnych), które są połączone z usługą Azure AD. Gdy w systemie iOS/iPadOS jest obecna aplikacja Microsoft Authenticator lub gdy w systemie Android jest obecna aplikacja Portal firmy usługi Intune, użytkownicy przeglądarki zabezpieczonej przy użyciu zasad mogą uzyskiwać dostęp do aplikacji internetowych połączonych z usługą Azure AD bez konieczności ponownego wprowadzania poświadczeń.
 
-Logowanie jednokrotne wymaga, aby urządzenie było zarejestrowane przez aplikację Microsoft Authenticator w systemie iOS lub przez aplikację Portal firmy usługi Intune w systemie Android. Użytkownikom z aplikacją Authenticator lub Portal firmy usługi Intune zostanie wyświetlony monit o zarejestrowanie urządzenia, gdy przejdą do aplikacji internetowej połączonej z usługą Azure AD w przeglądarce zabezpieczonej przy użyciu zasad, a ich urządzenie nie zostało jeszcze zarejestrowane przez inną aplikację. Po zarejestrowaniu urządzenia przy użyciu konta zarządzanego przez usługę Intune dla tego konta zostanie włączone logowanie jednokrotne dla aplikacji internetowych połączonych z usługą Azure AD. 
+Logowanie jednokrotne wymaga, aby urządzenie było zarejestrowane przez aplikację Microsoft Authenticator w systemach iOS i iPadOS lub przez aplikację Portal firmy usługi Intune w systemie Android. Użytkownikom z aplikacją Authenticator lub Portal firmy usługi Intune zostanie wyświetlony monit o zarejestrowanie urządzenia, gdy przejdą do aplikacji internetowej połączonej z usługą Azure AD w przeglądarce zabezpieczonej przy użyciu zasad, a ich urządzenie nie zostało jeszcze zarejestrowane przez inną aplikację. Po zarejestrowaniu urządzenia przy użyciu konta zarządzanego przez usługę Intune dla tego konta zostanie włączone logowanie jednokrotne dla aplikacji internetowych połączonych z usługą Azure AD. 
 
 > [!NOTE]
 > Rejestracja urządzenia to proste zaewidencjonowanie go w usłudze Azure AD. Nie wymaga pełnej rejestracji urządzenia ani nie daje działowi IT żadnych dodatkowych uprawnień na urządzeniu.
@@ -138,7 +138,7 @@ Logowanie jednokrotne wymaga, aby urządzenie było zarejestrowane przez aplikac
 1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Wybierz kolejno pozycje **Aplikacje** > **Zasady konfiguracji aplikacji** > **Dodaj** > **Aplikacje zarządzane**.
 3. Na stronie **Podstawowe** w okienku **Tworzenie zasad konfiguracji aplikacji** wypełnij pola **Nazwa** i **Opis** (opcjonalnie) odnoszące się do ustawień konfiguracji aplikacji.
-4. Wybierz kolejno pozycje **Select the public app** (Wybierz aplikację publiczną) i **Managed Browser** i/lub **Micrisift Edge** dla systemu iOS, Android lub dla obu tych systemów.
+4. Wybierz kolejno pozycje **Select the public app** (Wybierz aplikację publiczną) i **Managed Browser** i/lub **Microsoft Edge** dla systemu iOS/iPadOS, Android lub dla obu tych systemów.
 5. Kliknij pozycję **Wybierz**, aby wrócić do okienka **Tworzenie zasad konfiguracji aplikacji**.
 6. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Ustawienia**.
 7. Na stronie **Ustawienia** należy zdefiniować pary kluczy i wartości do dostarczania konfiguracji dla aplikacji. Informacje na temat różnych par kluczy i wartości, które można zdefiniować, znajdują się w dalszych sekcjach tego artykułu.
@@ -186,7 +186,7 @@ Powyższą procedurę można wykorzystać do utworzenia konfiguracji przeglądar
 
 ## <a name="how-to-configure-application-proxy-settings-for-protected-browsers"></a>Jak skonfigurować ustawienia serwera proxy aplikacji dla przeglądarek chronionych
 
-Aplikacje Microsoft Edge i Intune Managed Browser oraz [serwer proxy aplikacji usługi Azure AD]( https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) zapewniają wspólnie obsługę następujących scenariuszy możliwych w przypadku użytkowników urządzeń z systemami iOS oraz Android:
+Aplikacje Microsoft Edge i Intune Managed Browser oraz [serwer proxy aplikacji usługi Azure AD]( https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) zapewniają wspólnie obsługę następujących scenariuszy możliwych w przypadku użytkowników urządzeń z systemami iOS, iPadOS oraz Android:
 
 - Użytkownik pobiera aplikację Microsoft Outlook i loguje się w niej. Zasady ochrony aplikacji usługi Intune są stosowane automatycznie. Szyfrują one zapisane dane i uniemożliwiają użytkownikom przesyłanie plików firmowych do niezarządzanych aplikacji lub lokalizacji na urządzeniu. Kiedy użytkownik klika link do witryny intranetowej w aplikacji Outlook, można określić, aby link był otwierany w aplikacji przeglądarki chronionej, a nie w jakiejś innej przeglądarce. Przeglądarka chroniona rozpoznaje, że ta witryna intranetowa została udostępniona użytkownikowi za pośrednictwem serwera proxy aplikacji. Przed dotarciem do witryny intranetowej użytkownik jest automatycznie kierowany przez serwer proxy aplikacji w celu uwierzytelnienia za pomocą dowolnego obsługiwanego uwierzytelniania wieloskładnikowego i udzielenia dostępu warunkowego. Dana lokalizacja (której wcześniej nie można było znaleźć, jeśli użytkownik był zdalny) jest teraz dostępna, a link w aplikacji Outlook działa prawidłowo.
 - Użytkownik zdalny otwiera aplikację przeglądarki chronionej i przechodzi do witryny intranetowej przy użyciu wewnętrznego adresu URL. Przeglądarka chroniona rozpoznaje, że dana witryna intranetowa została udostępniona użytkownikowi za pośrednictwem serwera proxy aplikacji. Przed dotarciem do witryny intranetowej użytkownik jest automatycznie kierowany przez serwer proxy aplikacji w celu uwierzytelnienia za pomocą dowolnego obsługiwanego uwierzytelniania wieloskładnikowego i udzielenia dostępu warunkowego. Dana lokalizacja (której wcześniej nie można było znaleźć, jeśli użytkownik był zdalny) jest teraz dostępna.
@@ -316,9 +316,9 @@ Korzystając z procedury tworzenia konfiguracji aplikacji Managed Browser lub Mi
 
 ## <a name="how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios"></a>Jak uzyskać dostęp do dzienników zarządzanych aplikacji przy użyciu programu Managed Browser w systemie iOS
 
-Użytkownicy końcowi z zainstalowanym programem Managed Browser na urządzeniu z systemem iOS mogą wyświetlać stan zarządzania wszystkich aplikacji opublikowanych przez firmę Microsoft. Mogą one wysyłać dzienniki na potrzeby rozwiązywania problemów z ich zarządzanymi aplikacjami systemu iOS.
+Użytkownicy końcowi z zainstalowanym programem Managed Browser na urządzeniu z systemami iOS i iPadOS mogą wyświetlać stan zarządzania wszystkich aplikacji opublikowanych przez firmę Microsoft. Mogą one wysyłać dzienniki na potrzeby rozwiązywania problemów z ich zarządzanymi aplikacjami systemów iOS i iPadOS.
 
-1. Otwórz **Ustawienia** systemu iOS.
+1. Otwórz **Ustawienia** systemu iOS/iPadOS.
 2. Wybierz ustawienia aplikacji Managed **Browser**.
 3. Przełącz opcję **Włącz diagnostykę usługi Intune**, aby ustawić przeglądarkę w trybie rozwiązywania problemów.
 4. Otwórz program Managed **Browser**. Kliknij przycisk **Wyświetl stan aplikacji usługi Intune**, aby przejrzeć ustawienia zasad poszczególnych aplikacji.
@@ -345,7 +345,7 @@ Aby uzyskać listę ustawień przechowywanych w dziennikach aplikacji, zobacz te
 ### <a name="turn-off-usage-data"></a>Wyłączanie danych użycia
 Firma Microsoft automatycznie zbiera anonimowe dane dotyczące wydajności i korzystania z programu Managed Browser w celu ulepszania swoich produktów i usług. Użytkownicy mogą wyłączyć zbieranie danych przy użyciu ustawienia **Dane użycia** na swoich urządzeniach. Użytkownik nie kontroluje zbierania tych danych.
 
-- Na urządzeniach z systemem iOS nie można otwierać odwiedzanych przez użytkowników witryn sieci Web z certyfikatem nieważnym lub niezaufanym.
+- Na urządzeniach z systemem iOS/iPadOS nie można otwierać odwiedzanych przez użytkowników witryn sieci Web z certyfikatem nieważnym lub niezaufanym.
 
 ## <a name="next-steps"></a>Następne kroki
 

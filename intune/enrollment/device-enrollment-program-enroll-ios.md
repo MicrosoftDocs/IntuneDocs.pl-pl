@@ -1,7 +1,7 @@
 ---
-title: Rejestrowanie urządzeń z systemem iOS — program Device Enrollment Program
+title: Rejestrowanie urządzeń z systemem iOS/iPadOS — program Device Enrollment Program
 titleSuffix: Microsoft Intune
-description: Informacje dotyczące rejestrowania firmowych urządzeń z systemem iOS przy użyciu programu Device Enrollment Program.
+description: Informacje dotyczące rejestrowania firmowych urządzeń z systemem iOS/iPadOS przy użyciu programu Device Enrollment Program.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b3fe6d1e2a0dcdeafad56d3facccb96f5d0721e4
-ms.sourcegitcommit: 2b905913840d4133a7964fe4f54a58ea6e421e12
+ms.openlocfilehash: 6167c48dcfd6b29749dca8d0378ff31ca239b154
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77074669"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415361"
 ---
-# <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Automatyczne rejestrowanie urządzeń z systemem iOS w ramach programu Device Enrollment Program
+# <a name="automatically-enroll-iosipados-devices-with-apples-device-enrollment-program"></a>Automatyczne rejestrowanie urządzeń z systemem iOS/iPadOS przy użyciu programu Device Enrollment Program firmy Apple
 
-Możesz skonfigurować usługę Intune do rejestracji urządzeń z systemem iOS zakupionych w ramach programu [Device Enrollment Program (DEP)](https://deploy.apple.com) firmy Apple. Program DEP umożliwia rejestrację dużej liczby urządzeń nawet bez ich dotykania. Urządzenia takie jak iPhone, iPad i MacBook można dostarczyć bezpośrednio do użytkowników. Gdy użytkownik włączy urządzenie, Asystent ustawień, który obejmuje środowisko out-of-box experience typowe dla produktów firmy Apple, zostanie uruchomiony ze wstępnie skonfigurowanymi ustawieniami, a urządzenie zostanie zarejestrowane w funkcji zarządzania.
+Możesz skonfigurować usługę Intune do rejestracji urządzeń z systemem iOS/iPadOS zakupionych w ramach programu [Device Enrollment Program (DEP)](https://deploy.apple.com) firmy Apple. Program DEP umożliwia rejestrację dużej liczby urządzeń nawet bez ich dotykania. Urządzenia takie jak iPhone, iPad i MacBook można dostarczyć bezpośrednio do użytkowników. Gdy użytkownik włączy urządzenie, Asystent ustawień, który obejmuje środowisko out-of-box experience typowe dla produktów firmy Apple, zostanie uruchomiony ze wstępnie skonfigurowanymi ustawieniami, a urządzenie zostanie zarejestrowane w funkcji zarządzania.
 
 Aby włączyć rejestrację w programie DEP, należy użyć portalu usługi Intune i portalu programu Apple Business Manager (ABM) lub portalu programu Apple School Manager (ASM). Wymagana jest lista numerów seryjnych lub numerów zamówień zakupu, aby można było przypisać urządzenia do usługi Intune na potrzeby zarządzania w programie ABM/ASM. W usłudze Intune należy utworzyć profile rejestracji programu DEP zawierające ustawienia stosowane względem urządzeń podczas rejestracji. Rejestracji DEP nie można używać razem z kontem [menedżera rejestracji urządzeń](device-enrollment-manager-enroll.md).
 
@@ -38,15 +38,15 @@ Aby włączyć rejestrację w programie DEP, należy użyć portalu usługi Intu
 
 Rejestracje programu DEP nie są zgodne z wersją aplikacji Portal firmy ze sklepu z aplikacjami. Możesz przyznać użytkownikom prawa dostępu do aplikacji Portal firmy na urządzeniu DEP. Ten dostęp można zapewnić, aby umożliwić użytkownikom wybranie aplikacji firmowych, których chcą używać na urządzeniu, lub aby przeprowadzić proces rejestracji przy użyciu nowoczesnego uwierzytelniania. 
 
-Aby włączyć nowoczesne uwierzytelnianie podczas rejestracji, wypchnij aplikację na urządzenie, korzystając z opcji **Zainstaluj Portal firmy za pomocą programu VPP** (Volume Purchase Program) w profilu programu DEP. Aby uzyskać więcej informacji, zobacz [Automatyczne rejestrowanie urządzeń z systemem iOS w ramach programu Device Enrollment Program firmy Apple](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
+Aby włączyć nowoczesne uwierzytelnianie podczas rejestracji, wypchnij aplikację na urządzenie, korzystając z opcji **Zainstaluj Portal firmy za pomocą programu VPP** (Volume Purchase Program) w profilu programu DEP. Aby uzyskać więcej informacji, zobacz [Automatyczne rejestrowanie urządzeń z systemem iOS/iPadOS w ramach programu Device Enrollment Program firmy Apple](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
 
 Aby umożliwić automatyczną aktualizację aplikacji Portal firmy i udostępnić ją na urządzeniach już zarejestrowanych w programie DEP, wdróż aplikację Portal firmy za pomocą usługi Intune jako wymaganą aplikację programu Volume Purchase Program (VPP) z zastosowanymi [zasadami konfiguracji aplikacji](../apps/app-configuration-policies-use-ios.md).
 
 ## <a name="what-is-supervised-mode"></a>Co to jest tryb nadzorowany?
 
-Firma Apple wprowadziła tryb nadzorowany w systemie iOS 5. Urządzeniem z systemem iOS w trybie nadzorowanym można zarządzać za pomocą większej liczby kontrolek, takich jak blokowanie przechwytywania ekranu i blokowanie instalowania aplikacji ze sklepu App Store. W efekcie jest szczególnie przydatne w przypadku urządzeń należących do firmy. Usługa Intune obsługuje konfigurowanie urządzeń dla trybu nadzorowanego w ramach programu Device Enrollment Program (DEP) firmy Apple.
+Firma Apple wprowadziła tryb nadzorowany w systemie iOS/iPadOS 5. Urządzeniem z systemem iOS/iPadOS w trybie nadzorowanym można zarządzać za pomocą większej liczby kontrolek, takich jak blokowanie przechwytywania ekranu i blokowanie instalowania aplikacji ze sklepu App Store. W efekcie jest szczególnie przydatne w przypadku urządzeń należących do firmy. Usługa Intune obsługuje konfigurowanie urządzeń dla trybu nadzorowanego w ramach programu Device Enrollment Program (DEP) firmy Apple.
 
-Obsługa nienadzorowanych urządzeń objętych programem DEP została uznana za przestarzałą w systemie iOS 11. W systemie iOS 11 i nowszych urządzenia skonfigurowane w ramach programu DEP zawsze powinny być nadzorowane. W przyszłych wersjach systemu iOS flaga is_supervised programu DEP zostanie zignorowana.
+Obsługa nienadzorowanych urządzeń objętych programem DEP została uznana za przestarzałą w systemie iOS/iPadOS 11. W systemie iOS/iPadOS 11 i nowszych urządzenia skonfigurowane w ramach programu DEP zawsze powinny być nadzorowane. W przyszłych wersjach systemu iOS/iPadOS flaga is_supervised programu DEP zostanie zignorowana.
 
 <!--
 **Steps to enable enrollment programs from Apple**
@@ -63,7 +63,7 @@ Obsługa nienadzorowanych urządzeń objętych programem DEP została uznana za 
 
 ## <a name="get-an-apple-dep-token"></a>Uzyskiwanie tokenu DEP od firmy Apple
 
-Aby zarejestrować urządzenia z systemem iOS w ramach programu DEP, należy uzyskać token programu DEP (plik p7m) od firmy Apple. Ten token umożliwia usłudze Intune synchronizację informacji dotyczących urządzeń korzystających z programu DEP należących do firmy. Umożliwia on również usłudze Intune przekazywanie profilów rejestracji do firmy Apple i przypisywanie urządzeń do tych profilów.
+Aby zarejestrować urządzenia z systemem iOS/iPadOS ramach programu DEP, należy uzyskać token programu DEP (plik p7m) od firmy Apple. Ten token umożliwia usłudze Intune synchronizację informacji dotyczących urządzeń korzystających z programu DEP należących do firmy. Umożliwia on również usłudze Intune przekazywanie profilów rejestracji do firmy Apple i przypisywanie urządzeń do tych profilów.
 
 Token można utworzyć za pomocą portalu programu Apple Business Manager lub Apple School Manager. W portalu programu ABM/ASM można również przypisać urządzenia do usługi Intune w celu zarządzania.
 
@@ -117,7 +117,7 @@ W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.micr
 2. Jeśli chcesz zastosować [tagi zakresu](../fundamentals/scope-tags.md) do tego tokenu DEP, wybierz pozycję **Zakres (tagi)** i wybierz tagi zakresu. Tagi zakresu stosowane do tokenu będą dziedziczone przez profile i urządzenia dodawane do tego tokenu.
 3. Wybierz pozycję **Utwórz**.
 
-Dzięki certyfikatowi wypychania usługa Intune może rejestrować urządzenia z systemem iOS i zarządzać nimi, wypychając zasady do zarejestrowanych urządzeń przenośnych. Usługa Intune automatycznie synchronizuje dane z firmą Apple, co pozwala wyświetlić konto programu rejestracji.
+Dzięki certyfikatowi wypychania usługa Intune może rejestrować urządzenia z systemem iOS/iPadOS i zarządzać nimi, wypychając zasady do zarejestrowanych urządzeń przenośnych. Usługa Intune automatycznie synchronizuje dane z firmą Apple, co pozwala wyświetlić konto programu rejestracji.
 
 ## <a name="create-an-apple-enrollment-profile"></a>Tworzenie profilu rejestracji firmy Apple
 
@@ -155,7 +155,7 @@ Teraz, po zainstalowaniu tokenu, możesz utworzyć profil rejestracji dla urząd
     >
     > Nie są one obsługiwane w przypadku uwierzytelniania przy użyciu asystenta ustawień firmy Apple.
 
-6. W przypadku wybrania aplikacji **Portal firmy** dla ustawienia **Wybierz miejsce, w którym użytkownicy muszą się uwierzytelniać** możesz używać tokenu programu VPP w celu automatycznego instalowania aplikacji Portal firmy na urządzeniu. W takim przypadku użytkownik nie musi podawać identyfikatora Apple ID. Aby zainstalować aplikację Portal firmy przy użyciu tokenu programu VPP, wybierz token w obszarze **Instalowanie aplikacji Portal firmy przy użyciu programu VPP**. Wymaga, aby Portal firmy został dodany do tokenu programu VPP. Aby upewnić się, że aplikacja Portal firmy nadal będzie aktualizowana po rejestracji, sprawdź, czy skonfigurowano wdrożenie aplikacji w usłudze Intune (Intune > Aplikacje klienckie). Aby interakcja użytkownika nie była wymagana, najprawdopodobniej będziesz używać Portalu firmy jako aplikacji VPP dla systemu iOS, oznaczysz ją jako aplikację wymaganą i użyjesz funkcji licencjonowania urządzenia na potrzeby przypisania. Upewnij się, że token nie wygasł, i że masz wystarczającą liczbę licencji urządzeń dla aplikacji Portal firmy. Jeśli token wygaśnie lub zabraknie dla niego licencji, usługa Intune zainstaluje aplikację Portal firmy ze sklepu App Store (powoduje to wyświetlenie monitu o podanie identyfikatora Apple ID). 
+6. W przypadku wybrania aplikacji **Portal firmy** dla ustawienia **Wybierz miejsce, w którym użytkownicy muszą się uwierzytelniać** możesz używać tokenu programu VPP w celu automatycznego instalowania aplikacji Portal firmy na urządzeniu. W takim przypadku użytkownik nie musi podawać identyfikatora Apple ID. Aby zainstalować aplikację Portal firmy przy użyciu tokenu programu VPP, wybierz token w obszarze **Instalowanie aplikacji Portal firmy przy użyciu programu VPP**. Wymaga, aby Portal firmy został dodany do tokenu programu VPP. Aby upewnić się, że aplikacja Portal firmy nadal będzie aktualizowana po rejestracji, sprawdź, czy skonfigurowano wdrożenie aplikacji w usłudze Intune (Intune > Aplikacje klienckie). Aby interakcja użytkownika nie była wymagana, najprawdopodobniej będziesz używać Portalu firmy jako aplikacji VPP dla systemu iOS/iPadOS, oznaczysz ją jako aplikację wymaganą i użyjesz funkcji licencjonowania urządzenia na potrzeby przypisania. Upewnij się, że token nie wygasł, i że masz wystarczającą liczbę licencji urządzeń dla aplikacji Portal firmy. Jeśli token wygaśnie lub zabraknie dla niego licencji, usługa Intune zainstaluje aplikację Portal firmy ze sklepu App Store (powoduje to wyświetlenie monitu o podanie identyfikatora Apple ID). 
 
     > [!NOTE]
     > Po ustawieniu opcji **Wybierz miejsce, w którym użytkownicy muszą się uwierzytelniać** na **Portal firmy** upewnij się, że proces rejestracji urządzenia zostanie wykonany w ciągu pierwszych 24 godzin od pobrania portalu firmy na urządzenie programu DEP. W przeciwnym razie rejestracja może zakończyć się niepowodzeniem, a w celu zarejestrowania urządzenia będzie konieczne zresetowanie do ustawień fabrycznych.
@@ -168,7 +168,7 @@ Teraz, po zainstalowaniu tokenu, możesz utworzyć profil rejestracji dla urząd
 
     Uwierzytelnianie wieloskładnikowe nie jest obsługiwane na pojedynczym urządzeniu zablokowanym w trybie pojedynczej aplikacji. To ograniczenie istnieje, ponieważ urządzenie nie może przełączyć się do innej aplikacji w celu ukończenia drugiego składnika uwierzytelniania. W związku z tym, jeśli chcesz przeprowadzać uwierzytelnianie wieloskładnikowe na urządzeniu w trybie pojedynczej aplikacji, drugi składnik musi znajdować się na innym urządzeniu.
 
-    Ta funkcja jest tylko obsługiwana w systemie iOS 11.3.1 i jego nowszych wersjach.
+    Ta funkcja jest obsługiwana tylko w systemie iOS/iPadOS 11.3.1 i jego nowszych wersjach.
 
    ![Zrzut ekranu przedstawiający tryb pojedynczej aplikacji.](./media/device-enrollment-program-enroll-ios/single-app-mode.png)
 
@@ -176,7 +176,7 @@ Teraz, po zainstalowaniu tokenu, możesz utworzyć profil rejestracji dla urząd
 
     ![Zrzut ekranu pozycji Ustawienia zarządzania urządzeniami.](./media/device-enrollment-program-enroll-ios/supervisedmode.png)
 
-    W przypadku urządzeń **nadzorowanych** dostępnych jest więcej opcji zarządzania, a blokada aktywacji jest domyślnie wyłączona. Firma Microsoft zaleca używanie programu DEP jako mechanizmu włączania trybu nadzorowanego, szczególnie w przypadku wdrażania dużej liczby urządzeń z systemem iOS.
+    W przypadku urządzeń **nadzorowanych** dostępnych jest więcej opcji zarządzania, a blokada aktywacji jest domyślnie wyłączona. Firma Microsoft zaleca używanie programu DEP jako mechanizmu włączania trybu nadzorowanego, szczególnie w przypadku wdrażania dużej liczby urządzeń z systemem iOS/iPadOS.
 
     Użytkownicy są powiadamiani o tym, że ich urządzenia są nadzorowane, na dwa sposoby:
 
@@ -184,9 +184,9 @@ Teraz, po zainstalowaniu tokenu, możesz utworzyć profil rejestracji dla urząd
    - Na ekranie **Ustawienia** > **Ogólne** > **Informacje** wyświetlany jest komunikat: „To urządzenie iPhone jest nadzorowane. Firma Contoso może monitorować Twój ruch w Internecie i lokalizować to urządzenie”
 
      > [!NOTE]
-     > Urządzenie zarejestrowane bez nadzoru można zresetować do nadzorowanego tylko przy użyciu programu Apple Configurator. Zresetowanie urządzenia w ten sposób wymaga podłączenia urządzenia z systemem iOS do komputera Mac za pomocą kabla USB. Dowiedz się więcej na ten temat w [dokumentacji programu Apple Configurator](http://help.apple.com/configurator/mac/2.3).
+     > Urządzenie zarejestrowane bez nadzoru można zresetować do nadzorowanego tylko przy użyciu programu Apple Configurator. Zresetowanie urządzenia w ten sposób wymaga podłączenia urządzenia z systemem iOS/iPadOS do komputera Mac za pomocą kabla USB. Dowiedz się więcej na ten temat w [dokumentacji programu Apple Configurator](http://help.apple.com/configurator/mac/2.3).
 
-10. Wybierz, czy chcesz ustawić rejestrację zablokowaną dla urządzeń używających tego profilu. **Rejestracja zablokowana** wyłącza ustawienia systemu iOS, które umożliwiają usunięcie profilu zarządzania w menu **Ustawienia**. Po rejestracji urządzenia nie można zmienić tego ustawienia bez wyczyszczenia danych z urządzenia. Takie urządzenia muszą mieć ustawiony tryb zarządzania **Nadzorowane** na *Tak*. 
+10. Wybierz, czy chcesz ustawić rejestrację zablokowaną dla urządzeń używających tego profilu. **Rejestracja zablokowana** wyłącza ustawienia systemu iOS/iPadOS, które umożliwiają usunięcie profilu zarządzania w menu **Ustawienia**. Po rejestracji urządzenia nie można zmienić tego ustawienia bez wyczyszczenia danych z urządzenia. Takie urządzenia muszą mieć ustawiony tryb zarządzania **Nadzorowane** na *Tak*. 
 
 11. Wybierz, czy chcesz, aby urządzenia korzystające z tego profilu mogły **synchronizować się z komputerami**. W przypadku wybrania pozycji **Zezwalaj programowi Apple Configurator według certyfikatów** należy wybrać certyfikat w obszarze **Certyfikaty programu Apple Configurator**.
 
@@ -270,7 +270,7 @@ Można wybrać profil domyślny, który zostanie zastosowany do wszystkich urzą
 ## <a name="distribute-devices"></a>Dystrybuowanie urządzeń
 Włączono zarządzanie i synchronizację między danymi firmy Apple i usługą Intune oraz przypisano profil umożliwiający rejestrowanie urządzeń korzystających z programu DEP. Możesz teraz przekazać urządzenia użytkownikom. W przypadku urządzeń z koligacją użytkownika wymagane jest, aby poszczególni użytkownicy mieli przypisane licencje na korzystanie z usługi Intune. Urządzenia bez koligacji użytkownika wymagają licencji urządzenia. Aktywowane urządzenie nie może stosować profilu rejestracji, dopóki nie zostaną wyczyszczone dane urządzenia.
 
-Zobacz [Rejestracja urządzenia z systemem iOS przy użyciu programu Device Enrollment Program](/intune-user-help/enroll-your-device-dep-ios).
+Zobacz temat [Rejestracja urządzenia z systemem iOS/iPadOS w usłudze Intune przy użyciu programu Device Enrollment Program](/intune-user-help/enroll-your-device-dep-ios).
 
 ## <a name="renew-a-dep-token"></a>Odnawianie tokenu DEP  
 1. Przejdź do witryny deploy.apple.com.  
