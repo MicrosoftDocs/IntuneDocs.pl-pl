@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/2/2019
+ms.date: 2/14/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,19 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e23e582a853f0b424296d8fb42f6c7d8fdd2984c
-ms.sourcegitcommit: 0d9e1452fcf5f15a80230838f80a427b9951cdb1
+ms.openlocfilehash: 9c6fb7da3a791d369fc3005367ee7670af8bc63e
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2019
-ms.locfileid: "75324869"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414130"
 ---
 # <a name="intune-actions-and-options-supported-with-apple-user-enrollment"></a>Akcje i opcje usługi Intune obsługiwane przez rejestrację użytkowników firmy Apple
 
 Rejestracja użytkownika obsługuje podzestaw opcji zarządzania urządzeniami. Jeśli wstępnie istniejący profil konfiguracji zostanie zastosowany do urządzenia z rejestracją użytkowników, na tym urządzeniu będą stosowane tylko ustawienia obsługiwane przez rejestrację użytkowników.
 
 > [!NOTE]
-> Obsługa rejestracji użytkownika firmy Apple w usłudze Intune jest obecnie dostępna w wersji zapoznawczej.
+> Obsługa rejestracji użytkownika firmy Apple w usłudze Intune jest obecnie dostępna w wersji zapoznawczej systemów iOS i iPadOS.
 
 ## <a name="password-settings"></a>Ustawienia hasła
 
@@ -107,19 +107,15 @@ Następujące opcje nie są obsługiwane na urządzeniach zarejestrowanych przy 
 - Zasady ochrony aplikacji nadal będą stosowane do tych aplikacji. Nie będzie można jednak przejąć zarządzania ani wdrożyć zarządzanej wersji tych aplikacji, chyba że użytkownik usunie je z urządzenia.
 - Akcje, konfiguracje, ustawienia i polecenia wymagające nadzoru. 
 
-## <a name="options-not-supported-in-preview"></a>Opcje nieobsługiwane w wersji zapoznawczej
-- Ograniczenia rejestracji dotyczące typów urządzeń w celu zezwolenia na urządzenia osobiste lub ich blokowania 
 
 ## <a name="known-issues-in-preview"></a>Znane problemy w wersji zapoznawczej
 - Odwołanie licencji programu VPP: Powiadomienie o odwołaniu licencji nie jest wyświetlane. Bieżące zachowanie polega na tym, że odwołanie jest pomyślne, ale użytkownik końcowy nie jest powiadamiany. 
 - Raportowanie aplikacji programu VPP: W raporcie znajdującym się w lokalizacji Aplikacje klienckie > Aplikacje > [Nazwa aplikacji] > Stan instalacji urządzenia aplikacje programu VPP wdrożone na urządzeniach zarejestrowanych przez użytkownika są zgłaszane ze stanem „niepowodzenie”, nawet jeśli aplikacja została pomyślnie wdrożona na urządzeniu. 
 - Raportowanie aplikacji: W przypadku typów aplikacji nieobsługiwanych przez funkcję rejestracji przez użytkownika raporty mogą generować nieodpowiednie komunikaty o błędach. 
 - Środowisko obsługi aplikacji Portal firmy: Użytkownicy widzą, że wszystkie aplikacje są przeznaczone dla nich, niezależnie od tego, czy te typy aplikacji są obsługiwane przez funkcję urządzeń zarejestrowanych przez użytkownika. 
-- Środowisko obsługi aplikacji Portal firmy: Użytkownicy widzą ten sam tekst wskazujący, co organizacje mogą i czego nie mogą zobaczyć w przypadku rejestracji użytkowników i urządzeń.
-- Jeśli użytkownik wybierze opcję „Moja organizacja jest właścicielem tego urządzenia” podczas rejestracji, urządzenie jest nadal identyfikowane jako osobiste w usłudze Intune, chyba że zostanie to zmodyfikowane w konsoli administracyjnej lub za pośrednictwem grafu. 
-- Kierowanie rejestracji: system iPadOS nie znajduje się na liście w selektorze platformy. System iPadOS jest obsługiwany w wersji zapoznawczej, ale nie jest jawnie określony w konsoli administracyjnej. 
+- Środowisko obsługi aplikacji Portal firmy: Użytkownicy widzą ten sam tekst wskazujący, co mogą widzieć organizacje w przypadku rejestracji użytkowników i urządzeń, jeśli administrator dostosował tekst z informacją, czego organizacje nie mogą zobaczyć.
 
 
 ## <a name="next-steps"></a>Następne kroki
 
-[Konfigurowanie rejestracji użytkowników w systemach iOS oraz iPadOS](ios-user-enrollment.md)
+[Konfigurowanie rejestracji użytkowników w systemach iOS/iPadOS](ios-user-enrollment.md)

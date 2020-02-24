@@ -1,5 +1,5 @@
 ---
-title: Zarządzanie książkami elektronicznymi dla systemu iOS nabytymi w ramach zakupów zbiorczych
+title: Zarządzanie książkami elektronicznymi dla systemu iOS/iPadOS nabytymi w ramach zakupów zbiorczych
 titleSuffix: Microsoft Intune
 description: Informacje o synchronizowaniu książek zakupionych w ramach zakupów zbiorczych w sklepie z aplikacjami dla systemu iOS z usługą Intune oraz o zarządzaniu ich użyciem i jego śledzeniu.
 keywords: ''
@@ -18,14 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 08275e2573fe8aae8c59ea25c85cdd8f7a3246ee
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: f7c2bd0603961b9d618b3f743ecb323fb7fc9823
+ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563760"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77437872"
 ---
-# <a name="how-to-manage-ios-ebooks-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Jak zarządzać w usłudze Microsoft Intune książkami elektronicznymi dla systemu iOS, które zostały zakupione w ramach programu zakupów zbiorczych
+# <a name="how-to-manage-iosipados-ebooks-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Jak zarządzać w usłudze Microsoft Intune książkami elektronicznymi dla systemu iOS/iPadOS, które zostały zakupione w ramach programu zakupów zbiorczych
 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -37,7 +37,7 @@ Usługa Microsoft Intune wspomaga synchronizację, zarządzanie i przypisywanie 
 Procedury służące do zarządzania książkami są podobne do [zarządzania aplikacjami programu VPP](../vpp-apps-ios.md).
 
 ## <a name="manage-volume-purchased-books-for-ios-devices"></a>Zarządzanie zbiorczo zakupionymi książkami dla urządzeń z systemem iOS
-Wiele licencji dla książek z systemem iOS można zakupić za pośrednictwem programu [Apple Volume Purchase Program for Business](https://www.apple.com/business/vpp/) lub [Apple Volume Purchase Program for Education](https://volume.itunes.apple.com/us/store). Ten proces obejmuje skonfigurowanie konta programu VPP firmy Apple w witrynie sieci Web firmy Apple i przekazanie tokenu VPP firmy Apple do usługi Intune.  Następnie można zsynchronizować dane zakupu zbiorczego z usługą Intune i śledzić użycie książek nabytych w ramach zakupu zbiorczego.
+Wiele licencji dla książek z systemem iOS/iPadOS można zakupić za pośrednictwem programu [Apple Volume Purchase Program for Business](https://www.apple.com/business/vpp/) lub [Apple Volume Purchase Program for Education](https://volume.itunes.apple.com/us/store). Ten proces obejmuje skonfigurowanie konta programu VPP firmy Apple w witrynie sieci Web firmy Apple i przekazanie tokenu VPP firmy Apple do usługi Intune.  Następnie można zsynchronizować dane zakupu zbiorczego z usługą Intune i śledzić użycie książek nabytych w ramach zakupu zbiorczego.
 
 ## <a name="before-you-start"></a>Przed rozpoczęciem
 Przed rozpoczęciem należy uzyskać token VPP od firmy Apple i przekazać go do konta usługi Intune. Dodatkowo:
@@ -46,7 +46,7 @@ Przed rozpoczęciem należy uzyskać token VPP od firmy Apple i przekazać go do
 * Każdy token jest ważny przez jeden rok.
 * Domyślnie usługa Intune przeprowadza synchronizację z usługą Apple VPP dwa razy dziennie. W dowolnym momencie można uruchomić ręczną synchronizację.
 * Po zaimportowaniu tokenu VPP do usługi Intune nie należy importować tego samego tokenu do żadnego innego rozwiązania do zarządzania urządzeniami. Może to spowodować utratę przypisania licencji i rekordów użytkowników.
-* Przed rozpoczęciem korzystania z książek dla systemu iOS przy użyciu usługi Intune należy usunąć wszystkie istniejące konta użytkowników programu VPP utworzone przy użyciu innych dostawców zarządzania urządzeniami mobilnymi. Usługa Intune nie synchronizuje tych kont użytkowników z usługą Intune ze względów bezpieczeństwa. Usługa Intune synchronizuje tylko dane z usługi VPP firmy Apple, która została utworzona przez usługę Intune.
+* Przed rozpoczęciem korzystania z książek dla systemu iOS/iPadOS przy użyciu usługi Intune należy usunąć wszystkie istniejące konta użytkowników programu VPP utworzone przy użyciu innych dostawców zarządzania urządzeniami mobilnymi. Usługa Intune nie synchronizuje tych kont użytkowników z usługą Intune ze względów bezpieczeństwa. Usługa Intune synchronizuje tylko dane z usługi VPP firmy Apple, która została utworzona przez usługę Intune.
 * Aby możliwe było przypisanie książki do urządzenia, musi na nim być zainstalowana wbudowana aplikacja iBooks. Jeśli tak nie jest, użytkownik końcowy musi ponownie zainstalować aplikację w celu czytania książki. Obecnie nie jest możliwe przywracanie usuniętych wbudowanych aplikacji przy użyciu usługi Intune.
 * Można przypisywać tylko książki z witryny programu Apple Volume Purchase Program. Nie można przekazać, a następnie przypisać książek utworzonych w swojej firmie.
 * Obecnie nie można przypisywać książek do kategorii użytkownika końcowego w taki sam sposób, jak przypisuje się aplikacje.

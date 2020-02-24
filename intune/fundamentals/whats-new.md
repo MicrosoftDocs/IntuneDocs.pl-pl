@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dc2e77db1aa322eb70c64d82ddca238f49b39fb2
-ms.sourcegitcommit: e1ff157f692983b49bdd6e20cc9d0f93c3b3733c
+ms.openlocfilehash: 7018e2ab4290219c752f44b4b391822438461e8e
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77125034"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415089"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co nowego w usłudze Microsoft Intune
 
@@ -55,7 +55,11 @@ Dowiedz się co tydzień, co nowego w usłudze Microsoft Intune. Możesz tu rów
 -->  
 
 <!-- ########################## -->
-## <a name="week-of-february-03-2020"></a>Tydzień od 03 lutego 2020 r.
+## <a name="week-of-february-10-2020"></a>Tydzień od 10 lutego 2020 r.
+
+### <a name="windows-7-ends-extended-support---3042987--"></a>Następuje zakończenie obsługi rozszerzonej systemu Windows 7 <!--3042987-->
+14 stycznia 2020 r. została zakończona obsługa rozszerzona systemu Windows 7. Tego samego dnia w usłudze Intune wycofano obsługę urządzeń z systemem Windows 7. Pomoc techniczna i automatyczne aktualizacje pomagające chronić komputer nie są już dostępne. Należy uaktualnić system do wersji Windows 10. Aby uzyskać więcej informacji, zobacz [wpis na blogu z planem zmian](https://aka.ms/Windows7_Intune).
+
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="app-management"></a>Zarządzanie aplikacjami
@@ -63,11 +67,11 @@ Dowiedz się co tydzień, co nowego w usłudze Microsoft Intune. Możesz tu rów
 #### <a name="microsoft-edge-version-77-and-later-on-windows-10-devices---5843584---"></a>Microsoft Edge w wersji 77 lub nowszej na urządzeniach z systemem Windows 10<!-- 5843584 -->
 Usługa Intune obsługuje teraz odinstalowywanie przeglądarki Microsoft Edge w wersji 77 lub nowszej na urządzeniach z systemem Windows 10. Aby uzyskać więcej informacji, zobacz [Dodawanie przeglądarki Microsoft Edge dla systemu Windows 10 do usługi Microsoft Intune](~/apps/apps-windows-edge.md).
 
-#### <a name="company-portal-app-improved-performance---6178652---"></a>Ulepszona wydajność aplikacji Portal firmy<!-- 6178652 -->
-Aplikacja Portal firmy została zaktualizowana w celu obsługi ulepszonej wydajności urządzeń z procesorami ARM64, takich jak Surface Pro X. Wcześniej aplikacja Portal firmy działała w trybie emulacji procesora ARM32. Teraz aplikacja Portal firmy jest natywnie skompilowana dla procesora ARM64. Aby uzyskać więcej informacji na temat aplikacji Portal firmy, zobacz [Jak skonfigurować aplikację Portal firmy w usłudze Microsoft Intune](~/apps/company-portal-app.md).
-
 #### <a name="screen-removed-from-company-portal-android-work-profile-enrollment--6103987---"></a>Ekran usunięty z aplikacji Portal firmy, rejestracja profilu służbowego systemu Android<!--6103987 -->
 Ekran **Co dalej?** został usunięty z przepływu rejestracji profilu służbowego systemu Android w aplikacji Portal firmy, aby usprawnić środowisko użytkownika. Przejdź do tematu [Rejestracja przy użyciu profilu służbowego systemu Android](/intune-user-help/enroll-device-android-work-profile), aby zobaczyć zaktualizowany przepływ rejestracji profilu służbowego systemu Android.  
+
+#### <a name="company-portal-app-improved-performance---6178652---"></a>Ulepszona wydajność aplikacji Portal firmy<!-- 6178652 -->
+Aplikacja Portal firmy została zaktualizowana w celu obsługi ulepszonej wydajności urządzeń z procesorami ARM64, takich jak Surface Pro X. Wcześniej aplikacja Portal firmy działała w trybie emulacji procesora ARM32. Teraz, w wersji 10.4.7080.0 lub wyższej, aplikacja Portal firmy jest natywnie skompilowana dla procesora ARM64. Aby uzyskać więcej informacji na temat aplikacji Portal firmy, zobacz [Jak skonfigurować aplikację Portal firmy w usłudze Microsoft Intune](~/apps/company-portal-app.md).
 
 <!-- ########################## -->
 ## <a name="week-of-january-27-2020"></a>Tydzień od 27 stycznia 2020 r.

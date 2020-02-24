@@ -1,6 +1,6 @@
 ---
-title: Aktywowanie trybu zgubienia urządzenia z systemem iOS przy użyciu usługi Microsoft Intune — Azure | Microsoft Docs
-description: Włącz lub uruchom tryb zgubienia w celu dostosowania komunikatu wyświetlanego na ekranie blokady zgubionego lub skradzionego urządzenia z systemem iOS za pomocą usługi Microsoft Intune. Uzyskaj szczegółowe informacje dotyczące zabezpieczeń i ochrony prywatności podczas korzystania z akcji Tryb zgubienia.
+title: Aktywowanie trybu zgubienia urządzenia z systemem iOS/iPadOS przy użyciu usługi Microsoft Intune — Azure | Microsoft Docs
+description: Włącz lub uruchom tryb zgubienia w celu dostosowania komunikatu wyświetlanego na ekranie blokady zgubionego lub skradzionego urządzenia z systemem iOS/iPadOS za pomocą usługi Microsoft Intune. Uzyskaj szczegółowe informacje dotyczące zabezpieczeń i ochrony prywatności podczas korzystania z akcji Tryb zgubienia.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -16,22 +16,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2956be9e32587c3bf86ce009a6927269c11ffced
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 9a4103c819c0d4bd377b9c6ab2359cb7465cdd9c
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73712229"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415600"
 ---
-# <a name="enable-lost-mode-on-ios-devices-with-intune"></a>Włączanie trybu zgubienia na urządzeniach z systemem iOS przy użyciu usługi Intune
+# <a name="enable-lost-mode-on-iosipados-devices-with-intune"></a>Włączanie trybu zgubienia na urządzeniach z systemem iOS/iPadOS przy użyciu usługi Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Akcja urządzenia **Tryb zgubienia** ułatwia włączenie trybu zgubienia na zgubionych lub skradzionych urządzeniach z systemem iOS. Ten tryb pozwala wprowadzić komunikat i numer telefonu, które będą wyświetlane na ekranie blokady urządzenia. Aby użyć trybu zgubienia, urządzenie musi być urządzeniem z systemem iOS należącym do firmy i objętym trybem nadzorowanym.
+Akcja urządzenia **Tryb zgubienia** ułatwia włączenie trybu zgubienia na zgubionych lub skradzionych urządzeniach z systemem iOS/iPadOS. Ten tryb pozwala wprowadzić komunikat i numer telefonu, które będą wyświetlane na ekranie blokady urządzenia. Aby użyć trybu zgubienia, urządzenie musi być urządzeniem z systemem iOS/iPadOS należącym do firmy i objętym trybem nadzorowanym.
 
 ## <a name="supported-platforms"></a>Obsługiwane platformy
 
-- iOS 9.3 i nowsze
+- System iOS/iPadOS 9.3 lub nowszy
 
 Ta funkcja nie jest obsługiwana w przypadku następujących platform: 
 - Windows
@@ -43,7 +43,7 @@ Ta funkcja nie jest obsługiwana w przypadku następujących platform:
 
 1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Wybierz pozycję **Urządzenia**, a następnie wybierz pozycję **Wszystkie urządzenia**.
-4. Z listy zarządzanych urządzeń wybierz urządzenie z systemem iOS, a następnie wybierz pozycję **Tryb zgubienia (tylko tryb nadzorowany)** .
+4. Z listy zarządzanych urządzeń wybierz urządzenie z systemem iOS/iPadOS, a następnie wybierz pozycję **Tryb zgubienia (tylko tryb nadzorowany)** .
 5. W obszarze **Tryb zgubienia**wybierz pozycję **Włącz**.
 6. W polu **Komunikat wyświetlany na ekranie blokady** wpisz komunikat, który ma być wyświetlany na ekranie blokady urządzenia.
 7. Opcjonalnie wprowadź numer telefonu w polu **Numer telefonu do wyświetlenia**.

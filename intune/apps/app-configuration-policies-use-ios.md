@@ -1,7 +1,7 @@
 ---
-title: Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem iOS
+title: Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem iOS/iPadOS
 titleSuffix: Microsoft Intune
-description: Informacje dotyczące korzystania z zasad konfiguracji aplikacji w celu przekazywania danych konfiguracyjnych do aplikacji dla systemu iOS po jej uruchomieniu.
+description: Informacje dotyczące korzystania z zasad konfiguracji aplikacji w celu przekazywania danych konfiguracyjnych do aplikacji dla systemu iOS/iPadOS po jej uruchomieniu.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0d4bbd0a5b57391edad726c7e936d0072a791673
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: 6044ff5f8d169e36a11f9289f1772c809723b7fc
+ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755769"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77438008"
 ---
-# <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem iOS
+# <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem iOS/iPadOS
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Zasady konfiguracji aplikacji w usłudze Microsoft Intune umożliwiają określenie niestandardowych ustawień konfiguracji dla aplikacji dla systemu iOS. Dzięki tym ustawieniom konfiguracji aplikację można dostosować na podstawie wskazówek jej dostawcy. Te ustawienia konfiguracji (klucze i wartości) należy uzyskać od dostawcy aplikacji. Aby skonfigurować aplikację, określ ustawienia jako klucze i wartości lub jako plik XML zawierający klucze i wartości.
+Zasady konfiguracji aplikacji w usłudze Microsoft Intune umożliwiają określenie niestandardowych ustawień konfiguracji dla aplikacji dla systemu iOS/iPadOS. Dzięki tym ustawieniom konfiguracji aplikację można dostosować na podstawie wskazówek jej dostawcy. Te ustawienia konfiguracji (klucze i wartości) należy uzyskać od dostawcy aplikacji. Aby skonfigurować aplikację, określ ustawienia jako klucze i wartości lub jako plik XML zawierający klucze i wartości.
 
 Jako administrator usługi Microsoft Intune masz możliwość kontrolowania kont użytkownika dodawanych do aplikacji pakietu Microsoft Office na urządzeniach zarządzanych. Istnieje możliwość ograniczenia dostępu tylko do dozwolonych kont użytkowników w organizacji oraz blokowania kont osobistych na zarejestrowanych urządzeniach. Aplikacje pomocnicze przetwarzają konfigurację aplikacji i usuwają oraz blokują niezatwierdzone konta. Ustawienia zasad konfiguracji są stosowane, gdy aplikacja je wyszukuje (zazwyczaj podczas pierwszego uruchomienia).
 
@@ -41,7 +41,7 @@ Po dodaniu zasad konfiguracji aplikacji możesz ustawić przypisania zasad konfi
 Po wybraniu dołączonych grup dla zasad konfiguracji aplikacji możesz też wybrać określone grupy, które mają zostać wykluczone. Aby uzyskać więcej informacji, zobacz [Dołączanie i wykluczanie przypisań aplikacji w usłudze Microsoft Intune](apps-inc-exl-assignments.md).
 
 > [!TIP]
-> Ten typ zasad jest obecnie dostępny tylko na urządzeniach z systemem iOS 8.0 lub nowszym. Obsługiwane są następujące typy instalacji aplikacji:
+> Ten typ zasad jest obecnie dostępny tylko na urządzeniach z systemem iOS/iPadOS 8.0 lub nowszym. Obsługiwane są następujące typy instalacji aplikacji:
 >
 > - **Zarządzana aplikacja systemu iOS ze sklepu App Store**
 > - **Pakiet aplikacji dla systemu iOS**
@@ -106,7 +106,7 @@ Znaki \{\{ i \}\} są używane tylko przez typy tokenów i nie mogą być używa
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Zezwalanie tylko na skonfigurowane konta organizacji w aplikacjach z obsługą wielu tożsamości 
 
-W przypadku urządzeń z systemem iOS używaj następujących par klucz/wartość:
+W przypadku urządzeń z systemem iOS/iPadOS używaj następujących par klucz/wartość:
 
 | **Klucz** | IntuneMAMAllowedAccountsOnly |
 |--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -177,17 +177,17 @@ Ponadto usługa Intune obsługuje następujące typy tokenów na liście właśc
 - \{\{deviceid\}\}—na przykład **b9841cd9-9843-405f-be28-b2265c59ef97**
 - \{\{userid\}\}—na przykład **3ec2c00f-b125-4519-acf0-302ac3761822**
 - \{\{username\}\}—na przykład **Jan Nowak**
-- \{\{serialnumber\}\}—na przykład **F4KN99ZUG5V2** (dla urządzeń z systemem iOS)
-- \{\{serialnumberlast4digits\}\}—na przykład **G5V2** (dla urządzeń z systemem iOS)
+- \{\{serialnumber\}\} — na przykład **F4KN99ZUG5V2** (dla urządzeń z systemem iOS/iPadOS)
+- \{\{serialnumberlast4digits\}\} — na przykład **G5V2** (dla urządzeń z systemem iOS/iPadOS)
 - \{\{aaddeviceid\}\} — na przykład **ab0dc123-45d6-7e89-aabb-cde0a1234b56**
 
 ## <a name="configure-the-company-portal-app-to-support-ios-dep-devices"></a>Konfigurowanie aplikacji Portal firmy na potrzeby obsługi urządzeń DEP z systemem iOS
 
-Rejestracje programu DEP (Device Enrollment Program firmy Apple) nie są zgodne z wersją aplikacji Portal firmy ze sklepu z aplikacjami. Można jednak skonfigurować aplikację Portal firmy do obsługi urządzeń DEP z systemem iOS, wykonując następujące czynności.
+Rejestracje programu DEP (Device Enrollment Program firmy Apple) nie są zgodne z wersją aplikacji Portal firmy ze sklepu z aplikacjami. Można jednak skonfigurować aplikację Portal firmy do obsługi urządzeń DEP z systemem iOS/iPadOS, wykonując następujące czynności.
 
 1. W usłudze Intune, jeśli to konieczne, dodaj aplikację Intune — Portal firmy, przechodząc do pozycji **Intune** > **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**.
 2. Przejdź do pozycji **Aplikacje** > **Zasady konfiguracji aplikacji**, aby utworzyć zasady konfiguracji aplikacji dla aplikacji Portal firmy.
-3. Utwórz zasady konfiguracji aplikacji za pomocą pliku XML poniżej. Więcej informacji na temat tworzenia zasad konfiguracji aplikacji i wprowadzania danych XML można znaleźć w artykule [Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem iOS](app-configuration-policies-use-ios.md).
+3. Utwórz zasady konfiguracji aplikacji za pomocą pliku XML poniżej. Więcej informacji na temat tworzenia zasad konfiguracji aplikacji i wprowadzania danych XML można znaleźć w artykule [Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem iOS/iPadOS](app-configuration-policies-use-ios.md).
 
     ``` xml
     <dict>
@@ -205,11 +205,11 @@ Rejestracje programu DEP (Device Enrollment Program firmy Apple) nie są zgodne 
 4. Poinformuj użytkowników końcowych, że powinni zalogować się w aplikacji Portal firmy po jej automatycznym zainstalowaniu.
 
 ## <a name="monitor-ios--app-configuration-status-per-device"></a>Monitorowanie stanu konfiguracji aplikacji systemu iOS na poszczególnych urządzeniach 
-Po przypisaniu zasad konfiguracji można monitorować stan konfiguracji aplikacji systemu iOS dla każdego zarządzanego urządzenia. W usłudze **Microsoft Intune** w witrynie Azure Portal wybierz pozycję **Urządzenia** > **Wszystkie urządzenia**. Z listy zarządzanych urządzeń wybierz konkretne urządzenie, aby wyświetlić okienko dla tego urządzenia. W okienku urządzenia wybierz pozycję **Konfiguracja aplikacji**.  
+Po przypisaniu zasad konfiguracji można monitorować stan konfiguracji aplikacji systemu iOS/iPadOS dla każdego zarządzanego urządzenia. W usłudze **Microsoft Intune** w witrynie Azure Portal wybierz pozycję **Urządzenia** > **Wszystkie urządzenia**. Z listy zarządzanych urządzeń wybierz konkretne urządzenie, aby wyświetlić okienko dla tego urządzenia. W okienku urządzenia wybierz pozycję **Konfiguracja aplikacji**.  
 
 ## <a name="additional-information"></a>Dodatkowe informacje
 
-- [Deploying Outlook for iOS and Android app configuration settings](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune) (Wdrażanie ustawień konfiguracji aplikacji Outlook dla systemu iOS i Android)
+- [Deploying Outlook for iOS/iPadOS and Android app configuration settings](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune) (Wdrażanie ustawień konfiguracji aplikacji Outlook dla systemów iOS/iPadOS i Android)
 
 ## <a name="next-steps"></a>Następne kroki
 

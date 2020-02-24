@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae3c2380aa27096be2490d2404858179ea9d222e
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: b7861d26650aaf74ea9c58608c33e72495244575
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72503178"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414221"
 ---
 # <a name="incomplete-user-enrollments-report"></a>Raport Nieukończone rejestracje użytkowników
 
@@ -44,7 +44,7 @@ Jeśli użytkownik decyduje się na wielokrotne zatrzymanie i ponowne rozpoczęc
 
 ## <a name="what-does-the-report-show"></a>Co jest wyświetlane w raporcie?
 
-Raporty zawierają dane dla urządzeń z systemami iOS i Android.
+Raporty zawierają dane dla urządzeń z systemami iOS, iPadOS i Android.
 
 W raportach są wyświetlane dane z ostatnich dwóch tygodni, ale możesz filtrować raport, aby były wyświetlane dane z okresu do 30 dni w przeszłości.
 
@@ -86,10 +86,10 @@ W poniższych tabelach przedstawiono listę akcji użytkownika, które kwalifiku
 
 | Nazwa akcji | Ekran lub przepływ | Platforma | Akcja |
 | ---- |---- |---- |---- |
-| iOSProfileLaunch | Monit o pokazanie profilu konfiguracji | iOS | **Ignoruj** |
-| iOSProfileLaunch | Ekran instalowania profilu | iOS | **Anuluj** |
-| iOSProfileLaunch | Monit o zaufanie elementowi źródłowemu profilu w celu zarejestrowania urządzenia | iOS | **Anuluj** |
-| iOSProfileLaunch | Ekran instalowania profilu do chwili zainstalowania profilu | iOS | Czas trwania > 30 minut |
+| iOSProfileLaunch | Monit o pokazanie profilu konfiguracji | iOS/iPadOS | **Ignoruj** |
+| iOSProfileLaunch | Ekran instalowania profilu | iOS/iPadOS | **Anuluj** |
+| iOSProfileLaunch | Monit o zaufanie elementowi źródłowemu profilu w celu zarejestrowania urządzenia | iOS/iPadOS | **Anuluj** |
+| iOSProfileLaunch | Ekran instalowania profilu do chwili zainstalowania profilu | iOS/iPadOS | Czas trwania > 30 minut |
 | AndroidPermissions | Ekran aktywacji administratora urządzenia | Android | **Anuluj** |
 | AndroidPermissions | Monit o zatwierdzenie w celu wykonywania połączeń telefonicznych i zarządzania nimi do chwili **aktywacji** administratora urządzenia | Android | Czas trwania > 30 minut |
 | KnoxActivation | Aktywacja agenta KLMS (tylko rozwiązanie firmy Samsung) | Android| **Anuluj** |

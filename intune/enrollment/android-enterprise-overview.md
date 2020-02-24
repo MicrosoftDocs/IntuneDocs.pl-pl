@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1a5c980b3f9ababaf94aa7b279e533679ed74b0e
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 6941b3b79dd690c9861c8efead7f525e56e2b350
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72503365"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415414"
 ---
 # <a name="manage-android-work-profile-devices-with-intune"></a>Zarządzanie urządzeniami z profilem służbowym systemu Android za pomocą usługi Intune
 
@@ -55,7 +55,7 @@ Rozwiązanie Android Enterprise zapewnia infrastrukturę pozwalającą wdrażać
 
 ## <a name="email-configuration"></a>Konfiguracja poczty e-mail
 
-Inaczej niż w systemie iOS, rozwiązanie Android Enterprise nie udostępnia domyślnej aplikacji poczty e-mail ani natywnego obiektu profilu poczty e-mail. Zamiast tego konfigurację poczty e-mail można ustawić, stosując ustawienia konfiguracji aplikacji do obsługujących je aplikacji poczty e-mail. W Sklepie Play są dostępne dwie aplikacje klienckie Exchange ActiveSync (EAS) obsługujące konfigurację aplikacji rozwiązania Android Enterprise: Gmail i Nine Work.
+Inaczej niż w systemie iOS/iPadOS, rozwiązanie Android Enterprise nie udostępnia domyślnej aplikacji poczty e-mail ani natywnego obiektu profilu poczty e-mail. Zamiast tego konfigurację poczty e-mail można ustawić, stosując ustawienia konfiguracji aplikacji do obsługujących je aplikacji poczty e-mail. W Sklepie Play są dostępne dwie aplikacje klienckie Exchange ActiveSync (EAS) obsługujące konfigurację aplikacji rozwiązania Android Enterprise: Gmail i Nine Work.
 
 Usługa Intune udostępnia szablony konfiguracji dla aplikacji Gmail i Nine Work, gdy są one zarządzane jako aplikacje robocze. Pozostałe aplikacje poczty e-mail, które obsługują profile konfiguracji aplikacji, można konfigurować przy użyciu zasad konfiguracji aplikacji mobilnych.
 
@@ -65,7 +65,7 @@ Jeśli na urządzeniu z profilem służbowym systemu Android Enterprise korzysta
 
 Stosowane zasady ochrony aplikacji są w pełni obsługiwane w profilu służbowym i w profilu osobistym. Aplikacje biznesowe można opublikować przy użyciu konsoli publikowania aplikacji systemu Android dostępnej pod adresem https://play.google.com/apps/publish. Konsola ta pozwala określić aplikacje jako prywatne w obrębie organizacji. Aby uzyskać więcej informacji, zobacz [Dodawanie zasad zgodności dla urządzeń z profilem służbowym systemu Android Enterprise w usłudze Intune](../protect/compliance-policy-create-android-for-work.md). Aby uzyskać ogólne informacje na temat zasad ochrony aplikacji, zobacz [Co to są zasady ochrony aplikacji?](../apps/app-protection-policy.md)
 
-## <a name="vpn-profiles"></a>profile sieci VPN,
+## <a name="vpn-profiles"></a>Profile sieci VPN
 
 Obsługa sieci VPN działa podobnie do profilów sieci VPN systemu Android. Na potrzeby zarządzania rozwiązaniem Android Enterprise dostępni są ci sami dostawcy sieci VPN oraz takie same podstawowe opcje konfiguracji z dwiema różnicami:
 

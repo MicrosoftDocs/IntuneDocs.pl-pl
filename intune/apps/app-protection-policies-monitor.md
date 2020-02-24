@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36a84296aabd2d78cbc3cdc14ffb8f696afa5c22
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 899e2d2dc8458d0909f01e9dfcc1056874ef0fa7
+ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75205262"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77437974"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Monitorowanie zasad ochrony aplikacji
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -51,8 +51,8 @@ Okres przechowywania danych ochrony aplikacji to 90 dni. Wszystkie wystąpienia
 - **Oflagowani użytkownicy:** Liczba użytkowników, którzy napotykają problemy ze swoimi urządzeniami. Urządzenia ze zdjętymi zabezpieczeniami systemu (iOS) i z dostępem do konta root (Android) są zgłaszane w sekcji **Oflagowani użytkownicy**. Ponadto w tym miejscu są zgłaszani użytkownicy urządzeń oflagowanych podczas sprawdzania zaświadczania urządzenia rozwiązania Google SafetyNet (jeśli zostało włączone przez administratora IT). 
 - **Użytkownicy z potencjalnie szkodliwymi aplikacjami**: Liczba użytkowników, którzy mogą mieć na urządzeniu z systemem Android szkodliwą aplikację wykrytą przez funkcję Google Play Protect. 
 - **Stan użytkownika dla systemu iOS** i **Stan użytkownika dla systemu Android**: Liczba użytkowników, którzy korzystali z aplikacji i mają przypisane zasady w kontekście służbowym dla powiązanej platformy. Zawiera liczbę użytkowników zarządzanych przez zasady, jak również liczbę użytkowników, którzy korzystają z aplikacji, ale nie są objęci żadnymi zasadami w kontekście służbowym. Można rozważyć dodanie tych użytkowników do zasad.
-- **Najlepsze chronione aplikacje systemu iOS** i **Najlepsze chronione aplikacje systemu Android**: ta informacja to liczba chronionych i niechronionych aplikacji według platformy określana w oparciu o najczęściej używane aplikacje systemu iOS i Android.
-- **Najważniejsze skonfigurowane aplikacje systemu iOS bez rejestracji** i **Najważniejsze skonfigurowane aplikacje systemu Android bez rejestracji**: ta informacja to liczba skonfigurowanych aplikacji według platformy określana w oparciu o najczęściej używane aplikacje systemu iOS i Android dla niezarejestrowanych urządzeń (czyli przy użyciu zasad konfiguracji aplikacji).
+- **Najlepsze chronione aplikacje systemu iOS/iPadOS** i **Najlepsze chronione aplikacje systemu Android**: ta informacja to liczba chronionych i niechronionych aplikacji według platformy określana w oparciu o najczęściej używane aplikacje systemu iOS/iPadOS i Android.
+- **Najważniejsze skonfigurowane aplikacje systemu iOS/iPadOS bez rejestracji** i **Najważniejsze skonfigurowane aplikacje systemu Android bez rejestracji**: ta informacja to liczba skonfigurowanych aplikacji według platformy określana w oparciu o najczęściej używane aplikacje systemu iOS/iPadOS i Android dla niezarejestrowanych urządzeń (czyli przy użyciu zasad konfiguracji aplikacji).
 
     > [!NOTE]
     > Jeśli istnieje wiele zasad dla platformy, użytkownik jest traktowany jako zarządzany przez zasady, gdy ma przypisane co najmniej jedne zasady.
@@ -170,9 +170,9 @@ Wykonaj następujące kroki, aby wygenerować plik CSV ochrony aplikacji lub pli
     ![Zrzut ekranu przedstawiający okno dialogowe z potwierdzeniem opcji Zapisz raport](./media/app-protection-policies-monitor/app-protection-report-csv-1.png)
    
 > [!NOTE]
-> Usługa Intune udostępnia dodatkowe pola raportów dotyczących urządzeń, takie jak na przykład identyfikator rejestracji aplikacji, producent systemu Android, model i wersja poprawki zabezpieczeń, a także model urządzenia z systemem iOS. W usłudze Intune te pola są dostępne po wybraniu pozycji **Aplikacje** > **Stan ochrony aplikacji** > **Raport ochrony aplikacji: iOS, Android**. Ponadto te parametry są pomocne w konfigurowaniu listy **dozwolonych** dla producenta urządzenia (Android), listy **dozwolonych** dla modelu urządzenia (Android i iOS) oraz ustawienia **minimalnej wersji poprawki zabezpieczeń systemu Android**.   
+> Usługa Intune udostępnia dodatkowe pola raportów dotyczących urządzeń, takie jak na przykład identyfikator rejestracji aplikacji, producent systemu Android, model i wersja poprawki zabezpieczeń, a także model urządzenia z systemem iOS/iPadOS. W usłudze Intune te pola są dostępne po wybraniu pozycji **Aplikacje** > **Stan ochrony aplikacji** > **Raport ochrony aplikacji: iOS/iPadOS, Android**. Ponadto te parametry są pomocne w konfigurowaniu listy **dozwolonych** dla producenta urządzenia (Android), listy **dozwolonych** dla modelu urządzenia (Android i iOS) oraz ustawienia **minimalnej wersji poprawki zabezpieczeń systemu Android**.   
  
 ## <a name="see-also"></a>Zobacz także
-- [Zarządzanie przesyłaniem danych między aplikacjami systemu iOS](data-transfer-between-apps-manage-ios.md)
-- [Czego można oczekiwać, gdy aplikacja dla systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji](../fundamentals/end-user-mam-apps-android.md)
-- [Czego można oczekiwać, gdy aplikacja systemu iOS jest zarządzana przy użyciu zasad ochrony aplikacji](../fundamentals/end-user-mam-apps-ios.md)
+- [Zarządzanie przesyłaniem danych między aplikacjami systemu iOS/iPadOS](data-transfer-between-apps-manage-ios.md)
+- [Czego można oczekiwać, gdy aplikacja systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji](../fundamentals/end-user-mam-apps-android.md)
+- [Czego można oczekiwać, gdy aplikacja systemu iOS/iPadOS jest zarządzana przy użyciu zasad ochrony aplikacji](../fundamentals/end-user-mam-apps-ios.md)

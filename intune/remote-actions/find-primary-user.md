@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3d8aadbd876ea03da0f16acea82b71ebd85cf9be
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: fbafca746c43dada6281ffbfe1e34f01afa8ab91
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73712252"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77413676"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>Znajdowanie użytkownika podstawowego urządzenia usługi Intune
 
@@ -67,8 +67,8 @@ Usługa Intune automatycznie dodaje użytkownika podstawowego na urządzeniach p
 | Windows | Przyłączanie do usługi Azure AD (tryb samowdrażania rozwiązania Autopilot) | Brak | Nie dotyczy | 
 | Wiele platform | Rejestracja sterowana przez użytkownika za pomocą aplikacji Portal firmy | Użytkownik rejestrujący | Podczas rejestracji |
 | Wiele platform | Menedżer rejestracji urządzeń (DEM, Device Enrollment Manager) | Rejestrujący użytkownik DEM | Podczas rejestracji |
-| iOS, macOS | Zautomatyzowane rejestrowanie urządzeń firmy Apple (program DEP z koligacją użytkownika) | Użytkownik rejestrujący | Podczas rejestracji |
-| iOS, macOS | Zautomatyzowane rejestrowanie urządzeń firmy Apple (program DEP bez koligacji użytkownika) | Brak | Nie dotyczy |
+| iOS/iPadOS, macOS | Zautomatyzowane rejestrowanie urządzeń firmy Apple (program DEP z koligacją użytkownika) | Użytkownik rejestrujący | Podczas rejestracji |
+| iOS/iPadOS, macOS | Zautomatyzowane rejestrowanie urządzeń firmy Apple (program DEP bez koligacji użytkownika) | Brak | Nie dotyczy |
 | Android | Należące do firmy, dedykowane urządzenia z systemem Android | Brak | Nie dotyczy |
 
 ## <a name="primary-user-and-azure-ad-device-owner"></a>Użytkownik podstawowy i właściciel urządzenia w usłudze Azure AD

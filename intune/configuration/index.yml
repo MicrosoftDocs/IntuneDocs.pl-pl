@@ -11,13 +11,13 @@ metadata:
   ms.collection: collection
   author: dougeby
   ms.author: dougeby
-  ms.date: 09/16/2019
-  ms.openlocfilehash: afd555e5f245ee9bc28bd21268ae64ae69afbad3
-  ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+  ms.date: 02/18/2020
+  ms.openlocfilehash: d6404a4c77507374b5e8759ba2078e541cde35d8
+  ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
   ms.translationtype: HT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 10/16/2019
-  ms.locfileid: "72492541"
+  ms.lasthandoff: 02/20/2020
+  ms.locfileid: "77511055"
 landingContent:
 - title: Stosowanie funkcji i ustawień na urządzeniach
   linkLists:
@@ -27,7 +27,7 @@ landingContent:
       url: device-profiles.md
   - linkListType: quickstart
     links:
-    - text: tworzenie profilu urządzenia poczty e-mail dla systemu iOS
+    - text: Tworzenie profilu poczty e-mail urządzenia dla systemu iOS/iPadOS
       url: quickstart-email-profile.md
   - linkListType: how-to-guide
     links:
@@ -69,11 +69,11 @@ landingContent:
       url: wi-fi-settings-configure.md
     - text: Kontrola dostępu, kont i funkcji zasilania na udostępnianych komputerach lub urządzeniach używanych przez wielu użytkowników
       url: shared-user-device-settings.md
-- title: Ustawienia dla systemu iOS
+- title: Ustawienia systemu iOS/iPadOS
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Dodawanie ustawień funkcji urządzeń z systemem iOS
+    - text: Dodawanie ustawień funkcji urządzeń z systemem iOS/iPadOS
       url: device-features-configure.md
     - text: Konfigurowanie ustawień ograniczeń dotyczących urządzeń
       url: device-restrictions-configure.md
@@ -81,7 +81,7 @@ landingContent:
       url: email-settings-configure.md
     - text: Tworzenie profilów sieci VPN w celu nawiązania połączenia z serwerami sieci VPN
       url: vpn-settings-configure.md
-    - text: Tworzenie profilów sieci VPN dla poszczególnych aplikacji dla urządzeń z systemem iOS
+    - text: Tworzenie profilów sieci VPN dla poszczególnych aplikacji dla urządzeń z systemem iOS/iPadOS
       url: vpn-setting-configure-per-app.md
     - text: Dodawanie i używanie ustawień sieci Wi-Fi dla urządzeń
       url: wi-fi-settings-configure.md
@@ -89,7 +89,7 @@ landingContent:
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Dodawanie ustawień funkcji urządzeń z systemem iOS
+    - text: Dodawanie ustawień funkcji urządzeń z systemem iOS/iPadOS
       url: device-features-configure.md
     - text: Konfigurowanie ustawień ograniczeń dotyczących urządzeń
       url: device-restrictions-configure.md
@@ -137,15 +137,15 @@ landingContent:
       url: device-restrictions-android.md
     - text: Android Enterprise
       url: device-restrictions-android-for-work.md
-    - text: iOS
+    - text: iOS/iPadOS
       url: ios-device-features-settings.md
     - text: macOS
       url: macos-device-features-settings.md
-    - text: System Windows 10 lub nowszy
+    - text: Windows 10 lub nowszym
       url: delivery-optimization-settings.md
     - text: Windows Holographic for Business
       url: device-restrictions-windows-holographic.md
     - text: Windows 8.1
       url: device-restrictions-windows-8-1.md
-    - text: Windows Phone 8,1
+    - text: Windows Phone 8,1
       url: device-restrictions-windows-phone-8-1.md

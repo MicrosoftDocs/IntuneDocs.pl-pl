@@ -1,7 +1,7 @@
 ---
-title: Samouczek — używanie usługi Apple Business Manager lub programu Device Enrollment Program do rejestrowania urządzeń z systemem iOS w usłudze Intune
+title: Samouczek — używanie usługi Apple Business Manager lub programu Device Enrollment Program do rejestrowania urządzeń z systemem iOS/iPadOS w usłudze Intune
 titleSuffix: Microsoft Intune
-description: W tym samouczku skonfigurujesz funkcje rejestracji firmowych urządzeń firmy Apple z usługą ABM do rejestrowania urządzeń z systemem iOS w usłudze Intune.
+description: W tym samouczku skonfigurujesz funkcje rejestracji firmowych urządzeń firmy Apple z usługą ABM do rejestrowania urządzeń z systemem iOS/iPadOS w usłudze Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -15,14 +15,14 @@ ms.technology: ''
 ms.assetid: ''
 Customer intent: As an Intune admin, I want to set up the Apple's corporate device enrollment features so that corporate devices can automatically enroll in Intune.
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5599e7ea8c9a26c4624f98133db566fb07c89af
-ms.sourcegitcommit: 5178aec0244e023e73546f3d10f1a76eaf1f4a3e
+ms.openlocfilehash: 9aab0233c05416fc50413a7889435cb221179730
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76971782"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415141"
 ---
-# <a name="tutorial-use-apples-corporate-device-enrollment-features-in-apple-business-manager-abm-to-enroll-ios-devices-in-intune"></a>Samouczek: Użyj funkcji rejestracji urządzeń firmowych firmy Apple w usłudze Apple Business Manager (ABM) do rejestrowania urządzeń z systemem iOS w usłudze Intune
+# <a name="tutorial-use-apples-corporate-device-enrollment-features-in-apple-business-manager-abm-to-enroll-iosipados-devices-in-intune"></a>Samouczek: Użyj funkcji rejestracji urządzeń firmowych firmy Apple w usłudze Apple Business Manager (ABM) do rejestrowania urządzeń z systemem iOS/iPadOS w usłudze Intune
 Funkcje rejestracji urządzeń w usłudze Apple Business Manager ułatwiają rejestrowanie urządzeń. Usługa Intune obsługuje również starszy portal programu Device Enrollment Program (DEP) firmy Apple, ale zachęcamy, aby zacząć od zera za pomocą usługi Apple Business Manager. Za pomocą usługi Microsoft Intune i rejestracji urządzeń firmowych firmy Apple urządzenia są automatycznie bezpiecznie rejestrowane za pierwszym razem, gdy użytkownik włączy urządzenie. Umożliwia to dostarczanie urządzeń wielu użytkownikom bez konieczności indywidualnego konfigurowania każdego urządzenia. 
 
 Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
@@ -40,7 +40,7 @@ Jeśli nie masz subskrypcji usługi Intune, [utwórz konto bezpłatnej wersji pr
 - Uzyskiwanie [certyfikatu wypychania MDM firmy Apple](apple-mdm-push-certificate-get.md)
 
 ## <a name="get-an-apple-device-enrollment-token"></a>Pobieranie tokenu rejestracji urządzeń firmy Apple
-Przed zarejestrowaniem urządzeń z systemem iOS za pomocą funkcji rejestracji firmowej firmy Apple będzie potrzebny plik tokenu (pem) rejestracji urządzeń firmy Apple. Ten token umożliwia usłudze Intune synchronizację informacji dotyczących urządzeń firmy Apple należących do Twojej firmy. Umożliwia on również usłudze Intune przekazywanie profilów rejestracji do firmy Apple i przypisywanie urządzeń do tych profilów.
+Przed zarejestrowaniem urządzeń z systemem iOS/iPadOS za pomocą funkcji rejestracji firmowej firmy Apple będzie potrzebny plik tokenu (pem) rejestracji urządzeń firmy Apple. Ten token umożliwia usłudze Intune synchronizację informacji dotyczących urządzeń firmy Apple należących do Twojej firmy. Umożliwia on również usłudze Intune przekazywanie profilów rejestracji do firmy Apple i przypisywanie urządzeń do tych profilów.
 
 Użyj usługi ABM lub portalu DEP, aby utworzyć token rejestracji urządzenia. W tych portalach można również przypisać urządzenia do funkcji zarządzania usługi Intune.
 
@@ -78,13 +78,13 @@ Użyj usługi ABM lub portalu DEP, aby utworzyć token rejestracji urządzenia. 
 11. Jeśli chcesz zastosować tagi zakresu w celu ograniczenia tego, którzy administratorzy mają dostęp do tego tokenu, wybierz zakresy.
 
 ## <a name="create-an-apple-enrollment-profile"></a>Tworzenie profilu rejestracji firmy Apple
-Teraz, po zainstalowaniu tokenu, możesz utworzyć profil rejestracji dla należących do firmy urządzeń z systemem iOS. Profil rejestracji urządzeń określa ustawienia stosowane do grupy urządzeń podczas rejestracji.
+Teraz, po zainstalowaniu tokenu, możesz utworzyć profil rejestracji dla należących do firmy urządzeń z systemem iOS/iPadOS. Profil rejestracji urządzeń określa ustawienia stosowane do grupy urządzeń podczas rejestracji.
 
 1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz kolejno pozycje **Urządzenia** > **iOS** > **Rejestracja urządzeń z systemem iOS** > **Tokeny programu rejestracji**.
 
 2. Wybierz właśnie zainstalowany token i wybierz pozycję **Profile** > **Utwórz profil**.
 
-3. W obszarze **Tworzenie profilu** wprowadź wartość *TestDEPProfile* w polu **Nazwa** oraz *Testowanie programu DEP dla urządzeń z systemem iOS* w polu **Opis**. Te szczegóły nie są widoczne dla użytkowników.
+3. W obszarze **Tworzenie profilu** wprowadź wartość *TestDEPProfile* w polu **Nazwa** oraz *Testowanie programu DEP dla urządzeń z systemem iOS/iPadOS* w polu **Opis**. Te szczegóły nie są widoczne dla użytkowników.
 
 4. Wybierz pozycję **iOS** w obszarze **Platforma**.
 
@@ -96,11 +96,11 @@ Teraz, po zainstalowaniu tokenu, możesz utworzyć profil rejestracji dla należ
 
 8. Jeśli wybierzesz rejestrację z koligacją użytkownika, uwierzytelnianie za pomocą Portalu firmy i instalowanie Portalu firmy przy użyciu programu VPP, musisz zdecydować, czy chcesz uruchomić portal firmy w trybie pojedynczej aplikacji do chwili uwierzytelnienia. To ustawienie da Ci pewność, że użytkownik nie będzie miał dostępu do innych aplikacji do czasu zakończenia rejestracji w firmie. Jeśli chcesz, aby do czasu ukończenia rejestracji użytkownik miał dostęp tylko do tego przepływu, wybierz pozycję **Tak** w obszarze **Uruchom portal firmy w trybie pojedynczej aplikacji do momentu uwierzytelnienia**. 
 
-9. Wybierz pozycję **Ustawienia zarządzania urządzeniami** i wybierz pozycję **Tak** w obszarze **Nadzorowane**. Nadzorowane urządzenia udostępniają najwięcej opcji zarządzania dla firmowych urządzeń z systemem iOS.
+9. Wybierz pozycję **Ustawienia zarządzania urządzeniami** i wybierz pozycję **Tak** w obszarze **Nadzorowane**. Nadzorowane urządzenia udostępniają najwięcej opcji zarządzania dla firmowych urządzeń z systemem iOS/iPadOS.
 
 10. Wybierz pozycję **Tak** w obszarze **Zablokowana rejestracja**, aby upewnić się, że użytkownicy nie mogą usunąć zarządzania urządzeniami firmowymi. 
 
-11. Wybierz opcję w obszarze **Synchronizacja z komputerami**, aby ustalić, czy urządzenia z systemem iOS będą mogły synchronizować się z komputerami.
+11. Wybierz opcję w obszarze **Synchronizacja z komputerami**, aby ustalić, czy urządzenia z systemem iOS/iPadOS będą mogły synchronizować się z komputerami.
 
 12. Domyślnie firma Apple nazywa urządzenia po ich typie (np. iPad). Jeśli chcesz podać inny szablon nazwy, wybierz pozycję **Tak** w obszarze **Zastosuj szablon nazwy urządzenia**. Wprowadź nazwę, którą chcesz zastosować do urządzeń, gdzie ciągi *{{SERIAL}}* i *{{DEVICETYPE}}* zostaną zastąpione przez numer seryjny i typ każdego urządzenia. W przeciwnym razie wybierz pozycję **Nie** w obszarze **Zastosuj szablon nazwy urządzenia**.
 
@@ -120,7 +120,7 @@ Po skonfigurowaniu tokenu programu rejestracji za pomocą usługi ABM, funkcji A
 
 1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)) wybierz kolejno pozycje **Urządzenia** > **iOS** > **Rejestracja urządzeń z systemem iOS** > **Tokeny programu rejestracji** > wybierz token na liście > **Urządzenia** > **Synchronizuj**.
 
-## <a name="assign-an-enrollment-profile-to-ios-devices"></a>Przypisywanie profilu rejestracji do urządzeń z systemem iOS
+## <a name="assign-an-enrollment-profile-to-iosipados-devices"></a>Przypisywanie profilu rejestracji do urządzeń z systemem iOS/iPadOS
 
 Zanim możliwe będzie rejestrowanie urządzeń, należy przypisać profil programu rejestracji. Urządzenia te są synchronizowane z usługą Intune z firmy Apple i muszą zostać przypisane do odpowiednich tokenów serwera MDM w usłudze ABM, funkcji ASM lub portalu DEP.
 
@@ -134,12 +134,12 @@ Skonfigurowano zarządzanie i synchronizację między danymi firmy Apple i usłu
 
 ## <a name="next-steps"></a>Następne kroki
 
-Możesz zapoznać się z dalszymi informacjami na temat innych opcji dostępnych dla rejestrowania urządzeń z systemem iOS.
+Możesz zapoznać się z dalszymi informacjami na temat innych opcji dostępnych dla rejestrowania urządzeń z systemem iOS/iPadOS.
 
 > [!div class="nextstepaction"]
-> [Szczegółowy artykuł dotyczący rejestracji programu DEP dla systemu iOS](device-enrollment-program-enroll-ios.md)
+> [Szczegółowy artykuł dotyczący rejestracji programu DEP dla systemu iOS/iPadOS](device-enrollment-program-enroll-ios.md)
 
 <!--commenting out because inaccurate>
 ## Clean up resources
-<!--If you don't want to use iOS corporate enrolled devices anymore, you can delete them.>
+<!--If you don't want to use iOS/iPadOS corporate enrolled devices anymore, you can delete them.>
 <!--- If the devices are enrolled in Intune, you must first [delete them from the Azure Active Directory portal](../remote-actions/devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).>

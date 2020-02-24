@@ -1,7 +1,7 @@
 ---
-title: Usuwanie użytkownika z urządzenia z systemem iOS przy użyciu usługi Microsoft Intune
+title: Usuwanie użytkownika z urządzenia z systemem iOS/iPadOS przy użyciu usługi Microsoft Intune
 titleSuffix: ''
-description: Dowiedz się, jak usunąć użytkownika ze współdzielonego urządzenia z systemem iOS przy użyciu usługi Intune.
+description: Dowiedz się, jak usunąć użytkownika ze współdzielonego urządzenia z systemem iOS/iPadOS przy użyciu usługi Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -17,25 +17,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 772cdbe203b0489a9b2312a1cc10ea1b3182b35d
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 8b6b2b3492b9edece6b69e4b302741c0443c0a3e
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73713150"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415569"
 ---
-# <a name="remove-a-user-from-a-shared-ios-device"></a>Usuwanie użytkownika ze współdzielonego urządzenia z systemem iOS
+# <a name="remove-a-user-from-a-shared-iosipados-device"></a>Usuwanie użytkownika z udostępnionego urządzenia z systemem iOS/iPadOS
 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Akcja **Usuń użytkownika** powoduje usunięcie wybranego użytkownika z lokalnej pamięci podręcznej na udostępnionym urządzeniu iPad. Urządzenie iPad należy skonfigurować do zarządzania aplikacją iOS Classroom przy użyciu [profilu Edukacja w systemie iOS](../fundamentals/education-settings-configure-ios.md). 
+Akcja **Usuń użytkownika** powoduje usunięcie wybranego użytkownika z lokalnej pamięci podręcznej na udostępnionym urządzeniu iPad. Urządzenie iPad należy skonfigurować do zarządzania aplikacją iOS/iPad Classroom przy użyciu [profilu Edukacja w systemie iOS/iPad](../fundamentals/education-settings-configure-ios.md). 
 
 ## <a name="supported-platforms"></a>Obsługiwane platformy
 
 - Windows — nieobsługiwana
 - Windows Phone — nieobsługiwana
-- iOS — obsługiwana w systemie iOS 9.3 lub nowszym (tylko współdzielone urządzenia iPad)
+- iOS/iPadOS — obsługiwana w systemie iOS/iPadOS 9.3 lub nowszym (tylko udostępnione urządzenia iPad)
 - macOS — nieobsługiwana
 - Android — nieobsługiwana
 
@@ -43,7 +43,7 @@ Akcja **Usuń użytkownika** powoduje usunięcie wybranego użytkownika z lokaln
 
 1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Wybierz pozycję **Urządzenia** > **Wszystkie urządzenia**.
-3. Z listy zarządzanych urządzeń wybierz urządzenie z systemem iOS.
+3. Z listy zarządzanych urządzeń wybierz urządzenie z systemem iOS/iPadOS.
 4. W okienku urządzenia wybierz pozycję **Użytkownicy**.
 5. Na liście kliknij prawym przyciskiem myszy użytkownika, którego chcesz usunąć, a następnie wybierz polecenie **Usuń użytkownika**.
 

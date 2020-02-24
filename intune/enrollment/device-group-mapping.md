@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ee8bc3cdee9f61a901854e08000e9e2cbbb2864
-ms.sourcegitcommit: e75718ee6cf93c0e6c915f2776b785fe8db9f7e0
+ms.openlocfilehash: f0976ff8e6ec45f1f861fd4a4e0474255d701ae4
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74955375"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414261"
 ---
 # <a name="categorize-devices-into-groups"></a>Kategoryzowanie urządzeń na grupy
 
@@ -32,7 +32,7 @@ Aby ułatwić zarządzanie urządzeniami, użyj kategorii urządzeń usługi Mic
 
 Kategorie urządzeń korzystają z następującego przepływu pracy:
 1. Tworzenie kategorii do wyboru dla użytkowników podczas rejestrowania urządzeń.
-2. Gdy użytkownik urządzenia z systemem iOS lub Android rejestruje urządzenie, musi wybrać kategorię z listy skonfigurowanych kategorii. Aby przypisać kategorię do urządzenia z systemem Windows, użytkownicy muszą użyć witryny Portal firmy.
+2. Gdy użytkownik urządzenia z systemem iOS/iPadOS lub Android rejestruje urządzenie, musi wybrać kategorię z listy skonfigurowanych kategorii. Aby przypisać kategorię do urządzenia z systemem Windows, użytkownicy muszą użyć witryny Portal firmy.
 3. Następnie możesz wdrażać do tych grup zasady i aplikacje.
 
 Możesz utworzyć dowolne kategorie urządzeń. Przykład:
@@ -76,13 +76,13 @@ Jeśli kolumna **Kategoria urządzenia** nie jest wyświetlana, wybierz pozycję
 
 ## <a name="after-you-configure-device-groups"></a>Po skonfigurowaniu grup urządzeń
 
-Gdy użytkownik urządzenia z systemem iOS lub Android rejestruje urządzenie, musi wybrać kategorię z listy skonfigurowanych kategorii. Po wybraniu kategorii i zakończeniu rejestracji urządzenie zostanie dodane do grupy urządzeń usługi Intune lub odpowiadającej wybranej kategorii grupy zabezpieczeń usługi Active Directory.
+Gdy użytkownik urządzenia z systemem iOS/iPadOS lub Android rejestruje urządzenie, musi wybrać kategorię z listy skonfigurowanych kategorii. Po wybraniu kategorii i zakończeniu rejestracji urządzenie zostanie dodane do grupy urządzeń usługi Intune lub odpowiadającej wybranej kategorii grupy zabezpieczeń usługi Active Directory.
 
 Użytkownicy systemu Windows powinni wybrać kategorię przy użyciu witryny internetowej Portal firmy.
 
 Bez względu na platformę użytkownicy mogą po zarejestrowaniu urządzenia skorzystać z witryny internetowej portal.manage.microsoft.com. Użytkownik powinien uzyskać dostęp do witryny internetowej Portal firmy i przejść do obszaru **Moje urządzenia**. Użytkownik może wybrać zarejestrowane urządzenie wymienione na stronie, a następnie wybrać kategorię.
 
-Gdy wybierzesz kategorię, urządzenie zostanie automatycznie dodane do odpowiedniej utworzonej grupy. Jeśli urządzenie zostało już zarejestrowane przed skonfigurowaniem kategorii, użytkownik zobaczy powiadomienie o urządzeniu w witrynie Portal firmy. Dzięki temu użytkownik wie, że musi wybrać kategorię podczas kolejnego dostępu do aplikacji Portal firmy w systemie iOS lub Android.
+Gdy wybierzesz kategorię, urządzenie zostanie automatycznie dodane do odpowiedniej utworzonej grupy. Jeśli urządzenie zostało już zarejestrowane przed skonfigurowaniem kategorii, użytkownik zobaczy powiadomienie o urządzeniu w witrynie Portal firmy. Dzięki temu użytkownik wie, że musi wybrać kategorię podczas kolejnego dostępu do aplikacji Portal firmy w systemie iOS/iPadOS lub Android.
 
 ## <a name="further-information"></a>Dodatkowe informacje
 - Kategorię urządzenia możesz edytować w witrynie Azure Portal, ale musisz ręcznie zaktualizować wszystkie grupy zabezpieczeń usługi Azure AD odwołujące się do tej kategorii.

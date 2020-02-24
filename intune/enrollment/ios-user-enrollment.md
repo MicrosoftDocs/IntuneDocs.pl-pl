@@ -1,5 +1,5 @@
 ---
-title: Rejestrowanie urządzeń z systemem iOS — rejestracja użytkownika
+title: Rejestrowanie urządzeń z systemem iOS/iPadOS — rejestracja użytkownika
 titleSuffix: Microsoft Intune
 description: Informacje o konfigurowaniu rejestracji użytkownika w systemach iOS oraz iPadOS.
 keywords: ''
@@ -18,14 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0872eef38e3ea5a70ebb64d3ae3c62069045fa97
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: d22d8d4772754fddbd366610402d64acc28ffc65
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76754636"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415265"
 ---
-# <a name="set-up-ios-and-ipados-user-enrollment-preview"></a>Konfigurowanie rejestracji użytkownika w systemach iOS oraz iPadOS (wersja zapoznawcza)
+# <a name="set-up-iosipados-and-ipados-user-enrollment-preview"></a>Konfigurowanie rejestracji użytkowników w systemach iOS oraz iPadOS (wersja zapoznawcza)
 
 Usługę Intune można skonfigurować do rejestrowania urządzeń z systemem iOS i iPadOS przy użyciu procesu rejestracji użytkownika firmy Apple. Rejestracja użytkownika zapewnia administratorom uproszczony podzbiór opcji zarządzania w porównaniu z innymi metodami rejestracji.
 
@@ -60,7 +60,7 @@ Profil rejestracji określa ustawienia stosowane do grupy urządzeń podczas rej
 
     - **Rejestrowanie urządzenia**: wszyscy użytkownicy w tym profilu będą korzystać z opcji rejestrowania urządzenia.
     - **Rejestrowanie użytkownika**: wszyscy użytkownicy w tym profilu będą korzystać z opcji rejestrowania użytkownika.
-    - **Określ na podstawie wyboru użytkownika**: wszyscy użytkownicy w tej grupie będą mieć wybór typu rejestracji do użycia. Podczas rejestrowania urządzeń użytkownicy będą widzieć następujące opcje do wyboru: **To urządzenie należy do mnie** i **Firma (nazwa firmy) jest właścicielem tego urządzenia**. Jeśli wybiorą drugą opcję, urządzenie zostanie zarejestrowane przy użyciu funkcji rejestracji urządzenia. Jeśli użytkownik wybierze opcję **To urządzenie należy do mnie**, będzie mógł wybrać opcję zabezpieczenia całego urządzenia lub zabezpieczenia tylko aplikacji i danych związanych z pracą. Od wyboru właściciela urządzenia przez użytkownika końcowego zależy typ rejestracji zaimplementowany na urządzeniu tego użytkownika. Ten wybór użytkownika jest również odzwierciedlony w atrybucie własności urządzenia w usłudze Intune. Aby dowiedzieć się więcej na temat środowiska użytkownika, zobacz [Set up iOS device access to your company resources](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-ios) (Konfigurowanie dostępu urządzenia z systemem iOS do zasobów firmowych).
+    - **Określ na podstawie wyboru użytkownika**: wszyscy użytkownicy w tej grupie będą mieć wybór typu rejestracji do użycia. Podczas rejestrowania urządzeń użytkownicy będą widzieć następujące opcje do wyboru: **To urządzenie należy do mnie** i **Firma (nazwa firmy) jest właścicielem tego urządzenia**. Jeśli wybiorą drugą opcję, urządzenie zostanie zarejestrowane przy użyciu funkcji rejestracji urządzenia. Jeśli użytkownik wybierze opcję **To urządzenie należy do mnie**, będzie mógł wybrać opcję zabezpieczenia całego urządzenia lub zabezpieczenia tylko aplikacji i danych związanych z pracą. Od wyboru właściciela urządzenia przez użytkownika końcowego zależy typ rejestracji zaimplementowany na urządzeniu tego użytkownika. Ten wybór użytkownika jest również odzwierciedlony w atrybucie własności urządzenia w usłudze Intune. Aby dowiedzieć się więcej na temat środowiska użytkownika, zobacz [Set up iOS/iPadOS device access to your company resources](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-ios) (Konfigurowanie dostępu urządzenia z systemem iOS/iPadOS do zasobów firmowych).
     
 5. Wybierz pozycję **Dalej**.
 

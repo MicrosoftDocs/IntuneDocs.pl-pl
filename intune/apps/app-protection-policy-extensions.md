@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ff4fcd7d1b2115c4fbe0bc00759ef3d60482904
-ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
+ms.openlocfilehash: e568bb5520b4f8cc242cb58a1ee48e8729f4e387
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75692099"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414590"
 ---
 # <a name="protecting-application-extensions"></a>Ochrona rozszerzeń aplikacji
 
@@ -31,7 +31,7 @@ W tym artykule opisano zasady ochrony aplikacji dla rozszerzeń w usłudze Micro
 
 ## <a name="add-ins-for-outlook-app"></a>Dodatki dla aplikacji Outlook
 
-Dodatki programu Outlook pozwalają zintegrować popularne aplikacje z klientem poczty e-mail. Dodatki dla programu Outlook w środowiskach Windows, Mac i Outlook dla systemu Android i iOS są dostępne w Internecie. Zestaw Intune APP SDK i zasady ochrony aplikacji usługi Intune nie obejmują obsługi dodatków zarządzania dla programu Outlook, ale istnieją inne sposoby, aby ograniczyć ich użycie. Ponieważ dodatki są zarządzane przez program Microsoft Exchange, użytkownicy otrzymają możliwość udostępniania danych i wiadomości między programem Outlook i niezarządzanymi aplikacjami zgodnymi z dodatkiem, chyba że dodatki zostaną wyłączone dla użytkownika przez program Exchange.
+Dodatki programu Outlook pozwalają zintegrować popularne aplikacje z klientem poczty e-mail. Dodatki dla programu Outlook w środowiskach Windows, Mac i Outlook dla systemu Android, iOS i iPadOS są dostępne w Internecie. Zestaw Intune APP SDK i zasady ochrony aplikacji usługi Intune nie obejmują obsługi dodatków zarządzania dla programu Outlook, ale istnieją inne sposoby, aby ograniczyć ich użycie. Ponieważ dodatki są zarządzane przez program Microsoft Exchange, użytkownicy otrzymają możliwość udostępniania danych i wiadomości między programem Outlook i niezarządzanymi aplikacjami zgodnymi z dodatkiem, chyba że dodatki zostaną wyłączone dla użytkownika przez program Exchange.
 
 Jeśli nie chcesz, aby użytkownicy końcowi mogli uzyskiwać dostęp do dodatków programu Outlook i je instalować (dotyczy wszystkich klientów programu Outlook), upewnij się, że w obszarze ról w centrum administracyjnym programu Exchange wprowadzono następujące zmiany:
 

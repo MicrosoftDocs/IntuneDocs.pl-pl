@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1001a7a3fde9c203fdad3d146ace57736ae7128d
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 21167b226556100e7e9920f31f859d6d6ce2a7bb
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73713439"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415527"
 ---
 # <a name="sync-devices-to-get-the-latest-policies-and-actions-with-intune"></a>Synchronizacja urządzeń w celu pobierania najnowszych zasad i akcji przy użyciu usługi Intune
 
@@ -43,13 +43,13 @@ Akcja urządzenia **Synchronizacja** wymusza natychmiastowe zaewidencjonowanie w
 4. Z listy zarządzanych urządzeń wybierz urządzenie, aby otworzyć jego okienko *Omówienie*, a następnie wybierz pozycję **Synchronizuj**.
 5. Wybierz pozycję **Tak**, aby potwierdzić.
 
-Aby zobaczyć stan akcji synchronizacji, wybierz kolejno pozycje **Urządzenia**  >  **Akcje urządzenia**.
+Aby zobaczyć stan akcji synchronizacji, wybierz kolejno pozycje **Urządzenia** > **Akcje urządzenia**.
 
 Standardowe częstotliwości zaewidencjonowania zasad usługi Intune można znaleźć w temacie [Czasy cyklu odświeżania](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
 ## <a name="retryable-error-codes"></a>Kody błędów z możliwością ponowienia próby
 
-Gdy administrator uruchomi akcję urządzenia **Synchronizuj**, aplikacje systemu iOS i Android, których działanie zakończyło się niepowodzeniem i które zwróciły kod błędu z możliwością ponowienia próby, będą nadal dostępne dla urządzenia. Jednak w przypadku aplikacji, które zwróciły kod błędu bez możliwości ponowienia próby, należy poczekać siedem dni, zanim staną się dostępne dla urządzenia.
+Gdy administrator uruchomi akcję urządzenia **Synchronizuj**, aplikacje systemu iOS/iPadOSi Android, których działanie zakończyło się niepowodzeniem i które zwróciły kod błędu z możliwością ponowienia próby, będą nadal dostępne dla urządzenia. Jednak w przypadku aplikacji, które zwróciły kod błędu bez możliwości ponowienia próby, należy poczekać siedem dni, zanim staną się dostępne dla urządzenia.
 
 
 | Kod błędu  | Sugerowany opis | Z możliwością ponowienia próby |

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/05/2019
+ms.date: 02/13/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a56d8f7aface3628ba5bc8985128ebb49c9cf404
-ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
+ms.openlocfilehash: 867873c78b34d5573084a3a6e44d7d4d67846423
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76812169"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77413646"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Ustawianie zasad na urządzeniach w celu umożliwienia dostępu do zasobów w organizacji za pomocą usługi Intune
 
@@ -104,7 +104,9 @@ Usługa Intune oferuje również zestaw wbudowanych ustawień zasad zgodności. 
   - Zezwolić aplikacji Portal firmy na użycie usług lokalizacyjnych.
   - Oceniać i zgłaszać stan jailbreaku do usługi Intune co najmniej raz na 72 godziny. Jeśli te warunki nie są spełnione, urządzenie jest oznaczane jako niezgodne. Ocena jest wyzwalana przez otwarcie aplikacji Portal firmy lub fizyczne przeniesienie urządzenia o 500 metrów lub więcej. Jeśli urządzenie nie zostanie przeniesione o 500 metrów w ciągu 72 godzin, użytkownik musi otworzyć aplikację Portal firmy w celu przeprowadzenia rozszerzonej oceny pod kątem wykonania jailbreaku.
 
-- **Okres ważności stanu zgodności (dni)** : podaj okres zgłaszania stanu urządzenia dla wszystkich odebranych zasad zgodności. Urządzenia, które nie zwrócą stanu w tym okresie, są traktowane jako niezgodne. Wartość domyślna to 30 dni.
+- **Okres ważności stanu zgodności (dni)** : podaj okres zgłaszania stanu urządzenia dla wszystkich odebranych zasad zgodności. Urządzenia, które nie zwrócą stanu w tym okresie, są traktowane jako niezgodne. Wartość domyślna to 30 dni. Wartość minimalna to 1 dzień.
+
+  To ustawienie jest wyświetlane jako domyślne zasady zgodności **Jest aktywny** (**Urządzenia** > **Monitor** > **Zgodność ustawienia**). Zadanie w tle dotyczące tych zasad jest uruchamiane raz dziennie.
 
 Te wbudowane zasady umożliwiają monitorowanie tych ustawień. Usługa Intune również [odświeża lub sprawdza aktualizacje](create-compliance-policy.md#refresh-cycle-times) w różnych interwałach w zależności od platformy urządzenia. Pomocnym zasobem jest artykuł [Typowe pytania, problemy i rozwiązania związane z zasadami i profilami urządzeń w usłudze Microsoft Intune](../configuration/device-profile-troubleshoot.md).
 

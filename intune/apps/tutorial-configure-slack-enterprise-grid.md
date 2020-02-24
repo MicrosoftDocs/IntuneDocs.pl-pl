@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dce6d71a4bc056146b581458d5c39325adad1584
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: cd0a4b0c5e0b4cbaa7ef43ec40cddb3ab30d3070
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206911"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415480"
 ---
 # <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>Samouczek: konfigurowanie usługi Slack do używania usługi Intune na potrzeby konfiguracji rozwiązania EMM i aplikacji
 
@@ -69,7 +69,7 @@ Dodaj aplikację Slack for EMM jako zarządzaną aplikację systemu iOS w usłud
 10. Kliknij przycisk **Zapisz**.
 
 ### <a name="add-an-app-configuration-policy-for-slack-for-emm"></a>Dodawanie zasad konfiguracji aplikacji Slack for EMM
-Dodaj zasady konfiguracji aplikacji Slack for EMM dla systemu iOS. Zasady konfiguracji aplikacji dla urządzeń zarządzanych są specyficzne dla platformy, dlatego trzeba dodać osobne zasady dla użytkowników usługi Slack na urządzeniach z systemem Android.
+Dodaj zasady konfiguracji aplikacji Slack for EMM dla systemu iOS/iPadOS. Zasady konfiguracji aplikacji dla urządzeń zarządzanych są specyficzne dla platformy, dlatego trzeba dodać osobne zasady dla użytkowników usługi Slack na urządzeniach z systemem Android.
 1. W centrum administracyjnym wybierz pozycję **Aplikacje** > **Zasady konfiguracji aplikacji** > **Dodaj** > **Urządzenia zarządzane**.
 2. W polu Nazwa wprowadź frazę „Test zasad konfiguracji aplikacji Slack”.
 3. W obszarze Typ rejestracji urządzenia sprawdź, czy ustawiono pozycję **Urządzenia zarządzane**.

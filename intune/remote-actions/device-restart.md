@@ -1,6 +1,6 @@
 ---
 title: Ponowne uruchamianie urządzeń za pomocą usługi Microsoft Intune — Azure | Microsoft Docs
-description: Ponownie uruchom urządzenia z systemem Windows i iOS przy użyciu usługi Microsoft Intune w witrynie Azure Portal za pomocą zdalnej akcji Uruchom ponownie.
+description: Ponownie uruchom urządzenia z systemem Windows i iOS/iPadOS przy użyciu usługi Microsoft Intune w witrynie Azure Portal za pomocą zdalnej akcji Uruchom ponownie.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 82ebf35d0eb435f2df4e6cf55274808e6fa690f4
-ms.sourcegitcommit: af384c46ec8d8def6aa32c3b89947748dc6fd28f
+ms.openlocfilehash: 54fa0f796e96a2487793197cbbbe548fd8490856
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76517545"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415616"
 ---
 # <a name="remotely-restart-devices-with-intune"></a>Zdalne ponowne uruchamianie urządzeń przy użyciu usługi Intune
 
@@ -35,10 +35,10 @@ Akcja urządzenia **Uruchom ponownie** powoduje ponowne uruchomienie wybranego u
 - Windows — obsługiwana dla systemu Windows 8.1 i nowszego
 - Windows Phone — obsługiwana dla systemu Windows Phone 8.1 i nowszego
 - Urządzenia kiosku z systemem Android — obsługiwana w systemie Android 7.0 lub nowszym
-- iOS — obsługiwana
+- iOS/iPadOS — obsługiwana
 
     > [!Note]  
-    > To polecenie wymaga trybu nadzorowanego urządzenia i prawa dostępu do **blokady urządzenia**. Urządzenie jest natychmiast uruchamiane ponownie. Urządzenia z systemem iOS zablokowane przy użyciu kodu dostępu nie dołączają ponownie do sieci Wi-Fi po ponownym uruchomieniu. Po ponownym uruchomieniu urządzenie może nie być w stanie nawiązać komunikacji z serwerem.
+    > To polecenie wymaga trybu nadzorowanego urządzenia i prawa dostępu do **blokady urządzenia**. Urządzenie jest natychmiast uruchamiane ponownie. Urządzenia z systemem iOS/iPadOS zablokowane przy użyciu kodu dostępu nie dołączają ponownie do sieci Wi-Fi po ponownym uruchomieniu. Po ponownym uruchomieniu urządzenie może nie być w stanie nawiązać komunikacji z serwerem.
 - macOS — nieobsługiwana
 - Urządzenia z systemem Android i służbowymi profilami systemu Android — nieobsługiwana
 

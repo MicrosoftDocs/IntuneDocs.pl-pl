@@ -1,7 +1,7 @@
 ---
-title: Włączanie trybu nadzorowanego dla systemu iOS przy użyciu usługi Microsoft Intune
+title: Włączanie trybu nadzorowanego dla systemu iOS/iPadOS przy użyciu usługi Microsoft Intune
 titleSuffix: ''
-description: Dowiedz się, jak włączyć tryb nadzorowany dla systemu iOS przy użyciu usługi Intune.
+description: Dowiedz się, jak włączyć tryb nadzorowany dla systemu iOS/iPadOS przy użyciu usługi Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e995dbc89321bf844151accd654a2d17d35afd9
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 0d266dbc9fa72b1579e05e7798315e2e718a9797
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73713434"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77413660"
 ---
-# <a name="turn-on-ios-supervised-mode"></a>Włączanie trybu nadzorowanego dla systemu iOS
+# <a name="turn-on-iosipados-supervised-mode"></a>Włączanie trybu nadzorowanego dla systemu iOS/iPadOS
 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Tryb nadzorowany systemu iOS firmy Apple zapewnia administratorom więcej opcji podczas zarządzania urządzeniami firmy Apple, co jest przydatne w przypadku urządzeń należących do firmy wdrożonych na dużą skalę. Na przykład można ograniczyć funkcję AirDrop lub uniemożliwić użytkownikom zmienianie nazwy urządzenia. Aby uzyskać listę ustawień, które wymagają trybu nadzorowanego, zobacz [ustawienia ograniczeń urządzeń z systemem iOS w usłudze Intune](../configuration/device-restrictions-ios.md).
+Tryb nadzorowany systemu iOS/iPadOS firmy Apple zapewnia administratorom więcej opcji podczas zarządzania urządzeniami firmy Apple, co jest przydatne w przypadku urządzeń należących do firmy wdrożonych na dużą skalę. Na przykład można ograniczyć funkcję AirDrop lub uniemożliwić użytkownikom zmienianie nazwy urządzenia. Aby uzyskać listę ustawień, które wymagają trybu nadzorowanego, zobacz [ustawienia ograniczeń urządzeń z systemem iOS w usłudze Intune](../configuration/device-restrictions-ios.md).
 
 Usługa Intune obsługuje tryb nadzorowany w ramach [programu Device Enrollment Program (DEP)](../enrollment/device-enrollment-program-enroll-ios.md) firmy Apple.
 
@@ -41,7 +41,7 @@ W [centrum administracyjnym programy Microsoft Endpoint Manager](https://go.micr
 
 ## <a name="turn-on-supervised-mode-after-enrollment"></a>Włączanie trybu nadzorowanego po rejestracji
 
-Po rejestracji jedynym sposobem włączenia trybu nadzorowanego jest podłączenie urządzenia z systemem iOS do komputera Mac i [użycie programu Apple Configurator](../enrollment/apple-configurator-enroll-ios.md) (który zresetuje urządzenie). Po rejestracji nie można skonfigurować urządzenia w trybie Nadzorowane w usłudze Intune.
+Po rejestracji jedynym sposobem włączenia trybu nadzorowanego jest podłączenie urządzenia z systemem iOS/iPadOS do komputera Mac i [użycie programu Apple Configurator](../enrollment/apple-configurator-enroll-ios.md) (który zresetuje urządzenie). Po rejestracji nie można skonfigurować urządzenia w trybie Nadzorowane w usłudze Intune.
 
 ## <a name="identify-a-supervised-device"></a>Identyfikowanie nadzorowanego urządzenia
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d2a5629e6a318836e23c6a2f7fceb59363a0ed72
-ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
+ms.openlocfilehash: cd6e58efa096c006780c17d991a9ea5da26099d4
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76812498"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415545"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>Resetowanie lub usuwanie kodu dostępu urządzenia w usłudze Intune
 
@@ -35,8 +35,8 @@ W tym dokumencie omówiono zarówno resetowanie kodu dostępu na poziomie urząd
 | ---- | ---- |
 | Urządzenia z systemem Android w wersji 6.x lub starszej | Tak |
 | Urządzenia z systemem Android Enterprise zarejestrowane jako właściciel urządzenia | Tak |
-| Urządzenia z systemem iOS | Tak |
-| Urządzenia z systemem iOS zarejestrowane w usłudze rejestracji użytkowników | Nie |
+| Urządzenia z systemem iOS/iPadOS | Tak |
+| Urządzenia z systemem iOS/iPadOS zarejestrowane w usłudze rejestracji użytkowników | Nie |
 | Zarejestrowane urządzenia z systemem Android z profilem służbowym | Nie |
 | Urządzenia z systemem Android w wersji 7.0 lub nowszej | Nie |
 | macOS | Nie |
@@ -68,9 +68,9 @@ Obsługiwane urządzenia z rozwiązaniem Android Enterprise i profilem służbow
 Na urządzeniach z rozwiązaniem Android Enterprise z systemem 8.x lub nowszym i zarejestrowanych za pomocą profilu służbowego użytkownicy końcowi otrzymują powiadomienie dotyczące konieczności aktywowania kodu dostępu resetowania natychmiast po zakończeniu rejestracji. Powiadomienie jest wyświetlane, jeśli hasło profilu służbowego jest wymagane i ustawione. Po wprowadzeniu kodu dostępu powiadomienie jest odrzucane.
 
 
-## <a name="remove-ios-passcodes"></a>Usuwanie kodów dostępu systemu iOS
+## <a name="remove-iosipados-passcodes"></a>Usuwanie kodów dostępu systemu iOS/iPadOS
 
-W przypadku urządzeń z systemem iOS kodów dostępu się nie resetuje — usuwa się je. Jeśli zostały ustawione zasady zgodności kodu dostępu, urządzenie wyświetla użytkownikowi monit o ustawienie nowego kodu dostępu w ustawieniach.
+W przypadku urządzeń z systemem iOS/iPadOS kodów dostępu się nie resetuje — usuwa się je. Jeśli zostały ustawione zasady zgodności kodu dostępu, urządzenie wyświetla użytkownikowi monit o ustawienie nowego kodu dostępu w ustawieniach.
 
 ## <a name="next-steps"></a>Następne kroki
 

@@ -1,7 +1,7 @@
 ---
-title: Rejestrowanie urządzeń z systemem iOS w usłudze Intune
+title: Rejestrowanie urządzeń z systemami iOS i iPadOS w usłudze Intune
 titleSuffix: Microsoft Intune
-description: Konfigurowanie rejestrowania urządzeń z systemem iOS w usłudze Microsoft Intune.
+description: Konfigurowanie rejestrowania urządzeń z systemami iOS i iPadOS w usłudze Microsoft Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -18,50 +18,50 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2fb5208cd7df6dc68bcd20455ae9e06a9dbd7ff5
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 8d5aeb17084ea0bb76429b1fa15c9de5855220ab
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72503149"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415291"
 ---
-# <a name="enroll-ios-devices-in-intune"></a>Rejestrowanie urządzeń z systemem iOS w usłudze Intune
+# <a name="enroll-iosipados-devices-in-intune"></a>Rejestrowanie urządzeń z systemami iOS i iPadOS w usłudze Intune
 
 Usługa Intune umożliwia zarządzanie urządzeniami przenośnymi (MDM) typu iPad i iPhone, a także zapewnia użytkownikom bezpieczny dostęp do poczty e-mail, danych oraz aplikacji firmy.
 
-Jako administrator usługi Intune możesz skonfigurować rejestrację dla urządzeń z systemem iOS i iPadOS, aby uzyskiwać dostęp do zasobów firmy. Użytkownikom można zezwolić na rejestrację prywatnych urządzeń nazywaną rejestracją typu „Przynieś własne urządzenie” (BYOD, bring your own device). Można również skonfigurować rejestrację urządzeń należących do firmy.
+Jako administrator usługi Intune możesz skonfigurować rejestrację dla urządzeń z systemami iOS i iPadOS, aby uzyskiwać dostęp do zasobów firmy. Użytkownikom można zezwolić na rejestrację prywatnych urządzeń nazywaną rejestracją typu „Przynieś własne urządzenie” (BYOD, bring your own device). Można również skonfigurować rejestrację urządzeń należących do firmy.
 
-## <a name="prerequisites-for-ios-enrollment"></a>Wymagania wstępne dotyczące rejestracji urządzeń z systemem iOS
+## <a name="prerequisites-for-iosipados-enrollment"></a>Wymagania wstępne dotyczące rejestracji urządzeń z systemami iOS i iPadOS
 
-Aby możliwa była rejestracja urządzeń z systemem iOS, wykonaj następujące czynności:
+Aby możliwa była rejestracja urządzeń z systemami iOS i iPadOS, wykonaj następujące czynności:
 
 - [Upewnij się, że urządzenie kwalifikuje się programu Device Enrollment Program firmy Apple](https://support.apple.com/en-us/HT204142#eligibility).
 - [Skonfiguruj usługę Intune](../fundamentals/setup-steps.md) — te kroki umożliwiają skonfigurowanie infrastruktury usługi Intune. W szczególności rejestracja urządzeń wymaga [ustawienia urzędu zarządzania urządzeniami przenośnymi](../fundamentals/mdm-authority-set.md).
-- [Uzyskiwanie certyfikatu wypychania MDM firmy Apple](apple-mdm-push-certificate-get.md) — firma Apple wymaga certyfikatu, aby możliwe było zarządzania urządzeniami z systemami iOS i macOS.
+- [Uzyskiwanie certyfikatu wypychania MDM firmy Apple](apple-mdm-push-certificate-get.md) — firma Apple wymaga certyfikatu, aby możliwe było zarządzania urządzeniami z systemami iOS, iPadOS i macOS.
 
-## <a name="user-owned-ios-and-ipados-devices-byod"></a>Urządzenia z systemem iOS i iPadOS należące do użytkownika (BYOD)
+## <a name="user-owned-iosipados-and-ipados-devices-byod"></a>Urządzenia z systemami iOS i iPadOS należące do użytkownika (BYOD)
 
 Możesz umożliwić użytkownikom rejestrowanie swoich urządzeń osobistych na potrzeby zarządzania w usłudze Intune — rozwiązanie to nazywa się „bring your own device”, czyli BYOD. Istnieją trzy opcje rejestrowania użytkowników:
 - Zasady ochrony aplikacji oferują najlżejszą wersję środowiska BYOD, zapewniając zarządzanie tylko na poziomie aplikacji. Jeśli jednak chcesz także zabezpieczyć urządzenie przy użyciu 6-cyfrowego złożonego numeru PIN, możesz użyć tych zasad razem z rejestracją użytkownika.
 - Rejestracja urządzeń to proces, który można traktować jako typową rejestrację BYOD. Gwarantuje on administratorom dostęp do szerokiej gamy opcji zarządzania.
 - Rejestracja użytkowników to ulepszony proces rejestracji, który oferuje administratorom dostęp do podzestawu opcji zarządzania urządzeniami. Ta funkcja jest obecnie w wersji zapoznawczej. 
 
-Gdy ukończysz wymagania wstępne i przypiszesz użytkownikom licencje, użytkownicy mogą pobrać aplikację Intune — Portal firmy ze sklepu App Store i postępować zgodnie z instrukcjami w aplikacji dotyczącymi rejestrowania. Zasady zachowania poufności informacji dotyczące aplikacji Portal firmy można dostosować na urządzeniach z systemem iOS zgodnie z opisem w sekcji [dostosowywanie zasad zachowania poufności](../apps/company-portal-app.md#privacy-statement-customization).
+Gdy ukończysz wymagania wstępne i przypiszesz użytkownikom licencje, użytkownicy mogą pobrać aplikację Intune — Portal firmy ze sklepu App Store i postępować zgodnie z instrukcjami w aplikacji dotyczącymi rejestrowania. Zasady zachowania poufności informacji dotyczące aplikacji Portal firmy można dostosować na urządzeniach z systemami iOS i iPadOS zgodnie z opisem w sekcji [dostosowywanie zasad zachowania poufności](../apps/company-portal-app.md#privacy-statement-customization).
 
-## <a name="company-owned-ios-devices"></a>Urządzenia z systemem iOS należące do firmy
+## <a name="company-owned-iosipados-devices"></a>Urządzenia z systemami iOS i iPadOS należące do firmy
 
-W przypadku organizacji, które kupują urządzenia dla swoich użytkowników, usługa Intune obsługuje następujące metody rejestracji urządzeń z systemem iOS należących do firmy:
+W przypadku organizacji, które kupują urządzenia dla swoich użytkowników, usługa Intune obsługuje następujące metody rejestracji urządzeń z systemami iOS i iPadOS należących do firmy:
 
 - Program Device Enrollment Program (DEP) firmy Apple
 - Apple School Manager
 - Rejestracja za pośrednictwem asystenta ustawień programu Apple Configurator
 - Rejestracja bezpośrednia w narzędziu Apple Configurator
 
-Urządzenia z systemem iOS należące do firmy możesz także zarejestrować przy użyciu konta [menedżera rejestracji urządzeń](device-enrollment-manager-enroll.md).
+Urządzenia z systemami iOS i iPadOS należące do firmy możesz także zarejestrować przy użyciu konta [menedżera rejestracji urządzeń](device-enrollment-manager-enroll.md).
 
 ## <a name="device-enrollment-program"></a>Program Device Enrollment Program
 
-Organizacje mogą zakupić urządzenia z systemem iOS za pośrednictwem programu Device Enrollment Program firmy Apple. Program Device Enrollment Program umożliwia wdrożenie „na odległość” profilu rejestracji w celu zarządzania urządzeniami. Aby uzyskać więcej informacji, zobacz temat [Device Enrollment Program](device-enrollment-program-enroll-ios.md).
+Organizacje mogą zakupić urządzenia z systemami iOS i iPadOS za pośrednictwem programu Device Enrollment Program firmy Apple. Program Device Enrollment Program umożliwia wdrożenie „na odległość” profilu rejestracji w celu zarządzania urządzeniami. Aby uzyskać więcej informacji, zobacz temat [Device Enrollment Program](device-enrollment-program-enroll-ios.md).
 
 ## <a name="user-enrollment"></a>Rejestrowanie użytkownika
 Rejestracja użytkownika zapewnia administratorom podzestaw opcji zarządzania w porównaniu z innymi metodami rejestracji. Aby uzyskać więcej informacji, zobacz tematy [User Enrollment supported actions, passwords, and other options](ios-user-enrollment-supported-actions.md) (Akcje obsługiwane przez rejestrację użytkownika, hasła i inne opcje) oraz [Konfigurowanie rejestracji użytkowników w systemach iOS oraz iPadOS](ios-user-enrollment.md).
@@ -72,7 +72,7 @@ Apple School Manager to program zakupu rejestracji urządzeń dla szkół. Podob
 
 ## <a name="apple-configurator"></a>Program Apple Configurator
 
-Możliwe jest rejestrowanie urządzeń z systemem iOS przy użyciu programu Apple Configurator uruchomionego na komputerze Mac. Aby przygotować urządzenia, należy podłączyć je za pomocą portu USB i zainstalować profil rejestracji. Za pomocą programu Apple Configurator można rejestrować urządzenia na dwa sposoby:
+Możliwe jest rejestrowanie urządzeń z systemami iOS i iPadOS przy użyciu programu Apple Configurator uruchomionego na komputerze Mac. Aby przygotować urządzenia, należy podłączyć je za pomocą portu USB i zainstalować profil rejestracji. Za pomocą programu Apple Configurator można rejestrować urządzenia na dwa sposoby:
 
 - Rejestracja z użyciem Asystenta ustawień — czyści dane urządzenia i przygotowuje je do uruchomienia Asystenta ustawień, a także instaluje zasady firmy dla nowego użytkownika urządzenia.
 - Rejestracja bezpośrednia — nie powoduje wyczyszczenia urządzenia i umożliwia zarejestrowanie urządzenia przy użyciu wstępnie zdefiniowanych zasad. Ta metoda służy do rejestrowania urządzeń bez koligacji użytkownika.
@@ -89,11 +89,11 @@ Koligacja użytkownika jest wymagana do obsługi:
 - Dostępu warunkowego do poczty e-mail i danych firmowych
 - Aplikacji Portal firmy
 
-### <a name="how-users-enroll-corporate-owned-ios-devices-with-user-affinity"></a>Jak użytkownicy rejestrują urządzenia firmowe z systemem iOS z koligacją użytkownika
+### <a name="how-users-enroll-corporate-owned-iosipados-devices-with-user-affinity"></a>Jak użytkownicy rejestrują urządzenia firmowe z systemami iOS i iPadOS z koligacją użytkownika
 
 1. Po włączeniu urządzenia użytkownicy są monitowani o ukończenie działania Asystenta ustawień.
 2. Po ukończeniu instalacji użytkownicy są monitowani o podanie identyfikatora Apple ID. Muszą podać identyfikator Apple ID, aby umożliwić zainstalowanie aplikacji Portal firmy na urządzeniu.
-3. Na urządzeniu z systemem iOS jest automatycznie instalowana aplikacja Portal firmy ze sklepu App Store.
+3. Na urządzeniu z systemem iOS lub iPadOS jest automatycznie instalowana aplikacja Portal firmy ze sklepu App Store.
 4. Użytkownicy muszą uruchamiać aplikację Portal firmy i logować się przy użyciu poświadczeń (na przykład unikatowego imienia i nazwiska lub nazwy UPN) skojarzonych z ich subskrypcją w usłudze Intune.
 5. Rejestracja zostanie ukończona po zalogowaniu się. Użytkownicy mogą teraz używać tego urządzenia z pełnym zestawem funkcji.
 
@@ -105,4 +105,4 @@ Jeśli koligacja użytkownika jest wymagana, przed zarejestrowaniem urządzenia 
 
 ## <a name="see-also"></a>Zobacz także
 
-[Troubleshooting iOS device enrollment problems in Microsoft Intune](https://support.microsoft.com/help/4039809) (Rozwiązywanie problemów dotyczących rejestrowania urządzeń z systemem iOS w usłudze Microsoft Intune)
+[Rozwiązywanie problemów dotyczących rejestrowania urządzeń z systemami iOS i iPadOS w usłudze Microsoft Intune](https://support.microsoft.com/help/4039809)

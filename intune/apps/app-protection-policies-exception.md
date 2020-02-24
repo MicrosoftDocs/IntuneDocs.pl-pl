@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ea66458060417fc828b2b7735b384e8cd3e25a9
-ms.sourcegitcommit: 637375a390b6e34f9c4415c77b99fe2980bbf554
+ms.openlocfilehash: 09c8a8819c288663936174e9317267c39eac63bc
+ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75839391"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77437855"
 ---
 # <a name="how-to-create-exceptions-to-the-intune-app-protection-policy-app-data-transfer-policy"></a>Jak utworzyć wyjątki dla zasad transferu danych zasad ochrony aplikacji usługi Intune
 
@@ -38,7 +38,7 @@ W ramach zasad ochrony aplikacji usługi Intune ustawienie właściwości **Zezw
 > Modyfikowanie lub dodawanie do wyjątków zasad przesyłania danych nie wpływa na inne zasady ochrony aplikacji, takie jak ograniczenia wycinania, kopiowania i wklejania. 
 
 ## <a name="ios-data-transfer-exceptions"></a>Wyjątki transferu danych w systemie iOS
-W przypadku zasad przeznaczonych dla systemu iOS możesz skonfigurować wyjątki transferu danych według protokołu URL. Aby dodać wyjątek, zapoznaj się z dokumentacją dostarczoną przez dewelopera aplikacji, gdzie można znaleźć informacje o obsługiwanych protokołach URL. Aby uzyskać dodatkowe informacje dotyczące wyjątków transferu danych w systemie iOS, zobacz [Ustawienia zasad ochrony aplikacji dla systemu iOS — Wyjątki w transferze danych](app-protection-policy-settings-ios.md#data-transfer-exemptions).
+W przypadku zasad dla urządzeń z systemem iOS/iPadOS wyjątki dotyczące transferu danych można skonfigurować według protokołu adresu URL. Aby dodać wyjątek, zapoznaj się z dokumentacją dostarczoną przez dewelopera aplikacji, gdzie można znaleźć informacje o obsługiwanych protokołach URL. Więcej informacji o wyjątkach dotyczących transferu danych w systemie iOS/iPadOS znajdziesz w temacie [Ustawienia zasad ochrony aplikacji dla systemu iOS — Wyjątki w transferze danych](app-protection-policy-settings-ios.md#data-transfer-exemptions).
 
 > [!NOTE]
 > Firma Microsoft nie dysponuje metodą ręcznego odnajdywania protokołu adresu URL na potrzeby tworzenia wyjątków dla aplikacji innych firm. 
@@ -53,9 +53,9 @@ W przypadku zasad przeznaczonych dla systemu Android możesz skonfigurować wyj�
 ### <a name="example"></a>Przykład
 Po dodaniu pakietu **Webex** jako wyjątku do zasad transferu danych funkcji MAM linki Webex w wiadomości e-mail zarządzanego programu Outlook mogą być otwierane bezpośrednio w aplikacji Webex. Transfer danych jest nadal ograniczony w innych niezarządzanych aplikacjach.
 
-- Przykład pakietu **Webex** w systemie iOS:   Aby zwolnić aplikację **Webex** i umożliwić jej wywoływanie przez aplikacje zarządzane w usłudze Intune, należy dodać wyjątek transferu danych dla następującego ciągu: <code>wbx</code>
+- Przykład pakietu **Webex** w systemie iOS/iPadOS:   Aby zwolnić aplikację **Webex** i umożliwić jej wywoływanie przez aplikacje zarządzane w usłudze Intune, należy dodać wyjątek transferu danych dla następującego ciągu: <code>wbx</code>
     
-- Przykład pakietu **Mapy** w systemie iOS:   aby zwolnić aplikację **Mapy** i umożliwić jej wywoływanie przez aplikacje zarządzane w usłudze Intune, należy dodać wyjątek transferu danych dla następującego ciągu: <code>maps</code>
+- Przykład pakietu **Mapy** w systemie iOS/iPadOS:   aby zwolnić aplikację **Mapy** i umożliwić jej wywoływanie przez aplikacje zarządzane w usłudze Intune, należy dodać wyjątek transferu danych dla następującego ciągu: <code>maps</code>
 
 - Przykład pakietu **Webex** w systemie Android:   Aby zwolnić aplikację **Webex** i umożliwić jej wywoływanie przez aplikacje zarządzane w usłudze Intune, należy dodać wyjątek transferu danych dla następującego ciągu: <code>com.cisco.webex.meetings</code>
     
@@ -66,7 +66,7 @@ Po dodaniu pakietu **Webex** jako wyjątku do zasad transferu danych funkcji MAM
     
     <code>com.samsung.android.messaging</code>
 
-- Przykład **instalatora certyfikatu** w systemie Android: Aby zwolnić natywną aplikację **Instalator certyfikatu** i umożliwić instalowanie przez program Outlook dla systemu Android certyfikatu S/MIME (dostarczanego jako załącznik wiadomości e-mail) do magazynu kluczy systemu Android, należy dodać wyjątek transferu danych dla następującego ciągu: <code>com.android.certinstaller</code>. Aby uzyskać więcej informacji, zobacz temat [Sensitivity labeling and protection in Outlook for iOS and Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/sensitive-labeling-and-protection-outlook-for-ios-android) (Etykietowanie i ochrona poufności w programie Outlook dla systemów iOS i Android).
+- Przykład **instalatora certyfikatu** w systemie Android: Aby zwolnić natywną aplikację **Instalator certyfikatu** i umożliwić instalowanie przez program Outlook dla systemu Android certyfikatu S/MIME (dostarczanego jako załącznik wiadomości e-mail) do magazynu kluczy systemu Android, należy dodać wyjątek transferu danych dla następującego ciągu: <code>com.android.certinstaller</code>. Aby uzyskać więcej informacji, zobacz temat [Sensitivity labeling and protection in Outlook for iOS/iPadOS and Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/sensitive-labeling-and-protection-outlook-for-ios-android) (Etykietowanie i ochrona poufności w programie Outlook dla systemów iOS/iPadOS i Android).
 
 ## <a name="next-steps"></a>Następne kroki
 

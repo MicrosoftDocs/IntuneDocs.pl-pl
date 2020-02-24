@@ -1,7 +1,7 @@
 ---
 title: Zasady konfiguracji aplikacji usługi Microsoft Intune
 titleSuffix: ''
-description: Dowiedz się, jak używać zasad konfiguracji aplikacji na urządzeniach z systemem iOS lub Android w usłudze Microsoft Intune.
+description: Dowiedz się, jak używać zasad konfiguracji aplikacji na urządzeniach z systemem iOS, iPadOS lub Android w usłudze Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c9dc1d95806bcddf423bb4d92dbdf4961c15809
-ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
+ms.openlocfilehash: a2cf53b26c1617ca7fc493c837e57823c23781bc
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76812474"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414858"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Zasady konfiguracji aplikacji usługi Microsoft Intune
 
 Zasady konfiguracji aplikacji mogą pomóc w wyeliminowaniu problemów z konfigurowaniem aplikacji, umożliwiając przypisanie ustawień konfiguracji do zasad, które są przypisywane do użytkowników końcowych, zanim uruchomią oni aplikację. Ustawienia są następnie dostarczane automatycznie podczas konfigurowania aplikacji na urządzeniach użytkowników końcowych, a użytkownicy końcowi nie muszą podejmować żadnego działania. Ustawienia konfiguracji są unikatowe dla każdej aplikacji. 
 
-Zasady konfiguracji aplikacji można utworzyć i używać ich w celu dostarczania ustawień konfiguracji dla aplikacji systemu iOS lub Android. Te ustawienia konfiguracji umożliwiają dostosowanie aplikacji przy użyciu zasad konfigurowania aplikacji i zarządzania nią. Ustawienia zasad konfiguracji są stosowane, gdy aplikacja sprawdza te ustawienia (zazwyczaj podczas pierwszego uruchomienia aplikacji). 
+Zasady konfiguracji aplikacji można utworzyć i używać ich w celu dostarczania ustawień konfiguracji dla aplikacji systemu iOS, iPadOS lub Android. Te ustawienia konfiguracji umożliwiają dostosowanie aplikacji przy użyciu zasad konfigurowania aplikacji i zarządzania nią. Ustawienia zasad konfiguracji są stosowane, gdy aplikacja sprawdza te ustawienia (zazwyczaj podczas pierwszego uruchomienia aplikacji). 
 
 Ustawienie konfiguracji aplikacji może wymagać na przykład określenia następujących szczegółów:
 
@@ -71,7 +71,7 @@ Wybór opcji **Aplikacje zarządzane** jako **Typ rejestracji urządzenia** odno
 ![Typ rejestracji urządzenia](./media/app-configuration-policies-overview/device-enrollment-type.png)
 
 > [!NOTE]
-> W przypadku aplikacji z obsługą wielu tożsamości, takich jak program Microsoft Outlook, można wziąć pod uwagę preferencje użytkownika. Na przykład priorytetowa skrzynka odbiorcza będzie uwzględniać ustawienie użytkownika i nie będzie zmieniać konfiguracji. Inne parametry pozwalają określić, czy użytkownik może zmienić ustawienie. Aby uzyskać więcej informacji, zobacz temat [Deploying Outlook for iOS and Android app configuration settings](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune) (Wdrażanie ustawień konfiguracji aplikacji Outlook dla systemu iOS i Android).
+> W przypadku aplikacji z obsługą wielu tożsamości, takich jak program Microsoft Outlook, można wziąć pod uwagę preferencje użytkownika. Na przykład priorytetowa skrzynka odbiorcza będzie uwzględniać ustawienie użytkownika i nie będzie zmieniać konfiguracji. Inne parametry pozwalają określić, czy użytkownik może zmienić ustawienie. Aby uzyskać więcej informacji, zobacz temat [Deploying Outlook for iOS/iPadOS and Android app configuration settings](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune) (Wdrażanie ustawień konfiguracji aplikacji Outlook dla systemów iOS, iPadOS i Android).
 
 ## <a name="validate-the-applied-app-configuration-policy"></a>Weryfikowanie zastosowanych zasad konfiguracji aplikacji
 
@@ -93,7 +93,7 @@ Zasady konfiguracji aplikacji można zweryfikować przy użyciu następujących 
 
 ### <a name="ios-configuration-on-unmanaged-devices"></a>Konfiguracja systemu iOS na urządzeniach niezarządzanych
 
-Konfigurację systemu iOS można zweryfikować za pomocą **dziennika diagnostycznego usługi Intune** na urządzeniach niezarządzanych w celu skonfigurowania aplikacji zarządzanych. Oprócz poniższych kroków można uzyskać dostęp do dzienników zarządzanych aplikacji przy użyciu przeglądarki Microsoft Edge. Aby uzyskać więcej informacji, zobacz [Używanie przeglądarki Microsoft Edge w systemie iOS do uzyskiwania dostępu do dzienników aplikacji zarządzanych](~/apps/manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs).
+Konfigurację systemu iOS/iPadOS można zweryfikować za pomocą **dziennika diagnostycznego usługi Intune** na urządzeniach niezarządzanych w celu skonfigurowania aplikacji zarządzanych. Oprócz poniższych kroków można uzyskać dostęp do dzienników zarządzanych aplikacji przy użyciu przeglądarki Microsoft Edge. Więcej informacji — zobacz [Używanie przeglądarki Microsoft Edge w systemie iOS/iPadOS do uzyskiwania dostępu do dzienników aplikacji zarządzanych](~/apps/manage-microsoft-edge.md#use-microsoft-edge-on-ios-to-access-managed-app-logs).
 
 1. Jeśli przeglądarka **Microsoft Edge** nie została jeszcze zainstalowana na urządzeniu, pobierz ją ze sklepu App Store i zainstaluj. Aby uzyskać więcej informacji, zobacz [Chronione aplikacje w usłudze Microsoft Intune](apps-supported-intune-apps.md).
 2. Uruchom przeglądarkę **Microsoft Edge** i wybierz pozycję **about** > **intunehelp** na pasku nawigacyjnym.
@@ -137,7 +137,7 @@ Szczegóły konfiguracji aplikacji powinny być zgodne z zasadami konfiguracji a
 
 ### <a name="ios-configuration-on-managed-devices"></a>Konfiguracja systemu iOS na urządzeniach zarządzanych
 
-Konfigurację systemu iOS można zweryfikować za pomocą **dziennika diagnostycznego usługi Intune** na urządzeniach zarządzanych w celu skonfigurowania aplikacji zarządzanych.
+Konfigurację systemu iOS/iPadOS można zweryfikować za pomocą **dziennika diagnostycznego usługi Intune** na urządzeniach zarządzanych w celu skonfigurowania aplikacji zarządzanych.
 
 1. Jeśli przeglądarka **Microsoft Edge** nie została jeszcze zainstalowana na urządzeniu, pobierz ją ze sklepu App Store i zainstaluj. Aby uzyskać więcej informacji, zobacz [Chronione aplikacje w usłudze Microsoft Intune](apps-supported-intune-apps.md).
 2. Uruchom przeglądarkę **Microsoft Edge** i wybierz pozycję **about** > **intunehelp** na pasku nawigacyjnym.
@@ -149,7 +149,7 @@ Konfigurację systemu iOS można zweryfikować za pomocą **dziennika diagnostyc
 
 ### <a name="android-configuration-on-managed-devices"></a>Konfiguracja systemu Android na urządzeniach zarządzanych
 
-Konfigurację systemu iOS można zweryfikować za pomocą **dziennika diagnostycznego usługi Intune** na urządzeniach zarządzanych w celu skonfigurowania aplikacji zarządzanych.
+Konfigurację systemu iOS/iPadOS można zweryfikować za pomocą **dziennika diagnostycznego usługi Intune** na urządzeniach zarządzanych w celu skonfigurowania aplikacji zarządzanych.
 
 Aby zbierać dzienniki z urządzenia z systemem Android, Ty lub użytkownik końcowy musicie pobrać dzienniki z urządzenia za pośrednictwem połączenia USB (lub odpowiednika narzędzia **Eksplorator plików** na urządzeniu). Oto kroki do wykonania:
 
@@ -173,7 +173,7 @@ Jeśli w dziennikach jest wyświetlany parametr konfiguracji, który został pot
 
 ### <a name="managed-devices"></a>Urządzenia zarządzane
 
-- Dowiedz się, jak używać konfiguracji aplikacji na urządzeniach z systemem iOS.  Zobacz [Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem iOS](app-configuration-policies-use-ios.md).
+- Dowiedz się, jak używać konfiguracji aplikacji na urządzeniach z systemem iOS/iPadOS.  Zobacz [Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem iOS/iPadOS](app-configuration-policies-use-ios.md).
 - Dowiedz się, jak używać konfiguracji aplikacji na urządzeniach z systemem Android.  Zobacz [Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem Android](app-configuration-policies-use-android.md).
 
 ### <a name="managed-apps"></a>Aplikacje zarządzane

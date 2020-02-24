@@ -1,6 +1,6 @@
 ---
 title: Wycofywanie lub czyszczenie urządzeń przy użyciu usługi Microsoft Intune — Azure | Microsoft Docs
-description: Wycofaj lub wyczyść urządzenie z systemem Android, profilem służbowym systemu Windows, systemem iOS lub macOS albo urządzeń z systemem Windows, korzystając z usługi Microsoft Intune. Ponadto możesz usunąć urządzenie z usługi Azure Active Directory.
+description: Wycofaj lub wyczyść urządzenie z systemem Android, profilem służbowym systemu Windows, systemem iOS/iPadOS lub macOS albo urządzeń z systemem Windows, korzystając z usługi Microsoft Intune. Ponadto możesz usunąć urządzenie z usługi Azure Active Directory.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7cda7404d24ccb9bb1c42d6bb66d77f29ac925ac
-ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
+ms.openlocfilehash: 62ba66469dfff004c3cd6a60284ec7466e8b9f00
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76812457"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415513"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Usuwanie urządzeń przy użyciu czyszczenia, wycofywania lub ręcznego wyrejestrowywania urządzenia
 
@@ -43,7 +43,7 @@ Akcja **Wyczyść** przywraca domyślne ustawienia fabryczne na urządzeniu. Je�
 
 
 > [!NOTE]
-> Akcja czyszczenia nie jest dostępna dla urządzeń z systemem iOS zarejestrowanych w ramach rejestracji użytkownika.
+> Akcja czyszczenia nie jest dostępna dla urządzeń z systemem iOS/iPadOS zarejestrowanych w ramach rejestracji użytkownika.
 
 Opcja **Zachowaj stan rejestracji i konto użytkownika** jest dostępna tylko w wersji 1709 systemu Windows 10 lub nowszej.
 

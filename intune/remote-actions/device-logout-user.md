@@ -1,7 +1,7 @@
 ---
-title: Wylogowywanie użytkownika z urządzenia z systemem iOS
+title: Wylogowywanie użytkownika z urządzenia z systemem iOS/iPadOS
 titleSuffix: Microsoft Intune
-description: Dowiedz się, jak wylogować bieżącego użytkownika z urządzenia z systemem iOS przy użyciu usługi Intune.
+description: Dowiedz się, jak wylogować bieżącego użytkownika z urządzenia z systemem iOS/iPadOS przy użyciu usługi Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -17,14 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fdb23916319b06fb4d85b913209d1ac9e007d551
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 6e23f95d169a95244abc8669eb9a19150cff8138
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73713178"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77413689"
 ---
-# <a name="logout-the-current-user-on-intune-managed-ios-devices"></a>Wylogowywanie bieżących użytkowników z urządzeń z systemem iOS zarządzanych przez usługę Intune
+# <a name="logout-the-current-user-on-intune-managed-iosipados-devices"></a>Wylogowywanie bieżących użytkowników z urządzeń z systemem iOS/iPadOS zarządzanych przez usługę Intune
 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -35,7 +35,7 @@ Akcja **Wyloguj bieżącego użytkownika** powoduje wylogowanie bieżącego uży
 
 - Windows — nieobsługiwana
 - Windows Phone — nieobsługiwana
-- iOS — obsługiwana w systemie iOS 9.3 lub nowszym (tylko współdzielone urządzenia iPad)
+- iOS/iPadOS — obsługiwana w systemie iOS/iPadOS 9.3 lub nowszym (tylko współdzielone urządzenia iPad)
 - macOS — nieobsługiwana
 - Android — nieobsługiwana
 
@@ -43,7 +43,7 @@ Akcja **Wyloguj bieżącego użytkownika** powoduje wylogowanie bieżącego uży
 
 1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) i wybierz pozycję **Urządzenia**.
 4. W bloku **Urządzenia i grupy** wybierz pozycję **Wszystkie urządzenia**.
-5. Z listy zarządzanych urządzeń wybierz urządzenie z systemem iOS, a następnie wybierz akcję zdalną **Wyloguj bieżącego użytkownika**.
+5. Z listy zarządzanych urządzeń wybierz urządzenie z systemem iOS/iPadOS, a następnie wybierz akcję zdalną **Wyloguj bieżącego użytkownika**.
 
 ## <a name="next-steps"></a>Następne kroki
 

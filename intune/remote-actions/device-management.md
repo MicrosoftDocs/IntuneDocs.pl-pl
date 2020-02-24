@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dde69fc70522684193f9cf6712a2192f77110dab
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: b780f22fd6823499128a3975f1812a1d1f7c032b
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76754256"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77413789"
 ---
 # <a name="what-is-microsoft-intune-device-management"></a>Co to jest zarządzanie urządzeniami w usłudze Microsoft Intune?
 
@@ -36,7 +36,7 @@ Obciążenie **Urządzenia** zapewnia wgląd w urządzenia zarządzane i umożli
 1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Wybierz pozycję **Urządzenia**. Ten widok zapewnia szczegółowe informacje o poszczególnych urządzeniach oraz czynnościach, które można wobec nich wykonać, w tym:
 
-   - **Omówienie** — wyświetla wizualną migawkę zarejestrowanych urządzeń oraz pokazuje, ile urządzeń korzysta z różnych platform, w tym systemu Android, iOS i innych.
+   - **Omówienie** — wyświetla wizualną migawkę zarejestrowanych urządzeń oraz pokazuje, ile urządzeń korzysta z różnych platform, w tym systemu Android, iOS, iPadOS i innych.
    - **Wszystkie urządzenia** — wyświetla listę zarejestrowanych urządzeń, którymi zarządzasz.
 
      Funkcja **Eksportuj** umożliwia utworzenie pliku CSV z listą wszystkich urządzeń w przyrostach co 10 000 (Internet Explorer) lub 30 000 (Microsoft Edge, Chrome).
@@ -70,7 +70,7 @@ Dostępne akcje zależą od platformy urządzenia i jego konfiguracji.
   - [Zdalne sterowanie dla systemu Android](teamviewer-support.md)
   - [Synchronizowanie urządzenia](device-sync.md)
   - [Zmienianie nazwy urządzenia](device-rename.md)
-  - [Wysyłanie powiadomień niestandardowych](custom-notifications.md#send-a-custom-notification-to-a-single-device) (Android, iOS)
+  - [Wysyłanie powiadomień niestandardowych](custom-notifications.md#send-a-custom-notification-to-a-single-device) (Android, iOS, iPadOS)
   - [Rotacja kluczy funkcji BitLocker](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys) (tylko system Windows)
 
 ## <a name="next-steps"></a>Następne kroki

@@ -1,7 +1,7 @@
 ---
 title: Uzyskiwanie certyfikatu wypychania MDM firmy Apple dla usługi Intune
 titleSuffix: ''
-description: Uzyskiwanie certyfikatu wypychania MDM firmy Apple przeznaczonego do zarządzania urządzeniami z systemem iOS za pomocą usługi Intune.
+description: Uzyskiwanie certyfikatu wypychania MDM firmy Apple przeznaczonego do zarządzania urządzeniami z systemami iOS i iPadOS za pomocą usługi Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -18,24 +18,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 178e1a3d0f58eb925c4d48be10bfa46e68c6b2c6
-ms.sourcegitcommit: e75718ee6cf93c0e6c915f2776b785fe8db9f7e0
+ms.openlocfilehash: 673f63194b46ca7e4dbf1206d363cbe70c6e6098
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74955460"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414425"
 ---
 # <a name="get-an-apple-mdm-push-certificate"></a>Uzyskiwanie certyfikatu wypychania MDM firmy Apple
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Aby zarządzać urządzeniami z systemem iOS i macOS, wymagany jest certyfikat usługi wypychania MDM firmy Apple. Po dodaniu certyfikatu do usługi Intune użytkownicy mogą rejestrować swoje urządzenia przy użyciu następujących sposobów:
+Aby zarządzać urządzeniami z systemami iOS, iPadOS i macOS w usłudze Intune, wymagany jest certyfikat usługi wypychania MDM firmy Apple. Po dodaniu certyfikatu do usługi Intune użytkownicy mogą rejestrować swoje urządzenia przy użyciu następujących sposobów:
 
 - Aplikacja Portal firmy.
 
 - Metody rejestracji zbiorczej firmy Apple, np. program Device Enrollment Program, Apple School Manager lub Apple Configurator.
 
-Aby uzyskać więcej informacji o opcjach rejestracji, zobacz [Wybieranie sposobu rejestracji urządzenia z systemem iOS](ios-enroll.md).
+Aby uzyskać więcej informacji o opcjach rejestracji, zobacz [Wybieranie sposobu rejestracji urządzenia z systemami iOS i iPadOS](ios-enroll.md).
 
 Po wygaśnięciu certyfikatu wypychania należy go odnowić. Podczas odnawiania upewnij się, że używasz tego samego identyfikatora Apple ID, który został użyty podczas pierwszego utworzenia certyfikatu wypychania.
 
@@ -64,7 +64,7 @@ Zanotuj ten identyfikator na wypadek, gdyby konieczne było odnowienie tego cert
 Przejdź do pliku certyfikatu (.pem) i wybierz pozycję **Otwórz**, a następnie wybierz pozycję **Przekaż**. Przy użyciu certyfikatu wypychania usługa Intune może rejestrować urządzenia firmy Apple i zarządzać nimi.
 
 ## <a name="renew-apple-mdm-push-certificate"></a>Odnawianie certyfikatu wypychania MDM firmy Apple
-Certyfikat wypychania MDM firmy Apple jest ważny przez rok i musi być odnawiany co roku, aby zachować możliwość zarządzania urządzeniami z systemami iOS i macOS. Jeśli certyfikat wygaśnie, nie będzie można skontaktować się z zarejestrowanymi urządzeniami firmy Apple.
+Certyfikat wypychania MDM firmy Apple jest ważny przez rok i musi być odnawiany co roku, aby zachować możliwość zarządzania urządzeniami z systemami iOS, iPadOS i macOS. Jeśli certyfikat wygaśnie, nie będzie można skontaktować się z zarejestrowanymi urządzeniami firmy Apple.
 
 Certyfikat jest skojarzony z identyfikatorem firmy Apple użytym do jego utworzenia. Certyfikat wypychania MDM odnów przy użyciu tego samego identyfikatora firmy Apple, którego użyto do jego utworzenia.
 
@@ -73,7 +73,7 @@ Certyfikat jest skojarzony z identyfikatorem firmy Apple użytym do jego utworze
 3. Wybierz pozycję **Utwórz swój certyfikat push MDM**, aby przejść do portalu Apple Push Certificates. Znajdź certyfikat, który chcesz odnowić, i wybierz opcję **Odnów**.
 4. Na ekranie **Odnawianie certyfikatu wypychania** wpisz notatki, aby w przyszłości łatwiej zidentyfikować certyfikat, wybierz pozycję **Wybierz plik**, aby wskazać nowo pobrany plik żądania, a następnie wybierz opcję **Przekaż**.
    > [!TIP]
-   > Certyfikat można zidentyfikować na podstawie jego identyfikatora UID. Sprawdź **Identyfikator podmiotu** w szczegółach certyfikatu, aby znaleźć fragment identyfikatora UID będący identyfikatorem GUID. Alternatywnie na zarejestrowanym urządzeniu z systemem iOS wybierz pozycję **Ustawienia** > **Ogólne** > **Urządzenie** **Zarządzanie** > **Profil zarządzania** > **Więcej szczegółów** > **Profil zarządzania**. Element w drugim wierszu, **Temat**, zawiera unikatowy identyfikator GUID, który można dopasować do certyfikatu w portalu Apple Push Certificates.
+   > Certyfikat można zidentyfikować na podstawie jego identyfikatora UID. Sprawdź **Identyfikator podmiotu** w szczegółach certyfikatu, aby znaleźć fragment identyfikatora UID będący identyfikatorem GUID. Alternatywnie na zarejestrowanym urządzeniu z systemem iOS lub iPadOS wybierz pozycję **Ustawienia** > **Ogólne** > **Urządzenie** **Zarządzanie** > **Profil zarządzania** > **Więcej szczegółów** > **Profil zarządzania**. Element w drugim wierszu, **Temat**, zawiera unikatowy identyfikator GUID, który można dopasować do certyfikatu w portalu Apple Push Certificates.
  
 6. Na ekranie **Potwierdzenie** wybierz pozycję **Pobierz** i zapisz plik pem na urządzeniu lokalnym.
 7. W menu usługi [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) wybierz ikonę przeglądania w obszarze **Certyfikat wypychania Apple MDM**, zaznacz plik .pem pobrany od firmy Apple, a następnie wybierz opcję **Przekaż**.

@@ -1,6 +1,6 @@
 ---
-title: Ustawienia programu Outlook dla urządzeń z systemami iOS i Android w programie Microsoft Intune
-description: Utwórz zasady konfiguracji, aby określić ustawienia programu Microsoft Outlook uruchomionego na urządzeniach z systemami iOS i Android.
+title: Ustawienia programu Outlook dla urządzeń z systemami iOS/iPadOS i Android w programie Microsoft Intune
+description: Utwórz zasady konfiguracji, aby określić ustawienia programu Microsoft Outlook uruchomionego na urządzeniach z systemami iOS/iPadOS i Android.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -16,28 +16,28 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ea33ae26983b33a1642d364281ed146a8a10184d
-ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
+ms.openlocfilehash: ee78020d02db164cea6b6ffc59079ee1568c84f0
+ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75692240"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77437991"
 ---
 # <a name="microsoft-outlook-configuration-settings"></a>Ustawienia konfiguracji programu Microsoft Outlook 
 
-Skorzystaj z zasad konfiguracji, aby określić ustawienia programu Microsoft Outlook uruchomionego na urządzeniach z systemami iOS i Android. 
+Użyj zasad konfiguracji, aby określić ustawienia programu Microsoft Outlook uruchomionego na urządzeniach z systemami iOS/iPadOS i Android. 
 
 Zarejestrowane urządzenia:
-- Aby utworzyć zasady konfiguracji aplikacji dla zarządzanych urządzeń z systemem iOS, zobacz [Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem iOS](app-configuration-policies-use-ios.md). 
+- Aby utworzyć zasady konfiguracji aplikacji dla zarządzanych urządzeń z systemem iOS/iPadOS, zobacz [Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem iOS/iPadOS](app-configuration-policies-use-ios.md). 
 - Aby utworzyć zasady konfiguracji aplikacji dla zarządzanych urządzeń z systemem Android, zobacz [Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem Android](app-configuration-policies-use-android.md). 
 
-W przypadku niezarejestrowanych urządzeń zapoznaj się z artykułem [Dodawanie zasad konfiguracji aplikacji dla zarządzanych aplikacji bez rejestracji urządzeń](app-configuration-policies-managed-app.md), aby utworzyć zasady konfiguracji aplikacji dla programu Outlook dla systemów iOS i Android.
+W przypadku niezarejestrowanych urządzeń zapoznaj się z artykułem [Dodawanie zasad konfiguracji aplikacji dla zarządzanych aplikacji bez rejestracji urządzeń](app-configuration-policies-managed-app.md), aby utworzyć zasady konfiguracji aplikacji dla programu Outlook dla systemów iOS/iPadOS i Android.
 
 ## <a name="configuration-settings"></a>Ustawienia konfiguracji
 
-Podczas dodawania zasad konfiguracji w usłudze Intune możesz określić ustawienia na potrzeby konfigurowania programu Microsoft Outlook dla systemów iOS i Android. W okienku Ustawienia konfiguracji możesz określić konfigurację konta poczty e-mail i skonfigurować ustawienia specyficzne dla aplikacji.
+Podczas dodawania zasad konfiguracji w usłudze Intune możesz określić ustawienia na potrzeby konfigurowania programu Microsoft Outlook dla systemów iOS/iPadOS i Android. W okienku Ustawienia konfiguracji możesz określić konfigurację konta poczty e-mail i skonfigurować ustawienia specyficzne dla aplikacji.
 
-Aby zapoznać się z określonymi krokami procedur i szczegółową dokumentacją dotyczącą ustawień konfiguracji aplikacji obsługiwanych przez program Outlook dla systemów iOS i Android, zobacz [Deploying Outlook for iOS and Android app configuration settings (Wdrażanie ustawień konfiguracji aplikacji w programie Outlook dla systemów iOS i Android)](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
+Aby zapoznać się z określonymi krokami procedur i szczegółową dokumentacją dotyczącą ustawień konfiguracji aplikacji obsługiwanych przez program Outlook dla systemów iOS/iPadOS i Android, zobacz [Deploying Outlook for iOS/iPadOS and Android app configuration settings (Wdrażanie ustawień konfiguracji aplikacji w programie Outlook dla systemów iOS/iPadOS i Android)](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
 
 ## <a name="next-steps"></a>Następne kroki
 

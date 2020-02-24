@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e299601f69a7052ea52f9da2537306cb8556982b
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: 96cd4997029c15396db91e9866bbb387c20f1044
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755378"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77414445"
 ---
 # <a name="add-built-in-apps-to-microsoft-intune"></a>Dodawanie wbudowanych aplikacji do usługi Microsoft Intune
 
-Aplikacja typu *wbudowanego* ułatwia przypisanie nadzorowanych zarządzanych aplikacji, takich jak aplikacje usługi Office 365, do urządzeń z systemem iOS i Android. Do tego typu aplikacji możesz przypisać określone aplikacje, takie jak Excel, OneDrive, Outlook, Skype i inne. Po dodaniu aplikacji typ aplikacji zostanie wyświetlony jako *Wbudowana aplikacja systemu iOS* lub *Wbudowana aplikacja systemu Android*. Za pomocą typu wbudowanej aplikacji możesz wybrać, które z tych aplikacji mają być opublikowane dla użytkowników urządzenia.
+Aplikacja typu *wbudowanego* ułatwia przypisanie nadzorowanych zarządzanych aplikacji, takich jak aplikacje usługi Office 365, do urządzeń z systemem iOS/iPadOS i Android. Do tego typu aplikacji możesz przypisać określone aplikacje, takie jak Excel, OneDrive, Outlook, Skype i inne. Po dodaniu aplikacji typ aplikacji zostanie wyświetlony jako *Wbudowana aplikacja systemu iOS* lub *Wbudowana aplikacja systemu Android*. Za pomocą typu wbudowanej aplikacji możesz wybrać, które z tych aplikacji mają być opublikowane dla użytkowników urządzenia.
 
 We wcześniejszych wersjach konsoli usługi Intune usługa Intune udostępniała kilka domyślnych zarządzanych aplikacji usługi Office 365, takich jak Outlook i OneDrive. Typy aplikacji dla tych zarządzanych aplikacji zostały oznaczone jako *Zarządzana aplikacja w sklepie dla systemu iOS* lub *Zarządzana aplikacja dla systemu Android*. Zamiast korzystania z tych typów aplikacji firma Microsoft zaleca użycie typu aplikacji wbudowanej. Korzystanie z typu aplikacji wbudowanej pozwala na uzyskanie większej elastyczności podczas edytowania i usuwania aplikacji usługi Office 365.
 

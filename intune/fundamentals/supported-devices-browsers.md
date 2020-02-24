@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2b58cbd0aa07babd36c7a7e5aa3dcc5b8d32d58a
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: e28f8a2cc43e4ca210a391151383633da457c056
+ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73415040"
+ms.lasthandoff: 02/18/2020
+ms.locfileid: "77437923"
 ---
 # <a name="supported-operating-systems-and-browsers-in-intune"></a>Systemy operacyjne i przeglądarki obsługiwane w usłudze Intune
 
@@ -87,12 +87,12 @@ Modele urządzeń firmy Samsung z poniższej listy nie obsługują systemu Knox.
 
 ### <a name="windows-pc-software-client"></a>Oprogramowanie klienckie dla komputerów z systemem Windows
 
-[Oprogramowanie klienckie usługi Intune](manage-windows-pcs-with-microsoft-intune.md) można wdrożyć i zainstalować na komputerach z systemem Windows jako alternatywną metodę rejestracji. Ta funkcja jest dostępna tylko za pomocą portalu klasycznego usługi Intune. Klient oprogramowania usługi Intune umożliwia zarządzanie komputerami z systemem Windows 7 lub nowszym, z wyjątkiem systemu Windows 10 Home Edition.
+[Oprogramowanie klienckie usługi Intune](manage-windows-pcs-with-microsoft-intune.md) można wdrożyć i zainstalować na komputerach z systemem Windows jako alternatywną metodę rejestracji. Ta funkcja jest dostępna tylko za pomocą portalu klasycznego usługi Intune. Klient oprogramowania usługi Intune umożliwia zarządzanie komputerami z systemem w wersji 10 lub nowszym, z wyjątkiem systemu Windows 10 Home Edition.
 
 > [!Note]
 > Firma Microsoft ogłosiła, że świadczenie pomocy technicznej dla systemu Windows 7 zakończy się 14 stycznia 2020 r. W tym dniu zostanie też wycofana obsługa urządzeń z systemem Windows 7 w usłudze Intune.
 >
-> Aby uzyskać więcej informacji, zobacz [Planowanie zmian w usłudze Intune: zbliża się koniec wsparcia dla systemu Windows 7](https://docs.microsoft.com/intune/fundamentals/whats-new#intune-plan-for-change-nearing-end-of-support-for-windows-7).
+> Aby uzyskać więcej informacji, zobacz [Planowanie zmian w usłudze Intune: koniec wsparcia dla systemu Windows 7](https://docs.microsoft.com/intune/fundamentals/whats-new#windows-7-ends-extended-support-).
 >
 > Obsługa konsoli usługi Intune opartej na technologii Silverlight zostanie wycofana w usłudze Microsoft Intune w dniu 15 października 2020 r. To wycofanie obejmuje zakończenie pomocy technicznej dla klienta oprogramowania konfigurowanego przez konsolę Silverlight (znanego również jako agent komputera).
 >

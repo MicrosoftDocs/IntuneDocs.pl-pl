@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b643ed41d01b70376dac32c26a66dcf9f9735ceb
-ms.sourcegitcommit: ec69e7ccc6e6183862a48c1b03ca6a3bf573f354
+ms.openlocfilehash: c4b3313d5ec7fe81944431276a63bfafb7a1b3dc
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74907223"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77413627"
 ---
 # <a name="reset-the-passcode-on-windows-devices-using-intune"></a>Resetowanie kodu dostępu na urządzeniach z systemem Windows przy użyciu usługi Intune
 
@@ -60,7 +60,7 @@ Zastąp *identyfikator dzierżawy* identyfikatorem usługi Azure AD, który znaj
 Ustaw wartość dla tego dostawcy usług kryptograficznych na **Prawda**.
 
 > [!TIP]
-> Po utworzeniu zasad możesz przypisać (lub wdrożyć) je do grupy. Zasady można przypisać do grup użytkowników lub grup urządzeń. Jeśli zostaną przypisane do grupy użytkowników, następnie grupa będzie mogła uwzględnić użytkowników posiadających inne urządzenia, np. z systemem iOS. Z technicznego punktu widzenia zasady nie będą mieć zastosowania, ale te urządzenia nadal będą uwzględniane w szczegółach dotyczących stanu.
+> Po utworzeniu zasad możesz przypisać (lub wdrożyć) je do grupy. Zasady można przypisać do grup użytkowników lub grup urządzeń. Jeśli zostaną przypisane do grupy użytkowników, następnie grupa będzie mogła uwzględnić użytkowników posiadających inne urządzenia, np. z systemem iOS/iPadOS. Z technicznego punktu widzenia zasady nie będą mieć zastosowania, ale te urządzenia nadal będą uwzględniane w szczegółach dotyczących stanu.
 
 ## <a name="reset-the-passcode"></a>Resetowanie kodu dostępu
 

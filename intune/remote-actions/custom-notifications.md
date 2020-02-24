@@ -1,7 +1,7 @@
 ---
 title: Wysyłanie powiadomień niestandardowych do użytkowników za pomocą usługi Microsoft Intune
 titleSuffix: Microsoft Intune
-description: Tworzenie i wysyłanie niestandardowych powiadomień push do użytkowników urządzeń z systemami iOS i Android przy użyciu usługi Intune
+description: Tworzenie i wysyłanie niestandardowych powiadomień push do użytkowników urządzeń z systemami iOS/iPadOS i Android przy użyciu usługi Intune
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -18,30 +18,30 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73b7617ad6a2d9aa756ddf9a8a4833289e5710ff
-ms.sourcegitcommit: af384c46ec8d8def6aa32c3b89947748dc6fd28f
+ms.openlocfilehash: 412dc631f2092d1eb7d9a7332b903a4742472202
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76517510"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77413885"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Wysyłanie powiadomień niestandardowych w usłudze Intune  
 
-Za pomocą usługi Microsoft Intune można wysyłać niestandardowe powiadomienia do użytkowników urządzeń zarządzanych z systemami iOS i Android. Te komunikaty są wyświetlane w postaci standardowych powiadomień push z aplikacji Portal firmy i aplikacji Microsoft Intune na urządzeniu użytkownika, podobnie jak powiadomienia z innych aplikacji wyświetlane na urządzeniu. Powiadomienia niestandardowe usługi Intune nie są obsługiwane na urządzeniach z systemem macOS ani Windows.   
+Za pomocą usługi Microsoft Intune można wysyłać niestandardowe powiadomienia do użytkowników urządzeń zarządzanych z systemami iOS/iPadOS i Android. Te komunikaty są wyświetlane w postaci standardowych powiadomień push z aplikacji Portal firmy i aplikacji Microsoft Intune na urządzeniu użytkownika, podobnie jak powiadomienia z innych aplikacji wyświetlane na urządzeniu. Powiadomienia niestandardowe usługi Intune nie są obsługiwane na urządzeniach z systemem macOS ani Windows.   
 
 Niestandardowe komunikaty powiadomień zawierają krótki tytuł i treść komunikatu składającą się maksymalnie z 500 znaków. Te komunikaty można dostosować do wszelkich celów komunikacji ogólnej.
 
-### <a name="what-the-notification-looks-like-on-an-ios-device"></a>Jak wygląda powiadomienie na urządzeniu z systemem iOS
+### <a name="what-the-notification-looks-like-on-an-iosipados-device"></a>Jak wygląda powiadomienie na urządzeniu z systemem iOS/iPadOS
 
-Jeśli aplikacja Portal firmy zostanie otwarta na urządzeniu z systemem iOS, powiadomienie będzie podobne do poniższego zrzutu ekranu:
+Jeśli aplikacja Portal firmy zostanie otwarta na urządzeniu z systemem iOS/iPadOS, powiadomienie będzie podobne do poniższego zrzutu ekranu:
 
 > [!div class="mx-imgBorder"]
-> ![Powiadomienie testowe Portalu firmy w systemie iOS](./media/custom-notifications/105046-1.png)
+> ![Powiadomienie testowe Portalu firmy w systemie iOS/iPadOS](./media/custom-notifications/105046-1.png)
 
 Jeśli urządzenie zostało zablokowane, powiadomienie jest podobne do poniższego zrzutu ekranu:
 
 > [!div class="mx-imgBorder"]
-> ![Powiadomienie testowe na zablokowanym urządzeniu z systemem iOS](./media/custom-notifications/105046-2.png)
+> ![Powiadomienie testowe na zablokowanym urządzeniu z systemem iOS/iPadOS](./media/custom-notifications/105046-2.png)
 
 ### <a name="what-the-notification-looks-like-on-an-android-device"></a>Jak wygląda powiadomienie na urządzeniu z systemem Android
 
@@ -75,14 +75,14 @@ Jeśli aplikacja Portal firmy zostanie otwarta na urządzeniu z systemem Android
 - Podczas wysyłania komunikatów do poszczególnych urządzeń można wysłać do tego samego urządzenia maksymalnie 10 komunikatów na godzinę. 
 - Powiadomienia można wysyłać do wielu użytkowników lub urządzeń, przypisując powiadomienie do grup. W przypadku korzystania z grup każde powiadomienie można kierować bezpośrednio do maksymalnie 25 grup. Grupy zagnieżdżone nie są wliczane do tej liczby.  
 
-  Grupy mogą obejmować użytkowników lub urządzenia, ale komunikaty są wysyłane tylko do użytkowników i do poszczególnych urządzeń z systemem iOS lub Android, które zostały zarejestrowane przez użytkownika.  
+  Grupy mogą obejmować użytkowników lub urządzenia, ale komunikaty są wysyłane tylko do użytkowników i do poszczególnych urządzeń z systemem iOS/iPadOS lub Android, które zostały zarejestrowane przez użytkownika.  
 - Powiadomienia można wysyłać do pojedynczego urządzenia. Zamiast korzystać z grup wybiera się urządzenie, a następnie używa zdalnej [akcji urządzenia](device-management.md#available-device-actions) w celu wysłania powiadomienia niestandardowego.  
 
 **Dostarczanie**:  
 - Usługa Intune wysyła komunikaty do aplikacji Portal firmy lub aplikacji Microsoft Intune użytkowników, która następnie tworzy powiadomienie push. Użytkownicy nie muszą być zalogowani do aplikacji, aby powiadomienie zostało wypchnięte do urządzenia.  
 - Usługa Intune oraz aplikacje Portal firmy i Microsoft Intune nie mogą zagwarantować dostarczania powiadomienia niestandardowego. Powiadomienia niestandardowe mogą pojawiać się nawet z kilkugodzinnym opóźnieniem, dlatego nie powinny być używane do przesyłania pilnych komunikatów.  
-- Komunikaty powiadomień niestandardowych z usługi Intune są wyświetlane na urządzeniach jako standardowe powiadomienia push. Jeśli aplikacja Portal firmy jest otwarta na urządzeniu z systemem iOS w momencie odebrania powiadomienia, zostanie ono wyświetlone w aplikacji zamiast w postaci powiadomienia push.  
-- W zależności od ustawień urządzenia powiadomienia niestandardowe mogą być widoczne na ekranach blokady na urządzeniach z systemami iOS i Android.  
+- Komunikaty powiadomień niestandardowych z usługi Intune są wyświetlane na urządzeniach jako standardowe powiadomienia push. Jeśli aplikacja Portal firmy jest otwarta na urządzeniu z systemem iOS/iPadOS w momencie odebrania powiadomienia, zostanie ono wyświetlone w aplikacji zamiast w postaci powiadomienia push.  
+- W zależności od ustawień urządzenia powiadomienia niestandardowe mogą być widoczne na ekranach blokady na urządzeniach z systemami iOS/iPadOS i Android.  
 - Na urządzeniach z systemem Android inne aplikacje mogą mieć dostęp do danych powiadomień niestandardowych. Nie używaj ich do przesyłania poufnych komunikatów.  
 - Użytkownicy urządzenia, które zostało ostatnio wyrejestrowane, lub użytkownicy usunięci z grupy mogą nadal otrzymywać powiadomienia niestandardowe, które są następnie wysyłane do tej grupy.  Podobnie jeśli dodasz użytkownika do grupy po wysłaniu powiadomienia niestandardowego do tej grupy, nowo dodany użytkownik może otrzymać ten wysłany wcześniej komunikat powiadomienia.  
 
@@ -127,7 +127,7 @@ Usługa Intune natychmiast przetwarza komunikat. Jedynym potwierdzeniem wysłani
 
 Na urządzeniu użytkownicy widzą komunikaty powiadomień niestandardowych wysyłanych przez usługę Intune jako standardowe powiadomienia push z aplikacji Portal firmy lub aplikacji Microsoft Intune. Te powiadomienia są podobne do powiadomień push otrzymywanych przez użytkowników z innych aplikacji na urządzeniu.  
 
-Jeśli na urządzeniu z systemem iOS aplikacja Portal firmy jest otwarta w momencie odebrania powiadomienia, zostanie ono wyświetlone w aplikacji zamiast w postaci powiadomienia push.  
+Jeśli na urządzeniu z systemem iOS/iPadOS aplikacja Portal firmy jest otwarta w momencie odebrania powiadomienia, zostanie ono wyświetlone w aplikacji zamiast w postaci powiadomienia push.  
 
 Powiadomienie pozostaje widoczne do momentu jego odrzucenia przez użytkownika.  
 

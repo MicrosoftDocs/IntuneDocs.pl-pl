@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b30da567d1a25028c51cf8268eab9613a7c3b8af
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: 52c8d10f0b8d06d68d75450c3d708f910bc5ddd4
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755508"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415039"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem Android Enterprise
 
@@ -36,7 +36,7 @@ Zasady konfiguracji aplikacji w usłudze Microsoft Intune zawierają ustawienia 
 
 1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Wybierz kolejno pozycje **Aplikacje** > **Zasady konfiguracji aplikacji** > **Dodaj** > **Urządzenia zarządzane**. Pamiętaj, że możesz wybrać między pozycjami **Urządzenia zarządzane** i **Aplikacje zarządzane**. Aby uzyskać więcej informacji, zobacz temat [Aplikacje obsługujące konfigurację aplikacji](~/apps/app-configuration-policies-overview.md#apps-that-support-app-configuration).
-3. Na stronie **Podstawowe** ustaw następujące szczegóły:
+3. Na stronie **podstawowych informacji** ustaw następujące szczegóły:
     - **Nazwa** — nazwa profilu, która będzie wyświetlana w witrynie Azure Portal.
     - **Opis** — opis profilu, który będzie wyświetlany w witrynie Azure Portal.
     - **Typ rejestracji urządzenia** — to ustawienie ma wartość **Urządzenia zarządzane**.
@@ -152,7 +152,7 @@ Na przykład aplikacja używa mikrofonu urządzenia. Użytkownik otrzymuje monit
 ## <a name="additional-information"></a>Dodatkowe informacje
 
 - [Przypisywanie aplikacji zarządzanego sklepu Google Play do urządzeń z systemem Android Enterprise](apps-add-android-for-work.md#assigning-a-managed-google-play-app-to-android-enterprise-work-profile-devices)
-- [Deploying Outlook for iOS and Android app configuration settings](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune) (Wdrażanie ustawień konfiguracji aplikacji Outlook dla systemu iOS i Android)
+- [Deploying Outlook for iOS and Android app configuration settings](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune) (Wdrażanie ustawień konfiguracji aplikacji Outlook dla systemów iOS, iPadOS i Android)
 
 ## <a name="next-steps"></a>Następne kroki
 

@@ -1,7 +1,7 @@
 ---
 title: Co to jest rejestrowanie urządzenia w usłudze Microsoft Intune
 titleSuffix: Microsoft Intune
-description: Dowiedz się więcej o rejestrowaniu urządzeń z systemem iOS, Android i Windows.
+description: Dowiedz się więcej o rejestrowaniu urządzeń z systemem iOS/iPadOS, Android i Windows.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: feee58d926a25e9132204798ba93d10a7c90f41e
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: 7955c91a33edef37b86f5bd8f29dfb681d28030e
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75547838"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415347"
 ---
 # <a name="what-is-device-enrollment"></a>Co to jest rejestrowanie urządzenia?
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -33,7 +33,7 @@ Jak pokazano w poniższych tabelach, istnieje kilka metod rejestracji urządzeń
 
 Domyślnie w usłudze Intune mogą być rejestrowane urządzenia dla dowolnej platformy. Można jednak [ograniczyć urządzenia według platformy](enrollment-restrictions-set.md#create-a-device-type-restriction).
 
-## <a name="ios-enrollment-methods"></a>Metody rejestracji urządzeń z systemem iOS
+## <a name="iosipados-enrollment-methods"></a>Metody rejestrowania urządzeń z systemem iOS/iPadOS
 
 | **Metoda** | **Wymagane zresetowanie** | [**Koligacja użytkownika**](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) | **Zablokowane** | **Szczegóły** |
 |:---:|:---:|:---:|:---:|:---:|
@@ -84,36 +84,36 @@ Domyślnie w usłudze Intune mogą być rejestrowane urządzenia dla dowolnej pl
 Model „Przynieś własne urządzenie” (BYOD) obejmuje telefony, tablety i komputery stanowiące własność użytkownika. W celu zarejestrowania urządzeń BYOD użytkownicy instalują i uruchamiają aplikację Portal firmy. Ten program umożliwia użytkownikom dostęp do zasobów firmowych, takich jak wiadomości e-mail.
 
 ## <a name="corporate-owned-device"></a>Urządzenie należące do firmy
-[Urządzenia należące do firmy (COD)](corporate-identifiers-add.md) obejmują telefony, tablety oraz komputery należące do organizacji i dostarczane pracownikom. Rejestracja urządzeń COD obsługuje takie scenariusze jak automatyczne rejestrowanie, urządzenia udostępnione lub wstępnie autoryzowane wymagania dotyczące rejestracji. Często stosowaną metodą rejestracji urządzeń COD jest użycie menedżera rejestracji urządzeń (DEM) przez administratora lub kierownika. Urządzenia z systemem iOS można zarejestrować bezpośrednio za pomocą narzędzi programu Device Enrollment Program (DEP) dostarczonych przez firmę Apple. Urządzenia z numerem IMEI można również zidentyfikować i oznaczyć jako należące do firmy.
+[Urządzenia należące do firmy (COD)](corporate-identifiers-add.md) obejmują telefony, tablety oraz komputery należące do organizacji i dostarczane pracownikom. Rejestracja urządzeń COD obsługuje takie scenariusze jak automatyczne rejestrowanie, urządzenia udostępnione lub wstępnie autoryzowane wymagania dotyczące rejestracji. Często stosowaną metodą rejestracji urządzeń COD jest użycie menedżera rejestracji urządzeń (DEM) przez administratora lub kierownika. Urządzenia z systemem iOS/iPadOS można zarejestrować bezpośrednio za pomocą narzędzi programu Device Enrollment Program (DEP) dostarczonych przez firmę Apple. Urządzenia z numerem IMEI można również zidentyfikować i oznaczyć jako należące do firmy.
 
 ### <a name="device-enrollment-manager"></a>Menedżer rejestracji urządzeń
 Menedżer rejestracji urządzeń (DEM) to specjalne konto użytkownika używane do rejestrowania wielu urządzeń należących do firmy i zarządzania nimi. Menedżerowie mogą zainstalować Portal firmy i zarejestrować wiele urządzeń bez użytkowników. Tego rodzaju urządzenia nadają się do wykorzystania w punktach sprzedaży lub na potrzeby użycia aplikacji narzędziowych, ale są złym rozwiązaniem dla użytkowników, którzy potrzebują dostępu do poczty e-mail lub zasobów firmowych. Dowiedz się więcej na temat [menedżera rejestracji urządzeń](device-enrollment-manager-enroll.md).
 
 ### <a name="apple-device-enrollment-program"></a>Program Device Enrollment Program firmy Apple
-Zarządzanie w programie Device Enrollment Program (DEP) firmy Apple pozwala na tworzenie i bezprzewodowe wdrażanie zasad na urządzeniach z systemem iOS oraz macOS kupionych i zarządzanych przy użyciu programu DEP. Urządzenie jest rejestrowane, gdy użytkownik włącza je po raz pierwszy i uruchamia asystenta ustawień. Ta metoda obsługuje tryb nadzorowany systemu iOS, który umożliwia skonfigurowanie określonej funkcji na urządzeniu.
+Zarządzanie w programie Device Enrollment Program (DEP) firmy Apple pozwala na tworzenie i bezprzewodowe wdrażanie zasad na urządzeniach z systemem iOS/iPadOS oraz macOS kupionych i zarządzanych przy użyciu programu DEP. Urządzenie jest rejestrowane, gdy użytkownik włącza je po raz pierwszy i uruchamia asystenta ustawień. Ta metoda obsługuje tryb nadzorowany systemu iOS/iPadOS, który umożliwia skonfigurowanie określonej funkcji na urządzeniu.
 
-Więcej informacji o rejestracji DEP urządzeń z systemem iOS:
+Więcej informacji o rejestracji DEP urządzeń z systemem iOS/iPadOS:
 
-- [Wybieranie sposobu rejestrowania urządzeń z systemem iOS](ios-enroll.md)
-- [Rejestrowanie urządzeń z systemem iOS przy użyciu programu Device Enrollment Program](device-enrollment-program-enroll-ios.md)
+- [Wybieranie sposobu rejestrowania urządzeń z systemem iOS/iPadOS](ios-enroll.md)
+- [Rejestrowanie urządzeń z systemem iOS/iPadOS przy użyciu programu Device Enrollment Program](device-enrollment-program-enroll-ios.md)
 
 ### <a name="usb-sa"></a>USB-SA
 Korzystając z programu Apple Configurator za pośrednictwem połączenia USB, administratorzy IT mogą ręcznie przygotować każde urządzenie firmowe do rejestracji przy użyciu Asystenta ustawień. Administrator IT tworzy profil rejestracji i eksportuje go do programu Apple Configurator. Gdy użytkownicy otrzymują swoje urządzenia, są następnie proszeni o uruchomienie Asystenta ustawień w celu zarejestrowania swojego urządzenia. Ta metoda obsługuje tryb **nadzorowany systemu iOS**, który z kolei udostępnia następujące funkcje:
 - Rejestrację zablokowaną
 - Tryb kiosku i inne zaawansowane konfiguracje oraz ograniczenia
 
-Więcej informacji o rejestracji urządzeń z systemem iOS przy użyciu programu Configurator firmy Apple oraz Asystenta ustawień:
+Więcej informacji o rejestracji urządzeń z systemem iOS/iPadOS przy użyciu programu Configurator firmy Apple oraz Asystenta ustawień:
 
-- [Wybieranie sposobu rejestrowania urządzeń z systemem iOS](ios-enroll.md)
-- [Rejestrowanie urządzeń z systemem iOS przy użyciu programu Configurator i Asystenta ustawień](apple-configurator-enroll-ios.md)
+- [Podejmowanie decyzji dotyczącej sposobu rejestrowania urządzeń z systemem iOS/iPadOS](ios-enroll.md)
+- [Rejestrowanie urządzeń z systemem iOS/iPadOS przy użyciu programu Configurator i Asystenta ustawień](apple-configurator-enroll-ios.md)
 
 ### <a name="usb-direct"></a>USB-Direct
 W celu przeprowadzenia rejestracji bezpośredniej administrator musi ręcznie zarejestrować każde urządzenie, tworząc zasady rejestracji i eksportując je do programu Apple Configurator. Urządzenia USB należące do firmy są rejestrowane bezpośrednio, bez konieczności czyszczenia urządzenia. Urządzenia są zarządzane jako urządzenia bez użytkowników. Nie są zablokowane ani nadzorowane i nie obsługują dostępu warunkowego, wykrywania zdjęcia zabezpieczeń systemu ani zarządzania aplikacjami mobilnymi.
 
-Aby dowiedzieć się więcej o rejestracji urządzeń z systemem iOS, zobacz:
+Aby dowiedzieć się więcej o rejestracji urządzeń z systemem iOS/iPadOS, zobacz:
 
-- [Wybieranie sposobu rejestrowania urządzeń z systemem iOS](ios-enroll.md)
-- [Rejestracja urządzeń z systemem iOS przy użyciu narzędzia Configurator i rejestracji bezpośredniej](apple-configurator-enroll-ios.md)
+- [Podejmowanie decyzji dotyczącej sposobu rejestrowania urządzeń z systemem iOS/iPadOS](ios-enroll.md)
+- [Rejestracja urządzeń z systemem iOS/iPadOS przy użyciu narzędzia Configurator i rejestracji bezpośredniej](apple-configurator-enroll-ios.md)
 
 ## <a name="mobile-device-cleanup-after-mdm-certificate-expiration"></a>Czyszczenie urządzenia przenośnego po wygaśnięciu certyfikatu MDM
 

@@ -1,6 +1,6 @@
 - name: Podstawy usługi Microsoft Intune
   href: index.yml
-- name: Przegląd
+- name: Omówienie
   expanded: true
   items:
     - name: Omówienie usługi Microsoft Intune
@@ -63,7 +63,7 @@
       href: manage-os-versions.md
     - name: Zarządzanie platformą Windows Holographic
       href: windows-holographic-for-business.md
-- name: Przewodniki
+- name: Przewodniki z instrukcjami
   items:
     - name: Planowanie wdrożenia
       items:
@@ -127,7 +127,7 @@
               href: end-user-mam-apps-ios.md
             - name: Jak uzyskiwać aplikacje dla systemu Android
               href: end-user-apps-android.md
-            - name: Jak uzyskiwać aplikacje dla systemu iOS
+            - name: Jak uzyskiwać aplikacje dla systemu iOS/iPadOS
               href: end-user-apps-ios.md
             - name: Jak uzyskiwać aplikacje dla systemu Windows
               href: end-user-apps-windows.md
@@ -201,21 +201,21 @@
           href: tenant-status.md
         - name: Pomaganie użytkownikom w rozwiązywaniu problemów
           href: help-desk-operators.md
-        - name: Dzienniki inspekcji dla działań usługi Intune
-          href: monitor-audit-logs.md
-        - name: Przeglądanie dzienników przy użyciu usługi Azure Monitor
-          href: review-logs-using-azure-monitor.md
         - name: Używanie dokumentów usługi Intune
           href: use-docs.md
         - name: Uzyskiwanie pomocy technicznej
           href: get-support.md
-    - name: Reports
+    - name: Raporty
       items:
         - name: Raporty usługi Intune
           href: reports.md
+        - name: Dzienniki inspekcji dla działań usługi Intune
+          href: monitor-audit-logs.md
+        - name: Przeglądanie dzienników przy użyciu usługi Azure Monitor
+          href: review-logs-using-azure-monitor.md
 - name: Tematy pomocy
   items:
-    - name: Kody błędów wraz z opisami
+    - name: Kody błędów i opisy
       items:
         - name: Rozwiązywanie problemów z dostępem do zasobów firmy
           href: troubleshoot-company-resource-access-problems.md
@@ -233,7 +233,7 @@
           href: ui-changes.md
         - name: Klasyczne grupy usługi Intune
           href: groups-get-started.md
-        - name: Ustawienia rozwiązań dla edukacji w systemie iOS
+        - name: Ustawienia rozwiązań dla edukacji w systemie iOS/iPadOS
           items:
             - name: iPad
               href: education-settings-configure-ios.md

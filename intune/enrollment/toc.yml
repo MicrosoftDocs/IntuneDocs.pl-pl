@@ -100,7 +100,7 @@
     - name: Konfigurowanie rejestracji urządzeń z systemem macOS
       href: macos-enroll.md
       items:
-        - name: Program Device Enrollment Program lub usługa Apple School Manager
+        - name: Automatyczne rejestrowanie urządzeń
           href: device-enrollment-program-enroll-macos.md
     - name: Niepełny raport rejestracji
       href: enrollment-report-company-portal-abandon.md
