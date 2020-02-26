@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c72cf963822284702f6b924ca506f8ec1157e91
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: a03a92f715496b3c647a12bb99457d151ead54a3
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72505142"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514935"
 ---
 # <a name="determine-use-case-scenario-requirements"></a>Określanie wymagań scenariusza przypadku użycia
 
@@ -37,11 +37,11 @@ Oto kilka przykładów wymagań dotyczących przypadków użycia w organizacji z
 
 | **Przypadki użycia** | **Podrzędne przypadki użycia** | **Grupy** | **Platformy urządzeń** | **Wymagania** |
 |:---:|:---:|:---:|:---:|:---:|
-| Firmowe | Pracownik przetwarzający informacje | Kadry, księgowość | iOS | Bezpieczna poczta e-mail, ustawienia urządzenia, profile, aplikacje |                                                          
-| Firmowe | Kierownictwo | Kadry, księgowość | iOS | Bezpieczna poczta e-mail, ustawienia urządzenia, profile, aplikacje |                                                         
+| Firmowe | Pracownik przetwarzający informacje | Kadry, księgowość | iOS/iPadOS | Bezpieczna poczta e-mail, ustawienia urządzenia, profile, aplikacje |                                                          
+| Firmowe | Kierownictwo | Kadry, księgowość | iOS/iPadOS | Bezpieczna poczta e-mail, ustawienia urządzenia, profile, aplikacje |                                                         
 | Firmowe | Kiosk | Sprzedaż detaliczna | Android | Ustawienia urządzenia, profile, aplikacje |
-| „Przynieś własne urządzenie” (BYOD, Bring Your Own Device) | Pracownik przetwarzający informacje | Marketing, sprzedaż | iOS | Bezpieczna poczta e-mail, ustawienia urządzenia, profile, aplikacje |                                                         
-| „Przynieś własne urządzenie” (BYOD, Bring Your Own Device) | Kierownictwo | Marketing, sprzedaż | iOS | Bezpieczna poczta e-mail, ustawienia urządzenia, profile, aplikacje |
+| „Przynieś własne urządzenie” (BYOD, Bring Your Own Device) | Pracownik przetwarzający informacje | Marketing, sprzedaż | iOS/iPadOS | Bezpieczna poczta e-mail, ustawienia urządzenia, profile, aplikacje |                                                         
+| „Przynieś własne urządzenie” (BYOD, Bring Your Own Device) | Kierownictwo | Marketing, sprzedaż | iOS/iPadOS | Bezpieczna poczta e-mail, ustawienia urządzenia, profile, aplikacje |
 
 Możesz [pobrać szablon powyższej tabeli](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0), aby wprowadzić wymagania przypadków użycia i podrzędnych przypadków użycia w Twojej organizacji.
 
