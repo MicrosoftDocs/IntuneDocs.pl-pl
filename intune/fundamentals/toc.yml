@@ -39,6 +39,8 @@
   items:
     - name: Co to jest usługa Intune for Education?
       href: introduction-intune-education.md
+    - name: Co to jest usługa Intune dla instytucji rządowych USA?
+      href: introduction-intune-government.md
     - name: Architektura wysokiego poziomu
       href: high-level-architecture.md
     - name: Cykl wsparcia technicznego urządzenia
