@@ -13,6 +13,8 @@
       href: quickstart-create-assign-app-policy.md
 - name: Samouczki
   items:
+    - name: Ochrona poczty e-mail na urządzeniach zarządzanych
+      href: ../protect/tutorial-protect-email-on-enrolled-devices.md?toc=/intune/apps/toc.json&bc=/intune/apps/breadcrumb/toc.json
     - name: Ochrona poczty e-mail na urządzeniach niezarządzanych
       href: ../protect/tutorial-protect-email-on-unmanaged-devices.md?toc=/intune/apps/toc.json&bc=/intune/apps/breadcrumb/toc.json
     - name: Konfigurowanie platformy Slack do użycia usługi Intune
