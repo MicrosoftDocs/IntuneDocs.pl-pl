@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6513c09f252d5a914ace4e57e5a593877a387172
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
-ms.translationtype: MTE75
+ms.openlocfilehash: 3d26c4c6cd05a411555f7824ad21b72431eb569c
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206554"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511176"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem macOS umożliwiające działanie funkcji lub ich ograniczanie przy użyciu usługi Intune
 
@@ -36,11 +36,11 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 [Utwórz profil konfiguracji ograniczeń urządzenia](../device-restrictions-configure.md).
 
 > [!NOTE]
-> Te ustawienia mają zastosowanie do różnych typów rejestracji. Aby uzyskać więcej informacji na temat różnych typów rejestracji, zobacz [rejestracji](../macos-enroll.md)macOS.
+> Te ustawienia mają zastosowanie do różnych typów rejestracji. Aby uzyskać więcej informacji na temat różnych typów rejestracji, zobacz [Rejestracja systemu macOS](../macos-enroll.md).
 
 ## <a name="general"></a>Ogólne
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Rejestracja urządzeń i automatyczna rejestracja urządzeń
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Ustawienia mają zastosowanie do: Rejestracja urządzeń i automatyczna rejestracja urządzeń
 
 - **Wyszukiwanie definicji**: pozycja **Blokuj** uniemożliwia użytkownikom wyróżnianie wyrazu, a następnie wyszukiwanie jego definicji na urządzeniu. Pozycja **Nieskonfigurowane** (wartość domyślna) zezwala na dostęp do funkcji wyszukiwania definicji.
 - **Dyktowanie**: pozycja **Blokuj** uniemożliwia użytkownikowi wprowadzanie tekstu przy użyciu głosu. Pozycja **Nieskonfigurowane** (wartość domyślna) zezwala użytkownikowi na korzystanie z wprowadzania tekstu przez dyktowanie.
@@ -62,29 +62,29 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
     Ta funkcja ma zastosowanie do:  
     - System macOS 10.13.4 i nowsze
 
-- **Zrzuty ekranu**: urządzenie musi być zarejestrowane w zautomatyzowanym rejestrowaniu urządzeń firmy Apple (DEP). Po ustawieniu na **bloku**użytkownicy nie mogą zapisać zrzutu ekranu ekranu. Zapobiega także obserwowanie ekranów zdalnych przez aplikację klasy. **Nie skonfigurowano** (domyślnie) umożliwia użytkownikom przechwytywanie zrzutów ekranu i umożliwia aplikacji klasy wyświetlanie ekranów zdalnych.
+- **Zrzuty ekranu**: Urządzenie musi być zarejestrowane w automatycznym rejestrowaniu urządzeń (DEP) firmy Apple. Po ustawieniu opcji **Blokuj** użytkownicy nie mogą zapisywać zrzutu ekranu wyświetlacza. Zapobiega także obserwowaniu ekranów zdalnych przez aplikację Classroom. Opcja **Nieskonfigurowane** (wartość domyślna) umożliwia użytkownikom przechwytywanie zrzutów ekranu i umożliwia aplikacji Classroom wyświetlanie ekranów zdalnych.
 
-### <a name="settings-apply-to-automated-device-enrollment"></a>Ustawienia dotyczą: automatyczna rejestracja urządzeń
+### <a name="settings-apply-to-automated-device-enrollment"></a>Ustawienia mają zastosowanie do: Automatyczne rejestrowanie urządzeń
 
-- **Podgląd ekranu zdalnego za pomocą aplikacji klasy**: **Disable** uniemożliwia nauczycielom korzystanie z aplikacji klasy do wyświetlania ekranów studentów. **Nie skonfigurowano** (domyślnie) umożliwia nauczycielom wyświetlanie ekranów swoich uczniów.
+- **Zdalne obserwowanie ekranu za pośrednictwem aplikacji Classroom**: Opcja **Wyłącz** uniemożliwianie nauczycielom korzystanie z aplikacji Classroom w celu wyświetlania ekranów uczniów. Opcja **Nieskonfigurowane** (wartość domyślna) umożliwia nauczycielom wyświetlanie ekranów uczniów.
 
-  Aby użyć tego ustawienia, należy ustawić ustawienie **zrzuty ekranu** **nie skonfigurowane** (zrzuty ekranu są dozwolone).
+  Aby użyć tego ustawienia, dla pozycji **Zrzuty ekranu** ustaw wartość **Nieskonfigurowane** (zrzuty ekranu są dozwolone).
 
-- **Niewyświetlane obserwacje ekranu według aplikacji klasy**: **Zezwalaj** umożliwia nauczycielom wyświetlanie ekranów studentów bez konieczności wyrażania zgody studenta. **Nie skonfigurowano** (domyślnie) wymaga, aby student mógł wyrazić zgodę, zanim nauczyciel zobaczy ekrany.
+- **Obserwacja ekranu bez monitowania za pomocą aplikacji Classroom**: Opcja **Zezwalaj** umożliwia nauczycielom wyświetlanie ekranów uczniów bez konieczności wyrażania zgody przez ucznia. Opcja **Nieskonfigurowane** (wartość domyślna) wymaga, aby uczeń wyraził zgodę na wyświetlanie jego ekranu przez nauczyciela.
 
-  Aby użyć tego ustawienia, należy ustawić ustawienie **zrzuty ekranu** **nie skonfigurowane** (zrzuty ekranu są dozwolone).
+  Aby użyć tego ustawienia, dla pozycji **Zrzuty ekranu** ustaw wartość **Nieskonfigurowane** (zrzuty ekranu są dozwolone).
 
-- **Uczniowie muszą zażądać uprawnień do opuszczenia klasy klas**: **wymagają, aby** wymuszać uczniów zarejestrowanych w niezarządzanym kursie z zajęć, aby uzyskać zatwierdzenie w nauczycielu w celu opuszczenia kursu. **Nie skonfigurowano** (domyślnie) pozwala studentowi na pozostawienie kursu przy każdym wyborze ucznia.
+- **Uczniowie muszą prosić o pozwolenie na opuszczenie klasy Classroom**: Opcja **Wymagaj** wymusza na uczniach zarejestrowanych w niezarządzanym kursie Classroom, aby uzyskiwali zgodę nauczyciela na opuszczenie kursu. Opcja **Nieskonfigurowane** (wartość domyślna) pozwala uczniowi na opuszczenie kursu w dowolnym momencie.
 
-- **Nauczyciele mogą automatycznie blokować urządzenia lub aplikacje w aplikacji klasy**: **Zezwalaj** umożliwia nauczycielom zablokowanie urządzenia lub aplikacji ucznia bez zgody ucznia. **Nie skonfigurowano** (domyślnie) wymaga od ucznia zgody przed zablokowaniem przez nauczyciela urządzenia lub aplikacji.
+- **Nauczyciele mogą automatycznie blokować urządzenia lub aplikacje w aplikacji Classroom**: Opcja **Zezwalaj** umożliwia nauczycielom blokowanie urządzeń i aplikacji uczniów bez ich zgody. Opcja **Nieskonfigurowane** (wartość domyślna) wymaga, aby uczeń wyraził zgodę na zablokowanie jego urządzenia lub aplikacji przez nauczyciela.
 
-- **Studenci mogą automatycznie dołączać klasy klas**: **Zezwalanie** pozwala studentom na dołączanie klasy bez monitowania nauczycieli. **Nie skonfigurowano** (domyślnie) wymaga zatwierdzenia nauczyciela do przyłączenia do klasy.
+- **Uczniowie mogą automatycznie dołączać do klas Classroom**: Opcja **Zezwalaj** zezwala uczniom na dołączanie do klasy bez powiadamiania nauczyciela. Opcja **Nieskonfigurowane** (wartość domyślna) wymaga zgody nauczyciela na dołączenie do klasy.
 
 ## <a name="password"></a>Hasło
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Rejestracja urządzeń i automatyczna rejestracja urządzeń
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Ustawienia mają zastosowanie do: Rejestracja urządzeń i automatyczna rejestracja urządzeń
 
-- **Hasło**: Pozycja **Wymagaj** wymusza wprowadzanie hasła przez użytkownika końcowego w celu uzyskania dostępu do urządzenia. **Nie skonfigurowano** (wartość domyślna) nie wymaga hasła. Nie wymusi również żadnych ograniczeń, takich jak blokowanie prostych haseł lub Ustawianie minimalnej długości.
+- **Hasło**: Pozycja **Wymagaj** wymusza wprowadzanie hasła przez użytkownika końcowego w celu uzyskania dostępu do urządzenia. Opcja **Nieskonfigurowane** (wartość domyślna) nie wymaga podawania hasła. Nie wymusza także żadnych ograniczeń, takich jak blokada zbyt prostych haseł czy ustawienie minimalnej długości hasła.
   - **Wymagany typ hasła**: Określa, czy hasło może być wyłącznie numeryczne (zawierać tylko cyfry), czy też musi być alfanumeryczne (zawierać litery i cyfry).
 
     Ta funkcja ma zastosowanie do:  
@@ -114,7 +114,7 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 
 ## <a name="built-in-apps"></a>Aplikacje wbudowane
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Rejestracja urządzeń i automatyczna rejestracja urządzeń
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Ustawienia mają zastosowanie do: Rejestracja urządzeń i automatyczna rejestracja urządzeń
 
 - **Blokuj autowypełnianie w przeglądarce Safari**: pozycja **Blokuj** powoduje wyłączenie funkcji automatycznego wypełniania w przeglądarce Safari na urządzeniu. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia użytkownikom zmianę ustawień automatycznego uzupełniania w przeglądarce internetowej.
 - **Blokuj aparat**: wybierz pozycję **Blokuj**, aby uniemożliwić dostęp do aparatu na urządzeniu. Pozycja **Nieskonfigurowane** (wartość domyślna) zezwala na dostęp do aparatu urządzenia.
@@ -127,32 +127,32 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 
 ## <a name="restricted-apps"></a>Aplikacje z ograniczeniami
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Rejestracja urządzeń i automatyczna rejestracja urządzeń
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Ustawienia mają zastosowanie do: Rejestracja urządzeń i automatyczna rejestracja urządzeń
 
-- **Typ listy aplikacji z ograniczeniami**: Utwórz listę aplikacji, których użytkownicy nie mogą instalować ani używać. Dostępne opcje:
+- **Typ listy ograniczonych aplikacji**: utwórz listę aplikacji, których użytkownicy nie mogą instalować ani używać. Dostępne opcje:
 
-  - **Nie skonfigurowano** (wartość domyślna): nie ma żadnych ograniczeń z usługi Intune. Użytkownicy mają dostęp do przypisywanych aplikacji oraz wbudowanych aplikacji.
-  - **Aplikacje zabronione**: Aplikacje niezarządzane przez usługę Intune, które nie powinny być instalowane na urządzeniu. Użytkownicy nie mogą instalować zabronionej aplikacji. Jednak jeśli użytkownik zainstaluje aplikację z tej listy, zostanie ona zgłoszona w usłudze Intune.
-  - **Aplikacje zatwierdzone**: Aplikacje, które użytkownicy mogą instalować. Użytkownicy nie mogą instalować aplikacji, których nie ma na liście. Aplikacje zarządzane przez usługę Intune są automatycznie traktowane jako dozwolone. Użytkownicy nadal będą mogli zainstalować aplikację, której nie ma na liście dozwolonych. Ale jeśli tak, jest on raportowany w usłudze Intune.
-- **Identyfikator pakietu aplikacji**: Wprowadź [identyfikator pakietu](bundle-ids-built-in-ios-apps.md) żądanej aplikacji. Możesz pokazać lub ukryć wbudowane aplikacje i aplikacje biznesowe. Witryna sieci Web firmy Apple zawiera listę [wbudowane aplikacje firmy Apple](https://support.apple.com/HT208094).
-- **Nazwa aplikacji**: Wprowadź nazwę żądanej aplikacji. Możesz pokazać lub ukryć wbudowane aplikacje i aplikacje biznesowe. Witryna sieci Web firmy Apple zawiera listę [wbudowane aplikacje firmy Apple](https://support.apple.com/HT208094).
+  - **Nieskonfigurowane** (wartość domyślna): nie ma żadnych ograniczeń ze strony usługi Intune. Użytkownicy mają dostęp do aplikacji przypisywanych przez Ciebie i wbudowanych.
+  - **Aplikacje zabronione**: Aplikacje niezarządzane przez usługę Intune, które nie powinny być instalowane na urządzeniu. Użytkownicy nie są chronieni przed zainstalowaniem zabronionej aplikacji. Jednak jeśli użytkownik zainstaluje aplikację z tej listy, zostanie to zgłoszone w usłudze Intune.
+  - **Aplikacje zatwierdzone**: Aplikacje, które użytkownicy mogą instalować. Użytkownicy nie mogą instalować aplikacji, których nie ma na liście. Aplikacje zarządzane przez usługę Intune są automatycznie traktowane jako dozwolone. Użytkownicy nadal będą mogli zainstalować aplikację, której nie ma na liście dozwolonych. Jednak w takim przypadku zostanie to zgłoszone w usłudze Intune.
+- **Identyfikator pakietu aplikacji**: Wprowadź [identyfikator pakietu](bundle-ids-built-in-ios-apps.md) żądanej aplikacji. Możesz wyświetlać lub ukrywać aplikacje wbudowane i aplikacje biznesowe. W witrynie internetowej firmy Apple znajduje się lista [wbudowanych aplikacji firmy Apple](https://support.apple.com/HT208094).
+- **Nazwa aplikacji**: Wprowadź nazwę żądanej aplikacji. Możesz wyświetlać lub ukrywać aplikacje wbudowane i aplikacje biznesowe. W witrynie internetowej firmy Apple znajduje się lista [wbudowanych aplikacji firmy Apple](https://support.apple.com/HT208094).
 - **Wydawca**: Podaj wydawcę odpowiedniej aplikacji.
 
 Aby dodać aplikacje do tych list, możesz:
 
-- **Dodaj**: Wybierz, aby utworzyć listę aplikacji.
-- **Zaimportować** plik CSV ze szczegółowymi informacjami o aplikacji, w tym z adresem URL. Użyj formatu `<app bundle ID>, <app name>, <app publisher>`. Lub **Eksportuj**, aby utworzyć listę dodanych aplikacji w tym samym formacie.
+- **Dodaj**: wybierz, aby utworzyć listę aplikacji.
+- **Zaimportować** plik CSV ze szczegółowymi informacjami o aplikacji, w tym z adresem URL. Użyj formatu `<app bundle ID>, <app name>, <app publisher>`. Możesz również wybrać pozycję **Eksportuj**, aby utworzyć listę dodanych aplikacji w tym samym formacie.
 
 ## <a name="connected-devices"></a>Połączone urządzenia
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Rejestracja urządzeń i automatyczna rejestracja urządzeń
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Ustawienia mają zastosowanie do: Rejestracja urządzeń i automatyczna rejestracja urządzeń
 
 - **Blokuj usługę AirDrop**: pozycja **Blokuj** uniemożliwia używanie funkcji AirDrop na urządzeniu. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia używanie funkcji AirDrop do wymiany zawartości z pobliskimi urządzeniami.
 - **Blokuj automatyczne odblokowywanie za pomocą zegarka Apple Watch**: Ustawienie **Blokuj** uniemożliwia użytkownikom odblokowywanie urządzenia z systemem macOS przy użyciu urządzenia Apple Watch. Opcja **Nieskonfigurowane** (ustawienie domyślne) umożliwia użytkownikom odblokowywanie urządzenia z systemem macOS przy użyciu urządzenia Apple Watch.
 
 ## <a name="cloud-and-storage"></a>Chmura i magazyn
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Rejestracja urządzeń i automatyczna rejestracja urządzeń
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Ustawienia mają zastosowanie do: Rejestracja urządzeń i automatyczna rejestracja urządzeń
 
 - **Blokuj synchronizowanie pęku kluczy z usługą iCloud**: wybierz pozycję **Blokuj**, aby wyłączyć synchronizowanie poświadczeń przechowywanych w pęku kluczy z usługą iCloud. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia użytkownikom synchronizację tych poświadczeń.
 - **Blokuj synchronizowanie dokumentów z usługą iCloud**: Pozycja **Blokuj** uniemożliwia synchronizowanie dokumentów i danych w usłudze iCloud. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia synchronizowanie dokumentów i par klucz-wartość w obszarze magazynu usługi iCloud.
@@ -162,15 +162,15 @@ Aby dodać aplikacje do tych list, możesz:
 - **Blokuj tworzenie kopii zapasowej przypomnień w usłudze iCloud**: Opcja **Blokuj** uniemożliwia synchronizowanie aplikacji Przypomnienia systemu macOS w usłudze iCloud. Opcja **Nieskonfigurowane** (ustawienie domyślne) umożliwia synchronizowanie aplikacji Przypomnienia w usłudze iCloud.
 - **Blokuj tworzenie kopii zapasowej zakładek w usłudze iCloud**: Opcja **Blokuj** uniemożliwia synchronizowanie zakładek z urządzenia w usłudze iCloud. Opcja **Nieskonfigurowane** (ustawienie domyślne) umożliwia synchronizowanie zakładek w usłudze iCloud.
 - **Blokuj tworzenie kopii zapasowej notatek w usłudze iCloud**: Opcja **Blokuj** uniemożliwia synchronizowanie notatek z urządzenia w usłudze iCloud. Opcja **Nieskonfigurowane** (ustawienie domyślne) umożliwia synchronizowanie notatek w usłudze iCloud.
-- **Zablokuj bibliotekę zdjęć iCloud**: **blok** wyłącza bibliotekę zdjęć iCloud i uniemożliwia synchronizowanie zdjęć z urządzeń w usłudze iCloud. Zdjęcia niepobrane w pełni z biblioteki iCloud Photo Library są usuwane z magazynu lokalnego na urządzeniu. **Nie skonfigurowano** (domyślnie) umożliwia synchronizowanie zdjęć między urządzeniem a biblioteką zdjęć iCloud.
-- **przekazanie**: nie **skonfigurowany** (domyślnie) umożliwia użytkownikom uruchamianie pracy na urządzeniu macOS, a następnie kontynuuje pracę uruchomioną na innym urządzeniu z systemem iOS lub macOS. **Blok** uniemożliwia funkcję przestawiania na urządzeniu. 
+- **Blokuj bibliotekę zdjęć usługi iCloud**: Opcja **Blokuj** wyłącza bibliotekę zdjęć usługi iCloud i uniemożliwia usłudze iCloud synchronizowanie zdjęć z urządzeń. Zdjęcia niepobrane w pełni z biblioteki iCloud Photo Library są usuwane z magazynu lokalnego na urządzeniu. Opcja **Nieskonfigurowane** (wartość domyślna) umożliwia synchronizowanie zdjęć między urządzeniem i biblioteką zdjęć usługi iCloud.
+- **Handoff**: Opcja **Nieskonfigurowane** (wartość domyślna) umożliwia użytkownikom kontynuowanie pracy rozpoczętej na urządzeniu z systemem macOS na innym urządzeniu z systemem iOS/iPadOS lub macOS. Opcja **Blokuj** uniemożliwia korzystanie z funkcji Przekazywanie na urządzeniu. 
 
   Ta funkcja ma zastosowanie do:  
   - System macOS 10.15 i nowsze
 
 ## <a name="domains"></a>Domains
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Rejestracja urządzeń i automatyczna rejestracja urządzeń
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Ustawienia mają zastosowanie do: Rejestracja urządzeń i automatyczna rejestracja urządzeń
 
 - **Adres URL domeny poczty e-mail**: **Dodaj** do listy co najmniej jeden adres URL. Gdy użytkownicy otrzymają wiadomość e-mail z domeny innej niż skonfigurowana, wiadomość e-mail zostanie oznaczona w aplikacji Mail dla systemu macOS jako niezaufana.
 
@@ -178,4 +178,4 @@ Aby dodać aplikacje do tych list, możesz:
 
 [Przypisywanie profilu](../device-profile-assign.md) i [monitorowanie jego stanu](../device-profile-monitor.md).
 
-Możesz również skonfigurować ograniczenia dotyczące funkcji i ustawień urządzenia z systemem [iOS](../device-restrictions-ios.md).
+Możesz również skonfigurować ograniczenia dotyczące funkcji i ustawień urządzenia z systemem [iOS/iPadOS](../device-restrictions-ios.md).

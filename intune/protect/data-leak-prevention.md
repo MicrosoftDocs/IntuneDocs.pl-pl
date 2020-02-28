@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b3affffdf69445ced667d718587303a5409423bf
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
-ms.translationtype: MTE75
+ms.openlocfilehash: 0d9e61cbe4f6d6e07c61fe182e639e715996f9ee
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72502400"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514442"
 ---
 # <a name="prevent-data-leaks-on-non-managed-devices-using-microsoft-intune"></a>Zapobieganie wyciekom danych na urządzeniach niezarządzanych przy użyciu programu Microsoft Intune
 
@@ -47,7 +47,7 @@ Gdy zostaną spełnione następujące wymagania, można użyć poniższego planu
 
 ## <a name="action-plan"></a>Plan działania
 
-Dla urządzeń z systemem iOS lub Android:
+Dla urządzeń z systemem iOS/iPadOS i Android:
 
 1. Dowiedz się, [jak działają zasady ochrony aplikacji](../apps/app-protection-policy.md).
 2. Dowiedz się, [jak utworzyć i wdrożyć zasady ochrony aplikacji](../apps/app-protection-policies.md) dla aplikacji mobilnych pakietu Office.
@@ -63,7 +63,7 @@ Dla urządzeń z systemem Windows 10:
 
 Zgodnie z potrzebami udostępnij poniższe linki, aby dostarczyć dodatkowe informacje:
 
-* [Czego można oczekiwać, gdy aplikacja systemu iOS jest zarządzana przy użyciu zasad ochrony aplikacji](../fundamentals/end-user-mam-apps-ios.md)
+* [Czego można oczekiwać, gdy aplikacja systemu iOS/iPadOS jest zarządzana przy użyciu zasad ochrony aplikacji](../fundamentals/end-user-mam-apps-ios.md)
 * [Czego można oczekiwać, gdy aplikacja systemu Android jest zarządzana przy użyciu zasad ochrony aplikacji](../fundamentals/end-user-mam-apps-android.md)
 
 ## <a name="next-steps"></a>Następne kroki

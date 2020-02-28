@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3502b1c1a73a9e98ed2901fc24dc69ab09136427
-ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
-ms.translationtype: MTE75
+ms.openlocfilehash: ef20d378740eae73c41521d8dfc7f8fdd853fdb9
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76812443"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513905"
 ---
 # <a name="intune-app-installation-error-reference"></a>Dokumentacja błędów instalacji aplikacji przy użyciu usługi Intune
 
@@ -51,17 +51,17 @@ Ta sekcja dotyczy rejestracji zarówno administratora urządzenia, jak i rozwią
 | 0xC7D14FB1  | -942583887 | Użytkownik końcowy anulował instalację aplikacji. | Użytkownik jawnie odinstalował aplikację. Ten błąd jest zwracany, gdy użytkownik anuluje działanie instalacji systemu operacyjnego Android. Użytkownik kliknął przycisk anulowania po wyświetleniu monitu o instalacji systemu operacyjnego, lub kliknął poza monitem. Ten błąd jest zwracany jedynie dla scenariuszy DA. W przypadku scenariuszy KNOX użytkownik nie otrzymuje monitu o instalację, ponieważ można ją przeprowadzić w trybie cichym. Usługa Intune wyświetla powiadomienie, które użytkownik może kliknąć, aby przeprowadzić ponowną próbę. Jeśli aplikacja jest aplikacją dostępną, powiadomienie można odrzucić. Jeśli jednak dana aplikacja jest wymagana, nie można go odrzucić. Poproś użytkownika, aby nie anulował instalacji. |
 | 0xC7D14FB9 | -942583879 | Użytkownik końcowy anulował instalację aplikacji. (Po wyświetleniu monitu o zaakceptowanie) | Poproś użytkownika o zaakceptowanie wdrożonej aplikacji usługi Intune i zainstalowanie aplikacji po wyświetleniu monitu. |
 
-## <a name="ios-app-installation-errors"></a>Błędy instalacji aplikacji systemu iOS
+## <a name="ios-and-ipados-app-installation-errors"></a>Błędy instalacji aplikacji systemu iOS i iPadOS
 
-Następujące komunikaty o błędach oraz opisy zapewniają szczegółowe informacje o błędach instalacji w systemie iOS. 
+Następujące komunikaty o błędach oraz opisy zawierają szczegółowe informacje o błędach instalacji w systemie iOS/iPadOS. 
 
 | Kod błędu (szesnastkowo) | Kod błędu (dziesiętnie) | Komunikat o błędzie/kod | Opis/wskazówki dotyczące rozwiązywania problemów |
 |--------------------|------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 0x87D12906 | -2016335610 | Błąd agenta MDM firmy Apple: nie można wykonać polecenia instalacji aplikacji, ale przyczyna błędu nie została określona. Ponów próbę instalacji aplikacji. | Agent MDM firmy Apple zwrócił informację, że polecenie instalacji nie powiodło się. |
 | 0x87D1313C | -2016333508 | Połączenie sieciowe na kliencie zostało utracone lub przerwane. Późniejsze próby powinny zakończyć się pomyślnie w lepszym środowisku sieciowym. | Utracono połączenie sieciowe, gdy zaktualizowany adres URL usługi pobierania został wysłany na urządzenie. W szczególności nie można odnaleźć serwera z określoną nazwą hosta. |
-| 0x87D11388 | -2016341112 | Urządzenie z systemem iOS jest aktualnie zajęte.  | Urządzenia z systemem iOS było zajęte, co spowodowało błąd. Urządzenie zostało zablokowane. Użytkownik musi odblokować urządzenie, aby zainstalować aplikację. |
-| 0x87D13B64 | -2016330908 | Instalacja aplikacji nie powiodła się.  | Wystąpił błąd instalacji aplikacji. Do rozwiązania tego problemu są wymagane dzienniki konsoli systemu iOS. |
-| 0x87D13B66 | -2016330906 | Aplikacja jest zarządzana, ale wygasła lub została usunięta przez użytkownika.  | Użytkownik jawnie odinstalował aplikację albo aplikacja wygasła, ale nie można jej pobrać, lub wykrywanie aplikacji jest niezgodne z odpowiedzią z urządzenia.   Ponadto ten błąd może wystąpić na podstawie usterki platformy iOS 9.2.2. |
+| 0x87D11388 | -2016341112 | Urządzenie z systemem iOS/iPadOS jest aktualnie zajęte.  | Urządzenie z systemem iOS/iPadOS było zajęte, co spowodowało wystąpienie błędu. Urządzenie zostało zablokowane. Użytkownik musi odblokować urządzenie, aby zainstalować aplikację. |
+| 0x87D13B64 | -2016330908 | Instalacja aplikacji nie powiodła się.  | Wystąpił błąd instalacji aplikacji. Do rozwiązania tego problemu są wymagane dzienniki konsoli systemu iOS/iPadOS. |
+| 0x87D13B66 | -2016330906 | Aplikacja jest zarządzana, ale wygasła lub została usunięta przez użytkownika.  | Użytkownik jawnie odinstalował aplikację albo aplikacja wygasła, ale nie można jej pobrać, lub wykrywanie aplikacji jest niezgodne z odpowiedzią z urządzenia.   Ponadto ten błąd może wystąpić w odpowiedzi na usterkę platformy iOS/iPadOS 9.2.2. |
 | 0x87D13B60 | -2016330912 | Zaplanowano zainstalowanie tej aplikacji, ale sfinalizowanie transakcji wymaga kodu realizacji.  | Ten błąd zazwyczaj występuje w przypadku aplikacji ze sklepu dla systemu iOS, które są płatne. |
 | 0x87D1041C | -2016345060 | Aplikacja nie została wykryta po pomyślnym ukończeniu instalacji.  | Proces wykrywania aplikacji jest niezgodny z odpowiedzią z urządzenia. |
 | 0x87D13B62 | -2016330910 | Użytkownik odrzucił ofertę zainstalowania aplikacji.  | Podczas początkowej instalacji aplikacji użytkownik kliknął przycisk Anuluj. Poproś użytkownika o zaakceptowanie żądania instalacji następnym razem. |
@@ -70,7 +70,7 @@ Następujące komunikaty o błędach oraz opisy zapewniają szczegółowe inform
 | 0x87D13B93 | -2016330861 | Aplikacje VPP można instalować tylko na udostępnionym urządzeniu iPad. | Aby móc zainstalować aplikacje na udostępnionym tablecie iPad, należy uzyskać je w ramach programu Apple Volume Purchase Program. |
 | 0x87D13B94 | -2016330860 | Nie można instalować aplikacji, gdy sklep App Store jest wyłączony. | Aby użytkownik mógł zainstalować aplikację, musi być włączony sklep App Store. |
 | 0x87D13B95 | -2016330859 | Nie można znaleźć licencji VPP dla aplikacji. | Spróbuj odwołać i ponownie przypisać licencję aplikacji. |
-| 0x87D13B96 | -2016330858 | Nie można instalować aplikacji systemu przy użyciu dostawcy MDM. | Instalowanie aplikacji wstępnie zainstalowanych przez system operacyjny iOS nie jest obsługiwane. |
+| 0x87D13B96 | -2016330858 | Nie można instalować aplikacji systemu przy użyciu dostawcy MDM. | Instalowanie aplikacji wstępnie zainstalowanych przez system operacyjny iOS/iPadOS nie jest obsługiwane. |
 | 0x87D13B97 | -2016330857 | Nie można instalować aplikacji, gdy urządzenie jest w trybie zgubienia. | W trybie zgubienia wszystkie sposoby korzystania z urządzenia są zablokowane. Aby móc instalować aplikacje, wyłącz tryb zgubienia. |
 | 0x87D13B98 | -2016330856 | Nie można instalować aplikacji, gdy urządzenie jest w trybie kiosku. | Aby móc instalować aplikacje, spróbuj dodać to urządzenie do grupy wykluczonych w zasadach konfiguracji trybu kiosku. |
 | 0x87D13B9C | -2016330852 | Na tym urządzeniu nie można instalować aplikacji 32-bitowych. | Urządzenie nie obsługuje instalowania aplikacji 32-bitowych. Spróbuj wdrożyć 64-bitową wersję aplikacji. |
@@ -80,7 +80,7 @@ Następujące komunikaty o błędach oraz opisy zapewniają szczegółowe inform
 | 0x87d13b7e | -2016330882 | Przypisywanie licencji nie powiodło się. Błąd firmy Apple: „nie ma już licencji VPP”  | Takie zachowanie jest celowe. Aby rozwiązać ten problem, kup dodatkowe licencje VPP lub odbierz licencje od użytkowników, które nie są już obsługiwane. |
 | 0x87d13b6e | -2016330898 | Błąd instalacji aplikacji 12024: Nieznana przyczyna.  | Firma Apple nie udzieliła nam wystarczających informacji, aby można było określić przyczynę niepowodzenia instalacji.   Nie ma niczego do zgłoszenia. |
 | 0x87d13b7f | -2016330881 | Wymagane zasady konfiguracji aplikacji nie istnieją. Upewnij się, że zasady są przeznaczone dla tych samych grup.  | Aplikacja wymaga konfiguracji aplikacji, ale nie jest używana żadna konfiguracja aplikacji. Administrator powinien upewnić się, że grupy, do których jest skierowana aplikacja, mają również wymaganą konfigurację aplikacji dla tych grup. |
-| 0x87d13b69 | -2016330903 | Licencje VPP dla urządzeń mają zastosowanie tylko do urządzeń z systemem iOS 9.0 lub nowszym.  | Uaktualnienie miało wpływ na urządzenia z systemem iOS 9.0 lub nowszym. |
+| 0x87d13b69 | -2016330903 | Licencje VPP dla urządzeń mają zastosowanie tylko do urządzeń z systemem iOS/iPadOS 9.0 lub nowszym.  | Uaktualnij urządzenia z systemem iOS/iPadOS, których dotyczy problem, do wersji iOS/iPadOS 9.0 lub nowszej. |
 | 0x87d13b8f | -2016330865 | Aplikacja jest zainstalowana na urządzeniu, ale nie jest zarządzana.  | Ten błąd występuje tylko w przypadku aplikacji biznesowych. Aplikacja została zainstalowana poza usługą Intune. Aby usunąć ten błąd, odinstaluj aplikację z urządzenia. Przy następnej synchronizacji urządzenie powinno zainstalować aplikację z usługi Intune. |
 | 0x87d13b68 | -2016330904 | Użytkownik nie wyraził zgody na zarządzanie aplikacjami  | Poproś użytkownika o zaakceptowanie zarządzania aplikacjami. |
 | 0x87d1279d | -2016335971 | Nieznany błąd.  | Ten błąd występuje w przypadku aplikacji ze sklepu dla systemu iOS, ale scenariusz błędu jest nieznany. |

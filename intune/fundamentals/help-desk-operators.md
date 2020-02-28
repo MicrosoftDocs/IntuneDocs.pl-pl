@@ -17,12 +17,12 @@ ms.reviewer: sumitp
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0094cdd12b2594cb60260d768daec8c5bed04c9c
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
-ms.translationtype: MTE75
+ms.openlocfilehash: 3812d19122cf4dd85edf00a6fa12d9f2b89529aa
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72510255"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514595"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Korzystanie z portalu rozwiązywania problemów, aby pomóc użytkownikom w firmie
 
@@ -269,7 +269,7 @@ Po wybraniu wiersza błędu zostaną wyświetlone bardziej szczegółowe informa
 
 | Error | Szczegóły |
 |-------------|----------|
-| Limit czasu lub błąd systemu iOS | Przekroczenie limitu czasu między urządzeniem a usługą Intune z powodu zbyt długiego oczekiwania na ukończenie procesu rejestracji przez użytkownika. |
+| Przekroczenie limitu czasu lub błąd systemu iOS/iPadOS | Przekroczenie limitu czasu między urządzeniem a usługą Intune z powodu zbyt długiego oczekiwania na ukończenie procesu rejestracji przez użytkownika. |
 | Nie znaleziono użytkownika lub licencji | Użytkownik nie ma licencji lub został usunięty z usługi. |
 | Urządzenie jest już zarejestrowane | Ktoś próbował zarejestrować urządzenie, korzystając z aplikacji Portal firmy na urządzeniu, które nadal jest zarejestrowane przez innego użytkownika. |
 | Nie dołączono do usługi Intune | Podjęto próbę rejestracji, podczas gdy urząd zarządzania urządzeniami mobilnymi (MDM) usługi Intune nie został skonfigurowany. |
@@ -286,14 +286,14 @@ Po wybraniu wiersza błędu zostaną wyświetlone bardziej szczegółowe informa
 | Nieoczekiwana metoda rejestracji rozwiązania Autopilot | Podjęto próbę zarejestrowania urządzenia przy użyciu niedozwolonej metody. |
 | Usunięto urządzenie rozwiązania Autopilot | Urządzenie, dla którego podjęto próbę rejestracji, zostało usunięte z rozwiązania Autopilot dla tego konta. |
 | Osiągnięto limit urządzeń | Ta rejestracja została zablokowana ze względu na limit urządzeń skonfigurowany przez administratora. |
-| Dołączanie urządzenia firmy Apple | W przypadku wszystkich urządzeń z systemem iOS możliwość rejestracji została w tej chwili zablokowana z powodu braku lub wygaśnięcia certyfikatu wypychania MDM firmy Apple w usłudze Intune. |
+| Dołączanie urządzenia firmy Apple | W przypadku wszystkich urządzeń z systemem iOS/iPadOS możliwość rejestracji została w tej chwili zablokowana z powodu braku lub wygaśnięcia certyfikatu wypychania MDM firmy Apple w usłudze Intune. |
 | Urządzenie nie jest wstępnie zarejestrowane | Urządzenie nie zostało wstępnie zarejestrowane jako firmowe, a wszystkie rejestracje osobiste zostały zablokowane przez administratora. |
 | Funkcja nie jest obsługiwana | Prawdopodobnie użytkownik próbował przeprowadzić rejestrację za pomocą metody niezgodnej z konfiguracją usługi Intune. |
 
 ## <a name="collect-available-data-from-mobile-device"></a>Zbieranie dostępnych danych z urządzenia przenośnego
 
 Następujące zasoby ułatwiają zbieranie danych urządzenia podczas rozwiązywania problemów z urządzeniem użytkownika:
-- [Wysyłanie błędów rejestracji systemu iOS do administratora IT](/intune-user-help/send-errors-to-your-it-admin-ios)
+- [Wysyłanie błędów rejestracji systemu iOS/iPadOS do administratora IT](/intune-user-help/send-errors-to-your-it-admin-ios)
 - [Ułatwianie działowi pomocy technicznej Twojej firmy rozwiązywania problemów z urządzeniami przez używanie pełnego rejestrowania](/intune-user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android)
 - [Wysyłanie dzienników systemu Android do działu pomocy technicznej Twojej firmy za pomocą kabla USB](/intune-user-help/send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android)
 - [Wysyłanie dzienników danych diagnostycznych systemu Android do administratora IT za pomocą poczty e-mail](/intune-user-help/send-logs-to-your-it-admin-by-email-android)

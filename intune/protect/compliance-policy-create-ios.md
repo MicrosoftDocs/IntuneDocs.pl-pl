@@ -1,6 +1,6 @@
 ---
-title: Ustawienia zgodności dla urządzeń z systemem iOS w usłudze Microsoft Intune — Azure | Microsoft Docs
-description: Zapoznaj się z listą ustawień umożliwiających skonfigurowanie zgodności dla urządzeń z systemem iOS w usłudze Microsoft Intune. Możesz między innymi wymagać profilu poczty e-mail, sprawdzać urządzenia ze zdjętymi zabezpieczeniami systemu lub odblokowanym dostępem do konta root, ustawiać minimalną lub maksymalną wersję systemu operacyjnego, określać ograniczenia dotyczące haseł takie jak długość hasła czy czas nieaktywności urządzenia oraz ograniczać aplikacje.
+title: Ustawienia zgodności dla urządzeń z systemem iOS/iPadOS w usłudze Microsoft Intune — Azure | Microsoft Docs
+description: Zapoznaj się z listą ustawień umożliwiających skonfigurowanie zgodności dla urządzeń z systemem iOS/iPadOS w usłudze Microsoft Intune. Możesz między innymi wymagać profilu poczty e-mail, sprawdzać urządzenia ze zdjętymi zabezpieczeniami systemu lub odblokowanym dostępem do konta root, ustawiać minimalną lub maksymalną wersję systemu operacyjnego, określać ograniczenia dotyczące haseł takie jak długość hasła czy czas nieaktywności urządzenia oraz ograniczać aplikacje.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e9bcfed67eda96bb4d79317bcc69d21a5f8197bc
-ms.sourcegitcommit: 2b905913840d4133a7964fe4f54a58ea6e421e12
-ms.translationtype: MTE75
+ms.openlocfilehash: 437673878335b04b76c53b13f18acac32213720a
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77074635"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514034"
 ---
-# <a name="ios-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Ustawienia urządzeń z systemem iOS umożliwiające oznaczenie ich jako zgodne lub niezgodne w usłudze Intune
+# <a name="iosipados-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Ustawienia urządzeń z systemem iOS/iPadOS umożliwiające oznaczenie ich jako zgodne lub niezgodne w usłudze Intune
 
-W tym artykule wymieniono i opisano różne ustawienia zgodności, które można skonfigurować na urządzeniach z systemem iOS za pomocą usługi Intune. Możesz stosować te ustawienia w ramach rozwiązania do zarządzania urządzeniami mobilnymi (MDM), aby między innymi wymagać profilu poczty e-mail, oznaczać urządzenia z odblokowanym dostępem do konta root lub zdjętymi zabezpieczeniami systemu jako niezgodne, określać dozwolony poziom zagrożenia, czy ustawiać wygasanie haseł.
+W tym artykule wymieniono i opisano różne ustawienia zgodności, które można skonfigurować na urządzeniach z systemem iOS/iPadOS za pomocą usługi Intune. Możesz stosować te ustawienia w ramach rozwiązania do zarządzania urządzeniami mobilnymi (MDM), aby między innymi wymagać profilu poczty e-mail, oznaczać urządzenia z odblokowanym dostępem do konta root lub zdjętymi zabezpieczeniami systemu jako niezgodne, określać dozwolony poziom zagrożenia, czy ustawiać wygasanie haseł.
 
 Ta funkcja ma zastosowanie do:
 
@@ -86,11 +86,11 @@ Aby uzyskać szczegółowe informacje na temat profilów poczty e-mail, zobacz [
 ### <a name="password"></a>Hasło
 
 > [!NOTE]
-> Po zastosowaniu zasad zgodności lub konfiguracji do urządzenia z systemem iOS użytkownicy będą otrzymywać monit o ustawienie kodu dostępu co 15 minut. Monity będą wyświetlane, dopóki kod dostępu nie zostanie ustawiony. Po ustawieniu kodu dostępu dla urządzenia z systemem iOS proces szyfrowania zostanie uruchomiony automatycznie. Urządzenie pozostanie zaszyfrowane do czasu wyłączenia kodu dostępu.
+> Po zastosowaniu zasad zgodności lub konfiguracji do urządzenia z systemem iOS/iPadOS użytkownicy będą otrzymywać monit o ustawienie kodu dostępu co 15 minut. Monity będą wyświetlane, dopóki kod dostępu nie zostanie ustawiony. Po ustawieniu kodu dostępu dla urządzenia z systemem iOS/iPadOS proces szyfrowania zostanie uruchomiony automatycznie. Urządzenie pozostanie zaszyfrowane do czasu wyłączenia kodu dostępu.
 
 - **Wymagaj hasła do odblokowania urządzeń przenośnych**:  
   - **Nieskonfigurowane** (*wartość domyślna*) — ustawienie nie jest oceniane na potrzeby określenia zgodności.  
-  - **Wymagaj** — użytkownicy muszą wprowadzić hasło podczas uzyskiwania dostępu do swoich urządzeń. Urządzenia z systemem iOS używające haseł są szyfrowane.
+  - **Wymagaj** — użytkownicy muszą wprowadzić hasło podczas uzyskiwania dostępu do swoich urządzeń. Urządzenia z systemem iOS/iPadOS używające haseł są szyfrowane.
 
 - **Proste hasła**:  
   - **Nieskonfigurowane** (*domyślne*) — użytkownicy mogą tworzyć proste hasła, takie jak **1234** lub **1111**.
@@ -125,7 +125,7 @@ Aby uzyskać szczegółowe informacje na temat profilów poczty e-mail, zobacz [
   Możesz ograniczyć aplikacje poprzez dodanie ich identyfikatorów pakietu do zasad. Jeśli urządzenie ma zainstalowaną określoną aplikację, jest oznaczane jako niezgodne.
 
   - **Nazwa aplikacji** — wprowadź przyjazną nazwę, która ułatwia rozpoznanie identyfikatora pakietu.
-  - **Identyfikator pakietu aplikacji** — wprowadź unikatowy identyfikator pakietu dostarczony przez dostawcę aplikacji. Aby znaleźć identyfikator pakietu, zobacz [How to find the bundle ID for an iOS app (Jak znaleźć identyfikator pakietu aplikacji z systemem iOS](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app) — link otwiera inną witrynę internetową firmy Microsoft).  
+  - **Identyfikator pakietu aplikacji** — wprowadź unikatowy identyfikator pakietu dostarczony przez dostawcę aplikacji. Aby znaleźć identyfikator pakietu, zobacz [How to find the bundle ID for an iOS/iPadOS app](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app) (Jak znaleźć identyfikator pakietu aplikacji z systemem iOS/iPadOS) — link otwiera inną witrynę internetową firmy Microsoft.  
 
 ## <a name="next-steps"></a>Następne kroki
 

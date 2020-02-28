@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d4517d89e3b7365834e904c815b30a362540906
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
-ms.translationtype: MTE75
+ms.openlocfilehash: 545f287e8b7ee82e2008f239171b22e01714b8c7
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755599"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514748"
 ---
 # <a name="troubleshoot-device-actions-in-intune"></a>Rozwiązywanie problemów z akcjami urządzenia w usłudze Intune
 
@@ -34,7 +34,7 @@ Usługa Microsoft Intune oferuje wiele akcji, które ułatwiają zarządzanie ur
 ### <a name="i-clicked-the-disable-activation-lock-action-in-the-portal-but-nothing-happened-on-the-device"></a>Po kliknięciu akcji „Wyłącz blokadę aktywacji” w portalu na urządzeniu nic się nie dzieje.
 Jest to oczekiwane zachowanie. Po uruchomieniu akcji Wyłącz blokadę aktywacji w usłudze Intune należy podać zaktualizowany kod od firmy Apple. Kod należy wprowadzić ręcznie w polu kodu dostępu, gdy na urządzeniu zostanie wyświetlony ekran Blokada aktywacji. Ten kod jest ważny tylko przez 15 dni, dlatego należy pamiętać, aby kliknąć tę akcję i skopiować kod przed uruchomieniem czyszczenia.
 
-### <a name="why-dont-i-see-the-disable-activation-lock-code-in-the-hardware-overview-blade-of-my-ios-device"></a>Dlaczego nie widzę kodu akcji Wyłącz blokadę aktywacji w bloku przeglądu sprzętu mojego urządzenia z systemem iOS?
+### <a name="why-dont-i-see-the-disable-activation-lock-code-in-the-hardware-overview-blade-of-my-iosipados-device"></a>Dlaczego nie widzę kodu akcji Wyłącz blokadę aktywacji w bloku przeglądu sprzętu mojego urządzenia z systemem iOS/iPadOS?
 Najbardziej prawdopodobne przyczyny mogą być następujące:
 - Kod wygasł i został wyczyszczony z usługi.
 - Urządzenie nie jest nadzorowane przy użyciu zasad ograniczeń urządzenia, aby można było zezwolić na blokadę aktywacji.
@@ -43,7 +43,7 @@ Kod możesz sprawdzić w eksploratorze programu Graph za pomocą następującego
 
 ```GET - https://graph.microsoft.com/beta/deviceManagement/manageddevices('deviceId')?$select=activationLockBypassCode.```
 
-### <a name="why-is-the-disable-activation-lock-action-greyed-out-for-my-ios-device"></a>Dlaczego akcja Wyłącz blokadę aktywacji jest wyszarzona dla mojego urządzenia z systemem iOS?
+### <a name="why-is-the-disable-activation-lock-action-greyed-out-for-my-iosipados-device"></a>Dlaczego akcja Wyłącz blokadę aktywacji jest wyszarzona dla mojego urządzenia z systemem iOS/iPadOS?
 Najbardziej prawdopodobne przyczyny mogą być następujące: 
 - Kod wygasł i został wyczyszczony z usługi.
 - Urządzenie nie jest nadzorowane przy użyciu zasad ograniczeń urządzenia, aby można było zezwolić na blokadę aktywacji.
@@ -90,8 +90,22 @@ Ponieważ na urządzeniu nie aktywowano tokenu resetowania. Aby aktywować token
 3. Użytkownik końcowy musi zaakceptować monit pomocniczy, aby umożliwić resetowanie kodu dostępu.
 Po wykonaniu tych kroków taka odpowiedź nie powinna być już wyświetlana.
 
-### <a name="why-am-i-prompted-to-set-a-new-passcode-on-my-ios-device-when-i-issue-the-remove-passcode-action"></a>Dlaczego otrzymuję monit o ustawienie nowego kodu dostępu na urządzeniu z systemem iOS, gdy uruchamiam akcję Usuń kod dostępu?
+### <a name="why-am-i-prompted-to-set-a-new-passcode-on-my-iosipados-device-when-i-issue-the-remove-passcode-action"></a>Dlaczego otrzymuję monit o ustawienie nowego kodu dostępu na urządzeniu z systemem iOS/iPadOS, gdy uruchamiam akcję Usuń kod dostępu?
 Ponieważ jedna z zasad zgodności wymaga kodu dostępu.
+
+
+## <a name="wipe-action"></a>Akcja Wyczyść
+
+### <a name="i-cant-restart-a-windows-10-device-after-using-the-wipe-action"></a>Nie można ponownie uruchomić urządzenia z systemem Windows 10 po użyciu akcji czyszczenia
+Może być to spowodowane tym, że używasz opcji **Wyczyść urządzenie i kontynuujesz czyszczenie nawet wtedy, gdy urządzenie utraci zasilanie. W przypadku wybrania tej opcji pamiętaj, że może ona uniemożliwić ponowne uruchomienie niektórych urządzeń z systemem Windows 10.** na urządzeniu z systemem Windows 10.
+
+Może to być spowodowane tym, że instalacja systemu Windows ma poważne uszkodzenie uniemożliwiające ponowne zainstalowanie systemu operacyjnego. W takim przypadku proces kończy się niepowodzeniem i pozostawia system w [środowisku odzyskiwania systemu Windows]( https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference).
+
+### <a name="i-cant-restart-a-bitlocker-encrypted-device-after-using-the-wipe-action"></a>Nie można ponownie uruchomić urządzenia szyfrowanego funkcją BitLocker po użyciu akcji czyszczenia
+Może być to spowodowane tym, że używasz opcji **Wyczyść urządzenie i kontynuujesz czyszczenie nawet wtedy, gdy urządzenie utraci zasilanie. W przypadku wybrania tej opcji pamiętaj, że może ona uniemożliwić ponowne uruchomienie niektórych urządzeń z systemem Windows 10.** na urządzeniu szyfrowanym funkcją BitLocker.
+
+Aby rozwiązać ten problem, użyj nośnika rozruchowego w celu ponownego zainstalowania systemu Windows 10 na urządzeniu.
+
 
 ## <a name="next-steps"></a>Następne kroki
 

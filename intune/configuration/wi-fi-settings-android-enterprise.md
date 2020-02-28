@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/08/2019
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,14 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04d35f49f9e07cb72a1fea92210b05e0a95ec256
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
-ms.translationtype: MTE75
+ms.openlocfilehash: aef1747fdbb3118db82f6e99c2838632c8a9d369
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74390805"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77512453"
 ---
-# <a name="add-wi-fi-settings-for-android-enterprise-dedicated-and-fully-managed-devices-in-microsoft-intune"></a>Dodawanie ustawień sieci Wi-Fi dla urządzeń z systemem Android w wersji Enterprise dedykowanych i w pełni zarządzanych w Microsoft Intune
+# <a name="add-wi-fi-settings-for-android-enterprise-dedicated-and-fully-managed-devices-in-microsoft-intune"></a>Dodawanie ustawień sieci Wi-Fi dla dedykowanych i w pełni zarządzanych urządzeń z systemem Android Enterprise w usłudze Microsoft Intune
 
 Możesz utworzyć profil z określonymi ustawieniami Wi-Fi, po czym wdrożyć go w urządzeniach z systemem Android w wersji Enterprise dedykowanych i w pełni zarządzanych. Usługa Microsoft Intune oferuje wiele funkcji, w uwierzytelnianie do sieci, korzystanie z klucza wstępnego i inne.
 
@@ -35,43 +35,43 @@ W tym artykule opisano te ustawienia. Więcej informacji na temat funkcji sieci 
 
 ## <a name="device-owner-only"></a>Tylko właściciel urządzenia
 
-Wybierz tę opcję, Jeśli wdrażasz system na urządzeniu z systemem Android w wersji dedykowanej lub w pełni zarządzanej.  Urządzenia z systemem Android w wersji Enterprise dedykowane i w pełni zarządzane obecnie obsługują Wdrażanie certyfikatów protokołu SCEP, ale nie PKCS.
+Wybierz tę opcję, jeśli wdrażasz na dedykowanym lub w pełni zarządzanym urządzeniu z systemem Android Enterprise.  Dedykowane i w pełni zarządzane urządzenia z systemem Android Enterprise obecnie obsługują wdrażanie certyfikatów protokołu SCEP, ale nie PKCS.
 
-### <a name="basic"></a>Podstawowe
+### <a name="basic"></a>Podstawowy
 
-- **Typ sieci Wi-Fi**: wybierz pozycję **Podstawowa**.
+- **Typ sieci Wi-Fi**: Wybierz pozycję **Podstawowe**.
 - **Nazwa sieci**: wprowadź nazwę połączenia sieci Wi-Fi. Użytkownicy końcowi widzą tę nazwę, przeglądając w urządzeniu listę dostępnych połączeń sieci Wi-Fi. Na przykład wprowadź nazwę **Contoso WiFi**.
-- **SSID**: wprowadź **Identyfikator zestawu usług**, który jest rzeczywistą nazwą sieci bezprzewodowej, z którą urządzenia nawiązują połączenie. Jednak przy wyborze połączenia użytkownicy widzą tylko **nazwę sieci** utworzoną wcześniej.
-- **Ukryta sieć**: wybierz pozycję **Włącz**, aby ukrywać tę sieć na liście dostępnych sieci w urządzeniu. Identyfikator SSID nie jest rozgłaszany. Wybierz pozycję **Wyłącz**, aby wyświetlać tę sieć na liście dostępnych sieci w urządzeniu.
+- **SSID**: wprowadź **identyfikator zestawu usług** będący prawdziwą nazwą sieci bezprzewodowej, z którą łączą się urządzenia. Jednak przy wyborze połączenia użytkownicy widzą tylko **nazwę sieci** utworzoną wcześniej.
+- **Sieć ukryta**: wybierz pozycję **Włącz**, aby ukrywać tę sieć na liście dostępnych sieci w urządzeniu. Identyfikator SSID nie jest rozgłaszany. Wybierz pozycję **Wyłącz**, aby wyświetlać tę sieć na liście dostępnych sieci w urządzeniu.
 - **Typ sieci Wi-Fi**: wybierz protokół zabezpieczeń do uwierzytelniania sieci Wi-Fi. Dostępne opcje:
 
-  - **Otwórz (bez uwierzytelniania)** : tej opcji można używać tylko, jeśli sieć jest niezabezpieczona.
-  - **Klucz wstępny protokołu WEP**: wprowadź hasło w polu **Klucz wstępny**. Podczas ustawiania lub konfigurowania sieci organizacji jest również konfigurowane hasło lub klucz sieciowy. Wprowadź to hasło lub klucz sieciowy dla wartości klucza wstępnego.
-  - **Klucz wstępny funkcji WPA**: wprowadź hasło w polu **Klucz wstępny**. Podczas ustawiania lub konfigurowania sieci organizacji jest również konfigurowane hasło lub klucz sieciowy. Wprowadź to hasło lub klucz sieciowy dla wartości klucza wstępnego.
+  - **Otwarte (brak uwierzytelniania)** : z tej opcji można korzystać tylko w sytuacji, gdy sieć jest niezabezpieczona.
+  - **Wstępnie udostępniony klucz WEP**: wprowadź hasło w polu **Klucz wstępny**. Podczas ustawiania lub konfigurowania sieci organizacji jest również konfigurowane hasło lub klucz sieciowy. Wprowadź to hasło lub klucz sieciowy dla wartości klucza wstępnego.
+  - **Wstępnie udostępniony klucz WPA**: wprowadź hasło w polu **Klucz wstępny**. Podczas ustawiania lub konfigurowania sieci organizacji jest również konfigurowane hasło lub klucz sieciowy. Wprowadź to hasło lub klucz sieciowy dla wartości klucza wstępnego.
 
 ### <a name="enterprise"></a>Enterprise
 
 - **Typ sieci Wi-Fi**: wybierz pozycję **Przedsiębiorstwo**.
-- **SSID**: wprowadź **Identyfikator zestawu usług**, który jest rzeczywistą nazwą sieci bezprzewodowej, z którą urządzenia nawiązują połączenie. Jednak przy wyborze połączenia użytkownicy widzą tylko **nazwę sieci** utworzoną wcześniej.
-- **Ukryta sieć**: wybierz pozycję **Włącz**, aby ukrywać tę sieć na liście dostępnych sieci w urządzeniu. Identyfikator SSID nie jest rozgłaszany. Wybierz pozycję **Wyłącz**, aby wyświetlać tę sieć na liście dostępnych sieci w urządzeniu.
+- **SSID**: wprowadź **identyfikator zestawu usług** będący prawdziwą nazwą sieci bezprzewodowej, z którą łączą się urządzenia. Jednak przy wyborze połączenia użytkownicy widzą tylko **nazwę sieci** utworzoną wcześniej.
+- **Sieć ukryta**: wybierz pozycję **Włącz**, aby ukrywać tę sieć na liście dostępnych sieci w urządzeniu. Identyfikator SSID nie jest rozgłaszany. Wybierz pozycję **Wyłącz**, aby wyświetlać tę sieć na liście dostępnych sieci w urządzeniu.
 - **Typ protokołu EAP**: wybierz typ protokołu uwierzytelniania rozszerzonego (EAP) używany do uwierzytelniania zabezpieczonych połączeń bezprzewodowych. Dostępne opcje:
 
-  - **EAP-TLS**: wprowadź też następujące ustawienia:
+  - **EAP-TLS**: Wprowadź też następujące ustawienia:
 
-    - **Zaufanie serwera** - **certyfikat główny na potrzeby walidacji serwera**: wybierz istniejący profil zaufanego certyfikatu głównego. Gdy klient łączy się z siecią, ten certyfikat jest przedstawiany na serwerze i uwierzytelnia połączenie.
+    - **Zaufanie serwera** - **Certyfikat główny weryfikacji serwera**: wybierz istniejący profil zaufanego certyfikatu głównego. Gdy klient łączy się z siecią, ten certyfikat jest przedstawiany na serwerze i uwierzytelnia połączenie.
 
-    - **Uwierzytelnianie klienta** - **Certyfikat klienta na potrzeby jego uwierzytelniania (certyfikat tożsamości)** : wybierz profil certyfikatu klienta protokołu SCEP, który również został wdrożony w urządzeniu. Ten certyfikat to tożsamość przesyłana przez urządzenie do serwera w celu uwierzytelnienia połączenia.
+    - **Uwierzytelnienie klienta** - **Certyfikat klienta na potrzeby uwierzytelniania klienta (certyfikat tożsamości)** : wybierz profil certyfikatu klienta protokołu SCEP, który również został wdrożony w urządzeniu. Ten certyfikat to tożsamość przesyłana przez urządzenie do serwera w celu uwierzytelnienia połączenia.
 
     - **Prywatność tożsamości (tożsamość zewnętrzna)** : wprowadź tekst, który będzie wysyłany w odpowiedzi na żądanie podania tożsamości zgłaszane przez protokół EAP. Ten tekst może mieć dowolną wartość, taką jak `anonymous`. Podczas uwierzytelniania na początku wysyłana jest ta tożsamość anonimowa, a po niej — tożsamość rzeczywista, która jest wysyłana w bezpiecznym tunelu.
 
-  - **EAP-TTLS**: wprowadź też następujące ustawienia:
+  - **EAP-TTLS**: Wprowadź też następujące ustawienia:
 
-    - **Zaufanie serwera** - **certyfikat główny na potrzeby walidacji serwera**: wybierz istniejący profil zaufanego certyfikatu głównego. Gdy klient łączy się z siecią, ten certyfikat jest przedstawiany na serwerze i uwierzytelnia połączenie.
+    - **Zaufanie serwera** - **Certyfikat główny weryfikacji serwera**: wybierz istniejący profil zaufanego certyfikatu głównego. Gdy klient łączy się z siecią, ten certyfikat jest przedstawiany na serwerze i uwierzytelnia połączenie.
 
-    - **Uwierzytelnianie klienta**: wybierz **metodę uwierzytelniania**. Dostępne opcje:
+    - **Uwierzytelnianie klienta**: Wybierz **metodę uwierzytelniania**. Dostępne opcje:
 
       - **Nazwa użytkownika i hasło**: monituj użytkownika o nazwę użytkownika i hasło w celu uwierzytelnienia połączenia. Wprowadź też następujące ustawienia:
-        - **Metoda inna niż EAP (tożsamość wewnętrzna)** : wybierz sposób uwierzytelniania połączenia. Pamiętaj, aby wybrać ten sam protokół, który został skonfigurowany w sieci Wi-Fi. Dostępne opcje:
+        - **Metoda bez protokołu EAP (tożsamość wewnętrzna)** : wybierz sposób uwierzytelniania połączenia. Pamiętaj, aby wybrać ten sam protokół, który został skonfigurowany w sieci Wi-Fi. Dostępne opcje:
 
           - **Hasło nieszyfrowane (PAP)**
           - **Microsoft CHAP (MS-CHAP)**
@@ -81,11 +81,11 @@ Wybierz tę opcję, Jeśli wdrażasz system na urządzeniu z systemem Android w 
 
       - **Prywatność tożsamości (tożsamość zewnętrzna)** : wprowadź tekst, który będzie wysyłany w odpowiedzi na żądanie podania tożsamości zgłaszane przez protokół EAP. Ten tekst może mieć dowolną wartość, taką jak `anonymous`. Podczas uwierzytelniania na początku wysyłana jest ta tożsamość anonimowa, a po niej — tożsamość rzeczywista, która jest wysyłana w bezpiecznym tunelu.
 
-  - **PEAP**: wprowadź też następujące ustawienia:
+  - **PEAP**: Wprowadź też następujące ustawienia:
 
-    - **Zaufanie serwera** - **certyfikat główny na potrzeby walidacji serwera**: wybierz istniejący profil zaufanego certyfikatu głównego. Gdy klient łączy się z siecią, ten certyfikat jest przedstawiany na serwerze i uwierzytelnia połączenie.
+    - **Zaufanie serwera** - **Certyfikat główny weryfikacji serwera**: wybierz istniejący profil zaufanego certyfikatu głównego. Gdy klient łączy się z siecią, ten certyfikat jest przedstawiany na serwerze i uwierzytelnia połączenie.
 
-    - **Uwierzytelnianie klienta**: wybierz **metodę uwierzytelniania**. Dostępne opcje:
+    - **Uwierzytelnianie klienta**: Wybierz **metodę uwierzytelniania**. Dostępne opcje:
 
       - **Nazwa użytkownika i hasło**: monituj użytkownika o nazwę użytkownika i hasło w celu uwierzytelnienia połączenia. Wprowadź też następujące ustawienia:
         - **Metoda uwierzytelniania inna niż EAP (tożsamość wewnętrzna)** : wybierz sposób uwierzytelniania połączenia. Pamiętaj, aby wybrać ten sam protokół, który został skonfigurowany w sieci Wi-Fi. Dostępne opcje:
@@ -99,49 +99,49 @@ Wybierz tę opcję, Jeśli wdrażasz system na urządzeniu z systemem Android w 
 
 ## <a name="work-profile-only"></a>Tylko profil służbowy
 
-### <a name="basic"></a>Podstawowe
+### <a name="basic"></a>Podstawowy
 
-- **Typ sieci Wi-Fi**: wybierz pozycję **Podstawowa**.
-- **SSID**: wprowadź **Identyfikator zestawu usług**, który jest rzeczywistą nazwą sieci bezprzewodowej, z którą urządzenia nawiązują połączenie. Jednak przy wyborze połączenia użytkownicy widzą tylko **nazwę sieci** utworzoną wcześniej.
-- **Ukryta sieć**: wybierz pozycję **Włącz**, aby ukrywać tę sieć na liście dostępnych sieci w urządzeniu. Identyfikator SSID nie jest rozgłaszany. Wybierz pozycję **Wyłącz**, aby wyświetlać tę sieć na liście dostępnych sieci w urządzeniu.
+- **Typ sieci Wi-Fi**: Wybierz pozycję **Podstawowe**.
+- **SSID**: wprowadź **identyfikator zestawu usług** będący prawdziwą nazwą sieci bezprzewodowej, z którą łączą się urządzenia. Jednak przy wyborze połączenia użytkownicy widzą tylko **nazwę sieci** utworzoną wcześniej.
+- **Sieć ukryta**: wybierz pozycję **Włącz**, aby ukrywać tę sieć na liście dostępnych sieci w urządzeniu. Identyfikator SSID nie jest rozgłaszany. Wybierz pozycję **Wyłącz**, aby wyświetlać tę sieć na liście dostępnych sieci w urządzeniu.
 
 ### <a name="enterprise"></a>Enterprise
 
 - **Typ sieci Wi-Fi**: wybierz pozycję **Przedsiębiorstwo**.
-- **SSID**: wprowadź **Identyfikator zestawu usług**, który jest rzeczywistą nazwą sieci bezprzewodowej, z którą urządzenia nawiązują połączenie. Jednak przy wyborze połączenia użytkownicy widzą tylko **nazwę sieci** utworzoną wcześniej.
-- **Ukryta sieć**: wybierz pozycję **Włącz**, aby ukrywać tę sieć na liście dostępnych sieci w urządzeniu. Identyfikator SSID nie jest rozgłaszany. Wybierz pozycję **Wyłącz**, aby wyświetlać tę sieć na liście dostępnych sieci w urządzeniu.
+- **SSID**: wprowadź **identyfikator zestawu usług** będący prawdziwą nazwą sieci bezprzewodowej, z którą łączą się urządzenia. Jednak przy wyborze połączenia użytkownicy widzą tylko **nazwę sieci** utworzoną wcześniej.
+- **Sieć ukryta**: wybierz pozycję **Włącz**, aby ukrywać tę sieć na liście dostępnych sieci w urządzeniu. Identyfikator SSID nie jest rozgłaszany. Wybierz pozycję **Wyłącz**, aby wyświetlać tę sieć na liście dostępnych sieci w urządzeniu.
 - **Typ protokołu EAP**: wybierz typ protokołu uwierzytelniania rozszerzonego (EAP) używany do uwierzytelniania zabezpieczonych połączeń bezprzewodowych. Dostępne opcje:
 
-  - **EAP-TLS**: wprowadź też następujące ustawienia:
+  - **EAP-TLS**: Wprowadź też następujące ustawienia:
 
-    - **Zaufanie serwera** - **certyfikat główny na potrzeby walidacji serwera**: wybierz istniejący profil zaufanego certyfikatu głównego. Gdy klient łączy się z siecią, ten certyfikat jest przedstawiany na serwerze i uwierzytelnia połączenie.
+    - **Zaufanie serwera** - **Certyfikat główny weryfikacji serwera**: wybierz istniejący profil zaufanego certyfikatu głównego. Gdy klient łączy się z siecią, ten certyfikat jest przedstawiany na serwerze i uwierzytelnia połączenie.
 
-    - **Uwierzytelnianie klienta** - **certyfikat klienta na potrzeby uwierzytelniania klienta (certyfikat tożsamości)** : wybierz profil certyfikatu protokołu SCEP lub standardów PKCS, który również został wdrożony do urządzenia. Ten certyfikat to tożsamość przesyłana przez urządzenie do serwera w celu uwierzytelnienia połączenia.
+    - **Uwierzytelnienie klienta** - **Certyfikat klienta na potrzeby uwierzytelniania klienta (certyfikat tożsamości)** : wybierz profil certyfikatu klienta protokołu SCEP lub PKCS, który również został wdrożony w urządzeniu. Ten certyfikat to tożsamość przesyłana przez urządzenie do serwera w celu uwierzytelnienia połączenia.
 
     - **Prywatność tożsamości (tożsamość zewnętrzna)** : wprowadź tekst, który będzie wysyłany w odpowiedzi na żądanie podania tożsamości zgłaszane przez protokół EAP. Ten tekst może mieć dowolną wartość, taką jak `anonymous`. Podczas uwierzytelniania na początku wysyłana jest ta tożsamość anonimowa, a po niej — tożsamość rzeczywista, która jest wysyłana w bezpiecznym tunelu.
 
-  - **EAP-TTLS**: wprowadź też następujące ustawienia:
+  - **EAP-TTLS**: Wprowadź też następujące ustawienia:
 
-    - **Zaufanie serwera** - **certyfikat główny na potrzeby walidacji serwera**: wybierz istniejący profil zaufanego certyfikatu głównego. Gdy klient łączy się z siecią, ten certyfikat jest przedstawiany na serwerze i uwierzytelnia połączenie.
+    - **Zaufanie serwera** - **Certyfikat główny weryfikacji serwera**: wybierz istniejący profil zaufanego certyfikatu głównego. Gdy klient łączy się z siecią, ten certyfikat jest przedstawiany na serwerze i uwierzytelnia połączenie.
 
-    - **Uwierzytelnianie klienta**: wybierz **metodę uwierzytelniania**. Dostępne opcje:
+    - **Uwierzytelnianie klienta**: Wybierz **metodę uwierzytelniania**. Dostępne opcje:
 
       - **Nazwa użytkownika i hasło**: monituj użytkownika o nazwę użytkownika i hasło w celu uwierzytelnienia połączenia. Wprowadź też następujące ustawienia:
-        - **Metoda inna niż EAP (tożsamość wewnętrzna)** : wybierz sposób uwierzytelniania połączenia. Pamiętaj, aby wybrać ten sam protokół, który został skonfigurowany w sieci Wi-Fi. Dostępne opcje:
+        - **Metoda bez protokołu EAP (tożsamość wewnętrzna)** : wybierz sposób uwierzytelniania połączenia. Pamiętaj, aby wybrać ten sam protokół, który został skonfigurowany w sieci Wi-Fi. Dostępne opcje:
 
           - **Hasło nieszyfrowane (PAP)**
           - **Microsoft CHAP (MS-CHAP)**
           - **Microsoft CHAP wersja 2 (MS-CHAP v2)**
 
-      - **Certyfikaty**: wybierz profil certyfikatu klienta protokołu SCEP lub standardów PKCS, który również został wdrożony w urządzeniu. Ten certyfikat to tożsamość przesyłana przez urządzenie do serwera w celu uwierzytelnienia połączenia.
+      - **Certyfikaty**: wybierz profil certyfikatu klienta protokołu SCEP lub PKCS, który również został wdrożony w urządzeniu. Ten certyfikat to tożsamość przesyłana przez urządzenie do serwera w celu uwierzytelnienia połączenia.
 
       - **Prywatność tożsamości (tożsamość zewnętrzna)** : wprowadź tekst, który będzie wysyłany w odpowiedzi na żądanie podania tożsamości zgłaszane przez protokół EAP. Ten tekst może mieć dowolną wartość, taką jak `anonymous`. Podczas uwierzytelniania na początku wysyłana jest ta tożsamość anonimowa, a po niej — tożsamość rzeczywista, która jest wysyłana w bezpiecznym tunelu.
 
-  - **PEAP**: wprowadź też następujące ustawienia:
+  - **PEAP**: Wprowadź też następujące ustawienia:
 
-    - **Zaufanie serwera** - **certyfikat główny na potrzeby walidacji serwera**: wybierz istniejący profil zaufanego certyfikatu głównego. Gdy klient łączy się z siecią, ten certyfikat jest przedstawiany na serwerze i uwierzytelnia połączenie.
+    - **Zaufanie serwera** - **Certyfikat główny weryfikacji serwera**: wybierz istniejący profil zaufanego certyfikatu głównego. Gdy klient łączy się z siecią, ten certyfikat jest przedstawiany na serwerze i uwierzytelnia połączenie.
 
-    - **Uwierzytelnianie klienta**: wybierz **metodę uwierzytelniania**. Dostępne opcje:
+    - **Uwierzytelnianie klienta**: Wybierz **metodę uwierzytelniania**. Dostępne opcje:
 
       - **Nazwa użytkownika i hasło**: monituj użytkownika o nazwę użytkownika i hasło w celu uwierzytelnienia połączenia. Wprowadź też następujące ustawienia:
         - **Metoda uwierzytelniania inna niż EAP (tożsamość wewnętrzna)** : wybierz sposób uwierzytelniania połączenia. Pamiętaj, aby wybrać ten sam protokół, który został skonfigurowany w sieci Wi-Fi. Dostępne opcje:
@@ -149,7 +149,7 @@ Wybierz tę opcję, Jeśli wdrażasz system na urządzeniu z systemem Android w 
           - **Brak**
           - **Microsoft CHAP wersja 2 (MS-CHAP v2)**
 
-      - **Certyfikaty**: wybierz profil certyfikatu klienta protokołu SCEP lub standardów PKCS, który również został wdrożony w urządzeniu. Ten certyfikat to tożsamość przesyłana przez urządzenie do serwera w celu uwierzytelnienia połączenia.
+      - **Certyfikaty**: wybierz profil certyfikatu klienta protokołu SCEP lub PKCS, który również został wdrożony w urządzeniu. Ten certyfikat to tożsamość przesyłana przez urządzenie do serwera w celu uwierzytelnienia połączenia.
 
       - **Prywatność tożsamości (tożsamość zewnętrzna)** : wprowadź tekst, który będzie wysyłany w odpowiedzi na żądanie podania tożsamości zgłaszane przez protokół EAP. Ten tekst może mieć dowolną wartość, taką jak `anonymous`. Podczas uwierzytelniania na początku wysyłana jest ta tożsamość anonimowa, a po niej — tożsamość rzeczywista, która jest wysyłana w bezpiecznym tunelu.
 
@@ -157,4 +157,4 @@ Wybierz tę opcję, Jeśli wdrażasz system na urządzeniu z systemem Android w 
 
 Profil został utworzony, ale nie wykonuje żadnych czynności. Następnie [przypiszesz ten profil](device-profile-assign.md) i będziesz [monitorować jego stan](device-profile-monitor.md).
 
-Możesz również utworzyć profile sieci Wi-Fi dla urządzeń z systemami [Android](wi-fi-settings-android.md), [iOS](wi-fi-settings-ios.md), [macOS](wi-fi-settings-macos.md), [Windows 10](wi-fi-settings-windows.md) i [Windows 8.1](wi-fi-settings-import-windows-8-1.md).
+Możesz również utworzyć profile sieci Wi-Fi dla urządzeń z systemami [Android](wi-fi-settings-android.md), [iOS/iPadOS](wi-fi-settings-ios.md), [macOS](wi-fi-settings-macos.md), [Windows 10](wi-fi-settings-windows.md) i [Windows 8.1](wi-fi-settings-import-windows-8-1.md).

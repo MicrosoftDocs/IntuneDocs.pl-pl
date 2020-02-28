@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/05/2019
+ms.date: 02/18/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8768022872d32116add0ed4ea4caf1f8fcb800f
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
-ms.translationtype: MTE75
+ms.openlocfilehash: 9acb934cdf67aae9c18091a0340f27de635b5399
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059267"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511021"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Rozwiązywanie problemów związanych z zasadami i profilami w usłudze Intune
 
@@ -31,13 +31,13 @@ Usługa Microsoft Intune zawiera kilka wbudowanych funkcji rozwiązywania proble
 
 W tym artykule wymieniono niektóre typowe techniki rozwiązywania problemów i opisano niektóre problemy, które mogą wystąpić.
 
-## <a name="check-tenant-status"></a>Sprawdź stan dzierżawy
+## <a name="check-tenant-status"></a>Sprawdzenie stanu dzierżawy
 
-Sprawdź [stan dzierżawy](../fundamentals/tenant-status.md) i upewnij się, że subskrypcja jest aktywna. Możesz również wyświetlić szczegóły dotyczące aktywnych zdarzeń i klasyfikatorów, które mogą mieć wpływ na wdrożenie zasad lub profilu.
+Sprawdź [stan dzierżawy](../fundamentals/tenant-status.md) i upewnij się, że subskrypcja jest aktywna. Możesz również wyświetlić szczegóły dotyczące aktywnych zdarzeń i porad, które mogą mieć wpływ na wdrożenie zasad lub profilu.
 
 ## <a name="use-built-in-troubleshooting"></a>Korzystanie z wbudowanej funkcji rozwiązywania problemów
 
-1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)wybierz pozycję **Rozwiązywanie problemów i wsparcie**:
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Rozwiązywanie problemów i pomoc techniczna**:
 
     ![W usłudze Intune przejdź do obszaru Pomoc i obsługa techniczna, a następnie wybierz pozycję Rozwiązywanie problemów.](./media/troubleshoot-policies-in-microsoft-intune/help-and-support-troubleshoot.png)
 
@@ -59,25 +59,25 @@ Sprawdź [stan dzierżawy](../fundamentals/tenant-status.md) i upewnij się, że
 
         - Zasady ochrony aplikacji (zarządzanie aplikacjami mobilnymi) nie wymagają, aby urządzenia były zarejestrowane. Aby uzyskać więcej informacji, zobacz [Tworzenie i przypisywanie zasad ochrony aplikacji](../apps/app-protection-policies.md).
 
-    - **Typ dołączenia do usługi Azure AD**: powinna to być wartość **Obszar roboczy** lub **AzureAD**.
+    - **Typ dołączenia do usługi Azure AD**: powinna mieć wartość **Obszar roboczy** lub **AzureAD**.
  
         - Jeśli ta kolumna ma wartość **Niezarejestrowane**, może to oznaczać problem z rejestracją. Zazwyczaj wyrejestrowywanie i ponowne zarejestrowanie urządzenia rozwiązuje ten problem.
 
-    - **Zgodne z usługą Intune**: powinna to być wartość **Tak**. Jeśli jest wyświetlana wartość **Nie**, może to oznaczać problem z zasadami zgodności lub urządzenie nie łączy się z usługą Intune. Na przykład urządzenie może być wyłączone lub nie mieć połączenia sieciowego. Po pewnym czasie urządzenie stanie się niezgodne, prawdopodobnie po upływie 30 dni.
+    - **Zgodne z usługą Intune**: powinna mieć wartość **Tak**. Jeśli jest wyświetlana wartość **Nie**, może to oznaczać problem z zasadami zgodności lub urządzenie nie łączy się z usługą Intune. Na przykład urządzenie może być wyłączone lub nie mieć połączenia sieciowego. Po pewnym czasie urządzenie stanie się niezgodne, prawdopodobnie po upływie 30 dni.
 
         Aby uzyskać więcej informacji, zobacz [Wprowadzenie do zasad zgodności urządzeń](../protect/device-compliance-get-started.md).
 
-    - **Zgodne z usługą Azure AD**: powinna to być wartość **Tak**. Jeśli jest wyświetlana wartość **Nie**, może to oznaczać problem z zasadami zgodności lub urządzenie nie łączy się z usługą Intune. Na przykład urządzenie może być wyłączone lub nie mieć połączenia sieciowego. Po pewnym czasie urządzenie stanie się niezgodne, prawdopodobnie po upływie 30 dni.
+    - **Zgodne z usługą Azure AD**: powinna mieć wartość **Tak**. Jeśli jest wyświetlana wartość **Nie**, może to oznaczać problem z zasadami zgodności lub urządzenie nie łączy się z usługą Intune. Na przykład urządzenie może być wyłączone lub nie mieć połączenia sieciowego. Po pewnym czasie urządzenie stanie się niezgodne, prawdopodobnie po upływie 30 dni.
 
         Aby uzyskać więcej informacji, zobacz [Wprowadzenie do zasad zgodności urządzeń](../protect/device-compliance-get-started.md).
 
-    - **Ostatnie zaewidencjonowanie**: powinna to być niedawna godzina i data. Domyślnie urządzenia w usłudze Intune są ewidencjonowane co 8 godzin.
+    - **Ostatnie zaewidencjonowanie**: powinna być niedawną godziną i datą. Domyślnie urządzenia w usłudze Intune są ewidencjonowane co 8 godzin.
 
         - Jeśli **Ostatnie zaewidencjonowanie** ma wartość większą niż 24 godziny, może to oznaczać problem z urządzeniem. Urządzenie, którego nie można zaewidencjonować, nie może odbierać zasad z usługi Intune.
 
         - Aby wymusić zaewidencjonowanie, wykonaj następujące czynności:
             - Na urządzeniu z systemem Android, Otwórz aplikację Portal firmy > **Urządzenia** > wybierz urządzenie z listy > **Sprawdź ustawienia urządzenia**.
-            - Na urządzeniu z systemem iOS otwórz aplikację Portal firmy > **Urządzenia** > wybierz urządzenie z listy > **Sprawdź ustawienia**.
+            - Na urządzeniu z systemem iOS/iPadOS otwórz aplikację Portal firmy > **Urządzenia** > wybierz urządzenie z listy > **Sprawdź ustawienia**.
 
         - Na urządzeniu z systemem Windows otwórz pozycję **Ustawienia** > **Konta** > **Uzyskaj dostęp do miejsca pracy lub nauki** > wybierz konto lub rejestrację w usłudze zarządzania urządzeniami mobilnymi > **Informacje** > **Synchronizuj**.
 
@@ -91,9 +91,9 @@ Sprawdź [stan dzierżawy](../fundamentals/tenant-status.md) i upewnij się, że
 
         **Stany zasad**:
 
-        - **Nie dotyczy**: te zasady nie są obsługiwane na tej platformie. Na przykład zasady systemu iOS nie działają w systemie Android. Zasady systemu Samsung KNOX nie działają na urządzeniach z systemem Windows.
+        - **Nie dotyczy**: te zasady nie są obsługiwane na tej platformie. Na przykład zasady systemu iOS/iPadOS nie działają w systemie Android. Zasady systemu Samsung KNOX nie działają na urządzeniach z systemem Windows.
         - **Konflikt**: na urządzeniu istnieje ustawienie, którego usługa Intune nie może zastąpić. Lub wdrożono dwie zasady z tym samym ustawieniem przy użyciu różnych wartości.
-        - **Oczekiwanie**: urządzenie nie zostało zaewidencjonowane w usłudze Intune w celu otrzymania zasad. Lub urządzenie odebrało zasady, ale nie zgłosiło stanu usłudze Intune.
+        - **Oczekujące**: urządzenie nie zostało zaewidencjonowane w usłudze Intune w celu otrzymania zasad. Lub urządzenie odebrało zasady, ale nie zgłosiło stanu usłudze Intune.
         - **Błędy**: wyszukaj błędy i możliwe rozwiązania w artykule [Rozwiązywanie problemów z dostępem do zasobów firmy](../fundamentals/troubleshoot-company-resource-access-problems.md).
 
         **Przydatne linki**: 
@@ -110,25 +110,25 @@ Sprawdź [stan dzierżawy](../fundamentals/tenant-status.md) i upewnij się, że
 
     - **Zgodne**: urządzenie odebrało profil i zgłasza usłudze Intune, że działa zgodnie z ustawieniem.
 
-    - **Nie dotyczy**: ustawienie profilu nie ma zastosowania. Pa przykład ustawienia poczty e-mail dla urządzeń z systemem iOS nie mają zastosowania do urządzenia z systemem Android.
+    - **Nie dotyczy**: ustawienie profilu nie ma zastosowania. Na przykład ustawienia poczty e-mail dla urządzeń z systemem iOS/iPadOS nie mają zastosowania do urządzenia z systemem Android.
 
-    - **Oczekiwanie**: profil został wysłany do urządzenia, ale nie zgłosiło ono stanu usłudze Intune. Na przykład szyfrowanie w systemie Android wymaga od użytkownika końcowego włączenia szyfrowania, dlatego może być wyświetlany stan Oczekujące.
+    - **Oczekujące**: profil został wysłany do urządzenia, ale nie zgłosiło ono stanu usłudze Intune. Na przykład szyfrowanie w systemie Android wymaga od użytkownika końcowego włączenia szyfrowania, dlatego może być wyświetlany stan Oczekujące.
 
-**Przydatny link**: [monitorowanie profilów urządzeń konfiguracji](../configuration/device-profile-monitor.md)
+**Przydatny link**: [Monitorowanie profilów urządzeń konfiguracji](../configuration/device-profile-monitor.md)
 
 > [!NOTE]
 > Jeśli dwie zasady z różnymi poziomami ograniczeń dotyczą tego samego urządzenia lub użytkownika, zostaną zastosowane zasady bardziej restrykcyjne.
 
 ## <a name="policy-troubleshooting-resources"></a>Zasoby służące do rozwiązywania problemów z zasadami
 
-- [Rozwiązywanie problemów z zasadami systemu iOS lub Android, które nie mają zastosowania do urządzeń](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154) (otwiera kolejną witrynę firmy Microsoft)
-- [Rozwiązywanie problemów z błędami zasad usługi Intune systemu Windows 10](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (otwiera blog)
-- [Rozwiązywanie problemów z ustawieniami niestandardowymi programu CSP dla systemu Windows 10](https://support.microsoft.com/en-us/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (otwiera kolejną witrynę firmy Microsoft)
-- [Windows 10 zasady grupy zasady zarządzania urządzeniami przenośnymi w usłudze Intune](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/) (otwiera kolejną witrynę firmy Microsoft)
+- [Rozwiązywanie problemów z zasadami systemu iOS/iPadOS lub Android, których nie udaje się zastosować do urządzeń](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154) (przejście do innej witryny firmy Microsoft)
+- [Rozwiązywanie problemów z błędami dotyczącymi zasad usługi Intune systemu Windows 10](https://blogs.technet.microsoft.com/configmgrdogs/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (przejście do bloga)
+- [Rozwiązywanie problemów z ustawieniami niestandardowymi programu CSP dla systemu Windows 10](https://support.microsoft.com/en-us/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (przejście do innej witryny firmy Microsoft)
+- [Zasady grupy w systemie Windows 10 a zasady zarządzania urządzeniami mobilnymi w usłudze Intune](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/) (przejście do innej witryny firmy Microsoft)
 
-## <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>Alert: zapisywanie reguł dostępu do programu Exchange nie powiodło się
+## <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>Alert: Zapisywanie reguł dostępu w programie Exchange nie powiodło się
 
-**Problem**: w konsoli administracyjnej odebrano alert **Zapisywanie reguł dostępu w programie Exchange nie powiodło się**  .
+**Problem**: w konsoli administracyjnej odebrano alert **Zapisywanie reguł dostępu w programie Exchange nie powiodło się**.
 
 Jeśli utworzysz w obszarze roboczym Zasady lokalnej instalacji programu Exchange (konsola administracyjna), ale używasz usługi Office 365, skonfigurowane ustawienia zasad nie będą wymuszane przez usługę Intune. Zanotuj źródło zasad w alercie. W obszarze roboczym Zasady lokalnej instalacji programu Exchange usuń starsze reguły. Starsze reguły to globalne reguły programu Exchange w usłudze Intune dla lokalnego programu Exchange i nie są odpowiednie w przypadku usługi Office 365. Następnie utwórz nowe zasady dla usługi Office 365.
 
@@ -138,13 +138,13 @@ Przydatne informacje można znaleźć w artykule [Rozwiązywanie problemów z lo
 
 Urządzenia z systemem Windows Phone nie zezwalają na obniżenie bezpieczeństwa zasad zabezpieczeń ustawionych wcześniej przy użyciu usługi MDM lub EAS. Na przykład po ustawieniu dla zasady **Minimalna liczba znaków hasła** wartości 8 nastąpiła próba jej zmniejszenia do 4. Do urządzenia są stosowane bardziej restrykcyjne zasady.
 
-Urządzenia z systemem Windows 10 mogą nie usuwać zasad zabezpieczeń podczas cofania przypisywania zasad (Zatrzymaj wdrażanie). Może być konieczne pozostawienie przypisanych zasad, a następnie zmiana ustawień zabezpieczeń z powrotem na wartości domyślne.
+Urządzenia z systemem Windows 10 mogą nie usunąć zasad zabezpieczeń podczas cofania przypisania zasad (zatrzymania wdrażania). Może być konieczne pozostawienie przypisanych zasad, a następnie zmiana ustawień zabezpieczeń z powrotem na wartości domyślne.
 
 W zależności od platformy urządzenia jeśli chcesz zmienić zasady na wartość mniej bezpieczną, może być konieczne zresetowanie zasad zabezpieczeń.
 
 Na przykład w systemie Windows 8.1 na pulpicie przesuń palcem z prawej strony, aby otworzyć pasek **Panele funkcji**. Wybierz pozycję **Ustawienia** > **Panel sterowania** > **Konta użytkowników**. Po lewej stronie wybierz link **Resetuj zasady zabezpieczeń** i wybierz pozycję **Resetuj zasady**.
 
-W przypadku innych platform, takich jak Android, iOS czy Windows Phone 8.1, zastosowanie mniej restrykcyjnych zasad może wymagać wycofania i ponownego zarejestrowania urządzenia.
+W przypadku innych platform, takich jak Android, iOS/iPadOS czy Windows Phone 8.1, zastosowanie mniej restrykcyjnych zasad może wymagać wycofania i ponownego zarejestrowania urządzenia.
 
 Przydatne informacje można znaleźć w artykule [Rozwiązywanie problemów z rejestrowaniem urządzeń](../enrollment/troubleshoot-device-enrollment-in-intune.md).
 

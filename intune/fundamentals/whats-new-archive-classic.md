@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e88741609dc1a351d1971c907cd2e442cfd4b905
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
-ms.translationtype: MTE75
+ms.openlocfilehash: 94ff28cf36457d2d8b20e173508b7c9894a7d5bc
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72999520"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77510541"
 ---
 # <a name="whats-new-in-the-intune-classic-portal---previous-months"></a>Nowości w portalu klasycznym usługi Intune — poprzednie miesiące
 
@@ -115,7 +115,7 @@ Informujemy o zmianie, która zostanie wprowadzona w ciągu następnych kilku mi
 
 Zrzuty ekranu przedstawiające poprzednie środowisko logowania, nowe środowisko logowania z poświadczeniami oraz nowe środowisko logowania za pomocą innego urządzenia można znaleźć na stronie [Co nowego w interfejsie aplikacji](whats-new-app-ui.md).
 
-#### <a name="plan-for-change-intune-is-changing-the-intune-partner-portal-experience----1050016---"></a>Planowane zmiany: zmiany w usłudze Intune dotyczące witryny Intune Partner Portal <!-- 1050016 -->
+#### <a name="plan-for-change-intune-is-changing-the-intune-partner-portal-experience----1050016---"></a>Planowanie zmian: zmiany w usłudze Intune dotyczące witryny Intune Partner Portal <!-- 1050016 -->
 
 Wraz z aktualizacją usługi w połowie maja 2017 r. strona Intune Partner zostanie usunięta z witryny manage.microsoft.com.  
 
@@ -361,9 +361,9 @@ Nowa aplikacja będzie również umożliwiać użytkownikom korzystanie z dodatk
 > [!IMPORTANT]
 > __Aktualizacja dotycząca usługi Intune i systemu Android for Work__ Można wdrożyć aplikacje systemu Android for Work z akcją __Wymagane__, ale jeśli grupy usługi Intune zostały zmigrowane do nowego środowiska grup usługi Azure AD, będzie można wdrożyć aplikacje tylko jako __Dostępne__.
 
-__Dodatek Cordova do zestawu SDK aplikacji usługi Intune obsługuje obecnie usługę MAM bez rejestracji__ Deweloperzy aplikacji mogą teraz używać dodatku Cordova do zestawu SDK aplikacji usługi Intune, aby w swoich aplikacjach opartych na oprogramowaniu Cordova dla systemów Android i iOS włączyć funkcje zarządzania aplikacjami mobilnymi bez rejestracji urządzeń. Zestaw SDK aplikacji usługi Intune dla wtyczki Cordova można znaleźć [tutaj](https://github.com/msintuneappsdk/cordova-plugin-ms-intune-mam).
+__Wtyczka zestawu Intune App SDK dla oprogramowania Cordova obsługuje obecnie usługę MAM bez rejestracji__ Deweloperzy aplikacji mogą teraz używać wtyczki zestawu Intune App SDK dla oprogramowania Cordova, aby w swoich aplikacjach opartych na oprogramowaniu Cordova dla systemów Android i iOS/iPadOS włączyć funkcje zarządzania aplikacjami mobilnymi bez rejestracji urządzeń. Zestaw SDK aplikacji usługi Intune dla wtyczki Cordova można znaleźć [tutaj](https://github.com/msintuneappsdk/cordova-plugin-ms-intune-mam).
 
-__Składnik Xamarin zestawu SDK aplikacji usługi Intune obsługuje obecnie usługę MAM bez rejestracji__ Deweloperzy aplikacji mogą teraz używać składnika Xamarin zestawu SDK aplikacji usługi Intune, aby w swoich aplikacjach opartych na platformie Xamarin dla systemów Android i iOS włączyć funkcje zarządzania aplikacjami mobilnymi bez rejestracji urządzeń. Składnik Xamarin zestawu SDK aplikacji usługi Intune można znaleźć [tutaj](https://github.com/msintuneappsdk/intune-app-sdk-xamarin).
+__Składnik Xamarin zestawu Intune App SDK obsługuje obecnie usługę MAM bez rejestracji__ Deweloperzy aplikacji mogą teraz używać składnika Xamarin zestawu Intune App SDK, aby w swoich aplikacjach opartych na platformie Xamarin dla systemów Android i iOS/iPadOS włączyć funkcje zarządzania aplikacjami mobilnymi bez rejestracji urządzeń. Składnik Xamarin zestawu SDK aplikacji usługi Intune można znaleźć [tutaj](https://github.com/msintuneappsdk/intune-app-sdk-xamarin).
 
 ### <a name="notices"></a>Uwagi
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cafe9d3036a727d79de88eda050399138da55675
-ms.sourcegitcommit: 24487f078349795922dc497c952e8358cf767a1a
-ms.translationtype: MTE75
+ms.openlocfilehash: 7113552e09a7c7fa145a452e56575bfaf5297c3e
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76977754"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514572"
 ---
 # <a name="in-development-for-microsoft-intune---february-2020"></a>Funkcje usługi Microsoft Intune w trakcie opracowywania — luty 2020 r.
 
@@ -65,8 +65,8 @@ Zaktualizujemy aplikację Portal firmy na urządzeniach z systemem Windows, aby 
 Aplikacja Portal firmy będzie wyświetlać dodatkowe komunikaty o stanie instalacji aplikacji dla użytkowników końcowych. Poniższe warunki dotyczą nowych funkcji zależności Win32:
 - Instalowanie aplikacji nie powiodło się. Zależności zdefiniowane przez administratora nie zostały spełnione.
 
-### <a name="retarget-web-clips-to-microsoft-edge-on-ios-devices---5455276---"></a>Przekierowywanie klipów internetowych do przeglądarki Microsoft Edge na urządzeniach z systemem iOS<!-- 5455276 -->
-Klipy internetowe, które działają jako przypięte aplikacje internetowe na urządzeniach z systemem iOS, będą musiały zostać zaktualizowane. Nowo wdrożone klipy internetowe będą otwierane w przeglądarce Microsoft Edge, a nie w programie Intune Managed Browser, jeśli będzie to wymagane do otwarcia w chronionej przeglądarce. Istniejące klipy internetowe trzeba będzie skierować tak, aby były otwierane w przeglądarce Microsoft Edge, a nie Managed Browser.
+### <a name="retarget-web-clips-to-microsoft-edge-on-iosipados-devices---5455276---"></a>Przekierowywanie klipów internetowych do przeglądarki Microsoft Edge na urządzeniach z systemem iOS/iPadOS<!-- 5455276 -->
+Klipy internetowe, które działają jako przypięte aplikacje internetowe na urządzeniach z systemem iOS/iPadOS, będą musiały zostać zaktualizowane. Nowo wdrożone klipy internetowe będą otwierane w przeglądarce Microsoft Edge, a nie w programie Intune Managed Browser, jeśli będzie to wymagane do otwarcia w chronionej przeglądarce. Istniejące klipy internetowe trzeba będzie skierować tak, aby były otwierane w przeglądarce Microsoft Edge, a nie Managed Browser.
 
 ### <a name="macos-company-portal-user-experience-improvements---5568987---"></a>Ulepszenia środowiska użytkownika w aplikacji Portal firmy dla systemu macOS<!-- 5568987 -->
 Ulepszamy obsługę rejestracji urządzeń z systemem macOS i aplikację Portal firmy dla komputerów Mac. Można oczekiwać następujących zmian:
@@ -92,22 +92,22 @@ Zostanie udostępniony nowy profil konfiguracji urządzenia z systemem macOS, kt
 Dotyczy:
 - macOS
 
-### <a name="vpn-profiles-with-ikev2-vpn-connections-can-use-always-on-with-ios-devices----1947932-idready---"></a>Profile sieci VPN z połączeniami sieci VPN z protokołem IKEv2 mogą używać funkcji Zawsze włączone na urządzeniach z systemem iOS <!-- 1947932 idready -->
-Na urządzeniach z systemem iOS można utworzyć profil sieci VPN, który używa połączenia IKEv2 (**Konfiguracja urządzenia**  >  **Profile**  >  **Utwórz profil**  >  **iOS/iPadOS** dla platformy > **VPN** dla typu profilu). W przyszłej aktualizacji będzie można skonfigurować funkcję Zawsze włączone przy użyciu protokołu IKEv2. Po skonfigurowaniu profile sieci VPN IKEv2 łączą się automatycznie i pozostają połączone (lub szybko ponownie nawiązują połączenie) z siecią VPN. Pozostają one połączone nawet podczas przechodzenia między sieciami lub ponownego uruchamiania urządzeń.
+### <a name="vpn-profiles-with-ikev2-vpn-connections-can-use-always-on-with-iosipados-devices----1947932-idready---"></a>Profile sieci VPN z połączeniami sieci VPN z protokołem IKEv2 mogą używać funkcji Zawsze włączone na urządzeniach z systemem iOS/iPadOS <!-- 1947932 idready -->
+Na urządzeniach z systemem iOS/iPadOS można utworzyć profil sieci VPN, który używa połączenia IKEv2 (**Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **iOS/iPadOS** jako platforma > **VPN** jako typ profilu). W przyszłej aktualizacji będzie można skonfigurować funkcję Zawsze włączone przy użyciu protokołu IKEv2. Po skonfigurowaniu profile sieci VPN IKEv2 łączą się automatycznie i pozostają połączone (lub szybko ponownie nawiązują połączenie) z siecią VPN. Pozostają one połączone nawet podczas przechodzenia między sieciami lub ponownego uruchamiania urządzeń.
 
-W systemie iOS zawsze włączona sieć VPN jest ograniczona do profilów IKEv2.
+W systemie iOS/iPadOS zawsze włączona sieć VPN jest ograniczona do profilów IKEv2.
 
-Aby wyświetlić bieżące ustawienia profilów IKEv2, które możesz skonfigurować, przejdź do tematu [Dodawanie ustawień sieci VPN na urządzeniach z systemem iOS w usłudze Microsoft Intune](../configuration/vpn-settings-ios.md#ikev2-settings).
+Aby wyświetlić bieżące ustawienia profilów IKEv2, które możesz skonfigurować, przejdź do tematu [Dodawanie ustawień sieci VPN na urządzeniach z systemem iOS/iPadOS w usłudze Microsoft Intune](../configuration/vpn-settings-ios.md#ikev2-settings).
 
 Dotyczy:
 - iOS
 
-### <a name="improved-user-interface-experience-when-creating-configuration-profiles-on-ios-and-macos-devices---5569008-5569039-5569057-5569110-5569116-5569131-5569139-5569153-5859984-idready---"></a>Ulepszony interfejs użytkownika podczas tworzenia profilów konfiguracji na urządzeniach z systemami iOS i macOS<!-- 5569008-5569039-5569057-5569110-5569116-5569131-5569139-5569153-5859984 idready -->
-Środowisko tworzenia profilu dla urządzeń z systemem iOS lub macOS w centrum administracyjnym zarządzania punktem końcowym zostanie zaktualizowane. Ta zmiana ma wpływ na następujące profile konfiguracji urządzeń (**Urządzenia**  >  **Profile konfiguracji**  >  **Utwórz profil**  >  **iOS** lub **macOS** dla platformy):
+### <a name="improved-user-interface-experience-when-creating-configuration-profiles-on-iosipados-and-macos-devices---5569008-5569039-5569057-5569110-5569116-5569131-5569139-5569153-5859984-idready---"></a>Ulepszony interfejs użytkownika podczas tworzenia profilów konfiguracji na urządzeniach z systemami iOS/iPadOS i macOS<!-- 5569008-5569039-5569057-5569110-5569116-5569131-5569139-5569153-5859984 idready -->
+Środowisko tworzenia profilu dla urządzeń z systemem iOS/iPadOS lub macOS w centrum administracyjnym zarządzania punktem końcowym zostanie zaktualizowane. Ta zmiana ma wpływ na następujące profile konfiguracji urządzeń (**Urządzenia**  >  **Profile konfiguracji**  >  **Utwórz profil**  >  **iOS** lub **macOS** dla platformy):
 
-- Niestandardowe: iOS, macOS
-- Funkcje urządzeń: iOS, macOS
-- Ograniczenia urządzeń: iOS, macOS
+- Niestandardowe: iOS/iPadOS, macOS
+- Funkcje urządzenia: iOS/iPadOS, macOS
+- Ograniczenia urządzeń: iOS/iPadOS, macOS
 - Ochrona punktu końcowego: macOS
 - Rozszerzenia: macOS
 - Plik preferencji: macOS
@@ -182,7 +182,7 @@ W pełni zarządzane urządzenia z systemem Android Enterprise będą mogły kor
 ### <a name="use-antivirus-policy-to-manage-settings-for-microsoft-defender-antivirus-and-the-windows-security-experience--6131401---"></a>Używanie zasad ochrony antywirusowej do zarządzania ustawieniami programu Microsoft Defender Antivirus i środowiskiem zabezpieczeń systemu Windows<!--6131401 -->
 W węźle *Zabezpieczenia punktu końcowego* będzie można skonfigurować ustawienia **Ochrona antywirusowa**. Konfigurując zasady ochrony antywirusowej, można zdefiniować ustawienia dla urządzeń z systemem Windows 10 przy użyciu dwóch typów profilów:
 
-- Program antywirusowy Microsoft Defender: zarządzanie ustawieniami ochrony chmury, wykluczeniami ochrony antywirusowej, korygowania, opcji skanowania i innymi.
+- Program antywirusowy Microsoft Defender: zarządzanie ustawieniami ochrony chmury, wykluczeń ochrony antywirusowej, korygowania, opcji skanowania i innymi.
 - Środowisko zabezpieczeń systemu Windows: zarządzanie sposobem korzystania przez użytkowników z ustawień zabezpieczeń systemu Windows na urządzeniach. Będzie można skonfigurować elementy, które użytkownicy końcowi mogą wyświetlać w Centrum zabezpieczeń usługi Microsoft Defender, i otrzymywane przez nich powiadomienia. 
 
 <!-- ***********************************************-->

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fb67cf2cb17b78c4034c3b73e229e160723d975e
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
-ms.translationtype: MTE75
+ms.openlocfilehash: a4fdbf7ca252af9eb8513d437e3275692a1f8d13
+ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73414387"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415244"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Zarządzanie komputerami z systemem Windows przy użyciu oprogramowania klienckiego usługi Intune
 
@@ -30,7 +30,7 @@ ms.locfileid: "73414387"
 > [!WARNING]
 > Firma Microsoft ogłosiła, że [świadczenie pomocy technicznej dla systemu Windows 7 zakończy się 14 stycznia 2020 r](https://support.microsoft.com/help/4057281/windows-7-support-will-end-on-january-14-2020). W tym dniu zostanie też wycofana obsługa urządzeń z systemem Windows 7 w usłudze Intune. Firma Microsoft zdecydowanie zaleca przejście do systemu Windows 10, aby uniknąć przerw w świadczeniu usług i pomocy technicznej.
 > 
-> Aby uzyskać więcej informacji, zobacz [Planowanie zmian w usłudze Intune: zbliża się koniec wsparcia dla systemu Windows 7](../fundamentals/whats-new.md#intune-plan-for-change-nearing-end-of-support-for-windows-7).
+> Aby uzyskać więcej informacji, zobacz [wpis w blogu dotyczący planowania zmian](https://aka.ms/Windows7_Intune).
 
 > [!NOTE]
 > Możesz użyć usługi Microsoft Intune do zarządzania komputerami z systemem Windows albo [jako urządzeniami przenośnymi z wykorzystaniem zarządzania urządzeniami przenośnymi (MDM)](../enrollment/windows-enroll.md), albo jako komputerami z wykorzystaniem oprogramowania klienckiego usługi Intune zgodnie z poniższym opisem. Jednak firma Microsoft zaleca, aby klienci [używali rozwiązania MDM do zarządzania](../enrollment/windows-enroll.md) zawsze, gdy jest to możliwe. Aby uzyskać więcej informacji, zobacz temat [Porównanie zarządzania komputerami z systemem Windows jako komputerami i jako urządzeniami mobilnymi](pc-management-comparison.md) 

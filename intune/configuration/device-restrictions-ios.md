@@ -1,12 +1,12 @@
 ---
-title: Ustawienia urządzenia z systemem iOS w usłudze Microsoft Intune — Azure | Microsoft Docs
+title: Ustawienia urządzenia z systemem iOS/iPadOS w usłudze Microsoft Intune — Azure | Microsoft Docs
 titleSuffix: ''
-description: Dodawaj, konfiguruj lub twórz ustawienia na urządzeniach z systemem iOS w celu ograniczania funkcji, na przykład ustawiania wymagań dotyczących haseł, kontrolowania zablokowanego ekranu, używania wbudowanych aplikacji, dodawania ograniczonych lub zatwierdzonych aplikacji, obsługi urządzeń z funkcją Bluetooth, łączenia z chmurą na potrzeby tworzenia kopii zapasowych i magazynowania, włączania trybu kiosku, dodawania domen oraz kontrolowania sposobu, w jaki użytkownicy pracują z przeglądarką internetową Safari w usłudze Microsoft Intune.
+description: Dodawaj, konfiguruj lub twórz ustawienia na urządzeniach z systemem iOS/iPadOS w celu ograniczania funkcji, na przykład ustawiania wymagań dotyczących haseł, kontrolowania zablokowanego ekranu, używania wbudowanych aplikacji, dodawania ograniczonych lub zatwierdzonych aplikacji, obsługi urządzeń z funkcją Bluetooth, łączenia z chmurą na potrzeby tworzenia kopii zapasowych i magazynowania, włączania trybu kiosku, dodawania domen oraz kontrolowania sposobu, w jaki użytkownicy pracują z przeglądarką internetową Safari w usłudze Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/04/2020
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dc252068d963d75bf6ade79852d6ba01bda8800b
-ms.sourcegitcommit: 9b29478f815e10c46c8030abe0146d601ce0e28c
-ms.translationtype: MTE75
+ms.openlocfilehash: 1e352ca0c0100ebe1756d621feb725e040521901
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77051613"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513076"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>Ustawienia urządzeń z systemem iOS i iPadOS umożliwiające działanie funkcji lub ich ograniczanie przy użyciu usługi Intune
 
 W tym artykule wymieniono i opisano różne ustawienia, którymi można sterować na urządzeniach z systemem iOS lub iPadOS. Użyj tych ustawień w ramach swojego rozwiązania do zarządzania urządzeniami mobilnymi (MDM), aby zezwalać na działanie funkcji lub je wyłączać, ustawiać reguły haseł, zezwalać na działanie konkretnych aplikacji lub je ograniczać i nie tylko.
 
-Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune, a następnie przypisywane lub wdrażane na urządzeniach z systemem iOS.
+Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune, a następnie przypisywane lub wdrażane na urządzeniach z systemem iOS/iPadOS.
 
 > [!TIP]
 > Korzystają one z ustawień zarządzania urządzeniami mobilnymi firmy Apple. Aby uzyskać więcej informacji na temat tych ustawień, zobacz [Ustawienia zarządzania urządzeniami mobilnymi firmy Apple](https://support.apple.com/guide/mdm/welcome/web) (zostanie otwarta witryna internetowa firmy Apple).
@@ -37,7 +37,7 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 [Utwórz profil konfiguracji ograniczeń urządzenia](../device-restrictions-configure.md).
 
 > [!NOTE]
-> Te ustawienia mają zastosowanie do różnych typów rejestracji, a niektóre z nich dotyczą wszystkich opcji rejestracji. Aby uzyskać więcej informacji na temat różnych typów rejestracji, zobacz [Rejestracja systemu iOS](../ios-enroll.md).
+> Te ustawienia mają zastosowanie do różnych typów rejestracji, a niektóre z nich dotyczą wszystkich opcji rejestracji. Aby uzyskać więcej informacji na temat różnych typów rejestracji, zobacz [Rejestracja systemu iOS/iPadOS](../ios-enroll.md).
 
 ## <a name="general"></a>Ogólne
 
@@ -45,7 +45,7 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 
 - **Udostępnij dane użycia**: wybierz pozycję **Blokuj**, aby uniemożliwić urządzeniu wysyłanie danych diagnostycznych i danych użycia do firmy Apple. Pozycja **Nieskonfigurowane** (domyślna) umożliwia wysyłanie tych danych.
 
-- **Przechwytywanie ekranu**: wybierz pozycję **Blokuj**, aby uniemożliwić tworzenie zrzutów ekranu i przechwytywanie ekranów w urządzeniu. W systemie iOS 9.0 i nowszych blokowane jest również nagrywanie ekranu. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia użytkownikowi przechwytywanie zawartości ekranu w formie obrazu lub pliku wideo.
+- **Przechwytywanie ekranu**: wybierz pozycję **Blokuj**, aby uniemożliwić tworzenie zrzutów ekranu i przechwytywanie ekranów w urządzeniu. W systemie iOS/iPadOS 9.0 i nowszych blokowane jest również nagrywanie ekranu. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia użytkownikowi przechwytywanie zawartości ekranu w formie obrazu lub pliku wideo.
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ustawienia mają zastosowanie do: Rejestrowanie urządzeń, Automatyczne rejestrowanie urządzeń (nadzorowane)
 
@@ -61,6 +61,7 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 
   Ta funkcja ma zastosowanie do:  
   - System iOS 9.3.2 i nowsze
+  - System iPadOS 13.0 i nowsze
 
 - **Blokuj zdalne obserwowanie ekranów przez aplikację Classroom**: wybierz opcję **Blokuj**, aby nie był możliwy zdalny podgląd ekranu urządzenia za pomocą aplikacji Classroom. Pozycja **Nieskonfigurowane** (domyślna) umożliwia aplikacji Classroom firmy Apple wyświetlanie ekranu.
 
@@ -68,15 +69,16 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 
   Ta funkcja ma zastosowanie do:  
   - System iOS 9.3 i nowsze
+  - System iPadOS 13.0 i nowsze
 
-- **Obserwacja ekranu bez monitowania za pomocą aplikacji Classroom**: w przypadku ustawienia pozycji **Zezwalaj** nauczyciele mogą dyskretnie obserwować ekrany urządzeń z systemem iOS przy użyciu aplikacji Classroom bez wiedzy uczniów. Urządzenia uczniów zarejestrowanych na zajęcia za pomocą aplikacji Classroom automatycznie udzielają uprawnień nauczycielowi na danym kursie. Pozycja **Nie skonfigurowano** (ustawienie domyślne) blokuje tę funkcję.
+- **Obserwacja ekranu bez monitowania za pomocą aplikacji Classroom**: w przypadku ustawienia pozycji **Zezwalaj** nauczyciele mogą dyskretnie obserwować ekrany urządzeń z systemem iOS/iPadOS przy użyciu aplikacji Classroom bez wiedzy uczniów. Urządzenia uczniów zarejestrowanych na zajęcia za pomocą aplikacji Classroom automatycznie udzielają uprawnień nauczycielowi na danym kursie. Pozycja **Nie skonfigurowano** (ustawienie domyślne) blokuje tę funkcję.
 
   Aby użyć tego ustawienia, w ustawieniu **Przechwytywanie ekranu** wybierz pozycję **Blokuj**.
 
 - **Zaufanie do aplikacji dla przedsiębiorstw**: wybierz pozycję **Blokuj**, aby usunąć przycisk **Ufaj deweloperowi aplikacji dla przedsiębiorstw** w obszarze Ustawienia > Ogólne > Zarządzanie profilami i urządzeniami na urządzeniu. Opcja **Nieskonfigurowane** (domyślna) umożliwia użytkownikowi określenie, że ufa aplikacjom, które nie zostały pobrane ze sklepu z aplikacjami.
-- **Modyfikacja konta**: po ustawieniu pozycji **Blokuj** użytkownik nie może aktualizować ustawień specyficznych dla urządzenia z poziomu aplikacji obsługującej ustawienia systemu iOS. Na przykład użytkownik nie może tworzyć nowych kont urządzenia lub zmieniać nazwy użytkownika albo hasła. Opcja **Nieskonfigurowane** (domyślna) umożliwia użytkownikom zmianę tych ustawień.
+- **Modyfikacja konta**: po ustawieniu pozycji **Blokuj** użytkownik nie może aktualizować ustawień specyficznych dla urządzenia z poziomu aplikacji obsługującej ustawienia systemu iOS/iPadOS. Na przykład użytkownik nie może tworzyć nowych kont urządzenia lub zmieniać nazwy użytkownika albo hasła. Opcja **Nieskonfigurowane** (domyślna) umożliwia użytkownikom zmianę tych ustawień.
 
-  Ta funkcja ma również zastosowanie w przypadku ustawień dostępnych z poziomu aplikacji z ustawieniami dla systemu iOS, takich jak Poczta, Kontakty, Kalendarz, Twitter i inne. Ta funkcja nie ma zastosowania w przypadku aplikacji z ustawieniami konta, których nie można skonfigurować z poziomu aplikacji obsługującej ustawienia dla systemu iOS, na przykład aplikacji Microsoft Outlook.
+  Ta funkcja ma również zastosowanie w przypadku ustawień dostępnych z poziomu aplikacji z ustawieniami dla systemu iOS/iPadOS, takich jak Poczta, Kontakty, Kalendarz, Twitter i inne. Ta funkcja nie ma zastosowania w przypadku aplikacji z ustawieniami konta, których nie można skonfigurować z poziomu aplikacji obsługującej ustawienia dla systemu iOS/iPadOS, na przykład aplikacji Microsoft Outlook.
 
 - **Czas korzystania z urządzenia**: Wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom określanie własnych ograniczeń w obszarze ustawień urządzenia Czas korzystania z urządzenia. Pozycja **Nieskonfigurowane** zezwala użytkownikowi na konfigurowanie ograniczeń urządzenia (na przykład kontroli rodzicielskiej oraz ograniczeń dotyczących zawartości i prywatności) na urządzeniu.
 
@@ -91,7 +93,7 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 - **Modyfikowanie tapety**: pozycja **Blokuj** uniemożliwia zmianę tapety. Opcja **Nieskonfigurowane** (domyślna) umożliwia użytkownikowi zmianę tapety na urządzeniu.
 - **Modyfikowanie ustawień zaufania aplikacji dla przedsiębiorstw**: pozycja **Blokuj** uniemożliwia użytkownikowi zmianę ustawień zaufania aplikacji przedsiębiorstwa na urządzeniach nadzorowanych. Opcja **Nieskonfigurowane** (domyślna) umożliwia użytkownikowi ufanie aplikacjom, które nie zostały pobrane ze sklepu z aplikacjami.
 - **Zmiany profilu konfiguracji**: pozycja **Blokuj** uniemożliwia zmiany profilów konfiguracji na urządzeniu. Opcja **Nieskonfigurowane** (domyślna) zezwala użytkownikowi na instalowanie profilów konfiguracji.
-- **Blokada aktywacji**: wybierz pozycję **Zezwalaj**, aby umożliwić stosowanie blokady aktywacji na nadzorowanych urządzeniach z systemem iOS. Blokada aktywacji utrudnia ponowne aktywowanie utraconego lub skradzionego urządzenia.
+- **Blokada aktywacji**: wybierz pozycję **Zezwalaj**, aby umożliwić stosowanie blokady aktywacji na nadzorowanych urządzeniach z systemem iOS/iPadOS. Blokada aktywacji utrudnia ponowne aktywowanie utraconego lub skradzionego urządzenia.
 - **Blokuj usuwanie aplikacji**: wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom usuwanie aplikacji. Opcja **Nieskonfigurowane** (domyślna) pozwala użytkownikom na usuwanie aplikacji z urządzenia.
 - **Zezwalaj na akcesoria USB, gdy urządzenie jest zablokowane**: pozycja **Zezwalaj** umożliwia akcesoriom USB wymianę danych z urządzeniem, które było zablokowane przez dłużej niż godzinę. Pozycja **Nie skonfigurowano** (wartość domyślna) nie aktualizuje trybu ograniczonego USB na urządzeniu, a akcesoria USB nie mogą przesyłać danych z urządzenia zablokowanego przez ponad godzinę.
 - **Wymuszaj automatyczne ustawianie daty i godziny**: pozycja **Wymagaj** wymusza automatyczne ustawianie daty i godziny na urządzeniach nadzorowanych. Strefa czasowa urządzenia jest aktualizowana, gdy urządzenie ma połączenie komórkowe lub sieć Wi-Fi z włączonymi usługami lokalizacji.
@@ -99,24 +101,28 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 
   Ta funkcja ma zastosowanie do:  
   - System iOS 11.3 i nowsze
+  - System iPadOS 13.0 i nowsze
 
 - **Zezwalaj aplikacji Classroom na blokowanie aplikacji i blokowanie urządzenia bez monitu**: Pozycja **Włącz** umożliwia nauczycielowi blokowanie aplikacji lub urządzeń za pomocą aplikacji Classroom bez monitowania uczniów. Blokowanie aplikacji oznacza, że na urządzeniu można uzyskać dostęp tylko do aplikacji określonych przez nauczyciela. Pozycja **Nieskonfigurowane** (ustawienie domyślne) uniemożliwia nauczycielowi blokowanie aplikacji lub urządzeń za pomocą aplikacji Classroom bez monitowania uczniów.
 
   Ta funkcja ma zastosowanie do:  
   - System iOS 11.0 i nowsze
+  - System iPadOS 13.0 i nowsze
 
 - **Automatycznie dołączaj do zajęć w aplikacji Classroom bez monitu**: Pozycja **Włącz** automatycznie zezwala uczniom na dołączanie do zajęć w aplikacji Classroom bez monitowania nauczyciela. Pozycja **Nieskonfigurowane** (ustawienie domyślne) powoduje wyświetlenie nauczycielowi monitu o uczniach, którzy chcą dołączyć do zajęć w aplikacji Classroom.
 
   Ta funkcja ma zastosowanie do:  
   - System iOS 11.0 i nowsze
+  - System iPadOS 13.0 i nowsze
 
 - **Blokuj tworzenie sieci VPN**: pozycja **Blokuj** uniemożliwia użytkownikom tworzenie ustawień konfiguracji sieci VPN. Opcja **Nieskonfigurowane** (domyślna) pozwala użytkownikom na tworzenie sieci VPN na urządzeniu.
 - **Modyfikowanie ustawień karty eSIM**: Pozycja **Blokuj** uniemożliwia użytkownikom dodawanie i usuwanie planów komórkowych w ustawieniach karty eSIM urządzenia. Opcja **Nieskonfigurowane** (domyślna) umożliwia użytkownikom zmianę tych ustawień.
 
   Ta funkcja ma zastosowanie do:  
   - System iOS 12.1 i nowsze
+  - System iPadOS 13.0 i nowsze
 
-- **Odrocz aktualizacje oprogramowania**: Jeśli jest wybrana opcja **Nieskonfigurowane** (ustawienie domyślne), aktualizacje oprogramowania są wyświetlane na urządzeniu w momencie ich publikacji przez firmę Apple. Na przykład jeśli firma Apple opublikuje aktualizację systemu iOS określonego dnia, ta aktualizacja będzie naturalnie widoczna na urządzeniu w okolicy tego terminu.
+- **Odrocz aktualizacje oprogramowania**: Jeśli jest wybrana opcja **Nieskonfigurowane** (ustawienie domyślne), aktualizacje oprogramowania są wyświetlane na urządzeniu w momencie ich publikacji przez firmę Apple. Na przykład jeśli firma Apple opublikuje aktualizację systemu iOS/iPadOS określonego dnia, ta aktualizacja będzie naturalnie widoczna na urządzeniu w okolicy tego terminu.
 
   Pozycja **Włącz** umożliwia opóźnienie momentu wyświetlenia aktualizacji oprogramowania na urządzeniach o określony czas z przedziału 0–90 dni. To ustawienie nie określa momentu instalowania lub nieinstalowania aktualizacji. 
 
@@ -126,6 +132,7 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 
     To ustawienie ma zastosowanie do:  
     - System iOS 11.3 i nowsze
+    - System iPadOS 13.0 i nowsze
 
 ## <a name="password"></a>Hasło
 
@@ -159,13 +166,13 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 
 - **Liczba logowań zakończonych niepowodzeniem przed wyczyszczeniem urządzenia**: Wprowadź liczbę dopuszczalnych nieudanych logowań przed wyczyszczeniem urządzenia (od 4 do 11).
   
-  System iOS ma wbudowane zabezpieczenia, które mogą mieć wpływ na to ustawienie. Na przykład system iOS może opóźniać wyzwalanie zasad w zależności od liczby błędów logowania. Może również uznawać wielokrotne wprowadzenie tego samego kodu dostępu za jedną próbę. Przydatnym zasobem jest [Przewodnik po zabezpieczeniach systemu iOS](https://www.apple.com/business/site/docs/iOS_Security_Guide.pdf) firmy Apple (zostanie otwarta witryna internetowa firmy Apple), który zawiera bardziej szczegółowe informacje na temat kodów dostępu.
+  System iOS/iPadOS ma wbudowane zabezpieczenia, które mogą mieć wpływ na to ustawienie. Na przykład system iOS/iPadOS może opóźniać wyzwalanie zasad w zależności od liczby błędów logowania. Może również uznawać wielokrotne wprowadzenie tego samego kodu dostępu za jedną próbę. Przydatnym zasobem jest [Przewodnik po zabezpieczeniach systemu iOS/iPadOS](https://www.apple.com/business/site/docs/iOS_Security_Guide.pdf) firmy Apple (zostanie otwarta witryna internetowa firmy Apple), który zawiera bardziej szczegółowe informacje na temat kodów dostępu.
   
-- **Maksymalna liczba minut po zablokowaniu ekranu, po których jest wymagane wprowadzenie hasła**<sup>1</sup>: podaj, jak długo urządzenie pozostanie bezczynne, zanim użytkownik będzie musiał ponownie wprowadzić hasło. Jeśli wprowadzony czas jest dłuższy niż aktualnie ustawiony na urządzeniu, urządzenie ignoruje wprowadzony przez Ciebie czas. Obsługiwane na urządzeniach z systemem iOS 8.0 i nowszym.
+- **Maksymalna liczba minut po zablokowaniu ekranu, po których jest wymagane wprowadzenie hasła**<sup>1</sup>: podaj, jak długo urządzenie pozostanie bezczynne, zanim użytkownik będzie musiał ponownie wprowadzić hasło. Jeśli wprowadzony czas jest dłuższy niż aktualnie ustawiony na urządzeniu, urządzenie ignoruje wprowadzony przez Ciebie czas. Obsługiwane na urządzeniach z systemem iOS 8.0 i nowszych oraz iPadOS 13.0 i nowszych.
 
 - **Maksymalna liczba minut braku aktywności przed zablokowaniem ekranu**<sup>1</sup>: wprowadź maksymalną dopuszczalną liczbę minut braku aktywności przed automatycznym zablokowaniem ekranu.
 
-  **Opcje systemu iOS**:  
+  **Opcje systemu iOS/iPadOS**:  
 
   - **Nie skonfigurowano** (wartość domyślna): usługa Intune nie zmienia tego ustawienia.
   - **Natychmiast**: ekran blokuje się po upływie 30 s braku aktywności.
@@ -174,7 +181,7 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
   - **3**: ekran blokuje się po upływie 3 min braku aktywności.
   - **4**: ekran blokuje się po upływie 4 min braku aktywności.
   - **5**: ekran blokuje się po upływie 5 min braku aktywności.
-    
+
   **Opcje systemu iPadOS**:  
 
   - **Nie skonfigurowano** (wartość domyślna): usługa Intune nie zmienia tego ustawienia.
@@ -184,7 +191,7 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
   - **10**: ekran blokuje się po upływie 10 min braku aktywności.
   - **15**: ekran blokuje się po upływie 15 min braku aktywności.
 
-  Jeśli wartość nie ma zastosowania do systemu iOS lub iPadOS, firma Apple używa najbardziej zbliżonej *najniższej* wartości. Na przykład jeśli wprowadzisz `4` min, urządzenia z systemem iPadOS użyją `2` min. Jeśli wprowadzisz `10` min, urządzenia z systemem iOS użyją `5` min. Jest to ograniczenie firmy Apple.
+  Jeśli wartość nie ma zastosowania do systemu iOS i iPadOS, firma Apple używa najbardziej zbliżonej *najniższej* wartości. Na przykład jeśli wprowadzisz `4` min, urządzenia z systemem iPadOS użyją `2` min. Jeśli wprowadzisz `10` min, urządzenia z systemem iOS użyją `5` min. Jest to ograniczenie firmy Apple.
   
   > [!NOTE]
   > Interfejs użytkownika usługi Intune w przypadku tego ustawienia nie oddziela wartości obsługiwanych w systemach iOS i iPadOS. Interfejs użytkownika może zostać zaktualizowany w przyszłości.
@@ -197,6 +204,7 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 
   Funkcja Face ID dotyczy:  
   - System iOS 11.0 i nowsze
+  - System iPadOS 13.0 i nowsze
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ustawienia mają zastosowanie do: Automatyczne rejestrowanie urządzeń (nadzorowane)
 
@@ -208,8 +216,9 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 
     Funkcja Face ID dotyczy:  
     - System iOS 11.0 i nowsze
+    - System iPadOS 13.0 i nowsze
 
-- **Blokuj automatyczne wypełnianie haseł**: wybierz pozycję **Blokuj**, aby uniemożliwić użycie funkcji automatycznego wypełniania haseł w systemie iOS. Wybranie opcji **Blokuj** ma również następujące skutki:
+- **Blokuj automatyczne wypełnianie haseł**: wybierz pozycję **Blokuj**, aby uniemożliwić użycie funkcji automatycznego wypełniania haseł w systemie iOS/iPadOS. Wybranie opcji **Blokuj** ma również następujące skutki:
 
   - Użytkownicy nie są monitowani o użycie zapisanego hasła w przeglądarce Safari ani innych aplikacjach.
   - Automatyczne silne hasła są wyłączone i silne hasła nie są zalecane dla użytkowników.
@@ -222,6 +231,7 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 
   Ta funkcja ma zastosowanie do:  
   - System iOS 11.0 i nowsze
+  - System iPadOS 13.0 i nowsze
   
 <sup>1</sup> W przypadku skonfigurowania ustawień **Maksymalna liczba minut braku aktywności przed zablokowaniem ekranu** i **Maksymalna liczba minut po zablokowaniu ekranu, po których jest wymagane wprowadzenie hasła** są one stosowane jedno po drugim. Na przykład jeśli wartość obu ustawień jest ustawiona na **5** minut, ekran wyłącza się automatycznie po pięciu minutach, a urządzenie jest blokowane po kolejnych pięciu minutach. Jednak jeśli użytkownik wyłączy ekran ręcznie, drugie ustawienie zostanie zastosowane natychmiast. W tym samym przykładzie jeśli użytkownik wyłączy ekran, po pięciu minutach urządzenie zostanie zablokowane.
 
@@ -247,25 +257,25 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
   > [!NOTE]
   > Po zablokowaniu tego ustawienia blokowane są również klawiatury innych firm zainstalowane ze sklepu App Store.
 
-  - **Zezwalaj niezarządzanym aplikacjom na odczytywanie z kont kontaktów zarządzanych**: po wybraniu pozycji **Zezwalaj** aplikacje niezarządzane, takie jak wbudowana w systemie iOS aplikacja Kontakty, mogą odczytywać informacje kontaktowe i uzyskiwać do nich dostęp z aplikacji zarządzanych, w tym aplikacji mobilnej Outlook. Ustawienie opcji **Nieskonfigurowane** (wartość domyślna) zapobiega odczytywaniu informacji z wbudowanej aplikacji Kontakty na urządzeniu oraz uniemożliwia usuwanie duplikatów.  
+  - **Zezwalaj niezarządzanym aplikacjom na odczytywanie z kont kontaktów zarządzanych**: po wybraniu pozycji **Zezwalaj** aplikacje niezarządzane, takie jak wbudowana w systemie iOS/iPadOS aplikacja Kontakty, mogą odczytywać informacje kontaktowe i uzyskiwać do nich dostęp z aplikacji zarządzanych, w tym aplikacji mobilnej Outlook. Ustawienie opcji **Nieskonfigurowane** (wartość domyślna) zapobiega odczytywaniu informacji z wbudowanej aplikacji Kontakty na urządzeniu oraz uniemożliwia usuwanie duplikatów.  
   
     To ustawienie umożliwia lub uniemożliwia odczytywanie informacji kontaktowych. Nie kontroluje ono synchronizowania kontaktów między aplikacjami.
   
     Aby użyć tego ustawienia, skonfiguruj ustawienie **Wyświetlanie dokumentów firmowych w aplikacjach niezarządzanych** na wartość **Blokuj**.
 
-  Aby uzyskać więcej informacji na temat tych dwóch ustawień i ich wpływu na synchronizację eksportu kontaktów z programu Outlook dla systemu iOS, zobacz [Support Tip: Use Intune custom profile settings with the iOS Native Contacts App](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Use-Intune-custom-profile-settings-with-the-iOS/ba-p/298453) (Porada pomocy technicznej: korzystanie z ustawień profilu niestandardowego usługi Intune w natywnej aplikacji Kontakty systemu iOS).
+  Aby uzyskać więcej informacji na temat tych dwóch ustawień i ich wpływu na synchronizację eksportu kontaktów z programu Outlook dla systemu iOS/iPadOS, zobacz [Support Tip: Use Intune custom profile settings with the iOS/iPadOS Native Contacts App](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Use-Intune-custom-profile-settings-with-the-iOS/ba-p/298453) (Porada pomocy technicznej: korzystanie z ustawień profilu niestandardowego usługi Intune w natywnej aplikacji Kontakty systemu iOS/iPadOS).
 
 - **Traktuj usługę AirDrop jako niezarządzane miejsce docelowe**: pozycja **Wymagaj** wymusza traktowanie usługi AirDrop jako niezarządzanego miejsca docelowego upuszczania. Uniemożliwia to aplikacjom zarządzanym wysyłanie danych przy użyciu usługi AirDrop. 
 - **Wyświetlanie dokumentów innych niż firmowe w aplikacjach firmowych**: pozycja **Blokuj** uniemożliwia wyświetlanie dokumentów innych niż firmowe w aplikacjach firmowych. Pozycja **Nieskonfigurowane** (wartość domyślna) zezwala na wyświetlanie dowolnych dokumentów w zarządzanych aplikacjach firmowych.
 
-  Wybranie pozycji **Blokuj** uniemożliwia również synchronizację eksportu kontaktów w programie Outlook dla systemu iOS. Aby uzyskać więcej informacji, zobacz [Support tip: Enabling Outlook iOS Contact Sync with iOS12 MDM Controls](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Enabling-Outlook-iOS-Contact-Sync-with-iOS12-MDM/ba-p/298453) (Porada pomocy technicznej: włączanie synchronizacji kontaktów programu Outlook w systemie iOS za pomocą kontrolek zarządzania urządzeniami mobilnymi systemu iOS12).
+  Wybranie pozycji **Blokuj** uniemożliwia również synchronizację eksportu kontaktów w programie Outlook dla systemu iOS/iPadOS. Aby uzyskać więcej informacji, zobacz [Support tip: Enabling Outlook iOS/iPadOS Contact Sync with iOS12 MDM Controls](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Enabling-Outlook-iOS-Contact-Sync-with-iOS12-MDM/ba-p/298453) (Porada pomocy technicznej: włączanie synchronizacji kontaktów programu Outlook w systemie iOS/iPadOS za pomocą kontrolek oprogramowania MDM systemu iOS12).
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ustawienia mają zastosowanie do: Rejestrowanie urządzeń, Automatyczne rejestrowanie urządzeń (nadzorowane)
 
 - **Wymagaj hasła sklepu iTunes Store dla wszystkich zakupów**: pozycja **Wymagaj** wymusza na użytkowniku wprowadzanie hasła Apple ID w przypadku każdego zakupu w aplikacji lub w programie iTunes. Pozycja **Nieskonfigurowane** (wartość domyślna) pozwala na zakupy bez monitowania za każdym razem o podanie hasła.
 - **Zakupy w aplikacji**: wybierz pozycję **Blokuj**, aby uniemożliwić dokonywanie zakupów w aplikacji ze sklepu. Pozycja **Nieskonfigurowane** (wartość domyślna) zezwala na zakupy w sklepie w uruchomionej aplikacji.
 - **Pobieranie ze sklepu iBook zawartości oznaczonej jako „Erotyka”** : wybierz pozycję **Blokuj**, aby uniemożliwić użytkownikom pobieranie ze sklepu iBook multimediów oznaczonych jako erotyka. Pozycja **Nieskonfigurowane** (wartość domyślna) zezwala użytkownikom na pobieranie książek z kategorii „Erotyka”.
-- **Zezwalaj aplikacjom zarządzanym na zapisywanie kontaktów na kontach niezarządzanych kontaktów**: po wybraniu pozycji **Zezwalaj** aplikacje zarządzane, takie jak aplikacja mobilna Outlook, mogą zapisywać i synchronizować informacje kontaktowe, w tym kontakty biznesowe i firmowe, przy użyciu aplikacji Kontakty wbudowanej w systemie iOS. Po wybraniu pozycji **Nieskonfigurowane** (wartość domyślna) aplikacje zarządzane nie mogą zapisywać ani synchronizować informacji kontaktowych z aplikacją Kontakty wbudowaną w systemie iOS na urządzeniu.
+- **Zezwalaj aplikacjom zarządzanym na zapisywanie kontaktów na kontach niezarządzanych kontaktów**: po wybraniu pozycji **Zezwalaj** aplikacje zarządzane, takie jak aplikacja mobilna Outlook, mogą zapisywać i synchronizować informacje kontaktowe, w tym kontakty biznesowe i firmowe, przy użyciu aplikacji Kontakty wbudowanej w systemie iOS/iPadOS. Po wybraniu pozycji **Nieskonfigurowane** (wartość domyślna) aplikacje zarządzane nie mogą zapisywać ani synchronizować informacji kontaktowych z aplikacją Kontakty wbudowaną w systemie iOS/iPadOS na urządzeniu.
   
   Aby użyć tego ustawienia, skonfiguruj ustawienie **Wyświetlanie dokumentów firmowych w aplikacjach niezarządzanych** na wartość **Blokuj**.
 
@@ -275,28 +285,29 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 
 - **Sklep z aplikacjami**: pozycja **Blokuj** uniemożliwia dostęp do sklepu z aplikacjami na urządzeniach nadzorowanych. Ustawienie **Nie skonfigurowano** (domyślne) zezwala na dostęp.
 
-  Począwszy od systemu iOS 13.0, to ustawienie wymaga urządzeń nadzorowanych.
+  Począwszy od systemu iOS/iPadOS 13.0, to ustawienie wymaga urządzeń nadzorowanych.
 
   - **Instalowanie aplikacji ze sklepu App Store**: wybierz pozycję **Blokuj**, aby zablokować sklep z aplikacjami na ekranie głównym urządzenia. Użytkownicy końcowi nadal mogą instalować aplikacje przy użyciu programu iTunes lub Apple Configurator. Pozycja **Nieskonfigurowane** (wartość domyślna) pozwala na korzystanie ze sklepu z aplikacjami na ekranie głównym.
-  - **Automatyczne pobieranie aplikacji**: wybierz pozycję **Blokuj**, aby uniemożliwić automatyczne pobieranie aplikacji zakupionych na innych urządzeniach. Nie wpływa to na aktualizacje istniejących aplikacji. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia pobieranie aplikacji zakupionych na innych urządzeniach z systemem iOS na dane urządzenie.
+  - **Automatyczne pobieranie aplikacji**: wybierz pozycję **Blokuj**, aby uniemożliwić automatyczne pobieranie aplikacji zakupionych na innych urządzeniach. Nie wpływa to na aktualizacje istniejących aplikacji. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia pobieranie aplikacji zakupionych na innych urządzeniach z systemem iOS/iPadOS na dane urządzenie.
 
-- **Jawna zawartość programu iTunes — muzyka, podcasty lub wiadomości**: wybierz pozycję **Blokuj**, aby uniemożliwić ujawnianie zawartości programu iTunes: muzyki, podkastów lub wiadomości. Pozycja **Nieskonfigurowane** (wartość domyślna) zezwala urządzeniu na dostęp do zawartości w sklepie sklasyfikowanej jako zawartość dla dorosłych. System iOS 13 i nowsze mogą wymagać tylko urządzeń nadzorowanych. 
+- **Jawna zawartość programu iTunes — muzyka, podcasty lub wiadomości**: wybierz pozycję **Blokuj**, aby uniemożliwić ujawnianie zawartości programu iTunes: muzyki, podkastów lub wiadomości. Pozycja **Nieskonfigurowane** (wartość domyślna) zezwala urządzeniu na dostęp do zawartości w sklepie sklasyfikowanej jako zawartość dla dorosłych.
 
-  Począwszy od systemu iOS 13.0, to ustawienie wymaga urządzeń nadzorowanych.
+  Począwszy od systemu iOS/iPadOS 13.0, to ustawienie wymaga urządzeń nadzorowanych.
 
 - **Dodawanie znajomych do usługi Game Center**: pozycja **Blokuj** uniemożliwia użytkownikom dodawanie znajomych do usługi Game Center. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia użytkownikowi dodawanie znajomych do usługi Game Center.
 
-  Począwszy od systemu iOS 13.0, to ustawienie wymaga urządzeń nadzorowanych.
+  Począwszy od systemu iOS/iPadOS 13.0, to ustawienie wymaga urządzeń nadzorowanych.
 
 - **Game Center**: pozycja **Blokuj** uniemożliwia korzystanie z aplikacji Game Center. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia używanie aplikacji Game Center na urządzeniu.
 - **Gry dla wielu graczy**: wybierz pozycję **Blokuj**, aby uniemożliwić korzystanie z gier dla wielu graczy. Pozycja **Nieskonfigurowane** (wartość domyślna) zezwala użytkownikowi na gry dla wielu graczy na urządzeniu.
 
-  Począwszy od systemu iOS 13.0, to ustawienie wymaga urządzeń nadzorowanych.
+  Począwszy od systemu iOS/iPadOS 13.0, to ustawienie wymaga urządzeń nadzorowanych.
 
 - **Dostęp do dysku sieciowego w aplikacji Pliki**: korzystając z protokołu SMB (Server Message Block), urządzenia mogą uzyskiwać dostęp do plików lub innych zasobów na serwerze sieciowym. Ustawienie **Wyłącz** uniemożliwia dostęp do plików na sieciowym dysku SMB. Ustawienie **Nie skonfigurowano** (domyślne) zezwala na dostęp.
 
   Ta funkcja ma zastosowanie do:  
-  - Systemy iOS oraz iPadOS 13.0 i nowsze
+  - System iOS 13.0 i nowsze
+  - System iPadOS 13.0 i nowsze
 
 ## <a name="built-in-apps"></a>Aplikacje wbudowane
 
@@ -325,11 +336,11 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 
 - **Aparat fotograficzny**: wybierz pozycję **Blokuj**, aby uniemożliwić dostęp do aparatu na urządzeniu. Pozycja **Nieskonfigurowane** (wartość domyślna) zezwala na dostęp do aparatu urządzenia.
 
-  Począwszy od systemu iOS 13.0, to ustawienie wymaga urządzeń nadzorowanych.
+  Począwszy od systemu iOS/iPadOS 13.0, to ustawienie wymaga urządzeń nadzorowanych.
 
   - **FaceTime**: wybierz pozycję **Blokuj**, aby uniemożliwić dostęp do aplikacji FaceTime. Pozycja **Nieskonfigurowane** (wartość domyślna) zezwala na dostęp do aplikacji FaceTime na urządzeniu.
 
-    Począwszy od systemu iOS 13.0, to ustawienie wymaga urządzeń nadzorowanych.
+    Począwszy od systemu iOS/iPadOS 13.0, to ustawienie wymaga urządzeń nadzorowanych.
 
 - **Filtr przekleństw funkcji Siri**: pozycja **Wymagaj** uniemożliwia dyktowanie lub wypowiadanie wulgaryzmów przez Siri.
 
@@ -349,16 +360,19 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 
   Ta funkcja ma zastosowanie do:  
   - System iOS 4.0 i nowsze
+  - System iPadOS 13.0 i nowsze
 
 - **Znajdź mój iPhone**: pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia uzyskiwanie przybliżonej lokalizacji urządzenia przy użyciu tej funkcji aplikacji Znajdź. Pozycja **Blokuj** uniemożliwia korzystanie z tej funkcji w aplikacji Znajdź. 
 
   Ta funkcja ma zastosowanie do:  
-  - Systemy iOS 13.0 oraz iPadOS 13.0 i nowsze
+  - System iOS 13.0 i nowsze
+  - System iPadOS 13.0 i nowsze
 
 - **Znajdź moich znajomych**: pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia znajdowanie członków rodziny i znajomych z poziomu urządzenia firmy Apple lub witryny iCloud.com przy użyciu tej funkcji aplikacji Znajdź. Pozycja **Blokuj** uniemożliwia korzystanie z tej funkcji w aplikacji Znajdź.
 
   Ta funkcja ma zastosowanie do:  
-  - Systemy iOS 13.0 oraz iPadOS 13.0 i nowsze
+  - System iOS 13.0 i nowsze
+  - System iPadOS 13.0 i nowsze
 
 - **Zmiany ustawień aplikacji Znajdź moich znajomych**: pozycja **Blokuj** uniemożliwia zmiany ustawień aplikacji Znajdź moich znajomych. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia użytkownikowi zmienianie ustawień aplikacji Znajdź moich znajomych.
 
@@ -368,11 +382,11 @@ Te ustawienia są dodawane do profilu konfiguracji urządzenia w usłudze Intune
 
 - **Safari**: pozycja **Blokuj** uniemożliwia korzystanie z przeglądarki Safari na urządzeniu. Pozycja **Nieskonfigurowane** (wartość domyślna) pozwala użytkownikom na używanie przeglądarki Safari.
 
-  Począwszy od systemu iOS 13.0, to ustawienie wymaga urządzeń nadzorowanych.
+  Począwszy od systemu iOS/iPadOS 13.0, to ustawienie wymaga urządzeń nadzorowanych.
 
 - **Autowypełnianie w przeglądarce Safari**: pozycja **Blokuj** powoduje wyłączenie funkcji automatycznego wypełniania w przeglądarce Safari na urządzeniu. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia użytkownikom zmianę ustawień automatycznego uzupełniania w przeglądarce internetowej.
 
-  Począwszy od systemu iOS 13.0, to ustawienie wymaga urządzeń nadzorowanych.
+  Począwszy od systemu iOS/iPadOS 13.0, to ustawienie wymaga urządzeń nadzorowanych.
 
 ## <a name="restricted-apps"></a>Aplikacje z ograniczeniami
 
@@ -399,7 +413,7 @@ Aby dodać aplikacje do tych list, możesz:
 
 ## <a name="show-or-hide-apps"></a>Pokaż lub ukryj aplikacje
 
-Dotyczy urządzeń z systemem iOS w wersji 9.3 i nowszych.
+Dotyczy urządzeń z systemem iOS 9.3+ i iPadOS 13.0+.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ustawienia mają zastosowanie do: Automatyczne rejestrowanie urządzeń (nadzorowane)
 
@@ -459,6 +473,7 @@ Informacja niezbędna w przypadku roamingu danych (porada lub ważna uwaga pozwa
 
   Ta funkcja ma zastosowanie do:  
   - System iOS 11.0 i nowsze
+  - System iPadOS 13.0 i nowsze
 
 - **Modyfikowanie osobistego hotspotu przez użytkownika**: po wybraniu pozycji **Blokuj** użytkownik nie może zmieniać ustawienia osobistego hotspotu. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia użytkownikom końcowym włączanie i wyłączanie ich osobistych hotspotów.
 
@@ -466,6 +481,7 @@ Informacja niezbędna w przypadku roamingu danych (porada lub ważna uwaga pozwa
 
   Ta funkcja ma zastosowanie do:  
   - System iOS 12.2 i nowsze
+  - System iPadOS 13.0 i nowsze
 
 - **Dołączaj do sieci Wi-Fi wyłącznie za pomocą profilów konfiguracji**: pozycja **Wymagaj** wymusza użycie na urządzeniu tylko sieci Wi-Fi, które zostały skonfigurowane przy użyciu profilu konfiguracji usługi Intune. Opcja **Nieskonfigurowane** (domyślna) zezwala urządzeniu na korzystanie z innych sieci Wi-Fi.
 
@@ -478,7 +494,8 @@ Informacja niezbędna w przypadku roamingu danych (porada lub ważna uwaga pozwa
   Skonfigurowanie tego ustawienia nie uniemożliwia użytkownikom wyboru sieci Wi-Fi.
 
   Ta funkcja ma zastosowanie do:  
-  - Systemy iOS oraz iPadOS 13.0 i nowsze
+  - System iOS 13.0 i nowsze
+  - System iPadOS 13.0 i nowsze
 
 ## <a name="connected-devices"></a>Połączone urządzenia
 
@@ -495,7 +512,7 @@ Informacja niezbędna w przypadku roamingu danych (porada lub ważna uwaga pozwa
 - **AirDrop**: pozycja **Blokuj** uniemożliwia używanie funkcji AirDrop na urządzeniu. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia używanie funkcji AirDrop do wymiany zawartości z pobliskimi urządzeniami.
 - **Parowanie urządzenia Apple Watch**: pozycja **Blokuj** uniemożliwia parowanie urządzenia z urządzeniem Apple Watch. Opcja **Nieskonfigurowane** (domyślna) zezwala na parowanie urządzenia z zegarkiem Apple Watch.
 - **Modyfikowanie ustawień funkcji Bluetooth**: pozycja **Blokuj** uniemożliwia użytkownikowi końcowemu zmianę ustawień protokołu Bluetooth na urządzeniu. Opcja **Nieskonfigurowane** (domyślna) umożliwia użytkownikowi zmianę tych ustawień.
-- **Parowanie hosta na potrzeby kontrolowania urządzeń, z którymi można parować urządzenie z systemem iOS**: Pozycja **Nieskonfigurowane** (ustawienie domyślne) zezwala na parowanie hostów w celu umożliwienia administratorowi kontrolowania tego, z którymi urządzeniami może być sparowane urządzenie z systemem iOS. Pozycja **Blokuj** uniemożliwia parowanie hosta.
+- **Parowanie hosta na potrzeby kontrolowania urządzeń, z którymi można parować urządzenie z systemem iOS/iPadOS**: pozycja **Nieskonfigurowane** (ustawienie domyślne) zezwala na parowanie hostów w celu umożliwienia administratorowi kontrolowania tego, z którymi urządzeniami może być sparowane urządzenie z systemem iOS/iPadOS. Pozycja **Blokuj** uniemożliwia parowanie hosta.
 - **Blokuj funkcję AirPrint**: wybierz pozycję **Blokuj**, aby uniemożliwić używanie funkcji AirPrint na urządzeniu. Opcja **Nieskonfigurowane** (domyślna) zezwala użytkownikowi na korzystanie z funkcji AirPrint.
   - **Blokuj przechowywanie poświadczeń funkcji AirPrint w pęku kluczy**: pozycja **Blokuj** uniemożliwia korzystanie z magazynu pęku kluczy do przechowywania nazwy użytkownika i hasła na urządzeniu. Opcja **Nieskonfigurowane** (domyślna) umożliwia przechowywanie nazwy użytkownika i hasła funkcji AirPrint w aplikacji pęku kluczy.
   - **Wymagaj zaufanego certyfikatu protokołu TLS dla funkcji AirPrint**: pozycja **Wymagaj** wymusza użycie zaufanych certyfikatów na potrzeby komunikacji dotyczącej drukowania przy użyciu protokołu TLS.
@@ -504,11 +521,13 @@ Informacja niezbędna w przypadku roamingu danych (porada lub ważna uwaga pozwa
 
   Ta funkcja ma zastosowanie do:  
   - System iOS 11.0 i nowsze
+  - System iPadOS 13.0 i nowsze
 
 - **Dostęp do plików na dysku USB**: urządzenia mogą łączyć się z dyskiem USB i otwierać znajdujące się na nim pliki. Pozycja **Wyłącz** uniemożliwia dostęp urządzenia do dysku USB w aplikacji Pliki, gdy dysk USB jest podłączony do urządzenia. Wyłączenie tej funkcji blokuje również użytkownikom końcowym przesyłanie plików na dysk USB podłączony do urządzenia iPad. Pozycja **Nieskonfigurowane** (wartość domyślna) zezwala na dostęp do dysku USB w aplikacji Pliki.
 
   Ta funkcja ma zastosowanie do:  
-  - Systemy iOS oraz iPadOS 13.0 i nowsze
+  - System iOS 13.0 i nowsze
+  - System iPadOS 13.0 i nowsze
 
 ## <a name="keyboard-and-dictionary"></a>Klawiatura i słownik
 
@@ -523,7 +542,8 @@ Informacja niezbędna w przypadku roamingu danych (porada lub ważna uwaga pozwa
 - **QuickPath**: pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia użytkownikom korzystanie z funkcji QuickPath, która pozwala na ciągłe wprowadzanie danych na klawiaturze urządzenia. Użytkownicy mogą wpisywać słowa, przesuwając szybko po klawiszach. Pozycja **Blokuj** uniemożliwia użytkownikom korzystanie z funkcji QuickPath. 
 
   Ta funkcja ma zastosowanie do:  
-  - Systemy iOS 13.0 oraz iPadOS 13.0 i nowsze
+  - System iOS 13.0 i nowsze
+  - System iPadOS 13.0 i nowsze
 
 ## <a name="cloud-and-storage"></a>Chmura i magazyn
 
@@ -539,21 +559,21 @@ Informacja niezbędna w przypadku roamingu danych (porada lub ważna uwaga pozwa
 - **Synchronizowanie strumienia zdjęć z usługą iCloud**: Pozycja **Nieskonfigurowane** (ustawienie domyślne) umożliwia użytkownikom włączanie funkcji **Mój strumień zdjęć** na urządzeniu, co pozwala na synchronizowanie z usługą iCloud i udostępnianie zdjęć na wszystkich urządzeniach użytkownika. Pozycja **Blokuj** zezwala na synchronizację funkcji Strumień zdjęć w usłudze iCloud. Zablokowanie tej funkcji może spowodować utratę danych. 
 - **Biblioteka zdjęć usługi iCloud**: ustaw tę opcję na pozycję **Blokuj**, aby wyłączyć możliwość używania biblioteki zdjęć usługi iCloud do przechowywania zdjęć i klipów wideo w chmurze. Wszystkie zdjęcia, które nie zostały w pełni pobrane z biblioteki zdjęć iCloud na urządzenie, są usuwane z urządzenia. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia używanie biblioteki zdjęć iCloud.
 - **Udostępniony strumień zdjęć**: wybierz pozycję **Blokuj**, aby wyłączyć funkcję **Udostępnianie zdjęć w usłudze iCloud** na urządzeniu. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia przesyłanie strumieniowe udostępnionych zdjęć.
-- **Handoff**: pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia użytkownikom kontynuowanie pracy rozpoczętej na urządzeniu z systemem iOS na innym urządzeniu z systemem iOS lub macOS. Pozycja **Blokuj** uniemożliwia użycie programu Handoff.
+- **Handoff**: pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia użytkownikom kontynuowanie pracy rozpoczętej na urządzeniu z systemem iOS/iPadOS na innym urządzeniu z systemem iOS/iPadOS lub macOS. Pozycja **Blokuj** uniemożliwia użycie programu Handoff.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Ustawienia mają zastosowanie do: Automatyczne rejestrowanie urządzeń (nadzorowane)
 
 - **Tworzenie kopii zapasowych w usłudze iCloud**: Pozycja **Nieskonfigurowane** (ustawienie domyślne) umożliwia użytkownikowi tworzenie kopii zapasowych urządzenia w usłudze iCloud. Pozycja **Blokuj** uniemożliwia użytkownikowi tworzenie kopii zapasowych urządzenia w usłudze iCloud.
 
-  Począwszy od systemu iOS 13.0, to ustawienie wymaga urządzeń nadzorowanych.
+  Począwszy od systemu iOS/iPadOS 13.0, to ustawienie wymaga urządzeń nadzorowanych.
 
 - **Blokuj synchronizowanie dokumentów z usługą iCloud**: Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia synchronizowanie dokumentów i par klucz-wartość w obszarze magazynu usługi iCloud. Pozycja **Blokuj** uniemożliwia synchronizowanie dokumentów i danych w usłudze iCloud.
 
-  Począwszy od systemu iOS 13.0, to ustawienie wymaga urządzeń nadzorowanych.
+  Począwszy od systemu iOS/iPadOS 13.0, to ustawienie wymaga urządzeń nadzorowanych.
 
 - **Blokuj synchronizowanie pęku kluczy z usługą iCloud**: wybierz pozycję **Blokuj**, aby wyłączyć synchronizowanie poświadczeń przechowywanych w pęku kluczy z usługą iCloud. Pozycja **Nieskonfigurowane** (wartość domyślna) umożliwia użytkownikom synchronizację tych poświadczeń.
 
-  Począwszy od systemu iOS 13.0, to ustawienie wymaga urządzeń nadzorowanych.
+  Począwszy od systemu iOS/iPadOS 13.0, to ustawienie wymaga urządzeń nadzorowanych.
 
 ## <a name="autonomous-single-app-mode"></a>Autonomiczny tryb pojedynczej aplikacji
 
@@ -612,14 +632,14 @@ Możesz również **zaimportować** plik CSV zawierający listę nazw aplikacji 
 - **Ustawianie powiększania**: pozycja **Zezwalaj** umożliwia użytkownikowi zmienianie powiększenia. Pozycja **Nieskonfigurowane** uniemożliwia zmiany powiększenia.
 
 > [!NOTE]
-> Aby można było skonfigurować urządzenie z systemem iOS do obsługi trybu kiosku, należy najpierw użyć narzędzia Apple Configurator lub programu Apple Device Enrollment Program w przełączenia go do trybu nadzorowanego. Zapoznaj się z przewodnikiem firmy Apple dotyczącym korzystania z narzędzia Apple Configurator.
-> Jeśli wprowadzona aplikacja systemu iOS zostanie zainstalowana po przypisaniu profilu, urządzenie przejdzie do trybu kiosku dopiero po ponownym uruchomieniu.
+> Aby można było skonfigurować urządzenie z systemem iOS/iPadOS do obsługi trybu kiosku, należy najpierw użyć narzędzia Apple Configurator lub programu Apple Device Enrollment Program w przełączenia go do trybu nadzorowanego. Zapoznaj się z przewodnikiem firmy Apple dotyczącym korzystania z narzędzia Apple Configurator.
+> Jeśli wprowadzona aplikacja systemu iOS/iPadOS zostanie zainstalowana po przypisaniu profilu, urządzenie przejdzie do trybu kiosku dopiero po ponownym uruchomieniu.
 
 ## <a name="domains"></a>Domains
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Ustawienia mają zastosowanie do: Rejestrowanie urządzeń, Automatyczne rejestrowanie urządzeń (nadzorowane)
 
-- **Nieoznaczone domeny poczty e-mail** > **Adres URL domeny poczty e-mail**: Dodaj do listy co najmniej jeden adres URL. Gdy użytkownicy końcowi otrzymają wiadomość e-mail z domeny innej niż wprowadzona, wiadomość e-mail zostanie oznaczona w aplikacji Mail dla systemu iOS jako niezaufana.
+- **Nieoznaczone domeny poczty e-mail** > **Adres URL domeny poczty e-mail**: Dodaj do listy co najmniej jeden adres URL. Gdy użytkownicy końcowi otrzymają wiadomość e-mail z domeny innej niż wprowadzona, wiadomość e-mail zostanie oznaczona w aplikacji Mail dla systemu iOS/iPadOS jako niezaufana.
 
 - **Zarządzane domeny sieci Web** > **Adres URL domeny sieci Web**: dodaj do listy co najmniej jeden adres URL. Dokumenty pobierane z wprowadzonych domen są uznawane za zarządzane. To ustawienie ma zastosowanie wyłącznie do dokumentów pobieranych przy użyciu przeglądarki Safari.
 
@@ -629,10 +649,11 @@ Możesz również **zaimportować** plik CSV zawierający listę nazw aplikacji 
 
   To ustawienie ma zastosowanie do:  
   - System iOS 9.3 i nowsze
+  - System iPadOS 13.0 i nowsze
 
 ## <a name="settings-that-require-supervised-mode"></a>Ustawienia, które wymagają trybu nadzorowanego
 
-Tryb nadzorowany systemu iOS można włączyć tylko podczas początkowego konfigurowania urządzenia za pośrednictwem programu Device Enrollment Program firmy Apple lub programu Apple Configurator. Po włączeniu trybu nadzorowanego na urządzeniu można skonfigurować następujące funkcje za pomocą usługi Intune:
+Tryb nadzorowany systemu iOS/iPadOS można włączyć tylko podczas początkowego konfigurowania urządzenia za pośrednictwem programu Device Enrollment Program firmy Apple lub programu Apple Configurator. Po włączeniu trybu nadzorowanego na urządzeniu można skonfigurować następujące funkcje za pomocą usługi Intune:
 
 - Blokada aplikacji (tryb jednej aplikacji) 
 - Globalny serwer proxy HTTP 

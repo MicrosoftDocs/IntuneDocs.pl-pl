@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/12/2018
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f2bee04eabb7036d9a28ac628175b27f763d0ccb
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
-ms.translationtype: MTE75
+ms.openlocfilehash: 47be57dece7867109565622ec2a1380e9a9d57d7
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75207064"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77512504"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Ustawienia urządzeń z systemami Windows 10 i Windows Holographic umożliwiające dodanie połączeń sieci VPN przy użyciu usługi Intune
 
@@ -143,7 +143,7 @@ Aby uzyskać więcej informacji na temat tworzenia niestandardowych poleceń XML
 
   ![Wybór symbolu trzech kropek oraz kliknięcie i przeciągnięcie sufiksu DNS w celu jego przeniesienia](./media/vpn-settings-windows-10/vpn-settings-windows10-move-dns-suffix.png)
 
-- **Reguły tabeli zasad rozpoznawania nazw (NRPT)** definiują, jak system DNS rozpoznaje nazwy podczas połączenia z siecią VPN. Po ustanowieniu połączenia z siecią VPN możesz wybrać serwery DNS, których to połączenie będzie używać.
+- **Reguły tabeli zasad rozpoznawania nazw (NRPT)** : reguły tabeli zasad rozpoznawania nazw (NRPT) definiują, jak system DNS rozpoznaje nazwy podczas połączenia z siecią VPN. Po ustanowieniu połączenia z siecią VPN możesz wybrać serwery DNS, których to połączenie będzie używać.
 
   Do tabeli możesz dodać reguły, które zawierają domenę, serwer DNS, serwer proxy i inne szczegóły umożliwiające rozpoznanie wprowadzonej domeny. Połączenie sieci VPN korzysta z tych reguł, kiedy użytkownicy łączą się z wprowadzonymi domenami.
 
@@ -185,4 +185,4 @@ Jeśli na przykład użytkownik jest już połączony z zaufanym sufiksem DNS, t
 
 Profil został utworzony, ale nie wykonuje jeszcze żadnych czynności. W dalszej części [przypiszesz profil](device-profile-assign.md) i będziesz [monitorować jego stan](device-profile-monitor.md).
 
-Konfigurowanie ustawień sieci VPN na urządzeniach z systemami [Android](vpn-settings-android.md), [iOS](vpn-settings-ios.md) i [macOS](vpn-settings-macos.md).
+Konfigurowanie ustawień sieci VPN na urządzeniach z systemami [Android](vpn-settings-android.md), [iOS/iPadOS](vpn-settings-ios.md) i [macOS](vpn-settings-macos.md).

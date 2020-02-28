@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/15/2019
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43a2b00ae824656621c8a586e41ba6425c69ed40
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
-ms.translationtype: MTE75
+ms.openlocfilehash: 0a1bc53e0f05818b28bbd975e0de5cf5c9368afb
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72506773"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77512861"
 ---
 # <a name="android-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Ustawienia urządzeń z systemem Android do konfigurowania poczty e-mail, uwierzytelniania i synchronizacji w usłudze Intune
 
@@ -36,12 +36,12 @@ Aby dowiedzieć się więcej na temat profilów poczty e-mail w usłudze Intune,
 
 ## <a name="android-samsung-knox"></a>Android (Samsung Knox)
 
-- **Serwer poczty e-mail**: wprowadź nazwę hosta serwera programu Exchange. Na przykład wprowadź `outlook.office365.com`.
+- **Serwer poczty e-mail**: wprowadź nazwę hosta serwera Exchange. Na przykład wprowadź `outlook.office365.com`.
 - **Nazwa konta**: wprowadź nazwę wyświetlaną konta e-mail. Ta nazwa jest widoczna na urządzeniach użytkowników.
 - **Atrybut nazwy użytkownika z usługi AAD**: ta nazwa to atrybut pobierany przez usługę Intune z usługi Azure Active Directory (Azure AD). Usługa Intune dynamicznie generuje nazwę użytkownika używaną przez ten profil. Dostępne opcje:
-  - **Główna nazwa użytkownika**: pobiera nazwę, taką jak `user1` lub `user1@contoso.com`
+  - **Nazwa główna użytkownika**: pobiera nazwę, taką jak `user1` lub `user1@contoso.com`
   - **Nazwa użytkownika**: pobiera tylko nazwę, taką jak `user1`
-  - **Nazwa konta SAM**: wymaga domeny, takiej jak `domain\user1`. Nazwa konta sAM jest używana tylko z urządzeniami z systemem Android.
+  - **Nazwa konta sAM**: wymaga domeny, takiej jak `domain\user1`. Nazwa konta sAM jest używana tylko z urządzeniami z systemem Android.
 
     Wprowadź też następujące ustawienia:  
     - **Źródło nazwy domeny użytkownika**: wybierz pozycję **AAD** (Azure Active Directory) lub **Niestandardowe**.
@@ -53,26 +53,26 @@ Aby dowiedzieć się więcej na temat profilów poczty e-mail w usłudze Intune,
       - **Nazwa domeny niestandardowej do użycia**: wprowadź wartość używaną przez usługę Intune jako nazwa domeny, taką jak `contoso.com` lub `contoso`
 
 - **Atrybut adresu e-mail z usługi AAD**: ta nazwa to atrybut adresu e-mail pobierany przez usługę Intune z usługi Azure AD. Usługa Intune dynamicznie generuje adres e-mail używany przez ten profil. Dostępne opcje:
-  - **Główna nazwa użytkownika**: używa pełnej nazwy głównej, takiej jak `user1@contoso.com` lub `user1`, jako adresu e-mail.
+  - **Główna nazwa użytkownika**:  używa pełnej nazwy głównej, takiej jak `user1@contoso.com` lub `user1`, jako adresu e-mail.
   - **Podstawowy adres SMTP**: używa podstawowego adresu SMTP, takiego jak `user1@contoso.com`, do logowania się do programu Exchange.
 
-- **Metoda uwierzytelniania** — wybierz metodę uwierzytelniania stosowaną w profilu e-mail: **Certyfikaty** lub **Nazwa użytkownika i hasło**.
+- **Metoda uwierzytelniania**: Wybierz metodę uwierzytelniania stosowaną w profilu poczty e-mail: **Certyfikaty** lub **Nazwa użytkownika i hasło**.
   - W przypadku wybrania opcji **Certyfikat** wybierz wcześniej utworzony profil certyfikatu SCEP lub PKCS klienta, który będzie używany do uwierzytelniania połączenia z programem Exchange.
 
 ### <a name="security-settings"></a>Ustawienia zabezpieczeń
 
-- **Protokół SSL**: użyj komunikacji SSL (Secure Sockets Layer) podczas wysyłania i odbierania wiadomości e-mail oraz komunikacji z serwerem programu Exchange.
-- **S/MIME**: umożliwia wysyłanie wychodzącej poczty e-mail przy użyciu szyfrowania S/MIME.
+- **SSL**: Użyj komunikacji SSL (Secure Sockets Layer) podczas wysyłania wiadomości e-mail, otrzymywania wiadomości e-mail i komunikacji z serwerem programu Exchange.
+- **S/MIME**: Wyślij pocztę wychodzącą przy użyciu szyfrowania S/MIME.
   - W przypadku wybrania opcji **Certyfikat** wybierz wcześniej utworzony profil certyfikatu SCEP lub PKCS klienta, który będzie używany do uwierzytelniania połączenia z programem Exchange.
 
 ### <a name="synchronization-settings"></a>Ustawienia synchronizacji
 
-- **Liczba wiadomości e-mail do synchronizacji**: wybierz liczbę dni, z których chcesz zsynchronizować pocztę e-mail, lub wybierz pozycję **Nieograniczone**, aby synchronizować wszystkie dostępne wiadomości e-mail.
+- **Liczba wiadomości e-mail do synchronizacji**: wybierz liczbę dni okresu, z którego chcesz synchronizować pocztę e-mail, lub wybierz pozycję **Nieograniczone**, aby synchronizować wszystkie dostępne wiadomości e-mail.
 - **Harmonogram synchronizacji**: wybierz harmonogram, według którego urządzenia będą synchronizować dane z serwera programu Exchange. Możesz również wybrać opcję **W momencie nadejścia nowych wiadomości**, która powoduje synchronizowanie danych zaraz po odebraniu, lub opcję **Ręcznie**, jeśli użytkownik urządzenia ma inicjować synchronizację.
 
 ### <a name="content-sync-settings"></a>Ustawienia synchronizacji zawartości
 
-- **Typ zawartości do zsynchronizowania**: wybierz typ zawartości, który chcesz zsynchronizować na urządzeniach. Wartość **Nieskonfigurowane** wyłącza to ustawienie. Jeśli w przypadku ustawienia wartości **Nieskonfigurowane** użytkownik końcowy włączy synchronizację na urządzeniu, to synchronizacja zostanie ponownie wyłączona podczas synchronizacji urządzenia z usługą Intune, ponieważ zasady zostały wzmocnione. 
+- **Typ zawartości do synchronizowania**: Wybierz typy zawartości, które chcesz synchronizować na urządzeniach. Wartość **Nieskonfigurowane** wyłącza to ustawienie. Jeśli w przypadku ustawienia wartości **Nieskonfigurowane** użytkownik końcowy włączy synchronizację na urządzeniu, to synchronizacja zostanie ponownie wyłączona podczas synchronizacji urządzenia z usługą Intune, ponieważ zasady zostały wzmocnione. 
 
   Można synchronizować następującą zawartość:  
   - **Kontakty**: wybierz pozycję **Włącz**, aby zezwolić użytkownikom końcowym na synchronizowanie kontaktów z urządzeniami.
@@ -83,4 +83,4 @@ Aby dowiedzieć się więcej na temat profilów poczty e-mail w usłudze Intune,
 
 [Przypisywanie profilu](device-profile-assign.md) i [monitorowanie jego stanu](device-profile-monitor.md).
 
-Można również utworzyć profile poczty e-mail dla [profilu służbowego w systemie Android Enterprise](email-settings-android-enterprise.md) oraz systemów [iOS](email-settings-ios.md), [Windows 10 i nowszych](email-settings-windows-10.md) i [Windows Phone 8.1](email-settings-windows-phone-8-1.md).
+Można również utworzyć profile poczty e-mail dla [profilu służbowego w systemie Android Enterprise](email-settings-android-enterprise.md) oraz systemów [iOS/iPadOS](email-settings-ios.md), [Windows 10 i nowszych](email-settings-windows-10.md) i [Windows Phone 8.1](email-settings-windows-phone-8-1.md).

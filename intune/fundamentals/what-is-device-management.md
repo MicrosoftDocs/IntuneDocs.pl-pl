@@ -16,12 +16,12 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ab41026cd9b2ceeaaa478fc27c984d0d89db4c5
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
-ms.translationtype: MTE75
+ms.openlocfilehash: 3a15bf0bd8ed0a46f330b159e45d0a5d5a4c7059
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74058525"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77510388"
 ---
 # <a name="device-management-overview"></a>Omówienie zarządzania urządzeniami
 
@@ -33,7 +33,7 @@ Dzięki korzystaniu z usług dostawcy zarządzania urządzeniami organizacje mog
 
 Odpowiedzią jest usługa [Microsoft Intune](what-is-intune.md). Usługa Intune umożliwia zarządzanie urządzeniami przenośnymi (MDM, mobile device management) oraz zarządzanie aplikacjami mobilnymi (MAM, mobile app management). Oto niektóre kluczowe zadania wszelkich rozwiązań MDM i MAM:
 
-- Obsługa zróżnicowanego środowiska mobilnego oraz bezpieczne zarządzanie urządzeniami z systemami iOS, Android, Windows i macOS.
+- Obsługa zróżnicowanego środowiska mobilnego oraz bezpieczne zarządzanie urządzeniami z systemami iOS/iPadOS, Android, Windows i macOS.
 - Zapewnienie zgodności urządzeń i aplikacji z wymaganiami bezpieczeństwa organizacji.
 - Tworzenie zasad pomagających zapewnić bezpieczeństwo danych organizacji na urządzeniach osobistych i należących do organizacji.
 - Używanie jednego, ujednoliconego rozwiązania dla środowiska mobilnego do egzekwowania tych zasad i ułatwiania zarządzania urządzeniami, aplikacjami, użytkownikami i grupami
@@ -47,7 +47,7 @@ Wiele organizacji, takich jak Microsoft, zabezpiecza dane własnościowe używan
 
 Wiele osób korzysta z wielu różnych urządzeń, na których używane są różne platformy. Na przykład pracownik może używać komputera Surface Pro do pracy i urządzenia przenośnego z systemem Android do spraw osobistych. Typowe jest też uzyskiwanie dostępu do zasobów organizacji, takich jak programy Microsoft Outlook i SharePoint, przy użyciu tych wielu urządzeń.
 
-Za pomocą usługi Intune można zarządzać wieloma urządzeniami na osobę i różnymi platformami działającymi na poszczególnych urządzeniach, w tym systemami iOS, macOS, Android i Windows. W usłudze Intune zasady i ustawienia są podzielone według platformy urządzeń. Dzięki temu można łatwo wyświetlać urządzenia korzystające z określonej platformy i nimi zarządzać.
+Za pomocą usługi Intune można zarządzać wieloma urządzeniami na osobę i różnymi platformami działającymi na poszczególnych urządzeniach, w tym systemami iOS/iPadOS, macOS, Android i Windows. W usłudze Intune zasady i ustawienia są podzielone według platformy urządzeń. Dzięki temu można łatwo wyświetlać urządzenia korzystające z określonej platformy i nimi zarządzać.
 
 **[Typowe scenariusze](common-scenarios.md)** to świetny zasób pozwalający przekonać się, jak usługa Intune obsługuje typowe zagadnienia związane z pracą z urządzeniami przenośnymi. Oto czego dotyczą te scenariusze:  
 
@@ -55,7 +55,7 @@ Za pomocą usługi Intune można zarządzać wieloma urządzeniami na osobę i r
 - Bezpieczne uzyskiwanie dostępu do usługi Office 365
 - Uzyskiwanie dostępu do zasobów organizacji za pomocą urządzeń osobistych
 
-Aby uzyskać więcej informacji na temat usługi Intune, zobacz [co to jest usługa Intune](what-is-intune.md).
+Aby uzyskać więcej informacji na temat usługi Intune, zobacz [Co to jest usługa Intune](what-is-intune.md).
 
 ## <a name="integration-with-secure-and-protect-services"></a>Integracja z usługami zabezpieczania i ochrony
 
@@ -63,7 +63,7 @@ Kluczowym zadaniem dowolnego rozwiązania do zarządzania urządzeniami jest zap
 
 - Rozwiązanie **Microsoft 365** to kluczowy składnik upraszczania typowych zadań informatycznych. W centrum administracyjnym platformy Microsoft 365 możesz tworzyć użytkowników i zarządzać grupami. Możesz także uzyskać dostęp do innych usług, takich jak Intune, Azure AD i nie tylko.
 
-  W rozwiązaniu Microsoft 365 można na przykład utworzyć grupę urządzeń z systemem iOS. Następnie przy użyciu usługi Intune można wypychać do tej grupy urządzeń z systemem iOS zasady dotyczące funkcji systemu iOS, takich jak między innymi dostęp do sklepu z aplikacjami, używanie funkcji AirDrop, tworzenie kopii zapasowych w usłudze iCloud i korzystanie z filtru internetowego firmy Apple.
+  W rozwiązaniu Microsoft 365 można na przykład utworzyć grupę urządzeń z systemem iOS/iPadOS. Następnie przy użyciu usługi Intune można wypychać do tej grupy urządzeń z systemem iOS/iPadOS zasady dotyczące funkcji systemu iOS/iPadOS, takich jak między innymi dostęp do sklepu z aplikacjami, używanie funkcji AirDrop, tworzenie kopii zapasowych w usłudze iCloud i korzystanie z filtru internetowego firmy Apple.
 
 - Program **Windows Defender** zawiera wiele funkcji zabezpieczeń ułatwiających chronienie urządzeń z systemem Windows 10. Używanie usługi Intune i programu Windows Defender w połączeniu umożliwia na przykład:
 
@@ -86,7 +86,7 @@ Po skonfigurowaniu usługi Intune wybiera się też opcję zarządzania urządze
 
 [Centrum administracyjne programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) to pojedyncze miejsce do zarządzania urządzeniami przenośnymi i realizowania związanych z nimi zadań. Ten obszar roboczy zawiera usługi służące do zarządzania urządzeniami, w tym Intune i Azure Active Directory, a także do zarządzania aplikacjami klienckimi.
 
-W centrum administracyjnym zarządzania urządzeniami można:
+Oto zadania, które można realizować w centrum administracyjnym zarządzania urządzeniami:
 
 - [Rejestrowanie urządzeń](../enrollment/device-enrollment.md)
 - [Ustawianie zgodności urządzenia](../protect/device-compliance-get-started.md)
@@ -97,7 +97,7 @@ W centrum administracyjnym zarządzania urządzeniami można:
 - [Zarządzanie rolami](role-based-access-control.md)  
 - Zarządzanie aktualizacjami oprogramowania
   - [Zarządzanie aktualizacjami systemu Windows 10](../protect/windows-update-for-business-configure.md)  
-  - [Zarządzanie aktualizacjami systemu iOS](../protect/software-updates-ios.md)  
+  - [Zarządzanie aktualizacjami systemu iOS/iPadOS](../protect/software-updates-ios.md)  
 - [Azure Active Directory](https://docs.microsoft.com/azure/active-directory)  
 - [Zarządzanie użytkownikami](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
 - [Zarządzanie grupami i członkami](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups)

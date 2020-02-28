@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 61b703837598ddbe2c0c44874928b4444466c811
-ms.sourcegitcommit: 5ad0ce27a30ee3ef3beefc46d2ee49db6ec0cbe3
-ms.translationtype: MTE75
+ms.openlocfilehash: f3b32268d0b04dee84a737b9a1c768bc4fab7202
+ms.sourcegitcommit: 3964e6697b4d43e2c69a15e97c8d16f8c838645b
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2020
-ms.locfileid: "76886785"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77556503"
 ---
 # <a name="troubleshoot-bitlocker-policies-in-microsoft-intune"></a>Rozwiązywanie problemów dotyczących zasad funkcji BitLocker w usłudze Microsoft Intune
 
@@ -39,7 +39,9 @@ Usługa Microsoft Intune udostępnia następujące metody zarządzania funkcją 
 
 - **Punkty odniesienia zabezpieczeń** - [Punkty odniesienia zabezpieczeń](security-baselines.md) to znane grupy ustawień i wartości domyślne zalecane przez odpowiedni zespół ds. zabezpieczeń, aby ułatwić zabezpieczanie urządzeń z systemem Windows. Różne źródła punktów odniesienia, takie jak *punkt odniesienia zabezpieczeń MDM* lub *punkt odniesienia usługi Microsoft Defender ATP*, umożliwiają zarządzanie tymi samymi ustawieniami, a także różnymi ustawieniami. Pozwalają również zarządzać tymi samymi ustawieniami, którymi zarządzasz przy użyciu zasad konfiguracji urządzenia. 
 
-Oprócz usługi Intune możliwe jest, że ustawienia funkcji BitLocker są zarządzane przy użyciu innych metod, takich jak zasady grupy, lub ręcznie ustawiane przez użytkownika urządzenia.
+Oprócz usługi Intune, w przypadku sprzętu zgodnego z funkcją nowoczesnego wstrzymania i interfejsem HSTI podczas korzystania z jednej z tych funkcji szyfrowanie urządzenia przy użyciu funkcji BitLocker jest automatycznie włączane za każdym razem, gdy użytkownik dołączy urządzenie do usługi Azure AD. Usługa Azure AD udostępnia portal, w którym są również tworzone kopie zapasowe kluczy odzyskiwania, dzięki czemu użytkownicy mogą w razie potrzeby pobrać własny klucz odzyskiwania na potrzeby samoobsługi.
+
+Możliwe jest także, że ustawienia funkcji BitLocker są zarządzane przy użyciu innych metod, takich jak zasady grupy, lub ręcznie ustawiane przez użytkownika urządzenia.
 
 Niezależnie od tego, jak ustawienia są stosowane do urządzenia, zasady funkcji BitLocker używają [dostawcy usług kryptograficznych funkcji BitLocker](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) w celu skonfigurowania szyfrowania na urządzeniu. Dostawca usług kryptograficznych funkcji BitLocker jest wbudowany w system Windows i gdy usługa Intune wdraża zasady funkcji BitLocker na przypisanym urządzeniu, dostawca usług kryptograficznych funkcji BitLocker na urządzeniu zapisuje odpowiednie wartości w rejestrze systemu Windows, aby ustawienia zasad mogły obowiązywać.
 
@@ -103,7 +105,7 @@ Confirm-SecureBootUEFI
 
 ### <a name="review-the-devices-registry-key-configuration"></a>Przejrzyj konfigurację klucza rejestru urządzeń
 
-Po pomyślnym wdrożeniu zasad funkcji BitLocker na urządzeniu wyświetl następujący klucz rejestru na urządzeniu, na którym można sprawdzić konfigurację ustawień funkcji BitLocker: *HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\current\device\BitLocker*. Przykład:
+Po pomyślnym wdrożeniu zasad funkcji BitLocker na urządzeniu wyświetl następujący klucz rejestru na urządzeniu, na którym można sprawdzić konfigurację ustawień funkcji BitLocker:  *HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\PolicyManager\current\device\BitLocker*. Przykład:
 
 ![Klucz rejestru funkcji BitLocker](./media/troubleshooting-bitlocker-policies/registry.png)
 
@@ -164,6 +166,15 @@ Wiesz już, jak upewnić się, że zasady funkcji BitLocker zostały pomyślnie 
 
   2. **Funkcja BitLocker nie jest obsługiwana na wszystkich urządzeniach**.
      Nawet jeśli masz odpowiednią wersję systemu Windows, istnieje możliwość, że sprzęt nie spełnia wymagań dotyczących szyfrowania funkcją BitLocker. [Wymagania systemowe dotyczące funkcji BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-overview#system-requirements) można znaleźć w dokumentacji systemu Windows, ale główne kwestie do sprawdzenia to, czy urządzenie ma zgodny układ TPM (1.2 lub nowszy) oraz system BIOS lub oprogramowanie układowe UEFI zgodne ze standardem Trusted Computing Group (TCG).
+     
+**Szyfrowanie funkcją BitLocker nie jest przeprowadzane w trybie dyskretnym** — skonfigurowano zasady programu Endpoint Protection z ustawieniem „Ostrzeżenie dotyczące innego szyfrowania dysków” i nadal pojawia się kreator szyfrowania:
+
+- **Potwierdź, że wersja systemu Windows obsługuje szyfrowanie dyskretne** Wymaga to co najmniej wersji 1803. Jeśli użytkownik nie jest administratorem na urządzeniu, wymaga ono co najmniej wersji 1809. Ponadto w wersji 1809 dodano obsługę urządzeń, które nie obsługują nowoczesnego wstrzymania
+
+**Urządzenie szyfrowane funkcją BitLocker jest wyświetlane jako niezgodne z zasadami zgodności usługi Intune** — problem występuje, gdy szyfrowanie za pomocą funkcji BitLocker nie zostało zakończone. W zależności od takich czynników, jak rozmiar dysku, liczba plików i ustawienia funkcji BitLocker, szyfrowanie za pomocą funkcji BitLocker może zająć dużo czasu. Po zakończeniu szyfrowania urządzenie będzie wyświetlane jako zgodne. Urządzenia mogą być również tymczasowo niezgodne bezpośrednio po ostatniej instalacji aktualizacji systemu Windows.
+
+**Urządzenia są szyfrowane przy użyciu algorytmu 128-bitowego, a w zasadach jest podana wersja 256-bitowa** — domyślnie system Windows 10 zaszyfruje dysk przy użyciu 128-bitowego szyfrowania XTS-AES. Zapoznaj się z tym przewodnikiem, aby [ustawić 256-bitowe szyfrowanie dla funkcji BitLocker podczas pracy z rozwiązaniem Autopilot](https://techcommunity.microsoft.com/t5/intune-customer-success/setting-256-bit-encryption-for-bitlocker-during-autopilot-with/ba-p/323791#).
+
 
 **Przykładowe badanie**
 

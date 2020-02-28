@@ -1,11 +1,11 @@
 ---
 title: Korzystanie z ustawień sieci VPN dla urządzeń z systemem Android w usłudze Microsoft Intune — Azure | Microsoft Docs
-description: Zobacz wszystkie ustawienia, aby utworzyć połączenia sieci VPN na urządzeniach z systemem Android w Microsoft Intune. Wprowadź nazwę połączenia, adres IP lub nazwę FQDN serwera sieci VPN, wybierz sposób uwierzytelniania użytkowników, a następnie wybierz Citrix, SonicWall, Check Point kapsułka i Pulse bezpieczne typy połączeń.
+description: Zobacz wszystkie ustawienia potrzebne do utworzenia połączeń sieci VPN na urządzeniach z systemem Android w usłudze Microsoft Intune. Wprowadź nazwę połączenia, adres IP lub nazwę FQDN serwera sieci VPN, wybierz sposób uwierzytelniania użytkowników, a następnie wybierz typ połączenia Citrix, SonicWall, Check Point Capsule lub Pulse Secure.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/06/2019
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,22 +15,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 458c38e4cce7022d7a56e86cc171365f1496741e
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
-ms.translationtype: MTE75
+ms.openlocfilehash: 3f82cc74aa2e351ee63ffba2629e9ddddb57fc76
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206299"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77512521"
 ---
-# <a name="android-device-settings-to-configure-vpn-in-intune"></a>Ustawienia urządzenia z systemem Android w celu skonfigurowania sieci VPN w usłudze Intune
+# <a name="android-device-settings-to-configure-vpn-in-intune"></a>Ustawienia urządzenia z systemem Android potrzebne do skonfigurowania sieci VPN w usłudze Intune
 
-
-
-W tym artykule wyszczególniono i opisano różne ustawienia połączenia VPN, którymi można zarządzać na urządzeniach z systemem Android. W ramach rozwiązania do zarządzania urządzeniami przenośnymi (MDM) Użyj tych ustawień, aby utworzyć połączenie sieci VPN, wybierz sposób uwierzytelniania sieci VPN, wybierz typ serwera sieci VPN i inne.
+W tym artykule wyszczególniono i opisano różne ustawienia połączenia VPN, którymi można zarządzać na urządzeniach z systemem Android. W ramach oprogramowania do zarządzania urządzeniami przenośnymi (MDM) użyj tych ustawień, aby utworzyć połączenie sieci VPN, wybrać sposób uwierzytelniania sieci VPN, wybrać typ serwera sieci VPN i wykonać inne czynności.
 
 Jako administrator usługi Intune możesz tworzyć ustawienia sieci VPN i przypisywać je do urządzeń z systemem Android. 
 
-Aby dowiedzieć się więcej o profilach sieci VPN w usłudze Intune, zobacz [profile sieci VPN](vpn-settings-configure.md).
+Aby dowiedzieć się więcej o profilach sieci VPN w usłudze Intune, zobacz [Profile sieci VPN](vpn-settings-configure.md).
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
@@ -55,15 +53,15 @@ Aby dowiedzieć się więcej o profilach sieci VPN w usłudze Intune, zobacz [pr
   - **Pulse Secure**
   - **Citrix SSO**
 
-- **Odcisk palca** (tylko funkcja Check Point Capsule VPN): wprowadź ciąg znaków, na przykład **Kod odcisku palca firmy Contoso**, aby sprawdzić, czy serwer sieci VPN jest zaufany. Odcisk palca można wysłać do klienta, który będzie wówczas traktował każdy serwer przedstawiający ten sam odcisk palca podczas połączenia jako zaufany. Jeśli urządzenie nie ma żadnego odcisku palca, wyświetli użytkownikowi monit dotyczący zaufania serwerowi sieci VPN zawierający odcisk palca serwera. Użytkownik ręcznie weryfikuje odcisk palca i wybiera pozycję Zaufane w celu nawiązania połączenia.
+- **Odcisk palca** (tylko funkcja Check Point Capsule VPN): wprowadź ciąg znaków, na przykład **Kod odcisku palca firmy Contoso**, aby sprawdzić, czy serwer sieci VPN jest zaufany. Odcisk palca jest wysyłany do klienta, dzięki czemu klient wie, że może ufać każdemu serwerowi z tym samym odciskiem palca. Jeśli urządzenie nie ma żadnego odcisku palca, wyświetli użytkownikowi monit dotyczący zaufania serwerowi sieci VPN zawierający odcisk palca serwera. Użytkownik ręcznie weryfikuje odcisk palca i wybiera pozycję Zaufane w celu nawiązania połączenia.
 - **Wprowadź pary kluczy i wartości dla atrybutów sieci VPN Citrix** (tylko Citrix): wprowadź pary kluczy i wartości udostępnione przez firmę Citrix. Te wartości służą do konfigurowania właściwości połączenia sieci VPN. 
 
-  Można również **zaimportować** plik z wartościami rozdzielanymi przecinkami (CSV) z parami klucze i wartość. Upewnij się, że **moje dane mają nagłówki** i **właściwości** klucza.
+  Można również **zaimportować** plik z wartościami rozdzielanymi przecinkami (CSV) za pomocą par kluczy i wartości. Pamiętaj, aby sprawdzić właściwości **Moje dane mają nagłówki** i **Klucz**.
 
-  Po dodaniu par kluczy i wartości Użyj **eksportu**, aby utworzyć kopię zapasową danych w pliku CSV.
+  Po dodaniu par kluczy i wartości użyj pozycji **Eksportuj**, aby utworzyć kopię zapasową danych w pliku CSV.
 
 ## <a name="next-steps"></a>Następne kroki
 
 [Przypisywanie profilu](device-profile-assign.md) i [monitorowanie jego stanu](device-profile-monitor.md).
 
-Możesz również utworzyć profile sieci VPN dla [Android Enterprise](vpn-settings-android-enterprise.md), [iOS](vpn-settings-ios.md), [macOS](vpn-settings-macos.md), [Windows 10 i nowszych](vpn-settings-windows-10.md), [Windows 8.1](vpn-settings-windows-8-1.md)i [Windows Phone 8,1](vpn-settings-windows-phone-8-1.md) urządzeń.
+Można również tworzyć profile sieci VPN dla urządzeń z systemem [Android Enterprise](vpn-settings-android-enterprise.md), [iOS/iPadOS](vpn-settings-ios.md), [macOS](vpn-settings-macos.md), [Windows 10 lub nowszym](vpn-settings-windows-10.md), [Windows 8.1](vpn-settings-windows-8-1.md) i [Windows Phone 8.1](vpn-settings-windows-phone-8-1.md).

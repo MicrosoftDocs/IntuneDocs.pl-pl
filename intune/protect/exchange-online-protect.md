@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ffcc4a7e48064e6a458126667cf6ab2c4e75777
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
-ms.translationtype: MTE75
+ms.openlocfilehash: ac670fd5e17462688fdfcde1b047e1071a49353a
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72502260"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515207"
 ---
 # <a name="protect-office-365-exchange-online-without-requiring-device-management"></a>Ochrona usługi Office 365 Exchange Online bez konieczności zarządzania urządzeniami
 
-Jeśli chcesz zapewnić pracownikom dostęp do służbowej poczty e-mail bez ponoszenia kosztów związanych z konfigurowaniem systemu zarządzania urządzeniami, możesz to zrobić. Możesz zapewnić dostęp do usługi Office 365 Exchange Online za pośrednictwem usługi Intune. Aby móc wykonać niezbędne kroki, upewnij się, że masz licencję na usługę Microsoft 365 lub usługi Azure Active Directory (Premium) i Intune. Pracownicy muszą posiadać [obsługiwane urządzenie z systemem iOS lub Android](../fundamentals/supported-devices-browsers.md). 
+Jeśli chcesz zapewnić pracownikom dostęp do służbowej poczty e-mail bez ponoszenia kosztów związanych z konfigurowaniem systemu zarządzania urządzeniami, możesz to zrobić. Możesz zapewnić dostęp do usługi Office 365 Exchange Online za pośrednictwem usługi Intune. Aby móc wykonać niezbędne kroki, upewnij się, że masz licencję na usługę Microsoft 365 lub usługi Azure Active Directory (Premium) i Intune. Pracownicy muszą posiadać [obsługiwane urządzenie z systemem iOS/iPadOS lub Android](../fundamentals/supported-devices-browsers.md). 
 
 Jeśli postanowisz skonfigurować system zarządzania urządzeniami, możesz to zrobić. Ten typ ochrony aplikacji działa niezależnie od zarządzania urządzeniami. 
 
@@ -41,7 +41,7 @@ Jeśli postanowisz skonfigurować system zarządzania urządzeniami, możesz to 
 
 ## <a name="what-to-tell-employees-and-students"></a>Co powiedzieć pracownikom i uczniom
 
-* Poproś pracowników oraz uczniów o pobranie i zainstalowanie programu Outlook lub Microsoft SharePoint dla systemu iOS ze sklepu App Store firmy Apple lub dla systemu Android ze sklepu Google Play. 
+* Poproś pracowników oraz uczniów o pobranie i zainstalowanie programu Outlook lub Microsoft SharePoint dla systemu iOS/iPadOS ze sklepu App Store firmy Apple lub dla systemu Android ze sklepu Google Play. 
 * Jeśli zablokujesz dostęp do aplikacji, które nie korzystają z nowoczesnego uwierzytelniania, powiadom pracowników i uczniów o tym ograniczeniu. 
 
 ## <a name="next-steps"></a>Następne kroki

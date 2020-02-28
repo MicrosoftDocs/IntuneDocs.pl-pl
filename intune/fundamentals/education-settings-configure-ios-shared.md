@@ -1,7 +1,7 @@
 ---
-title: Ustawienia udostępnionych urządzeń usługi Intune dla aplikacji Classroom w systemie iOS
+title: Ustawienia udostępnionych urządzeń usługi Intune dla aplikacji Classroom w systemie iOS/iPadOS
 titleSuffix: Microsoft Intune
-description: Informacje na temat ustawień usługi Intune służących do kontrolowania ustawień aplikacji Classroom na urządzeniach z systemem iOS.
+description: Informacje na temat ustawień usługi Intune służących do kontrolowania ustawień aplikacji Classroom na urządzeniach z systemem iOS/iPadOS.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -18,23 +18,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0edfd9b8ee8b45952d9c22d5365d09d125ea7710
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
-ms.translationtype: MTE75
+ms.openlocfilehash: 412dc9a12f5a13b5fbd738f3ac1b5b1033a2635b
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74784259"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514714"
 ---
 # <a name="configure-intune-education-settings-for-shared-ipad-devices"></a>Konfigurowanie ustawień rozwiązań dla edukacji usługi Intune dla udostępnianych urządzeń iPad
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 > [!NOTE]
-> Usługa Intune nie obsługuje obecnie konfigurowania aplikacji klasy. Ten artykuł dotyczy tylko użytkowników posiadających profile edukacyjne systemu iOS w usłudze Intune.
+> Usługa Intune nie obsługuje obecnie konfigurowania aplikacji Classroom. Ten artykuł dotyczy tylko użytkowników posiadających profile edukacyjne systemu iOS/iPadOS w usłudze Intune.
 
-Usługa Intune obsługuje aplikację Classroom dla systemu iOS, która pomaga nauczycielom w prowadzeniu nauczania oraz kontrolowaniu urządzeń uczniów w klasie. Oprócz aplikacji Classroom firma Apple obsługuje możliwość skonfigurowania urządzeń iPad uczniów w taki sposób, że wielu uczniów może współdzielić jedno urządzenie. W tym dokumencie opisano sposób osiągnięcia tego celu przy użyciu usługi Intune.
+Usługa Intune obsługuje aplikację Classroom dla systemu iOS/iPadOS, która pomaga nauczycielom w prowadzeniu nauczania oraz kontrolowaniu urządzeń uczniów w klasie. Oprócz aplikacji Classroom firma Apple obsługuje możliwość skonfigurowania urządzeń iPad uczniów w taki sposób, że wielu uczniów może współdzielić jedno urządzenie. W tym dokumencie opisano sposób osiągnięcia tego celu przy użyciu usługi Intune.
 
-Informacje o konfigurowaniu dedykowanych (1:1) urządzeń iPad do używania aplikacji Classroom zawiera temat [Jak konfigurować ustawienia usługi Intune dla aplikacji Classroom w systemie iOS](education-settings-configure-ios.md).
+Informacje o konfigurowaniu dedykowanych (1:1) urządzeń iPad do używania aplikacji Classroom zawiera temat [Jak konfigurować ustawienia usługi Intune dla aplikacji Classroom w systemie iOS/iPadOS](education-settings-configure-ios.md).
 
 ## <a name="before-you-start"></a>Przed rozpoczęciem
 
@@ -64,7 +64,7 @@ Informacje do usługi SDS możesz zaimportować przy użyciu jednej z następuj�
 - [Więcej informacji na temat licencjonowania w usłudze Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-licensing-whatis-azure-portal)
 
 
-## <a name="step-2---create-and-assign-an-ios-education-profile-in-intune"></a>Krok 2. Tworzenie i przypisywanie profilu Edukacja dla systemu iOS w usłudze Intune
+## <a name="step-2---create-and-assign-an-iosipados-education-profile-in-intune"></a>Krok 2. Tworzenie i przypisywanie profilu Edukacja dla systemu iOS/iPadOS w usłudze Intune
 
 ### <a name="configure-general-settings"></a>Konfigurowanie ustawień ogólnych
 
@@ -72,7 +72,7 @@ Informacje do usługi SDS możesz zaimportować przy użyciu jednej z następuj�
 3. W okienku **Intune** wybierz pozycję **Konfiguracja urządzeń**.
 2. W okienku **Konfiguracja urządzeń** w sekcji **Zarządzanie** wybierz pozycję **Profile**.
 5. W okienku profilów wybierz pozycję **Utwórz profil**.
-6. W okienku **Utwórz profil** wypełnij pola **Nazwa** i **Opis** odnoszące się do profilu Edukacja w systemie iOS.
+6. W okienku **Utwórz profil** wypełnij pola **Nazwa** i **Opis** odnoszące się do profilu Edukacja w systemie iOS/iPadOS.
 7. Z listy rozwijanej **Platforma** wybierz pozycję **iOS**.
 8. Z listy rozwijanej **Typ profilu** wybierz pozycję **Edukacja**.
 9. Wybierz kolejno pozycje **Ustawienia** > **Konfiguruj**.

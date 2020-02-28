@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c662de98ffa497c5fbc89ac1b78ed8537ff0d80c
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
-ms.translationtype: MTE75
+ms.openlocfilehash: 0d6dc10eca80a7d403d0ff44c25d3cfaed85fafa
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "71732701"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514204"
 ---
 # <a name="troubleshoot-conditional-access"></a>Rozwiązywanie problemów z dostępem warunkowym
 W tym artykule opisano, co zrobić, gdy użytkownicy nie mogą uzyskać dostępu do zasobów chronionych przy użyciu dostępu warunkowego, lub gdy użytkownicy mogą uzyskiwać dostęp do chronionych zasobów, ale powinni być blokowani.
@@ -46,21 +46,21 @@ Aby dostęp warunkowy działał, muszą być spełnione następujące wymagania:
 
 - Na urządzeniu musi być aktywowany program Exchange ActiveSync, jeśli użytkownik korzysta z natywnego klienta poczty urządzenia, a nie z programu Outlook. Dzieje się to automatycznie w przypadku urządzeń z systemem iOS, Windows Phone i Android Knox.
 
-- W przypadku lokalnego programu Exchange łącznik usługi Intune Exchange musi być poprawnie skonfigurowany. Aby uzyskać więcej informacji, zobacz artykuł [Rozwiązywanie problemów z programem Exchange Connector w usłudze Microsoft Intune](troubleshoot-exchange-connector.md).
+- W przypadku lokalnego programu Exchange program Intune Exchange Connector musi zostać poprawnie skonfigurowany. Aby uzyskać więcej informacji, zobacz artykuł [Rozwiązywanie problemów z programem Exchange Connector w usłudze Microsoft Intune](troubleshoot-exchange-connector.md).
 
-- W przypadku lokalnego programu Skype należy skonfigurować nowoczesne uwierzytelnianie hybrydowe. Zobacz [Omówienie nowoczesnego uwierzytelniania hybrydowego](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview).
+- W przypadku lokalnego programu Skype należy skonfigurować nowoczesne uwierzytelnianie hybrydowe. Zobacz temat [Hybrid Modern Auth Overview](https://docs.microsoft.com/office365/enterprise/hybrid-modern-auth-overview) (Omówienie nowoczesnego uwierzytelniania hybrydowego).
 
 Te warunki można wyświetlić dla każdego urządzenia w witrynie Azure Portal i w raporcie ze spisu urządzeń.
 
 ## <a name="devices-appear-compliant-but-users-are-still-blocked"></a>Urządzenia są widoczne jako zgodne, ale użytkownicy nadal są blokowani
 
-- Upewnij się, że użytkownik ma licencję usługi Intune przypisaną do właściwej oceny zgodności.
+- Upewnij się, że użytkownik ma przypisaną licencję usługi Intune, aby właściwie ocenić zgodność.
 
 - Urządzenia z systemem Android innym niż Knox nie uzyskają dostępu, dopóki użytkownik nie kliknie linku **Rozpocznij teraz** w otrzymanej wiadomości e-mail o kwarantannie. Ma to zastosowanie nawet w przypadku, gdy użytkownik jest już zarejestrowany w usłudze Intune. Jeśli użytkownik nie odbiera wiadomości e-mail z linkiem na telefonie, może użyć komputera, aby uzyskać dostęp do swojej poczty e-mail i przekazać ją na konto poczty e-mail na urządzeniu.
 
 - Gdy urządzenie jest rejestrowane po raz pierwszy, może upłynąć trochę czasu, zanim informacje o zgodności zostaną zarejestrowane dla urządzenia. Odczekaj kilka minut i spróbuj ponownie.
 
-- W przypadku urządzeń z systemem iOS istniejący profil poczty e-mail może zablokować wdrożenie profilu poczty e-mail utworzonego przez administratora usługi Intune i przypisanego do danego użytkownika, przez co urządzenie jest niezgodne. W tym scenariuszu aplikacja Portal firmy powiadamia użytkownika, że nie jest on zgodny ze względu na ręcznie skonfigurowany profil poczty e-mail, i wyświetla monit o usunięcie tego profilu. Gdy użytkownik usunie istniejący profil poczty e-mail, będzie można pomyślnie wdrożyć profil poczty e-mail usługi Intune. Aby uniknąć tego problemu, poinstruuj użytkowników, aby usunęli wszystkie istniejące profile poczty e-mail na swoim urządzeniu przed rozpoczęciem rejestrowania.
+- W przypadku urządzeń z systemem iOS/iPadOS istniejący profil poczty e-mail może zablokować wdrożenie profilu poczty e-mail utworzonego przez administratora usługi Intune i przypisanego do danego użytkownika, przez co urządzenie jest niezgodne. W tym scenariuszu aplikacja Portal firmy powiadamia użytkownika, że nie jest on zgodny ze względu na ręcznie skonfigurowany profil poczty e-mail, i wyświetla monit o usunięcie tego profilu. Gdy użytkownik usunie istniejący profil poczty e-mail, będzie można pomyślnie wdrożyć profil poczty e-mail usługi Intune. Aby uniknąć tego problemu, poinstruuj użytkowników, aby usunęli wszystkie istniejące profile poczty e-mail na swoim urządzeniu przed rozpoczęciem rejestrowania.
 
 - Urządzenie może zostać zablokowane w stanie sprawdzania zgodności, co uniemożliwia użytkownikowi rozpoczęcie kolejnego ewidencjonowania. Jeśli masz urządzenie w tym stanie:
   - Upewnij się, że urządzenie korzysta z najnowszej wersji aplikacji Portal firmy.
@@ -76,7 +76,7 @@ Te warunki można wyświetlić dla każdego urządzenia w witrynie Azure Portal 
 
 - Zarejestrowane i zgodne urządzenie z systemem Android nadal może być blokowane i otrzymać powiadomienie o kwarantannie podczas pierwszej próby uzyskania dostępu do zasobów firmy. W takiej sytuacji upewnij się, że aplikacja Portal firmy nie została uruchomiona, a następnie wybierz link **Rozpocznij teraz** w wiadomości e-mail o kwarantannie, aby wyzwolić ocenę. Należy to zrobić tylko w przypadku, gdy najpierw włączono dostęp warunkowy.
 
-- Zarejestrowane urządzenie z systemem Android może monitować użytkownika o "nie znaleziono certyfikatów" i nie ma dostępu do zasobów usługi O365. Użytkownik musi włączyć opcję *Włącz dostęp za pomocą przeglądarki* na zarejestrowanym urządzeniu w następujący sposób:
+- Zarejestrowane urządzenie z systemem Android może monitować użytkownika przy użyciu komunikatu „Nie znaleziono certyfikatów” i nie ma przyznanych praw dostępu do zasobów usługi O365. Użytkownik musi włączyć opcję *Włącz dostęp za pomocą przeglądarki* na zarejestrowanym urządzeniu w następujący sposób:
   1. Otwórz aplikację Portal firmy.
   2. Przejdź do strony Ustawienia za pomocą przycisku wielokropka (...) lub przycisku menu sprzętu.
   3. Wybierz przycisk *Włącz dostęp za pomocą przeglądarki*.
@@ -97,13 +97,13 @@ Te warunki można wyświetlić dla każdego urządzenia w witrynie Azure Portal 
 
 - Jeśli urządzenie zostanie selektywnie wyczyszczone lub wycofane z usługi Intune, może nadal mieć dostęp przez kilka godzin po wycofaniu. Jest to spowodowane tym, że program Exchange buforuje prawa dostępu przez sześć godzin. Należy rozważyć inne sposoby ochrony danych na wycofanych urządzeniach w tym scenariuszu.
 
-- Surface Hub, zarejestrowane zbiorczo i zarejestrowane urządzenia z systemem Windows mogą obsługiwać dostęp warunkowy, gdy użytkownik, do którego jest przypisana Licencja na usługę Intune, jest zalogowany. Jednak w celu poprawnej oceny należy wdrożyć zasady zgodności w grupach urządzeń (nie w grupach użytkowników).
+- Urządzenia Surface Hub, zarejestrowane zbiorczo i urządzenia z systemem Windows zarejestrowane w programie DEM mogą obsługiwać dostęp warunkowy, gdy użytkownik z przypisaną licencją usługi Intune jest zalogowany. Jednak w celu poprawnej oceny należy wdrożyć zasady zgodności w grupach urządzeń (a nie w grupach użytkowników).
 
-- Sprawdź przypisania zasad zgodności i zasad dostępu warunkowego. Jeśli użytkownik nie należy do grupy, do której przypisano zasady, lub znajduje się w wykluczonej grupie, użytkownik nie jest zablokowany. Tylko urządzenia użytkowników znajdujących się w przypisanej grupie są sprawdzane pod kątem zgodności.
+- Sprawdź przypisania zasad zgodności i zasad dostępu warunkowego. Jeśli użytkownik nie należy do grupy, do której przypisano zasady, lub znajduje się w wykluczonej grupie, nie jest blokowany. Tylko urządzenia użytkowników znajdujących się w przypisanej grupie są sprawdzane pod kątem zgodności.
 
 ## <a name="noncompliant-device-is-not-blocked"></a>Niezgodne urządzenie nie jest blokowane
 
-Jeśli urządzenie nie jest zgodne, ale nadal ma dostęp, wykonaj następujące czynności.
+Jeśli urządzenie nie jest zgodne, ale nadal ma dostęp, wykonaj poniższe czynności.
 
 - Sprawdź grupy docelowe i wykluczenia. Jeśli użytkownik nie znajduje się w odpowiedniej grupie docelowej lub znajduje się w grupie wykluczenia, nie zostanie zablokowany. Tylko urządzenia użytkowników w grupie docelowej są sprawdzane pod kątem zgodności.
 

@@ -1,12 +1,12 @@
 ---
-title: Identyfikatory pakietów systemu iOS dla aplikacji wbudowanych w usłudze Microsoft Intune — Azure | Microsoft Docs
+title: Identyfikatory pakietów systemu iOS/iPadOS dla aplikacji wbudowanych w usłudze Microsoft Intune — Azure | Microsoft Docs
 titleSuffix: ''
-description: Zobacz listę identyfikatorów pakietów dla wbudowanych aplikacji dla systemu iOS. Te identyfikatory pakietów umożliwiają jawne zezwalanie na używanie aplikacji w zasadach i profilach konfiguracji urządzeń w usłudze Microsoft Intune.
+description: Zobacz listę identyfikatorów pakietów dla wbudowanych aplikacji dla systemu iOS i iPadOS. Te identyfikatory pakietów umożliwiają jawne zezwalanie na używanie aplikacji w zasadach i profilach konfiguracji urządzeń w usłudze Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/06/2020
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e151481b090e1e666bfdb2759015adde6f1d66a9
-ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
-ms.translationtype: MTE75
+ms.openlocfilehash: 10c6ea8e3afd7bb1f5a583c0088c72fc155cb0f9
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75691844"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513303"
 ---
-# <a name="bundle-ids-for-built-in-ios-apps-you-can-use-in-intune"></a>Identyfikatory pakietów dla wbudowanych aplikacji dla systemu iOS, których można używać w usłudze Intune
+# <a name="bundle-ids-for-built-in-ios-and-ipados-apps-you-can-use-in-intune"></a>Identyfikatory pakietów dla wbudowanych aplikacji dla systemu iOS i iPadOS, których można używać w usłudze Intune
 
-Podczas konfigurowania funkcji na urządzeniach z systemem iOS można również dodawać wbudowane aplikacje. W tym artykule wymieniono identyfikatory pakietów niektórych typowych wbudowanych aplikacji dla systemu iOS. Aby wyszukać identyfikatory pakietu innych aplikacji, skontaktuj się z dostawcą oprogramowania. Zobacz listę [identyfikatorów pakietów dla systemu iOS](https://support.apple.com/guide/mdm/ios-bundle-ids-mdm90f60c1ce/web) (otwiera witrynę firmy Apple).
+Podczas konfigurowania funkcji na urządzeniach z systemem iOS/iPadOS można również dodawać wbudowane aplikacje. W tym artykule wymieniono identyfikatory pakietów niektórych typowych wbudowanych aplikacji dla systemu iOS/iPadOS. Aby wyszukać identyfikatory pakietu innych aplikacji, skontaktuj się z dostawcą oprogramowania. Zobacz listę [identyfikatorów pakietów dla systemu iOS/iPadOS](https://support.apple.com/guide/mdm/ios-bundle-ids-mdm90f60c1ce/web) (otwiera witrynę firmy Apple).
 
 ## <a name="bundle-ids"></a>Identyfikatory pakietów
 
@@ -36,7 +36,7 @@ Podczas konfigurowania funkcji na urządzeniach z systemem iOS można również 
 | com.apple.mobilecal         | Kalendarz     | Apple     |
 | com.apple.camera            | Aparat fotograficzny       | Apple     |
 | com.apple.mobiletimer       | Zegar        | Apple     |
-| com. Apple. clips             | Film        | Apple     |
+| com.apple.clips             | Klipy        | Apple     |
 | com.apple.compass           | Kompas      | Apple     |
 | com.apple.MobileAddressBook | Kontakty     | Apple     |
 | com.apple.facetime          | FaceTime     | Apple     |
@@ -55,7 +55,7 @@ Podczas konfigurowania funkcji na urządzeniach z systemem iOS można również 
 | com.apple.Keynote           | Keynote      | Apple     |
 | com.apple.mobilemail        | Mail         | Apple     |
 | com.apple.Maps              | Mapy         | Apple     |
-| com. Apple. Measure           | Miara      | Apple     |
+| com.apple.measure           | Miara      | Apple     |
 | com.apple.MobileSMS         | Komunikaty     | Apple     |
 | com.apple.Music             | Muzyka        | Apple     |
 | com.apple.news              | News         | Apple     |
@@ -69,7 +69,7 @@ Podczas konfigurowania funkcji na urządzeniach z systemem iOS można również 
 | com.apple.reminders         | Przypomnienia    | Apple     |
 | com.apple.mobilesafari      | Safari       | Apple     |
 | com.apple.Preferences       | Ustawienia     | Apple     |
-| com. Apple. shortcuts         | Skróty    | Apple     |
+| com.apple.shortcuts         | Skróty    | Apple     |
 | com.apple.SiriViewService   | Siri         | Apple     |
 | com.apple.stocks            | Giełda       | Apple     |
 | com.apple.tips              | Porady         | Apple     |
@@ -78,8 +78,8 @@ Podczas konfigurowania funkcji na urządzeniach z systemem iOS można również 
 | com.apple.VoiceMemos        | Dyktafon   | Apple     |
 | com.apple.Passbook          | Wallet       | Apple     |
 | com.apple.Bridge            | Zegarek        | Apple     |
-| com.apple.weather           | Pogoda      | Apple     |      
+| com.apple.weather           | Pogoda      | Apple     |
 
 ## <a name="next-steps"></a>Następne kroki
 
-Te identyfikatory pakietów umożliwiają konfigurowanie [funkcji urządzeń](ios-device-features-settings.md) oraz [ograniczanie niektórych ustawień lub zezwalanie na ich używanie ](device-restrictions-ios.md) na urządzeniach z systemem iOS.
+Te identyfikatory pakietów umożliwiają konfigurowanie [funkcji urządzeń](ios-device-features-settings.md) oraz [ograniczanie niektórych ustawień lub zezwalanie na ich używanie ](device-restrictions-ios.md) na urządzeniach z systemem iOS/iPadOS.

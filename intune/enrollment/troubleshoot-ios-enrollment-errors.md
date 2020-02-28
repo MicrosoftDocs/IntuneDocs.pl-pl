@@ -1,7 +1,7 @@
 ---
-title: Rozwiązywanie problemów dotyczących rejestrowania urządzeń z systemem iOS w usłudze Microsoft Intune
+title: Rozwiązywanie problemów dotyczących rejestrowania urządzeń z systemami iOS/iPadOS w usłudze Microsoft Intune
 titleSuffix: Microsoft Intune
-description: Sugestie dotyczące rozwiązywania niektórych typowych problemów dotyczących rejestrowania urządzeń z systemem iOS w usłudze Intune.
+description: Sugestie dotyczące rozwiązywania niektórych typowych problemów występujących podczas rejestrowania urządzeń z systemem iOS/iPadOS w usłudze Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -17,57 +17,57 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9bca046302b221b934d0802c0bf637aced2cec3f
-ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
-ms.translationtype: MTE75
+ms.openlocfilehash: a29fab4be6e2046b2c6757505001a7ba3455b8d6
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75885915"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514323"
 ---
-# <a name="troubleshoot-ios-device-enrollment-problems-in-microsoft-intune"></a>Rozwiązywanie problemów dotyczących rejestrowania urządzeń z systemem iOS w usłudze Microsoft Intune
+# <a name="troubleshoot-iosipados-device-enrollment-problems-in-microsoft-intune"></a>Rozwiązywanie problemów dotyczących rejestrowania urządzeń z systemami iOS/iPadOS w usłudze Microsoft Intune
 
-Ten artykuł ułatwia administratorom usługi Intune zrozumienie i rozwiązywanie problemów podczas rejestrowania urządzeń z systemem iOS w usłudze Intune.
+Ten artykuł ułatwia administratorom usługi Intune zrozumienie i rozwiązywanie problemów podczas rejestrowania urządzeń z systemem iOS/iPadOS w usłudze Intune.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Przed rozpoczęciem rozwiązywania problemów należy zebrać podstawowe informacje. Te informacje mogą pomóc w lepszym zrozumieniu problemu i skrócić czas, aby znaleźć rozwiązanie.
+Przed rozpoczęciem rozwiązywania problemów należy zebrać pewne podstawowe informacje. Te informacje mogą pomóc w skuteczniejszym zrozumieniu problemu i skróceniu czasu jego rozwiązywania.
 
 Zbierz następujące informacje o problemie:
 
 - Jaki jest dokładny komunikat o błędzie?
-- Gdzie zobaczysz komunikat o błędzie?
-- Kiedy problem zaczął występować? Czy rejestracja została kiedykolwiek zadziałała?
-- Na jakiej platformie (Android, iOS, Windows) występuje problem?
-- Ilu użytkowników dotyczy błąd? Czy wszyscy użytkownicy mają te same lub tylko niektóre?
-- Ile urządzeń ma wpływ? Czy dotyczy to wszystkich urządzeń?
-- Zmiana urzędu MDM
-- Jak odbywa się rejestracja? Czy jest to "Dobierz własne urządzenie" (BYOD), czy Apple Device Enrollment Program (DEP) z profilami rejestracji?
+- Gdzie jest widoczny komunikat o błędzie?
+- Kiedy problem zaczął występować? Czy rejestracja kiedykolwiek zadziałała?
+- Na jakiej platformie (Android, iOS/iPadOS, Windows) występuje problem?
+- Ilu użytkowników dotyczy błąd? Czy problem dotyczy wszystkich użytkowników, czy tylko niektórych?
+- Na ilu urządzeniach występuje problem? Czy problem dotyczy wszystkich urządzeń, czy tylko niektórych?
+- Jaki urząd oprogramowania MDM jest stosowany?
+- Jak odbywa się rejestracja? Czy jest stosowana strategia „Przynieś własne urządzenie” (BYOD), czy też program Apple Device Enrollment Program (DEP) z profilami rejestracji?
 
 ## <a name="error-messages"></a>Komunikaty o błędach
 
 ### <a name="profile-installation-failed-a-network-error-has-occurred"></a>Instalacja profilu nie powiodła się. Wystąpił błąd sieciowy.
 
-**Przyczyna:** Wystąpił nieokreślony problem z systemem iOS na urządzeniu.
+**Przyczyna:** Wystąpił nieokreślony problem z systemem iOS/iPadOS na urządzeniu.
 
 #### <a name="resolution"></a>Rozwiązanie
 
-1. Aby zapobiec utracie danych w następujących krokach (Przywracanie systemu iOS powoduje usunięcie wszystkich danych z urządzenia), należy pamiętać o wykonaniu kopii zapasowej danych.
-2. Przełącz urządzenie w tryb odzyskiwania, a następnie Przywróć je. Upewnij się, że skonfigurowano ją jako nowe urządzenie. Więcej informacji o sposobie przywracania urządzeń z systemem iOS znajduje się w temacie [https://support.apple.com/HT201263](https://support.apple.com/HT201263).
+1. Aby zapobiec utracie danych podczas wykonywania poniższych kroków (przywrócenie systemu iOS/iPadOS powoduje usunięcie wszystkich danych z urządzenia), utwórz kopię zapasową danych.
+2. Przełącz urządzenie w tryb odzyskiwania, a następnie przywróć je. Upewnij się, że urządzenie zostało skonfigurowane jako nowe. Więcej informacji o sposobach przywracania urządzeń z systemem iOS/iPadOS znajduje się w temacie [https://support.apple.com/HT201263](https://support.apple.com/HT201263).
 3. Zarejestruj ponownie urządzenie.
 
 ### <a name="profile-installation-failed-connection-to-the-server-could-not-be-established"></a>Instalacja profilu nie powiodła się. Nie można nawiązać połączenia z serwerem.
 
-**Przyczyna:** dzierżawy usługi Intune jest skonfigurowana tak, aby zezwalać tylko na urządzenia należące do firmy. 
+**Przyczyna:** Dzierżawa usługi Intune została skonfigurowana tak, aby zezwalać tylko na korzystanie z urządzeń należących do firmy. 
 
 #### <a name="resolution"></a>Rozwiązanie
 1. Zaloguj się do witryny Azure Portal.
 2. Wybierz pozycję **Więcej usług**, wyszukaj usługę Intune, a następnie wybierz usługę **Intune**.
 3. Wybierz pozycję **Rejestrowanie urządzenia** > **Ograniczenia rejestracji**.
-4. W obszarze **ograniczenia dotyczące typu urządzenia**wybierz ograniczenie, które chcesz ustawić > **właściwości** > **wybierz platform** > Wybierz **Zezwól** **iOS**, a następnie kliknij przycisk **OK**.
-5. Wybierz pozycję **Konfiguruj platformy**, wybierz pozycję **Zezwalaj na** dla urządzeń z systemem iOS należących do użytkownika, a następnie kliknij przycisk **OK**.
+4. W obszarze **Ograniczenia typów urządzeń** wybierz ograniczenie, które chcesz ustawić > **Właściwości** > **Wybierz platformy** > wybierz pozycję **Zezwalaj** w obszarze **iOS**, a następnie kliknij przycisk **OK**.
+5. Wybierz pozycję **Konfiguruj platformy**, wybierz pozycję **Zezwalaj** dla urządzeń z systemem iOS/iPadOS, a następnie kliknij przycisk **OK**.
 6. Zarejestruj ponownie urządzenie.
 
-**Przyczyna:** niezbędne rekordy CNAME w systemie DNS nie istnieją.
+**Przyczyna:** Niezbędne rekordy CNAME w systemie DNS nie istnieją.
 
 #### <a name="resolution"></a>Rozwiązanie
 Utwórz rekordy zasobów CNAME systemu DNS dla domeny Twojej firmy. Na przykład jeśli domena firmy to contoso.com, utwórz w systemie DNS rekord CNAME przekierowujący EnterpriseEnrollment.contoso.com do EnterpriseEnrollment-s.manage.microsoft.com.
@@ -86,7 +86,7 @@ Jeśli firma używa wielu domen dla poświadczeń użytkowników, należy utworz
 > [!NOTE]
 > Propagowanie zmian rekordów DNS może potrwać do 72 godzin. Nie można zweryfikować zmiany w systemie DNS w usłudze Intune, dopóki trwa propagowanie rekordu DNS.
 
-**Przyczyna:** zarejestrować urządzenie, które było wcześniej zarejestrowane przy użyciu innego konta użytkownika, a poprzedni użytkownik nie został odpowiednio usunięty z usługi Intune.
+**Przyczyna:** Rejestrujesz urządzenie, które zostało wcześniej zarejestrowane przy użyciu innego konta użytkownika, a poprzedni użytkownik nie został odpowiednio usunięty z usługi Intune.
 
 #### <a name="resolution"></a>Rozwiązanie
 1. Anuluj wszystkie bieżące instalacje profilu.
@@ -94,58 +94,58 @@ Jeśli firma używa wielu domen dla poświadczeń użytkowników, należy utworz
 3. Zarejestruj ponownie urządzenie.
 
 > [!NOTE]
-> Jeśli rejestracja nadal kończy się niepowodzeniem, Usuń pliki cookie w przeglądarce Safari (nie blokuj plików cookie), a następnie zarejestruj ponownie urządzenie.
+> Jeśli rejestracja nadal kończy się niepowodzeniem, usuń pliki cookie w przeglądarce Safari (nie blokuj plików cookie), a następnie zarejestruj ponownie urządzenie.
 
-**Sprawdź**, czy urządzenie nie zostało już zarejestrowane za pomocą innego dostawcy MDM.
+**Przyczyna:** Urządzenie zostało już zarejestrowane za pomocą innego dostawcy oprogramowania MDM.
 
 #### <a name="resolution"></a>Rozwiązanie
-1. Otwórz **ustawienia** na urządzeniu z systemem iOS, przejdź do pozycji **ogólne > Zarządzanie urządzeniami**.
-2. Usuń istniejący profil zarządzania.
+1. Otwórz obszar **Ustawienia** na urządzeniu z systemem iOS/iPadOS i przejdź do pozycji **Ogólne > Zarządzanie urządzeniami**.
+2. Usuń wszystkie istniejące profile zarządzania.
 3. Zarejestruj ponownie urządzenie.
 
-**Przyczyna:** użytkownik próbujący zarejestrować urządzenie nie ma licencji Microsoft Intune.
+**Przyczyna:** Użytkownik, który próbuje zarejestrować urządzenie, nie ma licencji usługi Microsoft Intune.
 
 #### <a name="resolution"></a>Rozwiązanie
-1. Przejdź do centrum administracyjnego [pakietu Office 365](https://portal.office.com/adminportal/home#/homepage), a następnie wybierz pozycję **Użytkownicy > aktywni użytkownicy**.
+1. Przejdź do [centrum administracyjnego usługi Office 365](https://portal.office.com/adminportal/home#/homepage), a następnie wybierz pozycję **Użytkownicy > Aktywni użytkownicy**.
 2. Wybierz konto użytkownika, do którego chcesz przypisać licencję użytkownika usługi Intune, po czym wybierz opcje **Licencje produktu > Edytuj**.
-3. Przełącz przełącznik do **na pozycji** dla licencji, która ma zostać przypisana do tego użytkownika, a następnie wybierz pozycję **Zapisz**.
+3. Przełącz przełącznik do pozycji **Wł.** dla licencji, którą chcesz przypisać do tego użytkownika, a następnie wybierz pozycję **Zapisz**.
 4. Zarejestruj ponownie urządzenie.
 
 ### <a name="this-service-is-not-supported-no-enrollment-policy"></a>Ta usługa nie jest obsługiwana. Brak zasad rejestracji.
 
-**Przyczyna**: certyfikat wypychania MDM firmy Apple nie jest skonfigurowany w usłudze Intune lub certyfikat jest nieprawidłowy. 
+**Przyczyna:** Certyfikat wypychania oprogramowania MDM firmy Apple nie został skonfigurowany w usłudze Intune lub certyfikat jest nieprawidłowy. 
 
 #### <a name="resolution"></a>Rozwiązanie
 
-- Jeśli certyfikat wypychania MDM nie jest skonfigurowany, wykonaj czynności opisane w [uzyskać certyfikat wypychania MDM firmy Apple](apple-mdm-push-certificate-get.md#steps-to-get-your-certificate).
-- Jeśli certyfikat wypychania MDM jest nieprawidłowy, wykonaj kroki opisane w [odnów certyfikat wypychania Apple MDM](apple-mdm-push-certificate-get.md#renew-apple-mdm-push-certificate).
+- Jeśli certyfikat wypychania oprogramowania MDM nie został skonfigurowany, wykonaj kroki opisane w temacie [Uzyskiwanie certyfikatu wypychania MDM firmy Apple](apple-mdm-push-certificate-get.md#steps-to-get-your-certificate).
+- Jeśli certyfikat wypychania oprogramowania MDM jest nieprawidłowy, wykonaj kroki opisane w temacie [Odnawianie certyfikatu wypychania MDM firmy Apple](apple-mdm-push-certificate-get.md#renew-apple-mdm-push-certificate).
 
 ### <a name="company-portal-temporarily-unavailable-the-company-portal-app-encountered-a-problem-if-the-problem-persists-contact-your-system-administrator"></a>Portal firmy jest tymczasowo niedostępny. Aplikacja Portal firmy napotkała problem. Jeśli problem będzie nadal występować, skontaktuj się z administratorem systemu.
 
-**Przyczyna:** aplikacja Portal firmy jest nieaktualna lub uszkodzona.
+**Przyczyna:** Aplikacja Portal firmy jest nieaktualna lub uszkodzona.
 
 #### <a name="resolution"></a>Rozwiązanie
 1. Usuń aplikację Portal firmy z urządzenia.
 2. Pobierz i zainstaluj aplikację **Microsoft Intune — Portal firmy** ze sklepu **App Store**.
 3. Zarejestruj ponownie urządzenie.
  > [!NOTE]
-    > Ten błąd może również wystąpić, jeśli użytkownik próbuje zarejestrować więcej urządzeń, niż jest skonfigurowana do zezwalania na rejestrację urządzenia. Postępuj zgodnie z instrukcjami dotyczącymi **zakończenia urządzenia** poniżej, jeśli te kroki nie rozwiążą problemu.
+    > Ten błąd może również wystąpić, jeśli użytkownik próbuje zarejestrować więcej urządzeń niż zezwala na to skonfigurowana rejestracja urządzeń. Postępuj zgodnie z opisanymi poniżej krokami rozwiązywania problemu **Osiągnięto limit urządzeń**, jeśli te kroki nie rozwiążą problemu.
 
 ### <a name="device-cap-reached"></a>Osiągnięto limit urządzeń
 
-**Przyczyna:** użytkownik próbuje zarejestrować więcej urządzeń niż limit rejestracji urządzeń.
+**Przyczyna:** Użytkownik próbuje zarejestrować więcej urządzeń niż wynosi limit rejestracji urządzeń.
 
 #### <a name="resolution"></a>Rozwiązanie
-1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)wybierz pozycję **urządzenia** > **wszystkie urządzenia**i sprawdź liczbę urządzeń zarejestrowanych przez użytkownika.
+1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **Wszystkie urządzenia** i sprawdź liczbę urządzeń zarejestrowanych przez użytkownika.
     > [!NOTE]
-    > Należy również mieć zalogowanego użytkownika Logowanie do [portalu użytkowników usługi Intune](https://portal.manage.microsoft.com/) i sprawdzić zarejestrowane urządzenia. Mogą istnieć urządzenia, które znajdują się w portalu użytkownika usługi [Intune](https://portal.manage.microsoft.com/) ale nie w [portalu administratora usługi Intune](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview)takie urządzenia również liczą się na limit rejestracji urządzeń.
-2. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Rejestrowanie urządzenia** > **Ograniczenia rejestracji**Ograniczenia limitu urządzeń. Domyślnie ustawiony jest port 15. 
-3. Jeśli liczba zarejestrowanych urządzeń osiągnie limit, Usuń niepotrzebne urządzenia lub Zwiększ limit rejestracji urządzeń. Ponieważ każde zarejestrowane urządzenie korzysta z licencji usługi Intune, zalecamy najpierw usunąć niepotrzebne urządzenia.
+    > Użytkownik, którego dotyczy problem, powinien się również zalogować do [portalu użytkowników usługi Intune](https://portal.manage.microsoft.com/) i sprawdzić zarejestrowane urządzenia. Mogą istnieć urządzenia, które są wyświetlane w [portalu użytkowników usługi Intune](https://portal.manage.microsoft.com/), ale nie w [portalu administracyjnym usługi Intune](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview). Takie urządzenia również wliczają się do limitu rejestracji urządzeń.
+2. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **Ograniczenia rejestracji** > sprawdź limit rejestracji urządzeń. Domyślnie limit jest ustawiany na 15. 
+3. Jeśli liczba zarejestrowanych urządzeń osiągnie limit, usuń niepotrzebne urządzenia lub zwiększ limit rejestracji urządzeń. Ponieważ każde zarejestrowane urządzenie korzysta z licencji usługi Intune, zalecamy, aby zawsze najpierw usunąć niepotrzebne urządzenia.
 4. Zarejestruj ponownie urządzenie.
 
-### <a name="workplace-join-failed"></a>Workplace Join nie powiodło się
+### <a name="workplace-join-failed"></a>Dołączanie w miejscu pracy zakończyło się niepowodzeniem
 
-**Przyczyna:** aplikacja Portal firmy jest nieaktualna lub uszkodzona.  
+**Przyczyna:** Aplikacja Portal firmy jest nieaktualna lub uszkodzona.  
 
 #### <a name="resolution"></a>Rozwiązanie
 1. Usuń aplikację Portal firmy z urządzenia.
@@ -154,56 +154,56 @@ Jeśli firma używa wielu domen dla poświadczeń użytkowników, należy utworz
 
 ### <a name="user-license-type-invalid"></a>Nieprawidłowy typ licencji użytkownika
 
-**Przyczyna:** użytkownik próbujący zarejestrować urządzenie nie ma prawidłowej licencji usługi Intune.
+**Przyczyna:** Użytkownik, który próbuje zarejestrować urządzenie, nie ma prawidłowej licencji usługi Intune.
 
 #### <a name="resolution"></a>Rozwiązanie
-1. Przejdź do [centrum administracyjnego Microsoft 365](https://portal.office.com/adminportal/home#/homepage), a następnie wybierz **użytkownicy** > **aktywni użytkownicy**.
-2. Wybierz konto użytkownika, którego dotyczy ten > **licencje produktu** > **edytowanie**.
-3. Sprawdź, czy przypisano prawidłową licencję usługi Intune do tego użytkownika.
+1. Przejdź do [centrum administracyjnego platformy Microsoft 365](https://portal.office.com/adminportal/home#/homepage), a następnie wybierz pozycję **Użytkownicy** > **Aktywni użytkownicy**.
+2. Wybierz konto użytkownika narażonego na problem > **Licencje produktu** > **Edytuj**.
+3. Sprawdź, czy do tego użytkownika przypisano prawidłową licencję usługi Intune.
 4. Zarejestruj ponownie urządzenie.
 
-### <a name="user-name-not-recognized-this-user-account-is-not-authorized-to-use-microsoft-intune-contact-your-system-administrator-if-you-think-you-have-received-this-message-in-error"></a>Nie rozpoznano nazwy użytkownika. To konto użytkownika nie ma autoryzacji do użycia Microsoft Intune. Skontaktuj się z administratorem systemu, jeśli uważasz, że ten komunikat został wyświetlony z błędem.
+### <a name="user-name-not-recognized-this-user-account-is-not-authorized-to-use-microsoft-intune-contact-your-system-administrator-if-you-think-you-have-received-this-message-in-error"></a>Nie rozpoznano nazwy użytkownika. To konto użytkownika nie ma autoryzacji do korzystania z usługi Microsoft Intune. Skontaktuj się z administratorem systemu, jeśli uważasz, że ten komunikat został wyświetlony przez pomyłkę.
 
-**Przyczyna:** użytkownik próbujący zarejestrować urządzenie nie ma prawidłowej licencji usługi Intune.
+**Przyczyna:** Użytkownik, który próbuje zarejestrować urządzenie, nie ma prawidłowej licencji usługi Intune.
 
-1. Przejdź do [centrum administracyjnego Microsoft 365](https://portal.office.com/adminportal/home#/homepage), a następnie wybierz **użytkownicy** > **aktywni użytkownicy**.
-2. Wybierz konto użytkownika, którego to dotyczy, a następnie wybierz pozycję **licencje produktu** > **Edytuj**.
-3. Sprawdź, czy przypisano prawidłową licencję usługi Intune do tego użytkownika.
+1. Przejdź do [centrum administracyjnego platformy Microsoft 365](https://portal.office.com/adminportal/home#/homepage), a następnie wybierz pozycję **Użytkownicy** > **Aktywni użytkownicy**.
+2. Wybierz konto użytkownika, którego dotyczy problem, a następnie wybierz pozycję **Licencje produktu** > **Edytuj**.
+3. Sprawdź, czy do tego użytkownika przypisano prawidłową licencję usługi Intune.
 4. Zarejestruj ponownie urządzenie.
 
-### <a name="profile-installation-failed-the-new-mdm-payload-does-not-match-the-old-payload"></a>Instalacja profilu nie powiodła się. Nowy ładunek MDM nie jest zgodny ze starym ładunkiem.
+### <a name="profile-installation-failed-the-new-mdm-payload-does-not-match-the-old-payload"></a>Instalacja profilu nie powiodła się. Nowy ładunek oprogramowania MDM nie jest zgodny ze starym ładunkiem.
 
-**Przyczyna:** profil zarządzania jest już zainstalowany na urządzeniu.
+**Przyczyna:** Profil zarządzania został już zainstalowany na urządzeniu.
 
 #### <a name="resolution"></a>Rozwiązanie
 
-1. Otwórz **ustawienia** na urządzeniu z systemem iOS > **ogólne** > **zarządzanie urządzeniami**.
-2. Naciśnij istniejący profil zarządzania, a następnie naciśnij pozycję **usunąć**zarządzania.
+1. Otwórz obszar **Ustawienia** na urządzeniu z systemem iOS/iPadOS > **Ogólne** > **Zarządzanie urządzeniami**.
+2. Wybierz istniejący profil zarządzania i naciśnij pozycję **Usuń zarządzanie**.
 3. Zarejestruj ponownie urządzenie.
 
 ### <a name="noenrollmentpolicy"></a>NoEnrollmentPolicy
 
-**Przyczyna:** brakuje certyfikatu Apple Push Notification Service (APNs), jest on nieprawidłowy lub wygasł.
+**Przyczyna:** Brak certyfikatu Apple Push Notification Service (APNs), jest on nieprawidłowy lub wygasł.
 
 #### <a name="resolution"></a>Rozwiązanie
-Sprawdź, czy do usługi Intune został dodany prawidłowy certyfikat usługi APNs. Aby uzyskać więcej informacji, zobacz [konfiguracja](ios-enroll.md)rejestracji w systemie iOS.
+Sprawdź, czy do usługi Intune został dodany prawidłowy certyfikat usługi APNs. Aby uzyskać więcej informacji, zobacz [Konfigurowanie rejestracji urządzeń z systemem iOS/iPadOS](ios-enroll.md).
 
 ### <a name="accountnotonboarded"></a>AccountNotOnboarded
 
-**Przyczyna:** występuje problem z certyfikatem usługi Apple Push Notification Service (APNs) skonfigurowanym w usłudze Intune.
+**Przyczyna:** Wystąpił problem z certyfikatem usługi Apple Push Notification Service (APNs) skonfigurowanym w usłudze Intune.
 
 #### <a name="resolution"></a>Rozwiązanie
-Odnów certyfikat APNs, a następnie zarejestruj ponownie urządzenie.
+Odnów certyfikat usługi APNs, a następnie ponownie zarejestruj urządzenie.
 
 > [!IMPORTANT]
-> Upewnij się, że odnowisz certyfikat usługi APNs. Nie zamieniaj certyfikatu APNs. W przypadku zastąpienia certyfikatu należy ponownie zarejestrować wszystkie urządzenia z systemem iOS w usłudze Intune. 
+> Upewnij się, że certyfikat usługi APNs zostanie odnowiony. Nie zastępuj certyfikatu usługi APNs. W przypadku zastąpienia certyfikatu trzeba ponownie zarejestrować wszystkie urządzenia z systemem iOS/iPadOS w usłudze Intune. 
 
-- Aby odnowić certyfikat usługi APNs w autonomicznej usłudze Intune, zobacz [odnawianie certyfikatu wypychania Apple MDM](apple-mdm-push-certificate-get.md#renew-apple-mdm-push-certificate).
-- Aby odnowić certyfikat APNs w pakiecie Office 365, zobacz [Tworzenie certyfikatu usługi APNs dla urządzeń z systemem iOS](https://support.office.com/article/Create-an-APNs-Certificate-for-iOS-devices-522b43f4-a2ff-46f6-962a-dd4f47e546a7).
+- Aby odnowić certyfikat usługi APNs w autonomicznej usłudze Intune, zobacz temat [Odnawianie certyfikatu wypychania MDM firmy Apple](apple-mdm-push-certificate-get.md#renew-apple-mdm-push-certificate).
+- Aby odnowić certyfikat APNs w pakiecie Office 365, zobacz [Tworzenie certyfikatu usługi APNs dla urządzeń z systemem iOS/iPadOS](https://support.office.com/article/Create-an-APNs-Certificate-for-iOS-devices-522b43f4-a2ff-46f6-962a-dd4f47e546a7).
 
 ### <a name="xpc_type_error-connection-invalid"></a>Nieprawidłowe połączenie XPC_TYPE_ERROR
 
-Po włączeniu urządzenia zarządzanego przez program DEP, któremu przypisano profil rejestracji, rejestracja kończy się niepowodzeniem i wyświetlany jest następujący komunikat o błędzie:
+Po włączeniu urządzenia zarządzanego przez program DEP, do którego przypisano profil rejestracji, rejestracja kończy się niepowodzeniem i wyświetlany jest następujący komunikat o błędzie:
 
 ```
 asciidoc
@@ -213,31 +213,32 @@ iPhone com.apple.accessibility.AccessibilityUIServer(MobileAsset)[288] <Notice>:
 iPhone mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR Connection invalid <error: 0x1a49aebc0> { count = 1, transaction: 0, voucher = 0x0, contents = "XPCErrorDescription" => <string: 0x1a49aee18> { length = 18, contents = "Connection invalid" }
 ```
 
-**Przyczyna:** istnieje problem z połączeniem między urządzeniem a usługą DEP firmy Apple.
+**Przyczyna:** Wystąpił problem z połączeniem między urządzeniem i programem DEP firmy Apple.
 
 #### <a name="resolution"></a>Rozwiązanie
-Rozwiąż problem z połączeniem lub użyj innego połączenia sieciowego do zarejestrowania urządzenia. Jeśli problem będzie się powtarzać, może być również konieczne skontaktowanie się z firmą Apple.
+Rozwiąż problem z połączeniem lub użyj innego połączenia sieciowego do zarejestrowania urządzenia. Jeśli problem będzie się powtarzać, być może trzeba będzie również skontaktować się z firmą Apple.
 
 
 ## <a name="other-issues"></a>Inne problemy
 
-### <a name="dep-enrollment-doesnt-start"></a>Rejestracja w programie DEP nie jest uruchomiona
-Po włączeniu urządzenia zarządzanego przez program DEP, któremu przypisano profil rejestracji, proces rejestracji w usłudze Intune nie zostanie zainicjowany.
+### <a name="dep-enrollment-doesnt-start"></a>Rejestracja w programie DEP nie rozpoczyna się
+Po włączeniu urządzenia zarządzanego przez program DEP, do którego przypisano profil rejestracji, proces rejestracji w usłudze Intune nie zostanie zainicjowany.
 
-**Przyczyna:** profil rejestracji zostanie utworzony przed przekazaniem tokenu DEP do usługi Intune.
+**Przyczyna:** Profil rejestracji jest tworzony przed przekazaniem tokenu programu DEP do usługi Intune.
 
 #### <a name="resolution"></a>Rozwiązanie
 
-1. Edytuj profil rejestracji. Możesz wprowadzić zmiany w profilu. Celem jest aktualizacja czasu modyfikacji profilu.
+1. Edytuj profil rejestracji. W profilu możesz wprowadzić dowolne zmiany. Celem jest aktualizacja czasu modyfikacji profilu.
 2. Synchronizowanie urządzeń zarządzanych w programie DEP: W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz kolejno pozycje **Urządzenia** > **iOS** > **Rejestracja urządzeń z systemem iOS** > **Tokeny programu rejestracji** > wybierz token > **Synchronizuj teraz**. Żądanie synchronizacji zostanie wysłane do firmy Apple.
 
-### <a name="dep-enrollment-stuck-at-user-login"></a>Rejestracja w programie DEP zablokowana przy logowaniu użytkownika
-Po włączeniu urządzenia zarządzanego przez program DEP, któremu przypisano profil rejestracji, początkowa konfiguracja jest umieszczana po wprowadzeniu poświadczeń.
+### <a name="dep-enrollment-stuck-at-user-login"></a>Rejestracja w programie DEP zablokowana podczas logowaniu użytkownika
+Po włączeniu urządzenia zarządzanego przez program DEP, do którego przypisano profil rejestracji, początkowa konfiguracja jest blokowana po wprowadzeniu poświadczeń.
 
-**Przyczyna: włączono** uwierzytelniania wieloskładnikowego (MFA). Obecnie uwierzytelnianie wieloskładnikowe nie działa podczas rejestracji na urządzeniach DEP.
+**Przyczyna:** Włączono uwierzytelnianie wieloskładnikowe (MFA). Obecnie uwierzytelnianie wieloskładnikowe nie działa podczas rejestracji na urządzeniach DEP.
 
 #### <a name="resolution"></a>Rozwiązanie
-Wyłącz usługę MFA, a następnie ponownie Zarejestruj urządzenie.
+Wyłącz uwierzytelnianie wieloskładnikowe (MFA), a następnie ponownie zarejestruj urządzenie.
+
 
 ## <a name="next-steps"></a>Następne kroki
 
