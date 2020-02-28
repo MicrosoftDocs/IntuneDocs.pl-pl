@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/12/2019
+ms.date: 02/18/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,36 +16,36 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 791e2a1313480bdf1ad95988d48664d6620ba0b3
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
-ms.translationtype: MTE75
+ms.openlocfilehash: df5b53be159fd082090e61fd736e4c9329644c85
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206350"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77512742"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>Ustawienia funkcji urządzenia z systemem macOS w usłudze Intune
 
-Ustawienia wbudowane w usługę Intune umożliwiają dostosowanie funkcji na urządzeniach z systemem macOS. Administratorzy mogą na przykład dodawać AirPrint drukarki, decydować o sposobie logowania użytkowników, konfigurować sterowanie mocą, korzystać z uwierzytelniania jednokrotnego i nie tylko.
+Ustawienia wbudowane w usługę Intune umożliwiają dostosowanie funkcji na urządzeniach z systemem macOS. Administratorzy mogą na przykład dodawać drukarki AirPrint, decydować o sposobie logowania użytkowników, konfigurować sterowanie zasilaniem, korzystać z uwierzytelniania za pomocą logowania jednokrotnego i nie tylko.
 
 Z tych funkcji można korzystać w celu kontrolowania urządzeń z systemem macOS w ramach rozwiązania do zarządzania urządzeniami mobilnymi (MDM).
 
-Ten artykuł zawiera listę tych ustawień i opisy zadań poszczególnych ustawień. Przedstawiono w nim również listę czynności wymaganych do uzyskania adresu IP, ścieżki i portu drukarek AirPrint przy użyciu aplikacji Terminal (emulatora). Aby uzyskać więcej informacji na temat funkcji urządzenia, przejdź do [Dodaj ustawienia funkcji urządzenia z systemem iOS lub macOS](device-features-configure.md).
+Ten artykuł zawiera listę tych ustawień i opisy zadań poszczególnych ustawień. Przedstawiono w nim również listę czynności wymaganych do uzyskania adresu IP, ścieżki i portu drukarek AirPrint przy użyciu aplikacji Terminal (emulatora). Aby uzyskać więcej informacji na temat funkcji urządzeń, przejdź do tematu [Dodawanie ustawień funkcji urządzeń z systemami iOS/iPadOS lub macOS](device-features-configure.md).
 
 ## <a name="before-you-begin"></a>Przed rozpoczęciem
 
 [Utwórz profil konfiguracji urządzenia sieci macOS](device-features-configure.md).
 
 > [!NOTE]
-> Te ustawienia mają zastosowanie do różnych typów rejestracji, z uwzględnieniem niektórych ustawień, które są stosowane do wszystkich opcji rejestracji. Aby uzyskać więcej informacji na temat różnych typów rejestracji, zobacz [rejestracji](../enrollment/macos-enroll.md)macOS.
+> Te ustawienia mają zastosowanie do różnych typów rejestracji, a niektóre z nich dotyczą wszystkich opcji rejestracji. Aby uzyskać więcej informacji na temat różnych typów rejestracji, zobacz [Rejestracja systemu macOS](../enrollment/macos-enroll.md).
 
 ## <a name="airprint"></a>Funkcja AirPrint
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Rejestracja urządzeń i automatyczna rejestracja urządzeń 
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Ustawienia mają zastosowanie do: Rejestracja urządzeń i automatyczna rejestracja urządzeń 
 
 - **Adres IP**: wprowadź adres IPv4 lub IPv6 drukarki. Jeśli do identyfikowania drukarek używasz nazw hostów, możesz uzyskać adres IP, wysyłając polecenie ping do drukarki w aplikacji Terminal. Dalsze szczegółowe informacje można znaleźć w sekcji [Uzyskiwanie adresu IP i ścieżki](#get-the-ip-address-and-path) (w tym artykule).
 - **Ścieżka**: wprowadź ścieżkę drukarki. W przypadku drukarek w sieci ścieżka to zazwyczaj `ipp/print`. Dalsze szczegółowe informacje można znaleźć w sekcji [Uzyskiwanie adresu IP i ścieżki](#get-the-ip-address-and-path) (w tym artykule).
-- **Port** (system iOS 11.0 i nowsze): wprowadź port nasłuchiwania miejsca docelowego funkcji AirPrint. Jeśli ta właściwość pozostanie pusta, funkcja AirPrint będzie używać portu domyślnego.
-- **TLS** (system iOS 11.0 i nowsze): Wybierz pozycję **Włącz**, aby zabezpieczyć połączenia funkcji AirPrint przy użyciu protokołu Transport Layer Security (TLS).
+- **Port** (iOS 11.0+, iPadOS 13.0+): wprowadź port nasłuchiwania miejsca docelowego funkcji AirPrint. Jeśli ta właściwość pozostanie pusta, funkcja AirPrint będzie używać portu domyślnego.
+- **TLS** (iOS 11.0+, iPadOS 13.0+): Wybierz pozycję **Włącz**, aby zabezpieczyć połączenia funkcji AirPrint przy użyciu protokołu Transport Layer Security (TLS).
 
 - **Dodaj** serwer funkcji AirPrint. Można dodać wiele serwerów z funkcją AirPrint.
 
@@ -68,22 +68,22 @@ Aby dodać serwery funkcji AirPrinter, potrzebujesz adresu IP drukarki, ścieżk
 
 ## <a name="login-items"></a>Elementy logowania
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Ustawienia dotyczą: wszystkie typy rejestracji
+### <a name="settings-apply-to-all-enrollment-types"></a>Ustawienia mają zastosowanie do: Wszystkie typy rejestracji
 
-- **Pliki, foldery i aplikacje niestandardowe**: **Dodaj** ścieżkę do pliku, folderu, aplikacji niestandardowej lub aplikacji systemowej, którą chcesz otworzyć, gdy użytkownik zaloguje się na urządzeniu. Aplikacje systemowe lub aplikacje skompilowane lub dostosowane do organizacji zwykle znajdują się w folderze `Applications` ze ścieżką podobną do `/Applications/AppName.app`. 
+- **Pliki, foldery i aplikacje niestandardowe**: **Dodaj** ścieżkę do pliku, folderu, aplikacji niestandardowej lub aplikacji systemowej, którą chcesz otworzyć, gdy użytkownik zaloguje się na urządzeniu. Aplikacje systemowe lub aplikacje opracowane bądź dostosowane dla organizacji zwykle znajdują się w folderze `Applications`, który ma ścieżkę podobną do `/Applications/AppName.app`. 
 
-  Można dodać wiele plików, folderów i aplikacji. Wprowadź na przykład:  
+  Możesz dodać wiele plików, folderów i aplikacji. Wprowadź na przykład:  
   
   - `/Applications/Calculator.app`
   - `/Applications`
   - `/Applications/Microsoft Office/root/Office16/winword.exe`
   - `/Users/UserName/music/itunes.app`
   
-  Podczas dodawania dowolnej aplikacji, folderu lub pliku upewnij się, że została wprowadzona poprawna ścieżka. Nie wszystkie elementy znajdują się w folderze `Applications`. Jeśli Użytkownik przeniesie element z jednej lokalizacji do drugiej, zmieni się ścieżka. Ten przeniesiony element nie zostanie otwarty po zalogowaniu się użytkownika.
+  Podczas dodawania dowolnej aplikacji, folderu lub pliku upewnij się, że została wprowadzona poprawna ścieżka. Nie wszystkie elementy znajdują się w folderze `Applications`. Jeśli użytkownik przeniesie element z jednej lokalizacji do drugiej, ścieżka się zmieni. Ten przeniesiony element nie zostanie otwarty, gdy użytkownik się zaloguje.
 
 ## <a name="login-window"></a>Okno logowania
 
-### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Rejestracja urządzeń i automatyczna rejestracja urządzeń
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Ustawienia mają zastosowanie do: Rejestracja urządzeń i automatyczna rejestracja urządzeń
 
 #### <a name="window-layout"></a>Układ okna
 
@@ -125,117 +125,117 @@ Ta funkcja ma zastosowanie do:
 
 - System macOS 10.15 i nowsze
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Ustawienia dotyczą: wszystkie typy rejestracji 
+### <a name="settings-apply-to-all-enrollment-types"></a>Ustawienia mają zastosowanie do: Wszystkie typy rejestracji 
 
-- **Typ rozszerzenia aplikacji SSO**: Wybierz typ rozszerzenia aplikacji SSO logowania jednokrotnego. Dostępne opcje:
+- **Typ rozszerzenia aplikacji logowania jednokrotnego**: wybierz typ rozszerzenia aplikacji poświadczeń logowania jednokrotnego. Dostępne opcje:
 
-  - **Nie skonfigurowano**: rozszerzenia aplikacji nie są używane. Aby wyłączyć rozszerzenie aplikacji, Zmień typ rozszerzenia aplikacji logowania jednokrotnego na **nieskonfigurowane**.
-  - **Przekierowanie**: Użyj ogólnego, dostosowywalnego rozszerzenia aplikacji przekierowania, aby przeprowadzić Logowanie jednokrotne przy użyciu nowoczesnych przepływów uwierzytelniania. Upewnij się, że znasz rozszerzenie i identyfikator zespołu dla rozszerzenia aplikacji w organizacji.
-  - **poświadczeń**: Użyj ogólnego, dostosowywalnego rozszerzenia aplikacji Credential, aby przeprowadzić Logowanie jednokrotne za pomocą przepływów uwierzytelniania typu wyzwanie-odpowiedź. Upewnij się, że znasz identyfikator rozszerzenia i identyfikator zespołu dla rozszerzenia aplikacji SSO w organizacji.  
-  - **Kerberos**: Użyj wbudowanego rozszerzenia protokołu Kerberos firmy Apple, które jest dołączone do macOS Catalina 10,15 i nowszych. Ta opcja jest zależna od protokołu Kerberos wersja **poświadczenia** aplikacji.
+  - **Nieskonfigurowane**: rozszerzenia aplikacji nie są używane. Aby wyłączyć rozszerzenie aplikacji, przełącz typ rozszerzenia aplikacji logowania jednokrotnego na wartość **Nieskonfigurowane**.
+  - **Przekierowanie**: użyj ogólnego, dostosowywalnego rozszerzenia aplikacji przekierowania, aby przeprowadzać logowanie jednokrotne za pomocą nowoczesnych przepływów uwierzytelniania. Upewnij się, że znasz identyfikator rozszerzenia i zespołu dla rozszerzenia aplikacji w organizacji.
+  - **Poświadczenie**: użyj ogólnego, dostosowywalnego rozszerzenia aplikacji poświadczenia, aby przeprowadzać logowanie jednokrotne za pomocą przepływów uwierzytelniania typu wyzwanie-odpowiedź. Upewnij się, że znasz identyfikator rozszerzenia i identyfikator zespołu dla rozszerzenia aplikacji logowania jednokrotnego w organizacji.  
+  - **Kerberos**: użyj wbudowanego rozszerzenia protokołu Kerberos firmy Apple, które jest zawarte w systemie macOS Catalina 10.15 i nowszych wersjach. Ta opcja jest specyficzną dla protokołu Kerberos wersją rozszerzenia aplikacji **Poświadczenie**.
 
   > [!TIP]
-  > Za pomocą **przekierowania** i **typy** poświadczeń należy dodać własne wartości konfiguracyjne, aby przejść przez rozszerzenie. Jeśli używasz usługi **Credential**, rozważ użycie wbudowanych ustawień konfiguracji dostarczonych przez firmę Apple w typu **Kerberos**.
+  > W przypadku typów **Przekierowanie** i **Poświadczenie** dodajesz własne wartości konfiguracji w celu przekazania przez rozszerzenie. Jeśli używasz typu **Poświadczenie**, rozważ użycie wbudowanych ustawień konfiguracji dostarczonych przez firmę Apple w typie **Kerberos**.
 
-- **Identyfikator rozszerzenia** (przekierowanie i poświadczenie): Wprowadź identyfikator pakietu identyfikujący rozszerzenie aplikacji logowania jednokrotnego, takie jak `com.apple.ssoexample`.
-- **Identyfikator zespołu** (przekierowanie i poświadczenie): Wprowadź identyfikator zespołu rozszerzenia aplikacji logowania jednokrotnego. Identyfikator zespołu to 10-znakowy ciąg alfanumeryczny (cyfry i litery) generowany przez firmę Apple, taki jak `ABCDE12345`. 
+- **Identyfikator rozszerzenia** (Przekierowanie i Poświadczenie): wprowadź identyfikator pakietu określający rozszerzenie aplikacji logowania jednokrotnego, na przykład `com.apple.ssoexample`.
+- **Identyfikator zespołu** (Przekierowanie i Poświadczenie): wprowadź identyfikator zespołu dla rozszerzenia aplikacji logowania jednokrotnego. Identyfikator zespołu to 10-znakowy ciąg alfanumeryczny (cyfry i litery) generowany przez firmę Apple, taki jak `ABCDE12345`. 
 
-  [Znajdź identyfikator zespołu](https://help.apple.com/developer-account/#/dev55c3c710c) (otwiera witrynę firmy Apple), aby uzyskać więcej informacji.
+  Aby uzyskać więcej informacji, skorzystaj z linku [Locate your Team ID](https://help.apple.com/developer-account/#/dev55c3c710c) (Znajdź swój identyfikator zespołu) — zostanie otwarta witryna internetowa firmy Apple.
 
-- **obszaru** (poświadczenia i protokół Kerberos): Wprowadź nazwę obszaru uwierzytelniania. Nazwa obszaru powinna być Wielka litera, taka jak `CONTOSO.COM`. Zazwyczaj nazwa obszaru jest taka sama jak nazwa domeny DNS, ale w przypadku wszystkich wielkich liter.
+- **Obszar** (Poświadczenie i Kerberos): wprowadź nazwę obszaru uwierzytelniania. Nazwa obszaru powinna być pisana wielkimi literami, na przykład `CONTOSO.COM`. Zazwyczaj nazwa obszaru jest taka sama, jak nazwa domeny DNS, ale pisana w całości wielkimi literami.
 
-- **Domeny** (Credential i Kerberos): Wprowadź nazwy domeny lub hosta witryn, które mogą być uwierzytelniane za pomocą logowania jednokrotnego. Na przykład jeśli witryna sieci Web jest `mysite.contoso.com`, `mysite` to nazwa hosta, a `contoso.com` to nazwa domeny. Gdy użytkownicy łączą się z dowolną z tych witryn, rozszerzenie aplikacji obsługuje wyzwanie uwierzytelniania. To uwierzytelnianie umożliwia użytkownikom logowanie się przy użyciu identyfikatora, Touch ID lub Apple pincode/kodu dostępu.
+- **Domeny** (Poświadczenie i Kerberos): wprowadź nazwy domen lub hostów witryn, które mogą być uwierzytelniane za pomocą logowania jednokrotnego. Jeśli na przykład witryna internetowa to `mysite.contoso.com`, nazwą hosta będzie `mysite`, a nazwą domeny będzie `contoso.com`. Gdy użytkownicy będą łączyć się z dowolną z tych witryn, rozszerzenie aplikacji obsłuży wyzwanie uwierzytelniania. To uwierzytelnianie umożliwia użytkownikom logowanie się przy użyciu funkcji Face ID, Touch ID lub kodu PIN/ kodu dostępu firmy Apple.
 
-  - Wszystkie domeny w profilach usługi Intune rozszerzenia aplikacji logowania jednokrotnego muszą być unikatowe. Nie można powtórzyć domeny w dowolnym profilu rozszerzenia aplikacji logowania, nawet jeśli używasz różnych typów rozszerzeń aplikacji logowania jednokrotnego.
+  - Wszystkie domeny w profilach usługi Intune rozszerzenia aplikacji logowania jednokrotnego muszą być unikatowe. Nie można powtórzyć domeny w żadnym profilu rozszerzenia aplikacji logowania, nawet jeśli używasz różnych typów rozszerzeń aplikacji logowania jednokrotnego.
   - W tych domenach nie jest rozróżniana wielkość liter.
 
-- **Adresy URL** (tylko przekierowanie): wprowadź prefiksy adresów URL dostawców tożsamości, w których imieniu rozszerzenie aplikacji przekierowanie wykonuje Logowanie jednokrotne. Gdy użytkownik zostanie przekierowany do tych adresów URL, rozszerzenie aplikacji SSO będzie interweniować i monitować o Logowanie jednokrotne.
+- **Adresy URL** (tylko Przekierowanie): wprowadź prefiksy adresów URL swoich dostawców tożsamości, w których imieniu rozszerzenie aplikacji przekierowania wykonuje logowanie jednokrotne. Gdy użytkownik zostanie przekierowany do tych adresów URL, rozszerzenie aplikacji logowana jednokrotnego będzie interweniować i monitować o logowanie jednokrotne.
 
-  - Wszystkie adresy URL w profilach rozszerzenia aplikacji logowania jednokrotnego usługi Intune muszą być unikatowe. Nie można powtórzyć domeny w żadnym profilu rozszerzenia aplikacji logowania jednokrotnego, nawet jeśli używasz różnych typów rozszerzeń aplikacji logowania jednokrotnego.
-  - Adresy URL muszą zaczynać się od http://lub https://.
+  - Wszystkie adresy URL w profilach usługi Intune rozszerzenia aplikacji logowania jednokrotnego muszą być unikatowe. Nie można powtórzyć domeny w żadnym profilu rozszerzenia aplikacji logowania jednokrotnego, nawet jeśli używasz różnych typów rozszerzeń aplikacji logowania jednokrotnego.
+  - Adresy URL muszą zaczynać się od ciągu http:// lub https://.
 
-- **Dodatkowe** konfiguracji (przekierowanie i poświadczenie): wprowadź dodatkowe dane specyficzne dla rozszerzenia, które mają zostać przekazane do rozszerzenia aplikacji SSO:
-  - **Klucz**: Wprowadź nazwę elementu, który chcesz dodać, np. `user name`.
+- **Konfiguracja dodatkowa** (Przekierowanie i Poświadczenie): wprowadź dodatkowe dane specyficzne dla rozszerzenia, które mają zostać przekazane do rozszerzenia aplikacji logowania jednokrotnego:
+  - **Klucz**: wprowadź nazwę elementu, który chcesz dodać, na przykład `user name`.
   - **Typ**: wprowadź typ danych. Dostępne opcje:
 
     - String
-    - Wartość logiczna: w **wartości konfiguracji**, wprowadź `True` lub `False`.
-    - Liczba całkowita: w **wartość konfiguracji**wprowadź liczbę.
+    - Wartość logiczna: w polu **Wartość konfiguracji** wprowadź wartość `True` lub `False`.
+    - Liczba całkowita: w polu **Wartość konfiguracji** wprowadź liczbę.
     
-  - **Wartość**: Wprowadź dane.
+  - **Wartość**: wprowadź dane.
   
-  - **Dodaj**: Wybierz, aby dodać klucze konfiguracji.
+  - **Dodaj**: wybierz, aby dodać klucze konfiguracji.
 
-- **użycia łańcucha kluczy** (tylko protokół Kerberos): wybierz pozycję **Blokuj**, aby uniemożliwić zapisywanie i przechowywanie haseł w łańcuchu kluczy. **Nieskonfigurowane** (domyślnie) umożliwia zapisywanie i przechowywanie haseł w pęku kluczy.  
-- **Identyfikator urządzenia, Touch ID lub** kodu dostępu (tylko protokół Kerberos): **Wymagaj** wymusza, aby użytkownicy musieli wprowadzić swój identyfikator, Touch ID lub kod dostępu Apple, aby zalogować się do dodanych domen. **Nie skonfigurowano** (domyślnie) nie wymaga, aby użytkownicy używali biometrii ani kodu dostępu do logowania.
-- **Domyślny** obszaru (tylko protokół Kerberos): wybierz pozycję **Włącz**, aby ustawić wartość **obszaru** wprowadzoną jako domyślny obszar. **Nie skonfigurowano** (domyślnie) nie ustawia obszaru domyślnego.
+- **Użycie pęku kluczy** (tylko Kerberos): wybierz opcję **Blokuj**, aby uniemożliwić zapisywanie i przechowywanie haseł w pęku kluczy. Opcja **Nieskonfigurowane** (wartość domyślna) umożliwia zapisywanie i przechowywanie haseł w pęku kluczy.  
+- **Face ID, Touch ID lub kod dostępu** (tylko Kerberos): opcja **Wymagaj** zmusza użytkowników, aby wprowadzili identyfikator Face ID, Touch ID lub kod dostępu firmy Apple w celu zalogowania się do dodanych domen. Opcja **Nieskonfigurowane** (wartość domyślna) nie wymaga użycia danych biometrycznych ani kodu dostępu w celu zalogowania.
+- **Obszar domyślny** (tylko Kerberos): wybierz opcję **Włącz**, aby ustawić wartość właściwości **Obszar** wprowadzoną jako obszar domyślny. Opcja **Nieskonfigurowane** (wartość domyślna) nie ustawia obszaru domyślnego.
 
   > [!TIP]
-  > - **Włącz** tego ustawienia, jeśli konfigurujesz wiele rozszerzeń aplikacji SSO protokołu Kerberos w organizacji.
-  > - **Włącz** tego ustawienia, jeśli używasz wielu obszarów. Ustawia obszar **,** wartość wprowadzona jako domyślny obszar.
-  > - Jeśli masz tylko jeden obszar, pozostaw **nie skonfigurowany** (domyślnie).
+  > - **Włącz** to ustawienie, jeśli konfigurujesz wiele rozszerzeń aplikacji logowania jednokrotnego protokołu Kerberos w organizacji.
+  > - **Włącz** to ustawienie, jeśli używasz wielu obszarów. Powoduje to ustawienie wartości **obszaru** wprowadzonej jako obszar domyślny.
+  > - Jeśli masz tylko jeden obszar, pozostaw opcję **Nieskonfigurowane** (wartość domyślna).
 
-- **wykrywania** automatycznego (tylko protokół Kerberos): w przypadku ustawienia opcji **bloku**rozszerzenie protokołu Kerberos nie będzie automatycznie używać protokołu LDAP i DNS do określenia nazwy lokacji Active Directory. **Nie skonfigurowano** (domyślnie) pozwala rozszerzeniu na automatyczne Znajdowanie Active Directory nazwy lokacji.
-- **Zmiany hasła** (tylko protokół Kerberos): **bloku** uniemożliwia użytkownikom zmianę haseł używanych do logowania się do wprowadzonych domen. **Nie skonfigurowano** (wartość domyślna) umożliwia zmianę hasła.  
-- **synchronizacji haseł** (tylko protokół Kerberos): wybierz pozycję **Włącz**, aby synchronizować hasła lokalne użytkowników z usługą Azure AD. **Nie skonfigurowano** (domyślnie) powoduje wyłączenie synchronizacji haseł z usługą Azure AD. Użyj tego ustawienia jako alternatywy lub kopii zapasowej na potrzeby logowania jednokrotnego. To ustawienie nie działa, jeśli użytkownicy są zalogowani przy użyciu konta Apple Mobile.
-- **Windows Server Active Directory złożoność hasła** (tylko protokół Kerberos): Wybierz **wymagać**, aby wymusić, że hasła użytkowników spełniają wymagania dotyczące złożoności hasła Active Directory. Aby uzyskać więcej informacji, zobacz [hasło musi spełniać](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements) wymagania co do złożoności. **Nie skonfigurowano** (wartość domyślna) nie wymaga od użytkowników spełnienia wymagań dotyczących hasła Active Directory.
-- **Minimalna długość hasła** (tylko protokół Kerberos): wprowadź minimalną liczbę znaków, które mogą wprowadzić hasło użytkownika. **Nie skonfigurowano** (wartość domyślna) nie wymusza minimalnej długości hasła dla użytkowników.
-- **Limit ponownego użycia hasła** (tylko protokół Kerberos): wprowadź liczbę nowych haseł z 1-24, które muszą zostać użyte, dopóki nie będzie można ponownie użyć poprzedniego hasła w domenie. **Nie skonfigurowano** (wartość domyślna) nie wymusza ponownego użycia hasła.
-- **Minimalny wiek hasła** (tylko protokół Kerberos): wprowadź liczbę dni, przez które hasło musi być używane w domenie, zanim użytkownik będzie mógł je zmienić. **Nie skonfigurowano** (wartość domyślna) nie wymusza minimalnego wieku hasła, zanim będzie można je zmienić.
-- **Powiadomienie o wygaśnięciu hasła** (tylko protokół Kerberos): wprowadź liczbę dni, po których hasło wygasa, gdy użytkownicy otrzymają powiadomienie o wygaśnięciu hasła. **Nie skonfigurowano** (wartość domyślna) używa `15` dni.
-- **Wygaśnięcie hasła** (tylko protokół Kerberos): wprowadź liczbę dni, po której należy zmienić hasło urządzenia. **Nie skonfigurowano** (wartość domyślna) oznacza, że hasła użytkowników nigdy nie wygasną.
-- **Adres URL zmiany hasła** (tylko protokół Kerberos): wprowadź adres URL, który zostanie uruchomiony, gdy użytkownik zainicjuje zmianę hasła protokołu Kerberos.
-- **Nazwa główna** (tylko protokół Kerberos): Wprowadź nazwę użytkownika podmiotu zabezpieczeń protokołu Kerberos. Nie trzeba dołączać nazwy obszaru. Na przykład w `user@contoso.com``user` jest nazwą główną, a `contoso.com` jest nazwą obszaru.
+- **Wykrywanie automatyczne** (tylko Kerberos): w przypadku ustawienia opcji **Blokuj** rozszerzenie protokołu Kerberos nie będzie automatycznie używać protokołu LDAP i usługi DNS do określenia swojej nazwy lokacji usługi Active Directory. Opcja **Nieskonfigurowane** (wartość domyślna) umożliwia rozszerzeniu automatyczne znajdowanie nazwy lokacji usługi Active Directory.
+- **Zmiany hasła** (tylko Kerberos): opcja **Blokuj** uniemożliwia użytkownikom zmienianie haseł używanych do logowania się do wprowadzonych domen. Opcja **Nieskonfigurowane** (wartość domyślna) umożliwia zmianę hasła.  
+- **Synchronizacja haseł** (tylko Kerberos): wybierz opcję **Włącz**, aby synchronizować lokalne hasła użytkowników z usługą Azure AD. Opcja **Nieskonfigurowane** (wartość domyślna) powoduje wyłączenie synchronizacji haseł z usługą Azure AD. Użyj tego ustawienia jako metody alternatywnej lub zapasowej dla logowania jednokrotnego. To ustawienie nie działa, jeśli użytkownicy są zalogowani przy użyciu konta urządzeń przenośnych firmy Apple.
+- **Złożoność hasła w usłudze Active Directory systemu Windows Server** (tylko Kerberos): wybierz opcję **Wymagaj**, aby hasła użytkowników musiały spełniać wymagania dotyczące złożoności haseł usługi Active Directory. Aby uzyskać więcej informacji, zobacz [Hasło musi spełniać wymagania dotyczące złożoności](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements). Opcja **Nieskonfigurowane** (wartość domyślna) nie wymaga od użytkowników spełnienia wymagań dotyczących haseł usługi Active Directory.
+- **Minimalna długość hasła** (tylko Kerberos): określ minimalną liczbę znaków, z których musi składać się hasło użytkownika. Opcja **Nieskonfigurowane** (wartość domyślna) nie wymusza minimalnej długości hasła użytkownika.
+- **Limit ponownego użycia hasła** (tylko Kerberos): wprowadź liczbę nowych haseł z zakresu od 1 do 24, których należy użyć, zanim będzie można ponownie użyć poprzedniego hasła w domenie. Opcja **Nieskonfigurowane** (wartość domyślna) nie wymusza limitu ponownego użycia hasła.
+- **Minimalny wiek hasła** (tylko Kerberos): wprowadź liczbę dni, przez które hasło musi być używane w domenie, zanim użytkownik będzie mógł je zmienić. Opcja **Nieskonfigurowane** (wartość domyślna) nie wymusza minimalnego wieku hasła, zanim będzie można je zmienić.
+- **Powiadomienie o wygaśnięciu hasła** (tylko Kerberos): wprowadź liczbę dni pozostałych do wygaśnięcia hasła, kiedy użytkownik jest powiadamiany, że hasło wygaśnie. Opcja **Nieskonfigurowane** (wartość domyślna) używa wartości `15` dni.
+- **Wygaśnięcie hasła** (tylko protokół Kerberos): wprowadź liczbę dni, po której należy zmienić hasło urządzenia. Opcja **Nieskonfigurowane** (wartość domyślna) oznacza, że hasła użytkowników nigdy nie wygasają.
+- **Adres URL zmiany hasła** (tylko Kerberos): wprowadź adres URL, który zostanie uruchomiony, gdy użytkownik zainicjuje zmianę hasła protokołu Kerberos.
+- **Nazwa podmiotu zabezpieczeń** (tylko Kerberos): wprowadź nazwę użytkownika podmiotu zabezpieczeń protokołu Kerberos. Nie trzeba dołączać nazwy obszaru. Na przykład w adresie `user@contoso.com` `user` jest nazwą podmiotu zabezpieczeń, a `contoso.com` jest nazwą obszaru.
 
   > [!TIP]
-  > - Można również użyć zmiennych w nazwie głównej, wprowadzając nawiasy klamrowe `{{ }}`. Na przykład, aby wyświetlić nazwę użytkownika, wprowadź `Username: {{username}}`. 
-  > - Jednak należy zachować ostrożność przy użyciu podstawienia zmiennej, ponieważ zmienne nie są sprawdzane w interfejsie użytkownika i uwzględniają wielkość liter. Upewnij się, że wprowadzono prawidłowe informacje.
+  > - W nazwie podmiotu zabezpieczeń można również użyć zmiennych, wprowadzając nawiasy klamrowe `{{ }}`. Aby na przykład wyświetlić nazwę użytkownika, wprowadź `Username: {{username}}`. 
+  > - Zachowaj ostrożność, używając podstawienia zmiennej, ponieważ zmienne nie są weryfikowanie w interfejsie użytkownika i uwzględniają wielkość liter. Upewnij się, że wprowadzasz odpowiednie informacje.
   
-- **Active Directory** kodu lokacji (tylko protokół Kerberos): Wprowadź nazwę witryny Active Directory, której ma używać rozszerzenie protokołu Kerberos. Zmiana tej wartości może nie być konieczna, ponieważ rozszerzenie protokołu Kerberos może automatycznie znaleźć kod lokacji Active Directory.
-- **Nazwa pamięci podręcznej** (tylko protokół Kerberos): Wprowadź nazwę Generic Security Services (GSS) pamięci podręcznej protokołu Kerberos. Najprawdopodobniej nie musisz ustawiać tej wartości.  
-- **Komunikat wymagania dotyczącego hasła** (tylko protokół Kerberos): wprowadź wersję tekstową wymagań dotyczących hasła organizacji, które są widoczne dla użytkowników. Komunikat jest wyświetlany, jeśli nie są wymagane wymagania dotyczące złożoności hasła Active Directory lub nie wprowadzono minimalnej długości hasła.  
-- **Identyfikatory pakietu aplikacji** (tylko protokół Kerberos): **Dodaj** identyfikatorów zbioru aplikacji, które powinny używać logowania jednokrotnego na urządzeniach. Te aplikacje otrzymują dostęp do biletu uprawniającego do przyznania biletu protokołu Kerberos, biletu uwierzytelniania i uwierzytelniania użytkowników do usług, do których mają dostęp.
-- **Mapowanie obszaru domeny** (tylko protokół Kerberos): **Dodaj** sufiksy DNS domeny, które powinny być mapowane na obszar. Użyj tego ustawienia, jeśli nazwy DNS hostów nie pasują do nazwy obszaru. Najprawdopodobniej nie musisz tworzyć tego niestandardowego mapowania domeny-obszaru.
-- **certyfikatów PKINIT** (tylko protokół Kerberos): **wybierz** kryptografii klucza publicznego dla certyfikatu uwierzytelniania początkowego (PKINIT), którego można użyć do uwierzytelniania Kerberos. Możesz wybrać jedną z [PKCS](../protect/certficates-pfx-configure.md) lub [SCEP](../protect/certificates-scep-configure.md) certyfikaty, które zostały dodane w usłudze Intune. Aby uzyskać więcej informacji o certyfikatach, zobacz [używać certyfikatów do uwierzytelniania w Microsoft Intune](../protect/certificates-configure.md).
+- **Kod lokacji usługi Active Directory** (tylko Kerberos): wprowadź nazwę lokacji usługi Active Directory, której ma użyć rozszerzenie protokołu Kerberos. Zmiana tej wartości może nie być konieczna, ponieważ rozszerzenie protokołu Kerberos może automatycznie znajdować kod lokacji usługi Active Directory.
+- **Nazwa pamięci podręcznej** (tylko Kerberos): wprowadź nazwę usług Generic Security Services (GSS) pamięci podręcznej protokołu Kerberos. Najprawdopodobniej nie trzeba będzie ustawiać tej wartości.  
+- **Komunikat o wymaganiach dotyczących hasła** (tylko Kerberos): wprowadź wersję tekstową wymagań dotyczących haseł w organizacji, które są wyświetlane dla użytkowników. Ten komunikat jest wyświetlany, jeśli nie żądasz spełnienia wymagań dotyczących złożoności hasła usługi Active Directory ani nie wprowadzasz minimalnej długości hasła.  
+- **Identyfikatory pakietów aplikacji** (tylko Kerberos): **Dodaj** identyfikatory pakietów aplikacji, które powinny używać logowania jednokrotnego na urządzeniach. Te aplikacje mogą uzyskiwać dostęp do biletu uprawniającego do przyznania biletu protokołu Kerberos, czyli do biletu uwierzytelniania, i uwierzytelniają użytkowników w usługach, do których mają dostęp.
+- **Mapowanie obszaru domeny** (tylko Kerberos): **Dodaj** sufiksy DNS domeny, które powinny być mapowane na obszar. Użyj tego ustawienia, jeśli nazwy DNS hostów nie są zgodne z nazwą obszaru. Najprawdopodobniej nie trzeba będzie tworzyć tego niestandardowego mapowania domeny na obszar.
+- **Certyfikat PKINIT** (tylko Kerberos): **Wybierz** certyfikat kryptografii klucza publicznego na użytek uwierzytelniania początkowego (PKINIT), którego można użyć na potrzeby uwierzytelniania protokołu Kerberos. Możesz wybrać spośród certyfikatów [PKCS](../protect/certficates-pfx-configure.md) lub [SCEP](../protect/certificates-scep-configure.md), które zostały dodane do usługi Intune. Aby uzyskać więcej informacji o certyfikatach, zobacz [Używanie certyfikatów do uwierzytelniania w usłudze Microsoft Intune](../protect/certificates-configure.md).
 
 ## <a name="associated-domains"></a>Skojarzone domeny
 
 W usłudze Intune:
 
-- Dodaj wiele skojarzeń między aplikacjami.
+- Dodaj wiele skojarzeń aplikacji z domeną.
 - Skojarz wiele domen z tą samą aplikacją.
 
 Ta funkcja ma zastosowanie do:
 
 - System macOS 10.15 i nowsze
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Ustawienia dotyczą: wszystkie typy rejestracji
+### <a name="settings-apply-to-all-enrollment-types"></a>Ustawienia mają zastosowanie do: Wszystkie typy rejestracji
 
-- **Identyfikator aplikacji**: Wprowadź identyfikator aplikacji, która ma zostać skojarzona z witryną sieci Web. Identyfikator aplikacji zawiera identyfikator zespołu i identyfikator pakietu: `TeamID.BundleID`.
+- **Identyfikator aplikacji**: wprowadź identyfikator aplikacji, która ma zostać skojarzona z witryną internetową. Identyfikator aplikacji zawiera identyfikator zespołu i identyfikator pakietu: `TeamID.BundleID`.
 
-  Identyfikator zespołu to 10-znakowe znaki alfanumeryczne (litery i cyfry) wygenerowane przez firmę Apple dla deweloperów aplikacji, takie jak `ABCDE12345`. [Znajdź identyfikator zespołu](https://help.apple.com/developer-account/#/dev55c3c710c) (otwiera witrynę sieci Web firmy Apple), aby uzyskać więcej informacji.
+  Identyfikator zespołu to 10-znakowy ciąg alfanumeryczny (litery i cyfry) wygenerowany przez firmę Apple dla deweloperów aplikacji, na przykład `ABCDE12345`. Aby uzyskać więcej informacji, skorzystaj z linku [Locate your Team ID](https://help.apple.com/developer-account/#/dev55c3c710c)  (Znajdź swój identyfikator zespołu) — zostanie otwarta witryna internetowa firmy Apple.
 
-  Identyfikator pakietu jednoznacznie identyfikuje aplikację i zazwyczaj jest formatowany w odwrotnej notacji nazwy domeny. Na przykład identyfikator pakietu wyszukiwania jest `com.apple.finder`. Aby znaleźć identyfikator pakietu, użyj programu AppleScript w terminalu:
+  Identyfikator pakietu jednoznacznie identyfikuje aplikację i zazwyczaj jest formatowany w odwrotnej notacji nazwy domeny. Na przykład identyfikator pakietu aplikacji Finder to `com.apple.finder`. Aby znaleźć identyfikator pakietu, użyj funkcji AppleScript w programie Terminal:
 
   `osascript -e 'id of app "ExampleApp"'`
 
-- **domeny**: Wprowadź domenę witryny sieci Web, która ma zostać skojarzona z aplikacją. Domena zawiera typ usługi i w pełni kwalifikowana nazwa hosta, takie jak `webcredentials:www.contoso.com`.
+- **Domena**: wprowadź domenę witryny internetowej, która ma zostać skojarzona z aplikacją. Domena zawiera typ usługi i w pełni kwalifikowaną nazwę hosta, na przykład `webcredentials:www.contoso.com`.
 
-  Można dopasować wszystkie poddomeny skojarzonej domeny, wprowadzając `*.` (symbol wieloznaczny gwiazdki i kropkę) przed rozpoczęciem domeny. Okres wykorzystania jest wymagany Dokładne domeny mają wyższy priorytet niż w przypadku domen wieloznacznych. Dlatego wzorce z domen nadrzędnych są dopasowywane *, jeśli* dopasowanie nie zostanie znalezione w w pełni kwalifikowanej poddomenie.
+  Możesz dopasować wszystkie poddomeny skojarzonej domeny, wprowadzając znaki `*.` (symbol wieloznaczny gwiazdki i kropkę) przed początkiem domeny. Okres jest wymagany. Dokładne domeny mają wyższy priorytet niż domeny wieloznaczne. Zatem wzorce z domen nadrzędnych są dopasowywane, *jeśli* nie zostanie znalezione dopasowanie dla w pełni kwalifikowanej poddomeny.
 
-  Typem usługi może być:
+  Typ usługi może być następujący:
 
   - **authsrv**: Rozszerzenie aplikacji — rejestracja jednokrotna
-  - **applink**: połączenie uniwersalne
-  - **poświadczeń webcredentials**: Autowypełnianie hasła
+  - **applink**: link uniwersalny
+  - **webcredentials**: autowypełnianie hasła
 
-- **Dodaj**: Wybierz, aby dodać aplikacje i skojarzone domeny.
+- **Dodaj**: wybierz, aby dodać aplikacje i skojarzone domeny.
 
 > [!TIP]
-> Aby rozwiązać problem, na urządzeniu macOS Otwórz **preferencji systemu** > **profile**. Potwierdź, że utworzony profil znajduje się na liście Profile urządzeń. Jeśli jest ona wyświetlana, upewnij się, że **konfiguracji skojarzonych domen** znajduje się w profilu i zawiera poprawne identyfikatory aplikacji i domen.
+> W celu rozwiązania problemów na urządzeniu z systemem macOS wybierz pozycję **Preferencje systemowe** > **Profile**. Potwierdź, że utworzony profil znajduje się na liście profili urządzeń. Jeśli jest wymieniony, upewnij się, że zawiera on ustawienie **Konfiguracja skojarzonych domen** oraz że identyfikator aplikacji i domeny są prawidłowe.
 
 ## <a name="next-steps"></a>Następne kroki
 
 [Przypisywanie profilu](device-profile-assign.md) i [monitorowanie jego stanu](device-profile-monitor.md).
 
-Możesz również skonfigurować funkcje urządzenia w [systemu iOS](ios-device-features-settings.md).
+Możesz również skonfigurować funkcje urządzenia w systemie [iOS/iPadOS](ios-device-features-settings.md).
