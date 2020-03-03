@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c705e8863ef4e01906a773d528f9ae2f40461c71
-ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
+ms.openlocfilehash: 08041a57ab52f395283e57cda596d00ba168aba1
+ms.sourcegitcommit: 3964e6697b4d43e2c69a15e97c8d16f8c838645b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75885855"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77556486"
 ---
 # <a name="basic-setup"></a>Konfiguracja podstawowa
 
@@ -53,18 +53,11 @@ Jeśli w usłudze Intune planowane jest użycie uwierzytelniania opartego na cer
 
 - [Jak skonfigurować infrastrukturę certyfikatów dla profilu PFX](/intune/certficates-pfx-configure).
 
-
 ## <a name="task-list-for-an-intune-setup"></a>Lista zadań konfiguracji usługi Intune
 
 ### <a name="task-1-intune-subscription"></a>Zadanie 1. Subskrypcja usługi Intune
 
-Aby można było przeprowadzić migrację do usługi Intune, należy dysponować subskrypcją usługi Intune.
-
-- Na [tej stronie](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0) można znaleźć instrukcje dotyczące poniższych zagadnień:
-
-  - Tworzenie nowej subskrypcji usługi Intune połączonej z nową dzierżawą usługi AAD.
-
-  - Łączenie subskrypcji usługi Intune przez zalogowanie się do istniejącej dzierżawy usługi AAD.
+Aby można było przeprowadzić migrację do usługi Intune, należy dysponować [subskrypcją usługi Intune](account-sign-up.md).
 
 ### <a name="task-2-assign-intune-user-licenses"></a>Zadanie 2. Przypisanie licencji użytkowników usługi Intune
 

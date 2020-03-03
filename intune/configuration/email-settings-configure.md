@@ -1,12 +1,12 @@
 ---
 title: Konfigurowanie ustawień poczty e-mail w usłudze Microsoft Intune — Azure | Microsoft Docs
 titleSuffix: ''
-description: Utwórz profil poczty e-mail w usłudze Microsoft Intune i wdróż go w urządzeniach z rozwiązaniem Android Enterprise oraz z systemami iOS i Windows. Profil poczty e-mail pozwala skonfigurować wspólne ustawienia poczty e-mail, w tym serwer poczty e-mail i metodę uwierzytelniania połączenia z firmową pocztą e-mail w urządzeniach, którymi zarządzasz.
+description: Utwórz profil poczty e-mail w usłudze Microsoft Intune i wdróż go w urządzeniach z rozwiązaniem Android Enterprise oraz z systemami iOS, iPadOS i Windows. Profil poczty e-mail pozwala skonfigurować wspólne ustawienia poczty e-mail, w tym serwer poczty e-mail i metodę uwierzytelniania połączenia z firmową pocztą e-mail w urządzeniach, którymi zarządzasz.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/07/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 110db564dce5ad68d3c2a26b85e60ecbe99e7335
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 908a20098917540e6f823d94c6643d15f13ecf68
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74059432"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511089"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>Dodawanie ustawień poczty e-mail do urządzeń przy użyciu usługi Intune
 
@@ -32,7 +32,8 @@ Profile poczty e-mail mogą służyć do konfigurowania wbudowanych ustawień po
 - System Android Samsung Knox Standard 4.0 i nowsze wersje
 - Android Enterprise
 - System iOS 8.0 i nowsze
-- System Windows Phone 8.1 lub nowszy
+- System iPadOS 13.0 i nowsze
+- System Windows Phone 8.1 i nowsze
 - System Windows 10 Mobile Desktop i Windows 10 Mobile
 
 W tym artykule przedstawiono sposób tworzenia profilu poczty e-mail w usłudze Microsoft Intune. Zawiera on też linki dotyczące bardziej szczegółowych ustawień na innych platformach.
@@ -89,7 +90,7 @@ Profile poczty e-mail można zabezpieczyć przy użyciu następujących metod:
 
 Jeśli użytkownik skonfigurował już konto e-mail, może przypisać profil poczty e-mail w sposób odpowiedni dla danej platformy.
 
-- **iOS**: Istniejące zduplikowane profile poczty e-mail są wykrywane na podstawie nazwy hosta i adresu e-mail. Duplikat profilu poczty e-mail blokuje możliwość przypisywania profilu usługi Intune. W takim przypadku w aplikacji Portal firmy zostanie wyświetlony komunikat dla użytkownika z informacją, że profil nie jest zgodny, oraz monitem dla użytkownika końcowego o ręczne usunięcie skonfigurowanego profilu. Aby uniknąć tego scenariusza, poleć użytkownikom końcowym, aby dokonali rejestracji *przed* zainstalowaniem profilu poczty e-mail — dzięki temu usługa Intune będzie mogła samodzielnie skonfigurować profil.
+- **iOS/iPadOS**: Istniejące zduplikowane profile poczty e-mail są wykrywane na podstawie nazwy hosta i adresu e-mail. Duplikat profilu poczty e-mail blokuje możliwość przypisywania profilu usługi Intune. W takim przypadku w aplikacji Portal firmy zostanie wyświetlony komunikat dla użytkownika z informacją, że profil nie jest zgodny, oraz monitem dla użytkownika końcowego o ręczne usunięcie skonfigurowanego profilu. Aby uniknąć tego scenariusza, poleć użytkownikom końcowym, aby dokonali rejestracji *przed* zainstalowaniem profilu poczty e-mail — dzięki temu usługa Intune będzie mogła samodzielnie skonfigurować profil.
 
 - **Windows:** Istniejące zduplikowane profile poczty e-mail są wykrywane na podstawie nazwy hosta i adresu e-mail. Usługa Intune zastępuje istniejący profil poczty e-mail utworzony przez użytkownika końcowego.
 

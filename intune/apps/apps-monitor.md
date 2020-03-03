@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72e1f95e2bd81d974d900acbcb0f785bb7966eaa
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 2bd5b26073611d9ff974d4a53f7794919e8672c7
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563696"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513541"
 ---
 # <a name="monitor-app-information-and-assignments-with-microsoft-intune"></a>Monitorowanie informacji o aplikacji i przypisań z użyciem usługi Microsoft Intune
 
@@ -32,7 +32,7 @@ ms.locfileid: "74563696"
 Usługa Intune oferuje kilka sposobów monitorowania właściwości zarządzanych aplikacji oraz stanu przypisania aplikacji.
 
 1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Wybierz kolejno pozycje **Aplikacje** > **Wszystkie aplikacje**.
+2. Wybierz pozycję **Aplikacje** > **Wszystkie aplikacje**.
 3. Na liście aplikacji wybierz aplikację do monitorowania. Zostanie wyświetlone okienko aplikacji, które zawiera przegląd stanu urządzenia i stanu użytkownika.
 
 > [!NOTE]
@@ -50,7 +50,7 @@ Sekcja **Podstawy** zawiera następujące informacje dotyczące aplikacji:
  | **Szczegóły aplikacji**            | **Opis**                                                      |
 |------------------------|------------------------------------------------------------------|
 | **Wydawca**          | Wydawca aplikacji.                                            |
-| **System operacyjny**   | System operacyjny aplikacji (Windows, iOS, Android itp.). |
+| **System operacyjny**   | System operacyjny aplikacji (Windows, iOS/iPadOS, Android itp.). |
 | **Utworzono**             | Data i godzina utworzenia tej poprawki. <b>**Uwaga**: ta wartość daty jest aktualizowana, gdy administrator IT zmienia metadane aplikacji, takie jak kategoria aplikacji lub opis aplikacji.                        |
 | **Przypisane**           | Czy aplikacja została przypisana (**Tak** lub **Nie**).                  |
 
@@ -76,7 +76,7 @@ Lista stanu urządzenia zostanie pokazana po wybraniu pozycji **Stan instalacji 
 |----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Nazwa urządzenia**      | Nazwa urządzenia na platformach, które umożliwiają nadanie nazwy urządzeniu. Na innych platformach usługa Intune utworzy nazwę na podstawie innych właściwości. Ten atrybut jest niedostępny w przypadku innych urządzeń.                                                                       |
 | **Nazwa użytkownika**        | Nazwa użytkownika.                                                                                                                                                                                                                                      |
-| **Platforma**         | System operacyjny urządzenia (Windows, iOS, Android itp.).                                                                                                                                                                                           |
+| **Platforma**         | System operacyjny urządzenia (Windows, iOS/iPadOS, Android itp.).                                                                                                                                                                                           |
 | **Wersja**          | Numer wersji aplikacji. W przypadku aplikacji biznesowych (LOB) i aplikacji ze sklepu Microsoft Store dla Firm jest pokazywany pełny numer wersji. Pełny numer wersji identyfikuje określone wydanie aplikacji. Numer ma postać _wersja_(_kompilacja_), Na przykład 2.2(2.2.17560800). W przypadku standardowych aplikacji z witryny Store wersje nie są wyświetlane. |
 | **Stan**           | Stan aplikacji.                                                                                                                                                                                                                                     |
 | **Szczegóły stanu**   | Szczegółowe informacje o stanie.                                                                                                                                                                                                                                     |

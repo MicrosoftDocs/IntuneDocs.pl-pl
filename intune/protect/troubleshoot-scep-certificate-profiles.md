@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 38bc86b1b9ba85eb7885a0e00673e551821063c1
-ms.sourcegitcommit: 459b0ee01eb6e69cc0ce66d4c4b81d73f510f96d
+ms.openlocfilehash: 4496a5bbc6d5ee5134dc4e6a795494710ea6865d
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77034247"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515224"
 ---
 # <a name="overview-for-troubleshooting-scep-certificate-profiles-with-microsoft-intune"></a>Omówienie rozwiązywania problemów z profilami certyfikatów SCEP w usłudze Microsoft Intune
 
@@ -123,9 +123,9 @@ Możesz również [przekazywać dzienniki i wysyłać je pocztą e-mail](/intune
 
 ### <a name="logs-for-ios-and-ipados-devices"></a>Dzienniki dotyczące urządzeń z systemem iOS i iPadOS
 
-W przypadku urządzeń z systemem iOS lub iPadOS należy użyć dzienników debugowania i **Xcode**, które są uruchamiane na komputerze Mac:
+W przypadku urządzeń z systemem iOS/iPadOS należy użyć dzienników debugowania i **Xcode**, które są uruchamiane na komputerze Mac:
 
-1. Podłącz urządzenie z systemem iOS do komputera Mac, a następnie przejdź do pozycji **Aplikacje** > **Narzędzia**, aby otworzyć aplikację Konsola. 
+1. Podłącz urządzenie z systemem iOS/iPadOS do komputera Mac, a następnie przejdź do pozycji **Aplikacje** > **Narzędzia**, aby otworzyć aplikację Konsola. 
 
 2. W obszarze **akcji** wybierz opcje **uwzględniania komunikatów informacyjnych** i **uwzględniania komunikatów debugowania**.
 

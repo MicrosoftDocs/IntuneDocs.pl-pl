@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2020
+ms.date: 02/11/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6044ff5f8d169e36a11f9289f1772c809723b7fc
-ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
+ms.openlocfilehash: af3c4e05a47e015384716588a28a6074898e2f6a
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77438008"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513966"
 ---
 # <a name="add-app-configuration-policies-for-managed-iosipados-devices"></a>Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem iOS/iPadOS
 
@@ -43,7 +43,7 @@ Po wybraniu dołączonych grup dla zasad konfiguracji aplikacji możesz też wyb
 > [!TIP]
 > Ten typ zasad jest obecnie dostępny tylko na urządzeniach z systemem iOS/iPadOS 8.0 lub nowszym. Obsługiwane są następujące typy instalacji aplikacji:
 >
-> - **Zarządzana aplikacja systemu iOS ze sklepu App Store**
+> - **Zarządzana aplikacja systemu iOS/iPadOS ze sklepu App Store**
 > - **Pakiet aplikacji dla systemu iOS**
 >
 > Aby uzyskać więcej informacji na temat typów instalacji aplikacji, zobacz artykuł [How to add an app to Microsoft Intune](apps-add.md) (Jak dodać aplikację do usługi Microsoft Intune). Aby uzyskać więcej informacji dotyczących dołączania konfiguracji aplikacji do pakietu aplikacji .ipa dla zarządzanych urządzeń, zobacz temat Managed App Configuration (Konfiguracja aplikacji zarządzanych) w [dokumentacji dla deweloperów systemu iOS](https://developer.apple.com/library/archive/samplecode/sc2279/Introduction/Intro.html).
@@ -108,9 +108,10 @@ Znaki \{\{ i \}\} są używane tylko przez typy tokenów i nie mogą być używa
 
 W przypadku urządzeń z systemem iOS/iPadOS używaj następujących par klucz/wartość:
 
-| **Klucz** | IntuneMAMAllowedAccountsOnly |
-|--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Wartości** | <ul><li>**Włączone**: jedynym dozwolonym kontem jest zarządzane konto użytkownika zdefiniowane za pomocą klucza [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).</li><li>**Wyłączone** (lub dowolna wartość, która nie stanowi dopasowania do opcji **Włączone** bez uwzględniania wielkości liter): każde konto jest dozwolone.</li></ul> |.
+| **Klucz** | **Wartości** |
+|----|----|
+| IntuneMAMAllowedAccountsOnly | <ul><li>**Włączone**: jedynym dozwolonym kontem jest zarządzane konto użytkownika zdefiniowane za pomocą klucza [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).</li><li>**Wyłączone** (lub dowolna wartość, która nie stanowi dopasowania do opcji **Włączone** bez uwzględniania wielkości liter): każde konto jest dozwolone.</li></ul> |
+| IntuneMAMUPN | <ul><li>Nazwa UPN konta, które może się zalogować do aplikacji.</li><li> W przypadku urządzeń zarejestrowanych w usłudze Intune token <code>{{userprincipalname}}</code> może służyć do reprezentowania zarejestrowanego konta użytkownika.</li></ul>  |
 
    > [!NOTE]
    > W przypadku zezwalania wyłącznie na skonfigurowane konta organizacji z obsługą wielu tożsamości należy użyć usługi OneDrive dla systemu iOS 10.34 lub nowszej wersji, programu Outlook dla systemu iOS 2.99.0 lub nowszej wersji bądź programu Microsoft Edge dla systemu iOS 44.8.7 lub nowszej wersji, a w aplikacji należy zastosować [zasady ochrony aplikacji usługi Intune](app-protection-policy.md).
@@ -181,7 +182,7 @@ Ponadto usługa Intune obsługuje następujące typy tokenów na liście właśc
 - \{\{serialnumberlast4digits\}\} — na przykład **G5V2** (dla urządzeń z systemem iOS/iPadOS)
 - \{\{aaddeviceid\}\} — na przykład **ab0dc123-45d6-7e89-aabb-cde0a1234b56**
 
-## <a name="configure-the-company-portal-app-to-support-ios-dep-devices"></a>Konfigurowanie aplikacji Portal firmy na potrzeby obsługi urządzeń DEP z systemem iOS
+## <a name="configure-the-company-portal-app-to-support-ios-and-ipados-dep-devices"></a>Konfigurowanie aplikacji Portal firmy na potrzeby obsługi urządzeń DEP z systemem iOS oraz iPadOS
 
 Rejestracje programu DEP (Device Enrollment Program firmy Apple) nie są zgodne z wersją aplikacji Portal firmy ze sklepu z aplikacjami. Można jednak skonfigurować aplikację Portal firmy do obsługi urządzeń DEP z systemem iOS/iPadOS, wykonując następujące czynności.
 
@@ -204,7 +205,7 @@ Rejestracje programu DEP (Device Enrollment Program firmy Apple) nie są zgodne 
 3. Wdróż aplikację Portal firmy na urządzeniach z zasadami konfiguracji aplikacji przeznaczonymi dla żądanych grup. Pamiętaj, aby wdrażać tylko zasady w grupach urządzeń, które są już zarejestrowane w programie DEP.
 4. Poinformuj użytkowników końcowych, że powinni zalogować się w aplikacji Portal firmy po jej automatycznym zainstalowaniu.
 
-## <a name="monitor-ios--app-configuration-status-per-device"></a>Monitorowanie stanu konfiguracji aplikacji systemu iOS na poszczególnych urządzeniach 
+## <a name="monitor-iosipados--app-configuration-status-per-device"></a>Monitorowanie stanu konfiguracji aplikacji systemu iOS/iPadOS na poszczególnych urządzeniach 
 Po przypisaniu zasad konfiguracji można monitorować stan konfiguracji aplikacji systemu iOS/iPadOS dla każdego zarządzanego urządzenia. W usłudze **Microsoft Intune** w witrynie Azure Portal wybierz pozycję **Urządzenia** > **Wszystkie urządzenia**. Z listy zarządzanych urządzeń wybierz konkretne urządzenie, aby wyświetlić okienko dla tego urządzenia. W okienku urządzenia wybierz pozycję **Konfiguracja aplikacji**.  
 
 ## <a name="additional-information"></a>Dodatkowe informacje

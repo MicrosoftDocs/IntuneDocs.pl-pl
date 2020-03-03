@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/06/2019
+ms.date: 02/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,21 +18,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 061644a1c83b02902a6bbdaf3cfbd04815d32ea3
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: 9c2083d6f259b62b2856e08fec5ebcb696cbc0df
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755038"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576451"
 ---
-# <a name="manually-add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Ręczne dodawanie aplikacji Portal firmy dla systemu Windows 10 przy użyciu usługi Microsoft Intune
+# <a name="add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Dodawanie aplikacji Portal firmy dla systemu Windows 10 przy użyciu usługi Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Użytkownicy mogą samodzielnie zainstalować aplikację Portal firmy ze sklepu Microsoft Store, aby zarządzać urządzeniami i instalować aplikacje. Jeśli jednak w Twojej organizacji wymagane jest przypisanie aplikacji Portal firmy do użytkowników, aplikację Portal firmy dla systemu Windows 10 można przypisać ręcznie bezpośrednio z poziomu usługi Intune. Można to zrobić, nawet jeśli usługa Intune nie została zintegrowana ze sklepem Microsoft Store dla Firm.
+Użytkownicy mogą samodzielnie zainstalować aplikację Portal firmy ze sklepu Microsoft Store, aby zarządzać urządzeniami i instalować aplikacje. Jeśli jednak w Twojej organizacji wymagane jest przypisanie aplikacji Portal firmy do użytkowników, aplikację Portal firmy dla systemu Windows 10 można przypisać bezpośrednio z poziomu usługi Intune. Można to zrobić, nawet jeśli usługa Intune nie została zintegrowana ze sklepem Microsoft Store dla Firm.
 
- > [!NOTE]
- > Opcja opisana w tym artykule wymaga ręcznego przypisywania aktualizacji po każdym wydaniu aktualizacji aplikacji.
+ > [!IMPORTANT]
+ > Jeśli pobrano aplikację Portal firmy, opcja opisana w tym artykule wymaga ręcznego przypisywania aktualizacji po każdym wydaniu aktualizacji aplikacji. Aby uzyskać informacje na temat wdrażania aplikacji Portal firmy dla systemu Windows 10 na urządzeniach aprowizowanych za pomocą rozwiązania Autopilot, zobacz [Dodawanie aplikacji Portal firmy dla systemu Windows 10 na urządzeniach rozwiązania Autopilot](~/apps/store-apps-company-portal-autopilot.md).
 
 ## <a name="configure-settings-to-show-offline-apps"></a>Konfiguracja ustawień w celu wyświetlania aplikacji w trybie offline
 1. Zaloguj się do sklepu [Microsoft Store dla Firm](https://www.microsoft.com/business-store) przy użyciu konta administratora.

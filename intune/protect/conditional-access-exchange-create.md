@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d04897d38c1b46f27fe86e72ecfa6856aa9eece2
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: 4962b4c75460b129f9df7729b5a34485d8ee0760
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755677"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576072"
 ---
 # <a name="create-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated"></a>Tworzenie zasad dostępu warunkowego do lokalnego programu Exchange i starszej wersji usługi Exchange Online w wersji dedykowanej w usłudze Intune
 
@@ -63,12 +63,12 @@ Przed skonfigurowaniem dostępu warunkowego należy się upewnić, że istnieje 
 ### <a name="support-for-mobile-devices"></a>Obsługa urządzeń przenośnych
 
 - System Windows Phone 8.1 lub nowszy
-- Natywna aplikacja poczty e-mail w systemie iOS
+- Natywna aplikacja poczty e-mail w systemie iOS/iPadOS.
 - Klienci poczty korzystający z protokołu EAS (np. Gmail w systemie Android 4 lub nowszym).
 - Klienci poczty korzystający z protokołu EAS na **urządzeniach z profilami służbowymi systemu Android:** na urządzeniach z profilami służbowymi systemu Android są obsługiwane tylko aplikacje **Gmail** i **Nine Work for Android Enterprise** w **profilu służbowym**. Aby dostęp warunkowy współdziałał z profilami służbowymi systemu Android, należy wdrożyć profil poczty e-mail dla aplikacji Gmail lub Nine Work for Android Enterprise, a także wdrożyć te aplikacje jako instalację wymaganą.
 
 > [!NOTE]
-> Program Microsoft Outlook dla systemów Android i iOS nie jest obsługiwany za pośrednictwem łącznika lokalnego programu Exchange. Jeśli chcesz korzystać z zasad dostępu warunkowego usługi Azure Active Directory i zasad rozwiązania Intune App Protection przy użyciu programu Outlook dla systemów iOS i Android dla skrzynek pocztowych w środowisku lokalnym, zobacz temat [Using hybrid Modern Authentication with Outlook for iOS and Android](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth) (Używanie hybrydowego nowoczesnego uwierzytelniania w programie Outlook dla systemów iOS i Android).
+> Program Microsoft Outlook dla systemów Android i iOS/iPadOS nie jest obsługiwany za pośrednictwem łącznika lokalnego programu Exchange. Jeśli chcesz korzystać z zasad dostępu warunkowego usługi Azure Active Directory i zasad rozwiązania Intune App Protection przy użyciu programu Outlook dla systemów iOS/iPadOS i Android dla skrzynek pocztowych w środowisku lokalnym, zobacz temat [Używanie hybrydowego nowoczesnego uwierzytelniania w programie Outlook dla systemów iOS/iPadOS i Android](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth).
 
 ### <a name="support-for-pcs"></a>Obsługa komputerów
 

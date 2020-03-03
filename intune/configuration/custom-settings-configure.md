@@ -1,11 +1,11 @@
 ---
 title: Korzystanie z niestandardowych ustawień urządzenia w usłudze Microsoft Intune — Azure | Microsoft Docs
-description: Dodawanie lub tworzenie profilu umożliwiającego korzystanie z ustawień niestandardowych na urządzeniach z systemem Windows Phone, Windows 8.1, Windows 10 lub nowszym, Android, Android Enterprise, macOS oraz iOS za pomocą usługi Microsoft Intune
+description: Dodawanie lub tworzenie profilu umożliwiającego korzystanie z ustawień niestandardowych na urządzeniach z systemem Windows Phone, Windows 8.1, Windows 10 lub nowszym, Android, Android Enterprise, macOS oraz iOS/iPadOS za pomocą usługi Microsoft Intune
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/05/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,22 +15,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c815a2c911dba6d17fc864b446122931fa88e91
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: d2ca5a120e50819208743564279a5d16c6b4aa2f
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73755385"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511518"
 ---
 # <a name="create-a-profile-with-custom-settings-in-intune"></a>Tworzenie profilu z ustawieniami niestandardowymi w usłudze Intune
 
 ## <a name="what-are-custom-profiles"></a>Czym są profile niestandardowe
 
-Usługa Microsoft Intune zawiera wiele wbudowanych ustawień do kontrolowania różnych funkcji na urządzeniu. Profile niestandardowe można również tworzyć. Profile niestandardowe świetnie się sprawdzają, gdy chcesz użyć ustawień i funkcji urządzenia, które nie są wbudowane w usłudze Intune. Takie profile zawierają funkcje i ustawienia, które możesz kontrolować na urządzeniach w organizacji. Możesz na przykład utworzyć profil niestandardowy, który ustawia tę samą funkcję dla każdego urządzenia z systemem iOS.
+Usługa Microsoft Intune zawiera wiele wbudowanych ustawień do kontrolowania różnych funkcji na urządzeniu. Profile niestandardowe można również tworzyć. Profile niestandardowe świetnie się sprawdzają, gdy chcesz użyć ustawień i funkcji urządzenia, które nie są wbudowane w usłudze Intune. Takie profile zawierają funkcje i ustawienia, które możesz kontrolować na urządzeniach w organizacji. Możesz na przykład utworzyć profil niestandardowy, który ustawia tę samą funkcję dla każdego urządzenia z systemem iOS/iPadOS.
 
 Aby uzyskać więcej informacji na temat profilów konfiguracji, zobacz [Co to są profile urządzeń w usłudze Microsoft Intune?](device-profiles.md). 
 
-Ten artykuł zawiera linki do instrukcji tworzenia profilów niestandardowych dla systemów Android, Android Enterprise, iOS, macOS i Windows.
+Ten artykuł zawiera linki do instrukcji tworzenia profilów niestandardowych dla systemów Android, Android Enterprise, iOS/iPadOS, macOS i Windows.
 
 ## <a name="available-platforms"></a>Dostępne platformy
 

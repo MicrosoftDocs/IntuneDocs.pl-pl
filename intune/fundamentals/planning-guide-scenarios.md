@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96ebae46fd4935c3070319f16d35d5b53888e94c
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 3f432ab20170dc702d2014bbac68ced06e51082e
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72505174"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514901"
 ---
 # <a name="identify-mobile-device-management-use-case-scenarios"></a>Identyfikowanie scenariuszy przypadków użycia zarządzania urządzeniami mobilnymi
 
@@ -79,15 +79,15 @@ Następnie należy zidentyfikować grupy organizacyjne, które są skojarzone z 
 
 Kolejnym krokiem jest zidentyfikowanie platform urządzeń mobilnych skojarzonych z poszczególnymi scenariuszami przypadków użycia. Może ich być więcej niż jedna.
 
-Na przykład firmowy scenariusz przypadków użycia może obsługiwać platformy urządzeń iOS i Android Samsung Knox. Zasady BYOD mogą obejmować obsługę dodatkowych platform urządzeń mobilnych, takich jak Android (w wersjach innych niż Samsung Knox) i Windows 10 Mobile. Opierając się na powyższych przykładach, skojarzyliśmy platformy urządzeń mobilnych z poszczególnymi scenariuszami przypadków użycia.
+Na przykład firmowy scenariusz przypadków użycia może obsługiwać platformy urządzeń iOS/iPadOS i Android Samsung Knox. Zasady BYOD mogą obejmować obsługę dodatkowych platform urządzeń mobilnych, takich jak Android (w wersjach innych niż Samsung Knox) i Windows 10 Mobile. Opierając się na powyższych przykładach, skojarzyliśmy platformy urządzeń mobilnych z poszczególnymi scenariuszami przypadków użycia.
 
 | **Przypadki użycia** | **Podrzędne przypadki użycia** | **Grupy** | **Platformy urządzeń** |   
 |:---:|:---:|:---:|:---:|
-| Firmowe | Pracownik przetwarzający informacje | Kadry, księgowość | iOS |                                                           
-| Firmowe | Kierownictwo | Kadry, księgowość | iOS |                                                           
+| Firmowe | Pracownik przetwarzający informacje | Kadry, księgowość | iOS/iPadOS |                                                           
+| Firmowe | Kierownictwo | Kadry, księgowość | iOS/iPadOS |                                                           
 | Firmowe | Kiosk | Sprzedaż detaliczna | Android |
-| „Przynieś własne urządzenie” (BYOD, Bring Your Own Device) | Pracownik przetwarzający informacje | Marketing, sprzedaż | iOS |                                                           
-| „Przynieś własne urządzenie” (BYOD, Bring Your Own Device) | Kierownictwo | Marketing, sprzedaż | iOS |
+| „Przynieś własne urządzenie” (BYOD, Bring Your Own Device) | Pracownik przetwarzający informacje | Marketing, sprzedaż | iOS/iPadOS |                                                           
+| „Przynieś własne urządzenie” (BYOD, Bring Your Own Device) | Kierownictwo | Marketing, sprzedaż | iOS/iPadOS |
 
 ## <a name="next-steps"></a>Następne kroki
 

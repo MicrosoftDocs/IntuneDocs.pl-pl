@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c959102383f44eb35e1a923f39325007c6624b5
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 94c52257072bc713cfd3b7a44f342d5d9a4ba2f8
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72502895"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514680"
 ---
 # <a name="how-to-educate-your-end-users-about-microsoft-intune"></a>Jak edukować użytkowników końcowych na temat usługi Microsoft Intune
 
@@ -68,8 +68,8 @@ Przeczytaj poniższą listę wskazówek, które pokazują, jak uczynić wdrażan
   * [Jak użytkownicy systemu Android uzyskują aplikacje](end-user-apps-android.md)
 
 * **iOS**
-  * [Korzystanie z urządzenia z systemem iOS i usługi Intune](https://docs.microsoft.com/intune-user-help/using-your-ios-device-with-intune)
-  * [Jak użytkownicy systemu iOS uzyskują aplikacje](end-user-apps-ios.md)
+  * [Korzystanie z urządzenia z systemem iOS/iPadOS i usługi Intune](https://docs.microsoft.com/intune-user-help/using-your-ios-device-with-intune)
+  * [Jak użytkownicy systemu iOS/iPadOS uzyskują aplikacje](end-user-apps-ios.md)
 
 * **Windows**
   * [Korzystanie z urządzenia z systemem Windows i usługi Intune](https://docs.microsoft.com/intune-user-help/using-your-windows-device-with-intune)

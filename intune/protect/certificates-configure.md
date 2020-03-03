@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5092fa37f0bf6bd1320fa06fa58ac5e36f55aa3c
-ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
+ms.openlocfilehash: 63fa9f461fc9884d8c21e40cb4b5e3831f3b4b03
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74410184"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576528"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Używanie certyfikatów do uwierzytelniania w usłudze Microsoft Intune
 
@@ -38,7 +38,7 @@ Przy użyciu certyfikatów w usłudze Intune można uwierzytelniać użytkownik�
 
 Aby wdrożyć te certyfikaty, należy utworzyć i przypisać profile certyfikatów do urządzeń.
 
-Każdy utworzony profil certyfikatów obsługuje jedną platformę. Jeśli na przykład używasz certyfikatów PKCS, utworzysz profil certyfikatu PKCS dla systemu Android i oddzielny profil certyfikatu PKCS dla systemu iOS. Jeśli używasz również certyfikatów SCEP dla tych dwóch platform, utworzysz jeden profil certyfikatu SCEP dla systemu Android i drugi dla systemu iOS.
+Każdy utworzony profil certyfikatów obsługuje jedną platformę. Jeśli na przykład używasz certyfikatów PKCS, utworzysz profil certyfikatu PKCS dla systemu Android i oddzielny profil certyfikatu PKCS dla systemu iOS/iPadOS. Jeśli używasz również certyfikatów SCEP dla tych dwóch platform, utworzysz jeden profil certyfikatu SCEP dla systemu Android i drugi dla systemu iOS/iPadOS.
 
 ### <a name="general-considerations-when-you-use-a-microsoft-certification-authority"></a>Ogólne zagadnienia dotyczące używania urzędu certyfikacji firmy Microsoft
 
@@ -83,9 +83,9 @@ W przypadku korzystania z urzędu certyfikacji (CA) innej firmy, niż firma Micr
 | Android Enterprise <br> — W pełni zarządzane (właściciel urządzenia)   | ![Obsługiwane](./media/certificates-configure/green-check.png) |   | ![Obsługiwane](./media/certificates-configure/green-check.png) |   |
 | Android Enterprise <br> — Dedykowane (właściciel urządzenia)   | ![Obsługiwane](./media/certificates-configure/green-check.png)  |   | ![Obsługiwane](./media/certificates-configure/green-check.png)  |   |
 | Android Enterprise <br> — Profil służbowy    | ![Obsługiwane](./media/certificates-configure/green-check.png) | ![Obsługiwane](./media/certificates-configure/green-check.png) | ![Obsługiwane](./media/certificates-configure/green-check.png) | ![Obsługiwane](./media/certificates-configure/green-check.png) |
-| iOS                   | ![Obsługiwane](./media/certificates-configure/green-check.png) | ![Obsługiwane](./media/certificates-configure/green-check.png) | ![Obsługiwane](./media/certificates-configure/green-check.png) | ![Obsługiwane](./media/certificates-configure/green-check.png) |
+| iOS/iPadOS                   | ![Obsługiwane](./media/certificates-configure/green-check.png) | ![Obsługiwane](./media/certificates-configure/green-check.png) | ![Obsługiwane](./media/certificates-configure/green-check.png) | ![Obsługiwane](./media/certificates-configure/green-check.png) |
 | macOS                 | ![Obsługiwane](./media/certificates-configure/green-check.png) |  ![Obsługiwane](./media/certificates-configure/green-check.png) |![Obsługiwane](./media/certificates-configure/green-check.png)|![Obsługiwane](./media/certificates-configure/green-check.png)|
-| Windows Phone 8,1     |![Obsługiwane](./media/certificates-configure/green-check.png)  |  | ![Obsługiwane](./media/certificates-configure/green-check.png)| ![Obsługiwane](./media/certificates-configure/green-check.png) |
+| Windows Phone 8,1     |![Obsługiwane](./media/certificates-configure/green-check.png)  |  | ![Obsługiwane](./media/certificates-configure/green-check.png)| ![Obsługiwane](./media/certificates-configure/green-check.png) |
 | Windows 8.1 i nowsze |![Obsługiwane](./media/certificates-configure/green-check.png)  |  |![Obsługiwane](./media/certificates-configure/green-check.png) |   |
 | Windows 10 lub nowszym  | ![Obsługiwane](./media/certificates-configure/green-check.png) | ![Obsługiwane](./media/certificates-configure/green-check.png) | ![Obsługiwane](./media/certificates-configure/green-check.png) | ![Obsługiwane](./media/certificates-configure/green-check.png) |
 

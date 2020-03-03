@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 099d68568cd920c9ae3f328b4e9fba95424e46fd
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: dc262dc67c967ffd2c6525c4370df8e9fa0e4dff
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755276"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511841"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Dodawanie aplikacji do usługi Microsoft Intune 
 
@@ -52,7 +52,7 @@ W poniższej tabeli przedstawiono typy specyficzne dla aplikacji i sposób ich d
 | --- | --- | --- |
 | Aplikacje ze sklepu dla systemu Android  | Aplikacja ze sklepu  | Wybierz **Android** jako **typ aplikacji**, a następnie wprowadź adres URL sklepu Google Play dla aplikacji. |
 | Aplikacje systemu Android Enterprise  | Aplikacja ze sklepu  | Wybierz pozycję **Android** jako **typ aplikacji**, a następnie wprowadź adres URL zarządzanego sklepu Google Play. <sup>1</sup> |
-| Aplikacje ze sklepu dla systemu iOS  | Aplikacja ze sklepu  | Wybierz **iOS** jako **typ aplikacji**, wyszukaj aplikację i wybierz aplikację w usłudze Intune. |
+| Aplikacje ze sklepu dla systemu iOS/iPadOS  | Aplikacja ze sklepu  | Wybierz **iOS** jako **typ aplikacji**, wyszukaj aplikację i wybierz aplikację w usłudze Intune. |
 | Aplikacje ze sklepu dla systemu Windows Phone 8.1  | Aplikacja ze sklepu  | Wybierz **Windows Phone 8.1** jako **typ aplikacji**, a następnie wprowadź adres URL Sklepu Microsoft dla aplikacji. |
 | Aplikacje ze sklepu Microsoft Store  | Aplikacja ze sklepu  | Wybierz **Windows** jako **typ aplikacji**, a następnie wprowadź adres URL sklepu Microsoft Store dla aplikacji. |
 | Aplikacje zarządzane ze sklepu Google Play | Aplikacja ze sklepu  | Wybierz **Zarządzany sklep Google Play** jako **typ aplikacji**, wyszukaj aplikację i wybierz aplikację w usłudze Intune. |
@@ -61,10 +61,10 @@ W poniższej tabeli przedstawiono typy specyficzne dla aplikacji i sposób ich d
 | Microsoft Edge w wersji 77 lub nowszej dla systemu Windows 10 | Aplikacja ze sklepu | W obszarze **Microsoft Edge, wersja 77 lub nowsza** wybierz **Windows 10** jako **typ aplikacji**. |
 | Microsoft Edge w wersji 77 lub nowszej dla systemu macOS | Aplikacja ze sklepu | W obszarze **Microsoft Edge, wersja 77 lub nowsza** wybierz **macOS** jako **typ aplikacji**. |
 | Aplikacje biznesowe (LOB) dla systemu Android | Aplikacja LOB | Wybierz aplikację **Biznesowa** jako **typ aplikacji**, wybierz pozycję **Plik pakietu aplikacji**, a następnie wprowadź plik instalacyjny systemu Android z rozszerzeniem **.apk**.  |
-| Aplikacje LOB dla systemu iOS | Aplikacja LOB | Wybierz aplikację **Biznesowa** jako **typ aplikacji**, wybierz pozycję **Plik pakietu aplikacji**, a następnie wprowadź plik instalacyjny systemu iOS z rozszerzeniem **.ipa**.  |
+| Aplikacje LOB dla systemu iOS/iPadOS | Aplikacja LOB | Wybierz aplikację **Biznesowa** jako **typ aplikacji**, wybierz pozycję **Plik pakietu aplikacji**, a następnie wprowadź plik instalacyjny systemu iOS/iPadOS z rozszerzeniem **.ipa**.  |
 | Aplikacje LOB dla systemu Windows Phone | Aplikacja LOB | Wybierz opcję **Biznesowa** jako **typ aplikacji**, wybierz pozycję **Plik pakietu aplikacji**, a następnie wprowadź plik instalacyjny systemu Windows Phone z rozszerzeniem **xap**.  |
 | Aplikacja LOB dla systemu Windows | Aplikacja LOB | Wybierz pozycję **Biznesowa** jako typ aplikacji, wybierz pozycję **Plik pakietu aplikacji**, a następnie wprowadź plik instalacyjny systemu Windows z rozszerzeniem **.msi**, **.appx**, **.appxbundle**, **.msix** lub **.msixbundle**. |
-| Wbudowana aplikacja systemu iOS  | Aplikacja wbudowana | Wybierz pozycję **Aplikacja wbudowana** jako **typ aplikacji**, a następnie wybierz wbudowaną aplikację z listy dostarczonych aplikacji.  |
+| Aplikacja wbudowana dla systemu iOS/iPadOS  | Aplikacja wbudowana | Wybierz pozycję **Aplikacja wbudowana** jako **typ aplikacji**, a następnie wybierz wbudowaną aplikację z listy dostarczonych aplikacji.  |
 | Wbudowana aplikacja systemu Android  | Aplikacja wbudowana | Wybierz pozycję **Aplikacja wbudowana** jako **typ aplikacji**, a następnie wybierz wbudowaną aplikację z listy dostarczonych aplikacji.  |
 | Aplikacje internetowe  | Aplikacja internetowa  | Wybierz **Link internetowy** jako **typ aplikacji**, a następnie wprowadź prawidłowy adres URL wskazujący aplikację internetową.  |
 | Aplikacje systemu Android Enterprise  | Aplikacja ze sklepu  | Wybierz pozycję **Aplikacja systemu Android Enterprise** jako **typ aplikacji**, a następnie wprowadź nazwę i wydawcę aplikacji oraz plik pakietu.  |
@@ -77,7 +77,7 @@ W poniższej tabeli przedstawiono typy specyficzne dla aplikacji i sposób ich d
 Aby dodać aplikację w usłudze Microsoft Intune, wybierz kolejno pozycje **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**. Zostanie wyświetlone okienko **Wybierz typ aplikacji**, w którym możesz wybrać **Typ aplikacji**. 
 
 >[!TIP]
-> Aplikacja biznesowa (LOB) to aplikacja dodawana za pomocą pliku instalacyjnego aplikacji. Aby na przykład zainstalować aplikację LOB systemu iOS, należy dodać tę aplikację, wybierając pozycję **Aplikacja biznesowa** jako **Typ aplikacji** w okienku **Wybierz typ aplikacji**. Następnie należy wybrać plik pakietu aplikacji (z rozszerzeniem ipa). Aplikacje tego typu są zwykle pisane w firmie.
+> Aplikacja biznesowa (LOB) to aplikacja dodawana za pomocą pliku instalacyjnego aplikacji. Aby na przykład zainstalować aplikację LOB systemu iOS/iPadOS, należy dodać tę aplikację, wybierając pozycję **Aplikacja biznesowa** jako **Typ aplikacji** w okienku **Wybierz typ aplikacji**. Następnie należy wybrać plik pakietu aplikacji (z rozszerzeniem ipa). Aplikacje tego typu są zwykle pisane w firmie.
 
 ## <a name="assess-app-requirements"></a>Ocena wymagań dotyczących aplikacji
 Jako administrator IT określasz nie tylko aplikacje, które mają być używane przez Twoją grupę, ale także możliwości wymagane przez każdą grupę i podgrupę. Dla każdej aplikacji określasz wymagane platformy, grupy użytkowników, które potrzebują aplikacji, zasady konfiguracji, które mają zostać zastosowane dla tych grup, oraz zasady ochrony do zastosowania.  
@@ -109,8 +109,8 @@ W [przewodniku planowania, projektowania i implementowania wdrożenia usługi In
 ### <a name="determine-the-type-of-app-for-your-solution"></a>Określanie typu aplikacji dla rozwiązania
 
 Można wybrać następujące typy aplikacji:
-- **Aplikacje ze sklepu**: aplikacje, które zostały przekazane do sklepu Microsoft Store, sklepu dla systemu iOS lub sklepu dla systemu Android. Dostawca aplikacji ze sklepu obsługuje i udostępnia jej aktualizacje. Administrator wybiera aplikację z listy w sklepie i przy użyciu usługi Intune dodaje ją jako aplikację dostępną dla użytkowników.
-- **Aplikacje napisane w firmie (biznesowe)** : aplikacje tworzone w firmie to aplikacje biznesowe (LOB). Funkcje aplikacji tego typu zostały zaprojektowane dla jednej z platform obsługiwanych przez usługę Intune, takich jak Windows, iOS, macOS lub Android. Aktualizacje są tworzone i dostarczane przez organizację w postaci oddzielnych plików. Aby dostarczyć aktualizacje aplikacji do użytkowników, należy je dodać i wdrożyć za pomocą usługi Intune.
+- **Aplikacje ze sklepu**: aplikacje, które zostały przekazane do sklepu Microsoft Store, sklepu dla systemu iOS/iPadOS lub sklepu dla systemu Android. Dostawca aplikacji ze sklepu obsługuje i udostępnia jej aktualizacje. Administrator wybiera aplikację z listy w sklepie i przy użyciu usługi Intune dodaje ją jako aplikację dostępną dla użytkowników.
+- **Aplikacje napisane w firmie (biznesowe)** : aplikacje tworzone w firmie to aplikacje biznesowe (LOB). Funkcje aplikacji tego typu zostały zaprojektowane dla jednej z platform obsługiwanych przez usługę Intune, takich jak Windows, iOS/iPadOS, macOS lub Android. Aktualizacje są tworzone i dostarczane przez organizację w postaci oddzielnych plików. Aby dostarczyć aktualizacje aplikacji do użytkowników, należy je dodać i wdrożyć za pomocą usługi Intune.
 - **Aplikacje w Internecie**: aplikacje internetowe to aplikacje typu klient/serwer. Serwer udostępnia aplikację internetową, która obejmuje interfejs użytkownika, zawartość i funkcje. Ponadto nowoczesne internetowe platformy hostingowe często oferują zabezpieczenia, równoważenie obciążenia i inne korzyści. Aplikacje tego typu są oddzielnie obsługiwane w Internecie. Usługa Intune umożliwia wskazanie tego typu aplikacji. Można także przypisać grupy użytkowników, które będą mogły uzyskiwać dostęp do takiej aplikacji. Należy pamiętać, że system Android nie obsługuje aplikacji internetowych.
 
 Podczas określania, które aplikacje są wymagane w organizacji, należy uwzględnić, w jaki sposób integrują się one z usługami w chmurze, do jakich danych mają dostęp, czy są dostępne dla użytkowników korzystających z własnych urządzeń oraz czy wymagają dostępu do Internetu.
@@ -128,7 +128,7 @@ W aplikacjach zarządzanych przez usługę Intune można również włączyć oc
 
 ### <a name="understanding-licensed-apps"></a>Licencjonowane aplikacje
 Oprócz zapoznania się z aplikacjami internetowymi, aplikacjami ze sklepu i aplikacjami biznesowymi należy także znać miejsca docelowe aplikacji programu zakupów zbiorczych i aplikacji licencjonowanych, takich jak: 
-- **Program Volume Purchase Program for Business (VPP) firmy Apple (iOS)** : sklep z aplikacjami dla systemu iOS umożliwia zakup wielu licencji dla aplikacji, które mają być uruchamiane w firmie. Zakup wielu kopii ułatwia efektywne zarządzanie aplikacjami w firmie. Aby uzyskać więcej informacji, zobacz [Zarządzanie aplikacjami dla systemu iOS nabytymi w ramach zakupów zbiorczych](vpp-apps-ios.md).
+- **Program Volume Purchase Program for Business (VPP) firmy Apple (iOS)** : sklep z aplikacjami dla systemu iOS/iPadOS umożliwia zakup wielu licencji dla aplikacji, które mają być uruchamiane w firmie. Zakup wielu kopii ułatwia efektywne zarządzanie aplikacjami w firmie. Aby uzyskać więcej informacji, zobacz [Zarządzanie aplikacjami dla systemu iOS/iPadOS nabytymi w ramach zakupów zbiorczych](vpp-apps-ios.md).
 - **Profil służbowy systemu Android**: Przypisywanie aplikacji do urządzeń z profilem służbowym systemu Android przebiega inaczej niż przypisywanie aplikacji do standardowych urządzeń z systemem Android. Wszystkie aplikacje, które instalujesz dla profilów służbowych Android, pochodzą z zarządzanego sklepu Google Play. Usługa Intune umożliwia wyszukiwanie wybranych aplikacji i ich zatwierdzanie. Następnie aplikacja zostaje wyświetlona w węźle **Licencjonowane aplikacje** w witrynie Azure Portal i można zarządzać przypisaniem aplikacji w taki sam sposób, jak w przypadku wszystkich innych.
 - **Microsoft Store dla Firm (Windows 10)** : sklep Microsoft Store dla Firm to miejsce, w którym można znaleźć i zakupić aplikacje dla całej organizacji, pojedynczo lub zbiorczo. Łącząc sklep z usługą Microsoft Intune, aplikacjami nabytymi w ramach zakupów zbiorczych można zarządzać bezpośrednio w witrynie Azure Portal. Aby uzyskać więcej informacji, zobacz [Zarządzanie aplikacjami zakupionymi w Sklepie Microsoft dla Firm](windows-store-for-business.md).
 
@@ -139,7 +139,7 @@ Oprócz zapoznania się z aplikacjami internetowymi, aplikacjami ze sklepu i apl
 Przed rozpoczęciem dodawania i przypisywania aplikacji należy wziąć pod uwagę poniższe kwestie:
 
 - W przypadku dodawania i przypisywania aplikacji ze sklepu użytkownicy muszą mieć konto w danym sklepie, aby móc zainstalować daną aplikację.
-- Niektóre przypisywane aplikacje lub elementy mogą być zależne od wbudowanych aplikacji systemu iOS. Na przykład, jeśli przypisujesz książkę ze sklepu iOS, w urządzeniu musi być zainstalowana aplikacja iBooks. W przypadku usunięcia wbudowanej aplikacji iBooks nie ma możliwości użycia usługi Intune do jej przywrócenia.
+- Niektóre przypisywane aplikacje lub elementy mogą być zależne od wbudowanych aplikacji systemu iOS/iPadOS. Na przykład, jeśli przypisujesz książkę ze sklepu iOS/iPadOS, w urządzeniu musi być zainstalowana aplikacja iBooks. W przypadku usunięcia wbudowanej aplikacji iBooks nie ma możliwości użycia usługi Intune do jej przywrócenia.
 
 > [!IMPORTANT]
 > Jeśli po wdrożeniu i zainstalowaniu aplikacji zmienisz jej nazwę za pośrednictwem witryny Azure Portal usługi Intune, nie będzie można już więcej oddziaływać na tę aplikację przy użyciu poleceń.
@@ -153,7 +153,7 @@ Wymagania dotyczące miejsca do magazynowania w chmurze są następujące:
 - Maksymalny rozmiar dowolnego przekazywanego pliku wynosi 8 GB.
 
   > [!NOTE]
-  > Aplikacje biznesowe (LOB) dla systemu Windows, w tym aplikacje Win32, uniwersalne aplikacje AppX dla systemu Windows, uniwersalny pakiet AppX dla systemu Windows, uniwersalne aplikacje MSI X i uniwersalny pakiet MSI X systemu Windows, mają maksymalny rozmiar wynoszący 8 GB na aplikację. Wszystkie inne aplikacje LOB, w tym aplikacje LOB systemu iOS, mają maksymalny limit rozmiaru wynoszący 2 GB na aplikację.
+  > Aplikacje biznesowe (LOB) dla systemu Windows, w tym aplikacje Win32, uniwersalne aplikacje AppX dla systemu Windows, uniwersalny pakiet AppX dla systemu Windows, uniwersalne aplikacje MSI X i uniwersalny pakiet MSI X systemu Windows, mają maksymalny rozmiar wynoszący 8 GB na aplikację. Wszystkie inne aplikacje LOB, w tym aplikacje LOB systemu iOS/iPadOS, mają maksymalny limit rozmiaru wynoszący 2 GB na aplikację.
 
 ## <a name="create-and-edit-categories-for-apps"></a>Tworzenie i edytowanie kategorii aplikacji
 

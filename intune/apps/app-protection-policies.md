@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c7a6914e8174023704cfc593ec08a525ec5889f3
-ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
+ms.openlocfilehash: 7d1a55f758be50c342a5c8851106f0c37e6aec50
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77437906"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513728"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Tworzenie i przypisywanie zasad ochrony aplikacji
 
@@ -74,21 +74,21 @@ Aby utworzyć zasady ochrony aplikacji w systemach iOS/iPadOS i Android, należy
     Ta strona udostępnia ustawienia funkcji ochrony przed utratą danych ograniczające działania, takie jak wycinanie, kopiowanie, wklejanie i zapisywanie pod nową nazwą. Te ustawienia określają, jak użytkownicy używają danych w aplikacjach, do których mają zastosowanie zasady ochrony.
 
     **Ustawienia ochrony danych**:<br>
-    - **Ochrona danych w systemie iOS/iPadOS** — aby uzyskać więcej informacji, zobacz [Ustawienia zasad ochrony aplikacji dla systemu iOS — ochrona danych](~/apps/app-protection-policy-settings-ios.md#data-protection).
+    - **Ochrona danych w systemie iOS/iPadOS** — aby uzyskać więcej informacji, zobacz [Ustawienia zasad ochrony aplikacji dla systemu iOS/iPadOS — ochrona danych](~/apps/app-protection-policy-settings-ios.md#data-protection).
     - **Ochrona danych w systemie Android** — aby uzyskać więcej informacji, zobacz [Ustawienia zasad ochrony aplikacji dla systemu Android — ochrona danych](~/apps/app-protection-policy-settings-android.md#data-protection).
 
 7. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Wymagania dotyczące dostępu**.<br>
     Ta strona zawiera ustawienia pozwalające skonfigurować wymagania dotyczące numeru PIN i poświadczeń, które użytkownicy muszą spełnić, aby uzyskać dostęp do aplikacji w kontekście służbowym. 
  
     **Ustawienia wymagań dotyczących dostępu**:<br>
-    - **Wymagania dotyczące dostępu w systemie iOS/iPadOS** — aby uzyskać więcej informacji, zobacz [Ustawienia zasad ochrony aplikacji dla systemu iOS — wymagania dotyczące dostępu](~/apps/app-protection-policy-settings-ios.md#access-requirements).
+    - **Wymagania dotyczące dostępu w systemie iOS/iPadOS** — aby uzyskać więcej informacji, zobacz [Ustawienia zasad ochrony aplikacji dla systemu iOS/iPadOS — wymagania dotyczące dostępu](~/apps/app-protection-policy-settings-ios.md#access-requirements).
     - **Wymagania dotyczące dostępu w systemie Android** — aby uzyskać więcej informacji, zobacz [Ustawienia zasad ochrony aplikacji dla systemu Android — wymagania dotyczące dostępu](~/apps/app-protection-policy-settings-android.md#access-requirements).
 
 8. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Uruchamianie warunkowe**.<br>
     Ta strona zawiera ustawienia umożliwiające skonfigurowanie wymagań dotyczących zabezpieczeń logowania na potrzeby zasad ochrony aplikacji. Wybierz pozycję w kolumnie **Ustawienie** i w kolumnie **Wartość** wprowadź wartość, która będzie wymagana od użytkowników, aby mogli zalogować się do aplikacji firmowej. Następnie w kolumnie **Akcja** wybierz akcję, którą chcesz wykonać, jeśli użytkownicy nie spełnili Twoich wymagań. W niektórych przypadkach dla pojedynczego ustawienia można skonfigurować wiele akcji.
 
     **Ustawienia uruchamiania warunkowego**:<br>
-    - **Uruchamianie warunkowe w systemie iOS/iPadOS** — aby uzyskać więcej informacji, zobacz [Ustawienia zasad ochrony aplikacji dla systemu iOS — uruchamianie warunkowe](~/apps/app-protection-policy-settings-ios.md#conditional-launch).
+    - **Uruchamianie warunkowe w systemie iOS/iPadOS** — aby uzyskać więcej informacji, zobacz [Ustawienia zasad ochrony aplikacji dla systemu iOS/iPadOS — uruchamianie warunkowe](~/apps/app-protection-policy-settings-ios.md#conditional-launch).
     - **Uruchamianie warunkowe w systemie Android** — aby uzyskać więcej informacji, zobacz [Ustawienia zasad ochrony aplikacji dla systemu Android — uruchamianie warunkowe](~/apps/app-protection-policy-settings-android.md#conditional-launch).
 
 9. Kliknij przycisk **Dalej**, aby wyświetlić stronę **Przypisania**.<br>
@@ -180,7 +180,7 @@ Aby utworzyć te zasady, przejdź do opcji **Aplikacje** > **Zasady ochrony apli
 > [!NOTE]
 > W przypadku urządzeń z systemem Android zostanie wyświetlony monit o zainstalowanie aplikacji Intune — Portal firmy niezależnie od wybranego typu aplikacji. Jeśli na przykład wybierzesz pozycję „Android Enterprise”, nadal będą wyświetlane monity dla użytkowników z niezarządzanymi urządzeniami z systemem Android.
 
-W przypadku systemu iOS wymagane są dodatkowe ustawienia konfiguracji aplikacji przeznaczone dla ustawień zasad ochrony aplikacji na urządzeniach zarejestrowanych w usłudze Intune:
+W przypadku systemu iOS/iPadOS wymagane są dodatkowe ustawienia konfiguracji aplikacji przeznaczone dla ustawień zasad ochrony aplikacji na urządzeniach zarejestrowanych w usłudze Intune:
 
 - Ustawienie **IntuneMAMUPN** musi być skonfigurowane dla wszystkich aplikacji zarządzanych przez oprogramowanie MDM. Aby uzyskać więcej informacji, zobacz [Jak zarządzać przesyłaniem danych między aplikacjami systemu iOS/iPadOS w usłudze Microsoft Intune](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
 - Ustawienie **IntuneMAMDeviceID** musi być skonfigurowane dla wszystkich aplikacji innych firm i aplikacji biznesowych zarządzanych przez rozwiązanie MDM. Ustawienie **IntuneMAMDeviceID** powinno zostać skonfigurowane do tokenu identyfikacyjnego urządzenia. Na przykład `key=IntuneMAMDeviceID, value={{deviceID}}`. Aby uzyskać więcej informacji, zobacz [Dodawanie zasad konfiguracji aplikacji dla zarządzanych urządzeń z systemem iOS/iPadOS](app-configuration-policies-use-ios.md).
@@ -192,7 +192,7 @@ W przypadku systemu iOS wymagane są dodatkowe ustawienia konfiguracji aplikacji
 ## <a name="policy-settings"></a>Ustawienia zasad
 Aby wyświetlić pełną listę ustawień zasad dla systemów iOS/iPadOS i Android, wybierz jeden z następujących linków:
 
-- [Zasady systemu iOS](app-protection-policy-settings-ios.md)
+- [Zasady systemu iOS/iPadOS](app-protection-policy-settings-ios.md)
 - [Zasady systemu Android](app-protection-policy-settings-android.md)
 
 ## <a name="next-steps"></a>Następne kroki

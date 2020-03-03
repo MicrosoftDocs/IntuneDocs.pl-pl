@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/05/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8748639f0407de7b1bb83f646b7decf8c838766
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 6dff94a9bfeb21f09b8a8c629e10ba562d7e642b
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206673"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511433"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Tworzenie profilu urządzenia w usłudze Microsoft Intune
 
@@ -87,7 +87,7 @@ W tym artykule:
 
      Jeśli na przykład wybierzesz platformę **iOS/iPadOS**, opcje typu profilu będą wyglądać podobnie do następującego profilu:
 
-     ![Tworzenie profilu systemu iOS w usłudze Intune](./media/device-profile-create/create-device-profile.png)
+     ![Tworzenie profilu systemu iOS/iPadOS w usłudze Intune](./media/device-profile-create/create-device-profile.png)
 
 4. Po zakończeniu wybierz pozycję **OK** > **Utwórz**, aby zapisać zmiany. Profil zostanie utworzony i wyświetlony na liście.
 
@@ -171,10 +171,10 @@ Podczas tworzenia profilów należy wziąć pod uwagę następujące zalecenia:
   **Nazwa profilu**: Szablon administratora — profil konfiguracji usługi OneDrive dla wszystkich użytkowników systemu Windows 10  
   **Opis profilu**: Profil szablonu administratora usługi OneDrive obejmujący minimalne i podstawowe ustawienia dla wszystkich użytkowników systemu Windows 10. Utworzony przez użytkownika user@contoso.com, aby uniemożliwić użytkownikom udostępnianie danych organizacji na kontach osobistych w usłudze OneDrive.
 
-  **Nazwa profilu**: Profil sieci VPN dla wszystkich użytkowników systemu iOS  
-  **Opis profilu**: Profil sieci VPN, który obejmuje minimalne i podstawowe ustawienia łączenia się z siecią VPN firmy Contoso dla wszystkich użytkowników systemu iOS. Utworzony przez użytkownika user@contoso.com, aby użytkownicy automatycznie uwierzytelniali się w sieci VPN, a nie otrzymywali monity o podanie nazwy użytkownika i hasła.
+  **Nazwa profilu**: Profil sieci VPN dla wszystkich użytkowników systemu iOS/iPadOS  
+  **Opis profilu**: Profil sieci VPN, który obejmuje minimalne i podstawowe ustawienia łączenia się z siecią VPN firmy Contoso dla wszystkich użytkowników systemu iOS/iPadOS. Utworzony przez użytkownika user@contoso.com, aby użytkownicy automatycznie uwierzytelniali się w sieci VPN, a nie otrzymywali monity o podanie nazwy użytkownika i hasła.
 
-- Utwórz profil związany z konkretnym zadaniem, takim jak konfiguracja ustawień przeglądarki Microsoft Edge, włączanie ustawienia antywirusowego programu Microsoft Defender, blokowanie urządzeń z systemem iOS ze zdjętymi zabezpieczeniami itd.
+- Utwórz profil związany z konkretnym zadaniem, takim jak konfiguracja ustawień przeglądarki Microsoft Edge, włączanie ustawienia antywirusowego programu Microsoft Defender, blokowanie urządzeń z systemem iOS/iPadOS ze zdjętymi zabezpieczeniami itd.
 
 - Utwórz profile, które mają zastosowanie do określonych grup, takich jak marketing, sprzedaż, administratorzy IT, lub do określonej lokalizacji bądź szkoły.
 

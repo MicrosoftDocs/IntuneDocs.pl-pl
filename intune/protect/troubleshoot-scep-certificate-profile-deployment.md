@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3dae74321b6825a1b94551addfd7621450fd8ae4
-ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
+ms.openlocfilehash: 26eb6a5cb8e7aba01ce32ab8bec8ad917604a55c
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76916048"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514782"
 ---
 # <a name="troubleshoot-deployment-of-a-scep-certificate-profile-to-devices-in-microsoft-intune"></a>Rozwiązywanie problemów z wdrażaniem profilu certyfikatu protokołu SCEP na urządzeniach w usłudze Microsoft Intune
 
@@ -59,9 +59,9 @@ Przykłady wpisów kluczy:
 - `ModelName=AC_51bad41f-3854-4eb5-a2f2-0f7a94034ee8%2FLogicalName_39907e78_e61b_4730_b9fa_d44a53e4111c%3BHash=-1518303401`
 - `NDESUrls&amp;gt;&amp;lt;NDESUrl&amp;gt;https://<server>-contoso.msappproxy.net/certsrv/mscep/mscep.dll&amp;lt;/NDESUrl&amp;gt;&amp;lt;/NDESUrls`
 
-## <a name="ios-and-ipados"></a>Systemy iOS i iPadOS
+## <a name="iosipados"></a>iOS/iPadOS
 
-### <a name="validate-that-the-ios-or-ipados-device-was-sent-the-policy"></a>Weryfikowanie, czy na urządzenie z systemem iOS lub iPadOS wysłano zasady
+### <a name="validate-that-the-iosipados-device-was-sent-the-policy"></a>Weryfikowanie, czy na urządzenie z systemem iOS/iPadOS wysłano zasady
 
 Aby sprawdzić, czy profil został wysłany na odpowiednie urządzenie, w [Centrum administracyjnym usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Rozwiązywania problemów i pomoc techniczna** > **Rozwiązywanie problemów**.  W oknie *Rozwiązywanie problemów* dla pozycji **Przypisania** ustaw opcję **Profile konfiguracji**, a następnie zweryfikuj następujące konfiguracje:
 
@@ -106,7 +106,7 @@ Dostarczenie zasad dla profilu jest rejestrowane na urządzeniu z systemem Windo
 
 Aby otworzyć dziennik:
 
-1. Na urządzeniu uruchom plik **eventvwr.msc**, aby otworzyć Podgląd zdarzeń systemu Windows.
+1. Na urządzeniu uruchom polecenie **eventvwr.msc**, aby otworzyć Podgląd zdarzeń systemu Windows.
 
 2. Rozwiń pozycję **Dzienniki aplikacji i usług** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostic-Provider** > **Administrator**.
 

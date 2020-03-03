@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/04/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,18 +15,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c86252030a4baf957077cd889386bb8016554f1
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 53985a9af523ecf60efda5c5c651161c132e326c
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206571"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511225"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Konfiguracja ustawień ograniczeń urządzeń w usłudze Microsoft Intune
 
 
 
-Usługa Intune zawiera zasady ograniczania urządzeń, które ułatwiają administratorom kontrolowanie urządzeń z systemami Android, iOS, macOS i Windows. Te ograniczenia umożliwiają kontrolę szerokiego zakresu ustawień i funkcji w celu ochrony zasobów organizacji. Administratorzy mogą na przykład:
+Usługa Intune zawiera zasady ograniczania urządzeń, które ułatwiają administratorom kontrolowanie urządzeń z systemami Android, iOS/iPadOS, macOS i Windows. Te ograniczenia umożliwiają kontrolę szerokiego zakresu ustawień i funkcji w celu ochrony zasobów organizacji. Administratorzy mogą na przykład:
 
 - zezwalać na używanie aparatu urządzenia lub je blokować;
 - kontrolować dostęp do sklepu Google Play, sklepów z aplikacjami, wyświetlania dokumentów i gier;
@@ -44,7 +44,7 @@ W tym artykule przedstawiono sposób tworzenia profilu ograniczeń urządzenia. 
 2. Wybierz pozycję **Urządzenia** > **Profile konfiguracji** > **Utwórz profil**.
 3. Wprowadź następujące właściwości:
 
-    - **Nazwa**: wprowadź opisową nazwę zasad. Nadaj nazwę zasadom, aby można było je później łatwo rozpoznać. Dobra nazwa zasad to na przykład **iOS: Blokowanie aparatu na urządzeniach**.
+    - **Nazwa**: wprowadź opisową nazwę zasad. Nadaj nazwę zasadom, aby można było je później łatwo rozpoznać. Dobra nazwa zasad to na przykład **iOS/iPadOS: Blokowanie aparatu na urządzeniach**.
     - **Opis**: wprowadź opis zasad. To ustawienie jest opcjonalne, ale zalecane.
     - **Platforma**: Wybierz platformę urządzeń. Dostępne opcje:  
 

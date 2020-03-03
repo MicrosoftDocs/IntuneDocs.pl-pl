@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c0ca82b434b83937c7962b2676ce3c2a12c1424
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 1f6992aa93e1ca5a095b1e92a16a07bd0eb1c2f5
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564015"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513643"
 ---
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Jak czyścić z aplikacji usługi Intune tylko dane firmowe
 
@@ -32,7 +32,7 @@ ms.locfileid: "74564015"
 W przypadku utraty lub kradzieży urządzenia lub jeśli pracownik odchodzi z firmy dane aplikacji firmowych powinny zostać usunięte z urządzenia. Jednak możesz nie chcieć usuwać osobistych danych znajdujących się na urządzeniu, zwłaszcza jeśli jest to urządzenie należące do pracownika.
 
 >[!NOTE]
-> Systemy iOS, Android i Windows 10 to jedyne platformy, które są obecnie obsługiwane pod kątem czyszczenia danych firmowych z poziomu aplikacji zarządzanych przez usługę Intune. Aplikacje zarządzane przez usługę Intune to aplikacje obejmujące zestaw SDK zasad ochrony aplikacji Intune i mające konto licencjonowanego użytkownika w Twojej organizacji. Wdrożenie zasad ochrony aplikacji nie jest wymagane do włączenia selektywnego czyszczenia aplikacji.
+> Systemy iOS/iPadOS, Android i Windows 10 to jedyne platformy, które są obecnie obsługiwane pod kątem czyszczenia danych firmowych z poziomu aplikacji zarządzanych przez usługę Intune. Aplikacje zarządzane przez usługę Intune to aplikacje obejmujące zestaw SDK zasad ochrony aplikacji Intune i mające konto licencjonowanego użytkownika w Twojej organizacji. Wdrożenie zasad ochrony aplikacji nie jest wymagane do włączenia selektywnego czyszczenia aplikacji.
 
 Aby selektywnie usunąć dane aplikacji firmowych, utwórz żądanie czyszczenia, wykonując instrukcje opisane w tym temacie. Po wysłaniu żądania czyszczenia dane firmowe zostaną usunięte z aplikacji przy następnym uruchomieniu tej aplikacji na urządzeniu. Oprócz utworzenia żądania czyszczenia możesz skonfigurować selektywne czyszczenie danych organizacji jako nową akcję, gdy nie są spełnione warunki ustawień dostępu zasad ochrony aplikacji. Ta funkcja pomaga automatycznie chronić i usuwać poufne dane organizacji z aplikacji na podstawie wstępnie skonfigurowanych kryteriów.
 

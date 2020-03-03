@@ -1,7 +1,7 @@
 ---
 title: Zarządzanie aplikacjami firmy Apple nabytymi w ramach zakupów zbiorczych
 titleSuffix: Microsoft Intune
-description: Informacje o synchronizowaniu aplikacji nabytych w ramach zakupów zbiorczych w sklepie App Store z aplikacjami dla systemu iOS i macOS z usługą Microsoft Intune oraz o zarządzaniu ich użyciem i jego śledzeniu.
+description: Informacje o synchronizowaniu aplikacji nabytych w ramach zakupów zbiorczych w sklepie App Store z aplikacjami dla systemów iOS/iPadOS i macOS z usługą Microsoft Intune oraz o zarządzaniu ich użyciem i jego śledzeniu.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -18,19 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d965ac35719d809ab922d28f76dec1754e9a4c6b
-ms.sourcegitcommit: 9b29478f815e10c46c8030abe0146d601ce0e28c
+ms.openlocfilehash: 9127ee06bc2125f476c18e9b8e46a127e48d0245
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/06/2020
-ms.locfileid: "77051630"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513405"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Jak w usłudze Microsoft Intune zarządzać aplikacjami dla systemów iOS i macOS, które zostały zakupione w ramach programu zakupów zbiorczych firmy Apple
 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Firma Apple umożliwia zakupienie wielu licencji dla aplikacji, która ma być używana w organizacji na urządzeniach z systemem iOS i macOS przy użyciu programu [Apple Business Manager](https://business.apple.com/) lub [Apple School Manager](https://school.apple.com/). Następnie można zsynchronizować dane zakupu zbiorczego z usługą Intune i śledzić użycie aplikacji nabytych w ramach zakupu zbiorczego. Kupowanie licencji aplikacji pomaga wydajnie zarządzać aplikacjami w firmie i zachować własność i kontrolę nad zakupionymi aplikacjami. 
+Firma Apple umożliwia zakupienie wielu licencji dla aplikacji, która ma być używana w organizacji na urządzeniach z systemami iOS/iPadOS i macOS przy użyciu programu [Apple Business Manager](https://business.apple.com/) lub [Apple School Manager](https://school.apple.com/). Następnie można zsynchronizować dane zakupu zbiorczego z usługą Intune i śledzić użycie aplikacji nabytych w ramach zakupu zbiorczego. Kupowanie licencji aplikacji pomaga wydajnie zarządzać aplikacjami w firmie i zachować własność i kontrolę nad zakupionymi aplikacjami. 
 
 Usługa Microsoft Intune ułatwia zarządzanie aplikacjami kupionymi za pośrednictwem tego programu, ponieważ umożliwia:
 
@@ -38,13 +38,13 @@ Usługa Microsoft Intune ułatwia zarządzanie aplikacjami kupionymi za pośredn
 - Śledzenie liczby licencji dostępnych i użytych w zakupionych aplikacjach.
 - Pomoc przy instalowaniu aplikacji do liczby posiadanych licencji.
 
-Oprócz tego przy użyciu usługi Intune można synchronizować książki kupione w programie Apple Business Manager oraz zarządzać nimi i przypisywać je do urządzeń z systemem iOS. Aby uzyskać więcej informacji, zobacz [Jak zarządzać książkami elektronicznymi dla systemu iOS, które zostały zakupione w ramach programu zakupów zbiorczych](vpp-ebooks-ios.md).
+Oprócz tego przy użyciu usługi Intune można synchronizować książki kupione w programie Apple Business Manager oraz zarządzać nimi i przypisywać je do urządzeń z systemem iOS/iPadOS. Aby uzyskać więcej informacji, zobacz [Jak zarządzać książkami elektronicznymi dla systemu iOS/iPadOS, które zostały zakupione w ramach programu zakupów zbiorczych](vpp-ebooks-ios.md).
 
 ## <a name="what-are-location-tokens"></a>Co to są tokeny lokalizacji?
 Tokeny lokalizacji są również nazywane tokenami programu Volume Purchase Program (VPP). Te tokeny służą do przypisywania licencji zakupionych w ramach programu Apple Business Manager i zarządzania nimi. Menedżerowie zawartości mogą kupować licencje i kojarzyć je z tokenami lokalizacji, do których mają uprawnienia w programie Apple Business Manager. Te tokeny lokalizacji są następnie pobierane z programu Apple Business Manager i przekazywane w usłudze Microsoft Intune. Usługa Microsoft Intune obsługuje przekazywanie wielu tokenów lokalizacji na dzierżawę. Każdy token jest ważny przez jeden rok.
 
 ## <a name="how-are-purchased-apps-licensed"></a>Jak odbywa się licencjonowanie zakupionych aplikacji?
-Zakupione aplikacje można przypisać do grup przy użyciu dwóch typów licencji oferowanych przez firmę Apple dla urządzeń z systemem iOS i macOS.
+Zakupione aplikacje można przypisać do grup przy użyciu dwóch typów licencji oferowanych przez firmę Apple dla urządzeń z systemami iOS/iPadOS i macOS.
 
 |   | Licencjonowanie na urządzenie | Licencjonowanie na użytkownika |
 |-----|------------------|----------------|
@@ -156,9 +156,9 @@ Użytkownik końcowy otrzymuje monity dotyczące instalacji aplikacji programu V
 
 ## <a name="revoking-app-licenses"></a>Odwoływanie licencji aplikacji
 
-Można odwołać wszystkie skojarzone licencje aplikacji systemu iOS lub macOS programu Volume Purchase Program (VPP) na podstawie danego urządzenia, użytkownika lub aplikacji.  Istnieją jednak pewne różnice między platformami iOS i macOS. 
+Można odwołać wszystkie skojarzone licencje aplikacji systemów iOS/iPadOS lub macOS programu Volume Purchase Program (VPP) na podstawie danego urządzenia, użytkownika lub aplikacji.  Istnieją jednak pewne różnice między platformami iOS/iPadOS i macOS. 
 
-|   | iOS | macOS |
+|   | iOS/iPadOS | macOS |
 |-----|------------------|----------------|
 | **Usuwanie przypisania aplikacji** | Gdy usuniesz aplikację przypisaną do użytkownika, usługa Intune odzyska licencję użytkownika lub urządzenia i odinstaluje aplikację z urządzenia. | Gdy usuniesz aplikację przypisaną do użytkownika, usługa Intune odzyska licencję użytkownika lub urządzenia. Aplikacja nie zostanie odinstalowana z urządzenia. |
 | **Odwoływanie licencji aplikacji** | Odwoływanie licencji aplikacji polega na odzyskiwaniu licencji aplikacji od użytkownika lub urządzenia. Musisz zmienić przypisanie na **Odinstaluj**, aby usunąć aplikację z urządzenia. | Odwoływanie licencji aplikacji polega na odzyskiwaniu licencji aplikacji od użytkownika lub urządzenia. Aplikacja systemu macOS z odwołaną licencją pozostaje na urządzeniu i można jej używać, ale nie można jej zaktualizować do czasu ponownego przypisania licencji do użytkownika lub urządzenia. Zgodnie z zasadami firmy Apple takie aplikacje są usuwane po 30-dniowym okresie prolongaty. Firma Apple nie zapewnia jednak sposobu usunięcia takiej aplikacji za pomocą usługi Intune za pośrednictwem akcji odinstalowywania przypisania.
@@ -184,14 +184,14 @@ Token VPP firmy Apple można odnowić, pobierając nowy token z portalu programu
 
 ## <a name="deleting-a-vpp-app"></a>Usuwanie aplikacji VPP
 
-Obecnie nie można usunąć aplikacji programu VPP systemu iOS z usługi Microsoft Intune.
+Obecnie nie można usunąć aplikacji programu VPP systemu iOS/iPadOS z usługi Microsoft Intune.
 
 ## <a name="assigning-custom-role-permissions-for-vpp"></a>Przypisywanie uprawnień roli niestandardowej dla programu VPP
 
 Dostęp do tokenów i aplikacji VPP firmy Apple można kontrolować niezależnie przy użyciu uprawnień przypisanych do niestandardowych ról administratorów w usłudze Intune.
 
 * Aby umożliwić roli niestandardowej usługi Intune zarządzanie tokenami programu VPP firmy Apple, w obszarze **Aplikacje** > **Tokeny VPP firmy Apple** przypisz uprawnienia dla elementu **Aplikacje zarządzane**.
-* Aby umożliwić roli niestandardowej usługi Intune zarządzanie aplikacjami kupionymi przy użyciu tokenów VPP systemu iOS, w obszarze **Aplikacje** > **Wszystkie aplikacje** przypisz uprawnienia dla elementu **Aplikacje mobilne**. 
+* Aby umożliwić roli niestandardowej usługi Intune zarządzanie aplikacjami kupionymi przy użyciu tokenów VPP systemu iOS/iPadOS, w obszarze **Aplikacje** > **Wszystkie aplikacje** przypisz uprawnienia dla elementu **Aplikacje mobilne**. 
 
 ## <a name="additional-information"></a>Dodatkowe informacje
 

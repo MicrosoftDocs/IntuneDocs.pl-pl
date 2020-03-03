@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: cde4d389-1770-4226-85a3-a2f3b3fb92a3
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 563b117583f8b8c1f4da08d5d4e3399d5939bf97
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: fd2f03edeb1e402401911ab2c80fa0d699e2628c
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72504374"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514884"
 ---
 # <a name="pradeo-mobile-threat-defense-connector-with-intune"></a>Łącznik Pradeo Mobile Threat Defense z usługą Intune
 
@@ -30,7 +30,7 @@ Można skonfigurować zasady dostępu warunkowego oparte na ocenie ryzyka Pradeo
 
 ## <a name="how-do-intune-and-pradeo-help-protect-your-company-resources"></a>W jaki sposób usługa Intune i program Pradeo ułatwiają ochronę zasobów firmy?
 
-Aplikacja Pradeo dla systemów Android i iOS przechwytuje dane telemetryczne z systemu plików, stosu sieci oraz urządzenia i aplikacji (wszędzie, gdzie są dostępne), a następnie wysyła je do usługi Pradeo w chmurze w celu dokonania oceny ryzyka dotyczącego urządzenia pod kątem zagrożeń mobilnych.
+Aplikacja Pradeo dla systemów Android i iOS/iPadOS przechwytuje dane telemetryczne z systemu plików, stosu sieci oraz urządzenia i aplikacji (wszędzie, gdzie są dostępne), a następnie wysyła je do usługi Pradeo w chmurze w celu dokonania oceny ryzyka dotyczącego urządzenia pod kątem zagrożeń mobilnych.
 
 Zasady zgodności urządzeń w usłudze Intune zawierają regułę dotyczącą usługi Pradeo Mobile Threat Defense, która jest oparta na ocenie ryzyka Pradeo. Gdy ta reguła jest włączona, usługa Intune ocenia zgodność urządzenia z zasadami, które zostały włączone. Jeśli okaże się, że urządzenie nie jest zgodne, użytkownikom zostanie zablokowany dostęp do takich zasobów firmowych jak usługa Exchange Online lub SharePoint Online. Użytkownicy otrzymają wskazówki z aplikacji Pradeo zainstalowanej na ich urządzeniach dotyczące rozwiązania problemu i odzyskania dostępu do zasobów firmy.
 

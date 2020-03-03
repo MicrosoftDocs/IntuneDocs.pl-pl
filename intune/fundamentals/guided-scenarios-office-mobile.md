@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3399cf006543c0a3554c4c6ec812554462d74231
-ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
+ms.openlocfilehash: 0232855773626693d848f77e561c51d281739215
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75691823"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514612"
 ---
 # <a name="guided-scenario---secure-microsoft-office-mobile-apps"></a>Scenariusz z przewodnikiem — bezpieczne aplikacje mobilne Microsoft Office 
 
-Postępując zgodnie ze wskazówkami zawartymi w tym scenariuszu, możesz włączyć w portalu zarządzania urządzeniami podstawową ochronę aplikacji na urządzeniach z systemem iOS i Android za pomocą usługi Intune.
+Postępując zgodnie ze wskazówkami zawartymi w tym scenariuszu, możesz włączyć w portalu zarządzania urządzeniami podstawową ochronę aplikacji na urządzeniach z systemem iOS/iPadOS i Android za pomocą usługi Intune.
 
 Gdy włączysz ochronę aplikacji, wymuszone zostaną następujące akcje: 
 - Szyfrowanie plików służbowych.
@@ -51,7 +51,7 @@ Zasady ochrony aplikacji pozwalają zapobiegać zapisywaniu plików służbowych
 
 Dostęp warunkowy oparty na aplikacjach oraz zarządzanie aplikacjami klienckimi tworzą dodatkową warstwę zabezpieczeń i gwarantują, że tylko aplikacje klienckie, które obsługują zasady ochrony aplikacji usługi Intune, mogą uzyskać dostęp do usługi Exchange Online i innych usług pakietu Office 365.
 
-Aplikacje poczty wbudowane w systemach iOS i Android można zablokować, zezwalając na dostęp do usługi Exchange Online wyłącznie aplikacji Microsoft Outlook. Ponadto aplikacjom, które nie mają zastosowanych zasad ochrony aplikacji usługi Intune, można zablokować dostęp do usługi SharePoint Online.
+Aplikacje poczty wbudowane w systemach iOS/iPadOS i Android można zablokować, zezwalając na dostęp do usługi Exchange Online wyłącznie aplikacji Microsoft Outlook. Ponadto aplikacjom, które nie mają zastosowanych zasad ochrony aplikacji usługi Intune, można zablokować dostęp do usługi SharePoint Online.
 
 W tym przykładzie administrator zastosował zasady ochrony aplikacji w odniesieniu do aplikacji Outlook, a następuje zastosował regułę dostępu warunkowego, która powoduje dodanie aplikacji Outlook do listy zatwierdzonych aplikacji, które mogą być używane podczas uzyskiwania dostępu do firmowej poczty e-mail.
 
@@ -69,7 +69,7 @@ Wymagane są następujące uprawnienia administratora usługi Intune:
 
 Postępowanie zgodnie ze scenariuszem z przewodnikiem **Ochrona aplikacji w usłudze Intune** zapobiega udostępnianiu danych lub ich wyciekowi poza organizację. 
 
-Przypisani użytkownicy systemów iOS i Android muszą wprowadzić kod PIN przy każdym otwarciu aplikacji pakietu Office. Po pięciu nieudanych próbach wprowadzenia kodu PIN użytkownicy muszą zresetować kod PIN. Ta zmiana nie ma wpływu na użytkowników, którzy już teraz muszą wprowadzać kod PIN na urządzeniach.
+Przypisani użytkownicy systemów iOS/iPadOS i Android muszą wprowadzić kod PIN przy każdym otwarciu aplikacji pakietu Office. Po pięciu nieudanych próbach wprowadzenia kodu PIN użytkownicy muszą zresetować kod PIN. Ta zmiana nie ma wpływu na użytkowników, którzy już teraz muszą wprowadzać kod PIN na urządzeniach.
 
 ### <a name="what-you-will-need-to-continue"></a>Co jest konieczne, aby przejść dalej
 
@@ -86,7 +86,7 @@ W tym kroku należy wprowadzić **prefiks** oraz **opis** nowej zasady ochrony a
 
 ## <a name="step-3---apps"></a>Krok 3. Aplikacje
 
-Aby ułatwić rozpoczęcie pracy, w tym scenariuszu z przewodnikiem zostały już wstępnie wybrane następujące aplikacje mobilne, które mają być chronione na urządzeniach z systemem iOS i Android:
+Aby ułatwić rozpoczęcie pracy, w tym scenariuszu z przewodnikiem zostały już wstępnie wybrane następujące aplikacje mobilne, które mają być chronione na urządzeniach z systemem iOS/iPadOS i Android:
 - Microsoft Excel 
 - Microsoft Word 
 - Microsoft Teams 

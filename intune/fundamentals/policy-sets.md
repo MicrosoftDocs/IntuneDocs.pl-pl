@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d302db46510b664aec5b0a71fd8b19985e29be37
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 48bfe727615f5165fc70ed2e08f98f01203dc895
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206129"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514833"
 ---
 # <a name="use-policy-sets-to-group-collections-of-management-objects"></a>Zestawy zasad umożliwiają grupowanie kolekcji obiektów zarządzania
 
@@ -52,7 +52,7 @@ W zestawie zasad można uwzględnić następujące obiekty zarządzania:
 Kiedy tworzysz zestaw zasad, tworzysz pojedynczą jednostkę przypisania i zarządzasz skojarzeniami między różnymi obiektami. Zestaw zasad będzie więc odwołaniem do obiektów znajdujących się poza ta jednostką. Wszelkie zmiany w uwzględnionych obiektach wpłyną również na zestaw zasad. Po utworzeniu zestawu zasad możesz wielokrotnie wyświetlać i edytować jego obiekty i przydziały. 
 
 > [!NOTE]
-> Zestawy zasad obsługują ustawienia systemów Windows, Android, macOS i iOS oraz mogą być przypisywane między różnymi platformami.
+> Zestawy zasad obsługują ustawienia systemów Windows, Android, macOS i iOS/iPadOS oraz mogą być przypisywane między różnymi platformami.
 
 ## <a name="how-to-create-a-policy-set"></a>Jak utworzyć zestaw zasad
 
@@ -82,15 +82,15 @@ Zestawy zasad wprowadzone w wersji 1910 mają następujące znane problemy.
 - Jeśli podczas tworzenia zestawu zasad administrator z zakresem próbuje utworzyć zestaw zasad bez zaznaczenia jakichkolwiek tagów zakresu, to na stronie **Przeglądanie + tworzenie** sprawdzanie poprawności zakończy się niepowodzeniem, a na pasku stanu zostanie wyświetlony komunikat o błędzie. Administrator musi przełączyć się na inną stronę w procesie, a następnie wrócić do strony **Przeglądanie + tworzenie**. Spowoduje to włączenie opcji **Utwórz**.  
  
 - Następujące typy aplikacji są obecnie obsługiwane przez zestawy zasad:
-    - Aplikacja ze sklepu dla systemu iOS
-    - Aplikacja biznesowa dla systemu iOS
-    - Zarządzana aplikacja biznesowa dla systemu iOS
+    - Aplikacja ze sklepu dla systemu iOS/iPadOS
+    - Aplikacja biznesowa dla systemu iOS/iPadOS
+    - Zarządzana aplikacja biznesowa dla systemu iOS/iPadOS
     - Aplikacja ze sklepu dla systemu Android
     - Aplikacja biznesowa dla systemu Android
     - Zarządzana aplikacja biznesowa dla systemu Android
     - Pakiet Office 365 ProPlus (Windows 10)
     - Link internetowy
-    - Wbudowana aplikacja systemu iOS
+    - Aplikacja wbudowana dla systemu iOS/iPadOS
     - Wbudowana aplikacja systemu Android
 
 - Ustawianie przypisania zestawu zasad **Wszyscy użytkownicy** do **profilu rozwiązania Autopilot** nie jest obsługiwane.
@@ -103,18 +103,18 @@ Zestawy zasad wprowadzone w wersji 1910 mają następujące znane problemy.
 
 - Zestawy zasad są obsługiwane przez następujące typy zasad MAM: 
     - Ochrona aplikacji zarządzanych za pomocą funkcji MAM WIP (Windows) MDM 
-    - Ochrona aplikacji zarządzanych za pomocą funkcji MAM w systemie iOS
+    - Ochrona aplikacji zarządzanych za pomocą funkcji MAM w systemie iOS/iPadOS
     - Ochrona aplikacji zarządzanych za pomocą funkcji MAM w systemie Android
-    - Konfiguracja aplikacji zarządzanych za pomocą funkcji MAM w systemie iOS
+    - Konfiguracja aplikacji zarządzanych za pomocą funkcji MAM w systemie iOS/iPadOS
     - Konfiguracja aplikacji zarządzanych za pomocą funkcji MAM w systemie Android
 
 - Zestawy zasad nie są obsługiwane przez następujące typy zasad MAM: 
     - Ochrona aplikacji zarządzanych za pomocą funkcji MAM WIP (Windows)
 
 - Funkcja MAM przetwarza przypisania zestawu zasad jako bezpośrednie przypisania dla następujących typów zasad:
-    - Ochrona aplikacji zarządzanych za pomocą funkcji MAM w systemie iOS
+    - Ochrona aplikacji zarządzanych za pomocą funkcji MAM w systemie iOS/iPadOS
     - Ochrona aplikacji zarządzanych za pomocą funkcji MAM w systemie Android
-    - Konfiguracja aplikacji zarządzanych za pomocą funkcji MAM w systemie iOS
+    - Konfiguracja aplikacji zarządzanych za pomocą funkcji MAM w systemie iOS/iPadOS
     - Konfiguracja aplikacji zarządzanych za pomocą funkcji MAM w systemie Android
 
     Jeśli zasady zostaną dodane do zestawu zasad wdrożonego w grupie, ta grupa będzie wyświetlana jako bezpośrednio przypisana w obciążeniu, a nie jako „przypisana za pomocą zestawu zasad”. W związku z tym funkcja MAM nie przetwarza usunięć przypisań grup pochodzących z zestawów zasad.

@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9197d4f96eae1041b00b07110ef421a12a4fe338
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 203d243df3e8ae496e7ff78f20222fd361417c3d
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73712984"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514051"
 ---
 # <a name="tutorial-walkthrough-of-microsoft-intune-in-the-azure-portal"></a>Samouczek: przewodnik po usłudze Microsoft Intune w witrynie Azure Portal
 
@@ -67,7 +67,7 @@ Wykonaj poniższe czynności, aby lepiej poznać usługę Intune w witrynie Azur
     
     Usługa Intune umożliwia zarządzanie urządzeniami i aplikacjami pracowników, w tym także sposobem uzyskiwania przez nich dostępu do danych firmy. Aby można było użyć tego rozwiązania do zarządzania urządzeniami mobilnymi (MDM, mobile device management), urządzenia muszą być zarejestrowane w usłudze Intune. Dla zarejestrowanego urządzenia jest wystawiany certyfikat MDM. Ten certyfikat jest używany do komunikacji z usługą Intune. 
 
-    Istnieje kilka metod rejestrowania urządzeń pracowników w usłudze Intune. Każda metoda zależy od własności urządzenia (osobiste lub firmowe), typu urządzenia (system iOS, Windows lub Android) i wymagań dotyczących zarządzania (resetowanie, koligacja i blokowanie). Jednak zanim będzie możliwe włączenie rejestrowania urządzeń, najpierw należy skonfigurować infrastrukturę usługi Intune. W szczególności rejestracja urządzeń wymaga [ustawienia urzędu zarządzania urządzeniami przenośnymi](mdm-authority-set.md). Aby uzyskać więcej informacji na temat przygotowania środowiska usługi Intune (dzierżawy), zobacz [Konfigurowanie usługi Intune](setup-steps.md). Po przygotowaniu dzierżawy usługi Intune możesz rejestrować urządzenia. Aby uzyskać informacje na temat rejestrowania urządzenia, zobacz [Co to jest rejestrowanie urządzenia?](../enrollment/device-enrollment.md)
+    Istnieje kilka metod rejestrowania urządzeń pracowników w usłudze Intune. Każda metoda zależy od własności urządzenia (osobiste lub firmowe), typu urządzenia (system iOS/iPadOS, Windows lub Android) i wymagań dotyczących zarządzania (resetowanie, koligacja i blokowanie). Jednak zanim będzie możliwe włączenie rejestrowania urządzeń, najpierw należy skonfigurować infrastrukturę usługi Intune. W szczególności rejestracja urządzeń wymaga [ustawienia urzędu zarządzania urządzeniami przenośnymi](mdm-authority-set.md). Aby uzyskać więcej informacji na temat przygotowania środowiska usługi Intune (dzierżawy), zobacz [Konfigurowanie usługi Intune](setup-steps.md). Po przygotowaniu dzierżawy usługi Intune możesz rejestrować urządzenia. Aby uzyskać informacje na temat rejestrowania urządzenia, zobacz [Co to jest rejestrowanie urządzenia?](../enrollment/device-enrollment.md)
 
 3. W usłudze [Intune](https://aka.ms/intuneportal) wybierz pozycję **Zgodność urządzenia**, aby wyświetlić szczegóły dotyczące zgodności urządzeń zarządzanych przez usługę Intune. Zostaną wyświetlone szczegóły jak na poniższej ilustracji.
 
@@ -85,7 +85,7 @@ Wykonaj poniższe czynności, aby lepiej poznać usługę Intune w witrynie Azur
 
     ![Zrzut ekranu przedstawiający okienko Konfiguracja urządzenia](./media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-04.png)
     
-    Usługa Intune obejmuje ustawienia i funkcje, które można włączać lub wyłączać na różnych urządzeniach w organizacji. Te ustawienia i funkcje są dodawane do „profili konfiguracji”. Możesz utworzyć profile dla różnych urządzeń i różnych platform, w tym systemów iOS, Android i Windows. Następnie możesz przy użyciu usługi Intune zastosować profil do urządzeń w organizacji.   
+    Usługa Intune obejmuje ustawienia i funkcje, które można włączać lub wyłączać na różnych urządzeniach w organizacji. Te ustawienia i funkcje są dodawane do „profili konfiguracji”. Możesz utworzyć profile dla różnych urządzeń i różnych platform, w tym systemów iOS/iPadOS, Android i Windows. Następnie możesz przy użyciu usługi Intune zastosować profil do urządzeń w organizacji.   
 
     Aby uzyskać więcej informacji o konfiguracji urządzeń, zobacz [Stosowanie ustawień funkcji w urządzeniach przy użyciu profili urządzeń w usłudze Microsoft Intune](../configuration/device-profiles.md).
 

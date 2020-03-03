@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 777267f10edac5bbdbe23ceb3068d4366a8df7b7
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 0d5a51d82551795ed8ad5c740d5fb852ff292e1b
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72509944"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514918"
 ---
 # <a name="develop-a-rollout-plan"></a>Opracowywanie planu wdrażania
 
@@ -58,7 +58,7 @@ Po ukończeniu projektu pilotażowego można rozpocząć pełne wdrożenie produ
 
 - **Położenie geograficzne** <br/>W tej metodzie wdrożenie dotyczy wszystkich użytkowników w określonym położeniu geograficznym — może to być ten sam kontynent, kraj/region lub budynek jednej firmy. Ten typ wdrożenia etapowego umożliwia skoncentrowanie się na określonych lokalizacjach użytkowników. Może to zapewnić bardziej [dokładne](#user-assisted-enrollment) podejście z powodu ograniczenia liczby lokalizacji, w których jednocześnie ma miejsce wdrożenie usługi Intune. Ponieważ istnieje możliwość, że różne działy lub przypadki użycia znajdują się w tej samej lokalizacji, różne przypadki użycia mogą być wdrażane w tym samym czasie.
 
-- **Platforma** <br/>Ten typ wdrożenia polega na wdrożeniu podobnych platform w tym samym czasie. Przykładem może być wdrożenie wszystkich urządzeń z systemem iOS w pierwszym miesiącu, następnie urządzeń z system Android, a na końcu urządzeń z systemem Windows. Ten typ wdrożenia etapowego upraszcza pomoc techniczną, ponieważ musiałaby ona obsługiwać jednorazowo tylko jedną platformę.
+- **Platforma** <br/>Ten typ wdrożenia polega na wdrożeniu podobnych platform w tym samym czasie. Przykładem może być wdrożenie wszystkich urządzeń z systemem iOS/iPadOS w pierwszym miesiącu, następnie urządzeń z system Android, a na końcu urządzeń z systemem Windows. Ten typ wdrożenia etapowego upraszcza pomoc techniczną, ponieważ musiałaby ona obsługiwać jednorazowo tylko jedną platformę.
 
 Oto przykład planu wdrożenia usługi Intune, który obejmuje grupy docelowe i przedziały czasu:
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/30/2020
+ms.date: 02/25/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fa4510b95e1e84d9f94158833dac555daa33c690
-ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
+ms.openlocfilehash: 7251a2db0c36db9d01e51ca8fc62bd4e072d80e6
+ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76912561"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77609229"
 ---
 # <a name="windows-10-app-deployment-by-using-microsoft-intune"></a>Wdrażanie aplikacji systemu Windows 10 przy użyciu usługi Microsoft Intune 
 
@@ -44,18 +44,19 @@ Aplikacje obsługiwane na urządzeniach z systemem Windows 10 to aplikacje bizne
 
 Określone typy aplikacji są obsługiwane w oparciu o wersję systemu Windows 10 uruchamianą przez użytkowników. Poniższa tabela zawiera informacje o typie aplikacji i możliwości jego obsługi w systemie Windows 10.
 
-| Typ aplikacji | Domowy | Pro | Firmowe | Enterprise | Edukacja | S-Mode | HoloLens | SurfaceHub | WCOS | Telefon komórkowy |
+| Typ aplikacji | Domowy | Pro | Firmowe | Enterprise | Edukacja | S-Mode | HoloLens<sup>1 | Surface Hub | WCOS | Telefon komórkowy |
 |----------------|------|-----|----------|------------|-----------|--------|-----------|------------|------|--------|
 |  .MSI | Nie | Tak | Tak | Tak | Tak | Nie | Nie | Nie | Nie | Nie |
 | .IntuneWin | Nie | Tak | Tak | Tak | Tak | 19H2+ | Nie | Nie | Nie | Nie |
-| Office C2R | Nie | Tak | Tak | Tak | Tak | Nie | Nie | Nie | Nie | Nie |
+| Office C2R | Nie | Tak | Tak | Tak | Tak | RS4+ | Nie | Nie | Nie | Nie |
 | LOB: APPX/MSIX | Tak | Tak | Tak | Tak | Tak | Tak | Tak | Tak | Tak | Tak |
 | MSFB w trybie offline | Tak | Tak | Tak | Tak | Tak | Tak | Tak | Tak | Tak | Tak |
-| MSFB w trybie online | Tak | Tak | Tak | Tak | Tak | Tak | RS4+ | Tak | Tak | Tak |
-| Aplikacje internetowe | Tak | Tak | Tak | Tak | Tak | Tak | Tak<sup>1 | Tak<sup>1 | Tak | Tak |
+| MSFB w trybie online | Tak | Tak | Tak | Tak | Tak | Tak | RS4+ | Nie | Tak | Tak |
+| Aplikacje internetowe | Tak | Tak | Tak | Tak | Tak | Tak | Tak<sup>2 | Tak<sup>2 | Tak | Tak<sup>2 |
 | Link do sklepu | Tak | Tak | Tak | Tak | Tak | Tak | Tak | Tak | Tak | Tak |
 
-<sup>1</sup> Uruchamianie tylko z poziomu portalu firmy.
+<sup>1</sup> Aby odblokować zarządzanie aplikacjami, uaktualnij urządzenie HoloLens do systemu [Holographic for Business](../fundamentals/windows-holographic-for-business.md).<br />
+<sup>2</sup> Uruchamiaj tylko z poziomu Portalu firmy.
 
 > [!NOTE]
 > Wszystkie typy aplikacji systemu Windows wymagają rejestracji.

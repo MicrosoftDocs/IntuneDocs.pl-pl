@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04a18befe73ce63f5619c3efc6def4189db9c8df
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: efdb1912fdbb2f28c6859fae4407116173daa99d
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74188479"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576291"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Dodawanie i przypisywanie aplikacji usługi Mobile Threat Defense (MTD) za pomocą usługi Intune
 
@@ -203,7 +203,7 @@ Zapoznaj się z instrukcjami dotyczącymi [używania zasad konfiguracji aplikacj
 
 ### <a name="pradeo-app-configuration-policy"></a>Zasady konfiguracji aplikacji Pradeo
 
-Firma Pradeo nie obsługuje zasad konfiguracji aplikacji w systemie iOS.  Zamiast tego, aby uzyskać skonfigurowaną aplikację, należy współpracować z firmą Pradeo w celu wdrożenia niestandardowych plików IPA lub APK, które są wstępnie skonfigurowane przy użyciu żądanych ustawień.
+Firma Pradeo nie obsługuje zasad konfiguracji aplikacji w systemie iOS/iPadOS.  Zamiast tego, aby uzyskać skonfigurowaną aplikację, należy współpracować z firmą Pradeo w celu wdrożenia niestandardowych plików IPA lub APK, które są wstępnie skonfigurowane przy użyciu żądanych ustawień.
 
 ### <a name="better-mobile-app-configuration-policy"></a>Zasady konfiguracji aplikacji Better Mobile
 

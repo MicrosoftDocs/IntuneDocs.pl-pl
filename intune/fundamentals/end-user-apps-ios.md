@@ -1,6 +1,6 @@
 ---
-title: Jak użytkownicy systemu iOS uzyskują aplikacje
-description: Metody udostępniania aplikacji dla systemu iOS użytkownikom końcowym
+title: Jak użytkownicy systemu iOS/iPadOS uzyskują aplikacje
+description: Metody udostępniania aplikacji dla systemu iOS/iPadOS użytkownikom końcowym
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -17,14 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 06cc977ce8b0b892e1020436f89ada4a40bac3f2
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 344c2e3f3ed53852aa6b749c9ebf6d451dd313ff
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73413993"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514391"
 ---
-# <a name="how-your-ios-users-get-their-apps"></a>Jak użytkownicy systemu iOS uzyskują aplikacje
+# <a name="how-your-iosipados-users-get-their-apps"></a>Jak użytkownicy systemu iOS/iPadOS uzyskują aplikacje
 
 Dzięki tym informacjom można zrozumieć, jak i gdzie użytkownicy końcowi uzyskują aplikacje, które rozprowadzasz przez usługę Microsoft Intune.
 
@@ -34,9 +34,9 @@ Dzięki tym informacjom można zrozumieć, jak i gdzie użytkownicy końcowi uzy
 
 **Aplikacje zarządzane** — Aplikacje, które mogą być zarządzane za pomocą zasad i które zostały „opakowane” przez usługę Intune lub utworzone przy użyciu zestawu Intune App Software Development Kit (SDK). Tymi aplikacjami można zarządzać za pomocą usługi Intune i można do nich stosować zasady ochrony aplikacji.
 
-**Aplikacje niezarządzane** — aplikacje, które użytkownicy mogą pobrać ze sklepu App Store systemu iOS, niezintegrowane z zestawem Intune App SDK. Usługa Intune nie kontroluje dystrybucji, selektywnego czyszczenia tych aplikacji ani zarządzania nimi.  
+**Aplikacje niezarządzane** — aplikacje, które użytkownicy mogą pobrać ze sklepu App Store systemu iOS/iPadOS, niezintegrowane z zestawem Intune App SDK. Usługa Intune nie kontroluje dystrybucji, selektywnego czyszczenia tych aplikacji ani zarządzania nimi.  
 
-Ograniczenia firmy Apple uniemożliwiają wyświetlanie w aplikacji Portal firmy aplikacji biznesowych oraz zarządzanych ze sklepu App Store. Aby obejść ten problem, kafelki w aplikacji Portal firmy działającej w systemie iOS umożliwiają przechodzenie do różnych widoków w obrębie jednej lokalizacji — witryny sieci Web Portal firmy — dla wszystkich aplikacji.
+Ograniczenia firmy Apple uniemożliwiają wyświetlanie w aplikacji Portal firmy aplikacji biznesowych oraz zarządzanych ze sklepu App Store. Aby obejść ten problem, kafelki w aplikacji Portal firmy działającej w systemie iOS/iPadOS umożliwiają przechodzenie do różnych widoków w obrębie jednej lokalizacji — witryny sieci Web Portal firmy — dla wszystkich aplikacji.
 
 Zarejestrowani użytkownicy uzyskują aplikacje, naciskając następujące kafelki na ekranie Aplikacje w aplikacji Portal firmy:
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 02/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cbf82c0bef88e4a6d0e790f4b0ecdf73d2731d5d
-ms.sourcegitcommit: 9bb1bcd9f1bdd53b470073da956bbd8b0935dfbc
+ms.openlocfilehash: 3d8ee4ec6a5bcb29a51b68cff7b840823b678636
+ms.sourcegitcommit: 5881979c45fc973cba382413eaa193d369b8dcf6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556406"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77569289"
 ---
 # <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>Monitorowanie profilów i punktu odniesienia zabezpieczeń w usłudze Microsoft Intune
 
@@ -106,6 +106,18 @@ Monitorowanie profilu umożliwia uzyskiwanie szczegółowych informacji na temat
 
    ![Wyświetlanie różnych opcji monitorowania dla profilu punktów odniesienia zabezpieczeń](./media/security-baselines-monitor/monitor-status-options.png)
 
+## <a name="view-endpoint-security-configurations-per-device"></a>Wyświetlanie konfiguracji zabezpieczeń punktu końcowego dla poszczególnych urządzeń
+
+Wyświetl szczegółowe informacje o konfiguracjach zabezpieczeń, które mają zastosowanie do poszczególnych urządzeń, co może ułatwić wyizolowanie nieprawidłowo skonfigurowanych ustawień.
+
+1. Zaloguj się do [Centrum administracyjnego usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Przejdź do pozycji **Urządzenia** > **Wszystkie urządzenia** i wybierz urządzenie, które chcesz wyświetlić.
+
+3. W kategorii *Monitor* wybierz pozycję **Konfiguracja zabezpieczeń punktu końcowego**, aby wyświetlić listę konfiguracji zabezpieczeń stosowanych do tego urządzenia.
+
+4. Możesz wybrać konfigurację zabezpieczeń punktu końcowego, aby przejść do szczegółów i wyświetlić dodatkowe informacje o ocenie konfiguracji zabezpieczeń na urządzeniu.
+
 ## <a name="troubleshoot-using-per-setting-status"></a>Rozwiązywanie problemów przy użyciu stanu poszczególnych ustawień
 
 Wdrożono punkt odniesienia zabezpieczeń, ale stan wdrożenia wskazuje błąd. Poniższe kroki oferują wskazówki na temat rozwiązywania problemu powodującego błąd.
@@ -135,6 +147,7 @@ Na urządzeniach z systemem Windows 10 istnieje wbudowany raport zawierający in
 Artykuł [Diagnose MDM failures in Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) (Diagnozowanie błędów oprogramowania MDM w systemie Windows 10) zawiera dalsze informacje na tego wbudowanego raportu.
 
 > [!TIP]
+>
 > - Niektóre ustawienia na liście zawierają również identyfikator GUID. Możesz wyszukać ten identyfikator GUID w rejestrze lokalnym (regedit) dla każdej ustawionej wartości.
 > - Dzienniki Podglądu zdarzeń mogą zawierać informacje o błędach problematycznego ustawienia (**Podgląd zdarzeń** > **Dzienniki aplikacji i usług** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostics-Provider** > **Administrator**).
 

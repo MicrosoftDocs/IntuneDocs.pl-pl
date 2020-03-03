@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9e8bc347dc6336f665fcabfb4e716fef4818515
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 91442d262adb1d85217cb73f2f415766b89267af
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75207211"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77510524"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Korzystanie z pochodnych poświadczeń w usłudze Microsoft Intune
 
@@ -37,7 +37,7 @@ Pochodne poświadczenia są implementacją wytycznych National Institute of Stan
 
 - Administrator usługi Intune określa **Pochodne poświadczenie** jako *metodę uwierzytelniania* dla następujących obiektów:
 
-  - Typowe typy profilów, takie jak Wi-Fi, VPN i poczta E-mail, w tym aplikacja natywna poczty systemu iOS
+  - Typowe typy profilów, takie jak Wi-Fi, VPN i poczta e-mail, w tym aplikacja natywna poczty systemu iOS/iPadOS
 
   - Uwierzytelnianie aplikacji
 
@@ -76,7 +76,7 @@ Aby uzyskać ważne informacje dotyczące korzystania z różnych wystawców, za
 
 Zaplanuj wdrożenie aplikacji Intune — Portal firmy na urządzeniach, które będą rejestrowane na potrzeby pochodnego poświadczenia. Użytkownicy urządzeń używają aplikacji Portal firmy do uruchamiania procesu rejestracji poświadczeń.
 
-Jeśli masz urządzenie z systemem iOS, zobacz [Dodawanie aplikacji ze sklepu z aplikacjami dla systemu iOS do usługi Microsoft Intune](../apps/store-apps-ios.md).
+Jeśli masz urządzenie z systemem iOS/iPadOS, zobacz [Dodawanie aplikacji ze sklepu z aplikacjami dla systemu iOS/iPadOS do usługi Microsoft Intune](../apps/store-apps-ios.md).
 
 ## <a name="plan-for-derived-credentials"></a>Planowanie na potrzeby pochodnych poświadczeń
 
@@ -198,7 +198,7 @@ Oprócz wdrożenia aplikacji za pomocą usługi Intune należy skonfigurować w 
 **Wykonaj następujące zadania**:
   
 1. Pobierz [aplikację DISA Purebred](https://cyber.mil/pki-pke/purebred/).
-2. Wdróż aplikację DISA Purebred w usłudze Intune.  Zobacz [Dodawanie do usługi Microsoft Intune aplikacji biznesowych dla systemu iOS](../apps/lob-apps-ios.md).
+2. Wdróż aplikację DISA Purebred w usłudze Intune.  Zobacz [Dodawanie do usługi Microsoft Intune aplikacji biznesowych dla systemu iOS/iPadOS](../apps/lob-apps-ios.md).
 3. [Utwórz sieć VPN dla aplikacji](../configuration/vpn-settings-configure.md) DISA Purebred.
 
 ## <a name="use-derived-credentials-for-authentication-and-smime-signing-and-encryption"></a>Korzystanie z pochodnych poświadczeń na potrzeby uwierzytelniania i podpisywania oraz szyfrowania za pomocą protokołu S/MIME
@@ -224,7 +224,7 @@ Pochodnych poświadczeń można używać do uwierzytelniania opartego na certyfi
 2. Wybierz pozycję **Urządzenia** > **Profile konfiguracji** > **Utwórz profil**.
 3. Podaj następujące ustawienia:
 
-    - **Nazwa**: Wprowadź opisową nazwę profilu. Nadaj nazwę profilom, aby można było je później łatwo rozpoznać. Na przykład dobrą nazwą profilu jest **Pochodne poświadczenie dla profilu urządzeń z systemem iOS**.
+    - **Nazwa**: Wprowadź opisową nazwę profilu. Nadaj nazwę profilom, aby można było je później łatwo rozpoznać. Na przykład dobrą nazwą profilu jest **Pochodne poświadczenie dla profilu urządzeń z systemem iOS/iPadOS**.
     - **Opis**: Wprowadź opis ułatwiający identyfikację ustawienia oraz zawierający inne ważne szczegóły.
     - **Platforma**: wybierz pozycję **iOS/iPadOS**.
     - **Typ profilu**: wybierz pozycję **Pochodne poświadczenia**.

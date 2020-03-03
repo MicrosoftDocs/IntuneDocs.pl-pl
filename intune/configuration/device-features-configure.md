@@ -1,11 +1,11 @@
 ---
-title: Tworzenie profilu urządzenia z systemem iOS lub macOS w usłudze Microsoft Intune — Azure | Microsoft Docs
-description: Dodaj lub utwórz profil urządzenia z systemem iOS lub macOS, a następnie skonfiguruj ustawienia funkcji AirPrint, układu ekranu głównego, powiadomień aplikacji, urządzenia udostępnionego, logowania jednokrotnego i filtru zawartości internetowej w usłudze Microsoft Intune.
+title: Tworzenie profilu urządzenia z systemem iOS/iPadOS lub macOS w usłudze Microsoft Intune — Azure | Microsoft Docs
+description: Dodaj lub utwórz profil urządzenia z systemem iOS, iPadOS lub macOS, a następnie skonfiguruj ustawienia funkcji AirPrint, układu ekranu głównego, powiadomień aplikacji, urządzenia udostępnionego, logowania jednokrotnego i filtru zawartości internetowej w usłudze Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/12/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1fb628d68f50ce1862b3cce51f9fd08804d042a6
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 52c31cc7d3949b42251d3e45075864762cda6930
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206724"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513150"
 ---
-# <a name="add-ios-or-macos-device-feature-settings-in-intune"></a>Dodawanie ustawień funkcji urządzenia z systemem iOS lub macOS w usłudze Intune
+# <a name="add-ios-ipados-or-macos-device-feature-settings-in-intune"></a>Dodawanie ustawień funkcji urządzenia z systemem iOS, iPadOS lub macOS w usłudze Intune
 
-Usługa Intune oferuje wiele funkcji i ustawień, które pomagają administratorom kontrolować urządzenia z systemami iOS i macOS. Administratorzy mogą na przykład:
+Usługa Intune oferuje wiele funkcji i ustawień, które pomagają administratorom kontrolować urządzenia z systemami iOS, iPadOS i macOS. Administratorzy mogą na przykład:
 
 - Zezwalać użytkownikom na dostęp do drukarek AirPrint w sieci
 - Dodawać aplikacje i foldery do ekranu głównego, w tym dodawać nowe strony
@@ -34,15 +34,15 @@ Usługa Intune oferuje wiele funkcji i ustawień, które pomagają administrator
 - Oferować użytkownikom bezpieczne środowisko logowania jednokrotnego w celu udostępniania poświadczeń między aplikacjami
 - Filtrować witryny internetowe, które używają języka dla dorosłych, oraz zezwalać na określone witryny internetowe lub je blokować
 
-„Profile konfiguracji” są używane w usłudze Intune do tworzenia i dostosowywania tych ustawień na potrzeby organizacji. Po dodaniu tych funkcji w profilu można następnie wypychać lub wdrażać profil na urządzeniach z systemami iOS i macOS w organizacji.
+„Profile konfiguracji” są używane w usłudze Intune do tworzenia i dostosowywania tych ustawień na potrzeby organizacji. Po dodaniu tych funkcji w profilu można następnie wypychać lub wdrażać profil na urządzeniach z systemami iOS/iPadOS i macOS w organizacji.
 
-Ten artykuł opisuje różne możliwe do skonfigurowania funkcje, a także pokazuje, jak utworzyć profil konfiguracji urządzenia. Zawiera on również listę wszystkich dostępnych ustawień dla urządzeń z systemem [iOS](ios-device-features-settings.md) i [macOS](macos-device-features-settings.md).
+Ten artykuł opisuje różne możliwe do skonfigurowania funkcje, a także pokazuje, jak utworzyć profil konfiguracji urządzenia. Zawiera on również listę wszystkich dostępnych ustawień dla urządzeń z systemem [iOS/iPadOS](ios-device-features-settings.md) i [macOS](macos-device-features-settings.md).
 
 ## <a name="airprint"></a>Funkcja AirPrint
 
 AirPrint to funkcja firmy Apple, która umożliwia drukowanie plików z urządzeń za pośrednictwem sieci bezprzewodowej. W usłudze Intune możesz dodać do urządzeń informacje o funkcji AirPrint.
 
-Aby uzyskać listę ustawień, jakie można skonfigurować w usłudze Intune, zobacz [AirPrint w systemie iOS](ios-device-features-settings.md#airprint) oraz [AirPrint w systemie macOS](macos-device-features-settings.md#airprint).
+Aby uzyskać listę ustawień, jakie można skonfigurować w usłudze Intune, zobacz [AirPrint w systemie iOS/iPadOS](ios-device-features-settings.md#airprint) oraz [AirPrint w systemie macOS](macos-device-features-settings.md#airprint).
 
 Więcej informacji na temat funkcji AirPrint można znaleźć w sekcji [Informacje o funkcji AirPrint](https://support.apple.com/HT201311) w witrynie internetowej firmy Apple.
 
@@ -54,9 +54,9 @@ Dotyczy:
 
 ## <a name="app-notifications"></a>Powiadomienia aplikacji
 
-Wybierz sposób odbierania powiadomień przez aplikacje na urządzeniach z systemem iOS i urządzeniach iPad. W usłudze Intune możesz na przykład wysyłać powiadomienia aplikacji tak, aby były wyświetlane w centrum powiadomień, na ekranie blokady lub odtwarzały dźwięk.
+Wybierz sposób odbierania powiadomień przez aplikacje na urządzeniach z systemem iOS i iPadOS. W usłudze Intune możesz na przykład wysyłać powiadomienia aplikacji tak, aby były wyświetlane w centrum powiadomień, na ekranie blokady lub odtwarzały dźwięk.
 
-Aby zapoznać się z listą ustawień, jakie można skonfigurować w usłudze Intune, zobacz [Powiadomienia aplikacji w systemie iOS](ios-device-features-settings.md#app-notifications).
+Aby zapoznać się z listą ustawień, jakie można skonfigurować w usłudze Intune, zobacz [Powiadomienia aplikacji w systemie iOS/iPadOS](ios-device-features-settings.md#app-notifications).
 
 Więcej informacji na temat tej funkcji można znaleźć w sekcji [Powiadomienia](https://developer.apple.com/notifications/) w witrynie internetowej firmy Apple.
 
@@ -89,7 +89,7 @@ Te ustawienia umożliwiają konfigurowanie układu aplikacji i folderów w obsza
 - Użyć ustawień **dokowania**, aby dodać do ekranu aplikacje lub foldery. W panelu dokowania urządzenia możesz na przykład wyświetlić przeglądarkę Safari i aplikację poczty e-mail.
 - Dodaj **strony**, które mają być wyświetlane na ekranie głównym, oraz aplikacje, które mają być wyświetlane na każdej ze stron. Możesz na przykład dodać stronę **Contoso** i umieścić na niej aplikację Ustawienia.
 
-Aby poznać listę ustawień, jakie można skonfigurować w usłudze Intune, zobacz [Układ ekranu głównego w systemie iOS](ios-device-features-settings.md#home-screen-layout).
+Aby poznać listę ustawień, jakie można skonfigurować w usłudze Intune, zobacz [Układ ekranu głównego w systemie iOS/iPadOS](ios-device-features-settings.md#home-screen-layout).
 
 Dotyczy:
 
@@ -100,7 +100,7 @@ Dotyczy:
 
 Te ustawienia pozwalają wyświetlać niestandardowe komunikaty lub tekst w oknie logowania i na ekranie blokady. Możesz na przykład wprowadzić komunikat „W razie zgubienia zwróć do” oraz wyświetlić informacje dotyczące tagu zasobu.
 
-Aby poznać listę ustawień, jakie można skonfigurować w usłudze Intune, zobacz [Ustawienia komunikatów na ekranie blokady w systemie iOS](ios-device-features-settings.md#lock-screen-message).
+Aby poznać listę ustawień, jakie można skonfigurować w usłudze Intune, zobacz [Ustawienia komunikatów na ekranie blokady w systemie iOS/iPadOS](ios-device-features-settings.md#lock-screen-message).
 
 Więcej informacji na temat komunikatu na ekranie blokady można znaleźć na stronie [Komunikat na ekranie blokady](https://developer.apple.com/documentation/devicemanagement/lockscreenmessage) w witrynie internetowej firmy Apple.
 
@@ -136,11 +136,11 @@ Większość aplikacji biznesowych (LOB, Line of Business) wymaga pewnego poziom
 Aby korzystać z logowania jednokrotnego, upewnij się, że masz:
 
 - Aplikację poszukującą magazynu poświadczeń użytkownika w logowaniu jednokrotnym na urządzeniu.
-- Usługa Intune musi być skonfigurowana na potrzeby logowania jednokrotnego dla urządzeń z systemem iOS.
+- Usługa Intune musi być skonfigurowana na potrzeby logowania jednokrotnego dla urządzeń z systemem iOS/iPadOS.
 
 ![Okienko Logowanie jednokrotne](./media/device-features-configure/sso-blade.png)
 
-Aby poznać listę ustawień, jakie można skonfigurować w usłudze Intune, zobacz [Rejestracja jednokrotna w systemie iOS](ios-device-features-settings.md#single-sign-on).
+Aby poznać listę ustawień, jakie można skonfigurować w usłudze Intune, zobacz [Rejestracja jednokrotna w systemie iOS/iPadOS](ios-device-features-settings.md#single-sign-on).
 
 Dotyczy:
 
@@ -156,7 +156,7 @@ Użyj tych ustawień w usłudze Intune, aby skonfigurować rozszerzenie aplikacj
 - Rozszerzenia przeznaczone do przekierowywania są zaprojektowane pod kątem nowoczesnych protokołów uwierzytelniania, takich jak OAuth i SAML2.
 - Rozszerzenia przeznaczone do obsługi poświadczeń są zaprojektowane na potrzeby przepływów uwierzytelniania typu wyzwanie-odpowiedź. Istnieje możliwość wyboru między dostarczonym przez firmę Apple rozszerzeniem poświadczeń dostosowanym do protokołu Kerberos a ogólnym rozszerzeniem poświadczeń.
 
-Aby poznać listę ustawień, jakie można skonfigurować w usłudze Intune, zobacz [SSO app extension](ios-device-features-settings.md#single-sign-on-app-extension) (Rozszerzenie aplikacji do jednokrotnego logowania w systemie iOS) oraz [macOS SSO app extension](macos-device-features-settings.md#single-sign-on-app-extension) (Rozszerzenie aplikacji do jednokrotnego logowania w systemie macOS).
+Aby poznać listę ustawień, jakie można skonfigurować w usłudze Intune, zobacz [Rozszerzenie aplikacji do jednokrotnego logowania w systemie iOS/iPadOS](ios-device-features-settings.md#single-sign-on-app-extension) oraz [Rozszerzenie aplikacji do jednokrotnego logowania w systemie macOS](macos-device-features-settings.md#single-sign-on-app-extension).
 
 Aby uzyskać więcej informacji na temat tworzenia rozszerzenia aplikacji do jednokrotnego logowania, obejrzyj materiał [Extensible Enterprise SSO](https://developer.apple.com/videos/play/tech-talks/301) w witrynie internetowej Apple. Aby zapoznać się z opisem funkcji dostarczanym przez firmę Apple, odwiedź stronę [Ustawienia pakietu danych Single Sign-On Extensions (rozszerzenia pojedynczego logowania)](https://support.apple.com/guide/mdm/single-sign-on-extensions-mdmfd9cdf845/web). 
 
@@ -171,7 +171,7 @@ Aby uzyskać więcej informacji na temat tworzenia rozszerzenia aplikacji do jed
 >
 > - Z perspektywy programowania za pomocą **rozszerzenia aplikacji do logowania jednokrotnego** można używać uwierzytelniania logowania jednokrotnego dowolnego typu — z przekierowaniem lub stosującego poświadczenia. W przypadku **jednokrotnego logowania** można korzystać wyłącznie z uwierzytelniania jednokrotnego logowania za pomocą protokołu Kerberos.
 >
-> - **Rozszerzenie aplikacji do logowania jednokrotnego** dla protokołu Kerberos zostało opracowane przez firmę Apple i wbudowane w platformy iOS 13.0+ i macOS 10.15+. Wbudowane rozszerzenie protokołu Kerberos może służyć do logowania użytkowników w aplikacjach natywnych i witrynach internetowych, które obsługują uwierzytelnianie Kerberos. **Logowanie jednokrotne** nie jest implementacją protokołu Kerberos autorstwa firmy Apple.
+> - **Rozszerzenie aplikacji do logowania jednokrotnego** dla protokołu Kerberos zostało opracowane przez firmę Apple i wbudowane w platformy iOS/iPadOS 13.0+ i macOS 10.15+. Wbudowane rozszerzenie protokołu Kerberos może służyć do logowania użytkowników w aplikacjach natywnych i witrynach internetowych, które obsługują uwierzytelnianie Kerberos. **Logowanie jednokrotne** nie jest implementacją protokołu Kerberos autorstwa firmy Apple.
 >
 > - Wbudowane **rozszerzenie aplikacji do logowania jednokrotnego** protokołu Kerberos obsługuje wyzwania protokołu Kerberos dla stron i aplikacji internetowych podobnie jak **logowanie jednokrotne**. Jednak wbudowane rozszerzenie protokołu Kerberos obsługuje zmiany haseł i zachowuje się lepiej w sieciach przedsiębiorstwa. W przypadku wybierania między **rozszerzeniem aplikacji do logowania jednokrotnego** i **logowaniem jednokrotnym** protokołu Kerberos zalecamy użycie rozszerzenia z powodu jego wyższej wydajności i większych możliwości.
 
@@ -183,9 +183,9 @@ Dotyczy:
 
 ## <a name="wallpaper"></a>Tapeta
 
-Dodaj niestandardowy obrazu PNG, JPG lub JPEG na urządzeniach nadzorowanych z systemem iOS. Na przykład możesz za pomocą usługi Intune dodać logo firmy do ekranu blokady na urządzeniach.
+Dodaj niestandardowy obrazu PNG, JPG lub JPEG na urządzeniach nadzorowanych z systemem iOS/iPadOS. Na przykład możesz za pomocą usługi Intune dodać logo firmy do ekranu blokady na urządzeniach.
 
-Aby poznać listę ustawień, jakie można skonfigurować w usłudze Intune, zobacz [Tapeta w systemie iOS](ios-device-features-settings.md#wallpaper).
+Aby poznać listę ustawień, jakie można skonfigurować w usłudze Intune, zobacz [Tapeta w systemie iOS/iPadOS](ios-device-features-settings.md#wallpaper).
 
 Dotyczy:
 
@@ -196,7 +196,7 @@ Dotyczy:
 
 Te ustawienia mogą korzystać z wbudowanego algorytmu autofiltrowania firmy Apple do oceniania stron sieci Web i blokowania zawartości dla dorosłych oraz wulgarnego języka. Można również utworzyć listę łączy sieci Web z ograniczeniami oraz bez ograniczeń. Na przykład można zezwolić wyłącznie na otwieranie witryn sieci Web `contoso`.
 
-Aby poznać listę ustawień, jakie można skonfigurować w usłudze Intune, zobacz [Filtr zawartości sieci Web dla systemu iOS](ios-device-features-settings.md#web-content-filter).
+Aby poznać listę ustawień, jakie można skonfigurować w usłudze Intune, zobacz [Filtr zawartości sieci Web dla systemu iOS/iPadOS](ios-device-features-settings.md#web-content-filter).
 
 Dotyczy:
 
@@ -229,4 +229,4 @@ Profil zostanie utworzony i wyświetlony na liście profilów. Pamiętaj, aby [p
 
 Po utworzeniu profil jest gotowy do przypisania. W dalszej części [przypiszesz profil](device-profile-assign.md) i będziesz [monitorować jego stan](device-profile-monitor.md).
 
-Wyświetl wszystkie ustawienia funkcji urządzenia dla urządzeń z systemem [iOS](ios-device-features-settings.md) i [macOS](macos-device-features-settings.md).
+Wyświetl wszystkie ustawienia funkcji urządzenia dla urządzeń z systemem [iOS/iPadOS](ios-device-features-settings.md) i [macOS](macos-device-features-settings.md).

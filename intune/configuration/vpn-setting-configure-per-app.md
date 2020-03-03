@@ -1,11 +1,11 @@
 ---
-title: Konfigurowanie sieci VPN dla aplikacji na urządzeniach z systemem iOS w usłudze Microsoft Intune na platformie Azure | Microsoft Docs
-description: W tym artykule opisano wymagania wstępne, tworzenie grupy dla użytkowników wirtualnej sieci prywatnej (sieci VPN), dodawanie profilu certyfikatu SCEP, konfigurowanie profilu sieci VPN dla aplikacji oraz przypisywanie aplikacji do profilu sieci VPN w usłudze Microsoft Intune na urządzeniach z systemem iOS. Zawiera on także instrukcje weryfikowania połączenia z siecią VPN na urządzeniu.
+title: Konfigurowanie sieci VPN dla aplikacji na urządzeniach z systemem iOS/iPadOS w usłudze Microsoft Intune na platformie Azure | Microsoft Docs
+description: W tym artykule opisano wymagania wstępne, tworzenie grupy dla użytkowników wirtualnej sieci prywatnej (sieci VPN), dodawanie profilu certyfikatu SCEP, konfigurowanie profilu sieci VPN dla aplikacji oraz przypisywanie aplikacji do profilu sieci VPN w usłudze Microsoft Intune na urządzeniach z systemem iOS/iPadOS. Zawiera on także instrukcje weryfikowania połączenia z siecią VPN na urządzeniu.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/07/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,20 +17,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1c9f6dbfb8d6ee4b766abef04595ffca7df4c9dc
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: fd53172a1086f48dc1646e1b8a63de8bec37b934
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206384"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77512606"
 ---
-# <a name="set-up-per-app-virtual-private-network-vpn-for-ios-devices-in-intune"></a>Konfigurowanie wirtualnej sieci prywatnej dla aplikacji na urządzeniach z systemem iOS w usłudze Intune
+# <a name="set-up-per-app-virtual-private-network-vpn-for-iosipados-devices-in-intune"></a>Konfigurowanie wirtualnej sieci prywatnej dla aplikacji na urządzeniach z systemem iOS/iPadOS w usłudze Intune
 
 Usługa Microsoft Intune umożliwia utworzenie sieci wirtualnej przypisanej do aplikacji i korzystanie z niej. Ta funkcja jest nazywana „siecią VPN dla aplikacji”. Należy wybrać aplikacje zarządzane, które mogą używać sieci VPN na urządzeniach zarządzanych przez usługę Intune. Podczas korzystania z sieci VPN dla aplikacji użytkownicy końcowi automatycznie łączą się przez sieć VPN i uzyskują dostęp do zasobów organizacji, takich jak dokumenty.
 
 Ta funkcja ma zastosowanie do:
 
-- System iOS 9 lub nowszy
+- System iOS 9 i nowsze
+- System iPadOS 13.0 i nowsze
 
 Przejrzyj dokumentację dostawcy sieci VPN, aby sprawdzić, czy używana sieć VPN obsługuje sieć VPN dla aplikacji.
 
@@ -39,7 +40,7 @@ W tym artykule przedstawiono sposób tworzenia profilu sieci VPN dla aplikacji, 
 Niektóre sieci VPN umożliwiają uwierzytelnianie za pomocą nazwy użytkownika i hasła w przypadku sieci VPN dla aplikacji. To znaczy użytkownicy muszą podać nazwę użytkownika i hasło, aby nawiązać połączenie z siecią VPN.
 
 > [!IMPORTANT]
-> Sieć VPN dla aplikacji nie jest obsługiwana w przypadku profilów sieci VPN protokołu IKEv2 dla systemu iOS.
+> Sieć VPN dla aplikacji nie jest obsługiwana w przypadku profilów sieci VPN protokołu IKEv2 dla systemu iOS/iPadOS.
 
 ## <a name="per-app-vpn-with-zscaler"></a>Sieć VPN dla aplikacji z rozwiązaniem Zscaler
 
@@ -67,23 +68,23 @@ Utwórz lub wybierz istniejącą grupę w usłudze Azure Active Directory (Azure
 
 ## <a name="create-a-trusted-certificate-profile"></a>Tworzenie profilu zaufanego certyfikatu
 
-Zaimportuj certyfikat główny serwera sieci VPN wystawiony przez urząd certyfikacji do profilu utworzonego w usłudze Intune. Profil zaufanego certyfikatu powoduje, że urządzenia z systemem iOS automatycznie zaufają urzędowi certyfikacji przedstawianemu przez serwer sieci VPN.
+Zaimportuj certyfikat główny serwera sieci VPN wystawiony przez urząd certyfikacji do profilu utworzonego w usłudze Intune. Profil zaufanego certyfikatu powoduje, że urządzenia z systemem iOS/iPadOS automatycznie zaufają urzędowi certyfikacji przedstawianemu przez serwer sieci VPN.
 
 1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Wybierz pozycję **Urządzenia** > **Profile konfiguracji** > **Utwórz profil**.
 3. Wprowadź następujące właściwości:
-    - **Nazwa**: Wprowadź opisową nazwę profilu. Nadaj nazwę profilom, aby można było je później łatwo rozpoznać. Na przykład dobra nazwa profilu to **Profil sieci VPN z zaufanym certyfikatem sieci iOS dla całej firmy**.
+    - **Nazwa**: Wprowadź opisową nazwę profilu. Nadaj nazwę profilom, aby można było je później łatwo rozpoznać. Na przykład dobra nazwa profilu to **Profil sieci VPN z zaufanym certyfikatem sieci iOS/iPadOS dla całej firmy**.
     - **Opis**: Wprowadź opis profilu. To ustawienie jest opcjonalne, ale zalecane.
-    - **Platforma**: Wybierz pozycję **iOS**.
+    - **Platforma**: wybierz pozycję **iOS/iPadOS**.
     - **Typ profilu**: Wybierz pozycję **Zaufany certyfikat**.
 4. Wybierz ikonę folderu i przejdź do certyfikatu sieci VPN (pliku cer), który został wyeksportowany z konsoli administracyjnej sieci VPN. 
 5. Wybierz pozycje **OK** > **Utwórz**.
 
-    ![Tworzenie profilu zaufanego certyfikatu dla urządzeń z systemem iOS w usłudze Microsoft Intune](./media/vpn-setting-configure-per-app/vpn-per-app-create-trusted-cert.png)
+    ![Tworzenie profilu zaufanego certyfikatu dla urządzeń z systemem iOS/iPadOS w usłudze Microsoft Intune](./media/vpn-setting-configure-per-app/vpn-per-app-create-trusted-cert.png)
 
 ## <a name="create-a-scep-or-pkcs-certificate-profile"></a>Tworzenie profilu certyfikatu SCEP lub PKCS
 
-Profil zaufanego certyfikatu głównego umożliwia urządzeniu automatyczne zaufanie serwerowi sieci VPN. Certyfikat SCEP lub PKCS dostarcza poświadczenia od klienta sieci VPN systemu iOS do serwera sieci VPN. Dzięki certyfikatowi urządzenie może przeprowadzić dyskretne uwierzytelnianie bez monitowania o nazwę użytkownika i hasło. 
+Profil zaufanego certyfikatu głównego umożliwia urządzeniu automatyczne zaufanie serwerowi sieci VPN. Certyfikat SCEP lub PKCS dostarcza poświadczenia od klienta sieci VPN systemu iOS/iPadOS do serwera sieci VPN. Dzięki certyfikatowi urządzenie może przeprowadzić dyskretne uwierzytelnianie bez monitowania o nazwę użytkownika i hasło. 
 
 Aby skonfigurować i przypisać certyfikat uwierzytelniania klienta, zobacz jeden z następujących artykułów:
 
@@ -96,28 +97,28 @@ Pamiętaj o skonfigurowaniu certyfikatu dla uwierzytelniania klienta. Możesz us
 
 ## <a name="create-a-per-app-vpn-profile"></a>Tworzenie profilu sieci VPN dla aplikacji
 
-Profil sieci VPN obejmuje certyfikat SCEP lub PKCS zawierający poświadczenia klienta, informacje o połączeniu z siecią VPN i flagę sieci VPN dla aplikacji, aby umożliwić używanie funkcji sieci VPN dla aplikacji przez aplikację systemu iOS.
+Profil sieci VPN obejmuje certyfikat SCEP lub PKCS zawierający poświadczenia klienta, informacje o połączeniu z siecią VPN i flagę sieci VPN dla aplikacji, aby umożliwić używanie funkcji sieci VPN dla aplikacji przez aplikację systemu iOS/iPadOS.
 
 1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)wybierz pozycję **Urządzenia** > **Profile konfiguracji** > **Utwórz profil**.
 2. Wprowadź następujące właściwości:
-    - **Nazwa**: Wprowadź opisową nazwę profilu niestandardowego. Nadaj nazwę profilom, aby można było je później łatwo rozpoznać. Na przykład dobra nazwa profilu to **Profil sieci VPN dla aplikacji systemu iOS w całej firmie**.
+    - **Nazwa**: Wprowadź opisową nazwę profilu niestandardowego. Nadaj nazwę profilom, aby można było je później łatwo rozpoznać. Na przykład dobra nazwa profilu to **Profil sieci VPN dla aplikacji systemu iOS/iPadOS w całej firmie**.
     - **Opis**: Wprowadź opis profilu. To ustawienie jest opcjonalne, ale zalecane.
-    - **Platforma**: Wybierz pozycję **iOS**.
+    - **Platforma**: wybierz pozycję **iOS/iPadOS**.
     - **Typ profilu**: Wybierz pozycję **Sieć VPN**.
 3. W polu **Typ połączenia** wybierz aplikację klienta sieci VPN.
-4. Wybierz element **Podstawowa sieć VPN**. Artykuł [Ustawienia sieci VPN dla systemu iOS](vpn-settings-ios.md) zawiera listę wszystkich ustawień wraz z opisami. Jeśli korzystasz z sieci VPN dla aplikacji, upewnij się, że skonfigurowano następujące ustawienia w podany sposób:
+4. Wybierz element **Podstawowa sieć VPN**. Artykuł [Ustawienia sieci VPN dla systemu iOS/iPadOS](vpn-settings-ios.md) zawiera listę wszystkich ustawień wraz z opisami. Jeśli korzystasz z sieci VPN dla aplikacji, upewnij się, że skonfigurowano następujące ustawienia w podany sposób:
 
     - **Metoda uwierzytelniania**: wybierz opcję **Certyfikaty**. 
-    - **Certyfikat uwierzytelniania**: wybierz istniejący certyfikat SCEP lub PKCS > **OK**.      
+    - **Certyfikat uwierzytelniania**: wybierz istniejący certyfikat SCEP lub PKCS > **OK**.
     - **Podziel tunelowanie**: wybierz opcję **Wyłącz**, aby wymusić kierowanie całego ruchu przez tunel sieci VPN, gdy połączenie sieci VPN jest aktywne. 
 
       ![W profilu sieci VPN dla aplikacji podaj połączenie, adres IP lub nazwę FQDN, metodę uwierzytelniania i tunelowanie podzielone w usłudze Microsoft Intune](./media/vpn-setting-configure-per-app/vpn-per-app-create-vpn-profile.png)
 
-    Aby uzyskać informacje na temat innych ustawień, zobacz [Ustawienia sieci VPN dla systemu iOS](vpn-settings-ios.md).
+    Aby uzyskać informacje na temat innych ustawień, zobacz [Ustawienia sieci VPN dla systemu iOS/iPadOS](vpn-settings-ios.md).
 
 5. Wybierz pozycje **Automatyczne połączenie VPN** > **Typ automatycznego połączenia VPN** > **Sieć VPN dla aplikacji**
 
-    ![W usłudze Intune ustaw dla pozycji Automatyczne połączenie VPN wartość Sieć VPN dla aplikacji na urządzeniach z systemem iOS](./media/vpn-setting-configure-per-app/vpn-per-app-automatic.png)
+    ![W usłudze Intune ustaw dla pozycji Automatyczne połączenie VPN wartość Sieć VPN dla aplikacji na urządzeniach z systemem iOS/iPadOS](./media/vpn-setting-configure-per-app/vpn-per-app-automatic.png)
 
 6. Wybierz pozycje **OK** > **OK** > **Utwórz**.
 
@@ -148,7 +149,7 @@ Skojarzenie między aplikacją i profilem będzie nadal istnieć do momentu, gdy
 - Użytkownik zażądał instalacji aplikacji z aplikacji Portal firmy, w wyniku czego aplikacja i profil są instalowane na urządzeniu.
 - Konfiguracja sieci VPN dla aplikacji została usunięta lub zmieniona z poziomu przypisania aplikacji.
 
-## <a name="verify-the-connection-on-the-ios-device"></a>Sprawdzanie połączenia na urządzeniu z systemem iOS
+## <a name="verify-the-connection-on-the-iosipados-device"></a>Sprawdzanie połączenia na urządzeniu z systemem iOS/iPadOS
 
 Za pomocą skonfigurowanej i skojarzonej z aplikacją sieci VPN dla aplikacji sprawdź, czy połączenie działa z urządzenia.
 
@@ -167,5 +168,5 @@ Sprawdź środowisko bezobsługowe, nawiązując połączenie bez konieczności 
 
 ## <a name="next-steps"></a>Następne kroki
 
-- Aby przejrzeć ustawienia systemu iOS, zobacz temat [Ustawienia sieci VPN dla urządzeń z systemem iOS w usłudze Microsoft Intune](vpn-settings-ios.md).
+- Aby przejrzeć ustawienia systemu iOS/iPadOS, zobacz temat [Ustawienia sieci VPN dla urządzeń z systemem iOS/iPadOS w usłudze Microsoft Intune](vpn-settings-ios.md).
 - Aby dowiedzieć się więcej na temat ustawień sieci VPN i usługi Intune, zobacz temat [Konfigurowanie ustawień sieci VPN w usłudze Microsoft Intune](vpn-settings-configure.md).

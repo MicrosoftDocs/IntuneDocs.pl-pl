@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 899e2d2dc8458d0909f01e9dfcc1056874ef0fa7
-ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
+ms.openlocfilehash: 317f39b28909196d03ef5e7c68c7980f5fdfea3f
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77437974"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77512215"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Monitorowanie zasad ochrony aplikacji
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -48,7 +48,7 @@ Okres przechowywania danych ochrony aplikacji to 90 dni. Wszystkie wystąpienia
    ![Zrzut ekranu przedstawiający kafelek podsumowania w okienku zarządzania aplikacjami mobilnymi usługi Intune](./media/app-protection-policies-monitor/app-protection-user-status-summary.png)
 
 - **Przypisani użytkownicy**: Całkowita liczba przypisanych użytkowników w firmie korzystających z aplikacji, którzy są powiązani z zasadami w kontekście służbowym oraz są chronieni i licencjonowani, jak również przypisanych użytkowników, którzy są niechronieni i nielicencjonowani.
-- **Oflagowani użytkownicy:** Liczba użytkowników, którzy napotykają problemy ze swoimi urządzeniami. Urządzenia ze zdjętymi zabezpieczeniami systemu (iOS) i z dostępem do konta root (Android) są zgłaszane w sekcji **Oflagowani użytkownicy**. Ponadto w tym miejscu są zgłaszani użytkownicy urządzeń oflagowanych podczas sprawdzania zaświadczania urządzenia rozwiązania Google SafetyNet (jeśli zostało włączone przez administratora IT). 
+- **Oflagowani użytkownicy:** Liczba użytkowników, którzy napotykają problemy ze swoimi urządzeniami. Urządzenia ze zdjętymi zabezpieczeniami systemu (iOS/iPadOS) i z dostępem do konta root (Android) są zgłaszane w sekcji **Oflagowani użytkownicy**. Ponadto w tym miejscu są zgłaszani użytkownicy urządzeń oflagowanych podczas sprawdzania zaświadczania urządzenia rozwiązania Google SafetyNet (jeśli zostało włączone przez administratora IT). 
 - **Użytkownicy z potencjalnie szkodliwymi aplikacjami**: Liczba użytkowników, którzy mogą mieć na urządzeniu z systemem Android szkodliwą aplikację wykrytą przez funkcję Google Play Protect. 
 - **Stan użytkownika dla systemu iOS** i **Stan użytkownika dla systemu Android**: Liczba użytkowników, którzy korzystali z aplikacji i mają przypisane zasady w kontekście służbowym dla powiązanej platformy. Zawiera liczbę użytkowników zarządzanych przez zasady, jak również liczbę użytkowników, którzy korzystają z aplikacji, ale nie są objęci żadnymi zasadami w kontekście służbowym. Można rozważyć dodanie tych użytkowników do zasad.
 - **Najlepsze chronione aplikacje systemu iOS/iPadOS** i **Najlepsze chronione aplikacje systemu Android**: ta informacja to liczba chronionych i niechronionych aplikacji według platformy określana w oparciu o najczęściej używane aplikacje systemu iOS/iPadOS i Android.
@@ -61,7 +61,7 @@ Okres przechowywania danych ochrony aplikacji to 90 dni. Wszystkie wystąpienia
 Aby uzyskać szczegółowy widok podsumowania, możesz wybrać kafelek **Oflagowani użytkownicy** i kafelek **Użytkownicy z potencjalnie szkodliwymi aplikacjami**.
 
 ### <a name="flagged-users"></a>Oflagowani użytkownicy
-W widoku szczegółowym wyświetlane są: komunikat o błędzie, aplikacja używana w momencie wystąpienia błędu, platforma systemu operacyjnego urządzenia, której dotyczy błąd, oraz sygnatura czasowa. Ten błąd zazwyczaj występuje w przypadku urządzeń ze zdjętymi zabezpieczeniami systemu (iOS) lub z odblokowanym dostępem (Android). W tym miejscu są także zgłaszani użytkownicy urządzeń oflagowanych podczas sprawdzania uruchomienia warunkowego „zaświadczania urządzenia rozwiązania SafetyNet” z przyczyną zgłoszoną przez firmę Google. Aby użytkownik został usunięty z raportu, musi zmienić się stan samego urządzenia. Ma to miejsce po następnym sprawdzeniu odblokowania dostępu (lub sprawdzeniu zdjęcia zabezpieczeń systemu/SafetyNet) ze zgłoszonym pozytywnym wynikiem. Jeśli stan urządzenia zostanie rzeczywiście skorygowany, odświeżenie raportu Oflagowani użytkownicy nastąpi po ponownym załadowaniu okienka.
+W widoku szczegółowym wyświetlane są: komunikat o błędzie, aplikacja używana w momencie wystąpienia błędu, platforma systemu operacyjnego urządzenia, której dotyczy błąd, oraz sygnatura czasowa. Ten błąd zazwyczaj występuje w przypadku urządzeń ze zdjętymi zabezpieczeniami systemu (iOS/iPadOS) lub z odblokowanym dostępem (Android). W tym miejscu są także zgłaszani użytkownicy urządzeń oflagowanych podczas sprawdzania uruchomienia warunkowego „zaświadczania urządzenia rozwiązania SafetyNet” z przyczyną zgłoszoną przez firmę Google. Aby użytkownik został usunięty z raportu, musi zmienić się stan samego urządzenia. Ma to miejsce po następnym sprawdzeniu odblokowania dostępu (lub sprawdzeniu zdjęcia zabezpieczeń systemu/SafetyNet) ze zgłoszonym pozytywnym wynikiem. Jeśli stan urządzenia zostanie rzeczywiście skorygowany, odświeżenie raportu Oflagowani użytkownicy nastąpi po ponownym załadowaniu okienka.
 
 ### <a name="users-with-potentially-harmful-apps"></a>Użytkownicy z potencjalnie szkodliwymi aplikacjami
 W tym miejscu są zgłaszani użytkownicy urządzeń oflagowanych podczas sprawdzania uruchomienia warunkowego **wymagania skanowania zagrożeń w aplikacjach** z kategorią zagrożenia zgłoszoną przez firmę Google. Jeśli w tym raporcie znajdują się aplikacje, które są wdrażane za pośrednictwem usługi Intune, skontaktuj się z deweloperem aplikacji lub usuń aplikację z przypisywania do użytkowników. Widok szczegółowy pokazuje następujące dane:
@@ -170,7 +170,7 @@ Wykonaj następujące kroki, aby wygenerować plik CSV ochrony aplikacji lub pli
     ![Zrzut ekranu przedstawiający okno dialogowe z potwierdzeniem opcji Zapisz raport](./media/app-protection-policies-monitor/app-protection-report-csv-1.png)
    
 > [!NOTE]
-> Usługa Intune udostępnia dodatkowe pola raportów dotyczących urządzeń, takie jak na przykład identyfikator rejestracji aplikacji, producent systemu Android, model i wersja poprawki zabezpieczeń, a także model urządzenia z systemem iOS/iPadOS. W usłudze Intune te pola są dostępne po wybraniu pozycji **Aplikacje** > **Stan ochrony aplikacji** > **Raport ochrony aplikacji: iOS/iPadOS, Android**. Ponadto te parametry są pomocne w konfigurowaniu listy **dozwolonych** dla producenta urządzenia (Android), listy **dozwolonych** dla modelu urządzenia (Android i iOS) oraz ustawienia **minimalnej wersji poprawki zabezpieczeń systemu Android**.   
+> Usługa Intune udostępnia dodatkowe pola raportów dotyczących urządzeń, takie jak na przykład identyfikator rejestracji aplikacji, producent systemu Android, model i wersja poprawki zabezpieczeń, a także model urządzenia z systemem iOS/iPadOS. W usłudze Intune te pola są dostępne po wybraniu pozycji **Aplikacje** > **Stan ochrony aplikacji** > **Raport ochrony aplikacji: iOS/iPadOS, Android**. Ponadto te parametry są pomocne w konfigurowaniu listy **dozwolonych** dla producenta urządzenia (Android), listy **dozwolonych** dla modelu urządzenia (Android i iOS/iPadOS) oraz ustawienia **minimalnej wersji poprawki zabezpieczeń systemu Android**.   
  
 ## <a name="see-also"></a>Zobacz także
 - [Zarządzanie przesyłaniem danych między aplikacjami systemu iOS/iPadOS](data-transfer-between-apps-manage-ios.md)

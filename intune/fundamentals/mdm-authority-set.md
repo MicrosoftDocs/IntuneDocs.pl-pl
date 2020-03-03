@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43c5d0731736df193bf615391ad486a60dff6cdd
-ms.sourcegitcommit: 2506cdbfccefd42587a76f14ee50c3849dad1708
+ms.openlocfilehash: b611b2307b7b4f7e789e7db9d070e4b6b3f1350c
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75885901"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514493"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Ustawianie źródła zarządzania urządzeniem przenośnym
 
@@ -69,7 +69,7 @@ W każdym przypadku zgoda jest ściśle powiązana z uruchamianiem usługi zarz�
 Po zmianie na nowy urząd MDM prawdopodobnie wystąpi czas przejścia (maksymalnie osiem godzin), zanim urządzenie zostanie zaewidencjonowane i zsynchronizowane z usługą. Wymagane jest skonfigurowanie ustawień w nowym urzędzie MDM, aby upewnić się, że zarejestrowane urządzenia będą nadal zarządzane i chronione po zmianie. 
 - Urządzenia muszą połączyć się z usługą po zmianie, aby ustawienia z nowego urzędu MDM (autonomicznej usługi Intune) zastąpiły istniejące ustawienia na urządzeniu.
 - Po zmianie urzędu MDM niektóre podstawowe ustawienia (takie jak profile) z poprzedniego urzędu MDM pozostaną na urządzeniu przez maksymalnie siedem dni lub dopóki urządzenie nie połączy się z usługą po raz pierwszy. Zaleca się jak najszybsze skonfigurowanie aplikacji i ustawień (zasad, profilów, aplikacji itd.) w nowym urzędzie MDM i wdrożenie ustawienia w grupach użytkowników, które zawierają użytkowników posiadających istniejące zarejestrowane urządzenia. Kiedy tylko urządzenie połączy się z usługą po zmianie urzędu MDM, odbierze nowe ustawienia z nowego urzędu MDM, co zapobiegnie przerwom w zarządzaniu i ochronie.
-- Urządzenia, które nie mają skojarzonych użytkowników (zazwyczaj jeśli masz urządzenia z systemem iOS w programie Device Enrollment Program lub scenariusze rejestracji zbiorczej) nie są migrowane do nowego urzędu MDM. W przypadku tych urządzeń musisz skontaktować się z działem pomocy technicznej, aby przenieść je do nowego urzędu MDM.
+- Urządzenia, które nie mają skojarzonych użytkowników (zazwyczaj jeśli masz urządzenia z systemem iOS/iPadOS w programie Device Enrollment Program lub scenariusze rejestracji zbiorczej) nie są migrowane do nowego urzędu MDM. W przypadku tych urządzeń musisz skontaktować się z działem pomocy technicznej, aby przenieść je do nowego urzędu MDM.
 
 ## <a name="change-mdm-authority-to-office-365"></a>Zmiana urzędu MDM na usługę Office 365
 
@@ -93,7 +93,7 @@ Urzędu MDM nie można zmienić z powrotem na Nieznany. Usługa korzysta z urzę
 - Nawet w przypadku urządzeń, które są włączone i w trybie online podczas zmiany urzędu MDM (lub wkrótce po niej), nastąpi opóźnienie do ośmiu godzin (w zależności od czasu następnego zaplanowanego regularnego ewidencjonowania), zanim urządzenia zostaną zarejestrowane w usłudze z nowym urzędem MDM.    
 
   > [!IMPORTANT]    
-  > W czasie między zmianą urzędu MDM a przekazaniem odnowionego certyfikatu usługi APNs do nowego urzędu rejestracje nowych urządzeń i meldowanie urządzeń z systemem iOS zakończy się niepowodzeniem. Dlatego ważne jest przejrzenie i przekazanie certyfikatu usługi APNs do nowego urzędu jak najszybciej po zmianie urzędu MDM.
+  > W czasie między zmianą urzędu MDM a przekazaniem odnowionego certyfikatu usługi APNs do nowego urzędu rejestracje nowych urządzeń i meldowanie urządzeń z systemem iOS/iPadOS zakończy się niepowodzeniem. Dlatego ważne jest przejrzenie i przekazanie certyfikatu usługi APNs do nowego urzędu jak najszybciej po zmianie urzędu MDM.
 
 - Użytkownicy mogą szybko zmienić nowy urząd MDM, ręcznie uruchamiając ewidencjonowanie z poziomu urządzenia do usługi. Mogą oni łatwo wprowadzić tę zmianę, używając aplikacji Portal firmy i inicjując sprawdzenie zgodności urządzenia.
 - Aby sprawdzić, czy wszystko działa prawidłowo po zaewidencjonowaniu urządzeń i zsynchronizowaniu ich z usługą po zmianie urzędu MDM, wyszukaj urządzenia w nowym urzędzie MDM.

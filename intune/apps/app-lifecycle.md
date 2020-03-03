@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: apps; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 569906cea8467d568d302f4e44b26c3394213b62
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: 670e5033ddf2a04cd5bd87040d85eef764dca519
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77414964"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77512300"
 ---
 # <a name="overview-of-the-app-lifecycle-in-microsoft-intune"></a>Przegląd cyklu życia aplikacji w usłudze Microsoft Intune
 
@@ -42,7 +42,7 @@ Po dodaniu aplikacji do usługi Intune możesz tę aplikację [przypisać do uż
 
 W ramach cyklu życia aplikacji regularnie wydawane są nowe wersje aplikacji. Usługa Intune udostępnia narzędzia do łatwego [aktualizowania wdrożonych aplikacji](apps-add.md) do nowszej wersji. Ponadto dla niektórych aplikacji można skonfigurować dodatkowe funkcje, na przykład:
 
-- [Zasady konfiguracji aplikacji systemu iOS](app-configuration-policies-use-ios.md) pozwalają określać ustawienia dla zgodnych aplikacji systemu iOS/iPadOS, które będą używane po uruchomieniu aplikacji. Na przykład aplikacja może wymagać określonych ustawień oznaczania marką lub nazwy serwera, z którym musi nawiązać połączenie.
+- [Zasady konfiguracji aplikacji systemu iOS/iPadOS](app-configuration-policies-use-ios.md) pozwalają określać ustawienia dla zgodnych aplikacji systemu iOS/iPadOS, które będą używane po uruchomieniu aplikacji. Na przykład aplikacja może wymagać określonych ustawień oznaczania marką lub nazwy serwera, z którym musi nawiązać połączenie.
 - [Zasady przeglądarki zarządzanej](app-configuration-managed-browser.md) pomagają w konfigurowaniu ustawień dla przeglądarki [Microsoft Edge](~/apps/apps-supported-intune-apps.md#microsoft-apps), która zastępuje domyślną przeglądarkę urządzenia i umożliwia ograniczenie witryn internetowych, które użytkownicy mogą odwiedzać.
 
 ## <a name="protect"></a>Ochrona

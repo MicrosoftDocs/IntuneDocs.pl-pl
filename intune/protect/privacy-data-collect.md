@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e93e69b5cce2c54ae07410309b33870dd828f563
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: bd204271b9ae3e57e15a101647444913749f4109
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72509085"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514238"
 ---
 # <a name="data-collection-in-intune"></a>Zbieranie danych w usłudze Intune
 
@@ -60,11 +60,11 @@ Dane identyfikujące zebrane przez usługę Intune obejmują między innymi:
   - Identyfikator ICCID
   - Numer telefonu
 - Informacje dziennika inspekcji, w tym dane o następujących działaniach
-  - Zarządzanie programem Endpoint Protection usługi
+  - Zarządzanie
   - Utwórz
   - Aktualizowanie (edytowanie)
   - Usuwanie
-  - Przypisywanie
+  - Przypisanie
   - Zadania zdalne
 - Informacje dotyczące pomocy technicznej
   - Informacje kontaktowe (nazwisko, numer telefonu, adres e-mail)
@@ -85,7 +85,7 @@ Dane identyfikujące zebrane przez usługę Intune obejmują między innymi:
   - Nazwa aplikacji
   - Wersja
   - Identyfikator aplikacji
-  - rozmiar
+  - size
   - Miejsce instalacji
   - Dane spisu aplikacji są zbierane tylko wtedy, gdy urządzenie zostanie oznaczone przez administratora jako należące do firmy lub gdy jest włączona funkcja zgodnych aplikacji.  
 - Identyfikatory dzierżawy innej firmy klienta, na przykład identyfikator Apple ID. 
@@ -112,7 +112,7 @@ Dane pseudonimizowane zebrane przez usługę Intune obejmują między innymi:
   - Identyfikator konta
   - Identyfikator urządzenia protokołu EAS
   - Identyfikatory specyficzne dla platformy
-  - Identyfikator AppleID dla urządzeń z systemem iOS
+  - Identyfikator AppleID dla urządzeń z systemem iOS/iPadOS
   - Adres Mac dla urządzeń Mac
   - Identyfikator systemu Windows dla urządzeń z systemem Windows
 - Informacje o aplikacji zarządzanej

@@ -1,6 +1,6 @@
 ---
-title: Aplikacje dla systemu iOS z zasadami ochrony aplikacji
-description: W tym temacie opisano, czego można oczekiwać, gdy aplikacja dla systemu iOS jest zarządzana przy użyciu zasad ochrony aplikacji.
+title: Aplikacje dla systemu iOS/iPadOS z zasadami ochrony aplikacji
+description: W tym temacie opisano, czego można oczekiwać, gdy aplikacja dla systemu iOS/iPadOS jest zarządzana przy użyciu zasad ochrony aplikacji.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -17,14 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 165ce160339647e396b9cfc3a8374f21c77665f8
-ms.sourcegitcommit: f9dc50642efa8656054ef67f9335b9b46b655f93
+ms.openlocfilehash: c854811a9deb938613af872f3cf86244ab9121b3
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/02/2020
-ms.locfileid: "75606625"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514663"
 ---
-# <a name="what-to-expect-when-your-ios-app-is-managed-by-app-protection-policies"></a>Czego można oczekiwać, gdy aplikacja dla systemu iOS jest zarządzana przy użyciu zasad ochrony aplikacji
+# <a name="what-to-expect-when-your-iosipados-app-is-managed-by-app-protection-policies"></a>Czego można oczekiwać, gdy aplikacja systemu iOS/iPadOS jest zarządzana przy użyciu zasad ochrony aplikacji
 
 Zasady ochrony aplikacji usługi Intune mają zastosowanie do aplikacji, które są używane w miejscu pracy lub nauki. Oznacza to, że gdy pracownicy i uczniowie korzystają z aplikacji w kontekście osobistym, mogą nie zauważyć żadnych różnic w środowisku pracy. W kontekście służbowym mogą jednak otrzymywać monity o podjęcie decyzji dotyczących kont, zaktualizowanie ich ustawień lub skontaktowanie się z Tobą w celu uzyskania pomocy. Skorzystaj z tego artykułu, aby dowiedzieć się, co może się zdarzyć, gdy użytkownicy podejmą próbę uzyskania dostępu do aplikacji chronionych przez usługę Intune i ich używania.  
 
@@ -34,7 +34,7 @@ Jeśli urządzenie **nie jest zarejestrowane w usłudze Intune**, użytkownik zo
 
 <!--- The following screenshot from the Skype app illustrates this restart request: --->
 
-<!---  ![Screenshot of the iOS device showing PIN prompt](./media/end-user-mam-apps-ios/iOS_AppPINPrompt.png) --->
+<!---  ![Screenshot of the iOS/iPadOS device showing PIN prompt](./media/end-user-mam-apps-ios/iOS_AppPINPrompt.png) --->
 
 Na urządzeniach, które są **zarejestrowane do celów zarządzania w usłudze Intune**, użytkownik zobaczy komunikat, że jego aplikacja jest teraz zarządzana.
 

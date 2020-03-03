@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad363785888a92d1e8be4f2d28690278a2efaae9
-ms.sourcegitcommit: c7c6be3833d9a63d43f31d598b555b49b33cf5cb
+ms.openlocfilehash: 3cd153a4c602ba49a5b5135d1d6cb32a61f2668d
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76966304"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576514"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Tworzenie i przypisywanie profilów certyfikatów SCEP w usłudze Intune
 
@@ -60,7 +60,7 @@ Po [skonfigurowaniu infrastruktury](certificates-scep-configure.md) pod kątem o
 
    - **Typ certyfikatu**:
 
-     *(Dotyczy:  system Android, Android Enterprise, iOS, macOS, Windows 8.1 i nowszy oraz Windows 10 i nowszy).*
+     *(Dotyczy:  system Android, Android Enterprise, iOS/iPadOS, macOS, Windows 8.1 i nowszy oraz Windows 10 i nowszy).*
 
      Wybierz typ w zależności od tego, w jaki sposób będzie używany profil certyfikatu:
 
@@ -280,7 +280,7 @@ Przypisz profile certyfikatów SCEP w taki sam sposób, w jaki [wdrażasz profil
 - Chociaż profil zaufanego certyfikatu i profil certyfikatu SCEP są tworzone osobno, oba muszą zostać przypisane. Gdy oba te profile nie zostaną zainstalowane na urządzeniu, zasady certyfikatu SCEP nie będą działać. Upewnij się, że wszystkie profile zaufanych certyfikatów głównych zostały również wdrożone w tych samych grupach, co profil SCEP.
 
 > [!NOTE]
-> Na urządzeniu z systemem iOS, kiedy profil certyfikatu SCEP jest skojarzony z dodatkowym profilem, takim jak profil sieci Wi-Fi lub VPN, urządzenie otrzymuje certyfikat dla każdego z tych dodatkowych profilów. W wyniku urządzenie z systemem iOS ma wiele certyfikatów dostarczonych przez żądanie certyfikatu SCEP.  Jeśli potrzebny jest pojedynczy certyfikat, należy użyć certyfikatów PKCS zamiast certyfikatów SCEP.  Wynika to z różnic w sposobie dostarczania certyfikatów SCEP i PKCS na urządzenia.
+> Na urządzeniu z systemem iOS/iPadOS, kiedy profil certyfikatu SCEP jest skojarzony z dodatkowym profilem, takim jak profil sieci Wi-Fi lub VPN, urządzenie otrzymuje certyfikat dla każdego z tych dodatkowych profilów. Spowoduje to, że urządzenie z systemem iOS/iPadOS będzie miało wiele certyfikatów dostarczonych przez żądanie certyfikatu SCEP.  Jeśli potrzebny jest pojedynczy certyfikat, należy użyć certyfikatów PKCS zamiast certyfikatów SCEP.  Wynika to z różnic w sposobie dostarczania certyfikatów SCEP i PKCS na urządzenia.
 
 ## <a name="next-steps"></a>Następne kroki
 

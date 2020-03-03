@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b7c0a7dfa4337983c12ada2d0f415c771bd0548
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: 507c7ecff9715ebf9f24567c735592f3f255ccc9
+ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755191"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77609176"
 ---
 # <a name="add-an-ios-line-of-business-app-to-microsoft-intune"></a>Dodawanie do usługi Microsoft Intune aplikacji biznesowych dla systemu iOS
 
@@ -31,10 +31,13 @@ ms.locfileid: "76755191"
 
 Informacje przedstawione w tym artykule ułatwiają dodawanie aplikacji biznesowych (LOB, line-of-business) dla systemu iOS do usługi Microsoft Intune. Aplikacja biznesowa (LOB) to aplikacja dodawana do usługi Intune za pomocą pliku instalacyjnego aplikacji IPA. Aplikacja tego typu jest zwykle pisana w firmie. Najpierw musisz dołączyć do programu dla deweloperów aplikacji systemu iOS dla przedsiębiorstw. Więcej informacji na ten temat znajdziesz w [witrynie firmy Apple](https://developer.apple.com/programs/ios/enterprise/).
 
->[!NOTE]
->Użytkownicy urządzeń z systemem iOS mogą usuwać niektóre wbudowane aplikacje dla systemu iOS, takie jak Stocks i Maps. Nie można użyć usługi Intune do ponownego wdrożenia tych aplikacji. Jeśli użytkownicy usunęli te aplikacje, muszą przejść do sklepu z aplikacjami i ponownie ręcznie je zainstalować.
+> [!NOTE]
+> Użytkownicy urządzeń z systemem iOS mogą usuwać niektóre wbudowane aplikacje dla systemu iOS, takie jak Stocks i Maps. Nie można użyć usługi Intune do ponownego wdrożenia tych aplikacji. Jeśli użytkownicy usunęli te aplikacje, muszą przejść do sklepu z aplikacjami i ponownie ręcznie je zainstalować.
 >
->Aplikacje LOB systemu iOS mają maksymalny limit rozmiaru wynoszący 4 GB na aplikację.
+> Aplikacje LOB systemu iOS mają maksymalny limit rozmiaru wynoszący 4 GB na aplikację.
+
+> [!NOTE]
+> Identyfikatory pakietów (na przykład *com.contoso.app*) pełnią rolę unikatowych identyfikatorów aplikacji. Na przykład aby zainstalować do celów testowych wersję beta aplikacji LOB obok wersji produkcyjnej, wersja beta musi mieć inny unikatowy identyfikator (na przykład *com.contoso.app-beta*). W przeciwnym razie wersja beta nałoży się na wersję produkcyjną i będzie traktowana jako jej uaktualnienie. Zmiana nazwy pliku IPA nie ma wpływu na to zachowanie.
 
 ## <a name="select-the-app-type"></a>Wybieranie typu aplikacji
 

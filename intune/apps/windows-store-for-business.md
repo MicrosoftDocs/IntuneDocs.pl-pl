@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3c1627ba89ad50b2053187a20fee6cbc7a9064e8
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 6faaa800d8dedc53ab20f1dae2c3049132642b7d
+ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74562499"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77609162"
 ---
 # <a name="how-to-manage-volume-purchased-apps-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Jak zarządzać aplikacjami zakupionymi zbiorczo w sklepie Microsoft Store dla Firm za pomocą usługi Microsoft Intune
 
@@ -48,7 +48,7 @@ Przed rozpoczęciem synchronizowania i przypisywania aplikacji ze Sklepu Microso
 - Licencjonowane aplikacje zakupione w sklepie Microsoft Store dla Firm zarówno w trybie online, jak i w trybie offline są synchronizowane w portalu usługi Intune. Następnie można wdrożyć te aplikacje w grupach urządzeń lub w grupach użytkowników. 
 - Instalacje aplikacji online są zarządzane przez sklep.
 - Aplikacje w trybie offline, które są bezpłatne, mogą być również synchronizowane z usługą Intune. Te aplikacje są instalowane przez usługę Intune, a nie przez sklep.
-- Aby móc używać tej funkcji, urządzenia muszą być przyłączone do usługi Active Directory Domain Services lub dołączone w miejscu pracy.
+- Aby móc używać tej funkcji, urządzenia muszą być przyłączone do usługi Active Directory Domain Services, dołączone do usługi Azure AD lub dołączone w miejscu pracy.
 - Zarejestrowane urządzenia muszą używać systemu Windows 10 w wersji 1511 lub nowszej.
 
 Ponadto powiązane zestawy i aplikacje licencjonowane w trybie offline synchronizowane ze sklepem Microsoft Store dla Firm będą teraz konsolidowane w jeden wpis aplikacji w interfejsie użytkownika. Wszelkie szczegóły wdrożenia z indywidualnych pakietów zostaną poddane migracji do pojedynczego wpisu. Aby wyświetlić powiązane zestawy w witrynie Azure Portal, wybierz pozycję **Licencje aplikacji** w okienku **Aplikacje**.

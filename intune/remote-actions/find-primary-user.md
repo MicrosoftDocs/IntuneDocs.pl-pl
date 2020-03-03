@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fbafca746c43dada6281ffbfe1e34f01afa8ab91
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: 7ff03682ab406b92e3ea7f1e416188119913cc87
+ms.sourcegitcommit: 5881979c45fc973cba382413eaa193d369b8dcf6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77413676"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77569459"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>Znajdowanie użytkownika podstawowego urządzenia usługi Intune
 
 Użytkownik podstawowy, określany również jako koligacja urządzenia użytkownika, to właściwość każdego urządzenia usługi Intune. Urządzenie usługi Intune może nie mieć przypisanego użytkownika podstawowego lub mieć przypisanego jednego użytkownika podstawowego. Jeśli nie przypisano użytkownika podstawowego, urządzenie jest określane jako „Urządzenie udostępnione”.
 
-## <a name="how-to-find-a-devices-primary-user"></a>Jak znaleźć użytkownika podstawowego urządzenia
+## <a name="find-a-devices-primary-user"></a>Znajdowanie użytkownika podstawowego urządzenia
 
 1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Wybierz pozycję **Urządzenia** > wybierz urządzenie.
@@ -38,7 +38,7 @@ Użytkownik podstawowy, określany również jako koligacja urządzenia użytkow
 Właściwość użytkownika podstawowego jest używana do mapowania licencjonowanego użytkownika usługi Intune na urządzeniach w:
 - Aplikacji Portal firmy
 - Witrynie internetowej użytkownika końcowego
-- Profesjonalnych środowiskach IT, takich jak strony rozwiązywania problemów w witrynie Azure Portal. Te strony mapują konta użytkowników na urządzenia przy użyciu użytkownika podstawowego.    
+- Profesjonalnych środowiskach IT, takich jak strony rozwiązywania problemów w witrynie Azure Portal. Te strony mapują konta użytkowników na urządzenia przy użyciu użytkownika podstawowego. 
 
 ### <a name="company-portal-app"></a>Aplikacji Portal firmy
 Aplikacja Portal firmy oczekuje, że konto użytkownika zalogowanego do Portalu firmy jest użytkownikiem podstawowym danego urządzenia. Jeśli inny użytkownik został przypisany jako użytkownik podstawowy, aplikacja Portal firmy wyświetla ostrzeżenie:

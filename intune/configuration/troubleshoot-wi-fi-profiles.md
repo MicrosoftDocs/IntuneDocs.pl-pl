@@ -1,11 +1,11 @@
 ---
 title: Rozwiązywanie problemów z dziennikami profilów urządzeń Wi-Fi i ich przeglądanie w usłudze Microsoft Intune — Azure | Microsoft Docs
-description: Informacje o problemach z profilami konfiguracji urządzeń Wi-Fi oraz ich rozwiązywaniu na urządzeniach z systemami Android, iOS i Windows w usłudze Microsoft Intune. Przejrzyj dzienniki, aby zapoznać się z niektórymi typowymi problemami i możliwymi rozwiązaniami.
+description: Informacje o problemach z profilami konfiguracji urządzeń Wi-Fi oraz ich rozwiązywaniu na urządzeniach z systemami Android, iOS/iPadOS i Windows w usłudze Microsoft Intune. Przejrzyj dzienniki, aby zapoznać się z niektórymi typowymi problemami i możliwymi rozwiązaniami.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 70f471e7f4db7ddce89d8956474822375c684944
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: db663f96f1e4fe84c506395b98c52956069e5426
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75547974"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77512827"
 ---
 # <a name="troubleshoot-wi-fi-device-configuration-profiles-in-microsoft-intune"></a>Rozwiązywanie problemów z profilami konfiguracji urządzeń w usłudze Microsoft Intune
 
-W usłudze Intune można tworzyć profile konfiguracji urządzeń, które obejmują ustawienia połączeń sieci Wi-Fi. Te ustawienia służą do łączenia urządzeń użytkowników z systemami Android, iOS i Windows z siecią organizacji.
+W usłudze Intune można tworzyć profile konfiguracji urządzeń, które obejmują ustawienia połączeń sieci Wi-Fi. Te ustawienia służą do łączenia urządzeń użytkowników z systemami Android, iOS/iPadOS i Windows z siecią organizacji.
 
 W tym artykule pokazano, jak wygląda profil sieci Wi-Fi po pomyślnym zastosowaniu na urządzeniach. Zawiera on również informacje dziennika, typowe problemy i wiele innych. Artykuł ten ułatwi Ci rozwiązywanie problemów z profilami sieci Wi-Fi.
 
@@ -100,25 +100,25 @@ Poniższy dziennik przedstawia wyniki wyszukiwania i pokazuje, że profil sieci 
 
 ```
 
-## <a name="ios"></a>iOS
+## <a name="iosipados"></a>iOS/iPadOS
 
 Po zainstalowaniu na urządzeniu profilu sieci Wi-Fi zostanie on wyświetlony w obszarze **Profil zarządzania**:
 
 > [!div class="mx-imgBorder"]
-> ![Profil zarządzania na urządzeniu z systemem iOS](./media/troubleshoot-wi-fi-profiles/ios-management-profile.png)
+> ![Profil zarządzania na urządzeniu z systemem iOS/iPadOS w usłudze Intune](./media/troubleshoot-wi-fi-profiles/ios-management-profile.png)
 
 > [!div class="mx-imgBorder"]
-> ![Połączenie Wi-Fi wyświetlane jako sieć Wi-Fi na urządzeniu z systemem iOS](./media/troubleshoot-wi-fi-profiles/ios-wifi-connection-in-management-profile.png)
+> ![Połączenie Wi-Fi wyświetlane jako sieć Wi-Fi na urządzeniu z systemem iOS/iPadOS w usłudze Intune](./media/troubleshoot-wi-fi-profiles/ios-wifi-connection-in-management-profile.png)
 
-### <a name="review-the-ios-console-and-device-logs"></a>Przeglądanie dzienników konsoli i urządzeń systemu iOS
+### <a name="review-the-iosipados-console-and-device-logs"></a>Przeglądanie dzienników konsoli i urządzeń systemu iOS/iPadOS
 
-Na urządzeniach z systemem iOS dziennik aplikacji Portal firmy nie zawiera informacji o profilach sieci Wi-Fi. Aby wyświetlić szczegóły instalacji profilów sieci Wi-Fi, użyj dzienników konsoli/urządzenia:
+Na urządzeniach z systemem iOS/iPadOS dziennik aplikacji Portal firmy nie zawiera informacji o profilach sieci Wi-Fi. Aby wyświetlić szczegóły instalacji profilów sieci Wi-Fi, użyj dzienników konsoli/urządzenia:
 
-1. Podłącz urządzenie z systemem iOS do komputera Mac. Przejdź do pozycji **Aplikacje** > **Narzędzia** i otwórz aplikację Konsola.
+1. Podłącz urządzenie z systemem iOS/iPadOS do komputera Mac. Przejdź do pozycji **Aplikacje** > **Narzędzia** i otwórz aplikację Konsola.
 2. W obszarze **akcji** wybierz opcje **uwzględniania komunikatów informacyjnych** i **uwzględniania komunikatów debugowania**:
 
     > [!div class="mx-imgBorder"]
-    > ![Opcje uwzględniania komunikatów informacyjnych i uwzględniania komunikatów debugowania w aplikacji konsolowej systemu iOS](./media/troubleshoot-wi-fi-profiles/ios-console-app-include-info-messages-debug-messages.png)
+    > ![Opcje uwzględniania komunikatów informacyjnych i uwzględniania komunikatów debugowania w aplikacji konsolowej systemu iOS/iPadOS](./media/troubleshoot-wi-fi-profiles/ios-console-app-include-info-messages-debug-messages.png)
 
 3. Odtwórz scenariusz i zapisz dzienniki w pliku tekstowym:
 
@@ -263,7 +263,7 @@ Zazwyczaj ten problem jest spowodowany przez elementy spoza usługi Intune. Nast
 
 - Aby uzyskać więcej informacji o profilach sieci Wi-Fi w usłudze Microsoft Intune, zobacz następujące artykuły:
 
-  - Dodawanie ustawień sieci Wi-Fi dla urządzeń z systemem [Android](wi-fi-settings-android.md), [iOS](wi-fi-settings-ios.md) oraz [Windows 10 i nowszym](wi-fi-settings-windows.md).
+  - Dodawanie ustawień sieci Wi-Fi dla urządzeń z systemem [Android](wi-fi-settings-android.md), [iOS/iPadOS](wi-fi-settings-ios.md) oraz [Windows 10 i nowszym](wi-fi-settings-windows.md).
   - [Support Tip - How to configure NDES for SCEP certificate deployments in Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-How-to-configure-NDES-for-SCEP-certificate/ba-p/455125) (Porady dotyczące pomocy technicznej — jak skonfigurować usługę NDES dla wdrożeń certyfikatów SCEP w usłudze Intune)
   - Rozwiązywanie problemów z [wdrożeniem profilu certyfikatu protokołu SCEP](https://support.microsoft.com/help/4526725/troubleshooting-scep-profile-deployment-to-android-devices-in-intune) i [konfiguracją usługi NDES](https://support.microsoft.com/help/4459540/troubleshoot-ndes-configuration-for-use-with-intune).
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2daa7428cf8677f9e1a2b11db2b3ce65e2df8bc4
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: f2baf60fed2c6010e5ae0784cda166ac4fabfd57
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755004"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511739"
 ---
 # <a name="add-ios-store-apps-to-microsoft-intune"></a>Dodawanie aplikacji ze sklepu z aplikacjami dla systemu iOS do usługi Microsoft Intune
 
@@ -32,11 +32,11 @@ ms.locfileid: "76755004"
 Informacje przedstawione w tym artykule ułatwiają dodawanie aplikacji ze sklepu dla systemu iOS w usłudze Microsoft Intune. Aplikacje ze sklepu dla systemu iOS to aplikacje instalowane przez usługę Intune na urządzeniu użytkownika. Użytkownik jest pracownikiem firmy. Aplikacje ze sklepu dla systemu iOS są aktualizowane automatycznie.
 
 >[!NOTE]
->Chociaż użytkownicy urządzeń z systemem iOS mogą usunąć niektóre wbudowane aplikacje dla systemu iOS, takie jak Stocks i Maps, jednak nie mogą użyć usługi Intune do ponownego wdrożenia tych aplikacji. Jeśli użytkownicy usunęli te aplikacje, muszą przejść do sklepu App Store i ponownie zainstalować je ręcznie.
+>Chociaż użytkownicy urządzeń z systemem iOS/iPadOS mogą usunąć niektóre wbudowane aplikacje dla systemu iOS/iPadOS, takie jak Stocks i Maps, jednak nie mogą użyć usługi Intune do ponownego wdrożenia tych aplikacji. Jeśli użytkownicy usunęli te aplikacje, muszą przejść do sklepu App Store i ponownie zainstalować je ręcznie.
 
 ## <a name="before-you-start"></a>Przed rozpoczęciem
 
-Przy użyciu tej metody można przypisywać tylko aplikacje dostępne bezpłatnie w sklepie App Store. Jeśli chcesz przy użyciu usługi Intune przypisać aplikacje płatne, rozważ skorzystanie z [programu zakupów zbiorczych dla systemu iOS](vpp-apps-ios.md).
+Przy użyciu tej metody można przypisywać tylko aplikacje dostępne bezpłatnie w sklepie App Store. Jeśli chcesz przy użyciu usługi Intune przypisać aplikacje płatne, rozważ skorzystanie z [programu zakupów zbiorczych dla systemu iOS/iPadOS](vpp-apps-ios.md).
 
 >[!NOTE]
 >Jeśli pracujesz, korzystając z usługi Microsoft Intune, firma Microsoft zaleca używanie przeglądarki Microsoft Edge lub Google Chrome.

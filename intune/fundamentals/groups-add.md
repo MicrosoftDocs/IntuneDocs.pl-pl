@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 237eca2f8e00f00fda5fa3cf401be87de9602743
-ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
+ms.openlocfilehash: 183e8cc5924f6ce1f002225150d808841924e20c
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75956259"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514646"
 ---
 # <a name="add-groups-to-organize-users-and-devices"></a>Dodawanie grup w celu zorganizowania użytkowników i urządzeń
 
@@ -34,7 +34,7 @@ Dodawać można następujące typy grup:
 - **Grupy przypisane** — ręczne dodawanie użytkowników lub urządzeń do grup statycznych. 
 - **Grupy dynamiczne** (wymagana usługa Azure AD Premium) — automatyczne dodawanie użytkowników lub urządzeń do grup użytkowników lub urządzeń na podstawie utworzonego wyrażenia.
 
-  Na przykład użytkownik z tytułem menedżera jest automatycznie dodawany do grupy użytkowników **Wszyscy menedżerowie**. Z kolei urządzenie z typem systemu operacyjnego ustawionym na iOS jest automatycznie dodawane do grupy **Wszystkie urządzenia z systemem iOS**.
+  Na przykład użytkownik z tytułem menedżera jest automatycznie dodawany do grupy użytkowników **Wszyscy menedżerowie**. Z kolei urządzenie z typem systemu operacyjnego ustawionym na iOS/iPadOS jest automatycznie dodawane do grupy **Wszystkie urządzenia z systemem iOS/iPadOS**.
 
 ## <a name="add-a-new-group"></a>Dodawanie nowej grupy
 
@@ -47,7 +47,7 @@ Aby utworzyć nową grupę, wykonaj następujące czynności.
 
 3. Jako **Typ grupy** wybierz jedną z następujących opcji:
 
-    - **Zabezpieczenia**: Grupy zabezpieczeń określają, kto może uzyskać dostęp do zasobów. Są zalecane do użytku z grupami w usłudze Intune. Na przykład można utworzyć grupy użytkowników, takie jak **Wszyscy pracownicy z Charlotte** lub **Pracownicy zdalni**. Można też utworzyć grupy urządzeń, takie jak **Wszystkie urządzenia z systemem iOS** lub **Wszystkie urządzenia uczniów z systemem Windows 10**.
+    - **Zabezpieczenia**: Grupy zabezpieczeń określają, kto może uzyskać dostęp do zasobów. Są zalecane do użytku z grupami w usłudze Intune. Na przykład można utworzyć grupy użytkowników, takie jak **Wszyscy pracownicy z Charlotte** lub **Pracownicy zdalni**. Można też utworzyć grupy urządzeń, takie jak **Wszystkie urządzenia z systemem iOS/iPadOS** lub **Wszystkie urządzenia uczniów z systemem Windows 10**.
 
         > [!TIP]
         > Utworzonych użytkowników i grupy można też zobaczyć w [centrum administracyjnym platformy Microsoft 365](https://admin.microsoft.com), centrum administracyjnym usługi Azure Active Directory i [usłudze Microsoft Intune w witrynie Azure Portal](https://go.microsoft.com/fwlink/?linkid=2090973). W dzierżawie swojej organizacji możesz tworzyć grupy we wszystkich tych obszarach i nimi zarządzać.

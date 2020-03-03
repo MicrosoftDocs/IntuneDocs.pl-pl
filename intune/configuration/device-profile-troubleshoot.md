@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/28/2020
+ms.date: 02/18/2020
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 881d0f095d2144ae42db4825336275980a19f419
-ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
+ms.openlocfilehash: 21497716f17ced83bdcc1952cb952151f993bb7b
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76812362"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511331"
 ---
 # <a name="common-questions-issues-and-resolutions-with-device-policies-and-profiles-in-microsoft-intune"></a>Typowe pytania, problemy i rozwiązania związane z zasadami i profilami urządzeń w usłudze Microsoft Intune
 
@@ -36,11 +36,11 @@ Aby zminimalizować ten problem, skonfiguruj sieć Wi-Fi dla gości. Jeśli firm
 
 Niektóre zalecenia dodatkowe:  
 
-- Jeśli sieć Wi-Fi, z którą nawiązujesz połączenie, używa hasła lub kodu dostępu, upewnij się, że możesz łączyć się bezpośrednio z routerem sieci Wi-Fi. Możesz przeprowadzić test za pomocą urządzenia z systemem iOS.
+- Jeśli sieć Wi-Fi, z którą nawiązujesz połączenie, używa hasła lub kodu dostępu, upewnij się, że możesz łączyć się bezpośrednio z routerem sieci Wi-Fi. Możesz przeprowadzić test za pomocą urządzenia z systemem iOS/iPadOS.
 - Po pomyślnym nawiązaniu połączenia z punktem końcowym sieci Wi-Fi (routerem sieci Wi-Fi) zanotuj identyfikator SSID i używane poświadczenia (tą wartością jest hasło lub kod dostępu).
 - Wprowadź identyfikator SSID i poświadczenia (hasło lub kod dostępu) w polu Klucz wstępny. 
 - Przeprowadź wdrożenie w grupie testowej, zawierającej ograniczoną liczbę użytkowników, najlepiej tylko w zespole IT. 
-- Zsynchronizuj urządzenie z systemem iOS z usługą Intune. Zarejestruj się, jeśli jeszcze nie dokonano rejestracji. 
+- Zsynchronizuj urządzenie z systemem iOS/iPadOS z usługą Intune. Zarejestruj się, jeśli jeszcze nie dokonano rejestracji. 
 - Ponownie przetestuj połączenie z tym samym punktem końcowym sieci Wi-Fi (jak wspomniano w pierwszym kroku).
 - Przeprowadź wdrożenie w większych grupach i ostatecznie dla wszystkich oczekiwanych użytkowników w organizacji. 
 
@@ -54,7 +54,7 @@ Jeśli urządzenie nie zostanie zaewidencjonowane w celu pobrania zasad lub prof
 
 | Platforma | Cykl odświeżania|
 | --- | --- |
-| iOS | Co około 8 godzin |
+| iOS/iPadOS | Co około 8 godzin |
 | macOS | Co około 8 godzin |
 | Android | Co około 8 godzin |
 | Komputery z systemem Windows 10 zarejestrowane jako urządzenia | Co około 8 godzin |
@@ -65,7 +65,7 @@ Jeśli urządzenie zostało ostatnio zarejestrowane, ewidencjonowanie zgodności
 
 | Platforma | Częstotliwość |
 | --- | --- |
-| iOS | Co 15 minut przez 1 godzinę, a następnie co około 8 godzin |  
+| iOS/iPadOS | Co 15 minut przez 1 godzinę, a następnie co około 8 godzin |  
 | macOS | Co 15 minut przez 1 godzinę, a następnie co około 8 godzin | 
 | Android | Co 3 minuty przez 15 minut, następnie co 15 minut przez 2 godziny, a następnie co około 8 godzin | 
 | Komputery z systemem Windows 10 zarejestrowane jako urządzenia | Co 3 minuty przez 15 minut, następnie co 15 minut przez 2 godziny, a następnie co około 8 godzin | 
@@ -102,7 +102,7 @@ Konflikty występują, jeśli dwa ustawienia profilów są takie same. Można na
 
 Zasady są wdrażane w aplikacji i zaczynają obowiązywać. Następuje wdrożenie drugich zasad. W tym scenariuszu pierwsze zasady mają pierwszeństwo i są nadal stosowane. Drugie zasady powodują wystąpienie konfliktu. Jeśli obydwie zasady zostaną zastosowane w tym samym czasie, tj. żadne zasady nie będą mieć pierwszeństwa, i jedne, i drugie zasady są w konflikcie. Wszystkie ustawienia powodujące konflikt są ustawiane na bardziej restrykcyjne wartości.
 
-## <a name="what-happens-when-ios-custom-policies-conflict"></a>Co się stanie w przypadku konfliktu zasad niestandardowych systemu iOS?
+## <a name="what-happens-when-iosipados-custom-policies-conflict"></a>Co się stanie w przypadku konfliktu zasad niestandardowych systemu iOS/iPadOS?
 
 Usługa Intune nie ocenia ładunku plików konfiguracji firmy Apple lub niestandardowych zasad OMA-URI (Open Mobile Alliance Uniform Resource Identifier). Służy ona jedynie jako mechanizm dostarczania.
 
@@ -144,7 +144,7 @@ Usunięcie profilu lub usunięcie urządzenia z grupy zawierającej profil powod
     - Zezwalaj na komunikację NFC
     - Zezwalaj na połączenia Wi-Fi
 
-  - **iOS**: wszystkie ustawienia są usuwane, z wyjątkiem:
+  - **iOS/iPadOS**: wszystkie ustawienia są usuwane, z wyjątkiem:
   
     - Zezwalaj na roaming połączeń głosowych
     - Zezwalaj na roaming danych
@@ -156,7 +156,7 @@ Po ustawieniu urządzenia z systemem Windows Phone nie zezwalają na obniżenie 
 
 Aby zmienić wartość na obniżającą poziom zabezpieczeń profilu, zresetuj zasady zabezpieczeń. Na przykład w systemie Windows 8.1 na pulpicie szybko przesuń palcem od prawej strony > wybierz pozycję **Ustawienia** > **Panel sterowania**. Wybierz aplet **Konta użytkowników** . W menu nawigacji po lewej stronie (u dołu ekranu) znajduje się link **Resetuj zasady zabezpieczeń**. Wybierz go, a następnie wybierz opcję **Resetuj zasady**.
 
-W przypadku innych urządzeń MDM, takich jak urządzenia z systemem Android, Windows Phone 8.1 lub nowszym, iOS oraz Windows 10, zastosowanie mniej restrykcyjnego profilu może wymagać wycofania i ponownego zarejestrowania urządzenia w usłudze Intune.
+W przypadku innych urządzeń MDM, takich jak urządzenia z systemem Android, Windows Phone 8.1 lub nowszym, iOS/iPadOS oraz Windows 10, zastosowanie mniej restrykcyjnego profilu może wymagać wycofania i ponownego zarejestrowania urządzenia w usłudze Intune.
 
 ## <a name="some-settings-in-a-windows-10-profile-return-not-applicable"></a>Niektóre ustawienia w profilu systemu Windows 10 zwracają komunikat „Nie dotyczy”
 

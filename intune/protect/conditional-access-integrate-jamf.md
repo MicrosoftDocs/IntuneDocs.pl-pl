@@ -6,24 +6,24 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/18/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 4b6dcbcc-4661-4463-9a36-698d673502c6
-ms.reviewer: elocholi
+ms.reviewer: jinyoon
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 01dae8f6c90155e649211ab226cf24eeade29b42
-ms.sourcegitcommit: f5108039f0ade52e95ea3ac1da1aa16d02224af3
+ms.openlocfilehash: 9dab1025e283ed1591c22b03ed4e3a61d40a20c3
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74946686"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515088"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Integrowanie narzędzia Jamf Pro z usługą Intune w celu zachowania zgodności
 
@@ -92,19 +92,17 @@ Aby połączyć usługę Intune z narzędziem Jamf Pro:
 
 6. Wybierz pozycję **Uprawnienia interfejsu API** w sekcji **Zarządzanie**. 
 
-7. Na stronie uprawnień interfejsu API wybierz pozycję **Dodaj uprawnienie**, aby dodać nowe uprawnienie. Na stronie **Żądanie uprawnień interfejsu API** wybierz pozycję **Intune**, a następnie wybierz pozycję **Uprawnienia aplikacji**. Zaznacz pole wyboru tylko przy pozycji **update_device_attributes**.
+7. Na stronie Uprawnienia interfejsu API usuń wszystkie uprawnienia z tej aplikacji, wybierając ikonę **...** obok każdego istniejącego uprawnienia. Jest to wymagane. Integracja nie powiedzie się, jeśli w tej rejestracji aplikacji istnieją jakiekolwiek nieoczekiwane uprawnienia dodatkowe.
 
-8. Odczekaj kilka minut, aby nowe uprawnienie zaczęło obowiązywać. Następnie wybierz pozycję **Wyraź zgodę administratora dla katalogu _\<Twoja dzierżawa>_** . Uwierzytelnij swoje konto w nowym oknie i udziel dostępu aplikacji, postępując zgodnie z instrukcjami.  
+8. Następnie dodamy uprawnienia w celu zaktualizowania atrybutów urządzenia. W lewym górnym rogu strony **Uprawnienia interfejsu API** wybierz pozycję **Dodaj uprawnienie**, aby dodać nowe uprawnienie. 
 
-9. Może być konieczne odczekanie kilku kolejnych minut, aby zgoda administratora zaczęła obowiązywać.
+9. Na stronie **Żądanie uprawnień interfejsu API** wybierz pozycję **Intune**, a następnie wybierz pozycję **Uprawnienia aplikacji**. Zaznacz pole wyboru tylko przy pozycji **update_device_attributes** i zapisz nowe uprawnienie.
 
-10. Odśwież stronę, klikając przycisk **Odśwież** w górnej części strony. Upewnij się, że udzielono zgody administratora na uprawnienie **update_device_attributes**. 
+10. Następnie udziel zgody administratora dla tej aplikacji, wybierając pozycję **Wyraź zgodę administratora dla katalogu _\<Twoja dzierżawa >_** w lewym górnym rogu strony **Uprawnienia interfejsu API**. Może być wymagane ponowne uwierzytelnienie swojego konta w nowym oknie i udzielenie dostępu aplikacji przez postępowanie zgodnie z instrukcjami.  
 
-11. Usuń zgodę administratora z uprawnienia **User.Read**, wybierając menu **...** , a następnie pozycję **Odwołaj zgodę administratora**.
+11. Odśwież stronę, klikając przycisk **Odśwież** w górnej części strony. Upewnij się, że udzielono zgody administratora na uprawnienie **update_device_attributes**. 
 
-12. Konieczne będzie także usunięcie uprawnienia **User.Read**. Wybierz menu **...** obok pozycji **User.Read**, a następnie wybierz pozycję **Usuń uprawnienie**. 
-
-8. Po pomyślnym zarejestrowaniu aplikacji uprawnienia interfejsu API powinny zawierać tylko jedno uprawnienie o nazwie **update_device_attributes** i wyglądać następująco:
+12. Po pomyślnym zarejestrowaniu aplikacji uprawnienia interfejsu API powinny zawierać tylko jedno uprawnienie o nazwie **update_device_attributes** i wyglądać następująco:
 
    ![Uprawnienia po pomyślnej rejestracji](./media/conditional-access-integrate-jamf/sucessfull-app-registration.png)
 

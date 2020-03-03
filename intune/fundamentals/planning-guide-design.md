@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9fa02a61148a03a64b88b38dcdc1799b30bc45db
-ms.sourcegitcommit: 5ad0ce27a30ee3ef3beefc46d2ee49db6ec0cbe3
+ms.openlocfilehash: f676a0e39bb5dae32d3032d1703dbb44f6b2e54a
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2020
-ms.locfileid: "76886726"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514969"
 ---
 # <a name="create-a-design"></a>Tworzenie projektu
 
@@ -188,7 +188,7 @@ Omówmy teraz te zagadnienia w bardziej szczegółowy sposób.
 
 ### <a name="determine-supported-device-platforms"></a>Określanie obsługiwanych platform urządzeń
 
-W momencie tworzenia projektu należy wiedzieć, jakie urządzenia będą znajdować się w środowisku, a następnie zweryfikować, czy są one obsługiwane przez usługę Intune. Usługa Intune obsługuje platformy iOS, Android i Windows.
+W momencie tworzenia projektu należy wiedzieć, jakie urządzenia będą znajdować się w środowisku, a następnie zweryfikować, czy są one obsługiwane przez usługę Intune. Usługa Intune obsługuje platformy iOS/iPadOS, Android i Windows.
 
 [Pełna lista urządzeń obsługiwanych przez usługę Intune](supported-devices-browsers.md).
 
@@ -296,8 +296,8 @@ Oto przykład, jak można udokumentować certyfikaty podczas projektowania:
 
 | **Typ** | **Nazwa profilu** | **Platforma urządzeń** | **Przypadki użycia** |   
 |:---:|:---:|:---:|:---:|
-| Główny urząd certyfikacji | Firmowy główny urząd certyfikacji | Android, iOS i Windows Mobile | Firmowe, BYOD  |                                                           
-| SCEP | Certyfikat użytkownika | Android, iOS i Windows Mobile | Firmowe, BYOD |                                                           
+| Główny urząd certyfikacji | Firmowy główny urząd certyfikacji | Android, iOS/iPadOS lub Windows Mobile | Firmowe, BYOD  |                                                           
+| SCEP | Certyfikat użytkownika | Android, iOS/iPadOS lub Windows Mobile | Firmowe, BYOD |                                                           
 
 
 Aby zidentyfikować potrzeby swojego profilu certyfikatu, możesz [pobrać szablon powyższej tabeli](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0).
@@ -311,7 +311,7 @@ Poniżej przedstawiono przykładowy projekt dla profilu sieci Wi-Fi:
 | **Typ** | **Nazwa profilu** | **Platforma urządzeń** | **Przypadki użycia** |
 |:---:|:---:|:---:|:---:|
 | Wi-Fi | Profil sieci Wi-Fi (Azja) | Android | Firmowe, BYOD (region Azja)|
-| Wi-Fi | Profil sieci Wi-Fi (Ameryka Północna) | Android, iOS i Windows 10 Mobile | Firmowe, BYOD (region Ameryka Północna) |
+| Wi-Fi | Profil sieci Wi-Fi (Ameryka Północna) | Android, iOS/iPadOS lub Windows 10 Mobile | Firmowe, BYOD (region Ameryka Północna) |
 
 Aby zidentyfikować potrzeby swojego profilu sieci Wi-Fi, możesz [pobrać szablon powyższej tabeli](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0).
 
@@ -323,7 +323,7 @@ Poniżej przedstawiono przykład dokumentowania projektu profilu sieci VPN.
 
 | **Typ** | **Nazwa profilu** | **Platforma urządzeń** | **Przypadki użycia** |
 |:---:|:---:|:---:|:---:|
-| VPN | Profil Cisco AnyConnect sieci VPN | Android, iOS i Windows 10 Mobile | Firmowe, BYOD (region Ameryka Północna i Niemcy)|
+| VPN | Profil Cisco AnyConnect sieci VPN | Android, iOS/iPadOS lub Windows 10 Mobile | Firmowe, BYOD (region Ameryka Północna i Niemcy)|
 | VPN | Pulse Secure | Android | Firmowe, BYOD (region Azja) |
 
 Aby zidentyfikować potrzeby swojego profilu sieci VPN, możesz [pobrać szablon powyższej tabeli](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0).
@@ -374,7 +374,7 @@ Zasady ochrony aplikacji minimalizują utratę danych przez zdefiniowanie sposob
 | **Aplikacja** | **Cel** | **Platformy** | **Przypadek użycia** | **Zasady ochrony aplikacji** |
 |:---:|:---:|:---:|:---:|:---:|
 | Outlook Mobile  | Dostępne | iOS | Firmowe — Kierownicy | Nie może mieć złamanych zabezpieczeń producenta, szyfrowanie plików |                                                         
-| Word | Dostępne | iOS, Android — system Samsung Knox, system inny niż Samsung Knox, Windows 10 Mobile | Firmowe, BYOD | Nie może mieć złamanych zabezpieczeń producenta, szyfrowanie plików |                                                         
+| Word | Dostępne | iOS/iPadOS, Android — system Samsung Knox, system inny niż Samsung Knox, Windows 10 Mobile | Firmowe, BYOD | Nie może mieć złamanych zabezpieczeń producenta, szyfrowanie plików |                                                         
 
 
 Aby zidentyfikować potrzeby swoich zasad ochrony aplikacji, możesz [pobrać szablon powyższej tabeli](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0).
@@ -388,7 +388,7 @@ Poniżej przedstawiono przykład sposobu projektowania zasad zgodności:
 
 | **Nazwa zasad** | **Platforma urządzeń** | **Ustawienia** | **Grupa docelowa** |
 |:---:|:---:|:---:|:---:|
-| Zasady zgodności | iOS, Android — system Samsung Knox, system inny niż Samsung Knox, Windows 10 Mobile | Wymagany jest numer PIN, nie może mieć złamanych zabezpieczeń producenta | Firmowe, BYOD |
+| Zasady zgodności | iOS/iPadOS, Android — system Samsung Knox, system inny niż Samsung Knox, Windows 10 Mobile | Wymagany jest numer PIN, nie może mieć złamanych zabezpieczeń producenta | Firmowe, BYOD |
 
 
 Aby zidentyfikować potrzeby swoich zasad zgodności, możesz [pobrać szablon powyższej tabeli](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0).
@@ -404,8 +404,8 @@ Oto przykład sposobu dokumentowania zasad dostępu warunkowego:
 
 | **Usługa** | **Platformy korzystające z nowoczesnych metod uwierzytelniania** | **Uwierzytelnianie podstawowe** | **Przypadki użycia** |
 |:---:|:---:|:---:|:---:|
-| Exchange Online | iOS, Android | Blokuj niezgodne urządzenia na platformach obsługiwanych przez usługę Intune | Firmowe, BYOD |
-| SharePoint Online | iOS, Android |  | Firmowe, BYOD |
+| Exchange Online | iOS/iPadOS, Android | Blokuj niezgodne urządzenia na platformach obsługiwanych przez usługę Intune | Firmowe, BYOD |
+| SharePoint Online | iOS/iPadOS, Android |  | Firmowe, BYOD |
 
 Aby zidentyfikować potrzeby swoich zasad dostępu warunkowego, możesz [pobrać szablon powyższej tabeli](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0).
 

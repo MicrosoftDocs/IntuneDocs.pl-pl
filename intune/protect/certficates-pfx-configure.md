@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/12/2019
+ms.date: 02/25/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6d35d7470508b610f850ca7f9f394e0d26bec677
-ms.sourcegitcommit: 576b9528629981e87e775fac146932e502f07a74
+ms.openlocfilehash: 99983b2d2776e72232c65fcfb12d8075061d804b
+ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77258100"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77609344"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurowanie certyfikatów PKCS i korzystanie z nich za pomocą usługi Intune
 
@@ -66,7 +66,7 @@ Aby korzystać z certyfikatów PKCS za pomocą usługi Intune, musisz mieć nast
   Łącznik certyfikatów usługi Microsoft Intune obsługuje też tryb Federal Information Processing Standard (FIPS). Tryb FIPS nie jest wymagany, ale gdy jest on włączony, możesz wystawiać i odwoływać certyfikaty.
 
 - **Łącznik certyfikatów PFX dla usługi Microsoft Intune**:  
-  Jeśli zamierzasz korzystać z szyfrowania wiadomości e-mail za pomocą protokołu S/MIME, pobierz z portalu usługi Intune łącznik *PFX Certificate Connector*, który obsługuje importowanie certyfikatów PFX.  Przejdź do pozycji **Konfiguracja urządzenia** > **Łączniki certyfikatu** > **Dodaj** i postępuj zgodnie z *krokami instalowania łącznika dla zaimportowanych certyfikatów PFX*. Użyj linku pobierania w portalu, aby rozpocząć pobieranie instalatora **PfxCertificateConnectorBootstrapper.exe**. 
+  Jeśli zamierzasz korzystać z szyfrowania wiadomości e-mail za pomocą protokołu S/MIME, pobierz z portalu usługi Intune łącznik *PFX Certificate Connector*, który obsługuje importowanie certyfikatów PFX.  Przejdź do pozycji **Konfiguracja urządzenia** > **Łączniki certyfikatu** > **Dodaj** i postępuj zgodnie z *krokami instalowania łącznika dla zaimportowanych certyfikatów PFX*. Użyj linku pobierania w portalu, aby rozpocząć pobieranie instalatora **PfxCertificateConnectorBootstrapper.exe**.
 
   Każda dzierżawa usługi Intune obsługuje pojedyncze wystąpienie tego łącznika. Możesz zainstalować ten łącznik na tym samym serwerze jako wystąpienie łącznika certyfikatu usługi Microsoft Intune.
 
@@ -79,10 +79,12 @@ Aby korzystać z certyfikatów PKCS za pomocą usługi Intune, musisz mieć nast
   Więcej informacji — zobacz [Punkty końcowe sieci dla usługi Microsoft Intune](../fundamentals/intune-endpoints.md) i [Przepustowość i wymagania dotyczące konfiguracji sieci usługi Intune](../fundamentals/network-bandwidth-use.md).
 
 - **Windows Server**:  
-  Używasz systemu Windows Server do hostowania:
+  Systemu Windows Server można używać do hostowania następujących elementów:
 
   - Łącznik certyfikatów usługi Microsoft Intune — na potrzeby scenariuszy uwierzytelniania i szyfrowania wiadomości e-mail za pomocą protokołu S/MIME
   - Łącznik certyfikatów PFX dla usługi Microsoft Intune — na potrzeby scenariuszy szyfrowania wiadomości e-mail za pomocą protokołu S/MIME.
+
+  Te łączniki wymagają dostępu do tych samych portów. Opisano to przy okazji omawiania urządzeń zarządzanych. Więcej informacji zawiera [zawartość dotycząca punktu końcowego urządzenia](https://docs.microsoft.com/intune/fundamentals/intune-endpoints#access-for-managed-devices).
 
   W usłudze Intune łącznik *PFX Certificate Connector* można zainstalować na tym samym serwerze co *Łącznik certyfikatów usługi Microsoft Intune*.
   
@@ -124,7 +126,7 @@ Do uwierzytelnienia urządzenia za pomocą sieci VPN, sieci WiFi lub innych zaso
 9. W obszarze **Rozszerzenia** upewnij się, że w sekcji **Zasady aplikacji** wyświetlane są pozycje System szyfrowania plików, Bezpieczna poczta e-mail i Uwierzytelnienie klienta.
 
     > [!IMPORTANT]
-    > W przypadku szablonów certyfikatów dla systemu iOS przejdź na kartę **Rozszerzenia**, zaktualizuj pozycję **Użycie klucza** i upewnij się, że opcja **Podpis jest dowodem pochodzenia** nie jest zaznaczona.
+    > W przypadku szablonów certyfikatów dla systemu iOS/iPadOS przejdź na kartę **Rozszerzenia**, zaktualizuj pozycję **Użycie klucza** i upewnij się, że opcja **Podpis jest dowodem pochodzenia** nie jest zaznaczona.
 
 10. W obszarze **Zabezpieczenia** dodaj konto komputera dla serwera, na którym instalowany jest Łącznik certyfikatów usługi Microsoft Intune. Nadaj dla tego konta uprawnienia **Odczyt** i **Rejestracja**.
 11. Wybierz kolejno pozycje **Zastosuj** > **OK**, aby zapisać szablon certyfikatu. Zamknij okno **Konsola szablonów certyfikatów**.
@@ -208,12 +210,13 @@ Do uwierzytelnienia urządzenia za pomocą sieci VPN, sieci WiFi lub innych zaso
    |------------|------------|------------|
    |**Próg odnawiania (%)**        |<ul><li>Wszystkie         |Zalecana wartość to 20%  | 
    |**Okres ważności certyfikatu**  |<ul><li>Wszystkie         |Jeśli szablon certyfikatu nie został zmieniony, wartość tej opcji może być ustawiona na jeden rok. |
-   |**Dostawca magazynu kluczy**   |<ul><li>Windows 10  | W przypadku systemu Windows wybierz miejsce przechowywania kluczy na urządzeniu. |
+   |**Dostawca magazynu kluczy**   |<ul><li>Windows 10  |W przypadku systemu Windows wybierz miejsce przechowywania kluczy na urządzeniu. |
    |**Urząd certyfikacji**      |<ul><li>Wszystkie         |Wyświetla wewnętrzną w pełni kwalifikowaną nazwę domeny (nazwę FQDN) urzędu certyfikacji przedsiębiorstwa.  |
    |**Nazwa urzędu certyfikacji** |<ul><li>Wszystkie         |Wyświetla nazwę urzędu certyfikacji przedsiębiorstwa, na przykład „Urząd certyfikacji firmy Contoso”. |
+   |**Nazwa szablonu certyfikatu**    |<ul><li>Wszystkie         |Wyświetla nazwę szablonu certyfikatu. |
    |**Typ certyfikatu**             |<ul><li>Android Enterprise (*profil służbowy*)</li><li>iOS</li><li>macOS</li><li>Windows 10 lub nowszym|Wybierz typ: <ul><li> Certyfikaty typu **Użytkownik** mogą zawierać atrybuty użytkownika i urządzenia w podmiocie i nazwie SAN certyfikatu. </il><li>Certyfikaty typu **Urządzenie** mogą zawierać tylko atrybuty urządzenia w temacie i nazwie SAN certyfikatu. Używaj certyfikatów typu Urządzenie na potrzeby scenariuszy, takich jak urządzenia bez użytkowników, np. kioski lub inne urządzenia udostępnione.  <br><br> Ten wybór ma wpływ na format nazwy podmiotu. |
-   |**Format nazwy podmiotu**          |<ul><li>Wszystkie         |W przypadku większości platform ustaw dla tej opcji wartość **Nazwa pospolita**, chyba że wymagana jest inna nazwa.<br><br>W przypadku następujących platform format nazwy podmiotu jest określany na podstawie typu certyfikatu: <ul><li>Android Enterprise (*profil służbowy*)</li><li>iOS</li><li>macOS</li><li>Windows 10 lub nowszym</li></ul>  <p> Zobacz sekcję [Format nazwy podmiotu](#subject-name-format) w dalszej części tego artykułu. |
-   |**Alternatywna nazwa podmiotu**     |<ul><li>Wszystkie         |Ustaw tę opcję na wartość **Główna nazwa użytkownika (UPN)** , chyba że wymagana jest inna nazwa. |
+   |**Format nazwy podmiotu**          |<ul><li>Wszystkie         |Aby uzyskać szczegółowe informacje na temat sposobu konfigurowania formatu nazwy podmiotu, zobacz [Format nazwy podmiotu](#subject-name-format) w dalszej części tego artykułu.  <br><br> W przypadku większości platform użyj opcji **Nazwa pospolita**, chyba że wymagana jest inna nazwa. <br><br>W przypadku następujących platform format nazwy podmiotu jest określany na podstawie typu certyfikatu: <ul><li>Android Enterprise (*profil służbowy*)</li><li>iOS</li><li>macOS</li><li>Windows 10 lub nowszym</li></ul>  <p>  |
+   |**Alternatywna nazwa podmiotu**     |<ul><li>Wszystkie         |Dla pola *Atrybut* wybierz pozycję **Główna nazwa użytkownika (UPN)** , chyba że wymagana jest inna opcja, skonfiguruj odpowiednią *Wartość*, a następnie kliknij przycisk **Dodaj**. <br><br>Aby uzyskać więcej informacji, zobacz sekcję [Format nazwy podmiotu](#subject-name-format) w dalszej części tego artykułu.|
    |**Rozszerzone użycie klucza**           |<ul><li> Administrator urządzenia z systemem Android </li><li>Android Enterprise (*właściciel urządzenia*, *profil służbowy*) </li><li>Windows 10 |Certyfikaty wymagają zazwyczaj wprowadzenia wartości *Uwierzytelnianie klienta*, aby zapewnić użytkownikom lub urządzeniom możliwość uwierzytelnienia na serwerze. |
    |**Zezwalaj wszystkim aplikacjom na dostęp do klucza prywatnego** |<ul><li>macOS  |Ustaw wartość **Włącz**, aby zezwolić aplikacjom skonfigurowanym dla skojarzonego urządzenia Mac na dostęp do klucza prywatnego certyfikatów PKCS. <br><br> Aby uzyskać więcej informacji na temat tego ustawienia, zobacz *AllowAllAppsAccess* w sekcji Certificate Payload (Ładunek certyfikatu) dokumentu [Configuration Profile Reference](https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf) (Dokumentacja profilu konfiguracji) w dokumentacji dla deweloperów firmy Apple. |
    |**Certyfikat główny**             |<ul><li>Administrator urządzenia z systemem Android </li><li>Android Enterprise (*właściciel urządzenia*, *profil służbowy*) |Wybierz profil certyfikatu głównego urzędu certyfikacji, który został wcześniej przypisany. |
@@ -284,8 +287,6 @@ Platformy:
   > - Właściwości urządzenia użyte w polach *temat* lub *Nazwa SAN* certyfikatu urządzenia, takie jak **IMEI**, **SerialNumber** i **FullyQualifiedDomainName**, są właściwościami, mogą zostać sfałszowane przez osobę z dostępem do urządzenia.
   > - Urządzenie musi obsługiwać wszystkie zmienne określone w profilu certyfikatu, aby dla tego profilu możliwe było instalowanie na urządzeniu.  Na przykład jeśli zmienna **{{IMEI}}** zostanie użyta w nazwie podmiotu profilu SCEP, a następnie zostanie przypisana do urządzenia, które nie ma numeru IMEI, instalacja profilu zakończy się niepowodzeniem.  
  
-
-
 ## <a name="whats-new-for-connectors"></a>Nowości dotyczące łączników
 
 Okresowo są publikowane aktualizacje dla dwóch łączników certyfikatów. Po zaktualizowaniu łącznika możesz przeczytać w tym miejscu o wprowadzonych zmianach.
@@ -303,7 +304,7 @@ Okresowo są publikowane aktualizacje dla dwóch łączników certyfikatów. Po 
 - **Łącznik certyfikatów PFX dla usługi Microsoft Intune — wersja 6.1905.0.402**  
   Zmiany w tej wersji:  
   - Odstęp czasu sondowania dla łącznika został skrócony z 5 minut do 30 sekund.
- 
+
 ### <a name="april-2-2019"></a>2 kwietnia 2019 r.
 
 - **Łącznik certyfikatów usługi Intune — wersja 6.1904.1.0**  

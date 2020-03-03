@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 02/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7a4d6db4f61dea1b073ccce7c4c3f727a91402c1
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 4c938aba7fde84536af2452f13f6ed030fa1d823
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563634"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576419"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Jak skonfigurować aplikację Portal firmy w usłudze Microsoft Intune
 
@@ -37,9 +37,9 @@ Portal firmy usługi Microsoft Intune jest miejscem, w którym użytkownicy uzys
 > [!Tip]
 > Podczas dostosowywania Portalu firmy konfiguracje mają zastosowanie do witryny sieci Web Portal firmy i aplikacji Portal firmy. Należy pamiętać, że użytkownicy muszą mieć przypisaną licencję usługi Intune, aby uzyskiwać dostęp do witryny internetowej Portal firmy.
 
-Dostosowanie Portalu firmy ułatwi zapewnienie znanego i przydatnego środowiska dla użytkowników końcowych. W tym celu w portalu usługi Intune wybierz pozycję **Aplikacje** > **Znakowanie i dostosowywanie**, a następnie skonfiguruj wymagane ustawienia.
+Dostosowanie Portalu firmy ułatwi zapewnienie znanego i przydatnego środowiska dla użytkowników końcowych. W tym celu przejdź do [Centrum administracyjnego usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431), wybierz pozycję **Administracja dzierżawą** > **Znakowanie i dostosowywanie**, a następnie skonfiguruj wymagane ustawienia.
 
-Gdy użytkownik będzie instalował aplikację systemu iOS z witryny Portal firmy, zostanie wyświetlony monit. Dzieje się tak, gdy aplikacja systemu iOS jest połączona ze sklepem z aplikacjami, z programem zakupów zbiorczych (VPP) lub z aplikacją biznesową (LOB). Monit umożliwia użytkownikom zaakceptowanie akcji lub zezwolenie na zarządzanie aplikacją. Monit będzie zawierał nazwę firmy, a jeśli nazwa firmy jest niedostępna, będzie wyświetlana pozycja **Portal firmy**. 
+Gdy użytkownik będzie instalował aplikację systemu iOS/iPadOS z witryny Portal firmy, zostanie wyświetlony monit. Dzieje się tak, gdy aplikacja systemu iOS/iPadOS jest połączona ze sklepem z aplikacjami, z programem zakupów zbiorczych (VPP) lub z aplikacją biznesową (LOB). Monit umożliwia użytkownikom zaakceptowanie akcji lub zezwolenie na zarządzanie aplikacją. Monit będzie zawierał nazwę firmy, a jeśli nazwa firmy jest niedostępna, będzie wyświetlana pozycja **Portal firmy**. 
 
 > [!Note]
 > Jeśli używasz platformy Azure Government, użytkownik końcowy ma możliwość zdecydowania o sposobie udostępnienia dzienników aplikacji, gdy rozpocznie proces uzyskiwania pomocy dotyczącej problemu. Jeśli jednak nie używasz platformy Azure Government, aplikacja Portal firmy w systemie Windows 10 będzie wysyłać dzienniki aplikacji bezpośrednio do firmy Microsoft, gdy użytkownik zainicjuje proces w celu uzyskania pomocy dotyczącej problemu. Wysłanie dzienników aplikacji do firmy Microsoft ułatwi rozwiązywanie i usuwanie problemów. 
@@ -92,11 +92,11 @@ Wybierz logo, które będzie wyglądać najlepiej na białym lub jasnym tle.
 
 ### <a name="brand-image-for-company-portal"></a>Obraz marki dla Portalu firmy
 
-Możesz wyświetlać obraz marki Twojej firmy. Po zapisaniu zmian można wybrać pozycję **Podgląd ustawień** w portalu internetowym usługi Intune w górnej części okienka, aby zobaczyć, jak będą wyglądać konfiguracje. Podgląd obrazu marki jest dostępny tylko w urządzeniu z systemem iOS, a nie w portalu internetowym usługi Intune. 
+Możesz wyświetlać obraz marki Twojej firmy. Po zapisaniu zmian można wybrać pozycję **Podgląd ustawień** w portalu internetowym usługi Intune w górnej części okienka, aby zobaczyć, jak będą wyglądać konfiguracje. Podgląd obrazu marki jest dostępny tylko w urządzeniu z systemem iOS/iPadOS, a nie w portalu internetowym usługi Intune. 
 
 |Nazwa pola|Więcej informacji|
 |---|---|
-|**Przekaż obraz marki**| Ta opcja umożliwia wyświetlanie obrazu marki. W aplikacji Portal firmy dla systemu iOS jest on wyświetlany jako obraz tła na stronie profilu użytkownika.<p><ul><li>Zalecana szerokość obrazu: Większa niż 1125 pikseli (wymagane co najmniej 650 pikseli)</li><li>Maksymalny rozmiar obrazu: 1,3 MB</li><li>Typ pliku: PNG, JPG lub JPEG</li></ul>|
+|**Przekaż obraz marki**| Ta opcja umożliwia wyświetlanie obrazu marki. W aplikacji Portal firmy dla systemu iOS/iPadOS jest on wyświetlany jako obraz tła na stronie profilu użytkownika.<p><ul><li>Zalecana szerokość obrazu: Większa niż 1125 pikseli (wymagane co najmniej 650 pikseli)</li><li>Maksymalny rozmiar obrazu: 1,3 MB</li><li>Typ pliku: PNG, JPG lub JPEG</li></ul>|
 
 Odpowiedni obraz marki wzmacnia pozytywne wrażenie marki, co pozwala zwiększyć zaufanie użytkownika w Portalu firmy. Poniżej przedstawiono porady, które warto wziąć pod uwagę podczas nabywania, wybierania i optymalizowania obrazu dla Portalu firmy. 
 
@@ -108,7 +108,7 @@ Odpowiedni obraz marki wzmacnia pozytywne wrażenie marki, co pozwala zwiększy�
 
 - Usuń niepotrzebne metadane. Plik obrazu może zawierać metadane, takie jak profil aparatu, lokalizację geograficzną, tytuł, podpis itp. Użyj narzędzia do optymalizacji obrazów, aby usunąć te informacje w celu zachowania jakości przy spełnieniu wymagania dotyczącego limitu rozmiaru pliku. 
 
-Po dodaniu lub zmodyfikowaniu obrazu marki w usłudze Intune użytkownik końcowy może nie widzieć zmiany w urządzeniach z systemem iOS do momentu, gdy aplikacja Portal firmy rozpozna zmianę podczas uruchamiania, a następnie zostanie ponownie uruchomiona w celu wyświetlenia obrazu marki. 
+Po dodaniu lub zmodyfikowaniu obrazu marki w usłudze Intune użytkownik końcowy może nie widzieć zmiany w urządzeniach z systemem iOS/iPadOS do momentu, gdy aplikacja Portal firmy rozpozna zmianę podczas uruchamiania, a następnie zostanie ponownie uruchomiona w celu wyświetlenia obrazu marki. 
 
 ### <a name="brand-image-examples"></a>Przykłady obrazu marki
 
@@ -122,20 +122,20 @@ Na poniższej ilustracji przedstawiono przykład obrazu marki urządzenia iPhone
 
 ## <a name="privacy-statement-customization"></a>Dostosowywanie oświadczenia o ochronie prywatności
 
-Możesz dostosować oświadczenie o ochronie prywatności, które jest wyświetlane dla organizacji na zarządzanych urządzeniach z systemem iOS. Ten komunikat zawiera listę elementów, których organizacja nie może zobaczyć ani używać na zarządzanych urządzeniach z systemem iOS.
+Możesz dostosować oświadczenie o ochronie prywatności, które jest wyświetlane dla organizacji na zarządzanych urządzeniach z systemem iOS/iPadOS. Ten komunikat zawiera listę elementów, których organizacja nie może zobaczyć ani używać na zarządzanych urządzeniach z systemem iOS/iPadOS.
 
 W obszarze **Dostosowywanie Portalu firmy** > **Komunikat dotyczący zarządzania urządzeniami i prywatności** możesz:
 
 - wybrać pozycję **Domyślne**, aby zaakceptować listę i używać jej w takiej formie, w jakiej została pokazana, lub
-- wybrać pozycję **Niestandardowe**, aby dostosować listę elementów, których organizacja nie może zobaczyć ani używać na zarządzanych urządzeniach z systemem iOS. Aby dodać punktory, pogrubienie, kursywę i linki, można użyć znaczników [markdown](https://daringfireball.net/projects/markdown/).
+- wybrać pozycję **Niestandardowe**, aby dostosować listę elementów, których organizacja nie może zobaczyć ani używać na zarządzanych urządzeniach z systemem iOS/iPadOS. Aby dodać punktory, pogrubienie, kursywę i linki, można użyć znaczników [markdown](https://daringfireball.net/projects/markdown/).
 
 ## <a name="company-portal-derived-credentials-for-ios-devices"></a>Pochodne poświadczenia aplikacji Portal firmy dla urządzeń z systemem iOS
-Usługa Intune obsługuje pochodne poświadczenia na potrzeby weryfikacji tożsamości osobistej (PIV) i kart Common Access Card (CAC) w ramach partnerstwa z dostawcami poświadczeń DISA Purebred, Entrust Datacard i Intercede. Użytkownicy końcowi zostaną poproszeni o wykonanie dodatkowych czynności po rejestracji swojego urządzenia z systemem iOS w celu zweryfikowania ich tożsamości w aplikacji Portal firmy. Włączenie pochodnych poświadczeń dla użytkowników polega w pierwszej kolejności na skonfigurowaniu dostawcy poświadczeń dla dzierżawy, a następnie wyznaczeniu profilu, który będzie korzystał z pochodnych poświadczeń na potrzeby użytkowników lub urządzeń.
+Usługa Intune obsługuje pochodne poświadczenia na potrzeby weryfikacji tożsamości osobistej (PIV) i kart Common Access Card (CAC) w ramach partnerstwa z dostawcami poświadczeń DISA Purebred, Entrust Datacard i Intercede. Użytkownicy końcowi zostaną poproszeni o wykonanie dodatkowych czynności po rejestracji swojego urządzenia z systemem iOS/iPadOS w celu zweryfikowania ich tożsamości w aplikacji Portal firmy. Włączenie pochodnych poświadczeń dla użytkowników polega w pierwszej kolejności na skonfigurowaniu dostawcy poświadczeń dla dzierżawy, a następnie wyznaczeniu profilu, który będzie korzystał z pochodnych poświadczeń na potrzeby użytkowników lub urządzeń.
 
 > [!NOTE]
 > Użytkownik zobaczy instrukcje dotyczące pochodnych poświadczeń dzięki linkowi określonemu przez Ciebie za pośrednictwem usługi Intune.
 
-Aby uzyskać więcej informacji na temat pochodnych poświadczeń dla urządzeń z systemem iOS, zobacz [Korzystanie z pochodnych poświadczeń w usłudze Microsoft Intune](~/protect/derived-credentials.md).
+Aby uzyskać więcej informacji na temat pochodnych poświadczeń dla urządzeń z systemem iOS/iPadOS, zobacz [Korzystanie z pochodnych poświadczeń w usłudze Microsoft Intune](~/protect/derived-credentials.md).
 
 ## <a name="dark-mode-for-ios-company-portal"></a>Tryb ciemny dla aplikacji Portal firmy systemu iOS
 
@@ -150,7 +150,7 @@ Poniższe skróty klawiaturowe są dostępne w aplikacji Portal firmy dla system
 | Obszar | Opis | Skrót klawiaturowy |
 |:------------------:|:--------------:|:-----------------:|
 | Menu nawigacji | Nawigacja | Alt + M |
-|  | Domowy | Alt + H |
+|  | Domowy | ALT + H |
 |  | Wszystkie aplikacje | Alt + A |
 |  | Zainstalowane aplikacje | ALT + I |
 |  | Wyślij opinię | Alt + F |
@@ -177,7 +177,7 @@ Za pomocą aplikacji lub witryny Portal firmy użytkownicy mogą wykonywać akcj
 - **Zmień nazwę** — Ta akcja zmienia nazwę urządzenia, którą użytkownik widzi w Portalu firmy. Nie zmienia ona nazwy urządzenia lokalnego, tylko pozycję widoczną na liście w Portalu firmy.
 - **Synchronizuj** — Ta akcja inicjuje ewidencjonowanie urządzenia w usłudze Intune. Ta opcja jest widoczna jako **Sprawdź stan** w Portalu firmy.
 - **Zdalne blokowanie** — Blokuje urządzenie i wymaga podania kodu PIN w celu odblokowania.
-- **Resetowanie kodu dostępu** — Ta akcja służy do resetowania kodu dostępu urządzenia. Na urządzeniach z systemem iOS kod dostępu zostanie usunięty i użytkownik końcowy będzie musiał wprowadzić nowy kod w ustawieniach. Na obsługiwanych urządzeniach z systemem Android nowy kod dostępu jest generowany przez usługę Intune i tymczasowo wyświetlany w Portalu firmy.
+- **Resetowanie kodu dostępu** — Ta akcja służy do resetowania kodu dostępu urządzenia. Na urządzeniach z systemem iOS/iPadOS kod dostępu zostanie usunięty i użytkownik końcowy będzie musiał wprowadzić nowy kod w ustawieniach. Na obsługiwanych urządzeniach z systemem Android nowy kod dostępu jest generowany przez usługę Intune i tymczasowo wyświetlany w Portalu firmy.
 - **Odzyskiwanie kluczy** — Ta akcja służy do odzyskania osobistego klucza odzyskiwania dla zaszyfrowanych urządzeń z systemem macOS z witryny Portal firmy. 
 
 ### <a name="self-service-actions"></a>Akcje samoobsługowe
@@ -192,7 +192,7 @@ Niektóre platformy i konfiguracje nie zezwalają na samoobsługowe akcje urząd
 | Synchronizuj | Dostępne | Dostępne | Dostępne | Dostępne |
 | Zdalne blokowanie | Tylko system Windows Phone | Dostępne | Dostępne | Dostępne |
 | Resetowanie kodu dostępu | Tylko system Windows Phone | Dostępne<sup>(8)</sup> | Nie dotyczy | Dostępne<sup>(6)</sup> |
-| Odzyskiwanie kluczy | Nie dotyczy | Nie dotyczy | Dostępne<sup>(2)</sup> | Nie dotyczy |
+| Odzyskiwanie klucza | Nie dotyczy | Nie dotyczy | Dostępne<sup>(2)</sup> | Nie dotyczy |
 
 <sup>(1)</sup> **Wycofanie** jest zawsze zablokowane na urządzeniach z systemem Windows dołączonych do usługi Azure AD.<br>
 <sup>(2)</sup> **Odzyskiwanie klucza** dla systemu MacOS jest dostępne tylko w portalu internetowym.<br>
@@ -201,7 +201,7 @@ Niektóre platformy i konfiguracje nie zezwalają na samoobsługowe akcje urząd
 <sup>(5)</sup> **Czyszczenie** nie jest dostępne na urządzeniach z systemem iOS zarejestrowanych przez użytkownika.<br>
 <sup>(6)</sup> **Resetowanie kodu dostępu** nie jest obsługiwane w niektórych konfiguracjach systemów Android i Android Enterprise. Aby uzyskać więcej informacji, zobacz [Resetowanie lub usuwanie kodu dostępu urządzenia w usłudze Intune](../remote-actions/device-passcode-reset.md).<br>
 <sup>(7)</sup> **Wycofywanie** i **czyszczenie** nie są dostępne w scenariuszach właściciela urządzenia z systemem Android Enterprise (COPE, COBO, COSU).<br> 
-<sup>(8)</sup> **Resetowania kodu dostępu** nie jest obsługiwana na urządzeniach z systemem iOS zarejestrowanych przez użytkownika.
+<sup>(8)</sup> **Resetowanie kodu dostępu** nie jest obsługiwane na urządzeniach z systemem iOS zarejestrowanych przez użytkownika.
 
 ## <a name="next-steps"></a>Następne kroki
 

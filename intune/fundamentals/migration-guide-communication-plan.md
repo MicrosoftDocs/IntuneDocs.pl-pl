@@ -17,12 +17,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f617e85e78ac5436567790d416c988742a2abe4c
-ms.sourcegitcommit: de663ef5f3e82e0d983899082a7f5b62c63f24ef
+ms.openlocfilehash: c880251d59810dc02446020ed02fd6049878262c
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75956225"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515020"
 ---
 # <a name="plan-communications"></a>Planowanie komunikacji
 
@@ -52,7 +52,7 @@ Utworzyliśmy krótkie filmy wideo z instrukcjami krok po kroku, aby pomóc uży
 
 - [Rejestracja urządzenia z systemem Android](https://www.youtube.com/watch?v=k0Q_sGLSx6o&t=1s)
 - [Enroll your Android Work Profile device (Rejestrowanie urządzenia z profilem służbowym systemu Android)](https://www.youtube.com/watch?v=9Dl8HsGk4tI&t=3s)
-- [Rejestrowanie urządzenia z systemem iOS](https://www.youtube.com/watch?v=mJyv6YcHi7c)
+- [Rejestrowanie urządzenia z systemem iOS/iPadOS](https://www.youtube.com/watch?v=mJyv6YcHi7c)
 - [Rejestrowanie urządzenia z systemem macOS](https://www.youtube.com/watch?v=Pa2pfhwq_yk)
 - [Enroll your Windows (Rejestrowanie w przypadku systemu Windows)](https://www.youtube.com/watch?v=TKQxEckBHiE)
 
@@ -61,5 +61,5 @@ Utworzyliśmy krótkie filmy wideo z instrukcjami krok po kroku, aby pomóc uży
 W usłudze Intune są dostępne dodatkowe zasoby zachęcające użytkowników do rejestracji urządzeń:
 
 - [Jak przekazywać wiedzę użytkownikom końcowym na temat usługi Microsoft Intune](end-user-educate.md) omawia kroki rejestracji związane z platformą systemu operacyjnego dla urządzeń przenośnych.
-- W temacie [Rejestracja urządzeń z usługą Intune dla administratorów IT](../enrollment/device-enrollment.md) wyjaśniono, jak zarejestrować urządzenia z systemem Android, iOS i Mac w usłudze Intune.
-- Udostępnij aplikację Portal firmy użytkownikom systemów Android, iOS i Windows.
+- W temacie [Rejestracja urządzeń z usługą Intune dla administratorów IT](../enrollment/device-enrollment.md) wyjaśniono, jak zarejestrować urządzenia z systemem Android, iOS/iPadOS i Mac w usłudze Intune.
+- Udostępnij aplikację Portal firmy użytkownikom systemów Android, iOS/iPadOS i Windows.

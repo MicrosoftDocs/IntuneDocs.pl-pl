@@ -15,24 +15,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: adea17c0e013d922c0bc3ccf06ed590828bd79dd
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 15147a1d9ffd82e2f900d15c4a9d2b4d23ad23e3
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73801487"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515156"
 ---
 # <a name="smime-overview-to-sign-and-encrypt-email-in-intune"></a>Omówienie protokołu S/MIME w zakresie podpisywania i szyfrowania wiadomości e-mail w usłudze Intune
 
 Certyfikaty poczty e-mail, nazywane też certyfikatami S/MIME, zapewniają dodatkowe zabezpieczenia wiadomości e-mail przy użyciu szyfrowania i odszyfrowywania. Usługa Microsoft Intune może używać certyfikatów S/MIME do podpisywania i szyfrowania wiadomości e-mail w urządzeniach przenośnych korzystających z następujących platform:
 
 - Android
-- iOS
+- iOS/iPadOS
 - macOS
 - Windows 10 lub nowszym
 - Windows Phone
 
-Na urządzeniach z systemem iOS można utworzyć profil poczty e-mail zarządzany przez usługę Intune, która będzie korzystać z protokołu S/MIME i certyfikatów w przypadku podpisywania i szyfrowania przychodzących i wychodzących wiadomości e-mail. Na innych platformach protokół S/MIME może być obsługiwany lub nie. Jeśli jest obsługiwany, zainstaluj certyfikaty, które używają podpisywania i szyfrowania za pomocą protokołu S/MIME. Następnie użytkownik końcowy włącza protokół S/MIME w aplikacjach poczty e-mail.
+Na urządzeniach z systemem iOS/iPadOS można utworzyć profil poczty e-mail zarządzany przez usługę Intune, która będzie korzystać z protokołu S/MIME i certyfikatów w przypadku podpisywania i szyfrowania przychodzących i wychodzących wiadomości e-mail. Na innych platformach protokół S/MIME może być obsługiwany lub nie. Jeśli jest obsługiwany, zainstaluj certyfikaty, które używają podpisywania i szyfrowania za pomocą protokołu S/MIME. Następnie użytkownik końcowy włącza protokół S/MIME w aplikacjach poczty e-mail.
 
 Aby uzyskać więcej informacji na temat szyfrowania i podpisywania wiadomości e-mail przy użyciu protokołu S/MIME w programie Exchange, zobacz [S/MIME for message signing and encryption (Protokół S/MIME na potrzeby podpisywania i szyfrowania wiadomości)](https://docs.microsoft.com/Exchange/policy-and-compliance/smime).
 
@@ -44,13 +44,13 @@ Certyfikaty używane do podpisywania umożliwiają aplikacji poczty e-mail klien
 
 Aby korzystać z podpisywania certyfikatów, należy utworzyć szablon w obrębie urzędu certyfikacji skoncentrowany na podpisywaniu. Temat [Configure the server certificate template (Konfigurowanie szablonu certyfikatu serwera)](https://docs.microsoft.com/windows-server/networking/core-network-guide/cncg/server-certs/configure-the-server-certificate-template) dla urzędu certyfikacji usługi Microsoft Active Directory zawiera instrukcje dotyczące tworzenia szablonów certyfikatów.
 
-Certyfikaty podpisywania w usłudze Intune używają certyfikatów PKCS. W artykule [Konfigurowanie certyfikatów PKCS i korzystanie z nich](certficates-pfx-configure.md) opisano sposób wdrażania i używania certyfikatu PKCS w danym środowisku usługi Intune. Kroki te obejmują:
+Certyfikaty podpisywania w usłudze Intune używają certyfikatów PKCS. W artykule [Konfigurowanie certyfikatów PKCS i korzystanie z nich](certficates-pfx-configure.md) opisano sposób wdrażania i używania certyfikatu PKCS w danym środowisku usługi Intune. Te kroki to:
 
 - Pobieranie i instalowanie łącznika certyfikatów usługi Microsoft Intune na potrzeby obsługi żądań certyfikatów PKCS.
 - Tworzenie profilu zaufanego certyfikatu głównego dla urządzeń. Ten krok obejmuje używanie zaufanych certyfikatów głównych i certyfikatów pośrednich dla urzędu certyfikacji, a następnie wdrażanie profilu do urządzeń.
 - Tworzenie profilu certyfikatu PKCS przy użyciu utworzonego szablonu certyfikatu. Ten profil wystawia certyfikaty podpisywania dla urządzeń i wdraża profil certyfikatu PKCS na urządzeniach.
 
-Można również zaimportować certyfikat podpisywania dla określonego użytkownika. Certyfikat podpisywania jest wdrażany na dowolnym urządzeniu rejestrowanym przez użytkownika. Aby importować certyfikaty w usłudze Intune, należy używać [poleceń cmdlet programu PowerShell w usłudze GitHub](https://github.com/Microsoft/Intune-Resource-Access). Aby wdrożyć certyfikat PKCS zaimportowany w usłudze Intune w celu używania go do podpisywania wiadomości e-mail, należy wykonać kroki opisane w temacie [Konfigurowanie certyfikatów PKCS i korzystanie z nich za pomocą usługi Intune](certficates-pfx-configure.md). Kroki te obejmują:
+Można również zaimportować certyfikat podpisywania dla określonego użytkownika. Certyfikat podpisywania jest wdrażany na dowolnym urządzeniu rejestrowanym przez użytkownika. Aby importować certyfikaty w usłudze Intune, należy używać [poleceń cmdlet programu PowerShell w usłudze GitHub](https://github.com/Microsoft/Intune-Resource-Access). Aby wdrożyć certyfikat PKCS zaimportowany w usłudze Intune w celu używania go do podpisywania wiadomości e-mail, należy wykonać kroki opisane w temacie [Konfigurowanie certyfikatów PKCS i korzystanie z nich za pomocą usługi Intune](certficates-pfx-configure.md). Te kroki to:
 
 - Pobieranie i instalowanie łącznika certyfikatów PFX w usłudze Microsoft Intune. Ten łącznik dostarcza importowane certyfikaty PKCS na urządzenia.
 - Importowanie certyfikatów podpisywania wiadomości e-mail w ramach protokołu S/MIME do usługi Intune.
@@ -66,7 +66,7 @@ Zaleca się, aby certyfikaty szyfrowania wiadomości e-mail nie były tworzone w
 
 Aby wdrażać certyfikaty szyfrowania S/MIME przy użyciu usługi Intune, należy zaimportować wszystkie certyfikaty szyfrowania użytkownika do usługi Intune. Usługa Intune następnie wdraża wszystkie te certyfikaty do każdego urządzenia rejestrowanego przez użytkownika. Aby importować certyfikaty w usłudze Intune, należy używać [poleceń cmdlet programu PowerShell w usłudze GitHub](https://github.com/Microsoft/Intune-Resource-Access).
 
-Aby wdrożyć certyfikat PKCS zaimportowany w usłudze Intune i używany do szyfrowania wiadomości e-mail, należy wykonać kroki opisane w temacie [Konfigurowanie certyfikatów PKCS i korzystanie z nich za pomocą usługi Intune](certficates-pfx-configure.md). Kroki te obejmują:
+Aby wdrożyć certyfikat PKCS zaimportowany w usłudze Intune i używany do szyfrowania wiadomości e-mail, należy wykonać kroki opisane w temacie [Konfigurowanie certyfikatów PKCS i korzystanie z nich za pomocą usługi Intune](certficates-pfx-configure.md). Te kroki to:
 
 - Pobieranie i instalowanie łącznika certyfikatów PFX w usłudze Microsoft Intune. Ten łącznik dostarcza importowane certyfikaty PKCS na urządzenia.
 - Importowanie certyfikatów szyfrowania wiadomości e-mail w ramach protokołu S/MIME do usługi Intune.
@@ -77,7 +77,7 @@ Aby wdrożyć certyfikat PKCS zaimportowany w usłudze Intune i używany do szyf
 
 ## <a name="smime-email-profiles"></a>Profile poczty e-mail protokołu S/MIME
 
-Po utworzeniu profilów certyfikatów podpisywania i szyfrowania S/MIME można [włączyć protokół S/MIME na potrzeby natywnej poczty e-mail systemu iOS](../configuration/email-settings-ios.md).
+Po utworzeniu profilów certyfikatów podpisywania i szyfrowania S/MIME można [włączyć protokół S/MIME na potrzeby natywnej poczty e-mail systemu iOS/iPadOS](../configuration/email-settings-ios.md).
 
 ## <a name="next-steps"></a>Następne kroki
 

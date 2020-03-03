@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 62ba66469dfff004c3cd6a60284ec7466e8b9f00
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: 41a46bd400c5901f0352709f6057bddac262ff9e
+ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415513"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77609381"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Usuwanie urządzeń przy użyciu czyszczenia, wycofywania lub ręcznego wyrejestrowywania urządzenia
 
@@ -47,7 +47,7 @@ Akcja **Wyczyść** przywraca domyślne ustawienia fabryczne na urządzeniu. Je�
 
 Opcja **Zachowaj stan rejestracji i konto użytkownika** jest dostępna tylko w wersji 1709 systemu Windows 10 lub nowszej.
 
-Opcja **Wykonaj chronione czyszczenie** zapewnia, że nie można obejść akcji czyszczenia przez wyłączenie urządzenia. Funkcja chronionego czyszczenia będzie ponawiać próby zresetowania urządzenia do momentu pomyślnego przeprowadzenia czyszczenia. W przypadku niektórych konfiguracji ta akcja może pozostawić urządzenie w stanie, który uniemożliwia jego ponowne uruchomienie.
+Opcja **Wykonaj chronione czyszczenie** zapewnia, że nie można obejść akcji czyszczenia przez wyłączenie urządzenia. Funkcja chronionego czyszczenia będzie ponawiać próby zresetowania urządzenia do momentu pomyślnego przeprowadzenia czyszczenia. W przypadku niektórych konfiguracji ta akcja może pozostawić urządzenie w stanie, który [uniemożliwia jego ponowne uruchomienie](troubleshoot-device-actions.md#wipe-action).
 
 Zasady zarządzania urządzeniami przenośnymi zostaną zastosowane przy następnym połączeniu urządzenia z usługą Intune.
 
@@ -196,6 +196,9 @@ Jeśli chcesz całkowicie usunąć urządzenie Apple DEP z zarządzania przez us
 5. Wybierz przycisk **Reassign (Przypisz ponownie)** .
 
     ![Zrzut ekranu przedstawiający ponowne przypisanie urządzenia Apple](./media/devices-wipe/apple-reassign.png)
+
+## <a name="device-states"></a>Stany urządzeń
+Aby uzyskać opis stanów urządzeń, zobacz [kolekcję managementStates](https://docs.microsoft.com/intune/developer/intune-data-warehouse-collections.md#managementstates).
 
 ## <a name="fresh-start"></a>Rozpoczęcie od nowa
 

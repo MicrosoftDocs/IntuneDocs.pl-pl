@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fdc704d1971dfcc46ee2c3f5550e201d7a8e89fb
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 1cdfc7d42d3bffe1abe21deddfe146af953b150a
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72505188"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514952"
 ---
 # <a name="implement-your-microsoft-intune-plan"></a>Implementowanie planu dotyczącego usługi Microsoft Intune
 
@@ -39,7 +39,7 @@ Główne wymagania autonomicznej usługi Intune to:
 
 - Subskrypcja usługi Office 365 (w przypadku aplikacji pakietu Office i aplikacji zarządzanych za pomocą zasad ochrony aplikacji)
 
-- Certyfikat Apple APNs (w celu włączenia zarządzanie platformą urządzeń z systemem iOS)
+- Certyfikat Apple APNs (w celu włączenia zarządzanie platformą urządzeń z systemem iOS/iPadOS)
 
 - Program Azure AD Connect (do synchronizacji katalogów)
 
@@ -88,7 +88,7 @@ Przed rozpoczęciem instalacji, konfigurowania i rejestrowania urządzeń oraz z
 
 ### <a name="task-6-enable-device-platforms"></a>Zadanie 6. Włączanie platform urządzeń
 
-Domyślnie większość platform urządzeń jest włączona — z wyjątkiem urządzeń firmy Apple (system iOS i komputery Mac). Zanim możliwe będzie zarejestrowanie urządzeń z systemem iOS w usłudze Intune i zarządzanie nimi należy włączyć platformę urządzenia. Aby to zrobić, należy utworzyć certyfikat wypychania MDM i dodać go do usługi Intune.
+Domyślnie większość platform urządzeń jest włączona — z wyjątkiem urządzeń firmy Apple (system iOS/iPadOS i komputery Mac). Zanim możliwe będzie zarejestrowanie urządzeń z systemem iOS/iPadOS w usłudze Intune i zarządzanie nimi należy włączyć platformę urządzenia. Aby to zrobić, należy utworzyć certyfikat wypychania MDM i dodać go do usługi Intune.
 
 - Dowiedz się więcej o [włączaniu urządzeń firmy Apple do rejestracji](../enrollment/apple-mdm-push-certificate-get.md).
 
@@ -130,7 +130,7 @@ Usługa Intune obsługuje dostęp warunkowy dla usługi Exchange Online, lokalne
 
 ### <a name="task-13-enroll-devices"></a>Zadanie 13. Rejestrowanie urządzeń
 
-Usługa Intune obsługuje platformy urządzeń przenośnych z systemem iOS, Mac OS, Android, Windows Desktop i Windows Mobile. Zarejestruj odpowiednie platformy urządzeń przenośnych na podstawie przypadków użycia i wymagań dotyczących wdrożenia usługi Intune.
+Usługa Intune obsługuje platformy urządzeń przenośnych z systemem iOS/iPadOS, Mac OS, Android, Windows Desktop i Windows Mobile. Zarejestruj odpowiednie platformy urządzeń przenośnych na podstawie przypadków użycia i wymagań dotyczących wdrożenia usługi Intune.
 
 - Dowiedz się więcej na temat [rejestrowania urządzeń](../enrollment/device-enrollment.md).
 

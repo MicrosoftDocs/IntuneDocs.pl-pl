@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b67e3b14fd94376fb6dacad88fa58ddc460a6bc5
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: f056f665ebee0d1e2315129a4fe739b2c490ca98
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73057578"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514850"
 ---
 # <a name="mobile-threat-defense-integration-with-intune"></a>Integracja narzędzia Mobile Threat Defense z usługą Intune
 
@@ -50,7 +50,7 @@ Usługa Intune, jeśli jest włączona, zbiera informacje dotyczące spisu aplik
 Konieczne jest wyrażenie zgody na uczestnictwo w tej usłudze; żadne informacje o spisie aplikacji nie są domyślnie udostępniane. Administrator usługi Intune musi włączyć **synchronizację aplikacji dla urządzeń z systemem iOS** w ustawieniach łącznika usługi Mobile Threat Defense, zanim zostaną udostępnione jakiekolwiek informacje dotyczące spisu aplikacji.
 
 **Spis aplikacji**  
-W przypadku włączenia synchronizacji aplikacji dla urządzeń z systemem iOS spisy zarówno z urządzeń z systemem iOS będących własnością firmy, jak i poszczególnych osób są wysyłane do dostawcy usługi MTD. Spis aplikacji zawiera następujące dane:
+W przypadku włączenia synchronizacji aplikacji dla urządzeń z systemem iOS/iPadOS spisy zarówno z urządzeń z systemem iOS/iPadOS będących własnością firmy, jak i poszczególnych osób są wysyłane do dostawcy usługi MTD. Spis aplikacji zawiera następujące dane:
 
 - Identyfikator aplikacji
 - Wersja aplikacji

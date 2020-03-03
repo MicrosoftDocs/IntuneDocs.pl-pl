@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba6b8fb66d25af3833e55eebc12e8b6df2fb5ba5
-ms.sourcegitcommit: 66e284fe092e19c1da72b4b770e45bf25ac7910c
+ms.openlocfilehash: 68fcdb66591ec0e566aa702b3ca4d6c5c5448859
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74860234"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514017"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Tworzenie zasad zgodności w usłudze Microsoft Intune
 
@@ -53,7 +53,7 @@ Aby korzystać z zasad zgodności urządzeń, upewnij się, że spełniono nast�
   - macOS
   - Windows 10
   - Windows 8.1
-  - Windows Phone 8,1
+  - Windows Phone 8,1
 
 - Urządzenia zostały zarejestrowane w usłudze Intune (wymagane na wyświetlenia stanu zgodności)
 
@@ -67,7 +67,7 @@ Aby korzystać z zasad zgodności urządzeń, upewnij się, że spełniono nast�
 
 3. Określ następujące właściwości:
 
-   - **Nazwa**: wprowadź opisową nazwę zasad. Nadaj nazwę zasadom, aby można było je później łatwo rozpoznać. Na przykład dobrą nazwą zasad jest **Oznaczanie urządzeń ze zdjętymi zabezpieczeniami systemu iOS jako niezgodnych**.
+   - **Nazwa**: wprowadź opisową nazwę zasad. Nadaj nazwę zasadom, aby można było je później łatwo rozpoznać. Na przykład dobrą nazwą zasad jest **Oznaczanie urządzeń ze zdjętymi zabezpieczeniami systemu iOS/iPadOS jako niezgodnych**.
 
    - **Opis**: wprowadź opis zasad. To ustawienie jest opcjonalne, ale zalecane.
 
@@ -102,7 +102,7 @@ Aby korzystać z zasad zgodności urządzeń, upewnij się, że spełniono nast�
 
    - **Zakres (tagi)** : Tagi zakresu to doskonały sposób filtrowania profilów w celu zdefiniowania grup takich `US-NC IT Team` lub `JohnGlenn_ITDepartment`. Po dodaniu ustawień możesz również dodać tag zakresu do zasad zgodności. Pomocnym zasobem jest artykuł [Używanie tagów zakresu do filtrowania zasad](../fundamentals/scope-tags.md).
 
-4. Po zakończeniu wybierz pozycję **OK**  >  **Utwórz**, aby zapisać zmiany. Zasady zostaną utworzone i wyświetlone na liście. Następnie przypisz zasady do grup.
+4. Po zakończeniu wybierz pozycję **OK** > **Utwórz**, aby zapisać zmiany. Zasady zostaną utworzone i wyświetlone na liście. Następnie przypisz zasady do grup.
 
 ## <a name="assign-the-policy"></a>Przypisywanie zasad
 

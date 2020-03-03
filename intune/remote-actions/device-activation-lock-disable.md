@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3f67a08ef3cbfae4a801333e5f8ffb5469e723ed
-ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
+ms.openlocfilehash: 65a13c2690f08c2244f31854556a88b6301c6ac5
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77438059"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576013"
 ---
 # <a name="disable-activation-lock-on-supervised-iosipados-devices-with-intune"></a>Wyłączanie blokady aktywacji na nadzorowanych urządzeniach z systemem iOS/iPadOS przy użyciu usługi Intune
 
@@ -63,7 +63,7 @@ Usługa Intune może wysłać żądanie dotyczące stanu blokady aktywacji na na
 Aby wyłączyć blokadę aktywacji na urządzeniach, trzeba ją najpierw włączyć, postępując zgodnie z następującymi instrukcjami:
 
 1. Skonfiguruj profil ograniczeń dotyczących urządzeń w usłudze Intune dla systemu iOS/iPadOS przy użyciu informacji w temacie [Jak skonfigurować ustawienia ograniczeń dotyczących urządzeń w usłudze Microsoft Intune](/intune-azure/configure-devices/how-to-configure-device-restrictions).
-2. W [ustawieniach ograniczeń urządzenia dla systemu iOS](../configuration/device-restrictions-ios.md) w sekcji ustawień **Ogólne** włącz opcję **Blokada aktywacji**.
+2. W [ustawieniach ograniczeń urządzenia dla systemu iOS/iPadOS](../configuration/device-restrictions-ios.md) w sekcji ustawień **Ogólne** włącz opcję **Blokada aktywacji**.
 3. Zapisz profil, a następnie [przypisz go](../configuration/device-profile-assign.md) do urządzeń, na których chcesz zarządzać wyłączaniem blokady aktywacji.
 
 

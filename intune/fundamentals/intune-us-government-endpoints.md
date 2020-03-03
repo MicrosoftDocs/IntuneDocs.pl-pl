@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dfa93bb758447c872d172ded7706fd7507a42f11
-ms.sourcegitcommit: c7c6be3833d9a63d43f31d598b555b49b33cf5cb
+ms.openlocfilehash: d7edf84ada3c84b7ad31748909ef81a877237fd5
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76966287"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514476"
 ---
 # <a name="us-government-endpoints-for-microsoft-intune"></a>Punkty końcowe dla instytucji rządowych USA w usłudze Microsoft Intune
 
@@ -74,8 +74,8 @@ W przypadku urządzeń zarządzanych przez usługę Intune przy użyciu rozwiąz
 Aby uzyskać więcej informacji, zobacz:
 
 - [Porty TCP i UDP używane przez produkty Apple](https://support.apple.com/HT202944)
-- [Informacje o połączeniach z serwerami systemów macOS i iOS oraz aplikacji iTunes oraz o procesach aplikacji iTunes działających w tle](https://support.apple.com/HT201999)
-- [Jeśli urządzenia klienckie z systemem macOS lub iOS nie otrzymują powiadomień w trybie push Apple](https://support.apple.com/HT203609)
+- [Informacje o połączeniach z serwerami systemów macOS i iOS/iPadOS oraz aplikacji iTunes oraz o procesach aplikacji iTunes działających w tle](https://support.apple.com/HT201999)
+- [Jeśli urządzenia klienckie z systemem macOS lub iOS/iPadOS nie otrzymują powiadomień w trybie push Apple](https://support.apple.com/HT203609)
 
 ## <a name="next-steps"></a>Następne kroki
 [Punkty końcowe sieci dla usługi Microsoft Intune](intune-endpoints.md)

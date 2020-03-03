@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 24d0a8160d852a5a44f5df688b7e0bc230d56704
-ms.sourcegitcommit: c7c6be3833d9a63d43f31d598b555b49b33cf5cb
+ms.openlocfilehash: c454ae6184f4d2a7c3c31f3c61d2cf4331ac187c
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76966389"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514102"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Konfigurowanie infrastruktury do obsługi protokołu SCEP w usłudze Intune
 
@@ -148,7 +148,7 @@ Poniższe sekcje wymagają znajomości systemu Windows Server 2012 R2 lub nowsze
        > [!IMPORTANT]
        > Dodaj tylko te zasady aplikacji, które są wymagane. Należy uzgodnić wybrane opcje z administratorami zabezpieczeń.
 
-     - W przypadku szablonów certyfikatów dla systemu iOS i macOS edytuj również pozycję **Użycie klucza** i upewnij się, że opcja **Podpis jest dowodem pochodzenia** nie jest zaznaczona.
+     - W przypadku szablonów certyfikatów dla systemu iOS/iPadOS i macOS edytuj również pozycję **Użycie klucza** i upewnij się, że opcja **Podpis jest dowodem pochodzenia** nie jest zaznaczona.
 
      ![Szablon, karta rozszerzeń](./media/certificates-scep-configure/scep-ndes-extensions.jpg)  
 
@@ -217,7 +217,7 @@ Po [utworzeniu szablonu certyfikatu SCEP](#create-the-scep-certificate-template)
 Domyślnie usługa Intune używa wartości skonfigurowanej w szablonie. Urząd certyfikacji można jednak skonfigurować tak, aby umożliwiał żądającemu podanie innej wartości, a wartość tę można ustawić przy użyciu konsoli usługi Intune.
 
 > [!IMPORTANT]
-> W przypadku systemów iOS i macOS zawsze używaj wartości ustawionej w szablonie.
+> W przypadku systemów iOS/iPadOS i macOS zawsze używaj wartości ustawionej w szablonie.
 
 #### <a name="to-configure-a-value-that-can-be-set-from-within-the-intune-console"></a>Aby skonfigurować wartość, którą można ustawić z poziomu konsoli usługi Intune
 

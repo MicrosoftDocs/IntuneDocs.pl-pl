@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 191be009f8d9e6fc448126834ef48f0bc6e2edc4
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: c8e4671790b72583219f1df64a0ef3491d707ea7
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72505349"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515037"
 ---
 # <a name="configure-device-compliance-and-app-management-policies-when-migrating-to-microsoft-intune"></a>Konfigurowanie zasad zgodności urządzeń i zasad zarządzania aplikacjami podczas migracji do usługi Microsoft Intune
 
@@ -60,11 +60,11 @@ Profile dostępu do zasobów dostarczają certyfikaty i konfiguracje dostępu za
 
 Musisz utworzyć profil konfiguracji urządzeń, aby wymusić stosowanie ustawień na poziomie urządzenia, na przykład wyłączyć aparat i sklep z aplikacjami, skonfigurować ekran główny i tryb pojedynczej aplikacji itd. Dowiedz się więcej o [profilach urządzeń](../configuration/device-profiles.md).
 
-#### <a name="directly-import-ios-configuration-profiles-optional"></a>Bezpośrednie importowanie profilów konfiguracji systemu iOS (opcjonalnie)
+#### <a name="directly-import-iosipados-configuration-profiles-optional"></a>Bezpośrednie importowanie profilów konfiguracji systemu iOS/iPadOS (opcjonalnie)
 
 - **Profile programu Apple Configurator dla systemu iOS (system iOS 7.1 lub nowszy):** jeśli istniejące rozwiązanie MDM używa profilów programu Apple Configurator (plików mobileconfig), można je bezpośrednio zaimportować do usługi Intune jako niestandardowe zasady konfiguracji.
 
-- **Zasady konfiguracji aplikacji mobilnych dla systemu iOS:** jeśli istniejące rozwiązanie MDM używa zasad konfiguracji aplikacji mobilnych dla systemu iOS, można je bezpośrednio zaimportować do usługi Intune, o ile są one zgodne z formatem XML list właściwości określonym przez firmę Apple.
+- **Zasady konfiguracji aplikacji mobilnych dla systemu iOS:** jeśli istniejące rozwiązanie MDM używa zasad konfiguracji aplikacji mobilnych dla systemu iOS/iPadOS, można je bezpośrednio zaimportować do usługi Intune, o ile są one zgodne z formatem XML list właściwości określonym przez firmę Apple.
 
 - Dowiedz się, jak dodać niestandardowe zasady dla systemu [iOS](../configuration/custom-settings-ios.md).
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 84d33e0ff6bbe407d9838f97214f37d042a2e261
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: 6e00a2d3c245c1297f2ea28ab0184369e7d92980
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77414702"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513949"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co to jest zarządzanie aplikacjami w usłudze Microsoft Intune?
 
@@ -92,20 +92,20 @@ W następnych czterech sekcjach opisano opcje dostępne w okienku **Aplikacje**.
   - [Monitorowanie aplikacji](apps-monitor.md).
 - **Zasady konfigurowania aplikacji**: wybierz tę opcję, aby określać wartości ustawień, które mogą być wymagane, jeśli użytkownik uruchamia aplikację. Aby uzyskać więcej informacji, zobacz:
   - [Zasady konfiguracji aplikacji usługi Intune](app-configuration-policies-overview.md).
-    - [Zasady konfiguracji aplikacji systemu iOS](app-configuration-policies-use-ios.md).
+    - [Zasady konfiguracji aplikacji systemu iOS/iPadOS](app-configuration-policies-use-ios.md).
     - [Zasady konfiguracji aplikacji systemu Android](app-configuration-policies-use-android.md).
 - **Zasady ochrony aplikacji**: wybierz tę opcję, aby skojarzyć ustawienia z aplikacją i ułatwić ochronę używanych przez nią danych firmy. Można na przykład ograniczyć możliwości komunikowania się aplikacji z innymi aplikacjami lub wymagać od użytkownika wprowadzania numeru PIN umożliwiającego dostęp do aplikacji firmowej. Aby uzyskać więcej informacji, zobacz:
   - [Zasady ochrony aplikacji](app-protection-policies.md).
 - **Selektywne czyszczenie aplikacji**: wybierz tę opcję, aby usunąć tylko dane firmowe z wybranego urządzenia użytkownika. Aby uzyskać więcej informacji, zobacz:
   - [Selektywne czyszczenie aplikacji](apps-selective-wipe.md).
 - **Profile aprowizacji aplikacji systemu iOS**: aplikacje dla systemu iOS/iPadOS obejmują profil aprowizowania i kod podpisany przy użyciu certyfikatu. Po wygaśnięciu certyfikatu aplikacji nie będzie można już uruchomić. Usługa Intune udostępnia narzędzia umożliwiające aktywne przypisywanie nowych zasad profilu aprowizowania do urządzeń, na których znajdują się aplikacje bliskie wygaśnięcia. Aby uzyskać więcej informacji, zobacz:
-  - [Profile aprowizowania aplikacji dla systemu iOS](app-provisioning-profile-ios.md).
+  - [Profile aprowizowania aplikacji dla systemu iOS/iPadOS](app-provisioning-profile-ios.md).
 
 Aby uzyskać więcej informacji na temat tej sekcji, zobacz [Zarządzanie aplikacjami](app-management.md).
 
 ### <a name="monitor"></a>Monitor
 - **Licencje aplikacji**: przeglądanie, przypisywanie i monitorowanie aplikacji nabytych w ramach zakupów zbiorczych w sklepach z aplikacjami. Aby uzyskać więcej informacji, zobacz:
-  - [Aplikacje dla systemu iOS zakupione w ramach programu zakupów zbiorczych (VPP)](vpp-apps-ios.md).
+  - [Aplikacje dla systemu iOS/iPadOS zakupione w ramach programu zakupów zbiorczych (VPP)](vpp-apps-ios.md).
   - [Aplikacje nabyte w ramach zakupów zbiorczych w sklepie Microsoft Store dla Firm](windows-store-for-business.md).
 - **Odnalezione aplikacje**: wyświetlanie aplikacji, które zostały przypisane przez usługę Intune lub zainstalowane na urządzeniu. Aby uzyskać więcej informacji, zobacz [Intune discovered apps](app-discovered-apps.md) (Aplikacje odnalezione przez usługę Intune).
 - **Stan instalacji aplikacji**: wyświetlanie stanu utworzonego przez siebie przypisania aplikacji. Aby uzyskać więcej informacji, zobacz [Monitorowanie informacji o aplikacji i przypisań z użyciem usługi Microsoft Intune](apps-monitor.md#device-and-user-status-graphs).
@@ -116,7 +116,7 @@ Aby uzyskać więcej informacji na temat tej sekcji, zobacz [Monitorowanie aplik
 
 ### <a name="set-up"></a>Konfiguruj
 - **Tokeny programu VPP dla systemu iOS**: stosowanie i wyświetlanie licencji Volume Purchase Program (VPP) dla systemu iOS/iPadOS. Aby uzyskać więcej informacji, zobacz:
-  - [Aplikacje systemu iOS nabyte w ramach zakupów zbiorczych](vpp-apps-ios.md)
+  - [Aplikacje systemu iOS/iPadOS nabyte w ramach zakupów zbiorczych](vpp-apps-ios.md)
 - **Certyfikat przedsiębiorstwa systemu Windows**: stosowanie lub wyświetlanie stanu certyfikatu podpisywania kodu używanego do dystrybuowania aplikacji biznesowych na zarządzanych urządzeniach z systemem Windows.
 - **Certyfikat firmy Symantec systemu Windows**: stosowanie lub wyświetlanie stanu certyfikatu podpisywania kodu firmy Symantec potrzebnego do rozpowszechniania plików appx XAP i WP8.x na urządzeniach z systemem Windows 10 Mobile.
 - **Microsoft Store dla Firm**: konfigurowanie integracji ze sklepem Microsoft Store dla Firm. Po wykonaniu tej czynności można synchronizować zakupione aplikacje z usługą Intune, przypisywać je i śledzić użycie licencji. Aby uzyskać więcej informacji, zobacz:

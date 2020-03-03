@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/25/2019
+ms.date: 02/19/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e28f8a2cc43e4ca210a391151383633da457c056
-ms.sourcegitcommit: ecaff388038fb800f2e646f8efcf8f3b1e2fd1b1
+ms.openlocfilehash: ea115810d604ce7ad49bd23b40951ee3f3da67fc
+ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/18/2020
-ms.locfileid: "77437923"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77609257"
 ---
 # <a name="supported-operating-systems-and-browsers-in-intune"></a>Systemy operacyjne i przeglądarki obsługiwane w usłudze Intune
 
@@ -32,6 +32,9 @@ Przed skonfigurowaniem usługi Microsoft Intune sprawdź obsługiwane systemy op
 Aby uzyskać pomoc dotyczącą instalowania usługi Intune na urządzeniu, zobacz [Wykonywanie pracy przy użyciu urządzeń zarządzanych](https://docs.microsoft.com/intune-user-help/company-portal-frequently-asked-questions) i [Przepustowość i wymagania dotyczące konfiguracji sieci usługi Intune](network-bandwidth-use.md).
 
 Aby uzyskać więcej informacji na temat obsługi dostawcy usługi konfiguracji, odwiedź stronę [Configuration service provider reference](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) (Informacje dotyczące dostawcy usługi konfiguracji).
+
+> [!NOTE]
+> Usługa Intune aktualnie wymaga systemu Android 5.x (Lollipop) lub nowszego, aby aplikacje i urządzenia mogły uzyskiwać dostęp do zasobów firmy za pomocą aplikacji Portal firmy dla systemu Android oraz zestawu Intune App SDK dla systemu Android. To wymaganie NIE dotyczy urządzeń usługi Teams bazujących na systemie Polycom Android 4.4. Te urządzenia będą nadal obsługiwane. 
 
 ## <a name="intune-supported-operating-systems"></a>Systemy operacyjne obsługiwane przez usługę Intune
 

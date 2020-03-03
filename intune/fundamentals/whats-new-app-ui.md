@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e38e4f8552b6ef217d264cfa74597bda5c665ab
-ms.sourcegitcommit: e1ff157f692983b49bdd6e20cc9d0f93c3b3733c
+ms.openlocfilehash: aab10058fe507a956bb793902e6f7b09d8579966
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77125051"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576547"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizacje interfejsu użytkownika dla aplikacji użytkownika końcowego usługi Intune
 
@@ -59,7 +59,7 @@ Użytkownicy końcowi mogą teraz uruchamiać aplikacje internetowe bezpośredni
 ## <a name="week-of-october-28-2019"></a>Tydzień 28 października 2019 r.  
 
 ### <a name="improved-checklist-design-in-company-portal-app-for-android----5550857---"></a>Ulepszony projekt listy kontrolnej w aplikacji Portal firmy dla systemu Android <!-- 5550857 -->  
-Lista kontrolna konfiguracji w aplikacji Portal firmy dla systemu Android została zaktualizowana za pomocą przystępnego projektu i nowych ikon. Zmiany te idą w parze z najnowszymi aktualizacjami wprowadzonymi w aplikacji Portal firmy dla systemu iOS. Aby zapoznać się ze zaktualizowanymi krokami rejestracji, zobacz [Rejestracja przy użyciu profilu służbowego systemu Android](/intune-user-help/enroll-device-android-work-profile) i [Rejestracja urządzeń z systemem Android](/intune-user-help/enroll-device-android-company-portal).  
+Lista kontrolna konfiguracji w aplikacji Portal firmy dla systemu Android została zaktualizowana za pomocą przystępnego projektu i nowych ikon. Zmiany te idą w parze z najnowszymi aktualizacjami wprowadzonymi w aplikacji Portal firmy dla systemu iOS/iPadOS. Aby zapoznać się ze zaktualizowanymi krokami rejestracji, zobacz [Rejestracja przy użyciu profilu służbowego systemu Android](/intune-user-help/enroll-device-android-work-profile) i [Rejestracja urządzeń z systemem Android](/intune-user-help/enroll-device-android-company-portal).  
 
 Na następujących ekranach przedstawiono zaktualizowaną listę kontrolną dla rejestracji profilu służbowego systemu Android:
 
@@ -216,7 +216,7 @@ Aplikacja Portal firmy usługi Intune dla systemu Windows 10 została zaktualizo
 ## <a name="week-of-april-2-2018"></a>Tydzień od 2 kwietnia 2018 r.
 
 ### <a name="user-experience-update-for-the-company-portal-app-for-ios----1412866---"></a>Aktualizacja środowiska użytkownika aplikacji Portal firmy dla systemu iOS <!-- 1412866 -->
-Wydaliśmy dużą aktualizację środowiska użytkownika w aplikacji Portal firmy dla systemu iOS. Aktualizacja obejmuje całkiem nowy projekt wizualny, który zapewnia zmodernizowany wygląd i działanie. Zachowaliśmy funkcjonalność aplikacji, ale zwiększyliśmy jej użyteczność i dostępność.  
+Wydaliśmy dużą aktualizację środowiska użytkownika w aplikacji Portal firmy dla systemu iOS/iPadOS. Aktualizacja obejmuje całkiem nowy projekt wizualny, który zapewnia zmodernizowany wygląd i działanie. Zachowaliśmy funkcjonalność aplikacji, ale zwiększyliśmy jej użyteczność i dostępność.  
 
 Ponadto wprowadziliśmy następujące zmiany:
 - Obsługa urządzenia iPhone X.
@@ -267,7 +267,7 @@ Jeśli włączono [mapowanie grup urządzeń](../enrollment/device-group-mapping
 
 ### <a name="improvements-to-device-setup-workflow-in-the-company-portal-for-ios-in-version-290----1417174---"></a>Ulepszenia przepływu pracy konfiguracji urządzenia w aplikacji Portal firmy dla systemu iOS w wersji 2.9.0 <!-- 1417174 -->
 
-Ulepszyliśmy przepływ pracy konfiguracji urządzenia w aplikacji Portal firmy dla systemu iOS. Używany język jest bardziej przyjazny dla użytkownika i tam, gdzie było to możliwe, ekrany zostały połączone. Ponadto język jest lepiej dostosowany do Twojej firmy, ponieważ w tekście instalatora używana jest jej nazwa.
+Ulepszyliśmy przepływ pracy konfiguracji urządzenia w aplikacji Portal firmy dla systemu iOS/iPadOS. Używany język jest bardziej przyjazny dla użytkownika i tam, gdzie było to możliwe, ekrany zostały połączone. Ponadto język jest lepiej dostosowany do Twojej firmy, ponieważ w tekście instalatora używana jest jej nazwa.
 
 > [!NOTE]
 > Jest to nazwa ustawiona w witrynie Azure Portal w opcji **Microsoft Intune** > **Aplikacje klienckie** > **Znakowanie Portalu firmy** > **Nazwa firmy**. Jeśli nie ustawiono tej wartości, używana jest nazwa dzierżawy ustawiona w opcji **Azure Active Directory** > **Właściwości** > **Nazwa**. Jeśli w funkcji znakowania aplikacji Portal firmy nie ustawiono nazwy firmy, ale nie chcesz, aby wyświetlana była nazwa dzierżawy, zaleca się ustawienie nazwy firmy na karcie znakowania aplikacji Portal firmy. Jeśli nie chcesz, aby ten ciąg znaków był wyświetlany w nagłówku w aplikacji Portal firmy, możesz usunąć zaznaczenie pola wyboru „Pokaż nazwę firmy obok logo”.
@@ -303,7 +303,7 @@ Nadal dostrajamy sposób śledzenia zgodności, więc prosimy o informacje, jak 
 ### <a name="search-improvements-to-the-company-portal-website----1331697---"></a>Ulepszenia wyszukiwania w witrynie internetowej Portal firmy <!-- 1331697 -->
 Ulepszyliśmy możliwości wyszukiwania naszych aplikacji, zaczynając od [witryny internetowej Portal firmy](https://portal.manage.microsoft.com). Wyszukiwanie będzie teraz przeprowadzane dodatkowo według kategorii aplikacji, a nie tylko pól nazwy i opisu. Wyniki będą domyślnie posortowane malejąco według zgodności. 
 
-Użytkownicy systemu iOS również skorzystają z tej zmiany, ponieważ witryna internetowa Portal firmy jest też używana jako część aplikacji Portal firmy dla systemu iOS. Aplikacje Portal firmy dla systemów Android i Windows otrzymają analogiczne aktualizacje w najbliższych miesiącach.
+Użytkownicy systemu iOS również skorzystają z tej zmiany, ponieważ witryna internetowa Portal firmy jest też używana jako część aplikacji Portal firmy dla systemu iOS/iPadOS. Aplikacje Portal firmy dla systemów Android i Windows otrzymają analogiczne aktualizacje w najbliższych miesiącach.
 
 Nadal dostrajamy sposób śledzenia zgodności, więc prosimy o informacje, jak to działa (link „Opinia” u dołu witryny internetowej Portal firmy).
 
@@ -407,7 +407,7 @@ Na stronie szczegółów aplikacji w aplikacji Portal firmy dla systemu Android 
 
 ### <a name="improved-sign-in-experience-across-company-portal-apps-for-all-platforms---user-story-1132123--"></a>Ulepszone środowisko logowania w aplikacjach Portalu firmy dla wszystkich platform <!--User Story 1132123-->
 
-Informujemy o zmianie, która zostanie wprowadzona w ciągu następnych kilku miesięcy i ułatwi logowanie w aplikacjach Portalu firmy w usłudze Intune dla systemów Android, iOS i Windows. Nowe środowisko użytkownika zostanie udostępnione automatycznie na wszystkich platformach aplikacji Portal firmy, gdy zmiana ta zostanie wprowadzona w usłudze Azure AD. Ponadto użytkownicy mogą teraz logować się do Portalu firmy za pomocą innego urządzenia, korzystając z wygenerowanego kodu jednorazowego. Ta opcja jest szczególnie przydatna w sytuacji, gdy niezbędne jest zalogowanie się bez użycia poświadczeń.  
+Informujemy o zmianie, która zostanie wprowadzona w ciągu następnych kilku miesięcy i ułatwi logowanie w aplikacjach Portal firmy w usłudze Intune dla systemów Android, iOS/iPadOS i Windows. Nowe środowisko użytkownika zostanie udostępnione automatycznie na wszystkich platformach aplikacji Portal firmy, gdy zmiana ta zostanie wprowadzona w usłudze Azure AD. Ponadto użytkownicy mogą teraz logować się do Portalu firmy za pomocą innego urządzenia, korzystając z wygenerowanego kodu jednorazowego. Ta opcja jest szczególnie przydatna w sytuacji, gdy niezbędne jest zalogowanie się bez użycia poświadczeń.  
 
 Poniżej przedstawiono poprzednie środowisko logowania, nowe środowisko logowania z poświadczeniami oraz nowe środowisko logowania za pomocą innego urządzenia.
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 780a248f16a8a5028875c9c2401921ea23d0af24
-ms.sourcegitcommit: 70b40aa4743c8396f8d6a0163893c4a337d67c48
+ms.openlocfilehash: 19fff092f7eccfc6de2a027c7834c52698176cbf
+ms.sourcegitcommit: 5881979c45fc973cba382413eaa193d369b8dcf6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2020
-ms.locfileid: "76540932"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77569170"
 ---
 # <a name="assign-a-role-to-an-intune-user"></a>Przypisywanie roli do użytkownika usługi Intune
 
@@ -34,23 +34,20 @@ Aby możliwe było tworzenie, edytowanie i przypisywanie ról, konto musi mieć 
 
 1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Administracja dzierżawą** > **Role** > **Wszystkie role**.
 
-2. W bloku **Role usługi Intune — Wszystkie role** wybierz rolę wbudowaną, którą chcesz przypisać.
+2. W bloku **Role usługi Intune — Wszystkie role** wybierz rolę wbudowaną, którą chcesz przypisać > **Przypisania** > **Przypisz**.
 
-3. W bloku <*nazwa roli*> — **Przegląd** wybierz kolejno pozycje **Zarządzaj** > **Przypisania**.
+5. Na stronie **Podstawowe** uzupełnij pole **Nazwa przypisania** i opcjonalne pole **Opis przypisania**, a następnie wybierz pozycję **Dalej**.
 
-4. W bloku roli niestandardowej wybierz pozycję **Przypisz**.
+6. Na stronie **Grupy administracyjne** wybierz grupę, do której należy użytkownik, któremu chcesz nadać uprawnienia. Wybierz pozycję **Dalej**.
 
-5. W bloku **Przypisania ról** wprowadź **nazwę przypisania** i opcjonalnie **opis przypisania** danego przypisania.
+7. Na stronie **Zakres (grupy)** wybierz grupę, do której należą użytkownicy/urządzenia, którymi będzie mógł zarządzać wskazany wcześniej członek. Wybierz pozycję **Next** (Dalej).
 
-6. W obszarze **Członkowie (grupy)** wybierz grupę, do której należy użytkownik, któremu chcesz nadać uprawnienia.
+8. Na stronie **Zakres (tagi)** wybierz tagi, w których zostanie zastosowane to przypisanie roli. Wybierz pozycję **Next** (Dalej).
 
-7. W obszarze **Zakres (grupy)** wybierz grupę, do której należą użytkownicy/urządzenia, którymi będzie mógł zarządzać wskazany wcześniej członek.
-
-8. W obszarze **Zakres (tagi)** wybierz tagi, w których zostanie zastosowane to przypisanie roli.
-
-9. Gdy wszystko będzie gotowe, wybierz przycisk **OK**. Nowe przypisanie zostanie wyświetlone na liście przypisań.
-
+9. Na stronie **Przeglądanie + tworzenie** po zakończeniu wybierz pozycję **Utwórz**. Nowe przypisanie zostanie wyświetlone na liście przypisań.
 
 ## <a name="next-steps"></a>Następne kroki
 - [Dowiedz się więcej na temat kontroli dostępu opartej na rolach w usłudze Intune](role-based-access-control.md)
 - [Tworzenie roli niestandardowej](create-custom-role.md)
+
+

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 02/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3ae5a7508f27dbf15a58ba3386e744bb63bf102b
-ms.sourcegitcommit: e1ff157f692983b49bdd6e20cc9d0f93c3b3733c
+ms.openlocfilehash: 9622eb33cb4e7732b573e8caf56acf4e3966badb
+ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77125017"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77609125"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Zarządzanie dostępem do Internetu przy użyciu przeglądarki Microsoft Edge w usłudze Microsoft Intune
 
@@ -101,7 +101,7 @@ Aby utworzyć konfigurację aplikacji na potrzeby przeglądarki Microsoft Edge:
 2. Wybierz kolejno pozycje **Aplikacje** > **Zasady konfiguracji aplikacji** > **Dodaj**.
 3. W okienku **Dodaj zasady konfiguracji** wypełnij pola **Nazwa** i **Opis** (opcjonalnie) odnoszące się do ustawień konfiguracji aplikacji.
 4. Jako typ **rejestracji urządzenia** wybierz **Aplikacje zarządzane**.
-5. Wybierz pozycję **Wybierz wymaganą aplikację**. Następnie przejdź do okienka **Docelowe aplikacje** i wybierz pozycję **Managed Browser** lub **Microsoft Edge** dla systemu iOS lub Android bądź dla obu tych systemów.
+5. Wybierz pozycję **Wybierz wymaganą aplikację**. Następnie przejdź do okienka **Docelowe aplikacje** i wybierz pozycję **Managed Browser** lub **Microsoft Edge** dla systemu iOS/iPadOS lub Android bądź dla obu tych systemów.
 6. Kliknij przycisk **OK**, aby wrócić do okienka **Dodaj zasady konfiguracji**.
 7. Wybierz pozycję **Ustawienia konfiguracji**. W okienku **Konfiguracja** należy zdefiniować pary kluczy i wartości do dostarczania konfiguracji dla przeglądarki Microsoft Edge. Informacje na temat różnych par kluczy i wartości, które można zdefiniować, znajdują się w dalszych sekcjach tego artykułu.
 
@@ -136,7 +136,7 @@ W systemie Android:
 - Przeglądarka Microsoft Edge jest uruchamiana, jeśli na urządzenie została pobrana tylko ta przeglądarka i jest ona objęta zasadami usługi Intune.
 - Program Managed Browser jest uruchamiany, jeśli na urządzeniu znajduje się tylko ten program i jest on objęty zasadami usługi Intune.
 
-W systemie iOS w przypadku aplikacji, które mają zintegrowany zestaw SDK usługi Intune dla systemu iOS w wersji 9.0.9+:
+W systemie iOS/iPadOS w przypadku aplikacji, które mają zintegrowany zestaw SDK usługi Intune dla systemu iOS w wersji 9.0.9+:
 - Program Intune Managed Browser jest uruchamiany, jeśli użytkownik ma na swoim urządzeniu programy Managed Browser i Microsoft Edge.  
 - Przeglądarka Microsoft Edge jest uruchamiana, jeśli na urządzeniu znajduje się tylko ta przeglądarka i jest ona objęta zasadami usługi Intune.
 - Program Managed Browser jest uruchamiany, jeśli na urządzeniu znajduje się tylko ten program i jest on objęty zasadami usługi Intune.
@@ -188,7 +188,7 @@ Użyj następującej pary klucz/wartość, aby skonfigurować skrót do strony g
 Te ustawienia umożliwiają dostosowanie strony nowej karty dla przeglądarki Microsoft Edge w celu wyświetlania logo i koloru marki organizacji jako tła strony.
 
 Aby przekazać logo i kolor organizacji, najpierw wykonaj następujące czynności:
-- W witrynie Azure Portal przejdź do usługi Intune —> Aplikacje klienckie —> Znakowanie i dostosowywanie —> Znakowanie tożsamości firmy
+- W witrynie Azure Portal przejdź do okna [Centrum administracyjne usługi Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) -> **Administracja dzierżawą** -> **Znakowanie i dostosowywanie** -> **Znakowanie tożsamością firmy**.
 - Aby ustawić logo marki, w obszarze „Wyświetlanie” wybierz pozycję „Tylko logo firmy”. Zalecane jest użycie logo z przezroczystym tłem. 
 - Aby ustawić kolor tła marki, w obszarze „Wyświetlanie” wybierz pozycję „Kolor motywu”. Przeglądarka Microsoft Edge stosuje jaśniejszy odcień koloru na nowej karcie, co gwarantuje, że strona ma wysoką czytelność. 
 
@@ -201,7 +201,7 @@ Następnie użyj następujących par klucz-wartość, aby ściągnąć znakowani
 
 ## <a name="display-relevant-industry-news-on-new-tab-pages"></a>Wyświetlanie odpowiednich wiadomości branżowych na stronach nowych kart
 
-Środowisko strony nowej karty można skonfigurować w przeglądarce Microsoft Edge na urządzeniach przenośnych w celu wyświetlania wiadomości branżowych, które są istotne dla organizacji. Po włączeniu tej funkcji przeglądarka Microosft Edge na urządzeniach przenośnych używa nazwy domeny Twojej organizacji do agregowania z Internetu wiadomości dotyczących organizacji, branży organizacji i firm konkurencyjnych, dzięki czemu użytkownicy mogą znaleźć odpowiednie wiadomości zewnętrzne — a wszystko to na stronach nowych kart scentralizowanych w przeglądarce Microsoft Edge. Wiadomości branżowe są domyślnie wyłączone i można wybrać opcję włączenia tej funkcji w organizacji. 
+Środowisko strony nowej karty można skonfigurować w przeglądarce Microsoft Edge na urządzeniach przenośnych w celu wyświetlania wiadomości branżowych, które są istotne dla organizacji. Po włączeniu tej funkcji przeglądarka Microsoft Edge na urządzeniach przenośnych używa nazwy domeny Twojej organizacji do agregowania z Internetu wiadomości dotyczących organizacji, branży organizacji i firm konkurencyjnych, dzięki czemu użytkownicy mogą znaleźć odpowiednie wiadomości zewnętrzne — a wszystko to na stronach nowych kart scentralizowanych w przeglądarce Microsoft Edge. Wiadomości branżowe są domyślnie wyłączone i można wybrać opcję włączenia tej funkcji w organizacji. 
 
 |    Klucz    |    Wartość    |
 |------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
@@ -293,19 +293,48 @@ W konfiguracji można wskazać, czy linki z ograniczeniami powinny być otwieran
 
 |    Klucz    |    Wartość    |
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock`    |    Wartość **Prawda** pozwala przeglądarce Microsoft Edge na przenoszenie użytkowników do ich kontekstu osobistego w celu otwarcia zablokowanych witryn.<p>Wartość **Blokuj** uniemożliwia przeglądarce Microsoft Edge przenoszenie użytkowników. Użytkownicy widzą po prostu komunikat o zablokowaniu witryny, do której próbują uzyskać dostęp.    |
+|    `com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlock`    |    Wartość **true** powoduje automatyczne otwieranie witryn na karcie InPrivate bez monitowania użytkownika o przełączenie się do konta osobistego. <p> Wartość **false** (wartość domyślna) powoduje zablokowanie witryny w przeglądarce Microsoft Edge, a użytkownik jest proszony o przełączenie się do konta osobistego w celu jej wyświetlenia.    |
 
-## <a name="disable-microsoft-edge-prompt-to-save-passwords"></a>Wyłączanie monitu o zapisywanie haseł w przeglądarce Microsoft Edge
+## <a name="disable-microsoft-edge-features-to-customize-the-end-user-experience-for-your-organizations-needs"></a>Wyłączanie funkcji programu Microsoft Edge w celu dostosowania środowiska użytkownika końcowego do potrzeb organizacji
+
+### <a name="disable-prompts-to-share-usage-data-for-personalization"></a>Wyłączanie próśb o udostępnienie danych użycia na potrzeby personalizacji 
+
+Domyślnie przeglądarka Microsoft Edge prosi użytkowników o pozwolenie na zbieranie danych użycia w celu spersonalizowania ich środowiska przeglądania. Możesz wyłączyć udostępnianie tych danych i zatrzymać wyświetlanie tego monitu dla użytkowników końcowych. 
 
 |    Klucz    |    Wartość    |
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    `com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlock`    |    Wartość **true** spowoduje, że linki z ograniczeniami będą otwierane bezpośrednio w trybie przeglądania InPrivate.<p>Wartość **false** (domyślna) umożliwi użytkownikom wybranie opcji otwarcia linku z ograniczeniami w trybie przeglądania InPrivate lub przy użyciu konta osobistego (MSA).    |
+|    `com.microsoft.intune.mam.managedbrowser.disableShareUsageData`    |     Wartość **true** spowoduje wyłączenie wyświetlania tego monitu dla użytkowników końcowych.    |
 
+### <a name="disable-prompts-to-share-browsing-history"></a>Wyłączanie monitów o udostępnianie historii przeglądania 
+
+Domyślnie przeglądarka Microsoft Edge prosi użytkowników o pozwolenie na zbieranie danych historii przeglądania w celu spersonalizowania ich środowiska przeglądania. Możesz wyłączyć udostępnianie tych danych i zatrzymać wyświetlanie tego monitu dla użytkowników końcowych.
+
+|    Klucz    |    Wartość    |
+|----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     `com.microsoft.intune.man.managedbrowser.disableShareBrowsingHistory`    |     Wartość **true** spowoduje wyłączenie wyświetlania tego monitu dla użytkowników końcowych.     |
+
+### <a name="disable-prompts-that-offer-to-save-passwords"></a>Wyłączanie monitów oferujących zapisywanie haseł
 Domyślnie przeglądarka Microsoft Edge w systemie iOS oferuje możliwość zapisywania haseł użytkowników w pęku kluczy. Jeśli chcesz wyłączyć ten monit dla swojej organizacji, skonfiguruj następujące ustawienie:
 
 |    Klucz    |    Wartość    |
+|-----------------------|-----------------------|
+|    `com.microsoft.intune.mam.managedbrowser.disableFeatures`    |    Wartość **password** spowoduje wyłączenie monitów oferujących zapisywanie haseł dla użytkownika końcowego.    |
+
+### <a name="disable-inprivate-browsing-and-microsoft-accounts-to-restrict-browsing-to-work-only-contexts"></a>Wyłączanie przeglądania InPrivate i kont Microsoft w celu ograniczenia przeglądania tylko do kontekstów służbowych
+
+Jeśli Twoja organizacja działa w ściśle regulowanej branży lub korzysta z sieci VPN dla aplikacji w celu umożliwienia użytkownikom dostępu do zasobów służbowych za pomocą przeglądarki Microsoft Edge, możesz ograniczyć użycie przeglądarki Microsoft Edge tylko do kontekstu chronionego przez funkcję zarządzania aplikacją mobilną. Ta funkcja jest dostępna tylko dla urządzeń zarejestrowanych w usłudze MDM.
+
+|    Klucz    |    Wartość    |
 |-----------|-------------|
-|     'com.microsoft.intune.mam.managedbrowser.disableFeatures'    |    Wartość **password** spowoduje wyłączenie monitu o zapisywanie haseł.    |
+|    `com.microsoft.intune.mam.managedbrowser.disableFeatures`    |    Wartość **inprivate** wyłącza przeglądanie InPrivate, <br> a wartość **msa** uniemożliwia użytkownikom dodawanie osobistych kont Microsoft (MSA) do aplikacji Microsoft Edge. <br> Aby wyłączyć wiele funkcji, należy oddzielić wartości za pomocą znaku `|`. Na przykład wartość `inprivate|msa` blokuje zarówno przeglądanie InPrivate, jak i konta osobiste.   |
+
+### <a name="restrict-microsoft-edge-use-to-allowed-accounts-only"></a>Ograniczanie użycia przeglądarki Microsoft Edge tylko do dozwolonych kont
+
+Oprócz blokowania przeglądania InPrivate i MSA można również zezwolić na korzystanie tylko z przeglądarki Microsoft Edge, gdy użytkownik jest zalogowany przy użyciu konta usługi AAD. Ta funkcja jest dostępna tylko dla użytkowników zarejestrowanych w usłudze MDM. Więcej informacji o konfigurowaniu tego ustawienia można znaleźć tutaj:
+
+- [Ustawienie systemu Android](~/apps/app-configuration-policies-use-android.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
+- [Ustawienie systemu iOS](~/apps/app-configuration-policies-use-ios.md#allow-only-configured-organization-accounts-in-multi-identity-apps)
+
 
 ## <a name="use-microsoft-edge-on-ios-to-access-managed-app-logs"></a>Używanie przeglądarki Microsoft Edge w systemie iOS do uzyskiwania dostępu do dzienników aplikacji zarządzanych 
 
@@ -322,7 +351,7 @@ Aby dowiedzieć się, jak wyświetlać dzienniki na urządzeniach z systemem And
 
 Poniżej zostały przedstawione dodatkowe zagadnienia dotyczące bezpieczeństwa i ochrony prywatności dla przeglądarki Microsoft Edge:
 
-- Przeglądarka Microsoft Edge nie używa ustawień, które użytkownicy ustawiają dla natywnej przeglądarki na swoich urządzeniach, ponieważ przeglądarka Microsoft Edge nie ma dostępu do tych ustawień.
+- Przeglądarka Microsoft Edge nie używa ustawień, które użytkownicy ustawiają dla natywnej przeglądarki https://docs.microsoft.com/en-us/intune/apps/app-configuration-policies-use-android#allow-only-configured-organization-accounts-in-multi-identity-apps na swoich urządzeniach, ponieważ przeglądarka Microsoft Edge nie ma dostępu do tych ustawień.
 - Możesz skonfigurować opcję **Wymagaj prostego numeru PIN w celu udzielenia dostępu** lub **Wymagaj poświadczeń firmowych w celu udzielenia dostępu** w zasadach ochrony aplikacji skojarzonych z przeglądarką Microsoft Edge. Jeśli użytkownik wybierze link do pomocy na stronie uwierzytelniania, będzie mógł przeglądać dowolne witryny internetowe, niezależnie od tego, czy zostały one dodane do listy zablokowanych w zasadach.
 - Przeglądarka Microsoft Edge może zablokować dostęp do witryn tylko w przypadku uzyskiwania do nich bezpośredniego dostępu. Dostęp do witryny nie jest blokowany, jeśli użytkownicy używają usług pośrednich (na przykład usługi tłumaczenia).
 - W celu umożliwienia uwierzytelniania i uzyskania dostępu do dokumentacji usługi Intune, witryna * **.microsoft.com** jest wyłączona z ustawień listy dozwolonych lub zablokowanych witryn. Jest ona zawsze dozwolona.

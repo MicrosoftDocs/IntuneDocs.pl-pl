@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/28/2020
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b61c333f41054194b44c7517e508fe1ef6d28d4
-ms.sourcegitcommit: b0d683917af83170f85022b270270d8ced8e301c
+ms.openlocfilehash: c6678c3fbc247ac0595775c0ccc72c7bdb9c55e1
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76812371"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513099"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Przypisywanie profili użytkowników i urządzeń w usłudze Microsoft Intune
 
@@ -89,7 +89,7 @@ Podsumowując: z grup urządzeń należy korzystać wtedy, gdy nie ma znaczenia,
 
 ### <a name="user-groups"></a>Grupy użytkowników
 
-Ustawienia profilu stosowane do grup użytkowników są zawsze powiązane z użytkownikiem i przechodzą wraz z nim na kolejne urządzenia, na których się loguje. Użytkownicy często mają kilka urządzeń — np. służbowy notebook Surface Pro i prywatne urządzenie z systemem iOS. Jest też zrozumiałe, że uzyskują dostęp do poczty e-mail i innych zasobów organizacji na wszystkich tych urządzeniach.
+Ustawienia profilu stosowane do grup użytkowników są zawsze powiązane z użytkownikiem i przechodzą wraz z nim na kolejne urządzenia, na których się loguje. Użytkownicy często mają kilka urządzeń — np. służbowy notebook Surface Pro i prywatne urządzenie z systemem iOS/iPadOS. Jest też zrozumiałe, że uzyskują dostęp do poczty e-mail i innych zasobów organizacji na wszystkich tych urządzeniach.
 
 Przykład:
 

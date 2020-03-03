@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/10/2020
+ms.date: 02/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4db1a1a74c1a19f310aba0f1c10ed5d01869073f
-ms.sourcegitcommit: 576b9528629981e87e775fac146932e502f07a74
+ms.openlocfilehash: 02fa3acdaf0dc450afee97dfaaf5870166013356
+ms.sourcegitcommit: 5881979c45fc973cba382413eaa193d369b8dcf6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77258134"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77569527"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Konfigurowanie zaimportowanych certyfikatów PKCS i korzystanie z nich w usłudze Intune
 
@@ -31,6 +31,17 @@ Microsoft Intune obsługuje zaimportowane certyfikaty pary kluczy publicznych (P
 Szyfrowanie S/MIME jest trudne, ponieważ poczta e-mail jest szyfrowana przy użyciu określonego certyfikatu. Musisz mieć klucz prywatny certyfikatu, który zaszyfrował wiadomość e-mail na urządzeniu, na którym odczytujesz wiadomość e-mail, aby można było ją odszyfrować. Certyfikaty szyfrowania są regularnie odnawiane, co oznacza, że do odczytania starszych wiadomości e-mail może być potrzebna historia szyfrowania na wszystkich urządzeniach.  Ponieważ na obu urządzeniach musi być użyty ten sam certyfikat, nie można użyć do tego celu profilu certyfikatu [SCEP](certificates-scep-configure.md) ani [PKCS](certficates-pfx-configure.md), ponieważ te mechanizmy dostarczania certyfikatów dostarczają unikatowy certyfikat do każdego urządzenia.
 
 Więcej informacji o korzystaniu z protokołu S/MIME w usłudze Intune — zobacz [Korzystanie z protokołu S/MIME do szyfrowania poczty e-mail](certificates-s-mime-encryption-sign.md).
+
+## <a name="supported-platforms"></a>Obsługiwane platformy
+
+Usługa Intune obsługuje importowanie certyfikatów PFX dla następujących platform:
+
+- Android — administrator urządzenia
+- Android Enterprise — w pełni zarządzane
+- Android Enterprise — profil służbowy
+- iOS
+- Mac
+- Windows 10
 
 ## <a name="requirements"></a>Wymagania
 
@@ -49,6 +60,8 @@ Aby korzystać z zaimportowanych certyfikatów PKCS w usłudze Intune, musisz mi
 - **Windows Server**:
 
   używasz systemu Windows Server do hostowania programu Łącznik certyfikatów PFX dla usługi Microsoft Intune.  Łącznik służy do przetwarzania żądań dotyczących certyfikatów zaimportowanych do usługi Intune.
+  
+  Łącznik wymaga dostępu do tych samych portów. Opisano to przy okazji omawiania urządzeń zarządzanych. Więcej informacji zawiera [zawartość dotycząca punktu końcowego urządzenia](https://docs.microsoft.com/intune/fundamentals/intune-endpoints#access-for-managed-devices).
 
   W usłudze Intune możesz zainstalować oba łączniki (*Łącznik certyfikatów usługi Microsoft Intune* i *Łącznik certyfikatów PFX dla usługi Microsoft Intune*) na tym samym serwerze.
 

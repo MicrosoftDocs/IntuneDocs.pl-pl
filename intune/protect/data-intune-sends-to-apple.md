@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a2f1be7a2457cca7da62883370c9e273168c6a29
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 0c550fba45e5e6b16e49e7103fde40de1e08ba55
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72502430"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576481"
 ---
 # <a name="data-intune-sends-to-apple"></a>Dane wysyłane przez usługę Intune do Apple
 
@@ -44,7 +44,7 @@ Poniższa tabela zawiera dane wysyłane przez usługę Microsoft Intune z urząd
 |---|---| ---|
 | [APNS](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Token, PushMagic | Jeśli serwer zaakceptuje urządzenie, urządzenie udostępni serwerowi token powiadomienia push urządzenia. Serwer powinien używać tego tokenu do wysyłania komunikatów push do urządzenia. Ten komunikat zaewidencjonowania zawiera również ciąg PushMagic. Serwer musi zapamiętać ten ciąg i uwzględnić go we wszystkich komunikatach push, które wysyła do urządzenia. |
 | [ASM/DEP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/3-MDM_Protocol/MDM_Protocol.html#//apple_ref/doc/uid/TP40017387-CH3-SW2) | Token serwera | Token powiadomienia push urządzenia używany do uwierzytelniania usługi Apple. |
-| ASM/DEP | nazwa_serwera | Możliwa do zidentyfikowania nazwa serwera MDM. |
+| ASM/DEP | server_name | Możliwa do zidentyfikowania nazwa serwera MDM. |
 | ASM/DEP | server_uuid | Identyfikator serwera generowany przez system. |
 | ASM/DEP | admin_id | Identyfikator Apple osoby, która wygenerowała bieżące tokeny będące w użyciu. |
 | ASM/DEP | org_name | Nazwa organizacji. |
@@ -59,7 +59,7 @@ Poniższa tabela zawiera dane wysyłane przez usługę Microsoft Intune z urząd
 | ASM/DEP | profile_status | Stan instalacji profilu. Możliwe wartości: **pusty**, **przypisany**, **wypchnięty** lub **usunięty**. |
 | ASM/DEP | profile_uuid | Unikatowy identyfikator przypisanego profilu. |
 | ASM/DEP | device_assigned_by | Adres e-mail osoby, która przypisała urządzenie. |
-| ASM/DEP | os | System operacyjny urządzenia: iOS, OSX lub tvOS. Ten klucz jest prawidłowy w protokole serwera X w wersji 2 lub nowszej. |
+| ASM/DEP | os | System operacyjny urządzenia: iOS/iPadOS, OSX lub tvOS. Ten klucz jest prawidłowy w protokole serwera X w wersji 2 lub nowszej. |
 | ASM/DEP | device_family | Rodzina produktów firmy Apple urządzenia: iPad, iPhone, iPod, Mac lub AppleTV. Ten klucz jest prawidłowy w protokole serwera X w wersji 2 lub nowszej. |
 | ASM/DEP | profile_name | Ciąg. Zrozumiała dla człowieka nazwa profilu. |
 | ASM/DEP | support_phone_number | Opcjonalny. Ciąg. Numer telefonu pomocy technicznej dla organizacji. |

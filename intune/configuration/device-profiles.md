@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,23 +17,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 800bbd5199bd4389ee1ae8aa98a68e21456e7000
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 951d3df8b842f1a0e76f875ea9fc7921c413494f
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75206622"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77513078"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Stosowanie funkcji i ustawień w urządzeniach przy użyciu profilów urządzeń w usłudze Microsoft Intune
 
 
 
-Usługa Microsoft Intune obejmuje ustawienia i funkcje, które można włączać lub wyłączać na różnych urządzeniach w organizacji. Te ustawienia i funkcje są dodawane do „profili konfiguracji”. Możesz utworzyć profile dla różnych urządzeń i różnych platform, w tym systemów iOS, Android i Windows. Następnie użyj usługi Intune, aby zastosować lub „przypisać” profil na urządzeniach.
+Usługa Microsoft Intune obejmuje ustawienia i funkcje, które można włączać lub wyłączać na różnych urządzeniach w organizacji. Te ustawienia i funkcje są dodawane do „profili konfiguracji”. Możesz utworzyć profile dla różnych urządzeń i różnych platform, w tym systemów iOS/iPadOS, Android i Windows. Następnie użyj usługi Intune, aby zastosować lub „przypisać” profil na urządzeniach.
 
 Jako część rozwiązania do zarządzania urządzeniami przenośnymi (MDM) użyj tych profilów konfiguracji w celu wykonywania różnych zadań. Oto kilka przykładów profilów:
 
 - W urządzeniach z systemem Windows 10 użyj szablonu profilu, który blokuje kontrolki ActiveX w programie Internet Explorer.
-- W urządzeniach z systemem iOS lub macOS zezwól użytkownikom na korzystanie z drukarek AirPrint w Twojej organizacji.
+- W urządzeniach z systemem iOS/iPadOS lub macOS zezwól użytkownikom na korzystanie z drukarek AirPrint w Twojej organizacji.
 - Umożliwiaj lub blokuj dostęp do funkcji Bluetooth w urządzeniu.
 - Utwórz profil sieci WiFi lub VPN, który zapewnia różnym urządzeniom dostęp do sieci firmowej.
 - Zarządzaj aktualizacjami oprogramowania, łącznie z czasem ich instalacji.
@@ -67,7 +67,7 @@ Ta funkcja obsługuje systemy:
 
 ## <a name="custom-profile"></a>Profil niestandardowy
 
-[Ustawienia niestandardowe](custom-settings-configure.md) umożliwiają administratorom przypisywanie ustawień urządzenia, które nie są wbudowane w usługę Intune. Na urządzeniach z systemem Android można wprowadzić wartości identyfikatora OMA-URI. W przypadku urządzeń z systemem iOS można zaimportować plik konfiguracyjny utworzony za pomocą programu Apple Configurator.
+[Ustawienia niestandardowe](custom-settings-configure.md) umożliwiają administratorom przypisywanie ustawień urządzenia, które nie są wbudowane w usługę Intune. Na urządzeniach z systemem Android można wprowadzić wartości identyfikatora OMA-URI. W przypadku urządzeń z systemem iOS/iPadOS można zaimportować plik konfiguracyjny utworzony za pomocą programu Apple Configurator.
 
 Ta funkcja obsługuje systemy:
 
@@ -89,7 +89,7 @@ Ta funkcja obsługuje systemy:
 
 ## <a name="device-features"></a>Funkcje urządzenia
 
-Profil [Funkcje urządzenia](device-features-configure.md) steruje funkcjami urządzeń z systemami iOS i macOS, takimi jak AirPrint, powiadomienia i komunikaty na ekranie blokady.
+Profil [Funkcje urządzenia](device-features-configure.md) steruje funkcjami urządzeń z systemami iOS/iPadOS i macOS, takimi jak AirPrint, powiadomienia i komunikaty na ekranie blokady.
 
 Ta funkcja obsługuje systemy:
 
@@ -106,7 +106,7 @@ Ta funkcja obsługuje systemy:
 
 ## <a name="device-restrictions"></a>Ograniczenia dotyczące urządzeń
 
-Profil [Ograniczenia urządzenia](device-restrictions-configure.md) steruje zabezpieczeniami, sprzętem, udostępnianiem danych i kolejnymi ustawieniami urządzeń. Na przykład można utworzyć profil ograniczenia dotyczącego urządzeń, który uniemożliwia użytkownikom urządzeń z systemem iOS dostęp do aparatu urządzenia. 
+Profil [Ograniczenia urządzenia](device-restrictions-configure.md) steruje zabezpieczeniami, sprzętem, udostępnianiem danych i kolejnymi ustawieniami urządzeń. Na przykład można utworzyć profil ograniczenia dotyczącego urządzeń, który uniemożliwia użytkownikom urządzeń z systemem iOS/iPadOS dostęp do aparatu urządzenia. 
 
 Ta funkcja obsługuje systemy:
 
@@ -129,7 +129,7 @@ Ta funkcja obsługuje systemy:
 
 Profil [Ustawienia edukacji — Windows 10](education-settings-configure.md) umożliwia konfigurowanie opcji [aplikacji systemu Windows Take a Test](https://education.microsoft.com/gettrained/win10takeatest). Po skonfigurowaniu tych opcji do czasu ukończenia testu nie można uruchomić na urządzeniu żadnych innych aplikacji.
 
-Profil [Ustawienia edukacyjne — iOS](../fundamentals/education-settings-configure-ios-shared.md) korzysta z aplikacji Classroom dla systemu iOS, która pomaga nauczycielom w prowadzeniu nauczania oraz kontrolowaniu urządzeń uczniów w klasie. Możesz skonfigurować urządzenia iPad w taki sposób, aby wielu uczniów mogło współużytkować jedno urządzenie.
+Profil [Ustawienia edukacyjne — iOS/iPadOS](../fundamentals/education-settings-configure-ios-shared.md) korzysta z aplikacji Classroom dla systemu iOS/iPadOS, która pomaga nauczycielom w prowadzeniu nauczania oraz kontrolowaniu urządzeń uczniów w klasie. Możesz skonfigurować urządzenia iPad w taki sposób, aby wielu uczniów mogło współużytkować jedno urządzenie.
 
 ## <a name="email"></a>Poczta e-mail
 
@@ -186,7 +186,7 @@ Ta funkcja obsługuje systemy:
 
 - Windows 10 lub nowszym
 
-Ustawienia kiosku są również dostępne jako ograniczenia urządzenia z systemem [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings) i [ios](device-restrictions-ios.md#kiosk).
+Ustawienia kiosku są również dostępne jako ograniczenia urządzenia z systemem [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings) i [iOS/iPadOS](device-restrictions-ios.md#kiosk).
 
 ## <a name="oemconfig"></a>OEMConfig
 
@@ -219,7 +219,7 @@ Ta funkcja obsługuje systemy:
 
 ## <a name="update-policies"></a>Zasady aktualizacji
 
-W sekcji [Zasady aktualizacji systemu iOS](../protect/software-updates-ios.md) pokazano, jak utworzyć i przypisać zasady systemu iOS w celu zainstalowania aktualizacji oprogramowania na urządzeniach z systemem iOS. Można również sprawdzić stan instalacji.
+W sekcji [Zasady aktualizacji systemu iOS/iPadOS](../protect/software-updates-ios.md) pokazano, jak utworzyć i przypisać zasady systemu iOS/iPadOS w celu zainstalowania aktualizacji oprogramowania na urządzeniach z systemem iOS/iPadOS. Można również sprawdzić stan instalacji.
 
 Aby uzyskać informacje o zasadach aktualizacji urządzeń z systemem Windows, zobacz [Optymalizacja dostarczania](delivery-optimization-windows.md). 
 

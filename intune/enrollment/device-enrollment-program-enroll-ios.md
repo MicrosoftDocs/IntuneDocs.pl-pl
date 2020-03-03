@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6167c48dcfd6b29749dca8d0378ff31ca239b154
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: adca40b558a75d2c080fe453218f232a37b21daa
+ms.sourcegitcommit: cd90650c339795d44702e9dcd0b9679a7b438bb2
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415361"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77473752"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-device-enrollment-program"></a>Automatyczne rejestrowanie urządzeń z systemem iOS/iPadOS przy użyciu programu Device Enrollment Program firmy Apple
 
@@ -77,6 +77,9 @@ Token można utworzyć za pomocą portalu programu Apple Business Manager lub Ap
     ![Pobierz token programu rejestracji.](./media/device-enrollment-program-enroll-ios/image01.png)
 
 2. Udziel firmie Microsoft uprawnień do wysyłania informacji o użytkowniku i urządzeniu do firmy Apple, wybierając pozycję **Zgadzam się**.
+
+> [!NOTE]
+> Gdy przejdziesz poza krok 2, aby pobrać certyfikat klucza publicznego usługi Intune, nie zamykaj kreatora ani nie opuszczaj tej strony. Jeśli to zrobisz, spowoduje to unieważnienie pobranego certyfikatu i trzeba będzie powtórzyć ten proces. Jeśli taka sytuacja będzie miała miejsce, zauważysz, że przycisk Utwórz na karcie Przeglądanie i tworzenie jest wyszarzony i nie można ukończyć procesu.
 
    ![Zrzut ekranu przedstawiający okienko tokenu programu Enrollment Program w obszarze roboczym certyfikatów firmy Apple umożliwiające pobranie klucza publicznego.](./media/device-enrollment-program-enroll-ios/add-enrollment-program-token-pane.png)
 

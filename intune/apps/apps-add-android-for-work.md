@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 138bf192f5244eb6e44a6be96af3cc15c47bdc76
-ms.sourcegitcommit: 139853f8d6ea61786da7056cfb9024a6459abd70
+ms.openlocfilehash: a4b3bd06bad6c31c2d0fb4c31a7ad605af96be86
+ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755395"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77609183"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Dodawanie zarządzanych aplikacji ze sklepu Google Play do urządzeń z systemem Android Enterprise z usługą Intune
 
@@ -80,20 +80,6 @@ Istnieją dwie metody przeglądania i zatwierdzania aplikacji zarządzanego skle
 9. Kliknij pozycję **Wybierz**, aby wybrać aplikację.
 10. Kliknij pozycję **Synchronizuj** w górnej części bloku, aby przeprowadzić synchronizację aplikacji z usługą zarządzanego sklepu Google Play.
 11. Kliknij pozycję **Odśwież**, aby zaktualizować listę aplikacji i wyświetlić nowo dodaną aplikację.
-
-### <a name="add-additional-app-settings-to-a-managed-google-play-store-app"></a>Dodawanie dodatkowych ustawień aplikacji do aplikacji z zarządzanego sklepu Google Play
-1. Jeśli musisz dodać dodatkowe szczegóły aplikacji, wybierz aplikację z listy.
-2. Kliknij pozycję **Właściwości** > **Edytuj** obok obszaru **Informacje o aplikacji**. Zostanie wyświetlona strona **Informacje o aplikacji**.
-3. Na stronie **Informacje o aplikacji** dodaj szczegóły aplikacji:
-    - **Kategoria**: opcjonalnie wybierz co najmniej jedną wbudowaną lub utworzoną przez siebie kategorię aplikacji. Ułatwi to użytkownikom znajdowanie aplikacji podczas przeglądania Portalu firmy.
-    - **Pokaż jako polecaną aplikację w Portalu firmy**: wybierz tę opcję, aby wyświetlić pakiet aplikacji w dobrze widocznym miejscu na stronie głównej portalu firmy podczas przeglądania aplikacji przez użytkowników.
-    - **Adres URL informacji**: Opcjonalnie wprowadź adres URL witryny sieci Web zawierającej informacje o tej aplikacji. Adres będzie widoczny dla użytkowników Portalu firmy.
-    - **Adres URL zasad ochrony prywatności**: Opcjonalnie wprowadź adres URL witryny sieci Web zawierającej informacje dotyczące zasad ochrony prywatności w tej aplikacji. Adres będzie widoczny dla użytkowników Portalu firmy.
-    - **Deweloper**: opcjonalnie wprowadź nazwę dewelopera aplikacji.
-    - **Właściciel**: opcjonalnie wprowadź nazwę właściciela aplikacji, na przykład *Dział kadr*.
-    - **Uwagi**: opcjonalnie wprowadź wszelkie uwagi, które chcesz skojarzyć z tą aplikacją.
-4. Kliknij pozycję **Przejrzyj i zapisz**, aby wyświetlić stronę **Przeglądanie i zapisywanie**. 
-5. Gdy skończysz, kliknij pozycję **Zapisz**, aby zaktualizować aplikację w usłudze Intune.
 
 ### <a name="add-a-managed-google-play-store-app-in-the-managed-google-play-console-alternative"></a>Dodawanie aplikacji z zarządzanego sklepu Google Play za pośrednictwem konsoli zarządzanego sklepu Google Play (metoda alternatywna)
 Jeśli wolisz zsynchronizować aplikację z zarządzanego sklepu Google Play, zamiast dodawać ją bezpośrednio za pomocą usługi Intune, wykonaj poniższe kroki.
@@ -238,6 +224,9 @@ W przypadku aplikacji zarządzanych ze sklepu Google Play wdrożonych na urządz
 
 ## <a name="delete-managed-google-play-apps"></a>Usuwanie aplikacji z zarządzanego sklepu Google Play
 W razie potrzeby możesz usuwać aplikacje z zarządzanego sklepu Google Play z poziomu usługi Microsoft Intune. Aby usunąć aplikację z zarządzanego sklepu Google Play, otwórz usługę Microsoft Intune w witrynie Azure Portal i wybierz kolejno pozycje **Aplikacje** > **Wszystkie aplikacje**. Na liście aplikacji wybierz wielokropek (...) po prawej stronie aplikacji z zarządzanego sklepu Google Play, a następnie wybierz pozycję **Usuń** z wyświetlonej listy. Po usunięciu aplikacji zarządzanej ze sklepu Google Play z listy aplikacji ta aplikacja zarządzana stanie się automatycznie aplikacją niezatwierdzoną.
+
+> [!NOTE]
+> Jeśli zatwierdzenie aplikacji zostanie cofnięte lub aplikacja zostanie usunięta z zarządzanego Sklepu Google Play, nie zostanie ona usunięta z listy aplikacji klienckich usługi Intune. Dzięki temu można kierować zasady odinstalowywania do użytkowników, nawet jeśli aplikacja jest niezatwierdzona.
 
 ## <a name="android-enterprise-system-apps"></a>Aplikacje systemu Android Enterprise
 

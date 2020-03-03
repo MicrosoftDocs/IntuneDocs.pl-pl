@@ -17,12 +17,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 57467d3d073666c1c22ac0a412f68a258d5b3d75
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: cbc4e1cc8cf7bd578690bf3e34353a60ec67cdab
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73414070"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514731"
 ---
 # <a name="help-end-users-understand-company-portal-app-messages"></a>Pomaganie użytkownikom końcowym w zrozumieniu komunikatów aplikacji Portal firmy
 
@@ -126,7 +126,7 @@ Jeśli aplikacja Portal firmy nie została dodana do listy **Dozwolone aplikacje
 
 Dodaj Portal firmy do listy **Dozwolone aplikacje** lub **Aplikacje wykluczone** w zasadach ochrony aplikacji usługi Windows Information Protection (WIP). Aby uzyskać więcej informacji, zobacz [Tworzenie i wdrażanie zasad ochrony aplikacji w funkcji Windows Information Protection (WIP) za pomocą usługi Intune](../apps/windows-information-protection-policy-create.md).
 
-## <a name="approve-a-ios-company-app-line-of-business-app-on-your-ios-device"></a>Zatwierdź aplikację firmową systemu iOS (aplikacja biznesowa) na urządzeniu z systemem iOS 
+## <a name="approve-a-iosipados-company-app-line-of-business-app-on-your-iosipados-device"></a>Zatwierdź aplikację firmową systemu iOS/iPadOS (aplikacja biznesowa) na urządzeniu z systemem iOS/iPadOS 
 
 ### <a name="where-it-appears"></a>Gdzie jest dostępny
 
@@ -136,7 +136,7 @@ Aplikacje systemu iOS opracowywane przez organizację, które nie są dostępne 
 
 ### <a name="what-it-means"></a>Znaczenie
 
-Ten komunikat oznacza, że musisz zmodyfikować ustawienia urządzenia z systemem iOS w celu zatwierdzenia i zainstalowania aplikacji opracowanej przez firmę na urządzeniu z systemem iOS.
+Ten komunikat oznacza, że musisz zmodyfikować ustawienia urządzenia z systemem iOS/iPadOS w celu zatwierdzenia i zainstalowania aplikacji opracowanej przez firmę na urządzeniu z systemem iOS/iPadOS.
 
 Gdy zainstalujesz takie aplikacje przy użyciu aplikacji Portal firmy, a następnie uruchomisz aplikację, wykonaj poniższe kroki w celu zatwierdzenia pobranej aplikacji:
 

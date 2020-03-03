@@ -16,21 +16,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 88beb8f4791c127b0a225878f5bc43b6dd9b4025
-ms.sourcegitcommit: 637375a390b6e34f9c4415c77b99fe2980bbf554
+ms.openlocfilehash: 9afb8f431ae301fe74f420c11205a7ed2637434b
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75839371"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514629"
 ---
 # <a name="guided-scenario---deploy-microsoft-edge-for-mobile"></a>Scenariusz z przewodnikiem — wdrażanie przeglądarki Microsoft Edge dla urządzeń przenośnych 
 
-Wykonując czynności opisane w tym [przewodniku ze scenariuszem](~/fundamentals/guided-scenarios-overview.md), możesz przypisać aplikację Microsoft Edge do użytkowników urządzeń z systemem iOS lub Android w swojej organizacji. Przypisanie tej aplikacji umożliwi użytkownikom bezproblemowe przeglądanie zawartości przy użyciu urządzeń firmowych. 
+Wykonując czynności opisane w tym [przewodniku ze scenariuszem](~/fundamentals/guided-scenarios-overview.md), możesz przypisać aplikację Microsoft Edge do użytkowników urządzeń z systemem iOS/iPadOS lub Android w swojej organizacji. Przypisanie tej aplikacji umożliwi użytkownikom bezproblemowe przeglądanie zawartości przy użyciu urządzeń firmowych. 
 
-Przeglądarka Microsoft Edge umożliwia użytkownikom łatwiejsze korzystanie z Internetu dzięki wbudowanym funkcjom, które pomagają im konsolidować i porządkować zawartość związaną z pracą oraz nią zarządzać. Użytkownicy urządzeń z systemami iOS i Android, którzy logują się przy użyciu kont firmowych usługi Azure AD w aplikacji Microsoft Edge, zobaczą wstępnie załadowaną przeglądarkę z służbowymi **ulubionymi** oraz zdefiniowanymi przez Ciebie filtrami witryn internetowych.
+Przeglądarka Microsoft Edge umożliwia użytkownikom łatwiejsze korzystanie z Internetu dzięki wbudowanym funkcjom, które pomagają im konsolidować i porządkować zawartość związaną z pracą oraz nią zarządzać. Użytkownicy urządzeń z systemami iOS/iPadOS i Android, którzy logują się przy użyciu kont firmowych usługi Azure AD w aplikacji Microsoft Edge, zobaczą wstępnie załadowaną przeglądarkę z służbowymi **ulubionymi** oraz zdefiniowanymi przez Ciebie filtrami witryn internetowych.
 
 > [!NOTE]
-> Jeśli zablokowano możliwość rejestrowania urządzeń z systemem iOS lub Android przez użytkowników, ten scenariusz nie umożliwi rejestracji, a użytkownicy będą musieli zainstalować przeglądarkę Microsoft Edge samodzielnie.
+> Jeśli zablokowano możliwość rejestrowania urządzeń z systemem iOS/iPadOS lub Android przez użytkowników, ten scenariusz nie umożliwi rejestracji, a użytkownicy będą musieli zainstalować przeglądarkę Microsoft Edge samodzielnie.
 Dostępne są następujące funkcje przeglądarki Microsoft Edge dla przedsiębiorstw włączane przy użyciu zasad usługi Intune: 
 
 - **Podwójna tożsamość** — użytkownicy mogą dodawać konta służbowe i osobiste na potrzeby przeglądania. Te dwie tożsamości są całkowicie oddzielone, co przypomina architekturę i środowisko usługi Office 365 oraz programu Outlook. Administratorzy usługi Intune będą mogli ustawić żądane zasady dla chronionego środowiska przeglądania w ramach konta służbowego. 
@@ -49,9 +49,9 @@ Dostępne są następujące funkcje przeglądarki Microsoft Edge dla przedsiębi
 
 ## <a name="step-1---introduction"></a>Krok 1. Wprowadzenie
 
-Scenariusz z przewodnikiem **Wdrażanie przeglądarki Microsoft Edge dla urządzeń przenośnych** opisuje konfigurowanie podstawowych wdrożeń przeglądarki Microsoft Edge dla wybranej grupy użytkowników urządzeń z systemami iOS i Android. Obejmuje wdrożenie **podwójnej tożsamości** oraz **skrótów do zarządzanych ulubionych i strony głównej**. Ponadto na urządzeniach zarejestrowanych przez wybranych użytkowników aplikacja Microsoft Edge zostanie automatycznie zainstalowana przez usługę Intune. Ta automatyczna instalacja będzie miała miejsce w przypadku wszystkich typów rejestracji sterowanych przez użytkownika, takich jak: 
-- Rejestracja urządzeń z systemem iOS za pośrednictwem aplikacji Portal firmy 
-- Rejestracja koligacji urządzenia z systemem iOS użytkownika za pośrednictwem usługi Apple Business Manager 
+Scenariusz z przewodnikiem **Wdrażanie przeglądarki Microsoft Edge dla urządzeń przenośnych** opisuje konfigurowanie podstawowych wdrożeń przeglądarki Microsoft Edge dla wybranej grupy użytkowników urządzeń z systemami iOS/iPadOS i Android. Obejmuje wdrożenie **podwójnej tożsamości** oraz **skrótów do zarządzanych ulubionych i strony głównej**. Ponadto na urządzeniach zarejestrowanych przez wybranych użytkowników aplikacja Microsoft Edge zostanie automatycznie zainstalowana przez usługę Intune. Ta automatyczna instalacja będzie miała miejsce w przypadku wszystkich typów rejestracji sterowanych przez użytkownika, takich jak: 
+- Rejestracja urządzeń z systemem iOS/iPadOS za pośrednictwem aplikacji Portal firmy 
+- Rejestracja koligacji urządzenia z systemem iOS/iPadOS użytkownika za pośrednictwem usługi Apple Business Manager 
 - Rejestracja starszych urządzeń z systemem Android za pośrednictwem aplikacji Portal firmy 
 
 Ten scenariusz z przewodnikiem obejmuje automatyczne włączenie wyświetlania usługi **MyApps** w Ulubionych w przeglądarce Microsoft Edge i zastosowanie w przeglądarce oznaczeń marki skonfigurowanych dla aplikacji Portal firmy w usłudze Intune. 
@@ -60,13 +60,13 @@ Ten scenariusz z przewodnikiem obejmuje automatyczne włączenie wyświetlania u
 Będą potrzebne informacje o stronach służbowych, które mają zostać dodane do Ulubionych dla użytkowników, oraz o filtrach wymaganych podczas przeglądania Internetu. Zanim przejdziesz dalej, upewnij się, że zakończono wykonywanie następujących zadań:
 
 - Dodawanie użytkowników do grup usługi Azure AD. Aby uzyskać więcej informacji, zobacz [Tworzenie podstawowej grupy i dodawanie członków w usłudze Azure Active Directory](https://go.microsoft.com/fwlink/?linkid=2102458).
-- Rejestrowanie urządzeń z systemami iOS i Android w usłudze Intune. Aby uzyskać więcej informacji, zobacz temat [Rejestrowanie urządzeń](https://go.microsoft.com/fwlink/?linkid=2102547).
+- Rejestrowanie urządzeń z systemami iOS/iPadOS i Android w usłudze Intune. Aby uzyskać więcej informacji, zobacz temat [Rejestrowanie urządzeń](https://go.microsoft.com/fwlink/?linkid=2102547).
 - Przygotowanie listy stron służbowych do dodania do Ulubionych w przeglądarce Microsoft Edge.
 - Przygotowanie listy filtrów witryn internetowych, które chcesz zastosować w przeglądarce Microsoft Edge.
 
 ## <a name="step-2---basics"></a>Krok 2. Podstawowe informacje
 
-W tym kroku należy wprowadzić nazwę i opis nowych zasad przeglądarki Microsoft Edge. Możesz sprawdzić te zasady później, jeśli konieczna będzie zmiana przypisań i konfiguracji. W scenariuszu z przewodnikiem zostanie dodana aplikacja Microsoft Edge iOS dla urządzeń z systemem iOS oraz aplikacja Microsoft Edge Android dla urządzeń z systemem Android. W tym kroku zostaną również utworzone zasady konfiguracji dla tych aplikacji.
+W tym kroku należy wprowadzić nazwę i opis nowych zasad przeglądarki Microsoft Edge. Możesz sprawdzić te zasady później, jeśli konieczna będzie zmiana przypisań i konfiguracji. W scenariuszu z przewodnikiem zostanie dodana aplikacja Microsoft Edge iOS/iPadOS dla urządzeń z systemem iOS/iPadOS oraz aplikacja Microsoft Edge Android dla urządzeń z systemem Android. W tym kroku zostaną również utworzone zasady konfiguracji dla tych aplikacji.
 
 ## <a name="step-3---configuration"></a>Krok 3. Konfiguracja
 
@@ -74,7 +74,7 @@ Ten krok scenariusza z przewodnikiem pokazuje, jak skonfigurować przeglądarkę
 
 ## <a name="step-4---assignments"></a>Krok 4. Przypisania
 
-W tym kroku możesz wybrać grupy użytkowników, które mają mieć skonfigurowaną przeglądarkę Microsoft Edge dla urządzeń przenośnych do celów służbowych. Przeglądarka Microsoft Edge będzie również zainstalowana na wszystkich urządzeniach z systemami iOS i Android zarejestrowanych przez tych użytkowników.
+W tym kroku możesz wybrać grupy użytkowników, które mają mieć skonfigurowaną przeglądarkę Microsoft Edge dla urządzeń przenośnych do celów służbowych. Przeglądarka Microsoft Edge będzie również zainstalowana na wszystkich urządzeniach z systemami iOS/iPadOS i Android zarejestrowanych przez tych użytkowników.
 
 ## <a name="step-5---review--create"></a>Krok 5. Przegląd + tworzenie
 

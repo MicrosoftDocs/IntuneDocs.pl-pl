@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/04/2019
+ms.date: 02/25/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 5209ce7fba30a156de055503751104f9090d49d7
-ms.sourcegitcommit: e7052114324b80d0503b107c934bb90b8eb29704
+ms.openlocfilehash: a5c844377dcd69b6caf5ef9f72fcb8dbb4ef8bd0
+ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75756000"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77609317"
 ---
 # <a name="use-device-encryption-with-intune"></a>Szyfrowanie urządzeń w usłudze Intune
 
@@ -39,17 +39,30 @@ Usługa Intune udostępnia również wbudowany [raport szyfrowania](encryption-m
 
 Za pomocą usługi Intune można skonfigurować szyfrowanie dysków za pomocą programu FileVault na urządzeniach z systemem macOS. Następnie, korzystając z raportu szyfrowania usługi Intune, można wyświetlić szczegóły szyfrowania dla tych urządzeń i zarządzać kluczami odzyskiwania dla urządzeń zaszyfrowanych za pomocą programu FileVault.
 
-Pamiętaj, że rejestracja urządzeń zatwierdzonych przez użytkownika jest wymagana, aby program FileVault działał w urządzeniu. Użytkownik musi ręcznie zatwierdzić profil zarządzania z preferencji systemu, aby rejestracja została uznana za zatwierdzoną przez użytkownika. 
+Rejestracja urządzeń zatwierdzonych przez użytkownika jest wymagana, aby program FileVault działał na urządzeniu. Użytkownik musi ręcznie zatwierdzić profil zarządzania z preferencji systemu, aby rejestracja została uznana za zatwierdzoną przez użytkownika.
 
 FileVault to program do szyfrowania całych dysków, który jest dołączony do systemu macOS. Za pomocą usługi Intune można skonfigurować program FileVault na urządzeniach z systemem **macOS 10.13 lub nowszym**.
 
 Aby skonfigurować narzędzie FileVault, utwórz [profil konfiguracji urządzenia](../configuration/device-profile-create.md) na potrzeby ochrony punktu końcowego na platformie macOS. Ustawienia programu FileVault są jedną z dostępnych kategorii ustawień ochrony punktu końcowego w systemie macOS.
 
-Po utworzeniu zasad służących do szyfrowania urządzeń za pomocą programu FileVault te zasady są stosowane do urządzeń w dwóch etapach. Najpierw urządzenie jest przygotowywane, aby umożliwić usłudze Intune pobranie klucza odzyskiwania i utworzenie jego kopii zapasowej. Jest to nazywane deponowaniem. Po zdeponowaniu klucza można uruchomić szyfrowanie dysku.
+Po utworzeniu zasad służących do szyfrowania urządzeń za pomocą programu FileVault te zasady są stosowane do urządzeń w dwóch etapach. Najpierw urządzenie jest przygotowywane, aby umożliwić usłudze Intune pobranie klucza odzyskiwania i utworzenie jego kopii zapasowej. To działanie jest nazywane deponowaniem. Po zdeponowaniu klucza można uruchomić szyfrowanie dysku.
 
 ![Ustawienia programu FileVault](./media/encrypt-devices/filevault-settings.png)
 
 Aby uzyskać szczegółowe informacje na temat ustawień programu FileVault, którymi można zarządzać za pomocą usługi Intune, zobacz sekcję [FileVault](endpoint-protection-macos.md#filevault) w artykule dotyczącym ustawień ochrony punktu końcowego w usłudze Intune w systemie macOS.
+
+### <a name="permissions-to-manage-filevault"></a>Uprawnienia umożliwiające zarządzanie funkcją FileVault
+
+Aby zarządzać funkcją FileVault w usłudze Intune, Twoje konto musi mieć odpowiednie uprawnienia [kontroli dostępu na podstawie ról](../fundamentals/role-based-access-control.md) (RBAC) usługi Intune.
+
+Poniżej opisano uprawnienia funkcji FileVault z kategorii **Zadania zdalne** oraz wbudowane role RBAC, które udzielają uprawnień:
+ 
+- **Pobieranie klucza funkcji FileVault**:
+  - Operator pomocy technicznej
+  - Menedżer zabezpieczeń punktu końcowego
+
+- **Obracanie klucza funkcji FileVault**
+  - Operator pomocy technicznej
 
 ### <a name="how-to-configure-macos-filevault"></a>Jak skonfigurować program FileVault w systemie macOS
 
@@ -84,7 +97,7 @@ Gdy usługa Intune zaszyfruje urządzenie z systemem macOS za pomocą programu F
 
 ### <a name="retrieve-personal-recovery-key-from-mem-encrypted-macos-devices"></a>Pobieranie osobistego klucza odzyskiwania z urządzeń z systemem macOS zaszyfrowanych przy użyciu programu MEM
 
-Użytkownicy końcowi będą mogli pobrać osobisty klucz odzyskiwania (klucz FileVault) przy użyciu aplikacji Portal firmy dla systemu iOS. Urządzenie, które ma osobisty klucz odzyskiwania, musi zostać zarejestrowane w usłudze Intune i zaszyfrowane za pomocą usługi FileVault w usłudze Intune. Korzystając z aplikacji Portal firmy dla systemu iOS, użytkownik końcowy może otworzyć stronę internetową zawierającą osobisty klucz odzyskiwania usługi FileVault. Możesz również pobrać klucz odzyskiwania z usługi Intune, wybierając pozycję **Urządzenia** > *zaszyfrowane i zarejestrowane urządzenie z systemem macOS* > **Pobierz klucz odzyskiwania**. 
+Użytkownicy końcowi pobierają osobisty klucz odzyskiwania (klucz FileVault) przy użyciu aplikacji Portal firmy dla systemu iOS. Urządzenie, które ma osobisty klucz odzyskiwania, musi zostać zarejestrowane w usłudze Intune i zaszyfrowane za pomocą usługi FileVault w usłudze Intune. Korzystając z aplikacji Portal firmy dla systemu iOS, użytkownik końcowy może otworzyć stronę internetową zawierającą osobisty klucz odzyskiwania usługi FileVault. Możesz również pobrać klucz odzyskiwania z usługi Intune, wybierając pozycję **Urządzenia** > *zaszyfrowane i zarejestrowane urządzenie z systemem macOS* > **Pobierz klucz odzyskiwania**. 
 
 ## <a name="bitlocker-encryption-for-windows-10"></a>Szyfrowanie funkcją BitLocker dla systemu Windows 10
 

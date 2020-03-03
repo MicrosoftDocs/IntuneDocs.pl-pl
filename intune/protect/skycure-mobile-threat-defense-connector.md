@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: be8fbb0bd96891eb3af3157deddfc325ebc5f2b9
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: 884d7f5d4710b44c302598b3c34e704beace240a
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72508925"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77515275"
 ---
 # <a name="symantec-endpoint-protection-mobile-connector"></a>Łącznik Symantec Endpoint Protection Mobile
 
@@ -41,7 +41,7 @@ Możesz włączyć ocenę ryzyka SEP Mobile za pomocą zasad zgodności urządze
 
 ## <a name="how-do-intune-and-sep-mobile-help-protect-your-company-resources"></a>W jaki sposób usługa Intune i program SEP Mobile ułatwiają ochronę zasobów firmy?
 
-Aplikacja SEP Mobile dla systemu Android lub iOS przechwytuje dane telemetryczne z systemu plików, stosu sieci oraz urządzenia i aplikacji (wszędzie, gdzie są dostępne), a następnie wysyła je do usługi Symantec w chmurze w celu dokonania oceny ryzyka dotyczącego urządzenia pod kątem zagrożeń mobilnych.
+Aplikacja SEP Mobile dla systemu Android lub iOS/iPadOS przechwytuje dane telemetryczne z systemu plików, stosu sieci oraz urządzenia i aplikacji (wszędzie, gdzie są dostępne), a następnie wysyła je do usługi Symantec w chmurze w celu dokonania oceny ryzyka dotyczącego urządzenia pod kątem zagrożeń mobilnych.
 
 Zasady zgodności urządzeń w usłudze Intune zawierają regułę dotyczącą programu SEP Mobile, która jest oparta na ocenie ryzyka SEP Mobile. Gdy ta reguła jest włączona, usługa Intune ocenia zgodność urządzenia z zasadami, które zostały włączone.
 
@@ -121,7 +121,7 @@ Poniżej przedstawiono kroki, które należy wykonać w celu zintegrowania usłu
 
 - [Konfiguracja integracji z programem SEP Mobile w usłudze Intune](skycure-mtd-connector-integration.md)
 
-- [Dodawanie i przypisywanie aplikacji SEP Mobile, aplikacji Microsoft Authenticator i zasad konfiguracji aplikacji systemu iOS](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Dodawanie i przypisywanie aplikacji SEP Mobile, aplikacji Microsoft Authenticator i zasad konfiguracji aplikacji systemu iOS/iPadOS](mtd-apps-ios-app-configuration-policy-add-assign.md)
 
 - [Tworzenie zasad zgodności urządzeń w programie SEP Mobile przy użyciu usługi Intune](mtd-device-compliance-policy-create.md)
 

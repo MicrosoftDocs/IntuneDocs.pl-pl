@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9deee0dca675d7fd95445131ed98ea195972c6ac
-ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
+ms.openlocfilehash: c134eb1fc413a32f2a27034d8c3a993f18f8a9c9
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74409809"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576276"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>Samouczek: Chronienie poczty e-mail usługi Exchange Online na urządzeniach zarządzanych
 
@@ -45,7 +45,7 @@ W tym samouczku będziesz potrzebować dzierżawy testowej z następującymi sub
 
 - Subskrypcja Office 365 Business obejmująca program Exchange ([bezpłatna wersja próbna](https://go.microsoft.com/fwlink/p/?LinkID=510938))
 
-Przed rozpoczęciem pracy utwórz profil testowy urządzenia dla urządzeń z systemem iOS, wykonując kroki opisane w przewodniku [Szybki start: Tworzenie profilu poczty e-mail urządzenia dla systemu iOS](../configuration/quickstart-email-profile.md).
+Przed rozpoczęciem pracy utwórz profil testowy urządzenia dla urządzeń z systemem iOS, wykonując kroki opisane w przewodniku [Szybki start: Tworzenie profilu poczty e-mail urządzenia dla systemu iOS/iPadOS](../configuration/quickstart-email-profile.md).
 
 ## <a name="sign-in-to-intune"></a>Logowanie się do usługi Intune
 
@@ -156,13 +156,13 @@ Teraz utworzymy zasady dostępu warunkowego, które wymagają zarejestrowania ws
 
 8. W obszarze **Włącz zasady** wybierz pozycję **na**.
 
-   ![Włączanie zasad](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-enable-policy.png)
+   ![Włącz zasady](./media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-enable-policy.png)
 
 9. Wybierz przycisk **Utwórz**.
 
 ## <a name="try-it-out"></a>Wypróbowywanie działania
 
-Dzięki utworzonym zasadom dowolne urządzenie z systemem iOS, które próbuje zalogować się do poczty e-mail usługi Office 365, musi zostać zarejestrowanie w usłudze Intune i musi używać aplikacji mobilnej Outlook dla systemu iOS. Aby przetestować ten scenariusz w urządzeniu z systemem iOS, zaloguj się do usługi Exchange Online przy użyciu poświadczeń dla użytkownika w dzierżawie testowej. Zostanie wyświetlony monit o zarejestrowanie urządzenia i zainstalowanie aplikacji mobilnej Outlook.
+Dzięki utworzonym zasadom dowolne urządzenie z systemem iOS, które próbuje zalogować się do poczty e-mail usługi Office 365, musi zostać zarejestrowane w usłudze Intune i musi używać aplikacji mobilnej Outlook dla systemu iOS/iPadOS. Aby przetestować ten scenariusz w urządzeniu z systemem iOS, zaloguj się do usługi Exchange Online przy użyciu poświadczeń dla użytkownika w dzierżawie testowej. Zostanie wyświetlony monit o zarejestrowanie urządzenia i zainstalowanie aplikacji mobilnej Outlook.
 
 1. Aby przetestować na telefonie iPhone, przejdź do pozycji **Ustawienia** > **Hasła i konta** > **Dodaj konto** > **Exchange**.
 

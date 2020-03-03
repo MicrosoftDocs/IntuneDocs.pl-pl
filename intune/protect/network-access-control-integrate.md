@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/25/2019
+ms.date: 02/18/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: baeece091358a7cd05f0d1f8db7c0032870fc262
-ms.sourcegitcommit: e166b9746fcf0e710e93ad012d2f52e2d3ed2644
+ms.openlocfilehash: 472b23581cddad16a1b7eaf37ddf99e7e37e70f5
+ms.sourcegitcommit: 5881979c45fc973cba382413eaa193d369b8dcf6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75207098"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77569238"
 ---
 # <a name="network-access-control-nac-integration-with-intune"></a>Integracja kontroli dostępu do sieci (NAC) z usługą Intune
 
@@ -67,31 +67,34 @@ Poniższa lista stanowi omówienie działania integracji kontroli dostępu do si
 
 ## <a name="use-nac-for-vpn-on-your-ios-devices"></a>Używanie kontroli dostępu do sieci VPN w urządzeniach z systemem iOS  
 
-- Kontrola dostępu do sieci jest dostępna w następujących sieciach VPN bez włączania kontroli dostępu do sieci w profilu sieci VPN:
+Kontrola dostępu do sieci jest dostępna w następujących sieciach VPN bez włączania kontroli dostępu do sieci w profilu sieci VPN:
 
   - Kontrola dostępu do sieci dla starszej wersji programu Cisco AnyConnect
   - Starsza wersja programu F5 Access
   - Citrix VPN
 
-- Kontrola dostępu do sieci jest również dostępna dla aplikacji Citrix SSO i F5 Access. Aby włączyć kontrolę dostępu do sieci dla aplikacji Citrix SSO:
+Kontrola dostępu do sieci jest również obsługiwana w przypadku programów Cisco AnyConnect, Citrix SSO i F5 Access. 
+
+### <a name="to-enable-nac-for-cisco-anyconnect-for-ios"></a>Aby włączyć kontrolę dostępu do sieci dla programu Cisco AnyConnect dla systemu iOS:
+
+  - Zintegruj platformę ISE z usługą Intune na potrzeby rozwiązania NAC zgodnie z opisem pod linkiem poniżej.
+  - Skonfiguruj ustawienie **Włącz kontrolę dostępu do sieci (NAC)** w profilu sieci VPN, nadając mu wartość **Tak**.
+
+### <a name="to-enable-nac-for-citrix-sso"></a>Aby włączyć kontrolę dostępu do sieci dla aplikacji Citrix SSO:
 
   - Użyj rozwiązania Citrix Gateway 12.0.59 lub nowszego.  
   - Użytkownicy muszą mieć zainstalowaną aplikację Citrix SSO 1.1.6 lub nowszą.
   - [Zintegruj program NetScaler z usługą Intune na potrzeby rozwiązania NAC](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html) zgodnie z opisem w dokumentacji produktów firmy Citrix.
   - W profilu sieci VPN wybierz pozycję **Podstawowe ustawienia** > **Włącz kontrolę dostępu do sieci (NAC)** > wybierz pozycję **Zgadzam się**.
 
-  Połączenie sieci VPN jest rozłączane co 24 godziny ze względów bezpieczeństwa. Połączenie z siecią VPN można od razu nawiązać ponownie.
 
-- Aby włączyć kontrolę dostępu do sieci dla programu F5 Access:
+### <a name="to-enable-nac-for-f5-access"></a>Aby włączyć kontrolę dostępu do sieci dla programu F5 Access:
 
   - Użyj systemu F5 BIG-IP 13.1.1.5. System BIG-IP 14 nie jest obsługiwany.
   - Zintegruj system BIG-IP z usługą Intune, aby móc korzystać z kontroli dostępu do sieci. Listę kroków można znaleźć w przewodniku firmy F5 [Overview: Configuring APM for device posture checks with endpoint management systems](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) (Omówienie: Konfigurowania programu APM pod kątem kontroli stanu urządzenia za pomocą systemów zarządzania punktem końcowym).
   - W profilu sieci VPN wybierz pozycję **Podstawowe ustawienia** > **Włącz kontrolę dostępu do sieci (NAC)** > wybierz pozycję **Zgadzam się**.
 
   Połączenie sieci VPN jest rozłączane co 24 godziny ze względów bezpieczeństwa. Połączenie z siecią VPN można od razu nawiązać ponownie.
-
-- Kontrola dostępu do sieci nie jest obsługiwana dla następującego klienta sieci VPN w systemie iOS:
-  - Cisco AnyConnect
 
 Współpracujemy z naszymi partnerami, aby udostępnić rozwiązanie NAC dla nowszych klientów. Gdy rozwiązania będą gotowe, zaktualizujemy ten artykuł o dodatkowe informacje.
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 15d6a67cb41455a1e3c0830e9ed242bfa52b0269
-ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
+ms.openlocfilehash: cee415174d68f3e6c9e72f0f0e06aa0d5d80ad91
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76912662"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77511858"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Przypisywanie aplikacji do grup przy użyciu usługi Microsoft Intune
 
@@ -49,7 +49,7 @@ Poniższa tabela zawiera listę różnych opcji przypisywania aplikacji do użyt
 | Użytkownicy końcowi instalują dostępne aplikacje z internetowego Portalu firmy | Tak | Tak |
 
 > [!NOTE]
-> Obecnie można przypisać aplikacje systemu iOS i Android (aplikacje biznesowe i zakupione w sklepie) do urządzeń, które nie zostały zarejestrowane w usłudze Intune.
+> Obecnie można przypisać aplikacje systemu iOS/iPadOS i Android (aplikacje biznesowe i zakupione w sklepie) do urządzeń, które nie zostały zarejestrowane w usłudze Intune.
 >
 > Aby otrzymywać aktualizacje aplikacji na urządzeniach, które nie zostały zarejestrowane w usłudze Intune, użytkownicy urządzeń muszą przejść do Portalu firmy swojej organizacji i ręcznie zainstalować aktualizacje aplikacji.
 
@@ -67,9 +67,9 @@ Poniższa tabela zawiera listę różnych opcji przypisywania aplikacji do użyt
    - **Odinstalowywanie**: aplikacja jest odinstalowywana z urządzeń w wybranych grupach, jeśli usługa Intune wcześniej zainstalowała aplikację na urządzeniu za pośrednictwem przypisania „Dostępne dla zarejestrowanych urządzeń” lub „Wymagane” przy użyciu tego samego wdrożenia. Po wdrożeniu nie można usunąć linków internetowych.
 
      > [!NOTE]
-     > **Tylko dla aplikacji systemu iOS**:
-     > - Aby skonfigurować to, co się dzieje z aplikacjami zarządzanymi, jeśli urządzenia nie są już zarządzane, możesz wybrać odpowiednie ustawienie w obszarze **Odinstaluj po usunięciu urządzenia**. Aby uzyskać więcej informacji, zobacz sekcję [Ustawienia dezinstalacji aplikacji zarządzanych przez system iOS](apps-deploy.md#app-uninstall-setting-for-ios-managed-apps).
-     > - jeśli utworzono profil sieci VPN systemu iOS zawierający ustawienia sieci VPN dla aplikacji, można wybrać ten profil w obszarze **Sieć VPN**. Gdy aplikacja jest uruchomiona, połączenie sieci VPN jest otwarte. Aby uzyskać więcej informacji, zobacz temat [Ustawienia sieci VPN dla urządzeń z systemem iOS](../vpn-settings-ios.md).
+     > **Tylko dla aplikacji systemu iOS/iPadOS**:
+     > - Aby skonfigurować to, co się dzieje z aplikacjami zarządzanymi, jeśli urządzenia nie są już zarządzane, możesz wybrać odpowiednie ustawienie w obszarze **Odinstaluj po usunięciu urządzenia**. Aby uzyskać więcej informacji, zobacz sekcję [Ustawienia dezinstalacji aplikacji zarządzanych przez system iOS/iPadOS](apps-deploy.md#app-uninstall-setting-for-ios-managed-apps).
+     > - Jeśli utworzono profil sieci VPN systemu iOS/iPadOS zawierający ustawienia sieci VPN dla aplikacji, można wybrać ten profil w obszarze **Sieć VPN**. Gdy aplikacja jest uruchomiona, połączenie sieci VPN jest otwarte. Aby uzyskać więcej informacji, zobacz temat [Ustawienia sieci VPN dla urządzeń z systemem iOS/iPadOS](../vpn-settings-ios.md).
      >
      > **Tylko dla aplikacji systemu Android**: jeśli aplikacja systemu Android jest wdrażana przy użyciu opcji **Dostępne z rejestracją lub bez**, stan raportowania będzie dostępny tylko na zarejestrowanych urządzeniach.
      >
@@ -114,7 +114,7 @@ W poniższej tabeli opisano wynikowe intencje w przypadku konfliktu:
 
 > [!NOTE]
 > W przypadku dodania zarządzanych aplikacji ze sklepu iOS do usługi Microsoft Intune i przypisania ich jako **Wymagane** są one automatycznie tworzone z intencjami **Wymagane** i **Dostępne**.<br><br>
-> Aplikacje ze sklepu dla systemu iOS (nie aplikacje zakupione w ramach programu VPP dla systemu iOS), które mają określony cel i intencję, będą wymuszane na urządzeniach w chwili zameldowania urządzenia i będą także widoczne w aplikacji Portal firmy.<br><br>
+> Aplikacje ze sklepu dla systemu iOS (nie aplikacje zakupione w ramach programu VPP dla systemu iOS/iPadOS), które mają określony cel i intencję, będą wymuszane na urządzeniach w chwili zameldowania urządzenia i będą także widoczne w aplikacji Portal firmy.<br><br>
 > Po wystąpieniu konfliktów w ustawieniu **Odinstaluj po usunięciu urządzenia** aplikacja nie zostanie usunięta z urządzenia, gdy urządzenie nie jest już zarządzane.
 
 ## <a name="managed-google-play-app-deployment-to-unmanaged-devices"></a>Wdrażanie aplikacji z zarządzanego sklepu Google Play na urządzeniach niezarządzanych
@@ -132,7 +132,7 @@ Czynności wymagane do przypisania aplikacji z zarządzanego sklepu Google Play 
 Jeśli selektywne czyszczenie zasad ochrony aplikacji zostanie włączone w konsoli usługi Intune, konto służbowe zostanie automatycznie usunięte z aplikacji Sklep Play, a użytkownik końcowy nie będzie od tego momentu widzieć aplikacji służbowych w wykazie aplikacji Sklep Play. Gdy konto służbowe zostanie usunięte z urządzenia, aplikacje zainstalowane ze Sklepu Play pozostaną zainstalowane na urządzeniu i nie będą odinstalowywane. 
 
 ## <a name="app-uninstall-setting-for-ios-managed-apps"></a>Ustawienia odinstalowywania aplikacji zarządzanych przez system iOS
-W przypadku urządzeń z systemem iOS możesz wybrać, co się dzieje z aplikacjami zarządzanymi po wyrejestrowaniu urządzenia z usługi Intune lub usunięciu profilu zarządzania, za pomocą ustawienia **Odinstaluj po usunięciu urządzenia**. To ustawienie dotyczy tylko aplikacji instalowanych jako zarządzane po zarejestrowaniu urządzenia. Nie można skonfigurować ustawienia dla aplikacji sieci Web ani linków sieci Web. Tylko dane chronione przez oprogramowanie do zarządzanie aplikacjami mobilnymi są usuwane po wycofaniu przez selektywne czyszczenie aplikacji.
+W przypadku urządzeń z systemem iOS/iPadOS możesz wybrać, co się dzieje z aplikacjami zarządzanymi po wyrejestrowaniu urządzenia z usługi Intune lub usunięciu profilu zarządzania, za pomocą ustawienia **Odinstaluj po usunięciu urządzenia**. To ustawienie dotyczy tylko aplikacji instalowanych jako zarządzane po zarejestrowaniu urządzenia. Nie można skonfigurować ustawienia dla aplikacji sieci Web ani linków sieci Web. Tylko dane chronione przez oprogramowanie do zarządzanie aplikacjami mobilnymi są usuwane po wycofaniu przez selektywne czyszczenie aplikacji.
 
 Wartości domyślne dla ustawienia są wstępnie wypełniane dla nowych przypisań w następujący sposób:
 

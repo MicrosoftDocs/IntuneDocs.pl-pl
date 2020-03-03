@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/21/2019
+ms.date: 02/24/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04436c38fc6c4100a8232ea1ad23585f350d6aae
-ms.sourcegitcommit: a82d25d98fdf0ba766f8f074871d4f13725e23f9
+ms.openlocfilehash: 43e104d9f32f6b6204ffc3bd461bb06764543e3c
+ms.sourcegitcommit: 5881979c45fc973cba382413eaa193d369b8dcf6
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75548145"
+ms.lasthandoff: 02/24/2020
+ms.locfileid: "77569272"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Konfigurowanie urządzeń z systemem Windows 10 w usłudze Intune przy użyciu punktów odniesienia zabezpieczeń
 
@@ -142,7 +142,7 @@ Typowe zadania podczas pracy z punktami odniesienia zabezpieczeń obejmują:
 
    ![Przegląd punktu odniesienia](./media/security-baselines/review.png)
 
-9. Po utworzeniu profilu można go edytować. W tym celu wybierz pozycję **Bezpieczeństwo urządzeń** > **Punkty odniesienia zabezpieczeń**, wybierz skonfigurowany typ punktu odniesienia, a następnie wybierz pozycję **Profile**. Wybierz profil z listy dostępnych profilów, a następnie wybierz pozycję **Właściwości**. Możesz edytować ustawienia na wszystkich dostępnych kartach konfiguracji. Następnie wybierz pozycję **Przejrzyj i zapisz**, aby zatwierdzić zmiany.
+9. Po utworzeniu profilu można go edytować. W tym celu wybierz pozycję **Zabezpieczenia punktu końcowego** > **Punkty odniesienia zabezpieczeń**, wybierz skonfigurowany typ punktu odniesienia, a następnie wybierz pozycję **Profile**. Wybierz profil z listy dostępnych profilów, a następnie wybierz pozycję **Właściwości**. Możesz edytować ustawienia na wszystkich dostępnych kartach konfiguracji. Następnie wybierz pozycję **Przejrzyj i zapisz**, aby zatwierdzić zmiany.
 
 ### <a name="change-the-baseline-version-for-a-profile"></a>Zmienianie wersji punktu odniesienia dla profilu
 
@@ -214,7 +214,7 @@ Ten sam zespół firmy Microsoft wybrał i zorganizował ustawienia dla każdego
 
 - Firma Microsoft nadal publikuje punkty odniesienia zabezpieczeń dla zasad grupy (GPO) i zestawu narzędzi [Security Compliance Toolkit](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10), tak jak robiła to przez wiele lat. Te punkty odniesienia są używane przez wiele organizacji. Rekomendacje przedstawione w tych punktach odniesienia są tworzone w trakcie współpracy zespołu ds. zabezpieczeń firmy Microsoft z klientami korporacyjnymi i agencjami zewnętrznymi, w tym z Departamentem Obrony (DoD, Department of Defense), Narodowym Instytutem Standaryzacji i Technologii (NIST, National Institute of Standards and Technology) i innymi. Udostępniamy nasze rekomendacje i punkty odniesienia tym organizacjom. Te organizacje mają również własne rekomendacje, które dokładnie odzwierciedlają rekomendacje firmy Microsoft. Ponieważ funkcja zarządzania urządzeniami przenośnymi (MDM) jest wciąż rozbudowywana w chmurze, firma Microsoft utworzyła równoważne rekomendacje oprogramowania MDM dla tych punktów odniesienia zasad grupy. Te dodatkowe punkty odniesienia są wbudowane w usłudze Microsoft Intune i oferują raporty dotyczące zgodności dla użytkowników, grup i urządzeń, które są zgodne (lub nie) z danym punktem odniesienia.
 
-- Wielu klientów używa rekomendacji punktów odniesienia usługi Intune jako punktu startowego, a następnie dostosowuje go tak, aby spełniał wymagania dotyczące infrastruktury IT i zabezpieczeń. Pierwszy punkt odniesienia do wydania to **punkt odniesienia dotyczący oprogramowania MDM** w systemie Windows 10 RS5 firmy Microsoft. Ten punkt odniesienia został stworzony jako ogólna infrastruktura, która umożliwia klientom ostateczne importowanie innych punktów odniesienia w oparciu o standardy CIS, NIST i inne. Obecnie to rozwiązanie jest dostępne dla systemu Windows, a w przyszłości będzie również obejmować systemy iOS i Android.
+- Wielu klientów używa rekomendacji punktów odniesienia usługi Intune jako punktu startowego, a następnie dostosowuje go tak, aby spełniał wymagania dotyczące infrastruktury IT i zabezpieczeń. Pierwszy punkt odniesienia do wydania to **punkt odniesienia dotyczący oprogramowania MDM** w systemie Windows 10 RS5 firmy Microsoft. Ten punkt odniesienia został stworzony jako ogólna infrastruktura, która umożliwia klientom ostateczne importowanie innych punktów odniesienia w oparciu o standardy CIS, NIST i inne. Obecnie to rozwiązanie jest dostępne dla systemu Windows, a w przyszłości będzie również obejmować systemy iOS/iPadOS i Android.
 
 - Migracja z lokalnych zasad grupy usługi Active Directory do rozwiązania działającego wyłącznie w chmurze przy użyciu usługi Azure Active Directory (AD) w usłudze Microsoft Intune to podróż. Aby ułatwić ten proces, można skorzystać z szablonów zasad grupy zawartych w zestawie narzędzi [Security Compliance Toolkit](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10), które są pomocne w zarządzaniu urządzeniami przyłączonymi do hybrydowej usługi Azure AD i do usługi Azure AD. W razie potrzeby te urządzenia mogą uzyskać ustawienia zarządzania urządzeniami przenośnymi z chmury (usługi Intune), a ustawienia zasad grupy z kontrolerów domeny w środowisku lokalnym.
 

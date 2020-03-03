@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19c1bb959212ebeaea40f7089cba5533b6efeb71
-ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
+ms.openlocfilehash: 9f639c4d2c2bcfa62f828fa18973fe6a513b1a82
+ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76912611"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77514867"
 ---
 # <a name="set-up-symantec-endpoint-protection-mobile-integration-with-intune"></a>Konfigurowanie integracji programu Symantec Endpoint Protection Mobile w usłudze Intune
 
@@ -54,7 +54,7 @@ Program SEP Mobile obsługuje dwa tryby integracji z usługą Intune:
 
 ### <a name="how-are-the-sep-mobile-apps-used-with-azure-ad-and-intune"></a>Jak aplikacje programu SEP Mobile są używane w usługach Azure AD i Intune?
 
-- **Aplikacja systemu iOS:** umożliwia użytkownikom końcowym logowanie się do usługi Azure AD za pomocą aplikacji dla systemu iOS.
+- **Aplikacja systemu iOS:** umożliwia użytkownikom końcowym logowanie się do usługi Azure AD za pomocą aplikacji dla systemu iOS/iPadOS.
 
 - **Aplikacja systemu Android:** umożliwia użytkownikom końcowym logowanie się do usługi Azure AD za pomocą aplikacji dla systemu Android.
 
@@ -77,11 +77,11 @@ Program SEP Mobile obsługuje dwa tryby integracji z usługą Intune:
 
 5. Po otwarciu strony logowania wprowadź swoje poświadczenia usługi Intune, a następnie wybierz pozycję **Akceptuj**.
 
-    ![Obraz przedstawiający monit logowania usługi Intune aplikacji systemu iOS](./media/skycure-mtd-connector-integration/symantec-portal-basic-accept.png)
+    ![Obraz przedstawiający monit logowania usługi Intune aplikacji systemu iOS/iPadOS](./media/skycure-mtd-connector-integration/symantec-portal-basic-accept.png)
 
 6. Po dodaniu aplikacji do usługi Azure AD zostanie wyświetlona informacja o pomyślnym dodaniu aplikacji.
 
-    ![Obraz przedstawiający ekran końcowy aplikacji systemu iOS](./media/skycure-mtd-connector-integration/symantec-portal-basic-added.png)
+    ![Obraz przedstawiający ekran końcowy aplikacji systemu iOS/iPadOS](./media/skycure-mtd-connector-integration/symantec-portal-basic-added.png)
 
 7. Powtórz te kroki dla aplikacji **SEP Mobile Android** i **Zarządzanie**.
 
@@ -136,11 +136,11 @@ Program SEP Mobile synchronizuje urządzenia z uruchomioną usługą Mobile Thre
 
 6. Obok pozycji **Aplikacja systemu iOS** wybierz przycisk **Dodaj do usługi Active Directory**.
 
-    ![Obraz przedstawiający dodawanie aplikacji systemu iOS do usługi Active Directory](./media/skycure-mtd-connector-integration/symantec-portal-basic-add.png)
+    ![Obraz przedstawiający dodawanie aplikacji systemu iOS/iPadOS do usługi Active Directory](./media/skycure-mtd-connector-integration/symantec-portal-basic-add.png)
 
 7. Zaloguj się przy użyciu poświadczeń usługi Azure Active Directory dla konta usługi Office 365, które zarządza katalogiem.
 
-8. Wybierz przycisk **Akceptuj**, aby dodać aplikację systemu iOS dla programu SEP Mobile do usługi Azure Active Directory.
+8. Wybierz przycisk **Akceptuj**, aby dodać aplikację systemu iOS/iPadOS dla programu SEP Mobile do usługi Azure Active Directory.
 
     ![Obraz przedstawiający przycisk Akceptuj](./media/skycure-mtd-connector-integration/symantec-portal-basic-accept.png)
 
