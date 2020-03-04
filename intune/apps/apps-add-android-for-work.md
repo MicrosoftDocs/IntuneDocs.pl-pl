@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4b3bd06bad6c31c2d0fb4c31a7ad605af96be86
-ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
+ms.openlocfilehash: 126ea5a1798252f29e988553edfea462eff2fd7e
+ms.sourcegitcommit: a25f556aa9df4fcd9fdacccd12c9029bc6c5fe20
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77609183"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256462"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Dodawanie zarządzanych aplikacji ze sklepu Google Play do urządzeń z systemem Android Enterprise z usługą Intune
 
@@ -155,9 +155,6 @@ Więcej informacji na temat aplikacji prywatnych z zarządzanego sklepu Google P
 Linki sieci Web z zarządzanego sklepu Google Play można instalować i zarządzać nimi tak, jak innym aplikacjami w systemie Android. Po zainstalowaniu na urządzeniu pojawią się na liście aplikacji użytkownika wraz z innymi zainstalowanymi aplikacjami. Ich naciśnięcie spowoduje uruchomienie przeglądarki urządzenia.
 
 Linki sieci Web będą otwierane przy użyciu przeglądarki Microsoft Edge lub dowolnej innej wdrożonej przeglądarki. Pamiętaj o wdrożeniu na urządzeniach co najmniej jednej aplikacji przeglądarki, aby można było poprawnie otwierać na nich linki sieci Web. Jednak wszystkie opcje menu **Wyświetlanie** dostępne dla linków sieci Web (pełny ekran, autonomiczny i minimalny interfejs użytkownika) będą działały wyłącznie w przeglądarce Chrome. 
-
-> [!IMPORTANT]
-> W momencie publikowania tego dokumentu istnieje znana usterka Google, która uniemożliwia otwieranie linków sieci Web na urządzeniach z przeglądarkami innymi niż Chrome. Firma Google zobowiązała się ją naprawić.  Ta informacja zostanie usunięta, jeśli firma Microsoft otrzyma od firmy Google potwierdzenie wydania poprawki.
 
 1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Wybierz pozycję **Aplikacje** > **Wszystkie aplikacje** > **Dodaj**.

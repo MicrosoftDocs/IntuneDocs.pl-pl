@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e478402f826809bda4f81315d5a1a4ff6e1a8b88
-ms.sourcegitcommit: 5ad0ce27a30ee3ef3beefc46d2ee49db6ec0cbe3
+ms.openlocfilehash: c9245ca028bdb5589df8c76b10560d9130a1108c
+ms.sourcegitcommit: 9ee2401a2f01373a962749b0728c22385dbcba6d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2020
-ms.locfileid: "76886801"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "78181725"
 ---
 # <a name="manage-windows-10-software-updates-in-intune"></a>Zarządzanie aktualizacjami oprogramowania systemu Windows 10 w usłudze Intune
 
@@ -77,14 +77,14 @@ Pierścienie aktualizacji systemu Windows 10 obsługują [tagi zakresu](../funda
 
 ### <a name="create-and-assign-update-rings"></a>Tworzenie i przypisywanie pierścieni aktualizacji
 
-1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager]( https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Wybierz pozycję **Urządzenia** > **Windows** > **Pierścienie aktualizacji systemu Windows 10** > **Utwórz**.
 
 3. W obszarze *Podstawowe* podaj nazwę i opis (opcjonalnie), a następnie wybierz przycisk **Dalej**.
-  ![Tworzenie pierścienia aktualizacji]( ./media/windows-update-for-business-configure/basics-tab.png)
-  
-4. W obszarze **Aktualizuj ustawienia pierścienia** skonfiguruj ustawienia na potrzeby Twojej firmy. Aby uzyskać informacje na temat dostępnych ustawień, zobacz artykuł Ustawienia aktualizacji systemu Windows. Po skonfigurowaniu ustawień *Aktualizacja i Środowisko użytkownika* wybierz przycisk **Dalej**.
+  ![Tworzenie pierścienia aktualizacji](./media/windows-update-for-business-configure/basics-tab.png)
+
+4. W obszarze **Aktualizuj ustawienia pierścienia** skonfiguruj ustawienia na potrzeby Twojej firmy. Aby uzyskać informacje na temat dostępnych ustawień, zobacz artykuł [Ustawienia aktualizacji systemu Windows](../protect/windows-update-settings.md). Po skonfigurowaniu ustawień *Aktualizacja i Środowisko użytkownika* wybierz przycisk **Dalej**.
 
 5. Jeśli chcesz zastosować tagi do pierścienia aktualizacji, w obszarze **Tagi zakresu** wybierz pozycję **+ Wybierz zakres tagów**, aby otworzyć okienko *Wybierz tagi*. Wybierz co najmniej jeden tag, a następnie kliknij pozycję **Wybierz**, aby dodać je do pierścienia aktualizacji i wrócić na stronę *Tagi zakresu*.
 

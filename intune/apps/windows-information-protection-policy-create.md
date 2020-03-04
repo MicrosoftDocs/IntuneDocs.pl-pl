@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 02/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d1a8ee3f6d5eb190fb2ee252dfb5f6c23a1cf16
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 8ae5e45c521046fb414a1d141c6859c7a4e5d61a
+ms.sourcegitcommit: fab685b22a010fe231b27a0c5eda34a6f22f4c8d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74563770"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "78216123"
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Tworzenie i wdrażanie zasad ochrony aplikacji w funkcji Windows Information Protection (WIP) za pomocą usługi Intune
 
@@ -89,7 +89,7 @@ Po skonfigurowaniu usługi Intune w organizacji można utworzyć zasady dotyczą
 5. Wybierz pozycję **Dodaj aplikacje**. W obszarze **Dodawanie aplikacji** jest wyświetlana filtrowana lista aplikacji. Lista w górnej części okienka pozwala na zmianę filtru listy.
 6. Wybierz każdą aplikację, która ma mieć dostęp do danych firmowych.
 7. Kliknij przycisk **OK**. Okienko **Chronione aplikacje** zostanie zaktualizowane w celu wyświetlenia wszystkich wybranych aplikacji.
-8. Kliknij polecenie **Zapisz**.
+8. Kliknij przycisk **Zapisz**.
 
 ## <a name="add-a-store-app-to-your-protected-apps-list"></a>Dodawanie aplikacji ze Sklepu do listy Chronione aplikacje
 
@@ -103,7 +103,7 @@ Po skonfigurowaniu usługi Intune w organizacji można utworzyć zasady dotyczą
 6. Wybierz z listy pozycję **Aplikacje ze sklepu**.
 7. Wprowadź wartości w polach **Nazwa**, **Wydawca**, **Nazwa produktu** i **Akcja**. Ustaw w polu **Akcja** wartość **Zezwalaj**, aby aplikacja miała dostęp do danych firmowych.
 9. Kliknij przycisk **OK**. Okienko **Chronione aplikacje** zostanie zaktualizowane w celu wyświetlenia wszystkich wybranych aplikacji.
-10. Kliknij polecenie **Zapisz**.
+10. Kliknij przycisk **Zapisz**.
 
 ## <a name="add-a-desktop-app-to-your-protected-apps-list"></a>Dodawanie aplikacji klasycznej do listy Chronione aplikacje
 
@@ -116,7 +116,7 @@ Po skonfigurowaniu usługi Intune w organizacji można utworzyć zasady dotyczą
 6. Wybierz z listy pozycję **Aplikacje klasyczne**.
 7. Wprowadź wartości w polach **Nazwa**, **Wydawca**, **Nazwa produktu**, **Plik**, **Minimalna wersja**, **Maksymalna wersja** i **Akcja**. Ustaw w polu **Akcja** wartość **Zezwalaj**, aby aplikacja miała dostęp do danych firmowych.
 9. Kliknij przycisk **OK**. Okienko **Chronione aplikacje** zostanie zaktualizowane w celu wyświetlenia wszystkich wybranych aplikacji.
-10. Kliknij polecenie **Zapisz**.
+10. Kliknij przycisk **Zapisz**.
 
 ## <a name="wip-learning"></a>Uczenie funkcji WIP
 Po dodaniu aplikacji, które chcesz chronić za pomocą funkcji WIP, konieczne jest zastosowanie trybu ochrony z wykorzystaniem opcji **Uczenie funkcji WIP**.

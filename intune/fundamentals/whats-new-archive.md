@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 313d9f470e9467cc80bae9c2400d4cc64aacc7ea
-ms.sourcegitcommit: 5ad0ce27a30ee3ef3beefc46d2ee49db6ec0cbe3
-ms.translationtype: MTE75
+ms.openlocfilehash: c0cfe99f022a5e5448bdee453fb0210f6b7195fc
+ms.sourcegitcommit: 9ee2401a2f01373a962749b0728c22385dbcba6d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2020
-ms.locfileid: "76886768"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "78181821"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Nowości w usłudze Microsoft Intune — poprzednie miesiące
 
@@ -187,7 +187,7 @@ Rejestracja w usłudze Intune i aplikacja Portal firmy obsługują teraz system 
 Podczas zmiany nazwy urządzenia z systemem Windows należy przestrzegać nowych reguł:
 - Może mieć maksymalnie 15 znaków (nie może zajmować więcej niż 63 bajty i na końcu nie może być znaku null)
 - Nie może mieć wartości null ani być pustym ciągiem
-- Dozwolone znaki ASCII: litery (a–z, A–Z), cyfry (0–9) i łączniki
+- Dozwolone znaki ASCII: Litery (a–z, A–Z), cyfry (0–9) i łączniki
 - Dozwolone znaki Unicode: znaki muszą mieć wartość co najmniej 0x80, muszą być prawidłowymi znakami UTF8, musi dać się je zamapować na nazwę IDN (tzn. funkcja RtlIdnToNameprepUnicode musi je pomyślnie przetworzyć; zobacz RFC 3492)
 - Nazwy nie mogą zawierać samych cyfr
 - W nazwie nie może być spacji
@@ -407,7 +407,7 @@ Dotyczy:
 ### <a name="device-enrollment"></a>Rejestrowanie urządzeń
 
 #### <a name="new-tenants-will-default-away-from-android-device-administrator-management---4869790-----"></a>Nowi dzierżawcy będą domyślnie odchodzić od zarządzania urządzeniami z systemem Android przez administratorów<!-- 4869790   -->
-Możliwości administratora urządzeń z systemem Android zostały wyparte przez system Android Enterprise. W związku z tym zalecamy korzystanie na potrzeby nowych rejestracji z systemu Android Enterprise. W przyszłej aktualizacji nowi dzierżawcy będą musieli wykonać następujące czynności wstępne w ramach rejestracji w systemie Android, aby korzystać z zarządzania przez administratora urządzeń: wybierz kolejno pozycje **Intune** > **Rejestracja urządzeń** > **Rejestracja w systemie Android** > **Urządzenia prywatne i należące do firmy z uprawnieniami do administrowania urządzeniami** > **Zarządzaj urządzeniami za pomocą administratora urządzeń**.
+Możliwości administratora urządzeń z systemem Android zostały wyparte przez system Android Enterprise. W związku z tym zalecamy korzystanie na potrzeby nowych rejestracji z systemu Android Enterprise. W przyszłej aktualizacji nowi dzierżawcy będą musieli wykonać następujące czynności wstępne wymagane w ramach rejestracji w systemie Android, aby móc korzystać z zarządzania przy użyciu administratora: Wybierz kolejno **Intune** > **Rejestrowanie urządzeń** > **Rejestracja w systemie Android** > **Urządzenia prywatne i należące do firmy z uprawnieniami do administrowania urządzeniami** > **Zarządzaj urządzeniami za pomocą administratora urządzeń**.
 
 W środowisku istniejących dzierżawców nie zostaną wprowadzone żadne zmiany.
 
@@ -580,11 +580,11 @@ Istnieje możliwość utworzenia profilów w celu ograniczenia niektórych ustaw
 
 - W obszarze **iOS** > **Ograniczenia urządzenia** wprowadzono kilka zmian:
 
-  - **Aplikacje wbudowane** > **Znajdź mój telefon iPhone (tylko tryb nadzorowany)** : nowe ustawienie, które blokuje tę funkcję w funkcji aplikacji Znajdź. 
-  - **Aplikacje wbudowane** > **Znajdź moich znajomych (tylko tryb nadzorowany)** : nowe ustawienie, które blokuje tę funkcję w funkcji aplikacji Znajdź. 
+  - **Aplikacje wbudowane** > **Znajdź mój telefon iPhone (tylko tryb nadzorowany)** : nowe ustawienie, które blokuje tę funkcję w funkcji Znajdź moją aplikację. 
+  - **Aplikacje wbudowane** > **Znajdź moich znajomych (tylko tryb nadzorowany)** : nowe ustawienie, które blokuje tę funkcję w funkcji Znajdź moją aplikację. 
   - **Bezprzewodowe** > **Modyfikacja stanu sieci Wi-Fi (tylko tryb nadzorowany)** : nowe ustawienie, które uniemożliwia użytkownikom włączanie lub wyłączanie sieci Wi-Fi na urządzeniu.
   - **Klawiatura i słownik** > **QuickPath (tylko tryb nadzorowany)** : nowe ustawienie, które blokuje funkcję QuickPath.
-  - **Chmura i magazyn**: nazwa opcji **Kontynuacja aktywności** została zmieniona na **Handoff**.
+  - **Chmura i magazyn**: nazwa opcji **Kontynuacja aktywności** została zmieniona na **Przekazanie**.
 
   Aby zobaczyć bieżące ustawienia, przejdź do artykułu [Ustawienia urządzeń z systemem iOS umożliwiające działanie funkcji lub ich ograniczanie przy użyciu usługi Intune](../configuration/device-restrictions-ios.md).
 
@@ -1444,7 +1444,7 @@ Aby uzyskać listę tych ustawień zobacz:
 
 - [Ustawienia urządzenia z systemem Windows 10 lub nowszym, które ma działać jako kiosk](../configuration/kiosk-settings-windows.md)
 - [Ograniczenia urządzeń z przeglądarką Microsoft Edge](../configuration/device-restrictions-windows-10.md#microsoft-edge-browser)
-- [Ograniczenia urządzeń dotyczące ulubionych i wyszukiwania](../configuration/device-restrictions-windows-10.md##favorites-and-search)
+- [Ograniczenia urządzeń dotyczące ulubionych i wyszukiwania](../configuration/device-restrictions-windows-10.md#favorites-and-search)
 
 Dotyczy: Windows 10 lub nowszym
 
@@ -1639,7 +1639,7 @@ W przypadku tworzenia profilu konfiguracji dla urządzeń z systemem iOS możesz
 Listę ustawień można znaleźć w temacie dotyczącym [ustawień wyświetlania komunikatów na ekranie blokady](../configuration/ios-device-features-settings.md#lock-screen-message).
 
 #### <a name="new-app-store-doc-viewing-gaming-device-restriction-settings-added-to-ios-devices---2827760--"></a>Do urządzeń z systemem iOS dodano nowe ustawienia ograniczeń urządzenia obejmujące sklep App Store, wyświetlanie dokumentów i gry<!-- 2827760-->
-W obszarze **Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > **iOS** dla platformy > **Ograniczenia dotyczące urządzeń** dla typu profilu > **App Store, wyświetlanie dokumentów, gry** dodano następujące ustawienia: Zezwalanie aplikacjom zarządzanym na zapisywanie kontaktów na kontach niezarządzanych kontaktów, Zezwalanie niezarządzanym aplikacjom na odczytywanie z kont kontaktów zarządzanych. Aby wyświetlić te ustawienia, zobacz [ograniczenia urządzeń z systemem iOS](../configuration/device-restrictions-ios.md#app-store-doc-viewing-gaming).
+W obszarze **Konfiguracja urządzenia** > **Profile** > **Utwórz profil** >  **iOS** dla platformy > **Ograniczenia dotyczące urządzeń** dla typu profilu > **App Store, wyświetlanie dokumentów, gry** dodano następujące ustawienia: Zezwalanie aplikacjom zarządzanym na zapisywanie kontaktów na kontach niezarządzanych kontaktów. Zezwalanie niezarządzanym aplikacjom na odczytywanie z kont kontaktów zarządzanych. Aby wyświetlić te ustawienia, zobacz [ograniczenia urządzeń z systemem iOS](../configuration/device-restrictions-ios.md#app-store-doc-viewing-gaming).
 
 #### <a name="new-notification-hints-and-keyguard-settings-to-android-enterprise-device-owner-devices---3201839-3201843---"></a>Nowe ustawienia powiadomień, wskazówek i funkcji blokowania klawiatury na urządzeniach właściciela urządzenia z systemem Android Enterprise<!-- 3201839 3201843 -->
 Ta aktualizacja obejmuje kilka nowych funkcji dotyczących urządzeń z systemem Android Enterprise uruchamianych jako właściciel urządzenia. Aby korzystać z tych funkcji, przejdź do pozycji **Konfiguracja urządzenia** > **Profile** > **Utwórz profil** > w polu **Platforma** wybierz wartość **Android Enterprise** > w polu **Typ profilu** wybierz wartość **Tylko właściciel urządzenia** > **Ograniczenia urządzenia**.
@@ -1702,7 +1702,7 @@ Ustawienie **Udostępnianie kontaktów za pośrednictwem połączenia Bluetooth*
 
 Aby wyświetlić aktualną listę ustawień, zobacz [Ustawienia urządzeń z systemem Android Enterprise w celu zezwolenia na funkcje lub ich ograniczenia](../configuration/device-restrictions-android-for-work.md).
 
-Dotyczy: Właściciel urządzenia z systemem Android Enterprise
+Dotyczy: właściciel urządzenia z systemem Android Enterprise
 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->

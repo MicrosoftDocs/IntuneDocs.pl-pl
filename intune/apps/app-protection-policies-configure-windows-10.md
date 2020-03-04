@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 02/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 41c08d1912bf9c79507c2a6627205979504f340d
-ms.sourcegitcommit: 73b362173929f59e9df57e54e76d19834f155433
+ms.openlocfilehash: 66cf454290903705d8500c2b1f9a07c9097351bf
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564236"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77781752"
 ---
 # <a name="get-ready-to-configure-app-protection-policies-for-windows-10"></a>Przygotowywanie do konfigurowania zasad ochrony aplikacji dla systemu Windows 10 
 
@@ -52,7 +52,7 @@ Włącz zarządzanie aplikacjami mobilnymi (MAM) dla systemu Windows 10, ustawia
    **Adres URL informacji o zgodności usługi zarządzania aplikacjami mobilnymi**  
    Adres URL informacji o zgodności usługi zarządzania aplikacjami mobilnymi nie jest obsługiwany w przypadku usługi Microsoft Intune. Aby zasady ochrony zostały zastosowane, to pole wejściowe musi pozostać puste. 
 
-7. Kliknij polecenie **Zapisz**.
+7. Kliknij przycisk **Zapisz**.
 
 ## <a name="next-steps"></a>Następne kroki
 

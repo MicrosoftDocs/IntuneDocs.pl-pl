@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/09/2017
+ms.date: 02/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 884d7f5d4710b44c302598b3c34e704beace240a
-ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.openlocfilehash: 60bad9299a3751474ef01220a7c18f16be329448
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77515275"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77782075"
 ---
 # <a name="symantec-endpoint-protection-mobile-connector"></a>Łącznik Symantec Endpoint Protection Mobile
 
@@ -38,6 +38,9 @@ Dostęp urządzeń przenośnych do zasobów firmy można kontrolować z użyciem
 - Ochrona przed lukami w zabezpieczeniach
 
 Możesz włączyć ocenę ryzyka SEP Mobile za pomocą zasad zgodności urządzeń usługi Intune, a następnie używać zasad dostępu warunkowego do zezwalania na dostęp do zasobów firmy lub blokowania go w oparciu o wykryte zagrożenia.
+
+> [!NOTE]
+> Ten dostawca rozwiązania Mobile Threat Defense nie jest obsługiwany w przypadku niezarejestrowanych urządzeń.
 
 ## <a name="how-do-intune-and-sep-mobile-help-protect-your-company-resources"></a>W jaki sposób usługa Intune i program SEP Mobile ułatwiają ochronę zasobów firmy?
 
