@@ -161,6 +161,8 @@
             - name: Zasady ochrony aplikacji — przegląd
               href: app-protection-policy.md
               displayName: app; protection; policy
+            - name: Struktura ochrony danych przy użyciu zasad ochrony aplikacji
+              href: app-protection-framework.md
             - name: Tworzenie zasad ochrony aplikacji
               items:
                 - name: Ustawienia ogólne
