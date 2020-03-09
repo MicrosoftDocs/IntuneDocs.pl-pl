@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e0ed343f652c4afe87273eeaa4a2e35b7669056d
-ms.sourcegitcommit: 637375a390b6e34f9c4415c77b99fe2980bbf554
+ms.openlocfilehash: d26721ff27f380917fec7f4d23c0c5524737a4a3
+ms.sourcegitcommit: fab685b22a010fe231b27a0c5eda34a6f22f4c8d
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75839238"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "78216167"
 ---
 # <a name="understand-app-protection-policy-delivery-timing"></a>Omówienie harmonogramu dostarczania zasad ochrony aplikacji
 
@@ -38,6 +38,7 @@ Dostarczanie zasad ochrony aplikacji jest zależne od stanu licencji i rejestrac
 |    Nie dołączono dzierżawy    |    Poczekaj do następnego interwału ponawiania prób.  Ochrona aplikacji nie jest aktywna dla użytkownika.    |    24 godziny    |    Występuje, gdy nie skonfigurowano dzierżawy dla usługi Intune.    |
 |    Użytkownik nie ma licencji     |    Poczekaj do następnego interwału ponawiania prób.  Ochrona aplikacji nie jest aktywna dla użytkownika.     |    12 godzin — jednak w przypadku urządzeń z systemem Android ten interwał wymaga zestawu SDK aplikacji usługi Intune w wersji 5.6.0 lub nowszej. W przeciwnym razie w przypadku urządzeń z systemem Android ten interwał będzie wynosił 24 godziny.   |    Występuje, gdy użytkownik ma nie licencję na usługę Intune.    |
 |    Użytkownik nie ma przypisanych zasad ochrony aplikacji    |    Poczekaj do następnego interwału ponawiania prób.  Ochrona aplikacji nie jest aktywna dla użytkownika.    |    12 godzin        |    Występuje, gdy nie przypisano ustawień aplikacji dla użytkownika.    |
+|    Użytkownik ma przypisane zasady ochrony aplikacji, ale aplikacja nie jest zdefiniowana w zasadach ochrony aplikacji   |    Poczekaj do następnego interwału ponawiania prób.  Ochrona aplikacji nie jest aktywna dla użytkownika.    |    12 godzin        |    Występuje, gdy aplikacja nie została dodana do zasad ochrony aplikacji.    |
 |    Użytkownik został pomyślnie zarejestrowany w zarządzaniu aplikacjami mobilnymi w usłudze Intune    |    Ochrona aplikacji jest stosowana na ustawienia zasad.    Aktualizacje są wykonywane zgodnie z interwałem ponawiania prób    |    Usługa Intune jest definiowana w oparciu o obciążenie użytkownikami.    Zazwyczaj 30 minut.     |    Występuje, gdy użytkownik został pomyślnie zarejestrowany w konfiguracji usługi Intune dla zarządzania aplikacjami mobilnymi.    |
 
 > [!NOTE]

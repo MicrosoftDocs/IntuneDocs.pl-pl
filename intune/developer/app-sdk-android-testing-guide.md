@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d473d29536b4ffdcc221c8cf61c63725bae0fa2
-ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
-ms.translationtype: MTE75
+ms.openlocfilehash: 699665f93d04801223f2fc6e6536d9b675e75242
+ms.sourcegitcommit: 9ee2401a2f01373a962749b0728c22385dbcba6d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75653907"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "78181946"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-testing-guide"></a>Przewodnik dotyczący testowania zestawu SDK aplikacji usługi Microsoft Intune dla systemu Android
 
-Ten przewodnik ułatwia deweloperom testowanie aplikacji systemu Android zarządzanych przez usługę Intune.  
+Ten przewodnik pomaga deweloperom w testowaniu aplikacji systemu Android zarządzanych przez usługę Intune.  
 
 ## <a name="prerequisite-test-accounts"></a>Wymagane wstępnie konta do testowania
-Można tworzyć nowe konta z lub bez wstępnie wygenerowanych danych. Aby utworzyć nowe konto:
+Nowe konta można utworzyć ze wstępnie wygenerowanymi danymi lub bez nich. Aby utworzyć nowe konto:
 1. Przejdź do witryny [Microsoft Demos](https://demos.microsoft.com/environments/create/tenant). 
 2. [Skonfiguruj usługę Intune](../fundamentals/setup-steps.md), aby włączyć zarządzanie urządzeniami mobilnymi (MDM, Mobile Device Management).
 3. [Utwórz użytkowników](../fundamentals/users-add.md).
@@ -38,7 +38,7 @@ Można tworzyć nowe konta z lub bez wstępnie wygenerowanych danych. Aby utworz
 
 
 ## <a name="azure-portal-policy-configuration"></a>Konfiguracja zasad w witrynie Azure Portal
-[Utwórz i przypisz zasady ochrony aplikacji](../apps/app-protection-policies.md) w [bloku usługi Intune w witrynie Azure Portal](https://portal.azure.com/?feature.customportal=false#blade/Microsoft_Intune_Apps/MainMenu/14/selectedMenuItem/Overview). Możesz również utworzyć i przypisać [zasady konfiguracji aplikacji](../apps/app-configuration-policies-overview.md) w bloku Intune.
+[Utwórz i przypisz zasady ochrony aplikacji](../apps/app-protection-policies.md) w [bloku usługi Intune w witrynie Azure Portal](https://portal.azure.com/?feature.customportal=false#blade/Microsoft_Intune_Apps/MainMenu/14/selectedMenuItem/Overview). [Zasady konfiguracji aplikacji](../apps/app-configuration-policies-overview.md) możesz też utworzyć i przypisać w bloku Intune.
 
 > [!NOTE]
 > Jeśli aplikacji nie ma na liście w witrynie Azure Portal, możesz wybrać ją jako docelową dla zasad, wybierając opcję **więcej aplikacji** i podając nazwę pakietu w polu tekstowym.
@@ -54,11 +54,11 @@ Możesz wymagać podania numeru PIN przed uzyskaniem dostępu do zasobów firmy.
 1. W polach **Wymagaj numeru PIN w celu uzyskania dostępu** i **Wymagaj poświadczeń firmowych w celu udzielenia dostępu** ustaw wartość **Tak**. Aby uzyskać więcej informacji, zobacz [Ustawienia zasad ochrony aplikacji systemu Android w usłudze Microsoft Intune](../apps/app-protection-policy-settings-android.md#access-requirements).
 2. Potwierdź następujące warunki:
     - Podczas uruchamiania aplikacji powinien pojawiać się monit o podanie numeru PIN lub konto użytkownika produkcyjnego, za pomocą którego dokonano rejestracji w aplikacji Portal firmy.
-    - Niepowodzenie zaprezentowania prawidłowego monitu logowania może być spowodowane niepoprawnie skonfigurowanym manifestem systemu Android, w odniesieniu do wartości integracji biblioteki uwierzytelniania Azure Active Directory (ADAL) (element skipbroker, ClientID i urząd).
+    - Jeśli właściwy monit logowania się nie pojawia, może to być spowodowane niepoprawnie skonfigurowanym manifestem systemu Android, w szczególności wartościami integracji biblioteki ADAL (Azure Active Directory Authentication Library): SkipBroker, ClientID i Authority.
     - Jeśli nie pojawia się żaden monit, może to być spowodowane niepoprawnie zintegrowaną wartością `MAMActivity`. Aby uzyskać więcej informacji na temat klasy `MAMActivity`, zobacz [Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android](app-sdk-android.md).
 
 > [!NOTE] 
-> Jeśli poprzedni test nie działa, następujące testy prawdopodobnie zakończą się niepowodzeniem. Zapoznaj się z informacjami o zestawie [SDK](app-sdk-android.md##sdk-integration) i integracji [ADAL](app-sdk-android.md#configure-azure-active-directory-authentication-library-adal).
+> Jeśli wcześniejszy test nie działa, kolejne testy prawdopodobnie także zakończą się niepowodzeniem. Zapoznaj się z informacjami o zestawie [SDK](app-sdk-android.md#sdk-integration) i integracji [ADAL](app-sdk-android.md#configure-azure-active-directory-authentication-library-adal).
 
 ### <a name="restrict-transferring-and-receiving-data-with-other-apps"></a>Ograniczanie przesyłania i odbierania danych z innych aplikacji
 Przesyłaniem danych między zarządzanymi przez firmę aplikacjami możesz sterować w następujący sposób:
@@ -89,7 +89,7 @@ Dane na urządzeniu możesz szyfrować w następujący sposób:
 
 1. Dla ustawienia **Szyfruj dane aplikacji** skonfiguruj wartość **Tak**.
 2. Potwierdź następujące warunki:
-    - Normalne zachowanie aplikacji nie ma zastosowania.
+    - Nie wpływa to na normalne działanie aplikacji.
 
 ### <a name="prevent-android-backups"></a>Blokuj kopie zapasowe systemu Android
 Kopiami zapasowymi aplikacji możesz sterować w następujący sposób:
@@ -108,9 +108,9 @@ Możesz zdalnie wyczyścić w aplikacjach zarządzanych firmowe wiadomości e-ma
     - Zawartość zarządzana zostaje usunięta z aplikacji. Aby uzyskać więcej informacji, zobacz [Przewodnik dewelopera po zestawie SDK aplikacji usługi Microsoft Intune dla systemu Android — selektywne czyszczenie](app-sdk-android.md#selective-wipe).
 
 ### <a name="multi-identity-support"></a>Obsługa wielu tożsamości
-Integracja [obsługi wielu tożsamości](app-sdk-android.md#multi-identity-optional) to zmiana, z którą wiąże się istotne ryzyko, należy więc ją dokładnie przetestować. Najczęstsze problemy występują z powodu nieprawidłowego ustawienia tożsamości (poziomu kontekstu i zagrożenia) oraz śledzenia plików (`MAMFileProtectionManager`).
+Integracja [obsługi wielu tożsamości](app-sdk-android.md#multi-identity-optional) to zmiana, z którą wiąże się istotne ryzyko, należy więc ją dokładnie przetestować. Najczęstsze problemy wynikają z niepoprawnego ustawienia tożsamości (kontekst a poziom zagrożenia) i śledzenia plików (`MAMFileProtectionManager`).
 
-Upewnij się, że:
+Musisz co najmniej upewnić się, że:
 
 - Zasady polecenia **Zapisz jako** działają poprawnie dla tożsamości zarządzanych.
 - Ograniczenia dotyczące kopiowania i wklejania są poprawnie wymuszane ze środowisk zarządzanych do osobistych.
@@ -119,7 +119,7 @@ Upewnij się, że:
 - Użytkownik jest monitowany o uruchomienie warunkowe podczas przełączania z konta niezarządzanego na zarządzane (tylko za pierwszym razem).
 
 ### <a name="app-configuration-optional"></a>Konfiguracja aplikacji (opcjonalna)
-Możesz skonfigurować działanie aplikacji zarządzanych. Jeśli aplikacja używa jakichkolwiek ustawień konfiguracji aplikacji, należy sprawdzić, czy poprawnie obsługuje ona wszystkie wartości, które (jako administrator) możesz ustawić. Można tworzyć i przypisywać [zasady konfiguracji aplikacji](../apps/app-configuration-policies-overview.md) w usłudze Intune.
+Możesz skonfigurować działanie aplikacji zarządzanych. Jeśli aplikacja używa jakichkolwiek ustawień konfiguracji aplikacji, należy sprawdzić, czy poprawnie obsługuje ona wszystkie wartości, które (jako administrator) możesz ustawić. [Zasady konfiguracji aplikacji](../apps/app-configuration-policies-overview.md) można tworzyć i przypisywać w usłudze Intune.
 
 ## <a name="next-steps"></a>Następne kroki
 

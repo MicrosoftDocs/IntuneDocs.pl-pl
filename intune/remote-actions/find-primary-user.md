@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/21/2019
+ms.date: 02/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ff03682ab406b92e3ea7f1e416188119913cc87
-ms.sourcegitcommit: 5881979c45fc973cba382413eaa193d369b8dcf6
+ms.openlocfilehash: b804eccfa6f860c77ab4a1a7f1fe5ae0f5baf101
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/24/2020
-ms.locfileid: "77569459"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77781821"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>Znajdowanie użytkownika podstawowego urządzenia usługi Intune
 
@@ -32,7 +32,7 @@ Użytkownik podstawowy, określany również jako koligacja urządzenia użytkow
 
 1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Wybierz pozycję **Urządzenia** > wybierz urządzenie.
-3. Na stronie **Omówienie** wybierz pozycję **Zobacz więcej**. Zostanie wyświetlony użytkownik podstawowy.
+3. Na stronie **Omówienie** można zobaczyć wyświetlonego użytkownika podstawowego.
 
 ## <a name="what-is-the-primary-user"></a>Kto to jest użytkownik podstawowy?
 Właściwość użytkownika podstawowego jest używana do mapowania licencjonowanego użytkownika usługi Intune na urządzeniach w:

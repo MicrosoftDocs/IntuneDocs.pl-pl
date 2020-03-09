@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 842af9c8fffcb3755c81260739f4949768e75bac
-ms.sourcegitcommit: c46b0c2d4507be6a2786a4ea06009b2d5aafef85
-ms.translationtype: MTE75
+ms.openlocfilehash: e2075ed8328e6a33732e03fbf521d32b2edd6a35
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76912679"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77575825"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Przygotowanie aplikacji biznesowych pod kątem zasad ochrony aplikacji
 
@@ -103,7 +103,7 @@ Ta tabela zawiera listę ustawień, które są włączone, jeśli aplikacja korz
 |Zablokuj przechwytywanie ekranu (tylko system Android)|X|X|
 |Obsługa zarządzania aplikacjami mobilnymi bez rejestracji urządzenia|X|X|
 |Pełne czyszczenie danych aplikacji|X|X|
-|Selektywne czyszczenie danych służbowych w scenariuszach obejmujących wiele tożsamości <br><br>**Uwaga:** W systemie iOS usunięcie profilu zarządzania spowoduje również usunięcie aplikacji.|X||
+|Selektywne czyszczenie danych służbowych w scenariuszach obejmujących wiele tożsamości <br><br>**Uwaga:** W systemie iOS/iPadOS usunięcie profilu zarządzania spowoduje również usunięcie aplikacji.|X||
 |Nie zezwalaj na używanie polecenia „Zapisz jako”|X||
 |Konfiguracja aplikacji docelowej (lub konfiguracja aplikacji za pośrednictwem „kanału MAM”)|X|X|
 |Obsługa wielu tożsamości|X||

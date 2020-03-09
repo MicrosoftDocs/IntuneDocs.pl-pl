@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/26/2019
+ms.date: 02/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6faaa800d8dedc53ab20f1dae2c3049132642b7d
-ms.sourcegitcommit: 29f3ba071c9348686d3ad6f3b8864d8557e05b97
+ms.openlocfilehash: 07463f3bcac7d657659ece7fed2c40db53ee2122
+ms.sourcegitcommit: a25f556aa9df4fcd9fdacccd12c9029bc6c5fe20
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77609162"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256377"
 ---
 # <a name="how-to-manage-volume-purchased-apps-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Jak zarządzać aplikacjami zakupionymi zbiorczo w sklepie Microsoft Store dla Firm za pomocą usługi Microsoft Intune
 
@@ -51,7 +51,8 @@ Przed rozpoczęciem synchronizowania i przypisywania aplikacji ze Sklepu Microso
 - Aby móc używać tej funkcji, urządzenia muszą być przyłączone do usługi Active Directory Domain Services, dołączone do usługi Azure AD lub dołączone w miejscu pracy.
 - Zarejestrowane urządzenia muszą używać systemu Windows 10 w wersji 1511 lub nowszej.
 
-Ponadto powiązane zestawy i aplikacje licencjonowane w trybie offline synchronizowane ze sklepem Microsoft Store dla Firm będą teraz konsolidowane w jeden wpis aplikacji w interfejsie użytkownika. Wszelkie szczegóły wdrożenia z indywidualnych pakietów zostaną poddane migracji do pojedynczego wpisu. Aby wyświetlić powiązane zestawy w witrynie Azure Portal, wybierz pozycję **Licencje aplikacji** w okienku **Aplikacje**.
+> [!NOTE]
+W przypadku wyłączenia usługi Store na urządzeniach zarządzanych (ręcznie, za pośrednictwem zasad lub zasad grupy) instalacja aplikacji licencjonowanych w trybie online nie powiedzie się.
 
 ## <a name="associate-your-microsoft-store-for-business-account-with-intune"></a>Kojarzenie konta w Sklepie Microsoft dla Firm z usługą Intune
 Przed włączeniem synchronizacji w konsoli usługi Intune należy skonfigurować konto w sklepie, aby używało usługi Intune jako narzędzia do zarządzania:

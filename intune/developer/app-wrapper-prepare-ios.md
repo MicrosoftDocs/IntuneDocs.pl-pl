@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 62ee300b7357132e6f9e18ef4528110dfc988dc3
-ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
-ms.translationtype: MTE75
+ms.openlocfilehash: 11e757d22274a0e1cc327d9037a74e4ffac024dd
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75653669"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576346"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Przygotowywanie aplikacji systemu iOS pod kątem zasad ochrony aplikacji za pomocą narzędzia opakowującego aplikacje usługi Intune
 
@@ -199,14 +199,14 @@ Z narzędziem opakowującym aplikacje można użyć następujących parametrów 
 |**-c**|`<SHA1 hash of the signing certificate>`|
 |**-h**| Wyświetla szczegółowe informacje dotyczące użycia dostępnych właściwości wiersza polecenia dla narzędzia opakowującego aplikacje. |
 |**-aa**|(Opcjonalnie) `<Authority URI of the input app if the app uses the Azure Active Directory Authentication Library>` tj. `login.windows.net/common` |
-|**-ac**|(Opcjonalnie) `<Client ID of the input app if the app uses the Azure Active Directory Authentication Library>` to jest identyfikator GUID w polu Identyfikator klienta pochodzi z listy aplikacji w bloku rejestracji aplikacji. |
-|**-ar**|(Opcjonalnie) `<Redirect/Reply URI of the input app if the app uses the Azure Active Directory Authentication Library>` to jest identyfikator URI przekierowania skonfigurowany w ramach rejestracji aplikacji. Zwykle jest to protokół URL aplikacji, z którą aplikacja Microsoft Authenticator powraca po uwierzytelnieniu przez brokera. |
+|**-ac**|(Opcjonalnie) `<Client ID of the input app if the app uses the Azure Active Directory Authentication Library>` Jest to identyfikator GUID w polu Identyfikator klienta, który pochodzi z listy aplikacji w bloku Rejestracja aplikacji. |
+|**-ar**|(Opcjonalnie) `<Redirect/Reply URI of the input app if the app uses the Azure Active Directory Authentication Library>` Jest to identyfikator URI przekierowania skonfigurowany w ramach rejestracji aplikacji. Zwykle jest to protokół URL aplikacji, który aplikacja Microsoft Authenticator zwraca po uwierzytelnieniu przez brokera. |
 |**-v**| (Opcjonalna) Zwraca pełne komunikaty wyjściowe do konsoli. Zaleca się użyć tej flagi w celu debugowania wszelkich błędów. |
 |**-e**| (Opcjonalna) Użyj tej właściwości, aby narzędzie opakowujące aplikacje usuwało brakujące uprawnienia podczas przetwarzania aplikacji. Zobacz [Ustawianie uprawnień dla aplikacji](#setting-app-entitlements), aby uzyskać szczegółowe informacje.|
 |**-xe**| (Opcjonalna) Wyświetla informacje na temat rozszerzeń systemu iOS w aplikacji oraz uprawnień wymaganych do ich używania. Zobacz [Ustawianie uprawnień dla aplikacji](#setting-app-entitlements), aby uzyskać szczegółowe informacje. |
 |**-x**| (Opcjonalnie) `<An array of paths to extension provisioning profiles>`. Użyj tej właściwości, jeśli aplikacja wymaga profilów aprowizacji rozszerzeń.|
 |**-b**|(Opcjonalnie) Użyj właściwości -b bez argumentu, jeśli chcesz, aby opakowana aplikacja wyjściowa miała taką samą wersję pakietu jak aplikacja wejściowa (niezalecane). <br/><br/> Użyj właściwości `-b <custom bundle version>`, jeśli chcesz, aby opakowana aplikacja miała niestandardową wartość CFBundleVersion. Jeśli chcesz określić niestandardową wartość CFBundleVersion, zaleca się podwyższenie najmniej istotnego składnika wartości CFBundleVersion aplikacji natywnej, na przykład z 1.0.0 na 1.0.1. |
-|**-citrix**|Obowiązkowe Uwzględnij zestaw SDK aplikacji Citrix XenMobile ("tylko sieć"). Aby można było użyć tej opcji, musisz mieć zainstalowany [Citrix MDX Toolkit](https://docs.citrix.com/en-us/mdx-toolkit/about-mdx-toolkit.html). |
+|**-citrix**|(Opcjonalnie) Uwzględnij zestaw SDK aplikacji Citrix XenMobile (wariant tylko dla sieci). Aby można było użyć tej opcji, musisz mieć zainstalowany zestaw narzędzi [Citrix MDX Toolkit](https://docs.citrix.com/en-us/mdx-toolkit/about-mdx-toolkit.html). |
 |**-f**|(Opcjonalna) `<Path to a plist file specifying arguments.>` Poprzedź tą flagą plik [plist](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html), jeśli chcesz użyć szablonu pliku plist w celu określenia pozostałych właściwości aplikacji IntuneMAMPackager: -i, -o, -p itd. Zobacz temat Wprowadzanie argumentów przy użyciu pliku plist. |
 
 ### <a name="use-a-plist-to-input-arguments"></a>Wprowadzanie argumentów przy użyciu pliku plist
@@ -226,9 +226,9 @@ Za pomocą edytora tekstu lub narzędzia Xcode otwórz plik `Parameters.plist`, 
 | Identyfikator URI odpowiedzi ADAL |String|puste| Odpowiada właściwości -ar|
 | Verbose Enabled (Pełne komunikaty włączone) |Boolean|fałsz| Odpowiada właściwości -v.|
 | Remove Missing Entitlements (Usuwanie brakujących uprawnień) |Boolean|fałsz| Odpowiada właściwości -c.|
-| Prevent Default Build (Zapobieganie użyciu domyślnej kompilacji) |Boolen|fałsz| Odpowiada właściwości -b bez argumentów.|
+| Prevent Default Build (Zapobieganie użyciu domyślnej kompilacji) |Boolean|fałsz| Odpowiada właściwości -b bez argumentów.|
 | Build String Override (Zastąpienie ciągu kompilacji) |String|puste| Niestandardowa wartość CFBundleVersion opakowanej aplikacji wyjściowej|
-| Uwzględnij zestaw SDK aplikacji Citrix XenMobile (wariant dotyczący tylko sieci)|Boolean|fałsz| Taka sama jak dla platformy Citrix|
+| Uwzględnij zestaw SDK aplikacji Citrix XenMobile (wariant tylko dla sieci)|Boolean|fałsz| To samo co -citrix|
 | Extension Provisioning Profile Paths (Ścieżki profilów aprowizacji rozszerzeń) |Tablica ciągów|puste| Tablica profilów aprowizacji rozszerzeń dla aplikacji.
 
 Uruchom aplikację IntuneMAMPackager, wprowadzając plik plist jako jedyny argument:
@@ -255,7 +255,7 @@ Główne scenariusze, w których trzeba będzie ponownie opakować aplikacje:
 * Sama aplikacja wydała nową wersję. Poprzednia wersja aplikacji została opakowana i przekazana do konsoli usługi Intune.
 * Narzędzie opakowujące aplikacje usługi Intune dla systemu iOS wydało nową wersję, która oferuje kluczowe poprawki usterek i nowe funkcje zasad ochrony aplikacji, przeznaczone specjalnie dla usługi Intune. Taka sytuacja występuje co 6–8 tygodni za pośrednictwem repozytorium GitHub dla [narzędzia opakowującego aplikacje usługi Intune dla systemu iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios).
 
-W przypadku systemu iOS, chociaż możliwe jest opakowywanie przy użyciu profilu aprowizacji/certyfikatu innego niż oryginalnie zastosowany do podpisania aplikacji, jeśli uprawnienia określone w aplikacji nie zostaną uwzględnione w nowym profilu aprowizacji, opakowywanie nie powiedzie się. Użycie opcji „-e” wiersza polecenia, która usuwa wszystkie brakujące uprawnienia z aplikacji, w celu wymuszenia zakończenia opakowywania powodzeniem w tym scenariuszu może spowodować uszkodzenie funkcjonalności aplikacji.
+W przypadku systemu iOS/iPadOS, chociaż możliwe jest opakowywanie przy użyciu profilu aprowizacji/certyfikatu innego niż oryginalnie zastosowany do podpisania aplikacji, jeśli uprawnienia określone w aplikacji nie zostaną uwzględnione w nowym profilu aprowizacji, opakowywanie nie powiedzie się. Użycie opcji „-e” wiersza polecenia, która usuwa wszystkie brakujące uprawnienia z aplikacji, w celu wymuszenia zakończenia opakowywania powodzeniem w tym scenariuszu może spowodować uszkodzenie funkcjonalności aplikacji.
 
 Niektóre najlepsze rozwiązania dotyczące ponownego opakowywania:
 
@@ -289,7 +289,7 @@ Jeśli przetwarzanie aplikacji przez narzędzie opakowujące aplikacje nie powie
 |Wskazana aplikacja wejściowa jest już opakowana i korzysta z najnowszej wersji szablonu zasad.|Narzędzie opakowujące aplikacje nie opakuje ponownie istniejącej opakowanej aplikacji korzystającej z najnowszej wersji szablonu zasad.|
 |OSTRZEŻENIE: Nie określono skrótu SHA1 certyfikatu. Przed wdrożeniem upewnij się, że opakowana aplikacja jest podpisana.|Upewnij się, że po właściwości wiersza polecenia –c podano prawidłowy skrót SHA1. |
 
-### <a name="collecting-logs-for-your-wrapped-applications-from-the-device"></a>Zbieranie dzienników dla opakowanych aplikacji z urządzenia
+### <a name="collecting-logs-for-your-wrapped-applications-from-the-device"></a>Zbieranie dzienników opakowanych aplikacji z urządzenia
 Wykonaj następujące kroki, aby podczas rozwiązywania problemów pobrać dzienniki opakowanych aplikacji.
 
 1. Przejdź do aplikacji Ustawienia systemu iOS na urządzeniu i wybierz aplikację LOB.
@@ -303,7 +303,7 @@ Wykonaj następujące kroki, aby podczas rozwiązywania problemów pobrać dzien
 
 ### <a name="collecting-crash-logs-from-the-system"></a>Zbieranie dzienników awarii z systemu
 
-Aplikacja może rejestrować przydatne informacje w konsoli urządzenia klienta systemu iOS. Informacje te są przydatne w przypadku wystąpienia problemów z aplikacją, gdy konieczne jest ustalenie, czy problem jest związany z narzędziem opakowującym aplikacje, czy też z samą aplikacją. Aby uzyskać dostęp do tych informacji, wykonaj następujące czynności:
+Aplikacja może rejestrować przydatne informacje w konsoli urządzenia klienckiego systemu iOS. Informacje te są przydatne w przypadku wystąpienia problemów z aplikacją, gdy konieczne jest ustalenie, czy problem jest związany z narzędziem opakowującym aplikacje, czy też z samą aplikacją. Aby uzyskać dostęp do tych informacji, wykonaj następujące czynności:
 
 1. Uruchom aplikację, aby problem wystąpił ponownie.
 
@@ -419,7 +419,7 @@ Podczas korzystania z narzędzia opakowującego aplikacje należy stosować poni
 
 ## <a name="intune-app-wrapping-tool-for-ios-with-citrix-mdx-mvpn"></a>Narzędzie opakowujące aplikacje dla systemu iOS w usłudze Intune z siecią mVPN w technologii Citrix MDX
 
-Ta funkcja jest integracją z narzędziem opakowującym aplikacje Citrix MDX dla systemu iOS. Integracja to po prostu dodatkowa, opcjonalna flaga wiersza polecenia, `-citrix`, do użycia z ogólnymi narzędziami opakowującymi aplikacje w usłudze Intune.
+Ta funkcja jest integracją z narzędziem opakowującym aplikacje Citrix MDX dla systemu iOS/iPadOS. Integracja to po prostu dodatkowa, opcjonalna flaga wiersza polecenia, `-citrix`, do użycia z ogólnymi narzędziami opakowującymi aplikacje w usłudze Intune.
 
 ### <a name="requirements"></a>Wymagania
 

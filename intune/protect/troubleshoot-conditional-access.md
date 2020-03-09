@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0d6dc10eca80a7d403d0ff44c25d3cfaed85fafa
-ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.openlocfilehash: f4a1d0575ce4c46c56fd1b3d2a7526a18a076fcf
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77514204"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576124"
 ---
 # <a name="troubleshoot-conditional-access"></a>Rozwiązywanie problemów z dostępem warunkowym
 W tym artykule opisano, co zrobić, gdy użytkownicy nie mogą uzyskać dostępu do zasobów chronionych przy użyciu dostępu warunkowego, lub gdy użytkownicy mogą uzyskiwać dostęp do chronionych zasobów, ale powinni być blokowani.
@@ -44,7 +44,7 @@ Aby dostęp warunkowy działał, muszą być spełnione następujące wymagania:
 
 - Domyślnie użytkownikowi muszą być przypisane zasady zgodności urządzenia. Może to zależeć od konfiguracji ustawienia **Oznacz urządzenia bez przypisanych zasad zgodności jako** w obszarze **Zgodność urządzeń** > **Ustawienia zasad zgodności** w portalu administracyjnym usługi Intune.
 
-- Na urządzeniu musi być aktywowany program Exchange ActiveSync, jeśli użytkownik korzysta z natywnego klienta poczty urządzenia, a nie z programu Outlook. Dzieje się to automatycznie w przypadku urządzeń z systemem iOS, Windows Phone i Android Knox.
+- Na urządzeniu musi być aktywowany program Exchange ActiveSync, jeśli użytkownik korzysta z natywnego klienta poczty urządzenia, a nie z programu Outlook. Dzieje się to automatycznie w przypadku urządzeń z systemem iOS/iPadOS, Windows Phone i Android Knox.
 
 - W przypadku lokalnego programu Exchange program Intune Exchange Connector musi zostać poprawnie skonfigurowany. Aby uzyskać więcej informacji, zobacz artykuł [Rozwiązywanie problemów z programem Exchange Connector w usłudze Microsoft Intune](troubleshoot-exchange-connector.md).
 

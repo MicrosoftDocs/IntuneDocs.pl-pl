@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0d9e61cbe4f6d6e07c61fe182e639e715996f9ee
-ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.openlocfilehash: 7f7a6203fcf641c41192eec8aaa0835939376d54
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77514442"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77575941"
 ---
 # <a name="prevent-data-leaks-on-non-managed-devices-using-microsoft-intune"></a>Zapobieganie wyciekom danych na urządzeniach niezarządzanych przy użyciu programu Microsoft Intune
 
@@ -31,7 +31,7 @@ Jeśli zezwolisz na dostęp do firmowych danych hostowanych przez usługi Office
 
 Zasady ochrony aplikacji ustawione przy użyciu usługi Intune również działają na urządzeniach zarządzanych za pomocą rozwiązania do zarządzania urządzeniami z systemem innym niż Microsoft. Dane osobowe na urządzeniach pozostają nienaruszone; jedynie dane firmowe są zarządzane przez dział IT. 
 
-W celu ochrony danych firmowych można ustawić zasady ochrony aplikacji dla aplikacji mobilnych pakietu Office na urządzeniach z systemem Windows, iOS lub Android. Zasady te pozwalają na ustawienie zasad takich jak oparty na aplikacji numer PIN czy szyfrowanie danych firmowych lub bardziej zaawansowanych ustawień mających na celu ograniczenie sposobu, w jaki użytkownicy używają funkcji Wytnij, Kopiuj, Wklej oraz Zapisz jako między aplikacjami zarządzanymi i niezarządzanymi. Można także zdalnie wyczyścić dane firmowe bez konieczności rejestrowania urządzeń przez użytkowników.
+W celu ochrony danych firmowych można ustawić zasady ochrony aplikacji dla aplikacji mobilnych pakietu Office na urządzeniach z systemem Windows, iOS/iPadOS lub Android. Zasady te pozwalają na ustawienie zasad takich jak oparty na aplikacji numer PIN czy szyfrowanie danych firmowych lub bardziej zaawansowanych ustawień mających na celu ograniczenie sposobu, w jaki użytkownicy używają funkcji Wytnij, Kopiuj, Wklej oraz Zapisz jako między aplikacjami zarządzanymi i niezarządzanymi. Można także zdalnie wyczyścić dane firmowe bez konieczności rejestrowania urządzeń przez użytkowników.
 
 Zasady ochrony aplikacji usługi Intune są niezależne od zarządzania urządzeniami. Zasady ochrony aplikacji umożliwiają zarządzanie aplikacjami mobilnymi pakietu Office na urządzeniach niezarządzanych i zarządzanych przez usługę Intune, a także urządzeniach zarządzanych przez rozwiązania do zarządzania urządzeniami przenośnymi innych firm niż Microsoft.
 
@@ -42,7 +42,7 @@ Gdy zostaną spełnione następujące wymagania, można użyć poniższego planu
 * Firma jest gotowa do bezpiecznego przejścia do chmury.
 * Firma korzysta z usług Office 365 Exchange Online, SharePoint Online i OneDrive dla Firm lub Yammer.
 * Firma ma licencje dla rozwiązań Microsoft 365, Enterprise Mobility + Security (EMS) lub Azure Information Protection.
-* Firma zezwala użytkownikom na dostęp do danych firmowych z urządzeń należących do firmy lub osobistych urządzeń z systemem Windows, iOS lub Android.
+* Firma zezwala użytkownikom na dostęp do danych firmowych z urządzeń należących do firmy lub osobistych urządzeń z systemem Windows, iOS/iPadOS lub Android.
 * Firma nie chce wymagać rejestracji urządzeń osobistych w usłudze zarządzania urządzeniami.
 
 ## <a name="action-plan"></a>Plan działania

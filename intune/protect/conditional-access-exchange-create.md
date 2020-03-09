@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/24/2020
+ms.date: 02/26/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,14 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4962b4c75460b129f9df7729b5a34485d8ee0760
-ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
+ms.openlocfilehash: 6650c091917ea265783044efd78b19a7e032e6a7
+ms.sourcegitcommit: 5511b4f2b8a3383176a7afe2a22ad5a8d42caf7b
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77576072"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78169301"
 ---
-# <a name="create-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated"></a>Tworzenie zasad dostępu warunkowego do lokalnego programu Exchange i starszej wersji usługi Exchange Online w wersji dedykowanej w usłudze Intune
+# <a name="configure-exchange-on-premises-access-for-intune"></a>Konfiguracja dostępu do lokalnego programu Exchange dla usługi Intune
 
 W tym artykule pokazano, jak skonfigurować dostęp warunkowy dla lokalnej instalacji programu Exchange w oparciu o zgodność urządzenia.
 
@@ -62,10 +62,29 @@ Przed skonfigurowaniem dostępu warunkowego należy się upewnić, że istnieje 
 
 ### <a name="support-for-mobile-devices"></a>Obsługa urządzeń przenośnych
 
-- System Windows Phone 8.1 lub nowszy
-- Natywna aplikacja poczty e-mail w systemie iOS/iPadOS.
-- Klienci poczty korzystający z protokołu EAS (np. Gmail w systemie Android 4 lub nowszym).
-- Klienci poczty korzystający z protokołu EAS na **urządzeniach z profilami służbowymi systemu Android:** na urządzeniach z profilami służbowymi systemu Android są obsługiwane tylko aplikacje **Gmail** i **Nine Work for Android Enterprise** w **profilu służbowym**. Aby dostęp warunkowy współdziałał z profilami służbowymi systemu Android, należy wdrożyć profil poczty e-mail dla aplikacji Gmail lub Nine Work for Android Enterprise, a także wdrożyć te aplikacje jako instalację wymaganą.
+- **Windows Phone 8.1 i nowsze** — aby utworzyć zasady dostępu warunkowego, zobacz [Tworzenie zasad dostępu warunkowego](../protect/create-conditional-access-intune.md)
+- **Natywna aplikacja poczty e-mail w systemie iOS/iPadOS** — aby utworzyć zasady dostępu warunkowego, zobacz [Tworzenie zasad dostępu warunkowego](../protect/create-conditional-access-intune.md)
+- **Klienci poczty korzystający z protokołu EAS, na przykład Gmail w systemie Android 4 lub nowszym** — aby utworzyć zasady dostępu warunkowego, zobacz [Tworzenie zasad dostępu warunkowego](../protect/create-conditional-access-intune.md)
+
+- **Klienci poczty korzystający z protokołu EAS na urządzeniach z profilami służbowymi systemu Android** — na urządzeniach z profilami służbowymi systemu Android są obsługiwane tylko aplikacje *Gmail* i *Nine Work for Android Enterprise*. Aby dostęp warunkowy współdziałał z profilami służbowymi systemu Android, należy wdrożyć profil poczty e-mail dla aplikacji *Gmail* lub *Nine Work for Android Enterprise*, a także wdrożyć te aplikacje jako instalację wymaganą. Po wdrożeniu aplikacji można skonfigurować dostęp warunkowy oparty na urządzeniach.
+
+#### <a name="to-set-up-conditional-access-for-android-work-profile-devices"></a>Aby skonfigurować dostęp warunkowy dla urządzeń z profilem służbowym systemu Android
+
+  1. Zaloguj się do [centrum administracyjnego programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+  
+  2. Wdróż aplikację Gmail lub Nine Work jako **wymaganą**.
+
+  3. Wybierz pozycję **Urządzenia** > **Profile konfiguracji** > **Utwórz profil**, wprowadź **nazwę** i **opis** profilu.
+
+  4. W polu **Platforma** wybierz pozycję **Android Enterprise**, w polu **Typ profilu** wybierz pozycję **E-mail**.
+
+  5. Skonfiguruj [ustawienia profilu poczty e-mail](https://docs.microsoft.com/intune/configuration/email-settings-android-enterprise#android-enterprise).
+
+  6. Po zakończeniu wybierz kolejno pozycje **OK** > **Utwórz**, aby zapisać zmiany.
+
+  7. Po utworzeniu profilu poczty e-mail [przypisz go do grup](https://docs.microsoft.com/intune/device-profile-assign).
+
+  8. Skonfiguruj [dostęp warunkowy oparty na urządzeniach](https://docs.microsoft.com/intune/protect/conditional-access-intune-common-ways-use#device-based-conditional-access).
 
 > [!NOTE]
 > Program Microsoft Outlook dla systemów Android i iOS/iPadOS nie jest obsługiwany za pośrednictwem łącznika lokalnego programu Exchange. Jeśli chcesz korzystać z zasad dostępu warunkowego usługi Azure Active Directory i zasad rozwiązania Intune App Protection przy użyciu programu Outlook dla systemów iOS/iPadOS i Android dla skrzynek pocztowych w środowisku lokalnym, zobacz temat [Używanie hybrydowego nowoczesnego uwierzytelniania w programie Outlook dla systemów iOS/iPadOS i Android](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth).

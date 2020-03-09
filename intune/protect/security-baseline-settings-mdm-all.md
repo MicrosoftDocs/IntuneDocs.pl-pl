@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: abf23bff0d8889b57ab05c55b7e1464d0a9d2436
-ms.sourcegitcommit: 32391f74241ee3289a76ccd5319fe700b800d427
-ms.translationtype: MTE75
+ms.openlocfilehash: a46532467f8de7caf8cc88fe60e7a5cbc10ba147
+ms.sourcegitcommit: a25f556aa9df4fcd9fdacccd12c9029bc6c5fe20
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/07/2020
-ms.locfileid: "77075794"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256530"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Ustawienia punktów odniesienia zabezpieczeń oprogramowania MDM w systemie Windows dla usługi Intune
 
@@ -97,7 +97,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
 
   - *Jeśli to ustawienie zasad zostanie włączone*, uprawnienia zostaną rozszerzone na wszystkie programy. Zwykle te uprawnienia są zastrzeżone dla programów przypisanych do użytkownika (oferowanych na pulpicie), przypisanych do komputera (instalowanych automatycznie) albo dostępnych w aplecie Dodawanie lub usuwanie programów w Panelu sterowania. To ustawienie profilu umożliwia użytkownikom instalowanie programów wymagających dostępu do katalogów, w przypadku których użytkownik może nie mieć uprawnień do wyświetlania lub zmieniania, włącznie z katalogami na zastrzeżonych komputerach.
 
-  - *Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane*, system zastosuje uprawnienia bieżącego użytkownika podczas instalacji programów, które nie są dystrybuowane lub oferowane przez administratora systemu. Uwaga: To ustawienie zasad jest dostępne w folderach Konfiguracja komputera i Konfiguracja użytkownika. Aby to ustawienie zasad działało, należy włączyć je w obu folderach. Przestroga: doświadczeni użytkownicy mogą wykorzystać uprawnienia zapewniane przez to ustawienie zasad do zmiany swoich uprawnień i uzyskania stałego dostępu do zastrzeżonych plików i folderów. Bezpieczeństwo wersji tego ustawienia zasad znajdującej się w folderze Konfiguracja użytkownika nie jest gwarantowane.  
+  - *Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane*, system zastosuje uprawnienia bieżącego użytkownika podczas instalacji programów, które nie są dystrybuowane lub oferowane przez administratora systemu. Uwaga: To ustawienie zasad jest dostępne w folderach Konfiguracja komputera i Konfiguracja użytkownika. Aby to ustawienie zasad działało, należy włączyć je w obu folderach. Uwaga: doświadczeni użytkownicy mogą wykorzystać uprawnienia zapewniane przez to ustawienie zasad do zmiany swoich uprawnień i uzyskania stałego dostępu do zastrzeżonych plików i folderów. Bezpieczeństwo wersji tego ustawienia zasad znajdującej się w folderze Konfiguracja użytkownika nie jest gwarantowane.  
   [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067134)
 
   **Ustawienie domyślne**: Tak
@@ -231,7 +231,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   To ustawienie zasad służy do konfigurowania bezpiecznego dostępu do ścieżek UNC. Jeśli zostanie włączone, system Windows będzie zezwalać na dostęp do określonych ścieżek UNC tylko po spełnieniu dodatkowych wymagań dotyczących zabezpieczeń.  
   [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067243)
 
-  **Domyślne**: Skonfiguruj system Windows w celu zezwalania na dostęp do określonych ścieżek UNC tylko po spełnieniu dodatkowych wymagań dotyczących zabezpieczeń.
+  **Ustawienie domyślne**: Skonfiguruj system Windows pod kątem zezwalania na dostęp do określonych ścieżek UNC tylko po spełnieniu dodatkowych wymagań dotyczących zabezpieczeń.
 
   Gdy jest wybrane ustawienie *Skonfiguruj system Windows w celu zezwalania na dostęp do określonych ścieżek UNC tylko po spełnieniu dodatkowych wymagań dotyczących zabezpieczeń*, można skonfigurować ustawienie *Lista ścieżek UNC ze wzmocnionymi zabezpieczeniami*.
 
@@ -291,7 +291,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
 ::: zone pivot="mdm-may-2019"
 
 - **Zabezpieczenia oparte na wirtualizacji**:  
-  **Domyślne**: Włącz VBS przy użyciu bezpiecznego rozruchu
+  **Ustawienie domyślne**: Włącz VBS przy użyciu bezpiecznego rozruchu
 
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
@@ -364,7 +364,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   Jeśli pozycja *Wymagaj hasła* została ustawiona na *Tak*, są dostępne następujące ustawienia.
 
   - **Minimalna liczba zestawów znaków hasła**:  
-    Liczba typów elementów (dużych i małych liter, liczb oraz znaków interpunkcyjnych) wymaganych do uznania hasła lub numeru PIN za silne. Numer PIN wymusza na następujące zachowanie w komputerze i urządzeniach przenośnych: 1 — Tylko cyfry 2 — Cyfry i małe litery są wymagane 3 — Cyfry, małe i wielkie litery są wymagane. Nie jest obsługiwane przez klasyczne konta Microsoft i konta domen. 4 — Cyfry, małe i wielkie litery oraz znaki specjalne są wymagane. Nieobsługiwane w wersji klasycznej. Wartość domyślna to 1.  
+    Liczba typów elementów (dużych i małych liter, liczb oraz znaków interpunkcyjnych) wymaganych do uznania hasła lub numeru PIN za silne. Numer PIN wymusza na następujące zachowanie w komputerze i urządzeniach przenośnych: 1 — Tylko cyfry 2 — Cyfry i małe litery są wymagane 3 — Cyfry, małe i wielkie litery są wymagane. Nie jest obsługiwane przez klasyczne konta Microsoft i konta domen. 4 — Cyfry, małe i wielkie litery oraz znaki specjalne są wymagane. Nieobsługiwane w wersji klasycznej.  
     [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067055)
 
     **Ustawienie domyślne**: 3
@@ -722,7 +722,7 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
   To ustawienie zasad pozwala wyłączyć obsługę protokołów Transport Layer Security (TLS) 1.0, TLS 1.1, TLS 1.2, Secure Sockets Layer (SSL) 2.0 lub SSL 3.0 w przeglądarce. Protokoły TLS i SSL pomagają chronić komunikację między przeglądarką a serwerem docelowym. Gdy przeglądarka próbuje skonfigurować chronioną komunikację z serwerem docelowym, przeglądarka i serwer negocjują protokół i wersję do użycia. Przeglądarka i serwer próbują dopasować swoje listy obsługiwanych protokołów i wersji oraz wybierają najbardziej preferowane dopasowanie. Jeśli to ustawienie zasad zostanie włączone, przeglądarka będzie negocjować tunel szyfrowania z użyciem metod szyfrowania wybranych z listy rozwijanej albo nie będzie negocjować tego tunelu. Jeśli to ustawienie zasad zostanie wyłączone lub nie zostanie skonfigurowane, użytkownik będzie mógł wybrać, którą metodę szyfrowania obsługuje przeglądarka.  
   [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067057)
 
-  **Domyślne**: 2 elementy: TLS 1.1 i TLS 1.2  
+  **Ustawienie domyślne**: 2 pozycje:  TLS v1.1 i TLS v1.2  
   *Wybierz strzałkę w dół, aby wyświetlić opcje, które można wybrać dla tego ustawienia.*
 
 ::: zone-end
@@ -1366,9 +1366,9 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
 
   - *Wysyłaj tylko odpowiedź NTLMv2* — klienci korzystają tylko z uwierzytelniania NTLMv2 i używają zabezpieczeń sesji NTLMv2, jeśli są one obsługiwane przez serwer; kontrolery domeny akceptują uwierzytelnianie LM, NTLM i NTLMv2.
 
-  - *Wyślij tylko odpowiedź protokołu NTLMv2. Odrzuć uwierzytelnianie LM* — Klienci korzystają tylko z uwierzytelniania NTLMv2 i używają zabezpieczeń sesji NTLMv2, jeśli są one obsługiwane przez serwer. Kontrolery domeny odrzucają uwierzytelnianie LM (akceptują tylko uwierzytelnianie NTLM i NTLMv2).
+  - *Wysyłaj tylko odpowiedź NTLMv2. Odrzuć uwierzytelnianie LM* — klienci korzystają tylko z uwierzytelniania NTLMv2 i używają zabezpieczeń sesji NTLMv2, jeśli są one obsługiwane przez serwer. Kontrolery domeny odrzucają uwierzytelnianie LM (akceptują tylko uwierzytelnianie NTLM i NTLMv2).
 
-  - *Wyślij tylko odpowiedź protokołu NTLMv2. Odrzuć uwierzytelnianie LM i NTLM* — Klienci korzystają tylko z uwierzytelniania NTLMv2 i używają zabezpieczeń sesji NTLMv2, jeśli są one obsługiwane przez serwer. Kontrolery domeny odrzucają uwierzytelnianie LM i NTLM (akceptują tylko uwierzytelnianie NTLMv2).
+  - *Wysyłaj tylko odpowiedź NTLMv2. Odrzuć uwierzytelnianie LM i NTLM* — klienci korzystają tylko z uwierzytelniania NTLMv2 i używają zabezpieczeń sesji NTLMv2, jeśli są one obsługiwane przez serwer. Kontrolery domeny odrzucają uwierzytelnianie LM i NTLM (akceptują tylko uwierzytelnianie NTLMv2).
 
   [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067189)
 
@@ -1779,10 +1779,10 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
 
   - *Jeśli to ustawienie zasad nie zostanie skonfigurowane*, użytkownicy będą mogli samodzielnie włączyć lub wyłączyć Pomoc zdalną na żądanie (opcję Poproś o Pomoc zdalną) we właściwościach systemu w Panelu sterowania. Użytkownicy będą mogli również skonfigurować ustawienia Pomocy zdalnej.
 
-  Jeśli to ustawienie zasad zostanie włączone, istnieją dwa sposoby zezwolenia pomocnikom na zapewnianie Pomocy zdalnej: „Pomocnik może tylko wyświetlać komputer” lub „Pomocnik może zdalnie sterować komputerem”. Ustawienie zasad „Maksymalny czas biletu” określa limit czasu, przez jaki zaproszenie Pomocy zdalnej utworzone przy użyciu poczty e-mail lub transferu plików może pozostawać otwarte. Ustawienie „Wybierz metodę wysyłania zaproszeń pocztą e-mail” określa standard poczty e-mail używany do wysyłania zaproszeń Pomocy zdalnej. W zależności od programu poczty e-mail można użyć standardu *Mailto* (adresat zaproszenia łączy się przez połączenie internetowe) albo standardu SMAPI — Prosty interfejs MAPI (zaproszenie jest dołączane do wiadomości e-mail). To ustawienie zasad nie jest dostępne w systemie Windows Vista, ponieważ jedyną obsługiwaną metodą jest SMAPI. W przypadku włączenia tego ustawienia zasad należy także włączyć odpowiednie wyjątki zapory, aby umożliwić komunikację Pomocy zdalnej.  
+  Jeśli włączysz to ustawienie zasad, możesz umożliwić pomocnikom świadczenie pomocy zdalnej na dwa sposoby: za pomocą opcji „Zezwalaj pomocnikom tylko na oglądanie komputera” lub opcji „Zezwalaj pomocnikom na zdalne sterowanie komputerem”. Ustawienie zasad „Maksymalny czas biletu” określa limit czasu, przez jaki zaproszenie Pomocy zdalnej utworzone przy użyciu poczty e-mail lub transferu plików może pozostawać otwarte. Ustawienie „Wybierz metodę wysyłania zaproszeń pocztą e-mail” określa standard poczty e-mail używany do wysyłania zaproszeń Pomocy zdalnej. W zależności od programu poczty e-mail można użyć standardu *Mailto* (adresat zaproszenia łączy się przez połączenie internetowe) albo standardu SMAPI — Prosty interfejs MAPI (zaproszenie jest dołączane do wiadomości e-mail). To ustawienie zasad nie jest dostępne w systemie Windows Vista, ponieważ jedyną obsługiwaną metodą jest SMAPI. W przypadku włączenia tego ustawienia zasad należy także włączyć odpowiednie wyjątki zapory, aby umożliwić komunikację Pomocy zdalnej.  
   [Dowiedz się więcej](https://go.microsoft.com/fwlink/?linkid=2067198)
 
-  **Domyślne**: Wyłącz Pomoc zdalną
+  **Ustawienie domyślne**: Wyłącz pomoc zdalną
 
   W przypadku wybrania opcji *Włącz Pomoc zdalną* skonfiguruj następujące dodatkowe ustawienia:
 
@@ -1793,10 +1793,10 @@ Więcej informacji można znaleźć na stronie [Dostawca usługi konfiguracji za
     **Ustawienie domyślne**: *Nieskonfigurowany*
 
   - **Okres maksymalnego czasu biletu**:  
-    **Domyślne**: Minuty
+    **Ustawienie domyślne**: Min
 
   - **Metoda zaproszenia e-mail**:  
-    **Domyślne**: Prosty interfejs MAPI
+    **Ustawienie domyślne**: Prosty interfejs MAPI
 
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"

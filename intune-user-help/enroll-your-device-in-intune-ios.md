@@ -19,12 +19,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: ''
-ms.openlocfilehash: bd9fd38fdc244bc48333496c2f266ff039e55585
-ms.sourcegitcommit: caee3c3fa77586314aa8040b0caf32a0527b669e
-ms.translationtype: MTE75
+ms.openlocfilehash: 92d1ca850d8bb542f0b7fe027ab7af8c12089ef8
+ms.sourcegitcommit: 9ee2401a2f01373a962749b0728c22385dbcba6d
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75855567"
+ms.lasthandoff: 02/29/2020
+ms.locfileid: "78181759"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Konfigurowanie urządzenia z systemem iOS do uzyskiwania dostępu do zasobów firmy  
 
@@ -70,25 +70,25 @@ Wstrzymanie rejestracji na więcej niż kilka minut może spowodować zamknięci
 
     ![Przykładowy zrzut ekranu „Konfigurowanie dostępu” w aplikacji Portal firmy.](./media/ios-enrollment-checklist-1909.PNG)  
 
-4. **wybierz pozycję urządzenie i typ rejestracji** zostanie wyświetlony ekran i zostanie wyświetlony komunikat z pytaniem o typ urządzenia.  
-    * Naciśnij pozycję **(organizacja) jest właścicielem tego urządzenia** Jeśli urządzenie zostało odebrane z Twojej organizacji. Następnie przejdź do [zabezpieczenia całego urządzenia](###secure-entire-device) w tym artykule, aby zakończyć instalację.  
-    * Naciśnij **mnie to urządzenie**, jeśli używasz urządzenia osobistego dostarczonego z domu. Przejdź do następnego kroku.  
+4. Zostanie wyświetlony ekran **Wybór typu urządzenia i rejestracji** z pytaniem o typ urządzenia.  
+    * Jeśli swoje urządzenie masz od organizacji, naciśnij pozycję **Firma (nazwa organizacji) jest właścicielem tego urządzenia**. Następnie przejdź do sekcji [Zabezpieczanie całego urządzenia](#secure-entire-device) w tym artykule, aby zakończyć instalację.  
+    * Naciśnij pozycję **To urządzenie należy do mnie**, jeśli używasz urządzenia osobistego przyniesionego z domu. Następnie przejdź do następnego kroku.  
 
-    Jeśli nie widzisz tego ekranu, przejdź do [zabezpieczenia całego urządzenia](enroll-your-device-in-intune-ios.md#secure-entire-device), aby zakończyć instalację.  
+    Jeśli nie widzisz tego ekranu, przejdź do sekcji [Zabezpieczanie całego urządzenia](#secure-entire-device), aby zakończyć instalację.  
     
-    ![Przykładowy zrzut ekranu Portal firmy, "Wybierz urządzenie i typ rejestracji", opcje typu urządzenia.](./media/ios-device-type-1909.PNG)  
+    ![Przykładowy zrzut ekranu przedstawiający Portal firmy, ekran „Wybór typu urządzenia i rejestracji”, opcje typu urządzenia.](./media/ios-device-type-1909.PNG)  
 
 
 5. Wybierz sposób ochrony danych na urządzeniu po jego zarejestrowaniu.  
-    * Naciśnij pozycję **Zabezpiecz całe** urządzeń, aby zabezpieczyć wszystkie aplikacje i dane na urządzeniu. Następnie przejdź do [zabezpieczenia całego urządzenia](enroll-your-device-in-intune-ios.md#secure-entire-device), aby zakończyć instalację.
-    * Naciśnij pozycję **bezpieczne aplikacje i dane dotyczące pracy**, aby zabezpieczyć tylko aplikacje i dane, do których uzyskujesz dostęp za pomocą konta służbowego. Następnie przejdź do [bezpieczne aplikacje i](enroll-your-device-in-intune-ios.md#secure-work-related-apps-and-data)danych.  
+    * Naciśnij pozycję **Zabezpieczanie całego urządzenia**, aby zabezpieczyć wszystkie aplikacje i dane na urządzeniu. Następnie przejdź do sekcji [Zabezpieczanie całego urządzenia](enroll-your-device-in-intune-ios.md#secure-entire-device), aby zakończyć instalację.
+    * Naciśnij pozycję **Zabezpieczanie tylko aplikacji i danych służbowych**, aby zabezpieczyć tylko aplikacje i dane, do których uzyskujesz dostęp za pomocą konta służbowego. Następnie przejdź do sekcji [Zabezpieczanie tylko aplikacji i danych służbowych](enroll-your-device-in-intune-ios.md#secure-work-related-apps-and-data).  
 
-    ![Przykładowy zrzut ekranu przedstawiający Portal firmy, "Wybieranie urządzenia i typ rejestracji", opcje typu rejestracji.](./media/ios-enrollment-type-1909.PNG)  
+    ![Przykładowy zrzut ekranu przedstawiający Portal firmy, ekran „Wybór typu urządzenia i rejestracji”, opcje typu rejestracji.](./media/ios-enrollment-type-1909.PNG)  
 
 
 ### <a name="secure-entire-device"></a>Zabezpieczanie całego urządzenia  
 
-1. Na ekranie **zarządzanie urządzeniami i prywatność** Przeczytaj listę informacji o urządzeniu, które organizacja może zobaczyć. Następnie naciśnij przycisk **Kontynuuj**.  
+1. Na ekranie **Zarządzanie urządzeniami i prywatność** zapoznaj się z listą informacji o urządzeniu widocznych i niewidocznych dla Twojej organizacji. Następnie naciśnij przycisk **Kontynuuj**.  
 
 
  > [!IMPORTANT]
@@ -96,20 +96,20 @@ Wstrzymanie rejestracji na więcej niż kilka minut może spowodować zamknięci
 
 2. W przeglądarce Safari na urządzeniu zostanie otwarta witryna internetowa Portal firmy. Po wyświetleniu monitu dotyczącego pobrania profilu konfiguracji naciśnij pozycję **Zezwalaj**. Jeśli używasz systemu:  
     * iOS 12.2 lub nowszego: Po zakończeniu pobierania naciśnij pozycję **Zamknij**. Następnie przejdź do kroku 3.  
-    * iOS 12,1 i starsze: po zakończeniu pobierania nastąpi automatyczne przekierowanie do aplikacji ustawienia. Następnie przejdź do kroku 4.  
+    * System iOS 12.1 i starsze: Po zakończeniu pobierania nastąpi automatyczne przekierowanie do aplikacji Ustawienia. Przejdź do kroku 4.  
  
-    Jeśli przypadkowo naciśniesz pozycję **Ignoruj**, odśwież stronę. Zostanie wyświetlony monit o otwarcie aplikacji Portal firmy. Po zakończeniu naciśnij pozycję **Pobierz ponownie**.
+    Jeśli przypadkowo naciśniesz pozycję **Ignoruj**, odśwież stronę. Zostanie wyświetlony monit o otwarcie aplikacji Portal firmy. Gdy tam będziesz, naciśnij pozycję **Pobierz ponownie**.
 
   > [!NOTE]
   > Należy zainstalować profil zarządzania zgodnie z poniższymi instrukcjami przed upływem 8 minut od jego pobrania. W przeciwnym przypadku profil zostanie usunięty i będzie trzeba ponownie uruchomić rejestrację.  
 
-3. Tylko w systemie iOS 12.2 lub nowszym: po wyświetleniu monitu o otwarcie aplikacji Portal firmy naciśnij przycisk **Otwórz**. Zapoznaj się z informacjami na **jak zainstalować profil zarządzania** ekranie.  
+3. Po wyświetleniu monitu o otwarcie Portalu firmy naciśnij pozycję **Otwórz**. Zapoznaj się z informacjami na ekranie **Jak zainstalować profil zarządzania**.  
 
-4. Przejdź do aplikacji ustawienia, a następnie naciśnij pozycję **Rejestracja w < nazwa organizacji >** lub **pobrano profil**.  
+4. Przejdź do aplikacji Ustawienia, a następnie naciśnij pozycję **Zarejestruj w firmie < nazwa organizacji >** lub **Pobrano profil**.  
 
-    ![Przykładowy zrzut ekranu przedstawiający aplikację Ustawienia, rejestrowanie w organizacji.](./media/enroll-in-organization-ios-1909.PNG)  
+    ![Przykładowy zrzut ekranu przedstawiający aplikację Ustawienia, opcja rejestrowania w organizacji.](./media/enroll-in-organization-ios-1909.PNG)  
 
-   Jeśli żadna z tych opcji nie zostanie wyświetlona, przejdź do pozycji **ogólne** > **profile & Zarządzanie urządzeniami**> **profilu zarządzania**. Jeśli nadal nie widzisz profilu zarządzania, może być konieczne jego ponowne pobranie.  
+   Jeśli żadna z tych opcji nie zostanie wyświetlona, przejdź do pozycji **Ogólne** > **Profile i zarządzanie urządzeniami**> **Profil zarządzania**. Jeśli nadal nie widzisz profilu zarządzania, może być konieczne jego ponowne pobranie.  
 
 5. Naciśnij przycisk **Zainstaluj**.  
     
@@ -128,17 +128,17 @@ Wstrzymanie rejestracji na więcej niż kilka minut może spowodować zamknięci
 > [!Note]
 > Jeśli w Twojej organizacji są monitorowane limity danych i połączeń głosowych lub są udostępniane urządzenia należące do firmy, może być konieczne wykonanie kilku dodatkowych czynności. Jeśli zostanie wyświetlony monit o instalację aplikacji **Datalert**, zobacz [Rejestrowanie urządzenia w rozwiązaniu do zarządzania wydatkami telekomunikacyjnymi](enroll-your-device-with-telecom-expense-management-ios.md). Jeśli Twoja organizacja uczestniczy w programie Device Enrollment Program firmy Apple, zobacz [jak zarejestrować urządzenie należące do firmy](enroll-your-device-dep-ios.md).  
 
-### <a name="secure-work-related-apps-and-data"></a>Zabezpieczanie tylko aplikacji i danych służbowych  
-1. Zostanie wyświetlony ekran **pobieranie Microsoft Authenticator** (Jeśli masz już wystawcy uwierzytelnienia, ten ekran nie zostanie wyświetlony, aby pominąć krok 2).  
+### <a name="secure-work-related-apps-and-data"></a>Zabezpieczanie aplikacji i danych służbowych  
+1. Zostanie wyświetlony ekran **Pobieranie aplikacji Microsoft Authenticator** (jeśli masz już aplikację Authenticator, nie zobaczysz tego ekranu, dlatego przejdź od razu do kroku 2).  
     1. Naciśnij pozycję **Pobierz ze sklepu App Store**.
-    2. Po otwarciu sklepu z aplikacjami Zainstaluj aplikację. 
-    3. Wróć do Portal firmy i naciśnij pozycję **Kontynuuj**.    
+    2. Po otwarciu sklepu App Store zainstaluj aplikację. 
+    3. Wróć do Portalu firmy i naciśnij pozycję **Kontynuuj**.    
     
-   Po zainstalowaniu Microsoft Authenticator nie trzeba wykonywać żadnych innych czynności w odniesieniu do aplikacji. Musi on być obecny na urządzeniu. 
+   Po zainstalowaniu aplikacji Microsoft Authenticator nie trzeba już niczego robić w związku z tą aplikacją. Wystarczy, że będzie obecna na urządzeniu. 
 
-   ![Przykład zrzutu ekranu Portal firmy "Pobierz Microsoft Authenticator".](./media/download-ms-authenticator-1909.PNG)  
+   ![Przykładowy zrzut ekranu przedstawiający Portal firmy, ekran „Pobieranie aplikacji Microsoft Authenticator”.](./media/download-ms-authenticator-1909.PNG)  
 
-2. Na ekranie **zarządzanie urządzeniami i prywatność** Przeczytaj listę informacji o urządzeniu, które organizacja może zobaczyć. Następnie naciśnij przycisk **Kontynuuj**.  
+2. Na ekranie **Zarządzanie urządzeniami i prywatność** zapoznaj się z listą informacji o urządzeniu widocznych i niewidocznych dla Twojej organizacji. Następnie naciśnij przycisk **Kontynuuj**.  
 
 
  > [!IMPORTANT]
@@ -146,37 +146,37 @@ Wstrzymanie rejestracji na więcej niż kilka minut może spowodować zamknięci
 
 3. W przeglądarce Safari na urządzeniu zostanie otwarta witryna internetowa Portal firmy. Po wyświetleniu monitu dotyczącego pobrania profilu konfiguracji naciśnij pozycję **Zezwalaj**. Jeśli używasz systemu:  
     * iOS 12.2 lub nowszego: Po zakończeniu pobierania naciśnij pozycję **Zamknij**. Następnie przejdź do kroku 4.  
-    * iOS 12,1 i starsze: po zakończeniu pobierania nastąpi automatyczne przekierowanie do aplikacji ustawienia. Następnie przejdź do kroku 5.  
+    * System iOS 12.1 i starsze: Po zakończeniu pobierania nastąpi automatyczne przekierowanie do aplikacji Ustawienia. Przejdź do kroku 5.  
  
     Jeśli przypadkowo naciśniesz pozycję **Ignoruj**, odśwież stronę. Zostanie wyświetlony monit o otwarcie aplikacji Portal firmy. W aplikacji możesz nacisnąć przycisk **Pobierz ponownie**.
 
   > [!NOTE]
   > Należy zainstalować profil zarządzania zgodnie z poniższymi instrukcjami przed upływem 8 minut od jego pobrania. W przeciwnym przypadku profil zostanie usunięty i będzie trzeba ponownie uruchomić rejestrację.  
 
-4. Tylko w systemie iOS 12.2 lub nowszym: po wyświetleniu monitu o otwarcie aplikacji Portal firmy naciśnij przycisk **Otwórz**. Zapoznaj się z informacjami na **jak zainstalować profil zarządzania** ekranie. 
+4. Po wyświetleniu monitu o otwarcie Portalu firmy naciśnij pozycję **Otwórz**. Zapoznaj się z informacjami na ekranie **Jak zainstalować profil zarządzania**. 
 
-5. Przejdź do aplikacji ustawienia, a następnie naciśnij pozycję **Rejestracja w < nazwa organizacji >** lub **pobrano profil**.  
+5. Przejdź do aplikacji Ustawienia, a następnie naciśnij pozycję **Zarejestruj w firmie < nazwa organizacji >** lub **Pobrano profil**.  
 
-    ![Przykładowy zrzut ekranu przedstawiający aplikację Ustawienia, rejestrowanie w organizacji.](./media/enroll-in-organization-ios-1909.PNG)  
+    ![Przykładowy zrzut ekranu przedstawiający aplikację Ustawienia, opcja rejestrowania w organizacji.](./media/enroll-in-organization-ios-1909.PNG)  
 
-   Jeśli żadna z tych opcji nie zostanie wyświetlona, przejdź do pozycji **ogólne** > **profile & Zarządzanie urządzeniami**> **profilu zarządzania**. Jeśli nadal nie widzisz profilu zarządzania, może być konieczne jego ponowne pobranie.   
+   Jeśli żadna z tych opcji nie zostanie wyświetlona, przejdź do pozycji **Ogólne** > **Profile i zarządzanie urządzeniami**> **Profil zarządzania**. Jeśli nadal nie widzisz profilu zarządzania, może być konieczne jego ponowne pobranie.   
 
 
-6. Na ekranie **rejestracji użytkownika** naciśnij pozycję **zarejestrować mój telefon iPhone**.  
+6. Na ekranie **Rejestracja użytkownika** naciśnij pozycję **Zarejestruj moje urządzenie iPhone**.  
 
-    ![Przykładowy zrzut ekranu przedstawiający aplikację Ustawienia, ekran Rejestracja użytkownika, wyróżnienie przycisku Zarejestruj.](./media/user-enrollment-information-1909.PNG)  
+    ![Przykładowy zrzut ekranu przedstawiający aplikację Ustawienia, ekran Rejestracja użytkownika, wyróżnienie przycisku rejestracji.](./media/user-enrollment-information-1909.PNG)  
 
 7. Wprowadź hasło urządzenia. Następnie naciśnij przycisk **Zainstaluj**.  
 
-8. Na ekranie **logowania** wprowadź hasło dla zarządzanego identyfikatora Apple ID. W większości przypadków te poświadczenia będą takie same, które są używane do logowania się do konta służbowego, chyba że Twoja organizacja przeprowadzi Cię przez inny zestaw poświadczeń. 
+8. Na ekranie **Logowanie** wprowadź hasło dla zarządzanego identyfikatora Apple ID. W większości przypadków te poświadczenia będą takie same jak te, które są używane do logowania się do konta służbowego, chyba że Twoja organizacja udostępni Ci inny zestaw poświadczeń. 
 9. Naciśnij pozycję **Zaloguj się**.  
-10. Komunikat o powodzeniu zostanie wyświetlony na ekranie krótko po zainstalowaniu profilu. Aby zweryfikować instalację profilu, przejdź do obszaru  **Profile i zarządzanie urządzeniami** ustawień. Profil powinien znajdować się na liście w obszarze  **Mobile Device Management**.  
+10. Komunikat o powodzeniu zostanie wyświetlony na ekranie krótko po zainstalowaniu profilu. Aby zweryfikować instalację profilu, przejdź do ustawień  **Profile i zarządzanie urządzeniami** . Profil powinien znajdować się na liście w obszarze  **Mobile Device Management**.  
 
     ![Przykładowy zrzut ekranu Profile i zarządzanie urządzeniami w aplikacji Ustawienia z widocznym profilem zarządzania.](./media/ios-12-cp-enroll-1904.PNG)  
 
 11. Wróć do aplikacji Portal firmy. W aplikacji Portal firmy rozpocznie się synchronizowanie i konfigurowanie urządzenia. Może zostać wyświetlony monit o zaktualizowanie dodatkowych ustawień urządzenia. W takim przypadku naciśnij przycisk **Kontynuuj**.    
 
-12. Konfiguracja będzie zakończona, gdy obok wszystkich elementów na liście wyświetlona będzie ikona zielonego znacznika wyboru. Naciśnij pozycję **gotowe**.  
+12. Konfiguracja będzie zakończona, gdy obok wszystkich elementów na liście wyświetlona będzie ikona zielonego znacznika wyboru. Naciśnij pozycję  **Gotowe**.  
 
 ## <a name="it-administrator-support"></a>Pomoc techniczna dla administratora IT  
 Jeśli jako administrator IT napotkasz problemy podczas rejestrowania urządzeń, zobacz [Troubleshooting iOS device enrollment problems in Microsoft Intune (Rozwiązywanie problemów z rejestrowaniem urządzeń z systemem iOS w usłudze Microsoft Intune)](https://support.microsoft.com/en-us/help/4039809). W tym artykule wymieniono typowe błędy, ich przyczyny i kroki prowadzące do ich usunięcia.  

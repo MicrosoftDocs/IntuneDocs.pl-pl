@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: adca40b558a75d2c080fe453218f232a37b21daa
-ms.sourcegitcommit: cd90650c339795d44702e9dcd0b9679a7b438bb2
+ms.openlocfilehash: a1eca1f8911e9c6aae3b3725cf15f04d954c5f48
+ms.sourcegitcommit: 6608dc70d01376e0cd90aa620a2fe01337f6a2f1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77473752"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78260320"
 ---
 # <a name="automatically-enroll-iosipados-devices-with-apples-device-enrollment-program"></a>Automatyczne rejestrowanie urządzeń z systemem iOS/iPadOS przy użyciu programu Device Enrollment Program firmy Apple
 
@@ -41,6 +41,8 @@ Rejestracje programu DEP nie są zgodne z wersją aplikacji Portal firmy ze skle
 Aby włączyć nowoczesne uwierzytelnianie podczas rejestracji, wypchnij aplikację na urządzenie, korzystając z opcji **Zainstaluj Portal firmy za pomocą programu VPP** (Volume Purchase Program) w profilu programu DEP. Aby uzyskać więcej informacji, zobacz [Automatyczne rejestrowanie urządzeń z systemem iOS/iPadOS w ramach programu Device Enrollment Program firmy Apple](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
 
 Aby umożliwić automatyczną aktualizację aplikacji Portal firmy i udostępnić ją na urządzeniach już zarejestrowanych w programie DEP, wdróż aplikację Portal firmy za pomocą usługi Intune jako wymaganą aplikację programu Volume Purchase Program (VPP) z zastosowanymi [zasadami konfiguracji aplikacji](../apps/app-configuration-policies-use-ios.md).
+
+Uwaga: Podczas automatycznego rejestrowania urządzenia, gdy Portal firmy działa w trybie pojedynczej aplikacji, kliknięcie linku „Dowiedz się więcej” spowoduje zgłoszenie komunikatu o błędzie z powodu trybu pojedynczej aplikacji. Po zakończeniu rejestracji można wyświetlić więcej informacji w aplikacji Portal firmy, gdy urządzenie nie działa już w trybie pojedynczej aplikacji. 
 
 ## <a name="what-is-supervised-mode"></a>Co to jest tryb nadzorowany?
 
@@ -248,7 +250,7 @@ Gdy usługa Intune ma uprawnienia do zarządzania urządzeniami, można ją zsyn
 
 1. W [centrum administracyjnym programu Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431) wybierz pozycję **Urządzenia** > **iOS** > **Rejestracja urządzeń z systemem iOS** > **Tokeny programu rejestracji**, wybierz token na liście, a następnie wybierz pozycję **Urządzenia** > **Synchronizuj**. ![Zrzut ekranu przedstawiający węzeł Urządzenia programu Enrollment Program i link Synchronizuj.](./media/device-enrollment-program-enroll-ios/image06.png)
 
-   Aby spełnić warunki firmy Apple dotyczące ruchu w programie rejestracji, usługa Intune nakłada następujące ograniczenia:
+   Aby spełnić warunki firmy Apple dotyczące dopuszczalnego ruchu w programie rejestracji, usługa Intune nakłada następujące ograniczenia:
    - Pełną synchronizację można uruchamiać nie częściej niż co siedem dni. Podczas pełnej synchronizacji usługa Intune pobiera pełną zaktualizowaną listę numerów seryjnych przypisanych do serwera MDM firmy Apple połączonego z usługą Intune. Jeśli urządzenie programu DEP zostanie usunięte z portalu usługi Intune, powinno zostać cofnięte jego przypisanie do serwera MDM firmy Apple w portalu programu DEP. W przeciwnym razie nie zostanie ono ponownie zaimportowane do usługi Intune do momentu uruchomienia pełnej synchronizacji.   
    - Synchronizacja jest uruchamiana automatycznie co 24 godziny. Można też przeprowadzić synchronizację, klikając przycisk **Synchronizuj** (nie częściej niż raz na 15 minut). Każde żądanie synchronizacji ma przydzielone 15 minut na ukończenie. Przycisk **Synchronizuj** pozostaje wyłączony do ukończenia synchronizacji. Synchronizacja spowoduje odświeżenie stanu bieżącego urządzenia oraz zaimportowanie nowych urządzeń przypisanych do serwera MDM firmy Apple.   
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b780f22fd6823499128a3975f1812a1d1f7c032b
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: 6f5d11cade1e22ca5d306dd1896e8136f9e7c1ed
+ms.sourcegitcommit: a25f556aa9df4fcd9fdacccd12c9029bc6c5fe20
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77413789"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256394"
 ---
 # <a name="what-is-microsoft-intune-device-management"></a>Co to jest zarządzanie urządzeniami w usłudze Microsoft Intune?
 
@@ -39,7 +39,7 @@ Obciążenie **Urządzenia** zapewnia wgląd w urządzenia zarządzane i umożli
    - **Omówienie** — wyświetla wizualną migawkę zarejestrowanych urządzeń oraz pokazuje, ile urządzeń korzysta z różnych platform, w tym systemu Android, iOS, iPadOS i innych.
    - **Wszystkie urządzenia** — wyświetla listę zarejestrowanych urządzeń, którymi zarządzasz.
 
-     Funkcja **Eksportuj** umożliwia utworzenie pliku CSV z listą wszystkich urządzeń w przyrostach co 10 000 (Internet Explorer) lub 30 000 (Microsoft Edge, Chrome).
+     Funkcja **Eksportuj** umożliwia utworzenie pliku zip z listą wszystkich urządzeń w przyrostach co 10 000 (Internet Explorer) lub 30 000 (Microsoft Edge, Chrome).
 
      Wybierz dowolne urządzenie, aby [wyświetlić dodatkowe szczegóły o tym urządzeniu](device-inventory.md), w tym szczegóły dotyczące sprzętu, zainstalowanych aplikacji, stanu zasad zgodności i innych informacji.
 
@@ -61,7 +61,7 @@ Dostępne akcje zależą od platformy urządzenia i jego konfiguracji.
   - [Czyszczenie danych](devices-wipe.md#wipe)
   - [Zdalne blokowanie](device-remote-lock.md)
   - [Zresetuj kod dostępu](device-passcode-reset.md)
-  - [Wyłączanie blokady aktywacji](device-activation-lock-bypass.md) (tylko system iOS)
+  - [Wyłączanie blokady aktywacji](device-activation-lock-disable.md) (tylko system iOS)
   - [Zaczynanie od początku](device-fresh-start.md) (tylko system Windows)
   - [Tryb zgubienia](device-lost-mode.md) (tylko system iOS)
   - [Lokalizowanie urządzenia](device-locate.md) (tylko system iOS)

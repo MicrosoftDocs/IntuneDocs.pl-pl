@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/21/2019
+ms.date: 02/20/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,19 +18,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9571f7d0ae10f33007d5ae50b403580232c2e870
-ms.sourcegitcommit: 06dce5c8111592ad774247e86e539dd3128117e5
+ms.openlocfilehash: 25d7c357c0ea313891f80433f33cd4ac57cfad2c
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/30/2019
-ms.locfileid: "75545939"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77782086"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune-for-unenrolled-devices"></a>Włączanie łącznika usługi Mobile Threat Defense dla niezarejestrowanych urządzeń w usłudze Intune
 
 Podczas konfigurowania usługi Mobile Threat Defense (MTD) skonfigurowano zasady służące do klasyfikowania zagrożeń w konsoli partnera usługi Mobile Threat Defense i utworzono zasady ochrony aplikacji w usłudze Intune. Jeśli łącznik usługi Intune został już skonfigurowany w konsoli partnera usługi MTD, możesz teraz włączyć połączenie z usługą MTD dla aplikacji partnera usługi MTD.
 
 > [!NOTE]
-> Ten artykuł dotyczy wszystkich partnerów usługi Mobile Threat Defense, którzy obsługują zasady ochrony aplikacji: Better Mobile (Android), Zimperium (Android/iOS), Lookout for Work (Android/iOS).
+> Ten artykuł dotyczy wszystkich partnerów usługi Mobile Threat Defense, którzy obsługują zasady ochrony aplikacji:
+>
+> - Better Mobile (Android,iOS/iPadOS)
+> - Zimperium (Android,iOS/iPadOS)
+> - Lookout for Work (Android,iOS/iPadOS)
 
 ## <a name="classic-conditional-access-policies-for-mtd-apps"></a>Klasyczne zasady dostępu warunkowego dla aplikacji MTD
 

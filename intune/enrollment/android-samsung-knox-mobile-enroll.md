@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: ''
-ms.date: 12/06/2018
+ms.date: 03/03/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ecb043300578e5eba0613b6fa5f0fb249b1e515c
-ms.sourcegitcommit: a66b5916eaab9cb537e483064efc584a6a63a390
+ms.openlocfilehash: ae445597cfd1afc4650c7a900ee335c939adedce
+ms.sourcegitcommit: 6608dc70d01376e0cd90aa620a2fe01337f6a2f1
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75692158"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78260184"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>Automatyczne rejestrowanie urządzeń z systemem Android za pomocą rozwiązania Knox Mobile Enrollment firmy Samsung
 
@@ -57,38 +57,44 @@ Aby rejestrować w usłudze Intune przy użyciu rozwiązania KME, musisz najpier
 
 ## <a name="create-mdm-profile"></a>Tworzenie profilu oprogramowania MDM
 
-Po pomyślnym zarejestrowaniu firmy można utworzyć profil oprogramowania MDM dla usługi Microsoft Intune w portalu platformy Knox, korzystając z poniższych informacji. Profile MDM dla systemów Android i Android Enterprise można tworzyć w portalu platformy Knox. 
+Po pomyślnym zarejestrowaniu firmy można utworzyć profil oprogramowania MDM dla usługi Microsoft Intune w portalu platformy Knox, korzystając z poniższych informacji. Profile MDM dla systemów Android i Android Enterprise można tworzyć w portalu platformy Knox.
+- Aby utworzyć profil MDM dla systemu Android, wybierz pozycję **Administrator urządzenia** jako typ profilu w portalu Knox. 
+- Aby utworzyć profil MDM dla rozwiązania Android Enterprise, wybierz pozycję **Właściciel urządzenia** jako typ profilu w portalu Knox.  
 
-### <a name="for-android-enterprise"></a>Dla systemu Android Enterprise
+### <a name="for-android"></a>Dla systemu Android
 
 | Pola profilu oprogramowania MDM| Wymagane? | Wartości | 
 |-------------------|-----------|-------| 
-|MDM Server URI (Identyfikator URI serwera MDM)     | Nie        |Pozostaw to pole puste. 
-|Profile Name (Nazwa profilu)       | Tak       |Wprowadź wybraną nazwę profilu. 
-|Opis        | Nie        |Wprowadź tekst opisujący profil. 
-|MDM Agent APK (Plik APK oprogramowania MDM)      | Tak       |https://aka.ms/intune_kme_deviceowner 
-|Włącz tę aplikację jako właściciela urządzenia Google | Tak | Wybierz tę opcję, aby zarejestrować się w systemie Android Enterprise. 
-|Obsługiwane zarządzanie urządzeniami przenośnymi      | Tak       |Microsoft Intune 
-|Pozostaw wszystkie aplikacje systemowe włączone | Nie | Wybierz tę opcję, aby upewnić się, że wszystkie aplikacje są włączone i dostępne dla tego profilu. Jeśli ta opcja nie jest zaznaczona, na pasku aplikacji urządzenia będzie wyświetlany tylko ograniczony zestaw aplikacji systemowych. Aplikacje takie jak aplikacja poczty e-mail pozostaną ukryte. 
-|Custom JSON (Niestandardowa notacja JSON)        | Nie        |{"com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "Wprowadź ciąg tokenu rejestracji usługi Intune"}. Dowiedz się, jak [utworzyć profil rejestracji](android-kiosk-enroll.md). 
-| Dodaj umowy prawne | Nie | Pozostaw to pole puste. 
+|Profile Name (Nazwa profilu)       | Tak       |Wprowadź wybraną nazwę profilu. |
+|Opis        | Nie        |Wprowadź tekst opisujący profil. |
+|MDM Information (Informacje dotyczące zarządzania urządzeniami mobilnymi)     | Tak        |Wybierz pozycję **Server URI not required for my MDM** (Identyfikator URI serwera nie jest wymagany dla mojego rozwiązania MDM).| 
+|MDM Agent APK (Plik APK oprogramowania MDM)      | Tak       |https://aka.ms/intune_kme_deviceowner| 
+|Custom JSON (Niestandardowa notacja JSON)        | Tak*        |{"com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "Wprowadź ciąg tokenu rejestracji usługi Intune"}. Dowiedz się, jak utworzyć token rejestracji dla [urządzeń dedykowanych](android-kiosk-enroll.md) i [urządzeń w pełni zarządzanych](android-fully-managed-enroll.md). |
+|Skip Setup wizard (Pomiń kreatora instalacji)  | Nie        |Wybierz tę opcję, aby pomijać monity dotyczące standardowej instalacji urządzenia dla użytkownika końcowego.|
+|Allow End User to Cancel Enrollment (Zezwalaj użytkownikowi końcowemu na anulowanie rejestracji) | Nie | Wybierz tę opcję, aby użytkownicy mogli anulować rozwiązanie KME.|
+| Zasady ochrony prywatności, umowy licencyjne i warunki świadczenia usługi | Nie | Pozostaw to pole puste. |
+| Szczegóły dotyczące kontaktu z pomocą techniczną | Tak | Wybierz pozycję Edit (Edytuj), aby zaktualizować swoje dane kontaktowe |
+|Associate a Knox license with this profile (Skojarz licencję rozwiązania Knox z tym profilem) | Nie | Pozostaw tę opcję niezaznaczoną. Rejestrowanie w usłudze Intune przy użyciu rozwiązania KME nie wymaga licencji platformy Knox.|
 
-### <a name="for-android"></a>Dla systemu Android
+\* To pole nie jest wymagane do ukończenia tworzenia profilu w portalu Knox. Jednak usługa Intune wymaga wypełnienia tego pola, aby profil mógł pomyślnie zarejestrować urządzenie w usłudze Intune.
+
+### <a name="for-android-enterprise"></a>Dla systemu Android Enterprise
 
 Szczegółowe wskazówki można znaleźć w instrukcjach podanych w artykule [Samsung's Create Profile](https://docs.samsungknox.com/KME-Getting-Started/Content/create-profiles.htm) (Tworzenie profilu (Samsung)).
 
 | Pola profilu oprogramowania MDM| Wymagane? | Wartości |
 |-------------------|-----------|-------|
-|MDM Server URI (Identyfikator URI serwera MDM)     | Nie        |Pozostaw to pole puste.
-|Profile Name (Nazwa profilu)       | Tak       |Wprowadź wybraną nazwę profilu.
-|description        | Nie        |Wprowadź tekst opisujący profil.
-|MDM Agent APK (Plik APK oprogramowania MDM)      | Tak       |https://aka.ms/intune_kme
-|Włącz tę aplikację jako właściciela urządzenia Google | Nie | Pozostaw tę opcję niezaznaczoną w przypadku systemu Android. Ta opcja dotyczy tylko systemu Android Enterprise.
-|Skip Setup wizard (Pomiń kreatora instalacji)  | Nie        |Wybierz tę opcję, aby pomijać monity dotyczące standardowej instalacji urządzenia dla użytkownika końcowego.
-|Allow End User to Cancel Enrollment (Zezwalaj użytkownikowi końcowemu na anulowanie rejestracji) | Nie | Wybierz tę opcję, aby użytkownicy mogli anulować rozwiązanie KME.
-|Custom JSON (Niestandardowa notacja JSON)        | Nie        |Pozostaw to pole puste.
-| Dodaj umowy prawne | Nie | Pozostaw to pole puste.
-Associate a Knox license with this profile (Skojarz licencję rozwiązania Knox z tym profilem) | Nie | Pozostaw tę opcję niezaznaczoną. Rejestrowanie w usłudze Intune przy użyciu rozwiązania KME nie wymaga licencji platformy Knox.
+|Profile Name (Nazwa profilu)       | Tak       |Wprowadź wybraną nazwę profilu.|
+|Opis        | Nie        |Wprowadź tekst opisujący profil.|
+|Pick your MDM (Wybierz rozwiązanie MDM) | Tak | Wybierz pozycję Microsoft Intune. |
+|MDM Agent APK (Plik APK oprogramowania MDM)      | Tak       |https://aka.ms/intune_kme|
+|MDM Server URI (Identyfikator URI serwera MDM)     | Nie        |Pozostaw to pole puste.|
+|Custom JSON Data (Niestandardowe dane JSON)        | Nie        |Pozostaw to pole puste.|
+|Dual DAR (Podwójne dane magazynowane) | Nie | Pozostaw to pole puste.|
+|QR code for enrollment (Kod QR na potrzeby rejestracji) | Nie | Aby przyspieszyć rejestrację, można dodać kod QR.|
+|Aplikacje systemowe | Tak | Wybierz opcję **Leave all system apps enabled** (Pozostaw wszystkie aplikacje systemowe włączone), aby zapewnić, że wszystkie aplikacje są włączone i dostępne dla profilu. Jeśli ta opcja nie jest zaznaczona, na pasku aplikacji urządzenia będzie wyświetlany tylko ograniczony zestaw aplikacji systemowych. Aplikacje takie jak aplikacja poczty e-mail pozostaną ukryte. |
+|Zasady ochrony prywatności, umowy licencyjne i warunki świadczenia usługi | Nie | Pozostaw to pole puste.|
+|Nazwa firmy | Tak | Ta nazwa będzie wyświetlana podczas rejestrowania urządzenia. |
 
 ## <a name="add-devices"></a>Dodawanie urządzeń
 

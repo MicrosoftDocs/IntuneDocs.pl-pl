@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/16/2020
+ms.date: 02/25/2020
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,14 +16,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1075054f3812e8c40f38e705a440c46ba09fdd0e
-ms.sourcegitcommit: 11cbd2a9d90dea20f6dc1f54f0a6acbeec3a71d6
-ms.translationtype: MTE75
+ms.openlocfilehash: f8a516ce9dda525d5c7a48fcbc2c799471489d0d
+ms.sourcegitcommit: ff254acb94df88afc3e3e7b878084052adf40745
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76146773"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77600246"
 ---
 # <a name="add-macos-kernel-extensions-in-intune"></a>Dodawanie rozszerzeń jądra systemu macOS w usłudze Intune
+
+> [!NOTE]
+> Rozszerzenia jądra systemu macOS są zastępowane rozszerzeniami systemowymi. Aby uzyskać więcej informacji, zobacz [Support tip: Using system extensions instead of kernel extensions for macOS Catalina 10.15 in Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-using-system-extensions-instead-of-kernel-extensions/ba-p/1191413) (Porada pomocy technicznej: korzystanie z rozszerzeń systemowych zamiast rozszerzeń jądra w przypadku systemu macOS Catalina 10.15 w usłudze Intune).
 
 Na urządzeniach z systemem macOS można dodawać funkcje na poziomie jądra. Te funkcje uzyskują dostęp do części systemu operacyjnego, do których nie mogą uzyskać dostępu zwykłe programy. Organizacja może mieć określone potrzeby lub wymagania, które nie są dostępne w aplikacji, funkcji urządzenia i tak dalej. 
 
@@ -74,7 +77,7 @@ W tym artykule przedstawiono sposób tworzenia profilu konfiguracji urządzenia 
     - **Nazwa**: Wprowadź opisową nazwę nowego profilu.
     - **Opis**: Wprowadź opis profilu. To ustawienie jest opcjonalne, ale zalecane.
     - **Platforma**: Wybierz pozycję **macOS**
-    - **Typ profilu**: wybierz pozycję **Rozszerzenia**.
+    - **Typ profilu**: Wybierz pozycję **Rozszerzenia**.
     - **Ustawienia**: wprowadź ustawienia, które chcesz skonfigurować. Listę wszystkich ustawień i ich zadań można znaleźć w temacie:
 
         - [macOS](kernel-extensions-settings-macos.md)

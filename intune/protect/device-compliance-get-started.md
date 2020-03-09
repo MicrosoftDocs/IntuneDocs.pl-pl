@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b593cab8a9a89f895c668b2b49583b73cbfccffa
-ms.sourcegitcommit: c780e9988341a20f94fdeb8672bd13e0b302da93
+ms.openlocfilehash: 45bcabf8c7dc932c9415fbd309bf09f53499fbcc
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77515173"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77781933"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Ustawianie zasad na urządzeniach w celu umożliwienia dostępu do zasobów w organizacji za pomocą usługi Intune
 
@@ -93,16 +93,13 @@ Usługa Intune oferuje również zestaw wbudowanych ustawień zasad zgodności. 
 
   Jeśli do urządzenia nie są przypisane zasady zgodności, jest ono domyślnie traktowane jako zgodne. Jeśli używasz dostępu warunkowego wykorzystując zasady zgodności, zalecamy zmianę domyślnego ustawienia na **Niezgodne**. Jeśli użytkownik końcowy jest niezgodny, ponieważ zasady nie zostały przypisane, w [aplikacji Portal firmy](../apps/company-portal-app.md) zostanie wyświetlony komunikat `No compliance policies have been assigned`.
 
-
-> [!NOTE]
-> Rozszerzone wykrywanie jailbreaku dla urządzeń z systemem iOS/iPadOS zostało tymczasowo wyłączone w usłudze Intune.
-
-- **Rozszerzone wykrywanie jailbreaku**: włączenie tego ustawienia powoduje, że urządzenia z systemem iOS/iPadOS są częściej meldowane w usłudze Intune. Włączenie tej właściwości powoduje użycie usług lokalizacyjnych urządzenia i wpływa na użycie baterii. Dane lokalizacji użytkownika nie są przechowywane przez usługę Intune.
+- **Rozszerzone wykrywanie jailbreaku**: Włączenie tego ustawienia powoduje, że na urządzeniach z systemem iOS/iPadOS częściej pojawia się stan urządzenia ze zdjętymi zabezpieczeniami systemu. To ustawienie dotyczy tylko urządzeń objętych zasadami zgodności, które blokują urządzenia ze zdjętymi zabezpieczeniami systemu. Włączenie tej właściwości powoduje korzystanie z usług lokalizacyjnych urządzenia i wpływa na użycie baterii. Dane lokalizacji użytkownika nie są przechowywane przez usługę Intune i służą tylko do wyzwalania częstszego wykrywania w tle zdjętych zabezpieczeń systemu. 
 
   Włączenie tego ustawienia wymaga, aby na urządzeniach:
   - Włączyć usługi lokalizacyjne na poziomie systemu operacyjnego.
-  - Zezwolić aplikacji Portal firmy na użycie usług lokalizacyjnych.
-  - Oceniać i zgłaszać stan jailbreaku do usługi Intune co najmniej raz na 72 godziny. Jeśli te warunki nie są spełnione, urządzenie jest oznaczane jako niezgodne. Ocena jest wyzwalana przez otwarcie aplikacji Portal firmy lub fizyczne przeniesienie urządzenia o 500 metrów lub więcej. Jeśli urządzenie nie zostanie przeniesione o 500 metrów w ciągu 72 godzin, użytkownik musi otworzyć aplikację Portal firmy w celu przeprowadzenia rozszerzonej oceny pod kątem wykonania jailbreaku.
+  - Zawsze zezwalać aplikacji Portal firmy na użycie usług lokalizacyjnych.
+
+  Ocena jest wyzwalana przez otwarcie aplikacji Portal firmy lub fizyczne przeniesienie urządzenia na znaczną odległość wynoszącą około 500 metrów lub więcej. W systemie iOS 13 i nowszych ta funkcja będzie wymagać od użytkowników wybrania opcji Zawsze zezwalaj, gdy urządzenie wyświetli monit o dalsze używanie ich lokalizacji w tle przez aplikację Portal firmy. Jeśli użytkownicy nie zawsze zezwalają na dostęp do lokalizacji i to ustawienie jest skonfigurowane w ich zasadach, urządzenie zostanie oznaczone jako niezgodne. Usługa Intune nie może zagwarantować, że każda znacząca zmiana lokalizacji zapewni wykrycie zdjęcia zabezpieczeń systemu, ponieważ zależy to od połączenia sieciowego urządzenia w danym momencie.
 
 - **Okres ważności stanu zgodności (dni)** : podaj okres zgłaszania stanu urządzenia dla wszystkich odebranych zasad zgodności. Urządzenia, które nie zwrócą stanu w tym okresie, są traktowane jako niezgodne. Wartość domyślna to 30 dni. Wartość minimalna to 1 dzień.
 

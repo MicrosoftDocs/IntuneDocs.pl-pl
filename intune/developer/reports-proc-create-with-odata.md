@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 18815fb671e853bc0463fed750d40b80ccb285fb
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
-ms.translationtype: MTE75
+ms.openlocfilehash: 7fbbffb187fc9e9537bf647bc33e3d98879369c3
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74784276"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576046"
 ---
 # <a name="create-an-intune-report-from-the-odata-feed-with-power-bi"></a>Tworzenie raportu usługi Intune w usłudze Power BI na podstawie kanału informacyjnego OData
 
-W tym artykule opisano sposób tworzenia wizualizacji mapy drzewa danych usługi Intune przy użyciu filtru interaktywnego w aplikacji Power BI Desktop. Na przykład dyrektor finansowy chce wiedzieć, jaki odsetek urządzeń w firmie stanowią urządzenia należące do firmy, a jaki urządzenia osobiste. Mapa drzewa daje wgląd w ogólną liczbę urządzeń różnych typów. Możesz zobaczyć liczbę urządzeń z systemami iOS, Android i Windows, które należą do firmy lub do pracowników.
+W tym artykule opisano sposób tworzenia wizualizacji mapy drzewa danych usługi Intune przy użyciu filtru interaktywnego w aplikacji Power BI Desktop. Na przykład dyrektor finansowy chce wiedzieć, jaki odsetek urządzeń w firmie stanowią urządzenia należące do firmy, a jaki urządzenia osobiste. Mapa drzewa daje wgląd w ogólną liczbę urządzeń różnych typów. Możesz zobaczyć liczbę urządzeń z systemami iOS/iPadOS, Android i Windows, które należą do firmy lub do pracowników.
 
 ## <a name="overview-of-creating-the-chart"></a>Przegląd tworzenia wykresu
 
@@ -47,7 +47,7 @@ Nieco mylące może być użycie terminów *jednostka* i *tabela*. Model danych 
 
 ## <a name="install-power-bi-desktop"></a>Instalowanie programu Power BI Desktop
 
-Zainstaluj najnowszą wersję aplikacji Power BI Desktop. Aplikację Power BI Desktop możesz pobrać z witryny [PowerBI.microsoft.com](https://powerbi.microsoft.com/desktop)
+Zainstaluj najnowszą wersję aplikacji Power BI Desktop. Aplikację Power BI Desktop możesz pobrać z witryny: [PowerBI.microsoft.com](https://powerbi.microsoft.com/desktop)
 
 ## <a name="connect-to-the-odata-feed-for-the-intune-data-warehouse-for-your-tenant"></a>Łączenie się ze źródłem danych OData dla magazynu danych usługi Intune swojej dzierżawy
 

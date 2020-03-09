@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 85b6d49f435ec45a2c6a2b81387ea25a1c15299b
-ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
-ms.translationtype: MTE75
+ms.openlocfilehash: 19ecbc632b924dda297b3692cabf5345b4724b30
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75654077"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77575775"
 ---
 # <a name="reference-for-devices-entities"></a>Odwołanie do jednostek urządzeń
 
@@ -249,7 +249,7 @@ Jednostka **devices** zawiera listę wszystkich zarejestrowanych urządzeń w ob
 | rowLastModifiedDateTimeUTC | Data i godzina ostatniej modyfikacji tego użytkownika w magazynie danych (czas UTC).                                                                                                       |
 | manufacturer               | Producent urządzenia                                                                                                                                                             |
 | model                      | Model urządzenia                                                                                                                                                                    |
-| operatingSystem            | System operacyjny urządzenia. Windows, iOS itp.                                                                                                                                   |
+| operatingSystem            | System operacyjny urządzenia. Windows, iOS/iPadOS itd.                                                                                                                                   |
 | isDeleted                  | Plik binarny pokazujący, czy urządzenie zostało usunięte.                                                                                                                                 |
 | androidSecurityPatchLevel  | Poziom poprawki zabezpieczeń systemu Android                                                                                                                                                           |
 | MEID                       | MEID                                                                                                                                                                                   |
@@ -262,7 +262,7 @@ Jednostka **devices** zawiera listę wszystkich zarejestrowanych urządzeń w ob
 | IMEI                       | IMEI                                                                                                                                                                                   |
 | cellularTechnology         | Technologia sieci komórkowej urządzenia                                                                                                                                                    |
 | WiFiMacAddress             | Wi-Fi MAC                                                                                                                                                                              |
-| ICCD                       | Identyfikator karty zintegrowanego obwodu                                                                                                                                                     |
+| ICCD                       | Integrated Circuit Card Identifier                                                                                                                                                     |
 
 ## <a name="devicepropertyhistories"></a>devicePropertyHistories
 

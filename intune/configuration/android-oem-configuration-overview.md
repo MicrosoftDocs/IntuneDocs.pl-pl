@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/16/2020
+ms.date: 03/02/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9cc568cbadb683f632ffd2365ab7023cd796f231
-ms.sourcegitcommit: 5ad0ce27a30ee3ef3beefc46d2ee49db6ec0cbe3
-ms.translationtype: MTE75
+ms.openlocfilehash: 1bc811bcac80f8321284ece8d3860efc7164a270
+ms.sourcegitcommit: a25f556aa9df4fcd9fdacccd12c9029bc6c5fe20
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/30/2020
-ms.locfileid: "76886694"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78256326"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Korzystanie z urządzeń z systemem Android Enterprise i zarządzanie nimi za pomocą aplikacji OEMConfig w usłudze Microsoft Intune
 
@@ -161,7 +161,8 @@ W porównaniu ze standardowymi aplikacjami, aplikacje OEMConfig rozszerzają upr
 | Spectralink — Urządzenie | com.spectralink.slnkdevicesettings  |  |
 | Spectralink — Rejestrowanie | com.spectralink.slnklogger |  |
 | Spectralink — VQO | com.spectralink.slnkvqo |  |
-| HMD Global | com.hmdglobal.app.oemconfig.ironman |  |
+| Seuic | com.seuic.seuicoemconfig | |
+| Unitech Electronics | com.unitech.oemconfig | |
 
 -----------------
 
@@ -169,6 +170,8 @@ Jeśli aplikacja OEMConfig istnieje dla Twojego urządzenia, ale nie znajduje si
 
 > [!NOTE]
 > Aplikacje OEMConfig muszą zostać dołączone do usługi Intune, zanim będzie można je konfigurować za pomocą profilów OEMConfig. Gdy aplikacja będzie już obsługiwana, nie musisz kontaktować się z firmą Microsoft w celu skonfigurowania jej w dzierżawie. Po prostu postępuj zgodnie z instrukcjami na tej stronie.
+>
+> Jeśli aplikacja OEMConfig działa niepoprawnie, skontaktuj się z jej deweloperami. Usługa Intune nie odpowiada za problemy techniczne związane z poszczególnymi aplikacjami OEMConfig.
 
 ## <a name="next-steps"></a>Następne kroki
 

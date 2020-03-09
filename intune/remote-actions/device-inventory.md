@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/26/2019
+ms.date: 02/27/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af4270587ab5894d52a7d12b1c2082b7b3298e51
-ms.sourcegitcommit: 51591b862d97904291af7aa53a6eb341b11a761e
+ms.openlocfilehash: df814abf9cdff3eb4d9fbac8183618461b590adb
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77413740"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77781913"
 ---
 # <a name="see-device-details-in-intune"></a>Wyświetlanie szczegółów urządzenia w usłudze Intune
 
@@ -39,11 +39,16 @@ W tym artykule przedstawiono sposób wyświetlania wszystkich urządzeń i ich w
    - Strona **Omówienie** zawiera nazwę urządzenia oraz listę niektórych kluczowych właściwości urządzenia, w tym informację o tym, czy jest to urządzenie BYOD, kiedy zostało zaewidencjonowane i nie tylko. Na urządzeniu można wykonywać następujące akcje:
       - [Wycofaj](devices-wipe.md#retire)
       - [Czyszczenie danych](devices-wipe.md#wipe)
+      - [Usuwanie](devices-wipe.md#delete-devices-from-the-intune-portal)
       - [Zdalne blokowanie](device-remote-lock.md)
-      - [Synchronizowanie urządzenia](device-sync.md)
+      - [Synchronizacja](device-sync.md)
       - [Zresetuj kod dostępu](device-passcode-reset.md)
       - [Ponowne uruchamianie](device-restart.md) (tylko system Windows)
       - [Zaczynanie od początku](device-fresh-start.md) (tylko system Windows)
+      - [Resetowanie rozwiązania Autopilot]() (tylko system Windows)
+      - [Szybkie skanowanie](../configuration/device-restrictions-windows-10.md) (tylko system Windows 10)
+      - [Pełne skanowanie](../configuration/device-restrictions-windows-10.md) (tylko system Windows 10)
+       - [Zmienianie nazwy urządzenia](device-rename.md)
       - Uruchamianie sesji pomocy zdalnej
    - Za pomocą opcji **Właściwości** możesz przypisać [utworzoną kategorię urządzeń](../enrollment/device-group-mapping.md) i zmienić własność urządzenia na urządzenie osobiste lub urządzenie firmowe.
    - **Sprzęt** — zawiera wiele szczegółowych informacji o urządzeniu, takich jak identyfikator urządzenia, system operacyjny i jego wersja, dostępne miejsce do magazynowania i inne szczegóły.

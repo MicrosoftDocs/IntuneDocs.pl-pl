@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fcb3a9f817b0e765fee79342bcd212f33509209a
-ms.sourcegitcommit: 8d7406b75ef0d75cc2ed03b1a5e5f74ff10b98c0
-ms.translationtype: MTE75
+ms.openlocfilehash: 8d47d91388fffd0e5716d20be640c4afbad2862e
+ms.sourcegitcommit: 47c9af81c385c7e893fe5a85eb79cf08e69e6831
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75653550"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77576321"
 ---
 # <a name="microsoft-intune-app-sdk-overview"></a>Omówienie zestawu SDK aplikacji usługi Microsoft Intune
 Korzystając z zestawu SDK aplikacji usługi Intune dostępnego dla systemów iOS i Android, możesz obsługiwać [zasady ochrony aplikacji](../apps/app-protection-policy.md) usługi Intune w swojej aplikacji. Po zastosowaniu zasad ochrony do aplikacji można zarządzać nią w usłudze Intune i będzie ona rozpoznawana przez usługę Intune jako zarządzana aplikacja. Zestaw SDK kładzie nacisk na minimalizację liczby zmian kodu wymaganych od dewelopera aplikacji. Większość funkcji zestawu SDK możesz włączyć bez zmiany zachowania aplikacji. W przypadku rozszerzonego środowiska użytkownika końcowego i administratora IT możesz użyć interfejsów API zestawu SDK, aby dostosować zachowanie aplikacji pod kątem obsługi funkcji, które wymagają współdziałania ze strony aplikacji.
@@ -56,7 +56,7 @@ Administratorzy IT mogą wymagać od użytkowników końcowych wprowadzania nume
 Administratorzy IT mogą wymagać od użytkowników logowania się za pomocą konta służbowego w celu uzyskania dostępu do aplikacji. Zestaw SDK aplikacji usługi Intune używa usługi Azure Active Directory do udostępnienia funkcji logowania jednokrotnego, która umożliwia ponowne używanie poświadczeń podczas kolejnych logowań po ich jednokrotnym podaniu. Obsługiwane jest również uwierzytelnianie przy użyciu rozwiązań do zarządzania tożsamościami sfederowanych z usługą Azure Active Directory.
 
 ### <a name="check-device-health-and-compliance"></a>Sprawdzanie kondycji i zgodności urządzenia
-Administratorzy IT mogą sprawdzać kondycję urządzenia i jego zgodność z zasadami usługi Intune przed udostępnieniem aplikacji użytkownikom końcowym. W systemie iOS te zasady sprawdzają, czy nie zostały zdjęte zabezpieczenia systemu. W systemie Android te zasady sprawdzają, czy na urządzeniu nie został odblokowany dostęp do konta root.
+Administratorzy IT mogą sprawdzać kondycję urządzenia i jego zgodność z zasadami usługi Intune przed udostępnieniem aplikacji użytkownikom końcowym. W systemie iOS/iPadOS te zasady sprawdzają, czy nie zostały zdjęte zabezpieczenia systemu. W systemie Android te zasady sprawdzają, czy na urządzeniu nie został odblokowany dostęp do konta root.
 
 ### <a name="support-multi-identity"></a>Obsługa wielu tożsamości
 Obsługa wielu tożsamości to funkcja zestawu SDK, która umożliwia współistnienie kont zarządzanych przez zasady (firmowych) i niezarządzanych (osobistych) w jednej aplikacji.

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/25/2018
+ms.date: 02/21/2020
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,18 +15,18 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1a52636a140778f6e78bfe081cda40b36ef2354f
-ms.sourcegitcommit: ebf72b038219904d6e7d20024b107f4aa68f57e6
+ms.openlocfilehash: cbab3aae2e38e1ce7d3c8c526b706d70e0cf2b2a
+ms.sourcegitcommit: 045ca42cad6f86024af9a38a380535f42a6b4bef
 ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72509639"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77781210"
 ---
 # <a name="better-mobile-threat-defense-connector-with-intune"></a>Łącznik Better Mobile Threat Defense z usługą Intune
 
 Dostęp urządzeń przenośnych do zasobów firmy można kontrolować za pomocą dostępu warunkowego opartego na ocenie ryzyka przeprowadzanej przez usługę Better Mobile — rozwiązania usługi Mobile Threat Defense (MTD) zintegrowanego z usługą Microsoft Intune. Ryzyko jest oceniane na podstawie danych telemetrycznych zebranych z urządzeń z uruchomioną aplikacją Better Mobile.
 
-Można skonfigurować zasady dostępu warunkowego oparte na ocenie ryzyka Better Mobile włączone za pomocą zasad zgodności urządzeń usługi Intune, których w przypadku niezgodnego urządzenia można użyć do zezwalania na dostęp do zasobów firmy lub blokowania go w oparciu o wykryte zagrożenia.
+Można skonfigurować zasady dostępu warunkowego oparte na ocenie ryzyka Better Mobile włączone za pomocą zasad zgodności urządzeń usługi Intune dla zarejestrowanych urządzeń, których w przypadku niezgodnego urządzenia można użyć do zezwalania na dostęp do zasobów firmy lub blokowania go w oparciu o wykryte zagrożenia. W przypadku niezarejestrowanych urządzeń można użyć zasad ochrony aplikacji, aby wymusić blokowanie lub selektywne czyszczenie na podstawie wykrytych zagrożeń.
 
 ## <a name="how-do-intune-and-better-mobile-help-protect-your-company-resources"></a>W jaki sposób usługi Intune i Better Mobile ułatwiają ochronę zasobów firmy?
 
@@ -105,3 +105,5 @@ Wykrywanie zagrożeń dla sieci, takich jak ataki typu **Man-in-the-middle** i b
 - [Tworzenie zasad zgodności urządzeń w usłudze Better Mobile](mtd-device-compliance-policy-create.md)
 
 - [Włączanie łącznika MTD usługi Better Mobile](mtd-connector-enable.md)
+
+- [Tworzenie zasad ochrony aplikacji usługi MTD](mtd-app-protection-policy.md) 
